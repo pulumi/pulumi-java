@@ -10,6 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Sqli Match Statement.
+ * 
+ */
 public final class RuleGroupSqliMatchStatement extends io.pulumi.resources.InvokeArgs {
 
     public static final RuleGroupSqliMatchStatement Empty = new RuleGroupSqliMatchStatement();

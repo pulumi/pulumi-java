@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetQueueAuthorizationRule {
+/**
+ * Description of a namespace authorization rule.
+ * API Version: 2017-04-01.
+ * 
+ *
+ * Description of a namespace authorization rule.
+ * 
+ */
     public static CompletableFuture<GetQueueAuthorizationRuleResult> invokeAsync(GetQueueAuthorizationRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicebus:getQueueAuthorizationRule", TypeShape.of(GetQueueAuthorizationRuleResult.class), args == null ? GetQueueAuthorizationRuleArgs.Empty : args, Utilities.withVersion(options));
     }

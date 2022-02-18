@@ -11,8 +11,23 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class JobAppEngineHttpTargetAppEngineRouting {
+    /**
+     * App instance.
+     * By default, the job is sent to an instance which is available when the job is attempted.
+     * 
+     */
     private final @Nullable String instance;
+    /**
+     * App service.
+     * By default, the job is sent to the service which is the default service when the job is attempted.
+     * 
+     */
     private final @Nullable String service;
+    /**
+     * App version.
+     * By default, the job is sent to the version which is the default version when the job is attempted.
+     * 
+     */
     private final @Nullable String version;
 
     @OutputCustomType.Constructor({"instance","service","version"})
@@ -25,12 +40,27 @@ public final class JobAppEngineHttpTargetAppEngineRouting {
         this.version = version;
     }
 
+    /**
+     * App instance.
+     * By default, the job is sent to an instance which is available when the job is attempted.
+     * 
+     */
     public Optional<String> getInstance() {
         return Optional.ofNullable(this.instance);
     }
+    /**
+     * App service.
+     * By default, the job is sent to the service which is the default service when the job is attempted.
+     * 
+     */
     public Optional<String> getService() {
         return Optional.ofNullable(this.service);
     }
+    /**
+     * App version.
+     * By default, the job is sent to the version which is the default version when the job is attempted.
+     * 
+     */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }

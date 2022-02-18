@@ -12,6 +12,10 @@ public final class GetMonitorArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetMonitorArgs Empty = new GetMonitorArgs();
 
+    /**
+     * Monitor resource name
+     * 
+     */
     @InputImport(name="monitorName", required=true)
     private final String monitorName;
 
@@ -19,6 +23,10 @@ public final class GetMonitorArgs extends io.pulumi.resources.InvokeArgs {
         return this.monitorName;
     }
 
+    /**
+     * The name of the resource group to which the Elastic resource belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

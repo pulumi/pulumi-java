@@ -10,10 +10,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Represents a result from running a test case in an agent environment.
+ * 
+ */
 public final class GoogleCloudDialogflowCxV3TestCaseResultResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowCxV3TestCaseResultResponse Empty = new GoogleCloudDialogflowCxV3TestCaseResultResponse();
 
+    /**
+     * The conversation turns uttered during the test case replay in chronological order.
+     * 
+     */
     @InputImport(name="conversationTurns", required=true)
     private final List<GoogleCloudDialogflowCxV3ConversationTurnResponse> conversationTurns;
 
@@ -21,6 +29,10 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultResponse extends io.pu
         return this.conversationTurns;
     }
 
+    /**
+     * Environment where the test was run. If not set, it indicates the draft environment.
+     * 
+     */
     @InputImport(name="environment", required=true)
     private final String environment;
 
@@ -28,6 +40,10 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultResponse extends io.pu
         return this.environment;
     }
 
+    /**
+     * The resource name for the test case result. Format: `projects//locations//agents//testCases/ /results/`.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -35,6 +51,10 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultResponse extends io.pu
         return this.name;
     }
 
+    /**
+     * Whether the test case passed in the agent environment.
+     * 
+     */
     @InputImport(name="testResult", required=true)
     private final String testResult;
 
@@ -42,6 +62,10 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultResponse extends io.pu
         return this.testResult;
     }
 
+    /**
+     * The time that the test was run.
+     * 
+     */
     @InputImport(name="testTime", required=true)
     private final String testTime;
 

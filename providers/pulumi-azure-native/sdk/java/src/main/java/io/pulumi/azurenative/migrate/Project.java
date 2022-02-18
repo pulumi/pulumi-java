@@ -16,45 +16,114 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Azure Migrate Project.
+ * API Version: 2019-10-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:migrate:Project abGoyalProject2 /subscriptions/6393a73f-8d55-47ef-b6dd-179b3e0c7910/resourceGroups/abgoyal-westeurope/providers/Microsoft.Migrate/assessmentprojects/abGoyalProject2 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:migrate:Project")
 public class Project extends io.pulumi.resources.CustomResource {
+    /**
+     * For optimistic concurrency control.
+     * 
+     */
     @OutputExport(name="eTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> eTag;
 
+    /**
+     * @return For optimistic concurrency control.
+     * 
+     */
     public Output</* @Nullable */ String> getETag() {
         return this.eTag;
     }
+    /**
+     * Azure location in which project is created.
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Azure location in which project is created.
+     * 
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * Name of the project.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Name of the project.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Properties of the project.
+     * 
+     */
     @OutputExport(name="properties", type=ProjectPropertiesResponse.class, parameters={})
     private Output<ProjectPropertiesResponse> properties;
 
+    /**
+     * @return Properties of the project.
+     * 
+     */
     public Output<ProjectPropertiesResponse> getProperties() {
         return this.properties;
     }
+    /**
+     * Tags provided by Azure Tagging service.
+     * 
+     */
     @OutputExport(name="tags", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> tags;
 
+    /**
+     * @return Tags provided by Azure Tagging service.
+     * 
+     */
     public Output</* @Nullable */ Object> getTags() {
         return this.tags;
     }
+    /**
+     * Type of the object = [Microsoft.Migrate/assessmentProjects].
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Type of the object = [Microsoft.Migrate/assessmentProjects].
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Project(String name, ProjectArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:migrate:Project", name, args == null ? ProjectArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -73,6 +142,14 @@ public class Project extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Project get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Project(name, id, options);
     }

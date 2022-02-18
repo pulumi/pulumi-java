@@ -8,10 +8,18 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
+/**
+ * Configuration of Shielded Nodes feature.
+ * 
+ */
 public final class ShieldedNodesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ShieldedNodesResponse Empty = new ShieldedNodesResponse();
 
+    /**
+     * Whether Shielded Nodes features are enabled on all nodes in this cluster.
+     * 
+     */
     @InputImport(name="enabled", required=true)
     private final Boolean enabled;
 

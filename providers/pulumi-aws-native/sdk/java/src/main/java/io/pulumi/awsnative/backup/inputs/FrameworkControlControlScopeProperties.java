@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The scope of a control. The control scope defines what the control will evaluate. Three examples of control scopes are: a specific backup plan, all backup plans with a specific tag, or all backup plans.
+ * 
+ */
 public final class FrameworkControlControlScopeProperties extends io.pulumi.resources.InvokeArgs {
 
     public static final FrameworkControlControlScopeProperties Empty = new FrameworkControlControlScopeProperties();
 
+    /**
+     * The ID of the only AWS resource that you want your control scope to contain.
+     * 
+     */
     @InputImport(name="complianceResourceIds")
     private final @Nullable List<String> complianceResourceIds;
 
@@ -23,6 +31,10 @@ public final class FrameworkControlControlScopeProperties extends io.pulumi.reso
         return this.complianceResourceIds == null ? List.of() : this.complianceResourceIds;
     }
 
+    /**
+     * Describes whether the control scope includes one or more types of resources, such as `EFS` or `RDS`.
+     * 
+     */
     @InputImport(name="complianceResourceTypes")
     private final @Nullable List<String> complianceResourceTypes;
 
@@ -30,6 +42,10 @@ public final class FrameworkControlControlScopeProperties extends io.pulumi.reso
         return this.complianceResourceTypes == null ? List.of() : this.complianceResourceTypes;
     }
 
+    /**
+     * Describes whether the control scope includes resources with one or more tags. Each tag is a key-value pair.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable List<FrameworkTag> tags;
 

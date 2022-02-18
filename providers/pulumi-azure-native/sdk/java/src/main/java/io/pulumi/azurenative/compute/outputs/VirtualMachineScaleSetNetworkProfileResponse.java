@@ -14,8 +14,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class VirtualMachineScaleSetNetworkProfileResponse {
+    /**
+     * A reference to a load balancer probe used to determine the health of an instance in the virtual machine scale set. The reference will be in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}/probes/{probeName}'.
+     * 
+     */
     private final @Nullable ApiEntityReferenceResponse healthProbe;
+    /**
+     * specifies the Microsoft.Network API version used when creating networking resources in the Network Interface Configurations for Virtual Machine Scale Set with orchestration mode 'Flexible'
+     * 
+     */
     private final @Nullable String networkApiVersion;
+    /**
+     * The list of network configurations.
+     * 
+     */
     private final @Nullable List<VirtualMachineScaleSetNetworkConfigurationResponse> networkInterfaceConfigurations;
 
     @OutputCustomType.Constructor({"healthProbe","networkApiVersion","networkInterfaceConfigurations"})
@@ -28,12 +40,24 @@ public final class VirtualMachineScaleSetNetworkProfileResponse {
         this.networkInterfaceConfigurations = networkInterfaceConfigurations;
     }
 
+    /**
+     * A reference to a load balancer probe used to determine the health of an instance in the virtual machine scale set. The reference will be in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}/probes/{probeName}'.
+     * 
+     */
     public Optional<ApiEntityReferenceResponse> getHealthProbe() {
         return Optional.ofNullable(this.healthProbe);
     }
+    /**
+     * specifies the Microsoft.Network API version used when creating networking resources in the Network Interface Configurations for Virtual Machine Scale Set with orchestration mode 'Flexible'
+     * 
+     */
     public Optional<String> getNetworkApiVersion() {
         return Optional.ofNullable(this.networkApiVersion);
     }
+    /**
+     * The list of network configurations.
+     * 
+     */
     public List<VirtualMachineScaleSetNetworkConfigurationResponse> getNetworkInterfaceConfigurations() {
         return this.networkInterfaceConfigurations == null ? List.of() : this.networkInterfaceConfigurations;
     }

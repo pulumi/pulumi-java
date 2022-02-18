@@ -19,6 +19,10 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
 
     public static final InfrastructureConfigurationArgs Empty = new InfrastructureConfigurationArgs();
 
+    /**
+     * The description of the infrastructure configuration.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -26,6 +30,10 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The instance metadata option settings for the infrastructure configuration.
+     * 
+     */
     @InputImport(name="instanceMetadataOptions")
     private final @Nullable Input<InfrastructureConfigurationInstanceMetadataOptionsArgs> instanceMetadataOptions;
 
@@ -33,6 +41,10 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
         return this.instanceMetadataOptions == null ? Input.empty() : this.instanceMetadataOptions;
     }
 
+    /**
+     * The instance profile of the infrastructure configuration.
+     * 
+     */
     @InputImport(name="instanceProfileName", required=true)
     private final Input<String> instanceProfileName;
 
@@ -40,6 +52,10 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
         return this.instanceProfileName;
     }
 
+    /**
+     * The instance types of the infrastructure configuration.
+     * 
+     */
     @InputImport(name="instanceTypes")
     private final @Nullable Input<List<String>> instanceTypes;
 
@@ -47,6 +63,10 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
         return this.instanceTypes == null ? Input.empty() : this.instanceTypes;
     }
 
+    /**
+     * The EC2 key pair of the infrastructure configuration..
+     * 
+     */
     @InputImport(name="keyPair")
     private final @Nullable Input<String> keyPair;
 
@@ -54,6 +74,10 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
         return this.keyPair == null ? Input.empty() : this.keyPair;
     }
 
+    /**
+     * The logging configuration of the infrastructure configuration.
+     * 
+     */
     @InputImport(name="logging")
     private final @Nullable Input<InfrastructureConfigurationLoggingArgs> logging;
 
@@ -61,6 +85,10 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
         return this.logging == null ? Input.empty() : this.logging;
     }
 
+    /**
+     * The name of the infrastructure configuration.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -68,6 +96,10 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The tags attached to the resource created by Image Builder.
+     * 
+     */
     @InputImport(name="resourceTags")
     private final @Nullable Input<Object> resourceTags;
 
@@ -75,6 +107,10 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
         return this.resourceTags == null ? Input.empty() : this.resourceTags;
     }
 
+    /**
+     * The security group IDs of the infrastructure configuration.
+     * 
+     */
     @InputImport(name="securityGroupIds")
     private final @Nullable Input<List<String>> securityGroupIds;
 
@@ -82,6 +118,10 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
         return this.securityGroupIds == null ? Input.empty() : this.securityGroupIds;
     }
 
+    /**
+     * The SNS Topic Amazon Resource Name (ARN) of the infrastructure configuration.
+     * 
+     */
     @InputImport(name="snsTopicArn")
     private final @Nullable Input<String> snsTopicArn;
 
@@ -89,6 +129,10 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
         return this.snsTopicArn == null ? Input.empty() : this.snsTopicArn;
     }
 
+    /**
+     * The subnet ID of the infrastructure configuration.
+     * 
+     */
     @InputImport(name="subnetId")
     private final @Nullable Input<String> subnetId;
 
@@ -96,6 +140,10 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
         return this.subnetId == null ? Input.empty() : this.subnetId;
     }
 
+    /**
+     * The tags associated with the component.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Object> tags;
 
@@ -103,6 +151,10 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The terminate instance on failure configuration of the infrastructure configuration.
+     * 
+     */
     @InputImport(name="terminateInstanceOnFailure")
     private final @Nullable Input<Boolean> terminateInstanceOnFailure;
 

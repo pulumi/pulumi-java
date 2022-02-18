@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSubnetGroup {
+/**
+ * The AWS::MemoryDB::SubnetGroup resource creates an Amazon MemoryDB Subnet Group.
+ * 
+ */
     public static CompletableFuture<GetSubnetGroupResult> invokeAsync(GetSubnetGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:memorydb:getSubnetGroup", TypeShape.of(GetSubnetGroupResult.class), args == null ? GetSubnetGroupArgs.Empty : args, Utilities.withVersion(options));
     }

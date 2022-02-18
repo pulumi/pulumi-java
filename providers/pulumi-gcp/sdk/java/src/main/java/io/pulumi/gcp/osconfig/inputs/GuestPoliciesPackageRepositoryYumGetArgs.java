@@ -15,6 +15,10 @@ public final class GuestPoliciesPackageRepositoryYumGetArgs extends io.pulumi.re
 
     public static final GuestPoliciesPackageRepositoryYumGetArgs Empty = new GuestPoliciesPackageRepositoryYumGetArgs();
 
+    /**
+     * The location of the repository directory.
+     * 
+     */
     @InputImport(name="baseUrl", required=true)
     private final Input<String> baseUrl;
 
@@ -22,6 +26,10 @@ public final class GuestPoliciesPackageRepositoryYumGetArgs extends io.pulumi.re
         return this.baseUrl;
     }
 
+    /**
+     * The display name of the repository.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -29,6 +37,10 @@ public final class GuestPoliciesPackageRepositoryYumGetArgs extends io.pulumi.re
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * URIs of GPG keys.
+     * 
+     */
     @InputImport(name="gpgKeys")
     private final @Nullable Input<List<String>> gpgKeys;
 
@@ -36,6 +48,11 @@ public final class GuestPoliciesPackageRepositoryYumGetArgs extends io.pulumi.re
         return this.gpgKeys == null ? Input.empty() : this.gpgKeys;
     }
 
+    /**
+     * Id of the artifact, which the installation and update steps of this recipe can reference.
+     * Artifacts in a recipe cannot have the same id.
+     * 
+     */
     @InputImport(name="id", required=true)
     private final Input<String> id;
 

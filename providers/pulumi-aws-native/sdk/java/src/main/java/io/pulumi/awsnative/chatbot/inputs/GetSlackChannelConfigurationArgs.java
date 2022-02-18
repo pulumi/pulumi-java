@@ -12,6 +12,10 @@ public final class GetSlackChannelConfigurationArgs extends io.pulumi.resources.
 
     public static final GetSlackChannelConfigurationArgs Empty = new GetSlackChannelConfigurationArgs();
 
+    /**
+     * Amazon Resource Name (ARN) of the configuration
+     * 
+     */
     @InputImport(name="arn", required=true)
     private final String arn;
 

@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The definition of a prediction distribution.
+ * 
+ */
 public final class PredictionDistributionDefinitionResponseDistributions extends io.pulumi.resources.InvokeArgs {
 
     public static final PredictionDistributionDefinitionResponseDistributions Empty = new PredictionDistributionDefinitionResponseDistributions();
 
+    /**
+     * Number of negatives.
+     * 
+     */
     @InputImport(name="negatives")
     private final @Nullable Double negatives;
 
@@ -22,6 +30,10 @@ public final class PredictionDistributionDefinitionResponseDistributions extends
         return this.negatives == null ? Optional.empty() : Optional.ofNullable(this.negatives);
     }
 
+    /**
+     * Number of negatives above threshold.
+     * 
+     */
     @InputImport(name="negativesAboveThreshold")
     private final @Nullable Double negativesAboveThreshold;
 
@@ -29,6 +41,10 @@ public final class PredictionDistributionDefinitionResponseDistributions extends
         return this.negativesAboveThreshold == null ? Optional.empty() : Optional.ofNullable(this.negativesAboveThreshold);
     }
 
+    /**
+     * Number of positives.
+     * 
+     */
     @InputImport(name="positives")
     private final @Nullable Double positives;
 
@@ -36,6 +52,10 @@ public final class PredictionDistributionDefinitionResponseDistributions extends
         return this.positives == null ? Optional.empty() : Optional.ofNullable(this.positives);
     }
 
+    /**
+     * Number of positives above threshold.
+     * 
+     */
     @InputImport(name="positivesAboveThreshold")
     private final @Nullable Double positivesAboveThreshold;
 
@@ -43,6 +63,10 @@ public final class PredictionDistributionDefinitionResponseDistributions extends
         return this.positivesAboveThreshold == null ? Optional.empty() : Optional.ofNullable(this.positivesAboveThreshold);
     }
 
+    /**
+     * Score threshold.
+     * 
+     */
     @InputImport(name="scoreThreshold")
     private final @Nullable Integer scoreThreshold;
 

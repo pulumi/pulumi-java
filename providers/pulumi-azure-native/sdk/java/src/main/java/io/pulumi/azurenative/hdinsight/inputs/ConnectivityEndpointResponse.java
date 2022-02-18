@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The connectivity properties
+ * 
+ */
 public final class ConnectivityEndpointResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConnectivityEndpointResponse Empty = new ConnectivityEndpointResponse();
 
+    /**
+     * The location of the endpoint.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable String location;
 
@@ -22,6 +30,10 @@ public final class ConnectivityEndpointResponse extends io.pulumi.resources.Invo
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
+    /**
+     * The name of the endpoint.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -29,6 +41,10 @@ public final class ConnectivityEndpointResponse extends io.pulumi.resources.Invo
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The port to connect to.
+     * 
+     */
     @InputImport(name="port")
     private final @Nullable Integer port;
 
@@ -36,6 +52,10 @@ public final class ConnectivityEndpointResponse extends io.pulumi.resources.Invo
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
     }
 
+    /**
+     * The private ip address of the endpoint.
+     * 
+     */
     @InputImport(name="privateIPAddress")
     private final @Nullable String privateIPAddress;
 
@@ -43,6 +63,10 @@ public final class ConnectivityEndpointResponse extends io.pulumi.resources.Invo
         return this.privateIPAddress == null ? Optional.empty() : Optional.ofNullable(this.privateIPAddress);
     }
 
+    /**
+     * The protocol of the endpoint.
+     * 
+     */
     @InputImport(name="protocol")
     private final @Nullable String protocol;
 

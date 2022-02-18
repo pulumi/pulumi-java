@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RangePartitioningResponse {
+    /**
+     * [TrustedTester] [Required] The table is partitioned by this field. The field must be a top-level NULLABLE/REQUIRED field. The only supported type is INTEGER/INT64.
+     * 
+     */
     private final String field;
+    /**
+     * [TrustedTester] [Required] Defines the ranges for range partitioning.
+     * 
+     */
     private final RangePartitioningRangeResponse range;
 
     @OutputCustomType.Constructor({"field","range"})
@@ -21,9 +29,17 @@ public final class RangePartitioningResponse {
         this.range = Objects.requireNonNull(range);
     }
 
+    /**
+     * [TrustedTester] [Required] The table is partitioned by this field. The field must be a top-level NULLABLE/REQUIRED field. The only supported type is INTEGER/INT64.
+     * 
+     */
     public String getField() {
         return this.field;
     }
+    /**
+     * [TrustedTester] [Required] Defines the ranges for range partitioning.
+     * 
+     */
     public RangePartitioningRangeResponse getRange() {
         return this.range;
     }

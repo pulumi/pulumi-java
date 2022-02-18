@@ -19,6 +19,10 @@ public final class IPAMPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IPAMPoolArgs Empty = new IPAMPoolArgs();
 
+    /**
+     * The address family of the address space in this pool. Either IPv4 or IPv6.
+     * 
+     */
     @InputImport(name="addressFamily", required=true)
     private final Input<String> addressFamily;
 
@@ -26,6 +30,10 @@ public final class IPAMPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.addressFamily;
     }
 
+    /**
+     * The default netmask length for allocations made from this pool. This value is used when the netmask length of an allocation isn't specified.
+     * 
+     */
     @InputImport(name="allocationDefaultNetmaskLength")
     private final @Nullable Input<Integer> allocationDefaultNetmaskLength;
 
@@ -33,6 +41,10 @@ public final class IPAMPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.allocationDefaultNetmaskLength == null ? Input.empty() : this.allocationDefaultNetmaskLength;
     }
 
+    /**
+     * The maximum allowed netmask length for allocations made from this pool.
+     * 
+     */
     @InputImport(name="allocationMaxNetmaskLength")
     private final @Nullable Input<Integer> allocationMaxNetmaskLength;
 
@@ -40,6 +52,10 @@ public final class IPAMPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.allocationMaxNetmaskLength == null ? Input.empty() : this.allocationMaxNetmaskLength;
     }
 
+    /**
+     * The minimum allowed netmask length for allocations made from this pool.
+     * 
+     */
     @InputImport(name="allocationMinNetmaskLength")
     private final @Nullable Input<Integer> allocationMinNetmaskLength;
 
@@ -47,6 +63,10 @@ public final class IPAMPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.allocationMinNetmaskLength == null ? Input.empty() : this.allocationMinNetmaskLength;
     }
 
+    /**
+     * When specified, an allocation will not be allowed unless a resource has a matching set of tags.
+     * 
+     */
     @InputImport(name="allocationResourceTags")
     private final @Nullable Input<List<IPAMPoolTagArgs>> allocationResourceTags;
 
@@ -54,6 +74,10 @@ public final class IPAMPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.allocationResourceTags == null ? Input.empty() : this.allocationResourceTags;
     }
 
+    /**
+     * Determines what to do if IPAM discovers resources that haven't been assigned an allocation. If set to true, an allocation will be made automatically.
+     * 
+     */
     @InputImport(name="autoImport")
     private final @Nullable Input<Boolean> autoImport;
 
@@ -68,6 +92,10 @@ public final class IPAMPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The Id of the scope this pool is a part of.
+     * 
+     */
     @InputImport(name="ipamScopeId", required=true)
     private final Input<String> ipamScopeId;
 
@@ -75,6 +103,10 @@ public final class IPAMPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.ipamScopeId;
     }
 
+    /**
+     * The region of this pool. If not set, this will default to "None" which will disable non-custom allocations. If the locale has been specified for the source pool, this value must match.
+     * 
+     */
     @InputImport(name="locale")
     private final @Nullable Input<String> locale;
 
@@ -82,6 +114,10 @@ public final class IPAMPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.locale == null ? Input.empty() : this.locale;
     }
 
+    /**
+     * A list of cidrs representing the address space available for allocation in this pool.
+     * 
+     */
     @InputImport(name="provisionedCidrs")
     private final @Nullable Input<List<IPAMPoolProvisionedCidrArgs>> provisionedCidrs;
 
@@ -89,6 +125,10 @@ public final class IPAMPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.provisionedCidrs == null ? Input.empty() : this.provisionedCidrs;
     }
 
+    /**
+     * Determines whether or not address space from this pool is publicly advertised. Must be set if and only if the pool is IPv6.
+     * 
+     */
     @InputImport(name="publiclyAdvertisable")
     private final @Nullable Input<Boolean> publiclyAdvertisable;
 
@@ -96,6 +136,10 @@ public final class IPAMPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.publiclyAdvertisable == null ? Input.empty() : this.publiclyAdvertisable;
     }
 
+    /**
+     * The Id of this pool's source. If set, all space provisioned in this pool must be free space provisioned in the parent pool.
+     * 
+     */
     @InputImport(name="sourceIpamPoolId")
     private final @Nullable Input<String> sourceIpamPoolId;
 
@@ -103,6 +147,10 @@ public final class IPAMPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceIpamPoolId == null ? Input.empty() : this.sourceIpamPoolId;
     }
 
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<IPAMPoolTagArgs>> tags;
 

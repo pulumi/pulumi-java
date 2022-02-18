@@ -16,6 +16,10 @@ public final class DataConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataConnectionArgs Empty = new DataConnectionArgs();
 
+    /**
+     * The name of the Kusto cluster.
+     * 
+     */
     @InputImport(name="clusterName", required=true)
     private final Input<String> clusterName;
 
@@ -23,6 +27,10 @@ public final class DataConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.clusterName;
     }
 
+    /**
+     * The name of the data connection.
+     * 
+     */
     @InputImport(name="dataConnectionName")
     private final @Nullable Input<String> dataConnectionName;
 
@@ -30,6 +38,10 @@ public final class DataConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataConnectionName == null ? Input.empty() : this.dataConnectionName;
     }
 
+    /**
+     * The name of the database in the Kusto cluster.
+     * 
+     */
     @InputImport(name="databaseName", required=true)
     private final Input<String> databaseName;
 
@@ -37,6 +49,10 @@ public final class DataConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.databaseName;
     }
 
+    /**
+     * Kind of the endpoint for the data connection
+     * 
+     */
     @InputImport(name="kind", required=true)
     private final Input<Either<String,DataConnectionKind>> kind;
 
@@ -44,6 +60,10 @@ public final class DataConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind;
     }
 
+    /**
+     * Resource location.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -51,6 +71,10 @@ public final class DataConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the resource group containing the Kusto cluster.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

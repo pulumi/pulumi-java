@@ -15,6 +15,11 @@ public final class AutoscalerAutoscalingPolicyScaleInControlGetArgs extends io.p
 
     public static final AutoscalerAutoscalingPolicyScaleInControlGetArgs Empty = new AutoscalerAutoscalingPolicyScaleInControlGetArgs();
 
+    /**
+     * A nested object resource
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="maxScaledInReplicas")
     private final @Nullable Input<AutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasGetArgs> maxScaledInReplicas;
 
@@ -22,6 +27,11 @@ public final class AutoscalerAutoscalingPolicyScaleInControlGetArgs extends io.p
         return this.maxScaledInReplicas == null ? Input.empty() : this.maxScaledInReplicas;
     }
 
+    /**
+     * How long back autoscaling should look when computing recommendations
+     * to include directives regarding slower scale down, as described above.
+     * 
+     */
     @InputImport(name="timeWindowSec")
     private final @Nullable Input<Integer> timeWindowSec;
 

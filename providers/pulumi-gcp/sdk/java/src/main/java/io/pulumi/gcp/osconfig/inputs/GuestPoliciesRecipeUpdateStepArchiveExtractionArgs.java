@@ -14,6 +14,10 @@ public final class GuestPoliciesRecipeUpdateStepArchiveExtractionArgs extends io
 
     public static final GuestPoliciesRecipeUpdateStepArchiveExtractionArgs Empty = new GuestPoliciesRecipeUpdateStepArchiveExtractionArgs();
 
+    /**
+     * The id of the relevant artifact in the recipe.
+     * 
+     */
     @InputImport(name="artifactId", required=true)
     private final Input<String> artifactId;
 
@@ -21,6 +25,10 @@ public final class GuestPoliciesRecipeUpdateStepArchiveExtractionArgs extends io
         return this.artifactId;
     }
 
+    /**
+     * Directory to extract archive to. Defaults to / on Linux or C:\ on Windows.
+     * 
+     */
     @InputImport(name="destination")
     private final @Nullable Input<String> destination;
 
@@ -28,6 +36,11 @@ public final class GuestPoliciesRecipeUpdateStepArchiveExtractionArgs extends io
         return this.destination == null ? Input.empty() : this.destination;
     }
 
+    /**
+     * The type of the archive to extract.
+     * Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZIP`.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

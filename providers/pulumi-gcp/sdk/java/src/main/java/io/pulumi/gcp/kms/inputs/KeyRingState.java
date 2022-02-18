@@ -14,6 +14,11 @@ public final class KeyRingState extends io.pulumi.resources.ResourceArgs {
 
     public static final KeyRingState Empty = new KeyRingState();
 
+    /**
+     * The location for the KeyRing.
+     * A full list of valid locations can be found by running `gcloud kms locations list`.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -21,6 +26,10 @@ public final class KeyRingState extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The resource name for the KeyRing.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -28,6 +37,11 @@ public final class KeyRingState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

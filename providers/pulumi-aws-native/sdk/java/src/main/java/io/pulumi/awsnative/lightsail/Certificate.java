@@ -14,6 +14,10 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * An example resource schema demonstrating some basic constructs and validation rules.
+ * 
+ */
 @ResourceType(type="aws-native:lightsail:Certificate")
 public class Certificate extends io.pulumi.resources.CustomResource {
     @OutputExport(name="certificateArn", type=String.class, parameters={})
@@ -22,37 +26,83 @@ public class Certificate extends io.pulumi.resources.CustomResource {
     public Output<String> getCertificateArn() {
         return this.certificateArn;
     }
+    /**
+     * The name for the certificate.
+     * 
+     */
     @OutputExport(name="certificateName", type=String.class, parameters={})
     private Output<String> certificateName;
 
+    /**
+     * @return The name for the certificate.
+     * 
+     */
     public Output<String> getCertificateName() {
         return this.certificateName;
     }
+    /**
+     * The domain name (e.g., example.com ) for the certificate.
+     * 
+     */
     @OutputExport(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
+    /**
+     * @return The domain name (e.g., example.com ) for the certificate.
+     * 
+     */
     public Output<String> getDomainName() {
         return this.domainName;
     }
+    /**
+     * The validation status of the certificate.
+     * 
+     */
     @OutputExport(name="status", type=String.class, parameters={})
     private Output<String> status;
 
+    /**
+     * @return The validation status of the certificate.
+     * 
+     */
     public Output<String> getStatus() {
         return this.status;
     }
+    /**
+     * An array of strings that specify the alternate domains (e.g., example2.com) and subdomains (e.g., blog.example.com) for the certificate.
+     * 
+     */
     @OutputExport(name="subjectAlternativeNames", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> subjectAlternativeNames;
 
+    /**
+     * @return An array of strings that specify the alternate domains (e.g., example2.com) and subdomains (e.g., blog.example.com) for the certificate.
+     * 
+     */
     public Output</* @Nullable */ List<String>> getSubjectAlternativeNames() {
         return this.subjectAlternativeNames;
     }
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     @OutputExport(name="tags", type=List.class, parameters={CertificateTag.class})
     private Output</* @Nullable */ List<CertificateTag>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     */
     public Output</* @Nullable */ List<CertificateTag>> getTags() {
         return this.tags;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Certificate(String name, CertificateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:lightsail:Certificate", name, args == null ? CertificateArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -68,6 +118,14 @@ public class Certificate extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Certificate get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Certificate(name, id, options);
     }

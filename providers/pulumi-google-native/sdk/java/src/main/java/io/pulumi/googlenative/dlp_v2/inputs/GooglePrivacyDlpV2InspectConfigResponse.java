@@ -14,10 +14,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Configuration description of the scanning process. When used with redactContent only info_types and min_likelihood are currently used.
+ * 
+ */
 public final class GooglePrivacyDlpV2InspectConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2InspectConfigResponse Empty = new GooglePrivacyDlpV2InspectConfigResponse();
 
+    /**
+     * CustomInfoTypes provided by the user. See https://cloud.google.com/dlp/docs/creating-custom-infotypes to learn more.
+     * 
+     */
     @InputImport(name="customInfoTypes", required=true)
     private final List<GooglePrivacyDlpV2CustomInfoTypeResponse> customInfoTypes;
 
@@ -25,6 +33,10 @@ public final class GooglePrivacyDlpV2InspectConfigResponse extends io.pulumi.res
         return this.customInfoTypes;
     }
 
+    /**
+     * When true, excludes type information of the findings. This is not used for data profiling.
+     * 
+     */
     @InputImport(name="excludeInfoTypes", required=true)
     private final Boolean excludeInfoTypes;
 
@@ -32,6 +44,10 @@ public final class GooglePrivacyDlpV2InspectConfigResponse extends io.pulumi.res
         return this.excludeInfoTypes;
     }
 
+    /**
+     * When true, a contextual quote from the data that triggered a finding is included in the response; see Finding.quote. This is not used for data profiling.
+     * 
+     */
     @InputImport(name="includeQuote", required=true)
     private final Boolean includeQuote;
 
@@ -39,6 +55,10 @@ public final class GooglePrivacyDlpV2InspectConfigResponse extends io.pulumi.res
         return this.includeQuote;
     }
 
+    /**
+     * Restricts what info_types to look for. The values must correspond to InfoType values returned by ListInfoTypes or listed at https://cloud.google.com/dlp/docs/infotypes-reference. When no InfoTypes or CustomInfoTypes are specified in a request, the system may automatically choose what detectors to run. By default this may be all types, but may change over time as detectors are updated. If you need precise control and predictability as to what detectors are run you should specify specific InfoTypes listed in the reference, otherwise a default list will be used, which may change over time.
+     * 
+     */
     @InputImport(name="infoTypes", required=true)
     private final List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes;
 
@@ -46,6 +66,10 @@ public final class GooglePrivacyDlpV2InspectConfigResponse extends io.pulumi.res
         return this.infoTypes;
     }
 
+    /**
+     * Configuration to control the number of findings returned. This is not used for data profiling.
+     * 
+     */
     @InputImport(name="limits", required=true)
     private final GooglePrivacyDlpV2FindingLimitsResponse limits;
 
@@ -53,6 +77,10 @@ public final class GooglePrivacyDlpV2InspectConfigResponse extends io.pulumi.res
         return this.limits;
     }
 
+    /**
+     * Only returns findings equal or above this threshold. The default is POSSIBLE. See https://cloud.google.com/dlp/docs/likelihood to learn more.
+     * 
+     */
     @InputImport(name="minLikelihood", required=true)
     private final String minLikelihood;
 
@@ -60,6 +88,10 @@ public final class GooglePrivacyDlpV2InspectConfigResponse extends io.pulumi.res
         return this.minLikelihood;
     }
 
+    /**
+     * Set of rules to apply to the findings for this InspectConfig. Exclusion rules, contained in the set are executed in the end, other rules are executed in the order they are specified for each info type.
+     * 
+     */
     @InputImport(name="ruleSet", required=true)
     private final List<GooglePrivacyDlpV2InspectionRuleSetResponse> ruleSet;
 

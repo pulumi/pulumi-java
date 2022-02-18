@@ -23,6 +23,10 @@ public final class IPAMScopeArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The Id of the IPAM this scope is a part of.
+     * 
+     */
     @InputImport(name="ipamId", required=true)
     private final Input<String> ipamId;
 
@@ -30,6 +34,10 @@ public final class IPAMScopeArgs extends io.pulumi.resources.ResourceArgs {
         return this.ipamId;
     }
 
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<IPAMScopeTagArgs>> tags;
 

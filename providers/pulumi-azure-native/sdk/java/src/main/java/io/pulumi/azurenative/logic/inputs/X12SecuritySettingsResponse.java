@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The X12 agreement security settings.
+ * 
+ */
 public final class X12SecuritySettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final X12SecuritySettingsResponse Empty = new X12SecuritySettingsResponse();
 
+    /**
+     * The authorization qualifier.
+     * 
+     */
     @InputImport(name="authorizationQualifier", required=true)
     private final String authorizationQualifier;
 
@@ -21,6 +29,10 @@ public final class X12SecuritySettingsResponse extends io.pulumi.resources.Invok
         return this.authorizationQualifier;
     }
 
+    /**
+     * The authorization value.
+     * 
+     */
     @InputImport(name="authorizationValue")
     private final @Nullable String authorizationValue;
 
@@ -28,6 +40,10 @@ public final class X12SecuritySettingsResponse extends io.pulumi.resources.Invok
         return this.authorizationValue == null ? Optional.empty() : Optional.ofNullable(this.authorizationValue);
     }
 
+    /**
+     * The password value.
+     * 
+     */
     @InputImport(name="passwordValue")
     private final @Nullable String passwordValue;
 
@@ -35,6 +51,10 @@ public final class X12SecuritySettingsResponse extends io.pulumi.resources.Invok
         return this.passwordValue == null ? Optional.empty() : Optional.ofNullable(this.passwordValue);
     }
 
+    /**
+     * The security qualifier.
+     * 
+     */
     @InputImport(name="securityQualifier", required=true)
     private final String securityQualifier;
 

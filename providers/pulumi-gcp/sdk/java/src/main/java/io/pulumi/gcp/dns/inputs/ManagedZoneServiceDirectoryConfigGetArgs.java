@@ -13,6 +13,11 @@ public final class ManagedZoneServiceDirectoryConfigGetArgs extends io.pulumi.re
 
     public static final ManagedZoneServiceDirectoryConfigGetArgs Empty = new ManagedZoneServiceDirectoryConfigGetArgs();
 
+    /**
+     * The namespace associated with the zone.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="namespace", required=true)
     private final Input<ManagedZoneServiceDirectoryConfigNamespaceGetArgs> namespace;
 

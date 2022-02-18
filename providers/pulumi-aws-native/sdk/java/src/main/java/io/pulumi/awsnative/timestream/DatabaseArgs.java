@@ -16,6 +16,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DatabaseArgs Empty = new DatabaseArgs();
 
+    /**
+     * The name for the database. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the database name.
+     * 
+     */
     @InputImport(name="databaseName")
     private final @Nullable Input<String> databaseName;
 
@@ -23,6 +27,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.databaseName == null ? Input.empty() : this.databaseName;
     }
 
+    /**
+     * The KMS key for the database. If the KMS key is not specified, the database will be encrypted with a Timestream managed KMS key located in your account.
+     * 
+     */
     @InputImport(name="kmsKeyId")
     private final @Nullable Input<String> kmsKeyId;
 
@@ -30,6 +38,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
     }
 
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<DatabaseTagArgs>> tags;
 

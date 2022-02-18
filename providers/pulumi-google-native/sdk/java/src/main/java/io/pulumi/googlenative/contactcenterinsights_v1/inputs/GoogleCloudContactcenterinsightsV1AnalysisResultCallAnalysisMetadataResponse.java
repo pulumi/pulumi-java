@@ -13,10 +13,18 @@ import java.util.Map;
 import java.util.Objects;
 
 
+/**
+ * Call-specific metadata created during analysis.
+ * 
+ */
 public final class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse Empty = new GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse();
 
+    /**
+     * A list of call annotations that apply to this call.
+     * 
+     */
     @InputImport(name="annotations", required=true)
     private final List<GoogleCloudContactcenterinsightsV1CallAnnotationResponse> annotations;
 
@@ -24,6 +32,10 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisM
         return this.annotations;
     }
 
+    /**
+     * All the entities in the call.
+     * 
+     */
     @InputImport(name="entities", required=true)
     private final Map<String,String> entities;
 
@@ -31,6 +43,10 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisM
         return this.entities;
     }
 
+    /**
+     * All the matched intents in the call.
+     * 
+     */
     @InputImport(name="intents", required=true)
     private final Map<String,String> intents;
 
@@ -38,6 +54,10 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisM
         return this.intents;
     }
 
+    /**
+     * Overall conversation-level issue modeling result.
+     * 
+     */
     @InputImport(name="issueModelResult", required=true)
     private final GoogleCloudContactcenterinsightsV1IssueModelResultResponse issueModelResult;
 
@@ -45,6 +65,10 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisM
         return this.issueModelResult;
     }
 
+    /**
+     * All the matched phrase matchers in the call.
+     * 
+     */
     @InputImport(name="phraseMatchers", required=true)
     private final Map<String,String> phraseMatchers;
 
@@ -52,6 +76,10 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisM
         return this.phraseMatchers;
     }
 
+    /**
+     * Overall conversation-level sentiment for each channel of the call.
+     * 
+     */
     @InputImport(name="sentiments", required=true)
     private final List<GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse> sentiments;
 

@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CreationDataResponse {
+    /**
+     * This is the ARM ID of the source object to be used to create the target object.
+     * 
+     */
     private final @Nullable String sourceResourceId;
 
     @OutputCustomType.Constructor({"sourceResourceId"})
@@ -18,6 +22,10 @@ public final class CreationDataResponse {
         this.sourceResourceId = sourceResourceId;
     }
 
+    /**
+     * This is the ARM ID of the source object to be used to create the target object.
+     * 
+     */
     public Optional<String> getSourceResourceId() {
         return Optional.ofNullable(this.sourceResourceId);
     }

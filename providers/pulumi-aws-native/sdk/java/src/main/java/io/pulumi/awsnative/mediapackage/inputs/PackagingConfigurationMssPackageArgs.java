@@ -13,6 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A Microsoft Smooth Streaming (MSS) PackagingConfiguration.
+ * 
+ */
 public final class PackagingConfigurationMssPackageArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PackagingConfigurationMssPackageArgs Empty = new PackagingConfigurationMssPackageArgs();
@@ -24,6 +28,10 @@ public final class PackagingConfigurationMssPackageArgs extends io.pulumi.resour
         return this.encryption == null ? Input.empty() : this.encryption;
     }
 
+    /**
+     * A list of MSS manifest configurations.
+     * 
+     */
     @InputImport(name="mssManifests", required=true)
     private final Input<List<PackagingConfigurationMssManifestArgs>> mssManifests;
 

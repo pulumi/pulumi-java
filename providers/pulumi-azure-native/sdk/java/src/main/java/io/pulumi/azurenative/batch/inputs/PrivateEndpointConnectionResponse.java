@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Contains information about a private link resource.
+ * 
+ */
 public final class PrivateEndpointConnectionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PrivateEndpointConnectionResponse Empty = new PrivateEndpointConnectionResponse();
 
+    /**
+     * The ETag of the resource, used for concurrency statements.
+     * 
+     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -23,6 +31,10 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
         return this.etag;
     }
 
+    /**
+     * The ID of the resource.
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -30,6 +42,10 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
         return this.id;
     }
 
+    /**
+     * The name of the resource.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -37,6 +53,10 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
         return this.name;
     }
 
+    /**
+     * The private endpoint of the private endpoint connection.
+     * 
+     */
     @InputImport(name="privateEndpoint")
     private final @Nullable PrivateEndpointResponse privateEndpoint;
 
@@ -44,6 +64,10 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
         return this.privateEndpoint == null ? Optional.empty() : Optional.ofNullable(this.privateEndpoint);
     }
 
+    /**
+     * The private link service connection state of the private endpoint connection
+     * 
+     */
     @InputImport(name="privateLinkServiceConnectionState")
     private final @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
 
@@ -58,6 +82,10 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
         return this.provisioningState;
     }
 
+    /**
+     * The type of the resource.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

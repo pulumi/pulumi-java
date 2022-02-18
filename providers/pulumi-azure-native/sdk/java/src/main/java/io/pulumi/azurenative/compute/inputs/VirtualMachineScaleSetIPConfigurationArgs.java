@@ -17,10 +17,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes a virtual machine scale set network profile's IP configuration.
+ * 
+ */
 public final class VirtualMachineScaleSetIPConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualMachineScaleSetIPConfigurationArgs Empty = new VirtualMachineScaleSetIPConfigurationArgs();
 
+    /**
+     * Specifies an array of references to backend address pools of application gateways. A scale set can reference backend address pools of multiple application gateways. Multiple scale sets cannot use the same application gateway.
+     * 
+     */
     @InputImport(name="applicationGatewayBackendAddressPools")
     private final @Nullable Input<List<SubResourceArgs>> applicationGatewayBackendAddressPools;
 
@@ -28,6 +36,10 @@ public final class VirtualMachineScaleSetIPConfigurationArgs extends io.pulumi.r
         return this.applicationGatewayBackendAddressPools == null ? Input.empty() : this.applicationGatewayBackendAddressPools;
     }
 
+    /**
+     * Specifies an array of references to application security group.
+     * 
+     */
     @InputImport(name="applicationSecurityGroups")
     private final @Nullable Input<List<SubResourceArgs>> applicationSecurityGroups;
 
@@ -35,6 +47,10 @@ public final class VirtualMachineScaleSetIPConfigurationArgs extends io.pulumi.r
         return this.applicationSecurityGroups == null ? Input.empty() : this.applicationSecurityGroups;
     }
 
+    /**
+     * Resource Id
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -42,6 +58,10 @@ public final class VirtualMachineScaleSetIPConfigurationArgs extends io.pulumi.r
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * Specifies an array of references to backend address pools of load balancers. A scale set can reference backend address pools of one public and one internal load balancer. Multiple scale sets cannot use the same basic sku load balancer.
+     * 
+     */
     @InputImport(name="loadBalancerBackendAddressPools")
     private final @Nullable Input<List<SubResourceArgs>> loadBalancerBackendAddressPools;
 
@@ -49,6 +69,10 @@ public final class VirtualMachineScaleSetIPConfigurationArgs extends io.pulumi.r
         return this.loadBalancerBackendAddressPools == null ? Input.empty() : this.loadBalancerBackendAddressPools;
     }
 
+    /**
+     * Specifies an array of references to inbound Nat pools of the load balancers. A scale set can reference inbound nat pools of one public and one internal load balancer. Multiple scale sets cannot use the same basic sku load balancer.
+     * 
+     */
     @InputImport(name="loadBalancerInboundNatPools")
     private final @Nullable Input<List<SubResourceArgs>> loadBalancerInboundNatPools;
 
@@ -56,6 +80,10 @@ public final class VirtualMachineScaleSetIPConfigurationArgs extends io.pulumi.r
         return this.loadBalancerInboundNatPools == null ? Input.empty() : this.loadBalancerInboundNatPools;
     }
 
+    /**
+     * The IP configuration name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -63,6 +91,10 @@ public final class VirtualMachineScaleSetIPConfigurationArgs extends io.pulumi.r
         return this.name;
     }
 
+    /**
+     * Specifies the primary network interface in case the virtual machine has more than 1 network interface.
+     * 
+     */
     @InputImport(name="primary")
     private final @Nullable Input<Boolean> primary;
 
@@ -70,6 +102,10 @@ public final class VirtualMachineScaleSetIPConfigurationArgs extends io.pulumi.r
         return this.primary == null ? Input.empty() : this.primary;
     }
 
+    /**
+     * Available from Api-Version 2017-03-30 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.  Possible values are: 'IPv4' and 'IPv6'.
+     * 
+     */
     @InputImport(name="privateIPAddressVersion")
     private final @Nullable Input<Either<String,IPVersion>> privateIPAddressVersion;
 
@@ -77,6 +113,10 @@ public final class VirtualMachineScaleSetIPConfigurationArgs extends io.pulumi.r
         return this.privateIPAddressVersion == null ? Input.empty() : this.privateIPAddressVersion;
     }
 
+    /**
+     * The publicIPAddressConfiguration.
+     * 
+     */
     @InputImport(name="publicIPAddressConfiguration")
     private final @Nullable Input<VirtualMachineScaleSetPublicIPAddressConfigurationArgs> publicIPAddressConfiguration;
 
@@ -84,6 +124,10 @@ public final class VirtualMachineScaleSetIPConfigurationArgs extends io.pulumi.r
         return this.publicIPAddressConfiguration == null ? Input.empty() : this.publicIPAddressConfiguration;
     }
 
+    /**
+     * Specifies the identifier of the subnet.
+     * 
+     */
     @InputImport(name="subnet")
     private final @Nullable Input<ApiEntityReferenceArgs> subnet;
 

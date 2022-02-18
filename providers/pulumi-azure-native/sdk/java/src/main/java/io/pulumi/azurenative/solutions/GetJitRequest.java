@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetJitRequest {
+/**
+ * Information about JIT request definition.
+ * API Version: 2019-07-01.
+ * 
+ *
+ * Information about JIT request definition.
+ * 
+ */
     public static CompletableFuture<GetJitRequestResult> invokeAsync(GetJitRequestArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:solutions:getJitRequest", TypeShape.of(GetJitRequestResult.class), args == null ? GetJitRequestArgs.Empty : args, Utilities.withVersion(options));
     }

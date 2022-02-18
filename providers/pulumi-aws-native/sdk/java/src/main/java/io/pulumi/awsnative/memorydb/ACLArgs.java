@@ -16,6 +16,10 @@ public final class ACLArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ACLArgs Empty = new ACLArgs();
 
+    /**
+     * The name of the acl.
+     * 
+     */
     @InputImport(name="aCLName")
     private final @Nullable Input<String> aCLName;
 
@@ -23,6 +27,10 @@ public final class ACLArgs extends io.pulumi.resources.ResourceArgs {
         return this.aCLName == null ? Input.empty() : this.aCLName;
     }
 
+    /**
+     * An array of key-value pairs to apply to this cluster.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<ACLTagArgs>> tags;
 
@@ -30,6 +38,10 @@ public final class ACLArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * List of users associated to this acl.
+     * 
+     */
     @InputImport(name="userNames")
     private final @Nullable Input<List<String>> userNames;
 

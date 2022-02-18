@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetResourceGuard {
+/**
+ * API Version: 2021-10-01-preview.
+ * 
+ */
     public static CompletableFuture<GetResourceGuardResult> invokeAsync(GetResourceGuardArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:dataprotection:getResourceGuard", TypeShape.of(GetResourceGuardResult.class), args == null ? GetResourceGuardArgs.Empty : args, Utilities.withVersion(options));
     }

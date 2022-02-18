@@ -12,6 +12,10 @@ public final class GetPreparedStatementArgs extends io.pulumi.resources.InvokeAr
 
     public static final GetPreparedStatementArgs Empty = new GetPreparedStatementArgs();
 
+    /**
+     * The name of the prepared statement.
+     * 
+     */
     @InputImport(name="statementName", required=true)
     private final String statementName;
 
@@ -19,6 +23,10 @@ public final class GetPreparedStatementArgs extends io.pulumi.resources.InvokeAr
         return this.statementName;
     }
 
+    /**
+     * The name of the workgroup to which the prepared statement belongs.
+     * 
+     */
     @InputImport(name="workGroup", required=true)
     private final String workGroup;
 

@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetResponsePlan {
+/**
+ * Resource type definition for AWS::SSMIncidents::ResponsePlan
+ * 
+ */
     public static CompletableFuture<GetResponsePlanResult> invokeAsync(GetResponsePlanArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ssmincidents:getResponsePlan", TypeShape.of(GetResponsePlanResult.class), args == null ? GetResponsePlanArgs.Empty : args, Utilities.withVersion(options));
     }

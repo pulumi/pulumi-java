@@ -9,7 +9,16 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AzureResourceDetailsResponse {
+    /**
+     * Azure resource Id of the assessed resource
+     * 
+     */
     private final String id;
+    /**
+     * The platform where the assessed resource resides
+     * Expected value is 'Azure'.
+     * 
+     */
     private final String source;
 
     @OutputCustomType.Constructor({"id","source"})
@@ -20,9 +29,18 @@ public final class AzureResourceDetailsResponse {
         this.source = Objects.requireNonNull(source);
     }
 
+    /**
+     * Azure resource Id of the assessed resource
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * The platform where the assessed resource resides
+     * Expected value is 'Azure'.
+     * 
+     */
     public String getSource() {
         return this.source;
     }

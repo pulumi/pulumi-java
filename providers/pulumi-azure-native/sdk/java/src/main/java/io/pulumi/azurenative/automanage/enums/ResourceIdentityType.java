@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The type of identity used for the Automanage account. Currently, the only supported type is 'SystemAssigned', which implicitly creates an identity.
+     * 
+     */
     @EnumType
     public enum ResourceIdentityType {
         SystemAssigned("SystemAssigned"),

@@ -16,6 +16,10 @@ public final class PerInstanceConfigState extends io.pulumi.resources.ResourceAr
 
     public static final PerInstanceConfigState Empty = new PerInstanceConfigState();
 
+    /**
+     * The instance group manager this instance config is part of.
+     * 
+     */
     @InputImport(name="instanceGroupManager")
     private final @Nullable Input<String> instanceGroupManager;
 
@@ -23,6 +27,15 @@ public final class PerInstanceConfigState extends io.pulumi.resources.ResourceAr
         return this.instanceGroupManager == null ? Input.empty() : this.instanceGroupManager;
     }
 
+    /**
+     * The minimal action to perform on the instance during an update.
+     * Default is `NONE`. Possible values are:
+     * * REPLACE
+     * * RESTART
+     * * REFRESH
+     * * NONE
+     * 
+     */
     @InputImport(name="minimalAction")
     private final @Nullable Input<String> minimalAction;
 
@@ -30,6 +43,15 @@ public final class PerInstanceConfigState extends io.pulumi.resources.ResourceAr
         return this.minimalAction == null ? Input.empty() : this.minimalAction;
     }
 
+    /**
+     * The most disruptive action to perform on the instance during an update.
+     * Default is `REPLACE`. Possible values are:
+     * * REPLACE
+     * * RESTART
+     * * REFRESH
+     * * NONE
+     * 
+     */
     @InputImport(name="mostDisruptiveAllowedAction")
     private final @Nullable Input<String> mostDisruptiveAllowedAction;
 
@@ -37,6 +59,10 @@ public final class PerInstanceConfigState extends io.pulumi.resources.ResourceAr
         return this.mostDisruptiveAllowedAction == null ? Input.empty() : this.mostDisruptiveAllowedAction;
     }
 
+    /**
+     * The name for this per-instance config and its corresponding instance.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -44,6 +70,11 @@ public final class PerInstanceConfigState extends io.pulumi.resources.ResourceAr
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The preserved state for this instance.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="preservedState")
     private final @Nullable Input<PerInstanceConfigPreservedStateGetArgs> preservedState;
 
@@ -51,6 +82,11 @@ public final class PerInstanceConfigState extends io.pulumi.resources.ResourceAr
         return this.preservedState == null ? Input.empty() : this.preservedState;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -58,6 +94,12 @@ public final class PerInstanceConfigState extends io.pulumi.resources.ResourceAr
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * When true, deleting this config will immediately remove any specified state from the underlying instance.
+     * When false, deleting this config will *not* immediately remove any state from the underlying instance.
+     * State will be removed on the next instance recreation or update.
+     * 
+     */
     @InputImport(name="removeInstanceStateOnDestroy")
     private final @Nullable Input<Boolean> removeInstanceStateOnDestroy;
 
@@ -65,6 +107,10 @@ public final class PerInstanceConfigState extends io.pulumi.resources.ResourceAr
         return this.removeInstanceStateOnDestroy == null ? Input.empty() : this.removeInstanceStateOnDestroy;
     }
 
+    /**
+     * Zone where the containing instance group manager is located
+     * 
+     */
     @InputImport(name="zone")
     private final @Nullable Input<String> zone;
 

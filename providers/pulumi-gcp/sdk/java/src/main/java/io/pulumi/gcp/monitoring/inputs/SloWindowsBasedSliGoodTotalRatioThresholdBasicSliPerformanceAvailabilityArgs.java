@@ -14,6 +14,10 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceA
 
     public static final SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailabilityArgs Empty = new SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailabilityArgs();
 
+    /**
+     * Whether an availability SLI is enabled or not. Must be set to ` true. Defaults to  `true`.
+     * 
+     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 

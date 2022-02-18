@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Access Review History Definition Instance.
+ * 
+ */
 public final class AccessReviewHistoryInstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AccessReviewHistoryInstanceArgs Empty = new AccessReviewHistoryInstanceArgs();
 
+    /**
+     * The display name for the parent history definition.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -21,6 +29,10 @@ public final class AccessReviewHistoryInstanceArgs extends io.pulumi.resources.R
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * Date time when history data report expires and the associated data is deleted.
+     * 
+     */
     @InputImport(name="expiration")
     private final @Nullable Input<String> expiration;
 
@@ -28,6 +40,10 @@ public final class AccessReviewHistoryInstanceArgs extends io.pulumi.resources.R
         return this.expiration == null ? Input.empty() : this.expiration;
     }
 
+    /**
+     * Date time when the history data report is scheduled to be generated.
+     * 
+     */
     @InputImport(name="fulfilledDateTime")
     private final @Nullable Input<String> fulfilledDateTime;
 
@@ -35,6 +51,10 @@ public final class AccessReviewHistoryInstanceArgs extends io.pulumi.resources.R
         return this.fulfilledDateTime == null ? Input.empty() : this.fulfilledDateTime;
     }
 
+    /**
+     * Date time used when selecting review data, all reviews included in data end on or before this date. For use only with one-time/non-recurring reports.
+     * 
+     */
     @InputImport(name="reviewHistoryPeriodEndDateTime")
     private final @Nullable Input<String> reviewHistoryPeriodEndDateTime;
 
@@ -42,6 +62,10 @@ public final class AccessReviewHistoryInstanceArgs extends io.pulumi.resources.R
         return this.reviewHistoryPeriodEndDateTime == null ? Input.empty() : this.reviewHistoryPeriodEndDateTime;
     }
 
+    /**
+     * Date time used when selecting review data, all reviews included in data start on or after this date. For use only with one-time/non-recurring reports.
+     * 
+     */
     @InputImport(name="reviewHistoryPeriodStartDateTime")
     private final @Nullable Input<String> reviewHistoryPeriodStartDateTime;
 
@@ -49,6 +73,10 @@ public final class AccessReviewHistoryInstanceArgs extends io.pulumi.resources.R
         return this.reviewHistoryPeriodStartDateTime == null ? Input.empty() : this.reviewHistoryPeriodStartDateTime;
     }
 
+    /**
+     * Date time when the history data report is scheduled to be generated.
+     * 
+     */
     @InputImport(name="runDateTime")
     private final @Nullable Input<String> runDateTime;
 

@@ -17,10 +17,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * DatabricksNotebook activity.
+ * 
+ */
 public final class DatabricksNotebookActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DatabricksNotebookActivityArgs Empty = new DatabricksNotebookActivityArgs();
 
+    /**
+     * Base parameters to be used for each run of this job.If the notebook takes a parameter that is not specified, the default value from the notebook will be used.
+     * 
+     */
     @InputImport(name="baseParameters")
     private final @Nullable Input<Map<String,Object>> baseParameters;
 
@@ -28,6 +36,10 @@ public final class DatabricksNotebookActivityArgs extends io.pulumi.resources.Re
         return this.baseParameters == null ? Input.empty() : this.baseParameters;
     }
 
+    /**
+     * Activity depends on condition.
+     * 
+     */
     @InputImport(name="dependsOn")
     private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
 
@@ -35,6 +47,10 @@ public final class DatabricksNotebookActivityArgs extends io.pulumi.resources.Re
         return this.dependsOn == null ? Input.empty() : this.dependsOn;
     }
 
+    /**
+     * Activity description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -42,6 +58,10 @@ public final class DatabricksNotebookActivityArgs extends io.pulumi.resources.Re
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * A list of libraries to be installed on the cluster that will execute the job.
+     * 
+     */
     @InputImport(name="libraries")
     private final @Nullable Input<List<Map<String,Object>>> libraries;
 
@@ -49,6 +69,10 @@ public final class DatabricksNotebookActivityArgs extends io.pulumi.resources.Re
         return this.libraries == null ? Input.empty() : this.libraries;
     }
 
+    /**
+     * Linked service reference.
+     * 
+     */
     @InputImport(name="linkedServiceName")
     private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
 
@@ -56,6 +80,10 @@ public final class DatabricksNotebookActivityArgs extends io.pulumi.resources.Re
         return this.linkedServiceName == null ? Input.empty() : this.linkedServiceName;
     }
 
+    /**
+     * Activity name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -63,6 +91,10 @@ public final class DatabricksNotebookActivityArgs extends io.pulumi.resources.Re
         return this.name;
     }
 
+    /**
+     * The absolute path of the notebook to be run in the Databricks Workspace. This path must begin with a slash. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="notebookPath", required=true)
     private final Input<Object> notebookPath;
 
@@ -70,6 +102,10 @@ public final class DatabricksNotebookActivityArgs extends io.pulumi.resources.Re
         return this.notebookPath;
     }
 
+    /**
+     * Activity policy.
+     * 
+     */
     @InputImport(name="policy")
     private final @Nullable Input<ActivityPolicyArgs> policy;
 
@@ -77,6 +113,11 @@ public final class DatabricksNotebookActivityArgs extends io.pulumi.resources.Re
         return this.policy == null ? Input.empty() : this.policy;
     }
 
+    /**
+     * Type of activity.
+     * Expected value is 'DatabricksNotebook'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -84,6 +125,10 @@ public final class DatabricksNotebookActivityArgs extends io.pulumi.resources.Re
         return this.type;
     }
 
+    /**
+     * Activity user properties.
+     * 
+     */
     @InputImport(name="userProperties")
     private final @Nullable Input<List<UserPropertyArgs>> userProperties;
 

@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSubnetworkIamPolicy {
+/**
+ * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+ * 
+ */
     public static CompletableFuture<GetSubnetworkIamPolicyResult> invokeAsync(GetSubnetworkIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getSubnetworkIamPolicy", TypeShape.of(GetSubnetworkIamPolicyResult.class), args == null ? GetSubnetworkIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

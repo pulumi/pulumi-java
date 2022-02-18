@@ -9,6 +9,10 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * The inputs for a monitoring job.
+ * 
+ */
 public final class DataQualityJobDefinitionDataQualityJobInputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataQualityJobDefinitionDataQualityJobInputArgs Empty = new DataQualityJobDefinitionDataQualityJobInputArgs();

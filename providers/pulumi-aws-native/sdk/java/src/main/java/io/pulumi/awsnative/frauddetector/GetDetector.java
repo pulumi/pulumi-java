@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDetector {
+/**
+ * A resource schema for a Detector in Amazon Fraud Detector.
+ * 
+ */
     public static CompletableFuture<GetDetectorResult> invokeAsync(GetDetectorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:frauddetector:getDetector", TypeShape.of(GetDetectorResult.class), args == null ? GetDetectorArgs.Empty : args, Utilities.withVersion(options));
     }

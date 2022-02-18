@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Header configuration of the Actions set in Application Gateway.
+ * 
+ */
 public final class ApplicationGatewayHeaderConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApplicationGatewayHeaderConfigurationResponse Empty = new ApplicationGatewayHeaderConfigurationResponse();
 
+    /**
+     * Header name of the header configuration.
+     * 
+     */
     @InputImport(name="headerName")
     private final @Nullable String headerName;
 
@@ -21,6 +29,10 @@ public final class ApplicationGatewayHeaderConfigurationResponse extends io.pulu
         return this.headerName == null ? Optional.empty() : Optional.ofNullable(this.headerName);
     }
 
+    /**
+     * Header value of the header configuration.
+     * 
+     */
     @InputImport(name="headerValue")
     private final @Nullable String headerValue;
 

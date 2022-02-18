@@ -10,8 +10,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DataSourcePrestoParameters {
+    /**
+     * <p>Catalog.</p>
+     * 
+     */
     private final String catalog;
+    /**
+     * <p>Host.</p>
+     * 
+     */
     private final String host;
+    /**
+     * <p>Port.</p>
+     * 
+     */
     private final Double port;
 
     @OutputCustomType.Constructor({"catalog","host","port"})
@@ -24,12 +36,24 @@ public final class DataSourcePrestoParameters {
         this.port = Objects.requireNonNull(port);
     }
 
+    /**
+     * <p>Catalog.</p>
+     * 
+     */
     public String getCatalog() {
         return this.catalog;
     }
+    /**
+     * <p>Host.</p>
+     * 
+     */
     public String getHost() {
         return this.host;
     }
+    /**
+     * <p>Port.</p>
+     * 
+     */
     public Double getPort() {
         return this.port;
     }

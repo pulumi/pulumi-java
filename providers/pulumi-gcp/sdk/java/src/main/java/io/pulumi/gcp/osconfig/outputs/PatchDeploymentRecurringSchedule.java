@@ -15,13 +15,56 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PatchDeploymentRecurringSchedule {
+    /**
+     * The end time at which a recurring patch deployment schedule is no longer active.
+     * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * 
+     */
     private final @Nullable String endTime;
+    /**
+     * - 
+     * The time the last patch job ran successfully.
+     * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * 
+     */
     private final @Nullable String lastExecuteTime;
+    /**
+     * Schedule with monthly executions.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable PatchDeploymentRecurringScheduleMonthly monthly;
+    /**
+     * - 
+     * The time the next patch job is scheduled to run.
+     * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * 
+     */
     private final @Nullable String nextExecuteTime;
+    /**
+     * The time that the recurring schedule becomes effective. Defaults to createTime of the patch deployment.
+     * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * 
+     */
     private final @Nullable String startTime;
+    /**
+     * Time of the day to run a recurring deployment.
+     * Structure is documented below.
+     * 
+     */
     private final PatchDeploymentRecurringScheduleTimeOfDay timeOfDay;
+    /**
+     * Defines the time zone that timeOfDay is relative to. The rules for daylight saving time are
+     * determined by the chosen time zone.
+     * Structure is documented below.
+     * 
+     */
     private final PatchDeploymentRecurringScheduleTimeZone timeZone;
+    /**
+     * Schedule with weekly executions.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable PatchDeploymentRecurringScheduleWeekly weekly;
 
     @OutputCustomType.Constructor({"endTime","lastExecuteTime","monthly","nextExecuteTime","startTime","timeOfDay","timeZone","weekly"})
@@ -44,27 +87,70 @@ public final class PatchDeploymentRecurringSchedule {
         this.weekly = weekly;
     }
 
+    /**
+     * The end time at which a recurring patch deployment schedule is no longer active.
+     * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * 
+     */
     public Optional<String> getEndTime() {
         return Optional.ofNullable(this.endTime);
     }
+    /**
+     * - 
+     * The time the last patch job ran successfully.
+     * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * 
+     */
     public Optional<String> getLastExecuteTime() {
         return Optional.ofNullable(this.lastExecuteTime);
     }
+    /**
+     * Schedule with monthly executions.
+     * Structure is documented below.
+     * 
+     */
     public Optional<PatchDeploymentRecurringScheduleMonthly> getMonthly() {
         return Optional.ofNullable(this.monthly);
     }
+    /**
+     * - 
+     * The time the next patch job is scheduled to run.
+     * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * 
+     */
     public Optional<String> getNextExecuteTime() {
         return Optional.ofNullable(this.nextExecuteTime);
     }
+    /**
+     * The time that the recurring schedule becomes effective. Defaults to createTime of the patch deployment.
+     * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * 
+     */
     public Optional<String> getStartTime() {
         return Optional.ofNullable(this.startTime);
     }
+    /**
+     * Time of the day to run a recurring deployment.
+     * Structure is documented below.
+     * 
+     */
     public PatchDeploymentRecurringScheduleTimeOfDay getTimeOfDay() {
         return this.timeOfDay;
     }
+    /**
+     * Defines the time zone that timeOfDay is relative to. The rules for daylight saving time are
+     * determined by the chosen time zone.
+     * Structure is documented below.
+     * 
+     */
     public PatchDeploymentRecurringScheduleTimeZone getTimeZone() {
         return this.timeZone;
     }
+    /**
+     * Schedule with weekly executions.
+     * Structure is documented below.
+     * 
+     */
     public Optional<PatchDeploymentRecurringScheduleWeekly> getWeekly() {
         return Optional.ofNullable(this.weekly);
     }

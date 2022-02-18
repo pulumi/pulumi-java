@@ -17,6 +17,10 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ChannelArgs Empty = new ChannelArgs();
 
+    /**
+     * A short text description of the Channel.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -24,6 +28,10 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The configuration parameters for egress access logging.
+     * 
+     */
     @InputImport(name="egressAccessLogs")
     private final @Nullable Input<ChannelLogConfigurationArgs> egressAccessLogs;
 
@@ -31,6 +39,10 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
         return this.egressAccessLogs == null ? Input.empty() : this.egressAccessLogs;
     }
 
+    /**
+     * The configuration parameters for egress access logging.
+     * 
+     */
     @InputImport(name="ingressAccessLogs")
     private final @Nullable Input<ChannelLogConfigurationArgs> ingressAccessLogs;
 
@@ -38,6 +50,10 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
         return this.ingressAccessLogs == null ? Input.empty() : this.ingressAccessLogs;
     }
 
+    /**
+     * A collection of tags associated with a resource
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<ChannelTagArgs>> tags;
 

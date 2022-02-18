@@ -16,6 +16,10 @@ public final class OutputDataBindingArgs extends io.pulumi.resources.ResourceArg
 
     public static final OutputDataBindingArgs Empty = new OutputDataBindingArgs();
 
+    /**
+     * ARM resource ID of the datastore where the data output will be stored.
+     * 
+     */
     @InputImport(name="datastoreId")
     private final @Nullable Input<String> datastoreId;
 
@@ -23,6 +27,10 @@ public final class OutputDataBindingArgs extends io.pulumi.resources.ResourceArg
         return this.datastoreId == null ? Input.empty() : this.datastoreId;
     }
 
+    /**
+     * Mechanism for data movement to datastore.
+     * 
+     */
     @InputImport(name="mode")
     private final @Nullable Input<Either<String,DataBindingMode>> mode;
 
@@ -30,6 +38,10 @@ public final class OutputDataBindingArgs extends io.pulumi.resources.ResourceArg
         return this.mode == null ? Input.empty() : this.mode;
     }
 
+    /**
+     * Location of data inside the container process.
+     * 
+     */
     @InputImport(name="pathOnCompute")
     private final @Nullable Input<String> pathOnCompute;
 
@@ -37,6 +49,10 @@ public final class OutputDataBindingArgs extends io.pulumi.resources.ResourceArg
         return this.pathOnCompute == null ? Input.empty() : this.pathOnCompute;
     }
 
+    /**
+     * Path within the datastore to the data.
+     * 
+     */
     @InputImport(name="pathOnDatastore")
     private final @Nullable Input<String> pathOnDatastore;
 

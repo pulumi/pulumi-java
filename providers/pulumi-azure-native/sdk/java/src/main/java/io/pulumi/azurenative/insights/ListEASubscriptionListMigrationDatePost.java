@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListEASubscriptionListMigrationDatePost {
+/**
+ * Subscription migrate date information properties
+ * API Version: 2017-10-01.
+ * 
+ *
+ * Subscription migrate date information properties
+ * 
+ */
     public static CompletableFuture<ListEASubscriptionListMigrationDatePostResult> invokeAsync(@Nullable ListEASubscriptionListMigrationDatePostArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:listEASubscriptionListMigrationDatePost", TypeShape.of(ListEASubscriptionListMigrationDatePostResult.class), args == null ? ListEASubscriptionListMigrationDatePostArgs.Empty : args, Utilities.withVersion(options));
     }

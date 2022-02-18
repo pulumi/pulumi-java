@@ -14,6 +14,10 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SkuResponse Empty = new SkuResponse();
 
+    /**
+     * Gets or set the SKU.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 

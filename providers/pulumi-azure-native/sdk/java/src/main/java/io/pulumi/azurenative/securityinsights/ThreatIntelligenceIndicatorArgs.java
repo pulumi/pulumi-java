@@ -24,6 +24,10 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
 
     public static final ThreatIntelligenceIndicatorArgs Empty = new ThreatIntelligenceIndicatorArgs();
 
+    /**
+     * Confidence of threat intelligence entity
+     * 
+     */
     @InputImport(name="confidence")
     private final @Nullable Input<Integer> confidence;
 
@@ -31,6 +35,10 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
         return this.confidence == null ? Input.empty() : this.confidence;
     }
 
+    /**
+     * Created by
+     * 
+     */
     @InputImport(name="created")
     private final @Nullable Input<String> created;
 
@@ -38,6 +46,10 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
         return this.created == null ? Input.empty() : this.created;
     }
 
+    /**
+     * Created by reference of threat intelligence entity
+     * 
+     */
     @InputImport(name="createdByRef")
     private final @Nullable Input<String> createdByRef;
 
@@ -45,6 +57,10 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
         return this.createdByRef == null ? Input.empty() : this.createdByRef;
     }
 
+    /**
+     * Is threat intelligence entity defanged
+     * 
+     */
     @InputImport(name="defanged")
     private final @Nullable Input<Boolean> defanged;
 
@@ -52,6 +68,10 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
         return this.defanged == null ? Input.empty() : this.defanged;
     }
 
+    /**
+     * Description of a threat intelligence entity
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -59,6 +79,10 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Display name of a threat intelligence entity
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -66,6 +90,10 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * Extensions map
+     * 
+     */
     @InputImport(name="extensions")
     private final @Nullable Input<Object> extensions;
 
@@ -73,6 +101,10 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
         return this.extensions == null ? Input.empty() : this.extensions;
     }
 
+    /**
+     * External ID of threat intelligence entity
+     * 
+     */
     @InputImport(name="externalId")
     private final @Nullable Input<String> externalId;
 
@@ -80,6 +112,10 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
         return this.externalId == null ? Input.empty() : this.externalId;
     }
 
+    /**
+     * External last updated time in UTC
+     * 
+     */
     @InputImport(name="externalLastUpdatedTimeUtc")
     private final @Nullable Input<String> externalLastUpdatedTimeUtc;
 
@@ -87,6 +123,10 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
         return this.externalLastUpdatedTimeUtc == null ? Input.empty() : this.externalLastUpdatedTimeUtc;
     }
 
+    /**
+     * External References
+     * 
+     */
     @InputImport(name="externalReferences")
     private final @Nullable Input<List<ThreatIntelligenceExternalReferenceArgs>> externalReferences;
 
@@ -94,6 +134,10 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
         return this.externalReferences == null ? Input.empty() : this.externalReferences;
     }
 
+    /**
+     * Granular Markings
+     * 
+     */
     @InputImport(name="granularMarkings")
     private final @Nullable Input<List<ThreatIntelligenceGranularMarkingModelArgs>> granularMarkings;
 
@@ -101,6 +145,10 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
         return this.granularMarkings == null ? Input.empty() : this.granularMarkings;
     }
 
+    /**
+     * Indicator types of threat intelligence entities
+     * 
+     */
     @InputImport(name="indicatorTypes")
     private final @Nullable Input<List<String>> indicatorTypes;
 
@@ -108,6 +156,10 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
         return this.indicatorTypes == null ? Input.empty() : this.indicatorTypes;
     }
 
+    /**
+     * Kill chain phases
+     * 
+     */
     @InputImport(name="killChainPhases")
     private final @Nullable Input<List<ThreatIntelligenceKillChainPhaseArgs>> killChainPhases;
 
@@ -115,6 +167,10 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
         return this.killChainPhases == null ? Input.empty() : this.killChainPhases;
     }
 
+    /**
+     * The kind of the entity.
+     * 
+     */
     @InputImport(name="kind", required=true)
     private final Input<Either<String,ThreatIntelligenceResourceKind>> kind;
 
@@ -122,6 +178,10 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
         return this.kind;
     }
 
+    /**
+     * Labels  of threat intelligence entity
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<List<String>> labels;
 
@@ -129,6 +189,10 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * Language of threat intelligence entity
+     * 
+     */
     @InputImport(name="language")
     private final @Nullable Input<String> language;
 
@@ -136,6 +200,10 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
         return this.language == null ? Input.empty() : this.language;
     }
 
+    /**
+     * Last updated time in UTC
+     * 
+     */
     @InputImport(name="lastUpdatedTimeUtc")
     private final @Nullable Input<String> lastUpdatedTimeUtc;
 
@@ -143,6 +211,10 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
         return this.lastUpdatedTimeUtc == null ? Input.empty() : this.lastUpdatedTimeUtc;
     }
 
+    /**
+     * Modified by
+     * 
+     */
     @InputImport(name="modified")
     private final @Nullable Input<String> modified;
 
@@ -150,6 +222,10 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
         return this.modified == null ? Input.empty() : this.modified;
     }
 
+    /**
+     * Threat intelligence indicator name field.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -157,6 +233,10 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Threat intelligence entity object marking references
+     * 
+     */
     @InputImport(name="objectMarkingRefs")
     private final @Nullable Input<List<String>> objectMarkingRefs;
 
@@ -164,6 +244,10 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
         return this.objectMarkingRefs == null ? Input.empty() : this.objectMarkingRefs;
     }
 
+    /**
+     * The namespace of workspaces resource provider- Microsoft.OperationalInsights.
+     * 
+     */
     @InputImport(name="operationalInsightsResourceProvider", required=true)
     private final Input<String> operationalInsightsResourceProvider;
 
@@ -171,6 +255,10 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
         return this.operationalInsightsResourceProvider;
     }
 
+    /**
+     * Parsed patterns
+     * 
+     */
     @InputImport(name="parsedPattern")
     private final @Nullable Input<List<ThreatIntelligenceParsedPatternArgs>> parsedPattern;
 
@@ -178,6 +266,10 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
         return this.parsedPattern == null ? Input.empty() : this.parsedPattern;
     }
 
+    /**
+     * Pattern of a threat intelligence entity
+     * 
+     */
     @InputImport(name="pattern")
     private final @Nullable Input<String> pattern;
 
@@ -185,6 +277,10 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
         return this.pattern == null ? Input.empty() : this.pattern;
     }
 
+    /**
+     * Pattern type of a threat intelligence entity
+     * 
+     */
     @InputImport(name="patternType")
     private final @Nullable Input<String> patternType;
 
@@ -192,6 +288,10 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
         return this.patternType == null ? Input.empty() : this.patternType;
     }
 
+    /**
+     * Pattern version of a threat intelligence entity
+     * 
+     */
     @InputImport(name="patternVersion")
     private final @Nullable Input<String> patternVersion;
 
@@ -199,6 +299,10 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
         return this.patternVersion == null ? Input.empty() : this.patternVersion;
     }
 
+    /**
+     * The name of the resource group within the user's subscription. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -206,6 +310,10 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
         return this.resourceGroupName;
     }
 
+    /**
+     * Is threat intelligence entity revoked
+     * 
+     */
     @InputImport(name="revoked")
     private final @Nullable Input<Boolean> revoked;
 
@@ -213,6 +321,10 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
         return this.revoked == null ? Input.empty() : this.revoked;
     }
 
+    /**
+     * Source of a threat intelligence entity
+     * 
+     */
     @InputImport(name="source")
     private final @Nullable Input<String> source;
 
@@ -220,6 +332,10 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
         return this.source == null ? Input.empty() : this.source;
     }
 
+    /**
+     * List of tags
+     * 
+     */
     @InputImport(name="threatIntelligenceTags")
     private final @Nullable Input<List<String>> threatIntelligenceTags;
 
@@ -227,6 +343,10 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
         return this.threatIntelligenceTags == null ? Input.empty() : this.threatIntelligenceTags;
     }
 
+    /**
+     * Threat types
+     * 
+     */
     @InputImport(name="threatTypes")
     private final @Nullable Input<List<String>> threatTypes;
 
@@ -234,6 +354,10 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
         return this.threatTypes == null ? Input.empty() : this.threatTypes;
     }
 
+    /**
+     * Valid from
+     * 
+     */
     @InputImport(name="validFrom")
     private final @Nullable Input<String> validFrom;
 
@@ -241,6 +365,10 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
         return this.validFrom == null ? Input.empty() : this.validFrom;
     }
 
+    /**
+     * Valid until
+     * 
+     */
     @InputImport(name="validUntil")
     private final @Nullable Input<String> validUntil;
 
@@ -248,6 +376,10 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
         return this.validUntil == null ? Input.empty() : this.validUntil;
     }
 
+    /**
+     * The name of the workspace.
+     * 
+     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

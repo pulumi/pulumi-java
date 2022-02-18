@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Note holding the version of the provider's builder and the signature of the provenance message in linked BuildDetails.
+ * 
+ */
 public final class BuildTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BuildTypeArgs Empty = new BuildTypeArgs();
 
+    /**
+     * Version of the builder which produced this Note.
+     * 
+     */
     @InputImport(name="builderVersion")
     private final @Nullable Input<String> builderVersion;
 
@@ -22,6 +30,10 @@ public final class BuildTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.builderVersion == null ? Input.empty() : this.builderVersion;
     }
 
+    /**
+     * Signature of the build in Occurrences pointing to the Note containing this `BuilderDetails`.
+     * 
+     */
     @InputImport(name="signature")
     private final @Nullable Input<BuildSignatureArgs> signature;
 

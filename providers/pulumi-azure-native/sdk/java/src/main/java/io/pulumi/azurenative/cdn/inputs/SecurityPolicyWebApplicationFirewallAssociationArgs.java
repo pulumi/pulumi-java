@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * settings for security policy patterns to match
+ * 
+ */
 public final class SecurityPolicyWebApplicationFirewallAssociationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SecurityPolicyWebApplicationFirewallAssociationArgs Empty = new SecurityPolicyWebApplicationFirewallAssociationArgs();
 
+    /**
+     * List of domains.
+     * 
+     */
     @InputImport(name="domains")
     private final @Nullable Input<List<ResourceReferenceArgs>> domains;
 
@@ -23,6 +31,10 @@ public final class SecurityPolicyWebApplicationFirewallAssociationArgs extends i
         return this.domains == null ? Input.empty() : this.domains;
     }
 
+    /**
+     * List of paths
+     * 
+     */
     @InputImport(name="patternsToMatch")
     private final @Nullable Input<List<String>> patternsToMatch;
 

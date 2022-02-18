@@ -9,9 +9,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RelationshipOccurrenceResponse {
+    /**
+     * A place for the SPDX file creator to record any general comments about the relationship
+     * 
+     */
     private final String comment;
+    /**
+     * Also referred to as SPDXRef-A The source SPDX element (file, package, etc)
+     * 
+     */
     private final String source;
+    /**
+     * Also referred to as SPDXRef-B The target SPDC element (file, package, etc) In cases where there are "known unknowns", the use of the keyword NOASSERTION can be used The keywords NONE can be used to indicate that an SPDX element (package/file/snippet) has no other elements connected by some relationship to it
+     * 
+     */
     private final String target;
+    /**
+     * The type of relationship between the source and target SPDX elements
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"comment","source","target","type"})
@@ -26,15 +42,31 @@ public final class RelationshipOccurrenceResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * A place for the SPDX file creator to record any general comments about the relationship
+     * 
+     */
     public String getComment() {
         return this.comment;
     }
+    /**
+     * Also referred to as SPDXRef-A The source SPDX element (file, package, etc)
+     * 
+     */
     public String getSource() {
         return this.source;
     }
+    /**
+     * Also referred to as SPDXRef-B The target SPDC element (file, package, etc) In cases where there are "known unknowns", the use of the keyword NOASSERTION can be used The keywords NONE can be used to indicate that an SPDX element (package/file/snippet) has no other elements connected by some relationship to it
+     * 
+     */
     public String getTarget() {
         return this.target;
     }
+    /**
+     * The type of relationship between the source and target SPDX elements
+     * 
+     */
     public String getType() {
         return this.type;
     }

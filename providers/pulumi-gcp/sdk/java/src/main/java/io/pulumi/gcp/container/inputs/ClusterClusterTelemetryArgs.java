@@ -13,6 +13,10 @@ public final class ClusterClusterTelemetryArgs extends io.pulumi.resources.Resou
 
     public static final ClusterClusterTelemetryArgs Empty = new ClusterClusterTelemetryArgs();
 
+    /**
+     * The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

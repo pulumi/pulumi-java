@@ -17,6 +17,10 @@ public final class TagTemplateFieldGetArgs extends io.pulumi.resources.ResourceA
 
     public static final TagTemplateFieldGetArgs Empty = new TagTemplateFieldGetArgs();
 
+    /**
+     * A description for this field.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -24,6 +28,10 @@ public final class TagTemplateFieldGetArgs extends io.pulumi.resources.ResourceA
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The display name for this template.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -31,6 +39,10 @@ public final class TagTemplateFieldGetArgs extends io.pulumi.resources.ResourceA
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The identifier for this object. Format specified above.
+     * 
+     */
     @InputImport(name="fieldId", required=true)
     private final Input<String> fieldId;
 
@@ -38,6 +50,10 @@ public final class TagTemplateFieldGetArgs extends io.pulumi.resources.ResourceA
         return this.fieldId;
     }
 
+    /**
+     * Whether this is a required field. Defaults to false.
+     * 
+     */
     @InputImport(name="isRequired")
     private final @Nullable Input<Boolean> isRequired;
 
@@ -45,6 +61,11 @@ public final class TagTemplateFieldGetArgs extends io.pulumi.resources.ResourceA
         return this.isRequired == null ? Input.empty() : this.isRequired;
     }
 
+    /**
+     * - 
+     * The resource name of the tag template field in URL format. Example: projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId}/fields/{field}
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -52,6 +73,12 @@ public final class TagTemplateFieldGetArgs extends io.pulumi.resources.ResourceA
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The order of this field with respect to other fields in this tag template.
+     * A higher value indicates a more important field. The value can be negative.
+     * Multiple fields can have the same order, and field orders within a tag do not have to be sequential.
+     * 
+     */
     @InputImport(name="order")
     private final @Nullable Input<Integer> order;
 
@@ -59,6 +86,11 @@ public final class TagTemplateFieldGetArgs extends io.pulumi.resources.ResourceA
         return this.order == null ? Input.empty() : this.order;
     }
 
+    /**
+     * The type of value this tag field can contain.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<TagTemplateFieldTypeGetArgs> type;
 

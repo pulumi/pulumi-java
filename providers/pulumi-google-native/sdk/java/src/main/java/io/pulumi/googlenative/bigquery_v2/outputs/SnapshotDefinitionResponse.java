@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SnapshotDefinitionResponse {
+    /**
+     * [Required] Reference describing the ID of the table that was snapshot.
+     * 
+     */
     private final TableReferenceResponse baseTableReference;
+    /**
+     * [Required] The time at which the base table was snapshot. This value is reported in the JSON response using RFC3339 format.
+     * 
+     */
     private final String snapshotTime;
 
     @OutputCustomType.Constructor({"baseTableReference","snapshotTime"})
@@ -21,9 +29,17 @@ public final class SnapshotDefinitionResponse {
         this.snapshotTime = Objects.requireNonNull(snapshotTime);
     }
 
+    /**
+     * [Required] Reference describing the ID of the table that was snapshot.
+     * 
+     */
     public TableReferenceResponse getBaseTableReference() {
         return this.baseTableReference;
     }
+    /**
+     * [Required] The time at which the base table was snapshot. This value is reported in the JSON response using RFC3339 format.
+     * 
+     */
     public String getSnapshotTime() {
         return this.snapshotTime;
     }

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * WCF relay type.
+     * 
+     */
     @EnumType
     public enum Relaytype {
         NetTcp("NetTcp"),

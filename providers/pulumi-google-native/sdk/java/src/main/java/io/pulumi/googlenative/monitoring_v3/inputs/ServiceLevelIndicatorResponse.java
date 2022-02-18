@@ -10,10 +10,18 @@ import io.pulumi.googlenative.monitoring_v3.inputs.WindowsBasedSliResponse;
 import java.util.Objects;
 
 
+/**
+ * A Service-Level Indicator (SLI) describes the "performance" of a service. For some services, the SLI is well-defined. In such cases, the SLI can be described easily by referencing the well-known SLI and providing the needed parameters. Alternatively, a "custom" SLI can be defined with a query to the underlying metric store. An SLI is defined to be good_service / total_service over any queried time interval. The value of performance always falls into the range 0 <= performance <= 1. A custom SLI describes how to compute this ratio, whether this is by dividing values from a pair of time series, cutting a Distribution into good and bad counts, or counting time windows in which the service complies with a criterion. For separation of concerns, a single Service-Level Indicator measures performance for only one aspect of service quality, such as fraction of successful queries or fast-enough queries.
+ * 
+ */
 public final class ServiceLevelIndicatorResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ServiceLevelIndicatorResponse Empty = new ServiceLevelIndicatorResponse();
 
+    /**
+     * Basic SLI on a well-known service type.
+     * 
+     */
     @InputImport(name="basicSli", required=true)
     private final BasicSliResponse basicSli;
 
@@ -21,6 +29,10 @@ public final class ServiceLevelIndicatorResponse extends io.pulumi.resources.Inv
         return this.basicSli;
     }
 
+    /**
+     * Request-based SLIs
+     * 
+     */
     @InputImport(name="requestBased", required=true)
     private final RequestBasedSliResponse requestBased;
 
@@ -28,6 +40,10 @@ public final class ServiceLevelIndicatorResponse extends io.pulumi.resources.Inv
         return this.requestBased;
     }
 
+    /**
+     * Windows-based SLIs
+     * 
+     */
     @InputImport(name="windowsBased", required=true)
     private final WindowsBasedSliResponse windowsBased;
 

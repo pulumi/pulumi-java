@@ -16,6 +16,10 @@ public final class DiagnosticSettingArgs extends io.pulumi.resources.ResourceArg
 
     public static final DiagnosticSettingArgs Empty = new DiagnosticSettingArgs();
 
+    /**
+     * The resource Id for the event hub authorization rule.
+     * 
+     */
     @InputImport(name="eventHubAuthorizationRuleId")
     private final @Nullable Input<String> eventHubAuthorizationRuleId;
 
@@ -23,6 +27,10 @@ public final class DiagnosticSettingArgs extends io.pulumi.resources.ResourceArg
         return this.eventHubAuthorizationRuleId == null ? Input.empty() : this.eventHubAuthorizationRuleId;
     }
 
+    /**
+     * The name of the event hub. If none is specified, the default event hub will be selected.
+     * 
+     */
     @InputImport(name="eventHubName")
     private final @Nullable Input<String> eventHubName;
 
@@ -30,6 +38,10 @@ public final class DiagnosticSettingArgs extends io.pulumi.resources.ResourceArg
         return this.eventHubName == null ? Input.empty() : this.eventHubName;
     }
 
+    /**
+     * The list of logs settings.
+     * 
+     */
     @InputImport(name="logs")
     private final @Nullable Input<List<LogSettingsArgs>> logs;
 
@@ -37,6 +49,10 @@ public final class DiagnosticSettingArgs extends io.pulumi.resources.ResourceArg
         return this.logs == null ? Input.empty() : this.logs;
     }
 
+    /**
+     * The name of the diagnostic setting.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -44,6 +60,10 @@ public final class DiagnosticSettingArgs extends io.pulumi.resources.ResourceArg
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The service bus rule Id of the diagnostic setting. This is here to maintain backwards compatibility.
+     * 
+     */
     @InputImport(name="serviceBusRuleId")
     private final @Nullable Input<String> serviceBusRuleId;
 
@@ -51,6 +71,10 @@ public final class DiagnosticSettingArgs extends io.pulumi.resources.ResourceArg
         return this.serviceBusRuleId == null ? Input.empty() : this.serviceBusRuleId;
     }
 
+    /**
+     * The resource ID of the storage account to which you would like to send Diagnostic Logs.
+     * 
+     */
     @InputImport(name="storageAccountId")
     private final @Nullable Input<String> storageAccountId;
 
@@ -58,6 +82,10 @@ public final class DiagnosticSettingArgs extends io.pulumi.resources.ResourceArg
         return this.storageAccountId == null ? Input.empty() : this.storageAccountId;
     }
 
+    /**
+     * The workspace ID (resource ID of a Log Analytics workspace) for a Log Analytics workspace to which you would like to send Diagnostic Logs. Example: /subscriptions/4b9e8510-67ab-4e9a-95a9-e2f1e570ea9c/resourceGroups/insights-integration/providers/Microsoft.OperationalInsights/workspaces/viruela2
+     * 
+     */
     @InputImport(name="workspaceId")
     private final @Nullable Input<String> workspaceId;
 

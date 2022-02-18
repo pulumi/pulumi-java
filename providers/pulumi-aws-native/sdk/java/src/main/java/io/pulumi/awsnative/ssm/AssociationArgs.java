@@ -29,6 +29,10 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
         return this.applyOnlyAtCronInterval == null ? Input.empty() : this.applyOnlyAtCronInterval;
     }
 
+    /**
+     * The name of the association.
+     * 
+     */
     @InputImport(name="associationName")
     private final @Nullable Input<String> associationName;
 
@@ -57,6 +61,10 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
         return this.complianceSeverity == null ? Input.empty() : this.complianceSeverity;
     }
 
+    /**
+     * The version of the SSM document to associate with the target.
+     * 
+     */
     @InputImport(name="documentVersion")
     private final @Nullable Input<String> documentVersion;
 
@@ -64,6 +72,10 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
         return this.documentVersion == null ? Input.empty() : this.documentVersion;
     }
 
+    /**
+     * The ID of the instance that the SSM document is associated with.
+     * 
+     */
     @InputImport(name="instanceId")
     private final @Nullable Input<String> instanceId;
 
@@ -85,6 +97,10 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
         return this.maxErrors == null ? Input.empty() : this.maxErrors;
     }
 
+    /**
+     * The name of the SSM document.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -99,6 +115,10 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
         return this.outputLocation == null ? Input.empty() : this.outputLocation;
     }
 
+    /**
+     * Parameter values that the SSM document uses at runtime.
+     * 
+     */
     @InputImport(name="parameters")
     private final @Nullable Input<Object> parameters;
 
@@ -106,6 +126,10 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
+    /**
+     * A Cron or Rate expression that specifies when the association is applied to the target.
+     * 
+     */
     @InputImport(name="scheduleExpression")
     private final @Nullable Input<String> scheduleExpression;
 
@@ -120,6 +144,10 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
         return this.syncCompliance == null ? Input.empty() : this.syncCompliance;
     }
 
+    /**
+     * The targets that the SSM document sends commands to.
+     * 
+     */
     @InputImport(name="targets")
     private final @Nullable Input<List<AssociationTargetArgs>> targets;
 

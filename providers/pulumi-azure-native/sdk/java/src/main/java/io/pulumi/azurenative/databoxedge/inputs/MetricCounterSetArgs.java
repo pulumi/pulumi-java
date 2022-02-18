@@ -10,10 +10,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * The metric counter set
+ * 
+ */
 public final class MetricCounterSetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MetricCounterSetArgs Empty = new MetricCounterSetArgs();
 
+    /**
+     * The counters that should be collected in this set.
+     * 
+     */
     @InputImport(name="counters", required=true)
     private final Input<List<MetricCounterArgs>> counters;
 

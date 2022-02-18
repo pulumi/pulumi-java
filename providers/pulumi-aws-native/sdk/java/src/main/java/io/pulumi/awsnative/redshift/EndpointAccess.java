@@ -16,75 +16,173 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Resource schema for a Redshift-managed VPC endpoint.
+ * 
+ */
 @ResourceType(type="aws-native:redshift:EndpointAccess")
 public class EndpointAccess extends io.pulumi.resources.CustomResource {
+    /**
+     * The DNS address of the endpoint.
+     * 
+     */
     @OutputExport(name="address", type=String.class, parameters={})
     private Output<String> address;
 
+    /**
+     * @return The DNS address of the endpoint.
+     * 
+     */
     public Output<String> getAddress() {
         return this.address;
     }
+    /**
+     * A unique identifier for the cluster. You use this identifier to refer to the cluster for any subsequent cluster operations such as deleting or modifying. All alphabetical characters must be lower case, no hypens at the end, no two consecutive hyphens. Cluster name should be unique for all clusters within an AWS account
+     * 
+     */
     @OutputExport(name="clusterIdentifier", type=String.class, parameters={})
     private Output</* @Nullable */ String> clusterIdentifier;
 
+    /**
+     * @return A unique identifier for the cluster. You use this identifier to refer to the cluster for any subsequent cluster operations such as deleting or modifying. All alphabetical characters must be lower case, no hypens at the end, no two consecutive hyphens. Cluster name should be unique for all clusters within an AWS account
+     * 
+     */
     public Output</* @Nullable */ String> getClusterIdentifier() {
         return this.clusterIdentifier;
     }
+    /**
+     * The time (UTC) that the endpoint was created.
+     * 
+     */
     @OutputExport(name="endpointCreateTime", type=String.class, parameters={})
     private Output<String> endpointCreateTime;
 
+    /**
+     * @return The time (UTC) that the endpoint was created.
+     * 
+     */
     public Output<String> getEndpointCreateTime() {
         return this.endpointCreateTime;
     }
+    /**
+     * The name of the endpoint.
+     * 
+     */
     @OutputExport(name="endpointName", type=String.class, parameters={})
     private Output<String> endpointName;
 
+    /**
+     * @return The name of the endpoint.
+     * 
+     */
     public Output<String> getEndpointName() {
         return this.endpointName;
     }
+    /**
+     * The status of the endpoint.
+     * 
+     */
     @OutputExport(name="endpointStatus", type=String.class, parameters={})
     private Output<String> endpointStatus;
 
+    /**
+     * @return The status of the endpoint.
+     * 
+     */
     public Output<String> getEndpointStatus() {
         return this.endpointStatus;
     }
+    /**
+     * The port number on which the cluster accepts incoming connections.
+     * 
+     */
     @OutputExport(name="port", type=Integer.class, parameters={})
     private Output<Integer> port;
 
+    /**
+     * @return The port number on which the cluster accepts incoming connections.
+     * 
+     */
     public Output<Integer> getPort() {
         return this.port;
     }
+    /**
+     * The AWS account ID of the owner of the cluster.
+     * 
+     */
     @OutputExport(name="resourceOwner", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceOwner;
 
+    /**
+     * @return The AWS account ID of the owner of the cluster.
+     * 
+     */
     public Output</* @Nullable */ String> getResourceOwner() {
         return this.resourceOwner;
     }
+    /**
+     * The subnet group name where Amazon Redshift chooses to deploy the endpoint.
+     * 
+     */
     @OutputExport(name="subnetGroupName", type=String.class, parameters={})
     private Output</* @Nullable */ String> subnetGroupName;
 
+    /**
+     * @return The subnet group name where Amazon Redshift chooses to deploy the endpoint.
+     * 
+     */
     public Output</* @Nullable */ String> getSubnetGroupName() {
         return this.subnetGroupName;
     }
+    /**
+     * The connection endpoint for connecting to an Amazon Redshift cluster through the proxy.
+     * 
+     */
     @OutputExport(name="vpcEndpoint", type=VpcEndpointProperties.class, parameters={})
     private Output<VpcEndpointProperties> vpcEndpoint;
 
+    /**
+     * @return The connection endpoint for connecting to an Amazon Redshift cluster through the proxy.
+     * 
+     */
     public Output<VpcEndpointProperties> getVpcEndpoint() {
         return this.vpcEndpoint;
     }
+    /**
+     * A list of vpc security group ids to apply to the created endpoint access.
+     * 
+     */
     @OutputExport(name="vpcSecurityGroupIds", type=List.class, parameters={String.class})
     private Output<List<String>> vpcSecurityGroupIds;
 
+    /**
+     * @return A list of vpc security group ids to apply to the created endpoint access.
+     * 
+     */
     public Output<List<String>> getVpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds;
     }
+    /**
+     * A list of Virtual Private Cloud (VPC) security groups to be associated with the endpoint.
+     * 
+     */
     @OutputExport(name="vpcSecurityGroups", type=List.class, parameters={EndpointAccessVpcSecurityGroup.class})
     private Output<List<EndpointAccessVpcSecurityGroup>> vpcSecurityGroups;
 
+    /**
+     * @return A list of Virtual Private Cloud (VPC) security groups to be associated with the endpoint.
+     * 
+     */
     public Output<List<EndpointAccessVpcSecurityGroup>> getVpcSecurityGroups() {
         return this.vpcSecurityGroups;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public EndpointAccess(String name, EndpointAccessArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:redshift:EndpointAccess", name, args == null ? EndpointAccessArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -100,6 +198,14 @@ public class EndpointAccess extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static EndpointAccess get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new EndpointAccess(name, id, options);
     }

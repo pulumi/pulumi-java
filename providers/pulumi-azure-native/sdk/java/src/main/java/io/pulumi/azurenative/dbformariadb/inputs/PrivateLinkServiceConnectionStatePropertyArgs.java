@@ -13,6 +13,10 @@ public final class PrivateLinkServiceConnectionStatePropertyArgs extends io.pulu
 
     public static final PrivateLinkServiceConnectionStatePropertyArgs Empty = new PrivateLinkServiceConnectionStatePropertyArgs();
 
+    /**
+     * The private link service connection description.
+     * 
+     */
     @InputImport(name="description", required=true)
     private final Input<String> description;
 
@@ -20,6 +24,10 @@ public final class PrivateLinkServiceConnectionStatePropertyArgs extends io.pulu
         return this.description;
     }
 
+    /**
+     * The private link service connection status.
+     * 
+     */
     @InputImport(name="status", required=true)
     private final Input<String> status;
 

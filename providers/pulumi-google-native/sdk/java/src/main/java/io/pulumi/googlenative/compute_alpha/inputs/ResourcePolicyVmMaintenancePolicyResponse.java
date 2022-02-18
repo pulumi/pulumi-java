@@ -20,6 +20,10 @@ public final class ResourcePolicyVmMaintenancePolicyResponse extends io.pulumi.r
         return this.concurrencyControlGroup;
     }
 
+    /**
+     * Maintenance windows that are applied to VMs covered by this policy.
+     * 
+     */
     @InputImport(name="maintenanceWindow", required=true)
     private final ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse maintenanceWindow;
 

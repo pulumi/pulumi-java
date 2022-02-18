@@ -15,6 +15,10 @@ public final class BackendServiceLogConfigArgs extends io.pulumi.resources.Resou
 
     public static final BackendServiceLogConfigArgs Empty = new BackendServiceLogConfigArgs();
 
+    /**
+     * Whether to enable logging for the load balancer traffic served by this backend service.
+     * 
+     */
     @InputImport(name="enable")
     private final @Nullable Input<Boolean> enable;
 
@@ -22,6 +26,13 @@ public final class BackendServiceLogConfigArgs extends io.pulumi.resources.Resou
         return this.enable == null ? Input.empty() : this.enable;
     }
 
+    /**
+     * This field can only be specified if logging is enabled for this backend service. The value of
+     * the field must be in [0, 1]. This configures the sampling rate of requests to the load balancer
+     * where 1.0 means all logged requests are reported and 0.0 means no logged requests are reported.
+     * The default value is 1.0.
+     * 
+     */
     @InputImport(name="sampleRate")
     private final @Nullable Input<Double> sampleRate;
 

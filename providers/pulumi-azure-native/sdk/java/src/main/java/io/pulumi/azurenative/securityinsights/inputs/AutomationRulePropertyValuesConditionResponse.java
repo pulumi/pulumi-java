@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Describes an automation rule condition that evaluates a property's value
+ * 
+ */
 public final class AutomationRulePropertyValuesConditionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AutomationRulePropertyValuesConditionResponse Empty = new AutomationRulePropertyValuesConditionResponse();
 
+    /**
+     * The configuration of the automation rule condition
+     * 
+     */
     @InputImport(name="conditionProperties", required=true)
     private final AutomationRulePropertyValuesConditionResponseConditionProperties conditionProperties;
 
@@ -20,6 +28,11 @@ public final class AutomationRulePropertyValuesConditionResponse extends io.pulu
         return this.conditionProperties;
     }
 
+    /**
+     * The type of the automation rule condition
+     * Expected value is 'Property'.
+     * 
+     */
     @InputImport(name="conditionType", required=true)
     private final String conditionType;
 

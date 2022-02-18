@@ -16,6 +16,10 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DashboardArgs Empty = new DashboardArgs();
 
+    /**
+     * The dashboard definition specified in a JSON literal.
+     * 
+     */
     @InputImport(name="dashboardDefinition", required=true)
     private final Input<String> dashboardDefinition;
 
@@ -23,6 +27,10 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
         return this.dashboardDefinition;
     }
 
+    /**
+     * A description for the dashboard.
+     * 
+     */
     @InputImport(name="dashboardDescription", required=true)
     private final Input<String> dashboardDescription;
 
@@ -30,6 +38,10 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
         return this.dashboardDescription;
     }
 
+    /**
+     * A friendly name for the dashboard.
+     * 
+     */
     @InputImport(name="dashboardName")
     private final @Nullable Input<String> dashboardName;
 
@@ -37,6 +49,10 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
         return this.dashboardName == null ? Input.empty() : this.dashboardName;
     }
 
+    /**
+     * The ID of the project in which to create the dashboard.
+     * 
+     */
     @InputImport(name="projectId")
     private final @Nullable Input<String> projectId;
 
@@ -44,6 +60,10 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
         return this.projectId == null ? Input.empty() : this.projectId;
     }
 
+    /**
+     * A list of key-value pairs that contain metadata for the dashboard.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<DashboardTagArgs>> tags;
 

@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFolderContact {
+/**
+ * Gets a single contact.
+ * 
+ */
     public static CompletableFuture<GetFolderContactResult> invokeAsync(GetFolderContactArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:essentialcontacts/v1:getFolderContact", TypeShape.of(GetFolderContactResult.class), args == null ? GetFolderContactArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDscpConfiguration {
+/**
+ * DSCP Configuration in a resource group.
+ * API Version: 2020-11-01.
+ * 
+ *
+ * DSCP Configuration in a resource group.
+ * 
+ */
     public static CompletableFuture<GetDscpConfigurationResult> invokeAsync(GetDscpConfigurationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getDscpConfiguration", TypeShape.of(GetDscpConfigurationResult.class), args == null ? GetDscpConfigurationArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -13,10 +13,42 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GuestPoliciesAssignment {
+    /**
+     * Targets instances matching at least one of these label sets. This allows an assignment to target disparate groups,
+     * for example "env=prod or env=staging".
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable List<GuestPoliciesAssignmentGroupLabel> groupLabels;
+    /**
+     * Targets VM instances whose name starts with one of these prefixes.
+     * Like labels, this is another way to group VM instances when targeting configs,
+     * for example prefix="prod-".
+     * Only supported for project-level policies.
+     * 
+     */
     private final @Nullable List<String> instanceNamePrefixes;
+    /**
+     * Targets any of the instances specified. Instances are specified by their URI in the form
+     * zones/[ZONE]/instances/[INSTANCE_NAME].
+     * Instance targeting is uncommon and is supported to facilitate the management of changes
+     * by the instance or to target specific VM instances for development and testing.
+     * Only supported for project-level policies and must reference instances within this project.
+     * 
+     */
     private final @Nullable List<String> instances;
+    /**
+     * Targets VM instances matching at least one of the following OS types.
+     * VM instances must match all supplied criteria for a given OsType to be included.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable List<GuestPoliciesAssignmentOsType> osTypes;
+    /**
+     * Targets instances in any of these zones. Leave empty to target instances in any zone.
+     * Zonal targeting is uncommon and is supported to facilitate the management of changes by zone.
+     * 
+     */
     private final @Nullable List<String> zones;
 
     @OutputCustomType.Constructor({"groupLabels","instanceNamePrefixes","instances","osTypes","zones"})
@@ -33,18 +65,50 @@ public final class GuestPoliciesAssignment {
         this.zones = zones;
     }
 
+    /**
+     * Targets instances matching at least one of these label sets. This allows an assignment to target disparate groups,
+     * for example "env=prod or env=staging".
+     * Structure is documented below.
+     * 
+     */
     public List<GuestPoliciesAssignmentGroupLabel> getGroupLabels() {
         return this.groupLabels == null ? List.of() : this.groupLabels;
     }
+    /**
+     * Targets VM instances whose name starts with one of these prefixes.
+     * Like labels, this is another way to group VM instances when targeting configs,
+     * for example prefix="prod-".
+     * Only supported for project-level policies.
+     * 
+     */
     public List<String> getInstanceNamePrefixes() {
         return this.instanceNamePrefixes == null ? List.of() : this.instanceNamePrefixes;
     }
+    /**
+     * Targets any of the instances specified. Instances are specified by their URI in the form
+     * zones/[ZONE]/instances/[INSTANCE_NAME].
+     * Instance targeting is uncommon and is supported to facilitate the management of changes
+     * by the instance or to target specific VM instances for development and testing.
+     * Only supported for project-level policies and must reference instances within this project.
+     * 
+     */
     public List<String> getInstances() {
         return this.instances == null ? List.of() : this.instances;
     }
+    /**
+     * Targets VM instances matching at least one of the following OS types.
+     * VM instances must match all supplied criteria for a given OsType to be included.
+     * Structure is documented below.
+     * 
+     */
     public List<GuestPoliciesAssignmentOsType> getOsTypes() {
         return this.osTypes == null ? List.of() : this.osTypes;
     }
+    /**
+     * Targets instances in any of these zones. Leave empty to target instances in any zone.
+     * Zonal targeting is uncommon and is supported to facilitate the management of changes by zone.
+     * 
+     */
     public List<String> getZones() {
         return this.zones == null ? List.of() : this.zones;
     }

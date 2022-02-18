@@ -13,6 +13,16 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWebApp {
+/**
+ * A Google Cloud Firebase web application instance
+ * 
+ *
+ * A collection of arguments for invoking getWebApp.
+ * 
+ *
+ * A collection of values returned by getWebApp.
+ * 
+ */
     public static CompletableFuture<GetWebAppResult> invokeAsync(GetWebAppArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:firebase/getWebApp:getWebApp", TypeShape.of(GetWebAppResult.class), args == null ? GetWebAppArgs.Empty : args, Utilities.withVersion(options));
     }

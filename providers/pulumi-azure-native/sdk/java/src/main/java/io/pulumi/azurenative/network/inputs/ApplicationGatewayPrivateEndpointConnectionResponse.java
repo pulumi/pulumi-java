@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Private Endpoint connection on an application gateway.
+ * 
+ */
 public final class ApplicationGatewayPrivateEndpointConnectionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApplicationGatewayPrivateEndpointConnectionResponse Empty = new ApplicationGatewayPrivateEndpointConnectionResponse();
 
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -23,6 +31,10 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends i
         return this.etag;
     }
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -30,6 +42,10 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends i
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * The consumer link id.
+     * 
+     */
     @InputImport(name="linkIdentifier", required=true)
     private final String linkIdentifier;
 
@@ -37,6 +53,10 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends i
         return this.linkIdentifier;
     }
 
+    /**
+     * Name of the private endpoint connection on an application gateway.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -44,6 +64,10 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends i
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The resource of private end point.
+     * 
+     */
     @InputImport(name="privateEndpoint", required=true)
     private final PrivateEndpointResponse privateEndpoint;
 
@@ -51,6 +75,10 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends i
         return this.privateEndpoint;
     }
 
+    /**
+     * A collection of information about the state of the connection between service consumer and provider.
+     * 
+     */
     @InputImport(name="privateLinkServiceConnectionState")
     private final @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
 
@@ -58,6 +86,10 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends i
         return this.privateLinkServiceConnectionState == null ? Optional.empty() : Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
 
+    /**
+     * The provisioning state of the application gateway private endpoint connection resource.
+     * 
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -65,6 +97,10 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends i
         return this.provisioningState;
     }
 
+    /**
+     * Type of the resource.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

@@ -23,6 +23,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.databaseId == null ? Input.empty() : this.databaseId;
     }
 
+    /**
+     * Immutable. The globally unique hostname of the database.
+     * 
+     */
     @InputImport(name="databaseUrl")
     private final @Nullable Input<String> databaseUrl;
 
@@ -37,6 +41,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The fully qualified resource name of the database instance, in the form: `projects/{project-number}/locations/{location-id}/instances/{database-id}`.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -44,6 +52,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The resource name of the project this instance belongs to. For example: `projects/{project-number}`.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -51,6 +63,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The database's lifecycle state. Read-only.
+     * 
+     */
     @InputImport(name="state")
     private final @Nullable Input<InstanceState> state;
 
@@ -58,6 +74,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.state == null ? Input.empty() : this.state;
     }
 
+    /**
+     * The database instance type. On creation only USER_DATABASE is allowed, which is also the default when omitted.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<InstanceType> type;
 

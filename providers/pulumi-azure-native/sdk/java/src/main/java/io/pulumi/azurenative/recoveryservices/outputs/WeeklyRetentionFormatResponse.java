@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class WeeklyRetentionFormatResponse {
+    /**
+     * List of days of the week.
+     * 
+     */
     private final @Nullable List<String> daysOfTheWeek;
+    /**
+     * List of weeks of month.
+     * 
+     */
     private final @Nullable List<String> weeksOfTheMonth;
 
     @OutputCustomType.Constructor({"daysOfTheWeek","weeksOfTheMonth"})
@@ -22,9 +30,17 @@ public final class WeeklyRetentionFormatResponse {
         this.weeksOfTheMonth = weeksOfTheMonth;
     }
 
+    /**
+     * List of days of the week.
+     * 
+     */
     public List<String> getDaysOfTheWeek() {
         return this.daysOfTheWeek == null ? List.of() : this.daysOfTheWeek;
     }
+    /**
+     * List of weeks of month.
+     * 
+     */
     public List<String> getWeeksOfTheMonth() {
         return this.weeksOfTheMonth == null ? List.of() : this.weeksOfTheMonth;
     }

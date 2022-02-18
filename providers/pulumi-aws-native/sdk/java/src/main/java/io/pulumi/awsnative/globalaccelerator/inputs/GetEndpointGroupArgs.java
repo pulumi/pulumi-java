@@ -12,6 +12,10 @@ public final class GetEndpointGroupArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetEndpointGroupArgs Empty = new GetEndpointGroupArgs();
 
+    /**
+     * The Amazon Resource Name (ARN) of the endpoint group
+     * 
+     */
     @InputImport(name="endpointGroupArn", required=true)
     private final String endpointGroupArn;
 

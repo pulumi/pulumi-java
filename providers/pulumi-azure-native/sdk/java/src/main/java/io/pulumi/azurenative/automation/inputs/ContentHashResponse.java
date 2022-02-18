@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Definition of the runbook property type.
+ * 
+ */
 public final class ContentHashResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ContentHashResponse Empty = new ContentHashResponse();
 
+    /**
+     * Gets or sets the content hash algorithm used to hash the content.
+     * 
+     */
     @InputImport(name="algorithm", required=true)
     private final String algorithm;
 
@@ -19,6 +27,10 @@ public final class ContentHashResponse extends io.pulumi.resources.InvokeArgs {
         return this.algorithm;
     }
 
+    /**
+     * Gets or sets expected hash value of the content.
+     * 
+     */
     @InputImport(name="value", required=true)
     private final String value;
 

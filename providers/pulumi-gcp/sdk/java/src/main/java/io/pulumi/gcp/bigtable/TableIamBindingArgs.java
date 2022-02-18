@@ -23,6 +23,10 @@ public final class TableIamBindingArgs extends io.pulumi.resources.ResourceArgs 
         return this.condition == null ? Input.empty() : this.condition;
     }
 
+    /**
+     * The name or relative resource id of the instance that owns the table.
+     * 
+     */
     @InputImport(name="instance", required=true)
     private final Input<String> instance;
 
@@ -37,6 +41,11 @@ public final class TableIamBindingArgs extends io.pulumi.resources.ResourceArgs 
         return this.members;
     }
 
+    /**
+     * The project in which the table belongs. If it
+     * is not provided, this provider will use the provider default.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -44,6 +53,12 @@ public final class TableIamBindingArgs extends io.pulumi.resources.ResourceArgs 
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The role that should be applied. Only one
+     * `gcp.bigtable.TableIamBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`. Read more about roles [here](https://cloud.google.com/bigtable/docs/access-control#roles).
+     * 
+     */
     @InputImport(name="role", required=true)
     private final Input<String> role;
 
@@ -51,6 +66,10 @@ public final class TableIamBindingArgs extends io.pulumi.resources.ResourceArgs 
         return this.role;
     }
 
+    /**
+     * The name or relative resource id of the table to manage IAM policies for.
+     * 
+     */
     @InputImport(name="table", required=true)
     private final Input<String> table;
 

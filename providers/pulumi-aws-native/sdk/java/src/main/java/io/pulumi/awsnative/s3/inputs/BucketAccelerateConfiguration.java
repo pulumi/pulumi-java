@@ -12,6 +12,10 @@ public final class BucketAccelerateConfiguration extends io.pulumi.resources.Inv
 
     public static final BucketAccelerateConfiguration Empty = new BucketAccelerateConfiguration();
 
+    /**
+     * Configures the transfer acceleration state for an Amazon S3 bucket.
+     * 
+     */
     @InputImport(name="accelerationStatus", required=true)
     private final BucketAccelerateConfigurationAccelerationStatus accelerationStatus;
 

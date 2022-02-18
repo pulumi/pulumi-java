@@ -35,6 +35,10 @@ public final class DatacenterConnectorArgs extends io.pulumi.resources.ResourceA
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Immutable. A unique key for this connector. This key is internal to the OVA connector and is supplied with its creation during the registration process and can not be modified.
+     * 
+     */
     @InputImport(name="registrationId")
     private final @Nullable Input<String> registrationId;
 
@@ -49,6 +53,10 @@ public final class DatacenterConnectorArgs extends io.pulumi.resources.ResourceA
         return this.requestId == null ? Input.empty() : this.requestId;
     }
 
+    /**
+     * The service account to use in the connector when communicating with the cloud.
+     * 
+     */
     @InputImport(name="serviceAccount")
     private final @Nullable Input<String> serviceAccount;
 
@@ -63,6 +71,10 @@ public final class DatacenterConnectorArgs extends io.pulumi.resources.ResourceA
         return this.sourceId;
     }
 
+    /**
+     * The version running in the DatacenterConnector. This is supplied by the OVA connector during the registration process and can not be modified.
+     * 
+     */
     @InputImport(name="version")
     private final @Nullable Input<String> version;
 

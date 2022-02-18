@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Define match variables.
+ * 
+ */
 public final class MatchVariableResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MatchVariableResponse Empty = new MatchVariableResponse();
 
+    /**
+     * The selector of match variable.
+     * 
+     */
     @InputImport(name="selector")
     private final @Nullable String selector;
 
@@ -21,6 +29,10 @@ public final class MatchVariableResponse extends io.pulumi.resources.InvokeArgs 
         return this.selector == null ? Optional.empty() : Optional.ofNullable(this.selector);
     }
 
+    /**
+     * Match Variable.
+     * 
+     */
     @InputImport(name="variableName", required=true)
     private final String variableName;
 

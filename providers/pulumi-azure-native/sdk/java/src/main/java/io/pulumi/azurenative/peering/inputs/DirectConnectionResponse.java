@@ -13,10 +13,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The properties that define a direct connection.
+ * 
+ */
 public final class DirectConnectionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DirectConnectionResponse Empty = new DirectConnectionResponse();
 
+    /**
+     * The bandwidth of the connection.
+     * 
+     */
     @InputImport(name="bandwidthInMbps")
     private final @Nullable Integer bandwidthInMbps;
 
@@ -24,6 +32,10 @@ public final class DirectConnectionResponse extends io.pulumi.resources.InvokeAr
         return this.bandwidthInMbps == null ? Optional.empty() : Optional.ofNullable(this.bandwidthInMbps);
     }
 
+    /**
+     * The BGP session associated with the connection.
+     * 
+     */
     @InputImport(name="bgpSession")
     private final @Nullable BgpSessionResponse bgpSession;
 
@@ -31,6 +43,10 @@ public final class DirectConnectionResponse extends io.pulumi.resources.InvokeAr
         return this.bgpSession == null ? Optional.empty() : Optional.ofNullable(this.bgpSession);
     }
 
+    /**
+     * The unique identifier (GUID) for the connection.
+     * 
+     */
     @InputImport(name="connectionIdentifier")
     private final @Nullable String connectionIdentifier;
 
@@ -38,6 +54,10 @@ public final class DirectConnectionResponse extends io.pulumi.resources.InvokeAr
         return this.connectionIdentifier == null ? Optional.empty() : Optional.ofNullable(this.connectionIdentifier);
     }
 
+    /**
+     * The state of the connection.
+     * 
+     */
     @InputImport(name="connectionState", required=true)
     private final String connectionState;
 
@@ -45,6 +65,10 @@ public final class DirectConnectionResponse extends io.pulumi.resources.InvokeAr
         return this.connectionState;
     }
 
+    /**
+     * The error message related to the connection state, if any.
+     * 
+     */
     @InputImport(name="errorMessage", required=true)
     private final String errorMessage;
 
@@ -52,6 +76,10 @@ public final class DirectConnectionResponse extends io.pulumi.resources.InvokeAr
         return this.errorMessage;
     }
 
+    /**
+     * The ID used within Microsoft's peering provisioning system to track the connection
+     * 
+     */
     @InputImport(name="microsoftTrackingId", required=true)
     private final String microsoftTrackingId;
 
@@ -59,6 +87,10 @@ public final class DirectConnectionResponse extends io.pulumi.resources.InvokeAr
         return this.microsoftTrackingId;
     }
 
+    /**
+     * The PeeringDB.com ID of the facility at which the connection has to be set up.
+     * 
+     */
     @InputImport(name="peeringDBFacilityId")
     private final @Nullable Integer peeringDBFacilityId;
 
@@ -66,6 +98,10 @@ public final class DirectConnectionResponse extends io.pulumi.resources.InvokeAr
         return this.peeringDBFacilityId == null ? Optional.empty() : Optional.ofNullable(this.peeringDBFacilityId);
     }
 
+    /**
+     * The bandwidth that is actually provisioned.
+     * 
+     */
     @InputImport(name="provisionedBandwidthInMbps", required=true)
     private final Integer provisionedBandwidthInMbps;
 
@@ -73,6 +109,10 @@ public final class DirectConnectionResponse extends io.pulumi.resources.InvokeAr
         return this.provisionedBandwidthInMbps;
     }
 
+    /**
+     * The field indicating if Microsoft provides session ip addresses.
+     * 
+     */
     @InputImport(name="sessionAddressProvider")
     private final @Nullable String sessionAddressProvider;
 
@@ -80,6 +120,10 @@ public final class DirectConnectionResponse extends io.pulumi.resources.InvokeAr
         return this.sessionAddressProvider == null ? Optional.empty() : Optional.ofNullable(this.sessionAddressProvider);
     }
 
+    /**
+     * The flag that indicates whether or not the connection is used for peering service.
+     * 
+     */
     @InputImport(name="useForPeeringService")
     private final @Nullable Boolean useForPeeringService;
 

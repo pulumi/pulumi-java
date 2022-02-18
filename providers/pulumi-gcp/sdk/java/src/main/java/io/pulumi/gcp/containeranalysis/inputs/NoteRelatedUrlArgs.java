@@ -14,6 +14,10 @@ public final class NoteRelatedUrlArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NoteRelatedUrlArgs Empty = new NoteRelatedUrlArgs();
 
+    /**
+     * Label to describe usage of the URL
+     * 
+     */
     @InputImport(name="label")
     private final @Nullable Input<String> label;
 
@@ -21,6 +25,10 @@ public final class NoteRelatedUrlArgs extends io.pulumi.resources.ResourceArgs {
         return this.label == null ? Input.empty() : this.label;
     }
 
+    /**
+     * Specific URL associated with the resource.
+     * 
+     */
     @InputImport(name="url", required=true)
     private final Input<String> url;
 

@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * <p>The configuration for a render farm that is associated with a studio resource.</p>
+ * 
+ */
 public final class StudioComponentComputeFarmConfiguration extends io.pulumi.resources.InvokeArgs {
 
     public static final StudioComponentComputeFarmConfiguration Empty = new StudioComponentComputeFarmConfiguration();
 
+    /**
+     * <p>The name of an Active Directory user that is used on ComputeFarm worker instances.</p>
+     * 
+     */
     @InputImport(name="activeDirectoryUser")
     private final @Nullable String activeDirectoryUser;
 
@@ -21,6 +29,10 @@ public final class StudioComponentComputeFarmConfiguration extends io.pulumi.res
         return this.activeDirectoryUser == null ? Optional.empty() : Optional.ofNullable(this.activeDirectoryUser);
     }
 
+    /**
+     * <p>The endpoint of the ComputeFarm that is accessed by the studio component resource.</p>
+     * 
+     */
     @InputImport(name="endpoint")
     private final @Nullable String endpoint;
 

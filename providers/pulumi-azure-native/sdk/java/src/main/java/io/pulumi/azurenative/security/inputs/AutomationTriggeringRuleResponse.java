@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A rule which is evaluated upon event interception. The rule is configured by comparing a specific value from the event model to an expected value. This comparison is done by using one of the supported operators set.
+ * 
+ */
 public final class AutomationTriggeringRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AutomationTriggeringRuleResponse Empty = new AutomationTriggeringRuleResponse();
 
+    /**
+     * The expected value.
+     * 
+     */
     @InputImport(name="expectedValue")
     private final @Nullable String expectedValue;
 
@@ -21,6 +29,10 @@ public final class AutomationTriggeringRuleResponse extends io.pulumi.resources.
         return this.expectedValue == null ? Optional.empty() : Optional.ofNullable(this.expectedValue);
     }
 
+    /**
+     * A valid comparer operator to use. A case-insensitive comparison will be applied for String PropertyType.
+     * 
+     */
     @InputImport(name="operator")
     private final @Nullable String operator;
 
@@ -28,6 +40,10 @@ public final class AutomationTriggeringRuleResponse extends io.pulumi.resources.
         return this.operator == null ? Optional.empty() : Optional.ofNullable(this.operator);
     }
 
+    /**
+     * The JPath of the entity model property that should be checked.
+     * 
+     */
     @InputImport(name="propertyJPath")
     private final @Nullable String propertyJPath;
 
@@ -35,6 +51,10 @@ public final class AutomationTriggeringRuleResponse extends io.pulumi.resources.
         return this.propertyJPath == null ? Optional.empty() : Optional.ofNullable(this.propertyJPath);
     }
 
+    /**
+     * The data type of the compared operands (string, integer, floating point number or a boolean [true/false]]
+     * 
+     */
     @InputImport(name="propertyType")
     private final @Nullable String propertyType;
 

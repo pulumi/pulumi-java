@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Access information for the storage account.
+ * 
+ */
 public final class StorageAccountCredentialsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StorageAccountCredentialsResponse Empty = new StorageAccountCredentialsResponse();
 
+    /**
+     * The primary key of the storage account.
+     * 
+     */
     @InputImport(name="primaryKey", required=true)
     private final String primaryKey;
 
@@ -19,6 +27,10 @@ public final class StorageAccountCredentialsResponse extends io.pulumi.resources
         return this.primaryKey;
     }
 
+    /**
+     * The ARM resource ID of the storage account.
+     * 
+     */
     @InputImport(name="resourceId", required=true)
     private final String resourceId;
 
@@ -26,6 +38,10 @@ public final class StorageAccountCredentialsResponse extends io.pulumi.resources
         return this.resourceId;
     }
 
+    /**
+     * The secondary key of the storage account.
+     * 
+     */
     @InputImport(name="secondaryKey", required=true)
     private final String secondaryKey;
 

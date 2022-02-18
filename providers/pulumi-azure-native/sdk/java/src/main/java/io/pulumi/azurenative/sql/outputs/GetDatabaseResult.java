@@ -16,39 +16,177 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetDatabaseResult {
+    /**
+     * Time in minutes after which database is automatically paused. A value of -1 means that automatic pause is disabled
+     * 
+     */
     private final @Nullable Integer autoPauseDelay;
+    /**
+     * Collation of the metadata catalog.
+     * 
+     */
     private final @Nullable String catalogCollation;
+    /**
+     * The collation of the database.
+     * 
+     */
     private final @Nullable String collation;
+    /**
+     * The creation date of the database (ISO8601 format).
+     * 
+     */
     private final String creationDate;
+    /**
+     * The storage account type used to store backups for this database.
+     * 
+     */
     private final String currentBackupStorageRedundancy;
+    /**
+     * The current service level objective name of the database.
+     * 
+     */
     private final String currentServiceObjectiveName;
+    /**
+     * The name and tier of the SKU.
+     * 
+     */
     private final SkuResponse currentSku;
+    /**
+     * The ID of the database.
+     * 
+     */
     private final String databaseId;
+    /**
+     * The default secondary region for this database.
+     * 
+     */
     private final String defaultSecondaryLocation;
+    /**
+     * This records the earliest start date and time that restore is available for this database (ISO8601 format).
+     * 
+     */
     private final String earliestRestoreDate;
+    /**
+     * The resource identifier of the elastic pool containing this database.
+     * 
+     */
     private final @Nullable String elasticPoolId;
+    /**
+     * Failover Group resource identifier that this database belongs to.
+     * 
+     */
     private final String failoverGroupId;
+    /**
+     * The number of secondary replicas associated with the database that are used to provide high availability.
+     * 
+     */
     private final @Nullable Integer highAvailabilityReplicaCount;
+    /**
+     * Resource ID.
+     * 
+     */
     private final String id;
+    /**
+     * Kind of database. This is metadata used for the Azure portal experience.
+     * 
+     */
     private final String kind;
+    /**
+     * The license type to apply for this database. `LicenseIncluded` if you need a license, or `BasePrice` if you have a license and are eligible for the Azure Hybrid Benefit.
+     * 
+     */
     private final @Nullable String licenseType;
+    /**
+     * Resource location.
+     * 
+     */
     private final String location;
+    /**
+     * Maintenance configuration id assigned to the database. This configuration defines the period when the maintenance updates will occur.
+     * 
+     */
     private final @Nullable String maintenanceConfigurationId;
+    /**
+     * Resource that manages the database.
+     * 
+     */
     private final String managedBy;
+    /**
+     * The max log size for this database.
+     * 
+     */
     private final Double maxLogSizeBytes;
+    /**
+     * The max size of the database expressed in bytes.
+     * 
+     */
     private final @Nullable Double maxSizeBytes;
+    /**
+     * Minimal capacity that database will always have allocated, if not paused
+     * 
+     */
     private final @Nullable Double minCapacity;
+    /**
+     * Resource name.
+     * 
+     */
     private final String name;
+    /**
+     * The date when database was paused by user configuration or action(ISO8601 format). Null if the database is ready.
+     * 
+     */
     private final String pausedDate;
+    /**
+     * The state of read-only routing. If enabled, connections that have application intent set to readonly in their connection string may be routed to a readonly secondary replica in the same region.
+     * 
+     */
     private final @Nullable String readScale;
+    /**
+     * The storage account type to be used to store backups for this database.
+     * 
+     */
     private final @Nullable String requestedBackupStorageRedundancy;
+    /**
+     * The requested service level objective name of the database.
+     * 
+     */
     private final String requestedServiceObjectiveName;
+    /**
+     * The date when database was resumed by user action or database login (ISO8601 format). Null if the database is paused.
+     * 
+     */
     private final String resumedDate;
+    /**
+     * The secondary type of the database if it is a secondary.  Valid values are Geo and Named.
+     * 
+     */
     private final @Nullable String secondaryType;
+    /**
+     * The database SKU.
+     * 
+     * The list of SKUs may vary by region and support offer. To determine the SKUs (including the SKU name, tier/edition, family, and capacity) that are available to your subscription in an Azure region, use the `Capabilities_ListByLocation` REST API or one of the following commands:
+     * 
+     */
     private final @Nullable SkuResponse sku;
+    /**
+     * The status of the database.
+     * 
+     */
     private final String status;
+    /**
+     * Resource tags.
+     * 
+     */
     private final @Nullable Map<String,String> tags;
+    /**
+     * Resource type.
+     * 
+     */
     private final String type;
+    /**
+     * Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones.
+     * 
+     */
     private final @Nullable Boolean zoneRedundant;
 
     @OutputCustomType.Constructor({"autoPauseDelay","catalogCollation","collation","creationDate","currentBackupStorageRedundancy","currentServiceObjectiveName","currentSku","databaseId","defaultSecondaryLocation","earliestRestoreDate","elasticPoolId","failoverGroupId","highAvailabilityReplicaCount","id","kind","licenseType","location","maintenanceConfigurationId","managedBy","maxLogSizeBytes","maxSizeBytes","minCapacity","name","pausedDate","readScale","requestedBackupStorageRedundancy","requestedServiceObjectiveName","resumedDate","secondaryType","sku","status","tags","type","zoneRedundant"})
@@ -123,105 +261,243 @@ public final class GetDatabaseResult {
         this.zoneRedundant = zoneRedundant;
     }
 
+    /**
+     * Time in minutes after which database is automatically paused. A value of -1 means that automatic pause is disabled
+     * 
+     */
     public Optional<Integer> getAutoPauseDelay() {
         return Optional.ofNullable(this.autoPauseDelay);
     }
+    /**
+     * Collation of the metadata catalog.
+     * 
+     */
     public Optional<String> getCatalogCollation() {
         return Optional.ofNullable(this.catalogCollation);
     }
+    /**
+     * The collation of the database.
+     * 
+     */
     public Optional<String> getCollation() {
         return Optional.ofNullable(this.collation);
     }
+    /**
+     * The creation date of the database (ISO8601 format).
+     * 
+     */
     public String getCreationDate() {
         return this.creationDate;
     }
+    /**
+     * The storage account type used to store backups for this database.
+     * 
+     */
     public String getCurrentBackupStorageRedundancy() {
         return this.currentBackupStorageRedundancy;
     }
+    /**
+     * The current service level objective name of the database.
+     * 
+     */
     public String getCurrentServiceObjectiveName() {
         return this.currentServiceObjectiveName;
     }
+    /**
+     * The name and tier of the SKU.
+     * 
+     */
     public SkuResponse getCurrentSku() {
         return this.currentSku;
     }
+    /**
+     * The ID of the database.
+     * 
+     */
     public String getDatabaseId() {
         return this.databaseId;
     }
+    /**
+     * The default secondary region for this database.
+     * 
+     */
     public String getDefaultSecondaryLocation() {
         return this.defaultSecondaryLocation;
     }
+    /**
+     * This records the earliest start date and time that restore is available for this database (ISO8601 format).
+     * 
+     */
     public String getEarliestRestoreDate() {
         return this.earliestRestoreDate;
     }
+    /**
+     * The resource identifier of the elastic pool containing this database.
+     * 
+     */
     public Optional<String> getElasticPoolId() {
         return Optional.ofNullable(this.elasticPoolId);
     }
+    /**
+     * Failover Group resource identifier that this database belongs to.
+     * 
+     */
     public String getFailoverGroupId() {
         return this.failoverGroupId;
     }
+    /**
+     * The number of secondary replicas associated with the database that are used to provide high availability.
+     * 
+     */
     public Optional<Integer> getHighAvailabilityReplicaCount() {
         return Optional.ofNullable(this.highAvailabilityReplicaCount);
     }
+    /**
+     * Resource ID.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Kind of database. This is metadata used for the Azure portal experience.
+     * 
+     */
     public String getKind() {
         return this.kind;
     }
+    /**
+     * The license type to apply for this database. `LicenseIncluded` if you need a license, or `BasePrice` if you have a license and are eligible for the Azure Hybrid Benefit.
+     * 
+     */
     public Optional<String> getLicenseType() {
         return Optional.ofNullable(this.licenseType);
     }
+    /**
+     * Resource location.
+     * 
+     */
     public String getLocation() {
         return this.location;
     }
+    /**
+     * Maintenance configuration id assigned to the database. This configuration defines the period when the maintenance updates will occur.
+     * 
+     */
     public Optional<String> getMaintenanceConfigurationId() {
         return Optional.ofNullable(this.maintenanceConfigurationId);
     }
+    /**
+     * Resource that manages the database.
+     * 
+     */
     public String getManagedBy() {
         return this.managedBy;
     }
+    /**
+     * The max log size for this database.
+     * 
+     */
     public Double getMaxLogSizeBytes() {
         return this.maxLogSizeBytes;
     }
+    /**
+     * The max size of the database expressed in bytes.
+     * 
+     */
     public Optional<Double> getMaxSizeBytes() {
         return Optional.ofNullable(this.maxSizeBytes);
     }
+    /**
+     * Minimal capacity that database will always have allocated, if not paused
+     * 
+     */
     public Optional<Double> getMinCapacity() {
         return Optional.ofNullable(this.minCapacity);
     }
+    /**
+     * Resource name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The date when database was paused by user configuration or action(ISO8601 format). Null if the database is ready.
+     * 
+     */
     public String getPausedDate() {
         return this.pausedDate;
     }
+    /**
+     * The state of read-only routing. If enabled, connections that have application intent set to readonly in their connection string may be routed to a readonly secondary replica in the same region.
+     * 
+     */
     public Optional<String> getReadScale() {
         return Optional.ofNullable(this.readScale);
     }
+    /**
+     * The storage account type to be used to store backups for this database.
+     * 
+     */
     public Optional<String> getRequestedBackupStorageRedundancy() {
         return Optional.ofNullable(this.requestedBackupStorageRedundancy);
     }
+    /**
+     * The requested service level objective name of the database.
+     * 
+     */
     public String getRequestedServiceObjectiveName() {
         return this.requestedServiceObjectiveName;
     }
+    /**
+     * The date when database was resumed by user action or database login (ISO8601 format). Null if the database is paused.
+     * 
+     */
     public String getResumedDate() {
         return this.resumedDate;
     }
+    /**
+     * The secondary type of the database if it is a secondary.  Valid values are Geo and Named.
+     * 
+     */
     public Optional<String> getSecondaryType() {
         return Optional.ofNullable(this.secondaryType);
     }
+    /**
+     * The database SKU.
+     * 
+     * The list of SKUs may vary by region and support offer. To determine the SKUs (including the SKU name, tier/edition, family, and capacity) that are available to your subscription in an Azure region, use the `Capabilities_ListByLocation` REST API or one of the following commands:
+     * 
+     */
     public Optional<SkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
+    /**
+     * The status of the database.
+     * 
+     */
     public String getStatus() {
         return this.status;
     }
+    /**
+     * Resource tags.
+     * 
+     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+    /**
+     * Resource type.
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones.
+     * 
+     */
     public Optional<Boolean> getZoneRedundant() {
         return Optional.ofNullable(this.zoneRedundant);
     }

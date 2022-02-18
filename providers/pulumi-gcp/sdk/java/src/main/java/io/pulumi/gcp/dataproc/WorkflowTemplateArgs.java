@@ -20,6 +20,10 @@ public final class WorkflowTemplateArgs extends io.pulumi.resources.ResourceArgs
 
     public static final WorkflowTemplateArgs Empty = new WorkflowTemplateArgs();
 
+    /**
+     * (Beta only) Optional. Timeout duration for the DAG of jobs. You can use "s", "m", "h", and "d" suffixes for second, minute, hour, and day duration values, respectively. The timeout duration must be from 10 minutes ("10m") to 24 hours ("24h" or "1d"). The timer begins when the first job is submitted. If the workflow is running at the end of the timeout period, any remaining jobs are cancelled, the workflow is ended, and if the workflow was running on a (/dataproc/docs/concepts/workflows/using-workflows#configuring_or_selecting_a_cluster), the cluster is deleted.
+     * 
+     */
     @InputImport(name="dagTimeout")
     private final @Nullable Input<String> dagTimeout;
 
@@ -27,6 +31,10 @@ public final class WorkflowTemplateArgs extends io.pulumi.resources.ResourceArgs
         return this.dagTimeout == null ? Input.empty() : this.dagTimeout;
     }
 
+    /**
+     * Required. The Directed Acyclic Graph of Jobs to submit.
+     * 
+     */
     @InputImport(name="jobs", required=true)
     private final Input<List<WorkflowTemplateJobArgs>> jobs;
 
@@ -34,6 +42,10 @@ public final class WorkflowTemplateArgs extends io.pulumi.resources.ResourceArgs
         return this.jobs;
     }
 
+    /**
+     * Optional. The labels to associate with this cluster. Label keys must be between 1 and 63 characters long, and must conform to the following PCRE regular expression: {0,63} No more than 32 labels can be associated with a given cluster.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -41,6 +53,10 @@ public final class WorkflowTemplateArgs extends io.pulumi.resources.ResourceArgs
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The location for the resource
+     * 
+     */
     @InputImport(name="location", required=true)
     private final Input<String> location;
 
@@ -48,6 +64,10 @@ public final class WorkflowTemplateArgs extends io.pulumi.resources.ResourceArgs
         return this.location;
     }
 
+    /**
+     * Required. Parameter name. The parameter name is used as the key, and paired with the parameter value, which are passed to the template when the template is instantiated. The name must contain only capital letters (A-Z), numbers (0-9), and underscores (_), and must not start with a number. The maximum length is 40 characters.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -55,6 +75,10 @@ public final class WorkflowTemplateArgs extends io.pulumi.resources.ResourceArgs
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Optional. Template parameters whose values are substituted into the template. Values for parameters must be provided when the template is instantiated.
+     * 
+     */
     @InputImport(name="parameters")
     private final @Nullable Input<List<WorkflowTemplateParameterArgs>> parameters;
 
@@ -62,6 +86,10 @@ public final class WorkflowTemplateArgs extends io.pulumi.resources.ResourceArgs
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
+    /**
+     * Required. WorkflowTemplate scheduling information.
+     * 
+     */
     @InputImport(name="placement", required=true)
     private final Input<WorkflowTemplatePlacementArgs> placement;
 
@@ -69,6 +97,10 @@ public final class WorkflowTemplateArgs extends io.pulumi.resources.ResourceArgs
         return this.placement;
     }
 
+    /**
+     * The project for the resource
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -76,6 +108,14 @@ public final class WorkflowTemplateArgs extends io.pulumi.resources.ResourceArgs
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Optional. Used to perform a consistent read-modify-write. This field should be left blank for a `CreateWorkflowTemplate` request. It is required for an `UpdateWorkflowTemplate` request, and must match the current server version. A typical update template flow would fetch the current template with a `GetWorkflowTemplate` request, which will return the current template with the `version` field filled in with the current server version. The user updates other fields in the template, then returns it as part of the `UpdateWorkflowTemplate` request.
+     * 
+     * @deprecated
+     * version is not useful as a configurable field, and will be removed in the future.
+     * 
+     */
+    @Deprecated /* version is not useful as a configurable field, and will be removed in the future. */
     @InputImport(name="version")
     private final @Nullable Input<Integer> version;
 

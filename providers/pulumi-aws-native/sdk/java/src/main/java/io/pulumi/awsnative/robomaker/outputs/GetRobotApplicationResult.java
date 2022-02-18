@@ -16,9 +16,21 @@ import javax.annotation.Nullable;
 @OutputCustomType
 public final class GetRobotApplicationResult {
     private final @Nullable String arn;
+    /**
+     * The revision ID of robot application.
+     * 
+     */
     private final @Nullable String currentRevisionId;
+    /**
+     * The URI of the Docker image for the robot application.
+     * 
+     */
     private final @Nullable String environment;
     private final @Nullable RobotApplicationRobotSoftwareSuite robotSoftwareSuite;
+    /**
+     * The sources of the robot application.
+     * 
+     */
     private final @Nullable List<RobotApplicationSourceConfig> sources;
     private final @Nullable RobotApplicationTags tags;
 
@@ -41,15 +53,27 @@ public final class GetRobotApplicationResult {
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
+    /**
+     * The revision ID of robot application.
+     * 
+     */
     public Optional<String> getCurrentRevisionId() {
         return Optional.ofNullable(this.currentRevisionId);
     }
+    /**
+     * The URI of the Docker image for the robot application.
+     * 
+     */
     public Optional<String> getEnvironment() {
         return Optional.ofNullable(this.environment);
     }
     public Optional<RobotApplicationRobotSoftwareSuite> getRobotSoftwareSuite() {
         return Optional.ofNullable(this.robotSoftwareSuite);
     }
+    /**
+     * The sources of the robot application.
+     * 
+     */
     public List<RobotApplicationSourceConfig> getSources() {
         return this.sources == null ? List.of() : this.sources;
     }

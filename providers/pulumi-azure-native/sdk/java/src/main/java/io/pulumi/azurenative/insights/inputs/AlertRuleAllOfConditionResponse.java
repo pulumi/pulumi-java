@@ -9,10 +9,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * An Activity Log Alert rule condition that is met when all its member conditions are met.
+ * 
+ */
 public final class AlertRuleAllOfConditionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AlertRuleAllOfConditionResponse Empty = new AlertRuleAllOfConditionResponse();
 
+    /**
+     * The list of Activity Log Alert rule conditions.
+     * 
+     */
     @InputImport(name="allOf", required=true)
     private final List<AlertRuleAnyOfOrLeafConditionResponse> allOf;
 

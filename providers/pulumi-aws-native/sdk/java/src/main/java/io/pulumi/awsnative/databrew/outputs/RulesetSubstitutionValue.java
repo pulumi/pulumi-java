@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RulesetSubstitutionValue {
+    /**
+     * Value or column name
+     * 
+     */
     private final String value;
+    /**
+     * Variable name
+     * 
+     */
     private final String valueReference;
 
     @OutputCustomType.Constructor({"value","valueReference"})
@@ -20,9 +28,17 @@ public final class RulesetSubstitutionValue {
         this.valueReference = Objects.requireNonNull(valueReference);
     }
 
+    /**
+     * Value or column name
+     * 
+     */
     public String getValue() {
         return this.value;
     }
+    /**
+     * Variable name
+     * 
+     */
     public String getValueReference() {
         return this.valueReference;
     }

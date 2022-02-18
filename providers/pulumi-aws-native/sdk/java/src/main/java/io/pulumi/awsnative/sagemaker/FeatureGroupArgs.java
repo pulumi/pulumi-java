@@ -19,6 +19,10 @@ public final class FeatureGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FeatureGroupArgs Empty = new FeatureGroupArgs();
 
+    /**
+     * Description about the FeatureGroup.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -26,6 +30,10 @@ public final class FeatureGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The Event Time Feature Name.
+     * 
+     */
     @InputImport(name="eventTimeFeatureName", required=true)
     private final Input<String> eventTimeFeatureName;
 
@@ -33,6 +41,10 @@ public final class FeatureGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.eventTimeFeatureName;
     }
 
+    /**
+     * An Array of Feature Definition
+     * 
+     */
     @InputImport(name="featureDefinitions", required=true)
     private final Input<List<FeatureGroupFeatureDefinitionArgs>> featureDefinitions;
 
@@ -40,6 +52,10 @@ public final class FeatureGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.featureDefinitions;
     }
 
+    /**
+     * The Name of the FeatureGroup.
+     * 
+     */
     @InputImport(name="featureGroupName")
     private final @Nullable Input<String> featureGroupName;
 
@@ -61,6 +77,10 @@ public final class FeatureGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.onlineStoreConfig == null ? Input.empty() : this.onlineStoreConfig;
     }
 
+    /**
+     * The Record Identifier Feature Name.
+     * 
+     */
     @InputImport(name="recordIdentifierFeatureName", required=true)
     private final Input<String> recordIdentifierFeatureName;
 
@@ -68,6 +88,10 @@ public final class FeatureGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.recordIdentifierFeatureName;
     }
 
+    /**
+     * Role Arn
+     * 
+     */
     @InputImport(name="roleArn")
     private final @Nullable Input<String> roleArn;
 
@@ -75,6 +99,10 @@ public final class FeatureGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.roleArn == null ? Input.empty() : this.roleArn;
     }
 
+    /**
+     * An array of key-value pair to apply to this resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<FeatureGroupTagArgs>> tags;
 

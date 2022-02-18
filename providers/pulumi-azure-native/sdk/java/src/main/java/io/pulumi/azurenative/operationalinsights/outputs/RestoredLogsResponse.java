@@ -11,8 +11,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RestoredLogsResponse {
+    /**
+     * The timestamp to end the restore by (UTC).
+     * 
+     */
     private final @Nullable String endRestoreTime;
+    /**
+     * The table to restore data from.
+     * 
+     */
     private final String sourceTable;
+    /**
+     * The timestamp to start the restore from (UTC).
+     * 
+     */
     private final @Nullable String startRestoreTime;
 
     @OutputCustomType.Constructor({"endRestoreTime","sourceTable","startRestoreTime"})
@@ -25,12 +37,24 @@ public final class RestoredLogsResponse {
         this.startRestoreTime = startRestoreTime;
     }
 
+    /**
+     * The timestamp to end the restore by (UTC).
+     * 
+     */
     public Optional<String> getEndRestoreTime() {
         return Optional.ofNullable(this.endRestoreTime);
     }
+    /**
+     * The table to restore data from.
+     * 
+     */
     public String getSourceTable() {
         return this.sourceTable;
     }
+    /**
+     * The timestamp to start the restore from (UTC).
+     * 
+     */
     public Optional<String> getStartRestoreTime() {
         return Optional.ofNullable(this.startRestoreTime);
     }

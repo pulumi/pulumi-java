@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Deployment container liveness/readiness probe configuration.
+ * 
+ */
 public final class ProbeSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ProbeSettingsResponse Empty = new ProbeSettingsResponse();
 
+    /**
+     * The number of failures to allow before returning an unhealthy status.
+     * 
+     */
     @InputImport(name="failureThreshold")
     private final @Nullable Integer failureThreshold;
 
@@ -22,6 +30,10 @@ public final class ProbeSettingsResponse extends io.pulumi.resources.InvokeArgs 
         return this.failureThreshold == null ? Optional.empty() : Optional.ofNullable(this.failureThreshold);
     }
 
+    /**
+     * The delay before the first probe in ISO 8601 format.
+     * 
+     */
     @InputImport(name="initialDelay")
     private final @Nullable String initialDelay;
 
@@ -29,6 +41,10 @@ public final class ProbeSettingsResponse extends io.pulumi.resources.InvokeArgs 
         return this.initialDelay == null ? Optional.empty() : Optional.ofNullable(this.initialDelay);
     }
 
+    /**
+     * The length of time between probes in ISO 8601 format.
+     * 
+     */
     @InputImport(name="period")
     private final @Nullable String period;
 
@@ -36,6 +52,10 @@ public final class ProbeSettingsResponse extends io.pulumi.resources.InvokeArgs 
         return this.period == null ? Optional.empty() : Optional.ofNullable(this.period);
     }
 
+    /**
+     * The number of successful probes before returning a healthy status.
+     * 
+     */
     @InputImport(name="successThreshold")
     private final @Nullable Integer successThreshold;
 
@@ -43,6 +63,10 @@ public final class ProbeSettingsResponse extends io.pulumi.resources.InvokeArgs 
         return this.successThreshold == null ? Optional.empty() : Optional.ofNullable(this.successThreshold);
     }
 
+    /**
+     * The probe timeout in ISO 8601 format.
+     * 
+     */
     @InputImport(name="timeout")
     private final @Nullable String timeout;
 

@@ -9,8 +9,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class HealthMonitorResponse {
+    /**
+     * Health Monitor Details
+     * 
+     */
     private final String details;
+    /**
+     * Health Monitor Id
+     * 
+     */
     private final String id;
+    /**
+     * Health Monitor Name
+     * 
+     */
     private final String name;
 
     @OutputCustomType.Constructor({"details","id","name"})
@@ -23,12 +35,24 @@ public final class HealthMonitorResponse {
         this.name = Objects.requireNonNull(name);
     }
 
+    /**
+     * Health Monitor Details
+     * 
+     */
     public String getDetails() {
         return this.details;
     }
+    /**
+     * Health Monitor Id
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Health Monitor Name
+     * 
+     */
     public String getName() {
         return this.name;
     }

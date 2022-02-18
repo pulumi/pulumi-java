@@ -12,6 +12,10 @@ public final class GetGuestConfigurationAssignmentArgs extends io.pulumi.resourc
 
     public static final GetGuestConfigurationAssignmentArgs Empty = new GetGuestConfigurationAssignmentArgs();
 
+    /**
+     * The guest configuration assignment name.
+     * 
+     */
     @InputImport(name="guestConfigurationAssignmentName", required=true)
     private final String guestConfigurationAssignmentName;
 
@@ -19,6 +23,10 @@ public final class GetGuestConfigurationAssignmentArgs extends io.pulumi.resourc
         return this.guestConfigurationAssignmentName;
     }
 
+    /**
+     * The resource group name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetGuestConfigurationAssignmentArgs extends io.pulumi.resourc
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the virtual machine.
+     * 
+     */
     @InputImport(name="vmName", required=true)
     private final String vmName;
 

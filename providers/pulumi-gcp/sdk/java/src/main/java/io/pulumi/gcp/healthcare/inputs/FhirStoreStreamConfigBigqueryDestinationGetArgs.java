@@ -14,6 +14,10 @@ public final class FhirStoreStreamConfigBigqueryDestinationGetArgs extends io.pu
 
     public static final FhirStoreStreamConfigBigqueryDestinationGetArgs Empty = new FhirStoreStreamConfigBigqueryDestinationGetArgs();
 
+    /**
+     * BigQuery URI to a dataset, up to 2000 characters long, in the format bq://projectId.bqDatasetId
+     * 
+     */
     @InputImport(name="datasetUri", required=true)
     private final Input<String> datasetUri;
 
@@ -21,6 +25,11 @@ public final class FhirStoreStreamConfigBigqueryDestinationGetArgs extends io.pu
         return this.datasetUri;
     }
 
+    /**
+     * The configuration for the exported BigQuery schema.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="schemaConfig", required=true)
     private final Input<FhirStoreStreamConfigBigqueryDestinationSchemaConfigGetArgs> schemaConfig;
 

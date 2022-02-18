@@ -8,10 +8,18 @@ import io.pulumi.googlenative.secretmanager_v1.inputs.CustomerManagedEncryptionR
 import java.util.Objects;
 
 
+/**
+ * A replication policy that replicates the Secret payload without any restrictions.
+ * 
+ */
 public final class AutomaticResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AutomaticResponse Empty = new AutomaticResponse();
 
+    /**
+     * Optional. The customer-managed encryption configuration of the Secret. If no configuration is provided, Google-managed default encryption is used. Updates to the Secret encryption configuration only apply to SecretVersions added afterwards. They do not apply retroactively to existing SecretVersions.
+     * 
+     */
     @InputImport(name="customerManagedEncryption", required=true)
     private final CustomerManagedEncryptionResponse customerManagedEncryption;
 

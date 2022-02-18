@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Gets or sets the disk mode.
+     * 
+     */
     @EnumType
     public enum DiskMode {
         Persistent("persistent"),

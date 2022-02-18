@@ -14,6 +14,10 @@ public final class ProcessorArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ProcessorArgs Empty = new ProcessorArgs();
 
+    /**
+     * The time the processor was created.
+     * 
+     */
     @InputImport(name="createTime")
     private final @Nullable Input<String> createTime;
 
@@ -21,6 +25,10 @@ public final class ProcessorArgs extends io.pulumi.resources.ResourceArgs {
         return this.createTime == null ? Input.empty() : this.createTime;
     }
 
+    /**
+     * The default processor version.
+     * 
+     */
     @InputImport(name="defaultProcessorVersion")
     private final @Nullable Input<String> defaultProcessorVersion;
 
@@ -28,6 +36,10 @@ public final class ProcessorArgs extends io.pulumi.resources.ResourceArgs {
         return this.defaultProcessorVersion == null ? Input.empty() : this.defaultProcessorVersion;
     }
 
+    /**
+     * The display name of the processor.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -35,6 +47,10 @@ public final class ProcessorArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The KMS key used for encryption/decryption in CMEK scenarios. See https://cloud.google.com/security-key-management.
+     * 
+     */
     @InputImport(name="kmsKeyName")
     private final @Nullable Input<String> kmsKeyName;
 
@@ -56,6 +72,10 @@ public final class ProcessorArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The processor type, e.g., INVOICE_PARSING, W2_PARSING, etc.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 

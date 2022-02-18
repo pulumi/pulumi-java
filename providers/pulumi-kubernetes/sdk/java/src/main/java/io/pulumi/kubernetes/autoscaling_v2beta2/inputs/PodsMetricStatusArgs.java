@@ -10,10 +10,18 @@ import io.pulumi.kubernetes.autoscaling_v2beta2.inputs.MetricValueStatusArgs;
 import java.util.Objects;
 
 
+/**
+ * PodsMetricStatus indicates the current value of a metric describing each pod in the current scale target (for example, transactions-processed-per-second).
+ * 
+ */
 public final class PodsMetricStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PodsMetricStatusArgs Empty = new PodsMetricStatusArgs();
 
+    /**
+     * current contains the current value for the given metric
+     * 
+     */
     @InputImport(name="current", required=true)
     private final Input<MetricValueStatusArgs> current;
 
@@ -21,6 +29,10 @@ public final class PodsMetricStatusArgs extends io.pulumi.resources.ResourceArgs
         return this.current;
     }
 
+    /**
+     * metric identifies the target metric by name and selector
+     * 
+     */
     @InputImport(name="metric", required=true)
     private final Input<MetricIdentifierArgs> metric;
 

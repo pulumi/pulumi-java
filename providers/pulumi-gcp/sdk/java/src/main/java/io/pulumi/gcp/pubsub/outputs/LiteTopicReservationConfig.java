@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class LiteTopicReservationConfig {
+    /**
+     * The Reservation to use for this topic's throughput capacity.
+     * 
+     */
     private final @Nullable String throughputReservation;
 
     @OutputCustomType.Constructor({"throughputReservation"})
@@ -18,6 +22,10 @@ public final class LiteTopicReservationConfig {
         this.throughputReservation = throughputReservation;
     }
 
+    /**
+     * The Reservation to use for this topic's throughput capacity.
+     * 
+     */
     public Optional<String> getThroughputReservation() {
         return Optional.ofNullable(this.throughputReservation);
     }

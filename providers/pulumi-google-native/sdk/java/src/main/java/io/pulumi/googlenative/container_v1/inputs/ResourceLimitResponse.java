@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Contains information about amount of some resource in the cluster. For memory, value should be in GB.
+ * 
+ */
 public final class ResourceLimitResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceLimitResponse Empty = new ResourceLimitResponse();
 
+    /**
+     * Maximum amount of the resource in the cluster.
+     * 
+     */
     @InputImport(name="maximum", required=true)
     private final String maximum;
 
@@ -19,6 +27,10 @@ public final class ResourceLimitResponse extends io.pulumi.resources.InvokeArgs 
         return this.maximum;
     }
 
+    /**
+     * Minimum amount of the resource in the cluster.
+     * 
+     */
     @InputImport(name="minimum", required=true)
     private final String minimum;
 
@@ -26,6 +38,10 @@ public final class ResourceLimitResponse extends io.pulumi.resources.InvokeArgs 
         return this.minimum;
     }
 
+    /**
+     * Resource name "cpu", "memory" or gpu-specific string.
+     * 
+     */
     @InputImport(name="resourceType", required=true)
     private final String resourceType;
 

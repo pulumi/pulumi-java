@@ -12,8 +12,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DatabaseInstanceSettingsMaintenanceWindow {
+    /**
+     * Day of week (`1-7`), starting on Monday
+     * 
+     */
     private final @Nullable Integer day;
+    /**
+     * Hour of day (`0-23`), ignored if `day` not set
+     * 
+     */
     private final @Nullable Integer hour;
+    /**
+     * Receive updates earlier (`canary`) or later
+     * (`stable`)
+     * 
+     */
     private final @Nullable String updateTrack;
 
     @OutputCustomType.Constructor({"day","hour","updateTrack"})
@@ -26,12 +39,25 @@ public final class DatabaseInstanceSettingsMaintenanceWindow {
         this.updateTrack = updateTrack;
     }
 
+    /**
+     * Day of week (`1-7`), starting on Monday
+     * 
+     */
     public Optional<Integer> getDay() {
         return Optional.ofNullable(this.day);
     }
+    /**
+     * Hour of day (`0-23`), ignored if `day` not set
+     * 
+     */
     public Optional<Integer> getHour() {
         return Optional.ofNullable(this.hour);
     }
+    /**
+     * Receive updates earlier (`canary`) or later
+     * (`stable`)
+     * 
+     */
     public Optional<String> getUpdateTrack() {
         return Optional.ofNullable(this.updateTrack);
     }

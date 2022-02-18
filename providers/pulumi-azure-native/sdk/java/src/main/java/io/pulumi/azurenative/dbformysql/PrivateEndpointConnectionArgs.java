@@ -16,6 +16,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
 
     public static final PrivateEndpointConnectionArgs Empty = new PrivateEndpointConnectionArgs();
 
+    /**
+     * Private endpoint which the connection belongs to.
+     * 
+     */
     @InputImport(name="privateEndpoint")
     private final @Nullable Input<PrivateEndpointPropertyArgs> privateEndpoint;
 
@@ -30,6 +34,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.privateEndpointConnectionName == null ? Input.empty() : this.privateEndpointConnectionName;
     }
 
+    /**
+     * Connection state of the private endpoint connection.
+     * 
+     */
     @InputImport(name="privateLinkServiceConnectionState")
     private final @Nullable Input<PrivateLinkServiceConnectionStatePropertyArgs> privateLinkServiceConnectionState;
 
@@ -37,6 +45,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.privateLinkServiceConnectionState == null ? Input.empty() : this.privateLinkServiceConnectionState;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -44,6 +56,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the server.
+     * 
+     */
     @InputImport(name="serverName", required=true)
     private final Input<String> serverName;
 

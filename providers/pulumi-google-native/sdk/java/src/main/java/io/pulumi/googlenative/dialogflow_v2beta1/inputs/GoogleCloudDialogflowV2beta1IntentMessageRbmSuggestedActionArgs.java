@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Rich Business Messaging (RBM) suggested client-side action that the user can choose from the card.
+ * 
+ */
 public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionArgs Empty = new GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionArgs();
 
+    /**
+     * Suggested client side action: Dial a phone number
+     * 
+     */
     @InputImport(name="dial")
     private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialArgs> dial;
 
@@ -24,6 +32,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionAr
         return this.dial == null ? Input.empty() : this.dial;
     }
 
+    /**
+     * Suggested client side action: Open a URI on device
+     * 
+     */
     @InputImport(name="openUrl")
     private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriArgs> openUrl;
 
@@ -31,6 +43,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionAr
         return this.openUrl == null ? Input.empty() : this.openUrl;
     }
 
+    /**
+     * Opaque payload that the Dialogflow receives in a user event when the user taps the suggested action. This data will be also forwarded to webhook to allow performing custom business logic.
+     * 
+     */
     @InputImport(name="postbackData")
     private final @Nullable Input<String> postbackData;
 
@@ -38,6 +54,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionAr
         return this.postbackData == null ? Input.empty() : this.postbackData;
     }
 
+    /**
+     * Suggested client side action: Share user location
+     * 
+     */
     @InputImport(name="shareLocation")
     private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationArgs> shareLocation;
 
@@ -45,6 +65,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionAr
         return this.shareLocation == null ? Input.empty() : this.shareLocation;
     }
 
+    /**
+     * Text to display alongside the action.
+     * 
+     */
     @InputImport(name="text")
     private final @Nullable Input<String> text;
 

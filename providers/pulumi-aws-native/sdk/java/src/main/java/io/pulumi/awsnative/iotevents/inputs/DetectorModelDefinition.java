@@ -10,10 +10,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Information that defines how a detector operates.
+ * 
+ */
 public final class DetectorModelDefinition extends io.pulumi.resources.InvokeArgs {
 
     public static final DetectorModelDefinition Empty = new DetectorModelDefinition();
 
+    /**
+     * The state that is entered at the creation of each detector (instance).
+     * 
+     */
     @InputImport(name="initialStateName", required=true)
     private final String initialStateName;
 
@@ -21,6 +29,10 @@ public final class DetectorModelDefinition extends io.pulumi.resources.InvokeArg
         return this.initialStateName;
     }
 
+    /**
+     * Information about the states of the detector.
+     * 
+     */
     @InputImport(name="states", required=true)
     private final List<DetectorModelState> states;
 

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Enumerates the possible values for the status of a messaging entity.
+     * 
+     */
     @EnumType
     public enum EntityStatus {
         Active("Active"),

@@ -14,7 +14,15 @@ import javax.annotation.Nullable;
 @OutputCustomType
 public final class JobDatabaseOutput {
     private final JobDatabaseTableOutputOptions databaseOptions;
+    /**
+     * Database table name
+     * 
+     */
     private final @Nullable JobDatabaseOutputDatabaseOutputMode databaseOutputMode;
+    /**
+     * Glue connection name
+     * 
+     */
     private final String glueConnectionName;
 
     @OutputCustomType.Constructor({"databaseOptions","databaseOutputMode","glueConnectionName"})
@@ -30,9 +38,17 @@ public final class JobDatabaseOutput {
     public JobDatabaseTableOutputOptions getDatabaseOptions() {
         return this.databaseOptions;
     }
+    /**
+     * Database table name
+     * 
+     */
     public Optional<JobDatabaseOutputDatabaseOutputMode> getDatabaseOutputMode() {
         return Optional.ofNullable(this.databaseOutputMode);
     }
+    /**
+     * Glue connection name
+     * 
+     */
     public String getGlueConnectionName() {
         return this.glueConnectionName;
     }

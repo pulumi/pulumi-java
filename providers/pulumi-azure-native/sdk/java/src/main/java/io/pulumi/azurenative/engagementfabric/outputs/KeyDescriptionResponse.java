@@ -9,8 +9,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class KeyDescriptionResponse {
+    /**
+     * The name of the key
+     * 
+     */
     private final String name;
+    /**
+     * The rank of the key
+     * 
+     */
     private final String rank;
+    /**
+     * The value of the key
+     * 
+     */
     private final String value;
 
     @OutputCustomType.Constructor({"name","rank","value"})
@@ -23,12 +35,24 @@ public final class KeyDescriptionResponse {
         this.value = Objects.requireNonNull(value);
     }
 
+    /**
+     * The name of the key
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The rank of the key
+     * 
+     */
     public String getRank() {
         return this.rank;
     }
+    /**
+     * The value of the key
+     * 
+     */
     public String getValue() {
         return this.value;
     }

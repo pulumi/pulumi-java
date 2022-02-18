@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * NIC type
+     * 
+     */
     @EnumType
     public enum NICType {
         Vmxnet3("vmxnet3"),

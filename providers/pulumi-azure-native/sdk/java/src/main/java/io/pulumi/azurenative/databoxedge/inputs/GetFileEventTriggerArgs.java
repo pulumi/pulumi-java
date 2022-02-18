@@ -12,6 +12,10 @@ public final class GetFileEventTriggerArgs extends io.pulumi.resources.InvokeArg
 
     public static final GetFileEventTriggerArgs Empty = new GetFileEventTriggerArgs();
 
+    /**
+     * The device name.
+     * 
+     */
     @InputImport(name="deviceName", required=true)
     private final String deviceName;
 
@@ -19,6 +23,10 @@ public final class GetFileEventTriggerArgs extends io.pulumi.resources.InvokeArg
         return this.deviceName;
     }
 
+    /**
+     * The trigger name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -26,6 +34,10 @@ public final class GetFileEventTriggerArgs extends io.pulumi.resources.InvokeArg
         return this.name;
     }
 
+    /**
+     * The resource group name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

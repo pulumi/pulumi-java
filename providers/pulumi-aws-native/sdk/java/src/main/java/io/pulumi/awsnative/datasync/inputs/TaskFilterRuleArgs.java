@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specifies which files folders and objects to include or exclude when transferring files from source to destination.
+ * 
+ */
 public final class TaskFilterRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TaskFilterRuleArgs Empty = new TaskFilterRuleArgs();
 
+    /**
+     * The type of filter rule to apply. AWS DataSync only supports the SIMPLE_PATTERN rule type.
+     * 
+     */
     @InputImport(name="filterType")
     private final @Nullable Input<TaskFilterRuleFilterType> filterType;
 
@@ -22,6 +30,10 @@ public final class TaskFilterRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.filterType == null ? Input.empty() : this.filterType;
     }
 
+    /**
+     * A single filter string that consists of the patterns to include or exclude. The patterns are delimited by "|".
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

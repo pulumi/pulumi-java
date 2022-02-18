@@ -13,6 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Input
+ * 
+ */
 public final class DatasetInputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DatasetInputArgs Empty = new DatasetInputArgs();

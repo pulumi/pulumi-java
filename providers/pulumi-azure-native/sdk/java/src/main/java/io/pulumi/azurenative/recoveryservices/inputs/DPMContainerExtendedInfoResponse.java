@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Additional information of the DPMContainer.
+ * 
+ */
 public final class DPMContainerExtendedInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DPMContainerExtendedInfoResponse Empty = new DPMContainerExtendedInfoResponse();
 
+    /**
+     * Last refresh time of the DPMContainer.
+     * 
+     */
     @InputImport(name="lastRefreshedAt")
     private final @Nullable String lastRefreshedAt;
 

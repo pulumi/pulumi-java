@@ -16,6 +16,13 @@ public final class BackendServiceOutlierDetectionArgs extends io.pulumi.resource
 
     public static final BackendServiceOutlierDetectionArgs Empty = new BackendServiceOutlierDetectionArgs();
 
+    /**
+     * The base time that a host is ejected for. The real time is equal to the base
+     * time multiplied by the number of times the host has been ejected. Defaults to
+     * 30000ms or 30s.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="baseEjectionTime")
     private final @Nullable Input<BackendServiceOutlierDetectionBaseEjectionTimeArgs> baseEjectionTime;
 
@@ -23,6 +30,12 @@ public final class BackendServiceOutlierDetectionArgs extends io.pulumi.resource
         return this.baseEjectionTime == null ? Input.empty() : this.baseEjectionTime;
     }
 
+    /**
+     * Number of errors before a host is ejected from the connection pool. When the
+     * backend host is accessed over HTTP, a 5xx return code qualifies as an error.
+     * Defaults to 5.
+     * 
+     */
     @InputImport(name="consecutiveErrors")
     private final @Nullable Input<Integer> consecutiveErrors;
 
@@ -30,6 +43,12 @@ public final class BackendServiceOutlierDetectionArgs extends io.pulumi.resource
         return this.consecutiveErrors == null ? Input.empty() : this.consecutiveErrors;
     }
 
+    /**
+     * The number of consecutive gateway failures (502, 503, 504 status or connection
+     * errors that are mapped to one of those status codes) before a consecutive
+     * gateway failure ejection occurs. Defaults to 5.
+     * 
+     */
     @InputImport(name="consecutiveGatewayFailure")
     private final @Nullable Input<Integer> consecutiveGatewayFailure;
 
@@ -37,6 +56,12 @@ public final class BackendServiceOutlierDetectionArgs extends io.pulumi.resource
         return this.consecutiveGatewayFailure == null ? Input.empty() : this.consecutiveGatewayFailure;
     }
 
+    /**
+     * The percentage chance that a host will be actually ejected when an outlier
+     * status is detected through consecutive 5xx. This setting can be used to disable
+     * ejection or to ramp it up slowly. Defaults to 100.
+     * 
+     */
     @InputImport(name="enforcingConsecutiveErrors")
     private final @Nullable Input<Integer> enforcingConsecutiveErrors;
 
@@ -44,6 +69,12 @@ public final class BackendServiceOutlierDetectionArgs extends io.pulumi.resource
         return this.enforcingConsecutiveErrors == null ? Input.empty() : this.enforcingConsecutiveErrors;
     }
 
+    /**
+     * The percentage chance that a host will be actually ejected when an outlier
+     * status is detected through consecutive gateway failures. This setting can be
+     * used to disable ejection or to ramp it up slowly. Defaults to 0.
+     * 
+     */
     @InputImport(name="enforcingConsecutiveGatewayFailure")
     private final @Nullable Input<Integer> enforcingConsecutiveGatewayFailure;
 
@@ -51,6 +82,12 @@ public final class BackendServiceOutlierDetectionArgs extends io.pulumi.resource
         return this.enforcingConsecutiveGatewayFailure == null ? Input.empty() : this.enforcingConsecutiveGatewayFailure;
     }
 
+    /**
+     * The percentage chance that a host will be actually ejected when an outlier
+     * status is detected through success rate statistics. This setting can be used to
+     * disable ejection or to ramp it up slowly. Defaults to 100.
+     * 
+     */
     @InputImport(name="enforcingSuccessRate")
     private final @Nullable Input<Integer> enforcingSuccessRate;
 
@@ -58,6 +95,12 @@ public final class BackendServiceOutlierDetectionArgs extends io.pulumi.resource
         return this.enforcingSuccessRate == null ? Input.empty() : this.enforcingSuccessRate;
     }
 
+    /**
+     * Time interval between ejection sweep analysis. This can result in both new
+     * ejections as well as hosts being returned to service. Defaults to 10 seconds.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="interval")
     private final @Nullable Input<BackendServiceOutlierDetectionIntervalArgs> interval;
 
@@ -65,6 +108,11 @@ public final class BackendServiceOutlierDetectionArgs extends io.pulumi.resource
         return this.interval == null ? Input.empty() : this.interval;
     }
 
+    /**
+     * Maximum percentage of hosts in the load balancing pool for the backend service
+     * that can be ejected. Defaults to 10%.
+     * 
+     */
     @InputImport(name="maxEjectionPercent")
     private final @Nullable Input<Integer> maxEjectionPercent;
 
@@ -72,6 +120,13 @@ public final class BackendServiceOutlierDetectionArgs extends io.pulumi.resource
         return this.maxEjectionPercent == null ? Input.empty() : this.maxEjectionPercent;
     }
 
+    /**
+     * The number of hosts in a cluster that must have enough request volume to detect
+     * success rate outliers. If the number of hosts is less than this setting, outlier
+     * detection via success rate statistics is not performed for any host in the
+     * cluster. Defaults to 5.
+     * 
+     */
     @InputImport(name="successRateMinimumHosts")
     private final @Nullable Input<Integer> successRateMinimumHosts;
 
@@ -79,6 +134,14 @@ public final class BackendServiceOutlierDetectionArgs extends io.pulumi.resource
         return this.successRateMinimumHosts == null ? Input.empty() : this.successRateMinimumHosts;
     }
 
+    /**
+     * The minimum number of total requests that must be collected in one interval (as
+     * defined by the interval duration above) to include this host in success rate
+     * based outlier detection. If the volume is lower than this setting, outlier
+     * detection via success rate statistics is not performed for that host. Defaults
+     * to 100.
+     * 
+     */
     @InputImport(name="successRateRequestVolume")
     private final @Nullable Input<Integer> successRateRequestVolume;
 
@@ -86,6 +149,15 @@ public final class BackendServiceOutlierDetectionArgs extends io.pulumi.resource
         return this.successRateRequestVolume == null ? Input.empty() : this.successRateRequestVolume;
     }
 
+    /**
+     * This factor is used to determine the ejection threshold for success rate outlier
+     * ejection. The ejection threshold is the difference between the mean success
+     * rate, and the product of this factor and the standard deviation of the mean
+     * success rate: mean - (stdev * success_rate_stdev_factor). This factor is divided
+     * by a thousand to get a double. That is, if the desired factor is 1.9, the
+     * runtime value should be 1900. Defaults to 1900.
+     * 
+     */
     @InputImport(name="successRateStdevFactor")
     private final @Nullable Input<Integer> successRateStdevFactor;
 

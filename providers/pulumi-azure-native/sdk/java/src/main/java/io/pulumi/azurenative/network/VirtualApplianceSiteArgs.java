@@ -15,6 +15,10 @@ public final class VirtualApplianceSiteArgs extends io.pulumi.resources.Resource
 
     public static final VirtualApplianceSiteArgs Empty = new VirtualApplianceSiteArgs();
 
+    /**
+     * Address Prefix.
+     * 
+     */
     @InputImport(name="addressPrefix")
     private final @Nullable Input<String> addressPrefix;
 
@@ -22,6 +26,10 @@ public final class VirtualApplianceSiteArgs extends io.pulumi.resources.Resource
         return this.addressPrefix == null ? Input.empty() : this.addressPrefix;
     }
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -29,6 +37,10 @@ public final class VirtualApplianceSiteArgs extends io.pulumi.resources.Resource
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * Name of the virtual appliance site.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -36,6 +48,10 @@ public final class VirtualApplianceSiteArgs extends io.pulumi.resources.Resource
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The name of the Network Virtual Appliance.
+     * 
+     */
     @InputImport(name="networkVirtualApplianceName", required=true)
     private final Input<String> networkVirtualApplianceName;
 
@@ -43,6 +59,10 @@ public final class VirtualApplianceSiteArgs extends io.pulumi.resources.Resource
         return this.networkVirtualApplianceName;
     }
 
+    /**
+     * Office 365 Policy.
+     * 
+     */
     @InputImport(name="o365Policy")
     private final @Nullable Input<Office365PolicyPropertiesArgs> o365Policy;
 
@@ -50,6 +70,10 @@ public final class VirtualApplianceSiteArgs extends io.pulumi.resources.Resource
         return this.o365Policy == null ? Input.empty() : this.o365Policy;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -57,6 +81,10 @@ public final class VirtualApplianceSiteArgs extends io.pulumi.resources.Resource
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the site.
+     * 
+     */
     @InputImport(name="siteName")
     private final @Nullable Input<String> siteName;
 

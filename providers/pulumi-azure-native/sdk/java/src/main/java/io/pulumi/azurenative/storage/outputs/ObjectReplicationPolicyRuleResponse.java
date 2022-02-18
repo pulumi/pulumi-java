@@ -12,9 +12,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ObjectReplicationPolicyRuleResponse {
+    /**
+     * Required. Destination container name.
+     * 
+     */
     private final String destinationContainer;
+    /**
+     * Optional. An object that defines the filter set.
+     * 
+     */
     private final @Nullable ObjectReplicationPolicyFilterResponse filters;
+    /**
+     * Rule Id is auto-generated for each new rule on destination account. It is required for put policy on source account.
+     * 
+     */
     private final @Nullable String ruleId;
+    /**
+     * Required. Source container name.
+     * 
+     */
     private final String sourceContainer;
 
     @OutputCustomType.Constructor({"destinationContainer","filters","ruleId","sourceContainer"})
@@ -29,15 +45,31 @@ public final class ObjectReplicationPolicyRuleResponse {
         this.sourceContainer = Objects.requireNonNull(sourceContainer);
     }
 
+    /**
+     * Required. Destination container name.
+     * 
+     */
     public String getDestinationContainer() {
         return this.destinationContainer;
     }
+    /**
+     * Optional. An object that defines the filter set.
+     * 
+     */
     public Optional<ObjectReplicationPolicyFilterResponse> getFilters() {
         return Optional.ofNullable(this.filters);
     }
+    /**
+     * Rule Id is auto-generated for each new rule on destination account. It is required for put policy on source account.
+     * 
+     */
     public Optional<String> getRuleId() {
         return Optional.ofNullable(this.ruleId);
     }
+    /**
+     * Required. Source container name.
+     * 
+     */
     public String getSourceContainer() {
         return this.sourceContainer;
     }

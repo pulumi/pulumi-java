@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Database table name
+     * 
+     */
     @EnumType
     public enum JobDatabaseOutputDatabaseOutputMode {
         NewTable("NEW_TABLE");

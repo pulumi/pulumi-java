@@ -14,6 +14,10 @@ public final class StaticIpArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StaticIpArgs Empty = new StaticIpArgs();
 
+    /**
+     * The instance where the static IP is attached.
+     * 
+     */
     @InputImport(name="attachedTo")
     private final @Nullable Input<String> attachedTo;
 
@@ -21,6 +25,10 @@ public final class StaticIpArgs extends io.pulumi.resources.ResourceArgs {
         return this.attachedTo == null ? Input.empty() : this.attachedTo;
     }
 
+    /**
+     * The name of the static IP address.
+     * 
+     */
     @InputImport(name="staticIpName")
     private final @Nullable Input<String> staticIpName;
 

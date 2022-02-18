@@ -17,6 +17,10 @@ public final class RegionSslCertificateArgs extends io.pulumi.resources.Resource
 
     public static final RegionSslCertificateArgs Empty = new RegionSslCertificateArgs();
 
+    /**
+     * A value read into memory from a certificate file. The certificate file must be in PEM format. The certificate chain must be no greater than 5 certs long. The chain must include at least one intermediate cert.
+     * 
+     */
     @InputImport(name="certificate")
     private final @Nullable Input<String> certificate;
 
@@ -24,6 +28,10 @@ public final class RegionSslCertificateArgs extends io.pulumi.resources.Resource
         return this.certificate == null ? Input.empty() : this.certificate;
     }
 
+    /**
+     * An optional description of this resource. Provide this property when you create the resource.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -31,6 +39,10 @@ public final class RegionSslCertificateArgs extends io.pulumi.resources.Resource
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Configuration and status of a managed SSL certificate.
+     * 
+     */
     @InputImport(name="managed")
     private final @Nullable Input<SslCertificateManagedSslCertificateArgs> managed;
 
@@ -38,6 +50,10 @@ public final class RegionSslCertificateArgs extends io.pulumi.resources.Resource
         return this.managed == null ? Input.empty() : this.managed;
     }
 
+    /**
+     * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -45,6 +61,10 @@ public final class RegionSslCertificateArgs extends io.pulumi.resources.Resource
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * A value read into memory from a write-only private key file. The private key file must be in PEM format. For security, only insert requests include this field.
+     * 
+     */
     @InputImport(name="privateKey")
     private final @Nullable Input<String> privateKey;
 
@@ -73,6 +93,10 @@ public final class RegionSslCertificateArgs extends io.pulumi.resources.Resource
         return this.requestId == null ? Input.empty() : this.requestId;
     }
 
+    /**
+     * Configuration and status of a self-managed SSL certificate.
+     * 
+     */
     @InputImport(name="selfManaged")
     private final @Nullable Input<SslCertificateSelfManagedSslCertificateArgs> selfManaged;
 
@@ -80,6 +104,10 @@ public final class RegionSslCertificateArgs extends io.pulumi.resources.Resource
         return this.selfManaged == null ? Input.empty() : this.selfManaged;
     }
 
+    /**
+     * (Optional) Specifies the type of SSL certificate, either "SELF_MANAGED" or "MANAGED". If not specified, the certificate is self-managed and the fields certificate and private_key are used.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<RegionSslCertificateType> type;
 

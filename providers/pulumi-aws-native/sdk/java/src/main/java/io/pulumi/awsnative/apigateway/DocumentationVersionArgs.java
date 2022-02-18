@@ -14,6 +14,10 @@ public final class DocumentationVersionArgs extends io.pulumi.resources.Resource
 
     public static final DocumentationVersionArgs Empty = new DocumentationVersionArgs();
 
+    /**
+     * The description of the API documentation snapshot.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -21,6 +25,10 @@ public final class DocumentationVersionArgs extends io.pulumi.resources.Resource
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The version identifier of the API documentation snapshot.
+     * 
+     */
     @InputImport(name="documentationVersion", required=true)
     private final Input<String> documentationVersion;
 
@@ -28,6 +36,10 @@ public final class DocumentationVersionArgs extends io.pulumi.resources.Resource
         return this.documentationVersion;
     }
 
+    /**
+     * The identifier of the API.
+     * 
+     */
     @InputImport(name="restApiId", required=true)
     private final Input<String> restApiId;
 

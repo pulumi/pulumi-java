@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A package managed by APT. - install: `apt-get update && apt-get -y install [name]` - remove: `apt-get -y remove [name]`
+ * 
+ */
 public final class OSPolicyResourcePackageResourceAPTResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OSPolicyResourcePackageResourceAPTResponse Empty = new OSPolicyResourcePackageResourceAPTResponse();
 
+    /**
+     * Package name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

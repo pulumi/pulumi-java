@@ -8,9 +8,21 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Required. The redirect status code.
+     * 
+     */
     @EnumType
     public enum DomainRedirectType {
+        /**
+         * The default redirect type; should not be intentionlly used.
+         * 
+         */
         RedirectTypeUnspecified("REDIRECT_TYPE_UNSPECIFIED"),
+        /**
+         * The redirect will respond with an HTTP status code of `301 Moved Permanently`.
+         * 
+         */
         MovedPermanently("MOVED_PERMANENTLY");
 
         private final String value;

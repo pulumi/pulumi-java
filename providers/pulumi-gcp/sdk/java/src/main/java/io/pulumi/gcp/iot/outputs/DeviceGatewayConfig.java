@@ -11,9 +11,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DeviceGatewayConfig {
+    /**
+     * Indicates whether the device is a gateway.
+     * Possible values are `ASSOCIATION_ONLY`, `DEVICE_AUTH_TOKEN_ONLY`, and `ASSOCIATION_AND_DEVICE_AUTH_TOKEN`.
+     * 
+     */
     private final @Nullable String gatewayAuthMethod;
+    /**
+     * Indicates whether the device is a gateway.
+     * Default value is `NON_GATEWAY`.
+     * Possible values are `GATEWAY` and `NON_GATEWAY`.
+     * 
+     */
     private final @Nullable String gatewayType;
+    /**
+     * - 
+     * The ID of the gateway the device accessed most recently.
+     * 
+     */
     private final @Nullable String lastAccessedGatewayId;
+    /**
+     * - 
+     * The most recent time at which the device accessed the gateway specified in last_accessed_gateway.
+     * 
+     */
     private final @Nullable String lastAccessedGatewayTime;
 
     @OutputCustomType.Constructor({"gatewayAuthMethod","gatewayType","lastAccessedGatewayId","lastAccessedGatewayTime"})
@@ -28,15 +49,36 @@ public final class DeviceGatewayConfig {
         this.lastAccessedGatewayTime = lastAccessedGatewayTime;
     }
 
+    /**
+     * Indicates whether the device is a gateway.
+     * Possible values are `ASSOCIATION_ONLY`, `DEVICE_AUTH_TOKEN_ONLY`, and `ASSOCIATION_AND_DEVICE_AUTH_TOKEN`.
+     * 
+     */
     public Optional<String> getGatewayAuthMethod() {
         return Optional.ofNullable(this.gatewayAuthMethod);
     }
+    /**
+     * Indicates whether the device is a gateway.
+     * Default value is `NON_GATEWAY`.
+     * Possible values are `GATEWAY` and `NON_GATEWAY`.
+     * 
+     */
     public Optional<String> getGatewayType() {
         return Optional.ofNullable(this.gatewayType);
     }
+    /**
+     * - 
+     * The ID of the gateway the device accessed most recently.
+     * 
+     */
     public Optional<String> getLastAccessedGatewayId() {
         return Optional.ofNullable(this.lastAccessedGatewayId);
     }
+    /**
+     * - 
+     * The most recent time at which the device accessed the gateway specified in last_accessed_gateway.
+     * 
+     */
     public Optional<String> getLastAccessedGatewayTime() {
         return Optional.ofNullable(this.lastAccessedGatewayTime);
     }

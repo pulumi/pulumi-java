@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties for the task that gets TDE certificates in Base64 encoded format.
+ * 
+ */
 public final class GetTdeCertificatesSqlTaskPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GetTdeCertificatesSqlTaskPropertiesArgs Empty = new GetTdeCertificatesSqlTaskPropertiesArgs();
 
+    /**
+     * Task input
+     * 
+     */
     @InputImport(name="input")
     private final @Nullable Input<GetTdeCertificatesSqlTaskInputArgs> input;
 
@@ -22,6 +30,11 @@ public final class GetTdeCertificatesSqlTaskPropertiesArgs extends io.pulumi.res
         return this.input == null ? Input.empty() : this.input;
     }
 
+    /**
+     * Task type.
+     * Expected value is 'GetTDECertificates.Sql'.
+     * 
+     */
     @InputImport(name="taskType", required=true)
     private final Input<String> taskType;
 

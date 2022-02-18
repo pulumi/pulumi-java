@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGuestPolicy {
+/**
+ * Get an OS Config guest policy.
+ * 
+ */
     public static CompletableFuture<GetGuestPolicyResult> invokeAsync(GetGuestPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:osconfig/v1beta:getGuestPolicy", TypeShape.of(GetGuestPolicyResult.class), args == null ? GetGuestPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

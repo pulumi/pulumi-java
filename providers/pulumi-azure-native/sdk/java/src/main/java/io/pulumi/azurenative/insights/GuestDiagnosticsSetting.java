@@ -16,29 +16,76 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Virtual machine guest diagnostics settings resource.
+ * API Version: 2018-06-01-preview.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:insights:guestDiagnosticsSetting SampleDiagSetting /subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/Default-ResourceGroup/providers/microsoft.insights/guestDiagnosticSettings/SampleDiagSetting 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:insights:guestDiagnosticsSetting")
 public class GuestDiagnosticsSetting extends io.pulumi.resources.CustomResource {
+    /**
+     * the array of data source object which are configured to collect and send data
+     * 
+     */
     @OutputExport(name="dataSources", type=List.class, parameters={DataSourceResponse.class})
     private Output</* @Nullable */ List<DataSourceResponse>> dataSources;
 
+    /**
+     * @return the array of data source object which are configured to collect and send data
+     * 
+     */
     public Output</* @Nullable */ List<DataSourceResponse>> getDataSources() {
         return this.dataSources;
     }
+    /**
+     * Resource location
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * Azure resource name
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Azure resource name
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Operating system type for the configuration
+     * 
+     */
     @OutputExport(name="osType", type=String.class, parameters={})
     private Output</* @Nullable */ String> osType;
 
+    /**
+     * @return Operating system type for the configuration
+     * 
+     */
     public Output</* @Nullable */ String> getOsType() {
         return this.osType;
     }
@@ -48,19 +95,41 @@ public class GuestDiagnosticsSetting extends io.pulumi.resources.CustomResource 
     public Output</* @Nullable */ String> getProxySetting() {
         return this.proxySetting;
     }
+    /**
+     * Resource tags
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Azure resource type
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Azure resource type
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public GuestDiagnosticsSetting(String name, GuestDiagnosticsSettingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:insights:guestDiagnosticsSetting", name, args == null ? GuestDiagnosticsSettingArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -79,6 +148,14 @@ public class GuestDiagnosticsSetting extends io.pulumi.resources.CustomResource 
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static GuestDiagnosticsSetting get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new GuestDiagnosticsSetting(name, id, options);
     }

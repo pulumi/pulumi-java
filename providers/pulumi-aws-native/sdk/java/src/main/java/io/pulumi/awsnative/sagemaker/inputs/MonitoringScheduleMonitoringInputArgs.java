@@ -9,6 +9,10 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * The inputs for a monitoring job.
+ * 
+ */
 public final class MonitoringScheduleMonitoringInputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MonitoringScheduleMonitoringInputArgs Empty = new MonitoringScheduleMonitoringInputArgs();

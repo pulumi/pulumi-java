@@ -18,6 +18,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ClusterArgs Empty = new ClusterArgs();
 
+    /**
+     * Configuration for this cluster.
+     * 
+     */
     @InputImport(name="clusterConfig")
     private final @Nullable Input<ClusterConfigArgs> clusterConfig;
 
@@ -32,6 +36,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.clusterId;
     }
 
+    /**
+     * Immutable. The type of storage used by this cluster to serve its parent instance's tables, unless explicitly overridden.
+     * 
+     */
     @InputImport(name="defaultStorageType")
     private final @Nullable Input<ClusterDefaultStorageType> defaultStorageType;
 
@@ -39,6 +47,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.defaultStorageType == null ? Input.empty() : this.defaultStorageType;
     }
 
+    /**
+     * Immutable. The encryption configuration for CMEK-protected clusters.
+     * 
+     */
     @InputImport(name="encryptionConfig")
     private final @Nullable Input<EncryptionConfigArgs> encryptionConfig;
 
@@ -53,6 +65,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.instanceId;
     }
 
+    /**
+     * Immutable. The location where this cluster's nodes and storage reside. For best performance, clients should be located as close as possible to this cluster. Currently only zones are supported, so values should be of the form `projects/{project}/locations/{zone}`.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -60,6 +76,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The unique name of the cluster. Values are of the form `projects/{project}/instances/{instance}/clusters/a-z*`.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -74,6 +94,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The number of nodes allocated to this cluster. More nodes enable higher throughput and more consistent performance.
+     * 
+     */
     @InputImport(name="serveNodes")
     private final @Nullable Input<Integer> serveNodes;
 

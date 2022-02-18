@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Teams data type connection.
+ * 
+ */
 public final class OfficeDataConnectorDataTypesResponseTeams extends io.pulumi.resources.InvokeArgs {
 
     public static final OfficeDataConnectorDataTypesResponseTeams Empty = new OfficeDataConnectorDataTypesResponseTeams();
 
+    /**
+     * Describe whether this data type connection is enabled or not.
+     * 
+     */
     @InputImport(name="state")
     private final @Nullable String state;
 

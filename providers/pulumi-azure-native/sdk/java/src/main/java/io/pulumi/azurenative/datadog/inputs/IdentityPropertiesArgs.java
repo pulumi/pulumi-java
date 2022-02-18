@@ -16,6 +16,10 @@ public final class IdentityPropertiesArgs extends io.pulumi.resources.ResourceAr
 
     public static final IdentityPropertiesArgs Empty = new IdentityPropertiesArgs();
 
+    /**
+     * Identity type
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<Either<String,ManagedIdentityTypes>> type;
 

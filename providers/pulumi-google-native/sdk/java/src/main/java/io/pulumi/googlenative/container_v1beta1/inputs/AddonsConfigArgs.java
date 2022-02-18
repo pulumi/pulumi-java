@@ -21,10 +21,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Configuration for the addons that can be automatically spun up in the cluster, enabling additional functionality.
+ * 
+ */
 public final class AddonsConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AddonsConfigArgs Empty = new AddonsConfigArgs();
 
+    /**
+     * Configuration for the Cloud Run addon. The `IstioConfig` addon must be enabled in order to enable Cloud Run addon. This option can only be enabled at cluster creation time.
+     * 
+     */
     @InputImport(name="cloudRunConfig")
     private final @Nullable Input<CloudRunConfigArgs> cloudRunConfig;
 
@@ -32,6 +40,10 @@ public final class AddonsConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.cloudRunConfig == null ? Input.empty() : this.cloudRunConfig;
     }
 
+    /**
+     * Configuration for the ConfigConnector add-on, a Kubernetes extension to manage hosted GCP services through the Kubernetes API
+     * 
+     */
     @InputImport(name="configConnectorConfig")
     private final @Nullable Input<ConfigConnectorConfigArgs> configConnectorConfig;
 
@@ -39,6 +51,10 @@ public final class AddonsConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.configConnectorConfig == null ? Input.empty() : this.configConnectorConfig;
     }
 
+    /**
+     * Configuration for NodeLocalDNS, a dns cache running on cluster nodes
+     * 
+     */
     @InputImport(name="dnsCacheConfig")
     private final @Nullable Input<DnsCacheConfigArgs> dnsCacheConfig;
 
@@ -46,6 +62,10 @@ public final class AddonsConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.dnsCacheConfig == null ? Input.empty() : this.dnsCacheConfig;
     }
 
+    /**
+     * Configuration for the Compute Engine Persistent Disk CSI driver.
+     * 
+     */
     @InputImport(name="gcePersistentDiskCsiDriverConfig")
     private final @Nullable Input<GcePersistentDiskCsiDriverConfigArgs> gcePersistentDiskCsiDriverConfig;
 
@@ -53,6 +73,10 @@ public final class AddonsConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.gcePersistentDiskCsiDriverConfig == null ? Input.empty() : this.gcePersistentDiskCsiDriverConfig;
     }
 
+    /**
+     * Configuration for the GCP Filestore CSI driver.
+     * 
+     */
     @InputImport(name="gcpFilestoreCsiDriverConfig")
     private final @Nullable Input<GcpFilestoreCsiDriverConfigArgs> gcpFilestoreCsiDriverConfig;
 
@@ -60,6 +84,10 @@ public final class AddonsConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.gcpFilestoreCsiDriverConfig == null ? Input.empty() : this.gcpFilestoreCsiDriverConfig;
     }
 
+    /**
+     * Configuration for the Backup for GKE agent addon.
+     * 
+     */
     @InputImport(name="gkeBackupAgentConfig")
     private final @Nullable Input<GkeBackupAgentConfigArgs> gkeBackupAgentConfig;
 
@@ -67,6 +95,10 @@ public final class AddonsConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.gkeBackupAgentConfig == null ? Input.empty() : this.gkeBackupAgentConfig;
     }
 
+    /**
+     * Configuration for the horizontal pod autoscaling feature, which increases or decreases the number of replica pods a replication controller has based on the resource usage of the existing pods.
+     * 
+     */
     @InputImport(name="horizontalPodAutoscaling")
     private final @Nullable Input<HorizontalPodAutoscalingArgs> horizontalPodAutoscaling;
 
@@ -74,6 +106,10 @@ public final class AddonsConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.horizontalPodAutoscaling == null ? Input.empty() : this.horizontalPodAutoscaling;
     }
 
+    /**
+     * Configuration for the HTTP (L7) load balancing controller addon, which makes it easy to set up HTTP load balancers for services in a cluster.
+     * 
+     */
     @InputImport(name="httpLoadBalancing")
     private final @Nullable Input<HttpLoadBalancingArgs> httpLoadBalancing;
 
@@ -81,6 +117,10 @@ public final class AddonsConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.httpLoadBalancing == null ? Input.empty() : this.httpLoadBalancing;
     }
 
+    /**
+     * Configuration for Istio, an open platform to connect, manage, and secure microservices.
+     * 
+     */
     @InputImport(name="istioConfig")
     private final @Nullable Input<IstioConfigArgs> istioConfig;
 
@@ -88,6 +128,10 @@ public final class AddonsConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.istioConfig == null ? Input.empty() : this.istioConfig;
     }
 
+    /**
+     * Configuration for the KALM addon, which manages the lifecycle of k8s applications.
+     * 
+     */
     @InputImport(name="kalmConfig")
     private final @Nullable Input<KalmConfigArgs> kalmConfig;
 
@@ -95,6 +139,10 @@ public final class AddonsConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.kalmConfig == null ? Input.empty() : this.kalmConfig;
     }
 
+    /**
+     * Configuration for the Kubernetes Dashboard. This addon is deprecated, and will be disabled in 1.15. It is recommended to use the Cloud Console to manage and monitor your Kubernetes clusters, workloads and applications. For more information, see: https://cloud.google.com/kubernetes-engine/docs/concepts/dashboards
+     * 
+     */
     @InputImport(name="kubernetesDashboard")
     private final @Nullable Input<KubernetesDashboardArgs> kubernetesDashboard;
 
@@ -102,6 +150,10 @@ public final class AddonsConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.kubernetesDashboard == null ? Input.empty() : this.kubernetesDashboard;
     }
 
+    /**
+     * Configuration for NetworkPolicy. This only tracks whether the addon is enabled or not on the Master, it does not track whether network policy is enabled for the nodes.
+     * 
+     */
     @InputImport(name="networkPolicyConfig")
     private final @Nullable Input<NetworkPolicyConfigArgs> networkPolicyConfig;
 

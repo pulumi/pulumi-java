@@ -14,6 +14,10 @@ public final class SelfSubjectRulesReviewSpecArgs extends io.pulumi.resources.Re
 
     public static final SelfSubjectRulesReviewSpecArgs Empty = new SelfSubjectRulesReviewSpecArgs();
 
+    /**
+     * Namespace to evaluate rules for. Required.
+     * 
+     */
     @InputImport(name="namespace")
     private final @Nullable Input<String> namespace;
 

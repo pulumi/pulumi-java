@@ -14,6 +14,10 @@ public final class RouterBgpAdvertisedIpRangeArgs extends io.pulumi.resources.Re
 
     public static final RouterBgpAdvertisedIpRangeArgs Empty = new RouterBgpAdvertisedIpRangeArgs();
 
+    /**
+     * User-specified description for the IP range.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -21,6 +25,11 @@ public final class RouterBgpAdvertisedIpRangeArgs extends io.pulumi.resources.Re
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The IP range to advertise. The value must be a
+     * CIDR-formatted string.
+     * 
+     */
     @InputImport(name="range", required=true)
     private final Input<String> range;
 

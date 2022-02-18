@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Container group network profile information.
+ * 
+ */
 public final class ContainerGroupNetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContainerGroupNetworkProfileArgs Empty = new ContainerGroupNetworkProfileArgs();
 
+    /**
+     * The identifier for a network profile.
+     * 
+     */
     @InputImport(name="id", required=true)
     private final Input<String> id;
 

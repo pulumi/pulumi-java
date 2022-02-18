@@ -15,6 +15,10 @@ public final class SecretVersionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SecretVersionArgs Empty = new SecretVersionArgs();
 
+    /**
+     * The current state of the SecretVersion.
+     * 
+     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 
@@ -22,6 +26,10 @@ public final class SecretVersionArgs extends io.pulumi.resources.ResourceArgs {
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
+    /**
+     * Secret Manager secret resource
+     * 
+     */
     @InputImport(name="secret", required=true)
     private final Input<String> secret;
 
@@ -29,6 +37,11 @@ public final class SecretVersionArgs extends io.pulumi.resources.ResourceArgs {
         return this.secret;
     }
 
+    /**
+     * The secret data. Must be no larger than 64KiB.
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     @InputImport(name="secretData", required=true)
     private final Input<String> secretData;
 

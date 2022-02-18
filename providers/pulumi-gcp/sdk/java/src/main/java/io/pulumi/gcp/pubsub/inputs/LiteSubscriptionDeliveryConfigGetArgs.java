@@ -13,6 +13,11 @@ public final class LiteSubscriptionDeliveryConfigGetArgs extends io.pulumi.resou
 
     public static final LiteSubscriptionDeliveryConfigGetArgs Empty = new LiteSubscriptionDeliveryConfigGetArgs();
 
+    /**
+     * When this subscription should send messages to subscribers relative to messages persistence in storage.
+     * Possible values are `DELIVER_IMMEDIATELY`, `DELIVER_AFTER_STORED`, and `DELIVERY_REQUIREMENT_UNSPECIFIED`.
+     * 
+     */
     @InputImport(name="deliveryRequirement", required=true)
     private final Input<String> deliveryRequirement;
 

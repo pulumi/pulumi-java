@@ -8,9 +8,21 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The frequency of the recurrence.
+     * 
+     */
     @EnumType
     public enum RecurrenceFrequency {
+        /**
+         * Schedule will run every days.
+         * 
+         */
         Daily("Daily"),
+        /**
+         * Schedule will run every week on days specified in weekDays.
+         * 
+         */
         Weekly("Weekly");
 
         private final String value;

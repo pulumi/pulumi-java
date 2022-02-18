@@ -14,6 +14,10 @@ public final class CertificateAuthorityActivationArgs extends io.pulumi.resource
 
     public static final CertificateAuthorityActivationArgs Empty = new CertificateAuthorityActivationArgs();
 
+    /**
+     * Certificate Authority certificate that will be installed in the Certificate Authority.
+     * 
+     */
     @InputImport(name="certificate", required=true)
     private final Input<String> certificate;
 
@@ -21,6 +25,10 @@ public final class CertificateAuthorityActivationArgs extends io.pulumi.resource
         return this.certificate;
     }
 
+    /**
+     * Arn of the Certificate Authority.
+     * 
+     */
     @InputImport(name="certificateAuthorityArn", required=true)
     private final Input<String> certificateAuthorityArn;
 
@@ -28,6 +36,10 @@ public final class CertificateAuthorityActivationArgs extends io.pulumi.resource
         return this.certificateAuthorityArn;
     }
 
+    /**
+     * Certificate chain for the Certificate Authority certificate.
+     * 
+     */
     @InputImport(name="certificateChain")
     private final @Nullable Input<String> certificateChain;
 
@@ -35,6 +47,10 @@ public final class CertificateAuthorityActivationArgs extends io.pulumi.resource
         return this.certificateChain == null ? Input.empty() : this.certificateChain;
     }
 
+    /**
+     * The status of the Certificate Authority.
+     * 
+     */
     @InputImport(name="status")
     private final @Nullable Input<String> status;
 

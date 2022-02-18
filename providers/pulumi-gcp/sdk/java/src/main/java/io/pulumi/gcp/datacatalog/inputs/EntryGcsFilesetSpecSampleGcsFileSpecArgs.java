@@ -15,6 +15,11 @@ public final class EntryGcsFilesetSpecSampleGcsFileSpecArgs extends io.pulumi.re
 
     public static final EntryGcsFilesetSpecSampleGcsFileSpecArgs Empty = new EntryGcsFilesetSpecSampleGcsFileSpecArgs();
 
+    /**
+     * - 
+     * The full file path
+     * 
+     */
     @InputImport(name="filePath")
     private final @Nullable Input<String> filePath;
 
@@ -22,6 +27,11 @@ public final class EntryGcsFilesetSpecSampleGcsFileSpecArgs extends io.pulumi.re
         return this.filePath == null ? Input.empty() : this.filePath;
     }
 
+    /**
+     * - 
+     * The size of the file, in bytes.
+     * 
+     */
     @InputImport(name="sizeBytes")
     private final @Nullable Input<Integer> sizeBytes;
 

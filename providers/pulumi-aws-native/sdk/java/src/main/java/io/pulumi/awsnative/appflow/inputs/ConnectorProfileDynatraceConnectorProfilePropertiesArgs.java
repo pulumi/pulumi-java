@@ -13,6 +13,10 @@ public final class ConnectorProfileDynatraceConnectorProfilePropertiesArgs exten
 
     public static final ConnectorProfileDynatraceConnectorProfilePropertiesArgs Empty = new ConnectorProfileDynatraceConnectorProfilePropertiesArgs();
 
+    /**
+     * The location of the Dynatrace resource
+     * 
+     */
     @InputImport(name="instanceUrl", required=true)
     private final Input<String> instanceUrl;
 

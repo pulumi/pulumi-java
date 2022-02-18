@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * An indication of Cache health. Gives more information about health than just that related to provisioning.
+ * 
+ */
 public final class CacheHealthResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CacheHealthResponse Empty = new CacheHealthResponse();
 
+    /**
+     * Outstanding conditions that need to be investigated and resolved.
+     * 
+     */
     @InputImport(name="conditions", required=true)
     private final List<ConditionResponse> conditions;
 
@@ -23,6 +31,10 @@ public final class CacheHealthResponse extends io.pulumi.resources.InvokeArgs {
         return this.conditions;
     }
 
+    /**
+     * List of Cache health states.
+     * 
+     */
     @InputImport(name="state")
     private final @Nullable String state;
 
@@ -30,6 +42,10 @@ public final class CacheHealthResponse extends io.pulumi.resources.InvokeArgs {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
     }
 
+    /**
+     * Describes explanation of state.
+     * 
+     */
     @InputImport(name="statusDescription")
     private final @Nullable String statusDescription;
 

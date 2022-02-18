@@ -17,6 +17,13 @@ public final class JobHttpTargetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JobHttpTargetArgs Empty = new JobHttpTargetArgs();
 
+    /**
+     * HTTP request body.
+     * A request body is allowed only if the HTTP method is POST, PUT, or PATCH.
+     * It is an error to set body on a job with an incompatible HttpMethod.
+     * A base64-encoded string.
+     * 
+     */
     @InputImport(name="body")
     private final @Nullable Input<String> body;
 
@@ -24,6 +31,11 @@ public final class JobHttpTargetArgs extends io.pulumi.resources.ResourceArgs {
         return this.body == null ? Input.empty() : this.body;
     }
 
+    /**
+     * This map contains the header field names and values.
+     * Repeated headers are not supported, but a header value can contain commas.
+     * 
+     */
     @InputImport(name="headers")
     private final @Nullable Input<Map<String,String>> headers;
 
@@ -31,6 +43,10 @@ public final class JobHttpTargetArgs extends io.pulumi.resources.ResourceArgs {
         return this.headers == null ? Input.empty() : this.headers;
     }
 
+    /**
+     * Which HTTP method to use for the request.
+     * 
+     */
     @InputImport(name="httpMethod")
     private final @Nullable Input<String> httpMethod;
 
@@ -38,6 +54,12 @@ public final class JobHttpTargetArgs extends io.pulumi.resources.ResourceArgs {
         return this.httpMethod == null ? Input.empty() : this.httpMethod;
     }
 
+    /**
+     * Contains information needed for generating an OAuth token.
+     * This type of authorization should be used when sending requests to a GCP endpoint.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="oauthToken")
     private final @Nullable Input<JobHttpTargetOauthTokenArgs> oauthToken;
 
@@ -45,6 +67,12 @@ public final class JobHttpTargetArgs extends io.pulumi.resources.ResourceArgs {
         return this.oauthToken == null ? Input.empty() : this.oauthToken;
     }
 
+    /**
+     * Contains information needed for generating an OpenID Connect token.
+     * This type of authorization should be used when sending requests to third party endpoints or Cloud Run.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="oidcToken")
     private final @Nullable Input<JobHttpTargetOidcTokenArgs> oidcToken;
 
@@ -52,6 +80,10 @@ public final class JobHttpTargetArgs extends io.pulumi.resources.ResourceArgs {
         return this.oidcToken == null ? Input.empty() : this.oidcToken;
     }
 
+    /**
+     * The full URI path that the request will be sent to.
+     * 
+     */
     @InputImport(name="uri", required=true)
     private final Input<String> uri;
 

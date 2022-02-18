@@ -21,11 +21,23 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Resource Type definition for AWS::SageMaker::DataQualityJobDefinition
+ * 
+ */
 @ResourceType(type="aws-native:sagemaker:DataQualityJobDefinition")
 public class DataQualityJobDefinition extends io.pulumi.resources.CustomResource {
+    /**
+     * The time at which the job definition was created.
+     * 
+     */
     @OutputExport(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
+    /**
+     * @return The time at which the job definition was created.
+     * 
+     */
     public Output<String> getCreationTime() {
         return this.creationTime;
     }
@@ -53,9 +65,17 @@ public class DataQualityJobDefinition extends io.pulumi.resources.CustomResource
     public Output<DataQualityJobDefinitionMonitoringOutputConfig> getDataQualityJobOutputConfig() {
         return this.dataQualityJobOutputConfig;
     }
+    /**
+     * The Amazon Resource Name (ARN) of job definition.
+     * 
+     */
     @OutputExport(name="jobDefinitionArn", type=String.class, parameters={})
     private Output<String> jobDefinitionArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of job definition.
+     * 
+     */
     public Output<String> getJobDefinitionArn() {
         return this.jobDefinitionArn;
     }
@@ -77,9 +97,17 @@ public class DataQualityJobDefinition extends io.pulumi.resources.CustomResource
     public Output</* @Nullable */ DataQualityJobDefinitionNetworkConfig> getNetworkConfig() {
         return this.networkConfig;
     }
+    /**
+     * The Amazon Resource Name (ARN) of an IAM role that Amazon SageMaker can assume to perform tasks on your behalf.
+     * 
+     */
     @OutputExport(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of an IAM role that Amazon SageMaker can assume to perform tasks on your behalf.
+     * 
+     */
     public Output<String> getRoleArn() {
         return this.roleArn;
     }
@@ -89,13 +117,27 @@ public class DataQualityJobDefinition extends io.pulumi.resources.CustomResource
     public Output</* @Nullable */ DataQualityJobDefinitionStoppingCondition> getStoppingCondition() {
         return this.stoppingCondition;
     }
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     @OutputExport(name="tags", type=List.class, parameters={DataQualityJobDefinitionTag.class})
     private Output</* @Nullable */ List<DataQualityJobDefinitionTag>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     */
     public Output</* @Nullable */ List<DataQualityJobDefinitionTag>> getTags() {
         return this.tags;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public DataQualityJobDefinition(String name, DataQualityJobDefinitionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:sagemaker:DataQualityJobDefinition", name, args == null ? DataQualityJobDefinitionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -111,6 +153,14 @@ public class DataQualityJobDefinition extends io.pulumi.resources.CustomResource
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static DataQualityJobDefinition get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DataQualityJobDefinition(name, id, options);
     }

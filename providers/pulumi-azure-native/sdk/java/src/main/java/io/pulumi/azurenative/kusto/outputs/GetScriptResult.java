@@ -13,13 +13,45 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetScriptResult {
+    /**
+     * Flag that indicates whether to continue if one of the command fails.
+     * 
+     */
     private final @Nullable Boolean continueOnErrors;
+    /**
+     * A unique string. If changed the script will be applied again.
+     * 
+     */
     private final @Nullable String forceUpdateTag;
+    /**
+     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * 
+     */
     private final String id;
+    /**
+     * The name of the resource
+     * 
+     */
     private final String name;
+    /**
+     * The provisioned state of the resource.
+     * 
+     */
     private final String provisioningState;
+    /**
+     * The url to the KQL script blob file.
+     * 
+     */
     private final String scriptUrl;
+    /**
+     * Metadata pertaining to creation and last modification of the resource.
+     * 
+     */
     private final SystemDataResponse systemData;
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"continueOnErrors","forceUpdateTag","id","name","provisioningState","scriptUrl","systemData","type"})
@@ -42,27 +74,59 @@ public final class GetScriptResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Flag that indicates whether to continue if one of the command fails.
+     * 
+     */
     public Optional<Boolean> getContinueOnErrors() {
         return Optional.ofNullable(this.continueOnErrors);
     }
+    /**
+     * A unique string. If changed the script will be applied again.
+     * 
+     */
     public Optional<String> getForceUpdateTag() {
         return Optional.ofNullable(this.forceUpdateTag);
     }
+    /**
+     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * The name of the resource
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The provisioned state of the resource.
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The url to the KQL script blob file.
+     * 
+     */
     public String getScriptUrl() {
         return this.scriptUrl;
     }
+    /**
+     * Metadata pertaining to creation and last modification of the resource.
+     * 
+     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     public String getType() {
         return this.type;
     }

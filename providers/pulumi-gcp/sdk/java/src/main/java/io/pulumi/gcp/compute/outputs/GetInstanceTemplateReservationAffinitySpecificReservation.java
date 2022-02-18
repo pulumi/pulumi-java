@@ -10,6 +10,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetInstanceTemplateReservationAffinitySpecificReservation {
+    /**
+     * The key for the node affinity label.
+     * 
+     */
     private final String key;
     private final List<String> values;
 
@@ -21,6 +25,10 @@ public final class GetInstanceTemplateReservationAffinitySpecificReservation {
         this.values = Objects.requireNonNull(values);
     }
 
+    /**
+     * The key for the node affinity label.
+     * 
+     */
     public String getKey() {
         return this.key;
     }

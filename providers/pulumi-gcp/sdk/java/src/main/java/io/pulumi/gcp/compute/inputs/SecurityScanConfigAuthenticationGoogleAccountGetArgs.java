@@ -13,6 +13,12 @@ public final class SecurityScanConfigAuthenticationGoogleAccountGetArgs extends 
 
     public static final SecurityScanConfigAuthenticationGoogleAccountGetArgs Empty = new SecurityScanConfigAuthenticationGoogleAccountGetArgs();
 
+    /**
+     * The password of the custom account. The credential is stored encrypted
+     * in GCP.
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     @InputImport(name="password", required=true)
     private final Input<String> password;
 
@@ -20,6 +26,10 @@ public final class SecurityScanConfigAuthenticationGoogleAccountGetArgs extends 
         return this.password;
     }
 
+    /**
+     * The user name of the custom account.
+     * 
+     */
     @InputImport(name="username", required=true)
     private final Input<String> username;
 

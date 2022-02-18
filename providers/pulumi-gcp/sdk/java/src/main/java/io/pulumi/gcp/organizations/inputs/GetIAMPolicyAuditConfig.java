@@ -14,6 +14,10 @@ public final class GetIAMPolicyAuditConfig extends io.pulumi.resources.InvokeArg
 
     public static final GetIAMPolicyAuditConfig Empty = new GetIAMPolicyAuditConfig();
 
+    /**
+     * A nested block that defines the operations you'd like to log.
+     * 
+     */
     @InputImport(name="auditLogConfigs", required=true)
     private final List<GetIAMPolicyAuditConfigAuditLogConfig> auditLogConfigs;
 
@@ -21,6 +25,10 @@ public final class GetIAMPolicyAuditConfig extends io.pulumi.resources.InvokeArg
         return this.auditLogConfigs;
     }
 
+    /**
+     * Defines a service that will be enabled for audit logging. For example, `storage.googleapis.com`, `cloudsql.googleapis.com`. `allServices` is a special value that covers all services.
+     * 
+     */
     @InputImport(name="service", required=true)
     private final String service;
 

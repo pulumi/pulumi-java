@@ -13,9 +13,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ClusterResourcePropertiesResponse {
+    /**
+     * Network profile of the Service
+     * 
+     */
     private final @Nullable NetworkProfileResponse networkProfile;
+    /**
+     * Provisioning state of the Service
+     * 
+     */
     private final String provisioningState;
+    /**
+     * ServiceInstanceEntity GUID which uniquely identifies a created resource
+     * 
+     */
     private final String serviceId;
+    /**
+     * Version of the Service
+     * 
+     */
     private final Integer version;
 
     @OutputCustomType.Constructor({"networkProfile","provisioningState","serviceId","version"})
@@ -30,15 +46,31 @@ public final class ClusterResourcePropertiesResponse {
         this.version = Objects.requireNonNull(version);
     }
 
+    /**
+     * Network profile of the Service
+     * 
+     */
     public Optional<NetworkProfileResponse> getNetworkProfile() {
         return Optional.ofNullable(this.networkProfile);
     }
+    /**
+     * Provisioning state of the Service
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * ServiceInstanceEntity GUID which uniquely identifies a created resource
+     * 
+     */
     public String getServiceId() {
         return this.serviceId;
     }
+    /**
+     * Version of the Service
+     * 
+     */
     public Integer getVersion() {
         return this.version;
     }

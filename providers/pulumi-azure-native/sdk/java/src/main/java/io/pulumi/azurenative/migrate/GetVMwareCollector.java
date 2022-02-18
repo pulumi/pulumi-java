@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVMwareCollector {
+/**
+ * API Version: 2019-10-01.
+ * 
+ */
     public static CompletableFuture<GetVMwareCollectorResult> invokeAsync(GetVMwareCollectorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:migrate:getVMwareCollector", TypeShape.of(GetVMwareCollectorResult.class), args == null ? GetVMwareCollectorArgs.Empty : args, Utilities.withVersion(options));
     }

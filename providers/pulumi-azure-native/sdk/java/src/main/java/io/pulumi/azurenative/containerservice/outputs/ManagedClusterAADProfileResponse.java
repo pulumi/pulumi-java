@@ -13,12 +13,40 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ManagedClusterAADProfileResponse {
+    /**
+     * AAD group object IDs that will have admin role of the cluster.
+     * 
+     */
     private final @Nullable List<String> adminGroupObjectIDs;
+    /**
+     * The client AAD application ID.
+     * 
+     */
     private final @Nullable String clientAppID;
+    /**
+     * Whether to enable Azure RBAC for Kubernetes authorization.
+     * 
+     */
     private final @Nullable Boolean enableAzureRBAC;
+    /**
+     * Whether to enable managed AAD.
+     * 
+     */
     private final @Nullable Boolean managed;
+    /**
+     * The server AAD application ID.
+     * 
+     */
     private final @Nullable String serverAppID;
+    /**
+     * The server AAD application secret.
+     * 
+     */
     private final @Nullable String serverAppSecret;
+    /**
+     * The AAD tenant ID to use for authentication. If not specified, will use the tenant of the deployment subscription.
+     * 
+     */
     private final @Nullable String tenantID;
 
     @OutputCustomType.Constructor({"adminGroupObjectIDs","clientAppID","enableAzureRBAC","managed","serverAppID","serverAppSecret","tenantID"})
@@ -39,24 +67,52 @@ public final class ManagedClusterAADProfileResponse {
         this.tenantID = tenantID;
     }
 
+    /**
+     * AAD group object IDs that will have admin role of the cluster.
+     * 
+     */
     public List<String> getAdminGroupObjectIDs() {
         return this.adminGroupObjectIDs == null ? List.of() : this.adminGroupObjectIDs;
     }
+    /**
+     * The client AAD application ID.
+     * 
+     */
     public Optional<String> getClientAppID() {
         return Optional.ofNullable(this.clientAppID);
     }
+    /**
+     * Whether to enable Azure RBAC for Kubernetes authorization.
+     * 
+     */
     public Optional<Boolean> getEnableAzureRBAC() {
         return Optional.ofNullable(this.enableAzureRBAC);
     }
+    /**
+     * Whether to enable managed AAD.
+     * 
+     */
     public Optional<Boolean> getManaged() {
         return Optional.ofNullable(this.managed);
     }
+    /**
+     * The server AAD application ID.
+     * 
+     */
     public Optional<String> getServerAppID() {
         return Optional.ofNullable(this.serverAppID);
     }
+    /**
+     * The server AAD application secret.
+     * 
+     */
     public Optional<String> getServerAppSecret() {
         return Optional.ofNullable(this.serverAppSecret);
     }
+    /**
+     * The AAD tenant ID to use for authentication. If not specified, will use the tenant of the deployment subscription.
+     * 
+     */
     public Optional<String> getTenantID() {
         return Optional.ofNullable(this.tenantID);
     }

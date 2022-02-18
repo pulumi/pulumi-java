@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFleetMetric {
+/**
+ * An aggregated metric of certain devices in your fleet
+ * 
+ */
     public static CompletableFuture<GetFleetMetricResult> invokeAsync(GetFleetMetricArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iot:getFleetMetric", TypeShape.of(GetFleetMetricResult.class), args == null ? GetFleetMetricArgs.Empty : args, Utilities.withVersion(options));
     }

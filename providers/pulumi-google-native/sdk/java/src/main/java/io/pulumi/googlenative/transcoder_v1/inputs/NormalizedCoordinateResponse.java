@@ -8,10 +8,18 @@ import java.lang.Double;
 import java.util.Objects;
 
 
+/**
+ * 2D normalized coordinates. Default: `{0.0, 0.0}`
+ * 
+ */
 public final class NormalizedCoordinateResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NormalizedCoordinateResponse Empty = new NormalizedCoordinateResponse();
 
+    /**
+     * Normalized x coordinate.
+     * 
+     */
     @InputImport(name="x", required=true)
     private final Double x;
 
@@ -19,6 +27,10 @@ public final class NormalizedCoordinateResponse extends io.pulumi.resources.Invo
         return this.x;
     }
 
+    /**
+     * Normalized y coordinate.
+     * 
+     */
     @InputImport(name="y", required=true)
     private final Double y;
 

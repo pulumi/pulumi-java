@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The signing or hashing algorithm.
+     * 
+     */
     @EnumType
     public enum HashingAlgorithm {
         NotSpecified("NotSpecified"),

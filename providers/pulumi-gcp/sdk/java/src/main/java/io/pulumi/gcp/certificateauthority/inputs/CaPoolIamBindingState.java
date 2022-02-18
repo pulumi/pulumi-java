@@ -16,6 +16,10 @@ public final class CaPoolIamBindingState extends io.pulumi.resources.ResourceArg
 
     public static final CaPoolIamBindingState Empty = new CaPoolIamBindingState();
 
+    /**
+     * Used to find the parent resource to bind the IAM policy to
+     * 
+     */
     @InputImport(name="caPool")
     private final @Nullable Input<String> caPool;
 
@@ -30,6 +34,10 @@ public final class CaPoolIamBindingState extends io.pulumi.resources.ResourceArg
         return this.condition == null ? Input.empty() : this.condition;
     }
 
+    /**
+     * (Computed) The etag of the IAM policy.
+     * 
+     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -37,6 +45,12 @@ public final class CaPoolIamBindingState extends io.pulumi.resources.ResourceArg
         return this.etag == null ? Input.empty() : this.etag;
     }
 
+    /**
+     * Location of the CaPool. A full list of valid locations can be found by
+     * running `gcloud privateca locations list`.
+     * Used to find the parent resource to bind the IAM policy to
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -51,6 +65,11 @@ public final class CaPoolIamBindingState extends io.pulumi.resources.ResourceArg
         return this.members == null ? Input.empty() : this.members;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -58,6 +77,12 @@ public final class CaPoolIamBindingState extends io.pulumi.resources.ResourceArg
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The role that should be applied. Only one
+     * `gcp.certificateauthority.CaPoolIamBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     @InputImport(name="role")
     private final @Nullable Input<String> role;
 

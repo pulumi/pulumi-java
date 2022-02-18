@@ -17,69 +17,170 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Pool of backend IP addresses.
+ * API Version: 2020-11-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:network:LoadBalancerBackendAddressPool backend /subscriptions/subid/resourceGroups/testrg/providers/Microsoft.Network/loadBalancers/lb/backendAddressPools/backend 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:network:LoadBalancerBackendAddressPool")
 public class LoadBalancerBackendAddressPool extends io.pulumi.resources.CustomResource {
+    /**
+     * An array of references to IP addresses defined in network interfaces.
+     * 
+     */
     @OutputExport(name="backendIPConfigurations", type=List.class, parameters={NetworkInterfaceIPConfigurationResponse.class})
     private Output<List<NetworkInterfaceIPConfigurationResponse>> backendIPConfigurations;
 
+    /**
+     * @return An array of references to IP addresses defined in network interfaces.
+     * 
+     */
     public Output<List<NetworkInterfaceIPConfigurationResponse>> getBackendIPConfigurations() {
         return this.backendIPConfigurations;
     }
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * An array of backend addresses.
+     * 
+     */
     @OutputExport(name="loadBalancerBackendAddresses", type=List.class, parameters={LoadBalancerBackendAddressResponse.class})
     private Output</* @Nullable */ List<LoadBalancerBackendAddressResponse>> loadBalancerBackendAddresses;
 
+    /**
+     * @return An array of backend addresses.
+     * 
+     */
     public Output</* @Nullable */ List<LoadBalancerBackendAddressResponse>> getLoadBalancerBackendAddresses() {
         return this.loadBalancerBackendAddresses;
     }
+    /**
+     * An array of references to load balancing rules that use this backend address pool.
+     * 
+     */
     @OutputExport(name="loadBalancingRules", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> loadBalancingRules;
 
+    /**
+     * @return An array of references to load balancing rules that use this backend address pool.
+     * 
+     */
     public Output<List<SubResourceResponse>> getLoadBalancingRules() {
         return this.loadBalancingRules;
     }
+    /**
+     * The location of the backend address pool.
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return The location of the backend address pool.
+     * 
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * The name of the resource that is unique within the set of backend address pools used by the load balancer. This name can be used to access the resource.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
+    /**
+     * @return The name of the resource that is unique within the set of backend address pools used by the load balancer. This name can be used to access the resource.
+     * 
+     */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
+    /**
+     * A reference to an outbound rule that uses this backend address pool.
+     * 
+     */
     @OutputExport(name="outboundRule", type=SubResourceResponse.class, parameters={})
     private Output<SubResourceResponse> outboundRule;
 
+    /**
+     * @return A reference to an outbound rule that uses this backend address pool.
+     * 
+     */
     public Output<SubResourceResponse> getOutboundRule() {
         return this.outboundRule;
     }
+    /**
+     * An array of references to outbound rules that use this backend address pool.
+     * 
+     */
     @OutputExport(name="outboundRules", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> outboundRules;
 
+    /**
+     * @return An array of references to outbound rules that use this backend address pool.
+     * 
+     */
     public Output<List<SubResourceResponse>> getOutboundRules() {
         return this.outboundRules;
     }
+    /**
+     * The provisioning state of the backend address pool resource.
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning state of the backend address pool resource.
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Type of the resource.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Type of the resource.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public LoadBalancerBackendAddressPool(String name, LoadBalancerBackendAddressPoolArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:LoadBalancerBackendAddressPool", name, args == null ? LoadBalancerBackendAddressPoolArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -106,6 +207,14 @@ public class LoadBalancerBackendAddressPool extends io.pulumi.resources.CustomRe
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static LoadBalancerBackendAddressPool get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new LoadBalancerBackendAddressPool(name, id, options);
     }

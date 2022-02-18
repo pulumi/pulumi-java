@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The action of virtual network rule.
+     * 
+     */
     @EnumType
     public enum Action {
         Allow("Allow");

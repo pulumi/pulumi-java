@@ -10,10 +10,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * A set of Android device configuration permutations is defined by the the cross-product of the given axes. Internally, the given AndroidMatrix will be expanded into a set of AndroidDevices. Only supported permutations will be instantiated. Invalid permutations (e.g., incompatible models/versions) are ignored.
+ * 
+ */
 public final class AndroidMatrixArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AndroidMatrixArgs Empty = new AndroidMatrixArgs();
 
+    /**
+     * The ids of the set of Android device to be used. Use the TestEnvironmentDiscoveryService to get supported options.
+     * 
+     */
     @InputImport(name="androidModelIds", required=true)
     private final Input<List<String>> androidModelIds;
 
@@ -21,6 +29,10 @@ public final class AndroidMatrixArgs extends io.pulumi.resources.ResourceArgs {
         return this.androidModelIds;
     }
 
+    /**
+     * The ids of the set of Android OS version to be used. Use the TestEnvironmentDiscoveryService to get supported options.
+     * 
+     */
     @InputImport(name="androidVersionIds", required=true)
     private final Input<List<String>> androidVersionIds;
 
@@ -28,6 +40,10 @@ public final class AndroidMatrixArgs extends io.pulumi.resources.ResourceArgs {
         return this.androidVersionIds;
     }
 
+    /**
+     * The set of locales the test device will enable for testing. Use the TestEnvironmentDiscoveryService to get supported options.
+     * 
+     */
     @InputImport(name="locales", required=true)
     private final Input<List<String>> locales;
 
@@ -35,6 +51,10 @@ public final class AndroidMatrixArgs extends io.pulumi.resources.ResourceArgs {
         return this.locales;
     }
 
+    /**
+     * The set of orientations to test with. Use the TestEnvironmentDiscoveryService to get supported options.
+     * 
+     */
     @InputImport(name="orientations", required=true)
     private final Input<List<String>> orientations;
 

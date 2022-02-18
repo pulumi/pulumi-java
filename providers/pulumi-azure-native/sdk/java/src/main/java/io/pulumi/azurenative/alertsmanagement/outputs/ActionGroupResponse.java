@@ -13,15 +13,56 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ActionGroupResponse {
+    /**
+     * Action group to trigger if action rule matches
+     * 
+     */
     private final String actionGroupId;
+    /**
+     * conditions on which alerts will be filtered
+     * 
+     */
     private final @Nullable ConditionsResponse conditions;
+    /**
+     * Creation time of action rule. Date-Time in ISO-8601 format.
+     * 
+     */
     private final String createdAt;
+    /**
+     * Created by user name.
+     * 
+     */
     private final String createdBy;
+    /**
+     * Description of action rule
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * Last updated time of action rule. Date-Time in ISO-8601 format.
+     * 
+     */
     private final String lastModifiedAt;
+    /**
+     * Last modified by user name.
+     * 
+     */
     private final String lastModifiedBy;
+    /**
+     * scope on which action rule will apply
+     * 
+     */
     private final @Nullable ScopeResponse scope;
+    /**
+     * Indicates if the given action rule is enabled or disabled
+     * 
+     */
     private final @Nullable String status;
+    /**
+     * Indicates type of action rule
+     * Expected value is 'ActionGroup'.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"actionGroupId","conditions","createdAt","createdBy","description","lastModifiedAt","lastModifiedBy","scope","status","type"})
@@ -48,33 +89,74 @@ public final class ActionGroupResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Action group to trigger if action rule matches
+     * 
+     */
     public String getActionGroupId() {
         return this.actionGroupId;
     }
+    /**
+     * conditions on which alerts will be filtered
+     * 
+     */
     public Optional<ConditionsResponse> getConditions() {
         return Optional.ofNullable(this.conditions);
     }
+    /**
+     * Creation time of action rule. Date-Time in ISO-8601 format.
+     * 
+     */
     public String getCreatedAt() {
         return this.createdAt;
     }
+    /**
+     * Created by user name.
+     * 
+     */
     public String getCreatedBy() {
         return this.createdBy;
     }
+    /**
+     * Description of action rule
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * Last updated time of action rule. Date-Time in ISO-8601 format.
+     * 
+     */
     public String getLastModifiedAt() {
         return this.lastModifiedAt;
     }
+    /**
+     * Last modified by user name.
+     * 
+     */
     public String getLastModifiedBy() {
         return this.lastModifiedBy;
     }
+    /**
+     * scope on which action rule will apply
+     * 
+     */
     public Optional<ScopeResponse> getScope() {
         return Optional.ofNullable(this.scope);
     }
+    /**
+     * Indicates if the given action rule is enabled or disabled
+     * 
+     */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
+    /**
+     * Indicates type of action rule
+     * Expected value is 'ActionGroup'.
+     * 
+     */
     public String getType() {
         return this.type;
     }

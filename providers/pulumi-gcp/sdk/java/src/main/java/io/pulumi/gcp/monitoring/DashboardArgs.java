@@ -14,6 +14,11 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DashboardArgs Empty = new DashboardArgs();
 
+    /**
+     * The JSON representation of a dashboard, following the format at https://cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards.
+     * The representation of an existing dashboard can be found by using the [API Explorer](https://cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards/get)
+     * 
+     */
     @InputImport(name="dashboardJson", required=true)
     private final Input<String> dashboardJson;
 
@@ -21,6 +26,11 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
         return this.dashboardJson;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

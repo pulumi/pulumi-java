@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class APIServiceStatus {
+    /**
+     * Current service state of apiService.
+     * 
+     */
     private final @Nullable List<APIServiceCondition> conditions;
 
     @OutputCustomType.Constructor({"conditions"})
@@ -18,6 +22,10 @@ public final class APIServiceStatus {
         this.conditions = conditions;
     }
 
+    /**
+     * Current service state of apiService.
+     * 
+     */
     public List<APIServiceCondition> getConditions() {
         return this.conditions == null ? List.of() : this.conditions;
     }

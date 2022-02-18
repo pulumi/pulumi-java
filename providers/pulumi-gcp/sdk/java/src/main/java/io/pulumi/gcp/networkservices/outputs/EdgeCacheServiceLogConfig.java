@@ -12,7 +12,16 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EdgeCacheServiceLogConfig {
+    /**
+     * Specifies whether to enable logging for traffic served by this service.
+     * 
+     */
     private final @Nullable Boolean enable;
+    /**
+     * Configures the sampling rate of requests, where 1.0 means all logged requests are reported and 0.0 means no logged requests are reported. The default value is 1.0, and the value of the field must be in [0, 1].
+     * This field can only be specified if logging is enabled for this service.
+     * 
+     */
     private final @Nullable Double sampleRate;
 
     @OutputCustomType.Constructor({"enable","sampleRate"})
@@ -23,9 +32,18 @@ public final class EdgeCacheServiceLogConfig {
         this.sampleRate = sampleRate;
     }
 
+    /**
+     * Specifies whether to enable logging for traffic served by this service.
+     * 
+     */
     public Optional<Boolean> getEnable() {
         return Optional.ofNullable(this.enable);
     }
+    /**
+     * Configures the sampling rate of requests, where 1.0 means all logged requests are reported and 0.0 means no logged requests are reported. The default value is 1.0, and the value of the field must be in [0, 1].
+     * This field can only be specified if logging is enabled for this service.
+     * 
+     */
     public Optional<Double> getSampleRate() {
         return Optional.ofNullable(this.sampleRate);
     }

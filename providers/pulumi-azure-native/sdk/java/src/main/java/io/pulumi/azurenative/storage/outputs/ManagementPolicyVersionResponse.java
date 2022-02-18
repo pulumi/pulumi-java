@@ -11,8 +11,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ManagementPolicyVersionResponse {
+    /**
+     * The function to delete the blob version
+     * 
+     */
     private final @Nullable DateAfterCreationResponse delete;
+    /**
+     * The function to tier blob version to archive storage. Support blob version currently at Hot or Cool tier
+     * 
+     */
     private final @Nullable DateAfterCreationResponse tierToArchive;
+    /**
+     * The function to tier blob version to cool storage. Support blob version currently at Hot tier
+     * 
+     */
     private final @Nullable DateAfterCreationResponse tierToCool;
 
     @OutputCustomType.Constructor({"delete","tierToArchive","tierToCool"})
@@ -25,12 +37,24 @@ public final class ManagementPolicyVersionResponse {
         this.tierToCool = tierToCool;
     }
 
+    /**
+     * The function to delete the blob version
+     * 
+     */
     public Optional<DateAfterCreationResponse> getDelete() {
         return Optional.ofNullable(this.delete);
     }
+    /**
+     * The function to tier blob version to archive storage. Support blob version currently at Hot or Cool tier
+     * 
+     */
     public Optional<DateAfterCreationResponse> getTierToArchive() {
         return Optional.ofNullable(this.tierToArchive);
     }
+    /**
+     * The function to tier blob version to cool storage. Support blob version currently at Hot tier
+     * 
+     */
     public Optional<DateAfterCreationResponse> getTierToCool() {
         return Optional.ofNullable(this.tierToCool);
     }

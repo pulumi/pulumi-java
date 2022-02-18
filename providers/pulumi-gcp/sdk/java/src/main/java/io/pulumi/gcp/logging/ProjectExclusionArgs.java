@@ -15,6 +15,10 @@ public final class ProjectExclusionArgs extends io.pulumi.resources.ResourceArgs
 
     public static final ProjectExclusionArgs Empty = new ProjectExclusionArgs();
 
+    /**
+     * A human-readable description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -22,6 +26,11 @@ public final class ProjectExclusionArgs extends io.pulumi.resources.ResourceArgs
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Whether this exclusion rule should be disabled or not. This defaults to
+     * false.
+     * 
+     */
     @InputImport(name="disabled")
     private final @Nullable Input<Boolean> disabled;
 
@@ -29,6 +38,12 @@ public final class ProjectExclusionArgs extends io.pulumi.resources.ResourceArgs
         return this.disabled == null ? Input.empty() : this.disabled;
     }
 
+    /**
+     * The filter to apply when excluding logs. Only log entries that match the filter are excluded.
+     * See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced-filters) for information on how to
+     * write a filter.
+     * 
+     */
     @InputImport(name="filter", required=true)
     private final Input<String> filter;
 
@@ -36,6 +51,10 @@ public final class ProjectExclusionArgs extends io.pulumi.resources.ResourceArgs
         return this.filter;
     }
 
+    /**
+     * The name of the logging exclusion.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -43,6 +62,11 @@ public final class ProjectExclusionArgs extends io.pulumi.resources.ResourceArgs
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The project to create the exclusion in. If omitted, the project associated with the provider is
+     * used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

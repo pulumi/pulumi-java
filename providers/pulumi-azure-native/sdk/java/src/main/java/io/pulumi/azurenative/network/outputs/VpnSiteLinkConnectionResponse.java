@@ -17,26 +17,110 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class VpnSiteLinkConnectionResponse {
+    /**
+     * Expected bandwidth in MBPS.
+     * 
+     */
     private final @Nullable Integer connectionBandwidth;
+    /**
+     * The connection status.
+     * 
+     */
     private final String connectionStatus;
+    /**
+     * Egress bytes transferred.
+     * 
+     */
     private final Double egressBytesTransferred;
+    /**
+     * List of egress NatRules.
+     * 
+     */
     private final @Nullable List<SubResourceResponse> egressNatRules;
+    /**
+     * EnableBgp flag.
+     * 
+     */
     private final @Nullable Boolean enableBgp;
+    /**
+     * EnableBgp flag.
+     * 
+     */
     private final @Nullable Boolean enableRateLimiting;
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     private final String etag;
+    /**
+     * Resource ID.
+     * 
+     */
     private final @Nullable String id;
+    /**
+     * Ingress bytes transferred.
+     * 
+     */
     private final Double ingressBytesTransferred;
+    /**
+     * List of ingress NatRules.
+     * 
+     */
     private final @Nullable List<SubResourceResponse> ingressNatRules;
+    /**
+     * The IPSec Policies to be considered by this connection.
+     * 
+     */
     private final @Nullable List<IpsecPolicyResponse> ipsecPolicies;
+    /**
+     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * The provisioning state of the VPN site link connection resource.
+     * 
+     */
     private final String provisioningState;
+    /**
+     * Routing weight for vpn connection.
+     * 
+     */
     private final @Nullable Integer routingWeight;
+    /**
+     * SharedKey for the vpn connection.
+     * 
+     */
     private final @Nullable String sharedKey;
+    /**
+     * Resource type.
+     * 
+     */
     private final String type;
+    /**
+     * Use local azure ip to initiate connection.
+     * 
+     */
     private final @Nullable Boolean useLocalAzureIpAddress;
+    /**
+     * Enable policy-based traffic selectors.
+     * 
+     */
     private final @Nullable Boolean usePolicyBasedTrafficSelectors;
+    /**
+     * Connection protocol used for this connection.
+     * 
+     */
     private final @Nullable String vpnConnectionProtocolType;
+    /**
+     * Vpn link connection mode.
+     * 
+     */
     private final @Nullable String vpnLinkConnectionMode;
+    /**
+     * Id of the connected vpn site link.
+     * 
+     */
     private final @Nullable SubResourceResponse vpnSiteLink;
 
     @OutputCustomType.Constructor({"connectionBandwidth","connectionStatus","egressBytesTransferred","egressNatRules","enableBgp","enableRateLimiting","etag","id","ingressBytesTransferred","ingressNatRules","ipsecPolicies","name","provisioningState","routingWeight","sharedKey","type","useLocalAzureIpAddress","usePolicyBasedTrafficSelectors","vpnConnectionProtocolType","vpnLinkConnectionMode","vpnSiteLink"})
@@ -85,66 +169,150 @@ public final class VpnSiteLinkConnectionResponse {
         this.vpnSiteLink = vpnSiteLink;
     }
 
+    /**
+     * Expected bandwidth in MBPS.
+     * 
+     */
     public Optional<Integer> getConnectionBandwidth() {
         return Optional.ofNullable(this.connectionBandwidth);
     }
+    /**
+     * The connection status.
+     * 
+     */
     public String getConnectionStatus() {
         return this.connectionStatus;
     }
+    /**
+     * Egress bytes transferred.
+     * 
+     */
     public Double getEgressBytesTransferred() {
         return this.egressBytesTransferred;
     }
+    /**
+     * List of egress NatRules.
+     * 
+     */
     public List<SubResourceResponse> getEgressNatRules() {
         return this.egressNatRules == null ? List.of() : this.egressNatRules;
     }
+    /**
+     * EnableBgp flag.
+     * 
+     */
     public Optional<Boolean> getEnableBgp() {
         return Optional.ofNullable(this.enableBgp);
     }
+    /**
+     * EnableBgp flag.
+     * 
+     */
     public Optional<Boolean> getEnableRateLimiting() {
         return Optional.ofNullable(this.enableRateLimiting);
     }
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String getEtag() {
         return this.etag;
     }
+    /**
+     * Resource ID.
+     * 
+     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+    /**
+     * Ingress bytes transferred.
+     * 
+     */
     public Double getIngressBytesTransferred() {
         return this.ingressBytesTransferred;
     }
+    /**
+     * List of ingress NatRules.
+     * 
+     */
     public List<SubResourceResponse> getIngressNatRules() {
         return this.ingressNatRules == null ? List.of() : this.ingressNatRules;
     }
+    /**
+     * The IPSec Policies to be considered by this connection.
+     * 
+     */
     public List<IpsecPolicyResponse> getIpsecPolicies() {
         return this.ipsecPolicies == null ? List.of() : this.ipsecPolicies;
     }
+    /**
+     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * The provisioning state of the VPN site link connection resource.
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Routing weight for vpn connection.
+     * 
+     */
     public Optional<Integer> getRoutingWeight() {
         return Optional.ofNullable(this.routingWeight);
     }
+    /**
+     * SharedKey for the vpn connection.
+     * 
+     */
     public Optional<String> getSharedKey() {
         return Optional.ofNullable(this.sharedKey);
     }
+    /**
+     * Resource type.
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * Use local azure ip to initiate connection.
+     * 
+     */
     public Optional<Boolean> getUseLocalAzureIpAddress() {
         return Optional.ofNullable(this.useLocalAzureIpAddress);
     }
+    /**
+     * Enable policy-based traffic selectors.
+     * 
+     */
     public Optional<Boolean> getUsePolicyBasedTrafficSelectors() {
         return Optional.ofNullable(this.usePolicyBasedTrafficSelectors);
     }
+    /**
+     * Connection protocol used for this connection.
+     * 
+     */
     public Optional<String> getVpnConnectionProtocolType() {
         return Optional.ofNullable(this.vpnConnectionProtocolType);
     }
+    /**
+     * Vpn link connection mode.
+     * 
+     */
     public Optional<String> getVpnLinkConnectionMode() {
         return Optional.ofNullable(this.vpnLinkConnectionMode);
     }
+    /**
+     * Id of the connected vpn site link.
+     * 
+     */
     public Optional<SubResourceResponse> getVpnSiteLink() {
         return Optional.ofNullable(this.vpnSiteLink);
     }

@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specifies the details for the S3 file being copied.
+ * 
+ */
 public final class WorkflowS3InputFileLocationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WorkflowS3InputFileLocationArgs Empty = new WorkflowS3InputFileLocationArgs();
 
+    /**
+     * Specifies the S3 bucket that contains the file being copied.
+     * 
+     */
     @InputImport(name="bucket")
     private final @Nullable Input<String> bucket;
 
@@ -21,6 +29,10 @@ public final class WorkflowS3InputFileLocationArgs extends io.pulumi.resources.R
         return this.bucket == null ? Input.empty() : this.bucket;
     }
 
+    /**
+     * The name assigned to the file when it was created in S3. You use the object key to retrieve the object.
+     * 
+     */
     @InputImport(name="key")
     private final @Nullable Input<String> key;
 

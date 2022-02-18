@@ -12,7 +12,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EntryGcsFilesetSpecSampleGcsFileSpec {
+    /**
+     * - 
+     * The full file path
+     * 
+     */
     private final @Nullable String filePath;
+    /**
+     * - 
+     * The size of the file, in bytes.
+     * 
+     */
     private final @Nullable Integer sizeBytes;
 
     @OutputCustomType.Constructor({"filePath","sizeBytes"})
@@ -23,9 +33,19 @@ public final class EntryGcsFilesetSpecSampleGcsFileSpec {
         this.sizeBytes = sizeBytes;
     }
 
+    /**
+     * - 
+     * The full file path
+     * 
+     */
     public Optional<String> getFilePath() {
         return Optional.ofNullable(this.filePath);
     }
+    /**
+     * - 
+     * The size of the file, in bytes.
+     * 
+     */
     public Optional<Integer> getSizeBytes() {
         return Optional.ofNullable(this.sizeBytes);
     }

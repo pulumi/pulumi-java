@@ -15,39 +15,89 @@ import io.pulumi.core.internal.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Resource Type definition for AWS::IoT::TopicRuleDestination
+ * 
+ */
 @ResourceType(type="aws-native:iot:TopicRuleDestination")
 public class TopicRuleDestination extends io.pulumi.resources.CustomResource {
+    /**
+     * Amazon Resource Name (ARN).
+     * 
+     */
     @OutputExport(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
+    /**
+     * @return Amazon Resource Name (ARN).
+     * 
+     */
     public Output<String> getArn() {
         return this.arn;
     }
+    /**
+     * HTTP URL destination properties.
+     * 
+     */
     @OutputExport(name="httpUrlProperties", type=TopicRuleDestinationHttpUrlDestinationSummary.class, parameters={})
     private Output</* @Nullable */ TopicRuleDestinationHttpUrlDestinationSummary> httpUrlProperties;
 
+    /**
+     * @return HTTP URL destination properties.
+     * 
+     */
     public Output</* @Nullable */ TopicRuleDestinationHttpUrlDestinationSummary> getHttpUrlProperties() {
         return this.httpUrlProperties;
     }
+    /**
+     * The status of the TopicRuleDestination.
+     * 
+     */
     @OutputExport(name="status", type=TopicRuleDestinationStatus.class, parameters={})
     private Output</* @Nullable */ TopicRuleDestinationStatus> status;
 
+    /**
+     * @return The status of the TopicRuleDestination.
+     * 
+     */
     public Output</* @Nullable */ TopicRuleDestinationStatus> getStatus() {
         return this.status;
     }
+    /**
+     * The reasoning for the current status of the TopicRuleDestination.
+     * 
+     */
     @OutputExport(name="statusReason", type=String.class, parameters={})
     private Output<String> statusReason;
 
+    /**
+     * @return The reasoning for the current status of the TopicRuleDestination.
+     * 
+     */
     public Output<String> getStatusReason() {
         return this.statusReason;
     }
+    /**
+     * VPC destination properties.
+     * 
+     */
     @OutputExport(name="vpcProperties", type=TopicRuleDestinationVpcDestinationProperties.class, parameters={})
     private Output</* @Nullable */ TopicRuleDestinationVpcDestinationProperties> vpcProperties;
 
+    /**
+     * @return VPC destination properties.
+     * 
+     */
     public Output</* @Nullable */ TopicRuleDestinationVpcDestinationProperties> getVpcProperties() {
         return this.vpcProperties;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public TopicRuleDestination(String name, @Nullable TopicRuleDestinationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:iot:TopicRuleDestination", name, args == null ? TopicRuleDestinationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -63,6 +113,14 @@ public class TopicRuleDestination extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static TopicRuleDestination get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new TopicRuleDestination(name, id, options);
     }

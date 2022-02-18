@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetUserProfile {
+/**
+ * Resource Type definition for AWS::SageMaker::UserProfile
+ * 
+ */
     public static CompletableFuture<GetUserProfileResult> invokeAsync(GetUserProfileArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:sagemaker:getUserProfile", TypeShape.of(GetUserProfileResult.class), args == null ? GetUserProfileArgs.Empty : args, Utilities.withVersion(options));
     }

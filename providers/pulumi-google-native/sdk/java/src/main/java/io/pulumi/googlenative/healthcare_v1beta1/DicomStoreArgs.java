@@ -32,6 +32,10 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
         return this.dicomStoreId == null ? Input.empty() : this.dicomStoreId;
     }
 
+    /**
+     * User-supplied key-value pairs used to organize DICOM stores. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62} Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -46,6 +50,10 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Resource name of the DICOM store, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -53,6 +61,10 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Notification destination for new DICOM instances. Supplied by the client.
+     * 
+     */
     @InputImport(name="notificationConfig")
     private final @Nullable Input<NotificationConfigArgs> notificationConfig;
 
@@ -67,6 +79,10 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * A list of streaming configs used to configure the destination of streaming exports for every DICOM instance insertion in this DICOM store. After a new config is added to `stream_configs`, DICOM instance insertions are streamed to the new destination. When a config is removed from `stream_configs`, the server stops streaming to that destination. Each config must contain a unique destination.
+     * 
+     */
     @InputImport(name="streamConfigs")
     private final @Nullable Input<List<GoogleCloudHealthcareV1beta1DicomStreamConfigArgs>> streamConfigs;
 

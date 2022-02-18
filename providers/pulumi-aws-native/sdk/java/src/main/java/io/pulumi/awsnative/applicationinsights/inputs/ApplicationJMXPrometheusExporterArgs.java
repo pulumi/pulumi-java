@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The JMX Prometheus Exporter settings.
+ * 
+ */
 public final class ApplicationJMXPrometheusExporterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationJMXPrometheusExporterArgs Empty = new ApplicationJMXPrometheusExporterArgs();
 
+    /**
+     * Java agent host port
+     * 
+     */
     @InputImport(name="hostPort")
     private final @Nullable Input<String> hostPort;
 
@@ -21,6 +29,10 @@ public final class ApplicationJMXPrometheusExporterArgs extends io.pulumi.resour
         return this.hostPort == null ? Input.empty() : this.hostPort;
     }
 
+    /**
+     * JMX service URL.
+     * 
+     */
     @InputImport(name="jMXURL")
     private final @Nullable Input<String> jMXURL;
 
@@ -28,6 +40,10 @@ public final class ApplicationJMXPrometheusExporterArgs extends io.pulumi.resour
         return this.jMXURL == null ? Input.empty() : this.jMXURL;
     }
 
+    /**
+     * Prometheus exporter port.
+     * 
+     */
     @InputImport(name="prometheusPort")
     private final @Nullable Input<String> prometheusPort;
 

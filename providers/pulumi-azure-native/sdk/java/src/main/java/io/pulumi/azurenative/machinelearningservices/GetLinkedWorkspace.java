@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLinkedWorkspace {
+/**
+ * Linked workspace.
+ * API Version: 2020-03-01.
+ * 
+ *
+ * Linked workspace.
+ * 
+ */
     public static CompletableFuture<GetLinkedWorkspaceResult> invokeAsync(GetLinkedWorkspaceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getLinkedWorkspace", TypeShape.of(GetLinkedWorkspaceResult.class), args == null ? GetLinkedWorkspaceArgs.Empty : args, Utilities.withVersion(options));
     }

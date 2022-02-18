@@ -19,16 +19,61 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AmazonRedshiftLinkedServiceResponse {
+    /**
+     * List of tags that can be used for describing the linked service.
+     * 
+     */
     private final @Nullable List<Object> annotations;
+    /**
+     * The integration runtime reference.
+     * 
+     */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+    /**
+     * The database name of the Amazon Redshift source. Type: string (or Expression with resultType string).
+     * 
+     */
     private final Object database;
+    /**
+     * Linked service description.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     private final @Nullable Object encryptedCredential;
+    /**
+     * Parameters for linked service.
+     * 
+     */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+    /**
+     * The password of the Amazon Redshift source.
+     * 
+     */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
+    /**
+     * The TCP port number that the Amazon Redshift server uses to listen for client connections. The default value is 5439. Type: integer (or Expression with resultType integer).
+     * 
+     */
     private final @Nullable Object port;
+    /**
+     * The name of the Amazon Redshift server. Type: string (or Expression with resultType string).
+     * 
+     */
     private final Object server;
+    /**
+     * Type of linked service.
+     * Expected value is 'AmazonRedshift'.
+     * 
+     */
     private final String type;
+    /**
+     * The username of the Amazon Redshift source. Type: string (or Expression with resultType string).
+     * 
+     */
     private final @Nullable Object username;
 
     @OutputCustomType.Constructor({"annotations","connectVia","database","description","encryptedCredential","parameters","password","port","server","type","username"})
@@ -57,36 +102,81 @@ public final class AmazonRedshiftLinkedServiceResponse {
         this.username = username;
     }
 
+    /**
+     * List of tags that can be used for describing the linked service.
+     * 
+     */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
+    /**
+     * The integration runtime reference.
+     * 
+     */
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return Optional.ofNullable(this.connectVia);
     }
+    /**
+     * The database name of the Amazon Redshift source. Type: string (or Expression with resultType string).
+     * 
+     */
     public Object getDatabase() {
         return this.database;
     }
+    /**
+     * Linked service description.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> getEncryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
+    /**
+     * Parameters for linked service.
+     * 
+     */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
+    /**
+     * The password of the Amazon Redshift source.
+     * 
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getPassword() {
         return Optional.ofNullable(this.password);
     }
+    /**
+     * The TCP port number that the Amazon Redshift server uses to listen for client connections. The default value is 5439. Type: integer (or Expression with resultType integer).
+     * 
+     */
     public Optional<Object> getPort() {
         return Optional.ofNullable(this.port);
     }
+    /**
+     * The name of the Amazon Redshift server. Type: string (or Expression with resultType string).
+     * 
+     */
     public Object getServer() {
         return this.server;
     }
+    /**
+     * Type of linked service.
+     * Expected value is 'AmazonRedshift'.
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * The username of the Amazon Redshift source. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> getUsername() {
         return Optional.ofNullable(this.username);
     }

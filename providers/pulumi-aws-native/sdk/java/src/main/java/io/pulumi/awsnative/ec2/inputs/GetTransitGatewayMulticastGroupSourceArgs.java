@@ -12,6 +12,10 @@ public final class GetTransitGatewayMulticastGroupSourceArgs extends io.pulumi.r
 
     public static final GetTransitGatewayMulticastGroupSourceArgs Empty = new GetTransitGatewayMulticastGroupSourceArgs();
 
+    /**
+     * The IP address assigned to the transit gateway multicast group.
+     * 
+     */
     @InputImport(name="groupIpAddress", required=true)
     private final String groupIpAddress;
 
@@ -19,6 +23,10 @@ public final class GetTransitGatewayMulticastGroupSourceArgs extends io.pulumi.r
         return this.groupIpAddress;
     }
 
+    /**
+     * The ID of the transit gateway attachment.
+     * 
+     */
     @InputImport(name="networkInterfaceId", required=true)
     private final String networkInterfaceId;
 
@@ -26,6 +34,10 @@ public final class GetTransitGatewayMulticastGroupSourceArgs extends io.pulumi.r
         return this.networkInterfaceId;
     }
 
+    /**
+     * The ID of the transit gateway multicast domain.
+     * 
+     */
     @InputImport(name="transitGatewayMulticastDomainId", required=true)
     private final String transitGatewayMulticastDomainId;
 

@@ -14,6 +14,10 @@ public final class ManagedInstancePrivateEndpointPropertyResponse extends io.pul
 
     public static final ManagedInstancePrivateEndpointPropertyResponse Empty = new ManagedInstancePrivateEndpointPropertyResponse();
 
+    /**
+     * Resource id of the private endpoint.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 

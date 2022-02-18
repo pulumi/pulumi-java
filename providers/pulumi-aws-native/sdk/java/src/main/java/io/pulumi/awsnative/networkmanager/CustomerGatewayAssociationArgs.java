@@ -14,6 +14,10 @@ public final class CustomerGatewayAssociationArgs extends io.pulumi.resources.Re
 
     public static final CustomerGatewayAssociationArgs Empty = new CustomerGatewayAssociationArgs();
 
+    /**
+     * The Amazon Resource Name (ARN) of the customer gateway.
+     * 
+     */
     @InputImport(name="customerGatewayArn", required=true)
     private final Input<String> customerGatewayArn;
 
@@ -21,6 +25,10 @@ public final class CustomerGatewayAssociationArgs extends io.pulumi.resources.Re
         return this.customerGatewayArn;
     }
 
+    /**
+     * The ID of the device
+     * 
+     */
     @InputImport(name="deviceId", required=true)
     private final Input<String> deviceId;
 
@@ -28,6 +36,10 @@ public final class CustomerGatewayAssociationArgs extends io.pulumi.resources.Re
         return this.deviceId;
     }
 
+    /**
+     * The ID of the global network.
+     * 
+     */
     @InputImport(name="globalNetworkId", required=true)
     private final Input<String> globalNetworkId;
 
@@ -35,6 +47,10 @@ public final class CustomerGatewayAssociationArgs extends io.pulumi.resources.Re
         return this.globalNetworkId;
     }
 
+    /**
+     * The ID of the link
+     * 
+     */
     @InputImport(name="linkId")
     private final @Nullable Input<String> linkId;
 

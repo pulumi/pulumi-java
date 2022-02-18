@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class EngineModelDefaultVersion {
+    /**
+     * The name specified for the version when it was created.
+     * 
+     */
     private final String name;
 
     @OutputCustomType.Constructor({"name"})
@@ -16,6 +20,10 @@ public final class EngineModelDefaultVersion {
         this.name = Objects.requireNonNull(name);
     }
 
+    /**
+     * The name specified for the version when it was created.
+     * 
+     */
     public String getName() {
         return this.name;
     }

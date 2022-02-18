@@ -13,6 +13,11 @@ public final class URLMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelG
 
     public static final URLMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelGetArgs Empty = new URLMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelGetArgs();
 
+    /**
+     * The name of the query parameter to match. The query parameter must exist in the
+     * request, in the absence of which the request match fails.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -20,6 +25,11 @@ public final class URLMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelG
         return this.name;
     }
 
+    /**
+     * The value of the label must match the specified value. value can have a maximum
+     * length of 1024 characters.
+     * 
+     */
     @InputImport(name="value", required=true)
     private final Input<String> value;
 

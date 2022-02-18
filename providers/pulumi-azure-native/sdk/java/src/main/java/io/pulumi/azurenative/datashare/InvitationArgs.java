@@ -14,6 +14,10 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InvitationArgs Empty = new InvitationArgs();
 
+    /**
+     * The name of the share account.
+     * 
+     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -21,6 +25,10 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountName;
     }
 
+    /**
+     * The expiration date for the invitation and share subscription.
+     * 
+     */
     @InputImport(name="expirationDate")
     private final @Nullable Input<String> expirationDate;
 
@@ -28,6 +36,10 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
         return this.expirationDate == null ? Input.empty() : this.expirationDate;
     }
 
+    /**
+     * The name of the invitation.
+     * 
+     */
     @InputImport(name="invitationName")
     private final @Nullable Input<String> invitationName;
 
@@ -35,6 +47,10 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
         return this.invitationName == null ? Input.empty() : this.invitationName;
     }
 
+    /**
+     * The resource group name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -42,6 +58,10 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the share to send the invitation for.
+     * 
+     */
     @InputImport(name="shareName", required=true)
     private final Input<String> shareName;
 
@@ -49,6 +69,10 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
         return this.shareName;
     }
 
+    /**
+     * The target Azure AD Id. Can't be combined with email.
+     * 
+     */
     @InputImport(name="targetActiveDirectoryId")
     private final @Nullable Input<String> targetActiveDirectoryId;
 
@@ -56,6 +80,10 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
         return this.targetActiveDirectoryId == null ? Input.empty() : this.targetActiveDirectoryId;
     }
 
+    /**
+     * The email the invitation is directed to.
+     * 
+     */
     @InputImport(name="targetEmail")
     private final @Nullable Input<String> targetEmail;
 
@@ -63,6 +91,12 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
         return this.targetEmail == null ? Input.empty() : this.targetEmail;
     }
 
+    /**
+     * The target user or application Id that invitation is being sent to.
+     * Must be specified along TargetActiveDirectoryId. This enables sending
+     * invitations to specific users or applications in an AD tenant.
+     * 
+     */
     @InputImport(name="targetObjectId")
     private final @Nullable Input<String> targetObjectId;
 

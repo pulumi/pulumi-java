@@ -12,9 +12,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GooglePrivacyDlpV2LDiversityEquivalenceClassResponse {
+    /**
+     * Size of the k-anonymity equivalence class.
+     * 
+     */
     private final String equivalenceClassSize;
+    /**
+     * Number of distinct sensitive values in this equivalence class.
+     * 
+     */
     private final String numDistinctSensitiveValues;
+    /**
+     * Quasi-identifier values defining the k-anonymity equivalence class. The order is always the same as the original request.
+     * 
+     */
     private final List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues;
+    /**
+     * Estimated frequencies of top sensitive values.
+     * 
+     */
     private final List<GooglePrivacyDlpV2ValueFrequencyResponse> topSensitiveValues;
 
     @OutputCustomType.Constructor({"equivalenceClassSize","numDistinctSensitiveValues","quasiIdsValues","topSensitiveValues"})
@@ -29,15 +45,31 @@ public final class GooglePrivacyDlpV2LDiversityEquivalenceClassResponse {
         this.topSensitiveValues = Objects.requireNonNull(topSensitiveValues);
     }
 
+    /**
+     * Size of the k-anonymity equivalence class.
+     * 
+     */
     public String getEquivalenceClassSize() {
         return this.equivalenceClassSize;
     }
+    /**
+     * Number of distinct sensitive values in this equivalence class.
+     * 
+     */
     public String getNumDistinctSensitiveValues() {
         return this.numDistinctSensitiveValues;
     }
+    /**
+     * Quasi-identifier values defining the k-anonymity equivalence class. The order is always the same as the original request.
+     * 
+     */
     public List<GooglePrivacyDlpV2ValueResponse> getQuasiIdsValues() {
         return this.quasiIdsValues;
     }
+    /**
+     * Estimated frequencies of top sensitive values.
+     * 
+     */
     public List<GooglePrivacyDlpV2ValueFrequencyResponse> getTopSensitiveValues() {
         return this.topSensitiveValues;
     }

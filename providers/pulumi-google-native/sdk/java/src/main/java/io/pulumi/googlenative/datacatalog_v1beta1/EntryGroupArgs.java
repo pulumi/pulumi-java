@@ -14,6 +14,10 @@ public final class EntryGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EntryGroupArgs Empty = new EntryGroupArgs();
 
+    /**
+     * Entry group description, which can consist of several sentences or paragraphs that describe entry group contents. Default value is an empty string.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -21,6 +25,10 @@ public final class EntryGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * A short name to identify the entry group, for example, "analytics data - jan 2011". Default value is an empty string.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -42,6 +50,10 @@ public final class EntryGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The resource name of the entry group in URL format. Example: * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id} Note that this EntryGroup and its child resources may not actually be stored in the location in this name.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

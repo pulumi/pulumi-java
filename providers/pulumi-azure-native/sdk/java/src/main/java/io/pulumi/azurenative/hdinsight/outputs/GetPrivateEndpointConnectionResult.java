@@ -12,13 +12,45 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetPrivateEndpointConnectionResult {
+    /**
+     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * 
+     */
     private final String id;
+    /**
+     * The link identifier.
+     * 
+     */
     private final String linkIdentifier;
+    /**
+     * The name of the resource
+     * 
+     */
     private final String name;
+    /**
+     * The private endpoint of the private endpoint connection
+     * 
+     */
     private final PrivateEndpointResponse privateEndpoint;
+    /**
+     * The private link service connection state.
+     * 
+     */
     private final PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
+    /**
+     * The provisioning state, which only appears in the response.
+     * 
+     */
     private final String provisioningState;
+    /**
+     * Metadata pertaining to creation and last modification of the resource.
+     * 
+     */
     private final SystemDataResponse systemData;
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"id","linkIdentifier","name","privateEndpoint","privateLinkServiceConnectionState","provisioningState","systemData","type"})
@@ -41,27 +73,59 @@ public final class GetPrivateEndpointConnectionResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * The link identifier.
+     * 
+     */
     public String getLinkIdentifier() {
         return this.linkIdentifier;
     }
+    /**
+     * The name of the resource
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The private endpoint of the private endpoint connection
+     * 
+     */
     public PrivateEndpointResponse getPrivateEndpoint() {
         return this.privateEndpoint;
     }
+    /**
+     * The private link service connection state.
+     * 
+     */
     public PrivateLinkServiceConnectionStateResponse getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
+    /**
+     * The provisioning state, which only appears in the response.
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Metadata pertaining to creation and last modification of the resource.
+     * 
+     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     public String getType() {
         return this.type;
     }

@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Client secret information for factory's bring your own app repository configuration.
+ * 
+ */
 public final class GitHubClientSecretArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GitHubClientSecretArgs Empty = new GitHubClientSecretArgs();
 
+    /**
+     * Bring your own app client secret AKV URL.
+     * 
+     */
     @InputImport(name="byoaSecretAkvUrl")
     private final @Nullable Input<String> byoaSecretAkvUrl;
 
@@ -21,6 +29,10 @@ public final class GitHubClientSecretArgs extends io.pulumi.resources.ResourceAr
         return this.byoaSecretAkvUrl == null ? Input.empty() : this.byoaSecretAkvUrl;
     }
 
+    /**
+     * Bring your own app client secret name in AKV.
+     * 
+     */
     @InputImport(name="byoaSecretName")
     private final @Nullable Input<String> byoaSecretName;
 

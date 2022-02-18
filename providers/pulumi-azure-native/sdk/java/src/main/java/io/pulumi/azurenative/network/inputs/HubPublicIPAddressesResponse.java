@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Public IP addresses associated with azure firewall.
+ * 
+ */
 public final class HubPublicIPAddressesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final HubPublicIPAddressesResponse Empty = new HubPublicIPAddressesResponse();
 
+    /**
+     * The list of Public IP addresses associated with azure firewall or IP addresses to be retained.
+     * 
+     */
     @InputImport(name="addresses")
     private final @Nullable List<AzureFirewallPublicIPAddressResponse> addresses;
 
@@ -23,6 +31,10 @@ public final class HubPublicIPAddressesResponse extends io.pulumi.resources.Invo
         return this.addresses == null ? List.of() : this.addresses;
     }
 
+    /**
+     * The number of Public IP addresses associated with azure firewall.
+     * 
+     */
     @InputImport(name="count")
     private final @Nullable Integer count;
 

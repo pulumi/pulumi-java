@@ -14,6 +14,12 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
 
     public static final UserState Empty = new UserState();
 
+    /**
+     * The deletion policy for the user.
+     * Setting `ABANDON` allows the resource to be abandoned rather than deleted. This is useful
+     * for Postgres, where users cannot be deleted from the API if they have been granted SQL roles.
+     * 
+     */
     @InputImport(name="deletionPolicy")
     private final @Nullable Input<String> deletionPolicy;
 
@@ -21,6 +27,12 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
         return this.deletionPolicy == null ? Input.empty() : this.deletionPolicy;
     }
 
+    /**
+     * The host the user can connect from. This is only supported
+     * for MySQL instances. Don't set this field for PostgreSQL instances.
+     * Can be an IP address. Changing this forces a new resource to be created.
+     * 
+     */
     @InputImport(name="host")
     private final @Nullable Input<String> host;
 
@@ -28,6 +40,11 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
         return this.host == null ? Input.empty() : this.host;
     }
 
+    /**
+     * The name of the Cloud SQL instance. Changing this
+     * forces a new resource to be created.
+     * 
+     */
     @InputImport(name="instance")
     private final @Nullable Input<String> instance;
 
@@ -35,6 +52,11 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
         return this.instance == null ? Input.empty() : this.instance;
     }
 
+    /**
+     * The name of the user. Changing this forces a new resource
+     * to be created.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -42,6 +64,11 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The password for the user. Can be updated. For Postgres
+     * instances this is a Required field.
+     * 
+     */
     @InputImport(name="password")
     private final @Nullable Input<String> password;
 
@@ -49,6 +76,11 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
         return this.password == null ? Input.empty() : this.password;
     }
 
+    /**
+     * The ID of the project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -56,6 +88,12 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The user type. It determines the method to authenticate the
+     * user during login. The default is the database's built-in user type. Flags
+     * include "BUILT_IN", "CLOUD_IAM_USER", or "CLOUD_IAM_SERVICE_ACCOUNT".
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 

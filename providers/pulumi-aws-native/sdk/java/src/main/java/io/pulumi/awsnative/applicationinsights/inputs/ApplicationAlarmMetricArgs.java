@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A metric to be monitored for the component.
+ * 
+ */
 public final class ApplicationAlarmMetricArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationAlarmMetricArgs Empty = new ApplicationAlarmMetricArgs();
 
+    /**
+     * The name of the metric to be monitored for the component.
+     * 
+     */
     @InputImport(name="alarmMetricName", required=true)
     private final Input<String> alarmMetricName;
 

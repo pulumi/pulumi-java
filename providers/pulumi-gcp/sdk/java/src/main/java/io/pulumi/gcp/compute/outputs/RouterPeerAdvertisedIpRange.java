@@ -11,7 +11,16 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RouterPeerAdvertisedIpRange {
+    /**
+     * User-specified description for the IP range.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * The IP range to advertise. The value must be a
+     * CIDR-formatted string.
+     * 
+     */
     private final String range;
 
     @OutputCustomType.Constructor({"description","range"})
@@ -22,9 +31,18 @@ public final class RouterPeerAdvertisedIpRange {
         this.range = Objects.requireNonNull(range);
     }
 
+    /**
+     * User-specified description for the IP range.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * The IP range to advertise. The value must be a
+     * CIDR-formatted string.
+     * 
+     */
     public String getRange() {
         return this.range;
     }

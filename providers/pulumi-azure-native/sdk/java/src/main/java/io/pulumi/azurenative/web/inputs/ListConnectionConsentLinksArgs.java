@@ -16,6 +16,10 @@ public final class ListConnectionConsentLinksArgs extends io.pulumi.resources.In
 
     public static final ListConnectionConsentLinksArgs Empty = new ListConnectionConsentLinksArgs();
 
+    /**
+     * Connection name
+     * 
+     */
     @InputImport(name="connectionName", required=true)
     private final String connectionName;
 
@@ -23,6 +27,10 @@ public final class ListConnectionConsentLinksArgs extends io.pulumi.resources.In
         return this.connectionName;
     }
 
+    /**
+     * Collection of resources
+     * 
+     */
     @InputImport(name="parameters")
     private final @Nullable List<ConsentLinkParameterDefinition> parameters;
 
@@ -30,6 +38,10 @@ public final class ListConnectionConsentLinksArgs extends io.pulumi.resources.In
         return this.parameters == null ? List.of() : this.parameters;
     }
 
+    /**
+     * The resource group
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -37,6 +49,10 @@ public final class ListConnectionConsentLinksArgs extends io.pulumi.resources.In
         return this.resourceGroupName;
     }
 
+    /**
+     * Subscription Id
+     * 
+     */
     @InputImport(name="subscriptionId")
     private final @Nullable String subscriptionId;
 

@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetStreamingLocator {
+/**
+ * A Streaming Locator resource
+ * API Version: 2020-05-01.
+ * 
+ *
+ * A Streaming Locator resource
+ * 
+ */
     public static CompletableFuture<GetStreamingLocatorResult> invokeAsync(GetStreamingLocatorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:media:getStreamingLocator", TypeShape.of(GetStreamingLocatorResult.class), args == null ? GetStreamingLocatorArgs.Empty : args, Utilities.withVersion(options));
     }

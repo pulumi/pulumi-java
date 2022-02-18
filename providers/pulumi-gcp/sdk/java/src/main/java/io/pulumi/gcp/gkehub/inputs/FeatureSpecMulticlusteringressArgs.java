@@ -13,6 +13,10 @@ public final class FeatureSpecMulticlusteringressArgs extends io.pulumi.resource
 
     public static final FeatureSpecMulticlusteringressArgs Empty = new FeatureSpecMulticlusteringressArgs();
 
+    /**
+     * Fully-qualified Membership name which hosts the MultiClusterIngress CRD. Example: `projects/foo-proj/locations/global/memberships/bar`
+     * 
+     */
     @InputImport(name="configMembership", required=true)
     private final Input<String> configMembership;
 

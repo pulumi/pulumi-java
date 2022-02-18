@@ -13,10 +13,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties of a virtual machine returned by the Microsoft.Compute API.
+ * 
+ */
 public final class ComputeVmPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ComputeVmPropertiesResponse Empty = new ComputeVmPropertiesResponse();
 
+    /**
+     * Gets data disks blob uri for the virtual machine.
+     * 
+     */
     @InputImport(name="dataDiskIds")
     private final @Nullable List<String> dataDiskIds;
 
@@ -24,6 +32,10 @@ public final class ComputeVmPropertiesResponse extends io.pulumi.resources.Invok
         return this.dataDiskIds == null ? List.of() : this.dataDiskIds;
     }
 
+    /**
+     * Gets all data disks attached to the virtual machine.
+     * 
+     */
     @InputImport(name="dataDisks")
     private final @Nullable List<ComputeDataDiskResponse> dataDisks;
 
@@ -31,6 +43,10 @@ public final class ComputeVmPropertiesResponse extends io.pulumi.resources.Invok
         return this.dataDisks == null ? List.of() : this.dataDisks;
     }
 
+    /**
+     * Gets the network interface ID of the virtual machine.
+     * 
+     */
     @InputImport(name="networkInterfaceId")
     private final @Nullable String networkInterfaceId;
 
@@ -38,6 +54,10 @@ public final class ComputeVmPropertiesResponse extends io.pulumi.resources.Invok
         return this.networkInterfaceId == null ? Optional.empty() : Optional.ofNullable(this.networkInterfaceId);
     }
 
+    /**
+     * Gets OS disk blob uri for the virtual machine.
+     * 
+     */
     @InputImport(name="osDiskId")
     private final @Nullable String osDiskId;
 
@@ -45,6 +65,10 @@ public final class ComputeVmPropertiesResponse extends io.pulumi.resources.Invok
         return this.osDiskId == null ? Optional.empty() : Optional.ofNullable(this.osDiskId);
     }
 
+    /**
+     * Gets the OS type of the virtual machine.
+     * 
+     */
     @InputImport(name="osType")
     private final @Nullable String osType;
 
@@ -52,6 +76,10 @@ public final class ComputeVmPropertiesResponse extends io.pulumi.resources.Invok
         return this.osType == null ? Optional.empty() : Optional.ofNullable(this.osType);
     }
 
+    /**
+     * Gets the statuses of the virtual machine.
+     * 
+     */
     @InputImport(name="statuses")
     private final @Nullable List<ComputeVmInstanceViewStatusResponse> statuses;
 
@@ -59,6 +87,10 @@ public final class ComputeVmPropertiesResponse extends io.pulumi.resources.Invok
         return this.statuses == null ? List.of() : this.statuses;
     }
 
+    /**
+     * Gets the size of the virtual machine.
+     * 
+     */
     @InputImport(name="vmSize")
     private final @Nullable String vmSize;
 

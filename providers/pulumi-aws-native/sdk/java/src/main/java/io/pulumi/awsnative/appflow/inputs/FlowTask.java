@@ -18,6 +18,10 @@ public final class FlowTask extends io.pulumi.resources.InvokeArgs {
 
     public static final FlowTask Empty = new FlowTask();
 
+    /**
+     * Operation to be performed on provided source fields
+     * 
+     */
     @InputImport(name="connectorOperator")
     private final @Nullable FlowConnectorOperator connectorOperator;
 
@@ -25,6 +29,10 @@ public final class FlowTask extends io.pulumi.resources.InvokeArgs {
         return this.connectorOperator == null ? Optional.empty() : Optional.ofNullable(this.connectorOperator);
     }
 
+    /**
+     * A field value on which source field should be validated
+     * 
+     */
     @InputImport(name="destinationField")
     private final @Nullable String destinationField;
 
@@ -32,6 +40,10 @@ public final class FlowTask extends io.pulumi.resources.InvokeArgs {
         return this.destinationField == null ? Optional.empty() : Optional.ofNullable(this.destinationField);
     }
 
+    /**
+     * Source fields on which particular task will be applied
+     * 
+     */
     @InputImport(name="sourceFields", required=true)
     private final List<String> sourceFields;
 
@@ -39,6 +51,10 @@ public final class FlowTask extends io.pulumi.resources.InvokeArgs {
         return this.sourceFields;
     }
 
+    /**
+     * A Map used to store task related info
+     * 
+     */
     @InputImport(name="taskProperties")
     private final @Nullable List<FlowTaskPropertiesObject> taskProperties;
 
@@ -46,6 +62,10 @@ public final class FlowTask extends io.pulumi.resources.InvokeArgs {
         return this.taskProperties == null ? List.of() : this.taskProperties;
     }
 
+    /**
+     * Type of task
+     * 
+     */
     @InputImport(name="taskType", required=true)
     private final FlowTaskType taskType;
 

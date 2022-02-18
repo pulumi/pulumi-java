@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Label object for CompositeTypes
+ * 
+ */
 public final class CompositeTypeLabelEntryResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CompositeTypeLabelEntryResponse Empty = new CompositeTypeLabelEntryResponse();
 
+    /**
+     * Key of the label
+     * 
+     */
     @InputImport(name="key", required=true)
     private final String key;
 
@@ -19,6 +27,10 @@ public final class CompositeTypeLabelEntryResponse extends io.pulumi.resources.I
         return this.key;
     }
 
+    /**
+     * Value of the label
+     * 
+     */
     @InputImport(name="value", required=true)
     private final String value;
 

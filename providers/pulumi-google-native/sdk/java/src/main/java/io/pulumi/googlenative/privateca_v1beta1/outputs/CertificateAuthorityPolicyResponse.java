@@ -15,12 +15,40 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CertificateAuthorityPolicyResponse {
+    /**
+     * Optional. If any value is specified here, then all Certificates issued by the CertificateAuthority must match at least one listed value. If no value is specified, all values will be allowed for this fied. Glob patterns are also supported.
+     * 
+     */
     private final List<String> allowedCommonNames;
+    /**
+     * Optional. All Certificates issued by the CertificateAuthority must match at least one listed ReusableConfigWrapper in the list.
+     * 
+     */
     private final AllowedConfigListResponse allowedConfigList;
+    /**
+     * Optional. If specified, then only methods allowed in the IssuanceModes may be used to issue Certificates.
+     * 
+     */
     private final IssuanceModesResponse allowedIssuanceModes;
+    /**
+     * Optional. If any Subject is specified here, then all Certificates issued by the CertificateAuthority must match at least one listed Subject. If a Subject has an empty field, any value will be allowed for that field.
+     * 
+     */
     private final List<SubjectResponse> allowedLocationsAndOrganizations;
+    /**
+     * Optional. If a AllowedSubjectAltNames is specified here, then all Certificates issued by the CertificateAuthority must match AllowedSubjectAltNames. If no value or an empty value is specified, any value will be allowed for the SubjectAltNames field.
+     * 
+     */
     private final AllowedSubjectAltNamesResponse allowedSans;
+    /**
+     * Optional. The maximum lifetime allowed by the CertificateAuthority. Note that if the any part if the issuing chain expires before a Certificate's requested maximum_lifetime, the effective lifetime will be explicitly truncated.
+     * 
+     */
     private final String maximumLifetime;
+    /**
+     * Optional. All Certificates issued by the CertificateAuthority will use the provided configuration values, overwriting any requested configuration values.
+     * 
+     */
     private final ReusableConfigWrapperResponse overwriteConfigValues;
 
     @OutputCustomType.Constructor({"allowedCommonNames","allowedConfigList","allowedIssuanceModes","allowedLocationsAndOrganizations","allowedSans","maximumLifetime","overwriteConfigValues"})
@@ -41,24 +69,52 @@ public final class CertificateAuthorityPolicyResponse {
         this.overwriteConfigValues = Objects.requireNonNull(overwriteConfigValues);
     }
 
+    /**
+     * Optional. If any value is specified here, then all Certificates issued by the CertificateAuthority must match at least one listed value. If no value is specified, all values will be allowed for this fied. Glob patterns are also supported.
+     * 
+     */
     public List<String> getAllowedCommonNames() {
         return this.allowedCommonNames;
     }
+    /**
+     * Optional. All Certificates issued by the CertificateAuthority must match at least one listed ReusableConfigWrapper in the list.
+     * 
+     */
     public AllowedConfigListResponse getAllowedConfigList() {
         return this.allowedConfigList;
     }
+    /**
+     * Optional. If specified, then only methods allowed in the IssuanceModes may be used to issue Certificates.
+     * 
+     */
     public IssuanceModesResponse getAllowedIssuanceModes() {
         return this.allowedIssuanceModes;
     }
+    /**
+     * Optional. If any Subject is specified here, then all Certificates issued by the CertificateAuthority must match at least one listed Subject. If a Subject has an empty field, any value will be allowed for that field.
+     * 
+     */
     public List<SubjectResponse> getAllowedLocationsAndOrganizations() {
         return this.allowedLocationsAndOrganizations;
     }
+    /**
+     * Optional. If a AllowedSubjectAltNames is specified here, then all Certificates issued by the CertificateAuthority must match AllowedSubjectAltNames. If no value or an empty value is specified, any value will be allowed for the SubjectAltNames field.
+     * 
+     */
     public AllowedSubjectAltNamesResponse getAllowedSans() {
         return this.allowedSans;
     }
+    /**
+     * Optional. The maximum lifetime allowed by the CertificateAuthority. Note that if the any part if the issuing chain expires before a Certificate's requested maximum_lifetime, the effective lifetime will be explicitly truncated.
+     * 
+     */
     public String getMaximumLifetime() {
         return this.maximumLifetime;
     }
+    /**
+     * Optional. All Certificates issued by the CertificateAuthority will use the provided configuration values, overwriting any requested configuration values.
+     * 
+     */
     public ReusableConfigWrapperResponse getOverwriteConfigValues() {
         return this.overwriteConfigValues;
     }

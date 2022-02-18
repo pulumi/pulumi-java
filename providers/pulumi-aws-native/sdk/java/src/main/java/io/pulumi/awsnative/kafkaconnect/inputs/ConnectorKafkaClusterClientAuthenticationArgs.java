@@ -9,6 +9,10 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * Details of the client authentication used by the Kafka cluster.
+ * 
+ */
 public final class ConnectorKafkaClusterClientAuthenticationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectorKafkaClusterClientAuthenticationArgs Empty = new ConnectorKafkaClusterClientAuthenticationArgs();

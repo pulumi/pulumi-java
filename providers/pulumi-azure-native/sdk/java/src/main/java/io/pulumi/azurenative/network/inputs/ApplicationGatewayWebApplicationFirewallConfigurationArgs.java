@@ -17,10 +17,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Application gateway web application firewall configuration.
+ * 
+ */
 public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationGatewayWebApplicationFirewallConfigurationArgs Empty = new ApplicationGatewayWebApplicationFirewallConfigurationArgs();
 
+    /**
+     * The disabled rule groups.
+     * 
+     */
     @InputImport(name="disabledRuleGroups")
     private final @Nullable Input<List<ApplicationGatewayFirewallDisabledRuleGroupArgs>> disabledRuleGroups;
 
@@ -28,6 +36,10 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs ext
         return this.disabledRuleGroups == null ? Input.empty() : this.disabledRuleGroups;
     }
 
+    /**
+     * Whether the web application firewall is enabled or not.
+     * 
+     */
     @InputImport(name="enabled", required=true)
     private final Input<Boolean> enabled;
 
@@ -35,6 +47,10 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs ext
         return this.enabled;
     }
 
+    /**
+     * The exclusion list.
+     * 
+     */
     @InputImport(name="exclusions")
     private final @Nullable Input<List<ApplicationGatewayFirewallExclusionArgs>> exclusions;
 
@@ -42,6 +58,10 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs ext
         return this.exclusions == null ? Input.empty() : this.exclusions;
     }
 
+    /**
+     * Maximum file upload size in Mb for WAF.
+     * 
+     */
     @InputImport(name="fileUploadLimitInMb")
     private final @Nullable Input<Integer> fileUploadLimitInMb;
 
@@ -49,6 +69,10 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs ext
         return this.fileUploadLimitInMb == null ? Input.empty() : this.fileUploadLimitInMb;
     }
 
+    /**
+     * Web application firewall mode.
+     * 
+     */
     @InputImport(name="firewallMode", required=true)
     private final Input<Either<String,ApplicationGatewayFirewallMode>> firewallMode;
 
@@ -56,6 +80,10 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs ext
         return this.firewallMode;
     }
 
+    /**
+     * Maximum request body size for WAF.
+     * 
+     */
     @InputImport(name="maxRequestBodySize")
     private final @Nullable Input<Integer> maxRequestBodySize;
 
@@ -63,6 +91,10 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs ext
         return this.maxRequestBodySize == null ? Input.empty() : this.maxRequestBodySize;
     }
 
+    /**
+     * Maximum request body size in Kb for WAF.
+     * 
+     */
     @InputImport(name="maxRequestBodySizeInKb")
     private final @Nullable Input<Integer> maxRequestBodySizeInKb;
 
@@ -70,6 +102,10 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs ext
         return this.maxRequestBodySizeInKb == null ? Input.empty() : this.maxRequestBodySizeInKb;
     }
 
+    /**
+     * Whether allow WAF to check request Body.
+     * 
+     */
     @InputImport(name="requestBodyCheck")
     private final @Nullable Input<Boolean> requestBodyCheck;
 
@@ -77,6 +113,10 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs ext
         return this.requestBodyCheck == null ? Input.empty() : this.requestBodyCheck;
     }
 
+    /**
+     * The type of the web application firewall rule set. Possible values are: 'OWASP'.
+     * 
+     */
     @InputImport(name="ruleSetType", required=true)
     private final Input<String> ruleSetType;
 
@@ -84,6 +124,10 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs ext
         return this.ruleSetType;
     }
 
+    /**
+     * The version of the rule set type.
+     * 
+     */
     @InputImport(name="ruleSetVersion", required=true)
     private final Input<String> ruleSetVersion;
 

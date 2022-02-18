@@ -13,6 +13,10 @@ public final class InstanceTemplateDiskDiskEncryptionKeyArgs extends io.pulumi.r
 
     public static final InstanceTemplateDiskDiskEncryptionKeyArgs Empty = new InstanceTemplateDiskDiskEncryptionKeyArgs();
 
+    /**
+     * The self link of the encryption key that is stored in Google Cloud KMS
+     * 
+     */
     @InputImport(name="kmsKeySelfLink", required=true)
     private final Input<String> kmsKeySelfLink;
 

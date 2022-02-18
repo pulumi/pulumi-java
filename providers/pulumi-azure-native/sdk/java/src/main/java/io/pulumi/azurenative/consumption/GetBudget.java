@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBudget {
+/**
+ * A budget resource.
+ * API Version: 2019-10-01.
+ * 
+ *
+ * A budget resource.
+ * 
+ */
     public static CompletableFuture<GetBudgetResult> invokeAsync(GetBudgetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:consumption:getBudget", TypeShape.of(GetBudgetResult.class), args == null ? GetBudgetArgs.Empty : args, Utilities.withVersion(options));
     }

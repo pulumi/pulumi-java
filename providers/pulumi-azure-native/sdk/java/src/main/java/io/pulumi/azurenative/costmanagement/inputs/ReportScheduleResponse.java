@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The schedule associated with a report.
+ * 
+ */
 public final class ReportScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ReportScheduleResponse Empty = new ReportScheduleResponse();
 
+    /**
+     * The schedule recurrence.
+     * 
+     */
     @InputImport(name="recurrence", required=true)
     private final String recurrence;
 
@@ -22,6 +30,10 @@ public final class ReportScheduleResponse extends io.pulumi.resources.InvokeArgs
         return this.recurrence;
     }
 
+    /**
+     * Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.
+     * 
+     */
     @InputImport(name="recurrencePeriod")
     private final @Nullable ReportRecurrencePeriodResponse recurrencePeriod;
 
@@ -29,6 +41,10 @@ public final class ReportScheduleResponse extends io.pulumi.resources.InvokeArgs
         return this.recurrencePeriod == null ? Optional.empty() : Optional.ofNullable(this.recurrencePeriod);
     }
 
+    /**
+     * The status of the schedule. Whether active or not. If inactive, the report's scheduled execution is paused.
+     * 
+     */
     @InputImport(name="status")
     private final @Nullable String status;
 

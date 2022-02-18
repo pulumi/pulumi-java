@@ -17,6 +17,10 @@ public final class ConnectorProfileArgs extends io.pulumi.resources.ResourceArgs
 
     public static final ConnectorProfileArgs Empty = new ConnectorProfileArgs();
 
+    /**
+     * Mode in which data transfer should be enabled. Private connection mode is currently enabled for Salesforce, Snowflake, Trendmicro and Singular
+     * 
+     */
     @InputImport(name="connectionMode", required=true)
     private final Input<ConnectorProfileConnectionMode> connectionMode;
 
@@ -24,6 +28,10 @@ public final class ConnectorProfileArgs extends io.pulumi.resources.ResourceArgs
         return this.connectionMode;
     }
 
+    /**
+     * Connector specific configurations needed to create connector profile
+     * 
+     */
     @InputImport(name="connectorProfileConfig")
     private final @Nullable Input<ConnectorProfileConfigArgs> connectorProfileConfig;
 
@@ -31,6 +39,10 @@ public final class ConnectorProfileArgs extends io.pulumi.resources.ResourceArgs
         return this.connectorProfileConfig == null ? Input.empty() : this.connectorProfileConfig;
     }
 
+    /**
+     * The maximum number of items to retrieve in a single batch.
+     * 
+     */
     @InputImport(name="connectorProfileName")
     private final @Nullable Input<String> connectorProfileName;
 
@@ -38,6 +50,10 @@ public final class ConnectorProfileArgs extends io.pulumi.resources.ResourceArgs
         return this.connectorProfileName == null ? Input.empty() : this.connectorProfileName;
     }
 
+    /**
+     * List of Saas providers that need connector profile to be created
+     * 
+     */
     @InputImport(name="connectorType", required=true)
     private final Input<ConnectorProfileConnectorType> connectorType;
 
@@ -45,6 +61,10 @@ public final class ConnectorProfileArgs extends io.pulumi.resources.ResourceArgs
         return this.connectorType;
     }
 
+    /**
+     * The ARN of the AWS Key Management Service (AWS KMS) key that's used to encrypt your function's environment variables. If it's not provided, AWS Lambda uses a default service key.
+     * 
+     */
     @InputImport(name="kMSArn")
     private final @Nullable Input<String> kMSArn;
 

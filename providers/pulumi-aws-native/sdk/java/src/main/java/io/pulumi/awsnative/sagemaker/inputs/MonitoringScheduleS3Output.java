@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Information about where and how to store the results of a monitoring job.
+ * 
+ */
 public final class MonitoringScheduleS3Output extends io.pulumi.resources.InvokeArgs {
 
     public static final MonitoringScheduleS3Output Empty = new MonitoringScheduleS3Output();
 
+    /**
+     * The local path to the Amazon S3 storage location where Amazon SageMaker saves the results of a monitoring job. LocalPath is an absolute path for the output data.
+     * 
+     */
     @InputImport(name="localPath", required=true)
     private final String localPath;
 
@@ -22,6 +30,10 @@ public final class MonitoringScheduleS3Output extends io.pulumi.resources.Invoke
         return this.localPath;
     }
 
+    /**
+     * Whether to upload the results of the monitoring job continuously or after the job completes.
+     * 
+     */
     @InputImport(name="s3UploadMode")
     private final @Nullable MonitoringScheduleS3OutputS3UploadMode s3UploadMode;
 
@@ -29,6 +41,10 @@ public final class MonitoringScheduleS3Output extends io.pulumi.resources.Invoke
         return this.s3UploadMode == null ? Optional.empty() : Optional.ofNullable(this.s3UploadMode);
     }
 
+    /**
+     * A URI that identifies the Amazon S3 storage location where Amazon SageMaker saves the results of a monitoring job.
+     * 
+     */
     @InputImport(name="s3Uri", required=true)
     private final String s3Uri;
 

@@ -19,6 +19,18 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EnvironmentArgs Empty = new EnvironmentArgs();
 
+    /**
+     * Key/value pairs representing Airflow configuration variables.
+     *     Keys are prefixed by their section:
+     * 
+     *     [core]
+     *     dags_folder={AIRFLOW_HOME}/dags
+     *     
+     *     Would be represented as
+     *     
+     *     "core.dags_folder": "{AIRFLOW_HOME}/dags"
+     * 
+     */
     @InputImport(name="airflowConfigurationOptions")
     private final @Nullable Input<Object> airflowConfigurationOptions;
 
@@ -138,6 +150,10 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceBucketArn == null ? Input.empty() : this.sourceBucketArn;
     }
 
+    /**
+     * A map of tags for the environment.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Object> tags;
 

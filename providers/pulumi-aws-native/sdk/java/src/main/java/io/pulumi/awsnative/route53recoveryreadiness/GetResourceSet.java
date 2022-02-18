@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetResourceSet {
+/**
+ * Schema for the AWS Route53 Recovery Readiness ResourceSet Resource and API.
+ * 
+ */
     public static CompletableFuture<GetResourceSetResult> invokeAsync(GetResourceSetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:route53recoveryreadiness:getResourceSet", TypeShape.of(GetResourceSetResult.class), args == null ? GetResourceSetArgs.Empty : args, Utilities.withVersion(options));
     }

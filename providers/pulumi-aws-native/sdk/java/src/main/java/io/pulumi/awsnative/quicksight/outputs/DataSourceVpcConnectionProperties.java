@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DataSourceVpcConnectionProperties {
+    /**
+     * <p>The Amazon Resource Name (ARN) for the VPC connection.</p>
+     * 
+     */
     private final String vpcConnectionArn;
 
     @OutputCustomType.Constructor({"vpcConnectionArn"})
@@ -16,6 +20,10 @@ public final class DataSourceVpcConnectionProperties {
         this.vpcConnectionArn = Objects.requireNonNull(vpcConnectionArn);
     }
 
+    /**
+     * <p>The Amazon Resource Name (ARN) for the VPC connection.</p>
+     * 
+     */
     public String getVpcConnectionArn() {
         return this.vpcConnectionArn;
     }

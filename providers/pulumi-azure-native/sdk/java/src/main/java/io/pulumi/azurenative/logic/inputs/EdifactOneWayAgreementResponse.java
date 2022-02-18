@@ -9,10 +9,18 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * The Edifact one way agreement.
+ * 
+ */
 public final class EdifactOneWayAgreementResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EdifactOneWayAgreementResponse Empty = new EdifactOneWayAgreementResponse();
 
+    /**
+     * The EDIFACT protocol settings.
+     * 
+     */
     @InputImport(name="protocolSettings", required=true)
     private final EdifactProtocolSettingsResponse protocolSettings;
 
@@ -20,6 +28,10 @@ public final class EdifactOneWayAgreementResponse extends io.pulumi.resources.In
         return this.protocolSettings;
     }
 
+    /**
+     * The receiver business identity
+     * 
+     */
     @InputImport(name="receiverBusinessIdentity", required=true)
     private final BusinessIdentityResponse receiverBusinessIdentity;
 
@@ -27,6 +39,10 @@ public final class EdifactOneWayAgreementResponse extends io.pulumi.resources.In
         return this.receiverBusinessIdentity;
     }
 
+    /**
+     * The sender business identity
+     * 
+     */
     @InputImport(name="senderBusinessIdentity", required=true)
     private final BusinessIdentityResponse senderBusinessIdentity;
 

@@ -12,6 +12,10 @@ public final class GetTenantConfigurationArgs extends io.pulumi.resources.Invoke
 
     public static final GetTenantConfigurationArgs Empty = new GetTenantConfigurationArgs();
 
+    /**
+     * The configuration name. Value must be 'default'
+     * 
+     */
     @InputImport(name="configurationName", required=true)
     private final String configurationName;
 

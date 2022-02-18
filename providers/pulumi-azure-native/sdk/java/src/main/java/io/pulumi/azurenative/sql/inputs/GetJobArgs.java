@@ -12,6 +12,10 @@ public final class GetJobArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetJobArgs Empty = new GetJobArgs();
 
+    /**
+     * The name of the job agent.
+     * 
+     */
     @InputImport(name="jobAgentName", required=true)
     private final String jobAgentName;
 
@@ -19,6 +23,10 @@ public final class GetJobArgs extends io.pulumi.resources.InvokeArgs {
         return this.jobAgentName;
     }
 
+    /**
+     * The name of the job to get.
+     * 
+     */
     @InputImport(name="jobName", required=true)
     private final String jobName;
 
@@ -26,6 +34,10 @@ public final class GetJobArgs extends io.pulumi.resources.InvokeArgs {
         return this.jobName;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -33,6 +45,10 @@ public final class GetJobArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the server.
+     * 
+     */
     @InputImport(name="serverName", required=true)
     private final String serverName;
 

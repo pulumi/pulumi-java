@@ -15,6 +15,10 @@ public final class SessionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SessionArgs Empty = new SessionArgs();
 
+    /**
+     * A enumeration value that specifies how frequently finding updates are published.
+     * 
+     */
     @InputImport(name="findingPublishingFrequency")
     private final @Nullable Input<SessionFindingPublishingFrequency> findingPublishingFrequency;
 
@@ -22,6 +26,10 @@ public final class SessionArgs extends io.pulumi.resources.ResourceArgs {
         return this.findingPublishingFrequency == null ? Input.empty() : this.findingPublishingFrequency;
     }
 
+    /**
+     * A enumeration value that specifies the status of the Macie Session.
+     * 
+     */
     @InputImport(name="status")
     private final @Nullable Input<SessionStatus> status;
 

@@ -15,6 +15,10 @@ public final class SecretVersionState extends io.pulumi.resources.ResourceArgs {
 
     public static final SecretVersionState Empty = new SecretVersionState();
 
+    /**
+     * The time at which the Secret was created.
+     * 
+     */
     @InputImport(name="createTime")
     private final @Nullable Input<String> createTime;
 
@@ -22,6 +26,10 @@ public final class SecretVersionState extends io.pulumi.resources.ResourceArgs {
         return this.createTime == null ? Input.empty() : this.createTime;
     }
 
+    /**
+     * The time at which the Secret was destroyed. Only present if state is DESTROYED.
+     * 
+     */
     @InputImport(name="destroyTime")
     private final @Nullable Input<String> destroyTime;
 
@@ -29,6 +37,10 @@ public final class SecretVersionState extends io.pulumi.resources.ResourceArgs {
         return this.destroyTime == null ? Input.empty() : this.destroyTime;
     }
 
+    /**
+     * The current state of the SecretVersion.
+     * 
+     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 
@@ -36,6 +48,10 @@ public final class SecretVersionState extends io.pulumi.resources.ResourceArgs {
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
+    /**
+     * The resource name of the SecretVersion. Format: 'projects/{{project}}/secrets/{{secret_id}}/versions/{{version}}'
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -43,6 +59,10 @@ public final class SecretVersionState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Secret Manager secret resource
+     * 
+     */
     @InputImport(name="secret")
     private final @Nullable Input<String> secret;
 
@@ -50,6 +70,11 @@ public final class SecretVersionState extends io.pulumi.resources.ResourceArgs {
         return this.secret == null ? Input.empty() : this.secret;
     }
 
+    /**
+     * The secret data. Must be no larger than 64KiB.
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     @InputImport(name="secretData")
     private final @Nullable Input<String> secretData;
 

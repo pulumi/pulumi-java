@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A structure that contains timestamp information. For more information, see [TimeInNanos](https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_TimeInNanos.html) in the *AWS IoT SiteWise API Reference*.
+ * 
+ */
 public final class DetectorModelAssetPropertyTimestampArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DetectorModelAssetPropertyTimestampArgs Empty = new DetectorModelAssetPropertyTimestampArgs();
 
+    /**
+     * The timestamp, in seconds, in the Unix epoch format. The valid range is between `1-31556889864403199`. You can also specify an expression.
+     * 
+     */
     @InputImport(name="offsetInNanos")
     private final @Nullable Input<String> offsetInNanos;
 
@@ -21,6 +29,10 @@ public final class DetectorModelAssetPropertyTimestampArgs extends io.pulumi.res
         return this.offsetInNanos == null ? Input.empty() : this.offsetInNanos;
     }
 
+    /**
+     * The nanosecond offset converted from `timeInSeconds`. The valid range is between `0-999999999`. You can also specify an expression.
+     * 
+     */
     @InputImport(name="timeInSeconds", required=true)
     private final Input<String> timeInSeconds;
 

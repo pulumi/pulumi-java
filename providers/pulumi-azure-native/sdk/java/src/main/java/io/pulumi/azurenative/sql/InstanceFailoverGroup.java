@@ -18,57 +18,142 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * An instance failover group.
+ * API Version: 2020-11-01-preview.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:sql:InstanceFailoverGroup failover-group-test-3 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/locations/JapanEast/instanceFailoverGroups/failover-group-test-3 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:sql:InstanceFailoverGroup")
 public class InstanceFailoverGroup extends io.pulumi.resources.CustomResource {
+    /**
+     * List of managed instance pairs in the failover group.
+     * 
+     */
     @OutputExport(name="managedInstancePairs", type=List.class, parameters={ManagedInstancePairInfoResponse.class})
     private Output<List<ManagedInstancePairInfoResponse>> managedInstancePairs;
 
+    /**
+     * @return List of managed instance pairs in the failover group.
+     * 
+     */
     public Output<List<ManagedInstancePairInfoResponse>> getManagedInstancePairs() {
         return this.managedInstancePairs;
     }
+    /**
+     * Resource name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Partner region information for the failover group.
+     * 
+     */
     @OutputExport(name="partnerRegions", type=List.class, parameters={PartnerRegionInfoResponse.class})
     private Output<List<PartnerRegionInfoResponse>> partnerRegions;
 
+    /**
+     * @return Partner region information for the failover group.
+     * 
+     */
     public Output<List<PartnerRegionInfoResponse>> getPartnerRegions() {
         return this.partnerRegions;
     }
+    /**
+     * Read-only endpoint of the failover group instance.
+     * 
+     */
     @OutputExport(name="readOnlyEndpoint", type=InstanceFailoverGroupReadOnlyEndpointResponse.class, parameters={})
     private Output</* @Nullable */ InstanceFailoverGroupReadOnlyEndpointResponse> readOnlyEndpoint;
 
+    /**
+     * @return Read-only endpoint of the failover group instance.
+     * 
+     */
     public Output</* @Nullable */ InstanceFailoverGroupReadOnlyEndpointResponse> getReadOnlyEndpoint() {
         return this.readOnlyEndpoint;
     }
+    /**
+     * Read-write endpoint of the failover group instance.
+     * 
+     */
     @OutputExport(name="readWriteEndpoint", type=InstanceFailoverGroupReadWriteEndpointResponse.class, parameters={})
     private Output<InstanceFailoverGroupReadWriteEndpointResponse> readWriteEndpoint;
 
+    /**
+     * @return Read-write endpoint of the failover group instance.
+     * 
+     */
     public Output<InstanceFailoverGroupReadWriteEndpointResponse> getReadWriteEndpoint() {
         return this.readWriteEndpoint;
     }
+    /**
+     * Local replication role of the failover group instance.
+     * 
+     */
     @OutputExport(name="replicationRole", type=String.class, parameters={})
     private Output<String> replicationRole;
 
+    /**
+     * @return Local replication role of the failover group instance.
+     * 
+     */
     public Output<String> getReplicationRole() {
         return this.replicationRole;
     }
+    /**
+     * Replication state of the failover group instance.
+     * 
+     */
     @OutputExport(name="replicationState", type=String.class, parameters={})
     private Output<String> replicationState;
 
+    /**
+     * @return Replication state of the failover group instance.
+     * 
+     */
     public Output<String> getReplicationState() {
         return this.replicationState;
     }
+    /**
+     * Resource type.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public InstanceFailoverGroup(String name, InstanceFailoverGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:sql:InstanceFailoverGroup", name, args == null ? InstanceFailoverGroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -93,6 +178,14 @@ public class InstanceFailoverGroup extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static InstanceFailoverGroup get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new InstanceFailoverGroup(name, id, options);
     }

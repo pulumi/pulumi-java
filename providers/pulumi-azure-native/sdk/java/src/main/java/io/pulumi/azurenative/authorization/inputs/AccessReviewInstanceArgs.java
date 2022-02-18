@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Access Review Instance.
+ * 
+ */
 public final class AccessReviewInstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AccessReviewInstanceArgs Empty = new AccessReviewInstanceArgs();
 
+    /**
+     * The DateTime when the review instance is scheduled to end.
+     * 
+     */
     @InputImport(name="endDateTime")
     private final @Nullable Input<String> endDateTime;
 
@@ -21,6 +29,10 @@ public final class AccessReviewInstanceArgs extends io.pulumi.resources.Resource
         return this.endDateTime == null ? Input.empty() : this.endDateTime;
     }
 
+    /**
+     * The DateTime when the review instance is scheduled to be start.
+     * 
+     */
     @InputImport(name="startDateTime")
     private final @Nullable Input<String> startDateTime;
 

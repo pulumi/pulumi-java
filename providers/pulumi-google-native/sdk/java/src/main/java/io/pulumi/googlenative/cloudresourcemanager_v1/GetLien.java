@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLien {
+/**
+ * Retrieve a Lien by `name`. Callers of this method will require permission on the `parent` resource. For example, a Lien with a `parent` of `projects/1234` requires permission `resourcemanager.projects.get`
+ * 
+ */
     public static CompletableFuture<GetLienResult> invokeAsync(GetLienArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudresourcemanager/v1:getLien", TypeShape.of(GetLienResult.class), args == null ? GetLienArgs.Empty : args, Utilities.withVersion(options));
     }

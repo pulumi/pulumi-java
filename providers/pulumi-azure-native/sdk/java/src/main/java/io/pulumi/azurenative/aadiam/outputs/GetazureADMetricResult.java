@@ -12,11 +12,31 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetazureADMetricResult {
+    /**
+     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * 
+     */
     private final String id;
+    /**
+     * The geo-location where the resource lives
+     * 
+     */
     private final String location;
+    /**
+     * The name of the resource
+     * 
+     */
     private final String name;
     private final AzureADMetricsPropertiesFormatResponse properties;
+    /**
+     * Resource tags.
+     * 
+     */
     private final @Nullable Map<String,String> tags;
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"id","location","name","properties","tags","type"})
@@ -35,21 +55,41 @@ public final class GetazureADMetricResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * The geo-location where the resource lives
+     * 
+     */
     public String getLocation() {
         return this.location;
     }
+    /**
+     * The name of the resource
+     * 
+     */
     public String getName() {
         return this.name;
     }
     public AzureADMetricsPropertiesFormatResponse getProperties() {
         return this.properties;
     }
+    /**
+     * Resource tags.
+     * 
+     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     public String getType() {
         return this.type;
     }

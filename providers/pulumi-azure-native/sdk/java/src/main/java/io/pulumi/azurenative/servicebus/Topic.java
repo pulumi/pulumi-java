@@ -18,117 +18,282 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Description of topic resource.
+ * API Version: 2017-04-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:servicebus:Topic sdk-Topics-5488 /subscriptions/5f750a97-50d9-4e36-8081-c9ee4c0210d4/resourceGroups/ArunMonocle/providers/Microsoft.ServiceBus/namespaces/sdk-Namespace-1617/topics/sdk-Topics-5488 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:servicebus:Topic")
 public class Topic extends io.pulumi.resources.CustomResource {
+    /**
+     * Last time the message was sent, or a request was received, for this topic.
+     * 
+     */
     @OutputExport(name="accessedAt", type=String.class, parameters={})
     private Output<String> accessedAt;
 
+    /**
+     * @return Last time the message was sent, or a request was received, for this topic.
+     * 
+     */
     public Output<String> getAccessedAt() {
         return this.accessedAt;
     }
+    /**
+     * ISO 8601 timespan idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes.
+     * 
+     */
     @OutputExport(name="autoDeleteOnIdle", type=String.class, parameters={})
     private Output</* @Nullable */ String> autoDeleteOnIdle;
 
+    /**
+     * @return ISO 8601 timespan idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes.
+     * 
+     */
     public Output</* @Nullable */ String> getAutoDeleteOnIdle() {
         return this.autoDeleteOnIdle;
     }
+    /**
+     * Message count details
+     * 
+     */
     @OutputExport(name="countDetails", type=MessageCountDetailsResponse.class, parameters={})
     private Output<MessageCountDetailsResponse> countDetails;
 
+    /**
+     * @return Message count details
+     * 
+     */
     public Output<MessageCountDetailsResponse> getCountDetails() {
         return this.countDetails;
     }
+    /**
+     * Exact time the message was created.
+     * 
+     */
     @OutputExport(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
+    /**
+     * @return Exact time the message was created.
+     * 
+     */
     public Output<String> getCreatedAt() {
         return this.createdAt;
     }
+    /**
+     * ISO 8601 Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.
+     * 
+     */
     @OutputExport(name="defaultMessageTimeToLive", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultMessageTimeToLive;
 
+    /**
+     * @return ISO 8601 Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.
+     * 
+     */
     public Output</* @Nullable */ String> getDefaultMessageTimeToLive() {
         return this.defaultMessageTimeToLive;
     }
+    /**
+     * ISO8601 timespan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.
+     * 
+     */
     @OutputExport(name="duplicateDetectionHistoryTimeWindow", type=String.class, parameters={})
     private Output</* @Nullable */ String> duplicateDetectionHistoryTimeWindow;
 
+    /**
+     * @return ISO8601 timespan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.
+     * 
+     */
     public Output</* @Nullable */ String> getDuplicateDetectionHistoryTimeWindow() {
         return this.duplicateDetectionHistoryTimeWindow;
     }
+    /**
+     * Value that indicates whether server-side batched operations are enabled.
+     * 
+     */
     @OutputExport(name="enableBatchedOperations", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableBatchedOperations;
 
+    /**
+     * @return Value that indicates whether server-side batched operations are enabled.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getEnableBatchedOperations() {
         return this.enableBatchedOperations;
     }
+    /**
+     * Value that indicates whether Express Entities are enabled. An express topic holds a message in memory temporarily before writing it to persistent storage.
+     * 
+     */
     @OutputExport(name="enableExpress", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableExpress;
 
+    /**
+     * @return Value that indicates whether Express Entities are enabled. An express topic holds a message in memory temporarily before writing it to persistent storage.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getEnableExpress() {
         return this.enableExpress;
     }
+    /**
+     * Value that indicates whether the topic to be partitioned across multiple message brokers is enabled.
+     * 
+     */
     @OutputExport(name="enablePartitioning", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enablePartitioning;
 
+    /**
+     * @return Value that indicates whether the topic to be partitioned across multiple message brokers is enabled.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getEnablePartitioning() {
         return this.enablePartitioning;
     }
+    /**
+     * Maximum size of the topic in megabytes, which is the size of the memory allocated for the topic. Default is 1024.
+     * 
+     */
     @OutputExport(name="maxSizeInMegabytes", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxSizeInMegabytes;
 
+    /**
+     * @return Maximum size of the topic in megabytes, which is the size of the memory allocated for the topic. Default is 1024.
+     * 
+     */
     public Output</* @Nullable */ Integer> getMaxSizeInMegabytes() {
         return this.maxSizeInMegabytes;
     }
+    /**
+     * Resource name
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Value indicating if this topic requires duplicate detection.
+     * 
+     */
     @OutputExport(name="requiresDuplicateDetection", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> requiresDuplicateDetection;
 
+    /**
+     * @return Value indicating if this topic requires duplicate detection.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getRequiresDuplicateDetection() {
         return this.requiresDuplicateDetection;
     }
+    /**
+     * Size of the topic, in bytes.
+     * 
+     */
     @OutputExport(name="sizeInBytes", type=Double.class, parameters={})
     private Output<Double> sizeInBytes;
 
+    /**
+     * @return Size of the topic, in bytes.
+     * 
+     */
     public Output<Double> getSizeInBytes() {
         return this.sizeInBytes;
     }
+    /**
+     * Enumerates the possible values for the status of a messaging entity.
+     * 
+     */
     @OutputExport(name="status", type=String.class, parameters={})
     private Output</* @Nullable */ String> status;
 
+    /**
+     * @return Enumerates the possible values for the status of a messaging entity.
+     * 
+     */
     public Output</* @Nullable */ String> getStatus() {
         return this.status;
     }
+    /**
+     * Number of subscriptions.
+     * 
+     */
     @OutputExport(name="subscriptionCount", type=Integer.class, parameters={})
     private Output<Integer> subscriptionCount;
 
+    /**
+     * @return Number of subscriptions.
+     * 
+     */
     public Output<Integer> getSubscriptionCount() {
         return this.subscriptionCount;
     }
+    /**
+     * Value that indicates whether the topic supports ordering.
+     * 
+     */
     @OutputExport(name="supportOrdering", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> supportOrdering;
 
+    /**
+     * @return Value that indicates whether the topic supports ordering.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getSupportOrdering() {
         return this.supportOrdering;
     }
+    /**
+     * Resource type
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * The exact time the message was updated.
+     * 
+     */
     @OutputExport(name="updatedAt", type=String.class, parameters={})
     private Output<String> updatedAt;
 
+    /**
+     * @return The exact time the message was updated.
+     * 
+     */
     public Output<String> getUpdatedAt() {
         return this.updatedAt;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Topic(String name, TopicArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:servicebus:Topic", name, args == null ? TopicArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -153,6 +318,14 @@ public class Topic extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Topic get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Topic(name, id, options);
     }

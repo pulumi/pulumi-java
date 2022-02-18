@@ -13,6 +13,18 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNetwork {
+/**
+ * Get a network within GCE from its name.
+ * 
+ * ## Example Usage
+ * 
+ *
+ * A collection of arguments for invoking getNetwork.
+ * 
+ *
+ * A collection of values returned by getNetwork.
+ * 
+ */
     public static CompletableFuture<GetNetworkResult> invokeAsync(GetNetworkArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getNetwork:getNetwork", TypeShape.of(GetNetworkResult.class), args == null ? GetNetworkArgs.Empty : args, Utilities.withVersion(options));
     }

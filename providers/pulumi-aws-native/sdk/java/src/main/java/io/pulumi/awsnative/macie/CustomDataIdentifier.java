@@ -14,51 +14,117 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Macie CustomDataIdentifier resource schema
+ * 
+ */
 @ResourceType(type="aws-native:macie:CustomDataIdentifier")
 public class CustomDataIdentifier extends io.pulumi.resources.CustomResource {
+    /**
+     * Custom data identifier ARN.
+     * 
+     */
     @OutputExport(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
+    /**
+     * @return Custom data identifier ARN.
+     * 
+     */
     public Output<String> getArn() {
         return this.arn;
     }
+    /**
+     * Description of custom data identifier.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return Description of custom data identifier.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * Words to be ignored.
+     * 
+     */
     @OutputExport(name="ignoreWords", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> ignoreWords;
 
+    /**
+     * @return Words to be ignored.
+     * 
+     */
     public Output</* @Nullable */ List<String>> getIgnoreWords() {
         return this.ignoreWords;
     }
+    /**
+     * Keywords to be matched against.
+     * 
+     */
     @OutputExport(name="keywords", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> keywords;
 
+    /**
+     * @return Keywords to be matched against.
+     * 
+     */
     public Output</* @Nullable */ List<String>> getKeywords() {
         return this.keywords;
     }
+    /**
+     * Maximum match distance.
+     * 
+     */
     @OutputExport(name="maximumMatchDistance", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maximumMatchDistance;
 
+    /**
+     * @return Maximum match distance.
+     * 
+     */
     public Output</* @Nullable */ Integer> getMaximumMatchDistance() {
         return this.maximumMatchDistance;
     }
+    /**
+     * Name of custom data identifier.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Name of custom data identifier.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Regular expression for custom data identifier.
+     * 
+     */
     @OutputExport(name="regex", type=String.class, parameters={})
     private Output<String> regex;
 
+    /**
+     * @return Regular expression for custom data identifier.
+     * 
+     */
     public Output<String> getRegex() {
         return this.regex;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public CustomDataIdentifier(String name, CustomDataIdentifierArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:macie:CustomDataIdentifier", name, args == null ? CustomDataIdentifierArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -74,6 +140,14 @@ public class CustomDataIdentifier extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static CustomDataIdentifier get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new CustomDataIdentifier(name, id, options);
     }

@@ -15,10 +15,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FlowTask {
+    /**
+     * Operation to be performed on provided source fields
+     * 
+     */
     private final @Nullable FlowConnectorOperator connectorOperator;
+    /**
+     * A field value on which source field should be validated
+     * 
+     */
     private final @Nullable String destinationField;
+    /**
+     * Source fields on which particular task will be applied
+     * 
+     */
     private final List<String> sourceFields;
+    /**
+     * A Map used to store task related info
+     * 
+     */
     private final @Nullable List<FlowTaskPropertiesObject> taskProperties;
+    /**
+     * Type of task
+     * 
+     */
     private final FlowTaskType taskType;
 
     @OutputCustomType.Constructor({"connectorOperator","destinationField","sourceFields","taskProperties","taskType"})
@@ -35,18 +55,38 @@ public final class FlowTask {
         this.taskType = Objects.requireNonNull(taskType);
     }
 
+    /**
+     * Operation to be performed on provided source fields
+     * 
+     */
     public Optional<FlowConnectorOperator> getConnectorOperator() {
         return Optional.ofNullable(this.connectorOperator);
     }
+    /**
+     * A field value on which source field should be validated
+     * 
+     */
     public Optional<String> getDestinationField() {
         return Optional.ofNullable(this.destinationField);
     }
+    /**
+     * Source fields on which particular task will be applied
+     * 
+     */
     public List<String> getSourceFields() {
         return this.sourceFields;
     }
+    /**
+     * A Map used to store task related info
+     * 
+     */
     public List<FlowTaskPropertiesObject> getTaskProperties() {
         return this.taskProperties == null ? List.of() : this.taskProperties;
     }
+    /**
+     * Type of task
+     * 
+     */
     public FlowTaskType getTaskType() {
         return this.taskType;
     }

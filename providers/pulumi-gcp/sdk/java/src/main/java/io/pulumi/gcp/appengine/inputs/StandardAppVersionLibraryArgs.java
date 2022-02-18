@@ -14,6 +14,10 @@ public final class StandardAppVersionLibraryArgs extends io.pulumi.resources.Res
 
     public static final StandardAppVersionLibraryArgs Empty = new StandardAppVersionLibraryArgs();
 
+    /**
+     * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -21,6 +25,10 @@ public final class StandardAppVersionLibraryArgs extends io.pulumi.resources.Res
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Version of the library to select, or "latest".
+     * 
+     */
     @InputImport(name="version")
     private final @Nullable Input<String> version;
 

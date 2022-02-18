@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The flow endpoints configuration.
+ * 
+ */
 public final class FlowEndpointsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FlowEndpointsResponse Empty = new FlowEndpointsResponse();
 
+    /**
+     * The access endpoint ip address.
+     * 
+     */
     @InputImport(name="accessEndpointIpAddresses")
     private final @Nullable List<IpAddressResponse> accessEndpointIpAddresses;
 
@@ -22,6 +30,10 @@ public final class FlowEndpointsResponse extends io.pulumi.resources.InvokeArgs 
         return this.accessEndpointIpAddresses == null ? List.of() : this.accessEndpointIpAddresses;
     }
 
+    /**
+     * The outgoing ip address.
+     * 
+     */
     @InputImport(name="outgoingIpAddresses")
     private final @Nullable List<IpAddressResponse> outgoingIpAddresses;
 

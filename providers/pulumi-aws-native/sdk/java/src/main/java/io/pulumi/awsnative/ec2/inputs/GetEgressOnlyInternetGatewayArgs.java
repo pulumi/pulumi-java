@@ -12,6 +12,10 @@ public final class GetEgressOnlyInternetGatewayArgs extends io.pulumi.resources.
 
     public static final GetEgressOnlyInternetGatewayArgs Empty = new GetEgressOnlyInternetGatewayArgs();
 
+    /**
+     * Service Generated ID of the EgressOnlyInternetGateway
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 

@@ -13,14 +13,42 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetEngineVersionsResult {
+    /**
+     * Version of Kubernetes the service deploys by default.
+     * 
+     */
     private final String defaultClusterVersion;
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
+    /**
+     * The latest version available in the given zone for use with master instances.
+     * 
+     */
     private final String latestMasterVersion;
+    /**
+     * The latest version available in the given zone for use with node instances.
+     * 
+     */
     private final String latestNodeVersion;
     private final @Nullable String location;
     private final @Nullable String project;
+    /**
+     * A map from a release channel name to the channel's default version.
+     * 
+     */
     private final Map<String,String> releaseChannelDefaultVersion;
+    /**
+     * A list of versions available in the given zone for use with master instances.
+     * 
+     */
     private final List<String> validMasterVersions;
+    /**
+     * A list of versions available in the given zone for use with node instances.
+     * 
+     */
     private final List<String> validNodeVersions;
     private final @Nullable String versionPrefix;
 
@@ -48,15 +76,31 @@ public final class GetEngineVersionsResult {
         this.versionPrefix = versionPrefix;
     }
 
+    /**
+     * Version of Kubernetes the service deploys by default.
+     * 
+     */
     public String getDefaultClusterVersion() {
         return this.defaultClusterVersion;
     }
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * The latest version available in the given zone for use with master instances.
+     * 
+     */
     public String getLatestMasterVersion() {
         return this.latestMasterVersion;
     }
+    /**
+     * The latest version available in the given zone for use with node instances.
+     * 
+     */
     public String getLatestNodeVersion() {
         return this.latestNodeVersion;
     }
@@ -66,12 +110,24 @@ public final class GetEngineVersionsResult {
     public Optional<String> getProject() {
         return Optional.ofNullable(this.project);
     }
+    /**
+     * A map from a release channel name to the channel's default version.
+     * 
+     */
     public Map<String,String> getReleaseChannelDefaultVersion() {
         return this.releaseChannelDefaultVersion;
     }
+    /**
+     * A list of versions available in the given zone for use with master instances.
+     * 
+     */
     public List<String> getValidMasterVersions() {
         return this.validMasterVersions;
     }
+    /**
+     * A list of versions available in the given zone for use with node instances.
+     * 
+     */
     public List<String> getValidNodeVersions() {
         return this.validNodeVersions;
     }

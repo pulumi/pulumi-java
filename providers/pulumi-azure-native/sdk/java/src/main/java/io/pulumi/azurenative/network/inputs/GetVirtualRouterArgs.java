@@ -14,6 +14,10 @@ public final class GetVirtualRouterArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetVirtualRouterArgs Empty = new GetVirtualRouterArgs();
 
+    /**
+     * Expands referenced resources.
+     * 
+     */
     @InputImport(name="expand")
     private final @Nullable String expand;
 
@@ -21,6 +25,10 @@ public final class GetVirtualRouterArgs extends io.pulumi.resources.InvokeArgs {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -28,6 +36,10 @@ public final class GetVirtualRouterArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the Virtual Router.
+     * 
+     */
     @InputImport(name="virtualRouterName", required=true)
     private final String virtualRouterName;
 

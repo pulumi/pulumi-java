@@ -20,6 +20,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContainerArgs Empty = new ContainerArgs();
 
+    /**
+     * Describes a container deployment configuration of an Amazon Lightsail container service.
+     * 
+     */
     @InputImport(name="containerServiceDeployment")
     private final @Nullable Input<ContainerServiceDeploymentArgs> containerServiceDeployment;
 
@@ -27,6 +31,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.containerServiceDeployment == null ? Input.empty() : this.containerServiceDeployment;
     }
 
+    /**
+     * A Boolean value to indicate whether the container service is disabled.
+     * 
+     */
     @InputImport(name="isDisabled")
     private final @Nullable Input<Boolean> isDisabled;
 
@@ -34,6 +42,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.isDisabled == null ? Input.empty() : this.isDisabled;
     }
 
+    /**
+     * The power specification for the container service.
+     * 
+     */
     @InputImport(name="power", required=true)
     private final Input<String> power;
 
@@ -41,6 +53,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.power;
     }
 
+    /**
+     * The public domain names to use with the container service, such as example.com and www.example.com.
+     * 
+     */
     @InputImport(name="publicDomainNames")
     private final @Nullable Input<List<ContainerPublicDomainNameArgs>> publicDomainNames;
 
@@ -48,6 +64,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.publicDomainNames == null ? Input.empty() : this.publicDomainNames;
     }
 
+    /**
+     * The scale specification for the container service.
+     * 
+     */
     @InputImport(name="scale", required=true)
     private final Input<Integer> scale;
 
@@ -55,6 +75,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.scale;
     }
 
+    /**
+     * The name for the container service.
+     * 
+     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 
@@ -62,6 +86,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceName;
     }
 
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<ContainerTagArgs>> tags;
 

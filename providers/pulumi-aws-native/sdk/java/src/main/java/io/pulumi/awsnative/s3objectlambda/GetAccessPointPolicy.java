@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAccessPointPolicy {
+/**
+ * AWS::S3ObjectLambda::AccessPointPolicy resource is an Amazon S3ObjectLambda policy type that you can use to control permissions for your S3ObjectLambda
+ * 
+ */
     public static CompletableFuture<GetAccessPointPolicyResult> invokeAsync(GetAccessPointPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:s3objectlambda:getAccessPointPolicy", TypeShape.of(GetAccessPointPolicyResult.class), args == null ? GetAccessPointPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

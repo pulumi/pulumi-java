@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * DNS configuration for the container group.
+ * 
+ */
 public final class DnsConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DnsConfigurationArgs Empty = new DnsConfigurationArgs();
 
+    /**
+     * The DNS servers for the container group.
+     * 
+     */
     @InputImport(name="nameServers", required=true)
     private final Input<List<String>> nameServers;
 
@@ -22,6 +30,10 @@ public final class DnsConfigurationArgs extends io.pulumi.resources.ResourceArgs
         return this.nameServers;
     }
 
+    /**
+     * The DNS options for the container group.
+     * 
+     */
     @InputImport(name="options")
     private final @Nullable Input<String> options;
 
@@ -29,6 +41,10 @@ public final class DnsConfigurationArgs extends io.pulumi.resources.ResourceArgs
         return this.options == null ? Input.empty() : this.options;
     }
 
+    /**
+     * The DNS search domains for hostname lookup in the container group.
+     * 
+     */
     @InputImport(name="searchDomains")
     private final @Nullable Input<String> searchDomains;
 

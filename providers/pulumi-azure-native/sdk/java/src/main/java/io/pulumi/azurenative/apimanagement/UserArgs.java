@@ -21,6 +21,10 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final UserArgs Empty = new UserArgs();
 
+    /**
+     * Determines the type of application which send the create user request. Default is legacy portal.
+     * 
+     */
     @InputImport(name="appType")
     private final @Nullable Input<Either<String,AppType>> appType;
 
@@ -28,6 +32,10 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
         return this.appType == null ? Input.empty() : this.appType;
     }
 
+    /**
+     * Determines the type of confirmation e-mail that will be sent to the newly created user.
+     * 
+     */
     @InputImport(name="confirmation")
     private final @Nullable Input<Either<String,Confirmation>> confirmation;
 
@@ -35,6 +43,10 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
         return this.confirmation == null ? Input.empty() : this.confirmation;
     }
 
+    /**
+     * Email address. Must not be empty and must be unique within the service instance.
+     * 
+     */
     @InputImport(name="email", required=true)
     private final Input<String> email;
 
@@ -42,6 +54,10 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
         return this.email;
     }
 
+    /**
+     * First name.
+     * 
+     */
     @InputImport(name="firstName", required=true)
     private final Input<String> firstName;
 
@@ -49,6 +65,10 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
         return this.firstName;
     }
 
+    /**
+     * Collection of user identities.
+     * 
+     */
     @InputImport(name="identities")
     private final @Nullable Input<List<UserIdentityContractArgs>> identities;
 
@@ -56,6 +76,10 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
         return this.identities == null ? Input.empty() : this.identities;
     }
 
+    /**
+     * Last name.
+     * 
+     */
     @InputImport(name="lastName", required=true)
     private final Input<String> lastName;
 
@@ -63,6 +87,10 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
         return this.lastName;
     }
 
+    /**
+     * Optional note about a user set by the administrator.
+     * 
+     */
     @InputImport(name="note")
     private final @Nullable Input<String> note;
 
@@ -70,6 +98,10 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
         return this.note == null ? Input.empty() : this.note;
     }
 
+    /**
+     * Send an Email notification to the User.
+     * 
+     */
     @InputImport(name="notify")
     private final @Nullable Input<Boolean> notify;
 
@@ -77,6 +109,10 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
         return this.notify == null ? Input.empty() : this.notify;
     }
 
+    /**
+     * User Password. If no value is provided, a default password is generated.
+     * 
+     */
     @InputImport(name="password")
     private final @Nullable Input<String> password;
 
@@ -84,6 +120,10 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
         return this.password == null ? Input.empty() : this.password;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -91,6 +131,10 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the API Management service.
+     * 
+     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 
@@ -98,6 +142,10 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceName;
     }
 
+    /**
+     * Account state. Specifies whether the user is active or not. Blocked users are unable to sign into the developer portal or call any APIs of subscribed products. Default state is Active.
+     * 
+     */
     @InputImport(name="state")
     private final @Nullable Input<Either<String,UserState>> state;
 
@@ -105,6 +153,10 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
         return this.state == null ? Input.empty() : this.state;
     }
 
+    /**
+     * User identifier. Must be unique in the current API Management service instance.
+     * 
+     */
     @InputImport(name="userId")
     private final @Nullable Input<String> userId;
 

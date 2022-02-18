@@ -13,8 +13,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DeploymentCanarySettings {
+    /**
+     * The percentage (0-100) of traffic diverted to a canary deployment.
+     * 
+     */
     private final @Nullable Double percentTraffic;
+    /**
+     * Stage variables overridden for a canary release deployment, including new stage variables introduced in the canary. These stage variables are represented as a string-to-string map between stage variable names and their values. Duplicates are not allowed.
+     * 
+     */
     private final @Nullable Object stageVariableOverrides;
+    /**
+     * Whether the canary deployment uses the stage cache.
+     * 
+     */
     private final @Nullable Boolean useStageCache;
 
     @OutputCustomType.Constructor({"percentTraffic","stageVariableOverrides","useStageCache"})
@@ -27,12 +39,24 @@ public final class DeploymentCanarySettings {
         this.useStageCache = useStageCache;
     }
 
+    /**
+     * The percentage (0-100) of traffic diverted to a canary deployment.
+     * 
+     */
     public Optional<Double> getPercentTraffic() {
         return Optional.ofNullable(this.percentTraffic);
     }
+    /**
+     * Stage variables overridden for a canary release deployment, including new stage variables introduced in the canary. These stage variables are represented as a string-to-string map between stage variable names and their values. Duplicates are not allowed.
+     * 
+     */
     public Optional<Object> getStageVariableOverrides() {
         return Optional.ofNullable(this.stageVariableOverrides);
     }
+    /**
+     * Whether the canary deployment uses the stage cache.
+     * 
+     */
     public Optional<Boolean> getUseStageCache() {
         return Optional.ofNullable(this.useStageCache);
     }

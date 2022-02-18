@@ -20,6 +20,10 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BackupRunArgs Empty = new BackupRunArgs();
 
+    /**
+     * Specifies the kind of backup, PHYSICAL or DEFAULT_SNAPSHOT.
+     * 
+     */
     @InputImport(name="backupKind")
     private final @Nullable Input<BackupRunBackupKind> backupKind;
 
@@ -27,6 +31,10 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
         return this.backupKind == null ? Input.empty() : this.backupKind;
     }
 
+    /**
+     * The description of this run, only applicable to on-demand backups.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -34,6 +42,10 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Encryption configuration specific to a backup.
+     * 
+     */
     @InputImport(name="diskEncryptionConfiguration")
     private final @Nullable Input<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration;
 
@@ -41,6 +53,10 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
         return this.diskEncryptionConfiguration == null ? Input.empty() : this.diskEncryptionConfiguration;
     }
 
+    /**
+     * Encryption status specific to a backup.
+     * 
+     */
     @InputImport(name="diskEncryptionStatus")
     private final @Nullable Input<DiskEncryptionStatusArgs> diskEncryptionStatus;
 
@@ -48,6 +64,10 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
         return this.diskEncryptionStatus == null ? Input.empty() : this.diskEncryptionStatus;
     }
 
+    /**
+     * The time the backup operation completed in UTC timezone in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
+     * 
+     */
     @InputImport(name="endTime")
     private final @Nullable Input<String> endTime;
 
@@ -55,6 +75,10 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
         return this.endTime == null ? Input.empty() : this.endTime;
     }
 
+    /**
+     * The time the run was enqueued in UTC timezone in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
+     * 
+     */
     @InputImport(name="enqueuedTime")
     private final @Nullable Input<String> enqueuedTime;
 
@@ -62,6 +86,10 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
         return this.enqueuedTime == null ? Input.empty() : this.enqueuedTime;
     }
 
+    /**
+     * Information about why the backup operation failed. This is only present if the run has the FAILED status.
+     * 
+     */
     @InputImport(name="error")
     private final @Nullable Input<OperationErrorArgs> error;
 
@@ -69,6 +97,10 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
         return this.error == null ? Input.empty() : this.error;
     }
 
+    /**
+     * The identifier for this backup run. Unique only for a specific Cloud SQL instance.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -76,6 +108,10 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * Name of the database instance.
+     * 
+     */
     @InputImport(name="instance", required=true)
     private final Input<String> instance;
 
@@ -83,6 +119,10 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
         return this.instance;
     }
 
+    /**
+     * This is always `sql#backupRun`.
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -90,6 +130,10 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Location of the backups.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -104,6 +148,10 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The URI of this resource.
+     * 
+     */
     @InputImport(name="selfLink")
     private final @Nullable Input<String> selfLink;
 
@@ -111,6 +159,10 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
         return this.selfLink == null ? Input.empty() : this.selfLink;
     }
 
+    /**
+     * The time the backup operation actually started in UTC timezone in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
+     * 
+     */
     @InputImport(name="startTime")
     private final @Nullable Input<String> startTime;
 
@@ -118,6 +170,10 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
         return this.startTime == null ? Input.empty() : this.startTime;
     }
 
+    /**
+     * The status of this run.
+     * 
+     */
     @InputImport(name="status")
     private final @Nullable Input<BackupRunStatus> status;
 
@@ -125,6 +181,10 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
         return this.status == null ? Input.empty() : this.status;
     }
 
+    /**
+     * The type of this run; can be either "AUTOMATED" or "ON_DEMAND". This field defaults to "ON_DEMAND" and is ignored, when specified for insert requests.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<BackupRunType> type;
 
@@ -132,6 +192,10 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
         return this.type == null ? Input.empty() : this.type;
     }
 
+    /**
+     * The start time of the backup window during which this the backup was attempted in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
+     * 
+     */
     @InputImport(name="windowStartTime")
     private final @Nullable Input<String> windowStartTime;
 

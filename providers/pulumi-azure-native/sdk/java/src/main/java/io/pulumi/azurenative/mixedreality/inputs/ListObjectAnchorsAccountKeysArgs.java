@@ -12,6 +12,10 @@ public final class ListObjectAnchorsAccountKeysArgs extends io.pulumi.resources.
 
     public static final ListObjectAnchorsAccountKeysArgs Empty = new ListObjectAnchorsAccountKeysArgs();
 
+    /**
+     * Name of an Mixed Reality Account.
+     * 
+     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -19,6 +23,10 @@ public final class ListObjectAnchorsAccountKeysArgs extends io.pulumi.resources.
         return this.accountName;
     }
 
+    /**
+     * Name of an Azure resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

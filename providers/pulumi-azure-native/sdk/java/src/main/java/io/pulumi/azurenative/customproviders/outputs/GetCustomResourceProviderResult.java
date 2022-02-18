@@ -15,14 +15,50 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetCustomResourceProviderResult {
+    /**
+     * A list of actions that the custom resource provider implements.
+     * 
+     */
     private final @Nullable List<CustomRPActionRouteDefinitionResponse> actions;
+    /**
+     * Resource Id
+     * 
+     */
     private final String id;
+    /**
+     * Resource location
+     * 
+     */
     private final String location;
+    /**
+     * Resource name
+     * 
+     */
     private final String name;
+    /**
+     * The provisioning state of the resource provider.
+     * 
+     */
     private final String provisioningState;
+    /**
+     * A list of resource types that the custom resource provider implements.
+     * 
+     */
     private final @Nullable List<CustomRPResourceTypeRouteDefinitionResponse> resourceTypes;
+    /**
+     * Resource tags
+     * 
+     */
     private final @Nullable Map<String,String> tags;
+    /**
+     * Resource type
+     * 
+     */
     private final String type;
+    /**
+     * A list of validations to run on the custom resource provider's requests.
+     * 
+     */
     private final @Nullable List<CustomRPValidationsResponse> validations;
 
     @OutputCustomType.Constructor({"actions","id","location","name","provisioningState","resourceTypes","tags","type","validations"})
@@ -47,30 +83,66 @@ public final class GetCustomResourceProviderResult {
         this.validations = validations;
     }
 
+    /**
+     * A list of actions that the custom resource provider implements.
+     * 
+     */
     public List<CustomRPActionRouteDefinitionResponse> getActions() {
         return this.actions == null ? List.of() : this.actions;
     }
+    /**
+     * Resource Id
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Resource location
+     * 
+     */
     public String getLocation() {
         return this.location;
     }
+    /**
+     * Resource name
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The provisioning state of the resource provider.
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * A list of resource types that the custom resource provider implements.
+     * 
+     */
     public List<CustomRPResourceTypeRouteDefinitionResponse> getResourceTypes() {
         return this.resourceTypes == null ? List.of() : this.resourceTypes;
     }
+    /**
+     * Resource tags
+     * 
+     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+    /**
+     * Resource type
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * A list of validations to run on the custom resource provider's requests.
+     * 
+     */
     public List<CustomRPValidationsResponse> getValidations() {
         return this.validations == null ? List.of() : this.validations;
     }

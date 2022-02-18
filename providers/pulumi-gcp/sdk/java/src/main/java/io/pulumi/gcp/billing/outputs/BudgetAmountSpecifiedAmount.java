@@ -12,8 +12,27 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class BudgetAmountSpecifiedAmount {
+    /**
+     * The 3-letter currency code defined in ISO 4217.
+     * 
+     */
     private final @Nullable String currencyCode;
+    /**
+     * Number of nano (10^-9) units of the amount.
+     * The value must be between -999,999,999 and +999,999,999
+     * inclusive. If units is positive, nanos must be positive or
+     * zero. If units is zero, nanos can be positive, zero, or
+     * negative. If units is negative, nanos must be negative or
+     * zero. For example $-1.75 is represented as units=-1 and
+     * nanos=-750,000,000.
+     * 
+     */
     private final @Nullable Integer nanos;
+    /**
+     * The whole units of the amount. For example if currencyCode
+     * is "USD", then 1 unit is one US dollar.
+     * 
+     */
     private final @Nullable String units;
 
     @OutputCustomType.Constructor({"currencyCode","nanos","units"})
@@ -26,12 +45,31 @@ public final class BudgetAmountSpecifiedAmount {
         this.units = units;
     }
 
+    /**
+     * The 3-letter currency code defined in ISO 4217.
+     * 
+     */
     public Optional<String> getCurrencyCode() {
         return Optional.ofNullable(this.currencyCode);
     }
+    /**
+     * Number of nano (10^-9) units of the amount.
+     * The value must be between -999,999,999 and +999,999,999
+     * inclusive. If units is positive, nanos must be positive or
+     * zero. If units is zero, nanos can be positive, zero, or
+     * negative. If units is negative, nanos must be negative or
+     * zero. For example $-1.75 is represented as units=-1 and
+     * nanos=-750,000,000.
+     * 
+     */
     public Optional<Integer> getNanos() {
         return Optional.ofNullable(this.nanos);
     }
+    /**
+     * The whole units of the amount. For example if currencyCode
+     * is "USD", then 1 unit is one US dollar.
+     * 
+     */
     public Optional<String> getUnits() {
         return Optional.ofNullable(this.units);
     }

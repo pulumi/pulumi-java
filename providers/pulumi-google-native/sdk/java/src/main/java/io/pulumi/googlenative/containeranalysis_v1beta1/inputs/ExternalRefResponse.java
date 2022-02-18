@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * An External Reference allows a Package to reference an external source of additional information, metadata, enumerations, asset identifiers, or downloadable content believed to be relevant to the Package
+ * 
+ */
 public final class ExternalRefResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ExternalRefResponse Empty = new ExternalRefResponse();
 
+    /**
+     * An External Reference allows a Package to reference an external source of additional information, metadata, enumerations, asset identifiers, or downloadable content believed to be relevant to the Package
+     * 
+     */
     @InputImport(name="category", required=true)
     private final String category;
 
@@ -19,6 +27,10 @@ public final class ExternalRefResponse extends io.pulumi.resources.InvokeArgs {
         return this.category;
     }
 
+    /**
+     * Human-readable information about the purpose and target of the reference
+     * 
+     */
     @InputImport(name="comment", required=true)
     private final String comment;
 
@@ -26,6 +38,10 @@ public final class ExternalRefResponse extends io.pulumi.resources.InvokeArgs {
         return this.comment;
     }
 
+    /**
+     * The unique string with no spaces necessary to access the package-specific information, metadata, or content within the target location
+     * 
+     */
     @InputImport(name="locator", required=true)
     private final String locator;
 
@@ -33,6 +49,10 @@ public final class ExternalRefResponse extends io.pulumi.resources.InvokeArgs {
         return this.locator;
     }
 
+    /**
+     * Type of category (e.g. 'npm' for the PACKAGE_MANAGER category)
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

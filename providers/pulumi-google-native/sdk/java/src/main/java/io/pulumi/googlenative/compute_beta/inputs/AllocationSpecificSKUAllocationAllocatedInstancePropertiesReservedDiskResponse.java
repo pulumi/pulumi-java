@@ -12,6 +12,10 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
 
     public static final AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse Empty = new AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse();
 
+    /**
+     * Specifies the size of the disk in base-2 GB.
+     * 
+     */
     @InputImport(name="diskSizeGb", required=true)
     private final String diskSizeGb;
 
@@ -19,6 +23,10 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
         return this.diskSizeGb;
     }
 
+    /**
+     * Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance.
+     * 
+     */
     @InputImport(name="interface", required=true)
     private final String $interface;
 

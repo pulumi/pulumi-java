@@ -9,6 +9,10 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
+/**
+ * listener to endpoint port mapping.
+ * 
+ */
 public final class EndpointGroupPortOverrideArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EndpointGroupPortOverrideArgs Empty = new EndpointGroupPortOverrideArgs();

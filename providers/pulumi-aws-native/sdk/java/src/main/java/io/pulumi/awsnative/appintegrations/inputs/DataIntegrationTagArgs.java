@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A label for tagging DataIntegration resources
+ * 
+ */
 public final class DataIntegrationTagArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataIntegrationTagArgs Empty = new DataIntegrationTagArgs();
 
+    /**
+     * A key to identify the tag.
+     * 
+     */
     @InputImport(name="key", required=true)
     private final Input<String> key;
 
@@ -20,6 +28,10 @@ public final class DataIntegrationTagArgs extends io.pulumi.resources.ResourceAr
         return this.key;
     }
 
+    /**
+     * Corresponding tag value for the key.
+     * 
+     */
     @InputImport(name="value", required=true)
     private final Input<String> value;
 

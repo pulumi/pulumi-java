@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties of a Managed Network Peering Policy
+ * 
+ */
 public final class ManagedNetworkPeeringPolicyPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ManagedNetworkPeeringPolicyPropertiesResponse Empty = new ManagedNetworkPeeringPolicyPropertiesResponse();
 
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -23,6 +31,10 @@ public final class ManagedNetworkPeeringPolicyPropertiesResponse extends io.pulu
         return this.etag;
     }
 
+    /**
+     * Gets or sets the hub virtual network ID
+     * 
+     */
     @InputImport(name="hub")
     private final @Nullable ResourceIdResponse hub;
 
@@ -30,6 +42,10 @@ public final class ManagedNetworkPeeringPolicyPropertiesResponse extends io.pulu
         return this.hub == null ? Optional.empty() : Optional.ofNullable(this.hub);
     }
 
+    /**
+     * Gets or sets the mesh group IDs
+     * 
+     */
     @InputImport(name="mesh")
     private final @Nullable List<ResourceIdResponse> mesh;
 
@@ -37,6 +53,10 @@ public final class ManagedNetworkPeeringPolicyPropertiesResponse extends io.pulu
         return this.mesh == null ? List.of() : this.mesh;
     }
 
+    /**
+     * Provisioning state of the ManagedNetwork resource.
+     * 
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -44,6 +64,10 @@ public final class ManagedNetworkPeeringPolicyPropertiesResponse extends io.pulu
         return this.provisioningState;
     }
 
+    /**
+     * Gets or sets the spokes group IDs
+     * 
+     */
     @InputImport(name="spokes")
     private final @Nullable List<ResourceIdResponse> spokes;
 
@@ -51,6 +75,10 @@ public final class ManagedNetworkPeeringPolicyPropertiesResponse extends io.pulu
         return this.spokes == null ? List.of() : this.spokes;
     }
 
+    /**
+     * Gets or sets the connectivity type of a network structure policy
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

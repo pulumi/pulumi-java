@@ -12,8 +12,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class StorageProfileResponse {
+    /**
+     * Size of file share
+     * 
+     */
     private final @Nullable Integer diskSizeInGB;
+    /**
+     * Name of the mounted file share. 63 characters or less, lowercase alphabet, numbers, and -
+     * 
+     */
     private final @Nullable String fileShareName;
+    /**
+     * Full resource ID of storage account.
+     * 
+     */
     private final @Nullable String storageAccountResourceId;
 
     @OutputCustomType.Constructor({"diskSizeInGB","fileShareName","storageAccountResourceId"})
@@ -26,12 +38,24 @@ public final class StorageProfileResponse {
         this.storageAccountResourceId = storageAccountResourceId;
     }
 
+    /**
+     * Size of file share
+     * 
+     */
     public Optional<Integer> getDiskSizeInGB() {
         return Optional.ofNullable(this.diskSizeInGB);
     }
+    /**
+     * Name of the mounted file share. 63 characters or less, lowercase alphabet, numbers, and -
+     * 
+     */
     public Optional<String> getFileShareName() {
         return Optional.ofNullable(this.fileShareName);
     }
+    /**
+     * Full resource ID of storage account.
+     * 
+     */
     public Optional<String> getStorageAccountResourceId() {
         return Optional.ofNullable(this.storageAccountResourceId);
     }

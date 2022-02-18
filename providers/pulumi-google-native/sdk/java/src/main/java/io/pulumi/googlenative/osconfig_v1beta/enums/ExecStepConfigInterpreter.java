@@ -8,10 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The script interpreter to use to run the script. If no interpreter is specified the script will be executed directly, which will likely only succeed for scripts with [shebang lines] (https://en.wikipedia.org/wiki/Shebang_\(Unix\)).
+     * 
+     */
     @EnumType
     public enum ExecStepConfigInterpreter {
+        /**
+         * Invalid for a Windows ExecStepConfig. For a Linux ExecStepConfig, the interpreter will be parsed from the shebang line of the script if unspecified.
+         * 
+         */
         InterpreterUnspecified("INTERPRETER_UNSPECIFIED"),
+        /**
+         * Indicates that the script is run with `/bin/sh` on Linux and `cmd` on Windows.
+         * 
+         */
         Shell("SHELL"),
+        /**
+         * Indicates that the file is run with PowerShell flags `-NonInteractive`, `-NoProfile`, and `-ExecutionPolicy Bypass`.
+         * 
+         */
         Powershell("POWERSHELL");
 
         private final String value;

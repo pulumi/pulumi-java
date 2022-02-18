@@ -11,6 +11,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Definition of a single value with generic type.
+ * 
+ */
 public final class ValueResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ValueResponse Empty = new ValueResponse();

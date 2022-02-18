@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Controls certain runtime behaviors of the streaming job.
+     * 
+     */
     @EnumType
     public enum CompatibilityLevel {
         CompatibilityLevel_1_0("1.0");

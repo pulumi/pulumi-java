@@ -13,7 +13,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PrivilegeResponse {
+    /**
+     * An array of actions that are allowed.
+     * 
+     */
     private final @Nullable List<String> actions;
+    /**
+     * An Azure Cosmos DB Mongo DB Resource.
+     * 
+     */
     private final @Nullable PrivilegeResponseResource resource;
 
     @OutputCustomType.Constructor({"actions","resource"})
@@ -24,9 +32,17 @@ public final class PrivilegeResponse {
         this.resource = resource;
     }
 
+    /**
+     * An array of actions that are allowed.
+     * 
+     */
     public List<String> getActions() {
         return this.actions == null ? List.of() : this.actions;
     }
+    /**
+     * An Azure Cosmos DB Mongo DB Resource.
+     * 
+     */
     public Optional<PrivilegeResponseResource> getResource() {
         return Optional.ofNullable(this.resource);
     }

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Type of access to be allowed for the client.
+     * 
+     */
     @EnumType
     public enum ClientPermissionType {
         NoAccess("NoAccess"),

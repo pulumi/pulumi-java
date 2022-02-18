@@ -13,6 +13,10 @@ public final class JobExtractSourceModelGetArgs extends io.pulumi.resources.Reso
 
     public static final JobExtractSourceModelGetArgs Empty = new JobExtractSourceModelGetArgs();
 
+    /**
+     * The ID of the dataset containing this model.
+     * 
+     */
     @InputImport(name="datasetId", required=true)
     private final Input<String> datasetId;
 
@@ -20,6 +24,10 @@ public final class JobExtractSourceModelGetArgs extends io.pulumi.resources.Reso
         return this.datasetId;
     }
 
+    /**
+     * The ID of the model.
+     * 
+     */
     @InputImport(name="modelId", required=true)
     private final Input<String> modelId;
 
@@ -27,6 +35,10 @@ public final class JobExtractSourceModelGetArgs extends io.pulumi.resources.Reso
         return this.modelId;
     }
 
+    /**
+     * The ID of the project containing this model.
+     * 
+     */
     @InputImport(name="projectId", required=true)
     private final Input<String> projectId;
 

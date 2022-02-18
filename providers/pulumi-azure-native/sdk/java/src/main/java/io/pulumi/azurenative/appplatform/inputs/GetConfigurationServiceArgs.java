@@ -12,6 +12,10 @@ public final class GetConfigurationServiceArgs extends io.pulumi.resources.Invok
 
     public static final GetConfigurationServiceArgs Empty = new GetConfigurationServiceArgs();
 
+    /**
+     * The name of Application Configuration Service.
+     * 
+     */
     @InputImport(name="configurationServiceName", required=true)
     private final String configurationServiceName;
 
@@ -19,6 +23,10 @@ public final class GetConfigurationServiceArgs extends io.pulumi.resources.Invok
         return this.configurationServiceName;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetConfigurationServiceArgs extends io.pulumi.resources.Invok
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the Service resource.
+     * 
+     */
     @InputImport(name="serviceName", required=true)
     private final String serviceName;
 

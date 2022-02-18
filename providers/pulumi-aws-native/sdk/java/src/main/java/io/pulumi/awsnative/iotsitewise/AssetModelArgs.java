@@ -19,6 +19,10 @@ public final class AssetModelArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AssetModelArgs Empty = new AssetModelArgs();
 
+    /**
+     * The composite asset models that are part of this asset model. Composite asset models are asset models that contain specific properties.
+     * 
+     */
     @InputImport(name="assetModelCompositeModels")
     private final @Nullable Input<List<AssetModelCompositeModelArgs>> assetModelCompositeModels;
 
@@ -26,6 +30,10 @@ public final class AssetModelArgs extends io.pulumi.resources.ResourceArgs {
         return this.assetModelCompositeModels == null ? Input.empty() : this.assetModelCompositeModels;
     }
 
+    /**
+     * A description for the asset model.
+     * 
+     */
     @InputImport(name="assetModelDescription")
     private final @Nullable Input<String> assetModelDescription;
 
@@ -33,6 +41,10 @@ public final class AssetModelArgs extends io.pulumi.resources.ResourceArgs {
         return this.assetModelDescription == null ? Input.empty() : this.assetModelDescription;
     }
 
+    /**
+     * The hierarchy definitions of the asset model. Each hierarchy specifies an asset model whose assets can be children of any other assets created from this asset model. You can specify up to 10 hierarchies per asset model.
+     * 
+     */
     @InputImport(name="assetModelHierarchies")
     private final @Nullable Input<List<AssetModelHierarchyArgs>> assetModelHierarchies;
 
@@ -40,6 +52,10 @@ public final class AssetModelArgs extends io.pulumi.resources.ResourceArgs {
         return this.assetModelHierarchies == null ? Input.empty() : this.assetModelHierarchies;
     }
 
+    /**
+     * A unique, friendly name for the asset model.
+     * 
+     */
     @InputImport(name="assetModelName")
     private final @Nullable Input<String> assetModelName;
 
@@ -47,6 +63,10 @@ public final class AssetModelArgs extends io.pulumi.resources.ResourceArgs {
         return this.assetModelName == null ? Input.empty() : this.assetModelName;
     }
 
+    /**
+     * The property definitions of the asset model. You can specify up to 200 properties per asset model.
+     * 
+     */
     @InputImport(name="assetModelProperties")
     private final @Nullable Input<List<AssetModelPropertyArgs>> assetModelProperties;
 
@@ -54,6 +74,10 @@ public final class AssetModelArgs extends io.pulumi.resources.ResourceArgs {
         return this.assetModelProperties == null ? Input.empty() : this.assetModelProperties;
     }
 
+    /**
+     * A list of key-value pairs that contain metadata for the asset model.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<AssetModelTagArgs>> tags;
 

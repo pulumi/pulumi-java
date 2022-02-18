@@ -13,9 +13,28 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class IdentityPropertiesResponse {
+    /**
+     * The principal ID of resource identity.
+     * 
+     */
     private final @Nullable String principalId;
+    /**
+     * The tenant ID of resource.
+     * 
+     */
     private final @Nullable String tenantId;
+    /**
+     * The identity type.
+     * 
+     */
     private final @Nullable String type;
+    /**
+     * The list of user identities associated with the resource. The user identity
+     * dictionary key references will be ARM resource ids in the form:
+     * '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
+     *     providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+     * 
+     */
     private final @Nullable Map<String,UserIdentityPropertiesResponse> userAssignedIdentities;
 
     @OutputCustomType.Constructor({"principalId","tenantId","type","userAssignedIdentities"})
@@ -30,15 +49,34 @@ public final class IdentityPropertiesResponse {
         this.userAssignedIdentities = userAssignedIdentities;
     }
 
+    /**
+     * The principal ID of resource identity.
+     * 
+     */
     public Optional<String> getPrincipalId() {
         return Optional.ofNullable(this.principalId);
     }
+    /**
+     * The tenant ID of resource.
+     * 
+     */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }
+    /**
+     * The identity type.
+     * 
+     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
+    /**
+     * The list of user identities associated with the resource. The user identity
+     * dictionary key references will be ARM resource ids in the form:
+     * '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
+     *     providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+     * 
+     */
     public Map<String,UserIdentityPropertiesResponse> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }

@@ -10,10 +10,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A filter that defines a subset of time series data that is displayed in a widget. Time series data is fetched using the ListTimeSeries (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.timeSeries/list) method.
+ * 
+ */
 public final class TimeSeriesFilterResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TimeSeriesFilterResponse Empty = new TimeSeriesFilterResponse();
 
+    /**
+     * By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.
+     * 
+     */
     @InputImport(name="aggregation", required=true)
     private final AggregationResponse aggregation;
 
@@ -21,6 +29,10 @@ public final class TimeSeriesFilterResponse extends io.pulumi.resources.InvokeAr
         return this.aggregation;
     }
 
+    /**
+     * The monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) that identifies the metric types, resources, and projects to query.
+     * 
+     */
     @InputImport(name="filter", required=true)
     private final String filter;
 
@@ -28,6 +40,10 @@ public final class TimeSeriesFilterResponse extends io.pulumi.resources.InvokeAr
         return this.filter;
     }
 
+    /**
+     * Ranking based time series filter.
+     * 
+     */
     @InputImport(name="pickTimeSeriesFilter", required=true)
     private final PickTimeSeriesFilterResponse pickTimeSeriesFilter;
 
@@ -35,6 +51,10 @@ public final class TimeSeriesFilterResponse extends io.pulumi.resources.InvokeAr
         return this.pickTimeSeriesFilter;
     }
 
+    /**
+     * Apply a second aggregation after aggregation is applied.
+     * 
+     */
     @InputImport(name="secondaryAggregation", required=true)
     private final AggregationResponse secondaryAggregation;
 

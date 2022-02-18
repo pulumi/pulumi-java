@@ -15,6 +15,10 @@ public final class ManagementGroupArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final ManagementGroupArgs Empty = new ManagementGroupArgs();
 
+    /**
+     * The details of a management group used during creation.
+     * 
+     */
     @InputImport(name="details")
     private final @Nullable Input<CreateManagementGroupDetailsArgs> details;
 
@@ -22,6 +26,10 @@ public final class ManagementGroupArgs extends io.pulumi.resources.ResourceArgs 
         return this.details == null ? Input.empty() : this.details;
     }
 
+    /**
+     * The friendly name of the management group. If no value is passed then this  field will be set to the groupId.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -29,6 +37,10 @@ public final class ManagementGroupArgs extends io.pulumi.resources.ResourceArgs 
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * Management Group ID.
+     * 
+     */
     @InputImport(name="groupId")
     private final @Nullable Input<String> groupId;
 
@@ -36,6 +48,10 @@ public final class ManagementGroupArgs extends io.pulumi.resources.ResourceArgs 
         return this.groupId == null ? Input.empty() : this.groupId;
     }
 
+    /**
+     * The name of the management group. For example, 00000000-0000-0000-0000-000000000000
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

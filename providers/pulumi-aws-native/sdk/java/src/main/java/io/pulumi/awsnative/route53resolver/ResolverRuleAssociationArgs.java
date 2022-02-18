@@ -14,6 +14,10 @@ public final class ResolverRuleAssociationArgs extends io.pulumi.resources.Resou
 
     public static final ResolverRuleAssociationArgs Empty = new ResolverRuleAssociationArgs();
 
+    /**
+     * The name of an association between a Resolver rule and a VPC.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -21,6 +25,10 @@ public final class ResolverRuleAssociationArgs extends io.pulumi.resources.Resou
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the Resolver rule that you associated with the VPC that is specified by VPCId.
+     * 
+     */
     @InputImport(name="resolverRuleId", required=true)
     private final Input<String> resolverRuleId;
 
@@ -28,6 +36,10 @@ public final class ResolverRuleAssociationArgs extends io.pulumi.resources.Resou
         return this.resolverRuleId;
     }
 
+    /**
+     * The ID of the VPC that you associated the Resolver rule with.
+     * 
+     */
     @InputImport(name="vPCId", required=true)
     private final Input<String> vPCId;
 

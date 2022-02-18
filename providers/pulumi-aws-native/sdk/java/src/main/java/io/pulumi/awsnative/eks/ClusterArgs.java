@@ -41,6 +41,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.logging == null ? Input.empty() : this.logging;
     }
 
+    /**
+     * The unique name to give to your cluster.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -55,6 +59,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourcesVpcConfig;
     }
 
+    /**
+     * The Amazon Resource Name (ARN) of the IAM role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf.
+     * 
+     */
     @InputImport(name="roleArn", required=true)
     private final Input<String> roleArn;
 
@@ -62,6 +70,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.roleArn;
     }
 
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<ClusterTagArgs>> tags;
 
@@ -69,6 +81,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The desired Kubernetes version for your cluster. If you don't specify a value here, the latest version available in Amazon EKS is used.
+     * 
+     */
     @InputImport(name="version")
     private final @Nullable Input<String> version;
 

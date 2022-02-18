@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The target type.
+     * 
+     */
     @EnumType
     public enum JobTargetType {
         TargetGroup("TargetGroup"),

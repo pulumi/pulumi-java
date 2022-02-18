@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A regular expression used to validate the value of a slot.
+ * 
+ */
 public final class BotSlotValueRegexFilterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BotSlotValueRegexFilterArgs Empty = new BotSlotValueRegexFilterArgs();
 
+    /**
+     * Regex pattern
+     * 
+     */
     @InputImport(name="pattern", required=true)
     private final Input<String> pattern;
 

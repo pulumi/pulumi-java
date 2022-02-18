@@ -14,45 +14,105 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Resource Type definition for AWS::APS::Workspace
+ * 
+ * ## Example Usage
+ * 
+ */
 @ResourceType(type="aws-native:aps:Workspace")
 public class Workspace extends io.pulumi.resources.CustomResource {
+    /**
+     * The AMP Workspace alert manager definition data
+     * 
+     */
     @OutputExport(name="alertManagerDefinition", type=String.class, parameters={})
     private Output</* @Nullable */ String> alertManagerDefinition;
 
+    /**
+     * @return The AMP Workspace alert manager definition data
+     * 
+     */
     public Output</* @Nullable */ String> getAlertManagerDefinition() {
         return this.alertManagerDefinition;
     }
+    /**
+     * AMP Workspace alias.
+     * 
+     */
     @OutputExport(name="alias", type=String.class, parameters={})
     private Output</* @Nullable */ String> alias;
 
+    /**
+     * @return AMP Workspace alias.
+     * 
+     */
     public Output</* @Nullable */ String> getAlias() {
         return this.alias;
     }
+    /**
+     * Workspace arn.
+     * 
+     */
     @OutputExport(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
+    /**
+     * @return Workspace arn.
+     * 
+     */
     public Output<String> getArn() {
         return this.arn;
     }
+    /**
+     * AMP Workspace prometheus endpoint
+     * 
+     */
     @OutputExport(name="prometheusEndpoint", type=String.class, parameters={})
     private Output<String> prometheusEndpoint;
 
+    /**
+     * @return AMP Workspace prometheus endpoint
+     * 
+     */
     public Output<String> getPrometheusEndpoint() {
         return this.prometheusEndpoint;
     }
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     @OutputExport(name="tags", type=List.class, parameters={WorkspaceTag.class})
     private Output</* @Nullable */ List<WorkspaceTag>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     */
     public Output</* @Nullable */ List<WorkspaceTag>> getTags() {
         return this.tags;
     }
+    /**
+     * Required to identify a specific APS Workspace.
+     * 
+     */
     @OutputExport(name="workspaceId", type=String.class, parameters={})
     private Output<String> workspaceId;
 
+    /**
+     * @return Required to identify a specific APS Workspace.
+     * 
+     */
     public Output<String> getWorkspaceId() {
         return this.workspaceId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Workspace(String name, @Nullable WorkspaceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:aps:Workspace", name, args == null ? WorkspaceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -68,6 +128,14 @@ public class Workspace extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Workspace get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Workspace(name, id, options);
     }

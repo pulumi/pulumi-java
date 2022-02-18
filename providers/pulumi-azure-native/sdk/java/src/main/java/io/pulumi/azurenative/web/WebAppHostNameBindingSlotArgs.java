@@ -18,6 +18,10 @@ public final class WebAppHostNameBindingSlotArgs extends io.pulumi.resources.Res
 
     public static final WebAppHostNameBindingSlotArgs Empty = new WebAppHostNameBindingSlotArgs();
 
+    /**
+     * Azure resource name.
+     * 
+     */
     @InputImport(name="azureResourceName")
     private final @Nullable Input<String> azureResourceName;
 
@@ -25,6 +29,10 @@ public final class WebAppHostNameBindingSlotArgs extends io.pulumi.resources.Res
         return this.azureResourceName == null ? Input.empty() : this.azureResourceName;
     }
 
+    /**
+     * Azure resource type.
+     * 
+     */
     @InputImport(name="azureResourceType")
     private final @Nullable Input<AzureResourceType> azureResourceType;
 
@@ -32,6 +40,10 @@ public final class WebAppHostNameBindingSlotArgs extends io.pulumi.resources.Res
         return this.azureResourceType == null ? Input.empty() : this.azureResourceType;
     }
 
+    /**
+     * Custom DNS record type.
+     * 
+     */
     @InputImport(name="customHostNameDnsRecordType")
     private final @Nullable Input<CustomHostNameDnsRecordType> customHostNameDnsRecordType;
 
@@ -39,6 +51,10 @@ public final class WebAppHostNameBindingSlotArgs extends io.pulumi.resources.Res
         return this.customHostNameDnsRecordType == null ? Input.empty() : this.customHostNameDnsRecordType;
     }
 
+    /**
+     * Fully qualified ARM domain resource URI.
+     * 
+     */
     @InputImport(name="domainId")
     private final @Nullable Input<String> domainId;
 
@@ -46,6 +62,10 @@ public final class WebAppHostNameBindingSlotArgs extends io.pulumi.resources.Res
         return this.domainId == null ? Input.empty() : this.domainId;
     }
 
+    /**
+     * Hostname in the hostname binding.
+     * 
+     */
     @InputImport(name="hostName")
     private final @Nullable Input<String> hostName;
 
@@ -53,6 +73,10 @@ public final class WebAppHostNameBindingSlotArgs extends io.pulumi.resources.Res
         return this.hostName == null ? Input.empty() : this.hostName;
     }
 
+    /**
+     * Hostname type.
+     * 
+     */
     @InputImport(name="hostNameType")
     private final @Nullable Input<HostNameType> hostNameType;
 
@@ -60,6 +84,10 @@ public final class WebAppHostNameBindingSlotArgs extends io.pulumi.resources.Res
         return this.hostNameType == null ? Input.empty() : this.hostNameType;
     }
 
+    /**
+     * Kind of resource.
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -67,6 +95,10 @@ public final class WebAppHostNameBindingSlotArgs extends io.pulumi.resources.Res
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Name of the app.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -74,6 +106,10 @@ public final class WebAppHostNameBindingSlotArgs extends io.pulumi.resources.Res
         return this.name;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -81,6 +117,10 @@ public final class WebAppHostNameBindingSlotArgs extends io.pulumi.resources.Res
         return this.resourceGroupName;
     }
 
+    /**
+     * App Service app name.
+     * 
+     */
     @InputImport(name="siteName")
     private final @Nullable Input<String> siteName;
 
@@ -88,6 +128,10 @@ public final class WebAppHostNameBindingSlotArgs extends io.pulumi.resources.Res
         return this.siteName == null ? Input.empty() : this.siteName;
     }
 
+    /**
+     * Name of the deployment slot. If a slot is not specified, the API will create a binding for the production slot.
+     * 
+     */
     @InputImport(name="slot", required=true)
     private final Input<String> slot;
 
@@ -95,6 +139,10 @@ public final class WebAppHostNameBindingSlotArgs extends io.pulumi.resources.Res
         return this.slot;
     }
 
+    /**
+     * SSL type
+     * 
+     */
     @InputImport(name="sslState")
     private final @Nullable Input<SslState> sslState;
 
@@ -102,6 +150,10 @@ public final class WebAppHostNameBindingSlotArgs extends io.pulumi.resources.Res
         return this.sslState == null ? Input.empty() : this.sslState;
     }
 
+    /**
+     * SSL certificate thumbprint
+     * 
+     */
     @InputImport(name="thumbprint")
     private final @Nullable Input<String> thumbprint;
 

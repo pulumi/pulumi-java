@@ -15,6 +15,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
 
     public static final PrivateEndpointConnectionArgs Empty = new PrivateEndpointConnectionArgs();
 
+    /**
+     * The name of the Kusto cluster.
+     * 
+     */
     @InputImport(name="clusterName", required=true)
     private final Input<String> clusterName;
 
@@ -22,6 +26,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.clusterName;
     }
 
+    /**
+     * The name of the private endpoint connection.
+     * 
+     */
     @InputImport(name="privateEndpointConnectionName")
     private final @Nullable Input<String> privateEndpointConnectionName;
 
@@ -29,6 +37,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.privateEndpointConnectionName == null ? Input.empty() : this.privateEndpointConnectionName;
     }
 
+    /**
+     * Connection State of the Private Endpoint Connection.
+     * 
+     */
     @InputImport(name="privateLinkServiceConnectionState", required=true)
     private final Input<PrivateLinkServiceConnectionStatePropertyArgs> privateLinkServiceConnectionState;
 
@@ -36,6 +48,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.privateLinkServiceConnectionState;
     }
 
+    /**
+     * The name of the resource group containing the Kusto cluster.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

@@ -12,6 +12,10 @@ public final class GetVirtualNetworkArgs extends io.pulumi.resources.InvokeArgs 
 
     public static final GetVirtualNetworkArgs Empty = new GetVirtualNetworkArgs();
 
+    /**
+     * The Resource Group Name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +23,10 @@ public final class GetVirtualNetworkArgs extends io.pulumi.resources.InvokeArgs 
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of the virtual network resource.
+     * 
+     */
     @InputImport(name="virtualNetworkName", required=true)
     private final String virtualNetworkName;
 

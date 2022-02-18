@@ -14,6 +14,10 @@ public final class GetGlobalForwardingRuleArgs extends io.pulumi.resources.Invok
 
     public static final GetGlobalForwardingRuleArgs Empty = new GetGlobalForwardingRuleArgs();
 
+    /**
+     * The name of the global forwarding rule.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -21,6 +25,11 @@ public final class GetGlobalForwardingRuleArgs extends io.pulumi.resources.Invok
         return this.name;
     }
 
+    /**
+     * The project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

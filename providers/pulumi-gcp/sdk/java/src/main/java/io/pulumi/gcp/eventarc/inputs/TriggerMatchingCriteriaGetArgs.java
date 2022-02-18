@@ -13,6 +13,10 @@ public final class TriggerMatchingCriteriaGetArgs extends io.pulumi.resources.Re
 
     public static final TriggerMatchingCriteriaGetArgs Empty = new TriggerMatchingCriteriaGetArgs();
 
+    /**
+     * Required. The name of a CloudEvents attribute. Currently, only a subset of attributes are supported for filtering. All triggers MUST provide a filter for the 'type' attribute.
+     * 
+     */
     @InputImport(name="attribute", required=true)
     private final Input<String> attribute;
 
@@ -20,6 +24,10 @@ public final class TriggerMatchingCriteriaGetArgs extends io.pulumi.resources.Re
         return this.attribute;
     }
 
+    /**
+     * Required. The value for the attribute.
+     * 
+     */
     @InputImport(name="value", required=true)
     private final Input<String> value;
 

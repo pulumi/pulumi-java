@@ -8,10 +8,18 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
+/**
+ * The bucket's versioning configuration.
+ * 
+ */
 public final class BucketVersioningResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BucketVersioningResponse Empty = new BucketVersioningResponse();
 
+    /**
+     * While set to true, versioning is fully enabled for this bucket.
+     * 
+     */
     @InputImport(name="enabled", required=true)
     private final Boolean enabled;
 

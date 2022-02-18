@@ -17,6 +17,10 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WorkflowArgs Empty = new WorkflowArgs();
 
+    /**
+     * A textual description for the workflow.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -24,6 +28,10 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Specifies the steps (actions) to take if any errors are encountered during execution of the workflow.
+     * 
+     */
     @InputImport(name="onExceptionSteps")
     private final @Nullable Input<List<WorkflowStepArgs>> onExceptionSteps;
 
@@ -31,6 +39,10 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
         return this.onExceptionSteps == null ? Input.empty() : this.onExceptionSteps;
     }
 
+    /**
+     * Specifies the details for the steps that are in the specified workflow.
+     * 
+     */
     @InputImport(name="steps", required=true)
     private final Input<List<WorkflowStepArgs>> steps;
 
@@ -38,6 +50,10 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
         return this.steps;
     }
 
+    /**
+     * Key-value pairs that can be used to group and search for workflows. Tags are metadata attached to workflows for any purpose.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<WorkflowTagArgs>> tags;
 

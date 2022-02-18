@@ -15,6 +15,11 @@ public final class AuthorityConfigSubjectConfigArgs extends io.pulumi.resources.
 
     public static final AuthorityConfigSubjectConfigArgs Empty = new AuthorityConfigSubjectConfigArgs();
 
+    /**
+     * Contains distinguished name fields such as the location and organization.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="subject", required=true)
     private final Input<AuthorityConfigSubjectConfigSubjectArgs> subject;
 
@@ -22,6 +27,11 @@ public final class AuthorityConfigSubjectConfigArgs extends io.pulumi.resources.
         return this.subject;
     }
 
+    /**
+     * The subject alternative name fields.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="subjectAltName")
     private final @Nullable Input<AuthorityConfigSubjectConfigSubjectAltNameArgs> subjectAltName;
 

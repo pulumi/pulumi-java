@@ -14,6 +14,10 @@ public final class RegistryEventNotificationConfigItemGetArgs extends io.pulumi.
 
     public static final RegistryEventNotificationConfigItemGetArgs Empty = new RegistryEventNotificationConfigItemGetArgs();
 
+    /**
+     * PubSub topic name to publish device events.
+     * 
+     */
     @InputImport(name="pubsubTopicName", required=true)
     private final Input<String> pubsubTopicName;
 
@@ -21,6 +25,14 @@ public final class RegistryEventNotificationConfigItemGetArgs extends io.pulumi.
         return this.pubsubTopicName;
     }
 
+    /**
+     * If the subfolder name matches this string exactly, this
+     * configuration will be used. The string must not include the
+     * leading '/' character. If empty, all strings are matched. Empty
+     * value can only be used for the last `event_notification_configs`
+     * item.
+     * 
+     */
     @InputImport(name="subfolderMatches")
     private final @Nullable Input<String> subfolderMatches;
 

@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVPCDHCPOptionsAssociation {
+/**
+ * Associates a set of DHCP options with a VPC, or associates no DHCP options with the VPC.
+ * 
+ */
     public static CompletableFuture<GetVPCDHCPOptionsAssociationResult> invokeAsync(GetVPCDHCPOptionsAssociationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ec2:getVPCDHCPOptionsAssociation", TypeShape.of(GetVPCDHCPOptionsAssociationResult.class), args == null ? GetVPCDHCPOptionsAssociationArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * scale settings for AML Compute
+ * 
+ */
 public final class ScaleSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ScaleSettingsArgs Empty = new ScaleSettingsArgs();
 
+    /**
+     * Max number of nodes to use
+     * 
+     */
     @InputImport(name="maxNodeCount", required=true)
     private final Input<Integer> maxNodeCount;
 
@@ -22,6 +30,10 @@ public final class ScaleSettingsArgs extends io.pulumi.resources.ResourceArgs {
         return this.maxNodeCount;
     }
 
+    /**
+     * Min number of nodes to use
+     * 
+     */
     @InputImport(name="minNodeCount")
     private final @Nullable Input<Integer> minNodeCount;
 
@@ -29,6 +41,10 @@ public final class ScaleSettingsArgs extends io.pulumi.resources.ResourceArgs {
         return this.minNodeCount == null ? Input.empty() : this.minNodeCount;
     }
 
+    /**
+     * Node Idle Time before scaling down amlCompute. This string needs to be in the RFC Format.
+     * 
+     */
     @InputImport(name="nodeIdleTimeBeforeScaleDown")
     private final @Nullable Input<String> nodeIdleTimeBeforeScaleDown;
 

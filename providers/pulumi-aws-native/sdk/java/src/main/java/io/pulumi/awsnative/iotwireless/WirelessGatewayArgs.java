@@ -17,6 +17,10 @@ public final class WirelessGatewayArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final WirelessGatewayArgs Empty = new WirelessGatewayArgs();
 
+    /**
+     * Description of Wireless Gateway.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -24,6 +28,10 @@ public final class WirelessGatewayArgs extends io.pulumi.resources.ResourceArgs 
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The date and time when the most recent uplink was received.
+     * 
+     */
     @InputImport(name="lastUplinkReceivedAt")
     private final @Nullable Input<String> lastUplinkReceivedAt;
 
@@ -31,6 +39,10 @@ public final class WirelessGatewayArgs extends io.pulumi.resources.ResourceArgs 
         return this.lastUplinkReceivedAt == null ? Input.empty() : this.lastUplinkReceivedAt;
     }
 
+    /**
+     * The combination of Package, Station and Model which represents the version of the LoRaWAN Wireless Gateway.
+     * 
+     */
     @InputImport(name="loRaWAN", required=true)
     private final Input<WirelessGatewayLoRaWANGatewayArgs> loRaWAN;
 
@@ -38,6 +50,10 @@ public final class WirelessGatewayArgs extends io.pulumi.resources.ResourceArgs 
         return this.loRaWAN;
     }
 
+    /**
+     * Name of Wireless Gateway.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -45,6 +61,10 @@ public final class WirelessGatewayArgs extends io.pulumi.resources.ResourceArgs 
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * A list of key-value pairs that contain metadata for the gateway.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<WirelessGatewayTagArgs>> tags;
 
@@ -52,6 +72,10 @@ public final class WirelessGatewayArgs extends io.pulumi.resources.ResourceArgs 
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * Thing Arn. Passed into Update to associate a Thing with the Wireless Gateway.
+     * 
+     */
     @InputImport(name="thingArn")
     private final @Nullable Input<String> thingArn;
 

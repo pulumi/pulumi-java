@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Base class for all control activities like IfCondition, ForEach , Until.
+ * 
+ */
 public final class ControlActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ControlActivityArgs Empty = new ControlActivityArgs();
 
+    /**
+     * Activity depends on condition.
+     * 
+     */
     @InputImport(name="dependsOn")
     private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
 
@@ -24,6 +32,10 @@ public final class ControlActivityArgs extends io.pulumi.resources.ResourceArgs 
         return this.dependsOn == null ? Input.empty() : this.dependsOn;
     }
 
+    /**
+     * Activity description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -31,6 +43,10 @@ public final class ControlActivityArgs extends io.pulumi.resources.ResourceArgs 
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Activity name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -38,6 +54,11 @@ public final class ControlActivityArgs extends io.pulumi.resources.ResourceArgs 
         return this.name;
     }
 
+    /**
+     * Type of activity.
+     * Expected value is 'Container'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -45,6 +66,10 @@ public final class ControlActivityArgs extends io.pulumi.resources.ResourceArgs 
         return this.type;
     }
 
+    /**
+     * Activity user properties.
+     * 
+     */
     @InputImport(name="userProperties")
     private final @Nullable Input<List<UserPropertyArgs>> userProperties;
 

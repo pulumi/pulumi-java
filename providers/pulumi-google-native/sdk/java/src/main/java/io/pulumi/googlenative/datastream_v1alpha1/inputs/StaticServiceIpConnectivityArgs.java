@@ -6,6 +6,10 @@ package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 import java.util.Objects;
 
 
+/**
+ * Static IP address connectivity.
+ * 
+ */
 public final class StaticServiceIpConnectivityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StaticServiceIpConnectivityArgs Empty = new StaticServiceIpConnectivityArgs();

@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Optional properties to be used in case a new video resource needs to be created on the service. These will not take effect if the video already exists.
+ * 
+ */
 public final class VideoCreationPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VideoCreationPropertiesArgs Empty = new VideoCreationPropertiesArgs();
 
+    /**
+     * Optional description provided by the user. Value can be up to 2048 characters long.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -21,6 +29,10 @@ public final class VideoCreationPropertiesArgs extends io.pulumi.resources.Resou
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Video retention period indicates how long the video is kept in storage. Value must be specified in ISO8601 duration format (i.e. "P1D" equals 1 day) and can vary between 1 day to 10 years, in 1 day increments. When absent (null), all video content is retained indefinitely. This property is only allowed for topologies where "kind" is set to "live".
+     * 
+     */
     @InputImport(name="retentionPeriod")
     private final @Nullable Input<String> retentionPeriod;
 
@@ -28,6 +40,10 @@ public final class VideoCreationPropertiesArgs extends io.pulumi.resources.Resou
         return this.retentionPeriod == null ? Input.empty() : this.retentionPeriod;
     }
 
+    /**
+     * Segment length indicates the length of individual content files (segments) which are persisted to storage. Smaller segments provide lower archive playback latency but generate larger volume of storage transactions. Larger segments reduce the amount of storage transactions while increasing the archive playback latency. Value must be specified in ISO8601 duration format (i.e. "PT30S" equals 30 seconds) and can vary between 30 seconds to 5 minutes, in 30 seconds increments. Changing this value after the initial call to create the video resource can lead to errors when uploading content to the archive. Default value is 30 seconds. This property is only allowed for topologies where "kind" is set to "live".
+     * 
+     */
     @InputImport(name="segmentLength")
     private final @Nullable Input<String> segmentLength;
 
@@ -35,6 +51,10 @@ public final class VideoCreationPropertiesArgs extends io.pulumi.resources.Resou
         return this.segmentLength == null ? Input.empty() : this.segmentLength;
     }
 
+    /**
+     * Optional title provided by the user. Value can be up to 256 characters long.
+     * 
+     */
     @InputImport(name="title")
     private final @Nullable Input<String> title;
 

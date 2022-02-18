@@ -11,10 +11,18 @@ import java.util.Map;
 import java.util.Objects;
 
 
+/**
+ * Parameters to provide to the template being launched.
+ * 
+ */
 public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse Empty = new GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse();
 
+    /**
+     * The runtime environment for the job.
+     * 
+     */
     @InputImport(name="environment", required=true)
     private final GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse environment;
 
@@ -22,6 +30,10 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse ex
         return this.environment;
     }
 
+    /**
+     * The job name to use for the created job.
+     * 
+     */
     @InputImport(name="jobName", required=true)
     private final String jobName;
 
@@ -29,6 +41,10 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse ex
         return this.jobName;
     }
 
+    /**
+     * The runtime parameters to pass to the job.
+     * 
+     */
     @InputImport(name="parameters", required=true)
     private final Map<String,String> parameters;
 
@@ -36,6 +52,10 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse ex
         return this.parameters;
     }
 
+    /**
+     * Map of transform name prefixes of the job to be replaced to the corresponding name prefixes of the new job. Only applicable when updating a pipeline.
+     * 
+     */
     @InputImport(name="transformNameMapping", required=true)
     private final Map<String,String> transformNameMapping;
 
@@ -43,6 +63,10 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse ex
         return this.transformNameMapping;
     }
 
+    /**
+     * If set, replace the existing pipeline with the name specified by jobName with this pipeline, preserving state.
+     * 
+     */
     @InputImport(name="update", required=true)
     private final Boolean update;
 

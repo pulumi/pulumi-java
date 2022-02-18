@@ -12,7 +12,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AdaptiveApplicationControlIssueSummaryResponse {
+    /**
+     * An alert that machines within a group can have
+     * 
+     */
     private final @Nullable String issue;
+    /**
+     * The number of machines in the group that have this alert
+     * 
+     */
     private final @Nullable Double numberOfVms;
 
     @OutputCustomType.Constructor({"issue","numberOfVms"})
@@ -23,9 +31,17 @@ public final class AdaptiveApplicationControlIssueSummaryResponse {
         this.numberOfVms = numberOfVms;
     }
 
+    /**
+     * An alert that machines within a group can have
+     * 
+     */
     public Optional<String> getIssue() {
         return Optional.ofNullable(this.issue);
     }
+    /**
+     * The number of machines in the group that have this alert
+     * 
+     */
     public Optional<Double> getNumberOfVms() {
         return Optional.ofNullable(this.numberOfVms);
     }

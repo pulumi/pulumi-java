@@ -15,6 +15,10 @@ public final class SentinelOnboardingStateArgs extends io.pulumi.resources.Resou
 
     public static final SentinelOnboardingStateArgs Empty = new SentinelOnboardingStateArgs();
 
+    /**
+     * Flag that indicates the status of the CMK setting
+     * 
+     */
     @InputImport(name="customerManagedKey")
     private final @Nullable Input<Boolean> customerManagedKey;
 
@@ -22,6 +26,10 @@ public final class SentinelOnboardingStateArgs extends io.pulumi.resources.Resou
         return this.customerManagedKey == null ? Input.empty() : this.customerManagedKey;
     }
 
+    /**
+     * The namespace of workspaces resource provider- Microsoft.OperationalInsights.
+     * 
+     */
     @InputImport(name="operationalInsightsResourceProvider", required=true)
     private final Input<String> operationalInsightsResourceProvider;
 
@@ -29,6 +37,10 @@ public final class SentinelOnboardingStateArgs extends io.pulumi.resources.Resou
         return this.operationalInsightsResourceProvider;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -36,6 +48,10 @@ public final class SentinelOnboardingStateArgs extends io.pulumi.resources.Resou
         return this.resourceGroupName;
     }
 
+    /**
+     * The Sentinel onboarding state name. Supports - default
+     * 
+     */
     @InputImport(name="sentinelOnboardingStateName")
     private final @Nullable Input<String> sentinelOnboardingStateName;
 
@@ -43,6 +59,10 @@ public final class SentinelOnboardingStateArgs extends io.pulumi.resources.Resou
         return this.sentinelOnboardingStateName == null ? Input.empty() : this.sentinelOnboardingStateName;
     }
 
+    /**
+     * The name of the workspace.
+     * 
+     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

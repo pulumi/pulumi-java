@@ -14,6 +14,10 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleP
 
     public static final PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityGetArgs Empty = new PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityGetArgs();
 
+    /**
+     * Number of characters after the finding to consider. Either this or window_before must be specified
+     * 
+     */
     @InputImport(name="windowAfter")
     private final @Nullable Input<Integer> windowAfter;
 
@@ -21,6 +25,10 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleP
         return this.windowAfter == null ? Input.empty() : this.windowAfter;
     }
 
+    /**
+     * Number of characters before the finding to consider. Either this or window_after must be specified
+     * 
+     */
     @InputImport(name="windowBefore")
     private final @Nullable Input<Integer> windowBefore;
 

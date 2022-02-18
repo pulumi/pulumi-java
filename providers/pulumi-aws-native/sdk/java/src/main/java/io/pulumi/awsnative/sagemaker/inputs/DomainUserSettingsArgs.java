@@ -14,10 +14,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A collection of settings that apply to users of Amazon SageMaker Studio. These settings are specified when the CreateUserProfile API is called, and as DefaultUserSettings when the CreateDomain API is called.
+ * 
+ */
 public final class DomainUserSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DomainUserSettingsArgs Empty = new DomainUserSettingsArgs();
 
+    /**
+     * The user profile Amazon Resource Name (ARN).
+     * 
+     */
     @InputImport(name="executionRole")
     private final @Nullable Input<String> executionRole;
 
@@ -25,6 +33,10 @@ public final class DomainUserSettingsArgs extends io.pulumi.resources.ResourceAr
         return this.executionRole == null ? Input.empty() : this.executionRole;
     }
 
+    /**
+     * The Jupyter server's app settings.
+     * 
+     */
     @InputImport(name="jupyterServerAppSettings")
     private final @Nullable Input<DomainJupyterServerAppSettingsArgs> jupyterServerAppSettings;
 
@@ -32,6 +44,10 @@ public final class DomainUserSettingsArgs extends io.pulumi.resources.ResourceAr
         return this.jupyterServerAppSettings == null ? Input.empty() : this.jupyterServerAppSettings;
     }
 
+    /**
+     * The kernel gateway app settings.
+     * 
+     */
     @InputImport(name="kernelGatewayAppSettings")
     private final @Nullable Input<DomainKernelGatewayAppSettingsArgs> kernelGatewayAppSettings;
 
@@ -39,6 +55,10 @@ public final class DomainUserSettingsArgs extends io.pulumi.resources.ResourceAr
         return this.kernelGatewayAppSettings == null ? Input.empty() : this.kernelGatewayAppSettings;
     }
 
+    /**
+     * The security groups for the Amazon Virtual Private Cloud (VPC) that Studio uses for communication.
+     * 
+     */
     @InputImport(name="securityGroups")
     private final @Nullable Input<List<String>> securityGroups;
 
@@ -46,6 +66,10 @@ public final class DomainUserSettingsArgs extends io.pulumi.resources.ResourceAr
         return this.securityGroups == null ? Input.empty() : this.securityGroups;
     }
 
+    /**
+     * The sharing settings.
+     * 
+     */
     @InputImport(name="sharingSettings")
     private final @Nullable Input<DomainSharingSettingsArgs> sharingSettings;
 

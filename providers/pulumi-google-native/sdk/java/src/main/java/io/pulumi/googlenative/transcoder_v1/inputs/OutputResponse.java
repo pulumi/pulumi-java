@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Location of output file(s) in a Cloud Storage bucket.
+ * 
+ */
 public final class OutputResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OutputResponse Empty = new OutputResponse();
 
+    /**
+     * URI for the output file(s). For example, `gs://my-bucket/outputs/`. If empty the value is populated from `Job.output_uri`.
+     * 
+     */
     @InputImport(name="uri", required=true)
     private final String uri;
 

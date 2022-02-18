@@ -14,6 +14,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceRe
 
     public static final OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceRemoteGetArgs Empty = new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceRemoteGetArgs();
 
+    /**
+     * SHA256 checksum of the remote file.
+     * 
+     */
     @InputImport(name="sha256Checksum")
     private final @Nullable Input<String> sha256Checksum;
 
@@ -21,6 +25,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceRe
         return this.sha256Checksum == null ? Input.empty() : this.sha256Checksum;
     }
 
+    /**
+     * Required. URI for this repository.
+     * 
+     */
     @InputImport(name="uri", required=true)
     private final Input<String> uri;
 

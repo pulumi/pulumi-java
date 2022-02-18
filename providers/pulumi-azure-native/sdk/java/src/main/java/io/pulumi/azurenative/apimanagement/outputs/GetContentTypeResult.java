@@ -12,11 +12,35 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetContentTypeResult {
+    /**
+     * Content type description.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * Resource ID.
+     * 
+     */
     private final String id;
+    /**
+     * Resource name.
+     * 
+     */
     private final String name;
+    /**
+     * Content type schema.
+     * 
+     */
     private final @Nullable Object schema;
+    /**
+     * Resource type for API Management resource.
+     * 
+     */
     private final String type;
+    /**
+     * Content type version.
+     * 
+     */
     private final @Nullable String version;
 
     @OutputCustomType.Constructor({"description","id","name","schema","type","version"})
@@ -35,21 +59,45 @@ public final class GetContentTypeResult {
         this.version = version;
     }
 
+    /**
+     * Content type description.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * Resource ID.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Resource name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Content type schema.
+     * 
+     */
     public Optional<Object> getSchema() {
         return Optional.ofNullable(this.schema);
     }
+    /**
+     * Resource type for API Management resource.
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * Content type version.
+     * 
+     */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }

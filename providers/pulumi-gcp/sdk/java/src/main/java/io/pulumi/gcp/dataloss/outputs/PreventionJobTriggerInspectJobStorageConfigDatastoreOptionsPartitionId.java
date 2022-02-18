@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionId {
+    /**
+     * If not empty, the ID of the namespace to which the entities belong.
+     * 
+     */
     private final @Nullable String namespaceId;
+    /**
+     * The Google Cloud Platform project ID of the project containing the table.
+     * 
+     */
     private final String projectId;
 
     @OutputCustomType.Constructor({"namespaceId","projectId"})
@@ -22,9 +30,17 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPa
         this.projectId = Objects.requireNonNull(projectId);
     }
 
+    /**
+     * If not empty, the ID of the namespace to which the entities belong.
+     * 
+     */
     public Optional<String> getNamespaceId() {
         return Optional.ofNullable(this.namespaceId);
     }
+    /**
+     * The Google Cloud Platform project ID of the project containing the table.
+     * 
+     */
     public String getProjectId() {
         return this.projectId;
     }

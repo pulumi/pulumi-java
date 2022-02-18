@@ -12,8 +12,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class BackendServiceConsistentHashHttpCookie {
+    /**
+     * Name of the cookie.
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * Path to set for the cookie.
+     * 
+     */
     private final @Nullable String path;
+    /**
+     * The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s
+     * (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
+     * 
+     */
     private final @Nullable BackendServiceConsistentHashHttpCookieTtl ttl;
 
     @OutputCustomType.Constructor({"name","path","ttl"})
@@ -26,12 +39,25 @@ public final class BackendServiceConsistentHashHttpCookie {
         this.ttl = ttl;
     }
 
+    /**
+     * Name of the cookie.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * Path to set for the cookie.
+     * 
+     */
     public Optional<String> getPath() {
         return Optional.ofNullable(this.path);
     }
+    /**
+     * The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s
+     * (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
+     * 
+     */
     public Optional<BackendServiceConsistentHashHttpCookieTtl> getTtl() {
         return Optional.ofNullable(this.ttl);
     }

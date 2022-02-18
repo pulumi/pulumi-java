@@ -14,6 +14,10 @@ public final class MetricBucketOptionsExplicitBucketsGetArgs extends io.pulumi.r
 
     public static final MetricBucketOptionsExplicitBucketsGetArgs Empty = new MetricBucketOptionsExplicitBucketsGetArgs();
 
+    /**
+     * The values must be monotonically increasing.
+     * 
+     */
     @InputImport(name="bounds", required=true)
     private final Input<List<Double>> bounds;
 

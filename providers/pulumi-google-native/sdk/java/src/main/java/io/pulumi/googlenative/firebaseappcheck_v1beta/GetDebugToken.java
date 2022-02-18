@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDebugToken {
+/**
+ * Gets the specified DebugToken. For security reasons, the `token` field is never populated in the response.
+ * 
+ */
     public static CompletableFuture<GetDebugTokenResult> invokeAsync(GetDebugTokenArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:firebaseappcheck/v1beta:getDebugToken", TypeShape.of(GetDebugTokenResult.class), args == null ? GetDebugTokenArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -12,6 +12,10 @@ public final class PacketMirroringNetworkInfoResponse extends io.pulumi.resource
 
     public static final PacketMirroringNetworkInfoResponse Empty = new PacketMirroringNetworkInfoResponse();
 
+    /**
+     * Unique identifier for the network; defined by the server.
+     * 
+     */
     @InputImport(name="canonicalUrl", required=true)
     private final String canonicalUrl;
 
@@ -19,6 +23,10 @@ public final class PacketMirroringNetworkInfoResponse extends io.pulumi.resource
         return this.canonicalUrl;
     }
 
+    /**
+     * URL of the network resource.
+     * 
+     */
     @InputImport(name="url", required=true)
     private final String url;
 

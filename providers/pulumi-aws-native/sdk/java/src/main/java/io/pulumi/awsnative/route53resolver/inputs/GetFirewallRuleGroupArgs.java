@@ -12,6 +12,10 @@ public final class GetFirewallRuleGroupArgs extends io.pulumi.resources.InvokeAr
 
     public static final GetFirewallRuleGroupArgs Empty = new GetFirewallRuleGroupArgs();
 
+    /**
+     * ResourceId
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 

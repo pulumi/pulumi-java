@@ -8,10 +8,18 @@ import io.pulumi.googlenative.jobs_v3.inputs.LocationResponse;
 import java.util.Objects;
 
 
+/**
+ * Derived details about the company.
+ * 
+ */
 public final class CompanyDerivedInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CompanyDerivedInfoResponse Empty = new CompanyDerivedInfoResponse();
 
+    /**
+     * A structured headquarters location of the company, resolved from Company.hq_location if provided.
+     * 
+     */
     @InputImport(name="headquartersLocation", required=true)
     private final LocationResponse headquartersLocation;
 

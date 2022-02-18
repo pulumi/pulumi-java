@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetInstanceScratchDisk {
+    /**
+     * The disk interface used for attaching this disk. One of `SCSI` or `NVME`.
+     * 
+     */
     private final String $interface;
 
     @OutputCustomType.Constructor({"$interface"})
@@ -16,6 +20,10 @@ public final class GetInstanceScratchDisk {
         this.$interface = Objects.requireNonNull($interface);
     }
 
+    /**
+     * The disk interface used for attaching this disk. One of `SCSI` or `NVME`.
+     * 
+     */
     public String get$interface() {
         return this.$interface;
     }

@@ -15,6 +15,10 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisArgs 
 
     public static final AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisArgs Empty = new AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisArgs();
 
+    /**
+     * The monitoring schedule for snapshot analysis. For EntityType-level config: unset / disabled = true indicates disabled by default for Features under it; otherwise by default enable snapshot analysis monitoring with monitoringInterval for Features under it.
+     * 
+     */
     @InputImport(name="disabled")
     private final @Nullable Input<Boolean> disabled;
 
@@ -22,6 +26,11 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisArgs 
         return this.disabled == null ? Input.empty() : this.disabled;
     }
 
+    /**
+     * Configuration of the snapshot analysis based monitoring pipeline running interval. The value is rolled up to full day.
+     * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+     * 
+     */
     @InputImport(name="monitoringInterval")
     private final @Nullable Input<String> monitoringInterval;
 

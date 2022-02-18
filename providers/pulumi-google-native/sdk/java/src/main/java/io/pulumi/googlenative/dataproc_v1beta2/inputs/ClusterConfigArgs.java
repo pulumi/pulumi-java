@@ -22,10 +22,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The cluster config.
+ * 
+ */
 public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ClusterConfigArgs Empty = new ClusterConfigArgs();
 
+    /**
+     * Optional. Autoscaling config for the policy associated with the cluster. Cluster does not autoscale if this field is unset.
+     * 
+     */
     @InputImport(name="autoscalingConfig")
     private final @Nullable Input<AutoscalingConfigArgs> autoscalingConfig;
 
@@ -33,6 +41,10 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.autoscalingConfig == null ? Input.empty() : this.autoscalingConfig;
     }
 
+    /**
+     * Optional. A Cloud Storage bucket used to stage job dependencies, config files, and job driver console output. If you do not specify a staging bucket, Cloud Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster's staging bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket (see Dataproc staging bucket (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)). This field requires a Cloud Storage bucket name, not a URI to a Cloud Storage bucket.
+     * 
+     */
     @InputImport(name="configBucket")
     private final @Nullable Input<String> configBucket;
 
@@ -40,6 +52,10 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.configBucket == null ? Input.empty() : this.configBucket;
     }
 
+    /**
+     * Optional. Encryption settings for the cluster.
+     * 
+     */
     @InputImport(name="encryptionConfig")
     private final @Nullable Input<EncryptionConfigArgs> encryptionConfig;
 
@@ -47,6 +63,10 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.encryptionConfig == null ? Input.empty() : this.encryptionConfig;
     }
 
+    /**
+     * Optional. Port/endpoint configuration for this cluster
+     * 
+     */
     @InputImport(name="endpointConfig")
     private final @Nullable Input<EndpointConfigArgs> endpointConfig;
 
@@ -54,6 +74,10 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.endpointConfig == null ? Input.empty() : this.endpointConfig;
     }
 
+    /**
+     * Optional. The shared Compute Engine config settings for all instances in a cluster.
+     * 
+     */
     @InputImport(name="gceClusterConfig")
     private final @Nullable Input<GceClusterConfigArgs> gceClusterConfig;
 
@@ -61,6 +85,10 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.gceClusterConfig == null ? Input.empty() : this.gceClusterConfig;
     }
 
+    /**
+     * Optional. The Kubernetes Engine config for Dataproc clusters deployed to Kubernetes. Setting this is considered mutually exclusive with Compute Engine-based options such as gce_cluster_config, master_config, worker_config, secondary_worker_config, and autoscaling_config.
+     * 
+     */
     @InputImport(name="gkeClusterConfig")
     private final @Nullable Input<GkeClusterConfigArgs> gkeClusterConfig;
 
@@ -68,6 +96,10 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.gkeClusterConfig == null ? Input.empty() : this.gkeClusterConfig;
     }
 
+    /**
+     * Optional. Commands to execute on each node after config is completed. By default, executables are run on master and all worker nodes. You can test a node's role metadata to run an executable on a master or worker node, as shown below using curl (you can also use wget): ROLE=$(curl -H Metadata-Flavor:Google http://metadata/computeMetadata/v1beta2/instance/attributes/dataproc-role) if [[ "${ROLE}" == 'Master' ]]; then ... master specific actions ... else ... worker specific actions ... fi
+     * 
+     */
     @InputImport(name="initializationActions")
     private final @Nullable Input<List<NodeInitializationActionArgs>> initializationActions;
 
@@ -75,6 +107,10 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.initializationActions == null ? Input.empty() : this.initializationActions;
     }
 
+    /**
+     * Optional. The config setting for auto delete cluster schedule.
+     * 
+     */
     @InputImport(name="lifecycleConfig")
     private final @Nullable Input<LifecycleConfigArgs> lifecycleConfig;
 
@@ -82,6 +118,10 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.lifecycleConfig == null ? Input.empty() : this.lifecycleConfig;
     }
 
+    /**
+     * Optional. The Compute Engine config settings for the master instance in a cluster.
+     * 
+     */
     @InputImport(name="masterConfig")
     private final @Nullable Input<InstanceGroupConfigArgs> masterConfig;
 
@@ -89,6 +129,10 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.masterConfig == null ? Input.empty() : this.masterConfig;
     }
 
+    /**
+     * Optional. Metastore configuration.
+     * 
+     */
     @InputImport(name="metastoreConfig")
     private final @Nullable Input<MetastoreConfigArgs> metastoreConfig;
 
@@ -96,6 +140,10 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.metastoreConfig == null ? Input.empty() : this.metastoreConfig;
     }
 
+    /**
+     * Optional. The Compute Engine config settings for additional worker instances in a cluster.
+     * 
+     */
     @InputImport(name="secondaryWorkerConfig")
     private final @Nullable Input<InstanceGroupConfigArgs> secondaryWorkerConfig;
 
@@ -103,6 +151,10 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.secondaryWorkerConfig == null ? Input.empty() : this.secondaryWorkerConfig;
     }
 
+    /**
+     * Optional. Security related configuration.
+     * 
+     */
     @InputImport(name="securityConfig")
     private final @Nullable Input<SecurityConfigArgs> securityConfig;
 
@@ -110,6 +162,10 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.securityConfig == null ? Input.empty() : this.securityConfig;
     }
 
+    /**
+     * Optional. The config settings for software inside the cluster.
+     * 
+     */
     @InputImport(name="softwareConfig")
     private final @Nullable Input<SoftwareConfigArgs> softwareConfig;
 
@@ -117,6 +173,10 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.softwareConfig == null ? Input.empty() : this.softwareConfig;
     }
 
+    /**
+     * Optional. A Cloud Storage bucket used to store ephemeral cluster and jobs data, such as Spark and MapReduce history files. If you do not specify a temp bucket, Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster's temp bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket. The default bucket has a TTL of 90 days, but you can use any TTL (or none) if you specify a bucket. This field requires a Cloud Storage bucket name, not a URI to a Cloud Storage bucket.
+     * 
+     */
     @InputImport(name="tempBucket")
     private final @Nullable Input<String> tempBucket;
 
@@ -124,6 +184,10 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.tempBucket == null ? Input.empty() : this.tempBucket;
     }
 
+    /**
+     * Optional. The Compute Engine config settings for worker instances in a cluster.
+     * 
+     */
     @InputImport(name="workerConfig")
     private final @Nullable Input<InstanceGroupConfigArgs> workerConfig;
 

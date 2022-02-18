@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYum {
+    /**
+     * Required. The name of the repository.
+     * 
+     */
     private final String name;
 
     @OutputCustomType.Constructor({"name"})
@@ -16,6 +20,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYum {
         this.name = Objects.requireNonNull(name);
     }
 
+    /**
+     * Required. The name of the repository.
+     * 
+     */
     public String getName() {
         return this.name;
     }

@@ -11,9 +11,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class QueryExecutionResultResponse {
+    /**
+     * Query text retrieved from the source server
+     * 
+     */
     private final String queryText;
+    /**
+     * Query analysis result from the source
+     * 
+     */
     private final ExecutionStatisticsResponse sourceResult;
+    /**
+     * Total no. of statements in the batch
+     * 
+     */
     private final Double statementsInBatch;
+    /**
+     * Query analysis result from the target
+     * 
+     */
     private final ExecutionStatisticsResponse targetResult;
 
     @OutputCustomType.Constructor({"queryText","sourceResult","statementsInBatch","targetResult"})
@@ -28,15 +44,31 @@ public final class QueryExecutionResultResponse {
         this.targetResult = Objects.requireNonNull(targetResult);
     }
 
+    /**
+     * Query text retrieved from the source server
+     * 
+     */
     public String getQueryText() {
         return this.queryText;
     }
+    /**
+     * Query analysis result from the source
+     * 
+     */
     public ExecutionStatisticsResponse getSourceResult() {
         return this.sourceResult;
     }
+    /**
+     * Total no. of statements in the batch
+     * 
+     */
     public Double getStatementsInBatch() {
         return this.statementsInBatch;
     }
+    /**
+     * Query analysis result from the target
+     * 
+     */
     public ExecutionStatisticsResponse getTargetResult() {
         return this.targetResult;
     }

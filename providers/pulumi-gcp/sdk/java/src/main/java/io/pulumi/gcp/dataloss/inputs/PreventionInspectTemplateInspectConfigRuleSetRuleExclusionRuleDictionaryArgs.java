@@ -15,6 +15,11 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
 
     public static final PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryArgs Empty = new PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryArgs();
 
+    /**
+     * Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="cloudStoragePath")
     private final @Nullable Input<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryCloudStoragePathArgs> cloudStoragePath;
 
@@ -22,6 +27,11 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
         return this.cloudStoragePath == null ? Input.empty() : this.cloudStoragePath;
     }
 
+    /**
+     * List of words or phrases to search for.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="wordList")
     private final @Nullable Input<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryWordListArgs> wordList;
 

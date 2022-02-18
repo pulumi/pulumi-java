@@ -12,6 +12,10 @@ public final class ListStreamingLocatorContentKeysArgs extends io.pulumi.resourc
 
     public static final ListStreamingLocatorContentKeysArgs Empty = new ListStreamingLocatorContentKeysArgs();
 
+    /**
+     * The Media Services account name.
+     * 
+     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -19,6 +23,10 @@ public final class ListStreamingLocatorContentKeysArgs extends io.pulumi.resourc
         return this.accountName;
     }
 
+    /**
+     * The name of the resource group within the Azure subscription.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class ListStreamingLocatorContentKeysArgs extends io.pulumi.resourc
         return this.resourceGroupName;
     }
 
+    /**
+     * The Streaming Locator name.
+     * 
+     */
     @InputImport(name="streamingLocatorName", required=true)
     private final String streamingLocatorName;
 

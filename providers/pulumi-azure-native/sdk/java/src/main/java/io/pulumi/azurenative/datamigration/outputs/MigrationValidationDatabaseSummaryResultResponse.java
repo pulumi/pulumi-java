@@ -9,12 +9,40 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MigrationValidationDatabaseSummaryResultResponse {
+    /**
+     * Validation end time
+     * 
+     */
     private final String endedOn;
+    /**
+     * Result identifier
+     * 
+     */
     private final String id;
+    /**
+     * Migration Identifier
+     * 
+     */
     private final String migrationId;
+    /**
+     * Name of the source database
+     * 
+     */
     private final String sourceDatabaseName;
+    /**
+     * Validation start time
+     * 
+     */
     private final String startedOn;
+    /**
+     * Current status of validation at the database level
+     * 
+     */
     private final String status;
+    /**
+     * Name of the target database
+     * 
+     */
     private final String targetDatabaseName;
 
     @OutputCustomType.Constructor({"endedOn","id","migrationId","sourceDatabaseName","startedOn","status","targetDatabaseName"})
@@ -35,24 +63,52 @@ public final class MigrationValidationDatabaseSummaryResultResponse {
         this.targetDatabaseName = Objects.requireNonNull(targetDatabaseName);
     }
 
+    /**
+     * Validation end time
+     * 
+     */
     public String getEndedOn() {
         return this.endedOn;
     }
+    /**
+     * Result identifier
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Migration Identifier
+     * 
+     */
     public String getMigrationId() {
         return this.migrationId;
     }
+    /**
+     * Name of the source database
+     * 
+     */
     public String getSourceDatabaseName() {
         return this.sourceDatabaseName;
     }
+    /**
+     * Validation start time
+     * 
+     */
     public String getStartedOn() {
         return this.startedOn;
     }
+    /**
+     * Current status of validation at the database level
+     * 
+     */
     public String getStatus() {
         return this.status;
     }
+    /**
+     * Name of the target database
+     * 
+     */
     public String getTargetDatabaseName() {
         return this.targetDatabaseName;
     }

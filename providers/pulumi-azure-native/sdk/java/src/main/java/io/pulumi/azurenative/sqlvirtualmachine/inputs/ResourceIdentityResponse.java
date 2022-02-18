@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Azure Active Directory identity configuration for a resource.
+ * 
+ */
 public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceIdentityResponse Empty = new ResourceIdentityResponse();
 
+    /**
+     * The Azure Active Directory principal id.
+     * 
+     */
     @InputImport(name="principalId", required=true)
     private final String principalId;
 
@@ -21,6 +29,10 @@ public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeAr
         return this.principalId;
     }
 
+    /**
+     * The Azure Active Directory tenant id.
+     * 
+     */
     @InputImport(name="tenantId", required=true)
     private final String tenantId;
 
@@ -28,6 +40,10 @@ public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeAr
         return this.tenantId;
     }
 
+    /**
+     * The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 

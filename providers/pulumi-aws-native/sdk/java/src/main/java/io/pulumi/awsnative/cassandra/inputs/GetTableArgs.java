@@ -12,6 +12,10 @@ public final class GetTableArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetTableArgs Empty = new GetTableArgs();
 
+    /**
+     * Name for Cassandra keyspace
+     * 
+     */
     @InputImport(name="keyspaceName", required=true)
     private final String keyspaceName;
 
@@ -19,6 +23,10 @@ public final class GetTableArgs extends io.pulumi.resources.InvokeArgs {
         return this.keyspaceName;
     }
 
+    /**
+     * Name for Cassandra table
+     * 
+     */
     @InputImport(name="tableName", required=true)
     private final String tableName;
 

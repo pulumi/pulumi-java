@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * User identity details.
+ * 
+ */
 public final class UserIdentityContractResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final UserIdentityContractResponse Empty = new UserIdentityContractResponse();
 
+    /**
+     * Identifier value within provider.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -21,6 +29,10 @@ public final class UserIdentityContractResponse extends io.pulumi.resources.Invo
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * Identity provider name.
+     * 
+     */
     @InputImport(name="provider")
     private final @Nullable String provider;
 

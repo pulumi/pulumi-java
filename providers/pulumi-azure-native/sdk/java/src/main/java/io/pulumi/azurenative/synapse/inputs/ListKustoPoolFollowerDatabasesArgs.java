@@ -12,6 +12,10 @@ public final class ListKustoPoolFollowerDatabasesArgs extends io.pulumi.resource
 
     public static final ListKustoPoolFollowerDatabasesArgs Empty = new ListKustoPoolFollowerDatabasesArgs();
 
+    /**
+     * The name of the Kusto pool.
+     * 
+     */
     @InputImport(name="kustoPoolName", required=true)
     private final String kustoPoolName;
 
@@ -19,6 +23,10 @@ public final class ListKustoPoolFollowerDatabasesArgs extends io.pulumi.resource
         return this.kustoPoolName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class ListKustoPoolFollowerDatabasesArgs extends io.pulumi.resource
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the workspace.
+     * 
+     */
     @InputImport(name="workspaceName", required=true)
     private final String workspaceName;
 

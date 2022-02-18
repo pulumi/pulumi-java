@@ -24,105 +24,254 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * LoadBalancer resource.
+ * API Version: 2020-11-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:network:LoadBalancer lb /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:network:LoadBalancer")
 public class LoadBalancer extends io.pulumi.resources.CustomResource {
+    /**
+     * Collection of backend address pools used by a load balancer.
+     * 
+     */
     @OutputExport(name="backendAddressPools", type=List.class, parameters={BackendAddressPoolResponse.class})
     private Output</* @Nullable */ List<BackendAddressPoolResponse>> backendAddressPools;
 
+    /**
+     * @return Collection of backend address pools used by a load balancer.
+     * 
+     */
     public Output</* @Nullable */ List<BackendAddressPoolResponse>> getBackendAddressPools() {
         return this.backendAddressPools;
     }
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * The extended location of the load balancer.
+     * 
+     */
     @OutputExport(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
     private Output</* @Nullable */ ExtendedLocationResponse> extendedLocation;
 
+    /**
+     * @return The extended location of the load balancer.
+     * 
+     */
     public Output</* @Nullable */ ExtendedLocationResponse> getExtendedLocation() {
         return this.extendedLocation;
     }
+    /**
+     * Object representing the frontend IPs to be used for the load balancer.
+     * 
+     */
     @OutputExport(name="frontendIPConfigurations", type=List.class, parameters={FrontendIPConfigurationResponse.class})
     private Output</* @Nullable */ List<FrontendIPConfigurationResponse>> frontendIPConfigurations;
 
+    /**
+     * @return Object representing the frontend IPs to be used for the load balancer.
+     * 
+     */
     public Output</* @Nullable */ List<FrontendIPConfigurationResponse>> getFrontendIPConfigurations() {
         return this.frontendIPConfigurations;
     }
+    /**
+     * Defines an external port range for inbound NAT to a single backend port on NICs associated with a load balancer. Inbound NAT rules are created automatically for each NIC associated with the Load Balancer using an external port from this range. Defining an Inbound NAT pool on your Load Balancer is mutually exclusive with defining inbound Nat rules. Inbound NAT pools are referenced from virtual machine scale sets. NICs that are associated with individual virtual machines cannot reference an inbound NAT pool. They have to reference individual inbound NAT rules.
+     * 
+     */
     @OutputExport(name="inboundNatPools", type=List.class, parameters={InboundNatPoolResponse.class})
     private Output</* @Nullable */ List<InboundNatPoolResponse>> inboundNatPools;
 
+    /**
+     * @return Defines an external port range for inbound NAT to a single backend port on NICs associated with a load balancer. Inbound NAT rules are created automatically for each NIC associated with the Load Balancer using an external port from this range. Defining an Inbound NAT pool on your Load Balancer is mutually exclusive with defining inbound Nat rules. Inbound NAT pools are referenced from virtual machine scale sets. NICs that are associated with individual virtual machines cannot reference an inbound NAT pool. They have to reference individual inbound NAT rules.
+     * 
+     */
     public Output</* @Nullable */ List<InboundNatPoolResponse>> getInboundNatPools() {
         return this.inboundNatPools;
     }
+    /**
+     * Collection of inbound NAT Rules used by a load balancer. Defining inbound NAT rules on your load balancer is mutually exclusive with defining an inbound NAT pool. Inbound NAT pools are referenced from virtual machine scale sets. NICs that are associated with individual virtual machines cannot reference an Inbound NAT pool. They have to reference individual inbound NAT rules.
+     * 
+     */
     @OutputExport(name="inboundNatRules", type=List.class, parameters={InboundNatRuleResponse.class})
     private Output</* @Nullable */ List<InboundNatRuleResponse>> inboundNatRules;
 
+    /**
+     * @return Collection of inbound NAT Rules used by a load balancer. Defining inbound NAT rules on your load balancer is mutually exclusive with defining an inbound NAT pool. Inbound NAT pools are referenced from virtual machine scale sets. NICs that are associated with individual virtual machines cannot reference an Inbound NAT pool. They have to reference individual inbound NAT rules.
+     * 
+     */
     public Output</* @Nullable */ List<InboundNatRuleResponse>> getInboundNatRules() {
         return this.inboundNatRules;
     }
+    /**
+     * Object collection representing the load balancing rules Gets the provisioning.
+     * 
+     */
     @OutputExport(name="loadBalancingRules", type=List.class, parameters={LoadBalancingRuleResponse.class})
     private Output</* @Nullable */ List<LoadBalancingRuleResponse>> loadBalancingRules;
 
+    /**
+     * @return Object collection representing the load balancing rules Gets the provisioning.
+     * 
+     */
     public Output</* @Nullable */ List<LoadBalancingRuleResponse>> getLoadBalancingRules() {
         return this.loadBalancingRules;
     }
+    /**
+     * Resource location.
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * Resource name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The outbound rules.
+     * 
+     */
     @OutputExport(name="outboundRules", type=List.class, parameters={OutboundRuleResponse.class})
     private Output</* @Nullable */ List<OutboundRuleResponse>> outboundRules;
 
+    /**
+     * @return The outbound rules.
+     * 
+     */
     public Output</* @Nullable */ List<OutboundRuleResponse>> getOutboundRules() {
         return this.outboundRules;
     }
+    /**
+     * Collection of probe objects used in the load balancer.
+     * 
+     */
     @OutputExport(name="probes", type=List.class, parameters={ProbeResponse.class})
     private Output</* @Nullable */ List<ProbeResponse>> probes;
 
+    /**
+     * @return Collection of probe objects used in the load balancer.
+     * 
+     */
     public Output</* @Nullable */ List<ProbeResponse>> getProbes() {
         return this.probes;
     }
+    /**
+     * The provisioning state of the load balancer resource.
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning state of the load balancer resource.
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The resource GUID property of the load balancer resource.
+     * 
+     */
     @OutputExport(name="resourceGuid", type=String.class, parameters={})
     private Output<String> resourceGuid;
 
+    /**
+     * @return The resource GUID property of the load balancer resource.
+     * 
+     */
     public Output<String> getResourceGuid() {
         return this.resourceGuid;
     }
+    /**
+     * The load balancer SKU.
+     * 
+     */
     @OutputExport(name="sku", type=LoadBalancerSkuResponse.class, parameters={})
     private Output</* @Nullable */ LoadBalancerSkuResponse> sku;
 
+    /**
+     * @return The load balancer SKU.
+     * 
+     */
     public Output</* @Nullable */ LoadBalancerSkuResponse> getSku() {
         return this.sku;
     }
+    /**
+     * Resource tags.
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Resource type.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public LoadBalancer(String name, LoadBalancerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:LoadBalancer", name, args == null ? LoadBalancerArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -179,6 +328,14 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static LoadBalancer get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new LoadBalancer(name, id, options);
     }

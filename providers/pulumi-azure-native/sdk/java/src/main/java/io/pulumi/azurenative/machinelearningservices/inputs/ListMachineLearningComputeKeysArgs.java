@@ -12,6 +12,10 @@ public final class ListMachineLearningComputeKeysArgs extends io.pulumi.resource
 
     public static final ListMachineLearningComputeKeysArgs Empty = new ListMachineLearningComputeKeysArgs();
 
+    /**
+     * Name of the Azure Machine Learning compute.
+     * 
+     */
     @InputImport(name="computeName", required=true)
     private final String computeName;
 
@@ -19,6 +23,10 @@ public final class ListMachineLearningComputeKeysArgs extends io.pulumi.resource
         return this.computeName;
     }
 
+    /**
+     * Name of the resource group in which workspace is located.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class ListMachineLearningComputeKeysArgs extends io.pulumi.resource
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of Azure Machine Learning workspace.
+     * 
+     */
     @InputImport(name="workspaceName", required=true)
     private final String workspaceName;
 

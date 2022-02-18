@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The IPSec encryption algorithm (IKE phase 1).
+     * 
+     */
     @EnumType
     public enum IpsecEncryption {
         None("None"),

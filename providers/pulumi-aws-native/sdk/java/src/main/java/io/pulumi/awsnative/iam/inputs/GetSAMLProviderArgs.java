@@ -12,6 +12,10 @@ public final class GetSAMLProviderArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSAMLProviderArgs Empty = new GetSAMLProviderArgs();
 
+    /**
+     * Amazon Resource Name (ARN) of the SAML provider
+     * 
+     */
     @InputImport(name="arn", required=true)
     private final String arn;
 

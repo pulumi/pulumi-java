@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Style of terminal font.
+     * 
+     */
     @EnumType
     public enum FontStyle {
         NotSpecified("NotSpecified"),

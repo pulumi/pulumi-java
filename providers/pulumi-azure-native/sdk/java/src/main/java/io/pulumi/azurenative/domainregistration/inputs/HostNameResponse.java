@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Details of a hostname derived from a domain.
+ * 
+ */
 public final class HostNameResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final HostNameResponse Empty = new HostNameResponse();
 
+    /**
+     * Name of the Azure resource the hostname is assigned to. If it is assigned to a Traffic Manager then it will be the Traffic Manager name otherwise it will be the app name.
+     * 
+     */
     @InputImport(name="azureResourceName")
     private final @Nullable String azureResourceName;
 
@@ -22,6 +30,10 @@ public final class HostNameResponse extends io.pulumi.resources.InvokeArgs {
         return this.azureResourceName == null ? Optional.empty() : Optional.ofNullable(this.azureResourceName);
     }
 
+    /**
+     * Type of the Azure resource the hostname is assigned to.
+     * 
+     */
     @InputImport(name="azureResourceType")
     private final @Nullable String azureResourceType;
 
@@ -29,6 +41,10 @@ public final class HostNameResponse extends io.pulumi.resources.InvokeArgs {
         return this.azureResourceType == null ? Optional.empty() : Optional.ofNullable(this.azureResourceType);
     }
 
+    /**
+     * Type of the DNS record.
+     * 
+     */
     @InputImport(name="customHostNameDnsRecordType")
     private final @Nullable String customHostNameDnsRecordType;
 
@@ -36,6 +52,10 @@ public final class HostNameResponse extends io.pulumi.resources.InvokeArgs {
         return this.customHostNameDnsRecordType == null ? Optional.empty() : Optional.ofNullable(this.customHostNameDnsRecordType);
     }
 
+    /**
+     * Type of the hostname.
+     * 
+     */
     @InputImport(name="hostNameType")
     private final @Nullable String hostNameType;
 
@@ -43,6 +63,10 @@ public final class HostNameResponse extends io.pulumi.resources.InvokeArgs {
         return this.hostNameType == null ? Optional.empty() : Optional.ofNullable(this.hostNameType);
     }
 
+    /**
+     * Name of the hostname.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -50,6 +74,10 @@ public final class HostNameResponse extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * List of apps the hostname is assigned to. This list will have more than one app only if the hostname is pointing to a Traffic Manager.
+     * 
+     */
     @InputImport(name="siteNames")
     private final @Nullable List<String> siteNames;
 

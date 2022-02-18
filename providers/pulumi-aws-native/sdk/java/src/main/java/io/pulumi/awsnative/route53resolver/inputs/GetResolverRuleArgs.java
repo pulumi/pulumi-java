@@ -12,6 +12,10 @@ public final class GetResolverRuleArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetResolverRuleArgs Empty = new GetResolverRuleArgs();
 
+    /**
+     * The ID of the endpoint that the rule is associated with.
+     * 
+     */
     @InputImport(name="resolverRuleId", required=true)
     private final String resolverRuleId;
 

@@ -12,6 +12,10 @@ public final class ListWorkflowRunActionExpressionTracesArgs extends io.pulumi.r
 
     public static final ListWorkflowRunActionExpressionTracesArgs Empty = new ListWorkflowRunActionExpressionTracesArgs();
 
+    /**
+     * The workflow action name.
+     * 
+     */
     @InputImport(name="actionName", required=true)
     private final String actionName;
 
@@ -19,6 +23,10 @@ public final class ListWorkflowRunActionExpressionTracesArgs extends io.pulumi.r
         return this.actionName;
     }
 
+    /**
+     * The resource group name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class ListWorkflowRunActionExpressionTracesArgs extends io.pulumi.r
         return this.resourceGroupName;
     }
 
+    /**
+     * The workflow run name.
+     * 
+     */
     @InputImport(name="runName", required=true)
     private final String runName;
 
@@ -33,6 +45,10 @@ public final class ListWorkflowRunActionExpressionTracesArgs extends io.pulumi.r
         return this.runName;
     }
 
+    /**
+     * The workflow name.
+     * 
+     */
     @InputImport(name="workflowName", required=true)
     private final String workflowName;
 

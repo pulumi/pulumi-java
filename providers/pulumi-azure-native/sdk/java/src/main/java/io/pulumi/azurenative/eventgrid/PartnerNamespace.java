@@ -19,41 +19,106 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * EventGrid Partner Namespace.
+ * API Version: 2021-06-01-preview.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:eventgrid:PartnerNamespace examplePartnerNamespaceName1 /subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/partnerNamespaces/examplePartnerNamespaceName1 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:eventgrid:PartnerNamespace")
 public class PartnerNamespace extends io.pulumi.resources.CustomResource {
+    /**
+     * This boolean is used to enable or disable local auth. Default value is false. When the property is set to true, only AAD token will be used to authenticate if user is allowed to publish to the partner namespace.
+     * 
+     */
     @OutputExport(name="disableLocalAuth", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> disableLocalAuth;
 
+    /**
+     * @return This boolean is used to enable or disable local auth. Default value is false. When the property is set to true, only AAD token will be used to authenticate if user is allowed to publish to the partner namespace.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getDisableLocalAuth() {
         return this.disableLocalAuth;
     }
+    /**
+     * Endpoint for the partner namespace.
+     * 
+     */
     @OutputExport(name="endpoint", type=String.class, parameters={})
     private Output<String> endpoint;
 
+    /**
+     * @return Endpoint for the partner namespace.
+     * 
+     */
     public Output<String> getEndpoint() {
         return this.endpoint;
     }
+    /**
+     * This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.
+     * 
+     */
     @OutputExport(name="inboundIpRules", type=List.class, parameters={InboundIpRuleResponse.class})
     private Output</* @Nullable */ List<InboundIpRuleResponse>> inboundIpRules;
 
+    /**
+     * @return This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.
+     * 
+     */
     public Output</* @Nullable */ List<InboundIpRuleResponse>> getInboundIpRules() {
         return this.inboundIpRules;
     }
+    /**
+     * Location of the resource.
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return Location of the resource.
+     * 
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * Name of the resource.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Name of the resource.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The fully qualified ARM Id of the partner registration that should be associated with this partner namespace. This takes the following format:
+     * /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/partnerRegistrations/{partnerRegistrationName}.
+     * 
+     */
     @OutputExport(name="partnerRegistrationFullyQualifiedId", type=String.class, parameters={})
     private Output</* @Nullable */ String> partnerRegistrationFullyQualifiedId;
 
+    /**
+     * @return The fully qualified ARM Id of the partner registration that should be associated with this partner namespace. This takes the following format:
+     * /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/partnerRegistrations/{partnerRegistrationName}.
+     * 
+     */
     public Output</* @Nullable */ String> getPartnerRegistrationFullyQualifiedId() {
         return this.partnerRegistrationFullyQualifiedId;
     }
@@ -63,37 +128,85 @@ public class PartnerNamespace extends io.pulumi.resources.CustomResource {
     public Output<List<PrivateEndpointConnectionResponse>> getPrivateEndpointConnections() {
         return this.privateEndpointConnections;
     }
+    /**
+     * Provisioning state of the partner namespace.
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return Provisioning state of the partner namespace.
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * This determines if traffic is allowed over public network. By default it is enabled.
+     * You can further restrict to specific IPs by configuring <seealso cref="P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.PartnerNamespaceProperties.InboundIpRules" />
+     * 
+     */
     @OutputExport(name="publicNetworkAccess", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicNetworkAccess;
 
+    /**
+     * @return This determines if traffic is allowed over public network. By default it is enabled.
+     * You can further restrict to specific IPs by configuring <seealso cref="P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.PartnerNamespaceProperties.InboundIpRules" />
+     * 
+     */
     public Output</* @Nullable */ String> getPublicNetworkAccess() {
         return this.publicNetworkAccess;
     }
+    /**
+     * The system metadata relating to Partner Namespace resource.
+     * 
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return The system metadata relating to Partner Namespace resource.
+     * 
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * Tags of the resource.
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Tags of the resource.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Type of the resource.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Type of the resource.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public PartnerNamespace(String name, PartnerNamespaceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:eventgrid:PartnerNamespace", name, args == null ? PartnerNamespaceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -114,6 +227,14 @@ public class PartnerNamespace extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static PartnerNamespace get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PartnerNamespace(name, id, options);
     }

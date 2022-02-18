@@ -19,22 +19,91 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GoogleBigQueryLinkedServiceResponse {
+    /**
+     * A comma-separated list of public BigQuery projects to access.
+     * 
+     */
     private final @Nullable Object additionalProjects;
+    /**
+     * List of tags that can be used for describing the linked service.
+     * 
+     */
     private final @Nullable List<Object> annotations;
+    /**
+     * The OAuth 2.0 authentication mechanism used for authentication. ServiceAuthentication can only be used on self-hosted IR.
+     * 
+     */
     private final String authenticationType;
+    /**
+     * The client id of the google application used to acquire the refresh token. Type: string (or Expression with resultType string).
+     * 
+     */
     private final @Nullable Object clientId;
+    /**
+     * The client secret of the google application used to acquire the refresh token.
+     * 
+     */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret;
+    /**
+     * The integration runtime reference.
+     * 
+     */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+    /**
+     * Linked service description.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * The service account email ID that is used for ServiceAuthentication and can only be used on self-hosted IR.
+     * 
+     */
     private final @Nullable Object email;
+    /**
+     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     private final @Nullable Object encryptedCredential;
+    /**
+     * The full path to the .p12 key file that is used to authenticate the service account email address and can only be used on self-hosted IR.
+     * 
+     */
     private final @Nullable Object keyFilePath;
+    /**
+     * Parameters for linked service.
+     * 
+     */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+    /**
+     * The default BigQuery project to query against.
+     * 
+     */
     private final Object project;
+    /**
+     * The refresh token obtained from Google for authorizing access to BigQuery for UserAuthentication.
+     * 
+     */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> refreshToken;
+    /**
+     * Whether to request access to Google Drive. Allowing Google Drive access enables support for federated tables that combine BigQuery data with data from Google Drive. The default value is false.
+     * 
+     */
     private final @Nullable Object requestGoogleDriveScope;
+    /**
+     * The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.
+     * 
+     */
     private final @Nullable Object trustedCertPath;
+    /**
+     * Type of linked service.
+     * Expected value is 'GoogleBigQuery'.
+     * 
+     */
     private final String type;
+    /**
+     * Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false.
+     * 
+     */
     private final @Nullable Object useSystemTrustStore;
 
     @OutputCustomType.Constructor({"additionalProjects","annotations","authenticationType","clientId","clientSecret","connectVia","description","email","encryptedCredential","keyFilePath","parameters","project","refreshToken","requestGoogleDriveScope","trustedCertPath","type","useSystemTrustStore"})
@@ -75,54 +144,123 @@ public final class GoogleBigQueryLinkedServiceResponse {
         this.useSystemTrustStore = useSystemTrustStore;
     }
 
+    /**
+     * A comma-separated list of public BigQuery projects to access.
+     * 
+     */
     public Optional<Object> getAdditionalProjects() {
         return Optional.ofNullable(this.additionalProjects);
     }
+    /**
+     * List of tags that can be used for describing the linked service.
+     * 
+     */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
+    /**
+     * The OAuth 2.0 authentication mechanism used for authentication. ServiceAuthentication can only be used on self-hosted IR.
+     * 
+     */
     public String getAuthenticationType() {
         return this.authenticationType;
     }
+    /**
+     * The client id of the google application used to acquire the refresh token. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> getClientId() {
         return Optional.ofNullable(this.clientId);
     }
+    /**
+     * The client secret of the google application used to acquire the refresh token.
+     * 
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getClientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
+    /**
+     * The integration runtime reference.
+     * 
+     */
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return Optional.ofNullable(this.connectVia);
     }
+    /**
+     * Linked service description.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * The service account email ID that is used for ServiceAuthentication and can only be used on self-hosted IR.
+     * 
+     */
     public Optional<Object> getEmail() {
         return Optional.ofNullable(this.email);
     }
+    /**
+     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> getEncryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
+    /**
+     * The full path to the .p12 key file that is used to authenticate the service account email address and can only be used on self-hosted IR.
+     * 
+     */
     public Optional<Object> getKeyFilePath() {
         return Optional.ofNullable(this.keyFilePath);
     }
+    /**
+     * Parameters for linked service.
+     * 
+     */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
+    /**
+     * The default BigQuery project to query against.
+     * 
+     */
     public Object getProject() {
         return this.project;
     }
+    /**
+     * The refresh token obtained from Google for authorizing access to BigQuery for UserAuthentication.
+     * 
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getRefreshToken() {
         return Optional.ofNullable(this.refreshToken);
     }
+    /**
+     * Whether to request access to Google Drive. Allowing Google Drive access enables support for federated tables that combine BigQuery data with data from Google Drive. The default value is false.
+     * 
+     */
     public Optional<Object> getRequestGoogleDriveScope() {
         return Optional.ofNullable(this.requestGoogleDriveScope);
     }
+    /**
+     * The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.
+     * 
+     */
     public Optional<Object> getTrustedCertPath() {
         return Optional.ofNullable(this.trustedCertPath);
     }
+    /**
+     * Type of linked service.
+     * Expected value is 'GoogleBigQuery'.
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false.
+     * 
+     */
     public Optional<Object> getUseSystemTrustStore() {
         return Optional.ofNullable(this.useSystemTrustStore);
     }

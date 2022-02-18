@@ -17,6 +17,10 @@ public final class ManagerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagerArgs Empty = new ManagerArgs();
 
+    /**
+     * Represents the type of StorSimple Manager.
+     * 
+     */
     @InputImport(name="cisIntrinsicSettings")
     private final @Nullable Input<ManagerIntrinsicSettingsArgs> cisIntrinsicSettings;
 
@@ -24,6 +28,10 @@ public final class ManagerArgs extends io.pulumi.resources.ResourceArgs {
         return this.cisIntrinsicSettings == null ? Input.empty() : this.cisIntrinsicSettings;
     }
 
+    /**
+     * The geo location of the resource.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -31,6 +39,10 @@ public final class ManagerArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The manager name
+     * 
+     */
     @InputImport(name="managerName")
     private final @Nullable Input<String> managerName;
 
@@ -38,6 +50,10 @@ public final class ManagerArgs extends io.pulumi.resources.ResourceArgs {
         return this.managerName == null ? Input.empty() : this.managerName;
     }
 
+    /**
+     * Specifies the state of the resource as it is getting provisioned. Value of "Succeeded" means the Manager was successfully created.
+     * 
+     */
     @InputImport(name="provisioningState")
     private final @Nullable Input<String> provisioningState;
 
@@ -45,6 +61,10 @@ public final class ManagerArgs extends io.pulumi.resources.ResourceArgs {
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
     }
 
+    /**
+     * The resource group name
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -52,6 +72,10 @@ public final class ManagerArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Specifies the Sku.
+     * 
+     */
     @InputImport(name="sku")
     private final @Nullable Input<ManagerSkuArgs> sku;
 
@@ -59,6 +83,10 @@ public final class ManagerArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku == null ? Input.empty() : this.sku;
     }
 
+    /**
+     * The tags attached to the resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

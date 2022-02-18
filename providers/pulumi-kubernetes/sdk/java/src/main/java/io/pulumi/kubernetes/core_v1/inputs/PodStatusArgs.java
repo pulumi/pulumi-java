@@ -14,10 +14,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * PodStatus represents information about the status of a pod. Status may trail the actual state of a system, especially if the node that hosts the pod cannot contact the control plane.
+ * 
+ */
 public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PodStatusArgs Empty = new PodStatusArgs();
 
+    /**
+     * Current service state of pod. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-conditions
+     * 
+     */
     @InputImport(name="conditions")
     private final @Nullable Input<List<PodConditionArgs>> conditions;
 
@@ -25,6 +33,10 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
         return this.conditions == null ? Input.empty() : this.conditions;
     }
 
+    /**
+     * The list has one entry per container in the manifest. Each entry is currently the output of `docker inspect`. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-and-container-status
+     * 
+     */
     @InputImport(name="containerStatuses")
     private final @Nullable Input<List<ContainerStatusArgs>> containerStatuses;
 
@@ -32,6 +44,10 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
         return this.containerStatuses == null ? Input.empty() : this.containerStatuses;
     }
 
+    /**
+     * Status for any ephemeral containers that have run in this pod. This field is beta-level and available on clusters that haven't disabled the EphemeralContainers feature gate.
+     * 
+     */
     @InputImport(name="ephemeralContainerStatuses")
     private final @Nullable Input<List<ContainerStatusArgs>> ephemeralContainerStatuses;
 
@@ -39,6 +55,10 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
         return this.ephemeralContainerStatuses == null ? Input.empty() : this.ephemeralContainerStatuses;
     }
 
+    /**
+     * IP address of the host to which the pod is assigned. Empty if not yet scheduled.
+     * 
+     */
     @InputImport(name="hostIP")
     private final @Nullable Input<String> hostIP;
 
@@ -46,6 +66,10 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
         return this.hostIP == null ? Input.empty() : this.hostIP;
     }
 
+    /**
+     * The list has one entry per init container in the manifest. The most recent successful init container will have ready = true, the most recently started container will have startTime set. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-and-container-status
+     * 
+     */
     @InputImport(name="initContainerStatuses")
     private final @Nullable Input<List<ContainerStatusArgs>> initContainerStatuses;
 
@@ -53,6 +77,10 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
         return this.initContainerStatuses == null ? Input.empty() : this.initContainerStatuses;
     }
 
+    /**
+     * A human readable message indicating details about why the pod is in this condition.
+     * 
+     */
     @InputImport(name="message")
     private final @Nullable Input<String> message;
 
@@ -60,6 +88,10 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
         return this.message == null ? Input.empty() : this.message;
     }
 
+    /**
+     * nominatedNodeName is set only when this pod preempts other pods on the node, but it cannot be scheduled right away as preemption victims receive their graceful termination periods. This field does not guarantee that the pod will be scheduled on this node. Scheduler may decide to place the pod elsewhere if other nodes become available sooner. Scheduler may also decide to give the resources on this node to a higher priority pod that is created after preemption. As a result, this field may be different than PodSpec.nodeName when the pod is scheduled.
+     * 
+     */
     @InputImport(name="nominatedNodeName")
     private final @Nullable Input<String> nominatedNodeName;
 
@@ -67,6 +99,21 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
         return this.nominatedNodeName == null ? Input.empty() : this.nominatedNodeName;
     }
 
+    /**
+     * The phase of a Pod is a simple, high-level summary of where the Pod is in its lifecycle. The conditions array, the reason and message fields, and the individual container status arrays contain more detail about the pod's status. There are five possible phase values:
+     * 
+     * Pending: The pod has been accepted by the Kubernetes system, but one or more of the container images has not been created. This includes time before being scheduled as well as time spent downloading images over the network, which could take a while. Running: The pod has been bound to a node, and all of the containers have been created. At least one container is still running, or is in the process of starting or restarting. Succeeded: All containers in the pod have terminated in success, and will not be restarted. Failed: All containers in the pod have terminated, and at least one container has terminated in failure. The container either exited with non-zero status or was terminated by the system. Unknown: For some reason the state of the pod could not be obtained, typically due to an error in communicating with the host of the pod.
+     * 
+     * More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-phase
+     * 
+     * Possible enum values:
+     *  - `"Failed"` means that all containers in the pod have terminated, and at least one container has terminated in a failure (exited with a non-zero exit code or was stopped by the system).
+     *  - `"Pending"` means the pod has been accepted by the system, but one or more of the containers has not been started. This includes time before being bound to a node, as well as time spent pulling images onto the host.
+     *  - `"Running"` means the pod has been bound to a node and all of the containers have been started. At least one container is still running or is in the process of being restarted.
+     *  - `"Succeeded"` means that all containers in the pod have voluntarily terminated with a container exit code of 0, and the system is not going to restart any of these containers.
+     *  - `"Unknown"` means that for some reason the state of the pod could not be obtained, typically due to an error in communicating with the host of the pod. Deprecated: It isn't being set since 2015 (74da3b14b0c0f658b3bb8d2def5094686d0e9095)
+     * 
+     */
     @InputImport(name="phase")
     private final @Nullable Input<String> phase;
 
@@ -74,6 +121,10 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
         return this.phase == null ? Input.empty() : this.phase;
     }
 
+    /**
+     * IP address allocated to the pod. Routable at least within the cluster. Empty if not yet allocated.
+     * 
+     */
     @InputImport(name="podIP")
     private final @Nullable Input<String> podIP;
 
@@ -81,6 +132,10 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
         return this.podIP == null ? Input.empty() : this.podIP;
     }
 
+    /**
+     * podIPs holds the IP addresses allocated to the pod. If this field is specified, the 0th entry must match the podIP field. Pods may be allocated at most 1 value for each of IPv4 and IPv6. This list is empty if no IPs have been allocated yet.
+     * 
+     */
     @InputImport(name="podIPs")
     private final @Nullable Input<List<PodIPArgs>> podIPs;
 
@@ -88,6 +143,15 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
         return this.podIPs == null ? Input.empty() : this.podIPs;
     }
 
+    /**
+     * The Quality of Service (QOS) classification assigned to the pod based on resource requirements See PodQOSClass type for available QOS classes More info: https://git.k8s.io/community/contributors/design-proposals/node/resource-qos.md
+     * 
+     * Possible enum values:
+     *  - `"BestEffort"` is the BestEffort qos class.
+     *  - `"Burstable"` is the Burstable qos class.
+     *  - `"Guaranteed"` is the Guaranteed qos class.
+     * 
+     */
     @InputImport(name="qosClass")
     private final @Nullable Input<String> qosClass;
 
@@ -95,6 +159,10 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
         return this.qosClass == null ? Input.empty() : this.qosClass;
     }
 
+    /**
+     * A brief CamelCase message indicating details about why the pod is in this state. e.g. 'Evicted'
+     * 
+     */
     @InputImport(name="reason")
     private final @Nullable Input<String> reason;
 
@@ -102,6 +170,10 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
         return this.reason == null ? Input.empty() : this.reason;
     }
 
+    /**
+     * RFC 3339 date and time at which the object was acknowledged by the Kubelet. This is before the Kubelet pulled the container image(s) for the pod.
+     * 
+     */
     @InputImport(name="startTime")
     private final @Nullable Input<String> startTime;
 

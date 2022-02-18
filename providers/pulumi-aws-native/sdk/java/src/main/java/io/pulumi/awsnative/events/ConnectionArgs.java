@@ -30,6 +30,10 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.authorizationType;
     }
 
+    /**
+     * Description of the connection.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -37,6 +41,10 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Name of the connection.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

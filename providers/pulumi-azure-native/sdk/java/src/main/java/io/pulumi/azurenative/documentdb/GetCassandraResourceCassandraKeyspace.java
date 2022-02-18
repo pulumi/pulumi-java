@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCassandraResourceCassandraKeyspace {
+/**
+ * An Azure Cosmos DB Cassandra keyspace.
+ * API Version: 2021-03-15.
+ * 
+ *
+ * An Azure Cosmos DB Cassandra keyspace.
+ * 
+ */
     public static CompletableFuture<GetCassandraResourceCassandraKeyspaceResult> invokeAsync(GetCassandraResourceCassandraKeyspaceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:getCassandraResourceCassandraKeyspace", TypeShape.of(GetCassandraResourceCassandraKeyspaceResult.class), args == null ? GetCassandraResourceCassandraKeyspaceArgs.Empty : args, Utilities.withVersion(options));
     }

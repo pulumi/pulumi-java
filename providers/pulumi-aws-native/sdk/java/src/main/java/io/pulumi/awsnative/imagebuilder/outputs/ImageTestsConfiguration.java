@@ -12,7 +12,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ImageTestsConfiguration {
+    /**
+     * ImageTestsEnabled
+     * 
+     */
     private final @Nullable Boolean imageTestsEnabled;
+    /**
+     * TimeoutMinutes
+     * 
+     */
     private final @Nullable Integer timeoutMinutes;
 
     @OutputCustomType.Constructor({"imageTestsEnabled","timeoutMinutes"})
@@ -23,9 +31,17 @@ public final class ImageTestsConfiguration {
         this.timeoutMinutes = timeoutMinutes;
     }
 
+    /**
+     * ImageTestsEnabled
+     * 
+     */
     public Optional<Boolean> getImageTestsEnabled() {
         return Optional.ofNullable(this.imageTestsEnabled);
     }
+    /**
+     * TimeoutMinutes
+     * 
+     */
     public Optional<Integer> getTimeoutMinutes() {
         return Optional.ofNullable(this.timeoutMinutes);
     }

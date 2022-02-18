@@ -11,11 +11,35 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RcmProxyDetailsResponse {
+    /**
+     * The health of the RCM proxy.
+     * 
+     */
     private final String health;
+    /**
+     * The health errors.
+     * 
+     */
     private final List<HealthErrorResponse> healthErrors;
+    /**
+     * The RCM proxy Id.
+     * 
+     */
     private final String id;
+    /**
+     * The last heartbeat received from the RCM proxy.
+     * 
+     */
     private final String lastHeartbeatUtc;
+    /**
+     * The RCM proxy name.
+     * 
+     */
     private final String name;
+    /**
+     * The RCM proxy version.
+     * 
+     */
     private final String version;
 
     @OutputCustomType.Constructor({"health","healthErrors","id","lastHeartbeatUtc","name","version"})
@@ -34,21 +58,45 @@ public final class RcmProxyDetailsResponse {
         this.version = Objects.requireNonNull(version);
     }
 
+    /**
+     * The health of the RCM proxy.
+     * 
+     */
     public String getHealth() {
         return this.health;
     }
+    /**
+     * The health errors.
+     * 
+     */
     public List<HealthErrorResponse> getHealthErrors() {
         return this.healthErrors;
     }
+    /**
+     * The RCM proxy Id.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * The last heartbeat received from the RCM proxy.
+     * 
+     */
     public String getLastHeartbeatUtc() {
         return this.lastHeartbeatUtc;
     }
+    /**
+     * The RCM proxy name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The RCM proxy version.
+     * 
+     */
     public String getVersion() {
         return this.version;
     }

@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ConfidentialNodesResponse {
+    /**
+     * Whether Confidential Nodes feature is enabled.
+     * 
+     */
     private final Boolean enabled;
 
     @OutputCustomType.Constructor({"enabled"})
@@ -16,6 +20,10 @@ public final class ConfidentialNodesResponse {
         this.enabled = Objects.requireNonNull(enabled);
     }
 
+    /**
+     * Whether Confidential Nodes feature is enabled.
+     * 
+     */
     public Boolean getEnabled() {
         return this.enabled;
     }

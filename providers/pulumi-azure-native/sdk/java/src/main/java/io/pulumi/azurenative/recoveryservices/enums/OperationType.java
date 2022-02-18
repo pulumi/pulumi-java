@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Re-Do Operation
+     * 
+     */
     @EnumType
     public enum OperationType {
         Invalid("Invalid"),

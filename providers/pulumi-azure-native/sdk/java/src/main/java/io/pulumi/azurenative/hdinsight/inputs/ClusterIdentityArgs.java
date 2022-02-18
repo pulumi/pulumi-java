@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Identity for the cluster.
+ * 
+ */
 public final class ClusterIdentityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ClusterIdentityArgs Empty = new ClusterIdentityArgs();
 
+    /**
+     * The type of identity used for the cluster. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<ResourceIdentityType> type;
 
@@ -24,6 +32,10 @@ public final class ClusterIdentityArgs extends io.pulumi.resources.ResourceArgs 
         return this.type == null ? Input.empty() : this.type;
     }
 
+    /**
+     * The list of user identities associated with the cluster. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+     * 
+     */
     @InputImport(name="userAssignedIdentities")
     private final @Nullable Input<Map<String,ClusterIdentityUserAssignedIdentitiesArgs>> userAssignedIdentities;
 

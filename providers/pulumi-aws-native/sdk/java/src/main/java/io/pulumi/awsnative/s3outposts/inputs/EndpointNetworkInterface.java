@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The container for the network interface.
+ * 
+ */
 public final class EndpointNetworkInterface extends io.pulumi.resources.InvokeArgs {
 
     public static final EndpointNetworkInterface Empty = new EndpointNetworkInterface();

@@ -18,6 +18,10 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
 
     public static final GroupMembershipState Empty = new GroupMembershipState();
 
+    /**
+     * The time when the Membership was created.
+     * 
+     */
     @InputImport(name="createTime")
     private final @Nullable Input<String> createTime;
 
@@ -25,6 +29,10 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
         return this.createTime == null ? Input.empty() : this.createTime;
     }
 
+    /**
+     * The name of the Group to create this membership in.
+     * 
+     */
     @InputImport(name="group")
     private final @Nullable Input<String> group;
 
@@ -32,6 +40,11 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
         return this.group == null ? Input.empty() : this.group;
     }
 
+    /**
+     * EntityKey of the member.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="memberKey")
     private final @Nullable Input<GroupMembershipMemberKeyGetArgs> memberKey;
 
@@ -39,6 +52,11 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
         return this.memberKey == null ? Input.empty() : this.memberKey;
     }
 
+    /**
+     * The name of the MembershipRole. Must be one of OWNER, MANAGER, MEMBER.
+     * Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -46,6 +64,11 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * EntityKey of the member.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="preferredMemberKey")
     private final @Nullable Input<GroupMembershipPreferredMemberKeyGetArgs> preferredMemberKey;
 
@@ -53,6 +76,12 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
         return this.preferredMemberKey == null ? Input.empty() : this.preferredMemberKey;
     }
 
+    /**
+     * The MembershipRoles that apply to the Membership.
+     * Must not contain duplicate MembershipRoles with the same name.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="roles")
     private final @Nullable Input<List<GroupMembershipRoleGetArgs>> roles;
 
@@ -60,6 +89,10 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
         return this.roles == null ? Input.empty() : this.roles;
     }
 
+    /**
+     * The type of the membership.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 
@@ -67,6 +100,10 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
         return this.type == null ? Input.empty() : this.type;
     }
 
+    /**
+     * The time when the Membership was last updated.
+     * 
+     */
     @InputImport(name="updateTime")
     private final @Nullable Input<String> updateTime;
 

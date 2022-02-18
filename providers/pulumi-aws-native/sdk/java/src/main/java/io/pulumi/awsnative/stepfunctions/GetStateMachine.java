@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetStateMachine {
+/**
+ * Resource schema for StateMachine
+ * 
+ */
     public static CompletableFuture<GetStateMachineResult> invokeAsync(GetStateMachineArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:stepfunctions:getStateMachine", TypeShape.of(GetStateMachineResult.class), args == null ? GetStateMachineArgs.Empty : args, Utilities.withVersion(options));
     }

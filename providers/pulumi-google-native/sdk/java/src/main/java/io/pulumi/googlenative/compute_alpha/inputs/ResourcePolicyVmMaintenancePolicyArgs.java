@@ -22,6 +22,10 @@ public final class ResourcePolicyVmMaintenancePolicyArgs extends io.pulumi.resou
         return this.concurrencyControlGroup == null ? Input.empty() : this.concurrencyControlGroup;
     }
 
+    /**
+     * Maintenance windows that are applied to VMs covered by this policy.
+     * 
+     */
     @InputImport(name="maintenanceWindow")
     private final @Nullable Input<ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs> maintenanceWindow;
 

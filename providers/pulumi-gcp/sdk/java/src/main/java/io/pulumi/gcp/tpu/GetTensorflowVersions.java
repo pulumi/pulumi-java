@@ -13,6 +13,18 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTensorflowVersions {
+/**
+ * Get TensorFlow versions available for a project. For more information see the [official documentation](https://cloud.google.com/tpu/docs/) and [API](https://cloud.google.com/tpu/docs/reference/rest/v1/projects.locations.tensorflowVersions).
+ * 
+ * ## Example Usage
+ * 
+ *
+ * A collection of arguments for invoking getTensorflowVersions.
+ * 
+ *
+ * A collection of values returned by getTensorflowVersions.
+ * 
+ */
     public static CompletableFuture<GetTensorflowVersionsResult> invokeAsync(@Nullable GetTensorflowVersionsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:tpu/getTensorflowVersions:getTensorflowVersions", TypeShape.of(GetTensorflowVersionsResult.class), args == null ? GetTensorflowVersionsArgs.Empty : args, Utilities.withVersion(options));
     }

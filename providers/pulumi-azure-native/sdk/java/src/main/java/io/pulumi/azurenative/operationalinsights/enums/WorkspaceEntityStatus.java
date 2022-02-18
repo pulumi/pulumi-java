@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The provisioning state of the workspace.
+     * 
+     */
     @EnumType
     public enum WorkspaceEntityStatus {
         Creating("Creating"),

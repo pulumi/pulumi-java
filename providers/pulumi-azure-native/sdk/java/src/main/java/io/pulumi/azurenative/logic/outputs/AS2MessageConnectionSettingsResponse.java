@@ -9,9 +9,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AS2MessageConnectionSettingsResponse {
+    /**
+     * The value indicating whether to ignore mismatch in certificate name.
+     * 
+     */
     private final Boolean ignoreCertificateNameMismatch;
+    /**
+     * The value indicating whether to keep the connection alive.
+     * 
+     */
     private final Boolean keepHttpConnectionAlive;
+    /**
+     * The value indicating whether to support HTTP status code 'CONTINUE'.
+     * 
+     */
     private final Boolean supportHttpStatusCodeContinue;
+    /**
+     * The value indicating whether to unfold the HTTP headers.
+     * 
+     */
     private final Boolean unfoldHttpHeaders;
 
     @OutputCustomType.Constructor({"ignoreCertificateNameMismatch","keepHttpConnectionAlive","supportHttpStatusCodeContinue","unfoldHttpHeaders"})
@@ -26,15 +42,31 @@ public final class AS2MessageConnectionSettingsResponse {
         this.unfoldHttpHeaders = Objects.requireNonNull(unfoldHttpHeaders);
     }
 
+    /**
+     * The value indicating whether to ignore mismatch in certificate name.
+     * 
+     */
     public Boolean getIgnoreCertificateNameMismatch() {
         return this.ignoreCertificateNameMismatch;
     }
+    /**
+     * The value indicating whether to keep the connection alive.
+     * 
+     */
     public Boolean getKeepHttpConnectionAlive() {
         return this.keepHttpConnectionAlive;
     }
+    /**
+     * The value indicating whether to support HTTP status code 'CONTINUE'.
+     * 
+     */
     public Boolean getSupportHttpStatusCodeContinue() {
         return this.supportHttpStatusCodeContinue;
     }
+    /**
+     * The value indicating whether to unfold the HTTP headers.
+     * 
+     */
     public Boolean getUnfoldHttpHeaders() {
         return this.unfoldHttpHeaders;
     }

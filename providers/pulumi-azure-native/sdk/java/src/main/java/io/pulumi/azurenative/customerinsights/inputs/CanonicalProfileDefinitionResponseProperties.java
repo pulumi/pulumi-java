@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The definition of a canonical profile property.
+ * 
+ */
 public final class CanonicalProfileDefinitionResponseProperties extends io.pulumi.resources.InvokeArgs {
 
     public static final CanonicalProfileDefinitionResponseProperties Empty = new CanonicalProfileDefinitionResponseProperties();
 
+    /**
+     * Profile name.
+     * 
+     */
     @InputImport(name="profileName")
     private final @Nullable String profileName;
 
@@ -22,6 +30,10 @@ public final class CanonicalProfileDefinitionResponseProperties extends io.pulum
         return this.profileName == null ? Optional.empty() : Optional.ofNullable(this.profileName);
     }
 
+    /**
+     * Property name of profile.
+     * 
+     */
     @InputImport(name="profilePropertyName")
     private final @Nullable String profilePropertyName;
 
@@ -29,6 +41,10 @@ public final class CanonicalProfileDefinitionResponseProperties extends io.pulum
         return this.profilePropertyName == null ? Optional.empty() : Optional.ofNullable(this.profilePropertyName);
     }
 
+    /**
+     * The rank.
+     * 
+     */
     @InputImport(name="rank")
     private final @Nullable Integer rank;
 
@@ -36,6 +52,10 @@ public final class CanonicalProfileDefinitionResponseProperties extends io.pulum
         return this.rank == null ? Optional.empty() : Optional.ofNullable(this.rank);
     }
 
+    /**
+     * Type of canonical property value.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 
@@ -43,6 +63,10 @@ public final class CanonicalProfileDefinitionResponseProperties extends io.pulum
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
+    /**
+     * Value of the canonical property.
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable String value;
 

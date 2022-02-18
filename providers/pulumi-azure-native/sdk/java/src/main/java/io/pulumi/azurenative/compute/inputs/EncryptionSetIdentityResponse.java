@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The managed identity for the disk encryption set. It should be given permission on the key vault before it can be used to encrypt disks.
+ * 
+ */
 public final class EncryptionSetIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EncryptionSetIdentityResponse Empty = new EncryptionSetIdentityResponse();
 
+    /**
+     * The object id of the Managed Identity Resource. This will be sent to the RP from ARM via the x-ms-identity-principal-id header in the PUT request if the resource has a systemAssigned(implicit) identity
+     * 
+     */
     @InputImport(name="principalId", required=true)
     private final String principalId;
 
@@ -21,6 +29,10 @@ public final class EncryptionSetIdentityResponse extends io.pulumi.resources.Inv
         return this.principalId;
     }
 
+    /**
+     * The tenant id of the Managed Identity Resource. This will be sent to the RP from ARM via the x-ms-client-tenant-id header in the PUT request if the resource has a systemAssigned(implicit) identity
+     * 
+     */
     @InputImport(name="tenantId", required=true)
     private final String tenantId;
 
@@ -28,6 +40,10 @@ public final class EncryptionSetIdentityResponse extends io.pulumi.resources.Inv
         return this.tenantId;
     }
 
+    /**
+     * The type of Managed Identity used by the DiskEncryptionSet. Only SystemAssigned is supported for new creations. Disk Encryption Sets can be updated with Identity type None during migration of subscription to a new Azure Active Directory tenant; it will cause the encrypted resources to lose access to the keys.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 

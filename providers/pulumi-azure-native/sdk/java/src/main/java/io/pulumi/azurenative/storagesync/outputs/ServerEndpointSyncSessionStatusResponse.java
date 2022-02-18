@@ -13,13 +13,45 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ServerEndpointSyncSessionStatusResponse {
+    /**
+     * Array of per-item errors coming from the last sync session.
+     * 
+     */
     private final List<ServerEndpointFilesNotSyncingErrorResponse> filesNotSyncingErrors;
+    /**
+     * Sync mode
+     * 
+     */
     private final String lastSyncMode;
+    /**
+     * Last sync per item error count.
+     * 
+     */
     private final Double lastSyncPerItemErrorCount;
+    /**
+     * Last sync result (HResult)
+     * 
+     */
     private final Integer lastSyncResult;
+    /**
+     * Last sync success timestamp
+     * 
+     */
     private final String lastSyncSuccessTimestamp;
+    /**
+     * Last sync timestamp
+     * 
+     */
     private final String lastSyncTimestamp;
+    /**
+     * Count of persistent files not syncing.
+     * 
+     */
     private final Double persistentFilesNotSyncingCount;
+    /**
+     * Count of transient files not syncing.
+     * 
+     */
     private final Double transientFilesNotSyncingCount;
 
     @OutputCustomType.Constructor({"filesNotSyncingErrors","lastSyncMode","lastSyncPerItemErrorCount","lastSyncResult","lastSyncSuccessTimestamp","lastSyncTimestamp","persistentFilesNotSyncingCount","transientFilesNotSyncingCount"})
@@ -42,27 +74,59 @@ public final class ServerEndpointSyncSessionStatusResponse {
         this.transientFilesNotSyncingCount = Objects.requireNonNull(transientFilesNotSyncingCount);
     }
 
+    /**
+     * Array of per-item errors coming from the last sync session.
+     * 
+     */
     public List<ServerEndpointFilesNotSyncingErrorResponse> getFilesNotSyncingErrors() {
         return this.filesNotSyncingErrors;
     }
+    /**
+     * Sync mode
+     * 
+     */
     public String getLastSyncMode() {
         return this.lastSyncMode;
     }
+    /**
+     * Last sync per item error count.
+     * 
+     */
     public Double getLastSyncPerItemErrorCount() {
         return this.lastSyncPerItemErrorCount;
     }
+    /**
+     * Last sync result (HResult)
+     * 
+     */
     public Integer getLastSyncResult() {
         return this.lastSyncResult;
     }
+    /**
+     * Last sync success timestamp
+     * 
+     */
     public String getLastSyncSuccessTimestamp() {
         return this.lastSyncSuccessTimestamp;
     }
+    /**
+     * Last sync timestamp
+     * 
+     */
     public String getLastSyncTimestamp() {
         return this.lastSyncTimestamp;
     }
+    /**
+     * Count of persistent files not syncing.
+     * 
+     */
     public Double getPersistentFilesNotSyncingCount() {
         return this.persistentFilesNotSyncingCount;
     }
+    /**
+     * Count of transient files not syncing.
+     * 
+     */
     public Double getTransientFilesNotSyncingCount() {
         return this.transientFilesNotSyncingCount;
     }

@@ -9,8 +9,16 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetKMSSecretCiphertextResult {
+    /**
+     * Contains the result of encrypting the provided plaintext, encoded in base64.
+     * 
+     */
     private final String ciphertext;
     private final String cryptoKey;
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
     private final String plaintext;
 
@@ -26,12 +34,20 @@ public final class GetKMSSecretCiphertextResult {
         this.plaintext = Objects.requireNonNull(plaintext);
     }
 
+    /**
+     * Contains the result of encrypting the provided plaintext, encoded in base64.
+     * 
+     */
     public String getCiphertext() {
         return this.ciphertext;
     }
     public String getCryptoKey() {
         return this.cryptoKey;
     }
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }

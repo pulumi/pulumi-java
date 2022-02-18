@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSnapshotSchedulePolicy {
+/**
+ * Get details of a single snapshot schedule policy.
+ * 
+ */
     public static CompletableFuture<GetSnapshotSchedulePolicyResult> invokeAsync(GetSnapshotSchedulePolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:baremetalsolution/v2:getSnapshotSchedulePolicy", TypeShape.of(GetSnapshotSchedulePolicyResult.class), args == null ? GetSnapshotSchedulePolicyArgs.Empty : args, Utilities.withVersion(options));
     }

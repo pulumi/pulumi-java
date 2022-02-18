@@ -21,6 +21,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * An intent represents an action that the user wants to perform. You create a bot to support one or more related intents.
+ * 
+ */
 public final class BotIntentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BotIntentArgs Empty = new BotIntentArgs();
@@ -109,6 +113,10 @@ public final class BotIntentArgs extends io.pulumi.resources.ResourceArgs {
         return this.slotPriorities == null ? Input.empty() : this.slotPriorities;
     }
 
+    /**
+     * List of slots
+     * 
+     */
     @InputImport(name="slots")
     private final @Nullable Input<List<BotSlotArgs>> slots;
 

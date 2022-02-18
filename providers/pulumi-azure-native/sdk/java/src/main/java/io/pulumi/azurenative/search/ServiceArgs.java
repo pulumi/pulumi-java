@@ -21,6 +21,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceArgs Empty = new ServiceArgs();
 
+    /**
+     * Applicable only for the standard3 SKU. You can set this property to enable up to 3 high density partitions that allow up to 1000 indexes, which is much higher than the maximum indexes allowed for any other SKU. For the standard3 SKU, the value is either 'default' or 'highDensity'. For all other SKUs, this value must be 'default'.
+     * 
+     */
     @InputImport(name="hostingMode")
     private final @Nullable Input<HostingMode> hostingMode;
 
@@ -28,6 +32,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.hostingMode == null ? Input.empty() : this.hostingMode;
     }
 
+    /**
+     * The identity of the resource.
+     * 
+     */
     @InputImport(name="identity")
     private final @Nullable Input<IdentityArgs> identity;
 
@@ -35,6 +43,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity == null ? Input.empty() : this.identity;
     }
 
+    /**
+     * The geo-location where the resource lives
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -42,6 +54,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Network specific rules that determine how the Azure Cognitive Search service may be reached.
+     * 
+     */
     @InputImport(name="networkRuleSet")
     private final @Nullable Input<NetworkRuleSetArgs> networkRuleSet;
 
@@ -49,6 +65,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.networkRuleSet == null ? Input.empty() : this.networkRuleSet;
     }
 
+    /**
+     * The number of partitions in the search service; if specified, it can be 1, 2, 3, 4, 6, or 12. Values greater than 1 are only valid for standard SKUs. For 'standard3' services with hostingMode set to 'highDensity', the allowed values are between 1 and 3.
+     * 
+     */
     @InputImport(name="partitionCount")
     private final @Nullable Input<Integer> partitionCount;
 
@@ -56,6 +76,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.partitionCount == null ? Input.empty() : this.partitionCount;
     }
 
+    /**
+     * This value can be set to 'enabled' to avoid breaking changes on existing customer resources and templates. If set to 'disabled', traffic over public interface is not allowed, and private endpoint connections would be the exclusive access method.
+     * 
+     */
     @InputImport(name="publicNetworkAccess")
     private final @Nullable Input<PublicNetworkAccess> publicNetworkAccess;
 
@@ -63,6 +87,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
     }
 
+    /**
+     * The number of replicas in the search service. If specified, it must be a value between 1 and 12 inclusive for standard SKUs or between 1 and 3 inclusive for basic SKU.
+     * 
+     */
     @InputImport(name="replicaCount")
     private final @Nullable Input<Integer> replicaCount;
 
@@ -70,6 +98,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.replicaCount == null ? Input.empty() : this.replicaCount;
     }
 
+    /**
+     * The name of the resource group within the current subscription. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -77,6 +109,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the Azure Cognitive Search service to create or update. Search service names must only contain lowercase letters, digits or dashes, cannot use dash as the first two or last one characters, cannot contain consecutive dashes, and must be between 2 and 60 characters in length. Search service names must be globally unique since they are part of the service URI (https://<name>.search.windows.net). You cannot change the service name after the service is created.
+     * 
+     */
     @InputImport(name="searchServiceName")
     private final @Nullable Input<String> searchServiceName;
 
@@ -84,6 +120,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.searchServiceName == null ? Input.empty() : this.searchServiceName;
     }
 
+    /**
+     * The SKU of the Search Service, which determines price tier and capacity limits. This property is required when creating a new Search Service.
+     * 
+     */
     @InputImport(name="sku")
     private final @Nullable Input<SkuArgs> sku;
 
@@ -91,6 +131,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku == null ? Input.empty() : this.sku;
     }
 
+    /**
+     * Resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A namespace junction.
+ * 
+ */
 public final class NamespaceJunctionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NamespaceJunctionResponse Empty = new NamespaceJunctionResponse();
 
+    /**
+     * Namespace path on a Cache for a Storage Target.
+     * 
+     */
     @InputImport(name="namespacePath")
     private final @Nullable String namespacePath;
 
@@ -21,6 +29,10 @@ public final class NamespaceJunctionResponse extends io.pulumi.resources.InvokeA
         return this.namespacePath == null ? Optional.empty() : Optional.ofNullable(this.namespacePath);
     }
 
+    /**
+     * Name of the access policy applied to this junction.
+     * 
+     */
     @InputImport(name="nfsAccessPolicy")
     private final @Nullable String nfsAccessPolicy;
 
@@ -28,6 +40,10 @@ public final class NamespaceJunctionResponse extends io.pulumi.resources.InvokeA
         return this.nfsAccessPolicy == null ? Optional.empty() : Optional.ofNullable(this.nfsAccessPolicy);
     }
 
+    /**
+     * NFS export where targetPath exists.
+     * 
+     */
     @InputImport(name="nfsExport")
     private final @Nullable String nfsExport;
 
@@ -35,6 +51,10 @@ public final class NamespaceJunctionResponse extends io.pulumi.resources.InvokeA
         return this.nfsExport == null ? Optional.empty() : Optional.ofNullable(this.nfsExport);
     }
 
+    /**
+     * Path in Storage Target to which namespacePath points.
+     * 
+     */
     @InputImport(name="targetPath")
     private final @Nullable String targetPath;
 

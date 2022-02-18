@@ -16,6 +16,10 @@ public final class IAMCustomRoleState extends io.pulumi.resources.ResourceArgs {
 
     public static final IAMCustomRoleState Empty = new IAMCustomRoleState();
 
+    /**
+     * (Optional) The current deleted state of the role.
+     * 
+     */
     @InputImport(name="deleted")
     private final @Nullable Input<Boolean> deleted;
 
@@ -23,6 +27,10 @@ public final class IAMCustomRoleState extends io.pulumi.resources.ResourceArgs {
         return this.deleted == null ? Input.empty() : this.deleted;
     }
 
+    /**
+     * A human-readable description for the role.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -30,6 +38,10 @@ public final class IAMCustomRoleState extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The name of the role in the format `projects/{{project}}/roles/{{role_id}}`. Like `id`, this field can be used as a reference in other resources such as IAM role bindings.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -37,6 +49,10 @@ public final class IAMCustomRoleState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The names of the permissions this role grants when bound in an IAM policy. At least one permission must be specified.
+     * 
+     */
     @InputImport(name="permissions")
     private final @Nullable Input<List<String>> permissions;
 
@@ -44,6 +60,11 @@ public final class IAMCustomRoleState extends io.pulumi.resources.ResourceArgs {
         return this.permissions == null ? Input.empty() : this.permissions;
     }
 
+    /**
+     * The project that the service account will be created in.
+     * Defaults to the provider project configuration.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -51,6 +72,10 @@ public final class IAMCustomRoleState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The camel case role id to use for this role. Cannot contain `-` characters.
+     * 
+     */
     @InputImport(name="roleId")
     private final @Nullable Input<String> roleId;
 
@@ -58,6 +83,12 @@ public final class IAMCustomRoleState extends io.pulumi.resources.ResourceArgs {
         return this.roleId == null ? Input.empty() : this.roleId;
     }
 
+    /**
+     * The current launch stage of the role.
+     * Defaults to `GA`.
+     * List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1/organizations.roles#Role.RoleLaunchStage).
+     * 
+     */
     @InputImport(name="stage")
     private final @Nullable Input<String> stage;
 
@@ -65,6 +96,10 @@ public final class IAMCustomRoleState extends io.pulumi.resources.ResourceArgs {
         return this.stage == null ? Input.empty() : this.stage;
     }
 
+    /**
+     * A human-readable title for the role.
+     * 
+     */
     @InputImport(name="title")
     private final @Nullable Input<String> title;
 

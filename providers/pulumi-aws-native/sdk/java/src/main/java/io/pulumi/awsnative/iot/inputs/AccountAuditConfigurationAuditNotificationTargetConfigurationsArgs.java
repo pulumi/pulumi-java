@@ -10,6 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Information about the targets to which audit notifications are sent.
+ * 
+ */
 public final class AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs Empty = new AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs();

@@ -22,6 +22,10 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
 
     public static final DeviceState Empty = new DeviceState();
 
+    /**
+     * If a device is blocked, connections or requests from this device will fail.
+     * 
+     */
     @InputImport(name="blocked")
     private final @Nullable Input<Boolean> blocked;
 
@@ -29,6 +33,10 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
         return this.blocked == null ? Input.empty() : this.blocked;
     }
 
+    /**
+     * The most recent device configuration, which is eventually sent from Cloud IoT Core to the device.
+     * 
+     */
     @InputImport(name="configs")
     private final @Nullable Input<List<DeviceConfigGetArgs>> configs;
 
@@ -36,6 +44,11 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
         return this.configs == null ? Input.empty() : this.configs;
     }
 
+    /**
+     * The credentials used to authenticate this device.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="credentials")
     private final @Nullable Input<List<DeviceCredentialGetArgs>> credentials;
 
@@ -43,6 +56,11 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
         return this.credentials == null ? Input.empty() : this.credentials;
     }
 
+    /**
+     * Gateway-related configuration and state.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="gatewayConfig")
     private final @Nullable Input<DeviceGatewayConfigGetArgs> gatewayConfig;
 
@@ -50,6 +68,10 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
         return this.gatewayConfig == null ? Input.empty() : this.gatewayConfig;
     }
 
+    /**
+     * The last time a cloud-to-device config version acknowledgment was received from the device.
+     * 
+     */
     @InputImport(name="lastConfigAckTime")
     private final @Nullable Input<String> lastConfigAckTime;
 
@@ -57,6 +79,10 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
         return this.lastConfigAckTime == null ? Input.empty() : this.lastConfigAckTime;
     }
 
+    /**
+     * The last time a cloud-to-device config version was sent to the device.
+     * 
+     */
     @InputImport(name="lastConfigSendTime")
     private final @Nullable Input<String> lastConfigSendTime;
 
@@ -64,6 +90,10 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
         return this.lastConfigSendTime == null ? Input.empty() : this.lastConfigSendTime;
     }
 
+    /**
+     * The error message of the most recent error, such as a failure to publish to Cloud Pub/Sub.
+     * 
+     */
     @InputImport(name="lastErrorStatuses")
     private final @Nullable Input<List<DeviceLastErrorStatusGetArgs>> lastErrorStatuses;
 
@@ -71,6 +101,10 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
         return this.lastErrorStatuses == null ? Input.empty() : this.lastErrorStatuses;
     }
 
+    /**
+     * The time the most recent error occurred, such as a failure to publish to Cloud Pub/Sub.
+     * 
+     */
     @InputImport(name="lastErrorTime")
     private final @Nullable Input<String> lastErrorTime;
 
@@ -78,6 +112,10 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
         return this.lastErrorTime == null ? Input.empty() : this.lastErrorTime;
     }
 
+    /**
+     * The last time a telemetry event was received.
+     * 
+     */
     @InputImport(name="lastEventTime")
     private final @Nullable Input<String> lastEventTime;
 
@@ -85,6 +123,10 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
         return this.lastEventTime == null ? Input.empty() : this.lastEventTime;
     }
 
+    /**
+     * The last time an MQTT PINGREQ was received.
+     * 
+     */
     @InputImport(name="lastHeartbeatTime")
     private final @Nullable Input<String> lastHeartbeatTime;
 
@@ -92,6 +134,10 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
         return this.lastHeartbeatTime == null ? Input.empty() : this.lastHeartbeatTime;
     }
 
+    /**
+     * The last time a state event was received.
+     * 
+     */
     @InputImport(name="lastStateTime")
     private final @Nullable Input<String> lastStateTime;
 
@@ -99,6 +145,11 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
         return this.lastStateTime == null ? Input.empty() : this.lastStateTime;
     }
 
+    /**
+     * The logging verbosity for device activity.
+     * Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
+     * 
+     */
     @InputImport(name="logLevel")
     private final @Nullable Input<String> logLevel;
 
@@ -106,6 +157,10 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
         return this.logLevel == null ? Input.empty() : this.logLevel;
     }
 
+    /**
+     * The metadata key-value pairs assigned to the device.
+     * 
+     */
     @InputImport(name="metadata")
     private final @Nullable Input<Map<String,String>> metadata;
 
@@ -113,6 +168,10 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
+    /**
+     * A unique name for the resource.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -120,6 +179,11 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * A server-defined unique numeric ID for the device. This is a more compact way to identify devices, and it is globally
+     * unique.
+     * 
+     */
     @InputImport(name="numId")
     private final @Nullable Input<String> numId;
 
@@ -127,6 +191,10 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
         return this.numId == null ? Input.empty() : this.numId;
     }
 
+    /**
+     * The name of the device registry where this device should be created.
+     * 
+     */
     @InputImport(name="registry")
     private final @Nullable Input<String> registry;
 
@@ -134,6 +202,10 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
         return this.registry == null ? Input.empty() : this.registry;
     }
 
+    /**
+     * The state most recently received from the device.
+     * 
+     */
     @InputImport(name="states")
     private final @Nullable Input<List<DeviceStateGetArgs>> states;
 

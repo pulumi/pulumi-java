@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Enables activity metrics.
+ * 
+ */
 public final class StorageLensActivityMetricsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StorageLensActivityMetricsArgs Empty = new StorageLensActivityMetricsArgs();
 
+    /**
+     * Specifies whether activity metrics are enabled or disabled.
+     * 
+     */
     @InputImport(name="isEnabled")
     private final @Nullable Input<Boolean> isEnabled;
 

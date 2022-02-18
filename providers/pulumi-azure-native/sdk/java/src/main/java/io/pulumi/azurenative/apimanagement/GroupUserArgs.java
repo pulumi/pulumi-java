@@ -14,6 +14,10 @@ public final class GroupUserArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GroupUserArgs Empty = new GroupUserArgs();
 
+    /**
+     * Group identifier. Must be unique in the current API Management service instance.
+     * 
+     */
     @InputImport(name="groupId", required=true)
     private final Input<String> groupId;
 
@@ -21,6 +25,10 @@ public final class GroupUserArgs extends io.pulumi.resources.ResourceArgs {
         return this.groupId;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -28,6 +36,10 @@ public final class GroupUserArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the API Management service.
+     * 
+     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 
@@ -35,6 +47,10 @@ public final class GroupUserArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceName;
     }
 
+    /**
+     * User identifier. Must be unique in the current API Management service instance.
+     * 
+     */
     @InputImport(name="userId")
     private final @Nullable Input<String> userId;
 

@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ClusterClusterConfigMetastoreConfig {
+    /**
+     * Resource name of an existing Dataproc Metastore service.
+     * 
+     */
     private final String dataprocMetastoreService;
 
     @OutputCustomType.Constructor({"dataprocMetastoreService"})
@@ -16,6 +20,10 @@ public final class ClusterClusterConfigMetastoreConfig {
         this.dataprocMetastoreService = Objects.requireNonNull(dataprocMetastoreService);
     }
 
+    /**
+     * Resource name of an existing Dataproc Metastore service.
+     * 
+     */
     public String getDataprocMetastoreService() {
         return this.dataprocMetastoreService;
     }

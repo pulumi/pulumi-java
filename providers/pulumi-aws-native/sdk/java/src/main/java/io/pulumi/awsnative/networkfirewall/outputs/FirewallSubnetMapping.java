@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class FirewallSubnetMapping {
+    /**
+     * A SubnetId.
+     * 
+     */
     private final String subnetId;
 
     @OutputCustomType.Constructor({"subnetId"})
@@ -16,6 +20,10 @@ public final class FirewallSubnetMapping {
         this.subnetId = Objects.requireNonNull(subnetId);
     }
 
+    /**
+     * A SubnetId.
+     * 
+     */
     public String getSubnetId() {
         return this.subnetId;
     }

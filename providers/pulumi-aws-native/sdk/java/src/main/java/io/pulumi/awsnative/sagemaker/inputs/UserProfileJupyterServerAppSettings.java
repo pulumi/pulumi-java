@@ -10,6 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The JupyterServer app settings.
+ * 
+ */
 public final class UserProfileJupyterServerAppSettings extends io.pulumi.resources.InvokeArgs {
 
     public static final UserProfileJupyterServerAppSettings Empty = new UserProfileJupyterServerAppSettings();

@@ -16,10 +16,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Api is a light-weight descriptor for an API Interface. Interfaces are also described as "protocol buffer services" in some contexts, such as by the "service" keyword in a .proto file, but they are different from API Services, which represent a concrete implementation of an interface as opposed to simply a description of methods and bindings. They are also sometimes simply referred to as "APIs" in other contexts, such as the name of this message itself. See https://cloud.google.com/apis/design/glossary for detailed terminology.
+ * 
+ */
 public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApiArgs Empty = new ApiArgs();
 
+    /**
+     * The methods of this interface, in unspecified order.
+     * 
+     */
     @InputImport(name="methods")
     private final @Nullable Input<List<MethodArgs>> methods;
 
@@ -27,6 +35,10 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
         return this.methods == null ? Input.empty() : this.methods;
     }
 
+    /**
+     * Included interfaces. See Mixin.
+     * 
+     */
     @InputImport(name="mixins")
     private final @Nullable Input<List<MixinArgs>> mixins;
 
@@ -34,6 +46,10 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
         return this.mixins == null ? Input.empty() : this.mixins;
     }
 
+    /**
+     * The fully qualified name of this interface, including package name followed by the interface's simple name.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -41,6 +57,10 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Any metadata attached to the interface.
+     * 
+     */
     @InputImport(name="options")
     private final @Nullable Input<List<OptionArgs>> options;
 
@@ -48,6 +68,10 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
         return this.options == null ? Input.empty() : this.options;
     }
 
+    /**
+     * Source context for the protocol buffer service represented by this message.
+     * 
+     */
     @InputImport(name="sourceContext")
     private final @Nullable Input<SourceContextArgs> sourceContext;
 
@@ -55,6 +79,10 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceContext == null ? Input.empty() : this.sourceContext;
     }
 
+    /**
+     * The source syntax of the service.
+     * 
+     */
     @InputImport(name="syntax")
     private final @Nullable Input<ApiSyntax> syntax;
 
@@ -62,6 +90,10 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
         return this.syntax == null ? Input.empty() : this.syntax;
     }
 
+    /**
+     * A version string for this interface. If specified, must have the form `major-version.minor-version`, as in `1.10`. If the minor version is omitted, it defaults to zero. If the entire version field is empty, the major version is derived from the package name, as outlined below. If the field is not empty, the version in the package name will be verified to be consistent with what is provided here. The versioning schema uses [semantic versioning](http://semver.org) where the major version number indicates a breaking change and the minor version an additive, non-breaking change. Both version numbers are signals to users what to expect from different versions, and should be carefully chosen based on the product plan. The major version is also reflected in the package name of the interface, which must end in `v`, as in `google.feature.v1`. For major versions 0 and 1, the suffix can be omitted. Zero major versions must only be used for experimental, non-GA interfaces.
+     * 
+     */
     @InputImport(name="version")
     private final @Nullable Input<String> version;
 

@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetThreatIntelligenceIndicator {
+/**
+ * Threat intelligence information object.
+ * API Version: 2019-01-01-preview.
+ * 
+ *
+ * Threat intelligence information object.
+ * 
+ */
     public static CompletableFuture<GetThreatIntelligenceIndicatorResult> invokeAsync(GetThreatIntelligenceIndicatorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getThreatIntelligenceIndicator", TypeShape.of(GetThreatIntelligenceIndicatorResult.class), args == null ? GetThreatIntelligenceIndicatorArgs.Empty : args, Utilities.withVersion(options));
     }

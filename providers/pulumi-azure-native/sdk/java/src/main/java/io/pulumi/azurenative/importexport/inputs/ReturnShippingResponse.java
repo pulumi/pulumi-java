@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Specifies the return carrier and customer's account with the carrier.
+ * 
+ */
 public final class ReturnShippingResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ReturnShippingResponse Empty = new ReturnShippingResponse();
 
+    /**
+     * The customer's account number with the carrier.
+     * 
+     */
     @InputImport(name="carrierAccountNumber", required=true)
     private final String carrierAccountNumber;
 
@@ -19,6 +27,10 @@ public final class ReturnShippingResponse extends io.pulumi.resources.InvokeArgs
         return this.carrierAccountNumber;
     }
 
+    /**
+     * The carrier's name.
+     * 
+     */
     @InputImport(name="carrierName", required=true)
     private final String carrierName;
 

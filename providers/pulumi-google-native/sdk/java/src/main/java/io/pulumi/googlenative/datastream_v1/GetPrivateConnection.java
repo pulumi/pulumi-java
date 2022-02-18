@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPrivateConnection {
+/**
+ * Use this method to get details about a private connectivity configuration.
+ * 
+ */
     public static CompletableFuture<GetPrivateConnectionResult> invokeAsync(GetPrivateConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:datastream/v1:getPrivateConnection", TypeShape.of(GetPrivateConnectionResult.class), args == null ? GetPrivateConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

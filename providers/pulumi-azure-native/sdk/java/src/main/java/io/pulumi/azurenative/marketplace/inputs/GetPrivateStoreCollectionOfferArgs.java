@@ -12,6 +12,10 @@ public final class GetPrivateStoreCollectionOfferArgs extends io.pulumi.resource
 
     public static final GetPrivateStoreCollectionOfferArgs Empty = new GetPrivateStoreCollectionOfferArgs();
 
+    /**
+     * The collection ID
+     * 
+     */
     @InputImport(name="collectionId", required=true)
     private final String collectionId;
 
@@ -19,6 +23,10 @@ public final class GetPrivateStoreCollectionOfferArgs extends io.pulumi.resource
         return this.collectionId;
     }
 
+    /**
+     * The offer ID to update or delete
+     * 
+     */
     @InputImport(name="offerId", required=true)
     private final String offerId;
 
@@ -26,6 +34,10 @@ public final class GetPrivateStoreCollectionOfferArgs extends io.pulumi.resource
         return this.offerId;
     }
 
+    /**
+     * The store ID - must use the tenant ID
+     * 
+     */
     @InputImport(name="privateStoreId", required=true)
     private final String privateStoreId;
 

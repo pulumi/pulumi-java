@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListSignalRKeys {
+/**
+ * A class represents the access keys of SignalR service.
+ * API Version: 2020-05-01.
+ * 
+ *
+ * A class represents the access keys of SignalR service.
+ * 
+ */
     public static CompletableFuture<ListSignalRKeysResult> invokeAsync(ListSignalRKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:signalrservice:listSignalRKeys", TypeShape.of(ListSignalRKeysResult.class), args == null ? ListSignalRKeysArgs.Empty : args, Utilities.withVersion(options));
     }

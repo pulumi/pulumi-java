@@ -23,117 +23,282 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Information about the connection monitor.
+ * API Version: 2020-11-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:network:ConnectionMonitor cm1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/networkWatchers/nw1/connectionMonitors/cm1 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:network:ConnectionMonitor")
 public class ConnectionMonitor extends io.pulumi.resources.CustomResource {
+    /**
+     * Determines if the connection monitor will start automatically once created.
+     * 
+     */
     @OutputExport(name="autoStart", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> autoStart;
 
+    /**
+     * @return Determines if the connection monitor will start automatically once created.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getAutoStart() {
         return this.autoStart;
     }
+    /**
+     * Type of connection monitor.
+     * 
+     */
     @OutputExport(name="connectionMonitorType", type=String.class, parameters={})
     private Output<String> connectionMonitorType;
 
+    /**
+     * @return Type of connection monitor.
+     * 
+     */
     public Output<String> getConnectionMonitorType() {
         return this.connectionMonitorType;
     }
+    /**
+     * Describes the destination of connection monitor.
+     * 
+     */
     @OutputExport(name="destination", type=ConnectionMonitorDestinationResponse.class, parameters={})
     private Output</* @Nullable */ ConnectionMonitorDestinationResponse> destination;
 
+    /**
+     * @return Describes the destination of connection monitor.
+     * 
+     */
     public Output</* @Nullable */ ConnectionMonitorDestinationResponse> getDestination() {
         return this.destination;
     }
+    /**
+     * List of connection monitor endpoints.
+     * 
+     */
     @OutputExport(name="endpoints", type=List.class, parameters={ConnectionMonitorEndpointResponse.class})
     private Output</* @Nullable */ List<ConnectionMonitorEndpointResponse>> endpoints;
 
+    /**
+     * @return List of connection monitor endpoints.
+     * 
+     */
     public Output</* @Nullable */ List<ConnectionMonitorEndpointResponse>> getEndpoints() {
         return this.endpoints;
     }
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * Connection monitor location.
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Connection monitor location.
+     * 
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * Monitoring interval in seconds.
+     * 
+     */
     @OutputExport(name="monitoringIntervalInSeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> monitoringIntervalInSeconds;
 
+    /**
+     * @return Monitoring interval in seconds.
+     * 
+     */
     public Output</* @Nullable */ Integer> getMonitoringIntervalInSeconds() {
         return this.monitoringIntervalInSeconds;
     }
+    /**
+     * The monitoring status of the connection monitor.
+     * 
+     */
     @OutputExport(name="monitoringStatus", type=String.class, parameters={})
     private Output<String> monitoringStatus;
 
+    /**
+     * @return The monitoring status of the connection monitor.
+     * 
+     */
     public Output<String> getMonitoringStatus() {
         return this.monitoringStatus;
     }
+    /**
+     * Name of the connection monitor.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Name of the connection monitor.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Optional notes to be associated with the connection monitor.
+     * 
+     */
     @OutputExport(name="notes", type=String.class, parameters={})
     private Output</* @Nullable */ String> notes;
 
+    /**
+     * @return Optional notes to be associated with the connection monitor.
+     * 
+     */
     public Output</* @Nullable */ String> getNotes() {
         return this.notes;
     }
+    /**
+     * List of connection monitor outputs.
+     * 
+     */
     @OutputExport(name="outputs", type=List.class, parameters={ConnectionMonitorOutputResponse.class})
     private Output</* @Nullable */ List<ConnectionMonitorOutputResponse>> outputs;
 
+    /**
+     * @return List of connection monitor outputs.
+     * 
+     */
     public Output</* @Nullable */ List<ConnectionMonitorOutputResponse>> getOutputs() {
         return this.outputs;
     }
+    /**
+     * The provisioning state of the connection monitor.
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning state of the connection monitor.
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Describes the source of connection monitor.
+     * 
+     */
     @OutputExport(name="source", type=ConnectionMonitorSourceResponse.class, parameters={})
     private Output</* @Nullable */ ConnectionMonitorSourceResponse> source;
 
+    /**
+     * @return Describes the source of connection monitor.
+     * 
+     */
     public Output</* @Nullable */ ConnectionMonitorSourceResponse> getSource() {
         return this.source;
     }
+    /**
+     * The date and time when the connection monitor was started.
+     * 
+     */
     @OutputExport(name="startTime", type=String.class, parameters={})
     private Output<String> startTime;
 
+    /**
+     * @return The date and time when the connection monitor was started.
+     * 
+     */
     public Output<String> getStartTime() {
         return this.startTime;
     }
+    /**
+     * Connection monitor tags.
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Connection monitor tags.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * List of connection monitor test configurations.
+     * 
+     */
     @OutputExport(name="testConfigurations", type=List.class, parameters={ConnectionMonitorTestConfigurationResponse.class})
     private Output</* @Nullable */ List<ConnectionMonitorTestConfigurationResponse>> testConfigurations;
 
+    /**
+     * @return List of connection monitor test configurations.
+     * 
+     */
     public Output</* @Nullable */ List<ConnectionMonitorTestConfigurationResponse>> getTestConfigurations() {
         return this.testConfigurations;
     }
+    /**
+     * List of connection monitor test groups.
+     * 
+     */
     @OutputExport(name="testGroups", type=List.class, parameters={ConnectionMonitorTestGroupResponse.class})
     private Output</* @Nullable */ List<ConnectionMonitorTestGroupResponse>> testGroups;
 
+    /**
+     * @return List of connection monitor test groups.
+     * 
+     */
     public Output</* @Nullable */ List<ConnectionMonitorTestGroupResponse>> getTestGroups() {
         return this.testGroups;
     }
+    /**
+     * Connection monitor type.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Connection monitor type.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ConnectionMonitor(String name, ConnectionMonitorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:ConnectionMonitor", name, args == null ? ConnectionMonitorArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -180,6 +345,14 @@ public class ConnectionMonitor extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ConnectionMonitor get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ConnectionMonitor(name, id, options);
     }

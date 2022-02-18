@@ -10,14 +10,51 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse {
+    /**
+     * Count of databases
+     * 
+     */
     private final Integer databaseCount;
+    /**
+     * Migration end time
+     * 
+     */
     private final String endedOn;
+    /**
+     * Result identifier
+     * 
+     */
     private final String id;
+    /**
+     * Result type
+     * Expected value is 'MigrationLevelOutput'.
+     * 
+     */
     private final String resultType;
+    /**
+     * Source server name
+     * 
+     */
     private final String sourceServer;
+    /**
+     * Source server version
+     * 
+     */
     private final String sourceServerVersion;
+    /**
+     * Migration start time
+     * 
+     */
     private final String startedOn;
+    /**
+     * Target server name
+     * 
+     */
     private final String targetServer;
+    /**
+     * Target server version
+     * 
+     */
     private final String targetServerVersion;
 
     @OutputCustomType.Constructor({"databaseCount","endedOn","id","resultType","sourceServer","sourceServerVersion","startedOn","targetServer","targetServerVersion"})
@@ -42,30 +79,67 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse {
         this.targetServerVersion = Objects.requireNonNull(targetServerVersion);
     }
 
+    /**
+     * Count of databases
+     * 
+     */
     public Integer getDatabaseCount() {
         return this.databaseCount;
     }
+    /**
+     * Migration end time
+     * 
+     */
     public String getEndedOn() {
         return this.endedOn;
     }
+    /**
+     * Result identifier
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Result type
+     * Expected value is 'MigrationLevelOutput'.
+     * 
+     */
     public String getResultType() {
         return this.resultType;
     }
+    /**
+     * Source server name
+     * 
+     */
     public String getSourceServer() {
         return this.sourceServer;
     }
+    /**
+     * Source server version
+     * 
+     */
     public String getSourceServerVersion() {
         return this.sourceServerVersion;
     }
+    /**
+     * Migration start time
+     * 
+     */
     public String getStartedOn() {
         return this.startedOn;
     }
+    /**
+     * Target server name
+     * 
+     */
     public String getTargetServer() {
         return this.targetServer;
     }
+    /**
+     * Target server version
+     * 
+     */
     public String getTargetServerVersion() {
         return this.targetServerVersion;
     }

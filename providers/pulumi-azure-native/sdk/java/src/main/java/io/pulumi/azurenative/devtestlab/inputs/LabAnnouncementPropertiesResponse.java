@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties of a lab's announcement banner
+ * 
+ */
 public final class LabAnnouncementPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LabAnnouncementPropertiesResponse Empty = new LabAnnouncementPropertiesResponse();
 
+    /**
+     * Is the lab announcement active/enabled at this time?
+     * 
+     */
     @InputImport(name="enabled")
     private final @Nullable String enabled;
 
@@ -22,6 +30,10 @@ public final class LabAnnouncementPropertiesResponse extends io.pulumi.resources
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
+    /**
+     * The time at which the announcement expires (null for never)
+     * 
+     */
     @InputImport(name="expirationDate")
     private final @Nullable String expirationDate;
 
@@ -29,6 +41,10 @@ public final class LabAnnouncementPropertiesResponse extends io.pulumi.resources
         return this.expirationDate == null ? Optional.empty() : Optional.ofNullable(this.expirationDate);
     }
 
+    /**
+     * Has this announcement expired?
+     * 
+     */
     @InputImport(name="expired")
     private final @Nullable Boolean expired;
 
@@ -36,6 +52,10 @@ public final class LabAnnouncementPropertiesResponse extends io.pulumi.resources
         return this.expired == null ? Optional.empty() : Optional.ofNullable(this.expired);
     }
 
+    /**
+     * The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.
+     * 
+     */
     @InputImport(name="markdown")
     private final @Nullable String markdown;
 
@@ -43,6 +63,10 @@ public final class LabAnnouncementPropertiesResponse extends io.pulumi.resources
         return this.markdown == null ? Optional.empty() : Optional.ofNullable(this.markdown);
     }
 
+    /**
+     * The provisioning status of the resource.
+     * 
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -50,6 +74,10 @@ public final class LabAnnouncementPropertiesResponse extends io.pulumi.resources
         return this.provisioningState;
     }
 
+    /**
+     * The plain text title for the lab announcement
+     * 
+     */
     @InputImport(name="title")
     private final @Nullable String title;
 
@@ -57,6 +85,10 @@ public final class LabAnnouncementPropertiesResponse extends io.pulumi.resources
         return this.title == null ? Optional.empty() : Optional.ofNullable(this.title);
     }
 
+    /**
+     * The unique immutable identifier of a resource (Guid).
+     * 
+     */
     @InputImport(name="uniqueIdentifier", required=true)
     private final String uniqueIdentifier;
 

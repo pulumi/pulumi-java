@@ -15,11 +15,67 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Three different resources help you manage your IAM policy for BigQuery Table. Each of these resources serves a different use case:
+ * 
+ * * `gcp.bigquery.IamPolicy`: Authoritative. Sets the IAM policy for the table and replaces any existing policy already attached.
+ * * `gcp.bigquery.IamBinding`: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the table are preserved.
+ * * `gcp.bigquery.IamMember`: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the table are preserved.
+ * 
+ * > **Note:** `gcp.bigquery.IamPolicy` **cannot** be used in conjunction with `gcp.bigquery.IamBinding` and `gcp.bigquery.IamMember` or they will fight over what your policy should be.
+ * 
+ * > **Note:** `gcp.bigquery.IamBinding` resources **can be** used in conjunction with `gcp.bigquery.IamMember` resources **only if** they do not grant privilege to the same role.
+ * 
+ * ## google\_bigquery\_table\_iam\_policy
+ * 
+ * With IAM Conditions:
+ * ## google\_bigquery\_table\_iam\_binding
+ * 
+ * With IAM Conditions:
+ * ## google\_bigquery\_table\_iam\_member
+ * 
+ * With IAM Conditions:
+ * 
+ * ## Import
+ * 
+ * For all import syntaxes, the "resource in question" can take any of the following forms* projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}} * {{project}}/{{dataset_id}}/{{table_id}} * {{dataset_id}}/{{table_id}} * {{table_id}} Any variables not passed in the import command will be taken from the provider configuration. BigQuery table IAM resources can be imported using the resource identifiers, role, and member. IAM member imports use space-delimited identifiersthe resource in question, the role, and the member identity, e.g.
+ * 
+ * ```sh
+ *  $ pulumi import gcp:bigquery/iamBinding:IamBinding editor "projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}} roles/bigquery.dataOwner user:jane@example.com"
+ * ```
+ * 
+ *  IAM binding imports use space-delimited identifiersthe resource in question and the role, e.g.
+ * 
+ * ```sh
+ *  $ pulumi import gcp:bigquery/iamBinding:IamBinding editor "projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}} roles/bigquery.dataOwner"
+ * ```
+ * 
+ *  IAM policy imports use the identifier of the resource in question, e.g.
+ * 
+ * ```sh
+ *  $ pulumi import gcp:bigquery/iamBinding:IamBinding editor projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
+ * ```
+ * 
+ *  -> **Custom Roles**If you're importing a IAM resource with a custom role, make sure to use the
+ * 
+ * full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`.
+ * 
+ */
 @ResourceType(type="gcp:bigquery/iamBinding:IamBinding")
 public class IamBinding extends io.pulumi.resources.CustomResource {
+    /**
+     * An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="condition", type=IamBindingCondition.class, parameters={})
     private Output</* @Nullable */ IamBindingCondition> condition;
 
+    /**
+     * @return An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+     * Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ IamBindingCondition> getCondition() {
         return this.condition;
     }
@@ -29,9 +85,17 @@ public class IamBinding extends io.pulumi.resources.CustomResource {
     public Output<String> getDatasetId() {
         return this.datasetId;
     }
+    /**
+     * (Computed) The etag of the IAM policy.
+     * 
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return (Computed) The etag of the IAM policy.
+     * 
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
@@ -41,15 +105,37 @@ public class IamBinding extends io.pulumi.resources.CustomResource {
     public Output<List<String>> getMembers() {
         return this.members;
     }
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * The role that should be applied. Only one
+     * `gcp.bigquery.IamBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     @OutputExport(name="role", type=String.class, parameters={})
     private Output<String> role;
 
+    /**
+     * @return The role that should be applied. Only one
+     * `gcp.bigquery.IamBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     public Output<String> getRole() {
         return this.role;
     }
@@ -60,6 +146,12 @@ public class IamBinding extends io.pulumi.resources.CustomResource {
         return this.tableId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public IamBinding(String name, IamBindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:bigquery/iamBinding:IamBinding", name, args == null ? IamBindingArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -75,6 +167,15 @@ public class IamBinding extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static IamBinding get(String name, Input<String> id, @Nullable IamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new IamBinding(name, id, state, options);
     }

@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MqttConfigResponse {
+    /**
+     * If enabled, allows connections using the MQTT protocol. Otherwise, MQTT connections to this registry will fail.
+     * 
+     */
     private final String mqttEnabledState;
 
     @OutputCustomType.Constructor({"mqttEnabledState"})
@@ -16,6 +20,10 @@ public final class MqttConfigResponse {
         this.mqttEnabledState = Objects.requireNonNull(mqttEnabledState);
     }
 
+    /**
+     * If enabled, allows connections using the MQTT protocol. Otherwise, MQTT connections to this registry will fail.
+     * 
+     */
     public String getMqttEnabledState() {
         return this.mqttEnabledState;
     }

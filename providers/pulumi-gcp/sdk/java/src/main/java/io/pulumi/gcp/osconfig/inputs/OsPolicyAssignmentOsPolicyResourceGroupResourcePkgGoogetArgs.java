@@ -13,6 +13,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGoogetArgs 
 
     public static final OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGoogetArgs Empty = new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGoogetArgs();
 
+    /**
+     * Required. The name of the repository.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

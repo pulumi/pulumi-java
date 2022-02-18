@@ -15,6 +15,10 @@ public final class DefaultSupportedIdpConfigArgs extends io.pulumi.resources.Res
 
     public static final DefaultSupportedIdpConfigArgs Empty = new DefaultSupportedIdpConfigArgs();
 
+    /**
+     * OAuth client ID
+     * 
+     */
     @InputImport(name="clientId", required=true)
     private final Input<String> clientId;
 
@@ -22,6 +26,10 @@ public final class DefaultSupportedIdpConfigArgs extends io.pulumi.resources.Res
         return this.clientId;
     }
 
+    /**
+     * OAuth client secret
+     * 
+     */
     @InputImport(name="clientSecret", required=true)
     private final Input<String> clientSecret;
 
@@ -29,6 +37,10 @@ public final class DefaultSupportedIdpConfigArgs extends io.pulumi.resources.Res
         return this.clientSecret;
     }
 
+    /**
+     * If this IDP allows the user to sign in
+     * 
+     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 
@@ -36,6 +48,20 @@ public final class DefaultSupportedIdpConfigArgs extends io.pulumi.resources.Res
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
+    /**
+     * ID of the IDP. Possible values include:
+     * * `apple.com`
+     * * `facebook.com`
+     * * `gc.apple.com`
+     * * `github.com`
+     * * `google.com`
+     * * `linkedin.com`
+     * * `microsoft.com`
+     * * `playgames.google.com`
+     * * `twitter.com`
+     * * `yahoo.com`
+     * 
+     */
     @InputImport(name="idpId", required=true)
     private final Input<String> idpId;
 
@@ -43,6 +69,11 @@ public final class DefaultSupportedIdpConfigArgs extends io.pulumi.resources.Res
         return this.idpId;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

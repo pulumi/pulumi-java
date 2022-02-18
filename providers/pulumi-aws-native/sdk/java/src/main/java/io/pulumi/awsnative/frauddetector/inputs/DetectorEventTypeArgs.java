@@ -20,6 +20,10 @@ public final class DetectorEventTypeArgs extends io.pulumi.resources.ResourceArg
 
     public static final DetectorEventTypeArgs Empty = new DetectorEventTypeArgs();
 
+    /**
+     * The ARN of the event type.
+     * 
+     */
     @InputImport(name="arn")
     private final @Nullable Input<String> arn;
 
@@ -27,6 +31,10 @@ public final class DetectorEventTypeArgs extends io.pulumi.resources.ResourceArg
         return this.arn == null ? Input.empty() : this.arn;
     }
 
+    /**
+     * The time when the event type was created.
+     * 
+     */
     @InputImport(name="createdTime")
     private final @Nullable Input<String> createdTime;
 
@@ -34,6 +42,10 @@ public final class DetectorEventTypeArgs extends io.pulumi.resources.ResourceArg
         return this.createdTime == null ? Input.empty() : this.createdTime;
     }
 
+    /**
+     * The description of the event type.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -69,6 +81,10 @@ public final class DetectorEventTypeArgs extends io.pulumi.resources.ResourceArg
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The time when the event type was last updated.
+     * 
+     */
     @InputImport(name="lastUpdatedTime")
     private final @Nullable Input<String> lastUpdatedTime;
 
@@ -76,6 +92,10 @@ public final class DetectorEventTypeArgs extends io.pulumi.resources.ResourceArg
         return this.lastUpdatedTime == null ? Input.empty() : this.lastUpdatedTime;
     }
 
+    /**
+     * The name for the event type
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -83,6 +103,10 @@ public final class DetectorEventTypeArgs extends io.pulumi.resources.ResourceArg
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Tags associated with this event type.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<DetectorTagArgs>> tags;
 

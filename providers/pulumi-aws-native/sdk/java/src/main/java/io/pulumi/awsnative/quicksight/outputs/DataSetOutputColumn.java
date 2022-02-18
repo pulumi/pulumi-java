@@ -12,7 +12,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DataSetOutputColumn {
+    /**
+     * <p>A description for a column.</p>
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * <p>A display name for the dataset.</p>
+     * 
+     */
     private final @Nullable String name;
     private final @Nullable DataSetColumnDataType type;
 
@@ -26,9 +34,17 @@ public final class DataSetOutputColumn {
         this.type = type;
     }
 
+    /**
+     * <p>A description for a column.</p>
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * <p>A display name for the dataset.</p>
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

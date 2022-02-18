@@ -18,6 +18,11 @@ public final class ServiceTemplateSpecArgs extends io.pulumi.resources.ResourceA
 
     public static final ServiceTemplateSpecArgs Empty = new ServiceTemplateSpecArgs();
 
+    /**
+     * ContainerConcurrency specifies the maximum allowed in-flight (concurrent)
+     * requests per container of the Revision. Values are:
+     * 
+     */
     @InputImport(name="containerConcurrency")
     private final @Nullable Input<Integer> containerConcurrency;
 
@@ -25,6 +30,15 @@ public final class ServiceTemplateSpecArgs extends io.pulumi.resources.ResourceA
         return this.containerConcurrency == null ? Input.empty() : this.containerConcurrency;
     }
 
+    /**
+     * Container defines the unit of execution for this Revision.
+     * In the context of a Revision, we disallow a number of the fields of
+     * this Container, including: name, ports, and volumeMounts.
+     * The runtime contract is documented here:
+     * https://github.com/knative/serving/blob/master/docs/runtime-contract.md
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="containers")
     private final @Nullable Input<List<ServiceTemplateSpecContainerArgs>> containers;
 
@@ -32,6 +46,13 @@ public final class ServiceTemplateSpecArgs extends io.pulumi.resources.ResourceA
         return this.containers == null ? Input.empty() : this.containers;
     }
 
+    /**
+     * Email address of the IAM service account associated with the revision of the
+     * service. The service account represents the identity of the running revision,
+     * and determines what permissions the revision has. If not provided, the revision
+     * will use the project's default service account.
+     * 
+     */
     @InputImport(name="serviceAccountName")
     private final @Nullable Input<String> serviceAccountName;
 
@@ -39,6 +60,18 @@ public final class ServiceTemplateSpecArgs extends io.pulumi.resources.ResourceA
         return this.serviceAccountName == null ? Input.empty() : this.serviceAccountName;
     }
 
+    /**
+     * - 
+     * ServingState holds a value describing the state the resources
+     * are in for this Revision.
+     * It is expected
+     * that the system will manipulate this based on routability and load.
+     * 
+     * @deprecated
+     * Not supported by Cloud Run fully managed
+     * 
+     */
+    @Deprecated /* Not supported by Cloud Run fully managed */
     @InputImport(name="servingState")
     private final @Nullable Input<String> servingState;
 
@@ -47,6 +80,10 @@ public final class ServiceTemplateSpecArgs extends io.pulumi.resources.ResourceA
         return this.servingState == null ? Input.empty() : this.servingState;
     }
 
+    /**
+     * TimeoutSeconds holds the max duration the instance is allowed for responding to a request.
+     * 
+     */
     @InputImport(name="timeoutSeconds")
     private final @Nullable Input<Integer> timeoutSeconds;
 
@@ -54,6 +91,11 @@ public final class ServiceTemplateSpecArgs extends io.pulumi.resources.ResourceA
         return this.timeoutSeconds == null ? Input.empty() : this.timeoutSeconds;
     }
 
+    /**
+     * Volume represents a named volume in a container.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="volumes")
     private final @Nullable Input<List<ServiceTemplateSpecVolumeArgs>> volumes;
 

@@ -12,6 +12,10 @@ public final class ListDeviceFailoverSetsArgs extends io.pulumi.resources.Invoke
 
     public static final ListDeviceFailoverSetsArgs Empty = new ListDeviceFailoverSetsArgs();
 
+    /**
+     * The device name
+     * 
+     */
     @InputImport(name="deviceName", required=true)
     private final String deviceName;
 
@@ -19,6 +23,10 @@ public final class ListDeviceFailoverSetsArgs extends io.pulumi.resources.Invoke
         return this.deviceName;
     }
 
+    /**
+     * The manager name
+     * 
+     */
     @InputImport(name="managerName", required=true)
     private final String managerName;
 
@@ -26,6 +34,10 @@ public final class ListDeviceFailoverSetsArgs extends io.pulumi.resources.Invoke
         return this.managerName;
     }
 
+    /**
+     * The resource group name
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

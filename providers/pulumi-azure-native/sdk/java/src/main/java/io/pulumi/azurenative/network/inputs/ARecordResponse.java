@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * An A record.
+ * 
+ */
 public final class ARecordResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ARecordResponse Empty = new ARecordResponse();
 
+    /**
+     * The IPv4 address of this A record.
+     * 
+     */
     @InputImport(name="ipv4Address")
     private final @Nullable String ipv4Address;
 

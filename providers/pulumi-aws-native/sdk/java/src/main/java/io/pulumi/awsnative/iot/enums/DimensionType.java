@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Specifies the type of the dimension.
+     * 
+     */
     @EnumType
     public enum DimensionType {
         TopicFilter("TOPIC_FILTER");

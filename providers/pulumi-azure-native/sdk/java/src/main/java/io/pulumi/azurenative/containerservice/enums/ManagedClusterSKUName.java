@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Name of a managed cluster SKU.
+     * 
+     */
     @EnumType
     public enum ManagedClusterSKUName {
         Basic("Basic");

@@ -15,6 +15,10 @@ public final class ApiSchemaArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApiSchemaArgs Empty = new ApiSchemaArgs();
 
+    /**
+     * API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.
+     * 
+     */
     @InputImport(name="apiId", required=true)
     private final Input<String> apiId;
 
@@ -22,6 +26,10 @@ public final class ApiSchemaArgs extends io.pulumi.resources.ResourceArgs {
         return this.apiId;
     }
 
+    /**
+     * Must be a valid a media type used in a Content-Type header as defined in the RFC 2616. Media type of the schema document (e.g. application/json, application/xml). </br> - `Swagger` Schema use `application/vnd.ms-azure-apim.swagger.definitions+json` </br> - `WSDL` Schema use `application/vnd.ms-azure-apim.xsd+xml` </br> - `OpenApi` Schema use `application/vnd.oai.openapi.components+json` </br> - `WADL Schema` use `application/vnd.ms-azure-apim.wadl.grammars+xml`.
+     * 
+     */
     @InputImport(name="contentType", required=true)
     private final Input<String> contentType;
 
@@ -29,6 +37,10 @@ public final class ApiSchemaArgs extends io.pulumi.resources.ResourceArgs {
         return this.contentType;
     }
 
+    /**
+     * Types definitions. Used for Swagger/OpenAPI schemas only, null otherwise.
+     * 
+     */
     @InputImport(name="definitions")
     private final @Nullable Input<Object> definitions;
 
@@ -36,6 +48,10 @@ public final class ApiSchemaArgs extends io.pulumi.resources.ResourceArgs {
         return this.definitions == null ? Input.empty() : this.definitions;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -43,6 +59,10 @@ public final class ApiSchemaArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Schema identifier within an API. Must be unique in the current API Management service instance.
+     * 
+     */
     @InputImport(name="schemaId")
     private final @Nullable Input<String> schemaId;
 
@@ -50,6 +70,10 @@ public final class ApiSchemaArgs extends io.pulumi.resources.ResourceArgs {
         return this.schemaId == null ? Input.empty() : this.schemaId;
     }
 
+    /**
+     * The name of the API Management service.
+     * 
+     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 
@@ -57,6 +81,10 @@ public final class ApiSchemaArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceName;
     }
 
+    /**
+     * Json escaped string defining the document representing the Schema. Used for schemas other than Swagger/OpenAPI.
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

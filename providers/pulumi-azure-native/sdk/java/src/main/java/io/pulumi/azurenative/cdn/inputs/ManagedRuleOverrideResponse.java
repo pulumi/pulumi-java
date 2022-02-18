@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines a managed rule group override setting.
+ * 
+ */
 public final class ManagedRuleOverrideResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ManagedRuleOverrideResponse Empty = new ManagedRuleOverrideResponse();
 
+    /**
+     * Describes the override action to be applied when rule matches.
+     * 
+     */
     @InputImport(name="action")
     private final @Nullable String action;
 
@@ -21,6 +29,10 @@ public final class ManagedRuleOverrideResponse extends io.pulumi.resources.Invok
         return this.action == null ? Optional.empty() : Optional.ofNullable(this.action);
     }
 
+    /**
+     * Describes if the managed rule is in enabled or disabled state. Defaults to Disabled if not specified.
+     * 
+     */
     @InputImport(name="enabledState")
     private final @Nullable String enabledState;
 
@@ -28,6 +40,10 @@ public final class ManagedRuleOverrideResponse extends io.pulumi.resources.Invok
         return this.enabledState == null ? Optional.empty() : Optional.ofNullable(this.enabledState);
     }
 
+    /**
+     * Identifier for the managed rule.
+     * 
+     */
     @InputImport(name="ruleId", required=true)
     private final String ruleId;
 

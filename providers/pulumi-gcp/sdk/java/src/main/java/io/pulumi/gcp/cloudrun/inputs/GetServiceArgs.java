@@ -14,6 +14,10 @@ public final class GetServiceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetServiceArgs Empty = new GetServiceArgs();
 
+    /**
+     * The location of the cloud run instance. eg us-central1
+     * 
+     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -21,6 +25,10 @@ public final class GetServiceArgs extends io.pulumi.resources.InvokeArgs {
         return this.location;
     }
 
+    /**
+     * The name of the Cloud Run Service.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -28,6 +36,11 @@ public final class GetServiceArgs extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    /**
+     * The project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

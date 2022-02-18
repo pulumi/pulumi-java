@@ -13,10 +13,18 @@ import java.util.Map;
 import java.util.Objects;
 
 
+/**
+ * Represents the result of a single hyperparameter tuning trial from a training job. The TrainingOutput object that is returned on successful completion of a training job with hyperparameter tuning includes a list of HyperparameterOutput objects, one for each successful trial.
+ * 
+ */
 public final class GoogleCloudMlV1__HyperparameterOutputResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudMlV1__HyperparameterOutputResponse Empty = new GoogleCloudMlV1__HyperparameterOutputResponse();
 
+    /**
+     * All recorded object metrics for this trial. This field is not currently populated.
+     * 
+     */
     @InputImport(name="allMetrics", required=true)
     private final List<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse> allMetrics;
 
@@ -24,6 +32,10 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse extends io.pulu
         return this.allMetrics;
     }
 
+    /**
+     * Details related to built-in algorithms jobs. Only set for trials of built-in algorithms jobs that have succeeded.
+     * 
+     */
     @InputImport(name="builtInAlgorithmOutput", required=true)
     private final GoogleCloudMlV1__BuiltInAlgorithmOutputResponse builtInAlgorithmOutput;
 
@@ -31,6 +43,10 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse extends io.pulu
         return this.builtInAlgorithmOutput;
     }
 
+    /**
+     * End time for the trial.
+     * 
+     */
     @InputImport(name="endTime", required=true)
     private final String endTime;
 
@@ -38,6 +54,10 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse extends io.pulu
         return this.endTime;
     }
 
+    /**
+     * The final objective metric seen for this trial.
+     * 
+     */
     @InputImport(name="finalMetric", required=true)
     private final GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse finalMetric;
 
@@ -45,6 +65,10 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse extends io.pulu
         return this.finalMetric;
     }
 
+    /**
+     * The hyperparameters given to this trial.
+     * 
+     */
     @InputImport(name="hyperparameters", required=true)
     private final Map<String,String> hyperparameters;
 
@@ -52,6 +76,10 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse extends io.pulu
         return this.hyperparameters;
     }
 
+    /**
+     * True if the trial is stopped early.
+     * 
+     */
     @InputImport(name="isTrialStoppedEarly", required=true)
     private final Boolean isTrialStoppedEarly;
 
@@ -59,6 +87,10 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse extends io.pulu
         return this.isTrialStoppedEarly;
     }
 
+    /**
+     * Start time for the trial.
+     * 
+     */
     @InputImport(name="startTime", required=true)
     private final String startTime;
 
@@ -66,6 +98,10 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse extends io.pulu
         return this.startTime;
     }
 
+    /**
+     * The detailed state of the trial.
+     * 
+     */
     @InputImport(name="state", required=true)
     private final String state;
 
@@ -73,6 +109,10 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse extends io.pulu
         return this.state;
     }
 
+    /**
+     * The trial id for these results.
+     * 
+     */
     @InputImport(name="trialId", required=true)
     private final String trialId;
 
@@ -80,6 +120,10 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse extends io.pulu
         return this.trialId;
     }
 
+    /**
+     * URIs for accessing [interactive shells](https://cloud.google.com/ai-platform/training/docs/monitor-debug-interactive-shell) (one URI for each training node). Only available if this trial is part of a hyperparameter tuning job and the job's training_input.enable_web_access is `true`. The keys are names of each node in the training job; for example, `master-replica-0` for the master node, `worker-replica-0` for the first worker, and `ps-replica-0` for the first parameter server. The values are the URIs for each node's interactive shell.
+     * 
+     */
     @InputImport(name="webAccessUris", required=true)
     private final Map<String,String> webAccessUris;
 

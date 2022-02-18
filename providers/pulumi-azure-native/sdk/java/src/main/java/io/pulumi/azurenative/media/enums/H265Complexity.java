@@ -8,10 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Tells the encoder how to choose its encoding settings.  Quality will provide for a higher compression ratio but at a higher cost and longer compute time.  Speed will produce a relatively larger file but is faster and more economical. The default value is Balanced.
+     * 
+     */
     @EnumType
     public enum H265Complexity {
+        /**
+         * Tells the encoder to use settings that are optimized for faster encoding. Quality is sacrificed to decrease encoding time.
+         * 
+         */
         Speed("Speed"),
+        /**
+         * Tells the encoder to use settings that achieve a balance between speed and quality.
+         * 
+         */
         Balanced("Balanced"),
+        /**
+         * Tells the encoder to use settings that are optimized to produce higher quality output at the expense of slower overall encode time.
+         * 
+         */
         Quality("Quality");
 
         private final String value;

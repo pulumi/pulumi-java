@@ -23,6 +23,10 @@ public final class NamespaceIamBindingState extends io.pulumi.resources.Resource
         return this.condition == null ? Input.empty() : this.condition;
     }
 
+    /**
+     * (Computed) The etag of the IAM policy.
+     * 
+     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -37,6 +41,10 @@ public final class NamespaceIamBindingState extends io.pulumi.resources.Resource
         return this.members == null ? Input.empty() : this.members;
     }
 
+    /**
+     * Used to find the parent resource to bind the IAM policy to
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -44,6 +52,12 @@ public final class NamespaceIamBindingState extends io.pulumi.resources.Resource
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The role that should be applied. Only one
+     * `gcp.servicedirectory.NamespaceIamBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     @InputImport(name="role")
     private final @Nullable Input<String> role;
 

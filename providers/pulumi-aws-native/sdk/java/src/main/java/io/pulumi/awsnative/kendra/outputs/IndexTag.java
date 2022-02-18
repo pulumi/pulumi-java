@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class IndexTag {
+    /**
+     * A string used to identify this tag
+     * 
+     */
     private final String key;
+    /**
+     * A string containing the value for the tag
+     * 
+     */
     private final String value;
 
     @OutputCustomType.Constructor({"key","value"})
@@ -20,9 +28,17 @@ public final class IndexTag {
         this.value = Objects.requireNonNull(value);
     }
 
+    /**
+     * A string used to identify this tag
+     * 
+     */
     public String getKey() {
         return this.key;
     }
+    /**
+     * A string containing the value for the tag
+     * 
+     */
     public String getValue() {
         return this.value;
     }

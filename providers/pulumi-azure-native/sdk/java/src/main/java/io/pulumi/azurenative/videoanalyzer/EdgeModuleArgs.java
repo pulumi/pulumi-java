@@ -14,6 +14,10 @@ public final class EdgeModuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EdgeModuleArgs Empty = new EdgeModuleArgs();
 
+    /**
+     * The Azure Video Analyzer account name.
+     * 
+     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -21,6 +25,10 @@ public final class EdgeModuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountName;
     }
 
+    /**
+     * The name of the edge module to create or update.
+     * 
+     */
     @InputImport(name="edgeModuleName")
     private final @Nullable Input<String> edgeModuleName;
 
@@ -28,6 +36,10 @@ public final class EdgeModuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.edgeModuleName == null ? Input.empty() : this.edgeModuleName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

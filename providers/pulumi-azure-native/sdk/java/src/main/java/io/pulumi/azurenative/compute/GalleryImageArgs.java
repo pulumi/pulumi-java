@@ -25,6 +25,10 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GalleryImageArgs Empty = new GalleryImageArgs();
 
+    /**
+     * The description of this gallery image definition resource. This property is updatable.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -32,6 +36,10 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Describes the disallowed disk types.
+     * 
+     */
     @InputImport(name="disallowed")
     private final @Nullable Input<DisallowedArgs> disallowed;
 
@@ -39,6 +47,10 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.disallowed == null ? Input.empty() : this.disallowed;
     }
 
+    /**
+     * The end of life date of the gallery image definition. This property can be used for decommissioning purposes. This property is updatable.
+     * 
+     */
     @InputImport(name="endOfLifeDate")
     private final @Nullable Input<String> endOfLifeDate;
 
@@ -46,6 +58,10 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.endOfLifeDate == null ? Input.empty() : this.endOfLifeDate;
     }
 
+    /**
+     * The Eula agreement for the gallery image definition.
+     * 
+     */
     @InputImport(name="eula")
     private final @Nullable Input<String> eula;
 
@@ -53,6 +69,10 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.eula == null ? Input.empty() : this.eula;
     }
 
+    /**
+     * A list of gallery image features.
+     * 
+     */
     @InputImport(name="features")
     private final @Nullable Input<List<GalleryImageFeatureArgs>> features;
 
@@ -60,6 +80,10 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.features == null ? Input.empty() : this.features;
     }
 
+    /**
+     * The name of the gallery image definition to be created or updated. The allowed characters are alphabets and numbers with dots, dashes, and periods allowed in the middle. The maximum length is 80 characters.
+     * 
+     */
     @InputImport(name="galleryImageName")
     private final @Nullable Input<String> galleryImageName;
 
@@ -67,6 +91,10 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.galleryImageName == null ? Input.empty() : this.galleryImageName;
     }
 
+    /**
+     * The name of the Shared Image Gallery in which the Image Definition is to be created.
+     * 
+     */
     @InputImport(name="galleryName", required=true)
     private final Input<String> galleryName;
 
@@ -74,6 +102,10 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.galleryName;
     }
 
+    /**
+     * The hypervisor generation of the Virtual Machine. Applicable to OS disks only.
+     * 
+     */
     @InputImport(name="hyperVGeneration")
     private final @Nullable Input<Either<String,HyperVGeneration>> hyperVGeneration;
 
@@ -81,6 +113,10 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.hyperVGeneration == null ? Input.empty() : this.hyperVGeneration;
     }
 
+    /**
+     * This is the gallery image definition identifier.
+     * 
+     */
     @InputImport(name="identifier", required=true)
     private final Input<GalleryImageIdentifierArgs> identifier;
 
@@ -88,6 +124,10 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.identifier;
     }
 
+    /**
+     * Resource location
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -95,6 +135,10 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * This property allows the user to specify whether the virtual machines created under this image are 'Generalized' or 'Specialized'.
+     * 
+     */
     @InputImport(name="osState", required=true)
     private final Input<OperatingSystemStateTypes> osState;
 
@@ -102,6 +146,10 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.osState;
     }
 
+    /**
+     * This property allows you to specify the type of the OS that is included in the disk when creating a VM from a managed image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**
+     * 
+     */
     @InputImport(name="osType", required=true)
     private final Input<OperatingSystemTypes> osType;
 
@@ -109,6 +157,10 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.osType;
     }
 
+    /**
+     * The privacy statement uri.
+     * 
+     */
     @InputImport(name="privacyStatementUri")
     private final @Nullable Input<String> privacyStatementUri;
 
@@ -116,6 +168,10 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.privacyStatementUri == null ? Input.empty() : this.privacyStatementUri;
     }
 
+    /**
+     * Describes the gallery image definition purchase plan. This is used by marketplace images.
+     * 
+     */
     @InputImport(name="purchasePlan")
     private final @Nullable Input<ImagePurchasePlanArgs> purchasePlan;
 
@@ -123,6 +179,10 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.purchasePlan == null ? Input.empty() : this.purchasePlan;
     }
 
+    /**
+     * The properties describe the recommended machine configuration for this Image Definition. These properties are updatable.
+     * 
+     */
     @InputImport(name="recommended")
     private final @Nullable Input<RecommendedMachineConfigurationArgs> recommended;
 
@@ -130,6 +190,10 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.recommended == null ? Input.empty() : this.recommended;
     }
 
+    /**
+     * The release note uri.
+     * 
+     */
     @InputImport(name="releaseNoteUri")
     private final @Nullable Input<String> releaseNoteUri;
 
@@ -137,6 +201,10 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.releaseNoteUri == null ? Input.empty() : this.releaseNoteUri;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -144,6 +212,10 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Resource tags
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

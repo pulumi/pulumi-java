@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPackageVersion {
+/**
+ * Schema for PackageVersion Resource Type
+ * 
+ */
     public static CompletableFuture<GetPackageVersionResult> invokeAsync(GetPackageVersionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:panorama:getPackageVersion", TypeShape.of(GetPackageVersionResult.class), args == null ? GetPackageVersionArgs.Empty : args, Utilities.withVersion(options));
     }

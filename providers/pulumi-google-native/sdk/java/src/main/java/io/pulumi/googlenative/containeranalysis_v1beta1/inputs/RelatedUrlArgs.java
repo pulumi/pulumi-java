@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Metadata for any related URL information.
+ * 
+ */
 public final class RelatedUrlArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RelatedUrlArgs Empty = new RelatedUrlArgs();
 
+    /**
+     * Label to describe usage of the URL.
+     * 
+     */
     @InputImport(name="label")
     private final @Nullable Input<String> label;
 
@@ -21,6 +29,10 @@ public final class RelatedUrlArgs extends io.pulumi.resources.ResourceArgs {
         return this.label == null ? Input.empty() : this.label;
     }
 
+    /**
+     * Specific URL associated with the resource.
+     * 
+     */
     @InputImport(name="url")
     private final @Nullable Input<String> url;
 

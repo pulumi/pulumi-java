@@ -12,7 +12,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetRegionsResult {
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
+    /**
+     * A list of regions available in the given project
+     * 
+     */
     private final List<String> names;
     private final String project;
     private final @Nullable String status;
@@ -29,9 +37,17 @@ public final class GetRegionsResult {
         this.status = status;
     }
 
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * A list of regions available in the given project
+     * 
+     */
     public List<String> getNames() {
         return this.names;
     }

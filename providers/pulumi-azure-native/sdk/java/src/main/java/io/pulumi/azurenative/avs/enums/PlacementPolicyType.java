@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * placement policy type
+     * 
+     */
     @EnumType
     public enum PlacementPolicyType {
         VmVm("VmVm"),

@@ -12,8 +12,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CertificateTemplateIdentityConstraints {
+    /**
+     * Required. If this is true, the SubjectAltNames extension may be copied from a certificate request into the signed certificate. Otherwise, the requested SubjectAltNames will be discarded.
+     * 
+     */
     private final Boolean allowSubjectAltNamesPassthrough;
+    /**
+     * Required. If this is true, the Subject field may be copied from a certificate request into the signed certificate. Otherwise, the requested Subject will be discarded.
+     * 
+     */
     private final Boolean allowSubjectPassthrough;
+    /**
+     * Optional. A CEL expression that may be used to validate the resolved X.509 Subject and/or Subject Alternative Name before a certificate is signed. To see the full allowed syntax and some examples, see https://cloud.google.com/certificate-authority-service/docs/using-cel
+     * 
+     */
     private final @Nullable CertificateTemplateIdentityConstraintsCelExpression celExpression;
 
     @OutputCustomType.Constructor({"allowSubjectAltNamesPassthrough","allowSubjectPassthrough","celExpression"})
@@ -26,12 +38,24 @@ public final class CertificateTemplateIdentityConstraints {
         this.celExpression = celExpression;
     }
 
+    /**
+     * Required. If this is true, the SubjectAltNames extension may be copied from a certificate request into the signed certificate. Otherwise, the requested SubjectAltNames will be discarded.
+     * 
+     */
     public Boolean getAllowSubjectAltNamesPassthrough() {
         return this.allowSubjectAltNamesPassthrough;
     }
+    /**
+     * Required. If this is true, the Subject field may be copied from a certificate request into the signed certificate. Otherwise, the requested Subject will be discarded.
+     * 
+     */
     public Boolean getAllowSubjectPassthrough() {
         return this.allowSubjectPassthrough;
     }
+    /**
+     * Optional. A CEL expression that may be used to validate the resolved X.509 Subject and/or Subject Alternative Name before a certificate is signed. To see the full allowed syntax and some examples, see https://cloud.google.com/certificate-authority-service/docs/using-cel
+     * 
+     */
     public Optional<CertificateTemplateIdentityConstraintsCelExpression> getCelExpression() {
         return Optional.ofNullable(this.celExpression);
     }

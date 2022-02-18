@@ -18,6 +18,10 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StepArgs Empty = new StepArgs();
 
+    /**
+     * The geo-location where the resource lives
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -25,6 +29,10 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The properties that define the step.
+     * 
+     */
     @InputImport(name="properties", required=true)
     private final Input<Either<HealthCheckStepPropertiesArgs,WaitStepPropertiesArgs>> properties;
 
@@ -32,6 +40,10 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -39,6 +51,10 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the deployment step.
+     * 
+     */
     @InputImport(name="stepName")
     private final @Nullable Input<String> stepName;
 
@@ -46,6 +62,10 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
         return this.stepName == null ? Input.empty() : this.stepName;
     }
 
+    /**
+     * Resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

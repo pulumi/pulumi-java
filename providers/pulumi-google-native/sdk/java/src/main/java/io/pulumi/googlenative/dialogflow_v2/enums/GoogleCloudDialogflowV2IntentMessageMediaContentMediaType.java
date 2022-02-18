@@ -8,9 +8,21 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Optional. What type of media is the content (ie "audio").
+     * 
+     */
     @EnumType
     public enum GoogleCloudDialogflowV2IntentMessageMediaContentMediaType {
+        /**
+         * Unspecified.
+         * 
+         */
         ResponseMediaTypeUnspecified("RESPONSE_MEDIA_TYPE_UNSPECIFIED"),
+        /**
+         * Response media type is audio.
+         * 
+         */
         Audio("AUDIO");
 
         private final String value;

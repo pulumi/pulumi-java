@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Definition of a single parameter for an entity.
+ * 
+ */
 public final class ParameterSpecificationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ParameterSpecificationResponse Empty = new ParameterSpecificationResponse();
 
+    /**
+     * Default value of parameter.
+     * 
+     */
     @InputImport(name="defaultValue")
     private final @Nullable Object defaultValue;
 
@@ -22,6 +30,10 @@ public final class ParameterSpecificationResponse extends io.pulumi.resources.In
         return this.defaultValue == null ? Optional.empty() : Optional.ofNullable(this.defaultValue);
     }
 
+    /**
+     * Parameter type.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

@@ -12,6 +12,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetRegistryPolicyResult {
+    /**
+     * The JSON policy text to apply to your registry. The policy text follows the same format as IAM policy text. For more information, see Registry permissions (https://docs.aws.amazon.com/AmazonECR/latest/userguide/registry-permissions.html) in the Amazon Elastic Container Registry User Guide.
+     * 
+     */
     private final @Nullable Object policyText;
     private final @Nullable String registryId;
 
@@ -23,6 +27,10 @@ public final class GetRegistryPolicyResult {
         this.registryId = registryId;
     }
 
+    /**
+     * The JSON policy text to apply to your registry. The policy text follows the same format as IAM policy text. For more information, see Registry permissions (https://docs.aws.amazon.com/AmazonECR/latest/userguide/registry-permissions.html) in the Amazon Elastic Container Registry User Guide.
+     * 
+     */
     public Optional<Object> getPolicyText() {
         return Optional.ofNullable(this.policyText);
     }

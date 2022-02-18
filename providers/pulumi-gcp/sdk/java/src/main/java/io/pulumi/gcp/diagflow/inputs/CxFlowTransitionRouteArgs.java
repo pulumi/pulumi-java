@@ -15,6 +15,11 @@ public final class CxFlowTransitionRouteArgs extends io.pulumi.resources.Resourc
 
     public static final CxFlowTransitionRouteArgs Empty = new CxFlowTransitionRouteArgs();
 
+    /**
+     * The condition to evaluate against form parameters or session parameters.
+     * At least one of intent or condition must be specified. When both intent and condition are specified, the transition can only happen when both are fulfilled.
+     * 
+     */
     @InputImport(name="condition")
     private final @Nullable Input<String> condition;
 
@@ -22,6 +27,11 @@ public final class CxFlowTransitionRouteArgs extends io.pulumi.resources.Resourc
         return this.condition == null ? Input.empty() : this.condition;
     }
 
+    /**
+     * The unique identifier of an Intent.
+     * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/intents/<Intent ID>. Indicates that the transition can only happen when the given intent is matched. At least one of intent or condition must be specified. When both intent and condition are specified, the transition can only happen when both are fulfilled.
+     * 
+     */
     @InputImport(name="intent")
     private final @Nullable Input<String> intent;
 
@@ -29,6 +39,11 @@ public final class CxFlowTransitionRouteArgs extends io.pulumi.resources.Resourc
         return this.intent == null ? Input.empty() : this.intent;
     }
 
+    /**
+     * - 
+     * The unique identifier of this event handler.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -36,6 +51,11 @@ public final class CxFlowTransitionRouteArgs extends io.pulumi.resources.Resourc
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The target flow to transition to.
+     * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.
+     * 
+     */
     @InputImport(name="targetFlow")
     private final @Nullable Input<String> targetFlow;
 
@@ -43,6 +63,11 @@ public final class CxFlowTransitionRouteArgs extends io.pulumi.resources.Resourc
         return this.targetFlow == null ? Input.empty() : this.targetFlow;
     }
 
+    /**
+     * The target page to transition to.
+     * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/pages/<Page ID>.
+     * 
+     */
     @InputImport(name="targetPage")
     private final @Nullable Input<String> targetPage;
 
@@ -50,6 +75,11 @@ public final class CxFlowTransitionRouteArgs extends io.pulumi.resources.Resourc
         return this.targetPage == null ? Input.empty() : this.targetPage;
     }
 
+    /**
+     * The fulfillment to call when the event occurs. Handling webhook errors with a fulfillment enabled with webhook could cause infinite loop. It is invalid to specify such fulfillment for a handler handling webhooks.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="triggerFulfillment")
     private final @Nullable Input<CxFlowTransitionRouteTriggerFulfillmentArgs> triggerFulfillment;
 

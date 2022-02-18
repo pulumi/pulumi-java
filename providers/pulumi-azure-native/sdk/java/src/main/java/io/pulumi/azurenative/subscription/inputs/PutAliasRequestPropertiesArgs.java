@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Put subscription properties.
+ * 
+ */
 public final class PutAliasRequestPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PutAliasRequestPropertiesArgs Empty = new PutAliasRequestPropertiesArgs();
 
+    /**
+     * Determines whether subscription is fieldLed, partnerLed or LegacyEA
+     * 
+     */
     @InputImport(name="billingScope")
     private final @Nullable Input<String> billingScope;
 
@@ -23,6 +31,10 @@ public final class PutAliasRequestPropertiesArgs extends io.pulumi.resources.Res
         return this.billingScope == null ? Input.empty() : this.billingScope;
     }
 
+    /**
+     * The friendly name of the subscription.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -30,6 +42,10 @@ public final class PutAliasRequestPropertiesArgs extends io.pulumi.resources.Res
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * Reseller ID, basically MPN Id
+     * 
+     */
     @InputImport(name="resellerId")
     private final @Nullable Input<String> resellerId;
 
@@ -37,6 +53,10 @@ public final class PutAliasRequestPropertiesArgs extends io.pulumi.resources.Res
         return this.resellerId == null ? Input.empty() : this.resellerId;
     }
 
+    /**
+     * This parameter can be used to create alias for existing subscription Id
+     * 
+     */
     @InputImport(name="subscriptionId")
     private final @Nullable Input<String> subscriptionId;
 
@@ -44,6 +64,10 @@ public final class PutAliasRequestPropertiesArgs extends io.pulumi.resources.Res
         return this.subscriptionId == null ? Input.empty() : this.subscriptionId;
     }
 
+    /**
+     * The workload type of the subscription. It can be either Production or DevTest.
+     * 
+     */
     @InputImport(name="workload")
     private final @Nullable Input<Either<String,Workload>> workload;
 

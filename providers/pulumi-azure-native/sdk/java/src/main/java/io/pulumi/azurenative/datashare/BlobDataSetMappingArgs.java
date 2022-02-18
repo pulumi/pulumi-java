@@ -16,6 +16,10 @@ public final class BlobDataSetMappingArgs extends io.pulumi.resources.ResourceAr
 
     public static final BlobDataSetMappingArgs Empty = new BlobDataSetMappingArgs();
 
+    /**
+     * The name of the share account.
+     * 
+     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -23,6 +27,10 @@ public final class BlobDataSetMappingArgs extends io.pulumi.resources.ResourceAr
         return this.accountName;
     }
 
+    /**
+     * Container that has the file path.
+     * 
+     */
     @InputImport(name="containerName", required=true)
     private final Input<String> containerName;
 
@@ -30,6 +38,10 @@ public final class BlobDataSetMappingArgs extends io.pulumi.resources.ResourceAr
         return this.containerName;
     }
 
+    /**
+     * The id of the source data set.
+     * 
+     */
     @InputImport(name="dataSetId", required=true)
     private final Input<String> dataSetId;
 
@@ -37,6 +49,10 @@ public final class BlobDataSetMappingArgs extends io.pulumi.resources.ResourceAr
         return this.dataSetId;
     }
 
+    /**
+     * The name of the data set mapping to be created.
+     * 
+     */
     @InputImport(name="dataSetMappingName")
     private final @Nullable Input<String> dataSetMappingName;
 
@@ -44,6 +60,10 @@ public final class BlobDataSetMappingArgs extends io.pulumi.resources.ResourceAr
         return this.dataSetMappingName == null ? Input.empty() : this.dataSetMappingName;
     }
 
+    /**
+     * File path within the source data set
+     * 
+     */
     @InputImport(name="filePath", required=true)
     private final Input<String> filePath;
 
@@ -51,6 +71,11 @@ public final class BlobDataSetMappingArgs extends io.pulumi.resources.ResourceAr
         return this.filePath;
     }
 
+    /**
+     * Kind of data set mapping.
+     * Expected value is 'Blob'.
+     * 
+     */
     @InputImport(name="kind", required=true)
     private final Input<String> kind;
 
@@ -58,6 +83,10 @@ public final class BlobDataSetMappingArgs extends io.pulumi.resources.ResourceAr
         return this.kind;
     }
 
+    /**
+     * File output type
+     * 
+     */
     @InputImport(name="outputType")
     private final @Nullable Input<Either<String,OutputType>> outputType;
 
@@ -65,6 +94,10 @@ public final class BlobDataSetMappingArgs extends io.pulumi.resources.ResourceAr
         return this.outputType == null ? Input.empty() : this.outputType;
     }
 
+    /**
+     * Resource group of storage account.
+     * 
+     */
     @InputImport(name="resourceGroup", required=true)
     private final Input<String> resourceGroup;
 
@@ -72,6 +105,10 @@ public final class BlobDataSetMappingArgs extends io.pulumi.resources.ResourceAr
         return this.resourceGroup;
     }
 
+    /**
+     * The resource group name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -79,6 +116,10 @@ public final class BlobDataSetMappingArgs extends io.pulumi.resources.ResourceAr
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the share subscription which will hold the data set sink.
+     * 
+     */
     @InputImport(name="shareSubscriptionName", required=true)
     private final Input<String> shareSubscriptionName;
 
@@ -86,6 +127,10 @@ public final class BlobDataSetMappingArgs extends io.pulumi.resources.ResourceAr
         return this.shareSubscriptionName;
     }
 
+    /**
+     * Storage account name of the source data set.
+     * 
+     */
     @InputImport(name="storageAccountName", required=true)
     private final Input<String> storageAccountName;
 
@@ -93,6 +138,10 @@ public final class BlobDataSetMappingArgs extends io.pulumi.resources.ResourceAr
         return this.storageAccountName;
     }
 
+    /**
+     * Subscription id of storage account.
+     * 
+     */
     @InputImport(name="subscriptionId", required=true)
     private final Input<String> subscriptionId;
 

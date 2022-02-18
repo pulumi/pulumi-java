@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Encapsulation method on physical ports.
+     * 
+     */
     @EnumType
     public enum ExpressRoutePortsEncapsulation {
         Dot1Q("Dot1Q"),

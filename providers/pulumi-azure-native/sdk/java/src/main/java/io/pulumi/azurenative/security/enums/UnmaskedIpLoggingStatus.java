@@ -8,9 +8,21 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Unmasked IP address logging status
+     * 
+     */
     @EnumType
     public enum UnmaskedIpLoggingStatus {
+        /**
+         * Unmasked IP logging is disabled
+         * 
+         */
         Disabled("Disabled"),
+        /**
+         * Unmasked IP logging is enabled
+         * 
+         */
         Enabled("Enabled");
 
         private final String value;

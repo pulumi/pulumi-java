@@ -16,6 +16,12 @@ public final class GetInstanceTemplateScheduling extends io.pulumi.resources.Inv
 
     public static final GetInstanceTemplateScheduling Empty = new GetInstanceTemplateScheduling();
 
+    /**
+     * Specifies whether the instance should be
+     * automatically restarted if it is terminated by Compute Engine (not
+     * terminated by a user). This defaults to true.
+     * 
+     */
     @InputImport(name="automaticRestart", required=true)
     private final Boolean automaticRestart;
 
@@ -30,6 +36,14 @@ public final class GetInstanceTemplateScheduling extends io.pulumi.resources.Inv
         return this.minNodeCpus;
     }
 
+    /**
+     * Specifies node affinities or anti-affinities
+     * to determine which sole-tenant nodes your instances and managed instance
+     * groups will use as host systems. Read more on sole-tenant node creation
+     * [here](https://cloud.google.com/compute/docs/nodes/create-nodes).
+     * Structure documented below.
+     * 
+     */
     @InputImport(name="nodeAffinities", required=true)
     private final List<GetInstanceTemplateSchedulingNodeAffinity> nodeAffinities;
 
@@ -37,6 +51,11 @@ public final class GetInstanceTemplateScheduling extends io.pulumi.resources.Inv
         return this.nodeAffinities;
     }
 
+    /**
+     * Defines the maintenance behavior for this
+     * instance.
+     * 
+     */
     @InputImport(name="onHostMaintenance", required=true)
     private final String onHostMaintenance;
 
@@ -44,6 +63,12 @@ public final class GetInstanceTemplateScheduling extends io.pulumi.resources.Inv
         return this.onHostMaintenance;
     }
 
+    /**
+     * Allows instance to be preempted. This defaults to
+     * false. Read more on this
+     * [here](https://cloud.google.com/compute/docs/instances/preemptible).
+     * 
+     */
     @InputImport(name="preemptible", required=true)
     private final Boolean preemptible;
 

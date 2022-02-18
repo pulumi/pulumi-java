@@ -13,6 +13,10 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevel
 
     public static final MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevelResponse Empty = new MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevelResponse();
 
+    /**
+     * Number of applied deletes
+     * 
+     */
     @InputImport(name="cdcDeleteCounter", required=true)
     private final Double cdcDeleteCounter;
 
@@ -20,6 +24,10 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevel
         return this.cdcDeleteCounter;
     }
 
+    /**
+     * Number of applied inserts
+     * 
+     */
     @InputImport(name="cdcInsertCounter", required=true)
     private final Double cdcInsertCounter;
 
@@ -27,6 +35,10 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevel
         return this.cdcInsertCounter;
     }
 
+    /**
+     * Number of applied updates
+     * 
+     */
     @InputImport(name="cdcUpdateCounter", required=true)
     private final Double cdcUpdateCounter;
 
@@ -34,6 +46,10 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevel
         return this.cdcUpdateCounter;
     }
 
+    /**
+     * Number of data errors occurred
+     * 
+     */
     @InputImport(name="dataErrorsCounter", required=true)
     private final Double dataErrorsCounter;
 
@@ -41,6 +57,10 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevel
         return this.dataErrorsCounter;
     }
 
+    /**
+     * Name of the database
+     * 
+     */
     @InputImport(name="databaseName", required=true)
     private final String databaseName;
 
@@ -48,6 +68,10 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevel
         return this.databaseName;
     }
 
+    /**
+     * Full load end time
+     * 
+     */
     @InputImport(name="fullLoadEndedOn", required=true)
     private final String fullLoadEndedOn;
 
@@ -55,6 +79,10 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevel
         return this.fullLoadEndedOn;
     }
 
+    /**
+     * Estimate to finish full load
+     * 
+     */
     @InputImport(name="fullLoadEstFinishTime", required=true)
     private final String fullLoadEstFinishTime;
 
@@ -62,6 +90,10 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevel
         return this.fullLoadEstFinishTime;
     }
 
+    /**
+     * Full load start time
+     * 
+     */
     @InputImport(name="fullLoadStartedOn", required=true)
     private final String fullLoadStartedOn;
 
@@ -69,6 +101,10 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevel
         return this.fullLoadStartedOn;
     }
 
+    /**
+     * Number of rows applied in full load
+     * 
+     */
     @InputImport(name="fullLoadTotalRows", required=true)
     private final Double fullLoadTotalRows;
 
@@ -76,6 +112,10 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevel
         return this.fullLoadTotalRows;
     }
 
+    /**
+     * Result identifier
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -83,6 +123,10 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevel
         return this.id;
     }
 
+    /**
+     * Last modified time on target
+     * 
+     */
     @InputImport(name="lastModifiedTime", required=true)
     private final String lastModifiedTime;
 
@@ -90,6 +134,11 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevel
         return this.lastModifiedTime;
     }
 
+    /**
+     * Result type
+     * Expected value is 'TableLevelOutput'.
+     * 
+     */
     @InputImport(name="resultType", required=true)
     private final String resultType;
 
@@ -97,6 +146,10 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevel
         return this.resultType;
     }
 
+    /**
+     * Current state of the table migration
+     * 
+     */
     @InputImport(name="state", required=true)
     private final String state;
 
@@ -104,6 +157,10 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevel
         return this.state;
     }
 
+    /**
+     * Name of the table
+     * 
+     */
     @InputImport(name="tableName", required=true)
     private final String tableName;
 
@@ -111,6 +168,10 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevel
         return this.tableName;
     }
 
+    /**
+     * Total number of applied changes
+     * 
+     */
     @InputImport(name="totalChangesApplied", required=true)
     private final Double totalChangesApplied;
 

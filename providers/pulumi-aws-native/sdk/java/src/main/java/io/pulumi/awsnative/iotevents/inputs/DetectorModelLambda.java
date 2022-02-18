@@ -15,6 +15,10 @@ public final class DetectorModelLambda extends io.pulumi.resources.InvokeArgs {
 
     public static final DetectorModelLambda Empty = new DetectorModelLambda();
 
+    /**
+     * The ARN of the Lambda function that is executed.
+     * 
+     */
     @InputImport(name="functionArn", required=true)
     private final String functionArn;
 

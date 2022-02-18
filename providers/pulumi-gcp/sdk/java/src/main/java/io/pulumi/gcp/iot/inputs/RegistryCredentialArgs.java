@@ -15,6 +15,10 @@ public final class RegistryCredentialArgs extends io.pulumi.resources.ResourceAr
 
     public static final RegistryCredentialArgs Empty = new RegistryCredentialArgs();
 
+    /**
+     * A public key certificate format and data.
+     * 
+     */
     @InputImport(name="publicKeyCertificate", required=true)
     private final Input<Map<String,Object>> publicKeyCertificate;
 

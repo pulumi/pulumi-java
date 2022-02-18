@@ -9,6 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A key-value pair to associate expression variable names with their values
+ * 
+ */
 public final class DatasetFilterValueArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DatasetFilterValueArgs Empty = new DatasetFilterValueArgs();
@@ -20,6 +24,10 @@ public final class DatasetFilterValueArgs extends io.pulumi.resources.ResourceAr
         return this.value;
     }
 
+    /**
+     * Variable name
+     * 
+     */
     @InputImport(name="valueReference", required=true)
     private final Input<String> valueReference;
 

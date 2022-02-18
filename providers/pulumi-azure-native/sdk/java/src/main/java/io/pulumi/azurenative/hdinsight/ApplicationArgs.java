@@ -16,6 +16,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationArgs Empty = new ApplicationArgs();
 
+    /**
+     * The constant value for the application name.
+     * 
+     */
     @InputImport(name="applicationName")
     private final @Nullable Input<String> applicationName;
 
@@ -23,6 +27,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.applicationName == null ? Input.empty() : this.applicationName;
     }
 
+    /**
+     * The name of the cluster.
+     * 
+     */
     @InputImport(name="clusterName", required=true)
     private final Input<String> clusterName;
 
@@ -30,6 +38,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.clusterName;
     }
 
+    /**
+     * The properties of the application.
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<ApplicationPropertiesArgs> properties;
 
@@ -37,6 +49,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -44,6 +60,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The tags for the application.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Istio service scoped to an Istio mesh. Anthos clusters running ASM < 1.6.8 will have their services ingested as this type.
+ * 
+ */
 public final class MeshIstioResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MeshIstioResponse Empty = new MeshIstioResponse();
 
+    /**
+     * Identifier for the mesh in which this Istio service is defined. Corresponds to the mesh_uid metric label in Istio metrics.
+     * 
+     */
     @InputImport(name="meshUid", required=true)
     private final String meshUid;
 
@@ -19,6 +27,10 @@ public final class MeshIstioResponse extends io.pulumi.resources.InvokeArgs {
         return this.meshUid;
     }
 
+    /**
+     * The name of the Istio service underlying this service. Corresponds to the destination_service_name metric label in Istio metrics.
+     * 
+     */
     @InputImport(name="serviceName", required=true)
     private final String serviceName;
 
@@ -26,6 +38,10 @@ public final class MeshIstioResponse extends io.pulumi.resources.InvokeArgs {
         return this.serviceName;
     }
 
+    /**
+     * The namespace of the Istio service underlying this service. Corresponds to the destination_service_namespace metric label in Istio metrics.
+     * 
+     */
     @InputImport(name="serviceNamespace", required=true)
     private final String serviceNamespace;
 

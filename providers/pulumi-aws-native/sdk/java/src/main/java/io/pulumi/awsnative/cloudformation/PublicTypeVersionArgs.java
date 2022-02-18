@@ -15,6 +15,10 @@ public final class PublicTypeVersionArgs extends io.pulumi.resources.ResourceArg
 
     public static final PublicTypeVersionArgs Empty = new PublicTypeVersionArgs();
 
+    /**
+     * The Amazon Resource Number (ARN) of the extension.
+     * 
+     */
     @InputImport(name="arn")
     private final @Nullable Input<String> arn;
 
@@ -22,6 +26,10 @@ public final class PublicTypeVersionArgs extends io.pulumi.resources.ResourceArg
         return this.arn == null ? Input.empty() : this.arn;
     }
 
+    /**
+     * A url to the S3 bucket where logs for the testType run will be available
+     * 
+     */
     @InputImport(name="logDeliveryBucket")
     private final @Nullable Input<String> logDeliveryBucket;
 
@@ -29,6 +37,10 @@ public final class PublicTypeVersionArgs extends io.pulumi.resources.ResourceArg
         return this.logDeliveryBucket == null ? Input.empty() : this.logDeliveryBucket;
     }
 
+    /**
+     * The version number of a public third-party extension
+     * 
+     */
     @InputImport(name="publicVersionNumber")
     private final @Nullable Input<String> publicVersionNumber;
 
@@ -36,6 +48,10 @@ public final class PublicTypeVersionArgs extends io.pulumi.resources.ResourceArg
         return this.publicVersionNumber == null ? Input.empty() : this.publicVersionNumber;
     }
 
+    /**
+     * The kind of extension
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<PublicTypeVersionType> type;
 
@@ -43,6 +59,12 @@ public final class PublicTypeVersionArgs extends io.pulumi.resources.ResourceArg
         return this.type == null ? Input.empty() : this.type;
     }
 
+    /**
+     * The name of the type being registered.
+     * 
+     * We recommend that type names adhere to the following pattern: company_or_organization::service::type.
+     * 
+     */
     @InputImport(name="typeName")
     private final @Nullable Input<String> typeName;
 

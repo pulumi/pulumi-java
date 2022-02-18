@@ -16,6 +16,13 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
 
     public static final TagState Empty = new TagState();
 
+    /**
+     * Resources like Entry can have schemas associated with them. This scope allows users to attach tags to an
+     * individual column based on that schema.
+     * For attaching a tag to a nested column, use `.` to separate the column names. Example:
+     * `outer_column.inner_column`
+     * 
+     */
     @InputImport(name="column")
     private final @Nullable Input<String> column;
 
@@ -23,6 +30,12 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
         return this.column == null ? Input.empty() : this.column;
     }
 
+    /**
+     * This maps the ID of a tag field to the value of and additional information about that field.
+     * Valid field IDs are defined by the tag's template. A tag must have at least 1 field and at most 500 fields.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="fields")
     private final @Nullable Input<List<TagFieldGetArgs>> fields;
 
@@ -30,6 +43,13 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
         return this.fields == null ? Input.empty() : this.fields;
     }
 
+    /**
+     * The resource name of the tag in URL format. Example:
+     * projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/entries/{entryId}/tags/{tag_id} or
+     * projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/tags/{tag_id} where tag_id is a system-generated
+     * identifier. Note that this Tag may not actually be stored in the location in this name.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -37,6 +57,11 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The name of the parent this tag is attached to. This can be the name of an entry or an entry group. If an entry group, the tag will be attached to
+     * all entries in that group.
+     * 
+     */
     @InputImport(name="parent")
     private final @Nullable Input<String> parent;
 
@@ -44,6 +69,12 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
         return this.parent == null ? Input.empty() : this.parent;
     }
 
+    /**
+     * The resource name of the tag template that this tag uses. Example:
+     * projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId}
+     * This field cannot be modified after creation.
+     * 
+     */
     @InputImport(name="template")
     private final @Nullable Input<String> template;
 
@@ -51,6 +82,10 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
         return this.template == null ? Input.empty() : this.template;
     }
 
+    /**
+     * The display name of the tag template.
+     * 
+     */
     @InputImport(name="templateDisplayname")
     private final @Nullable Input<String> templateDisplayname;
 

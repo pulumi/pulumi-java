@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Disk Encryption Key Information (BitLocker Encryption Key (BEK) on Windows).
+ * 
+ */
 public final class DiskEncryptionKeyInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DiskEncryptionKeyInfoArgs Empty = new DiskEncryptionKeyInfoArgs();
 
+    /**
+     * The KeyVault resource ARM Id for secret.
+     * 
+     */
     @InputImport(name="keyVaultResourceArmId")
     private final @Nullable Input<String> keyVaultResourceArmId;
 
@@ -21,6 +29,10 @@ public final class DiskEncryptionKeyInfoArgs extends io.pulumi.resources.Resourc
         return this.keyVaultResourceArmId == null ? Input.empty() : this.keyVaultResourceArmId;
     }
 
+    /**
+     * The secret URL / identifier.
+     * 
+     */
     @InputImport(name="secretIdentifier")
     private final @Nullable Input<String> secretIdentifier;
 

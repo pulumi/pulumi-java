@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetArchive {
+/**
+ * Resource Type definition for AWS::Events::Archive
+ * 
+ */
     public static CompletableFuture<GetArchiveResult> invokeAsync(GetArchiveArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:events:getArchive", TypeShape.of(GetArchiveResult.class), args == null ? GetArchiveArgs.Empty : args, Utilities.withVersion(options));
     }

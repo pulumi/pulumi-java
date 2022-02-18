@@ -13,6 +13,30 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetClusterIstioService {
+/**
+ * A Monitoring Service is the root resource under which operational aspects of a
+ * generic service are accessible. A service is some discrete, autonomous, and
+ * network-accessible unit, designed to solve an individual concern
+ * 
+ * An Cluster Istio monitoring service is automatically created by GCP to monitor
+ * Cluster Istio services.
+ * 
+ * To get more information about Service, see:
+ * 
+ * * [API documentation](https://cloud.google.com/monitoring/api/ref_v3/rest/v3/services)
+ * * How-to Guides
+ *     * [Service Monitoring](https://cloud.google.com/monitoring/service-monitoring)
+ *     * [Monitoring API Documentation](https://cloud.google.com/monitoring/api/v3/)
+ * 
+ * ## Example Usage
+ * 
+ *
+ * A collection of arguments for invoking getClusterIstioService.
+ * 
+ *
+ * A collection of values returned by getClusterIstioService.
+ * 
+ */
     public static CompletableFuture<GetClusterIstioServiceResult> invokeAsync(GetClusterIstioServiceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:monitoring/getClusterIstioService:getClusterIstioService", TypeShape.of(GetClusterIstioServiceResult.class), args == null ? GetClusterIstioServiceArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A destination for events that failed processing.
+ * 
+ */
 public final class EventSourceMappingOnFailure extends io.pulumi.resources.InvokeArgs {
 
     public static final EventSourceMappingOnFailure Empty = new EventSourceMappingOnFailure();
 
+    /**
+     * The Amazon Resource Name (ARN) of the destination resource.
+     * 
+     */
     @InputImport(name="destination")
     private final @Nullable String destination;
 

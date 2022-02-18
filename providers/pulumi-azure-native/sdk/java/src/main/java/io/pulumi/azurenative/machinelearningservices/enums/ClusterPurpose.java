@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Intended usage of the cluster
+     * 
+     */
     @EnumType
     public enum ClusterPurpose {
         FastProd("FastProd"),

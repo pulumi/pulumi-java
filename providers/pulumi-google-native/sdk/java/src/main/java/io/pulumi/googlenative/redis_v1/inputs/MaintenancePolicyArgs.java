@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Maintenance policy for an instance.
+ * 
+ */
 public final class MaintenancePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MaintenancePolicyArgs Empty = new MaintenancePolicyArgs();
 
+    /**
+     * Optional. Description of what this policy is for. Create/Update methods return INVALID_ARGUMENT if the length is greater than 512.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -23,6 +31,10 @@ public final class MaintenancePolicyArgs extends io.pulumi.resources.ResourceArg
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Optional. Maintenance window that is applied to resources covered by this policy. Minimum 1. For the current version, the maximum number of weekly_window is expected to be one.
+     * 
+     */
     @InputImport(name="weeklyMaintenanceWindow")
     private final @Nullable Input<List<WeeklyMaintenanceWindowArgs>> weeklyMaintenanceWindow;
 

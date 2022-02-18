@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The schedule property associated with the entity.
+ * 
+ */
 public final class ScheduleAssociationPropertyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ScheduleAssociationPropertyResponse Empty = new ScheduleAssociationPropertyResponse();
 
+    /**
+     * Gets or sets the name of the Schedule.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 

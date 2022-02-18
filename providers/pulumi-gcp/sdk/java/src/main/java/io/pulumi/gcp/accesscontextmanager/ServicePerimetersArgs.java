@@ -16,6 +16,11 @@ public final class ServicePerimetersArgs extends io.pulumi.resources.ResourceArg
 
     public static final ServicePerimetersArgs Empty = new ServicePerimetersArgs();
 
+    /**
+     * The AccessPolicy this ServicePerimeter lives in.
+     * Format: accessPolicies/{policy_id}
+     * 
+     */
     @InputImport(name="parent", required=true)
     private final Input<String> parent;
 
@@ -23,6 +28,11 @@ public final class ServicePerimetersArgs extends io.pulumi.resources.ResourceArg
         return this.parent;
     }
 
+    /**
+     * The desired Service Perimeters that should replace all existing Service Perimeters in the Access Policy.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="servicePerimeters")
     private final @Nullable Input<List<ServicePerimetersServicePerimeterArgs>> servicePerimeters;
 

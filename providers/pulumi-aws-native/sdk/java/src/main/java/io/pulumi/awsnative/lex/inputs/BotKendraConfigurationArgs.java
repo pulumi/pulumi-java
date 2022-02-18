@@ -11,6 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Configuration for searching a Amazon Kendra index specified for the intent.
+ * 
+ */
 public final class BotKendraConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BotKendraConfigurationArgs Empty = new BotKendraConfigurationArgs();
@@ -29,6 +33,10 @@ public final class BotKendraConfigurationArgs extends io.pulumi.resources.Resour
         return this.queryFilterString == null ? Input.empty() : this.queryFilterString;
     }
 
+    /**
+     * Determines whether the AMAZON.KendraSearchIntent intent uses a custom query string to query the Amazon Kendra index.
+     * 
+     */
     @InputImport(name="queryFilterStringEnabled")
     private final @Nullable Input<Boolean> queryFilterStringEnabled;
 

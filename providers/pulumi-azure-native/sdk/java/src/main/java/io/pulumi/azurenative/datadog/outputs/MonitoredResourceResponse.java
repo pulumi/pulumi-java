@@ -12,10 +12,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MonitoredResourceResponse {
+    /**
+     * The ARM id of the resource.
+     * 
+     */
     private final @Nullable String id;
+    /**
+     * Reason for why the resource is sending logs (or why it is not sending).
+     * 
+     */
     private final @Nullable String reasonForLogsStatus;
+    /**
+     * Reason for why the resource is sending metrics (or why it is not sending).
+     * 
+     */
     private final @Nullable String reasonForMetricsStatus;
+    /**
+     * Flag indicating if resource is sending logs to Datadog.
+     * 
+     */
     private final @Nullable Boolean sendingLogs;
+    /**
+     * Flag indicating if resource is sending metrics to Datadog.
+     * 
+     */
     private final @Nullable Boolean sendingMetrics;
 
     @OutputCustomType.Constructor({"id","reasonForLogsStatus","reasonForMetricsStatus","sendingLogs","sendingMetrics"})
@@ -32,18 +52,38 @@ public final class MonitoredResourceResponse {
         this.sendingMetrics = sendingMetrics;
     }
 
+    /**
+     * The ARM id of the resource.
+     * 
+     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+    /**
+     * Reason for why the resource is sending logs (or why it is not sending).
+     * 
+     */
     public Optional<String> getReasonForLogsStatus() {
         return Optional.ofNullable(this.reasonForLogsStatus);
     }
+    /**
+     * Reason for why the resource is sending metrics (or why it is not sending).
+     * 
+     */
     public Optional<String> getReasonForMetricsStatus() {
         return Optional.ofNullable(this.reasonForMetricsStatus);
     }
+    /**
+     * Flag indicating if resource is sending logs to Datadog.
+     * 
+     */
     public Optional<Boolean> getSendingLogs() {
         return Optional.ofNullable(this.sendingLogs);
     }
+    /**
+     * Flag indicating if resource is sending metrics to Datadog.
+     * 
+     */
     public Optional<Boolean> getSendingMetrics() {
         return Optional.ofNullable(this.sendingMetrics);
     }

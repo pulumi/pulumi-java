@@ -12,15 +12,55 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetControllerDetailsResult {
+    /**
+     * dnc application id should be used by customer to authenticate with dnc gateway.
+     * 
+     */
     private final String dncAppId;
+    /**
+     * dnc endpoint url that customers can use to connect to
+     * 
+     */
     private final String dncEndpoint;
+    /**
+     * tenant id of dnc application id
+     * 
+     */
     private final String dncTenantId;
+    /**
+     * An identifier that represents the resource.
+     * 
+     */
     private final String id;
+    /**
+     * Location of the resource.
+     * 
+     */
     private final @Nullable String location;
+    /**
+     * The name of the resource.
+     * 
+     */
     private final String name;
+    /**
+     * The current state of dnc controller resource.
+     * 
+     */
     private final String provisioningState;
+    /**
+     * Resource guid.
+     * 
+     */
     private final String resourceGuid;
+    /**
+     * The resource tags.
+     * 
+     */
     private final @Nullable Map<String,String> tags;
+    /**
+     * The type of resource.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"dncAppId","dncEndpoint","dncTenantId","id","location","name","provisioningState","resourceGuid","tags","type"})
@@ -47,33 +87,73 @@ public final class GetControllerDetailsResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * dnc application id should be used by customer to authenticate with dnc gateway.
+     * 
+     */
     public String getDncAppId() {
         return this.dncAppId;
     }
+    /**
+     * dnc endpoint url that customers can use to connect to
+     * 
+     */
     public String getDncEndpoint() {
         return this.dncEndpoint;
     }
+    /**
+     * tenant id of dnc application id
+     * 
+     */
     public String getDncTenantId() {
         return this.dncTenantId;
     }
+    /**
+     * An identifier that represents the resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Location of the resource.
+     * 
+     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
+    /**
+     * The name of the resource.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The current state of dnc controller resource.
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Resource guid.
+     * 
+     */
     public String getResourceGuid() {
         return this.resourceGuid;
     }
+    /**
+     * The resource tags.
+     * 
+     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+    /**
+     * The type of resource.
+     * 
+     */
     public String getType() {
         return this.type;
     }

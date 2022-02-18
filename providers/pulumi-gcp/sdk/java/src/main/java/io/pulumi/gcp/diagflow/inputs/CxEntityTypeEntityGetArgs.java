@@ -15,6 +15,11 @@ public final class CxEntityTypeEntityGetArgs extends io.pulumi.resources.Resourc
 
     public static final CxEntityTypeEntityGetArgs Empty = new CxEntityTypeEntityGetArgs();
 
+    /**
+     * A collection of value synonyms. For example, if the entity type is vegetable, and value is scallions, a synonym could be green onions.
+     * For KIND_LIST entity types: This collection must contain exactly one synonym equal to value.
+     * 
+     */
     @InputImport(name="synonyms")
     private final @Nullable Input<List<String>> synonyms;
 
@@ -22,6 +27,10 @@ public final class CxEntityTypeEntityGetArgs extends io.pulumi.resources.Resourc
         return this.synonyms == null ? Input.empty() : this.synonyms;
     }
 
+    /**
+     * The word or phrase to be excluded.
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

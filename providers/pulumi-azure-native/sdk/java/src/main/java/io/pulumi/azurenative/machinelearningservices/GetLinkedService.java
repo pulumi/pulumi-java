@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLinkedService {
+/**
+ * Linked service.
+ * API Version: 2020-09-01-preview.
+ * 
+ *
+ * Linked service.
+ * 
+ */
     public static CompletableFuture<GetLinkedServiceResult> invokeAsync(GetLinkedServiceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getLinkedService", TypeShape.of(GetLinkedServiceResult.class), args == null ? GetLinkedServiceArgs.Empty : args, Utilities.withVersion(options));
     }

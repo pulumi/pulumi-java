@@ -18,29 +18,105 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetFunctionResult {
+    /**
+     * Available memory (in MB) to the function.
+     * 
+     */
     private final Integer availableMemoryMb;
     private final Map<String,Object> buildEnvironmentVariables;
+    /**
+     * Description of the function.
+     * 
+     */
     private final String description;
+    /**
+     * Name of a JavaScript function that will be executed when the Google Cloud Function is triggered.
+     * 
+     */
     private final String entryPoint;
     private final Map<String,Object> environmentVariables;
+    /**
+     * A source that fires events in response to a condition in another service. Structure is documented below.
+     * 
+     */
     private final List<GetFunctionEventTrigger> eventTriggers;
+    /**
+     * If function is triggered by HTTP, trigger URL is set here.
+     * 
+     */
     private final String httpsTriggerUrl;
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
+    /**
+     * Controls what traffic can reach the function.
+     * 
+     */
     private final String ingressSettings;
+    /**
+     * A map of labels applied to this function.
+     * 
+     */
     private final Map<String,Object> labels;
+    /**
+     * The limit on the maximum number of function instances that may coexist at a given time.
+     * 
+     */
     private final Integer maxInstances;
     private final Integer minInstances;
+    /**
+     * The name of the Cloud Function.
+     * 
+     */
     private final String name;
     private final @Nullable String project;
     private final @Nullable String region;
+    /**
+     * The runtime in which the function is running.
+     * 
+     */
     private final String runtime;
+    /**
+     * The service account email to be assumed by the cloud function.
+     * 
+     */
     private final String serviceAccountEmail;
+    /**
+     * The GCS bucket containing the zip archive which contains the function.
+     * 
+     */
     private final String sourceArchiveBucket;
+    /**
+     * The source archive object (file) in archive bucket.
+     * 
+     */
     private final String sourceArchiveObject;
+    /**
+     * The URL of the Cloud Source Repository that the function is deployed from. Structure is documented below.
+     * 
+     */
     private final List<GetFunctionSourceRepository> sourceRepositories;
+    /**
+     * Function execution timeout (in seconds).
+     * 
+     */
     private final Integer timeout;
+    /**
+     * If function is triggered by HTTP, this boolean is set.
+     * 
+     */
     private final Boolean triggerHttp;
+    /**
+     * The VPC Network Connector that this cloud function can connect to.
+     * 
+     */
     private final String vpcConnector;
+    /**
+     * The egress settings for the connector, controlling what traffic is diverted through it.
+     * 
+     */
     private final String vpcConnectorEgressSettings;
 
     @OutputCustomType.Constructor({"availableMemoryMb","buildEnvironmentVariables","description","entryPoint","environmentVariables","eventTriggers","httpsTriggerUrl","id","ingressSettings","labels","maxInstances","minInstances","name","project","region","runtime","serviceAccountEmail","sourceArchiveBucket","sourceArchiveObject","sourceRepositories","timeout","triggerHttp","vpcConnector","vpcConnectorEgressSettings"})
@@ -95,42 +171,82 @@ public final class GetFunctionResult {
         this.vpcConnectorEgressSettings = Objects.requireNonNull(vpcConnectorEgressSettings);
     }
 
+    /**
+     * Available memory (in MB) to the function.
+     * 
+     */
     public Integer getAvailableMemoryMb() {
         return this.availableMemoryMb;
     }
     public Map<String,Object> getBuildEnvironmentVariables() {
         return this.buildEnvironmentVariables;
     }
+    /**
+     * Description of the function.
+     * 
+     */
     public String getDescription() {
         return this.description;
     }
+    /**
+     * Name of a JavaScript function that will be executed when the Google Cloud Function is triggered.
+     * 
+     */
     public String getEntryPoint() {
         return this.entryPoint;
     }
     public Map<String,Object> getEnvironmentVariables() {
         return this.environmentVariables;
     }
+    /**
+     * A source that fires events in response to a condition in another service. Structure is documented below.
+     * 
+     */
     public List<GetFunctionEventTrigger> getEventTriggers() {
         return this.eventTriggers;
     }
+    /**
+     * If function is triggered by HTTP, trigger URL is set here.
+     * 
+     */
     public String getHttpsTriggerUrl() {
         return this.httpsTriggerUrl;
     }
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Controls what traffic can reach the function.
+     * 
+     */
     public String getIngressSettings() {
         return this.ingressSettings;
     }
+    /**
+     * A map of labels applied to this function.
+     * 
+     */
     public Map<String,Object> getLabels() {
         return this.labels;
     }
+    /**
+     * The limit on the maximum number of function instances that may coexist at a given time.
+     * 
+     */
     public Integer getMaxInstances() {
         return this.maxInstances;
     }
     public Integer getMinInstances() {
         return this.minInstances;
     }
+    /**
+     * The name of the Cloud Function.
+     * 
+     */
     public String getName() {
         return this.name;
     }
@@ -140,30 +256,66 @@ public final class GetFunctionResult {
     public Optional<String> getRegion() {
         return Optional.ofNullable(this.region);
     }
+    /**
+     * The runtime in which the function is running.
+     * 
+     */
     public String getRuntime() {
         return this.runtime;
     }
+    /**
+     * The service account email to be assumed by the cloud function.
+     * 
+     */
     public String getServiceAccountEmail() {
         return this.serviceAccountEmail;
     }
+    /**
+     * The GCS bucket containing the zip archive which contains the function.
+     * 
+     */
     public String getSourceArchiveBucket() {
         return this.sourceArchiveBucket;
     }
+    /**
+     * The source archive object (file) in archive bucket.
+     * 
+     */
     public String getSourceArchiveObject() {
         return this.sourceArchiveObject;
     }
+    /**
+     * The URL of the Cloud Source Repository that the function is deployed from. Structure is documented below.
+     * 
+     */
     public List<GetFunctionSourceRepository> getSourceRepositories() {
         return this.sourceRepositories;
     }
+    /**
+     * Function execution timeout (in seconds).
+     * 
+     */
     public Integer getTimeout() {
         return this.timeout;
     }
+    /**
+     * If function is triggered by HTTP, this boolean is set.
+     * 
+     */
     public Boolean getTriggerHttp() {
         return this.triggerHttp;
     }
+    /**
+     * The VPC Network Connector that this cloud function can connect to.
+     * 
+     */
     public String getVpcConnector() {
         return this.vpcConnector;
     }
+    /**
+     * The egress settings for the connector, controlling what traffic is diverted through it.
+     * 
+     */
     public String getVpcConnectorEgressSettings() {
         return this.vpcConnectorEgressSettings;
     }

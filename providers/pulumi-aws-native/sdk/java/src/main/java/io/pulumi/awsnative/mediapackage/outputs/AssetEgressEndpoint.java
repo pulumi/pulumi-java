@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AssetEgressEndpoint {
+    /**
+     * The ID of the PackagingConfiguration being applied to the Asset.
+     * 
+     */
     private final String packagingConfigurationId;
+    /**
+     * The URL of the parent manifest for the repackaged Asset.
+     * 
+     */
     private final String url;
 
     @OutputCustomType.Constructor({"packagingConfigurationId","url"})
@@ -20,9 +28,17 @@ public final class AssetEgressEndpoint {
         this.url = Objects.requireNonNull(url);
     }
 
+    /**
+     * The ID of the PackagingConfiguration being applied to the Asset.
+     * 
+     */
     public String getPackagingConfigurationId() {
         return this.packagingConfigurationId;
     }
+    /**
+     * The URL of the parent manifest for the repackaged Asset.
+     * 
+     */
     public String getUrl() {
         return this.url;
     }

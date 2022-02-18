@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes a network interface.
+ * 
+ */
 public final class EndpointAccessNetworkInterface extends io.pulumi.resources.InvokeArgs {
 
     public static final EndpointAccessNetworkInterface Empty = new EndpointAccessNetworkInterface();
 
+    /**
+     * The Availability Zone.
+     * 
+     */
     @InputImport(name="availabilityZone")
     private final @Nullable String availabilityZone;
 
@@ -21,6 +29,10 @@ public final class EndpointAccessNetworkInterface extends io.pulumi.resources.In
         return this.availabilityZone == null ? Optional.empty() : Optional.ofNullable(this.availabilityZone);
     }
 
+    /**
+     * The network interface identifier.
+     * 
+     */
     @InputImport(name="networkInterfaceId")
     private final @Nullable String networkInterfaceId;
 
@@ -28,6 +40,10 @@ public final class EndpointAccessNetworkInterface extends io.pulumi.resources.In
         return this.networkInterfaceId == null ? Optional.empty() : Optional.ofNullable(this.networkInterfaceId);
     }
 
+    /**
+     * The IPv4 address of the network interface within the subnet.
+     * 
+     */
     @InputImport(name="privateIpAddress")
     private final @Nullable String privateIpAddress;
 
@@ -35,6 +51,10 @@ public final class EndpointAccessNetworkInterface extends io.pulumi.resources.In
         return this.privateIpAddress == null ? Optional.empty() : Optional.ofNullable(this.privateIpAddress);
     }
 
+    /**
+     * The subnet identifier.
+     * 
+     */
     @InputImport(name="subnetId")
     private final @Nullable String subnetId;
 

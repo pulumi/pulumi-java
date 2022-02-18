@@ -14,10 +14,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines a threshold for categorizing time series values.
+ * 
+ */
 public final class ThresholdArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ThresholdArgs Empty = new ThresholdArgs();
 
+    /**
+     * The state color for this threshold. Color is not allowed in a XyChart.
+     * 
+     */
     @InputImport(name="color")
     private final @Nullable Input<ThresholdColor> color;
 
@@ -25,6 +33,10 @@ public final class ThresholdArgs extends io.pulumi.resources.ResourceArgs {
         return this.color == null ? Input.empty() : this.color;
     }
 
+    /**
+     * The direction for the current threshold. Direction is not allowed in a XyChart.
+     * 
+     */
     @InputImport(name="direction")
     private final @Nullable Input<ThresholdDirection> direction;
 
@@ -32,6 +44,10 @@ public final class ThresholdArgs extends io.pulumi.resources.ResourceArgs {
         return this.direction == null ? Input.empty() : this.direction;
     }
 
+    /**
+     * A label for the threshold.
+     * 
+     */
     @InputImport(name="label")
     private final @Nullable Input<String> label;
 
@@ -39,6 +55,10 @@ public final class ThresholdArgs extends io.pulumi.resources.ResourceArgs {
         return this.label == null ? Input.empty() : this.label;
     }
 
+    /**
+     * The target axis to use for plotting the threshold. Target axis is not allowed in a Scorecard.
+     * 
+     */
     @InputImport(name="targetAxis")
     private final @Nullable Input<ThresholdTargetAxis> targetAxis;
 
@@ -46,6 +66,10 @@ public final class ThresholdArgs extends io.pulumi.resources.ResourceArgs {
         return this.targetAxis == null ? Input.empty() : this.targetAxis;
     }
 
+    /**
+     * The value of the threshold. The value should be defined in the native scale of the metric.
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable Input<Double> value;
 

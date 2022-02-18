@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The login server properties of the connected registry.
+ * 
+ */
 public final class LoginServerPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LoginServerPropertiesResponse Empty = new LoginServerPropertiesResponse();
 
+    /**
+     * The host of the connected registry. Can be FQDN or IP.
+     * 
+     */
     @InputImport(name="host", required=true)
     private final String host;
 
@@ -20,6 +28,10 @@ public final class LoginServerPropertiesResponse extends io.pulumi.resources.Inv
         return this.host;
     }
 
+    /**
+     * The TLS properties of the connected registry login server.
+     * 
+     */
     @InputImport(name="tls", required=true)
     private final TlsPropertiesResponse tls;
 

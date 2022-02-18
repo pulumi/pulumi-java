@@ -12,6 +12,10 @@ public final class GetSchemaVersionMetadataArgs extends io.pulumi.resources.Invo
 
     public static final GetSchemaVersionMetadataArgs Empty = new GetSchemaVersionMetadataArgs();
 
+    /**
+     * Metadata key
+     * 
+     */
     @InputImport(name="key", required=true)
     private final String key;
 
@@ -19,6 +23,10 @@ public final class GetSchemaVersionMetadataArgs extends io.pulumi.resources.Invo
         return this.key;
     }
 
+    /**
+     * Represents the version ID associated with the schema version.
+     * 
+     */
     @InputImport(name="schemaVersionId", required=true)
     private final String schemaVersionId;
 
@@ -26,6 +34,10 @@ public final class GetSchemaVersionMetadataArgs extends io.pulumi.resources.Invo
         return this.schemaVersionId;
     }
 
+    /**
+     * Metadata value
+     * 
+     */
     @InputImport(name="value", required=true)
     private final String value;
 

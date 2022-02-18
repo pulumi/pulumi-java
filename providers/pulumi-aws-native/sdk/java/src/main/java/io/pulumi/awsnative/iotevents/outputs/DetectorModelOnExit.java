@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DetectorModelOnExit {
+    /**
+     * Specifies the `actions` that are performed when the state is exited and the `condition` is `TRUE`.
+     * 
+     */
     private final @Nullable List<DetectorModelEvent> events;
 
     @OutputCustomType.Constructor({"events"})
@@ -18,6 +22,10 @@ public final class DetectorModelOnExit {
         this.events = events;
     }
 
+    /**
+     * Specifies the `actions` that are performed when the state is exited and the `condition` is `TRUE`.
+     * 
+     */
     public List<DetectorModelEvent> getEvents() {
         return this.events == null ? List.of() : this.events;
     }

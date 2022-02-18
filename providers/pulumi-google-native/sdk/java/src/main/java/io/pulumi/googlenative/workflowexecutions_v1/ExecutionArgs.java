@@ -15,6 +15,10 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ExecutionArgs Empty = new ExecutionArgs();
 
+    /**
+     * Input parameters of the execution represented as a JSON string. The size limit is 32KB. *Note*: If you are using the REST API directly to run your workflow, you must escape any JSON string value of `argument`. Example: `'{"argument":"{\"firstName\":\"FIRST\",\"lastName\":\"LAST\"}"}'`
+     * 
+     */
     @InputImport(name="argument")
     private final @Nullable Input<String> argument;
 
@@ -22,6 +26,10 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
         return this.argument == null ? Input.empty() : this.argument;
     }
 
+    /**
+     * The call logging level associated to this execution.
+     * 
+     */
     @InputImport(name="callLogLevel")
     private final @Nullable Input<ExecutionCallLogLevel> callLogLevel;
 

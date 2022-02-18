@@ -12,12 +12,40 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetLongTermRetentionPolicyResult {
+    /**
+     * Resource ID.
+     * 
+     */
     private final String id;
+    /**
+     * The monthly retention policy for an LTR backup in an ISO 8601 format.
+     * 
+     */
     private final @Nullable String monthlyRetention;
+    /**
+     * Resource name.
+     * 
+     */
     private final String name;
+    /**
+     * Resource type.
+     * 
+     */
     private final String type;
+    /**
+     * The week of year to take the yearly backup in an ISO 8601 format.
+     * 
+     */
     private final @Nullable Integer weekOfYear;
+    /**
+     * The weekly retention policy for an LTR backup in an ISO 8601 format.
+     * 
+     */
     private final @Nullable String weeklyRetention;
+    /**
+     * The yearly retention policy for an LTR backup in an ISO 8601 format.
+     * 
+     */
     private final @Nullable String yearlyRetention;
 
     @OutputCustomType.Constructor({"id","monthlyRetention","name","type","weekOfYear","weeklyRetention","yearlyRetention"})
@@ -38,24 +66,52 @@ public final class GetLongTermRetentionPolicyResult {
         this.yearlyRetention = yearlyRetention;
     }
 
+    /**
+     * Resource ID.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * The monthly retention policy for an LTR backup in an ISO 8601 format.
+     * 
+     */
     public Optional<String> getMonthlyRetention() {
         return Optional.ofNullable(this.monthlyRetention);
     }
+    /**
+     * Resource name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Resource type.
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * The week of year to take the yearly backup in an ISO 8601 format.
+     * 
+     */
     public Optional<Integer> getWeekOfYear() {
         return Optional.ofNullable(this.weekOfYear);
     }
+    /**
+     * The weekly retention policy for an LTR backup in an ISO 8601 format.
+     * 
+     */
     public Optional<String> getWeeklyRetention() {
         return Optional.ofNullable(this.weeklyRetention);
     }
+    /**
+     * The yearly retention policy for an LTR backup in an ISO 8601 format.
+     * 
+     */
     public Optional<String> getYearlyRetention() {
         return Optional.ofNullable(this.yearlyRetention);
     }

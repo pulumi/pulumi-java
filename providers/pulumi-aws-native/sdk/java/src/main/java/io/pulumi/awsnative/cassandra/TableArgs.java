@@ -29,6 +29,10 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
         return this.billingMode == null ? Input.empty() : this.billingMode;
     }
 
+    /**
+     * Clustering key columns of the table
+     * 
+     */
     @InputImport(name="clusteringKeyColumns")
     private final @Nullable Input<List<TableClusteringKeyColumnArgs>> clusteringKeyColumns;
 
@@ -36,6 +40,10 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
         return this.clusteringKeyColumns == null ? Input.empty() : this.clusteringKeyColumns;
     }
 
+    /**
+     * Default TTL (Time To Live) in seconds, where zero is disabled. If the value is greater than zero, TTL is enabled for the entire table and an expiration timestamp is added to each column.
+     * 
+     */
     @InputImport(name="defaultTimeToLive")
     private final @Nullable Input<Integer> defaultTimeToLive;
 
@@ -50,6 +58,10 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
         return this.encryptionSpecification == null ? Input.empty() : this.encryptionSpecification;
     }
 
+    /**
+     * Name for Cassandra keyspace
+     * 
+     */
     @InputImport(name="keyspaceName", required=true)
     private final Input<String> keyspaceName;
 
@@ -57,6 +69,10 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
         return this.keyspaceName;
     }
 
+    /**
+     * Partition key columns of the table
+     * 
+     */
     @InputImport(name="partitionKeyColumns", required=true)
     private final Input<List<TableColumnArgs>> partitionKeyColumns;
 
@@ -64,6 +80,10 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
         return this.partitionKeyColumns;
     }
 
+    /**
+     * Indicates whether point in time recovery is enabled (true) or disabled (false) on the table
+     * 
+     */
     @InputImport(name="pointInTimeRecoveryEnabled")
     private final @Nullable Input<Boolean> pointInTimeRecoveryEnabled;
 
@@ -71,6 +91,10 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
         return this.pointInTimeRecoveryEnabled == null ? Input.empty() : this.pointInTimeRecoveryEnabled;
     }
 
+    /**
+     * Non-key columns of the table
+     * 
+     */
     @InputImport(name="regularColumns")
     private final @Nullable Input<List<TableColumnArgs>> regularColumns;
 
@@ -78,6 +102,10 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
         return this.regularColumns == null ? Input.empty() : this.regularColumns;
     }
 
+    /**
+     * Name for Cassandra table
+     * 
+     */
     @InputImport(name="tableName")
     private final @Nullable Input<String> tableName;
 
@@ -85,6 +113,10 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
         return this.tableName == null ? Input.empty() : this.tableName;
     }
 
+    /**
+     * An array of key-value pairs to apply to this resource
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<TableTagArgs>> tags;
 

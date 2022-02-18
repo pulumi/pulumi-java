@@ -14,6 +14,10 @@ public final class ResolverQueryLoggingConfigAssociationArgs extends io.pulumi.r
 
     public static final ResolverQueryLoggingConfigAssociationArgs Empty = new ResolverQueryLoggingConfigAssociationArgs();
 
+    /**
+     * ResolverQueryLogConfigId
+     * 
+     */
     @InputImport(name="resolverQueryLogConfigId")
     private final @Nullable Input<String> resolverQueryLogConfigId;
 
@@ -21,6 +25,10 @@ public final class ResolverQueryLoggingConfigAssociationArgs extends io.pulumi.r
         return this.resolverQueryLogConfigId == null ? Input.empty() : this.resolverQueryLogConfigId;
     }
 
+    /**
+     * ResourceId
+     * 
+     */
     @InputImport(name="resourceId")
     private final @Nullable Input<String> resourceId;
 

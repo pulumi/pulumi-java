@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The traffic routing method of the Traffic Manager profile.
+     * 
+     */
     @EnumType
     public enum TrafficRoutingMethod {
         Performance("Performance"),

@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetBucketPolicyResult {
+    /**
+     * A policy document containing permissions to add to the specified bucket.
+     * 
+     */
     private final @Nullable Object policyDocument;
 
     @OutputCustomType.Constructor({"policyDocument"})
@@ -18,6 +22,10 @@ public final class GetBucketPolicyResult {
         this.policyDocument = policyDocument;
     }
 
+    /**
+     * A policy document containing permissions to add to the specified bucket.
+     * 
+     */
     public Optional<Object> getPolicyDocument() {
         return Optional.ofNullable(this.policyDocument);
     }

@@ -24,6 +24,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AccountArgs Empty = new AccountArgs();
 
+    /**
+     * The name of the Data Lake Analytics account.
+     * 
+     */
     @InputImport(name="accountName")
     private final @Nullable Input<String> accountName;
 
@@ -31,6 +35,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountName == null ? Input.empty() : this.accountName;
     }
 
+    /**
+     * The list of compute policies associated with this account.
+     * 
+     */
     @InputImport(name="computePolicies")
     private final @Nullable Input<List<CreateComputePolicyWithAccountParametersArgs>> computePolicies;
 
@@ -38,6 +46,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.computePolicies == null ? Input.empty() : this.computePolicies;
     }
 
+    /**
+     * The list of Data Lake Store accounts associated with this account.
+     * 
+     */
     @InputImport(name="dataLakeStoreAccounts", required=true)
     private final Input<List<AddDataLakeStoreWithAccountParametersArgs>> dataLakeStoreAccounts;
 
@@ -45,6 +57,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataLakeStoreAccounts;
     }
 
+    /**
+     * The default Data Lake Store account associated with this account.
+     * 
+     */
     @InputImport(name="defaultDataLakeStoreAccount", required=true)
     private final Input<String> defaultDataLakeStoreAccount;
 
@@ -52,6 +68,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.defaultDataLakeStoreAccount;
     }
 
+    /**
+     * The current state of allowing or disallowing IPs originating within Azure through the firewall. If the firewall is disabled, this is not enforced.
+     * 
+     */
     @InputImport(name="firewallAllowAzureIps")
     private final @Nullable Input<FirewallAllowAzureIpsState> firewallAllowAzureIps;
 
@@ -59,6 +79,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.firewallAllowAzureIps == null ? Input.empty() : this.firewallAllowAzureIps;
     }
 
+    /**
+     * The list of firewall rules associated with this account.
+     * 
+     */
     @InputImport(name="firewallRules")
     private final @Nullable Input<List<CreateFirewallRuleWithAccountParametersArgs>> firewallRules;
 
@@ -66,6 +90,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.firewallRules == null ? Input.empty() : this.firewallRules;
     }
 
+    /**
+     * The current state of the IP address firewall for this account.
+     * 
+     */
     @InputImport(name="firewallState")
     private final @Nullable Input<FirewallState> firewallState;
 
@@ -73,6 +101,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.firewallState == null ? Input.empty() : this.firewallState;
     }
 
+    /**
+     * The resource location.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -80,6 +112,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The maximum supported degree of parallelism for this account.
+     * 
+     */
     @InputImport(name="maxDegreeOfParallelism")
     private final @Nullable Input<Integer> maxDegreeOfParallelism;
 
@@ -87,6 +123,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.maxDegreeOfParallelism == null ? Input.empty() : this.maxDegreeOfParallelism;
     }
 
+    /**
+     * The maximum supported degree of parallelism per job for this account.
+     * 
+     */
     @InputImport(name="maxDegreeOfParallelismPerJob")
     private final @Nullable Input<Integer> maxDegreeOfParallelismPerJob;
 
@@ -94,6 +134,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.maxDegreeOfParallelismPerJob == null ? Input.empty() : this.maxDegreeOfParallelismPerJob;
     }
 
+    /**
+     * The maximum supported jobs running under the account at the same time.
+     * 
+     */
     @InputImport(name="maxJobCount")
     private final @Nullable Input<Integer> maxJobCount;
 
@@ -101,6 +145,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.maxJobCount == null ? Input.empty() : this.maxJobCount;
     }
 
+    /**
+     * The minimum supported priority per job for this account.
+     * 
+     */
     @InputImport(name="minPriorityPerJob")
     private final @Nullable Input<Integer> minPriorityPerJob;
 
@@ -108,6 +156,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.minPriorityPerJob == null ? Input.empty() : this.minPriorityPerJob;
     }
 
+    /**
+     * The commitment tier for the next month.
+     * 
+     */
     @InputImport(name="newTier")
     private final @Nullable Input<TierType> newTier;
 
@@ -115,6 +167,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.newTier == null ? Input.empty() : this.newTier;
     }
 
+    /**
+     * The number of days that job metadata is retained.
+     * 
+     */
     @InputImport(name="queryStoreRetention")
     private final @Nullable Input<Integer> queryStoreRetention;
 
@@ -122,6 +178,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.queryStoreRetention == null ? Input.empty() : this.queryStoreRetention;
     }
 
+    /**
+     * The name of the Azure resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -129,6 +189,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The list of Azure Blob Storage accounts associated with this account.
+     * 
+     */
     @InputImport(name="storageAccounts")
     private final @Nullable Input<List<AddStorageAccountWithAccountParametersArgs>> storageAccounts;
 
@@ -136,6 +200,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.storageAccounts == null ? Input.empty() : this.storageAccounts;
     }
 
+    /**
+     * The resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

@@ -13,11 +13,35 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class BatchEndpointResponse {
+    /**
+     * Enum to determine endpoint authentication mode.
+     * 
+     */
     private final @Nullable String authMode;
+    /**
+     * Description of the inference endpoint.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * Property dictionary. Properties can be added, but not removed or altered.
+     * 
+     */
     private final @Nullable Map<String,String> properties;
+    /**
+     * Endpoint URI.
+     * 
+     */
     private final String scoringUri;
+    /**
+     * Endpoint Swagger URI.
+     * 
+     */
     private final String swaggerUri;
+    /**
+     * Traffic rules on how the traffic will be routed across deployments.
+     * 
+     */
     private final @Nullable Map<String,Integer> traffic;
 
     @OutputCustomType.Constructor({"authMode","description","properties","scoringUri","swaggerUri","traffic"})
@@ -36,21 +60,45 @@ public final class BatchEndpointResponse {
         this.traffic = traffic;
     }
 
+    /**
+     * Enum to determine endpoint authentication mode.
+     * 
+     */
     public Optional<String> getAuthMode() {
         return Optional.ofNullable(this.authMode);
     }
+    /**
+     * Description of the inference endpoint.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * Property dictionary. Properties can be added, but not removed or altered.
+     * 
+     */
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
     }
+    /**
+     * Endpoint URI.
+     * 
+     */
     public String getScoringUri() {
         return this.scoringUri;
     }
+    /**
+     * Endpoint Swagger URI.
+     * 
+     */
     public String getSwaggerUri() {
         return this.swaggerUri;
     }
+    /**
+     * Traffic rules on how the traffic will be routed across deployments.
+     * 
+     */
     public Map<String,Integer> getTraffic() {
         return this.traffic == null ? Map.of() : this.traffic;
     }

@@ -10,6 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Settings required for a slot type based on a grammar that you provide.
+ * 
+ */
 public final class BotGrammarSlotTypeSettingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BotGrammarSlotTypeSettingArgs Empty = new BotGrammarSlotTypeSettingArgs();

@@ -10,6 +10,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ClusterLogging {
+    /**
+     * The cluster control plane logging configuration for your cluster.
+     * 
+     */
     private final @Nullable ClusterLogging clusterLogging;
 
     @OutputCustomType.Constructor({"clusterLogging"})
@@ -17,6 +21,10 @@ public final class ClusterLogging {
         this.clusterLogging = clusterLogging;
     }
 
+    /**
+     * The cluster control plane logging configuration for your cluster.
+     * 
+     */
     public Optional<ClusterLogging> getClusterLogging() {
         return Optional.ofNullable(this.clusterLogging);
     }

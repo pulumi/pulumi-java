@@ -11,8 +11,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EncryptionKeyDetailsResponse {
+    /**
+     * The type of kek encryption key
+     * 
+     */
     private final @Nullable String kekType;
+    /**
+     * Specifies the url for kek encryption key.
+     * 
+     */
     private final @Nullable String kekUrl;
+    /**
+     * Specifies the keyvault resource id for kek encryption key.
+     * 
+     */
     private final @Nullable String kekVaultResourceID;
 
     @OutputCustomType.Constructor({"kekType","kekUrl","kekVaultResourceID"})
@@ -25,12 +37,24 @@ public final class EncryptionKeyDetailsResponse {
         this.kekVaultResourceID = kekVaultResourceID;
     }
 
+    /**
+     * The type of kek encryption key
+     * 
+     */
     public Optional<String> getKekType() {
         return Optional.ofNullable(this.kekType);
     }
+    /**
+     * Specifies the url for kek encryption key.
+     * 
+     */
     public Optional<String> getKekUrl() {
         return Optional.ofNullable(this.kekUrl);
     }
+    /**
+     * Specifies the keyvault resource id for kek encryption key.
+     * 
+     */
     public Optional<String> getKekVaultResourceID() {
         return Optional.ofNullable(this.kekVaultResourceID);
     }

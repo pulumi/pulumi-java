@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ConnectionMonitorWorkspaceSettingsResponse {
+    /**
+     * Log analytics workspace resource ID.
+     * 
+     */
     private final @Nullable String workspaceResourceId;
 
     @OutputCustomType.Constructor({"workspaceResourceId"})
@@ -18,6 +22,10 @@ public final class ConnectionMonitorWorkspaceSettingsResponse {
         this.workspaceResourceId = workspaceResourceId;
     }
 
+    /**
+     * Log analytics workspace resource ID.
+     * 
+     */
     public Optional<String> getWorkspaceResourceId() {
         return Optional.ofNullable(this.workspaceResourceId);
     }

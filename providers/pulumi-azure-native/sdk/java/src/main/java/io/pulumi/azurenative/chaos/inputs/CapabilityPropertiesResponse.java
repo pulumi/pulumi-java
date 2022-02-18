@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Model that represents the Capability properties model.
+ * 
+ */
 public final class CapabilityPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CapabilityPropertiesResponse Empty = new CapabilityPropertiesResponse();
 
+    /**
+     * Localized string of the description.
+     * 
+     */
     @InputImport(name="description", required=true)
     private final String description;
 
@@ -19,6 +27,10 @@ public final class CapabilityPropertiesResponse extends io.pulumi.resources.Invo
         return this.description;
     }
 
+    /**
+     * URL to retrieve JSON schema of the Capability parameters.
+     * 
+     */
     @InputImport(name="parametersSchema", required=true)
     private final String parametersSchema;
 
@@ -26,6 +38,10 @@ public final class CapabilityPropertiesResponse extends io.pulumi.resources.Invo
         return this.parametersSchema;
     }
 
+    /**
+     * String of the Publisher that this Capability extends.
+     * 
+     */
     @InputImport(name="publisher", required=true)
     private final String publisher;
 
@@ -33,6 +49,10 @@ public final class CapabilityPropertiesResponse extends io.pulumi.resources.Invo
         return this.publisher;
     }
 
+    /**
+     * String of the Target Type that this Capability extends.
+     * 
+     */
     @InputImport(name="targetType", required=true)
     private final String targetType;
 
@@ -40,6 +60,10 @@ public final class CapabilityPropertiesResponse extends io.pulumi.resources.Invo
         return this.targetType;
     }
 
+    /**
+     * String of the URN for this Capability Type.
+     * 
+     */
     @InputImport(name="urn", required=true)
     private final String urn;
 

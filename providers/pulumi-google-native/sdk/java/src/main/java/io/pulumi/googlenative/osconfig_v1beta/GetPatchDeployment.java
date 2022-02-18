@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPatchDeployment {
+/**
+ * Get an OS Config patch deployment.
+ * 
+ */
     public static CompletableFuture<GetPatchDeploymentResult> invokeAsync(GetPatchDeploymentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:osconfig/v1beta:getPatchDeployment", TypeShape.of(GetPatchDeploymentResult.class), args == null ? GetPatchDeploymentArgs.Empty : args, Utilities.withVersion(options));
     }

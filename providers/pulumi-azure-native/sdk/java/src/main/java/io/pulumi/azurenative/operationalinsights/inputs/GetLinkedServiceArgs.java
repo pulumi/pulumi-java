@@ -12,6 +12,10 @@ public final class GetLinkedServiceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetLinkedServiceArgs Empty = new GetLinkedServiceArgs();
 
+    /**
+     * Name of the linked service.
+     * 
+     */
     @InputImport(name="linkedServiceName", required=true)
     private final String linkedServiceName;
 
@@ -19,6 +23,10 @@ public final class GetLinkedServiceArgs extends io.pulumi.resources.InvokeArgs {
         return this.linkedServiceName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetLinkedServiceArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the workspace.
+     * 
+     */
     @InputImport(name="workspaceName", required=true)
     private final String workspaceName;
 

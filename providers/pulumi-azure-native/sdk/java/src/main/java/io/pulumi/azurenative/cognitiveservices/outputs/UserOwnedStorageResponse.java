@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class UserOwnedStorageResponse {
+    /**
+     * Full resource id of a Microsoft.Storage resource.
+     * 
+     */
     private final @Nullable String resourceId;
 
     @OutputCustomType.Constructor({"resourceId"})
@@ -18,6 +22,10 @@ public final class UserOwnedStorageResponse {
         this.resourceId = resourceId;
     }
 
+    /**
+     * Full resource id of a Microsoft.Storage resource.
+     * 
+     */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }

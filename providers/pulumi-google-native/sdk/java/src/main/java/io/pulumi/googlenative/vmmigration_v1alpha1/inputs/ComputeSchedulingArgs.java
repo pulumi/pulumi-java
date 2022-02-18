@@ -15,6 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Scheduling information for VM on maintenance/restart behaviour and node allocation in sole tenant nodes.
+ * 
+ */
 public final class ComputeSchedulingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ComputeSchedulingArgs Empty = new ComputeSchedulingArgs();
@@ -26,6 +30,10 @@ public final class ComputeSchedulingArgs extends io.pulumi.resources.ResourceArg
         return this.automaticRestart == null ? Input.empty() : this.automaticRestart;
     }
 
+    /**
+     * The minimum number of virtual CPUs this instance will consume when running on a sole-tenant node. Ignored if no node_affinites are configured.
+     * 
+     */
     @InputImport(name="minNodeCpus")
     private final @Nullable Input<Integer> minNodeCpus;
 
@@ -33,6 +41,10 @@ public final class ComputeSchedulingArgs extends io.pulumi.resources.ResourceArg
         return this.minNodeCpus == null ? Input.empty() : this.minNodeCpus;
     }
 
+    /**
+     * A set of node affinity and anti-affinity configurations for sole tenant nodes.
+     * 
+     */
     @InputImport(name="nodeAffinities")
     private final @Nullable Input<List<SchedulingNodeAffinityArgs>> nodeAffinities;
 
@@ -40,6 +52,10 @@ public final class ComputeSchedulingArgs extends io.pulumi.resources.ResourceArg
         return this.nodeAffinities == null ? Input.empty() : this.nodeAffinities;
     }
 
+    /**
+     * How the instance should behave when the host machine undergoes maintenance that may temporarily impact instance performance.
+     * 
+     */
     @InputImport(name="onHostMaintenance")
     private final @Nullable Input<ComputeSchedulingOnHostMaintenance> onHostMaintenance;
 
@@ -47,6 +63,10 @@ public final class ComputeSchedulingArgs extends io.pulumi.resources.ResourceArg
         return this.onHostMaintenance == null ? Input.empty() : this.onHostMaintenance;
     }
 
+    /**
+     * Whether the Instance should be automatically restarted whenever it is terminated by Compute Engine (not terminated by user). This configuration is identical to `automaticRestart` field in Compute Engine create instance under scheduling. It was changed to an enum (instead of a boolean) to match the default value in Compute Engine which is automatic restart.
+     * 
+     */
     @InputImport(name="restartType")
     private final @Nullable Input<ComputeSchedulingRestartType> restartType;
 

@@ -11,6 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The public domain name to use with the container service, such as example.com and www.example.com.
+ * 
+ */
 public final class ContainerPublicDomainNameArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContainerPublicDomainNameArgs Empty = new ContainerPublicDomainNameArgs();
@@ -22,6 +26,10 @@ public final class ContainerPublicDomainNameArgs extends io.pulumi.resources.Res
         return this.certificateName == null ? Input.empty() : this.certificateName;
     }
 
+    /**
+     * An object that describes the configuration for the containers of the deployment.
+     * 
+     */
     @InputImport(name="domainNames")
     private final @Nullable Input<List<String>> domainNames;
 

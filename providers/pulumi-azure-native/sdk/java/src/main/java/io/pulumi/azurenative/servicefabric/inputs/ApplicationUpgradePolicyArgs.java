@@ -15,10 +15,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes the policy for a monitored application upgrade.
+ * 
+ */
 public final class ApplicationUpgradePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationUpgradePolicyArgs Empty = new ApplicationUpgradePolicyArgs();
 
+    /**
+     * Defines a health policy used to evaluate the health of an application or one of its children entities.
+     * 
+     */
     @InputImport(name="applicationHealthPolicy")
     private final @Nullable Input<ArmApplicationHealthPolicyArgs> applicationHealthPolicy;
 
@@ -26,6 +34,10 @@ public final class ApplicationUpgradePolicyArgs extends io.pulumi.resources.Reso
         return this.applicationHealthPolicy == null ? Input.empty() : this.applicationHealthPolicy;
     }
 
+    /**
+     * If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).
+     * 
+     */
     @InputImport(name="forceRestart")
     private final @Nullable Input<Boolean> forceRestart;
 
@@ -33,6 +45,10 @@ public final class ApplicationUpgradePolicyArgs extends io.pulumi.resources.Reso
         return this.forceRestart == null ? Input.empty() : this.forceRestart;
     }
 
+    /**
+     * Determines whether the application should be recreated on update. If value=true, the rest of the upgrade policy parameters are not allowed and it will result in availability loss.
+     * 
+     */
     @InputImport(name="recreateApplication")
     private final @Nullable Input<Boolean> recreateApplication;
 
@@ -40,6 +56,10 @@ public final class ApplicationUpgradePolicyArgs extends io.pulumi.resources.Reso
         return this.recreateApplication == null ? Input.empty() : this.recreateApplication;
     }
 
+    /**
+     * The policy used for monitoring the application upgrade
+     * 
+     */
     @InputImport(name="rollingUpgradeMonitoringPolicy")
     private final @Nullable Input<ArmRollingUpgradeMonitoringPolicyArgs> rollingUpgradeMonitoringPolicy;
 
@@ -47,6 +67,10 @@ public final class ApplicationUpgradePolicyArgs extends io.pulumi.resources.Reso
         return this.rollingUpgradeMonitoringPolicy == null ? Input.empty() : this.rollingUpgradeMonitoringPolicy;
     }
 
+    /**
+     * The mode used to monitor health during a rolling upgrade. The values are UnmonitoredAuto, UnmonitoredManual, and Monitored.
+     * 
+     */
     @InputImport(name="upgradeMode")
     private final @Nullable Input<Either<String,RollingUpgradeMode>> upgradeMode;
 
@@ -54,6 +78,10 @@ public final class ApplicationUpgradePolicyArgs extends io.pulumi.resources.Reso
         return this.upgradeMode == null ? Input.empty() : this.upgradeMode;
     }
 
+    /**
+     * The maximum amount of time to block processing of an upgrade domain and prevent loss of availability when there are unexpected issues. When this timeout expires, processing of the upgrade domain will proceed regardless of availability loss issues. The timeout is reset at the start of each upgrade domain. Valid values are between 0 and 42949672925 inclusive. (unsigned 32-bit integer).
+     * 
+     */
     @InputImport(name="upgradeReplicaSetCheckTimeout")
     private final @Nullable Input<String> upgradeReplicaSetCheckTimeout;
 

@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLocationObjectStorage {
+/**
+ * Resource schema for AWS::DataSync::LocationObjectStorage.
+ * 
+ */
     public static CompletableFuture<GetLocationObjectStorageResult> invokeAsync(GetLocationObjectStorageArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:datasync:getLocationObjectStorage", TypeShape.of(GetLocationObjectStorageResult.class), args == null ? GetLocationObjectStorageArgs.Empty : args, Utilities.withVersion(options));
     }

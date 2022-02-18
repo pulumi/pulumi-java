@@ -10,10 +10,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * This represents the details about a User's environment and its state.
+ * 
+ */
 public final class EnvironmentDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EnvironmentDetailsResponse Empty = new EnvironmentDetailsResponse();
 
+    /**
+     * Description of the Environment
+     * 
+     */
     @InputImport(name="description", required=true)
     private final String description;
 
@@ -21,6 +29,10 @@ public final class EnvironmentDetailsResponse extends io.pulumi.resources.Invoke
         return this.description;
     }
 
+    /**
+     * Publishing state of the environment setting Possible values are Creating, Created, Failed
+     * 
+     */
     @InputImport(name="environmentState", required=true)
     private final String environmentState;
 
@@ -28,6 +40,10 @@ public final class EnvironmentDetailsResponse extends io.pulumi.resources.Invoke
         return this.environmentState;
     }
 
+    /**
+     * Resource Id of the environment
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -35,6 +51,10 @@ public final class EnvironmentDetailsResponse extends io.pulumi.resources.Invoke
         return this.id;
     }
 
+    /**
+     * The details of the latest operation. ex: status, error
+     * 
+     */
     @InputImport(name="latestOperationResult", required=true)
     private final LatestOperationResultResponse latestOperationResult;
 
@@ -42,6 +62,10 @@ public final class EnvironmentDetailsResponse extends io.pulumi.resources.Invoke
         return this.latestOperationResult;
     }
 
+    /**
+     * Name of the Environment
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -49,6 +73,10 @@ public final class EnvironmentDetailsResponse extends io.pulumi.resources.Invoke
         return this.name;
     }
 
+    /**
+     * When the password was last reset on the environment.
+     * 
+     */
     @InputImport(name="passwordLastReset", required=true)
     private final String passwordLastReset;
 
@@ -56,6 +84,10 @@ public final class EnvironmentDetailsResponse extends io.pulumi.resources.Invoke
         return this.passwordLastReset;
     }
 
+    /**
+     * The provisioning state of the environment. This also includes LabIsFull and NotYetProvisioned status.
+     * 
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -63,6 +95,10 @@ public final class EnvironmentDetailsResponse extends io.pulumi.resources.Invoke
         return this.provisioningState;
     }
 
+    /**
+     * How long the environment has been used by a lab user
+     * 
+     */
     @InputImport(name="totalUsage", required=true)
     private final String totalUsage;
 
@@ -70,6 +106,10 @@ public final class EnvironmentDetailsResponse extends io.pulumi.resources.Invoke
         return this.totalUsage;
     }
 
+    /**
+     * Details of backing DTL virtual machine with compute and network details.
+     * 
+     */
     @InputImport(name="virtualMachineDetails", required=true)
     private final VirtualMachineDetailsResponse virtualMachineDetails;
 

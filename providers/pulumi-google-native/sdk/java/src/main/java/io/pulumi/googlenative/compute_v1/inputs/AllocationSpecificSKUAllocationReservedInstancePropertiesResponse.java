@@ -11,10 +11,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Properties of the SKU instances being reserved. Next ID: 9
+ * 
+ */
 public final class AllocationSpecificSKUAllocationReservedInstancePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AllocationSpecificSKUAllocationReservedInstancePropertiesResponse Empty = new AllocationSpecificSKUAllocationReservedInstancePropertiesResponse();
 
+    /**
+     * Specifies accelerator type and count.
+     * 
+     */
     @InputImport(name="guestAccelerators", required=true)
     private final List<AcceleratorConfigResponse> guestAccelerators;
 
@@ -22,6 +30,10 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesResp
         return this.guestAccelerators;
     }
 
+    /**
+     * Specifies amount of local ssd to reserve with each instance. The type of disk is local-ssd.
+     * 
+     */
     @InputImport(name="localSsds", required=true)
     private final List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse> localSsds;
 
@@ -29,6 +41,10 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesResp
         return this.localSsds;
     }
 
+    /**
+     * An opaque location hint used to place the allocation close to other resources. This field is for use by internal tools that use the public API.
+     * 
+     */
     @InputImport(name="locationHint", required=true)
     private final String locationHint;
 
@@ -36,6 +52,10 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesResp
         return this.locationHint;
     }
 
+    /**
+     * Specifies type of machine (name only) which has fixed number of vCPUs and fixed amount of memory. This also includes specifying custom machine type following custom-NUMBER_OF_CPUS-AMOUNT_OF_MEMORY pattern.
+     * 
+     */
     @InputImport(name="machineType", required=true)
     private final String machineType;
 
@@ -43,6 +63,10 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesResp
         return this.machineType;
     }
 
+    /**
+     * Minimum cpu platform the reservation.
+     * 
+     */
     @InputImport(name="minCpuPlatform", required=true)
     private final String minCpuPlatform;
 

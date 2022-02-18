@@ -12,6 +12,10 @@ public final class GetInstanceNetworkPerformanceConfig extends io.pulumi.resourc
 
     public static final GetInstanceNetworkPerformanceConfig Empty = new GetInstanceNetworkPerformanceConfig();
 
+    /**
+     * The egress bandwidth tier for the instance.
+     * 
+     */
     @InputImport(name="totalEgressBandwidthTier", required=true)
     private final String totalEgressBandwidthTier;
 

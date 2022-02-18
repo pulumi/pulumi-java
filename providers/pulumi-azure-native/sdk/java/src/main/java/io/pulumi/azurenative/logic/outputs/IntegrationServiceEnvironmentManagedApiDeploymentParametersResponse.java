@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class IntegrationServiceEnvironmentManagedApiDeploymentParametersResponse {
+    /**
+     * The integration service environment managed api content link for deployment.
+     * 
+     */
     private final @Nullable ContentLinkResponse contentLinkDefinition;
 
     @OutputCustomType.Constructor({"contentLinkDefinition"})
@@ -18,6 +22,10 @@ public final class IntegrationServiceEnvironmentManagedApiDeploymentParametersRe
         this.contentLinkDefinition = contentLinkDefinition;
     }
 
+    /**
+     * The integration service environment managed api content link for deployment.
+     * 
+     */
     public Optional<ContentLinkResponse> getContentLinkDefinition() {
         return Optional.ofNullable(this.contentLinkDefinition);
     }

@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetServerAdministrator {
+/**
+ * Represents a and external administrator to be created.
+ * API Version: 2017-12-01.
+ * 
+ *
+ * Represents a and external administrator to be created.
+ * 
+ */
     public static CompletableFuture<GetServerAdministratorResult> invokeAsync(GetServerAdministratorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:dbformysql:getServerAdministrator", TypeShape.of(GetServerAdministratorResult.class), args == null ? GetServerAdministratorArgs.Empty : args, Utilities.withVersion(options));
     }

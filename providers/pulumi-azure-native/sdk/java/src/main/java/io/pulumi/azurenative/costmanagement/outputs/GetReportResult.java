@@ -15,13 +15,45 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetReportResult {
+    /**
+     * Has definition for the report.
+     * 
+     */
     private final ReportDefinitionResponse definition;
+    /**
+     * Has delivery information for the report.
+     * 
+     */
     private final ReportDeliveryInfoResponse deliveryInfo;
+    /**
+     * The format of the report being delivered.
+     * 
+     */
     private final @Nullable String format;
+    /**
+     * Resource Id.
+     * 
+     */
     private final String id;
+    /**
+     * Resource name.
+     * 
+     */
     private final String name;
+    /**
+     * Has schedule information for the report.
+     * 
+     */
     private final @Nullable ReportScheduleResponse schedule;
+    /**
+     * Resource tags.
+     * 
+     */
     private final Map<String,String> tags;
+    /**
+     * Resource type.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"definition","deliveryInfo","format","id","name","schedule","tags","type"})
@@ -44,27 +76,59 @@ public final class GetReportResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Has definition for the report.
+     * 
+     */
     public ReportDefinitionResponse getDefinition() {
         return this.definition;
     }
+    /**
+     * Has delivery information for the report.
+     * 
+     */
     public ReportDeliveryInfoResponse getDeliveryInfo() {
         return this.deliveryInfo;
     }
+    /**
+     * The format of the report being delivered.
+     * 
+     */
     public Optional<String> getFormat() {
         return Optional.ofNullable(this.format);
     }
+    /**
+     * Resource Id.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Resource name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Has schedule information for the report.
+     * 
+     */
     public Optional<ReportScheduleResponse> getSchedule() {
         return Optional.ofNullable(this.schedule);
     }
+    /**
+     * Resource tags.
+     * 
+     */
     public Map<String,String> getTags() {
         return this.tags;
     }
+    /**
+     * Resource type.
+     * 
+     */
     public String getType() {
         return this.type;
     }

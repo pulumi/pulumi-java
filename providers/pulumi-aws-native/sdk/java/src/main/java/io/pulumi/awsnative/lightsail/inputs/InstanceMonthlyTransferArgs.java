@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Monthly Transfer of the Instance.
+ * 
+ */
 public final class InstanceMonthlyTransferArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InstanceMonthlyTransferArgs Empty = new InstanceMonthlyTransferArgs();
 
+    /**
+     * GbPerMonthAllocated of the Instance.
+     * 
+     */
     @InputImport(name="gbPerMonthAllocated")
     private final @Nullable Input<String> gbPerMonthAllocated;
 

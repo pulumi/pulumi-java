@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Resource level annotation.
+ * 
+ */
 public final class ResourceAnnotationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceAnnotationResponse Empty = new ResourceAnnotationResponse();
 
+    /**
+     * A description of the annotation record.
+     * 
+     */
     @InputImport(name="label", required=true)
     private final String label;
 

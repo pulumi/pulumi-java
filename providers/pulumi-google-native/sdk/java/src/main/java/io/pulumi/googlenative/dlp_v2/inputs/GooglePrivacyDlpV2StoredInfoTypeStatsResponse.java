@@ -8,10 +8,18 @@ import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2LargeCustomDiction
 import java.util.Objects;
 
 
+/**
+ * Statistics for a StoredInfoType.
+ * 
+ */
 public final class GooglePrivacyDlpV2StoredInfoTypeStatsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2StoredInfoTypeStatsResponse Empty = new GooglePrivacyDlpV2StoredInfoTypeStatsResponse();
 
+    /**
+     * StoredInfoType where findings are defined by a dictionary of phrases.
+     * 
+     */
     @InputImport(name="largeCustomDictionary", required=true)
     private final GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse largeCustomDictionary;
 

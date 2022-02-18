@@ -11,9 +11,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class WindowsDetailResponse {
+    /**
+     * The [CPE URI](https://cpe.mitre.org/specification/) this vulnerability affects.
+     * 
+     */
     private final String cpeUri;
+    /**
+     * The description of this vulnerability.
+     * 
+     */
     private final String description;
+    /**
+     * The names of the KBs which have hotfixes to mitigate this vulnerability. Note that there may be multiple hotfixes (and thus multiple KBs) that mitigate a given vulnerability. Currently any listed KBs presence is considered a fix.
+     * 
+     */
     private final List<KnowledgeBaseResponse> fixingKbs;
+    /**
+     * The name of this vulnerability.
+     * 
+     */
     private final String name;
 
     @OutputCustomType.Constructor({"cpeUri","description","fixingKbs","name"})
@@ -28,15 +44,31 @@ public final class WindowsDetailResponse {
         this.name = Objects.requireNonNull(name);
     }
 
+    /**
+     * The [CPE URI](https://cpe.mitre.org/specification/) this vulnerability affects.
+     * 
+     */
     public String getCpeUri() {
         return this.cpeUri;
     }
+    /**
+     * The description of this vulnerability.
+     * 
+     */
     public String getDescription() {
         return this.description;
     }
+    /**
+     * The names of the KBs which have hotfixes to mitigate this vulnerability. Note that there may be multiple hotfixes (and thus multiple KBs) that mitigate a given vulnerability. Currently any listed KBs presence is considered a fix.
+     * 
+     */
     public List<KnowledgeBaseResponse> getFixingKbs() {
         return this.fixingKbs;
     }
+    /**
+     * The name of this vulnerability.
+     * 
+     */
     public String getName() {
         return this.name;
     }

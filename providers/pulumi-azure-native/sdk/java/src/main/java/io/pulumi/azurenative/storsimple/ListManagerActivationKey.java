@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListManagerActivationKey {
+/**
+ * The key.
+ * API Version: 2017-06-01.
+ * 
+ *
+ * The key.
+ * 
+ */
     public static CompletableFuture<ListManagerActivationKeyResult> invokeAsync(ListManagerActivationKeyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storsimple:listManagerActivationKey", TypeShape.of(ListManagerActivationKeyResult.class), args == null ? ListManagerActivationKeyArgs.Empty : args, Utilities.withVersion(options));
     }

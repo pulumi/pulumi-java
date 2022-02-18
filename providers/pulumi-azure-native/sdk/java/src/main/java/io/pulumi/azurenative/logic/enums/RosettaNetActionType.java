@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The value indicating whether the RosettaNet PIP is used for a single action.
+     * 
+     */
     @EnumType
     public enum RosettaNetActionType {
         NotSpecified("NotSpecified"),

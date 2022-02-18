@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The resource model definition representing SKU
+ * 
+ */
 public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SkuArgs Empty = new SkuArgs();
 
+    /**
+     * If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.
+     * 
+     */
     @InputImport(name="capacity")
     private final @Nullable Input<Integer> capacity;
 
@@ -23,6 +31,10 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
         return this.capacity == null ? Input.empty() : this.capacity;
     }
 
+    /**
+     * If the service has different generations of hardware, for the same SKU, then that can be captured here.
+     * 
+     */
     @InputImport(name="family")
     private final @Nullable Input<String> family;
 
@@ -30,6 +42,10 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
         return this.family == null ? Input.empty() : this.family;
     }
 
+    /**
+     * The name of the SKU. Ex - P3. It is typically a letter+number code
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -37,6 +53,10 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
+    /**
+     * The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code.
+     * 
+     */
     @InputImport(name="size")
     private final @Nullable Input<String> size;
 
@@ -44,6 +64,10 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
         return this.size == null ? Input.empty() : this.size;
     }
 
+    /**
+     * This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.
+     * 
+     */
     @InputImport(name="tier")
     private final @Nullable Input<SkuTier> tier;
 

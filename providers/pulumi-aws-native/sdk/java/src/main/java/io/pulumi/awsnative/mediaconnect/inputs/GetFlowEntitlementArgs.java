@@ -12,6 +12,10 @@ public final class GetFlowEntitlementArgs extends io.pulumi.resources.InvokeArgs
 
     public static final GetFlowEntitlementArgs Empty = new GetFlowEntitlementArgs();
 
+    /**
+     * The ARN of the entitlement.
+     * 
+     */
     @InputImport(name="entitlementArn", required=true)
     private final String entitlementArn;
 

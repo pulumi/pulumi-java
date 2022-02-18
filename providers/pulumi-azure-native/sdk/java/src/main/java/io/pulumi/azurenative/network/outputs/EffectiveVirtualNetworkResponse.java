@@ -11,8 +11,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EffectiveVirtualNetworkResponse {
+    /**
+     * Effective vnet Id.
+     * 
+     */
     private final @Nullable String id;
+    /**
+     * Location of vnet.
+     * 
+     */
     private final @Nullable String location;
+    /**
+     * Membership Type.
+     * 
+     */
     private final @Nullable String membershipType;
 
     @OutputCustomType.Constructor({"id","location","membershipType"})
@@ -25,12 +37,24 @@ public final class EffectiveVirtualNetworkResponse {
         this.membershipType = membershipType;
     }
 
+    /**
+     * Effective vnet Id.
+     * 
+     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+    /**
+     * Location of vnet.
+     * 
+     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
+    /**
+     * Membership Type.
+     * 
+     */
     public Optional<String> getMembershipType() {
         return Optional.ofNullable(this.membershipType);
     }

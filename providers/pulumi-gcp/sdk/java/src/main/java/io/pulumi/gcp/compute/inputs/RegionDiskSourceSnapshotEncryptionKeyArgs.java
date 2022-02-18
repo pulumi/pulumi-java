@@ -14,6 +14,10 @@ public final class RegionDiskSourceSnapshotEncryptionKeyArgs extends io.pulumi.r
 
     public static final RegionDiskSourceSnapshotEncryptionKeyArgs Empty = new RegionDiskSourceSnapshotEncryptionKeyArgs();
 
+    /**
+     * The name of the encryption key that is stored in Google Cloud KMS.
+     * 
+     */
     @InputImport(name="kmsKeyName")
     private final @Nullable Input<String> kmsKeyName;
 
@@ -21,6 +25,11 @@ public final class RegionDiskSourceSnapshotEncryptionKeyArgs extends io.pulumi.r
         return this.kmsKeyName == null ? Input.empty() : this.kmsKeyName;
     }
 
+    /**
+     * Specifies a 256-bit customer-supplied encryption key, encoded in
+     * RFC 4648 base64 to either encrypt or decrypt this resource.
+     * 
+     */
     @InputImport(name="rawKey")
     private final @Nullable Input<String> rawKey;
 
@@ -28,6 +37,12 @@ public final class RegionDiskSourceSnapshotEncryptionKeyArgs extends io.pulumi.r
         return this.rawKey == null ? Input.empty() : this.rawKey;
     }
 
+    /**
+     * - 
+     * The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied
+     * encryption key that protects this resource.
+     * 
+     */
     @InputImport(name="sha256")
     private final @Nullable Input<String> sha256;
 

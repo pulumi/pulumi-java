@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Description of a NotificationHub AdmCredential.
+ * 
+ */
 public final class AdmCredentialArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AdmCredentialArgs Empty = new AdmCredentialArgs();
 
+    /**
+     * The URL of the authorization token.
+     * 
+     */
     @InputImport(name="authTokenUrl")
     private final @Nullable Input<String> authTokenUrl;
 
@@ -21,6 +29,10 @@ public final class AdmCredentialArgs extends io.pulumi.resources.ResourceArgs {
         return this.authTokenUrl == null ? Input.empty() : this.authTokenUrl;
     }
 
+    /**
+     * The client identifier.
+     * 
+     */
     @InputImport(name="clientId")
     private final @Nullable Input<String> clientId;
 
@@ -28,6 +40,10 @@ public final class AdmCredentialArgs extends io.pulumi.resources.ResourceArgs {
         return this.clientId == null ? Input.empty() : this.clientId;
     }
 
+    /**
+     * The credential secret access key.
+     * 
+     */
     @InputImport(name="clientSecret")
     private final @Nullable Input<String> clientSecret;
 

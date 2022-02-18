@@ -15,6 +15,10 @@ public final class GameServerConfigScalingConfigSelectorGetArgs extends io.pulum
 
     public static final GameServerConfigScalingConfigSelectorGetArgs Empty = new GameServerConfigScalingConfigSelectorGetArgs();
 
+    /**
+     * Set of labels to group by.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 

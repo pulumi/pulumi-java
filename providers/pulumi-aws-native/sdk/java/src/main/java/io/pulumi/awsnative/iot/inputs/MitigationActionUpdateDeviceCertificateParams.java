@@ -8,6 +8,10 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * Parameters to define a mitigation action that changes the state of the device certificate to inactive.
+ * 
+ */
 public final class MitigationActionUpdateDeviceCertificateParams extends io.pulumi.resources.InvokeArgs {
 
     public static final MitigationActionUpdateDeviceCertificateParams Empty = new MitigationActionUpdateDeviceCertificateParams();

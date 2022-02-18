@@ -16,15 +16,55 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class StorageClass {
+    /**
+     * AllowVolumeExpansion shows whether the storage class allow volume expand
+     * 
+     */
     private final @Nullable Boolean allowVolumeExpansion;
+    /**
+     * Restrict the node topologies where volumes can be dynamically provisioned. Each volume plugin defines its own supported topology specifications. An empty TopologySelectorTerm list means there is no topology restriction. This field is only honored by servers that enable the VolumeScheduling feature.
+     * 
+     */
     private final @Nullable List<TopologySelectorTerm> allowedTopologies;
+    /**
+     * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+     * 
+     */
     private final @Nullable String apiVersion;
+    /**
+     * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+     * 
+     */
     private final @Nullable String kind;
+    /**
+     * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     * 
+     */
     private final @Nullable ObjectMeta metadata;
+    /**
+     * Dynamically provisioned PersistentVolumes of this storage class are created with these mountOptions, e.g. ["ro", "soft"]. Not validated - mount of the PVs will simply fail if one is invalid.
+     * 
+     */
     private final @Nullable List<String> mountOptions;
+    /**
+     * Parameters holds the parameters for the provisioner that should create volumes of this storage class.
+     * 
+     */
     private final @Nullable Map<String,String> parameters;
+    /**
+     * Provisioner indicates the type of the provisioner.
+     * 
+     */
     private final String provisioner;
+    /**
+     * Dynamically provisioned PersistentVolumes of this storage class are created with this reclaimPolicy. Defaults to Delete.
+     * 
+     */
     private final @Nullable String reclaimPolicy;
+    /**
+     * VolumeBindingMode indicates how PersistentVolumeClaims should be provisioned and bound.  When unset, VolumeBindingImmediate is used. This field is only honored by servers that enable the VolumeScheduling feature.
+     * 
+     */
     private final @Nullable String volumeBindingMode;
 
     @OutputCustomType.Constructor({"allowVolumeExpansion","allowedTopologies","apiVersion","kind","metadata","mountOptions","parameters","provisioner","reclaimPolicy","volumeBindingMode"})
@@ -51,33 +91,73 @@ public final class StorageClass {
         this.volumeBindingMode = volumeBindingMode;
     }
 
+    /**
+     * AllowVolumeExpansion shows whether the storage class allow volume expand
+     * 
+     */
     public Optional<Boolean> getAllowVolumeExpansion() {
         return Optional.ofNullable(this.allowVolumeExpansion);
     }
+    /**
+     * Restrict the node topologies where volumes can be dynamically provisioned. Each volume plugin defines its own supported topology specifications. An empty TopologySelectorTerm list means there is no topology restriction. This field is only honored by servers that enable the VolumeScheduling feature.
+     * 
+     */
     public List<TopologySelectorTerm> getAllowedTopologies() {
         return this.allowedTopologies == null ? List.of() : this.allowedTopologies;
     }
+    /**
+     * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+     * 
+     */
     public Optional<String> getApiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
+    /**
+     * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+     * 
+     */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
+    /**
+     * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     * 
+     */
     public Optional<ObjectMeta> getMetadata() {
         return Optional.ofNullable(this.metadata);
     }
+    /**
+     * Dynamically provisioned PersistentVolumes of this storage class are created with these mountOptions, e.g. ["ro", "soft"]. Not validated - mount of the PVs will simply fail if one is invalid.
+     * 
+     */
     public List<String> getMountOptions() {
         return this.mountOptions == null ? List.of() : this.mountOptions;
     }
+    /**
+     * Parameters holds the parameters for the provisioner that should create volumes of this storage class.
+     * 
+     */
     public Map<String,String> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
+    /**
+     * Provisioner indicates the type of the provisioner.
+     * 
+     */
     public String getProvisioner() {
         return this.provisioner;
     }
+    /**
+     * Dynamically provisioned PersistentVolumes of this storage class are created with this reclaimPolicy. Defaults to Delete.
+     * 
+     */
     public Optional<String> getReclaimPolicy() {
         return Optional.ofNullable(this.reclaimPolicy);
     }
+    /**
+     * VolumeBindingMode indicates how PersistentVolumeClaims should be provisioned and bound.  When unset, VolumeBindingImmediate is used. This field is only honored by servers that enable the VolumeScheduling feature.
+     * 
+     */
     public Optional<String> getVolumeBindingMode() {
         return Optional.ofNullable(this.volumeBindingMode);
     }

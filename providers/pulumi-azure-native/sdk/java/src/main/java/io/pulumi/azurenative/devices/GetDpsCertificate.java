@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDpsCertificate {
+/**
+ * The X509 Certificate.
+ * API Version: 2020-03-01.
+ * 
+ *
+ * The X509 Certificate.
+ * 
+ */
     public static CompletableFuture<GetDpsCertificateResult> invokeAsync(GetDpsCertificateArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devices:getDpsCertificate", TypeShape.of(GetDpsCertificateResult.class), args == null ? GetDpsCertificateArgs.Empty : args, Utilities.withVersion(options));
     }

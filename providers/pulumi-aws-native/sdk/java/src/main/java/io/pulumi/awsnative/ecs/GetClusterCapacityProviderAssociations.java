@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetClusterCapacityProviderAssociations {
+/**
+ * Associate a set of ECS Capacity Providers with a specified ECS Cluster
+ * 
+ */
     public static CompletableFuture<GetClusterCapacityProviderAssociationsResult> invokeAsync(GetClusterCapacityProviderAssociationsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ecs:getClusterCapacityProviderAssociations", TypeShape.of(GetClusterCapacityProviderAssociationsResult.class), args == null ? GetClusterCapacityProviderAssociationsArgs.Empty : args, Utilities.withVersion(options));
     }

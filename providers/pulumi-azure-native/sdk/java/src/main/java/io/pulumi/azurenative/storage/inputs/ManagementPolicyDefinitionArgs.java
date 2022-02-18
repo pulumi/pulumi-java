@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * An object that defines the Lifecycle rule. Each definition is made up with a filters set and an actions set.
+ * 
+ */
 public final class ManagementPolicyDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagementPolicyDefinitionArgs Empty = new ManagementPolicyDefinitionArgs();
 
+    /**
+     * An object that defines the action set.
+     * 
+     */
     @InputImport(name="actions", required=true)
     private final Input<ManagementPolicyActionArgs> actions;
 
@@ -22,6 +30,10 @@ public final class ManagementPolicyDefinitionArgs extends io.pulumi.resources.Re
         return this.actions;
     }
 
+    /**
+     * An object that defines the filter set.
+     * 
+     */
     @InputImport(name="filters")
     private final @Nullable Input<ManagementPolicyFilterArgs> filters;
 

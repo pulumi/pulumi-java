@@ -14,6 +14,10 @@ public final class PatchDeploymentRecurringScheduleTimeZoneArgs extends io.pulum
 
     public static final PatchDeploymentRecurringScheduleTimeZoneArgs Empty = new PatchDeploymentRecurringScheduleTimeZoneArgs();
 
+    /**
+     * IANA Time Zone Database time zone, e.g. "America/New_York".
+     * 
+     */
     @InputImport(name="id", required=true)
     private final Input<String> id;
 
@@ -21,6 +25,10 @@ public final class PatchDeploymentRecurringScheduleTimeZoneArgs extends io.pulum
         return this.id;
     }
 
+    /**
+     * IANA Time Zone Database version number, e.g. "2019a".
+     * 
+     */
     @InputImport(name="version")
     private final @Nullable Input<String> version;
 

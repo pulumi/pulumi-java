@@ -13,7 +13,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AppImageConfigKernelGatewayImageConfig {
+    /**
+     * The Amazon Elastic File System (EFS) storage configuration for a SageMaker image.
+     * 
+     */
     private final @Nullable AppImageConfigFileSystemConfig fileSystemConfig;
+    /**
+     * The specification of the Jupyter kernels in the image.
+     * 
+     */
     private final List<AppImageConfigKernelSpec> kernelSpecs;
 
     @OutputCustomType.Constructor({"fileSystemConfig","kernelSpecs"})
@@ -24,9 +32,17 @@ public final class AppImageConfigKernelGatewayImageConfig {
         this.kernelSpecs = Objects.requireNonNull(kernelSpecs);
     }
 
+    /**
+     * The Amazon Elastic File System (EFS) storage configuration for a SageMaker image.
+     * 
+     */
     public Optional<AppImageConfigFileSystemConfig> getFileSystemConfig() {
         return Optional.ofNullable(this.fileSystemConfig);
     }
+    /**
+     * The specification of the Jupyter kernels in the image.
+     * 
+     */
     public List<AppImageConfigKernelSpec> getKernelSpecs() {
         return this.kernelSpecs;
     }

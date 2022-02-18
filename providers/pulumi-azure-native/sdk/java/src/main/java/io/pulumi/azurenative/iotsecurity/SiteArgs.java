@@ -15,6 +15,10 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SiteArgs Empty = new SiteArgs();
 
+    /**
+     * Display name of the IoT site
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -22,6 +26,10 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName;
     }
 
+    /**
+     * Scope of the query (IoT Hub, /providers/Microsoft.Devices/iotHubs/myHub)
+     * 
+     */
     @InputImport(name="scope", required=true)
     private final Input<String> scope;
 
@@ -29,6 +37,10 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
         return this.scope;
     }
 
+    /**
+     * Tags of the IoT site
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

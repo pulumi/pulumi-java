@@ -11,11 +11,35 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ReleaseResponse {
+    /**
+     * The deploy description when the release was created. The value can be up to 512 characters.
+     * 
+     */
     private final String message;
+    /**
+     * The unique identifier for the release, in either of the following formats: - sites/SITE_ID/releases/RELEASE_ID - sites/SITE_ID/channels/CHANNEL_ID/releases/RELEASE_ID This name is provided in the response body when you call [`releases.create`](sites.releases/create) or [`channels.releases.create`](sites.channels.releases/create).
+     * 
+     */
     private final String name;
+    /**
+     * The time at which the version is set to be public.
+     * 
+     */
     private final String releaseTime;
+    /**
+     * Identifies the user who created the release.
+     * 
+     */
     private final ActingUserResponse releaseUser;
+    /**
+     * Explains the reason for the release. Specify a value for this field only when creating a `SITE_DISABLE` type release.
+     * 
+     */
     private final String type;
+    /**
+     * The configuration and content that was released.
+     * 
+     */
     private final VersionResponse version;
 
     @OutputCustomType.Constructor({"message","name","releaseTime","releaseUser","type","version"})
@@ -34,21 +58,45 @@ public final class ReleaseResponse {
         this.version = Objects.requireNonNull(version);
     }
 
+    /**
+     * The deploy description when the release was created. The value can be up to 512 characters.
+     * 
+     */
     public String getMessage() {
         return this.message;
     }
+    /**
+     * The unique identifier for the release, in either of the following formats: - sites/SITE_ID/releases/RELEASE_ID - sites/SITE_ID/channels/CHANNEL_ID/releases/RELEASE_ID This name is provided in the response body when you call [`releases.create`](sites.releases/create) or [`channels.releases.create`](sites.channels.releases/create).
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The time at which the version is set to be public.
+     * 
+     */
     public String getReleaseTime() {
         return this.releaseTime;
     }
+    /**
+     * Identifies the user who created the release.
+     * 
+     */
     public ActingUserResponse getReleaseUser() {
         return this.releaseUser;
     }
+    /**
+     * Explains the reason for the release. Specify a value for this field only when creating a `SITE_DISABLE` type release.
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * The configuration and content that was released.
+     * 
+     */
     public VersionResponse getVersion() {
         return this.version;
     }

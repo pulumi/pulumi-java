@@ -14,6 +14,10 @@ public final class OsPolicyAssignmentRolloutDisruptionBudgetArgs extends io.pulu
 
     public static final OsPolicyAssignmentRolloutDisruptionBudgetArgs Empty = new OsPolicyAssignmentRolloutDisruptionBudgetArgs();
 
+    /**
+     * Specifies a fixed value.
+     * 
+     */
     @InputImport(name="fixed")
     private final @Nullable Input<Integer> fixed;
 
@@ -21,6 +25,10 @@ public final class OsPolicyAssignmentRolloutDisruptionBudgetArgs extends io.pulu
         return this.fixed == null ? Input.empty() : this.fixed;
     }
 
+    /**
+     * Specifies the relative value defined as a percentage, which will be multiplied by a reference value.
+     * 
+     */
     @InputImport(name="percent")
     private final @Nullable Input<Integer> percent;
 

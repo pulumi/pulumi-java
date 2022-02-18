@@ -15,6 +15,13 @@ public final class BudgetAmountArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BudgetAmountArgs Empty = new BudgetAmountArgs();
 
+    /**
+     * Configures a budget amount that is automatically set to 100% of
+     * last period's spend.
+     * Boolean. Set value to true to use. Do not set to false, instead
+     * use the `specified_amount` block.
+     * 
+     */
     @InputImport(name="lastPeriodAmount")
     private final @Nullable Input<Boolean> lastPeriodAmount;
 
@@ -22,6 +29,13 @@ public final class BudgetAmountArgs extends io.pulumi.resources.ResourceArgs {
         return this.lastPeriodAmount == null ? Input.empty() : this.lastPeriodAmount;
     }
 
+    /**
+     * A specified amount to use as the budget. currencyCode is
+     * optional. If specified, it must match the currency of the
+     * billing account. The currencyCode is provided on output.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="specifiedAmount")
     private final @Nullable Input<BudgetAmountSpecifiedAmountArgs> specifiedAmount;
 

@@ -18,6 +18,13 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
 
     public static final PolicyState Empty = new PolicyState();
 
+    /**
+     * A whitelist of image patterns to exclude from admission rules. If an
+     * image's name matches a whitelist pattern, the image's admission
+     * requests will always be permitted regardless of your admission rules.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="admissionWhitelistPatterns")
     private final @Nullable Input<List<PolicyAdmissionWhitelistPatternGetArgs>> admissionWhitelistPatterns;
 
@@ -25,6 +32,14 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
         return this.admissionWhitelistPatterns == null ? Input.empty() : this.admissionWhitelistPatterns;
     }
 
+    /**
+     * Per-cluster admission rules. An admission rule specifies either that
+     * all container images used in a pod creation request must be attested
+     * to by one or more attestors, that all pod creations will be allowed,
+     * or that all pod creations will be denied. There can be at most one
+     * admission rule per cluster spec.
+     * 
+     */
     @InputImport(name="clusterAdmissionRules")
     private final @Nullable Input<List<PolicyClusterAdmissionRuleGetArgs>> clusterAdmissionRules;
 
@@ -32,6 +47,12 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
         return this.clusterAdmissionRules == null ? Input.empty() : this.clusterAdmissionRules;
     }
 
+    /**
+     * Default admission rule for a cluster without a per-cluster admission
+     * rule.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="defaultAdmissionRule")
     private final @Nullable Input<PolicyDefaultAdmissionRuleGetArgs> defaultAdmissionRule;
 
@@ -39,6 +60,10 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
         return this.defaultAdmissionRule == null ? Input.empty() : this.defaultAdmissionRule;
     }
 
+    /**
+     * A descriptive comment.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -46,6 +71,13 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Controls the evaluation of a Google-maintained global admission policy
+     * for common system-level images. Images not covered by the global
+     * policy will be subject to the project admission policy.
+     * Possible values are `ENABLE` and `DISABLE`.
+     * 
+     */
     @InputImport(name="globalPolicyEvaluationMode")
     private final @Nullable Input<String> globalPolicyEvaluationMode;
 
@@ -53,6 +85,11 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
         return this.globalPolicyEvaluationMode == null ? Input.empty() : this.globalPolicyEvaluationMode;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

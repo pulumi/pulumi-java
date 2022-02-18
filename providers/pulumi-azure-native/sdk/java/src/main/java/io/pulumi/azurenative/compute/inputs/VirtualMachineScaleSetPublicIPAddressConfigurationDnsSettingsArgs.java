@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Describes a virtual machines scale sets network configuration's DNS settings.
+ * 
+ */
 public final class VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsArgs Empty = new VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsArgs();
 
+    /**
+     * The Domain name label.The concatenation of the domain name label and vm index will be the domain name labels of the PublicIPAddress resources that will be created
+     * 
+     */
     @InputImport(name="domainNameLabel", required=true)
     private final Input<String> domainNameLabel;
 

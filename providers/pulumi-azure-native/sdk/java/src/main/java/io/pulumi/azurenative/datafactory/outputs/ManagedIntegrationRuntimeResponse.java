@@ -15,12 +15,41 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ManagedIntegrationRuntimeResponse {
+    /**
+     * The compute resource for managed integration runtime.
+     * 
+     */
     private final @Nullable IntegrationRuntimeComputePropertiesResponse computeProperties;
+    /**
+     * The name of virtual network to which Azure-SSIS integration runtime will join
+     * 
+     */
     private final @Nullable IntegrationRuntimeCustomerVirtualNetworkResponse customerVirtualNetwork;
+    /**
+     * Integration runtime description.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * Managed Virtual Network reference.
+     * 
+     */
     private final @Nullable ManagedVirtualNetworkReferenceResponse managedVirtualNetwork;
+    /**
+     * SSIS properties for managed integration runtime.
+     * 
+     */
     private final @Nullable IntegrationRuntimeSsisPropertiesResponse ssisProperties;
+    /**
+     * Integration runtime state, only valid for managed dedicated integration runtime.
+     * 
+     */
     private final String state;
+    /**
+     * The type of integration runtime.
+     * Expected value is 'Managed'.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"computeProperties","customerVirtualNetwork","description","managedVirtualNetwork","ssisProperties","state","type"})
@@ -41,24 +70,53 @@ public final class ManagedIntegrationRuntimeResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * The compute resource for managed integration runtime.
+     * 
+     */
     public Optional<IntegrationRuntimeComputePropertiesResponse> getComputeProperties() {
         return Optional.ofNullable(this.computeProperties);
     }
+    /**
+     * The name of virtual network to which Azure-SSIS integration runtime will join
+     * 
+     */
     public Optional<IntegrationRuntimeCustomerVirtualNetworkResponse> getCustomerVirtualNetwork() {
         return Optional.ofNullable(this.customerVirtualNetwork);
     }
+    /**
+     * Integration runtime description.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * Managed Virtual Network reference.
+     * 
+     */
     public Optional<ManagedVirtualNetworkReferenceResponse> getManagedVirtualNetwork() {
         return Optional.ofNullable(this.managedVirtualNetwork);
     }
+    /**
+     * SSIS properties for managed integration runtime.
+     * 
+     */
     public Optional<IntegrationRuntimeSsisPropertiesResponse> getSsisProperties() {
         return Optional.ofNullable(this.ssisProperties);
     }
+    /**
+     * Integration runtime state, only valid for managed dedicated integration runtime.
+     * 
+     */
     public String getState() {
         return this.state;
     }
+    /**
+     * The type of integration runtime.
+     * Expected value is 'Managed'.
+     * 
+     */
     public String getType() {
         return this.type;
     }

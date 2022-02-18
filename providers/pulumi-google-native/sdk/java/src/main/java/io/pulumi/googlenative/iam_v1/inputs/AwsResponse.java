@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Represents an Amazon Web Services identity provider.
+ * 
+ */
 public final class AwsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AwsResponse Empty = new AwsResponse();
 
+    /**
+     * The AWS account ID.
+     * 
+     */
     @InputImport(name="accountId", required=true)
     private final String accountId;
 

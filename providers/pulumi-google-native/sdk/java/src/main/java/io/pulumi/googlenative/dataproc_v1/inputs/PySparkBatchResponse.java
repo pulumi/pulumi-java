@@ -9,10 +9,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * A configuration for running an Apache PySpark (https://spark.apache.org/docs/latest/api/python/getting_started/quickstart.html) batch workload.
+ * 
+ */
 public final class PySparkBatchResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PySparkBatchResponse Empty = new PySparkBatchResponse();
 
+    /**
+     * Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
+     * 
+     */
     @InputImport(name="archiveUris", required=true)
     private final List<String> archiveUris;
 
@@ -20,6 +28,10 @@ public final class PySparkBatchResponse extends io.pulumi.resources.InvokeArgs {
         return this.archiveUris;
     }
 
+    /**
+     * Optional. The arguments to pass to the driver. Do not include arguments that can be set as batch properties, such as --conf, since a collision can occur that causes an incorrect batch submission.
+     * 
+     */
     @InputImport(name="args", required=true)
     private final List<String> args;
 
@@ -27,6 +39,10 @@ public final class PySparkBatchResponse extends io.pulumi.resources.InvokeArgs {
         return this.args;
     }
 
+    /**
+     * Optional. HCFS URIs of files to be placed in the working directory of each executor.
+     * 
+     */
     @InputImport(name="fileUris", required=true)
     private final List<String> fileUris;
 
@@ -34,6 +50,10 @@ public final class PySparkBatchResponse extends io.pulumi.resources.InvokeArgs {
         return this.fileUris;
     }
 
+    /**
+     * Optional. HCFS URIs of jar files to add to the classpath of the Spark driver and tasks.
+     * 
+     */
     @InputImport(name="jarFileUris", required=true)
     private final List<String> jarFileUris;
 
@@ -41,6 +61,10 @@ public final class PySparkBatchResponse extends io.pulumi.resources.InvokeArgs {
         return this.jarFileUris;
     }
 
+    /**
+     * The HCFS URI of the main Python file to use as the Spark driver. Must be a .py file.
+     * 
+     */
     @InputImport(name="mainPythonFileUri", required=true)
     private final String mainPythonFileUri;
 
@@ -48,6 +72,10 @@ public final class PySparkBatchResponse extends io.pulumi.resources.InvokeArgs {
         return this.mainPythonFileUri;
     }
 
+    /**
+     * Optional. HCFS file URIs of Python files to pass to the PySpark framework. Supported file types: .py, .egg, and .zip.
+     * 
+     */
     @InputImport(name="pythonFileUris", required=true)
     private final List<String> pythonFileUris;
 

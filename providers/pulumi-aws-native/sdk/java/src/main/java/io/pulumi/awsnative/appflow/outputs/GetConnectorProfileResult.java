@@ -12,8 +12,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetConnectorProfileResult {
+    /**
+     * Mode in which data transfer should be enabled. Private connection mode is currently enabled for Salesforce, Snowflake, Trendmicro and Singular
+     * 
+     */
     private final @Nullable ConnectorProfileConnectionMode connectionMode;
+    /**
+     * Unique identifier for connector profile resources
+     * 
+     */
     private final @Nullable String connectorProfileArn;
+    /**
+     * A unique Arn for Connector-Profile resource
+     * 
+     */
     private final @Nullable String credentialsArn;
 
     @OutputCustomType.Constructor({"connectionMode","connectorProfileArn","credentialsArn"})
@@ -26,12 +38,24 @@ public final class GetConnectorProfileResult {
         this.credentialsArn = credentialsArn;
     }
 
+    /**
+     * Mode in which data transfer should be enabled. Private connection mode is currently enabled for Salesforce, Snowflake, Trendmicro and Singular
+     * 
+     */
     public Optional<ConnectorProfileConnectionMode> getConnectionMode() {
         return Optional.ofNullable(this.connectionMode);
     }
+    /**
+     * Unique identifier for connector profile resources
+     * 
+     */
     public Optional<String> getConnectorProfileArn() {
         return Optional.ofNullable(this.connectorProfileArn);
     }
+    /**
+     * A unique Arn for Connector-Profile resource
+     * 
+     */
     public Optional<String> getCredentialsArn() {
         return Optional.ofNullable(this.credentialsArn);
     }

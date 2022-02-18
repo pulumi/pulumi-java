@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Settings concerning network injection.
+ * 
+ */
 public final class PropertiesNetworkInjectionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PropertiesNetworkInjectionArgs Empty = new PropertiesNetworkInjectionArgs();
 
+    /**
+     * Network injection configuration
+     * 
+     */
     @InputImport(name="virtualNetworks")
     private final @Nullable Input<VirtualNetworkPropertiesListArgs> virtualNetworks;
 

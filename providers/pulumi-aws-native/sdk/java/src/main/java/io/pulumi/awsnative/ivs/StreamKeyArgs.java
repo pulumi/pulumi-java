@@ -16,6 +16,10 @@ public final class StreamKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StreamKeyArgs Empty = new StreamKeyArgs();
 
+    /**
+     * Channel ARN for the stream.
+     * 
+     */
     @InputImport(name="channelArn", required=true)
     private final Input<String> channelArn;
 
@@ -23,6 +27,10 @@ public final class StreamKeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.channelArn;
     }
 
+    /**
+     * A list of key-value pairs that contain metadata for the asset model.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<StreamKeyTagArgs>> tags;
 

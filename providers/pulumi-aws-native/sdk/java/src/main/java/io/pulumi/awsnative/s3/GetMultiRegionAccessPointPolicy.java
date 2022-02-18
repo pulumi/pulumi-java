@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMultiRegionAccessPointPolicy {
+/**
+ * The policy to be attached to a Multi Region Access Point
+ * 
+ */
     public static CompletableFuture<GetMultiRegionAccessPointPolicyResult> invokeAsync(GetMultiRegionAccessPointPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:s3:getMultiRegionAccessPointPolicy", TypeShape.of(GetMultiRegionAccessPointPolicyResult.class), args == null ? GetMultiRegionAccessPointPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

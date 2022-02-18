@@ -13,6 +13,10 @@ public final class PatchDeploymentPatchConfigGooArgs extends io.pulumi.resources
 
     public static final PatchDeploymentPatchConfigGooArgs Empty = new PatchDeploymentPatchConfigGooArgs();
 
+    /**
+     * goo update settings. Use this setting to override the default goo patch rules.
+     * 
+     */
     @InputImport(name="enabled", required=true)
     private final Input<Boolean> enabled;
 

@@ -14,19 +14,75 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetWebhookResult {
+    /**
+     * Gets or sets the creation time.
+     * 
+     */
     private final @Nullable String creationTime;
+    /**
+     * Gets or sets the description.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * Gets or sets the expiry time.
+     * 
+     */
     private final @Nullable String expiryTime;
+    /**
+     * Fully qualified resource Id for the resource
+     * 
+     */
     private final String id;
+    /**
+     * Gets or sets the value of the enabled flag of the webhook.
+     * 
+     */
     private final @Nullable Boolean isEnabled;
+    /**
+     * Gets or sets the last invoked time.
+     * 
+     */
     private final @Nullable String lastInvokedTime;
+    /**
+     * Details of the user who last modified the Webhook
+     * 
+     */
     private final @Nullable String lastModifiedBy;
+    /**
+     * Gets or sets the last modified time.
+     * 
+     */
     private final @Nullable String lastModifiedTime;
+    /**
+     * The name of the resource
+     * 
+     */
     private final String name;
+    /**
+     * Gets or sets the parameters of the job that is created when the webhook calls the runbook it is associated with.
+     * 
+     */
     private final @Nullable Map<String,String> parameters;
+    /**
+     * Gets or sets the name of the hybrid worker group the webhook job will run on.
+     * 
+     */
     private final @Nullable String runOn;
+    /**
+     * Gets or sets the runbook the webhook is associated with.
+     * 
+     */
     private final @Nullable RunbookAssociationPropertyResponse runbook;
+    /**
+     * The type of the resource.
+     * 
+     */
     private final String type;
+    /**
+     * Gets or sets the webhook uri.
+     * 
+     */
     private final @Nullable String uri;
 
     @OutputCustomType.Constructor({"creationTime","description","expiryTime","id","isEnabled","lastInvokedTime","lastModifiedBy","lastModifiedTime","name","parameters","runOn","runbook","type","uri"})
@@ -61,45 +117,101 @@ public final class GetWebhookResult {
         this.uri = uri;
     }
 
+    /**
+     * Gets or sets the creation time.
+     * 
+     */
     public Optional<String> getCreationTime() {
         return Optional.ofNullable(this.creationTime);
     }
+    /**
+     * Gets or sets the description.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * Gets or sets the expiry time.
+     * 
+     */
     public Optional<String> getExpiryTime() {
         return Optional.ofNullable(this.expiryTime);
     }
+    /**
+     * Fully qualified resource Id for the resource
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Gets or sets the value of the enabled flag of the webhook.
+     * 
+     */
     public Optional<Boolean> getIsEnabled() {
         return Optional.ofNullable(this.isEnabled);
     }
+    /**
+     * Gets or sets the last invoked time.
+     * 
+     */
     public Optional<String> getLastInvokedTime() {
         return Optional.ofNullable(this.lastInvokedTime);
     }
+    /**
+     * Details of the user who last modified the Webhook
+     * 
+     */
     public Optional<String> getLastModifiedBy() {
         return Optional.ofNullable(this.lastModifiedBy);
     }
+    /**
+     * Gets or sets the last modified time.
+     * 
+     */
     public Optional<String> getLastModifiedTime() {
         return Optional.ofNullable(this.lastModifiedTime);
     }
+    /**
+     * The name of the resource
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Gets or sets the parameters of the job that is created when the webhook calls the runbook it is associated with.
+     * 
+     */
     public Map<String,String> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
+    /**
+     * Gets or sets the name of the hybrid worker group the webhook job will run on.
+     * 
+     */
     public Optional<String> getRunOn() {
         return Optional.ofNullable(this.runOn);
     }
+    /**
+     * Gets or sets the runbook the webhook is associated with.
+     * 
+     */
     public Optional<RunbookAssociationPropertyResponse> getRunbook() {
         return Optional.ofNullable(this.runbook);
     }
+    /**
+     * The type of the resource.
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * Gets or sets the webhook uri.
+     * 
+     */
     public Optional<String> getUri() {
         return Optional.ofNullable(this.uri);
     }

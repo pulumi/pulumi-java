@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApiManagementService {
+/**
+ * A single API Management service resource in List or Get response.
+ * API Version: 2020-12-01.
+ * 
+ *
+ * A single API Management service resource in List or Get response.
+ * 
+ */
     public static CompletableFuture<GetApiManagementServiceResult> invokeAsync(GetApiManagementServiceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getApiManagementService", TypeShape.of(GetApiManagementServiceResult.class), args == null ? GetApiManagementServiceArgs.Empty : args, Utilities.withVersion(options));
     }

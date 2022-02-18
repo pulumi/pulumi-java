@@ -12,6 +12,10 @@ public final class ListIngestionSettingTokensArgs extends io.pulumi.resources.In
 
     public static final ListIngestionSettingTokensArgs Empty = new ListIngestionSettingTokensArgs();
 
+    /**
+     * Name of the ingestion setting
+     * 
+     */
     @InputImport(name="ingestionSettingName", required=true)
     private final String ingestionSettingName;
 

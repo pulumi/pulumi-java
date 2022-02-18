@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Synthesizes speech and plays back the synthesized audio to the caller in Telephony Gateway. Telephony Gateway takes the synthesizer settings from `DetectIntentResponse.output_audio_config` which can either be set at request-level or can come from the agent-level synthesizer config.
+ * 
+ */
 public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechArgs Empty = new GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechArgs();
 
+    /**
+     * The SSML to be synthesized. For more information, see [SSML](https://developers.google.com/actions/reference/ssml).
+     * 
+     */
     @InputImport(name="ssml")
     private final @Nullable Input<String> ssml;
 
@@ -21,6 +29,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeS
         return this.ssml == null ? Input.empty() : this.ssml;
     }
 
+    /**
+     * The raw text to be synthesized.
+     * 
+     */
     @InputImport(name="text")
     private final @Nullable Input<String> text;
 

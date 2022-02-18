@@ -12,8 +12,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ScaleSettingsResponse {
+    /**
+     * Max number of nodes to use
+     * 
+     */
     private final Integer maxNodeCount;
+    /**
+     * Min number of nodes to use
+     * 
+     */
     private final @Nullable Integer minNodeCount;
+    /**
+     * Node Idle Time before scaling down amlCompute. This string needs to be in the RFC Format.
+     * 
+     */
     private final @Nullable String nodeIdleTimeBeforeScaleDown;
 
     @OutputCustomType.Constructor({"maxNodeCount","minNodeCount","nodeIdleTimeBeforeScaleDown"})
@@ -26,12 +38,24 @@ public final class ScaleSettingsResponse {
         this.nodeIdleTimeBeforeScaleDown = nodeIdleTimeBeforeScaleDown;
     }
 
+    /**
+     * Max number of nodes to use
+     * 
+     */
     public Integer getMaxNodeCount() {
         return this.maxNodeCount;
     }
+    /**
+     * Min number of nodes to use
+     * 
+     */
     public Optional<Integer> getMinNodeCount() {
         return Optional.ofNullable(this.minNodeCount);
     }
+    /**
+     * Node Idle Time before scaling down amlCompute. This string needs to be in the RFC Format.
+     * 
+     */
     public Optional<String> getNodeIdleTimeBeforeScaleDown() {
         return Optional.ofNullable(this.nodeIdleTimeBeforeScaleDown);
     }

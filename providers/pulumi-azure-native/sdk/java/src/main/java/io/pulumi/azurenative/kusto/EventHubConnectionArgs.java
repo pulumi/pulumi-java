@@ -16,6 +16,10 @@ public final class EventHubConnectionArgs extends io.pulumi.resources.ResourceAr
 
     public static final EventHubConnectionArgs Empty = new EventHubConnectionArgs();
 
+    /**
+     * The name of the Kusto cluster.
+     * 
+     */
     @InputImport(name="clusterName", required=true)
     private final Input<String> clusterName;
 
@@ -23,6 +27,10 @@ public final class EventHubConnectionArgs extends io.pulumi.resources.ResourceAr
         return this.clusterName;
     }
 
+    /**
+     * The event hub consumer group.
+     * 
+     */
     @InputImport(name="consumerGroup", required=true)
     private final Input<String> consumerGroup;
 
@@ -30,6 +38,10 @@ public final class EventHubConnectionArgs extends io.pulumi.resources.ResourceAr
         return this.consumerGroup;
     }
 
+    /**
+     * The data format of the message. Optionally the data format can be added to each message.
+     * 
+     */
     @InputImport(name="dataFormat")
     private final @Nullable Input<Either<String,DataFormat>> dataFormat;
 
@@ -37,6 +49,10 @@ public final class EventHubConnectionArgs extends io.pulumi.resources.ResourceAr
         return this.dataFormat == null ? Input.empty() : this.dataFormat;
     }
 
+    /**
+     * The name of the database in the Kusto cluster.
+     * 
+     */
     @InputImport(name="databaseName", required=true)
     private final Input<String> databaseName;
 
@@ -44,6 +60,10 @@ public final class EventHubConnectionArgs extends io.pulumi.resources.ResourceAr
         return this.databaseName;
     }
 
+    /**
+     * The name of the event hub connection.
+     * 
+     */
     @InputImport(name="eventHubConnectionName")
     private final @Nullable Input<String> eventHubConnectionName;
 
@@ -51,6 +71,10 @@ public final class EventHubConnectionArgs extends io.pulumi.resources.ResourceAr
         return this.eventHubConnectionName == null ? Input.empty() : this.eventHubConnectionName;
     }
 
+    /**
+     * The resource ID of the event hub to be used to create a data connection.
+     * 
+     */
     @InputImport(name="eventHubResourceId", required=true)
     private final Input<String> eventHubResourceId;
 
@@ -58,6 +82,10 @@ public final class EventHubConnectionArgs extends io.pulumi.resources.ResourceAr
         return this.eventHubResourceId;
     }
 
+    /**
+     * Resource location.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -65,6 +93,10 @@ public final class EventHubConnectionArgs extends io.pulumi.resources.ResourceAr
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
+     * 
+     */
     @InputImport(name="mappingRuleName")
     private final @Nullable Input<String> mappingRuleName;
 
@@ -72,6 +104,10 @@ public final class EventHubConnectionArgs extends io.pulumi.resources.ResourceAr
         return this.mappingRuleName == null ? Input.empty() : this.mappingRuleName;
     }
 
+    /**
+     * The name of the resource group containing the Kusto cluster.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -79,6 +115,10 @@ public final class EventHubConnectionArgs extends io.pulumi.resources.ResourceAr
         return this.resourceGroupName;
     }
 
+    /**
+     * The table where the data should be ingested. Optionally the table information can be added to each message.
+     * 
+     */
     @InputImport(name="tableName")
     private final @Nullable Input<String> tableName;
 

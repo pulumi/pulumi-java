@@ -8,10 +8,18 @@ import java.lang.Double;
 import java.util.Objects;
 
 
+/**
+ * The data for a sentiment annotation.
+ * 
+ */
 public final class GoogleCloudContactcenterinsightsV1SentimentDataResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudContactcenterinsightsV1SentimentDataResponse Empty = new GoogleCloudContactcenterinsightsV1SentimentDataResponse();
 
+    /**
+     * A non-negative number from 0 to infinity which represents the abolute magnitude of sentiment regardless of score.
+     * 
+     */
     @InputImport(name="magnitude", required=true)
     private final Double magnitude;
 
@@ -19,6 +27,10 @@ public final class GoogleCloudContactcenterinsightsV1SentimentDataResponse exten
         return this.magnitude;
     }
 
+    /**
+     * The sentiment score between -1.0 (negative) and 1.0 (positive).
+     * 
+     */
     @InputImport(name="score", required=true)
     private final Double score;
 

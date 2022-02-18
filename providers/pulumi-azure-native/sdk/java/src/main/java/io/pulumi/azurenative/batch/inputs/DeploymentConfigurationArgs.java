@@ -15,6 +15,10 @@ public final class DeploymentConfigurationArgs extends io.pulumi.resources.Resou
 
     public static final DeploymentConfigurationArgs Empty = new DeploymentConfigurationArgs();
 
+    /**
+     * This property and virtualMachineConfiguration are mutually exclusive and one of the properties must be specified. This property cannot be specified if the Batch account was created with its poolAllocationMode property set to 'UserSubscription'.
+     * 
+     */
     @InputImport(name="cloudServiceConfiguration")
     private final @Nullable Input<CloudServiceConfigurationArgs> cloudServiceConfiguration;
 
@@ -22,6 +26,10 @@ public final class DeploymentConfigurationArgs extends io.pulumi.resources.Resou
         return this.cloudServiceConfiguration == null ? Input.empty() : this.cloudServiceConfiguration;
     }
 
+    /**
+     * This property and cloudServiceConfiguration are mutually exclusive and one of the properties must be specified.
+     * 
+     */
     @InputImport(name="virtualMachineConfiguration")
     private final @Nullable Input<VirtualMachineConfigurationArgs> virtualMachineConfiguration;
 

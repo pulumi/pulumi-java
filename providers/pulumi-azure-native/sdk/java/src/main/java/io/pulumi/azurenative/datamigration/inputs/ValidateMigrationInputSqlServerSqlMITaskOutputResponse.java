@@ -13,10 +13,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Output for task that validates migration input for SQL to Azure SQL Managed Instance migrations
+ * 
+ */
 public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ValidateMigrationInputSqlServerSqlMITaskOutputResponse Empty = new ValidateMigrationInputSqlServerSqlMITaskOutputResponse();
 
+    /**
+     * Errors associated with the BackupFolder path
+     * 
+     */
     @InputImport(name="backupFolderErrors", required=true)
     private final List<ReportableExceptionResponse> backupFolderErrors;
 
@@ -24,6 +32,10 @@ public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse extend
         return this.backupFolderErrors;
     }
 
+    /**
+     * Errors associated with backup share user name and password credentials
+     * 
+     */
     @InputImport(name="backupShareCredentialsErrors", required=true)
     private final List<ReportableExceptionResponse> backupShareCredentialsErrors;
 
@@ -31,6 +43,10 @@ public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse extend
         return this.backupShareCredentialsErrors;
     }
 
+    /**
+     * Errors associated with the storage account provided.
+     * 
+     */
     @InputImport(name="backupStorageAccountErrors", required=true)
     private final List<ReportableExceptionResponse> backupStorageAccountErrors;
 
@@ -38,6 +54,10 @@ public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse extend
         return this.backupStorageAccountErrors;
     }
 
+    /**
+     * Information about backup files when existing backup mode is used.
+     * 
+     */
     @InputImport(name="databaseBackupInfo")
     private final @Nullable DatabaseBackupInfoResponse databaseBackupInfo;
 
@@ -45,6 +65,10 @@ public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse extend
         return this.databaseBackupInfo == null ? Optional.empty() : Optional.ofNullable(this.databaseBackupInfo);
     }
 
+    /**
+     * Errors associated with existing backup files.
+     * 
+     */
     @InputImport(name="existingBackupErrors", required=true)
     private final List<ReportableExceptionResponse> existingBackupErrors;
 
@@ -52,6 +76,10 @@ public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse extend
         return this.existingBackupErrors;
     }
 
+    /**
+     * Result identifier
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -59,6 +87,10 @@ public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse extend
         return this.id;
     }
 
+    /**
+     * Name of database
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -66,6 +98,10 @@ public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse extend
         return this.name;
     }
 
+    /**
+     * Errors associated with the RestoreDatabaseName
+     * 
+     */
     @InputImport(name="restoreDatabaseNameErrors", required=true)
     private final List<ReportableExceptionResponse> restoreDatabaseNameErrors;
 

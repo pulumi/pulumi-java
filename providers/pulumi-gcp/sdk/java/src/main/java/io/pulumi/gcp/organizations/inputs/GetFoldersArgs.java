@@ -12,6 +12,10 @@ public final class GetFoldersArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetFoldersArgs Empty = new GetFoldersArgs();
 
+    /**
+     * A string parent as defined in the [REST API](https://cloud.google.com/resource-manager/reference/rest/v3/folders/list#query-parameters).
+     * 
+     */
     @InputImport(name="parentId", required=true)
     private final String parentId;
 

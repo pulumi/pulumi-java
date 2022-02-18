@@ -14,13 +14,37 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RuleGroupFieldToMatch {
+    /**
+     * All query arguments of a web request.
+     * 
+     */
     private final @Nullable Object allQueryArguments;
+    /**
+     * The body of a web request. This immediately follows the request headers.
+     * 
+     */
     private final @Nullable Object body;
     private final @Nullable RuleGroupJsonBody jsonBody;
+    /**
+     * The HTTP method of a web request. The method indicates the type of operation that the request is asking the origin to perform.
+     * 
+     */
     private final @Nullable Object method;
+    /**
+     * The query string of a web request. This is the part of a URL that appears after a ? character, if any.
+     * 
+     */
     private final @Nullable Object queryString;
     private final @Nullable RuleGroupFieldToMatchSingleHeaderProperties singleHeader;
+    /**
+     * One query argument in a web request, identified by name, for example UserName or SalesRegion. The name can be up to 30 characters long and isn't case sensitive.
+     * 
+     */
     private final @Nullable RuleGroupFieldToMatchSingleQueryArgumentProperties singleQueryArgument;
+    /**
+     * The path component of the URI of a web request. This is the part of a web request that identifies a resource, for example, /images/daily-ad.jpg.
+     * 
+     */
     private final @Nullable Object uriPath;
 
     @OutputCustomType.Constructor({"allQueryArguments","body","jsonBody","method","queryString","singleHeader","singleQueryArgument","uriPath"})
@@ -43,27 +67,51 @@ public final class RuleGroupFieldToMatch {
         this.uriPath = uriPath;
     }
 
+    /**
+     * All query arguments of a web request.
+     * 
+     */
     public Optional<Object> getAllQueryArguments() {
         return Optional.ofNullable(this.allQueryArguments);
     }
+    /**
+     * The body of a web request. This immediately follows the request headers.
+     * 
+     */
     public Optional<Object> getBody() {
         return Optional.ofNullable(this.body);
     }
     public Optional<RuleGroupJsonBody> getJsonBody() {
         return Optional.ofNullable(this.jsonBody);
     }
+    /**
+     * The HTTP method of a web request. The method indicates the type of operation that the request is asking the origin to perform.
+     * 
+     */
     public Optional<Object> getMethod() {
         return Optional.ofNullable(this.method);
     }
+    /**
+     * The query string of a web request. This is the part of a URL that appears after a ? character, if any.
+     * 
+     */
     public Optional<Object> getQueryString() {
         return Optional.ofNullable(this.queryString);
     }
     public Optional<RuleGroupFieldToMatchSingleHeaderProperties> getSingleHeader() {
         return Optional.ofNullable(this.singleHeader);
     }
+    /**
+     * One query argument in a web request, identified by name, for example UserName or SalesRegion. The name can be up to 30 characters long and isn't case sensitive.
+     * 
+     */
     public Optional<RuleGroupFieldToMatchSingleQueryArgumentProperties> getSingleQueryArgument() {
         return Optional.ofNullable(this.singleQueryArgument);
     }
+    /**
+     * The path component of the URI of a web request. This is the part of a web request that identifies a resource, for example, /images/daily-ad.jpg.
+     * 
+     */
     public Optional<Object> getUriPath() {
         return Optional.ofNullable(this.uriPath);
     }

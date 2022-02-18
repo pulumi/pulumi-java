@@ -9,10 +9,18 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
+/**
+ * The X12 processing settings.
+ * 
+ */
 public final class X12ProcessingSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final X12ProcessingSettingsArgs Empty = new X12ProcessingSettingsArgs();
 
+    /**
+     * The value indicating whether to convert numerical type to implied decimal.
+     * 
+     */
     @InputImport(name="convertImpliedDecimal", required=true)
     private final Input<Boolean> convertImpliedDecimal;
 
@@ -20,6 +28,10 @@ public final class X12ProcessingSettingsArgs extends io.pulumi.resources.Resourc
         return this.convertImpliedDecimal;
     }
 
+    /**
+     * The value indicating whether to create empty xml tags for trailing separators.
+     * 
+     */
     @InputImport(name="createEmptyXmlTagsForTrailingSeparators", required=true)
     private final Input<Boolean> createEmptyXmlTagsForTrailingSeparators;
 
@@ -27,6 +39,10 @@ public final class X12ProcessingSettingsArgs extends io.pulumi.resources.Resourc
         return this.createEmptyXmlTagsForTrailingSeparators;
     }
 
+    /**
+     * The value indicating whether to mask security information.
+     * 
+     */
     @InputImport(name="maskSecurityInfo", required=true)
     private final Input<Boolean> maskSecurityInfo;
 
@@ -34,6 +50,10 @@ public final class X12ProcessingSettingsArgs extends io.pulumi.resources.Resourc
         return this.maskSecurityInfo;
     }
 
+    /**
+     * The value indicating whether to preserve interchange.
+     * 
+     */
     @InputImport(name="preserveInterchange", required=true)
     private final Input<Boolean> preserveInterchange;
 
@@ -41,6 +61,10 @@ public final class X12ProcessingSettingsArgs extends io.pulumi.resources.Resourc
         return this.preserveInterchange;
     }
 
+    /**
+     * The value indicating whether to suspend interchange on error.
+     * 
+     */
     @InputImport(name="suspendInterchangeOnError", required=true)
     private final Input<Boolean> suspendInterchangeOnError;
 
@@ -48,6 +72,10 @@ public final class X12ProcessingSettingsArgs extends io.pulumi.resources.Resourc
         return this.suspendInterchangeOnError;
     }
 
+    /**
+     * The value indicating whether to use dot as decimal separator.
+     * 
+     */
     @InputImport(name="useDotAsDecimalSeparator", required=true)
     private final Input<Boolean> useDotAsDecimalSeparator;
 

@@ -12,6 +12,10 @@ public final class GetPrivateLinkHubArgs extends io.pulumi.resources.InvokeArgs 
 
     public static final GetPrivateLinkHubArgs Empty = new GetPrivateLinkHubArgs();
 
+    /**
+     * Name of the privateLinkHub
+     * 
+     */
     @InputImport(name="privateLinkHubName", required=true)
     private final String privateLinkHubName;
 
@@ -19,6 +23,10 @@ public final class GetPrivateLinkHubArgs extends io.pulumi.resources.InvokeArgs 
         return this.privateLinkHubName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

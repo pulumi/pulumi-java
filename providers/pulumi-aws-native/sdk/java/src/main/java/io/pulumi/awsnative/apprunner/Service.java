@@ -18,11 +18,23 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * The AWS::AppRunner::Service resource specifies an AppRunner Service.
+ * 
+ */
 @ResourceType(type="aws-native:apprunner:Service")
 public class Service extends io.pulumi.resources.CustomResource {
+    /**
+     * Autoscaling configuration ARN
+     * 
+     */
     @OutputExport(name="autoScalingConfigurationArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> autoScalingConfigurationArn;
 
+    /**
+     * @return Autoscaling configuration ARN
+     * 
+     */
     public Output</* @Nullable */ String> getAutoScalingConfigurationArn() {
         return this.autoScalingConfigurationArn;
     }
@@ -44,27 +56,59 @@ public class Service extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ ServiceInstanceConfiguration> getInstanceConfiguration() {
         return this.instanceConfiguration;
     }
+    /**
+     * The Amazon Resource Name (ARN) of the AppRunner Service.
+     * 
+     */
     @OutputExport(name="serviceArn", type=String.class, parameters={})
     private Output<String> serviceArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the AppRunner Service.
+     * 
+     */
     public Output<String> getServiceArn() {
         return this.serviceArn;
     }
+    /**
+     * The AppRunner Service Id
+     * 
+     */
     @OutputExport(name="serviceId", type=String.class, parameters={})
     private Output<String> serviceId;
 
+    /**
+     * @return The AppRunner Service Id
+     * 
+     */
     public Output<String> getServiceId() {
         return this.serviceId;
     }
+    /**
+     * The AppRunner Service Name.
+     * 
+     */
     @OutputExport(name="serviceName", type=String.class, parameters={})
     private Output</* @Nullable */ String> serviceName;
 
+    /**
+     * @return The AppRunner Service Name.
+     * 
+     */
     public Output</* @Nullable */ String> getServiceName() {
         return this.serviceName;
     }
+    /**
+     * The Service Url of the AppRunner Service.
+     * 
+     */
     @OutputExport(name="serviceUrl", type=String.class, parameters={})
     private Output<String> serviceUrl;
 
+    /**
+     * @return The Service Url of the AppRunner Service.
+     * 
+     */
     public Output<String> getServiceUrl() {
         return this.serviceUrl;
     }
@@ -74,9 +118,17 @@ public class Service extends io.pulumi.resources.CustomResource {
     public Output<ServiceSourceConfiguration> getSourceConfiguration() {
         return this.sourceConfiguration;
     }
+    /**
+     * AppRunner Service status.
+     * 
+     */
     @OutputExport(name="status", type=String.class, parameters={})
     private Output<String> status;
 
+    /**
+     * @return AppRunner Service status.
+     * 
+     */
     public Output<String> getStatus() {
         return this.status;
     }
@@ -87,6 +139,12 @@ public class Service extends io.pulumi.resources.CustomResource {
         return this.tags;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Service(String name, ServiceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:apprunner:Service", name, args == null ? ServiceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -102,6 +160,14 @@ public class Service extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Service get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Service(name, id, options);
     }

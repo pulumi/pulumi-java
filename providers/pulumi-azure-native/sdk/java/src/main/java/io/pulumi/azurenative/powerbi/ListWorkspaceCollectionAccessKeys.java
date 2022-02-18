@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListWorkspaceCollectionAccessKeys {
+/**
+ * API Version: 2016-01-29.
+ * 
+ */
     public static CompletableFuture<ListWorkspaceCollectionAccessKeysResult> invokeAsync(ListWorkspaceCollectionAccessKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:powerbi:listWorkspaceCollectionAccessKeys", TypeShape.of(ListWorkspaceCollectionAccessKeysResult.class), args == null ? ListWorkspaceCollectionAccessKeysArgs.Empty : args, Utilities.withVersion(options));
     }

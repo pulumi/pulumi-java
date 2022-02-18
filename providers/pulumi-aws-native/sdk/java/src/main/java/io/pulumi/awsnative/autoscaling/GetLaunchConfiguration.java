@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLaunchConfiguration {
+/**
+ * The AWS::AutoScaling::LaunchConfiguration resource specifies the launch configuration that can be used by an Auto Scaling group to configure Amazon EC2 instances.
+ * 
+ */
     public static CompletableFuture<GetLaunchConfigurationResult> invokeAsync(GetLaunchConfigurationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:autoscaling:getLaunchConfiguration", TypeShape.of(GetLaunchConfigurationResult.class), args == null ? GetLaunchConfigurationArgs.Empty : args, Utilities.withVersion(options));
     }

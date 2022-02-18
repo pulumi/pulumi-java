@@ -14,6 +14,10 @@ public final class GetResourcePolicyArgs extends io.pulumi.resources.InvokeArgs 
 
     public static final GetResourcePolicyArgs Empty = new GetResourcePolicyArgs();
 
+    /**
+     * The name of the Resource Policy.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -21,6 +25,10 @@ public final class GetResourcePolicyArgs extends io.pulumi.resources.InvokeArgs 
         return this.name;
     }
 
+    /**
+     * Project from which to list the Resource Policy. Defaults to project declared in the provider.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -28,6 +36,10 @@ public final class GetResourcePolicyArgs extends io.pulumi.resources.InvokeArgs 
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
+    /**
+     * Region where the Resource Policy resides.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable String region;
 

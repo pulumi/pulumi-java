@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ConditionContextResponse {
+    /**
+     * The hypothetical access timestamp to evaluate IAM conditions. Note that this value must not be earlier than the current time; otherwise, an INVALID_ARGUMENT error will be returned.
+     * 
+     */
     private final String accessTime;
 
     @OutputCustomType.Constructor({"accessTime"})
@@ -16,6 +20,10 @@ public final class ConditionContextResponse {
         this.accessTime = Objects.requireNonNull(accessTime);
     }
 
+    /**
+     * The hypothetical access timestamp to evaluate IAM conditions. Note that this value must not be earlier than the current time; otherwise, an INVALID_ARGUMENT error will be returned.
+     * 
+     */
     public String getAccessTime() {
         return this.accessTime;
     }

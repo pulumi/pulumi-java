@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRepositoryAssociation {
+/**
+ * This resource schema represents the RepositoryAssociation resource in the Amazon CodeGuru Reviewer service.
+ * 
+ */
     public static CompletableFuture<GetRepositoryAssociationResult> invokeAsync(GetRepositoryAssociationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:codegurureviewer:getRepositoryAssociation", TypeShape.of(GetRepositoryAssociationResult.class), args == null ? GetRepositoryAssociationArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -19,6 +19,12 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
 
     public static final OsPolicyAssignmentState Empty = new OsPolicyAssignmentState();
 
+    /**
+     * Output only. Indicates that this revision has been successfully rolled out in this zone and new VMs will be assigned OS
+     * policies from this revision. For a given OS policy assignment, there is only one revision with a value of `true` for
+     * this field.
+     * 
+     */
     @InputImport(name="baseline")
     private final @Nullable Input<Boolean> baseline;
 
@@ -26,6 +32,10 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
         return this.baseline == null ? Input.empty() : this.baseline;
     }
 
+    /**
+     * Output only. Indicates that this revision deletes the OS policy assignment.
+     * 
+     */
     @InputImport(name="deleted")
     private final @Nullable Input<Boolean> deleted;
 
@@ -33,6 +43,10 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
         return this.deleted == null ? Input.empty() : this.deleted;
     }
 
+    /**
+     * OS policy assignment description. Length of the description is limited to 1024 characters.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -40,6 +54,10 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The etag for this OS policy assignment. If this is provided on update, it must match the server's etag.
+     * 
+     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -47,6 +65,10 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
         return this.etag == null ? Input.empty() : this.etag;
     }
 
+    /**
+     * Required. Filter to select VMs.
+     * 
+     */
     @InputImport(name="instanceFilter")
     private final @Nullable Input<OsPolicyAssignmentInstanceFilterGetArgs> instanceFilter;
 
@@ -54,6 +76,10 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
         return this.instanceFilter == null ? Input.empty() : this.instanceFilter;
     }
 
+    /**
+     * The location for the resource
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -61,6 +87,10 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Required. The name of the repository.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -68,6 +98,10 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Required. List of OS policies to be applied to the VMs.
+     * 
+     */
     @InputImport(name="osPolicies")
     private final @Nullable Input<List<OsPolicyAssignmentOsPolicyGetArgs>> osPolicies;
 
@@ -75,6 +109,10 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
         return this.osPolicies == null ? Input.empty() : this.osPolicies;
     }
 
+    /**
+     * The project for the resource
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -82,6 +120,11 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Output only. Indicates that reconciliation is in progress for the revision. This value is `true` when the
+     * `rollout_state` is one of: * IN_PROGRESS * CANCELLING
+     * 
+     */
     @InputImport(name="reconciling")
     private final @Nullable Input<Boolean> reconciling;
 
@@ -89,6 +132,10 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
         return this.reconciling == null ? Input.empty() : this.reconciling;
     }
 
+    /**
+     * Output only. The timestamp that the revision was created.
+     * 
+     */
     @InputImport(name="revisionCreateTime")
     private final @Nullable Input<String> revisionCreateTime;
 
@@ -96,6 +143,11 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
         return this.revisionCreateTime == null ? Input.empty() : this.revisionCreateTime;
     }
 
+    /**
+     * Output only. The assignment revision ID A new revision is committed whenever a rollout is triggered for a OS policy
+     * assignment
+     * 
+     */
     @InputImport(name="revisionId")
     private final @Nullable Input<String> revisionId;
 
@@ -103,6 +155,10 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
         return this.revisionId == null ? Input.empty() : this.revisionId;
     }
 
+    /**
+     * Required. Rollout to deploy the OS policy assignment. A rollout is triggered in the following situations: 1) OSPolicyAssignment is created. 2) OSPolicyAssignment is updated and the update contains changes to one of the following fields: - instance_filter - os_policies 3) OSPolicyAssignment is deleted.
+     * 
+     */
     @InputImport(name="rollout")
     private final @Nullable Input<OsPolicyAssignmentRolloutGetArgs> rollout;
 
@@ -110,6 +166,11 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
         return this.rollout == null ? Input.empty() : this.rollout;
     }
 
+    /**
+     * Output only. OS policy assignment rollout state Possible values: ROLLOUT_STATE_UNSPECIFIED, IN_PROGRESS, CANCELLING,
+     * CANCELLED, SUCCEEDED
+     * 
+     */
     @InputImport(name="rolloutState")
     private final @Nullable Input<String> rolloutState;
 
@@ -117,6 +178,10 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
         return this.rolloutState == null ? Input.empty() : this.rolloutState;
     }
 
+    /**
+     * Output only. Server generated unique id for the OS policy assignment resource.
+     * 
+     */
     @InputImport(name="uid")
     private final @Nullable Input<String> uid;
 

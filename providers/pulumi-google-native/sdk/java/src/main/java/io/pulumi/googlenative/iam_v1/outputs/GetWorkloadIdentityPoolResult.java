@@ -10,10 +10,30 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetWorkloadIdentityPoolResult {
+    /**
+     * A description of the pool. Cannot exceed 256 characters.
+     * 
+     */
     private final String description;
+    /**
+     * Whether the pool is disabled. You cannot use a disabled pool to exchange tokens, or use existing tokens to access resources. If the pool is re-enabled, existing tokens grant access again.
+     * 
+     */
     private final Boolean disabled;
+    /**
+     * A display name for the pool. Cannot exceed 32 characters.
+     * 
+     */
     private final String displayName;
+    /**
+     * The resource name of the pool.
+     * 
+     */
     private final String name;
+    /**
+     * The state of the pool.
+     * 
+     */
     private final String state;
 
     @OutputCustomType.Constructor({"description","disabled","displayName","name","state"})
@@ -30,18 +50,38 @@ public final class GetWorkloadIdentityPoolResult {
         this.state = Objects.requireNonNull(state);
     }
 
+    /**
+     * A description of the pool. Cannot exceed 256 characters.
+     * 
+     */
     public String getDescription() {
         return this.description;
     }
+    /**
+     * Whether the pool is disabled. You cannot use a disabled pool to exchange tokens, or use existing tokens to access resources. If the pool is re-enabled, existing tokens grant access again.
+     * 
+     */
     public Boolean getDisabled() {
         return this.disabled;
     }
+    /**
+     * A display name for the pool. Cannot exceed 32 characters.
+     * 
+     */
     public String getDisplayName() {
         return this.displayName;
     }
+    /**
+     * The resource name of the pool.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The state of the pool.
+     * 
+     */
     public String getState() {
         return this.state;
     }

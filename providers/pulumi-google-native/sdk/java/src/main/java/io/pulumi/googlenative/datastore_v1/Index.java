@@ -14,45 +14,104 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Creates the specified index. A newly created index's initial state is `CREATING`. On completion of the returned google.longrunning.Operation, the state will be `READY`. If the index already exists, the call will return an `ALREADY_EXISTS` status. During index creation, the process could result in an error, in which case the index will move to the `ERROR` state. The process can be recovered by fixing the data that caused the error, removing the index with delete, then re-creating the index with create. Indexes with a single property cannot be created.
+ * Auto-naming is currently not supported for this resource.
+ * 
+ */
 @ResourceType(type="google-native:datastore/v1:Index")
 public class Index extends io.pulumi.resources.CustomResource {
+    /**
+     * The index's ancestor mode. Must not be ANCESTOR_MODE_UNSPECIFIED.
+     * 
+     */
     @OutputExport(name="ancestor", type=String.class, parameters={})
     private Output<String> ancestor;
 
+    /**
+     * @return The index's ancestor mode. Must not be ANCESTOR_MODE_UNSPECIFIED.
+     * 
+     */
     public Output<String> getAncestor() {
         return this.ancestor;
     }
+    /**
+     * The resource ID of the index.
+     * 
+     */
     @OutputExport(name="indexId", type=String.class, parameters={})
     private Output<String> indexId;
 
+    /**
+     * @return The resource ID of the index.
+     * 
+     */
     public Output<String> getIndexId() {
         return this.indexId;
     }
+    /**
+     * The entity kind to which this index applies.
+     * 
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
+    /**
+     * @return The entity kind to which this index applies.
+     * 
+     */
     public Output<String> getKind() {
         return this.kind;
     }
+    /**
+     * Project ID.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return Project ID.
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * An ordered sequence of property names and their index attributes.
+     * 
+     */
     @OutputExport(name="properties", type=List.class, parameters={GoogleDatastoreAdminV1IndexedPropertyResponse.class})
     private Output<List<GoogleDatastoreAdminV1IndexedPropertyResponse>> properties;
 
+    /**
+     * @return An ordered sequence of property names and their index attributes.
+     * 
+     */
     public Output<List<GoogleDatastoreAdminV1IndexedPropertyResponse>> getProperties() {
         return this.properties;
     }
+    /**
+     * The state of the index.
+     * 
+     */
     @OutputExport(name="state", type=String.class, parameters={})
     private Output<String> state;
 
+    /**
+     * @return The state of the index.
+     * 
+     */
     public Output<String> getState() {
         return this.state;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Index(String name, IndexArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:datastore/v1:Index", name, args == null ? IndexArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -68,6 +127,14 @@ public class Index extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Index get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Index(name, id, options);
     }

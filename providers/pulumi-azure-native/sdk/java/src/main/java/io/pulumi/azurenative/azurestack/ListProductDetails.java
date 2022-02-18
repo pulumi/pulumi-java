@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListProductDetails {
+/**
+ * Extended description about the product required for installing it into Azure Stack.
+ * API Version: 2017-06-01.
+ * 
+ *
+ * Extended description about the product required for installing it into Azure Stack.
+ * 
+ */
     public static CompletableFuture<ListProductDetailsResult> invokeAsync(ListProductDetailsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:azurestack:listProductDetails", TypeShape.of(ListProductDetailsResult.class), args == null ? ListProductDetailsArgs.Empty : args, Utilities.withVersion(options));
     }

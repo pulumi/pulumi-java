@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MultichannelResponse {
+    /**
+     * Indicates whether multichannel is enabled
+     * 
+     */
     private final @Nullable Boolean enabled;
 
     @OutputCustomType.Constructor({"enabled"})
@@ -18,6 +22,10 @@ public final class MultichannelResponse {
         this.enabled = enabled;
     }
 
+    /**
+     * Indicates whether multichannel is enabled
+     * 
+     */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }

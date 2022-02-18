@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The parameters used to create a new trusted identity provider while creating a new Data Lake Store account.
+ * 
+ */
 public final class CreateTrustedIdProviderWithAccountParametersArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CreateTrustedIdProviderWithAccountParametersArgs Empty = new CreateTrustedIdProviderWithAccountParametersArgs();
 
+    /**
+     * The URL of this trusted identity provider.
+     * 
+     */
     @InputImport(name="idProvider", required=true)
     private final Input<String> idProvider;
 
@@ -20,6 +28,10 @@ public final class CreateTrustedIdProviderWithAccountParametersArgs extends io.p
         return this.idProvider;
     }
 
+    /**
+     * The unique name of the trusted identity provider to create.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

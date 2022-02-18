@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SshPublicKeyResponse {
+    /**
+     * SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).
+     * 
+     */
     private final @Nullable String keyData;
+    /**
+     * Specifies the full path on the created VM where ssh public key is stored. If the file already exists, the specified key is appended to the file. Example: /home/user/.ssh/authorized_keys
+     * 
+     */
     private final @Nullable String path;
 
     @OutputCustomType.Constructor({"keyData","path"})
@@ -22,9 +30,17 @@ public final class SshPublicKeyResponse {
         this.path = path;
     }
 
+    /**
+     * SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).
+     * 
+     */
     public Optional<String> getKeyData() {
         return Optional.ofNullable(this.keyData);
     }
+    /**
+     * Specifies the full path on the created VM where ssh public key is stored. If the file already exists, the specified key is appended to the file. Example: /home/user/.ssh/authorized_keys
+     * 
+     */
     public Optional<String> getPath() {
         return Optional.ofNullable(this.path);
     }

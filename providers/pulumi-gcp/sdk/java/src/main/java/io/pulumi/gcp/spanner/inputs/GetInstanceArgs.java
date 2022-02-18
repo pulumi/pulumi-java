@@ -28,6 +28,10 @@ public final class GetInstanceArgs extends io.pulumi.resources.InvokeArgs {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
+    /**
+     * The name of the spanner instance.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -35,6 +39,11 @@ public final class GetInstanceArgs extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    /**
+     * The project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

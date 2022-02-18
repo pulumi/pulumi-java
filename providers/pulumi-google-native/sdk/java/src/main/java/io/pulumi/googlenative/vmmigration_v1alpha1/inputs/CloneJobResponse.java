@@ -10,10 +10,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * CloneJob describes the process of creating a clone of a MigratingVM to the requested target based on the latest successful uploaded snapshots. While the migration cycles of a MigratingVm take place, it is possible to verify the uploaded VM can be started in the cloud, by creating a clone. The clone can be created without any downtime, and it is created using the latest snapshots which are already in the cloud. The cloneJob is only responsible for its work, not its products, which means once it is finished, it will never touch the instance it created. It will only delete it in case of the CloneJob being cancelled or upon failure to clone.
+ * 
+ */
 public final class CloneJobResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CloneJobResponse Empty = new CloneJobResponse();
 
+    /**
+     * Details of the target VM in Compute Engine.
+     * 
+     */
     @InputImport(name="computeEngineTargetDetails", required=true)
     private final ComputeEngineTargetDetailsResponse computeEngineTargetDetails;
 
@@ -21,6 +29,10 @@ public final class CloneJobResponse extends io.pulumi.resources.InvokeArgs {
         return this.computeEngineTargetDetails;
     }
 
+    /**
+     * The time the clone job was created (as an API call, not when it was actually created in the target).
+     * 
+     */
     @InputImport(name="createTime", required=true)
     private final String createTime;
 
@@ -28,6 +40,10 @@ public final class CloneJobResponse extends io.pulumi.resources.InvokeArgs {
         return this.createTime;
     }
 
+    /**
+     * Provides details for the errors that led to the Clone Job's state.
+     * 
+     */
     @InputImport(name="error", required=true)
     private final StatusResponse error;
 
@@ -35,6 +51,10 @@ public final class CloneJobResponse extends io.pulumi.resources.InvokeArgs {
         return this.error;
     }
 
+    /**
+     * The name of the clone.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -42,6 +62,10 @@ public final class CloneJobResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    /**
+     * State of the clone job.
+     * 
+     */
     @InputImport(name="state", required=true)
     private final String state;
 
@@ -49,6 +73,10 @@ public final class CloneJobResponse extends io.pulumi.resources.InvokeArgs {
         return this.state;
     }
 
+    /**
+     * The time the state was last updated.
+     * 
+     */
     @InputImport(name="stateTime", required=true)
     private final String stateTime;
 

@@ -9,6 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * An array of objects representing the details of a replication destination.
+ * 
+ */
 public final class ReplicationConfigurationReplicationDestinationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ReplicationConfigurationReplicationDestinationArgs Empty = new ReplicationConfigurationReplicationDestinationArgs();

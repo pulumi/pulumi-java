@@ -12,9 +12,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetNetblockIPRangesResult {
+    /**
+     * Retrieve list of all CIDR blocks.
+     * 
+     */
     private final List<String> cidrBlocks;
+    /**
+     * Retrieve list of the IPv4 CIDR blocks
+     * 
+     */
     private final List<String> cidrBlocksIpv4s;
+    /**
+     * Retrieve list of the IPv6 CIDR blocks, if available.
+     * 
+     */
     private final List<String> cidrBlocksIpv6s;
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
     private final @Nullable String rangeType;
 
@@ -32,15 +48,31 @@ public final class GetNetblockIPRangesResult {
         this.rangeType = rangeType;
     }
 
+    /**
+     * Retrieve list of all CIDR blocks.
+     * 
+     */
     public List<String> getCidrBlocks() {
         return this.cidrBlocks;
     }
+    /**
+     * Retrieve list of the IPv4 CIDR blocks
+     * 
+     */
     public List<String> getCidrBlocksIpv4s() {
         return this.cidrBlocksIpv4s;
     }
+    /**
+     * Retrieve list of the IPv6 CIDR blocks, if available.
+     * 
+     */
     public List<String> getCidrBlocksIpv6s() {
         return this.cidrBlocksIpv6s;
     }
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }

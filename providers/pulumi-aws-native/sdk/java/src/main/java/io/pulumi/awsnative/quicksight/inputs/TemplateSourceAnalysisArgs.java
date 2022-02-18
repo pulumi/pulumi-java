@@ -11,10 +11,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * <p>The source analysis of the template.</p>
+ * 
+ */
 public final class TemplateSourceAnalysisArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TemplateSourceAnalysisArgs Empty = new TemplateSourceAnalysisArgs();
 
+    /**
+     * <p>The Amazon Resource Name (ARN) of the resource.</p>
+     * 
+     */
     @InputImport(name="arn", required=true)
     private final Input<String> arn;
 
@@ -22,6 +30,11 @@ public final class TemplateSourceAnalysisArgs extends io.pulumi.resources.Resour
         return this.arn;
     }
 
+    /**
+     * <p>A structure containing information about the dataset references used as placeholders
+     *             in the template.</p>
+     * 
+     */
     @InputImport(name="dataSetReferences", required=true)
     private final Input<List<TemplateDataSetReferenceArgs>> dataSetReferences;
 

@@ -12,6 +12,10 @@ public final class GetOriginEndpointArgs extends io.pulumi.resources.InvokeArgs 
 
     public static final GetOriginEndpointArgs Empty = new GetOriginEndpointArgs();
 
+    /**
+     * The ID of the OriginEndpoint.
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 

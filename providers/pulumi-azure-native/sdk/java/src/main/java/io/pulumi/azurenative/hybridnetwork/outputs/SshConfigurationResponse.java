@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SshConfigurationResponse {
+    /**
+     * The list of SSH public keys used to authenticate with linux based VMs.
+     * 
+     */
     private final @Nullable List<SshPublicKeyResponse> publicKeys;
 
     @OutputCustomType.Constructor({"publicKeys"})
@@ -18,6 +22,10 @@ public final class SshConfigurationResponse {
         this.publicKeys = publicKeys;
     }
 
+    /**
+     * The list of SSH public keys used to authenticate with linux based VMs.
+     * 
+     */
     public List<SshPublicKeyResponse> getPublicKeys() {
         return this.publicKeys == null ? List.of() : this.publicKeys;
     }

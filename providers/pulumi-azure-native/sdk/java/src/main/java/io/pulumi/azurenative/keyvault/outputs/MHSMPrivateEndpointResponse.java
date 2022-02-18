@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MHSMPrivateEndpointResponse {
+    /**
+     * Full identifier of the private endpoint resource.
+     * 
+     */
     private final String id;
 
     @OutputCustomType.Constructor({"id"})
@@ -16,6 +20,10 @@ public final class MHSMPrivateEndpointResponse {
         this.id = Objects.requireNonNull(id);
     }
 
+    /**
+     * Full identifier of the private endpoint resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }

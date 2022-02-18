@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLoadBalancerTlsCertificate {
+/**
+ * Resource Type definition for AWS::Lightsail::LoadBalancerTlsCertificate
+ * 
+ */
     public static CompletableFuture<GetLoadBalancerTlsCertificateResult> invokeAsync(GetLoadBalancerTlsCertificateArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lightsail:getLoadBalancerTlsCertificate", TypeShape.of(GetLoadBalancerTlsCertificateResult.class), args == null ? GetLoadBalancerTlsCertificateArgs.Empty : args, Utilities.withVersion(options));
     }

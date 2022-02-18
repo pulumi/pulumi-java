@@ -13,6 +13,11 @@ public final class EnvGroupAttachmentArgs extends io.pulumi.resources.ResourceAr
 
     public static final EnvGroupAttachmentArgs Empty = new EnvGroupAttachmentArgs();
 
+    /**
+     * The Apigee environment group associated with the Apigee environment,
+     * in the format `organizations/{{org_name}}/envgroups/{{envgroup_name}}`.
+     * 
+     */
     @InputImport(name="envgroupId", required=true)
     private final Input<String> envgroupId;
 
@@ -20,6 +25,10 @@ public final class EnvGroupAttachmentArgs extends io.pulumi.resources.ResourceAr
         return this.envgroupId;
     }
 
+    /**
+     * The resource ID of the environment.
+     * 
+     */
     @InputImport(name="environment", required=true)
     private final Input<String> environment;
 

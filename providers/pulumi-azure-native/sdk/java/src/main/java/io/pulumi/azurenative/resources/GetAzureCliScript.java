@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAzureCliScript {
+/**
+ * Object model for the Azure CLI script.
+ * API Version: 2020-10-01.
+ * 
+ *
+ * Object model for the Azure CLI script.
+ * 
+ */
     public static CompletableFuture<GetAzureCliScriptResult> invokeAsync(GetAzureCliScriptArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:resources:getAzureCliScript", TypeShape.of(GetAzureCliScriptResult.class), args == null ? GetAzureCliScriptArgs.Empty : args, Utilities.withVersion(options));
     }

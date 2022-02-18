@@ -12,9 +12,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ConnectorCollectionInfoResponse {
+    /**
+     * Error information of last collection
+     * 
+     */
     private final @Nullable ConnectorCollectionErrorInfoResponse error;
+    /**
+     * Last time the data acquisition process initiated connecting to the external provider
+     * 
+     */
     private final String lastChecked;
+    /**
+     * Last time the external data was updated into Azure
+     * 
+     */
     private final String lastUpdated;
+    /**
+     * Source timestamp of external data currently available in Azure (eg AWS last processed CUR file timestamp)
+     * 
+     */
     private final String sourceLastUpdated;
 
     @OutputCustomType.Constructor({"error","lastChecked","lastUpdated","sourceLastUpdated"})
@@ -29,15 +45,31 @@ public final class ConnectorCollectionInfoResponse {
         this.sourceLastUpdated = Objects.requireNonNull(sourceLastUpdated);
     }
 
+    /**
+     * Error information of last collection
+     * 
+     */
     public Optional<ConnectorCollectionErrorInfoResponse> getError() {
         return Optional.ofNullable(this.error);
     }
+    /**
+     * Last time the data acquisition process initiated connecting to the external provider
+     * 
+     */
     public String getLastChecked() {
         return this.lastChecked;
     }
+    /**
+     * Last time the external data was updated into Azure
+     * 
+     */
     public String getLastUpdated() {
         return this.lastUpdated;
     }
+    /**
+     * Source timestamp of external data currently available in Azure (eg AWS last processed CUR file timestamp)
+     * 
+     */
     public String getSourceLastUpdated() {
         return this.sourceLastUpdated;
     }

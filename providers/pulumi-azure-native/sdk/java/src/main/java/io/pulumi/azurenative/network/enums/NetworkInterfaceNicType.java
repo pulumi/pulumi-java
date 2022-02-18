@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Type of Network Interface resource.
+     * 
+     */
     @EnumType
     public enum NetworkInterfaceNicType {
         Standard("Standard"),

@@ -8,6 +8,10 @@ import io.pulumi.googlenative.compute_alpha.inputs.ResourcePolicyDailyCycleRespo
 import java.util.Objects;
 
 
+/**
+ * A maintenance window for VMs. When set, we restrict our maintenance operations to this window.
+ * 
+ */
 public final class ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse Empty = new ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse();

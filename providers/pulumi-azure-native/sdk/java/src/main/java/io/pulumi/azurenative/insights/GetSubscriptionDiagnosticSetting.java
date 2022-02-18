@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSubscriptionDiagnosticSetting {
+/**
+ * The subscription diagnostic setting resource.
+ * API Version: 2017-05-01-preview.
+ * 
+ *
+ * The subscription diagnostic setting resource.
+ * 
+ */
     public static CompletableFuture<GetSubscriptionDiagnosticSettingResult> invokeAsync(GetSubscriptionDiagnosticSettingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getSubscriptionDiagnosticSetting", TypeShape.of(GetSubscriptionDiagnosticSettingResult.class), args == null ? GetSubscriptionDiagnosticSettingArgs.Empty : args, Utilities.withVersion(options));
     }

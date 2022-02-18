@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetKMSCryptoKeyVersionPublicKey {
+    /**
+     * The CryptoKeyVersionAlgorithm that this CryptoKeyVersion supports.
+     * 
+     */
     private final String algorithm;
+    /**
+     * The public key, encoded in PEM format. For more information, see the RFC 7468 sections for General Considerations and Textual Encoding of Subject Public Key Info.
+     * 
+     */
     private final String pem;
 
     @OutputCustomType.Constructor({"algorithm","pem"})
@@ -20,9 +28,17 @@ public final class GetKMSCryptoKeyVersionPublicKey {
         this.pem = Objects.requireNonNull(pem);
     }
 
+    /**
+     * The CryptoKeyVersionAlgorithm that this CryptoKeyVersion supports.
+     * 
+     */
     public String getAlgorithm() {
         return this.algorithm;
     }
+    /**
+     * The public key, encoded in PEM format. For more information, see the RFC 7468 sections for General Considerations and Textual Encoding of Subject Public Key Info.
+     * 
+     */
     public String getPem() {
         return this.pem;
     }

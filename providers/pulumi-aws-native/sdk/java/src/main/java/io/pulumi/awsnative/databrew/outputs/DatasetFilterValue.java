@@ -10,6 +10,10 @@ import java.util.Objects;
 @OutputCustomType
 public final class DatasetFilterValue {
     private final String value;
+    /**
+     * Variable name
+     * 
+     */
     private final String valueReference;
 
     @OutputCustomType.Constructor({"value","valueReference"})
@@ -23,6 +27,10 @@ public final class DatasetFilterValue {
     public String getValue() {
         return this.value;
     }
+    /**
+     * Variable name
+     * 
+     */
     public String getValueReference() {
         return this.valueReference;
     }

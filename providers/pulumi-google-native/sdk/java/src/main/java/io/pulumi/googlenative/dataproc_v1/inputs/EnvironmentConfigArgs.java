@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Environment configuration for a workload.
+ * 
+ */
 public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EnvironmentConfigArgs Empty = new EnvironmentConfigArgs();
 
+    /**
+     * Optional. Execution configuration for a workload.
+     * 
+     */
     @InputImport(name="executionConfig")
     private final @Nullable Input<ExecutionConfigArgs> executionConfig;
 
@@ -22,6 +30,10 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
         return this.executionConfig == null ? Input.empty() : this.executionConfig;
     }
 
+    /**
+     * Optional. Peripherals configuration that workload has access to.
+     * 
+     */
     @InputImport(name="peripheralsConfig")
     private final @Nullable Input<PeripheralsConfigArgs> peripheralsConfig;
 

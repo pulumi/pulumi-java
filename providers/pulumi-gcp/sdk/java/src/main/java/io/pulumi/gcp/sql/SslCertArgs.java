@@ -14,6 +14,11 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SslCertArgs Empty = new SslCertArgs();
 
+    /**
+     * The common name to be used in the certificate to identify the
+     * client. Constrained to [a-zA-Z.-_ ]+. Changing this forces a new resource to be created.
+     * 
+     */
     @InputImport(name="commonName", required=true)
     private final Input<String> commonName;
 
@@ -21,6 +26,11 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
         return this.commonName;
     }
 
+    /**
+     * The name of the Cloud SQL instance. Changing this
+     * forces a new resource to be created.
+     * 
+     */
     @InputImport(name="instance", required=true)
     private final Input<String> instance;
 
@@ -28,6 +38,11 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
         return this.instance;
     }
 
+    /**
+     * The ID of the project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

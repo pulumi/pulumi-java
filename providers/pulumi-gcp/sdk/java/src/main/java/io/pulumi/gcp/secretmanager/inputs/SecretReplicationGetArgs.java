@@ -15,6 +15,10 @@ public final class SecretReplicationGetArgs extends io.pulumi.resources.Resource
 
     public static final SecretReplicationGetArgs Empty = new SecretReplicationGetArgs();
 
+    /**
+     * The Secret will automatically be replicated without any restrictions.
+     * 
+     */
     @InputImport(name="automatic")
     private final @Nullable Input<Boolean> automatic;
 
@@ -22,6 +26,11 @@ public final class SecretReplicationGetArgs extends io.pulumi.resources.Resource
         return this.automatic == null ? Input.empty() : this.automatic;
     }
 
+    /**
+     * The Secret will automatically be replicated without any restrictions.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="userManaged")
     private final @Nullable Input<SecretReplicationUserManagedGetArgs> userManaged;
 

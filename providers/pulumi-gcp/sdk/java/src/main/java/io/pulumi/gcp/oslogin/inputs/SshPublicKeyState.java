@@ -14,6 +14,10 @@ public final class SshPublicKeyState extends io.pulumi.resources.ResourceArgs {
 
     public static final SshPublicKeyState Empty = new SshPublicKeyState();
 
+    /**
+     * An expiration time in microseconds since epoch.
+     * 
+     */
     @InputImport(name="expirationTimeUsec")
     private final @Nullable Input<String> expirationTimeUsec;
 
@@ -21,6 +25,10 @@ public final class SshPublicKeyState extends io.pulumi.resources.ResourceArgs {
         return this.expirationTimeUsec == null ? Input.empty() : this.expirationTimeUsec;
     }
 
+    /**
+     * The SHA-256 fingerprint of the SSH public key.
+     * 
+     */
     @InputImport(name="fingerprint")
     private final @Nullable Input<String> fingerprint;
 
@@ -28,6 +36,10 @@ public final class SshPublicKeyState extends io.pulumi.resources.ResourceArgs {
         return this.fingerprint == null ? Input.empty() : this.fingerprint;
     }
 
+    /**
+     * Public key text in SSH format, defined by RFC4253 section 6.6.
+     * 
+     */
     @InputImport(name="key")
     private final @Nullable Input<String> key;
 
@@ -35,6 +47,10 @@ public final class SshPublicKeyState extends io.pulumi.resources.ResourceArgs {
         return this.key == null ? Input.empty() : this.key;
     }
 
+    /**
+     * The project ID of the Google Cloud Platform project.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -42,6 +58,10 @@ public final class SshPublicKeyState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The user email.
+     * 
+     */
     @InputImport(name="user")
     private final @Nullable Input<String> user;
 

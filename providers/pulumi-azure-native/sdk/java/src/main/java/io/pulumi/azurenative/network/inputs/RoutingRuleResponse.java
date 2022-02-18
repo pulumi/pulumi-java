@@ -16,10 +16,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A routing rule represents a specification for traffic to treat and where to send it, along with health probe information.
+ * 
+ */
 public final class RoutingRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RoutingRuleResponse Empty = new RoutingRuleResponse();
 
+    /**
+     * Protocol schemes to match for this rule
+     * 
+     */
     @InputImport(name="acceptedProtocols")
     private final @Nullable List<String> acceptedProtocols;
 
@@ -27,6 +35,10 @@ public final class RoutingRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.acceptedProtocols == null ? List.of() : this.acceptedProtocols;
     }
 
+    /**
+     * Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'
+     * 
+     */
     @InputImport(name="enabledState")
     private final @Nullable String enabledState;
 
@@ -34,6 +46,10 @@ public final class RoutingRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.enabledState == null ? Optional.empty() : Optional.ofNullable(this.enabledState);
     }
 
+    /**
+     * Frontend endpoints associated with this rule
+     * 
+     */
     @InputImport(name="frontendEndpoints")
     private final @Nullable List<SubResourceResponse> frontendEndpoints;
 
@@ -41,6 +57,10 @@ public final class RoutingRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.frontendEndpoints == null ? List.of() : this.frontendEndpoints;
     }
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -48,6 +68,10 @@ public final class RoutingRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * Resource name.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -55,6 +79,10 @@ public final class RoutingRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The route patterns of the rule.
+     * 
+     */
     @InputImport(name="patternsToMatch")
     private final @Nullable List<String> patternsToMatch;
 
@@ -62,6 +90,10 @@ public final class RoutingRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.patternsToMatch == null ? List.of() : this.patternsToMatch;
     }
 
+    /**
+     * Resource status.
+     * 
+     */
     @InputImport(name="resourceState", required=true)
     private final String resourceState;
 
@@ -69,6 +101,10 @@ public final class RoutingRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.resourceState;
     }
 
+    /**
+     * A reference to the routing configuration.
+     * 
+     */
     @InputImport(name="routeConfiguration")
     private final @Nullable Either<ForwardingConfigurationResponse,RedirectConfigurationResponse> routeConfiguration;
 
@@ -76,6 +112,10 @@ public final class RoutingRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.routeConfiguration == null ? null : this.routeConfiguration;
     }
 
+    /**
+     * A reference to a specific Rules Engine Configuration to apply to this route.
+     * 
+     */
     @InputImport(name="rulesEngine")
     private final @Nullable SubResourceResponse rulesEngine;
 
@@ -83,6 +123,10 @@ public final class RoutingRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.rulesEngine == null ? Optional.empty() : Optional.ofNullable(this.rulesEngine);
     }
 
+    /**
+     * Resource type.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -90,6 +134,10 @@ public final class RoutingRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.type;
     }
 
+    /**
+     * Defines the Web Application Firewall policy for each routing rule (if applicable)
+     * 
+     */
     @InputImport(name="webApplicationFirewallPolicyLink")
     private final @Nullable RoutingRuleUpdateParametersResponseWebApplicationFirewallPolicyLink webApplicationFirewallPolicyLink;
 

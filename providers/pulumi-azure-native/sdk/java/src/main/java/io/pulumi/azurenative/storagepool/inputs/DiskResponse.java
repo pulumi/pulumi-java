@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Azure Managed Disk to attach to the Disk pool.
+ * 
+ */
 public final class DiskResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DiskResponse Empty = new DiskResponse();
 
+    /**
+     * Unique Azure Resource ID of the Managed Disk.
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 

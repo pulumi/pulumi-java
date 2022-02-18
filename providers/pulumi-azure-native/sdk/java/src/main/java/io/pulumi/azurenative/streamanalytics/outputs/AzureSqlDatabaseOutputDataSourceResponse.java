@@ -11,11 +11,36 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AzureSqlDatabaseOutputDataSourceResponse {
+    /**
+     * The name of the Azure SQL database. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     private final @Nullable String database;
+    /**
+     * The password that will be used to connect to the Azure SQL database. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     private final @Nullable String password;
+    /**
+     * The name of the SQL server containing the Azure SQL database. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     private final @Nullable String server;
+    /**
+     * The name of the table in the Azure SQL database. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     private final @Nullable String table;
+    /**
+     * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
+     * Expected value is 'Microsoft.Sql/Server/Database'.
+     * 
+     */
     private final String type;
+    /**
+     * The user name that will be used to connect to the Azure SQL database. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     private final @Nullable String user;
 
     @OutputCustomType.Constructor({"database","password","server","table","type","user"})
@@ -34,21 +59,46 @@ public final class AzureSqlDatabaseOutputDataSourceResponse {
         this.user = user;
     }
 
+    /**
+     * The name of the Azure SQL database. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<String> getDatabase() {
         return Optional.ofNullable(this.database);
     }
+    /**
+     * The password that will be used to connect to the Azure SQL database. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<String> getPassword() {
         return Optional.ofNullable(this.password);
     }
+    /**
+     * The name of the SQL server containing the Azure SQL database. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<String> getServer() {
         return Optional.ofNullable(this.server);
     }
+    /**
+     * The name of the table in the Azure SQL database. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<String> getTable() {
         return Optional.ofNullable(this.table);
     }
+    /**
+     * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
+     * Expected value is 'Microsoft.Sql/Server/Database'.
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * The user name that will be used to connect to the Azure SQL database. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<String> getUser() {
         return Optional.ofNullable(this.user);
     }

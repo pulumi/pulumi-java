@@ -13,6 +13,10 @@ import javax.annotation.Nullable;
 @OutputCustomType
 public final class ClusterMasterAuth {
     private final @Nullable String clientCertificate;
+    /**
+     * Whether client certificate authorization is enabled for this cluster.  For example:
+     * 
+     */
     private final ClusterMasterAuthClientCertificateConfig clientCertificateConfig;
     private final @Nullable String clientKey;
     private final @Nullable String clusterCaCertificate;
@@ -32,6 +36,10 @@ public final class ClusterMasterAuth {
     public Optional<String> getClientCertificate() {
         return Optional.ofNullable(this.clientCertificate);
     }
+    /**
+     * Whether client certificate authorization is enabled for this cluster.  For example:
+     * 
+     */
     public ClusterMasterAuthClientCertificateConfig getClientCertificateConfig() {
         return this.clientCertificateConfig;
     }

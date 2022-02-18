@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * RelationshipNote represents an SPDX Relationship section: https://spdx.github.io/spdx-spec/7-relationships-between-SPDX-elements/
+ * 
+ */
 public final class RelationshipNoteArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RelationshipNoteArgs Empty = new RelationshipNoteArgs();
 
+    /**
+     * The type of relationship between the source and target SPDX elements
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<RelationshipNoteType> type;
 

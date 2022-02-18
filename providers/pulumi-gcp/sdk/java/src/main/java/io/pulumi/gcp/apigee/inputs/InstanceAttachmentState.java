@@ -14,6 +14,10 @@ public final class InstanceAttachmentState extends io.pulumi.resources.ResourceA
 
     public static final InstanceAttachmentState Empty = new InstanceAttachmentState();
 
+    /**
+     * The resource ID of the environment.
+     * 
+     */
     @InputImport(name="environment")
     private final @Nullable Input<String> environment;
 
@@ -21,6 +25,11 @@ public final class InstanceAttachmentState extends io.pulumi.resources.ResourceA
         return this.environment == null ? Input.empty() : this.environment;
     }
 
+    /**
+     * The Apigee instance associated with the Apigee environment,
+     * in the format `organisations/{{org_name}}/instances/{{instance_name}}`.
+     * 
+     */
     @InputImport(name="instanceId")
     private final @Nullable Input<String> instanceId;
 
@@ -28,6 +37,10 @@ public final class InstanceAttachmentState extends io.pulumi.resources.ResourceA
         return this.instanceId == null ? Input.empty() : this.instanceId;
     }
 
+    /**
+     * The name of the newly created attachment (output parameter).
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

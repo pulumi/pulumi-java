@@ -14,6 +14,10 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
 
     public static final PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueTimeValueGetArgs Empty = new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueTimeValueGetArgs();
 
+    /**
+     * Hours of day in 24 hour format. Should be from 0 to 23.
+     * 
+     */
     @InputImport(name="hours")
     private final @Nullable Input<Integer> hours;
 
@@ -21,6 +25,10 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
         return this.hours == null ? Input.empty() : this.hours;
     }
 
+    /**
+     * Minutes of hour of day. Must be from 0 to 59.
+     * 
+     */
     @InputImport(name="minutes")
     private final @Nullable Input<Integer> minutes;
 
@@ -28,6 +36,10 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
         return this.minutes == null ? Input.empty() : this.minutes;
     }
 
+    /**
+     * Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
+     * 
+     */
     @InputImport(name="nanos")
     private final @Nullable Input<Integer> nanos;
 
@@ -35,6 +47,10 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
         return this.nanos == null ? Input.empty() : this.nanos;
     }
 
+    /**
+     * Seconds of minutes of the time. Must normally be from 0 to 59.
+     * 
+     */
     @InputImport(name="seconds")
     private final @Nullable Input<Integer> seconds;
 

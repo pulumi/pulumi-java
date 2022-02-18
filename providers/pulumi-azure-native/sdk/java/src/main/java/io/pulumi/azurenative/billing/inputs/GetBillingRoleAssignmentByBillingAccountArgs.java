@@ -12,6 +12,10 @@ public final class GetBillingRoleAssignmentByBillingAccountArgs extends io.pulum
 
     public static final GetBillingRoleAssignmentByBillingAccountArgs Empty = new GetBillingRoleAssignmentByBillingAccountArgs();
 
+    /**
+     * The ID that uniquely identifies a billing account.
+     * 
+     */
     @InputImport(name="billingAccountName", required=true)
     private final String billingAccountName;
 
@@ -19,6 +23,10 @@ public final class GetBillingRoleAssignmentByBillingAccountArgs extends io.pulum
         return this.billingAccountName;
     }
 
+    /**
+     * The ID that uniquely identifies a role assignment.
+     * 
+     */
     @InputImport(name="billingRoleAssignmentName", required=true)
     private final String billingRoleAssignmentName;
 

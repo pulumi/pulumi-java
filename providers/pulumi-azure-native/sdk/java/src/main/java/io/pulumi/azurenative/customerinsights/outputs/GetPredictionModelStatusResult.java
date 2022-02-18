@@ -10,16 +10,60 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetPredictionModelStatusResult {
+    /**
+     * The model status message.
+     * 
+     */
     private final String message;
+    /**
+     * Version of the model.
+     * 
+     */
     private final String modelVersion;
+    /**
+     * The prediction GUID ID.
+     * 
+     */
     private final String predictionGuidId;
+    /**
+     * The prediction name.
+     * 
+     */
     private final String predictionName;
+    /**
+     * The signals used.
+     * 
+     */
     private final Integer signalsUsed;
+    /**
+     * Prediction model life cycle.  When prediction is in PendingModelConfirmation status, it is allowed to update the status to PendingFeaturing or Active through API.
+     * 
+     */
     private final String status;
+    /**
+     * The hub name.
+     * 
+     */
     private final String tenantId;
+    /**
+     * Count of the test set.
+     * 
+     */
     private final Integer testSetCount;
+    /**
+     * The training accuracy.
+     * 
+     */
     private final Integer trainingAccuracy;
+    /**
+     * Count of the training set.
+     * 
+     */
     private final Integer trainingSetCount;
+    /**
+     * Count of the validation set.
+     * 
+     */
     private final Integer validationSetCount;
 
     @OutputCustomType.Constructor({"message","modelVersion","predictionGuidId","predictionName","signalsUsed","status","tenantId","testSetCount","trainingAccuracy","trainingSetCount","validationSetCount"})
@@ -48,36 +92,80 @@ public final class GetPredictionModelStatusResult {
         this.validationSetCount = Objects.requireNonNull(validationSetCount);
     }
 
+    /**
+     * The model status message.
+     * 
+     */
     public String getMessage() {
         return this.message;
     }
+    /**
+     * Version of the model.
+     * 
+     */
     public String getModelVersion() {
         return this.modelVersion;
     }
+    /**
+     * The prediction GUID ID.
+     * 
+     */
     public String getPredictionGuidId() {
         return this.predictionGuidId;
     }
+    /**
+     * The prediction name.
+     * 
+     */
     public String getPredictionName() {
         return this.predictionName;
     }
+    /**
+     * The signals used.
+     * 
+     */
     public Integer getSignalsUsed() {
         return this.signalsUsed;
     }
+    /**
+     * Prediction model life cycle.  When prediction is in PendingModelConfirmation status, it is allowed to update the status to PendingFeaturing or Active through API.
+     * 
+     */
     public String getStatus() {
         return this.status;
     }
+    /**
+     * The hub name.
+     * 
+     */
     public String getTenantId() {
         return this.tenantId;
     }
+    /**
+     * Count of the test set.
+     * 
+     */
     public Integer getTestSetCount() {
         return this.testSetCount;
     }
+    /**
+     * The training accuracy.
+     * 
+     */
     public Integer getTrainingAccuracy() {
         return this.trainingAccuracy;
     }
+    /**
+     * Count of the training set.
+     * 
+     */
     public Integer getTrainingSetCount() {
         return this.trainingSetCount;
     }
+    /**
+     * Count of the validation set.
+     * 
+     */
     public Integer getValidationSetCount() {
         return this.validationSetCount;
     }

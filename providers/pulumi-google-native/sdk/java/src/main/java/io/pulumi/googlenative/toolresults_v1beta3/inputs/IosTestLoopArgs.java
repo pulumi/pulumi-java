@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A game loop test of an iOS application.
+ * 
+ */
 public final class IosTestLoopArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IosTestLoopArgs Empty = new IosTestLoopArgs();
 
+    /**
+     * Bundle ID of the app.
+     * 
+     */
     @InputImport(name="bundleId")
     private final @Nullable Input<String> bundleId;
 

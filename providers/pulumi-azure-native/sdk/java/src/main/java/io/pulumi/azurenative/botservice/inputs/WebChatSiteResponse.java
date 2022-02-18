@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A site for the Webchat channel
+ * 
+ */
 public final class WebChatSiteResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final WebChatSiteResponse Empty = new WebChatSiteResponse();
 
+    /**
+     * Whether this site is enabled for DirectLine channel
+     * 
+     */
     @InputImport(name="isEnabled", required=true)
     private final Boolean isEnabled;
 
@@ -20,6 +28,10 @@ public final class WebChatSiteResponse extends io.pulumi.resources.InvokeArgs {
         return this.isEnabled;
     }
 
+    /**
+     * Whether this site is enabled for preview versions of Webchat
+     * 
+     */
     @InputImport(name="isWebchatPreviewEnabled", required=true)
     private final Boolean isWebchatPreviewEnabled;
 
@@ -27,6 +39,10 @@ public final class WebChatSiteResponse extends io.pulumi.resources.InvokeArgs {
         return this.isWebchatPreviewEnabled;
     }
 
+    /**
+     * Primary key. Value only returned through POST to the action Channel List API, otherwise empty.
+     * 
+     */
     @InputImport(name="key", required=true)
     private final String key;
 
@@ -34,6 +50,10 @@ public final class WebChatSiteResponse extends io.pulumi.resources.InvokeArgs {
         return this.key;
     }
 
+    /**
+     * Secondary key. Value only returned through POST to the action Channel List API, otherwise empty.
+     * 
+     */
     @InputImport(name="key2", required=true)
     private final String key2;
 
@@ -41,6 +61,10 @@ public final class WebChatSiteResponse extends io.pulumi.resources.InvokeArgs {
         return this.key2;
     }
 
+    /**
+     * Site Id
+     * 
+     */
     @InputImport(name="siteId", required=true)
     private final String siteId;
 
@@ -48,6 +72,10 @@ public final class WebChatSiteResponse extends io.pulumi.resources.InvokeArgs {
         return this.siteId;
     }
 
+    /**
+     * Site name
+     * 
+     */
     @InputImport(name="siteName", required=true)
     private final String siteName;
 

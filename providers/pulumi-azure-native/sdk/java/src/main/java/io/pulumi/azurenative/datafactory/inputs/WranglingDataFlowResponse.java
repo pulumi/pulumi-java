@@ -14,10 +14,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Power Query data flow.
+ * 
+ */
 public final class WranglingDataFlowResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final WranglingDataFlowResponse Empty = new WranglingDataFlowResponse();
 
+    /**
+     * List of tags that can be used for describing the data flow.
+     * 
+     */
     @InputImport(name="annotations")
     private final @Nullable List<Object> annotations;
 
@@ -25,6 +33,10 @@ public final class WranglingDataFlowResponse extends io.pulumi.resources.InvokeA
         return this.annotations == null ? List.of() : this.annotations;
     }
 
+    /**
+     * The description of the data flow.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -32,6 +44,10 @@ public final class WranglingDataFlowResponse extends io.pulumi.resources.InvokeA
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * Locale of the Power query mashup document.
+     * 
+     */
     @InputImport(name="documentLocale")
     private final @Nullable String documentLocale;
 
@@ -39,6 +55,10 @@ public final class WranglingDataFlowResponse extends io.pulumi.resources.InvokeA
         return this.documentLocale == null ? Optional.empty() : Optional.ofNullable(this.documentLocale);
     }
 
+    /**
+     * The folder that this data flow is in. If not specified, Data flow will appear at the root level.
+     * 
+     */
     @InputImport(name="folder")
     private final @Nullable DataFlowResponseFolder folder;
 
@@ -46,6 +66,10 @@ public final class WranglingDataFlowResponse extends io.pulumi.resources.InvokeA
         return this.folder == null ? Optional.empty() : Optional.ofNullable(this.folder);
     }
 
+    /**
+     * Power query mashup script.
+     * 
+     */
     @InputImport(name="script")
     private final @Nullable String script;
 
@@ -53,6 +77,10 @@ public final class WranglingDataFlowResponse extends io.pulumi.resources.InvokeA
         return this.script == null ? Optional.empty() : Optional.ofNullable(this.script);
     }
 
+    /**
+     * List of sources in Power Query.
+     * 
+     */
     @InputImport(name="sources")
     private final @Nullable List<PowerQuerySourceResponse> sources;
 
@@ -60,6 +88,11 @@ public final class WranglingDataFlowResponse extends io.pulumi.resources.InvokeA
         return this.sources == null ? List.of() : this.sources;
     }
 
+    /**
+     * Type of data flow.
+     * Expected value is 'WranglingDataFlow'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

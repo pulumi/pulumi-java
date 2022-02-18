@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ConnectionPropertyResponse {
+    /**
+     * [Required] Name of the connection property to set.
+     * 
+     */
     private final String key;
+    /**
+     * [Required] Value of the connection property.
+     * 
+     */
     private final String value;
 
     @OutputCustomType.Constructor({"key","value"})
@@ -20,9 +28,17 @@ public final class ConnectionPropertyResponse {
         this.value = Objects.requireNonNull(value);
     }
 
+    /**
+     * [Required] Name of the connection property to set.
+     * 
+     */
     public String getKey() {
         return this.key;
     }
+    /**
+     * [Required] Value of the connection property.
+     * 
+     */
     public String getValue() {
         return this.value;
     }

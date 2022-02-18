@@ -12,7 +12,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class IntegrationServiceEnvironmentSkuResponse {
+    /**
+     * The sku capacity.
+     * 
+     */
     private final @Nullable Integer capacity;
+    /**
+     * The sku name.
+     * 
+     */
     private final @Nullable String name;
 
     @OutputCustomType.Constructor({"capacity","name"})
@@ -23,9 +31,17 @@ public final class IntegrationServiceEnvironmentSkuResponse {
         this.name = name;
     }
 
+    /**
+     * The sku capacity.
+     * 
+     */
     public Optional<Integer> getCapacity() {
         return Optional.ofNullable(this.capacity);
     }
+    /**
+     * The sku name.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

@@ -16,6 +16,10 @@ public final class DeliveryPipelineArgs extends io.pulumi.resources.ResourceArgs
 
     public static final DeliveryPipelineArgs Empty = new DeliveryPipelineArgs();
 
+    /**
+     * User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
+     * 
+     */
     @InputImport(name="annotations")
     private final @Nullable Input<Map<String,String>> annotations;
 
@@ -30,6 +34,10 @@ public final class DeliveryPipelineArgs extends io.pulumi.resources.ResourceArgs
         return this.deliveryPipelineId;
     }
 
+    /**
+     * Description of the `DeliveryPipeline`. Max length is 255 characters.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -37,6 +45,10 @@ public final class DeliveryPipelineArgs extends io.pulumi.resources.ResourceArgs
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
+     * 
+     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -44,6 +56,10 @@ public final class DeliveryPipelineArgs extends io.pulumi.resources.ResourceArgs
         return this.etag == null ? Input.empty() : this.etag;
     }
 
+    /**
+     * Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be <= 128 bytes.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -58,6 +74,10 @@ public final class DeliveryPipelineArgs extends io.pulumi.resources.ResourceArgs
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Optional. Name of the `DeliveryPipeline`. Format is projects/{project}/ locations/{location}/deliveryPipelines/a-z{0,62}.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -79,6 +99,10 @@ public final class DeliveryPipelineArgs extends io.pulumi.resources.ResourceArgs
         return this.requestId == null ? Input.empty() : this.requestId;
     }
 
+    /**
+     * SerialPipeline defines a sequential set of stages for a `DeliveryPipeline`.
+     * 
+     */
     @InputImport(name="serialPipeline")
     private final @Nullable Input<SerialPipelineArgs> serialPipeline;
 

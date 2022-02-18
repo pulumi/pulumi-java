@@ -15,15 +15,59 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class UptimeCheckConfigHttpCheck {
+    /**
+     * The authentication information. Optional when creating an HTTP check; defaults to empty.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable UptimeCheckConfigHttpCheckAuthInfo authInfo;
+    /**
+     * The request body associated with the HTTP POST request. If contentType is URL_ENCODED, the body passed in must be URL-encoded. Users can provide a Content-Length header via the headers field or the API will do so. If the requestMethod is GET and body is not empty, the API will return an error. The maximum byte size is 1 megabyte. Note - As with all bytes fields JSON representations are base64 encoded. e.g. "foo=bar" in URL-encoded form is "foo%3Dbar" and in base64 encoding is "Zm9vJTI1M0RiYXI=".
+     * 
+     */
     private final @Nullable String body;
+    /**
+     * The content type to use for the check.
+     * Possible values are `TYPE_UNSPECIFIED` and `URL_ENCODED`.
+     * 
+     */
     private final @Nullable String contentType;
+    /**
+     * The list of headers to send as part of the uptime check request. If two headers have the same key and different values, they should be entered as a single header, with the value being a comma-separated list of all the desired values as described at https://www.w3.org/Protocols/rfc2616/rfc2616.txt (page 31). Entering two separate headers with the same key in a Create call will cause the first to be overwritten by the second. The maximum number of headers allowed is 100.
+     * 
+     */
     private final @Nullable Map<String,String> headers;
+    /**
+     * Boolean specifying whether to encrypt the header information. Encryption should be specified for any headers related to authentication that you do not wish to be seen when retrieving the configuration. The server will be responsible for encrypting the headers. On Get/List calls, if mask_headers is set to True then the headers will be obscured with ******.
+     * 
+     */
     private final @Nullable Boolean maskHeaders;
+    /**
+     * The path to the page to run the check against. Will be combined with the host (specified within the MonitoredResource) and port to construct the full URL. Optional (defaults to "/").
+     * 
+     */
     private final @Nullable String path;
+    /**
+     * The port to the page to run the check against. Will be combined with host (specified within the MonitoredResource) to construct the full URL.
+     * 
+     */
     private final @Nullable Integer port;
+    /**
+     * The HTTP request method to use for the check. If set to METHOD_UNSPECIFIED then requestMethod defaults to GET.
+     * Default value is `GET`.
+     * Possible values are `METHOD_UNSPECIFIED`, `GET`, and `POST`.
+     * 
+     */
     private final @Nullable String requestMethod;
+    /**
+     * If true, use HTTPS instead of HTTP to run the check.
+     * 
+     */
     private final @Nullable Boolean useSsl;
+    /**
+     * Boolean specifying whether to include SSL certificate validation as a part of the Uptime check. Only applies to checks where monitoredResource is set to uptime_url. If useSsl is false, setting validateSsl to true has no effect.
+     * 
+     */
     private final @Nullable Boolean validateSsl;
 
     @OutputCustomType.Constructor({"authInfo","body","contentType","headers","maskHeaders","path","port","requestMethod","useSsl","validateSsl"})
@@ -50,33 +94,77 @@ public final class UptimeCheckConfigHttpCheck {
         this.validateSsl = validateSsl;
     }
 
+    /**
+     * The authentication information. Optional when creating an HTTP check; defaults to empty.
+     * Structure is documented below.
+     * 
+     */
     public Optional<UptimeCheckConfigHttpCheckAuthInfo> getAuthInfo() {
         return Optional.ofNullable(this.authInfo);
     }
+    /**
+     * The request body associated with the HTTP POST request. If contentType is URL_ENCODED, the body passed in must be URL-encoded. Users can provide a Content-Length header via the headers field or the API will do so. If the requestMethod is GET and body is not empty, the API will return an error. The maximum byte size is 1 megabyte. Note - As with all bytes fields JSON representations are base64 encoded. e.g. "foo=bar" in URL-encoded form is "foo%3Dbar" and in base64 encoding is "Zm9vJTI1M0RiYXI=".
+     * 
+     */
     public Optional<String> getBody() {
         return Optional.ofNullable(this.body);
     }
+    /**
+     * The content type to use for the check.
+     * Possible values are `TYPE_UNSPECIFIED` and `URL_ENCODED`.
+     * 
+     */
     public Optional<String> getContentType() {
         return Optional.ofNullable(this.contentType);
     }
+    /**
+     * The list of headers to send as part of the uptime check request. If two headers have the same key and different values, they should be entered as a single header, with the value being a comma-separated list of all the desired values as described at https://www.w3.org/Protocols/rfc2616/rfc2616.txt (page 31). Entering two separate headers with the same key in a Create call will cause the first to be overwritten by the second. The maximum number of headers allowed is 100.
+     * 
+     */
     public Map<String,String> getHeaders() {
         return this.headers == null ? Map.of() : this.headers;
     }
+    /**
+     * Boolean specifying whether to encrypt the header information. Encryption should be specified for any headers related to authentication that you do not wish to be seen when retrieving the configuration. The server will be responsible for encrypting the headers. On Get/List calls, if mask_headers is set to True then the headers will be obscured with ******.
+     * 
+     */
     public Optional<Boolean> getMaskHeaders() {
         return Optional.ofNullable(this.maskHeaders);
     }
+    /**
+     * The path to the page to run the check against. Will be combined with the host (specified within the MonitoredResource) and port to construct the full URL. Optional (defaults to "/").
+     * 
+     */
     public Optional<String> getPath() {
         return Optional.ofNullable(this.path);
     }
+    /**
+     * The port to the page to run the check against. Will be combined with host (specified within the MonitoredResource) to construct the full URL.
+     * 
+     */
     public Optional<Integer> getPort() {
         return Optional.ofNullable(this.port);
     }
+    /**
+     * The HTTP request method to use for the check. If set to METHOD_UNSPECIFIED then requestMethod defaults to GET.
+     * Default value is `GET`.
+     * Possible values are `METHOD_UNSPECIFIED`, `GET`, and `POST`.
+     * 
+     */
     public Optional<String> getRequestMethod() {
         return Optional.ofNullable(this.requestMethod);
     }
+    /**
+     * If true, use HTTPS instead of HTTP to run the check.
+     * 
+     */
     public Optional<Boolean> getUseSsl() {
         return Optional.ofNullable(this.useSsl);
     }
+    /**
+     * Boolean specifying whether to include SSL certificate validation as a part of the Uptime check. Only applies to checks where monitoredResource is set to uptime_url. If useSsl is false, setting validateSsl to true has no effect.
+     * 
+     */
     public Optional<Boolean> getValidateSsl() {
         return Optional.ofNullable(this.validateSsl);
     }

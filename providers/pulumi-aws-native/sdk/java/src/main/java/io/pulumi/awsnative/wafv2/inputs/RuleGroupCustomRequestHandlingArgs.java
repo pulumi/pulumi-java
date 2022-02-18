@@ -10,10 +10,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Custom request handling.
+ * 
+ */
 public final class RuleGroupCustomRequestHandlingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RuleGroupCustomRequestHandlingArgs Empty = new RuleGroupCustomRequestHandlingArgs();
 
+    /**
+     * Collection of HTTP headers.
+     * 
+     */
     @InputImport(name="insertHeaders", required=true)
     private final Input<List<RuleGroupCustomHTTPHeaderArgs>> insertHeaders;
 

@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents a condition for a device pool.
+ * 
+ */
 public final class DevicePoolRule extends io.pulumi.resources.InvokeArgs {
 
     public static final DevicePoolRule Empty = new DevicePoolRule();
 
+    /**
+     * The rule's stringified attribute.
+     * 
+     */
     @InputImport(name="attribute")
     private final @Nullable DevicePoolRuleAttribute attribute;
 
@@ -23,6 +31,10 @@ public final class DevicePoolRule extends io.pulumi.resources.InvokeArgs {
         return this.attribute == null ? Optional.empty() : Optional.ofNullable(this.attribute);
     }
 
+    /**
+     * Specifies how Device Farm compares the rule's attribute to the value.
+     * 
+     */
     @InputImport(name="operator")
     private final @Nullable DevicePoolRuleOperator operator;
 
@@ -30,6 +42,10 @@ public final class DevicePoolRule extends io.pulumi.resources.InvokeArgs {
         return this.operator == null ? Optional.empty() : Optional.ofNullable(this.operator);
     }
 
+    /**
+     * The rule's value.
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable String value;
 

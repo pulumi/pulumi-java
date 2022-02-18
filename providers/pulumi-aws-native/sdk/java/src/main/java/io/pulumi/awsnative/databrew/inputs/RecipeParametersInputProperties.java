@@ -11,6 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Input
+ * 
+ */
 public final class RecipeParametersInputProperties extends io.pulumi.resources.InvokeArgs {
 
     public static final RecipeParametersInputProperties Empty = new RecipeParametersInputProperties();

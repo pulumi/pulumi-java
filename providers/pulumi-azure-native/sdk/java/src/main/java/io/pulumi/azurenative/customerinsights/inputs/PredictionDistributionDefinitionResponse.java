@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The definition of the prediction distribution.
+ * 
+ */
 public final class PredictionDistributionDefinitionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PredictionDistributionDefinitionResponse Empty = new PredictionDistributionDefinitionResponse();
 
+    /**
+     * Distributions of the prediction.
+     * 
+     */
     @InputImport(name="distributions")
     private final @Nullable List<PredictionDistributionDefinitionResponseDistributions> distributions;
 
@@ -23,6 +31,10 @@ public final class PredictionDistributionDefinitionResponse extends io.pulumi.re
         return this.distributions == null ? List.of() : this.distributions;
     }
 
+    /**
+     * Total negatives in the distribution.
+     * 
+     */
     @InputImport(name="totalNegatives")
     private final @Nullable Double totalNegatives;
 
@@ -30,6 +42,10 @@ public final class PredictionDistributionDefinitionResponse extends io.pulumi.re
         return this.totalNegatives == null ? Optional.empty() : Optional.ofNullable(this.totalNegatives);
     }
 
+    /**
+     * Total positive in the distribution.
+     * 
+     */
     @InputImport(name="totalPositives")
     private final @Nullable Double totalPositives;
 

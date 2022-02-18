@@ -17,10 +17,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * An IPSec Policy configuration for a virtual network gateway connection.
+ * 
+ */
 public final class IpsecPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IpsecPolicyArgs Empty = new IpsecPolicyArgs();
 
+    /**
+     * The DH Group used in IKE Phase 1 for initial SA.
+     * 
+     */
     @InputImport(name="dhGroup", required=true)
     private final Input<Either<String,DhGroup>> dhGroup;
 
@@ -28,6 +36,10 @@ public final class IpsecPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.dhGroup;
     }
 
+    /**
+     * The IKE encryption algorithm (IKE phase 2).
+     * 
+     */
     @InputImport(name="ikeEncryption", required=true)
     private final Input<Either<String,IkeEncryption>> ikeEncryption;
 
@@ -35,6 +47,10 @@ public final class IpsecPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.ikeEncryption;
     }
 
+    /**
+     * The IKE integrity algorithm (IKE phase 2).
+     * 
+     */
     @InputImport(name="ikeIntegrity", required=true)
     private final Input<Either<String,IkeIntegrity>> ikeIntegrity;
 
@@ -42,6 +58,10 @@ public final class IpsecPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.ikeIntegrity;
     }
 
+    /**
+     * The IPSec encryption algorithm (IKE phase 1).
+     * 
+     */
     @InputImport(name="ipsecEncryption", required=true)
     private final Input<Either<String,IpsecEncryption>> ipsecEncryption;
 
@@ -49,6 +69,10 @@ public final class IpsecPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.ipsecEncryption;
     }
 
+    /**
+     * The IPSec integrity algorithm (IKE phase 1).
+     * 
+     */
     @InputImport(name="ipsecIntegrity", required=true)
     private final Input<Either<String,IpsecIntegrity>> ipsecIntegrity;
 
@@ -56,6 +80,10 @@ public final class IpsecPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.ipsecIntegrity;
     }
 
+    /**
+     * The Pfs Group used in IKE Phase 2 for new child SA.
+     * 
+     */
     @InputImport(name="pfsGroup", required=true)
     private final Input<Either<String,PfsGroup>> pfsGroup;
 
@@ -63,6 +91,10 @@ public final class IpsecPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.pfsGroup;
     }
 
+    /**
+     * The IPSec Security Association (also called Quick Mode or Phase 2 SA) payload size in KB for a site to site VPN tunnel.
+     * 
+     */
     @InputImport(name="saDataSizeKilobytes", required=true)
     private final Input<Integer> saDataSizeKilobytes;
 
@@ -70,6 +102,10 @@ public final class IpsecPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.saDataSizeKilobytes;
     }
 
+    /**
+     * The IPSec Security Association (also called Quick Mode or Phase 2 SA) lifetime in seconds for a site to site VPN tunnel.
+     * 
+     */
     @InputImport(name="saLifeTimeSeconds", required=true)
     private final Input<Integer> saLifeTimeSeconds;
 

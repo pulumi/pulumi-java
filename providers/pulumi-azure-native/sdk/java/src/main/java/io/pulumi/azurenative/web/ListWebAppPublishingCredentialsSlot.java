@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListWebAppPublishingCredentialsSlot {
+/**
+ * User credentials used for publishing activity.
+ * API Version: 2020-12-01.
+ * 
+ *
+ * User credentials used for publishing activity.
+ * 
+ */
     public static CompletableFuture<ListWebAppPublishingCredentialsSlotResult> invokeAsync(ListWebAppPublishingCredentialsSlotArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppPublishingCredentialsSlot", TypeShape.of(ListWebAppPublishingCredentialsSlotResult.class), args == null ? ListWebAppPublishingCredentialsSlotArgs.Empty : args, Utilities.withVersion(options));
     }

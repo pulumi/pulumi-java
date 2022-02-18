@@ -10,9 +10,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AlexaChannelPropertiesResponse {
+    /**
+     * The Alexa skill Id
+     * 
+     */
     private final String alexaSkillId;
+    /**
+     * Whether this channel is enabled for the bot
+     * 
+     */
     private final Boolean isEnabled;
+    /**
+     * Full Uri used to configured the skill in Alexa
+     * 
+     */
     private final String serviceEndpointUri;
+    /**
+     * Url fragment used in part of the Uri configured in Alexa
+     * 
+     */
     private final String urlFragment;
 
     @OutputCustomType.Constructor({"alexaSkillId","isEnabled","serviceEndpointUri","urlFragment"})
@@ -27,15 +43,31 @@ public final class AlexaChannelPropertiesResponse {
         this.urlFragment = Objects.requireNonNull(urlFragment);
     }
 
+    /**
+     * The Alexa skill Id
+     * 
+     */
     public String getAlexaSkillId() {
         return this.alexaSkillId;
     }
+    /**
+     * Whether this channel is enabled for the bot
+     * 
+     */
     public Boolean getIsEnabled() {
         return this.isEnabled;
     }
+    /**
+     * Full Uri used to configured the skill in Alexa
+     * 
+     */
     public String getServiceEndpointUri() {
         return this.serviceEndpointUri;
     }
+    /**
+     * Url fragment used in part of the Uri configured in Alexa
+     * 
+     */
     public String getUrlFragment() {
         return this.urlFragment;
     }

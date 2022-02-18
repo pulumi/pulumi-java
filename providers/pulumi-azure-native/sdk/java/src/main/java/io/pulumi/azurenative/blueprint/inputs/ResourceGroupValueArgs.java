@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents an Azure resource group.
+ * 
+ */
 public final class ResourceGroupValueArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourceGroupValueArgs Empty = new ResourceGroupValueArgs();
 
+    /**
+     * Location of the resource group.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -21,6 +29,10 @@ public final class ResourceGroupValueArgs extends io.pulumi.resources.ResourceAr
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Name of the resource group.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

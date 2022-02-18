@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Selects a repo using a Google Cloud Platform project ID (e.g., winged-cargo-31) and a repo name within that project.
+ * 
+ */
 public final class ProjectRepoIdArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ProjectRepoIdArgs Empty = new ProjectRepoIdArgs();
 
+    /**
+     * The ID of the project.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -21,6 +29,10 @@ public final class ProjectRepoIdArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The name of the repo. Leave empty for the default repo.
+     * 
+     */
     @InputImport(name="repoName")
     private final @Nullable Input<String> repoName;
 

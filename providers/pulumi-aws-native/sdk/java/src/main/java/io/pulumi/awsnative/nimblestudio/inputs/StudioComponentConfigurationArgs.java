@@ -13,6 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * <p>The configuration of the studio component, based on component type.</p>
+ * 
+ */
 public final class StudioComponentConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StudioComponentConfigurationArgs Empty = new StudioComponentConfigurationArgs();

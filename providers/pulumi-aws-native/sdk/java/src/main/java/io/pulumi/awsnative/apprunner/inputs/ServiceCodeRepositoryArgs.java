@@ -12,6 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Source Code Repository
+ * 
+ */
 public final class ServiceCodeRepositoryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceCodeRepositoryArgs Empty = new ServiceCodeRepositoryArgs();
@@ -23,6 +27,10 @@ public final class ServiceCodeRepositoryArgs extends io.pulumi.resources.Resourc
         return this.codeConfiguration == null ? Input.empty() : this.codeConfiguration;
     }
 
+    /**
+     * Repository Url
+     * 
+     */
     @InputImport(name="repositoryUrl", required=true)
     private final Input<String> repositoryUrl;
 

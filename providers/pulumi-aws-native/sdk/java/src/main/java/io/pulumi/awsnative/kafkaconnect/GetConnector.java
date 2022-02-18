@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetConnector {
+/**
+ * Resource Type definition for AWS::KafkaConnect::Connector
+ * 
+ */
     public static CompletableFuture<GetConnectorResult> invokeAsync(GetConnectorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:kafkaconnect:getConnector", TypeShape.of(GetConnectorResult.class), args == null ? GetConnectorArgs.Empty : args, Utilities.withVersion(options));
     }

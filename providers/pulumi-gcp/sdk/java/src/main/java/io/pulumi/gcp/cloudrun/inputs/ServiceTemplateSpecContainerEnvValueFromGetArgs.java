@@ -13,6 +13,11 @@ public final class ServiceTemplateSpecContainerEnvValueFromGetArgs extends io.pu
 
     public static final ServiceTemplateSpecContainerEnvValueFromGetArgs Empty = new ServiceTemplateSpecContainerEnvValueFromGetArgs();
 
+    /**
+     * Selects a key (version) of a secret in Secret Manager.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="secretKeyRef", required=true)
     private final Input<ServiceTemplateSpecContainerEnvValueFromSecretKeyRefGetArgs> secretKeyRef;
 

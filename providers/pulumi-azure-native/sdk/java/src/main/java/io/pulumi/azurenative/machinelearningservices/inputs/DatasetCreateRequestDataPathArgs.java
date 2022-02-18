@@ -14,6 +14,10 @@ public final class DatasetCreateRequestDataPathArgs extends io.pulumi.resources.
 
     public static final DatasetCreateRequestDataPathArgs Empty = new DatasetCreateRequestDataPathArgs();
 
+    /**
+     * The datastore name.
+     * 
+     */
     @InputImport(name="datastoreName")
     private final @Nullable Input<String> datastoreName;
 
@@ -21,6 +25,10 @@ public final class DatasetCreateRequestDataPathArgs extends io.pulumi.resources.
         return this.datastoreName == null ? Input.empty() : this.datastoreName;
     }
 
+    /**
+     * Path within the datastore.
+     * 
+     */
     @InputImport(name="relativePath")
     private final @Nullable Input<String> relativePath;
 

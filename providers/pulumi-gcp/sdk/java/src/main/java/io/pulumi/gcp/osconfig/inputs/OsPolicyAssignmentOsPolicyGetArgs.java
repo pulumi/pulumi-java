@@ -17,6 +17,10 @@ public final class OsPolicyAssignmentOsPolicyGetArgs extends io.pulumi.resources
 
     public static final OsPolicyAssignmentOsPolicyGetArgs Empty = new OsPolicyAssignmentOsPolicyGetArgs();
 
+    /**
+     * This flag determines the OS policy compliance status when none of the resource groups within the policy are applicable for a VM. Set this value to `true` if the policy needs to be reported as compliant even if the policy has nothing to validate or enforce.
+     * 
+     */
     @InputImport(name="allowNoResourceGroupMatch")
     private final @Nullable Input<Boolean> allowNoResourceGroupMatch;
 
@@ -24,6 +28,10 @@ public final class OsPolicyAssignmentOsPolicyGetArgs extends io.pulumi.resources
         return this.allowNoResourceGroupMatch == null ? Input.empty() : this.allowNoResourceGroupMatch;
     }
 
+    /**
+     * OS policy assignment description. Length of the description is limited to 1024 characters.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -31,6 +39,10 @@ public final class OsPolicyAssignmentOsPolicyGetArgs extends io.pulumi.resources
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Required. A one word, unique name for this repository. This is the `repo id` in the zypper config file and also the `display_name` if `display_name` is omitted. This id is also used as the unique identifier when checking for GuestPolicy conflicts.
+     * 
+     */
     @InputImport(name="id", required=true)
     private final Input<String> id;
 
@@ -38,6 +50,10 @@ public final class OsPolicyAssignmentOsPolicyGetArgs extends io.pulumi.resources
         return this.id;
     }
 
+    /**
+     * Required. Policy mode Possible values: MODE_UNSPECIFIED, VALIDATION, ENFORCEMENT
+     * 
+     */
     @InputImport(name="mode", required=true)
     private final Input<String> mode;
 
@@ -45,6 +61,10 @@ public final class OsPolicyAssignmentOsPolicyGetArgs extends io.pulumi.resources
         return this.mode;
     }
 
+    /**
+     * Required. List of resource groups for the policy. For a particular VM, resource groups are evaluated in the order specified and the first resource group that is applicable is selected and the rest are ignored. If none of the resource groups are applicable for a VM, the VM is considered to be non-compliant w.r.t this policy. This behavior can be toggled by the flag `allow_no_resource_group_match`
+     * 
+     */
     @InputImport(name="resourceGroups", required=true)
     private final Input<List<OsPolicyAssignmentOsPolicyResourceGroupGetArgs>> resourceGroups;
 

@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class StandardAppVersionHandlerScript {
+    /**
+     * Path to the script from the application root directory.
+     * 
+     */
     private final String scriptPath;
 
     @OutputCustomType.Constructor({"scriptPath"})
@@ -16,6 +20,10 @@ public final class StandardAppVersionHandlerScript {
         this.scriptPath = Objects.requireNonNull(scriptPath);
     }
 
+    /**
+     * Path to the script from the application root directory.
+     * 
+     */
     public String getScriptPath() {
         return this.scriptPath;
     }

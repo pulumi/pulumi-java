@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInventoryItem {
+/**
+ * Defines the inventory item.
+ * API Version: 2020-10-01-preview.
+ * 
+ *
+ * Defines the inventory item.
+ * 
+ */
     public static CompletableFuture<GetInventoryItemResult> invokeAsync(GetInventoryItemArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:connectedvmwarevsphere:getInventoryItem", TypeShape.of(GetInventoryItemResult.class), args == null ? GetInventoryItemArgs.Empty : args, Utilities.withVersion(options));
     }

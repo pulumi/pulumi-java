@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNamedQuery {
+/**
+ * Resource schema for AWS::Athena::NamedQuery
+ * 
+ */
     public static CompletableFuture<GetNamedQueryResult> invokeAsync(GetNamedQueryArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:athena:getNamedQuery", TypeShape.of(GetNamedQueryResult.class), args == null ? GetNamedQueryArgs.Empty : args, Utilities.withVersion(options));
     }

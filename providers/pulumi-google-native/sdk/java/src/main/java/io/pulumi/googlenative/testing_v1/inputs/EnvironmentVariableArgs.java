@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A key-value pair passed as an environment variable to the test.
+ * 
+ */
 public final class EnvironmentVariableArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EnvironmentVariableArgs Empty = new EnvironmentVariableArgs();
 
+    /**
+     * Key for the environment variable.
+     * 
+     */
     @InputImport(name="key")
     private final @Nullable Input<String> key;
 
@@ -21,6 +29,10 @@ public final class EnvironmentVariableArgs extends io.pulumi.resources.ResourceA
         return this.key == null ? Input.empty() : this.key;
     }
 
+    /**
+     * Value for the environment variable.
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

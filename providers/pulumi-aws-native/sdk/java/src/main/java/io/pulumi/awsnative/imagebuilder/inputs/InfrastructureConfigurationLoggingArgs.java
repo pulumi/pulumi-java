@@ -10,6 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The logging configuration of the infrastructure configuration.
+ * 
+ */
 public final class InfrastructureConfigurationLoggingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InfrastructureConfigurationLoggingArgs Empty = new InfrastructureConfigurationLoggingArgs();

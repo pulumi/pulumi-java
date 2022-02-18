@@ -45,6 +45,10 @@ public final class RecipeParameters {
     private final @Nullable String hiddenColumns;
     private final @Nullable String ignoreCase;
     private final @Nullable String includeInSplit;
+    /**
+     * Input
+     * 
+     */
     private final @Nullable RecipeParametersInputProperties input;
     private final @Nullable String interval;
     private final @Nullable String isText;
@@ -411,6 +415,10 @@ public final class RecipeParameters {
     public Optional<String> getIncludeInSplit() {
         return Optional.ofNullable(this.includeInSplit);
     }
+    /**
+     * Input
+     * 
+     */
     public Optional<RecipeParametersInputProperties> getInput() {
         return Optional.ofNullable(this.input);
     }

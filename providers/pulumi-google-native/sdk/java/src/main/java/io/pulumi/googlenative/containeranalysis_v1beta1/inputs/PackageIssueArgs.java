@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * This message wraps a location affected by a vulnerability and its associated fix (if one is available).
+ * 
+ */
 public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PackageIssueArgs Empty = new PackageIssueArgs();
 
+    /**
+     * The location of the vulnerability.
+     * 
+     */
     @InputImport(name="affectedLocation", required=true)
     private final Input<VulnerabilityLocationArgs> affectedLocation;
 
@@ -22,6 +30,10 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
         return this.affectedLocation;
     }
 
+    /**
+     * The location of the available fix for vulnerability.
+     * 
+     */
     @InputImport(name="fixedLocation")
     private final @Nullable Input<VulnerabilityLocationArgs> fixedLocation;
 
@@ -29,6 +41,10 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
         return this.fixedLocation == null ? Input.empty() : this.fixedLocation;
     }
 
+    /**
+     * The type of package (e.g. OS, MAVEN, GO).
+     * 
+     */
     @InputImport(name="packageType")
     private final @Nullable Input<String> packageType;
 

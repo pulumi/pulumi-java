@@ -13,6 +13,11 @@ public final class FirewallLogConfigGetArgs extends io.pulumi.resources.Resource
 
     public static final FirewallLogConfigGetArgs Empty = new FirewallLogConfigGetArgs();
 
+    /**
+     * This field denotes whether to include or exclude metadata for firewall logs.
+     * Possible values are `EXCLUDE_ALL_METADATA` and `INCLUDE_ALL_METADATA`.
+     * 
+     */
     @InputImport(name="metadata", required=true)
     private final Input<String> metadata;
 

@@ -16,6 +16,10 @@ public final class GoogleCloudApigeeV1ReportPropertyArgs extends io.pulumi.resou
 
     public static final GoogleCloudApigeeV1ReportPropertyArgs Empty = new GoogleCloudApigeeV1ReportPropertyArgs();
 
+    /**
+     * name of the property
+     * 
+     */
     @InputImport(name="property")
     private final @Nullable Input<String> property;
 
@@ -23,6 +27,10 @@ public final class GoogleCloudApigeeV1ReportPropertyArgs extends io.pulumi.resou
         return this.property == null ? Input.empty() : this.property;
     }
 
+    /**
+     * property values
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable Input<List<GoogleCloudApigeeV1AttributeArgs>> value;
 

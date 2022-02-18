@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * SSH configuration for Linux based VMs running on Azure
+ * 
+ */
 public final class SshConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SshConfigurationResponse Empty = new SshConfigurationResponse();
 
+    /**
+     * The list of SSH public keys used to authenticate with linux based VMs.
+     * 
+     */
     @InputImport(name="publicKeys")
     private final @Nullable List<SshPublicKeyResponse> publicKeys;
 

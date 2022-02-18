@@ -11,10 +11,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * This contains the fields corresponding to the definition of a software supply chain step in an in-toto layout. This information goes into a Grafeas note.
+ * 
+ */
 public final class InTotoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final InTotoResponse Empty = new InTotoResponse();
 
+    /**
+     * This field contains the expected command used to perform the step.
+     * 
+     */
     @InputImport(name="expectedCommand", required=true)
     private final List<String> expectedCommand;
 
@@ -22,6 +30,10 @@ public final class InTotoResponse extends io.pulumi.resources.InvokeArgs {
         return this.expectedCommand;
     }
 
+    /**
+     * The following fields contain in-toto artifact rules identifying the artifacts that enter this supply chain step, and exit the supply chain step, i.e. materials and products of the step.
+     * 
+     */
     @InputImport(name="expectedMaterials", required=true)
     private final List<ArtifactRuleResponse> expectedMaterials;
 
@@ -36,6 +48,10 @@ public final class InTotoResponse extends io.pulumi.resources.InvokeArgs {
         return this.expectedProducts;
     }
 
+    /**
+     * This field contains the public keys that can be used to verify the signatures on the step metadata.
+     * 
+     */
     @InputImport(name="signingKeys", required=true)
     private final List<SigningKeyResponse> signingKeys;
 
@@ -43,6 +59,10 @@ public final class InTotoResponse extends io.pulumi.resources.InvokeArgs {
         return this.signingKeys;
     }
 
+    /**
+     * This field identifies the name of the step in the supply chain.
+     * 
+     */
     @InputImport(name="stepName", required=true)
     private final String stepName;
 
@@ -50,6 +70,10 @@ public final class InTotoResponse extends io.pulumi.resources.InvokeArgs {
         return this.stepName;
     }
 
+    /**
+     * This field contains a value that indicates the minimum number of keys that need to be used to sign the step's in-toto link.
+     * 
+     */
     @InputImport(name="threshold", required=true)
     private final String threshold;
 

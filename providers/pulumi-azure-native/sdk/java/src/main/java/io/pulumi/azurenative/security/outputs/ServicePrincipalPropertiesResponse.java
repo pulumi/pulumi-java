@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ServicePrincipalPropertiesResponse {
+    /**
+     * Application ID of service principal.
+     * 
+     */
     private final @Nullable String applicationId;
+    /**
+     * A secret string that the application uses to prove its identity, also can be referred to as application password (write only).
+     * 
+     */
     private final @Nullable String secret;
 
     @OutputCustomType.Constructor({"applicationId","secret"})
@@ -22,9 +30,17 @@ public final class ServicePrincipalPropertiesResponse {
         this.secret = secret;
     }
 
+    /**
+     * Application ID of service principal.
+     * 
+     */
     public Optional<String> getApplicationId() {
         return Optional.ofNullable(this.applicationId);
     }
+    /**
+     * A secret string that the application uses to prove its identity, also can be referred to as application password (write only).
+     * 
+     */
     public Optional<String> getSecret() {
         return Optional.ofNullable(this.secret);
     }

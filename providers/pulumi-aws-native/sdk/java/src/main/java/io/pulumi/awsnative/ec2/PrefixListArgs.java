@@ -19,6 +19,10 @@ public final class PrefixListArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PrefixListArgs Empty = new PrefixListArgs();
 
+    /**
+     * Ip Version of Prefix List.
+     * 
+     */
     @InputImport(name="addressFamily", required=true)
     private final Input<PrefixListAddressFamily> addressFamily;
 
@@ -26,6 +30,10 @@ public final class PrefixListArgs extends io.pulumi.resources.ResourceArgs {
         return this.addressFamily;
     }
 
+    /**
+     * Entries of Prefix List.
+     * 
+     */
     @InputImport(name="entries")
     private final @Nullable Input<List<PrefixListEntryArgs>> entries;
 
@@ -33,6 +41,10 @@ public final class PrefixListArgs extends io.pulumi.resources.ResourceArgs {
         return this.entries == null ? Input.empty() : this.entries;
     }
 
+    /**
+     * Max Entries of Prefix List.
+     * 
+     */
     @InputImport(name="maxEntries", required=true)
     private final Input<Integer> maxEntries;
 
@@ -40,6 +52,10 @@ public final class PrefixListArgs extends io.pulumi.resources.ResourceArgs {
         return this.maxEntries;
     }
 
+    /**
+     * Name of Prefix List.
+     * 
+     */
     @InputImport(name="prefixListName")
     private final @Nullable Input<String> prefixListName;
 
@@ -47,6 +63,10 @@ public final class PrefixListArgs extends io.pulumi.resources.ResourceArgs {
         return this.prefixListName == null ? Input.empty() : this.prefixListName;
     }
 
+    /**
+     * Tags for Prefix List
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<PrefixListTagArgs>> tags;
 

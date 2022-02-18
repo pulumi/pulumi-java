@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The configuration settings of the Azure Static Web Apps provider.
+ * 
+ */
 public final class AzureStaticWebAppsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureStaticWebAppsArgs Empty = new AzureStaticWebAppsArgs();
 
+    /**
+     * <code>false</code> if the Azure Static Web Apps provider should not be enabled despite the set registration; otherwise, <code>true</code>.
+     * 
+     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 
@@ -22,6 +30,10 @@ public final class AzureStaticWebAppsArgs extends io.pulumi.resources.ResourceAr
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
+    /**
+     * The configuration settings of the Azure Static Web Apps registration.
+     * 
+     */
     @InputImport(name="registration")
     private final @Nullable Input<AzureStaticWebAppsRegistrationArgs> registration;
 

@@ -14,33 +14,75 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Uploads a ZIP-formatted shared flow configuration bundle to an organization. If the shared flow already exists, this creates a new revision of it. If the shared flow does not exist, this creates it. Once imported, the shared flow revision must be deployed before it can be accessed at runtime. The size limit of a shared flow bundle is 15 MB.
+ * 
+ */
 @ResourceType(type="google-native:apigee/v1:Sharedflow")
 public class Sharedflow extends io.pulumi.resources.CustomResource {
+    /**
+     * The id of the most recently created revision for this shared flow.
+     * 
+     */
     @OutputExport(name="latestRevisionId", type=String.class, parameters={})
     private Output<String> latestRevisionId;
 
+    /**
+     * @return The id of the most recently created revision for this shared flow.
+     * 
+     */
     public Output<String> getLatestRevisionId() {
         return this.latestRevisionId;
     }
+    /**
+     * Metadata describing the shared flow.
+     * 
+     */
     @OutputExport(name="metaData", type=GoogleCloudApigeeV1EntityMetadataResponse.class, parameters={})
     private Output<GoogleCloudApigeeV1EntityMetadataResponse> metaData;
 
+    /**
+     * @return Metadata describing the shared flow.
+     * 
+     */
     public Output<GoogleCloudApigeeV1EntityMetadataResponse> getMetaData() {
         return this.metaData;
     }
+    /**
+     * The ID of the shared flow.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The ID of the shared flow.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * A list of revisions of this shared flow.
+     * 
+     */
     @OutputExport(name="revision", type=List.class, parameters={String.class})
     private Output<List<String>> revision;
 
+    /**
+     * @return A list of revisions of this shared flow.
+     * 
+     */
     public Output<List<String>> getRevision() {
         return this.revision;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Sharedflow(String name, SharedflowArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:apigee/v1:Sharedflow", name, args == null ? SharedflowArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -56,6 +98,14 @@ public class Sharedflow extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Sharedflow get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Sharedflow(name, id, options);
     }

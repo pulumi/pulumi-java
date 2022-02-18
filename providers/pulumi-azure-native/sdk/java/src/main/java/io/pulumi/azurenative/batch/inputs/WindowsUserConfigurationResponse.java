@@ -14,6 +14,10 @@ public final class WindowsUserConfigurationResponse extends io.pulumi.resources.
 
     public static final WindowsUserConfigurationResponse Empty = new WindowsUserConfigurationResponse();
 
+    /**
+     * Specifies login mode for the user. The default value for VirtualMachineConfiguration pools is interactive mode and for CloudServiceConfiguration pools is batch mode.
+     * 
+     */
     @InputImport(name="loginMode")
     private final @Nullable String loginMode;
 

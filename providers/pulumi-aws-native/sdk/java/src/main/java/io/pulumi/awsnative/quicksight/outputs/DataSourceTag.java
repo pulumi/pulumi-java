@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DataSourceTag {
+    /**
+     * <p>Tag key.</p>
+     * 
+     */
     private final String key;
+    /**
+     * <p>Tag value.</p>
+     * 
+     */
     private final String value;
 
     @OutputCustomType.Constructor({"key","value"})
@@ -20,9 +28,17 @@ public final class DataSourceTag {
         this.value = Objects.requireNonNull(value);
     }
 
+    /**
+     * <p>Tag key.</p>
+     * 
+     */
     public String getKey() {
         return this.key;
     }
+    /**
+     * <p>Tag value.</p>
+     * 
+     */
     public String getValue() {
         return this.value;
     }

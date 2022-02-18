@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AzureNodePoolConfigSshConfig {
+    /**
+     * Required. The SSH public key data for VMs managed by Anthos. This accepts the authorized_keys file format used in OpenSSH according to the sshd(8) manual page.
+     * 
+     */
     private final String authorizedKey;
 
     @OutputCustomType.Constructor({"authorizedKey"})
@@ -16,6 +20,10 @@ public final class AzureNodePoolConfigSshConfig {
         this.authorizedKey = Objects.requireNonNull(authorizedKey);
     }
 
+    /**
+     * Required. The SSH public key data for VMs managed by Anthos. This accepts the authorized_keys file format used in OpenSSH according to the sshd(8) manual page.
+     * 
+     */
     public String getAuthorizedKey() {
         return this.authorizedKey;
     }

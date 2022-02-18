@@ -10,6 +10,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class OracleRdbmsResponse {
+    /**
+     * Oracle schemas/databases in the database server.
+     * 
+     */
     private final List<OracleSchemaResponse> oracleSchemas;
 
     @OutputCustomType.Constructor({"oracleSchemas"})
@@ -17,6 +21,10 @@ public final class OracleRdbmsResponse {
         this.oracleSchemas = Objects.requireNonNull(oracleSchemas);
     }
 
+    /**
+     * Oracle schemas/databases in the database server.
+     * 
+     */
     public List<OracleSchemaResponse> getOracleSchemas() {
         return this.oracleSchemas;
     }

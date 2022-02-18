@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SourceResponse {
+    /**
+     * Source name for content indexed by the Indexing API.
+     * 
+     */
     private final String name;
+    /**
+     * Predefined content source for Google Apps.
+     * 
+     */
     private final String predefinedSource;
 
     @OutputCustomType.Constructor({"name","predefinedSource"})
@@ -20,9 +28,17 @@ public final class SourceResponse {
         this.predefinedSource = Objects.requireNonNull(predefinedSource);
     }
 
+    /**
+     * Source name for content indexed by the Indexing API.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Predefined content source for Google Apps.
+     * 
+     */
     public String getPredefinedSource() {
         return this.predefinedSource;
     }

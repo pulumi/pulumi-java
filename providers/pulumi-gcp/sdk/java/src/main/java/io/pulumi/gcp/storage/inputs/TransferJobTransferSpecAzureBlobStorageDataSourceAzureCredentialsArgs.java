@@ -13,6 +13,10 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredent
 
     public static final TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsArgs Empty = new TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsArgs();
 
+    /**
+     * Azure shared access signature. See [Grant limited access to Azure Storage resources using shared access signatures (SAS)](https://docs.microsoft.com/en-us/azure/storage/common/storage-sas-overview).
+     * 
+     */
     @InputImport(name="sasToken", required=true)
     private final Input<String> sasToken;
 

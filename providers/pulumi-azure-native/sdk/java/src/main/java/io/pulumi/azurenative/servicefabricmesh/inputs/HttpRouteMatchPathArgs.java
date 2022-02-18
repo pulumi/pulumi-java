@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Path to match for routing.
+ * 
+ */
 public final class HttpRouteMatchPathArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HttpRouteMatchPathArgs Empty = new HttpRouteMatchPathArgs();
 
+    /**
+     * replacement string for matched part of the Uri.
+     * 
+     */
     @InputImport(name="rewrite")
     private final @Nullable Input<String> rewrite;
 
@@ -23,6 +31,10 @@ public final class HttpRouteMatchPathArgs extends io.pulumi.resources.ResourceAr
         return this.rewrite == null ? Input.empty() : this.rewrite;
     }
 
+    /**
+     * how to match value in the Uri
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<Either<String,PathMatchType>> type;
 
@@ -30,6 +42,10 @@ public final class HttpRouteMatchPathArgs extends io.pulumi.resources.ResourceAr
         return this.type;
     }
 
+    /**
+     * Uri path to match for request.
+     * 
+     */
     @InputImport(name="value", required=true)
     private final Input<String> value;
 

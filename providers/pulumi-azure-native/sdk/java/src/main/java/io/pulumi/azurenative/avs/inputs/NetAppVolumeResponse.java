@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * An Azure NetApp Files volume from Microsoft.NetApp provider
+ * 
+ */
 public final class NetAppVolumeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NetAppVolumeResponse Empty = new NetAppVolumeResponse();
 
+    /**
+     * File path through which the NFS volume is exposed by the provider
+     * 
+     */
     @InputImport(name="nfsFilePath")
     private final @Nullable String nfsFilePath;
 
@@ -21,6 +29,10 @@ public final class NetAppVolumeResponse extends io.pulumi.resources.InvokeArgs {
         return this.nfsFilePath == null ? Optional.empty() : Optional.ofNullable(this.nfsFilePath);
     }
 
+    /**
+     * IP address of the NFS provider
+     * 
+     */
     @InputImport(name="nfsProviderIp")
     private final @Nullable String nfsProviderIp;
 

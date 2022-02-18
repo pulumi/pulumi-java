@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * BoolEquals Advanced Filter.
+ * 
+ */
 public final class BoolEqualsAdvancedFilterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BoolEqualsAdvancedFilterArgs Empty = new BoolEqualsAdvancedFilterArgs();
 
+    /**
+     * The field/property in the event based on which you want to filter.
+     * 
+     */
     @InputImport(name="key")
     private final @Nullable Input<String> key;
 
@@ -22,6 +30,11 @@ public final class BoolEqualsAdvancedFilterArgs extends io.pulumi.resources.Reso
         return this.key == null ? Input.empty() : this.key;
     }
 
+    /**
+     * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+     * Expected value is 'BoolEquals'.
+     * 
+     */
     @InputImport(name="operatorType", required=true)
     private final Input<String> operatorType;
 
@@ -29,6 +42,10 @@ public final class BoolEqualsAdvancedFilterArgs extends io.pulumi.resources.Reso
         return this.operatorType;
     }
 
+    /**
+     * The boolean filter value.
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable Input<Boolean> value;
 

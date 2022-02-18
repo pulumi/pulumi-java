@@ -12,9 +12,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DetectorModelTransitionEvent {
+    /**
+     * The actions to be performed.
+     * 
+     */
     private final @Nullable List<DetectorModelAction> actions;
+    /**
+     * A Boolean expression that when `TRUE` causes the `actions` to be performed and the `nextState` to be entered.
+     * 
+     */
     private final String condition;
+    /**
+     * The name of the event.
+     * 
+     */
     private final String eventName;
+    /**
+     * The next state to enter.
+     * 
+     */
     private final String nextState;
 
     @OutputCustomType.Constructor({"actions","condition","eventName","nextState"})
@@ -29,15 +45,31 @@ public final class DetectorModelTransitionEvent {
         this.nextState = Objects.requireNonNull(nextState);
     }
 
+    /**
+     * The actions to be performed.
+     * 
+     */
     public List<DetectorModelAction> getActions() {
         return this.actions == null ? List.of() : this.actions;
     }
+    /**
+     * A Boolean expression that when `TRUE` causes the `actions` to be performed and the `nextState` to be entered.
+     * 
+     */
     public String getCondition() {
         return this.condition;
     }
+    /**
+     * The name of the event.
+     * 
+     */
     public String getEventName() {
         return this.eventName;
     }
+    /**
+     * The next state to enter.
+     * 
+     */
     public String getNextState() {
         return this.nextState;
     }

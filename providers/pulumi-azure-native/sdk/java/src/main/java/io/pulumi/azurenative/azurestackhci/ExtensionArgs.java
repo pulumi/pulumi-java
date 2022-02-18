@@ -18,6 +18,10 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ExtensionArgs Empty = new ExtensionArgs();
 
+    /**
+     * The name of the proxy resource holding details of HCI ArcSetting information.
+     * 
+     */
     @InputImport(name="arcSettingName", required=true)
     private final Input<String> arcSettingName;
 
@@ -25,6 +29,10 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
         return this.arcSettingName;
     }
 
+    /**
+     * Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
+     * 
+     */
     @InputImport(name="autoUpgradeMinorVersion")
     private final @Nullable Input<Boolean> autoUpgradeMinorVersion;
 
@@ -32,6 +40,10 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
         return this.autoUpgradeMinorVersion == null ? Input.empty() : this.autoUpgradeMinorVersion;
     }
 
+    /**
+     * The name of the cluster.
+     * 
+     */
     @InputImport(name="clusterName", required=true)
     private final Input<String> clusterName;
 
@@ -39,6 +51,10 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
         return this.clusterName;
     }
 
+    /**
+     * The timestamp of resource creation (UTC).
+     * 
+     */
     @InputImport(name="createdAt")
     private final @Nullable Input<String> createdAt;
 
@@ -46,6 +62,10 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
         return this.createdAt == null ? Input.empty() : this.createdAt;
     }
 
+    /**
+     * The identity that created the resource.
+     * 
+     */
     @InputImport(name="createdBy")
     private final @Nullable Input<String> createdBy;
 
@@ -53,6 +73,10 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
         return this.createdBy == null ? Input.empty() : this.createdBy;
     }
 
+    /**
+     * The type of identity that created the resource.
+     * 
+     */
     @InputImport(name="createdByType")
     private final @Nullable Input<Either<String,CreatedByType>> createdByType;
 
@@ -60,6 +84,10 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
         return this.createdByType == null ? Input.empty() : this.createdByType;
     }
 
+    /**
+     * The name of the machine extension.
+     * 
+     */
     @InputImport(name="extensionName")
     private final @Nullable Input<String> extensionName;
 
@@ -67,6 +95,10 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
         return this.extensionName == null ? Input.empty() : this.extensionName;
     }
 
+    /**
+     * How the extension handler should be forced to update even if the extension configuration has not changed.
+     * 
+     */
     @InputImport(name="forceUpdateTag")
     private final @Nullable Input<String> forceUpdateTag;
 
@@ -74,6 +106,10 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
         return this.forceUpdateTag == null ? Input.empty() : this.forceUpdateTag;
     }
 
+    /**
+     * The timestamp of resource last modification (UTC)
+     * 
+     */
     @InputImport(name="lastModifiedAt")
     private final @Nullable Input<String> lastModifiedAt;
 
@@ -81,6 +117,10 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
         return this.lastModifiedAt == null ? Input.empty() : this.lastModifiedAt;
     }
 
+    /**
+     * The identity that last modified the resource.
+     * 
+     */
     @InputImport(name="lastModifiedBy")
     private final @Nullable Input<String> lastModifiedBy;
 
@@ -88,6 +128,10 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
         return this.lastModifiedBy == null ? Input.empty() : this.lastModifiedBy;
     }
 
+    /**
+     * The type of identity that last modified the resource.
+     * 
+     */
     @InputImport(name="lastModifiedByType")
     private final @Nullable Input<Either<String,CreatedByType>> lastModifiedByType;
 
@@ -95,6 +139,10 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
         return this.lastModifiedByType == null ? Input.empty() : this.lastModifiedByType;
     }
 
+    /**
+     * Protected settings (may contain secrets).
+     * 
+     */
     @InputImport(name="protectedSettings")
     private final @Nullable Input<Object> protectedSettings;
 
@@ -102,6 +150,10 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
         return this.protectedSettings == null ? Input.empty() : this.protectedSettings;
     }
 
+    /**
+     * The name of the extension handler publisher.
+     * 
+     */
     @InputImport(name="publisher")
     private final @Nullable Input<String> publisher;
 
@@ -109,6 +161,10 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
         return this.publisher == null ? Input.empty() : this.publisher;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -116,6 +172,10 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Json formatted public settings for the extension.
+     * 
+     */
     @InputImport(name="settings")
     private final @Nullable Input<Object> settings;
 
@@ -123,6 +183,10 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
         return this.settings == null ? Input.empty() : this.settings;
     }
 
+    /**
+     * Specifies the type of the extension; an example is "CustomScriptExtension".
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 
@@ -130,6 +194,10 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
         return this.type == null ? Input.empty() : this.type;
     }
 
+    /**
+     * Specifies the version of the script handler.
+     * 
+     */
     @InputImport(name="typeHandlerVersion")
     private final @Nullable Input<String> typeHandlerVersion;
 

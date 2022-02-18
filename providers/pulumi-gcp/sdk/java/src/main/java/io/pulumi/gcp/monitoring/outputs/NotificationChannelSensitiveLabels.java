@@ -11,8 +11,23 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class NotificationChannelSensitiveLabels {
+    /**
+     * An authorization token for a notification channel. Channel types that support this field include: slack
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     private final @Nullable String authToken;
+    /**
+     * An password for a notification channel. Channel types that support this field include: webhook_basicauth
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     private final @Nullable String password;
+    /**
+     * An servicekey token for a notification channel. Channel types that support this field include: pagerduty
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     private final @Nullable String serviceKey;
 
     @OutputCustomType.Constructor({"authToken","password","serviceKey"})
@@ -25,12 +40,27 @@ public final class NotificationChannelSensitiveLabels {
         this.serviceKey = serviceKey;
     }
 
+    /**
+     * An authorization token for a notification channel. Channel types that support this field include: slack
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     public Optional<String> getAuthToken() {
         return Optional.ofNullable(this.authToken);
     }
+    /**
+     * An password for a notification channel. Channel types that support this field include: webhook_basicauth
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     public Optional<String> getPassword() {
         return Optional.ofNullable(this.password);
     }
+    /**
+     * An servicekey token for a notification channel. Channel types that support this field include: pagerduty
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     public Optional<String> getServiceKey() {
         return Optional.ofNullable(this.serviceKey);
     }

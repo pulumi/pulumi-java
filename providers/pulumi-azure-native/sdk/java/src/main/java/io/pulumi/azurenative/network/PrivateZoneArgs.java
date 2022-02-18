@@ -15,6 +15,10 @@ public final class PrivateZoneArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PrivateZoneArgs Empty = new PrivateZoneArgs();
 
+    /**
+     * The Azure Region where the resource lives
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -22,6 +26,10 @@ public final class PrivateZoneArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the Private DNS zone (without a terminating dot).
+     * 
+     */
     @InputImport(name="privateZoneName")
     private final @Nullable Input<String> privateZoneName;
 
@@ -29,6 +37,10 @@ public final class PrivateZoneArgs extends io.pulumi.resources.ResourceArgs {
         return this.privateZoneName == null ? Input.empty() : this.privateZoneName;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -36,6 +48,10 @@ public final class PrivateZoneArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

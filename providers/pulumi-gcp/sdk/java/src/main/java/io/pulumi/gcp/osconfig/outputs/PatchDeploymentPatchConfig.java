@@ -18,13 +18,53 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PatchDeploymentPatchConfig {
+    /**
+     * Apt update settings. Use this setting to override the default apt patch rules.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable PatchDeploymentPatchConfigApt apt;
+    /**
+     * goo update settings. Use this setting to override the default goo patch rules.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable PatchDeploymentPatchConfigGoo goo;
+    /**
+     * The ExecStep to run after the patch update.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable PatchDeploymentPatchConfigPostStep postStep;
+    /**
+     * The ExecStep to run before the patch update.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable PatchDeploymentPatchConfigPreStep preStep;
+    /**
+     * Post-patch reboot settings.
+     * Possible values are `DEFAULT`, `ALWAYS`, and `NEVER`.
+     * 
+     */
     private final @Nullable String rebootConfig;
+    /**
+     * Windows update settings. Use this setting to override the default Windows patch rules.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable PatchDeploymentPatchConfigWindowsUpdate windowsUpdate;
+    /**
+     * Yum update settings. Use this setting to override the default yum patch rules.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable PatchDeploymentPatchConfigYum yum;
+    /**
+     * zypper update settings. Use this setting to override the default zypper patch rules.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable PatchDeploymentPatchConfigZypper zypper;
 
     @OutputCustomType.Constructor({"apt","goo","postStep","preStep","rebootConfig","windowsUpdate","yum","zypper"})
@@ -47,27 +87,67 @@ public final class PatchDeploymentPatchConfig {
         this.zypper = zypper;
     }
 
+    /**
+     * Apt update settings. Use this setting to override the default apt patch rules.
+     * Structure is documented below.
+     * 
+     */
     public Optional<PatchDeploymentPatchConfigApt> getApt() {
         return Optional.ofNullable(this.apt);
     }
+    /**
+     * goo update settings. Use this setting to override the default goo patch rules.
+     * Structure is documented below.
+     * 
+     */
     public Optional<PatchDeploymentPatchConfigGoo> getGoo() {
         return Optional.ofNullable(this.goo);
     }
+    /**
+     * The ExecStep to run after the patch update.
+     * Structure is documented below.
+     * 
+     */
     public Optional<PatchDeploymentPatchConfigPostStep> getPostStep() {
         return Optional.ofNullable(this.postStep);
     }
+    /**
+     * The ExecStep to run before the patch update.
+     * Structure is documented below.
+     * 
+     */
     public Optional<PatchDeploymentPatchConfigPreStep> getPreStep() {
         return Optional.ofNullable(this.preStep);
     }
+    /**
+     * Post-patch reboot settings.
+     * Possible values are `DEFAULT`, `ALWAYS`, and `NEVER`.
+     * 
+     */
     public Optional<String> getRebootConfig() {
         return Optional.ofNullable(this.rebootConfig);
     }
+    /**
+     * Windows update settings. Use this setting to override the default Windows patch rules.
+     * Structure is documented below.
+     * 
+     */
     public Optional<PatchDeploymentPatchConfigWindowsUpdate> getWindowsUpdate() {
         return Optional.ofNullable(this.windowsUpdate);
     }
+    /**
+     * Yum update settings. Use this setting to override the default yum patch rules.
+     * Structure is documented below.
+     * 
+     */
     public Optional<PatchDeploymentPatchConfigYum> getYum() {
         return Optional.ofNullable(this.yum);
     }
+    /**
+     * zypper update settings. Use this setting to override the default zypper patch rules.
+     * Structure is documented below.
+     * 
+     */
     public Optional<PatchDeploymentPatchConfigZypper> getZypper() {
         return Optional.ofNullable(this.zypper);
     }

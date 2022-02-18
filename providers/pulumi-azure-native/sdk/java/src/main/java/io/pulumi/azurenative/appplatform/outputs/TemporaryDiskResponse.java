@@ -12,7 +12,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TemporaryDiskResponse {
+    /**
+     * Mount path of the temporary disk
+     * 
+     */
     private final @Nullable String mountPath;
+    /**
+     * Size of the temporary disk in GB
+     * 
+     */
     private final @Nullable Integer sizeInGB;
 
     @OutputCustomType.Constructor({"mountPath","sizeInGB"})
@@ -23,9 +31,17 @@ public final class TemporaryDiskResponse {
         this.sizeInGB = sizeInGB;
     }
 
+    /**
+     * Mount path of the temporary disk
+     * 
+     */
     public Optional<String> getMountPath() {
         return Optional.ofNullable(this.mountPath);
     }
+    /**
+     * Size of the temporary disk in GB
+     * 
+     */
     public Optional<Integer> getSizeInGB() {
         return Optional.ofNullable(this.sizeInGB);
     }

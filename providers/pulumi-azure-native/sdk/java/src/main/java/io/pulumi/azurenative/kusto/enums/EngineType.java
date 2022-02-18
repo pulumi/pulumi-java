@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The engine type
+     * 
+     */
     @EnumType
     public enum EngineType {
         V2("V2"),

@@ -12,11 +12,35 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ApplicationGatewayFrontendPortResponse {
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     private final String etag;
+    /**
+     * Resource ID.
+     * 
+     */
     private final @Nullable String id;
+    /**
+     * Name of the frontend port that is unique within an Application Gateway.
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * Frontend port.
+     * 
+     */
     private final @Nullable Integer port;
+    /**
+     * The provisioning state of the frontend port resource.
+     * 
+     */
     private final String provisioningState;
+    /**
+     * Type of the resource.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"etag","id","name","port","provisioningState","type"})
@@ -35,21 +59,45 @@ public final class ApplicationGatewayFrontendPortResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String getEtag() {
         return this.etag;
     }
+    /**
+     * Resource ID.
+     * 
+     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+    /**
+     * Name of the frontend port that is unique within an Application Gateway.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * Frontend port.
+     * 
+     */
     public Optional<Integer> getPort() {
         return Optional.ofNullable(this.port);
     }
+    /**
+     * The provisioning state of the frontend port resource.
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Type of the resource.
+     * 
+     */
     public String getType() {
         return this.type;
     }

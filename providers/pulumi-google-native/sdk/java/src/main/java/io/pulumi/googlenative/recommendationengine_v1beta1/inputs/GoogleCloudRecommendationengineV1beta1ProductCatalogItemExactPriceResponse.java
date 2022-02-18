@@ -8,10 +8,18 @@ import java.lang.Double;
 import java.util.Objects;
 
 
+/**
+ * Exact product price.
+ * 
+ */
 public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse Empty = new GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse();
 
+    /**
+     * Optional. Display price of the product.
+     * 
+     */
     @InputImport(name="displayPrice", required=true)
     private final Double displayPrice;
 
@@ -19,6 +27,10 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExact
         return this.displayPrice;
     }
 
+    /**
+     * Optional. Price of the product without any discount. If zero, by default set to be the 'displayPrice'.
+     * 
+     */
     @InputImport(name="originalPrice", required=true)
     private final Double originalPrice;
 

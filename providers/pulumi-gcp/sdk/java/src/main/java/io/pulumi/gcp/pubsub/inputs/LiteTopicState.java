@@ -17,6 +17,10 @@ public final class LiteTopicState extends io.pulumi.resources.ResourceArgs {
 
     public static final LiteTopicState Empty = new LiteTopicState();
 
+    /**
+     * Name of the topic.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -24,6 +28,11 @@ public final class LiteTopicState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The settings for this topic's partitions.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="partitionConfig")
     private final @Nullable Input<LiteTopicPartitionConfigGetArgs> partitionConfig;
 
@@ -31,6 +40,11 @@ public final class LiteTopicState extends io.pulumi.resources.ResourceArgs {
         return this.partitionConfig == null ? Input.empty() : this.partitionConfig;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -38,6 +52,10 @@ public final class LiteTopicState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The region of the pubsub lite topic.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 
@@ -45,6 +63,11 @@ public final class LiteTopicState extends io.pulumi.resources.ResourceArgs {
         return this.region == null ? Input.empty() : this.region;
     }
 
+    /**
+     * The settings for this topic's Reservation usage.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="reservationConfig")
     private final @Nullable Input<LiteTopicReservationConfigGetArgs> reservationConfig;
 
@@ -52,6 +75,11 @@ public final class LiteTopicState extends io.pulumi.resources.ResourceArgs {
         return this.reservationConfig == null ? Input.empty() : this.reservationConfig;
     }
 
+    /**
+     * The settings for a topic's message retention.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="retentionConfig")
     private final @Nullable Input<LiteTopicRetentionConfigGetArgs> retentionConfig;
 
@@ -59,6 +87,10 @@ public final class LiteTopicState extends io.pulumi.resources.ResourceArgs {
         return this.retentionConfig == null ? Input.empty() : this.retentionConfig;
     }
 
+    /**
+     * The zone of the pubsub lite topic.
+     * 
+     */
     @InputImport(name="zone")
     private final @Nullable Input<String> zone;
 

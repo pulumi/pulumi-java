@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AutomaticResponse {
+    /**
+     * Optional. The customer-managed encryption configuration of the Secret. If no configuration is provided, Google-managed default encryption is used. Updates to the Secret encryption configuration only apply to SecretVersions added afterwards. They do not apply retroactively to existing SecretVersions.
+     * 
+     */
     private final CustomerManagedEncryptionResponse customerManagedEncryption;
 
     @OutputCustomType.Constructor({"customerManagedEncryption"})
@@ -16,6 +20,10 @@ public final class AutomaticResponse {
         this.customerManagedEncryption = Objects.requireNonNull(customerManagedEncryption);
     }
 
+    /**
+     * Optional. The customer-managed encryption configuration of the Secret. If no configuration is provided, Google-managed default encryption is used. Updates to the Secret encryption configuration only apply to SecretVersions added afterwards. They do not apply retroactively to existing SecretVersions.
+     * 
+     */
     public CustomerManagedEncryptionResponse getCustomerManagedEncryption() {
         return this.customerManagedEncryption;
     }

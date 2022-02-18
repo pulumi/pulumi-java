@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * <p>Amazon Athena parameters.</p>
+ * 
+ */
 public final class DataSourceAthenaParameters extends io.pulumi.resources.InvokeArgs {
 
     public static final DataSourceAthenaParameters Empty = new DataSourceAthenaParameters();
 
+    /**
+     * <p>The workgroup that Amazon Athena uses.</p>
+     * 
+     */
     @InputImport(name="workGroup")
     private final @Nullable String workGroup;
 

@@ -13,10 +13,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Contains information about an asset model property.
+ * 
+ */
 public final class AssetModelProperty extends io.pulumi.resources.InvokeArgs {
 
     public static final AssetModelProperty Empty = new AssetModelProperty();
 
+    /**
+     * The data type of the asset model property.
+     * 
+     */
     @InputImport(name="dataType", required=true)
     private final AssetModelDataType dataType;
 
@@ -24,6 +32,10 @@ public final class AssetModelProperty extends io.pulumi.resources.InvokeArgs {
         return this.dataType;
     }
 
+    /**
+     * The data type of the structure for this property.
+     * 
+     */
     @InputImport(name="dataTypeSpec")
     private final @Nullable AssetModelDataTypeSpec dataTypeSpec;
 
@@ -31,6 +43,10 @@ public final class AssetModelProperty extends io.pulumi.resources.InvokeArgs {
         return this.dataTypeSpec == null ? Optional.empty() : Optional.ofNullable(this.dataTypeSpec);
     }
 
+    /**
+     * Customer provided ID for property.
+     * 
+     */
     @InputImport(name="logicalId", required=true)
     private final String logicalId;
 
@@ -38,6 +54,10 @@ public final class AssetModelProperty extends io.pulumi.resources.InvokeArgs {
         return this.logicalId;
     }
 
+    /**
+     * The name of the asset model property.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -45,6 +65,10 @@ public final class AssetModelProperty extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    /**
+     * The property type
+     * 
+     */
     @InputImport(name="type", required=true)
     private final AssetModelPropertyType type;
 
@@ -52,6 +76,10 @@ public final class AssetModelProperty extends io.pulumi.resources.InvokeArgs {
         return this.type;
     }
 
+    /**
+     * The unit of the asset model property, such as Newtons or RPM.
+     * 
+     */
     @InputImport(name="unit")
     private final @Nullable String unit;
 

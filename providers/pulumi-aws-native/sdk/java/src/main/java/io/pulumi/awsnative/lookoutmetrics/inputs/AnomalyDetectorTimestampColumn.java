@@ -14,6 +14,10 @@ public final class AnomalyDetectorTimestampColumn extends io.pulumi.resources.In
 
     public static final AnomalyDetectorTimestampColumn Empty = new AnomalyDetectorTimestampColumn();
 
+    /**
+     * A timestamp format for the timestamps in the dataset
+     * 
+     */
     @InputImport(name="columnFormat")
     private final @Nullable String columnFormat;
 

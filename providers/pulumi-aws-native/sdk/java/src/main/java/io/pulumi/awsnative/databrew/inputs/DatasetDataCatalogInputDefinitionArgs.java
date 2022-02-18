@@ -15,6 +15,10 @@ public final class DatasetDataCatalogInputDefinitionArgs extends io.pulumi.resou
 
     public static final DatasetDataCatalogInputDefinitionArgs Empty = new DatasetDataCatalogInputDefinitionArgs();
 
+    /**
+     * Catalog id
+     * 
+     */
     @InputImport(name="catalogId")
     private final @Nullable Input<String> catalogId;
 
@@ -22,6 +26,10 @@ public final class DatasetDataCatalogInputDefinitionArgs extends io.pulumi.resou
         return this.catalogId == null ? Input.empty() : this.catalogId;
     }
 
+    /**
+     * Database name
+     * 
+     */
     @InputImport(name="databaseName")
     private final @Nullable Input<String> databaseName;
 
@@ -29,6 +37,10 @@ public final class DatasetDataCatalogInputDefinitionArgs extends io.pulumi.resou
         return this.databaseName == null ? Input.empty() : this.databaseName;
     }
 
+    /**
+     * Table name
+     * 
+     */
     @InputImport(name="tableName")
     private final @Nullable Input<String> tableName;
 

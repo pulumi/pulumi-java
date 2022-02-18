@@ -14,6 +14,10 @@ public final class GetRoleAssignmentArgs extends io.pulumi.resources.InvokeArgs 
 
     public static final GetRoleAssignmentArgs Empty = new GetRoleAssignmentArgs();
 
+    /**
+     * The name of the role assignment. It can be any valid GUID.
+     * 
+     */
     @InputImport(name="roleAssignmentName", required=true)
     private final String roleAssignmentName;
 
@@ -21,6 +25,10 @@ public final class GetRoleAssignmentArgs extends io.pulumi.resources.InvokeArgs 
         return this.roleAssignmentName;
     }
 
+    /**
+     * The scope of the operation or resource. Valid scopes are: subscription (format: '/subscriptions/{subscriptionId}'), resource group (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'
+     * 
+     */
     @InputImport(name="scope", required=true)
     private final String scope;
 
@@ -28,6 +36,10 @@ public final class GetRoleAssignmentArgs extends io.pulumi.resources.InvokeArgs 
         return this.scope;
     }
 
+    /**
+     * Tenant ID for cross-tenant request
+     * 
+     */
     @InputImport(name="tenantId")
     private final @Nullable String tenantId;
 

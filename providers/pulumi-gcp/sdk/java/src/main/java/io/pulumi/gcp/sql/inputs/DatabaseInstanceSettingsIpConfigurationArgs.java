@@ -17,6 +17,10 @@ public final class DatabaseInstanceSettingsIpConfigurationArgs extends io.pulumi
 
     public static final DatabaseInstanceSettingsIpConfigurationArgs Empty = new DatabaseInstanceSettingsIpConfigurationArgs();
 
+    /**
+     * The name of the allocated ip range for the private ip CloudSQL instance. For example: "google-managed-services-default". If set, the instance ip will be created in the allocated range. The range name must comply with [RFC 1035](https://datatracker.ietf.org/doc/html/rfc1035). Specifically, the name must be 1-63 characters long and match the regular expression a-z?.
+     * 
+     */
     @InputImport(name="allocatedIpRange")
     private final @Nullable Input<String> allocatedIpRange;
 
@@ -31,6 +35,12 @@ public final class DatabaseInstanceSettingsIpConfigurationArgs extends io.pulumi
         return this.authorizedNetworks == null ? Input.empty() : this.authorizedNetworks;
     }
 
+    /**
+     * Whether this Cloud SQL instance should be assigned
+     * a public IPV4 address. At least `ipv4_enabled` must be enabled or a
+     * `private_network` must be configured.
+     * 
+     */
     @InputImport(name="ipv4Enabled")
     private final @Nullable Input<Boolean> ipv4Enabled;
 
@@ -38,6 +48,14 @@ public final class DatabaseInstanceSettingsIpConfigurationArgs extends io.pulumi
         return this.ipv4Enabled == null ? Input.empty() : this.ipv4Enabled;
     }
 
+    /**
+     * The VPC network from which the Cloud SQL
+     * instance is accessible for private IP. For example, projects/myProject/global/networks/default.
+     * Specifying a network enables private IP.
+     * At least `ipv4_enabled` must be enabled or a `private_network` must be configured.
+     * This setting can be updated, but it cannot be removed after it is set.
+     * 
+     */
     @InputImport(name="privateNetwork")
     private final @Nullable Input<String> privateNetwork;
 
@@ -45,6 +63,10 @@ public final class DatabaseInstanceSettingsIpConfigurationArgs extends io.pulumi
         return this.privateNetwork == null ? Input.empty() : this.privateNetwork;
     }
 
+    /**
+     * Whether SSL connections over IP are enforced or not.
+     * 
+     */
     @InputImport(name="requireSsl")
     private final @Nullable Input<Boolean> requireSsl;
 

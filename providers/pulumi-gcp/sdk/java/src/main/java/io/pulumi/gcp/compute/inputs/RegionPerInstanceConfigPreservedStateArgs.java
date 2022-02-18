@@ -17,6 +17,11 @@ public final class RegionPerInstanceConfigPreservedStateArgs extends io.pulumi.r
 
     public static final RegionPerInstanceConfigPreservedStateArgs Empty = new RegionPerInstanceConfigPreservedStateArgs();
 
+    /**
+     * Stateful disks for the instance.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="disks")
     private final @Nullable Input<List<RegionPerInstanceConfigPreservedStateDiskArgs>> disks;
 
@@ -24,6 +29,10 @@ public final class RegionPerInstanceConfigPreservedStateArgs extends io.pulumi.r
         return this.disks == null ? Input.empty() : this.disks;
     }
 
+    /**
+     * Preserved metadata defined for this instance. This is a list of key->value pairs.
+     * 
+     */
     @InputImport(name="metadata")
     private final @Nullable Input<Map<String,String>> metadata;
 

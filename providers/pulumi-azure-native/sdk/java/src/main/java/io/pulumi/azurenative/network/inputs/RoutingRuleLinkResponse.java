@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines the Resource ID for a Routing Rule.
+ * 
+ */
 public final class RoutingRuleLinkResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RoutingRuleLinkResponse Empty = new RoutingRuleLinkResponse();
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 

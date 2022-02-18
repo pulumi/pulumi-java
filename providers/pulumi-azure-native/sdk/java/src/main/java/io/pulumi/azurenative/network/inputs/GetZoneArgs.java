@@ -12,6 +12,10 @@ public final class GetZoneArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetZoneArgs Empty = new GetZoneArgs();
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +23,10 @@ public final class GetZoneArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the DNS zone (without a terminating dot).
+     * 
+     */
     @InputImport(name="zoneName", required=true)
     private final String zoneName;
 

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Chart type of the main view in Cost Analysis. Required.
+     * 
+     */
     @EnumType
     public enum ChartType {
         Area("Area"),

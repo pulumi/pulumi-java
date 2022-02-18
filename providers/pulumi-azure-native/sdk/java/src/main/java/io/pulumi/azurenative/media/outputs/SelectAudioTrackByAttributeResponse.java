@@ -11,10 +11,31 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SelectAudioTrackByAttributeResponse {
+    /**
+     * The TrackAttribute to filter the tracks by.
+     * 
+     */
     private final String attribute;
+    /**
+     * Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.
+     * 
+     */
     private final @Nullable String channelMapping;
+    /**
+     * The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.
+     * 
+     */
     private final String filter;
+    /**
+     * The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property.
+     * 
+     */
     private final @Nullable String filterValue;
+    /**
+     * The discriminator for derived types.
+     * Expected value is '#Microsoft.Media.SelectAudioTrackByAttribute'.
+     * 
+     */
     private final String odataType;
 
     @OutputCustomType.Constructor({"attribute","channelMapping","filter","filterValue","odataType"})
@@ -31,18 +52,39 @@ public final class SelectAudioTrackByAttributeResponse {
         this.odataType = Objects.requireNonNull(odataType);
     }
 
+    /**
+     * The TrackAttribute to filter the tracks by.
+     * 
+     */
     public String getAttribute() {
         return this.attribute;
     }
+    /**
+     * Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.
+     * 
+     */
     public Optional<String> getChannelMapping() {
         return Optional.ofNullable(this.channelMapping);
     }
+    /**
+     * The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.
+     * 
+     */
     public String getFilter() {
         return this.filter;
     }
+    /**
+     * The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property.
+     * 
+     */
     public Optional<String> getFilterValue() {
         return Optional.ofNullable(this.filterValue);
     }
+    /**
+     * The discriminator for derived types.
+     * Expected value is '#Microsoft.Media.SelectAudioTrackByAttribute'.
+     * 
+     */
     public String getOdataType() {
         return this.odataType;
     }

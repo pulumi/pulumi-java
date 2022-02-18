@@ -9,6 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A key-value pair to associate dataset parameter name with its definition.
+ * 
+ */
 public final class DatasetPathParameter extends io.pulumi.resources.InvokeArgs {
 
     public static final DatasetPathParameter Empty = new DatasetPathParameter();

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Severity of the alert
+     * 
+     */
     @EnumType
     public enum AlertSeverity {
         Zero("0"),

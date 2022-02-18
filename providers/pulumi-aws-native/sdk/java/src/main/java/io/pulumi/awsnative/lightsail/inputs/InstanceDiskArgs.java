@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Disk associated with the Instance.
+ * 
+ */
 public final class InstanceDiskArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InstanceDiskArgs Empty = new InstanceDiskArgs();
 
+    /**
+     * Instance attached to the disk.
+     * 
+     */
     @InputImport(name="attachedTo")
     private final @Nullable Input<String> attachedTo;
 
@@ -23,6 +31,10 @@ public final class InstanceDiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.attachedTo == null ? Input.empty() : this.attachedTo;
     }
 
+    /**
+     * Attachment state of the disk.
+     * 
+     */
     @InputImport(name="attachmentState")
     private final @Nullable Input<String> attachmentState;
 
@@ -30,6 +42,10 @@ public final class InstanceDiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.attachmentState == null ? Input.empty() : this.attachmentState;
     }
 
+    /**
+     * The names to use for your new Lightsail disk.
+     * 
+     */
     @InputImport(name="diskName", required=true)
     private final Input<String> diskName;
 
@@ -37,6 +53,10 @@ public final class InstanceDiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.diskName;
     }
 
+    /**
+     * IOPS of disk.
+     * 
+     */
     @InputImport(name="iOPS")
     private final @Nullable Input<Integer> iOPS;
 
@@ -44,6 +64,10 @@ public final class InstanceDiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.iOPS == null ? Input.empty() : this.iOPS;
     }
 
+    /**
+     * Is the Attached disk is the system disk of the Instance.
+     * 
+     */
     @InputImport(name="isSystemDisk")
     private final @Nullable Input<Boolean> isSystemDisk;
 
@@ -51,6 +75,10 @@ public final class InstanceDiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.isSystemDisk == null ? Input.empty() : this.isSystemDisk;
     }
 
+    /**
+     * Path of the disk attached to the instance.
+     * 
+     */
     @InputImport(name="path", required=true)
     private final Input<String> path;
 
@@ -58,6 +86,10 @@ public final class InstanceDiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.path;
     }
 
+    /**
+     * Size of the disk attached to the Instance.
+     * 
+     */
     @InputImport(name="sizeInGb")
     private final @Nullable Input<String> sizeInGb;
 

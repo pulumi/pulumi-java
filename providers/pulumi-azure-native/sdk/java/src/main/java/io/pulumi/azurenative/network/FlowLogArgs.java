@@ -19,6 +19,10 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FlowLogArgs Empty = new FlowLogArgs();
 
+    /**
+     * Flag to enable/disable flow logging.
+     * 
+     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 
@@ -26,6 +30,10 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
+    /**
+     * Parameters that define the configuration of traffic analytics.
+     * 
+     */
     @InputImport(name="flowAnalyticsConfiguration")
     private final @Nullable Input<TrafficAnalyticsPropertiesArgs> flowAnalyticsConfiguration;
 
@@ -33,6 +41,10 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
         return this.flowAnalyticsConfiguration == null ? Input.empty() : this.flowAnalyticsConfiguration;
     }
 
+    /**
+     * The name of the flow log.
+     * 
+     */
     @InputImport(name="flowLogName")
     private final @Nullable Input<String> flowLogName;
 
@@ -40,6 +52,10 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
         return this.flowLogName == null ? Input.empty() : this.flowLogName;
     }
 
+    /**
+     * Parameters that define the flow log format.
+     * 
+     */
     @InputImport(name="format")
     private final @Nullable Input<FlowLogFormatParametersArgs> format;
 
@@ -47,6 +63,10 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
         return this.format == null ? Input.empty() : this.format;
     }
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -54,6 +74,10 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * Resource location.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -61,6 +85,10 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the network watcher.
+     * 
+     */
     @InputImport(name="networkWatcherName", required=true)
     private final Input<String> networkWatcherName;
 
@@ -68,6 +96,10 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
         return this.networkWatcherName;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -75,6 +107,10 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Parameters that define the retention policy for flow log.
+     * 
+     */
     @InputImport(name="retentionPolicy")
     private final @Nullable Input<RetentionPolicyParametersArgs> retentionPolicy;
 
@@ -82,6 +118,10 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
         return this.retentionPolicy == null ? Input.empty() : this.retentionPolicy;
     }
 
+    /**
+     * ID of the storage account which is used to store the flow log.
+     * 
+     */
     @InputImport(name="storageId", required=true)
     private final Input<String> storageId;
 
@@ -89,6 +129,10 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
         return this.storageId;
     }
 
+    /**
+     * Resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -96,6 +140,10 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * ID of network security group to which flow log will be applied.
+     * 
+     */
     @InputImport(name="targetResourceId", required=true)
     private final Input<String> targetResourceId;
 

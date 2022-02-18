@@ -11,10 +11,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * A KeyUsage describes key usage values that may appear in an X.509 certificate.
+ * 
+ */
 public final class KeyUsageResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final KeyUsageResponse Empty = new KeyUsageResponse();
 
+    /**
+     * Describes high-level ways in which a key may be used.
+     * 
+     */
     @InputImport(name="baseKeyUsage", required=true)
     private final KeyUsageOptionsResponse baseKeyUsage;
 
@@ -22,6 +30,10 @@ public final class KeyUsageResponse extends io.pulumi.resources.InvokeArgs {
         return this.baseKeyUsage;
     }
 
+    /**
+     * Detailed scenarios in which a key may be used.
+     * 
+     */
     @InputImport(name="extendedKeyUsage", required=true)
     private final ExtendedKeyUsageOptionsResponse extendedKeyUsage;
 
@@ -29,6 +41,10 @@ public final class KeyUsageResponse extends io.pulumi.resources.InvokeArgs {
         return this.extendedKeyUsage;
     }
 
+    /**
+     * Used to describe extended key usages that are not listed in the KeyUsage.ExtendedKeyUsageOptions message.
+     * 
+     */
     @InputImport(name="unknownExtendedKeyUsages", required=true)
     private final List<ObjectIdResponse> unknownExtendedKeyUsages;
 

@@ -19,10 +19,18 @@ import java.util.Map;
 import java.util.Objects;
 
 
+/**
+ * A job executed by the workflow.
+ * 
+ */
 public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OrderedJobResponse Empty = new OrderedJobResponse();
 
+    /**
+     * Optional. Job is a Hadoop job.
+     * 
+     */
     @InputImport(name="hadoopJob", required=true)
     private final HadoopJobResponse hadoopJob;
 
@@ -30,6 +38,10 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
         return this.hadoopJob;
     }
 
+    /**
+     * Optional. Job is a Hive job.
+     * 
+     */
     @InputImport(name="hiveJob", required=true)
     private final HiveJobResponse hiveJob;
 
@@ -37,6 +49,10 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
         return this.hiveJob;
     }
 
+    /**
+     * Optional. The labels to associate with this job.Label keys must be between 1 and 63 characters long, and must conform to the following regular expression: \p{Ll}\p{Lo}{0,62}Label values must be between 1 and 63 characters long, and must conform to the following regular expression: \p{Ll}\p{Lo}\p{N}_-{0,63}No more than 32 labels can be associated with a given job.
+     * 
+     */
     @InputImport(name="labels", required=true)
     private final Map<String,String> labels;
 
@@ -44,6 +60,10 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
         return this.labels;
     }
 
+    /**
+     * Optional. Job is a Pig job.
+     * 
+     */
     @InputImport(name="pigJob", required=true)
     private final PigJobResponse pigJob;
 
@@ -51,6 +71,10 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
         return this.pigJob;
     }
 
+    /**
+     * Optional. The optional list of prerequisite job step_ids. If not specified, the job will start at the beginning of workflow.
+     * 
+     */
     @InputImport(name="prerequisiteStepIds", required=true)
     private final List<String> prerequisiteStepIds;
 
@@ -58,6 +82,10 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
         return this.prerequisiteStepIds;
     }
 
+    /**
+     * Optional. Job is a Presto job.
+     * 
+     */
     @InputImport(name="prestoJob", required=true)
     private final PrestoJobResponse prestoJob;
 
@@ -65,6 +93,10 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
         return this.prestoJob;
     }
 
+    /**
+     * Optional. Job is a PySpark job.
+     * 
+     */
     @InputImport(name="pysparkJob", required=true)
     private final PySparkJobResponse pysparkJob;
 
@@ -72,6 +104,10 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
         return this.pysparkJob;
     }
 
+    /**
+     * Optional. Job scheduling configuration.
+     * 
+     */
     @InputImport(name="scheduling", required=true)
     private final JobSchedulingResponse scheduling;
 
@@ -79,6 +115,10 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
         return this.scheduling;
     }
 
+    /**
+     * Optional. Job is a Spark job.
+     * 
+     */
     @InputImport(name="sparkJob", required=true)
     private final SparkJobResponse sparkJob;
 
@@ -86,6 +126,10 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
         return this.sparkJob;
     }
 
+    /**
+     * Optional. Job is a SparkR job.
+     * 
+     */
     @InputImport(name="sparkRJob", required=true)
     private final SparkRJobResponse sparkRJob;
 
@@ -93,6 +137,10 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
         return this.sparkRJob;
     }
 
+    /**
+     * Optional. Job is a SparkSql job.
+     * 
+     */
     @InputImport(name="sparkSqlJob", required=true)
     private final SparkSqlJobResponse sparkSqlJob;
 
@@ -100,6 +148,10 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
         return this.sparkSqlJob;
     }
 
+    /**
+     * The step id. The id must be unique among all jobs within the template.The step id is used as prefix for job id, as job goog-dataproc-workflow-step-id label, and in prerequisiteStepIds field from other steps.The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between 3 and 50 characters.
+     * 
+     */
     @InputImport(name="stepId", required=true)
     private final String stepId;
 

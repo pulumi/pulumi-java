@@ -12,8 +12,23 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EdgeCacheServiceRoutingHostRule {
+    /**
+     * A human-readable description of the resource.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * The list of host patterns to match.
+     * Host patterns must be valid hostnames with optional port numbers in the format host:port. * matches any string of ([a-z0-9-.]*).
+     * The only accepted ports are :80 and :443.
+     * Hosts are matched against the HTTP Host header, or for HTTP/2 and HTTP/3, the ":authority" header, from the incoming request.
+     * 
+     */
     private final List<String> hosts;
+    /**
+     * The name of the pathMatcher associated with this hostRule.
+     * 
+     */
     private final String pathMatcher;
 
     @OutputCustomType.Constructor({"description","hosts","pathMatcher"})
@@ -26,12 +41,27 @@ public final class EdgeCacheServiceRoutingHostRule {
         this.pathMatcher = Objects.requireNonNull(pathMatcher);
     }
 
+    /**
+     * A human-readable description of the resource.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * The list of host patterns to match.
+     * Host patterns must be valid hostnames with optional port numbers in the format host:port. * matches any string of ([a-z0-9-.]*).
+     * The only accepted ports are :80 and :443.
+     * Hosts are matched against the HTTP Host header, or for HTTP/2 and HTTP/3, the ":authority" header, from the incoming request.
+     * 
+     */
     public List<String> getHosts() {
         return this.hosts;
     }
+    /**
+     * The name of the pathMatcher associated with this hostRule.
+     * 
+     */
     public String getPathMatcher() {
         return this.pathMatcher;
     }

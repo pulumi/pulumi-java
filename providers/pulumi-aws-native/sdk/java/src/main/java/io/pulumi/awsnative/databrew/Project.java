@@ -15,35 +15,81 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Resource schema for AWS::DataBrew::Project.
+ * 
+ * ## Example Usage
+ * 
+ */
 @ResourceType(type="aws-native:databrew:Project")
 public class Project extends io.pulumi.resources.CustomResource {
+    /**
+     * Dataset name
+     * 
+     */
     @OutputExport(name="datasetName", type=String.class, parameters={})
     private Output<String> datasetName;
 
+    /**
+     * @return Dataset name
+     * 
+     */
     public Output<String> getDatasetName() {
         return this.datasetName;
     }
+    /**
+     * Project name
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Project name
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Recipe name
+     * 
+     */
     @OutputExport(name="recipeName", type=String.class, parameters={})
     private Output<String> recipeName;
 
+    /**
+     * @return Recipe name
+     * 
+     */
     public Output<String> getRecipeName() {
         return this.recipeName;
     }
+    /**
+     * Role arn
+     * 
+     */
     @OutputExport(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
+    /**
+     * @return Role arn
+     * 
+     */
     public Output<String> getRoleArn() {
         return this.roleArn;
     }
+    /**
+     * Sample
+     * 
+     */
     @OutputExport(name="sample", type=ProjectSample.class, parameters={})
     private Output</* @Nullable */ ProjectSample> sample;
 
+    /**
+     * @return Sample
+     * 
+     */
     public Output</* @Nullable */ ProjectSample> getSample() {
         return this.sample;
     }
@@ -54,6 +100,12 @@ public class Project extends io.pulumi.resources.CustomResource {
         return this.tags;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Project(String name, ProjectArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:databrew:Project", name, args == null ? ProjectArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -69,6 +121,14 @@ public class Project extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Project get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Project(name, id, options);
     }

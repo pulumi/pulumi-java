@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDataCatalog {
+/**
+ * Resource schema for AWS::Athena::DataCatalog
+ * 
+ */
     public static CompletableFuture<GetDataCatalogResult> invokeAsync(GetDataCatalogArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:athena:getDataCatalog", TypeShape.of(GetDataCatalogResult.class), args == null ? GetDataCatalogArgs.Empty : args, Utilities.withVersion(options));
     }

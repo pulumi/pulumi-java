@@ -14,6 +14,10 @@ public final class DatasetCreateRequestTimeSeriesArgs extends io.pulumi.resource
 
     public static final DatasetCreateRequestTimeSeriesArgs Empty = new DatasetCreateRequestTimeSeriesArgs();
 
+    /**
+     * Column name to be used as CoarseGrainTimestamp. Can only be used if 'fineGrainTimestamp' is specified and cannot be same as 'fineGrainTimestamp'.
+     * 
+     */
     @InputImport(name="coarseGrainTimestamp")
     private final @Nullable Input<String> coarseGrainTimestamp;
 
@@ -21,6 +25,10 @@ public final class DatasetCreateRequestTimeSeriesArgs extends io.pulumi.resource
         return this.coarseGrainTimestamp == null ? Input.empty() : this.coarseGrainTimestamp;
     }
 
+    /**
+     *  Column name to be used as FineGrainTimestamp
+     * 
+     */
     @InputImport(name="fineGrainTimestamp")
     private final @Nullable Input<String> fineGrainTimestamp;
 

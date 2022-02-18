@@ -13,8 +13,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EdgeCacheServiceRoutingPathMatcher {
+    /**
+     * A human-readable description of the resource.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * The name of the query parameter to match. The query parameter must exist in the request, in the absence of which the request match fails.
+     * 
+     */
     private final String name;
+    /**
+     * The routeRules to match against. routeRules support advanced routing behaviour, and can match on paths, headers and query parameters, as well as status codes and HTTP methods.
+     * Structure is documented below.
+     * 
+     */
     private final List<EdgeCacheServiceRoutingPathMatcherRouteRule> routeRules;
 
     @OutputCustomType.Constructor({"description","name","routeRules"})
@@ -27,12 +40,25 @@ public final class EdgeCacheServiceRoutingPathMatcher {
         this.routeRules = Objects.requireNonNull(routeRules);
     }
 
+    /**
+     * A human-readable description of the resource.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * The name of the query parameter to match. The query parameter must exist in the request, in the absence of which the request match fails.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The routeRules to match against. routeRules support advanced routing behaviour, and can match on paths, headers and query parameters, as well as status codes and HTTP methods.
+     * Structure is documented below.
+     * 
+     */
     public List<EdgeCacheServiceRoutingPathMatcherRouteRule> getRouteRules() {
         return this.routeRules;
     }

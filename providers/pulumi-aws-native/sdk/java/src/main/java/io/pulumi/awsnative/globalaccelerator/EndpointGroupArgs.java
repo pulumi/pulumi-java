@@ -20,6 +20,10 @@ public final class EndpointGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EndpointGroupArgs Empty = new EndpointGroupArgs();
 
+    /**
+     * The list of endpoint objects.
+     * 
+     */
     @InputImport(name="endpointConfigurations")
     private final @Nullable Input<List<EndpointGroupEndpointConfigurationArgs>> endpointConfigurations;
 
@@ -27,6 +31,10 @@ public final class EndpointGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.endpointConfigurations == null ? Input.empty() : this.endpointConfigurations;
     }
 
+    /**
+     * The name of the AWS Region where the endpoint group is located
+     * 
+     */
     @InputImport(name="endpointGroupRegion", required=true)
     private final Input<String> endpointGroupRegion;
 
@@ -34,6 +42,10 @@ public final class EndpointGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.endpointGroupRegion;
     }
 
+    /**
+     * The time in seconds between each health check for an endpoint. Must be a value of 10 or 30
+     * 
+     */
     @InputImport(name="healthCheckIntervalSeconds")
     private final @Nullable Input<Integer> healthCheckIntervalSeconds;
 
@@ -48,6 +60,10 @@ public final class EndpointGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.healthCheckPath == null ? Input.empty() : this.healthCheckPath;
     }
 
+    /**
+     * The port that AWS Global Accelerator uses to check the health of endpoints in this endpoint group.
+     * 
+     */
     @InputImport(name="healthCheckPort")
     private final @Nullable Input<Integer> healthCheckPort;
 
@@ -55,6 +71,10 @@ public final class EndpointGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.healthCheckPort == null ? Input.empty() : this.healthCheckPort;
     }
 
+    /**
+     * The protocol that AWS Global Accelerator uses to check the health of endpoints in this endpoint group.
+     * 
+     */
     @InputImport(name="healthCheckProtocol")
     private final @Nullable Input<EndpointGroupHealthCheckProtocol> healthCheckProtocol;
 
@@ -62,6 +82,10 @@ public final class EndpointGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.healthCheckProtocol == null ? Input.empty() : this.healthCheckProtocol;
     }
 
+    /**
+     * The Amazon Resource Name (ARN) of the listener
+     * 
+     */
     @InputImport(name="listenerArn", required=true)
     private final Input<String> listenerArn;
 
@@ -76,6 +100,10 @@ public final class EndpointGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.portOverrides == null ? Input.empty() : this.portOverrides;
     }
 
+    /**
+     * The number of consecutive health checks required to set the state of the endpoint to unhealthy.
+     * 
+     */
     @InputImport(name="thresholdCount")
     private final @Nullable Input<Integer> thresholdCount;
 
@@ -83,6 +111,10 @@ public final class EndpointGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.thresholdCount == null ? Input.empty() : this.thresholdCount;
     }
 
+    /**
+     * The percentage of traffic to sent to an AWS Region
+     * 
+     */
     @InputImport(name="trafficDialPercentage")
     private final @Nullable Input<Double> trafficDialPercentage;
 

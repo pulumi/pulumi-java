@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Forward SSH Tunnel connectivity.
+ * 
+ */
 public final class ForwardSshTunnelConnectivityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ForwardSshTunnelConnectivityArgs Empty = new ForwardSshTunnelConnectivityArgs();
 
+    /**
+     * Hostname for the SSH tunnel.
+     * 
+     */
     @InputImport(name="hostname", required=true)
     private final Input<String> hostname;
 
@@ -22,6 +30,10 @@ public final class ForwardSshTunnelConnectivityArgs extends io.pulumi.resources.
         return this.hostname;
     }
 
+    /**
+     * Input only. SSH password.
+     * 
+     */
     @InputImport(name="password")
     private final @Nullable Input<String> password;
 
@@ -29,6 +41,10 @@ public final class ForwardSshTunnelConnectivityArgs extends io.pulumi.resources.
         return this.password == null ? Input.empty() : this.password;
     }
 
+    /**
+     * Port for the SSH tunnel, default value is 22.
+     * 
+     */
     @InputImport(name="port")
     private final @Nullable Input<Integer> port;
 
@@ -36,6 +52,10 @@ public final class ForwardSshTunnelConnectivityArgs extends io.pulumi.resources.
         return this.port == null ? Input.empty() : this.port;
     }
 
+    /**
+     * Input only. SSH private key.
+     * 
+     */
     @InputImport(name="privateKey")
     private final @Nullable Input<String> privateKey;
 
@@ -43,6 +63,10 @@ public final class ForwardSshTunnelConnectivityArgs extends io.pulumi.resources.
         return this.privateKey == null ? Input.empty() : this.privateKey;
     }
 
+    /**
+     * Username for the SSH tunnel.
+     * 
+     */
     @InputImport(name="username", required=true)
     private final Input<String> username;
 

@@ -56,6 +56,11 @@ public final class CertificateCertificateDescriptionArgs extends io.pulumi.resou
         return this.crlDistributionPoints == null ? Input.empty() : this.crlDistributionPoints;
     }
 
+    /**
+     * A PublicKey describes a public key.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="publicKeys")
     private final @Nullable Input<List<CertificateCertificateDescriptionPublicKeyArgs>> publicKeys;
 

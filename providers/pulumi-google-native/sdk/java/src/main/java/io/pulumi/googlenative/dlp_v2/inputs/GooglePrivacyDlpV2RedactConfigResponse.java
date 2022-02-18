@@ -6,6 +6,10 @@ package io.pulumi.googlenative.dlp_v2.inputs;
 import java.util.Objects;
 
 
+/**
+ * Redact a given value. For example, if used with an `InfoTypeTransformation` transforming PHONE_NUMBER, and input 'My phone number is 206-555-0123', the output would be 'My phone number is '.
+ * 
+ */
 public final class GooglePrivacyDlpV2RedactConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2RedactConfigResponse Empty = new GooglePrivacyDlpV2RedactConfigResponse();

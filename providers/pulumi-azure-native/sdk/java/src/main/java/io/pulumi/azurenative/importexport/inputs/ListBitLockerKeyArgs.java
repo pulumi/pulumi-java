@@ -12,6 +12,10 @@ public final class ListBitLockerKeyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListBitLockerKeyArgs Empty = new ListBitLockerKeyArgs();
 
+    /**
+     * The name of the import/export job.
+     * 
+     */
     @InputImport(name="jobName", required=true)
     private final String jobName;
 
@@ -19,6 +23,10 @@ public final class ListBitLockerKeyArgs extends io.pulumi.resources.InvokeArgs {
         return this.jobName;
     }
 
+    /**
+     * The resource group name uniquely identifies the resource group within the user subscription.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

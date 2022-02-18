@@ -9,6 +9,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped {
+    /**
+     * A 128/192/256 bit key.
+     * A base64-encoded string.
+     * 
+     */
     private final String key;
 
     @OutputCustomType.Constructor({"key"})
@@ -16,6 +21,11 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
         this.key = Objects.requireNonNull(key);
     }
 
+    /**
+     * A 128/192/256 bit key.
+     * A base64-encoded string.
+     * 
+     */
     public String getKey() {
         return this.key;
     }

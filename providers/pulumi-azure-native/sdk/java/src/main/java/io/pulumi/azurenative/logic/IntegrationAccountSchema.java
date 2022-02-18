@@ -17,93 +17,226 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * The integration account schema.
+ * API Version: 2019-05-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:logic:IntegrationAccountSchema IntegrationAccountSchema5349 /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/testResourceGroup/providers/Microsoft.Logic/integrationAccounts/testIntegrationAccount/schemas/testSchema 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:logic:IntegrationAccountSchema")
 public class IntegrationAccountSchema extends io.pulumi.resources.CustomResource {
+    /**
+     * The changed time.
+     * 
+     */
     @OutputExport(name="changedTime", type=String.class, parameters={})
     private Output<String> changedTime;
 
+    /**
+     * @return The changed time.
+     * 
+     */
     public Output<String> getChangedTime() {
         return this.changedTime;
     }
+    /**
+     * The content.
+     * 
+     */
     @OutputExport(name="content", type=String.class, parameters={})
     private Output</* @Nullable */ String> content;
 
+    /**
+     * @return The content.
+     * 
+     */
     public Output</* @Nullable */ String> getContent() {
         return this.content;
     }
+    /**
+     * The content link.
+     * 
+     */
     @OutputExport(name="contentLink", type=ContentLinkResponse.class, parameters={})
     private Output<ContentLinkResponse> contentLink;
 
+    /**
+     * @return The content link.
+     * 
+     */
     public Output<ContentLinkResponse> getContentLink() {
         return this.contentLink;
     }
+    /**
+     * The content type.
+     * 
+     */
     @OutputExport(name="contentType", type=String.class, parameters={})
     private Output</* @Nullable */ String> contentType;
 
+    /**
+     * @return The content type.
+     * 
+     */
     public Output</* @Nullable */ String> getContentType() {
         return this.contentType;
     }
+    /**
+     * The created time.
+     * 
+     */
     @OutputExport(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
+    /**
+     * @return The created time.
+     * 
+     */
     public Output<String> getCreatedTime() {
         return this.createdTime;
     }
+    /**
+     * The document name.
+     * 
+     */
     @OutputExport(name="documentName", type=String.class, parameters={})
     private Output</* @Nullable */ String> documentName;
 
+    /**
+     * @return The document name.
+     * 
+     */
     public Output</* @Nullable */ String> getDocumentName() {
         return this.documentName;
     }
+    /**
+     * The file name.
+     * 
+     */
     @OutputExport(name="fileName", type=String.class, parameters={})
     private Output</* @Nullable */ String> fileName;
 
+    /**
+     * @return The file name.
+     * 
+     */
     public Output</* @Nullable */ String> getFileName() {
         return this.fileName;
     }
+    /**
+     * The resource location.
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return The resource location.
+     * 
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * The metadata.
+     * 
+     */
     @OutputExport(name="metadata", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> metadata;
 
+    /**
+     * @return The metadata.
+     * 
+     */
     public Output</* @Nullable */ Object> getMetadata() {
         return this.metadata;
     }
+    /**
+     * Gets the resource name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Gets the resource name.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The schema type.
+     * 
+     */
     @OutputExport(name="schemaType", type=String.class, parameters={})
     private Output<String> schemaType;
 
+    /**
+     * @return The schema type.
+     * 
+     */
     public Output<String> getSchemaType() {
         return this.schemaType;
     }
+    /**
+     * The resource tags.
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return The resource tags.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * The target namespace of the schema.
+     * 
+     */
     @OutputExport(name="targetNamespace", type=String.class, parameters={})
     private Output</* @Nullable */ String> targetNamespace;
 
+    /**
+     * @return The target namespace of the schema.
+     * 
+     */
     public Output</* @Nullable */ String> getTargetNamespace() {
         return this.targetNamespace;
     }
+    /**
+     * Gets the resource type.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Gets the resource type.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public IntegrationAccountSchema(String name, IntegrationAccountSchemaArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:logic:IntegrationAccountSchema", name, args == null ? IntegrationAccountSchemaArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -125,6 +258,14 @@ public class IntegrationAccountSchema extends io.pulumi.resources.CustomResource
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static IntegrationAccountSchema get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new IntegrationAccountSchema(name, id, options);
     }

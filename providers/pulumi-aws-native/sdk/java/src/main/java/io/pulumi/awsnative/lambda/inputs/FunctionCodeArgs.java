@@ -14,6 +14,10 @@ public final class FunctionCodeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FunctionCodeArgs Empty = new FunctionCodeArgs();
 
+    /**
+     * ImageUri.
+     * 
+     */
     @InputImport(name="imageUri")
     private final @Nullable Input<String> imageUri;
 
@@ -21,6 +25,10 @@ public final class FunctionCodeArgs extends io.pulumi.resources.ResourceArgs {
         return this.imageUri == null ? Input.empty() : this.imageUri;
     }
 
+    /**
+     * An Amazon S3 bucket in the same AWS Region as your function. The bucket can be in a different AWS account.
+     * 
+     */
     @InputImport(name="s3Bucket")
     private final @Nullable Input<String> s3Bucket;
 
@@ -28,6 +36,10 @@ public final class FunctionCodeArgs extends io.pulumi.resources.ResourceArgs {
         return this.s3Bucket == null ? Input.empty() : this.s3Bucket;
     }
 
+    /**
+     * The Amazon S3 key of the deployment package.
+     * 
+     */
     @InputImport(name="s3Key")
     private final @Nullable Input<String> s3Key;
 
@@ -35,6 +47,10 @@ public final class FunctionCodeArgs extends io.pulumi.resources.ResourceArgs {
         return this.s3Key == null ? Input.empty() : this.s3Key;
     }
 
+    /**
+     * For versioned objects, the version of the deployment package object to use.
+     * 
+     */
     @InputImport(name="s3ObjectVersion")
     private final @Nullable Input<String> s3ObjectVersion;
 
@@ -42,6 +58,10 @@ public final class FunctionCodeArgs extends io.pulumi.resources.ResourceArgs {
         return this.s3ObjectVersion == null ? Input.empty() : this.s3ObjectVersion;
     }
 
+    /**
+     * The source code of your Lambda function. If you include your function source inline with this parameter, AWS CloudFormation places it in a file named index and zips it to create a deployment package..
+     * 
+     */
     @InputImport(name="zipFile")
     private final @Nullable Input<String> zipFile;
 

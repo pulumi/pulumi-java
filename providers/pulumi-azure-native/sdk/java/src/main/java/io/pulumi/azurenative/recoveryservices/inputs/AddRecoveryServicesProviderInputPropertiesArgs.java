@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The properties of an add provider request.
+ * 
+ */
 public final class AddRecoveryServicesProviderInputPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AddRecoveryServicesProviderInputPropertiesArgs Empty = new AddRecoveryServicesProviderInputPropertiesArgs();
 
+    /**
+     * The identity provider input for DRA authentication.
+     * 
+     */
     @InputImport(name="authenticationIdentityInput", required=true)
     private final Input<IdentityProviderInputArgs> authenticationIdentityInput;
 
@@ -22,6 +30,10 @@ public final class AddRecoveryServicesProviderInputPropertiesArgs extends io.pul
         return this.authenticationIdentityInput;
     }
 
+    /**
+     * The identity provider input for data plane authentication.
+     * 
+     */
     @InputImport(name="dataPlaneAuthenticationIdentityInput")
     private final @Nullable Input<IdentityProviderInputArgs> dataPlaneAuthenticationIdentityInput;
 
@@ -29,6 +41,10 @@ public final class AddRecoveryServicesProviderInputPropertiesArgs extends io.pul
         return this.dataPlaneAuthenticationIdentityInput == null ? Input.empty() : this.dataPlaneAuthenticationIdentityInput;
     }
 
+    /**
+     * The Id of the machine where the provider is getting added.
+     * 
+     */
     @InputImport(name="machineId")
     private final @Nullable Input<String> machineId;
 
@@ -36,6 +52,10 @@ public final class AddRecoveryServicesProviderInputPropertiesArgs extends io.pul
         return this.machineId == null ? Input.empty() : this.machineId;
     }
 
+    /**
+     * The name of the machine where the provider is getting added.
+     * 
+     */
     @InputImport(name="machineName", required=true)
     private final Input<String> machineName;
 
@@ -43,6 +63,10 @@ public final class AddRecoveryServicesProviderInputPropertiesArgs extends io.pul
         return this.machineName;
     }
 
+    /**
+     * The identity provider input for resource access.
+     * 
+     */
     @InputImport(name="resourceAccessIdentityInput", required=true)
     private final Input<IdentityProviderInputArgs> resourceAccessIdentityInput;
 

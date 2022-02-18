@@ -14,6 +14,10 @@ public final class DatasetMetadataArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final DatasetMetadataArgs Empty = new DatasetMetadataArgs();
 
+    /**
+     * Arn of the source of the dataset. For e.g.: AppFlow Flow ARN.
+     * 
+     */
     @InputImport(name="sourceArn")
     private final @Nullable Input<String> sourceArn;
 

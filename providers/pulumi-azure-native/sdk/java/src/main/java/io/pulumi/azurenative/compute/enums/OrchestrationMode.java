@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Specifies the orchestration mode for the virtual machine scale set.
+     * 
+     */
     @EnumType
     public enum OrchestrationMode {
         Uniform("Uniform"),

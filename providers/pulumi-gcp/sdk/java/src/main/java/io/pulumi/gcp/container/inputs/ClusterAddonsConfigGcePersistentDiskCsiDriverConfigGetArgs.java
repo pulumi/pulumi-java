@@ -13,6 +13,11 @@ public final class ClusterAddonsConfigGcePersistentDiskCsiDriverConfigGetArgs ex
 
     public static final ClusterAddonsConfigGcePersistentDiskCsiDriverConfigGetArgs Empty = new ClusterAddonsConfigGcePersistentDiskCsiDriverConfigGetArgs();
 
+    /**
+     * Enable the PodSecurityPolicy controller for this cluster.
+     * If enabled, pods must be valid under a PodSecurityPolicy to be created.
+     * 
+     */
     @InputImport(name="enabled", required=true)
     private final Input<Boolean> enabled;
 

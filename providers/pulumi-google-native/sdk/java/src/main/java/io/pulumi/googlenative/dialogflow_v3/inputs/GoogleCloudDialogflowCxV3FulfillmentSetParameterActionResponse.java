@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Setting a parameter value.
+ * 
+ */
 public final class GoogleCloudDialogflowCxV3FulfillmentSetParameterActionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowCxV3FulfillmentSetParameterActionResponse Empty = new GoogleCloudDialogflowCxV3FulfillmentSetParameterActionResponse();
 
+    /**
+     * Display name of the parameter.
+     * 
+     */
     @InputImport(name="parameter", required=true)
     private final String parameter;
 
@@ -20,6 +28,10 @@ public final class GoogleCloudDialogflowCxV3FulfillmentSetParameterActionRespons
         return this.parameter;
     }
 
+    /**
+     * The new value of the parameter. A null value clears the parameter.
+     * 
+     */
     @InputImport(name="value", required=true)
     private final Object value;
 

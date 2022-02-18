@@ -16,39 +16,100 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * A datastore resource
+ * API Version: 2021-01-01-preview.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:avs:Datastore datastore1 /subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/clusters/cluster1/datastores/datastore1 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:avs:Datastore")
 public class Datastore extends io.pulumi.resources.CustomResource {
+    /**
+     * An iSCSI volume
+     * 
+     */
     @OutputExport(name="diskPoolVolume", type=DiskPoolVolumeResponse.class, parameters={})
     private Output</* @Nullable */ DiskPoolVolumeResponse> diskPoolVolume;
 
+    /**
+     * @return An iSCSI volume
+     * 
+     */
     public Output</* @Nullable */ DiskPoolVolumeResponse> getDiskPoolVolume() {
         return this.diskPoolVolume;
     }
+    /**
+     * Resource name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * An Azure NetApp Files volume
+     * 
+     */
     @OutputExport(name="netAppVolume", type=NetAppVolumeResponse.class, parameters={})
     private Output</* @Nullable */ NetAppVolumeResponse> netAppVolume;
 
+    /**
+     * @return An Azure NetApp Files volume
+     * 
+     */
     public Output</* @Nullable */ NetAppVolumeResponse> getNetAppVolume() {
         return this.netAppVolume;
     }
+    /**
+     * The state of the datastore provisioning
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The state of the datastore provisioning
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Resource type.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Datastore(String name, DatastoreArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:avs:Datastore", name, args == null ? DatastoreArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -69,6 +130,14 @@ public class Datastore extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Datastore get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Datastore(name, id, options);
     }

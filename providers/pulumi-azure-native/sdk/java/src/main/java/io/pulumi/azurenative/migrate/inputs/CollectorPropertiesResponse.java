@@ -22,6 +22,10 @@ public final class CollectorPropertiesResponse extends io.pulumi.resources.Invok
         return this.agentProperties == null ? Optional.empty() : Optional.ofNullable(this.agentProperties);
     }
 
+    /**
+     * Time when this collector was created. Date-Time represented in ISO-8601 format.
+     * 
+     */
     @InputImport(name="createdTimestamp", required=true)
     private final String createdTimestamp;
 
@@ -29,6 +33,10 @@ public final class CollectorPropertiesResponse extends io.pulumi.resources.Invok
         return this.createdTimestamp;
     }
 
+    /**
+     * The ARM id of the discovery service site.
+     * 
+     */
     @InputImport(name="discoverySiteId")
     private final @Nullable String discoverySiteId;
 
@@ -36,6 +44,10 @@ public final class CollectorPropertiesResponse extends io.pulumi.resources.Invok
         return this.discoverySiteId == null ? Optional.empty() : Optional.ofNullable(this.discoverySiteId);
     }
 
+    /**
+     * Time when this collector was updated. Date-Time represented in ISO-8601 format.
+     * 
+     */
     @InputImport(name="updatedTimestamp", required=true)
     private final String updatedTimestamp;
 

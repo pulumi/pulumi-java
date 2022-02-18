@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetManagedDatabaseSensitivityLabel {
+/**
+ * A sensitivity label.
+ * API Version: 2020-11-01-preview.
+ * 
+ *
+ * A sensitivity label.
+ * 
+ */
     public static CompletableFuture<GetManagedDatabaseSensitivityLabelResult> invokeAsync(GetManagedDatabaseSensitivityLabelArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getManagedDatabaseSensitivityLabel", TypeShape.of(GetManagedDatabaseSensitivityLabelResult.class), args == null ? GetManagedDatabaseSensitivityLabelArgs.Empty : args, Utilities.withVersion(options));
     }

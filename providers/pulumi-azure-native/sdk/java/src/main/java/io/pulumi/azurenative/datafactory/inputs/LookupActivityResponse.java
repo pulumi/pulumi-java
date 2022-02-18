@@ -112,10 +112,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Lookup activity.
+ * 
+ */
 public final class LookupActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LookupActivityResponse Empty = new LookupActivityResponse();
 
+    /**
+     * Lookup activity dataset reference.
+     * 
+     */
     @InputImport(name="dataset", required=true)
     private final DatasetReferenceResponse dataset;
 
@@ -123,6 +131,10 @@ public final class LookupActivityResponse extends io.pulumi.resources.InvokeArgs
         return this.dataset;
     }
 
+    /**
+     * Activity depends on condition.
+     * 
+     */
     @InputImport(name="dependsOn")
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
@@ -130,6 +142,10 @@ public final class LookupActivityResponse extends io.pulumi.resources.InvokeArgs
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
 
+    /**
+     * Activity description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -137,6 +153,10 @@ public final class LookupActivityResponse extends io.pulumi.resources.InvokeArgs
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * Whether to return first row or all rows. Default value is true. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     @InputImport(name="firstRowOnly")
     private final @Nullable Object firstRowOnly;
 
@@ -144,6 +164,10 @@ public final class LookupActivityResponse extends io.pulumi.resources.InvokeArgs
         return this.firstRowOnly == null ? Optional.empty() : Optional.ofNullable(this.firstRowOnly);
     }
 
+    /**
+     * Linked service reference.
+     * 
+     */
     @InputImport(name="linkedServiceName")
     private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
@@ -151,6 +175,10 @@ public final class LookupActivityResponse extends io.pulumi.resources.InvokeArgs
         return this.linkedServiceName == null ? Optional.empty() : Optional.ofNullable(this.linkedServiceName);
     }
 
+    /**
+     * Activity name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -158,6 +186,10 @@ public final class LookupActivityResponse extends io.pulumi.resources.InvokeArgs
         return this.name;
     }
 
+    /**
+     * Activity policy.
+     * 
+     */
     @InputImport(name="policy")
     private final @Nullable ActivityPolicyResponse policy;
 
@@ -165,6 +197,10 @@ public final class LookupActivityResponse extends io.pulumi.resources.InvokeArgs
         return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
     }
 
+    /**
+     * Dataset-specific source properties, same as copy activity source.
+     * 
+     */
     @InputImport(name="source", required=true)
     private final Object source;
 
@@ -172,6 +208,11 @@ public final class LookupActivityResponse extends io.pulumi.resources.InvokeArgs
         return this.source;
     }
 
+    /**
+     * Type of activity.
+     * Expected value is 'Lookup'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -179,6 +220,10 @@ public final class LookupActivityResponse extends io.pulumi.resources.InvokeArgs
         return this.type;
     }
 
+    /**
+     * Activity user properties.
+     * 
+     */
     @InputImport(name="userProperties")
     private final @Nullable List<UserPropertyResponse> userProperties;
 

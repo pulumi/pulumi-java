@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDomainConfiguration {
+/**
+ * Create and manage a Domain Configuration
+ * 
+ */
     public static CompletableFuture<GetDomainConfigurationResult> invokeAsync(GetDomainConfigurationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iot:getDomainConfiguration", TypeShape.of(GetDomainConfigurationResult.class), args == null ? GetDomainConfigurationArgs.Empty : args, Utilities.withVersion(options));
     }

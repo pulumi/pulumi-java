@@ -9,7 +9,18 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TriggerBuildAvailableSecretsSecretManager {
+    /**
+     * A list of global environment variable definitions that will exist for all build steps
+     * in this build. If a variable is defined in both globally and in a build step,
+     * the variable will use the build step value.
+     * The elements are of the form "KEY=VALUE" for the environment variable "KEY" being given the value "VALUE".
+     * 
+     */
     private final String env;
+    /**
+     * Resource name of the SecretVersion. In format: projects/*{@literal /}secrets/*{@literal /}versions/*
+     * 
+     */
     private final String versionName;
 
     @OutputCustomType.Constructor({"env","versionName"})
@@ -20,9 +31,20 @@ public final class TriggerBuildAvailableSecretsSecretManager {
         this.versionName = Objects.requireNonNull(versionName);
     }
 
+    /**
+     * A list of global environment variable definitions that will exist for all build steps
+     * in this build. If a variable is defined in both globally and in a build step,
+     * the variable will use the build step value.
+     * The elements are of the form "KEY=VALUE" for the environment variable "KEY" being given the value "VALUE".
+     * 
+     */
     public String getEnv() {
         return this.env;
     }
+    /**
+     * Resource name of the SecretVersion. In format: projects/*{@literal /}secrets/*{@literal /}versions/*
+     * 
+     */
     public String getVersionName() {
         return this.versionName;
     }

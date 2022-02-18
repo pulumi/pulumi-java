@@ -8,9 +8,21 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The type of placement.
+     * 
+     */
     @EnumType
     public enum PlacementPolicyType {
+        /**
+         * TYPE_UNSPECIFIED specifies no requirements on nodes placement.
+         * 
+         */
         TypeUnspecified("TYPE_UNSPECIFIED"),
+        /**
+         * COMPACT specifies node placement in the same availability domain to ensure low communication latency.
+         * 
+         */
         Compact("COMPACT");
 
         private final String value;

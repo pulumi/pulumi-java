@@ -10,10 +10,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Upcoming Maintenance notification information. TODO(b/196881882) Deprecate this proto once it's fully migrated to be under proto ResourceStatus.UpcomingMaintenance.
+ * 
+ */
 public final class UpcomingMaintenanceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final UpcomingMaintenanceResponse Empty = new UpcomingMaintenanceResponse();
 
+    /**
+     * Indicates if the maintenance can be customer triggered. From more detail, see go/sf-ctm-design.
+     * 
+     */
     @InputImport(name="canReschedule", required=true)
     private final Boolean canReschedule;
 
@@ -21,6 +29,10 @@ public final class UpcomingMaintenanceResponse extends io.pulumi.resources.Invok
         return this.canReschedule;
     }
 
+    /**
+     * The start time window of the maintenance disruption.
+     * 
+     */
     @InputImport(name="startTimeWindow", required=true)
     private final UpcomingMaintenanceTimeWindowResponse startTimeWindow;
 
@@ -28,6 +40,10 @@ public final class UpcomingMaintenanceResponse extends io.pulumi.resources.Invok
         return this.startTimeWindow;
     }
 
+    /**
+     * Defines the type of maintenance.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

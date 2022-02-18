@@ -9,10 +9,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * The Upgrade Distribution represents metadata about the Upgrade for each operating system (CPE). Some distributions have additional metadata around updates, classifying them into various categories and severities.
+ * 
+ */
 public final class UpgradeDistributionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final UpgradeDistributionResponse Empty = new UpgradeDistributionResponse();
 
+    /**
+     * The operating system classification of this Upgrade, as specified by the upstream operating system upgrade feed. For Windows the classification is one of the category_ids listed at https://docs.microsoft.com/en-us/previous-versions/windows/desktop/ff357803(v=vs.85)
+     * 
+     */
     @InputImport(name="classification", required=true)
     private final String classification;
 
@@ -20,6 +28,10 @@ public final class UpgradeDistributionResponse extends io.pulumi.resources.Invok
         return this.classification;
     }
 
+    /**
+     * Required - The specific operating system this metadata applies to. See https://cpe.mitre.org/specification/.
+     * 
+     */
     @InputImport(name="cpeUri", required=true)
     private final String cpeUri;
 
@@ -27,6 +39,10 @@ public final class UpgradeDistributionResponse extends io.pulumi.resources.Invok
         return this.cpeUri;
     }
 
+    /**
+     * The cve tied to this Upgrade.
+     * 
+     */
     @InputImport(name="cve", required=true)
     private final List<String> cve;
 
@@ -34,6 +50,10 @@ public final class UpgradeDistributionResponse extends io.pulumi.resources.Invok
         return this.cve;
     }
 
+    /**
+     * The severity as specified by the upstream operating system.
+     * 
+     */
     @InputImport(name="severity", required=true)
     private final String severity;
 

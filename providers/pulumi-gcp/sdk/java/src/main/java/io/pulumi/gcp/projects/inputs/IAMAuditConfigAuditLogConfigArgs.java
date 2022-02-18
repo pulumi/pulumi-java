@@ -15,6 +15,10 @@ public final class IAMAuditConfigAuditLogConfigArgs extends io.pulumi.resources.
 
     public static final IAMAuditConfigAuditLogConfigArgs Empty = new IAMAuditConfigAuditLogConfigArgs();
 
+    /**
+     * Identities that do not cause logging for this type of permission.  The format is the same as that for `members`.
+     * 
+     */
     @InputImport(name="exemptedMembers")
     private final @Nullable Input<List<String>> exemptedMembers;
 
@@ -22,6 +26,10 @@ public final class IAMAuditConfigAuditLogConfigArgs extends io.pulumi.resources.
         return this.exemptedMembers == null ? Input.empty() : this.exemptedMembers;
     }
 
+    /**
+     * Permission type for which logging is to be configured.  Must be one of `DATA_READ`, `DATA_WRITE`, or `ADMIN_READ`.
+     * 
+     */
     @InputImport(name="logType", required=true)
     private final Input<String> logType;
 

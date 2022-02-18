@@ -10,6 +10,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Volume represents a named volume in a container.
+ * 
+ */
 public final class VolumeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VolumeResponse Empty = new VolumeResponse();
@@ -21,6 +25,10 @@ public final class VolumeResponse extends io.pulumi.resources.InvokeArgs {
         return this.configMap;
     }
 
+    /**
+     * Volume's name. In Cloud Run Fully Managed, the name 'cloudsql' is reserved.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

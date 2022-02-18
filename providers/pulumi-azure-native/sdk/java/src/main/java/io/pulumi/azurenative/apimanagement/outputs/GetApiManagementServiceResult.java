@@ -21,38 +21,170 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetApiManagementServiceResult {
+    /**
+     * Additional datacenter locations of the API Management service.
+     * 
+     */
     private final @Nullable List<AdditionalLocationResponse> additionalLocations;
+    /**
+     * Control Plane Apis version constraint for the API Management service.
+     * 
+     */
     private final @Nullable ApiVersionConstraintResponse apiVersionConstraint;
+    /**
+     * List of Certificates that need to be installed in the API Management service. Max supported certificates that can be installed is 10.
+     * 
+     */
     private final @Nullable List<CertificateConfigurationResponse> certificates;
+    /**
+     * Creation UTC date of the API Management service.The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+     * 
+     */
     private final String createdAtUtc;
+    /**
+     * Custom properties of the API Management service.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TripleDes168` will disable the cipher TLS_RSA_WITH_3DES_EDE_CBC_SHA for all TLS(1.0, 1.1 and 1.2).</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls11` can be used to disable just TLS 1.1.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10` can be used to disable TLS 1.0 on an API Management service.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls11` can be used to disable just TLS 1.1 for communications with backends.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls10` can be used to disable TLS 1.0 for communications with backends.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Protocols.Server.Http2` can be used to enable HTTP2 protocol on an API Management service.</br>Not specifying any of these properties on PATCH operation will reset omitted properties' values to their defaults. For all the settings except Http2 the default value is `True` if the service was created on or before April 1st 2018 and `False` otherwise. Http2 setting's default value is `False`.</br></br>You can disable any of next ciphers by using settings `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.[cipher_name]`: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA. For example, `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_RSA_WITH_AES_128_CBC_SHA256`:`false`. The default value is `true` for them.  Note: next ciphers can't be disabled since they are required by Azure CloudService internal components: TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256,TLS_RSA_WITH_AES_256_GCM_SHA384
+     * 
+     */
     private final @Nullable Map<String,String> customProperties;
+    /**
+     * DEveloper Portal endpoint URL of the API Management service.
+     * 
+     */
     private final String developerPortalUrl;
+    /**
+     * Property only valid for an Api Management service deployed in multiple locations. This can be used to disable the gateway in master region.
+     * 
+     */
     private final @Nullable Boolean disableGateway;
+    /**
+     * Property only meant to be used for Consumption SKU Service. This enforces a client certificate to be presented on each request to the gateway. This also enables the ability to authenticate the certificate in the policy on the gateway.
+     * 
+     */
     private final @Nullable Boolean enableClientCertificate;
+    /**
+     * ETag of the resource.
+     * 
+     */
     private final String etag;
+    /**
+     * Gateway URL of the API Management service in the Default Region.
+     * 
+     */
     private final String gatewayRegionalUrl;
+    /**
+     * Gateway URL of the API Management service.
+     * 
+     */
     private final String gatewayUrl;
+    /**
+     * Custom hostname configuration of the API Management service.
+     * 
+     */
     private final @Nullable List<HostnameConfigurationResponse> hostnameConfigurations;
+    /**
+     * Resource ID.
+     * 
+     */
     private final String id;
+    /**
+     * Managed service identity of the Api Management service.
+     * 
+     */
     private final @Nullable ApiManagementServiceIdentityResponse identity;
+    /**
+     * Resource location.
+     * 
+     */
     private final String location;
+    /**
+     * Management API endpoint URL of the API Management service.
+     * 
+     */
     private final String managementApiUrl;
+    /**
+     * Resource name.
+     * 
+     */
     private final String name;
+    /**
+     * Email address from which the notification will be sent.
+     * 
+     */
     private final @Nullable String notificationSenderEmail;
+    /**
+     * Publisher portal endpoint Url of the API Management service.
+     * 
+     */
     private final String portalUrl;
+    /**
+     * Private Static Load Balanced IP addresses of the API Management service in Primary region which is deployed in an Internal Virtual Network. Available only for Basic, Standard, Premium and Isolated SKU.
+     * 
+     */
     private final List<String> privateIPAddresses;
+    /**
+     * The current provisioning state of the API Management service which can be one of the following: Created/Activating/Succeeded/Updating/Failed/Stopped/Terminating/TerminationFailed/Deleted.
+     * 
+     */
     private final String provisioningState;
+    /**
+     * Public Static Load Balanced IP addresses of the API Management service in Primary region. Available only for Basic, Standard, Premium and Isolated SKU.
+     * 
+     */
     private final List<String> publicIPAddresses;
+    /**
+     * Publisher email.
+     * 
+     */
     private final String publisherEmail;
+    /**
+     * Publisher name.
+     * 
+     */
     private final String publisherName;
+    /**
+     * Undelete Api Management Service if it was previously soft-deleted. If this flag is specified and set to True all other properties will be ignored.
+     * 
+     */
     private final @Nullable Boolean restore;
+    /**
+     * SCM endpoint URL of the API Management service.
+     * 
+     */
     private final String scmUrl;
+    /**
+     * SKU properties of the API Management service.
+     * 
+     */
     private final ApiManagementServiceSkuPropertiesResponse sku;
+    /**
+     * Resource tags.
+     * 
+     */
     private final @Nullable Map<String,String> tags;
+    /**
+     * The provisioning state of the API Management service, which is targeted by the long running operation started on the service.
+     * 
+     */
     private final String targetProvisioningState;
+    /**
+     * Resource type for API Management resource is set to Microsoft.ApiManagement.
+     * 
+     */
     private final String type;
+    /**
+     * Virtual network configuration of the API Management service.
+     * 
+     */
     private final @Nullable VirtualNetworkConfigurationResponse virtualNetworkConfiguration;
+    /**
+     * The type of VPN in which API Management service needs to be configured in. None (Default Value) means the API Management service is not part of any Virtual Network, External means the API Management deployment is set up inside a Virtual Network having an Internet Facing Endpoint, and Internal means that API Management deployment is setup inside a Virtual Network having an Intranet Facing Endpoint only.
+     * 
+     */
     private final @Nullable String virtualNetworkType;
+    /**
+     * A list of availability zones denoting where the resource needs to come from.
+     * 
+     */
     private final @Nullable List<String> zones;
 
     @OutputCustomType.Constructor({"additionalLocations","apiVersionConstraint","certificates","createdAtUtc","customProperties","developerPortalUrl","disableGateway","enableClientCertificate","etag","gatewayRegionalUrl","gatewayUrl","hostnameConfigurations","id","identity","location","managementApiUrl","name","notificationSenderEmail","portalUrl","privateIPAddresses","provisioningState","publicIPAddresses","publisherEmail","publisherName","restore","scmUrl","sku","tags","targetProvisioningState","type","virtualNetworkConfiguration","virtualNetworkType","zones"})
@@ -125,102 +257,234 @@ public final class GetApiManagementServiceResult {
         this.zones = zones;
     }
 
+    /**
+     * Additional datacenter locations of the API Management service.
+     * 
+     */
     public List<AdditionalLocationResponse> getAdditionalLocations() {
         return this.additionalLocations == null ? List.of() : this.additionalLocations;
     }
+    /**
+     * Control Plane Apis version constraint for the API Management service.
+     * 
+     */
     public Optional<ApiVersionConstraintResponse> getApiVersionConstraint() {
         return Optional.ofNullable(this.apiVersionConstraint);
     }
+    /**
+     * List of Certificates that need to be installed in the API Management service. Max supported certificates that can be installed is 10.
+     * 
+     */
     public List<CertificateConfigurationResponse> getCertificates() {
         return this.certificates == null ? List.of() : this.certificates;
     }
+    /**
+     * Creation UTC date of the API Management service.The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+     * 
+     */
     public String getCreatedAtUtc() {
         return this.createdAtUtc;
     }
+    /**
+     * Custom properties of the API Management service.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TripleDes168` will disable the cipher TLS_RSA_WITH_3DES_EDE_CBC_SHA for all TLS(1.0, 1.1 and 1.2).</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls11` can be used to disable just TLS 1.1.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10` can be used to disable TLS 1.0 on an API Management service.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls11` can be used to disable just TLS 1.1 for communications with backends.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls10` can be used to disable TLS 1.0 for communications with backends.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Protocols.Server.Http2` can be used to enable HTTP2 protocol on an API Management service.</br>Not specifying any of these properties on PATCH operation will reset omitted properties' values to their defaults. For all the settings except Http2 the default value is `True` if the service was created on or before April 1st 2018 and `False` otherwise. Http2 setting's default value is `False`.</br></br>You can disable any of next ciphers by using settings `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.[cipher_name]`: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA. For example, `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_RSA_WITH_AES_128_CBC_SHA256`:`false`. The default value is `true` for them.  Note: next ciphers can't be disabled since they are required by Azure CloudService internal components: TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256,TLS_RSA_WITH_AES_256_GCM_SHA384
+     * 
+     */
     public Map<String,String> getCustomProperties() {
         return this.customProperties == null ? Map.of() : this.customProperties;
     }
+    /**
+     * DEveloper Portal endpoint URL of the API Management service.
+     * 
+     */
     public String getDeveloperPortalUrl() {
         return this.developerPortalUrl;
     }
+    /**
+     * Property only valid for an Api Management service deployed in multiple locations. This can be used to disable the gateway in master region.
+     * 
+     */
     public Optional<Boolean> getDisableGateway() {
         return Optional.ofNullable(this.disableGateway);
     }
+    /**
+     * Property only meant to be used for Consumption SKU Service. This enforces a client certificate to be presented on each request to the gateway. This also enables the ability to authenticate the certificate in the policy on the gateway.
+     * 
+     */
     public Optional<Boolean> getEnableClientCertificate() {
         return Optional.ofNullable(this.enableClientCertificate);
     }
+    /**
+     * ETag of the resource.
+     * 
+     */
     public String getEtag() {
         return this.etag;
     }
+    /**
+     * Gateway URL of the API Management service in the Default Region.
+     * 
+     */
     public String getGatewayRegionalUrl() {
         return this.gatewayRegionalUrl;
     }
+    /**
+     * Gateway URL of the API Management service.
+     * 
+     */
     public String getGatewayUrl() {
         return this.gatewayUrl;
     }
+    /**
+     * Custom hostname configuration of the API Management service.
+     * 
+     */
     public List<HostnameConfigurationResponse> getHostnameConfigurations() {
         return this.hostnameConfigurations == null ? List.of() : this.hostnameConfigurations;
     }
+    /**
+     * Resource ID.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Managed service identity of the Api Management service.
+     * 
+     */
     public Optional<ApiManagementServiceIdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
+    /**
+     * Resource location.
+     * 
+     */
     public String getLocation() {
         return this.location;
     }
+    /**
+     * Management API endpoint URL of the API Management service.
+     * 
+     */
     public String getManagementApiUrl() {
         return this.managementApiUrl;
     }
+    /**
+     * Resource name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Email address from which the notification will be sent.
+     * 
+     */
     public Optional<String> getNotificationSenderEmail() {
         return Optional.ofNullable(this.notificationSenderEmail);
     }
+    /**
+     * Publisher portal endpoint Url of the API Management service.
+     * 
+     */
     public String getPortalUrl() {
         return this.portalUrl;
     }
+    /**
+     * Private Static Load Balanced IP addresses of the API Management service in Primary region which is deployed in an Internal Virtual Network. Available only for Basic, Standard, Premium and Isolated SKU.
+     * 
+     */
     public List<String> getPrivateIPAddresses() {
         return this.privateIPAddresses;
     }
+    /**
+     * The current provisioning state of the API Management service which can be one of the following: Created/Activating/Succeeded/Updating/Failed/Stopped/Terminating/TerminationFailed/Deleted.
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Public Static Load Balanced IP addresses of the API Management service in Primary region. Available only for Basic, Standard, Premium and Isolated SKU.
+     * 
+     */
     public List<String> getPublicIPAddresses() {
         return this.publicIPAddresses;
     }
+    /**
+     * Publisher email.
+     * 
+     */
     public String getPublisherEmail() {
         return this.publisherEmail;
     }
+    /**
+     * Publisher name.
+     * 
+     */
     public String getPublisherName() {
         return this.publisherName;
     }
+    /**
+     * Undelete Api Management Service if it was previously soft-deleted. If this flag is specified and set to True all other properties will be ignored.
+     * 
+     */
     public Optional<Boolean> getRestore() {
         return Optional.ofNullable(this.restore);
     }
+    /**
+     * SCM endpoint URL of the API Management service.
+     * 
+     */
     public String getScmUrl() {
         return this.scmUrl;
     }
+    /**
+     * SKU properties of the API Management service.
+     * 
+     */
     public ApiManagementServiceSkuPropertiesResponse getSku() {
         return this.sku;
     }
+    /**
+     * Resource tags.
+     * 
+     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+    /**
+     * The provisioning state of the API Management service, which is targeted by the long running operation started on the service.
+     * 
+     */
     public String getTargetProvisioningState() {
         return this.targetProvisioningState;
     }
+    /**
+     * Resource type for API Management resource is set to Microsoft.ApiManagement.
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * Virtual network configuration of the API Management service.
+     * 
+     */
     public Optional<VirtualNetworkConfigurationResponse> getVirtualNetworkConfiguration() {
         return Optional.ofNullable(this.virtualNetworkConfiguration);
     }
+    /**
+     * The type of VPN in which API Management service needs to be configured in. None (Default Value) means the API Management service is not part of any Virtual Network, External means the API Management deployment is set up inside a Virtual Network having an Internet Facing Endpoint, and Internal means that API Management deployment is setup inside a Virtual Network having an Intranet Facing Endpoint only.
+     * 
+     */
     public Optional<String> getVirtualNetworkType() {
         return Optional.ofNullable(this.virtualNetworkType);
     }
+    /**
+     * A list of availability zones denoting where the resource needs to come from.
+     * 
+     */
     public List<String> getZones() {
         return this.zones == null ? List.of() : this.zones;
     }

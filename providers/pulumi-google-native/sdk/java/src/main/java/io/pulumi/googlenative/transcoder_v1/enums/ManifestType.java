@@ -8,10 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Required. Type of the manifest, can be `HLS` or `DASH`.
+     * 
+     */
     @EnumType
     public enum ManifestType {
+        /**
+         * The manifest type is not specified.
+         * 
+         */
         ManifestTypeUnspecified("MANIFEST_TYPE_UNSPECIFIED"),
+        /**
+         * Create `HLS` manifest. The corresponding file extension is `.m3u8`.
+         * 
+         */
         Hls("HLS"),
+        /**
+         * Create `DASH` manifest. The corresponding file extension is `.mpd`.
+         * 
+         */
         Dash("DASH");
 
         private final String value;

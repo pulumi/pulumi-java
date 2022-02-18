@@ -14,10 +14,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class Container {
+    /**
+     * The launch command for the container.
+     * 
+     */
     private final @Nullable List<String> command;
+    /**
+     * The name of the container.
+     * 
+     */
     private final @Nullable String containerName;
+    /**
+     * The environment variables of the container.
+     * 
+     */
     private final @Nullable List<ContainerEnvironmentVariable> environment;
+    /**
+     * The name of the image used for the container.
+     * 
+     */
     private final @Nullable String image;
+    /**
+     * The open firewall ports of the container.
+     * 
+     */
     private final @Nullable List<ContainerPortInfo> ports;
 
     @OutputCustomType.Constructor({"command","containerName","environment","image","ports"})
@@ -34,18 +54,38 @@ public final class Container {
         this.ports = ports;
     }
 
+    /**
+     * The launch command for the container.
+     * 
+     */
     public List<String> getCommand() {
         return this.command == null ? List.of() : this.command;
     }
+    /**
+     * The name of the container.
+     * 
+     */
     public Optional<String> getContainerName() {
         return Optional.ofNullable(this.containerName);
     }
+    /**
+     * The environment variables of the container.
+     * 
+     */
     public List<ContainerEnvironmentVariable> getEnvironment() {
         return this.environment == null ? List.of() : this.environment;
     }
+    /**
+     * The name of the image used for the container.
+     * 
+     */
     public Optional<String> getImage() {
         return Optional.ofNullable(this.image);
     }
+    /**
+     * The open firewall ports of the container.
+     * 
+     */
     public List<ContainerPortInfo> getPorts() {
         return this.ports == null ? List.of() : this.ports;
     }

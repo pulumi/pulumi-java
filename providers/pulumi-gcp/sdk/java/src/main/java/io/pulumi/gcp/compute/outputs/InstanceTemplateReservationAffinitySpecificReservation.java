@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class InstanceTemplateReservationAffinitySpecificReservation {
+    /**
+     * Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify compute.googleapis.com/reservation-name as the key and specify the name of your reservation as the only value.
+     * 
+     */
     private final String key;
+    /**
+     * Corresponds to the label values of a reservation resource.
+     * 
+     */
     private final List<String> values;
 
     @OutputCustomType.Constructor({"key","values"})
@@ -21,9 +29,17 @@ public final class InstanceTemplateReservationAffinitySpecificReservation {
         this.values = Objects.requireNonNull(values);
     }
 
+    /**
+     * Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify compute.googleapis.com/reservation-name as the key and specify the name of your reservation as the only value.
+     * 
+     */
     public String getKey() {
         return this.key;
     }
+    /**
+     * Corresponds to the label values of a reservation resource.
+     * 
+     */
     public List<String> getValues() {
         return this.values;
     }

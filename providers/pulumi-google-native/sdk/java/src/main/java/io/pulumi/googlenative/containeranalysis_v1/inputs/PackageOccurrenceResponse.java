@@ -10,10 +10,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Details on how a particular software package was installed on a system.
+ * 
+ */
 public final class PackageOccurrenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PackageOccurrenceResponse Empty = new PackageOccurrenceResponse();
 
+    /**
+     * All of the places within the filesystem versions of this package have been found.
+     * 
+     */
     @InputImport(name="location", required=true)
     private final List<LocationResponse> location;
 
@@ -21,6 +29,10 @@ public final class PackageOccurrenceResponse extends io.pulumi.resources.InvokeA
         return this.location;
     }
 
+    /**
+     * The name of the installed package.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

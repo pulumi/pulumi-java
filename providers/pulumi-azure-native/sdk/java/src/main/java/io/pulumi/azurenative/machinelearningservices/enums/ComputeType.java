@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The type of compute
+     * 
+     */
     @EnumType
     public enum ComputeType {
         AKS("AKS"),

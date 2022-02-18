@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The protocol to use in test evaluation.
+     * 
+     */
     @EnumType
     public enum ConnectionMonitorTestConfigurationProtocol {
         Tcp("Tcp"),

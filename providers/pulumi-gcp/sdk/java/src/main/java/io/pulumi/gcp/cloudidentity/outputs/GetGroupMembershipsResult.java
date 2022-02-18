@@ -12,7 +12,15 @@ import java.util.Objects;
 @OutputCustomType
 public final class GetGroupMembershipsResult {
     private final String group;
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
+    /**
+     * The list of memberships under the given group. Structure is documented below.
+     * 
+     */
     private final List<GetGroupMembershipsMembership> memberships;
 
     @OutputCustomType.Constructor({"group","id","memberships"})
@@ -28,9 +36,17 @@ public final class GetGroupMembershipsResult {
     public String getGroup() {
         return this.group;
     }
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * The list of memberships under the given group. Structure is documented below.
+     * 
+     */
     public List<GetGroupMembershipsMembership> getMemberships() {
         return this.memberships;
     }

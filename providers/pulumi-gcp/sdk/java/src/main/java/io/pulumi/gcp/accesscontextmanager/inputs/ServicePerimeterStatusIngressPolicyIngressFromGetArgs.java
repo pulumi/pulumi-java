@@ -16,6 +16,12 @@ public final class ServicePerimeterStatusIngressPolicyIngressFromGetArgs extends
 
     public static final ServicePerimeterStatusIngressPolicyIngressFromGetArgs Empty = new ServicePerimeterStatusIngressPolicyIngressFromGetArgs();
 
+    /**
+     * A list of identities that are allowed access through this `EgressPolicy`.
+     * Should be in the format of email address. The email address should
+     * represent individual user or service account only.
+     * 
+     */
     @InputImport(name="identities")
     private final @Nullable Input<List<String>> identities;
 
@@ -23,6 +29,13 @@ public final class ServicePerimeterStatusIngressPolicyIngressFromGetArgs extends
         return this.identities == null ? Input.empty() : this.identities;
     }
 
+    /**
+     * Specifies the type of identities that are allowed access to outside the
+     * perimeter. If left unspecified, then members of `identities` field will
+     * be allowed access.
+     * Possible values are `IDENTITY_TYPE_UNSPECIFIED`, `ANY_IDENTITY`, `ANY_USER_ACCOUNT`, and `ANY_SERVICE_ACCOUNT`.
+     * 
+     */
     @InputImport(name="identityType")
     private final @Nullable Input<String> identityType;
 
@@ -30,6 +43,11 @@ public final class ServicePerimeterStatusIngressPolicyIngressFromGetArgs extends
         return this.identityType == null ? Input.empty() : this.identityType;
     }
 
+    /**
+     * Sources that this `IngressPolicy` authorizes access from.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="sources")
     private final @Nullable Input<List<ServicePerimeterStatusIngressPolicyIngressFromSourceGetArgs>> sources;
 

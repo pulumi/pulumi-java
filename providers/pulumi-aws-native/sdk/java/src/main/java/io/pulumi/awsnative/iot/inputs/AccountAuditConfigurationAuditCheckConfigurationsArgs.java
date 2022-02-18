@@ -10,6 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specifies which audit checks are enabled and disabled for this account.
+ * 
+ */
 public final class AccountAuditConfigurationAuditCheckConfigurationsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AccountAuditConfigurationAuditCheckConfigurationsArgs Empty = new AccountAuditConfigurationAuditCheckConfigurationsArgs();

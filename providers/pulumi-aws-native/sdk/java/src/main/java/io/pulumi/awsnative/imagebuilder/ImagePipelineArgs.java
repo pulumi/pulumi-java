@@ -19,6 +19,10 @@ public final class ImagePipelineArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ImagePipelineArgs Empty = new ImagePipelineArgs();
 
+    /**
+     * The Amazon Resource Name (ARN) of the container recipe that defines how images are configured and tested.
+     * 
+     */
     @InputImport(name="containerRecipeArn")
     private final @Nullable Input<String> containerRecipeArn;
 
@@ -26,6 +30,10 @@ public final class ImagePipelineArgs extends io.pulumi.resources.ResourceArgs {
         return this.containerRecipeArn == null ? Input.empty() : this.containerRecipeArn;
     }
 
+    /**
+     * The description of the image pipeline.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -33,6 +41,10 @@ public final class ImagePipelineArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The Amazon Resource Name (ARN) of the distribution configuration associated with this image pipeline.
+     * 
+     */
     @InputImport(name="distributionConfigurationArn")
     private final @Nullable Input<String> distributionConfigurationArn;
 
@@ -40,6 +52,10 @@ public final class ImagePipelineArgs extends io.pulumi.resources.ResourceArgs {
         return this.distributionConfigurationArn == null ? Input.empty() : this.distributionConfigurationArn;
     }
 
+    /**
+     * Collects additional information about the image being created, including the operating system (OS) version and package list.
+     * 
+     */
     @InputImport(name="enhancedImageMetadataEnabled")
     private final @Nullable Input<Boolean> enhancedImageMetadataEnabled;
 
@@ -47,6 +63,10 @@ public final class ImagePipelineArgs extends io.pulumi.resources.ResourceArgs {
         return this.enhancedImageMetadataEnabled == null ? Input.empty() : this.enhancedImageMetadataEnabled;
     }
 
+    /**
+     * The Amazon Resource Name (ARN) of the image recipe that defines how images are configured, tested, and assessed.
+     * 
+     */
     @InputImport(name="imageRecipeArn")
     private final @Nullable Input<String> imageRecipeArn;
 
@@ -54,6 +74,10 @@ public final class ImagePipelineArgs extends io.pulumi.resources.ResourceArgs {
         return this.imageRecipeArn == null ? Input.empty() : this.imageRecipeArn;
     }
 
+    /**
+     * The image tests configuration of the image pipeline.
+     * 
+     */
     @InputImport(name="imageTestsConfiguration")
     private final @Nullable Input<ImagePipelineImageTestsConfigurationArgs> imageTestsConfiguration;
 
@@ -61,6 +85,10 @@ public final class ImagePipelineArgs extends io.pulumi.resources.ResourceArgs {
         return this.imageTestsConfiguration == null ? Input.empty() : this.imageTestsConfiguration;
     }
 
+    /**
+     * The Amazon Resource Name (ARN) of the infrastructure configuration associated with this image pipeline.
+     * 
+     */
     @InputImport(name="infrastructureConfigurationArn")
     private final @Nullable Input<String> infrastructureConfigurationArn;
 
@@ -68,6 +96,10 @@ public final class ImagePipelineArgs extends io.pulumi.resources.ResourceArgs {
         return this.infrastructureConfigurationArn == null ? Input.empty() : this.infrastructureConfigurationArn;
     }
 
+    /**
+     * The name of the image pipeline.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -75,6 +107,10 @@ public final class ImagePipelineArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The schedule of the image pipeline.
+     * 
+     */
     @InputImport(name="schedule")
     private final @Nullable Input<ImagePipelineScheduleArgs> schedule;
 
@@ -82,6 +118,10 @@ public final class ImagePipelineArgs extends io.pulumi.resources.ResourceArgs {
         return this.schedule == null ? Input.empty() : this.schedule;
     }
 
+    /**
+     * The status of the image pipeline.
+     * 
+     */
     @InputImport(name="status")
     private final @Nullable Input<ImagePipelineStatus> status;
 
@@ -89,6 +129,10 @@ public final class ImagePipelineArgs extends io.pulumi.resources.ResourceArgs {
         return this.status == null ? Input.empty() : this.status;
     }
 
+    /**
+     * The tags of this image pipeline.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Object> tags;
 

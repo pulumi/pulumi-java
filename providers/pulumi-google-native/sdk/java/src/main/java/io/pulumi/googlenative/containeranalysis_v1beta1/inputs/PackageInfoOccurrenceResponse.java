@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * PackageInfoOccurrence represents an SPDX Package Information section: https://spdx.github.io/spdx-spec/3-package-information/
+ * 
+ */
 public final class PackageInfoOccurrenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PackageInfoOccurrenceResponse Empty = new PackageInfoOccurrenceResponse();
 
+    /**
+     * A place for the SPDX file creator to record any general comments about the package being described
+     * 
+     */
     @InputImport(name="comment", required=true)
     private final String comment;
 
@@ -20,6 +28,10 @@ public final class PackageInfoOccurrenceResponse extends io.pulumi.resources.Inv
         return this.comment;
     }
 
+    /**
+     * Provide the actual file name of the package, or path of the directory being treated as a package
+     * 
+     */
     @InputImport(name="filename", required=true)
     private final String filename;
 
@@ -27,6 +39,10 @@ public final class PackageInfoOccurrenceResponse extends io.pulumi.resources.Inv
         return this.filename;
     }
 
+    /**
+     * Provide a place for the SPDX file creator to record a web site that serves as the package's home page
+     * 
+     */
     @InputImport(name="homePage", required=true)
     private final String homePage;
 
@@ -34,6 +50,10 @@ public final class PackageInfoOccurrenceResponse extends io.pulumi.resources.Inv
         return this.homePage;
     }
 
+    /**
+     * package or alternative values, if the governing license cannot be determined
+     * 
+     */
     @InputImport(name="licenseConcluded", required=true)
     private final LicenseResponse licenseConcluded;
 
@@ -41,6 +61,10 @@ public final class PackageInfoOccurrenceResponse extends io.pulumi.resources.Inv
         return this.licenseConcluded;
     }
 
+    /**
+     * The type of package: OS, MAVEN, GO, GO_STDLIB, etc.
+     * 
+     */
     @InputImport(name="packageType", required=true)
     private final String packageType;
 
@@ -48,6 +72,10 @@ public final class PackageInfoOccurrenceResponse extends io.pulumi.resources.Inv
         return this.packageType;
     }
 
+    /**
+     * Provide a place for the SPDX file creator to record any relevant background information or additional comments about the origin of the package
+     * 
+     */
     @InputImport(name="sourceInfo", required=true)
     private final String sourceInfo;
 
@@ -55,6 +83,10 @@ public final class PackageInfoOccurrenceResponse extends io.pulumi.resources.Inv
         return this.sourceInfo;
     }
 
+    /**
+     * A short description of the package
+     * 
+     */
     @InputImport(name="summaryDescription", required=true)
     private final String summaryDescription;
 
@@ -62,6 +94,10 @@ public final class PackageInfoOccurrenceResponse extends io.pulumi.resources.Inv
         return this.summaryDescription;
     }
 
+    /**
+     * Identify the full name of the package as given by the Package Originator
+     * 
+     */
     @InputImport(name="title", required=true)
     private final String title;
 
@@ -69,6 +105,10 @@ public final class PackageInfoOccurrenceResponse extends io.pulumi.resources.Inv
         return this.title;
     }
 
+    /**
+     * Identify the version of the package
+     * 
+     */
     @InputImport(name="version", required=true)
     private final String version;
 

@@ -12,6 +12,10 @@ public final class GetWebAppSourceControlArgs extends io.pulumi.resources.Invoke
 
     public static final GetWebAppSourceControlArgs Empty = new GetWebAppSourceControlArgs();
 
+    /**
+     * Name of the app.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -19,6 +23,10 @@ public final class GetWebAppSourceControlArgs extends io.pulumi.resources.Invoke
         return this.name;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

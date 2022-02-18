@@ -14,6 +14,10 @@ public final class CxPageEntryFulfillmentMessageArgs extends io.pulumi.resources
 
     public static final CxPageEntryFulfillmentMessageArgs Empty = new CxPageEntryFulfillmentMessageArgs();
 
+    /**
+     * A collection of text responses.
+     * 
+     */
     @InputImport(name="text")
     private final @Nullable Input<CxPageEntryFulfillmentMessageTextArgs> text;
 

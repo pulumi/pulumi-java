@@ -10,7 +10,15 @@ import java.util.StringJoiner;
 
     @EnumType
     public enum NetworkSecurityGroupRuleAccess {
+        /**
+         * Allow access.
+         * 
+         */
         Allow("Allow"),
+        /**
+         * Deny access.
+         * 
+         */
         Deny("Deny");
 
         private final String value;

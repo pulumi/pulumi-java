@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Kind of synchronization setting.
+     * 
+     */
     @EnumType
     public enum SynchronizationSettingKind {
         ScheduleBased("ScheduleBased");

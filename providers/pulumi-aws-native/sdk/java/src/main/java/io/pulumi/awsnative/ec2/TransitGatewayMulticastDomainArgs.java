@@ -17,6 +17,10 @@ public final class TransitGatewayMulticastDomainArgs extends io.pulumi.resources
 
     public static final TransitGatewayMulticastDomainArgs Empty = new TransitGatewayMulticastDomainArgs();
 
+    /**
+     * The options for the transit gateway multicast domain.
+     * 
+     */
     @InputImport(name="options")
     private final @Nullable Input<OptionsPropertiesArgs> options;
 
@@ -24,6 +28,10 @@ public final class TransitGatewayMulticastDomainArgs extends io.pulumi.resources
         return this.options == null ? Input.empty() : this.options;
     }
 
+    /**
+     * The tags for the transit gateway multicast domain.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<TransitGatewayMulticastDomainTagArgs>> tags;
 
@@ -31,6 +39,10 @@ public final class TransitGatewayMulticastDomainArgs extends io.pulumi.resources
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The ID of the transit gateway.
+     * 
+     */
     @InputImport(name="transitGatewayId", required=true)
     private final Input<String> transitGatewayId;
 

@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * This represents a particular channel of distribution for a given package. E.g., Debian's jessie-backports dpkg mirror.
+ * 
+ */
 public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DistributionArgs Empty = new DistributionArgs();
 
+    /**
+     * The CPU architecture for which packages in this distribution channel were built.
+     * 
+     */
     @InputImport(name="architecture")
     private final @Nullable Input<DistributionArchitecture> architecture;
 
@@ -23,6 +31,10 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
         return this.architecture == null ? Input.empty() : this.architecture;
     }
 
+    /**
+     * The cpe_uri in [CPE format](https://cpe.mitre.org/specification/) denoting the package manager version distributing a package.
+     * 
+     */
     @InputImport(name="cpeUri", required=true)
     private final Input<String> cpeUri;
 
@@ -30,6 +42,10 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
         return this.cpeUri;
     }
 
+    /**
+     * The distribution channel-specific description of this package.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -37,6 +53,10 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The latest available version of this package in this distribution channel.
+     * 
+     */
     @InputImport(name="latestVersion")
     private final @Nullable Input<VersionArgs> latestVersion;
 
@@ -44,6 +64,10 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
         return this.latestVersion == null ? Input.empty() : this.latestVersion;
     }
 
+    /**
+     * A freeform string denoting the maintainer of this package.
+     * 
+     */
     @InputImport(name="maintainer")
     private final @Nullable Input<String> maintainer;
 
@@ -51,6 +75,10 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
         return this.maintainer == null ? Input.empty() : this.maintainer;
     }
 
+    /**
+     * The distribution channel-specific homepage for this package.
+     * 
+     */
     @InputImport(name="url")
     private final @Nullable Input<String> url;
 

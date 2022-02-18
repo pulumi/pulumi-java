@@ -15,6 +15,11 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
 
     public static final GroupState Empty = new GroupState();
 
+    /**
+     * A user-assigned name for this group, used only for display
+     * purposes.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -22,6 +27,11 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The filter used to determine which monitored resources
+     * belong to this group.
+     * 
+     */
     @InputImport(name="filter")
     private final @Nullable Input<String> filter;
 
@@ -29,6 +39,12 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
         return this.filter == null ? Input.empty() : this.filter;
     }
 
+    /**
+     * If true, the members of this group are considered to be a
+     * cluster. The system can perform additional analysis on
+     * groups that are clusters.
+     * 
+     */
     @InputImport(name="isCluster")
     private final @Nullable Input<Boolean> isCluster;
 
@@ -36,6 +52,10 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
         return this.isCluster == null ? Input.empty() : this.isCluster;
     }
 
+    /**
+     * A unique identifier for this group. The format is "projects/{project_id_or_number}/groups/{group_id}".
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -43,6 +63,12 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The name of the group's parent, if it has one. The format is
+     * "projects/{project_id_or_number}/groups/{group_id}". For
+     * groups with no parent, parentName is the empty string, "".
+     * 
+     */
     @InputImport(name="parentName")
     private final @Nullable Input<String> parentName;
 
@@ -50,6 +76,11 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
         return this.parentName == null ? Input.empty() : this.parentName;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

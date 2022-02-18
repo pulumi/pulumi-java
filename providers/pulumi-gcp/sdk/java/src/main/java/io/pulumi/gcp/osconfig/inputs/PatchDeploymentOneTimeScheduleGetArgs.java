@@ -13,6 +13,11 @@ public final class PatchDeploymentOneTimeScheduleGetArgs extends io.pulumi.resou
 
     public static final PatchDeploymentOneTimeScheduleGetArgs Empty = new PatchDeploymentOneTimeScheduleGetArgs();
 
+    /**
+     * The desired patch job execution time. A timestamp in RFC3339 UTC "Zulu" format,
+     * accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * 
+     */
     @InputImport(name="executeTime", required=true)
     private final Input<String> executeTime;
 

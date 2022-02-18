@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * describe the properties of a security assessment object reference (by key)
+ * 
+ */
 public final class AssignedComponentItemResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AssignedComponentItemResponse Empty = new AssignedComponentItemResponse();
 
+    /**
+     * unique key to a security assessment object
+     * 
+     */
     @InputImport(name="key")
     private final @Nullable String key;
 

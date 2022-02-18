@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class OSDiskImageEncryptionResponse {
+    /**
+     * A relative URI containing the resource ID of the disk encryption set.
+     * 
+     */
     private final @Nullable String diskEncryptionSetId;
 
     @OutputCustomType.Constructor({"diskEncryptionSetId"})
@@ -18,6 +22,10 @@ public final class OSDiskImageEncryptionResponse {
         this.diskEncryptionSetId = diskEncryptionSetId;
     }
 
+    /**
+     * A relative URI containing the resource ID of the disk encryption set.
+     * 
+     */
     public Optional<String> getDiskEncryptionSetId() {
         return Optional.ofNullable(this.diskEncryptionSetId);
     }

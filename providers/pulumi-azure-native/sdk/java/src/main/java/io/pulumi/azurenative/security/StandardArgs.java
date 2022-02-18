@@ -17,6 +17,10 @@ public final class StandardArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StandardArgs Empty = new StandardArgs();
 
+    /**
+     * category of the standard provided
+     * 
+     */
     @InputImport(name="category")
     private final @Nullable Input<String> category;
 
@@ -24,6 +28,10 @@ public final class StandardArgs extends io.pulumi.resources.ResourceArgs {
         return this.category == null ? Input.empty() : this.category;
     }
 
+    /**
+     * List of component objects containing component unique keys (such as assessment keys) to apply to standard scope.  Currently only supports assessment keys.
+     * 
+     */
     @InputImport(name="components")
     private final @Nullable Input<List<StandardComponentPropertiesArgs>> components;
 
@@ -31,6 +39,10 @@ public final class StandardArgs extends io.pulumi.resources.ResourceArgs {
         return this.components == null ? Input.empty() : this.components;
     }
 
+    /**
+     * description of the standard
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -38,6 +50,10 @@ public final class StandardArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * display name of the standard, equivalent to the standardId
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -45,6 +61,10 @@ public final class StandardArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * Kind of the resource
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -52,6 +72,10 @@ public final class StandardArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Location where the resource is stored
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -59,6 +83,10 @@ public final class StandardArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the resource group within the user's subscription. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -66,6 +94,10 @@ public final class StandardArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The Security Standard key - unique key for the standard type
+     * 
+     */
     @InputImport(name="standardId")
     private final @Nullable Input<String> standardId;
 
@@ -73,6 +105,10 @@ public final class StandardArgs extends io.pulumi.resources.ResourceArgs {
         return this.standardId == null ? Input.empty() : this.standardId;
     }
 
+    /**
+     * A list of key value pairs that describe the resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

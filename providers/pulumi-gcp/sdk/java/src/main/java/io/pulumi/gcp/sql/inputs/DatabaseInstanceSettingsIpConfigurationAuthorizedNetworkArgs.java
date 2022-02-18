@@ -14,6 +14,11 @@ public final class DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs 
 
     public static final DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs Empty = new DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs();
 
+    /**
+     * The [RFC 3339](https://tools.ietf.org/html/rfc3339)
+     * formatted date time string indicating when this whitelist expires.
+     * 
+     */
     @InputImport(name="expirationTime")
     private final @Nullable Input<String> expirationTime;
 
@@ -21,6 +26,10 @@ public final class DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs 
         return this.expirationTime == null ? Input.empty() : this.expirationTime;
     }
 
+    /**
+     * A name for this whitelist entry.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -28,6 +37,12 @@ public final class DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs 
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * A CIDR notation IPv4 or IPv6 address that is allowed to
+     * access this instance. Must be set even if other two attributes are not for
+     * the whitelist to become active.
+     * 
+     */
     @InputImport(name="value", required=true)
     private final Input<String> value;
 

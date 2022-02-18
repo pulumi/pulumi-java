@@ -15,6 +15,10 @@ public final class TerminateNotificationProfileArgs extends io.pulumi.resources.
 
     public static final TerminateNotificationProfileArgs Empty = new TerminateNotificationProfileArgs();
 
+    /**
+     * Specifies whether the Terminate Scheduled event is enabled or disabled.
+     * 
+     */
     @InputImport(name="enable")
     private final @Nullable Input<Boolean> enable;
 
@@ -22,6 +26,10 @@ public final class TerminateNotificationProfileArgs extends io.pulumi.resources.
         return this.enable == null ? Input.empty() : this.enable;
     }
 
+    /**
+     * Configurable length of time a Virtual Machine being deleted will have to potentially approve the Terminate Scheduled Event before the event is auto approved (timed out). The configuration must be specified in ISO 8601 format, the default value is 5 minutes (PT5M)
+     * 
+     */
     @InputImport(name="notBeforeTimeout")
     private final @Nullable Input<String> notBeforeTimeout;
 

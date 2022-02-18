@@ -12,6 +12,10 @@ public final class GetPartnerTopicEventSubscriptionDeliveryAttributesArgs extend
 
     public static final GetPartnerTopicEventSubscriptionDeliveryAttributesArgs Empty = new GetPartnerTopicEventSubscriptionDeliveryAttributesArgs();
 
+    /**
+     * Name of the event subscription to be created. Event subscription names must be between 3 and 100 characters in length and use alphanumeric letters only.
+     * 
+     */
     @InputImport(name="eventSubscriptionName", required=true)
     private final String eventSubscriptionName;
 
@@ -19,6 +23,10 @@ public final class GetPartnerTopicEventSubscriptionDeliveryAttributesArgs extend
         return this.eventSubscriptionName;
     }
 
+    /**
+     * Name of the partner topic.
+     * 
+     */
     @InputImport(name="partnerTopicName", required=true)
     private final String partnerTopicName;
 
@@ -26,6 +34,10 @@ public final class GetPartnerTopicEventSubscriptionDeliveryAttributesArgs extend
         return this.partnerTopicName;
     }
 
+    /**
+     * The name of the resource group within the user's subscription.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

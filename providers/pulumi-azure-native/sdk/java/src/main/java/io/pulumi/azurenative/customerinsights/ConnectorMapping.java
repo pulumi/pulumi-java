@@ -15,111 +15,268 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * The connector mapping resource format.
+ * API Version: 2017-04-26.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:customerinsights:ConnectorMapping sdkTestHub/testConnector8858/testMapping12491 /subscriptions/c909e979-ef71-4def-a970-bc7c154db8c5/resourceGroups/TestHubRG/providers/Microsoft.CustomerInsights/hubs/sdkTestHub/connectors/testConnector8858/mappings/testMapping12491 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:customerinsights:ConnectorMapping")
 public class ConnectorMapping extends io.pulumi.resources.CustomResource {
+    /**
+     * The connector mapping name
+     * 
+     */
     @OutputExport(name="connectorMappingName", type=String.class, parameters={})
     private Output<String> connectorMappingName;
 
+    /**
+     * @return The connector mapping name
+     * 
+     */
     public Output<String> getConnectorMappingName() {
         return this.connectorMappingName;
     }
+    /**
+     * The connector name.
+     * 
+     */
     @OutputExport(name="connectorName", type=String.class, parameters={})
     private Output<String> connectorName;
 
+    /**
+     * @return The connector name.
+     * 
+     */
     public Output<String> getConnectorName() {
         return this.connectorName;
     }
+    /**
+     * Type of connector.
+     * 
+     */
     @OutputExport(name="connectorType", type=String.class, parameters={})
     private Output</* @Nullable */ String> connectorType;
 
+    /**
+     * @return Type of connector.
+     * 
+     */
     public Output</* @Nullable */ String> getConnectorType() {
         return this.connectorType;
     }
+    /**
+     * The created time.
+     * 
+     */
     @OutputExport(name="created", type=String.class, parameters={})
     private Output<String> created;
 
+    /**
+     * @return The created time.
+     * 
+     */
     public Output<String> getCreated() {
         return this.created;
     }
+    /**
+     * The DataFormat ID.
+     * 
+     */
     @OutputExport(name="dataFormatId", type=String.class, parameters={})
     private Output<String> dataFormatId;
 
+    /**
+     * @return The DataFormat ID.
+     * 
+     */
     public Output<String> getDataFormatId() {
         return this.dataFormatId;
     }
+    /**
+     * The description of the connector mapping.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return The description of the connector mapping.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * Display name for the connector mapping.
+     * 
+     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
+    /**
+     * @return Display name for the connector mapping.
+     * 
+     */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
+    /**
+     * Defines which entity type the file should map to.
+     * 
+     */
     @OutputExport(name="entityType", type=String.class, parameters={})
     private Output<String> entityType;
 
+    /**
+     * @return Defines which entity type the file should map to.
+     * 
+     */
     public Output<String> getEntityType() {
         return this.entityType;
     }
+    /**
+     * The mapping entity name.
+     * 
+     */
     @OutputExport(name="entityTypeName", type=String.class, parameters={})
     private Output<String> entityTypeName;
 
+    /**
+     * @return The mapping entity name.
+     * 
+     */
     public Output<String> getEntityTypeName() {
         return this.entityTypeName;
     }
+    /**
+     * The last modified time.
+     * 
+     */
     @OutputExport(name="lastModified", type=String.class, parameters={})
     private Output<String> lastModified;
 
+    /**
+     * @return The last modified time.
+     * 
+     */
     public Output<String> getLastModified() {
         return this.lastModified;
     }
+    /**
+     * The properties of the mapping.
+     * 
+     */
     @OutputExport(name="mappingProperties", type=ConnectorMappingPropertiesResponse.class, parameters={})
     private Output<ConnectorMappingPropertiesResponse> mappingProperties;
 
+    /**
+     * @return The properties of the mapping.
+     * 
+     */
     public Output<ConnectorMappingPropertiesResponse> getMappingProperties() {
         return this.mappingProperties;
     }
+    /**
+     * Resource name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The next run time based on customer's settings.
+     * 
+     */
     @OutputExport(name="nextRunTime", type=String.class, parameters={})
     private Output<String> nextRunTime;
 
+    /**
+     * @return The next run time based on customer's settings.
+     * 
+     */
     public Output<String> getNextRunTime() {
         return this.nextRunTime;
     }
+    /**
+     * The RunId.
+     * 
+     */
     @OutputExport(name="runId", type=String.class, parameters={})
     private Output<String> runId;
 
+    /**
+     * @return The RunId.
+     * 
+     */
     public Output<String> getRunId() {
         return this.runId;
     }
+    /**
+     * State of connector mapping.
+     * 
+     */
     @OutputExport(name="state", type=String.class, parameters={})
     private Output<String> state;
 
+    /**
+     * @return State of connector mapping.
+     * 
+     */
     public Output<String> getState() {
         return this.state;
     }
+    /**
+     * The hub name.
+     * 
+     */
     @OutputExport(name="tenantId", type=String.class, parameters={})
     private Output<String> tenantId;
 
+    /**
+     * @return The hub name.
+     * 
+     */
     public Output<String> getTenantId() {
         return this.tenantId;
     }
+    /**
+     * Resource type.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ConnectorMapping(String name, ConnectorMappingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:customerinsights:ConnectorMapping", name, args == null ? ConnectorMappingArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -139,6 +296,14 @@ public class ConnectorMapping extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ConnectorMapping get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ConnectorMapping(name, id, options);
     }

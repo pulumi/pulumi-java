@@ -15,63 +15,145 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * The AWS::NetworkManager::Link type describes a link.
+ * 
+ */
 @ResourceType(type="aws-native:networkmanager:Link")
 public class Link extends io.pulumi.resources.CustomResource {
+    /**
+     * The Bandwidth for the link.
+     * 
+     */
     @OutputExport(name="bandwidth", type=LinkBandwidth.class, parameters={})
     private Output<LinkBandwidth> bandwidth;
 
+    /**
+     * @return The Bandwidth for the link.
+     * 
+     */
     public Output<LinkBandwidth> getBandwidth() {
         return this.bandwidth;
     }
+    /**
+     * The description of the link.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return The description of the link.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * The ID of the global network.
+     * 
+     */
     @OutputExport(name="globalNetworkId", type=String.class, parameters={})
     private Output<String> globalNetworkId;
 
+    /**
+     * @return The ID of the global network.
+     * 
+     */
     public Output<String> getGlobalNetworkId() {
         return this.globalNetworkId;
     }
+    /**
+     * The Amazon Resource Name (ARN) of the link.
+     * 
+     */
     @OutputExport(name="linkArn", type=String.class, parameters={})
     private Output<String> linkArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the link.
+     * 
+     */
     public Output<String> getLinkArn() {
         return this.linkArn;
     }
+    /**
+     * The ID of the link.
+     * 
+     */
     @OutputExport(name="linkId", type=String.class, parameters={})
     private Output<String> linkId;
 
+    /**
+     * @return The ID of the link.
+     * 
+     */
     public Output<String> getLinkId() {
         return this.linkId;
     }
+    /**
+     * The provider of the link.
+     * 
+     */
     @OutputExport(name="provider", type=String.class, parameters={})
     private Output</* @Nullable */ String> provider;
 
+    /**
+     * @return The provider of the link.
+     * 
+     */
     public Output</* @Nullable */ String> getProvider() {
         return this.provider;
     }
+    /**
+     * The ID of the site
+     * 
+     */
     @OutputExport(name="siteId", type=String.class, parameters={})
     private Output<String> siteId;
 
+    /**
+     * @return The ID of the site
+     * 
+     */
     public Output<String> getSiteId() {
         return this.siteId;
     }
+    /**
+     * The tags for the link.
+     * 
+     */
     @OutputExport(name="tags", type=List.class, parameters={LinkTag.class})
     private Output</* @Nullable */ List<LinkTag>> tags;
 
+    /**
+     * @return The tags for the link.
+     * 
+     */
     public Output</* @Nullable */ List<LinkTag>> getTags() {
         return this.tags;
     }
+    /**
+     * The type of the link.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output</* @Nullable */ String> type;
 
+    /**
+     * @return The type of the link.
+     * 
+     */
     public Output</* @Nullable */ String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Link(String name, LinkArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:networkmanager:Link", name, args == null ? LinkArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -87,6 +169,14 @@ public class Link extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Link get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Link(name, id, options);
     }

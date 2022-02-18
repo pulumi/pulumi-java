@@ -9,10 +9,18 @@ import io.pulumi.googlenative.connectors_v1.inputs.SecretResponse;
 import java.util.Objects;
 
 
+/**
+ * Parameters to support JSON Web Token (JWT) Profile for Oauth 2.0 Authorization Grant based authentication. See https://tools.ietf.org/html/rfc7523 for more details.
+ * 
+ */
 public final class Oauth2JwtBearerResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final Oauth2JwtBearerResponse Empty = new Oauth2JwtBearerResponse();
 
+    /**
+     * Secret version reference containing a PKCS#8 PEM-encoded private key associated with the Client Certificate. This private key will be used to sign JWTs used for the jwt-bearer authorization grant. Specified in the form as: `projects/*{@literal /}secrets/*{@literal /}versions/*`.
+     * 
+     */
     @InputImport(name="clientKey", required=true)
     private final SecretResponse clientKey;
 
@@ -20,6 +28,10 @@ public final class Oauth2JwtBearerResponse extends io.pulumi.resources.InvokeArg
         return this.clientKey;
     }
 
+    /**
+     * JwtClaims providers fields to generate the token.
+     * 
+     */
     @InputImport(name="jwtClaims", required=true)
     private final JwtClaimsResponse jwtClaims;
 

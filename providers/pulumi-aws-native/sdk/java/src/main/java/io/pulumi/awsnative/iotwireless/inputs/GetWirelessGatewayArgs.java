@@ -12,6 +12,10 @@ public final class GetWirelessGatewayArgs extends io.pulumi.resources.InvokeArgs
 
     public static final GetWirelessGatewayArgs Empty = new GetWirelessGatewayArgs();
 
+    /**
+     * Id for Wireless Gateway. Returned upon successful create.
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 

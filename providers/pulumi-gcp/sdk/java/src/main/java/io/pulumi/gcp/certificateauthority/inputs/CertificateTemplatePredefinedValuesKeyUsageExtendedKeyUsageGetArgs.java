@@ -14,6 +14,10 @@ public final class CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsageGe
 
     public static final CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsageGetArgs Empty = new CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsageGetArgs();
 
+    /**
+     * Corresponds to OID 1.3.6.1.5.5.7.3.2. Officially described as "TLS WWW client authentication", though regularly used for non-WWW TLS.
+     * 
+     */
     @InputImport(name="clientAuth")
     private final @Nullable Input<Boolean> clientAuth;
 
@@ -21,6 +25,10 @@ public final class CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsageGe
         return this.clientAuth == null ? Input.empty() : this.clientAuth;
     }
 
+    /**
+     * Corresponds to OID 1.3.6.1.5.5.7.3.3. Officially described as "Signing of downloadable executable code client authentication".
+     * 
+     */
     @InputImport(name="codeSigning")
     private final @Nullable Input<Boolean> codeSigning;
 
@@ -28,6 +36,10 @@ public final class CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsageGe
         return this.codeSigning == null ? Input.empty() : this.codeSigning;
     }
 
+    /**
+     * Corresponds to OID 1.3.6.1.5.5.7.3.4. Officially described as "Email protection".
+     * 
+     */
     @InputImport(name="emailProtection")
     private final @Nullable Input<Boolean> emailProtection;
 
@@ -35,6 +47,10 @@ public final class CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsageGe
         return this.emailProtection == null ? Input.empty() : this.emailProtection;
     }
 
+    /**
+     * Corresponds to OID 1.3.6.1.5.5.7.3.9. Officially described as "Signing OCSP responses".
+     * 
+     */
     @InputImport(name="ocspSigning")
     private final @Nullable Input<Boolean> ocspSigning;
 
@@ -42,6 +58,10 @@ public final class CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsageGe
         return this.ocspSigning == null ? Input.empty() : this.ocspSigning;
     }
 
+    /**
+     * Corresponds to OID 1.3.6.1.5.5.7.3.1. Officially described as "TLS WWW server authentication", though regularly used for non-WWW TLS.
+     * 
+     */
     @InputImport(name="serverAuth")
     private final @Nullable Input<Boolean> serverAuth;
 
@@ -49,6 +69,10 @@ public final class CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsageGe
         return this.serverAuth == null ? Input.empty() : this.serverAuth;
     }
 
+    /**
+     * Corresponds to OID 1.3.6.1.5.5.7.3.8. Officially described as "Binding the hash of an object to a time".
+     * 
+     */
     @InputImport(name="timeStamping")
     private final @Nullable Input<Boolean> timeStamping;
 

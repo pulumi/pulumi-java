@@ -16,11 +16,35 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class JobErrorActionResponse {
+    /**
+     * Gets or sets the storage queue message.
+     * 
+     */
     private final @Nullable StorageQueueMessageResponse queueMessage;
+    /**
+     * Gets or sets the http requests.
+     * 
+     */
     private final @Nullable HttpRequestResponse request;
+    /**
+     * Gets or sets the retry policy.
+     * 
+     */
     private final @Nullable RetryPolicyResponse retryPolicy;
+    /**
+     * Gets or sets the service bus queue message.
+     * 
+     */
     private final @Nullable ServiceBusQueueMessageResponse serviceBusQueueMessage;
+    /**
+     * Gets or sets the service bus topic message.
+     * 
+     */
     private final @Nullable ServiceBusTopicMessageResponse serviceBusTopicMessage;
+    /**
+     * Gets or sets the job error action type.
+     * 
+     */
     private final @Nullable String type;
 
     @OutputCustomType.Constructor({"queueMessage","request","retryPolicy","serviceBusQueueMessage","serviceBusTopicMessage","type"})
@@ -39,21 +63,45 @@ public final class JobErrorActionResponse {
         this.type = type;
     }
 
+    /**
+     * Gets or sets the storage queue message.
+     * 
+     */
     public Optional<StorageQueueMessageResponse> getQueueMessage() {
         return Optional.ofNullable(this.queueMessage);
     }
+    /**
+     * Gets or sets the http requests.
+     * 
+     */
     public Optional<HttpRequestResponse> getRequest() {
         return Optional.ofNullable(this.request);
     }
+    /**
+     * Gets or sets the retry policy.
+     * 
+     */
     public Optional<RetryPolicyResponse> getRetryPolicy() {
         return Optional.ofNullable(this.retryPolicy);
     }
+    /**
+     * Gets or sets the service bus queue message.
+     * 
+     */
     public Optional<ServiceBusQueueMessageResponse> getServiceBusQueueMessage() {
         return Optional.ofNullable(this.serviceBusQueueMessage);
     }
+    /**
+     * Gets or sets the service bus topic message.
+     * 
+     */
     public Optional<ServiceBusTopicMessageResponse> getServiceBusTopicMessage() {
         return Optional.ofNullable(this.serviceBusTopicMessage);
     }
+    /**
+     * Gets or sets the job error action type.
+     * 
+     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

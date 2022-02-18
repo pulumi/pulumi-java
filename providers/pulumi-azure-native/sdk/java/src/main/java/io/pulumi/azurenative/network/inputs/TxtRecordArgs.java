@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A TXT record.
+ * 
+ */
 public final class TxtRecordArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TxtRecordArgs Empty = new TxtRecordArgs();
 
+    /**
+     * The text value of this TXT record.
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable Input<List<String>> value;
 

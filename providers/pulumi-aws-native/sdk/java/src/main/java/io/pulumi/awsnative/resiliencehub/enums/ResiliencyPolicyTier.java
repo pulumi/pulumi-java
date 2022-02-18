@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Resiliency Policy Tier.
+     * 
+     */
     @EnumType
     public enum ResiliencyPolicyTier {
         MissionCritical("MissionCritical"),

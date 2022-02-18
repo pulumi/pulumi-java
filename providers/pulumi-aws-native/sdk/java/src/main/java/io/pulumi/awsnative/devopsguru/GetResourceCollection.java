@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetResourceCollection {
+/**
+ * This resource schema represents the ResourceCollection resource in the Amazon DevOps Guru.
+ * 
+ */
     public static CompletableFuture<GetResourceCollectionResult> invokeAsync(GetResourceCollectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:devopsguru:getResourceCollection", TypeShape.of(GetResourceCollectionResult.class), args == null ? GetResourceCollectionArgs.Empty : args, Utilities.withVersion(options));
     }

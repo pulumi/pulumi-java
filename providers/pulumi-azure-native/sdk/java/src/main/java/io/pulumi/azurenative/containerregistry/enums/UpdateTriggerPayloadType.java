@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Type of Payload body for Base image update triggers.
+     * 
+     */
     @EnumType
     public enum UpdateTriggerPayloadType {
         Default("Default"),

@@ -11,11 +11,35 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DiagnosticsStorageAccountConfigResponse {
+    /**
+     * The blob endpoint of the azure storage account.
+     * 
+     */
     private final String blobEndpoint;
+    /**
+     * The protected diagnostics storage key name.
+     * 
+     */
     private final String protectedAccountKeyName;
+    /**
+     * The secondary protected diagnostics storage key name. If one of the storage account keys is rotated the cluster will fallback to using the other.
+     * 
+     */
     private final @Nullable String protectedAccountKeyName2;
+    /**
+     * The queue endpoint of the azure storage account.
+     * 
+     */
     private final String queueEndpoint;
+    /**
+     * The Azure storage account name.
+     * 
+     */
     private final String storageAccountName;
+    /**
+     * The table endpoint of the azure storage account.
+     * 
+     */
     private final String tableEndpoint;
 
     @OutputCustomType.Constructor({"blobEndpoint","protectedAccountKeyName","protectedAccountKeyName2","queueEndpoint","storageAccountName","tableEndpoint"})
@@ -34,21 +58,45 @@ public final class DiagnosticsStorageAccountConfigResponse {
         this.tableEndpoint = Objects.requireNonNull(tableEndpoint);
     }
 
+    /**
+     * The blob endpoint of the azure storage account.
+     * 
+     */
     public String getBlobEndpoint() {
         return this.blobEndpoint;
     }
+    /**
+     * The protected diagnostics storage key name.
+     * 
+     */
     public String getProtectedAccountKeyName() {
         return this.protectedAccountKeyName;
     }
+    /**
+     * The secondary protected diagnostics storage key name. If one of the storage account keys is rotated the cluster will fallback to using the other.
+     * 
+     */
     public Optional<String> getProtectedAccountKeyName2() {
         return Optional.ofNullable(this.protectedAccountKeyName2);
     }
+    /**
+     * The queue endpoint of the azure storage account.
+     * 
+     */
     public String getQueueEndpoint() {
         return this.queueEndpoint;
     }
+    /**
+     * The Azure storage account name.
+     * 
+     */
     public String getStorageAccountName() {
         return this.storageAccountName;
     }
+    /**
+     * The table endpoint of the azure storage account.
+     * 
+     */
     public String getTableEndpoint() {
         return this.tableEndpoint;
     }

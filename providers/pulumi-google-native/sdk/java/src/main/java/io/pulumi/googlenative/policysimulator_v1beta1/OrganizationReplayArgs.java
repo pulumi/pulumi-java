@@ -15,6 +15,10 @@ public final class OrganizationReplayArgs extends io.pulumi.resources.ResourceAr
 
     public static final OrganizationReplayArgs Empty = new OrganizationReplayArgs();
 
+    /**
+     * The configuration used for the `Replay`.
+     * 
+     */
     @InputImport(name="config", required=true)
     private final Input<GoogleCloudPolicysimulatorV1beta1ReplayConfigArgs> config;
 

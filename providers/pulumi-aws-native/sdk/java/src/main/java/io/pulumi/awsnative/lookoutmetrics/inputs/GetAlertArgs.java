@@ -12,6 +12,10 @@ public final class GetAlertArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAlertArgs Empty = new GetAlertArgs();
 
+    /**
+     * ARN assigned to the alert.
+     * 
+     */
     @InputImport(name="arn", required=true)
     private final String arn;
 

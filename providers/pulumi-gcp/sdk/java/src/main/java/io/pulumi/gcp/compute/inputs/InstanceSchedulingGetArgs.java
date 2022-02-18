@@ -18,6 +18,12 @@ public final class InstanceSchedulingGetArgs extends io.pulumi.resources.Resourc
 
     public static final InstanceSchedulingGetArgs Empty = new InstanceSchedulingGetArgs();
 
+    /**
+     * Specifies if the instance should be
+     * restarted if it was terminated by Compute Engine (not a user).
+     * Defaults to true.
+     * 
+     */
     @InputImport(name="automaticRestart")
     private final @Nullable Input<Boolean> automaticRestart;
 
@@ -25,6 +31,10 @@ public final class InstanceSchedulingGetArgs extends io.pulumi.resources.Resourc
         return this.automaticRestart == null ? Input.empty() : this.automaticRestart;
     }
 
+    /**
+     * The minimum number of virtual CPUs this instance will consume when running on a sole-tenant node.
+     * 
+     */
     @InputImport(name="minNodeCpus")
     private final @Nullable Input<Integer> minNodeCpus;
 
@@ -32,6 +42,14 @@ public final class InstanceSchedulingGetArgs extends io.pulumi.resources.Resourc
         return this.minNodeCpus == null ? Input.empty() : this.minNodeCpus;
     }
 
+    /**
+     * Specifies node affinities or anti-affinities
+     * to determine which sole-tenant nodes your instances and managed instance
+     * groups will use as host systems. Read more on sole-tenant node creation
+     * [here](https://cloud.google.com/compute/docs/nodes/create-nodes).
+     * Structure documented below.
+     * 
+     */
     @InputImport(name="nodeAffinities")
     private final @Nullable Input<List<InstanceSchedulingNodeAffinityGetArgs>> nodeAffinities;
 
@@ -39,6 +57,12 @@ public final class InstanceSchedulingGetArgs extends io.pulumi.resources.Resourc
         return this.nodeAffinities == null ? Input.empty() : this.nodeAffinities;
     }
 
+    /**
+     * Describes maintenance behavior for the
+     * instance. Can be MIGRATE or TERMINATE, for more info, read
+     * [here](https://cloud.google.com/compute/docs/instances/setting-instance-scheduling-options).
+     * 
+     */
     @InputImport(name="onHostMaintenance")
     private final @Nullable Input<String> onHostMaintenance;
 
@@ -46,6 +70,12 @@ public final class InstanceSchedulingGetArgs extends io.pulumi.resources.Resourc
         return this.onHostMaintenance == null ? Input.empty() : this.onHostMaintenance;
     }
 
+    /**
+     * Specifies if the instance is preemptible.
+     * If this field is set to true, then `automatic_restart` must be
+     * set to false.  Defaults to false.
+     * 
+     */
     @InputImport(name="preemptible")
     private final @Nullable Input<Boolean> preemptible;
 

@@ -15,6 +15,11 @@ public final class SecurityScanConfigAuthenticationArgs extends io.pulumi.resour
 
     public static final SecurityScanConfigAuthenticationArgs Empty = new SecurityScanConfigAuthenticationArgs();
 
+    /**
+     * Describes authentication configuration that uses a custom account.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="customAccount")
     private final @Nullable Input<SecurityScanConfigAuthenticationCustomAccountArgs> customAccount;
 
@@ -22,6 +27,11 @@ public final class SecurityScanConfigAuthenticationArgs extends io.pulumi.resour
         return this.customAccount == null ? Input.empty() : this.customAccount;
     }
 
+    /**
+     * Describes authentication configuration that uses a Google account.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="googleAccount")
     private final @Nullable Input<SecurityScanConfigAuthenticationGoogleAccountArgs> googleAccount;
 

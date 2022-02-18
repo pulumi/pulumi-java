@@ -20,6 +20,11 @@ public final class TableExternalDataConfigurationGetArgs extends io.pulumi.resou
 
     public static final TableExternalDataConfigurationGetArgs Empty = new TableExternalDataConfigurationGetArgs();
 
+    /**
+     * - Let BigQuery try to autodetect the schema
+     *   and format of the table.
+     * 
+     */
     @InputImport(name="autodetect", required=true)
     private final Input<Boolean> autodetect;
 
@@ -27,6 +32,11 @@ public final class TableExternalDataConfigurationGetArgs extends io.pulumi.resou
         return this.autodetect;
     }
 
+    /**
+     * The compression type of the data source.
+     * Valid values are "NONE" or "GZIP".
+     * 
+     */
     @InputImport(name="compression")
     private final @Nullable Input<String> compression;
 
@@ -34,6 +44,11 @@ public final class TableExternalDataConfigurationGetArgs extends io.pulumi.resou
         return this.compression == null ? Input.empty() : this.compression;
     }
 
+    /**
+     * Additional properties to set if
+     * `source_format` is set to "CSV". Structure is documented below.
+     * 
+     */
     @InputImport(name="csvOptions")
     private final @Nullable Input<TableExternalDataConfigurationCsvOptionsGetArgs> csvOptions;
 
@@ -41,6 +56,12 @@ public final class TableExternalDataConfigurationGetArgs extends io.pulumi.resou
         return this.csvOptions == null ? Input.empty() : this.csvOptions;
     }
 
+    /**
+     * Additional options if
+     * `source_format` is set to "GOOGLE_SHEETS". Structure is
+     * documented below.
+     * 
+     */
     @InputImport(name="googleSheetsOptions")
     private final @Nullable Input<TableExternalDataConfigurationGoogleSheetsOptionsGetArgs> googleSheetsOptions;
 
@@ -48,6 +69,13 @@ public final class TableExternalDataConfigurationGetArgs extends io.pulumi.resou
         return this.googleSheetsOptions == null ? Input.empty() : this.googleSheetsOptions;
     }
 
+    /**
+     * When set, configures hive partitioning
+     * support. Not all storage formats support hive partitioning -- requesting hive
+     * partitioning on an unsupported format will lead to an error, as will providing
+     * an invalid specification. Structure is documented below.
+     * 
+     */
     @InputImport(name="hivePartitioningOptions")
     private final @Nullable Input<TableExternalDataConfigurationHivePartitioningOptionsGetArgs> hivePartitioningOptions;
 
@@ -55,6 +83,15 @@ public final class TableExternalDataConfigurationGetArgs extends io.pulumi.resou
         return this.hivePartitioningOptions == null ? Input.empty() : this.hivePartitioningOptions;
     }
 
+    /**
+     * Indicates if BigQuery should
+     * allow extra values that are not represented in the table schema.
+     * If true, the extra values are ignored. If false, records with
+     * extra columns are treated as bad records, and if there are too
+     * many bad records, an invalid error is returned in the job result.
+     * The default value is false.
+     * 
+     */
     @InputImport(name="ignoreUnknownValues")
     private final @Nullable Input<Boolean> ignoreUnknownValues;
 
@@ -62,6 +99,11 @@ public final class TableExternalDataConfigurationGetArgs extends io.pulumi.resou
         return this.ignoreUnknownValues == null ? Input.empty() : this.ignoreUnknownValues;
     }
 
+    /**
+     * The maximum number of bad records that
+     * BigQuery can ignore when reading data.
+     * 
+     */
     @InputImport(name="maxBadRecords")
     private final @Nullable Input<Integer> maxBadRecords;
 
@@ -69,6 +111,20 @@ public final class TableExternalDataConfigurationGetArgs extends io.pulumi.resou
         return this.maxBadRecords == null ? Input.empty() : this.maxBadRecords;
     }
 
+    /**
+     * A JSON schema for the external table. Schema is required
+     * for CSV and JSON formats if autodetect is not on. Schema is disallowed
+     * for Google Cloud Bigtable, Cloud Datastore backups, Avro, ORC and Parquet formats.
+     * ~>**NOTE:** Because this field expects a JSON string, any changes to the
+     * string will create a diff, even if the JSON itself hasn't changed.
+     * Furthermore drift for this field cannot not be detected because BigQuery
+     * only uses this schema to compute the effective schema for the table, therefore
+     * any changes on the configured value will force the table to be recreated.
+     * This schema is effectively only applied when creating a table from an external
+     * datasource, after creation the computed schema will be stored in
+     * `google_bigquery_table.schema`
+     * 
+     */
     @InputImport(name="schema")
     private final @Nullable Input<String> schema;
 
@@ -76,6 +132,14 @@ public final class TableExternalDataConfigurationGetArgs extends io.pulumi.resou
         return this.schema == null ? Input.empty() : this.schema;
     }
 
+    /**
+     * The data format. Supported values are:
+     * "CSV", "GOOGLE_SHEETS", "NEWLINE_DELIMITED_JSON", "AVRO", "PARQUET", "ORC",
+     * "DATSTORE_BACKUP", and "BIGTABLE". To use "GOOGLE_SHEETS"
+     * the `scopes` must include
+     * "https://www.googleapis.com/auth/drive.readonly".
+     * 
+     */
     @InputImport(name="sourceFormat", required=true)
     private final Input<String> sourceFormat;
 
@@ -83,6 +147,11 @@ public final class TableExternalDataConfigurationGetArgs extends io.pulumi.resou
         return this.sourceFormat;
     }
 
+    /**
+     * A list of the fully-qualified URIs that point to
+     * your data in Google Cloud.
+     * 
+     */
     @InputImport(name="sourceUris", required=true)
     private final Input<List<String>> sourceUris;
 

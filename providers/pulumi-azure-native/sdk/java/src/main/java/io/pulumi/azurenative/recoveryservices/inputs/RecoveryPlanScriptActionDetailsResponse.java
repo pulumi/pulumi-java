@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Recovery plan script action details.
+ * 
+ */
 public final class RecoveryPlanScriptActionDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RecoveryPlanScriptActionDetailsResponse Empty = new RecoveryPlanScriptActionDetailsResponse();
 
+    /**
+     * The fabric location.
+     * 
+     */
     @InputImport(name="fabricLocation", required=true)
     private final String fabricLocation;
 
@@ -21,6 +29,11 @@ public final class RecoveryPlanScriptActionDetailsResponse extends io.pulumi.res
         return this.fabricLocation;
     }
 
+    /**
+     * Gets the type of action details (see RecoveryPlanActionDetailsTypes enum for possible values).
+     * Expected value is 'ScriptActionDetails'.
+     * 
+     */
     @InputImport(name="instanceType", required=true)
     private final String instanceType;
 
@@ -28,6 +41,10 @@ public final class RecoveryPlanScriptActionDetailsResponse extends io.pulumi.res
         return this.instanceType;
     }
 
+    /**
+     * The script path.
+     * 
+     */
     @InputImport(name="path", required=true)
     private final String path;
 
@@ -35,6 +52,10 @@ public final class RecoveryPlanScriptActionDetailsResponse extends io.pulumi.res
         return this.path;
     }
 
+    /**
+     * The script timeout.
+     * 
+     */
     @InputImport(name="timeout")
     private final @Nullable String timeout;
 

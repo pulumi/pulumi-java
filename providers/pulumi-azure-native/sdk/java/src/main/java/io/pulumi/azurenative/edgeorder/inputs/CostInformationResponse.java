@@ -10,10 +10,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Cost information for the product system
+ * 
+ */
 public final class CostInformationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CostInformationResponse Empty = new CostInformationResponse();
 
+    /**
+     * Default url to display billing information
+     * 
+     */
     @InputImport(name="billingInfoUrl", required=true)
     private final String billingInfoUrl;
 
@@ -21,6 +29,10 @@ public final class CostInformationResponse extends io.pulumi.resources.InvokeArg
         return this.billingInfoUrl;
     }
 
+    /**
+     * Details on the various billing aspects for the product system.
+     * 
+     */
     @InputImport(name="billingMeterDetails", required=true)
     private final List<BillingMeterDetailsResponse> billingMeterDetails;
 

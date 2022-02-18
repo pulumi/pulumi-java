@@ -8,10 +8,18 @@ import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ValueResponse;
 import java.util.Objects;
 
 
+/**
+ * Bucket is represented as a range, along with replacement values.
+ * 
+ */
 public final class GooglePrivacyDlpV2BucketResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2BucketResponse Empty = new GooglePrivacyDlpV2BucketResponse();
 
+    /**
+     * Upper bound of the range, exclusive; type must match min.
+     * 
+     */
     @InputImport(name="max", required=true)
     private final GooglePrivacyDlpV2ValueResponse max;
 
@@ -19,6 +27,10 @@ public final class GooglePrivacyDlpV2BucketResponse extends io.pulumi.resources.
         return this.max;
     }
 
+    /**
+     * Lower bound of the range, inclusive. Type should be the same as max if used.
+     * 
+     */
     @InputImport(name="min", required=true)
     private final GooglePrivacyDlpV2ValueResponse min;
 
@@ -26,6 +38,10 @@ public final class GooglePrivacyDlpV2BucketResponse extends io.pulumi.resources.
         return this.min;
     }
 
+    /**
+     * Replacement value for this bucket.
+     * 
+     */
     @InputImport(name="replacementValue", required=true)
     private final GooglePrivacyDlpV2ValueResponse replacementValue;
 

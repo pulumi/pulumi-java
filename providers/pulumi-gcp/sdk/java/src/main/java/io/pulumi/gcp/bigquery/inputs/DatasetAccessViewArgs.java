@@ -13,6 +13,10 @@ public final class DatasetAccessViewArgs extends io.pulumi.resources.ResourceArg
 
     public static final DatasetAccessViewArgs Empty = new DatasetAccessViewArgs();
 
+    /**
+     * The ID of the dataset containing this table.
+     * 
+     */
     @InputImport(name="datasetId", required=true)
     private final Input<String> datasetId;
 
@@ -20,6 +24,10 @@ public final class DatasetAccessViewArgs extends io.pulumi.resources.ResourceArg
         return this.datasetId;
     }
 
+    /**
+     * The ID of the project containing this table.
+     * 
+     */
     @InputImport(name="projectId", required=true)
     private final Input<String> projectId;
 
@@ -27,6 +35,12 @@ public final class DatasetAccessViewArgs extends io.pulumi.resources.ResourceArg
         return this.projectId;
     }
 
+    /**
+     * The ID of the table. The ID must contain only letters (a-z,
+     * A-Z), numbers (0-9), or underscores (_). The maximum length
+     * is 1,024 characters.
+     * 
+     */
     @InputImport(name="tableId", required=true)
     private final Input<String> tableId;
 

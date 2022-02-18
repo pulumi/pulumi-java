@@ -15,6 +15,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
 
     public static final PrivateEndpointConnectionArgs Empty = new PrivateEndpointConnectionArgs();
 
+    /**
+     * The name of the private endpoint connection to the Azure Cognitive Search service with the specified resource group.
+     * 
+     */
     @InputImport(name="privateEndpointConnectionName")
     private final @Nullable Input<String> privateEndpointConnectionName;
 
@@ -22,6 +26,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.privateEndpointConnectionName == null ? Input.empty() : this.privateEndpointConnectionName;
     }
 
+    /**
+     * Describes the properties of an existing Private Endpoint connection to the Azure Cognitive Search service.
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<PrivateEndpointConnectionPropertiesArgs> properties;
 
@@ -29,6 +37,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The name of the resource group within the current subscription. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -36,6 +48,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the Azure Cognitive Search service associated with the specified resource group.
+     * 
+     */
     @InputImport(name="searchServiceName", required=true)
     private final Input<String> searchServiceName;
 

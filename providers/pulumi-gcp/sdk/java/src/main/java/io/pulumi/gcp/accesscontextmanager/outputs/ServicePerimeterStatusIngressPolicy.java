@@ -12,7 +12,19 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ServicePerimeterStatusIngressPolicy {
+    /**
+     * Defines the conditions on the source of a request causing this `IngressPolicy`
+     * to apply.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable ServicePerimeterStatusIngressPolicyIngressFrom ingressFrom;
+    /**
+     * Defines the conditions on the `ApiOperation` and request destination that cause
+     * this `IngressPolicy` to apply.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable ServicePerimeterStatusIngressPolicyIngressTo ingressTo;
 
     @OutputCustomType.Constructor({"ingressFrom","ingressTo"})
@@ -23,9 +35,21 @@ public final class ServicePerimeterStatusIngressPolicy {
         this.ingressTo = ingressTo;
     }
 
+    /**
+     * Defines the conditions on the source of a request causing this `IngressPolicy`
+     * to apply.
+     * Structure is documented below.
+     * 
+     */
     public Optional<ServicePerimeterStatusIngressPolicyIngressFrom> getIngressFrom() {
         return Optional.ofNullable(this.ingressFrom);
     }
+    /**
+     * Defines the conditions on the `ApiOperation` and request destination that cause
+     * this `IngressPolicy` to apply.
+     * Structure is documented below.
+     * 
+     */
     public Optional<ServicePerimeterStatusIngressPolicyIngressTo> getIngressTo() {
         return Optional.ofNullable(this.ingressTo);
     }

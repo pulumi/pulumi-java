@@ -16,10 +16,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes a list of inputs to a Job.
+ * 
+ */
 public final class JobInputsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JobInputsArgs Empty = new JobInputsArgs();
 
+    /**
+     * List of inputs to a Job.
+     * 
+     */
     @InputImport(name="inputs")
     private final @Nullable Input<List<Object>> inputs;
 
@@ -27,6 +35,11 @@ public final class JobInputsArgs extends io.pulumi.resources.ResourceArgs {
         return this.inputs == null ? Input.empty() : this.inputs;
     }
 
+    /**
+     * The discriminator for derived types.
+     * Expected value is '#Microsoft.Media.JobInputs'.
+     * 
+     */
     @InputImport(name="odataType", required=true)
     private final Input<String> odataType;
 

@@ -10,10 +10,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * This represents a particular package that is distributed over various channels. E.g., glibc (aka libc6) is distributed by many, at various versions.
+ * 
+ */
 public final class PackageNoteResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PackageNoteResponse Empty = new PackageNoteResponse();
 
+    /**
+     * The various channels by which a package is distributed.
+     * 
+     */
     @InputImport(name="distribution", required=true)
     private final List<DistributionResponse> distribution;
 
@@ -21,6 +29,10 @@ public final class PackageNoteResponse extends io.pulumi.resources.InvokeArgs {
         return this.distribution;
     }
 
+    /**
+     * Immutable. The name of the package.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

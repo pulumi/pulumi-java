@@ -22,6 +22,10 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
         return this.configId;
     }
 
+    /**
+     * The description of the notification config (max of 1024 characters).
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -29,6 +33,10 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The relative resource name of this notification config. See: https://cloud.google.com/apis/design/resource_names#relative_resource_name Example: "organizations/{organization_id}/notificationConfigs/notify_public_bucket".
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -43,6 +51,10 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
         return this.organizationId;
     }
 
+    /**
+     * The Pub/Sub topic to send notifications to. Its format is "projects/[project_id]/topics/[topic]".
+     * 
+     */
     @InputImport(name="pubsubTopic")
     private final @Nullable Input<String> pubsubTopic;
 
@@ -50,6 +62,10 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
         return this.pubsubTopic == null ? Input.empty() : this.pubsubTopic;
     }
 
+    /**
+     * The config for triggering streaming-based notifications.
+     * 
+     */
     @InputImport(name="streamingConfig")
     private final @Nullable Input<StreamingConfigArgs> streamingConfig;
 

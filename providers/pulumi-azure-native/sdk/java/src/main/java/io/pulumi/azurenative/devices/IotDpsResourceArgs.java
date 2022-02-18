@@ -17,6 +17,10 @@ public final class IotDpsResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IotDpsResourceArgs Empty = new IotDpsResourceArgs();
 
+    /**
+     * The resource location.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -24,6 +28,10 @@ public final class IotDpsResourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Service specific properties for a provisioning service
+     * 
+     */
     @InputImport(name="properties", required=true)
     private final Input<IotDpsPropertiesDescriptionArgs> properties;
 
@@ -31,6 +39,10 @@ public final class IotDpsResourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties;
     }
 
+    /**
+     * Name of provisioning service to create or update.
+     * 
+     */
     @InputImport(name="provisioningServiceName")
     private final @Nullable Input<String> provisioningServiceName;
 
@@ -38,6 +50,10 @@ public final class IotDpsResourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.provisioningServiceName == null ? Input.empty() : this.provisioningServiceName;
     }
 
+    /**
+     * Resource group identifier.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -45,6 +61,10 @@ public final class IotDpsResourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Sku info for a provisioning Service.
+     * 
+     */
     @InputImport(name="sku", required=true)
     private final Input<IotDpsSkuInfoArgs> sku;
 
@@ -52,6 +72,10 @@ public final class IotDpsResourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku;
     }
 
+    /**
+     * The resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

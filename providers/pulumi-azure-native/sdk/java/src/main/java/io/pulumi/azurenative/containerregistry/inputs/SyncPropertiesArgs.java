@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The sync properties of the connected registry with its parent.
+ * 
+ */
 public final class SyncPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SyncPropertiesArgs Empty = new SyncPropertiesArgs();
 
+    /**
+     * The period of time for which a message is available to sync before it is expired. Specify the duration using the format P[n]Y[n]M[n]DT[n]H[n]M[n]S as per ISO8601.
+     * 
+     */
     @InputImport(name="messageTtl", required=true)
     private final Input<String> messageTtl;
 
@@ -21,6 +29,10 @@ public final class SyncPropertiesArgs extends io.pulumi.resources.ResourceArgs {
         return this.messageTtl;
     }
 
+    /**
+     * The cron expression indicating the schedule that the connected registry will sync with its parent.
+     * 
+     */
     @InputImport(name="schedule")
     private final @Nullable Input<String> schedule;
 
@@ -28,6 +40,10 @@ public final class SyncPropertiesArgs extends io.pulumi.resources.ResourceArgs {
         return this.schedule == null ? Input.empty() : this.schedule;
     }
 
+    /**
+     * The time window during which sync is enabled for each schedule occurrence. Specify the duration using the format P[n]Y[n]M[n]DT[n]H[n]M[n]S as per ISO8601.
+     * 
+     */
     @InputImport(name="syncWindow")
     private final @Nullable Input<String> syncWindow;
 
@@ -35,6 +51,10 @@ public final class SyncPropertiesArgs extends io.pulumi.resources.ResourceArgs {
         return this.syncWindow == null ? Input.empty() : this.syncWindow;
     }
 
+    /**
+     * The resource ID of the ACR token used to authenticate the connected registry to its parent during sync.
+     * 
+     */
     @InputImport(name="tokenId", required=true)
     private final Input<String> tokenId;
 

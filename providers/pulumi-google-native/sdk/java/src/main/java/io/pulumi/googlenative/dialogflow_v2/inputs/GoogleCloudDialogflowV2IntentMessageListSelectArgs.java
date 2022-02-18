@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The card for presenting a list of options to select from.
+ * 
+ */
 public final class GoogleCloudDialogflowV2IntentMessageListSelectArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowV2IntentMessageListSelectArgs Empty = new GoogleCloudDialogflowV2IntentMessageListSelectArgs();
 
+    /**
+     * List items.
+     * 
+     */
     @InputImport(name="items", required=true)
     private final Input<List<GoogleCloudDialogflowV2IntentMessageListSelectItemArgs>> items;
 
@@ -23,6 +31,10 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectArgs extends io
         return this.items;
     }
 
+    /**
+     * Optional. Subtitle of the list.
+     * 
+     */
     @InputImport(name="subtitle")
     private final @Nullable Input<String> subtitle;
 
@@ -30,6 +42,10 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectArgs extends io
         return this.subtitle == null ? Input.empty() : this.subtitle;
     }
 
+    /**
+     * Optional. The overall title of the list.
+     * 
+     */
     @InputImport(name="title")
     private final @Nullable Input<String> title;
 

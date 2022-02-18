@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The container probe, for liveness or readiness
+ * 
+ */
 public final class ContainerProbeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContainerProbeArgs Empty = new ContainerProbeArgs();
 
+    /**
+     * The execution command to probe
+     * 
+     */
     @InputImport(name="exec")
     private final @Nullable Input<ContainerExecArgs> exec;
 
@@ -23,6 +31,10 @@ public final class ContainerProbeArgs extends io.pulumi.resources.ResourceArgs {
         return this.exec == null ? Input.empty() : this.exec;
     }
 
+    /**
+     * The failure threshold.
+     * 
+     */
     @InputImport(name="failureThreshold")
     private final @Nullable Input<Integer> failureThreshold;
 
@@ -30,6 +42,10 @@ public final class ContainerProbeArgs extends io.pulumi.resources.ResourceArgs {
         return this.failureThreshold == null ? Input.empty() : this.failureThreshold;
     }
 
+    /**
+     * The Http Get settings to probe
+     * 
+     */
     @InputImport(name="httpGet")
     private final @Nullable Input<ContainerHttpGetArgs> httpGet;
 
@@ -37,6 +53,10 @@ public final class ContainerProbeArgs extends io.pulumi.resources.ResourceArgs {
         return this.httpGet == null ? Input.empty() : this.httpGet;
     }
 
+    /**
+     * The initial delay seconds.
+     * 
+     */
     @InputImport(name="initialDelaySeconds")
     private final @Nullable Input<Integer> initialDelaySeconds;
 
@@ -44,6 +64,10 @@ public final class ContainerProbeArgs extends io.pulumi.resources.ResourceArgs {
         return this.initialDelaySeconds == null ? Input.empty() : this.initialDelaySeconds;
     }
 
+    /**
+     * The period seconds.
+     * 
+     */
     @InputImport(name="periodSeconds")
     private final @Nullable Input<Integer> periodSeconds;
 
@@ -51,6 +75,10 @@ public final class ContainerProbeArgs extends io.pulumi.resources.ResourceArgs {
         return this.periodSeconds == null ? Input.empty() : this.periodSeconds;
     }
 
+    /**
+     * The success threshold.
+     * 
+     */
     @InputImport(name="successThreshold")
     private final @Nullable Input<Integer> successThreshold;
 
@@ -58,6 +86,10 @@ public final class ContainerProbeArgs extends io.pulumi.resources.ResourceArgs {
         return this.successThreshold == null ? Input.empty() : this.successThreshold;
     }
 
+    /**
+     * The timeout seconds.
+     * 
+     */
     @InputImport(name="timeoutSeconds")
     private final @Nullable Input<Integer> timeoutSeconds;
 

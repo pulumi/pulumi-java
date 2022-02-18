@@ -18,10 +18,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * InMageAzureV2 provider specific settings
+ * 
+ */
 public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final InMageAzureV2ReplicationDetailsResponse Empty = new InMageAzureV2ReplicationDetailsResponse();
 
+    /**
+     * Agent expiry date.
+     * 
+     */
     @InputImport(name="agentExpiryDate")
     private final @Nullable String agentExpiryDate;
 
@@ -29,6 +37,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
         return this.agentExpiryDate == null ? Optional.empty() : Optional.ofNullable(this.agentExpiryDate);
     }
 
+    /**
+     * The agent version.
+     * 
+     */
     @InputImport(name="agentVersion")
     private final @Nullable String agentVersion;
 
@@ -36,6 +48,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
         return this.agentVersion == null ? Optional.empty() : Optional.ofNullable(this.agentVersion);
     }
 
+    /**
+     * Azure VM Disk details.
+     * 
+     */
     @InputImport(name="azureVMDiskDetails")
     private final @Nullable List<AzureVmDiskDetailsResponse> azureVMDiskDetails;
 
@@ -43,6 +59,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
         return this.azureVMDiskDetails == null ? List.of() : this.azureVMDiskDetails;
     }
 
+    /**
+     * The compressed data change rate in MB.
+     * 
+     */
     @InputImport(name="compressedDataRateInMB")
     private final @Nullable Double compressedDataRateInMB;
 
@@ -50,6 +70,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
         return this.compressedDataRateInMB == null ? Optional.empty() : Optional.ofNullable(this.compressedDataRateInMB);
     }
 
+    /**
+     * The data stores of the on-premise machine. Value can be list of strings that contain data store names.
+     * 
+     */
     @InputImport(name="datastores")
     private final @Nullable List<String> datastores;
 
@@ -57,6 +81,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
         return this.datastores == null ? List.of() : this.datastores;
     }
 
+    /**
+     * A value indicating the discovery type of the machine. Value can be vCenter or physical.
+     * 
+     */
     @InputImport(name="discoveryType")
     private final @Nullable String discoveryType;
 
@@ -64,6 +92,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
         return this.discoveryType == null ? Optional.empty() : Optional.ofNullable(this.discoveryType);
     }
 
+    /**
+     * A value indicating whether any disk is resized for this VM.
+     * 
+     */
     @InputImport(name="diskResized")
     private final @Nullable String diskResized;
 
@@ -71,6 +103,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
         return this.diskResized == null ? Optional.empty() : Optional.ofNullable(this.diskResized);
     }
 
+    /**
+     * The selected option to enable RDP\SSH on target vm after failover. String value of {SrsDataContract.EnableRDPOnTargetOption} enum.
+     * 
+     */
     @InputImport(name="enableRdpOnTargetOption")
     private final @Nullable String enableRdpOnTargetOption;
 
@@ -78,6 +114,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
         return this.enableRdpOnTargetOption == null ? Optional.empty() : Optional.ofNullable(this.enableRdpOnTargetOption);
     }
 
+    /**
+     * The infrastructure VM Id.
+     * 
+     */
     @InputImport(name="infrastructureVmId")
     private final @Nullable String infrastructureVmId;
 
@@ -85,6 +125,11 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
         return this.infrastructureVmId == null ? Optional.empty() : Optional.ofNullable(this.infrastructureVmId);
     }
 
+    /**
+     * Gets the Instance type.
+     * Expected value is 'InMageAzureV2'.
+     * 
+     */
     @InputImport(name="instanceType", required=true)
     private final String instanceType;
 
@@ -92,6 +137,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
         return this.instanceType;
     }
 
+    /**
+     * The source IP address.
+     * 
+     */
     @InputImport(name="ipAddress")
     private final @Nullable String ipAddress;
 
@@ -99,6 +148,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
         return this.ipAddress == null ? Optional.empty() : Optional.ofNullable(this.ipAddress);
     }
 
+    /**
+     * A value indicating whether installed agent needs to be updated.
+     * 
+     */
     @InputImport(name="isAgentUpdateRequired")
     private final @Nullable String isAgentUpdateRequired;
 
@@ -106,6 +159,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
         return this.isAgentUpdateRequired == null ? Optional.empty() : Optional.ofNullable(this.isAgentUpdateRequired);
     }
 
+    /**
+     * A value indicating whether the source server requires a restart after update.
+     * 
+     */
     @InputImport(name="isRebootAfterUpdateRequired")
     private final @Nullable String isRebootAfterUpdateRequired;
 
@@ -113,6 +170,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
         return this.isRebootAfterUpdateRequired == null ? Optional.empty() : Optional.ofNullable(this.isRebootAfterUpdateRequired);
     }
 
+    /**
+     * The last heartbeat received from the source server.
+     * 
+     */
     @InputImport(name="lastHeartbeat")
     private final @Nullable String lastHeartbeat;
 
@@ -120,6 +181,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
         return this.lastHeartbeat == null ? Optional.empty() : Optional.ofNullable(this.lastHeartbeat);
     }
 
+    /**
+     * The last RPO calculated time.
+     * 
+     */
     @InputImport(name="lastRpoCalculatedTime")
     private final @Nullable String lastRpoCalculatedTime;
 
@@ -127,6 +192,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
         return this.lastRpoCalculatedTime == null ? Optional.empty() : Optional.ofNullable(this.lastRpoCalculatedTime);
     }
 
+    /**
+     * The last update time received from on-prem components.
+     * 
+     */
     @InputImport(name="lastUpdateReceivedTime")
     private final @Nullable String lastUpdateReceivedTime;
 
@@ -134,6 +203,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
         return this.lastUpdateReceivedTime == null ? Optional.empty() : Optional.ofNullable(this.lastUpdateReceivedTime);
     }
 
+    /**
+     * License Type of the VM to be used.
+     * 
+     */
     @InputImport(name="licenseType")
     private final @Nullable String licenseType;
 
@@ -141,6 +214,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
         return this.licenseType == null ? Optional.empty() : Optional.ofNullable(this.licenseType);
     }
 
+    /**
+     * The master target Id.
+     * 
+     */
     @InputImport(name="masterTargetId")
     private final @Nullable String masterTargetId;
 
@@ -148,6 +225,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
         return this.masterTargetId == null ? Optional.empty() : Optional.ofNullable(this.masterTargetId);
     }
 
+    /**
+     * The multi vm group Id.
+     * 
+     */
     @InputImport(name="multiVmGroupId")
     private final @Nullable String multiVmGroupId;
 
@@ -155,6 +236,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
         return this.multiVmGroupId == null ? Optional.empty() : Optional.ofNullable(this.multiVmGroupId);
     }
 
+    /**
+     * The multi vm group name.
+     * 
+     */
     @InputImport(name="multiVmGroupName")
     private final @Nullable String multiVmGroupName;
 
@@ -162,6 +247,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
         return this.multiVmGroupName == null ? Optional.empty() : Optional.ofNullable(this.multiVmGroupName);
     }
 
+    /**
+     * A value indicating whether multi vm sync is enabled or disabled.
+     * 
+     */
     @InputImport(name="multiVmSyncStatus")
     private final @Nullable String multiVmSyncStatus;
 
@@ -169,6 +258,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
         return this.multiVmSyncStatus == null ? Optional.empty() : Optional.ofNullable(this.multiVmSyncStatus);
     }
 
+    /**
+     * The id of the disk containing the OS.
+     * 
+     */
     @InputImport(name="osDiskId")
     private final @Nullable String osDiskId;
 
@@ -176,6 +269,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
         return this.osDiskId == null ? Optional.empty() : Optional.ofNullable(this.osDiskId);
     }
 
+    /**
+     * The type of the OS on the VM.
+     * 
+     */
     @InputImport(name="osType")
     private final @Nullable String osType;
 
@@ -183,6 +280,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
         return this.osType == null ? Optional.empty() : Optional.ofNullable(this.osType);
     }
 
+    /**
+     * The OS Version of the protected item.
+     * 
+     */
     @InputImport(name="osVersion")
     private final @Nullable String osVersion;
 
@@ -190,6 +291,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
         return this.osVersion == null ? Optional.empty() : Optional.ofNullable(this.osVersion);
     }
 
+    /**
+     * The process server Id.
+     * 
+     */
     @InputImport(name="processServerId")
     private final @Nullable String processServerId;
 
@@ -197,6 +302,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
         return this.processServerId == null ? Optional.empty() : Optional.ofNullable(this.processServerId);
     }
 
+    /**
+     * The process server name.
+     * 
+     */
     @InputImport(name="processServerName", required=true)
     private final String processServerName;
 
@@ -204,6 +313,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
         return this.processServerName;
     }
 
+    /**
+     * The list of protected disks.
+     * 
+     */
     @InputImport(name="protectedDisks")
     private final @Nullable List<InMageAzureV2ProtectedDiskDetailsResponse> protectedDisks;
 
@@ -211,6 +324,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
         return this.protectedDisks == null ? List.of() : this.protectedDisks;
     }
 
+    /**
+     * The list of protected managed disks.
+     * 
+     */
     @InputImport(name="protectedManagedDisks")
     private final @Nullable List<InMageAzureV2ManagedDiskDetailsResponse> protectedManagedDisks;
 
@@ -218,6 +335,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
         return this.protectedManagedDisks == null ? List.of() : this.protectedManagedDisks;
     }
 
+    /**
+     * The protection stage.
+     * 
+     */
     @InputImport(name="protectionStage")
     private final @Nullable String protectionStage;
 
@@ -225,6 +346,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
         return this.protectionStage == null ? Optional.empty() : Optional.ofNullable(this.protectionStage);
     }
 
+    /**
+     * The recovery availability set Id.
+     * 
+     */
     @InputImport(name="recoveryAvailabilitySetId")
     private final @Nullable String recoveryAvailabilitySetId;
 
@@ -232,6 +357,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
         return this.recoveryAvailabilitySetId == null ? Optional.empty() : Optional.ofNullable(this.recoveryAvailabilitySetId);
     }
 
+    /**
+     * The ARM id of the log storage account used for replication. This will be set to null if no log storage account was provided during enable protection.
+     * 
+     */
     @InputImport(name="recoveryAzureLogStorageAccountId")
     private final @Nullable String recoveryAzureLogStorageAccountId;
 
@@ -239,6 +368,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
         return this.recoveryAzureLogStorageAccountId == null ? Optional.empty() : Optional.ofNullable(this.recoveryAzureLogStorageAccountId);
     }
 
+    /**
+     * The target resource group Id.
+     * 
+     */
     @InputImport(name="recoveryAzureResourceGroupId")
     private final @Nullable String recoveryAzureResourceGroupId;
 
@@ -246,6 +379,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
         return this.recoveryAzureResourceGroupId == null ? Optional.empty() : Optional.ofNullable(this.recoveryAzureResourceGroupId);
     }
 
+    /**
+     * The recovery Azure storage account.
+     * 
+     */
     @InputImport(name="recoveryAzureStorageAccount")
     private final @Nullable String recoveryAzureStorageAccount;
 
@@ -253,6 +390,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
         return this.recoveryAzureStorageAccount == null ? Optional.empty() : Optional.ofNullable(this.recoveryAzureStorageAccount);
     }
 
+    /**
+     * Recovery Azure given name.
+     * 
+     */
     @InputImport(name="recoveryAzureVMName")
     private final @Nullable String recoveryAzureVMName;
 
@@ -260,6 +401,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
         return this.recoveryAzureVMName == null ? Optional.empty() : Optional.ofNullable(this.recoveryAzureVMName);
     }
 
+    /**
+     * The Recovery Azure VM size.
+     * 
+     */
     @InputImport(name="recoveryAzureVMSize")
     private final @Nullable String recoveryAzureVMSize;
 
@@ -267,6 +412,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
         return this.recoveryAzureVMSize == null ? Optional.empty() : Optional.ofNullable(this.recoveryAzureVMSize);
     }
 
+    /**
+     * The replica id of the protected item.
+     * 
+     */
     @InputImport(name="replicaId")
     private final @Nullable String replicaId;
 
@@ -274,6 +423,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
         return this.replicaId == null ? Optional.empty() : Optional.ofNullable(this.replicaId);
     }
 
+    /**
+     * The resync progress percentage.
+     * 
+     */
     @InputImport(name="resyncProgressPercentage")
     private final @Nullable Integer resyncProgressPercentage;
 
@@ -281,6 +434,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
         return this.resyncProgressPercentage == null ? Optional.empty() : Optional.ofNullable(this.resyncProgressPercentage);
     }
 
+    /**
+     * The RPO in seconds.
+     * 
+     */
     @InputImport(name="rpoInSeconds")
     private final @Nullable Double rpoInSeconds;
 
@@ -288,6 +445,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
         return this.rpoInSeconds == null ? Optional.empty() : Optional.ofNullable(this.rpoInSeconds);
     }
 
+    /**
+     * The selected recovery azure network Id.
+     * 
+     */
     @InputImport(name="selectedRecoveryAzureNetworkId")
     private final @Nullable String selectedRecoveryAzureNetworkId;
 
@@ -295,6 +456,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
         return this.selectedRecoveryAzureNetworkId == null ? Optional.empty() : Optional.ofNullable(this.selectedRecoveryAzureNetworkId);
     }
 
+    /**
+     * The selected source nic Id which will be used as the primary nic during failover.
+     * 
+     */
     @InputImport(name="selectedSourceNicId")
     private final @Nullable String selectedSourceNicId;
 
@@ -302,6 +467,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
         return this.selectedSourceNicId == null ? Optional.empty() : Optional.ofNullable(this.selectedSourceNicId);
     }
 
+    /**
+     * The test failover virtual network.
+     * 
+     */
     @InputImport(name="selectedTfoAzureNetworkId")
     private final @Nullable String selectedTfoAzureNetworkId;
 
@@ -309,6 +478,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
         return this.selectedTfoAzureNetworkId == null ? Optional.empty() : Optional.ofNullable(this.selectedTfoAzureNetworkId);
     }
 
+    /**
+     * The CPU count of the VM on the primary side.
+     * 
+     */
     @InputImport(name="sourceVmCpuCount")
     private final @Nullable Integer sourceVmCpuCount;
 
@@ -316,6 +489,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
         return this.sourceVmCpuCount == null ? Optional.empty() : Optional.ofNullable(this.sourceVmCpuCount);
     }
 
+    /**
+     * The RAM size of the VM on the primary side.
+     * 
+     */
     @InputImport(name="sourceVmRamSizeInMB")
     private final @Nullable Integer sourceVmRamSizeInMB;
 
@@ -323,6 +500,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
         return this.sourceVmRamSizeInMB == null ? Optional.empty() : Optional.ofNullable(this.sourceVmRamSizeInMB);
     }
 
+    /**
+     * The target availability zone.
+     * 
+     */
     @InputImport(name="targetAvailabilityZone")
     private final @Nullable String targetAvailabilityZone;
 
@@ -330,6 +511,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
         return this.targetAvailabilityZone == null ? Optional.empty() : Optional.ofNullable(this.targetAvailabilityZone);
     }
 
+    /**
+     * The target proximity placement group Id.
+     * 
+     */
     @InputImport(name="targetProximityPlacementGroupId")
     private final @Nullable String targetProximityPlacementGroupId;
 
@@ -337,6 +522,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
         return this.targetProximityPlacementGroupId == null ? Optional.empty() : Optional.ofNullable(this.targetProximityPlacementGroupId);
     }
 
+    /**
+     * The ARM Id of the target Azure VM. This value will be null until the VM is failed over. Only after failure it will be populated with the ARM Id of the Azure VM.
+     * 
+     */
     @InputImport(name="targetVmId")
     private final @Nullable String targetVmId;
 
@@ -344,6 +533,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
         return this.targetVmId == null ? Optional.empty() : Optional.ofNullable(this.targetVmId);
     }
 
+    /**
+     * The uncompressed data change rate in MB.
+     * 
+     */
     @InputImport(name="uncompressedDataRateInMB")
     private final @Nullable Double uncompressedDataRateInMB;
 
@@ -351,6 +544,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
         return this.uncompressedDataRateInMB == null ? Optional.empty() : Optional.ofNullable(this.uncompressedDataRateInMB);
     }
 
+    /**
+     * A value indicating whether managed disks should be used during failover.
+     * 
+     */
     @InputImport(name="useManagedDisks")
     private final @Nullable String useManagedDisks;
 
@@ -358,6 +555,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
         return this.useManagedDisks == null ? Optional.empty() : Optional.ofNullable(this.useManagedDisks);
     }
 
+    /**
+     * The vCenter infrastructure Id.
+     * 
+     */
     @InputImport(name="vCenterInfrastructureId")
     private final @Nullable String vCenterInfrastructureId;
 
@@ -365,6 +566,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
         return this.vCenterInfrastructureId == null ? Optional.empty() : Optional.ofNullable(this.vCenterInfrastructureId);
     }
 
+    /**
+     * The validation errors of the on-premise machine Value can be list of validation errors.
+     * 
+     */
     @InputImport(name="validationErrors")
     private final @Nullable List<HealthErrorResponse> validationErrors;
 
@@ -372,6 +577,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
         return this.validationErrors == null ? List.of() : this.validationErrors;
     }
 
+    /**
+     * The OS disk VHD name.
+     * 
+     */
     @InputImport(name="vhdName")
     private final @Nullable String vhdName;
 
@@ -379,6 +588,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
         return this.vhdName == null ? Optional.empty() : Optional.ofNullable(this.vhdName);
     }
 
+    /**
+     * The virtual machine Id.
+     * 
+     */
     @InputImport(name="vmId")
     private final @Nullable String vmId;
 
@@ -386,6 +599,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
         return this.vmId == null ? Optional.empty() : Optional.ofNullable(this.vmId);
     }
 
+    /**
+     * The PE Network details.
+     * 
+     */
     @InputImport(name="vmNics")
     private final @Nullable List<VMNicDetailsResponse> vmNics;
 
@@ -393,6 +610,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
         return this.vmNics == null ? List.of() : this.vmNics;
     }
 
+    /**
+     * The protection state for the vm.
+     * 
+     */
     @InputImport(name="vmProtectionState")
     private final @Nullable String vmProtectionState;
 
@@ -400,6 +621,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
         return this.vmProtectionState == null ? Optional.empty() : Optional.ofNullable(this.vmProtectionState);
     }
 
+    /**
+     * The protection state description for the vm.
+     * 
+     */
     @InputImport(name="vmProtectionStateDescription")
     private final @Nullable String vmProtectionStateDescription;
 

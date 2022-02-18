@@ -18,6 +18,10 @@ public final class BillingAccountSinkState extends io.pulumi.resources.ResourceA
 
     public static final BillingAccountSinkState Empty = new BillingAccountSinkState();
 
+    /**
+     * Options that affect sinks exporting data to BigQuery. Structure documented below.
+     * 
+     */
     @InputImport(name="bigqueryOptions")
     private final @Nullable Input<BillingAccountSinkBigqueryOptionsGetArgs> bigqueryOptions;
 
@@ -25,6 +29,10 @@ public final class BillingAccountSinkState extends io.pulumi.resources.ResourceA
         return this.bigqueryOptions == null ? Input.empty() : this.bigqueryOptions;
     }
 
+    /**
+     * The billing account exported to the sink.
+     * 
+     */
     @InputImport(name="billingAccount")
     private final @Nullable Input<String> billingAccount;
 
@@ -32,6 +40,10 @@ public final class BillingAccountSinkState extends io.pulumi.resources.ResourceA
         return this.billingAccount == null ? Input.empty() : this.billingAccount;
     }
 
+    /**
+     * A description of this exclusion.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -39,6 +51,13 @@ public final class BillingAccountSinkState extends io.pulumi.resources.ResourceA
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The destination of the sink (or, in other words, where logs are written to). Can be a
+     * Cloud Storage bucket, a PubSub topic, a BigQuery dataset or a Cloud Logging bucket. Examples:
+     * 
+     * The writer associated with the sink must have access to write to the above resource.
+     * 
+     */
     @InputImport(name="destination")
     private final @Nullable Input<String> destination;
 
@@ -46,6 +65,10 @@ public final class BillingAccountSinkState extends io.pulumi.resources.ResourceA
         return this.destination == null ? Input.empty() : this.destination;
     }
 
+    /**
+     * If set to True, then this exclusion is disabled and it does not exclude any log entries.
+     * 
+     */
     @InputImport(name="disabled")
     private final @Nullable Input<Boolean> disabled;
 
@@ -53,6 +76,10 @@ public final class BillingAccountSinkState extends io.pulumi.resources.ResourceA
         return this.disabled == null ? Input.empty() : this.disabled;
     }
 
+    /**
+     * Log entries that match any of the exclusion filters will not be exported. If a log entry is matched by both filter and one of exclusion_filters it will not be exported.  Can be repeated multiple times for multiple exclusions. Structure is documented below.
+     * 
+     */
     @InputImport(name="exclusions")
     private final @Nullable Input<List<BillingAccountSinkExclusionGetArgs>> exclusions;
 
@@ -60,6 +87,11 @@ public final class BillingAccountSinkState extends io.pulumi.resources.ResourceA
         return this.exclusions == null ? Input.empty() : this.exclusions;
     }
 
+    /**
+     * An advanced logs filter that matches the log entries to be excluded. By using the sample function, you can exclude less than 100% of the matching log entries. See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced_filters) for information on how to
+     * write a filter.
+     * 
+     */
     @InputImport(name="filter")
     private final @Nullable Input<String> filter;
 
@@ -67,6 +99,10 @@ public final class BillingAccountSinkState extends io.pulumi.resources.ResourceA
         return this.filter == null ? Input.empty() : this.filter;
     }
 
+    /**
+     * A client-assigned identifier, such as `load-balancer-exclusion`. Identifiers are limited to 100 characters and can include only letters, digits, underscores, hyphens, and periods. First character has to be alphanumeric.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -74,6 +110,11 @@ public final class BillingAccountSinkState extends io.pulumi.resources.ResourceA
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The identity associated with this sink. This identity must be granted write access to the
+     * configured `destination`.
+     * 
+     */
     @InputImport(name="writerIdentity")
     private final @Nullable Input<String> writerIdentity;
 

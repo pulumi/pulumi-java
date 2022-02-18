@@ -30,6 +30,10 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
         return this.authorization == null ? Input.empty() : this.authorization;
     }
 
+    /**
+     * The ID of the Channel the OriginEndpoint is associated with.
+     * 
+     */
     @InputImport(name="channelId", required=true)
     private final Input<String> channelId;
 
@@ -51,6 +55,10 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
         return this.dashPackage == null ? Input.empty() : this.dashPackage;
     }
 
+    /**
+     * A short text description of the OriginEndpoint.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -65,6 +73,10 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
         return this.hlsPackage == null ? Input.empty() : this.hlsPackage;
     }
 
+    /**
+     * A short string appended to the end of the OriginEndpoint URL.
+     * 
+     */
     @InputImport(name="manifestName")
     private final @Nullable Input<String> manifestName;
 
@@ -79,6 +91,10 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
         return this.mssPackage == null ? Input.empty() : this.mssPackage;
     }
 
+    /**
+     * Control whether origination of video is allowed for this OriginEndpoint. If set to ALLOW, the OriginEndpoint may by requested, pursuant to any other form of access control. If set to DENY, the OriginEndpoint may not be requested. This can be helpful for Live to VOD harvesting, or for temporarily disabling origination
+     * 
+     */
     @InputImport(name="origination")
     private final @Nullable Input<OriginEndpointOrigination> origination;
 
@@ -86,6 +102,10 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
         return this.origination == null ? Input.empty() : this.origination;
     }
 
+    /**
+     * Maximum duration (seconds) of content to retain for startover playback. If not specified, startover playback will be disabled for the OriginEndpoint.
+     * 
+     */
     @InputImport(name="startoverWindowSeconds")
     private final @Nullable Input<Integer> startoverWindowSeconds;
 
@@ -93,6 +113,10 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
         return this.startoverWindowSeconds == null ? Input.empty() : this.startoverWindowSeconds;
     }
 
+    /**
+     * A collection of tags associated with a resource
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<OriginEndpointTagArgs>> tags;
 
@@ -100,6 +124,10 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * Amount of delay (seconds) to enforce on the playback of live content. If not specified, there will be no time delay in effect for the OriginEndpoint.
+     * 
+     */
     @InputImport(name="timeDelaySeconds")
     private final @Nullable Input<Integer> timeDelaySeconds;
 
@@ -107,6 +135,10 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
         return this.timeDelaySeconds == null ? Input.empty() : this.timeDelaySeconds;
     }
 
+    /**
+     * A list of source IP CIDR blocks that will be allowed to access the OriginEndpoint.
+     * 
+     */
     @InputImport(name="whitelist")
     private final @Nullable Input<List<String>> whitelist;
 

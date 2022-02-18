@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A codec flag, which tells the encoder to copy the input video bitstream without re-encoding.
+ * 
+ */
 public final class CopyVideoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CopyVideoArgs Empty = new CopyVideoArgs();
 
+    /**
+     * An optional label for the codec. The label can be used to control muxing behavior.
+     * 
+     */
     @InputImport(name="label")
     private final @Nullable Input<String> label;
 
@@ -21,6 +29,11 @@ public final class CopyVideoArgs extends io.pulumi.resources.ResourceArgs {
         return this.label == null ? Input.empty() : this.label;
     }
 
+    /**
+     * The discriminator for derived types.
+     * Expected value is '#Microsoft.Media.CopyVideo'.
+     * 
+     */
     @InputImport(name="odataType", required=true)
     private final Input<String> odataType;
 

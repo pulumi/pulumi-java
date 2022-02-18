@@ -14,12 +14,41 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ImageTemplateSharedImageDistributorResponse {
+    /**
+     * Tags that will be applied to the artifact once it has been created/updated by the distributor.
+     * 
+     */
     private final @Nullable Map<String,String> artifactTags;
+    /**
+     * Flag that indicates whether created image version should be excluded from latest. Omit to use the default (false).
+     * 
+     */
     private final @Nullable Boolean excludeFromLatest;
+    /**
+     * Resource Id of the Shared Image Gallery image
+     * 
+     */
     private final String galleryImageId;
+    /**
+     * A list of regions that the image will be replicated to
+     * 
+     */
     private final List<String> replicationRegions;
+    /**
+     * The name to be used for the associated RunOutput.
+     * 
+     */
     private final String runOutputName;
+    /**
+     * Storage account type to be used to store the shared image. Omit to use the default (Standard_LRS).
+     * 
+     */
     private final @Nullable String storageAccountType;
+    /**
+     * Type of distribution.
+     * Expected value is 'SharedImage'.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"artifactTags","excludeFromLatest","galleryImageId","replicationRegions","runOutputName","storageAccountType","type"})
@@ -40,24 +69,53 @@ public final class ImageTemplateSharedImageDistributorResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Tags that will be applied to the artifact once it has been created/updated by the distributor.
+     * 
+     */
     public Map<String,String> getArtifactTags() {
         return this.artifactTags == null ? Map.of() : this.artifactTags;
     }
+    /**
+     * Flag that indicates whether created image version should be excluded from latest. Omit to use the default (false).
+     * 
+     */
     public Optional<Boolean> getExcludeFromLatest() {
         return Optional.ofNullable(this.excludeFromLatest);
     }
+    /**
+     * Resource Id of the Shared Image Gallery image
+     * 
+     */
     public String getGalleryImageId() {
         return this.galleryImageId;
     }
+    /**
+     * A list of regions that the image will be replicated to
+     * 
+     */
     public List<String> getReplicationRegions() {
         return this.replicationRegions;
     }
+    /**
+     * The name to be used for the associated RunOutput.
+     * 
+     */
     public String getRunOutputName() {
         return this.runOutputName;
     }
+    /**
+     * Storage account type to be used to store the shared image. Omit to use the default (Standard_LRS).
+     * 
+     */
     public Optional<String> getStorageAccountType() {
         return Optional.ofNullable(this.storageAccountType);
     }
+    /**
+     * Type of distribution.
+     * Expected value is 'SharedImage'.
+     * 
+     */
     public String getType() {
         return this.type;
     }

@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PolicyAlternativeNameServerConfigTargetNameServerResponse {
+    /**
+     * Forwarding path for this TargetNameServer. If unset or set to DEFAULT, Cloud DNS makes forwarding decisions based on address ranges; that is, RFC1918 addresses go to the VPC network, non-RFC1918 addresses go to the internet. When set to PRIVATE, Cloud DNS always sends queries through the VPC network for this target.
+     * 
+     */
     private final String forwardingPath;
+    /**
+     * IPv4 address to forward to.
+     * 
+     */
     private final String ipv4Address;
     private final String kind;
 
@@ -23,9 +31,17 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerResponse {
         this.kind = Objects.requireNonNull(kind);
     }
 
+    /**
+     * Forwarding path for this TargetNameServer. If unset or set to DEFAULT, Cloud DNS makes forwarding decisions based on address ranges; that is, RFC1918 addresses go to the VPC network, non-RFC1918 addresses go to the internet. When set to PRIVATE, Cloud DNS always sends queries through the VPC network for this target.
+     * 
+     */
     public String getForwardingPath() {
         return this.forwardingPath;
     }
+    /**
+     * IPv4 address to forward to.
+     * 
+     */
     public String getIpv4Address() {
         return this.ipv4Address;
     }

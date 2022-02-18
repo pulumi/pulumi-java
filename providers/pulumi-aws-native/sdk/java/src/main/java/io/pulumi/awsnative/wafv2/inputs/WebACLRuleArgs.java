@@ -18,6 +18,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Rule of WebACL that contains condition and action.
+ * 
+ */
 public final class WebACLRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WebACLRuleArgs Empty = new WebACLRuleArgs();
@@ -57,6 +61,10 @@ public final class WebACLRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.priority;
     }
 
+    /**
+     * Collection of Rule Labels.
+     * 
+     */
     @InputImport(name="ruleLabels")
     private final @Nullable Input<List<WebACLLabelArgs>> ruleLabels;
 

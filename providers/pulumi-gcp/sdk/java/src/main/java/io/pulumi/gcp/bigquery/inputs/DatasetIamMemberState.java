@@ -22,6 +22,10 @@ public final class DatasetIamMemberState extends io.pulumi.resources.ResourceArg
         return this.condition == null ? Input.empty() : this.condition;
     }
 
+    /**
+     * The dataset ID.
+     * 
+     */
     @InputImport(name="datasetId")
     private final @Nullable Input<String> datasetId;
 
@@ -29,6 +33,10 @@ public final class DatasetIamMemberState extends io.pulumi.resources.ResourceArg
         return this.datasetId == null ? Input.empty() : this.datasetId;
     }
 
+    /**
+     * (Computed) The etag of the dataset's IAM policy.
+     * 
+     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -43,6 +51,11 @@ public final class DatasetIamMemberState extends io.pulumi.resources.ResourceArg
         return this.member == null ? Input.empty() : this.member;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -50,6 +63,12 @@ public final class DatasetIamMemberState extends io.pulumi.resources.ResourceArg
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The role that should be applied. Only one
+     * `gcp.bigquery.DatasetIamBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     @InputImport(name="role")
     private final @Nullable Input<String> role;
 

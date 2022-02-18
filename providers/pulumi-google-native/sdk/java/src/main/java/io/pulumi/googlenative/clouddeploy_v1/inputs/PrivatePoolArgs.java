@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Execution using a private Cloud Build pool.
+ * 
+ */
 public final class PrivatePoolArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PrivatePoolArgs Empty = new PrivatePoolArgs();
 
+    /**
+     * Optional. Cloud Storage location where execution outputs should be stored. This can either be a bucket ("gs://my-bucket") or a path within a bucket ("gs://my-bucket/my-dir"). If unspecified, a default bucket located in the same region will be used.
+     * 
+     */
     @InputImport(name="artifactStorage")
     private final @Nullable Input<String> artifactStorage;
 
@@ -21,6 +29,10 @@ public final class PrivatePoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.artifactStorage == null ? Input.empty() : this.artifactStorage;
     }
 
+    /**
+     * Optional. Google service account to use for execution. If unspecified, the project execution service account (-compute@developer.gserviceaccount.com) will be used.
+     * 
+     */
     @InputImport(name="serviceAccount")
     private final @Nullable Input<String> serviceAccount;
 
@@ -28,6 +40,10 @@ public final class PrivatePoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
     }
 
+    /**
+     * Resource name of the Cloud Build worker pool to use. The format is `projects/{project}/locations/{location}/workerPools/{pool}`.
+     * 
+     */
     @InputImport(name="workerPool", required=true)
     private final Input<String> workerPool;
 

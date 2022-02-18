@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * SasPolicy assigned to the storage account.
+ * 
+ */
 public final class SasPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SasPolicyResponse Empty = new SasPolicyResponse();
 
+    /**
+     * The SAS expiration action. Can only be Log.
+     * 
+     */
     @InputImport(name="expirationAction", required=true)
     private final String expirationAction;
 
@@ -19,6 +27,10 @@ public final class SasPolicyResponse extends io.pulumi.resources.InvokeArgs {
         return this.expirationAction;
     }
 
+    /**
+     * The SAS expiration period, DD.HH:MM:SS.
+     * 
+     */
     @InputImport(name="sasExpirationPeriod", required=true)
     private final String sasExpirationPeriod;
 

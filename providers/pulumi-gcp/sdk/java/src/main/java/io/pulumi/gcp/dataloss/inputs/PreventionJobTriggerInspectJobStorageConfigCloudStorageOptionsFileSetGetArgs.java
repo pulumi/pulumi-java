@@ -15,6 +15,11 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
 
     public static final PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetGetArgs Empty = new PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetGetArgs();
 
+    /**
+     * The regex-filtered set of files to scan.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="regexFileSet")
     private final @Nullable Input<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetGetArgs> regexFileSet;
 
@@ -22,6 +27,14 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
         return this.regexFileSet == null ? Input.empty() : this.regexFileSet;
     }
 
+    /**
+     * The Cloud Storage url of the file(s) to scan, in the format `gs://<bucket>/<path>`. Trailing wildcard
+     * in the path is allowed.
+     * If the url ends in a trailing slash, the bucket or directory represented by the url will be scanned
+     * non-recursively (content in sub-directories will not be scanned). This means that `gs://mybucket/` is
+     * equivalent to `gs://mybucket/*`, and `gs://mybucket/directory/` is equivalent to `gs://mybucket/directory/*`.
+     * 
+     */
     @InputImport(name="url")
     private final @Nullable Input<String> url;
 

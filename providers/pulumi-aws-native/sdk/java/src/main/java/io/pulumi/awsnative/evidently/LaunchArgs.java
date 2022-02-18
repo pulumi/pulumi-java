@@ -68,6 +68,10 @@ public final class LaunchArgs extends io.pulumi.resources.ResourceArgs {
         return this.scheduledSplitsConfig;
     }
 
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<LaunchTagArgs>> tags;
 

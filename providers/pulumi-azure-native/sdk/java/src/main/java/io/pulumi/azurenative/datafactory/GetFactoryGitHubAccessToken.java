@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFactoryGitHubAccessToken {
+/**
+ * Get GitHub access token response definition.
+ * API Version: 2018-06-01.
+ * 
+ *
+ * Get GitHub access token response definition.
+ * 
+ */
     public static CompletableFuture<GetFactoryGitHubAccessTokenResult> invokeAsync(GetFactoryGitHubAccessTokenArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datafactory:getFactoryGitHubAccessToken", TypeShape.of(GetFactoryGitHubAccessTokenResult.class), args == null ? GetFactoryGitHubAccessTokenArgs.Empty : args, Utilities.withVersion(options));
     }

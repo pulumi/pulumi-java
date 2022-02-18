@@ -15,10 +15,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Network Interface model
+ * 
+ */
 public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NetworkInterfaceArgs Empty = new NetworkInterfaceArgs();
 
+    /**
+     * Gets or sets the device key value.
+     * 
+     */
     @InputImport(name="deviceKey")
     private final @Nullable Input<Integer> deviceKey;
 
@@ -26,6 +34,10 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
         return this.deviceKey == null ? Input.empty() : this.deviceKey;
     }
 
+    /**
+     * Gets or sets the ipsettings.
+     * 
+     */
     @InputImport(name="ipSettings")
     private final @Nullable Input<NicIPSettingsArgs> ipSettings;
 
@@ -33,6 +45,10 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
         return this.ipSettings == null ? Input.empty() : this.ipSettings;
     }
 
+    /**
+     * Gets or sets the name of the network interface.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -40,6 +56,10 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Gets or sets the ARM Id of the network resource to connect the virtual machine.
+     * 
+     */
     @InputImport(name="networkId")
     private final @Nullable Input<String> networkId;
 
@@ -47,6 +67,10 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
         return this.networkId == null ? Input.empty() : this.networkId;
     }
 
+    /**
+     * NIC type
+     * 
+     */
     @InputImport(name="nicType")
     private final @Nullable Input<Either<String,NICType>> nicType;
 
@@ -54,6 +78,10 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
         return this.nicType == null ? Input.empty() : this.nicType;
     }
 
+    /**
+     * Gets or sets the power on boot.
+     * 
+     */
     @InputImport(name="powerOnBoot")
     private final @Nullable Input<Either<String,PowerOnBootOption>> powerOnBoot;
 

@@ -11,8 +11,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FeatureMembershipConfigmanagementHierarchyController {
+    /**
+     * Whether hierarchical resource quota is enabled in this cluster.
+     * 
+     */
     private final @Nullable Boolean enableHierarchicalResourceQuota;
+    /**
+     * Whether pod tree labels are enabled in this cluster.
+     * 
+     */
     private final @Nullable Boolean enablePodTreeLabels;
+    /**
+     * Enables the installation of Policy Controller. If false, the rest of PolicyController fields take no effect.
+     * 
+     */
     private final @Nullable Boolean enabled;
 
     @OutputCustomType.Constructor({"enableHierarchicalResourceQuota","enablePodTreeLabels","enabled"})
@@ -25,12 +37,24 @@ public final class FeatureMembershipConfigmanagementHierarchyController {
         this.enabled = enabled;
     }
 
+    /**
+     * Whether hierarchical resource quota is enabled in this cluster.
+     * 
+     */
     public Optional<Boolean> getEnableHierarchicalResourceQuota() {
         return Optional.ofNullable(this.enableHierarchicalResourceQuota);
     }
+    /**
+     * Whether pod tree labels are enabled in this cluster.
+     * 
+     */
     public Optional<Boolean> getEnablePodTreeLabels() {
         return Optional.ofNullable(this.enablePodTreeLabels);
     }
+    /**
+     * Enables the installation of Policy Controller. If false, the rest of PolicyController fields take no effect.
+     * 
+     */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }

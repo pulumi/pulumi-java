@@ -13,6 +13,25 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetKMSSecret {
+/**
+ * This data source allows you to use data encrypted with Google Cloud KMS
+ * within your resource definitions.
+ * 
+ * For more information see
+ * [the official documentation](https://cloud.google.com/kms/docs/encrypt-decrypt).
+ * 
+ * > **NOTE:** Using this data provider will allow you to conceal secret data within your
+ * resource definitions, but it does not take care of protecting that data in the
+ * logging output, plan output, or state output.  Please take care to secure your secret
+ * data outside of resource definitions.
+ * 
+ *
+ * A collection of arguments for invoking getKMSSecret.
+ * 
+ *
+ * A collection of values returned by getKMSSecret.
+ * 
+ */
     public static CompletableFuture<GetKMSSecretResult> invokeAsync(GetKMSSecretArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:kms/getKMSSecret:getKMSSecret", TypeShape.of(GetKMSSecretResult.class), args == null ? GetKMSSecretArgs.Empty : args, Utilities.withVersion(options));
     }

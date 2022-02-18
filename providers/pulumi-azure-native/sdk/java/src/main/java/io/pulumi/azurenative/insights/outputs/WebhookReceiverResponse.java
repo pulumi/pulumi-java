@@ -12,12 +12,40 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class WebhookReceiverResponse {
+    /**
+     * Indicates the identifier uri for aad auth.
+     * 
+     */
     private final @Nullable String identifierUri;
+    /**
+     * The name of the webhook receiver. Names must be unique across all receivers within an action group.
+     * 
+     */
     private final String name;
+    /**
+     * Indicates the webhook app object Id for aad auth.
+     * 
+     */
     private final @Nullable String objectId;
+    /**
+     * The URI where webhooks should be sent.
+     * 
+     */
     private final String serviceUri;
+    /**
+     * Indicates the tenant id for aad auth.
+     * 
+     */
     private final @Nullable String tenantId;
+    /**
+     * Indicates whether or not use AAD authentication.
+     * 
+     */
     private final @Nullable Boolean useAadAuth;
+    /**
+     * Indicates whether to use common alert schema.
+     * 
+     */
     private final @Nullable Boolean useCommonAlertSchema;
 
     @OutputCustomType.Constructor({"identifierUri","name","objectId","serviceUri","tenantId","useAadAuth","useCommonAlertSchema"})
@@ -38,24 +66,52 @@ public final class WebhookReceiverResponse {
         this.useCommonAlertSchema = useCommonAlertSchema;
     }
 
+    /**
+     * Indicates the identifier uri for aad auth.
+     * 
+     */
     public Optional<String> getIdentifierUri() {
         return Optional.ofNullable(this.identifierUri);
     }
+    /**
+     * The name of the webhook receiver. Names must be unique across all receivers within an action group.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Indicates the webhook app object Id for aad auth.
+     * 
+     */
     public Optional<String> getObjectId() {
         return Optional.ofNullable(this.objectId);
     }
+    /**
+     * The URI where webhooks should be sent.
+     * 
+     */
     public String getServiceUri() {
         return this.serviceUri;
     }
+    /**
+     * Indicates the tenant id for aad auth.
+     * 
+     */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }
+    /**
+     * Indicates whether or not use AAD authentication.
+     * 
+     */
     public Optional<Boolean> getUseAadAuth() {
         return Optional.ofNullable(this.useAadAuth);
     }
+    /**
+     * Indicates whether to use common alert schema.
+     * 
+     */
     public Optional<Boolean> getUseCommonAlertSchema() {
         return Optional.ofNullable(this.useCommonAlertSchema);
     }

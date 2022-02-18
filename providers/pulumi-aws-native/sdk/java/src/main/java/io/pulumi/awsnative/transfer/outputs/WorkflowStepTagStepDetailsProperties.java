@@ -13,7 +13,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class WorkflowStepTagStepDetailsProperties {
+    /**
+     * The name of the step, used as an identifier.
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * Array that contains from 1 to 10 key/value pairs.
+     * 
+     */
     private final @Nullable List<WorkflowS3Tag> tags;
 
     @OutputCustomType.Constructor({"name","tags"})
@@ -24,9 +32,17 @@ public final class WorkflowStepTagStepDetailsProperties {
         this.tags = tags;
     }
 
+    /**
+     * The name of the step, used as an identifier.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * Array that contains from 1 to 10 key/value pairs.
+     * 
+     */
     public List<WorkflowS3Tag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

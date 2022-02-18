@@ -8,20 +8,76 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Required. Immutable. The kind of analysis that is handled by this discovery.
+     * 
+     */
     @EnumType
     public enum DiscoveryAnalysisKind {
+        /**
+         * Default value. This value is unused.
+         * 
+         */
         NoteKindUnspecified("NOTE_KIND_UNSPECIFIED"),
+        /**
+         * The note and occurrence represent a package vulnerability.
+         * 
+         */
         Vulnerability("VULNERABILITY"),
+        /**
+         * The note and occurrence assert build provenance.
+         * 
+         */
         Build("BUILD"),
+        /**
+         * This represents an image basis relationship.
+         * 
+         */
         Image("IMAGE"),
+        /**
+         * This represents a package installed via a package manager.
+         * 
+         */
         Package("PACKAGE"),
+        /**
+         * The note and occurrence track deployment events.
+         * 
+         */
         Deployment("DEPLOYMENT"),
+        /**
+         * The note and occurrence track the initial discovery status of a resource.
+         * 
+         */
         Discovery("DISCOVERY"),
+        /**
+         * This represents a logical "role" that can attest to artifacts.
+         * 
+         */
         Attestation("ATTESTATION"),
+        /**
+         * This represents an in-toto link.
+         * 
+         */
         Intoto("INTOTO"),
+        /**
+         * This represents a software bill of materials.
+         * 
+         */
         Sbom("SBOM"),
+        /**
+         * This represents an SPDX Package.
+         * 
+         */
         SpdxPackage("SPDX_PACKAGE"),
+        /**
+         * This represents an SPDX File.
+         * 
+         */
         SpdxFile("SPDX_FILE"),
+        /**
+         * This represents an SPDX Relationship.
+         * 
+         */
         SpdxRelationship("SPDX_RELATIONSHIP");
 
         private final String value;

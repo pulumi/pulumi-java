@@ -16,6 +16,10 @@ public final class ExternalVpnGatewayState extends io.pulumi.resources.ResourceA
 
     public static final ExternalVpnGatewayState Empty = new ExternalVpnGatewayState();
 
+    /**
+     * An optional description of this resource.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -23,6 +27,11 @@ public final class ExternalVpnGatewayState extends io.pulumi.resources.ResourceA
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * A list of interfaces on this external VPN gateway.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="interfaces")
     private final @Nullable Input<List<ExternalVpnGatewayInterfaceGetArgs>> interfaces;
 
@@ -30,6 +39,16 @@ public final class ExternalVpnGatewayState extends io.pulumi.resources.ResourceA
         return this.interfaces == null ? Input.empty() : this.interfaces;
     }
 
+    /**
+     * Name of the resource. Provided by the client when the resource is
+     * created. The name must be 1-63 characters long, and comply with
+     * RFC1035.  Specifically, the name must be 1-63 characters long and
+     * match the regular expression `a-z?` which means
+     * the first character must be a lowercase letter, and all following
+     * characters must be a dash, lowercase letter, or digit, except the last
+     * character, which cannot be a dash.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -37,6 +56,11 @@ public final class ExternalVpnGatewayState extends io.pulumi.resources.ResourceA
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -44,6 +68,11 @@ public final class ExternalVpnGatewayState extends io.pulumi.resources.ResourceA
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Indicates the redundancy type of this external VPN gateway
+     * Possible values are `FOUR_IPS_REDUNDANCY`, `SINGLE_IP_INTERNALLY_REDUNDANT`, and `TWO_IPS_REDUNDANCY`.
+     * 
+     */
     @InputImport(name="redundancyType")
     private final @Nullable Input<String> redundancyType;
 
@@ -51,6 +80,10 @@ public final class ExternalVpnGatewayState extends io.pulumi.resources.ResourceA
         return this.redundancyType == null ? Input.empty() : this.redundancyType;
     }
 
+    /**
+     * The URI of the created resource.
+     * 
+     */
     @InputImport(name="selfLink")
     private final @Nullable Input<String> selfLink;
 

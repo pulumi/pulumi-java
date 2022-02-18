@@ -10,10 +10,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A property of an index.
+ * 
+ */
 public final class GoogleDatastoreAdminV1IndexedPropertyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleDatastoreAdminV1IndexedPropertyArgs Empty = new GoogleDatastoreAdminV1IndexedPropertyArgs();
 
+    /**
+     * The indexed property's direction. Must not be DIRECTION_UNSPECIFIED.
+     * 
+     */
     @InputImport(name="direction", required=true)
     private final Input<GoogleDatastoreAdminV1IndexedPropertyDirection> direction;
 
@@ -21,6 +29,10 @@ public final class GoogleDatastoreAdminV1IndexedPropertyArgs extends io.pulumi.r
         return this.direction;
     }
 
+    /**
+     * The property name to index.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

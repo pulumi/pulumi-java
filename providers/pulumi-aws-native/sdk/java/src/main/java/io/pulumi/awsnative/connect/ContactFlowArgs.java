@@ -18,6 +18,10 @@ public final class ContactFlowArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContactFlowArgs Empty = new ContactFlowArgs();
 
+    /**
+     * The content of the contact flow in JSON format.
+     * 
+     */
     @InputImport(name="content", required=true)
     private final Input<String> content;
 
@@ -25,6 +29,10 @@ public final class ContactFlowArgs extends io.pulumi.resources.ResourceArgs {
         return this.content;
     }
 
+    /**
+     * The description of the contact flow.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -32,6 +40,10 @@ public final class ContactFlowArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The identifier of the Amazon Connect instance (ARN).
+     * 
+     */
     @InputImport(name="instanceArn", required=true)
     private final Input<String> instanceArn;
 
@@ -39,6 +51,10 @@ public final class ContactFlowArgs extends io.pulumi.resources.ResourceArgs {
         return this.instanceArn;
     }
 
+    /**
+     * The name of the contact flow.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -46,6 +62,10 @@ public final class ContactFlowArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The state of the contact flow.
+     * 
+     */
     @InputImport(name="state")
     private final @Nullable Input<ContactFlowState> state;
 
@@ -53,6 +73,10 @@ public final class ContactFlowArgs extends io.pulumi.resources.ResourceArgs {
         return this.state == null ? Input.empty() : this.state;
     }
 
+    /**
+     * One or more tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<ContactFlowTagArgs>> tags;
 
@@ -60,6 +84,10 @@ public final class ContactFlowArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The type of the contact flow.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<ContactFlowType> type;
 

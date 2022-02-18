@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetActivity {
+/**
+ * Resource schema for Activity
+ * 
+ */
     public static CompletableFuture<GetActivityResult> invokeAsync(GetActivityArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:stepfunctions:getActivity", TypeShape.of(GetActivityResult.class), args == null ? GetActivityArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DetectorModelSetVariable {
+    /**
+     * The new value of the variable.
+     * 
+     */
     private final String value;
+    /**
+     * The name of the variable.
+     * 
+     */
     private final String variableName;
 
     @OutputCustomType.Constructor({"value","variableName"})
@@ -20,9 +28,17 @@ public final class DetectorModelSetVariable {
         this.variableName = Objects.requireNonNull(variableName);
     }
 
+    /**
+     * The new value of the variable.
+     * 
+     */
     public String getValue() {
         return this.value;
     }
+    /**
+     * The name of the variable.
+     * 
+     */
     public String getVariableName() {
         return this.variableName;
     }

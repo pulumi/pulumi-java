@@ -15,6 +15,10 @@ public final class ExtensionResourceArgs extends io.pulumi.resources.ResourceArg
 
     public static final ExtensionResourceArgs Empty = new ExtensionResourceArgs();
 
+    /**
+     * Dictionary of the extension resource properties.
+     * 
+     */
     @InputImport(name="properties", required=true)
     private final Input<Map<String,Object>> properties;
 
@@ -22,6 +26,10 @@ public final class ExtensionResourceArgs extends io.pulumi.resources.ResourceArg
         return this.properties;
     }
 
+    /**
+     * CloudFormation type name.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

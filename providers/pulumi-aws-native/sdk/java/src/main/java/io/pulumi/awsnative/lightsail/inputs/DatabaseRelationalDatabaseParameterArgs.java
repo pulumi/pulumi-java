@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes the parameters of the database.
+ * 
+ */
 public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DatabaseRelationalDatabaseParameterArgs Empty = new DatabaseRelationalDatabaseParameterArgs();
 
+    /**
+     * Specifies the valid range of values for the parameter.
+     * 
+     */
     @InputImport(name="allowedValues")
     private final @Nullable Input<String> allowedValues;
 
@@ -22,6 +30,10 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
         return this.allowedValues == null ? Input.empty() : this.allowedValues;
     }
 
+    /**
+     * Indicates when parameter updates are applied. Can be immediate or pending-reboot.
+     * 
+     */
     @InputImport(name="applyMethod")
     private final @Nullable Input<String> applyMethod;
 
@@ -29,6 +41,10 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
         return this.applyMethod == null ? Input.empty() : this.applyMethod;
     }
 
+    /**
+     * Specifies the engine-specific parameter type.
+     * 
+     */
     @InputImport(name="applyType")
     private final @Nullable Input<String> applyType;
 
@@ -36,6 +52,10 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
         return this.applyType == null ? Input.empty() : this.applyType;
     }
 
+    /**
+     * Specifies the valid data type for the parameter.
+     * 
+     */
     @InputImport(name="dataType")
     private final @Nullable Input<String> dataType;
 
@@ -43,6 +63,10 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
         return this.dataType == null ? Input.empty() : this.dataType;
     }
 
+    /**
+     * Provides a description of the parameter.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -50,6 +74,10 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * A Boolean value indicating whether the parameter can be modified.
+     * 
+     */
     @InputImport(name="isModifiable")
     private final @Nullable Input<Boolean> isModifiable;
 
@@ -57,6 +85,10 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
         return this.isModifiable == null ? Input.empty() : this.isModifiable;
     }
 
+    /**
+     * Specifies the name of the parameter.
+     * 
+     */
     @InputImport(name="parameterName")
     private final @Nullable Input<String> parameterName;
 
@@ -64,6 +96,10 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
         return this.parameterName == null ? Input.empty() : this.parameterName;
     }
 
+    /**
+     * Specifies the value of the parameter.
+     * 
+     */
     @InputImport(name="parameterValue")
     private final @Nullable Input<String> parameterValue;
 

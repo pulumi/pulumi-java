@@ -13,6 +13,10 @@ public final class URLMapDefaultRouteActionRequestMirrorPolicyArgs extends io.pu
 
     public static final URLMapDefaultRouteActionRequestMirrorPolicyArgs Empty = new URLMapDefaultRouteActionRequestMirrorPolicyArgs();
 
+    /**
+     * The full or partial URL to the BackendService resource being mirrored to.
+     * 
+     */
     @InputImport(name="backendService", required=true)
     private final Input<String> backendService;
 

@@ -12,10 +12,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class StaticSiteTemplateOptionsResponse {
+    /**
+     * Description of the newly generated repository.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * Whether or not the newly generated repository is a private repository. Defaults to false (i.e. public).
+     * 
+     */
     private final @Nullable Boolean isPrivate;
+    /**
+     * Owner of the newly generated repository.
+     * 
+     */
     private final @Nullable String owner;
+    /**
+     * Name of the newly generated repository.
+     * 
+     */
     private final @Nullable String repositoryName;
+    /**
+     * URL of the template repository. The newly generated repository will be based on this one.
+     * 
+     */
     private final @Nullable String templateRepositoryUrl;
 
     @OutputCustomType.Constructor({"description","isPrivate","owner","repositoryName","templateRepositoryUrl"})
@@ -32,18 +52,38 @@ public final class StaticSiteTemplateOptionsResponse {
         this.templateRepositoryUrl = templateRepositoryUrl;
     }
 
+    /**
+     * Description of the newly generated repository.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * Whether or not the newly generated repository is a private repository. Defaults to false (i.e. public).
+     * 
+     */
     public Optional<Boolean> getIsPrivate() {
         return Optional.ofNullable(this.isPrivate);
     }
+    /**
+     * Owner of the newly generated repository.
+     * 
+     */
     public Optional<String> getOwner() {
         return Optional.ofNullable(this.owner);
     }
+    /**
+     * Name of the newly generated repository.
+     * 
+     */
     public Optional<String> getRepositoryName() {
         return Optional.ofNullable(this.repositoryName);
     }
+    /**
+     * URL of the template repository. The newly generated repository will be based on this one.
+     * 
+     */
     public Optional<String> getTemplateRepositoryUrl() {
         return Optional.ofNullable(this.templateRepositoryUrl);
     }

@@ -16,6 +16,11 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RouterArgs Empty = new RouterArgs();
 
+    /**
+     * BGP information specific to this router.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="bgp")
     private final @Nullable Input<RouterBgpArgs> bgp;
 
@@ -23,6 +28,10 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
         return this.bgp == null ? Input.empty() : this.bgp;
     }
 
+    /**
+     * User-specified description for the IP range.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -30,6 +39,12 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Field to indicate if a router is dedicated to use with encrypted
+     * Interconnect Attachment (IPsec-encrypted Cloud Interconnect feature).
+     * Not currently available publicly.
+     * 
+     */
     @InputImport(name="encryptedInterconnectRouter")
     private final @Nullable Input<Boolean> encryptedInterconnectRouter;
 
@@ -37,6 +52,15 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
         return this.encryptedInterconnectRouter == null ? Input.empty() : this.encryptedInterconnectRouter;
     }
 
+    /**
+     * Name of the resource. The name must be 1-63 characters long, and
+     * comply with RFC1035. Specifically, the name must be 1-63 characters
+     * long and match the regular expression `a-z?`
+     * which means the first character must be a lowercase letter, and all
+     * following characters must be a dash, lowercase letter, or digit,
+     * except the last character, which cannot be a dash.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -44,6 +68,10 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * A reference to the network to which this router belongs.
+     * 
+     */
     @InputImport(name="network", required=true)
     private final Input<String> network;
 
@@ -51,6 +79,11 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
         return this.network;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -58,6 +91,10 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Region where the router resides.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 

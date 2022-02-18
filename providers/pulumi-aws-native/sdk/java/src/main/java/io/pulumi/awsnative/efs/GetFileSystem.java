@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFileSystem {
+/**
+ * Resource Type definition for AWS::EFS::FileSystem
+ * 
+ */
     public static CompletableFuture<GetFileSystemResult> invokeAsync(GetFileSystemArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:efs:getFileSystem", TypeShape.of(GetFileSystemResult.class), args == null ? GetFileSystemArgs.Empty : args, Utilities.withVersion(options));
     }

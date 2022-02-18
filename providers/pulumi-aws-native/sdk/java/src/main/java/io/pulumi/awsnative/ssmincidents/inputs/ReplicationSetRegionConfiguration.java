@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The ReplicationSet regional configuration.
+ * 
+ */
 public final class ReplicationSetRegionConfiguration extends io.pulumi.resources.InvokeArgs {
 
     public static final ReplicationSetRegionConfiguration Empty = new ReplicationSetRegionConfiguration();

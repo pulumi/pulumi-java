@@ -14,6 +14,10 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPa
 
     public static final PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdArgs Empty = new PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdArgs();
 
+    /**
+     * If not empty, the ID of the namespace to which the entities belong.
+     * 
+     */
     @InputImport(name="namespaceId")
     private final @Nullable Input<String> namespaceId;
 
@@ -21,6 +25,10 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPa
         return this.namespaceId == null ? Input.empty() : this.namespaceId;
     }
 
+    /**
+     * The Google Cloud Platform project ID of the project containing the table.
+     * 
+     */
     @InputImport(name="projectId", required=true)
     private final Input<String> projectId;
 

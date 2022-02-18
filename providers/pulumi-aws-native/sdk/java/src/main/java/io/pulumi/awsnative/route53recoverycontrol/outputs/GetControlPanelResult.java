@@ -14,10 +14,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetControlPanelResult {
+    /**
+     * The Amazon Resource Name (ARN) of the cluster.
+     * 
+     */
     private final @Nullable String controlPanelArn;
+    /**
+     * A flag that Amazon Route 53 Application Recovery Controller sets to true to designate the default control panel for a cluster. When you create a cluster, Amazon Route 53 Application Recovery Controller creates a control panel, and sets this flag for that control panel. If you create a control panel yourself, this flag is set to false.
+     * 
+     */
     private final @Nullable Boolean defaultControlPanel;
+    /**
+     * The name of the control panel. You can use any non-white space character in the name.
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * Count of associated routing controls
+     * 
+     */
     private final @Nullable Integer routingControlCount;
+    /**
+     * The deployment status of control panel. Status can be one of the following: PENDING, DEPLOYED, PENDING_DELETION.
+     * 
+     */
     private final @Nullable ControlPanelStatus status;
 
     @OutputCustomType.Constructor({"controlPanelArn","defaultControlPanel","name","routingControlCount","status"})
@@ -34,18 +54,38 @@ public final class GetControlPanelResult {
         this.status = status;
     }
 
+    /**
+     * The Amazon Resource Name (ARN) of the cluster.
+     * 
+     */
     public Optional<String> getControlPanelArn() {
         return Optional.ofNullable(this.controlPanelArn);
     }
+    /**
+     * A flag that Amazon Route 53 Application Recovery Controller sets to true to designate the default control panel for a cluster. When you create a cluster, Amazon Route 53 Application Recovery Controller creates a control panel, and sets this flag for that control panel. If you create a control panel yourself, this flag is set to false.
+     * 
+     */
     public Optional<Boolean> getDefaultControlPanel() {
         return Optional.ofNullable(this.defaultControlPanel);
     }
+    /**
+     * The name of the control panel. You can use any non-white space character in the name.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * Count of associated routing controls
+     * 
+     */
     public Optional<Integer> getRoutingControlCount() {
         return Optional.ofNullable(this.routingControlCount);
     }
+    /**
+     * The deployment status of control panel. Status can be one of the following: PENDING, DEPLOYED, PENDING_DELETION.
+     * 
+     */
     public Optional<ControlPanelStatus> getStatus() {
         return Optional.ofNullable(this.status);
     }

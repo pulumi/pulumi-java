@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Resource for a regional service location.
+ * 
+ */
 public final class SqlDedicatedGatewayRegionalServiceResourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SqlDedicatedGatewayRegionalServiceResourceResponse Empty = new SqlDedicatedGatewayRegionalServiceResourceResponse();
 
+    /**
+     * The location name.
+     * 
+     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -19,6 +27,10 @@ public final class SqlDedicatedGatewayRegionalServiceResourceResponse extends io
         return this.location;
     }
 
+    /**
+     * The regional service name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -26,6 +38,10 @@ public final class SqlDedicatedGatewayRegionalServiceResourceResponse extends io
         return this.name;
     }
 
+    /**
+     * The regional endpoint for SqlDedicatedGateway.
+     * 
+     */
     @InputImport(name="sqlDedicatedGatewayEndpoint", required=true)
     private final String sqlDedicatedGatewayEndpoint;
 
@@ -33,6 +49,10 @@ public final class SqlDedicatedGatewayRegionalServiceResourceResponse extends io
         return this.sqlDedicatedGatewayEndpoint;
     }
 
+    /**
+     * Describes the status of a service.
+     * 
+     */
     @InputImport(name="status", required=true)
     private final String status;
 

@@ -16,6 +16,12 @@ public final class DataStoreIndexState extends io.pulumi.resources.ResourceArgs 
 
     public static final DataStoreIndexState Empty = new DataStoreIndexState();
 
+    /**
+     * Policy for including ancestors in the index.
+     * Default value is `NONE`.
+     * Possible values are `NONE` and `ALL_ANCESTORS`.
+     * 
+     */
     @InputImport(name="ancestor")
     private final @Nullable Input<String> ancestor;
 
@@ -23,6 +29,10 @@ public final class DataStoreIndexState extends io.pulumi.resources.ResourceArgs 
         return this.ancestor == null ? Input.empty() : this.ancestor;
     }
 
+    /**
+     * The index id.
+     * 
+     */
     @InputImport(name="indexId")
     private final @Nullable Input<String> indexId;
 
@@ -30,6 +40,10 @@ public final class DataStoreIndexState extends io.pulumi.resources.ResourceArgs 
         return this.indexId == null ? Input.empty() : this.indexId;
     }
 
+    /**
+     * The entity kind which the index applies to.
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -37,6 +51,11 @@ public final class DataStoreIndexState extends io.pulumi.resources.ResourceArgs 
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -44,6 +63,11 @@ public final class DataStoreIndexState extends io.pulumi.resources.ResourceArgs 
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * An ordered list of properties to index on.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<List<DataStoreIndexPropertyGetArgs>> properties;
 

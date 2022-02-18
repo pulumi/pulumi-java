@@ -8,10 +8,18 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * Policies to control how to act if a signature is invalid
+ * 
+ */
 public final class CodeSigningConfigCodeSigningPolicies extends io.pulumi.resources.InvokeArgs {
 
     public static final CodeSigningConfigCodeSigningPolicies Empty = new CodeSigningConfigCodeSigningPolicies();
 
+    /**
+     * Indicates how Lambda operations involve updating the code artifact will operate. Default to Warn if not provided
+     * 
+     */
     @InputImport(name="untrustedArtifactOnDeployment", required=true)
     private final CodeSigningConfigCodeSigningPoliciesUntrustedArtifactOnDeployment untrustedArtifactOnDeployment;
 

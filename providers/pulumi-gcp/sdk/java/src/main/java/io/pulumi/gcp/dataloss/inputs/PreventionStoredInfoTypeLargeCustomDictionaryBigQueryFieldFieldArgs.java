@@ -13,6 +13,10 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFie
 
     public static final PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldArgs Empty = new PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldArgs();
 
+    /**
+     * Name describing the field.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

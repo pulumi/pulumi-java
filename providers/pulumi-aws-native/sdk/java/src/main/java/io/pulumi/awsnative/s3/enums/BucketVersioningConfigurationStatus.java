@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The versioning state of the bucket.
+     * 
+     */
     @EnumType
     public enum BucketVersioningConfigurationStatus {
         Enabled("Enabled"),

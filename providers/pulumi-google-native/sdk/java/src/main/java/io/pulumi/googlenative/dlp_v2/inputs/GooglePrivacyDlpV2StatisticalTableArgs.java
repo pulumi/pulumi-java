@@ -12,10 +12,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * An auxiliary table containing statistical information on the relative frequency of different quasi-identifiers values. It has one or several quasi-identifiers columns, and one column that indicates the relative frequency of each quasi-identifier tuple. If a tuple is present in the data but not in the auxiliary table, the corresponding relative frequency is assumed to be zero (and thus, the tuple is highly reidentifiable).
+ * 
+ */
 public final class GooglePrivacyDlpV2StatisticalTableArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GooglePrivacyDlpV2StatisticalTableArgs Empty = new GooglePrivacyDlpV2StatisticalTableArgs();
 
+    /**
+     * Quasi-identifier columns.
+     * 
+     */
     @InputImport(name="quasiIds", required=true)
     private final Input<List<GooglePrivacyDlpV2QuasiIdentifierFieldArgs>> quasiIds;
 
@@ -23,6 +31,10 @@ public final class GooglePrivacyDlpV2StatisticalTableArgs extends io.pulumi.reso
         return this.quasiIds;
     }
 
+    /**
+     * The relative frequency column must contain a floating-point number between 0 and 1 (inclusive). Null values are assumed to be zero.
+     * 
+     */
     @InputImport(name="relativeFrequency", required=true)
     private final Input<GooglePrivacyDlpV2FieldIdArgs> relativeFrequency;
 
@@ -30,6 +42,10 @@ public final class GooglePrivacyDlpV2StatisticalTableArgs extends io.pulumi.reso
         return this.relativeFrequency;
     }
 
+    /**
+     * Auxiliary table location.
+     * 
+     */
     @InputImport(name="table", required=true)
     private final Input<GooglePrivacyDlpV2BigQueryTableArgs> table;
 

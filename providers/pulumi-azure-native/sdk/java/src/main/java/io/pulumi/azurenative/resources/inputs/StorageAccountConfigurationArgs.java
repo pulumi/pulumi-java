@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Settings to use an existing storage account. Valid storage account kinds are: Storage, StorageV2 and FileStorage
+ * 
+ */
 public final class StorageAccountConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StorageAccountConfigurationArgs Empty = new StorageAccountConfigurationArgs();
 
+    /**
+     * The storage account access key.
+     * 
+     */
     @InputImport(name="storageAccountKey")
     private final @Nullable Input<String> storageAccountKey;
 
@@ -21,6 +29,10 @@ public final class StorageAccountConfigurationArgs extends io.pulumi.resources.R
         return this.storageAccountKey == null ? Input.empty() : this.storageAccountKey;
     }
 
+    /**
+     * The storage account name.
+     * 
+     */
     @InputImport(name="storageAccountName")
     private final @Nullable Input<String> storageAccountName;
 

@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Keys for endpoint authentication.
+ * 
+ */
 public final class EndpointAuthKeysArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EndpointAuthKeysArgs Empty = new EndpointAuthKeysArgs();
 
+    /**
+     * The primary key.
+     * 
+     */
     @InputImport(name="primaryKey")
     private final @Nullable Input<String> primaryKey;
 
@@ -21,6 +29,10 @@ public final class EndpointAuthKeysArgs extends io.pulumi.resources.ResourceArgs
         return this.primaryKey == null ? Input.empty() : this.primaryKey;
     }
 
+    /**
+     * The secondary key.
+     * 
+     */
     @InputImport(name="secondaryKey")
     private final @Nullable Input<String> secondaryKey;
 

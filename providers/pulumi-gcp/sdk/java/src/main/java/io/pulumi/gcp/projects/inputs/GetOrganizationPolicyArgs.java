@@ -12,6 +12,10 @@ public final class GetOrganizationPolicyArgs extends io.pulumi.resources.InvokeA
 
     public static final GetOrganizationPolicyArgs Empty = new GetOrganizationPolicyArgs();
 
+    /**
+     * (Required) The name of the Constraint the Policy is configuring, for example, `serviceuser.services`. Check out the [complete list of available constraints](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints#available_constraints).
+     * 
+     */
     @InputImport(name="constraint", required=true)
     private final String constraint;
 
@@ -19,6 +23,10 @@ public final class GetOrganizationPolicyArgs extends io.pulumi.resources.InvokeA
         return this.constraint;
     }
 
+    /**
+     * The project ID.
+     * 
+     */
     @InputImport(name="project", required=true)
     private final String project;
 

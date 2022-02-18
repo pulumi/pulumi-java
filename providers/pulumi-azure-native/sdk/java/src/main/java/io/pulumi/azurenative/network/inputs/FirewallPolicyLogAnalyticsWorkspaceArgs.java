@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Log Analytics Workspace for Firewall Policy Insights.
+ * 
+ */
 public final class FirewallPolicyLogAnalyticsWorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FirewallPolicyLogAnalyticsWorkspaceArgs Empty = new FirewallPolicyLogAnalyticsWorkspaceArgs();
 
+    /**
+     * Region to configure the Workspace.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 
@@ -22,6 +30,10 @@ public final class FirewallPolicyLogAnalyticsWorkspaceArgs extends io.pulumi.res
         return this.region == null ? Input.empty() : this.region;
     }
 
+    /**
+     * The workspace Id for Firewall Policy Insights.
+     * 
+     */
     @InputImport(name="workspaceId")
     private final @Nullable Input<SubResourceArgs> workspaceId;
 

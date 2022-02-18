@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Day of the week when a cache can be patched.
+     * 
+     */
     @EnumType
     public enum DayOfWeek {
         Monday("Monday"),

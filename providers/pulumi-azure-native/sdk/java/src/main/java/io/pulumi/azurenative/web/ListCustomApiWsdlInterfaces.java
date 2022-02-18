@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListCustomApiWsdlInterfaces {
+/**
+ * A list of custom API WSDL interfaces
+ * API Version: 2016-06-01.
+ * 
+ *
+ * A list of custom API WSDL interfaces
+ * 
+ */
     public static CompletableFuture<ListCustomApiWsdlInterfacesResult> invokeAsync(ListCustomApiWsdlInterfacesArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listCustomApiWsdlInterfaces", TypeShape.of(ListCustomApiWsdlInterfacesResult.class), args == null ? ListCustomApiWsdlInterfacesArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Body of the error response returned from the API.
+ * 
+ */
 public final class ErrorEntityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ErrorEntityResponse Empty = new ErrorEntityResponse();
 
+    /**
+     * Basic error code.
+     * 
+     */
     @InputImport(name="code")
     private final @Nullable String code;
 
@@ -22,6 +30,10 @@ public final class ErrorEntityResponse extends io.pulumi.resources.InvokeArgs {
         return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
     }
 
+    /**
+     * Type of error.
+     * 
+     */
     @InputImport(name="extendedCode")
     private final @Nullable String extendedCode;
 
@@ -29,6 +41,10 @@ public final class ErrorEntityResponse extends io.pulumi.resources.InvokeArgs {
         return this.extendedCode == null ? Optional.empty() : Optional.ofNullable(this.extendedCode);
     }
 
+    /**
+     * Inner errors.
+     * 
+     */
     @InputImport(name="innerErrors")
     private final @Nullable List<ErrorEntityResponse> innerErrors;
 
@@ -36,6 +52,10 @@ public final class ErrorEntityResponse extends io.pulumi.resources.InvokeArgs {
         return this.innerErrors == null ? List.of() : this.innerErrors;
     }
 
+    /**
+     * Any details of the error.
+     * 
+     */
     @InputImport(name="message")
     private final @Nullable String message;
 
@@ -43,6 +63,10 @@ public final class ErrorEntityResponse extends io.pulumi.resources.InvokeArgs {
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
     }
 
+    /**
+     * Message template.
+     * 
+     */
     @InputImport(name="messageTemplate")
     private final @Nullable String messageTemplate;
 
@@ -50,6 +74,10 @@ public final class ErrorEntityResponse extends io.pulumi.resources.InvokeArgs {
         return this.messageTemplate == null ? Optional.empty() : Optional.ofNullable(this.messageTemplate);
     }
 
+    /**
+     * Parameters for the template.
+     * 
+     */
     @InputImport(name="parameters")
     private final @Nullable List<String> parameters;
 

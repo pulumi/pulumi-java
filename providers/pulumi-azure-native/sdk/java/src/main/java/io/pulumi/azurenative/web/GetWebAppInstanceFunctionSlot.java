@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWebAppInstanceFunctionSlot {
+/**
+ * Function information.
+ * API Version: 2020-12-01.
+ * 
+ *
+ * Function information.
+ * 
+ */
     public static CompletableFuture<GetWebAppInstanceFunctionSlotResult> invokeAsync(GetWebAppInstanceFunctionSlotArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppInstanceFunctionSlot", TypeShape.of(GetWebAppInstanceFunctionSlotResult.class), args == null ? GetWebAppInstanceFunctionSlotArgs.Empty : args, Utilities.withVersion(options));
     }

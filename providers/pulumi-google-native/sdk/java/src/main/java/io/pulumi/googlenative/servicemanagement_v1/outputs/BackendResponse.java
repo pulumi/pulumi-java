@@ -10,6 +10,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BackendResponse {
+    /**
+     * A list of API backend rules that apply to individual API methods. **NOTE:** All service configuration rules follow "last one wins" order.
+     * 
+     */
     private final List<BackendRuleResponse> rules;
 
     @OutputCustomType.Constructor({"rules"})
@@ -17,6 +21,10 @@ public final class BackendResponse {
         this.rules = Objects.requireNonNull(rules);
     }
 
+    /**
+     * A list of API backend rules that apply to individual API methods. **NOTE:** All service configuration rules follow "last one wins" order.
+     * 
+     */
     public List<BackendRuleResponse> getRules() {
         return this.rules;
     }

@@ -10,10 +10,19 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Defines the RemoteAddress condition for the delivery rule.
+ * 
+ */
 public final class DeliveryRuleRemoteAddressConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DeliveryRuleRemoteAddressConditionArgs Empty = new DeliveryRuleRemoteAddressConditionArgs();
 
+    /**
+     * The name of the condition for the delivery rule.
+     * Expected value is 'RemoteAddress'.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -21,6 +30,10 @@ public final class DeliveryRuleRemoteAddressConditionArgs extends io.pulumi.reso
         return this.name;
     }
 
+    /**
+     * Defines the parameters for the condition.
+     * 
+     */
     @InputImport(name="parameters", required=true)
     private final Input<RemoteAddressMatchConditionParametersArgs> parameters;
 

@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Sends an AWS IoT Events input, passing in information about the detector model instance and the event that triggered the action.
+ * 
+ */
 public final class DetectorModelIotEvents extends io.pulumi.resources.InvokeArgs {
 
     public static final DetectorModelIotEvents Empty = new DetectorModelIotEvents();
 
+    /**
+     * The name of the AWS IoT Events input where the data is sent.
+     * 
+     */
     @InputImport(name="inputName", required=true)
     private final String inputName;
 

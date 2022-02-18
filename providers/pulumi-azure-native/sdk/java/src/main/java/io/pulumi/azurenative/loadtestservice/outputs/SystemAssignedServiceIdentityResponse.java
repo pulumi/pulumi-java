@@ -9,8 +9,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SystemAssignedServiceIdentityResponse {
+    /**
+     * The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
+     * 
+     */
     private final String principalId;
+    /**
+     * The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
+     * 
+     */
     private final String tenantId;
+    /**
+     * Type of managed service identity (either system assigned, or none).
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"principalId","tenantId","type"})
@@ -23,12 +35,24 @@ public final class SystemAssignedServiceIdentityResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
+     * 
+     */
     public String getPrincipalId() {
         return this.principalId;
     }
+    /**
+     * The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
+     * 
+     */
     public String getTenantId() {
         return this.tenantId;
     }
+    /**
+     * Type of managed service identity (either system assigned, or none).
+     * 
+     */
     public String getType() {
         return this.type;
     }

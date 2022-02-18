@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A set of properties that can be defined in the context of a specific item type. Each type may have its own properties.
+ * 
+ */
 public final class ApplicationInsightsComponentAnalyticsItemPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApplicationInsightsComponentAnalyticsItemPropertiesResponse Empty = new ApplicationInsightsComponentAnalyticsItemPropertiesResponse();
 
+    /**
+     * A function alias, used when the type of the item is Function
+     * 
+     */
     @InputImport(name="functionAlias")
     private final @Nullable String functionAlias;
 

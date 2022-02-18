@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The integration account RosettaNet ProcessConfiguration role settings.
+ * 
+ */
 public final class RosettaNetPipRoleSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RosettaNetPipRoleSettingsArgs Empty = new RosettaNetPipRoleSettingsArgs();
 
+    /**
+     * The action name.
+     * 
+     */
     @InputImport(name="action", required=true)
     private final Input<String> action;
 
@@ -23,6 +31,10 @@ public final class RosettaNetPipRoleSettingsArgs extends io.pulumi.resources.Res
         return this.action;
     }
 
+    /**
+     * The RosettaNet ProcessConfiguration business document.
+     * 
+     */
     @InputImport(name="businessDocument", required=true)
     private final Input<RosettaNetPipBusinessDocumentArgs> businessDocument;
 
@@ -30,6 +42,10 @@ public final class RosettaNetPipRoleSettingsArgs extends io.pulumi.resources.Res
         return this.businessDocument;
     }
 
+    /**
+     * The description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -37,6 +53,10 @@ public final class RosettaNetPipRoleSettingsArgs extends io.pulumi.resources.Res
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The role name.
+     * 
+     */
     @InputImport(name="role", required=true)
     private final Input<String> role;
 
@@ -44,6 +64,10 @@ public final class RosettaNetPipRoleSettingsArgs extends io.pulumi.resources.Res
         return this.role;
     }
 
+    /**
+     * The RosettaNet ProcessConfiguration role type.
+     * 
+     */
     @InputImport(name="roleType", required=true)
     private final Input<RosettaNetPipRoleType> roleType;
 
@@ -51,6 +75,10 @@ public final class RosettaNetPipRoleSettingsArgs extends io.pulumi.resources.Res
         return this.roleType;
     }
 
+    /**
+     * The service name.
+     * 
+     */
     @InputImport(name="service", required=true)
     private final Input<String> service;
 
@@ -58,6 +86,10 @@ public final class RosettaNetPipRoleSettingsArgs extends io.pulumi.resources.Res
         return this.service;
     }
 
+    /**
+     * The service classification name.
+     * 
+     */
     @InputImport(name="serviceClassification", required=true)
     private final Input<String> serviceClassification;
 

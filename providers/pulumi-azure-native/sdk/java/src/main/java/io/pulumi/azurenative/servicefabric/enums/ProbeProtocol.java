@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * the reference to the load balancer probe used by the load balancing rule.
+     * 
+     */
     @EnumType
     public enum ProbeProtocol {
         Tcp("tcp"),

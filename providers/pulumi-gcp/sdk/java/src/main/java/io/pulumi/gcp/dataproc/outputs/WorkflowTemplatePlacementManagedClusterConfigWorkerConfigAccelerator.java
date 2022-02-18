@@ -12,7 +12,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class WorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerator {
+    /**
+     * The number of the accelerator cards of this type exposed to this instance.
+     * 
+     */
     private final @Nullable Integer acceleratorCount;
+    /**
+     * Full URL, partial URI, or short name of the accelerator type resource to expose to this instance. See (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the accelerator type resource, for example, `nvidia-tesla-k80`.
+     * 
+     */
     private final @Nullable String acceleratorType;
 
     @OutputCustomType.Constructor({"acceleratorCount","acceleratorType"})
@@ -23,9 +31,17 @@ public final class WorkflowTemplatePlacementManagedClusterConfigWorkerConfigAcce
         this.acceleratorType = acceleratorType;
     }
 
+    /**
+     * The number of the accelerator cards of this type exposed to this instance.
+     * 
+     */
     public Optional<Integer> getAcceleratorCount() {
         return Optional.ofNullable(this.acceleratorCount);
     }
+    /**
+     * Full URL, partial URI, or short name of the accelerator type resource to expose to this instance. See (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the accelerator type resource, for example, `nvidia-tesla-k80`.
+     * 
+     */
     public Optional<String> getAcceleratorType() {
         return Optional.ofNullable(this.acceleratorType);
     }

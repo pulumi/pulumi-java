@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Subscription key parameter names details.
+ * 
+ */
 public final class SubscriptionKeyParameterNamesContractArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SubscriptionKeyParameterNamesContractArgs Empty = new SubscriptionKeyParameterNamesContractArgs();
 
+    /**
+     * Subscription key header name.
+     * 
+     */
     @InputImport(name="header")
     private final @Nullable Input<String> header;
 
@@ -21,6 +29,10 @@ public final class SubscriptionKeyParameterNamesContractArgs extends io.pulumi.r
         return this.header == null ? Input.empty() : this.header;
     }
 
+    /**
+     * Subscription key query string parameter name.
+     * 
+     */
     @InputImport(name="query")
     private final @Nullable Input<String> query;
 

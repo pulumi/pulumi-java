@@ -20,6 +20,10 @@ public final class AFDOriginGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AFDOriginGroupArgs Empty = new AFDOriginGroupArgs();
 
+    /**
+     * Health probe settings to the origin that is used to determine the health of the origin.
+     * 
+     */
     @InputImport(name="healthProbeSettings")
     private final @Nullable Input<HealthProbeParametersArgs> healthProbeSettings;
 
@@ -27,6 +31,10 @@ public final class AFDOriginGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.healthProbeSettings == null ? Input.empty() : this.healthProbeSettings;
     }
 
+    /**
+     * Load balancing settings for a backend pool
+     * 
+     */
     @InputImport(name="loadBalancingSettings")
     private final @Nullable Input<LoadBalancingSettingsParametersArgs> loadBalancingSettings;
 
@@ -34,6 +42,10 @@ public final class AFDOriginGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.loadBalancingSettings == null ? Input.empty() : this.loadBalancingSettings;
     }
 
+    /**
+     * Name of the origin group which is unique within the endpoint.
+     * 
+     */
     @InputImport(name="originGroupName")
     private final @Nullable Input<String> originGroupName;
 
@@ -41,6 +53,10 @@ public final class AFDOriginGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.originGroupName == null ? Input.empty() : this.originGroupName;
     }
 
+    /**
+     * Name of the CDN profile which is unique within the resource group.
+     * 
+     */
     @InputImport(name="profileName", required=true)
     private final Input<String> profileName;
 
@@ -48,6 +64,10 @@ public final class AFDOriginGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.profileName;
     }
 
+    /**
+     * Name of the Resource group within the Azure subscription.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -55,6 +75,10 @@ public final class AFDOriginGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The JSON object that contains the properties to determine origin health using real requests/responses. This property is currently not supported.
+     * 
+     */
     @InputImport(name="responseBasedAfdOriginErrorDetectionSettings")
     private final @Nullable Input<ResponseBasedOriginErrorDetectionParametersArgs> responseBasedAfdOriginErrorDetectionSettings;
 
@@ -62,6 +86,10 @@ public final class AFDOriginGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.responseBasedAfdOriginErrorDetectionSettings == null ? Input.empty() : this.responseBasedAfdOriginErrorDetectionSettings;
     }
 
+    /**
+     * Whether to allow session affinity on this host. Valid options are 'Enabled' or 'Disabled'
+     * 
+     */
     @InputImport(name="sessionAffinityState")
     private final @Nullable Input<Either<String,EnabledState>> sessionAffinityState;
 
@@ -69,6 +97,10 @@ public final class AFDOriginGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.sessionAffinityState == null ? Input.empty() : this.sessionAffinityState;
     }
 
+    /**
+     * Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
+     * 
+     */
     @InputImport(name="trafficRestorationTimeToHealedOrNewEndpointsInMinutes")
     private final @Nullable Input<Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
 

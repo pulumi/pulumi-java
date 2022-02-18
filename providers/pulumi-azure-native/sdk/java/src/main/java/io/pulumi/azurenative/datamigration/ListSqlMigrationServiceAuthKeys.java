@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListSqlMigrationServiceAuthKeys {
+/**
+ * An authentication key.
+ * API Version: 2021-10-30-preview.
+ * 
+ *
+ * An authentication key.
+ * 
+ */
     public static CompletableFuture<ListSqlMigrationServiceAuthKeysResult> invokeAsync(ListSqlMigrationServiceAuthKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datamigration:listSqlMigrationServiceAuthKeys", TypeShape.of(ListSqlMigrationServiceAuthKeysResult.class), args == null ? ListSqlMigrationServiceAuthKeysArgs.Empty : args, Utilities.withVersion(options));
     }

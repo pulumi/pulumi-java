@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Metadata that you can assign to a Metric Stream, consisting of a key-value pair.
+ * 
+ */
 public final class MetricStreamTagArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MetricStreamTagArgs Empty = new MetricStreamTagArgs();
 
+    /**
+     * A unique identifier for the tag.
+     * 
+     */
     @InputImport(name="key", required=true)
     private final Input<String> key;
 
@@ -21,6 +29,10 @@ public final class MetricStreamTagArgs extends io.pulumi.resources.ResourceArgs 
         return this.key;
     }
 
+    /**
+     * An optional string, which you can use to describe or define the tag.
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

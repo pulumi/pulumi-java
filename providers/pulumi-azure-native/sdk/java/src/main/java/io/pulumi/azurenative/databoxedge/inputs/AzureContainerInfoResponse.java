@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Azure container mapping of the endpoint.
+ * 
+ */
 public final class AzureContainerInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureContainerInfoResponse Empty = new AzureContainerInfoResponse();
 
+    /**
+     * Container name (Based on the data format specified, this represents the name of Azure Files/Page blob/Block blob).
+     * 
+     */
     @InputImport(name="containerName", required=true)
     private final String containerName;
 
@@ -19,6 +27,10 @@ public final class AzureContainerInfoResponse extends io.pulumi.resources.Invoke
         return this.containerName;
     }
 
+    /**
+     * Storage format used for the file represented by the share.
+     * 
+     */
     @InputImport(name="dataFormat", required=true)
     private final String dataFormat;
 
@@ -26,6 +38,10 @@ public final class AzureContainerInfoResponse extends io.pulumi.resources.Invoke
         return this.dataFormat;
     }
 
+    /**
+     * ID of the storage account credential used to access storage.
+     * 
+     */
     @InputImport(name="storageAccountCredentialId", required=true)
     private final String storageAccountCredentialId;
 

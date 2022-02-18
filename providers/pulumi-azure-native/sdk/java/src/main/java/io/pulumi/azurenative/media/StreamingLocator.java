@@ -16,87 +16,212 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * A Streaming Locator resource
+ * API Version: 2020-05-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:media:StreamingLocator UserCreatedSecureStreamingLocatorWithUserDefinedContentKeys /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contoso/providers/Microsoft.Media/mediaservices/contosomedia/streamingLocators/UserCreatedSecureStreamingLocatorWithUserDefinedContentKeys 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:media:StreamingLocator")
 public class StreamingLocator extends io.pulumi.resources.CustomResource {
+    /**
+     * Alternative Media ID of this Streaming Locator
+     * 
+     */
     @OutputExport(name="alternativeMediaId", type=String.class, parameters={})
     private Output</* @Nullable */ String> alternativeMediaId;
 
+    /**
+     * @return Alternative Media ID of this Streaming Locator
+     * 
+     */
     public Output</* @Nullable */ String> getAlternativeMediaId() {
         return this.alternativeMediaId;
     }
+    /**
+     * Asset Name
+     * 
+     */
     @OutputExport(name="assetName", type=String.class, parameters={})
     private Output<String> assetName;
 
+    /**
+     * @return Asset Name
+     * 
+     */
     public Output<String> getAssetName() {
         return this.assetName;
     }
+    /**
+     * The ContentKeys used by this Streaming Locator.
+     * 
+     */
     @OutputExport(name="contentKeys", type=List.class, parameters={StreamingLocatorContentKeyResponse.class})
     private Output</* @Nullable */ List<StreamingLocatorContentKeyResponse>> contentKeys;
 
+    /**
+     * @return The ContentKeys used by this Streaming Locator.
+     * 
+     */
     public Output</* @Nullable */ List<StreamingLocatorContentKeyResponse>> getContentKeys() {
         return this.contentKeys;
     }
+    /**
+     * The creation time of the Streaming Locator.
+     * 
+     */
     @OutputExport(name="created", type=String.class, parameters={})
     private Output<String> created;
 
+    /**
+     * @return The creation time of the Streaming Locator.
+     * 
+     */
     public Output<String> getCreated() {
         return this.created;
     }
+    /**
+     * Name of the default ContentKeyPolicy used by this Streaming Locator.
+     * 
+     */
     @OutputExport(name="defaultContentKeyPolicyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultContentKeyPolicyName;
 
+    /**
+     * @return Name of the default ContentKeyPolicy used by this Streaming Locator.
+     * 
+     */
     public Output</* @Nullable */ String> getDefaultContentKeyPolicyName() {
         return this.defaultContentKeyPolicyName;
     }
+    /**
+     * The end time of the Streaming Locator.
+     * 
+     */
     @OutputExport(name="endTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> endTime;
 
+    /**
+     * @return The end time of the Streaming Locator.
+     * 
+     */
     public Output</* @Nullable */ String> getEndTime() {
         return this.endTime;
     }
+    /**
+     * A list of asset or account filters which apply to this streaming locator
+     * 
+     */
     @OutputExport(name="filters", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> filters;
 
+    /**
+     * @return A list of asset or account filters which apply to this streaming locator
+     * 
+     */
     public Output</* @Nullable */ List<String>> getFilters() {
         return this.filters;
     }
+    /**
+     * The name of the resource
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The start time of the Streaming Locator.
+     * 
+     */
     @OutputExport(name="startTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> startTime;
 
+    /**
+     * @return The start time of the Streaming Locator.
+     * 
+     */
     public Output</* @Nullable */ String> getStartTime() {
         return this.startTime;
     }
+    /**
+     * The StreamingLocatorId of the Streaming Locator.
+     * 
+     */
     @OutputExport(name="streamingLocatorId", type=String.class, parameters={})
     private Output</* @Nullable */ String> streamingLocatorId;
 
+    /**
+     * @return The StreamingLocatorId of the Streaming Locator.
+     * 
+     */
     public Output</* @Nullable */ String> getStreamingLocatorId() {
         return this.streamingLocatorId;
     }
+    /**
+     * Name of the Streaming Policy used by this Streaming Locator. Either specify the name of Streaming Policy you created or use one of the predefined Streaming Policies. The predefined Streaming Policies available are: 'Predefined_DownloadOnly', 'Predefined_ClearStreamingOnly', 'Predefined_DownloadAndClearStreaming', 'Predefined_ClearKey', 'Predefined_MultiDrmCencStreaming' and 'Predefined_MultiDrmStreaming'
+     * 
+     */
     @OutputExport(name="streamingPolicyName", type=String.class, parameters={})
     private Output<String> streamingPolicyName;
 
+    /**
+     * @return Name of the Streaming Policy used by this Streaming Locator. Either specify the name of Streaming Policy you created or use one of the predefined Streaming Policies. The predefined Streaming Policies available are: 'Predefined_DownloadOnly', 'Predefined_ClearStreamingOnly', 'Predefined_DownloadAndClearStreaming', 'Predefined_ClearKey', 'Predefined_MultiDrmCencStreaming' and 'Predefined_MultiDrmStreaming'
+     * 
+     */
     public Output<String> getStreamingPolicyName() {
         return this.streamingPolicyName;
     }
+    /**
+     * The system metadata relating to this resource.
+     * 
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return The system metadata relating to this resource.
+     * 
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public StreamingLocator(String name, StreamingLocatorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:media:StreamingLocator", name, args == null ? StreamingLocatorArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -119,6 +244,14 @@ public class StreamingLocator extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static StreamingLocator get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new StreamingLocator(name, id, options);
     }

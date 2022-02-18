@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Enum to detect if user confirmation is required. If not passed will default to NotRequired.
+     * 
+     */
     @EnumType
     public enum UserConfirmation {
         NotRequired("NotRequired"),

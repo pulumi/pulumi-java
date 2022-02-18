@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class VirtualNetworkBgpCommunitiesResponse {
+    /**
+     * The BGP community associated with the region of the virtual network.
+     * 
+     */
     private final String regionalCommunity;
+    /**
+     * The BGP community associated with the virtual network.
+     * 
+     */
     private final String virtualNetworkCommunity;
 
     @OutputCustomType.Constructor({"regionalCommunity","virtualNetworkCommunity"})
@@ -20,9 +28,17 @@ public final class VirtualNetworkBgpCommunitiesResponse {
         this.virtualNetworkCommunity = Objects.requireNonNull(virtualNetworkCommunity);
     }
 
+    /**
+     * The BGP community associated with the region of the virtual network.
+     * 
+     */
     public String getRegionalCommunity() {
         return this.regionalCommunity;
     }
+    /**
+     * The BGP community associated with the virtual network.
+     * 
+     */
     public String getVirtualNetworkCommunity() {
         return this.virtualNetworkCommunity;
     }

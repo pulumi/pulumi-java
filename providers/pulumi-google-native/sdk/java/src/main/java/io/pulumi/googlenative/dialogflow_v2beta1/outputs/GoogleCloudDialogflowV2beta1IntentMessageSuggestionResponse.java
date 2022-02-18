@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageSuggestionResponse {
+    /**
+     * The text shown the in the suggestion chip.
+     * 
+     */
     private final String title;
 
     @OutputCustomType.Constructor({"title"})
@@ -16,6 +20,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSuggestionResponse {
         this.title = Objects.requireNonNull(title);
     }
 
+    /**
+     * The text shown the in the suggestion chip.
+     * 
+     */
     public String getTitle() {
         return this.title;
     }

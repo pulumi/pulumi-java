@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListKustoPoolFollowerDatabases {
+/**
+ * The list Kusto database principals operation response.
+ * API Version: 2021-06-01-preview.
+ * 
+ *
+ * The list Kusto database principals operation response.
+ * 
+ */
     public static CompletableFuture<ListKustoPoolFollowerDatabasesResult> invokeAsync(ListKustoPoolFollowerDatabasesArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:listKustoPoolFollowerDatabases", TypeShape.of(ListKustoPoolFollowerDatabasesResult.class), args == null ? ListKustoPoolFollowerDatabasesArgs.Empty : args, Utilities.withVersion(options));
     }

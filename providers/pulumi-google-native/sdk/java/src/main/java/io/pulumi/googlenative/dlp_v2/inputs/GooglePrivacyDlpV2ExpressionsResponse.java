@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * An expression, consisting or an operator and conditions.
+ * 
+ */
 public final class GooglePrivacyDlpV2ExpressionsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2ExpressionsResponse Empty = new GooglePrivacyDlpV2ExpressionsResponse();
 
+    /**
+     * Conditions to apply to the expression.
+     * 
+     */
     @InputImport(name="conditions", required=true)
     private final GooglePrivacyDlpV2ConditionsResponse conditions;
 
@@ -20,6 +28,10 @@ public final class GooglePrivacyDlpV2ExpressionsResponse extends io.pulumi.resou
         return this.conditions;
     }
 
+    /**
+     * The operator to apply to the result of conditions. Default and currently only supported value is `AND`.
+     * 
+     */
     @InputImport(name="logicalOperator", required=true)
     private final String logicalOperator;
 

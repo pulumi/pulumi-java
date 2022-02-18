@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DetectorModelResetTimer {
+    /**
+     * The name of the timer to reset.
+     * 
+     */
     private final String timerName;
 
     @OutputCustomType.Constructor({"timerName"})
@@ -16,6 +20,10 @@ public final class DetectorModelResetTimer {
         this.timerName = Objects.requireNonNull(timerName);
     }
 
+    /**
+     * The name of the timer to reset.
+     * 
+     */
     public String getTimerName() {
         return this.timerName;
     }

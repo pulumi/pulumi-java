@@ -15,6 +15,10 @@ public final class BucketLifecycleRuleItemArgs extends io.pulumi.resources.Resou
 
     public static final BucketLifecycleRuleItemArgs Empty = new BucketLifecycleRuleItemArgs();
 
+    /**
+     * The action to take.
+     * 
+     */
     @InputImport(name="action")
     private final @Nullable Input<BucketLifecycleRuleItemActionArgs> action;
 
@@ -22,6 +26,10 @@ public final class BucketLifecycleRuleItemArgs extends io.pulumi.resources.Resou
         return this.action == null ? Input.empty() : this.action;
     }
 
+    /**
+     * The condition(s) under which the action will be taken.
+     * 
+     */
     @InputImport(name="condition")
     private final @Nullable Input<BucketLifecycleRuleItemConditionArgs> condition;
 

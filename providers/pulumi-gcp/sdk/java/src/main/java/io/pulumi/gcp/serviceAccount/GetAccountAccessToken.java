@@ -13,6 +13,19 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAccountAccessToken {
+/**
+ * This data source provides a google `oauth2` `access_token` for a different service account than the one initially running the script.
+ * 
+ * For more information see
+ * [the official documentation](https://cloud.google.com/iam/docs/creating-short-lived-service-account-credentials) as well as [iamcredentials.generateAccessToken()](https://cloud.google.com/iam/credentials/reference/rest/v1/projects.serviceAccounts/generateAccessToken)
+ * 
+ *
+ * A collection of arguments for invoking getAccountAccessToken.
+ * 
+ *
+ * A collection of values returned by getAccountAccessToken.
+ * 
+ */
     public static CompletableFuture<GetAccountAccessTokenResult> invokeAsync(GetAccountAccessTokenArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:serviceAccount/getAccountAccessToken:getAccountAccessToken", TypeShape.of(GetAccountAccessTokenResult.class), args == null ? GetAccountAccessTokenArgs.Empty : args, Utilities.withVersion(options));
     }

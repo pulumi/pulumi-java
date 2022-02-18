@@ -11,6 +11,10 @@ import java.util.Objects;
 @OutputCustomType
 public final class ResourcePolicyVmMaintenancePolicyResponse {
     private final ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse concurrencyControlGroup;
+    /**
+     * Maintenance windows that are applied to VMs covered by this policy.
+     * 
+     */
     private final ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse maintenanceWindow;
 
     @OutputCustomType.Constructor({"concurrencyControlGroup","maintenanceWindow"})
@@ -24,6 +28,10 @@ public final class ResourcePolicyVmMaintenancePolicyResponse {
     public ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse getConcurrencyControlGroup() {
         return this.concurrencyControlGroup;
     }
+    /**
+     * Maintenance windows that are applied to VMs covered by this policy.
+     * 
+     */
     public ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse getMaintenanceWindow() {
         return this.maintenanceWindow;
     }

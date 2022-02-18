@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Windows specific update configuration.
+ * 
+ */
 public final class WindowsPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WindowsPropertiesArgs Empty = new WindowsPropertiesArgs();
 
+    /**
+     * KB numbers excluded from the software update configuration.
+     * 
+     */
     @InputImport(name="excludedKbNumbers")
     private final @Nullable Input<List<String>> excludedKbNumbers;
 
@@ -24,6 +32,10 @@ public final class WindowsPropertiesArgs extends io.pulumi.resources.ResourceArg
         return this.excludedKbNumbers == null ? Input.empty() : this.excludedKbNumbers;
     }
 
+    /**
+     * KB numbers included from the software update configuration.
+     * 
+     */
     @InputImport(name="includedKbNumbers")
     private final @Nullable Input<List<String>> includedKbNumbers;
 
@@ -31,6 +43,10 @@ public final class WindowsPropertiesArgs extends io.pulumi.resources.ResourceArg
         return this.includedKbNumbers == null ? Input.empty() : this.includedKbNumbers;
     }
 
+    /**
+     * Update classification included in the software update configuration. A comma separated string with required values
+     * 
+     */
     @InputImport(name="includedUpdateClassifications")
     private final @Nullable Input<Either<String,WindowsUpdateClasses>> includedUpdateClassifications;
 
@@ -38,6 +54,10 @@ public final class WindowsPropertiesArgs extends io.pulumi.resources.ResourceArg
         return this.includedUpdateClassifications == null ? Input.empty() : this.includedUpdateClassifications;
     }
 
+    /**
+     * Reboot setting for the software update configuration.
+     * 
+     */
     @InputImport(name="rebootSetting")
     private final @Nullable Input<String> rebootSetting;
 

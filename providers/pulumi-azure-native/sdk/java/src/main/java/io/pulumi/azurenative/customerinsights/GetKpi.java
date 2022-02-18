@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetKpi {
+/**
+ * The KPI resource format.
+ * API Version: 2017-04-26.
+ * 
+ *
+ * The KPI resource format.
+ * 
+ */
     public static CompletableFuture<GetKpiResult> invokeAsync(GetKpiArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:customerinsights:getKpi", TypeShape.of(GetKpiResult.class), args == null ? GetKpiArgs.Empty : args, Utilities.withVersion(options));
     }

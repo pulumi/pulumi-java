@@ -14,6 +14,11 @@ public final class QueueAppEngineRoutingOverrideArgs extends io.pulumi.resources
 
     public static final QueueAppEngineRoutingOverrideArgs Empty = new QueueAppEngineRoutingOverrideArgs();
 
+    /**
+     * - 
+     * The host that the task is sent to.
+     * 
+     */
     @InputImport(name="host")
     private final @Nullable Input<String> host;
 
@@ -21,6 +26,11 @@ public final class QueueAppEngineRoutingOverrideArgs extends io.pulumi.resources
         return this.host == null ? Input.empty() : this.host;
     }
 
+    /**
+     * App instance.
+     * By default, the task is sent to an instance which is available when the task is attempted.
+     * 
+     */
     @InputImport(name="instance")
     private final @Nullable Input<String> instance;
 
@@ -28,6 +38,11 @@ public final class QueueAppEngineRoutingOverrideArgs extends io.pulumi.resources
         return this.instance == null ? Input.empty() : this.instance;
     }
 
+    /**
+     * App service.
+     * By default, the task is sent to the service which is the default service when the task is attempted.
+     * 
+     */
     @InputImport(name="service")
     private final @Nullable Input<String> service;
 
@@ -35,6 +50,11 @@ public final class QueueAppEngineRoutingOverrideArgs extends io.pulumi.resources
         return this.service == null ? Input.empty() : this.service;
     }
 
+    /**
+     * App version.
+     * By default, the task is sent to the version which is the default version when the task is attempted.
+     * 
+     */
     @InputImport(name="version")
     private final @Nullable Input<String> version;
 

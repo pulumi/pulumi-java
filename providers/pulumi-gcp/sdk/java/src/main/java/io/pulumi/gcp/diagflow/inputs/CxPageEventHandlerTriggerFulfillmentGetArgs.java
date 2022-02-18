@@ -17,6 +17,11 @@ public final class CxPageEventHandlerTriggerFulfillmentGetArgs extends io.pulumi
 
     public static final CxPageEventHandlerTriggerFulfillmentGetArgs Empty = new CxPageEventHandlerTriggerFulfillmentGetArgs();
 
+    /**
+     * The list of rich message responses to present to the user.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="messages")
     private final @Nullable Input<List<CxPageEventHandlerTriggerFulfillmentMessageGetArgs>> messages;
 
@@ -24,6 +29,10 @@ public final class CxPageEventHandlerTriggerFulfillmentGetArgs extends io.pulumi
         return this.messages == null ? Input.empty() : this.messages;
     }
 
+    /**
+     * Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs. If a webhook is specified, it happens before Dialogflow invokes webhook. Warning: 1) This flag only affects streaming API. Responses are still queued and returned once in non-streaming API. 2) The flag can be enabled in any fulfillment but only the first 3 partial responses will be returned. You may only want to apply it to fulfillments that have slow webhooks.
+     * 
+     */
     @InputImport(name="returnPartialResponses")
     private final @Nullable Input<Boolean> returnPartialResponses;
 
@@ -31,6 +40,10 @@ public final class CxPageEventHandlerTriggerFulfillmentGetArgs extends io.pulumi
         return this.returnPartialResponses == null ? Input.empty() : this.returnPartialResponses;
     }
 
+    /**
+     * The tag used by the webhook to identify which fulfillment is being called. This field is required if webhook is specified.
+     * 
+     */
     @InputImport(name="tag")
     private final @Nullable Input<String> tag;
 
@@ -38,6 +51,10 @@ public final class CxPageEventHandlerTriggerFulfillmentGetArgs extends io.pulumi
         return this.tag == null ? Input.empty() : this.tag;
     }
 
+    /**
+     * The webhook to call. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/webhooks/<Webhook ID>.
+     * 
+     */
     @InputImport(name="webhook")
     private final @Nullable Input<String> webhook;
 

@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Class for content key in Streaming Locator
+ * 
+ */
 public final class StreamingLocatorContentKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StreamingLocatorContentKeyArgs Empty = new StreamingLocatorContentKeyArgs();
 
+    /**
+     * ID of Content Key
+     * 
+     */
     @InputImport(name="id", required=true)
     private final Input<String> id;
 
@@ -21,6 +29,10 @@ public final class StreamingLocatorContentKeyArgs extends io.pulumi.resources.Re
         return this.id;
     }
 
+    /**
+     * Label of Content Key as specified in the Streaming Policy
+     * 
+     */
     @InputImport(name="labelReferenceInStreamingPolicy")
     private final @Nullable Input<String> labelReferenceInStreamingPolicy;
 
@@ -28,6 +40,10 @@ public final class StreamingLocatorContentKeyArgs extends io.pulumi.resources.Re
         return this.labelReferenceInStreamingPolicy == null ? Input.empty() : this.labelReferenceInStreamingPolicy;
     }
 
+    /**
+     * Value of Content Key
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

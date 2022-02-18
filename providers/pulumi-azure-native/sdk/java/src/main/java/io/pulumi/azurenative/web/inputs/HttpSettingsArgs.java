@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The configuration settings of the HTTP requests for authentication and authorization requests made against App Service Authentication/Authorization.
+ * 
+ */
 public final class HttpSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HttpSettingsArgs Empty = new HttpSettingsArgs();
 
+    /**
+     * The configuration settings of a forward proxy used to make the requests.
+     * 
+     */
     @InputImport(name="forwardProxy")
     private final @Nullable Input<ForwardProxyArgs> forwardProxy;
 
@@ -23,6 +31,10 @@ public final class HttpSettingsArgs extends io.pulumi.resources.ResourceArgs {
         return this.forwardProxy == null ? Input.empty() : this.forwardProxy;
     }
 
+    /**
+     * <code>false</code> if the authentication/authorization responses not having the HTTPS scheme are permissible; otherwise, <code>true</code>.
+     * 
+     */
     @InputImport(name="requireHttps")
     private final @Nullable Input<Boolean> requireHttps;
 
@@ -30,6 +42,10 @@ public final class HttpSettingsArgs extends io.pulumi.resources.ResourceArgs {
         return this.requireHttps == null ? Input.empty() : this.requireHttps;
     }
 
+    /**
+     * The configuration settings of the paths HTTP requests.
+     * 
+     */
     @InputImport(name="routes")
     private final @Nullable Input<HttpSettingsRoutesArgs> routes;
 

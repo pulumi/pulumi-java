@@ -12,7 +12,18 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ServiceTemplate {
+    /**
+     * Metadata associated with this Service, including name, namespace, labels,
+     * and annotations.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable ServiceTemplateMetadata metadata;
+    /**
+     * RevisionSpec holds the desired state of the Revision (from the client).
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable ServiceTemplateSpec spec;
 
     @OutputCustomType.Constructor({"metadata","spec"})
@@ -23,9 +34,20 @@ public final class ServiceTemplate {
         this.spec = spec;
     }
 
+    /**
+     * Metadata associated with this Service, including name, namespace, labels,
+     * and annotations.
+     * Structure is documented below.
+     * 
+     */
     public Optional<ServiceTemplateMetadata> getMetadata() {
         return Optional.ofNullable(this.metadata);
     }
+    /**
+     * RevisionSpec holds the desired state of the Revision (from the client).
+     * Structure is documented below.
+     * 
+     */
     public Optional<ServiceTemplateSpec> getSpec() {
         return Optional.ofNullable(this.spec);
     }

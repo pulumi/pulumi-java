@@ -17,57 +17,132 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Creates a cluster in a project. The returned Operation.metadata will be ClusterOperationMetadata (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
+ * Auto-naming is currently not supported for this resource.
+ * 
+ */
 @ResourceType(type="google-native:dataproc/v1:Cluster")
 public class Cluster extends io.pulumi.resources.CustomResource {
+    /**
+     * The cluster name. Cluster names within a project must be unique. Names of deleted clusters can be reused.
+     * 
+     */
     @OutputExport(name="clusterName", type=String.class, parameters={})
     private Output<String> clusterName;
 
+    /**
+     * @return The cluster name. Cluster names within a project must be unique. Names of deleted clusters can be reused.
+     * 
+     */
     public Output<String> getClusterName() {
         return this.clusterName;
     }
+    /**
+     * A cluster UUID (Unique Universal Identifier). Dataproc generates this value when it creates the cluster.
+     * 
+     */
     @OutputExport(name="clusterUuid", type=String.class, parameters={})
     private Output<String> clusterUuid;
 
+    /**
+     * @return A cluster UUID (Unique Universal Identifier). Dataproc generates this value when it creates the cluster.
+     * 
+     */
     public Output<String> getClusterUuid() {
         return this.clusterUuid;
     }
+    /**
+     * Optional. The cluster config for a cluster of Compute Engine Instances. Note that Dataproc may set default values, and values may change when clusters are updated.
+     * 
+     */
     @OutputExport(name="config", type=ClusterConfigResponse.class, parameters={})
     private Output<ClusterConfigResponse> config;
 
+    /**
+     * @return Optional. The cluster config for a cluster of Compute Engine Instances. Note that Dataproc may set default values, and values may change when clusters are updated.
+     * 
+     */
     public Output<ClusterConfigResponse> getConfig() {
         return this.config;
     }
+    /**
+     * Optional. The labels to associate with this cluster. Label keys must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a cluster.
+     * 
+     */
     @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
+    /**
+     * @return Optional. The labels to associate with this cluster. Label keys must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a cluster.
+     * 
+     */
     public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
+    /**
+     * Contains cluster daemon metrics such as HDFS and YARN stats.Beta Feature: This report is available for testing purposes only. It may be changed before final release.
+     * 
+     */
     @OutputExport(name="metrics", type=ClusterMetricsResponse.class, parameters={})
     private Output<ClusterMetricsResponse> metrics;
 
+    /**
+     * @return Contains cluster daemon metrics such as HDFS and YARN stats.Beta Feature: This report is available for testing purposes only. It may be changed before final release.
+     * 
+     */
     public Output<ClusterMetricsResponse> getMetrics() {
         return this.metrics;
     }
+    /**
+     * The Google Cloud Platform project ID that the cluster belongs to.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The Google Cloud Platform project ID that the cluster belongs to.
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * Cluster status.
+     * 
+     */
     @OutputExport(name="status", type=ClusterStatusResponse.class, parameters={})
     private Output<ClusterStatusResponse> status;
 
+    /**
+     * @return Cluster status.
+     * 
+     */
     public Output<ClusterStatusResponse> getStatus() {
         return this.status;
     }
+    /**
+     * The previous cluster status.
+     * 
+     */
     @OutputExport(name="statusHistory", type=List.class, parameters={ClusterStatusResponse.class})
     private Output<List<ClusterStatusResponse>> statusHistory;
 
+    /**
+     * @return The previous cluster status.
+     * 
+     */
     public Output<List<ClusterStatusResponse>> getStatusHistory() {
         return this.statusHistory;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Cluster(String name, ClusterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:dataproc/v1:Cluster", name, args == null ? ClusterArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -83,6 +158,14 @@ public class Cluster extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Cluster get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Cluster(name, id, options);
     }

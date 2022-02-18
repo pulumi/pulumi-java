@@ -13,6 +13,18 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGlobalForwardingRule {
+/**
+ * Get a global forwarding rule within GCE from its name.
+ * 
+ * ## Example Usage
+ * 
+ *
+ * A collection of arguments for invoking getGlobalForwardingRule.
+ * 
+ *
+ * A collection of values returned by getGlobalForwardingRule.
+ * 
+ */
     public static CompletableFuture<GetGlobalForwardingRuleResult> invokeAsync(GetGlobalForwardingRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getGlobalForwardingRule:getGlobalForwardingRule", TypeShape.of(GetGlobalForwardingRuleResult.class), args == null ? GetGlobalForwardingRuleArgs.Empty : args, Utilities.withVersion(options));
     }

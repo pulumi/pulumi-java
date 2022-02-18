@@ -9,8 +9,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class FilterTrackPropertyConditionResponse {
+    /**
+     * The track property condition operation.
+     * 
+     */
     private final String operation;
+    /**
+     * The track property type.
+     * 
+     */
     private final String property;
+    /**
+     * The track property value.
+     * 
+     */
     private final String value;
 
     @OutputCustomType.Constructor({"operation","property","value"})
@@ -23,12 +35,24 @@ public final class FilterTrackPropertyConditionResponse {
         this.value = Objects.requireNonNull(value);
     }
 
+    /**
+     * The track property condition operation.
+     * 
+     */
     public String getOperation() {
         return this.operation;
     }
+    /**
+     * The track property type.
+     * 
+     */
     public String getProperty() {
         return this.property;
     }
+    /**
+     * The track property value.
+     * 
+     */
     public String getValue() {
         return this.value;
     }

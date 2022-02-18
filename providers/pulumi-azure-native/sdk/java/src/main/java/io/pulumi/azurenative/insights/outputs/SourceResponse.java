@@ -12,9 +12,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SourceResponse {
+    /**
+     * List of  Resource referred into query
+     * 
+     */
     private final @Nullable List<String> authorizedResources;
+    /**
+     * The resource uri over which log search query is to be run.
+     * 
+     */
     private final String dataSourceId;
+    /**
+     * Log search query. Required for action type - AlertingAction
+     * 
+     */
     private final @Nullable String query;
+    /**
+     * Set value to 'ResultCount' .
+     * 
+     */
     private final @Nullable String queryType;
 
     @OutputCustomType.Constructor({"authorizedResources","dataSourceId","query","queryType"})
@@ -29,15 +45,31 @@ public final class SourceResponse {
         this.queryType = queryType;
     }
 
+    /**
+     * List of  Resource referred into query
+     * 
+     */
     public List<String> getAuthorizedResources() {
         return this.authorizedResources == null ? List.of() : this.authorizedResources;
     }
+    /**
+     * The resource uri over which log search query is to be run.
+     * 
+     */
     public String getDataSourceId() {
         return this.dataSourceId;
     }
+    /**
+     * Log search query. Required for action type - AlertingAction
+     * 
+     */
     public Optional<String> getQuery() {
         return Optional.ofNullable(this.query);
     }
+    /**
+     * Set value to 'ResultCount' .
+     * 
+     */
     public Optional<String> getQueryType() {
         return Optional.ofNullable(this.queryType);
     }

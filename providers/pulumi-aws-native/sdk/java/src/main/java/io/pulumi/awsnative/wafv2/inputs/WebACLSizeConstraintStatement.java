@@ -12,6 +12,10 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Size Constraint statement.
+ * 
+ */
 public final class WebACLSizeConstraintStatement extends io.pulumi.resources.InvokeArgs {
 
     public static final WebACLSizeConstraintStatement Empty = new WebACLSizeConstraintStatement();

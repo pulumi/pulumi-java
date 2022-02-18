@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Maintenance Operation Status.
+ * 
+ */
 public final class MaintenanceRedeployStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MaintenanceRedeployStatusResponse Empty = new MaintenanceRedeployStatusResponse();
 
+    /**
+     * True, if customer is allowed to perform Maintenance.
+     * 
+     */
     @InputImport(name="isCustomerInitiatedMaintenanceAllowed")
     private final @Nullable Boolean isCustomerInitiatedMaintenanceAllowed;
 
@@ -22,6 +30,10 @@ public final class MaintenanceRedeployStatusResponse extends io.pulumi.resources
         return this.isCustomerInitiatedMaintenanceAllowed == null ? Optional.empty() : Optional.ofNullable(this.isCustomerInitiatedMaintenanceAllowed);
     }
 
+    /**
+     * Message returned for the last Maintenance Operation.
+     * 
+     */
     @InputImport(name="lastOperationMessage")
     private final @Nullable String lastOperationMessage;
 
@@ -29,6 +41,10 @@ public final class MaintenanceRedeployStatusResponse extends io.pulumi.resources
         return this.lastOperationMessage == null ? Optional.empty() : Optional.ofNullable(this.lastOperationMessage);
     }
 
+    /**
+     * The Last Maintenance Operation Result Code.
+     * 
+     */
     @InputImport(name="lastOperationResultCode")
     private final @Nullable String lastOperationResultCode;
 
@@ -36,6 +52,10 @@ public final class MaintenanceRedeployStatusResponse extends io.pulumi.resources
         return this.lastOperationResultCode == null ? Optional.empty() : Optional.ofNullable(this.lastOperationResultCode);
     }
 
+    /**
+     * End Time for the Maintenance Window.
+     * 
+     */
     @InputImport(name="maintenanceWindowEndTime")
     private final @Nullable String maintenanceWindowEndTime;
 
@@ -43,6 +63,10 @@ public final class MaintenanceRedeployStatusResponse extends io.pulumi.resources
         return this.maintenanceWindowEndTime == null ? Optional.empty() : Optional.ofNullable(this.maintenanceWindowEndTime);
     }
 
+    /**
+     * Start Time for the Maintenance Window.
+     * 
+     */
     @InputImport(name="maintenanceWindowStartTime")
     private final @Nullable String maintenanceWindowStartTime;
 
@@ -50,6 +74,10 @@ public final class MaintenanceRedeployStatusResponse extends io.pulumi.resources
         return this.maintenanceWindowStartTime == null ? Optional.empty() : Optional.ofNullable(this.maintenanceWindowStartTime);
     }
 
+    /**
+     * End Time for the Pre Maintenance Window.
+     * 
+     */
     @InputImport(name="preMaintenanceWindowEndTime")
     private final @Nullable String preMaintenanceWindowEndTime;
 
@@ -57,6 +85,10 @@ public final class MaintenanceRedeployStatusResponse extends io.pulumi.resources
         return this.preMaintenanceWindowEndTime == null ? Optional.empty() : Optional.ofNullable(this.preMaintenanceWindowEndTime);
     }
 
+    /**
+     * Start Time for the Pre Maintenance Window.
+     * 
+     */
     @InputImport(name="preMaintenanceWindowStartTime")
     private final @Nullable String preMaintenanceWindowStartTime;
 

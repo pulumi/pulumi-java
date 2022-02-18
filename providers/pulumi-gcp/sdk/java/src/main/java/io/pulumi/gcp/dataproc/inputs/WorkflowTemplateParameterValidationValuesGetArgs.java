@@ -14,6 +14,10 @@ public final class WorkflowTemplateParameterValidationValuesGetArgs extends io.p
 
     public static final WorkflowTemplateParameterValidationValuesGetArgs Empty = new WorkflowTemplateParameterValidationValuesGetArgs();
 
+    /**
+     * Optional. Corresponds to the label values of reservation resource.
+     * 
+     */
     @InputImport(name="values", required=true)
     private final Input<List<String>> values;
 

@@ -16,6 +16,11 @@ public final class ServicePerimetersServicePerimeterStatusVpcAccessibleServicesG
 
     public static final ServicePerimetersServicePerimeterStatusVpcAccessibleServicesGetArgs Empty = new ServicePerimetersServicePerimeterStatusVpcAccessibleServicesGetArgs();
 
+    /**
+     * The list of APIs usable within the Service Perimeter.
+     * Must be empty unless `enableRestriction` is True.
+     * 
+     */
     @InputImport(name="allowedServices")
     private final @Nullable Input<List<String>> allowedServices;
 
@@ -23,6 +28,11 @@ public final class ServicePerimetersServicePerimeterStatusVpcAccessibleServicesG
         return this.allowedServices == null ? Input.empty() : this.allowedServices;
     }
 
+    /**
+     * Whether to restrict API calls within the Service Perimeter to the
+     * list of APIs specified in 'allowedServices'.
+     * 
+     */
     @InputImport(name="enableRestriction")
     private final @Nullable Input<Boolean> enableRestriction;
 

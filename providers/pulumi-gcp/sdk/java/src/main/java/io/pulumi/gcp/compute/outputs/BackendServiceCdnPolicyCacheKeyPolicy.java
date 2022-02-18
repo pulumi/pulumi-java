@@ -13,10 +13,43 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class BackendServiceCdnPolicyCacheKeyPolicy {
+    /**
+     * If true requests to different hosts will be cached separately.
+     * 
+     */
     private final @Nullable Boolean includeHost;
+    /**
+     * If true, http and https requests will be cached separately.
+     * 
+     */
     private final @Nullable Boolean includeProtocol;
+    /**
+     * If true, include query string parameters in the cache key
+     * according to query_string_whitelist and
+     * query_string_blacklist. If neither is set, the entire query
+     * string will be included.
+     * If false, the query string will be excluded from the cache
+     * key entirely.
+     * 
+     */
     private final @Nullable Boolean includeQueryString;
+    /**
+     * Names of query string parameters to exclude in cache keys.
+     * All other parameters will be included. Either specify
+     * query_string_whitelist or query_string_blacklist, not both.
+     * '&' and '=' will be percent encoded and not treated as
+     * delimiters.
+     * 
+     */
     private final @Nullable List<String> queryStringBlacklists;
+    /**
+     * Names of query string parameters to include in cache keys.
+     * All other parameters will be excluded. Either specify
+     * query_string_whitelist or query_string_blacklist, not both.
+     * '&' and '=' will be percent encoded and not treated as
+     * delimiters.
+     * 
+     */
     private final @Nullable List<String> queryStringWhitelists;
 
     @OutputCustomType.Constructor({"includeHost","includeProtocol","includeQueryString","queryStringBlacklists","queryStringWhitelists"})
@@ -33,18 +66,51 @@ public final class BackendServiceCdnPolicyCacheKeyPolicy {
         this.queryStringWhitelists = queryStringWhitelists;
     }
 
+    /**
+     * If true requests to different hosts will be cached separately.
+     * 
+     */
     public Optional<Boolean> getIncludeHost() {
         return Optional.ofNullable(this.includeHost);
     }
+    /**
+     * If true, http and https requests will be cached separately.
+     * 
+     */
     public Optional<Boolean> getIncludeProtocol() {
         return Optional.ofNullable(this.includeProtocol);
     }
+    /**
+     * If true, include query string parameters in the cache key
+     * according to query_string_whitelist and
+     * query_string_blacklist. If neither is set, the entire query
+     * string will be included.
+     * If false, the query string will be excluded from the cache
+     * key entirely.
+     * 
+     */
     public Optional<Boolean> getIncludeQueryString() {
         return Optional.ofNullable(this.includeQueryString);
     }
+    /**
+     * Names of query string parameters to exclude in cache keys.
+     * All other parameters will be included. Either specify
+     * query_string_whitelist or query_string_blacklist, not both.
+     * '&' and '=' will be percent encoded and not treated as
+     * delimiters.
+     * 
+     */
     public List<String> getQueryStringBlacklists() {
         return this.queryStringBlacklists == null ? List.of() : this.queryStringBlacklists;
     }
+    /**
+     * Names of query string parameters to include in cache keys.
+     * All other parameters will be excluded. Either specify
+     * query_string_whitelist or query_string_blacklist, not both.
+     * '&' and '=' will be percent encoded and not treated as
+     * delimiters.
+     * 
+     */
     public List<String> getQueryStringWhitelists() {
         return this.queryStringWhitelists == null ? List.of() : this.queryStringWhitelists;
     }

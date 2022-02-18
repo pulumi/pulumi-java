@@ -12,14 +12,50 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetAnalyticsItemResult {
+    /**
+     * The content of this item
+     * 
+     */
     private final @Nullable String content;
+    /**
+     * Internally assigned unique id of the item definition.
+     * 
+     */
     private final @Nullable String id;
+    /**
+     * The user-defined name of the item.
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * A set of properties that can be defined in the context of a specific item type. Each type may have its own properties.
+     * 
+     */
     private final ApplicationInsightsComponentAnalyticsItemPropertiesResponse properties;
+    /**
+     * Enum indicating if this item definition is owned by a specific user or is shared between all users with access to the Application Insights component.
+     * 
+     */
     private final @Nullable String scope;
+    /**
+     * Date and time in UTC when this item was created.
+     * 
+     */
     private final String timeCreated;
+    /**
+     * Date and time in UTC of the last modification that was made to this item.
+     * 
+     */
     private final String timeModified;
+    /**
+     * Enum indicating the type of the Analytics item.
+     * 
+     */
     private final @Nullable String type;
+    /**
+     * This instance's version of the data model. This can change as new features are added.
+     * 
+     */
     private final String version;
 
     @OutputCustomType.Constructor({"content","id","name","properties","scope","timeCreated","timeModified","type","version"})
@@ -44,30 +80,66 @@ public final class GetAnalyticsItemResult {
         this.version = Objects.requireNonNull(version);
     }
 
+    /**
+     * The content of this item
+     * 
+     */
     public Optional<String> getContent() {
         return Optional.ofNullable(this.content);
     }
+    /**
+     * Internally assigned unique id of the item definition.
+     * 
+     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+    /**
+     * The user-defined name of the item.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * A set of properties that can be defined in the context of a specific item type. Each type may have its own properties.
+     * 
+     */
     public ApplicationInsightsComponentAnalyticsItemPropertiesResponse getProperties() {
         return this.properties;
     }
+    /**
+     * Enum indicating if this item definition is owned by a specific user or is shared between all users with access to the Application Insights component.
+     * 
+     */
     public Optional<String> getScope() {
         return Optional.ofNullable(this.scope);
     }
+    /**
+     * Date and time in UTC when this item was created.
+     * 
+     */
     public String getTimeCreated() {
         return this.timeCreated;
     }
+    /**
+     * Date and time in UTC of the last modification that was made to this item.
+     * 
+     */
     public String getTimeModified() {
         return this.timeModified;
     }
+    /**
+     * Enum indicating the type of the Analytics item.
+     * 
+     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
+    /**
+     * This instance's version of the data model. This can change as new features are added.
+     * 
+     */
     public String getVersion() {
         return this.version;
     }

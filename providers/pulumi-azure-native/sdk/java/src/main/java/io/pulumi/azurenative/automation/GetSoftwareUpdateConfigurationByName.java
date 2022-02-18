@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSoftwareUpdateConfigurationByName {
+/**
+ * Software update configuration properties.
+ * API Version: 2019-06-01.
+ * 
+ *
+ * Software update configuration properties.
+ * 
+ */
     public static CompletableFuture<GetSoftwareUpdateConfigurationByNameResult> invokeAsync(GetSoftwareUpdateConfigurationByNameArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getSoftwareUpdateConfigurationByName", TypeShape.of(GetSoftwareUpdateConfigurationByNameResult.class), args == null ? GetSoftwareUpdateConfigurationByNameArgs.Empty : args, Utilities.withVersion(options));
     }

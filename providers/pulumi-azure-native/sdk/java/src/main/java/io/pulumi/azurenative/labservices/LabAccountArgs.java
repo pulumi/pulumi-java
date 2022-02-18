@@ -16,6 +16,10 @@ public final class LabAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LabAccountArgs Empty = new LabAccountArgs();
 
+    /**
+     * Represents if region selection is enabled
+     * 
+     */
     @InputImport(name="enabledRegionSelection")
     private final @Nullable Input<Boolean> enabledRegionSelection;
 
@@ -23,6 +27,10 @@ public final class LabAccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.enabledRegionSelection == null ? Input.empty() : this.enabledRegionSelection;
     }
 
+    /**
+     * The name of the lab Account.
+     * 
+     */
     @InputImport(name="labAccountName")
     private final @Nullable Input<String> labAccountName;
 
@@ -30,6 +38,10 @@ public final class LabAccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.labAccountName == null ? Input.empty() : this.labAccountName;
     }
 
+    /**
+     * The location of the resource.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -37,6 +49,10 @@ public final class LabAccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The provisioning status of the resource.
+     * 
+     */
     @InputImport(name="provisioningState")
     private final @Nullable Input<String> provisioningState;
 
@@ -44,6 +60,10 @@ public final class LabAccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -51,6 +71,10 @@ public final class LabAccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The tags of the resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -58,6 +82,10 @@ public final class LabAccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The unique immutable identifier of a resource (Guid).
+     * 
+     */
     @InputImport(name="uniqueIdentifier")
     private final @Nullable Input<String> uniqueIdentifier;
 

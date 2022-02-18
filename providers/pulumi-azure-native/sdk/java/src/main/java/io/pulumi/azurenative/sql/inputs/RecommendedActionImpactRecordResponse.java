@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Contains information of estimated or observed impact on various metrics for an Azure SQL Database, Server or Elastic Pool Recommended Action.
+ * 
+ */
 public final class RecommendedActionImpactRecordResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RecommendedActionImpactRecordResponse Empty = new RecommendedActionImpactRecordResponse();
 
+    /**
+     * Gets the absolute value of this dimension if applicable. e.g., Number of Queries affected
+     * 
+     */
     @InputImport(name="absoluteValue", required=true)
     private final Double absoluteValue;
 
@@ -20,6 +28,10 @@ public final class RecommendedActionImpactRecordResponse extends io.pulumi.resou
         return this.absoluteValue;
     }
 
+    /**
+     * Gets the absolute change in the value of this dimension. e.g., Absolute Disk space change in Megabytes
+     * 
+     */
     @InputImport(name="changeValueAbsolute", required=true)
     private final Double changeValueAbsolute;
 
@@ -27,6 +39,10 @@ public final class RecommendedActionImpactRecordResponse extends io.pulumi.resou
         return this.changeValueAbsolute;
     }
 
+    /**
+     * Gets the relative change in the value of this dimension. e.g., Relative Disk space change in Percentage
+     * 
+     */
     @InputImport(name="changeValueRelative", required=true)
     private final Double changeValueRelative;
 
@@ -34,6 +50,10 @@ public final class RecommendedActionImpactRecordResponse extends io.pulumi.resou
         return this.changeValueRelative;
     }
 
+    /**
+     * Gets the name of the impact dimension. e.g., CPUChange, DiskSpaceChange, NumberOfQueriesAffected.
+     * 
+     */
     @InputImport(name="dimensionName", required=true)
     private final String dimensionName;
 
@@ -41,6 +61,10 @@ public final class RecommendedActionImpactRecordResponse extends io.pulumi.resou
         return this.dimensionName;
     }
 
+    /**
+     * Gets the name of the impact dimension. e.g., CPUChange, DiskSpaceChange, NumberOfQueriesAffected.
+     * 
+     */
     @InputImport(name="unit", required=true)
     private final String unit;
 

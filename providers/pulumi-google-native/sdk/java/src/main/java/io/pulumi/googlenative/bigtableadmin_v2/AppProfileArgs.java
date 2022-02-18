@@ -23,6 +23,10 @@ public final class AppProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.appProfileId;
     }
 
+    /**
+     * Long form description of the use case for this AppProfile.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -30,6 +34,10 @@ public final class AppProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Strongly validated etag for optimistic concurrency control. Preserve the value returned from `GetAppProfile` when calling `UpdateAppProfile` to fail the request if there has been a modification in the mean time. The `update_mask` of the request need not include `etag` for this protection to apply. See [Wikipedia](https://en.wikipedia.org/wiki/HTTP_ETag) and [RFC 7232](https://tools.ietf.org/html/rfc7232#section-2.3) for more details.
+     * 
+     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -51,6 +59,10 @@ public final class AppProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.instanceId;
     }
 
+    /**
+     * Use a multi-cluster routing policy.
+     * 
+     */
     @InputImport(name="multiClusterRoutingUseAny")
     private final @Nullable Input<MultiClusterRoutingUseAnyArgs> multiClusterRoutingUseAny;
 
@@ -58,6 +70,10 @@ public final class AppProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.multiClusterRoutingUseAny == null ? Input.empty() : this.multiClusterRoutingUseAny;
     }
 
+    /**
+     * The unique name of the app profile. Values are of the form `projects/{project}/instances/{instance}/appProfiles/_a-zA-Z0-9*`.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -72,6 +88,10 @@ public final class AppProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Use a single-cluster routing policy.
+     * 
+     */
     @InputImport(name="singleClusterRouting")
     private final @Nullable Input<SingleClusterRoutingArgs> singleClusterRouting;
 

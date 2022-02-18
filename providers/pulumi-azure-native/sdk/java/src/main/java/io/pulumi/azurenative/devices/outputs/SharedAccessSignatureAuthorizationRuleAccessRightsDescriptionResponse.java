@@ -11,9 +11,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse {
+    /**
+     * Name of the key.
+     * 
+     */
     private final String keyName;
+    /**
+     * Primary SAS key value.
+     * 
+     */
     private final @Nullable String primaryKey;
+    /**
+     * Rights that this key has.
+     * 
+     */
     private final String rights;
+    /**
+     * Secondary SAS key value.
+     * 
+     */
     private final @Nullable String secondaryKey;
 
     @OutputCustomType.Constructor({"keyName","primaryKey","rights","secondaryKey"})
@@ -28,15 +44,31 @@ public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescription
         this.secondaryKey = secondaryKey;
     }
 
+    /**
+     * Name of the key.
+     * 
+     */
     public String getKeyName() {
         return this.keyName;
     }
+    /**
+     * Primary SAS key value.
+     * 
+     */
     public Optional<String> getPrimaryKey() {
         return Optional.ofNullable(this.primaryKey);
     }
+    /**
+     * Rights that this key has.
+     * 
+     */
     public String getRights() {
         return this.rights;
     }
+    /**
+     * Secondary SAS key value.
+     * 
+     */
     public Optional<String> getSecondaryKey() {
         return Optional.ofNullable(this.secondaryKey);
     }

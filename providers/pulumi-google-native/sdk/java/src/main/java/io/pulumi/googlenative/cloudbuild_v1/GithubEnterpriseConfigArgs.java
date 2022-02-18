@@ -15,6 +15,10 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
 
     public static final GithubEnterpriseConfigArgs Empty = new GithubEnterpriseConfigArgs();
 
+    /**
+     * The GitHub app id of the Cloud Build app on the GitHub Enterprise server.
+     * 
+     */
     @InputImport(name="appId", required=true)
     private final Input<String> appId;
 
@@ -22,6 +26,10 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
         return this.appId;
     }
 
+    /**
+     * Name to display for this config.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -36,6 +44,10 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
         return this.gheConfigId == null ? Input.empty() : this.gheConfigId;
     }
 
+    /**
+     * The URL of the github enterprise host the configuration is for.
+     * 
+     */
     @InputImport(name="hostUrl")
     private final @Nullable Input<String> hostUrl;
 
@@ -50,6 +62,10 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Optional. The full resource name for the GitHubEnterpriseConfig For example: "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -57,6 +73,10 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Optional. The network to be used when reaching out to the GitHub Enterprise server. The VPC network must be enabled for private service connection. This should be set if the GitHub Enterprise server is hosted on-premises and not reachable by public internet. If this field is left empty, no network peering will occur and calls to the GitHub Enterprise server will be made over the public internet. Must be in the format `projects/{project}/global/networks/{network}`, where {project} is a project number or id and {network} is the name of a VPC network in the project.
+     * 
+     */
     @InputImport(name="peeredNetwork")
     private final @Nullable Input<String> peeredNetwork;
 
@@ -78,6 +98,10 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
         return this.projectId == null ? Input.empty() : this.projectId;
     }
 
+    /**
+     * Names of secrets in Secret Manager.
+     * 
+     */
     @InputImport(name="secrets")
     private final @Nullable Input<GitHubEnterpriseSecretsArgs> secrets;
 
@@ -85,6 +109,10 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
         return this.secrets == null ? Input.empty() : this.secrets;
     }
 
+    /**
+     * Optional. SSL certificate to use for requests to GitHub Enterprise.
+     * 
+     */
     @InputImport(name="sslCa")
     private final @Nullable Input<String> sslCa;
 
@@ -92,6 +120,10 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
         return this.sslCa == null ? Input.empty() : this.sslCa;
     }
 
+    /**
+     * The key that should be attached to webhook calls to the ReceiveWebhook endpoint.
+     * 
+     */
     @InputImport(name="webhookKey")
     private final @Nullable Input<String> webhookKey;
 

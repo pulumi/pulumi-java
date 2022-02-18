@@ -17,16 +17,60 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ApplicationPropertiesResponse {
+    /**
+     * The application state.
+     * 
+     */
     private final String applicationState;
+    /**
+     * The application type.
+     * 
+     */
     private final @Nullable String applicationType;
+    /**
+     * The list of roles in the cluster.
+     * 
+     */
     private final @Nullable ComputeProfileResponse computeProfile;
+    /**
+     * The application create date time.
+     * 
+     */
     private final String createdDate;
+    /**
+     * The list of errors.
+     * 
+     */
     private final @Nullable List<ErrorsResponse> errors;
+    /**
+     * The list of application HTTPS endpoints.
+     * 
+     */
     private final @Nullable List<ApplicationGetHttpsEndpointResponse> httpsEndpoints;
+    /**
+     * The list of install script actions.
+     * 
+     */
     private final @Nullable List<RuntimeScriptActionResponse> installScriptActions;
+    /**
+     * The marketplace identifier.
+     * 
+     */
     private final String marketplaceIdentifier;
+    /**
+     * The provisioning state of the application.
+     * 
+     */
     private final String provisioningState;
+    /**
+     * The list of application SSH endpoints.
+     * 
+     */
     private final @Nullable List<ApplicationGetEndpointResponse> sshEndpoints;
+    /**
+     * The list of uninstall script actions.
+     * 
+     */
     private final @Nullable List<RuntimeScriptActionResponse> uninstallScriptActions;
 
     @OutputCustomType.Constructor({"applicationState","applicationType","computeProfile","createdDate","errors","httpsEndpoints","installScriptActions","marketplaceIdentifier","provisioningState","sshEndpoints","uninstallScriptActions"})
@@ -55,36 +99,80 @@ public final class ApplicationPropertiesResponse {
         this.uninstallScriptActions = uninstallScriptActions;
     }
 
+    /**
+     * The application state.
+     * 
+     */
     public String getApplicationState() {
         return this.applicationState;
     }
+    /**
+     * The application type.
+     * 
+     */
     public Optional<String> getApplicationType() {
         return Optional.ofNullable(this.applicationType);
     }
+    /**
+     * The list of roles in the cluster.
+     * 
+     */
     public Optional<ComputeProfileResponse> getComputeProfile() {
         return Optional.ofNullable(this.computeProfile);
     }
+    /**
+     * The application create date time.
+     * 
+     */
     public String getCreatedDate() {
         return this.createdDate;
     }
+    /**
+     * The list of errors.
+     * 
+     */
     public List<ErrorsResponse> getErrors() {
         return this.errors == null ? List.of() : this.errors;
     }
+    /**
+     * The list of application HTTPS endpoints.
+     * 
+     */
     public List<ApplicationGetHttpsEndpointResponse> getHttpsEndpoints() {
         return this.httpsEndpoints == null ? List.of() : this.httpsEndpoints;
     }
+    /**
+     * The list of install script actions.
+     * 
+     */
     public List<RuntimeScriptActionResponse> getInstallScriptActions() {
         return this.installScriptActions == null ? List.of() : this.installScriptActions;
     }
+    /**
+     * The marketplace identifier.
+     * 
+     */
     public String getMarketplaceIdentifier() {
         return this.marketplaceIdentifier;
     }
+    /**
+     * The provisioning state of the application.
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The list of application SSH endpoints.
+     * 
+     */
     public List<ApplicationGetEndpointResponse> getSshEndpoints() {
         return this.sshEndpoints == null ? List.of() : this.sshEndpoints;
     }
+    /**
+     * The list of uninstall script actions.
+     * 
+     */
     public List<RuntimeScriptActionResponse> getUninstallScriptActions() {
         return this.uninstallScriptActions == null ? List.of() : this.uninstallScriptActions;
     }

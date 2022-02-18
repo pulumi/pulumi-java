@@ -20,111 +20,281 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * A Google Cloud IoT Core device.
+ * 
+ * To get more information about Device, see:
+ * 
+ * * [API documentation](https://cloud.google.com/iot/docs/reference/cloudiot/rest/)
+ * * How-to Guides
+ *     * [Official Documentation](https://cloud.google.com/iot/docs/)
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * Device can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:iot/device:Device default {{registry}}/devices/{{name}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:iot/device:Device")
 public class Device extends io.pulumi.resources.CustomResource {
+    /**
+     * If a device is blocked, connections or requests from this device will fail.
+     * 
+     */
     @OutputExport(name="blocked", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> blocked;
 
+    /**
+     * @return If a device is blocked, connections or requests from this device will fail.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getBlocked() {
         return this.blocked;
     }
+    /**
+     * The most recent device configuration, which is eventually sent from Cloud IoT Core to the device.
+     * 
+     */
     @OutputExport(name="configs", type=List.class, parameters={DeviceConfig.class})
     private Output<List<DeviceConfig>> configs;
 
+    /**
+     * @return The most recent device configuration, which is eventually sent from Cloud IoT Core to the device.
+     * 
+     */
     public Output<List<DeviceConfig>> getConfigs() {
         return this.configs;
     }
+    /**
+     * The credentials used to authenticate this device.
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="credentials", type=List.class, parameters={DeviceCredential.class})
     private Output</* @Nullable */ List<DeviceCredential>> credentials;
 
+    /**
+     * @return The credentials used to authenticate this device.
+     * Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ List<DeviceCredential>> getCredentials() {
         return this.credentials;
     }
+    /**
+     * Gateway-related configuration and state.
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="gatewayConfig", type=DeviceGatewayConfig.class, parameters={})
     private Output</* @Nullable */ DeviceGatewayConfig> gatewayConfig;
 
+    /**
+     * @return Gateway-related configuration and state.
+     * Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ DeviceGatewayConfig> getGatewayConfig() {
         return this.gatewayConfig;
     }
+    /**
+     * The last time a cloud-to-device config version acknowledgment was received from the device.
+     * 
+     */
     @OutputExport(name="lastConfigAckTime", type=String.class, parameters={})
     private Output<String> lastConfigAckTime;
 
+    /**
+     * @return The last time a cloud-to-device config version acknowledgment was received from the device.
+     * 
+     */
     public Output<String> getLastConfigAckTime() {
         return this.lastConfigAckTime;
     }
+    /**
+     * The last time a cloud-to-device config version was sent to the device.
+     * 
+     */
     @OutputExport(name="lastConfigSendTime", type=String.class, parameters={})
     private Output<String> lastConfigSendTime;
 
+    /**
+     * @return The last time a cloud-to-device config version was sent to the device.
+     * 
+     */
     public Output<String> getLastConfigSendTime() {
         return this.lastConfigSendTime;
     }
+    /**
+     * The error message of the most recent error, such as a failure to publish to Cloud Pub/Sub.
+     * 
+     */
     @OutputExport(name="lastErrorStatuses", type=List.class, parameters={DeviceLastErrorStatus.class})
     private Output<List<DeviceLastErrorStatus>> lastErrorStatuses;
 
+    /**
+     * @return The error message of the most recent error, such as a failure to publish to Cloud Pub/Sub.
+     * 
+     */
     public Output<List<DeviceLastErrorStatus>> getLastErrorStatuses() {
         return this.lastErrorStatuses;
     }
+    /**
+     * The time the most recent error occurred, such as a failure to publish to Cloud Pub/Sub.
+     * 
+     */
     @OutputExport(name="lastErrorTime", type=String.class, parameters={})
     private Output<String> lastErrorTime;
 
+    /**
+     * @return The time the most recent error occurred, such as a failure to publish to Cloud Pub/Sub.
+     * 
+     */
     public Output<String> getLastErrorTime() {
         return this.lastErrorTime;
     }
+    /**
+     * The last time a telemetry event was received.
+     * 
+     */
     @OutputExport(name="lastEventTime", type=String.class, parameters={})
     private Output<String> lastEventTime;
 
+    /**
+     * @return The last time a telemetry event was received.
+     * 
+     */
     public Output<String> getLastEventTime() {
         return this.lastEventTime;
     }
+    /**
+     * The last time an MQTT PINGREQ was received.
+     * 
+     */
     @OutputExport(name="lastHeartbeatTime", type=String.class, parameters={})
     private Output<String> lastHeartbeatTime;
 
+    /**
+     * @return The last time an MQTT PINGREQ was received.
+     * 
+     */
     public Output<String> getLastHeartbeatTime() {
         return this.lastHeartbeatTime;
     }
+    /**
+     * The last time a state event was received.
+     * 
+     */
     @OutputExport(name="lastStateTime", type=String.class, parameters={})
     private Output<String> lastStateTime;
 
+    /**
+     * @return The last time a state event was received.
+     * 
+     */
     public Output<String> getLastStateTime() {
         return this.lastStateTime;
     }
+    /**
+     * The logging verbosity for device activity.
+     * Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
+     * 
+     */
     @OutputExport(name="logLevel", type=String.class, parameters={})
     private Output</* @Nullable */ String> logLevel;
 
+    /**
+     * @return The logging verbosity for device activity.
+     * Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
+     * 
+     */
     public Output</* @Nullable */ String> getLogLevel() {
         return this.logLevel;
     }
+    /**
+     * The metadata key-value pairs assigned to the device.
+     * 
+     */
     @OutputExport(name="metadata", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> metadata;
 
+    /**
+     * @return The metadata key-value pairs assigned to the device.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getMetadata() {
         return this.metadata;
     }
+    /**
+     * A unique name for the resource.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return A unique name for the resource.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * A server-defined unique numeric ID for the device. This is a more compact way to identify devices, and it is globally
+     * unique.
+     * 
+     */
     @OutputExport(name="numId", type=String.class, parameters={})
     private Output<String> numId;
 
+    /**
+     * @return A server-defined unique numeric ID for the device. This is a more compact way to identify devices, and it is globally
+     * unique.
+     * 
+     */
     public Output<String> getNumId() {
         return this.numId;
     }
+    /**
+     * The name of the device registry where this device should be created.
+     * 
+     */
     @OutputExport(name="registry", type=String.class, parameters={})
     private Output<String> registry;
 
+    /**
+     * @return The name of the device registry where this device should be created.
+     * 
+     */
     public Output<String> getRegistry() {
         return this.registry;
     }
+    /**
+     * The state most recently received from the device.
+     * 
+     */
     @OutputExport(name="states", type=List.class, parameters={DeviceState.class})
     private Output<List<DeviceState>> states;
 
+    /**
+     * @return The state most recently received from the device.
+     * 
+     */
     public Output<List<DeviceState>> getStates() {
         return this.states;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Device(String name, DeviceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:iot/device:Device", name, args == null ? DeviceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -140,6 +310,15 @@ public class Device extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Device get(String name, Input<String> id, @Nullable io.pulumi.gcp.iot.inputs.DeviceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Device(name, id, state, options);
     }

@@ -19,6 +19,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * You must specify at least one of the following properties: AbortIncompleteMultipartUpload, ExpirationDate, ExpirationInDays, NoncurrentVersionExpirationInDays, NoncurrentVersionTransition, NoncurrentVersionTransitions, Transition, or Transitions.
+ * 
+ */
 public final class BucketRule extends io.pulumi.resources.InvokeArgs {
 
     public static final BucketRule Empty = new BucketRule();

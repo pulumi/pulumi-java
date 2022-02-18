@@ -10,10 +10,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Represents intent parameters.
+ * 
+ */
 public final class GoogleCloudDialogflowV2beta1IntentParameterResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowV2beta1IntentParameterResponse Empty = new GoogleCloudDialogflowV2beta1IntentParameterResponse();
 
+    /**
+     * Optional. The default value to use when the `value` yields an empty result. Default values can be extracted from contexts by using the following syntax: `#context_name.parameter_name`.
+     * 
+     */
     @InputImport(name="defaultValue", required=true)
     private final String defaultValue;
 
@@ -21,6 +29,10 @@ public final class GoogleCloudDialogflowV2beta1IntentParameterResponse extends i
         return this.defaultValue;
     }
 
+    /**
+     * The name of the parameter.
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final String displayName;
 
@@ -28,6 +40,10 @@ public final class GoogleCloudDialogflowV2beta1IntentParameterResponse extends i
         return this.displayName;
     }
 
+    /**
+     * Optional. The name of the entity type, prefixed with `@`, that describes values of the parameter. If the parameter is required, this must be provided.
+     * 
+     */
     @InputImport(name="entityTypeDisplayName", required=true)
     private final String entityTypeDisplayName;
 
@@ -35,6 +51,10 @@ public final class GoogleCloudDialogflowV2beta1IntentParameterResponse extends i
         return this.entityTypeDisplayName;
     }
 
+    /**
+     * Optional. Indicates whether the parameter represents a list of values.
+     * 
+     */
     @InputImport(name="isList", required=true)
     private final Boolean isList;
 
@@ -42,6 +62,10 @@ public final class GoogleCloudDialogflowV2beta1IntentParameterResponse extends i
         return this.isList;
     }
 
+    /**
+     * Optional. Indicates whether the parameter is required. That is, whether the intent cannot be completed without collecting the parameter value.
+     * 
+     */
     @InputImport(name="mandatory", required=true)
     private final Boolean mandatory;
 
@@ -49,6 +73,10 @@ public final class GoogleCloudDialogflowV2beta1IntentParameterResponse extends i
         return this.mandatory;
     }
 
+    /**
+     * The unique identifier of this parameter.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -56,6 +84,10 @@ public final class GoogleCloudDialogflowV2beta1IntentParameterResponse extends i
         return this.name;
     }
 
+    /**
+     * Optional. The collection of prompts that the agent can present to the user in order to collect a value for the parameter.
+     * 
+     */
     @InputImport(name="prompts", required=true)
     private final List<String> prompts;
 
@@ -63,6 +95,10 @@ public final class GoogleCloudDialogflowV2beta1IntentParameterResponse extends i
         return this.prompts;
     }
 
+    /**
+     * Optional. The definition of the parameter value. It can be: - a constant string, - a parameter value defined as `$parameter_name`, - an original parameter value defined as `$parameter_name.original`, - a parameter value from some context defined as `#context_name.parameter_name`.
+     * 
+     */
     @InputImport(name="value", required=true)
     private final String value;
 

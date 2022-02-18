@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Specifies the status of the configuration.
+     * 
+     */
     @EnumType
     public enum BucketIntelligentTieringConfigurationStatus {
         Disabled("Disabled"),

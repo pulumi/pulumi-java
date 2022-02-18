@@ -11,7 +11,16 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EventHubEventSubscriptionDestinationResponse {
+    /**
+     * Type of the endpoint for the event subscription destination.
+     * Expected value is 'EventHub'.
+     * 
+     */
     private final String endpointType;
+    /**
+     * The Azure Resource Id that represents the endpoint of an Event Hub destination of an event subscription.
+     * 
+     */
     private final @Nullable String resourceId;
 
     @OutputCustomType.Constructor({"endpointType","resourceId"})
@@ -22,9 +31,18 @@ public final class EventHubEventSubscriptionDestinationResponse {
         this.resourceId = resourceId;
     }
 
+    /**
+     * Type of the endpoint for the event subscription destination.
+     * Expected value is 'EventHub'.
+     * 
+     */
     public String getEndpointType() {
         return this.endpointType;
     }
+    /**
+     * The Azure Resource Id that represents the endpoint of an Event Hub destination of an event subscription.
+     * 
+     */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }

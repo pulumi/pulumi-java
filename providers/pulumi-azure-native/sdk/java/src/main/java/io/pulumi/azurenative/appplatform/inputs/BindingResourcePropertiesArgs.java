@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Binding resource properties payload
+ * 
+ */
 public final class BindingResourcePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BindingResourcePropertiesArgs Empty = new BindingResourcePropertiesArgs();
 
+    /**
+     * Binding parameters of the Binding resource
+     * 
+     */
     @InputImport(name="bindingParameters")
     private final @Nullable Input<Map<String,Object>> bindingParameters;
 
@@ -23,6 +31,10 @@ public final class BindingResourcePropertiesArgs extends io.pulumi.resources.Res
         return this.bindingParameters == null ? Input.empty() : this.bindingParameters;
     }
 
+    /**
+     * The key of the bound resource
+     * 
+     */
     @InputImport(name="key")
     private final @Nullable Input<String> key;
 
@@ -30,6 +42,10 @@ public final class BindingResourcePropertiesArgs extends io.pulumi.resources.Res
         return this.key == null ? Input.empty() : this.key;
     }
 
+    /**
+     * The Azure resource id of the bound resource
+     * 
+     */
     @InputImport(name="resourceId")
     private final @Nullable Input<String> resourceId;
 

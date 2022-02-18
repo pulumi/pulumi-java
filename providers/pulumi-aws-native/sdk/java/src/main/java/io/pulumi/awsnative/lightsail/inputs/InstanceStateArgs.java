@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Current State of the Instance.
+ * 
+ */
 public final class InstanceStateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InstanceStateArgs Empty = new InstanceStateArgs();
 
+    /**
+     * Status code of the Instance.
+     * 
+     */
     @InputImport(name="code")
     private final @Nullable Input<Integer> code;
 
@@ -22,6 +30,10 @@ public final class InstanceStateArgs extends io.pulumi.resources.ResourceArgs {
         return this.code == null ? Input.empty() : this.code;
     }
 
+    /**
+     * Status code of the Instance.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Health state name
+     * 
+     */
     @EnumType
     public enum HealthStateName {
         Warning("Warning"),

@@ -17,6 +17,10 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NetworkProfileArgs Empty = new NetworkProfileArgs();
 
+    /**
+     * List of chid container network interface configurations.
+     * 
+     */
     @InputImport(name="containerNetworkInterfaceConfigurations")
     private final @Nullable Input<List<ContainerNetworkInterfaceConfigurationArgs>> containerNetworkInterfaceConfigurations;
 
@@ -24,6 +28,10 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.containerNetworkInterfaceConfigurations == null ? Input.empty() : this.containerNetworkInterfaceConfigurations;
     }
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -31,6 +39,10 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * Resource location.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -38,6 +50,10 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the network profile.
+     * 
+     */
     @InputImport(name="networkProfileName")
     private final @Nullable Input<String> networkProfileName;
 
@@ -45,6 +61,10 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.networkProfileName == null ? Input.empty() : this.networkProfileName;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -52,6 +72,10 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

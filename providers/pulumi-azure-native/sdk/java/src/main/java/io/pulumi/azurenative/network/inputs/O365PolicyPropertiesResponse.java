@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The Office365 breakout policy.
+ * 
+ */
 public final class O365PolicyPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final O365PolicyPropertiesResponse Empty = new O365PolicyPropertiesResponse();
 
+    /**
+     * Office365 breakout categories.
+     * 
+     */
     @InputImport(name="breakOutCategories")
     private final @Nullable O365BreakOutCategoryPoliciesResponse breakOutCategories;
 

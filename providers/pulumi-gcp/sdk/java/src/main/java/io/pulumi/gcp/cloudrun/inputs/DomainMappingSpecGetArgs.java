@@ -15,6 +15,12 @@ public final class DomainMappingSpecGetArgs extends io.pulumi.resources.Resource
 
     public static final DomainMappingSpecGetArgs Empty = new DomainMappingSpecGetArgs();
 
+    /**
+     * The mode of the certificate.
+     * Default value is `AUTOMATIC`.
+     * Possible values are `NONE` and `AUTOMATIC`.
+     * 
+     */
     @InputImport(name="certificateMode")
     private final @Nullable Input<String> certificateMode;
 
@@ -22,6 +28,13 @@ public final class DomainMappingSpecGetArgs extends io.pulumi.resources.Resource
         return this.certificateMode == null ? Input.empty() : this.certificateMode;
     }
 
+    /**
+     * If set, the mapping will override any mapping set before this spec was set.
+     * It is recommended that the user leaves this empty to receive an error
+     * warning about a potential conflict and only set it once the respective UI
+     * has given such a warning.
+     * 
+     */
     @InputImport(name="forceOverride")
     private final @Nullable Input<Boolean> forceOverride;
 
@@ -29,6 +42,11 @@ public final class DomainMappingSpecGetArgs extends io.pulumi.resources.Resource
         return this.forceOverride == null ? Input.empty() : this.forceOverride;
     }
 
+    /**
+     * The name of the Cloud Run Service that this DomainMapping applies to.
+     * The route must exist.
+     * 
+     */
     @InputImport(name="routeName", required=true)
     private final Input<String> routeName;
 

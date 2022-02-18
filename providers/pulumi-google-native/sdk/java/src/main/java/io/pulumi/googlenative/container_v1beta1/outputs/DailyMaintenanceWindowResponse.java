@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DailyMaintenanceWindowResponse {
+    /**
+     * [Output only] Duration of the time window, automatically chosen to be smallest possible in the given scenario.
+     * 
+     */
     private final String duration;
+    /**
+     * Time within the maintenance window to start the maintenance operations. It must be in format "HH:MM", where HH : [00-23] and MM : [00-59] GMT.
+     * 
+     */
     private final String startTime;
 
     @OutputCustomType.Constructor({"duration","startTime"})
@@ -20,9 +28,17 @@ public final class DailyMaintenanceWindowResponse {
         this.startTime = Objects.requireNonNull(startTime);
     }
 
+    /**
+     * [Output only] Duration of the time window, automatically chosen to be smallest possible in the given scenario.
+     * 
+     */
     public String getDuration() {
         return this.duration;
     }
+    /**
+     * Time within the maintenance window to start the maintenance operations. It must be in format "HH:MM", where HH : [00-23] and MM : [00-59] GMT.
+     * 
+     */
     public String getStartTime() {
         return this.startTime;
     }

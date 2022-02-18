@@ -14,9 +14,26 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FlexibleAppVersionResources {
+    /**
+     * Number of CPU cores needed.
+     * 
+     */
     private final @Nullable Integer cpu;
+    /**
+     * Disk size (GB) needed.
+     * 
+     */
     private final @Nullable Integer diskGb;
+    /**
+     * Memory (GB) needed.
+     * 
+     */
     private final @Nullable Double memoryGb;
+    /**
+     * List of ports, or port pairs, to forward from the virtual machine to the application container.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable List<FlexibleAppVersionResourcesVolume> volumes;
 
     @OutputCustomType.Constructor({"cpu","diskGb","memoryGb","volumes"})
@@ -31,15 +48,32 @@ public final class FlexibleAppVersionResources {
         this.volumes = volumes;
     }
 
+    /**
+     * Number of CPU cores needed.
+     * 
+     */
     public Optional<Integer> getCpu() {
         return Optional.ofNullable(this.cpu);
     }
+    /**
+     * Disk size (GB) needed.
+     * 
+     */
     public Optional<Integer> getDiskGb() {
         return Optional.ofNullable(this.diskGb);
     }
+    /**
+     * Memory (GB) needed.
+     * 
+     */
     public Optional<Double> getMemoryGb() {
         return Optional.ofNullable(this.memoryGb);
     }
+    /**
+     * List of ports, or port pairs, to forward from the virtual machine to the application container.
+     * Structure is documented below.
+     * 
+     */
     public List<FlexibleAppVersionResourcesVolume> getVolumes() {
         return this.volumes == null ? List.of() : this.volumes;
     }

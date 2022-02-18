@@ -18,10 +18,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A routing rule represents a specification for traffic to treat and where to send it, along with health probe information.
+ * 
+ */
 public final class RoutingRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RoutingRuleArgs Empty = new RoutingRuleArgs();
 
+    /**
+     * Protocol schemes to match for this rule
+     * 
+     */
     @InputImport(name="acceptedProtocols")
     private final @Nullable Input<List<Either<String,FrontDoorProtocol>>> acceptedProtocols;
 
@@ -29,6 +37,10 @@ public final class RoutingRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.acceptedProtocols == null ? Input.empty() : this.acceptedProtocols;
     }
 
+    /**
+     * Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'
+     * 
+     */
     @InputImport(name="enabledState")
     private final @Nullable Input<Either<String,RoutingRuleEnabledState>> enabledState;
 
@@ -36,6 +48,10 @@ public final class RoutingRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.enabledState == null ? Input.empty() : this.enabledState;
     }
 
+    /**
+     * Frontend endpoints associated with this rule
+     * 
+     */
     @InputImport(name="frontendEndpoints")
     private final @Nullable Input<List<SubResourceArgs>> frontendEndpoints;
 
@@ -43,6 +59,10 @@ public final class RoutingRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.frontendEndpoints == null ? Input.empty() : this.frontendEndpoints;
     }
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -50,6 +70,10 @@ public final class RoutingRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * Resource name.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -57,6 +81,10 @@ public final class RoutingRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The route patterns of the rule.
+     * 
+     */
     @InputImport(name="patternsToMatch")
     private final @Nullable Input<List<String>> patternsToMatch;
 
@@ -64,6 +92,10 @@ public final class RoutingRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.patternsToMatch == null ? Input.empty() : this.patternsToMatch;
     }
 
+    /**
+     * A reference to the routing configuration.
+     * 
+     */
     @InputImport(name="routeConfiguration")
     private final @Nullable Input<Either<ForwardingConfigurationArgs,RedirectConfigurationArgs>> routeConfiguration;
 
@@ -71,6 +103,10 @@ public final class RoutingRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.routeConfiguration == null ? Input.empty() : this.routeConfiguration;
     }
 
+    /**
+     * A reference to a specific Rules Engine Configuration to apply to this route.
+     * 
+     */
     @InputImport(name="rulesEngine")
     private final @Nullable Input<SubResourceArgs> rulesEngine;
 
@@ -78,6 +114,10 @@ public final class RoutingRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.rulesEngine == null ? Input.empty() : this.rulesEngine;
     }
 
+    /**
+     * Defines the Web Application Firewall policy for each routing rule (if applicable)
+     * 
+     */
     @InputImport(name="webApplicationFirewallPolicyLink")
     private final @Nullable Input<RoutingRuleUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink;
 

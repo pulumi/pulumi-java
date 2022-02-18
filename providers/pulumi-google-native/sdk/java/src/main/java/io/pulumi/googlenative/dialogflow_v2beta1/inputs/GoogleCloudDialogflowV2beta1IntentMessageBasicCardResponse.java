@@ -11,10 +11,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * The basic card message. Useful for displaying information.
+ * 
+ */
 public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowV2beta1IntentMessageBasicCardResponse Empty = new GoogleCloudDialogflowV2beta1IntentMessageBasicCardResponse();
 
+    /**
+     * Optional. The collection of card buttons.
+     * 
+     */
     @InputImport(name="buttons", required=true)
     private final List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonResponse> buttons;
 
@@ -22,6 +30,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardResponse ex
         return this.buttons;
     }
 
+    /**
+     * Required, unless image is present. The body text of the card.
+     * 
+     */
     @InputImport(name="formattedText", required=true)
     private final String formattedText;
 
@@ -29,6 +41,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardResponse ex
         return this.formattedText;
     }
 
+    /**
+     * Optional. The image for the card.
+     * 
+     */
     @InputImport(name="image", required=true)
     private final GoogleCloudDialogflowV2beta1IntentMessageImageResponse image;
 
@@ -36,6 +52,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardResponse ex
         return this.image;
     }
 
+    /**
+     * Optional. The subtitle of the card.
+     * 
+     */
     @InputImport(name="subtitle", required=true)
     private final String subtitle;
 
@@ -43,6 +63,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardResponse ex
         return this.subtitle;
     }
 
+    /**
+     * Optional. The title of the card.
+     * 
+     */
     @InputImport(name="title", required=true)
     private final String title;
 

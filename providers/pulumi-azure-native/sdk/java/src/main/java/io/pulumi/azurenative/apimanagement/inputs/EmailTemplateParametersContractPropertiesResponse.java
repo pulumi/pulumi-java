@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Email Template Parameter contract.
+ * 
+ */
 public final class EmailTemplateParametersContractPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EmailTemplateParametersContractPropertiesResponse Empty = new EmailTemplateParametersContractPropertiesResponse();
 
+    /**
+     * Template parameter description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -21,6 +29,10 @@ public final class EmailTemplateParametersContractPropertiesResponse extends io.
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * Template parameter name.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -28,6 +40,10 @@ public final class EmailTemplateParametersContractPropertiesResponse extends io.
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Template parameter title.
+     * 
+     */
     @InputImport(name="title")
     private final @Nullable String title;
 

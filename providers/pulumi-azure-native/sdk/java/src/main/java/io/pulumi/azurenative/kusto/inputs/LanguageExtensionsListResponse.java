@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The list of language extension objects.
+ * 
+ */
 public final class LanguageExtensionsListResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LanguageExtensionsListResponse Empty = new LanguageExtensionsListResponse();
 
+    /**
+     * The list of language extensions.
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable List<LanguageExtensionResponse> value;
 

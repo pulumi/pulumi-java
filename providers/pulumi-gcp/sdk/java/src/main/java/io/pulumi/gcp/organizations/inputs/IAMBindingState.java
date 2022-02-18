@@ -23,6 +23,10 @@ public final class IAMBindingState extends io.pulumi.resources.ResourceArgs {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
+    /**
+     * (Computed) The etag of the organization's IAM policy.
+     * 
+     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -30,6 +34,10 @@ public final class IAMBindingState extends io.pulumi.resources.ResourceArgs {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
+    /**
+     * A list of users that the role should apply to. For more details on format and restrictions see https://cloud.google.com/billing/reference/rest/v1/Policy#Binding
+     * 
+     */
     @InputImport(name="members")
     private final @Nullable Input<List<String>> members;
 
@@ -37,6 +45,10 @@ public final class IAMBindingState extends io.pulumi.resources.ResourceArgs {
         return this.members == null ? Input.empty() : this.members;
     }
 
+    /**
+     * The numeric ID of the organization in which you want to create a custom role.
+     * 
+     */
     @InputImport(name="orgId")
     private final @Nullable Input<String> orgId;
 
@@ -44,6 +56,12 @@ public final class IAMBindingState extends io.pulumi.resources.ResourceArgs {
         return this.orgId == null ? Input.empty() : this.orgId;
     }
 
+    /**
+     * The role that should be applied. Only one
+     * `gcp.organizations.IAMBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     @InputImport(name="role")
     private final @Nullable Input<String> role;
 

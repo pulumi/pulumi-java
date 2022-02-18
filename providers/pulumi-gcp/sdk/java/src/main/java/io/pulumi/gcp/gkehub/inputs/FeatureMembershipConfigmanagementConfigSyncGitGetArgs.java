@@ -21,6 +21,10 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
         return this.gcpServiceAccountEmail == null ? Input.empty() : this.gcpServiceAccountEmail;
     }
 
+    /**
+     * URL for the HTTPS proxy to be used when communicating with the Git repo.
+     * 
+     */
     @InputImport(name="httpsProxy")
     private final @Nullable Input<String> httpsProxy;
 
@@ -28,6 +32,10 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
         return this.httpsProxy == null ? Input.empty() : this.httpsProxy;
     }
 
+    /**
+     * The path within the Git repository that represents the top level of the repo to sync. Default: the root directory of the repository.
+     * 
+     */
     @InputImport(name="policyDir")
     private final @Nullable Input<String> policyDir;
 
@@ -35,6 +43,10 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
         return this.policyDir == null ? Input.empty() : this.policyDir;
     }
 
+    /**
+     * Type of secret configured for access to the Git repo.
+     * 
+     */
     @InputImport(name="secretType")
     private final @Nullable Input<String> secretType;
 
@@ -42,6 +54,10 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
         return this.secretType == null ? Input.empty() : this.secretType;
     }
 
+    /**
+     * The branch of the repository to sync from. Default: master.
+     * 
+     */
     @InputImport(name="syncBranch")
     private final @Nullable Input<String> syncBranch;
 
@@ -49,6 +65,10 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
         return this.syncBranch == null ? Input.empty() : this.syncBranch;
     }
 
+    /**
+     * The URL of the Git repository to use as the source of truth.
+     * 
+     */
     @InputImport(name="syncRepo")
     private final @Nullable Input<String> syncRepo;
 
@@ -56,6 +76,10 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
         return this.syncRepo == null ? Input.empty() : this.syncRepo;
     }
 
+    /**
+     * Git revision (tag or hash) to check out. Default HEAD.
+     * 
+     */
     @InputImport(name="syncRev")
     private final @Nullable Input<String> syncRev;
 
@@ -63,6 +87,10 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
         return this.syncRev == null ? Input.empty() : this.syncRev;
     }
 
+    /**
+     * Period in seconds between consecutive syncs. Default: 15.
+     * 
+     */
     @InputImport(name="syncWaitSecs")
     private final @Nullable Input<String> syncWaitSecs;
 

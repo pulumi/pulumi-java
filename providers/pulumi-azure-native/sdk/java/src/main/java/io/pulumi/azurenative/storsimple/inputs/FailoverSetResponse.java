@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The failover set on a device.
+ * 
+ */
 public final class FailoverSetResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FailoverSetResponse Empty = new FailoverSetResponse();
 
+    /**
+     * The eligibility result of the failover set, for failover.
+     * 
+     */
     @InputImport(name="eligibilityResult")
     private final @Nullable FailoverSetEligibilityResultResponse eligibilityResult;
 
@@ -23,6 +31,10 @@ public final class FailoverSetResponse extends io.pulumi.resources.InvokeArgs {
         return this.eligibilityResult == null ? Optional.empty() : Optional.ofNullable(this.eligibilityResult);
     }
 
+    /**
+     * The list of meta data of volume containers, which are part of the failover set.
+     * 
+     */
     @InputImport(name="volumeContainers")
     private final @Nullable List<VolumeContainerFailoverMetadataResponse> volumeContainers;
 

@@ -14,6 +14,11 @@ public final class ProjectDefaultNetworkTierState extends io.pulumi.resources.Re
 
     public static final ProjectDefaultNetworkTierState Empty = new ProjectDefaultNetworkTierState();
 
+    /**
+     * The default network tier to be configured for the project.
+     * This field can take the following values: `PREMIUM` or `STANDARD`.
+     * 
+     */
     @InputImport(name="networkTier")
     private final @Nullable Input<String> networkTier;
 
@@ -21,6 +26,11 @@ public final class ProjectDefaultNetworkTierState extends io.pulumi.resources.Re
         return this.networkTier == null ? Input.empty() : this.networkTier;
     }
 
+    /**
+     * The ID of the project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

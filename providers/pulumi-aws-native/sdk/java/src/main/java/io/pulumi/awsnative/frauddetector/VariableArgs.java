@@ -19,6 +19,10 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VariableArgs Empty = new VariableArgs();
 
+    /**
+     * The source of the data.
+     * 
+     */
     @InputImport(name="dataSource", required=true)
     private final Input<VariableDataSource> dataSource;
 
@@ -26,6 +30,10 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataSource;
     }
 
+    /**
+     * The data type.
+     * 
+     */
     @InputImport(name="dataType", required=true)
     private final Input<VariableDataType> dataType;
 
@@ -33,6 +41,10 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataType;
     }
 
+    /**
+     * The default value for the variable when no value is received.
+     * 
+     */
     @InputImport(name="defaultValue", required=true)
     private final Input<String> defaultValue;
 
@@ -40,6 +52,10 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
         return this.defaultValue;
     }
 
+    /**
+     * The description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -47,6 +63,10 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The name of the variable.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -54,6 +74,10 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Tags associated with this variable.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<VariableTagArgs>> tags;
 
@@ -61,6 +85,10 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The variable type. For more information see https://docs.aws.amazon.com/frauddetector/latest/ug/create-a-variable.html#variable-types
+     * 
+     */
     @InputImport(name="variableType")
     private final @Nullable Input<VariableType> variableType;
 

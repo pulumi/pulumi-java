@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SecurityProfileTag {
+    /**
+     * The tag's key.
+     * 
+     */
     private final String key;
+    /**
+     * The tag's value.
+     * 
+     */
     private final String value;
 
     @OutputCustomType.Constructor({"key","value"})
@@ -20,9 +28,17 @@ public final class SecurityProfileTag {
         this.value = Objects.requireNonNull(value);
     }
 
+    /**
+     * The tag's key.
+     * 
+     */
     public String getKey() {
         return this.key;
     }
+    /**
+     * The tag's value.
+     * 
+     */
     public String getValue() {
         return this.value;
     }

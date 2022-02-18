@@ -19,6 +19,10 @@ public final class GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef exten
         return this.key;
     }
 
+    /**
+     * The name of the Cloud Run Service.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

@@ -12,8 +12,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class KeyUsageResponse {
+    /**
+     * Describes high-level ways in which a key may be used.
+     * 
+     */
     private final KeyUsageOptionsResponse baseKeyUsage;
+    /**
+     * Detailed scenarios in which a key may be used.
+     * 
+     */
     private final ExtendedKeyUsageOptionsResponse extendedKeyUsage;
+    /**
+     * Used to describe extended key usages that are not listed in the KeyUsage.ExtendedKeyUsageOptions message.
+     * 
+     */
     private final List<ObjectIdResponse> unknownExtendedKeyUsages;
 
     @OutputCustomType.Constructor({"baseKeyUsage","extendedKeyUsage","unknownExtendedKeyUsages"})
@@ -26,12 +38,24 @@ public final class KeyUsageResponse {
         this.unknownExtendedKeyUsages = Objects.requireNonNull(unknownExtendedKeyUsages);
     }
 
+    /**
+     * Describes high-level ways in which a key may be used.
+     * 
+     */
     public KeyUsageOptionsResponse getBaseKeyUsage() {
         return this.baseKeyUsage;
     }
+    /**
+     * Detailed scenarios in which a key may be used.
+     * 
+     */
     public ExtendedKeyUsageOptionsResponse getExtendedKeyUsage() {
         return this.extendedKeyUsage;
     }
+    /**
+     * Used to describe extended key usages that are not listed in the KeyUsage.ExtendedKeyUsageOptions message.
+     * 
+     */
     public List<ObjectIdResponse> getUnknownExtendedKeyUsages() {
         return this.unknownExtendedKeyUsages;
     }

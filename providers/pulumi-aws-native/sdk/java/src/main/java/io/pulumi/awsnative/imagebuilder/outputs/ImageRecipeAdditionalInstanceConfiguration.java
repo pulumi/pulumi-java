@@ -12,7 +12,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ImageRecipeAdditionalInstanceConfiguration {
+    /**
+     * Contains settings for the SSM agent on your build instance.
+     * 
+     */
     private final @Nullable ImageRecipeSystemsManagerAgent systemsManagerAgent;
+    /**
+     * Use this property to provide commands or a command script to run when you launch your build instance.
+     * 
+     */
     private final @Nullable String userDataOverride;
 
     @OutputCustomType.Constructor({"systemsManagerAgent","userDataOverride"})
@@ -23,9 +31,17 @@ public final class ImageRecipeAdditionalInstanceConfiguration {
         this.userDataOverride = userDataOverride;
     }
 
+    /**
+     * Contains settings for the SSM agent on your build instance.
+     * 
+     */
     public Optional<ImageRecipeSystemsManagerAgent> getSystemsManagerAgent() {
         return Optional.ofNullable(this.systemsManagerAgent);
     }
+    /**
+     * Use this property to provide commands or a command script to run when you launch your build instance.
+     * 
+     */
     public Optional<String> getUserDataOverride() {
         return Optional.ofNullable(this.userDataOverride);
     }

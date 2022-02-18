@@ -13,7 +13,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TimeInWeekResponse {
+    /**
+     * A day in a week.
+     * 
+     */
     private final @Nullable String day;
+    /**
+     * hour slots in a day.
+     * 
+     */
     private final @Nullable List<Integer> hourSlots;
 
     @OutputCustomType.Constructor({"day","hourSlots"})
@@ -24,9 +32,17 @@ public final class TimeInWeekResponse {
         this.hourSlots = hourSlots;
     }
 
+    /**
+     * A day in a week.
+     * 
+     */
     public Optional<String> getDay() {
         return Optional.ofNullable(this.day);
     }
+    /**
+     * hour slots in a day.
+     * 
+     */
     public List<Integer> getHourSlots() {
         return this.hourSlots == null ? List.of() : this.hourSlots;
     }

@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Managed Identity information.
+ * 
+ */
 public final class QuantumWorkspaceIdentityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final QuantumWorkspaceIdentityArgs Empty = new QuantumWorkspaceIdentityArgs();
 
+    /**
+     * The identity type.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<Either<String,ResourceIdentityType>> type;
 

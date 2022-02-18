@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Executes a script to handle the request that matches the URL pattern.
+ * 
+ */
 public final class ScriptHandlerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ScriptHandlerArgs Empty = new ScriptHandlerArgs();
 
+    /**
+     * Path to the script from the application root directory.
+     * 
+     */
     @InputImport(name="scriptPath")
     private final @Nullable Input<String> scriptPath;
 

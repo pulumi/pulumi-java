@@ -16,42 +16,105 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * @deprecated
+ * gcp.compute.MangedSslCertificate has been deprecated in favor of gcp.compute.ManagedSslCertificate
+ * 
+ */
 @Deprecated /* gcp.compute.MangedSslCertificate has been deprecated in favor of gcp.compute.ManagedSslCertificate */
 @ResourceType(type="gcp:compute/mangedSslCertificate:MangedSslCertificate")
 public class MangedSslCertificate extends io.pulumi.resources.CustomResource {
+    /**
+     * The unique identifier for the resource.
+     * 
+     */
     @OutputExport(name="certificateId", type=Integer.class, parameters={})
     private Output<Integer> certificateId;
 
+    /**
+     * @return The unique identifier for the resource.
+     * 
+     */
     public Output<Integer> getCertificateId() {
         return this.certificateId;
     }
+    /**
+     * Creation timestamp in RFC3339 text format.
+     * 
+     */
     @OutputExport(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
+    /**
+     * @return Creation timestamp in RFC3339 text format.
+     * 
+     */
     public Output<String> getCreationTimestamp() {
         return this.creationTimestamp;
     }
+    /**
+     * An optional description of this resource.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return An optional description of this resource.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * Expire time of the certificate.
+     * 
+     */
     @OutputExport(name="expireTime", type=String.class, parameters={})
     private Output<String> expireTime;
 
+    /**
+     * @return Expire time of the certificate.
+     * 
+     */
     public Output<String> getExpireTime() {
         return this.expireTime;
     }
+    /**
+     * Properties relevant to a managed certificate. These will be used if the certificate is managed (as indicated by a value
+     * of 'MANAGED' in 'type').
+     * 
+     */
     @OutputExport(name="managed", type=MangedSslCertificateManaged.class, parameters={})
     private Output</* @Nullable */ MangedSslCertificateManaged> managed;
 
+    /**
+     * @return Properties relevant to a managed certificate. These will be used if the certificate is managed (as indicated by a value
+     * of 'MANAGED' in 'type').
+     * 
+     */
     public Output</* @Nullable */ MangedSslCertificateManaged> getManaged() {
         return this.managed;
     }
+    /**
+     * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
+     * comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
+     * '[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
+     * must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash. These are in the same
+     * namespace as the managed SSL certificates.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
+     * comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
+     * '[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
+     * must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash. These are in the same
+     * namespace as the managed SSL certificates.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
@@ -67,19 +130,43 @@ public class MangedSslCertificate extends io.pulumi.resources.CustomResource {
     public Output<String> getSelfLink() {
         return this.selfLink;
     }
+    /**
+     * Domains associated with the certificate via Subject Alternative Name.
+     * 
+     */
     @OutputExport(name="subjectAlternativeNames", type=List.class, parameters={String.class})
     private Output<List<String>> subjectAlternativeNames;
 
+    /**
+     * @return Domains associated with the certificate via Subject Alternative Name.
+     * 
+     */
     public Output<List<String>> getSubjectAlternativeNames() {
         return this.subjectAlternativeNames;
     }
+    /**
+     * Enum field whose value is always 'MANAGED' - used to signal to the API which type this is. Default value: "MANAGED"
+     * Possible values: ["MANAGED"]
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output</* @Nullable */ String> type;
 
+    /**
+     * @return Enum field whose value is always 'MANAGED' - used to signal to the API which type this is. Default value: "MANAGED"
+     * Possible values: ["MANAGED"]
+     * 
+     */
     public Output</* @Nullable */ String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public MangedSslCertificate(String name, @Nullable MangedSslCertificateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:compute/mangedSslCertificate:MangedSslCertificate", name, args == null ? MangedSslCertificateArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -95,6 +182,15 @@ public class MangedSslCertificate extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static MangedSslCertificate get(String name, Input<String> id, @Nullable MangedSslCertificateState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new MangedSslCertificate(name, id, state, options);
     }

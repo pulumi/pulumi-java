@@ -10,6 +10,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Visibility Metric of the WebACL.
+ * 
+ */
 public final class WebACLVisibilityConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WebACLVisibilityConfigArgs Empty = new WebACLVisibilityConfigArgs();

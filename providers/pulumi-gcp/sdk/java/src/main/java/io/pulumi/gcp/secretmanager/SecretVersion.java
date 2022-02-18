@@ -14,45 +14,118 @@ import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * A secret version resource.
+ * 
+ * > **Warning:** All arguments including `payload.secret_data` will be stored in the raw
+ * state as plain-text.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * SecretVersion can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:secretmanager/secretVersion:SecretVersion default {{name}}/{{name}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:secretmanager/secretVersion:SecretVersion")
 public class SecretVersion extends io.pulumi.resources.CustomResource {
+    /**
+     * The time at which the Secret was created.
+     * 
+     */
     @OutputExport(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
+    /**
+     * @return The time at which the Secret was created.
+     * 
+     */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
+    /**
+     * The time at which the Secret was destroyed. Only present if state is DESTROYED.
+     * 
+     */
     @OutputExport(name="destroyTime", type=String.class, parameters={})
     private Output<String> destroyTime;
 
+    /**
+     * @return The time at which the Secret was destroyed. Only present if state is DESTROYED.
+     * 
+     */
     public Output<String> getDestroyTime() {
         return this.destroyTime;
     }
+    /**
+     * The current state of the SecretVersion.
+     * 
+     */
     @OutputExport(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
+    /**
+     * @return The current state of the SecretVersion.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getEnabled() {
         return this.enabled;
     }
+    /**
+     * The resource name of the SecretVersion. Format: 'projects/{{project}}/secrets/{{secret_id}}/versions/{{version}}'
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The resource name of the SecretVersion. Format: 'projects/{{project}}/secrets/{{secret_id}}/versions/{{version}}'
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Secret Manager secret resource
+     * 
+     */
     @OutputExport(name="secret", type=String.class, parameters={})
     private Output<String> secret;
 
+    /**
+     * @return Secret Manager secret resource
+     * 
+     */
     public Output<String> getSecret() {
         return this.secret;
     }
+    /**
+     * The secret data. Must be no larger than 64KiB.
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     @OutputExport(name="secretData", type=String.class, parameters={})
     private Output<String> secretData;
 
+    /**
+     * @return The secret data. Must be no larger than 64KiB.
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     public Output<String> getSecretData() {
         return this.secretData;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public SecretVersion(String name, SecretVersionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:secretmanager/secretVersion:SecretVersion", name, args == null ? SecretVersionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -68,6 +141,15 @@ public class SecretVersion extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static SecretVersion get(String name, Input<String> id, @Nullable SecretVersionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SecretVersion(name, id, state, options);
     }

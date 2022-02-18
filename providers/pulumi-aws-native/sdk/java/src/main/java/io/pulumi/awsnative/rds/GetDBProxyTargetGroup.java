@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDBProxyTargetGroup {
+/**
+ * Resource schema for AWS::RDS::DBProxyTargetGroup
+ * 
+ */
     public static CompletableFuture<GetDBProxyTargetGroupResult> invokeAsync(GetDBProxyTargetGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:rds:getDBProxyTargetGroup", TypeShape.of(GetDBProxyTargetGroupResult.class), args == null ? GetDBProxyTargetGroupArgs.Empty : args, Utilities.withVersion(options));
     }

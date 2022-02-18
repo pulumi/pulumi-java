@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEventGridDataConnection {
+/**
+ * Class representing an Event Grid data connection.
+ * API Version: 2021-04-01-preview.
+ * 
+ *
+ * Class representing an Event Grid data connection.
+ * 
+ */
     public static CompletableFuture<GetEventGridDataConnectionResult> invokeAsync(GetEventGridDataConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getEventGridDataConnection", TypeShape.of(GetEventGridDataConnectionResult.class), args == null ? GetEventGridDataConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

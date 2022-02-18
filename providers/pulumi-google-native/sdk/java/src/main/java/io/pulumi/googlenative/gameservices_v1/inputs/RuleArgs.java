@@ -14,10 +14,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A rule to be applied in a Policy.
+ * 
+ */
 public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RuleArgs Empty = new RuleArgs();
 
+    /**
+     * Required
+     * 
+     */
     @InputImport(name="action")
     private final @Nullable Input<RuleAction> action;
 
@@ -25,6 +33,10 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.action == null ? Input.empty() : this.action;
     }
 
+    /**
+     * Additional restrictions that must be met. All conditions must pass for the rule to match.
+     * 
+     */
     @InputImport(name="conditions")
     private final @Nullable Input<List<ConditionArgs>> conditions;
 
@@ -32,6 +44,10 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.conditions == null ? Input.empty() : this.conditions;
     }
 
+    /**
+     * Human-readable description of the rule.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -39,6 +55,10 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * If one or more 'in' clauses are specified, the rule matches if the PRINCIPAL/AUTHORITY_SELECTOR is in at least one of these entries.
+     * 
+     */
     @InputImport(name="in")
     private final @Nullable Input<List<String>> in;
 
@@ -46,6 +66,10 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.in == null ? Input.empty() : this.in;
     }
 
+    /**
+     * The config returned to callers of CheckPolicy for any entries that match the LOG action.
+     * 
+     */
     @InputImport(name="logConfig")
     private final @Nullable Input<List<LogConfigArgs>> logConfig;
 
@@ -53,6 +77,10 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.logConfig == null ? Input.empty() : this.logConfig;
     }
 
+    /**
+     * If one or more 'not_in' clauses are specified, the rule matches if the PRINCIPAL/AUTHORITY_SELECTOR is in none of the entries. The format for in and not_in entries can be found at in the Local IAM documentation (see go/local-iam#features).
+     * 
+     */
     @InputImport(name="notIn")
     private final @Nullable Input<List<String>> notIn;
 
@@ -60,6 +88,10 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.notIn == null ? Input.empty() : this.notIn;
     }
 
+    /**
+     * A permission is a string of form '..' (e.g., 'storage.buckets.list'). A value of '*' matches all permissions, and a verb part of '*' (e.g., 'storage.buckets.*') matches all verbs.
+     * 
+     */
     @InputImport(name="permissions")
     private final @Nullable Input<List<String>> permissions;
 

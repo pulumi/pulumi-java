@@ -13,6 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The configuration object that specifies the monitoring schedule and defines the monitoring job.
+ * 
+ */
 public final class MonitoringScheduleConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MonitoringScheduleConfigArgs Empty = new MonitoringScheduleConfigArgs();
@@ -24,6 +28,10 @@ public final class MonitoringScheduleConfigArgs extends io.pulumi.resources.Reso
         return this.monitoringJobDefinition == null ? Input.empty() : this.monitoringJobDefinition;
     }
 
+    /**
+     * Name of the job definition
+     * 
+     */
     @InputImport(name="monitoringJobDefinitionName")
     private final @Nullable Input<String> monitoringJobDefinitionName;
 

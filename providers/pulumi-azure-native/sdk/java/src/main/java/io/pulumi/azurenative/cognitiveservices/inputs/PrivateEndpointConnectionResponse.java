@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The Private Endpoint Connection resource.
+ * 
+ */
 public final class PrivateEndpointConnectionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PrivateEndpointConnectionResponse Empty = new PrivateEndpointConnectionResponse();
 
+    /**
+     * Entity Tag
+     * 
+     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -22,6 +30,10 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
         return this.etag;
     }
 
+    /**
+     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -29,6 +41,10 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
         return this.id;
     }
 
+    /**
+     * The location of the private endpoint connection
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable String location;
 
@@ -36,6 +52,10 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
+    /**
+     * The name of the resource
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -43,6 +63,10 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
         return this.name;
     }
 
+    /**
+     * Resource properties.
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable PrivateEndpointConnectionPropertiesResponse properties;
 
@@ -50,6 +74,10 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
         return this.properties == null ? Optional.empty() : Optional.ofNullable(this.properties);
     }
 
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

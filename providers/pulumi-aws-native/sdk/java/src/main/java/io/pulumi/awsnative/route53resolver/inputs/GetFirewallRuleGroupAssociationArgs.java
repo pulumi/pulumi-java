@@ -12,6 +12,10 @@ public final class GetFirewallRuleGroupAssociationArgs extends io.pulumi.resourc
 
     public static final GetFirewallRuleGroupAssociationArgs Empty = new GetFirewallRuleGroupAssociationArgs();
 
+    /**
+     * Id
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 

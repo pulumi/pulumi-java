@@ -15,6 +15,10 @@ public final class OsPolicyAssignmentInstanceFilterInclusionLabelGetArgs extends
 
     public static final OsPolicyAssignmentInstanceFilterInclusionLabelGetArgs Empty = new OsPolicyAssignmentInstanceFilterInclusionLabelGetArgs();
 
+    /**
+     * Labels are identified by key/value pairs in this map. A VM should contain all the key/value pairs specified in this map to be selected.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 

@@ -13,10 +13,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Configures settings for all methods in a stage.
+ * 
+ */
 public final class StageMethodSetting extends io.pulumi.resources.InvokeArgs {
 
     public static final StageMethodSetting Empty = new StageMethodSetting();
 
+    /**
+     * Indicates whether the cached responses are encrypted.
+     * 
+     */
     @InputImport(name="cacheDataEncrypted")
     private final @Nullable Boolean cacheDataEncrypted;
 
@@ -24,6 +32,10 @@ public final class StageMethodSetting extends io.pulumi.resources.InvokeArgs {
         return this.cacheDataEncrypted == null ? Optional.empty() : Optional.ofNullable(this.cacheDataEncrypted);
     }
 
+    /**
+     * The time-to-live (TTL) period, in seconds, that specifies how long API Gateway caches responses.
+     * 
+     */
     @InputImport(name="cacheTtlInSeconds")
     private final @Nullable Integer cacheTtlInSeconds;
 
@@ -31,6 +43,10 @@ public final class StageMethodSetting extends io.pulumi.resources.InvokeArgs {
         return this.cacheTtlInSeconds == null ? Optional.empty() : Optional.ofNullable(this.cacheTtlInSeconds);
     }
 
+    /**
+     * Indicates whether responses are cached and returned for requests. You must enable a cache cluster on the stage to cache responses.
+     * 
+     */
     @InputImport(name="cachingEnabled")
     private final @Nullable Boolean cachingEnabled;
 
@@ -38,6 +54,10 @@ public final class StageMethodSetting extends io.pulumi.resources.InvokeArgs {
         return this.cachingEnabled == null ? Optional.empty() : Optional.ofNullable(this.cachingEnabled);
     }
 
+    /**
+     * Indicates whether data trace logging is enabled for methods in the stage. API Gateway pushes these logs to Amazon CloudWatch Logs.
+     * 
+     */
     @InputImport(name="dataTraceEnabled")
     private final @Nullable Boolean dataTraceEnabled;
 
@@ -45,6 +65,10 @@ public final class StageMethodSetting extends io.pulumi.resources.InvokeArgs {
         return this.dataTraceEnabled == null ? Optional.empty() : Optional.ofNullable(this.dataTraceEnabled);
     }
 
+    /**
+     * The HTTP method. You can use an asterisk (*) as a wildcard to apply method settings to multiple methods.
+     * 
+     */
     @InputImport(name="httpMethod")
     private final @Nullable String httpMethod;
 
@@ -52,6 +76,10 @@ public final class StageMethodSetting extends io.pulumi.resources.InvokeArgs {
         return this.httpMethod == null ? Optional.empty() : Optional.ofNullable(this.httpMethod);
     }
 
+    /**
+     * The logging level for this method. For valid values, see the loggingLevel property of the Stage (https://docs.aws.amazon.com/apigateway/api-reference/resource/stage/#loggingLevel) resource in the Amazon API Gateway API Reference.
+     * 
+     */
     @InputImport(name="loggingLevel")
     private final @Nullable String loggingLevel;
 
@@ -59,6 +87,10 @@ public final class StageMethodSetting extends io.pulumi.resources.InvokeArgs {
         return this.loggingLevel == null ? Optional.empty() : Optional.ofNullable(this.loggingLevel);
     }
 
+    /**
+     * Indicates whether Amazon CloudWatch metrics are enabled for methods in the stage.
+     * 
+     */
     @InputImport(name="metricsEnabled")
     private final @Nullable Boolean metricsEnabled;
 
@@ -66,6 +98,10 @@ public final class StageMethodSetting extends io.pulumi.resources.InvokeArgs {
         return this.metricsEnabled == null ? Optional.empty() : Optional.ofNullable(this.metricsEnabled);
     }
 
+    /**
+     * The resource path for this method. Forward slashes (/) are encoded as ~1 and the initial slash must include a forward slash. For example, the path value /resource/subresource must be encoded as /~1resource~1subresource. To specify the root path, use only a slash (/). You can use an asterisk (*) as a wildcard to apply method settings to multiple methods.
+     * 
+     */
     @InputImport(name="resourcePath")
     private final @Nullable String resourcePath;
 
@@ -73,6 +109,10 @@ public final class StageMethodSetting extends io.pulumi.resources.InvokeArgs {
         return this.resourcePath == null ? Optional.empty() : Optional.ofNullable(this.resourcePath);
     }
 
+    /**
+     * The number of burst requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account.
+     * 
+     */
     @InputImport(name="throttlingBurstLimit")
     private final @Nullable Integer throttlingBurstLimit;
 
@@ -80,6 +120,10 @@ public final class StageMethodSetting extends io.pulumi.resources.InvokeArgs {
         return this.throttlingBurstLimit == null ? Optional.empty() : Optional.ofNullable(this.throttlingBurstLimit);
     }
 
+    /**
+     * The number of steady-state requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account.
+     * 
+     */
     @InputImport(name="throttlingRateLimit")
     private final @Nullable Double throttlingRateLimit;
 

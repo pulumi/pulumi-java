@@ -14,6 +14,10 @@ public final class DataLakeAnalyticsResponseProperties extends io.pulumi.resourc
 
     public static final DataLakeAnalyticsResponseProperties Empty = new DataLakeAnalyticsResponseProperties();
 
+    /**
+     * DataLake Store Account Name
+     * 
+     */
     @InputImport(name="dataLakeStoreAccountName")
     private final @Nullable String dataLakeStoreAccountName;
 

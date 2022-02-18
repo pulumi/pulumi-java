@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Health check configuration
+ * 
+ */
 public final class ServiceHealthCheckConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceHealthCheckConfigurationArgs Empty = new ServiceHealthCheckConfigurationArgs();
 
+    /**
+     * Health check Healthy Threshold
+     * 
+     */
     @InputImport(name="healthyThreshold")
     private final @Nullable Input<Integer> healthyThreshold;
 
@@ -23,6 +31,10 @@ public final class ServiceHealthCheckConfigurationArgs extends io.pulumi.resourc
         return this.healthyThreshold == null ? Input.empty() : this.healthyThreshold;
     }
 
+    /**
+     * Health check Interval
+     * 
+     */
     @InputImport(name="interval")
     private final @Nullable Input<Integer> interval;
 
@@ -30,6 +42,10 @@ public final class ServiceHealthCheckConfigurationArgs extends io.pulumi.resourc
         return this.interval == null ? Input.empty() : this.interval;
     }
 
+    /**
+     * Health check Path
+     * 
+     */
     @InputImport(name="path")
     private final @Nullable Input<String> path;
 
@@ -37,6 +53,10 @@ public final class ServiceHealthCheckConfigurationArgs extends io.pulumi.resourc
         return this.path == null ? Input.empty() : this.path;
     }
 
+    /**
+     * Health Check Protocol
+     * 
+     */
     @InputImport(name="protocol")
     private final @Nullable Input<ServiceHealthCheckConfigurationProtocol> protocol;
 
@@ -44,6 +64,10 @@ public final class ServiceHealthCheckConfigurationArgs extends io.pulumi.resourc
         return this.protocol == null ? Input.empty() : this.protocol;
     }
 
+    /**
+     * Health check Timeout
+     * 
+     */
     @InputImport(name="timeout")
     private final @Nullable Input<Integer> timeout;
 
@@ -51,6 +75,10 @@ public final class ServiceHealthCheckConfigurationArgs extends io.pulumi.resourc
         return this.timeout == null ? Input.empty() : this.timeout;
     }
 
+    /**
+     * Health check Unhealthy Threshold
+     * 
+     */
     @InputImport(name="unhealthyThreshold")
     private final @Nullable Input<Integer> unhealthyThreshold;
 

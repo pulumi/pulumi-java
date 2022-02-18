@@ -13,7 +13,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TemplateColumnGroupSchema {
+    /**
+     * <p>A structure containing the list of schemas for column group columns.</p>
+     * 
+     */
     private final @Nullable List<TemplateColumnGroupColumnSchema> columnGroupColumnSchemaList;
+    /**
+     * <p>The name of the column group schema.</p>
+     * 
+     */
     private final @Nullable String name;
 
     @OutputCustomType.Constructor({"columnGroupColumnSchemaList","name"})
@@ -24,9 +32,17 @@ public final class TemplateColumnGroupSchema {
         this.name = name;
     }
 
+    /**
+     * <p>A structure containing the list of schemas for column group columns.</p>
+     * 
+     */
     public List<TemplateColumnGroupColumnSchema> getColumnGroupColumnSchemaList() {
         return this.columnGroupColumnSchemaList == null ? List.of() : this.columnGroupColumnSchemaList;
     }
+    /**
+     * <p>The name of the column group schema.</p>
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

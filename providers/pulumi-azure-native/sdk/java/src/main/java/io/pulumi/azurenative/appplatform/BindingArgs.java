@@ -15,6 +15,10 @@ public final class BindingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BindingArgs Empty = new BindingArgs();
 
+    /**
+     * The name of the App resource.
+     * 
+     */
     @InputImport(name="appName", required=true)
     private final Input<String> appName;
 
@@ -22,6 +26,10 @@ public final class BindingArgs extends io.pulumi.resources.ResourceArgs {
         return this.appName;
     }
 
+    /**
+     * The name of the Binding resource.
+     * 
+     */
     @InputImport(name="bindingName")
     private final @Nullable Input<String> bindingName;
 
@@ -29,6 +37,10 @@ public final class BindingArgs extends io.pulumi.resources.ResourceArgs {
         return this.bindingName == null ? Input.empty() : this.bindingName;
     }
 
+    /**
+     * Properties of the Binding resource
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<BindingResourcePropertiesArgs> properties;
 
@@ -36,6 +48,10 @@ public final class BindingArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -43,6 +59,10 @@ public final class BindingArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the Service resource.
+     * 
+     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 

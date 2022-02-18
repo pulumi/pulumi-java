@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetContext {
+/**
+ * Retrieves the specified context.
+ * 
+ */
     public static CompletableFuture<GetContextResult> invokeAsync(GetContextArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v2:getContext", TypeShape.of(GetContextResult.class), args == null ? GetContextArgs.Empty : args, Utilities.withVersion(options));
     }

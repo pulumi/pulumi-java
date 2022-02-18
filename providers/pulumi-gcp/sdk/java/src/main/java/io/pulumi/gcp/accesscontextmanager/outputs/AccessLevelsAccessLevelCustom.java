@@ -9,6 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AccessLevelsAccessLevelCustom {
+    /**
+     * Represents a textual expression in the Common Expression Language (CEL) syntax. CEL is a C-like expression language.
+     * This page details the objects and attributes that are used to the build the CEL expressions for
+     * custom access levels - https://cloud.google.com/access-context-manager/docs/custom-access-level-spec.
+     * Structure is documented below.
+     * 
+     */
     private final AccessLevelsAccessLevelCustomExpr expr;
 
     @OutputCustomType.Constructor({"expr"})
@@ -16,6 +23,13 @@ public final class AccessLevelsAccessLevelCustom {
         this.expr = Objects.requireNonNull(expr);
     }
 
+    /**
+     * Represents a textual expression in the Common Expression Language (CEL) syntax. CEL is a C-like expression language.
+     * This page details the objects and attributes that are used to the build the CEL expressions for
+     * custom access levels - https://cloud.google.com/access-context-manager/docs/custom-access-level-spec.
+     * Structure is documented below.
+     * 
+     */
     public AccessLevelsAccessLevelCustomExpr getExpr() {
         return this.expr;
     }

@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudContactcenterinsightsV1GcsSourceResponse {
+    /**
+     * Cloud Storage URI that points to a file that contains the conversation audio.
+     * 
+     */
     private final String audioUri;
+    /**
+     * Immutable. Cloud Storage URI that points to a file that contains the conversation transcript.
+     * 
+     */
     private final String transcriptUri;
 
     @OutputCustomType.Constructor({"audioUri","transcriptUri"})
@@ -20,9 +28,17 @@ public final class GoogleCloudContactcenterinsightsV1GcsSourceResponse {
         this.transcriptUri = Objects.requireNonNull(transcriptUri);
     }
 
+    /**
+     * Cloud Storage URI that points to a file that contains the conversation audio.
+     * 
+     */
     public String getAudioUri() {
         return this.audioUri;
     }
+    /**
+     * Immutable. Cloud Storage URI that points to a file that contains the conversation transcript.
+     * 
+     */
     public String getTranscriptUri() {
         return this.transcriptUri;
     }

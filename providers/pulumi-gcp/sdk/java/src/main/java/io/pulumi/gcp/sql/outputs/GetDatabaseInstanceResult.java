@@ -25,6 +25,10 @@ public final class GetDatabaseInstanceResult {
     private final Boolean deletionProtection;
     private final String encryptionKeyName;
     private final String firstIpAddress;
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
     private final List<GetDatabaseInstanceIpAddress> ipAddresses;
     private final String masterInstanceName;
@@ -105,6 +109,10 @@ public final class GetDatabaseInstanceResult {
     public String getFirstIpAddress() {
         return this.firstIpAddress;
     }
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }

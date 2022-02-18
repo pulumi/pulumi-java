@@ -9,10 +9,18 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
+/**
+ * Specifies a time limit for how long the monitoring job is allowed to run.
+ * 
+ */
 public final class ModelExplainabilityJobDefinitionStoppingConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ModelExplainabilityJobDefinitionStoppingConditionArgs Empty = new ModelExplainabilityJobDefinitionStoppingConditionArgs();
 
+    /**
+     * The maximum runtime allowed in seconds.
+     * 
+     */
     @InputImport(name="maxRuntimeInSeconds", required=true)
     private final Input<Integer> maxRuntimeInSeconds;
 

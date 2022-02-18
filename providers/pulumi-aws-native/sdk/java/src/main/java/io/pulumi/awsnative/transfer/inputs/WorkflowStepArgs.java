@@ -14,10 +14,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The basic building block of a workflow.
+ * 
+ */
 public final class WorkflowStepArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WorkflowStepArgs Empty = new WorkflowStepArgs();
 
+    /**
+     * Details for a step that performs a file copy.
+     * 
+     */
     @InputImport(name="copyStepDetails")
     private final @Nullable Input<WorkflowStepCopyStepDetailsPropertiesArgs> copyStepDetails;
 
@@ -25,6 +33,10 @@ public final class WorkflowStepArgs extends io.pulumi.resources.ResourceArgs {
         return this.copyStepDetails == null ? Input.empty() : this.copyStepDetails;
     }
 
+    /**
+     * Details for a step that invokes a lambda function.
+     * 
+     */
     @InputImport(name="customStepDetails")
     private final @Nullable Input<WorkflowStepCustomStepDetailsPropertiesArgs> customStepDetails;
 
@@ -32,6 +44,10 @@ public final class WorkflowStepArgs extends io.pulumi.resources.ResourceArgs {
         return this.customStepDetails == null ? Input.empty() : this.customStepDetails;
     }
 
+    /**
+     * Details for a step that deletes the file.
+     * 
+     */
     @InputImport(name="deleteStepDetails")
     private final @Nullable Input<WorkflowStepDeleteStepDetailsPropertiesArgs> deleteStepDetails;
 
@@ -39,6 +55,10 @@ public final class WorkflowStepArgs extends io.pulumi.resources.ResourceArgs {
         return this.deleteStepDetails == null ? Input.empty() : this.deleteStepDetails;
     }
 
+    /**
+     * Details for a step that creates one or more tags.
+     * 
+     */
     @InputImport(name="tagStepDetails")
     private final @Nullable Input<WorkflowStepTagStepDetailsPropertiesArgs> tagStepDetails;
 

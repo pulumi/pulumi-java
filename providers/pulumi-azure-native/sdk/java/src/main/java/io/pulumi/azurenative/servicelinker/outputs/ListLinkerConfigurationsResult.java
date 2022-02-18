@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListLinkerConfigurationsResult {
+    /**
+     * The configuration properties for source resource.
+     * 
+     */
     private final @Nullable List<SourceConfigurationResponse> configurations;
 
     @OutputCustomType.Constructor({"configurations"})
@@ -18,6 +22,10 @@ public final class ListLinkerConfigurationsResult {
         this.configurations = configurations;
     }
 
+    /**
+     * The configuration properties for source resource.
+     * 
+     */
     public List<SourceConfigurationResponse> getConfigurations() {
         return this.configurations == null ? List.of() : this.configurations;
     }

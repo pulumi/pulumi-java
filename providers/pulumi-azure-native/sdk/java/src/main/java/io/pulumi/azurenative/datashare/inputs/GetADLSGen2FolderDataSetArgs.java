@@ -12,6 +12,10 @@ public final class GetADLSGen2FolderDataSetArgs extends io.pulumi.resources.Invo
 
     public static final GetADLSGen2FolderDataSetArgs Empty = new GetADLSGen2FolderDataSetArgs();
 
+    /**
+     * The name of the share account.
+     * 
+     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -19,6 +23,10 @@ public final class GetADLSGen2FolderDataSetArgs extends io.pulumi.resources.Invo
         return this.accountName;
     }
 
+    /**
+     * The name of the dataSet.
+     * 
+     */
     @InputImport(name="dataSetName", required=true)
     private final String dataSetName;
 
@@ -26,6 +34,10 @@ public final class GetADLSGen2FolderDataSetArgs extends io.pulumi.resources.Invo
         return this.dataSetName;
     }
 
+    /**
+     * The resource group name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -33,6 +45,10 @@ public final class GetADLSGen2FolderDataSetArgs extends io.pulumi.resources.Invo
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the share.
+     * 
+     */
     @InputImport(name="shareName", required=true)
     private final String shareName;
 

@@ -18,6 +18,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceArgs extends i
 
     public static final OsPolicyAssignmentOsPolicyResourceGroupResourceArgs Empty = new OsPolicyAssignmentOsPolicyResourceGroupResourceArgs();
 
+    /**
+     * Exec resource
+     * 
+     */
     @InputImport(name="exec")
     private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecArgs> exec;
 
@@ -25,6 +29,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceArgs extends i
         return this.exec == null ? Input.empty() : this.exec;
     }
 
+    /**
+     * A remote or local source.
+     * 
+     */
     @InputImport(name="file")
     private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceFileArgs> file;
 
@@ -32,6 +40,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceArgs extends i
         return this.file == null ? Input.empty() : this.file;
     }
 
+    /**
+     * Required. A one word, unique name for this repository. This is the `repo id` in the zypper config file and also the `display_name` if `display_name` is omitted. This id is also used as the unique identifier when checking for GuestPolicy conflicts.
+     * 
+     */
     @InputImport(name="id", required=true)
     private final Input<String> id;
 
@@ -39,6 +51,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceArgs extends i
         return this.id;
     }
 
+    /**
+     * Package resource
+     * 
+     */
     @InputImport(name="pkg")
     private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs> pkg;
 
@@ -46,6 +62,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceArgs extends i
         return this.pkg == null ? Input.empty() : this.pkg;
     }
 
+    /**
+     * Package repository resource
+     * 
+     */
     @InputImport(name="repository")
     private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs> repository;
 

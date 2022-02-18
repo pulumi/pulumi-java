@@ -12,8 +12,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class WorkflowTemplatePlacementManagedClusterConfigWorkerConfigDiskConfig {
+    /**
+     * Optional. Size in GB of the boot disk (default is 500GB).
+     * 
+     */
     private final @Nullable Integer bootDiskSizeGb;
+    /**
+     * Optional. Type of the boot disk (default is "pd-standard"). Valid values: "pd-ssd" (Persistent Disk Solid State Drive) or "pd-standard" (Persistent Disk Hard Disk Drive).
+     * 
+     */
     private final @Nullable String bootDiskType;
+    /**
+     * Optional. Number of attached SSDs, from 0 to 4 (default is 0). If SSDs are not attached, the boot disk is used to store runtime logs and (https://hadoop.apache.org/docs/r1.2.1/hdfs_user_guide.html) data. If one or more SSDs are attached, this runtime bulk data is spread across them, and the boot disk contains only basic config and installed binaries.
+     * 
+     */
     private final @Nullable Integer numLocalSsds;
 
     @OutputCustomType.Constructor({"bootDiskSizeGb","bootDiskType","numLocalSsds"})
@@ -26,12 +38,24 @@ public final class WorkflowTemplatePlacementManagedClusterConfigWorkerConfigDisk
         this.numLocalSsds = numLocalSsds;
     }
 
+    /**
+     * Optional. Size in GB of the boot disk (default is 500GB).
+     * 
+     */
     public Optional<Integer> getBootDiskSizeGb() {
         return Optional.ofNullable(this.bootDiskSizeGb);
     }
+    /**
+     * Optional. Type of the boot disk (default is "pd-standard"). Valid values: "pd-ssd" (Persistent Disk Solid State Drive) or "pd-standard" (Persistent Disk Hard Disk Drive).
+     * 
+     */
     public Optional<String> getBootDiskType() {
         return Optional.ofNullable(this.bootDiskType);
     }
+    /**
+     * Optional. Number of attached SSDs, from 0 to 4 (default is 0). If SSDs are not attached, the boot disk is used to store runtime logs and (https://hadoop.apache.org/docs/r1.2.1/hdfs_user_guide.html) data. If one or more SSDs are attached, this runtime bulk data is spread across them, and the boot disk contains only basic config and installed binaries.
+     * 
+     */
     public Optional<Integer> getNumLocalSsds() {
         return Optional.ofNullable(this.numLocalSsds);
     }

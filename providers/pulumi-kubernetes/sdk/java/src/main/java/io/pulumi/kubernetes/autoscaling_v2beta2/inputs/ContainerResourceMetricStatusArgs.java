@@ -10,10 +10,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * ContainerResourceMetricStatus indicates the current value of a resource metric known to Kubernetes, as specified in requests and limits, describing a single container in each pod in the current scale target (e.g. CPU or memory).  Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.
+ * 
+ */
 public final class ContainerResourceMetricStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContainerResourceMetricStatusArgs Empty = new ContainerResourceMetricStatusArgs();
 
+    /**
+     * Container is the name of the container in the pods of the scaling target
+     * 
+     */
     @InputImport(name="container", required=true)
     private final Input<String> container;
 
@@ -21,6 +29,10 @@ public final class ContainerResourceMetricStatusArgs extends io.pulumi.resources
         return this.container;
     }
 
+    /**
+     * current contains the current value for the given metric
+     * 
+     */
     @InputImport(name="current", required=true)
     private final Input<MetricValueStatusArgs> current;
 
@@ -28,6 +40,10 @@ public final class ContainerResourceMetricStatusArgs extends io.pulumi.resources
         return this.current;
     }
 
+    /**
+     * Name is the name of the resource in question.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

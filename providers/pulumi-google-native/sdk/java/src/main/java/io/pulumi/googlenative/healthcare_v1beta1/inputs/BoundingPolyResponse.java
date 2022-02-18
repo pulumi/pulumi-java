@@ -10,10 +10,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * A bounding polygon for the detected image annotation.
+ * 
+ */
 public final class BoundingPolyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BoundingPolyResponse Empty = new BoundingPolyResponse();
 
+    /**
+     * A description of this polygon.
+     * 
+     */
     @InputImport(name="label", required=true)
     private final String label;
 
@@ -21,6 +29,10 @@ public final class BoundingPolyResponse extends io.pulumi.resources.InvokeArgs {
         return this.label;
     }
 
+    /**
+     * List of the vertices of this polygon.
+     * 
+     */
     @InputImport(name="vertices", required=true)
     private final List<VertexResponse> vertices;
 

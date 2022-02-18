@@ -16,6 +16,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ProjectArgs Empty = new ProjectArgs();
 
+    /**
+     * The IDs of the assets to be associated to the project.
+     * 
+     */
     @InputImport(name="assetIds")
     private final @Nullable Input<List<String>> assetIds;
 
@@ -23,6 +27,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.assetIds == null ? Input.empty() : this.assetIds;
     }
 
+    /**
+     * The ID of the portal in which to create the project.
+     * 
+     */
     @InputImport(name="portalId", required=true)
     private final Input<String> portalId;
 
@@ -30,6 +38,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.portalId;
     }
 
+    /**
+     * A description for the project.
+     * 
+     */
     @InputImport(name="projectDescription")
     private final @Nullable Input<String> projectDescription;
 
@@ -37,6 +49,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.projectDescription == null ? Input.empty() : this.projectDescription;
     }
 
+    /**
+     * A friendly name for the project.
+     * 
+     */
     @InputImport(name="projectName")
     private final @Nullable Input<String> projectName;
 
@@ -44,6 +60,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.projectName == null ? Input.empty() : this.projectName;
     }
 
+    /**
+     * A list of key-value pairs that contain metadata for the project.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<ProjectTagArgs>> tags;
 

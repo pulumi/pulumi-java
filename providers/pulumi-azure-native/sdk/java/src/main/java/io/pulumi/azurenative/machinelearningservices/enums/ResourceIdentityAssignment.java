@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Defines values for a ResourceIdentity's type.
+     * 
+     */
     @EnumType
     public enum ResourceIdentityAssignment {
         SystemAssigned("SystemAssigned"),

@@ -15,6 +15,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WorkspaceArgs Empty = new WorkspaceArgs();
 
+    /**
+     * The name of the machine learning team account.
+     * 
+     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -22,6 +26,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountName;
     }
 
+    /**
+     * The description of this workspace.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -29,6 +37,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The friendly name for this workspace. This will be the workspace name in the arm id when the workspace object gets created
+     * 
+     */
     @InputImport(name="friendlyName", required=true)
     private final Input<String> friendlyName;
 
@@ -36,6 +48,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.friendlyName;
     }
 
+    /**
+     * The location of the resource. This cannot be changed after the resource is created.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -43,6 +59,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the resource group to which the machine learning team account belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -50,6 +70,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The tags of the resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -57,6 +81,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The name of the machine learning team account workspace.
+     * 
+     */
     @InputImport(name="workspaceName")
     private final @Nullable Input<String> workspaceName;
 

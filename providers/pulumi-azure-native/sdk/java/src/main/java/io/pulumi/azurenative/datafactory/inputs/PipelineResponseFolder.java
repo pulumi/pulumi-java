@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The folder that this Pipeline is in. If not specified, Pipeline will appear at the root level.
+ * 
+ */
 public final class PipelineResponseFolder extends io.pulumi.resources.InvokeArgs {
 
     public static final PipelineResponseFolder Empty = new PipelineResponseFolder();
 
+    /**
+     * The name of the folder that this Pipeline is in.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 

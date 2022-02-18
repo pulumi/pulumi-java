@@ -17,6 +17,10 @@ public final class DHCPOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DHCPOptionsArgs Empty = new DHCPOptionsArgs();
 
+    /**
+     * This value is used to complete unqualified DNS hostnames.
+     * 
+     */
     @InputImport(name="domainName")
     private final @Nullable Input<String> domainName;
 
@@ -24,6 +28,10 @@ public final class DHCPOptionsArgs extends io.pulumi.resources.ResourceArgs {
         return this.domainName == null ? Input.empty() : this.domainName;
     }
 
+    /**
+     * The IPv4 addresses of up to four domain name servers, or AmazonProvidedDNS.
+     * 
+     */
     @InputImport(name="domainNameServers")
     private final @Nullable Input<List<String>> domainNameServers;
 
@@ -31,6 +39,10 @@ public final class DHCPOptionsArgs extends io.pulumi.resources.ResourceArgs {
         return this.domainNameServers == null ? Input.empty() : this.domainNameServers;
     }
 
+    /**
+     * The IPv4 addresses of up to four NetBIOS name servers.
+     * 
+     */
     @InputImport(name="netbiosNameServers")
     private final @Nullable Input<List<String>> netbiosNameServers;
 
@@ -38,6 +50,10 @@ public final class DHCPOptionsArgs extends io.pulumi.resources.ResourceArgs {
         return this.netbiosNameServers == null ? Input.empty() : this.netbiosNameServers;
     }
 
+    /**
+     * The NetBIOS node type (1, 2, 4, or 8).
+     * 
+     */
     @InputImport(name="netbiosNodeType")
     private final @Nullable Input<Integer> netbiosNodeType;
 
@@ -45,6 +61,10 @@ public final class DHCPOptionsArgs extends io.pulumi.resources.ResourceArgs {
         return this.netbiosNodeType == null ? Input.empty() : this.netbiosNodeType;
     }
 
+    /**
+     * The IPv4 addresses of up to four Network Time Protocol (NTP) servers.
+     * 
+     */
     @InputImport(name="ntpServers")
     private final @Nullable Input<List<String>> ntpServers;
 
@@ -52,6 +72,10 @@ public final class DHCPOptionsArgs extends io.pulumi.resources.ResourceArgs {
         return this.ntpServers == null ? Input.empty() : this.ntpServers;
     }
 
+    /**
+     * Any tags assigned to the DHCP options set.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<DHCPOptionsTagArgs>> tags;
 

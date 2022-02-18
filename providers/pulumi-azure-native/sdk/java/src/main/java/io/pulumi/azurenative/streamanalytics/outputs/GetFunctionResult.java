@@ -12,9 +12,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetFunctionResult {
+    /**
+     * Resource Id
+     * 
+     */
     private final String id;
+    /**
+     * Resource name
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * The properties that are associated with a function.
+     * 
+     */
     private final ScalarFunctionPropertiesResponse properties;
+    /**
+     * Resource type
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"id","name","properties","type"})
@@ -29,15 +45,31 @@ public final class GetFunctionResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Resource Id
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Resource name
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * The properties that are associated with a function.
+     * 
+     */
     public ScalarFunctionPropertiesResponse getProperties() {
         return this.properties;
     }
+    /**
+     * Resource type
+     * 
+     */
     public String getType() {
         return this.type;
     }

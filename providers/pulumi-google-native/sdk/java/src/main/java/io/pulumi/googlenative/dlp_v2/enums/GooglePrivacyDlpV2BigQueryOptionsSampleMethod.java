@@ -11,7 +11,15 @@ import java.util.StringJoiner;
     @EnumType
     public enum GooglePrivacyDlpV2BigQueryOptionsSampleMethod {
         SampleMethodUnspecified("SAMPLE_METHOD_UNSPECIFIED"),
+        /**
+         * Scan groups of rows in the order BigQuery provides (default). Multiple groups of rows may be scanned in parallel, so results may not appear in the same order the rows are read.
+         * 
+         */
         Top("TOP"),
+        /**
+         * Randomly pick groups of rows to scan.
+         * 
+         */
         RandomStart("RANDOM_START");
 
         private final String value;

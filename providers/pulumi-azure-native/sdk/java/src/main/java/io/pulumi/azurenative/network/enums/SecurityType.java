@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Security Type.
+     * 
+     */
     @EnumType
     public enum SecurityType {
         AdminPolicy("AdminPolicy"),

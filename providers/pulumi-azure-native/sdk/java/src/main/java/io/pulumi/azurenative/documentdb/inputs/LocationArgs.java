@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A region in which the Azure Cosmos DB database account is deployed.
+ * 
+ */
 public final class LocationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LocationArgs Empty = new LocationArgs();
 
+    /**
+     * The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists.
+     * 
+     */
     @InputImport(name="failoverPriority")
     private final @Nullable Input<Integer> failoverPriority;
 
@@ -23,6 +31,10 @@ public final class LocationArgs extends io.pulumi.resources.ResourceArgs {
         return this.failoverPriority == null ? Input.empty() : this.failoverPriority;
     }
 
+    /**
+     * Flag to indicate whether or not this region is an AvailabilityZone region
+     * 
+     */
     @InputImport(name="isZoneRedundant")
     private final @Nullable Input<Boolean> isZoneRedundant;
 
@@ -30,6 +42,10 @@ public final class LocationArgs extends io.pulumi.resources.ResourceArgs {
         return this.isZoneRedundant == null ? Input.empty() : this.isZoneRedundant;
     }
 
+    /**
+     * The name of the region.
+     * 
+     */
     @InputImport(name="locationName")
     private final @Nullable Input<String> locationName;
 

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The data type of the compared operands (string, integer, floating point number or a boolean [true/false]]
+     * 
+     */
     @EnumType
     public enum PropertyType {
         String("String"),

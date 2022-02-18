@@ -17,13 +17,70 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class URLMapPathMatcher {
+    /**
+     * defaultRouteAction takes effect when none of the pathRules or routeRules match. The load balancer performs
+     * advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request
+     * to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set.
+     * Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices.
+     * Only one of defaultRouteAction or defaultUrlRedirect must be set.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable URLMapPathMatcherDefaultRouteAction defaultRouteAction;
+    /**
+     * The backend service or backend bucket to use when none of the given paths match.
+     * 
+     */
     private final @Nullable String defaultService;
+    /**
+     * When none of the specified hostRules match, the request is redirected to a URL specified
+     * by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
+     * defaultRouteAction must not be set.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable URLMapPathMatcherDefaultUrlRedirect defaultUrlRedirect;
+    /**
+     * Description of this test case.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * Specifies changes to request and response headers that need to take effect for
+     * the selected backendService.
+     * headerAction specified here take effect before headerAction in the enclosing
+     * HttpRouteRule, PathMatcher and UrlMap.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable URLMapPathMatcherHeaderAction headerAction;
+    /**
+     * The name of the query parameter to match. The query parameter must exist in the
+     * request, in the absence of which the request match fails.
+     * 
+     */
     private final String name;
+    /**
+     * The list of path rules. Use this list instead of routeRules when routing based
+     * on simple path matching is all that's required. The order by which path rules
+     * are specified does not matter. Matches are always done on the longest-path-first
+     * basis. For example: a pathRule with a path /a/b/c/* will match before /a/b/*
+     * irrespective of the order in which those paths appear in this list. Within a
+     * given pathMatcher, only one of pathRules or routeRules must be set.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable List<URLMapPathMatcherPathRule> pathRules;
+    /**
+     * The list of ordered HTTP route rules. Use this list instead of pathRules when
+     * advanced route matching and routing actions are desired. The order of specifying
+     * routeRules matters: the first rule that matches will cause its specified routing
+     * action to take effect. Within a given pathMatcher, only one of pathRules or
+     * routeRules must be set. routeRules are not supported in UrlMaps intended for
+     * External load balancers.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable List<URLMapPathMatcherRouteRule> routeRules;
 
     @OutputCustomType.Constructor({"defaultRouteAction","defaultService","defaultUrlRedirect","description","headerAction","name","pathRules","routeRules"})
@@ -46,27 +103,84 @@ public final class URLMapPathMatcher {
         this.routeRules = routeRules;
     }
 
+    /**
+     * defaultRouteAction takes effect when none of the pathRules or routeRules match. The load balancer performs
+     * advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request
+     * to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set.
+     * Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices.
+     * Only one of defaultRouteAction or defaultUrlRedirect must be set.
+     * Structure is documented below.
+     * 
+     */
     public Optional<URLMapPathMatcherDefaultRouteAction> getDefaultRouteAction() {
         return Optional.ofNullable(this.defaultRouteAction);
     }
+    /**
+     * The backend service or backend bucket to use when none of the given paths match.
+     * 
+     */
     public Optional<String> getDefaultService() {
         return Optional.ofNullable(this.defaultService);
     }
+    /**
+     * When none of the specified hostRules match, the request is redirected to a URL specified
+     * by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
+     * defaultRouteAction must not be set.
+     * Structure is documented below.
+     * 
+     */
     public Optional<URLMapPathMatcherDefaultUrlRedirect> getDefaultUrlRedirect() {
         return Optional.ofNullable(this.defaultUrlRedirect);
     }
+    /**
+     * Description of this test case.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * Specifies changes to request and response headers that need to take effect for
+     * the selected backendService.
+     * headerAction specified here take effect before headerAction in the enclosing
+     * HttpRouteRule, PathMatcher and UrlMap.
+     * Structure is documented below.
+     * 
+     */
     public Optional<URLMapPathMatcherHeaderAction> getHeaderAction() {
         return Optional.ofNullable(this.headerAction);
     }
+    /**
+     * The name of the query parameter to match. The query parameter must exist in the
+     * request, in the absence of which the request match fails.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The list of path rules. Use this list instead of routeRules when routing based
+     * on simple path matching is all that's required. The order by which path rules
+     * are specified does not matter. Matches are always done on the longest-path-first
+     * basis. For example: a pathRule with a path /a/b/c/* will match before /a/b/*
+     * irrespective of the order in which those paths appear in this list. Within a
+     * given pathMatcher, only one of pathRules or routeRules must be set.
+     * Structure is documented below.
+     * 
+     */
     public List<URLMapPathMatcherPathRule> getPathRules() {
         return this.pathRules == null ? List.of() : this.pathRules;
     }
+    /**
+     * The list of ordered HTTP route rules. Use this list instead of pathRules when
+     * advanced route matching and routing actions are desired. The order of specifying
+     * routeRules matters: the first rule that matches will cause its specified routing
+     * action to take effect. Within a given pathMatcher, only one of pathRules or
+     * routeRules must be set. routeRules are not supported in UrlMaps intended for
+     * External load balancers.
+     * Structure is documented below.
+     * 
+     */
     public List<URLMapPathMatcherRouteRule> getRouteRules() {
         return this.routeRules == null ? List.of() : this.routeRules;
     }

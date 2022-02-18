@@ -13,6 +13,10 @@ public final class ApiConfigOpenapiDocumentDocumentGetArgs extends io.pulumi.res
 
     public static final ApiConfigOpenapiDocumentDocumentGetArgs Empty = new ApiConfigOpenapiDocumentDocumentGetArgs();
 
+    /**
+     * Base64 encoded content of the file.
+     * 
+     */
     @InputImport(name="contents", required=true)
     private final Input<String> contents;
 
@@ -20,6 +24,10 @@ public final class ApiConfigOpenapiDocumentDocumentGetArgs extends io.pulumi.res
         return this.contents;
     }
 
+    /**
+     * The file path (full or relative path). This is typically the path of the file when it is uploaded.
+     * 
+     */
     @InputImport(name="path", required=true)
     private final Input<String> path;
 

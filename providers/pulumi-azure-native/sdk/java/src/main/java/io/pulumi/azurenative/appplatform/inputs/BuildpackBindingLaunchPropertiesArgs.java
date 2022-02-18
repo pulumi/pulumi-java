@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Buildpack Binding Launch Properties
+ * 
+ */
 public final class BuildpackBindingLaunchPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BuildpackBindingLaunchPropertiesArgs Empty = new BuildpackBindingLaunchPropertiesArgs();
 
+    /**
+     * Non-sensitive properties for launchProperties
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<Map<String,String>> properties;
 
@@ -22,6 +30,10 @@ public final class BuildpackBindingLaunchPropertiesArgs extends io.pulumi.resour
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * Sensitive properties for launchProperties
+     * 
+     */
     @InputImport(name="secrets")
     private final @Nullable Input<Map<String,String>> secrets;
 

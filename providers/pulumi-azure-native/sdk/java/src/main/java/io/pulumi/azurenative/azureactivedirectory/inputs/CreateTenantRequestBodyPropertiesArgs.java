@@ -14,6 +14,10 @@ public final class CreateTenantRequestBodyPropertiesArgs extends io.pulumi.resou
 
     public static final CreateTenantRequestBodyPropertiesArgs Empty = new CreateTenantRequestBodyPropertiesArgs();
 
+    /**
+     * Country code of Azure tenant (e.g. 'US'). Refer to [aka.ms/B2CDataResidency](https://aka.ms/B2CDataResidency) to see valid country codes and corresponding data residency locations. If you do not see a country code in an valid data residency location, choose one from the list.
+     * 
+     */
     @InputImport(name="countryCode")
     private final @Nullable Input<String> countryCode;
 
@@ -21,6 +25,10 @@ public final class CreateTenantRequestBodyPropertiesArgs extends io.pulumi.resou
         return this.countryCode == null ? Input.empty() : this.countryCode;
     }
 
+    /**
+     * The display name of the B2C tenant.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 

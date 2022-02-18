@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBitbucketServerConfig {
+/**
+ * Retrieve a `BitbucketServerConfig`. This API is experimental.
+ * 
+ */
     public static CompletableFuture<GetBitbucketServerConfigResult> invokeAsync(GetBitbucketServerConfigArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudbuild/v1:getBitbucketServerConfig", TypeShape.of(GetBitbucketServerConfigResult.class), args == null ? GetBitbucketServerConfigArgs.Empty : args, Utilities.withVersion(options));
     }

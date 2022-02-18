@@ -15,6 +15,10 @@ public final class PublicAdvertisedPrefixArgs extends io.pulumi.resources.Resour
 
     public static final PublicAdvertisedPrefixArgs Empty = new PublicAdvertisedPrefixArgs();
 
+    /**
+     * An optional description of this resource. Provide this property when you create the resource.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -22,6 +26,10 @@ public final class PublicAdvertisedPrefixArgs extends io.pulumi.resources.Resour
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The IPv4 address to be used for reverse DNS verification.
+     * 
+     */
     @InputImport(name="dnsVerificationIp")
     private final @Nullable Input<String> dnsVerificationIp;
 
@@ -29,6 +37,10 @@ public final class PublicAdvertisedPrefixArgs extends io.pulumi.resources.Resour
         return this.dnsVerificationIp == null ? Input.empty() : this.dnsVerificationIp;
     }
 
+    /**
+     * The IPv4 address range, in CIDR format, represented by this public advertised prefix.
+     * 
+     */
     @InputImport(name="ipCidrRange")
     private final @Nullable Input<String> ipCidrRange;
 
@@ -36,6 +48,10 @@ public final class PublicAdvertisedPrefixArgs extends io.pulumi.resources.Resour
         return this.ipCidrRange == null ? Input.empty() : this.ipCidrRange;
     }
 
+    /**
+     * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -57,6 +73,10 @@ public final class PublicAdvertisedPrefixArgs extends io.pulumi.resources.Resour
         return this.requestId == null ? Input.empty() : this.requestId;
     }
 
+    /**
+     * The status of the public advertised prefix. Possible values include: - `INITIAL`: RPKI validation is complete. - `PTR_CONFIGURED`: User has configured the PTR. - `VALIDATED`: Reverse DNS lookup is successful. - `REVERSE_DNS_LOOKUP_FAILED`: Reverse DNS lookup failed. - `PREFIX_CONFIGURATION_IN_PROGRESS`: The prefix is being configured. - `PREFIX_CONFIGURATION_COMPLETE`: The prefix is fully configured. - `PREFIX_REMOVAL_IN_PROGRESS`: The prefix is being removed.
+     * 
+     */
     @InputImport(name="status")
     private final @Nullable Input<PublicAdvertisedPrefixStatus> status;
 

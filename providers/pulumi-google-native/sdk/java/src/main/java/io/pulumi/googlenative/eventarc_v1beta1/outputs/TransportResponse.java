@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TransportResponse {
+    /**
+     * The Pub/Sub topic and subscription used by Eventarc as delivery intermediary.
+     * 
+     */
     private final PubsubResponse pubsub;
 
     @OutputCustomType.Constructor({"pubsub"})
@@ -16,6 +20,10 @@ public final class TransportResponse {
         this.pubsub = Objects.requireNonNull(pubsub);
     }
 
+    /**
+     * The Pub/Sub topic and subscription used by Eventarc as delivery intermediary.
+     * 
+     */
     public PubsubResponse getPubsub() {
         return this.pubsub;
     }

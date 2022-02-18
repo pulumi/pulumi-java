@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegexPatternSet {
+/**
+ * Contains a list of Regular expressions based on the provided inputs. RegexPatternSet can be used with other WAF entities with RegexPatternSetReferenceStatement to perform other actions .
+ * 
+ */
     public static CompletableFuture<GetRegexPatternSetResult> invokeAsync(GetRegexPatternSetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:wafv2:getRegexPatternSet", TypeShape.of(GetRegexPatternSetResult.class), args == null ? GetRegexPatternSetArgs.Empty : args, Utilities.withVersion(options));
     }

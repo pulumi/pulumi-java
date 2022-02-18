@@ -14,39 +14,91 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Resource Type definition for AWS::IVS::PlaybackKeyPair
+ * 
+ * ## Example Usage
+ * 
+ */
 @ResourceType(type="aws-native:ivs:PlaybackKeyPair")
 public class PlaybackKeyPair extends io.pulumi.resources.CustomResource {
+    /**
+     * Key-pair identifier.
+     * 
+     */
     @OutputExport(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
+    /**
+     * @return Key-pair identifier.
+     * 
+     */
     public Output<String> getArn() {
         return this.arn;
     }
+    /**
+     * Key-pair identifier.
+     * 
+     */
     @OutputExport(name="fingerprint", type=String.class, parameters={})
     private Output<String> fingerprint;
 
+    /**
+     * @return Key-pair identifier.
+     * 
+     */
     public Output<String> getFingerprint() {
         return this.fingerprint;
     }
+    /**
+     * An arbitrary string (a nickname) assigned to a playback key pair that helps the customer identify that resource. The value does not need to be unique.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
+    /**
+     * @return An arbitrary string (a nickname) assigned to a playback key pair that helps the customer identify that resource. The value does not need to be unique.
+     * 
+     */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
+    /**
+     * The public portion of a customer-generated key pair.
+     * 
+     */
     @OutputExport(name="publicKeyMaterial", type=String.class, parameters={})
     private Output<String> publicKeyMaterial;
 
+    /**
+     * @return The public portion of a customer-generated key pair.
+     * 
+     */
     public Output<String> getPublicKeyMaterial() {
         return this.publicKeyMaterial;
     }
+    /**
+     * A list of key-value pairs that contain metadata for the asset model.
+     * 
+     */
     @OutputExport(name="tags", type=List.class, parameters={PlaybackKeyPairTag.class})
     private Output</* @Nullable */ List<PlaybackKeyPairTag>> tags;
 
+    /**
+     * @return A list of key-value pairs that contain metadata for the asset model.
+     * 
+     */
     public Output</* @Nullable */ List<PlaybackKeyPairTag>> getTags() {
         return this.tags;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public PlaybackKeyPair(String name, PlaybackKeyPairArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:ivs:PlaybackKeyPair", name, args == null ? PlaybackKeyPairArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -62,6 +114,14 @@ public class PlaybackKeyPair extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static PlaybackKeyPair get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PlaybackKeyPair(name, id, options);
     }

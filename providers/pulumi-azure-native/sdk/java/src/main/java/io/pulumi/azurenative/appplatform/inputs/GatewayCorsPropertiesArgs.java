@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Cross-Origin Resource Sharing property
+ * 
+ */
 public final class GatewayCorsPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GatewayCorsPropertiesArgs Empty = new GatewayCorsPropertiesArgs();
 
+    /**
+     * Whether user credentials are supported on cross-site requests. Valid values: `true`, `false`.
+     * 
+     */
     @InputImport(name="allowCredentials")
     private final @Nullable Input<Boolean> allowCredentials;
 
@@ -24,6 +32,10 @@ public final class GatewayCorsPropertiesArgs extends io.pulumi.resources.Resourc
         return this.allowCredentials == null ? Input.empty() : this.allowCredentials;
     }
 
+    /**
+     * Allowed headers in cross-site requests. The special value `*` allows actual requests to send any header.
+     * 
+     */
     @InputImport(name="allowedHeaders")
     private final @Nullable Input<List<String>> allowedHeaders;
 
@@ -31,6 +43,10 @@ public final class GatewayCorsPropertiesArgs extends io.pulumi.resources.Resourc
         return this.allowedHeaders == null ? Input.empty() : this.allowedHeaders;
     }
 
+    /**
+     * Allowed HTTP methods on cross-site requests. The special value `*` allows all methods. If not set, `GET` and `HEAD` are allowed by default.
+     * 
+     */
     @InputImport(name="allowedMethods")
     private final @Nullable Input<List<String>> allowedMethods;
 
@@ -38,6 +54,10 @@ public final class GatewayCorsPropertiesArgs extends io.pulumi.resources.Resourc
         return this.allowedMethods == null ? Input.empty() : this.allowedMethods;
     }
 
+    /**
+     * Allowed origins to make cross-site requests. The special value `*` allows all domains.
+     * 
+     */
     @InputImport(name="allowedOrigins")
     private final @Nullable Input<List<String>> allowedOrigins;
 
@@ -45,6 +65,10 @@ public final class GatewayCorsPropertiesArgs extends io.pulumi.resources.Resourc
         return this.allowedOrigins == null ? Input.empty() : this.allowedOrigins;
     }
 
+    /**
+     * HTTP response headers to expose for cross-site requests.
+     * 
+     */
     @InputImport(name="exposedHeaders")
     private final @Nullable Input<List<String>> exposedHeaders;
 
@@ -52,6 +76,10 @@ public final class GatewayCorsPropertiesArgs extends io.pulumi.resources.Resourc
         return this.exposedHeaders == null ? Input.empty() : this.exposedHeaders;
     }
 
+    /**
+     * How long, in seconds, the response from a pre-flight request can be cached by clients.
+     * 
+     */
     @InputImport(name="maxAge")
     private final @Nullable Input<Integer> maxAge;
 

@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFolderIamPolicy {
+/**
+ * Gets the access control policy for a Folder. The returned policy may be empty if no such policy or resource exists. The `resource` field should be the Folder's resource name, e.g. "folders/1234". The caller must have `resourcemanager.folders.getIamPolicy` permission on the identified folder.
+ * 
+ */
     public static CompletableFuture<GetFolderIamPolicyResult> invokeAsync(GetFolderIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudresourcemanager/v2beta1:getFolderIamPolicy", TypeShape.of(GetFolderIamPolicyResult.class), args == null ? GetFolderIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

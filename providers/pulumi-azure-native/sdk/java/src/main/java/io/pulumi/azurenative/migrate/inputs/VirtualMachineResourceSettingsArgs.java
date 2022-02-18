@@ -12,10 +12,19 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Gets or sets the virtual machine resource settings.
+ * 
+ */
 public final class VirtualMachineResourceSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualMachineResourceSettingsArgs Empty = new VirtualMachineResourceSettingsArgs();
 
+    /**
+     * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+     * Expected value is 'Microsoft.Compute/virtualMachines'.
+     * 
+     */
     @InputImport(name="resourceType", required=true)
     private final Input<String> resourceType;
 
@@ -23,6 +32,10 @@ public final class VirtualMachineResourceSettingsArgs extends io.pulumi.resource
         return this.resourceType;
     }
 
+    /**
+     * Gets or sets the target availability set id for virtual machines not in an availability set at source.
+     * 
+     */
     @InputImport(name="targetAvailabilitySetId")
     private final @Nullable Input<String> targetAvailabilitySetId;
 
@@ -30,6 +43,10 @@ public final class VirtualMachineResourceSettingsArgs extends io.pulumi.resource
         return this.targetAvailabilitySetId == null ? Input.empty() : this.targetAvailabilitySetId;
     }
 
+    /**
+     * Gets or sets the target availability zone.
+     * 
+     */
     @InputImport(name="targetAvailabilityZone")
     private final @Nullable Input<Either<String,TargetAvailabilityZone>> targetAvailabilityZone;
 
@@ -37,6 +54,10 @@ public final class VirtualMachineResourceSettingsArgs extends io.pulumi.resource
         return this.targetAvailabilityZone == null ? Input.empty() : this.targetAvailabilityZone;
     }
 
+    /**
+     * Gets or sets the target Resource name.
+     * 
+     */
     @InputImport(name="targetResourceName", required=true)
     private final Input<String> targetResourceName;
 
@@ -44,6 +65,10 @@ public final class VirtualMachineResourceSettingsArgs extends io.pulumi.resource
         return this.targetResourceName;
     }
 
+    /**
+     * Gets or sets the target virtual machine size.
+     * 
+     */
     @InputImport(name="targetVmSize")
     private final @Nullable Input<String> targetVmSize;
 

@@ -13,6 +13,18 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetImageVersions {
+/**
+ * Provides access to available Cloud Composer versions in a region for a given project.
+ * 
+ * ## Example Usage
+ * 
+ *
+ * A collection of arguments for invoking getImageVersions.
+ * 
+ *
+ * A collection of values returned by getImageVersions.
+ * 
+ */
     public static CompletableFuture<GetImageVersionsResult> invokeAsync(@Nullable GetImageVersionsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:composer/getImageVersions:getImageVersions", TypeShape.of(GetImageVersionsResult.class), args == null ? GetImageVersionsArgs.Empty : args, Utilities.withVersion(options));
     }

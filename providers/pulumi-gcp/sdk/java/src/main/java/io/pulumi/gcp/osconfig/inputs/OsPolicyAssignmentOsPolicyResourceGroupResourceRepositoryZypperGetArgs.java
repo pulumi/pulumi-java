@@ -15,6 +15,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypp
 
     public static final OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypperGetArgs Empty = new OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypperGetArgs();
 
+    /**
+     * Required. The location of the repository directory.
+     * 
+     */
     @InputImport(name="baseUrl", required=true)
     private final Input<String> baseUrl;
 
@@ -22,6 +26,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypp
         return this.baseUrl;
     }
 
+    /**
+     * The display name of the repository.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -29,6 +37,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypp
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * URIs of GPG keys.
+     * 
+     */
     @InputImport(name="gpgKeys")
     private final @Nullable Input<List<String>> gpgKeys;
 
@@ -36,6 +48,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypp
         return this.gpgKeys == null ? Input.empty() : this.gpgKeys;
     }
 
+    /**
+     * Required. A one word, unique name for this repository. This is the `repo id` in the zypper config file and also the `display_name` if `display_name` is omitted. This id is also used as the unique identifier when checking for GuestPolicy conflicts.
+     * 
+     */
     @InputImport(name="id", required=true)
     private final Input<String> id;
 

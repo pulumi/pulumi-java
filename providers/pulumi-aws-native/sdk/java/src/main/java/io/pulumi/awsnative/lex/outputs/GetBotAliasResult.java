@@ -24,6 +24,10 @@ public final class GetBotAliasResult {
     private final @Nullable String botVersion;
     private final @Nullable BotAliasConversationLogSettings conversationLogSettings;
     private final @Nullable String description;
+    /**
+     * Determines whether Amazon Lex will use Amazon Comprehend to detect the sentiment of user utterances.
+     * 
+     */
     private final @Nullable SentimentAnalysisSettingsProperties sentimentAnalysisSettings;
 
     @OutputCustomType.Constructor({"arn","botAliasId","botAliasLocaleSettings","botAliasName","botAliasStatus","botVersion","conversationLogSettings","description","sentimentAnalysisSettings"})
@@ -72,6 +76,10 @@ public final class GetBotAliasResult {
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * Determines whether Amazon Lex will use Amazon Comprehend to detect the sentiment of user utterances.
+     * 
+     */
     public Optional<SentimentAnalysisSettingsProperties> getSentimentAnalysisSettings() {
         return Optional.ofNullable(this.sentimentAnalysisSettings);
     }

@@ -14,10 +14,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specifies the selection and configuration of software inside the runtime. The properties to set on runtime. Properties keys are specified in `key:value` format, for example: * `idle_shutdown: true` * `idle_shutdown_timeout: 180` * `enable_health_monitoring: true`
+ * 
+ */
 public final class RuntimeSoftwareConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RuntimeSoftwareConfigArgs Empty = new RuntimeSoftwareConfigArgs();
 
+    /**
+     * Specify a custom Cloud Storage path where the GPU driver is stored. If not specified, we'll automatically choose from official GPU drivers.
+     * 
+     */
     @InputImport(name="customGpuDriverPath")
     private final @Nullable Input<String> customGpuDriverPath;
 
@@ -25,6 +33,10 @@ public final class RuntimeSoftwareConfigArgs extends io.pulumi.resources.Resourc
         return this.customGpuDriverPath == null ? Input.empty() : this.customGpuDriverPath;
     }
 
+    /**
+     * Verifies core internal services are running. Default: True
+     * 
+     */
     @InputImport(name="enableHealthMonitoring")
     private final @Nullable Input<Boolean> enableHealthMonitoring;
 
@@ -32,6 +44,10 @@ public final class RuntimeSoftwareConfigArgs extends io.pulumi.resources.Resourc
         return this.enableHealthMonitoring == null ? Input.empty() : this.enableHealthMonitoring;
     }
 
+    /**
+     * Runtime will automatically shutdown after idle_shutdown_time. Default: True
+     * 
+     */
     @InputImport(name="idleShutdown")
     private final @Nullable Input<Boolean> idleShutdown;
 
@@ -39,6 +55,10 @@ public final class RuntimeSoftwareConfigArgs extends io.pulumi.resources.Resourc
         return this.idleShutdown == null ? Input.empty() : this.idleShutdown;
     }
 
+    /**
+     * Time in minutes to wait before shutting down runtime. Default: 180 minutes
+     * 
+     */
     @InputImport(name="idleShutdownTimeout")
     private final @Nullable Input<Integer> idleShutdownTimeout;
 
@@ -46,6 +66,10 @@ public final class RuntimeSoftwareConfigArgs extends io.pulumi.resources.Resourc
         return this.idleShutdownTimeout == null ? Input.empty() : this.idleShutdownTimeout;
     }
 
+    /**
+     * Install Nvidia Driver automatically.
+     * 
+     */
     @InputImport(name="installGpuDriver")
     private final @Nullable Input<Boolean> installGpuDriver;
 
@@ -53,6 +77,10 @@ public final class RuntimeSoftwareConfigArgs extends io.pulumi.resources.Resourc
         return this.installGpuDriver == null ? Input.empty() : this.installGpuDriver;
     }
 
+    /**
+     * Optional. Use a list of container images to use as Kernels in the notebook instance.
+     * 
+     */
     @InputImport(name="kernels")
     private final @Nullable Input<List<ContainerImageArgs>> kernels;
 
@@ -60,6 +88,10 @@ public final class RuntimeSoftwareConfigArgs extends io.pulumi.resources.Resourc
         return this.kernels == null ? Input.empty() : this.kernels;
     }
 
+    /**
+     * Cron expression in UTC timezone, used to schedule instance auto upgrade. Please follow the [cron format](https://en.wikipedia.org/wiki/Cron).
+     * 
+     */
     @InputImport(name="notebookUpgradeSchedule")
     private final @Nullable Input<String> notebookUpgradeSchedule;
 
@@ -67,6 +99,10 @@ public final class RuntimeSoftwareConfigArgs extends io.pulumi.resources.Resourc
         return this.notebookUpgradeSchedule == null ? Input.empty() : this.notebookUpgradeSchedule;
     }
 
+    /**
+     * Path to a Bash script that automatically runs after a notebook instance fully boots up. The path must be a URL or Cloud Storage path (`gs://path-to-file/file-name`).
+     * 
+     */
     @InputImport(name="postStartupScript")
     private final @Nullable Input<String> postStartupScript;
 

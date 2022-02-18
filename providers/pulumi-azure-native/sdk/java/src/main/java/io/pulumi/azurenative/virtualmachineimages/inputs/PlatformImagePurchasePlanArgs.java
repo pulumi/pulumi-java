@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Purchase plan configuration for platform image.
+ * 
+ */
 public final class PlatformImagePurchasePlanArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PlatformImagePurchasePlanArgs Empty = new PlatformImagePurchasePlanArgs();
 
+    /**
+     * Name of the purchase plan.
+     * 
+     */
     @InputImport(name="planName", required=true)
     private final Input<String> planName;
 
@@ -20,6 +28,10 @@ public final class PlatformImagePurchasePlanArgs extends io.pulumi.resources.Res
         return this.planName;
     }
 
+    /**
+     * Product of the purchase plan.
+     * 
+     */
     @InputImport(name="planProduct", required=true)
     private final Input<String> planProduct;
 
@@ -27,6 +39,10 @@ public final class PlatformImagePurchasePlanArgs extends io.pulumi.resources.Res
         return this.planProduct;
     }
 
+    /**
+     * Publisher of the purchase plan.
+     * 
+     */
     @InputImport(name="planPublisher", required=true)
     private final Input<String> planPublisher;
 

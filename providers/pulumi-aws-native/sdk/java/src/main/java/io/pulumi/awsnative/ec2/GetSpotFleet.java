@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSpotFleet {
+/**
+ * Resource Type definition for AWS::EC2::SpotFleet
+ * 
+ */
     public static CompletableFuture<GetSpotFleetResult> invokeAsync(GetSpotFleetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ec2:getSpotFleet", TypeShape.of(GetSpotFleetResult.class), args == null ? GetSpotFleetArgs.Empty : args, Utilities.withVersion(options));
     }

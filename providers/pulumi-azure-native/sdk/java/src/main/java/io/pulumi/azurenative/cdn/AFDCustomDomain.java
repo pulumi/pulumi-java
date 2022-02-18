@@ -18,11 +18,34 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Friendly domain name mapping to the endpoint hostname that the customer provides for branding purposes, e.g. www.contoso.com.
+ * API Version: 2020-09-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:cdn:AFDCustomDomain domain1 /subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/domains/domain1 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:cdn:AFDCustomDomain")
 public class AFDCustomDomain extends io.pulumi.resources.CustomResource {
+    /**
+     * Resource reference to the Azure DNS zone
+     * 
+     */
     @OutputExport(name="azureDnsZone", type=ResourceReferenceResponse.class, parameters={})
     private Output</* @Nullable */ ResourceReferenceResponse> azureDnsZone;
 
+    /**
+     * @return Resource reference to the Azure DNS zone
+     * 
+     */
     public Output</* @Nullable */ ResourceReferenceResponse> getAzureDnsZone() {
         return this.azureDnsZone;
     }
@@ -32,55 +55,125 @@ public class AFDCustomDomain extends io.pulumi.resources.CustomResource {
     public Output<String> getDeploymentStatus() {
         return this.deploymentStatus;
     }
+    /**
+     * Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step. DCV stands for DomainControlValidation.
+     * 
+     */
     @OutputExport(name="domainValidationState", type=String.class, parameters={})
     private Output<String> domainValidationState;
 
+    /**
+     * @return Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step. DCV stands for DomainControlValidation.
+     * 
+     */
     public Output<String> getDomainValidationState() {
         return this.domainValidationState;
     }
+    /**
+     * The host name of the domain. Must be a domain name.
+     * 
+     */
     @OutputExport(name="hostName", type=String.class, parameters={})
     private Output<String> hostName;
 
+    /**
+     * @return The host name of the domain. Must be a domain name.
+     * 
+     */
     public Output<String> getHostName() {
         return this.hostName;
     }
+    /**
+     * Resource name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Provisioning status
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return Provisioning status
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Read only system data
+     * 
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return Read only system data
+     * 
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * The configuration specifying how to enable HTTPS for the domain - using AzureFrontDoor managed certificate or user's own certificate. If not specified, enabling ssl uses AzureFrontDoor managed certificate by default.
+     * 
+     */
     @OutputExport(name="tlsSettings", type=AFDDomainHttpsParametersResponse.class, parameters={})
     private Output</* @Nullable */ AFDDomainHttpsParametersResponse> tlsSettings;
 
+    /**
+     * @return The configuration specifying how to enable HTTPS for the domain - using AzureFrontDoor managed certificate or user's own certificate. If not specified, enabling ssl uses AzureFrontDoor managed certificate by default.
+     * 
+     */
     public Output</* @Nullable */ AFDDomainHttpsParametersResponse> getTlsSettings() {
         return this.tlsSettings;
     }
+    /**
+     * Resource type.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * Values the customer needs to validate domain ownership
+     * 
+     */
     @OutputExport(name="validationProperties", type=DomainValidationPropertiesResponse.class, parameters={})
     private Output<DomainValidationPropertiesResponse> validationProperties;
 
+    /**
+     * @return Values the customer needs to validate domain ownership
+     * 
+     */
     public Output<DomainValidationPropertiesResponse> getValidationProperties() {
         return this.validationProperties;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public AFDCustomDomain(String name, AFDCustomDomainArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:cdn:AFDCustomDomain", name, args == null ? AFDCustomDomainArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -100,6 +193,14 @@ public class AFDCustomDomain extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static AFDCustomDomain get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AFDCustomDomain(name, id, options);
     }

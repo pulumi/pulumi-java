@@ -11,7 +11,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CaPoolIssuancePolicyAllowedKeyTypeRsa {
+    /**
+     * The maximum allowed RSA modulus size, in bits. If this is not set, or if set to zero, the
+     * service will not enforce an explicit upper bound on RSA modulus sizes.
+     * 
+     */
     private final @Nullable String maxModulusSize;
+    /**
+     * The minimum allowed RSA modulus size, in bits. If this is not set, or if set to zero, the
+     * service-level min RSA modulus size will continue to apply.
+     * 
+     */
     private final @Nullable String minModulusSize;
 
     @OutputCustomType.Constructor({"maxModulusSize","minModulusSize"})
@@ -22,9 +32,19 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeRsa {
         this.minModulusSize = minModulusSize;
     }
 
+    /**
+     * The maximum allowed RSA modulus size, in bits. If this is not set, or if set to zero, the
+     * service will not enforce an explicit upper bound on RSA modulus sizes.
+     * 
+     */
     public Optional<String> getMaxModulusSize() {
         return Optional.ofNullable(this.maxModulusSize);
     }
+    /**
+     * The minimum allowed RSA modulus size, in bits. If this is not set, or if set to zero, the
+     * service-level min RSA modulus size will continue to apply.
+     * 
+     */
     public Optional<String> getMinModulusSize() {
         return Optional.ofNullable(this.minModulusSize);
     }

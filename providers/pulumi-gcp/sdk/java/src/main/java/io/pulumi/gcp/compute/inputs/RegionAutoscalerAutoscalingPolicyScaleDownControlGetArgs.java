@@ -15,6 +15,11 @@ public final class RegionAutoscalerAutoscalingPolicyScaleDownControlGetArgs exte
 
     public static final RegionAutoscalerAutoscalingPolicyScaleDownControlGetArgs Empty = new RegionAutoscalerAutoscalingPolicyScaleDownControlGetArgs();
 
+    /**
+     * A nested object resource
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="maxScaledDownReplicas")
     private final @Nullable Input<RegionAutoscalerAutoscalingPolicyScaleDownControlMaxScaledDownReplicasGetArgs> maxScaledDownReplicas;
 
@@ -22,6 +27,11 @@ public final class RegionAutoscalerAutoscalingPolicyScaleDownControlGetArgs exte
         return this.maxScaledDownReplicas == null ? Input.empty() : this.maxScaledDownReplicas;
     }
 
+    /**
+     * How long back autoscaling should look when computing recommendations
+     * to include directives regarding slower scale down, as described above.
+     * 
+     */
     @InputImport(name="timeWindowSec")
     private final @Nullable Input<Integer> timeWindowSec;
 

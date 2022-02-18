@@ -15,7 +15,15 @@ import javax.annotation.Nullable;
 @OutputCustomType
 public final class GetAnalyzerResult {
     private final @Nullable List<AnalyzerArchiveRule> archiveRules;
+    /**
+     * Amazon Resource Name (ARN) of the analyzer
+     * 
+     */
     private final @Nullable String arn;
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     private final @Nullable List<AnalyzerTag> tags;
 
     @OutputCustomType.Constructor({"archiveRules","arn","tags"})
@@ -31,9 +39,17 @@ public final class GetAnalyzerResult {
     public List<AnalyzerArchiveRule> getArchiveRules() {
         return this.archiveRules == null ? List.of() : this.archiveRules;
     }
+    /**
+     * Amazon Resource Name (ARN) of the analyzer
+     * 
+     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     public List<AnalyzerTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

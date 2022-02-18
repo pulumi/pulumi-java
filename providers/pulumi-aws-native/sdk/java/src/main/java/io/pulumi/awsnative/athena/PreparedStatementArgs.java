@@ -14,6 +14,10 @@ public final class PreparedStatementArgs extends io.pulumi.resources.ResourceArg
 
     public static final PreparedStatementArgs Empty = new PreparedStatementArgs();
 
+    /**
+     * The description of the prepared statement.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -21,6 +25,10 @@ public final class PreparedStatementArgs extends io.pulumi.resources.ResourceArg
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The query string for the prepared statement.
+     * 
+     */
     @InputImport(name="queryStatement", required=true)
     private final Input<String> queryStatement;
 
@@ -28,6 +36,10 @@ public final class PreparedStatementArgs extends io.pulumi.resources.ResourceArg
         return this.queryStatement;
     }
 
+    /**
+     * The name of the prepared statement.
+     * 
+     */
     @InputImport(name="statementName", required=true)
     private final Input<String> statementName;
 
@@ -35,6 +47,10 @@ public final class PreparedStatementArgs extends io.pulumi.resources.ResourceArg
         return this.statementName;
     }
 
+    /**
+     * The name of the workgroup to which the prepared statement belongs.
+     * 
+     */
     @InputImport(name="workGroup", required=true)
     private final Input<String> workGroup;
 

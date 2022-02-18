@@ -15,12 +15,40 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RestorePointSourceVMOSDiskResponse {
+    /**
+     * Gets the caching type.
+     * 
+     */
     private final @Nullable String caching;
+    /**
+     * Gets the disk restore point Id.
+     * 
+     */
     private final @Nullable ApiEntityReferenceResponse diskRestorePoint;
+    /**
+     * Gets the disk size in GB.
+     * 
+     */
     private final @Nullable Integer diskSizeGB;
+    /**
+     * Gets the disk encryption settings.
+     * 
+     */
     private final @Nullable DiskEncryptionSettingsResponse encryptionSettings;
+    /**
+     * Gets the managed disk details
+     * 
+     */
     private final @Nullable ManagedDiskParametersResponse managedDisk;
+    /**
+     * Gets the disk name.
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * Gets the Operating System type.
+     * 
+     */
     private final @Nullable String osType;
 
     @OutputCustomType.Constructor({"caching","diskRestorePoint","diskSizeGB","encryptionSettings","managedDisk","name","osType"})
@@ -41,24 +69,52 @@ public final class RestorePointSourceVMOSDiskResponse {
         this.osType = osType;
     }
 
+    /**
+     * Gets the caching type.
+     * 
+     */
     public Optional<String> getCaching() {
         return Optional.ofNullable(this.caching);
     }
+    /**
+     * Gets the disk restore point Id.
+     * 
+     */
     public Optional<ApiEntityReferenceResponse> getDiskRestorePoint() {
         return Optional.ofNullable(this.diskRestorePoint);
     }
+    /**
+     * Gets the disk size in GB.
+     * 
+     */
     public Optional<Integer> getDiskSizeGB() {
         return Optional.ofNullable(this.diskSizeGB);
     }
+    /**
+     * Gets the disk encryption settings.
+     * 
+     */
     public Optional<DiskEncryptionSettingsResponse> getEncryptionSettings() {
         return Optional.ofNullable(this.encryptionSettings);
     }
+    /**
+     * Gets the managed disk details
+     * 
+     */
     public Optional<ManagedDiskParametersResponse> getManagedDisk() {
         return Optional.ofNullable(this.managedDisk);
     }
+    /**
+     * Gets the disk name.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * Gets the Operating System type.
+     * 
+     */
     public Optional<String> getOsType() {
         return Optional.ofNullable(this.osType);
     }

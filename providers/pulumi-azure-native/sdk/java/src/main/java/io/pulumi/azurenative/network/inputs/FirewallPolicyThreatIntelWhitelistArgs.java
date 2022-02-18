@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * ThreatIntel Whitelist for Firewall Policy.
+ * 
+ */
 public final class FirewallPolicyThreatIntelWhitelistArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FirewallPolicyThreatIntelWhitelistArgs Empty = new FirewallPolicyThreatIntelWhitelistArgs();
 
+    /**
+     * List of FQDNs for the ThreatIntel Whitelist.
+     * 
+     */
     @InputImport(name="fqdns")
     private final @Nullable Input<List<String>> fqdns;
 
@@ -22,6 +30,10 @@ public final class FirewallPolicyThreatIntelWhitelistArgs extends io.pulumi.reso
         return this.fqdns == null ? Input.empty() : this.fqdns;
     }
 
+    /**
+     * List of IP addresses for the ThreatIntel Whitelist.
+     * 
+     */
     @InputImport(name="ipAddresses")
     private final @Nullable Input<List<String>> ipAddresses;
 

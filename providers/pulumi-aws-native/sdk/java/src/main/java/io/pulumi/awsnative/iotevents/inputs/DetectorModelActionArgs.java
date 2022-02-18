@@ -22,6 +22,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The actions to be performed.
+ * 
+ */
 public final class DetectorModelActionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DetectorModelActionArgs Empty = new DetectorModelActionArgs();

@@ -13,51 +13,153 @@ import io.pulumi.gcp.sql.inputs.UserState;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Creates a new Google SQL User on a Google SQL User Instance. For more information, see the [official documentation](https://cloud.google.com/sql/), or the [JSON API](https://cloud.google.com/sql/docs/admin-api/v1beta4/users).
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * SQL users for MySQL databases can be imported using the `project`, `instance`, `host` and `name`, e.g.
+ * 
+ * ```sh
+ *  $ pulumi import gcp:sql/user:User users my-project/master-instance/my-domain.com/me
+ * ```
+ * 
+ *  SQL users for PostgreSQL databases can be imported using the `project`, `instance` and `name`, e.g.
+ * 
+ * ```sh
+ *  $ pulumi import gcp:sql/user:User users my-project/master-instance/me
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:sql/user:User")
 public class User extends io.pulumi.resources.CustomResource {
+    /**
+     * The deletion policy for the user.
+     * Setting `ABANDON` allows the resource to be abandoned rather than deleted. This is useful
+     * for Postgres, where users cannot be deleted from the API if they have been granted SQL roles.
+     * 
+     */
     @OutputExport(name="deletionPolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> deletionPolicy;
 
+    /**
+     * @return The deletion policy for the user.
+     * Setting `ABANDON` allows the resource to be abandoned rather than deleted. This is useful
+     * for Postgres, where users cannot be deleted from the API if they have been granted SQL roles.
+     * 
+     */
     public Output</* @Nullable */ String> getDeletionPolicy() {
         return this.deletionPolicy;
     }
+    /**
+     * The host the user can connect from. This is only supported
+     * for MySQL instances. Don't set this field for PostgreSQL instances.
+     * Can be an IP address. Changing this forces a new resource to be created.
+     * 
+     */
     @OutputExport(name="host", type=String.class, parameters={})
     private Output<String> host;
 
+    /**
+     * @return The host the user can connect from. This is only supported
+     * for MySQL instances. Don't set this field for PostgreSQL instances.
+     * Can be an IP address. Changing this forces a new resource to be created.
+     * 
+     */
     public Output<String> getHost() {
         return this.host;
     }
+    /**
+     * The name of the Cloud SQL instance. Changing this
+     * forces a new resource to be created.
+     * 
+     */
     @OutputExport(name="instance", type=String.class, parameters={})
     private Output<String> instance;
 
+    /**
+     * @return The name of the Cloud SQL instance. Changing this
+     * forces a new resource to be created.
+     * 
+     */
     public Output<String> getInstance() {
         return this.instance;
     }
+    /**
+     * The name of the user. Changing this forces a new resource
+     * to be created.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the user. Changing this forces a new resource
+     * to be created.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The password for the user. Can be updated. For Postgres
+     * instances this is a Required field.
+     * 
+     */
     @OutputExport(name="password", type=String.class, parameters={})
     private Output</* @Nullable */ String> password;
 
+    /**
+     * @return The password for the user. Can be updated. For Postgres
+     * instances this is a Required field.
+     * 
+     */
     public Output</* @Nullable */ String> getPassword() {
         return this.password;
     }
+    /**
+     * The ID of the project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * The user type. It determines the method to authenticate the
+     * user during login. The default is the database's built-in user type. Flags
+     * include "BUILT_IN", "CLOUD_IAM_USER", or "CLOUD_IAM_SERVICE_ACCOUNT".
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output</* @Nullable */ String> type;
 
+    /**
+     * @return The user type. It determines the method to authenticate the
+     * user during login. The default is the database's built-in user type. Flags
+     * include "BUILT_IN", "CLOUD_IAM_USER", or "CLOUD_IAM_SERVICE_ACCOUNT".
+     * 
+     */
     public Output</* @Nullable */ String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public User(String name, UserArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:sql/user:User", name, args == null ? UserArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -73,6 +175,15 @@ public class User extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static User get(String name, Input<String> id, @Nullable UserState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new User(name, id, state, options);
     }

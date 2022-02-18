@@ -15,6 +15,10 @@ public final class GetManagementGroupArgs extends io.pulumi.resources.InvokeArgs
 
     public static final GetManagementGroupArgs Empty = new GetManagementGroupArgs();
 
+    /**
+     * The $expand=children query string parameter allows clients to request inclusion of children in the response payload.  $expand=path includes the path from the root group to the current group.
+     * 
+     */
     @InputImport(name="expand")
     private final @Nullable String expand;
 
@@ -22,6 +26,10 @@ public final class GetManagementGroupArgs extends io.pulumi.resources.InvokeArgs
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
+    /**
+     * A filter which allows the exclusion of subscriptions from results (i.e. '$filter=children.childType ne Subscription')
+     * 
+     */
     @InputImport(name="filter")
     private final @Nullable String filter;
 
@@ -29,6 +37,10 @@ public final class GetManagementGroupArgs extends io.pulumi.resources.InvokeArgs
         return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
     }
 
+    /**
+     * Management Group ID.
+     * 
+     */
     @InputImport(name="groupId", required=true)
     private final String groupId;
 
@@ -36,6 +48,10 @@ public final class GetManagementGroupArgs extends io.pulumi.resources.InvokeArgs
         return this.groupId;
     }
 
+    /**
+     * The $recurse=true query string parameter allows clients to request inclusion of entire hierarchy in the response payload. Note that  $expand=children must be passed up if $recurse is set to true.
+     * 
+     */
     @InputImport(name="recurse")
     private final @Nullable Boolean recurse;
 

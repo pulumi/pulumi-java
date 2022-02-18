@@ -12,6 +12,10 @@ public final class GetUserSettingsWithLocationArgs extends io.pulumi.resources.I
 
     public static final GetUserSettingsWithLocationArgs Empty = new GetUserSettingsWithLocationArgs();
 
+    /**
+     * The provider location
+     * 
+     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -19,6 +23,10 @@ public final class GetUserSettingsWithLocationArgs extends io.pulumi.resources.I
         return this.location;
     }
 
+    /**
+     * The name of the user settings
+     * 
+     */
     @InputImport(name="userSettingsName", required=true)
     private final String userSettingsName;
 

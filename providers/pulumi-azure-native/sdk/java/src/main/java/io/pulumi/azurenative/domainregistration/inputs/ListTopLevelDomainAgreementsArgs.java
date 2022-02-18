@@ -15,6 +15,10 @@ public final class ListTopLevelDomainAgreementsArgs extends io.pulumi.resources.
 
     public static final ListTopLevelDomainAgreementsArgs Empty = new ListTopLevelDomainAgreementsArgs();
 
+    /**
+     * If <code>true</code>, then the list of agreements will include agreements for domain transfer as well; otherwise, <code>false</code>.
+     * 
+     */
     @InputImport(name="forTransfer")
     private final @Nullable Boolean forTransfer;
 
@@ -22,6 +26,10 @@ public final class ListTopLevelDomainAgreementsArgs extends io.pulumi.resources.
         return this.forTransfer == null ? Optional.empty() : Optional.ofNullable(this.forTransfer);
     }
 
+    /**
+     * If <code>true</code>, then the list of agreements will include agreements for domain privacy as well; otherwise, <code>false</code>.
+     * 
+     */
     @InputImport(name="includePrivacy")
     private final @Nullable Boolean includePrivacy;
 
@@ -29,6 +37,10 @@ public final class ListTopLevelDomainAgreementsArgs extends io.pulumi.resources.
         return this.includePrivacy == null ? Optional.empty() : Optional.ofNullable(this.includePrivacy);
     }
 
+    /**
+     * Name of the top-level domain.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

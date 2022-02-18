@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEventSubscription {
+/**
+ * The `AWS::Redshift::EventSubscription` resource creates an Amazon Redshift Event Subscription.
+ * 
+ */
     public static CompletableFuture<GetEventSubscriptionResult> invokeAsync(GetEventSubscriptionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:redshift:getEventSubscription", TypeShape.of(GetEventSubscriptionResult.class), args == null ? GetEventSubscriptionArgs.Empty : args, Utilities.withVersion(options));
     }

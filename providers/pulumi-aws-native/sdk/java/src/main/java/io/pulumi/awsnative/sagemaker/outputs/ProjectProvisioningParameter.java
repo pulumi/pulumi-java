@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ProjectProvisioningParameter {
+    /**
+     * The parameter key.
+     * 
+     */
     private final String key;
+    /**
+     * The parameter value.
+     * 
+     */
     private final String value;
 
     @OutputCustomType.Constructor({"key","value"})
@@ -20,9 +28,17 @@ public final class ProjectProvisioningParameter {
         this.value = Objects.requireNonNull(value);
     }
 
+    /**
+     * The parameter key.
+     * 
+     */
     public String getKey() {
         return this.key;
     }
+    /**
+     * The parameter value.
+     * 
+     */
     public String getValue() {
         return this.value;
     }

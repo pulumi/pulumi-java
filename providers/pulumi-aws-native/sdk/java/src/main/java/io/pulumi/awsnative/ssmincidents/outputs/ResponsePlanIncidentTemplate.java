@@ -14,10 +14,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ResponsePlanIncidentTemplate {
+    /**
+     * The deduplication string.
+     * 
+     */
     private final @Nullable String dedupeString;
+    /**
+     * The impact value.
+     * 
+     */
     private final Integer impact;
+    /**
+     * The list of notification targets.
+     * 
+     */
     private final @Nullable List<ResponsePlanNotificationTargetItem> notificationTargets;
+    /**
+     * The summary string.
+     * 
+     */
     private final @Nullable String summary;
+    /**
+     * The title string.
+     * 
+     */
     private final String title;
 
     @OutputCustomType.Constructor({"dedupeString","impact","notificationTargets","summary","title"})
@@ -34,18 +54,38 @@ public final class ResponsePlanIncidentTemplate {
         this.title = Objects.requireNonNull(title);
     }
 
+    /**
+     * The deduplication string.
+     * 
+     */
     public Optional<String> getDedupeString() {
         return Optional.ofNullable(this.dedupeString);
     }
+    /**
+     * The impact value.
+     * 
+     */
     public Integer getImpact() {
         return this.impact;
     }
+    /**
+     * The list of notification targets.
+     * 
+     */
     public List<ResponsePlanNotificationTargetItem> getNotificationTargets() {
         return this.notificationTargets == null ? List.of() : this.notificationTargets;
     }
+    /**
+     * The summary string.
+     * 
+     */
     public Optional<String> getSummary() {
         return Optional.ofNullable(this.summary);
     }
+    /**
+     * The title string.
+     * 
+     */
     public String getTitle() {
         return this.title;
     }

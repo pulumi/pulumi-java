@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BotSlotValueRegexFilter {
+    /**
+     * Regex pattern
+     * 
+     */
     private final String pattern;
 
     @OutputCustomType.Constructor({"pattern"})
@@ -16,6 +20,10 @@ public final class BotSlotValueRegexFilter {
         this.pattern = Objects.requireNonNull(pattern);
     }
 
+    /**
+     * Regex pattern
+     * 
+     */
     public String getPattern() {
         return this.pattern;
     }

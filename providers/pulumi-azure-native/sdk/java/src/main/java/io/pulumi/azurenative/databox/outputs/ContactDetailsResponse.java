@@ -13,11 +13,35 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ContactDetailsResponse {
+    /**
+     * Contact name of the person.
+     * 
+     */
     private final String contactName;
+    /**
+     * List of Email-ids to be notified about job progress.
+     * 
+     */
     private final List<String> emailList;
+    /**
+     * Mobile number of the contact person.
+     * 
+     */
     private final @Nullable String mobile;
+    /**
+     * Notification preference for a job stage.
+     * 
+     */
     private final @Nullable List<NotificationPreferenceResponse> notificationPreference;
+    /**
+     * Phone number of the contact person.
+     * 
+     */
     private final String phone;
+    /**
+     * Phone extension number of the contact person.
+     * 
+     */
     private final @Nullable String phoneExtension;
 
     @OutputCustomType.Constructor({"contactName","emailList","mobile","notificationPreference","phone","phoneExtension"})
@@ -36,21 +60,45 @@ public final class ContactDetailsResponse {
         this.phoneExtension = phoneExtension;
     }
 
+    /**
+     * Contact name of the person.
+     * 
+     */
     public String getContactName() {
         return this.contactName;
     }
+    /**
+     * List of Email-ids to be notified about job progress.
+     * 
+     */
     public List<String> getEmailList() {
         return this.emailList;
     }
+    /**
+     * Mobile number of the contact person.
+     * 
+     */
     public Optional<String> getMobile() {
         return Optional.ofNullable(this.mobile);
     }
+    /**
+     * Notification preference for a job stage.
+     * 
+     */
     public List<NotificationPreferenceResponse> getNotificationPreference() {
         return this.notificationPreference == null ? List.of() : this.notificationPreference;
     }
+    /**
+     * Phone number of the contact person.
+     * 
+     */
     public String getPhone() {
         return this.phone;
     }
+    /**
+     * Phone extension number of the contact person.
+     * 
+     */
     public Optional<String> getPhoneExtension() {
         return Optional.ofNullable(this.phoneExtension);
     }

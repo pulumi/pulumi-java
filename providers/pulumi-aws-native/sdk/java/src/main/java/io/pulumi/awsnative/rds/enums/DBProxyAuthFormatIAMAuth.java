@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Whether to require or disallow AWS Identity and Access Management (IAM) authentication for connections to the proxy.
+     * 
+     */
     @EnumType
     public enum DBProxyAuthFormatIAMAuth {
         Disabled("DISABLED"),

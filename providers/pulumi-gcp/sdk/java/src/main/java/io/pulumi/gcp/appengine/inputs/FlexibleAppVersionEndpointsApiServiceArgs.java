@@ -15,6 +15,15 @@ public final class FlexibleAppVersionEndpointsApiServiceArgs extends io.pulumi.r
 
     public static final FlexibleAppVersionEndpointsApiServiceArgs Empty = new FlexibleAppVersionEndpointsApiServiceArgs();
 
+    /**
+     * Endpoints service configuration ID as specified by the Service Management API. For example "2016-09-19r1".
+     * By default, the rollout strategy for Endpoints is "FIXED". This means that Endpoints starts up with a particular configuration ID.
+     * When a new configuration is rolled out, Endpoints must be given the new configuration ID. The configId field is used to give the configuration ID
+     * and is required in this case.
+     * Endpoints also has a rollout strategy called "MANAGED". When using this, Endpoints fetches the latest configuration and does not need
+     * the configuration ID. In this case, configId must be omitted.
+     * 
+     */
     @InputImport(name="configId")
     private final @Nullable Input<String> configId;
 
@@ -22,6 +31,10 @@ public final class FlexibleAppVersionEndpointsApiServiceArgs extends io.pulumi.r
         return this.configId == null ? Input.empty() : this.configId;
     }
 
+    /**
+     * Enable or disable trace sampling. By default, this is set to false for enabled.
+     * 
+     */
     @InputImport(name="disableTraceSampling")
     private final @Nullable Input<Boolean> disableTraceSampling;
 
@@ -29,6 +42,10 @@ public final class FlexibleAppVersionEndpointsApiServiceArgs extends io.pulumi.r
         return this.disableTraceSampling == null ? Input.empty() : this.disableTraceSampling;
     }
 
+    /**
+     * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -36,6 +53,12 @@ public final class FlexibleAppVersionEndpointsApiServiceArgs extends io.pulumi.r
         return this.name;
     }
 
+    /**
+     * Endpoints rollout strategy. If FIXED, configId must be specified. If MANAGED, configId must be omitted.
+     * Default value is `FIXED`.
+     * Possible values are `FIXED` and `MANAGED`.
+     * 
+     */
     @InputImport(name="rolloutStrategy")
     private final @Nullable Input<String> rolloutStrategy;
 

@@ -11,6 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Code Configuration
+ * 
+ */
 public final class ServiceCodeConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceCodeConfigurationArgs Empty = new ServiceCodeConfigurationArgs();
@@ -22,6 +26,10 @@ public final class ServiceCodeConfigurationArgs extends io.pulumi.resources.Reso
         return this.codeConfigurationValues == null ? Input.empty() : this.codeConfigurationValues;
     }
 
+    /**
+     * Configuration Source
+     * 
+     */
     @InputImport(name="configurationSource", required=true)
     private final Input<ServiceCodeConfigurationConfigurationSource> configurationSource;
 

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The identifier for the DBProxyTargetGroup
+     * 
+     */
     @EnumType
     public enum DBProxyTargetGroupTargetGroupName {
         Default("default");

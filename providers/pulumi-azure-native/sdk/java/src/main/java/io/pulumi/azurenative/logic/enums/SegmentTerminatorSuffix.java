@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The segment terminator suffix.
+     * 
+     */
     @EnumType
     public enum SegmentTerminatorSuffix {
         NotSpecified("NotSpecified"),

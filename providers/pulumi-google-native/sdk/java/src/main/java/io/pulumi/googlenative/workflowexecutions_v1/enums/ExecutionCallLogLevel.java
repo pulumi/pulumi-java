@@ -8,10 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The call logging level associated to this execution.
+     * 
+     */
     @EnumType
     public enum ExecutionCallLogLevel {
+        /**
+         * No call logging specified.
+         * 
+         */
         CallLogLevelUnspecified("CALL_LOG_LEVEL_UNSPECIFIED"),
+        /**
+         * Log all call steps within workflows, all call returns, and all exceptions raised.
+         * 
+         */
         LogAllCalls("LOG_ALL_CALLS"),
+        /**
+         * Log only exceptions that are raised from call steps within workflows.
+         * 
+         */
         LogErrorsOnly("LOG_ERRORS_ONLY");
 
         private final String value;

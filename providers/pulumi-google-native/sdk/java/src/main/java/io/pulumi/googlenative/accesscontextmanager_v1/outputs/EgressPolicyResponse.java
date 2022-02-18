@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class EgressPolicyResponse {
+    /**
+     * Defines conditions on the source of a request causing this EgressPolicy to apply.
+     * 
+     */
     private final EgressFromResponse egressFrom;
+    /**
+     * Defines the conditions on the ApiOperation and destination resources that cause this EgressPolicy to apply.
+     * 
+     */
     private final EgressToResponse egressTo;
 
     @OutputCustomType.Constructor({"egressFrom","egressTo"})
@@ -21,9 +29,17 @@ public final class EgressPolicyResponse {
         this.egressTo = Objects.requireNonNull(egressTo);
     }
 
+    /**
+     * Defines conditions on the source of a request causing this EgressPolicy to apply.
+     * 
+     */
     public EgressFromResponse getEgressFrom() {
         return this.egressFrom;
     }
+    /**
+     * Defines the conditions on the ApiOperation and destination resources that cause this EgressPolicy to apply.
+     * 
+     */
     public EgressToResponse getEgressTo() {
         return this.egressTo;
     }

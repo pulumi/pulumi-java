@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * User principals.
+ * 
+ */
 public final class PrincipalsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PrincipalsResponse Empty = new PrincipalsResponse();
 
+    /**
+     * Object Id for the user
+     * 
+     */
     @InputImport(name="objectId")
     private final @Nullable String objectId;
 
@@ -21,6 +29,10 @@ public final class PrincipalsResponse extends io.pulumi.resources.InvokeArgs {
         return this.objectId == null ? Optional.empty() : Optional.ofNullable(this.objectId);
     }
 
+    /**
+     * UPN of the user.
+     * 
+     */
     @InputImport(name="upn")
     private final @Nullable String upn;
 

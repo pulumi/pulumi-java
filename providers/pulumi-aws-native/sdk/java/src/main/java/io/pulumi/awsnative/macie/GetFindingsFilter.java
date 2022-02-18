@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFindingsFilter {
+/**
+ * Macie FindingsFilter resource schema.
+ * 
+ */
     public static CompletableFuture<GetFindingsFilterResult> invokeAsync(GetFindingsFilterArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:macie:getFindingsFilter", TypeShape.of(GetFindingsFilterResult.class), args == null ? GetFindingsFilterArgs.Empty : args, Utilities.withVersion(options));
     }

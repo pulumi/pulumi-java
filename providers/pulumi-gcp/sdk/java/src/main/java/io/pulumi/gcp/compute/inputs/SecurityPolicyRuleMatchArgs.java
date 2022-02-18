@@ -16,6 +16,12 @@ public final class SecurityPolicyRuleMatchArgs extends io.pulumi.resources.Resou
 
     public static final SecurityPolicyRuleMatchArgs Empty = new SecurityPolicyRuleMatchArgs();
 
+    /**
+     * The configuration options available when specifying `versioned_expr`.
+     * This field must be specified if `versioned_expr` is specified and cannot be specified if `versioned_expr` is not specified.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="config")
     private final @Nullable Input<SecurityPolicyRuleMatchConfigArgs> config;
 
@@ -23,6 +29,12 @@ public final class SecurityPolicyRuleMatchArgs extends io.pulumi.resources.Resou
         return this.config == null ? Input.empty() : this.config;
     }
 
+    /**
+     * User defined CEVAL expression. A CEVAL expression is used to specify match criteria
+     * such as origin.ip, source.region_code and contents in the request header.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="expr")
     private final @Nullable Input<SecurityPolicyRuleMatchExprArgs> expr;
 
@@ -30,6 +42,12 @@ public final class SecurityPolicyRuleMatchArgs extends io.pulumi.resources.Resou
         return this.expr == null ? Input.empty() : this.expr;
     }
 
+    /**
+     * Predefined rule expression. If this field is specified, `config` must also be specified.
+     * Available options:
+     * * SRC_IPS_V1: Must specify the corresponding `src_ip_ranges` field in `config`.
+     * 
+     */
     @InputImport(name="versionedExpr")
     private final @Nullable Input<String> versionedExpr;
 

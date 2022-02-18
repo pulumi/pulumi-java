@@ -8,9 +8,21 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Direction of traffic to which this firewall applies, either `INGRESS` or `EGRESS`. The default is `INGRESS`. For `INGRESS` traffic, you cannot specify the destinationRanges field, and for `EGRESS` traffic, you cannot specify the sourceRanges or sourceTags fields.
+     * 
+     */
     @EnumType
     public enum FirewallDirection {
+        /**
+         * Indicates that firewall should apply to outgoing traffic.
+         * 
+         */
         Egress("EGRESS"),
+        /**
+         * Indicates that firewall should apply to incoming traffic.
+         * 
+         */
         Ingress("INGRESS");
 
         private final String value;

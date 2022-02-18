@@ -13,6 +13,11 @@ public final class ClusterAddonsConfigDnsCacheConfigArgs extends io.pulumi.resou
 
     public static final ClusterAddonsConfigDnsCacheConfigArgs Empty = new ClusterAddonsConfigDnsCacheConfigArgs();
 
+    /**
+     * Enable the PodSecurityPolicy controller for this cluster.
+     * If enabled, pods must be valid under a PodSecurityPolicy to be created.
+     * 
+     */
     @InputImport(name="enabled", required=true)
     private final Input<Boolean> enabled;
 

@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNamespaceNetworkRuleSet {
+/**
+ * Description of NetworkRuleSet resource.
+ * API Version: 2017-04-01.
+ * 
+ *
+ * Description of NetworkRuleSet resource.
+ * 
+ */
     public static CompletableFuture<GetNamespaceNetworkRuleSetResult> invokeAsync(GetNamespaceNetworkRuleSetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventhub:getNamespaceNetworkRuleSet", TypeShape.of(GetNamespaceNetworkRuleSetResult.class), args == null ? GetNamespaceNetworkRuleSetArgs.Empty : args, Utilities.withVersion(options));
     }

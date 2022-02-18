@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Info for certificate to be exported for TDE enabled databases.
+ * 
+ */
 public final class SelectedCertificateInputResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SelectedCertificateInputResponse Empty = new SelectedCertificateInputResponse();
 
+    /**
+     * Name of certificate to be exported.
+     * 
+     */
     @InputImport(name="certificateName", required=true)
     private final String certificateName;
 
@@ -19,6 +27,10 @@ public final class SelectedCertificateInputResponse extends io.pulumi.resources.
         return this.certificateName;
     }
 
+    /**
+     * Password to use for encrypting the exported certificate.
+     * 
+     */
     @InputImport(name="password", required=true)
     private final String password;
 

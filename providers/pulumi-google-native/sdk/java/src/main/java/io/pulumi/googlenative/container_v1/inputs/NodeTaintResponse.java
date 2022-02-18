@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Kubernetes taint is comprised of three fields: key, value, and effect. Effect can only be one of three types: NoSchedule, PreferNoSchedule or NoExecute. See [here](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration) for more information, including usage and the valid values.
+ * 
+ */
 public final class NodeTaintResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NodeTaintResponse Empty = new NodeTaintResponse();
 
+    /**
+     * Effect for taint.
+     * 
+     */
     @InputImport(name="effect", required=true)
     private final String effect;
 
@@ -19,6 +27,10 @@ public final class NodeTaintResponse extends io.pulumi.resources.InvokeArgs {
         return this.effect;
     }
 
+    /**
+     * Key for taint.
+     * 
+     */
     @InputImport(name="key", required=true)
     private final String key;
 
@@ -26,6 +38,10 @@ public final class NodeTaintResponse extends io.pulumi.resources.InvokeArgs {
         return this.key;
     }
 
+    /**
+     * Value for taint.
+     * 
+     */
     @InputImport(name="value", required=true)
     private final String value;
 

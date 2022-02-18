@@ -10,6 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * <p>Sheet controls option.</p>
+ * 
+ */
 public final class DashboardSheetControlsOptionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DashboardSheetControlsOptionArgs Empty = new DashboardSheetControlsOptionArgs();

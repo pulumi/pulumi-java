@@ -15,6 +15,10 @@ public final class ClusterClusterAutoscalingResourceLimitArgs extends io.pulumi.
 
     public static final ClusterClusterAutoscalingResourceLimitArgs Empty = new ClusterClusterAutoscalingResourceLimitArgs();
 
+    /**
+     * Maximum amount of the resource in the cluster.
+     * 
+     */
     @InputImport(name="maximum")
     private final @Nullable Input<Integer> maximum;
 
@@ -22,6 +26,10 @@ public final class ClusterClusterAutoscalingResourceLimitArgs extends io.pulumi.
         return this.maximum == null ? Input.empty() : this.maximum;
     }
 
+    /**
+     * Minimum amount of the resource in the cluster.
+     * 
+     */
     @InputImport(name="minimum")
     private final @Nullable Input<Integer> minimum;
 
@@ -29,6 +37,12 @@ public final class ClusterClusterAutoscalingResourceLimitArgs extends io.pulumi.
         return this.minimum == null ? Input.empty() : this.minimum;
     }
 
+    /**
+     * The type of the resource. For example, `cpu` and
+     * `memory`.  See the [guide to using Node Auto-Provisioning](https://cloud.google.com/kubernetes-engine/docs/how-to/node-auto-provisioning)
+     * for a list of types.
+     * 
+     */
     @InputImport(name="resourceType", required=true)
     private final Input<String> resourceType;
 

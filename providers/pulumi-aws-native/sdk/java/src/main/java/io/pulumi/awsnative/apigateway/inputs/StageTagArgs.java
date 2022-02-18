@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Identify and categorize resources.
+ * 
+ */
 public final class StageTagArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StageTagArgs Empty = new StageTagArgs();
 
+    /**
+     * The key name of the tag. You can specify a value that is 1 to 128 Unicode characters in length and cannot be prefixed with aws:.
+     * 
+     */
     @InputImport(name="key", required=true)
     private final Input<String> key;
 
@@ -20,6 +28,10 @@ public final class StageTagArgs extends io.pulumi.resources.ResourceArgs {
         return this.key;
     }
 
+    /**
+     * The value for the tag. You can specify a value that is 0 to 256 Unicode characters in length and cannot be prefixed with aws:.
+     * 
+     */
     @InputImport(name="value", required=true)
     private final Input<String> value;
 

@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The settings that will be leveraged for teradata source partitioning.
+ * 
+ */
 public final class TeradataPartitionSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TeradataPartitionSettingsArgs Empty = new TeradataPartitionSettingsArgs();
 
+    /**
+     * The name of the column that will be used for proceeding range or hash partitioning. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="partitionColumnName")
     private final @Nullable Input<Object> partitionColumnName;
 
@@ -21,6 +29,10 @@ public final class TeradataPartitionSettingsArgs extends io.pulumi.resources.Res
         return this.partitionColumnName == null ? Input.empty() : this.partitionColumnName;
     }
 
+    /**
+     * The minimum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="partitionLowerBound")
     private final @Nullable Input<Object> partitionLowerBound;
 
@@ -28,6 +40,10 @@ public final class TeradataPartitionSettingsArgs extends io.pulumi.resources.Res
         return this.partitionLowerBound == null ? Input.empty() : this.partitionLowerBound;
     }
 
+    /**
+     * The maximum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="partitionUpperBound")
     private final @Nullable Input<Object> partitionUpperBound;
 

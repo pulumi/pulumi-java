@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * DNSConfig contains the desired set of options for configuring clusterDNS.
+ * 
+ */
 public final class DNSConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DNSConfigResponse Empty = new DNSConfigResponse();
 
+    /**
+     * cluster_dns indicates which in-cluster DNS provider should be used.
+     * 
+     */
     @InputImport(name="clusterDns", required=true)
     private final String clusterDns;
 
@@ -19,6 +27,10 @@ public final class DNSConfigResponse extends io.pulumi.resources.InvokeArgs {
         return this.clusterDns;
     }
 
+    /**
+     * cluster_dns_domain is the suffix used for all cluster service records.
+     * 
+     */
     @InputImport(name="clusterDnsDomain", required=true)
     private final String clusterDnsDomain;
 
@@ -26,6 +38,10 @@ public final class DNSConfigResponse extends io.pulumi.resources.InvokeArgs {
         return this.clusterDnsDomain;
     }
 
+    /**
+     * cluster_dns_scope indicates the scope of access to cluster DNS records.
+     * 
+     */
     @InputImport(name="clusterDnsScope", required=true)
     private final String clusterDnsScope;
 

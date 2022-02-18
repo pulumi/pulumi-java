@@ -11,10 +11,19 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Schedule based trigger context
+ * 
+ */
 public final class ScheduleBasedTriggerContextResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ScheduleBasedTriggerContextResponse Empty = new ScheduleBasedTriggerContextResponse();
 
+    /**
+     * Type of the specific object - used for deserializing
+     * Expected value is 'ScheduleBasedTriggerContext'.
+     * 
+     */
     @InputImport(name="objectType", required=true)
     private final String objectType;
 
@@ -22,6 +31,10 @@ public final class ScheduleBasedTriggerContextResponse extends io.pulumi.resourc
         return this.objectType;
     }
 
+    /**
+     * Schedule for this backup
+     * 
+     */
     @InputImport(name="schedule", required=true)
     private final BackupScheduleResponse schedule;
 
@@ -29,6 +42,10 @@ public final class ScheduleBasedTriggerContextResponse extends io.pulumi.resourc
         return this.schedule;
     }
 
+    /**
+     * List of tags that can be applicable for given schedule.
+     * 
+     */
     @InputImport(name="taggingCriteria", required=true)
     private final List<TaggingCriteriaResponse> taggingCriteria;
 

@@ -12,6 +12,10 @@ public final class ApplicationUserAssignedIdentityResponse extends io.pulumi.res
 
     public static final ApplicationUserAssignedIdentityResponse Empty = new ApplicationUserAssignedIdentityResponse();
 
+    /**
+     * The friendly name of user assigned identity.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -19,6 +23,10 @@ public final class ApplicationUserAssignedIdentityResponse extends io.pulumi.res
         return this.name;
     }
 
+    /**
+     * The principal id of user assigned identity.
+     * 
+     */
     @InputImport(name="principalId", required=true)
     private final String principalId;
 

@@ -21,6 +21,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InstanceArgs Empty = new InstanceArgs();
 
+    /**
+     * An array of objects representing the add-ons to enable for the new instance.
+     * 
+     */
     @InputImport(name="addOns")
     private final @Nullable Input<List<InstanceAddOnArgs>> addOns;
 
@@ -28,6 +32,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.addOns == null ? Input.empty() : this.addOns;
     }
 
+    /**
+     * The Availability Zone in which to create your instance. Use the following format: us-east-2a (case sensitive). Be sure to add the include Availability Zones parameter to your request.
+     * 
+     */
     @InputImport(name="availabilityZone")
     private final @Nullable Input<String> availabilityZone;
 
@@ -35,6 +43,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
     }
 
+    /**
+     * The ID for a virtual private server image (e.g., app_wordpress_4_4 or app_lamp_7_0 ). Use the get blueprints operation to return a list of available images (or blueprints ).
+     * 
+     */
     @InputImport(name="blueprintId", required=true)
     private final Input<String> blueprintId;
 
@@ -42,6 +54,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.blueprintId;
     }
 
+    /**
+     * The bundle of specification information for your virtual private server (or instance ), including the pricing plan (e.g., micro_1_0 ).
+     * 
+     */
     @InputImport(name="bundleId", required=true)
     private final Input<String> bundleId;
 
@@ -56,6 +72,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.hardware == null ? Input.empty() : this.hardware;
     }
 
+    /**
+     * The names to use for your new Lightsail instance.
+     * 
+     */
     @InputImport(name="instanceName")
     private final @Nullable Input<String> instanceName;
 
@@ -63,6 +83,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.instanceName == null ? Input.empty() : this.instanceName;
     }
 
+    /**
+     * The name of your key pair.
+     * 
+     */
     @InputImport(name="keyPairName")
     private final @Nullable Input<String> keyPairName;
 
@@ -91,6 +115,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.state == null ? Input.empty() : this.state;
     }
 
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<InstanceTagArgs>> tags;
 
@@ -98,6 +126,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * A launch script you can create that configures a server with additional user data. For example, you might want to run apt-get -y update.
+     * 
+     */
     @InputImport(name="userData")
     private final @Nullable Input<String> userData;
 

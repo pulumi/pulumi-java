@@ -13,6 +13,10 @@ public final class TagTemplateFieldTypeEnumTypeAllowedValueArgs extends io.pulum
 
     public static final TagTemplateFieldTypeEnumTypeAllowedValueArgs Empty = new TagTemplateFieldTypeEnumTypeAllowedValueArgs();
 
+    /**
+     * The display name for this template.
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 

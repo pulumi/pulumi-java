@@ -12,6 +12,10 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
 
     public static final GetPrivateEndpointConnectionArgs Empty = new GetPrivateEndpointConnectionArgs();
 
+    /**
+     * The name of the private endpoint connection.
+     * 
+     */
     @InputImport(name="privateEndpointConnectionName", required=true)
     private final String privateEndpointConnectionName;
 
@@ -19,6 +23,10 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
         return this.privateEndpointConnectionName;
     }
 
+    /**
+     * The name of the container registry.
+     * 
+     */
     @InputImport(name="registryName", required=true)
     private final String registryName;
 
@@ -26,6 +34,10 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
         return this.registryName;
     }
 
+    /**
+     * The name of the resource group to which the container registry belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

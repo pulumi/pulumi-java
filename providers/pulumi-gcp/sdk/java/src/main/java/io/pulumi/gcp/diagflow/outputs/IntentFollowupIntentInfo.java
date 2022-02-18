@@ -12,6 +12,11 @@ import javax.annotation.Nullable;
 @OutputCustomType
 public final class IntentFollowupIntentInfo {
     private final @Nullable String followupIntentName;
+    /**
+     * The unique identifier of the parent intent in the chain of followup intents.
+     * Format: projects/<Project ID>/agent/intents/<Intent ID>.
+     * 
+     */
     private final @Nullable String parentFollowupIntentName;
 
     @OutputCustomType.Constructor({"followupIntentName","parentFollowupIntentName"})
@@ -25,6 +30,11 @@ public final class IntentFollowupIntentInfo {
     public Optional<String> getFollowupIntentName() {
         return Optional.ofNullable(this.followupIntentName);
     }
+    /**
+     * The unique identifier of the parent intent in the chain of followup intents.
+     * Format: projects/<Project ID>/agent/intents/<Intent ID>.
+     * 
+     */
     public Optional<String> getParentFollowupIntentName() {
         return Optional.ofNullable(this.parentFollowupIntentName);
     }

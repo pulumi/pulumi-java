@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class NetworkProfileResponse {
+    /**
+     * Gets or sets the list of network interfaces associated with the virtual machine.
+     * 
+     */
     private final @Nullable List<NetworkInterfaceResponse> networkInterfaces;
 
     @OutputCustomType.Constructor({"networkInterfaces"})
@@ -18,6 +22,10 @@ public final class NetworkProfileResponse {
         this.networkInterfaces = networkInterfaces;
     }
 
+    /**
+     * Gets or sets the list of network interfaces associated with the virtual machine.
+     * 
+     */
     public List<NetworkInterfaceResponse> getNetworkInterfaces() {
         return this.networkInterfaces == null ? List.of() : this.networkInterfaces;
     }

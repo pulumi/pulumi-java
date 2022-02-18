@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBillingAccount {
+/**
+ * Gets information about a billing account. The current authenticated user must be a [viewer of the billing account](https://cloud.google.com/billing/docs/how-to/billing-access).
+ * 
+ */
     public static CompletableFuture<GetBillingAccountResult> invokeAsync(GetBillingAccountArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudbilling/v1:getBillingAccount", TypeShape.of(GetBillingAccountResult.class), args == null ? GetBillingAccountArgs.Empty : args, Utilities.withVersion(options));
     }

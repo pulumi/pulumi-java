@@ -14,6 +14,10 @@ public final class GetZonesArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetZonesArgs Empty = new GetZonesArgs();
 
+    /**
+     * Project from which to list available zones. Defaults to project declared in the provider.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -21,6 +25,10 @@ public final class GetZonesArgs extends io.pulumi.resources.InvokeArgs {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
+    /**
+     * Region from which to list available zones. Defaults to region declared in the provider.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable String region;
 
@@ -28,6 +36,11 @@ public final class GetZonesArgs extends io.pulumi.resources.InvokeArgs {
         return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);
     }
 
+    /**
+     * Allows to filter list of zones based on their current status. Status can be either `UP` or `DOWN`.
+     * Defaults to no filtering (all available zones - both `UP` and `DOWN`).
+     * 
+     */
     @InputImport(name="status")
     private final @Nullable String status;
 

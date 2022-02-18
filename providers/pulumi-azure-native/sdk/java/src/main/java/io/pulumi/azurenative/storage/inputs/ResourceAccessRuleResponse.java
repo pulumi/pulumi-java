@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Resource Access Rule.
+ * 
+ */
 public final class ResourceAccessRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceAccessRuleResponse Empty = new ResourceAccessRuleResponse();
 
+    /**
+     * Resource Id
+     * 
+     */
     @InputImport(name="resourceId")
     private final @Nullable String resourceId;
 
@@ -21,6 +29,10 @@ public final class ResourceAccessRuleResponse extends io.pulumi.resources.Invoke
         return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
     }
 
+    /**
+     * Tenant Id
+     * 
+     */
     @InputImport(name="tenantId")
     private final @Nullable String tenantId;
 

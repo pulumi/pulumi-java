@@ -12,6 +12,10 @@ public final class GetIscsiTargetArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetIscsiTargetArgs Empty = new GetIscsiTargetArgs();
 
+    /**
+     * The name of the Disk pool.
+     * 
+     */
     @InputImport(name="diskPoolName", required=true)
     private final String diskPoolName;
 
@@ -19,6 +23,10 @@ public final class GetIscsiTargetArgs extends io.pulumi.resources.InvokeArgs {
         return this.diskPoolName;
     }
 
+    /**
+     * The name of the iSCSI target.
+     * 
+     */
     @InputImport(name="iscsiTargetName", required=true)
     private final String iscsiTargetName;
 
@@ -26,6 +34,10 @@ public final class GetIscsiTargetArgs extends io.pulumi.resources.InvokeArgs {
         return this.iscsiTargetName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

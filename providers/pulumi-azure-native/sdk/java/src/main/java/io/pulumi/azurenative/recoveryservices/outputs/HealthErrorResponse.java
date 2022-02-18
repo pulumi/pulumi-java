@@ -13,20 +13,80 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class HealthErrorResponse {
+    /**
+     * Error creation time (UTC)
+     * 
+     */
     private final @Nullable String creationTimeUtc;
+    /**
+     * Value indicating whether the health error is customer resolvable.
+     * 
+     */
     private final @Nullable String customerResolvability;
+    /**
+     * ID of the entity.
+     * 
+     */
     private final @Nullable String entityId;
+    /**
+     * Category of error.
+     * 
+     */
     private final @Nullable String errorCategory;
+    /**
+     * Error code.
+     * 
+     */
     private final @Nullable String errorCode;
+    /**
+     * The health error unique id.
+     * 
+     */
     private final @Nullable String errorId;
+    /**
+     * Level of error.
+     * 
+     */
     private final @Nullable String errorLevel;
+    /**
+     * Error message.
+     * 
+     */
     private final @Nullable String errorMessage;
+    /**
+     * Source of error.
+     * 
+     */
     private final @Nullable String errorSource;
+    /**
+     * Type of error.
+     * 
+     */
     private final @Nullable String errorType;
+    /**
+     * The inner health errors. HealthError having a list of HealthError as child errors is problematic. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&gt; InnerException.
+     * 
+     */
     private final @Nullable List<InnerHealthErrorResponse> innerHealthErrors;
+    /**
+     * Possible causes of error.
+     * 
+     */
     private final @Nullable String possibleCauses;
+    /**
+     * Recommended action to resolve error.
+     * 
+     */
     private final @Nullable String recommendedAction;
+    /**
+     * DRA error message.
+     * 
+     */
     private final @Nullable String recoveryProviderErrorMessage;
+    /**
+     * Summary message of the entity.
+     * 
+     */
     private final @Nullable String summaryMessage;
 
     @OutputCustomType.Constructor({"creationTimeUtc","customerResolvability","entityId","errorCategory","errorCode","errorId","errorLevel","errorMessage","errorSource","errorType","innerHealthErrors","possibleCauses","recommendedAction","recoveryProviderErrorMessage","summaryMessage"})
@@ -63,48 +123,108 @@ public final class HealthErrorResponse {
         this.summaryMessage = summaryMessage;
     }
 
+    /**
+     * Error creation time (UTC)
+     * 
+     */
     public Optional<String> getCreationTimeUtc() {
         return Optional.ofNullable(this.creationTimeUtc);
     }
+    /**
+     * Value indicating whether the health error is customer resolvable.
+     * 
+     */
     public Optional<String> getCustomerResolvability() {
         return Optional.ofNullable(this.customerResolvability);
     }
+    /**
+     * ID of the entity.
+     * 
+     */
     public Optional<String> getEntityId() {
         return Optional.ofNullable(this.entityId);
     }
+    /**
+     * Category of error.
+     * 
+     */
     public Optional<String> getErrorCategory() {
         return Optional.ofNullable(this.errorCategory);
     }
+    /**
+     * Error code.
+     * 
+     */
     public Optional<String> getErrorCode() {
         return Optional.ofNullable(this.errorCode);
     }
+    /**
+     * The health error unique id.
+     * 
+     */
     public Optional<String> getErrorId() {
         return Optional.ofNullable(this.errorId);
     }
+    /**
+     * Level of error.
+     * 
+     */
     public Optional<String> getErrorLevel() {
         return Optional.ofNullable(this.errorLevel);
     }
+    /**
+     * Error message.
+     * 
+     */
     public Optional<String> getErrorMessage() {
         return Optional.ofNullable(this.errorMessage);
     }
+    /**
+     * Source of error.
+     * 
+     */
     public Optional<String> getErrorSource() {
         return Optional.ofNullable(this.errorSource);
     }
+    /**
+     * Type of error.
+     * 
+     */
     public Optional<String> getErrorType() {
         return Optional.ofNullable(this.errorType);
     }
+    /**
+     * The inner health errors. HealthError having a list of HealthError as child errors is problematic. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&gt; InnerException.
+     * 
+     */
     public List<InnerHealthErrorResponse> getInnerHealthErrors() {
         return this.innerHealthErrors == null ? List.of() : this.innerHealthErrors;
     }
+    /**
+     * Possible causes of error.
+     * 
+     */
     public Optional<String> getPossibleCauses() {
         return Optional.ofNullable(this.possibleCauses);
     }
+    /**
+     * Recommended action to resolve error.
+     * 
+     */
     public Optional<String> getRecommendedAction() {
         return Optional.ofNullable(this.recommendedAction);
     }
+    /**
+     * DRA error message.
+     * 
+     */
     public Optional<String> getRecoveryProviderErrorMessage() {
         return Optional.ofNullable(this.recoveryProviderErrorMessage);
     }
+    /**
+     * Summary message of the entity.
+     * 
+     */
     public Optional<String> getSummaryMessage() {
         return Optional.ofNullable(this.summaryMessage);
     }

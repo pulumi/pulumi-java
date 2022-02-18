@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The filter criteria to control event filtering.
+ * 
+ */
 public final class FilterCriteriaProperties extends io.pulumi.resources.InvokeArgs {
 
     public static final FilterCriteriaProperties Empty = new FilterCriteriaProperties();
 
+    /**
+     * List of filters of this FilterCriteria
+     * 
+     */
     @InputImport(name="filters")
     private final @Nullable List<EventSourceMappingFilter> filters;
 

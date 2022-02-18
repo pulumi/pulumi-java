@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * SQL stored procedure parameter.
+ * 
+ */
 public final class StoredProcedureParameterResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StoredProcedureParameterResponse Empty = new StoredProcedureParameterResponse();
 
+    /**
+     * Stored procedure parameter type.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 
@@ -22,6 +30,10 @@ public final class StoredProcedureParameterResponse extends io.pulumi.resources.
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
+    /**
+     * Stored procedure parameter value. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable Object value;
 

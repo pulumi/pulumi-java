@@ -18,6 +18,10 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Resource Type definition for AWS::Evidently::Experiment.
+ * 
+ */
 @ResourceType(type="aws-native:evidently:Experiment")
 public class Experiment extends io.pulumi.resources.CustomResource {
     @OutputExport(name="arn", type=String.class, parameters={})
@@ -68,9 +72,17 @@ public class Experiment extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ Integer> getSamplingRate() {
         return this.samplingRate;
     }
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     @OutputExport(name="tags", type=List.class, parameters={ExperimentTag.class})
     private Output</* @Nullable */ List<ExperimentTag>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     */
     public Output</* @Nullable */ List<ExperimentTag>> getTags() {
         return this.tags;
     }
@@ -81,6 +93,12 @@ public class Experiment extends io.pulumi.resources.CustomResource {
         return this.treatments;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Experiment(String name, ExperimentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:evidently:Experiment", name, args == null ? ExperimentArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -96,6 +114,14 @@ public class Experiment extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Experiment get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Experiment(name, id, options);
     }

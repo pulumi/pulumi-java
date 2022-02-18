@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSecurityProfile {
+/**
+ * A security profile defines a set of expected behaviors for devices in your account.
+ * 
+ */
     public static CompletableFuture<GetSecurityProfileResult> invokeAsync(GetSecurityProfileArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iot:getSecurityProfile", TypeShape.of(GetSecurityProfileResult.class), args == null ? GetSecurityProfileArgs.Empty : args, Utilities.withVersion(options));
     }

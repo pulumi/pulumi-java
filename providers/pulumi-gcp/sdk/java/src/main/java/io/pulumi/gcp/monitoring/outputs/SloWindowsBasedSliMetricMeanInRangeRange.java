@@ -11,7 +11,19 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SloWindowsBasedSliMetricMeanInRangeRange {
+    /**
+     * max value for the range (inclusive). If not given,
+     * will be set to "infinity", defining an open range
+     * ">= range.min"
+     * 
+     */
     private final @Nullable Double max;
+    /**
+     * Min value for the range (inclusive). If not given,
+     * will be set to "-infinity", defining an open range
+     * "< range.max"
+     * 
+     */
     private final @Nullable Double min;
 
     @OutputCustomType.Constructor({"max","min"})
@@ -22,9 +34,21 @@ public final class SloWindowsBasedSliMetricMeanInRangeRange {
         this.min = min;
     }
 
+    /**
+     * max value for the range (inclusive). If not given,
+     * will be set to "infinity", defining an open range
+     * ">= range.min"
+     * 
+     */
     public Optional<Double> getMax() {
         return Optional.ofNullable(this.max);
     }
+    /**
+     * Min value for the range (inclusive). If not given,
+     * will be set to "-infinity", defining an open range
+     * "< range.max"
+     * 
+     */
     public Optional<Double> getMin() {
         return Optional.ofNullable(this.min);
     }

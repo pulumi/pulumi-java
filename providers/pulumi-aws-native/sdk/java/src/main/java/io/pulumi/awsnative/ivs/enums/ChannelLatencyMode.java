@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Channel latency mode.
+     * 
+     */
     @EnumType
     public enum ChannelLatencyMode {
         Normal("NORMAL"),

@@ -11,10 +11,20 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * <p>The theme colors that are used for data colors in charts. The colors description is a
+ *             hexadecimal color code that consists of six alphanumerical characters, prefixed with
+ *                 <code>#</code>, for example #37BFF5. </p>
+ * 
+ */
 public final class ThemeDataColorPaletteArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ThemeDataColorPaletteArgs Empty = new ThemeDataColorPaletteArgs();
 
+    /**
+     * <p>The hexadecimal codes for the colors.</p>
+     * 
+     */
     @InputImport(name="colors")
     private final @Nullable Input<List<String>> colors;
 
@@ -22,6 +32,11 @@ public final class ThemeDataColorPaletteArgs extends io.pulumi.resources.Resourc
         return this.colors == null ? Input.empty() : this.colors;
     }
 
+    /**
+     * <p>The hexadecimal code of a color that applies to charts where a lack of data is
+     *             highlighted.</p>
+     * 
+     */
     @InputImport(name="emptyFillColor")
     private final @Nullable Input<String> emptyFillColor;
 
@@ -29,6 +44,10 @@ public final class ThemeDataColorPaletteArgs extends io.pulumi.resources.Resourc
         return this.emptyFillColor == null ? Input.empty() : this.emptyFillColor;
     }
 
+    /**
+     * <p>The minimum and maximum hexadecimal codes that describe a color gradient. </p>
+     * 
+     */
     @InputImport(name="minMaxGradient")
     private final @Nullable Input<List<String>> minMaxGradient;
 

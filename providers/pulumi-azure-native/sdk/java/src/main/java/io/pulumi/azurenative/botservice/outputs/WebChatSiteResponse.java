@@ -10,11 +10,35 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class WebChatSiteResponse {
+    /**
+     * Whether this site is enabled for DirectLine channel
+     * 
+     */
     private final Boolean isEnabled;
+    /**
+     * Whether this site is enabled for preview versions of Webchat
+     * 
+     */
     private final Boolean isWebchatPreviewEnabled;
+    /**
+     * Primary key. Value only returned through POST to the action Channel List API, otherwise empty.
+     * 
+     */
     private final String key;
+    /**
+     * Secondary key. Value only returned through POST to the action Channel List API, otherwise empty.
+     * 
+     */
     private final String key2;
+    /**
+     * Site Id
+     * 
+     */
     private final String siteId;
+    /**
+     * Site name
+     * 
+     */
     private final String siteName;
 
     @OutputCustomType.Constructor({"isEnabled","isWebchatPreviewEnabled","key","key2","siteId","siteName"})
@@ -33,21 +57,45 @@ public final class WebChatSiteResponse {
         this.siteName = Objects.requireNonNull(siteName);
     }
 
+    /**
+     * Whether this site is enabled for DirectLine channel
+     * 
+     */
     public Boolean getIsEnabled() {
         return this.isEnabled;
     }
+    /**
+     * Whether this site is enabled for preview versions of Webchat
+     * 
+     */
     public Boolean getIsWebchatPreviewEnabled() {
         return this.isWebchatPreviewEnabled;
     }
+    /**
+     * Primary key. Value only returned through POST to the action Channel List API, otherwise empty.
+     * 
+     */
     public String getKey() {
         return this.key;
     }
+    /**
+     * Secondary key. Value only returned through POST to the action Channel List API, otherwise empty.
+     * 
+     */
     public String getKey2() {
         return this.key2;
     }
+    /**
+     * Site Id
+     * 
+     */
     public String getSiteId() {
         return this.siteId;
     }
+    /**
+     * Site name
+     * 
+     */
     public String getSiteName() {
         return this.siteName;
     }

@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Reference to container resource in remote resource provider.
+ * 
+ */
 public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ContainerResponse Empty = new ContainerResponse();
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 

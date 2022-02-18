@@ -15,6 +15,10 @@ public final class WorkflowTemplateJobSparkSqlJobLoggingConfigGetArgs extends io
 
     public static final WorkflowTemplateJobSparkSqlJobLoggingConfigGetArgs Empty = new WorkflowTemplateJobSparkSqlJobLoggingConfigGetArgs();
 
+    /**
+     * The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
+     * 
+     */
     @InputImport(name="driverLogLevels")
     private final @Nullable Input<Map<String,String>> driverLogLevels;
 

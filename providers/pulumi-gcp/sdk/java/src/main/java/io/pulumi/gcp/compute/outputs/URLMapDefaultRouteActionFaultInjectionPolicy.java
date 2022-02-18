@@ -12,7 +12,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class URLMapDefaultRouteActionFaultInjectionPolicy {
+    /**
+     * The specification for how client requests are aborted as part of fault injection.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable URLMapDefaultRouteActionFaultInjectionPolicyAbort abort;
+    /**
+     * The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable URLMapDefaultRouteActionFaultInjectionPolicyDelay delay;
 
     @OutputCustomType.Constructor({"abort","delay"})
@@ -23,9 +33,19 @@ public final class URLMapDefaultRouteActionFaultInjectionPolicy {
         this.delay = delay;
     }
 
+    /**
+     * The specification for how client requests are aborted as part of fault injection.
+     * Structure is documented below.
+     * 
+     */
     public Optional<URLMapDefaultRouteActionFaultInjectionPolicyAbort> getAbort() {
         return Optional.ofNullable(this.abort);
     }
+    /**
+     * The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.
+     * Structure is documented below.
+     * 
+     */
     public Optional<URLMapDefaultRouteActionFaultInjectionPolicyDelay> getDelay() {
         return Optional.ofNullable(this.delay);
     }

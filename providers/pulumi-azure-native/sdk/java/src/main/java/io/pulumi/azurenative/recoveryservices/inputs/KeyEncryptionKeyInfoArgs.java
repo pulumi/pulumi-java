@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Key Encryption Key (KEK) information.
+ * 
+ */
 public final class KeyEncryptionKeyInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final KeyEncryptionKeyInfoArgs Empty = new KeyEncryptionKeyInfoArgs();
 
+    /**
+     * The key URL / identifier.
+     * 
+     */
     @InputImport(name="keyIdentifier")
     private final @Nullable Input<String> keyIdentifier;
 
@@ -21,6 +29,10 @@ public final class KeyEncryptionKeyInfoArgs extends io.pulumi.resources.Resource
         return this.keyIdentifier == null ? Input.empty() : this.keyIdentifier;
     }
 
+    /**
+     * The KeyVault resource ARM Id for key.
+     * 
+     */
     @InputImport(name="keyVaultResourceArmId")
     private final @Nullable Input<String> keyVaultResourceArmId;
 

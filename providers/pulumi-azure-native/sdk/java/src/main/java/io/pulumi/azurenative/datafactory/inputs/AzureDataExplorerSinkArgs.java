@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A copy activity Azure Data Explorer sink.
+ * 
+ */
 public final class AzureDataExplorerSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureDataExplorerSinkArgs Empty = new AzureDataExplorerSinkArgs();
 
+    /**
+     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     @InputImport(name="disableMetricsCollection")
     private final @Nullable Input<Object> disableMetricsCollection;
 
@@ -22,6 +30,10 @@ public final class AzureDataExplorerSinkArgs extends io.pulumi.resources.Resourc
         return this.disableMetricsCollection == null ? Input.empty() : this.disableMetricsCollection;
     }
 
+    /**
+     * If set to true, any aggregation will be skipped. Default is false. Type: boolean.
+     * 
+     */
     @InputImport(name="flushImmediately")
     private final @Nullable Input<Object> flushImmediately;
 
@@ -29,6 +41,10 @@ public final class AzureDataExplorerSinkArgs extends io.pulumi.resources.Resourc
         return this.flushImmediately == null ? Input.empty() : this.flushImmediately;
     }
 
+    /**
+     * An explicit column mapping description provided in a json format. Type: string.
+     * 
+     */
     @InputImport(name="ingestionMappingAsJson")
     private final @Nullable Input<Object> ingestionMappingAsJson;
 
@@ -36,6 +52,10 @@ public final class AzureDataExplorerSinkArgs extends io.pulumi.resources.Resourc
         return this.ingestionMappingAsJson == null ? Input.empty() : this.ingestionMappingAsJson;
     }
 
+    /**
+     * A name of a pre-created csv mapping that was defined on the target Kusto table. Type: string.
+     * 
+     */
     @InputImport(name="ingestionMappingName")
     private final @Nullable Input<Object> ingestionMappingName;
 
@@ -43,6 +63,10 @@ public final class AzureDataExplorerSinkArgs extends io.pulumi.resources.Resourc
         return this.ingestionMappingName == null ? Input.empty() : this.ingestionMappingName;
     }
 
+    /**
+     * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
+     * 
+     */
     @InputImport(name="maxConcurrentConnections")
     private final @Nullable Input<Object> maxConcurrentConnections;
 
@@ -50,6 +74,10 @@ public final class AzureDataExplorerSinkArgs extends io.pulumi.resources.Resourc
         return this.maxConcurrentConnections == null ? Input.empty() : this.maxConcurrentConnections;
     }
 
+    /**
+     * Sink retry count. Type: integer (or Expression with resultType integer).
+     * 
+     */
     @InputImport(name="sinkRetryCount")
     private final @Nullable Input<Object> sinkRetryCount;
 
@@ -57,6 +85,10 @@ public final class AzureDataExplorerSinkArgs extends io.pulumi.resources.Resourc
         return this.sinkRetryCount == null ? Input.empty() : this.sinkRetryCount;
     }
 
+    /**
+     * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     @InputImport(name="sinkRetryWait")
     private final @Nullable Input<Object> sinkRetryWait;
 
@@ -64,6 +96,11 @@ public final class AzureDataExplorerSinkArgs extends io.pulumi.resources.Resourc
         return this.sinkRetryWait == null ? Input.empty() : this.sinkRetryWait;
     }
 
+    /**
+     * Copy sink type.
+     * Expected value is 'AzureDataExplorerSink'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -71,6 +108,10 @@ public final class AzureDataExplorerSinkArgs extends io.pulumi.resources.Resourc
         return this.type;
     }
 
+    /**
+     * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
+     * 
+     */
     @InputImport(name="writeBatchSize")
     private final @Nullable Input<Object> writeBatchSize;
 
@@ -78,6 +119,10 @@ public final class AzureDataExplorerSinkArgs extends io.pulumi.resources.Resourc
         return this.writeBatchSize == null ? Input.empty() : this.writeBatchSize;
     }
 
+    /**
+     * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     @InputImport(name="writeBatchTimeout")
     private final @Nullable Input<Object> writeBatchTimeout;
 

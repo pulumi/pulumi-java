@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The unique identifier of the update.
+ * 
+ */
 public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IdentityArgs Empty = new IdentityArgs();
 
+    /**
+     * The revision number of the update.
+     * 
+     */
     @InputImport(name="revision")
     private final @Nullable Input<Integer> revision;
 
@@ -22,6 +30,10 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
         return this.revision == null ? Input.empty() : this.revision;
     }
 
+    /**
+     * The revision independent identifier of the update.
+     * 
+     */
     @InputImport(name="updateId")
     private final @Nullable Input<String> updateId;
 

@@ -10,7 +10,16 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DeliveryRuleCacheKeyQueryStringActionResponse {
+    /**
+     * The name of the action for the delivery rule.
+     * Expected value is 'CacheKeyQueryString'.
+     * 
+     */
     private final String name;
+    /**
+     * Defines the parameters for the action.
+     * 
+     */
     private final CacheKeyQueryStringActionParametersResponse parameters;
 
     @OutputCustomType.Constructor({"name","parameters"})
@@ -21,9 +30,18 @@ public final class DeliveryRuleCacheKeyQueryStringActionResponse {
         this.parameters = Objects.requireNonNull(parameters);
     }
 
+    /**
+     * The name of the action for the delivery rule.
+     * Expected value is 'CacheKeyQueryString'.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Defines the parameters for the action.
+     * 
+     */
     public CacheKeyQueryStringActionParametersResponse getParameters() {
         return this.parameters;
     }

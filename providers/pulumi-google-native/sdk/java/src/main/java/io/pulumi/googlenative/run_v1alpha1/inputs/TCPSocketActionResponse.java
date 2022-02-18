@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Not supported by Cloud Run TCPSocketAction describes an action based on opening a socket
+ * 
+ */
 public final class TCPSocketActionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TCPSocketActionResponse Empty = new TCPSocketActionResponse();
 
+    /**
+     * (Optional) Optional: Host name to connect to, defaults to the pod IP.
+     * 
+     */
     @InputImport(name="host", required=true)
     private final String host;
 
@@ -20,6 +28,10 @@ public final class TCPSocketActionResponse extends io.pulumi.resources.InvokeArg
         return this.host;
     }
 
+    /**
+     * Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME. This field is currently limited to integer types only because of proto's inability to properly support the IntOrString golang type.
+     * 
+     */
     @InputImport(name="port", required=true)
     private final Integer port;
 

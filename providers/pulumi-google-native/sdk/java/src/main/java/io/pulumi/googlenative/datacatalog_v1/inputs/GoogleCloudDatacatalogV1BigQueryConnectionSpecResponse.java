@@ -10,10 +10,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Specification for the BigQuery connection.
+ * 
+ */
 public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse Empty = new GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse();
 
+    /**
+     * Specification for the BigQuery connection to a Cloud SQL instance.
+     * 
+     */
     @InputImport(name="cloudSql", required=true)
     private final GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse cloudSql;
 
@@ -21,6 +29,10 @@ public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse extend
         return this.cloudSql;
     }
 
+    /**
+     * The type of the BigQuery connection.
+     * 
+     */
     @InputImport(name="connectionType", required=true)
     private final String connectionType;
 
@@ -28,6 +40,10 @@ public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse extend
         return this.connectionType;
     }
 
+    /**
+     * True if there are credentials attached to the BigQuery connection; false otherwise.
+     * 
+     */
     @InputImport(name="hasCredential", required=true)
     private final Boolean hasCredential;
 

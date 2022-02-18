@@ -14,9 +14,17 @@ import javax.annotation.Nullable;
 @OutputCustomType
 public final class GetSqlMigrationServiceResult {
     private final String id;
+    /**
+     * Current state of the Integration runtime.
+     * 
+     */
     private final String integrationRuntimeState;
     private final @Nullable String location;
     private final String name;
+    /**
+     * Provisioning state to track the async operation status.
+     * 
+     */
     private final String provisioningState;
     private final SystemDataResponse systemData;
     private final @Nullable Map<String,String> tags;
@@ -45,6 +53,10 @@ public final class GetSqlMigrationServiceResult {
     public String getId() {
         return this.id;
     }
+    /**
+     * Current state of the Integration runtime.
+     * 
+     */
     public String getIntegrationRuntimeState() {
         return this.integrationRuntimeState;
     }
@@ -54,6 +66,10 @@ public final class GetSqlMigrationServiceResult {
     public String getName() {
         return this.name;
     }
+    /**
+     * Provisioning state to track the async operation status.
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }

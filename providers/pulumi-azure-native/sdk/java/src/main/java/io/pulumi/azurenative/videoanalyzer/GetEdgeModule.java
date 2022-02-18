@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEdgeModule {
+/**
+ * The representation of an edge module.
+ * API Version: 2021-05-01-preview.
+ * 
+ *
+ * The representation of an edge module.
+ * 
+ */
     public static CompletableFuture<GetEdgeModuleResult> invokeAsync(GetEdgeModuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:videoanalyzer:getEdgeModule", TypeShape.of(GetEdgeModuleResult.class), args == null ? GetEdgeModuleArgs.Empty : args, Utilities.withVersion(options));
     }

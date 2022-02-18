@@ -14,10 +14,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Spec defined at https://github.com/in-toto/attestation/tree/main/spec#statement The serialized InTotoStatement will be stored as Envelope.payload. Envelope.payloadType is always "application/vnd.in-toto+json".
+ * 
+ */
 public final class InTotoStatementArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InTotoStatementArgs Empty = new InTotoStatementArgs();
 
+    /**
+     * "https://slsa.dev/provenance/v0.1" for SlsaProvenance.
+     * 
+     */
     @InputImport(name="predicateType")
     private final @Nullable Input<String> predicateType;
 
@@ -25,6 +33,10 @@ public final class InTotoStatementArgs extends io.pulumi.resources.ResourceArgs 
         return this.predicateType == null ? Input.empty() : this.predicateType;
     }
 
+    /**
+     * provenance is a predicate of type intotoprovenance
+     * 
+     */
     @InputImport(name="provenance")
     private final @Nullable Input<InTotoProvenanceArgs> provenance;
 
@@ -32,6 +44,10 @@ public final class InTotoStatementArgs extends io.pulumi.resources.ResourceArgs 
         return this.provenance == null ? Input.empty() : this.provenance;
     }
 
+    /**
+     * slsa_provenance is a predicate of type slsaProvenance
+     * 
+     */
     @InputImport(name="slsaProvenance")
     private final @Nullable Input<SlsaProvenanceArgs> slsaProvenance;
 
@@ -39,6 +55,10 @@ public final class InTotoStatementArgs extends io.pulumi.resources.ResourceArgs 
         return this.slsaProvenance == null ? Input.empty() : this.slsaProvenance;
     }
 
+    /**
+     * subject is the subjects of the intoto statement
+     * 
+     */
     @InputImport(name="subject")
     private final @Nullable Input<List<SubjectArgs>> subject;
 
@@ -46,6 +66,10 @@ public final class InTotoStatementArgs extends io.pulumi.resources.ResourceArgs 
         return this.subject == null ? Input.empty() : this.subject;
     }
 
+    /**
+     * Always "https://in-toto.io/Statement/v0.1".
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 

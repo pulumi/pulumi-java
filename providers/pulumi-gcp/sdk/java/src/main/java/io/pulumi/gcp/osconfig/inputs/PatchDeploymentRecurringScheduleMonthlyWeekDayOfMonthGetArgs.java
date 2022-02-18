@@ -14,6 +14,11 @@ public final class PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthGetArgs 
 
     public static final PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthGetArgs Empty = new PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthGetArgs();
 
+    /**
+     * A day of the week.
+     * Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
+     * 
+     */
     @InputImport(name="dayOfWeek", required=true)
     private final Input<String> dayOfWeek;
 
@@ -21,6 +26,10 @@ public final class PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthGetArgs 
         return this.dayOfWeek;
     }
 
+    /**
+     * Week number in a month. 1-4 indicates the 1st to 4th week of the month. -1 indicates the last week of the month.
+     * 
+     */
     @InputImport(name="weekOrdinal", required=true)
     private final Input<Integer> weekOrdinal;
 

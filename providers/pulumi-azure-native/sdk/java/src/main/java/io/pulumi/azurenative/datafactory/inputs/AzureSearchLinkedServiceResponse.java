@@ -18,10 +18,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Linked service for Windows Azure Search Service.
+ * 
+ */
 public final class AzureSearchLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureSearchLinkedServiceResponse Empty = new AzureSearchLinkedServiceResponse();
 
+    /**
+     * List of tags that can be used for describing the linked service.
+     * 
+     */
     @InputImport(name="annotations")
     private final @Nullable List<Object> annotations;
 
@@ -29,6 +37,10 @@ public final class AzureSearchLinkedServiceResponse extends io.pulumi.resources.
         return this.annotations == null ? List.of() : this.annotations;
     }
 
+    /**
+     * The integration runtime reference.
+     * 
+     */
     @InputImport(name="connectVia")
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
@@ -36,6 +48,10 @@ public final class AzureSearchLinkedServiceResponse extends io.pulumi.resources.
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
+    /**
+     * Linked service description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -43,6 +59,10 @@ public final class AzureSearchLinkedServiceResponse extends io.pulumi.resources.
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Object encryptedCredential;
 
@@ -50,6 +70,10 @@ public final class AzureSearchLinkedServiceResponse extends io.pulumi.resources.
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
+    /**
+     * Admin Key for Azure Search service
+     * 
+     */
     @InputImport(name="key")
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> key;
 
@@ -57,6 +81,10 @@ public final class AzureSearchLinkedServiceResponse extends io.pulumi.resources.
         return this.key == null ? null : this.key;
     }
 
+    /**
+     * Parameters for linked service.
+     * 
+     */
     @InputImport(name="parameters")
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
@@ -64,6 +92,11 @@ public final class AzureSearchLinkedServiceResponse extends io.pulumi.resources.
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
+    /**
+     * Type of linked service.
+     * Expected value is 'AzureSearch'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -71,6 +104,10 @@ public final class AzureSearchLinkedServiceResponse extends io.pulumi.resources.
         return this.type;
     }
 
+    /**
+     * URL for Azure Search service. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="url", required=true)
     private final Object url;
 

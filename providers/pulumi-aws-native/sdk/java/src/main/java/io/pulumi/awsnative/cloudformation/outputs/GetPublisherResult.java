@@ -13,9 +13,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetPublisherResult {
+    /**
+     * The type of account used as the identity provider when registering this publisher with CloudFormation.
+     * 
+     */
     private final @Nullable PublisherIdentityProvider identityProvider;
+    /**
+     * The publisher id assigned by CloudFormation for publishing in this region.
+     * 
+     */
     private final @Nullable String publisherId;
+    /**
+     * The URL to the publisher's profile with the identity provider.
+     * 
+     */
     private final @Nullable String publisherProfile;
+    /**
+     * Whether the publisher is verified.
+     * 
+     */
     private final @Nullable PublisherStatus publisherStatus;
 
     @OutputCustomType.Constructor({"identityProvider","publisherId","publisherProfile","publisherStatus"})
@@ -30,15 +46,31 @@ public final class GetPublisherResult {
         this.publisherStatus = publisherStatus;
     }
 
+    /**
+     * The type of account used as the identity provider when registering this publisher with CloudFormation.
+     * 
+     */
     public Optional<PublisherIdentityProvider> getIdentityProvider() {
         return Optional.ofNullable(this.identityProvider);
     }
+    /**
+     * The publisher id assigned by CloudFormation for publishing in this region.
+     * 
+     */
     public Optional<String> getPublisherId() {
         return Optional.ofNullable(this.publisherId);
     }
+    /**
+     * The URL to the publisher's profile with the identity provider.
+     * 
+     */
     public Optional<String> getPublisherProfile() {
         return Optional.ofNullable(this.publisherProfile);
     }
+    /**
+     * Whether the publisher is verified.
+     * 
+     */
     public Optional<PublisherStatus> getPublisherStatus() {
         return Optional.ofNullable(this.publisherStatus);
     }

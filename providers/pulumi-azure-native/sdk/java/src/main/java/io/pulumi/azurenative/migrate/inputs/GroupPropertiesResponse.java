@@ -13,10 +13,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties of group resource.
+ * 
+ */
 public final class GroupPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GroupPropertiesResponse Empty = new GroupPropertiesResponse();
 
+    /**
+     * If the assessments are in running state.
+     * 
+     */
     @InputImport(name="areAssessmentsRunning", required=true)
     private final Boolean areAssessmentsRunning;
 
@@ -24,6 +32,10 @@ public final class GroupPropertiesResponse extends io.pulumi.resources.InvokeArg
         return this.areAssessmentsRunning;
     }
 
+    /**
+     * List of References to Assessments created on this group.
+     * 
+     */
     @InputImport(name="assessments", required=true)
     private final List<String> assessments;
 
@@ -31,6 +43,10 @@ public final class GroupPropertiesResponse extends io.pulumi.resources.InvokeArg
         return this.assessments;
     }
 
+    /**
+     * Time when this group was created. Date-Time represented in ISO-8601 format.
+     * 
+     */
     @InputImport(name="createdTimestamp", required=true)
     private final String createdTimestamp;
 
@@ -38,6 +54,10 @@ public final class GroupPropertiesResponse extends io.pulumi.resources.InvokeArg
         return this.createdTimestamp;
     }
 
+    /**
+     * Whether the group has been created and is valid.
+     * 
+     */
     @InputImport(name="groupStatus", required=true)
     private final String groupStatus;
 
@@ -45,6 +65,10 @@ public final class GroupPropertiesResponse extends io.pulumi.resources.InvokeArg
         return this.groupStatus;
     }
 
+    /**
+     * The type of group.
+     * 
+     */
     @InputImport(name="groupType")
     private final @Nullable String groupType;
 
@@ -52,6 +76,10 @@ public final class GroupPropertiesResponse extends io.pulumi.resources.InvokeArg
         return this.groupType == null ? Optional.empty() : Optional.ofNullable(this.groupType);
     }
 
+    /**
+     * Number of machines part of this group.
+     * 
+     */
     @InputImport(name="machineCount", required=true)
     private final Integer machineCount;
 
@@ -59,6 +87,10 @@ public final class GroupPropertiesResponse extends io.pulumi.resources.InvokeArg
         return this.machineCount;
     }
 
+    /**
+     * Time when this group was last updated. Date-Time represented in ISO-8601 format.
+     * 
+     */
     @InputImport(name="updatedTimestamp", required=true)
     private final String updatedTimestamp;
 

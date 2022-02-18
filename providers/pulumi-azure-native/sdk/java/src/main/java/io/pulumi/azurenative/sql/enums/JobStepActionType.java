@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Type of action being executed by the job step.
+     * 
+     */
     @EnumType
     public enum JobStepActionType {
         TSql("TSql");

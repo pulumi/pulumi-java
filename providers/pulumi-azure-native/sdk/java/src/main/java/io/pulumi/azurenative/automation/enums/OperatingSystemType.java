@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * operating system of target machines
+     * 
+     */
     @EnumType
     public enum OperatingSystemType {
         Windows("Windows"),

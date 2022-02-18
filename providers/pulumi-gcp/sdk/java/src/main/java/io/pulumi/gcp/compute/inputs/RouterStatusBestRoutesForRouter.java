@@ -28,6 +28,10 @@ public final class RouterStatusBestRoutesForRouter extends io.pulumi.resources.I
         return this.destRange;
     }
 
+    /**
+     * The name of the router.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -35,6 +39,11 @@ public final class RouterStatusBestRoutesForRouter extends io.pulumi.resources.I
         return this.name;
     }
 
+    /**
+     * The network name or resource link to the parent
+     * network of this subnetwork.
+     * 
+     */
     @InputImport(name="network", required=true)
     private final String network;
 
@@ -98,6 +107,11 @@ public final class RouterStatusBestRoutesForRouter extends io.pulumi.resources.I
         return this.priority;
     }
 
+    /**
+     * The ID of the project in which the resource
+     * belongs. If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project", required=true)
     private final String project;
 

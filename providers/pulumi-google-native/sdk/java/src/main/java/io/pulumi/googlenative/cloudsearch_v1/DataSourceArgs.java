@@ -17,6 +17,10 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataSourceArgs Empty = new DataSourceArgs();
 
+    /**
+     * If true, sets the datasource to read-only mode. In read-only mode, the Indexing API rejects any requests to index or delete items in this source. Enabling read-only mode does not stop the processing of previously accepted data.
+     * 
+     */
     @InputImport(name="disableModifications")
     private final @Nullable Input<Boolean> disableModifications;
 
@@ -24,6 +28,10 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.disableModifications == null ? Input.empty() : this.disableModifications;
     }
 
+    /**
+     * Disable serving any search or assist results.
+     * 
+     */
     @InputImport(name="disableServing")
     private final @Nullable Input<Boolean> disableServing;
 
@@ -31,6 +39,10 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.disableServing == null ? Input.empty() : this.disableServing;
     }
 
+    /**
+     * Display name of the datasource The maximum length is 300 characters.
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -38,6 +50,10 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName;
     }
 
+    /**
+     * List of service accounts that have indexing access.
+     * 
+     */
     @InputImport(name="indexingServiceAccounts")
     private final @Nullable Input<List<String>> indexingServiceAccounts;
 
@@ -45,6 +61,10 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.indexingServiceAccounts == null ? Input.empty() : this.indexingServiceAccounts;
     }
 
+    /**
+     * This field restricts visibility to items at the datasource level. Items within the datasource are restricted to the union of users and groups included in this field. Note that, this does not ensure access to a specific item, as users need to have ACL permissions on the contained items. This ensures a high level access on the entire datasource, and that the individual items are not shared outside this visibility.
+     * 
+     */
     @InputImport(name="itemsVisibility")
     private final @Nullable Input<List<GSuitePrincipalArgs>> itemsVisibility;
 
@@ -52,6 +72,10 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.itemsVisibility == null ? Input.empty() : this.itemsVisibility;
     }
 
+    /**
+     * Name of the datasource resource. Format: datasources/{source_id}. The name is ignored when creating a datasource.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -59,6 +83,10 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * IDs of the Long Running Operations (LROs) currently running for this schema.
+     * 
+     */
     @InputImport(name="operationIds")
     private final @Nullable Input<List<String>> operationIds;
 
@@ -66,6 +94,10 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.operationIds == null ? Input.empty() : this.operationIds;
     }
 
+    /**
+     * Can a user request to get thumbnail URI for Items indexed in this data source.
+     * 
+     */
     @InputImport(name="returnThumbnailUrls")
     private final @Nullable Input<Boolean> returnThumbnailUrls;
 
@@ -73,6 +105,10 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.returnThumbnailUrls == null ? Input.empty() : this.returnThumbnailUrls;
     }
 
+    /**
+     * A short name or alias for the source. This value will be used to match the 'source' operator. For example, if the short name is *<value>* then queries like *source:<value>* will only return results for this source. The value must be unique across all datasources. The value must only contain alphanumeric characters (a-zA-Z0-9). The value cannot start with 'google' and cannot be one of the following: mail, gmail, docs, drive, groups, sites, calendar, hangouts, gplus, keep, people, teams. Its maximum length is 32 characters.
+     * 
+     */
     @InputImport(name="shortName")
     private final @Nullable Input<String> shortName;
 

@@ -15,6 +15,10 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SubscriptionArgs Empty = new SubscriptionArgs();
 
+    /**
+     * The settings for this subscription's message delivery.
+     * 
+     */
     @InputImport(name="deliveryConfig")
     private final @Nullable Input<DeliveryConfigArgs> deliveryConfig;
 
@@ -29,6 +33,10 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the subscription. Structured like: projects/{project_number}/locations/{location}/subscriptions/{subscription_id}
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -57,6 +65,10 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
         return this.subscriptionId;
     }
 
+    /**
+     * The name of the topic this subscription is attached to. Structured like: projects/{project_number}/locations/{location}/topics/{topic_id}
+     * 
+     */
     @InputImport(name="topic")
     private final @Nullable Input<String> topic;
 

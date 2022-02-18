@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The valid value is Inventory
+     * 
+     */
     @EnumType
     public enum InventoryRuleType {
         Inventory("Inventory");

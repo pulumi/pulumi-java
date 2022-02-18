@@ -8,9 +8,21 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The unit that 'retained_backups' represents.
+     * 
+     */
     @EnumType
     public enum BackupRetentionSettingsRetentionUnit {
+        /**
+         * Backup retention unit is unspecified, will be treated as COUNT.
+         * 
+         */
         RetentionUnitUnspecified("RETENTION_UNIT_UNSPECIFIED"),
+        /**
+         * Retention will be by count, eg. "retain the most recent 7 backups".
+         * 
+         */
         Count("COUNT");
 
         private final String value;

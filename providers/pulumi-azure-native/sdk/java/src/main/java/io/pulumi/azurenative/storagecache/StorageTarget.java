@@ -20,75 +20,184 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Type of the Storage Target.
+ * API Version: 2021-03-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:storagecache:StorageTarget st1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.StorageCache/caches/sc1/storagetargets/st1 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:storagecache:StorageTarget")
 public class StorageTarget extends io.pulumi.resources.CustomResource {
+    /**
+     * Properties when targetType is blobNfs.
+     * 
+     */
     @OutputExport(name="blobNfs", type=BlobNfsTargetResponse.class, parameters={})
     private Output</* @Nullable */ BlobNfsTargetResponse> blobNfs;
 
+    /**
+     * @return Properties when targetType is blobNfs.
+     * 
+     */
     public Output</* @Nullable */ BlobNfsTargetResponse> getBlobNfs() {
         return this.blobNfs;
     }
+    /**
+     * Properties when targetType is clfs.
+     * 
+     */
     @OutputExport(name="clfs", type=ClfsTargetResponse.class, parameters={})
     private Output</* @Nullable */ ClfsTargetResponse> clfs;
 
+    /**
+     * @return Properties when targetType is clfs.
+     * 
+     */
     public Output</* @Nullable */ ClfsTargetResponse> getClfs() {
         return this.clfs;
     }
+    /**
+     * List of Cache namespace junctions to target for namespace associations.
+     * 
+     */
     @OutputExport(name="junctions", type=List.class, parameters={NamespaceJunctionResponse.class})
     private Output</* @Nullable */ List<NamespaceJunctionResponse>> junctions;
 
+    /**
+     * @return List of Cache namespace junctions to target for namespace associations.
+     * 
+     */
     public Output</* @Nullable */ List<NamespaceJunctionResponse>> getJunctions() {
         return this.junctions;
     }
+    /**
+     * Region name string.
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return Region name string.
+     * 
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * Name of the Storage Target.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Name of the Storage Target.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Properties when targetType is nfs3.
+     * 
+     */
     @OutputExport(name="nfs3", type=Nfs3TargetResponse.class, parameters={})
     private Output</* @Nullable */ Nfs3TargetResponse> nfs3;
 
+    /**
+     * @return Properties when targetType is nfs3.
+     * 
+     */
     public Output</* @Nullable */ Nfs3TargetResponse> getNfs3() {
         return this.nfs3;
     }
+    /**
+     * ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
+    /**
+     * @return ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
+     * 
+     */
     public Output</* @Nullable */ String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The system meta data relating to this resource.
+     * 
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return The system meta data relating to this resource.
+     * 
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * Type of the Storage Target.
+     * 
+     */
     @OutputExport(name="targetType", type=String.class, parameters={})
     private Output<String> targetType;
 
+    /**
+     * @return Type of the Storage Target.
+     * 
+     */
     public Output<String> getTargetType() {
         return this.targetType;
     }
+    /**
+     * Type of the Storage Target; Microsoft.StorageCache/Cache/StorageTarget
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Type of the Storage Target; Microsoft.StorageCache/Cache/StorageTarget
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * Properties when targetType is unknown.
+     * 
+     */
     @OutputExport(name="unknown", type=UnknownTargetResponse.class, parameters={})
     private Output</* @Nullable */ UnknownTargetResponse> unknown;
 
+    /**
+     * @return Properties when targetType is unknown.
+     * 
+     */
     public Output</* @Nullable */ UnknownTargetResponse> getUnknown() {
         return this.unknown;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public StorageTarget(String name, StorageTargetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:storagecache:StorageTarget", name, args == null ? StorageTargetArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -113,6 +222,14 @@ public class StorageTarget extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static StorageTarget get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new StorageTarget(name, id, options);
     }

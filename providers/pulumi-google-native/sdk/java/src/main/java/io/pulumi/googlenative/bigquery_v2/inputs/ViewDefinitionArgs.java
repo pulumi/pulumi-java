@@ -17,6 +17,10 @@ public final class ViewDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ViewDefinitionArgs Empty = new ViewDefinitionArgs();
 
+    /**
+     * [Required] A query that BigQuery executes when the view is referenced.
+     * 
+     */
     @InputImport(name="query")
     private final @Nullable Input<String> query;
 
@@ -24,6 +28,10 @@ public final class ViewDefinitionArgs extends io.pulumi.resources.ResourceArgs {
         return this.query == null ? Input.empty() : this.query;
     }
 
+    /**
+     * True if the column names are explicitly specified. For example by using the 'CREATE VIEW v(c1, c2) AS ...' syntax. Can only be set using BigQuery's standard SQL: https://cloud.google.com/bigquery/sql-reference/
+     * 
+     */
     @InputImport(name="useExplicitColumnNames")
     private final @Nullable Input<Boolean> useExplicitColumnNames;
 
@@ -31,6 +39,10 @@ public final class ViewDefinitionArgs extends io.pulumi.resources.ResourceArgs {
         return this.useExplicitColumnNames == null ? Input.empty() : this.useExplicitColumnNames;
     }
 
+    /**
+     * Specifies whether to use BigQuery's legacy SQL for this view. The default value is true. If set to false, the view will use BigQuery's standard SQL: https://cloud.google.com/bigquery/sql-reference/ Queries and views that reference this view must use the same flag value.
+     * 
+     */
     @InputImport(name="useLegacySql")
     private final @Nullable Input<Boolean> useLegacySql;
 
@@ -38,6 +50,10 @@ public final class ViewDefinitionArgs extends io.pulumi.resources.ResourceArgs {
         return this.useLegacySql == null ? Input.empty() : this.useLegacySql;
     }
 
+    /**
+     * Describes user-defined function resources used in the query.
+     * 
+     */
     @InputImport(name="userDefinedFunctionResources")
     private final @Nullable Input<List<UserDefinedFunctionResourceArgs>> userDefinedFunctionResources;
 

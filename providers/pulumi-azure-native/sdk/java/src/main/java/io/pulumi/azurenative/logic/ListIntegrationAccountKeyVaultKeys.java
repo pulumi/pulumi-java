@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListIntegrationAccountKeyVaultKeys {
+/**
+ * Collection of key vault keys.
+ * API Version: 2019-05-01.
+ * 
+ *
+ * Collection of key vault keys.
+ * 
+ */
     public static CompletableFuture<ListIntegrationAccountKeyVaultKeysResult> invokeAsync(ListIntegrationAccountKeyVaultKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:listIntegrationAccountKeyVaultKeys", TypeShape.of(ListIntegrationAccountKeyVaultKeysResult.class), args == null ? ListIntegrationAccountKeyVaultKeysArgs.Empty : args, Utilities.withVersion(options));
     }

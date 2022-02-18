@@ -16,6 +16,10 @@ public final class RecoveryGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RecoveryGroupArgs Empty = new RecoveryGroupArgs();
 
+    /**
+     * A list of the cell Amazon Resource Names (ARNs) in the recovery group.
+     * 
+     */
     @InputImport(name="cells")
     private final @Nullable Input<List<String>> cells;
 
@@ -23,6 +27,10 @@ public final class RecoveryGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.cells == null ? Input.empty() : this.cells;
     }
 
+    /**
+     * The name of the recovery group to create.
+     * 
+     */
     @InputImport(name="recoveryGroupName")
     private final @Nullable Input<String> recoveryGroupName;
 
@@ -30,6 +38,10 @@ public final class RecoveryGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.recoveryGroupName == null ? Input.empty() : this.recoveryGroupName;
     }
 
+    /**
+     * A collection of tags associated with a resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<RecoveryGroupTagArgs>> tags;
 

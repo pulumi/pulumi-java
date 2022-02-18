@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCloneJob {
+/**
+ * Gets details of a single CloneJob.
+ * 
+ */
     public static CompletableFuture<GetCloneJobResult> invokeAsync(GetCloneJobArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:vmmigration/v1alpha1:getCloneJob", TypeShape.of(GetCloneJobResult.class), args == null ? GetCloneJobArgs.Empty : args, Utilities.withVersion(options));
     }

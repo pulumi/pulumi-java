@@ -15,11 +15,36 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class VideoSinkResponse {
+    /**
+     * An array of upstream node references within the topology to be used as inputs for this node.
+     * 
+     */
     private final List<NodeInputResponse> inputs;
+    /**
+     * Node name. Must be unique within the topology.
+     * 
+     */
     private final String name;
+    /**
+     * The discriminator for derived types.
+     * Expected value is '#Microsoft.VideoAnalyzer.VideoSink'.
+     * 
+     */
     private final String type;
+    /**
+     * Optional video properties to be used in case a new video resource needs to be created on the service.
+     * 
+     */
     private final @Nullable VideoCreationPropertiesResponse videoCreationProperties;
+    /**
+     * Name of a new or existing video resource used to capture and publish content. Note: if downstream of RTSP source, and if disableArchive is set to true, then no content is archived.
+     * 
+     */
     private final String videoName;
+    /**
+     * Options to change how the video sink publishes content via the video resource. This property is only allowed for topologies where "kind" is set to "live".
+     * 
+     */
     private final @Nullable VideoPublishingOptionsResponse videoPublishingOptions;
 
     @OutputCustomType.Constructor({"inputs","name","type","videoCreationProperties","videoName","videoPublishingOptions"})
@@ -38,21 +63,46 @@ public final class VideoSinkResponse {
         this.videoPublishingOptions = videoPublishingOptions;
     }
 
+    /**
+     * An array of upstream node references within the topology to be used as inputs for this node.
+     * 
+     */
     public List<NodeInputResponse> getInputs() {
         return this.inputs;
     }
+    /**
+     * Node name. Must be unique within the topology.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The discriminator for derived types.
+     * Expected value is '#Microsoft.VideoAnalyzer.VideoSink'.
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * Optional video properties to be used in case a new video resource needs to be created on the service.
+     * 
+     */
     public Optional<VideoCreationPropertiesResponse> getVideoCreationProperties() {
         return Optional.ofNullable(this.videoCreationProperties);
     }
+    /**
+     * Name of a new or existing video resource used to capture and publish content. Note: if downstream of RTSP source, and if disableArchive is set to true, then no content is archived.
+     * 
+     */
     public String getVideoName() {
         return this.videoName;
     }
+    /**
+     * Options to change how the video sink publishes content via the video resource. This property is only allowed for topologies where "kind" is set to "live".
+     * 
+     */
     public Optional<VideoPublishingOptionsResponse> getVideoPublishingOptions() {
         return Optional.ofNullable(this.videoPublishingOptions);
     }

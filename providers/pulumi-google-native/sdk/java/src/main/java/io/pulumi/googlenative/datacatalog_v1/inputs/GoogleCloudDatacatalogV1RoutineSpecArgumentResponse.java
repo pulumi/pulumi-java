@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Input or output argument of a function or stored procedure.
+ * 
+ */
 public final class GoogleCloudDatacatalogV1RoutineSpecArgumentResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDatacatalogV1RoutineSpecArgumentResponse Empty = new GoogleCloudDatacatalogV1RoutineSpecArgumentResponse();
 
+    /**
+     * Specifies whether the argument is input or output.
+     * 
+     */
     @InputImport(name="mode", required=true)
     private final String mode;
 
@@ -19,6 +27,10 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgumentResponse extends i
         return this.mode;
     }
 
+    /**
+     * The name of the argument. A return argument of a function might not have a name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -26,6 +38,10 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgumentResponse extends i
         return this.name;
     }
 
+    /**
+     * Type of the argument. The exact value depends on the source system and the language.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

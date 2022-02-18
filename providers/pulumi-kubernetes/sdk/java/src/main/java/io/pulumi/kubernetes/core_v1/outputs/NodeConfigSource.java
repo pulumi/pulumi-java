@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class NodeConfigSource {
+    /**
+     * ConfigMap is a reference to a Node's ConfigMap
+     * 
+     */
     private final @Nullable ConfigMapNodeConfigSource configMap;
 
     @OutputCustomType.Constructor({"configMap"})
@@ -18,6 +22,10 @@ public final class NodeConfigSource {
         this.configMap = configMap;
     }
 
+    /**
+     * ConfigMap is a reference to a Node's ConfigMap
+     * 
+     */
     public Optional<ConfigMapNodeConfigSource> getConfigMap() {
         return Optional.ofNullable(this.configMap);
     }

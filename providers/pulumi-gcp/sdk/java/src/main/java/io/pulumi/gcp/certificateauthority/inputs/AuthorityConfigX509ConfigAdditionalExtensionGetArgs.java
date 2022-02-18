@@ -15,6 +15,11 @@ public final class AuthorityConfigX509ConfigAdditionalExtensionGetArgs extends i
 
     public static final AuthorityConfigX509ConfigAdditionalExtensionGetArgs Empty = new AuthorityConfigX509ConfigAdditionalExtensionGetArgs();
 
+    /**
+     * Indicates whether or not this extension is critical (i.e., if the client does not know how to
+     * handle this extension, the client should consider this to be an error).
+     * 
+     */
     @InputImport(name="critical", required=true)
     private final Input<Boolean> critical;
 
@@ -22,6 +27,11 @@ public final class AuthorityConfigX509ConfigAdditionalExtensionGetArgs extends i
         return this.critical;
     }
 
+    /**
+     * Describes values that are relevant in a CA certificate.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="objectId", required=true)
     private final Input<AuthorityConfigX509ConfigAdditionalExtensionObjectIdGetArgs> objectId;
 
@@ -29,6 +39,10 @@ public final class AuthorityConfigX509ConfigAdditionalExtensionGetArgs extends i
         return this.objectId;
     }
 
+    /**
+     * The value of this X.509 extension. A base64-encoded string.
+     * 
+     */
     @InputImport(name="value", required=true)
     private final Input<String> value;
 

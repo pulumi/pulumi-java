@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The pricing tier for the catalog database. The valid values could be found in https://azure.microsoft.com/en-us/pricing/details/sql-database/
+     * 
+     */
     @EnumType
     public enum IntegrationRuntimeSsisCatalogPricingTier {
         Basic("Basic"),

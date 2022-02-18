@@ -16,6 +16,10 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectionArgs Empty = new ConnectionArgs();
 
+    /**
+     * The name of the connection. Connection names must be unique in an AWS user account.
+     * 
+     */
     @InputImport(name="connectionName")
     private final @Nullable Input<String> connectionName;
 
@@ -23,6 +27,10 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.connectionName == null ? Input.empty() : this.connectionName;
     }
 
+    /**
+     * The host arn configured to represent the infrastructure where your third-party provider is installed. You must specify either a ProviderType or a HostArn.
+     * 
+     */
     @InputImport(name="hostArn")
     private final @Nullable Input<String> hostArn;
 
@@ -30,6 +38,10 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.hostArn == null ? Input.empty() : this.hostArn;
     }
 
+    /**
+     * The name of the external provider where your third-party code repository is configured. You must specify either a ProviderType or a HostArn.
+     * 
+     */
     @InputImport(name="providerType")
     private final @Nullable Input<String> providerType;
 
@@ -37,6 +49,10 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.providerType == null ? Input.empty() : this.providerType;
     }
 
+    /**
+     * Specifies the tags applied to a connection.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<ConnectionTagArgs>> tags;
 

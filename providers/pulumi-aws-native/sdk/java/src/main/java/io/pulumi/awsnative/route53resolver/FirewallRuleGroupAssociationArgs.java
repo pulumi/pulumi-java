@@ -18,6 +18,10 @@ public final class FirewallRuleGroupAssociationArgs extends io.pulumi.resources.
 
     public static final FirewallRuleGroupAssociationArgs Empty = new FirewallRuleGroupAssociationArgs();
 
+    /**
+     * FirewallRuleGroupId
+     * 
+     */
     @InputImport(name="firewallRuleGroupId", required=true)
     private final Input<String> firewallRuleGroupId;
 
@@ -25,6 +29,10 @@ public final class FirewallRuleGroupAssociationArgs extends io.pulumi.resources.
         return this.firewallRuleGroupId;
     }
 
+    /**
+     * MutationProtectionStatus
+     * 
+     */
     @InputImport(name="mutationProtection")
     private final @Nullable Input<FirewallRuleGroupAssociationMutationProtection> mutationProtection;
 
@@ -32,6 +40,10 @@ public final class FirewallRuleGroupAssociationArgs extends io.pulumi.resources.
         return this.mutationProtection == null ? Input.empty() : this.mutationProtection;
     }
 
+    /**
+     * FirewallRuleGroupAssociationName
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -39,6 +51,10 @@ public final class FirewallRuleGroupAssociationArgs extends io.pulumi.resources.
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Priority
+     * 
+     */
     @InputImport(name="priority", required=true)
     private final Input<Integer> priority;
 
@@ -46,6 +62,10 @@ public final class FirewallRuleGroupAssociationArgs extends io.pulumi.resources.
         return this.priority;
     }
 
+    /**
+     * Tags
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<FirewallRuleGroupAssociationTagArgs>> tags;
 
@@ -53,6 +73,10 @@ public final class FirewallRuleGroupAssociationArgs extends io.pulumi.resources.
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * VpcId
+     * 
+     */
     @InputImport(name="vpcId", required=true)
     private final Input<String> vpcId;
 

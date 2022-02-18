@@ -15,6 +15,10 @@ public final class ResourceTypeRegistrationResponse extends io.pulumi.resources.
 
     public static final ResourceTypeRegistrationResponse Empty = new ResourceTypeRegistrationResponse();
 
+    /**
+     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -22,6 +26,10 @@ public final class ResourceTypeRegistrationResponse extends io.pulumi.resources.
         return this.id;
     }
 
+    /**
+     * The name of the resource
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -36,6 +44,10 @@ public final class ResourceTypeRegistrationResponse extends io.pulumi.resources.
         return this.properties == null ? Optional.empty() : Optional.ofNullable(this.properties);
     }
 
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

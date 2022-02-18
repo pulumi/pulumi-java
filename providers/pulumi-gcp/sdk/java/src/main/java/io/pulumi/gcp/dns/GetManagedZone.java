@@ -13,6 +13,20 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetManagedZone {
+/**
+ * Provides access to a zone's attributes within Google Cloud DNS.
+ * For more information see
+ * [the official documentation](https://cloud.google.com/dns/zones/)
+ * and
+ * [API](https://cloud.google.com/dns/api/v1/managedZones).
+ * 
+ *
+ * A collection of arguments for invoking getManagedZone.
+ * 
+ *
+ * A collection of values returned by getManagedZone.
+ * 
+ */
     public static CompletableFuture<GetManagedZoneResult> invokeAsync(GetManagedZoneArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:dns/getManagedZone:getManagedZone", TypeShape.of(GetManagedZoneResult.class), args == null ? GetManagedZoneArgs.Empty : args, Utilities.withVersion(options));
     }

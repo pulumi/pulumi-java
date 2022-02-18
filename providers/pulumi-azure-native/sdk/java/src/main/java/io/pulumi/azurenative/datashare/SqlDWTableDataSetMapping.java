@@ -15,75 +15,186 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * A SQL DW Table data set mapping.
+ * API Version: 2020-09-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:datashare:SqlDWTableDataSetMapping datasetMappingName1 /subscriptions/0f3dcfc3-18f8-4099-b381-8353e19d43a7/resourceGroups/SampleResourceGroup/providers/Microsoft.DataShare/accounts/consumerAccount/shareSubscriptions/ShareSubscription1/dataSetMappings/datasetMappingName1 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:datashare:SqlDWTableDataSetMapping")
 public class SqlDWTableDataSetMapping extends io.pulumi.resources.CustomResource {
+    /**
+     * The id of the source data set.
+     * 
+     */
     @OutputExport(name="dataSetId", type=String.class, parameters={})
     private Output<String> dataSetId;
 
+    /**
+     * @return The id of the source data set.
+     * 
+     */
     public Output<String> getDataSetId() {
         return this.dataSetId;
     }
+    /**
+     * Gets the status of the data set mapping.
+     * 
+     */
     @OutputExport(name="dataSetMappingStatus", type=String.class, parameters={})
     private Output<String> dataSetMappingStatus;
 
+    /**
+     * @return Gets the status of the data set mapping.
+     * 
+     */
     public Output<String> getDataSetMappingStatus() {
         return this.dataSetMappingStatus;
     }
+    /**
+     * DataWarehouse name of the source data set
+     * 
+     */
     @OutputExport(name="dataWarehouseName", type=String.class, parameters={})
     private Output<String> dataWarehouseName;
 
+    /**
+     * @return DataWarehouse name of the source data set
+     * 
+     */
     public Output<String> getDataWarehouseName() {
         return this.dataWarehouseName;
     }
+    /**
+     * Kind of data set mapping.
+     * Expected value is 'SqlDWTable'.
+     * 
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
+    /**
+     * @return Kind of data set mapping.
+     * Expected value is 'SqlDWTable'.
+     * 
+     */
     public Output<String> getKind() {
         return this.kind;
     }
+    /**
+     * Name of the azure resource
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Name of the azure resource
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Provisioning state of the data set mapping.
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return Provisioning state of the data set mapping.
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Schema of the table. Default value is dbo.
+     * 
+     */
     @OutputExport(name="schemaName", type=String.class, parameters={})
     private Output<String> schemaName;
 
+    /**
+     * @return Schema of the table. Default value is dbo.
+     * 
+     */
     public Output<String> getSchemaName() {
         return this.schemaName;
     }
+    /**
+     * Resource id of SQL server
+     * 
+     */
     @OutputExport(name="sqlServerResourceId", type=String.class, parameters={})
     private Output<String> sqlServerResourceId;
 
+    /**
+     * @return Resource id of SQL server
+     * 
+     */
     public Output<String> getSqlServerResourceId() {
         return this.sqlServerResourceId;
     }
+    /**
+     * System Data of the Azure resource.
+     * 
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return System Data of the Azure resource.
+     * 
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * SQL DW table name.
+     * 
+     */
     @OutputExport(name="tableName", type=String.class, parameters={})
     private Output<String> tableName;
 
+    /**
+     * @return SQL DW table name.
+     * 
+     */
     public Output<String> getTableName() {
         return this.tableName;
     }
+    /**
+     * Type of the azure resource
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Type of the azure resource
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public SqlDWTableDataSetMapping(String name, SqlDWTableDataSetMappingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:datashare:SqlDWTableDataSetMapping", name, makeArgs(args), makeResourceOptions(options, Input.empty()));
     }
@@ -113,6 +224,14 @@ public class SqlDWTableDataSetMapping extends io.pulumi.resources.CustomResource
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static SqlDWTableDataSetMapping get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SqlDWTableDataSetMapping(name, id, options);
     }

@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetJobSchedule {
+/**
+ * Definition of the job schedule.
+ * API Version: 2019-06-01.
+ * 
+ *
+ * Definition of the job schedule.
+ * 
+ */
     public static CompletableFuture<GetJobScheduleResult> invokeAsync(GetJobScheduleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getJobSchedule", TypeShape.of(GetJobScheduleResult.class), args == null ? GetJobScheduleArgs.Empty : args, Utilities.withVersion(options));
     }

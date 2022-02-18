@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIntegrationRuntimeConnectionInfo {
+/**
+ * Connection information for encrypting the on-premises data source credentials.
+ * API Version: 2021-03-01.
+ * 
+ *
+ * Connection information for encrypting the on-premises data source credentials.
+ * 
+ */
     public static CompletableFuture<GetIntegrationRuntimeConnectionInfoResult> invokeAsync(GetIntegrationRuntimeConnectionInfoArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getIntegrationRuntimeConnectionInfo", TypeShape.of(GetIntegrationRuntimeConnectionInfoResult.class), args == null ? GetIntegrationRuntimeConnectionInfoArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PodSecurityPolicyConfigResponse {
+    /**
+     * Enable the PodSecurityPolicy controller for this cluster. If enabled, pods must be valid under a PodSecurityPolicy to be created.
+     * 
+     */
     private final Boolean enabled;
 
     @OutputCustomType.Constructor({"enabled"})
@@ -16,6 +20,10 @@ public final class PodSecurityPolicyConfigResponse {
         this.enabled = Objects.requireNonNull(enabled);
     }
 
+    /**
+     * Enable the PodSecurityPolicy controller for this cluster. If enabled, pods must be valid under a PodSecurityPolicy to be created.
+     * 
+     */
     public Boolean getEnabled() {
         return this.enabled;
     }

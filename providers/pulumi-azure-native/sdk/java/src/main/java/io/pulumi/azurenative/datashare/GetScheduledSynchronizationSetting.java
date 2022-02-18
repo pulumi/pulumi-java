@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetScheduledSynchronizationSetting {
+/**
+ * A type of synchronization setting based on schedule
+ * API Version: 2020-09-01.
+ * 
+ *
+ * A type of synchronization setting based on schedule
+ * 
+ */
     public static CompletableFuture<GetScheduledSynchronizationSettingResult> invokeAsync(GetScheduledSynchronizationSettingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datashare:getScheduledSynchronizationSetting", TypeShape.of(GetScheduledSynchronizationSettingResult.class), args == null ? GetScheduledSynchronizationSettingArgs.Empty : args, Utilities.withVersion(options));
     }

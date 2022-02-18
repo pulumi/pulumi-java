@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class FunctionEventTriggerFailurePolicy {
+    /**
+     * Whether the function should be retried on failure. Defaults to `false`.
+     * 
+     */
     private final Boolean retry;
 
     @OutputCustomType.Constructor({"retry"})
@@ -16,6 +20,10 @@ public final class FunctionEventTriggerFailurePolicy {
         this.retry = Objects.requireNonNull(retry);
     }
 
+    /**
+     * Whether the function should be retried on failure. Defaults to `false`.
+     * 
+     */
     public Boolean getRetry() {
         return this.retry;
     }

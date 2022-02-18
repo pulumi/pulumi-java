@@ -12,12 +12,35 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetManagedZoneResult {
+    /**
+     * A textual description field.
+     * 
+     */
     private final String description;
+    /**
+     * The fully qualified DNS name of this zone, e.g. `example.io.`.
+     * 
+     */
     private final String dnsName;
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
     private final String name;
+    /**
+     * The list of nameservers that will be authoritative for this
+     * domain. Use NS records to redirect from your DNS provider to these names,
+     * thus making Google Cloud DNS authoritative for this zone.
+     * 
+     */
     private final List<String> nameServers;
     private final @Nullable String project;
+    /**
+     * The zone's visibility: public zones are exposed to the Internet,
+     * while private zones are visible only to Virtual Private Cloud resources.
+     * 
+     */
     private final String visibility;
 
     @OutputCustomType.Constructor({"description","dnsName","id","name","nameServers","project","visibility"})
@@ -38,24 +61,47 @@ public final class GetManagedZoneResult {
         this.visibility = Objects.requireNonNull(visibility);
     }
 
+    /**
+     * A textual description field.
+     * 
+     */
     public String getDescription() {
         return this.description;
     }
+    /**
+     * The fully qualified DNS name of this zone, e.g. `example.io.`.
+     * 
+     */
     public String getDnsName() {
         return this.dnsName;
     }
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }
     public String getName() {
         return this.name;
     }
+    /**
+     * The list of nameservers that will be authoritative for this
+     * domain. Use NS records to redirect from your DNS provider to these names,
+     * thus making Google Cloud DNS authoritative for this zone.
+     * 
+     */
     public List<String> getNameServers() {
         return this.nameServers;
     }
     public Optional<String> getProject() {
         return Optional.ofNullable(this.project);
     }
+    /**
+     * The zone's visibility: public zones are exposed to the Internet,
+     * while private zones are visible only to Virtual Private Cloud resources.
+     * 
+     */
     public String getVisibility() {
         return this.visibility;
     }

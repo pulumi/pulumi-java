@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Label object for CompositeTypes
+ * 
+ */
 public final class CompositeTypeLabelEntryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CompositeTypeLabelEntryArgs Empty = new CompositeTypeLabelEntryArgs();
 
+    /**
+     * Key of the label
+     * 
+     */
     @InputImport(name="key")
     private final @Nullable Input<String> key;
 
@@ -21,6 +29,10 @@ public final class CompositeTypeLabelEntryArgs extends io.pulumi.resources.Resou
         return this.key == null ? Input.empty() : this.key;
     }
 
+    /**
+     * Value of the label
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

@@ -11,7 +11,16 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class IsNotNullAdvancedFilterResponse {
+    /**
+     * The field/property in the event based on which you want to filter.
+     * 
+     */
     private final @Nullable String key;
+    /**
+     * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+     * Expected value is 'IsNotNull'.
+     * 
+     */
     private final String operatorType;
 
     @OutputCustomType.Constructor({"key","operatorType"})
@@ -22,9 +31,18 @@ public final class IsNotNullAdvancedFilterResponse {
         this.operatorType = Objects.requireNonNull(operatorType);
     }
 
+    /**
+     * The field/property in the event based on which you want to filter.
+     * 
+     */
     public Optional<String> getKey() {
         return Optional.ofNullable(this.key);
     }
+    /**
+     * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+     * Expected value is 'IsNotNull'.
+     * 
+     */
     public String getOperatorType() {
         return this.operatorType;
     }

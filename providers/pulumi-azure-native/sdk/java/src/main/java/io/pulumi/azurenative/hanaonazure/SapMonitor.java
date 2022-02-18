@@ -16,81 +16,198 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * SAP monitor info on Azure (ARM properties and SAP monitor properties)
+ * API Version: 2020-02-07-preview.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:hanaonazure:SapMonitor myHanaInstance /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.HanaOnAzure/hanaInstances/myHanaInstance 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:hanaonazure:SapMonitor")
 public class SapMonitor extends io.pulumi.resources.CustomResource {
+    /**
+     * The value indicating whether to send analytics to Microsoft
+     * 
+     */
     @OutputExport(name="enableCustomerAnalytics", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableCustomerAnalytics;
 
+    /**
+     * @return The value indicating whether to send analytics to Microsoft
+     * 
+     */
     public Output</* @Nullable */ Boolean> getEnableCustomerAnalytics() {
         return this.enableCustomerAnalytics;
     }
+    /**
+     * The geo-location where the resource lives
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * The ARM ID of the Log Analytics Workspace that is used for monitoring
+     * 
+     */
     @OutputExport(name="logAnalyticsWorkspaceArmId", type=String.class, parameters={})
     private Output</* @Nullable */ String> logAnalyticsWorkspaceArmId;
 
+    /**
+     * @return The ARM ID of the Log Analytics Workspace that is used for monitoring
+     * 
+     */
     public Output</* @Nullable */ String> getLogAnalyticsWorkspaceArmId() {
         return this.logAnalyticsWorkspaceArmId;
     }
+    /**
+     * The workspace ID of the log analytics workspace to be used for monitoring
+     * 
+     */
     @OutputExport(name="logAnalyticsWorkspaceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> logAnalyticsWorkspaceId;
 
+    /**
+     * @return The workspace ID of the log analytics workspace to be used for monitoring
+     * 
+     */
     public Output</* @Nullable */ String> getLogAnalyticsWorkspaceId() {
         return this.logAnalyticsWorkspaceId;
     }
+    /**
+     * The shared key of the log analytics workspace that is used for monitoring
+     * 
+     */
     @OutputExport(name="logAnalyticsWorkspaceSharedKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> logAnalyticsWorkspaceSharedKey;
 
+    /**
+     * @return The shared key of the log analytics workspace that is used for monitoring
+     * 
+     */
     public Output</* @Nullable */ String> getLogAnalyticsWorkspaceSharedKey() {
         return this.logAnalyticsWorkspaceSharedKey;
     }
+    /**
+     * The name of the resource group the SAP Monitor resources get deployed into.
+     * 
+     */
     @OutputExport(name="managedResourceGroupName", type=String.class, parameters={})
     private Output<String> managedResourceGroupName;
 
+    /**
+     * @return The name of the resource group the SAP Monitor resources get deployed into.
+     * 
+     */
     public Output<String> getManagedResourceGroupName() {
         return this.managedResourceGroupName;
     }
+    /**
+     * The subnet which the SAP monitor will be deployed in
+     * 
+     */
     @OutputExport(name="monitorSubnet", type=String.class, parameters={})
     private Output</* @Nullable */ String> monitorSubnet;
 
+    /**
+     * @return The subnet which the SAP monitor will be deployed in
+     * 
+     */
     public Output</* @Nullable */ String> getMonitorSubnet() {
         return this.monitorSubnet;
     }
+    /**
+     * The name of the resource
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * State of provisioning of the HanaInstance
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return State of provisioning of the HanaInstance
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The version of the payload running in the Collector VM
+     * 
+     */
     @OutputExport(name="sapMonitorCollectorVersion", type=String.class, parameters={})
     private Output<String> sapMonitorCollectorVersion;
 
+    /**
+     * @return The version of the payload running in the Collector VM
+     * 
+     */
     public Output<String> getSapMonitorCollectorVersion() {
         return this.sapMonitorCollectorVersion;
     }
+    /**
+     * Resource tags.
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public SapMonitor(String name, SapMonitorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:hanaonazure:SapMonitor", name, args == null ? SapMonitorArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -109,6 +226,14 @@ public class SapMonitor extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static SapMonitor get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SapMonitor(name, id, options);
     }

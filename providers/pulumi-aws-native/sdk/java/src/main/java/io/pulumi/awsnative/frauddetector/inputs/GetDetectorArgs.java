@@ -12,6 +12,10 @@ public final class GetDetectorArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDetectorArgs Empty = new GetDetectorArgs();
 
+    /**
+     * The ARN of the detector.
+     * 
+     */
     @InputImport(name="arn", required=true)
     private final String arn;
 

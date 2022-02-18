@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Tags to be applied to Input.
+ * 
+ */
 public final class InputTagArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InputTagArgs Empty = new InputTagArgs();
 
+    /**
+     * Key of the Tag.
+     * 
+     */
     @InputImport(name="key", required=true)
     private final Input<String> key;
 
@@ -20,6 +28,10 @@ public final class InputTagArgs extends io.pulumi.resources.ResourceArgs {
         return this.key;
     }
 
+    /**
+     * Value of the Tag.
+     * 
+     */
     @InputImport(name="value", required=true)
     private final Input<String> value;
 

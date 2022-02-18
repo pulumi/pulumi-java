@@ -15,45 +15,103 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Creates an Environment in the specified Agent. This method is a [long-running operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The returned `Operation` type has the following method-specific fields: - `metadata`: An empty [Struct message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct) - `response`: Environment
+ * 
+ */
 @ResourceType(type="google-native:dialogflow/v3:Environment")
 public class Environment extends io.pulumi.resources.CustomResource {
+    /**
+     * The human-readable description of the environment. The maximum length is 500 characters. If exceeded, the request is rejected.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output<String> description;
 
+    /**
+     * @return The human-readable description of the environment. The maximum length is 500 characters. If exceeded, the request is rejected.
+     * 
+     */
     public Output<String> getDescription() {
         return this.description;
     }
+    /**
+     * The human-readable name of the environment (unique in an agent). Limit of 64 characters.
+     * 
+     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
+    /**
+     * @return The human-readable name of the environment (unique in an agent). Limit of 64 characters.
+     * 
+     */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
+    /**
+     * The name of the environment. Format: `projects//locations//agents//environments/`.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the environment. Format: `projects//locations//agents//environments/`.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The test cases config for continuous tests of this environment.
+     * 
+     */
     @OutputExport(name="testCasesConfig", type=GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigResponse.class, parameters={})
     private Output<GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigResponse> testCasesConfig;
 
+    /**
+     * @return The test cases config for continuous tests of this environment.
+     * 
+     */
     public Output<GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigResponse> getTestCasesConfig() {
         return this.testCasesConfig;
     }
+    /**
+     * Update time of this environment.
+     * 
+     */
     @OutputExport(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
+    /**
+     * @return Update time of this environment.
+     * 
+     */
     public Output<String> getUpdateTime() {
         return this.updateTime;
     }
+    /**
+     * A list of configurations for flow versions. You should include version configs for all flows that are reachable from `Start Flow` in the agent. Otherwise, an error will be returned.
+     * 
+     */
     @OutputExport(name="versionConfigs", type=List.class, parameters={GoogleCloudDialogflowCxV3EnvironmentVersionConfigResponse.class})
     private Output<List<GoogleCloudDialogflowCxV3EnvironmentVersionConfigResponse>> versionConfigs;
 
+    /**
+     * @return A list of configurations for flow versions. You should include version configs for all flows that are reachable from `Start Flow` in the agent. Otherwise, an error will be returned.
+     * 
+     */
     public Output<List<GoogleCloudDialogflowCxV3EnvironmentVersionConfigResponse>> getVersionConfigs() {
         return this.versionConfigs;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Environment(String name, EnvironmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:dialogflow/v3:Environment", name, args == null ? EnvironmentArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -69,6 +127,14 @@ public class Environment extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Environment get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Environment(name, id, options);
     }

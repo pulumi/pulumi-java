@@ -15,99 +15,229 @@ import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Resource schema for AWS::MediaConnect::FlowSource
+ * 
+ */
 @ResourceType(type="aws-native:mediaconnect:FlowSource")
 public class FlowSource extends io.pulumi.resources.CustomResource {
+    /**
+     * The type of encryption that is used on the content ingested from this source.
+     * 
+     */
     @OutputExport(name="decryption", type=FlowSourceEncryption.class, parameters={})
     private Output</* @Nullable */ FlowSourceEncryption> decryption;
 
+    /**
+     * @return The type of encryption that is used on the content ingested from this source.
+     * 
+     */
     public Output</* @Nullable */ FlowSourceEncryption> getDecryption() {
         return this.decryption;
     }
+    /**
+     * A description for the source. This value is not used or seen outside of the current AWS Elemental MediaConnect account.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output<String> description;
 
+    /**
+     * @return A description for the source. This value is not used or seen outside of the current AWS Elemental MediaConnect account.
+     * 
+     */
     public Output<String> getDescription() {
         return this.description;
     }
+    /**
+     * The ARN of the entitlement that allows you to subscribe to content that comes from another AWS account. The entitlement is set by the content originator and the ARN is generated as part of the originator's flow.
+     * 
+     */
     @OutputExport(name="entitlementArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> entitlementArn;
 
+    /**
+     * @return The ARN of the entitlement that allows you to subscribe to content that comes from another AWS account. The entitlement is set by the content originator and the ARN is generated as part of the originator's flow.
+     * 
+     */
     public Output</* @Nullable */ String> getEntitlementArn() {
         return this.entitlementArn;
     }
+    /**
+     * The ARN of the flow.
+     * 
+     */
     @OutputExport(name="flowArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> flowArn;
 
+    /**
+     * @return The ARN of the flow.
+     * 
+     */
     public Output</* @Nullable */ String> getFlowArn() {
         return this.flowArn;
     }
+    /**
+     * The IP address that the flow will be listening on for incoming content.
+     * 
+     */
     @OutputExport(name="ingestIp", type=String.class, parameters={})
     private Output<String> ingestIp;
 
+    /**
+     * @return The IP address that the flow will be listening on for incoming content.
+     * 
+     */
     public Output<String> getIngestIp() {
         return this.ingestIp;
     }
+    /**
+     * The port that the flow will be listening on for incoming content.
+     * 
+     */
     @OutputExport(name="ingestPort", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> ingestPort;
 
+    /**
+     * @return The port that the flow will be listening on for incoming content.
+     * 
+     */
     public Output</* @Nullable */ Integer> getIngestPort() {
         return this.ingestPort;
     }
+    /**
+     * The smoothing max bitrate for RIST, RTP, and RTP-FEC streams.
+     * 
+     */
     @OutputExport(name="maxBitrate", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxBitrate;
 
+    /**
+     * @return The smoothing max bitrate for RIST, RTP, and RTP-FEC streams.
+     * 
+     */
     public Output</* @Nullable */ Integer> getMaxBitrate() {
         return this.maxBitrate;
     }
+    /**
+     * The maximum latency in milliseconds. This parameter applies only to RIST-based and Zixi-based streams.
+     * 
+     */
     @OutputExport(name="maxLatency", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxLatency;
 
+    /**
+     * @return The maximum latency in milliseconds. This parameter applies only to RIST-based and Zixi-based streams.
+     * 
+     */
     public Output</* @Nullable */ Integer> getMaxLatency() {
         return this.maxLatency;
     }
+    /**
+     * The name of the source.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the source.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The protocol that is used by the source.
+     * 
+     */
     @OutputExport(name="protocol", type=FlowSourceProtocol.class, parameters={})
     private Output</* @Nullable */ FlowSourceProtocol> protocol;
 
+    /**
+     * @return The protocol that is used by the source.
+     * 
+     */
     public Output</* @Nullable */ FlowSourceProtocol> getProtocol() {
         return this.protocol;
     }
+    /**
+     * The ARN of the source.
+     * 
+     */
     @OutputExport(name="sourceArn", type=String.class, parameters={})
     private Output<String> sourceArn;
 
+    /**
+     * @return The ARN of the source.
+     * 
+     */
     public Output<String> getSourceArn() {
         return this.sourceArn;
     }
+    /**
+     * The port that the flow will be listening on for incoming content.(ReadOnly)
+     * 
+     */
     @OutputExport(name="sourceIngestPort", type=String.class, parameters={})
     private Output<String> sourceIngestPort;
 
+    /**
+     * @return The port that the flow will be listening on for incoming content.(ReadOnly)
+     * 
+     */
     public Output<String> getSourceIngestPort() {
         return this.sourceIngestPort;
     }
+    /**
+     * The stream ID that you want to use for this transport. This parameter applies only to Zixi-based streams.
+     * 
+     */
     @OutputExport(name="streamId", type=String.class, parameters={})
     private Output</* @Nullable */ String> streamId;
 
+    /**
+     * @return The stream ID that you want to use for this transport. This parameter applies only to Zixi-based streams.
+     * 
+     */
     public Output</* @Nullable */ String> getStreamId() {
         return this.streamId;
     }
+    /**
+     * The name of the VPC Interface this Source is configured with.
+     * 
+     */
     @OutputExport(name="vpcInterfaceName", type=String.class, parameters={})
     private Output</* @Nullable */ String> vpcInterfaceName;
 
+    /**
+     * @return The name of the VPC Interface this Source is configured with.
+     * 
+     */
     public Output</* @Nullable */ String> getVpcInterfaceName() {
         return this.vpcInterfaceName;
     }
+    /**
+     * The range of IP addresses that should be allowed to contribute content to your source. These IP addresses should be in the form of a Classless Inter-Domain Routing (CIDR) block; for example, 10.0.0.0/16.
+     * 
+     */
     @OutputExport(name="whitelistCidr", type=String.class, parameters={})
     private Output</* @Nullable */ String> whitelistCidr;
 
+    /**
+     * @return The range of IP addresses that should be allowed to contribute content to your source. These IP addresses should be in the form of a Classless Inter-Domain Routing (CIDR) block; for example, 10.0.0.0/16.
+     * 
+     */
     public Output</* @Nullable */ String> getWhitelistCidr() {
         return this.whitelistCidr;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public FlowSource(String name, FlowSourceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:mediaconnect:FlowSource", name, args == null ? FlowSourceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -123,6 +253,14 @@ public class FlowSource extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static FlowSource get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new FlowSource(name, id, options);
     }

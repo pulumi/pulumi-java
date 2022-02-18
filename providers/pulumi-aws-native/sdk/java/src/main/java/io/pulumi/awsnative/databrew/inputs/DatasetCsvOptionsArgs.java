@@ -11,6 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Csv options
+ * 
+ */
 public final class DatasetCsvOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DatasetCsvOptionsArgs Empty = new DatasetCsvOptionsArgs();

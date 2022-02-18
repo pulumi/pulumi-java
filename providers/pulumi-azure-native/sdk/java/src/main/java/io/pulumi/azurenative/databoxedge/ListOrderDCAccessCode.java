@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListOrderDCAccessCode {
+/**
+ * DC Access code in the case of Self Managed Shipping.
+ * API Version: 2020-12-01.
+ * 
+ *
+ * DC Access code in the case of Self Managed Shipping.
+ * 
+ */
     public static CompletableFuture<ListOrderDCAccessCodeResult> invokeAsync(ListOrderDCAccessCodeArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databoxedge:listOrderDCAccessCode", TypeShape.of(ListOrderDCAccessCodeResult.class), args == null ? ListOrderDCAccessCodeArgs.Empty : args, Utilities.withVersion(options));
     }

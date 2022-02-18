@@ -10,6 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Structure that contains X.500 distinguished name information for your CA.
+ * 
+ */
 public final class CertificateAuthoritySubjectArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CertificateAuthoritySubjectArgs Empty = new CertificateAuthoritySubjectArgs();

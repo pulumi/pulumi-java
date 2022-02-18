@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Provides information for updating the user on the progress of fulfilling an intent.
+ * 
+ */
 public final class BotFulfillmentUpdatesSpecificationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BotFulfillmentUpdatesSpecificationArgs Empty = new BotFulfillmentUpdatesSpecificationArgs();
 
+    /**
+     * Determines whether fulfillment updates are sent to the user. When this field is true, updates are sent.
+     * 
+     */
     @InputImport(name="active", required=true)
     private final Input<Boolean> active;
 
@@ -31,6 +39,10 @@ public final class BotFulfillmentUpdatesSpecificationArgs extends io.pulumi.reso
         return this.startResponse == null ? Input.empty() : this.startResponse;
     }
 
+    /**
+     * The length of time that the fulfillment Lambda function should run before it times out.
+     * 
+     */
     @InputImport(name="timeoutInSeconds")
     private final @Nullable Input<Integer> timeoutInSeconds;
 

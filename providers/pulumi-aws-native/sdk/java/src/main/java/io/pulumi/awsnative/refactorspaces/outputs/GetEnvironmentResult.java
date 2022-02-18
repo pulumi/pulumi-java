@@ -15,6 +15,10 @@ import javax.annotation.Nullable;
 public final class GetEnvironmentResult {
     private final @Nullable String arn;
     private final @Nullable String environmentIdentifier;
+    /**
+     * Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
+     * 
+     */
     private final @Nullable List<EnvironmentTag> tags;
     private final @Nullable String transitGatewayId;
 
@@ -36,6 +40,10 @@ public final class GetEnvironmentResult {
     public Optional<String> getEnvironmentIdentifier() {
         return Optional.ofNullable(this.environmentIdentifier);
     }
+    /**
+     * Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
+     * 
+     */
     public List<EnvironmentTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

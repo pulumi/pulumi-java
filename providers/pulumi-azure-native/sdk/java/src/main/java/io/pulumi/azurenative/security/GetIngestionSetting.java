@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIngestionSetting {
+/**
+ * Configures how to correlate scan data and logs with resources associated with the subscription.
+ * API Version: 2021-01-15-preview.
+ * 
+ *
+ * Configures how to correlate scan data and logs with resources associated with the subscription.
+ * 
+ */
     public static CompletableFuture<GetIngestionSettingResult> invokeAsync(GetIngestionSettingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:security:getIngestionSetting", TypeShape.of(GetIngestionSettingResult.class), args == null ? GetIngestionSettingArgs.Empty : args, Utilities.withVersion(options));
     }

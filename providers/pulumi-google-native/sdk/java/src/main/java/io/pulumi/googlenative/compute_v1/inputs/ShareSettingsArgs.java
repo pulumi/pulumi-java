@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The share setting for reservations and sole tenancy node groups.
+ * 
+ */
 public final class ShareSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ShareSettingsArgs Empty = new ShareSettingsArgs();
 
+    /**
+     * A map of project id and project config. This is only valid when share_type's value is SPECIFIC_PROJECTS.
+     * 
+     */
     @InputImport(name="projectMap")
     private final @Nullable Input<Map<String,String>> projectMap;
 
@@ -23,6 +31,10 @@ public final class ShareSettingsArgs extends io.pulumi.resources.ResourceArgs {
         return this.projectMap == null ? Input.empty() : this.projectMap;
     }
 
+    /**
+     * Type of sharing for this shared-reservation
+     * 
+     */
     @InputImport(name="shareType")
     private final @Nullable Input<ShareSettingsShareType> shareType;
 

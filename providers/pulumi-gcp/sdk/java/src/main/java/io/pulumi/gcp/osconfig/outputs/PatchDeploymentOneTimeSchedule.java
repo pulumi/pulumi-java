@@ -9,6 +9,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PatchDeploymentOneTimeSchedule {
+    /**
+     * The desired patch job execution time. A timestamp in RFC3339 UTC "Zulu" format,
+     * accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * 
+     */
     private final String executeTime;
 
     @OutputCustomType.Constructor({"executeTime"})
@@ -16,6 +21,11 @@ public final class PatchDeploymentOneTimeSchedule {
         this.executeTime = Objects.requireNonNull(executeTime);
     }
 
+    /**
+     * The desired patch job execution time. A timestamp in RFC3339 UTC "Zulu" format,
+     * accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * 
+     */
     public String getExecuteTime() {
         return this.executeTime;
     }

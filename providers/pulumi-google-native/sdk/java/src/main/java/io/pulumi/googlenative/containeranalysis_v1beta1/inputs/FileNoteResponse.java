@@ -9,10 +9,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * FileNote represents an SPDX File Information section: https://spdx.github.io/spdx-spec/4-file-information/
+ * 
+ */
 public final class FileNoteResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FileNoteResponse Empty = new FileNoteResponse();
 
+    /**
+     * Provide a unique identifier to match analysis information on each specific file in a package
+     * 
+     */
     @InputImport(name="checksum", required=true)
     private final List<String> checksum;
 
@@ -20,6 +28,10 @@ public final class FileNoteResponse extends io.pulumi.resources.InvokeArgs {
         return this.checksum;
     }
 
+    /**
+     * This field provides information about the type of file identified
+     * 
+     */
     @InputImport(name="fileType", required=true)
     private final String fileType;
 
@@ -27,6 +39,10 @@ public final class FileNoteResponse extends io.pulumi.resources.InvokeArgs {
         return this.fileType;
     }
 
+    /**
+     * Identify the full path and filename that corresponds to the file information in this section
+     * 
+     */
     @InputImport(name="title", required=true)
     private final String title;
 

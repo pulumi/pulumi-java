@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Parquet write settings.
+ * 
+ */
 public final class ParquetWriteSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ParquetWriteSettingsArgs Empty = new ParquetWriteSettingsArgs();
 
+    /**
+     * Specifies the file name pattern <fileNamePrefix>_<fileIndex>.<fileExtension> when copy from non-file based store without partitionOptions. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="fileNamePrefix")
     private final @Nullable Input<Object> fileNamePrefix;
 
@@ -22,6 +30,10 @@ public final class ParquetWriteSettingsArgs extends io.pulumi.resources.Resource
         return this.fileNamePrefix == null ? Input.empty() : this.fileNamePrefix;
     }
 
+    /**
+     * Limit the written file's row count to be smaller than or equal to the specified count. Type: integer (or Expression with resultType integer).
+     * 
+     */
     @InputImport(name="maxRowsPerFile")
     private final @Nullable Input<Object> maxRowsPerFile;
 
@@ -29,6 +41,11 @@ public final class ParquetWriteSettingsArgs extends io.pulumi.resources.Resource
         return this.maxRowsPerFile == null ? Input.empty() : this.maxRowsPerFile;
     }
 
+    /**
+     * The write setting type.
+     * Expected value is 'ParquetWriteSettings'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

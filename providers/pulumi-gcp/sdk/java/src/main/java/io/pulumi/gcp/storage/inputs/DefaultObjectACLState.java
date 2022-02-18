@@ -15,6 +15,10 @@ public final class DefaultObjectACLState extends io.pulumi.resources.ResourceArg
 
     public static final DefaultObjectACLState Empty = new DefaultObjectACLState();
 
+    /**
+     * The name of the bucket it applies to.
+     * 
+     */
     @InputImport(name="bucket")
     private final @Nullable Input<String> bucket;
 
@@ -22,6 +26,12 @@ public final class DefaultObjectACLState extends io.pulumi.resources.ResourceArg
         return this.bucket == null ? Input.empty() : this.bucket;
     }
 
+    /**
+     * List of role/entity pairs in the form `ROLE:entity`.
+     * See [GCS Object ACL documentation](https://cloud.google.com/storage/docs/json_api/v1/objectAccessControls) for more details.
+     * Omitting the field is the same as providing an empty list.
+     * 
+     */
     @InputImport(name="roleEntities")
     private final @Nullable Input<List<String>> roleEntities;
 

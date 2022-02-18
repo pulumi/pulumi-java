@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The GitHub action configuration.
+ * 
+ */
 public final class GitHubActionConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GitHubActionConfigurationArgs Empty = new GitHubActionConfigurationArgs();
 
+    /**
+     * GitHub Action code configuration.
+     * 
+     */
     @InputImport(name="codeConfiguration")
     private final @Nullable Input<GitHubActionCodeConfigurationArgs> codeConfiguration;
 
@@ -23,6 +31,10 @@ public final class GitHubActionConfigurationArgs extends io.pulumi.resources.Res
         return this.codeConfiguration == null ? Input.empty() : this.codeConfiguration;
     }
 
+    /**
+     * GitHub Action container configuration.
+     * 
+     */
     @InputImport(name="containerConfiguration")
     private final @Nullable Input<GitHubActionContainerConfigurationArgs> containerConfiguration;
 
@@ -30,6 +42,10 @@ public final class GitHubActionConfigurationArgs extends io.pulumi.resources.Res
         return this.containerConfiguration == null ? Input.empty() : this.containerConfiguration;
     }
 
+    /**
+     * Workflow option to determine whether the workflow file should be generated and written to the repository.
+     * 
+     */
     @InputImport(name="generateWorkflowFile")
     private final @Nullable Input<Boolean> generateWorkflowFile;
 
@@ -37,6 +53,10 @@ public final class GitHubActionConfigurationArgs extends io.pulumi.resources.Res
         return this.generateWorkflowFile == null ? Input.empty() : this.generateWorkflowFile;
     }
 
+    /**
+     * This will help determine the workflow configuration to select.
+     * 
+     */
     @InputImport(name="isLinux")
     private final @Nullable Input<Boolean> isLinux;
 

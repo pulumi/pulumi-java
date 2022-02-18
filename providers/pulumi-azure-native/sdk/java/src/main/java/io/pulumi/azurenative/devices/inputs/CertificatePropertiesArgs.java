@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The description of an X509 CA Certificate.
+ * 
+ */
 public final class CertificatePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CertificatePropertiesArgs Empty = new CertificatePropertiesArgs();
 
+    /**
+     * The certificate content
+     * 
+     */
     @InputImport(name="certificate")
     private final @Nullable Input<String> certificate;
 

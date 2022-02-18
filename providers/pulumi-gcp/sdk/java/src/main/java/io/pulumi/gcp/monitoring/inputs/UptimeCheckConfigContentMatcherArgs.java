@@ -14,6 +14,10 @@ public final class UptimeCheckConfigContentMatcherArgs extends io.pulumi.resourc
 
     public static final UptimeCheckConfigContentMatcherArgs Empty = new UptimeCheckConfigContentMatcherArgs();
 
+    /**
+     * String or regex content to match (max 1024 bytes)
+     * 
+     */
     @InputImport(name="content", required=true)
     private final Input<String> content;
 
@@ -21,6 +25,12 @@ public final class UptimeCheckConfigContentMatcherArgs extends io.pulumi.resourc
         return this.content;
     }
 
+    /**
+     * The type of content matcher that will be applied to the server output, compared to the content string when the check is run.
+     * Default value is `CONTAINS_STRING`.
+     * Possible values are `CONTAINS_STRING`, `NOT_CONTAINS_STRING`, `MATCHES_REGEX`, and `NOT_MATCHES_REGEX`.
+     * 
+     */
     @InputImport(name="matcher")
     private final @Nullable Input<String> matcher;
 

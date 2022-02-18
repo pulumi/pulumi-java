@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TCPSocketActionResponse {
+    /**
+     * (Optional) Optional: Host name to connect to, defaults to the pod IP.
+     * 
+     */
     private final String host;
+    /**
+     * Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME. This field is currently limited to integer types only because of proto's inability to properly support the IntOrString golang type.
+     * 
+     */
     private final Integer port;
 
     @OutputCustomType.Constructor({"host","port"})
@@ -21,9 +29,17 @@ public final class TCPSocketActionResponse {
         this.port = Objects.requireNonNull(port);
     }
 
+    /**
+     * (Optional) Optional: Host name to connect to, defaults to the pod IP.
+     * 
+     */
     public String getHost() {
         return this.host;
     }
+    /**
+     * Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME. This field is currently limited to integer types only because of proto's inability to properly support the IntOrString golang type.
+     * 
+     */
     public Integer getPort() {
         return this.port;
     }

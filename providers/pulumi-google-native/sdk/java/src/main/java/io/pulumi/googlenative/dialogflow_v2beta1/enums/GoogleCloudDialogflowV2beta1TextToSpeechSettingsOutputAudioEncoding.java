@@ -8,13 +8,41 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Required. Audio encoding of the synthesized audio content.
+     * 
+     */
     @EnumType
     public enum GoogleCloudDialogflowV2beta1TextToSpeechSettingsOutputAudioEncoding {
+        /**
+         * Not specified.
+         * 
+         */
         OutputAudioEncodingUnspecified("OUTPUT_AUDIO_ENCODING_UNSPECIFIED"),
+        /**
+         * Uncompressed 16-bit signed little-endian samples (Linear PCM). Audio content returned as LINEAR16 also contains a WAV header.
+         * 
+         */
         OutputAudioEncodingLinear16("OUTPUT_AUDIO_ENCODING_LINEAR_16"),
+        /**
+         * MP3 audio at 32kbps.
+         * 
+         */
         OutputAudioEncodingMp3("OUTPUT_AUDIO_ENCODING_MP3"),
+        /**
+         * MP3 audio at 64kbps.
+         * 
+         */
         OutputAudioEncodingMp364Kbps("OUTPUT_AUDIO_ENCODING_MP3_64_KBPS"),
+        /**
+         * Opus encoded audio wrapped in an ogg container. The result will be a file which can be played natively on Android, and in browsers (at least Chrome and Firefox). The quality of the encoding is considerably higher than MP3 while using approximately the same bitrate.
+         * 
+         */
         OutputAudioEncodingOggOpus("OUTPUT_AUDIO_ENCODING_OGG_OPUS"),
+        /**
+         * 8-bit samples that compand 14-bit audio samples using G.711 PCMU/mu-law.
+         * 
+         */
         OutputAudioEncodingMulaw("OUTPUT_AUDIO_ENCODING_MULAW");
 
         private final String value;

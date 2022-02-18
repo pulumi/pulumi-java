@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNodePool {
+/**
+ * Retrieves the requested node pool.
+ * 
+ */
     public static CompletableFuture<GetNodePoolResult> invokeAsync(GetNodePoolArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:container/v1:getNodePool", TypeShape.of(GetNodePoolResult.class), args == null ? GetNodePoolArgs.Empty : args, Utilities.withVersion(options));
     }

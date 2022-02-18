@@ -12,6 +12,10 @@ public final class GetFeatureGroupArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetFeatureGroupArgs Empty = new GetFeatureGroupArgs();
 
+    /**
+     * The Name of the FeatureGroup.
+     * 
+     */
     @InputImport(name="featureGroupName", required=true)
     private final String featureGroupName;
 

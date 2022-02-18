@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The bandwidth for the link.
+ * 
+ */
 public final class LinkBandwidth extends io.pulumi.resources.InvokeArgs {
 
     public static final LinkBandwidth Empty = new LinkBandwidth();
 
+    /**
+     * Download speed in Mbps.
+     * 
+     */
     @InputImport(name="downloadSpeed")
     private final @Nullable Integer downloadSpeed;
 
@@ -21,6 +29,10 @@ public final class LinkBandwidth extends io.pulumi.resources.InvokeArgs {
         return this.downloadSpeed == null ? Optional.empty() : Optional.ofNullable(this.downloadSpeed);
     }
 
+    /**
+     * Upload speed in Mbps.
+     * 
+     */
     @InputImport(name="uploadSpeed")
     private final @Nullable Integer uploadSpeed;
 

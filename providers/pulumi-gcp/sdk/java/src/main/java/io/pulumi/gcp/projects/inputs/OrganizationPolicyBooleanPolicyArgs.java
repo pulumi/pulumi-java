@@ -13,6 +13,10 @@ public final class OrganizationPolicyBooleanPolicyArgs extends io.pulumi.resourc
 
     public static final OrganizationPolicyBooleanPolicyArgs Empty = new OrganizationPolicyBooleanPolicyArgs();
 
+    /**
+     * If true, then the Policy is enforced. If false, then any configuration is acceptable.
+     * 
+     */
     @InputImport(name="enforced", required=true)
     private final Input<Boolean> enforced;
 

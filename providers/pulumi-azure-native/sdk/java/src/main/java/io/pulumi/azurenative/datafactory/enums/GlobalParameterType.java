@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Global Parameter type.
+     * 
+     */
     @EnumType
     public enum GlobalParameterType {
         Object("Object"),

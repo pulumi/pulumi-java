@@ -14,11 +14,36 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SsisEnvironmentResponse {
+    /**
+     * Metadata description.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * Folder id which contains environment.
+     * 
+     */
     private final @Nullable Double folderId;
+    /**
+     * Metadata id.
+     * 
+     */
     private final @Nullable Double id;
+    /**
+     * Metadata name.
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * The type of SSIS object metadata.
+     * Expected value is 'Environment'.
+     * 
+     */
     private final String type;
+    /**
+     * Variable in environment
+     * 
+     */
     private final @Nullable List<SsisVariableResponse> variables;
 
     @OutputCustomType.Constructor({"description","folderId","id","name","type","variables"})
@@ -37,21 +62,46 @@ public final class SsisEnvironmentResponse {
         this.variables = variables;
     }
 
+    /**
+     * Metadata description.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * Folder id which contains environment.
+     * 
+     */
     public Optional<Double> getFolderId() {
         return Optional.ofNullable(this.folderId);
     }
+    /**
+     * Metadata id.
+     * 
+     */
     public Optional<Double> getId() {
         return Optional.ofNullable(this.id);
     }
+    /**
+     * Metadata name.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * The type of SSIS object metadata.
+     * Expected value is 'Environment'.
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * Variable in environment
+     * 
+     */
     public List<SsisVariableResponse> getVariables() {
         return this.variables == null ? List.of() : this.variables;
     }

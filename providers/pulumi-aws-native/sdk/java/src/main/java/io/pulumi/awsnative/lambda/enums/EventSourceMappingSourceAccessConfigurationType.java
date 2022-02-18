@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The type of source access configuration.
+     * 
+     */
     @EnumType
     public enum EventSourceMappingSourceAccessConfigurationType {
         BasicAuth("BASIC_AUTH"),

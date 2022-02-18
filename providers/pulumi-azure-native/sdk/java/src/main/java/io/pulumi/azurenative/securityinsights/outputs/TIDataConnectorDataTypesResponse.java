@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TIDataConnectorDataTypesResponse {
+    /**
+     * Data type for indicators connection.
+     * 
+     */
     private final @Nullable TIDataConnectorDataTypesResponseIndicators indicators;
 
     @OutputCustomType.Constructor({"indicators"})
@@ -18,6 +22,10 @@ public final class TIDataConnectorDataTypesResponse {
         this.indicators = indicators;
     }
 
+    /**
+     * Data type for indicators connection.
+     * 
+     */
     public Optional<TIDataConnectorDataTypesResponseIndicators> getIndicators() {
         return Optional.ofNullable(this.indicators);
     }

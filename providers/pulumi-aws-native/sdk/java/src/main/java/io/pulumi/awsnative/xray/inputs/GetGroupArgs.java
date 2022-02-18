@@ -12,6 +12,10 @@ public final class GetGroupArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetGroupArgs Empty = new GetGroupArgs();
 
+    /**
+     * The ARN of the group that was generated on creation.
+     * 
+     */
     @InputImport(name="groupARN", required=true)
     private final String groupARN;
 

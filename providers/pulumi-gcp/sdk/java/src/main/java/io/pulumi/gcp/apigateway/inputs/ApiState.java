@@ -15,6 +15,10 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
 
     public static final ApiState Empty = new ApiState();
 
+    /**
+     * Identifier to assign to the API. Must be unique within scope of the parent resource(project)
+     * 
+     */
     @InputImport(name="apiId")
     private final @Nullable Input<String> apiId;
 
@@ -22,6 +26,10 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
         return this.apiId == null ? Input.empty() : this.apiId;
     }
 
+    /**
+     * Creation timestamp in RFC3339 text format.
+     * 
+     */
     @InputImport(name="createTime")
     private final @Nullable Input<String> createTime;
 
@@ -29,6 +37,10 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
         return this.createTime == null ? Input.empty() : this.createTime;
     }
 
+    /**
+     * A user-visible name for the API.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -36,6 +48,10 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * Resource labels to represent user-provided metadata.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -43,6 +59,11 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * Immutable. The name of a Google Managed Service ( https://cloud.google.com/service-infrastructure/docs/glossary#managed).
+     * If not specified, a new Service will automatically be created in the same project as this API.
+     * 
+     */
     @InputImport(name="managedService")
     private final @Nullable Input<String> managedService;
 
@@ -50,6 +71,10 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
         return this.managedService == null ? Input.empty() : this.managedService;
     }
 
+    /**
+     * The resource name of the API. Format 'projects/{{project}}/locations/global/apis/{{apiId}}'
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -57,6 +82,11 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

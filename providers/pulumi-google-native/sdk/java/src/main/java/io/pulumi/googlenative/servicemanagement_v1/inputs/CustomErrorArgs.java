@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Customize service error responses. For example, list any service specific protobuf types that can appear in error detail lists of error responses. Example: custom_error: types: - google.foo.v1.CustomError - google.foo.v1.AnotherError
+ * 
+ */
 public final class CustomErrorArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CustomErrorArgs Empty = new CustomErrorArgs();
 
+    /**
+     * The list of custom error rules that apply to individual API messages. **NOTE:** All service configuration rules follow "last one wins" order.
+     * 
+     */
     @InputImport(name="rules")
     private final @Nullable Input<List<CustomErrorRuleArgs>> rules;
 
@@ -23,6 +31,10 @@ public final class CustomErrorArgs extends io.pulumi.resources.ResourceArgs {
         return this.rules == null ? Input.empty() : this.rules;
     }
 
+    /**
+     * The list of custom error detail types, e.g. 'google.foo.v1.CustomError'.
+     * 
+     */
     @InputImport(name="types")
     private final @Nullable Input<List<String>> types;
 

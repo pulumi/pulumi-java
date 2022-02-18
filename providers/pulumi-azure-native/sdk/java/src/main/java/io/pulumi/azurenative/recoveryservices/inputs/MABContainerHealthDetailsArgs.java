@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * MAB workload-specific Health Details.
+ * 
+ */
 public final class MABContainerHealthDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MABContainerHealthDetailsArgs Empty = new MABContainerHealthDetailsArgs();
 
+    /**
+     * Health Code
+     * 
+     */
     @InputImport(name="code")
     private final @Nullable Input<Integer> code;
 
@@ -23,6 +31,10 @@ public final class MABContainerHealthDetailsArgs extends io.pulumi.resources.Res
         return this.code == null ? Input.empty() : this.code;
     }
 
+    /**
+     * Health Message
+     * 
+     */
     @InputImport(name="message")
     private final @Nullable Input<String> message;
 
@@ -30,6 +42,10 @@ public final class MABContainerHealthDetailsArgs extends io.pulumi.resources.Res
         return this.message == null ? Input.empty() : this.message;
     }
 
+    /**
+     * Health Recommended Actions
+     * 
+     */
     @InputImport(name="recommendations")
     private final @Nullable Input<List<String>> recommendations;
 
@@ -37,6 +53,10 @@ public final class MABContainerHealthDetailsArgs extends io.pulumi.resources.Res
         return this.recommendations == null ? Input.empty() : this.recommendations;
     }
 
+    /**
+     * Health Title
+     * 
+     */
     @InputImport(name="title")
     private final @Nullable Input<String> title;
 

@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRobot {
+/**
+ * AWS::RoboMaker::Robot resource creates an AWS RoboMaker fleet.
+ * 
+ */
     public static CompletableFuture<GetRobotResult> invokeAsync(GetRobotArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:robomaker:getRobot", TypeShape.of(GetRobotResult.class), args == null ? GetRobotArgs.Empty : args, Utilities.withVersion(options));
     }

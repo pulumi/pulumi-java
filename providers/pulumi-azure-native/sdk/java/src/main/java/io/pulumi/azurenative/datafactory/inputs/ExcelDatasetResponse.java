@@ -30,10 +30,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Excel dataset.
+ * 
+ */
 public final class ExcelDatasetResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ExcelDatasetResponse Empty = new ExcelDatasetResponse();
 
+    /**
+     * List of tags that can be used for describing the Dataset.
+     * 
+     */
     @InputImport(name="annotations")
     private final @Nullable List<Object> annotations;
 
@@ -41,6 +49,10 @@ public final class ExcelDatasetResponse extends io.pulumi.resources.InvokeArgs {
         return this.annotations == null ? List.of() : this.annotations;
     }
 
+    /**
+     * The data compression method used for the json dataset.
+     * 
+     */
     @InputImport(name="compression")
     private final @Nullable DatasetCompressionResponse compression;
 
@@ -48,6 +60,10 @@ public final class ExcelDatasetResponse extends io.pulumi.resources.InvokeArgs {
         return this.compression == null ? Optional.empty() : Optional.ofNullable(this.compression);
     }
 
+    /**
+     * Dataset description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -55,6 +71,10 @@ public final class ExcelDatasetResponse extends io.pulumi.resources.InvokeArgs {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * When used as input, treat the first row of data as headers. When used as output,write the headers into the output as the first row of data. The default value is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     @InputImport(name="firstRowAsHeader")
     private final @Nullable Object firstRowAsHeader;
 
@@ -62,6 +82,10 @@ public final class ExcelDatasetResponse extends io.pulumi.resources.InvokeArgs {
         return this.firstRowAsHeader == null ? Optional.empty() : Optional.ofNullable(this.firstRowAsHeader);
     }
 
+    /**
+     * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
+     * 
+     */
     @InputImport(name="folder")
     private final @Nullable DatasetResponseFolder folder;
 
@@ -69,6 +93,10 @@ public final class ExcelDatasetResponse extends io.pulumi.resources.InvokeArgs {
         return this.folder == null ? Optional.empty() : Optional.ofNullable(this.folder);
     }
 
+    /**
+     * Linked service reference.
+     * 
+     */
     @InputImport(name="linkedServiceName", required=true)
     private final LinkedServiceReferenceResponse linkedServiceName;
 
@@ -76,6 +104,10 @@ public final class ExcelDatasetResponse extends io.pulumi.resources.InvokeArgs {
         return this.linkedServiceName;
     }
 
+    /**
+     * The location of the excel storage.
+     * 
+     */
     @InputImport(name="location", required=true)
     private final Object location;
 
@@ -83,6 +115,10 @@ public final class ExcelDatasetResponse extends io.pulumi.resources.InvokeArgs {
         return this.location;
     }
 
+    /**
+     * The null value string. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="nullValue")
     private final @Nullable Object nullValue;
 
@@ -90,6 +126,10 @@ public final class ExcelDatasetResponse extends io.pulumi.resources.InvokeArgs {
         return this.nullValue == null ? Optional.empty() : Optional.ofNullable(this.nullValue);
     }
 
+    /**
+     * Parameters for dataset.
+     * 
+     */
     @InputImport(name="parameters")
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
@@ -97,6 +137,10 @@ public final class ExcelDatasetResponse extends io.pulumi.resources.InvokeArgs {
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
+    /**
+     * The partial data of one sheet. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="range")
     private final @Nullable Object range;
 
@@ -104,6 +148,10 @@ public final class ExcelDatasetResponse extends io.pulumi.resources.InvokeArgs {
         return this.range == null ? Optional.empty() : Optional.ofNullable(this.range);
     }
 
+    /**
+     * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
+     * 
+     */
     @InputImport(name="schema")
     private final @Nullable Object schema;
 
@@ -111,6 +159,10 @@ public final class ExcelDatasetResponse extends io.pulumi.resources.InvokeArgs {
         return this.schema == null ? Optional.empty() : Optional.ofNullable(this.schema);
     }
 
+    /**
+     * The sheet index of excel file and default value is 0. Type: integer (or Expression with resultType integer)
+     * 
+     */
     @InputImport(name="sheetIndex")
     private final @Nullable Object sheetIndex;
 
@@ -118,6 +170,10 @@ public final class ExcelDatasetResponse extends io.pulumi.resources.InvokeArgs {
         return this.sheetIndex == null ? Optional.empty() : Optional.ofNullable(this.sheetIndex);
     }
 
+    /**
+     * The sheet name of excel file. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="sheetName")
     private final @Nullable Object sheetName;
 
@@ -125,6 +181,10 @@ public final class ExcelDatasetResponse extends io.pulumi.resources.InvokeArgs {
         return this.sheetName == null ? Optional.empty() : Optional.ofNullable(this.sheetName);
     }
 
+    /**
+     * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
+     * 
+     */
     @InputImport(name="structure")
     private final @Nullable Object structure;
 
@@ -132,6 +192,11 @@ public final class ExcelDatasetResponse extends io.pulumi.resources.InvokeArgs {
         return this.structure == null ? Optional.empty() : Optional.ofNullable(this.structure);
     }
 
+    /**
+     * Type of dataset.
+     * Expected value is 'Excel'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

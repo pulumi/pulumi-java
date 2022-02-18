@@ -12,6 +12,10 @@ public final class GetNetworkSecurityPerimeterArgs extends io.pulumi.resources.I
 
     public static final GetNetworkSecurityPerimeterArgs Empty = new GetNetworkSecurityPerimeterArgs();
 
+    /**
+     * The name of the network security perimeter.
+     * 
+     */
     @InputImport(name="networkSecurityPerimeterName", required=true)
     private final String networkSecurityPerimeterName;
 
@@ -19,6 +23,10 @@ public final class GetNetworkSecurityPerimeterArgs extends io.pulumi.resources.I
         return this.networkSecurityPerimeterName;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

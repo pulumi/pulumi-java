@@ -16,6 +16,11 @@ public final class ResourcePolicySnapshotSchedulePolicyArgs extends io.pulumi.re
 
     public static final ResourcePolicySnapshotSchedulePolicyArgs Empty = new ResourcePolicySnapshotSchedulePolicyArgs();
 
+    /**
+     * Retention policy applied to snapshots created by this resource policy.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="retentionPolicy")
     private final @Nullable Input<ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs> retentionPolicy;
 
@@ -23,6 +28,10 @@ public final class ResourcePolicySnapshotSchedulePolicyArgs extends io.pulumi.re
         return this.retentionPolicy == null ? Input.empty() : this.retentionPolicy;
     }
 
+    /**
+     * Specifies the frequency for the operation, using the unix-cron format.
+     * 
+     */
     @InputImport(name="schedule", required=true)
     private final Input<ResourcePolicySnapshotSchedulePolicyScheduleArgs> schedule;
 
@@ -30,6 +39,11 @@ public final class ResourcePolicySnapshotSchedulePolicyArgs extends io.pulumi.re
         return this.schedule;
     }
 
+    /**
+     * Properties with which the snapshots are created, such as labels.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="snapshotProperties")
     private final @Nullable Input<ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs> snapshotProperties;
 

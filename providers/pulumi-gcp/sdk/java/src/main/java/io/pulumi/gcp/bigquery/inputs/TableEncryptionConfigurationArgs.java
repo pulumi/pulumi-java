@@ -14,6 +14,14 @@ public final class TableEncryptionConfigurationArgs extends io.pulumi.resources.
 
     public static final TableEncryptionConfigurationArgs Empty = new TableEncryptionConfigurationArgs();
 
+    /**
+     * The self link or full name of a key which should be used to
+     * encrypt this table.  Note that the default bigquery service account will need to have
+     * encrypt/decrypt permissions on this key - you may want to see the
+     * `gcp.bigquery.getDefaultServiceAccount` datasource and the
+     * `gcp.kms.CryptoKeyIAMBinding` resource.
+     * 
+     */
     @InputImport(name="kmsKeyName", required=true)
     private final Input<String> kmsKeyName;
 
@@ -21,6 +29,10 @@ public final class TableEncryptionConfigurationArgs extends io.pulumi.resources.
         return this.kmsKeyName;
     }
 
+    /**
+     * The self link or full name of the kms key version used to encrypt this table.
+     * 
+     */
     @InputImport(name="kmsKeyVersion")
     private final @Nullable Input<String> kmsKeyVersion;
 

@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAccessLevel {
+/**
+ * Gets an access level based on the resource name.
+ * 
+ */
     public static CompletableFuture<GetAccessLevelResult> invokeAsync(GetAccessLevelArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:accesscontextmanager/v1:getAccessLevel", TypeShape.of(GetAccessLevelResult.class), args == null ? GetAccessLevelArgs.Empty : args, Utilities.withVersion(options));
     }

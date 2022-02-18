@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class QosIpRangeResponse {
+    /**
+     * End IP Address.
+     * 
+     */
     private final @Nullable String endIP;
+    /**
+     * Start IP Address.
+     * 
+     */
     private final @Nullable String startIP;
 
     @OutputCustomType.Constructor({"endIP","startIP"})
@@ -22,9 +30,17 @@ public final class QosIpRangeResponse {
         this.startIP = startIP;
     }
 
+    /**
+     * End IP Address.
+     * 
+     */
     public Optional<String> getEndIP() {
         return Optional.ofNullable(this.endIP);
     }
+    /**
+     * Start IP Address.
+     * 
+     */
     public Optional<String> getStartIP() {
         return Optional.ofNullable(this.startIP);
     }

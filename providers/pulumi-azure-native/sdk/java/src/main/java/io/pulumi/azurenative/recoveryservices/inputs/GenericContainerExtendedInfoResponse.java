@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Container extended information
+ * 
+ */
 public final class GenericContainerExtendedInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GenericContainerExtendedInfoResponse Empty = new GenericContainerExtendedInfoResponse();
 
+    /**
+     * Container identity information
+     * 
+     */
     @InputImport(name="containerIdentityInfo")
     private final @Nullable ContainerIdentityInfoResponse containerIdentityInfo;
 
@@ -23,6 +31,10 @@ public final class GenericContainerExtendedInfoResponse extends io.pulumi.resour
         return this.containerIdentityInfo == null ? Optional.empty() : Optional.ofNullable(this.containerIdentityInfo);
     }
 
+    /**
+     * Public key of container cert
+     * 
+     */
     @InputImport(name="rawCertData")
     private final @Nullable String rawCertData;
 
@@ -30,6 +42,10 @@ public final class GenericContainerExtendedInfoResponse extends io.pulumi.resour
         return this.rawCertData == null ? Optional.empty() : Optional.ofNullable(this.rawCertData);
     }
 
+    /**
+     * Azure Backup Service Endpoints for the container
+     * 
+     */
     @InputImport(name="serviceEndpoints")
     private final @Nullable Map<String,String> serviceEndpoints;
 

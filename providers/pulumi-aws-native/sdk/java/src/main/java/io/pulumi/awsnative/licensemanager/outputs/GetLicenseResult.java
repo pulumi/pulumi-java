@@ -17,17 +17,45 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetLicenseResult {
+    /**
+     * Beneficiary of the license.
+     * 
+     */
     private final @Nullable String beneficiary;
     private final @Nullable LicenseConsumptionConfiguration consumptionConfiguration;
     private final @Nullable List<LicenseEntitlement> entitlements;
+    /**
+     * Home region for the created license.
+     * 
+     */
     private final @Nullable String homeRegion;
     private final @Nullable LicenseIssuerData issuer;
+    /**
+     * Amazon Resource Name is a unique name for each resource.
+     * 
+     */
     private final @Nullable String licenseArn;
     private final @Nullable List<LicenseMetadata> licenseMetadata;
+    /**
+     * Name for the created license.
+     * 
+     */
     private final @Nullable String licenseName;
+    /**
+     * Product name for the created license.
+     * 
+     */
     private final @Nullable String productName;
+    /**
+     * ProductSKU of the license.
+     * 
+     */
     private final @Nullable String productSKU;
     private final @Nullable LicenseValidityDateFormat validity;
+    /**
+     * The version of the license.
+     * 
+     */
     private final @Nullable String version;
 
     @OutputCustomType.Constructor({"beneficiary","consumptionConfiguration","entitlements","homeRegion","issuer","licenseArn","licenseMetadata","licenseName","productName","productSKU","validity","version"})
@@ -58,6 +86,10 @@ public final class GetLicenseResult {
         this.version = version;
     }
 
+    /**
+     * Beneficiary of the license.
+     * 
+     */
     public Optional<String> getBeneficiary() {
         return Optional.ofNullable(this.beneficiary);
     }
@@ -67,30 +99,54 @@ public final class GetLicenseResult {
     public List<LicenseEntitlement> getEntitlements() {
         return this.entitlements == null ? List.of() : this.entitlements;
     }
+    /**
+     * Home region for the created license.
+     * 
+     */
     public Optional<String> getHomeRegion() {
         return Optional.ofNullable(this.homeRegion);
     }
     public Optional<LicenseIssuerData> getIssuer() {
         return Optional.ofNullable(this.issuer);
     }
+    /**
+     * Amazon Resource Name is a unique name for each resource.
+     * 
+     */
     public Optional<String> getLicenseArn() {
         return Optional.ofNullable(this.licenseArn);
     }
     public List<LicenseMetadata> getLicenseMetadata() {
         return this.licenseMetadata == null ? List.of() : this.licenseMetadata;
     }
+    /**
+     * Name for the created license.
+     * 
+     */
     public Optional<String> getLicenseName() {
         return Optional.ofNullable(this.licenseName);
     }
+    /**
+     * Product name for the created license.
+     * 
+     */
     public Optional<String> getProductName() {
         return Optional.ofNullable(this.productName);
     }
+    /**
+     * ProductSKU of the license.
+     * 
+     */
     public Optional<String> getProductSKU() {
         return Optional.ofNullable(this.productSKU);
     }
     public Optional<LicenseValidityDateFormat> getValidity() {
         return Optional.ofNullable(this.validity);
     }
+    /**
+     * The version of the license.
+     * 
+     */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }

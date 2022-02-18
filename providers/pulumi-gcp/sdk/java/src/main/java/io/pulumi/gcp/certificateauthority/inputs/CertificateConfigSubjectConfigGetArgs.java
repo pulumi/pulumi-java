@@ -15,6 +15,11 @@ public final class CertificateConfigSubjectConfigGetArgs extends io.pulumi.resou
 
     public static final CertificateConfigSubjectConfigGetArgs Empty = new CertificateConfigSubjectConfigGetArgs();
 
+    /**
+     * Contains distinguished name fields such as the location and organization.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="subject", required=true)
     private final Input<CertificateConfigSubjectConfigSubjectGetArgs> subject;
 
@@ -22,6 +27,11 @@ public final class CertificateConfigSubjectConfigGetArgs extends io.pulumi.resou
         return this.subject;
     }
 
+    /**
+     * The subject alternative name fields.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="subjectAltName")
     private final @Nullable Input<CertificateConfigSubjectConfigSubjectAltNameGetArgs> subjectAltName;
 

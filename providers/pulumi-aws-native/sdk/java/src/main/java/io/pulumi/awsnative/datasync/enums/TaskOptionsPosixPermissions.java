@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * A value that determines which users or groups can access a file for a specific purpose such as reading, writing, or execution of the file.
+     * 
+     */
     @EnumType
     public enum TaskOptionsPosixPermissions {
         None("NONE"),

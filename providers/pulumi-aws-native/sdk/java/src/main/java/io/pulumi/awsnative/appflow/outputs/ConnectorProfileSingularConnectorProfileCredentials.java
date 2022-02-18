@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ConnectorProfileSingularConnectorProfileCredentials {
+    /**
+     * A unique alphanumeric identiﬁer used to authenticate a user, developer, or calling program to your API.
+     * 
+     */
     private final String apiKey;
 
     @OutputCustomType.Constructor({"apiKey"})
@@ -16,6 +20,10 @@ public final class ConnectorProfileSingularConnectorProfileCredentials {
         this.apiKey = Objects.requireNonNull(apiKey);
     }
 
+    /**
+     * A unique alphanumeric identiﬁer used to authenticate a user, developer, or calling program to your API.
+     * 
+     */
     public String getApiKey() {
         return this.apiKey;
     }

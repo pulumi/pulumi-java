@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Nested parameter definition.
+ * 
+ */
 public final class ModeValueInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ModeValueInfoResponse Empty = new ModeValueInfoResponse();
 
+    /**
+     * The interface string name for the nested parameter.
+     * 
+     */
     @InputImport(name="interfaceString")
     private final @Nullable String interfaceString;
 
@@ -23,6 +31,10 @@ public final class ModeValueInfoResponse extends io.pulumi.resources.InvokeArgs 
         return this.interfaceString == null ? Optional.empty() : Optional.ofNullable(this.interfaceString);
     }
 
+    /**
+     * The definition of the parameter.
+     * 
+     */
     @InputImport(name="parameters")
     private final @Nullable List<ModuleAssetParameterResponse> parameters;
 

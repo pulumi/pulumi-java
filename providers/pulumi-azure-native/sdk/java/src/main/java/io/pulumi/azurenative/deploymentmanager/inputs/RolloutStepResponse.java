@@ -14,10 +14,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines a specific step on a target service unit.
+ * 
+ */
 public final class RolloutStepResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RolloutStepResponse Empty = new RolloutStepResponse();
 
+    /**
+     * Supplementary informative messages during rollout.
+     * 
+     */
     @InputImport(name="messages", required=true)
     private final List<MessageResponse> messages;
 
@@ -25,6 +33,10 @@ public final class RolloutStepResponse extends io.pulumi.resources.InvokeArgs {
         return this.messages;
     }
 
+    /**
+     * Name of the step.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -32,6 +44,10 @@ public final class RolloutStepResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    /**
+     * Detailed information of specific action execution.
+     * 
+     */
     @InputImport(name="operationInfo", required=true)
     private final StepOperationInfoResponse operationInfo;
 
@@ -39,6 +55,10 @@ public final class RolloutStepResponse extends io.pulumi.resources.InvokeArgs {
         return this.operationInfo;
     }
 
+    /**
+     * Set of resource operations that were performed, if any, on an Azure resource.
+     * 
+     */
     @InputImport(name="resourceOperations", required=true)
     private final List<ResourceOperationResponse> resourceOperations;
 
@@ -46,6 +66,10 @@ public final class RolloutStepResponse extends io.pulumi.resources.InvokeArgs {
         return this.resourceOperations;
     }
 
+    /**
+     * Current state of the step.
+     * 
+     */
     @InputImport(name="status", required=true)
     private final String status;
 
@@ -53,6 +77,10 @@ public final class RolloutStepResponse extends io.pulumi.resources.InvokeArgs {
         return this.status;
     }
 
+    /**
+     * The step group the current step is part of.
+     * 
+     */
     @InputImport(name="stepGroup")
     private final @Nullable String stepGroup;
 

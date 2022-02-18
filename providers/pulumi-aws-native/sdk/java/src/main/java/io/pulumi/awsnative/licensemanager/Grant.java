@@ -13,6 +13,10 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * An example resource schema demonstrating some basic constructs and validation rules.
+ * 
+ */
 @ResourceType(type="aws-native:licensemanager:Grant")
 public class Grant extends io.pulumi.resources.CustomResource {
     @OutputExport(name="allowedOperations", type=List.class, parameters={String.class})
@@ -21,27 +25,59 @@ public class Grant extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ List<String>> getAllowedOperations() {
         return this.allowedOperations;
     }
+    /**
+     * Arn of the grant.
+     * 
+     */
     @OutputExport(name="grantArn", type=String.class, parameters={})
     private Output<String> grantArn;
 
+    /**
+     * @return Arn of the grant.
+     * 
+     */
     public Output<String> getGrantArn() {
         return this.grantArn;
     }
+    /**
+     * Name for the created Grant.
+     * 
+     */
     @OutputExport(name="grantName", type=String.class, parameters={})
     private Output</* @Nullable */ String> grantName;
 
+    /**
+     * @return Name for the created Grant.
+     * 
+     */
     public Output</* @Nullable */ String> getGrantName() {
         return this.grantName;
     }
+    /**
+     * Home region for the created grant.
+     * 
+     */
     @OutputExport(name="homeRegion", type=String.class, parameters={})
     private Output</* @Nullable */ String> homeRegion;
 
+    /**
+     * @return Home region for the created grant.
+     * 
+     */
     public Output</* @Nullable */ String> getHomeRegion() {
         return this.homeRegion;
     }
+    /**
+     * License Arn for the grant.
+     * 
+     */
     @OutputExport(name="licenseArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> licenseArn;
 
+    /**
+     * @return License Arn for the grant.
+     * 
+     */
     public Output</* @Nullable */ String> getLicenseArn() {
         return this.licenseArn;
     }
@@ -57,13 +93,27 @@ public class Grant extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getStatus() {
         return this.status;
     }
+    /**
+     * The version of the grant.
+     * 
+     */
     @OutputExport(name="version", type=String.class, parameters={})
     private Output<String> version;
 
+    /**
+     * @return The version of the grant.
+     * 
+     */
     public Output<String> getVersion() {
         return this.version;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Grant(String name, @Nullable GrantArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:licensemanager:Grant", name, args == null ? GrantArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -79,6 +129,14 @@ public class Grant extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Grant get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Grant(name, id, options);
     }

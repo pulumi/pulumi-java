@@ -17,6 +17,10 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
 
     public static final DomainMappingState Empty = new DomainMappingState();
 
+    /**
+     * Relative name of the domain serving the application. Example: example.com.
+     * 
+     */
     @InputImport(name="domainName")
     private final @Nullable Input<String> domainName;
 
@@ -24,6 +28,10 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
         return this.domainName == null ? Input.empty() : this.domainName;
     }
 
+    /**
+     * Full path to the DomainMapping resource in the API. Example: apps/myapp/domainMapping/example.com.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -31,6 +39,13 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Whether the domain creation should override any existing mappings for this domain.
+     * By default, overrides are rejected.
+     * Default value is `STRICT`.
+     * Possible values are `STRICT` and `OVERRIDE`.
+     * 
+     */
     @InputImport(name="overrideStrategy")
     private final @Nullable Input<String> overrideStrategy;
 
@@ -38,6 +53,11 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
         return this.overrideStrategy == null ? Input.empty() : this.overrideStrategy;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -45,6 +65,11 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The resource records required to configure this domain mapping. These records must be added to the domain's DNS
+     * configuration in order to serve the application via this domain mapping.
+     * 
+     */
     @InputImport(name="resourceRecords")
     private final @Nullable Input<List<DomainMappingResourceRecordGetArgs>> resourceRecords;
 
@@ -52,6 +77,11 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
         return this.resourceRecords == null ? Input.empty() : this.resourceRecords;
     }
 
+    /**
+     * SSL configuration for this domain. If unconfigured, this domain will not serve with SSL.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="sslSettings")
     private final @Nullable Input<DomainMappingSslSettingsGetArgs> sslSettings;
 

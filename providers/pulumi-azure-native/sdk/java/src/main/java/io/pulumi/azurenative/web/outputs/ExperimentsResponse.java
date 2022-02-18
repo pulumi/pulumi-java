@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ExperimentsResponse {
+    /**
+     * List of ramp-up rules.
+     * 
+     */
     private final @Nullable List<RampUpRuleResponse> rampUpRules;
 
     @OutputCustomType.Constructor({"rampUpRules"})
@@ -18,6 +22,10 @@ public final class ExperimentsResponse {
         this.rampUpRules = rampUpRules;
     }
 
+    /**
+     * List of ramp-up rules.
+     * 
+     */
     public List<RampUpRuleResponse> getRampUpRules() {
         return this.rampUpRules == null ? List.of() : this.rampUpRules;
     }

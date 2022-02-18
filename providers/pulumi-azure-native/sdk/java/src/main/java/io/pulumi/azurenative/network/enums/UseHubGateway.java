@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Flag if need to use hub gateway.
+     * 
+     */
     @EnumType
     public enum UseHubGateway {
         False("False"),

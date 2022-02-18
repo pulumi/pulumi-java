@@ -15,9 +15,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TemplateResponse {
+    /**
+     * List of container definitions for the Container App.
+     * 
+     */
     private final @Nullable List<ContainerResponse> containers;
+    /**
+     * Dapr configuration for the Container App.
+     * 
+     */
     private final @Nullable DaprResponse dapr;
+    /**
+     * User friendly suffix that is appended to the revision name
+     * 
+     */
     private final @Nullable String revisionSuffix;
+    /**
+     * Scaling properties for the Container App.
+     * 
+     */
     private final @Nullable ScaleResponse scale;
 
     @OutputCustomType.Constructor({"containers","dapr","revisionSuffix","scale"})
@@ -32,15 +48,31 @@ public final class TemplateResponse {
         this.scale = scale;
     }
 
+    /**
+     * List of container definitions for the Container App.
+     * 
+     */
     public List<ContainerResponse> getContainers() {
         return this.containers == null ? List.of() : this.containers;
     }
+    /**
+     * Dapr configuration for the Container App.
+     * 
+     */
     public Optional<DaprResponse> getDapr() {
         return Optional.ofNullable(this.dapr);
     }
+    /**
+     * User friendly suffix that is appended to the revision name
+     * 
+     */
     public Optional<String> getRevisionSuffix() {
         return Optional.ofNullable(this.revisionSuffix);
     }
+    /**
+     * Scaling properties for the Container App.
+     * 
+     */
     public Optional<ScaleResponse> getScale() {
         return Optional.ofNullable(this.scale);
     }

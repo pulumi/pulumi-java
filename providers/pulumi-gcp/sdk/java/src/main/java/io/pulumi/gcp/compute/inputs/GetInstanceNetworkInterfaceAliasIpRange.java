@@ -12,6 +12,10 @@ public final class GetInstanceNetworkInterfaceAliasIpRange extends io.pulumi.res
 
     public static final GetInstanceNetworkInterfaceAliasIpRange Empty = new GetInstanceNetworkInterfaceAliasIpRange();
 
+    /**
+     * The IP CIDR range represented by this alias IP range.
+     * 
+     */
     @InputImport(name="ipCidrRange", required=true)
     private final String ipCidrRange;
 
@@ -19,6 +23,12 @@ public final class GetInstanceNetworkInterfaceAliasIpRange extends io.pulumi.res
         return this.ipCidrRange;
     }
 
+    /**
+     * The subnetwork secondary range name specifying
+     * the secondary range from which to allocate the IP CIDR range for this alias IP
+     * range.
+     * 
+     */
     @InputImport(name="subnetworkRangeName", required=true)
     private final String subnetworkRangeName;
 

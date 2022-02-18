@@ -15,6 +15,10 @@ public final class FolderSinkExclusionGetArgs extends io.pulumi.resources.Resour
 
     public static final FolderSinkExclusionGetArgs Empty = new FolderSinkExclusionGetArgs();
 
+    /**
+     * A description of this exclusion.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -22,6 +26,10 @@ public final class FolderSinkExclusionGetArgs extends io.pulumi.resources.Resour
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * If set to True, then this exclusion is disabled and it does not exclude any log entries.
+     * 
+     */
     @InputImport(name="disabled")
     private final @Nullable Input<Boolean> disabled;
 
@@ -29,6 +37,11 @@ public final class FolderSinkExclusionGetArgs extends io.pulumi.resources.Resour
         return this.disabled == null ? Input.empty() : this.disabled;
     }
 
+    /**
+     * An advanced logs filter that matches the log entries to be excluded. By using the sample function, you can exclude less than 100% of the matching log entries. See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced_filters) for information on how to
+     * write a filter.
+     * 
+     */
     @InputImport(name="filter", required=true)
     private final Input<String> filter;
 
@@ -36,6 +49,10 @@ public final class FolderSinkExclusionGetArgs extends io.pulumi.resources.Resour
         return this.filter;
     }
 
+    /**
+     * A client-assigned identifier, such as `load-balancer-exclusion`. Identifiers are limited to 100 characters and can include only letters, digits, underscores, hyphens, and periods. First character has to be alphanumeric.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

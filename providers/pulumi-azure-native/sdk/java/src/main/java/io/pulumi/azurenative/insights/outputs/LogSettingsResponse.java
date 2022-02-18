@@ -13,8 +13,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class LogSettingsResponse {
+    /**
+     * Name of a Diagnostic Log category for a resource type this setting is applied to. To obtain the list of Diagnostic Log categories for a resource, first perform a GET diagnostic settings operation.
+     * 
+     */
     private final @Nullable String category;
+    /**
+     * a value indicating whether this log is enabled.
+     * 
+     */
     private final Boolean enabled;
+    /**
+     * the retention policy for this log.
+     * 
+     */
     private final @Nullable RetentionPolicyResponse retentionPolicy;
 
     @OutputCustomType.Constructor({"category","enabled","retentionPolicy"})
@@ -27,12 +39,24 @@ public final class LogSettingsResponse {
         this.retentionPolicy = retentionPolicy;
     }
 
+    /**
+     * Name of a Diagnostic Log category for a resource type this setting is applied to. To obtain the list of Diagnostic Log categories for a resource, first perform a GET diagnostic settings operation.
+     * 
+     */
     public Optional<String> getCategory() {
         return Optional.ofNullable(this.category);
     }
+    /**
+     * a value indicating whether this log is enabled.
+     * 
+     */
     public Boolean getEnabled() {
         return this.enabled;
     }
+    /**
+     * the retention policy for this log.
+     * 
+     */
     public Optional<RetentionPolicyResponse> getRetentionPolicy() {
         return Optional.ofNullable(this.retentionPolicy);
     }

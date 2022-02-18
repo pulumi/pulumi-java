@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The mode of the stream
+     * 
+     */
     @EnumType
     public enum StreamModeDetailsStreamMode {
         OnDemand("ON_DEMAND"),

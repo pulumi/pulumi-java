@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRouteCalculator {
+/**
+ * Definition of AWS::Location::RouteCalculator Resource Type
+ * 
+ */
     public static CompletableFuture<GetRouteCalculatorResult> invokeAsync(GetRouteCalculatorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:location:getRouteCalculator", TypeShape.of(GetRouteCalculatorResult.class), args == null ? GetRouteCalculatorArgs.Empty : args, Utilities.withVersion(options));
     }

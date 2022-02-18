@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigResponse {
+    /**
+     * An email address to send alerts to.
+     * 
+     */
     private final String email;
+    /**
+     * A number between 0 and 1 that describes a minimum mean average precision threshold. When the evaluation job runs, if it calculates that your model version's predictions from the recent interval have meanAveragePrecision below this threshold, then it sends an alert to your specified email.
+     * 
+     */
     private final Double minAcceptableMeanAveragePrecision;
 
     @OutputCustomType.Constructor({"email","minAcceptableMeanAveragePrecision"})
@@ -21,9 +29,17 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigRespons
         this.minAcceptableMeanAveragePrecision = Objects.requireNonNull(minAcceptableMeanAveragePrecision);
     }
 
+    /**
+     * An email address to send alerts to.
+     * 
+     */
     public String getEmail() {
         return this.email;
     }
+    /**
+     * A number between 0 and 1 that describes a minimum mean average precision threshold. When the evaluation job runs, if it calculates that your model version's predictions from the recent interval have meanAveragePrecision below this threshold, then it sends an alert to your specified email.
+     * 
+     */
     public Double getMinAcceptableMeanAveragePrecision() {
         return this.minAcceptableMeanAveragePrecision;
     }

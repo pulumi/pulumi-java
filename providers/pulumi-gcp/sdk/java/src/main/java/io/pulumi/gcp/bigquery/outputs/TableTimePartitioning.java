@@ -13,9 +13,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TableTimePartitioning {
+    /**
+     * Number of milliseconds for which to keep the
+     * storage for a partition.
+     * 
+     */
     private final @Nullable Integer expirationMs;
+    /**
+     * The field used to determine how to create a range-based
+     * partition.
+     * 
+     */
     private final @Nullable String field;
+    /**
+     * If set to true, queries over this table
+     * require a partition filter that can be used for partition elimination to be
+     * specified.
+     * 
+     */
     private final @Nullable Boolean requirePartitionFilter;
+    /**
+     * The supported types are DAY, HOUR, MONTH, and YEAR,
+     * which will generate one partition per day, hour, month, and year, respectively.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"expirationMs","field","requirePartitionFilter","type"})
@@ -30,15 +51,36 @@ public final class TableTimePartitioning {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Number of milliseconds for which to keep the
+     * storage for a partition.
+     * 
+     */
     public Optional<Integer> getExpirationMs() {
         return Optional.ofNullable(this.expirationMs);
     }
+    /**
+     * The field used to determine how to create a range-based
+     * partition.
+     * 
+     */
     public Optional<String> getField() {
         return Optional.ofNullable(this.field);
     }
+    /**
+     * If set to true, queries over this table
+     * require a partition filter that can be used for partition elimination to be
+     * specified.
+     * 
+     */
     public Optional<Boolean> getRequirePartitionFilter() {
         return Optional.ofNullable(this.requirePartitionFilter);
     }
+    /**
+     * The supported types are DAY, HOUR, MONTH, and YEAR,
+     * which will generate one partition per day, hour, month, and year, respectively.
+     * 
+     */
     public String getType() {
         return this.type;
     }

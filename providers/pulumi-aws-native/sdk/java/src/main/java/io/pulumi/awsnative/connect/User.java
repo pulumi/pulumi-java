@@ -16,75 +16,173 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Resource Type definition for AWS::Connect::User
+ * 
+ */
 @ResourceType(type="aws-native:connect:User")
 public class User extends io.pulumi.resources.CustomResource {
+    /**
+     * The identifier of the user account in the directory used for identity management.
+     * 
+     */
     @OutputExport(name="directoryUserId", type=String.class, parameters={})
     private Output</* @Nullable */ String> directoryUserId;
 
+    /**
+     * @return The identifier of the user account in the directory used for identity management.
+     * 
+     */
     public Output</* @Nullable */ String> getDirectoryUserId() {
         return this.directoryUserId;
     }
+    /**
+     * The identifier of the hierarchy group for the user.
+     * 
+     */
     @OutputExport(name="hierarchyGroupArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> hierarchyGroupArn;
 
+    /**
+     * @return The identifier of the hierarchy group for the user.
+     * 
+     */
     public Output</* @Nullable */ String> getHierarchyGroupArn() {
         return this.hierarchyGroupArn;
     }
+    /**
+     * The information about the identity of the user.
+     * 
+     */
     @OutputExport(name="identityInfo", type=UserIdentityInfo.class, parameters={})
     private Output</* @Nullable */ UserIdentityInfo> identityInfo;
 
+    /**
+     * @return The information about the identity of the user.
+     * 
+     */
     public Output</* @Nullable */ UserIdentityInfo> getIdentityInfo() {
         return this.identityInfo;
     }
+    /**
+     * The identifier of the Amazon Connect instance.
+     * 
+     */
     @OutputExport(name="instanceArn", type=String.class, parameters={})
     private Output<String> instanceArn;
 
+    /**
+     * @return The identifier of the Amazon Connect instance.
+     * 
+     */
     public Output<String> getInstanceArn() {
         return this.instanceArn;
     }
+    /**
+     * The password for the user account. A password is required if you are using Amazon Connect for identity management. Otherwise, it is an error to include a password.
+     * 
+     */
     @OutputExport(name="password", type=String.class, parameters={})
     private Output</* @Nullable */ String> password;
 
+    /**
+     * @return The password for the user account. A password is required if you are using Amazon Connect for identity management. Otherwise, it is an error to include a password.
+     * 
+     */
     public Output</* @Nullable */ String> getPassword() {
         return this.password;
     }
+    /**
+     * The phone settings for the user.
+     * 
+     */
     @OutputExport(name="phoneConfig", type=UserPhoneConfig.class, parameters={})
     private Output<UserPhoneConfig> phoneConfig;
 
+    /**
+     * @return The phone settings for the user.
+     * 
+     */
     public Output<UserPhoneConfig> getPhoneConfig() {
         return this.phoneConfig;
     }
+    /**
+     * The identifier of the routing profile for the user.
+     * 
+     */
     @OutputExport(name="routingProfileArn", type=String.class, parameters={})
     private Output<String> routingProfileArn;
 
+    /**
+     * @return The identifier of the routing profile for the user.
+     * 
+     */
     public Output<String> getRoutingProfileArn() {
         return this.routingProfileArn;
     }
+    /**
+     * One or more security profile arns for the user
+     * 
+     */
     @OutputExport(name="securityProfileArns", type=List.class, parameters={String.class})
     private Output<List<String>> securityProfileArns;
 
+    /**
+     * @return One or more security profile arns for the user
+     * 
+     */
     public Output<List<String>> getSecurityProfileArns() {
         return this.securityProfileArns;
     }
+    /**
+     * One or more tags.
+     * 
+     */
     @OutputExport(name="tags", type=List.class, parameters={UserTag.class})
     private Output</* @Nullable */ List<UserTag>> tags;
 
+    /**
+     * @return One or more tags.
+     * 
+     */
     public Output</* @Nullable */ List<UserTag>> getTags() {
         return this.tags;
     }
+    /**
+     * The Amazon Resource Name (ARN) for the user.
+     * 
+     */
     @OutputExport(name="userArn", type=String.class, parameters={})
     private Output<String> userArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) for the user.
+     * 
+     */
     public Output<String> getUserArn() {
         return this.userArn;
     }
+    /**
+     * The user name for the account.
+     * 
+     */
     @OutputExport(name="username", type=String.class, parameters={})
     private Output<String> username;
 
+    /**
+     * @return The user name for the account.
+     * 
+     */
     public Output<String> getUsername() {
         return this.username;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public User(String name, UserArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:connect:User", name, args == null ? UserArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -100,6 +198,14 @@ public class User extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static User get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new User(name, id, options);
     }

@@ -11,6 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The managed scaling settings for the Auto Scaling group capacity provider.
+ * 
+ */
 public final class CapacityProviderManagedScaling extends io.pulumi.resources.InvokeArgs {
 
     public static final CapacityProviderManagedScaling Empty = new CapacityProviderManagedScaling();

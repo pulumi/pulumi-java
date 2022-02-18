@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Customer-initiated diagnostic log collection storage properties
+ * 
+ */
 public final class DiagnosticStoragePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DiagnosticStoragePropertiesResponse Empty = new DiagnosticStoragePropertiesResponse();
 
+    /**
+     * Authentication Type
+     * 
+     */
     @InputImport(name="authenticationType", required=true)
     private final String authenticationType;
 
@@ -21,6 +29,10 @@ public final class DiagnosticStoragePropertiesResponse extends io.pulumi.resourc
         return this.authenticationType;
     }
 
+    /**
+     * ConnectionString of the diagnostic storage account
+     * 
+     */
     @InputImport(name="connectionString")
     private final @Nullable String connectionString;
 
@@ -28,6 +40,10 @@ public final class DiagnosticStoragePropertiesResponse extends io.pulumi.resourc
         return this.connectionString == null ? Optional.empty() : Optional.ofNullable(this.connectionString);
     }
 
+    /**
+     * ResourceId of the diagnostic storage account
+     * 
+     */
     @InputImport(name="resourceId", required=true)
     private final String resourceId;
 

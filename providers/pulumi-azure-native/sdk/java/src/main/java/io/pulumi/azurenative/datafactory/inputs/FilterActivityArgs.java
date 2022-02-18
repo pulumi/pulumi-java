@@ -14,10 +14,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Filter and return results from input array based on the conditions.
+ * 
+ */
 public final class FilterActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FilterActivityArgs Empty = new FilterActivityArgs();
 
+    /**
+     * Condition to be used for filtering the input.
+     * 
+     */
     @InputImport(name="condition", required=true)
     private final Input<ExpressionArgs> condition;
 
@@ -25,6 +33,10 @@ public final class FilterActivityArgs extends io.pulumi.resources.ResourceArgs {
         return this.condition;
     }
 
+    /**
+     * Activity depends on condition.
+     * 
+     */
     @InputImport(name="dependsOn")
     private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
 
@@ -32,6 +44,10 @@ public final class FilterActivityArgs extends io.pulumi.resources.ResourceArgs {
         return this.dependsOn == null ? Input.empty() : this.dependsOn;
     }
 
+    /**
+     * Activity description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -39,6 +55,10 @@ public final class FilterActivityArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Input array on which filter should be applied.
+     * 
+     */
     @InputImport(name="items", required=true)
     private final Input<ExpressionArgs> items;
 
@@ -46,6 +66,10 @@ public final class FilterActivityArgs extends io.pulumi.resources.ResourceArgs {
         return this.items;
     }
 
+    /**
+     * Activity name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -53,6 +77,11 @@ public final class FilterActivityArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
+    /**
+     * Type of activity.
+     * Expected value is 'Filter'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -60,6 +89,10 @@ public final class FilterActivityArgs extends io.pulumi.resources.ResourceArgs {
         return this.type;
     }
 
+    /**
+     * Activity user properties.
+     * 
+     */
     @InputImport(name="userProperties")
     private final @Nullable Input<List<UserPropertyArgs>> userProperties;
 

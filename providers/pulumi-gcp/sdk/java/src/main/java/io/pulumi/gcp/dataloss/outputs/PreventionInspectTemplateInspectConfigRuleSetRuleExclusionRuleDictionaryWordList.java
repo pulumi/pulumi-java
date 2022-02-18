@@ -10,6 +10,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryWordList {
+    /**
+     * Words or phrases defining the dictionary. The dictionary must contain at least one
+     * phrase and every phrase must contain at least 2 characters that are letters or digits.
+     * 
+     */
     private final List<String> words;
 
     @OutputCustomType.Constructor({"words"})
@@ -17,6 +22,11 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
         this.words = Objects.requireNonNull(words);
     }
 
+    /**
+     * Words or phrases defining the dictionary. The dictionary must contain at least one
+     * phrase and every phrase must contain at least 2 characters that are letters or digits.
+     * 
+     */
     public List<String> getWords() {
         return this.words;
     }

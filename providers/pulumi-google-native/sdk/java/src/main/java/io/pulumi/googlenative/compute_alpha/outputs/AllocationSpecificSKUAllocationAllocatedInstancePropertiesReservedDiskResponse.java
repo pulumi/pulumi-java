@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse {
+    /**
+     * Specifies the size of the disk in base-2 GB.
+     * 
+     */
     private final String diskSizeGb;
+    /**
+     * Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance.
+     * 
+     */
     private final String $interface;
 
     @OutputCustomType.Constructor({"diskSizeGb","$interface"})
@@ -20,9 +28,17 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
         this.$interface = Objects.requireNonNull($interface);
     }
 
+    /**
+     * Specifies the size of the disk in base-2 GB.
+     * 
+     */
     public String getDiskSizeGb() {
         return this.diskSizeGb;
     }
+    /**
+     * Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance.
+     * 
+     */
     public String get$interface() {
         return this.$interface;
     }

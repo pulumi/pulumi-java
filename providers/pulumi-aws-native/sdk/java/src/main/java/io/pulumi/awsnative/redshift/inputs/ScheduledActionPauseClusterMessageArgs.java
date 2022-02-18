@@ -9,6 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Describes a pause cluster operation. For example, a scheduled action to run the `PauseCluster` API operation.
+ * 
+ */
 public final class ScheduledActionPauseClusterMessageArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ScheduledActionPauseClusterMessageArgs Empty = new ScheduledActionPauseClusterMessageArgs();

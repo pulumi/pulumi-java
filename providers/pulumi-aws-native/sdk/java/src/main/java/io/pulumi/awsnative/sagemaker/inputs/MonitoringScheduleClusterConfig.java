@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Configuration for the cluster used to run model monitoring jobs.
+ * 
+ */
 public final class MonitoringScheduleClusterConfig extends io.pulumi.resources.InvokeArgs {
 
     public static final MonitoringScheduleClusterConfig Empty = new MonitoringScheduleClusterConfig();
 
+    /**
+     * The number of ML compute instances to use in the model monitoring job. For distributed processing jobs, specify a value greater than 1. The default value is 1.
+     * 
+     */
     @InputImport(name="instanceCount", required=true)
     private final Integer instanceCount;
 
@@ -22,6 +30,10 @@ public final class MonitoringScheduleClusterConfig extends io.pulumi.resources.I
         return this.instanceCount;
     }
 
+    /**
+     * The ML compute instance type for the processing job.
+     * 
+     */
     @InputImport(name="instanceType", required=true)
     private final String instanceType;
 
@@ -29,6 +41,10 @@ public final class MonitoringScheduleClusterConfig extends io.pulumi.resources.I
         return this.instanceType;
     }
 
+    /**
+     * The AWS Key Management Service (AWS KMS) key that Amazon SageMaker uses to encrypt data on the storage volume attached to the ML compute instance(s) that run the model monitoring job.
+     * 
+     */
     @InputImport(name="volumeKmsKeyId")
     private final @Nullable String volumeKmsKeyId;
 
@@ -36,6 +52,10 @@ public final class MonitoringScheduleClusterConfig extends io.pulumi.resources.I
         return this.volumeKmsKeyId == null ? Optional.empty() : Optional.ofNullable(this.volumeKmsKeyId);
     }
 
+    /**
+     * The size of the ML storage volume, in gigabytes, that you want to provision. You must specify sufficient ML storage for your scenario.
+     * 
+     */
     @InputImport(name="volumeSizeInGB", required=true)
     private final Integer volumeSizeInGB;
 

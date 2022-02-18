@@ -17,6 +17,11 @@ public final class PreventionJobTriggerInspectJobStorageConfigArgs extends io.pu
 
     public static final PreventionJobTriggerInspectJobStorageConfigArgs Empty = new PreventionJobTriggerInspectJobStorageConfigArgs();
 
+    /**
+     * Options defining BigQuery table and row identifiers.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="bigQueryOptions")
     private final @Nullable Input<PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsArgs> bigQueryOptions;
 
@@ -24,6 +29,11 @@ public final class PreventionJobTriggerInspectJobStorageConfigArgs extends io.pu
         return this.bigQueryOptions == null ? Input.empty() : this.bigQueryOptions;
     }
 
+    /**
+     * Options defining a file or a set of files within a Google Cloud Storage bucket.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="cloudStorageOptions")
     private final @Nullable Input<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsArgs> cloudStorageOptions;
 
@@ -31,6 +41,11 @@ public final class PreventionJobTriggerInspectJobStorageConfigArgs extends io.pu
         return this.cloudStorageOptions == null ? Input.empty() : this.cloudStorageOptions;
     }
 
+    /**
+     * Options defining a data set within Google Cloud Datastore.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="datastoreOptions")
     private final @Nullable Input<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsArgs> datastoreOptions;
 
@@ -38,6 +53,11 @@ public final class PreventionJobTriggerInspectJobStorageConfigArgs extends io.pu
         return this.datastoreOptions == null ? Input.empty() : this.datastoreOptions;
     }
 
+    /**
+     * Information on where to inspect
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="timespanConfig")
     private final @Nullable Input<PreventionJobTriggerInspectJobStorageConfigTimespanConfigArgs> timespanConfig;
 

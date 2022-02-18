@@ -15,6 +15,10 @@ public final class AccountAuditConfigurationAuditNotificationTarget extends io.p
 
     public static final AccountAuditConfigurationAuditNotificationTarget Empty = new AccountAuditConfigurationAuditNotificationTarget();
 
+    /**
+     * True if notifications to the target are enabled.
+     * 
+     */
     @InputImport(name="enabled")
     private final @Nullable Boolean enabled;
 
@@ -22,6 +26,10 @@ public final class AccountAuditConfigurationAuditNotificationTarget extends io.p
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
+    /**
+     * The ARN of the role that grants permission to send notifications to the target.
+     * 
+     */
     @InputImport(name="roleArn")
     private final @Nullable String roleArn;
 
@@ -29,6 +37,10 @@ public final class AccountAuditConfigurationAuditNotificationTarget extends io.p
         return this.roleArn == null ? Optional.empty() : Optional.ofNullable(this.roleArn);
     }
 
+    /**
+     * The ARN of the target (SNS topic) to which audit notifications are sent.
+     * 
+     */
     @InputImport(name="targetArn")
     private final @Nullable String targetArn;
 

@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The parameters to provide for the Sms channel.
+ * 
+ */
 public final class SmsChannelPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SmsChannelPropertiesArgs Empty = new SmsChannelPropertiesArgs();
 
+    /**
+     * The Sms account SID. Value only returned through POST to the action Channel List API, otherwise empty.
+     * 
+     */
     @InputImport(name="accountSID", required=true)
     private final Input<String> accountSID;
 
@@ -22,6 +30,10 @@ public final class SmsChannelPropertiesArgs extends io.pulumi.resources.Resource
         return this.accountSID;
     }
 
+    /**
+     * The Sms auth token. Value only returned through POST to the action Channel List API, otherwise empty.
+     * 
+     */
     @InputImport(name="authToken")
     private final @Nullable Input<String> authToken;
 
@@ -29,6 +41,10 @@ public final class SmsChannelPropertiesArgs extends io.pulumi.resources.Resource
         return this.authToken == null ? Input.empty() : this.authToken;
     }
 
+    /**
+     * Whether this channel is enabled for the bot
+     * 
+     */
     @InputImport(name="isEnabled", required=true)
     private final Input<Boolean> isEnabled;
 
@@ -36,6 +52,10 @@ public final class SmsChannelPropertiesArgs extends io.pulumi.resources.Resource
         return this.isEnabled;
     }
 
+    /**
+     * Whether this channel is validated for the bot
+     * 
+     */
     @InputImport(name="isValidated")
     private final @Nullable Input<Boolean> isValidated;
 
@@ -43,6 +63,10 @@ public final class SmsChannelPropertiesArgs extends io.pulumi.resources.Resource
         return this.isValidated == null ? Input.empty() : this.isValidated;
     }
 
+    /**
+     * The Sms phone
+     * 
+     */
     @InputImport(name="phone", required=true)
     private final Input<String> phone;
 

@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSchemaVersionMetadata {
+/**
+ * This resource adds Key-Value metadata to a Schema version of Glue Schema Registry.
+ * 
+ */
     public static CompletableFuture<GetSchemaVersionMetadataResult> invokeAsync(GetSchemaVersionMetadataArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:glue:getSchemaVersionMetadata", TypeShape.of(GetSchemaVersionMetadataResult.class), args == null ? GetSchemaVersionMetadataArgs.Empty : args, Utilities.withVersion(options));
     }

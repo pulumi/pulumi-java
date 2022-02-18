@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes the properties for producing a collection of GOP aligned multi-bitrate files. The default behavior is to produce one output file for each video layer which is muxed together with all the audios. The exact output files produced can be controlled by specifying the outputFiles collection.
+ * 
+ */
 public final class MultiBitrateFormatResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MultiBitrateFormatResponse Empty = new MultiBitrateFormatResponse();
 
+    /**
+     * The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. {Resolution} - The video resolution. Any unsubstituted macros will be collapsed and removed from the filename.
+     * 
+     */
     @InputImport(name="filenamePattern", required=true)
     private final String filenamePattern;
 
@@ -23,6 +31,11 @@ public final class MultiBitrateFormatResponse extends io.pulumi.resources.Invoke
         return this.filenamePattern;
     }
 
+    /**
+     * The discriminator for derived types.
+     * Expected value is '#Microsoft.Media.MultiBitrateFormat'.
+     * 
+     */
     @InputImport(name="odataType", required=true)
     private final String odataType;
 
@@ -30,6 +43,10 @@ public final class MultiBitrateFormatResponse extends io.pulumi.resources.Invoke
         return this.odataType;
     }
 
+    /**
+     * The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .
+     * 
+     */
     @InputImport(name="outputFiles")
     private final @Nullable List<OutputFileResponse> outputFiles;
 

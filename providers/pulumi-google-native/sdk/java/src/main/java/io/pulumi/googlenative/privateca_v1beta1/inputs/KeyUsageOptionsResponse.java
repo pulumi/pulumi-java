@@ -8,10 +8,18 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
+/**
+ * KeyUsage.KeyUsageOptions corresponds to the key usage values described in https://tools.ietf.org/html/rfc5280#section-4.2.1.3.
+ * 
+ */
 public final class KeyUsageOptionsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final KeyUsageOptionsResponse Empty = new KeyUsageOptionsResponse();
 
+    /**
+     * The key may be used to sign certificates.
+     * 
+     */
     @InputImport(name="certSign", required=true)
     private final Boolean certSign;
 
@@ -19,6 +27,10 @@ public final class KeyUsageOptionsResponse extends io.pulumi.resources.InvokeArg
         return this.certSign;
     }
 
+    /**
+     * The key may be used for cryptographic commitments. Note that this may also be referred to as "non-repudiation".
+     * 
+     */
     @InputImport(name="contentCommitment", required=true)
     private final Boolean contentCommitment;
 
@@ -26,6 +38,10 @@ public final class KeyUsageOptionsResponse extends io.pulumi.resources.InvokeArg
         return this.contentCommitment;
     }
 
+    /**
+     * The key may be used sign certificate revocation lists.
+     * 
+     */
     @InputImport(name="crlSign", required=true)
     private final Boolean crlSign;
 
@@ -33,6 +49,10 @@ public final class KeyUsageOptionsResponse extends io.pulumi.resources.InvokeArg
         return this.crlSign;
     }
 
+    /**
+     * The key may be used to encipher data.
+     * 
+     */
     @InputImport(name="dataEncipherment", required=true)
     private final Boolean dataEncipherment;
 
@@ -40,6 +60,10 @@ public final class KeyUsageOptionsResponse extends io.pulumi.resources.InvokeArg
         return this.dataEncipherment;
     }
 
+    /**
+     * The key may be used to decipher only.
+     * 
+     */
     @InputImport(name="decipherOnly", required=true)
     private final Boolean decipherOnly;
 
@@ -47,6 +71,10 @@ public final class KeyUsageOptionsResponse extends io.pulumi.resources.InvokeArg
         return this.decipherOnly;
     }
 
+    /**
+     * The key may be used for digital signatures.
+     * 
+     */
     @InputImport(name="digitalSignature", required=true)
     private final Boolean digitalSignature;
 
@@ -54,6 +82,10 @@ public final class KeyUsageOptionsResponse extends io.pulumi.resources.InvokeArg
         return this.digitalSignature;
     }
 
+    /**
+     * The key may be used to encipher only.
+     * 
+     */
     @InputImport(name="encipherOnly", required=true)
     private final Boolean encipherOnly;
 
@@ -61,6 +93,10 @@ public final class KeyUsageOptionsResponse extends io.pulumi.resources.InvokeArg
         return this.encipherOnly;
     }
 
+    /**
+     * The key may be used in a key agreement protocol.
+     * 
+     */
     @InputImport(name="keyAgreement", required=true)
     private final Boolean keyAgreement;
 
@@ -68,6 +104,10 @@ public final class KeyUsageOptionsResponse extends io.pulumi.resources.InvokeArg
         return this.keyAgreement;
     }
 
+    /**
+     * The key may be used to encipher other keys.
+     * 
+     */
     @InputImport(name="keyEncipherment", required=true)
     private final Boolean keyEncipherment;
 

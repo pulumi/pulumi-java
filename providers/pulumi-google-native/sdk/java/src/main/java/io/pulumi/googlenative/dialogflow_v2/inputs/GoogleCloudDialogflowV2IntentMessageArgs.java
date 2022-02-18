@@ -25,10 +25,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A rich response message. Corresponds to the intent `Response` field in the Dialogflow console. For more information, see [Rich response messages](https://cloud.google.com/dialogflow/docs/intents-rich-messages).
+ * 
+ */
 public final class GoogleCloudDialogflowV2IntentMessageArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowV2IntentMessageArgs Empty = new GoogleCloudDialogflowV2IntentMessageArgs();
 
+    /**
+     * The basic card response for Actions on Google.
+     * 
+     */
     @InputImport(name="basicCard")
     private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageBasicCardArgs> basicCard;
 
@@ -36,6 +44,10 @@ public final class GoogleCloudDialogflowV2IntentMessageArgs extends io.pulumi.re
         return this.basicCard == null ? Input.empty() : this.basicCard;
     }
 
+    /**
+     * Browse carousel card for Actions on Google.
+     * 
+     */
     @InputImport(name="browseCarouselCard")
     private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardArgs> browseCarouselCard;
 
@@ -43,6 +55,10 @@ public final class GoogleCloudDialogflowV2IntentMessageArgs extends io.pulumi.re
         return this.browseCarouselCard == null ? Input.empty() : this.browseCarouselCard;
     }
 
+    /**
+     * The card response.
+     * 
+     */
     @InputImport(name="card")
     private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageCardArgs> card;
 
@@ -50,6 +66,10 @@ public final class GoogleCloudDialogflowV2IntentMessageArgs extends io.pulumi.re
         return this.card == null ? Input.empty() : this.card;
     }
 
+    /**
+     * The carousel card response for Actions on Google.
+     * 
+     */
     @InputImport(name="carouselSelect")
     private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageCarouselSelectArgs> carouselSelect;
 
@@ -57,6 +77,10 @@ public final class GoogleCloudDialogflowV2IntentMessageArgs extends io.pulumi.re
         return this.carouselSelect == null ? Input.empty() : this.carouselSelect;
     }
 
+    /**
+     * The image response.
+     * 
+     */
     @InputImport(name="image")
     private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageImageArgs> image;
 
@@ -64,6 +88,10 @@ public final class GoogleCloudDialogflowV2IntentMessageArgs extends io.pulumi.re
         return this.image == null ? Input.empty() : this.image;
     }
 
+    /**
+     * The link out suggestion chip for Actions on Google.
+     * 
+     */
     @InputImport(name="linkOutSuggestion")
     private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionArgs> linkOutSuggestion;
 
@@ -71,6 +99,10 @@ public final class GoogleCloudDialogflowV2IntentMessageArgs extends io.pulumi.re
         return this.linkOutSuggestion == null ? Input.empty() : this.linkOutSuggestion;
     }
 
+    /**
+     * The list card response for Actions on Google.
+     * 
+     */
     @InputImport(name="listSelect")
     private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageListSelectArgs> listSelect;
 
@@ -78,6 +110,10 @@ public final class GoogleCloudDialogflowV2IntentMessageArgs extends io.pulumi.re
         return this.listSelect == null ? Input.empty() : this.listSelect;
     }
 
+    /**
+     * The media content card for Actions on Google.
+     * 
+     */
     @InputImport(name="mediaContent")
     private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageMediaContentArgs> mediaContent;
 
@@ -85,6 +121,10 @@ public final class GoogleCloudDialogflowV2IntentMessageArgs extends io.pulumi.re
         return this.mediaContent == null ? Input.empty() : this.mediaContent;
     }
 
+    /**
+     * A custom platform-specific response.
+     * 
+     */
     @InputImport(name="payload")
     private final @Nullable Input<Map<String,String>> payload;
 
@@ -92,6 +132,10 @@ public final class GoogleCloudDialogflowV2IntentMessageArgs extends io.pulumi.re
         return this.payload == null ? Input.empty() : this.payload;
     }
 
+    /**
+     * Optional. The platform that this message is intended for.
+     * 
+     */
     @InputImport(name="platform")
     private final @Nullable Input<GoogleCloudDialogflowV2IntentMessagePlatform> platform;
 
@@ -99,6 +143,10 @@ public final class GoogleCloudDialogflowV2IntentMessageArgs extends io.pulumi.re
         return this.platform == null ? Input.empty() : this.platform;
     }
 
+    /**
+     * The quick replies response.
+     * 
+     */
     @InputImport(name="quickReplies")
     private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs> quickReplies;
 
@@ -106,6 +154,10 @@ public final class GoogleCloudDialogflowV2IntentMessageArgs extends io.pulumi.re
         return this.quickReplies == null ? Input.empty() : this.quickReplies;
     }
 
+    /**
+     * The voice and text-only responses for Actions on Google.
+     * 
+     */
     @InputImport(name="simpleResponses")
     private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageSimpleResponsesArgs> simpleResponses;
 
@@ -113,6 +165,10 @@ public final class GoogleCloudDialogflowV2IntentMessageArgs extends io.pulumi.re
         return this.simpleResponses == null ? Input.empty() : this.simpleResponses;
     }
 
+    /**
+     * The suggestion chips for Actions on Google.
+     * 
+     */
     @InputImport(name="suggestions")
     private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageSuggestionsArgs> suggestions;
 
@@ -120,6 +176,10 @@ public final class GoogleCloudDialogflowV2IntentMessageArgs extends io.pulumi.re
         return this.suggestions == null ? Input.empty() : this.suggestions;
     }
 
+    /**
+     * Table card for Actions on Google.
+     * 
+     */
     @InputImport(name="tableCard")
     private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageTableCardArgs> tableCard;
 
@@ -127,6 +187,10 @@ public final class GoogleCloudDialogflowV2IntentMessageArgs extends io.pulumi.re
         return this.tableCard == null ? Input.empty() : this.tableCard;
     }
 
+    /**
+     * The text response.
+     * 
+     */
     @InputImport(name="text")
     private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageTextArgs> text;
 

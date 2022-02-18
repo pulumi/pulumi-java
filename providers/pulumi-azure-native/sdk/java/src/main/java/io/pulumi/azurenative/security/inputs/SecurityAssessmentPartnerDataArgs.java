@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Data regarding 3rd party partner integration
+ * 
+ */
 public final class SecurityAssessmentPartnerDataArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SecurityAssessmentPartnerDataArgs Empty = new SecurityAssessmentPartnerDataArgs();
 
+    /**
+     * Name of the company of the partner
+     * 
+     */
     @InputImport(name="partnerName", required=true)
     private final Input<String> partnerName;
 
@@ -20,6 +28,10 @@ public final class SecurityAssessmentPartnerDataArgs extends io.pulumi.resources
         return this.partnerName;
     }
 
+    /**
+     * secret to authenticate the partner - write only
+     * 
+     */
     @InputImport(name="secret", required=true)
     private final Input<String> secret;
 

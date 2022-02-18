@@ -13,6 +13,10 @@ public final class GetTestablePermissionsPermission extends io.pulumi.resources.
 
     public static final GetTestablePermissionsPermission Empty = new GetTestablePermissionsPermission();
 
+    /**
+     * Whether the corresponding API has been enabled for the resource.
+     * 
+     */
     @InputImport(name="apiDisabled", required=true)
     private final Boolean apiDisabled;
 
@@ -20,6 +24,10 @@ public final class GetTestablePermissionsPermission extends io.pulumi.resources.
         return this.apiDisabled;
     }
 
+    /**
+     * The level of support for custom roles. Can be one of `"NOT_SUPPORTED"`, `"SUPPORTED"`, `"TESTING"`. Default is `"SUPPORTED"`
+     * 
+     */
     @InputImport(name="customSupportLevel", required=true)
     private final String customSupportLevel;
 
@@ -27,6 +35,10 @@ public final class GetTestablePermissionsPermission extends io.pulumi.resources.
         return this.customSupportLevel;
     }
 
+    /**
+     * Name of the permission.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -34,6 +46,10 @@ public final class GetTestablePermissionsPermission extends io.pulumi.resources.
         return this.name;
     }
 
+    /**
+     * Release stage of the permission.
+     * 
+     */
     @InputImport(name="stage", required=true)
     private final String stage;
 
@@ -41,6 +57,10 @@ public final class GetTestablePermissionsPermission extends io.pulumi.resources.
         return this.stage;
     }
 
+    /**
+     * Human readable title of the permission.
+     * 
+     */
     @InputImport(name="title", required=true)
     private final String title;
 

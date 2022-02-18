@@ -9,6 +9,12 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DatasetDefaultEncryptionConfiguration {
+    /**
+     * Describes the Cloud KMS encryption key that will be used to protect destination
+     * BigQuery table. The BigQuery Service Account associated with your project requires
+     * access to this encryption key.
+     * 
+     */
     private final String kmsKeyName;
 
     @OutputCustomType.Constructor({"kmsKeyName"})
@@ -16,6 +22,12 @@ public final class DatasetDefaultEncryptionConfiguration {
         this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
     }
 
+    /**
+     * Describes the Cloud KMS encryption key that will be used to protect destination
+     * BigQuery table. The BigQuery Service Account associated with your project requires
+     * access to this encryption key.
+     * 
+     */
     public String getKmsKeyName() {
         return this.kmsKeyName;
     }

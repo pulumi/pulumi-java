@@ -10,10 +10,18 @@ import io.pulumi.googlenative.redis_v1.inputs.TimeOfDayArgs;
 import java.util.Objects;
 
 
+/**
+ * Time window in which disruptive maintenance updates occur. Non-disruptive updates can occur inside or outside this window.
+ * 
+ */
 public final class WeeklyMaintenanceWindowArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WeeklyMaintenanceWindowArgs Empty = new WeeklyMaintenanceWindowArgs();
 
+    /**
+     * The day of week that maintenance updates occur.
+     * 
+     */
     @InputImport(name="day", required=true)
     private final Input<WeeklyMaintenanceWindowDay> day;
 
@@ -21,6 +29,10 @@ public final class WeeklyMaintenanceWindowArgs extends io.pulumi.resources.Resou
         return this.day;
     }
 
+    /**
+     * Start time of the window in UTC time.
+     * 
+     */
     @InputImport(name="startTime", required=true)
     private final Input<TimeOfDayArgs> startTime;
 

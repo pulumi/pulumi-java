@@ -9,10 +9,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Resource representing the Endpoint Verification-specific attributes of a Device. https://cloud.google.com/endpoint-verification/docs/overview
+ * 
+ */
 public final class EndpointVerificationSpecificAttributesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EndpointVerificationSpecificAttributesResponse Empty = new EndpointVerificationSpecificAttributesResponse();
 
+    /**
+     * Details of certificates.
+     * 
+     */
     @InputImport(name="certificateAttributes", required=true)
     private final List<CertificateAttributesResponse> certificateAttributes;
 

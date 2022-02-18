@@ -15,10 +15,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents results of a training job. Output only.
+ * 
+ */
 public final class GoogleCloudMlV1__TrainingOutputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudMlV1__TrainingOutputArgs Empty = new GoogleCloudMlV1__TrainingOutputArgs();
 
+    /**
+     * Details related to built-in algorithms jobs. Only set for built-in algorithms jobs.
+     * 
+     */
     @InputImport(name="builtInAlgorithmOutput")
     private final @Nullable Input<GoogleCloudMlV1__BuiltInAlgorithmOutputArgs> builtInAlgorithmOutput;
 
@@ -26,6 +34,10 @@ public final class GoogleCloudMlV1__TrainingOutputArgs extends io.pulumi.resourc
         return this.builtInAlgorithmOutput == null ? Input.empty() : this.builtInAlgorithmOutput;
     }
 
+    /**
+     * The number of hyperparameter tuning trials that completed successfully. Only set for hyperparameter tuning jobs.
+     * 
+     */
     @InputImport(name="completedTrialCount")
     private final @Nullable Input<String> completedTrialCount;
 
@@ -33,6 +45,10 @@ public final class GoogleCloudMlV1__TrainingOutputArgs extends io.pulumi.resourc
         return this.completedTrialCount == null ? Input.empty() : this.completedTrialCount;
     }
 
+    /**
+     * The amount of ML units consumed by the job.
+     * 
+     */
     @InputImport(name="consumedMLUnits")
     private final @Nullable Input<Double> consumedMLUnits;
 
@@ -40,6 +56,10 @@ public final class GoogleCloudMlV1__TrainingOutputArgs extends io.pulumi.resourc
         return this.consumedMLUnits == null ? Input.empty() : this.consumedMLUnits;
     }
 
+    /**
+     * The TensorFlow summary tag name used for optimizing hyperparameter tuning trials. See [`HyperparameterSpec.hyperparameterMetricTag`](#HyperparameterSpec.FIELDS.hyperparameter_metric_tag) for more information. Only set for hyperparameter tuning jobs.
+     * 
+     */
     @InputImport(name="hyperparameterMetricTag")
     private final @Nullable Input<String> hyperparameterMetricTag;
 
@@ -47,6 +67,10 @@ public final class GoogleCloudMlV1__TrainingOutputArgs extends io.pulumi.resourc
         return this.hyperparameterMetricTag == null ? Input.empty() : this.hyperparameterMetricTag;
     }
 
+    /**
+     * Whether this job is a built-in Algorithm job.
+     * 
+     */
     @InputImport(name="isBuiltInAlgorithmJob")
     private final @Nullable Input<Boolean> isBuiltInAlgorithmJob;
 
@@ -54,6 +78,10 @@ public final class GoogleCloudMlV1__TrainingOutputArgs extends io.pulumi.resourc
         return this.isBuiltInAlgorithmJob == null ? Input.empty() : this.isBuiltInAlgorithmJob;
     }
 
+    /**
+     * Whether this job is a hyperparameter tuning job.
+     * 
+     */
     @InputImport(name="isHyperparameterTuningJob")
     private final @Nullable Input<Boolean> isHyperparameterTuningJob;
 
@@ -61,6 +89,10 @@ public final class GoogleCloudMlV1__TrainingOutputArgs extends io.pulumi.resourc
         return this.isHyperparameterTuningJob == null ? Input.empty() : this.isHyperparameterTuningJob;
     }
 
+    /**
+     * Results for individual Hyperparameter trials. Only set for hyperparameter tuning jobs.
+     * 
+     */
     @InputImport(name="trials")
     private final @Nullable Input<List<GoogleCloudMlV1__HyperparameterOutputArgs>> trials;
 

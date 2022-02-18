@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetHoursOfOperation {
+/**
+ * Resource Type definition for AWS::Connect::HoursOfOperation
+ * 
+ */
     public static CompletableFuture<GetHoursOfOperationResult> invokeAsync(GetHoursOfOperationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:connect:getHoursOfOperation", TypeShape.of(GetHoursOfOperationResult.class), args == null ? GetHoursOfOperationArgs.Empty : args, Utilities.withVersion(options));
     }

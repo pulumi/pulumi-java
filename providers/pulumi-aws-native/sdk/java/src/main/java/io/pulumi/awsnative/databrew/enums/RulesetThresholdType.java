@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Threshold type for a rule
+     * 
+     */
     @EnumType
     public enum RulesetThresholdType {
         GreaterThanOrEqual("GREATER_THAN_OR_EQUAL"),

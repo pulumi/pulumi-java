@@ -16,18 +16,70 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetInfrastructureConfigurationResult {
+    /**
+     * The Amazon Resource Name (ARN) of the infrastructure configuration.
+     * 
+     */
     private final @Nullable String arn;
+    /**
+     * The description of the infrastructure configuration.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * The instance metadata option settings for the infrastructure configuration.
+     * 
+     */
     private final @Nullable InfrastructureConfigurationInstanceMetadataOptions instanceMetadataOptions;
+    /**
+     * The instance profile of the infrastructure configuration.
+     * 
+     */
     private final @Nullable String instanceProfileName;
+    /**
+     * The instance types of the infrastructure configuration.
+     * 
+     */
     private final @Nullable List<String> instanceTypes;
+    /**
+     * The EC2 key pair of the infrastructure configuration..
+     * 
+     */
     private final @Nullable String keyPair;
+    /**
+     * The logging configuration of the infrastructure configuration.
+     * 
+     */
     private final @Nullable InfrastructureConfigurationLogging logging;
+    /**
+     * The tags attached to the resource created by Image Builder.
+     * 
+     */
     private final @Nullable Object resourceTags;
+    /**
+     * The security group IDs of the infrastructure configuration.
+     * 
+     */
     private final @Nullable List<String> securityGroupIds;
+    /**
+     * The SNS Topic Amazon Resource Name (ARN) of the infrastructure configuration.
+     * 
+     */
     private final @Nullable String snsTopicArn;
+    /**
+     * The subnet ID of the infrastructure configuration.
+     * 
+     */
     private final @Nullable String subnetId;
+    /**
+     * The tags associated with the component.
+     * 
+     */
     private final @Nullable Object tags;
+    /**
+     * The terminate instance on failure configuration of the infrastructure configuration.
+     * 
+     */
     private final @Nullable Boolean terminateInstanceOnFailure;
 
     @OutputCustomType.Constructor({"arn","description","instanceMetadataOptions","instanceProfileName","instanceTypes","keyPair","logging","resourceTags","securityGroupIds","snsTopicArn","subnetId","tags","terminateInstanceOnFailure"})
@@ -60,42 +112,94 @@ public final class GetInfrastructureConfigurationResult {
         this.terminateInstanceOnFailure = terminateInstanceOnFailure;
     }
 
+    /**
+     * The Amazon Resource Name (ARN) of the infrastructure configuration.
+     * 
+     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
+    /**
+     * The description of the infrastructure configuration.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * The instance metadata option settings for the infrastructure configuration.
+     * 
+     */
     public Optional<InfrastructureConfigurationInstanceMetadataOptions> getInstanceMetadataOptions() {
         return Optional.ofNullable(this.instanceMetadataOptions);
     }
+    /**
+     * The instance profile of the infrastructure configuration.
+     * 
+     */
     public Optional<String> getInstanceProfileName() {
         return Optional.ofNullable(this.instanceProfileName);
     }
+    /**
+     * The instance types of the infrastructure configuration.
+     * 
+     */
     public List<String> getInstanceTypes() {
         return this.instanceTypes == null ? List.of() : this.instanceTypes;
     }
+    /**
+     * The EC2 key pair of the infrastructure configuration..
+     * 
+     */
     public Optional<String> getKeyPair() {
         return Optional.ofNullable(this.keyPair);
     }
+    /**
+     * The logging configuration of the infrastructure configuration.
+     * 
+     */
     public Optional<InfrastructureConfigurationLogging> getLogging() {
         return Optional.ofNullable(this.logging);
     }
+    /**
+     * The tags attached to the resource created by Image Builder.
+     * 
+     */
     public Optional<Object> getResourceTags() {
         return Optional.ofNullable(this.resourceTags);
     }
+    /**
+     * The security group IDs of the infrastructure configuration.
+     * 
+     */
     public List<String> getSecurityGroupIds() {
         return this.securityGroupIds == null ? List.of() : this.securityGroupIds;
     }
+    /**
+     * The SNS Topic Amazon Resource Name (ARN) of the infrastructure configuration.
+     * 
+     */
     public Optional<String> getSnsTopicArn() {
         return Optional.ofNullable(this.snsTopicArn);
     }
+    /**
+     * The subnet ID of the infrastructure configuration.
+     * 
+     */
     public Optional<String> getSubnetId() {
         return Optional.ofNullable(this.subnetId);
     }
+    /**
+     * The tags associated with the component.
+     * 
+     */
     public Optional<Object> getTags() {
         return Optional.ofNullable(this.tags);
     }
+    /**
+     * The terminate instance on failure configuration of the infrastructure configuration.
+     * 
+     */
     public Optional<Boolean> getTerminateInstanceOnFailure() {
         return Optional.ofNullable(this.terminateInstanceOnFailure);
     }

@@ -15,10 +15,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EnvironmentSizeResponse {
+    /**
+     * The pay-as-you-go dollar price per hour this size will cost. It does not include discounts and may not reflect the actual price the size will cost. This is the maximum price of all prices within this tier.
+     * 
+     */
     private final Double maxPrice;
+    /**
+     * The amount of memory available (in GB). This is the minimum amount of memory within this tier.
+     * 
+     */
     private final Double minMemory;
+    /**
+     * The number of cores a VM of this size has. This is the minimum number of cores within this tier.
+     * 
+     */
     private final Integer minNumberOfCores;
+    /**
+     * The size category
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * Represents a set of compute sizes that can serve this given size type
+     * 
+     */
     private final @Nullable List<SizeInfoResponse> vmSizes;
 
     @OutputCustomType.Constructor({"maxPrice","minMemory","minNumberOfCores","name","vmSizes"})
@@ -35,18 +55,38 @@ public final class EnvironmentSizeResponse {
         this.vmSizes = vmSizes;
     }
 
+    /**
+     * The pay-as-you-go dollar price per hour this size will cost. It does not include discounts and may not reflect the actual price the size will cost. This is the maximum price of all prices within this tier.
+     * 
+     */
     public Double getMaxPrice() {
         return this.maxPrice;
     }
+    /**
+     * The amount of memory available (in GB). This is the minimum amount of memory within this tier.
+     * 
+     */
     public Double getMinMemory() {
         return this.minMemory;
     }
+    /**
+     * The number of cores a VM of this size has. This is the minimum number of cores within this tier.
+     * 
+     */
     public Integer getMinNumberOfCores() {
         return this.minNumberOfCores;
     }
+    /**
+     * The size category
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * Represents a set of compute sizes that can serve this given size type
+     * 
+     */
     public List<SizeInfoResponse> getVmSizes() {
         return this.vmSizes == null ? List.of() : this.vmSizes;
     }

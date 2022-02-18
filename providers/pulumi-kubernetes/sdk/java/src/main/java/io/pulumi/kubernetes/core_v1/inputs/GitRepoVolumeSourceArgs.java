@@ -10,10 +10,20 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents a volume that is populated with the contents of a git repository. Git repo volumes do not support ownership management. Git repo volumes support SELinux relabeling.
+ * 
+ * DEPRECATED: GitRepo is deprecated. To provision a container with a git repo, mount an EmptyDir into an InitContainer that clones the repo using git, then mount the EmptyDir into the Pod's container.
+ * 
+ */
 public final class GitRepoVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GitRepoVolumeSourceArgs Empty = new GitRepoVolumeSourceArgs();
 
+    /**
+     * Target directory name. Must not contain or start with '..'.  If '.' is supplied, the volume directory will be the git repository.  Otherwise, if specified, the volume will contain the git repository in the subdirectory with the given name.
+     * 
+     */
     @InputImport(name="directory")
     private final @Nullable Input<String> directory;
 
@@ -21,6 +31,10 @@ public final class GitRepoVolumeSourceArgs extends io.pulumi.resources.ResourceA
         return this.directory == null ? Input.empty() : this.directory;
     }
 
+    /**
+     * Repository URL
+     * 
+     */
     @InputImport(name="repository", required=true)
     private final Input<String> repository;
 
@@ -28,6 +42,10 @@ public final class GitRepoVolumeSourceArgs extends io.pulumi.resources.ResourceA
         return this.repository;
     }
 
+    /**
+     * Commit hash for the specified revision.
+     * 
+     */
     @InputImport(name="revision")
     private final @Nullable Input<String> revision;
 

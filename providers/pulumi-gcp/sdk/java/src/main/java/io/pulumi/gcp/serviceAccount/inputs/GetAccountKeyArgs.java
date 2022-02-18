@@ -14,6 +14,12 @@ public final class GetAccountKeyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAccountKeyArgs Empty = new GetAccountKeyArgs();
 
+    /**
+     * The name of the service account key. This must have format
+     * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{KEYID}`, where `{ACCOUNT}`
+     * is the email address or unique id of the service account.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -21,6 +27,11 @@ public final class GetAccountKeyArgs extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    /**
+     * The ID of the project that the service account will be created in.
+     * Defaults to the provider project configuration.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -28,6 +39,10 @@ public final class GetAccountKeyArgs extends io.pulumi.resources.InvokeArgs {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
+    /**
+     * The output format of the public key requested. TYPE_X509_PEM_FILE is the default output format.
+     * 
+     */
     @InputImport(name="publicKeyType")
     private final @Nullable String publicKeyType;
 

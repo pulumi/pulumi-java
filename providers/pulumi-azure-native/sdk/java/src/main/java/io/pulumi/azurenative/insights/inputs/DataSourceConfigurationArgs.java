@@ -17,6 +17,10 @@ public final class DataSourceConfigurationArgs extends io.pulumi.resources.Resou
 
     public static final DataSourceConfigurationArgs Empty = new DataSourceConfigurationArgs();
 
+    /**
+     * Windows event logs configuration.
+     * 
+     */
     @InputImport(name="eventLogs")
     private final @Nullable Input<List<EventLogConfigurationArgs>> eventLogs;
 
@@ -24,6 +28,10 @@ public final class DataSourceConfigurationArgs extends io.pulumi.resources.Resou
         return this.eventLogs == null ? Input.empty() : this.eventLogs;
     }
 
+    /**
+     * Performance counter configuration
+     * 
+     */
     @InputImport(name="perfCounters")
     private final @Nullable Input<List<PerformanceCounterConfigurationArgs>> perfCounters;
 
@@ -31,6 +39,10 @@ public final class DataSourceConfigurationArgs extends io.pulumi.resources.Resou
         return this.perfCounters == null ? Input.empty() : this.perfCounters;
     }
 
+    /**
+     * ETW providers configuration
+     * 
+     */
     @InputImport(name="providers")
     private final @Nullable Input<List<EtwProviderConfigurationArgs>> providers;
 

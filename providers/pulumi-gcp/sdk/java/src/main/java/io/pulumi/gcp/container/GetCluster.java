@@ -13,6 +13,18 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCluster {
+/**
+ * Get info about a GKE cluster from its name and location.
+ * 
+ * ## Example Usage
+ * 
+ *
+ * A collection of arguments for invoking getCluster.
+ * 
+ *
+ * A collection of values returned by getCluster.
+ * 
+ */
     public static CompletableFuture<GetClusterResult> invokeAsync(GetClusterArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:container/getCluster:getCluster", TypeShape.of(GetClusterResult.class), args == null ? GetClusterArgs.Empty : args, Utilities.withVersion(options));
     }

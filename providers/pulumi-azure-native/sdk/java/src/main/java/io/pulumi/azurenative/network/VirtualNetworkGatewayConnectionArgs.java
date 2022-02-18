@@ -27,6 +27,10 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
 
     public static final VirtualNetworkGatewayConnectionArgs Empty = new VirtualNetworkGatewayConnectionArgs();
 
+    /**
+     * The authorizationKey.
+     * 
+     */
     @InputImport(name="authorizationKey")
     private final @Nullable Input<String> authorizationKey;
 
@@ -34,6 +38,10 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
         return this.authorizationKey == null ? Input.empty() : this.authorizationKey;
     }
 
+    /**
+     * The connection mode for this connection.
+     * 
+     */
     @InputImport(name="connectionMode")
     private final @Nullable Input<Either<String,VirtualNetworkGatewayConnectionMode>> connectionMode;
 
@@ -41,6 +49,10 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
         return this.connectionMode == null ? Input.empty() : this.connectionMode;
     }
 
+    /**
+     * Connection protocol used for this connection.
+     * 
+     */
     @InputImport(name="connectionProtocol")
     private final @Nullable Input<Either<String,VirtualNetworkGatewayConnectionProtocol>> connectionProtocol;
 
@@ -48,6 +60,10 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
         return this.connectionProtocol == null ? Input.empty() : this.connectionProtocol;
     }
 
+    /**
+     * Gateway connection type.
+     * 
+     */
     @InputImport(name="connectionType", required=true)
     private final Input<Either<String,VirtualNetworkGatewayConnectionType>> connectionType;
 
@@ -55,6 +71,10 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
         return this.connectionType;
     }
 
+    /**
+     * The dead peer detection timeout of this connection in seconds.
+     * 
+     */
     @InputImport(name="dpdTimeoutSeconds")
     private final @Nullable Input<Integer> dpdTimeoutSeconds;
 
@@ -62,6 +82,10 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
         return this.dpdTimeoutSeconds == null ? Input.empty() : this.dpdTimeoutSeconds;
     }
 
+    /**
+     * EnableBgp flag.
+     * 
+     */
     @InputImport(name="enableBgp")
     private final @Nullable Input<Boolean> enableBgp;
 
@@ -69,6 +93,10 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
         return this.enableBgp == null ? Input.empty() : this.enableBgp;
     }
 
+    /**
+     * Bypass ExpressRoute Gateway for data forwarding.
+     * 
+     */
     @InputImport(name="expressRouteGatewayBypass")
     private final @Nullable Input<Boolean> expressRouteGatewayBypass;
 
@@ -76,6 +104,10 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
         return this.expressRouteGatewayBypass == null ? Input.empty() : this.expressRouteGatewayBypass;
     }
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -83,6 +115,10 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * The IPSec Policies to be considered by this connection.
+     * 
+     */
     @InputImport(name="ipsecPolicies")
     private final @Nullable Input<List<IpsecPolicyArgs>> ipsecPolicies;
 
@@ -90,6 +126,10 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
         return this.ipsecPolicies == null ? Input.empty() : this.ipsecPolicies;
     }
 
+    /**
+     * The reference to local network gateway resource.
+     * 
+     */
     @InputImport(name="localNetworkGateway2")
     private final @Nullable Input<LocalNetworkGatewayArgs> localNetworkGateway2;
 
@@ -97,6 +137,10 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
         return this.localNetworkGateway2 == null ? Input.empty() : this.localNetworkGateway2;
     }
 
+    /**
+     * Resource location.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -104,6 +148,10 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The reference to peerings resource.
+     * 
+     */
     @InputImport(name="peer")
     private final @Nullable Input<SubResourceArgs> peer;
 
@@ -111,6 +159,10 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
         return this.peer == null ? Input.empty() : this.peer;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -118,6 +170,10 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
         return this.resourceGroupName;
     }
 
+    /**
+     * The routing weight.
+     * 
+     */
     @InputImport(name="routingWeight")
     private final @Nullable Input<Integer> routingWeight;
 
@@ -125,6 +181,10 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
         return this.routingWeight == null ? Input.empty() : this.routingWeight;
     }
 
+    /**
+     * The IPSec shared key.
+     * 
+     */
     @InputImport(name="sharedKey")
     private final @Nullable Input<String> sharedKey;
 
@@ -132,6 +192,10 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
         return this.sharedKey == null ? Input.empty() : this.sharedKey;
     }
 
+    /**
+     * Resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -139,6 +203,10 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The Traffic Selector Policies to be considered by this connection.
+     * 
+     */
     @InputImport(name="trafficSelectorPolicies")
     private final @Nullable Input<List<TrafficSelectorPolicyArgs>> trafficSelectorPolicies;
 
@@ -146,6 +214,10 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
         return this.trafficSelectorPolicies == null ? Input.empty() : this.trafficSelectorPolicies;
     }
 
+    /**
+     * Use private local Azure IP for the connection.
+     * 
+     */
     @InputImport(name="useLocalAzureIpAddress")
     private final @Nullable Input<Boolean> useLocalAzureIpAddress;
 
@@ -153,6 +225,10 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
         return this.useLocalAzureIpAddress == null ? Input.empty() : this.useLocalAzureIpAddress;
     }
 
+    /**
+     * Enable policy-based traffic selectors.
+     * 
+     */
     @InputImport(name="usePolicyBasedTrafficSelectors")
     private final @Nullable Input<Boolean> usePolicyBasedTrafficSelectors;
 
@@ -160,6 +236,10 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
         return this.usePolicyBasedTrafficSelectors == null ? Input.empty() : this.usePolicyBasedTrafficSelectors;
     }
 
+    /**
+     * The reference to virtual network gateway resource.
+     * 
+     */
     @InputImport(name="virtualNetworkGateway1", required=true)
     private final Input<VirtualNetworkGatewayArgs> virtualNetworkGateway1;
 
@@ -167,6 +247,10 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
         return this.virtualNetworkGateway1;
     }
 
+    /**
+     * The reference to virtual network gateway resource.
+     * 
+     */
     @InputImport(name="virtualNetworkGateway2")
     private final @Nullable Input<VirtualNetworkGatewayArgs> virtualNetworkGateway2;
 
@@ -174,6 +258,10 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
         return this.virtualNetworkGateway2 == null ? Input.empty() : this.virtualNetworkGateway2;
     }
 
+    /**
+     * The name of the virtual network gateway connection.
+     * 
+     */
     @InputImport(name="virtualNetworkGatewayConnectionName")
     private final @Nullable Input<String> virtualNetworkGatewayConnectionName;
 

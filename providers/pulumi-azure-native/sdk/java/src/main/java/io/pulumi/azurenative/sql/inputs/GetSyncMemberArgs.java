@@ -12,6 +12,10 @@ public final class GetSyncMemberArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSyncMemberArgs Empty = new GetSyncMemberArgs();
 
+    /**
+     * The name of the database on which the sync group is hosted.
+     * 
+     */
     @InputImport(name="databaseName", required=true)
     private final String databaseName;
 
@@ -19,6 +23,10 @@ public final class GetSyncMemberArgs extends io.pulumi.resources.InvokeArgs {
         return this.databaseName;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetSyncMemberArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the server.
+     * 
+     */
     @InputImport(name="serverName", required=true)
     private final String serverName;
 
@@ -33,6 +45,10 @@ public final class GetSyncMemberArgs extends io.pulumi.resources.InvokeArgs {
         return this.serverName;
     }
 
+    /**
+     * The name of the sync group on which the sync member is hosted.
+     * 
+     */
     @InputImport(name="syncGroupName", required=true)
     private final String syncGroupName;
 
@@ -40,6 +56,10 @@ public final class GetSyncMemberArgs extends io.pulumi.resources.InvokeArgs {
         return this.syncGroupName;
     }
 
+    /**
+     * The name of the sync member.
+     * 
+     */
     @InputImport(name="syncMemberName", required=true)
     private final String syncMemberName;
 

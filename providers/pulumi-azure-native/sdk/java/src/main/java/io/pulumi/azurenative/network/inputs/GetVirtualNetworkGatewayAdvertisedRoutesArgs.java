@@ -12,6 +12,10 @@ public final class GetVirtualNetworkGatewayAdvertisedRoutesArgs extends io.pulum
 
     public static final GetVirtualNetworkGatewayAdvertisedRoutesArgs Empty = new GetVirtualNetworkGatewayAdvertisedRoutesArgs();
 
+    /**
+     * The IP address of the peer.
+     * 
+     */
     @InputImport(name="peer", required=true)
     private final String peer;
 
@@ -19,6 +23,10 @@ public final class GetVirtualNetworkGatewayAdvertisedRoutesArgs extends io.pulum
         return this.peer;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetVirtualNetworkGatewayAdvertisedRoutesArgs extends io.pulum
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the virtual network gateway.
+     * 
+     */
     @InputImport(name="virtualNetworkGatewayName", required=true)
     private final String virtualNetworkGatewayName;
 

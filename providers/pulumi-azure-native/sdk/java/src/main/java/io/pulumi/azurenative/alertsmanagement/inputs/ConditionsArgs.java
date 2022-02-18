@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Conditions in alert instance to be matched for a given action rule. Default value is all. Multiple values could be provided with comma separation.
+ * 
+ */
 public final class ConditionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConditionsArgs Empty = new ConditionsArgs();
 
+    /**
+     * filter alerts by alert context (payload)
+     * 
+     */
     @InputImport(name="alertContext")
     private final @Nullable Input<ConditionArgs> alertContext;
 
@@ -21,6 +29,10 @@ public final class ConditionsArgs extends io.pulumi.resources.ResourceArgs {
         return this.alertContext == null ? Input.empty() : this.alertContext;
     }
 
+    /**
+     * filter alerts by alert rule id
+     * 
+     */
     @InputImport(name="alertRuleId")
     private final @Nullable Input<ConditionArgs> alertRuleId;
 
@@ -28,6 +40,10 @@ public final class ConditionsArgs extends io.pulumi.resources.ResourceArgs {
         return this.alertRuleId == null ? Input.empty() : this.alertRuleId;
     }
 
+    /**
+     * filter alerts by alert rule description
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<ConditionArgs> description;
 
@@ -35,6 +51,10 @@ public final class ConditionsArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * filter alerts by monitor condition
+     * 
+     */
     @InputImport(name="monitorCondition")
     private final @Nullable Input<ConditionArgs> monitorCondition;
 
@@ -42,6 +62,10 @@ public final class ConditionsArgs extends io.pulumi.resources.ResourceArgs {
         return this.monitorCondition == null ? Input.empty() : this.monitorCondition;
     }
 
+    /**
+     * filter alerts by monitor service
+     * 
+     */
     @InputImport(name="monitorService")
     private final @Nullable Input<ConditionArgs> monitorService;
 
@@ -49,6 +73,10 @@ public final class ConditionsArgs extends io.pulumi.resources.ResourceArgs {
         return this.monitorService == null ? Input.empty() : this.monitorService;
     }
 
+    /**
+     * filter alerts by severity
+     * 
+     */
     @InputImport(name="severity")
     private final @Nullable Input<ConditionArgs> severity;
 
@@ -56,6 +84,10 @@ public final class ConditionsArgs extends io.pulumi.resources.ResourceArgs {
         return this.severity == null ? Input.empty() : this.severity;
     }
 
+    /**
+     * filter alerts by target resource type
+     * 
+     */
     @InputImport(name="targetResourceType")
     private final @Nullable Input<ConditionArgs> targetResourceType;
 

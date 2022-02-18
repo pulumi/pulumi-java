@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Define a system parameter rule mapping system parameter definitions to methods.
+ * 
+ */
 public final class SystemParameterRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SystemParameterRuleArgs Empty = new SystemParameterRuleArgs();
 
+    /**
+     * Define parameters. Multiple names may be defined for a parameter. For a given method call, only one of them should be used. If multiple names are used the behavior is implementation-dependent. If none of the specified names are present the behavior is parameter-dependent.
+     * 
+     */
     @InputImport(name="parameters")
     private final @Nullable Input<List<SystemParameterArgs>> parameters;
 
@@ -23,6 +31,10 @@ public final class SystemParameterRuleArgs extends io.pulumi.resources.ResourceA
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
+    /**
+     * Selects the methods to which this rule applies. Use '*' to indicate all methods in all APIs. Refer to selector for syntax details.
+     * 
+     */
     @InputImport(name="selector")
     private final @Nullable Input<String> selector;
 

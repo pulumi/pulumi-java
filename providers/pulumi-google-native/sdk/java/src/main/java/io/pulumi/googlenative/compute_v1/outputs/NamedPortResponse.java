@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class NamedPortResponse {
+    /**
+     * The name for this named port. The name must be 1-63 characters long, and comply with RFC1035.
+     * 
+     */
     private final String name;
+    /**
+     * The port number, which can be a value between 1 and 65535.
+     * 
+     */
     private final Integer port;
 
     @OutputCustomType.Constructor({"name","port"})
@@ -21,9 +29,17 @@ public final class NamedPortResponse {
         this.port = Objects.requireNonNull(port);
     }
 
+    /**
+     * The name for this named port. The name must be 1-63 characters long, and comply with RFC1035.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The port number, which can be a value between 1 and 65535.
+     * 
+     */
     public Integer getPort() {
         return this.port;
     }

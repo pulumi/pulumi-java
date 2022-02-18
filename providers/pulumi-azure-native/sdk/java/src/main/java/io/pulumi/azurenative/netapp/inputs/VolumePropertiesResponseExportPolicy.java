@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Set of export policy rules
+ * 
+ */
 public final class VolumePropertiesResponseExportPolicy extends io.pulumi.resources.InvokeArgs {
 
     public static final VolumePropertiesResponseExportPolicy Empty = new VolumePropertiesResponseExportPolicy();
 
+    /**
+     * Export policy rule
+     * 
+     */
     @InputImport(name="rules")
     private final @Nullable List<ExportPolicyRuleResponse> rules;
 

@@ -13,6 +13,16 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRule {
+/**
+ * Use this data source to get information about a Google IAM Role.
+ * 
+ *
+ * A collection of arguments for invoking getRule.
+ * 
+ *
+ * A collection of values returned by getRule.
+ * 
+ */
     public static CompletableFuture<GetRuleResult> invokeAsync(GetRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:iam/getRule:getRule", TypeShape.of(GetRuleResult.class), args == null ? GetRuleArgs.Empty : args, Utilities.withVersion(options));
     }

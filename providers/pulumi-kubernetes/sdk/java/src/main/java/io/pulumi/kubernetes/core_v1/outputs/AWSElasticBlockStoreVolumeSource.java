@@ -13,9 +13,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AWSElasticBlockStoreVolumeSource {
+    /**
+     * Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
+     * 
+     */
     private final @Nullable String fsType;
+    /**
+     * The partition in the volume that you want to mount. If omitted, the default is to mount by volume name. Examples: For volume /dev/sda1, you specify the partition as "1". Similarly, the volume partition for /dev/sda is "0" (or you can leave the property empty).
+     * 
+     */
     private final @Nullable Integer partition;
+    /**
+     * Specify "true" to force and set the ReadOnly property in VolumeMounts to "true". If omitted, the default is "false". More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
+     * 
+     */
     private final @Nullable Boolean readOnly;
+    /**
+     * Unique ID of the persistent disk resource in AWS (Amazon EBS volume). More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
+     * 
+     */
     private final String volumeID;
 
     @OutputCustomType.Constructor({"fsType","partition","readOnly","volumeID"})
@@ -30,15 +46,31 @@ public final class AWSElasticBlockStoreVolumeSource {
         this.volumeID = Objects.requireNonNull(volumeID);
     }
 
+    /**
+     * Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
+     * 
+     */
     public Optional<String> getFsType() {
         return Optional.ofNullable(this.fsType);
     }
+    /**
+     * The partition in the volume that you want to mount. If omitted, the default is to mount by volume name. Examples: For volume /dev/sda1, you specify the partition as "1". Similarly, the volume partition for /dev/sda is "0" (or you can leave the property empty).
+     * 
+     */
     public Optional<Integer> getPartition() {
         return Optional.ofNullable(this.partition);
     }
+    /**
+     * Specify "true" to force and set the ReadOnly property in VolumeMounts to "true". If omitted, the default is "false". More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
+     * 
+     */
     public Optional<Boolean> getReadOnly() {
         return Optional.ofNullable(this.readOnly);
     }
+    /**
+     * Unique ID of the persistent disk resource in AWS (Amazon EBS volume). More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
+     * 
+     */
     public String getVolumeID() {
         return this.volumeID;
     }

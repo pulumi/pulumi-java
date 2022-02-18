@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ExpressionResponse {
+    /**
+     * Expression type.
+     * 
+     */
     private final String type;
+    /**
+     * Expression value.
+     * 
+     */
     private final String value;
 
     @OutputCustomType.Constructor({"type","value"})
@@ -20,9 +28,17 @@ public final class ExpressionResponse {
         this.value = Objects.requireNonNull(value);
     }
 
+    /**
+     * Expression type.
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * Expression value.
+     * 
+     */
     public String getValue() {
         return this.value;
     }

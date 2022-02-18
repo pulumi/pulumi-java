@@ -14,6 +14,10 @@ public final class BrandArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BrandArgs Empty = new BrandArgs();
 
+    /**
+     * Application name displayed on OAuth consent screen.
+     * 
+     */
     @InputImport(name="applicationTitle", required=true)
     private final Input<String> applicationTitle;
 
@@ -21,6 +25,11 @@ public final class BrandArgs extends io.pulumi.resources.ResourceArgs {
         return this.applicationTitle;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -28,6 +37,14 @@ public final class BrandArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Support email displayed on the OAuth consent screen. Can be either a
+     * user or group email. When a user email is specified, the caller must
+     * be the user with the associated email address. When a group email is
+     * specified, the caller can be either a user or a service account which
+     * is an owner of the specified group in Cloud Identity.
+     * 
+     */
     @InputImport(name="supportEmail", required=true)
     private final Input<String> supportEmail;
 

@@ -72,6 +72,10 @@ public final class ModelExplainabilityJobDefinitionArgs extends io.pulumi.resour
         return this.networkConfig == null ? Input.empty() : this.networkConfig;
     }
 
+    /**
+     * The Amazon Resource Name (ARN) of an IAM role that Amazon SageMaker can assume to perform tasks on your behalf.
+     * 
+     */
     @InputImport(name="roleArn", required=true)
     private final Input<String> roleArn;
 
@@ -86,6 +90,10 @@ public final class ModelExplainabilityJobDefinitionArgs extends io.pulumi.resour
         return this.stoppingCondition == null ? Input.empty() : this.stoppingCondition;
     }
 
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<ModelExplainabilityJobDefinitionTagArgs>> tags;
 

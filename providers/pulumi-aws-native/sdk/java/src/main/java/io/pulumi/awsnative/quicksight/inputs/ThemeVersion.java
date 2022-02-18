@@ -15,10 +15,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * <p>A version of a theme.</p>
+ * 
+ */
 public final class ThemeVersion extends io.pulumi.resources.InvokeArgs {
 
     public static final ThemeVersion Empty = new ThemeVersion();
 
+    /**
+     * <p>The Amazon Resource Name (ARN) of the resource.</p>
+     * 
+     */
     @InputImport(name="arn")
     private final @Nullable String arn;
 
@@ -26,6 +34,11 @@ public final class ThemeVersion extends io.pulumi.resources.InvokeArgs {
         return this.arn == null ? Optional.empty() : Optional.ofNullable(this.arn);
     }
 
+    /**
+     * <p>The Amazon QuickSight-defined ID of the theme that a custom theme inherits from. All
+     *             themes initially inherit from a default QuickSight theme.</p>
+     * 
+     */
     @InputImport(name="baseThemeId")
     private final @Nullable String baseThemeId;
 
@@ -40,6 +53,10 @@ public final class ThemeVersion extends io.pulumi.resources.InvokeArgs {
         return this.configuration == null ? Optional.empty() : Optional.ofNullable(this.configuration);
     }
 
+    /**
+     * <p>The date and time that this theme version was created.</p>
+     * 
+     */
     @InputImport(name="createdTime")
     private final @Nullable String createdTime;
 
@@ -47,6 +64,10 @@ public final class ThemeVersion extends io.pulumi.resources.InvokeArgs {
         return this.createdTime == null ? Optional.empty() : Optional.ofNullable(this.createdTime);
     }
 
+    /**
+     * <p>The description of the theme.</p>
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -54,6 +75,10 @@ public final class ThemeVersion extends io.pulumi.resources.InvokeArgs {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * <p>Errors associated with the theme.</p>
+     * 
+     */
     @InputImport(name="errors")
     private final @Nullable List<ThemeError> errors;
 
@@ -68,6 +93,10 @@ public final class ThemeVersion extends io.pulumi.resources.InvokeArgs {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 
+    /**
+     * <p>The version number of the theme.</p>
+     * 
+     */
     @InputImport(name="versionNumber")
     private final @Nullable Double versionNumber;
 

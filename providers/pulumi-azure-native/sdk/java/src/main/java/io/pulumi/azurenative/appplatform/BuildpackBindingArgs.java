@@ -15,6 +15,10 @@ public final class BuildpackBindingArgs extends io.pulumi.resources.ResourceArgs
 
     public static final BuildpackBindingArgs Empty = new BuildpackBindingArgs();
 
+    /**
+     * The name of the build service resource.
+     * 
+     */
     @InputImport(name="buildServiceName", required=true)
     private final Input<String> buildServiceName;
 
@@ -22,6 +26,10 @@ public final class BuildpackBindingArgs extends io.pulumi.resources.ResourceArgs
         return this.buildServiceName;
     }
 
+    /**
+     * The name of the builder resource.
+     * 
+     */
     @InputImport(name="builderName", required=true)
     private final Input<String> builderName;
 
@@ -29,6 +37,10 @@ public final class BuildpackBindingArgs extends io.pulumi.resources.ResourceArgs
         return this.builderName;
     }
 
+    /**
+     * The name of the Buildpack Binding Name
+     * 
+     */
     @InputImport(name="buildpackBindingName")
     private final @Nullable Input<String> buildpackBindingName;
 
@@ -36,6 +48,10 @@ public final class BuildpackBindingArgs extends io.pulumi.resources.ResourceArgs
         return this.buildpackBindingName == null ? Input.empty() : this.buildpackBindingName;
     }
 
+    /**
+     * Properties of a buildpack binding
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<BuildpackBindingPropertiesArgs> properties;
 
@@ -43,6 +59,10 @@ public final class BuildpackBindingArgs extends io.pulumi.resources.ResourceArgs
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -50,6 +70,10 @@ public final class BuildpackBindingArgs extends io.pulumi.resources.ResourceArgs
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the Service resource.
+     * 
+     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 

@@ -14,6 +14,10 @@ public final class DocumentTagArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DocumentTagArgs Empty = new DocumentTagArgs();
 
+    /**
+     * The name of the tag.
+     * 
+     */
     @InputImport(name="key")
     private final @Nullable Input<String> key;
 
@@ -21,6 +25,10 @@ public final class DocumentTagArgs extends io.pulumi.resources.ResourceArgs {
         return this.key == null ? Input.empty() : this.key;
     }
 
+    /**
+     * The value of the tag.
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

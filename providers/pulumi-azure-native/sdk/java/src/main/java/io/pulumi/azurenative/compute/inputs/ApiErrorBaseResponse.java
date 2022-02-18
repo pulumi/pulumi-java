@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Api error base.
+ * 
+ */
 public final class ApiErrorBaseResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApiErrorBaseResponse Empty = new ApiErrorBaseResponse();
 
+    /**
+     * The error code.
+     * 
+     */
     @InputImport(name="code")
     private final @Nullable String code;
 
@@ -21,6 +29,10 @@ public final class ApiErrorBaseResponse extends io.pulumi.resources.InvokeArgs {
         return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
     }
 
+    /**
+     * The error message.
+     * 
+     */
     @InputImport(name="message")
     private final @Nullable String message;
 
@@ -28,6 +40,10 @@ public final class ApiErrorBaseResponse extends io.pulumi.resources.InvokeArgs {
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
     }
 
+    /**
+     * The target of the particular error.
+     * 
+     */
     @InputImport(name="target")
     private final @Nullable String target;
 

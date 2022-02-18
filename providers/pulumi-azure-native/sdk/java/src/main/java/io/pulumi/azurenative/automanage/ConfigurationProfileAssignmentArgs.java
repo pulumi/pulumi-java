@@ -15,6 +15,10 @@ public final class ConfigurationProfileAssignmentArgs extends io.pulumi.resource
 
     public static final ConfigurationProfileAssignmentArgs Empty = new ConfigurationProfileAssignmentArgs();
 
+    /**
+     * Name of the configuration profile assignment. Only default is supported.
+     * 
+     */
     @InputImport(name="configurationProfileAssignmentName")
     private final @Nullable Input<String> configurationProfileAssignmentName;
 
@@ -22,6 +26,10 @@ public final class ConfigurationProfileAssignmentArgs extends io.pulumi.resource
         return this.configurationProfileAssignmentName == null ? Input.empty() : this.configurationProfileAssignmentName;
     }
 
+    /**
+     * Properties of the configuration profile assignment.
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<ConfigurationProfileAssignmentPropertiesArgs> properties;
 
@@ -29,6 +37,10 @@ public final class ConfigurationProfileAssignmentArgs extends io.pulumi.resource
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -36,6 +48,10 @@ public final class ConfigurationProfileAssignmentArgs extends io.pulumi.resource
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the virtual machine.
+     * 
+     */
     @InputImport(name="vmName", required=true)
     private final Input<String> vmName;
 

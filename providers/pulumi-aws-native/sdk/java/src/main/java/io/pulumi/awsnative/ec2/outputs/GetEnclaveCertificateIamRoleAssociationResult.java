@@ -11,8 +11,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetEnclaveCertificateIamRoleAssociationResult {
+    /**
+     * The name of the Amazon S3 bucket to which the certificate was uploaded.
+     * 
+     */
     private final @Nullable String certificateS3BucketName;
+    /**
+     * The Amazon S3 object key where the certificate, certificate chain, and encrypted private key bundle are stored.
+     * 
+     */
     private final @Nullable String certificateS3ObjectKey;
+    /**
+     * The ID of the AWS KMS CMK used to encrypt the private key of the certificate.
+     * 
+     */
     private final @Nullable String encryptionKmsKeyId;
 
     @OutputCustomType.Constructor({"certificateS3BucketName","certificateS3ObjectKey","encryptionKmsKeyId"})
@@ -25,12 +37,24 @@ public final class GetEnclaveCertificateIamRoleAssociationResult {
         this.encryptionKmsKeyId = encryptionKmsKeyId;
     }
 
+    /**
+     * The name of the Amazon S3 bucket to which the certificate was uploaded.
+     * 
+     */
     public Optional<String> getCertificateS3BucketName() {
         return Optional.ofNullable(this.certificateS3BucketName);
     }
+    /**
+     * The Amazon S3 object key where the certificate, certificate chain, and encrypted private key bundle are stored.
+     * 
+     */
     public Optional<String> getCertificateS3ObjectKey() {
         return Optional.ofNullable(this.certificateS3ObjectKey);
     }
+    /**
+     * The ID of the AWS KMS CMK used to encrypt the private key of the certificate.
+     * 
+     */
     public Optional<String> getEncryptionKmsKeyId() {
         return Optional.ofNullable(this.encryptionKmsKeyId);
     }

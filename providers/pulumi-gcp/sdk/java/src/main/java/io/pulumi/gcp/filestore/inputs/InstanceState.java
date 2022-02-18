@@ -18,6 +18,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
 
     public static final InstanceState Empty = new InstanceState();
 
+    /**
+     * Creation timestamp in RFC3339 text format.
+     * 
+     */
     @InputImport(name="createTime")
     private final @Nullable Input<String> createTime;
 
@@ -25,6 +29,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.createTime == null ? Input.empty() : this.createTime;
     }
 
+    /**
+     * A description of the instance.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -32,6 +40,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Server-specified ETag for the instance resource to prevent simultaneous updates from overwriting each other.
+     * 
+     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -39,6 +51,12 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
+    /**
+     * File system shares on the instance. For this version, only a
+     * single file share is supported.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="fileShares")
     private final @Nullable Input<InstanceFileSharesGetArgs> fileShares;
 
@@ -46,6 +64,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.fileShares == null ? Input.empty() : this.fileShares;
     }
 
+    /**
+     * Resource labels to represent user-provided metadata.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -53,6 +75,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The name of the location of the instance. This can be a region for ENTERPRISE tier instances.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -60,6 +86,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the fileshare (16 characters or less)
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -67,6 +97,12 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * VPC networks to which the instance is connected. For this version,
+     * only a single network is supported.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="networks")
     private final @Nullable Input<List<InstanceNetworkGetArgs>> networks;
 
@@ -74,6 +110,11 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.networks == null ? Input.empty() : this.networks;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -81,6 +122,11 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The service tier of the instance.
+     * Possible values include: STANDARD, PREMIUM, BASIC_HDD, BASIC_SSD, HIGH_SCALE_SSD and ENTERPRISE (beta only)
+     * 
+     */
     @InputImport(name="tier")
     private final @Nullable Input<String> tier;
 
@@ -88,6 +134,16 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.tier == null ? Input.empty() : this.tier;
     }
 
+    /**
+     * - 
+     * (Optional, Deprecated)
+     * The name of the Filestore zone of the instance.
+     * 
+     * @deprecated
+     * Deprecated in favor of location.
+     * 
+     */
+    @Deprecated /* Deprecated in favor of location. */
     @InputImport(name="zone")
     private final @Nullable Input<String> zone;
 

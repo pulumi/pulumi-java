@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Information for connecting over HTTP(s).
+ * 
+ */
 public final class AddressableResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AddressableResponse Empty = new AddressableResponse();

@@ -12,6 +12,10 @@ public final class GetCustomDataIdentifierArgs extends io.pulumi.resources.Invok
 
     public static final GetCustomDataIdentifierArgs Empty = new GetCustomDataIdentifierArgs();
 
+    /**
+     * Custom data identifier ID.
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 

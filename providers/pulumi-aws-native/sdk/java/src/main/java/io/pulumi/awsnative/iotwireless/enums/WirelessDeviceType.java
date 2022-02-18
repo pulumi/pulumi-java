@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Wireless device type, currently only Sidewalk and LoRa
+     * 
+     */
     @EnumType
     public enum WirelessDeviceType {
         Sidewalk("Sidewalk"),

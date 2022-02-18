@@ -14,6 +14,10 @@ public final class OsPolicyAssignmentInstanceFilterInventoryArgs extends io.pulu
 
     public static final OsPolicyAssignmentInstanceFilterInventoryArgs Empty = new OsPolicyAssignmentInstanceFilterInventoryArgs();
 
+    /**
+     * Required. The OS short name
+     * 
+     */
     @InputImport(name="osShortName", required=true)
     private final Input<String> osShortName;
 
@@ -21,6 +25,10 @@ public final class OsPolicyAssignmentInstanceFilterInventoryArgs extends io.pulu
         return this.osShortName;
     }
 
+    /**
+     * The OS version Prefix matches are supported if asterisk(*) is provided as the last character. For example, to match all versions with a major version of `7`, specify the following value for this field `7.*` An empty string matches all OS versions.
+     * 
+     */
     @InputImport(name="osVersion")
     private final @Nullable Input<String> osVersion;
 

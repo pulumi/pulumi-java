@@ -12,6 +12,10 @@ public final class GetDatabaseArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDatabaseArgs Empty = new GetDatabaseArgs();
 
+    /**
+     * The name to use for your new Lightsail database resource.
+     * 
+     */
     @InputImport(name="relationalDatabaseName", required=true)
     private final String relationalDatabaseName;
 

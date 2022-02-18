@@ -14,6 +14,10 @@ public final class OAuthAuthenticationArgs extends io.pulumi.resources.ResourceA
 
     public static final OAuthAuthenticationArgs Empty = new OAuthAuthenticationArgs();
 
+    /**
+     * Gets or sets the audience.
+     * 
+     */
     @InputImport(name="audience")
     private final @Nullable Input<String> audience;
 
@@ -21,6 +25,10 @@ public final class OAuthAuthenticationArgs extends io.pulumi.resources.ResourceA
         return this.audience == null ? Input.empty() : this.audience;
     }
 
+    /**
+     * Gets or sets the client identifier.
+     * 
+     */
     @InputImport(name="clientId")
     private final @Nullable Input<String> clientId;
 
@@ -28,6 +36,10 @@ public final class OAuthAuthenticationArgs extends io.pulumi.resources.ResourceA
         return this.clientId == null ? Input.empty() : this.clientId;
     }
 
+    /**
+     * Gets or sets the secret, return value will always be empty.
+     * 
+     */
     @InputImport(name="secret")
     private final @Nullable Input<String> secret;
 
@@ -35,6 +47,10 @@ public final class OAuthAuthenticationArgs extends io.pulumi.resources.ResourceA
         return this.secret == null ? Input.empty() : this.secret;
     }
 
+    /**
+     * Gets or sets the tenant.
+     * 
+     */
     @InputImport(name="tenant")
     private final @Nullable Input<String> tenant;
 
@@ -42,6 +58,11 @@ public final class OAuthAuthenticationArgs extends io.pulumi.resources.ResourceA
         return this.tenant == null ? Input.empty() : this.tenant;
     }
 
+    /**
+     * Gets or sets the HTTP authentication type.
+     * Expected value is 'ActiveDirectoryOAuth'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

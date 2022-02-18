@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The SKU of the cognitive services account.
+ * 
+ */
 public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SkuArgs Empty = new SkuArgs();
 
+    /**
+     * Gets or sets the sku name. Required for account creation, optional for update.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

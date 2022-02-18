@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Database instance operation error.
+ * 
+ */
 public final class OperationErrorArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OperationErrorArgs Empty = new OperationErrorArgs();
 
+    /**
+     * Identifies the specific error that occurred.
+     * 
+     */
     @InputImport(name="code")
     private final @Nullable Input<String> code;
 
@@ -21,6 +29,10 @@ public final class OperationErrorArgs extends io.pulumi.resources.ResourceArgs {
         return this.code == null ? Input.empty() : this.code;
     }
 
+    /**
+     * This is always `sql#operationError`.
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -28,6 +40,10 @@ public final class OperationErrorArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Additional information about the error encountered.
+     * 
+     */
     @InputImport(name="message")
     private final @Nullable Input<String> message;
 

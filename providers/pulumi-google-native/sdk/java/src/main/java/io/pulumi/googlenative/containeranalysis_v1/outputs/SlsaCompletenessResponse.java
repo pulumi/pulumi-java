@@ -9,8 +9,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SlsaCompletenessResponse {
+    /**
+     * If true, the builder claims that recipe.arguments is complete, meaning that all external inputs are properly captured in the recipe.
+     * 
+     */
     private final Boolean arguments;
+    /**
+     * If true, the builder claims that recipe.environment is claimed to be complete.
+     * 
+     */
     private final Boolean environment;
+    /**
+     * If true, the builder claims that materials are complete, usually through some controls to prevent network access. Sometimes called "hermetic".
+     * 
+     */
     private final Boolean materials;
 
     @OutputCustomType.Constructor({"arguments","environment","materials"})
@@ -23,12 +35,24 @@ public final class SlsaCompletenessResponse {
         this.materials = Objects.requireNonNull(materials);
     }
 
+    /**
+     * If true, the builder claims that recipe.arguments is complete, meaning that all external inputs are properly captured in the recipe.
+     * 
+     */
     public Boolean getArguments() {
         return this.arguments;
     }
+    /**
+     * If true, the builder claims that recipe.environment is claimed to be complete.
+     * 
+     */
     public Boolean getEnvironment() {
         return this.environment;
     }
+    /**
+     * If true, the builder claims that materials are complete, usually through some controls to prevent network access. Sometimes called "hermetic".
+     * 
+     */
     public Boolean getMaterials() {
         return this.materials;
     }

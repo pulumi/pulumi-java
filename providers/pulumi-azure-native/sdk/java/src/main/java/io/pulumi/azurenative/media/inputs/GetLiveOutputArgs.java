@@ -12,6 +12,10 @@ public final class GetLiveOutputArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetLiveOutputArgs Empty = new GetLiveOutputArgs();
 
+    /**
+     * The Media Services account name.
+     * 
+     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -19,6 +23,10 @@ public final class GetLiveOutputArgs extends io.pulumi.resources.InvokeArgs {
         return this.accountName;
     }
 
+    /**
+     * The name of the live event, maximum length is 32.
+     * 
+     */
     @InputImport(name="liveEventName", required=true)
     private final String liveEventName;
 
@@ -26,6 +34,10 @@ public final class GetLiveOutputArgs extends io.pulumi.resources.InvokeArgs {
         return this.liveEventName;
     }
 
+    /**
+     * The name of the live output.
+     * 
+     */
     @InputImport(name="liveOutputName", required=true)
     private final String liveOutputName;
 
@@ -33,6 +45,10 @@ public final class GetLiveOutputArgs extends io.pulumi.resources.InvokeArgs {
         return this.liveOutputName;
     }
 
+    /**
+     * The name of the resource group within the Azure subscription.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

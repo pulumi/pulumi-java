@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ListAccountSasResult {
+    /**
+     * The shared access signature access token.
+     * 
+     */
     private final String accountSasToken;
 
     @OutputCustomType.Constructor({"accountSasToken"})
@@ -16,6 +20,10 @@ public final class ListAccountSasResult {
         this.accountSasToken = Objects.requireNonNull(accountSasToken);
     }
 
+    /**
+     * The shared access signature access token.
+     * 
+     */
     public String getAccountSasToken() {
         return this.accountSasToken;
     }

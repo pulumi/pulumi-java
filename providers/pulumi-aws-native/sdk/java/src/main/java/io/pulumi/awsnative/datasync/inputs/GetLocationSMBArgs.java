@@ -12,6 +12,10 @@ public final class GetLocationSMBArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetLocationSMBArgs Empty = new GetLocationSMBArgs();
 
+    /**
+     * The Amazon Resource Name (ARN) of the SMB location that is created.
+     * 
+     */
     @InputImport(name="locationArn", required=true)
     private final String locationArn;
 

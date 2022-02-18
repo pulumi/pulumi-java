@@ -13,11 +13,35 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class KeyAttributesResponse {
+    /**
+     * Creation time in seconds since 1970-01-01T00:00:00Z.
+     * 
+     */
     private final Double created;
+    /**
+     * Determines whether or not the object is enabled.
+     * 
+     */
     private final @Nullable Boolean enabled;
+    /**
+     * Expiry date in seconds since 1970-01-01T00:00:00Z.
+     * 
+     */
     private final @Nullable Double expires;
+    /**
+     * Not before date in seconds since 1970-01-01T00:00:00Z.
+     * 
+     */
     private final @Nullable Double notBefore;
+    /**
+     * The deletion recovery level currently in effect for the object. If it contains 'Purgeable', then the object can be permanently deleted by a privileged user; otherwise, only the system can purge the object at the end of the retention interval.
+     * 
+     */
     private final String recoveryLevel;
+    /**
+     * Last updated time in seconds since 1970-01-01T00:00:00Z.
+     * 
+     */
     private final Double updated;
 
     @OutputCustomType.Constructor({"created","enabled","expires","notBefore","recoveryLevel","updated"})
@@ -36,21 +60,45 @@ public final class KeyAttributesResponse {
         this.updated = Objects.requireNonNull(updated);
     }
 
+    /**
+     * Creation time in seconds since 1970-01-01T00:00:00Z.
+     * 
+     */
     public Double getCreated() {
         return this.created;
     }
+    /**
+     * Determines whether or not the object is enabled.
+     * 
+     */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
+    /**
+     * Expiry date in seconds since 1970-01-01T00:00:00Z.
+     * 
+     */
     public Optional<Double> getExpires() {
         return Optional.ofNullable(this.expires);
     }
+    /**
+     * Not before date in seconds since 1970-01-01T00:00:00Z.
+     * 
+     */
     public Optional<Double> getNotBefore() {
         return Optional.ofNullable(this.notBefore);
     }
+    /**
+     * The deletion recovery level currently in effect for the object. If it contains 'Purgeable', then the object can be permanently deleted by a privileged user; otherwise, only the system can purge the object at the end of the retention interval.
+     * 
+     */
     public String getRecoveryLevel() {
         return this.recoveryLevel;
     }
+    /**
+     * Last updated time in seconds since 1970-01-01T00:00:00Z.
+     * 
+     */
     public Double getUpdated() {
         return this.updated;
     }

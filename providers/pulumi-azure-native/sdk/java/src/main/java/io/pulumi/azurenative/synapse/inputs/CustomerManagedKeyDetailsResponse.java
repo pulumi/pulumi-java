@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Details of the customer managed key associated with the workspace
+ * 
+ */
 public final class CustomerManagedKeyDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CustomerManagedKeyDetailsResponse Empty = new CustomerManagedKeyDetailsResponse();
 
+    /**
+     * The key object of the workspace
+     * 
+     */
     @InputImport(name="key")
     private final @Nullable WorkspaceKeyDetailsResponse key;
 
@@ -22,6 +30,10 @@ public final class CustomerManagedKeyDetailsResponse extends io.pulumi.resources
         return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
     }
 
+    /**
+     * The customer managed key status on the workspace
+     * 
+     */
     @InputImport(name="status", required=true)
     private final String status;
 

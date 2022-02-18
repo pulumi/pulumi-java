@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * GroupMembers Item.
+ * 
+ */
 public final class GroupMembersItemArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GroupMembersItemArgs Empty = new GroupMembersItemArgs();
 
+    /**
+     * Resource Id.
+     * 
+     */
     @InputImport(name="resourceId")
     private final @Nullable Input<String> resourceId;
 

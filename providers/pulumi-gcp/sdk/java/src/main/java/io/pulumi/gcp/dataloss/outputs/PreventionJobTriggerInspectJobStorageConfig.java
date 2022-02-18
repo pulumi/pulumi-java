@@ -14,9 +14,29 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PreventionJobTriggerInspectJobStorageConfig {
+    /**
+     * Options defining BigQuery table and row identifiers.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable PreventionJobTriggerInspectJobStorageConfigBigQueryOptions bigQueryOptions;
+    /**
+     * Options defining a file or a set of files within a Google Cloud Storage bucket.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable PreventionJobTriggerInspectJobStorageConfigCloudStorageOptions cloudStorageOptions;
+    /**
+     * Options defining a data set within Google Cloud Datastore.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable PreventionJobTriggerInspectJobStorageConfigDatastoreOptions datastoreOptions;
+    /**
+     * Information on where to inspect
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable PreventionJobTriggerInspectJobStorageConfigTimespanConfig timespanConfig;
 
     @OutputCustomType.Constructor({"bigQueryOptions","cloudStorageOptions","datastoreOptions","timespanConfig"})
@@ -31,15 +51,35 @@ public final class PreventionJobTriggerInspectJobStorageConfig {
         this.timespanConfig = timespanConfig;
     }
 
+    /**
+     * Options defining BigQuery table and row identifiers.
+     * Structure is documented below.
+     * 
+     */
     public Optional<PreventionJobTriggerInspectJobStorageConfigBigQueryOptions> getBigQueryOptions() {
         return Optional.ofNullable(this.bigQueryOptions);
     }
+    /**
+     * Options defining a file or a set of files within a Google Cloud Storage bucket.
+     * Structure is documented below.
+     * 
+     */
     public Optional<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptions> getCloudStorageOptions() {
         return Optional.ofNullable(this.cloudStorageOptions);
     }
+    /**
+     * Options defining a data set within Google Cloud Datastore.
+     * Structure is documented below.
+     * 
+     */
     public Optional<PreventionJobTriggerInspectJobStorageConfigDatastoreOptions> getDatastoreOptions() {
         return Optional.ofNullable(this.datastoreOptions);
     }
+    /**
+     * Information on where to inspect
+     * Structure is documented below.
+     * 
+     */
     public Optional<PreventionJobTriggerInspectJobStorageConfigTimespanConfig> getTimespanConfig() {
         return Optional.ofNullable(this.timespanConfig);
     }

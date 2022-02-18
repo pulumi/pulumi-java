@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The queue configuration. This is required only if QuickConnectType is QUEUE.
+ * 
+ */
 public final class QuickConnectQueueQuickConnectConfig extends io.pulumi.resources.InvokeArgs {
 
     public static final QuickConnectQueueQuickConnectConfig Empty = new QuickConnectQueueQuickConnectConfig();

@@ -14,6 +14,10 @@ public final class InstanceAcceleratorConfigArgs extends io.pulumi.resources.Res
 
     public static final InstanceAcceleratorConfigArgs Empty = new InstanceAcceleratorConfigArgs();
 
+    /**
+     * Count of cores of this accelerator.
+     * 
+     */
     @InputImport(name="coreCount", required=true)
     private final Input<Integer> coreCount;
 
@@ -21,6 +25,11 @@ public final class InstanceAcceleratorConfigArgs extends io.pulumi.resources.Res
         return this.coreCount;
     }
 
+    /**
+     * Type of this accelerator.
+     * Possible values are `ACCELERATOR_TYPE_UNSPECIFIED`, `NVIDIA_TESLA_K80`, `NVIDIA_TESLA_P100`, `NVIDIA_TESLA_V100`, `NVIDIA_TESLA_P4`, `NVIDIA_TESLA_T4`, `NVIDIA_TESLA_T4_VWS`, `NVIDIA_TESLA_P100_VWS`, `NVIDIA_TESLA_P4_VWS`, `NVIDIA_TESLA_A100`, `TPU_V2`, and `TPU_V3`.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

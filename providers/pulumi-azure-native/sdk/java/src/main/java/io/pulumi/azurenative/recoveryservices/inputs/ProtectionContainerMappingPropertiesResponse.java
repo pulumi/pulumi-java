@@ -15,10 +15,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Protection container mapping properties.
+ * 
+ */
 public final class ProtectionContainerMappingPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ProtectionContainerMappingPropertiesResponse Empty = new ProtectionContainerMappingPropertiesResponse();
 
+    /**
+     * Health of pairing.
+     * 
+     */
     @InputImport(name="health")
     private final @Nullable String health;
 
@@ -26,6 +34,10 @@ public final class ProtectionContainerMappingPropertiesResponse extends io.pulum
         return this.health == null ? Optional.empty() : Optional.ofNullable(this.health);
     }
 
+    /**
+     * Health error.
+     * 
+     */
     @InputImport(name="healthErrorDetails")
     private final @Nullable List<HealthErrorResponse> healthErrorDetails;
 
@@ -33,6 +45,10 @@ public final class ProtectionContainerMappingPropertiesResponse extends io.pulum
         return this.healthErrorDetails == null ? List.of() : this.healthErrorDetails;
     }
 
+    /**
+     * Friendly name of replication policy.
+     * 
+     */
     @InputImport(name="policyFriendlyName")
     private final @Nullable String policyFriendlyName;
 
@@ -40,6 +56,10 @@ public final class ProtectionContainerMappingPropertiesResponse extends io.pulum
         return this.policyFriendlyName == null ? Optional.empty() : Optional.ofNullable(this.policyFriendlyName);
     }
 
+    /**
+     * Policy ARM Id.
+     * 
+     */
     @InputImport(name="policyId")
     private final @Nullable String policyId;
 
@@ -47,6 +67,10 @@ public final class ProtectionContainerMappingPropertiesResponse extends io.pulum
         return this.policyId == null ? Optional.empty() : Optional.ofNullable(this.policyId);
     }
 
+    /**
+     * Provider specific provider details.
+     * 
+     */
     @InputImport(name="providerSpecificDetails")
     private final @Nullable Either<A2AProtectionContainerMappingDetailsResponse,VMwareCbtProtectionContainerMappingDetailsResponse> providerSpecificDetails;
 
@@ -54,6 +78,10 @@ public final class ProtectionContainerMappingPropertiesResponse extends io.pulum
         return this.providerSpecificDetails == null ? null : this.providerSpecificDetails;
     }
 
+    /**
+     * Friendly name of source fabric.
+     * 
+     */
     @InputImport(name="sourceFabricFriendlyName")
     private final @Nullable String sourceFabricFriendlyName;
 
@@ -61,6 +89,10 @@ public final class ProtectionContainerMappingPropertiesResponse extends io.pulum
         return this.sourceFabricFriendlyName == null ? Optional.empty() : Optional.ofNullable(this.sourceFabricFriendlyName);
     }
 
+    /**
+     * Friendly name of source protection container.
+     * 
+     */
     @InputImport(name="sourceProtectionContainerFriendlyName")
     private final @Nullable String sourceProtectionContainerFriendlyName;
 
@@ -68,6 +100,10 @@ public final class ProtectionContainerMappingPropertiesResponse extends io.pulum
         return this.sourceProtectionContainerFriendlyName == null ? Optional.empty() : Optional.ofNullable(this.sourceProtectionContainerFriendlyName);
     }
 
+    /**
+     * Association Status
+     * 
+     */
     @InputImport(name="state")
     private final @Nullable String state;
 
@@ -75,6 +111,10 @@ public final class ProtectionContainerMappingPropertiesResponse extends io.pulum
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
     }
 
+    /**
+     * Friendly name of target fabric.
+     * 
+     */
     @InputImport(name="targetFabricFriendlyName")
     private final @Nullable String targetFabricFriendlyName;
 
@@ -82,6 +122,10 @@ public final class ProtectionContainerMappingPropertiesResponse extends io.pulum
         return this.targetFabricFriendlyName == null ? Optional.empty() : Optional.ofNullable(this.targetFabricFriendlyName);
     }
 
+    /**
+     * Friendly name of paired container.
+     * 
+     */
     @InputImport(name="targetProtectionContainerFriendlyName")
     private final @Nullable String targetProtectionContainerFriendlyName;
 
@@ -89,6 +133,10 @@ public final class ProtectionContainerMappingPropertiesResponse extends io.pulum
         return this.targetProtectionContainerFriendlyName == null ? Optional.empty() : Optional.ofNullable(this.targetProtectionContainerFriendlyName);
     }
 
+    /**
+     * Paired protection container ARM ID.
+     * 
+     */
     @InputImport(name="targetProtectionContainerId")
     private final @Nullable String targetProtectionContainerId;
 

@@ -12,6 +12,10 @@ public final class GetClusterArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetClusterArgs Empty = new GetClusterArgs();
 
+    /**
+     * The Amazon Resource Name (ARN) of the cluster.
+     * 
+     */
     @InputImport(name="clusterArn", required=true)
     private final String clusterArn;
 

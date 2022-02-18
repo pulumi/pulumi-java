@@ -12,6 +12,10 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadi
 
     public static final InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalResponse Empty = new InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalResponse();
 
+    /**
+     * The number of seconds to wait for a readiness signal during initialization before timing out.
+     * 
+     */
     @InputImport(name="timeoutSec", required=true)
     private final Integer timeoutSec;
 

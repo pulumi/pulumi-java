@@ -16,21 +16,85 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetInstanceResult {
+    /**
+     * The full name of the Google Compute Engine [network](/compute/docs/networks-and-firewalls#networks) to which the instance is connected. If left unspecified, the `default` network will be used.
+     * 
+     */
     private final String authorizedNetwork;
+    /**
+     * The time the instance was created.
+     * 
+     */
     private final String createTime;
+    /**
+     * Endpoint for the Discovery API.
+     * 
+     */
     private final String discoveryEndpoint;
+    /**
+     * User provided name for the instance, which is only used for display purposes. Cannot be more than 80 characters.
+     * 
+     */
     private final String displayName;
+    /**
+     * List of messages that describe the current state of the Memcached instance.
+     * 
+     */
     private final List<InstanceMessageResponse> instanceMessages;
+    /**
+     * Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
+     * 
+     */
     private final Map<String,String> labels;
+    /**
+     * The full version of memcached server running on this instance. System automatically determines the full memcached version for an instance based on the input MemcacheVersion. The full version format will be "memcached-1.5.16".
+     * 
+     */
     private final String memcacheFullVersion;
+    /**
+     * List of Memcached nodes. Refer to Node message for more details.
+     * 
+     */
     private final List<NodeResponse> memcacheNodes;
+    /**
+     * The major version of Memcached software. If not provided, latest supported version will be used. Currently the latest supported major version is `MEMCACHE_1_5`. The minor version will be automatically determined by our system based on the latest supported minor version.
+     * 
+     */
     private final String memcacheVersion;
+    /**
+     * Unique name of the resource in this scope including project and location using the form: `projects/{project_id}/locations/{location_id}/instances/{instance_id}` Note: Memcached instances are managed and addressed at the regional level so `location_id` here refers to a Google Cloud region; however, users may choose which zones Memcached nodes should be provisioned in within an instance. Refer to zones field for more details.
+     * 
+     */
     private final String name;
+    /**
+     * Configuration for Memcached nodes.
+     * 
+     */
     private final NodeConfigResponse nodeConfig;
+    /**
+     * Number of nodes in the Memcached instance.
+     * 
+     */
     private final Integer nodeCount;
+    /**
+     * User defined parameters to apply to the memcached process on each node.
+     * 
+     */
     private final MemcacheParametersResponse parameters;
+    /**
+     * The state of this Memcached instance.
+     * 
+     */
     private final String state;
+    /**
+     * The time the instance was updated.
+     * 
+     */
     private final String updateTime;
+    /**
+     * Zones in which Memcached nodes should be provisioned. Memcached nodes will be equally distributed across these zones. If not provided, the service will by default create nodes in all zones in the region for the instance.
+     * 
+     */
     private final List<String> zones;
 
     @OutputCustomType.Constructor({"authorizedNetwork","createTime","discoveryEndpoint","displayName","instanceMessages","labels","memcacheFullVersion","memcacheNodes","memcacheVersion","name","nodeConfig","nodeCount","parameters","state","updateTime","zones"})
@@ -69,51 +133,115 @@ public final class GetInstanceResult {
         this.zones = Objects.requireNonNull(zones);
     }
 
+    /**
+     * The full name of the Google Compute Engine [network](/compute/docs/networks-and-firewalls#networks) to which the instance is connected. If left unspecified, the `default` network will be used.
+     * 
+     */
     public String getAuthorizedNetwork() {
         return this.authorizedNetwork;
     }
+    /**
+     * The time the instance was created.
+     * 
+     */
     public String getCreateTime() {
         return this.createTime;
     }
+    /**
+     * Endpoint for the Discovery API.
+     * 
+     */
     public String getDiscoveryEndpoint() {
         return this.discoveryEndpoint;
     }
+    /**
+     * User provided name for the instance, which is only used for display purposes. Cannot be more than 80 characters.
+     * 
+     */
     public String getDisplayName() {
         return this.displayName;
     }
+    /**
+     * List of messages that describe the current state of the Memcached instance.
+     * 
+     */
     public List<InstanceMessageResponse> getInstanceMessages() {
         return this.instanceMessages;
     }
+    /**
+     * Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
+     * 
+     */
     public Map<String,String> getLabels() {
         return this.labels;
     }
+    /**
+     * The full version of memcached server running on this instance. System automatically determines the full memcached version for an instance based on the input MemcacheVersion. The full version format will be "memcached-1.5.16".
+     * 
+     */
     public String getMemcacheFullVersion() {
         return this.memcacheFullVersion;
     }
+    /**
+     * List of Memcached nodes. Refer to Node message for more details.
+     * 
+     */
     public List<NodeResponse> getMemcacheNodes() {
         return this.memcacheNodes;
     }
+    /**
+     * The major version of Memcached software. If not provided, latest supported version will be used. Currently the latest supported major version is `MEMCACHE_1_5`. The minor version will be automatically determined by our system based on the latest supported minor version.
+     * 
+     */
     public String getMemcacheVersion() {
         return this.memcacheVersion;
     }
+    /**
+     * Unique name of the resource in this scope including project and location using the form: `projects/{project_id}/locations/{location_id}/instances/{instance_id}` Note: Memcached instances are managed and addressed at the regional level so `location_id` here refers to a Google Cloud region; however, users may choose which zones Memcached nodes should be provisioned in within an instance. Refer to zones field for more details.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Configuration for Memcached nodes.
+     * 
+     */
     public NodeConfigResponse getNodeConfig() {
         return this.nodeConfig;
     }
+    /**
+     * Number of nodes in the Memcached instance.
+     * 
+     */
     public Integer getNodeCount() {
         return this.nodeCount;
     }
+    /**
+     * User defined parameters to apply to the memcached process on each node.
+     * 
+     */
     public MemcacheParametersResponse getParameters() {
         return this.parameters;
     }
+    /**
+     * The state of this Memcached instance.
+     * 
+     */
     public String getState() {
         return this.state;
     }
+    /**
+     * The time the instance was updated.
+     * 
+     */
     public String getUpdateTime() {
         return this.updateTime;
     }
+    /**
+     * Zones in which Memcached nodes should be provisioned. Memcached nodes will be equally distributed across these zones. If not provided, the service will by default create nodes in all zones in the region for the instance.
+     * 
+     */
     public List<String> getZones() {
         return this.zones;
     }

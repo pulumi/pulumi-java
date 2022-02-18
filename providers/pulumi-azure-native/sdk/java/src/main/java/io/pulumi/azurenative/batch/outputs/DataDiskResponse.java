@@ -12,9 +12,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DataDiskResponse {
+    /**
+     * Values are:
+     * 
+     *  none - The caching mode for the disk is not enabled.
+     *  readOnly - The caching mode for the disk is read only.
+     *  readWrite - The caching mode for the disk is read and write.
+     * 
+     *  The default value for caching is none. For information about the caching options see: https://blogs.msdn.microsoft.com/windowsazurestorage/2012/06/27/exploring-windows-azure-drives-disks-and-images/.
+     * 
+     */
     private final @Nullable String caching;
     private final Integer diskSizeGB;
+    /**
+     * The lun is used to uniquely identify each data disk. If attaching multiple disks, each should have a distinct lun. The value must be between 0 and 63, inclusive.
+     * 
+     */
     private final Integer lun;
+    /**
+     * If omitted, the default is "Standard_LRS". Values are:
+     * 
+     *  Standard_LRS - The data disk should use standard locally redundant storage.
+     *  Premium_LRS - The data disk should use premium locally redundant storage.
+     * 
+     */
     private final @Nullable String storageAccountType;
 
     @OutputCustomType.Constructor({"caching","diskSizeGB","lun","storageAccountType"})
@@ -29,15 +50,36 @@ public final class DataDiskResponse {
         this.storageAccountType = storageAccountType;
     }
 
+    /**
+     * Values are:
+     * 
+     *  none - The caching mode for the disk is not enabled.
+     *  readOnly - The caching mode for the disk is read only.
+     *  readWrite - The caching mode for the disk is read and write.
+     * 
+     *  The default value for caching is none. For information about the caching options see: https://blogs.msdn.microsoft.com/windowsazurestorage/2012/06/27/exploring-windows-azure-drives-disks-and-images/.
+     * 
+     */
     public Optional<String> getCaching() {
         return Optional.ofNullable(this.caching);
     }
     public Integer getDiskSizeGB() {
         return this.diskSizeGB;
     }
+    /**
+     * The lun is used to uniquely identify each data disk. If attaching multiple disks, each should have a distinct lun. The value must be between 0 and 63, inclusive.
+     * 
+     */
     public Integer getLun() {
         return this.lun;
     }
+    /**
+     * If omitted, the default is "Standard_LRS". Values are:
+     * 
+     *  Standard_LRS - The data disk should use standard locally redundant storage.
+     *  Premium_LRS - The data disk should use premium locally redundant storage.
+     * 
+     */
     public Optional<String> getStorageAccountType() {
         return Optional.ofNullable(this.storageAccountType);
     }

@@ -19,15 +19,56 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SharePointOnlineListLinkedServiceResponse {
+    /**
+     * List of tags that can be used for describing the linked service.
+     * 
+     */
     private final @Nullable List<Object> annotations;
+    /**
+     * The integration runtime reference.
+     * 
+     */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+    /**
+     * Linked service description.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     private final @Nullable Object encryptedCredential;
+    /**
+     * Parameters for linked service.
+     * 
+     */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+    /**
+     * The application (client) ID of your application registered in Azure Active Directory. Make sure to grant SharePoint site permission to this application. Type: string (or Expression with resultType string).
+     * 
+     */
     private final Object servicePrincipalId;
+    /**
+     * The client secret of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).
+     * 
+     */
     private final Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
+    /**
+     * The URL of the SharePoint Online site. For example, https://contoso.sharepoint.com/sites/siteName. Type: string (or Expression with resultType string).
+     * 
+     */
     private final Object siteUrl;
+    /**
+     * The tenant ID under which your application resides. You can find it from Azure portal Active Directory overview page. Type: string (or Expression with resultType string).
+     * 
+     */
     private final Object tenantId;
+    /**
+     * Type of linked service.
+     * Expected value is 'SharePointOnlineList'.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"annotations","connectVia","description","encryptedCredential","parameters","servicePrincipalId","servicePrincipalKey","siteUrl","tenantId","type"})
@@ -54,33 +95,74 @@ public final class SharePointOnlineListLinkedServiceResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * List of tags that can be used for describing the linked service.
+     * 
+     */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
+    /**
+     * The integration runtime reference.
+     * 
+     */
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return Optional.ofNullable(this.connectVia);
     }
+    /**
+     * Linked service description.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> getEncryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
+    /**
+     * Parameters for linked service.
+     * 
+     */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
+    /**
+     * The application (client) ID of your application registered in Azure Active Directory. Make sure to grant SharePoint site permission to this application. Type: string (or Expression with resultType string).
+     * 
+     */
     public Object getServicePrincipalId() {
         return this.servicePrincipalId;
     }
+    /**
+     * The client secret of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).
+     * 
+     */
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getServicePrincipalKey() {
         return this.servicePrincipalKey;
     }
+    /**
+     * The URL of the SharePoint Online site. For example, https://contoso.sharepoint.com/sites/siteName. Type: string (or Expression with resultType string).
+     * 
+     */
     public Object getSiteUrl() {
         return this.siteUrl;
     }
+    /**
+     * The tenant ID under which your application resides. You can find it from Azure portal Active Directory overview page. Type: string (or Expression with resultType string).
+     * 
+     */
     public Object getTenantId() {
         return this.tenantId;
     }
+    /**
+     * Type of linked service.
+     * Expected value is 'SharePointOnlineList'.
+     * 
+     */
     public String getType() {
         return this.type;
     }

@@ -12,6 +12,10 @@ public final class GetSolutionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSolutionArgs Empty = new GetSolutionArgs();
 
+    /**
+     * Name of the Azure Migrate project.
+     * 
+     */
     @InputImport(name="migrateProjectName", required=true)
     private final String migrateProjectName;
 
@@ -19,6 +23,10 @@ public final class GetSolutionArgs extends io.pulumi.resources.InvokeArgs {
         return this.migrateProjectName;
     }
 
+    /**
+     * Name of the Azure Resource Group that migrate project is part of.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetSolutionArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Unique name of a migration solution within a migrate project.
+     * 
+     */
     @InputImport(name="solutionName", required=true)
     private final String solutionName;
 

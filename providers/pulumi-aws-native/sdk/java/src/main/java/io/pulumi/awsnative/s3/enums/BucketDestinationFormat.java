@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Specifies the file format used when exporting data to Amazon S3.
+     * 
+     */
     @EnumType
     public enum BucketDestinationFormat {
         Csv("CSV"),

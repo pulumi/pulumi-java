@@ -12,6 +12,10 @@ public final class GetHoursOfOperationArgs extends io.pulumi.resources.InvokeArg
 
     public static final GetHoursOfOperationArgs Empty = new GetHoursOfOperationArgs();
 
+    /**
+     * The Amazon Resource Name (ARN) for the hours of operation.
+     * 
+     */
     @InputImport(name="hoursOfOperationArn", required=true)
     private final String hoursOfOperationArn;
 

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Protocol to use when redirecting requests. The default is the protocol that is used in the original request.
+     * 
+     */
     @EnumType
     public enum BucketRedirectAllRequestsToProtocol {
         Http("http"),

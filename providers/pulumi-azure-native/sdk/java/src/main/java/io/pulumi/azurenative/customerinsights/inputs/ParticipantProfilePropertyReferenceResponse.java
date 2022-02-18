@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The participant profile property reference.
+ * 
+ */
 public final class ParticipantProfilePropertyReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ParticipantProfilePropertyReferenceResponse Empty = new ParticipantProfilePropertyReferenceResponse();
 
+    /**
+     * The source interaction property that maps to the target profile property.
+     * 
+     */
     @InputImport(name="interactionPropertyName", required=true)
     private final String interactionPropertyName;
 
@@ -19,6 +27,10 @@ public final class ParticipantProfilePropertyReferenceResponse extends io.pulumi
         return this.interactionPropertyName;
     }
 
+    /**
+     * The target profile property that maps to the source interaction property.
+     * 
+     */
     @InputImport(name="profilePropertyName", required=true)
     private final String profilePropertyName;
 

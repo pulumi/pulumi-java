@@ -14,6 +14,10 @@ public final class SuppressionAlertsScopeArgs extends io.pulumi.resources.Resour
 
     public static final SuppressionAlertsScopeArgs Empty = new SuppressionAlertsScopeArgs();
 
+    /**
+     * All the conditions inside need to be true in order to suppress the alert
+     * 
+     */
     @InputImport(name="allOf", required=true)
     private final Input<List<ScopeElementArgs>> allOf;
 

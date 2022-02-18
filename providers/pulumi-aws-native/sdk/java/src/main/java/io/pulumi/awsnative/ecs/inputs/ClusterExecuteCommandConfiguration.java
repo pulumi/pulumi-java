@@ -11,6 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The configuration for ExecuteCommand.
+ * 
+ */
 public final class ClusterExecuteCommandConfiguration extends io.pulumi.resources.InvokeArgs {
 
     public static final ClusterExecuteCommandConfiguration Empty = new ClusterExecuteCommandConfiguration();

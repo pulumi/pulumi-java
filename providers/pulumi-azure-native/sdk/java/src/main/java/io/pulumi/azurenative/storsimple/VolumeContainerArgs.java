@@ -17,6 +17,10 @@ public final class VolumeContainerArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final VolumeContainerArgs Empty = new VolumeContainerArgs();
 
+    /**
+     * The bandwidth-rate set on the volume container.
+     * 
+     */
     @InputImport(name="bandWidthRateInMbps")
     private final @Nullable Input<Integer> bandWidthRateInMbps;
 
@@ -24,6 +28,10 @@ public final class VolumeContainerArgs extends io.pulumi.resources.ResourceArgs 
         return this.bandWidthRateInMbps == null ? Input.empty() : this.bandWidthRateInMbps;
     }
 
+    /**
+     * The ID of the bandwidth setting associated with the volume container.
+     * 
+     */
     @InputImport(name="bandwidthSettingId")
     private final @Nullable Input<String> bandwidthSettingId;
 
@@ -31,6 +39,10 @@ public final class VolumeContainerArgs extends io.pulumi.resources.ResourceArgs 
         return this.bandwidthSettingId == null ? Input.empty() : this.bandwidthSettingId;
     }
 
+    /**
+     * The device name
+     * 
+     */
     @InputImport(name="deviceName", required=true)
     private final Input<String> deviceName;
 
@@ -38,6 +50,10 @@ public final class VolumeContainerArgs extends io.pulumi.resources.ResourceArgs 
         return this.deviceName;
     }
 
+    /**
+     * The key used to encrypt data in the volume container. It is required when property 'EncryptionStatus' is "Enabled".
+     * 
+     */
     @InputImport(name="encryptionKey")
     private final @Nullable Input<AsymmetricEncryptedSecretArgs> encryptionKey;
 
@@ -45,6 +61,10 @@ public final class VolumeContainerArgs extends io.pulumi.resources.ResourceArgs 
         return this.encryptionKey == null ? Input.empty() : this.encryptionKey;
     }
 
+    /**
+     * The Kind of the object. Currently only Series8000 is supported
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<Kind> kind;
 
@@ -52,6 +72,10 @@ public final class VolumeContainerArgs extends io.pulumi.resources.ResourceArgs 
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * The manager name
+     * 
+     */
     @InputImport(name="managerName", required=true)
     private final Input<String> managerName;
 
@@ -59,6 +83,10 @@ public final class VolumeContainerArgs extends io.pulumi.resources.ResourceArgs 
         return this.managerName;
     }
 
+    /**
+     * The resource group name
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -66,6 +94,10 @@ public final class VolumeContainerArgs extends io.pulumi.resources.ResourceArgs 
         return this.resourceGroupName;
     }
 
+    /**
+     * The path ID of storage account associated with the volume container.
+     * 
+     */
     @InputImport(name="storageAccountCredentialId", required=true)
     private final Input<String> storageAccountCredentialId;
 
@@ -73,6 +105,10 @@ public final class VolumeContainerArgs extends io.pulumi.resources.ResourceArgs 
         return this.storageAccountCredentialId;
     }
 
+    /**
+     * The name of the volume container.
+     * 
+     */
     @InputImport(name="volumeContainerName")
     private final @Nullable Input<String> volumeContainerName;
 

@@ -17,69 +17,171 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * The agentpool that has the ARM resource and properties.
+ * The agentpool will have all information to create an agent pool.
+ * API Version: 2019-06-01-preview.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:containerregistry:AgentPool myAgentPool /subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourceGroups/huanwudfwestgroup/providers/Microsoft.ContainerRegistry/registries/huanglidfwest01/agentPools/testagent26 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:containerregistry:AgentPool")
 public class AgentPool extends io.pulumi.resources.CustomResource {
+    /**
+     * The count of agent machine
+     * 
+     */
     @OutputExport(name="count", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> count;
 
+    /**
+     * @return The count of agent machine
+     * 
+     */
     public Output</* @Nullable */ Integer> getCount() {
         return this.count;
     }
+    /**
+     * The location of the resource. This cannot be changed after the resource is created.
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return The location of the resource. This cannot be changed after the resource is created.
+     * 
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * The name of the resource.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The OS of agent machine
+     * 
+     */
     @OutputExport(name="os", type=String.class, parameters={})
     private Output</* @Nullable */ String> os;
 
+    /**
+     * @return The OS of agent machine
+     * 
+     */
     public Output</* @Nullable */ String> getOs() {
         return this.os;
     }
+    /**
+     * The provisioning state of this agent pool
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning state of this agent pool
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Metadata pertaining to creation and last modification of the resource.
+     * 
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return Metadata pertaining to creation and last modification of the resource.
+     * 
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * The tags of the resource.
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return The tags of the resource.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * The Tier of agent machine
+     * 
+     */
     @OutputExport(name="tier", type=String.class, parameters={})
     private Output</* @Nullable */ String> tier;
 
+    /**
+     * @return The Tier of agent machine
+     * 
+     */
     public Output</* @Nullable */ String> getTier() {
         return this.tier;
     }
+    /**
+     * The type of the resource.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * The Virtual Network Subnet Resource Id of the agent machine
+     * 
+     */
     @OutputExport(name="virtualNetworkSubnetResourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> virtualNetworkSubnetResourceId;
 
+    /**
+     * @return The Virtual Network Subnet Resource Id of the agent machine
+     * 
+     */
     public Output</* @Nullable */ String> getVirtualNetworkSubnetResourceId() {
         return this.virtualNetworkSubnetResourceId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public AgentPool(String name, AgentPoolArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:containerregistry:AgentPool", name, args == null ? AgentPoolArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -98,6 +200,14 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static AgentPool get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AgentPool(name, id, options);
     }

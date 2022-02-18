@@ -12,7 +12,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ManagedRulesDefinitionResponse {
+    /**
+     * The Exclusions that are applied on the policy.
+     * 
+     */
     private final @Nullable List<OwaspCrsExclusionEntryResponse> exclusions;
+    /**
+     * The managed rule sets that are associated with the policy.
+     * 
+     */
     private final List<ManagedRuleSetResponse> managedRuleSets;
 
     @OutputCustomType.Constructor({"exclusions","managedRuleSets"})
@@ -23,9 +31,17 @@ public final class ManagedRulesDefinitionResponse {
         this.managedRuleSets = Objects.requireNonNull(managedRuleSets);
     }
 
+    /**
+     * The Exclusions that are applied on the policy.
+     * 
+     */
     public List<OwaspCrsExclusionEntryResponse> getExclusions() {
         return this.exclusions == null ? List.of() : this.exclusions;
     }
+    /**
+     * The managed rule sets that are associated with the policy.
+     * 
+     */
     public List<ManagedRuleSetResponse> getManagedRuleSets() {
         return this.managedRuleSets;
     }

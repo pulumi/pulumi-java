@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Each pivot must contain a 'type' and 'name'.
+ * 
+ */
 public final class PivotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PivotPropertiesArgs Empty = new PivotPropertiesArgs();
 
+    /**
+     * Data field to show in view.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -23,6 +31,10 @@ public final class PivotPropertiesArgs extends io.pulumi.resources.ResourceArgs 
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Data type to show in view.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<Either<String,PivotTypeType>> type;
 

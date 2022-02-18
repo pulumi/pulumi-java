@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The resource management error additional info.
+ * 
+ */
 public final class ErrorAdditionalInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ErrorAdditionalInfoResponse Empty = new ErrorAdditionalInfoResponse();
 
+    /**
+     * The additional info.
+     * 
+     */
     @InputImport(name="info", required=true)
     private final Object info;
 
@@ -20,6 +28,10 @@ public final class ErrorAdditionalInfoResponse extends io.pulumi.resources.Invok
         return this.info;
     }
 
+    /**
+     * The additional info type.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

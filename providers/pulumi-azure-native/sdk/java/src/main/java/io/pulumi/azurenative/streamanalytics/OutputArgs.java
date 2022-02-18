@@ -27,6 +27,10 @@ public final class OutputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OutputArgs Empty = new OutputArgs();
 
+    /**
+     * Describes the data source that output will be written to. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     @InputImport(name="datasource")
     private final @Nullable Input<Object> datasource;
 
@@ -34,6 +38,10 @@ public final class OutputArgs extends io.pulumi.resources.ResourceArgs {
         return this.datasource == null ? Input.empty() : this.datasource;
     }
 
+    /**
+     * The name of the streaming job.
+     * 
+     */
     @InputImport(name="jobName", required=true)
     private final Input<String> jobName;
 
@@ -41,6 +49,10 @@ public final class OutputArgs extends io.pulumi.resources.ResourceArgs {
         return this.jobName;
     }
 
+    /**
+     * Resource name
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -48,6 +60,10 @@ public final class OutputArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The name of the output.
+     * 
+     */
     @InputImport(name="outputName")
     private final @Nullable Input<String> outputName;
 
@@ -55,6 +71,10 @@ public final class OutputArgs extends io.pulumi.resources.ResourceArgs {
         return this.outputName == null ? Input.empty() : this.outputName;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -62,6 +82,10 @@ public final class OutputArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     @InputImport(name="serialization")
     private final @Nullable Input<Object> serialization;
 

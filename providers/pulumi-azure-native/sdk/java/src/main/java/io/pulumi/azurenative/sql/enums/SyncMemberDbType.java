@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Database type of the sync member.
+     * 
+     */
     @EnumType
     public enum SyncMemberDbType {
         AzureSqlDatabase("AzureSqlDatabase"),

@@ -14,6 +14,10 @@ public final class GetVariableArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetVariableArgs Empty = new GetVariableArgs();
 
+    /**
+     * The name of the Runtime Configurator configuration.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -21,6 +25,10 @@ public final class GetVariableArgs extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    /**
+     * The name of the RuntimeConfig resource containing this variable.
+     * 
+     */
     @InputImport(name="parent", required=true)
     private final String parent;
 
@@ -28,6 +36,11 @@ public final class GetVariableArgs extends io.pulumi.resources.InvokeArgs {
         return this.parent;
     }
 
+    /**
+     * The project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

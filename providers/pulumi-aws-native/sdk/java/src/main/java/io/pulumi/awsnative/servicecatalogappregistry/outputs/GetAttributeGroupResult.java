@@ -15,8 +15,16 @@ import javax.annotation.Nullable;
 public final class GetAttributeGroupResult {
     private final @Nullable String arn;
     private final @Nullable Object attributes;
+    /**
+     * The description of the attribute group.
+     * 
+     */
     private final @Nullable String description;
     private final @Nullable String id;
+    /**
+     * The name of the attribute group.
+     * 
+     */
     private final @Nullable String name;
     private final @Nullable AttributeGroupTags tags;
 
@@ -42,12 +50,20 @@ public final class GetAttributeGroupResult {
     public Optional<Object> getAttributes() {
         return Optional.ofNullable(this.attributes);
     }
+    /**
+     * The description of the attribute group.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+    /**
+     * The name of the attribute group.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

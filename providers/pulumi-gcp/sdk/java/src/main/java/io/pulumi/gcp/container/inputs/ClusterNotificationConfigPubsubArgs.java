@@ -15,6 +15,11 @@ public final class ClusterNotificationConfigPubsubArgs extends io.pulumi.resourc
 
     public static final ClusterNotificationConfigPubsubArgs Empty = new ClusterNotificationConfigPubsubArgs();
 
+    /**
+     * Enable the PodSecurityPolicy controller for this cluster.
+     * If enabled, pods must be valid under a PodSecurityPolicy to be created.
+     * 
+     */
     @InputImport(name="enabled", required=true)
     private final Input<Boolean> enabled;
 
@@ -22,6 +27,10 @@ public final class ClusterNotificationConfigPubsubArgs extends io.pulumi.resourc
         return this.enabled;
     }
 
+    /**
+     * The pubsub topic to push upgrade notifications to. Must be in the same project as the cluster. Must be in the format: `projects/{project}/topics/{topic}`.
+     * 
+     */
     @InputImport(name="topic")
     private final @Nullable Input<String> topic;
 

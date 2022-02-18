@@ -8,11 +8,31 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Specifies how the service is partitioned.
+     * 
+     */
     @EnumType
     public enum PartitionScheme {
+        /**
+         * Indicates the partition kind is invalid. All Service Fabric enumerations have the invalid type. The value is zero.
+         * 
+         */
         Invalid("Invalid"),
+        /**
+         * Indicates that the partition is based on string names, and is a SingletonPartitionSchemeDescription object, The value is 1.
+         * 
+         */
         Singleton("Singleton"),
+        /**
+         * Indicates that the partition is based on Int64 key ranges, and is a UniformInt64RangePartitionSchemeDescription object. The value is 2.
+         * 
+         */
         UniformInt64Range("UniformInt64Range"),
+        /**
+         * Indicates that the partition is based on string names, and is a NamedPartitionSchemeDescription object. The value is 3
+         * 
+         */
         Named("Named");
 
         private final String value;

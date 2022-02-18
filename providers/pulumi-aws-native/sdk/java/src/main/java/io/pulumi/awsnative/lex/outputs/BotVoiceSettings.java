@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BotVoiceSettings {
+    /**
+     * The Amazon Polly voice ID that Amazon Lex uses for voice interaction with the user.
+     * 
+     */
     private final String voiceId;
 
     @OutputCustomType.Constructor({"voiceId"})
@@ -16,6 +20,10 @@ public final class BotVoiceSettings {
         this.voiceId = Objects.requireNonNull(voiceId);
     }
 
+    /**
+     * The Amazon Polly voice ID that Amazon Lex uses for voice interaction with the user.
+     * 
+     */
     public String getVoiceId() {
         return this.voiceId;
     }

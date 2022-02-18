@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SecurityPolicyCloudArmorConfigResponse {
+    /**
+     * If set to true, enables Cloud Armor Machine Learning.
+     * 
+     */
     private final Boolean enableMl;
 
     @OutputCustomType.Constructor({"enableMl"})
@@ -16,6 +20,10 @@ public final class SecurityPolicyCloudArmorConfigResponse {
         this.enableMl = Objects.requireNonNull(enableMl);
     }
 
+    /**
+     * If set to true, enables Cloud Armor Machine Learning.
+     * 
+     */
     public Boolean getEnableMl() {
         return this.enableMl;
     }

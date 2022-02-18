@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The account SKU.
+ * 
+ */
 public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SkuArgs Empty = new SkuArgs();
 
+    /**
+     * Gets or sets the SKU capacity.
+     * 
+     */
     @InputImport(name="capacity")
     private final @Nullable Input<Integer> capacity;
 
@@ -24,6 +32,10 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
         return this.capacity == null ? Input.empty() : this.capacity;
     }
 
+    /**
+     * Gets or sets the SKU family.
+     * 
+     */
     @InputImport(name="family")
     private final @Nullable Input<String> family;
 
@@ -31,6 +43,10 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
         return this.family == null ? Input.empty() : this.family;
     }
 
+    /**
+     * Gets or sets the SKU name of the account.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<Either<String,SkuNameEnum>> name;
 

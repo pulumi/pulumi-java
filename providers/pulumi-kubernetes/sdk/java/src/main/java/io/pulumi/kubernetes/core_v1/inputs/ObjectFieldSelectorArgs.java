@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * ObjectFieldSelector selects an APIVersioned field of an object.
+ * 
+ */
 public final class ObjectFieldSelectorArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ObjectFieldSelectorArgs Empty = new ObjectFieldSelectorArgs();
 
+    /**
+     * Version of the schema the FieldPath is written in terms of, defaults to "v1".
+     * 
+     */
     @InputImport(name="apiVersion")
     private final @Nullable Input<String> apiVersion;
 
@@ -21,6 +29,10 @@ public final class ObjectFieldSelectorArgs extends io.pulumi.resources.ResourceA
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
     }
 
+    /**
+     * Path of the field to select in the specified API version.
+     * 
+     */
     @InputImport(name="fieldPath", required=true)
     private final Input<String> fieldPath;
 

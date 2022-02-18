@@ -10,6 +10,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ResourcePolicyWeeklyCycleResponse {
+    /**
+     * Up to 7 intervals/windows, one for each day of the week.
+     * 
+     */
     private final List<ResourcePolicyWeeklyCycleDayOfWeekResponse> dayOfWeeks;
 
     @OutputCustomType.Constructor({"dayOfWeeks"})
@@ -17,6 +21,10 @@ public final class ResourcePolicyWeeklyCycleResponse {
         this.dayOfWeeks = Objects.requireNonNull(dayOfWeeks);
     }
 
+    /**
+     * Up to 7 intervals/windows, one for each day of the week.
+     * 
+     */
     public List<ResourcePolicyWeeklyCycleDayOfWeekResponse> getDayOfWeeks() {
         return this.dayOfWeeks;
     }

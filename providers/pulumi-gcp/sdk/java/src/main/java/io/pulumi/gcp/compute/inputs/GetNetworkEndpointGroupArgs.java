@@ -14,6 +14,11 @@ public final class GetNetworkEndpointGroupArgs extends io.pulumi.resources.Invok
 
     public static final GetNetworkEndpointGroupArgs Empty = new GetNetworkEndpointGroupArgs();
 
+    /**
+     * The Network Endpoint Group name.
+     * Provide either this or a `self_link`.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -21,6 +26,11 @@ public final class GetNetworkEndpointGroupArgs extends io.pulumi.resources.Invok
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The ID of the project to list versions in.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -28,6 +38,10 @@ public final class GetNetworkEndpointGroupArgs extends io.pulumi.resources.Invok
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
+    /**
+     * The Network Endpoint Group self\_link.
+     * 
+     */
     @InputImport(name="selfLink")
     private final @Nullable String selfLink;
 
@@ -35,6 +49,10 @@ public final class GetNetworkEndpointGroupArgs extends io.pulumi.resources.Invok
         return this.selfLink == null ? Optional.empty() : Optional.ofNullable(this.selfLink);
     }
 
+    /**
+     * The Network Endpoint Group availability zone.
+     * 
+     */
     @InputImport(name="zone")
     private final @Nullable String zone;
 

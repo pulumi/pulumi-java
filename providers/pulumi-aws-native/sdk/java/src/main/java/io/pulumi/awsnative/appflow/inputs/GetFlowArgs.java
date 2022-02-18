@@ -12,6 +12,10 @@ public final class GetFlowArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetFlowArgs Empty = new GetFlowArgs();
 
+    /**
+     * Name of the flow.
+     * 
+     */
     @InputImport(name="flowName", required=true)
     private final String flowName;
 

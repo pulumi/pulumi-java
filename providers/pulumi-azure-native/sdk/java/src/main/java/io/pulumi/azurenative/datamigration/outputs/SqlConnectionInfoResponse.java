@@ -12,14 +12,51 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SqlConnectionInfoResponse {
+    /**
+     * Additional connection settings
+     * 
+     */
     private final @Nullable String additionalSettings;
+    /**
+     * Authentication type to use for connection
+     * 
+     */
     private final @Nullable String authentication;
+    /**
+     * Data source in the format Protocol:MachineName\SQLServerInstanceName,PortNumber
+     * 
+     */
     private final String dataSource;
+    /**
+     * Whether to encrypt the connection
+     * 
+     */
     private final @Nullable Boolean encryptConnection;
+    /**
+     * Password credential.
+     * 
+     */
     private final @Nullable String password;
+    /**
+     * Server platform type for connection
+     * 
+     */
     private final @Nullable String platform;
+    /**
+     * Whether to trust the server certificate
+     * 
+     */
     private final @Nullable Boolean trustServerCertificate;
+    /**
+     * Type of connection info
+     * Expected value is 'SqlConnectionInfo'.
+     * 
+     */
     private final String type;
+    /**
+     * User name
+     * 
+     */
     private final @Nullable String userName;
 
     @OutputCustomType.Constructor({"additionalSettings","authentication","dataSource","encryptConnection","password","platform","trustServerCertificate","type","userName"})
@@ -44,30 +81,67 @@ public final class SqlConnectionInfoResponse {
         this.userName = userName;
     }
 
+    /**
+     * Additional connection settings
+     * 
+     */
     public Optional<String> getAdditionalSettings() {
         return Optional.ofNullable(this.additionalSettings);
     }
+    /**
+     * Authentication type to use for connection
+     * 
+     */
     public Optional<String> getAuthentication() {
         return Optional.ofNullable(this.authentication);
     }
+    /**
+     * Data source in the format Protocol:MachineName\SQLServerInstanceName,PortNumber
+     * 
+     */
     public String getDataSource() {
         return this.dataSource;
     }
+    /**
+     * Whether to encrypt the connection
+     * 
+     */
     public Optional<Boolean> getEncryptConnection() {
         return Optional.ofNullable(this.encryptConnection);
     }
+    /**
+     * Password credential.
+     * 
+     */
     public Optional<String> getPassword() {
         return Optional.ofNullable(this.password);
     }
+    /**
+     * Server platform type for connection
+     * 
+     */
     public Optional<String> getPlatform() {
         return Optional.ofNullable(this.platform);
     }
+    /**
+     * Whether to trust the server certificate
+     * 
+     */
     public Optional<Boolean> getTrustServerCertificate() {
         return Optional.ofNullable(this.trustServerCertificate);
     }
+    /**
+     * Type of connection info
+     * Expected value is 'SqlConnectionInfo'.
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * User name
+     * 
+     */
     public Optional<String> getUserName() {
         return Optional.ofNullable(this.userName);
     }

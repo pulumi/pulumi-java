@@ -12,8 +12,16 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetLoadBalancerTlsCertificateResult {
+    /**
+     * When true, the SSL/TLS certificate is attached to the Lightsail load balancer.
+     * 
+     */
     private final @Nullable Boolean isAttached;
     private final @Nullable String loadBalancerTlsCertificateArn;
+    /**
+     * The validation status of the SSL/TLS certificate.
+     * 
+     */
     private final @Nullable String status;
 
     @OutputCustomType.Constructor({"isAttached","loadBalancerTlsCertificateArn","status"})
@@ -26,12 +34,20 @@ public final class GetLoadBalancerTlsCertificateResult {
         this.status = status;
     }
 
+    /**
+     * When true, the SSL/TLS certificate is attached to the Lightsail load balancer.
+     * 
+     */
     public Optional<Boolean> getIsAttached() {
         return Optional.ofNullable(this.isAttached);
     }
     public Optional<String> getLoadBalancerTlsCertificateArn() {
         return Optional.ofNullable(this.loadBalancerTlsCertificateArn);
     }
+    /**
+     * The validation status of the SSL/TLS certificate.
+     * 
+     */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }

@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A rule used to express this policy.
+ * 
+ */
 public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs Empty = new GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs();
 
+    /**
+     * Setting this to true means that all values are allowed. This field can be set only in Policies for list constraints.
+     * 
+     */
     @InputImport(name="allowAll")
     private final @Nullable Input<Boolean> allowAll;
 
@@ -23,6 +31,10 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs extends io.pul
         return this.allowAll == null ? Input.empty() : this.allowAll;
     }
 
+    /**
+     * A condition which determines whether this rule is used in the evaluation of the policy. When set, the `expression` field in the `Expr' must include from 1 to 10 subexpressions, joined by the "||" or "&&" operators. Each subexpression must be of the form "resource.matchTag('/tag_key_short_name, 'tag_value_short_name')". or "resource.matchTagId('tagKeys/key_id', 'tagValues/value_id')". where key_name and value_name are the resource names for Label Keys and Values. These names are available from the Tag Manager Service. An example expression is: "resource.matchTag('123456789/environment, 'prod')". or "resource.matchTagId('tagKeys/123', 'tagValues/456')".
+     * 
+     */
     @InputImport(name="condition")
     private final @Nullable Input<GoogleTypeExprArgs> condition;
 
@@ -30,6 +42,10 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs extends io.pul
         return this.condition == null ? Input.empty() : this.condition;
     }
 
+    /**
+     * Setting this to true means that all values are denied. This field can be set only in Policies for list constraints.
+     * 
+     */
     @InputImport(name="denyAll")
     private final @Nullable Input<Boolean> denyAll;
 
@@ -37,6 +53,10 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs extends io.pul
         return this.denyAll == null ? Input.empty() : this.denyAll;
     }
 
+    /**
+     * If `true`, then the `Policy` is enforced. If `false`, then any configuration is acceptable. This field can be set only in Policies for boolean constraints.
+     * 
+     */
     @InputImport(name="enforce")
     private final @Nullable Input<Boolean> enforce;
 
@@ -44,6 +64,10 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs extends io.pul
         return this.enforce == null ? Input.empty() : this.enforce;
     }
 
+    /**
+     * List of values to be used for this PolicyRule. This field can be set only in Policies for list constraints.
+     * 
+     */
     @InputImport(name="values")
     private final @Nullable Input<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs> values;
 

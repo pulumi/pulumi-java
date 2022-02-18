@@ -19,6 +19,11 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SecretArgs Empty = new SecretArgs();
 
+    /**
+     * Timestamp in UTC when the Secret is scheduled to expire. This is always provided on output, regardless of what was sent on input.
+     * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
+     * 
+     */
     @InputImport(name="expireTime")
     private final @Nullable Input<String> expireTime;
 
@@ -26,6 +31,17 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
         return this.expireTime == null ? Input.empty() : this.expireTime;
     }
 
+    /**
+     * The labels assigned to this Secret.
+     * Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes,
+     * and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}
+     * Label values must be between 0 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes,
+     * and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}
+     * No more than 64 labels can be assigned to a given resource.
+     * An object containing a list of "key": value pairs. Example:
+     * { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -33,6 +49,11 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -40,6 +61,12 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The replication policy of the secret data attached to the Secret. It cannot be changed
+     * after the Secret has been created.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="replication", required=true)
     private final Input<SecretReplicationArgs> replication;
 
@@ -47,6 +74,11 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
         return this.replication;
     }
 
+    /**
+     * The rotation time and period for a Secret. At `next_rotation_time`, Secret Manager will send a Pub/Sub notification to the topics configured on the Secret. `topics` must be set to configure rotation.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="rotation")
     private final @Nullable Input<SecretRotationArgs> rotation;
 
@@ -54,6 +86,10 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
         return this.rotation == null ? Input.empty() : this.rotation;
     }
 
+    /**
+     * This must be unique within the project.
+     * 
+     */
     @InputImport(name="secretId", required=true)
     private final Input<String> secretId;
 
@@ -61,6 +97,11 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
         return this.secretId;
     }
 
+    /**
+     * A list of up to 10 Pub/Sub topics to which messages are published when control plane operations are called on the secret or its versions.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="topics")
     private final @Nullable Input<List<SecretTopicArgs>> topics;
 
@@ -68,6 +109,11 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
         return this.topics == null ? Input.empty() : this.topics;
     }
 
+    /**
+     * The TTL for the Secret.
+     * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+     * 
+     */
     @InputImport(name="ttl")
     private final @Nullable Input<String> ttl;
 

@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * App Engine service. Learn more at https://cloud.google.com/appengine.
+ * 
+ */
 public final class AppEngineResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AppEngineResponse Empty = new AppEngineResponse();
 
+    /**
+     * The ID of the App Engine module underlying this service. Corresponds to the module_id resource label in the gae_app monitored resource: https://cloud.google.com/monitoring/api/resources#tag_gae_app
+     * 
+     */
     @InputImport(name="moduleId", required=true)
     private final String moduleId;
 

@@ -12,6 +12,10 @@ public final class GetMetricStreamArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetMetricStreamArgs Empty = new GetMetricStreamArgs();
 
+    /**
+     * Name of the metric stream.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

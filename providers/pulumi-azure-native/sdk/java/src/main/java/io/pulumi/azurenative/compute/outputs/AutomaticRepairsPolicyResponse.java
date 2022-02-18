@@ -12,7 +12,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AutomaticRepairsPolicyResponse {
+    /**
+     * Specifies whether automatic repairs should be enabled on the virtual machine scale set. The default value is false.
+     * 
+     */
     private final @Nullable Boolean enabled;
+    /**
+     * The amount of time for which automatic repairs are suspended due to a state change on VM. The grace time starts after the state change has completed. This helps avoid premature or accidental repairs. The time duration should be specified in ISO 8601 format. The minimum allowed grace period is 30 minutes (PT30M), which is also the default value. The maximum allowed grace period is 90 minutes (PT90M).
+     * 
+     */
     private final @Nullable String gracePeriod;
 
     @OutputCustomType.Constructor({"enabled","gracePeriod"})
@@ -23,9 +31,17 @@ public final class AutomaticRepairsPolicyResponse {
         this.gracePeriod = gracePeriod;
     }
 
+    /**
+     * Specifies whether automatic repairs should be enabled on the virtual machine scale set. The default value is false.
+     * 
+     */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
+    /**
+     * The amount of time for which automatic repairs are suspended due to a state change on VM. The grace time starts after the state change has completed. This helps avoid premature or accidental repairs. The time duration should be specified in ISO 8601 format. The minimum allowed grace period is 30 minutes (PT30M), which is also the default value. The maximum allowed grace period is 90 minutes (PT90M).
+     * 
+     */
     public Optional<String> getGracePeriod() {
         return Optional.ofNullable(this.gracePeriod);
     }

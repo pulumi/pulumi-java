@@ -16,10 +16,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The output from the virtual agent.
+ * 
+ */
 public final class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputArgs Empty = new GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputArgs();
 
+    /**
+     * The Page on which the utterance was spoken. Only name and displayName will be set.
+     * 
+     */
     @InputImport(name="currentPage")
     private final @Nullable Input<GoogleCloudDialogflowCxV3beta1PageArgs> currentPage;
 
@@ -27,6 +35,10 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOut
         return this.currentPage == null ? Input.empty() : this.currentPage;
     }
 
+    /**
+     * Input only. The diagnostic info output for the turn. Required to calculate the testing coverage.
+     * 
+     */
     @InputImport(name="diagnosticInfo", required=true)
     private final Input<Map<String,String>> diagnosticInfo;
 
@@ -34,6 +46,10 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOut
         return this.diagnosticInfo;
     }
 
+    /**
+     * The session parameters available to the bot at this point.
+     * 
+     */
     @InputImport(name="sessionParameters")
     private final @Nullable Input<Map<String,String>> sessionParameters;
 
@@ -41,6 +57,10 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOut
         return this.sessionParameters == null ? Input.empty() : this.sessionParameters;
     }
 
+    /**
+     * Response error from the agent in the test result. If set, other output is empty.
+     * 
+     */
     @InputImport(name="status")
     private final @Nullable Input<GoogleRpcStatusArgs> status;
 
@@ -48,6 +68,10 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOut
         return this.status == null ? Input.empty() : this.status;
     }
 
+    /**
+     * The text responses from the agent for the turn.
+     * 
+     */
     @InputImport(name="textResponses")
     private final @Nullable Input<List<GoogleCloudDialogflowCxV3beta1ResponseMessageTextArgs>> textResponses;
 
@@ -55,6 +79,10 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOut
         return this.textResponses == null ? Input.empty() : this.textResponses;
     }
 
+    /**
+     * The Intent that triggered the response. Only name and displayName will be set.
+     * 
+     */
     @InputImport(name="triggeredIntent")
     private final @Nullable Input<GoogleCloudDialogflowCxV3beta1IntentArgs> triggeredIntent;
 

@@ -18,12 +18,40 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ApplicationConfigurationDetails {
+    /**
+     * A list of metrics to monitor for the component.
+     * 
+     */
     private final @Nullable List<ApplicationAlarmMetric> alarmMetrics;
+    /**
+     * A list of alarms to monitor for the component.
+     * 
+     */
     private final @Nullable List<ApplicationAlarm> alarms;
+    /**
+     * The HA cluster Prometheus Exporter settings.
+     * 
+     */
     private final @Nullable ApplicationHAClusterPrometheusExporter hAClusterPrometheusExporter;
+    /**
+     * The HANA DB Prometheus Exporter settings.
+     * 
+     */
     private final @Nullable ApplicationHANAPrometheusExporter hANAPrometheusExporter;
+    /**
+     * The JMX Prometheus Exporter settings.
+     * 
+     */
     private final @Nullable ApplicationJMXPrometheusExporter jMXPrometheusExporter;
+    /**
+     * A list of logs to monitor for the component.
+     * 
+     */
     private final @Nullable List<ApplicationLog> logs;
+    /**
+     * A list of Windows Events to log.
+     * 
+     */
     private final @Nullable List<ApplicationWindowsEvent> windowsEvents;
 
     @OutputCustomType.Constructor({"alarmMetrics","alarms","hAClusterPrometheusExporter","hANAPrometheusExporter","jMXPrometheusExporter","logs","windowsEvents"})
@@ -44,24 +72,52 @@ public final class ApplicationConfigurationDetails {
         this.windowsEvents = windowsEvents;
     }
 
+    /**
+     * A list of metrics to monitor for the component.
+     * 
+     */
     public List<ApplicationAlarmMetric> getAlarmMetrics() {
         return this.alarmMetrics == null ? List.of() : this.alarmMetrics;
     }
+    /**
+     * A list of alarms to monitor for the component.
+     * 
+     */
     public List<ApplicationAlarm> getAlarms() {
         return this.alarms == null ? List.of() : this.alarms;
     }
+    /**
+     * The HA cluster Prometheus Exporter settings.
+     * 
+     */
     public Optional<ApplicationHAClusterPrometheusExporter> getHAClusterPrometheusExporter() {
         return Optional.ofNullable(this.hAClusterPrometheusExporter);
     }
+    /**
+     * The HANA DB Prometheus Exporter settings.
+     * 
+     */
     public Optional<ApplicationHANAPrometheusExporter> getHANAPrometheusExporter() {
         return Optional.ofNullable(this.hANAPrometheusExporter);
     }
+    /**
+     * The JMX Prometheus Exporter settings.
+     * 
+     */
     public Optional<ApplicationJMXPrometheusExporter> getJMXPrometheusExporter() {
         return Optional.ofNullable(this.jMXPrometheusExporter);
     }
+    /**
+     * A list of logs to monitor for the component.
+     * 
+     */
     public List<ApplicationLog> getLogs() {
         return this.logs == null ? List.of() : this.logs;
     }
+    /**
+     * A list of Windows Events to log.
+     * 
+     */
     public List<ApplicationWindowsEvent> getWindowsEvents() {
         return this.windowsEvents == null ? List.of() : this.windowsEvents;
     }

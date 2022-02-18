@@ -10,6 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Checks valid token exists with request.
+ * 
+ */
 public final class WebACLCaptchaActionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WebACLCaptchaActionArgs Empty = new WebACLCaptchaActionArgs();

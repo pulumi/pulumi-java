@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FunctionTracingConfig {
+    /**
+     * The tracing mode.
+     * 
+     */
     private final @Nullable FunctionTracingConfigMode mode;
 
     @OutputCustomType.Constructor({"mode"})
@@ -18,6 +22,10 @@ public final class FunctionTracingConfig {
         this.mode = mode;
     }
 
+    /**
+     * The tracing mode.
+     * 
+     */
     public Optional<FunctionTracingConfigMode> getMode() {
         return Optional.ofNullable(this.mode);
     }

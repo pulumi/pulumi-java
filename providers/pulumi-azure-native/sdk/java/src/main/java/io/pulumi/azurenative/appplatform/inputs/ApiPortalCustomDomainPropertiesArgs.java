@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The properties of custom domain for API portal
+ * 
+ */
 public final class ApiPortalCustomDomainPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApiPortalCustomDomainPropertiesArgs Empty = new ApiPortalCustomDomainPropertiesArgs();
 
+    /**
+     * The thumbprint of bound certificate.
+     * 
+     */
     @InputImport(name="thumbprint")
     private final @Nullable Input<String> thumbprint;
 

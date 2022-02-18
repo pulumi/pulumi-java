@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Identity for the virtual machine scale set.
+ * 
+ */
 public final class VirtualMachineScaleSetIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VirtualMachineScaleSetIdentityResponse Empty = new VirtualMachineScaleSetIdentityResponse();
 
+    /**
+     * The principal id of virtual machine scale set identity. This property will only be provided for a system assigned identity.
+     * 
+     */
     @InputImport(name="principalId", required=true)
     private final String principalId;
 
@@ -23,6 +31,10 @@ public final class VirtualMachineScaleSetIdentityResponse extends io.pulumi.reso
         return this.principalId;
     }
 
+    /**
+     * The tenant id associated with the virtual machine scale set. This property will only be provided for a system assigned identity.
+     * 
+     */
     @InputImport(name="tenantId", required=true)
     private final String tenantId;
 
@@ -30,6 +42,10 @@ public final class VirtualMachineScaleSetIdentityResponse extends io.pulumi.reso
         return this.tenantId;
     }
 
+    /**
+     * The type of identity used for the virtual machine scale set. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine scale set.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 
@@ -37,6 +53,10 @@ public final class VirtualMachineScaleSetIdentityResponse extends io.pulumi.reso
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
+    /**
+     * The list of user identities associated with the virtual machine scale set. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+     * 
+     */
     @InputImport(name="userAssignedIdentities")
     private final @Nullable Map<String,VirtualMachineScaleSetIdentityResponseUserAssignedIdentities> userAssignedIdentities;
 

@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLocationS3 {
+/**
+ * Resource schema for AWS::DataSync::LocationS3
+ * 
+ */
     public static CompletableFuture<GetLocationS3Result> invokeAsync(GetLocationS3Args args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:datasync:getLocationS3", TypeShape.of(GetLocationS3Result.class), args == null ? GetLocationS3Args.Empty : args, Utilities.withVersion(options));
     }

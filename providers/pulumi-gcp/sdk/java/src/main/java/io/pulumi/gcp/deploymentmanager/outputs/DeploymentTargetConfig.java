@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DeploymentTargetConfig {
+    /**
+     * The full contents of the template that you want to import.
+     * 
+     */
     private final String content;
 
     @OutputCustomType.Constructor({"content"})
@@ -16,6 +20,10 @@ public final class DeploymentTargetConfig {
         this.content = Objects.requireNonNull(content);
     }
 
+    /**
+     * The full contents of the template that you want to import.
+     * 
+     */
     public String getContent() {
         return this.content;
     }

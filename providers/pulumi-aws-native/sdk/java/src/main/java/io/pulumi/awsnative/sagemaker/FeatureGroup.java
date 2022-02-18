@@ -17,29 +17,65 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Resource Type definition for AWS::SageMaker::FeatureGroup
+ * 
+ */
 @ResourceType(type="aws-native:sagemaker:FeatureGroup")
 public class FeatureGroup extends io.pulumi.resources.CustomResource {
+    /**
+     * Description about the FeatureGroup.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return Description about the FeatureGroup.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * The Event Time Feature Name.
+     * 
+     */
     @OutputExport(name="eventTimeFeatureName", type=String.class, parameters={})
     private Output<String> eventTimeFeatureName;
 
+    /**
+     * @return The Event Time Feature Name.
+     * 
+     */
     public Output<String> getEventTimeFeatureName() {
         return this.eventTimeFeatureName;
     }
+    /**
+     * An Array of Feature Definition
+     * 
+     */
     @OutputExport(name="featureDefinitions", type=List.class, parameters={FeatureGroupFeatureDefinition.class})
     private Output<List<FeatureGroupFeatureDefinition>> featureDefinitions;
 
+    /**
+     * @return An Array of Feature Definition
+     * 
+     */
     public Output<List<FeatureGroupFeatureDefinition>> getFeatureDefinitions() {
         return this.featureDefinitions;
     }
+    /**
+     * The Name of the FeatureGroup.
+     * 
+     */
     @OutputExport(name="featureGroupName", type=String.class, parameters={})
     private Output<String> featureGroupName;
 
+    /**
+     * @return The Name of the FeatureGroup.
+     * 
+     */
     public Output<String> getFeatureGroupName() {
         return this.featureGroupName;
     }
@@ -55,25 +91,55 @@ public class FeatureGroup extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ OnlineStoreConfigProperties> getOnlineStoreConfig() {
         return this.onlineStoreConfig;
     }
+    /**
+     * The Record Identifier Feature Name.
+     * 
+     */
     @OutputExport(name="recordIdentifierFeatureName", type=String.class, parameters={})
     private Output<String> recordIdentifierFeatureName;
 
+    /**
+     * @return The Record Identifier Feature Name.
+     * 
+     */
     public Output<String> getRecordIdentifierFeatureName() {
         return this.recordIdentifierFeatureName;
     }
+    /**
+     * Role Arn
+     * 
+     */
     @OutputExport(name="roleArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> roleArn;
 
+    /**
+     * @return Role Arn
+     * 
+     */
     public Output</* @Nullable */ String> getRoleArn() {
         return this.roleArn;
     }
+    /**
+     * An array of key-value pair to apply to this resource.
+     * 
+     */
     @OutputExport(name="tags", type=List.class, parameters={FeatureGroupTag.class})
     private Output</* @Nullable */ List<FeatureGroupTag>> tags;
 
+    /**
+     * @return An array of key-value pair to apply to this resource.
+     * 
+     */
     public Output</* @Nullable */ List<FeatureGroupTag>> getTags() {
         return this.tags;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public FeatureGroup(String name, FeatureGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:sagemaker:FeatureGroup", name, args == null ? FeatureGroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -89,6 +155,14 @@ public class FeatureGroup extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static FeatureGroup get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new FeatureGroup(name, id, options);
     }

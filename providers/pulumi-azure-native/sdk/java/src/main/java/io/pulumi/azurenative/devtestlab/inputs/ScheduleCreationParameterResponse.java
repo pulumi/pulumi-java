@@ -15,10 +15,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties for creating a schedule.
+ * 
+ */
 public final class ScheduleCreationParameterResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ScheduleCreationParameterResponse Empty = new ScheduleCreationParameterResponse();
 
+    /**
+     * If the schedule will occur once each day of the week, specify the daily recurrence.
+     * 
+     */
     @InputImport(name="dailyRecurrence")
     private final @Nullable DayDetailsResponse dailyRecurrence;
 
@@ -26,6 +34,10 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
         return this.dailyRecurrence == null ? Optional.empty() : Optional.ofNullable(this.dailyRecurrence);
     }
 
+    /**
+     * If the schedule will occur multiple times a day, specify the hourly recurrence.
+     * 
+     */
     @InputImport(name="hourlyRecurrence")
     private final @Nullable HourDetailsResponse hourlyRecurrence;
 
@@ -33,6 +45,10 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
         return this.hourlyRecurrence == null ? Optional.empty() : Optional.ofNullable(this.hourlyRecurrence);
     }
 
+    /**
+     * The location of the new virtual machine or environment
+     * 
+     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -40,6 +56,10 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
         return this.location;
     }
 
+    /**
+     * The name of the virtual machine or environment
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -47,6 +67,10 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Notification settings.
+     * 
+     */
     @InputImport(name="notificationSettings")
     private final @Nullable NotificationSettingsResponse notificationSettings;
 
@@ -54,6 +78,10 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
         return this.notificationSettings == null ? Optional.empty() : Optional.ofNullable(this.notificationSettings);
     }
 
+    /**
+     * The status of the schedule (i.e. Enabled, Disabled)
+     * 
+     */
     @InputImport(name="status")
     private final @Nullable String status;
 
@@ -61,6 +89,10 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 
+    /**
+     * The tags of the resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Map<String,String> tags;
 
@@ -68,6 +100,10 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
         return this.tags == null ? Map.of() : this.tags;
     }
 
+    /**
+     * The resource ID to which the schedule belongs
+     * 
+     */
     @InputImport(name="targetResourceId")
     private final @Nullable String targetResourceId;
 
@@ -75,6 +111,10 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
         return this.targetResourceId == null ? Optional.empty() : Optional.ofNullable(this.targetResourceId);
     }
 
+    /**
+     * The task type of the schedule (e.g. LabVmsShutdownTask, LabVmAutoStart).
+     * 
+     */
     @InputImport(name="taskType")
     private final @Nullable String taskType;
 
@@ -82,6 +122,10 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
         return this.taskType == null ? Optional.empty() : Optional.ofNullable(this.taskType);
     }
 
+    /**
+     * The time zone ID (e.g. Pacific Standard time).
+     * 
+     */
     @InputImport(name="timeZoneId")
     private final @Nullable String timeZoneId;
 
@@ -89,6 +133,10 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
         return this.timeZoneId == null ? Optional.empty() : Optional.ofNullable(this.timeZoneId);
     }
 
+    /**
+     * If the schedule will occur only some days of the week, specify the weekly recurrence.
+     * 
+     */
     @InputImport(name="weeklyRecurrence")
     private final @Nullable WeekDetailsResponse weeklyRecurrence;
 

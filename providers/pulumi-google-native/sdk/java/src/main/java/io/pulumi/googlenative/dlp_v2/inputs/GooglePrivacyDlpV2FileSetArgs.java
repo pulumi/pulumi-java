@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Set of files to scan.
+ * 
+ */
 public final class GooglePrivacyDlpV2FileSetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GooglePrivacyDlpV2FileSetArgs Empty = new GooglePrivacyDlpV2FileSetArgs();
 
+    /**
+     * The regex-filtered set of files to scan. Exactly one of `url` or `regex_file_set` must be set.
+     * 
+     */
     @InputImport(name="regexFileSet")
     private final @Nullable Input<GooglePrivacyDlpV2CloudStorageRegexFileSetArgs> regexFileSet;
 
@@ -22,6 +30,10 @@ public final class GooglePrivacyDlpV2FileSetArgs extends io.pulumi.resources.Res
         return this.regexFileSet == null ? Input.empty() : this.regexFileSet;
     }
 
+    /**
+     * The Cloud Storage url of the file(s) to scan, in the format `gs:///`. Trailing wildcard in the path is allowed. If the url ends in a trailing slash, the bucket or directory represented by the url will be scanned non-recursively (content in sub-directories will not be scanned). This means that `gs://mybucket/` is equivalent to `gs://mybucket/*`, and `gs://mybucket/directory/` is equivalent to `gs://mybucket/directory/*`. Exactly one of `url` or `regex_file_set` must be set.
+     * 
+     */
     @InputImport(name="url")
     private final @Nullable Input<String> url;
 

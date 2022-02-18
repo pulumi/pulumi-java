@@ -15,6 +15,10 @@ public final class ApplicationTypeArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final ApplicationTypeArgs Empty = new ApplicationTypeArgs();
 
+    /**
+     * The name of the application type name resource.
+     * 
+     */
     @InputImport(name="applicationTypeName")
     private final @Nullable Input<String> applicationTypeName;
 
@@ -22,6 +26,10 @@ public final class ApplicationTypeArgs extends io.pulumi.resources.ResourceArgs 
         return this.applicationTypeName == null ? Input.empty() : this.applicationTypeName;
     }
 
+    /**
+     * The name of the cluster resource.
+     * 
+     */
     @InputImport(name="clusterName", required=true)
     private final Input<String> clusterName;
 
@@ -29,6 +37,10 @@ public final class ApplicationTypeArgs extends io.pulumi.resources.ResourceArgs 
         return this.clusterName;
     }
 
+    /**
+     * It will be deprecated in New API, resource location depends on the parent resource.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -36,6 +48,10 @@ public final class ApplicationTypeArgs extends io.pulumi.resources.ResourceArgs 
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -43,6 +59,10 @@ public final class ApplicationTypeArgs extends io.pulumi.resources.ResourceArgs 
         return this.resourceGroupName;
     }
 
+    /**
+     * Azure resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

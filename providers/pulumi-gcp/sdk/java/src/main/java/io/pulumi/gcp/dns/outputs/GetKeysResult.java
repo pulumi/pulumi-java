@@ -12,10 +12,22 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetKeysResult {
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
+    /**
+     * A list of Key-signing key (KSK) records. Structure is documented below. Additionally, the DS record is provided:
+     * 
+     */
     private final List<GetKeysKeySigningKey> keySigningKeys;
     private final String managedZone;
     private final String project;
+    /**
+     * A list of Zone-signing key (ZSK) records. Structure is documented below.
+     * 
+     */
     private final List<GetKeysZoneSigningKey> zoneSigningKeys;
 
     @OutputCustomType.Constructor({"id","keySigningKeys","managedZone","project","zoneSigningKeys"})
@@ -32,9 +44,17 @@ public final class GetKeysResult {
         this.zoneSigningKeys = Objects.requireNonNull(zoneSigningKeys);
     }
 
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * A list of Key-signing key (KSK) records. Structure is documented below. Additionally, the DS record is provided:
+     * 
+     */
     public List<GetKeysKeySigningKey> getKeySigningKeys() {
         return this.keySigningKeys;
     }
@@ -44,6 +64,10 @@ public final class GetKeysResult {
     public String getProject() {
         return this.project;
     }
+    /**
+     * A list of Zone-signing key (ZSK) records. Structure is documented below.
+     * 
+     */
     public List<GetKeysZoneSigningKey> getZoneSigningKeys() {
         return this.zoneSigningKeys;
     }

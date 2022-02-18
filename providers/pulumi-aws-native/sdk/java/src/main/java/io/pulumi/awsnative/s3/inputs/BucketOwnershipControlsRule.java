@@ -14,6 +14,10 @@ public final class BucketOwnershipControlsRule extends io.pulumi.resources.Invok
 
     public static final BucketOwnershipControlsRule Empty = new BucketOwnershipControlsRule();
 
+    /**
+     * Specifies an object ownership rule.
+     * 
+     */
     @InputImport(name="objectOwnership")
     private final @Nullable BucketOwnershipControlsRuleObjectOwnership objectOwnership;
 

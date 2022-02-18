@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ReservationShareSettingsProjectMap {
+    /**
+     * The identifier for this object. Format specified above.
+     * 
+     */
     private final String id;
+    /**
+     * The project id/number, should be same as the key of this project config in the project map.
+     * 
+     */
     private final @Nullable String projectId;
 
     @OutputCustomType.Constructor({"id","projectId"})
@@ -22,9 +30,17 @@ public final class ReservationShareSettingsProjectMap {
         this.projectId = projectId;
     }
 
+    /**
+     * The identifier for this object. Format specified above.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * The project id/number, should be same as the key of this project config in the project map.
+     * 
+     */
     public Optional<String> getProjectId() {
         return Optional.ofNullable(this.projectId);
     }

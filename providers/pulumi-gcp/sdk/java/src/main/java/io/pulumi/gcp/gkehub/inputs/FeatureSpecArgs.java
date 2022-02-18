@@ -14,6 +14,11 @@ public final class FeatureSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FeatureSpecArgs Empty = new FeatureSpecArgs();
 
+    /**
+     * Multicluster Ingress-specific spec.
+     * The `multiclusteringress` block supports:
+     * 
+     */
     @InputImport(name="multiclusteringress")
     private final @Nullable Input<FeatureSpecMulticlusteringressArgs> multiclusteringress;
 

@@ -8,10 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Defines autoscaling behaviour.
+     * 
+     */
     @EnumType
     public enum ClusterAutoscalingAutoscalingProfile {
+        /**
+         * No change to autoscaling configuration.
+         * 
+         */
         ProfileUnspecified("PROFILE_UNSPECIFIED"),
+        /**
+         * Prioritize optimizing utilization of resources.
+         * 
+         */
         OptimizeUtilization("OPTIMIZE_UTILIZATION"),
+        /**
+         * Use default (balanced) autoscaling configuration.
+         * 
+         */
         Balanced("BALANCED");
 
         private final String value;

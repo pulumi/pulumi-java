@@ -13,6 +13,11 @@ public final class ClusterAddonsConfigConfigConnectorConfigGetArgs extends io.pu
 
     public static final ClusterAddonsConfigConfigConnectorConfigGetArgs Empty = new ClusterAddonsConfigConfigConnectorConfigGetArgs();
 
+    /**
+     * Enable the PodSecurityPolicy controller for this cluster.
+     * If enabled, pods must be valid under a PodSecurityPolicy to be created.
+     * 
+     */
     @InputImport(name="enabled", required=true)
     private final Input<Boolean> enabled;
 

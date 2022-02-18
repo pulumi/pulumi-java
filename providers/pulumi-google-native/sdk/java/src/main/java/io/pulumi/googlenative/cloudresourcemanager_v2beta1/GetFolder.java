@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFolder {
+/**
+ * Retrieves a Folder identified by the supplied resource name. Valid Folder resource names have the format `folders/{folder_id}` (for example, `folders/1234`). The caller must have `resourcemanager.folders.get` permission on the identified folder.
+ * 
+ */
     public static CompletableFuture<GetFolderResult> invokeAsync(GetFolderArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudresourcemanager/v2beta1:getFolder", TypeShape.of(GetFolderResult.class), args == null ? GetFolderArgs.Empty : args, Utilities.withVersion(options));
     }

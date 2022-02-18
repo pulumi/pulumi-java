@@ -16,6 +16,10 @@ public final class LocalGatewayRouteTableVPCAssociationArgs extends io.pulumi.re
 
     public static final LocalGatewayRouteTableVPCAssociationArgs Empty = new LocalGatewayRouteTableVPCAssociationArgs();
 
+    /**
+     * The ID of the local gateway route table.
+     * 
+     */
     @InputImport(name="localGatewayRouteTableId", required=true)
     private final Input<String> localGatewayRouteTableId;
 
@@ -23,6 +27,10 @@ public final class LocalGatewayRouteTableVPCAssociationArgs extends io.pulumi.re
         return this.localGatewayRouteTableId;
     }
 
+    /**
+     * The tags for the association.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<LocalGatewayRouteTableVPCAssociationTagArgs>> tags;
 
@@ -30,6 +38,10 @@ public final class LocalGatewayRouteTableVPCAssociationArgs extends io.pulumi.re
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The ID of the VPC.
+     * 
+     */
     @InputImport(name="vpcId", required=true)
     private final Input<String> vpcId;
 

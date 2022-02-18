@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCaPool {
+/**
+ * Returns a CaPool.
+ * 
+ */
     public static CompletableFuture<GetCaPoolResult> invokeAsync(GetCaPoolArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:privateca/v1:getCaPool", TypeShape.of(GetCaPoolResult.class), args == null ? GetCaPoolArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -14,6 +14,10 @@ public final class GetBackendServiceConsistentHashHttpCooky extends io.pulumi.re
 
     public static final GetBackendServiceConsistentHashHttpCooky Empty = new GetBackendServiceConsistentHashHttpCooky();
 
+    /**
+     * The name of the Backend Service.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

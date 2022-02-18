@@ -15,6 +15,10 @@ public final class GetWorkloadIdentityPoolResult {
     private final String description;
     private final Boolean disabled;
     private final String displayName;
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
     private final String name;
     private final @Nullable String project;
@@ -50,6 +54,10 @@ public final class GetWorkloadIdentityPoolResult {
     public String getDisplayName() {
         return this.displayName;
     }
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }

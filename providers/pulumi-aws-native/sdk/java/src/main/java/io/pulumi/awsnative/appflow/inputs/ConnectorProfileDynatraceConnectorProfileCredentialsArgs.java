@@ -13,6 +13,10 @@ public final class ConnectorProfileDynatraceConnectorProfileCredentialsArgs exte
 
     public static final ConnectorProfileDynatraceConnectorProfileCredentialsArgs Empty = new ConnectorProfileDynatraceConnectorProfileCredentialsArgs();
 
+    /**
+     * The API tokens used by Dynatrace API to authenticate various API calls.
+     * 
+     */
     @InputImport(name="apiToken", required=true)
     private final Input<String> apiToken;
 

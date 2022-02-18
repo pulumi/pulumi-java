@@ -15,6 +15,10 @@ public final class RequestValidatorArgs extends io.pulumi.resources.ResourceArgs
 
     public static final RequestValidatorArgs Empty = new RequestValidatorArgs();
 
+    /**
+     * Name of the request validator.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -22,6 +26,10 @@ public final class RequestValidatorArgs extends io.pulumi.resources.ResourceArgs
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The identifier of the targeted API entity.
+     * 
+     */
     @InputImport(name="restApiId", required=true)
     private final Input<String> restApiId;
 
@@ -29,6 +37,10 @@ public final class RequestValidatorArgs extends io.pulumi.resources.ResourceArgs
         return this.restApiId;
     }
 
+    /**
+     * Indicates whether to validate the request body according to the configured schema for the targeted API and method.
+     * 
+     */
     @InputImport(name="validateRequestBody")
     private final @Nullable Input<Boolean> validateRequestBody;
 
@@ -36,6 +48,10 @@ public final class RequestValidatorArgs extends io.pulumi.resources.ResourceArgs
         return this.validateRequestBody == null ? Input.empty() : this.validateRequestBody;
     }
 
+    /**
+     * Indicates whether to validate request parameters.
+     * 
+     */
     @InputImport(name="validateRequestParameters")
     private final @Nullable Input<Boolean> validateRequestParameters;
 

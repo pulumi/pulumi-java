@@ -9,6 +9,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfig {
+    /**
+     * Replace each input value with a given value.
+     * Structure is documented below.
+     * 
+     */
     private final PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValue newValue;
 
     @OutputCustomType.Constructor({"newValue"})
@@ -16,6 +21,11 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
         this.newValue = Objects.requireNonNull(newValue);
     }
 
+    /**
+     * Replace each input value with a given value.
+     * Structure is documented below.
+     * 
+     */
     public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValue getNewValue() {
         return this.newValue;
     }

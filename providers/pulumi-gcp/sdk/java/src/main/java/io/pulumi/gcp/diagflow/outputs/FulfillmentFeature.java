@@ -9,6 +9,12 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class FulfillmentFeature {
+    /**
+     * The type of the feature that enabled for fulfillment.
+     * * SMALLTALK: Fulfillment is enabled for SmallTalk.
+     *   Possible values are `SMALLTALK`.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"type"})
@@ -16,6 +22,12 @@ public final class FulfillmentFeature {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * The type of the feature that enabled for fulfillment.
+     * * SMALLTALK: Fulfillment is enabled for SmallTalk.
+     *   Possible values are `SMALLTALK`.
+     * 
+     */
     public String getType() {
         return this.type;
     }

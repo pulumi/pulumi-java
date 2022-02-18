@@ -15,23 +15,51 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * An Amazon Lookout for Metrics Detector
+ * 
+ */
 @ResourceType(type="aws-native:lookoutmetrics:AnomalyDetector")
 public class AnomalyDetector extends io.pulumi.resources.CustomResource {
+    /**
+     * Configuration options for the AnomalyDetector
+     * 
+     */
     @OutputExport(name="anomalyDetectorConfig", type=AnomalyDetectorConfig.class, parameters={})
     private Output<AnomalyDetectorConfig> anomalyDetectorConfig;
 
+    /**
+     * @return Configuration options for the AnomalyDetector
+     * 
+     */
     public Output<AnomalyDetectorConfig> getAnomalyDetectorConfig() {
         return this.anomalyDetectorConfig;
     }
+    /**
+     * A description for the AnomalyDetector.
+     * 
+     */
     @OutputExport(name="anomalyDetectorDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> anomalyDetectorDescription;
 
+    /**
+     * @return A description for the AnomalyDetector.
+     * 
+     */
     public Output</* @Nullable */ String> getAnomalyDetectorDescription() {
         return this.anomalyDetectorDescription;
     }
+    /**
+     * Name for the Amazon Lookout for Metrics Anomaly Detector
+     * 
+     */
     @OutputExport(name="anomalyDetectorName", type=String.class, parameters={})
     private Output</* @Nullable */ String> anomalyDetectorName;
 
+    /**
+     * @return Name for the Amazon Lookout for Metrics Anomaly Detector
+     * 
+     */
     public Output</* @Nullable */ String> getAnomalyDetectorName() {
         return this.anomalyDetectorName;
     }
@@ -41,19 +69,41 @@ public class AnomalyDetector extends io.pulumi.resources.CustomResource {
     public Output<String> getArn() {
         return this.arn;
     }
+    /**
+     * KMS key used to encrypt the AnomalyDetector data
+     * 
+     */
     @OutputExport(name="kmsKeyArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> kmsKeyArn;
 
+    /**
+     * @return KMS key used to encrypt the AnomalyDetector data
+     * 
+     */
     public Output</* @Nullable */ String> getKmsKeyArn() {
         return this.kmsKeyArn;
     }
+    /**
+     * List of metric sets for anomaly detection
+     * 
+     */
     @OutputExport(name="metricSetList", type=List.class, parameters={AnomalyDetectorMetricSet.class})
     private Output<List<AnomalyDetectorMetricSet>> metricSetList;
 
+    /**
+     * @return List of metric sets for anomaly detection
+     * 
+     */
     public Output<List<AnomalyDetectorMetricSet>> getMetricSetList() {
         return this.metricSetList;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public AnomalyDetector(String name, AnomalyDetectorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:lookoutmetrics:AnomalyDetector", name, args == null ? AnomalyDetectorArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -69,6 +119,14 @@ public class AnomalyDetector extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static AnomalyDetector get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AnomalyDetector(name, id, options);
     }

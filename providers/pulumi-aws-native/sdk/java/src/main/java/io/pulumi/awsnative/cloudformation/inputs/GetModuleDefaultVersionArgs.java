@@ -12,6 +12,10 @@ public final class GetModuleDefaultVersionArgs extends io.pulumi.resources.Invok
 
     public static final GetModuleDefaultVersionArgs Empty = new GetModuleDefaultVersionArgs();
 
+    /**
+     * The Amazon Resource Name (ARN) of the module version to set as the default version.
+     * 
+     */
     @InputImport(name="arn", required=true)
     private final String arn;
 

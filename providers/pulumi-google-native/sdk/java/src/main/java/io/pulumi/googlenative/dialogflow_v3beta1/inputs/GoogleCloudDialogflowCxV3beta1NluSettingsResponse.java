@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Settings related to NLU.
+ * 
+ */
 public final class GoogleCloudDialogflowCxV3beta1NluSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowCxV3beta1NluSettingsResponse Empty = new GoogleCloudDialogflowCxV3beta1NluSettingsResponse();
 
+    /**
+     * To filter out false positive results and still get variety in matched natural language inputs for your agent, you can tune the machine learning classification threshold. If the returned score value is less than the threshold value, then a no-match event will be triggered. The score values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0, the default of 0.3 is used.
+     * 
+     */
     @InputImport(name="classificationThreshold", required=true)
     private final Double classificationThreshold;
 
@@ -20,6 +28,10 @@ public final class GoogleCloudDialogflowCxV3beta1NluSettingsResponse extends io.
         return this.classificationThreshold;
     }
 
+    /**
+     * Indicates NLU model training mode.
+     * 
+     */
     @InputImport(name="modelTrainingMode", required=true)
     private final String modelTrainingMode;
 
@@ -27,6 +39,10 @@ public final class GoogleCloudDialogflowCxV3beta1NluSettingsResponse extends io.
         return this.modelTrainingMode;
     }
 
+    /**
+     * Indicates the type of NLU model.
+     * 
+     */
     @InputImport(name="modelType", required=true)
     private final String modelType;
 

@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetReportPlan {
+/**
+ * Contains detailed information about a report plan in AWS Backup Audit Manager.
+ * 
+ */
     public static CompletableFuture<GetReportPlanResult> invokeAsync(GetReportPlanArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:backup:getReportPlan", TypeShape.of(GetReportPlanResult.class), args == null ? GetReportPlanArgs.Empty : args, Utilities.withVersion(options));
     }

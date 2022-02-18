@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Azure Fabric Specific Details.
+ * 
+ */
 public final class AzureFabricSpecificDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureFabricSpecificDetailsResponse Empty = new AzureFabricSpecificDetailsResponse();
 
+    /**
+     * The container Ids for the Azure fabric.
+     * 
+     */
     @InputImport(name="containerIds")
     private final @Nullable List<String> containerIds;
 
@@ -22,6 +30,11 @@ public final class AzureFabricSpecificDetailsResponse extends io.pulumi.resource
         return this.containerIds == null ? List.of() : this.containerIds;
     }
 
+    /**
+     * Gets the class type. Overridden in derived classes.
+     * Expected value is 'Azure'.
+     * 
+     */
     @InputImport(name="instanceType", required=true)
     private final String instanceType;
 
@@ -29,6 +42,10 @@ public final class AzureFabricSpecificDetailsResponse extends io.pulumi.resource
         return this.instanceType;
     }
 
+    /**
+     * The Location for the Azure fabric.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable String location;
 

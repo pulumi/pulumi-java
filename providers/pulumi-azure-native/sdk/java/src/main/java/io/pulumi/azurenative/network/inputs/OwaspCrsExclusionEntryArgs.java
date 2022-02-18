@@ -12,10 +12,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Allow to exclude some variable satisfy the condition for the WAF check.
+ * 
+ */
 public final class OwaspCrsExclusionEntryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OwaspCrsExclusionEntryArgs Empty = new OwaspCrsExclusionEntryArgs();
 
+    /**
+     * The variable to be excluded.
+     * 
+     */
     @InputImport(name="matchVariable", required=true)
     private final Input<Either<String,OwaspCrsExclusionEntryMatchVariable>> matchVariable;
 
@@ -23,6 +31,10 @@ public final class OwaspCrsExclusionEntryArgs extends io.pulumi.resources.Resour
         return this.matchVariable;
     }
 
+    /**
+     * When matchVariable is a collection, operator used to specify which elements in the collection this exclusion applies to.
+     * 
+     */
     @InputImport(name="selector", required=true)
     private final Input<String> selector;
 
@@ -30,6 +42,10 @@ public final class OwaspCrsExclusionEntryArgs extends io.pulumi.resources.Resour
         return this.selector;
     }
 
+    /**
+     * When matchVariable is a collection, operate on the selector to specify which elements in the collection this exclusion applies to.
+     * 
+     */
     @InputImport(name="selectorMatchOperator", required=true)
     private final Input<Either<String,OwaspCrsExclusionEntrySelectorMatchOperator>> selectorMatchOperator;
 

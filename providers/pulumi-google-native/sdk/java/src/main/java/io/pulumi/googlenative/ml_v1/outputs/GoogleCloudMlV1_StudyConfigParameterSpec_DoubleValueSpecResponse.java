@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecResponse {
+    /**
+     * Must be specified if type is `DOUBLE`. Maximum value of the parameter.
+     * 
+     */
     private final Double maxValue;
+    /**
+     * Must be specified if type is `DOUBLE`. Minimum value of the parameter.
+     * 
+     */
     private final Double minValue;
 
     @OutputCustomType.Constructor({"maxValue","minValue"})
@@ -20,9 +28,17 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecRespo
         this.minValue = Objects.requireNonNull(minValue);
     }
 
+    /**
+     * Must be specified if type is `DOUBLE`. Maximum value of the parameter.
+     * 
+     */
     public Double getMaxValue() {
         return this.maxValue;
     }
+    /**
+     * Must be specified if type is `DOUBLE`. Minimum value of the parameter.
+     * 
+     */
     public Double getMinValue() {
         return this.minValue;
     }

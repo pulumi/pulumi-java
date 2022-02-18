@@ -14,6 +14,10 @@ public final class BackendBucketSignedUrlKeyState extends io.pulumi.resources.Re
 
     public static final BackendBucketSignedUrlKeyState Empty = new BackendBucketSignedUrlKeyState();
 
+    /**
+     * The backend bucket this signed URL key belongs.
+     * 
+     */
     @InputImport(name="backendBucket")
     private final @Nullable Input<String> backendBucket;
 
@@ -21,6 +25,12 @@ public final class BackendBucketSignedUrlKeyState extends io.pulumi.resources.Re
         return this.backendBucket == null ? Input.empty() : this.backendBucket;
     }
 
+    /**
+     * 128-bit key value used for signing the URL. The key value must be a
+     * valid RFC 4648 Section 5 base64url encoded string.
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     @InputImport(name="keyValue")
     private final @Nullable Input<String> keyValue;
 
@@ -28,6 +38,10 @@ public final class BackendBucketSignedUrlKeyState extends io.pulumi.resources.Re
         return this.keyValue == null ? Input.empty() : this.keyValue;
     }
 
+    /**
+     * Name of the signed URL key.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -35,6 +49,11 @@ public final class BackendBucketSignedUrlKeyState extends io.pulumi.resources.Re
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

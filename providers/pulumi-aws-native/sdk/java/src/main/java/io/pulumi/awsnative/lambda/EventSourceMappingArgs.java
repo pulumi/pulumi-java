@@ -23,6 +23,10 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
 
     public static final EventSourceMappingArgs Empty = new EventSourceMappingArgs();
 
+    /**
+     * The maximum number of items to retrieve in a single batch.
+     * 
+     */
     @InputImport(name="batchSize")
     private final @Nullable Input<Integer> batchSize;
 
@@ -30,6 +34,10 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
         return this.batchSize == null ? Input.empty() : this.batchSize;
     }
 
+    /**
+     * (Streams) If the function returns an error, split the batch in two and retry.
+     * 
+     */
     @InputImport(name="bisectBatchOnFunctionError")
     private final @Nullable Input<Boolean> bisectBatchOnFunctionError;
 
@@ -37,6 +45,10 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
         return this.bisectBatchOnFunctionError == null ? Input.empty() : this.bisectBatchOnFunctionError;
     }
 
+    /**
+     * (Streams) An Amazon SQS queue or Amazon SNS topic destination for discarded records.
+     * 
+     */
     @InputImport(name="destinationConfig")
     private final @Nullable Input<EventSourceMappingDestinationConfigArgs> destinationConfig;
 
@@ -44,6 +56,10 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
         return this.destinationConfig == null ? Input.empty() : this.destinationConfig;
     }
 
+    /**
+     * Disables the event source mapping to pause polling and invocation.
+     * 
+     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 
@@ -51,6 +67,10 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
+    /**
+     * The Amazon Resource Name (ARN) of the event source.
+     * 
+     */
     @InputImport(name="eventSourceArn")
     private final @Nullable Input<String> eventSourceArn;
 
@@ -58,6 +78,10 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
         return this.eventSourceArn == null ? Input.empty() : this.eventSourceArn;
     }
 
+    /**
+     * The filter criteria to control event filtering.
+     * 
+     */
     @InputImport(name="filterCriteria")
     private final @Nullable Input<FilterCriteriaPropertiesArgs> filterCriteria;
 
@@ -65,6 +89,10 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
         return this.filterCriteria == null ? Input.empty() : this.filterCriteria;
     }
 
+    /**
+     * The name of the Lambda function.
+     * 
+     */
     @InputImport(name="functionName", required=true)
     private final Input<String> functionName;
 
@@ -72,6 +100,10 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
         return this.functionName;
     }
 
+    /**
+     * (Streams) A list of response types supported by the function.
+     * 
+     */
     @InputImport(name="functionResponseTypes")
     private final @Nullable Input<List<EventSourceMappingFunctionResponseTypesItem>> functionResponseTypes;
 
@@ -79,6 +111,10 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
         return this.functionResponseTypes == null ? Input.empty() : this.functionResponseTypes;
     }
 
+    /**
+     * (Streams) The maximum amount of time to gather records before invoking the function, in seconds.
+     * 
+     */
     @InputImport(name="maximumBatchingWindowInSeconds")
     private final @Nullable Input<Integer> maximumBatchingWindowInSeconds;
 
@@ -86,6 +122,10 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
         return this.maximumBatchingWindowInSeconds == null ? Input.empty() : this.maximumBatchingWindowInSeconds;
     }
 
+    /**
+     * (Streams) The maximum age of a record that Lambda sends to a function for processing.
+     * 
+     */
     @InputImport(name="maximumRecordAgeInSeconds")
     private final @Nullable Input<Integer> maximumRecordAgeInSeconds;
 
@@ -93,6 +133,10 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
         return this.maximumRecordAgeInSeconds == null ? Input.empty() : this.maximumRecordAgeInSeconds;
     }
 
+    /**
+     * (Streams) The maximum number of times to retry when the function returns an error.
+     * 
+     */
     @InputImport(name="maximumRetryAttempts")
     private final @Nullable Input<Integer> maximumRetryAttempts;
 
@@ -100,6 +144,10 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
         return this.maximumRetryAttempts == null ? Input.empty() : this.maximumRetryAttempts;
     }
 
+    /**
+     * (Streams) The number of batches to process from each shard concurrently.
+     * 
+     */
     @InputImport(name="parallelizationFactor")
     private final @Nullable Input<Integer> parallelizationFactor;
 
@@ -107,6 +155,10 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
         return this.parallelizationFactor == null ? Input.empty() : this.parallelizationFactor;
     }
 
+    /**
+     * (ActiveMQ) A list of ActiveMQ queues.
+     * 
+     */
     @InputImport(name="queues")
     private final @Nullable Input<List<String>> queues;
 
@@ -114,6 +166,10 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
         return this.queues == null ? Input.empty() : this.queues;
     }
 
+    /**
+     * Self-managed event source endpoints.
+     * 
+     */
     @InputImport(name="selfManagedEventSource")
     private final @Nullable Input<EventSourceMappingSelfManagedEventSourceArgs> selfManagedEventSource;
 
@@ -121,6 +177,10 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
         return this.selfManagedEventSource == null ? Input.empty() : this.selfManagedEventSource;
     }
 
+    /**
+     * A list of SourceAccessConfiguration.
+     * 
+     */
     @InputImport(name="sourceAccessConfigurations")
     private final @Nullable Input<List<EventSourceMappingSourceAccessConfigurationArgs>> sourceAccessConfigurations;
 
@@ -128,6 +188,10 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
         return this.sourceAccessConfigurations == null ? Input.empty() : this.sourceAccessConfigurations;
     }
 
+    /**
+     * The position in a stream from which to start reading. Required for Amazon Kinesis and Amazon DynamoDB Streams sources.
+     * 
+     */
     @InputImport(name="startingPosition")
     private final @Nullable Input<String> startingPosition;
 
@@ -135,6 +199,10 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
         return this.startingPosition == null ? Input.empty() : this.startingPosition;
     }
 
+    /**
+     * With StartingPosition set to AT_TIMESTAMP, the time from which to start reading, in Unix time seconds.
+     * 
+     */
     @InputImport(name="startingPositionTimestamp")
     private final @Nullable Input<Double> startingPositionTimestamp;
 
@@ -142,6 +210,10 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
         return this.startingPositionTimestamp == null ? Input.empty() : this.startingPositionTimestamp;
     }
 
+    /**
+     * (Kafka) A list of Kafka topics.
+     * 
+     */
     @InputImport(name="topics")
     private final @Nullable Input<List<String>> topics;
 
@@ -149,6 +221,10 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
         return this.topics == null ? Input.empty() : this.topics;
     }
 
+    /**
+     * (Streams) Tumbling window (non-overlapping time window) duration to perform aggregations.
+     * 
+     */
     @InputImport(name="tumblingWindowInSeconds")
     private final @Nullable Input<Integer> tumblingWindowInSeconds;
 

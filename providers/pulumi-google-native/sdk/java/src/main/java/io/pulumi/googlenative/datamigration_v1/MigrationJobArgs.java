@@ -21,6 +21,10 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MigrationJobArgs Empty = new MigrationJobArgs();
 
+    /**
+     * The resource name (URI) of the destination connection profile.
+     * 
+     */
     @InputImport(name="destination", required=true)
     private final Input<String> destination;
 
@@ -28,6 +32,10 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.destination;
     }
 
+    /**
+     * The database engine type and provider of the destination.
+     * 
+     */
     @InputImport(name="destinationDatabase")
     private final @Nullable Input<DatabaseTypeArgs> destinationDatabase;
 
@@ -35,6 +43,10 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.destinationDatabase == null ? Input.empty() : this.destinationDatabase;
     }
 
+    /**
+     * The migration job display name.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -42,6 +54,10 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The path to the dump file in Google Cloud Storage, in the format: (gs://[BUCKET_NAME]/[OBJECT_NAME]).
+     * 
+     */
     @InputImport(name="dumpPath")
     private final @Nullable Input<String> dumpPath;
 
@@ -49,6 +65,10 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.dumpPath == null ? Input.empty() : this.dumpPath;
     }
 
+    /**
+     * The resource labels for migration job to use to annotate any related underlying resources such as Compute Engine VMs. An object containing a list of "key": "value" pairs. Example: `{ "name": "wrench", "mass": "1.3kg", "count": "3" }`.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -70,6 +90,10 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.migrationJobId;
     }
 
+    /**
+     * The name (URI) of this migration job resource, in the form of: projects/{project}/locations/{location}/migrationJobs/{migrationJob}.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -91,6 +115,10 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.requestId == null ? Input.empty() : this.requestId;
     }
 
+    /**
+     * The details needed to communicate to the source over Reverse SSH tunnel connectivity.
+     * 
+     */
     @InputImport(name="reverseSshConnectivity")
     private final @Nullable Input<ReverseSshConnectivityArgs> reverseSshConnectivity;
 
@@ -98,6 +126,10 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.reverseSshConnectivity == null ? Input.empty() : this.reverseSshConnectivity;
     }
 
+    /**
+     * The resource name (URI) of the source connection profile.
+     * 
+     */
     @InputImport(name="source", required=true)
     private final Input<String> source;
 
@@ -105,6 +137,10 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.source;
     }
 
+    /**
+     * The database engine type and provider of the source.
+     * 
+     */
     @InputImport(name="sourceDatabase")
     private final @Nullable Input<DatabaseTypeArgs> sourceDatabase;
 
@@ -112,6 +148,10 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceDatabase == null ? Input.empty() : this.sourceDatabase;
     }
 
+    /**
+     * The current migration job state.
+     * 
+     */
     @InputImport(name="state")
     private final @Nullable Input<MigrationJobState> state;
 
@@ -119,6 +159,10 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.state == null ? Input.empty() : this.state;
     }
 
+    /**
+     * static ip connectivity data (default, no additional details needed).
+     * 
+     */
     @InputImport(name="staticIpConnectivity")
     private final @Nullable Input<StaticIpConnectivityArgs> staticIpConnectivity;
 
@@ -126,6 +170,10 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.staticIpConnectivity == null ? Input.empty() : this.staticIpConnectivity;
     }
 
+    /**
+     * The migration job type.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<MigrationJobType> type;
 
@@ -133,6 +181,10 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.type;
     }
 
+    /**
+     * The details of the VPC network that the source database is located in.
+     * 
+     */
     @InputImport(name="vpcPeeringConnectivity")
     private final @Nullable Input<VpcPeeringConnectivityArgs> vpcPeeringConnectivity;
 

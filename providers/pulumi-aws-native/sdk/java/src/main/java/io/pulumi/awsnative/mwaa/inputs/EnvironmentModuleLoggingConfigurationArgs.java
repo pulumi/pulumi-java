@@ -12,6 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Logging configuration for a specific airflow component.
+ * 
+ */
 public final class EnvironmentModuleLoggingConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EnvironmentModuleLoggingConfigurationArgs Empty = new EnvironmentModuleLoggingConfigurationArgs();

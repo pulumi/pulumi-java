@@ -12,8 +12,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AzureSkuResponse {
+    /**
+     * The number of instances of the cluster.
+     * 
+     */
     private final @Nullable Integer capacity;
+    /**
+     * SKU name.
+     * 
+     */
     private final String name;
+    /**
+     * SKU tier.
+     * 
+     */
     private final String tier;
 
     @OutputCustomType.Constructor({"capacity","name","tier"})
@@ -26,12 +38,24 @@ public final class AzureSkuResponse {
         this.tier = Objects.requireNonNull(tier);
     }
 
+    /**
+     * The number of instances of the cluster.
+     * 
+     */
     public Optional<Integer> getCapacity() {
         return Optional.ofNullable(this.capacity);
     }
+    /**
+     * SKU name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * SKU tier.
+     * 
+     */
     public String getTier() {
         return this.tier;
     }

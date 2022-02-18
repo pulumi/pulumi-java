@@ -8,10 +8,18 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
+/**
+ * Metadata for classification annotations.
+ * 
+ */
 public final class GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse Empty = new GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse();
 
+    /**
+     * Whether the classification task is multi-label or not.
+     * 
+     */
     @InputImport(name="isMultiLabel", required=true)
     private final Boolean isMultiLabel;
 

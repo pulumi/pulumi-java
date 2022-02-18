@@ -12,8 +12,23 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GuestPoliciesRecipeArtifactGcs {
+    /**
+     * Bucket of the Google Cloud Storage object. Given an example URL: https://storage.googleapis.com/my-bucket/foo/bar#1234567
+     * this value would be my-bucket.
+     * 
+     */
     private final @Nullable String bucket;
+    /**
+     * Must be provided if allowInsecure is false. Generation number of the Google Cloud Storage object.
+     * https://storage.googleapis.com/my-bucket/foo/bar#1234567 this value would be 1234567.
+     * 
+     */
     private final @Nullable Integer generation;
+    /**
+     * Name of the Google Cloud Storage object. Given an example URL: https://storage.googleapis.com/my-bucket/foo/bar#1234567
+     * this value would be foo/bar.
+     * 
+     */
     private final @Nullable String object;
 
     @OutputCustomType.Constructor({"bucket","generation","object"})
@@ -26,12 +41,27 @@ public final class GuestPoliciesRecipeArtifactGcs {
         this.object = object;
     }
 
+    /**
+     * Bucket of the Google Cloud Storage object. Given an example URL: https://storage.googleapis.com/my-bucket/foo/bar#1234567
+     * this value would be my-bucket.
+     * 
+     */
     public Optional<String> getBucket() {
         return Optional.ofNullable(this.bucket);
     }
+    /**
+     * Must be provided if allowInsecure is false. Generation number of the Google Cloud Storage object.
+     * https://storage.googleapis.com/my-bucket/foo/bar#1234567 this value would be 1234567.
+     * 
+     */
     public Optional<Integer> getGeneration() {
         return Optional.ofNullable(this.generation);
     }
+    /**
+     * Name of the Google Cloud Storage object. Given an example URL: https://storage.googleapis.com/my-bucket/foo/bar#1234567
+     * this value would be foo/bar.
+     * 
+     */
     public Optional<String> getObject() {
         return Optional.ofNullable(this.object);
     }

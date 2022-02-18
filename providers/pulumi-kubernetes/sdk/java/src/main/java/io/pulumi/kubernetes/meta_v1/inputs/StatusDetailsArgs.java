@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * StatusDetails is a set of additional properties that MAY be set by the server to provide additional information about a response. The Reason field of a Status object defines what attributes will be set. Clients must ignore fields that do not match the defined type of each attribute, and should assume that any attribute may be empty, invalid, or under defined.
+ * 
+ */
 public final class StatusDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StatusDetailsArgs Empty = new StatusDetailsArgs();
 
+    /**
+     * The Causes array includes more details associated with the StatusReason failure. Not all StatusReasons may provide detailed causes.
+     * 
+     */
     @InputImport(name="causes")
     private final @Nullable Input<List<StatusCauseArgs>> causes;
 
@@ -24,6 +32,10 @@ public final class StatusDetailsArgs extends io.pulumi.resources.ResourceArgs {
         return this.causes == null ? Input.empty() : this.causes;
     }
 
+    /**
+     * The group attribute of the resource associated with the status StatusReason.
+     * 
+     */
     @InputImport(name="group")
     private final @Nullable Input<String> group;
 
@@ -31,6 +43,10 @@ public final class StatusDetailsArgs extends io.pulumi.resources.ResourceArgs {
         return this.group == null ? Input.empty() : this.group;
     }
 
+    /**
+     * The kind attribute of the resource associated with the status StatusReason. On some operations may differ from the requested resource Kind. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -38,6 +54,10 @@ public final class StatusDetailsArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * The name attribute of the resource associated with the status StatusReason (when there is a single name which can be described).
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -45,6 +65,10 @@ public final class StatusDetailsArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * If specified, the time in seconds before the operation should be retried. Some errors may indicate the client must take an alternate action - for those errors this field may indicate how long to wait before taking the alternate action.
+     * 
+     */
     @InputImport(name="retryAfterSeconds")
     private final @Nullable Input<Integer> retryAfterSeconds;
 
@@ -52,6 +76,10 @@ public final class StatusDetailsArgs extends io.pulumi.resources.ResourceArgs {
         return this.retryAfterSeconds == null ? Input.empty() : this.retryAfterSeconds;
     }
 
+    /**
+     * UID of the resource. (when there is a single resource which can be described). More info: http://kubernetes.io/docs/user-guide/identifiers#uids
+     * 
+     */
     @InputImport(name="uid")
     private final @Nullable Input<String> uid;
 

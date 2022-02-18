@@ -14,6 +14,10 @@ public final class GetAccountArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAccountArgs Empty = new GetAccountArgs();
 
+    /**
+     * The Google service account ID. This be one of:
+     * 
+     */
     @InputImport(name="accountId", required=true)
     private final String accountId;
 
@@ -21,6 +25,11 @@ public final class GetAccountArgs extends io.pulumi.resources.InvokeArgs {
         return this.accountId;
     }
 
+    /**
+     * The ID of the project that the service account is present in.
+     * Defaults to the provider project configuration.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

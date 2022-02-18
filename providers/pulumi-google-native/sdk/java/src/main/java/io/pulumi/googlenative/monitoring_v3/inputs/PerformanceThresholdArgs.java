@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A PerformanceThreshold is used when each window is good when that window has a sufficiently high performance.
+ * 
+ */
 public final class PerformanceThresholdArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PerformanceThresholdArgs Empty = new PerformanceThresholdArgs();
 
+    /**
+     * BasicSli to evaluate to judge window quality.
+     * 
+     */
     @InputImport(name="basicSliPerformance")
     private final @Nullable Input<BasicSliArgs> basicSliPerformance;
 
@@ -23,6 +31,10 @@ public final class PerformanceThresholdArgs extends io.pulumi.resources.Resource
         return this.basicSliPerformance == null ? Input.empty() : this.basicSliPerformance;
     }
 
+    /**
+     * RequestBasedSli to evaluate to judge window quality.
+     * 
+     */
     @InputImport(name="performance")
     private final @Nullable Input<RequestBasedSliArgs> performance;
 
@@ -30,6 +42,10 @@ public final class PerformanceThresholdArgs extends io.pulumi.resources.Resource
         return this.performance == null ? Input.empty() : this.performance;
     }
 
+    /**
+     * If window performance >= threshold, the window is counted as good.
+     * 
+     */
     @InputImport(name="threshold")
     private final @Nullable Input<Double> threshold;
 

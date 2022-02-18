@@ -17,6 +17,10 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
 
     public static final PreventionJobTriggerState Empty = new PreventionJobTriggerState();
 
+    /**
+     * A description of the job trigger.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -24,6 +28,10 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * User set display name of the job trigger.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -31,6 +39,11 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * Controls what and how to inspect for findings.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="inspectJob")
     private final @Nullable Input<PreventionJobTriggerInspectJobGetArgs> inspectJob;
 
@@ -38,6 +51,10 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
         return this.inspectJob == null ? Input.empty() : this.inspectJob;
     }
 
+    /**
+     * The timestamp of the last time this trigger executed.
+     * 
+     */
     @InputImport(name="lastRunTime")
     private final @Nullable Input<String> lastRunTime;
 
@@ -45,6 +62,10 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
         return this.lastRunTime == null ? Input.empty() : this.lastRunTime;
     }
 
+    /**
+     * The name of the Datastore kind.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -52,6 +73,11 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The parent of the trigger, either in the format `projects/{{project}}`
+     * or `projects/{{project}}/locations/{{location}}`
+     * 
+     */
     @InputImport(name="parent")
     private final @Nullable Input<String> parent;
 
@@ -59,6 +85,12 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
         return this.parent == null ? Input.empty() : this.parent;
     }
 
+    /**
+     * Whether the trigger is currently active.
+     * Default value is `HEALTHY`.
+     * Possible values are `PAUSED`, `HEALTHY`, and `CANCELLED`.
+     * 
+     */
     @InputImport(name="status")
     private final @Nullable Input<String> status;
 
@@ -66,6 +98,11 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
         return this.status == null ? Input.empty() : this.status;
     }
 
+    /**
+     * What event needs to occur for a new job to be started.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="triggers")
     private final @Nullable Input<List<PreventionJobTriggerTriggerGetArgs>> triggers;
 

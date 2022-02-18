@@ -18,6 +18,10 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PackageArgs Empty = new PackageArgs();
 
+    /**
+     * Application name
+     * 
+     */
     @InputImport(name="applicationName", required=true)
     private final Input<String> applicationName;
 
@@ -25,6 +29,10 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
         return this.applicationName;
     }
 
+    /**
+     * The file path of the package.
+     * 
+     */
     @InputImport(name="blobPath", required=true)
     private final Input<String> blobPath;
 
@@ -32,6 +40,10 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
         return this.blobPath;
     }
 
+    /**
+     * The flighting ring for feature update.
+     * 
+     */
     @InputImport(name="flightingRing", required=true)
     private final Input<String> flightingRing;
 
@@ -39,6 +51,10 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
         return this.flightingRing;
     }
 
+    /**
+     * The geo-location where the resource lives
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -46,6 +62,10 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The resource name of the Test Base Package.
+     * 
+     */
     @InputImport(name="packageName")
     private final @Nullable Input<String> packageName;
 
@@ -53,6 +73,10 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
         return this.packageName == null ? Input.empty() : this.packageName;
     }
 
+    /**
+     * The name of the resource group that contains the resource.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -60,6 +84,10 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The tags of the resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -67,6 +95,10 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * Specifies the target OSs of specific OS Update types.
+     * 
+     */
     @InputImport(name="targetOSList", required=true)
     private final Input<List<TargetOSInfoArgs>> targetOSList;
 
@@ -74,6 +106,10 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
         return this.targetOSList;
     }
 
+    /**
+     * The resource name of the Test Base Account.
+     * 
+     */
     @InputImport(name="testBaseAccountName", required=true)
     private final Input<String> testBaseAccountName;
 
@@ -81,6 +117,10 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
         return this.testBaseAccountName;
     }
 
+    /**
+     * The detailed test information.
+     * 
+     */
     @InputImport(name="tests", required=true)
     private final Input<List<TestArgs>> tests;
 
@@ -88,6 +128,10 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
         return this.tests;
     }
 
+    /**
+     * Application version
+     * 
+     */
     @InputImport(name="version", required=true)
     private final Input<String> version;
 

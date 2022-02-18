@@ -10,6 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Output location
+ * 
+ */
 public final class JobOutputLocation extends io.pulumi.resources.InvokeArgs {
 
     public static final JobOutputLocation Empty = new JobOutputLocation();

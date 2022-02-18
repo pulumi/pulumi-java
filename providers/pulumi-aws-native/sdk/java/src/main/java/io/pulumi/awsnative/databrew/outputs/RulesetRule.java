@@ -19,6 +19,10 @@ public final class RulesetRule {
     private final String checkExpression;
     private final @Nullable List<RulesetColumnSelector> columnSelectors;
     private final @Nullable Boolean disabled;
+    /**
+     * Name of the rule
+     * 
+     */
     private final String name;
     private final @Nullable List<RulesetSubstitutionValue> substitutionMap;
     private final @Nullable RulesetThreshold threshold;
@@ -48,6 +52,10 @@ public final class RulesetRule {
     public Optional<Boolean> getDisabled() {
         return Optional.ofNullable(this.disabled);
     }
+    /**
+     * Name of the rule
+     * 
+     */
     public String getName() {
         return this.name;
     }

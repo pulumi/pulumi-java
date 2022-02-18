@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * What AWS WAF should do if it fails to completely parse the JSON body.
+     * 
+     */
     @EnumType
     public enum LoggingConfigurationFieldToMatchJsonBodyPropertiesInvalidFallbackBehavior {
         Match("MATCH"),

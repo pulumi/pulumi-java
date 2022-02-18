@@ -12,6 +12,10 @@ public final class GetProtectionContainerArgs extends io.pulumi.resources.Invoke
 
     public static final GetProtectionContainerArgs Empty = new GetProtectionContainerArgs();
 
+    /**
+     * Name of the container whose details need to be fetched.
+     * 
+     */
     @InputImport(name="containerName", required=true)
     private final String containerName;
 
@@ -19,6 +23,10 @@ public final class GetProtectionContainerArgs extends io.pulumi.resources.Invoke
         return this.containerName;
     }
 
+    /**
+     * Name of the fabric where the container belongs.
+     * 
+     */
     @InputImport(name="fabricName", required=true)
     private final String fabricName;
 
@@ -26,6 +34,10 @@ public final class GetProtectionContainerArgs extends io.pulumi.resources.Invoke
         return this.fabricName;
     }
 
+    /**
+     * The name of the resource group where the recovery services vault is present.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -33,6 +45,10 @@ public final class GetProtectionContainerArgs extends io.pulumi.resources.Invoke
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the recovery services vault.
+     * 
+     */
     @InputImport(name="vaultName", required=true)
     private final String vaultName;
 

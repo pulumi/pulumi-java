@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Inspect the request body as JSON. The request body immediately follows the request headers. This is the part of a request that contains any additional data that you want to send to your web server as the HTTP request body, such as data from a form.
+ * 
+ */
 public final class LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs Empty = new LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs();
 
+    /**
+     * What AWS WAF should do if it fails to completely parse the JSON body.
+     * 
+     */
     @InputImport(name="invalidFallbackBehavior")
     private final @Nullable Input<LoggingConfigurationFieldToMatchJsonBodyPropertiesInvalidFallbackBehavior> invalidFallbackBehavior;
 
@@ -23,6 +31,10 @@ public final class LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs extend
         return this.invalidFallbackBehavior == null ? Input.empty() : this.invalidFallbackBehavior;
     }
 
+    /**
+     * The patterns to look for in the JSON body. AWS WAF inspects the results of these pattern matches against the rule inspection criteria.
+     * 
+     */
     @InputImport(name="matchPattern", required=true)
     private final Input<LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs> matchPattern;
 
@@ -30,6 +42,10 @@ public final class LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs extend
         return this.matchPattern;
     }
 
+    /**
+     * The parts of the JSON to match against using the MatchPattern. If you specify All, AWS WAF matches against keys and values.
+     * 
+     */
     @InputImport(name="matchScope", required=true)
     private final Input<LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchScope> matchScope;
 

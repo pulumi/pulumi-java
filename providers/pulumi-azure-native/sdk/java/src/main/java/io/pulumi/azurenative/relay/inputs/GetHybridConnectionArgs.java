@@ -12,6 +12,10 @@ public final class GetHybridConnectionArgs extends io.pulumi.resources.InvokeArg
 
     public static final GetHybridConnectionArgs Empty = new GetHybridConnectionArgs();
 
+    /**
+     * The hybrid connection name.
+     * 
+     */
     @InputImport(name="hybridConnectionName", required=true)
     private final String hybridConnectionName;
 
@@ -19,6 +23,10 @@ public final class GetHybridConnectionArgs extends io.pulumi.resources.InvokeArg
         return this.hybridConnectionName;
     }
 
+    /**
+     * The namespace name
+     * 
+     */
     @InputImport(name="namespaceName", required=true)
     private final String namespaceName;
 
@@ -26,6 +34,10 @@ public final class GetHybridConnectionArgs extends io.pulumi.resources.InvokeArg
         return this.namespaceName;
     }
 
+    /**
+     * Name of the Resource group within the Azure subscription.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

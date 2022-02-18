@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetGlobalClusterResult {
+    /**
+     * The deletion protection setting for the new global database. The global database can't be deleted when deletion protection is enabled.
+     * 
+     */
     private final @Nullable Boolean deletionProtection;
 
     @OutputCustomType.Constructor({"deletionProtection"})
@@ -18,6 +22,10 @@ public final class GetGlobalClusterResult {
         this.deletionProtection = deletionProtection;
     }
 
+    /**
+     * The deletion protection setting for the new global database. The global database can't be deleted when deletion protection is enabled.
+     * 
+     */
     public Optional<Boolean> getDeletionProtection() {
         return Optional.ofNullable(this.deletionProtection);
     }

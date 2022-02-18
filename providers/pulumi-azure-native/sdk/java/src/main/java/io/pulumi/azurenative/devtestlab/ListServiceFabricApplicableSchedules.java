@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListServiceFabricApplicableSchedules {
+/**
+ * Schedules applicable to a virtual machine. The schedules may have been defined on a VM or on lab level.
+ * API Version: 2018-09-15.
+ * 
+ *
+ * Schedules applicable to a virtual machine. The schedules may have been defined on a VM or on lab level.
+ * 
+ */
     public static CompletableFuture<ListServiceFabricApplicableSchedulesResult> invokeAsync(ListServiceFabricApplicableSchedulesArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devtestlab:listServiceFabricApplicableSchedules", TypeShape.of(ListServiceFabricApplicableSchedulesResult.class), args == null ? ListServiceFabricApplicableSchedulesArgs.Empty : args, Utilities.withVersion(options));
     }

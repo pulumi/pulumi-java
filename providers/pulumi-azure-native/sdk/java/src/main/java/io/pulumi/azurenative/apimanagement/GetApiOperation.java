@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApiOperation {
+/**
+ * Api Operation details.
+ * API Version: 2020-12-01.
+ * 
+ *
+ * Api Operation details.
+ * 
+ */
     public static CompletableFuture<GetApiOperationResult> invokeAsync(GetApiOperationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getApiOperation", TypeShape.of(GetApiOperationResult.class), args == null ? GetApiOperationArgs.Empty : args, Utilities.withVersion(options));
     }

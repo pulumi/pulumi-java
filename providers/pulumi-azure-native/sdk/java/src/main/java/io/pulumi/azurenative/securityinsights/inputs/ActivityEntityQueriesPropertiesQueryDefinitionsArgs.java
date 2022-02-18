@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The Activity query definitions
+ * 
+ */
 public final class ActivityEntityQueriesPropertiesQueryDefinitionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ActivityEntityQueriesPropertiesQueryDefinitionsArgs Empty = new ActivityEntityQueriesPropertiesQueryDefinitionsArgs();
 
+    /**
+     * The Activity query to run on a given entity
+     * 
+     */
     @InputImport(name="query")
     private final @Nullable Input<String> query;
 

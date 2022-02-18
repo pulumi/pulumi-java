@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The protocol that the object storage server uses to communicate.
+     * 
+     */
     @EnumType
     public enum LocationObjectStorageServerProtocol {
         Https("HTTPS"),

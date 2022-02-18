@@ -13,10 +13,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Ssis Package.
+ * 
+ */
 public final class SsisPackageResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SsisPackageResponse Empty = new SsisPackageResponse();
 
+    /**
+     * Metadata description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -24,6 +32,10 @@ public final class SsisPackageResponse extends io.pulumi.resources.InvokeArgs {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * Folder id which contains package.
+     * 
+     */
     @InputImport(name="folderId")
     private final @Nullable Double folderId;
 
@@ -31,6 +43,10 @@ public final class SsisPackageResponse extends io.pulumi.resources.InvokeArgs {
         return this.folderId == null ? Optional.empty() : Optional.ofNullable(this.folderId);
     }
 
+    /**
+     * Metadata id.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Double id;
 
@@ -38,6 +54,10 @@ public final class SsisPackageResponse extends io.pulumi.resources.InvokeArgs {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * Metadata name.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -45,6 +65,10 @@ public final class SsisPackageResponse extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Parameters in package
+     * 
+     */
     @InputImport(name="parameters")
     private final @Nullable List<SsisParameterResponse> parameters;
 
@@ -52,6 +76,10 @@ public final class SsisPackageResponse extends io.pulumi.resources.InvokeArgs {
         return this.parameters == null ? List.of() : this.parameters;
     }
 
+    /**
+     * Project id which contains package.
+     * 
+     */
     @InputImport(name="projectId")
     private final @Nullable Double projectId;
 
@@ -59,6 +87,10 @@ public final class SsisPackageResponse extends io.pulumi.resources.InvokeArgs {
         return this.projectId == null ? Optional.empty() : Optional.ofNullable(this.projectId);
     }
 
+    /**
+     * Project version which contains package.
+     * 
+     */
     @InputImport(name="projectVersion")
     private final @Nullable Double projectVersion;
 
@@ -66,6 +98,11 @@ public final class SsisPackageResponse extends io.pulumi.resources.InvokeArgs {
         return this.projectVersion == null ? Optional.empty() : Optional.ofNullable(this.projectVersion);
     }
 
+    /**
+     * The type of SSIS object metadata.
+     * Expected value is 'Package'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

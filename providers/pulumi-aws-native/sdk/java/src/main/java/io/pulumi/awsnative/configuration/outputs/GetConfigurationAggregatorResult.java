@@ -16,8 +16,16 @@ import javax.annotation.Nullable;
 @OutputCustomType
 public final class GetConfigurationAggregatorResult {
     private final @Nullable List<ConfigurationAggregatorAccountAggregationSource> accountAggregationSources;
+    /**
+     * The Amazon Resource Name (ARN) of the aggregator.
+     * 
+     */
     private final @Nullable String configurationAggregatorArn;
     private final @Nullable ConfigurationAggregatorOrganizationAggregationSource organizationAggregationSource;
+    /**
+     * The tags for the configuration aggregator.
+     * 
+     */
     private final @Nullable List<ConfigurationAggregatorTag> tags;
 
     @OutputCustomType.Constructor({"accountAggregationSources","configurationAggregatorArn","organizationAggregationSource","tags"})
@@ -35,12 +43,20 @@ public final class GetConfigurationAggregatorResult {
     public List<ConfigurationAggregatorAccountAggregationSource> getAccountAggregationSources() {
         return this.accountAggregationSources == null ? List.of() : this.accountAggregationSources;
     }
+    /**
+     * The Amazon Resource Name (ARN) of the aggregator.
+     * 
+     */
     public Optional<String> getConfigurationAggregatorArn() {
         return Optional.ofNullable(this.configurationAggregatorArn);
     }
     public Optional<ConfigurationAggregatorOrganizationAggregationSource> getOrganizationAggregationSource() {
         return Optional.ofNullable(this.organizationAggregationSource);
     }
+    /**
+     * The tags for the configuration aggregator.
+     * 
+     */
     public List<ConfigurationAggregatorTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

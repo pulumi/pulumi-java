@@ -16,6 +16,10 @@ public final class GetKeysZoneSigningKey extends io.pulumi.resources.InvokeArgs 
 
     public static final GetKeysZoneSigningKey Empty = new GetKeysZoneSigningKey();
 
+    /**
+     * String mnemonic specifying the DNSSEC algorithm of this key. Immutable after creation time. Possible values are `ecdsap256sha256`, `ecdsap384sha384`, `rsasha1`, `rsasha256`, and `rsasha512`.
+     * 
+     */
     @InputImport(name="algorithm", required=true)
     private final String algorithm;
 
@@ -23,6 +27,10 @@ public final class GetKeysZoneSigningKey extends io.pulumi.resources.InvokeArgs 
         return this.algorithm;
     }
 
+    /**
+     * The time that this resource was created in the control plane. This is in RFC3339 text format.
+     * 
+     */
     @InputImport(name="creationTime", required=true)
     private final String creationTime;
 
@@ -30,6 +38,10 @@ public final class GetKeysZoneSigningKey extends io.pulumi.resources.InvokeArgs 
         return this.creationTime;
     }
 
+    /**
+     * A mutable string of at most 1024 characters associated with this resource for the user's convenience.
+     * 
+     */
     @InputImport(name="description", required=true)
     private final String description;
 
@@ -37,6 +49,10 @@ public final class GetKeysZoneSigningKey extends io.pulumi.resources.InvokeArgs 
         return this.description;
     }
 
+    /**
+     * A list of cryptographic hashes of the DNSKEY resource record associated with this DnsKey. These digests are needed to construct a DS record that points at this DNS key. Each contains:
+     * 
+     */
     @InputImport(name="digests", required=true)
     private final List<GetKeysZoneSigningKeyDigest> digests;
 
@@ -44,6 +60,10 @@ public final class GetKeysZoneSigningKey extends io.pulumi.resources.InvokeArgs 
         return this.digests;
     }
 
+    /**
+     * Unique identifier for the resource; defined by the server.
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -51,6 +71,10 @@ public final class GetKeysZoneSigningKey extends io.pulumi.resources.InvokeArgs 
         return this.id;
     }
 
+    /**
+     * Active keys will be used to sign subsequent changes to the ManagedZone. Inactive keys will still be present as DNSKEY Resource Records for the use of resolvers validating existing signatures.
+     * 
+     */
     @InputImport(name="isActive", required=true)
     private final Boolean isActive;
 
@@ -58,6 +82,10 @@ public final class GetKeysZoneSigningKey extends io.pulumi.resources.InvokeArgs 
         return this.isActive;
     }
 
+    /**
+     * Length of the key in bits. Specified at creation time then immutable.
+     * 
+     */
     @InputImport(name="keyLength", required=true)
     private final Integer keyLength;
 
@@ -65,6 +93,10 @@ public final class GetKeysZoneSigningKey extends io.pulumi.resources.InvokeArgs 
         return this.keyLength;
     }
 
+    /**
+     * The key tag is a non-cryptographic hash of the a DNSKEY resource record associated with this DnsKey. The key tag can be used to identify a DNSKEY more quickly (but it is not a unique identifier). In particular, the key tag is used in a parent zone's DS record to point at the DNSKEY in this child ManagedZone. The key tag is a number in the range [0, 65535] and the algorithm to calculate it is specified in RFC4034 Appendix B.
+     * 
+     */
     @InputImport(name="keyTag", required=true)
     private final Integer keyTag;
 
@@ -72,6 +104,10 @@ public final class GetKeysZoneSigningKey extends io.pulumi.resources.InvokeArgs 
         return this.keyTag;
     }
 
+    /**
+     * Base64 encoded public half of this key.
+     * 
+     */
     @InputImport(name="publicKey", required=true)
     private final String publicKey;
 

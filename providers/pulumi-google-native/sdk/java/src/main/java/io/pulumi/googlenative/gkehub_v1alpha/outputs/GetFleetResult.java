@@ -9,12 +9,40 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetFleetResult {
+    /**
+     * When the Fleet was created.
+     * 
+     */
     private final String createTime;
+    /**
+     * When the Fleet was deleted.
+     * 
+     */
     private final String deleteTime;
+    /**
+     * Optional. A user-assigned display name of the Fleet. When present, it must be between 4 to 30 characters. Allowed characters are: lowercase and uppercase letters, numbers, hyphen, single-quote, double-quote, space, and exclamation point. Example: `Production Fleet`
+     * 
+     */
     private final String displayName;
+    /**
+     * The name for the fleet. The name must meet the following constraints: + The name of a fleet should be unique within the organization; + It must consist of lower case alphanumeric characters or `-`; + The length of the name must be less than or equal to 63; + Unicode names must be expressed in Punycode format (rfc3492). Examples: + prod-fleet + xn--wlq33vhyw9jb （Punycode form for "生产环境")
+     * 
+     */
     private final String fleetName;
+    /**
+     * The full, unique resource name of this fleet in the format of `projects/{project}/locations/{location}/fleets/{fleet}`. Each GCP project can have at most one fleet resource, named "default".
+     * 
+     */
     private final String name;
+    /**
+     * Google-generated UUID for this resource. This is unique across all Fleet resources. If a Fleet resource is deleted and another resource with the same name is created, it gets a different uid.
+     * 
+     */
     private final String uid;
+    /**
+     * When the Fleet was last updated.
+     * 
+     */
     private final String updateTime;
 
     @OutputCustomType.Constructor({"createTime","deleteTime","displayName","fleetName","name","uid","updateTime"})
@@ -35,24 +63,52 @@ public final class GetFleetResult {
         this.updateTime = Objects.requireNonNull(updateTime);
     }
 
+    /**
+     * When the Fleet was created.
+     * 
+     */
     public String getCreateTime() {
         return this.createTime;
     }
+    /**
+     * When the Fleet was deleted.
+     * 
+     */
     public String getDeleteTime() {
         return this.deleteTime;
     }
+    /**
+     * Optional. A user-assigned display name of the Fleet. When present, it must be between 4 to 30 characters. Allowed characters are: lowercase and uppercase letters, numbers, hyphen, single-quote, double-quote, space, and exclamation point. Example: `Production Fleet`
+     * 
+     */
     public String getDisplayName() {
         return this.displayName;
     }
+    /**
+     * The name for the fleet. The name must meet the following constraints: + The name of a fleet should be unique within the organization; + It must consist of lower case alphanumeric characters or `-`; + The length of the name must be less than or equal to 63; + Unicode names must be expressed in Punycode format (rfc3492). Examples: + prod-fleet + xn--wlq33vhyw9jb （Punycode form for "生产环境")
+     * 
+     */
     public String getFleetName() {
         return this.fleetName;
     }
+    /**
+     * The full, unique resource name of this fleet in the format of `projects/{project}/locations/{location}/fleets/{fleet}`. Each GCP project can have at most one fleet resource, named "default".
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Google-generated UUID for this resource. This is unique across all Fleet resources. If a Fleet resource is deleted and another resource with the same name is created, it gets a different uid.
+     * 
+     */
     public String getUid() {
         return this.uid;
     }
+    /**
+     * When the Fleet was last updated.
+     * 
+     */
     public String getUpdateTime() {
         return this.updateTime;
     }

@@ -12,8 +12,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ComponentSetupResponse {
+    /**
+     * The name of the 3rd party component.
+     * 
+     */
     private final String componentName;
+    /**
+     * The license key to activate the component.
+     * 
+     */
     private final @Nullable SecureStringResponse licenseKey;
+    /**
+     * The type of custom setup.
+     * Expected value is 'ComponentSetup'.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"componentName","licenseKey","type"})
@@ -26,12 +39,25 @@ public final class ComponentSetupResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * The name of the 3rd party component.
+     * 
+     */
     public String getComponentName() {
         return this.componentName;
     }
+    /**
+     * The license key to activate the component.
+     * 
+     */
     public Optional<SecureStringResponse> getLicenseKey() {
         return Optional.ofNullable(this.licenseKey);
     }
+    /**
+     * The type of custom setup.
+     * Expected value is 'ComponentSetup'.
+     * 
+     */
     public String getType() {
         return this.type;
     }

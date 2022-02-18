@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFlowLog {
+/**
+ * Specifies a VPC flow log, which enables you to capture IP traffic for a specific network interface, subnet, or VPC.
+ * 
+ */
     public static CompletableFuture<GetFlowLogResult> invokeAsync(GetFlowLogArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ec2:getFlowLog", TypeShape.of(GetFlowLogResult.class), args == null ? GetFlowLogArgs.Empty : args, Utilities.withVersion(options));
     }

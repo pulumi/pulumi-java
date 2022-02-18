@@ -9,6 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * An array of objects representing the details of a repository filter.
+ * 
+ */
 public final class ReplicationConfigurationRepositoryFilter extends io.pulumi.resources.InvokeArgs {
 
     public static final ReplicationConfigurationRepositoryFilter Empty = new ReplicationConfigurationRepositoryFilter();

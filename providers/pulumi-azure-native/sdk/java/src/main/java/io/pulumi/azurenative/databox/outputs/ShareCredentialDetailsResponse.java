@@ -10,10 +10,30 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ShareCredentialDetailsResponse {
+    /**
+     * Password for the share.
+     * 
+     */
     private final String password;
+    /**
+     * Name of the share.
+     * 
+     */
     private final String shareName;
+    /**
+     * Type of the share.
+     * 
+     */
     private final String shareType;
+    /**
+     * Access protocols supported on the device.
+     * 
+     */
     private final List<String> supportedAccessProtocols;
+    /**
+     * User name for the share.
+     * 
+     */
     private final String userName;
 
     @OutputCustomType.Constructor({"password","shareName","shareType","supportedAccessProtocols","userName"})
@@ -30,18 +50,38 @@ public final class ShareCredentialDetailsResponse {
         this.userName = Objects.requireNonNull(userName);
     }
 
+    /**
+     * Password for the share.
+     * 
+     */
     public String getPassword() {
         return this.password;
     }
+    /**
+     * Name of the share.
+     * 
+     */
     public String getShareName() {
         return this.shareName;
     }
+    /**
+     * Type of the share.
+     * 
+     */
     public String getShareType() {
         return this.shareType;
     }
+    /**
+     * Access protocols supported on the device.
+     * 
+     */
     public List<String> getSupportedAccessProtocols() {
         return this.supportedAccessProtocols;
     }
+    /**
+     * User name for the share.
+     * 
+     */
     public String getUserName() {
         return this.userName;
     }

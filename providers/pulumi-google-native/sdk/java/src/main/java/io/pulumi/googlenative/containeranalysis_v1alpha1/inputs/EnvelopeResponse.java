@@ -10,10 +10,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * MUST match https://github.com/secure-systems-lab/dsse/blob/master/envelope.proto. An authenticated message of arbitrary type.
+ * 
+ */
 public final class EnvelopeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EnvelopeResponse Empty = new EnvelopeResponse();
 
+    /**
+     * The bytes being signed
+     * 
+     */
     @InputImport(name="payload", required=true)
     private final String payload;
 
@@ -21,6 +29,10 @@ public final class EnvelopeResponse extends io.pulumi.resources.InvokeArgs {
         return this.payload;
     }
 
+    /**
+     * The type of payload being signed
+     * 
+     */
     @InputImport(name="payloadType", required=true)
     private final String payloadType;
 
@@ -28,6 +40,10 @@ public final class EnvelopeResponse extends io.pulumi.resources.InvokeArgs {
         return this.payloadType;
     }
 
+    /**
+     * The signatures over the payload
+     * 
+     */
     @InputImport(name="signatures", required=true)
     private final List<EnvelopeSignatureResponse> signatures;
 

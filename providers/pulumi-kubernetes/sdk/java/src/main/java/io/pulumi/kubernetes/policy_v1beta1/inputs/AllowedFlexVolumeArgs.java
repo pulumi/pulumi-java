@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * AllowedFlexVolume represents a single Flexvolume that is allowed to be used.
+ * 
+ */
 public final class AllowedFlexVolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AllowedFlexVolumeArgs Empty = new AllowedFlexVolumeArgs();
 
+    /**
+     * driver is the name of the Flexvolume driver.
+     * 
+     */
     @InputImport(name="driver", required=true)
     private final Input<String> driver;
 

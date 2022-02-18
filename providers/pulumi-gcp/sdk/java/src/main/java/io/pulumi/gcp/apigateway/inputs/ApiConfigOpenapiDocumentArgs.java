@@ -13,6 +13,11 @@ public final class ApiConfigOpenapiDocumentArgs extends io.pulumi.resources.Reso
 
     public static final ApiConfigOpenapiDocumentArgs Empty = new ApiConfigOpenapiDocumentArgs();
 
+    /**
+     * The OpenAPI Specification document file.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="document", required=true)
     private final Input<ApiConfigOpenapiDocumentDocumentArgs> document;
 

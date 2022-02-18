@@ -13,8 +13,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class KubernetesRoleResourcesResponse {
+    /**
+     * Kubernetes role compute resource
+     * 
+     */
     private final KubernetesRoleComputeResponse compute;
+    /**
+     * Kubernetes role network resource
+     * 
+     */
     private final KubernetesRoleNetworkResponse network;
+    /**
+     * Kubernetes role storage resource
+     * 
+     */
     private final @Nullable KubernetesRoleStorageResponse storage;
 
     @OutputCustomType.Constructor({"compute","network","storage"})
@@ -27,12 +39,24 @@ public final class KubernetesRoleResourcesResponse {
         this.storage = storage;
     }
 
+    /**
+     * Kubernetes role compute resource
+     * 
+     */
     public KubernetesRoleComputeResponse getCompute() {
         return this.compute;
     }
+    /**
+     * Kubernetes role network resource
+     * 
+     */
     public KubernetesRoleNetworkResponse getNetwork() {
         return this.network;
     }
+    /**
+     * Kubernetes role storage resource
+     * 
+     */
     public Optional<KubernetesRoleStorageResponse> getStorage() {
         return Optional.ofNullable(this.storage);
     }

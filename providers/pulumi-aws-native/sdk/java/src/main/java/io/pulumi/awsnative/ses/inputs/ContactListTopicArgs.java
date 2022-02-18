@@ -21,6 +21,10 @@ public final class ContactListTopicArgs extends io.pulumi.resources.ResourceArgs
         return this.defaultSubscriptionStatus;
     }
 
+    /**
+     * The description of the topic.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -28,6 +32,10 @@ public final class ContactListTopicArgs extends io.pulumi.resources.ResourceArgs
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The display name of the topic.
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -35,6 +43,10 @@ public final class ContactListTopicArgs extends io.pulumi.resources.ResourceArgs
         return this.displayName;
     }
 
+    /**
+     * The name of the topic.
+     * 
+     */
     @InputImport(name="topicName", required=true)
     private final Input<String> topicName;
 

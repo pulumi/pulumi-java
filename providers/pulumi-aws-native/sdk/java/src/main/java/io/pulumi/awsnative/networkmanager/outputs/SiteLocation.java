@@ -11,8 +11,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SiteLocation {
+    /**
+     * The physical address.
+     * 
+     */
     private final @Nullable String address;
+    /**
+     * The latitude.
+     * 
+     */
     private final @Nullable String latitude;
+    /**
+     * The longitude.
+     * 
+     */
     private final @Nullable String longitude;
 
     @OutputCustomType.Constructor({"address","latitude","longitude"})
@@ -25,12 +37,24 @@ public final class SiteLocation {
         this.longitude = longitude;
     }
 
+    /**
+     * The physical address.
+     * 
+     */
     public Optional<String> getAddress() {
         return Optional.ofNullable(this.address);
     }
+    /**
+     * The latitude.
+     * 
+     */
     public Optional<String> getLatitude() {
         return Optional.ofNullable(this.latitude);
     }
+    /**
+     * The longitude.
+     * 
+     */
     public Optional<String> getLongitude() {
         return Optional.ofNullable(this.longitude);
     }

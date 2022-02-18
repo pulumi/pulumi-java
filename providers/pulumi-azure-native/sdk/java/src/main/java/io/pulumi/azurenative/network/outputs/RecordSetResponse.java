@@ -13,11 +13,35 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RecordSetResponse {
+    /**
+     * Fqdn that resolves to private endpoint ip address.
+     * 
+     */
     private final @Nullable String fqdn;
+    /**
+     * The private ip address of the private endpoint.
+     * 
+     */
     private final @Nullable List<String> ipAddresses;
+    /**
+     * The provisioning state of the recordset.
+     * 
+     */
     private final String provisioningState;
+    /**
+     * Recordset name.
+     * 
+     */
     private final @Nullable String recordSetName;
+    /**
+     * Resource record type.
+     * 
+     */
     private final @Nullable String recordType;
+    /**
+     * Recordset time to live.
+     * 
+     */
     private final @Nullable Integer ttl;
 
     @OutputCustomType.Constructor({"fqdn","ipAddresses","provisioningState","recordSetName","recordType","ttl"})
@@ -36,21 +60,45 @@ public final class RecordSetResponse {
         this.ttl = ttl;
     }
 
+    /**
+     * Fqdn that resolves to private endpoint ip address.
+     * 
+     */
     public Optional<String> getFqdn() {
         return Optional.ofNullable(this.fqdn);
     }
+    /**
+     * The private ip address of the private endpoint.
+     * 
+     */
     public List<String> getIpAddresses() {
         return this.ipAddresses == null ? List.of() : this.ipAddresses;
     }
+    /**
+     * The provisioning state of the recordset.
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Recordset name.
+     * 
+     */
     public Optional<String> getRecordSetName() {
         return Optional.ofNullable(this.recordSetName);
     }
+    /**
+     * Resource record type.
+     * 
+     */
     public Optional<String> getRecordType() {
         return Optional.ofNullable(this.recordType);
     }
+    /**
+     * Recordset time to live.
+     * 
+     */
     public Optional<Integer> getTtl() {
         return Optional.ofNullable(this.ttl);
     }

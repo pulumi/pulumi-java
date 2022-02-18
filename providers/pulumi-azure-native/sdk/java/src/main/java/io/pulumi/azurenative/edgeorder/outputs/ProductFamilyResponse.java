@@ -19,14 +19,50 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ProductFamilyResponse {
+    /**
+     * Availability information of the product system.
+     * 
+     */
     private final AvailabilityInformationResponse availabilityInformation;
+    /**
+     * Cost information for the product system.
+     * 
+     */
     private final CostInformationResponse costInformation;
+    /**
+     * Description related to the product system.
+     * 
+     */
     private final DescriptionResponse description;
+    /**
+     * Display Name for the product system.
+     * 
+     */
     private final String displayName;
+    /**
+     * list of filters supported for a product
+     * 
+     */
     private final List<FilterablePropertyResponse> filterableProperties;
+    /**
+     * Hierarchy information of a product.
+     * 
+     */
     private final HierarchyInformationResponse hierarchyInformation;
+    /**
+     * Image information for the product system.
+     * 
+     */
     private final List<ImageInformationResponse> imageInformation;
+    /**
+     * List of product lines supported in the product family
+     * 
+     */
     private final List<ProductLineResponse> productLines;
+    /**
+     * Contains details related to resource provider
+     * 
+     */
     private final @Nullable List<ResourceProviderDetailsResponse> resourceProviderDetails;
 
     @OutputCustomType.Constructor({"availabilityInformation","costInformation","description","displayName","filterableProperties","hierarchyInformation","imageInformation","productLines","resourceProviderDetails"})
@@ -51,30 +87,66 @@ public final class ProductFamilyResponse {
         this.resourceProviderDetails = resourceProviderDetails;
     }
 
+    /**
+     * Availability information of the product system.
+     * 
+     */
     public AvailabilityInformationResponse getAvailabilityInformation() {
         return this.availabilityInformation;
     }
+    /**
+     * Cost information for the product system.
+     * 
+     */
     public CostInformationResponse getCostInformation() {
         return this.costInformation;
     }
+    /**
+     * Description related to the product system.
+     * 
+     */
     public DescriptionResponse getDescription() {
         return this.description;
     }
+    /**
+     * Display Name for the product system.
+     * 
+     */
     public String getDisplayName() {
         return this.displayName;
     }
+    /**
+     * list of filters supported for a product
+     * 
+     */
     public List<FilterablePropertyResponse> getFilterableProperties() {
         return this.filterableProperties;
     }
+    /**
+     * Hierarchy information of a product.
+     * 
+     */
     public HierarchyInformationResponse getHierarchyInformation() {
         return this.hierarchyInformation;
     }
+    /**
+     * Image information for the product system.
+     * 
+     */
     public List<ImageInformationResponse> getImageInformation() {
         return this.imageInformation;
     }
+    /**
+     * List of product lines supported in the product family
+     * 
+     */
     public List<ProductLineResponse> getProductLines() {
         return this.productLines;
     }
+    /**
+     * Contains details related to resource provider
+     * 
+     */
     public List<ResourceProviderDetailsResponse> getResourceProviderDetails() {
         return this.resourceProviderDetails == null ? List.of() : this.resourceProviderDetails;
     }

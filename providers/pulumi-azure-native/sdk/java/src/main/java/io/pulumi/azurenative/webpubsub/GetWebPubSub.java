@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWebPubSub {
+/**
+ * A class represent a resource.
+ * API Version: 2021-04-01-preview.
+ * 
+ *
+ * A class represent a resource.
+ * 
+ */
     public static CompletableFuture<GetWebPubSubResult> invokeAsync(GetWebPubSubArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:webpubsub:getWebPubSub", TypeShape.of(GetWebPubSubResult.class), args == null ? GetWebPubSubArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Properties of a registration assignment.
+ * 
+ */
 public final class RegistrationAssignmentPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RegistrationAssignmentPropertiesArgs Empty = new RegistrationAssignmentPropertiesArgs();
 
+    /**
+     * Fully qualified path of the registration definition.
+     * 
+     */
     @InputImport(name="registrationDefinitionId", required=true)
     private final Input<String> registrationDefinitionId;
 

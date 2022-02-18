@@ -13,6 +13,10 @@ public final class GetGlobalUserOperationBatchStatusArgs extends io.pulumi.resou
 
     public static final GetGlobalUserOperationBatchStatusArgs Empty = new GetGlobalUserOperationBatchStatusArgs();
 
+    /**
+     * The operation url of long running operation
+     * 
+     */
     @InputImport(name="urls", required=true)
     private final List<String> urls;
 
@@ -20,6 +24,10 @@ public final class GetGlobalUserOperationBatchStatusArgs extends io.pulumi.resou
         return this.urls;
     }
 
+    /**
+     * The name of the user.
+     * 
+     */
     @InputImport(name="userName", required=true)
     private final String userName;
 

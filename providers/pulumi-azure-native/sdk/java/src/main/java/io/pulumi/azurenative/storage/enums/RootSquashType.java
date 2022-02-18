@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The property is for NFS share only. The default is NoRootSquash.
+     * 
+     */
     @EnumType
     public enum RootSquashType {
         NoRootSquash("NoRootSquash"),

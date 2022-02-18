@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDistribution {
+/**
+ * Resource Type definition for AWS::CloudFront::Distribution
+ * 
+ */
     public static CompletableFuture<GetDistributionResult> invokeAsync(GetDistributionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudfront:getDistribution", TypeShape.of(GetDistributionResult.class), args == null ? GetDistributionArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The encryption settings for a configuration store.
+ * 
+ */
 public final class PropertiesResponseEncryption extends io.pulumi.resources.InvokeArgs {
 
     public static final PropertiesResponseEncryption Empty = new PropertiesResponseEncryption();
 
+    /**
+     * Key vault properties.
+     * 
+     */
     @InputImport(name="keyVault")
     private final @Nullable KeyVaultPropertiesResponse keyVault;
 
@@ -22,6 +30,10 @@ public final class PropertiesResponseEncryption extends io.pulumi.resources.Invo
         return this.keyVault == null ? Optional.empty() : Optional.ofNullable(this.keyVault);
     }
 
+    /**
+     * The state of onboarding, which only appears in the response.
+     * 
+     */
     @InputImport(name="state")
     private final @Nullable String state;
 

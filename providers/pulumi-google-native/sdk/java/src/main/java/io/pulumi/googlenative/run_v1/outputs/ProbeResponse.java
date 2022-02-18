@@ -12,13 +12,45 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ProbeResponse {
+    /**
+     * (Optional) One and only one of the following should be specified. Exec specifies the action to take. A field inlined from the Handler message.
+     * 
+     */
     private final ExecActionResponse exec;
+    /**
+     * (Optional) Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1.
+     * 
+     */
     private final Integer failureThreshold;
+    /**
+     * (Optional) HTTPGet specifies the http request to perform. A field inlined from the Handler message.
+     * 
+     */
     private final HTTPGetActionResponse httpGet;
+    /**
+     * (Optional) Number of seconds after the container has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
+     * 
+     */
     private final Integer initialDelaySeconds;
+    /**
+     * (Optional) How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1.
+     * 
+     */
     private final Integer periodSeconds;
+    /**
+     * (Optional) Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness. Minimum value is 1.
+     * 
+     */
     private final Integer successThreshold;
+    /**
+     * (Optional) TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported A field inlined from the Handler message.
+     * 
+     */
     private final TCPSocketActionResponse tcpSocket;
+    /**
+     * (Optional) Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
+     * 
+     */
     private final Integer timeoutSeconds;
 
     @OutputCustomType.Constructor({"exec","failureThreshold","httpGet","initialDelaySeconds","periodSeconds","successThreshold","tcpSocket","timeoutSeconds"})
@@ -41,27 +73,59 @@ public final class ProbeResponse {
         this.timeoutSeconds = Objects.requireNonNull(timeoutSeconds);
     }
 
+    /**
+     * (Optional) One and only one of the following should be specified. Exec specifies the action to take. A field inlined from the Handler message.
+     * 
+     */
     public ExecActionResponse getExec() {
         return this.exec;
     }
+    /**
+     * (Optional) Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1.
+     * 
+     */
     public Integer getFailureThreshold() {
         return this.failureThreshold;
     }
+    /**
+     * (Optional) HTTPGet specifies the http request to perform. A field inlined from the Handler message.
+     * 
+     */
     public HTTPGetActionResponse getHttpGet() {
         return this.httpGet;
     }
+    /**
+     * (Optional) Number of seconds after the container has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
+     * 
+     */
     public Integer getInitialDelaySeconds() {
         return this.initialDelaySeconds;
     }
+    /**
+     * (Optional) How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1.
+     * 
+     */
     public Integer getPeriodSeconds() {
         return this.periodSeconds;
     }
+    /**
+     * (Optional) Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness. Minimum value is 1.
+     * 
+     */
     public Integer getSuccessThreshold() {
         return this.successThreshold;
     }
+    /**
+     * (Optional) TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported A field inlined from the Handler message.
+     * 
+     */
     public TCPSocketActionResponse getTcpSocket() {
         return this.tcpSocket;
     }
+    /**
+     * (Optional) Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
+     * 
+     */
     public Integer getTimeoutSeconds() {
         return this.timeoutSeconds;
     }

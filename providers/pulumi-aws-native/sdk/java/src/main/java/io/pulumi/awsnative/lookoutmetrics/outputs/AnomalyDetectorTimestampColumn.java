@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AnomalyDetectorTimestampColumn {
+    /**
+     * A timestamp format for the timestamps in the dataset
+     * 
+     */
     private final @Nullable String columnFormat;
     private final @Nullable String columnName;
 
@@ -22,6 +26,10 @@ public final class AnomalyDetectorTimestampColumn {
         this.columnName = columnName;
     }
 
+    /**
+     * A timestamp format for the timestamps in the dataset
+     * 
+     */
     public Optional<String> getColumnFormat() {
         return Optional.ofNullable(this.columnFormat);
     }

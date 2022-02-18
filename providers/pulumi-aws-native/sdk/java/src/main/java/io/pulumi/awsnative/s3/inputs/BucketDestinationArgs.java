@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specifies information about where to publish analysis or configuration results for an Amazon S3 bucket and S3 Replication Time Control (S3 RTC).
+ * 
+ */
 public final class BucketDestinationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BucketDestinationArgs Empty = new BucketDestinationArgs();
 
+    /**
+     * The account ID that owns the destination S3 bucket.
+     * 
+     */
     @InputImport(name="bucketAccountId")
     private final @Nullable Input<String> bucketAccountId;
 
@@ -22,6 +30,10 @@ public final class BucketDestinationArgs extends io.pulumi.resources.ResourceArg
         return this.bucketAccountId == null ? Input.empty() : this.bucketAccountId;
     }
 
+    /**
+     * The Amazon Resource Name (ARN) of the bucket to which data is exported.
+     * 
+     */
     @InputImport(name="bucketArn", required=true)
     private final Input<String> bucketArn;
 
@@ -29,6 +41,10 @@ public final class BucketDestinationArgs extends io.pulumi.resources.ResourceArg
         return this.bucketArn;
     }
 
+    /**
+     * Specifies the file format used when exporting data to Amazon S3.
+     * 
+     */
     @InputImport(name="format", required=true)
     private final Input<BucketDestinationFormat> format;
 
@@ -36,6 +52,10 @@ public final class BucketDestinationArgs extends io.pulumi.resources.ResourceArg
         return this.format;
     }
 
+    /**
+     * The prefix to use when exporting data. The prefix is prepended to all results.
+     * 
+     */
     @InputImport(name="prefix")
     private final @Nullable Input<String> prefix;
 

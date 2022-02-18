@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInput {
+/**
+ * An input object, containing all information associated with the named input. All inputs are contained under a streaming job.
+ * API Version: 2016-03-01.
+ * 
+ *
+ * An input object, containing all information associated with the named input. All inputs are contained under a streaming job.
+ * 
+ */
     public static CompletableFuture<GetInputResult> invokeAsync(GetInputArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:streamanalytics:getInput", TypeShape.of(GetInputResult.class), args == null ? GetInputArgs.Empty : args, Utilities.withVersion(options));
     }

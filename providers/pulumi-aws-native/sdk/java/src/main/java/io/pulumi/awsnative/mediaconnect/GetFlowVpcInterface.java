@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFlowVpcInterface {
+/**
+ * Resource schema for AWS::MediaConnect::FlowVpcInterface
+ * 
+ */
     public static CompletableFuture<GetFlowVpcInterfaceResult> invokeAsync(GetFlowVpcInterfaceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:mediaconnect:getFlowVpcInterface", TypeShape.of(GetFlowVpcInterfaceResult.class), args == null ? GetFlowVpcInterfaceArgs.Empty : args, Utilities.withVersion(options));
     }

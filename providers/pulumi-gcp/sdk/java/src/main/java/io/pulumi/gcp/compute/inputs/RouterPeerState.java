@@ -19,6 +19,13 @@ public final class RouterPeerState extends io.pulumi.resources.ResourceArgs {
 
     public static final RouterPeerState Empty = new RouterPeerState();
 
+    /**
+     * User-specified flag to indicate which mode to use for advertisement.
+     * Valid values of this enum field are: `DEFAULT`, `CUSTOM`
+     * Default value is `DEFAULT`.
+     * Possible values are `DEFAULT` and `CUSTOM`.
+     * 
+     */
     @InputImport(name="advertiseMode")
     private final @Nullable Input<String> advertiseMode;
 
@@ -26,6 +33,14 @@ public final class RouterPeerState extends io.pulumi.resources.ResourceArgs {
         return this.advertiseMode == null ? Input.empty() : this.advertiseMode;
     }
 
+    /**
+     * User-specified list of prefix groups to advertise in custom
+     * mode, which can take one of the following options:
+     * * `ALL_SUBNETS`: Advertises all available subnets, including peer VPC subnets.
+     * * `ALL_VPC_SUBNETS`: Advertises the router's own VPC subnets.
+     * * `ALL_PEER_VPC_SUBNETS`: Advertises peer subnets of the router's VPC network.
+     * 
+     */
     @InputImport(name="advertisedGroups")
     private final @Nullable Input<List<String>> advertisedGroups;
 
@@ -33,6 +48,15 @@ public final class RouterPeerState extends io.pulumi.resources.ResourceArgs {
         return this.advertisedGroups == null ? Input.empty() : this.advertisedGroups;
     }
 
+    /**
+     * User-specified list of individual IP ranges to advertise in
+     * custom mode. This field can only be populated if advertiseMode
+     * is `CUSTOM` and is advertised to all peers of the router. These IP
+     * ranges will be advertised in addition to any specified groups.
+     * Leave this field blank to advertise no custom IP ranges.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="advertisedIpRanges")
     private final @Nullable Input<List<RouterPeerAdvertisedIpRangeGetArgs>> advertisedIpRanges;
 
@@ -40,6 +64,12 @@ public final class RouterPeerState extends io.pulumi.resources.ResourceArgs {
         return this.advertisedIpRanges == null ? Input.empty() : this.advertisedIpRanges;
     }
 
+    /**
+     * The priority of routes advertised to this BGP peer.
+     * Where there is more than one matching route of maximum
+     * length, the routes with the lowest priority value win.
+     * 
+     */
     @InputImport(name="advertisedRoutePriority")
     private final @Nullable Input<Integer> advertisedRoutePriority;
 
@@ -47,6 +77,11 @@ public final class RouterPeerState extends io.pulumi.resources.ResourceArgs {
         return this.advertisedRoutePriority == null ? Input.empty() : this.advertisedRoutePriority;
     }
 
+    /**
+     * BFD configuration for the BGP peering.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="bfd")
     private final @Nullable Input<RouterPeerBfdGetArgs> bfd;
 
@@ -54,6 +89,13 @@ public final class RouterPeerState extends io.pulumi.resources.ResourceArgs {
         return this.bfd == null ? Input.empty() : this.bfd;
     }
 
+    /**
+     * The status of the BGP peer connection. If set to false, any active session
+     * with the peer is terminated and all associated routing information is removed.
+     * If set to true, the peer connection can be established with routing information.
+     * The default is true.
+     * 
+     */
     @InputImport(name="enable")
     private final @Nullable Input<Boolean> enable;
 
@@ -61,6 +103,10 @@ public final class RouterPeerState extends io.pulumi.resources.ResourceArgs {
         return this.enable == null ? Input.empty() : this.enable;
     }
 
+    /**
+     * Name of the interface the BGP peer is associated with.
+     * 
+     */
     @InputImport(name="interface")
     private final @Nullable Input<String> $interface;
 
@@ -68,6 +114,11 @@ public final class RouterPeerState extends io.pulumi.resources.ResourceArgs {
         return this.$interface == null ? Input.empty() : this.$interface;
     }
 
+    /**
+     * IP address of the interface inside Google Cloud Platform.
+     * Only IPv4 is supported.
+     * 
+     */
     @InputImport(name="ipAddress")
     private final @Nullable Input<String> ipAddress;
 
@@ -75,6 +126,13 @@ public final class RouterPeerState extends io.pulumi.resources.ResourceArgs {
         return this.ipAddress == null ? Input.empty() : this.ipAddress;
     }
 
+    /**
+     * The resource that configures and manages this BGP peer. * 'MANAGED_BY_USER' is the default value and can be managed by
+     * you or other users * 'MANAGED_BY_ATTACHMENT' is a BGP peer that is configured and managed by Cloud Interconnect,
+     * specifically by an InterconnectAttachment of type PARTNER. Google automatically creates, updates, and deletes this type
+     * of BGP peer when the PARTNER InterconnectAttachment is created, updated, or deleted.
+     * 
+     */
     @InputImport(name="managementType")
     private final @Nullable Input<String> managementType;
 
@@ -82,6 +140,15 @@ public final class RouterPeerState extends io.pulumi.resources.ResourceArgs {
         return this.managementType == null ? Input.empty() : this.managementType;
     }
 
+    /**
+     * Name of this BGP peer. The name must be 1-63 characters long,
+     * and comply with RFC1035. Specifically, the name must be 1-63 characters
+     * long and match the regular expression `a-z?` which
+     * means the first character must be a lowercase letter, and all
+     * following characters must be a dash, lowercase letter, or digit,
+     * except the last character, which cannot be a dash.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -89,6 +156,11 @@ public final class RouterPeerState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Peer BGP Autonomous System Number (ASN).
+     * Each BGP interface may use a different value.
+     * 
+     */
     @InputImport(name="peerAsn")
     private final @Nullable Input<Integer> peerAsn;
 
@@ -96,6 +168,11 @@ public final class RouterPeerState extends io.pulumi.resources.ResourceArgs {
         return this.peerAsn == null ? Input.empty() : this.peerAsn;
     }
 
+    /**
+     * IP address of the BGP interface outside Google Cloud Platform.
+     * Only IPv4 is supported.
+     * 
+     */
     @InputImport(name="peerIpAddress")
     private final @Nullable Input<String> peerIpAddress;
 
@@ -103,6 +180,11 @@ public final class RouterPeerState extends io.pulumi.resources.ResourceArgs {
         return this.peerIpAddress == null ? Input.empty() : this.peerIpAddress;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -110,6 +192,11 @@ public final class RouterPeerState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Region where the router and BgpPeer reside.
+     * If it is not provided, the provider region is used.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 
@@ -117,6 +204,10 @@ public final class RouterPeerState extends io.pulumi.resources.ResourceArgs {
         return this.region == null ? Input.empty() : this.region;
     }
 
+    /**
+     * The name of the Cloud Router in which this BgpPeer will be configured.
+     * 
+     */
     @InputImport(name="router")
     private final @Nullable Input<String> router;
 

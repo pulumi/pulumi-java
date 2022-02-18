@@ -15,6 +15,10 @@ public final class TriggerDestinationArgs extends io.pulumi.resources.ResourceAr
 
     public static final TriggerDestinationArgs Empty = new TriggerDestinationArgs();
 
+    /**
+     * The Cloud Function resource name. Only Cloud Functions V2 is supported. Format: projects/{project}/locations/{location}/functions/{function}
+     * 
+     */
     @InputImport(name="cloudFunction")
     private final @Nullable Input<String> cloudFunction;
 
@@ -22,6 +26,10 @@ public final class TriggerDestinationArgs extends io.pulumi.resources.ResourceAr
         return this.cloudFunction == null ? Input.empty() : this.cloudFunction;
     }
 
+    /**
+     * Cloud Run fully-managed service that receives the events. The service should be running in the same project of the trigger.
+     * 
+     */
     @InputImport(name="cloudRunService")
     private final @Nullable Input<TriggerDestinationCloudRunServiceArgs> cloudRunService;
 

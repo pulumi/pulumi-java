@@ -20,117 +20,282 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * The Test Base Package resource.
+ * API Version: 2020-12-16-preview.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:testbase:Package contoso-package2 /subscriptions/476f61a4-952c-422a-b4db-568a828f35df/resourceGroups/contoso-rg1/providers/Microsoft.TestBase/testBaseAccounts/contoso-testBaseAccount1/packages/contoso-package2 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:testbase:Package")
 public class Package extends io.pulumi.resources.CustomResource {
+    /**
+     * Application name
+     * 
+     */
     @OutputExport(name="applicationName", type=String.class, parameters={})
     private Output<String> applicationName;
 
+    /**
+     * @return Application name
+     * 
+     */
     public Output<String> getApplicationName() {
         return this.applicationName;
     }
+    /**
+     * The file path of the package.
+     * 
+     */
     @OutputExport(name="blobPath", type=String.class, parameters={})
     private Output<String> blobPath;
 
+    /**
+     * @return The file path of the package.
+     * 
+     */
     public Output<String> getBlobPath() {
         return this.blobPath;
     }
+    /**
+     * Resource Etag.
+     * 
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return Resource Etag.
+     * 
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * The flighting ring for feature update.
+     * 
+     */
     @OutputExport(name="flightingRing", type=String.class, parameters={})
     private Output<String> flightingRing;
 
+    /**
+     * @return The flighting ring for feature update.
+     * 
+     */
     public Output<String> getFlightingRing() {
         return this.flightingRing;
     }
+    /**
+     * Flag showing that whether the package is enabled. It doesn't schedule test for package which is not enabled.
+     * 
+     */
     @OutputExport(name="isEnabled", type=Boolean.class, parameters={})
     private Output<Boolean> isEnabled;
 
+    /**
+     * @return Flag showing that whether the package is enabled. It doesn't schedule test for package which is not enabled.
+     * 
+     */
     public Output<Boolean> getIsEnabled() {
         return this.isEnabled;
     }
+    /**
+     * The UTC timestamp when the package was last modified.
+     * 
+     */
     @OutputExport(name="lastModifiedTime", type=String.class, parameters={})
     private Output<String> lastModifiedTime;
 
+    /**
+     * @return The UTC timestamp when the package was last modified.
+     * 
+     */
     public Output<String> getLastModifiedTime() {
         return this.lastModifiedTime;
     }
+    /**
+     * The geo-location where the resource lives
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * Resource name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The status of the package.
+     * 
+     */
     @OutputExport(name="packageStatus", type=String.class, parameters={})
     private Output<String> packageStatus;
 
+    /**
+     * @return The status of the package.
+     * 
+     */
     public Output<String> getPackageStatus() {
         return this.packageStatus;
     }
+    /**
+     * The provisioning state of the resource.
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning state of the resource.
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The system metadata relating to this resource
+     * 
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return The system metadata relating to this resource
+     * 
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * The tags of the resource.
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return The tags of the resource.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Specifies the target OSs of specific OS Update types.
+     * 
+     */
     @OutputExport(name="targetOSList", type=List.class, parameters={TargetOSInfoResponse.class})
     private Output<List<TargetOSInfoResponse>> targetOSList;
 
+    /**
+     * @return Specifies the target OSs of specific OS Update types.
+     * 
+     */
     public Output<List<TargetOSInfoResponse>> getTargetOSList() {
         return this.targetOSList;
     }
+    /**
+     * OOB, functional or both. Mapped to the data in 'tests' property.
+     * 
+     */
     @OutputExport(name="testTypes", type=List.class, parameters={String.class})
     private Output<List<String>> testTypes;
 
+    /**
+     * @return OOB, functional or both. Mapped to the data in 'tests' property.
+     * 
+     */
     public Output<List<String>> getTestTypes() {
         return this.testTypes;
     }
+    /**
+     * The detailed test information.
+     * 
+     */
     @OutputExport(name="tests", type=List.class, parameters={TestResponse.class})
     private Output<List<TestResponse>> tests;
 
+    /**
+     * @return The detailed test information.
+     * 
+     */
     public Output<List<TestResponse>> getTests() {
         return this.tests;
     }
+    /**
+     * Resource type.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * The validation results. There's validation on package when it's created or updated.
+     * 
+     */
     @OutputExport(name="validationResults", type=List.class, parameters={PackageValidationResultResponse.class})
     private Output<List<PackageValidationResultResponse>> validationResults;
 
+    /**
+     * @return The validation results. There's validation on package when it's created or updated.
+     * 
+     */
     public Output<List<PackageValidationResultResponse>> getValidationResults() {
         return this.validationResults;
     }
+    /**
+     * Application version
+     * 
+     */
     @OutputExport(name="version", type=String.class, parameters={})
     private Output<String> version;
 
+    /**
+     * @return Application version
+     * 
+     */
     public Output<String> getVersion() {
         return this.version;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Package(String name, PackageArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:testbase:Package", name, args == null ? PackageArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -149,6 +314,14 @@ public class Package extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Package get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Package(name, id, options);
     }

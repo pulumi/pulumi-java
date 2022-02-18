@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIntent {
+/**
+ * Retrieves the specified intent.
+ * 
+ */
     public static CompletableFuture<GetIntentResult> invokeAsync(GetIntentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v2beta1:getIntent", TypeShape.of(GetIntentResult.class), args == null ? GetIntentArgs.Empty : args, Utilities.withVersion(options));
     }

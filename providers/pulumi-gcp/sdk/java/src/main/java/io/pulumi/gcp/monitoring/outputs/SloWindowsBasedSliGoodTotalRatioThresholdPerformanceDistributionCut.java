@@ -10,7 +10,24 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCut {
+    /**
+     * A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+     * aggregating values to quantify the good service provided.
+     * Must have ValueType = DISTRIBUTION and
+     * MetricKind = DELTA or MetricKind = CUMULATIVE.
+     * 
+     */
     private final String distributionFilter;
+    /**
+     * Range of numerical values. The computed good_service
+     * will be the count of values x in the Distribution such
+     * that range.min <= x <= range.max. inclusive of min and
+     * max. Open ranges can be defined by setting
+     * just one of min or max. Summed value `X` should satisfy
+     * `range.min <= X <= range.max` for a good window.
+     * Structure is documented below.
+     * 
+     */
     private final SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange range;
 
     @OutputCustomType.Constructor({"distributionFilter","range"})
@@ -21,9 +38,26 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistribut
         this.range = Objects.requireNonNull(range);
     }
 
+    /**
+     * A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+     * aggregating values to quantify the good service provided.
+     * Must have ValueType = DISTRIBUTION and
+     * MetricKind = DELTA or MetricKind = CUMULATIVE.
+     * 
+     */
     public String getDistributionFilter() {
         return this.distributionFilter;
     }
+    /**
+     * Range of numerical values. The computed good_service
+     * will be the count of values x in the Distribution such
+     * that range.min <= x <= range.max. inclusive of min and
+     * max. Open ranges can be defined by setting
+     * just one of min or max. Summed value `X` should satisfy
+     * `range.min <= X <= range.max` for a good window.
+     * Structure is documented below.
+     * 
+     */
     public SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange getRange() {
         return this.range;
     }

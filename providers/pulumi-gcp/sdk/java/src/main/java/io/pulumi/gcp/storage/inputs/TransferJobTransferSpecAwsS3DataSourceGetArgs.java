@@ -15,6 +15,10 @@ public final class TransferJobTransferSpecAwsS3DataSourceGetArgs extends io.pulu
 
     public static final TransferJobTransferSpecAwsS3DataSourceGetArgs Empty = new TransferJobTransferSpecAwsS3DataSourceGetArgs();
 
+    /**
+     * AWS credentials block.
+     * 
+     */
     @InputImport(name="awsAccessKey")
     private final @Nullable Input<TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyGetArgs> awsAccessKey;
 
@@ -22,6 +26,10 @@ public final class TransferJobTransferSpecAwsS3DataSourceGetArgs extends io.pulu
         return this.awsAccessKey == null ? Input.empty() : this.awsAccessKey;
     }
 
+    /**
+     * S3 Bucket name.
+     * 
+     */
     @InputImport(name="bucketName", required=true)
     private final Input<String> bucketName;
 
@@ -29,6 +37,10 @@ public final class TransferJobTransferSpecAwsS3DataSourceGetArgs extends io.pulu
         return this.bucketName;
     }
 
+    /**
+     * The Amazon Resource Name (ARN) of the role to support temporary credentials via 'AssumeRoleWithWebIdentity'. For more information about ARNs, see [IAM ARNs](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-arns). When a role ARN is provided, Transfer Service fetches temporary credentials for the session using a 'AssumeRoleWithWebIdentity' call for the provided role using the [GoogleServiceAccount][] for this project.
+     * 
+     */
     @InputImport(name="roleArn")
     private final @Nullable Input<String> roleArn;
 

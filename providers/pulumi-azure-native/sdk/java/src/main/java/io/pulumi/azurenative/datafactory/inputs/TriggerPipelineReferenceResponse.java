@@ -13,10 +13,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Pipeline that needs to be triggered with the given parameters.
+ * 
+ */
 public final class TriggerPipelineReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TriggerPipelineReferenceResponse Empty = new TriggerPipelineReferenceResponse();
 
+    /**
+     * Pipeline parameters.
+     * 
+     */
     @InputImport(name="parameters")
     private final @Nullable Map<String,Object> parameters;
 
@@ -24,6 +32,10 @@ public final class TriggerPipelineReferenceResponse extends io.pulumi.resources.
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
+    /**
+     * Pipeline reference.
+     * 
+     */
     @InputImport(name="pipelineReference")
     private final @Nullable PipelineReferenceResponse pipelineReference;
 

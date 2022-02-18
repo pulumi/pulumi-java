@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The storage profile.
+ * 
+ */
 public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StorageProfileResponse Empty = new StorageProfileResponse();
 
+    /**
+     * The list of storage accounts in the cluster.
+     * 
+     */
     @InputImport(name="storageaccounts")
     private final @Nullable List<StorageAccountResponse> storageaccounts;
 

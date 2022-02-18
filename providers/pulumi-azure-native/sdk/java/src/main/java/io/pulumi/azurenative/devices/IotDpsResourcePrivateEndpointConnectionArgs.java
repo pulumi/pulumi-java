@@ -15,6 +15,10 @@ public final class IotDpsResourcePrivateEndpointConnectionArgs extends io.pulumi
 
     public static final IotDpsResourcePrivateEndpointConnectionArgs Empty = new IotDpsResourcePrivateEndpointConnectionArgs();
 
+    /**
+     * The name of the private endpoint connection
+     * 
+     */
     @InputImport(name="privateEndpointConnectionName")
     private final @Nullable Input<String> privateEndpointConnectionName;
 
@@ -22,6 +26,10 @@ public final class IotDpsResourcePrivateEndpointConnectionArgs extends io.pulumi
         return this.privateEndpointConnectionName == null ? Input.empty() : this.privateEndpointConnectionName;
     }
 
+    /**
+     * The properties of a private endpoint connection
+     * 
+     */
     @InputImport(name="properties", required=true)
     private final Input<PrivateEndpointConnectionPropertiesArgs> properties;
 
@@ -29,6 +37,10 @@ public final class IotDpsResourcePrivateEndpointConnectionArgs extends io.pulumi
         return this.properties;
     }
 
+    /**
+     * The name of the resource group that contains the provisioning service.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -36,6 +48,10 @@ public final class IotDpsResourcePrivateEndpointConnectionArgs extends io.pulumi
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the provisioning service.
+     * 
+     */
     @InputImport(name="resourceName", required=true)
     private final Input<String> resourceName;
 

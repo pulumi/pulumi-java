@@ -14,11 +14,33 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class JobSparksqlConfig {
+    /**
+     * HCFS URIs of jar files to be added to the Spark CLASSPATH.
+     * 
+     */
     private final @Nullable List<String> jarFileUris;
     private final @Nullable JobSparksqlConfigLoggingConfig loggingConfig;
+    /**
+     * A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
+     * 
+     */
     private final @Nullable Map<String,String> properties;
+    /**
+     * The HCFS URI of the script that contains SQL queries.
+     * Conflicts with `query_list`
+     * 
+     */
     private final @Nullable String queryFileUri;
+    /**
+     * The list of SQL queries or statements to execute as part of the job.
+     * Conflicts with `query_file_uri`
+     * 
+     */
     private final @Nullable List<String> queryLists;
+    /**
+     * Mapping of query variable names to values (equivalent to the Spark SQL command: `SET name="value";`).
+     * 
+     */
     private final @Nullable Map<String,String> scriptVariables;
 
     @OutputCustomType.Constructor({"jarFileUris","loggingConfig","properties","queryFileUri","queryLists","scriptVariables"})
@@ -37,21 +59,43 @@ public final class JobSparksqlConfig {
         this.scriptVariables = scriptVariables;
     }
 
+    /**
+     * HCFS URIs of jar files to be added to the Spark CLASSPATH.
+     * 
+     */
     public List<String> getJarFileUris() {
         return this.jarFileUris == null ? List.of() : this.jarFileUris;
     }
     public Optional<JobSparksqlConfigLoggingConfig> getLoggingConfig() {
         return Optional.ofNullable(this.loggingConfig);
     }
+    /**
+     * A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
+     * 
+     */
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
     }
+    /**
+     * The HCFS URI of the script that contains SQL queries.
+     * Conflicts with `query_list`
+     * 
+     */
     public Optional<String> getQueryFileUri() {
         return Optional.ofNullable(this.queryFileUri);
     }
+    /**
+     * The list of SQL queries or statements to execute as part of the job.
+     * Conflicts with `query_file_uri`
+     * 
+     */
     public List<String> getQueryLists() {
         return this.queryLists == null ? List.of() : this.queryLists;
     }
+    /**
+     * Mapping of query variable names to values (equivalent to the Spark SQL command: `SET name="value";`).
+     * 
+     */
     public Map<String,String> getScriptVariables() {
         return this.scriptVariables == null ? Map.of() : this.scriptVariables;
     }

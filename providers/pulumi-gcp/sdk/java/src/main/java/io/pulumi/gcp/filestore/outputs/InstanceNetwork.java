@@ -12,10 +12,39 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class InstanceNetwork {
+    /**
+     * The network connect mode of the Filestore instance.
+     * If not provided, the connect mode defaults to
+     * DIRECT_PEERING.
+     * Default value is `DIRECT_PEERING`.
+     * Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
+     * 
+     */
     private final @Nullable String connectMode;
+    /**
+     * - 
+     * A list of IPv4 or IPv6 addresses.
+     * 
+     */
     private final @Nullable List<String> ipAddresses;
+    /**
+     * IP versions for which the instance has
+     * IP addresses assigned.
+     * Each value may be one of `ADDRESS_MODE_UNSPECIFIED`, `MODE_IPV4`, and `MODE_IPV6`.
+     * 
+     */
     private final List<String> modes;
+    /**
+     * The name of the GCE VPC network to which the
+     * instance is connected.
+     * 
+     */
     private final String network;
+    /**
+     * A /29 CIDR block that identifies the range of IP
+     * addresses reserved for this instance.
+     * 
+     */
     private final @Nullable String reservedIpRange;
 
     @OutputCustomType.Constructor({"connectMode","ipAddresses","modes","network","reservedIpRange"})
@@ -32,18 +61,47 @@ public final class InstanceNetwork {
         this.reservedIpRange = reservedIpRange;
     }
 
+    /**
+     * The network connect mode of the Filestore instance.
+     * If not provided, the connect mode defaults to
+     * DIRECT_PEERING.
+     * Default value is `DIRECT_PEERING`.
+     * Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
+     * 
+     */
     public Optional<String> getConnectMode() {
         return Optional.ofNullable(this.connectMode);
     }
+    /**
+     * - 
+     * A list of IPv4 or IPv6 addresses.
+     * 
+     */
     public List<String> getIpAddresses() {
         return this.ipAddresses == null ? List.of() : this.ipAddresses;
     }
+    /**
+     * IP versions for which the instance has
+     * IP addresses assigned.
+     * Each value may be one of `ADDRESS_MODE_UNSPECIFIED`, `MODE_IPV4`, and `MODE_IPV6`.
+     * 
+     */
     public List<String> getModes() {
         return this.modes;
     }
+    /**
+     * The name of the GCE VPC network to which the
+     * instance is connected.
+     * 
+     */
     public String getNetwork() {
         return this.network;
     }
+    /**
+     * A /29 CIDR block that identifies the range of IP
+     * addresses reserved for this instance.
+     * 
+     */
     public Optional<String> getReservedIpRange() {
         return Optional.ofNullable(this.reservedIpRange);
     }

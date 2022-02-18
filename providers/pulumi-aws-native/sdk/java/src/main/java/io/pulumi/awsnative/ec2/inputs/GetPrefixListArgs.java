@@ -12,6 +12,10 @@ public final class GetPrefixListArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPrefixListArgs Empty = new GetPrefixListArgs();
 
+    /**
+     * Id of Prefix List.
+     * 
+     */
     @InputImport(name="prefixListId", required=true)
     private final String prefixListId;
 

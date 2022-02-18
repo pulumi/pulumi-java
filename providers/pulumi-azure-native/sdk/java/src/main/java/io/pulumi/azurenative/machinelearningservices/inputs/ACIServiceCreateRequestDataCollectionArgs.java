@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Details of the data collection options specified.
+ * 
+ */
 public final class ACIServiceCreateRequestDataCollectionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ACIServiceCreateRequestDataCollectionArgs Empty = new ACIServiceCreateRequestDataCollectionArgs();
 
+    /**
+     * Option for enabling/disabling Event Hub.
+     * 
+     */
     @InputImport(name="eventHubEnabled")
     private final @Nullable Input<Boolean> eventHubEnabled;
 
@@ -21,6 +29,10 @@ public final class ACIServiceCreateRequestDataCollectionArgs extends io.pulumi.r
         return this.eventHubEnabled == null ? Input.empty() : this.eventHubEnabled;
     }
 
+    /**
+     * Option for enabling/disabling storage.
+     * 
+     */
     @InputImport(name="storageEnabled")
     private final @Nullable Input<Boolean> storageEnabled;
 

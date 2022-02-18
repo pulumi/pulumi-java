@@ -13,11 +13,35 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetJobResult {
+    /**
+     * User-defined description of the job.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * Resource ID.
+     * 
+     */
     private final String id;
+    /**
+     * Resource name.
+     * 
+     */
     private final String name;
+    /**
+     * Schedule properties of the job.
+     * 
+     */
     private final @Nullable JobScheduleResponse schedule;
+    /**
+     * Resource type.
+     * 
+     */
     private final String type;
+    /**
+     * The job version number.
+     * 
+     */
     private final Integer version;
 
     @OutputCustomType.Constructor({"description","id","name","schedule","type","version"})
@@ -36,21 +60,45 @@ public final class GetJobResult {
         this.version = Objects.requireNonNull(version);
     }
 
+    /**
+     * User-defined description of the job.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * Resource ID.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Resource name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Schedule properties of the job.
+     * 
+     */
     public Optional<JobScheduleResponse> getSchedule() {
         return Optional.ofNullable(this.schedule);
     }
+    /**
+     * Resource type.
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * The job version number.
+     * 
+     */
     public Integer getVersion() {
         return this.version;
     }

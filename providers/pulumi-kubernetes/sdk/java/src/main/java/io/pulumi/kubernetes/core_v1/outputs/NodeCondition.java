@@ -11,11 +11,42 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class NodeCondition {
+    /**
+     * Last time we got an update on a given condition.
+     * 
+     */
     private final @Nullable String lastHeartbeatTime;
+    /**
+     * Last time the condition transit from one status to another.
+     * 
+     */
     private final @Nullable String lastTransitionTime;
+    /**
+     * Human readable message indicating details about last transition.
+     * 
+     */
     private final @Nullable String message;
+    /**
+     * (brief) reason for the condition's last transition.
+     * 
+     */
     private final @Nullable String reason;
+    /**
+     * Status of the condition, one of True, False, Unknown.
+     * 
+     */
     private final String status;
+    /**
+     * Type of node condition.
+     * 
+     * Possible enum values:
+     *  - `"DiskPressure"` means the kubelet is under pressure due to insufficient available disk.
+     *  - `"MemoryPressure"` means the kubelet is under pressure due to insufficient available memory.
+     *  - `"NetworkUnavailable"` means that network for the node is not correctly configured.
+     *  - `"PIDPressure"` means the kubelet is under pressure due to insufficient available PID.
+     *  - `"Ready"` means kubelet is healthy and ready to accept pods.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"lastHeartbeatTime","lastTransitionTime","message","reason","status","type"})
@@ -34,21 +65,52 @@ public final class NodeCondition {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Last time we got an update on a given condition.
+     * 
+     */
     public Optional<String> getLastHeartbeatTime() {
         return Optional.ofNullable(this.lastHeartbeatTime);
     }
+    /**
+     * Last time the condition transit from one status to another.
+     * 
+     */
     public Optional<String> getLastTransitionTime() {
         return Optional.ofNullable(this.lastTransitionTime);
     }
+    /**
+     * Human readable message indicating details about last transition.
+     * 
+     */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
+    /**
+     * (brief) reason for the condition's last transition.
+     * 
+     */
     public Optional<String> getReason() {
         return Optional.ofNullable(this.reason);
     }
+    /**
+     * Status of the condition, one of True, False, Unknown.
+     * 
+     */
     public String getStatus() {
         return this.status;
     }
+    /**
+     * Type of node condition.
+     * 
+     * Possible enum values:
+     *  - `"DiskPressure"` means the kubelet is under pressure due to insufficient available disk.
+     *  - `"MemoryPressure"` means the kubelet is under pressure due to insufficient available memory.
+     *  - `"NetworkUnavailable"` means that network for the node is not correctly configured.
+     *  - `"PIDPressure"` means the kubelet is under pressure due to insufficient available PID.
+     *  - `"Ready"` means kubelet is healthy and ready to accept pods.
+     * 
+     */
     public String getType() {
         return this.type;
     }

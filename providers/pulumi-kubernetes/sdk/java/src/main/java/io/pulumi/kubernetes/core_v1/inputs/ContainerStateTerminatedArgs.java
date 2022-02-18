@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * ContainerStateTerminated is a terminated state of a container.
+ * 
+ */
 public final class ContainerStateTerminatedArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContainerStateTerminatedArgs Empty = new ContainerStateTerminatedArgs();
 
+    /**
+     * Container's ID in the format 'docker://<container_id>'
+     * 
+     */
     @InputImport(name="containerID")
     private final @Nullable Input<String> containerID;
 
@@ -22,6 +30,10 @@ public final class ContainerStateTerminatedArgs extends io.pulumi.resources.Reso
         return this.containerID == null ? Input.empty() : this.containerID;
     }
 
+    /**
+     * Exit status from the last termination of the container
+     * 
+     */
     @InputImport(name="exitCode", required=true)
     private final Input<Integer> exitCode;
 
@@ -29,6 +41,10 @@ public final class ContainerStateTerminatedArgs extends io.pulumi.resources.Reso
         return this.exitCode;
     }
 
+    /**
+     * Time at which the container last terminated
+     * 
+     */
     @InputImport(name="finishedAt")
     private final @Nullable Input<String> finishedAt;
 
@@ -36,6 +52,10 @@ public final class ContainerStateTerminatedArgs extends io.pulumi.resources.Reso
         return this.finishedAt == null ? Input.empty() : this.finishedAt;
     }
 
+    /**
+     * Message regarding the last termination of the container
+     * 
+     */
     @InputImport(name="message")
     private final @Nullable Input<String> message;
 
@@ -43,6 +63,10 @@ public final class ContainerStateTerminatedArgs extends io.pulumi.resources.Reso
         return this.message == null ? Input.empty() : this.message;
     }
 
+    /**
+     * (brief) reason from the last termination of the container
+     * 
+     */
     @InputImport(name="reason")
     private final @Nullable Input<String> reason;
 
@@ -50,6 +74,10 @@ public final class ContainerStateTerminatedArgs extends io.pulumi.resources.Reso
         return this.reason == null ? Input.empty() : this.reason;
     }
 
+    /**
+     * Signal from the last termination of the container
+     * 
+     */
     @InputImport(name="signal")
     private final @Nullable Input<Integer> signal;
 
@@ -57,6 +85,10 @@ public final class ContainerStateTerminatedArgs extends io.pulumi.resources.Reso
         return this.signal == null ? Input.empty() : this.signal;
     }
 
+    /**
+     * Time at which previous execution of the container started
+     * 
+     */
     @InputImport(name="startedAt")
     private final @Nullable Input<String> startedAt;
 

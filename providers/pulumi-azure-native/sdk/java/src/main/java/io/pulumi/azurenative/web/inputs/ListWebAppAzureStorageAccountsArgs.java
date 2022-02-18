@@ -12,6 +12,10 @@ public final class ListWebAppAzureStorageAccountsArgs extends io.pulumi.resource
 
     public static final ListWebAppAzureStorageAccountsArgs Empty = new ListWebAppAzureStorageAccountsArgs();
 
+    /**
+     * Name of the app.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -19,6 +23,10 @@ public final class ListWebAppAzureStorageAccountsArgs extends io.pulumi.resource
         return this.name;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

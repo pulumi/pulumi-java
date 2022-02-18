@@ -12,7 +12,19 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicy {
+    /**
+     * The specification for how client requests are aborted as part of fault
+     * injection.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbort abort;
+    /**
+     * The specification for how client requests are delayed as part of fault
+     * injection, before being sent to a backend service.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelay delay;
 
     @OutputCustomType.Constructor({"abort","delay"})
@@ -23,9 +35,21 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPoli
         this.delay = delay;
     }
 
+    /**
+     * The specification for how client requests are aborted as part of fault
+     * injection.
+     * Structure is documented below.
+     * 
+     */
     public Optional<RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbort> getAbort() {
         return Optional.ofNullable(this.abort);
     }
+    /**
+     * The specification for how client requests are delayed as part of fault
+     * injection, before being sent to a backend service.
+     * Structure is documented below.
+     * 
+     */
     public Optional<RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelay> getDelay() {
         return Optional.ofNullable(this.delay);
     }

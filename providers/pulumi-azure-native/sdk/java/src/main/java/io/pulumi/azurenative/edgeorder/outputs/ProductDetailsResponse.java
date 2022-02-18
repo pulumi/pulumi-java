@@ -16,10 +16,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ProductDetailsResponse {
+    /**
+     * Quantity of the product
+     * 
+     */
     private final Integer count;
+    /**
+     * list of device details
+     * 
+     */
     private final List<DeviceDetailsResponse> deviceDetails;
+    /**
+     * Display details of the product
+     * 
+     */
     private final @Nullable DisplayInfoResponse displayInfo;
+    /**
+     * Hierarchy of the product which uniquely identifies the product
+     * 
+     */
     private final HierarchyInformationResponse hierarchyInformation;
+    /**
+     * Double encryption status of the configuration. Read-only field.
+     * 
+     */
     private final String productDoubleEncryptionStatus;
 
     @OutputCustomType.Constructor({"count","deviceDetails","displayInfo","hierarchyInformation","productDoubleEncryptionStatus"})
@@ -36,18 +56,38 @@ public final class ProductDetailsResponse {
         this.productDoubleEncryptionStatus = Objects.requireNonNull(productDoubleEncryptionStatus);
     }
 
+    /**
+     * Quantity of the product
+     * 
+     */
     public Integer getCount() {
         return this.count;
     }
+    /**
+     * list of device details
+     * 
+     */
     public List<DeviceDetailsResponse> getDeviceDetails() {
         return this.deviceDetails;
     }
+    /**
+     * Display details of the product
+     * 
+     */
     public Optional<DisplayInfoResponse> getDisplayInfo() {
         return Optional.ofNullable(this.displayInfo);
     }
+    /**
+     * Hierarchy of the product which uniquely identifies the product
+     * 
+     */
     public HierarchyInformationResponse getHierarchyInformation() {
         return this.hierarchyInformation;
     }
+    /**
+     * Double encryption status of the configuration. Read-only field.
+     * 
+     */
     public String getProductDoubleEncryptionStatus() {
         return this.productDoubleEncryptionStatus;
     }

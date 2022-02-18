@@ -19,10 +19,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes the properties of a TransformOutput, which are the rules to be applied while generating the desired output.
+ * 
+ */
 public final class TransformOutputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TransformOutputArgs Empty = new TransformOutputArgs();
 
+    /**
+     * A Transform can define more than one outputs. This property defines what the service should do when one output fails - either continue to produce other outputs, or, stop the other outputs. The overall Job state will not reflect failures of outputs that are specified with 'ContinueJob'. The default is 'StopProcessingJob'.
+     * 
+     */
     @InputImport(name="onError")
     private final @Nullable Input<Either<String,OnErrorType>> onError;
 
@@ -30,6 +38,10 @@ public final class TransformOutputArgs extends io.pulumi.resources.ResourceArgs 
         return this.onError == null ? Input.empty() : this.onError;
     }
 
+    /**
+     * Preset that describes the operations that will be used to modify, transcode, or extract insights from the source file to generate the output.
+     * 
+     */
     @InputImport(name="preset", required=true)
     private final Input<Object> preset;
 
@@ -37,6 +49,10 @@ public final class TransformOutputArgs extends io.pulumi.resources.ResourceArgs 
         return this.preset;
     }
 
+    /**
+     * Sets the relative priority of the TransformOutputs within a Transform. This sets the priority that the service uses for processing TransformOutputs. The default priority is Normal.
+     * 
+     */
     @InputImport(name="relativePriority")
     private final @Nullable Input<Either<String,Priority>> relativePriority;
 

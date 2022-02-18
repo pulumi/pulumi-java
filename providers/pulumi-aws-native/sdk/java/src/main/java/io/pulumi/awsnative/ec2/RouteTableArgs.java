@@ -16,6 +16,10 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RouteTableArgs Empty = new RouteTableArgs();
 
+    /**
+     * Any tags assigned to the route table.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<RouteTableTagArgs>> tags;
 
@@ -23,6 +27,10 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The ID of the VPC.
+     * 
+     */
     @InputImport(name="vpcId", required=true)
     private final Input<String> vpcId;
 

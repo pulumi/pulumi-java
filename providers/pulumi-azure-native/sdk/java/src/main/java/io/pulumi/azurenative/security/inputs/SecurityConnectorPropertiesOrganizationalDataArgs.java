@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The multi cloud account's organizational data
+ * 
+ */
 public final class SecurityConnectorPropertiesOrganizationalDataArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SecurityConnectorPropertiesOrganizationalDataArgs Empty = new SecurityConnectorPropertiesOrganizationalDataArgs();
 
+    /**
+     * If the multi cloud account is of membership type organization, list of accounts excluded from offering
+     * 
+     */
     @InputImport(name="excludedAccountIds")
     private final @Nullable Input<List<String>> excludedAccountIds;
 
@@ -24,6 +32,10 @@ public final class SecurityConnectorPropertiesOrganizationalDataArgs extends io.
         return this.excludedAccountIds == null ? Input.empty() : this.excludedAccountIds;
     }
 
+    /**
+     * The multi cloud account's membership type in the organization
+     * 
+     */
     @InputImport(name="organizationMembershipType")
     private final @Nullable Input<Either<String,OrganizationMembershipType>> organizationMembershipType;
 
@@ -31,6 +43,10 @@ public final class SecurityConnectorPropertiesOrganizationalDataArgs extends io.
         return this.organizationMembershipType == null ? Input.empty() : this.organizationMembershipType;
     }
 
+    /**
+     * If the multi cloud account is not of membership type organization, this will be the ID of the account's parent
+     * 
+     */
     @InputImport(name="parentHierarchyId")
     private final @Nullable Input<String> parentHierarchyId;
 
@@ -38,6 +54,10 @@ public final class SecurityConnectorPropertiesOrganizationalDataArgs extends io.
         return this.parentHierarchyId == null ? Input.empty() : this.parentHierarchyId;
     }
 
+    /**
+     * If the multi cloud account is of membership type organization, this will be the name of the onboarding stackset
+     * 
+     */
     @InputImport(name="stacksetName")
     private final @Nullable Input<String> stacksetName;
 

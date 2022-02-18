@@ -14,6 +14,10 @@ public final class BucketLoggingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BucketLoggingArgs Empty = new BucketLoggingArgs();
 
+    /**
+     * The bucket that will receive log objects.
+     * 
+     */
     @InputImport(name="logBucket", required=true)
     private final Input<String> logBucket;
 
@@ -21,6 +25,11 @@ public final class BucketLoggingArgs extends io.pulumi.resources.ResourceArgs {
         return this.logBucket;
     }
 
+    /**
+     * The object prefix for log objects. If it's not provided,
+     * by default GCS sets this to this bucket's name.
+     * 
+     */
     @InputImport(name="logObjectPrefix")
     private final @Nullable Input<String> logObjectPrefix;
 

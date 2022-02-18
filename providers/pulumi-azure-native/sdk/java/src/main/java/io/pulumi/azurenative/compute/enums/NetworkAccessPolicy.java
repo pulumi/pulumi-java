@@ -8,10 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Policy for accessing the disk via network.
+     * 
+     */
     @EnumType
     public enum NetworkAccessPolicy {
+        /**
+         * The disk can be exported or uploaded to from any network.
+         * 
+         */
         AllowAll("AllowAll"),
+        /**
+         * The disk can be exported or uploaded to using a DiskAccess resource's private endpoints.
+         * 
+         */
         AllowPrivate("AllowPrivate"),
+        /**
+         * The disk cannot be exported.
+         * 
+         */
         DenyAll("DenyAll");
 
         private final String value;

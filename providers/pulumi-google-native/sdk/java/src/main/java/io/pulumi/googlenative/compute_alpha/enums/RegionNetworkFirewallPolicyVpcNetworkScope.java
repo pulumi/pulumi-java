@@ -8,9 +8,21 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The scope of networks allowed to be associated with the firewall policy. This field can be either GLOBAL_VPC_NETWORK or REGIONAL_VPC_NETWORK. A firewall policy with the VPC scope set to GLOBAL_VPC_NETWORK is allowed to be attached only to global networks. When the VPC scope is set to REGIONAL_VPC_NETWORK the firewall policy is allowed to be attached only to regional networks in the same scope as the firewall policy. Note: if not specified then GLOBAL_VPC_NETWORK will be used.
+     * 
+     */
     @EnumType
     public enum RegionNetworkFirewallPolicyVpcNetworkScope {
+        /**
+         * The firewall policy is allowed to be attached only to global networks.
+         * 
+         */
         GlobalVpcNetwork("GLOBAL_VPC_NETWORK"),
+        /**
+         * The firewall policy is allowed to be attached only to regional networks in the same scope as the firewall policy. This option is applicable only to regional firewall policies.
+         * 
+         */
         RegionalVpcNetwork("REGIONAL_VPC_NETWORK");
 
         private final String value;

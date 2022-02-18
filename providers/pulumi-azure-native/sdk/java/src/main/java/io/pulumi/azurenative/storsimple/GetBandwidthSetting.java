@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBandwidthSetting {
+/**
+ * The bandwidth setting.
+ * API Version: 2017-06-01.
+ * 
+ *
+ * The bandwidth setting.
+ * 
+ */
     public static CompletableFuture<GetBandwidthSettingResult> invokeAsync(GetBandwidthSettingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storsimple:getBandwidthSetting", TypeShape.of(GetBandwidthSettingResult.class), args == null ? GetBandwidthSettingArgs.Empty : args, Utilities.withVersion(options));
     }

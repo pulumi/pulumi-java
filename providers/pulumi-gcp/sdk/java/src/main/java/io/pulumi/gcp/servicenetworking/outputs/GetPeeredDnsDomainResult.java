@@ -10,6 +10,10 @@ import java.util.Objects;
 @OutputCustomType
 public final class GetPeeredDnsDomainResult {
     private final String dnsSuffix;
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
     private final String name;
     private final String network;
@@ -38,6 +42,10 @@ public final class GetPeeredDnsDomainResult {
     public String getDnsSuffix() {
         return this.dnsSuffix;
     }
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }

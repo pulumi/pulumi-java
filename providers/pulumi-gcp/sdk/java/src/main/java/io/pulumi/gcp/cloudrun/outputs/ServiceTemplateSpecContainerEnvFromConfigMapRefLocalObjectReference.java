@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReference {
+    /**
+     * Volume's name.
+     * 
+     */
     private final String name;
 
     @OutputCustomType.Constructor({"name"})
@@ -16,6 +20,10 @@ public final class ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectRef
         this.name = Objects.requireNonNull(name);
     }
 
+    /**
+     * Volume's name.
+     * 
+     */
     public String getName() {
         return this.name;
     }

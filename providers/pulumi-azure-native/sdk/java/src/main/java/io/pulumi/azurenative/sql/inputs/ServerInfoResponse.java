@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Server info for the server trust group.
+ * 
+ */
 public final class ServerInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ServerInfoResponse Empty = new ServerInfoResponse();
 
+    /**
+     * Server Id.
+     * 
+     */
     @InputImport(name="serverId", required=true)
     private final String serverId;
 

@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The monitoring setting of the component.
+ * 
+ */
 public final class ApplicationComponentMonitoringSettingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationComponentMonitoringSettingArgs Empty = new ApplicationComponentMonitoringSettingArgs();
 
+    /**
+     * The ARN of the compnonent.
+     * 
+     */
     @InputImport(name="componentARN")
     private final @Nullable Input<String> componentARN;
 
@@ -23,6 +31,10 @@ public final class ApplicationComponentMonitoringSettingArgs extends io.pulumi.r
         return this.componentARN == null ? Input.empty() : this.componentARN;
     }
 
+    /**
+     * The component monitoring configuration mode.
+     * 
+     */
     @InputImport(name="componentConfigurationMode", required=true)
     private final Input<ApplicationComponentMonitoringSettingComponentConfigurationMode> componentConfigurationMode;
 
@@ -30,6 +42,10 @@ public final class ApplicationComponentMonitoringSettingArgs extends io.pulumi.r
         return this.componentConfigurationMode;
     }
 
+    /**
+     * The name of the component.
+     * 
+     */
     @InputImport(name="componentName")
     private final @Nullable Input<String> componentName;
 
@@ -37,6 +53,10 @@ public final class ApplicationComponentMonitoringSettingArgs extends io.pulumi.r
         return this.componentName == null ? Input.empty() : this.componentName;
     }
 
+    /**
+     * The monitoring configuration of the component.
+     * 
+     */
     @InputImport(name="customComponentConfiguration")
     private final @Nullable Input<ApplicationComponentConfigurationArgs> customComponentConfiguration;
 
@@ -44,6 +64,10 @@ public final class ApplicationComponentMonitoringSettingArgs extends io.pulumi.r
         return this.customComponentConfiguration == null ? Input.empty() : this.customComponentConfiguration;
     }
 
+    /**
+     * The overwritten settings on default component monitoring configuration.
+     * 
+     */
     @InputImport(name="defaultOverwriteComponentConfiguration")
     private final @Nullable Input<ApplicationComponentConfigurationArgs> defaultOverwriteComponentConfiguration;
 
@@ -51,6 +75,10 @@ public final class ApplicationComponentMonitoringSettingArgs extends io.pulumi.r
         return this.defaultOverwriteComponentConfiguration == null ? Input.empty() : this.defaultOverwriteComponentConfiguration;
     }
 
+    /**
+     * The tier of the application component.
+     * 
+     */
     @InputImport(name="tier", required=true)
     private final Input<String> tier;
 

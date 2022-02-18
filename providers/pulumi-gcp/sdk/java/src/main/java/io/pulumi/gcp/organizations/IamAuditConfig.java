@@ -15,33 +15,85 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Allows management of audit logging config for a given service for a Google Cloud Platform Organization.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * IAM audit config imports use the identifier of the resource in question and the service, e.g.
+ * 
+ * ```sh
+ *  $ pulumi import gcp:organizations/iamAuditConfig:IamAuditConfig config "your-organization-id foo.googleapis.com"
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:organizations/iamAuditConfig:IamAuditConfig")
 public class IamAuditConfig extends io.pulumi.resources.CustomResource {
+    /**
+     * The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.
+     * 
+     */
     @OutputExport(name="auditLogConfigs", type=List.class, parameters={IamAuditConfigAuditLogConfig.class})
     private Output<List<IamAuditConfigAuditLogConfig>> auditLogConfigs;
 
+    /**
+     * @return The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.
+     * 
+     */
     public Output<List<IamAuditConfigAuditLogConfig>> getAuditLogConfigs() {
         return this.auditLogConfigs;
     }
+    /**
+     * The etag of iam policy
+     * 
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return The etag of iam policy
+     * 
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * The numeric ID of the organization in which you want to manage the audit logging config.
+     * 
+     */
     @OutputExport(name="orgId", type=String.class, parameters={})
     private Output<String> orgId;
 
+    /**
+     * @return The numeric ID of the organization in which you want to manage the audit logging config.
+     * 
+     */
     public Output<String> getOrgId() {
         return this.orgId;
     }
+    /**
+     * Service which will be enabled for audit logging.  The special value `allServices` covers all services.  Note that if there are google\_organization\_iam\_audit\_config resources covering both `allServices` and a specific service then the union of the two AuditConfigs is used for that service: the `log_types` specified in each `audit_log_config` are enabled, and the `exempted_members` in each `audit_log_config` are exempted.
+     * 
+     */
     @OutputExport(name="service", type=String.class, parameters={})
     private Output<String> service;
 
+    /**
+     * @return Service which will be enabled for audit logging.  The special value `allServices` covers all services.  Note that if there are google\_organization\_iam\_audit\_config resources covering both `allServices` and a specific service then the union of the two AuditConfigs is used for that service: the `log_types` specified in each `audit_log_config` are enabled, and the `exempted_members` in each `audit_log_config` are exempted.
+     * 
+     */
     public Output<String> getService() {
         return this.service;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public IamAuditConfig(String name, IamAuditConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:organizations/iamAuditConfig:IamAuditConfig", name, args == null ? IamAuditConfigArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -57,6 +109,15 @@ public class IamAuditConfig extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static IamAuditConfig get(String name, Input<String> id, @Nullable IamAuditConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new IamAuditConfig(name, id, state, options);
     }

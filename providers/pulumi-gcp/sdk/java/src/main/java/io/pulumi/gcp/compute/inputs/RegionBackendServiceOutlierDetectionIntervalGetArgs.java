@@ -14,6 +14,12 @@ public final class RegionBackendServiceOutlierDetectionIntervalGetArgs extends i
 
     public static final RegionBackendServiceOutlierDetectionIntervalGetArgs Empty = new RegionBackendServiceOutlierDetectionIntervalGetArgs();
 
+    /**
+     * Span of time that's a fraction of a second at nanosecond resolution. Durations
+     * less than one second are represented with a 0 `seconds` field and a positive
+     * `nanos` field. Must be from 0 to 999,999,999 inclusive.
+     * 
+     */
     @InputImport(name="nanos")
     private final @Nullable Input<Integer> nanos;
 
@@ -21,6 +27,11 @@ public final class RegionBackendServiceOutlierDetectionIntervalGetArgs extends i
         return this.nanos == null ? Input.empty() : this.nanos;
     }
 
+    /**
+     * Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
+     * inclusive.
+     * 
+     */
     @InputImport(name="seconds", required=true)
     private final Input<Integer> seconds;
 

@@ -12,7 +12,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RecordingConfigurationThumbnailConfiguration {
+    /**
+     * Thumbnail Recording Mode, which determines whether thumbnails are recorded at an interval or are disabled.
+     * 
+     */
     private final RecordingConfigurationThumbnailConfigurationRecordingMode recordingMode;
+    /**
+     * Thumbnail recording Target Interval Seconds defines the interval at which thumbnails are recorded. This field is required if RecordingMode is INTERVAL.
+     * 
+     */
     private final @Nullable Integer targetIntervalSeconds;
 
     @OutputCustomType.Constructor({"recordingMode","targetIntervalSeconds"})
@@ -23,9 +31,17 @@ public final class RecordingConfigurationThumbnailConfiguration {
         this.targetIntervalSeconds = targetIntervalSeconds;
     }
 
+    /**
+     * Thumbnail Recording Mode, which determines whether thumbnails are recorded at an interval or are disabled.
+     * 
+     */
     public RecordingConfigurationThumbnailConfigurationRecordingMode getRecordingMode() {
         return this.recordingMode;
     }
+    /**
+     * Thumbnail recording Target Interval Seconds defines the interval at which thumbnails are recorded. This field is required if RecordingMode is INTERVAL.
+     * 
+     */
     public Optional<Integer> getTargetIntervalSeconds() {
         return Optional.ofNullable(this.targetIntervalSeconds);
     }

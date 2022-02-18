@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPacketMirroring {
+/**
+ * Returns the specified PacketMirroring resource.
+ * 
+ */
     public static CompletableFuture<GetPacketMirroringResult> invokeAsync(GetPacketMirroringArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getPacketMirroring", TypeShape.of(GetPacketMirroringResult.class), args == null ? GetPacketMirroringArgs.Empty : args, Utilities.withVersion(options));
     }

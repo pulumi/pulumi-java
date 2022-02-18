@@ -14,6 +14,10 @@ public final class GetRouterArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetRouterArgs Empty = new GetRouterArgs();
 
+    /**
+     * The name of the router.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -21,6 +25,10 @@ public final class GetRouterArgs extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    /**
+     * The VPC network on which this router lives.
+     * 
+     */
     @InputImport(name="network", required=true)
     private final String network;
 
@@ -28,6 +36,11 @@ public final class GetRouterArgs extends io.pulumi.resources.InvokeArgs {
         return this.network;
     }
 
+    /**
+     * The ID of the project in which the resource
+     * belongs. If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -35,6 +48,11 @@ public final class GetRouterArgs extends io.pulumi.resources.InvokeArgs {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
+    /**
+     * The region this router has been created in. If
+     * unspecified, this defaults to the region configured in the provider.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable String region;
 

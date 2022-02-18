@@ -16,39 +16,89 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * AWS Route53 Recovery Control Cluster resource schema
+ * 
+ */
 @ResourceType(type="aws-native:route53recoverycontrol:Cluster")
 public class Cluster extends io.pulumi.resources.CustomResource {
+    /**
+     * The Amazon Resource Name (ARN) of the cluster.
+     * 
+     */
     @OutputExport(name="clusterArn", type=String.class, parameters={})
     private Output<String> clusterArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the cluster.
+     * 
+     */
     public Output<String> getClusterArn() {
         return this.clusterArn;
     }
+    /**
+     * Endpoints for the cluster.
+     * 
+     */
     @OutputExport(name="clusterEndpoints", type=List.class, parameters={ClusterEndpoint.class})
     private Output<List<ClusterEndpoint>> clusterEndpoints;
 
+    /**
+     * @return Endpoints for the cluster.
+     * 
+     */
     public Output<List<ClusterEndpoint>> getClusterEndpoints() {
         return this.clusterEndpoints;
     }
+    /**
+     * Name of a Cluster. You can use any non-white space character in the name
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
+    /**
+     * @return Name of a Cluster. You can use any non-white space character in the name
+     * 
+     */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
+    /**
+     * Deployment status of a resource. Status can be one of the following: PENDING, DEPLOYED, PENDING_DELETION.
+     * 
+     */
     @OutputExport(name="status", type=ClusterStatus.class, parameters={})
     private Output<ClusterStatus> status;
 
+    /**
+     * @return Deployment status of a resource. Status can be one of the following: PENDING, DEPLOYED, PENDING_DELETION.
+     * 
+     */
     public Output<ClusterStatus> getStatus() {
         return this.status;
     }
+    /**
+     * A collection of tags associated with a resource
+     * 
+     */
     @OutputExport(name="tags", type=List.class, parameters={ClusterTag.class})
     private Output</* @Nullable */ List<ClusterTag>> tags;
 
+    /**
+     * @return A collection of tags associated with a resource
+     * 
+     */
     public Output</* @Nullable */ List<ClusterTag>> getTags() {
         return this.tags;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Cluster(String name, @Nullable ClusterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:route53recoverycontrol:Cluster", name, args == null ? ClusterArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -64,6 +114,14 @@ public class Cluster extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Cluster get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Cluster(name, id, options);
     }

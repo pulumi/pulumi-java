@@ -11,8 +11,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ExportDeliveryDestinationResponse {
+    /**
+     * The name of the container where exports will be uploaded.
+     * 
+     */
     private final String container;
+    /**
+     * The resource id of the storage account where exports will be delivered.
+     * 
+     */
     private final String resourceId;
+    /**
+     * The name of the directory where exports will be uploaded.
+     * 
+     */
     private final @Nullable String rootFolderPath;
 
     @OutputCustomType.Constructor({"container","resourceId","rootFolderPath"})
@@ -25,12 +37,24 @@ public final class ExportDeliveryDestinationResponse {
         this.rootFolderPath = rootFolderPath;
     }
 
+    /**
+     * The name of the container where exports will be uploaded.
+     * 
+     */
     public String getContainer() {
         return this.container;
     }
+    /**
+     * The resource id of the storage account where exports will be delivered.
+     * 
+     */
     public String getResourceId() {
         return this.resourceId;
     }
+    /**
+     * The name of the directory where exports will be uploaded.
+     * 
+     */
     public Optional<String> getRootFolderPath() {
         return Optional.ofNullable(this.rootFolderPath);
     }

@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines the parameters for RequestScheme match conditions
+ * 
+ */
 public final class RequestSchemeMatchConditionParametersArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RequestSchemeMatchConditionParametersArgs Empty = new RequestSchemeMatchConditionParametersArgs();
 
+    /**
+     * The match value for the condition of the delivery rule
+     * 
+     */
     @InputImport(name="matchValues")
     private final @Nullable Input<List<String>> matchValues;
 
@@ -23,6 +31,10 @@ public final class RequestSchemeMatchConditionParametersArgs extends io.pulumi.r
         return this.matchValues == null ? Input.empty() : this.matchValues;
     }
 
+    /**
+     * Describes if this is negate condition or not
+     * 
+     */
     @InputImport(name="negateCondition")
     private final @Nullable Input<Boolean> negateCondition;
 
@@ -37,6 +49,10 @@ public final class RequestSchemeMatchConditionParametersArgs extends io.pulumi.r
         return this.odataType;
     }
 
+    /**
+     * Describes operator to be matched
+     * 
+     */
     @InputImport(name="operator", required=true)
     private final Input<String> operator;
 

@@ -23,6 +23,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WorkspaceArgs Empty = new WorkspaceArgs();
 
+    /**
+     * The ETag of the workspace.
+     * 
+     */
     @InputImport(name="eTag")
     private final @Nullable Input<String> eTag;
 
@@ -30,6 +34,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.eTag == null ? Input.empty() : this.eTag;
     }
 
+    /**
+     * Workspace features.
+     * 
+     */
     @InputImport(name="features")
     private final @Nullable Input<WorkspaceFeaturesArgs> features;
 
@@ -37,6 +45,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.features == null ? Input.empty() : this.features;
     }
 
+    /**
+     * Indicates whether customer managed storage is mandatory for query management.
+     * 
+     */
     @InputImport(name="forceCmkForQuery")
     private final @Nullable Input<Boolean> forceCmkForQuery;
 
@@ -44,6 +56,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.forceCmkForQuery == null ? Input.empty() : this.forceCmkForQuery;
     }
 
+    /**
+     * The geo-location where the resource lives
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -51,6 +67,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The provisioning state of the workspace.
+     * 
+     */
     @InputImport(name="provisioningState")
     private final @Nullable Input<Either<String,WorkspaceEntityStatus>> provisioningState;
 
@@ -58,6 +78,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
     }
 
+    /**
+     * The network access type for accessing Log Analytics ingestion.
+     * 
+     */
     @InputImport(name="publicNetworkAccessForIngestion")
     private final @Nullable Input<Either<String,PublicNetworkAccessType>> publicNetworkAccessForIngestion;
 
@@ -65,6 +89,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.publicNetworkAccessForIngestion == null ? Input.empty() : this.publicNetworkAccessForIngestion;
     }
 
+    /**
+     * The network access type for accessing Log Analytics query.
+     * 
+     */
     @InputImport(name="publicNetworkAccessForQuery")
     private final @Nullable Input<Either<String,PublicNetworkAccessType>> publicNetworkAccessForQuery;
 
@@ -72,6 +100,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.publicNetworkAccessForQuery == null ? Input.empty() : this.publicNetworkAccessForQuery;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -79,6 +111,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The workspace data retention in days. Allowed values are per pricing plan. See pricing tiers documentation for details.
+     * 
+     */
     @InputImport(name="retentionInDays")
     private final @Nullable Input<Integer> retentionInDays;
 
@@ -86,6 +122,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.retentionInDays == null ? Input.empty() : this.retentionInDays;
     }
 
+    /**
+     * The SKU of the workspace.
+     * 
+     */
     @InputImport(name="sku")
     private final @Nullable Input<WorkspaceSkuArgs> sku;
 
@@ -93,6 +133,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku == null ? Input.empty() : this.sku;
     }
 
+    /**
+     * Resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -100,6 +144,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The daily volume cap for ingestion.
+     * 
+     */
     @InputImport(name="workspaceCapping")
     private final @Nullable Input<WorkspaceCappingArgs> workspaceCapping;
 
@@ -107,6 +155,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.workspaceCapping == null ? Input.empty() : this.workspaceCapping;
     }
 
+    /**
+     * The name of the workspace.
+     * 
+     */
     @InputImport(name="workspaceName")
     private final @Nullable Input<String> workspaceName;
 

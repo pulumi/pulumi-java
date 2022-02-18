@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ServiceResponseBaseResponseError {
+    /**
+     * The error response.
+     * 
+     */
     private final ErrorResponseResponse error;
 
     @OutputCustomType.Constructor({"error"})
@@ -16,6 +20,10 @@ public final class ServiceResponseBaseResponseError {
         this.error = Objects.requireNonNull(error);
     }
 
+    /**
+     * The error response.
+     * 
+     */
     public ErrorResponseResponse getError() {
         return this.error;
     }

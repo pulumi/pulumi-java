@@ -19,105 +19,251 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Represents an environment instance
+ * API Version: 2018-10-15.
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:labservices:Environment myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.LabServices/labaccounts/{labAccountName}/labs/{labName}/environmentsettings/{environmentSettingName}/environments/{environmentName} 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:labservices:Environment")
 public class Environment extends io.pulumi.resources.CustomResource {
+    /**
+     * The name or email address of the user who has claimed the environment
+     * 
+     */
     @OutputExport(name="claimedByUserName", type=String.class, parameters={})
     private Output<String> claimedByUserName;
 
+    /**
+     * @return The name or email address of the user who has claimed the environment
+     * 
+     */
     public Output<String> getClaimedByUserName() {
         return this.claimedByUserName;
     }
+    /**
+     * The AAD object Id of the user who has claimed the environment
+     * 
+     */
     @OutputExport(name="claimedByUserObjectId", type=String.class, parameters={})
     private Output<String> claimedByUserObjectId;
 
+    /**
+     * @return The AAD object Id of the user who has claimed the environment
+     * 
+     */
     public Output<String> getClaimedByUserObjectId() {
         return this.claimedByUserObjectId;
     }
+    /**
+     * The user principal Id of the user who has claimed the environment
+     * 
+     */
     @OutputExport(name="claimedByUserPrincipalId", type=String.class, parameters={})
     private Output<String> claimedByUserPrincipalId;
 
+    /**
+     * @return The user principal Id of the user who has claimed the environment
+     * 
+     */
     public Output<String> getClaimedByUserPrincipalId() {
         return this.claimedByUserPrincipalId;
     }
+    /**
+     * Is the environment claimed or not
+     * 
+     */
     @OutputExport(name="isClaimed", type=Boolean.class, parameters={})
     private Output<Boolean> isClaimed;
 
+    /**
+     * @return Is the environment claimed or not
+     * 
+     */
     public Output<Boolean> getIsClaimed() {
         return this.isClaimed;
     }
+    /**
+     * Last known power state of the environment
+     * 
+     */
     @OutputExport(name="lastKnownPowerState", type=String.class, parameters={})
     private Output<String> lastKnownPowerState;
 
+    /**
+     * @return Last known power state of the environment
+     * 
+     */
     public Output<String> getLastKnownPowerState() {
         return this.lastKnownPowerState;
     }
+    /**
+     * The details of the latest operation. ex: status, error
+     * 
+     */
     @OutputExport(name="latestOperationResult", type=LatestOperationResultResponse.class, parameters={})
     private Output<LatestOperationResultResponse> latestOperationResult;
 
+    /**
+     * @return The details of the latest operation. ex: status, error
+     * 
+     */
     public Output<LatestOperationResultResponse> getLatestOperationResult() {
         return this.latestOperationResult;
     }
+    /**
+     * The location of the resource.
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return The location of the resource.
+     * 
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * The name of the resource.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Network details of the environment
+     * 
+     */
     @OutputExport(name="networkInterface", type=NetworkInterfaceResponse.class, parameters={})
     private Output<NetworkInterfaceResponse> networkInterface;
 
+    /**
+     * @return Network details of the environment
+     * 
+     */
     public Output<NetworkInterfaceResponse> getNetworkInterface() {
         return this.networkInterface;
     }
+    /**
+     * When the password was last reset on the environment.
+     * 
+     */
     @OutputExport(name="passwordLastReset", type=String.class, parameters={})
     private Output<String> passwordLastReset;
 
+    /**
+     * @return When the password was last reset on the environment.
+     * 
+     */
     public Output<String> getPasswordLastReset() {
         return this.passwordLastReset;
     }
+    /**
+     * The provisioning status of the resource.
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
+    /**
+     * @return The provisioning status of the resource.
+     * 
+     */
     public Output</* @Nullable */ String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The set of a VM and the setting id it was created for
+     * 
+     */
     @OutputExport(name="resourceSets", type=ResourceSetResponse.class, parameters={})
     private Output</* @Nullable */ ResourceSetResponse> resourceSets;
 
+    /**
+     * @return The set of a VM and the setting id it was created for
+     * 
+     */
     public Output</* @Nullable */ ResourceSetResponse> getResourceSets() {
         return this.resourceSets;
     }
+    /**
+     * The tags of the resource.
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return The tags of the resource.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * How long the environment has been used by a lab user
+     * 
+     */
     @OutputExport(name="totalUsage", type=String.class, parameters={})
     private Output<String> totalUsage;
 
+    /**
+     * @return How long the environment has been used by a lab user
+     * 
+     */
     public Output<String> getTotalUsage() {
         return this.totalUsage;
     }
+    /**
+     * The type of the resource.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * The unique immutable identifier of a resource (Guid).
+     * 
+     */
     @OutputExport(name="uniqueIdentifier", type=String.class, parameters={})
     private Output</* @Nullable */ String> uniqueIdentifier;
 
+    /**
+     * @return The unique immutable identifier of a resource (Guid).
+     * 
+     */
     public Output</* @Nullable */ String> getUniqueIdentifier() {
         return this.uniqueIdentifier;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Environment(String name, EnvironmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:labservices:Environment", name, args == null ? EnvironmentArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -136,6 +282,14 @@ public class Environment extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Environment get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Environment(name, id, options);
     }

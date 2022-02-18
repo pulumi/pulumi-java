@@ -14,6 +14,10 @@ public final class ProjectMetadataItemArgs extends io.pulumi.resources.ResourceA
 
     public static final ProjectMetadataItemArgs Empty = new ProjectMetadataItemArgs();
 
+    /**
+     * The metadata key to set.
+     * 
+     */
     @InputImport(name="key", required=true)
     private final Input<String> key;
 
@@ -21,6 +25,11 @@ public final class ProjectMetadataItemArgs extends io.pulumi.resources.ResourceA
         return this.key;
     }
 
+    /**
+     * The ID of the project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -28,6 +37,10 @@ public final class ProjectMetadataItemArgs extends io.pulumi.resources.ResourceA
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The value to set for the given metadata key.
+     * 
+     */
     @InputImport(name="value", required=true)
     private final Input<String> value;
 

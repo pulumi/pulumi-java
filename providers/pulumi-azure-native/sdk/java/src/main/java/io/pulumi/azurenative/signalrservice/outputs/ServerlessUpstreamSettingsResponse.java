@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ServerlessUpstreamSettingsResponse {
+    /**
+     * Gets or sets the list of Upstream URL templates. Order matters, and the first matching template takes effects.
+     * 
+     */
     private final @Nullable List<UpstreamTemplateResponse> templates;
 
     @OutputCustomType.Constructor({"templates"})
@@ -18,6 +22,10 @@ public final class ServerlessUpstreamSettingsResponse {
         this.templates = templates;
     }
 
+    /**
+     * Gets or sets the list of Upstream URL templates. Order matters, and the first matching template takes effects.
+     * 
+     */
     public List<UpstreamTemplateResponse> getTemplates() {
         return this.templates == null ? List.of() : this.templates;
     }

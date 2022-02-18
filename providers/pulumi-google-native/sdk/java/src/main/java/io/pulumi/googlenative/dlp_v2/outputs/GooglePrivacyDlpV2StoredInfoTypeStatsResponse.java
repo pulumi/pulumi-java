@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GooglePrivacyDlpV2StoredInfoTypeStatsResponse {
+    /**
+     * StoredInfoType where findings are defined by a dictionary of phrases.
+     * 
+     */
     private final GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse largeCustomDictionary;
 
     @OutputCustomType.Constructor({"largeCustomDictionary"})
@@ -16,6 +20,10 @@ public final class GooglePrivacyDlpV2StoredInfoTypeStatsResponse {
         this.largeCustomDictionary = Objects.requireNonNull(largeCustomDictionary);
     }
 
+    /**
+     * StoredInfoType where findings are defined by a dictionary of phrases.
+     * 
+     */
     public GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse getLargeCustomDictionary() {
         return this.largeCustomDictionary;
     }

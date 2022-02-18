@@ -11,6 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A rule set which evaluates all its rules upon an event interception. Only when all the included rules in the rule set will be evaluated as 'true', will the event trigger the defined actions.
+ * 
+ */
 public final class AutomationRuleSetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AutomationRuleSetArgs Empty = new AutomationRuleSetArgs();

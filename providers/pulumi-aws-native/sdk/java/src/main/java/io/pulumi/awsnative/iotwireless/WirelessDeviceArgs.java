@@ -18,6 +18,10 @@ public final class WirelessDeviceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WirelessDeviceArgs Empty = new WirelessDeviceArgs();
 
+    /**
+     * Wireless device description
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -25,6 +29,10 @@ public final class WirelessDeviceArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Wireless device destination name
+     * 
+     */
     @InputImport(name="destinationName", required=true)
     private final Input<String> destinationName;
 
@@ -32,6 +40,10 @@ public final class WirelessDeviceArgs extends io.pulumi.resources.ResourceArgs {
         return this.destinationName;
     }
 
+    /**
+     * The date and time when the most recent uplink was received.
+     * 
+     */
     @InputImport(name="lastUplinkReceivedAt")
     private final @Nullable Input<String> lastUplinkReceivedAt;
 
@@ -39,6 +51,10 @@ public final class WirelessDeviceArgs extends io.pulumi.resources.ResourceArgs {
         return this.lastUplinkReceivedAt == null ? Input.empty() : this.lastUplinkReceivedAt;
     }
 
+    /**
+     * The combination of Package, Station and Model which represents the version of the LoRaWAN Wireless Device.
+     * 
+     */
     @InputImport(name="loRaWAN")
     private final @Nullable Input<WirelessDeviceLoRaWANDeviceArgs> loRaWAN;
 
@@ -46,6 +62,10 @@ public final class WirelessDeviceArgs extends io.pulumi.resources.ResourceArgs {
         return this.loRaWAN == null ? Input.empty() : this.loRaWAN;
     }
 
+    /**
+     * Wireless device name
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -53,6 +73,10 @@ public final class WirelessDeviceArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * A list of key-value pairs that contain metadata for the device. Currently not supported, will not create if tags are passed.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<WirelessDeviceTagArgs>> tags;
 
@@ -60,6 +84,10 @@ public final class WirelessDeviceArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * Thing arn. Passed into update to associate Thing with Wireless device.
+     * 
+     */
     @InputImport(name="thingArn")
     private final @Nullable Input<String> thingArn;
 
@@ -67,6 +95,10 @@ public final class WirelessDeviceArgs extends io.pulumi.resources.ResourceArgs {
         return this.thingArn == null ? Input.empty() : this.thingArn;
     }
 
+    /**
+     * Wireless device type, currently only Sidewalk and LoRa
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<WirelessDeviceType> type;
 

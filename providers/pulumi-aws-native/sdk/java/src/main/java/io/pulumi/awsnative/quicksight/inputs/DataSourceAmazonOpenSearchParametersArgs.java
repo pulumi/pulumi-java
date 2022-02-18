@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * <p>Amazon OpenSearch Service parameters.</p>
+ * 
+ */
 public final class DataSourceAmazonOpenSearchParametersArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataSourceAmazonOpenSearchParametersArgs Empty = new DataSourceAmazonOpenSearchParametersArgs();
 
+    /**
+     * <p>The Amazon OpenSearch Service domain.</p>
+     * 
+     */
     @InputImport(name="domain", required=true)
     private final Input<String> domain;
 

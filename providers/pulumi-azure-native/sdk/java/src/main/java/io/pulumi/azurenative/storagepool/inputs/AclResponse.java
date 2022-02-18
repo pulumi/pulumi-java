@@ -9,10 +9,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Access Control List (ACL) for an iSCSI target portal group
+ * 
+ */
 public final class AclResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AclResponse Empty = new AclResponse();
 
+    /**
+     * iSCSI initiator IQN (iSCSI Qualified Name); example: "iqn.2005-03.org.iscsi:client".
+     * 
+     */
     @InputImport(name="initiatorIqn", required=true)
     private final String initiatorIqn;
 
@@ -20,6 +28,10 @@ public final class AclResponse extends io.pulumi.resources.InvokeArgs {
         return this.initiatorIqn;
     }
 
+    /**
+     * List of LUN names mapped to the ACL.
+     * 
+     */
     @InputImport(name="mappedLuns", required=true)
     private final List<String> mappedLuns;
 
@@ -27,6 +39,10 @@ public final class AclResponse extends io.pulumi.resources.InvokeArgs {
         return this.mappedLuns;
     }
 
+    /**
+     * Password for Challenge Handshake Authentication Protocol (CHAP) authentication.
+     * 
+     */
     @InputImport(name="password", required=true)
     private final String password;
 
@@ -34,6 +50,10 @@ public final class AclResponse extends io.pulumi.resources.InvokeArgs {
         return this.password;
     }
 
+    /**
+     * Username for Challenge Handshake Authentication Protocol (CHAP) authentication.
+     * 
+     */
     @InputImport(name="username", required=true)
     private final String username;
 

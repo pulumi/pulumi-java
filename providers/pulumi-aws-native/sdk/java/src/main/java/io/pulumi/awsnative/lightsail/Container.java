@@ -18,6 +18,10 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Resource Type definition for AWS::Lightsail::Container
+ * 
+ */
 @ResourceType(type="aws-native:lightsail:Container")
 public class Container extends io.pulumi.resources.CustomResource {
     @OutputExport(name="containerArn", type=String.class, parameters={})
@@ -26,55 +30,125 @@ public class Container extends io.pulumi.resources.CustomResource {
     public Output<String> getContainerArn() {
         return this.containerArn;
     }
+    /**
+     * Describes a container deployment configuration of an Amazon Lightsail container service.
+     * 
+     */
     @OutputExport(name="containerServiceDeployment", type=ContainerServiceDeployment.class, parameters={})
     private Output</* @Nullable */ ContainerServiceDeployment> containerServiceDeployment;
 
+    /**
+     * @return Describes a container deployment configuration of an Amazon Lightsail container service.
+     * 
+     */
     public Output</* @Nullable */ ContainerServiceDeployment> getContainerServiceDeployment() {
         return this.containerServiceDeployment;
     }
+    /**
+     * A Boolean value to indicate whether the container service is disabled.
+     * 
+     */
     @OutputExport(name="isDisabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isDisabled;
 
+    /**
+     * @return A Boolean value to indicate whether the container service is disabled.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getIsDisabled() {
         return this.isDisabled;
     }
+    /**
+     * The power specification for the container service.
+     * 
+     */
     @OutputExport(name="power", type=String.class, parameters={})
     private Output<String> power;
 
+    /**
+     * @return The power specification for the container service.
+     * 
+     */
     public Output<String> getPower() {
         return this.power;
     }
+    /**
+     * The public domain names to use with the container service, such as example.com and www.example.com.
+     * 
+     */
     @OutputExport(name="publicDomainNames", type=List.class, parameters={ContainerPublicDomainName.class})
     private Output</* @Nullable */ List<ContainerPublicDomainName>> publicDomainNames;
 
+    /**
+     * @return The public domain names to use with the container service, such as example.com and www.example.com.
+     * 
+     */
     public Output</* @Nullable */ List<ContainerPublicDomainName>> getPublicDomainNames() {
         return this.publicDomainNames;
     }
+    /**
+     * The scale specification for the container service.
+     * 
+     */
     @OutputExport(name="scale", type=Integer.class, parameters={})
     private Output<Integer> scale;
 
+    /**
+     * @return The scale specification for the container service.
+     * 
+     */
     public Output<Integer> getScale() {
         return this.scale;
     }
+    /**
+     * The name for the container service.
+     * 
+     */
     @OutputExport(name="serviceName", type=String.class, parameters={})
     private Output<String> serviceName;
 
+    /**
+     * @return The name for the container service.
+     * 
+     */
     public Output<String> getServiceName() {
         return this.serviceName;
     }
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     @OutputExport(name="tags", type=List.class, parameters={ContainerTag.class})
     private Output</* @Nullable */ List<ContainerTag>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     */
     public Output</* @Nullable */ List<ContainerTag>> getTags() {
         return this.tags;
     }
+    /**
+     * The publicly accessible URL of the container service.
+     * 
+     */
     @OutputExport(name="url", type=String.class, parameters={})
     private Output<String> url;
 
+    /**
+     * @return The publicly accessible URL of the container service.
+     * 
+     */
     public Output<String> getUrl() {
         return this.url;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Container(String name, ContainerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:lightsail:Container", name, args == null ? ContainerArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -90,6 +164,14 @@ public class Container extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Container get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Container(name, id, options);
     }

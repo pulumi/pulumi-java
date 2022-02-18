@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties of the application rule protocol.
+ * 
+ */
 public final class FirewallPolicyRuleConditionApplicationProtocolResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FirewallPolicyRuleConditionApplicationProtocolResponse Empty = new FirewallPolicyRuleConditionApplicationProtocolResponse();
 
+    /**
+     * Port number for the protocol, cannot be greater than 64000.
+     * 
+     */
     @InputImport(name="port")
     private final @Nullable Integer port;
 
@@ -22,6 +30,10 @@ public final class FirewallPolicyRuleConditionApplicationProtocolResponse extend
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
     }
 
+    /**
+     * Protocol type.
+     * 
+     */
     @InputImport(name="protocolType")
     private final @Nullable String protocolType;
 

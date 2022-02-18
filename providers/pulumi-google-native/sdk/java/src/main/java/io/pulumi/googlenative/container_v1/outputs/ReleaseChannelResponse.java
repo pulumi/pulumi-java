@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ReleaseChannelResponse {
+    /**
+     * channel specifies which release channel the cluster is subscribed to.
+     * 
+     */
     private final String channel;
 
     @OutputCustomType.Constructor({"channel"})
@@ -16,6 +20,10 @@ public final class ReleaseChannelResponse {
         this.channel = Objects.requireNonNull(channel);
     }
 
+    /**
+     * channel specifies which release channel the cluster is subscribed to.
+     * 
+     */
     public String getChannel() {
         return this.channel;
     }

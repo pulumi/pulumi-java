@@ -14,6 +14,11 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeRsaArgs extends io.pulumi.r
 
     public static final CaPoolIssuancePolicyAllowedKeyTypeRsaArgs Empty = new CaPoolIssuancePolicyAllowedKeyTypeRsaArgs();
 
+    /**
+     * The maximum allowed RSA modulus size, in bits. If this is not set, or if set to zero, the
+     * service will not enforce an explicit upper bound on RSA modulus sizes.
+     * 
+     */
     @InputImport(name="maxModulusSize")
     private final @Nullable Input<String> maxModulusSize;
 
@@ -21,6 +26,11 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeRsaArgs extends io.pulumi.r
         return this.maxModulusSize == null ? Input.empty() : this.maxModulusSize;
     }
 
+    /**
+     * The minimum allowed RSA modulus size, in bits. If this is not set, or if set to zero, the
+     * service-level min RSA modulus size will continue to apply.
+     * 
+     */
     @InputImport(name="minModulusSize")
     private final @Nullable Input<String> minModulusSize;
 

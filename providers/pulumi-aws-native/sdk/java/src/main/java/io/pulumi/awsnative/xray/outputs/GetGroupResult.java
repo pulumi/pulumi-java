@@ -14,8 +14,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetGroupResult {
+    /**
+     * The filter expression defining criteria by which to group traces.
+     * 
+     */
     private final @Nullable String filterExpression;
+    /**
+     * The ARN of the group that was generated on creation.
+     * 
+     */
     private final @Nullable String groupARN;
+    /**
+     * The case-sensitive name of the new group. Names must be unique.
+     * 
+     */
     private final @Nullable String groupName;
     private final @Nullable GroupInsightsConfiguration insightsConfiguration;
     private final @Nullable List<TagsItemProperties> tags;
@@ -34,12 +46,24 @@ public final class GetGroupResult {
         this.tags = tags;
     }
 
+    /**
+     * The filter expression defining criteria by which to group traces.
+     * 
+     */
     public Optional<String> getFilterExpression() {
         return Optional.ofNullable(this.filterExpression);
     }
+    /**
+     * The ARN of the group that was generated on creation.
+     * 
+     */
     public Optional<String> getGroupARN() {
         return Optional.ofNullable(this.groupARN);
     }
+    /**
+     * The case-sensitive name of the new group. Names must be unique.
+     * 
+     */
     public Optional<String> getGroupName() {
         return Optional.ofNullable(this.groupName);
     }

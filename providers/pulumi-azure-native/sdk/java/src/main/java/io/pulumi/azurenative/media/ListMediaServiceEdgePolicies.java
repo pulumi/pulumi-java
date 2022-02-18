@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListMediaServiceEdgePolicies {
+/**
+ * API Version: 2020-05-01.
+ * 
+ */
     public static CompletableFuture<ListMediaServiceEdgePoliciesResult> invokeAsync(ListMediaServiceEdgePoliciesArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:media:listMediaServiceEdgePolicies", TypeShape.of(ListMediaServiceEdgePoliciesResult.class), args == null ? ListMediaServiceEdgePoliciesArgs.Empty : args, Utilities.withVersion(options));
     }

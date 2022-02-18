@@ -18,6 +18,10 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
 
     public static final BillingAccountSinkArgs Empty = new BillingAccountSinkArgs();
 
+    /**
+     * Options that affect sinks exporting data to BigQuery. Structure documented below.
+     * 
+     */
     @InputImport(name="bigqueryOptions")
     private final @Nullable Input<BillingAccountSinkBigqueryOptionsArgs> bigqueryOptions;
 
@@ -25,6 +29,10 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
         return this.bigqueryOptions == null ? Input.empty() : this.bigqueryOptions;
     }
 
+    /**
+     * The billing account exported to the sink.
+     * 
+     */
     @InputImport(name="billingAccount", required=true)
     private final Input<String> billingAccount;
 
@@ -32,6 +40,10 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
         return this.billingAccount;
     }
 
+    /**
+     * A description of this exclusion.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -39,6 +51,13 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The destination of the sink (or, in other words, where logs are written to). Can be a
+     * Cloud Storage bucket, a PubSub topic, a BigQuery dataset or a Cloud Logging bucket. Examples:
+     * 
+     * The writer associated with the sink must have access to write to the above resource.
+     * 
+     */
     @InputImport(name="destination", required=true)
     private final Input<String> destination;
 
@@ -46,6 +65,10 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
         return this.destination;
     }
 
+    /**
+     * If set to True, then this exclusion is disabled and it does not exclude any log entries.
+     * 
+     */
     @InputImport(name="disabled")
     private final @Nullable Input<Boolean> disabled;
 
@@ -53,6 +76,10 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
         return this.disabled == null ? Input.empty() : this.disabled;
     }
 
+    /**
+     * Log entries that match any of the exclusion filters will not be exported. If a log entry is matched by both filter and one of exclusion_filters it will not be exported.  Can be repeated multiple times for multiple exclusions. Structure is documented below.
+     * 
+     */
     @InputImport(name="exclusions")
     private final @Nullable Input<List<BillingAccountSinkExclusionArgs>> exclusions;
 
@@ -60,6 +87,11 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
         return this.exclusions == null ? Input.empty() : this.exclusions;
     }
 
+    /**
+     * An advanced logs filter that matches the log entries to be excluded. By using the sample function, you can exclude less than 100% of the matching log entries. See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced_filters) for information on how to
+     * write a filter.
+     * 
+     */
     @InputImport(name="filter")
     private final @Nullable Input<String> filter;
 
@@ -67,6 +99,10 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
         return this.filter == null ? Input.empty() : this.filter;
     }
 
+    /**
+     * A client-assigned identifier, such as `load-balancer-exclusion`. Identifiers are limited to 100 characters and can include only letters, digits, underscores, hyphens, and periods. First character has to be alphanumeric.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

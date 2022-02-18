@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes HttpsTrigger, could be used to connect web hooks to function.
+ * 
+ */
 public final class HttpsTriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HttpsTriggerArgs Empty = new HttpsTriggerArgs();
 
+    /**
+     * The security level for the function.
+     * 
+     */
     @InputImport(name="securityLevel")
     private final @Nullable Input<HttpsTriggerSecurityLevel> securityLevel;
 

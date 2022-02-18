@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CloudHealthcareSourceResponse {
+    /**
+     * Full path of a Cloud Healthcare API resource.
+     * 
+     */
     private final String name;
 
     @OutputCustomType.Constructor({"name"})
@@ -16,6 +20,10 @@ public final class CloudHealthcareSourceResponse {
         this.name = Objects.requireNonNull(name);
     }
 
+    /**
+     * Full path of a Cloud Healthcare API resource.
+     * 
+     */
     public String getName() {
         return this.name;
     }

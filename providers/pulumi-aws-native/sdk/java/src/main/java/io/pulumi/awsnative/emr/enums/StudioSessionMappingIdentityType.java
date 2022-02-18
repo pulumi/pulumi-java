@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Specifies whether the identity to map to the Studio is a user or a group.
+     * 
+     */
     @EnumType
     public enum StudioSessionMappingIdentityType {
         User("USER"),

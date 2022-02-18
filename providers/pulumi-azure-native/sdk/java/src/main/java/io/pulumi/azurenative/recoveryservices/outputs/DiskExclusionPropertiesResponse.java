@@ -13,7 +13,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DiskExclusionPropertiesResponse {
+    /**
+     * List of Disks' Logical Unit Numbers (LUN) to be used for VM Protection.
+     * 
+     */
     private final @Nullable List<Integer> diskLunList;
+    /**
+     * Flag to indicate whether DiskLunList is to be included/ excluded from backup.
+     * 
+     */
     private final @Nullable Boolean isInclusionList;
 
     @OutputCustomType.Constructor({"diskLunList","isInclusionList"})
@@ -24,9 +32,17 @@ public final class DiskExclusionPropertiesResponse {
         this.isInclusionList = isInclusionList;
     }
 
+    /**
+     * List of Disks' Logical Unit Numbers (LUN) to be used for VM Protection.
+     * 
+     */
     public List<Integer> getDiskLunList() {
         return this.diskLunList == null ? List.of() : this.diskLunList;
     }
+    /**
+     * Flag to indicate whether DiskLunList is to be included/ excluded from backup.
+     * 
+     */
     public Optional<Boolean> getIsInclusionList() {
         return Optional.ofNullable(this.isInclusionList);
     }

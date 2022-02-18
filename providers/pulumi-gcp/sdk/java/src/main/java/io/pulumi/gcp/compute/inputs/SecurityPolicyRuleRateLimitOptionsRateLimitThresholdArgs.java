@@ -13,6 +13,10 @@ public final class SecurityPolicyRuleRateLimitOptionsRateLimitThresholdArgs exte
 
     public static final SecurityPolicyRuleRateLimitOptionsRateLimitThresholdArgs Empty = new SecurityPolicyRuleRateLimitOptionsRateLimitThresholdArgs();
 
+    /**
+     * Number of HTTP(S) requests for calculating the threshold.
+     * 
+     */
     @InputImport(name="count", required=true)
     private final Input<Integer> count;
 
@@ -20,6 +24,10 @@ public final class SecurityPolicyRuleRateLimitOptionsRateLimitThresholdArgs exte
         return this.count;
     }
 
+    /**
+     * Interval over which the threshold is computed.
+     * 
+     */
     @InputImport(name="intervalSec", required=true)
     private final Input<Integer> intervalSec;
 

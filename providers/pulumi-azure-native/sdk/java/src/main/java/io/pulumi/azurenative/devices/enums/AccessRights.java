@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The permissions assigned to the shared access policy.
+     * 
+     */
     @EnumType
     public enum AccessRights {
         RegistryRead("RegistryRead"),

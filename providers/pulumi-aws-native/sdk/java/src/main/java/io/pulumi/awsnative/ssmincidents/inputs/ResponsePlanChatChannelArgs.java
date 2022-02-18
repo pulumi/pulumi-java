@@ -11,6 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The chat channel configuration.
+ * 
+ */
 public final class ResponsePlanChatChannelArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResponsePlanChatChannelArgs Empty = new ResponsePlanChatChannelArgs();

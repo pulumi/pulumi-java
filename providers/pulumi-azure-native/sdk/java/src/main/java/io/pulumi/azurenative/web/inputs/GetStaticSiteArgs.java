@@ -12,6 +12,10 @@ public final class GetStaticSiteArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetStaticSiteArgs Empty = new GetStaticSiteArgs();
 
+    /**
+     * Name of the static site.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -19,6 +23,10 @@ public final class GetStaticSiteArgs extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

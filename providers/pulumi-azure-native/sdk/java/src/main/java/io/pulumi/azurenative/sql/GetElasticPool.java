@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetElasticPool {
+/**
+ * An elastic pool.
+ * API Version: 2020-11-01-preview.
+ * 
+ *
+ * An elastic pool.
+ * 
+ */
     public static CompletableFuture<GetElasticPoolResult> invokeAsync(GetElasticPoolArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getElasticPool", TypeShape.of(GetElasticPoolResult.class), args == null ? GetElasticPoolArgs.Empty : args, Utilities.withVersion(options));
     }

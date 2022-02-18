@@ -13,6 +13,11 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class LaunchProfileStreamConfigurationSessionStorage {
+    /**
+     * <p>Allows artists to upload files to their workstations. The only valid option is
+     *                 <code>UPLOAD</code>.</p>
+     * 
+     */
     private final @Nullable List<LaunchProfileStreamingSessionStorageMode> mode;
     private final @Nullable LaunchProfileStreamingSessionStorageRoot root;
 
@@ -24,6 +29,11 @@ public final class LaunchProfileStreamConfigurationSessionStorage {
         this.root = root;
     }
 
+    /**
+     * <p>Allows artists to upload files to their workstations. The only valid option is
+     *                 <code>UPLOAD</code>.</p>
+     * 
+     */
     public List<LaunchProfileStreamingSessionStorageMode> getMode() {
         return this.mode == null ? List.of() : this.mode;
     }

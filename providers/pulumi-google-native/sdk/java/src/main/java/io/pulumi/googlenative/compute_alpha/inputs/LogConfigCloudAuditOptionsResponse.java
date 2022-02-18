@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * This is deprecated and has no effect. Do not use.
+ * 
+ */
 public final class LogConfigCloudAuditOptionsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LogConfigCloudAuditOptionsResponse Empty = new LogConfigCloudAuditOptionsResponse();
 
+    /**
+     * This is deprecated and has no effect. Do not use.
+     * 
+     */
     @InputImport(name="authorizationLoggingOptions", required=true)
     private final AuthorizationLoggingOptionsResponse authorizationLoggingOptions;
 
@@ -20,6 +28,10 @@ public final class LogConfigCloudAuditOptionsResponse extends io.pulumi.resource
         return this.authorizationLoggingOptions;
     }
 
+    /**
+     * This is deprecated and has no effect. Do not use.
+     * 
+     */
     @InputImport(name="logName", required=true)
     private final String logName;
 

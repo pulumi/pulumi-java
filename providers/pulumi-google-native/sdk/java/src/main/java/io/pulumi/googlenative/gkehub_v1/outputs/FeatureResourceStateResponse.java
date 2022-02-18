@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class FeatureResourceStateResponse {
+    /**
+     * The current state of the Feature resource in the Hub API.
+     * 
+     */
     private final String state;
 
     @OutputCustomType.Constructor({"state"})
@@ -16,6 +20,10 @@ public final class FeatureResourceStateResponse {
         this.state = Objects.requireNonNull(state);
     }
 
+    /**
+     * The current state of the Feature resource in the Hub API.
+     * 
+     */
     public String getState() {
         return this.state;
     }

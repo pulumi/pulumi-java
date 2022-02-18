@@ -10,10 +10,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The mapping for the `Job.edit_list` atoms with text `EditAtom.inputs`.
+ * 
+ */
 public final class TextMappingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TextMappingArgs Empty = new TextMappingArgs();
 
+    /**
+     * The `EditAtom.key` that references atom with text inputs in the `Job.edit_list`.
+     * 
+     */
     @InputImport(name="atomKey", required=true)
     private final Input<String> atomKey;
 
@@ -21,6 +29,10 @@ public final class TextMappingArgs extends io.pulumi.resources.ResourceArgs {
         return this.atomKey;
     }
 
+    /**
+     * The `Input.key` that identifies the input file.
+     * 
+     */
     @InputImport(name="inputKey", required=true)
     private final Input<String> inputKey;
 
@@ -28,6 +40,10 @@ public final class TextMappingArgs extends io.pulumi.resources.ResourceArgs {
         return this.inputKey;
     }
 
+    /**
+     * The zero-based index of the track in the input file.
+     * 
+     */
     @InputImport(name="inputTrack", required=true)
     private final Input<Integer> inputTrack;
 

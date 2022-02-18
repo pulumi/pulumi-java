@@ -14,6 +14,10 @@ public final class BucketOwnershipControlsRuleArgs extends io.pulumi.resources.R
 
     public static final BucketOwnershipControlsRuleArgs Empty = new BucketOwnershipControlsRuleArgs();
 
+    /**
+     * Specifies an object ownership rule.
+     * 
+     */
     @InputImport(name="objectOwnership")
     private final @Nullable Input<BucketOwnershipControlsRuleObjectOwnership> objectOwnership;
 

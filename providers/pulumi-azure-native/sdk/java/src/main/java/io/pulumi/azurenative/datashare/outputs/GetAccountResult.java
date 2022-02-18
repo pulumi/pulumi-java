@@ -14,16 +14,60 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetAccountResult {
+    /**
+     * Time at which the account was created.
+     * 
+     */
     private final String createdAt;
+    /**
+     * The resource id of the azure resource
+     * 
+     */
     private final String id;
+    /**
+     * Identity Info on the Account
+     * 
+     */
     private final IdentityResponse identity;
+    /**
+     * Location of the azure resource.
+     * 
+     */
     private final @Nullable String location;
+    /**
+     * Name of the azure resource
+     * 
+     */
     private final String name;
+    /**
+     * Provisioning state of the Account
+     * 
+     */
     private final String provisioningState;
+    /**
+     * System Data of the Azure resource.
+     * 
+     */
     private final SystemDataResponse systemData;
+    /**
+     * Tags on the azure resource.
+     * 
+     */
     private final @Nullable Map<String,String> tags;
+    /**
+     * Type of the azure resource
+     * 
+     */
     private final String type;
+    /**
+     * Email of the user who created the resource
+     * 
+     */
     private final String userEmail;
+    /**
+     * Name of the user who created the resource
+     * 
+     */
     private final String userName;
 
     @OutputCustomType.Constructor({"createdAt","id","identity","location","name","provisioningState","systemData","tags","type","userEmail","userName"})
@@ -52,36 +96,80 @@ public final class GetAccountResult {
         this.userName = Objects.requireNonNull(userName);
     }
 
+    /**
+     * Time at which the account was created.
+     * 
+     */
     public String getCreatedAt() {
         return this.createdAt;
     }
+    /**
+     * The resource id of the azure resource
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Identity Info on the Account
+     * 
+     */
     public IdentityResponse getIdentity() {
         return this.identity;
     }
+    /**
+     * Location of the azure resource.
+     * 
+     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
+    /**
+     * Name of the azure resource
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Provisioning state of the Account
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * System Data of the Azure resource.
+     * 
+     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+    /**
+     * Tags on the azure resource.
+     * 
+     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+    /**
+     * Type of the azure resource
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * Email of the user who created the resource
+     * 
+     */
     public String getUserEmail() {
         return this.userEmail;
     }
+    /**
+     * Name of the user who created the resource
+     * 
+     */
     public String getUserName() {
         return this.userName;
     }

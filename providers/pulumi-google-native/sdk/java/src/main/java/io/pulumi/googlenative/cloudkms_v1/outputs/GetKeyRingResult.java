@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetKeyRingResult {
+    /**
+     * The time at which this KeyRing was created.
+     * 
+     */
     private final String createTime;
+    /**
+     * The resource name for the KeyRing in the format `projects/*{@literal /}locations/*{@literal /}keyRings/*`.
+     * 
+     */
     private final String name;
 
     @OutputCustomType.Constructor({"createTime","name"})
@@ -20,9 +28,17 @@ public final class GetKeyRingResult {
         this.name = Objects.requireNonNull(name);
     }
 
+    /**
+     * The time at which this KeyRing was created.
+     * 
+     */
     public String getCreateTime() {
         return this.createTime;
     }
+    /**
+     * The resource name for the KeyRing in the format `projects/*{@literal /}locations/*{@literal /}keyRings/*`.
+     * 
+     */
     public String getName() {
         return this.name;
     }

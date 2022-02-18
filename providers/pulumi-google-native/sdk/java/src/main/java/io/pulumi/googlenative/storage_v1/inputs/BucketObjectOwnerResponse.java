@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The owner of the object. This will always be the uploader of the object.
+ * 
+ */
 public final class BucketObjectOwnerResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BucketObjectOwnerResponse Empty = new BucketObjectOwnerResponse();
 
+    /**
+     * The entity, in the form user-userId.
+     * 
+     */
     @InputImport(name="entity", required=true)
     private final String entity;
 
@@ -19,6 +27,10 @@ public final class BucketObjectOwnerResponse extends io.pulumi.resources.InvokeA
         return this.entity;
     }
 
+    /**
+     * The ID for the entity.
+     * 
+     */
     @InputImport(name="entityId", required=true)
     private final String entityId;
 

@@ -17,10 +17,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Network security rule.
+ * 
+ */
 public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SecurityRuleArgs Empty = new SecurityRuleArgs();
 
+    /**
+     * The network traffic is allowed or denied.
+     * 
+     */
     @InputImport(name="access", required=true)
     private final Input<Either<String,SecurityRuleAccess>> access;
 
@@ -28,6 +36,10 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.access;
     }
 
+    /**
+     * A description for this rule. Restricted to 140 chars.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -35,6 +47,10 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The destination address prefix. CIDR or destination IP range. Asterisk '*' can also be used to match all source IPs. Default tags such as 'VirtualNetwork', 'AzureLoadBalancer' and 'Internet' can also be used.
+     * 
+     */
     @InputImport(name="destinationAddressPrefix")
     private final @Nullable Input<String> destinationAddressPrefix;
 
@@ -42,6 +58,10 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.destinationAddressPrefix == null ? Input.empty() : this.destinationAddressPrefix;
     }
 
+    /**
+     * The destination address prefixes. CIDR or destination IP ranges.
+     * 
+     */
     @InputImport(name="destinationAddressPrefixes")
     private final @Nullable Input<List<String>> destinationAddressPrefixes;
 
@@ -49,6 +69,10 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.destinationAddressPrefixes == null ? Input.empty() : this.destinationAddressPrefixes;
     }
 
+    /**
+     * The application security group specified as destination.
+     * 
+     */
     @InputImport(name="destinationApplicationSecurityGroups")
     private final @Nullable Input<List<ApplicationSecurityGroupArgs>> destinationApplicationSecurityGroups;
 
@@ -56,6 +80,10 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.destinationApplicationSecurityGroups == null ? Input.empty() : this.destinationApplicationSecurityGroups;
     }
 
+    /**
+     * The destination port or range. Integer or range between 0 and 65535. Asterisk '*' can also be used to match all ports.
+     * 
+     */
     @InputImport(name="destinationPortRange")
     private final @Nullable Input<String> destinationPortRange;
 
@@ -63,6 +91,10 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.destinationPortRange == null ? Input.empty() : this.destinationPortRange;
     }
 
+    /**
+     * The destination port ranges.
+     * 
+     */
     @InputImport(name="destinationPortRanges")
     private final @Nullable Input<List<String>> destinationPortRanges;
 
@@ -70,6 +102,10 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.destinationPortRanges == null ? Input.empty() : this.destinationPortRanges;
     }
 
+    /**
+     * The direction of the rule. The direction specifies if rule will be evaluated on incoming or outgoing traffic.
+     * 
+     */
     @InputImport(name="direction", required=true)
     private final Input<Either<String,SecurityRuleDirection>> direction;
 
@@ -77,6 +113,10 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.direction;
     }
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -84,6 +124,10 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -91,6 +135,10 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The priority of the rule. The value can be between 100 and 4096. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule.
+     * 
+     */
     @InputImport(name="priority")
     private final @Nullable Input<Integer> priority;
 
@@ -98,6 +146,10 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.priority == null ? Input.empty() : this.priority;
     }
 
+    /**
+     * Network protocol this rule applies to.
+     * 
+     */
     @InputImport(name="protocol", required=true)
     private final Input<Either<String,SecurityRuleProtocol>> protocol;
 
@@ -105,6 +157,10 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.protocol;
     }
 
+    /**
+     * The CIDR or source IP range. Asterisk '*' can also be used to match all source IPs. Default tags such as 'VirtualNetwork', 'AzureLoadBalancer' and 'Internet' can also be used. If this is an ingress rule, specifies where network traffic originates from.
+     * 
+     */
     @InputImport(name="sourceAddressPrefix")
     private final @Nullable Input<String> sourceAddressPrefix;
 
@@ -112,6 +168,10 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceAddressPrefix == null ? Input.empty() : this.sourceAddressPrefix;
     }
 
+    /**
+     * The CIDR or source IP ranges.
+     * 
+     */
     @InputImport(name="sourceAddressPrefixes")
     private final @Nullable Input<List<String>> sourceAddressPrefixes;
 
@@ -119,6 +179,10 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceAddressPrefixes == null ? Input.empty() : this.sourceAddressPrefixes;
     }
 
+    /**
+     * The application security group specified as source.
+     * 
+     */
     @InputImport(name="sourceApplicationSecurityGroups")
     private final @Nullable Input<List<ApplicationSecurityGroupArgs>> sourceApplicationSecurityGroups;
 
@@ -126,6 +190,10 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceApplicationSecurityGroups == null ? Input.empty() : this.sourceApplicationSecurityGroups;
     }
 
+    /**
+     * The source port or range. Integer or range between 0 and 65535. Asterisk '*' can also be used to match all ports.
+     * 
+     */
     @InputImport(name="sourcePortRange")
     private final @Nullable Input<String> sourcePortRange;
 
@@ -133,6 +201,10 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourcePortRange == null ? Input.empty() : this.sourcePortRange;
     }
 
+    /**
+     * The source port ranges.
+     * 
+     */
     @InputImport(name="sourcePortRanges")
     private final @Nullable Input<List<String>> sourcePortRanges;
 
@@ -140,6 +212,10 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourcePortRanges == null ? Input.empty() : this.sourcePortRanges;
     }
 
+    /**
+     * The type of the resource.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 

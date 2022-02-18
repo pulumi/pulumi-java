@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The type of document to create.
+     * 
+     */
     @EnumType
     public enum DocumentType {
         ApplicationConfiguration("ApplicationConfiguration"),

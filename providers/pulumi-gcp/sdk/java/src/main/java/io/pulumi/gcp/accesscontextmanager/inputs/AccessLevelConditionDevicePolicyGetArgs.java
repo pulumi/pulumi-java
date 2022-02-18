@@ -17,6 +17,12 @@ public final class AccessLevelConditionDevicePolicyGetArgs extends io.pulumi.res
 
     public static final AccessLevelConditionDevicePolicyGetArgs Empty = new AccessLevelConditionDevicePolicyGetArgs();
 
+    /**
+     * A list of allowed device management levels.
+     * An empty list allows all management levels.
+     * Each value may be one of `MANAGEMENT_UNSPECIFIED`, `NONE`, `BASIC`, and `COMPLETE`.
+     * 
+     */
     @InputImport(name="allowedDeviceManagementLevels")
     private final @Nullable Input<List<String>> allowedDeviceManagementLevels;
 
@@ -24,6 +30,12 @@ public final class AccessLevelConditionDevicePolicyGetArgs extends io.pulumi.res
         return this.allowedDeviceManagementLevels == null ? Input.empty() : this.allowedDeviceManagementLevels;
     }
 
+    /**
+     * A list of allowed encryptions statuses.
+     * An empty list allows all statuses.
+     * Each value may be one of `ENCRYPTION_UNSPECIFIED`, `ENCRYPTION_UNSUPPORTED`, `UNENCRYPTED`, and `ENCRYPTED`.
+     * 
+     */
     @InputImport(name="allowedEncryptionStatuses")
     private final @Nullable Input<List<String>> allowedEncryptionStatuses;
 
@@ -31,6 +43,12 @@ public final class AccessLevelConditionDevicePolicyGetArgs extends io.pulumi.res
         return this.allowedEncryptionStatuses == null ? Input.empty() : this.allowedEncryptionStatuses;
     }
 
+    /**
+     * A list of allowed OS versions.
+     * An empty list allows all types and all versions.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="osConstraints")
     private final @Nullable Input<List<AccessLevelConditionDevicePolicyOsConstraintGetArgs>> osConstraints;
 
@@ -38,6 +56,10 @@ public final class AccessLevelConditionDevicePolicyGetArgs extends io.pulumi.res
         return this.osConstraints == null ? Input.empty() : this.osConstraints;
     }
 
+    /**
+     * Whether the device needs to be approved by the customer admin.
+     * 
+     */
     @InputImport(name="requireAdminApproval")
     private final @Nullable Input<Boolean> requireAdminApproval;
 
@@ -45,6 +67,10 @@ public final class AccessLevelConditionDevicePolicyGetArgs extends io.pulumi.res
         return this.requireAdminApproval == null ? Input.empty() : this.requireAdminApproval;
     }
 
+    /**
+     * Whether the device needs to be corp owned.
+     * 
+     */
     @InputImport(name="requireCorpOwned")
     private final @Nullable Input<Boolean> requireCorpOwned;
 
@@ -52,6 +78,11 @@ public final class AccessLevelConditionDevicePolicyGetArgs extends io.pulumi.res
         return this.requireCorpOwned == null ? Input.empty() : this.requireCorpOwned;
     }
 
+    /**
+     * Whether or not screenlock is required for the DevicePolicy
+     * to be true. Defaults to false.
+     * 
+     */
     @InputImport(name="requireScreenLock")
     private final @Nullable Input<Boolean> requireScreenLock;
 

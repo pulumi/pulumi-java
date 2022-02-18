@@ -22,6 +22,10 @@ public final class IamMemberArgs extends io.pulumi.resources.ResourceArgs {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
+    /**
+     * The location of the cloud run instance. eg us-central1 Used to find the parent resource to bind the IAM policy to
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -36,6 +40,11 @@ public final class IamMemberArgs extends io.pulumi.resources.ResourceArgs {
         return this.member;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -43,6 +52,12 @@ public final class IamMemberArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The role that should be applied. Only one
+     * `gcp.cloudrun.IamBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     @InputImport(name="role", required=true)
     private final Input<String> role;
 
@@ -50,6 +65,10 @@ public final class IamMemberArgs extends io.pulumi.resources.ResourceArgs {
         return this.role;
     }
 
+    /**
+     * Used to find the parent resource to bind the IAM policy to
+     * 
+     */
     @InputImport(name="service", required=true)
     private final Input<String> service;
 

@@ -16,10 +16,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Define a match condition
+ * 
+ */
 public final class RulesEngineMatchConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RulesEngineMatchConditionArgs Empty = new RulesEngineMatchConditionArgs();
 
+    /**
+     * Describes if this is negate condition or not
+     * 
+     */
     @InputImport(name="negateCondition")
     private final @Nullable Input<Boolean> negateCondition;
 
@@ -27,6 +35,10 @@ public final class RulesEngineMatchConditionArgs extends io.pulumi.resources.Res
         return this.negateCondition == null ? Input.empty() : this.negateCondition;
     }
 
+    /**
+     * Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.
+     * 
+     */
     @InputImport(name="rulesEngineMatchValue", required=true)
     private final Input<List<String>> rulesEngineMatchValue;
 
@@ -34,6 +46,10 @@ public final class RulesEngineMatchConditionArgs extends io.pulumi.resources.Res
         return this.rulesEngineMatchValue;
     }
 
+    /**
+     * Match Variable
+     * 
+     */
     @InputImport(name="rulesEngineMatchVariable", required=true)
     private final Input<Either<String,RulesEngineMatchVariable>> rulesEngineMatchVariable;
 
@@ -41,6 +57,10 @@ public final class RulesEngineMatchConditionArgs extends io.pulumi.resources.Res
         return this.rulesEngineMatchVariable;
     }
 
+    /**
+     * Describes operator to apply to the match condition.
+     * 
+     */
     @InputImport(name="rulesEngineOperator", required=true)
     private final Input<Either<String,RulesEngineOperator>> rulesEngineOperator;
 
@@ -48,6 +68,10 @@ public final class RulesEngineMatchConditionArgs extends io.pulumi.resources.Res
         return this.rulesEngineOperator;
     }
 
+    /**
+     * Name of selector in RequestHeader or RequestBody to be matched
+     * 
+     */
     @InputImport(name="selector")
     private final @Nullable Input<String> selector;
 
@@ -55,6 +79,10 @@ public final class RulesEngineMatchConditionArgs extends io.pulumi.resources.Res
         return this.selector == null ? Input.empty() : this.selector;
     }
 
+    /**
+     * List of transforms
+     * 
+     */
     @InputImport(name="transforms")
     private final @Nullable Input<List<Either<String,Transform>>> transforms;
 

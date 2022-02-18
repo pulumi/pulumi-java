@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CertHttpChallengeResponse {
+    /**
+     * The URL path on which to serve the specified token to satisfy the certificate challenge.
+     * 
+     */
     private final String path;
+    /**
+     * The token to serve at the specified URL path to satisfy the certificate challenge.
+     * 
+     */
     private final String token;
 
     @OutputCustomType.Constructor({"path","token"})
@@ -20,9 +28,17 @@ public final class CertHttpChallengeResponse {
         this.token = Objects.requireNonNull(token);
     }
 
+    /**
+     * The URL path on which to serve the specified token to satisfy the certificate challenge.
+     * 
+     */
     public String getPath() {
         return this.path;
     }
+    /**
+     * The token to serve at the specified URL path to satisfy the certificate challenge.
+     * 
+     */
     public String getToken() {
         return this.token;
     }

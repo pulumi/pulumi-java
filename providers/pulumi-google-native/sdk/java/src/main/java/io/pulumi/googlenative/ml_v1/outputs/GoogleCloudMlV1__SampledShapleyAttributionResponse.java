@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudMlV1__SampledShapleyAttributionResponse {
+    /**
+     * The number of feature permutations to consider when approximating the Shapley values.
+     * 
+     */
     private final Integer numPaths;
 
     @OutputCustomType.Constructor({"numPaths"})
@@ -16,6 +20,10 @@ public final class GoogleCloudMlV1__SampledShapleyAttributionResponse {
         this.numPaths = Objects.requireNonNull(numPaths);
     }
 
+    /**
+     * The number of feature permutations to consider when approximating the Shapley values.
+     * 
+     */
     public Integer getNumPaths() {
         return this.numPaths;
     }

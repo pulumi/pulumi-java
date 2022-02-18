@@ -12,9 +12,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DailyScheduleResponse {
+    /**
+     * Indicates which hour in UTC timezone a snapshot should be taken
+     * 
+     */
     private final @Nullable Integer hour;
+    /**
+     * Indicates which minute snapshot should be taken
+     * 
+     */
     private final @Nullable Integer minute;
+    /**
+     * Daily snapshot count to keep
+     * 
+     */
     private final @Nullable Integer snapshotsToKeep;
+    /**
+     * Resource size in bytes, current storage usage for the volume in bytes
+     * 
+     */
     private final @Nullable Double usedBytes;
 
     @OutputCustomType.Constructor({"hour","minute","snapshotsToKeep","usedBytes"})
@@ -29,15 +45,31 @@ public final class DailyScheduleResponse {
         this.usedBytes = usedBytes;
     }
 
+    /**
+     * Indicates which hour in UTC timezone a snapshot should be taken
+     * 
+     */
     public Optional<Integer> getHour() {
         return Optional.ofNullable(this.hour);
     }
+    /**
+     * Indicates which minute snapshot should be taken
+     * 
+     */
     public Optional<Integer> getMinute() {
         return Optional.ofNullable(this.minute);
     }
+    /**
+     * Daily snapshot count to keep
+     * 
+     */
     public Optional<Integer> getSnapshotsToKeep() {
         return Optional.ofNullable(this.snapshotsToKeep);
     }
+    /**
+     * Resource size in bytes, current storage usage for the volume in bytes
+     * 
+     */
     public Optional<Double> getUsedBytes() {
         return Optional.ofNullable(this.usedBytes);
     }

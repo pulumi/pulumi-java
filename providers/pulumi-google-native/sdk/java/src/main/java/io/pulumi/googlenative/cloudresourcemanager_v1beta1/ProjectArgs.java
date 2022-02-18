@@ -17,6 +17,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ProjectArgs Empty = new ProjectArgs();
 
+    /**
+     * Creation time. Read-only.
+     * 
+     */
     @InputImport(name="createTime")
     private final @Nullable Input<String> createTime;
 
@@ -24,6 +28,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.createTime == null ? Input.empty() : this.createTime;
     }
 
+    /**
+     * The labels associated with this Project. Label keys must be between 1 and 63 characters long and must conform to the following regular expression: a-z{0,62}. Label values must be between 0 and 63 characters long and must conform to the regular expression [a-z0-9_-]{0,63}. A label value can be empty. No more than 256 labels can be associated with a given resource. Clients should store labels in a representation such as JSON that does not depend on specific characters being disallowed. Example: `"environment" : "dev"` Read-write.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -31,6 +39,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The Project lifecycle state. Read-only.
+     * 
+     */
     @InputImport(name="lifecycleState")
     private final @Nullable Input<ProjectLifecycleState> lifecycleState;
 
@@ -38,6 +50,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.lifecycleState == null ? Input.empty() : this.lifecycleState;
     }
 
+    /**
+     * The optional user-assigned display name of the Project. When present it must be between 4 to 30 characters. Allowed characters are: lowercase and uppercase letters, numbers, hyphen, single-quote, double-quote, space, and exclamation point. Example: `My Project` Read-write.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -45,6 +61,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * An optional reference to a parent Resource. Supported parent types include "organization" and "folder". Once set, the parent cannot be cleared. The `parent` can be set on creation or using the `UpdateProject` method; the end user must have the `resourcemanager.projects.create` permission on the parent. Read-write.
+     * 
+     */
     @InputImport(name="parent")
     private final @Nullable Input<ResourceIdArgs> parent;
 
@@ -52,6 +72,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.parent == null ? Input.empty() : this.parent;
     }
 
+    /**
+     * The unique, user-assigned ID of the Project. It must be 6 to 30 lowercase letters, digits, or hyphens. It must start with a letter. Trailing hyphens are prohibited. Example: `tokyo-rain-123` Read-only after creation.
+     * 
+     */
     @InputImport(name="projectId")
     private final @Nullable Input<String> projectId;
 
@@ -59,6 +83,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.projectId == null ? Input.empty() : this.projectId;
     }
 
+    /**
+     * The number uniquely identifying the project. Example: `415104041262` Read-only.
+     * 
+     */
     @InputImport(name="projectNumber")
     private final @Nullable Input<String> projectNumber;
 

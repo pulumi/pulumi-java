@@ -12,6 +12,10 @@ public final class GetProjectArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetProjectArgs Empty = new GetProjectArgs();
 
+    /**
+     * Project name
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

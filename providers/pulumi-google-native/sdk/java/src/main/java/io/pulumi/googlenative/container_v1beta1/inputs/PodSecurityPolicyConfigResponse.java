@@ -8,10 +8,18 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
+/**
+ * Configuration for the PodSecurityPolicy feature.
+ * 
+ */
 public final class PodSecurityPolicyConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PodSecurityPolicyConfigResponse Empty = new PodSecurityPolicyConfigResponse();
 
+    /**
+     * Enable the PodSecurityPolicy controller for this cluster. If enabled, pods must be valid under a PodSecurityPolicy to be created.
+     * 
+     */
     @InputImport(name="enabled", required=true)
     private final Boolean enabled;
 

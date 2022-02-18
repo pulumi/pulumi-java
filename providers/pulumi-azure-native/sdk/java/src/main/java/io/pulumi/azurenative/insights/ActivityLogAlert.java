@@ -18,63 +18,156 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * An Activity Log Alert rule resource.
+ * API Version: 2020-10-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:insights:ActivityLogAlert SampleActivityLogAlertRuleWithContainsAny /subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/MyResourceGroup/providers/microsoft.insights/activityLogAlerts/SampleActivityLogAlertRuleWithContainsAny 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:insights:ActivityLogAlert")
 public class ActivityLogAlert extends io.pulumi.resources.CustomResource {
+    /**
+     * The actions that will activate when the condition is met.
+     * 
+     */
     @OutputExport(name="actions", type=ActionListResponse.class, parameters={})
     private Output<ActionListResponse> actions;
 
+    /**
+     * @return The actions that will activate when the condition is met.
+     * 
+     */
     public Output<ActionListResponse> getActions() {
         return this.actions;
     }
+    /**
+     * The condition that will cause this alert to activate.
+     * 
+     */
     @OutputExport(name="condition", type=AlertRuleAllOfConditionResponse.class, parameters={})
     private Output<AlertRuleAllOfConditionResponse> condition;
 
+    /**
+     * @return The condition that will cause this alert to activate.
+     * 
+     */
     public Output<AlertRuleAllOfConditionResponse> getCondition() {
         return this.condition;
     }
+    /**
+     * A description of this Activity Log Alert rule.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return A description of this Activity Log Alert rule.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * Indicates whether this Activity Log Alert rule is enabled. If an Activity Log Alert rule is not enabled, then none of its actions will be activated.
+     * 
+     */
     @OutputExport(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
+    /**
+     * @return Indicates whether this Activity Log Alert rule is enabled. If an Activity Log Alert rule is not enabled, then none of its actions will be activated.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getEnabled() {
         return this.enabled;
     }
+    /**
+     * The location of the resource. Since Azure Activity Log Alerts is a global service, the location of the rules should always be 'global'.
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return The location of the resource. Since Azure Activity Log Alerts is a global service, the location of the rules should always be 'global'.
+     * 
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * The name of the resource.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * A list of resource IDs that will be used as prefixes. The alert will only apply to Activity Log events with resource IDs that fall under one of these prefixes. This list must include at least one item.
+     * 
+     */
     @OutputExport(name="scopes", type=List.class, parameters={String.class})
     private Output<List<String>> scopes;
 
+    /**
+     * @return A list of resource IDs that will be used as prefixes. The alert will only apply to Activity Log events with resource IDs that fall under one of these prefixes. This list must include at least one item.
+     * 
+     */
     public Output<List<String>> getScopes() {
         return this.scopes;
     }
+    /**
+     * The tags of the resource.
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return The tags of the resource.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * The type of the resource.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ActivityLogAlert(String name, ActivityLogAlertArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:insights:ActivityLogAlert", name, args == null ? ActivityLogAlertArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -94,6 +187,14 @@ public class ActivityLogAlert extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ActivityLogAlert get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ActivityLogAlert(name, id, options);
     }

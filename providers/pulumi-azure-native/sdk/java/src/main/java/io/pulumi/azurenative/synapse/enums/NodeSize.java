@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The level of compute power that each node in the Big Data pool has.
+     * 
+     */
     @EnumType
     public enum NodeSize {
         None("None"),

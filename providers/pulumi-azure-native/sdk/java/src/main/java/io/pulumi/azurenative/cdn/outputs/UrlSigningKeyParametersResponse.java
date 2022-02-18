@@ -12,9 +12,26 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class UrlSigningKeyParametersResponse {
+    /**
+     * Defines the customer defined key Id. This id will exist in the incoming request to indicate the key used to form the hash.
+     * 
+     */
     private final String keyId;
+    /**
+     * Resource reference to the KV secret
+     * 
+     */
     private final ResourceReferenceResponse secretSource;
+    /**
+     * Version of the secret to be used
+     * 
+     */
     private final @Nullable String secretVersion;
+    /**
+     * The type of the Secret to create.
+     * Expected value is 'UrlSigningKey'.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"keyId","secretSource","secretVersion","type"})
@@ -29,15 +46,32 @@ public final class UrlSigningKeyParametersResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Defines the customer defined key Id. This id will exist in the incoming request to indicate the key used to form the hash.
+     * 
+     */
     public String getKeyId() {
         return this.keyId;
     }
+    /**
+     * Resource reference to the KV secret
+     * 
+     */
     public ResourceReferenceResponse getSecretSource() {
         return this.secretSource;
     }
+    /**
+     * Version of the secret to be used
+     * 
+     */
     public Optional<String> getSecretVersion() {
         return Optional.ofNullable(this.secretVersion);
     }
+    /**
+     * The type of the Secret to create.
+     * Expected value is 'UrlSigningKey'.
+     * 
+     */
     public String getType() {
         return this.type;
     }

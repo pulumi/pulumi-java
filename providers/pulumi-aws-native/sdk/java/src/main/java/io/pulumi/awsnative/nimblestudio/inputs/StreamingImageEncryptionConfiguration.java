@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * <p>TODO</p>
+ * 
+ */
 public final class StreamingImageEncryptionConfiguration extends io.pulumi.resources.InvokeArgs {
 
     public static final StreamingImageEncryptionConfiguration Empty = new StreamingImageEncryptionConfiguration();
 
+    /**
+     * <p>The ARN for a KMS key that is used to encrypt studio data.</p>
+     * 
+     */
     @InputImport(name="keyArn")
     private final @Nullable String keyArn;
 

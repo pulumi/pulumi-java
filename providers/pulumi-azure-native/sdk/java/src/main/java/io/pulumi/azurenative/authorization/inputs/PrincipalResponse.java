@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The name of the entity last modified it
+ * 
+ */
 public final class PrincipalResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PrincipalResponse Empty = new PrincipalResponse();
 
+    /**
+     * The name of the principal made changes
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable String displayName;
 
@@ -21,6 +29,10 @@ public final class PrincipalResponse extends io.pulumi.resources.InvokeArgs {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
+    /**
+     * Email of principal
+     * 
+     */
     @InputImport(name="email")
     private final @Nullable String email;
 
@@ -28,6 +40,10 @@ public final class PrincipalResponse extends io.pulumi.resources.InvokeArgs {
         return this.email == null ? Optional.empty() : Optional.ofNullable(this.email);
     }
 
+    /**
+     * The id of the principal made changes
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -35,6 +51,10 @@ public final class PrincipalResponse extends io.pulumi.resources.InvokeArgs {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * Type of principal such as user , group etc
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 

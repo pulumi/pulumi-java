@@ -15,6 +15,10 @@ public final class AccessPointPosixUserArgs extends io.pulumi.resources.Resource
 
     public static final AccessPointPosixUserArgs Empty = new AccessPointPosixUserArgs();
 
+    /**
+     * The POSIX group ID used for all file system operations using this access point.
+     * 
+     */
     @InputImport(name="gid", required=true)
     private final Input<String> gid;
 
@@ -22,6 +26,10 @@ public final class AccessPointPosixUserArgs extends io.pulumi.resources.Resource
         return this.gid;
     }
 
+    /**
+     * Secondary POSIX group IDs used for all file system operations using this access point.
+     * 
+     */
     @InputImport(name="secondaryGids")
     private final @Nullable Input<List<String>> secondaryGids;
 
@@ -29,6 +37,10 @@ public final class AccessPointPosixUserArgs extends io.pulumi.resources.Resource
         return this.secondaryGids == null ? Input.empty() : this.secondaryGids;
     }
 
+    /**
+     * The POSIX user ID used for all file system operations using this access point.
+     * 
+     */
     @InputImport(name="uid", required=true)
     private final Input<String> uid;
 

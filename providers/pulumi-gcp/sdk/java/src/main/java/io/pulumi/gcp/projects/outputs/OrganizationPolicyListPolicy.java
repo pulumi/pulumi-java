@@ -14,9 +14,22 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class OrganizationPolicyListPolicy {
+    /**
+     * or `deny` - (Optional) One or the other must be set.
+     * 
+     */
     private final @Nullable OrganizationPolicyListPolicyAllow allow;
     private final @Nullable OrganizationPolicyListPolicyDeny deny;
+    /**
+     * If set to true, the values from the effective Policy of the parent resource
+     * are inherited, meaning the values set in this Policy are added to the values inherited up the hierarchy.
+     * 
+     */
     private final @Nullable Boolean inheritFromParent;
+    /**
+     * The Google Cloud Console will try to default to a configuration that matches the value specified in this field.
+     * 
+     */
     private final @Nullable String suggestedValue;
 
     @OutputCustomType.Constructor({"allow","deny","inheritFromParent","suggestedValue"})
@@ -31,15 +44,28 @@ public final class OrganizationPolicyListPolicy {
         this.suggestedValue = suggestedValue;
     }
 
+    /**
+     * or `deny` - (Optional) One or the other must be set.
+     * 
+     */
     public Optional<OrganizationPolicyListPolicyAllow> getAllow() {
         return Optional.ofNullable(this.allow);
     }
     public Optional<OrganizationPolicyListPolicyDeny> getDeny() {
         return Optional.ofNullable(this.deny);
     }
+    /**
+     * If set to true, the values from the effective Policy of the parent resource
+     * are inherited, meaning the values set in this Policy are added to the values inherited up the hierarchy.
+     * 
+     */
     public Optional<Boolean> getInheritFromParent() {
         return Optional.ofNullable(this.inheritFromParent);
     }
+    /**
+     * The Google Cloud Console will try to default to a configuration that matches the value specified in this field.
+     * 
+     */
     public Optional<String> getSuggestedValue() {
         return Optional.ofNullable(this.suggestedValue);
     }

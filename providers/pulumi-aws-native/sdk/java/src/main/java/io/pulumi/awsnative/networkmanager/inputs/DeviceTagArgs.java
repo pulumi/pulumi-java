@@ -10,6 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A key-value pair to associate with a device resource.
+ * 
+ */
 public final class DeviceTagArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DeviceTagArgs Empty = new DeviceTagArgs();

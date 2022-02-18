@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MaintenanceWindowResponse {
+    /**
+     * The day of week, when the window starts.
+     * 
+     */
     private final String dayOfWeek;
+    /**
+     * The hour of day (0-23) when the window starts.
+     * 
+     */
     private final Integer hourOfDay;
 
     @OutputCustomType.Constructor({"dayOfWeek","hourOfDay"})
@@ -21,9 +29,17 @@ public final class MaintenanceWindowResponse {
         this.hourOfDay = Objects.requireNonNull(hourOfDay);
     }
 
+    /**
+     * The day of week, when the window starts.
+     * 
+     */
     public String getDayOfWeek() {
         return this.dayOfWeek;
     }
+    /**
+     * The hour of day (0-23) when the window starts.
+     * 
+     */
     public Integer getHourOfDay() {
         return this.hourOfDay;
     }

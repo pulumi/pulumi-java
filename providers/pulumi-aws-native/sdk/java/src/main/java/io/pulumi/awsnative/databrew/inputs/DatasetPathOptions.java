@@ -13,6 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Path options for dataset
+ * 
+ */
 public final class DatasetPathOptions extends io.pulumi.resources.InvokeArgs {
 
     public static final DatasetPathOptions Empty = new DatasetPathOptions();

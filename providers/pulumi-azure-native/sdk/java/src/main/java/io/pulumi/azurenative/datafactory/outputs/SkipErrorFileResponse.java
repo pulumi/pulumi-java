@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SkipErrorFileResponse {
+    /**
+     * Skip if source/sink file changed by other concurrent write. Default is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     private final @Nullable Object dataInconsistency;
+    /**
+     * Skip if file is deleted by other client during copy. Default is true. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     private final @Nullable Object fileMissing;
 
     @OutputCustomType.Constructor({"dataInconsistency","fileMissing"})
@@ -22,9 +30,17 @@ public final class SkipErrorFileResponse {
         this.fileMissing = fileMissing;
     }
 
+    /**
+     * Skip if source/sink file changed by other concurrent write. Default is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> getDataInconsistency() {
         return Optional.ofNullable(this.dataInconsistency);
     }
+    /**
+     * Skip if file is deleted by other client during copy. Default is true. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> getFileMissing() {
         return Optional.ofNullable(this.fileMissing);
     }

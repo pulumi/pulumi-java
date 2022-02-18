@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetUserHierarchyGroup {
+/**
+ * Resource Type definition for AWS::Connect::UserHierarchyGroup
+ * 
+ */
     public static CompletableFuture<GetUserHierarchyGroupResult> invokeAsync(GetUserHierarchyGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:connect:getUserHierarchyGroup", TypeShape.of(GetUserHierarchyGroupResult.class), args == null ? GetUserHierarchyGroupArgs.Empty : args, Utilities.withVersion(options));
     }

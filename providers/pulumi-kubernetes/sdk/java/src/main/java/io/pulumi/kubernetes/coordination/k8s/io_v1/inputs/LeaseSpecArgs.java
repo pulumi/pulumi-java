@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * LeaseSpec is a specification of a Lease.
+ * 
+ */
 public final class LeaseSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LeaseSpecArgs Empty = new LeaseSpecArgs();
 
+    /**
+     * acquireTime is a time when the current lease was acquired.
+     * 
+     */
     @InputImport(name="acquireTime")
     private final @Nullable Input<String> acquireTime;
 
@@ -22,6 +30,10 @@ public final class LeaseSpecArgs extends io.pulumi.resources.ResourceArgs {
         return this.acquireTime == null ? Input.empty() : this.acquireTime;
     }
 
+    /**
+     * holderIdentity contains the identity of the holder of a current lease.
+     * 
+     */
     @InputImport(name="holderIdentity")
     private final @Nullable Input<String> holderIdentity;
 
@@ -29,6 +41,10 @@ public final class LeaseSpecArgs extends io.pulumi.resources.ResourceArgs {
         return this.holderIdentity == null ? Input.empty() : this.holderIdentity;
     }
 
+    /**
+     * leaseDurationSeconds is a duration that candidates for a lease need to wait to force acquire it. This is measure against time of last observed RenewTime.
+     * 
+     */
     @InputImport(name="leaseDurationSeconds")
     private final @Nullable Input<Integer> leaseDurationSeconds;
 
@@ -36,6 +52,10 @@ public final class LeaseSpecArgs extends io.pulumi.resources.ResourceArgs {
         return this.leaseDurationSeconds == null ? Input.empty() : this.leaseDurationSeconds;
     }
 
+    /**
+     * leaseTransitions is the number of transitions of a lease between holders.
+     * 
+     */
     @InputImport(name="leaseTransitions")
     private final @Nullable Input<Integer> leaseTransitions;
 
@@ -43,6 +63,10 @@ public final class LeaseSpecArgs extends io.pulumi.resources.ResourceArgs {
         return this.leaseTransitions == null ? Input.empty() : this.leaseTransitions;
     }
 
+    /**
+     * renewTime is a time when the current holder of a lease has last updated the lease.
+     * 
+     */
     @InputImport(name="renewTime")
     private final @Nullable Input<String> renewTime;
 

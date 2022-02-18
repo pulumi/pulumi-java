@@ -11,8 +11,28 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class NodeSelectorRequirement {
+    /**
+     * The label key that the selector applies to.
+     * 
+     */
     private final String key;
+    /**
+     * Represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists, DoesNotExist. Gt, and Lt.
+     * 
+     * Possible enum values:
+     *  - `"DoesNotExist"`
+     *  - `"Exists"`
+     *  - `"Gt"`
+     *  - `"In"`
+     *  - `"Lt"`
+     *  - `"NotIn"`
+     * 
+     */
     private final String operator;
+    /**
+     * An array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. If the operator is Gt or Lt, the values array must have a single element, which will be interpreted as an integer. This array is replaced during a strategic merge patch.
+     * 
+     */
     private final @Nullable List<String> values;
 
     @OutputCustomType.Constructor({"key","operator","values"})
@@ -25,12 +45,32 @@ public final class NodeSelectorRequirement {
         this.values = values;
     }
 
+    /**
+     * The label key that the selector applies to.
+     * 
+     */
     public String getKey() {
         return this.key;
     }
+    /**
+     * Represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists, DoesNotExist. Gt, and Lt.
+     * 
+     * Possible enum values:
+     *  - `"DoesNotExist"`
+     *  - `"Exists"`
+     *  - `"Gt"`
+     *  - `"In"`
+     *  - `"Lt"`
+     *  - `"NotIn"`
+     * 
+     */
     public String getOperator() {
         return this.operator;
     }
+    /**
+     * An array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. If the operator is Gt or Lt, the values array must have a single element, which will be interpreted as an integer. This array is replaced during a strategic merge patch.
+     * 
+     */
     public List<String> getValues() {
         return this.values == null ? List.of() : this.values;
     }

@@ -13,6 +13,11 @@ public final class GroupMembershipRoleArgs extends io.pulumi.resources.ResourceA
 
     public static final GroupMembershipRoleArgs Empty = new GroupMembershipRoleArgs();
 
+    /**
+     * The name of the MembershipRole. Must be one of OWNER, MANAGER, MEMBER.
+     * Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

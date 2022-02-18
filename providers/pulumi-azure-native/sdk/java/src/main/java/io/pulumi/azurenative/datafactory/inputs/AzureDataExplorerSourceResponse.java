@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A copy activity Azure Data Explorer (Kusto) source.
+ * 
+ */
 public final class AzureDataExplorerSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureDataExplorerSourceResponse Empty = new AzureDataExplorerSourceResponse();
 
+    /**
+     * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+     * 
+     */
     @InputImport(name="additionalColumns")
     private final @Nullable Object additionalColumns;
 
@@ -22,6 +30,10 @@ public final class AzureDataExplorerSourceResponse extends io.pulumi.resources.I
         return this.additionalColumns == null ? Optional.empty() : Optional.ofNullable(this.additionalColumns);
     }
 
+    /**
+     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     @InputImport(name="disableMetricsCollection")
     private final @Nullable Object disableMetricsCollection;
 
@@ -29,6 +41,10 @@ public final class AzureDataExplorerSourceResponse extends io.pulumi.resources.I
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
     }
 
+    /**
+     * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+     * 
+     */
     @InputImport(name="maxConcurrentConnections")
     private final @Nullable Object maxConcurrentConnections;
 
@@ -36,6 +52,10 @@ public final class AzureDataExplorerSourceResponse extends io.pulumi.resources.I
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
     }
 
+    /**
+     * The name of the Boolean option that controls whether truncation is applied to result-sets that go beyond a certain row-count limit.
+     * 
+     */
     @InputImport(name="noTruncation")
     private final @Nullable Object noTruncation;
 
@@ -43,6 +63,10 @@ public final class AzureDataExplorerSourceResponse extends io.pulumi.resources.I
         return this.noTruncation == null ? Optional.empty() : Optional.ofNullable(this.noTruncation);
     }
 
+    /**
+     * Database query. Should be a Kusto Query Language (KQL) query. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="query", required=true)
     private final Object query;
 
@@ -50,6 +74,10 @@ public final class AzureDataExplorerSourceResponse extends io.pulumi.resources.I
         return this.query;
     }
 
+    /**
+     * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9]))..
+     * 
+     */
     @InputImport(name="queryTimeout")
     private final @Nullable Object queryTimeout;
 
@@ -57,6 +85,10 @@ public final class AzureDataExplorerSourceResponse extends io.pulumi.resources.I
         return this.queryTimeout == null ? Optional.empty() : Optional.ofNullable(this.queryTimeout);
     }
 
+    /**
+     * Source retry count. Type: integer (or Expression with resultType integer).
+     * 
+     */
     @InputImport(name="sourceRetryCount")
     private final @Nullable Object sourceRetryCount;
 
@@ -64,6 +96,10 @@ public final class AzureDataExplorerSourceResponse extends io.pulumi.resources.I
         return this.sourceRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryCount);
     }
 
+    /**
+     * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     @InputImport(name="sourceRetryWait")
     private final @Nullable Object sourceRetryWait;
 
@@ -71,6 +107,11 @@ public final class AzureDataExplorerSourceResponse extends io.pulumi.resources.I
         return this.sourceRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryWait);
     }
 
+    /**
+     * Copy source type.
+     * Expected value is 'AzureDataExplorerSource'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

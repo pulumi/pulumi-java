@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCloudFormationProvisionedProduct {
+/**
+ * Resource Schema for AWS::ServiceCatalog::CloudFormationProvisionedProduct
+ * 
+ */
     public static CompletableFuture<GetCloudFormationProvisionedProductResult> invokeAsync(GetCloudFormationProvisionedProductArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:servicecatalog:getCloudFormationProvisionedProduct", TypeShape.of(GetCloudFormationProvisionedProductResult.class), args == null ? GetCloudFormationProvisionedProductArgs.Empty : args, Utilities.withVersion(options));
     }

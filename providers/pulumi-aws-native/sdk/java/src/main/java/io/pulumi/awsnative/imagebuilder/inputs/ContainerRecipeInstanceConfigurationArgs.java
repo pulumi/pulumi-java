@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A group of options that can be used to configure an instance for building and testing container images.
+ * 
+ */
 public final class ContainerRecipeInstanceConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContainerRecipeInstanceConfigurationArgs Empty = new ContainerRecipeInstanceConfigurationArgs();
 
+    /**
+     * Defines the block devices to attach for building an instance from this Image Builder AMI.
+     * 
+     */
     @InputImport(name="blockDeviceMappings")
     private final @Nullable Input<List<ContainerRecipeInstanceBlockDeviceMappingArgs>> blockDeviceMappings;
 
@@ -23,6 +31,10 @@ public final class ContainerRecipeInstanceConfigurationArgs extends io.pulumi.re
         return this.blockDeviceMappings == null ? Input.empty() : this.blockDeviceMappings;
     }
 
+    /**
+     * The AMI ID to use as the base image for a container build and test instance. If not specified, Image Builder will use the appropriate ECS-optimized AMI as a base image.
+     * 
+     */
     @InputImport(name="image")
     private final @Nullable Input<String> image;
 

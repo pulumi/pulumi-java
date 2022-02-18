@@ -12,6 +12,10 @@ public final class GetDataQualityJobDefinitionArgs extends io.pulumi.resources.I
 
     public static final GetDataQualityJobDefinitionArgs Empty = new GetDataQualityJobDefinitionArgs();
 
+    /**
+     * The Amazon Resource Name (ARN) of job definition.
+     * 
+     */
     @InputImport(name="jobDefinitionArn", required=true)
     private final String jobDefinitionArn;
 

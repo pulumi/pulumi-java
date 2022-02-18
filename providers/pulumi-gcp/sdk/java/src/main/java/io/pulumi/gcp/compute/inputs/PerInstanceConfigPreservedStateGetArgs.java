@@ -17,6 +17,11 @@ public final class PerInstanceConfigPreservedStateGetArgs extends io.pulumi.reso
 
     public static final PerInstanceConfigPreservedStateGetArgs Empty = new PerInstanceConfigPreservedStateGetArgs();
 
+    /**
+     * Stateful disks for the instance.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="disks")
     private final @Nullable Input<List<PerInstanceConfigPreservedStateDiskGetArgs>> disks;
 
@@ -24,6 +29,10 @@ public final class PerInstanceConfigPreservedStateGetArgs extends io.pulumi.reso
         return this.disks == null ? Input.empty() : this.disks;
     }
 
+    /**
+     * Preserved metadata defined for this instance. This is a list of key->value pairs.
+     * 
+     */
     @InputImport(name="metadata")
     private final @Nullable Input<Map<String,String>> metadata;
 

@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes threat granular marking model entity
+ * 
+ */
 public final class ThreatIntelligenceGranularMarkingModelArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ThreatIntelligenceGranularMarkingModelArgs Empty = new ThreatIntelligenceGranularMarkingModelArgs();
 
+    /**
+     * Language granular marking model
+     * 
+     */
     @InputImport(name="language")
     private final @Nullable Input<String> language;
 
@@ -23,6 +31,10 @@ public final class ThreatIntelligenceGranularMarkingModelArgs extends io.pulumi.
         return this.language == null ? Input.empty() : this.language;
     }
 
+    /**
+     * marking reference granular marking model
+     * 
+     */
     @InputImport(name="markingRef")
     private final @Nullable Input<Integer> markingRef;
 
@@ -30,6 +42,10 @@ public final class ThreatIntelligenceGranularMarkingModelArgs extends io.pulumi.
         return this.markingRef == null ? Input.empty() : this.markingRef;
     }
 
+    /**
+     * granular marking model selectors
+     * 
+     */
     @InputImport(name="selectors")
     private final @Nullable Input<List<String>> selectors;
 

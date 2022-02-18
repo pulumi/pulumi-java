@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * SKU of a public IP address.
+ * 
+ */
 public final class PublicIPAddressSkuResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PublicIPAddressSkuResponse Empty = new PublicIPAddressSkuResponse();
 
+    /**
+     * Name of a public IP address SKU.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -21,6 +29,10 @@ public final class PublicIPAddressSkuResponse extends io.pulumi.resources.Invoke
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Tier of a public IP address SKU.
+     * 
+     */
     @InputImport(name="tier")
     private final @Nullable String tier;
 

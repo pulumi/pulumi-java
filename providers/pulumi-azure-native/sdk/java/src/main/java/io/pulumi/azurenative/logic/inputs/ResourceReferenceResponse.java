@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The resource reference.
+ * 
+ */
 public final class ResourceReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceReferenceResponse Empty = new ResourceReferenceResponse();
 
+    /**
+     * The resource id.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -21,6 +29,10 @@ public final class ResourceReferenceResponse extends io.pulumi.resources.InvokeA
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * Gets the resource name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -28,6 +40,10 @@ public final class ResourceReferenceResponse extends io.pulumi.resources.InvokeA
         return this.name;
     }
 
+    /**
+     * Gets the resource type.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

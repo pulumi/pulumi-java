@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * This is used to express the source of an input schema mapping for a single target field in the Event Grid Event schema. This is currently used in the mappings for the 'id', 'topic' and 'eventtime' properties. This represents a field in the input event schema.
+ * 
+ */
 public final class JsonFieldArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JsonFieldArgs Empty = new JsonFieldArgs();
 
+    /**
+     * Name of a field in the input event schema that's to be used as the source of a mapping.
+     * 
+     */
     @InputImport(name="sourceField")
     private final @Nullable Input<String> sourceField;
 

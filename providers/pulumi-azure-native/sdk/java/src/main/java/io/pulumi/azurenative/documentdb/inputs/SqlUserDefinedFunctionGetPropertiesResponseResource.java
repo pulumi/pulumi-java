@@ -15,6 +15,10 @@ public final class SqlUserDefinedFunctionGetPropertiesResponseResource extends i
 
     public static final SqlUserDefinedFunctionGetPropertiesResponseResource Empty = new SqlUserDefinedFunctionGetPropertiesResponseResource();
 
+    /**
+     * Body of the User Defined Function
+     * 
+     */
     @InputImport(name="body")
     private final @Nullable String body;
 
@@ -22,6 +26,10 @@ public final class SqlUserDefinedFunctionGetPropertiesResponseResource extends i
         return this.body == null ? Optional.empty() : Optional.ofNullable(this.body);
     }
 
+    /**
+     * A system generated property representing the resource etag required for optimistic concurrency control.
+     * 
+     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -29,6 +37,10 @@ public final class SqlUserDefinedFunctionGetPropertiesResponseResource extends i
         return this.etag;
     }
 
+    /**
+     * Name of the Cosmos DB SQL userDefinedFunction
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -36,6 +48,10 @@ public final class SqlUserDefinedFunctionGetPropertiesResponseResource extends i
         return this.id;
     }
 
+    /**
+     * A system generated property. A unique identifier.
+     * 
+     */
     @InputImport(name="rid", required=true)
     private final String rid;
 
@@ -43,6 +59,10 @@ public final class SqlUserDefinedFunctionGetPropertiesResponseResource extends i
         return this.rid;
     }
 
+    /**
+     * A system generated property that denotes the last updated timestamp of the resource.
+     * 
+     */
     @InputImport(name="ts", required=true)
     private final Double ts;
 

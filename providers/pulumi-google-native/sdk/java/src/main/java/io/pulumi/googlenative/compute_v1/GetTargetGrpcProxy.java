@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTargetGrpcProxy {
+/**
+ * Returns the specified TargetGrpcProxy resource in the given scope.
+ * 
+ */
     public static CompletableFuture<GetTargetGrpcProxyResult> invokeAsync(GetTargetGrpcProxyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getTargetGrpcProxy", TypeShape.of(GetTargetGrpcProxyResult.class), args == null ? GetTargetGrpcProxyArgs.Empty : args, Utilities.withVersion(options));
     }

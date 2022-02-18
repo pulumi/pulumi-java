@@ -11,7 +11,16 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class JavaScriptFunctionBindingResponse {
+    /**
+     * The JavaScript code containing a single function definition. For example: 'function (x, y) { return x + y; }'
+     * 
+     */
     private final @Nullable String script;
+    /**
+     * Indicates the function binding type.
+     * Expected value is 'Microsoft.StreamAnalytics/JavascriptUdf'.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"script","type"})
@@ -22,9 +31,18 @@ public final class JavaScriptFunctionBindingResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * The JavaScript code containing a single function definition. For example: 'function (x, y) { return x + y; }'
+     * 
+     */
     public Optional<String> getScript() {
         return Optional.ofNullable(this.script);
     }
+    /**
+     * Indicates the function binding type.
+     * Expected value is 'Microsoft.StreamAnalytics/JavascriptUdf'.
+     * 
+     */
     public String getType() {
         return this.type;
     }

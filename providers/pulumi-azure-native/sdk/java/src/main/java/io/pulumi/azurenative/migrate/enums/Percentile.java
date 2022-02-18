@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Percentile of performance data used to recommend Azure size.
+     * 
+     */
     @EnumType
     public enum Percentile {
         Percentile50("Percentile50"),

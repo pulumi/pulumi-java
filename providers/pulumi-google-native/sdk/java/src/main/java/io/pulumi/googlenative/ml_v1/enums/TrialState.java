@@ -8,12 +8,36 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The detailed state of a trial.
+     * 
+     */
     @EnumType
     public enum TrialState {
+        /**
+         * The trial state is unspecified.
+         * 
+         */
         StateUnspecified("STATE_UNSPECIFIED"),
+        /**
+         * Indicates that a specific trial has been requested, but it has not yet been suggested by the service.
+         * 
+         */
         Requested("REQUESTED"),
+        /**
+         * Indicates that the trial has been suggested.
+         * 
+         */
         Active("ACTIVE"),
+        /**
+         * Indicates that the trial is done, and either has a final_measurement set, or is marked as trial_infeasible.
+         * 
+         */
         Completed("COMPLETED"),
+        /**
+         * Indicates that the trial should stop according to the service.
+         * 
+         */
         Stopping("STOPPING");
 
         private final String value;

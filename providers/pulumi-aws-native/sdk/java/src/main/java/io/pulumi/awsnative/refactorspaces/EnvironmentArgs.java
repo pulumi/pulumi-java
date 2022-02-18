@@ -38,6 +38,10 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.networkFabricType == null ? Input.empty() : this.networkFabricType;
     }
 
+    /**
+     * Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<EnvironmentTagArgs>> tags;
 

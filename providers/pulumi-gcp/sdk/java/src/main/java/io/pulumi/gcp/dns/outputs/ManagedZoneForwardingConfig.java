@@ -10,6 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ManagedZoneForwardingConfig {
+    /**
+     * List of target name servers to forward to. Cloud DNS will
+     * select the best available name server if more than
+     * one target is given.
+     * Structure is documented below.
+     * 
+     */
     private final List<ManagedZoneForwardingConfigTargetNameServer> targetNameServers;
 
     @OutputCustomType.Constructor({"targetNameServers"})
@@ -17,6 +24,13 @@ public final class ManagedZoneForwardingConfig {
         this.targetNameServers = Objects.requireNonNull(targetNameServers);
     }
 
+    /**
+     * List of target name servers to forward to. Cloud DNS will
+     * select the best available name server if more than
+     * one target is given.
+     * Structure is documented below.
+     * 
+     */
     public List<ManagedZoneForwardingConfigTargetNameServer> getTargetNameServers() {
         return this.targetNameServers;
     }

@@ -13,8 +13,16 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DataSetRowLevelPermissionDataSet {
+    /**
+     * <p>The Amazon Resource Name (ARN) of the permission dataset.</p>
+     * 
+     */
     private final String arn;
     private final @Nullable DataSetRowLevelPermissionFormatVersion formatVersion;
+    /**
+     * <p>The namespace associated with the row-level permissions dataset.</p>
+     * 
+     */
     private final @Nullable String namespace;
     private final DataSetRowLevelPermissionPolicy permissionPolicy;
 
@@ -30,12 +38,20 @@ public final class DataSetRowLevelPermissionDataSet {
         this.permissionPolicy = Objects.requireNonNull(permissionPolicy);
     }
 
+    /**
+     * <p>The Amazon Resource Name (ARN) of the permission dataset.</p>
+     * 
+     */
     public String getArn() {
         return this.arn;
     }
     public Optional<DataSetRowLevelPermissionFormatVersion> getFormatVersion() {
         return Optional.ofNullable(this.formatVersion);
     }
+    /**
+     * <p>The namespace associated with the row-level permissions dataset.</p>
+     * 
+     */
     public Optional<String> getNamespace() {
         return Optional.ofNullable(this.namespace);
     }

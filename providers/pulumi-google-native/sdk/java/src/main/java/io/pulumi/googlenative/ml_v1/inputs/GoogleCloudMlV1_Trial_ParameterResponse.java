@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A message representing a parameter to be tuned. Contains the name of the parameter and the suggested value to use for this trial.
+ * 
+ */
 public final class GoogleCloudMlV1_Trial_ParameterResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudMlV1_Trial_ParameterResponse Empty = new GoogleCloudMlV1_Trial_ParameterResponse();
 
+    /**
+     * Must be set if ParameterType is DOUBLE or DISCRETE.
+     * 
+     */
     @InputImport(name="floatValue", required=true)
     private final Double floatValue;
 
@@ -20,6 +28,10 @@ public final class GoogleCloudMlV1_Trial_ParameterResponse extends io.pulumi.res
         return this.floatValue;
     }
 
+    /**
+     * Must be set if ParameterType is INTEGER
+     * 
+     */
     @InputImport(name="intValue", required=true)
     private final String intValue;
 
@@ -27,6 +39,10 @@ public final class GoogleCloudMlV1_Trial_ParameterResponse extends io.pulumi.res
         return this.intValue;
     }
 
+    /**
+     * The name of the parameter.
+     * 
+     */
     @InputImport(name="parameter", required=true)
     private final String parameter;
 
@@ -34,6 +50,10 @@ public final class GoogleCloudMlV1_Trial_ParameterResponse extends io.pulumi.res
         return this.parameter;
     }
 
+    /**
+     * Must be set if ParameterTypeis CATEGORICAL
+     * 
+     */
     @InputImport(name="stringValue", required=true)
     private final String stringValue;
 

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * ResolverQueryLogConfigAssociationError
+     * 
+     */
     @EnumType
     public enum ResolverQueryLoggingConfigAssociationError {
         None("NONE"),

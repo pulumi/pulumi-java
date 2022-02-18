@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetController {
+/**
+ * API Version: 2019-04-01.
+ * 
+ */
     public static CompletableFuture<GetControllerResult> invokeAsync(GetControllerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devspaces:getController", TypeShape.of(GetControllerResult.class), args == null ? GetControllerArgs.Empty : args, Utilities.withVersion(options));
     }

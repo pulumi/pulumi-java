@@ -12,6 +12,10 @@ public final class GetDocumentationVersionArgs extends io.pulumi.resources.Invok
 
     public static final GetDocumentationVersionArgs Empty = new GetDocumentationVersionArgs();
 
+    /**
+     * The version identifier of the API documentation snapshot.
+     * 
+     */
     @InputImport(name="documentationVersion", required=true)
     private final String documentationVersion;
 
@@ -19,6 +23,10 @@ public final class GetDocumentationVersionArgs extends io.pulumi.resources.Invok
         return this.documentationVersion;
     }
 
+    /**
+     * The identifier of the API.
+     * 
+     */
     @InputImport(name="restApiId", required=true)
     private final String restApiId;
 

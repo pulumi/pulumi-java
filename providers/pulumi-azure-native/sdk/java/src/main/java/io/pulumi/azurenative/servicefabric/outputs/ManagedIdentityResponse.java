@@ -13,9 +13,26 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ManagedIdentityResponse {
+    /**
+     * The principal id of the managed identity. This property will only be provided for a system assigned identity.
+     * 
+     */
     private final String principalId;
+    /**
+     * The tenant id of the managed identity. This property will only be provided for a system assigned identity.
+     * 
+     */
     private final String tenantId;
+    /**
+     * The type of managed identity for the resource.
+     * 
+     */
     private final @Nullable String type;
+    /**
+     * The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form:
+     * '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+     * 
+     */
     private final @Nullable Map<String,UserAssignedIdentityResponse> userAssignedIdentities;
 
     @OutputCustomType.Constructor({"principalId","tenantId","type","userAssignedIdentities"})
@@ -30,15 +47,32 @@ public final class ManagedIdentityResponse {
         this.userAssignedIdentities = userAssignedIdentities;
     }
 
+    /**
+     * The principal id of the managed identity. This property will only be provided for a system assigned identity.
+     * 
+     */
     public String getPrincipalId() {
         return this.principalId;
     }
+    /**
+     * The tenant id of the managed identity. This property will only be provided for a system assigned identity.
+     * 
+     */
     public String getTenantId() {
         return this.tenantId;
     }
+    /**
+     * The type of managed identity for the resource.
+     * 
+     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
+    /**
+     * The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form:
+     * '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+     * 
+     */
     public Map<String,UserAssignedIdentityResponse> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }

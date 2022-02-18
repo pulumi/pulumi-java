@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A context rule provides information about the context for an individual API element.
+ * 
+ */
 public final class ContextRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContextRuleArgs Empty = new ContextRuleArgs();
 
+    /**
+     * A list of full type names or extension IDs of extensions allowed in grpc side channel from client to backend.
+     * 
+     */
     @InputImport(name="allowedRequestExtensions")
     private final @Nullable Input<List<String>> allowedRequestExtensions;
 
@@ -22,6 +30,10 @@ public final class ContextRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.allowedRequestExtensions == null ? Input.empty() : this.allowedRequestExtensions;
     }
 
+    /**
+     * A list of full type names or extension IDs of extensions allowed in grpc side channel from backend to client.
+     * 
+     */
     @InputImport(name="allowedResponseExtensions")
     private final @Nullable Input<List<String>> allowedResponseExtensions;
 
@@ -29,6 +41,10 @@ public final class ContextRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.allowedResponseExtensions == null ? Input.empty() : this.allowedResponseExtensions;
     }
 
+    /**
+     * A list of full type names of provided contexts.
+     * 
+     */
     @InputImport(name="provided")
     private final @Nullable Input<List<String>> provided;
 
@@ -36,6 +52,10 @@ public final class ContextRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.provided == null ? Input.empty() : this.provided;
     }
 
+    /**
+     * A list of full type names of requested contexts.
+     * 
+     */
     @InputImport(name="requested")
     private final @Nullable Input<List<String>> requested;
 
@@ -43,6 +63,10 @@ public final class ContextRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.requested == null ? Input.empty() : this.requested;
     }
 
+    /**
+     * Selects the methods to which this rule applies. Refer to selector for syntax details.
+     * 
+     */
     @InputImport(name="selector")
     private final @Nullable Input<String> selector;
 

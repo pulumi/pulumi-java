@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleMonitoringV3RangeResponse {
+    /**
+     * Range maximum.
+     * 
+     */
     private final Double max;
+    /**
+     * Range minimum.
+     * 
+     */
     private final Double min;
 
     @OutputCustomType.Constructor({"max","min"})
@@ -20,9 +28,17 @@ public final class GoogleMonitoringV3RangeResponse {
         this.min = Objects.requireNonNull(min);
     }
 
+    /**
+     * Range maximum.
+     * 
+     */
     public Double getMax() {
         return this.max;
     }
+    /**
+     * Range minimum.
+     * 
+     */
     public Double getMin() {
         return this.min;
     }

@@ -13,6 +13,10 @@ public final class GetInstanceTemplateReservationAffinitySpecificReservation ext
 
     public static final GetInstanceTemplateReservationAffinitySpecificReservation Empty = new GetInstanceTemplateReservationAffinitySpecificReservation();
 
+    /**
+     * The key for the node affinity label.
+     * 
+     */
     @InputImport(name="key", required=true)
     private final String key;
 

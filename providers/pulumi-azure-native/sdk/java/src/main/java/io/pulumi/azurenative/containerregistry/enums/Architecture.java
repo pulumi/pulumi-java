@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The OS architecture.
+     * 
+     */
     @EnumType
     public enum Architecture {
         Amd64("amd64"),

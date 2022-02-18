@@ -11,6 +11,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetServiceTemplateSpecVolume {
+    /**
+     * The name of the Cloud Run Service.
+     * 
+     */
     private final String name;
     private final List<GetServiceTemplateSpecVolumeSecret> secrets;
 
@@ -22,6 +26,10 @@ public final class GetServiceTemplateSpecVolume {
         this.secrets = Objects.requireNonNull(secrets);
     }
 
+    /**
+     * The name of the Cloud Run Service.
+     * 
+     */
     public String getName() {
         return this.name;
     }

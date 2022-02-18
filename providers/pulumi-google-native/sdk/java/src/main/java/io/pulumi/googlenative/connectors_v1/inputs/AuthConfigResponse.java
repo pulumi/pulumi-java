@@ -13,10 +13,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * AuthConfig defines details of a authentication type.
+ * 
+ */
 public final class AuthConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AuthConfigResponse Empty = new AuthConfigResponse();
 
+    /**
+     * List containing additional auth configs.
+     * 
+     */
     @InputImport(name="additionalVariables", required=true)
     private final List<ConfigVariableResponse> additionalVariables;
 
@@ -24,6 +32,10 @@ public final class AuthConfigResponse extends io.pulumi.resources.InvokeArgs {
         return this.additionalVariables;
     }
 
+    /**
+     * The type of authentication configured.
+     * 
+     */
     @InputImport(name="authType", required=true)
     private final String authType;
 
@@ -31,6 +43,10 @@ public final class AuthConfigResponse extends io.pulumi.resources.InvokeArgs {
         return this.authType;
     }
 
+    /**
+     * Oauth2ClientCredentials.
+     * 
+     */
     @InputImport(name="oauth2ClientCredentials", required=true)
     private final Oauth2ClientCredentialsResponse oauth2ClientCredentials;
 
@@ -38,6 +54,10 @@ public final class AuthConfigResponse extends io.pulumi.resources.InvokeArgs {
         return this.oauth2ClientCredentials;
     }
 
+    /**
+     * Oauth2JwtBearer.
+     * 
+     */
     @InputImport(name="oauth2JwtBearer", required=true)
     private final Oauth2JwtBearerResponse oauth2JwtBearer;
 
@@ -45,6 +65,10 @@ public final class AuthConfigResponse extends io.pulumi.resources.InvokeArgs {
         return this.oauth2JwtBearer;
     }
 
+    /**
+     * UserPassword.
+     * 
+     */
     @InputImport(name="userPassword", required=true)
     private final UserPasswordResponse userPassword;
 

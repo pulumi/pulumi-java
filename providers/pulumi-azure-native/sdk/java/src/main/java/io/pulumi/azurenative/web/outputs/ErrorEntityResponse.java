@@ -12,11 +12,35 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ErrorEntityResponse {
+    /**
+     * Basic error code.
+     * 
+     */
     private final @Nullable String code;
+    /**
+     * Type of error.
+     * 
+     */
     private final @Nullable String extendedCode;
+    /**
+     * Inner errors.
+     * 
+     */
     private final @Nullable List<ErrorEntityResponse> innerErrors;
+    /**
+     * Any details of the error.
+     * 
+     */
     private final @Nullable String message;
+    /**
+     * Message template.
+     * 
+     */
     private final @Nullable String messageTemplate;
+    /**
+     * Parameters for the template.
+     * 
+     */
     private final @Nullable List<String> parameters;
 
     @OutputCustomType.Constructor({"code","extendedCode","innerErrors","message","messageTemplate","parameters"})
@@ -35,21 +59,45 @@ public final class ErrorEntityResponse {
         this.parameters = parameters;
     }
 
+    /**
+     * Basic error code.
+     * 
+     */
     public Optional<String> getCode() {
         return Optional.ofNullable(this.code);
     }
+    /**
+     * Type of error.
+     * 
+     */
     public Optional<String> getExtendedCode() {
         return Optional.ofNullable(this.extendedCode);
     }
+    /**
+     * Inner errors.
+     * 
+     */
     public List<ErrorEntityResponse> getInnerErrors() {
         return this.innerErrors == null ? List.of() : this.innerErrors;
     }
+    /**
+     * Any details of the error.
+     * 
+     */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
+    /**
+     * Message template.
+     * 
+     */
     public Optional<String> getMessageTemplate() {
         return Optional.ofNullable(this.messageTemplate);
     }
+    /**
+     * Parameters for the template.
+     * 
+     */
     public List<String> getParameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }

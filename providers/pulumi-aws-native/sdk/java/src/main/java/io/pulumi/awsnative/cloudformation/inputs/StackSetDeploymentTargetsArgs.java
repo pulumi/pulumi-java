@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ *  The AWS OrganizationalUnitIds or Accounts for which to create stack instances in the specified Regions.
+ * 
+ */
 public final class StackSetDeploymentTargetsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StackSetDeploymentTargetsArgs Empty = new StackSetDeploymentTargetsArgs();
 
+    /**
+     * AWS accounts that you want to create stack instances in the specified Region(s) for.
+     * 
+     */
     @InputImport(name="accounts")
     private final @Nullable Input<List<String>> accounts;
 
@@ -22,6 +30,10 @@ public final class StackSetDeploymentTargetsArgs extends io.pulumi.resources.Res
         return this.accounts == null ? Input.empty() : this.accounts;
     }
 
+    /**
+     * The organization root ID or organizational unit (OU) IDs to which StackSets deploys.
+     * 
+     */
     @InputImport(name="organizationalUnitIds")
     private final @Nullable Input<List<String>> organizationalUnitIds;
 

@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSigningProfile {
+/**
+ * A signing profile is a signing template that can be used to carry out a pre-defined signing job.
+ * 
+ */
     public static CompletableFuture<GetSigningProfileResult> invokeAsync(GetSigningProfileArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:signer:getSigningProfile", TypeShape.of(GetSigningProfileResult.class), args == null ? GetSigningProfileArgs.Empty : args, Utilities.withVersion(options));
     }

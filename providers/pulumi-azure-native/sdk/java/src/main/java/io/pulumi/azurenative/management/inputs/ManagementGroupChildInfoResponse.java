@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The child information of a management group.
+ * 
+ */
 public final class ManagementGroupChildInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ManagementGroupChildInfoResponse Empty = new ManagementGroupChildInfoResponse();
 
+    /**
+     * The list of children.
+     * 
+     */
     @InputImport(name="children")
     private final @Nullable List<ManagementGroupChildInfoResponse> children;
 
@@ -22,6 +30,10 @@ public final class ManagementGroupChildInfoResponse extends io.pulumi.resources.
         return this.children == null ? List.of() : this.children;
     }
 
+    /**
+     * The friendly name of the child resource.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable String displayName;
 
@@ -29,6 +41,10 @@ public final class ManagementGroupChildInfoResponse extends io.pulumi.resources.
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
+    /**
+     * The fully qualified ID for the child resource (management group or subscription).  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -36,6 +52,10 @@ public final class ManagementGroupChildInfoResponse extends io.pulumi.resources.
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * The name of the child entity.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -43,6 +63,10 @@ public final class ManagementGroupChildInfoResponse extends io.pulumi.resources.
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The fully qualified resource type which includes provider namespace (e.g. Microsoft.Management/managementGroups)
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 

@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowV2beta1LoggingConfigResponse {
+    /**
+     * Whether to log conversation events like CONVERSATION_STARTED to Stackdriver in the conversation project as JSON format ConversationEvent protos.
+     * 
+     */
     private final Boolean enableStackdriverLogging;
 
     @OutputCustomType.Constructor({"enableStackdriverLogging"})
@@ -16,6 +20,10 @@ public final class GoogleCloudDialogflowV2beta1LoggingConfigResponse {
         this.enableStackdriverLogging = Objects.requireNonNull(enableStackdriverLogging);
     }
 
+    /**
+     * Whether to log conversation events like CONVERSATION_STARTED to Stackdriver in the conversation project as JSON format ConversationEvent protos.
+     * 
+     */
     public Boolean getEnableStackdriverLogging() {
         return this.enableStackdriverLogging;
     }

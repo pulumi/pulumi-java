@@ -16,9 +16,17 @@ public final class GetProjectResult {
     private final Boolean autoCreateNetwork;
     private final String billingAccount;
     private final String folderId;
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
     private final Map<String,String> labels;
     private final String name;
+    /**
+     * The numeric identifier of the project.
+     * 
+     */
     private final String number;
     private final String orgId;
     private final @Nullable String projectId;
@@ -57,6 +65,10 @@ public final class GetProjectResult {
     public String getFolderId() {
         return this.folderId;
     }
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }
@@ -66,6 +78,10 @@ public final class GetProjectResult {
     public String getName() {
         return this.name;
     }
+    /**
+     * The numeric identifier of the project.
+     * 
+     */
     public String getNumber() {
         return this.number;
     }

@@ -15,6 +15,10 @@ public final class CanaryBaseScreenshot extends io.pulumi.resources.InvokeArgs {
 
     public static final CanaryBaseScreenshot Empty = new CanaryBaseScreenshot();
 
+    /**
+     * List of coordinates of rectangles to be ignored during visual testing
+     * 
+     */
     @InputImport(name="ignoreCoordinates")
     private final @Nullable List<String> ignoreCoordinates;
 
@@ -22,6 +26,10 @@ public final class CanaryBaseScreenshot extends io.pulumi.resources.InvokeArgs {
         return this.ignoreCoordinates == null ? List.of() : this.ignoreCoordinates;
     }
 
+    /**
+     * Name of the screenshot to be used as base reference for visual testing
+     * 
+     */
     @InputImport(name="screenshotName", required=true)
     private final String screenshotName;
 

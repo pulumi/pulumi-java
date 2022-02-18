@@ -12,6 +12,10 @@ public final class GetStackSetArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetStackSetArgs Empty = new GetStackSetArgs();
 
+    /**
+     * The ID of the stack set that you're creating.
+     * 
+     */
     @InputImport(name="stackSetId", required=true)
     private final String stackSetId;
 

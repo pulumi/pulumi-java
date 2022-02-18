@@ -19,6 +19,10 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ChannelArgs Empty = new ChannelArgs();
 
+    /**
+     * Whether the channel is authorized.
+     * 
+     */
     @InputImport(name="authorized")
     private final @Nullable Input<Boolean> authorized;
 
@@ -26,6 +30,10 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
         return this.authorized == null ? Input.empty() : this.authorized;
     }
 
+    /**
+     * Channel latency mode.
+     * 
+     */
     @InputImport(name="latencyMode")
     private final @Nullable Input<ChannelLatencyMode> latencyMode;
 
@@ -33,6 +41,10 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
         return this.latencyMode == null ? Input.empty() : this.latencyMode;
     }
 
+    /**
+     * Channel
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -40,6 +52,10 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Recording Configuration ARN. A value other than an empty string indicates that recording is enabled. Default: “” (recording is disabled).
+     * 
+     */
     @InputImport(name="recordingConfigurationArn")
     private final @Nullable Input<String> recordingConfigurationArn;
 
@@ -47,6 +63,10 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
         return this.recordingConfigurationArn == null ? Input.empty() : this.recordingConfigurationArn;
     }
 
+    /**
+     * A list of key-value pairs that contain metadata for the asset model.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<ChannelTagArgs>> tags;
 
@@ -54,6 +74,10 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * Channel type, which determines the allowable resolution and bitrate. If you exceed the allowable resolution or bitrate, the stream probably will disconnect immediately.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<ChannelType> type;
 

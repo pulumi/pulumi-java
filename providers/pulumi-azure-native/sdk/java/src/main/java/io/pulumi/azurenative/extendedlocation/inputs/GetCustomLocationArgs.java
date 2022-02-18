@@ -12,6 +12,10 @@ public final class GetCustomLocationArgs extends io.pulumi.resources.InvokeArgs 
 
     public static final GetCustomLocationArgs Empty = new GetCustomLocationArgs();
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +23,10 @@ public final class GetCustomLocationArgs extends io.pulumi.resources.InvokeArgs 
         return this.resourceGroupName;
     }
 
+    /**
+     * Custom Locations name.
+     * 
+     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 

@@ -18,13 +18,46 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TrialComponentResponse {
+    /**
+     * ARM resource ID of the code asset.
+     * 
+     */
     private final @Nullable String codeId;
+    /**
+     * The command to execute on startup of the job. eg. "python train.py"
+     * 
+     */
     private final String command;
+    /**
+     * Distribution configuration of the job. If set, this should be one of Mpi, Tensorflow, PyTorch, or null.
+     * 
+     */
     private final @Nullable Object distribution;
+    /**
+     * The ARM resource ID of the Environment specification for the job.
+     * 
+     */
     private final @Nullable String environmentId;
+    /**
+     * Environment variables included in the job.
+     * 
+     */
     private final @Nullable Map<String,String> environmentVariables;
+    /**
+     * Mapping of input data bindings used in the job.
+     * 
+     */
     private final @Nullable Map<String,InputDataBindingResponse> inputDataBindings;
+    /**
+     * Mapping of output data bindings used in the job.
+     * 
+     */
     private final @Nullable Map<String,OutputDataBindingResponse> outputDataBindings;
+    /**
+     * The max run duration in ISO 8601 format, after which the trial component will be cancelled.
+     * Only supports duration with precision as low as Seconds.
+     * 
+     */
     private final @Nullable String timeout;
 
     @OutputCustomType.Constructor({"codeId","command","distribution","environmentId","environmentVariables","inputDataBindings","outputDataBindings","timeout"})
@@ -47,27 +80,60 @@ public final class TrialComponentResponse {
         this.timeout = timeout;
     }
 
+    /**
+     * ARM resource ID of the code asset.
+     * 
+     */
     public Optional<String> getCodeId() {
         return Optional.ofNullable(this.codeId);
     }
+    /**
+     * The command to execute on startup of the job. eg. "python train.py"
+     * 
+     */
     public String getCommand() {
         return this.command;
     }
+    /**
+     * Distribution configuration of the job. If set, this should be one of Mpi, Tensorflow, PyTorch, or null.
+     * 
+     */
     public Optional<Object> getDistribution() {
         return Optional.ofNullable(this.distribution);
     }
+    /**
+     * The ARM resource ID of the Environment specification for the job.
+     * 
+     */
     public Optional<String> getEnvironmentId() {
         return Optional.ofNullable(this.environmentId);
     }
+    /**
+     * Environment variables included in the job.
+     * 
+     */
     public Map<String,String> getEnvironmentVariables() {
         return this.environmentVariables == null ? Map.of() : this.environmentVariables;
     }
+    /**
+     * Mapping of input data bindings used in the job.
+     * 
+     */
     public Map<String,InputDataBindingResponse> getInputDataBindings() {
         return this.inputDataBindings == null ? Map.of() : this.inputDataBindings;
     }
+    /**
+     * Mapping of output data bindings used in the job.
+     * 
+     */
     public Map<String,OutputDataBindingResponse> getOutputDataBindings() {
         return this.outputDataBindings == null ? Map.of() : this.outputDataBindings;
     }
+    /**
+     * The max run duration in ISO 8601 format, after which the trial component will be cancelled.
+     * Only supports duration with precision as low as Seconds.
+     * 
+     */
     public Optional<String> getTimeout() {
         return Optional.ofNullable(this.timeout);
     }

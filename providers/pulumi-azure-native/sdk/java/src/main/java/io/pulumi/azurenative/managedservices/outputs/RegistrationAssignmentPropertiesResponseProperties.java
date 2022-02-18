@@ -13,13 +13,45 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RegistrationAssignmentPropertiesResponseProperties {
+    /**
+     * Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.
+     * 
+     */
     private final @Nullable List<AuthorizationResponse> authorizations;
+    /**
+     * Description of the registration definition.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * Id of the managedBy tenant.
+     * 
+     */
     private final @Nullable String managedByTenantId;
+    /**
+     * Name of the managedBy tenant.
+     * 
+     */
     private final @Nullable String managedByTenantName;
+    /**
+     * Id of the home tenant.
+     * 
+     */
     private final @Nullable String manageeTenantId;
+    /**
+     * Name of the home tenant.
+     * 
+     */
     private final @Nullable String manageeTenantName;
+    /**
+     * Current state of the registration definition.
+     * 
+     */
     private final @Nullable String provisioningState;
+    /**
+     * Name of the registration definition.
+     * 
+     */
     private final @Nullable String registrationDefinitionName;
 
     @OutputCustomType.Constructor({"authorizations","description","managedByTenantId","managedByTenantName","manageeTenantId","manageeTenantName","provisioningState","registrationDefinitionName"})
@@ -42,27 +74,59 @@ public final class RegistrationAssignmentPropertiesResponseProperties {
         this.registrationDefinitionName = registrationDefinitionName;
     }
 
+    /**
+     * Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.
+     * 
+     */
     public List<AuthorizationResponse> getAuthorizations() {
         return this.authorizations == null ? List.of() : this.authorizations;
     }
+    /**
+     * Description of the registration definition.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * Id of the managedBy tenant.
+     * 
+     */
     public Optional<String> getManagedByTenantId() {
         return Optional.ofNullable(this.managedByTenantId);
     }
+    /**
+     * Name of the managedBy tenant.
+     * 
+     */
     public Optional<String> getManagedByTenantName() {
         return Optional.ofNullable(this.managedByTenantName);
     }
+    /**
+     * Id of the home tenant.
+     * 
+     */
     public Optional<String> getManageeTenantId() {
         return Optional.ofNullable(this.manageeTenantId);
     }
+    /**
+     * Name of the home tenant.
+     * 
+     */
     public Optional<String> getManageeTenantName() {
         return Optional.ofNullable(this.manageeTenantName);
     }
+    /**
+     * Current state of the registration definition.
+     * 
+     */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
+    /**
+     * Name of the registration definition.
+     * 
+     */
     public Optional<String> getRegistrationDefinitionName() {
         return Optional.ofNullable(this.registrationDefinitionName);
     }

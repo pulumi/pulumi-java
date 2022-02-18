@@ -14,6 +14,10 @@ public final class JobCredentialArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JobCredentialArgs Empty = new JobCredentialArgs();
 
+    /**
+     * The name of the credential.
+     * 
+     */
     @InputImport(name="credentialName")
     private final @Nullable Input<String> credentialName;
 
@@ -21,6 +25,10 @@ public final class JobCredentialArgs extends io.pulumi.resources.ResourceArgs {
         return this.credentialName == null ? Input.empty() : this.credentialName;
     }
 
+    /**
+     * The name of the job agent.
+     * 
+     */
     @InputImport(name="jobAgentName", required=true)
     private final Input<String> jobAgentName;
 
@@ -28,6 +36,10 @@ public final class JobCredentialArgs extends io.pulumi.resources.ResourceArgs {
         return this.jobAgentName;
     }
 
+    /**
+     * The credential password.
+     * 
+     */
     @InputImport(name="password", required=true)
     private final Input<String> password;
 
@@ -35,6 +47,10 @@ public final class JobCredentialArgs extends io.pulumi.resources.ResourceArgs {
         return this.password;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -42,6 +58,10 @@ public final class JobCredentialArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the server.
+     * 
+     */
     @InputImport(name="serverName", required=true)
     private final Input<String> serverName;
 
@@ -49,6 +69,10 @@ public final class JobCredentialArgs extends io.pulumi.resources.ResourceArgs {
         return this.serverName;
     }
 
+    /**
+     * The credential user name.
+     * 
+     */
     @InputImport(name="username", required=true)
     private final Input<String> username;
 

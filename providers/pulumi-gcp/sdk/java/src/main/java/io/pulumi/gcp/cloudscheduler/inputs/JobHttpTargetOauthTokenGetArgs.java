@@ -14,6 +14,11 @@ public final class JobHttpTargetOauthTokenGetArgs extends io.pulumi.resources.Re
 
     public static final JobHttpTargetOauthTokenGetArgs Empty = new JobHttpTargetOauthTokenGetArgs();
 
+    /**
+     * OAuth scope to be used for generating OAuth access token. If not specified,
+     * "https://www.googleapis.com/auth/cloud-platform" will be used.
+     * 
+     */
     @InputImport(name="scope")
     private final @Nullable Input<String> scope;
 
@@ -21,6 +26,11 @@ public final class JobHttpTargetOauthTokenGetArgs extends io.pulumi.resources.Re
         return this.scope == null ? Input.empty() : this.scope;
     }
 
+    /**
+     * Service account email to be used for generating OAuth token.
+     * The service account must be within the same project as the job.
+     * 
+     */
     @InputImport(name="serviceAccountEmail", required=true)
     private final Input<String> serviceAccountEmail;
 

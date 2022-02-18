@@ -11,11 +11,27 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AzureBlobFileSystemConfigurationResponse {
+    /**
+     * This property is mutually exclusive with sasKey and one must be specified.
+     * 
+     */
     private final @Nullable String accountKey;
     private final String accountName;
+    /**
+     * These are 'net use' options in Windows and 'mount' options in Linux.
+     * 
+     */
     private final @Nullable String blobfuseOptions;
     private final String containerName;
+    /**
+     * All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
+     * 
+     */
     private final String relativeMountPath;
+    /**
+     * This property is mutually exclusive with accountKey and one must be specified.
+     * 
+     */
     private final @Nullable String sasKey;
 
     @OutputCustomType.Constructor({"accountKey","accountName","blobfuseOptions","containerName","relativeMountPath","sasKey"})
@@ -34,21 +50,37 @@ public final class AzureBlobFileSystemConfigurationResponse {
         this.sasKey = sasKey;
     }
 
+    /**
+     * This property is mutually exclusive with sasKey and one must be specified.
+     * 
+     */
     public Optional<String> getAccountKey() {
         return Optional.ofNullable(this.accountKey);
     }
     public String getAccountName() {
         return this.accountName;
     }
+    /**
+     * These are 'net use' options in Windows and 'mount' options in Linux.
+     * 
+     */
     public Optional<String> getBlobfuseOptions() {
         return Optional.ofNullable(this.blobfuseOptions);
     }
     public String getContainerName() {
         return this.containerName;
     }
+    /**
+     * All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
+     * 
+     */
     public String getRelativeMountPath() {
         return this.relativeMountPath;
     }
+    /**
+     * This property is mutually exclusive with accountKey and one must be specified.
+     * 
+     */
     public Optional<String> getSasKey() {
         return Optional.ofNullable(this.sasKey);
     }

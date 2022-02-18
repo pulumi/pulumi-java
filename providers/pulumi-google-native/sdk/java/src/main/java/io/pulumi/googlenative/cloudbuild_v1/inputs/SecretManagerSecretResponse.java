@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Pairs a secret environment variable with a SecretVersion in Secret Manager.
+ * 
+ */
 public final class SecretManagerSecretResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SecretManagerSecretResponse Empty = new SecretManagerSecretResponse();
 
+    /**
+     * Environment variable name to associate with the secret. Secret environment variables must be unique across all of a build's secrets, and must be used by at least one build step.
+     * 
+     */
     @InputImport(name="env", required=true)
     private final String env;
 
@@ -19,6 +27,10 @@ public final class SecretManagerSecretResponse extends io.pulumi.resources.Invok
         return this.env;
     }
 
+    /**
+     * Resource name of the SecretVersion. In format: projects/*{@literal /}secrets/*{@literal /}versions/*
+     * 
+     */
     @InputImport(name="versionName", required=true)
     private final String versionName;
 

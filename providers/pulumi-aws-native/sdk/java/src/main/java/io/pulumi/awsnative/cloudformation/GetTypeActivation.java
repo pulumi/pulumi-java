@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTypeActivation {
+/**
+ * Enable a resource that has been published in the CloudFormation Registry.
+ * 
+ */
     public static CompletableFuture<GetTypeActivationResult> invokeAsync(GetTypeActivationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudformation:getTypeActivation", TypeShape.of(GetTypeActivationResult.class), args == null ? GetTypeActivationArgs.Empty : args, Utilities.withVersion(options));
     }

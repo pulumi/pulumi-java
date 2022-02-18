@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MembershipRoleRestrictionEvaluationResponse {
+    /**
+     * The current state of the restriction
+     * 
+     */
     private final String state;
 
     @OutputCustomType.Constructor({"state"})
@@ -16,6 +20,10 @@ public final class MembershipRoleRestrictionEvaluationResponse {
         this.state = Objects.requireNonNull(state);
     }
 
+    /**
+     * The current state of the restriction
+     * 
+     */
     public String getState() {
         return this.state;
     }

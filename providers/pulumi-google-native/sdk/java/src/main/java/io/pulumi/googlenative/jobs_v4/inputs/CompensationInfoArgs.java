@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Job compensation details.
+ * 
+ */
 public final class CompensationInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CompensationInfoArgs Empty = new CompensationInfoArgs();
 
+    /**
+     * Job compensation information. At most one entry can be of type CompensationInfo.CompensationType.BASE, which is referred as **base compensation entry** for the job.
+     * 
+     */
     @InputImport(name="entries")
     private final @Nullable Input<List<CompensationEntryArgs>> entries;
 

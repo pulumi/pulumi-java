@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A representation of a Datastore kind.
+ * 
+ */
 public final class GooglePrivacyDlpV2KindExpressionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2KindExpressionResponse Empty = new GooglePrivacyDlpV2KindExpressionResponse();
 
+    /**
+     * The name of the kind.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

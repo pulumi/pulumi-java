@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Describes the mode of backups.
+     * 
+     */
     @EnumType
     public enum BackupPolicyType {
         Periodic("Periodic"),

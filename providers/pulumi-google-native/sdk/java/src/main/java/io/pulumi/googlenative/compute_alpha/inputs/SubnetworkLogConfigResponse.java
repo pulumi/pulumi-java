@@ -11,10 +11,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * The available logging options for this subnetwork.
+ * 
+ */
 public final class SubnetworkLogConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SubnetworkLogConfigResponse Empty = new SubnetworkLogConfigResponse();
 
+    /**
+     * Can only be specified if VPC flow logging for this subnetwork is enabled. Toggles the aggregation interval for collecting flow logs. Increasing the interval time will reduce the amount of generated flow logs for long lasting connections. Default is an interval of 5 seconds per connection.
+     * 
+     */
     @InputImport(name="aggregationInterval", required=true)
     private final String aggregationInterval;
 
@@ -22,6 +30,10 @@ public final class SubnetworkLogConfigResponse extends io.pulumi.resources.Invok
         return this.aggregationInterval;
     }
 
+    /**
+     * Whether to enable flow logging for this subnetwork. If this field is not explicitly set, it will not appear in get listings. If not set the default behavior is determined by the org policy, if there is no org policy specified, then it will default to disabled.
+     * 
+     */
     @InputImport(name="enable", required=true)
     private final Boolean enable;
 
@@ -29,6 +41,10 @@ public final class SubnetworkLogConfigResponse extends io.pulumi.resources.Invok
         return this.enable;
     }
 
+    /**
+     * Can only be specified if VPC flow logs for this subnetwork is enabled. Export filter used to define which VPC flow logs should be logged.
+     * 
+     */
     @InputImport(name="filterExpr", required=true)
     private final String filterExpr;
 
@@ -36,6 +52,10 @@ public final class SubnetworkLogConfigResponse extends io.pulumi.resources.Invok
         return this.filterExpr;
     }
 
+    /**
+     * Can only be specified if VPC flow logging for this subnetwork is enabled. The value of the field must be in [0, 1]. Set the sampling rate of VPC flow logs within the subnetwork where 1.0 means all collected logs are reported and 0.0 means no logs are reported. Default is 0.5 unless otherwise specified by the org policy, which means half of all collected logs are reported.
+     * 
+     */
     @InputImport(name="flowSampling", required=true)
     private final Double flowSampling;
 
@@ -43,6 +63,10 @@ public final class SubnetworkLogConfigResponse extends io.pulumi.resources.Invok
         return this.flowSampling;
     }
 
+    /**
+     * Can only be specified if VPC flow logs for this subnetwork is enabled. Configures whether all, none or a subset of metadata fields should be added to the reported VPC flow logs. Default is EXCLUDE_ALL_METADATA.
+     * 
+     */
     @InputImport(name="metadata", required=true)
     private final String metadata;
 
@@ -50,6 +74,10 @@ public final class SubnetworkLogConfigResponse extends io.pulumi.resources.Invok
         return this.metadata;
     }
 
+    /**
+     * Can only be specified if VPC flow logs for this subnetwork is enabled and "metadata" was set to CUSTOM_METADATA.
+     * 
+     */
     @InputImport(name="metadataFields", required=true)
     private final List<String> metadataFields;
 

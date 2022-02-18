@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The name of blob storage event type to process.
+     * 
+     */
     @EnumType
     public enum BlobStorageEventType {
         Microsoft_Storage_BlobCreated("Microsoft.Storage.BlobCreated"),

@@ -10,6 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * An indication that the compliance checks in the associated ComplianceNote were not satisfied for particular resources or a specified reason.
+ * 
+ */
 public final class ComplianceOccurrenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ComplianceOccurrenceResponse Empty = new ComplianceOccurrenceResponse();

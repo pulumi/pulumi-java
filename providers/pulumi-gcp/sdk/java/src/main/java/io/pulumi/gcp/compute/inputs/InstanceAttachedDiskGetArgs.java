@@ -14,6 +14,11 @@ public final class InstanceAttachedDiskGetArgs extends io.pulumi.resources.Resou
 
     public static final InstanceAttachedDiskGetArgs Empty = new InstanceAttachedDiskGetArgs();
 
+    /**
+     * Name with which the attached disk will be accessible
+     * under `/dev/disk/by-id/google-*`
+     * 
+     */
     @InputImport(name="deviceName")
     private final @Nullable Input<String> deviceName;
 
@@ -21,6 +26,13 @@ public final class InstanceAttachedDiskGetArgs extends io.pulumi.resources.Resou
         return this.deviceName == null ? Input.empty() : this.deviceName;
     }
 
+    /**
+     * A 256-bit [customer-supplied encryption key]
+     * (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption),
+     * encoded in [RFC 4648 base64](https://tools.ietf.org/html/rfc4648#section-4)
+     * to encrypt this disk. Only one of `kms_key_self_link` and `disk_encryption_key_raw` may be set.
+     * 
+     */
     @InputImport(name="diskEncryptionKeyRaw")
     private final @Nullable Input<String> diskEncryptionKeyRaw;
 
@@ -35,6 +47,12 @@ public final class InstanceAttachedDiskGetArgs extends io.pulumi.resources.Resou
         return this.diskEncryptionKeySha256 == null ? Input.empty() : this.diskEncryptionKeySha256;
     }
 
+    /**
+     * The self_link of the encryption key that is
+     * stored in Google Cloud KMS to encrypt this disk. Only one of `kms_key_self_link`
+     * and `disk_encryption_key_raw` may be set.
+     * 
+     */
     @InputImport(name="kmsKeySelfLink")
     private final @Nullable Input<String> kmsKeySelfLink;
 
@@ -42,6 +60,13 @@ public final class InstanceAttachedDiskGetArgs extends io.pulumi.resources.Resou
         return this.kmsKeySelfLink == null ? Input.empty() : this.kmsKeySelfLink;
     }
 
+    /**
+     * Either "READ_ONLY" or "READ_WRITE", defaults to "READ_WRITE"
+     * If you have a persistent disk with data that you want to share
+     * between multiple instances, detach it from any read-write instances and
+     * attach it to one or more instances in read-only mode.
+     * 
+     */
     @InputImport(name="mode")
     private final @Nullable Input<String> mode;
 
@@ -49,6 +74,10 @@ public final class InstanceAttachedDiskGetArgs extends io.pulumi.resources.Resou
         return this.mode == null ? Input.empty() : this.mode;
     }
 
+    /**
+     * The name or self_link of the disk to attach to this instance.
+     * 
+     */
     @InputImport(name="source", required=true)
     private final Input<String> source;
 

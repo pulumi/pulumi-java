@@ -14,10 +14,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * An HTTP Live Streaming (HLS) encryption configuration.
+ * 
+ */
 public final class OriginEndpointHlsEncryption extends io.pulumi.resources.InvokeArgs {
 
     public static final OriginEndpointHlsEncryption Empty = new OriginEndpointHlsEncryption();
 
+    /**
+     * A constant initialization vector for encryption (optional). When not specified the initialization vector will be periodically rotated.
+     * 
+     */
     @InputImport(name="constantInitializationVector")
     private final @Nullable String constantInitializationVector;
 
@@ -25,6 +33,10 @@ public final class OriginEndpointHlsEncryption extends io.pulumi.resources.Invok
         return this.constantInitializationVector == null ? Optional.empty() : Optional.ofNullable(this.constantInitializationVector);
     }
 
+    /**
+     * The encryption method to use.
+     * 
+     */
     @InputImport(name="encryptionMethod")
     private final @Nullable OriginEndpointHlsEncryptionEncryptionMethod encryptionMethod;
 
@@ -32,6 +44,10 @@ public final class OriginEndpointHlsEncryption extends io.pulumi.resources.Invok
         return this.encryptionMethod == null ? Optional.empty() : Optional.ofNullable(this.encryptionMethod);
     }
 
+    /**
+     * Interval (in seconds) between each encryption key rotation.
+     * 
+     */
     @InputImport(name="keyRotationIntervalSeconds")
     private final @Nullable Integer keyRotationIntervalSeconds;
 
@@ -39,6 +55,10 @@ public final class OriginEndpointHlsEncryption extends io.pulumi.resources.Invok
         return this.keyRotationIntervalSeconds == null ? Optional.empty() : Optional.ofNullable(this.keyRotationIntervalSeconds);
     }
 
+    /**
+     * When enabled, the EXT-X-KEY tag will be repeated in output manifests.
+     * 
+     */
     @InputImport(name="repeatExtXKey")
     private final @Nullable Boolean repeatExtXKey;
 

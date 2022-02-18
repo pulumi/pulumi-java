@@ -12,10 +12,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetGroupResult {
+    /**
+     * For optimistic concurrency control.
+     * 
+     */
     private final @Nullable String eTag;
+    /**
+     * Path reference to this group. /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/assessmentProjects/{projectName}/groups/{groupName}
+     * 
+     */
     private final String id;
+    /**
+     * Name of the group.
+     * 
+     */
     private final String name;
+    /**
+     * Properties of the group.
+     * 
+     */
     private final GroupPropertiesResponse properties;
+    /**
+     * Type of the object = [Microsoft.Migrate/assessmentProjects/groups].
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"eTag","id","name","properties","type"})
@@ -32,18 +52,38 @@ public final class GetGroupResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * For optimistic concurrency control.
+     * 
+     */
     public Optional<String> getETag() {
         return Optional.ofNullable(this.eTag);
     }
+    /**
+     * Path reference to this group. /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/assessmentProjects/{projectName}/groups/{groupName}
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Name of the group.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Properties of the group.
+     * 
+     */
     public GroupPropertiesResponse getProperties() {
         return this.properties;
     }
+    /**
+     * Type of the object = [Microsoft.Migrate/assessmentProjects/groups].
+     * 
+     */
     public String getType() {
         return this.type;
     }

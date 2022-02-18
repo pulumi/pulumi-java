@@ -8,10 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The CPU architecture for which packages in this distribution channel were built.
+     * 
+     */
     @EnumType
     public enum DistributionArchitecture {
+        /**
+         * Unknown architecture.
+         * 
+         */
         ArchitectureUnspecified("ARCHITECTURE_UNSPECIFIED"),
+        /**
+         * X86 architecture.
+         * 
+         */
         X86("X86"),
+        /**
+         * X64 architecture.
+         * 
+         */
         X64("X64");
 
         private final String value;

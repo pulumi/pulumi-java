@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A webhook receiver.
+ * 
+ */
 public final class WebhookReceiverResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final WebhookReceiverResponse Empty = new WebhookReceiverResponse();
 
+    /**
+     * Indicates the identifier uri for aad auth.
+     * 
+     */
     @InputImport(name="identifierUri")
     private final @Nullable String identifierUri;
 
@@ -22,6 +30,10 @@ public final class WebhookReceiverResponse extends io.pulumi.resources.InvokeArg
         return this.identifierUri == null ? Optional.empty() : Optional.ofNullable(this.identifierUri);
     }
 
+    /**
+     * The name of the webhook receiver. Names must be unique across all receivers within an action group.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -29,6 +41,10 @@ public final class WebhookReceiverResponse extends io.pulumi.resources.InvokeArg
         return this.name;
     }
 
+    /**
+     * Indicates the webhook app object Id for aad auth.
+     * 
+     */
     @InputImport(name="objectId")
     private final @Nullable String objectId;
 
@@ -36,6 +52,10 @@ public final class WebhookReceiverResponse extends io.pulumi.resources.InvokeArg
         return this.objectId == null ? Optional.empty() : Optional.ofNullable(this.objectId);
     }
 
+    /**
+     * The URI where webhooks should be sent.
+     * 
+     */
     @InputImport(name="serviceUri", required=true)
     private final String serviceUri;
 
@@ -43,6 +63,10 @@ public final class WebhookReceiverResponse extends io.pulumi.resources.InvokeArg
         return this.serviceUri;
     }
 
+    /**
+     * Indicates the tenant id for aad auth.
+     * 
+     */
     @InputImport(name="tenantId")
     private final @Nullable String tenantId;
 
@@ -50,6 +74,10 @@ public final class WebhookReceiverResponse extends io.pulumi.resources.InvokeArg
         return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
     }
 
+    /**
+     * Indicates whether or not use AAD authentication.
+     * 
+     */
     @InputImport(name="useAadAuth")
     private final @Nullable Boolean useAadAuth;
 
@@ -57,6 +85,10 @@ public final class WebhookReceiverResponse extends io.pulumi.resources.InvokeArg
         return this.useAadAuth == null ? Optional.empty() : Optional.ofNullable(this.useAadAuth);
     }
 
+    /**
+     * Indicates whether to use common alert schema.
+     * 
+     */
     @InputImport(name="useCommonAlertSchema")
     private final @Nullable Boolean useCommonAlertSchema;
 

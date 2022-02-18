@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * type of datastore; Operational/Vault/Archive
+     * 
+     */
     @EnumType
     public enum DataStoreTypes {
         OperationalStore("OperationalStore"),

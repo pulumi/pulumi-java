@@ -9,8 +9,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class IpFilterRuleResponse {
+    /**
+     * The desired action for requests captured by this rule.
+     * 
+     */
     private final String action;
+    /**
+     * The name of the IP filter rule.
+     * 
+     */
     private final String filterName;
+    /**
+     * A string that contains the IP address range in CIDR notation for the rule.
+     * 
+     */
     private final String ipMask;
 
     @OutputCustomType.Constructor({"action","filterName","ipMask"})
@@ -23,12 +35,24 @@ public final class IpFilterRuleResponse {
         this.ipMask = Objects.requireNonNull(ipMask);
     }
 
+    /**
+     * The desired action for requests captured by this rule.
+     * 
+     */
     public String getAction() {
         return this.action;
     }
+    /**
+     * The name of the IP filter rule.
+     * 
+     */
     public String getFilterName() {
         return this.filterName;
     }
+    /**
+     * A string that contains the IP address range in CIDR notation for the rule.
+     * 
+     */
     public String getIpMask() {
         return this.ipMask;
     }

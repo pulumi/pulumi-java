@@ -23,6 +23,10 @@ public final class TableIamBindingState extends io.pulumi.resources.ResourceArgs
         return this.condition == null ? Input.empty() : this.condition;
     }
 
+    /**
+     * (Computed) The etag of the tables's IAM policy.
+     * 
+     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -30,6 +34,10 @@ public final class TableIamBindingState extends io.pulumi.resources.ResourceArgs
         return this.etag == null ? Input.empty() : this.etag;
     }
 
+    /**
+     * The name or relative resource id of the instance that owns the table.
+     * 
+     */
     @InputImport(name="instance")
     private final @Nullable Input<String> instance;
 
@@ -44,6 +52,11 @@ public final class TableIamBindingState extends io.pulumi.resources.ResourceArgs
         return this.members == null ? Input.empty() : this.members;
     }
 
+    /**
+     * The project in which the table belongs. If it
+     * is not provided, this provider will use the provider default.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -51,6 +64,12 @@ public final class TableIamBindingState extends io.pulumi.resources.ResourceArgs
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The role that should be applied. Only one
+     * `gcp.bigtable.TableIamBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`. Read more about roles [here](https://cloud.google.com/bigtable/docs/access-control#roles).
+     * 
+     */
     @InputImport(name="role")
     private final @Nullable Input<String> role;
 
@@ -58,6 +77,10 @@ public final class TableIamBindingState extends io.pulumi.resources.ResourceArgs
         return this.role == null ? Input.empty() : this.role;
     }
 
+    /**
+     * The name or relative resource id of the table to manage IAM policies for.
+     * 
+     */
     @InputImport(name="table")
     private final @Nullable Input<String> table;
 

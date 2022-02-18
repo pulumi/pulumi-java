@@ -15,6 +15,10 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
 
     public static final MonitoringConfigArgs Empty = new MonitoringConfigArgs();
 
+    /**
+     * The device name.
+     * 
+     */
     @InputImport(name="deviceName", required=true)
     private final Input<String> deviceName;
 
@@ -22,6 +26,10 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
         return this.deviceName;
     }
 
+    /**
+     * The metrics configuration details
+     * 
+     */
     @InputImport(name="metricConfigurations", required=true)
     private final Input<List<MetricConfigurationArgs>> metricConfigurations;
 
@@ -29,6 +37,10 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
         return this.metricConfigurations;
     }
 
+    /**
+     * The resource group name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -36,6 +48,10 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
         return this.resourceGroupName;
     }
 
+    /**
+     * The role name.
+     * 
+     */
     @InputImport(name="roleName", required=true)
     private final Input<String> roleName;
 

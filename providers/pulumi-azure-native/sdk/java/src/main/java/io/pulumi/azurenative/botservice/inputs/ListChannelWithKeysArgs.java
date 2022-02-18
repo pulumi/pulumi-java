@@ -12,6 +12,10 @@ public final class ListChannelWithKeysArgs extends io.pulumi.resources.InvokeArg
 
     public static final ListChannelWithKeysArgs Empty = new ListChannelWithKeysArgs();
 
+    /**
+     * The name of the Channel resource.
+     * 
+     */
     @InputImport(name="channelName", required=true)
     private final String channelName;
 
@@ -19,6 +23,10 @@ public final class ListChannelWithKeysArgs extends io.pulumi.resources.InvokeArg
         return this.channelName;
     }
 
+    /**
+     * The name of the Bot resource group in the user subscription.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class ListChannelWithKeysArgs extends io.pulumi.resources.InvokeArg
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the Bot resource.
+     * 
+     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 

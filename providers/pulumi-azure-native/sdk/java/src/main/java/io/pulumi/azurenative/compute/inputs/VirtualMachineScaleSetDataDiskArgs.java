@@ -17,10 +17,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes a virtual machine scale set data disk.
+ * 
+ */
 public final class VirtualMachineScaleSetDataDiskArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualMachineScaleSetDataDiskArgs Empty = new VirtualMachineScaleSetDataDiskArgs();
 
+    /**
+     * Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**
+     * 
+     */
     @InputImport(name="caching")
     private final @Nullable Input<CachingTypes> caching;
 
@@ -28,6 +36,10 @@ public final class VirtualMachineScaleSetDataDiskArgs extends io.pulumi.resource
         return this.caching == null ? Input.empty() : this.caching;
     }
 
+    /**
+     * The create option.
+     * 
+     */
     @InputImport(name="createOption", required=true)
     private final Input<Either<String,DiskCreateOptionTypes>> createOption;
 
@@ -35,6 +47,10 @@ public final class VirtualMachineScaleSetDataDiskArgs extends io.pulumi.resource
         return this.createOption;
     }
 
+    /**
+     * Specifies the Read-Write IOPS for the managed disk. Should be used only when StorageAccountType is UltraSSD_LRS. If not specified, a default value would be assigned based on diskSizeGB.
+     * 
+     */
     @InputImport(name="diskIOPSReadWrite")
     private final @Nullable Input<Double> diskIOPSReadWrite;
 
@@ -42,6 +58,10 @@ public final class VirtualMachineScaleSetDataDiskArgs extends io.pulumi.resource
         return this.diskIOPSReadWrite == null ? Input.empty() : this.diskIOPSReadWrite;
     }
 
+    /**
+     * Specifies the bandwidth in MB per second for the managed disk. Should be used only when StorageAccountType is UltraSSD_LRS. If not specified, a default value would be assigned based on diskSizeGB.
+     * 
+     */
     @InputImport(name="diskMBpsReadWrite")
     private final @Nullable Input<Double> diskMBpsReadWrite;
 
@@ -49,6 +69,10 @@ public final class VirtualMachineScaleSetDataDiskArgs extends io.pulumi.resource
         return this.diskMBpsReadWrite == null ? Input.empty() : this.diskMBpsReadWrite;
     }
 
+    /**
+     * Specifies the size of an empty data disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB
+     * 
+     */
     @InputImport(name="diskSizeGB")
     private final @Nullable Input<Integer> diskSizeGB;
 
@@ -56,6 +80,10 @@ public final class VirtualMachineScaleSetDataDiskArgs extends io.pulumi.resource
         return this.diskSizeGB == null ? Input.empty() : this.diskSizeGB;
     }
 
+    /**
+     * Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.
+     * 
+     */
     @InputImport(name="lun", required=true)
     private final Input<Integer> lun;
 
@@ -63,6 +91,10 @@ public final class VirtualMachineScaleSetDataDiskArgs extends io.pulumi.resource
         return this.lun;
     }
 
+    /**
+     * The managed disk parameters.
+     * 
+     */
     @InputImport(name="managedDisk")
     private final @Nullable Input<VirtualMachineScaleSetManagedDiskParametersArgs> managedDisk;
 
@@ -70,6 +102,10 @@ public final class VirtualMachineScaleSetDataDiskArgs extends io.pulumi.resource
         return this.managedDisk == null ? Input.empty() : this.managedDisk;
     }
 
+    /**
+     * The disk name.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -77,6 +113,10 @@ public final class VirtualMachineScaleSetDataDiskArgs extends io.pulumi.resource
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Specifies whether writeAccelerator should be enabled or disabled on the disk.
+     * 
+     */
     @InputImport(name="writeAcceleratorEnabled")
     private final @Nullable Input<Boolean> writeAcceleratorEnabled;
 

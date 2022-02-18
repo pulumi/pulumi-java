@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetScheduledAudit {
+/**
+ * Scheduled audits can be used to specify the checks you want to perform during an audit and how often the audit should be run.
+ * 
+ */
     public static CompletableFuture<GetScheduledAuditResult> invokeAsync(GetScheduledAuditArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iot:getScheduledAudit", TypeShape.of(GetScheduledAuditResult.class), args == null ? GetScheduledAuditArgs.Empty : args, Utilities.withVersion(options));
     }

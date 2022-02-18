@@ -11,10 +11,30 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TemplateContentsResponse {
+    /**
+     * Import files referenced by the main template.
+     * 
+     */
     private final List<ImportFileResponse> imports;
+    /**
+     * Which interpreter (python or jinja) should be used during expansion.
+     * 
+     */
     private final String interpreter;
+    /**
+     * The filename of the mainTemplate
+     * 
+     */
     private final String mainTemplate;
+    /**
+     * The contents of the template schema.
+     * 
+     */
     private final String schema;
+    /**
+     * The contents of the main template file.
+     * 
+     */
     private final String template;
 
     @OutputCustomType.Constructor({"imports","interpreter","mainTemplate","schema","template"})
@@ -31,18 +51,38 @@ public final class TemplateContentsResponse {
         this.template = Objects.requireNonNull(template);
     }
 
+    /**
+     * Import files referenced by the main template.
+     * 
+     */
     public List<ImportFileResponse> getImports() {
         return this.imports;
     }
+    /**
+     * Which interpreter (python or jinja) should be used during expansion.
+     * 
+     */
     public String getInterpreter() {
         return this.interpreter;
     }
+    /**
+     * The filename of the mainTemplate
+     * 
+     */
     public String getMainTemplate() {
         return this.mainTemplate;
     }
+    /**
+     * The contents of the template schema.
+     * 
+     */
     public String getSchema() {
         return this.schema;
     }
+    /**
+     * The contents of the main template file.
+     * 
+     */
     public String getTemplate() {
         return this.template;
     }

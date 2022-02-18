@@ -16,57 +16,131 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Resource schema for AWS::MediaConnect::FlowEntitlement
+ * 
+ */
 @ResourceType(type="aws-native:mediaconnect:FlowEntitlement")
 public class FlowEntitlement extends io.pulumi.resources.CustomResource {
+    /**
+     * Percentage from 0-100 of the data transfer cost to be billed to the subscriber.
+     * 
+     */
     @OutputExport(name="dataTransferSubscriberFeePercent", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> dataTransferSubscriberFeePercent;
 
+    /**
+     * @return Percentage from 0-100 of the data transfer cost to be billed to the subscriber.
+     * 
+     */
     public Output</* @Nullable */ Integer> getDataTransferSubscriberFeePercent() {
         return this.dataTransferSubscriberFeePercent;
     }
+    /**
+     * A description of the entitlement.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output<String> description;
 
+    /**
+     * @return A description of the entitlement.
+     * 
+     */
     public Output<String> getDescription() {
         return this.description;
     }
+    /**
+     * The type of encryption that will be used on the output that is associated with this entitlement.
+     * 
+     */
     @OutputExport(name="encryption", type=FlowEntitlementEncryption.class, parameters={})
     private Output</* @Nullable */ FlowEntitlementEncryption> encryption;
 
+    /**
+     * @return The type of encryption that will be used on the output that is associated with this entitlement.
+     * 
+     */
     public Output</* @Nullable */ FlowEntitlementEncryption> getEncryption() {
         return this.encryption;
     }
+    /**
+     * The ARN of the entitlement.
+     * 
+     */
     @OutputExport(name="entitlementArn", type=String.class, parameters={})
     private Output<String> entitlementArn;
 
+    /**
+     * @return The ARN of the entitlement.
+     * 
+     */
     public Output<String> getEntitlementArn() {
         return this.entitlementArn;
     }
+    /**
+     *  An indication of whether the entitlement is enabled.
+     * 
+     */
     @OutputExport(name="entitlementStatus", type=FlowEntitlementEntitlementStatus.class, parameters={})
     private Output</* @Nullable */ FlowEntitlementEntitlementStatus> entitlementStatus;
 
+    /**
+     * @return  An indication of whether the entitlement is enabled.
+     * 
+     */
     public Output</* @Nullable */ FlowEntitlementEntitlementStatus> getEntitlementStatus() {
         return this.entitlementStatus;
     }
+    /**
+     * The ARN of the flow.
+     * 
+     */
     @OutputExport(name="flowArn", type=String.class, parameters={})
     private Output<String> flowArn;
 
+    /**
+     * @return The ARN of the flow.
+     * 
+     */
     public Output<String> getFlowArn() {
         return this.flowArn;
     }
+    /**
+     * The name of the entitlement.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the entitlement.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The AWS account IDs that you want to share your content with. The receiving accounts (subscribers) will be allowed to create their own flow using your content as the source.
+     * 
+     */
     @OutputExport(name="subscribers", type=List.class, parameters={String.class})
     private Output<List<String>> subscribers;
 
+    /**
+     * @return The AWS account IDs that you want to share your content with. The receiving accounts (subscribers) will be allowed to create their own flow using your content as the source.
+     * 
+     */
     public Output<List<String>> getSubscribers() {
         return this.subscribers;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public FlowEntitlement(String name, FlowEntitlementArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:mediaconnect:FlowEntitlement", name, args == null ? FlowEntitlementArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -82,6 +156,14 @@ public class FlowEntitlement extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static FlowEntitlement get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new FlowEntitlement(name, id, options);
     }

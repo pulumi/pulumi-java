@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Configuration for RPC Protection.
+     * 
+     */
     @EnumType
     public enum LocationHDFSQopConfigurationRpcProtection {
         Authentication("AUTHENTICATION"),

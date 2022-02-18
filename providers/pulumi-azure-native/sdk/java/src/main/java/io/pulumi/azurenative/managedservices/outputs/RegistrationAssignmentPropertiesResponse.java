@@ -10,8 +10,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RegistrationAssignmentPropertiesResponse {
+    /**
+     * Current state of the registration assignment.
+     * 
+     */
     private final String provisioningState;
+    /**
+     * Registration definition inside registration assignment.
+     * 
+     */
     private final RegistrationAssignmentPropertiesResponseRegistrationDefinition registrationDefinition;
+    /**
+     * Fully qualified path of the registration definition.
+     * 
+     */
     private final String registrationDefinitionId;
 
     @OutputCustomType.Constructor({"provisioningState","registrationDefinition","registrationDefinitionId"})
@@ -24,12 +36,24 @@ public final class RegistrationAssignmentPropertiesResponse {
         this.registrationDefinitionId = Objects.requireNonNull(registrationDefinitionId);
     }
 
+    /**
+     * Current state of the registration assignment.
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Registration definition inside registration assignment.
+     * 
+     */
     public RegistrationAssignmentPropertiesResponseRegistrationDefinition getRegistrationDefinition() {
         return this.registrationDefinition;
     }
+    /**
+     * Fully qualified path of the registration definition.
+     * 
+     */
     public String getRegistrationDefinitionId() {
         return this.registrationDefinitionId;
     }

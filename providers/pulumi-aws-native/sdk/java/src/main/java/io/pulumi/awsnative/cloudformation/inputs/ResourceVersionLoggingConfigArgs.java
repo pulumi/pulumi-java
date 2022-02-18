@@ -14,6 +14,10 @@ public final class ResourceVersionLoggingConfigArgs extends io.pulumi.resources.
 
     public static final ResourceVersionLoggingConfigArgs Empty = new ResourceVersionLoggingConfigArgs();
 
+    /**
+     * The Amazon CloudWatch log group to which CloudFormation sends error logging information when invoking the type's handlers.
+     * 
+     */
     @InputImport(name="logGroupName")
     private final @Nullable Input<String> logGroupName;
 
@@ -21,6 +25,10 @@ public final class ResourceVersionLoggingConfigArgs extends io.pulumi.resources.
         return this.logGroupName == null ? Input.empty() : this.logGroupName;
     }
 
+    /**
+     * The ARN of the role that CloudFormation should assume when sending log entries to CloudWatch logs.
+     * 
+     */
     @InputImport(name="logRoleArn")
     private final @Nullable Input<String> logRoleArn;
 

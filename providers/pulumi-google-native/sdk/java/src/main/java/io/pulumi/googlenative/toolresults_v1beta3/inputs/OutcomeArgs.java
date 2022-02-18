@@ -14,10 +14,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Interprets a result so that humans and machines can act on it.
+ * 
+ */
 public final class OutcomeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OutcomeArgs Empty = new OutcomeArgs();
 
+    /**
+     * More information about a FAILURE outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not FAILURE. Optional
+     * 
+     */
     @InputImport(name="failureDetail")
     private final @Nullable Input<FailureDetailArgs> failureDetail;
 
@@ -25,6 +33,10 @@ public final class OutcomeArgs extends io.pulumi.resources.ResourceArgs {
         return this.failureDetail == null ? Input.empty() : this.failureDetail;
     }
 
+    /**
+     * More information about an INCONCLUSIVE outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not INCONCLUSIVE. Optional
+     * 
+     */
     @InputImport(name="inconclusiveDetail")
     private final @Nullable Input<InconclusiveDetailArgs> inconclusiveDetail;
 
@@ -32,6 +44,10 @@ public final class OutcomeArgs extends io.pulumi.resources.ResourceArgs {
         return this.inconclusiveDetail == null ? Input.empty() : this.inconclusiveDetail;
     }
 
+    /**
+     * More information about a SKIPPED outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not SKIPPED. Optional
+     * 
+     */
     @InputImport(name="skippedDetail")
     private final @Nullable Input<SkippedDetailArgs> skippedDetail;
 
@@ -39,6 +55,10 @@ public final class OutcomeArgs extends io.pulumi.resources.ResourceArgs {
         return this.skippedDetail == null ? Input.empty() : this.skippedDetail;
     }
 
+    /**
+     * More information about a SUCCESS outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not SUCCESS. Optional
+     * 
+     */
     @InputImport(name="successDetail")
     private final @Nullable Input<SuccessDetailArgs> successDetail;
 
@@ -46,6 +66,10 @@ public final class OutcomeArgs extends io.pulumi.resources.ResourceArgs {
         return this.successDetail == null ? Input.empty() : this.successDetail;
     }
 
+    /**
+     * The simplest way to interpret a result. Required
+     * 
+     */
     @InputImport(name="summary")
     private final @Nullable Input<OutcomeSummary> summary;
 

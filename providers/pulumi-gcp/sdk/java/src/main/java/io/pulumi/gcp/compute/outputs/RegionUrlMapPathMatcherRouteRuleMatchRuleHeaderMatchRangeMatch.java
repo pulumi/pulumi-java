@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatch {
+    /**
+     * The end of the range (exclusive).
+     * 
+     */
     private final Integer rangeEnd;
+    /**
+     * The start of the range (inclusive).
+     * 
+     */
     private final Integer rangeStart;
 
     @OutputCustomType.Constructor({"rangeEnd","rangeStart"})
@@ -20,9 +28,17 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatc
         this.rangeStart = Objects.requireNonNull(rangeStart);
     }
 
+    /**
+     * The end of the range (exclusive).
+     * 
+     */
     public Integer getRangeEnd() {
         return this.rangeEnd;
     }
+    /**
+     * The start of the range (inclusive).
+     * 
+     */
     public Integer getRangeStart() {
         return this.rangeStart;
     }

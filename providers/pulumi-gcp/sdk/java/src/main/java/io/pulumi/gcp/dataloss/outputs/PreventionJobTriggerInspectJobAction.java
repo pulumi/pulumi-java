@@ -9,6 +9,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PreventionJobTriggerInspectJobAction {
+    /**
+     * Schedule for triggered jobs
+     * Structure is documented below.
+     * 
+     */
     private final PreventionJobTriggerInspectJobActionSaveFindings saveFindings;
 
     @OutputCustomType.Constructor({"saveFindings"})
@@ -16,6 +21,11 @@ public final class PreventionJobTriggerInspectJobAction {
         this.saveFindings = Objects.requireNonNull(saveFindings);
     }
 
+    /**
+     * Schedule for triggered jobs
+     * Structure is documented below.
+     * 
+     */
     public PreventionJobTriggerInspectJobActionSaveFindings getSaveFindings() {
         return this.saveFindings;
     }

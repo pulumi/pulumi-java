@@ -8,10 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Specifies how individual filter label matches within the list of filterLabels and contributes toward the overall metadataFilter match. Supported values are: - MATCH_ANY: at least one of the filterLabels must have a matching label in the provided metadata. - MATCH_ALL: all filterLabels must have matching labels in the provided metadata.
+     * 
+     */
     @EnumType
     public enum MetadataFilterFilterMatchCriteria {
+        /**
+         * Specifies that all filterLabels must match for the metadataFilter to be considered a match.
+         * 
+         */
         MatchAll("MATCH_ALL"),
+        /**
+         * Specifies that any filterLabel must match for the metadataFilter to be considered a match.
+         * 
+         */
         MatchAny("MATCH_ANY"),
+        /**
+         * Indicates that the match criteria was not set. A metadataFilter must never be created with this value.
+         * 
+         */
         NotSet("NOT_SET");
 
         private final String value;

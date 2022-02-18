@@ -9,10 +9,18 @@ import io.pulumi.googlenative.container_v1beta1.inputs.MonitoringComponentConfig
 import java.util.Objects;
 
 
+/**
+ * MonitoringConfig is cluster monitoring configuration.
+ * 
+ */
 public final class MonitoringConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MonitoringConfigResponse Empty = new MonitoringConfigResponse();
 
+    /**
+     * Monitoring components configuration
+     * 
+     */
     @InputImport(name="componentConfig", required=true)
     private final MonitoringComponentConfigResponse componentConfig;
 
@@ -20,6 +28,10 @@ public final class MonitoringConfigResponse extends io.pulumi.resources.InvokeAr
         return this.componentConfig;
     }
 
+    /**
+     * Enable Google Cloud Managed Service for Prometheus in the cluster.
+     * 
+     */
     @InputImport(name="managedPrometheusConfig", required=true)
     private final ManagedPrometheusConfigResponse managedPrometheusConfig;
 

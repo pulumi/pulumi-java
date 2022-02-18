@@ -9,10 +9,18 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * Determines whether Amazon Lex obscures slot values in conversation logs.
+ * 
+ */
 public final class BotObfuscationSettingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BotObfuscationSettingArgs Empty = new BotObfuscationSettingArgs();
 
+    /**
+     * Value that determines whether Amazon Lex obscures slot values in conversation logs. The default is to obscure the values.
+     * 
+     */
     @InputImport(name="obfuscationSettingType", required=true)
     private final Input<BotObfuscationSettingObfuscationSettingType> obfuscationSettingType;
 

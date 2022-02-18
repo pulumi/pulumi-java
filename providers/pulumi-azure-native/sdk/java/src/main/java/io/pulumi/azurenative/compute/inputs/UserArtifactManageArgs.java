@@ -14,6 +14,10 @@ public final class UserArtifactManageArgs extends io.pulumi.resources.ResourceAr
 
     public static final UserArtifactManageArgs Empty = new UserArtifactManageArgs();
 
+    /**
+     * Required. The path and arguments to install the gallery application. This is limited to 4096 characters.
+     * 
+     */
     @InputImport(name="install", required=true)
     private final Input<String> install;
 
@@ -21,6 +25,10 @@ public final class UserArtifactManageArgs extends io.pulumi.resources.ResourceAr
         return this.install;
     }
 
+    /**
+     * Required. The path and arguments to remove the gallery application. This is limited to 4096 characters.
+     * 
+     */
     @InputImport(name="remove", required=true)
     private final Input<String> remove;
 
@@ -28,6 +36,10 @@ public final class UserArtifactManageArgs extends io.pulumi.resources.ResourceAr
         return this.remove;
     }
 
+    /**
+     * Optional. The path and arguments to update the gallery application. If not present, then update operation will invoke remove command on the previous version and install command on the current version of the gallery application. This is limited to 4096 characters.
+     * 
+     */
     @InputImport(name="update")
     private final @Nullable Input<String> update;
 

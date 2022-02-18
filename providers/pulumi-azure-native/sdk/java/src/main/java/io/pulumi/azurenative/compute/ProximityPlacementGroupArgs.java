@@ -18,6 +18,10 @@ public final class ProximityPlacementGroupArgs extends io.pulumi.resources.Resou
 
     public static final ProximityPlacementGroupArgs Empty = new ProximityPlacementGroupArgs();
 
+    /**
+     * Describes colocation status of the Proximity Placement Group.
+     * 
+     */
     @InputImport(name="colocationStatus")
     private final @Nullable Input<InstanceViewStatusArgs> colocationStatus;
 
@@ -25,6 +29,10 @@ public final class ProximityPlacementGroupArgs extends io.pulumi.resources.Resou
         return this.colocationStatus == null ? Input.empty() : this.colocationStatus;
     }
 
+    /**
+     * Resource location
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -32,6 +40,10 @@ public final class ProximityPlacementGroupArgs extends io.pulumi.resources.Resou
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the proximity placement group.
+     * 
+     */
     @InputImport(name="proximityPlacementGroupName")
     private final @Nullable Input<String> proximityPlacementGroupName;
 
@@ -39,6 +51,10 @@ public final class ProximityPlacementGroupArgs extends io.pulumi.resources.Resou
         return this.proximityPlacementGroupName == null ? Input.empty() : this.proximityPlacementGroupName;
     }
 
+    /**
+     * Specifies the type of the proximity placement group. <br><br> Possible values are: <br><br> **Standard** : Co-locate resources within an Azure region or Availability Zone. <br><br> **Ultra** : For future use.
+     * 
+     */
     @InputImport(name="proximityPlacementGroupType")
     private final @Nullable Input<Either<String,ProximityPlacementGroupType>> proximityPlacementGroupType;
 
@@ -46,6 +62,10 @@ public final class ProximityPlacementGroupArgs extends io.pulumi.resources.Resou
         return this.proximityPlacementGroupType == null ? Input.empty() : this.proximityPlacementGroupType;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -53,6 +73,10 @@ public final class ProximityPlacementGroupArgs extends io.pulumi.resources.Resou
         return this.resourceGroupName;
     }
 
+    /**
+     * Resource tags
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

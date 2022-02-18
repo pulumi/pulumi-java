@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Provisioning state of the monitoring tag rules.
+     * 
+     */
     @EnumType
     public enum ProvisioningState {
         Accepted("Accepted"),

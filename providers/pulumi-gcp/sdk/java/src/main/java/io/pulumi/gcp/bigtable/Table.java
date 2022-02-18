@@ -15,39 +15,117 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Creates a Google Cloud Bigtable table inside an instance. For more information see
+ * [the official documentation](https://cloud.google.com/bigtable/) and
+ * [API](https://cloud.google.com/bigtable/docs/go/reference).
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * Bigtable Tables can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:bigtable/table:Table default projects/{{project}}/instances/{{instance_name}}/tables/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:bigtable/table:Table default {{project}}/{{instance_name}}/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:bigtable/table:Table default {{instance_name}}/{{name}}
+ * ```
+ * 
+ *  The following fields can't be read and will show diffs if set in config when imported- `split_keys`
+ * 
+ */
 @ResourceType(type="gcp:bigtable/table:Table")
 public class Table extends io.pulumi.resources.CustomResource {
+    /**
+     * A group of columns within a table which share a common configuration. This can be specified multiple times. Structure is documented below.
+     * 
+     */
     @OutputExport(name="columnFamilies", type=List.class, parameters={TableColumnFamily.class})
     private Output</* @Nullable */ List<TableColumnFamily>> columnFamilies;
 
+    /**
+     * @return A group of columns within a table which share a common configuration. This can be specified multiple times. Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ List<TableColumnFamily>> getColumnFamilies() {
         return this.columnFamilies;
     }
+    /**
+     * The name of the Bigtable instance.
+     * 
+     */
     @OutputExport(name="instanceName", type=String.class, parameters={})
     private Output<String> instanceName;
 
+    /**
+     * @return The name of the Bigtable instance.
+     * 
+     */
     public Output<String> getInstanceName() {
         return this.instanceName;
     }
+    /**
+     * The name of the table.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the table.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The ID of the project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * A list of predefined keys to split the table on.
+     * !> **Warning:** Modifying the `split_keys` of an existing table will cause the provider
+     * to delete/recreate the entire `gcp.bigtable.Table` resource.
+     * 
+     */
     @OutputExport(name="splitKeys", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> splitKeys;
 
+    /**
+     * @return A list of predefined keys to split the table on.
+     * !> **Warning:** Modifying the `split_keys` of an existing table will cause the provider
+     * to delete/recreate the entire `gcp.bigtable.Table` resource.
+     * 
+     */
     public Output</* @Nullable */ List<String>> getSplitKeys() {
         return this.splitKeys;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Table(String name, TableArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:bigtable/table:Table", name, args == null ? TableArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -63,6 +141,15 @@ public class Table extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Table get(String name, Input<String> id, @Nullable TableState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Table(name, id, state, options);
     }

@@ -14,17 +14,65 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetPatchDeploymentResult {
+    /**
+     * Time the patch deployment was created. Timestamp is in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * 
+     */
     private final String createTime;
+    /**
+     * Optional. Description of the patch deployment. Length of the description is limited to 1024 characters.
+     * 
+     */
     private final String description;
+    /**
+     * Optional. Duration of the patch. After the duration ends, the patch times out.
+     * 
+     */
     private final String duration;
+    /**
+     * VM instances to patch.
+     * 
+     */
     private final PatchInstanceFilterResponse instanceFilter;
+    /**
+     * The last time a patch job was started by this deployment. Timestamp is in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * 
+     */
     private final String lastExecuteTime;
+    /**
+     * Unique name for the patch deployment resource in a project. The patch deployment name is in the form: `projects/{project_id}/patchDeployments/{patch_deployment_id}`. This field is ignored when you create a new patch deployment.
+     * 
+     */
     private final String name;
+    /**
+     * Schedule a one-time execution.
+     * 
+     */
     private final OneTimeScheduleResponse oneTimeSchedule;
+    /**
+     * Optional. Patch configuration that is applied.
+     * 
+     */
     private final PatchConfigResponse patchConfig;
+    /**
+     * Schedule recurring executions.
+     * 
+     */
     private final RecurringScheduleResponse recurringSchedule;
+    /**
+     * Optional. Rollout strategy of the patch job.
+     * 
+     */
     private final PatchRolloutResponse rollout;
+    /**
+     * Current state of the patch deployment.
+     * 
+     */
     private final String state;
+    /**
+     * Time the patch deployment was last updated. Timestamp is in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * 
+     */
     private final String updateTime;
 
     @OutputCustomType.Constructor({"createTime","description","duration","instanceFilter","lastExecuteTime","name","oneTimeSchedule","patchConfig","recurringSchedule","rollout","state","updateTime"})
@@ -55,39 +103,87 @@ public final class GetPatchDeploymentResult {
         this.updateTime = Objects.requireNonNull(updateTime);
     }
 
+    /**
+     * Time the patch deployment was created. Timestamp is in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * 
+     */
     public String getCreateTime() {
         return this.createTime;
     }
+    /**
+     * Optional. Description of the patch deployment. Length of the description is limited to 1024 characters.
+     * 
+     */
     public String getDescription() {
         return this.description;
     }
+    /**
+     * Optional. Duration of the patch. After the duration ends, the patch times out.
+     * 
+     */
     public String getDuration() {
         return this.duration;
     }
+    /**
+     * VM instances to patch.
+     * 
+     */
     public PatchInstanceFilterResponse getInstanceFilter() {
         return this.instanceFilter;
     }
+    /**
+     * The last time a patch job was started by this deployment. Timestamp is in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * 
+     */
     public String getLastExecuteTime() {
         return this.lastExecuteTime;
     }
+    /**
+     * Unique name for the patch deployment resource in a project. The patch deployment name is in the form: `projects/{project_id}/patchDeployments/{patch_deployment_id}`. This field is ignored when you create a new patch deployment.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Schedule a one-time execution.
+     * 
+     */
     public OneTimeScheduleResponse getOneTimeSchedule() {
         return this.oneTimeSchedule;
     }
+    /**
+     * Optional. Patch configuration that is applied.
+     * 
+     */
     public PatchConfigResponse getPatchConfig() {
         return this.patchConfig;
     }
+    /**
+     * Schedule recurring executions.
+     * 
+     */
     public RecurringScheduleResponse getRecurringSchedule() {
         return this.recurringSchedule;
     }
+    /**
+     * Optional. Rollout strategy of the patch job.
+     * 
+     */
     public PatchRolloutResponse getRollout() {
         return this.rollout;
     }
+    /**
+     * Current state of the patch deployment.
+     * 
+     */
     public String getState() {
         return this.state;
     }
+    /**
+     * Time the patch deployment was last updated. Timestamp is in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * 
+     */
     public String getUpdateTime() {
         return this.updateTime;
     }

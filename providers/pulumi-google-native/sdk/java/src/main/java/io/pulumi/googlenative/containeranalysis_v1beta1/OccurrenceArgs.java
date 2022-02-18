@@ -27,6 +27,10 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OccurrenceArgs Empty = new OccurrenceArgs();
 
+    /**
+     * Describes an attestation of an artifact.
+     * 
+     */
     @InputImport(name="attestation")
     private final @Nullable Input<DetailsArgs> attestation;
 
@@ -34,6 +38,10 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.attestation == null ? Input.empty() : this.attestation;
     }
 
+    /**
+     * Describes a verifiable build.
+     * 
+     */
     @InputImport(name="build")
     private final @Nullable Input<GrafeasV1beta1BuildDetailsArgs> build;
 
@@ -41,6 +49,10 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.build == null ? Input.empty() : this.build;
     }
 
+    /**
+     * Describes the deployment of an artifact on a runtime.
+     * 
+     */
     @InputImport(name="deployment")
     private final @Nullable Input<GrafeasV1beta1DeploymentDetailsArgs> deployment;
 
@@ -48,6 +60,10 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.deployment == null ? Input.empty() : this.deployment;
     }
 
+    /**
+     * Describes how this resource derives from the basis in the associated note.
+     * 
+     */
     @InputImport(name="derivedImage")
     private final @Nullable Input<GrafeasV1beta1ImageDetailsArgs> derivedImage;
 
@@ -55,6 +71,10 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.derivedImage == null ? Input.empty() : this.derivedImage;
     }
 
+    /**
+     * Describes when a resource was discovered.
+     * 
+     */
     @InputImport(name="discovered")
     private final @Nullable Input<GrafeasV1beta1DiscoveryDetailsArgs> discovered;
 
@@ -62,6 +82,10 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.discovered == null ? Input.empty() : this.discovered;
     }
 
+    /**
+     * Describes the installation of a package on the linked resource.
+     * 
+     */
     @InputImport(name="installation")
     private final @Nullable Input<GrafeasV1beta1PackageDetailsArgs> installation;
 
@@ -69,6 +93,10 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.installation == null ? Input.empty() : this.installation;
     }
 
+    /**
+     * Describes a specific in-toto link.
+     * 
+     */
     @InputImport(name="intoto")
     private final @Nullable Input<GrafeasV1beta1IntotoDetailsArgs> intoto;
 
@@ -76,6 +104,10 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.intoto == null ? Input.empty() : this.intoto;
     }
 
+    /**
+     * Immutable. The analysis note associated with this occurrence, in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`. This field can be used as a filter in list requests.
+     * 
+     */
     @InputImport(name="noteName", required=true)
     private final Input<String> noteName;
 
@@ -90,6 +122,10 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * A description of actions that can be taken to remedy the note.
+     * 
+     */
     @InputImport(name="remediation")
     private final @Nullable Input<String> remediation;
 
@@ -97,6 +133,10 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.remediation == null ? Input.empty() : this.remediation;
     }
 
+    /**
+     * Immutable. The resource for which the occurrence applies.
+     * 
+     */
     @InputImport(name="resource", required=true)
     private final Input<ResourceArgs> resource;
 
@@ -104,6 +144,10 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.resource;
     }
 
+    /**
+     * Describes a specific software bill of materials document.
+     * 
+     */
     @InputImport(name="sbom")
     private final @Nullable Input<DocumentOccurrenceArgs> sbom;
 
@@ -111,6 +155,10 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.sbom == null ? Input.empty() : this.sbom;
     }
 
+    /**
+     * Describes a specific SPDX File.
+     * 
+     */
     @InputImport(name="spdxFile")
     private final @Nullable Input<FileOccurrenceArgs> spdxFile;
 
@@ -118,6 +166,10 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.spdxFile == null ? Input.empty() : this.spdxFile;
     }
 
+    /**
+     * Describes a specific SPDX Package.
+     * 
+     */
     @InputImport(name="spdxPackage")
     private final @Nullable Input<PackageInfoOccurrenceArgs> spdxPackage;
 
@@ -125,6 +177,10 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.spdxPackage == null ? Input.empty() : this.spdxPackage;
     }
 
+    /**
+     * Describes a specific SPDX Relationship.
+     * 
+     */
     @InputImport(name="spdxRelationship")
     private final @Nullable Input<RelationshipOccurrenceArgs> spdxRelationship;
 
@@ -132,6 +188,10 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.spdxRelationship == null ? Input.empty() : this.spdxRelationship;
     }
 
+    /**
+     * Describes a security vulnerability.
+     * 
+     */
     @InputImport(name="vulnerability")
     private final @Nullable Input<GrafeasV1beta1VulnerabilityDetailsArgs> vulnerability;
 

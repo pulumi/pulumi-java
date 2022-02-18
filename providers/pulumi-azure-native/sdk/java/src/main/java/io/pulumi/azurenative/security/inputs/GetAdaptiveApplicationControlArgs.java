@@ -12,6 +12,10 @@ public final class GetAdaptiveApplicationControlArgs extends io.pulumi.resources
 
     public static final GetAdaptiveApplicationControlArgs Empty = new GetAdaptiveApplicationControlArgs();
 
+    /**
+     * The location where ASC stores the data of the subscription. can be retrieved from Get locations
+     * 
+     */
     @InputImport(name="ascLocation", required=true)
     private final String ascLocation;
 
@@ -19,6 +23,10 @@ public final class GetAdaptiveApplicationControlArgs extends io.pulumi.resources
         return this.ascLocation;
     }
 
+    /**
+     * Name of an application control machine group
+     * 
+     */
     @InputImport(name="groupName", required=true)
     private final String groupName;
 

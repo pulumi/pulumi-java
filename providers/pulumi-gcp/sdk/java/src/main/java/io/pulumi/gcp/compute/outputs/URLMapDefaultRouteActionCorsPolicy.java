@@ -14,13 +14,50 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class URLMapDefaultRouteActionCorsPolicy {
+    /**
+     * In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
+     * This translates to the Access-Control-Allow-Credentials header.
+     * 
+     */
     private final @Nullable Boolean allowCredentials;
+    /**
+     * Specifies the content for the Access-Control-Allow-Headers header.
+     * 
+     */
     private final @Nullable List<String> allowHeaders;
+    /**
+     * Specifies the content for the Access-Control-Allow-Methods header.
+     * 
+     */
     private final @Nullable List<String> allowMethods;
+    /**
+     * Specifies the regular expression patterns that match allowed origins. For regular expression grammar
+     * please see en.cppreference.com/w/cpp/regex/ecmascript
+     * An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
+     * 
+     */
     private final @Nullable List<String> allowOriginRegexes;
+    /**
+     * Specifies the list of origins that will be allowed to do CORS requests.
+     * An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
+     * 
+     */
     private final @Nullable List<String> allowOrigins;
+    /**
+     * If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
+     * 
+     */
     private final @Nullable Boolean disabled;
+    /**
+     * Specifies the content for the Access-Control-Expose-Headers header.
+     * 
+     */
     private final @Nullable List<String> exposeHeaders;
+    /**
+     * Specifies how long results of a preflight request can be cached in seconds.
+     * This translates to the Access-Control-Max-Age header.
+     * 
+     */
     private final @Nullable Integer maxAge;
 
     @OutputCustomType.Constructor({"allowCredentials","allowHeaders","allowMethods","allowOriginRegexes","allowOrigins","disabled","exposeHeaders","maxAge"})
@@ -43,27 +80,64 @@ public final class URLMapDefaultRouteActionCorsPolicy {
         this.maxAge = maxAge;
     }
 
+    /**
+     * In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
+     * This translates to the Access-Control-Allow-Credentials header.
+     * 
+     */
     public Optional<Boolean> getAllowCredentials() {
         return Optional.ofNullable(this.allowCredentials);
     }
+    /**
+     * Specifies the content for the Access-Control-Allow-Headers header.
+     * 
+     */
     public List<String> getAllowHeaders() {
         return this.allowHeaders == null ? List.of() : this.allowHeaders;
     }
+    /**
+     * Specifies the content for the Access-Control-Allow-Methods header.
+     * 
+     */
     public List<String> getAllowMethods() {
         return this.allowMethods == null ? List.of() : this.allowMethods;
     }
+    /**
+     * Specifies the regular expression patterns that match allowed origins. For regular expression grammar
+     * please see en.cppreference.com/w/cpp/regex/ecmascript
+     * An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
+     * 
+     */
     public List<String> getAllowOriginRegexes() {
         return this.allowOriginRegexes == null ? List.of() : this.allowOriginRegexes;
     }
+    /**
+     * Specifies the list of origins that will be allowed to do CORS requests.
+     * An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
+     * 
+     */
     public List<String> getAllowOrigins() {
         return this.allowOrigins == null ? List.of() : this.allowOrigins;
     }
+    /**
+     * If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
+     * 
+     */
     public Optional<Boolean> getDisabled() {
         return Optional.ofNullable(this.disabled);
     }
+    /**
+     * Specifies the content for the Access-Control-Expose-Headers header.
+     * 
+     */
     public List<String> getExposeHeaders() {
         return this.exposeHeaders == null ? List.of() : this.exposeHeaders;
     }
+    /**
+     * Specifies how long results of a preflight request can be cached in seconds.
+     * This translates to the Access-Control-Max-Age header.
+     * 
+     */
     public Optional<Integer> getMaxAge() {
         return Optional.ofNullable(this.maxAge);
     }

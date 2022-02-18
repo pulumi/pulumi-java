@@ -9,6 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Structure that contains X.509 OtherName information.
+ * 
+ */
 public final class CertificateOtherNameArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CertificateOtherNameArgs Empty = new CertificateOtherNameArgs();

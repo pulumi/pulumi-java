@@ -13,6 +13,10 @@ public final class CaPoolIssuancePolicyAllowedIssuanceModesGetArgs extends io.pu
 
     public static final CaPoolIssuancePolicyAllowedIssuanceModesGetArgs Empty = new CaPoolIssuancePolicyAllowedIssuanceModesGetArgs();
 
+    /**
+     * When true, allows callers to create Certificates by specifying a CertificateConfig.
+     * 
+     */
     @InputImport(name="allowConfigBasedIssuance", required=true)
     private final Input<Boolean> allowConfigBasedIssuance;
 
@@ -20,6 +24,10 @@ public final class CaPoolIssuancePolicyAllowedIssuanceModesGetArgs extends io.pu
         return this.allowConfigBasedIssuance;
     }
 
+    /**
+     * When true, allows callers to create Certificates by specifying a CSR.
+     * 
+     */
     @InputImport(name="allowCsrBasedIssuance", required=true)
     private final Input<Boolean> allowCsrBasedIssuance;
 

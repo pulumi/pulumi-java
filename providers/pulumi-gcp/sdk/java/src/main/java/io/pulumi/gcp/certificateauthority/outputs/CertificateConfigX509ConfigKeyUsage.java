@@ -13,8 +13,23 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CertificateConfigX509ConfigKeyUsage {
+    /**
+     * Describes high-level ways in which a key may be used.
+     * Structure is documented below.
+     * 
+     */
     private final CertificateConfigX509ConfigKeyUsageBaseKeyUsage baseKeyUsage;
+    /**
+     * Describes high-level ways in which a key may be used.
+     * Structure is documented below.
+     * 
+     */
     private final CertificateConfigX509ConfigKeyUsageExtendedKeyUsage extendedKeyUsage;
+    /**
+     * An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable List<CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsage> unknownExtendedKeyUsages;
 
     @OutputCustomType.Constructor({"baseKeyUsage","extendedKeyUsage","unknownExtendedKeyUsages"})
@@ -27,12 +42,27 @@ public final class CertificateConfigX509ConfigKeyUsage {
         this.unknownExtendedKeyUsages = unknownExtendedKeyUsages;
     }
 
+    /**
+     * Describes high-level ways in which a key may be used.
+     * Structure is documented below.
+     * 
+     */
     public CertificateConfigX509ConfigKeyUsageBaseKeyUsage getBaseKeyUsage() {
         return this.baseKeyUsage;
     }
+    /**
+     * Describes high-level ways in which a key may be used.
+     * Structure is documented below.
+     * 
+     */
     public CertificateConfigX509ConfigKeyUsageExtendedKeyUsage getExtendedKeyUsage() {
         return this.extendedKeyUsage;
     }
+    /**
+     * An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+     * Structure is documented below.
+     * 
+     */
     public List<CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsage> getUnknownExtendedKeyUsages() {
         return this.unknownExtendedKeyUsages == null ? List.of() : this.unknownExtendedKeyUsages;
     }

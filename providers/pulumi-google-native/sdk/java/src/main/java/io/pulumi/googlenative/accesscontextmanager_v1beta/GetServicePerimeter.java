@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetServicePerimeter {
+/**
+ * Get a Service Perimeter by resource name.
+ * 
+ */
     public static CompletableFuture<GetServicePerimeterResult> invokeAsync(GetServicePerimeterArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:accesscontextmanager/v1beta:getServicePerimeter", TypeShape.of(GetServicePerimeterResult.class), args == null ? GetServicePerimeterArgs.Empty : args, Utilities.withVersion(options));
     }

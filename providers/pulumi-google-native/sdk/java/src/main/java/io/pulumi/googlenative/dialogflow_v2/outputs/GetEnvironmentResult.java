@@ -11,12 +11,40 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetEnvironmentResult {
+    /**
+     * Optional. The agent version loaded into this environment. Supported formats: - `projects//agent/versions/` - `projects//locations//agent/versions/`
+     * 
+     */
     private final String agentVersion;
+    /**
+     * Optional. The developer-provided description for this environment. The maximum length is 500 characters. If exceeded, the request is rejected.
+     * 
+     */
     private final String description;
+    /**
+     * Optional. The fulfillment settings to use for this environment.
+     * 
+     */
     private final GoogleCloudDialogflowV2FulfillmentResponse fulfillment;
+    /**
+     * The unique identifier of this agent environment. Supported formats: - `projects//agent/environments/` - `projects//locations//agent/environments/` The environment ID for the default environment is `-`.
+     * 
+     */
     private final String name;
+    /**
+     * The state of this environment. This field is read-only, i.e., it cannot be set by create and update methods.
+     * 
+     */
     private final String state;
+    /**
+     * Optional. Text to speech settings for this environment.
+     * 
+     */
     private final GoogleCloudDialogflowV2TextToSpeechSettingsResponse textToSpeechSettings;
+    /**
+     * The last update time of this environment. This field is read-only, i.e., it cannot be set by create and update methods.
+     * 
+     */
     private final String updateTime;
 
     @OutputCustomType.Constructor({"agentVersion","description","fulfillment","name","state","textToSpeechSettings","updateTime"})
@@ -37,24 +65,52 @@ public final class GetEnvironmentResult {
         this.updateTime = Objects.requireNonNull(updateTime);
     }
 
+    /**
+     * Optional. The agent version loaded into this environment. Supported formats: - `projects//agent/versions/` - `projects//locations//agent/versions/`
+     * 
+     */
     public String getAgentVersion() {
         return this.agentVersion;
     }
+    /**
+     * Optional. The developer-provided description for this environment. The maximum length is 500 characters. If exceeded, the request is rejected.
+     * 
+     */
     public String getDescription() {
         return this.description;
     }
+    /**
+     * Optional. The fulfillment settings to use for this environment.
+     * 
+     */
     public GoogleCloudDialogflowV2FulfillmentResponse getFulfillment() {
         return this.fulfillment;
     }
+    /**
+     * The unique identifier of this agent environment. Supported formats: - `projects//agent/environments/` - `projects//locations//agent/environments/` The environment ID for the default environment is `-`.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The state of this environment. This field is read-only, i.e., it cannot be set by create and update methods.
+     * 
+     */
     public String getState() {
         return this.state;
     }
+    /**
+     * Optional. Text to speech settings for this environment.
+     * 
+     */
     public GoogleCloudDialogflowV2TextToSpeechSettingsResponse getTextToSpeechSettings() {
         return this.textToSpeechSettings;
     }
+    /**
+     * The last update time of this environment. This field is read-only, i.e., it cannot be set by create and update methods.
+     * 
+     */
     public String getUpdateTime() {
         return this.updateTime;
     }

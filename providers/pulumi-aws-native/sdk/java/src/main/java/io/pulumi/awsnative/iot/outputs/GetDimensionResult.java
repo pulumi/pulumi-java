@@ -13,8 +13,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetDimensionResult {
+    /**
+     * The ARN (Amazon resource name) of the created dimension.
+     * 
+     */
     private final @Nullable String arn;
+    /**
+     * Specifies the value or list of values for the dimension.
+     * 
+     */
     private final @Nullable List<String> stringValues;
+    /**
+     * Metadata that can be used to manage the dimension.
+     * 
+     */
     private final @Nullable List<DimensionTag> tags;
 
     @OutputCustomType.Constructor({"arn","stringValues","tags"})
@@ -27,12 +39,24 @@ public final class GetDimensionResult {
         this.tags = tags;
     }
 
+    /**
+     * The ARN (Amazon resource name) of the created dimension.
+     * 
+     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
+    /**
+     * Specifies the value or list of values for the dimension.
+     * 
+     */
     public List<String> getStringValues() {
         return this.stringValues == null ? List.of() : this.stringValues;
     }
+    /**
+     * Metadata that can be used to manage the dimension.
+     * 
+     */
     public List<DimensionTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Configuration options for an SNS alert action.
+ * 
+ */
 public final class AlertSNSConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AlertSNSConfigurationArgs Empty = new AlertSNSConfigurationArgs();
 
+    /**
+     * ARN of an IAM role that LookoutMetrics should assume to access the SNS topic.
+     * 
+     */
     @InputImport(name="roleArn", required=true)
     private final Input<String> roleArn;
 
@@ -20,6 +28,10 @@ public final class AlertSNSConfigurationArgs extends io.pulumi.resources.Resourc
         return this.roleArn;
     }
 
+    /**
+     * ARN of an SNS topic to send alert notifications to.
+     * 
+     */
     @InputImport(name="snsTopicArn", required=true)
     private final Input<String> snsTopicArn;
 

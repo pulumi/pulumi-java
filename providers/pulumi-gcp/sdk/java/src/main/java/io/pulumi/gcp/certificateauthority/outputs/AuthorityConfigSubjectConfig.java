@@ -12,7 +12,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AuthorityConfigSubjectConfig {
+    /**
+     * Contains distinguished name fields such as the location and organization.
+     * Structure is documented below.
+     * 
+     */
     private final AuthorityConfigSubjectConfigSubject subject;
+    /**
+     * The subject alternative name fields.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable AuthorityConfigSubjectConfigSubjectAltName subjectAltName;
 
     @OutputCustomType.Constructor({"subject","subjectAltName"})
@@ -23,9 +33,19 @@ public final class AuthorityConfigSubjectConfig {
         this.subjectAltName = subjectAltName;
     }
 
+    /**
+     * Contains distinguished name fields such as the location and organization.
+     * Structure is documented below.
+     * 
+     */
     public AuthorityConfigSubjectConfigSubject getSubject() {
         return this.subject;
     }
+    /**
+     * The subject alternative name fields.
+     * Structure is documented below.
+     * 
+     */
     public Optional<AuthorityConfigSubjectConfigSubjectAltName> getSubjectAltName() {
         return Optional.ofNullable(this.subjectAltName);
     }

@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RatioPartResponse {
+    /**
+     * By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.
+     * 
+     */
     private final AggregationResponse aggregation;
+    /**
+     * The monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) that identifies the metric types, resources, and projects to query.
+     * 
+     */
     private final String filter;
 
     @OutputCustomType.Constructor({"aggregation","filter"})
@@ -21,9 +29,17 @@ public final class RatioPartResponse {
         this.filter = Objects.requireNonNull(filter);
     }
 
+    /**
+     * By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.
+     * 
+     */
     public AggregationResponse getAggregation() {
         return this.aggregation;
     }
+    /**
+     * The monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) that identifies the metric types, resources, and projects to query.
+     * 
+     */
     public String getFilter() {
         return this.filter;
     }

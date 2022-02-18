@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Storage account type to be used to store the shared image. Omit to use the default (Standard_LRS).
+     * 
+     */
     @EnumType
     public enum SharedImageStorageAccountType {
         Standard_LRS("Standard_LRS"),

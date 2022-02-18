@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DetectorModelPayload {
+    /**
+     * The content of the payload. You can use a string expression that includes quoted strings (`'<string>'`), variables (`$variable.<variable-name>`), input values (`$input.<input-name>.<path-to-datum>`), string concatenations, and quoted strings that contain `${}` as the content. The recommended maximum size of a content expression is 1 KB.
+     * 
+     */
     private final String contentExpression;
+    /**
+     * The value of the payload type can be either `STRING` or `JSON`.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"contentExpression","type"})
@@ -20,9 +28,17 @@ public final class DetectorModelPayload {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * The content of the payload. You can use a string expression that includes quoted strings (`'<string>'`), variables (`$variable.<variable-name>`), input values (`$input.<input-name>.<path-to-datum>`), string concatenations, and quoted strings that contain `${}` as the content. The recommended maximum size of a content expression is 1 KB.
+     * 
+     */
     public String getContentExpression() {
         return this.contentExpression;
     }
+    /**
+     * The value of the payload type can be either `STRING` or `JSON`.
+     * 
+     */
     public String getType() {
         return this.type;
     }

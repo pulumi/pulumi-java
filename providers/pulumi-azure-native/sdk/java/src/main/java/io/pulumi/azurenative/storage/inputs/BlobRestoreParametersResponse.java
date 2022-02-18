@@ -10,10 +10,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Blob restore parameters
+ * 
+ */
 public final class BlobRestoreParametersResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BlobRestoreParametersResponse Empty = new BlobRestoreParametersResponse();
 
+    /**
+     * Blob ranges to restore.
+     * 
+     */
     @InputImport(name="blobRanges", required=true)
     private final List<BlobRestoreRangeResponse> blobRanges;
 
@@ -21,6 +29,10 @@ public final class BlobRestoreParametersResponse extends io.pulumi.resources.Inv
         return this.blobRanges;
     }
 
+    /**
+     * Restore blob to the specified time.
+     * 
+     */
     @InputImport(name="timeToRestore", required=true)
     private final String timeToRestore;
 

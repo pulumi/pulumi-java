@@ -17,6 +17,10 @@ public final class EntityTypeState extends io.pulumi.resources.ResourceArgs {
 
     public static final EntityTypeState Empty = new EntityTypeState();
 
+    /**
+     * The name of this entity type to be displayed on the console.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -24,6 +28,10 @@ public final class EntityTypeState extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * Enables fuzzy entity extraction during classification.
+     * 
+     */
     @InputImport(name="enableFuzzyExtraction")
     private final @Nullable Input<Boolean> enableFuzzyExtraction;
 
@@ -31,6 +39,11 @@ public final class EntityTypeState extends io.pulumi.resources.ResourceArgs {
         return this.enableFuzzyExtraction == null ? Input.empty() : this.enableFuzzyExtraction;
     }
 
+    /**
+     * The collection of entity entries associated with the entity type.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="entities")
     private final @Nullable Input<List<EntityTypeEntityGetArgs>> entities;
 
@@ -38,6 +51,15 @@ public final class EntityTypeState extends io.pulumi.resources.ResourceArgs {
         return this.entities == null ? Input.empty() : this.entities;
     }
 
+    /**
+     * Indicates the kind of entity type.
+     * * KIND_MAP: Map entity types allow mapping of a group of synonyms to a reference value.
+     * * KIND_LIST: List entity types contain a set of entries that do not map to reference values. However, list entity
+     *   types can contain references to other entity types (with or without aliases).
+     * * KIND_REGEXP: Regexp entity types allow to specify regular expressions in entries values.
+     *   Possible values are `KIND_MAP`, `KIND_LIST`, and `KIND_REGEXP`.
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -45,6 +67,10 @@ public final class EntityTypeState extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * The unique identifier of the entity type. Format: projects/<Project ID>/agent/entityTypes/<Entity type ID>.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -52,6 +78,11 @@ public final class EntityTypeState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

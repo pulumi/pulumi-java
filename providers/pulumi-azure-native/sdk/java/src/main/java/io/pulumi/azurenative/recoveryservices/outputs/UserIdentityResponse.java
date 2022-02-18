@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class UserIdentityResponse {
+    /**
+     * The client ID of the user-assigned identity.
+     * 
+     */
     private final String clientId;
+    /**
+     * The principal ID of the user-assigned identity.
+     * 
+     */
     private final String principalId;
 
     @OutputCustomType.Constructor({"clientId","principalId"})
@@ -20,9 +28,17 @@ public final class UserIdentityResponse {
         this.principalId = Objects.requireNonNull(principalId);
     }
 
+    /**
+     * The client ID of the user-assigned identity.
+     * 
+     */
     public String getClientId() {
         return this.clientId;
     }
+    /**
+     * The principal ID of the user-assigned identity.
+     * 
+     */
     public String getPrincipalId() {
         return this.principalId;
     }

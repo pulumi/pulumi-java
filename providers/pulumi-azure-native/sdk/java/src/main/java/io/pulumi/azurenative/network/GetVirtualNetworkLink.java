@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVirtualNetworkLink {
+/**
+ * Describes a link to virtual network for a Private DNS zone.
+ * API Version: 2020-06-01.
+ * 
+ *
+ * Describes a link to virtual network for a Private DNS zone.
+ * 
+ */
     public static CompletableFuture<GetVirtualNetworkLinkResult> invokeAsync(GetVirtualNetworkLinkArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getVirtualNetworkLink", TypeShape.of(GetVirtualNetworkLinkResult.class), args == null ? GetVirtualNetworkLinkArgs.Empty : args, Utilities.withVersion(options));
     }

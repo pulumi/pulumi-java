@@ -8,11 +8,31 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The state of this instance upgrade history entry.
+     * 
+     */
     @EnumType
     public enum UpgradeHistoryEntryState {
+        /**
+         * State is not specified.
+         * 
+         */
         StateUnspecified("STATE_UNSPECIFIED"),
+        /**
+         * The instance upgrade is started.
+         * 
+         */
         Started("STARTED"),
+        /**
+         * The instance upgrade is succeeded.
+         * 
+         */
         Succeeded("SUCCEEDED"),
+        /**
+         * The instance upgrade is failed.
+         * 
+         */
         Failed("FAILED");
 
         private final String value;

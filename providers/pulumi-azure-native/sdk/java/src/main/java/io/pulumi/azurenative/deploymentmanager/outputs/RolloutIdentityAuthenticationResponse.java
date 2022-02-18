@@ -9,6 +9,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RolloutIdentityAuthenticationResponse {
+    /**
+     * The authentication type.
+     * Expected value is 'RolloutIdentity'.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"type"})
@@ -16,6 +21,11 @@ public final class RolloutIdentityAuthenticationResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * The authentication type.
+     * Expected value is 'RolloutIdentity'.
+     * 
+     */
     public String getType() {
         return this.type;
     }

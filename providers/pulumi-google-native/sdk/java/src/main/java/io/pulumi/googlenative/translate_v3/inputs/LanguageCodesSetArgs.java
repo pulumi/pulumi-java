@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Used with equivalent term set glossaries.
+ * 
+ */
 public final class LanguageCodesSetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LanguageCodesSetArgs Empty = new LanguageCodesSetArgs();
 
+    /**
+     * The BCP-47 language code(s) for terms defined in the glossary. All entries are unique. The list contains at least two entries. Expected to be an exact match for GlossaryTerm.language_code.
+     * 
+     */
     @InputImport(name="languageCodes")
     private final @Nullable Input<List<String>> languageCodes;
 

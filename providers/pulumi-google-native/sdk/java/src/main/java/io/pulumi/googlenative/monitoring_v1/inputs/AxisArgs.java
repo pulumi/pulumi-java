@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A chart axis.
+ * 
+ */
 public final class AxisArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AxisArgs Empty = new AxisArgs();
 
+    /**
+     * The label of the axis.
+     * 
+     */
     @InputImport(name="label")
     private final @Nullable Input<String> label;
 
@@ -22,6 +30,10 @@ public final class AxisArgs extends io.pulumi.resources.ResourceArgs {
         return this.label == null ? Input.empty() : this.label;
     }
 
+    /**
+     * The axis scale. By default, a linear scale is used.
+     * 
+     */
     @InputImport(name="scale")
     private final @Nullable Input<AxisScale> scale;
 

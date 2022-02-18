@@ -6,6 +6,10 @@ package io.pulumi.awsnative.robomaker.inputs;
 import java.util.Objects;
 
 
+/**
+ * A key-value pair to associate with a resource.
+ * 
+ */
 public final class SimulationApplicationTags extends io.pulumi.resources.InvokeArgs {
 
     public static final SimulationApplicationTags Empty = new SimulationApplicationTags();

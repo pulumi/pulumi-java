@@ -14,6 +14,12 @@ public final class AccessLevelConditionDevicePolicyOsConstraintGetArgs extends i
 
     public static final AccessLevelConditionDevicePolicyOsConstraintGetArgs Empty = new AccessLevelConditionDevicePolicyOsConstraintGetArgs();
 
+    /**
+     * The minimum allowed OS version. If not set, any version
+     * of this OS satisfies the constraint.
+     * Format: "major.minor.patch" such as "10.5.301", "9.2.1".
+     * 
+     */
     @InputImport(name="minimumVersion")
     private final @Nullable Input<String> minimumVersion;
 
@@ -21,6 +27,11 @@ public final class AccessLevelConditionDevicePolicyOsConstraintGetArgs extends i
         return this.minimumVersion == null ? Input.empty() : this.minimumVersion;
     }
 
+    /**
+     * The operating system type of the device.
+     * Possible values are `OS_UNSPECIFIED`, `DESKTOP_MAC`, `DESKTOP_WINDOWS`, `DESKTOP_LINUX`, `DESKTOP_CHROME_OS`, `ANDROID`, and `IOS`.
+     * 
+     */
     @InputImport(name="osType", required=true)
     private final Input<String> osType;
 

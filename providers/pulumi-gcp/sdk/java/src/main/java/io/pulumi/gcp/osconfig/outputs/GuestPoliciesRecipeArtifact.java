@@ -14,9 +14,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GuestPoliciesRecipeArtifact {
+    /**
+     * Defaults to false. When false, recipes are subject to validations based on the artifact type:
+     * Remote: A checksum must be specified, and only protocols with transport-layer security are permitted.
+     * GCS: An object generation number must be specified.
+     * 
+     */
     private final @Nullable Boolean allowInsecure;
+    /**
+     * A Google Cloud Storage artifact.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable GuestPoliciesRecipeArtifactGcs gcs;
+    /**
+     * Id of the artifact, which the installation and update steps of this recipe can reference.
+     * Artifacts in a recipe cannot have the same id.
+     * 
+     */
     private final String id;
+    /**
+     * A generic remote artifact.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable GuestPoliciesRecipeArtifactRemote remote;
 
     @OutputCustomType.Constructor({"allowInsecure","gcs","id","remote"})
@@ -31,15 +52,36 @@ public final class GuestPoliciesRecipeArtifact {
         this.remote = remote;
     }
 
+    /**
+     * Defaults to false. When false, recipes are subject to validations based on the artifact type:
+     * Remote: A checksum must be specified, and only protocols with transport-layer security are permitted.
+     * GCS: An object generation number must be specified.
+     * 
+     */
     public Optional<Boolean> getAllowInsecure() {
         return Optional.ofNullable(this.allowInsecure);
     }
+    /**
+     * A Google Cloud Storage artifact.
+     * Structure is documented below.
+     * 
+     */
     public Optional<GuestPoliciesRecipeArtifactGcs> getGcs() {
         return Optional.ofNullable(this.gcs);
     }
+    /**
+     * Id of the artifact, which the installation and update steps of this recipe can reference.
+     * Artifacts in a recipe cannot have the same id.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * A generic remote artifact.
+     * Structure is documented below.
+     * 
+     */
     public Optional<GuestPoliciesRecipeArtifactRemote> getRemote() {
         return Optional.ofNullable(this.remote);
     }

@@ -16,6 +16,11 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ClusterArgs Empty = new ClusterArgs();
 
+    /**
+     * Allows you to configure various aspects of the cluster.
+     * Structure defined below.
+     * 
+     */
     @InputImport(name="clusterConfig")
     private final @Nullable Input<ClusterClusterConfigArgs> clusterConfig;
 
@@ -23,6 +28,11 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.clusterConfig == null ? Input.empty() : this.clusterConfig;
     }
 
+    /**
+     * The timeout duration which allows graceful decomissioning when you change the number of worker nodes directly through a
+     * terraform apply
+     * 
+     */
     @InputImport(name="gracefulDecommissionTimeout")
     private final @Nullable Input<String> gracefulDecommissionTimeout;
 
@@ -30,6 +40,12 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.gracefulDecommissionTimeout == null ? Input.empty() : this.gracefulDecommissionTimeout;
     }
 
+    /**
+     * The list of labels (key/value pairs) to be applied to
+     * instances in the cluster. GCP generates some itself including `goog-dataproc-cluster-name`
+     * which is the name of the cluster.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -37,6 +53,11 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The name of the cluster, unique within the project and
+     * zone.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -44,6 +65,11 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which the `cluster` will exist. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -51,6 +77,11 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The region in which the cluster and associated nodes will be created in.
+     * Defaults to `global`.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 

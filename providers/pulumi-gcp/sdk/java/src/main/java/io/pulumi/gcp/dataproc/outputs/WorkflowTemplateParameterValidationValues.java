@@ -10,6 +10,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class WorkflowTemplateParameterValidationValues {
+    /**
+     * Optional. Corresponds to the label values of reservation resource.
+     * 
+     */
     private final List<String> values;
 
     @OutputCustomType.Constructor({"values"})
@@ -17,6 +21,10 @@ public final class WorkflowTemplateParameterValidationValues {
         this.values = Objects.requireNonNull(values);
     }
 
+    /**
+     * Optional. Corresponds to the label values of reservation resource.
+     * 
+     */
     public List<String> getValues() {
         return this.values;
     }

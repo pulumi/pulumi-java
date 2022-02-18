@@ -17,6 +17,10 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourceSetArgs Empty = new ResourceSetArgs();
 
+    /**
+     * The name of the resource set to create.
+     * 
+     */
     @InputImport(name="resourceSetName")
     private final @Nullable Input<String> resourceSetName;
 
@@ -24,6 +28,12 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceSetName == null ? Input.empty() : this.resourceSetName;
     }
 
+    /**
+     * The resource type of the resources in the resource set. Enter one of the following values for resource type:
+     * 
+     * AWS: :AutoScaling: :AutoScalingGroup, AWS: :CloudWatch: :Alarm, AWS: :EC2: :CustomerGateway, AWS: :DynamoDB: :Table, AWS: :EC2: :Volume, AWS: :ElasticLoadBalancing: :LoadBalancer, AWS: :ElasticLoadBalancingV2: :LoadBalancer, AWS: :MSK: :Cluster, AWS: :RDS: :DBCluster, AWS: :Route53: :HealthCheck, AWS: :SQS: :Queue, AWS: :SNS: :Topic, AWS: :SNS: :Subscription, AWS: :EC2: :VPC, AWS: :EC2: :VPNConnection, AWS: :EC2: :VPNGateway, AWS::Route53RecoveryReadiness::DNSTargetResource
+     * 
+     */
     @InputImport(name="resourceSetType", required=true)
     private final Input<String> resourceSetType;
 
@@ -31,6 +41,10 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceSetType;
     }
 
+    /**
+     * A list of resource objects in the resource set.
+     * 
+     */
     @InputImport(name="resources", required=true)
     private final Input<List<ResourceSetResourceArgs>> resources;
 
@@ -38,6 +52,10 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.resources;
     }
 
+    /**
+     * A tag to associate with the parameters for a resource set.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<ResourceSetTagArgs>> tags;
 

@@ -13,10 +13,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines the virtual network resource settings.
+ * 
+ */
 public final class VirtualNetworkResourceSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VirtualNetworkResourceSettingsResponse Empty = new VirtualNetworkResourceSettingsResponse();
 
+    /**
+     * Gets or sets the address prefixes for the virtual network.
+     * 
+     */
     @InputImport(name="addressSpace")
     private final @Nullable List<String> addressSpace;
 
@@ -24,6 +32,11 @@ public final class VirtualNetworkResourceSettingsResponse extends io.pulumi.reso
         return this.addressSpace == null ? List.of() : this.addressSpace;
     }
 
+    /**
+     * Gets or sets DHCPOptions that contains an array of DNS servers available to VMs
+     * deployed in the virtual network.
+     * 
+     */
     @InputImport(name="dnsServers")
     private final @Nullable List<String> dnsServers;
 
@@ -31,6 +44,11 @@ public final class VirtualNetworkResourceSettingsResponse extends io.pulumi.reso
         return this.dnsServers == null ? List.of() : this.dnsServers;
     }
 
+    /**
+     * Gets or sets a value indicating whether gets or sets whether the
+     * DDOS protection should be switched on.
+     * 
+     */
     @InputImport(name="enableDdosProtection")
     private final @Nullable Boolean enableDdosProtection;
 
@@ -38,6 +56,11 @@ public final class VirtualNetworkResourceSettingsResponse extends io.pulumi.reso
         return this.enableDdosProtection == null ? Optional.empty() : Optional.ofNullable(this.enableDdosProtection);
     }
 
+    /**
+     * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+     * Expected value is 'Microsoft.Network/virtualNetworks'.
+     * 
+     */
     @InputImport(name="resourceType", required=true)
     private final String resourceType;
 
@@ -45,6 +68,10 @@ public final class VirtualNetworkResourceSettingsResponse extends io.pulumi.reso
         return this.resourceType;
     }
 
+    /**
+     * Gets or sets List of subnets in a VirtualNetwork.
+     * 
+     */
     @InputImport(name="subnets")
     private final @Nullable List<SubnetResourceSettingsResponse> subnets;
 
@@ -52,6 +79,10 @@ public final class VirtualNetworkResourceSettingsResponse extends io.pulumi.reso
         return this.subnets == null ? List.of() : this.subnets;
     }
 
+    /**
+     * Gets or sets the target Resource name.
+     * 
+     */
     @InputImport(name="targetResourceName", required=true)
     private final String targetResourceName;
 

@@ -17,6 +17,10 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final UserArgs Empty = new UserArgs();
 
+    /**
+     * Access permissions string used for this user account.
+     * 
+     */
     @InputImport(name="accessString")
     private final @Nullable Input<String> accessString;
 
@@ -24,6 +28,10 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
         return this.accessString == null ? Input.empty() : this.accessString;
     }
 
+    /**
+     * Must be redis.
+     * 
+     */
     @InputImport(name="engine", required=true)
     private final Input<UserEngine> engine;
 
@@ -31,6 +39,10 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
         return this.engine;
     }
 
+    /**
+     * Indicates a password is not required for this user account.
+     * 
+     */
     @InputImport(name="noPasswordRequired")
     private final @Nullable Input<Boolean> noPasswordRequired;
 
@@ -38,6 +50,10 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
         return this.noPasswordRequired == null ? Input.empty() : this.noPasswordRequired;
     }
 
+    /**
+     * Passwords used for this user account. You can create up to two passwords for each user.
+     * 
+     */
     @InputImport(name="passwords")
     private final @Nullable Input<List<String>> passwords;
 
@@ -45,6 +61,10 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
         return this.passwords == null ? Input.empty() : this.passwords;
     }
 
+    /**
+     * The ID of the user.
+     * 
+     */
     @InputImport(name="userId", required=true)
     private final Input<String> userId;
 
@@ -52,6 +72,10 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
         return this.userId;
     }
 
+    /**
+     * The username of the user.
+     * 
+     */
     @InputImport(name="userName")
     private final @Nullable Input<String> userName;
 

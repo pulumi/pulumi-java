@@ -13,6 +13,10 @@ public final class NodeSchedulingConfigGetArgs extends io.pulumi.resources.Resou
 
     public static final NodeSchedulingConfigGetArgs Empty = new NodeSchedulingConfigGetArgs();
 
+    /**
+     * Defines whether the TPU instance is preemptible.
+     * 
+     */
     @InputImport(name="preemptible", required=true)
     private final Input<Boolean> preemptible;
 

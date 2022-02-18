@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetStoredQuery {
+/**
+ * Resource Type definition for AWS::Config::StoredQuery
+ * 
+ */
     public static CompletableFuture<GetStoredQueryResult> invokeAsync(GetStoredQueryArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:configuration:getStoredQuery", TypeShape.of(GetStoredQueryResult.class), args == null ? GetStoredQueryArgs.Empty : args, Utilities.withVersion(options));
     }

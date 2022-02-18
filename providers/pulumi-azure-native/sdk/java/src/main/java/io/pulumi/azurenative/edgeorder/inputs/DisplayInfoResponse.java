@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Describes product display information
+ * 
+ */
 public final class DisplayInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DisplayInfoResponse Empty = new DisplayInfoResponse();
 
+    /**
+     * Configuration display name
+     * 
+     */
     @InputImport(name="configurationDisplayName", required=true)
     private final String configurationDisplayName;
 
@@ -19,6 +27,10 @@ public final class DisplayInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.configurationDisplayName;
     }
 
+    /**
+     * Product family display name
+     * 
+     */
     @InputImport(name="productFamilyDisplayName", required=true)
     private final String productFamilyDisplayName;
 

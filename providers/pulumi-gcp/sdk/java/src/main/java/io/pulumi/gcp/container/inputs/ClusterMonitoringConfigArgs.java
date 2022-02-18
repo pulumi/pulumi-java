@@ -14,6 +14,10 @@ public final class ClusterMonitoringConfigArgs extends io.pulumi.resources.Resou
 
     public static final ClusterMonitoringConfigArgs Empty = new ClusterMonitoringConfigArgs();
 
+    /**
+     * The GKE components exposing logs. `SYSTEM_COMPONENTS` and in beta provider, both `SYSTEM_COMPONENTS` and `WORKLOADS` are supported.
+     * 
+     */
     @InputImport(name="enableComponents", required=true)
     private final Input<List<String>> enableComponents;
 

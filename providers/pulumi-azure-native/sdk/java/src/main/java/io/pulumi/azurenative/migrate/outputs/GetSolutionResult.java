@@ -12,10 +12,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetSolutionResult {
+    /**
+     * Gets or sets the ETAG for optimistic concurrency control.
+     * 
+     */
     private final @Nullable String etag;
+    /**
+     * Gets the relative URL to get to this REST resource.
+     * 
+     */
     private final String id;
+    /**
+     * Gets the name of this REST resource.
+     * 
+     */
     private final String name;
+    /**
+     * Gets or sets the properties of the solution.
+     * 
+     */
     private final SolutionPropertiesResponse properties;
+    /**
+     * Gets the type of this REST resource.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"etag","id","name","properties","type"})
@@ -32,18 +52,38 @@ public final class GetSolutionResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Gets or sets the ETAG for optimistic concurrency control.
+     * 
+     */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
+    /**
+     * Gets the relative URL to get to this REST resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Gets the name of this REST resource.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Gets or sets the properties of the solution.
+     * 
+     */
     public SolutionPropertiesResponse getProperties() {
         return this.properties;
     }
+    /**
+     * Gets the type of this REST resource.
+     * 
+     */
     public String getType() {
         return this.type;
     }

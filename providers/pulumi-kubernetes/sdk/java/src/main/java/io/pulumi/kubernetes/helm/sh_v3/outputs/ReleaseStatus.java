@@ -12,12 +12,40 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ReleaseStatus {
+    /**
+     * The version number of the application being deployed.
+     * 
+     */
     private final @Nullable String appVersion;
+    /**
+     * The name of the chart.
+     * 
+     */
     private final @Nullable String chart;
+    /**
+     * Name is the name of the release.
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * Namespace is the kubernetes namespace of the release.
+     * 
+     */
     private final @Nullable String namespace;
+    /**
+     * Version is an int32 which represents the version of the release.
+     * 
+     */
     private final @Nullable Integer revision;
+    /**
+     * Status of the release.
+     * 
+     */
     private final String status;
+    /**
+     * A SemVer 2 conformant version string of the chart.
+     * 
+     */
     private final @Nullable String version;
 
     @OutputCustomType.Constructor({"appVersion","chart","name","namespace","revision","status","version"})
@@ -38,24 +66,52 @@ public final class ReleaseStatus {
         this.version = version;
     }
 
+    /**
+     * The version number of the application being deployed.
+     * 
+     */
     public Optional<String> getAppVersion() {
         return Optional.ofNullable(this.appVersion);
     }
+    /**
+     * The name of the chart.
+     * 
+     */
     public Optional<String> getChart() {
         return Optional.ofNullable(this.chart);
     }
+    /**
+     * Name is the name of the release.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * Namespace is the kubernetes namespace of the release.
+     * 
+     */
     public Optional<String> getNamespace() {
         return Optional.ofNullable(this.namespace);
     }
+    /**
+     * Version is an int32 which represents the version of the release.
+     * 
+     */
     public Optional<Integer> getRevision() {
         return Optional.ofNullable(this.revision);
     }
+    /**
+     * Status of the release.
+     * 
+     */
     public String getStatus() {
         return this.status;
     }
+    /**
+     * A SemVer 2 conformant version string of the chart.
+     * 
+     */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }

@@ -12,9 +12,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetAdvancedThreatProtectionResult {
+    /**
+     * Resource Id
+     * 
+     */
     private final String id;
+    /**
+     * Indicates whether Advanced Threat Protection is enabled.
+     * 
+     */
     private final @Nullable Boolean isEnabled;
+    /**
+     * Resource name
+     * 
+     */
     private final String name;
+    /**
+     * Resource type
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"id","isEnabled","name","type"})
@@ -29,15 +45,31 @@ public final class GetAdvancedThreatProtectionResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Resource Id
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Indicates whether Advanced Threat Protection is enabled.
+     * 
+     */
     public Optional<Boolean> getIsEnabled() {
         return Optional.ofNullable(this.isEnabled);
     }
+    /**
+     * Resource name
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Resource type
+     * 
+     */
     public String getType() {
         return this.type;
     }

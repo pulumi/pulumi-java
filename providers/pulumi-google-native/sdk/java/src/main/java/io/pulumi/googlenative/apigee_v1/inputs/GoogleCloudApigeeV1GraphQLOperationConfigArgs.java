@@ -14,10 +14,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Binds the resources in a proxy or remote service with the GraphQL operation and its associated quota enforcement.
+ * 
+ */
 public final class GoogleCloudApigeeV1GraphQLOperationConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudApigeeV1GraphQLOperationConfigArgs Empty = new GoogleCloudApigeeV1GraphQLOperationConfigArgs();
 
+    /**
+     * Name of the API proxy endpoint or remote service with which the GraphQL operation and quota are associated.
+     * 
+     */
     @InputImport(name="apiSource", required=true)
     private final Input<String> apiSource;
 
@@ -25,6 +33,10 @@ public final class GoogleCloudApigeeV1GraphQLOperationConfigArgs extends io.pulu
         return this.apiSource;
     }
 
+    /**
+     * Custom attributes associated with the operation.
+     * 
+     */
     @InputImport(name="attributes")
     private final @Nullable Input<List<GoogleCloudApigeeV1AttributeArgs>> attributes;
 
@@ -32,6 +44,10 @@ public final class GoogleCloudApigeeV1GraphQLOperationConfigArgs extends io.pulu
         return this.attributes == null ? Input.empty() : this.attributes;
     }
 
+    /**
+     * List of GraphQL name/operation type pairs for the proxy or remote service to which quota will be applied. If only operation types are specified, the quota will be applied to all GraphQL requests irrespective of the GraphQL name. **Note**: Currently, you can specify only a single GraphQLOperation. Specifying more than one will cause the operation to fail.
+     * 
+     */
     @InputImport(name="operations", required=true)
     private final Input<List<GoogleCloudApigeeV1GraphQLOperationArgs>> operations;
 
@@ -39,6 +55,10 @@ public final class GoogleCloudApigeeV1GraphQLOperationConfigArgs extends io.pulu
         return this.operations;
     }
 
+    /**
+     * Quota parameters to be enforced for the resources, methods, and API source combination. If none are specified, quota enforcement will not be done.
+     * 
+     */
     @InputImport(name="quota")
     private final @Nullable Input<GoogleCloudApigeeV1QuotaArgs> quota;
 

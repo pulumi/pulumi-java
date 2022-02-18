@@ -12,6 +12,10 @@ public final class GetWebAppHostNameBindingSlotArgs extends io.pulumi.resources.
 
     public static final GetWebAppHostNameBindingSlotArgs Empty = new GetWebAppHostNameBindingSlotArgs();
 
+    /**
+     * Hostname in the hostname binding.
+     * 
+     */
     @InputImport(name="hostName", required=true)
     private final String hostName;
 
@@ -19,6 +23,10 @@ public final class GetWebAppHostNameBindingSlotArgs extends io.pulumi.resources.
         return this.hostName;
     }
 
+    /**
+     * Name of the app.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -26,6 +34,10 @@ public final class GetWebAppHostNameBindingSlotArgs extends io.pulumi.resources.
         return this.name;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -33,6 +45,10 @@ public final class GetWebAppHostNameBindingSlotArgs extends io.pulumi.resources.
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of the deployment slot. If a slot is not specified, the API the named binding for the production slot.
+     * 
+     */
     @InputImport(name="slot", required=true)
     private final String slot;
 

@@ -13,6 +13,10 @@ public final class ConnectorProfileZendeskConnectorProfilePropertiesArgs extends
 
     public static final ConnectorProfileZendeskConnectorProfilePropertiesArgs Empty = new ConnectorProfileZendeskConnectorProfilePropertiesArgs();
 
+    /**
+     * The location of the Zendesk resource
+     * 
+     */
     @InputImport(name="instanceUrl", required=true)
     private final Input<String> instanceUrl;
 

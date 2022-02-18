@@ -13,6 +13,10 @@ public final class LicenseValidityDateFormatArgs extends io.pulumi.resources.Res
 
     public static final LicenseValidityDateFormatArgs Empty = new LicenseValidityDateFormatArgs();
 
+    /**
+     * Validity begin date for the license.
+     * 
+     */
     @InputImport(name="begin", required=true)
     private final Input<String> begin;
 
@@ -20,6 +24,10 @@ public final class LicenseValidityDateFormatArgs extends io.pulumi.resources.Res
         return this.begin;
     }
 
+    /**
+     * Validity begin date for the license.
+     * 
+     */
     @InputImport(name="end", required=true)
     private final Input<String> end;
 

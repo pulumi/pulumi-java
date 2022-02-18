@@ -12,7 +12,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ContainerRecipeTargetContainerRepository {
+    /**
+     * The name of the container repository where the output container image is stored. This name is prefixed by the repository location.
+     * 
+     */
     private final @Nullable String repositoryName;
+    /**
+     * Specifies the service in which this image was registered.
+     * 
+     */
     private final @Nullable ContainerRecipeTargetContainerRepositoryService service;
 
     @OutputCustomType.Constructor({"repositoryName","service"})
@@ -23,9 +31,17 @@ public final class ContainerRecipeTargetContainerRepository {
         this.service = service;
     }
 
+    /**
+     * The name of the container repository where the output container image is stored. This name is prefixed by the repository location.
+     * 
+     */
     public Optional<String> getRepositoryName() {
         return Optional.ofNullable(this.repositoryName);
     }
+    /**
+     * Specifies the service in which this image was registered.
+     * 
+     */
     public Optional<ContainerRecipeTargetContainerRepositoryService> getService() {
         return Optional.ofNullable(this.service);
     }

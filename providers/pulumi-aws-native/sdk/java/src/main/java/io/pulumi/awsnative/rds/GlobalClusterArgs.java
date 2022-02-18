@@ -16,6 +16,10 @@ public final class GlobalClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GlobalClusterArgs Empty = new GlobalClusterArgs();
 
+    /**
+     * The deletion protection setting for the new global database. The global database can't be deleted when deletion protection is enabled.
+     * 
+     */
     @InputImport(name="deletionProtection")
     private final @Nullable Input<Boolean> deletionProtection;
 
@@ -23,6 +27,11 @@ public final class GlobalClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.deletionProtection == null ? Input.empty() : this.deletionProtection;
     }
 
+    /**
+     * The name of the database engine to be used for this DB cluster. Valid Values: aurora (for MySQL 5.6-compatible Aurora), aurora-mysql (for MySQL 5.7-compatible Aurora).
+     * If you specify the SourceDBClusterIdentifier property, don't specify this property. The value is inherited from the cluster.
+     * 
+     */
     @InputImport(name="engine")
     private final @Nullable Input<GlobalClusterEngine> engine;
 
@@ -30,6 +39,10 @@ public final class GlobalClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.engine == null ? Input.empty() : this.engine;
     }
 
+    /**
+     * The version number of the database engine to use. If you specify the SourceDBClusterIdentifier property, don't specify this property. The value is inherited from the cluster.
+     * 
+     */
     @InputImport(name="engineVersion")
     private final @Nullable Input<String> engineVersion;
 
@@ -37,6 +50,10 @@ public final class GlobalClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.engineVersion == null ? Input.empty() : this.engineVersion;
     }
 
+    /**
+     * The cluster identifier of the new global database cluster. This parameter is stored as a lowercase string.
+     * 
+     */
     @InputImport(name="globalClusterIdentifier")
     private final @Nullable Input<String> globalClusterIdentifier;
 
@@ -44,6 +61,10 @@ public final class GlobalClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.globalClusterIdentifier == null ? Input.empty() : this.globalClusterIdentifier;
     }
 
+    /**
+     * The Amazon Resource Name (ARN) to use as the primary cluster of the global database. This parameter is optional. This parameter is stored as a lowercase string.
+     * 
+     */
     @InputImport(name="sourceDBClusterIdentifier")
     private final @Nullable Input<String> sourceDBClusterIdentifier;
 
@@ -51,6 +72,11 @@ public final class GlobalClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceDBClusterIdentifier == null ? Input.empty() : this.sourceDBClusterIdentifier;
     }
 
+    /**
+     *  The storage encryption setting for the new global database cluster.
+     * If you specify the SourceDBClusterIdentifier property, don't specify this property. The value is inherited from the cluster.
+     * 
+     */
     @InputImport(name="storageEncrypted")
     private final @Nullable Input<Boolean> storageEncrypted;
 

@@ -13,9 +13,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetACLResult {
+    /**
+     * The Amazon Resource Name (ARN) of the acl.
+     * 
+     */
     private final @Nullable String arn;
+    /**
+     * Indicates acl status. Can be "creating", "active", "modifying", "deleting".
+     * 
+     */
     private final @Nullable String status;
+    /**
+     * An array of key-value pairs to apply to this cluster.
+     * 
+     */
     private final @Nullable List<ACLTag> tags;
+    /**
+     * List of users associated to this acl.
+     * 
+     */
     private final @Nullable List<String> userNames;
 
     @OutputCustomType.Constructor({"arn","status","tags","userNames"})
@@ -30,15 +46,31 @@ public final class GetACLResult {
         this.userNames = userNames;
     }
 
+    /**
+     * The Amazon Resource Name (ARN) of the acl.
+     * 
+     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
+    /**
+     * Indicates acl status. Can be "creating", "active", "modifying", "deleting".
+     * 
+     */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
+    /**
+     * An array of key-value pairs to apply to this cluster.
+     * 
+     */
     public List<ACLTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
+    /**
+     * List of users associated to this acl.
+     * 
+     */
     public List<String> getUserNames() {
         return this.userNames == null ? List.of() : this.userNames;
     }

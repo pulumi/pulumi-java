@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The name of the robot software suite.
+     * 
+     */
     @EnumType
     public enum SimulationApplicationRobotSoftwareSuiteName {
         Ros("ROS"),

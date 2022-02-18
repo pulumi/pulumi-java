@@ -16,12 +16,32 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetResponsePlanResult {
+    /**
+     * The list of actions.
+     * 
+     */
     private final @Nullable List<ResponsePlanAction> actions;
+    /**
+     * The ARN of the response plan.
+     * 
+     */
     private final @Nullable String arn;
     private final @Nullable ResponsePlanChatChannel chatChannel;
+    /**
+     * The display name of the response plan.
+     * 
+     */
     private final @Nullable String displayName;
+    /**
+     * The list of engagements to use.
+     * 
+     */
     private final @Nullable List<String> engagements;
     private final @Nullable ResponsePlanIncidentTemplate incidentTemplate;
+    /**
+     * The tags to apply to the response plan.
+     * 
+     */
     private final @Nullable List<ResponsePlanTag> tags;
 
     @OutputCustomType.Constructor({"actions","arn","chatChannel","displayName","engagements","incidentTemplate","tags"})
@@ -42,24 +62,44 @@ public final class GetResponsePlanResult {
         this.tags = tags;
     }
 
+    /**
+     * The list of actions.
+     * 
+     */
     public List<ResponsePlanAction> getActions() {
         return this.actions == null ? List.of() : this.actions;
     }
+    /**
+     * The ARN of the response plan.
+     * 
+     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     public Optional<ResponsePlanChatChannel> getChatChannel() {
         return Optional.ofNullable(this.chatChannel);
     }
+    /**
+     * The display name of the response plan.
+     * 
+     */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
+    /**
+     * The list of engagements to use.
+     * 
+     */
     public List<String> getEngagements() {
         return this.engagements == null ? List.of() : this.engagements;
     }
     public Optional<ResponsePlanIncidentTemplate> getIncidentTemplate() {
         return Optional.ofNullable(this.incidentTemplate);
     }
+    /**
+     * The tags to apply to the response plan.
+     * 
+     */
     public List<ResponsePlanTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

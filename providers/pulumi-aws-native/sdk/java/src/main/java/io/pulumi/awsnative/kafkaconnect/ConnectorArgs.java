@@ -30,6 +30,10 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.capacity;
     }
 
+    /**
+     * The configuration for the connector.
+     * 
+     */
     @InputImport(name="connectorConfiguration", required=true)
     private final Input<Object> connectorConfiguration;
 
@@ -37,6 +41,10 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.connectorConfiguration;
     }
 
+    /**
+     * A summary description of the connector.
+     * 
+     */
     @InputImport(name="connectorDescription")
     private final @Nullable Input<String> connectorDescription;
 
@@ -44,6 +52,10 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.connectorDescription == null ? Input.empty() : this.connectorDescription;
     }
 
+    /**
+     * The name of the connector.
+     * 
+     */
     @InputImport(name="connectorName")
     private final @Nullable Input<String> connectorName;
 
@@ -72,6 +84,10 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.kafkaClusterEncryptionInTransit;
     }
 
+    /**
+     * The version of Kafka Connect. It has to be compatible with both the Kafka cluster's version and the plugins.
+     * 
+     */
     @InputImport(name="kafkaConnectVersion", required=true)
     private final Input<String> kafkaConnectVersion;
 
@@ -86,6 +102,10 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.logDelivery == null ? Input.empty() : this.logDelivery;
     }
 
+    /**
+     * List of plugins to use with the connector.
+     * 
+     */
     @InputImport(name="plugins", required=true)
     private final Input<List<ConnectorPluginArgs>> plugins;
 
@@ -93,6 +113,10 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.plugins;
     }
 
+    /**
+     * The Amazon Resource Name (ARN) of the IAM role used by the connector to access Amazon S3 objects and other external resources.
+     * 
+     */
     @InputImport(name="serviceExecutionRoleArn", required=true)
     private final Input<String> serviceExecutionRoleArn;
 

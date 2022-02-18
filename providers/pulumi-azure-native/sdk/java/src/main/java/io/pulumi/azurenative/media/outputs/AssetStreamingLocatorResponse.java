@@ -9,13 +9,45 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AssetStreamingLocatorResponse {
+    /**
+     * Asset Name.
+     * 
+     */
     private final String assetName;
+    /**
+     * The creation time of the Streaming Locator.
+     * 
+     */
     private final String created;
+    /**
+     * Name of the default ContentKeyPolicy used by this Streaming Locator.
+     * 
+     */
     private final String defaultContentKeyPolicyName;
+    /**
+     * The end time of the Streaming Locator.
+     * 
+     */
     private final String endTime;
+    /**
+     * Streaming Locator name.
+     * 
+     */
     private final String name;
+    /**
+     * The start time of the Streaming Locator.
+     * 
+     */
     private final String startTime;
+    /**
+     * StreamingLocatorId of the Streaming Locator.
+     * 
+     */
     private final String streamingLocatorId;
+    /**
+     * Name of the Streaming Policy used by this Streaming Locator.
+     * 
+     */
     private final String streamingPolicyName;
 
     @OutputCustomType.Constructor({"assetName","created","defaultContentKeyPolicyName","endTime","name","startTime","streamingLocatorId","streamingPolicyName"})
@@ -38,27 +70,59 @@ public final class AssetStreamingLocatorResponse {
         this.streamingPolicyName = Objects.requireNonNull(streamingPolicyName);
     }
 
+    /**
+     * Asset Name.
+     * 
+     */
     public String getAssetName() {
         return this.assetName;
     }
+    /**
+     * The creation time of the Streaming Locator.
+     * 
+     */
     public String getCreated() {
         return this.created;
     }
+    /**
+     * Name of the default ContentKeyPolicy used by this Streaming Locator.
+     * 
+     */
     public String getDefaultContentKeyPolicyName() {
         return this.defaultContentKeyPolicyName;
     }
+    /**
+     * The end time of the Streaming Locator.
+     * 
+     */
     public String getEndTime() {
         return this.endTime;
     }
+    /**
+     * Streaming Locator name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The start time of the Streaming Locator.
+     * 
+     */
     public String getStartTime() {
         return this.startTime;
     }
+    /**
+     * StreamingLocatorId of the Streaming Locator.
+     * 
+     */
     public String getStreamingLocatorId() {
         return this.streamingLocatorId;
     }
+    /**
+     * Name of the Streaming Policy used by this Streaming Locator.
+     * 
+     */
     public String getStreamingPolicyName() {
         return this.streamingPolicyName;
     }

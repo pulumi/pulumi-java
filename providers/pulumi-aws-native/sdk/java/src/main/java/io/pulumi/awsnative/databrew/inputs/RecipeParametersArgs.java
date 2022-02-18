@@ -222,6 +222,10 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
         return this.includeInSplit == null ? Input.empty() : this.includeInSplit;
     }
 
+    /**
+     * Input
+     * 
+     */
     @InputImport(name="input")
     private final @Nullable Input<RecipeParametersInputPropertiesArgs> input;
 

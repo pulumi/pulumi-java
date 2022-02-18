@@ -13,10 +13,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The parameters to provide for the Facebook channel.
+ * 
+ */
 public final class FacebookChannelPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FacebookChannelPropertiesResponse Empty = new FacebookChannelPropertiesResponse();
 
+    /**
+     * Facebook application id
+     * 
+     */
     @InputImport(name="appId", required=true)
     private final String appId;
 
@@ -24,6 +32,10 @@ public final class FacebookChannelPropertiesResponse extends io.pulumi.resources
         return this.appId;
     }
 
+    /**
+     * Facebook application secret. Value only returned through POST to the action Channel List API, otherwise empty.
+     * 
+     */
     @InputImport(name="appSecret")
     private final @Nullable String appSecret;
 
@@ -31,6 +43,10 @@ public final class FacebookChannelPropertiesResponse extends io.pulumi.resources
         return this.appSecret == null ? Optional.empty() : Optional.ofNullable(this.appSecret);
     }
 
+    /**
+     * Callback Url
+     * 
+     */
     @InputImport(name="callbackUrl", required=true)
     private final String callbackUrl;
 
@@ -38,6 +54,10 @@ public final class FacebookChannelPropertiesResponse extends io.pulumi.resources
         return this.callbackUrl;
     }
 
+    /**
+     * Whether this channel is enabled for the bot
+     * 
+     */
     @InputImport(name="isEnabled", required=true)
     private final Boolean isEnabled;
 
@@ -45,6 +65,10 @@ public final class FacebookChannelPropertiesResponse extends io.pulumi.resources
         return this.isEnabled;
     }
 
+    /**
+     * The list of Facebook pages
+     * 
+     */
     @InputImport(name="pages")
     private final @Nullable List<FacebookPageResponse> pages;
 
@@ -52,6 +76,10 @@ public final class FacebookChannelPropertiesResponse extends io.pulumi.resources
         return this.pages == null ? List.of() : this.pages;
     }
 
+    /**
+     * Verify token. Value only returned through POST to the action Channel List API, otherwise empty.
+     * 
+     */
     @InputImport(name="verifyToken", required=true)
     private final String verifyToken;
 

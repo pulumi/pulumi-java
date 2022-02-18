@@ -16,6 +16,11 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
 
     public static final PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyArgs Empty = new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyArgs();
 
+    /**
+     * Kms wrapped key
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="kmsWrapped")
     private final @Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrappedArgs> kmsWrapped;
 
@@ -23,6 +28,11 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
         return this.kmsWrapped == null ? Input.empty() : this.kmsWrapped;
     }
 
+    /**
+     * Transient crypto key
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="transient")
     private final @Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransientArgs> $transient;
 
@@ -30,6 +40,11 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
         return this.$transient == null ? Input.empty() : this.$transient;
     }
 
+    /**
+     * Unwrapped crypto key
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="unwrapped")
     private final @Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrappedArgs> unwrapped;
 

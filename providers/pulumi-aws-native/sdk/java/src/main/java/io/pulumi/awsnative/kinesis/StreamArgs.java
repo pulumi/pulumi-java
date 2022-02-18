@@ -19,6 +19,10 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StreamArgs Empty = new StreamArgs();
 
+    /**
+     * The name of the Kinesis stream.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -26,6 +30,10 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The number of hours for the data records that are stored in shards to remain accessible.
+     * 
+     */
     @InputImport(name="retentionPeriodHours")
     private final @Nullable Input<Integer> retentionPeriodHours;
 
@@ -33,6 +41,10 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
         return this.retentionPeriodHours == null ? Input.empty() : this.retentionPeriodHours;
     }
 
+    /**
+     * The number of shards that the stream uses. Required when StreamMode = PROVISIONED is passed.
+     * 
+     */
     @InputImport(name="shardCount")
     private final @Nullable Input<Integer> shardCount;
 
@@ -40,6 +52,10 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
         return this.shardCount == null ? Input.empty() : this.shardCount;
     }
 
+    /**
+     * When specified, enables or updates server-side encryption using an AWS KMS key for a specified stream.
+     * 
+     */
     @InputImport(name="streamEncryption")
     private final @Nullable Input<StreamEncryptionArgs> streamEncryption;
 
@@ -47,6 +63,10 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
         return this.streamEncryption == null ? Input.empty() : this.streamEncryption;
     }
 
+    /**
+     * The mode in which the stream is running.
+     * 
+     */
     @InputImport(name="streamModeDetails")
     private final @Nullable Input<StreamModeDetailsArgs> streamModeDetails;
 
@@ -54,6 +74,10 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
         return this.streamModeDetails == null ? Input.empty() : this.streamModeDetails;
     }
 
+    /**
+     * An arbitrary set of tags (key–value pairs) to associate with the Kinesis stream.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<StreamTagArgs>> tags;
 

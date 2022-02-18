@@ -13,6 +13,11 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDay
 
     public static final ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekArgs Empty = new ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekArgs();
 
+    /**
+     * The day of the week to create the snapshot. e.g. MONDAY
+     * Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
+     * 
+     */
     @InputImport(name="day", required=true)
     private final Input<String> day;
 
@@ -20,6 +25,10 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDay
         return this.day;
     }
 
+    /**
+     * The start time of the schedule. The timestamp is an RFC3339 string.
+     * 
+     */
     @InputImport(name="startTime", required=true)
     private final Input<String> startTime;
 

@@ -15,10 +15,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Config for suggestion query.
+ * 
+ */
 public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigArgs Empty = new GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigArgs();
 
+    /**
+     * Confidence threshold of query result. Agent Assist gives each suggestion a score in the range [0.0, 1.0], based on the relevance between the suggestion and the current conversation context. A score of 0.0 has no relevance, while a score of 1.0 has high relevance. Only suggestions with a score greater than or equal to the value of this field are included in the results. For a baseline model (the default), the recommended value is in the range [0.05, 0.1]. For a custom model, there is no recommended value. Tune this value by starting from a very low value and slowly increasing until you have desired results. If this field is not set, it is default to 0.0, which means that all suggestions are returned. Supported features: ARTICLE_SUGGESTION, FAQ, SMART_REPLY, SMART_COMPOSE.
+     * 
+     */
     @InputImport(name="confidenceThreshold")
     private final @Nullable Input<Double> confidenceThreshold;
 
@@ -26,6 +34,10 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
         return this.confidenceThreshold == null ? Input.empty() : this.confidenceThreshold;
     }
 
+    /**
+     * Determines how recent conversation context is filtered when generating suggestions. If unspecified, no messages will be dropped.
+     * 
+     */
     @InputImport(name="contextFilterSettings")
     private final @Nullable Input<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsArgs> contextFilterSettings;
 
@@ -33,6 +45,10 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
         return this.contextFilterSettings == null ? Input.empty() : this.contextFilterSettings;
     }
 
+    /**
+     * Query from Dialogflow agent. It is used by DIALOGFLOW_ASSIST.
+     * 
+     */
     @InputImport(name="dialogflowQuerySource")
     private final @Nullable Input<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySourceArgs> dialogflowQuerySource;
 
@@ -40,6 +56,10 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
         return this.dialogflowQuerySource == null ? Input.empty() : this.dialogflowQuerySource;
     }
 
+    /**
+     * Query from knowledge base document. It is used by: SMART_REPLY, SMART_COMPOSE.
+     * 
+     */
     @InputImport(name="documentQuerySource")
     private final @Nullable Input<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceArgs> documentQuerySource;
 
@@ -47,6 +67,10 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
         return this.documentQuerySource == null ? Input.empty() : this.documentQuerySource;
     }
 
+    /**
+     * Query from knowledgebase. It is used by: ARTICLE_SUGGESTION, FAQ.
+     * 
+     */
     @InputImport(name="knowledgeBaseQuerySource")
     private final @Nullable Input<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySourceArgs> knowledgeBaseQuerySource;
 
@@ -54,6 +78,10 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
         return this.knowledgeBaseQuerySource == null ? Input.empty() : this.knowledgeBaseQuerySource;
     }
 
+    /**
+     * Maximum number of results to return. Currently, if unset, defaults to 10. And the max number is 20.
+     * 
+     */
     @InputImport(name="maxResults")
     private final @Nullable Input<Integer> maxResults;
 

@@ -22,6 +22,12 @@ public final class JobQueryGetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JobQueryGetArgs Empty = new JobQueryGetArgs();
 
+    /**
+     * If true and query uses legacy SQL dialect, allows the query to produce arbitrarily large result tables at a slight cost in performance.
+     * Requires destinationTable to be set. For standard SQL queries, this flag is ignored and large results are always allowed.
+     * However, you must still set destinationTable when result size exceeds the allowed maximum response size.
+     * 
+     */
     @InputImport(name="allowLargeResults")
     private final @Nullable Input<Boolean> allowLargeResults;
 
@@ -29,6 +35,15 @@ public final class JobQueryGetArgs extends io.pulumi.resources.ResourceArgs {
         return this.allowLargeResults == null ? Input.empty() : this.allowLargeResults;
     }
 
+    /**
+     * Specifies whether the job is allowed to create new tables. The following values are supported:
+     * CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
+     * CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result.
+     * Creation, truncation and append actions occur as one atomic update upon job completion
+     * Default value is `CREATE_IF_NEEDED`.
+     * Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
+     * 
+     */
     @InputImport(name="createDisposition")
     private final @Nullable Input<String> createDisposition;
 
@@ -36,6 +51,11 @@ public final class JobQueryGetArgs extends io.pulumi.resources.ResourceArgs {
         return this.createDisposition == null ? Input.empty() : this.createDisposition;
     }
 
+    /**
+     * Specifies the default dataset to use for unqualified table names in the query. Note that this does not alter behavior of unqualified dataset names.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="defaultDataset")
     private final @Nullable Input<JobQueryDefaultDatasetGetArgs> defaultDataset;
 
@@ -43,6 +63,11 @@ public final class JobQueryGetArgs extends io.pulumi.resources.ResourceArgs {
         return this.defaultDataset == null ? Input.empty() : this.defaultDataset;
     }
 
+    /**
+     * Custom encryption configuration (e.g., Cloud KMS keys)
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="destinationEncryptionConfiguration")
     private final @Nullable Input<JobQueryDestinationEncryptionConfigurationGetArgs> destinationEncryptionConfiguration;
 
@@ -50,6 +75,11 @@ public final class JobQueryGetArgs extends io.pulumi.resources.ResourceArgs {
         return this.destinationEncryptionConfiguration == null ? Input.empty() : this.destinationEncryptionConfiguration;
     }
 
+    /**
+     * The destination table.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="destinationTable")
     private final @Nullable Input<JobQueryDestinationTableGetArgs> destinationTable;
 
@@ -57,6 +87,11 @@ public final class JobQueryGetArgs extends io.pulumi.resources.ResourceArgs {
         return this.destinationTable == null ? Input.empty() : this.destinationTable;
     }
 
+    /**
+     * If true and query uses legacy SQL dialect, flattens all nested and repeated fields in the query results.
+     * allowLargeResults must be true if this is set to false. For standard SQL queries, this flag is ignored and results are never flattened.
+     * 
+     */
     @InputImport(name="flattenResults")
     private final @Nullable Input<Boolean> flattenResults;
 
@@ -64,6 +99,11 @@ public final class JobQueryGetArgs extends io.pulumi.resources.ResourceArgs {
         return this.flattenResults == null ? Input.empty() : this.flattenResults;
     }
 
+    /**
+     * Limits the billing tier for this job. Queries that have resource usage beyond this tier will fail (without incurring a charge).
+     * If unspecified, this will be set to your project default.
+     * 
+     */
     @InputImport(name="maximumBillingTier")
     private final @Nullable Input<Integer> maximumBillingTier;
 
@@ -71,6 +111,11 @@ public final class JobQueryGetArgs extends io.pulumi.resources.ResourceArgs {
         return this.maximumBillingTier == null ? Input.empty() : this.maximumBillingTier;
     }
 
+    /**
+     * Limits the bytes billed for this job. Queries that will have bytes billed beyond this limit will fail (without incurring a charge).
+     * If unspecified, this will be set to your project default.
+     * 
+     */
     @InputImport(name="maximumBytesBilled")
     private final @Nullable Input<String> maximumBytesBilled;
 
@@ -78,6 +123,10 @@ public final class JobQueryGetArgs extends io.pulumi.resources.ResourceArgs {
         return this.maximumBytesBilled == null ? Input.empty() : this.maximumBytesBilled;
     }
 
+    /**
+     * Standard SQL only. Set to POSITIONAL to use positional (?) query parameters or to NAMED to use named (@myparam) query parameters in this query.
+     * 
+     */
     @InputImport(name="parameterMode")
     private final @Nullable Input<String> parameterMode;
 
@@ -85,6 +134,12 @@ public final class JobQueryGetArgs extends io.pulumi.resources.ResourceArgs {
         return this.parameterMode == null ? Input.empty() : this.parameterMode;
     }
 
+    /**
+     * Specifies a priority for the query.
+     * Default value is `INTERACTIVE`.
+     * Possible values are `INTERACTIVE` and `BATCH`.
+     * 
+     */
     @InputImport(name="priority")
     private final @Nullable Input<String> priority;
 
@@ -92,6 +147,11 @@ public final class JobQueryGetArgs extends io.pulumi.resources.ResourceArgs {
         return this.priority == null ? Input.empty() : this.priority;
     }
 
+    /**
+     * Configures a query job.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="query", required=true)
     private final Input<String> query;
 
@@ -99,6 +159,15 @@ public final class JobQueryGetArgs extends io.pulumi.resources.ResourceArgs {
         return this.query;
     }
 
+    /**
+     * Allows the schema of the destination table to be updated as a side effect of the load job if a schema is autodetected or
+     * supplied in the job configuration. Schema update options are supported in two cases: when writeDisposition is WRITE_APPEND;
+     * when writeDisposition is WRITE_TRUNCATE and the destination table is a partition of a table, specified by partition decorators.
+     * For normal tables, WRITE_TRUNCATE will always overwrite the schema. One or more of the following values are specified:
+     * ALLOW_FIELD_ADDITION: allow adding a nullable field to the schema.
+     * ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema to nullable.
+     * 
+     */
     @InputImport(name="schemaUpdateOptions")
     private final @Nullable Input<List<String>> schemaUpdateOptions;
 
@@ -106,6 +175,11 @@ public final class JobQueryGetArgs extends io.pulumi.resources.ResourceArgs {
         return this.schemaUpdateOptions == null ? Input.empty() : this.schemaUpdateOptions;
     }
 
+    /**
+     * Options controlling the execution of scripts.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="scriptOptions")
     private final @Nullable Input<JobQueryScriptOptionsGetArgs> scriptOptions;
 
@@ -113,6 +187,11 @@ public final class JobQueryGetArgs extends io.pulumi.resources.ResourceArgs {
         return this.scriptOptions == null ? Input.empty() : this.scriptOptions;
     }
 
+    /**
+     * Specifies whether to use BigQuery's legacy SQL dialect for this query. The default value is true.
+     * If set to false, the query will use BigQuery's standard SQL.
+     * 
+     */
     @InputImport(name="useLegacySql")
     private final @Nullable Input<Boolean> useLegacySql;
 
@@ -120,6 +199,12 @@ public final class JobQueryGetArgs extends io.pulumi.resources.ResourceArgs {
         return this.useLegacySql == null ? Input.empty() : this.useLegacySql;
     }
 
+    /**
+     * Whether to look for the result in the query cache. The query cache is a best-effort cache that will be flushed whenever
+     * tables in the query are modified. Moreover, the query cache is only available when a query does not have a destination table specified.
+     * The default value is true.
+     * 
+     */
     @InputImport(name="useQueryCache")
     private final @Nullable Input<Boolean> useQueryCache;
 
@@ -127,6 +212,11 @@ public final class JobQueryGetArgs extends io.pulumi.resources.ResourceArgs {
         return this.useQueryCache == null ? Input.empty() : this.useQueryCache;
     }
 
+    /**
+     * Describes user-defined function resources used in the query.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="userDefinedFunctionResources")
     private final @Nullable Input<List<JobQueryUserDefinedFunctionResourceGetArgs>> userDefinedFunctionResources;
 
@@ -134,6 +224,17 @@ public final class JobQueryGetArgs extends io.pulumi.resources.ResourceArgs {
         return this.userDefinedFunctionResources == null ? Input.empty() : this.userDefinedFunctionResources;
     }
 
+    /**
+     * Specifies the action that occurs if the destination table already exists. The following values are supported:
+     * WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
+     * WRITE_APPEND: If the table already exists, BigQuery appends the data to the table.
+     * WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result.
+     * Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
+     * Creation, truncation and append actions occur as one atomic update upon job completion.
+     * Default value is `WRITE_EMPTY`.
+     * Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
+     * 
+     */
     @InputImport(name="writeDisposition")
     private final @Nullable Input<String> writeDisposition;
 

@@ -22,13 +22,45 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class IntegrationRuntimeSsisPropertiesResponse {
+    /**
+     * Catalog information for managed dedicated integration runtime.
+     * 
+     */
     private final @Nullable IntegrationRuntimeSsisCatalogInfoResponse catalogInfo;
+    /**
+     * The credential reference containing authentication information.
+     * 
+     */
     private final @Nullable CredentialReferenceResponse credential;
+    /**
+     * Custom setup script properties for a managed dedicated integration runtime.
+     * 
+     */
     private final @Nullable IntegrationRuntimeCustomSetupScriptPropertiesResponse customSetupScriptProperties;
+    /**
+     * Data proxy properties for a managed dedicated integration runtime.
+     * 
+     */
     private final @Nullable IntegrationRuntimeDataProxyPropertiesResponse dataProxyProperties;
+    /**
+     * The edition for the SSIS Integration Runtime
+     * 
+     */
     private final @Nullable String edition;
+    /**
+     * Custom setup without script properties for a SSIS integration runtime.
+     * 
+     */
     private final @Nullable List<Object> expressCustomSetupProperties;
+    /**
+     * License type for bringing your own license scenario.
+     * 
+     */
     private final @Nullable String licenseType;
+    /**
+     * Package stores for the SSIS Integration Runtime.
+     * 
+     */
     private final @Nullable List<PackageStoreResponse> packageStores;
 
     @OutputCustomType.Constructor({"catalogInfo","credential","customSetupScriptProperties","dataProxyProperties","edition","expressCustomSetupProperties","licenseType","packageStores"})
@@ -51,27 +83,59 @@ public final class IntegrationRuntimeSsisPropertiesResponse {
         this.packageStores = packageStores;
     }
 
+    /**
+     * Catalog information for managed dedicated integration runtime.
+     * 
+     */
     public Optional<IntegrationRuntimeSsisCatalogInfoResponse> getCatalogInfo() {
         return Optional.ofNullable(this.catalogInfo);
     }
+    /**
+     * The credential reference containing authentication information.
+     * 
+     */
     public Optional<CredentialReferenceResponse> getCredential() {
         return Optional.ofNullable(this.credential);
     }
+    /**
+     * Custom setup script properties for a managed dedicated integration runtime.
+     * 
+     */
     public Optional<IntegrationRuntimeCustomSetupScriptPropertiesResponse> getCustomSetupScriptProperties() {
         return Optional.ofNullable(this.customSetupScriptProperties);
     }
+    /**
+     * Data proxy properties for a managed dedicated integration runtime.
+     * 
+     */
     public Optional<IntegrationRuntimeDataProxyPropertiesResponse> getDataProxyProperties() {
         return Optional.ofNullable(this.dataProxyProperties);
     }
+    /**
+     * The edition for the SSIS Integration Runtime
+     * 
+     */
     public Optional<String> getEdition() {
         return Optional.ofNullable(this.edition);
     }
+    /**
+     * Custom setup without script properties for a SSIS integration runtime.
+     * 
+     */
     public List<Object> getExpressCustomSetupProperties() {
         return this.expressCustomSetupProperties == null ? List.of() : this.expressCustomSetupProperties;
     }
+    /**
+     * License type for bringing your own license scenario.
+     * 
+     */
     public Optional<String> getLicenseType() {
         return Optional.ofNullable(this.licenseType);
     }
+    /**
+     * Package stores for the SSIS Integration Runtime.
+     * 
+     */
     public List<PackageStoreResponse> getPackageStores() {
         return this.packageStores == null ? List.of() : this.packageStores;
     }

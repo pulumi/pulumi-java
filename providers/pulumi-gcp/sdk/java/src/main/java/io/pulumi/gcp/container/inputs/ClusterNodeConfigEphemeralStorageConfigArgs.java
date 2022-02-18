@@ -13,6 +13,10 @@ public final class ClusterNodeConfigEphemeralStorageConfigArgs extends io.pulumi
 
     public static final ClusterNodeConfigEphemeralStorageConfigArgs Empty = new ClusterNodeConfigEphemeralStorageConfigArgs();
 
+    /**
+     * Number of local SSDs to use to back ephemeral storage. Uses NVMe interfaces. Each local SSD is 375 GB in size. If zero, it means to disable using local SSDs as ephemeral storage.
+     * 
+     */
     @InputImport(name="localSsdCount", required=true)
     private final Input<Integer> localSsdCount;
 

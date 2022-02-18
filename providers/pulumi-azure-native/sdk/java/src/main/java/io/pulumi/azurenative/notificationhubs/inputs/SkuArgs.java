@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The Sku description for a namespace
+ * 
+ */
 public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SkuArgs Empty = new SkuArgs();
 
+    /**
+     * The capacity of the resource
+     * 
+     */
     @InputImport(name="capacity")
     private final @Nullable Input<Integer> capacity;
 
@@ -24,6 +32,10 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
         return this.capacity == null ? Input.empty() : this.capacity;
     }
 
+    /**
+     * The Sku Family
+     * 
+     */
     @InputImport(name="family")
     private final @Nullable Input<String> family;
 
@@ -31,6 +43,10 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
         return this.family == null ? Input.empty() : this.family;
     }
 
+    /**
+     * Name of the notification hub sku
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<Either<String,SkuName>> name;
 
@@ -38,6 +54,10 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
+    /**
+     * The Sku size
+     * 
+     */
     @InputImport(name="size")
     private final @Nullable Input<String> size;
 
@@ -45,6 +65,10 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
         return this.size == null ? Input.empty() : this.size;
     }
 
+    /**
+     * The tier of particular sku
+     * 
+     */
     @InputImport(name="tier")
     private final @Nullable Input<String> tier;
 

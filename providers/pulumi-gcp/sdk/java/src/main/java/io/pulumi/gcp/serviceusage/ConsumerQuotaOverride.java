@@ -15,57 +15,161 @@ import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * A consumer override is applied to the consumer on its own authority to limit its own quota usage.
+ * Consumer overrides cannot be used to grant more quota than would be allowed by admin overrides,
+ * producer overrides, or the default limit of the service.
+ * 
+ * To get more information about ConsumerQuotaOverride, see:
+ * 
+ * * How-to Guides
+ *     * [Getting Started](https://cloud.google.com/service-usage/docs/getting-started)
+ *     * [REST API documentation](https://cloud.google.com/service-usage/docs/reference/rest/v1beta1/services.consumerQuotaMetrics.limits.consumerOverrides)
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * ConsumerQuotaOverride can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:serviceusage/consumerQuotaOverride:ConsumerQuotaOverride default projects/{{project}}/services/{{service}}/consumerQuotaMetrics/{{metric}}/limits/{{limit}}/consumerOverrides/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:serviceusage/consumerQuotaOverride:ConsumerQuotaOverride default services/{{service}}/consumerQuotaMetrics/{{metric}}/limits/{{limit}}/consumerOverrides/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:serviceusage/consumerQuotaOverride:ConsumerQuotaOverride default {{service}}/{{metric}}/{{limit}}/{{name}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:serviceusage/consumerQuotaOverride:ConsumerQuotaOverride")
 public class ConsumerQuotaOverride extends io.pulumi.resources.CustomResource {
+    /**
+     * If this map is nonempty, then this override applies only to specific values for dimensions defined in the limit unit.
+     * 
+     */
     @OutputExport(name="dimensions", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> dimensions;
 
+    /**
+     * @return If this map is nonempty, then this override applies only to specific values for dimensions defined in the limit unit.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getDimensions() {
         return this.dimensions;
     }
+    /**
+     * If the new quota would decrease the existing quota by more than 10%, the request is rejected.
+     * If `force` is `true`, that safety check is ignored.
+     * 
+     */
     @OutputExport(name="force", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> force;
 
+    /**
+     * @return If the new quota would decrease the existing quota by more than 10%, the request is rejected.
+     * If `force` is `true`, that safety check is ignored.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getForce() {
         return this.force;
     }
+    /**
+     * The limit on the metric, e.g. `/project/region`.
+     * 
+     */
     @OutputExport(name="limit", type=String.class, parameters={})
     private Output<String> limit;
 
+    /**
+     * @return The limit on the metric, e.g. `/project/region`.
+     * 
+     */
     public Output<String> getLimit() {
         return this.limit;
     }
+    /**
+     * The metric that should be limited, e.g. `compute.googleapis.com/cpus`.
+     * 
+     */
     @OutputExport(name="metric", type=String.class, parameters={})
     private Output<String> metric;
 
+    /**
+     * @return The metric that should be limited, e.g. `compute.googleapis.com/cpus`.
+     * 
+     */
     public Output<String> getMetric() {
         return this.metric;
     }
+    /**
+     * The server-generated name of the quota override.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The server-generated name of the quota override.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The overriding quota limit value. Can be any nonnegative integer, or -1 (unlimited quota).
+     * 
+     */
     @OutputExport(name="overrideValue", type=String.class, parameters={})
     private Output<String> overrideValue;
 
+    /**
+     * @return The overriding quota limit value. Can be any nonnegative integer, or -1 (unlimited quota).
+     * 
+     */
     public Output<String> getOverrideValue() {
         return this.overrideValue;
     }
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * The service that the metrics belong to, e.g. `compute.googleapis.com`.
+     * 
+     */
     @OutputExport(name="service", type=String.class, parameters={})
     private Output<String> service;
 
+    /**
+     * @return The service that the metrics belong to, e.g. `compute.googleapis.com`.
+     * 
+     */
     public Output<String> getService() {
         return this.service;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ConsumerQuotaOverride(String name, ConsumerQuotaOverrideArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:serviceusage/consumerQuotaOverride:ConsumerQuotaOverride", name, args == null ? ConsumerQuotaOverrideArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -81,6 +185,15 @@ public class ConsumerQuotaOverride extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ConsumerQuotaOverride get(String name, Input<String> id, @Nullable ConsumerQuotaOverrideState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ConsumerQuotaOverride(name, id, state, options);
     }

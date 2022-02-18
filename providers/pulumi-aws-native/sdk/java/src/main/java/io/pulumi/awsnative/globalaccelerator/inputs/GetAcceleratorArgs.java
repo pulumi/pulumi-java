@@ -12,6 +12,10 @@ public final class GetAcceleratorArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAcceleratorArgs Empty = new GetAcceleratorArgs();
 
+    /**
+     * The Amazon Resource Name (ARN) of the accelerator.
+     * 
+     */
     @InputImport(name="acceleratorArn", required=true)
     private final String acceleratorArn;
 

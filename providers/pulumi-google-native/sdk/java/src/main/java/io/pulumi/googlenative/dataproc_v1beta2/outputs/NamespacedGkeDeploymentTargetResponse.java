@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class NamespacedGkeDeploymentTargetResponse {
+    /**
+     * Optional. A namespace within the GKE cluster to deploy into.
+     * 
+     */
     private final String clusterNamespace;
+    /**
+     * Optional. The target GKE cluster to deploy to. Format: 'projects/{project}/locations/{location}/clusters/{cluster_id}'
+     * 
+     */
     private final String targetGkeCluster;
 
     @OutputCustomType.Constructor({"clusterNamespace","targetGkeCluster"})
@@ -20,9 +28,17 @@ public final class NamespacedGkeDeploymentTargetResponse {
         this.targetGkeCluster = Objects.requireNonNull(targetGkeCluster);
     }
 
+    /**
+     * Optional. A namespace within the GKE cluster to deploy into.
+     * 
+     */
     public String getClusterNamespace() {
         return this.clusterNamespace;
     }
+    /**
+     * Optional. The target GKE cluster to deploy to. Format: 'projects/{project}/locations/{location}/clusters/{cluster_id}'
+     * 
+     */
     public String getTargetGkeCluster() {
         return this.targetGkeCluster;
     }

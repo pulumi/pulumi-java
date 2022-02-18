@@ -17,6 +17,10 @@ public final class GCPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GCPolicyArgs Empty = new GCPolicyArgs();
 
+    /**
+     * The name of the column family.
+     * 
+     */
     @InputImport(name="columnFamily", required=true)
     private final Input<String> columnFamily;
 
@@ -24,6 +28,10 @@ public final class GCPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.columnFamily;
     }
 
+    /**
+     * The name of the Bigtable instance.
+     * 
+     */
     @InputImport(name="instanceName", required=true)
     private final Input<String> instanceName;
 
@@ -31,6 +39,10 @@ public final class GCPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.instanceName;
     }
 
+    /**
+     * GC policy that applies to all cells older than the given age.
+     * 
+     */
     @InputImport(name="maxAge")
     private final @Nullable Input<GCPolicyMaxAgeArgs> maxAge;
 
@@ -38,6 +50,10 @@ public final class GCPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.maxAge == null ? Input.empty() : this.maxAge;
     }
 
+    /**
+     * GC policy that applies to all versions of a cell except for the most recent.
+     * 
+     */
     @InputImport(name="maxVersions")
     private final @Nullable Input<List<GCPolicyMaxVersionArgs>> maxVersions;
 
@@ -45,6 +61,10 @@ public final class GCPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.maxVersions == null ? Input.empty() : this.maxVersions;
     }
 
+    /**
+     * If multiple policies are set, you should choose between `UNION` OR `INTERSECTION`.
+     * 
+     */
     @InputImport(name="mode")
     private final @Nullable Input<String> mode;
 
@@ -52,6 +72,10 @@ public final class GCPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.mode == null ? Input.empty() : this.mode;
     }
 
+    /**
+     * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -59,6 +83,10 @@ public final class GCPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The name of the table.
+     * 
+     */
     @InputImport(name="table", required=true)
     private final Input<String> table;
 

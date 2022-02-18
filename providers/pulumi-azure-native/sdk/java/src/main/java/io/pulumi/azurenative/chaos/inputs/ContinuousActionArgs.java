@@ -11,10 +11,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Model that represents a continuous action.
+ * 
+ */
 public final class ContinuousActionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContinuousActionArgs Empty = new ContinuousActionArgs();
 
+    /**
+     * ISO8601 formatted string that represents a duration.
+     * 
+     */
     @InputImport(name="duration", required=true)
     private final Input<String> duration;
 
@@ -22,6 +30,10 @@ public final class ContinuousActionArgs extends io.pulumi.resources.ResourceArgs
         return this.duration;
     }
 
+    /**
+     * String that represents a Capability URN.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -29,6 +41,10 @@ public final class ContinuousActionArgs extends io.pulumi.resources.ResourceArgs
         return this.name;
     }
 
+    /**
+     * List of key value pairs.
+     * 
+     */
     @InputImport(name="parameters", required=true)
     private final Input<List<KeyValuePairArgs>> parameters;
 
@@ -36,6 +52,10 @@ public final class ContinuousActionArgs extends io.pulumi.resources.ResourceArgs
         return this.parameters;
     }
 
+    /**
+     * String that represents a selector.
+     * 
+     */
     @InputImport(name="selectorId", required=true)
     private final Input<String> selectorId;
 
@@ -43,6 +63,11 @@ public final class ContinuousActionArgs extends io.pulumi.resources.ResourceArgs
         return this.selectorId;
     }
 
+    /**
+     * Enum that discriminates between action models.
+     * Expected value is 'continuous'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

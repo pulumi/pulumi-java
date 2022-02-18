@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetContact {
+/**
+ * Customer creates a contact resource for a spacecraft resource.
+ * API Version: 2021-04-04-preview.
+ * 
+ *
+ * Customer creates a contact resource for a spacecraft resource.
+ * 
+ */
     public static CompletableFuture<GetContactResult> invokeAsync(GetContactArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:orbital:getContact", TypeShape.of(GetContactResult.class), args == null ? GetContactArgs.Empty : args, Utilities.withVersion(options));
     }

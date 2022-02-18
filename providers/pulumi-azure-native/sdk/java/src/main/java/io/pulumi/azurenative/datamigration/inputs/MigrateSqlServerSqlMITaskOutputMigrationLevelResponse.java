@@ -17,6 +17,10 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
 
     public static final MigrateSqlServerSqlMITaskOutputMigrationLevelResponse Empty = new MigrateSqlServerSqlMITaskOutputMigrationLevelResponse();
 
+    /**
+     * Selected agent jobs as a map from name to id
+     * 
+     */
     @InputImport(name="agentJobs", required=true)
     private final Map<String,String> agentJobs;
 
@@ -24,6 +28,10 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
         return this.agentJobs;
     }
 
+    /**
+     * Selected databases as a map from database name to database id
+     * 
+     */
     @InputImport(name="databases", required=true)
     private final Map<String,String> databases;
 
@@ -31,6 +39,10 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
         return this.databases;
     }
 
+    /**
+     * Migration end time
+     * 
+     */
     @InputImport(name="endedOn", required=true)
     private final String endedOn;
 
@@ -38,6 +50,10 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
         return this.endedOn;
     }
 
+    /**
+     * Migration exceptions and warnings.
+     * 
+     */
     @InputImport(name="exceptionsAndWarnings", required=true)
     private final List<ReportableExceptionResponse> exceptionsAndWarnings;
 
@@ -45,6 +61,10 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
         return this.exceptionsAndWarnings;
     }
 
+    /**
+     * Result identifier
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -52,6 +72,10 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
         return this.id;
     }
 
+    /**
+     * Selected logins as a map from name to id
+     * 
+     */
     @InputImport(name="logins", required=true)
     private final Map<String,String> logins;
 
@@ -59,6 +83,10 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
         return this.logins;
     }
 
+    /**
+     * Migration progress message
+     * 
+     */
     @InputImport(name="message", required=true)
     private final String message;
 
@@ -66,6 +94,10 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
         return this.message;
     }
 
+    /**
+     * List of orphaned users.
+     * 
+     */
     @InputImport(name="orphanedUsersInfo", required=true)
     private final List<OrphanedUserInfoResponse> orphanedUsersInfo;
 
@@ -73,6 +105,11 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
         return this.orphanedUsersInfo;
     }
 
+    /**
+     * Result type
+     * Expected value is 'MigrationLevelOutput'.
+     * 
+     */
     @InputImport(name="resultType", required=true)
     private final String resultType;
 
@@ -80,6 +117,10 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
         return this.resultType;
     }
 
+    /**
+     * Map of server role migration results.
+     * 
+     */
     @InputImport(name="serverRoleResults", required=true)
     private final Map<String,StartMigrationScenarioServerRoleResultResponse> serverRoleResults;
 
@@ -87,6 +128,10 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
         return this.serverRoleResults;
     }
 
+    /**
+     * Source server brand version
+     * 
+     */
     @InputImport(name="sourceServerBrandVersion", required=true)
     private final String sourceServerBrandVersion;
 
@@ -94,6 +139,10 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
         return this.sourceServerBrandVersion;
     }
 
+    /**
+     * Source server version
+     * 
+     */
     @InputImport(name="sourceServerVersion", required=true)
     private final String sourceServerVersion;
 
@@ -101,6 +150,10 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
         return this.sourceServerVersion;
     }
 
+    /**
+     * Migration start time
+     * 
+     */
     @InputImport(name="startedOn", required=true)
     private final String startedOn;
 
@@ -108,6 +161,10 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
         return this.startedOn;
     }
 
+    /**
+     * Current state of migration
+     * 
+     */
     @InputImport(name="state", required=true)
     private final String state;
 
@@ -115,6 +172,10 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
         return this.state;
     }
 
+    /**
+     * Current status of migration
+     * 
+     */
     @InputImport(name="status", required=true)
     private final String status;
 
@@ -122,6 +183,10 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
         return this.status;
     }
 
+    /**
+     * Target server brand version
+     * 
+     */
     @InputImport(name="targetServerBrandVersion", required=true)
     private final String targetServerBrandVersion;
 
@@ -129,6 +194,10 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
         return this.targetServerBrandVersion;
     }
 
+    /**
+     * Target server version
+     * 
+     */
     @InputImport(name="targetServerVersion", required=true)
     private final String targetServerVersion;
 

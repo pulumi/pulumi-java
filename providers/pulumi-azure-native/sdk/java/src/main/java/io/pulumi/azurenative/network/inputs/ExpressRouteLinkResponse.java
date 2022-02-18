@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * ExpressRouteLink child resource definition.
+ * 
+ */
 public final class ExpressRouteLinkResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ExpressRouteLinkResponse Empty = new ExpressRouteLinkResponse();
 
+    /**
+     * Administrative state of the physical port.
+     * 
+     */
     @InputImport(name="adminState")
     private final @Nullable String adminState;
 
@@ -22,6 +30,10 @@ public final class ExpressRouteLinkResponse extends io.pulumi.resources.InvokeAr
         return this.adminState == null ? Optional.empty() : Optional.ofNullable(this.adminState);
     }
 
+    /**
+     * Physical fiber port type.
+     * 
+     */
     @InputImport(name="connectorType", required=true)
     private final String connectorType;
 
@@ -29,6 +41,10 @@ public final class ExpressRouteLinkResponse extends io.pulumi.resources.InvokeAr
         return this.connectorType;
     }
 
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -36,6 +52,10 @@ public final class ExpressRouteLinkResponse extends io.pulumi.resources.InvokeAr
         return this.etag;
     }
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -43,6 +63,10 @@ public final class ExpressRouteLinkResponse extends io.pulumi.resources.InvokeAr
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * Name of Azure router interface.
+     * 
+     */
     @InputImport(name="interfaceName", required=true)
     private final String interfaceName;
 
@@ -50,6 +74,10 @@ public final class ExpressRouteLinkResponse extends io.pulumi.resources.InvokeAr
         return this.interfaceName;
     }
 
+    /**
+     * MacSec configuration.
+     * 
+     */
     @InputImport(name="macSecConfig")
     private final @Nullable ExpressRouteLinkMacSecConfigResponse macSecConfig;
 
@@ -57,6 +85,10 @@ public final class ExpressRouteLinkResponse extends io.pulumi.resources.InvokeAr
         return this.macSecConfig == null ? Optional.empty() : Optional.ofNullable(this.macSecConfig);
     }
 
+    /**
+     * Name of child port resource that is unique among child port resources of the parent.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -64,6 +96,10 @@ public final class ExpressRouteLinkResponse extends io.pulumi.resources.InvokeAr
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Mapping between physical port to patch panel port.
+     * 
+     */
     @InputImport(name="patchPanelId", required=true)
     private final String patchPanelId;
 
@@ -71,6 +107,10 @@ public final class ExpressRouteLinkResponse extends io.pulumi.resources.InvokeAr
         return this.patchPanelId;
     }
 
+    /**
+     * The provisioning state of the express route link resource.
+     * 
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -78,6 +118,10 @@ public final class ExpressRouteLinkResponse extends io.pulumi.resources.InvokeAr
         return this.provisioningState;
     }
 
+    /**
+     * Mapping of physical patch panel to rack.
+     * 
+     */
     @InputImport(name="rackId", required=true)
     private final String rackId;
 
@@ -85,6 +129,10 @@ public final class ExpressRouteLinkResponse extends io.pulumi.resources.InvokeAr
         return this.rackId;
     }
 
+    /**
+     * Name of Azure router associated with physical port.
+     * 
+     */
     @InputImport(name="routerName", required=true)
     private final String routerName;
 

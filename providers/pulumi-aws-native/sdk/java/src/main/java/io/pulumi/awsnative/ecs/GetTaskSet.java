@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTaskSet {
+/**
+ * Create a task set in the specified cluster and service. This is used when a service uses the EXTERNAL deployment controller type. For more information, see https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-types.htmlin the Amazon Elastic Container Service Developer Guide.
+ * 
+ */
     public static CompletableFuture<GetTaskSetResult> invokeAsync(GetTaskSetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ecs:getTaskSet", TypeShape.of(GetTaskSetResult.class), args == null ? GetTaskSetArgs.Empty : args, Utilities.withVersion(options));
     }

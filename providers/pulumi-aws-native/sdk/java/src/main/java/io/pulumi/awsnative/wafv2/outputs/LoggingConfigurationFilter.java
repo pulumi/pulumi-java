@@ -12,8 +12,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class LoggingConfigurationFilter {
+    /**
+     * How to handle logs that satisfy the filter's conditions and requirement.
+     * 
+     */
     private final LoggingConfigurationFilterBehavior behavior;
+    /**
+     * Match conditions for the filter.
+     * 
+     */
     private final List<LoggingConfigurationCondition> conditions;
+    /**
+     * Logic to apply to the filtering conditions. You can specify that, in order to satisfy the filter, a log must match all conditions or must match at least one condition.
+     * 
+     */
     private final LoggingConfigurationFilterRequirement requirement;
 
     @OutputCustomType.Constructor({"behavior","conditions","requirement"})
@@ -26,12 +38,24 @@ public final class LoggingConfigurationFilter {
         this.requirement = Objects.requireNonNull(requirement);
     }
 
+    /**
+     * How to handle logs that satisfy the filter's conditions and requirement.
+     * 
+     */
     public LoggingConfigurationFilterBehavior getBehavior() {
         return this.behavior;
     }
+    /**
+     * Match conditions for the filter.
+     * 
+     */
     public List<LoggingConfigurationCondition> getConditions() {
         return this.conditions;
     }
+    /**
+     * Logic to apply to the filtering conditions. You can specify that, in order to satisfy the filter, a log must match all conditions or must match at least one condition.
+     * 
+     */
     public LoggingConfigurationFilterRequirement getRequirement() {
         return this.requirement;
     }

@@ -14,6 +14,11 @@ public final class MetricMetricDescriptorLabelArgs extends io.pulumi.resources.R
 
     public static final MetricMetricDescriptorLabelArgs Empty = new MetricMetricDescriptorLabelArgs();
 
+    /**
+     * A description of this metric, which is used in documentation. The maximum length of the
+     * description is 8000 characters.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -21,6 +26,10 @@ public final class MetricMetricDescriptorLabelArgs extends io.pulumi.resources.R
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The label key.
+     * 
+     */
     @InputImport(name="key", required=true)
     private final Input<String> key;
 
@@ -28,6 +37,12 @@ public final class MetricMetricDescriptorLabelArgs extends io.pulumi.resources.R
         return this.key;
     }
 
+    /**
+     * The type of data that can be assigned to the label.
+     * Default value is `STRING`.
+     * Possible values are `BOOL`, `INT64`, and `STRING`.
+     * 
+     */
     @InputImport(name="valueType")
     private final @Nullable Input<String> valueType;
 

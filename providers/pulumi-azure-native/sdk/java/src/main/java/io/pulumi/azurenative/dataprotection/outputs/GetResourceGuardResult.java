@@ -15,14 +15,50 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetResourceGuardResult {
+    /**
+     * Optional ETag.
+     * 
+     */
     private final @Nullable String eTag;
+    /**
+     * Resource Id represents the complete path to the resource.
+     * 
+     */
     private final String id;
+    /**
+     * Input Managed Identity Details
+     * 
+     */
     private final @Nullable DppIdentityDetailsResponse identity;
+    /**
+     * Resource location.
+     * 
+     */
     private final @Nullable String location;
+    /**
+     * Resource name associated with the resource.
+     * 
+     */
     private final String name;
+    /**
+     * ResourceGuardResource properties
+     * 
+     */
     private final ResourceGuardResponse properties;
+    /**
+     * Metadata pertaining to creation and last modification of the resource.
+     * 
+     */
     private final SystemDataResponse systemData;
+    /**
+     * Resource tags.
+     * 
+     */
     private final @Nullable Map<String,String> tags;
+    /**
+     * Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"eTag","id","identity","location","name","properties","systemData","tags","type"})
@@ -47,30 +83,66 @@ public final class GetResourceGuardResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Optional ETag.
+     * 
+     */
     public Optional<String> getETag() {
         return Optional.ofNullable(this.eTag);
     }
+    /**
+     * Resource Id represents the complete path to the resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Input Managed Identity Details
+     * 
+     */
     public Optional<DppIdentityDetailsResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
+    /**
+     * Resource location.
+     * 
+     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
+    /**
+     * Resource name associated with the resource.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * ResourceGuardResource properties
+     * 
+     */
     public ResourceGuardResponse getProperties() {
         return this.properties;
     }
+    /**
+     * Metadata pertaining to creation and last modification of the resource.
+     * 
+     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+    /**
+     * Resource tags.
+     * 
+     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+    /**
+     * Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
+     * 
+     */
     public String getType() {
         return this.type;
     }

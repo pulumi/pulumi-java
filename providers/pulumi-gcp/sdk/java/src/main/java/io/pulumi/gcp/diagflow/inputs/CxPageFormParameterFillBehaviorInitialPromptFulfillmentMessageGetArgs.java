@@ -14,6 +14,10 @@ public final class CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessag
 
     public static final CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageGetArgs Empty = new CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageGetArgs();
 
+    /**
+     * A collection of text responses.
+     * 
+     */
     @InputImport(name="text")
     private final @Nullable Input<CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextGetArgs> text;
 

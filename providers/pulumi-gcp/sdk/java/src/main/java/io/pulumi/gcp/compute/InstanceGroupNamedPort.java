@@ -14,39 +14,124 @@ import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Mange the named ports setting for a managed instance group without
+ * managing the group as whole. This resource is primarily intended for use
+ * with GKE-generated groups that shouldn't otherwise be managed by other
+ * tools.
+ * 
+ * To get more information about InstanceGroupNamedPort, see:
+ * 
+ * * [API documentation](https://cloud.google.com/compute/docs/reference/rest/v1/instanceGroup)
+ * * How-to Guides
+ *     * [Official Documentation](https://cloud.google.com/compute/docs/instance-groups/)
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * InstanceGroupNamedPort can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/instanceGroupNamedPort:InstanceGroupNamedPort default projects/{{project}}/zones/{{zone}}/instanceGroups/{{group}}/{{port}}/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/instanceGroupNamedPort:InstanceGroupNamedPort default {{project}}/{{zone}}/{{group}}/{{port}}/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/instanceGroupNamedPort:InstanceGroupNamedPort default {{zone}}/{{group}}/{{port}}/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/instanceGroupNamedPort:InstanceGroupNamedPort default {{group}}/{{port}}/{{name}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:compute/instanceGroupNamedPort:InstanceGroupNamedPort")
 public class InstanceGroupNamedPort extends io.pulumi.resources.CustomResource {
+    /**
+     * The name of the instance group.
+     * 
+     */
     @OutputExport(name="group", type=String.class, parameters={})
     private Output<String> group;
 
+    /**
+     * @return The name of the instance group.
+     * 
+     */
     public Output<String> getGroup() {
         return this.group;
     }
+    /**
+     * The name for this named port. The name must be 1-63 characters
+     * long, and comply with RFC1035.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name for this named port. The name must be 1-63 characters
+     * long, and comply with RFC1035.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The port number, which can be a value between 1 and 65535.
+     * 
+     */
     @OutputExport(name="port", type=Integer.class, parameters={})
     private Output<Integer> port;
 
+    /**
+     * @return The port number, which can be a value between 1 and 65535.
+     * 
+     */
     public Output<Integer> getPort() {
         return this.port;
     }
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * The zone of the instance group.
+     * 
+     */
     @OutputExport(name="zone", type=String.class, parameters={})
     private Output<String> zone;
 
+    /**
+     * @return The zone of the instance group.
+     * 
+     */
     public Output<String> getZone() {
         return this.zone;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public InstanceGroupNamedPort(String name, InstanceGroupNamedPortArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:compute/instanceGroupNamedPort:InstanceGroupNamedPort", name, args == null ? InstanceGroupNamedPortArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -62,6 +147,15 @@ public class InstanceGroupNamedPort extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static InstanceGroupNamedPort get(String name, Input<String> id, @Nullable InstanceGroupNamedPortState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new InstanceGroupNamedPort(name, id, state, options);
     }

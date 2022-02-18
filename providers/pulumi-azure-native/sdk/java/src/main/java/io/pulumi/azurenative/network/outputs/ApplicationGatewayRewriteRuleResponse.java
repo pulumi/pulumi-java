@@ -15,9 +15,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ApplicationGatewayRewriteRuleResponse {
+    /**
+     * Set of actions to be done as part of the rewrite Rule.
+     * 
+     */
     private final @Nullable ApplicationGatewayRewriteRuleActionSetResponse actionSet;
+    /**
+     * Conditions based on which the action set execution will be evaluated.
+     * 
+     */
     private final @Nullable List<ApplicationGatewayRewriteRuleConditionResponse> conditions;
+    /**
+     * Name of the rewrite rule that is unique within an Application Gateway.
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * Rule Sequence of the rewrite rule that determines the order of execution of a particular rule in a RewriteRuleSet.
+     * 
+     */
     private final @Nullable Integer ruleSequence;
 
     @OutputCustomType.Constructor({"actionSet","conditions","name","ruleSequence"})
@@ -32,15 +48,31 @@ public final class ApplicationGatewayRewriteRuleResponse {
         this.ruleSequence = ruleSequence;
     }
 
+    /**
+     * Set of actions to be done as part of the rewrite Rule.
+     * 
+     */
     public Optional<ApplicationGatewayRewriteRuleActionSetResponse> getActionSet() {
         return Optional.ofNullable(this.actionSet);
     }
+    /**
+     * Conditions based on which the action set execution will be evaluated.
+     * 
+     */
     public List<ApplicationGatewayRewriteRuleConditionResponse> getConditions() {
         return this.conditions == null ? List.of() : this.conditions;
     }
+    /**
+     * Name of the rewrite rule that is unique within an Application Gateway.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * Rule Sequence of the rewrite rule that determines the order of execution of a particular rule in a RewriteRuleSet.
+     * 
+     */
     public Optional<Integer> getRuleSequence() {
         return Optional.ofNullable(this.ruleSequence);
     }

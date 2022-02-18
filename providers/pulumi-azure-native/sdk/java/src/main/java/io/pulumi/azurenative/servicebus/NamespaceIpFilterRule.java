@@ -14,39 +14,100 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Single item in a List or Get IpFilterRules operation
+ * API Version: 2018-01-01-preview.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:servicebus:NamespaceIpFilterRule sdk-IPFilterRules-7337 /subscriptions/Subscription/resourceGroups/ResourceGroup/providers/Microsoft.ServiceBus/namespaces/sdk-Namespace-5232/ipfilterrules/sdk-IPFilterRules-7337 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:servicebus:NamespaceIpFilterRule")
 public class NamespaceIpFilterRule extends io.pulumi.resources.CustomResource {
+    /**
+     * The IP Filter Action
+     * 
+     */
     @OutputExport(name="action", type=String.class, parameters={})
     private Output</* @Nullable */ String> action;
 
+    /**
+     * @return The IP Filter Action
+     * 
+     */
     public Output</* @Nullable */ String> getAction() {
         return this.action;
     }
+    /**
+     * IP Filter name
+     * 
+     */
     @OutputExport(name="filterName", type=String.class, parameters={})
     private Output</* @Nullable */ String> filterName;
 
+    /**
+     * @return IP Filter name
+     * 
+     */
     public Output</* @Nullable */ String> getFilterName() {
         return this.filterName;
     }
+    /**
+     * IP Mask
+     * 
+     */
     @OutputExport(name="ipMask", type=String.class, parameters={})
     private Output</* @Nullable */ String> ipMask;
 
+    /**
+     * @return IP Mask
+     * 
+     */
     public Output</* @Nullable */ String> getIpMask() {
         return this.ipMask;
     }
+    /**
+     * Resource name
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Resource type
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public NamespaceIpFilterRule(String name, NamespaceIpFilterRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:servicebus:NamespaceIpFilterRule", name, args == null ? NamespaceIpFilterRuleArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -65,6 +126,14 @@ public class NamespaceIpFilterRule extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static NamespaceIpFilterRule get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new NamespaceIpFilterRule(name, id, options);
     }

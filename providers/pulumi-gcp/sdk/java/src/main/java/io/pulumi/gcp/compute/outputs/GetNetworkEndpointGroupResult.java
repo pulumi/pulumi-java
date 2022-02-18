@@ -12,15 +12,43 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetNetworkEndpointGroupResult {
+    /**
+     * The NEG default port.
+     * 
+     */
     private final Integer defaultPort;
+    /**
+     * The NEG description.
+     * 
+     */
     private final String description;
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
     private final @Nullable String name;
+    /**
+     * The network to which all network endpoints in the NEG belong.
+     * 
+     */
     private final String network;
+    /**
+     * Type of network endpoints in this network endpoint group.
+     * 
+     */
     private final String networkEndpointType;
     private final @Nullable String project;
     private final @Nullable String selfLink;
+    /**
+     * Number of network endpoints in the network endpoint group.
+     * 
+     */
     private final Integer size;
+    /**
+     * subnetwork to which all network endpoints in the NEG belong.
+     * 
+     */
     private final String subnetwork;
     private final @Nullable String zone;
 
@@ -50,21 +78,41 @@ public final class GetNetworkEndpointGroupResult {
         this.zone = zone;
     }
 
+    /**
+     * The NEG default port.
+     * 
+     */
     public Integer getDefaultPort() {
         return this.defaultPort;
     }
+    /**
+     * The NEG description.
+     * 
+     */
     public String getDescription() {
         return this.description;
     }
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * The network to which all network endpoints in the NEG belong.
+     * 
+     */
     public String getNetwork() {
         return this.network;
     }
+    /**
+     * Type of network endpoints in this network endpoint group.
+     * 
+     */
     public String getNetworkEndpointType() {
         return this.networkEndpointType;
     }
@@ -74,9 +122,17 @@ public final class GetNetworkEndpointGroupResult {
     public Optional<String> getSelfLink() {
         return Optional.ofNullable(this.selfLink);
     }
+    /**
+     * Number of network endpoints in the network endpoint group.
+     * 
+     */
     public Integer getSize() {
         return this.size;
     }
+    /**
+     * subnetwork to which all network endpoints in the NEG belong.
+     * 
+     */
     public String getSubnetwork() {
         return this.subnetwork;
     }

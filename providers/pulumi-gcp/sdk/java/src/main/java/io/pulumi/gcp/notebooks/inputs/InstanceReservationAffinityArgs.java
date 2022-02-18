@@ -15,6 +15,11 @@ public final class InstanceReservationAffinityArgs extends io.pulumi.resources.R
 
     public static final InstanceReservationAffinityArgs Empty = new InstanceReservationAffinityArgs();
 
+    /**
+     * The type of Compute Reservation.
+     * Possible values are `NO_RESERVATION`, `ANY_RESERVATION`, and `SPECIFIC_RESERVATION`.
+     * 
+     */
     @InputImport(name="consumeReservationType", required=true)
     private final Input<String> consumeReservationType;
 
@@ -22,6 +27,10 @@ public final class InstanceReservationAffinityArgs extends io.pulumi.resources.R
         return this.consumeReservationType;
     }
 
+    /**
+     * Corresponds to the label key of reservation resource.
+     * 
+     */
     @InputImport(name="key")
     private final @Nullable Input<String> key;
 
@@ -29,6 +38,10 @@ public final class InstanceReservationAffinityArgs extends io.pulumi.resources.R
         return this.key == null ? Input.empty() : this.key;
     }
 
+    /**
+     * Corresponds to the label values of reservation resource.
+     * 
+     */
     @InputImport(name="values")
     private final @Nullable Input<List<String>> values;
 

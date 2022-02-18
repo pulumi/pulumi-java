@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListTenantAccessSecrets {
+/**
+ * Tenant access information contract of the API Management service.
+ * API Version: 2020-12-01.
+ * 
+ *
+ * Tenant access information contract of the API Management service.
+ * 
+ */
     public static CompletableFuture<ListTenantAccessSecretsResult> invokeAsync(ListTenantAccessSecretsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:listTenantAccessSecrets", TypeShape.of(ListTenantAccessSecretsResult.class), args == null ? ListTenantAccessSecretsArgs.Empty : args, Utilities.withVersion(options));
     }

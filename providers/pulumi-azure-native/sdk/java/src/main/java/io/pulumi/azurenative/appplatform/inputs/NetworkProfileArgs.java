@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Service network profile payload
+ * 
+ */
 public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NetworkProfileArgs Empty = new NetworkProfileArgs();
 
+    /**
+     * Name of the resource group containing network resources of Azure Spring Cloud Apps
+     * 
+     */
     @InputImport(name="appNetworkResourceGroup")
     private final @Nullable Input<String> appNetworkResourceGroup;
 
@@ -21,6 +29,10 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.appNetworkResourceGroup == null ? Input.empty() : this.appNetworkResourceGroup;
     }
 
+    /**
+     * Fully qualified resource Id of the subnet to host Azure Spring Cloud Apps
+     * 
+     */
     @InputImport(name="appSubnetId")
     private final @Nullable Input<String> appSubnetId;
 
@@ -28,6 +40,10 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.appSubnetId == null ? Input.empty() : this.appSubnetId;
     }
 
+    /**
+     * Azure Spring Cloud service reserved CIDR
+     * 
+     */
     @InputImport(name="serviceCidr")
     private final @Nullable Input<String> serviceCidr;
 
@@ -35,6 +51,10 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceCidr == null ? Input.empty() : this.serviceCidr;
     }
 
+    /**
+     * Name of the resource group containing network resources of Azure Spring Cloud Service Runtime
+     * 
+     */
     @InputImport(name="serviceRuntimeNetworkResourceGroup")
     private final @Nullable Input<String> serviceRuntimeNetworkResourceGroup;
 
@@ -42,6 +62,10 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceRuntimeNetworkResourceGroup == null ? Input.empty() : this.serviceRuntimeNetworkResourceGroup;
     }
 
+    /**
+     * Fully qualified resource Id of the subnet to host Azure Spring Cloud Service Runtime
+     * 
+     */
     @InputImport(name="serviceRuntimeSubnetId")
     private final @Nullable Input<String> serviceRuntimeSubnetId;
 

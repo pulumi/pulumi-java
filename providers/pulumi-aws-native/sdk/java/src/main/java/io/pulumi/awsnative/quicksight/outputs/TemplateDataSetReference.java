@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TemplateDataSetReference {
+    /**
+     * <p>Dataset Amazon Resource Name (ARN).</p>
+     * 
+     */
     private final String dataSetArn;
+    /**
+     * <p>Dataset placeholder.</p>
+     * 
+     */
     private final String dataSetPlaceholder;
 
     @OutputCustomType.Constructor({"dataSetArn","dataSetPlaceholder"})
@@ -20,9 +28,17 @@ public final class TemplateDataSetReference {
         this.dataSetPlaceholder = Objects.requireNonNull(dataSetPlaceholder);
     }
 
+    /**
+     * <p>Dataset Amazon Resource Name (ARN).</p>
+     * 
+     */
     public String getDataSetArn() {
         return this.dataSetArn;
     }
+    /**
+     * <p>Dataset placeholder.</p>
+     * 
+     */
     public String getDataSetPlaceholder() {
         return this.dataSetPlaceholder;
     }

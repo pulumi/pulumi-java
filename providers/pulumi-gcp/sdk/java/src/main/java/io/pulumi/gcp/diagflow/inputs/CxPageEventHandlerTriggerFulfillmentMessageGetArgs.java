@@ -14,6 +14,10 @@ public final class CxPageEventHandlerTriggerFulfillmentMessageGetArgs extends io
 
     public static final CxPageEventHandlerTriggerFulfillmentMessageGetArgs Empty = new CxPageEventHandlerTriggerFulfillmentMessageGetArgs();
 
+    /**
+     * A collection of text responses.
+     * 
+     */
     @InputImport(name="text")
     private final @Nullable Input<CxPageEventHandlerTriggerFulfillmentMessageTextGetArgs> text;
 

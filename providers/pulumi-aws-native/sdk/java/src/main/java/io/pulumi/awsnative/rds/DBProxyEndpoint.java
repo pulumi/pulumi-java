@@ -16,69 +16,159 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Resource schema for AWS::RDS::DBProxyEndpoint.
+ * 
+ */
 @ResourceType(type="aws-native:rds:DBProxyEndpoint")
 public class DBProxyEndpoint extends io.pulumi.resources.CustomResource {
+    /**
+     * The Amazon Resource Name (ARN) for the DB proxy endpoint.
+     * 
+     */
     @OutputExport(name="dBProxyEndpointArn", type=String.class, parameters={})
     private Output<String> dBProxyEndpointArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) for the DB proxy endpoint.
+     * 
+     */
     public Output<String> getDBProxyEndpointArn() {
         return this.dBProxyEndpointArn;
     }
+    /**
+     * The identifier for the DB proxy endpoint. This name must be unique for all DB proxy endpoints owned by your AWS account in the specified AWS Region.
+     * 
+     */
     @OutputExport(name="dBProxyEndpointName", type=String.class, parameters={})
     private Output<String> dBProxyEndpointName;
 
+    /**
+     * @return The identifier for the DB proxy endpoint. This name must be unique for all DB proxy endpoints owned by your AWS account in the specified AWS Region.
+     * 
+     */
     public Output<String> getDBProxyEndpointName() {
         return this.dBProxyEndpointName;
     }
+    /**
+     * The identifier for the proxy. This name must be unique for all proxies owned by your AWS account in the specified AWS Region.
+     * 
+     */
     @OutputExport(name="dBProxyName", type=String.class, parameters={})
     private Output<String> dBProxyName;
 
+    /**
+     * @return The identifier for the proxy. This name must be unique for all proxies owned by your AWS account in the specified AWS Region.
+     * 
+     */
     public Output<String> getDBProxyName() {
         return this.dBProxyName;
     }
+    /**
+     * The endpoint that you can use to connect to the DB proxy. You include the endpoint value in the connection string for a database client application.
+     * 
+     */
     @OutputExport(name="endpoint", type=String.class, parameters={})
     private Output<String> endpoint;
 
+    /**
+     * @return The endpoint that you can use to connect to the DB proxy. You include the endpoint value in the connection string for a database client application.
+     * 
+     */
     public Output<String> getEndpoint() {
         return this.endpoint;
     }
+    /**
+     * A value that indicates whether this endpoint is the default endpoint for the associated DB proxy. Default DB proxy endpoints always have read/write capability. Other endpoints that you associate with the DB proxy can be either read/write or read-only.
+     * 
+     */
     @OutputExport(name="isDefault", type=Boolean.class, parameters={})
     private Output<Boolean> isDefault;
 
+    /**
+     * @return A value that indicates whether this endpoint is the default endpoint for the associated DB proxy. Default DB proxy endpoints always have read/write capability. Other endpoints that you associate with the DB proxy can be either read/write or read-only.
+     * 
+     */
     public Output<Boolean> getIsDefault() {
         return this.isDefault;
     }
+    /**
+     * An optional set of key-value pairs to associate arbitrary data of your choosing with the DB proxy endpoint.
+     * 
+     */
     @OutputExport(name="tags", type=List.class, parameters={DBProxyEndpointTagFormat.class})
     private Output</* @Nullable */ List<DBProxyEndpointTagFormat>> tags;
 
+    /**
+     * @return An optional set of key-value pairs to associate arbitrary data of your choosing with the DB proxy endpoint.
+     * 
+     */
     public Output</* @Nullable */ List<DBProxyEndpointTagFormat>> getTags() {
         return this.tags;
     }
+    /**
+     * A value that indicates whether the DB proxy endpoint can be used for read/write or read-only operations.
+     * 
+     */
     @OutputExport(name="targetRole", type=DBProxyEndpointTargetRole.class, parameters={})
     private Output</* @Nullable */ DBProxyEndpointTargetRole> targetRole;
 
+    /**
+     * @return A value that indicates whether the DB proxy endpoint can be used for read/write or read-only operations.
+     * 
+     */
     public Output</* @Nullable */ DBProxyEndpointTargetRole> getTargetRole() {
         return this.targetRole;
     }
+    /**
+     * VPC ID to associate with the new DB proxy endpoint.
+     * 
+     */
     @OutputExport(name="vpcId", type=String.class, parameters={})
     private Output<String> vpcId;
 
+    /**
+     * @return VPC ID to associate with the new DB proxy endpoint.
+     * 
+     */
     public Output<String> getVpcId() {
         return this.vpcId;
     }
+    /**
+     * VPC security group IDs to associate with the new DB proxy endpoint.
+     * 
+     */
     @OutputExport(name="vpcSecurityGroupIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> vpcSecurityGroupIds;
 
+    /**
+     * @return VPC security group IDs to associate with the new DB proxy endpoint.
+     * 
+     */
     public Output</* @Nullable */ List<String>> getVpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds;
     }
+    /**
+     * VPC subnet IDs to associate with the new DB proxy endpoint.
+     * 
+     */
     @OutputExport(name="vpcSubnetIds", type=List.class, parameters={String.class})
     private Output<List<String>> vpcSubnetIds;
 
+    /**
+     * @return VPC subnet IDs to associate with the new DB proxy endpoint.
+     * 
+     */
     public Output<List<String>> getVpcSubnetIds() {
         return this.vpcSubnetIds;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public DBProxyEndpoint(String name, DBProxyEndpointArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:rds:DBProxyEndpoint", name, args == null ? DBProxyEndpointArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -94,6 +184,14 @@ public class DBProxyEndpoint extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static DBProxyEndpoint get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DBProxyEndpoint(name, id, options);
     }

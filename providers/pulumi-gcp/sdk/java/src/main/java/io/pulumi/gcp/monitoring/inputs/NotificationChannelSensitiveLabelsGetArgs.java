@@ -14,6 +14,11 @@ public final class NotificationChannelSensitiveLabelsGetArgs extends io.pulumi.r
 
     public static final NotificationChannelSensitiveLabelsGetArgs Empty = new NotificationChannelSensitiveLabelsGetArgs();
 
+    /**
+     * An authorization token for a notification channel. Channel types that support this field include: slack
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     @InputImport(name="authToken")
     private final @Nullable Input<String> authToken;
 
@@ -21,6 +26,11 @@ public final class NotificationChannelSensitiveLabelsGetArgs extends io.pulumi.r
         return this.authToken == null ? Input.empty() : this.authToken;
     }
 
+    /**
+     * An password for a notification channel. Channel types that support this field include: webhook_basicauth
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     @InputImport(name="password")
     private final @Nullable Input<String> password;
 
@@ -28,6 +38,11 @@ public final class NotificationChannelSensitiveLabelsGetArgs extends io.pulumi.r
         return this.password == null ? Input.empty() : this.password;
     }
 
+    /**
+     * An servicekey token for a notification channel. Channel types that support this field include: pagerduty
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     @InputImport(name="serviceKey")
     private final @Nullable Input<String> serviceKey;
 

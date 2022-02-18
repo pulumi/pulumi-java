@@ -16,6 +16,10 @@ public final class DatasetAccessEntryArgs extends io.pulumi.resources.ResourceAr
 
     public static final DatasetAccessEntryArgs Empty = new DatasetAccessEntryArgs();
 
+    /**
+     * [Required] The dataset this entry applies to.
+     * 
+     */
     @InputImport(name="dataset")
     private final @Nullable Input<DatasetReferenceArgs> dataset;
 

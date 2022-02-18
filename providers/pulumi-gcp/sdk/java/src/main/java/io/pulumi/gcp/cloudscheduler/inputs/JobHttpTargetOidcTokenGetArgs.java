@@ -14,6 +14,11 @@ public final class JobHttpTargetOidcTokenGetArgs extends io.pulumi.resources.Res
 
     public static final JobHttpTargetOidcTokenGetArgs Empty = new JobHttpTargetOidcTokenGetArgs();
 
+    /**
+     * Audience to be used when generating OIDC token. If not specified,
+     * the URI specified in target will be used.
+     * 
+     */
     @InputImport(name="audience")
     private final @Nullable Input<String> audience;
 
@@ -21,6 +26,11 @@ public final class JobHttpTargetOidcTokenGetArgs extends io.pulumi.resources.Res
         return this.audience == null ? Input.empty() : this.audience;
     }
 
+    /**
+     * Service account email to be used for generating OAuth token.
+     * The service account must be within the same project as the job.
+     * 
+     */
     @InputImport(name="serviceAccountEmail", required=true)
     private final Input<String> serviceAccountEmail;
 

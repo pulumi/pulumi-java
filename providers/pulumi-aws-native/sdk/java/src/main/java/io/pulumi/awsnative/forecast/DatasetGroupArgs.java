@@ -17,6 +17,10 @@ public final class DatasetGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DatasetGroupArgs Empty = new DatasetGroupArgs();
 
+    /**
+     * An array of Amazon Resource Names (ARNs) of the datasets that you want to include in the dataset group.
+     * 
+     */
     @InputImport(name="datasetArns")
     private final @Nullable Input<List<String>> datasetArns;
 
@@ -24,6 +28,10 @@ public final class DatasetGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.datasetArns == null ? Input.empty() : this.datasetArns;
     }
 
+    /**
+     * A name for the dataset group.
+     * 
+     */
     @InputImport(name="datasetGroupName")
     private final @Nullable Input<String> datasetGroupName;
 
@@ -31,6 +39,10 @@ public final class DatasetGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.datasetGroupName == null ? Input.empty() : this.datasetGroupName;
     }
 
+    /**
+     * The domain associated with the dataset group. When you add a dataset to a dataset group, this value and the value specified for the Domain parameter of the CreateDataset operation must match.
+     * 
+     */
     @InputImport(name="domain", required=true)
     private final Input<DatasetGroupDomain> domain;
 
@@ -38,6 +50,10 @@ public final class DatasetGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.domain;
     }
 
+    /**
+     * The tags of Application Insights application.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<DatasetGroupTagArgs>> tags;
 

@@ -15,6 +15,11 @@ public final class ClusterMasterAuthorizedNetworksConfigArgs extends io.pulumi.r
 
     public static final ClusterMasterAuthorizedNetworksConfigArgs Empty = new ClusterMasterAuthorizedNetworksConfigArgs();
 
+    /**
+     * External networks that can access the
+     * Kubernetes cluster master through HTTPS.
+     * 
+     */
     @InputImport(name="cidrBlocks")
     private final @Nullable Input<List<ClusterMasterAuthorizedNetworksConfigCidrBlockArgs>> cidrBlocks;
 

@@ -9,6 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Structure that contains X.509 EdiPartyName information.
+ * 
+ */
 public final class CertificateEdiPartyNameArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CertificateEdiPartyNameArgs Empty = new CertificateEdiPartyNameArgs();

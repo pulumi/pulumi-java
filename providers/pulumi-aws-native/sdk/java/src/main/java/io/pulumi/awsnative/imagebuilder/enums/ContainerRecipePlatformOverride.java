@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Specifies the operating system platform when you use a custom source image.
+     * 
+     */
     @EnumType
     public enum ContainerRecipePlatformOverride {
         Windows("Windows"),

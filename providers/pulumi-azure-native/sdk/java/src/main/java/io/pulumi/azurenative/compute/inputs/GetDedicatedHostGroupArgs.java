@@ -14,6 +14,10 @@ public final class GetDedicatedHostGroupArgs extends io.pulumi.resources.InvokeA
 
     public static final GetDedicatedHostGroupArgs Empty = new GetDedicatedHostGroupArgs();
 
+    /**
+     * The expand expression to apply on the operation. The response shows the list of instance view of the dedicated hosts under the dedicated host group.
+     * 
+     */
     @InputImport(name="expand")
     private final @Nullable String expand;
 
@@ -21,6 +25,10 @@ public final class GetDedicatedHostGroupArgs extends io.pulumi.resources.InvokeA
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
+    /**
+     * The name of the dedicated host group.
+     * 
+     */
     @InputImport(name="hostGroupName", required=true)
     private final String hostGroupName;
 
@@ -28,6 +36,10 @@ public final class GetDedicatedHostGroupArgs extends io.pulumi.resources.InvokeA
         return this.hostGroupName;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

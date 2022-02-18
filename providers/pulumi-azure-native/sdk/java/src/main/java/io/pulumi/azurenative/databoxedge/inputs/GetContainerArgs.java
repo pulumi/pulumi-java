@@ -12,6 +12,10 @@ public final class GetContainerArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetContainerArgs Empty = new GetContainerArgs();
 
+    /**
+     * The container Name
+     * 
+     */
     @InputImport(name="containerName", required=true)
     private final String containerName;
 
@@ -19,6 +23,10 @@ public final class GetContainerArgs extends io.pulumi.resources.InvokeArgs {
         return this.containerName;
     }
 
+    /**
+     * The device name.
+     * 
+     */
     @InputImport(name="deviceName", required=true)
     private final String deviceName;
 
@@ -26,6 +34,10 @@ public final class GetContainerArgs extends io.pulumi.resources.InvokeArgs {
         return this.deviceName;
     }
 
+    /**
+     * The resource group name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -33,6 +45,10 @@ public final class GetContainerArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The Storage Account Name
+     * 
+     */
     @InputImport(name="storageAccountName", required=true)
     private final String storageAccountName;
 

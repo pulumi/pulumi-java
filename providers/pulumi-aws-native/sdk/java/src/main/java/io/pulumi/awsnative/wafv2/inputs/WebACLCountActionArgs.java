@@ -10,6 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Allow traffic towards application.
+ * 
+ */
 public final class WebACLCountActionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WebACLCountActionArgs Empty = new WebACLCountActionArgs();

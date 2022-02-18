@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The pattern to look for in the JSON body.
+ * 
+ */
 public final class WebACLJsonMatchPatternArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WebACLJsonMatchPatternArgs Empty = new WebACLJsonMatchPatternArgs();
 
+    /**
+     * Inspect all parts of the web request's JSON body.
+     * 
+     */
     @InputImport(name="all")
     private final @Nullable Input<Object> all;
 

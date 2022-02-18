@@ -13,8 +13,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DistributionConfigurationDistributionContainerDistributionConfigurationProperties {
+    /**
+     * Tags that are attached to the container distribution configuration.
+     * 
+     */
     private final @Nullable List<String> containerTags;
+    /**
+     * The description of the container distribution configuration.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * The destination repository for the container distribution configuration.
+     * 
+     */
     private final @Nullable DistributionConfigurationTargetContainerRepository targetRepository;
 
     @OutputCustomType.Constructor({"containerTags","description","targetRepository"})
@@ -27,12 +39,24 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
         this.targetRepository = targetRepository;
     }
 
+    /**
+     * Tags that are attached to the container distribution configuration.
+     * 
+     */
     public List<String> getContainerTags() {
         return this.containerTags == null ? List.of() : this.containerTags;
     }
+    /**
+     * The description of the container distribution configuration.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * The destination repository for the container distribution configuration.
+     * 
+     */
     public Optional<DistributionConfigurationTargetContainerRepository> getTargetRepository() {
         return Optional.ofNullable(this.targetRepository);
     }

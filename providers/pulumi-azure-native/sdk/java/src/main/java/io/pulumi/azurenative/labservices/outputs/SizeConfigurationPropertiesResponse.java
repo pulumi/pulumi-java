@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SizeConfigurationPropertiesResponse {
+    /**
+     * Represents a list of size categories supported by this Lab Account (Small, Medium, Large)
+     * 
+     */
     private final @Nullable List<EnvironmentSizeResponse> environmentSizes;
 
     @OutputCustomType.Constructor({"environmentSizes"})
@@ -18,6 +22,10 @@ public final class SizeConfigurationPropertiesResponse {
         this.environmentSizes = environmentSizes;
     }
 
+    /**
+     * Represents a list of size categories supported by this Lab Account (Small, Medium, Large)
+     * 
+     */
     public List<EnvironmentSizeResponse> getEnvironmentSizes() {
         return this.environmentSizes == null ? List.of() : this.environmentSizes;
     }

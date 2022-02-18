@@ -13,6 +13,11 @@ public final class ClusterAddonsConfigHorizontalPodAutoscalingArgs extends io.pu
 
     public static final ClusterAddonsConfigHorizontalPodAutoscalingArgs Empty = new ClusterAddonsConfigHorizontalPodAutoscalingArgs();
 
+    /**
+     * The status of the Istio addon, which makes it easy to set up Istio for services in a
+     * cluster. It is disabled by default. Set `disabled = false` to enable.
+     * 
+     */
     @InputImport(name="disabled", required=true)
     private final Input<Boolean> disabled;
 

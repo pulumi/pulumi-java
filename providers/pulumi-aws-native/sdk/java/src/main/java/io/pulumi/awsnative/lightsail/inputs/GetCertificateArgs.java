@@ -12,6 +12,10 @@ public final class GetCertificateArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetCertificateArgs Empty = new GetCertificateArgs();
 
+    /**
+     * The name for the certificate.
+     * 
+     */
     @InputImport(name="certificateName", required=true)
     private final String certificateName;
 

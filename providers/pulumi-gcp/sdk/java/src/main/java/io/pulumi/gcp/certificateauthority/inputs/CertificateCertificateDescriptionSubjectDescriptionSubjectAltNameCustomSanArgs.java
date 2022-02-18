@@ -17,6 +17,11 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
 
     public static final CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanArgs Empty = new CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanArgs();
 
+    /**
+     * Indicates whether or not this extension is critical (i.e., if the client does not know how to
+     * handle this extension, the client should consider this to be an error).
+     * 
+     */
     @InputImport(name="critical")
     private final @Nullable Input<Boolean> critical;
 
@@ -31,6 +36,10 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
         return this.obectIds == null ? Input.empty() : this.obectIds;
     }
 
+    /**
+     * The value of this X.509 extension. A base64-encoded string.
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

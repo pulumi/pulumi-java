@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetGatewayRouteTableAssociationResult {
+    /**
+     * The route table association ID.
+     * 
+     */
     private final @Nullable String associationId;
+    /**
+     * The ID of the route table.
+     * 
+     */
     private final @Nullable String routeTableId;
 
     @OutputCustomType.Constructor({"associationId","routeTableId"})
@@ -22,9 +30,17 @@ public final class GetGatewayRouteTableAssociationResult {
         this.routeTableId = routeTableId;
     }
 
+    /**
+     * The route table association ID.
+     * 
+     */
     public Optional<String> getAssociationId() {
         return Optional.ofNullable(this.associationId);
     }
+    /**
+     * The ID of the route table.
+     * 
+     */
     public Optional<String> getRouteTableId() {
         return Optional.ofNullable(this.routeTableId);
     }

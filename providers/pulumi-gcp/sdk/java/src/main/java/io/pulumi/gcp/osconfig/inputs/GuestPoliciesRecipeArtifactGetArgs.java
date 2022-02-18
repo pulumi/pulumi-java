@@ -17,6 +17,12 @@ public final class GuestPoliciesRecipeArtifactGetArgs extends io.pulumi.resource
 
     public static final GuestPoliciesRecipeArtifactGetArgs Empty = new GuestPoliciesRecipeArtifactGetArgs();
 
+    /**
+     * Defaults to false. When false, recipes are subject to validations based on the artifact type:
+     * Remote: A checksum must be specified, and only protocols with transport-layer security are permitted.
+     * GCS: An object generation number must be specified.
+     * 
+     */
     @InputImport(name="allowInsecure")
     private final @Nullable Input<Boolean> allowInsecure;
 
@@ -24,6 +30,11 @@ public final class GuestPoliciesRecipeArtifactGetArgs extends io.pulumi.resource
         return this.allowInsecure == null ? Input.empty() : this.allowInsecure;
     }
 
+    /**
+     * A Google Cloud Storage artifact.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="gcs")
     private final @Nullable Input<GuestPoliciesRecipeArtifactGcsGetArgs> gcs;
 
@@ -31,6 +42,11 @@ public final class GuestPoliciesRecipeArtifactGetArgs extends io.pulumi.resource
         return this.gcs == null ? Input.empty() : this.gcs;
     }
 
+    /**
+     * Id of the artifact, which the installation and update steps of this recipe can reference.
+     * Artifacts in a recipe cannot have the same id.
+     * 
+     */
     @InputImport(name="id", required=true)
     private final Input<String> id;
 
@@ -38,6 +54,11 @@ public final class GuestPoliciesRecipeArtifactGetArgs extends io.pulumi.resource
         return this.id;
     }
 
+    /**
+     * A generic remote artifact.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="remote")
     private final @Nullable Input<GuestPoliciesRecipeArtifactRemoteGetArgs> remote;
 

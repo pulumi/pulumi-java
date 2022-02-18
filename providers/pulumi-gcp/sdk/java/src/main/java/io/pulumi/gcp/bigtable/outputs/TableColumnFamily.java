@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TableColumnFamily {
+    /**
+     * The name of the column family.
+     * 
+     */
     private final String family;
 
     @OutputCustomType.Constructor({"family"})
@@ -16,6 +20,10 @@ public final class TableColumnFamily {
         this.family = Objects.requireNonNull(family);
     }
 
+    /**
+     * The name of the column family.
+     * 
+     */
     public String getFamily() {
         return this.family;
     }

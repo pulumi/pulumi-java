@@ -17,93 +17,226 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * The relationship resource format.
+ * API Version: 2017-04-26.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:customerinsights:Relationship sdkTestHub/testProfile2326994 /subscriptions/c909e979-ef71-4def-a970-bc7c154db8c5/resourceGroups/TestHubRG/providers/Microsoft.CustomerInsights/hubs/sdkTestHub/relationships/SomeRelationship 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:customerinsights:Relationship")
 public class Relationship extends io.pulumi.resources.CustomResource {
+    /**
+     * The Relationship Cardinality.
+     * 
+     */
     @OutputExport(name="cardinality", type=String.class, parameters={})
     private Output</* @Nullable */ String> cardinality;
 
+    /**
+     * @return The Relationship Cardinality.
+     * 
+     */
     public Output</* @Nullable */ String> getCardinality() {
         return this.cardinality;
     }
+    /**
+     * Localized descriptions for the Relationship.
+     * 
+     */
     @OutputExport(name="description", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> description;
 
+    /**
+     * @return Localized descriptions for the Relationship.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getDescription() {
         return this.description;
     }
+    /**
+     * Localized display name for the Relationship.
+     * 
+     */
     @OutputExport(name="displayName", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> displayName;
 
+    /**
+     * @return Localized display name for the Relationship.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getDisplayName() {
         return this.displayName;
     }
+    /**
+     * The expiry date time in UTC.
+     * 
+     */
     @OutputExport(name="expiryDateTimeUtc", type=String.class, parameters={})
     private Output</* @Nullable */ String> expiryDateTimeUtc;
 
+    /**
+     * @return The expiry date time in UTC.
+     * 
+     */
     public Output</* @Nullable */ String> getExpiryDateTimeUtc() {
         return this.expiryDateTimeUtc;
     }
+    /**
+     * The properties of the Relationship.
+     * 
+     */
     @OutputExport(name="fields", type=List.class, parameters={PropertyDefinitionResponse.class})
     private Output</* @Nullable */ List<PropertyDefinitionResponse>> fields;
 
+    /**
+     * @return The properties of the Relationship.
+     * 
+     */
     public Output</* @Nullable */ List<PropertyDefinitionResponse>> getFields() {
         return this.fields;
     }
+    /**
+     * Optional property to be used to map fields in profile to their strong ids in related profile.
+     * 
+     */
     @OutputExport(name="lookupMappings", type=List.class, parameters={RelationshipTypeMappingResponse.class})
     private Output</* @Nullable */ List<RelationshipTypeMappingResponse>> lookupMappings;
 
+    /**
+     * @return Optional property to be used to map fields in profile to their strong ids in related profile.
+     * 
+     */
     public Output</* @Nullable */ List<RelationshipTypeMappingResponse>> getLookupMappings() {
         return this.lookupMappings;
     }
+    /**
+     * Resource name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Profile type.
+     * 
+     */
     @OutputExport(name="profileType", type=String.class, parameters={})
     private Output<String> profileType;
 
+    /**
+     * @return Profile type.
+     * 
+     */
     public Output<String> getProfileType() {
         return this.profileType;
     }
+    /**
+     * Provisioning state.
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return Provisioning state.
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Related profile being referenced.
+     * 
+     */
     @OutputExport(name="relatedProfileType", type=String.class, parameters={})
     private Output<String> relatedProfileType;
 
+    /**
+     * @return Related profile being referenced.
+     * 
+     */
     public Output<String> getRelatedProfileType() {
         return this.relatedProfileType;
     }
+    /**
+     * The relationship guid id.
+     * 
+     */
     @OutputExport(name="relationshipGuidId", type=String.class, parameters={})
     private Output<String> relationshipGuidId;
 
+    /**
+     * @return The relationship guid id.
+     * 
+     */
     public Output<String> getRelationshipGuidId() {
         return this.relationshipGuidId;
     }
+    /**
+     * The Relationship name.
+     * 
+     */
     @OutputExport(name="relationshipName", type=String.class, parameters={})
     private Output<String> relationshipName;
 
+    /**
+     * @return The Relationship name.
+     * 
+     */
     public Output<String> getRelationshipName() {
         return this.relationshipName;
     }
+    /**
+     * The hub name.
+     * 
+     */
     @OutputExport(name="tenantId", type=String.class, parameters={})
     private Output<String> tenantId;
 
+    /**
+     * @return The hub name.
+     * 
+     */
     public Output<String> getTenantId() {
         return this.tenantId;
     }
+    /**
+     * Resource type.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Relationship(String name, RelationshipArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:customerinsights:Relationship", name, args == null ? RelationshipArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -123,6 +256,14 @@ public class Relationship extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Relationship get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Relationship(name, id, options);
     }

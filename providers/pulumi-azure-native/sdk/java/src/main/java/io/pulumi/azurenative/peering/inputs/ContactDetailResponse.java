@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The contact detail class.
+ * 
+ */
 public final class ContactDetailResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ContactDetailResponse Empty = new ContactDetailResponse();
 
+    /**
+     * The e-mail address of the contact.
+     * 
+     */
     @InputImport(name="email")
     private final @Nullable String email;
 
@@ -21,6 +29,10 @@ public final class ContactDetailResponse extends io.pulumi.resources.InvokeArgs 
         return this.email == null ? Optional.empty() : Optional.ofNullable(this.email);
     }
 
+    /**
+     * The phone number of the contact.
+     * 
+     */
     @InputImport(name="phone")
     private final @Nullable String phone;
 
@@ -28,6 +40,10 @@ public final class ContactDetailResponse extends io.pulumi.resources.InvokeArgs 
         return this.phone == null ? Optional.empty() : Optional.ofNullable(this.phone);
     }
 
+    /**
+     * The role of the contact.
+     * 
+     */
     @InputImport(name="role")
     private final @Nullable String role;
 

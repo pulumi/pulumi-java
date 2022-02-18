@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The shipping address of the customer.
+ * 
+ */
 public final class AddressResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AddressResponse Empty = new AddressResponse();
 
+    /**
+     * The address line1.
+     * 
+     */
     @InputImport(name="addressLine1")
     private final @Nullable String addressLine1;
 
@@ -21,6 +29,10 @@ public final class AddressResponse extends io.pulumi.resources.InvokeArgs {
         return this.addressLine1 == null ? Optional.empty() : Optional.ofNullable(this.addressLine1);
     }
 
+    /**
+     * The address line2.
+     * 
+     */
     @InputImport(name="addressLine2")
     private final @Nullable String addressLine2;
 
@@ -28,6 +40,10 @@ public final class AddressResponse extends io.pulumi.resources.InvokeArgs {
         return this.addressLine2 == null ? Optional.empty() : Optional.ofNullable(this.addressLine2);
     }
 
+    /**
+     * The address line3.
+     * 
+     */
     @InputImport(name="addressLine3")
     private final @Nullable String addressLine3;
 
@@ -35,6 +51,10 @@ public final class AddressResponse extends io.pulumi.resources.InvokeArgs {
         return this.addressLine3 == null ? Optional.empty() : Optional.ofNullable(this.addressLine3);
     }
 
+    /**
+     * The city name.
+     * 
+     */
     @InputImport(name="city")
     private final @Nullable String city;
 
@@ -42,6 +62,10 @@ public final class AddressResponse extends io.pulumi.resources.InvokeArgs {
         return this.city == null ? Optional.empty() : Optional.ofNullable(this.city);
     }
 
+    /**
+     * The country name.
+     * 
+     */
     @InputImport(name="country", required=true)
     private final String country;
 
@@ -49,6 +73,10 @@ public final class AddressResponse extends io.pulumi.resources.InvokeArgs {
         return this.country;
     }
 
+    /**
+     * The postal code.
+     * 
+     */
     @InputImport(name="postalCode")
     private final @Nullable String postalCode;
 
@@ -56,6 +84,10 @@ public final class AddressResponse extends io.pulumi.resources.InvokeArgs {
         return this.postalCode == null ? Optional.empty() : Optional.ofNullable(this.postalCode);
     }
 
+    /**
+     * The state name.
+     * 
+     */
     @InputImport(name="state")
     private final @Nullable String state;
 

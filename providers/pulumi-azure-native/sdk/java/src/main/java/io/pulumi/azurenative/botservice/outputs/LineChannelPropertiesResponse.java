@@ -12,8 +12,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class LineChannelPropertiesResponse {
+    /**
+     * Callback Url to enter in line registration.
+     * 
+     */
     private final String callbackUrl;
+    /**
+     * Whether this channel is validated for the bot
+     * 
+     */
     private final Boolean isValidated;
+    /**
+     * The list of line channel registrations
+     * 
+     */
     private final List<LineRegistrationResponse> lineRegistrations;
 
     @OutputCustomType.Constructor({"callbackUrl","isValidated","lineRegistrations"})
@@ -26,12 +38,24 @@ public final class LineChannelPropertiesResponse {
         this.lineRegistrations = Objects.requireNonNull(lineRegistrations);
     }
 
+    /**
+     * Callback Url to enter in line registration.
+     * 
+     */
     public String getCallbackUrl() {
         return this.callbackUrl;
     }
+    /**
+     * Whether this channel is validated for the bot
+     * 
+     */
     public Boolean getIsValidated() {
         return this.isValidated;
     }
+    /**
+     * The list of line channel registrations
+     * 
+     */
     public List<LineRegistrationResponse> getLineRegistrations() {
         return this.lineRegistrations;
     }

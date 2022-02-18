@@ -13,6 +13,10 @@ public final class OrganizationPolicyRestorePolicyArgs extends io.pulumi.resourc
 
     public static final OrganizationPolicyRestorePolicyArgs Empty = new OrganizationPolicyRestorePolicyArgs();
 
+    /**
+     * May only be set to true. If set, then the default Policy is restored.
+     * 
+     */
     @InputImport(name="default", required=true)
     private final Input<Boolean> $default;
 

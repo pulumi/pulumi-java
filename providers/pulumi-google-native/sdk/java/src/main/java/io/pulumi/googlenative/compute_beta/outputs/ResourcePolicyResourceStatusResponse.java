@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ResourcePolicyResourceStatusResponse {
+    /**
+     * Specifies a set of output values reffering to the instance_schedule_policy system status. This field should have the same name as corresponding policy field.
+     * 
+     */
     private final ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse instanceSchedulePolicy;
 
     @OutputCustomType.Constructor({"instanceSchedulePolicy"})
@@ -16,6 +20,10 @@ public final class ResourcePolicyResourceStatusResponse {
         this.instanceSchedulePolicy = Objects.requireNonNull(instanceSchedulePolicy);
     }
 
+    /**
+     * Specifies a set of output values reffering to the instance_schedule_policy system status. This field should have the same name as corresponding policy field.
+     * 
+     */
     public ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse getInstanceSchedulePolicy() {
         return this.instanceSchedulePolicy;
     }

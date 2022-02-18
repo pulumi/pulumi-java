@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The live event endpoint.
+ * 
+ */
 public final class LiveEventEndpointResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LiveEventEndpointResponse Empty = new LiveEventEndpointResponse();
 
+    /**
+     * The endpoint protocol.
+     * 
+     */
     @InputImport(name="protocol")
     private final @Nullable String protocol;
 
@@ -21,6 +29,10 @@ public final class LiveEventEndpointResponse extends io.pulumi.resources.InvokeA
         return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
     }
 
+    /**
+     * The endpoint URL.
+     * 
+     */
     @InputImport(name="url")
     private final @Nullable String url;
 

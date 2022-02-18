@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ApplicationDeploymentPolicyResponse {
+    /**
+     * The managed application deployment mode.
+     * 
+     */
     private final String deploymentMode;
 
     @OutputCustomType.Constructor({"deploymentMode"})
@@ -16,6 +20,10 @@ public final class ApplicationDeploymentPolicyResponse {
         this.deploymentMode = Objects.requireNonNull(deploymentMode);
     }
 
+    /**
+     * The managed application deployment mode.
+     * 
+     */
     public String getDeploymentMode() {
         return this.deploymentMode;
     }

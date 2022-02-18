@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The file type of source file.
+     * 
+     */
     @EnumType
     public enum FileContentBufferFileType {
         Bin("BIN"),

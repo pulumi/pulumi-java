@@ -12,6 +12,10 @@ import java.util.Objects;
 public final class FutureReservationTimeWindowResponse {
     private final DurationResponse duration;
     private final String endTime;
+    /**
+     * Start time of the Future Reservation. The start_time is an RFC3339 string.
+     * 
+     */
     private final String startTime;
 
     @OutputCustomType.Constructor({"duration","endTime","startTime"})
@@ -30,6 +34,10 @@ public final class FutureReservationTimeWindowResponse {
     public String getEndTime() {
         return this.endTime;
     }
+    /**
+     * Start time of the Future Reservation. The start_time is an RFC3339 string.
+     * 
+     */
     public String getStartTime() {
         return this.startTime;
     }

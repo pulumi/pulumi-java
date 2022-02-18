@@ -14,10 +14,32 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AzureActiveDirectoryResponse {
+    /**
+     * <code>false</code> if the Azure Active Directory provider should not be enabled despite the set registration; otherwise, <code>true</code>.
+     * 
+     */
     private final @Nullable Boolean enabled;
+    /**
+     * Gets a value indicating whether the Azure AD configuration was auto-provisioned using 1st party tooling.
+     * This is an internal flag primarily intended to support the Azure Management Portal. Users should not
+     * read or write to this property.
+     * 
+     */
     private final @Nullable Boolean isAutoProvisioned;
+    /**
+     * The configuration settings of the Azure Active Directory login flow.
+     * 
+     */
     private final @Nullable AzureActiveDirectoryLoginResponse login;
+    /**
+     * The configuration settings of the Azure Active Directory app registration.
+     * 
+     */
     private final @Nullable AzureActiveDirectoryRegistrationResponse registration;
+    /**
+     * The configuration settings of the Azure Active Directory token validation flow.
+     * 
+     */
     private final @Nullable AzureActiveDirectoryValidationResponse validation;
 
     @OutputCustomType.Constructor({"enabled","isAutoProvisioned","login","registration","validation"})
@@ -34,18 +56,40 @@ public final class AzureActiveDirectoryResponse {
         this.validation = validation;
     }
 
+    /**
+     * <code>false</code> if the Azure Active Directory provider should not be enabled despite the set registration; otherwise, <code>true</code>.
+     * 
+     */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
+    /**
+     * Gets a value indicating whether the Azure AD configuration was auto-provisioned using 1st party tooling.
+     * This is an internal flag primarily intended to support the Azure Management Portal. Users should not
+     * read or write to this property.
+     * 
+     */
     public Optional<Boolean> getIsAutoProvisioned() {
         return Optional.ofNullable(this.isAutoProvisioned);
     }
+    /**
+     * The configuration settings of the Azure Active Directory login flow.
+     * 
+     */
     public Optional<AzureActiveDirectoryLoginResponse> getLogin() {
         return Optional.ofNullable(this.login);
     }
+    /**
+     * The configuration settings of the Azure Active Directory app registration.
+     * 
+     */
     public Optional<AzureActiveDirectoryRegistrationResponse> getRegistration() {
         return Optional.ofNullable(this.registration);
     }
+    /**
+     * The configuration settings of the Azure Active Directory token validation flow.
+     * 
+     */
     public Optional<AzureActiveDirectoryValidationResponse> getValidation() {
         return Optional.ofNullable(this.validation);
     }

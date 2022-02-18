@@ -21,117 +21,351 @@ import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Health Checks determine whether instances are responsive and able to do work.
+ * They are an important part of a comprehensive load balancing configuration,
+ * as they enable monitoring instances behind load balancers.
+ * 
+ * Health Checks poll instances at a specified interval. Instances that
+ * do not respond successfully to some number of probes in a row are marked
+ * as unhealthy. No new connections are sent to unhealthy instances,
+ * though existing connections will continue. The health check will
+ * continue to poll unhealthy instances. If an instance later responds
+ * successfully to some number of consecutive probes, it is marked
+ * healthy again and can receive new connections.
+ * 
+ * To get more information about RegionHealthCheck, see:
+ * 
+ * * [API documentation](https://cloud.google.com/compute/docs/reference/rest/v1/regionHealthChecks)
+ * * How-to Guides
+ *     * [Official Documentation](https://cloud.google.com/load-balancing/docs/health-checks)
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * RegionHealthCheck can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/regionHealthCheck:RegionHealthCheck default projects/{{project}}/regions/{{region}}/healthChecks/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/regionHealthCheck:RegionHealthCheck default {{project}}/{{region}}/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/regionHealthCheck:RegionHealthCheck default {{region}}/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/regionHealthCheck:RegionHealthCheck default {{name}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:compute/regionHealthCheck:RegionHealthCheck")
 public class RegionHealthCheck extends io.pulumi.resources.CustomResource {
+    /**
+     * How often (in seconds) to send a health check. The default value is 5
+     * seconds.
+     * 
+     */
     @OutputExport(name="checkIntervalSec", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> checkIntervalSec;
 
+    /**
+     * @return How often (in seconds) to send a health check. The default value is 5
+     * seconds.
+     * 
+     */
     public Output</* @Nullable */ Integer> getCheckIntervalSec() {
         return this.checkIntervalSec;
     }
+    /**
+     * Creation timestamp in RFC3339 text format.
+     * 
+     */
     @OutputExport(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
+    /**
+     * @return Creation timestamp in RFC3339 text format.
+     * 
+     */
     public Output<String> getCreationTimestamp() {
         return this.creationTimestamp;
     }
+    /**
+     * An optional description of this resource. Provide this property when
+     * you create the resource.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return An optional description of this resource. Provide this property when
+     * you create the resource.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * A nested object resource
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="grpcHealthCheck", type=RegionHealthCheckGrpcHealthCheck.class, parameters={})
     private Output</* @Nullable */ RegionHealthCheckGrpcHealthCheck> grpcHealthCheck;
 
+    /**
+     * @return A nested object resource
+     * Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ RegionHealthCheckGrpcHealthCheck> getGrpcHealthCheck() {
         return this.grpcHealthCheck;
     }
+    /**
+     * A so-far unhealthy instance will be marked healthy after this many
+     * consecutive successes. The default value is 2.
+     * 
+     */
     @OutputExport(name="healthyThreshold", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> healthyThreshold;
 
+    /**
+     * @return A so-far unhealthy instance will be marked healthy after this many
+     * consecutive successes. The default value is 2.
+     * 
+     */
     public Output</* @Nullable */ Integer> getHealthyThreshold() {
         return this.healthyThreshold;
     }
+    /**
+     * A nested object resource
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="http2HealthCheck", type=RegionHealthCheckHttp2HealthCheck.class, parameters={})
     private Output</* @Nullable */ RegionHealthCheckHttp2HealthCheck> http2HealthCheck;
 
+    /**
+     * @return A nested object resource
+     * Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ RegionHealthCheckHttp2HealthCheck> getHttp2HealthCheck() {
         return this.http2HealthCheck;
     }
+    /**
+     * A nested object resource
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="httpHealthCheck", type=RegionHealthCheckHttpHealthCheck.class, parameters={})
     private Output</* @Nullable */ RegionHealthCheckHttpHealthCheck> httpHealthCheck;
 
+    /**
+     * @return A nested object resource
+     * Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ RegionHealthCheckHttpHealthCheck> getHttpHealthCheck() {
         return this.httpHealthCheck;
     }
+    /**
+     * A nested object resource
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="httpsHealthCheck", type=RegionHealthCheckHttpsHealthCheck.class, parameters={})
     private Output</* @Nullable */ RegionHealthCheckHttpsHealthCheck> httpsHealthCheck;
 
+    /**
+     * @return A nested object resource
+     * Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ RegionHealthCheckHttpsHealthCheck> getHttpsHealthCheck() {
         return this.httpsHealthCheck;
     }
+    /**
+     * Configure logging on this health check.
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="logConfig", type=RegionHealthCheckLogConfig.class, parameters={})
     private Output<RegionHealthCheckLogConfig> logConfig;
 
+    /**
+     * @return Configure logging on this health check.
+     * Structure is documented below.
+     * 
+     */
     public Output<RegionHealthCheckLogConfig> getLogConfig() {
         return this.logConfig;
     }
+    /**
+     * Name of the resource. Provided by the client when the resource is
+     * created. The name must be 1-63 characters long, and comply with
+     * RFC1035.  Specifically, the name must be 1-63 characters long and
+     * match the regular expression `a-z?` which means
+     * the first character must be a lowercase letter, and all following
+     * characters must be a dash, lowercase letter, or digit, except the
+     * last character, which cannot be a dash.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Name of the resource. Provided by the client when the resource is
+     * created. The name must be 1-63 characters long, and comply with
+     * RFC1035.  Specifically, the name must be 1-63 characters long and
+     * match the regular expression `a-z?` which means
+     * the first character must be a lowercase letter, and all following
+     * characters must be a dash, lowercase letter, or digit, except the
+     * last character, which cannot be a dash.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * The Region in which the created health check should reside.
+     * If it is not provided, the provider region is used.
+     * 
+     */
     @OutputExport(name="region", type=String.class, parameters={})
     private Output<String> region;
 
+    /**
+     * @return The Region in which the created health check should reside.
+     * If it is not provided, the provider region is used.
+     * 
+     */
     public Output<String> getRegion() {
         return this.region;
     }
+    /**
+     * The URI of the created resource.
+     * 
+     */
     @OutputExport(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
+    /**
+     * @return The URI of the created resource.
+     * 
+     */
     public Output<String> getSelfLink() {
         return this.selfLink;
     }
+    /**
+     * A nested object resource
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="sslHealthCheck", type=RegionHealthCheckSslHealthCheck.class, parameters={})
     private Output</* @Nullable */ RegionHealthCheckSslHealthCheck> sslHealthCheck;
 
+    /**
+     * @return A nested object resource
+     * Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ RegionHealthCheckSslHealthCheck> getSslHealthCheck() {
         return this.sslHealthCheck;
     }
+    /**
+     * A nested object resource
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="tcpHealthCheck", type=RegionHealthCheckTcpHealthCheck.class, parameters={})
     private Output</* @Nullable */ RegionHealthCheckTcpHealthCheck> tcpHealthCheck;
 
+    /**
+     * @return A nested object resource
+     * Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ RegionHealthCheckTcpHealthCheck> getTcpHealthCheck() {
         return this.tcpHealthCheck;
     }
+    /**
+     * How long (in seconds) to wait before claiming failure.
+     * The default value is 5 seconds.  It is invalid for timeoutSec to have
+     * greater value than checkIntervalSec.
+     * 
+     */
     @OutputExport(name="timeoutSec", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> timeoutSec;
 
+    /**
+     * @return How long (in seconds) to wait before claiming failure.
+     * The default value is 5 seconds.  It is invalid for timeoutSec to have
+     * greater value than checkIntervalSec.
+     * 
+     */
     public Output</* @Nullable */ Integer> getTimeoutSec() {
         return this.timeoutSec;
     }
+    /**
+     * The type of the health check. One of HTTP, HTTP2, HTTPS, TCP, or SSL.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the health check. One of HTTP, HTTP2, HTTPS, TCP, or SSL.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * A so-far healthy instance will be marked unhealthy after this many
+     * consecutive failures. The default value is 2.
+     * 
+     */
     @OutputExport(name="unhealthyThreshold", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> unhealthyThreshold;
 
+    /**
+     * @return A so-far healthy instance will be marked unhealthy after this many
+     * consecutive failures. The default value is 2.
+     * 
+     */
     public Output</* @Nullable */ Integer> getUnhealthyThreshold() {
         return this.unhealthyThreshold;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public RegionHealthCheck(String name, @Nullable RegionHealthCheckArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:compute/regionHealthCheck:RegionHealthCheck", name, args == null ? RegionHealthCheckArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -147,6 +381,15 @@ public class RegionHealthCheck extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static RegionHealthCheck get(String name, Input<String> id, @Nullable RegionHealthCheckState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RegionHealthCheck(name, id, state, options);
     }

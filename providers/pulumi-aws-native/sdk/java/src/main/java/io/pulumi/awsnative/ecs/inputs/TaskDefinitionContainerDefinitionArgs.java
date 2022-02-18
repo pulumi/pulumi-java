@@ -30,6 +30,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * List of container definitions that are passed to the Docker daemon on a container instance
+ * 
+ */
 public final class TaskDefinitionContainerDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TaskDefinitionContainerDefinitionArgs Empty = new TaskDefinitionContainerDefinitionArgs();
@@ -97,6 +101,10 @@ public final class TaskDefinitionContainerDefinitionArgs extends io.pulumi.resou
         return this.entryPoint == null ? Input.empty() : this.entryPoint;
     }
 
+    /**
+     * The environment variables to pass to a container
+     * 
+     */
     @InputImport(name="environment")
     private final @Nullable Input<List<TaskDefinitionKeyValuePairArgs>> environment;
 
@@ -104,6 +112,10 @@ public final class TaskDefinitionContainerDefinitionArgs extends io.pulumi.resou
         return this.environment == null ? Input.empty() : this.environment;
     }
 
+    /**
+     * The list of one or more files that contain the environment variables to pass to a container
+     * 
+     */
     @InputImport(name="environmentFiles")
     private final @Nullable Input<List<TaskDefinitionEnvironmentFileArgs>> environmentFiles;
 
@@ -146,6 +158,10 @@ public final class TaskDefinitionContainerDefinitionArgs extends io.pulumi.resou
         return this.hostname == null ? Input.empty() : this.hostname;
     }
 
+    /**
+     * The image used to start a container. This string is passed directly to the Docker daemon.
+     * 
+     */
     @InputImport(name="image")
     private final @Nullable Input<String> image;
 
@@ -181,6 +197,10 @@ public final class TaskDefinitionContainerDefinitionArgs extends io.pulumi.resou
         return this.logConfiguration == null ? Input.empty() : this.logConfiguration;
     }
 
+    /**
+     * The amount (in MiB) of memory to present to the container. If your container attempts to exceed the memory specified here, the container is killed.
+     * 
+     */
     @InputImport(name="memory")
     private final @Nullable Input<Integer> memory;
 
@@ -202,6 +222,10 @@ public final class TaskDefinitionContainerDefinitionArgs extends io.pulumi.resou
         return this.mountPoints == null ? Input.empty() : this.mountPoints;
     }
 
+    /**
+     * The name of a container. Up to 255 letters (uppercase and lowercase), numbers, hyphens, and underscores are allowed
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -209,6 +233,10 @@ public final class TaskDefinitionContainerDefinitionArgs extends io.pulumi.resou
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Port mappings allow containers to access ports on the host container instance to send or receive traffic.
+     * 
+     */
     @InputImport(name="portMappings")
     private final @Nullable Input<List<TaskDefinitionPortMappingArgs>> portMappings;
 

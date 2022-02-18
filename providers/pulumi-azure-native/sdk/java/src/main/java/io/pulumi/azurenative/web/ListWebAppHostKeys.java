@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListWebAppHostKeys {
+/**
+ * Functions host level keys.
+ * API Version: 2020-12-01.
+ * 
+ *
+ * Functions host level keys.
+ * 
+ */
     public static CompletableFuture<ListWebAppHostKeysResult> invokeAsync(ListWebAppHostKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppHostKeys", TypeShape.of(ListWebAppHostKeysResult.class), args == null ? ListWebAppHostKeysArgs.Empty : args, Utilities.withVersion(options));
     }

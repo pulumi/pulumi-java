@@ -15,6 +15,10 @@ public final class PrivateEndpointConnectionByNameArgs extends io.pulumi.resourc
 
     public static final PrivateEndpointConnectionByNameArgs Empty = new PrivateEndpointConnectionByNameArgs();
 
+    /**
+     * Private Endpoint Connection Resource Id.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -22,6 +26,10 @@ public final class PrivateEndpointConnectionByNameArgs extends io.pulumi.resourc
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * Name of the private endpoint connection.
+     * 
+     */
     @InputImport(name="privateEndpointConnectionName")
     private final @Nullable Input<String> privateEndpointConnectionName;
 
@@ -29,6 +37,10 @@ public final class PrivateEndpointConnectionByNameArgs extends io.pulumi.resourc
         return this.privateEndpointConnectionName == null ? Input.empty() : this.privateEndpointConnectionName;
     }
 
+    /**
+     * The connection state of the private endpoint connection.
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<PrivateEndpointConnectionRequestPropertiesArgs> properties;
 
@@ -36,6 +48,10 @@ public final class PrivateEndpointConnectionByNameArgs extends io.pulumi.resourc
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -43,6 +59,10 @@ public final class PrivateEndpointConnectionByNameArgs extends io.pulumi.resourc
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the API Management service.
+     * 
+     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 

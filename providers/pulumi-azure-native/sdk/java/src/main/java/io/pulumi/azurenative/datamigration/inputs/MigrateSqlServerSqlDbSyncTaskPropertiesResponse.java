@@ -22,10 +22,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties for the task that migrates on-prem SQL Server databases to Azure SQL Database for online migrations
+ * 
+ */
 public final class MigrateSqlServerSqlDbSyncTaskPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MigrateSqlServerSqlDbSyncTaskPropertiesResponse Empty = new MigrateSqlServerSqlDbSyncTaskPropertiesResponse();
 
+    /**
+     * Array of command properties.
+     * 
+     */
     @InputImport(name="commands", required=true)
     private final List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands;
 
@@ -33,6 +41,10 @@ public final class MigrateSqlServerSqlDbSyncTaskPropertiesResponse extends io.pu
         return this.commands;
     }
 
+    /**
+     * Array of errors. This is ignored if submitted.
+     * 
+     */
     @InputImport(name="errors", required=true)
     private final List<ODataErrorResponse> errors;
 
@@ -40,6 +52,10 @@ public final class MigrateSqlServerSqlDbSyncTaskPropertiesResponse extends io.pu
         return this.errors;
     }
 
+    /**
+     * Task input
+     * 
+     */
     @InputImport(name="input")
     private final @Nullable MigrateSqlServerSqlDbSyncTaskInputResponse input;
 
@@ -47,6 +63,10 @@ public final class MigrateSqlServerSqlDbSyncTaskPropertiesResponse extends io.pu
         return this.input == null ? Optional.empty() : Optional.ofNullable(this.input);
     }
 
+    /**
+     * Task output. This is ignored if submitted.
+     * 
+     */
     @InputImport(name="output", required=true)
     private final List<Object> output;
 
@@ -54,6 +74,10 @@ public final class MigrateSqlServerSqlDbSyncTaskPropertiesResponse extends io.pu
         return this.output;
     }
 
+    /**
+     * The state of the task. This is ignored if submitted.
+     * 
+     */
     @InputImport(name="state", required=true)
     private final String state;
 
@@ -61,6 +85,11 @@ public final class MigrateSqlServerSqlDbSyncTaskPropertiesResponse extends io.pu
         return this.state;
     }
 
+    /**
+     * Task type.
+     * Expected value is 'Migrate.SqlServer.AzureSqlDb.Sync'.
+     * 
+     */
     @InputImport(name="taskType", required=true)
     private final String taskType;
 

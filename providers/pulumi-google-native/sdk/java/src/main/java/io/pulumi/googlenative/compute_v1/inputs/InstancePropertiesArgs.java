@@ -30,6 +30,10 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
 
     public static final InstancePropertiesArgs Empty = new InstancePropertiesArgs();
 
+    /**
+     * Controls for advanced machine-related behavior features. Note that for MachineImage, this is not supported yet.
+     * 
+     */
     @InputImport(name="advancedMachineFeatures")
     private final @Nullable Input<AdvancedMachineFeaturesArgs> advancedMachineFeatures;
 
@@ -37,6 +41,10 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
         return this.advancedMachineFeatures == null ? Input.empty() : this.advancedMachineFeatures;
     }
 
+    /**
+     * Enables instances created based on these properties to send packets with source IP addresses other than their own and receive packets with destination IP addresses other than their own. If these instances will be used as an IP gateway or it will be set as the next-hop in a Route resource, specify true. If unsure, leave this set to false. See the Enable IP forwarding documentation for more information.
+     * 
+     */
     @InputImport(name="canIpForward")
     private final @Nullable Input<Boolean> canIpForward;
 
@@ -44,6 +52,10 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
         return this.canIpForward == null ? Input.empty() : this.canIpForward;
     }
 
+    /**
+     * Specifies the Confidential Instance options. Note that for MachineImage, this is not supported yet.
+     * 
+     */
     @InputImport(name="confidentialInstanceConfig")
     private final @Nullable Input<ConfidentialInstanceConfigArgs> confidentialInstanceConfig;
 
@@ -51,6 +63,10 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
         return this.confidentialInstanceConfig == null ? Input.empty() : this.confidentialInstanceConfig;
     }
 
+    /**
+     * An optional text description for the instances that are created from these properties.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -58,6 +74,10 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * An array of disks that are associated with the instances that are created from these properties.
+     * 
+     */
     @InputImport(name="disks")
     private final @Nullable Input<List<AttachedDiskArgs>> disks;
 
@@ -65,6 +85,10 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
         return this.disks == null ? Input.empty() : this.disks;
     }
 
+    /**
+     * A list of guest accelerator cards' type and count to use for instances created from these properties.
+     * 
+     */
     @InputImport(name="guestAccelerators")
     private final @Nullable Input<List<AcceleratorConfigArgs>> guestAccelerators;
 
@@ -72,6 +96,10 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
         return this.guestAccelerators == null ? Input.empty() : this.guestAccelerators;
     }
 
+    /**
+     * Labels to apply to instances that are created from these properties.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -79,6 +107,10 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The machine type to use for instances that are created from these properties.
+     * 
+     */
     @InputImport(name="machineType")
     private final @Nullable Input<String> machineType;
 
@@ -86,6 +118,10 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
         return this.machineType == null ? Input.empty() : this.machineType;
     }
 
+    /**
+     * The metadata key/value pairs to assign to instances that are created from these properties. These pairs can consist of custom metadata or predefined keys. See Project and instance metadata for more information.
+     * 
+     */
     @InputImport(name="metadata")
     private final @Nullable Input<MetadataArgs> metadata;
 
@@ -93,6 +129,10 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
+    /**
+     * Minimum cpu/platform to be used by instances. The instance may be scheduled on the specified or newer cpu/platform. Applicable values are the friendly names of CPU platforms, such as minCpuPlatform: "Intel Haswell" or minCpuPlatform: "Intel Sandy Bridge". For more information, read Specifying a Minimum CPU Platform.
+     * 
+     */
     @InputImport(name="minCpuPlatform")
     private final @Nullable Input<String> minCpuPlatform;
 
@@ -100,6 +140,10 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
         return this.minCpuPlatform == null ? Input.empty() : this.minCpuPlatform;
     }
 
+    /**
+     * An array of network access configurations for this interface.
+     * 
+     */
     @InputImport(name="networkInterfaces")
     private final @Nullable Input<List<NetworkInterfaceArgs>> networkInterfaces;
 
@@ -107,6 +151,10 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
         return this.networkInterfaces == null ? Input.empty() : this.networkInterfaces;
     }
 
+    /**
+     * Note that for MachineImage, this is not supported yet.
+     * 
+     */
     @InputImport(name="networkPerformanceConfig")
     private final @Nullable Input<NetworkPerformanceConfigArgs> networkPerformanceConfig;
 
@@ -114,6 +162,10 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
         return this.networkPerformanceConfig == null ? Input.empty() : this.networkPerformanceConfig;
     }
 
+    /**
+     * The private IPv6 google access type for VMs. If not specified, use INHERIT_FROM_SUBNETWORK as default. Note that for MachineImage, this is not supported yet.
+     * 
+     */
     @InputImport(name="privateIpv6GoogleAccess")
     private final @Nullable Input<InstancePropertiesPrivateIpv6GoogleAccess> privateIpv6GoogleAccess;
 
@@ -121,6 +173,10 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
         return this.privateIpv6GoogleAccess == null ? Input.empty() : this.privateIpv6GoogleAccess;
     }
 
+    /**
+     * Specifies the reservations that instances can consume from. Note that for MachineImage, this is not supported yet.
+     * 
+     */
     @InputImport(name="reservationAffinity")
     private final @Nullable Input<ReservationAffinityArgs> reservationAffinity;
 
@@ -128,6 +184,10 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
         return this.reservationAffinity == null ? Input.empty() : this.reservationAffinity;
     }
 
+    /**
+     * Resource manager tags to be bound to the instance. Tag keys and values have the same definition as resource manager tags. Keys must be in the format `tagKeys/{tag_key_id}`, and values are in the format `tagValues/456`. The field is ignored (both PUT & PATCH) when empty.
+     * 
+     */
     @InputImport(name="resourceManagerTags")
     private final @Nullable Input<Map<String,String>> resourceManagerTags;
 
@@ -135,6 +195,10 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
         return this.resourceManagerTags == null ? Input.empty() : this.resourceManagerTags;
     }
 
+    /**
+     * Resource policies (names, not URLs) applied to instances created from these properties. Note that for MachineImage, this is not supported yet.
+     * 
+     */
     @InputImport(name="resourcePolicies")
     private final @Nullable Input<List<String>> resourcePolicies;
 
@@ -142,6 +206,10 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
         return this.resourcePolicies == null ? Input.empty() : this.resourcePolicies;
     }
 
+    /**
+     * Specifies the scheduling options for the instances that are created from these properties.
+     * 
+     */
     @InputImport(name="scheduling")
     private final @Nullable Input<SchedulingArgs> scheduling;
 
@@ -149,6 +217,10 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
         return this.scheduling == null ? Input.empty() : this.scheduling;
     }
 
+    /**
+     * A list of service accounts with specified scopes. Access tokens for these service accounts are available to the instances that are created from these properties. Use metadata queries to obtain the access tokens for these instances.
+     * 
+     */
     @InputImport(name="serviceAccounts")
     private final @Nullable Input<List<ServiceAccountArgs>> serviceAccounts;
 
@@ -156,6 +228,10 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
         return this.serviceAccounts == null ? Input.empty() : this.serviceAccounts;
     }
 
+    /**
+     * Note that for MachineImage, this is not supported yet.
+     * 
+     */
     @InputImport(name="shieldedInstanceConfig")
     private final @Nullable Input<ShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
@@ -163,6 +239,10 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
         return this.shieldedInstanceConfig == null ? Input.empty() : this.shieldedInstanceConfig;
     }
 
+    /**
+     * A list of tags to apply to the instances that are created from these properties. The tags identify valid sources or targets for network firewalls. The setTags method can modify this list of tags. Each tag within the list must comply with RFC1035.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<TagsArgs> tags;
 

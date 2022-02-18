@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBuildServiceBuildResultLog {
+/**
+ * Build result log resource properties payload
+ * API Version: 2022-01-01-preview.
+ * 
+ *
+ * Build result log resource properties payload
+ * 
+ */
     public static CompletableFuture<GetBuildServiceBuildResultLogResult> invokeAsync(GetBuildServiceBuildResultLogArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getBuildServiceBuildResultLog", TypeShape.of(GetBuildServiceBuildResultLogResult.class), args == null ? GetBuildServiceBuildResultLogArgs.Empty : args, Utilities.withVersion(options));
     }

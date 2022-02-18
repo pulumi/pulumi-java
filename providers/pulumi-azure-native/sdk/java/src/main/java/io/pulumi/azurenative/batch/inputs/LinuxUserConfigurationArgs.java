@@ -15,6 +15,10 @@ public final class LinuxUserConfigurationArgs extends io.pulumi.resources.Resour
 
     public static final LinuxUserConfigurationArgs Empty = new LinuxUserConfigurationArgs();
 
+    /**
+     * The uid and gid properties must be specified together or not at all. If not specified the underlying operating system picks the gid.
+     * 
+     */
     @InputImport(name="gid")
     private final @Nullable Input<Integer> gid;
 
@@ -22,6 +26,10 @@ public final class LinuxUserConfigurationArgs extends io.pulumi.resources.Resour
         return this.gid == null ? Input.empty() : this.gid;
     }
 
+    /**
+     * The private key must not be password protected. The private key is used to automatically configure asymmetric-key based authentication for SSH between nodes in a Linux pool when the pool's enableInterNodeCommunication property is true (it is ignored if enableInterNodeCommunication is false). It does this by placing the key pair into the user's .ssh directory. If not specified, password-less SSH is not configured between nodes (no modification of the user's .ssh directory is done).
+     * 
+     */
     @InputImport(name="sshPrivateKey")
     private final @Nullable Input<String> sshPrivateKey;
 
@@ -29,6 +37,10 @@ public final class LinuxUserConfigurationArgs extends io.pulumi.resources.Resour
         return this.sshPrivateKey == null ? Input.empty() : this.sshPrivateKey;
     }
 
+    /**
+     * The uid and gid properties must be specified together or not at all. If not specified the underlying operating system picks the uid.
+     * 
+     */
     @InputImport(name="uid")
     private final @Nullable Input<Integer> uid;
 

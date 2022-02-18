@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes an image source from [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
+ * 
+ */
 public final class ImageTemplatePlatformImageSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ImageTemplatePlatformImageSourceArgs Empty = new ImageTemplatePlatformImageSourceArgs();
 
+    /**
+     * Image offer from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
+     * 
+     */
     @InputImport(name="offer")
     private final @Nullable Input<String> offer;
 
@@ -22,6 +30,10 @@ public final class ImageTemplatePlatformImageSourceArgs extends io.pulumi.resour
         return this.offer == null ? Input.empty() : this.offer;
     }
 
+    /**
+     * Optional configuration of purchase plan for platform image.
+     * 
+     */
     @InputImport(name="planInfo")
     private final @Nullable Input<PlatformImagePurchasePlanArgs> planInfo;
 
@@ -29,6 +41,10 @@ public final class ImageTemplatePlatformImageSourceArgs extends io.pulumi.resour
         return this.planInfo == null ? Input.empty() : this.planInfo;
     }
 
+    /**
+     * Image Publisher in [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
+     * 
+     */
     @InputImport(name="publisher")
     private final @Nullable Input<String> publisher;
 
@@ -36,6 +52,10 @@ public final class ImageTemplatePlatformImageSourceArgs extends io.pulumi.resour
         return this.publisher == null ? Input.empty() : this.publisher;
     }
 
+    /**
+     * Image sku from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
+     * 
+     */
     @InputImport(name="sku")
     private final @Nullable Input<String> sku;
 
@@ -43,6 +63,11 @@ public final class ImageTemplatePlatformImageSourceArgs extends io.pulumi.resour
         return this.sku == null ? Input.empty() : this.sku;
     }
 
+    /**
+     * Specifies the type of source image you want to start with.
+     * Expected value is 'PlatformImage'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -50,6 +75,10 @@ public final class ImageTemplatePlatformImageSourceArgs extends io.pulumi.resour
         return this.type;
     }
 
+    /**
+     * Image version from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages). If 'latest' is specified here, the version is evaluated when the image build takes place, not when the template is submitted. Specifying 'latest' could cause ROUNDTRIP_INCONSISTENT_PROPERTY issue which will be fixed.
+     * 
+     */
     @InputImport(name="version")
     private final @Nullable Input<String> version;
 

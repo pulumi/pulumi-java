@@ -19,6 +19,10 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ReportArgs Empty = new ReportArgs();
 
+    /**
+     * Has definition for the report.
+     * 
+     */
     @InputImport(name="definition", required=true)
     private final Input<ReportDefinitionArgs> definition;
 
@@ -26,6 +30,10 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
         return this.definition;
     }
 
+    /**
+     * Has delivery information for the report.
+     * 
+     */
     @InputImport(name="deliveryInfo", required=true)
     private final Input<ReportDeliveryInfoArgs> deliveryInfo;
 
@@ -33,6 +41,10 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
         return this.deliveryInfo;
     }
 
+    /**
+     * The format of the report being delivered.
+     * 
+     */
     @InputImport(name="format")
     private final @Nullable Input<Either<String,FormatType>> format;
 
@@ -40,6 +52,10 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
         return this.format == null ? Input.empty() : this.format;
     }
 
+    /**
+     * Report Name.
+     * 
+     */
     @InputImport(name="reportName")
     private final @Nullable Input<String> reportName;
 
@@ -47,6 +63,10 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
         return this.reportName == null ? Input.empty() : this.reportName;
     }
 
+    /**
+     * Has schedule information for the report.
+     * 
+     */
     @InputImport(name="schedule")
     private final @Nullable Input<ReportScheduleArgs> schedule;
 

@@ -25,6 +25,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.accessRules == null ? Input.empty() : this.accessRules;
     }
 
+    /**
+     * The name for the bucket.
+     * 
+     */
     @InputImport(name="bucketName")
     private final @Nullable Input<String> bucketName;
 
@@ -32,6 +36,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.bucketName == null ? Input.empty() : this.bucketName;
     }
 
+    /**
+     * The ID of the bundle to use for the bucket.
+     * 
+     */
     @InputImport(name="bundleId", required=true)
     private final Input<String> bundleId;
 
@@ -39,6 +47,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.bundleId;
     }
 
+    /**
+     * Specifies whether to enable or disable versioning of objects in the bucket.
+     * 
+     */
     @InputImport(name="objectVersioning")
     private final @Nullable Input<Boolean> objectVersioning;
 
@@ -46,6 +58,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.objectVersioning == null ? Input.empty() : this.objectVersioning;
     }
 
+    /**
+     * An array of strings to specify the AWS account IDs that can access the bucket.
+     * 
+     */
     @InputImport(name="readOnlyAccessAccounts")
     private final @Nullable Input<List<String>> readOnlyAccessAccounts;
 
@@ -53,6 +69,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.readOnlyAccessAccounts == null ? Input.empty() : this.readOnlyAccessAccounts;
     }
 
+    /**
+     * The names of the Lightsail resources for which to set bucket access.
+     * 
+     */
     @InputImport(name="resourcesReceivingAccess")
     private final @Nullable Input<List<String>> resourcesReceivingAccess;
 
@@ -60,6 +80,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourcesReceivingAccess == null ? Input.empty() : this.resourcesReceivingAccess;
     }
 
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<BucketTagArgs>> tags;
 

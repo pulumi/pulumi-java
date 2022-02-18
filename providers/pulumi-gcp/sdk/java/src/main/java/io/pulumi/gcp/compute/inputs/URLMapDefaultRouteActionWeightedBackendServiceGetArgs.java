@@ -16,6 +16,10 @@ public final class URLMapDefaultRouteActionWeightedBackendServiceGetArgs extends
 
     public static final URLMapDefaultRouteActionWeightedBackendServiceGetArgs Empty = new URLMapDefaultRouteActionWeightedBackendServiceGetArgs();
 
+    /**
+     * The full or partial URL to the BackendService resource being mirrored to.
+     * 
+     */
     @InputImport(name="backendService")
     private final @Nullable Input<String> backendService;
 
@@ -23,6 +27,14 @@ public final class URLMapDefaultRouteActionWeightedBackendServiceGetArgs extends
         return this.backendService == null ? Input.empty() : this.backendService;
     }
 
+    /**
+     * Specifies changes to request and response headers that need to take effect for
+     * the selected backendService.
+     * headerAction specified here take effect before headerAction in the enclosing
+     * HttpRouteRule, PathMatcher and UrlMap.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="headerAction")
     private final @Nullable Input<URLMapDefaultRouteActionWeightedBackendServiceHeaderActionGetArgs> headerAction;
 
@@ -30,6 +42,15 @@ public final class URLMapDefaultRouteActionWeightedBackendServiceGetArgs extends
         return this.headerAction == null ? Input.empty() : this.headerAction;
     }
 
+    /**
+     * Specifies the fraction of traffic sent to backendService, computed as
+     * weight / (sum of all weightedBackendService weights in routeAction) .
+     * The selection of a backend service is determined only for new traffic. Once a user's request
+     * has been directed to a backendService, subsequent requests will be sent to the same backendService
+     * as determined by the BackendService's session affinity policy.
+     * The value must be between 0 and 1000
+     * 
+     */
     @InputImport(name="weight")
     private final @Nullable Input<Integer> weight;
 

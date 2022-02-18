@@ -12,6 +12,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FlowFailoverConfig {
+    /**
+     * Search window time to look for dash-7 packets
+     * 
+     */
     private final @Nullable Integer recoveryWindow;
     private final @Nullable FlowFailoverConfigState state;
 
@@ -23,6 +27,10 @@ public final class FlowFailoverConfig {
         this.state = state;
     }
 
+    /**
+     * Search window time to look for dash-7 packets
+     * 
+     */
     public Optional<Integer> getRecoveryWindow() {
         return Optional.ofNullable(this.recoveryWindow);
     }

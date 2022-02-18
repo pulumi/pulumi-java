@@ -14,10 +14,31 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GenericProtectionPolicyResponse {
+    /**
+     * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+     * Expected value is 'GenericProtectionPolicy'.
+     * 
+     */
     private final String backupManagementType;
+    /**
+     * Name of this policy's fabric.
+     * 
+     */
     private final @Nullable String fabricName;
+    /**
+     * Number of items associated with this policy.
+     * 
+     */
     private final @Nullable Integer protectedItemsCount;
+    /**
+     * List of sub-protection policies which includes schedule and retention
+     * 
+     */
     private final @Nullable List<SubProtectionPolicyResponse> subProtectionPolicy;
+    /**
+     * TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".
+     * 
+     */
     private final @Nullable String timeZone;
 
     @OutputCustomType.Constructor({"backupManagementType","fabricName","protectedItemsCount","subProtectionPolicy","timeZone"})
@@ -34,18 +55,39 @@ public final class GenericProtectionPolicyResponse {
         this.timeZone = timeZone;
     }
 
+    /**
+     * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+     * Expected value is 'GenericProtectionPolicy'.
+     * 
+     */
     public String getBackupManagementType() {
         return this.backupManagementType;
     }
+    /**
+     * Name of this policy's fabric.
+     * 
+     */
     public Optional<String> getFabricName() {
         return Optional.ofNullable(this.fabricName);
     }
+    /**
+     * Number of items associated with this policy.
+     * 
+     */
     public Optional<Integer> getProtectedItemsCount() {
         return Optional.ofNullable(this.protectedItemsCount);
     }
+    /**
+     * List of sub-protection policies which includes schedule and retention
+     * 
+     */
     public List<SubProtectionPolicyResponse> getSubProtectionPolicy() {
         return this.subProtectionPolicy == null ? List.of() : this.subProtectionPolicy;
     }
+    /**
+     * TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".
+     * 
+     */
     public Optional<String> getTimeZone() {
         return Optional.ofNullable(this.timeZone);
     }

@@ -15,63 +15,156 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Graph Query entity definition.
+ * API Version: 2018-09-01-preview.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:resourcegraph:GraphQuery MyDockerVMs  /subscriptions/024e2271-06fa-46b6-9079-f1ed3c7b070e/resources/my-resource-group/providers/Microsoft.ResourceGraph/queries/MyDockerVMs 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:resourcegraph:GraphQuery")
 public class GraphQuery extends io.pulumi.resources.CustomResource {
+    /**
+     * The description of a graph query.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return The description of a graph query.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * This will be used to handle Optimistic Concurrency. If not present, it will always overwrite the existing resource without checking conflict.
+     * 
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
+    /**
+     * @return This will be used to handle Optimistic Concurrency. If not present, it will always overwrite the existing resource without checking conflict.
+     * 
+     */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
+    /**
+     * The location of the resource
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return The location of the resource
+     * 
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * Azure resource name. This is GUID value. The display name should be assigned within properties field.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Azure resource name. This is GUID value. The display name should be assigned within properties field.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * KQL query that will be graph.
+     * 
+     */
     @OutputExport(name="query", type=String.class, parameters={})
     private Output<String> query;
 
+    /**
+     * @return KQL query that will be graph.
+     * 
+     */
     public Output<String> getQuery() {
         return this.query;
     }
+    /**
+     * Enum indicating a type of graph query.
+     * 
+     */
     @OutputExport(name="resultKind", type=String.class, parameters={})
     private Output<String> resultKind;
 
+    /**
+     * @return Enum indicating a type of graph query.
+     * 
+     */
     public Output<String> getResultKind() {
         return this.resultKind;
     }
+    /**
+     * Resource tags
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Date and time in UTC of the last modification that was made to this graph query definition.
+     * 
+     */
     @OutputExport(name="timeModified", type=String.class, parameters={})
     private Output<String> timeModified;
 
+    /**
+     * @return Date and time in UTC of the last modification that was made to this graph query definition.
+     * 
+     */
     public Output<String> getTimeModified() {
         return this.timeModified;
     }
+    /**
+     * Azure resource type
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Azure resource type
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public GraphQuery(String name, GraphQueryArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:resourcegraph:GraphQuery", name, args == null ? GraphQueryArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -91,6 +184,14 @@ public class GraphQuery extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static GraphQuery get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new GraphQuery(name, id, options);
     }

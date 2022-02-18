@@ -11,8 +11,27 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class InstanceShieldedInstanceConfig {
+    /**
+     * Defines whether the instance has integrity monitoring enabled. Enables monitoring and attestation of the
+     * boot integrity of the instance. The attestation is performed against the integrity policy baseline.
+     * This baseline is initially derived from the implicitly trusted boot image when the instance is created.
+     * Enabled by default.
+     * 
+     */
     private final @Nullable Boolean enableIntegrityMonitoring;
+    /**
+     * Defines whether the instance has Secure Boot enabled. Secure Boot helps ensure that the system only runs
+     * authentic software by verifying the digital signature of all boot components, and halting the boot process
+     * if signature verification fails.
+     * Disabled by default.
+     * 
+     */
     private final @Nullable Boolean enableSecureBoot;
+    /**
+     * Defines whether the instance has the vTPM enabled.
+     * Enabled by default.
+     * 
+     */
     private final @Nullable Boolean enableVtpm;
 
     @OutputCustomType.Constructor({"enableIntegrityMonitoring","enableSecureBoot","enableVtpm"})
@@ -25,12 +44,31 @@ public final class InstanceShieldedInstanceConfig {
         this.enableVtpm = enableVtpm;
     }
 
+    /**
+     * Defines whether the instance has integrity monitoring enabled. Enables monitoring and attestation of the
+     * boot integrity of the instance. The attestation is performed against the integrity policy baseline.
+     * This baseline is initially derived from the implicitly trusted boot image when the instance is created.
+     * Enabled by default.
+     * 
+     */
     public Optional<Boolean> getEnableIntegrityMonitoring() {
         return Optional.ofNullable(this.enableIntegrityMonitoring);
     }
+    /**
+     * Defines whether the instance has Secure Boot enabled. Secure Boot helps ensure that the system only runs
+     * authentic software by verifying the digital signature of all boot components, and halting the boot process
+     * if signature verification fails.
+     * Disabled by default.
+     * 
+     */
     public Optional<Boolean> getEnableSecureBoot() {
         return Optional.ofNullable(this.enableSecureBoot);
     }
+    /**
+     * Defines whether the instance has the vTPM enabled.
+     * Enabled by default.
+     * 
+     */
     public Optional<Boolean> getEnableVtpm() {
         return Optional.ofNullable(this.enableVtpm);
     }

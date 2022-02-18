@@ -33,6 +33,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.architectures == null ? Input.empty() : this.architectures;
     }
 
+    /**
+     * The code for the function.
+     * 
+     */
     @InputImport(name="code", required=true)
     private final Input<FunctionCodeArgs> code;
 
@@ -40,6 +44,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.code;
     }
 
+    /**
+     * A unique Arn for CodeSigningConfig resource
+     * 
+     */
     @InputImport(name="codeSigningConfigArn")
     private final @Nullable Input<String> codeSigningConfigArn;
 
@@ -47,6 +55,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.codeSigningConfigArn == null ? Input.empty() : this.codeSigningConfigArn;
     }
 
+    /**
+     * A dead letter queue configuration that specifies the queue or topic where Lambda sends asynchronous events when they fail processing.
+     * 
+     */
     @InputImport(name="deadLetterConfig")
     private final @Nullable Input<FunctionDeadLetterConfigArgs> deadLetterConfig;
 
@@ -54,6 +66,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.deadLetterConfig == null ? Input.empty() : this.deadLetterConfig;
     }
 
+    /**
+     * A description of the function.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -61,6 +77,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Environment variables that are accessible from function code during execution.
+     * 
+     */
     @InputImport(name="environment")
     private final @Nullable Input<FunctionEnvironmentArgs> environment;
 
@@ -68,6 +88,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.environment == null ? Input.empty() : this.environment;
     }
 
+    /**
+     * Connection settings for an Amazon EFS file system. To connect a function to a file system, a mount target must be available in every Availability Zone that your function connects to. If your template contains an AWS::EFS::MountTarget resource, you must also specify a DependsOn attribute to ensure that the mount target is created or updated before the function.
+     * 
+     */
     @InputImport(name="fileSystemConfigs")
     private final @Nullable Input<List<FunctionFileSystemConfigArgs>> fileSystemConfigs;
 
@@ -75,6 +99,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.fileSystemConfigs == null ? Input.empty() : this.fileSystemConfigs;
     }
 
+    /**
+     * The name of the Lambda function, up to 64 characters in length. If you don't specify a name, AWS CloudFormation generates one.
+     * 
+     */
     @InputImport(name="functionName")
     private final @Nullable Input<String> functionName;
 
@@ -82,6 +110,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.functionName == null ? Input.empty() : this.functionName;
     }
 
+    /**
+     * The name of the method within your code that Lambda calls to execute your function. The format includes the file name. It can also include namespaces and other qualifiers, depending on the runtime
+     * 
+     */
     @InputImport(name="handler")
     private final @Nullable Input<String> handler;
 
@@ -89,6 +121,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.handler == null ? Input.empty() : this.handler;
     }
 
+    /**
+     * ImageConfig
+     * 
+     */
     @InputImport(name="imageConfig")
     private final @Nullable Input<FunctionImageConfigArgs> imageConfig;
 
@@ -96,6 +132,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.imageConfig == null ? Input.empty() : this.imageConfig;
     }
 
+    /**
+     * The ARN of the AWS Key Management Service (AWS KMS) key that's used to encrypt your function's environment variables. If it's not provided, AWS Lambda uses a default service key.
+     * 
+     */
     @InputImport(name="kmsKeyArn")
     private final @Nullable Input<String> kmsKeyArn;
 
@@ -103,6 +143,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.kmsKeyArn == null ? Input.empty() : this.kmsKeyArn;
     }
 
+    /**
+     * A list of function layers to add to the function's execution environment. Specify each layer by its ARN, including the version.
+     * 
+     */
     @InputImport(name="layers")
     private final @Nullable Input<List<String>> layers;
 
@@ -110,6 +154,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.layers == null ? Input.empty() : this.layers;
     }
 
+    /**
+     * The amount of memory that your function has access to. Increasing the function's memory also increases its CPU allocation. The default value is 128 MB. The value must be a multiple of 64 MB.
+     * 
+     */
     @InputImport(name="memorySize")
     private final @Nullable Input<Integer> memorySize;
 
@@ -117,6 +165,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.memorySize == null ? Input.empty() : this.memorySize;
     }
 
+    /**
+     * PackageType.
+     * 
+     */
     @InputImport(name="packageType")
     private final @Nullable Input<FunctionPackageType> packageType;
 
@@ -124,6 +176,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.packageType == null ? Input.empty() : this.packageType;
     }
 
+    /**
+     * The number of simultaneous executions to reserve for the function.
+     * 
+     */
     @InputImport(name="reservedConcurrentExecutions")
     private final @Nullable Input<Integer> reservedConcurrentExecutions;
 
@@ -131,6 +187,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.reservedConcurrentExecutions == null ? Input.empty() : this.reservedConcurrentExecutions;
     }
 
+    /**
+     * The Amazon Resource Name (ARN) of the function's execution role.
+     * 
+     */
     @InputImport(name="role", required=true)
     private final Input<String> role;
 
@@ -138,6 +198,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.role;
     }
 
+    /**
+     * The identifier of the function's runtime.
+     * 
+     */
     @InputImport(name="runtime")
     private final @Nullable Input<String> runtime;
 
@@ -145,6 +209,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.runtime == null ? Input.empty() : this.runtime;
     }
 
+    /**
+     * A list of tags to apply to the function.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<FunctionTagArgs>> tags;
 
@@ -152,6 +220,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The amount of time that Lambda allows a function to run before stopping it. The default is 3 seconds. The maximum allowed value is 900 seconds.
+     * 
+     */
     @InputImport(name="timeout")
     private final @Nullable Input<Integer> timeout;
 
@@ -159,6 +231,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.timeout == null ? Input.empty() : this.timeout;
     }
 
+    /**
+     * Set Mode to Active to sample and trace a subset of incoming requests with AWS X-Ray.
+     * 
+     */
     @InputImport(name="tracingConfig")
     private final @Nullable Input<FunctionTracingConfigArgs> tracingConfig;
 
@@ -166,6 +242,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.tracingConfig == null ? Input.empty() : this.tracingConfig;
     }
 
+    /**
+     * For network connectivity to AWS resources in a VPC, specify a list of security groups and subnets in the VPC.
+     * 
+     */
     @InputImport(name="vpcConfig")
     private final @Nullable Input<FunctionVpcConfigArgs> vpcConfig;
 

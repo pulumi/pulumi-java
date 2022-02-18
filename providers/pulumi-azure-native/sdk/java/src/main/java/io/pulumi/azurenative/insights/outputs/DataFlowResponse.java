@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DataFlowResponse {
+    /**
+     * List of destinations for this data flow.
+     * 
+     */
     private final @Nullable List<String> destinations;
+    /**
+     * List of streams for this data flow.
+     * 
+     */
     private final @Nullable List<String> streams;
 
     @OutputCustomType.Constructor({"destinations","streams"})
@@ -22,9 +30,17 @@ public final class DataFlowResponse {
         this.streams = streams;
     }
 
+    /**
+     * List of destinations for this data flow.
+     * 
+     */
     public List<String> getDestinations() {
         return this.destinations == null ? List.of() : this.destinations;
     }
+    /**
+     * List of streams for this data flow.
+     * 
+     */
     public List<String> getStreams() {
         return this.streams == null ? List.of() : this.streams;
     }

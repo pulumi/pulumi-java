@@ -18,6 +18,10 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final RouteFilterRuleArgs Empty = new RouteFilterRuleArgs();
 
+    /**
+     * The access type of the rule.
+     * 
+     */
     @InputImport(name="access", required=true)
     private final Input<Either<String,Access>> access;
 
@@ -25,6 +29,10 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
         return this.access;
     }
 
+    /**
+     * The collection for bgp community values to filter on. e.g. ['12076:5010','12076:5020'].
+     * 
+     */
     @InputImport(name="communities", required=true)
     private final Input<List<String>> communities;
 
@@ -32,6 +40,10 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
         return this.communities;
     }
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -39,6 +51,10 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * Resource location.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -46,6 +62,10 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -53,6 +73,10 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -60,6 +84,10 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the route filter.
+     * 
+     */
     @InputImport(name="routeFilterName", required=true)
     private final Input<String> routeFilterName;
 
@@ -67,6 +95,10 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
         return this.routeFilterName;
     }
 
+    /**
+     * The rule type of the rule.
+     * 
+     */
     @InputImport(name="routeFilterRuleType", required=true)
     private final Input<Either<String,RouteFilterRuleType>> routeFilterRuleType;
 
@@ -74,6 +106,10 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
         return this.routeFilterRuleType;
     }
 
+    /**
+     * The name of the route filter rule.
+     * 
+     */
     @InputImport(name="ruleName")
     private final @Nullable Input<String> ruleName;
 

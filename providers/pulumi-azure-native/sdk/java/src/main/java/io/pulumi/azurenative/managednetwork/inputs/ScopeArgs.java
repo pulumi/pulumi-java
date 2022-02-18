@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Scope of a Managed Network
+ * 
+ */
 public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ScopeArgs Empty = new ScopeArgs();
 
+    /**
+     * The collection of management groups covered by the Managed Network
+     * 
+     */
     @InputImport(name="managementGroups")
     private final @Nullable Input<List<ResourceIdArgs>> managementGroups;
 
@@ -22,6 +30,10 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
         return this.managementGroups == null ? Input.empty() : this.managementGroups;
     }
 
+    /**
+     * The collection of  subnets covered by the Managed Network
+     * 
+     */
     @InputImport(name="subnets")
     private final @Nullable Input<List<ResourceIdArgs>> subnets;
 
@@ -29,6 +41,10 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
         return this.subnets == null ? Input.empty() : this.subnets;
     }
 
+    /**
+     * The collection of subscriptions covered by the Managed Network
+     * 
+     */
     @InputImport(name="subscriptions")
     private final @Nullable Input<List<ResourceIdArgs>> subscriptions;
 
@@ -36,6 +52,10 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
         return this.subscriptions == null ? Input.empty() : this.subscriptions;
     }
 
+    /**
+     * The collection of virtual nets covered by the Managed Network
+     * 
+     */
     @InputImport(name="virtualNetworks")
     private final @Nullable Input<List<ResourceIdArgs>> virtualNetworks;
 

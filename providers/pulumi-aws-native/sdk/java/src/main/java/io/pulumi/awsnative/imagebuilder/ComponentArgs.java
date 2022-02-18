@@ -17,6 +17,10 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ComponentArgs Empty = new ComponentArgs();
 
+    /**
+     * The change description of the component.
+     * 
+     */
     @InputImport(name="changeDescription")
     private final @Nullable Input<String> changeDescription;
 
@@ -24,6 +28,10 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
         return this.changeDescription == null ? Input.empty() : this.changeDescription;
     }
 
+    /**
+     * The data of the component.
+     * 
+     */
     @InputImport(name="data")
     private final @Nullable Input<String> data;
 
@@ -31,6 +39,10 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
         return this.data == null ? Input.empty() : this.data;
     }
 
+    /**
+     * The description of the component.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -38,6 +50,10 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The KMS key identifier used to encrypt the component.
+     * 
+     */
     @InputImport(name="kmsKeyId")
     private final @Nullable Input<String> kmsKeyId;
 
@@ -45,6 +61,10 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
     }
 
+    /**
+     * The name of the component.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -52,6 +72,10 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The platform of the component.
+     * 
+     */
     @InputImport(name="platform", required=true)
     private final Input<ComponentPlatform> platform;
 
@@ -59,6 +83,10 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
         return this.platform;
     }
 
+    /**
+     * The operating system (OS) version supported by the component.
+     * 
+     */
     @InputImport(name="supportedOsVersions")
     private final @Nullable Input<List<String>> supportedOsVersions;
 
@@ -66,6 +94,10 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
         return this.supportedOsVersions == null ? Input.empty() : this.supportedOsVersions;
     }
 
+    /**
+     * The tags associated with the component.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Object> tags;
 
@@ -73,6 +105,10 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The uri of the component.
+     * 
+     */
     @InputImport(name="uri")
     private final @Nullable Input<String> uri;
 
@@ -80,6 +116,10 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
         return this.uri == null ? Input.empty() : this.uri;
     }
 
+    /**
+     * The version of the component.
+     * 
+     */
     @InputImport(name="version", required=true)
     private final Input<String> version;
 

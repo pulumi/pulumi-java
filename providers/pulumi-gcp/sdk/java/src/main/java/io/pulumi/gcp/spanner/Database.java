@@ -16,51 +16,161 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * A Cloud Spanner Database which is hosted on a Spanner instance.
+ * 
+ * To get more information about Database, see:
+ * 
+ * * [API documentation](https://cloud.google.com/spanner/docs/reference/rest/v1/projects.instances.databases)
+ * * How-to Guides
+ *     * [Official Documentation](https://cloud.google.com/spanner/)
+ * 
+ * > **Warning:** It is strongly recommended to set `lifecycle { prevent_destroy = true }` on databases in order to prevent accidental data loss.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * Database can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:spanner/database:Database default projects/{{project}}/instances/{{instance}}/databases/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:spanner/database:Database default instances/{{instance}}/databases/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:spanner/database:Database default {{project}}/{{instance}}/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:spanner/database:Database default {{instance}}/{{name}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:spanner/database:Database")
 public class Database extends io.pulumi.resources.CustomResource {
+    /**
+     * An optional list of DDL statements to run inside the newly created
+     * database. Statements can create tables, indexes, etc. These statements
+     * execute atomically with the creation of the database: if there is an
+     * error in any statement, the database is not created.
+     * 
+     */
     @OutputExport(name="ddls", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> ddls;
 
+    /**
+     * @return An optional list of DDL statements to run inside the newly created
+     * database. Statements can create tables, indexes, etc. These statements
+     * execute atomically with the creation of the database: if there is an
+     * error in any statement, the database is not created.
+     * 
+     */
     public Output</* @Nullable */ List<String>> getDdls() {
         return this.ddls;
     }
+    /**
+     * Whether or not to allow the provider to destroy the instance. Unless this field is set to false
+     * in state, a `destroy` or `update` that would delete the instance will fail.
+     * 
+     */
     @OutputExport(name="deletionProtection", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> deletionProtection;
 
+    /**
+     * @return Whether or not to allow the provider to destroy the instance. Unless this field is set to false
+     * in state, a `destroy` or `update` that would delete the instance will fail.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getDeletionProtection() {
         return this.deletionProtection;
     }
+    /**
+     * Encryption configuration for the database
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="encryptionConfig", type=DatabaseEncryptionConfig.class, parameters={})
     private Output</* @Nullable */ DatabaseEncryptionConfig> encryptionConfig;
 
+    /**
+     * @return Encryption configuration for the database
+     * Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ DatabaseEncryptionConfig> getEncryptionConfig() {
         return this.encryptionConfig;
     }
+    /**
+     * The instance to create the database on.
+     * 
+     */
     @OutputExport(name="instance", type=String.class, parameters={})
     private Output<String> instance;
 
+    /**
+     * @return The instance to create the database on.
+     * 
+     */
     public Output<String> getInstance() {
         return this.instance;
     }
+    /**
+     * A unique identifier for the database, which cannot be changed after
+     * the instance is created. Values are of the form [a-z][-a-z0-9]*[a-z0-9].
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return A unique identifier for the database, which cannot be changed after
+     * the instance is created. Values are of the form [a-z][-a-z0-9]*[a-z0-9].
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * An explanation of the status of the database.
+     * 
+     */
     @OutputExport(name="state", type=String.class, parameters={})
     private Output<String> state;
 
+    /**
+     * @return An explanation of the status of the database.
+     * 
+     */
     public Output<String> getState() {
         return this.state;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Database(String name, DatabaseArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:spanner/database:Database", name, args == null ? DatabaseArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -76,6 +186,15 @@ public class Database extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Database get(String name, Input<String> id, @Nullable DatabaseState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Database(name, id, state, options);
     }

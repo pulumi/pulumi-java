@@ -16,14 +16,50 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ApiPortalPropertiesResponse {
+    /**
+     * The array of resource Ids of gateway to integrate with API portal.
+     * 
+     */
     private final @Nullable List<String> gatewayIds;
+    /**
+     * Indicate if only https is allowed.
+     * 
+     */
     private final @Nullable Boolean httpsOnly;
+    /**
+     * Collection of instances belong to API portal.
+     * 
+     */
     private final List<ApiPortalInstanceResponse> instances;
+    /**
+     * State of the API portal.
+     * 
+     */
     private final String provisioningState;
+    /**
+     * Indicates whether the API portal exposes endpoint.
+     * 
+     */
     private final @Nullable Boolean $public;
+    /**
+     * The requested resource quantity for required CPU and Memory.
+     * 
+     */
     private final ApiPortalResourceRequestsResponse resourceRequests;
+    /**
+     * Collection of OpenAPI source URL locations.
+     * 
+     */
     private final @Nullable List<String> sourceUrls;
+    /**
+     * Single sign-on related configuration
+     * 
+     */
     private final @Nullable SsoPropertiesResponse ssoProperties;
+    /**
+     * URL of the API portal, exposed when 'public' is true.
+     * 
+     */
     private final String url;
 
     @OutputCustomType.Constructor({"gatewayIds","httpsOnly","instances","provisioningState","$public","resourceRequests","sourceUrls","ssoProperties","url"})
@@ -48,30 +84,66 @@ public final class ApiPortalPropertiesResponse {
         this.url = Objects.requireNonNull(url);
     }
 
+    /**
+     * The array of resource Ids of gateway to integrate with API portal.
+     * 
+     */
     public List<String> getGatewayIds() {
         return this.gatewayIds == null ? List.of() : this.gatewayIds;
     }
+    /**
+     * Indicate if only https is allowed.
+     * 
+     */
     public Optional<Boolean> getHttpsOnly() {
         return Optional.ofNullable(this.httpsOnly);
     }
+    /**
+     * Collection of instances belong to API portal.
+     * 
+     */
     public List<ApiPortalInstanceResponse> getInstances() {
         return this.instances;
     }
+    /**
+     * State of the API portal.
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Indicates whether the API portal exposes endpoint.
+     * 
+     */
     public Optional<Boolean> get$public() {
         return Optional.ofNullable(this.$public);
     }
+    /**
+     * The requested resource quantity for required CPU and Memory.
+     * 
+     */
     public ApiPortalResourceRequestsResponse getResourceRequests() {
         return this.resourceRequests;
     }
+    /**
+     * Collection of OpenAPI source URL locations.
+     * 
+     */
     public List<String> getSourceUrls() {
         return this.sourceUrls == null ? List.of() : this.sourceUrls;
     }
+    /**
+     * Single sign-on related configuration
+     * 
+     */
     public Optional<SsoPropertiesResponse> getSsoProperties() {
         return Optional.ofNullable(this.ssoProperties);
     }
+    /**
+     * URL of the API portal, exposed when 'public' is true.
+     * 
+     */
     public String getUrl() {
         return this.url;
     }

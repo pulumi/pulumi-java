@@ -14,6 +14,11 @@ public final class GetIstioCanonicalServiceArgs extends io.pulumi.resources.Invo
 
     public static final GetIstioCanonicalServiceArgs Empty = new GetIstioCanonicalServiceArgs();
 
+    /**
+     * The name of the canonical service underlying this service.
+     * Corresponds to the destination_canonical_service_name metric label in label in Istio metrics.
+     * 
+     */
     @InputImport(name="canonicalService", required=true)
     private final String canonicalService;
 
@@ -21,6 +26,11 @@ public final class GetIstioCanonicalServiceArgs extends io.pulumi.resources.Invo
         return this.canonicalService;
     }
 
+    /**
+     * The namespace of the canonical service underlying this service.
+     * Corresponds to the destination_canonical_service_namespace metric label in Istio metrics.
+     * 
+     */
     @InputImport(name="canonicalServiceNamespace", required=true)
     private final String canonicalServiceNamespace;
 
@@ -28,6 +38,11 @@ public final class GetIstioCanonicalServiceArgs extends io.pulumi.resources.Invo
         return this.canonicalServiceNamespace;
     }
 
+    /**
+     * Identifier for the mesh in which this Istio service is defined.
+     * Corresponds to the meshUid metric label in Istio metrics.
+     * 
+     */
     @InputImport(name="meshUid", required=true)
     private final String meshUid;
 
@@ -35,6 +50,11 @@ public final class GetIstioCanonicalServiceArgs extends io.pulumi.resources.Invo
         return this.meshUid;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

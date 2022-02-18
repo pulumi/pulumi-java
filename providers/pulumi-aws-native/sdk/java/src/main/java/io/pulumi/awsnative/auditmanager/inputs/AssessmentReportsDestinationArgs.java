@@ -11,6 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The destination in which evidence reports are stored for the specified assessment.
+ * 
+ */
 public final class AssessmentReportsDestinationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AssessmentReportsDestinationArgs Empty = new AssessmentReportsDestinationArgs();

@@ -15,6 +15,11 @@ public final class CertificateCertificateDescriptionConfigValueArgs extends io.p
 
     public static final CertificateCertificateDescriptionConfigValueArgs Empty = new CertificateCertificateDescriptionConfigValueArgs();
 
+    /**
+     * Indicates the intended use for keys that correspond to a certificate.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="keyUsages")
     private final @Nullable Input<List<CertificateCertificateDescriptionConfigValueKeyUsageArgs>> keyUsages;
 

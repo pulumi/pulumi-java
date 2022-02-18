@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Plan data for an extension resource.
+ * 
+ */
 public final class ExtensionResourcePlanArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ExtensionResourcePlanArgs Empty = new ExtensionResourcePlanArgs();
 
+    /**
+     * Name of the plan.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -21,6 +29,10 @@ public final class ExtensionResourcePlanArgs extends io.pulumi.resources.Resourc
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Product name.
+     * 
+     */
     @InputImport(name="product")
     private final @Nullable Input<String> product;
 
@@ -28,6 +40,10 @@ public final class ExtensionResourcePlanArgs extends io.pulumi.resources.Resourc
         return this.product == null ? Input.empty() : this.product;
     }
 
+    /**
+     * Optional: the promotion code associated with the plan.
+     * 
+     */
     @InputImport(name="promotionCode")
     private final @Nullable Input<String> promotionCode;
 
@@ -35,6 +51,10 @@ public final class ExtensionResourcePlanArgs extends io.pulumi.resources.Resourc
         return this.promotionCode == null ? Input.empty() : this.promotionCode;
     }
 
+    /**
+     * Name of the extension publisher.
+     * 
+     */
     @InputImport(name="publisher")
     private final @Nullable Input<String> publisher;
 
@@ -42,6 +62,10 @@ public final class ExtensionResourcePlanArgs extends io.pulumi.resources.Resourc
         return this.publisher == null ? Input.empty() : this.publisher;
     }
 
+    /**
+     * A string that uniquely identifies the plan version.
+     * 
+     */
     @InputImport(name="version")
     private final @Nullable Input<String> version;
 

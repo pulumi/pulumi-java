@@ -15,10 +15,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A dashboard lens.
+ * 
+ */
 public final class DashboardLensResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DashboardLensResponse Empty = new DashboardLensResponse();
 
+    /**
+     * The dashboard len's metadata.
+     * 
+     */
     @InputImport(name="metadata")
     private final @Nullable Map<String,Object> metadata;
 
@@ -26,6 +34,10 @@ public final class DashboardLensResponse extends io.pulumi.resources.InvokeArgs 
         return this.metadata == null ? Map.of() : this.metadata;
     }
 
+    /**
+     * The lens order.
+     * 
+     */
     @InputImport(name="order", required=true)
     private final Integer order;
 
@@ -33,6 +45,10 @@ public final class DashboardLensResponse extends io.pulumi.resources.InvokeArgs 
         return this.order;
     }
 
+    /**
+     * The dashboard parts.
+     * 
+     */
     @InputImport(name="parts", required=true)
     private final List<DashboardPartsResponse> parts;
 

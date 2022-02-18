@@ -15,6 +15,10 @@ public final class SecurityPolicyRuleHttpHeaderActionArgs extends io.pulumi.reso
 
     public static final SecurityPolicyRuleHttpHeaderActionArgs Empty = new SecurityPolicyRuleHttpHeaderActionArgs();
 
+    /**
+     * The list of request headers to add or overwrite if they're already present.
+     * 
+     */
     @InputImport(name="requestHeadersToAdds")
     private final @Nullable Input<List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs>> requestHeadersToAdds;
 

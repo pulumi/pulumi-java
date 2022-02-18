@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWorkloadNetworkVMGroup {
+/**
+ * NSX VM Group
+ * API Version: 2020-07-17-preview.
+ * 
+ *
+ * NSX VM Group
+ * 
+ */
     public static CompletableFuture<GetWorkloadNetworkVMGroupResult> invokeAsync(GetWorkloadNetworkVMGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getWorkloadNetworkVMGroup", TypeShape.of(GetWorkloadNetworkVMGroupResult.class), args == null ? GetWorkloadNetworkVMGroupArgs.Empty : args, Utilities.withVersion(options));
     }

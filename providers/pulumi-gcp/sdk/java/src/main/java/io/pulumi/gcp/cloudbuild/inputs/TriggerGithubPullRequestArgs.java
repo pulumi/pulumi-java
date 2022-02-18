@@ -15,6 +15,10 @@ public final class TriggerGithubPullRequestArgs extends io.pulumi.resources.Reso
 
     public static final TriggerGithubPullRequestArgs Empty = new TriggerGithubPullRequestArgs();
 
+    /**
+     * Regex of branches to match.  Specify only one of branch or tag.
+     * 
+     */
     @InputImport(name="branch", required=true)
     private final Input<String> branch;
 
@@ -22,6 +26,11 @@ public final class TriggerGithubPullRequestArgs extends io.pulumi.resources.Reso
         return this.branch;
     }
 
+    /**
+     * Whether to block builds on a "/gcbrun" comment from a repository owner or collaborator.
+     * Possible values are `COMMENTS_DISABLED`, `COMMENTS_ENABLED`, and `COMMENTS_ENABLED_FOR_EXTERNAL_CONTRIBUTORS_ONLY`.
+     * 
+     */
     @InputImport(name="commentControl")
     private final @Nullable Input<String> commentControl;
 
@@ -29,6 +38,10 @@ public final class TriggerGithubPullRequestArgs extends io.pulumi.resources.Reso
         return this.commentControl == null ? Input.empty() : this.commentControl;
     }
 
+    /**
+     * Only trigger a build if the revision regex does NOT match the revision regex.
+     * 
+     */
     @InputImport(name="invertRegex")
     private final @Nullable Input<Boolean> invertRegex;
 

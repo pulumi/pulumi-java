@@ -11,8 +11,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AzureActiveDirectoryResponse {
+    /**
+     * Azure active directory client application id.
+     * 
+     */
     private final @Nullable String clientApplication;
+    /**
+     * Azure active directory cluster application id.
+     * 
+     */
     private final @Nullable String clusterApplication;
+    /**
+     * Azure active directory tenant id.
+     * 
+     */
     private final @Nullable String tenantId;
 
     @OutputCustomType.Constructor({"clientApplication","clusterApplication","tenantId"})
@@ -25,12 +37,24 @@ public final class AzureActiveDirectoryResponse {
         this.tenantId = tenantId;
     }
 
+    /**
+     * Azure active directory client application id.
+     * 
+     */
     public Optional<String> getClientApplication() {
         return Optional.ofNullable(this.clientApplication);
     }
+    /**
+     * Azure active directory cluster application id.
+     * 
+     */
     public Optional<String> getClusterApplication() {
         return Optional.ofNullable(this.clusterApplication);
     }
+    /**
+     * Azure active directory tenant id.
+     * 
+     */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }

@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Client supplied parameters used to create a new attestation provider.
+ * 
+ */
 public final class AttestationServiceCreationSpecificParamsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AttestationServiceCreationSpecificParamsArgs Empty = new AttestationServiceCreationSpecificParamsArgs();
 
+    /**
+     * JSON Web Key Set defining a set of X.509 Certificates that will represent the parent certificate for the signing certificate used for policy operations
+     * 
+     */
     @InputImport(name="policySigningCertificates")
     private final @Nullable Input<JSONWebKeySetArgs> policySigningCertificates;
 

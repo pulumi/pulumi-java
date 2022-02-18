@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AddressPrefixItemResponse {
+    /**
+     * Address prefix.
+     * 
+     */
     private final @Nullable String addressPrefix;
+    /**
+     * Address prefix type.
+     * 
+     */
     private final @Nullable String addressPrefixType;
 
     @OutputCustomType.Constructor({"addressPrefix","addressPrefixType"})
@@ -22,9 +30,17 @@ public final class AddressPrefixItemResponse {
         this.addressPrefixType = addressPrefixType;
     }
 
+    /**
+     * Address prefix.
+     * 
+     */
     public Optional<String> getAddressPrefix() {
         return Optional.ofNullable(this.addressPrefix);
     }
+    /**
+     * Address prefix type.
+     * 
+     */
     public Optional<String> getAddressPrefixType() {
         return Optional.ofNullable(this.addressPrefixType);
     }

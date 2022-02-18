@@ -19,6 +19,10 @@ public final class ResponsePlanArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResponsePlanArgs Empty = new ResponsePlanArgs();
 
+    /**
+     * The list of actions.
+     * 
+     */
     @InputImport(name="actions")
     private final @Nullable Input<List<ResponsePlanActionArgs>> actions;
 
@@ -33,6 +37,10 @@ public final class ResponsePlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.chatChannel == null ? Input.empty() : this.chatChannel;
     }
 
+    /**
+     * The display name of the response plan.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -40,6 +48,10 @@ public final class ResponsePlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The list of engagements to use.
+     * 
+     */
     @InputImport(name="engagements")
     private final @Nullable Input<List<String>> engagements;
 
@@ -54,6 +66,10 @@ public final class ResponsePlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.incidentTemplate;
     }
 
+    /**
+     * The name of the response plan.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -61,6 +77,10 @@ public final class ResponsePlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The tags to apply to the response plan.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<ResponsePlanTagArgs>> tags;
 

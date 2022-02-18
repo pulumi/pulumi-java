@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFhirStore {
+/**
+ * Gets the configuration of the specified FHIR store.
+ * 
+ */
     public static CompletableFuture<GetFhirStoreResult> invokeAsync(GetFhirStoreArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:healthcare/v1beta1:getFhirStore", TypeShape.of(GetFhirStoreResult.class), args == null ? GetFhirStoreArgs.Empty : args, Utilities.withVersion(options));
     }

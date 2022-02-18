@@ -13,6 +13,12 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicy
 
     public static final RegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyArgs Empty = new RegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyArgs();
 
+    /**
+     * The default RegionBackendService resource. Before
+     * forwarding the request to backendService, the loadbalancer applies any relevant
+     * headerActions specified as part of this backendServiceWeight.
+     * 
+     */
     @InputImport(name="backendService", required=true)
     private final Input<String> backendService;
 

@@ -15,6 +15,11 @@ public final class GuestPoliciesRecipeArtifactGcsArgs extends io.pulumi.resource
 
     public static final GuestPoliciesRecipeArtifactGcsArgs Empty = new GuestPoliciesRecipeArtifactGcsArgs();
 
+    /**
+     * Bucket of the Google Cloud Storage object. Given an example URL: https://storage.googleapis.com/my-bucket/foo/bar#1234567
+     * this value would be my-bucket.
+     * 
+     */
     @InputImport(name="bucket")
     private final @Nullable Input<String> bucket;
 
@@ -22,6 +27,11 @@ public final class GuestPoliciesRecipeArtifactGcsArgs extends io.pulumi.resource
         return this.bucket == null ? Input.empty() : this.bucket;
     }
 
+    /**
+     * Must be provided if allowInsecure is false. Generation number of the Google Cloud Storage object.
+     * https://storage.googleapis.com/my-bucket/foo/bar#1234567 this value would be 1234567.
+     * 
+     */
     @InputImport(name="generation")
     private final @Nullable Input<Integer> generation;
 
@@ -29,6 +39,11 @@ public final class GuestPoliciesRecipeArtifactGcsArgs extends io.pulumi.resource
         return this.generation == null ? Input.empty() : this.generation;
     }
 
+    /**
+     * Name of the Google Cloud Storage object. Given an example URL: https://storage.googleapis.com/my-bucket/foo/bar#1234567
+     * this value would be foo/bar.
+     * 
+     */
     @InputImport(name="object")
     private final @Nullable Input<String> object;
 

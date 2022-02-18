@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetContainerGroup {
+/**
+ * A container group.
+ * API Version: 2021-03-01.
+ * 
+ *
+ * A container group.
+ * 
+ */
     public static CompletableFuture<GetContainerGroupResult> invokeAsync(GetContainerGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerinstance:getContainerGroup", TypeShape.of(GetContainerGroupResult.class), args == null ? GetContainerGroupArgs.Empty : args, Utilities.withVersion(options));
     }

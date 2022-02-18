@@ -12,6 +12,10 @@ public final class GetObjectTypeArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetObjectTypeArgs Empty = new GetObjectTypeArgs();
 
+    /**
+     * The unique name of the domain.
+     * 
+     */
     @InputImport(name="domainName", required=true)
     private final String domainName;
 
@@ -19,6 +23,10 @@ public final class GetObjectTypeArgs extends io.pulumi.resources.InvokeArgs {
         return this.domainName;
     }
 
+    /**
+     * The name of the profile object type.
+     * 
+     */
     @InputImport(name="objectTypeName", required=true)
     private final String objectTypeName;
 

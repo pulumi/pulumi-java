@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAlert {
+/**
+ * Resource Type definition for AWS::LookoutMetrics::Alert
+ * 
+ */
     public static CompletableFuture<GetAlertResult> invokeAsync(GetAlertArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lookoutmetrics:getAlert", TypeShape.of(GetAlertResult.class), args == null ? GetAlertArgs.Empty : args, Utilities.withVersion(options));
     }

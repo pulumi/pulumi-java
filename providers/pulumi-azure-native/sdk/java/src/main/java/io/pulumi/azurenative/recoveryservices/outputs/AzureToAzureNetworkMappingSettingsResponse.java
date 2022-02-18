@@ -11,8 +11,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AzureToAzureNetworkMappingSettingsResponse {
+    /**
+     * Gets the Instance type.
+     * Expected value is 'AzureToAzure'.
+     * 
+     */
     private final String instanceType;
+    /**
+     * The primary fabric location.
+     * 
+     */
     private final @Nullable String primaryFabricLocation;
+    /**
+     * The recovery fabric location.
+     * 
+     */
     private final @Nullable String recoveryFabricLocation;
 
     @OutputCustomType.Constructor({"instanceType","primaryFabricLocation","recoveryFabricLocation"})
@@ -25,12 +38,25 @@ public final class AzureToAzureNetworkMappingSettingsResponse {
         this.recoveryFabricLocation = recoveryFabricLocation;
     }
 
+    /**
+     * Gets the Instance type.
+     * Expected value is 'AzureToAzure'.
+     * 
+     */
     public String getInstanceType() {
         return this.instanceType;
     }
+    /**
+     * The primary fabric location.
+     * 
+     */
     public Optional<String> getPrimaryFabricLocation() {
         return Optional.ofNullable(this.primaryFabricLocation);
     }
+    /**
+     * The recovery fabric location.
+     * 
+     */
     public Optional<String> getRecoveryFabricLocation() {
         return Optional.ofNullable(this.recoveryFabricLocation);
     }

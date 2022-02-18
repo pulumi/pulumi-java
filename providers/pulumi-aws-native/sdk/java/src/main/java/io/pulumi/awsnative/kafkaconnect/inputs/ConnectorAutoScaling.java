@@ -10,10 +10,18 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
+/**
+ * Details about auto scaling of a connector.
+ * 
+ */
 public final class ConnectorAutoScaling extends io.pulumi.resources.InvokeArgs {
 
     public static final ConnectorAutoScaling Empty = new ConnectorAutoScaling();
 
+    /**
+     * The maximum number of workers for a connector.
+     * 
+     */
     @InputImport(name="maxWorkerCount", required=true)
     private final Integer maxWorkerCount;
 
@@ -21,6 +29,10 @@ public final class ConnectorAutoScaling extends io.pulumi.resources.InvokeArgs {
         return this.maxWorkerCount;
     }
 
+    /**
+     * Specifies how many MSK Connect Units (MCU) as the minimum scaling unit.
+     * 
+     */
     @InputImport(name="mcuCount", required=true)
     private final Integer mcuCount;
 
@@ -28,6 +40,10 @@ public final class ConnectorAutoScaling extends io.pulumi.resources.InvokeArgs {
         return this.mcuCount;
     }
 
+    /**
+     * The minimum number of workers for a connector.
+     * 
+     */
     @InputImport(name="minWorkerCount", required=true)
     private final Integer minWorkerCount;
 

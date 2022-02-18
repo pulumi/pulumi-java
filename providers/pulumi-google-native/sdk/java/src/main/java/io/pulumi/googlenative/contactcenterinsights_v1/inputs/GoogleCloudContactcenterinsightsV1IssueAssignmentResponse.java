@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Information about the issue.
+ * 
+ */
 public final class GoogleCloudContactcenterinsightsV1IssueAssignmentResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudContactcenterinsightsV1IssueAssignmentResponse Empty = new GoogleCloudContactcenterinsightsV1IssueAssignmentResponse();
 
+    /**
+     * Immutable. Display name of the assigned issue. This field is set at time of analyis and immutable since then.
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final String displayName;
 
@@ -20,6 +28,10 @@ public final class GoogleCloudContactcenterinsightsV1IssueAssignmentResponse ext
         return this.displayName;
     }
 
+    /**
+     * Resource name of the assigned issue.
+     * 
+     */
     @InputImport(name="issue", required=true)
     private final String issue;
 
@@ -27,6 +39,10 @@ public final class GoogleCloudContactcenterinsightsV1IssueAssignmentResponse ext
         return this.issue;
     }
 
+    /**
+     * Score indicating the likelihood of the issue assignment. currently bounded on [0,1].
+     * 
+     */
     @InputImport(name="score", required=true)
     private final Double score;
 

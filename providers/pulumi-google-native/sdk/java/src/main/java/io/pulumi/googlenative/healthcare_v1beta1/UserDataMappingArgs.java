@@ -23,6 +23,10 @@ public final class UserDataMappingArgs extends io.pulumi.resources.ResourceArgs 
         return this.consentStoreId;
     }
 
+    /**
+     * A unique identifier for the mapped resource.
+     * 
+     */
     @InputImport(name="dataId", required=true)
     private final Input<String> dataId;
 
@@ -44,6 +48,10 @@ public final class UserDataMappingArgs extends io.pulumi.resources.ResourceArgs 
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Resource name of the User data mapping, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/userDataMappings/{user_data_mapping_id}`.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -58,6 +66,10 @@ public final class UserDataMappingArgs extends io.pulumi.resources.ResourceArgs 
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Attributes of the resource. Only explicitly set attributes are displayed here. Attribute definitions with defaults set implicitly apply to these User data mappings. Attributes listed here must be single valued, that is, exactly one value is specified for the field "values" in each Attribute.
+     * 
+     */
     @InputImport(name="resourceAttributes")
     private final @Nullable Input<List<AttributeArgs>> resourceAttributes;
 
@@ -65,6 +77,10 @@ public final class UserDataMappingArgs extends io.pulumi.resources.ResourceArgs 
         return this.resourceAttributes == null ? Input.empty() : this.resourceAttributes;
     }
 
+    /**
+     * User's UUID provided by the client.
+     * 
+     */
     @InputImport(name="userId", required=true)
     private final Input<String> userId;
 

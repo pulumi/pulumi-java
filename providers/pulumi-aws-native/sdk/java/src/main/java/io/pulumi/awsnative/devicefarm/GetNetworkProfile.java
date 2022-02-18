@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNetworkProfile {
+/**
+ * AWS::DeviceFarm::NetworkProfile creates a new DF Network Profile
+ * 
+ */
     public static CompletableFuture<GetNetworkProfileResult> invokeAsync(GetNetworkProfileArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:devicefarm:getNetworkProfile", TypeShape.of(GetNetworkProfileResult.class), args == null ? GetNetworkProfileArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The type of AAD object the object identifier refers to.
+     * 
+     */
     @EnumType
     public enum AADObjectType {
         User("User"),

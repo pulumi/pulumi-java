@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Definition of which streams are sent to which destinations.
+ * 
+ */
 public final class DataFlowResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DataFlowResponse Empty = new DataFlowResponse();
 
+    /**
+     * List of destinations for this data flow.
+     * 
+     */
     @InputImport(name="destinations")
     private final @Nullable List<String> destinations;
 
@@ -22,6 +30,10 @@ public final class DataFlowResponse extends io.pulumi.resources.InvokeArgs {
         return this.destinations == null ? List.of() : this.destinations;
     }
 
+    /**
+     * List of streams for this data flow.
+     * 
+     */
     @InputImport(name="streams")
     private final @Nullable List<String> streams;
 

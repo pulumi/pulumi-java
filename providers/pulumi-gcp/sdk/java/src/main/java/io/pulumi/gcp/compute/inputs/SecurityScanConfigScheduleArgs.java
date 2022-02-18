@@ -15,6 +15,10 @@ public final class SecurityScanConfigScheduleArgs extends io.pulumi.resources.Re
 
     public static final SecurityScanConfigScheduleArgs Empty = new SecurityScanConfigScheduleArgs();
 
+    /**
+     * The duration of time between executions in days
+     * 
+     */
     @InputImport(name="intervalDurationDays", required=true)
     private final Input<Integer> intervalDurationDays;
 
@@ -22,6 +26,12 @@ public final class SecurityScanConfigScheduleArgs extends io.pulumi.resources.Re
         return this.intervalDurationDays;
     }
 
+    /**
+     * A timestamp indicates when the next run will be scheduled. The value is refreshed
+     * by the server after each run. If unspecified, it will default to current server time,
+     * which means the scan will be scheduled to start immediately.
+     * 
+     */
     @InputImport(name="scheduleTime")
     private final @Nullable Input<String> scheduleTime;
 

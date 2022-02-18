@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Rule of type network.
+ * 
+ */
 public final class NetworkRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NetworkRuleArgs Empty = new NetworkRuleArgs();
 
+    /**
+     * Description of the rule.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -24,6 +32,10 @@ public final class NetworkRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * List of destination IP addresses or Service Tags.
+     * 
+     */
     @InputImport(name="destinationAddresses")
     private final @Nullable Input<List<String>> destinationAddresses;
 
@@ -31,6 +43,10 @@ public final class NetworkRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.destinationAddresses == null ? Input.empty() : this.destinationAddresses;
     }
 
+    /**
+     * List of destination FQDNs.
+     * 
+     */
     @InputImport(name="destinationFqdns")
     private final @Nullable Input<List<String>> destinationFqdns;
 
@@ -38,6 +54,10 @@ public final class NetworkRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.destinationFqdns == null ? Input.empty() : this.destinationFqdns;
     }
 
+    /**
+     * List of destination IpGroups for this rule.
+     * 
+     */
     @InputImport(name="destinationIpGroups")
     private final @Nullable Input<List<String>> destinationIpGroups;
 
@@ -45,6 +65,10 @@ public final class NetworkRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.destinationIpGroups == null ? Input.empty() : this.destinationIpGroups;
     }
 
+    /**
+     * List of destination ports.
+     * 
+     */
     @InputImport(name="destinationPorts")
     private final @Nullable Input<List<String>> destinationPorts;
 
@@ -52,6 +76,10 @@ public final class NetworkRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.destinationPorts == null ? Input.empty() : this.destinationPorts;
     }
 
+    /**
+     * Array of FirewallPolicyRuleNetworkProtocols.
+     * 
+     */
     @InputImport(name="ipProtocols")
     private final @Nullable Input<List<Either<String,FirewallPolicyRuleNetworkProtocol>>> ipProtocols;
 
@@ -59,6 +87,10 @@ public final class NetworkRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.ipProtocols == null ? Input.empty() : this.ipProtocols;
     }
 
+    /**
+     * Name of the rule.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -66,6 +98,11 @@ public final class NetworkRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Rule Type.
+     * Expected value is 'NetworkRule'.
+     * 
+     */
     @InputImport(name="ruleType", required=true)
     private final Input<String> ruleType;
 
@@ -73,6 +110,10 @@ public final class NetworkRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.ruleType;
     }
 
+    /**
+     * List of source IP addresses for this rule.
+     * 
+     */
     @InputImport(name="sourceAddresses")
     private final @Nullable Input<List<String>> sourceAddresses;
 
@@ -80,6 +121,10 @@ public final class NetworkRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceAddresses == null ? Input.empty() : this.sourceAddresses;
     }
 
+    /**
+     * List of source IpGroups for this rule.
+     * 
+     */
     @InputImport(name="sourceIpGroups")
     private final @Nullable Input<List<String>> sourceIpGroups;
 

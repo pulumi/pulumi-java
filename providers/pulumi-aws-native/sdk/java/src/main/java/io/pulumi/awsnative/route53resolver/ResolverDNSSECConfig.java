@@ -13,27 +13,61 @@ import io.pulumi.core.internal.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Resource schema for AWS::Route53Resolver::ResolverDNSSECConfig.
+ * 
+ */
 @ResourceType(type="aws-native:route53resolver:ResolverDNSSECConfig")
 public class ResolverDNSSECConfig extends io.pulumi.resources.CustomResource {
+    /**
+     * AccountId
+     * 
+     */
     @OutputExport(name="ownerId", type=String.class, parameters={})
     private Output<String> ownerId;
 
+    /**
+     * @return AccountId
+     * 
+     */
     public Output<String> getOwnerId() {
         return this.ownerId;
     }
+    /**
+     * ResourceId
+     * 
+     */
     @OutputExport(name="resourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceId;
 
+    /**
+     * @return ResourceId
+     * 
+     */
     public Output</* @Nullable */ String> getResourceId() {
         return this.resourceId;
     }
+    /**
+     * ResolverDNSSECValidationStatus, possible values are ENABLING, ENABLED, DISABLING AND DISABLED.
+     * 
+     */
     @OutputExport(name="validationStatus", type=ResolverDNSSECConfigValidationStatus.class, parameters={})
     private Output<ResolverDNSSECConfigValidationStatus> validationStatus;
 
+    /**
+     * @return ResolverDNSSECValidationStatus, possible values are ENABLING, ENABLED, DISABLING AND DISABLED.
+     * 
+     */
     public Output<ResolverDNSSECConfigValidationStatus> getValidationStatus() {
         return this.validationStatus;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ResolverDNSSECConfig(String name, @Nullable ResolverDNSSECConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:route53resolver:ResolverDNSSECConfig", name, args == null ? ResolverDNSSECConfigArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -49,6 +83,14 @@ public class ResolverDNSSECConfig extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ResolverDNSSECConfig get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ResolverDNSSECConfig(name, id, options);
     }

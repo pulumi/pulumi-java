@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAnomalyDetector {
+/**
+ * An Amazon Lookout for Metrics Detector
+ * 
+ */
     public static CompletableFuture<GetAnomalyDetectorResult> invokeAsync(GetAnomalyDetectorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lookoutmetrics:getAnomalyDetector", TypeShape.of(GetAnomalyDetectorResult.class), args == null ? GetAnomalyDetectorArgs.Empty : args, Utilities.withVersion(options));
     }

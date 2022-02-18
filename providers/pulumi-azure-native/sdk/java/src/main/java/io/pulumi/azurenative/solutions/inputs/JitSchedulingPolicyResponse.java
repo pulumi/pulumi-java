@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The JIT scheduling policies.
+ * 
+ */
 public final class JitSchedulingPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final JitSchedulingPolicyResponse Empty = new JitSchedulingPolicyResponse();
@@ -19,6 +23,10 @@ public final class JitSchedulingPolicyResponse extends io.pulumi.resources.Invok
         return this.duration;
     }
 
+    /**
+     * The start time of the request.
+     * 
+     */
     @InputImport(name="startTime", required=true)
     private final String startTime;
 
@@ -26,6 +34,10 @@ public final class JitSchedulingPolicyResponse extends io.pulumi.resources.Invok
         return this.startTime;
     }
 
+    /**
+     * The type of JIT schedule.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

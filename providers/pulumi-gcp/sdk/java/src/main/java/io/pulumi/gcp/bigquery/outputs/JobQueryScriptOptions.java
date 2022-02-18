@@ -11,8 +11,22 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class JobQueryScriptOptions {
+    /**
+     * Determines which statement in the script represents the "key result",
+     * used to populate the schema and query results of the script job.
+     * Possible values are `LAST` and `FIRST_SELECT`.
+     * 
+     */
     private final @Nullable String keyResultStatement;
+    /**
+     * Limit on the number of bytes billed per statement. Exceeding this budget results in an error.
+     * 
+     */
     private final @Nullable String statementByteBudget;
+    /**
+     * Timeout period for each statement in a script.
+     * 
+     */
     private final @Nullable String statementTimeoutMs;
 
     @OutputCustomType.Constructor({"keyResultStatement","statementByteBudget","statementTimeoutMs"})
@@ -25,12 +39,26 @@ public final class JobQueryScriptOptions {
         this.statementTimeoutMs = statementTimeoutMs;
     }
 
+    /**
+     * Determines which statement in the script represents the "key result",
+     * used to populate the schema and query results of the script job.
+     * Possible values are `LAST` and `FIRST_SELECT`.
+     * 
+     */
     public Optional<String> getKeyResultStatement() {
         return Optional.ofNullable(this.keyResultStatement);
     }
+    /**
+     * Limit on the number of bytes billed per statement. Exceeding this budget results in an error.
+     * 
+     */
     public Optional<String> getStatementByteBudget() {
         return Optional.ofNullable(this.statementByteBudget);
     }
+    /**
+     * Timeout period for each statement in a script.
+     * 
+     */
     public Optional<String> getStatementTimeoutMs() {
         return Optional.ofNullable(this.statementTimeoutMs);
     }

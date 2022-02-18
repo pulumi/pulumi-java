@@ -17,6 +17,10 @@ public final class ObjectAccessControlState extends io.pulumi.resources.Resource
 
     public static final ObjectAccessControlState Empty = new ObjectAccessControlState();
 
+    /**
+     * The name of the bucket.
+     * 
+     */
     @InputImport(name="bucket")
     private final @Nullable Input<String> bucket;
 
@@ -24,6 +28,10 @@ public final class ObjectAccessControlState extends io.pulumi.resources.Resource
         return this.bucket == null ? Input.empty() : this.bucket;
     }
 
+    /**
+     * The domain associated with the entity.
+     * 
+     */
     @InputImport(name="domain")
     private final @Nullable Input<String> domain;
 
@@ -31,6 +39,10 @@ public final class ObjectAccessControlState extends io.pulumi.resources.Resource
         return this.domain == null ? Input.empty() : this.domain;
     }
 
+    /**
+     * The email address associated with the entity.
+     * 
+     */
     @InputImport(name="email")
     private final @Nullable Input<String> email;
 
@@ -38,6 +50,18 @@ public final class ObjectAccessControlState extends io.pulumi.resources.Resource
         return this.email == null ? Input.empty() : this.email;
     }
 
+    /**
+     * The entity holding the permission, in one of the following forms:
+     * * user-{{userId}}
+     * * user-{{email}} (such as "user-liz@example.com")
+     * * group-{{groupId}}
+     * * group-{{email}} (such as "group-example@googlegroups.com")
+     * * domain-{{domain}} (such as "domain-example.com")
+     * * project-team-{{projectId}}
+     * * allUsers
+     * * allAuthenticatedUsers
+     * 
+     */
     @InputImport(name="entity")
     private final @Nullable Input<String> entity;
 
@@ -45,6 +69,10 @@ public final class ObjectAccessControlState extends io.pulumi.resources.Resource
         return this.entity == null ? Input.empty() : this.entity;
     }
 
+    /**
+     * The ID for the entity
+     * 
+     */
     @InputImport(name="entityId")
     private final @Nullable Input<String> entityId;
 
@@ -52,6 +80,10 @@ public final class ObjectAccessControlState extends io.pulumi.resources.Resource
         return this.entityId == null ? Input.empty() : this.entityId;
     }
 
+    /**
+     * The content generation of the object, if applied to an object.
+     * 
+     */
     @InputImport(name="generation")
     private final @Nullable Input<Integer> generation;
 
@@ -59,6 +91,10 @@ public final class ObjectAccessControlState extends io.pulumi.resources.Resource
         return this.generation == null ? Input.empty() : this.generation;
     }
 
+    /**
+     * The name of the object to apply the access control to.
+     * 
+     */
     @InputImport(name="object")
     private final @Nullable Input<String> object;
 
@@ -66,6 +102,10 @@ public final class ObjectAccessControlState extends io.pulumi.resources.Resource
         return this.object == null ? Input.empty() : this.object;
     }
 
+    /**
+     * The project team associated with the entity
+     * 
+     */
     @InputImport(name="projectTeams")
     private final @Nullable Input<List<ObjectAccessControlProjectTeamGetArgs>> projectTeams;
 
@@ -73,6 +113,11 @@ public final class ObjectAccessControlState extends io.pulumi.resources.Resource
         return this.projectTeams == null ? Input.empty() : this.projectTeams;
     }
 
+    /**
+     * The access permission for the entity.
+     * Possible values are `OWNER` and `READER`.
+     * 
+     */
     @InputImport(name="role")
     private final @Nullable Input<String> role;
 

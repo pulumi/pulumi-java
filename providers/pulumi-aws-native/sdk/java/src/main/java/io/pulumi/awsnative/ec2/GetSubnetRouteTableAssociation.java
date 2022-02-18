@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSubnetRouteTableAssociation {
+/**
+ * Resource Type definition for AWS::EC2::SubnetRouteTableAssociation
+ * 
+ */
     public static CompletableFuture<GetSubnetRouteTableAssociationResult> invokeAsync(GetSubnetRouteTableAssociationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ec2:getSubnetRouteTableAssociation", TypeShape.of(GetSubnetRouteTableAssociationResult.class), args == null ? GetSubnetRouteTableAssociationArgs.Empty : args, Utilities.withVersion(options));
     }

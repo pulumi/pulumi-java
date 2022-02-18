@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The security profile which contains Ssh public key for the HDInsight cluster.
+ * 
+ */
 public final class SecurityProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SecurityProfileResponse Empty = new SecurityProfileResponse();
 
+    /**
+     * The resource ID of the user's Azure Active Directory Domain Service.
+     * 
+     */
     @InputImport(name="aaddsResourceId")
     private final @Nullable String aaddsResourceId;
 
@@ -22,6 +30,10 @@ public final class SecurityProfileResponse extends io.pulumi.resources.InvokeArg
         return this.aaddsResourceId == null ? Optional.empty() : Optional.ofNullable(this.aaddsResourceId);
     }
 
+    /**
+     * Optional. The Distinguished Names for cluster user groups
+     * 
+     */
     @InputImport(name="clusterUsersGroupDNs")
     private final @Nullable List<String> clusterUsersGroupDNs;
 
@@ -29,6 +41,10 @@ public final class SecurityProfileResponse extends io.pulumi.resources.InvokeArg
         return this.clusterUsersGroupDNs == null ? List.of() : this.clusterUsersGroupDNs;
     }
 
+    /**
+     * The directory type.
+     * 
+     */
     @InputImport(name="directoryType")
     private final @Nullable String directoryType;
 
@@ -36,6 +52,10 @@ public final class SecurityProfileResponse extends io.pulumi.resources.InvokeArg
         return this.directoryType == null ? Optional.empty() : Optional.ofNullable(this.directoryType);
     }
 
+    /**
+     * The organization's active directory domain.
+     * 
+     */
     @InputImport(name="domain")
     private final @Nullable String domain;
 
@@ -43,6 +63,10 @@ public final class SecurityProfileResponse extends io.pulumi.resources.InvokeArg
         return this.domain == null ? Optional.empty() : Optional.ofNullable(this.domain);
     }
 
+    /**
+     * The domain admin password.
+     * 
+     */
     @InputImport(name="domainUserPassword")
     private final @Nullable String domainUserPassword;
 
@@ -50,6 +74,10 @@ public final class SecurityProfileResponse extends io.pulumi.resources.InvokeArg
         return this.domainUserPassword == null ? Optional.empty() : Optional.ofNullable(this.domainUserPassword);
     }
 
+    /**
+     * The domain user account that will have admin privileges on the cluster.
+     * 
+     */
     @InputImport(name="domainUsername")
     private final @Nullable String domainUsername;
 
@@ -57,6 +85,10 @@ public final class SecurityProfileResponse extends io.pulumi.resources.InvokeArg
         return this.domainUsername == null ? Optional.empty() : Optional.ofNullable(this.domainUsername);
     }
 
+    /**
+     * The LDAPS protocol URLs to communicate with the Active Directory.
+     * 
+     */
     @InputImport(name="ldapsUrls")
     private final @Nullable List<String> ldapsUrls;
 
@@ -64,6 +96,10 @@ public final class SecurityProfileResponse extends io.pulumi.resources.InvokeArg
         return this.ldapsUrls == null ? List.of() : this.ldapsUrls;
     }
 
+    /**
+     * User assigned identity that has permissions to read and create cluster-related artifacts in the user's AADDS.
+     * 
+     */
     @InputImport(name="msiResourceId")
     private final @Nullable String msiResourceId;
 
@@ -71,6 +107,10 @@ public final class SecurityProfileResponse extends io.pulumi.resources.InvokeArg
         return this.msiResourceId == null ? Optional.empty() : Optional.ofNullable(this.msiResourceId);
     }
 
+    /**
+     * The organizational unit within the Active Directory to place the cluster and service accounts.
+     * 
+     */
     @InputImport(name="organizationalUnitDN")
     private final @Nullable String organizationalUnitDN;
 

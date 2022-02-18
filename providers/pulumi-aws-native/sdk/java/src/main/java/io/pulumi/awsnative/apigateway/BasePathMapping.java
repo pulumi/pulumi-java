@@ -12,33 +12,75 @@ import io.pulumi.core.internal.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Resource Type definition for AWS::ApiGateway::BasePathMapping
+ * 
+ */
 @ResourceType(type="aws-native:apigateway:BasePathMapping")
 public class BasePathMapping extends io.pulumi.resources.CustomResource {
+    /**
+     * The base path name that callers of the API must provide in the URL after the domain name.
+     * 
+     */
     @OutputExport(name="basePath", type=String.class, parameters={})
     private Output</* @Nullable */ String> basePath;
 
+    /**
+     * @return The base path name that callers of the API must provide in the URL after the domain name.
+     * 
+     */
     public Output</* @Nullable */ String> getBasePath() {
         return this.basePath;
     }
+    /**
+     * The DomainName of an AWS::ApiGateway::DomainName resource.
+     * 
+     */
     @OutputExport(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
+    /**
+     * @return The DomainName of an AWS::ApiGateway::DomainName resource.
+     * 
+     */
     public Output<String> getDomainName() {
         return this.domainName;
     }
+    /**
+     * The ID of the API.
+     * 
+     */
     @OutputExport(name="restApiId", type=String.class, parameters={})
     private Output</* @Nullable */ String> restApiId;
 
+    /**
+     * @return The ID of the API.
+     * 
+     */
     public Output</* @Nullable */ String> getRestApiId() {
         return this.restApiId;
     }
+    /**
+     * The name of the API's stage.
+     * 
+     */
     @OutputExport(name="stage", type=String.class, parameters={})
     private Output</* @Nullable */ String> stage;
 
+    /**
+     * @return The name of the API's stage.
+     * 
+     */
     public Output</* @Nullable */ String> getStage() {
         return this.stage;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public BasePathMapping(String name, BasePathMappingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:apigateway:BasePathMapping", name, args == null ? BasePathMappingArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -54,6 +96,14 @@ public class BasePathMapping extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static BasePathMapping get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new BasePathMapping(name, id, options);
     }

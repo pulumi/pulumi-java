@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AutoHealCustomActionResponse {
+    /**
+     * Executable to be run.
+     * 
+     */
     private final @Nullable String exe;
+    /**
+     * Parameters for the executable.
+     * 
+     */
     private final @Nullable String parameters;
 
     @OutputCustomType.Constructor({"exe","parameters"})
@@ -22,9 +30,17 @@ public final class AutoHealCustomActionResponse {
         this.parameters = parameters;
     }
 
+    /**
+     * Executable to be run.
+     * 
+     */
     public Optional<String> getExe() {
         return Optional.ofNullable(this.exe);
     }
+    /**
+     * Parameters for the executable.
+     * 
+     */
     public Optional<String> getParameters() {
         return Optional.ofNullable(this.parameters);
     }

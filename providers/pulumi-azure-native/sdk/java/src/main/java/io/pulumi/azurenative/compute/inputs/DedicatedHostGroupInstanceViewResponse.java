@@ -15,6 +15,10 @@ public final class DedicatedHostGroupInstanceViewResponse extends io.pulumi.reso
 
     public static final DedicatedHostGroupInstanceViewResponse Empty = new DedicatedHostGroupInstanceViewResponse();
 
+    /**
+     * List of instance view of the dedicated hosts under the dedicated host group.
+     * 
+     */
     @InputImport(name="hosts")
     private final @Nullable List<DedicatedHostInstanceViewWithNameResponse> hosts;
 

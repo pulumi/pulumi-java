@@ -12,6 +12,10 @@ public final class GetDataConnectionArgs extends io.pulumi.resources.InvokeArgs 
 
     public static final GetDataConnectionArgs Empty = new GetDataConnectionArgs();
 
+    /**
+     * The name of the Kusto cluster.
+     * 
+     */
     @InputImport(name="clusterName", required=true)
     private final String clusterName;
 
@@ -19,6 +23,10 @@ public final class GetDataConnectionArgs extends io.pulumi.resources.InvokeArgs 
         return this.clusterName;
     }
 
+    /**
+     * The name of the data connection.
+     * 
+     */
     @InputImport(name="dataConnectionName", required=true)
     private final String dataConnectionName;
 
@@ -26,6 +34,10 @@ public final class GetDataConnectionArgs extends io.pulumi.resources.InvokeArgs 
         return this.dataConnectionName;
     }
 
+    /**
+     * The name of the database in the Kusto cluster.
+     * 
+     */
     @InputImport(name="databaseName", required=true)
     private final String databaseName;
 
@@ -33,6 +45,10 @@ public final class GetDataConnectionArgs extends io.pulumi.resources.InvokeArgs 
         return this.databaseName;
     }
 
+    /**
+     * The name of the resource group containing the Kusto cluster.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

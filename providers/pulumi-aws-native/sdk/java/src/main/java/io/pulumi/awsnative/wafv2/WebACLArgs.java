@@ -57,6 +57,10 @@ public final class WebACLArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Collection of Rules.
+     * 
+     */
     @InputImport(name="rules")
     private final @Nullable Input<List<WebACLRuleArgs>> rules;
 

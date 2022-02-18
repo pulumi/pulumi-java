@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The VPC security groups and subnets that are attached to a Lambda function. When you connect a function to a VPC, Lambda creates an elastic network interface for each combination of security group and subnet in the function's VPC configuration. The function can only access resources and the internet through that VPC.
+ * 
+ */
 public final class FunctionVpcConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FunctionVpcConfigArgs Empty = new FunctionVpcConfigArgs();
 
+    /**
+     * A list of VPC security groups IDs.
+     * 
+     */
     @InputImport(name="securityGroupIds")
     private final @Nullable Input<List<String>> securityGroupIds;
 
@@ -22,6 +30,10 @@ public final class FunctionVpcConfigArgs extends io.pulumi.resources.ResourceArg
         return this.securityGroupIds == null ? Input.empty() : this.securityGroupIds;
     }
 
+    /**
+     * A list of VPC subnet IDs.
+     * 
+     */
     @InputImport(name="subnetIds")
     private final @Nullable Input<List<String>> subnetIds;
 

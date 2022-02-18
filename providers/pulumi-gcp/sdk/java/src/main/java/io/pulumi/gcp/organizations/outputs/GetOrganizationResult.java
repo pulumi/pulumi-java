@@ -11,12 +11,36 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetOrganizationResult {
+    /**
+     * Timestamp when the Organization was created. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * 
+     */
     private final String createTime;
+    /**
+     * The Google for Work customer ID of the Organization.
+     * 
+     */
     private final String directoryCustomerId;
     private final String domain;
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
+    /**
+     * The Organization's current lifecycle state.
+     * 
+     */
     private final String lifecycleState;
+    /**
+     * The resource name of the Organization in the form `organizations/{organization_id}`.
+     * 
+     */
     private final String name;
+    /**
+     * The Organization ID.
+     * 
+     */
     private final String orgId;
     private final @Nullable String organization;
 
@@ -40,24 +64,48 @@ public final class GetOrganizationResult {
         this.organization = organization;
     }
 
+    /**
+     * Timestamp when the Organization was created. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * 
+     */
     public String getCreateTime() {
         return this.createTime;
     }
+    /**
+     * The Google for Work customer ID of the Organization.
+     * 
+     */
     public String getDirectoryCustomerId() {
         return this.directoryCustomerId;
     }
     public String getDomain() {
         return this.domain;
     }
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * The Organization's current lifecycle state.
+     * 
+     */
     public String getLifecycleState() {
         return this.lifecycleState;
     }
+    /**
+     * The resource name of the Organization in the form `organizations/{organization_id}`.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The Organization ID.
+     * 
+     */
     public String getOrgId() {
         return this.orgId;
     }

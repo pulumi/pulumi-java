@@ -10,9 +10,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetIotDpsResourcePrivateEndpointConnectionResult {
+    /**
+     * The resource identifier.
+     * 
+     */
     private final String id;
+    /**
+     * The resource name.
+     * 
+     */
     private final String name;
+    /**
+     * The properties of a private endpoint connection
+     * 
+     */
     private final PrivateEndpointConnectionPropertiesResponse properties;
+    /**
+     * The resource type.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"id","name","properties","type"})
@@ -27,15 +43,31 @@ public final class GetIotDpsResourcePrivateEndpointConnectionResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * The resource identifier.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * The resource name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The properties of a private endpoint connection
+     * 
+     */
     public PrivateEndpointConnectionPropertiesResponse getProperties() {
         return this.properties;
     }
+    /**
+     * The resource type.
+     * 
+     */
     public String getType() {
         return this.type;
     }

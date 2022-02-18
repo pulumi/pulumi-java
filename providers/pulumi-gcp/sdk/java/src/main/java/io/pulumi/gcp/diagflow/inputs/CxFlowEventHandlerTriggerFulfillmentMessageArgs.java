@@ -14,6 +14,10 @@ public final class CxFlowEventHandlerTriggerFulfillmentMessageArgs extends io.pu
 
     public static final CxFlowEventHandlerTriggerFulfillmentMessageArgs Empty = new CxFlowEventHandlerTriggerFulfillmentMessageArgs();
 
+    /**
+     * A collection of text responses.
+     * 
+     */
     @InputImport(name="text")
     private final @Nullable Input<CxFlowEventHandlerTriggerFulfillmentMessageTextArgs> text;
 

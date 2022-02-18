@@ -17,6 +17,10 @@ public final class JobPysparkConfigArgs extends io.pulumi.resources.ResourceArgs
 
     public static final JobPysparkConfigArgs Empty = new JobPysparkConfigArgs();
 
+    /**
+     * HCFS URIs of archives to be extracted in the working directory of .jar, .tar, .tar.gz, .tgz, and .zip.
+     * 
+     */
     @InputImport(name="archiveUris")
     private final @Nullable Input<List<String>> archiveUris;
 
@@ -24,6 +28,10 @@ public final class JobPysparkConfigArgs extends io.pulumi.resources.ResourceArgs
         return this.archiveUris == null ? Input.empty() : this.archiveUris;
     }
 
+    /**
+     * The arguments to pass to the driver. Do not include arguments, such as -libjars or -Dfoo=bar, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
+     * 
+     */
     @InputImport(name="args")
     private final @Nullable Input<List<String>> args;
 
@@ -31,6 +39,10 @@ public final class JobPysparkConfigArgs extends io.pulumi.resources.ResourceArgs
         return this.args == null ? Input.empty() : this.args;
     }
 
+    /**
+     * HCFS URIs of files to be copied to the working directory of Hadoop drivers and distributed tasks. Useful for naively parallel tasks.
+     * 
+     */
     @InputImport(name="fileUris")
     private final @Nullable Input<List<String>> fileUris;
 
@@ -38,6 +50,10 @@ public final class JobPysparkConfigArgs extends io.pulumi.resources.ResourceArgs
         return this.fileUris == null ? Input.empty() : this.fileUris;
     }
 
+    /**
+     * HCFS URIs of jar files to be added to the Spark CLASSPATH.
+     * 
+     */
     @InputImport(name="jarFileUris")
     private final @Nullable Input<List<String>> jarFileUris;
 
@@ -52,6 +68,10 @@ public final class JobPysparkConfigArgs extends io.pulumi.resources.ResourceArgs
         return this.loggingConfig == null ? Input.empty() : this.loggingConfig;
     }
 
+    /**
+     * The HCFS URI of the main Python file to use as the driver. Must be a .py file.
+     * 
+     */
     @InputImport(name="mainPythonFileUri", required=true)
     private final Input<String> mainPythonFileUri;
 
@@ -59,6 +79,10 @@ public final class JobPysparkConfigArgs extends io.pulumi.resources.ResourceArgs
         return this.mainPythonFileUri;
     }
 
+    /**
+     * A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<Map<String,String>> properties;
 
@@ -66,6 +90,10 @@ public final class JobPysparkConfigArgs extends io.pulumi.resources.ResourceArgs
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * HCFS file URIs of Python files to pass to the PySpark framework. Supported file types: .py, .egg, and .zip.
+     * 
+     */
     @InputImport(name="pythonFileUris")
     private final @Nullable Input<List<String>> pythonFileUris;
 

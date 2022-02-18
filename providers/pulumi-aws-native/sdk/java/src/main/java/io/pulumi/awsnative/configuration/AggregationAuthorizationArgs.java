@@ -16,6 +16,10 @@ public final class AggregationAuthorizationArgs extends io.pulumi.resources.Reso
 
     public static final AggregationAuthorizationArgs Empty = new AggregationAuthorizationArgs();
 
+    /**
+     * The 12-digit account ID of the account authorized to aggregate data.
+     * 
+     */
     @InputImport(name="authorizedAccountId", required=true)
     private final Input<String> authorizedAccountId;
 
@@ -23,6 +27,10 @@ public final class AggregationAuthorizationArgs extends io.pulumi.resources.Reso
         return this.authorizedAccountId;
     }
 
+    /**
+     * The region authorized to collect aggregated data.
+     * 
+     */
     @InputImport(name="authorizedAwsRegion", required=true)
     private final Input<String> authorizedAwsRegion;
 
@@ -30,6 +38,10 @@ public final class AggregationAuthorizationArgs extends io.pulumi.resources.Reso
         return this.authorizedAwsRegion;
     }
 
+    /**
+     * The tags for the AggregationAuthorization.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<AggregationAuthorizationTagArgs>> tags;
 

@@ -11,10 +11,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * ReplicationCycle contains information about the current replication cycle status.
+ * 
+ */
 public final class ReplicationCycleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ReplicationCycleResponse Empty = new ReplicationCycleResponse();
 
+    /**
+     * The time the replication cycle has ended.
+     * 
+     */
     @InputImport(name="endTime", required=true)
     private final String endTime;
 
@@ -22,6 +30,10 @@ public final class ReplicationCycleResponse extends io.pulumi.resources.InvokeAr
         return this.endTime;
     }
 
+    /**
+     * The current progress in percentage of this cycle.
+     * 
+     */
     @InputImport(name="progress", required=true)
     private final Integer progress;
 
@@ -29,6 +41,10 @@ public final class ReplicationCycleResponse extends io.pulumi.resources.InvokeAr
         return this.progress;
     }
 
+    /**
+     * The current progress in percentage of this cycle.
+     * 
+     */
     @InputImport(name="progressPercent", required=true)
     private final Integer progressPercent;
 
@@ -36,6 +52,10 @@ public final class ReplicationCycleResponse extends io.pulumi.resources.InvokeAr
         return this.progressPercent;
     }
 
+    /**
+     * The time the replication cycle has started.
+     * 
+     */
     @InputImport(name="startTime", required=true)
     private final String startTime;
 
@@ -43,6 +63,10 @@ public final class ReplicationCycleResponse extends io.pulumi.resources.InvokeAr
         return this.startTime;
     }
 
+    /**
+     * The cycle's steps list reflecting its progress.
+     * 
+     */
     @InputImport(name="steps", required=true)
     private final List<CycleStepResponse> steps;
 
@@ -50,6 +74,10 @@ public final class ReplicationCycleResponse extends io.pulumi.resources.InvokeAr
         return this.steps;
     }
 
+    /**
+     * The accumulated duration the replication cycle was paused.
+     * 
+     */
     @InputImport(name="totalPauseDuration", required=true)
     private final String totalPauseDuration;
 

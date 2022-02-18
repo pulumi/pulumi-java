@@ -11,7 +11,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class BucketWebsite {
+    /**
+     * Behaves as the bucket's directory index where
+     * missing objects are treated as potential directories.
+     * 
+     */
     private final @Nullable String mainPageSuffix;
+    /**
+     * The custom object to return when a requested
+     * resource is not found.
+     * 
+     */
     private final @Nullable String notFoundPage;
 
     @OutputCustomType.Constructor({"mainPageSuffix","notFoundPage"})
@@ -22,9 +32,19 @@ public final class BucketWebsite {
         this.notFoundPage = notFoundPage;
     }
 
+    /**
+     * Behaves as the bucket's directory index where
+     * missing objects are treated as potential directories.
+     * 
+     */
     public Optional<String> getMainPageSuffix() {
         return Optional.ofNullable(this.mainPageSuffix);
     }
+    /**
+     * The custom object to return when a requested
+     * resource is not found.
+     * 
+     */
     public Optional<String> getNotFoundPage() {
         return Optional.ofNullable(this.notFoundPage);
     }

@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents a group of VM intances that can be identified as having all these labels, for example "env=prod and app=web".
+ * 
+ */
 public final class AssignmentGroupLabelArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AssignmentGroupLabelArgs Empty = new AssignmentGroupLabelArgs();
 
+    /**
+     * Google Compute Engine instance labels that must be present for an instance to be included in this assignment group.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 

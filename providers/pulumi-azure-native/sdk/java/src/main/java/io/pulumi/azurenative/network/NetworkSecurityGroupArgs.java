@@ -17,6 +17,10 @@ public final class NetworkSecurityGroupArgs extends io.pulumi.resources.Resource
 
     public static final NetworkSecurityGroupArgs Empty = new NetworkSecurityGroupArgs();
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -24,6 +28,10 @@ public final class NetworkSecurityGroupArgs extends io.pulumi.resources.Resource
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * Resource location.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -31,6 +39,10 @@ public final class NetworkSecurityGroupArgs extends io.pulumi.resources.Resource
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the network security group.
+     * 
+     */
     @InputImport(name="networkSecurityGroupName")
     private final @Nullable Input<String> networkSecurityGroupName;
 
@@ -38,6 +50,10 @@ public final class NetworkSecurityGroupArgs extends io.pulumi.resources.Resource
         return this.networkSecurityGroupName == null ? Input.empty() : this.networkSecurityGroupName;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -45,6 +61,10 @@ public final class NetworkSecurityGroupArgs extends io.pulumi.resources.Resource
         return this.resourceGroupName;
     }
 
+    /**
+     * A collection of security rules of the network security group.
+     * 
+     */
     @InputImport(name="securityRules")
     private final @Nullable Input<List<SecurityRuleArgs>> securityRules;
 
@@ -52,6 +72,10 @@ public final class NetworkSecurityGroupArgs extends io.pulumi.resources.Resource
         return this.securityRules == null ? Input.empty() : this.securityRules;
     }
 
+    /**
+     * Resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

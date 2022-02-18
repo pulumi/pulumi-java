@@ -22,6 +22,10 @@ public final class AttestorArgs extends io.pulumi.resources.ResourceArgs {
         return this.attestorId;
     }
 
+    /**
+     * Optional. A descriptive comment. This field may be updated. The field may be displayed in chooser dialogs.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -29,6 +33,10 @@ public final class AttestorArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The resource name, in the format: `projects/*{@literal /}attestors/*`. This field may not be updated.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -43,6 +51,10 @@ public final class AttestorArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * A Drydock ATTESTATION_AUTHORITY Note, created by the user.
+     * 
+     */
     @InputImport(name="userOwnedDrydockNote")
     private final @Nullable Input<UserOwnedDrydockNoteArgs> userOwnedDrydockNote;
 

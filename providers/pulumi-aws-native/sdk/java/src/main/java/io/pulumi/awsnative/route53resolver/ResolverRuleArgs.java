@@ -18,6 +18,10 @@ public final class ResolverRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResolverRuleArgs Empty = new ResolverRuleArgs();
 
+    /**
+     * DNS queries for this domain name are forwarded to the IP addresses that are specified in TargetIps
+     * 
+     */
     @InputImport(name="domainName", required=true)
     private final Input<String> domainName;
 
@@ -25,6 +29,10 @@ public final class ResolverRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.domainName;
     }
 
+    /**
+     * The name for the Resolver rule
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -32,6 +40,10 @@ public final class ResolverRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the endpoint that the rule is associated with.
+     * 
+     */
     @InputImport(name="resolverEndpointId")
     private final @Nullable Input<String> resolverEndpointId;
 
@@ -39,6 +51,10 @@ public final class ResolverRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.resolverEndpointId == null ? Input.empty() : this.resolverEndpointId;
     }
 
+    /**
+     * When you want to forward DNS queries for specified domain name to resolvers on your network, specify FORWARD. When you have a forwarding rule to forward DNS queries for a domain to your network and you want Resolver to process queries for a subdomain of that domain, specify SYSTEM.
+     * 
+     */
     @InputImport(name="ruleType", required=true)
     private final Input<ResolverRuleRuleType> ruleType;
 
@@ -46,6 +62,10 @@ public final class ResolverRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.ruleType;
     }
 
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<ResolverRuleTagArgs>> tags;
 
@@ -53,6 +73,10 @@ public final class ResolverRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * An array that contains the IP addresses and ports that an outbound endpoint forwards DNS queries to. Typically, these are the IP addresses of DNS resolvers on your network. Specify IPv4 addresses. IPv6 is not supported.
+     * 
+     */
     @InputImport(name="targetIps")
     private final @Nullable Input<List<ResolverRuleTargetAddressArgs>> targetIps;
 

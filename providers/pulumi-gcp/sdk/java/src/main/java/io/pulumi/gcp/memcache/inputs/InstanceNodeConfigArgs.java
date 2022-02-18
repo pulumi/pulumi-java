@@ -13,6 +13,10 @@ public final class InstanceNodeConfigArgs extends io.pulumi.resources.ResourceAr
 
     public static final InstanceNodeConfigArgs Empty = new InstanceNodeConfigArgs();
 
+    /**
+     * Number of CPUs per node.
+     * 
+     */
     @InputImport(name="cpuCount", required=true)
     private final Input<Integer> cpuCount;
 
@@ -20,6 +24,10 @@ public final class InstanceNodeConfigArgs extends io.pulumi.resources.ResourceAr
         return this.cpuCount;
     }
 
+    /**
+     * Memory size in Mebibytes for each memcache node.
+     * 
+     */
     @InputImport(name="memorySizeMb", required=true)
     private final Input<Integer> memorySizeMb;
 

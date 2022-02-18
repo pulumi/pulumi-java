@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class FileSourceInfoResponse {
+    /**
+     * File share ID.
+     * 
+     */
     private final String shareId;
 
     @OutputCustomType.Constructor({"shareId"})
@@ -16,6 +20,10 @@ public final class FileSourceInfoResponse {
         this.shareId = Objects.requireNonNull(shareId);
     }
 
+    /**
+     * File share ID.
+     * 
+     */
     public String getShareId() {
         return this.shareId;
     }

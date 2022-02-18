@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWirelessGateway {
+/**
+ * Create and manage wireless gateways, including LoRa gateways.
+ * 
+ */
     public static CompletableFuture<GetWirelessGatewayResult> invokeAsync(GetWirelessGatewayArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iotwireless:getWirelessGateway", TypeShape.of(GetWirelessGatewayResult.class), args == null ? GetWirelessGatewayArgs.Empty : args, Utilities.withVersion(options));
     }

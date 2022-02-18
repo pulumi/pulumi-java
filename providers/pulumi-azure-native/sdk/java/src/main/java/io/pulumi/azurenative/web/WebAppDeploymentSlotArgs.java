@@ -16,6 +16,10 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
 
     public static final WebAppDeploymentSlotArgs Empty = new WebAppDeploymentSlotArgs();
 
+    /**
+     * True if deployment is currently active, false if completed and null if not started.
+     * 
+     */
     @InputImport(name="active")
     private final @Nullable Input<Boolean> active;
 
@@ -23,6 +27,10 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
         return this.active == null ? Input.empty() : this.active;
     }
 
+    /**
+     * Who authored the deployment.
+     * 
+     */
     @InputImport(name="author")
     private final @Nullable Input<String> author;
 
@@ -30,6 +38,10 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
         return this.author == null ? Input.empty() : this.author;
     }
 
+    /**
+     * Author email.
+     * 
+     */
     @InputImport(name="authorEmail")
     private final @Nullable Input<String> authorEmail;
 
@@ -37,6 +49,10 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
         return this.authorEmail == null ? Input.empty() : this.authorEmail;
     }
 
+    /**
+     * Who performed the deployment.
+     * 
+     */
     @InputImport(name="deployer")
     private final @Nullable Input<String> deployer;
 
@@ -44,6 +60,10 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
         return this.deployer == null ? Input.empty() : this.deployer;
     }
 
+    /**
+     * Details on deployment.
+     * 
+     */
     @InputImport(name="details")
     private final @Nullable Input<String> details;
 
@@ -51,6 +71,10 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
         return this.details == null ? Input.empty() : this.details;
     }
 
+    /**
+     * End time.
+     * 
+     */
     @InputImport(name="endTime")
     private final @Nullable Input<String> endTime;
 
@@ -58,6 +82,10 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
         return this.endTime == null ? Input.empty() : this.endTime;
     }
 
+    /**
+     * ID of an existing deployment.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -65,6 +93,10 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * Kind of resource.
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -72,6 +104,10 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Details about deployment status.
+     * 
+     */
     @InputImport(name="message")
     private final @Nullable Input<String> message;
 
@@ -79,6 +115,10 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
         return this.message == null ? Input.empty() : this.message;
     }
 
+    /**
+     * Name of the app.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -86,6 +126,10 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
         return this.name;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -93,6 +137,10 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of the deployment slot. If a slot is not specified, the API creates a deployment for the production slot.
+     * 
+     */
     @InputImport(name="slot", required=true)
     private final Input<String> slot;
 
@@ -100,6 +148,10 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
         return this.slot;
     }
 
+    /**
+     * Start time.
+     * 
+     */
     @InputImport(name="startTime")
     private final @Nullable Input<String> startTime;
 
@@ -107,6 +159,10 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
         return this.startTime == null ? Input.empty() : this.startTime;
     }
 
+    /**
+     * Deployment status.
+     * 
+     */
     @InputImport(name="status")
     private final @Nullable Input<Integer> status;
 

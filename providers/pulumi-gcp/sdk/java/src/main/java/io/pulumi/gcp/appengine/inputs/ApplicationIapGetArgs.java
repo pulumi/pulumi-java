@@ -15,6 +15,11 @@ public final class ApplicationIapGetArgs extends io.pulumi.resources.ResourceArg
 
     public static final ApplicationIapGetArgs Empty = new ApplicationIapGetArgs();
 
+    /**
+     * (Optional) Whether the serving infrastructure will authenticate and authorize all incoming requests.
+     * (default is false)
+     * 
+     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 
@@ -22,6 +27,10 @@ public final class ApplicationIapGetArgs extends io.pulumi.resources.ResourceArg
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
+    /**
+     * OAuth2 client ID to use for the authentication flow.
+     * 
+     */
     @InputImport(name="oauth2ClientId", required=true)
     private final Input<String> oauth2ClientId;
 
@@ -29,6 +38,11 @@ public final class ApplicationIapGetArgs extends io.pulumi.resources.ResourceArg
         return this.oauth2ClientId;
     }
 
+    /**
+     * OAuth2 client secret to use for the authentication flow.
+     * The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
+     * 
+     */
     @InputImport(name="oauth2ClientSecret", required=true)
     private final Input<String> oauth2ClientSecret;
 
@@ -36,6 +50,10 @@ public final class ApplicationIapGetArgs extends io.pulumi.resources.ResourceArg
         return this.oauth2ClientSecret;
     }
 
+    /**
+     * Hex-encoded SHA-256 hash of the client secret.
+     * 
+     */
     @InputImport(name="oauth2ClientSecretSha256")
     private final @Nullable Input<String> oauth2ClientSecretSha256;
 

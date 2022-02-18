@@ -9,10 +9,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Replaces a term in the query. Multiple replacement candidates can be specified. All `query_terms` will be replaced with the replacement term. Example: Replace "gShoe" with "google shoe".
+ * 
+ */
 public final class GoogleCloudRetailV2alphaRuleReplacementActionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudRetailV2alphaRuleReplacementActionResponse Empty = new GoogleCloudRetailV2alphaRuleReplacementActionResponse();
 
+    /**
+     * Terms from the search query. Will be replaced by replacement term. Can specify up to 100 terms.
+     * 
+     */
     @InputImport(name="queryTerms", required=true)
     private final List<String> queryTerms;
 
@@ -20,6 +28,10 @@ public final class GoogleCloudRetailV2alphaRuleReplacementActionResponse extends
         return this.queryTerms;
     }
 
+    /**
+     * Term that will be used for replacement.
+     * 
+     */
     @InputImport(name="replacementTerm", required=true)
     private final String replacementTerm;
 
@@ -27,6 +39,10 @@ public final class GoogleCloudRetailV2alphaRuleReplacementActionResponse extends
         return this.replacementTerm;
     }
 
+    /**
+     * Will be [deprecated = true] post migration;
+     * 
+     */
     @InputImport(name="term", required=true)
     private final String term;
 

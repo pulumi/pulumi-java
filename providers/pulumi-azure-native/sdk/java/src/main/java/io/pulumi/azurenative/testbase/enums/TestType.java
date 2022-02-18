@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The type of the test.
+     * 
+     */
     @EnumType
     public enum TestType {
         OutOfBoxTest("OutOfBoxTest"),

@@ -13,10 +13,18 @@ import java.util.Map;
 import java.util.Objects;
 
 
+/**
+ * ProductCatalogItem captures item metadata specific to retail products.
+ * 
+ */
 public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudRecommendationengineV1beta1ProductCatalogItemResponse Empty = new GoogleCloudRecommendationengineV1beta1ProductCatalogItemResponse();
 
+    /**
+     * Optional. The available quantity of the item.
+     * 
+     */
     @InputImport(name="availableQuantity", required=true)
     private final String availableQuantity;
 
@@ -24,6 +32,10 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
         return this.availableQuantity;
     }
 
+    /**
+     * Optional. Canonical URL directly linking to the item detail page with a length limit of 5 KiB..
+     * 
+     */
     @InputImport(name="canonicalProductUri", required=true)
     private final String canonicalProductUri;
 
@@ -31,6 +43,10 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
         return this.canonicalProductUri;
     }
 
+    /**
+     * Optional. A map to pass the costs associated with the product. For example: {"manufacturing": 45.5} The profit of selling this item is computed like so: * If 'exactPrice' is provided, profit = displayPrice - sum(costs) * If 'priceRange' is provided, profit = minPrice - sum(costs)
+     * 
+     */
     @InputImport(name="costs", required=true)
     private final Map<String,String> costs;
 
@@ -38,6 +54,10 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
         return this.costs;
     }
 
+    /**
+     * Optional. Only required if the price is set. Currency code for price/costs. Use three-character ISO-4217 code.
+     * 
+     */
     @InputImport(name="currencyCode", required=true)
     private final String currencyCode;
 
@@ -45,6 +65,10 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
         return this.currencyCode;
     }
 
+    /**
+     * Optional. The exact product price.
+     * 
+     */
     @InputImport(name="exactPrice", required=true)
     private final GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse exactPrice;
 
@@ -52,6 +76,10 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
         return this.exactPrice;
     }
 
+    /**
+     * Optional. Product images for the catalog item.
+     * 
+     */
     @InputImport(name="images", required=true)
     private final List<GoogleCloudRecommendationengineV1beta1ImageResponse> images;
 
@@ -59,6 +87,10 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
         return this.images;
     }
 
+    /**
+     * Optional. The product price range.
+     * 
+     */
     @InputImport(name="priceRange", required=true)
     private final GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse priceRange;
 
@@ -66,6 +98,10 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
         return this.priceRange;
     }
 
+    /**
+     * Optional. Online stock state of the catalog item. Default is `IN_STOCK`.
+     * 
+     */
     @InputImport(name="stockState", required=true)
     private final String stockState;
 

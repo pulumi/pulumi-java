@@ -14,6 +14,10 @@ public final class GetImageArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetImageArgs Empty = new GetImageArgs();
 
+    /**
+     * The family name of the image.
+     * 
+     */
     @InputImport(name="family")
     private final @Nullable String family;
 
@@ -28,6 +32,10 @@ public final class GetImageArgs extends io.pulumi.resources.InvokeArgs {
         return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
     }
 
+    /**
+     * The name of the image.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -35,6 +43,12 @@ public final class GetImageArgs extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The project in which the resource belongs. If it is not
+     * provided, the provider project is used. If you are using a
+     * [public base image][pubimg], be sure to specify the correct Image Project.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

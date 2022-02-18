@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListLocalUserKeys {
+/**
+ * The Storage Account Local User keys.
+ * API Version: 2021-08-01.
+ * 
+ *
+ * The Storage Account Local User keys.
+ * 
+ */
     public static CompletableFuture<ListLocalUserKeysResult> invokeAsync(ListLocalUserKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:listLocalUserKeys", TypeShape.of(ListLocalUserKeysResult.class), args == null ? ListLocalUserKeysArgs.Empty : args, Utilities.withVersion(options));
     }

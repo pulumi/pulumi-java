@@ -19,87 +19,212 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Definition of ARM tracked top level resource.
+ * API Version: 2021-04-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:insights:DataCollectionEndpoint myCollectionEndpoint /subscriptions/703362b3-f278-4e4b-9179-c76eaf41ffc2/resourceGroups/myResourceGroup/providers/Microsoft.Insights/dataCollectionEndpoints/myCollectionEndpoint 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:insights:DataCollectionEndpoint")
 public class DataCollectionEndpoint extends io.pulumi.resources.CustomResource {
+    /**
+     * The endpoint used by agents to access their configuration.
+     * 
+     */
     @OutputExport(name="configurationAccess", type=DataCollectionEndpointResponseConfigurationAccess.class, parameters={})
     private Output</* @Nullable */ DataCollectionEndpointResponseConfigurationAccess> configurationAccess;
 
+    /**
+     * @return The endpoint used by agents to access their configuration.
+     * 
+     */
     public Output</* @Nullable */ DataCollectionEndpointResponseConfigurationAccess> getConfigurationAccess() {
         return this.configurationAccess;
     }
+    /**
+     * Description of the data collection endpoint.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return Description of the data collection endpoint.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * Resource entity tag (ETag).
+     * 
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return Resource entity tag (ETag).
+     * 
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * The immutable ID of this data collection endpoint resource. This property is READ-ONLY.
+     * 
+     */
     @OutputExport(name="immutableId", type=String.class, parameters={})
     private Output</* @Nullable */ String> immutableId;
 
+    /**
+     * @return The immutable ID of this data collection endpoint resource. This property is READ-ONLY.
+     * 
+     */
     public Output</* @Nullable */ String> getImmutableId() {
         return this.immutableId;
     }
+    /**
+     * The kind of the resource.
+     * 
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
+    /**
+     * @return The kind of the resource.
+     * 
+     */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
+    /**
+     * The geo-location where the resource lives.
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives.
+     * 
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * The endpoint used by clients to ingest logs.
+     * 
+     */
     @OutputExport(name="logsIngestion", type=DataCollectionEndpointResponseLogsIngestion.class, parameters={})
     private Output</* @Nullable */ DataCollectionEndpointResponseLogsIngestion> logsIngestion;
 
+    /**
+     * @return The endpoint used by clients to ingest logs.
+     * 
+     */
     public Output</* @Nullable */ DataCollectionEndpointResponseLogsIngestion> getLogsIngestion() {
         return this.logsIngestion;
     }
+    /**
+     * The name of the resource.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Network access control rules for the endpoints.
+     * 
+     */
     @OutputExport(name="networkAcls", type=DataCollectionEndpointResponseNetworkAcls.class, parameters={})
     private Output</* @Nullable */ DataCollectionEndpointResponseNetworkAcls> networkAcls;
 
+    /**
+     * @return Network access control rules for the endpoints.
+     * 
+     */
     public Output</* @Nullable */ DataCollectionEndpointResponseNetworkAcls> getNetworkAcls() {
         return this.networkAcls;
     }
+    /**
+     * The resource provisioning state. This property is READ-ONLY.
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The resource provisioning state. This property is READ-ONLY.
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Metadata pertaining to creation and last modification of the resource.
+     * 
+     */
     @OutputExport(name="systemData", type=DataCollectionEndpointResourceResponseSystemData.class, parameters={})
     private Output<DataCollectionEndpointResourceResponseSystemData> systemData;
 
+    /**
+     * @return Metadata pertaining to creation and last modification of the resource.
+     * 
+     */
     public Output<DataCollectionEndpointResourceResponseSystemData> getSystemData() {
         return this.systemData;
     }
+    /**
+     * Resource tags.
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * The type of the resource.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public DataCollectionEndpoint(String name, DataCollectionEndpointArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:insights:DataCollectionEndpoint", name, args == null ? DataCollectionEndpointArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -118,6 +243,14 @@ public class DataCollectionEndpoint extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static DataCollectionEndpoint get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DataCollectionEndpoint(name, id, options);
     }

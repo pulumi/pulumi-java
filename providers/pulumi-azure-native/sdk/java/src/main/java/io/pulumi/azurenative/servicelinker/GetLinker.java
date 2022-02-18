@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLinker {
+/**
+ * Linker of source and target resource
+ * API Version: 2021-11-01-preview.
+ * 
+ *
+ * Linker of source and target resource
+ * 
+ */
     public static CompletableFuture<GetLinkerResult> invokeAsync(GetLinkerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicelinker:getLinker", TypeShape.of(GetLinkerResult.class), args == null ? GetLinkerArgs.Empty : args, Utilities.withVersion(options));
     }

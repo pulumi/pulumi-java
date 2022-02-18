@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DocumentTag {
+    /**
+     * The name of the tag.
+     * 
+     */
     private final @Nullable String key;
+    /**
+     * The value of the tag.
+     * 
+     */
     private final @Nullable String value;
 
     @OutputCustomType.Constructor({"key","value"})
@@ -22,9 +30,17 @@ public final class DocumentTag {
         this.value = value;
     }
 
+    /**
+     * The name of the tag.
+     * 
+     */
     public Optional<String> getKey() {
         return Optional.ofNullable(this.key);
     }
+    /**
+     * The value of the tag.
+     * 
+     */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }

@@ -17,6 +17,11 @@ public final class URLMapDefaultRouteActionCorsPolicyGetArgs extends io.pulumi.r
 
     public static final URLMapDefaultRouteActionCorsPolicyGetArgs Empty = new URLMapDefaultRouteActionCorsPolicyGetArgs();
 
+    /**
+     * In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
+     * This translates to the Access-Control-Allow-Credentials header.
+     * 
+     */
     @InputImport(name="allowCredentials")
     private final @Nullable Input<Boolean> allowCredentials;
 
@@ -24,6 +29,10 @@ public final class URLMapDefaultRouteActionCorsPolicyGetArgs extends io.pulumi.r
         return this.allowCredentials == null ? Input.empty() : this.allowCredentials;
     }
 
+    /**
+     * Specifies the content for the Access-Control-Allow-Headers header.
+     * 
+     */
     @InputImport(name="allowHeaders")
     private final @Nullable Input<List<String>> allowHeaders;
 
@@ -31,6 +40,10 @@ public final class URLMapDefaultRouteActionCorsPolicyGetArgs extends io.pulumi.r
         return this.allowHeaders == null ? Input.empty() : this.allowHeaders;
     }
 
+    /**
+     * Specifies the content for the Access-Control-Allow-Methods header.
+     * 
+     */
     @InputImport(name="allowMethods")
     private final @Nullable Input<List<String>> allowMethods;
 
@@ -38,6 +51,12 @@ public final class URLMapDefaultRouteActionCorsPolicyGetArgs extends io.pulumi.r
         return this.allowMethods == null ? Input.empty() : this.allowMethods;
     }
 
+    /**
+     * Specifies the regular expression patterns that match allowed origins. For regular expression grammar
+     * please see en.cppreference.com/w/cpp/regex/ecmascript
+     * An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
+     * 
+     */
     @InputImport(name="allowOriginRegexes")
     private final @Nullable Input<List<String>> allowOriginRegexes;
 
@@ -45,6 +64,11 @@ public final class URLMapDefaultRouteActionCorsPolicyGetArgs extends io.pulumi.r
         return this.allowOriginRegexes == null ? Input.empty() : this.allowOriginRegexes;
     }
 
+    /**
+     * Specifies the list of origins that will be allowed to do CORS requests.
+     * An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
+     * 
+     */
     @InputImport(name="allowOrigins")
     private final @Nullable Input<List<String>> allowOrigins;
 
@@ -52,6 +76,10 @@ public final class URLMapDefaultRouteActionCorsPolicyGetArgs extends io.pulumi.r
         return this.allowOrigins == null ? Input.empty() : this.allowOrigins;
     }
 
+    /**
+     * If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
+     * 
+     */
     @InputImport(name="disabled")
     private final @Nullable Input<Boolean> disabled;
 
@@ -59,6 +87,10 @@ public final class URLMapDefaultRouteActionCorsPolicyGetArgs extends io.pulumi.r
         return this.disabled == null ? Input.empty() : this.disabled;
     }
 
+    /**
+     * Specifies the content for the Access-Control-Expose-Headers header.
+     * 
+     */
     @InputImport(name="exposeHeaders")
     private final @Nullable Input<List<String>> exposeHeaders;
 
@@ -66,6 +98,11 @@ public final class URLMapDefaultRouteActionCorsPolicyGetArgs extends io.pulumi.r
         return this.exposeHeaders == null ? Input.empty() : this.exposeHeaders;
     }
 
+    /**
+     * Specifies how long results of a preflight request can be cached in seconds.
+     * This translates to the Access-Control-Max-Age header.
+     * 
+     */
     @InputImport(name="maxAge")
     private final @Nullable Input<Integer> maxAge;
 

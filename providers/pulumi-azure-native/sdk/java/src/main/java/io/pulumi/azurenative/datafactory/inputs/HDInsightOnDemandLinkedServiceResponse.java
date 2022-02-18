@@ -21,10 +21,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * HDInsight ondemand linked service.
+ * 
+ */
 public final class HDInsightOnDemandLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final HDInsightOnDemandLinkedServiceResponse Empty = new HDInsightOnDemandLinkedServiceResponse();
 
+    /**
+     * Specifies additional storage accounts for the HDInsight linked service so that the Data Factory service can register them on your behalf.
+     * 
+     */
     @InputImport(name="additionalLinkedServiceNames")
     private final @Nullable List<LinkedServiceReferenceResponse> additionalLinkedServiceNames;
 
@@ -32,6 +40,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends io.pulumi.reso
         return this.additionalLinkedServiceNames == null ? List.of() : this.additionalLinkedServiceNames;
     }
 
+    /**
+     * List of tags that can be used for describing the linked service.
+     * 
+     */
     @InputImport(name="annotations")
     private final @Nullable List<Object> annotations;
 
@@ -39,6 +51,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends io.pulumi.reso
         return this.annotations == null ? List.of() : this.annotations;
     }
 
+    /**
+     * The prefix of cluster name, postfix will be distinct with timestamp. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="clusterNamePrefix")
     private final @Nullable Object clusterNamePrefix;
 
@@ -46,6 +62,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends io.pulumi.reso
         return this.clusterNamePrefix == null ? Optional.empty() : Optional.ofNullable(this.clusterNamePrefix);
     }
 
+    /**
+     * The password to access the cluster.
+     * 
+     */
     @InputImport(name="clusterPassword")
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clusterPassword;
 
@@ -53,6 +73,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends io.pulumi.reso
         return this.clusterPassword == null ? null : this.clusterPassword;
     }
 
+    /**
+     * The resource group where the cluster belongs. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="clusterResourceGroup", required=true)
     private final Object clusterResourceGroup;
 
@@ -60,6 +84,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends io.pulumi.reso
         return this.clusterResourceGroup;
     }
 
+    /**
+     * Number of worker/data nodes in the cluster. Suggestion value: 4. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="clusterSize", required=true)
     private final Object clusterSize;
 
@@ -67,6 +95,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends io.pulumi.reso
         return this.clusterSize;
     }
 
+    /**
+     * The password to SSH remotely connect cluster’s node (for Linux).
+     * 
+     */
     @InputImport(name="clusterSshPassword")
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clusterSshPassword;
 
@@ -74,6 +106,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends io.pulumi.reso
         return this.clusterSshPassword == null ? null : this.clusterSshPassword;
     }
 
+    /**
+     * The username to SSH remotely connect to cluster’s node (for Linux). Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="clusterSshUserName")
     private final @Nullable Object clusterSshUserName;
 
@@ -81,6 +117,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends io.pulumi.reso
         return this.clusterSshUserName == null ? Optional.empty() : Optional.ofNullable(this.clusterSshUserName);
     }
 
+    /**
+     * The cluster type. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="clusterType")
     private final @Nullable Object clusterType;
 
@@ -88,6 +128,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends io.pulumi.reso
         return this.clusterType == null ? Optional.empty() : Optional.ofNullable(this.clusterType);
     }
 
+    /**
+     * The username to access the cluster. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="clusterUserName")
     private final @Nullable Object clusterUserName;
 
@@ -95,6 +139,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends io.pulumi.reso
         return this.clusterUserName == null ? Optional.empty() : Optional.ofNullable(this.clusterUserName);
     }
 
+    /**
+     * The integration runtime reference.
+     * 
+     */
     @InputImport(name="connectVia")
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
@@ -102,6 +150,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends io.pulumi.reso
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
+    /**
+     * Specifies the core configuration parameters (as in core-site.xml) for the HDInsight cluster to be created.
+     * 
+     */
     @InputImport(name="coreConfiguration")
     private final @Nullable Object coreConfiguration;
 
@@ -109,6 +161,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends io.pulumi.reso
         return this.coreConfiguration == null ? Optional.empty() : Optional.ofNullable(this.coreConfiguration);
     }
 
+    /**
+     * The credential reference containing authentication information.
+     * 
+     */
     @InputImport(name="credential")
     private final @Nullable CredentialReferenceResponse credential;
 
@@ -116,6 +172,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends io.pulumi.reso
         return this.credential == null ? Optional.empty() : Optional.ofNullable(this.credential);
     }
 
+    /**
+     * Specifies the size of the data node for the HDInsight cluster.
+     * 
+     */
     @InputImport(name="dataNodeSize")
     private final @Nullable Object dataNodeSize;
 
@@ -123,6 +183,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends io.pulumi.reso
         return this.dataNodeSize == null ? Optional.empty() : Optional.ofNullable(this.dataNodeSize);
     }
 
+    /**
+     * Linked service description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -130,6 +194,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends io.pulumi.reso
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Object encryptedCredential;
 
@@ -137,6 +205,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends io.pulumi.reso
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
+    /**
+     * Specifies the HBase configuration parameters (hbase-site.xml) for the HDInsight cluster.
+     * 
+     */
     @InputImport(name="hBaseConfiguration")
     private final @Nullable Object hBaseConfiguration;
 
@@ -144,6 +216,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends io.pulumi.reso
         return this.hBaseConfiguration == null ? Optional.empty() : Optional.ofNullable(this.hBaseConfiguration);
     }
 
+    /**
+     * The name of Azure SQL linked service that point to the HCatalog database. The on-demand HDInsight cluster is created by using the Azure SQL database as the metastore.
+     * 
+     */
     @InputImport(name="hcatalogLinkedServiceName")
     private final @Nullable LinkedServiceReferenceResponse hcatalogLinkedServiceName;
 
@@ -151,6 +227,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends io.pulumi.reso
         return this.hcatalogLinkedServiceName == null ? Optional.empty() : Optional.ofNullable(this.hcatalogLinkedServiceName);
     }
 
+    /**
+     * Specifies the HDFS configuration parameters (hdfs-site.xml) for the HDInsight cluster.
+     * 
+     */
     @InputImport(name="hdfsConfiguration")
     private final @Nullable Object hdfsConfiguration;
 
@@ -158,6 +238,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends io.pulumi.reso
         return this.hdfsConfiguration == null ? Optional.empty() : Optional.ofNullable(this.hdfsConfiguration);
     }
 
+    /**
+     * Specifies the size of the head node for the HDInsight cluster.
+     * 
+     */
     @InputImport(name="headNodeSize")
     private final @Nullable Object headNodeSize;
 
@@ -165,6 +249,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends io.pulumi.reso
         return this.headNodeSize == null ? Optional.empty() : Optional.ofNullable(this.headNodeSize);
     }
 
+    /**
+     * Specifies the hive configuration parameters (hive-site.xml) for the HDInsight cluster.
+     * 
+     */
     @InputImport(name="hiveConfiguration")
     private final @Nullable Object hiveConfiguration;
 
@@ -172,6 +260,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends io.pulumi.reso
         return this.hiveConfiguration == null ? Optional.empty() : Optional.ofNullable(this.hiveConfiguration);
     }
 
+    /**
+     * The customer’s subscription to host the cluster. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="hostSubscriptionId", required=true)
     private final Object hostSubscriptionId;
 
@@ -179,6 +271,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends io.pulumi.reso
         return this.hostSubscriptionId;
     }
 
+    /**
+     * Azure Storage linked service to be used by the on-demand cluster for storing and processing data.
+     * 
+     */
     @InputImport(name="linkedServiceName", required=true)
     private final LinkedServiceReferenceResponse linkedServiceName;
 
@@ -186,6 +282,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends io.pulumi.reso
         return this.linkedServiceName;
     }
 
+    /**
+     * Specifies the MapReduce configuration parameters (mapred-site.xml) for the HDInsight cluster.
+     * 
+     */
     @InputImport(name="mapReduceConfiguration")
     private final @Nullable Object mapReduceConfiguration;
 
@@ -193,6 +293,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends io.pulumi.reso
         return this.mapReduceConfiguration == null ? Optional.empty() : Optional.ofNullable(this.mapReduceConfiguration);
     }
 
+    /**
+     * Specifies the Oozie configuration parameters (oozie-site.xml) for the HDInsight cluster.
+     * 
+     */
     @InputImport(name="oozieConfiguration")
     private final @Nullable Object oozieConfiguration;
 
@@ -200,6 +304,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends io.pulumi.reso
         return this.oozieConfiguration == null ? Optional.empty() : Optional.ofNullable(this.oozieConfiguration);
     }
 
+    /**
+     * Parameters for linked service.
+     * 
+     */
     @InputImport(name="parameters")
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
@@ -207,6 +315,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends io.pulumi.reso
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
+    /**
+     * Custom script actions to run on HDI ondemand cluster once it's up. Please refer to https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux?toc=%2Fen-us%2Fazure%2Fhdinsight%2Fr-server%2FTOC.json&bc=%2Fen-us%2Fazure%2Fbread%2Ftoc.json#understanding-script-actions.
+     * 
+     */
     @InputImport(name="scriptActions")
     private final @Nullable List<ScriptActionResponse> scriptActions;
 
@@ -214,6 +326,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends io.pulumi.reso
         return this.scriptActions == null ? List.of() : this.scriptActions;
     }
 
+    /**
+     * The service principal id for the hostSubscriptionId. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="servicePrincipalId")
     private final @Nullable Object servicePrincipalId;
 
@@ -221,6 +337,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends io.pulumi.reso
         return this.servicePrincipalId == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalId);
     }
 
+    /**
+     * The key for the service principal id.
+     * 
+     */
     @InputImport(name="servicePrincipalKey")
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
 
@@ -228,6 +348,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends io.pulumi.reso
         return this.servicePrincipalKey == null ? null : this.servicePrincipalKey;
     }
 
+    /**
+     * The version of spark if the cluster type is 'spark'. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="sparkVersion")
     private final @Nullable Object sparkVersion;
 
@@ -235,6 +359,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends io.pulumi.reso
         return this.sparkVersion == null ? Optional.empty() : Optional.ofNullable(this.sparkVersion);
     }
 
+    /**
+     * Specifies the Storm configuration parameters (storm-site.xml) for the HDInsight cluster.
+     * 
+     */
     @InputImport(name="stormConfiguration")
     private final @Nullable Object stormConfiguration;
 
@@ -242,6 +370,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends io.pulumi.reso
         return this.stormConfiguration == null ? Optional.empty() : Optional.ofNullable(this.stormConfiguration);
     }
 
+    /**
+     * The ARM resource ID for the subnet in the vNet. If virtualNetworkId was specified, then this property is required. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="subnetName")
     private final @Nullable Object subnetName;
 
@@ -249,6 +381,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends io.pulumi.reso
         return this.subnetName == null ? Optional.empty() : Optional.ofNullable(this.subnetName);
     }
 
+    /**
+     * The Tenant id/name to which the service principal belongs. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="tenant", required=true)
     private final Object tenant;
 
@@ -256,6 +392,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends io.pulumi.reso
         return this.tenant;
     }
 
+    /**
+     * The allowed idle time for the on-demand HDInsight cluster. Specifies how long the on-demand HDInsight cluster stays alive after completion of an activity run if there are no other active jobs in the cluster. The minimum value is 5 mins. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="timeToLive", required=true)
     private final Object timeToLive;
 
@@ -263,6 +403,11 @@ public final class HDInsightOnDemandLinkedServiceResponse extends io.pulumi.reso
         return this.timeToLive;
     }
 
+    /**
+     * Type of linked service.
+     * Expected value is 'HDInsightOnDemand'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -270,6 +415,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends io.pulumi.reso
         return this.type;
     }
 
+    /**
+     * Version of the HDInsight cluster.  Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="version", required=true)
     private final Object version;
 
@@ -277,6 +426,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends io.pulumi.reso
         return this.version;
     }
 
+    /**
+     * The ARM resource ID for the vNet to which the cluster should be joined after creation. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="virtualNetworkId")
     private final @Nullable Object virtualNetworkId;
 
@@ -284,6 +437,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends io.pulumi.reso
         return this.virtualNetworkId == null ? Optional.empty() : Optional.ofNullable(this.virtualNetworkId);
     }
 
+    /**
+     * Specifies the Yarn configuration parameters (yarn-site.xml) for the HDInsight cluster.
+     * 
+     */
     @InputImport(name="yarnConfiguration")
     private final @Nullable Object yarnConfiguration;
 
@@ -291,6 +448,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends io.pulumi.reso
         return this.yarnConfiguration == null ? Optional.empty() : Optional.ofNullable(this.yarnConfiguration);
     }
 
+    /**
+     * Specifies the size of the Zoo Keeper node for the HDInsight cluster.
+     * 
+     */
     @InputImport(name="zookeeperNodeSize")
     private final @Nullable Object zookeeperNodeSize;
 

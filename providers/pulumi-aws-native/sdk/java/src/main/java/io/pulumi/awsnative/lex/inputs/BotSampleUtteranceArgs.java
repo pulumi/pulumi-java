@@ -9,6 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A sample utterance that invokes an intent or respond to a slot elicitation prompt.
+ * 
+ */
 public final class BotSampleUtteranceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BotSampleUtteranceArgs Empty = new BotSampleUtteranceArgs();

@@ -14,12 +14,40 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetDashboardResult {
+    /**
+     * Resource Id
+     * 
+     */
     private final String id;
+    /**
+     * The dashboard lenses.
+     * 
+     */
     private final @Nullable List<DashboardLensResponse> lenses;
+    /**
+     * Resource location
+     * 
+     */
     private final String location;
+    /**
+     * The dashboard metadata.
+     * 
+     */
     private final @Nullable Map<String,Object> metadata;
+    /**
+     * Resource name
+     * 
+     */
     private final String name;
+    /**
+     * Resource tags
+     * 
+     */
     private final @Nullable Map<String,String> tags;
+    /**
+     * Resource type
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"id","lenses","location","metadata","name","tags","type"})
@@ -40,24 +68,52 @@ public final class GetDashboardResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Resource Id
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * The dashboard lenses.
+     * 
+     */
     public List<DashboardLensResponse> getLenses() {
         return this.lenses == null ? List.of() : this.lenses;
     }
+    /**
+     * Resource location
+     * 
+     */
     public String getLocation() {
         return this.location;
     }
+    /**
+     * The dashboard metadata.
+     * 
+     */
     public Map<String,Object> getMetadata() {
         return this.metadata == null ? Map.of() : this.metadata;
     }
+    /**
+     * Resource name
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Resource tags
+     * 
+     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+    /**
+     * Resource type
+     * 
+     */
     public String getType() {
         return this.type;
     }

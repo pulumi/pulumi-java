@@ -15,6 +15,10 @@ public final class IotHubResourceEventHubConsumerGroupArgs extends io.pulumi.res
 
     public static final IotHubResourceEventHubConsumerGroupArgs Empty = new IotHubResourceEventHubConsumerGroupArgs();
 
+    /**
+     * The name of the Event Hub-compatible endpoint in the IoT hub.
+     * 
+     */
     @InputImport(name="eventHubEndpointName", required=true)
     private final Input<String> eventHubEndpointName;
 
@@ -22,6 +26,10 @@ public final class IotHubResourceEventHubConsumerGroupArgs extends io.pulumi.res
         return this.eventHubEndpointName;
     }
 
+    /**
+     * The name of the consumer group to add.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -29,6 +37,10 @@ public final class IotHubResourceEventHubConsumerGroupArgs extends io.pulumi.res
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The EventHub consumer group name.
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<EventHubConsumerGroupNameArgs> properties;
 
@@ -36,6 +48,10 @@ public final class IotHubResourceEventHubConsumerGroupArgs extends io.pulumi.res
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The name of the resource group that contains the IoT hub.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -43,6 +59,10 @@ public final class IotHubResourceEventHubConsumerGroupArgs extends io.pulumi.res
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the IoT hub.
+     * 
+     */
     @InputImport(name="resourceName", required=true)
     private final Input<String> resourceName;
 

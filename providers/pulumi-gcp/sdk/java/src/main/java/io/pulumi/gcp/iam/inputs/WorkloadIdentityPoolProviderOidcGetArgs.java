@@ -15,6 +15,16 @@ public final class WorkloadIdentityPoolProviderOidcGetArgs extends io.pulumi.res
 
     public static final WorkloadIdentityPoolProviderOidcGetArgs Empty = new WorkloadIdentityPoolProviderOidcGetArgs();
 
+    /**
+     * Acceptable values for the `aud` field (audience) in the OIDC token. Token exchange
+     * requests are rejected if the token audience does not match one of the configured
+     * values. Each audience may be at most 256 characters. A maximum of 10 audiences may
+     * be configured.
+     * If this list is empty, the OIDC token audience must be equal to the full canonical
+     * resource name of the WorkloadIdentityPoolProvider, with or without the HTTPS prefix.
+     * For example:
+     * 
+     */
     @InputImport(name="allowedAudiences")
     private final @Nullable Input<List<String>> allowedAudiences;
 
@@ -22,6 +32,10 @@ public final class WorkloadIdentityPoolProviderOidcGetArgs extends io.pulumi.res
         return this.allowedAudiences == null ? Input.empty() : this.allowedAudiences;
     }
 
+    /**
+     * The OIDC issuer URL.
+     * 
+     */
     @InputImport(name="issuerUri", required=true)
     private final Input<String> issuerUri;
 

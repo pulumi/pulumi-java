@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Gets the application HTTP endpoints.
+ * 
+ */
 public final class ApplicationGetHttpsEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationGetHttpsEndpointArgs Empty = new ApplicationGetHttpsEndpointArgs();
 
+    /**
+     * The list of access modes for the application.
+     * 
+     */
     @InputImport(name="accessModes")
     private final @Nullable Input<List<String>> accessModes;
 
@@ -24,6 +32,10 @@ public final class ApplicationGetHttpsEndpointArgs extends io.pulumi.resources.R
         return this.accessModes == null ? Input.empty() : this.accessModes;
     }
 
+    /**
+     * The destination port to connect to.
+     * 
+     */
     @InputImport(name="destinationPort")
     private final @Nullable Input<Integer> destinationPort;
 
@@ -31,6 +43,10 @@ public final class ApplicationGetHttpsEndpointArgs extends io.pulumi.resources.R
         return this.destinationPort == null ? Input.empty() : this.destinationPort;
     }
 
+    /**
+     * The value indicates whether to disable GatewayAuth.
+     * 
+     */
     @InputImport(name="disableGatewayAuth")
     private final @Nullable Input<Boolean> disableGatewayAuth;
 
@@ -38,6 +54,10 @@ public final class ApplicationGetHttpsEndpointArgs extends io.pulumi.resources.R
         return this.disableGatewayAuth == null ? Input.empty() : this.disableGatewayAuth;
     }
 
+    /**
+     * The private ip address of the endpoint.
+     * 
+     */
     @InputImport(name="privateIPAddress")
     private final @Nullable Input<String> privateIPAddress;
 
@@ -45,6 +65,10 @@ public final class ApplicationGetHttpsEndpointArgs extends io.pulumi.resources.R
         return this.privateIPAddress == null ? Input.empty() : this.privateIPAddress;
     }
 
+    /**
+     * The subdomain suffix of the application.
+     * 
+     */
     @InputImport(name="subDomainSuffix")
     private final @Nullable Input<String> subDomainSuffix;
 

@@ -13,6 +13,11 @@ public final class InstanceNetworkConfigGetArgs extends io.pulumi.resources.Reso
 
     public static final InstanceNetworkConfigGetArgs Empty = new InstanceNetworkConfigGetArgs();
 
+    /**
+     * The IP range in CIDR notation to use for the managed Data Fusion instance
+     * nodes. This range must not overlap with any other ranges used in the Data Fusion instance network.
+     * 
+     */
     @InputImport(name="ipAllocation", required=true)
     private final Input<String> ipAllocation;
 
@@ -20,6 +25,12 @@ public final class InstanceNetworkConfigGetArgs extends io.pulumi.resources.Reso
         return this.ipAllocation;
     }
 
+    /**
+     * Name of the network in the project with which the tenant project
+     * will be peered for executing pipelines. In case of shared VPC where the network resides in another host
+     * project the network should specified in the form of projects/{host-project-id}/global/networks/{network}
+     * 
+     */
     @InputImport(name="network", required=true)
     private final Input<String> network;
 

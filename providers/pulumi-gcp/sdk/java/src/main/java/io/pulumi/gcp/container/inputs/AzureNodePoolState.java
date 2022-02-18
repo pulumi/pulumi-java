@@ -19,6 +19,10 @@ public final class AzureNodePoolState extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureNodePoolState Empty = new AzureNodePoolState();
 
+    /**
+     * Optional. Annotations on the node pool. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Keys can have 2 segments: prefix (optional) and name (required), separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between.
+     * 
+     */
     @InputImport(name="annotations")
     private final @Nullable Input<Map<String,String>> annotations;
 
@@ -26,6 +30,10 @@ public final class AzureNodePoolState extends io.pulumi.resources.ResourceArgs {
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
+    /**
+     * Required. Autoscaler configuration for this node pool.
+     * 
+     */
     @InputImport(name="autoscaling")
     private final @Nullable Input<AzureNodePoolAutoscalingGetArgs> autoscaling;
 
@@ -33,6 +41,10 @@ public final class AzureNodePoolState extends io.pulumi.resources.ResourceArgs {
         return this.autoscaling == null ? Input.empty() : this.autoscaling;
     }
 
+    /**
+     * Optional. The Azure availability zone of the nodes in this nodepool. When unspecified, it defaults to `1`.
+     * 
+     */
     @InputImport(name="azureAvailabilityZone")
     private final @Nullable Input<String> azureAvailabilityZone;
 
@@ -40,6 +52,10 @@ public final class AzureNodePoolState extends io.pulumi.resources.ResourceArgs {
         return this.azureAvailabilityZone == null ? Input.empty() : this.azureAvailabilityZone;
     }
 
+    /**
+     * The azureCluster for the resource
+     * 
+     */
     @InputImport(name="cluster")
     private final @Nullable Input<String> cluster;
 
@@ -47,6 +63,10 @@ public final class AzureNodePoolState extends io.pulumi.resources.ResourceArgs {
         return this.cluster == null ? Input.empty() : this.cluster;
     }
 
+    /**
+     * Required. The node configuration of the node pool.
+     * 
+     */
     @InputImport(name="config")
     private final @Nullable Input<AzureNodePoolConfigGetArgs> config;
 
@@ -54,6 +74,10 @@ public final class AzureNodePoolState extends io.pulumi.resources.ResourceArgs {
         return this.config == null ? Input.empty() : this.config;
     }
 
+    /**
+     * Output only. The time at which this node pool was created.
+     * 
+     */
     @InputImport(name="createTime")
     private final @Nullable Input<String> createTime;
 
@@ -61,6 +85,11 @@ public final class AzureNodePoolState extends io.pulumi.resources.ResourceArgs {
         return this.createTime == null ? Input.empty() : this.createTime;
     }
 
+    /**
+     * Allows clients to perform consistent read-modify-writes through optimistic concurrency control. May be sent on update
+     * and delete requests to ensure the client has an up-to-date value before proceeding.
+     * 
+     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -68,6 +97,10 @@ public final class AzureNodePoolState extends io.pulumi.resources.ResourceArgs {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
+    /**
+     * The location for the resource
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -75,6 +108,10 @@ public final class AzureNodePoolState extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Required. The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool.
+     * 
+     */
     @InputImport(name="maxPodsConstraint")
     private final @Nullable Input<AzureNodePoolMaxPodsConstraintGetArgs> maxPodsConstraint;
 
@@ -82,6 +119,10 @@ public final class AzureNodePoolState extends io.pulumi.resources.ResourceArgs {
         return this.maxPodsConstraint == null ? Input.empty() : this.maxPodsConstraint;
     }
 
+    /**
+     * The name of this resource.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -89,6 +130,10 @@ public final class AzureNodePoolState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The project for the resource
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -96,6 +141,10 @@ public final class AzureNodePoolState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Output only. If set, there are currently pending changes to the node pool.
+     * 
+     */
     @InputImport(name="reconciling")
     private final @Nullable Input<Boolean> reconciling;
 
@@ -103,6 +152,11 @@ public final class AzureNodePoolState extends io.pulumi.resources.ResourceArgs {
         return this.reconciling == null ? Input.empty() : this.reconciling;
     }
 
+    /**
+     * Output only. The current state of the node pool. Possible values: STATE_UNSPECIFIED, PROVISIONING, RUNNING, RECONCILING,
+     * STOPPING, ERROR, DEGRADED
+     * 
+     */
     @InputImport(name="state")
     private final @Nullable Input<String> state;
 
@@ -110,6 +164,10 @@ public final class AzureNodePoolState extends io.pulumi.resources.ResourceArgs {
         return this.state == null ? Input.empty() : this.state;
     }
 
+    /**
+     * Required. The ARM ID of the subnet where the node pool VMs run. Make sure it's a subnet under the virtual network in the cluster configuration.
+     * 
+     */
     @InputImport(name="subnetId")
     private final @Nullable Input<String> subnetId;
 
@@ -117,6 +175,10 @@ public final class AzureNodePoolState extends io.pulumi.resources.ResourceArgs {
         return this.subnetId == null ? Input.empty() : this.subnetId;
     }
 
+    /**
+     * Output only. A globally unique identifier for the node pool.
+     * 
+     */
     @InputImport(name="uid")
     private final @Nullable Input<String> uid;
 
@@ -124,6 +186,10 @@ public final class AzureNodePoolState extends io.pulumi.resources.ResourceArgs {
         return this.uid == null ? Input.empty() : this.uid;
     }
 
+    /**
+     * Output only. The time at which this node pool was last updated.
+     * 
+     */
     @InputImport(name="updateTime")
     private final @Nullable Input<String> updateTime;
 
@@ -131,6 +197,10 @@ public final class AzureNodePoolState extends io.pulumi.resources.ResourceArgs {
         return this.updateTime == null ? Input.empty() : this.updateTime;
     }
 
+    /**
+     * Required. The Kubernetes version (e.g. `1.19.10-gke.1000`) running on this node pool.
+     * 
+     */
     @InputImport(name="version")
     private final @Nullable Input<String> version;
 

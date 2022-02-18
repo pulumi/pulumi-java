@@ -54,10 +54,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * This activity is used for iterating over a collection and execute given activities.
+ * 
+ */
 public final class ForEachActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ForEachActivityArgs Empty = new ForEachActivityArgs();
 
+    /**
+     * List of activities to execute .
+     * 
+     */
     @InputImport(name="activities", required=true)
     private final Input<List<Object>> activities;
 
@@ -65,6 +73,10 @@ public final class ForEachActivityArgs extends io.pulumi.resources.ResourceArgs 
         return this.activities;
     }
 
+    /**
+     * Batch count to be used for controlling the number of parallel execution (when isSequential is set to false).
+     * 
+     */
     @InputImport(name="batchCount")
     private final @Nullable Input<Integer> batchCount;
 
@@ -72,6 +84,10 @@ public final class ForEachActivityArgs extends io.pulumi.resources.ResourceArgs 
         return this.batchCount == null ? Input.empty() : this.batchCount;
     }
 
+    /**
+     * Activity depends on condition.
+     * 
+     */
     @InputImport(name="dependsOn")
     private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
 
@@ -79,6 +95,10 @@ public final class ForEachActivityArgs extends io.pulumi.resources.ResourceArgs 
         return this.dependsOn == null ? Input.empty() : this.dependsOn;
     }
 
+    /**
+     * Activity description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -86,6 +106,10 @@ public final class ForEachActivityArgs extends io.pulumi.resources.ResourceArgs 
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Should the loop be executed in sequence or in parallel (max 50)
+     * 
+     */
     @InputImport(name="isSequential")
     private final @Nullable Input<Boolean> isSequential;
 
@@ -93,6 +117,10 @@ public final class ForEachActivityArgs extends io.pulumi.resources.ResourceArgs 
         return this.isSequential == null ? Input.empty() : this.isSequential;
     }
 
+    /**
+     * Collection to iterate.
+     * 
+     */
     @InputImport(name="items", required=true)
     private final Input<ExpressionArgs> items;
 
@@ -100,6 +128,10 @@ public final class ForEachActivityArgs extends io.pulumi.resources.ResourceArgs 
         return this.items;
     }
 
+    /**
+     * Activity name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -107,6 +139,11 @@ public final class ForEachActivityArgs extends io.pulumi.resources.ResourceArgs 
         return this.name;
     }
 
+    /**
+     * Type of activity.
+     * Expected value is 'ForEach'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -114,6 +151,10 @@ public final class ForEachActivityArgs extends io.pulumi.resources.ResourceArgs 
         return this.type;
     }
 
+    /**
+     * Activity user properties.
+     * 
+     */
     @InputImport(name="userProperties")
     private final @Nullable Input<List<UserPropertyArgs>> userProperties;
 

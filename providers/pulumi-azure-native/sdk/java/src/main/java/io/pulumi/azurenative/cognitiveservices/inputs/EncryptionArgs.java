@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties to configure Encryption
+ * 
+ */
 public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EncryptionArgs Empty = new EncryptionArgs();
 
+    /**
+     * Enumerates the possible value of keySource for Encryption
+     * 
+     */
     @InputImport(name="keySource")
     private final @Nullable Input<Either<String,KeySource>> keySource;
 
@@ -24,6 +32,10 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
         return this.keySource == null ? Input.empty() : this.keySource;
     }
 
+    /**
+     * Properties of KeyVault
+     * 
+     */
     @InputImport(name="keyVaultProperties")
     private final @Nullable Input<KeyVaultPropertiesArgs> keyVaultProperties;
 

@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The endpoint URL used to access an Asset using one PackagingConfiguration.
+ * 
+ */
 public final class AssetEgressEndpoint extends io.pulumi.resources.InvokeArgs {
 
     public static final AssetEgressEndpoint Empty = new AssetEgressEndpoint();
 
+    /**
+     * The ID of the PackagingConfiguration being applied to the Asset.
+     * 
+     */
     @InputImport(name="packagingConfigurationId", required=true)
     private final String packagingConfigurationId;
 
@@ -19,6 +27,10 @@ public final class AssetEgressEndpoint extends io.pulumi.resources.InvokeArgs {
         return this.packagingConfigurationId;
     }
 
+    /**
+     * The URL of the parent manifest for the repackaged Asset.
+     * 
+     */
     @InputImport(name="url", required=true)
     private final String url;
 

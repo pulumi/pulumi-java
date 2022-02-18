@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetprivateLinkServicesForO365ManagementActivityAPI {
+/**
+ * The description of the service.
+ * API Version: 2021-03-08.
+ * 
+ *
+ * The description of the service.
+ * 
+ */
     public static CompletableFuture<GetprivateLinkServicesForO365ManagementActivityAPIResult> invokeAsync(GetprivateLinkServicesForO365ManagementActivityAPIArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityandcompliance:getprivateLinkServicesForO365ManagementActivityAPI", TypeShape.of(GetprivateLinkServicesForO365ManagementActivityAPIResult.class), args == null ? GetprivateLinkServicesForO365ManagementActivityAPIArgs.Empty : args, Utilities.withVersion(options));
     }

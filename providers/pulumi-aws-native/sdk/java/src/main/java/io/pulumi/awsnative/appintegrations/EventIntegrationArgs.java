@@ -17,6 +17,10 @@ public final class EventIntegrationArgs extends io.pulumi.resources.ResourceArgs
 
     public static final EventIntegrationArgs Empty = new EventIntegrationArgs();
 
+    /**
+     * The event integration description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -24,6 +28,10 @@ public final class EventIntegrationArgs extends io.pulumi.resources.ResourceArgs
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The Amazon Eventbridge bus for the event integration.
+     * 
+     */
     @InputImport(name="eventBridgeBus", required=true)
     private final Input<String> eventBridgeBus;
 
@@ -31,6 +39,10 @@ public final class EventIntegrationArgs extends io.pulumi.resources.ResourceArgs
         return this.eventBridgeBus;
     }
 
+    /**
+     * The EventFilter (source) associated with the event integration.
+     * 
+     */
     @InputImport(name="eventFilter", required=true)
     private final Input<EventIntegrationEventFilterArgs> eventFilter;
 
@@ -38,6 +50,10 @@ public final class EventIntegrationArgs extends io.pulumi.resources.ResourceArgs
         return this.eventFilter;
     }
 
+    /**
+     * The name of the event integration.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -45,6 +61,10 @@ public final class EventIntegrationArgs extends io.pulumi.resources.ResourceArgs
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The tags (keys and values) associated with the event integration.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<EventIntegrationTagArgs>> tags;
 

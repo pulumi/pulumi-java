@@ -9,10 +9,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * An artifact that can be deployed in some runtime.
+ * 
+ */
 public final class DeployableResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DeployableResponse Empty = new DeployableResponse();
 
+    /**
+     * Resource URI for the artifact being deployed.
+     * 
+     */
     @InputImport(name="resourceUri", required=true)
     private final List<String> resourceUri;
 

@@ -18,6 +18,10 @@ public final class FulfillmentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FulfillmentArgs Empty = new FulfillmentArgs();
 
+    /**
+     * The human-readable name of the fulfillment, unique within the agent.
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -25,6 +29,10 @@ public final class FulfillmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName;
     }
 
+    /**
+     * Whether fulfillment is enabled.
+     * 
+     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 
@@ -32,6 +40,11 @@ public final class FulfillmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
+    /**
+     * The field defines whether the fulfillment is enabled for certain features.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="features")
     private final @Nullable Input<List<FulfillmentFeatureArgs>> features;
 
@@ -39,6 +52,11 @@ public final class FulfillmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.features == null ? Input.empty() : this.features;
     }
 
+    /**
+     * Represents configuration for a generic web service. Dialogflow supports two mechanisms for authentications: - Basic authentication with username and password. - Authentication with additional authentication headers.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="genericWebService")
     private final @Nullable Input<FulfillmentGenericWebServiceArgs> genericWebService;
 
@@ -46,6 +64,11 @@ public final class FulfillmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.genericWebService == null ? Input.empty() : this.genericWebService;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

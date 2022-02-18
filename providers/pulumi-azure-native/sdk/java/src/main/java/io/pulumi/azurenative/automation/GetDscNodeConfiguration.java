@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDscNodeConfiguration {
+/**
+ * Definition of the dsc node configuration.
+ * API Version: 2019-06-01.
+ * 
+ *
+ * Definition of the dsc node configuration.
+ * 
+ */
     public static CompletableFuture<GetDscNodeConfigurationResult> invokeAsync(GetDscNodeConfigurationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getDscNodeConfiguration", TypeShape.of(GetDscNodeConfigurationResult.class), args == null ? GetDscNodeConfigurationArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -12,6 +12,10 @@ public final class GetApplicationGroupArgs extends io.pulumi.resources.InvokeArg
 
     public static final GetApplicationGroupArgs Empty = new GetApplicationGroupArgs();
 
+    /**
+     * The name of the application group
+     * 
+     */
     @InputImport(name="applicationGroupName", required=true)
     private final String applicationGroupName;
 
@@ -19,6 +23,10 @@ public final class GetApplicationGroupArgs extends io.pulumi.resources.InvokeArg
         return this.applicationGroupName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

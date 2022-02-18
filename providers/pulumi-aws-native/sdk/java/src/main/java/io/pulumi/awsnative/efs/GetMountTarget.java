@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMountTarget {
+/**
+ * Resource Type definition for AWS::EFS::MountTarget
+ * 
+ */
     public static CompletableFuture<GetMountTargetResult> invokeAsync(GetMountTargetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:efs:getMountTarget", TypeShape.of(GetMountTargetResult.class), args == null ? GetMountTargetArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -12,7 +12,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FlowTriggerConfig {
+    /**
+     * Details required based on the type of trigger
+     * 
+     */
     private final @Nullable FlowScheduledTriggerProperties triggerProperties;
+    /**
+     * Trigger type of the flow
+     * 
+     */
     private final FlowTriggerType triggerType;
 
     @OutputCustomType.Constructor({"triggerProperties","triggerType"})
@@ -23,9 +31,17 @@ public final class FlowTriggerConfig {
         this.triggerType = Objects.requireNonNull(triggerType);
     }
 
+    /**
+     * Details required based on the type of trigger
+     * 
+     */
     public Optional<FlowScheduledTriggerProperties> getTriggerProperties() {
         return Optional.ofNullable(this.triggerProperties);
     }
+    /**
+     * Trigger type of the flow
+     * 
+     */
     public FlowTriggerType getTriggerType() {
         return this.triggerType;
     }

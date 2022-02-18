@@ -14,6 +14,12 @@ public final class GetClusterArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetClusterArgs Empty = new GetClusterArgs();
 
+    /**
+     * The location (zone or region) this cluster has been
+     * created in. One of `location`, `region`, `zone`, or a provider-level `zone` must
+     * be specified.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable String location;
 
@@ -21,6 +27,10 @@ public final class GetClusterArgs extends io.pulumi.resources.InvokeArgs {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
+    /**
+     * The name of the cluster.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -28,6 +38,11 @@ public final class GetClusterArgs extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    /**
+     * The project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

@@ -15,57 +15,131 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Resource Type definition for AWS::ElastiCache::User
+ * 
+ */
 @ResourceType(type="aws-native:elasticache:User")
 public class User extends io.pulumi.resources.CustomResource {
+    /**
+     * Access permissions string used for this user account.
+     * 
+     */
     @OutputExport(name="accessString", type=String.class, parameters={})
     private Output</* @Nullable */ String> accessString;
 
+    /**
+     * @return Access permissions string used for this user account.
+     * 
+     */
     public Output</* @Nullable */ String> getAccessString() {
         return this.accessString;
     }
+    /**
+     * The Amazon Resource Name (ARN) of the user account.
+     * 
+     */
     @OutputExport(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the user account.
+     * 
+     */
     public Output<String> getArn() {
         return this.arn;
     }
+    /**
+     * Must be redis.
+     * 
+     */
     @OutputExport(name="engine", type=UserEngine.class, parameters={})
     private Output<UserEngine> engine;
 
+    /**
+     * @return Must be redis.
+     * 
+     */
     public Output<UserEngine> getEngine() {
         return this.engine;
     }
+    /**
+     * Indicates a password is not required for this user account.
+     * 
+     */
     @OutputExport(name="noPasswordRequired", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> noPasswordRequired;
 
+    /**
+     * @return Indicates a password is not required for this user account.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getNoPasswordRequired() {
         return this.noPasswordRequired;
     }
+    /**
+     * Passwords used for this user account. You can create up to two passwords for each user.
+     * 
+     */
     @OutputExport(name="passwords", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> passwords;
 
+    /**
+     * @return Passwords used for this user account. You can create up to two passwords for each user.
+     * 
+     */
     public Output</* @Nullable */ List<String>> getPasswords() {
         return this.passwords;
     }
+    /**
+     * Indicates the user status. Can be "active", "modifying" or "deleting".
+     * 
+     */
     @OutputExport(name="status", type=String.class, parameters={})
     private Output<String> status;
 
+    /**
+     * @return Indicates the user status. Can be "active", "modifying" or "deleting".
+     * 
+     */
     public Output<String> getStatus() {
         return this.status;
     }
+    /**
+     * The ID of the user.
+     * 
+     */
     @OutputExport(name="userId", type=String.class, parameters={})
     private Output<String> userId;
 
+    /**
+     * @return The ID of the user.
+     * 
+     */
     public Output<String> getUserId() {
         return this.userId;
     }
+    /**
+     * The username of the user.
+     * 
+     */
     @OutputExport(name="userName", type=String.class, parameters={})
     private Output<String> userName;
 
+    /**
+     * @return The username of the user.
+     * 
+     */
     public Output<String> getUserName() {
         return this.userName;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public User(String name, UserArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:elasticache:User", name, args == null ? UserArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -81,6 +155,14 @@ public class User extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static User get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new User(name, id, options);
     }

@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Application logs azure blob storage configuration.
+ * 
+ */
 public final class AzureBlobStorageApplicationLogsConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureBlobStorageApplicationLogsConfigResponse Empty = new AzureBlobStorageApplicationLogsConfigResponse();
 
+    /**
+     * Log level.
+     * 
+     */
     @InputImport(name="level")
     private final @Nullable String level;
 
@@ -22,6 +30,12 @@ public final class AzureBlobStorageApplicationLogsConfigResponse extends io.pulu
         return this.level == null ? Optional.empty() : Optional.ofNullable(this.level);
     }
 
+    /**
+     * Retention in days.
+     * Remove blobs older than X days.
+     * 0 or lower means no retention.
+     * 
+     */
     @InputImport(name="retentionInDays")
     private final @Nullable Integer retentionInDays;
 
@@ -29,6 +43,10 @@ public final class AzureBlobStorageApplicationLogsConfigResponse extends io.pulu
         return this.retentionInDays == null ? Optional.empty() : Optional.ofNullable(this.retentionInDays);
     }
 
+    /**
+     * SAS url to a azure blob container with read/write/list/delete permissions.
+     * 
+     */
     @InputImport(name="sasUrl")
     private final @Nullable String sasUrl;
 

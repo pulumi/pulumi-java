@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The default action of allow or deny when no other rules match.
+     * 
+     */
     @EnumType
     public enum DefaultAction {
         Allow("Allow"),

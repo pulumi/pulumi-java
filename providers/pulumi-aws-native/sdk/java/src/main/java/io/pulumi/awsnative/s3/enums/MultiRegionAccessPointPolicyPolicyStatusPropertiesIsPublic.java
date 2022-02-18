@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Specifies whether the policy is public or not.
+     * 
+     */
     @EnumType
     public enum MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic {
         True("true"),

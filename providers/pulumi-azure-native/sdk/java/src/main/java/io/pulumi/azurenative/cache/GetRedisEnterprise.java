@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRedisEnterprise {
+/**
+ * Describes the RedisEnterprise cluster
+ * API Version: 2021-03-01.
+ * 
+ *
+ * Describes the RedisEnterprise cluster
+ * 
+ */
     public static CompletableFuture<GetRedisEnterpriseResult> invokeAsync(GetRedisEnterpriseArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cache:getRedisEnterprise", TypeShape.of(GetRedisEnterpriseResult.class), args == null ? GetRedisEnterpriseArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -14,6 +14,10 @@ public final class AutoScaleSettingsArgs extends io.pulumi.resources.ResourceArg
 
     public static final AutoScaleSettingsArgs Empty = new AutoScaleSettingsArgs();
 
+    /**
+     * If omitted, the default value is 15 minutes (PT15M).
+     * 
+     */
     @InputImport(name="evaluationInterval")
     private final @Nullable Input<String> evaluationInterval;
 

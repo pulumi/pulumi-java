@@ -18,10 +18,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Linked service for Cassandra data source.
+ * 
+ */
 public final class CassandraLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CassandraLinkedServiceResponse Empty = new CassandraLinkedServiceResponse();
 
+    /**
+     * List of tags that can be used for describing the linked service.
+     * 
+     */
     @InputImport(name="annotations")
     private final @Nullable List<Object> annotations;
 
@@ -29,6 +37,10 @@ public final class CassandraLinkedServiceResponse extends io.pulumi.resources.In
         return this.annotations == null ? List.of() : this.annotations;
     }
 
+    /**
+     * AuthenticationType to be used for connection. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="authenticationType")
     private final @Nullable Object authenticationType;
 
@@ -36,6 +48,10 @@ public final class CassandraLinkedServiceResponse extends io.pulumi.resources.In
         return this.authenticationType == null ? Optional.empty() : Optional.ofNullable(this.authenticationType);
     }
 
+    /**
+     * The integration runtime reference.
+     * 
+     */
     @InputImport(name="connectVia")
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
@@ -43,6 +59,10 @@ public final class CassandraLinkedServiceResponse extends io.pulumi.resources.In
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
+    /**
+     * Linked service description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -50,6 +70,10 @@ public final class CassandraLinkedServiceResponse extends io.pulumi.resources.In
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Object encryptedCredential;
 
@@ -57,6 +81,10 @@ public final class CassandraLinkedServiceResponse extends io.pulumi.resources.In
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
+    /**
+     * Host name for connection. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="host", required=true)
     private final Object host;
 
@@ -64,6 +92,10 @@ public final class CassandraLinkedServiceResponse extends io.pulumi.resources.In
         return this.host;
     }
 
+    /**
+     * Parameters for linked service.
+     * 
+     */
     @InputImport(name="parameters")
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
@@ -71,6 +103,10 @@ public final class CassandraLinkedServiceResponse extends io.pulumi.resources.In
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
+    /**
+     * Password for authentication.
+     * 
+     */
     @InputImport(name="password")
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
@@ -78,6 +114,10 @@ public final class CassandraLinkedServiceResponse extends io.pulumi.resources.In
         return this.password == null ? null : this.password;
     }
 
+    /**
+     * The port for the connection. Type: integer (or Expression with resultType integer).
+     * 
+     */
     @InputImport(name="port")
     private final @Nullable Object port;
 
@@ -85,6 +125,11 @@ public final class CassandraLinkedServiceResponse extends io.pulumi.resources.In
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
     }
 
+    /**
+     * Type of linked service.
+     * Expected value is 'Cassandra'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -92,6 +137,10 @@ public final class CassandraLinkedServiceResponse extends io.pulumi.resources.In
         return this.type;
     }
 
+    /**
+     * Username for authentication. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="username")
     private final @Nullable Object username;
 

@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * CustomResourceValidation is a list of validation methods for CustomResources.
+ * 
+ */
 public final class CustomResourceValidationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CustomResourceValidationArgs Empty = new CustomResourceValidationArgs();
 
+    /**
+     * openAPIV3Schema is the OpenAPI v3 schema to use for validation and pruning.
+     * 
+     */
     @InputImport(name="openAPIV3Schema")
     private final @Nullable Input<JSONSchemaPropsArgs> openAPIV3Schema;
 

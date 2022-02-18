@@ -17,51 +17,160 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * A policy is a collection of DNS rules applied to one or more Virtual
+ * Private Cloud resources.
+ * 
+ * To get more information about Policy, see:
+ * 
+ * * [API documentation](https://cloud.google.com/dns/docs/reference/v1beta2/policies)
+ * * How-to Guides
+ *     * [Using DNS server policies](https://cloud.google.com/dns/zones/#using-dns-server-policies)
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * Policy can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:dns/policy:Policy default projects/{{project}}/policies/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:dns/policy:Policy default {{project}}/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:dns/policy:Policy default {{name}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:dns/policy:Policy")
 public class Policy extends io.pulumi.resources.CustomResource {
+    /**
+     * Sets an alternative name server for the associated networks.
+     * When specified, all DNS queries are forwarded to a name server that you choose.
+     * Names such as .internal are not available when an alternative name server is specified.
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="alternativeNameServerConfig", type=PolicyAlternativeNameServerConfig.class, parameters={})
     private Output</* @Nullable */ PolicyAlternativeNameServerConfig> alternativeNameServerConfig;
 
+    /**
+     * @return Sets an alternative name server for the associated networks.
+     * When specified, all DNS queries are forwarded to a name server that you choose.
+     * Names such as .internal are not available when an alternative name server is specified.
+     * Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ PolicyAlternativeNameServerConfig> getAlternativeNameServerConfig() {
         return this.alternativeNameServerConfig;
     }
+    /**
+     * A textual description field. Defaults to 'Managed by Pulumi'.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return A textual description field. Defaults to 'Managed by Pulumi'.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * Allows networks bound to this policy to receive DNS queries sent
+     * by VMs or applications over VPN connections. When enabled, a
+     * virtual IP address will be allocated from each of the sub-networks
+     * that are bound to this policy.
+     * 
+     */
     @OutputExport(name="enableInboundForwarding", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableInboundForwarding;
 
+    /**
+     * @return Allows networks bound to this policy to receive DNS queries sent
+     * by VMs or applications over VPN connections. When enabled, a
+     * virtual IP address will be allocated from each of the sub-networks
+     * that are bound to this policy.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getEnableInboundForwarding() {
         return this.enableInboundForwarding;
     }
+    /**
+     * Controls whether logging is enabled for the networks bound to this policy.
+     * Defaults to no logging if not set.
+     * 
+     */
     @OutputExport(name="enableLogging", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableLogging;
 
+    /**
+     * @return Controls whether logging is enabled for the networks bound to this policy.
+     * Defaults to no logging if not set.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getEnableLogging() {
         return this.enableLogging;
     }
+    /**
+     * User assigned name for this policy.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return User assigned name for this policy.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * List of network names specifying networks to which this policy is applied.
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="networks", type=List.class, parameters={PolicyNetwork.class})
     private Output</* @Nullable */ List<PolicyNetwork>> networks;
 
+    /**
+     * @return List of network names specifying networks to which this policy is applied.
+     * Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ List<PolicyNetwork>> getNetworks() {
         return this.networks;
     }
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Policy(String name, @Nullable PolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:dns/policy:Policy", name, args == null ? PolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -77,6 +186,15 @@ public class Policy extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Policy get(String name, Input<String> id, @Nullable PolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Policy(name, id, state, options);
     }

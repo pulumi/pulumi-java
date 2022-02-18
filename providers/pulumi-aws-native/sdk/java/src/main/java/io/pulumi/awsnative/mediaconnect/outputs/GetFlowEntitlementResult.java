@@ -14,11 +14,35 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetFlowEntitlementResult {
+    /**
+     * A description of the entitlement.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * The type of encryption that will be used on the output that is associated with this entitlement.
+     * 
+     */
     private final @Nullable FlowEntitlementEncryption encryption;
+    /**
+     * The ARN of the entitlement.
+     * 
+     */
     private final @Nullable String entitlementArn;
+    /**
+     *  An indication of whether the entitlement is enabled.
+     * 
+     */
     private final @Nullable FlowEntitlementEntitlementStatus entitlementStatus;
+    /**
+     * The ARN of the flow.
+     * 
+     */
     private final @Nullable String flowArn;
+    /**
+     * The AWS account IDs that you want to share your content with. The receiving accounts (subscribers) will be allowed to create their own flow using your content as the source.
+     * 
+     */
     private final @Nullable List<String> subscribers;
 
     @OutputCustomType.Constructor({"description","encryption","entitlementArn","entitlementStatus","flowArn","subscribers"})
@@ -37,21 +61,45 @@ public final class GetFlowEntitlementResult {
         this.subscribers = subscribers;
     }
 
+    /**
+     * A description of the entitlement.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * The type of encryption that will be used on the output that is associated with this entitlement.
+     * 
+     */
     public Optional<FlowEntitlementEncryption> getEncryption() {
         return Optional.ofNullable(this.encryption);
     }
+    /**
+     * The ARN of the entitlement.
+     * 
+     */
     public Optional<String> getEntitlementArn() {
         return Optional.ofNullable(this.entitlementArn);
     }
+    /**
+     *  An indication of whether the entitlement is enabled.
+     * 
+     */
     public Optional<FlowEntitlementEntitlementStatus> getEntitlementStatus() {
         return Optional.ofNullable(this.entitlementStatus);
     }
+    /**
+     * The ARN of the flow.
+     * 
+     */
     public Optional<String> getFlowArn() {
         return Optional.ofNullable(this.flowArn);
     }
+    /**
+     * The AWS account IDs that you want to share your content with. The receiving accounts (subscribers) will be allowed to create their own flow using your content as the source.
+     * 
+     */
     public List<String> getSubscribers() {
         return this.subscribers == null ? List.of() : this.subscribers;
     }

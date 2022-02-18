@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The alerts' productName on which the cases will be generated
+     * 
+     */
     @EnumType
     public enum MicrosoftSecurityProductName {
         Microsoft_Cloud_App_Security("Microsoft Cloud App Security"),

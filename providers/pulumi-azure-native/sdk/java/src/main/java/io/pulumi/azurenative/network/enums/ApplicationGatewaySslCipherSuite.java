@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Ssl cipher suites enums.
+     * 
+     */
     @EnumType
     public enum ApplicationGatewaySslCipherSuite {
         TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384("TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384"),

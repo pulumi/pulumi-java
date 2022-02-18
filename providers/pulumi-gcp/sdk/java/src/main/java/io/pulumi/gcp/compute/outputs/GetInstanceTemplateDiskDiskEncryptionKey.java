@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetInstanceTemplateDiskDiskEncryptionKey {
+    /**
+     * The self link of the encryption key that is stored in Google Cloud KMS
+     * 
+     */
     private final String kmsKeySelfLink;
 
     @OutputCustomType.Constructor({"kmsKeySelfLink"})
@@ -16,6 +20,10 @@ public final class GetInstanceTemplateDiskDiskEncryptionKey {
         this.kmsKeySelfLink = Objects.requireNonNull(kmsKeySelfLink);
     }
 
+    /**
+     * The self link of the encryption key that is stored in Google Cloud KMS
+     * 
+     */
     public String getKmsKeySelfLink() {
         return this.kmsKeySelfLink;
     }

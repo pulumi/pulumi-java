@@ -11,10 +11,22 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes the credentials that will be used to access a custom registry during a run.
+ * 
+ */
 public final class CustomRegistryCredentialsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CustomRegistryCredentialsResponse Empty = new CustomRegistryCredentialsResponse();
 
+    /**
+     * Indicates the managed identity assigned to the custom credential. If a user-assigned identity
+     * this value is the Client ID. If a system-assigned identity, the value will be `system`. In
+     * the case of a system-assigned identity, the Client ID will be determined by the runner. This
+     * identity may be used to authenticate to key vault to retrieve credentials or it may be the only
+     * source of authentication used for accessing the registry.
+     * 
+     */
     @InputImport(name="identity")
     private final @Nullable String identity;
 
@@ -22,6 +34,11 @@ public final class CustomRegistryCredentialsResponse extends io.pulumi.resources
         return this.identity == null ? Optional.empty() : Optional.ofNullable(this.identity);
     }
 
+    /**
+     * The password for logging into the custom registry. The password is a secret
+     * object that allows multiple ways of providing the value for it.
+     * 
+     */
     @InputImport(name="password")
     private final @Nullable SecretObjectResponse password;
 
@@ -29,6 +46,10 @@ public final class CustomRegistryCredentialsResponse extends io.pulumi.resources
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
     }
 
+    /**
+     * The username for logging into the custom registry.
+     * 
+     */
     @InputImport(name="userName")
     private final @Nullable SecretObjectResponse userName;
 

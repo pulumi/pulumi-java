@@ -16,6 +16,10 @@ public final class PrivateLinkScopeArgs extends io.pulumi.resources.ResourceArgs
 
     public static final PrivateLinkScopeArgs Empty = new PrivateLinkScopeArgs();
 
+    /**
+     * Resource location
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -23,6 +27,10 @@ public final class PrivateLinkScopeArgs extends io.pulumi.resources.ResourceArgs
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Properties that define a Azure Arc PrivateLinkScope resource.
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<HybridComputePrivateLinkScopePropertiesArgs> properties;
 
@@ -30,6 +38,10 @@ public final class PrivateLinkScopeArgs extends io.pulumi.resources.ResourceArgs
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -37,6 +49,10 @@ public final class PrivateLinkScopeArgs extends io.pulumi.resources.ResourceArgs
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the Azure Arc PrivateLinkScope resource.
+     * 
+     */
     @InputImport(name="scopeName")
     private final @Nullable Input<String> scopeName;
 
@@ -44,6 +60,10 @@ public final class PrivateLinkScopeArgs extends io.pulumi.resources.ResourceArgs
         return this.scopeName == null ? Input.empty() : this.scopeName;
     }
 
+    /**
+     * Resource tags
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

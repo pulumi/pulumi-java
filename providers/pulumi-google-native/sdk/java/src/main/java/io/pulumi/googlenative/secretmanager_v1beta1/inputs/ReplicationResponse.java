@@ -9,10 +9,18 @@ import io.pulumi.googlenative.secretmanager_v1beta1.inputs.UserManagedResponse;
 import java.util.Objects;
 
 
+/**
+ * A policy that defines the replication configuration of data.
+ * 
+ */
 public final class ReplicationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ReplicationResponse Empty = new ReplicationResponse();
 
+    /**
+     * The Secret will automatically be replicated without any restrictions.
+     * 
+     */
     @InputImport(name="automatic", required=true)
     private final AutomaticResponse automatic;
 
@@ -20,6 +28,10 @@ public final class ReplicationResponse extends io.pulumi.resources.InvokeArgs {
         return this.automatic;
     }
 
+    /**
+     * The Secret will only be replicated into the locations specified.
+     * 
+     */
     @InputImport(name="userManaged", required=true)
     private final UserManagedResponse userManaged;
 

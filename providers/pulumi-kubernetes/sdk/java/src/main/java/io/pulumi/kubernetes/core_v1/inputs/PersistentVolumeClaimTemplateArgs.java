@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * PersistentVolumeClaimTemplate is used to produce PersistentVolumeClaim objects as part of an EphemeralVolumeSource.
+ * 
+ */
 public final class PersistentVolumeClaimTemplateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PersistentVolumeClaimTemplateArgs Empty = new PersistentVolumeClaimTemplateArgs();
 
+    /**
+     * May contain labels and annotations that will be copied into the PVC when creating it. No other fields are allowed and will be rejected during validation.
+     * 
+     */
     @InputImport(name="metadata")
     private final @Nullable Input<ObjectMetaArgs> metadata;
 
@@ -22,6 +30,10 @@ public final class PersistentVolumeClaimTemplateArgs extends io.pulumi.resources
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
+    /**
+     * The specification for the PersistentVolumeClaim. The entire content is copied unchanged into the PVC that gets created from this template. The same fields as in a PersistentVolumeClaim are also valid here.
+     * 
+     */
     @InputImport(name="spec", required=true)
     private final Input<PersistentVolumeClaimSpecArgs> spec;
 

@@ -15,6 +15,10 @@ public final class PrivateEndpointConnectionsAdtAPIArgs extends io.pulumi.resour
 
     public static final PrivateEndpointConnectionsAdtAPIArgs Empty = new PrivateEndpointConnectionsAdtAPIArgs();
 
+    /**
+     * The name of the private endpoint connection associated with the Azure resource
+     * 
+     */
     @InputImport(name="privateEndpointConnectionName")
     private final @Nullable Input<String> privateEndpointConnectionName;
 
@@ -22,6 +26,10 @@ public final class PrivateEndpointConnectionsAdtAPIArgs extends io.pulumi.resour
         return this.privateEndpointConnectionName == null ? Input.empty() : this.privateEndpointConnectionName;
     }
 
+    /**
+     * A collection of information about the state of the connection between service consumer and provider.
+     * 
+     */
     @InputImport(name="privateLinkServiceConnectionState", required=true)
     private final Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
@@ -29,6 +37,10 @@ public final class PrivateEndpointConnectionsAdtAPIArgs extends io.pulumi.resour
         return this.privateLinkServiceConnectionState;
     }
 
+    /**
+     * The name of the resource group that contains the service instance.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -36,6 +48,10 @@ public final class PrivateEndpointConnectionsAdtAPIArgs extends io.pulumi.resour
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the service instance.
+     * 
+     */
     @InputImport(name="resourceName", required=true)
     private final Input<String> resourceName;
 

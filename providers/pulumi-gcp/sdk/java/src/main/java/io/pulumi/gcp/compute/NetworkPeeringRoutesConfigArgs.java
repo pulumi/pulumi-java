@@ -15,6 +15,10 @@ public final class NetworkPeeringRoutesConfigArgs extends io.pulumi.resources.Re
 
     public static final NetworkPeeringRoutesConfigArgs Empty = new NetworkPeeringRoutesConfigArgs();
 
+    /**
+     * Whether to export the custom routes to the peer network.
+     * 
+     */
     @InputImport(name="exportCustomRoutes", required=true)
     private final Input<Boolean> exportCustomRoutes;
 
@@ -22,6 +26,10 @@ public final class NetworkPeeringRoutesConfigArgs extends io.pulumi.resources.Re
         return this.exportCustomRoutes;
     }
 
+    /**
+     * Whether to import the custom routes to the peer network.
+     * 
+     */
     @InputImport(name="importCustomRoutes", required=true)
     private final Input<Boolean> importCustomRoutes;
 
@@ -29,6 +37,10 @@ public final class NetworkPeeringRoutesConfigArgs extends io.pulumi.resources.Re
         return this.importCustomRoutes;
     }
 
+    /**
+     * The name of the primary network for the peering.
+     * 
+     */
     @InputImport(name="network", required=true)
     private final Input<String> network;
 
@@ -36,6 +48,10 @@ public final class NetworkPeeringRoutesConfigArgs extends io.pulumi.resources.Re
         return this.network;
     }
 
+    /**
+     * Name of the peering.
+     * 
+     */
     @InputImport(name="peering", required=true)
     private final Input<String> peering;
 
@@ -43,6 +59,11 @@ public final class NetworkPeeringRoutesConfigArgs extends io.pulumi.resources.Re
         return this.peering;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

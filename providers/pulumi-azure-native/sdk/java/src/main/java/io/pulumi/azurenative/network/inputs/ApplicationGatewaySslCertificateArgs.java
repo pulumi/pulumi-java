@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * SSL certificates of an application gateway.
+ * 
+ */
 public final class ApplicationGatewaySslCertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationGatewaySslCertificateArgs Empty = new ApplicationGatewaySslCertificateArgs();
 
+    /**
+     * Base-64 encoded pfx certificate. Only applicable in PUT Request.
+     * 
+     */
     @InputImport(name="data")
     private final @Nullable Input<String> data;
 
@@ -21,6 +29,10 @@ public final class ApplicationGatewaySslCertificateArgs extends io.pulumi.resour
         return this.data == null ? Input.empty() : this.data;
     }
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -28,6 +40,10 @@ public final class ApplicationGatewaySslCertificateArgs extends io.pulumi.resour
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * Secret Id of (base-64 encoded unencrypted pfx) 'Secret' or 'Certificate' object stored in KeyVault.
+     * 
+     */
     @InputImport(name="keyVaultSecretId")
     private final @Nullable Input<String> keyVaultSecretId;
 
@@ -35,6 +51,10 @@ public final class ApplicationGatewaySslCertificateArgs extends io.pulumi.resour
         return this.keyVaultSecretId == null ? Input.empty() : this.keyVaultSecretId;
     }
 
+    /**
+     * Name of the SSL certificate that is unique within an Application Gateway.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -42,6 +62,10 @@ public final class ApplicationGatewaySslCertificateArgs extends io.pulumi.resour
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Password for the pfx file specified in data. Only applicable in PUT request.
+     * 
+     */
     @InputImport(name="password")
     private final @Nullable Input<String> password;
 

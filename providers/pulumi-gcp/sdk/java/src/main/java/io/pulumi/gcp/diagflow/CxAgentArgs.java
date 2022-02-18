@@ -17,6 +17,10 @@ public final class CxAgentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CxAgentArgs Empty = new CxAgentArgs();
 
+    /**
+     * The URI of the agent's avatar. Avatars are used throughout the Dialogflow console and in the self-hosted Web Demo integration.
+     * 
+     */
     @InputImport(name="avatarUri")
     private final @Nullable Input<String> avatarUri;
 
@@ -24,6 +28,11 @@ public final class CxAgentArgs extends io.pulumi.resources.ResourceArgs {
         return this.avatarUri == null ? Input.empty() : this.avatarUri;
     }
 
+    /**
+     * The default language of the agent as a language tag. [See Language Support](https://cloud.google.com/dialogflow/cx/docs/reference/language)
+     * for a list of the currently supported language codes. This field cannot be updated after creation.
+     * 
+     */
     @InputImport(name="defaultLanguageCode", required=true)
     private final Input<String> defaultLanguageCode;
 
@@ -31,6 +40,10 @@ public final class CxAgentArgs extends io.pulumi.resources.ResourceArgs {
         return this.defaultLanguageCode;
     }
 
+    /**
+     * The description of this agent. The maximum length is 500 characters. If exceeded, the request is rejected.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -38,6 +51,10 @@ public final class CxAgentArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The human-readable name of the agent, unique within the location.
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -45,6 +62,10 @@ public final class CxAgentArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName;
     }
 
+    /**
+     * Indicates if automatic spell correction is enabled in detect intent requests.
+     * 
+     */
     @InputImport(name="enableSpellCorrection")
     private final @Nullable Input<Boolean> enableSpellCorrection;
 
@@ -52,6 +73,10 @@ public final class CxAgentArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableSpellCorrection == null ? Input.empty() : this.enableSpellCorrection;
     }
 
+    /**
+     * Determines whether this agent should log conversation queries.
+     * 
+     */
     @InputImport(name="enableStackdriverLogging")
     private final @Nullable Input<Boolean> enableStackdriverLogging;
 
@@ -59,6 +84,13 @@ public final class CxAgentArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableStackdriverLogging == null ? Input.empty() : this.enableStackdriverLogging;
     }
 
+    /**
+     * The name of the location this agent is located in.
+     * > **Note:** The first time you are deploying an Agent in your project you must configure location settings.
+     * This is a one time step but at the moment you can only [configure location settings](https://cloud.google.com/dialogflow/cx/docs/concept/region#location-settings) via the Dialogflow CX console.
+     * Another options is to use global location so you don't need to manually configure location settings.
+     * 
+     */
     @InputImport(name="location", required=true)
     private final Input<String> location;
 
@@ -66,6 +98,11 @@ public final class CxAgentArgs extends io.pulumi.resources.ResourceArgs {
         return this.location;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -73,6 +110,10 @@ public final class CxAgentArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Name of the SecuritySettings reference for the agent. Format: projects/<Project ID>/locations/<Location ID>/securitySettings/<Security Settings ID>.
+     * 
+     */
     @InputImport(name="securitySettings")
     private final @Nullable Input<String> securitySettings;
 
@@ -80,6 +121,11 @@ public final class CxAgentArgs extends io.pulumi.resources.ResourceArgs {
         return this.securitySettings == null ? Input.empty() : this.securitySettings;
     }
 
+    /**
+     * Settings related to speech recognition.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="speechToTextSettings")
     private final @Nullable Input<CxAgentSpeechToTextSettingsArgs> speechToTextSettings;
 
@@ -87,6 +133,10 @@ public final class CxAgentArgs extends io.pulumi.resources.ResourceArgs {
         return this.speechToTextSettings == null ? Input.empty() : this.speechToTextSettings;
     }
 
+    /**
+     * The list of all languages supported by this agent (except for the default_language_code).
+     * 
+     */
     @InputImport(name="supportedLanguageCodes")
     private final @Nullable Input<List<String>> supportedLanguageCodes;
 
@@ -94,6 +144,11 @@ public final class CxAgentArgs extends io.pulumi.resources.ResourceArgs {
         return this.supportedLanguageCodes == null ? Input.empty() : this.supportedLanguageCodes;
     }
 
+    /**
+     * The time zone of this agent from the [time zone database](https://www.iana.org/time-zones), e.g., America/New_York,
+     * Europe/Paris.
+     * 
+     */
     @InputImport(name="timeZone", required=true)
     private final Input<String> timeZone;
 

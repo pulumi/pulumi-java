@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Specifies encryption-related information for an Amazon S3 bucket that is a destination for replicated objects.
+ * 
+ */
 public final class BucketEncryptionConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BucketEncryptionConfigurationArgs Empty = new BucketEncryptionConfigurationArgs();
 
+    /**
+     * Specifies the ID (Key ARN or Alias ARN) of the customer managed customer master key (CMK) stored in AWS Key Management Service (KMS) for the destination bucket.
+     * 
+     */
     @InputImport(name="replicaKmsKeyID", required=true)
     private final Input<String> replicaKmsKeyID;
 

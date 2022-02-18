@@ -15,6 +15,10 @@ public final class StandardAppVersionDeploymentZipGetArgs extends io.pulumi.reso
 
     public static final StandardAppVersionDeploymentZipGetArgs Empty = new StandardAppVersionDeploymentZipGetArgs();
 
+    /**
+     * files count
+     * 
+     */
     @InputImport(name="filesCount")
     private final @Nullable Input<Integer> filesCount;
 
@@ -22,6 +26,10 @@ public final class StandardAppVersionDeploymentZipGetArgs extends io.pulumi.reso
         return this.filesCount == null ? Input.empty() : this.filesCount;
     }
 
+    /**
+     * Source URL
+     * 
+     */
     @InputImport(name="sourceUrl", required=true)
     private final Input<String> sourceUrl;
 

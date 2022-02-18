@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegistryBuildSourceUploadUrl {
+/**
+ * The properties of a response to source upload request.
+ * API Version: 2018-02-01-preview.
+ * 
+ *
+ * The properties of a response to source upload request.
+ * 
+ */
     public static CompletableFuture<GetRegistryBuildSourceUploadUrlResult> invokeAsync(GetRegistryBuildSourceUploadUrlArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerregistry:getRegistryBuildSourceUploadUrl", TypeShape.of(GetRegistryBuildSourceUploadUrlResult.class), args == null ? GetRegistryBuildSourceUploadUrlArgs.Empty : args, Utilities.withVersion(options));
     }

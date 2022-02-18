@@ -13,6 +13,10 @@ public final class GetUserSharedAccessTokenArgs extends io.pulumi.resources.Invo
 
     public static final GetUserSharedAccessTokenArgs Empty = new GetUserSharedAccessTokenArgs();
 
+    /**
+     * The Expiry time of the Token. Maximum token expiry time is set to 30 days. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+     * 
+     */
     @InputImport(name="expiry", required=true)
     private final String expiry;
 
@@ -20,6 +24,10 @@ public final class GetUserSharedAccessTokenArgs extends io.pulumi.resources.Invo
         return this.expiry;
     }
 
+    /**
+     * The Key to be used to generate token for user.
+     * 
+     */
     @InputImport(name="keyType", required=true)
     private final KeyType keyType;
 
@@ -27,6 +35,10 @@ public final class GetUserSharedAccessTokenArgs extends io.pulumi.resources.Invo
         return this.keyType;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -34,6 +46,10 @@ public final class GetUserSharedAccessTokenArgs extends io.pulumi.resources.Invo
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the API Management service.
+     * 
+     */
     @InputImport(name="serviceName", required=true)
     private final String serviceName;
 
@@ -41,6 +57,10 @@ public final class GetUserSharedAccessTokenArgs extends io.pulumi.resources.Invo
         return this.serviceName;
     }
 
+    /**
+     * User identifier. Must be unique in the current API Management service instance.
+     * 
+     */
     @InputImport(name="userId", required=true)
     private final String userId;
 

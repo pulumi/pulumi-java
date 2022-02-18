@@ -11,10 +11,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * CycleStep hold information about a step progress.
+ * 
+ */
 public final class CycleStepResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CycleStepResponse Empty = new CycleStepResponse();
 
+    /**
+     * The time the cycle step has ended.
+     * 
+     */
     @InputImport(name="endTime", required=true)
     private final String endTime;
 
@@ -22,6 +30,10 @@ public final class CycleStepResponse extends io.pulumi.resources.InvokeArgs {
         return this.endTime;
     }
 
+    /**
+     * Initializing replication step.
+     * 
+     */
     @InputImport(name="initializingReplication", required=true)
     private final InitializingReplicationStepResponse initializingReplication;
 
@@ -29,6 +41,10 @@ public final class CycleStepResponse extends io.pulumi.resources.InvokeArgs {
         return this.initializingReplication;
     }
 
+    /**
+     * Post processing step.
+     * 
+     */
     @InputImport(name="postProcessing", required=true)
     private final PostProcessingStepResponse postProcessing;
 
@@ -36,6 +52,10 @@ public final class CycleStepResponse extends io.pulumi.resources.InvokeArgs {
         return this.postProcessing;
     }
 
+    /**
+     * Replicating step.
+     * 
+     */
     @InputImport(name="replicating", required=true)
     private final ReplicatingStepResponse replicating;
 
@@ -43,6 +63,10 @@ public final class CycleStepResponse extends io.pulumi.resources.InvokeArgs {
         return this.replicating;
     }
 
+    /**
+     * The time the cycle step has started.
+     * 
+     */
     @InputImport(name="startTime", required=true)
     private final String startTime;
 

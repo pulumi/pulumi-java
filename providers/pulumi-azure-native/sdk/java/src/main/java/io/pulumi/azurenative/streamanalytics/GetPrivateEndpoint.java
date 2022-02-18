@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPrivateEndpoint {
+/**
+ * Complete information about the private endpoint.
+ * API Version: 2020-03-01-preview.
+ * 
+ *
+ * Complete information about the private endpoint.
+ * 
+ */
     public static CompletableFuture<GetPrivateEndpointResult> invokeAsync(GetPrivateEndpointArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:streamanalytics:getPrivateEndpoint", TypeShape.of(GetPrivateEndpointResult.class), args == null ? GetPrivateEndpointArgs.Empty : args, Utilities.withVersion(options));
     }

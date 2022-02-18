@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Data type to show in view.
+     * 
+     */
     @EnumType
     public enum PivotTypeType {
         Dimension("Dimension"),

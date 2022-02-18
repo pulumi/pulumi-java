@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApiDestination {
+/**
+ * Resource Type definition for AWS::Events::ApiDestination.
+ * 
+ */
     public static CompletableFuture<GetApiDestinationResult> invokeAsync(GetApiDestinationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:events:getApiDestination", TypeShape.of(GetApiDestinationResult.class), args == null ? GetApiDestinationArgs.Empty : args, Utilities.withVersion(options));
     }

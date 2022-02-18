@@ -8,10 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The database instance type. On creation only USER_DATABASE is allowed, which is also the default when omitted.
+     * 
+     */
     @EnumType
     public enum InstanceType {
+        /**
+         * Unknown state, likely the result of an error on the backend. This is only used for distinguishing unset values.
+         * 
+         */
         DatabaseInstanceTypeUnspecified("DATABASE_INSTANCE_TYPE_UNSPECIFIED"),
+        /**
+         * The default database that is provisioned when a project is created.
+         * 
+         */
         DefaultDatabase("DEFAULT_DATABASE"),
+        /**
+         * A database that the user created.
+         * 
+         */
         UserDatabase("USER_DATABASE");
 
         private final String value;

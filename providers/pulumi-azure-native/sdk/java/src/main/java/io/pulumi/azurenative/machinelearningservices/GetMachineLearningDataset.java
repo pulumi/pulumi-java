@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMachineLearningDataset {
+/**
+ * Machine Learning dataset object wrapped into ARM resource envelope.
+ * API Version: 2020-05-01-preview.
+ * 
+ *
+ * Machine Learning dataset object wrapped into ARM resource envelope.
+ * 
+ */
     public static CompletableFuture<GetMachineLearningDatasetResult> invokeAsync(GetMachineLearningDatasetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getMachineLearningDataset", TypeShape.of(GetMachineLearningDatasetResult.class), args == null ? GetMachineLearningDatasetArgs.Empty : args, Utilities.withVersion(options));
     }

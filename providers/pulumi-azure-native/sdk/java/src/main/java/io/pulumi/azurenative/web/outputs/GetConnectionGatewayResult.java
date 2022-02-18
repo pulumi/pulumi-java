@@ -13,12 +13,36 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetConnectionGatewayResult {
+    /**
+     * Resource ETag
+     * 
+     */
     private final @Nullable String etag;
+    /**
+     * Resource id
+     * 
+     */
     private final String id;
+    /**
+     * Resource location
+     * 
+     */
     private final @Nullable String location;
+    /**
+     * Resource name
+     * 
+     */
     private final String name;
     private final ConnectionGatewayDefinitionResponseProperties properties;
+    /**
+     * Resource tags
+     * 
+     */
     private final @Nullable Map<String,String> tags;
+    /**
+     * Resource type
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"etag","id","location","name","properties","tags","type"})
@@ -39,24 +63,48 @@ public final class GetConnectionGatewayResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Resource ETag
+     * 
+     */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
+    /**
+     * Resource id
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Resource location
+     * 
+     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
+    /**
+     * Resource name
+     * 
+     */
     public String getName() {
         return this.name;
     }
     public ConnectionGatewayDefinitionResponseProperties getProperties() {
         return this.properties;
     }
+    /**
+     * Resource tags
+     * 
+     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+    /**
+     * Resource type
+     * 
+     */
     public String getType() {
         return this.type;
     }

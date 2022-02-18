@@ -12,8 +12,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PacketMirroringMirroredResourceInfoResponse {
+    /**
+     * A set of virtual machine instances that are being mirrored. They must live in zones contained in the same region as this packetMirroring. Note that this config will apply only to those network interfaces of the Instances that belong to the network specified in this packetMirroring. You may specify a maximum of 50 Instances.
+     * 
+     */
     private final List<PacketMirroringMirroredResourceInfoInstanceInfoResponse> instances;
+    /**
+     * A set of subnetworks for which traffic from/to all VM instances will be mirrored. They must live in the same region as this packetMirroring. You may specify a maximum of 5 subnetworks.
+     * 
+     */
     private final List<PacketMirroringMirroredResourceInfoSubnetInfoResponse> subnetworks;
+    /**
+     * A set of mirrored tags. Traffic from/to all VM instances that have one or more of these tags will be mirrored.
+     * 
+     */
     private final List<String> tags;
 
     @OutputCustomType.Constructor({"instances","subnetworks","tags"})
@@ -26,12 +38,24 @@ public final class PacketMirroringMirroredResourceInfoResponse {
         this.tags = Objects.requireNonNull(tags);
     }
 
+    /**
+     * A set of virtual machine instances that are being mirrored. They must live in zones contained in the same region as this packetMirroring. Note that this config will apply only to those network interfaces of the Instances that belong to the network specified in this packetMirroring. You may specify a maximum of 50 Instances.
+     * 
+     */
     public List<PacketMirroringMirroredResourceInfoInstanceInfoResponse> getInstances() {
         return this.instances;
     }
+    /**
+     * A set of subnetworks for which traffic from/to all VM instances will be mirrored. They must live in the same region as this packetMirroring. You may specify a maximum of 5 subnetworks.
+     * 
+     */
     public List<PacketMirroringMirroredResourceInfoSubnetInfoResponse> getSubnetworks() {
         return this.subnetworks;
     }
+    /**
+     * A set of mirrored tags. Traffic from/to all VM instances that have one or more of these tags will be mirrored.
+     * 
+     */
     public List<String> getTags() {
         return this.tags;
     }

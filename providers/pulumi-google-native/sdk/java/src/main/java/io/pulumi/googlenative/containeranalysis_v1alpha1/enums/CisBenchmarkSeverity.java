@@ -8,13 +8,41 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The severity level of this CIS benchmark check.
+     * 
+     */
     @EnumType
     public enum CisBenchmarkSeverity {
+        /**
+         * Unknown Impact
+         * 
+         */
         SeverityUnspecified("SEVERITY_UNSPECIFIED"),
+        /**
+         * Minimal Impact
+         * 
+         */
         Minimal("MINIMAL"),
+        /**
+         * Low Impact
+         * 
+         */
         Low("LOW"),
+        /**
+         * Medium Impact
+         * 
+         */
         Medium("MEDIUM"),
+        /**
+         * High Impact
+         * 
+         */
         High("HIGH"),
+        /**
+         * Critical Impact
+         * 
+         */
         Critical("CRITICAL");
 
         private final String value;

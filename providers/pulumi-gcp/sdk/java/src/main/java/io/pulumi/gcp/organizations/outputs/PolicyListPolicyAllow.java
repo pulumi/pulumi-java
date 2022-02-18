@@ -13,7 +13,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PolicyListPolicyAllow {
+    /**
+     * The policy allows or denies all values.
+     * 
+     */
     private final @Nullable Boolean all;
+    /**
+     * The policy can define specific values that are allowed or denied.
+     * 
+     */
     private final @Nullable List<String> values;
 
     @OutputCustomType.Constructor({"all","values"})
@@ -24,9 +32,17 @@ public final class PolicyListPolicyAllow {
         this.values = values;
     }
 
+    /**
+     * The policy allows or denies all values.
+     * 
+     */
     public Optional<Boolean> getAll() {
         return Optional.ofNullable(this.all);
     }
+    /**
+     * The policy can define specific values that are allowed or denied.
+     * 
+     */
     public List<String> getValues() {
         return this.values == null ? List.of() : this.values;
     }

@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SecurityContactPropertiesResponseAlertNotifications {
+    /**
+     * Defines the minimal alert severity which will be sent as email notifications
+     * 
+     */
     private final @Nullable String minimalSeverity;
+    /**
+     * Defines if email notifications will be sent about new security alerts
+     * 
+     */
     private final @Nullable String state;
 
     @OutputCustomType.Constructor({"minimalSeverity","state"})
@@ -22,9 +30,17 @@ public final class SecurityContactPropertiesResponseAlertNotifications {
         this.state = state;
     }
 
+    /**
+     * Defines the minimal alert severity which will be sent as email notifications
+     * 
+     */
     public Optional<String> getMinimalSeverity() {
         return Optional.ofNullable(this.minimalSeverity);
     }
+    /**
+     * Defines if email notifications will be sent about new security alerts
+     * 
+     */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }

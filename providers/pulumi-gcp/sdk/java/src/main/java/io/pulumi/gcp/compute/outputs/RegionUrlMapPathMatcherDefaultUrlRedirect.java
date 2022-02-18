@@ -12,11 +12,57 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RegionUrlMapPathMatcherDefaultUrlRedirect {
+    /**
+     * The host that will be used in the redirect response instead of the one that was
+     * supplied in the request. The value must be between 1 and 255 characters.
+     * 
+     */
     private final @Nullable String hostRedirect;
+    /**
+     * If set to true, the URL scheme in the redirected request is set to https. If set to
+     * false, the URL scheme of the redirected request will remain the same as that of the
+     * request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
+     * true for TargetHttpsProxy is not permitted. The default is set to false.
+     * 
+     */
     private final @Nullable Boolean httpsRedirect;
+    /**
+     * The path that will be used in the redirect response instead of the one that was
+     * supplied in the request. pathRedirect cannot be supplied together with
+     * prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
+     * original request will be used for the redirect. The value must be between 1 and 1024
+     * characters.
+     * 
+     */
     private final @Nullable String pathRedirect;
+    /**
+     * The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
+     * retaining the remaining portion of the URL before redirecting the request.
+     * prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
+     * neither. If neither is supplied, the path of the original request will be used for
+     * the redirect. The value must be between 1 and 1024 characters.
+     * 
+     */
     private final @Nullable String prefixRedirect;
+    /**
+     * The HTTP Status code to use for this RedirectAction. Supported values are:
+     * * MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
+     * * FOUND, which corresponds to 302.
+     * * SEE_OTHER which corresponds to 303.
+     * * TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+     *   will be retained.
+     * * PERMANENT_REDIRECT, which corresponds to 308. In this case,
+     *   the request method will be retained.
+     * 
+     */
     private final @Nullable String redirectResponseCode;
+    /**
+     * If set to true, any accompanying query portion of the original URL is removed prior
+     * to redirecting the request. If set to false, the query portion of the original URL is
+     * retained.
+     * This field is required to ensure an empty block is not set. The normal default value is false.
+     * 
+     */
     private final Boolean stripQuery;
 
     @OutputCustomType.Constructor({"hostRedirect","httpsRedirect","pathRedirect","prefixRedirect","redirectResponseCode","stripQuery"})
@@ -35,21 +81,67 @@ public final class RegionUrlMapPathMatcherDefaultUrlRedirect {
         this.stripQuery = Objects.requireNonNull(stripQuery);
     }
 
+    /**
+     * The host that will be used in the redirect response instead of the one that was
+     * supplied in the request. The value must be between 1 and 255 characters.
+     * 
+     */
     public Optional<String> getHostRedirect() {
         return Optional.ofNullable(this.hostRedirect);
     }
+    /**
+     * If set to true, the URL scheme in the redirected request is set to https. If set to
+     * false, the URL scheme of the redirected request will remain the same as that of the
+     * request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
+     * true for TargetHttpsProxy is not permitted. The default is set to false.
+     * 
+     */
     public Optional<Boolean> getHttpsRedirect() {
         return Optional.ofNullable(this.httpsRedirect);
     }
+    /**
+     * The path that will be used in the redirect response instead of the one that was
+     * supplied in the request. pathRedirect cannot be supplied together with
+     * prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
+     * original request will be used for the redirect. The value must be between 1 and 1024
+     * characters.
+     * 
+     */
     public Optional<String> getPathRedirect() {
         return Optional.ofNullable(this.pathRedirect);
     }
+    /**
+     * The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
+     * retaining the remaining portion of the URL before redirecting the request.
+     * prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
+     * neither. If neither is supplied, the path of the original request will be used for
+     * the redirect. The value must be between 1 and 1024 characters.
+     * 
+     */
     public Optional<String> getPrefixRedirect() {
         return Optional.ofNullable(this.prefixRedirect);
     }
+    /**
+     * The HTTP Status code to use for this RedirectAction. Supported values are:
+     * * MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
+     * * FOUND, which corresponds to 302.
+     * * SEE_OTHER which corresponds to 303.
+     * * TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+     *   will be retained.
+     * * PERMANENT_REDIRECT, which corresponds to 308. In this case,
+     *   the request method will be retained.
+     * 
+     */
     public Optional<String> getRedirectResponseCode() {
         return Optional.ofNullable(this.redirectResponseCode);
     }
+    /**
+     * If set to true, any accompanying query portion of the original URL is removed prior
+     * to redirecting the request. If set to false, the query portion of the original URL is
+     * retained.
+     * This field is required to ensure an empty block is not set. The normal default value is false.
+     * 
+     */
     public Boolean getStripQuery() {
         return this.stripQuery;
     }

@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Factory's GitHub repo information.
+ * 
+ */
 public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FactoryGitHubConfigurationArgs Empty = new FactoryGitHubConfigurationArgs();
 
+    /**
+     * Account name.
+     * 
+     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -22,6 +30,10 @@ public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.Re
         return this.accountName;
     }
 
+    /**
+     * GitHub bring your own app client id.
+     * 
+     */
     @InputImport(name="clientId")
     private final @Nullable Input<String> clientId;
 
@@ -29,6 +41,10 @@ public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.Re
         return this.clientId == null ? Input.empty() : this.clientId;
     }
 
+    /**
+     * GitHub bring your own app client secret information.
+     * 
+     */
     @InputImport(name="clientSecret")
     private final @Nullable Input<GitHubClientSecretArgs> clientSecret;
 
@@ -36,6 +52,10 @@ public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.Re
         return this.clientSecret == null ? Input.empty() : this.clientSecret;
     }
 
+    /**
+     * Collaboration branch.
+     * 
+     */
     @InputImport(name="collaborationBranch", required=true)
     private final Input<String> collaborationBranch;
 
@@ -43,6 +63,10 @@ public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.Re
         return this.collaborationBranch;
     }
 
+    /**
+     * GitHub Enterprise host name. For example: https://github.mydomain.com
+     * 
+     */
     @InputImport(name="hostName")
     private final @Nullable Input<String> hostName;
 
@@ -50,6 +74,10 @@ public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.Re
         return this.hostName == null ? Input.empty() : this.hostName;
     }
 
+    /**
+     * Last commit id.
+     * 
+     */
     @InputImport(name="lastCommitId")
     private final @Nullable Input<String> lastCommitId;
 
@@ -57,6 +85,10 @@ public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.Re
         return this.lastCommitId == null ? Input.empty() : this.lastCommitId;
     }
 
+    /**
+     * Repository name.
+     * 
+     */
     @InputImport(name="repositoryName", required=true)
     private final Input<String> repositoryName;
 
@@ -64,6 +96,10 @@ public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.Re
         return this.repositoryName;
     }
 
+    /**
+     * Root folder.
+     * 
+     */
     @InputImport(name="rootFolder", required=true)
     private final Input<String> rootFolder;
 
@@ -71,6 +107,11 @@ public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.Re
         return this.rootFolder;
     }
 
+    /**
+     * Type of repo configuration.
+     * Expected value is 'FactoryGitHubConfiguration'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

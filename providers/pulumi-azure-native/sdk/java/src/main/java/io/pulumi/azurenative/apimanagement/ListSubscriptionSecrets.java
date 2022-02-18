@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListSubscriptionSecrets {
+/**
+ * Subscription keys.
+ * API Version: 2020-12-01.
+ * 
+ *
+ * Subscription keys.
+ * 
+ */
     public static CompletableFuture<ListSubscriptionSecretsResult> invokeAsync(ListSubscriptionSecretsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:listSubscriptionSecrets", TypeShape.of(ListSubscriptionSecretsResult.class), args == null ? ListSubscriptionSecretsArgs.Empty : args, Utilities.withVersion(options));
     }

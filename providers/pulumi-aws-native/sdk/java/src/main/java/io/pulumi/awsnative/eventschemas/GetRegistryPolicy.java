@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegistryPolicy {
+/**
+ * Resource Type definition for AWS::EventSchemas::RegistryPolicy
+ * 
+ */
     public static CompletableFuture<GetRegistryPolicyResult> invokeAsync(GetRegistryPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:eventschemas:getRegistryPolicy", TypeShape.of(GetRegistryPolicyResult.class), args == null ? GetRegistryPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

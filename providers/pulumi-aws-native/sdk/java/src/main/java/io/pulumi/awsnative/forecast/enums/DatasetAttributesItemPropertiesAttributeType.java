@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Data type of the field
+     * 
+     */
     @EnumType
     public enum DatasetAttributesItemPropertiesAttributeType {
         String("string"),

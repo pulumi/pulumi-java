@@ -14,6 +14,10 @@ public final class GetVirtualMachineScaleSetVMExtensionArgs extends io.pulumi.re
 
     public static final GetVirtualMachineScaleSetVMExtensionArgs Empty = new GetVirtualMachineScaleSetVMExtensionArgs();
 
+    /**
+     * The expand expression to apply on the operation.
+     * 
+     */
     @InputImport(name="expand")
     private final @Nullable String expand;
 
@@ -21,6 +25,10 @@ public final class GetVirtualMachineScaleSetVMExtensionArgs extends io.pulumi.re
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
+    /**
+     * The instance ID of the virtual machine.
+     * 
+     */
     @InputImport(name="instanceId", required=true)
     private final String instanceId;
 
@@ -28,6 +36,10 @@ public final class GetVirtualMachineScaleSetVMExtensionArgs extends io.pulumi.re
         return this.instanceId;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -35,6 +47,10 @@ public final class GetVirtualMachineScaleSetVMExtensionArgs extends io.pulumi.re
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the virtual machine extension.
+     * 
+     */
     @InputImport(name="vmExtensionName", required=true)
     private final String vmExtensionName;
 
@@ -42,6 +58,10 @@ public final class GetVirtualMachineScaleSetVMExtensionArgs extends io.pulumi.re
         return this.vmExtensionName;
     }
 
+    /**
+     * The name of the VM scale set.
+     * 
+     */
     @InputImport(name="vmScaleSetName", required=true)
     private final String vmScaleSetName;
 

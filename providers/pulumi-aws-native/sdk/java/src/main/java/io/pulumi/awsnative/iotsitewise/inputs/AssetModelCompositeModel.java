@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Contains a composite model definition in an asset model. This composite model definition is applied to all assets created from the asset model.
+ * 
+ */
 public final class AssetModelCompositeModel extends io.pulumi.resources.InvokeArgs {
 
     public static final AssetModelCompositeModel Empty = new AssetModelCompositeModel();
 
+    /**
+     * The property definitions of the asset model. You can specify up to 200 properties per asset model.
+     * 
+     */
     @InputImport(name="compositeModelProperties")
     private final @Nullable List<AssetModelProperty> compositeModelProperties;
 
@@ -23,6 +31,10 @@ public final class AssetModelCompositeModel extends io.pulumi.resources.InvokeAr
         return this.compositeModelProperties == null ? List.of() : this.compositeModelProperties;
     }
 
+    /**
+     * A description for the asset composite model.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -30,6 +42,10 @@ public final class AssetModelCompositeModel extends io.pulumi.resources.InvokeAr
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * A unique, friendly name for the asset composite model.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -37,6 +53,10 @@ public final class AssetModelCompositeModel extends io.pulumi.resources.InvokeAr
         return this.name;
     }
 
+    /**
+     * The type of the composite model. For alarm composite models, this type is AWS/ALARM
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

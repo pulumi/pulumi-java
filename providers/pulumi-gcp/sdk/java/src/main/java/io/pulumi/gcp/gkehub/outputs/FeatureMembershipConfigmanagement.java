@@ -15,10 +15,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FeatureMembershipConfigmanagement {
+    /**
+     * Binauthz configuration for the cluster. Structure is documented below.
+     * 
+     */
     private final @Nullable FeatureMembershipConfigmanagementBinauthz binauthz;
+    /**
+     * Config Sync configuration for the cluster. Structure is documented below.
+     * 
+     */
     private final @Nullable FeatureMembershipConfigmanagementConfigSync configSync;
+    /**
+     * Hierarchy Controller configuration for the cluster. Structure is documented below.
+     * 
+     */
     private final @Nullable FeatureMembershipConfigmanagementHierarchyController hierarchyController;
+    /**
+     * Policy Controller configuration for the cluster. Structure is documented below.
+     * 
+     */
     private final @Nullable FeatureMembershipConfigmanagementPolicyController policyController;
+    /**
+     * Version of ACM installed.
+     * 
+     */
     private final @Nullable String version;
 
     @OutputCustomType.Constructor({"binauthz","configSync","hierarchyController","policyController","version"})
@@ -35,18 +55,38 @@ public final class FeatureMembershipConfigmanagement {
         this.version = version;
     }
 
+    /**
+     * Binauthz configuration for the cluster. Structure is documented below.
+     * 
+     */
     public Optional<FeatureMembershipConfigmanagementBinauthz> getBinauthz() {
         return Optional.ofNullable(this.binauthz);
     }
+    /**
+     * Config Sync configuration for the cluster. Structure is documented below.
+     * 
+     */
     public Optional<FeatureMembershipConfigmanagementConfigSync> getConfigSync() {
         return Optional.ofNullable(this.configSync);
     }
+    /**
+     * Hierarchy Controller configuration for the cluster. Structure is documented below.
+     * 
+     */
     public Optional<FeatureMembershipConfigmanagementHierarchyController> getHierarchyController() {
         return Optional.ofNullable(this.hierarchyController);
     }
+    /**
+     * Policy Controller configuration for the cluster. Structure is documented below.
+     * 
+     */
     public Optional<FeatureMembershipConfigmanagementPolicyController> getPolicyController() {
         return Optional.ofNullable(this.policyController);
     }
+    /**
+     * Version of ACM installed.
+     * 
+     */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }

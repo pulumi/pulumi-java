@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetKeysKeySigningKeyDigest {
+    /**
+     * The base-16 encoded bytes of this digest. Suitable for use in a DS resource record.
+     * 
+     */
     private final @Nullable String digest;
+    /**
+     * Specifies the algorithm used to calculate this digest. Possible values are `sha1`, `sha256` and `sha384`
+     * 
+     */
     private final @Nullable String type;
 
     @OutputCustomType.Constructor({"digest","type"})
@@ -22,9 +30,17 @@ public final class GetKeysKeySigningKeyDigest {
         this.type = type;
     }
 
+    /**
+     * The base-16 encoded bytes of this digest. Suitable for use in a DS resource record.
+     * 
+     */
     public Optional<String> getDigest() {
         return Optional.ofNullable(this.digest);
     }
+    /**
+     * Specifies the algorithm used to calculate this digest. Possible values are `sha1`, `sha256` and `sha384`
+     * 
+     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

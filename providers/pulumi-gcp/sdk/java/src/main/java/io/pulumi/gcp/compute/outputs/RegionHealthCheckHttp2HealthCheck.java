@@ -12,12 +12,61 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RegionHealthCheckHttp2HealthCheck {
+    /**
+     * The value of the host header in the HTTP2 health check request.
+     * If left empty (default value), the public IP on behalf of which this health
+     * check is performed will be used.
+     * 
+     */
     private final @Nullable String host;
+    /**
+     * The port number for the health check request.
+     * Must be specified if portName and portSpecification are not set
+     * or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
+     * 
+     */
     private final @Nullable Integer port;
+    /**
+     * Port name as defined in InstanceGroup#NamedPort#name. If both port and
+     * port_name are defined, port takes precedence.
+     * 
+     */
     private final @Nullable String portName;
+    /**
+     * Specifies how port is selected for health checking, can be one of the
+     * following values:
+     * * `USE_FIXED_PORT`: The port number in `port` is used for health checking.
+     * * `USE_NAMED_PORT`: The `portName` is used for health checking.
+     * * `USE_SERVING_PORT`: For NetworkEndpointGroup, the port specified for each
+     *   network endpoint is used for health checking. For other backends, the
+     *   port or named port specified in the Backend Service is used for health
+     *   checking.
+     *   If not specified, gRPC health check follows behavior specified in `port` and
+     *   `portName` fields.
+     *   Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
+     * 
+     */
     private final @Nullable String portSpecification;
+    /**
+     * Specifies the type of proxy header to append before sending data to the
+     * backend.
+     * Default value is `NONE`.
+     * Possible values are `NONE` and `PROXY_V1`.
+     * 
+     */
     private final @Nullable String proxyHeader;
+    /**
+     * The request path of the HTTP2 health check request.
+     * The default value is /.
+     * 
+     */
     private final @Nullable String requestPath;
+    /**
+     * The bytes to match against the beginning of the response data. If left empty
+     * (the default value), any response will indicate health. The response data
+     * can only be ASCII.
+     * 
+     */
     private final @Nullable String response;
 
     @OutputCustomType.Constructor({"host","port","portName","portSpecification","proxyHeader","requestPath","response"})
@@ -38,24 +87,73 @@ public final class RegionHealthCheckHttp2HealthCheck {
         this.response = response;
     }
 
+    /**
+     * The value of the host header in the HTTP2 health check request.
+     * If left empty (default value), the public IP on behalf of which this health
+     * check is performed will be used.
+     * 
+     */
     public Optional<String> getHost() {
         return Optional.ofNullable(this.host);
     }
+    /**
+     * The port number for the health check request.
+     * Must be specified if portName and portSpecification are not set
+     * or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
+     * 
+     */
     public Optional<Integer> getPort() {
         return Optional.ofNullable(this.port);
     }
+    /**
+     * Port name as defined in InstanceGroup#NamedPort#name. If both port and
+     * port_name are defined, port takes precedence.
+     * 
+     */
     public Optional<String> getPortName() {
         return Optional.ofNullable(this.portName);
     }
+    /**
+     * Specifies how port is selected for health checking, can be one of the
+     * following values:
+     * * `USE_FIXED_PORT`: The port number in `port` is used for health checking.
+     * * `USE_NAMED_PORT`: The `portName` is used for health checking.
+     * * `USE_SERVING_PORT`: For NetworkEndpointGroup, the port specified for each
+     *   network endpoint is used for health checking. For other backends, the
+     *   port or named port specified in the Backend Service is used for health
+     *   checking.
+     *   If not specified, gRPC health check follows behavior specified in `port` and
+     *   `portName` fields.
+     *   Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
+     * 
+     */
     public Optional<String> getPortSpecification() {
         return Optional.ofNullable(this.portSpecification);
     }
+    /**
+     * Specifies the type of proxy header to append before sending data to the
+     * backend.
+     * Default value is `NONE`.
+     * Possible values are `NONE` and `PROXY_V1`.
+     * 
+     */
     public Optional<String> getProxyHeader() {
         return Optional.ofNullable(this.proxyHeader);
     }
+    /**
+     * The request path of the HTTP2 health check request.
+     * The default value is /.
+     * 
+     */
     public Optional<String> getRequestPath() {
         return Optional.ofNullable(this.requestPath);
     }
+    /**
+     * The bytes to match against the beginning of the response data. If left empty
+     * (the default value), any response will indicate health. The response data
+     * can only be ASCII.
+     * 
+     */
     public Optional<String> getResponse() {
         return Optional.ofNullable(this.response);
     }

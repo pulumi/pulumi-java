@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A copy activity Rest service Sink.
+ * 
+ */
 public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RestSinkArgs Empty = new RestSinkArgs();
 
+    /**
+     * The additional HTTP headers in the request to the RESTful API. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="additionalHeaders")
     private final @Nullable Input<Object> additionalHeaders;
 
@@ -22,6 +30,10 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.additionalHeaders == null ? Input.empty() : this.additionalHeaders;
     }
 
+    /**
+     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     @InputImport(name="disableMetricsCollection")
     private final @Nullable Input<Object> disableMetricsCollection;
 
@@ -29,6 +41,10 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.disableMetricsCollection == null ? Input.empty() : this.disableMetricsCollection;
     }
 
+    /**
+     * Http Compression Type to Send data in compressed format with Optimal Compression Level, Default is None. And The Only Supported option is Gzip.
+     * 
+     */
     @InputImport(name="httpCompressionType")
     private final @Nullable Input<Object> httpCompressionType;
 
@@ -36,6 +52,10 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.httpCompressionType == null ? Input.empty() : this.httpCompressionType;
     }
 
+    /**
+     * The timeout (TimeSpan) to get an HTTP response. It is the timeout to get a response, not the timeout to read response data. Default value: 00:01:40. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     @InputImport(name="httpRequestTimeout")
     private final @Nullable Input<Object> httpRequestTimeout;
 
@@ -43,6 +63,10 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.httpRequestTimeout == null ? Input.empty() : this.httpRequestTimeout;
     }
 
+    /**
+     * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
+     * 
+     */
     @InputImport(name="maxConcurrentConnections")
     private final @Nullable Input<Object> maxConcurrentConnections;
 
@@ -50,6 +74,10 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.maxConcurrentConnections == null ? Input.empty() : this.maxConcurrentConnections;
     }
 
+    /**
+     * The time to await before sending next request, in milliseconds
+     * 
+     */
     @InputImport(name="requestInterval")
     private final @Nullable Input<Object> requestInterval;
 
@@ -57,6 +85,10 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.requestInterval == null ? Input.empty() : this.requestInterval;
     }
 
+    /**
+     * The HTTP method used to call the RESTful API. The default is POST. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="requestMethod")
     private final @Nullable Input<Object> requestMethod;
 
@@ -64,6 +96,10 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.requestMethod == null ? Input.empty() : this.requestMethod;
     }
 
+    /**
+     * Sink retry count. Type: integer (or Expression with resultType integer).
+     * 
+     */
     @InputImport(name="sinkRetryCount")
     private final @Nullable Input<Object> sinkRetryCount;
 
@@ -71,6 +107,10 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.sinkRetryCount == null ? Input.empty() : this.sinkRetryCount;
     }
 
+    /**
+     * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     @InputImport(name="sinkRetryWait")
     private final @Nullable Input<Object> sinkRetryWait;
 
@@ -78,6 +118,11 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.sinkRetryWait == null ? Input.empty() : this.sinkRetryWait;
     }
 
+    /**
+     * Copy sink type.
+     * Expected value is 'RestSink'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -85,6 +130,10 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.type;
     }
 
+    /**
+     * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
+     * 
+     */
     @InputImport(name="writeBatchSize")
     private final @Nullable Input<Object> writeBatchSize;
 
@@ -92,6 +141,10 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.writeBatchSize == null ? Input.empty() : this.writeBatchSize;
     }
 
+    /**
+     * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     @InputImport(name="writeBatchTimeout")
     private final @Nullable Input<Object> writeBatchTimeout;
 

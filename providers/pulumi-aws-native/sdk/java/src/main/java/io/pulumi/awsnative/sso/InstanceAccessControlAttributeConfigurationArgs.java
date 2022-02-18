@@ -24,6 +24,10 @@ public final class InstanceAccessControlAttributeConfigurationArgs extends io.pu
         return this.accessControlAttributes == null ? Input.empty() : this.accessControlAttributes;
     }
 
+    /**
+     * The InstanceAccessControlAttributeConfiguration property has been deprecated but is still supported for backwards compatibility purposes. We recomend that you use  AccessControlAttributes property instead.
+     * 
+     */
     @InputImport(name="instanceAccessControlAttributeConfiguration")
     private final @Nullable Input<InstanceAccessControlAttributeConfigurationPropertiesArgs> instanceAccessControlAttributeConfiguration;
 
@@ -31,6 +35,10 @@ public final class InstanceAccessControlAttributeConfigurationArgs extends io.pu
         return this.instanceAccessControlAttributeConfiguration == null ? Input.empty() : this.instanceAccessControlAttributeConfiguration;
     }
 
+    /**
+     * The ARN of the AWS SSO instance under which the operation will be executed.
+     * 
+     */
     @InputImport(name="instanceArn", required=true)
     private final Input<String> instanceArn;
 

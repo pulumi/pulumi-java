@@ -14,18 +14,62 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SamplingRule {
+    /**
+     * Matches attributes derived from the request.
+     * 
+     */
     private final @Nullable Object attributes;
+    /**
+     * The percentage of matching requests to instrument, after the reservoir is exhausted.
+     * 
+     */
     private final @Nullable Double fixedRate;
+    /**
+     * Matches the HTTP method from a request URL.
+     * 
+     */
     private final @Nullable String hTTPMethod;
+    /**
+     * Matches the hostname from a request URL.
+     * 
+     */
     private final @Nullable String host;
+    /**
+     * The priority of the sampling rule.
+     * 
+     */
     private final @Nullable Integer priority;
+    /**
+     * A fixed number of matching requests to instrument per second, prior to applying the fixed rate. The reservoir is not used directly by services, but applies to all services using the rule collectively.
+     * 
+     */
     private final @Nullable Integer reservoirSize;
+    /**
+     * Matches the ARN of the AWS resource on which the service runs.
+     * 
+     */
     private final @Nullable String resourceARN;
     private final @Nullable String ruleARN;
     private final @Nullable String ruleName;
+    /**
+     * Matches the name that the service uses to identify itself in segments.
+     * 
+     */
     private final @Nullable String serviceName;
+    /**
+     * Matches the origin that the service uses to identify its type in segments.
+     * 
+     */
     private final @Nullable String serviceType;
+    /**
+     * Matches the path from a request URL.
+     * 
+     */
     private final @Nullable String uRLPath;
+    /**
+     * The version of the sampling rule format (1)
+     * 
+     */
     private final @Nullable Integer version;
 
     @OutputCustomType.Constructor({"attributes","fixedRate","hTTPMethod","host","priority","reservoirSize","resourceARN","ruleARN","ruleName","serviceName","serviceType","uRLPath","version"})
@@ -58,24 +102,52 @@ public final class SamplingRule {
         this.version = version;
     }
 
+    /**
+     * Matches attributes derived from the request.
+     * 
+     */
     public Optional<Object> getAttributes() {
         return Optional.ofNullable(this.attributes);
     }
+    /**
+     * The percentage of matching requests to instrument, after the reservoir is exhausted.
+     * 
+     */
     public Optional<Double> getFixedRate() {
         return Optional.ofNullable(this.fixedRate);
     }
+    /**
+     * Matches the HTTP method from a request URL.
+     * 
+     */
     public Optional<String> getHTTPMethod() {
         return Optional.ofNullable(this.hTTPMethod);
     }
+    /**
+     * Matches the hostname from a request URL.
+     * 
+     */
     public Optional<String> getHost() {
         return Optional.ofNullable(this.host);
     }
+    /**
+     * The priority of the sampling rule.
+     * 
+     */
     public Optional<Integer> getPriority() {
         return Optional.ofNullable(this.priority);
     }
+    /**
+     * A fixed number of matching requests to instrument per second, prior to applying the fixed rate. The reservoir is not used directly by services, but applies to all services using the rule collectively.
+     * 
+     */
     public Optional<Integer> getReservoirSize() {
         return Optional.ofNullable(this.reservoirSize);
     }
+    /**
+     * Matches the ARN of the AWS resource on which the service runs.
+     * 
+     */
     public Optional<String> getResourceARN() {
         return Optional.ofNullable(this.resourceARN);
     }
@@ -85,15 +157,31 @@ public final class SamplingRule {
     public Optional<String> getRuleName() {
         return Optional.ofNullable(this.ruleName);
     }
+    /**
+     * Matches the name that the service uses to identify itself in segments.
+     * 
+     */
     public Optional<String> getServiceName() {
         return Optional.ofNullable(this.serviceName);
     }
+    /**
+     * Matches the origin that the service uses to identify its type in segments.
+     * 
+     */
     public Optional<String> getServiceType() {
         return Optional.ofNullable(this.serviceType);
     }
+    /**
+     * Matches the path from a request URL.
+     * 
+     */
     public Optional<String> getURLPath() {
         return Optional.ofNullable(this.uRLPath);
     }
+    /**
+     * The version of the sampling rule format (1)
+     * 
+     */
     public Optional<Integer> getVersion() {
         return Optional.ofNullable(this.version);
     }

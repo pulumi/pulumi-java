@@ -16,6 +16,10 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FlowArgs Empty = new FlowArgs();
 
+    /**
+     * The Availability Zone that you want to create the flow in. These options are limited to the Availability Zones within the current AWS.
+     * 
+     */
     @InputImport(name="availabilityZone")
     private final @Nullable Input<String> availabilityZone;
 
@@ -23,6 +27,10 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
         return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
     }
 
+    /**
+     * The name of the flow.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -30,6 +38,10 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The source of the flow.
+     * 
+     */
     @InputImport(name="source", required=true)
     private final Input<FlowSourceArgs> source;
 
@@ -37,6 +49,10 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
         return this.source;
     }
 
+    /**
+     * The source failover config of the flow.
+     * 
+     */
     @InputImport(name="sourceFailoverConfig")
     private final @Nullable Input<FlowFailoverConfigArgs> sourceFailoverConfig;
 

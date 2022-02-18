@@ -11,11 +11,35 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetSecretResult {
+    /**
+     * Fully qualified identifier of the key vault resource.
+     * 
+     */
     private final String id;
+    /**
+     * Azure location of the key vault resource.
+     * 
+     */
     private final String location;
+    /**
+     * Name of the key vault resource.
+     * 
+     */
     private final String name;
+    /**
+     * Properties of the secret
+     * 
+     */
     private final SecretPropertiesResponse properties;
+    /**
+     * Tags assigned to the key vault resource.
+     * 
+     */
     private final Map<String,String> tags;
+    /**
+     * Resource type of the key vault resource.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"id","location","name","properties","tags","type"})
@@ -34,21 +58,45 @@ public final class GetSecretResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Fully qualified identifier of the key vault resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Azure location of the key vault resource.
+     * 
+     */
     public String getLocation() {
         return this.location;
     }
+    /**
+     * Name of the key vault resource.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Properties of the secret
+     * 
+     */
     public SecretPropertiesResponse getProperties() {
         return this.properties;
     }
+    /**
+     * Tags assigned to the key vault resource.
+     * 
+     */
     public Map<String,String> getTags() {
         return this.tags;
     }
+    /**
+     * Resource type of the key vault resource.
+     * 
+     */
     public String getType() {
         return this.type;
     }

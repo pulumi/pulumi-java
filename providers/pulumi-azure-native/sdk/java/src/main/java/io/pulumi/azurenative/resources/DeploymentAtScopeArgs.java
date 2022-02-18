@@ -16,6 +16,10 @@ public final class DeploymentAtScopeArgs extends io.pulumi.resources.ResourceArg
 
     public static final DeploymentAtScopeArgs Empty = new DeploymentAtScopeArgs();
 
+    /**
+     * The name of the deployment.
+     * 
+     */
     @InputImport(name="deploymentName")
     private final @Nullable Input<String> deploymentName;
 
@@ -23,6 +27,10 @@ public final class DeploymentAtScopeArgs extends io.pulumi.resources.ResourceArg
         return this.deploymentName == null ? Input.empty() : this.deploymentName;
     }
 
+    /**
+     * The location to store the deployment data.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -30,6 +38,10 @@ public final class DeploymentAtScopeArgs extends io.pulumi.resources.ResourceArg
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The deployment properties.
+     * 
+     */
     @InputImport(name="properties", required=true)
     private final Input<DeploymentPropertiesArgs> properties;
 
@@ -37,6 +49,10 @@ public final class DeploymentAtScopeArgs extends io.pulumi.resources.ResourceArg
         return this.properties;
     }
 
+    /**
+     * The resource scope.
+     * 
+     */
     @InputImport(name="scope", required=true)
     private final Input<String> scope;
 
@@ -44,6 +60,10 @@ public final class DeploymentAtScopeArgs extends io.pulumi.resources.ResourceArg
         return this.scope;
     }
 
+    /**
+     * Deployment tags
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

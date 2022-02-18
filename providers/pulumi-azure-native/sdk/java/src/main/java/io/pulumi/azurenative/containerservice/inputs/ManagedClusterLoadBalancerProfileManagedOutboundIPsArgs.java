@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Desired managed outbound IPs for the cluster load balancer.
+ * 
+ */
 public final class ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs Empty = new ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs();
 
+    /**
+     * Desired number of outbound IP created/managed by Azure for the cluster load balancer. Allowed values must be in the range of 1 to 100 (inclusive). The default value is 1.
+     * 
+     */
     @InputImport(name="count")
     private final @Nullable Input<Integer> count;
 

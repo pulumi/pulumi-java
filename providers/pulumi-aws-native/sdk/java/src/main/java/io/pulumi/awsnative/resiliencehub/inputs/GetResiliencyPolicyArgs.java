@@ -12,6 +12,10 @@ public final class GetResiliencyPolicyArgs extends io.pulumi.resources.InvokeArg
 
     public static final GetResiliencyPolicyArgs Empty = new GetResiliencyPolicyArgs();
 
+    /**
+     * Amazon Resource Name (ARN) of the Resiliency Policy.
+     * 
+     */
     @InputImport(name="policyArn", required=true)
     private final String policyArn;
 

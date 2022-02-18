@@ -100,6 +100,10 @@ public final class IoMAMPolicyByNameArgs extends io.pulumi.resources.ResourceArg
         return this.friendlyName;
     }
 
+    /**
+     * Location hostName for the tenant
+     * 
+     */
     @InputImport(name="hostName", required=true)
     private final Input<String> hostName;
 
@@ -107,6 +111,10 @@ public final class IoMAMPolicyByNameArgs extends io.pulumi.resources.ResourceArg
         return this.hostName;
     }
 
+    /**
+     * Resource Location
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -142,6 +150,10 @@ public final class IoMAMPolicyByNameArgs extends io.pulumi.resources.ResourceArg
         return this.pinNumRetry == null ? Input.empty() : this.pinNumRetry;
     }
 
+    /**
+     * Unique name for the policy
+     * 
+     */
     @InputImport(name="policyName")
     private final @Nullable Input<String> policyName;
 
@@ -149,6 +161,10 @@ public final class IoMAMPolicyByNameArgs extends io.pulumi.resources.ResourceArg
         return this.policyName == null ? Input.empty() : this.policyName;
     }
 
+    /**
+     * Resource Tags
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

@@ -17,6 +17,10 @@ public final class AzureRetentionRuleResponse {
     private final @Nullable Boolean isDefault;
     private final List<SourceLifeCycleResponse> lifecycles;
     private final String name;
+    /**
+     * Expected value is 'AzureRetentionRule'.
+     * 
+     */
     private final String objectType;
 
     @OutputCustomType.Constructor({"isDefault","lifecycles","name","objectType"})
@@ -40,6 +44,10 @@ public final class AzureRetentionRuleResponse {
     public String getName() {
         return this.name;
     }
+    /**
+     * Expected value is 'AzureRetentionRule'.
+     * 
+     */
     public String getObjectType() {
         return this.objectType;
     }

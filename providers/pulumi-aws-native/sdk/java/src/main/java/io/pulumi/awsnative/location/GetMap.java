@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMap {
+/**
+ * Definition of AWS::Location::Map Resource Type
+ * 
+ */
     public static CompletableFuture<GetMapResult> invokeAsync(GetMapArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:location:getMap", TypeShape.of(GetMapResult.class), args == null ? GetMapArgs.Empty : args, Utilities.withVersion(options));
     }

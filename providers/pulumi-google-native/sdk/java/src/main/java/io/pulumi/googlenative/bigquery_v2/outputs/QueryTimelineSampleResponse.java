@@ -9,10 +9,30 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class QueryTimelineSampleResponse {
+    /**
+     * Total number of units currently being processed by workers. This does not correspond directly to slot usage. This is the largest value observed since the last sample.
+     * 
+     */
     private final String activeUnits;
+    /**
+     * Total parallel units of work completed by this query.
+     * 
+     */
     private final String completedUnits;
+    /**
+     * Milliseconds elapsed since the start of query execution.
+     * 
+     */
     private final String elapsedMs;
+    /**
+     * Total parallel units of work remaining for the active stages.
+     * 
+     */
     private final String pendingUnits;
+    /**
+     * Cumulative slot-ms consumed by the query.
+     * 
+     */
     private final String totalSlotMs;
 
     @OutputCustomType.Constructor({"activeUnits","completedUnits","elapsedMs","pendingUnits","totalSlotMs"})
@@ -29,18 +49,38 @@ public final class QueryTimelineSampleResponse {
         this.totalSlotMs = Objects.requireNonNull(totalSlotMs);
     }
 
+    /**
+     * Total number of units currently being processed by workers. This does not correspond directly to slot usage. This is the largest value observed since the last sample.
+     * 
+     */
     public String getActiveUnits() {
         return this.activeUnits;
     }
+    /**
+     * Total parallel units of work completed by this query.
+     * 
+     */
     public String getCompletedUnits() {
         return this.completedUnits;
     }
+    /**
+     * Milliseconds elapsed since the start of query execution.
+     * 
+     */
     public String getElapsedMs() {
         return this.elapsedMs;
     }
+    /**
+     * Total parallel units of work remaining for the active stages.
+     * 
+     */
     public String getPendingUnits() {
         return this.pendingUnits;
     }
+    /**
+     * Cumulative slot-ms consumed by the query.
+     * 
+     */
     public String getTotalSlotMs() {
         return this.totalSlotMs;
     }
