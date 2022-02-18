@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.retail_v2.outputs.GoogleCloudRetailV2AudienceResponse;
 import io.pulumi.googlenative.retail_v2.outputs.GoogleCloudRetailV2ColorInfoResponse;
 import io.pulumi.googlenative.retail_v2.outputs.GoogleCloudRetailV2FulfillmentInfoResponse;

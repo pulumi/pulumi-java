@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.MaterialResponse;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.SlsaBuilderResponse;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.SlsaMetadataResponse;

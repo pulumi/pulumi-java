@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyAssignmentInstanceFilterInventoryArgs;
 import io.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyAssignmentLabelSetArgs;
 import java.lang.Boolean;

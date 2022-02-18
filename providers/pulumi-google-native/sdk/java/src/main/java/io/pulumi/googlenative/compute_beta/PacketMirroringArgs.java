@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.enums.PacketMirroringEnable;
 import io.pulumi.googlenative.compute_beta.inputs.PacketMirroringFilterArgs;
 import io.pulumi.googlenative.compute_beta.inputs.PacketMirroringForwardingRuleInfoArgs;

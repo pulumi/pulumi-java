@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.pubsublite_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.pubsublite_v1.outputs.PartitionConfigResponse;
 import io.pulumi.googlenative.pubsublite_v1.outputs.ReservationConfigResponse;
 import io.pulumi.googlenative.pubsublite_v1.outputs.RetentionConfigResponse;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1alpha;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyArgs;
 import io.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyAssignmentInstanceFilterArgs;
 import io.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyAssignmentRolloutArgs;

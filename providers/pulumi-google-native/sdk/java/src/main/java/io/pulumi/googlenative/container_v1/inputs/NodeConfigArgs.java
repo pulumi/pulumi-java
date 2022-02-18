@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1.inputs.AcceleratorConfigArgs;
 import io.pulumi.googlenative.container_v1.inputs.AdvancedMachineFeaturesArgs;
 import io.pulumi.googlenative.container_v1.inputs.GcfsConfigArgs;

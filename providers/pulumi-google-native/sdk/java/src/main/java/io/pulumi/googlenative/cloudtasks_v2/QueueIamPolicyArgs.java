@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudtasks_v2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudtasks_v2.inputs.BindingArgs;
 import java.lang.Integer;
 import java.lang.String;

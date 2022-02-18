@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gameservices_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.gameservices_v1beta.inputs.ConditionResponse;
 import io.pulumi.googlenative.gameservices_v1beta.inputs.LogConfigResponse;
 import java.lang.String;

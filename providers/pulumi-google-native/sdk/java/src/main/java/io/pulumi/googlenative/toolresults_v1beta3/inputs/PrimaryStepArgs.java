@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.toolresults_v1beta3.enums.PrimaryStepRollUp;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.IndividualOutcomeArgs;
 import java.util.List;

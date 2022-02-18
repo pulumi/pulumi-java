@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1beta2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataproc_v1beta2.inputs.BasicAutoscalingAlgorithmArgs;
 import io.pulumi.googlenative.dataproc_v1beta2.inputs.InstanceGroupAutoscalingPolicyConfigArgs;
 import java.lang.String;

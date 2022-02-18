@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.enums.GlobalForwardingRuleIpProtocol;
 import io.pulumi.googlenative.compute_v1.enums.GlobalForwardingRuleIpVersion;
 import io.pulumi.googlenative.compute_v1.enums.GlobalForwardingRuleLoadBalancingScheme;

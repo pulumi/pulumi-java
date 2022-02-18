@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.gkehub_v1beta.outputs.AppDevExperienceFeatureStateResponse;
 import io.pulumi.googlenative.gkehub_v1beta.outputs.FeatureStateResponse;
 import java.util.Objects;

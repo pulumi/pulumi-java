@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.enums.SSLHealthCheckPortSpecification;
 import io.pulumi.googlenative.compute_v1.enums.SSLHealthCheckProxyHeader;
 import java.lang.Integer;

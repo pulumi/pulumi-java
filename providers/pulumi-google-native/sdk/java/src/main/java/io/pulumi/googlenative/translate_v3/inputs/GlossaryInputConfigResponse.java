@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.translate_v3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.translate_v3.inputs.GcsSourceResponse;
 import java.util.Objects;
 

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.AssignmentGroupLabelResponse;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.AssignmentOsTypeResponse;
 import java.lang.String;

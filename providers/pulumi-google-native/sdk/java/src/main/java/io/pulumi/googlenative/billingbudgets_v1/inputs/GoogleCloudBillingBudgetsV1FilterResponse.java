@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.billingbudgets_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.billingbudgets_v1.inputs.GoogleCloudBillingBudgetsV1CustomPeriodResponse;
 import java.lang.String;
 import java.util.List;

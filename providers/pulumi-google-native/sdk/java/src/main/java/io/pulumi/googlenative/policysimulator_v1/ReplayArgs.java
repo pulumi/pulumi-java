@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.policysimulator_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.policysimulator_v1.inputs.GoogleCloudPolicysimulatorV1ReplayConfigArgs;
 import java.lang.String;
 import java.util.Objects;

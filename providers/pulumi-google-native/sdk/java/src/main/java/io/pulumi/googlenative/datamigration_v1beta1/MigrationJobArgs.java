@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datamigration_v1beta1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datamigration_v1beta1.enums.MigrationJobState;
 import io.pulumi.googlenative.datamigration_v1beta1.enums.MigrationJobType;
 import io.pulumi.googlenative.datamigration_v1beta1.inputs.DatabaseTypeArgs;

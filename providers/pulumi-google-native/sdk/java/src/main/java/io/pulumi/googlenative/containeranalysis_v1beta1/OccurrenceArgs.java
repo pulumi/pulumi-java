@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1beta1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.DetailsArgs;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.DocumentOccurrenceArgs;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.FileOccurrenceArgs;

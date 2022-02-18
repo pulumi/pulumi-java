@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudscheduler_v1beta1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudscheduler_v1beta1.inputs.AppEngineHttpTargetArgs;
 import io.pulumi.googlenative.cloudscheduler_v1beta1.inputs.HttpTargetArgs;
 import io.pulumi.googlenative.cloudscheduler_v1beta1.inputs.PubsubTargetArgs;

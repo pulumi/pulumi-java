@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.RepoSourceArgs;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.StorageSourceArgs;

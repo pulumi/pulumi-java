@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.notebooks_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.notebooks_v1.enums.InstanceBootDiskType;
 import io.pulumi.googlenative.notebooks_v1.enums.InstanceDataDiskType;
 import io.pulumi.googlenative.notebooks_v1.enums.InstanceDiskEncryption;

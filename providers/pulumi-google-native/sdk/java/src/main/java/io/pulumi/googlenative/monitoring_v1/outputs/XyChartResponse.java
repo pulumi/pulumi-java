@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.monitoring_v1.outputs.AxisResponse;
 import io.pulumi.googlenative.monitoring_v1.outputs.ChartOptionsResponse;
 import io.pulumi.googlenative.monitoring_v1.outputs.DataSetResponse;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.run_v1.inputs.ConfigMapVolumeSourceResponse;
 import io.pulumi.googlenative.run_v1.inputs.SecretVolumeSourceResponse;
 import java.lang.String;

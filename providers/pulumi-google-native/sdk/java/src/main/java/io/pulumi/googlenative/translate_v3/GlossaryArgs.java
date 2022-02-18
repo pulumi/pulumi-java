@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.translate_v3;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.translate_v3.inputs.GlossaryInputConfigArgs;
 import io.pulumi.googlenative.translate_v3.inputs.LanguageCodePairArgs;
 import io.pulumi.googlenative.translate_v3.inputs.LanguageCodesSetArgs;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.testing_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.testing_v1.inputs.ClientInfoArgs;
 import io.pulumi.googlenative.testing_v1.inputs.EnvironmentMatrixArgs;
 import io.pulumi.googlenative.testing_v1.inputs.ResultStorageArgs;

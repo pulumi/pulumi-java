@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.translate_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.translate_v3.outputs.GlossaryInputConfigResponse;
 import io.pulumi.googlenative.translate_v3.outputs.LanguageCodePairResponse;
 import io.pulumi.googlenative.translate_v3.outputs.LanguageCodesSetResponse;

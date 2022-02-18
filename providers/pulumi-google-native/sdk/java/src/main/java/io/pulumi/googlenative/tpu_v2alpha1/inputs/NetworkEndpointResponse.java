@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.tpu_v2alpha1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.tpu_v2alpha1.inputs.AccessConfigResponse;
 import java.lang.Integer;
 import java.lang.String;

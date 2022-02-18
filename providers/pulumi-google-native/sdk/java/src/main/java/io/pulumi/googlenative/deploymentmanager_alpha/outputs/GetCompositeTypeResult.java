@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.deploymentmanager_alpha.outputs.CompositeTypeLabelEntryResponse;
 import io.pulumi.googlenative.deploymentmanager_alpha.outputs.OperationResponse;
 import io.pulumi.googlenative.deploymentmanager_alpha.outputs.TemplateContentsResponse;

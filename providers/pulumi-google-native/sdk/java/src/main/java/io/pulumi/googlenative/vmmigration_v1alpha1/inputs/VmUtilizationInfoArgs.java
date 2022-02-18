@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.vmmigration_v1alpha1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.vmmigration_v1alpha1.inputs.VmUtilizationMetricsArgs;
 import io.pulumi.googlenative.vmmigration_v1alpha1.inputs.VmwareVmDetailsArgs;
 import java.lang.String;

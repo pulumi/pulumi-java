@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudsearch_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudsearch_v1.outputs.FilterOptionsResponse;
 import io.pulumi.googlenative.cloudsearch_v1.outputs.SourceResponse;
 import java.util.List;

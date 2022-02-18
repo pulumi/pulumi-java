@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigateway_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.apigateway_v1.inputs.ApigatewayApiConfigFileArgs;
 import io.pulumi.googlenative.apigateway_v1.inputs.ApigatewayApiConfigGrpcServiceDefinitionArgs;
 import io.pulumi.googlenative.apigateway_v1.inputs.ApigatewayApiConfigOpenApiDocumentArgs;

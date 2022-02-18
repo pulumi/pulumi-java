@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.eventarc_v1beta1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.eventarc_v1beta1.inputs.DestinationArgs;
 import io.pulumi.googlenative.eventarc_v1beta1.inputs.MatchingCriteriaArgs;
 import java.lang.String;

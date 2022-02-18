@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.healthcare_v1beta1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.PatientIdArgs;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.SchematizedDataArgs;
 import java.lang.String;

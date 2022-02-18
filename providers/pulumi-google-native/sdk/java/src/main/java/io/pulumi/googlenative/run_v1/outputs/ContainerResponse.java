@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.run_v1.outputs.ContainerPortResponse;
 import io.pulumi.googlenative.run_v1.outputs.EnvFromSourceResponse;
 import io.pulumi.googlenative.run_v1.outputs.EnvVarResponse;

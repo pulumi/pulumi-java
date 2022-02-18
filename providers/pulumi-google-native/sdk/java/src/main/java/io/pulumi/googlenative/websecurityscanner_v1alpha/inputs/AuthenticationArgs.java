@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.websecurityscanner_v1alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.websecurityscanner_v1alpha.inputs.CustomAccountArgs;
 import io.pulumi.googlenative.websecurityscanner_v1alpha.inputs.GoogleAccountArgs;
 import java.util.Objects;

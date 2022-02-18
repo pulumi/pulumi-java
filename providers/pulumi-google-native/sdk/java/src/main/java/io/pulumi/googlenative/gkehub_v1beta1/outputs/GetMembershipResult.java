@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.gkehub_v1beta1.outputs.AuthorityResponse;
 import io.pulumi.googlenative.gkehub_v1beta1.outputs.MembershipEndpointResponse;
 import io.pulumi.googlenative.gkehub_v1beta1.outputs.MembershipStateResponse;

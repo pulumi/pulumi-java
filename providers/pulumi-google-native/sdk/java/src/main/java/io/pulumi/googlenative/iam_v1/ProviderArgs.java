@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.iam_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.iam_v1.inputs.AwsArgs;
 import io.pulumi.googlenative.iam_v1.inputs.OidcArgs;
 import java.lang.Boolean;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.datastream_v1.outputs.BackfillAllStrategyResponse;
 import io.pulumi.googlenative.datastream_v1.outputs.BackfillNoneStrategyResponse;
 import io.pulumi.googlenative.datastream_v1.outputs.DestinationConfigResponse;

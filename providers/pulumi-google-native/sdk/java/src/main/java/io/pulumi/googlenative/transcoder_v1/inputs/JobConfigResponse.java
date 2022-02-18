@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.transcoder_v1.inputs.AdBreakResponse;
 import io.pulumi.googlenative.transcoder_v1.inputs.EditAtomResponse;
 import io.pulumi.googlenative.transcoder_v1.inputs.ElementaryStreamResponse;

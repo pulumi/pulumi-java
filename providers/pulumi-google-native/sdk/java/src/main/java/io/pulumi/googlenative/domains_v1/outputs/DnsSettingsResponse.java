@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.domains_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.domains_v1.outputs.CustomDnsResponse;
 import io.pulumi.googlenative.domains_v1.outputs.GlueRecordResponse;
 import io.pulumi.googlenative.domains_v1.outputs.GoogleDomainsDnsResponse;

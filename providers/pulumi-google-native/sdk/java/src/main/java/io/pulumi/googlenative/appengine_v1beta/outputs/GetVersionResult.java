@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.appengine_v1beta.outputs.ApiConfigHandlerResponse;
 import io.pulumi.googlenative.appengine_v1beta.outputs.AutomaticScalingResponse;
 import io.pulumi.googlenative.appengine_v1beta.outputs.BasicScalingResponse;

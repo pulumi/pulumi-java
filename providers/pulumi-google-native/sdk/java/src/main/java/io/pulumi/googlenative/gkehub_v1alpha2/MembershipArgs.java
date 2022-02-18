@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.gkehub_v1alpha2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.gkehub_v1alpha2.enums.MembershipInfrastructureType;
 import io.pulumi.googlenative.gkehub_v1alpha2.inputs.AuthorityArgs;
 import io.pulumi.googlenative.gkehub_v1alpha2.inputs.MembershipEndpointArgs;

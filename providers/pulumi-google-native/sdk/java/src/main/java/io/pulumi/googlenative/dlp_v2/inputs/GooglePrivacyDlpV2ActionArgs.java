@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2JobNotificationEmailsArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2PublishSummaryToCsccArgs;

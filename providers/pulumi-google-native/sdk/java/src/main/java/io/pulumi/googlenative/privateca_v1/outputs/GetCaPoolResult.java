@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.privateca_v1.outputs.IssuancePolicyResponse;
 import io.pulumi.googlenative.privateca_v1.outputs.PublishingOptionsResponse;
 import java.lang.String;

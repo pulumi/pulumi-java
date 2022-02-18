@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.healthcare_v1beta1.outputs.AnnotationSourceResponse;
 import io.pulumi.googlenative.healthcare_v1beta1.outputs.ImageAnnotationResponse;
 import io.pulumi.googlenative.healthcare_v1beta1.outputs.ResourceAnnotationResponse;

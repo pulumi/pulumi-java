@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.run_v2.outputs.GoogleIamV1AuditConfigResponse;
 import io.pulumi.googlenative.run_v2.outputs.GoogleIamV1BindingResponse;
 import java.lang.Integer;

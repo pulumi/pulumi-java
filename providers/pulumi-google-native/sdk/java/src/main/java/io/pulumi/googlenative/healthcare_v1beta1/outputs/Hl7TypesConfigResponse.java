@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.healthcare_v1beta1.outputs.TypeResponse;
 import io.pulumi.googlenative.healthcare_v1beta1.outputs.VersionSourceResponse;
 import java.util.List;

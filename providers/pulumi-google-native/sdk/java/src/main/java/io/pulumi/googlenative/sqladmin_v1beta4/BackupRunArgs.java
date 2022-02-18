@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.sqladmin_v1beta4;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.sqladmin_v1beta4.enums.BackupRunBackupKind;
 import io.pulumi.googlenative.sqladmin_v1beta4.enums.BackupRunStatus;
 import io.pulumi.googlenative.sqladmin_v1beta4.enums.BackupRunType;

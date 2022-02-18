@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.vmmigration_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.vmmigration_v1.enums.ComputeSchedulingOnHostMaintenance;
 import io.pulumi.googlenative.vmmigration_v1.enums.ComputeSchedulingRestartType;
 import io.pulumi.googlenative.vmmigration_v1.inputs.SchedulingNodeAffinityArgs;

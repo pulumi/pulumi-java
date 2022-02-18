@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.AuthRequirementArgs;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.OAuthRequirementsArgs;
 import java.lang.Boolean;

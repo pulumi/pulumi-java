@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datafusion_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datafusion_v1.enums.AcceleratorAcceleratorType;
 import io.pulumi.googlenative.datafusion_v1.enums.AcceleratorState;
 import java.util.Objects;

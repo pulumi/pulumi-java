@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.privateca_v1.inputs.CertificateFingerprintResponse;
 import io.pulumi.googlenative.privateca_v1.inputs.KeyIdResponse;
 import io.pulumi.googlenative.privateca_v1.inputs.PublicKeyResponse;

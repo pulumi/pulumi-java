@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudidentity_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudidentity_v1beta1.inputs.DynamicGroupQueryResponse;
 import io.pulumi.googlenative.cloudidentity_v1beta1.inputs.DynamicGroupStatusResponse;
 import java.util.List;

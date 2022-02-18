@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudbuild_v1.enums.BuildOptionsLogStreamingOption;
 import io.pulumi.googlenative.cloudbuild_v1.enums.BuildOptionsLogging;
 import io.pulumi.googlenative.cloudbuild_v1.enums.BuildOptionsMachineType;

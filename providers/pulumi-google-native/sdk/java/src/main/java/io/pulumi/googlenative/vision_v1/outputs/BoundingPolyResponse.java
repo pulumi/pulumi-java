@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vision_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.vision_v1.outputs.NormalizedVertexResponse;
 import io.pulumi.googlenative.vision_v1.outputs.VertexResponse;
 import java.util.List;

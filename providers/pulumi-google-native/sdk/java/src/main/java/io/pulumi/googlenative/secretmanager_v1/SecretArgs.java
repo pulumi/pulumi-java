@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.secretmanager_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.secretmanager_v1.inputs.ReplicationArgs;
 import io.pulumi.googlenative.secretmanager_v1.inputs.RotationArgs;
 import io.pulumi.googlenative.secretmanager_v1.inputs.TopicArgs;
