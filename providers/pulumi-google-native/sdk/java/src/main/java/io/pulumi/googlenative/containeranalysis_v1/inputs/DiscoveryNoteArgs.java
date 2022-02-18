@@ -9,10 +9,18 @@ import io.pulumi.googlenative.containeranalysis_v1.enums.DiscoveryNoteAnalysisKi
 import java.util.Objects;
 
 
+/**
+ * A note that indicates a type of analysis a provider would perform. This note exists in a provider's project. A `Discovery` occurrence is created in a consumer's project at the start of analysis.
+ * 
+ */
 public final class DiscoveryNoteArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DiscoveryNoteArgs Empty = new DiscoveryNoteArgs();
 
+    /**
+     * Immutable. The kind of analysis that is handled by this discovery.
+     * 
+     */
     @InputImport(name="analysisKind", required=true)
     private final Input<DiscoveryNoteAnalysisKind> analysisKind;
 

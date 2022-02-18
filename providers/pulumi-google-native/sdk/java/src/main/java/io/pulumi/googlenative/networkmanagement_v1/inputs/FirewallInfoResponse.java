@@ -10,10 +10,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * For display only. Metadata associated with a VPC firewall rule, an implied VPC firewall rule, or a hierarchical firewall policy rule.
+ * 
+ */
 public final class FirewallInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FirewallInfoResponse Empty = new FirewallInfoResponse();
 
+    /**
+     * Possible values: ALLOW, DENY
+     * 
+     */
     @InputImport(name="action", required=true)
     private final String action;
 
@@ -21,6 +29,10 @@ public final class FirewallInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.action;
     }
 
+    /**
+     * Possible values: INGRESS, EGRESS
+     * 
+     */
     @InputImport(name="direction", required=true)
     private final String direction;
 
@@ -28,6 +40,10 @@ public final class FirewallInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.direction;
     }
 
+    /**
+     * The display name of the VPC firewall rule. This field is not applicable to hierarchical firewall policy rules.
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final String displayName;
 
@@ -35,6 +51,10 @@ public final class FirewallInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.displayName;
     }
 
+    /**
+     * The firewall rule's type.
+     * 
+     */
     @InputImport(name="firewallRuleType", required=true)
     private final String firewallRuleType;
 
@@ -42,6 +62,10 @@ public final class FirewallInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.firewallRuleType;
     }
 
+    /**
+     * The URI of the VPC network that the firewall rule is associated with. This field is not applicable to hierarchical firewall policy rules.
+     * 
+     */
     @InputImport(name="networkUri", required=true)
     private final String networkUri;
 
@@ -49,6 +73,10 @@ public final class FirewallInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.networkUri;
     }
 
+    /**
+     * The hierarchical firewall policy that this rule is associated with. This field is not applicable to VPC firewall rules.
+     * 
+     */
     @InputImport(name="policy", required=true)
     private final String policy;
 
@@ -56,6 +84,10 @@ public final class FirewallInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.policy;
     }
 
+    /**
+     * The priority of the firewall rule.
+     * 
+     */
     @InputImport(name="priority", required=true)
     private final Integer priority;
 
@@ -63,6 +95,10 @@ public final class FirewallInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.priority;
     }
 
+    /**
+     * The target service accounts specified by the firewall rule.
+     * 
+     */
     @InputImport(name="targetServiceAccounts", required=true)
     private final List<String> targetServiceAccounts;
 
@@ -70,6 +106,10 @@ public final class FirewallInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.targetServiceAccounts;
     }
 
+    /**
+     * The target tags defined by the VPC firewall rule. This field is not applicable to hierarchical firewall policy rules.
+     * 
+     */
     @InputImport(name="targetTags", required=true)
     private final List<String> targetTags;
 
@@ -77,6 +117,10 @@ public final class FirewallInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.targetTags;
     }
 
+    /**
+     * The URI of the VPC firewall rule. This field is not applicable to implied firewall rules or hierarchical firewall policy rules.
+     * 
+     */
     @InputImport(name="uri", required=true)
     private final String uri;
 

@@ -12,11 +12,35 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CompensationEntryResponse {
+    /**
+     * Optional. Compensation amount.
+     * 
+     */
     private final MoneyResponse amount;
+    /**
+     * Optional. Compensation description. For example, could indicate equity terms or provide additional context to an estimated bonus.
+     * 
+     */
     private final String description;
+    /**
+     * Optional. Expected number of units paid each year. If not specified, when Job.employment_types is FULLTIME, a default value is inferred based on unit. Default values: - HOURLY: 2080 - DAILY: 260 - WEEKLY: 52 - MONTHLY: 12 - ANNUAL: 1
+     * 
+     */
     private final Double expectedUnitsPerYear;
+    /**
+     * Optional. Compensation range.
+     * 
+     */
     private final CompensationRangeResponse range;
+    /**
+     * Optional. Compensation type. Default is CompensationUnit.COMPENSATION_TYPE_UNSPECIFIED.
+     * 
+     */
     private final String type;
+    /**
+     * Optional. Frequency of the specified amount. Default is CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED.
+     * 
+     */
     private final String unit;
 
     @OutputCustomType.Constructor({"amount","description","expectedUnitsPerYear","range","type","unit"})
@@ -35,21 +59,45 @@ public final class CompensationEntryResponse {
         this.unit = Objects.requireNonNull(unit);
     }
 
+    /**
+     * Optional. Compensation amount.
+     * 
+     */
     public MoneyResponse getAmount() {
         return this.amount;
     }
+    /**
+     * Optional. Compensation description. For example, could indicate equity terms or provide additional context to an estimated bonus.
+     * 
+     */
     public String getDescription() {
         return this.description;
     }
+    /**
+     * Optional. Expected number of units paid each year. If not specified, when Job.employment_types is FULLTIME, a default value is inferred based on unit. Default values: - HOURLY: 2080 - DAILY: 260 - WEEKLY: 52 - MONTHLY: 12 - ANNUAL: 1
+     * 
+     */
     public Double getExpectedUnitsPerYear() {
         return this.expectedUnitsPerYear;
     }
+    /**
+     * Optional. Compensation range.
+     * 
+     */
     public CompensationRangeResponse getRange() {
         return this.range;
     }
+    /**
+     * Optional. Compensation type. Default is CompensationUnit.COMPENSATION_TYPE_UNSPECIFIED.
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * Optional. Frequency of the specified amount. Default is CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED.
+     * 
+     */
     public String getUnit() {
         return this.unit;
     }

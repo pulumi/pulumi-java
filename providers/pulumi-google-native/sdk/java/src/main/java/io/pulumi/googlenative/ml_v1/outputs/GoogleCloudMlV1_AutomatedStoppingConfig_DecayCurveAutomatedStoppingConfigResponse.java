@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigResponse {
+    /**
+     * If true, measurement.elapsed_time is used as the x-axis of each Trials Decay Curve. Otherwise, Measurement.steps will be used as the x-axis.
+     * 
+     */
     private final Boolean useElapsedTime;
 
     @OutputCustomType.Constructor({"useElapsedTime"})
@@ -16,6 +20,10 @@ public final class GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedSt
         this.useElapsedTime = Objects.requireNonNull(useElapsedTime);
     }
 
+    /**
+     * If true, measurement.elapsed_time is used as the x-axis of each Trials Decay Curve. Otherwise, Measurement.steps will be used as the x-axis.
+     * 
+     */
     public Boolean getUseElapsedTime() {
         return this.useElapsedTime;
     }

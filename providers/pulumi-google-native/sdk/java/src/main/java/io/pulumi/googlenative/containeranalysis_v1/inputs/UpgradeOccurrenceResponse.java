@@ -11,10 +11,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * An Upgrade Occurrence represents that a specific resource_url could install a specific upgrade. This presence is supplied via local sources (i.e. it is present in the mirror and the running system has noticed its availability). For Windows, both distribution and windows_update contain information for the Windows update.
+ * 
+ */
 public final class UpgradeOccurrenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final UpgradeOccurrenceResponse Empty = new UpgradeOccurrenceResponse();
 
+    /**
+     * Metadata about the upgrade for available for the specific operating system for the resource_url. This allows efficient filtering, as well as making it easier to use the occurrence.
+     * 
+     */
     @InputImport(name="distribution", required=true)
     private final UpgradeDistributionResponse distribution;
 
@@ -22,6 +30,10 @@ public final class UpgradeOccurrenceResponse extends io.pulumi.resources.InvokeA
         return this.distribution;
     }
 
+    /**
+     * Required for non-Windows OS. The package this Upgrade is for.
+     * 
+     */
     @InputImport(name="package", required=true)
     private final String $package;
 
@@ -29,6 +41,10 @@ public final class UpgradeOccurrenceResponse extends io.pulumi.resources.InvokeA
         return this.$package;
     }
 
+    /**
+     * Required for non-Windows OS. The version of the package in a machine + human readable form.
+     * 
+     */
     @InputImport(name="parsedVersion", required=true)
     private final VersionResponse parsedVersion;
 
@@ -36,6 +52,10 @@ public final class UpgradeOccurrenceResponse extends io.pulumi.resources.InvokeA
         return this.parsedVersion;
     }
 
+    /**
+     * Required for Windows OS. Represents the metadata about the Windows update.
+     * 
+     */
     @InputImport(name="windowsUpdate", required=true)
     private final WindowsUpdateResponse windowsUpdate;
 

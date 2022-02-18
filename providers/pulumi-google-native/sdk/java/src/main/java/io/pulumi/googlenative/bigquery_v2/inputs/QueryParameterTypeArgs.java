@@ -16,6 +16,10 @@ public final class QueryParameterTypeArgs extends io.pulumi.resources.ResourceAr
 
     public static final QueryParameterTypeArgs Empty = new QueryParameterTypeArgs();
 
+    /**
+     * [Optional] The type of the array's elements, if this is an array.
+     * 
+     */
     @InputImport(name="arrayType")
     private final @Nullable Input<QueryParameterTypeArgs> arrayType;
 
@@ -23,6 +27,10 @@ public final class QueryParameterTypeArgs extends io.pulumi.resources.ResourceAr
         return this.arrayType == null ? Input.empty() : this.arrayType;
     }
 
+    /**
+     * [Optional] The types of the fields of this struct, in order, if this is a struct.
+     * 
+     */
     @InputImport(name="structTypes")
     private final @Nullable Input<List<QueryParameterTypeStructTypesItemArgs>> structTypes;
 
@@ -30,6 +38,10 @@ public final class QueryParameterTypeArgs extends io.pulumi.resources.ResourceAr
         return this.structTypes == null ? Input.empty() : this.structTypes;
     }
 
+    /**
+     * [Required] The top level type of this field.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 

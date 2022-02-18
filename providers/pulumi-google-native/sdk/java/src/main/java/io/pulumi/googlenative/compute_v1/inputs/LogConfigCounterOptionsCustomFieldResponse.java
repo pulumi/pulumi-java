@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * This is deprecated and has no effect. Do not use.
+ * 
+ */
 public final class LogConfigCounterOptionsCustomFieldResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LogConfigCounterOptionsCustomFieldResponse Empty = new LogConfigCounterOptionsCustomFieldResponse();
 
+    /**
+     * This is deprecated and has no effect. Do not use.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -19,6 +27,10 @@ public final class LogConfigCounterOptionsCustomFieldResponse extends io.pulumi.
         return this.name;
     }
 
+    /**
+     * This is deprecated and has no effect. Do not use.
+     * 
+     */
     @InputImport(name="value", required=true)
     private final String value;
 

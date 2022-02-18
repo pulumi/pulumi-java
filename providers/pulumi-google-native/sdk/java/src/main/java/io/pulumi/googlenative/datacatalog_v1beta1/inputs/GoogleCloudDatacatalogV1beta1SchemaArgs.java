@@ -10,10 +10,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Represents a schema (e.g. BigQuery, GoogleSQL, Avro schema).
+ * 
+ */
 public final class GoogleCloudDatacatalogV1beta1SchemaArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDatacatalogV1beta1SchemaArgs Empty = new GoogleCloudDatacatalogV1beta1SchemaArgs();
 
+    /**
+     * Schema of columns. A maximum of 10,000 columns and sub-columns can be specified.
+     * 
+     */
     @InputImport(name="columns", required=true)
     private final Input<List<GoogleCloudDatacatalogV1beta1ColumnSchemaArgs>> columns;
 

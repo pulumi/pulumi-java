@@ -29,6 +29,10 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
         return this.domainId;
     }
 
+    /**
+     * Optional. Resource labels to represent user provided metadata.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 

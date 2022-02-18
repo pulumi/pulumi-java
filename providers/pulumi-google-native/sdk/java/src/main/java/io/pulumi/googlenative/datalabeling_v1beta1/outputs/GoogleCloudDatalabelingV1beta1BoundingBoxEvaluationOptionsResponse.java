@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsResponse {
+    /**
+     * Minimum [intersection-over-union (IOU)](/vision/automl/object-detection/docs/evaluate#intersection-over-union) required for 2 bounding boxes to be considered a match. This must be a number between 0 and 1.
+     * 
+     */
     private final Double iouThreshold;
 
     @OutputCustomType.Constructor({"iouThreshold"})
@@ -16,6 +20,10 @@ public final class GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsRes
         this.iouThreshold = Objects.requireNonNull(iouThreshold);
     }
 
+    /**
+     * Minimum [intersection-over-union (IOU)](/vision/automl/object-detection/docs/evaluate#intersection-over-union) required for 2 bounding boxes to be considered a match. This must be a number between 0 and 1.
+     * 
+     */
     public Double getIouThreshold() {
         return this.iouThreshold;
     }

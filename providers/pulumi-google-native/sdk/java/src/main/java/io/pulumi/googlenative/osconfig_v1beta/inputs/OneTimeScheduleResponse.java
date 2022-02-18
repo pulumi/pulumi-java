@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Sets the time for a one time patch deployment. Timestamp is in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+ * 
+ */
 public final class OneTimeScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OneTimeScheduleResponse Empty = new OneTimeScheduleResponse();
 
+    /**
+     * The desired patch job execution time.
+     * 
+     */
     @InputImport(name="executeTime", required=true)
     private final String executeTime;
 

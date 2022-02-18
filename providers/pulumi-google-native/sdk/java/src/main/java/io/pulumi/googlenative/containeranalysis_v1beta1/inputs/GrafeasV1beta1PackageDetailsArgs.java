@@ -9,10 +9,18 @@ import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.InstallationArgs;
 import java.util.Objects;
 
 
+/**
+ * Details of a package occurrence.
+ * 
+ */
 public final class GrafeasV1beta1PackageDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GrafeasV1beta1PackageDetailsArgs Empty = new GrafeasV1beta1PackageDetailsArgs();
 
+    /**
+     * Where the package was installed.
+     * 
+     */
     @InputImport(name="installation", required=true)
     private final Input<InstallationArgs> installation;
 

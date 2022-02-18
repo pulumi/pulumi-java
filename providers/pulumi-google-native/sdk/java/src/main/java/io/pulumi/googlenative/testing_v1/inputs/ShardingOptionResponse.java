@@ -9,10 +9,18 @@ import io.pulumi.googlenative.testing_v1.inputs.UniformShardingResponse;
 import java.util.Objects;
 
 
+/**
+ * Options for enabling sharding.
+ * 
+ */
 public final class ShardingOptionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ShardingOptionResponse Empty = new ShardingOptionResponse();
 
+    /**
+     * Shards test cases into the specified groups of packages, classes, and/or methods.
+     * 
+     */
     @InputImport(name="manualSharding", required=true)
     private final ManualShardingResponse manualSharding;
 
@@ -20,6 +28,10 @@ public final class ShardingOptionResponse extends io.pulumi.resources.InvokeArgs
         return this.manualSharding;
     }
 
+    /**
+     * Uniformly shards test cases given a total number of shards.
+     * 
+     */
     @InputImport(name="uniformSharding", required=true)
     private final UniformShardingResponse uniformSharding;
 

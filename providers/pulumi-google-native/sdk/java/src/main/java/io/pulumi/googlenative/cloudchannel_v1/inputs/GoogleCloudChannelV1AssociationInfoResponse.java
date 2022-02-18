@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Association links that an entitlement has to other entitlements.
+ * 
+ */
 public final class GoogleCloudChannelV1AssociationInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudChannelV1AssociationInfoResponse Empty = new GoogleCloudChannelV1AssociationInfoResponse();
 
+    /**
+     * The name of the base entitlement, for which this entitlement is an add-on.
+     * 
+     */
     @InputImport(name="baseEntitlement", required=true)
     private final String baseEntitlement;
 

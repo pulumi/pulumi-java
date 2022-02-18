@@ -10,10 +10,18 @@ import io.pulumi.googlenative.transcoder_v1.inputs.AnimationStaticResponse;
 import java.util.Objects;
 
 
+/**
+ * Animation types.
+ * 
+ */
 public final class AnimationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AnimationResponse Empty = new AnimationResponse();
 
+    /**
+     * End previous animation.
+     * 
+     */
     @InputImport(name="animationEnd", required=true)
     private final AnimationEndResponse animationEnd;
 
@@ -21,6 +29,10 @@ public final class AnimationResponse extends io.pulumi.resources.InvokeArgs {
         return this.animationEnd;
     }
 
+    /**
+     * Display overlay object with fade animation.
+     * 
+     */
     @InputImport(name="animationFade", required=true)
     private final AnimationFadeResponse animationFade;
 
@@ -28,6 +40,10 @@ public final class AnimationResponse extends io.pulumi.resources.InvokeArgs {
         return this.animationFade;
     }
 
+    /**
+     * Display static overlay object.
+     * 
+     */
     @InputImport(name="animationStatic", required=true)
     private final AnimationStaticResponse animationStatic;
 

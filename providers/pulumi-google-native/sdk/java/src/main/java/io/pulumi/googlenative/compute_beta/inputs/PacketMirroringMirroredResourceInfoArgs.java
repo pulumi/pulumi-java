@@ -17,6 +17,10 @@ public final class PacketMirroringMirroredResourceInfoArgs extends io.pulumi.res
 
     public static final PacketMirroringMirroredResourceInfoArgs Empty = new PacketMirroringMirroredResourceInfoArgs();
 
+    /**
+     * A set of virtual machine instances that are being mirrored. They must live in zones contained in the same region as this packetMirroring. Note that this config will apply only to those network interfaces of the Instances that belong to the network specified in this packetMirroring. You may specify a maximum of 50 Instances.
+     * 
+     */
     @InputImport(name="instances")
     private final @Nullable Input<List<PacketMirroringMirroredResourceInfoInstanceInfoArgs>> instances;
 
@@ -24,6 +28,10 @@ public final class PacketMirroringMirroredResourceInfoArgs extends io.pulumi.res
         return this.instances == null ? Input.empty() : this.instances;
     }
 
+    /**
+     * A set of subnetworks for which traffic from/to all VM instances will be mirrored. They must live in the same region as this packetMirroring. You may specify a maximum of 5 subnetworks.
+     * 
+     */
     @InputImport(name="subnetworks")
     private final @Nullable Input<List<PacketMirroringMirroredResourceInfoSubnetInfoArgs>> subnetworks;
 
@@ -31,6 +39,10 @@ public final class PacketMirroringMirroredResourceInfoArgs extends io.pulumi.res
         return this.subnetworks == null ? Input.empty() : this.subnetworks;
     }
 
+    /**
+     * A set of mirrored tags. Traffic from/to all VM instances that have one or more of these tags will be mirrored.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<String>> tags;
 

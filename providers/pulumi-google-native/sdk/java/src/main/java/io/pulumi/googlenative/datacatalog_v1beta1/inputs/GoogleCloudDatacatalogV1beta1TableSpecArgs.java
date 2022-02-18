@@ -6,6 +6,10 @@ package io.pulumi.googlenative.datacatalog_v1beta1.inputs;
 import java.util.Objects;
 
 
+/**
+ * Normal BigQuery table spec.
+ * 
+ */
 public final class GoogleCloudDatacatalogV1beta1TableSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDatacatalogV1beta1TableSpecArgs Empty = new GoogleCloudDatacatalogV1beta1TableSpecArgs();

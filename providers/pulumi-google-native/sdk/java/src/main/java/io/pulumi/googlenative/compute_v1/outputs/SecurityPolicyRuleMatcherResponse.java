@@ -11,8 +11,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SecurityPolicyRuleMatcherResponse {
+    /**
+     * The configuration options available when specifying versioned_expr. This field must be specified if versioned_expr is specified and cannot be specified if versioned_expr is not specified.
+     * 
+     */
     private final SecurityPolicyRuleMatcherConfigResponse config;
+    /**
+     * User defined CEVAL expression. A CEVAL expression is used to specify match criteria such as origin.ip, source.region_code and contents in the request header.
+     * 
+     */
     private final ExprResponse expr;
+    /**
+     * Preconfigured versioned expression. If this field is specified, config must also be specified. Available preconfigured expressions along with their requirements are: SRC_IPS_V1 - must specify the corresponding src_ip_range field in config.
+     * 
+     */
     private final String versionedExpr;
 
     @OutputCustomType.Constructor({"config","expr","versionedExpr"})
@@ -25,12 +37,24 @@ public final class SecurityPolicyRuleMatcherResponse {
         this.versionedExpr = Objects.requireNonNull(versionedExpr);
     }
 
+    /**
+     * The configuration options available when specifying versioned_expr. This field must be specified if versioned_expr is specified and cannot be specified if versioned_expr is not specified.
+     * 
+     */
     public SecurityPolicyRuleMatcherConfigResponse getConfig() {
         return this.config;
     }
+    /**
+     * User defined CEVAL expression. A CEVAL expression is used to specify match criteria such as origin.ip, source.region_code and contents in the request header.
+     * 
+     */
     public ExprResponse getExpr() {
         return this.expr;
     }
+    /**
+     * Preconfigured versioned expression. If this field is specified, config must also be specified. Available preconfigured expressions along with their requirements are: SRC_IPS_V1 - must specify the corresponding src_ip_range field in config.
+     * 
+     */
     public String getVersionedExpr() {
         return this.versionedExpr;
     }

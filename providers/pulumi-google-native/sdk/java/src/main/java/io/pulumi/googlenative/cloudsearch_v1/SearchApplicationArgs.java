@@ -22,6 +22,10 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
 
     public static final SearchApplicationArgs Empty = new SearchApplicationArgs();
 
+    /**
+     * Retrictions applied to the configurations. The maximum number of elements is 10.
+     * 
+     */
     @InputImport(name="dataSourceRestrictions")
     private final @Nullable Input<List<DataSourceRestrictionArgs>> dataSourceRestrictions;
 
@@ -29,6 +33,10 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
         return this.dataSourceRestrictions == null ? Input.empty() : this.dataSourceRestrictions;
     }
 
+    /**
+     * The default fields for returning facet results. The sources specified here also have been included in data_source_restrictions above.
+     * 
+     */
     @InputImport(name="defaultFacetOptions")
     private final @Nullable Input<List<FacetOptionsArgs>> defaultFacetOptions;
 
@@ -36,6 +44,10 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
         return this.defaultFacetOptions == null ? Input.empty() : this.defaultFacetOptions;
     }
 
+    /**
+     * The default options for sorting the search results
+     * 
+     */
     @InputImport(name="defaultSortOptions")
     private final @Nullable Input<SortOptionsArgs> defaultSortOptions;
 
@@ -43,6 +55,10 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
         return this.defaultSortOptions == null ? Input.empty() : this.defaultSortOptions;
     }
 
+    /**
+     * Display name of the Search Application. The maximum length is 300 characters.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -50,6 +66,10 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * Indicates whether audit logging is on/off for requests made for the search application in query APIs.
+     * 
+     */
     @InputImport(name="enableAuditLog")
     private final @Nullable Input<Boolean> enableAuditLog;
 
@@ -57,6 +77,10 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
         return this.enableAuditLog == null ? Input.empty() : this.enableAuditLog;
     }
 
+    /**
+     * Name of the Search Application. Format: searchapplications/{application_id}.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -64,6 +88,10 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The default options for query interpretation
+     * 
+     */
     @InputImport(name="queryInterpretationConfig")
     private final @Nullable Input<QueryInterpretationConfigArgs> queryInterpretationConfig;
 
@@ -71,6 +99,10 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
         return this.queryInterpretationConfig == null ? Input.empty() : this.queryInterpretationConfig;
     }
 
+    /**
+     * With each result we should return the URI for its thumbnail (when applicable)
+     * 
+     */
     @InputImport(name="returnResultThumbnailUrls")
     private final @Nullable Input<Boolean> returnResultThumbnailUrls;
 
@@ -78,6 +110,10 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
         return this.returnResultThumbnailUrls == null ? Input.empty() : this.returnResultThumbnailUrls;
     }
 
+    /**
+     * Configuration for ranking results.
+     * 
+     */
     @InputImport(name="scoringConfig")
     private final @Nullable Input<ScoringConfigArgs> scoringConfig;
 
@@ -85,6 +121,10 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
         return this.scoringConfig == null ? Input.empty() : this.scoringConfig;
     }
 
+    /**
+     * Configuration for a sources specified in data_source_restrictions.
+     * 
+     */
     @InputImport(name="sourceConfig")
     private final @Nullable Input<List<SourceConfigArgs>> sourceConfig;
 

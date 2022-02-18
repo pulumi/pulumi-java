@@ -11,8 +11,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TemplateMetadataResponse {
+    /**
+     * Optional. A description of the template.
+     * 
+     */
     private final String description;
+    /**
+     * The name of the template.
+     * 
+     */
     private final String name;
+    /**
+     * The parameters for the template.
+     * 
+     */
     private final List<ParameterMetadataResponse> parameters;
 
     @OutputCustomType.Constructor({"description","name","parameters"})
@@ -25,12 +37,24 @@ public final class TemplateMetadataResponse {
         this.parameters = Objects.requireNonNull(parameters);
     }
 
+    /**
+     * Optional. A description of the template.
+     * 
+     */
     public String getDescription() {
         return this.description;
     }
+    /**
+     * The name of the template.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The parameters for the template.
+     * 
+     */
     public List<ParameterMetadataResponse> getParameters() {
         return this.parameters;
     }

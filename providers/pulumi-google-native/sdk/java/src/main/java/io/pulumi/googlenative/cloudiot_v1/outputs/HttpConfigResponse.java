@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class HttpConfigResponse {
+    /**
+     * If enabled, allows devices to use DeviceService via the HTTP protocol. Otherwise, any requests to DeviceService will fail for this registry.
+     * 
+     */
     private final String httpEnabledState;
 
     @OutputCustomType.Constructor({"httpEnabledState"})
@@ -16,6 +20,10 @@ public final class HttpConfigResponse {
         this.httpEnabledState = Objects.requireNonNull(httpEnabledState);
     }
 
+    /**
+     * If enabled, allows devices to use DeviceService via the HTTP protocol. Otherwise, any requests to DeviceService will fail for this registry.
+     * 
+     */
     public String getHttpEnabledState() {
         return this.httpEnabledState;
     }

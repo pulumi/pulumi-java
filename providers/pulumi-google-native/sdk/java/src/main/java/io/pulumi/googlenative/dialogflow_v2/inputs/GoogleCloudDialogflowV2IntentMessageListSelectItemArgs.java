@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * An item in the list.
+ * 
+ */
 public final class GoogleCloudDialogflowV2IntentMessageListSelectItemArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowV2IntentMessageListSelectItemArgs Empty = new GoogleCloudDialogflowV2IntentMessageListSelectItemArgs();
 
+    /**
+     * Optional. The main text describing the item.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -23,6 +31,10 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectItemArgs extend
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Optional. The image to display.
+     * 
+     */
     @InputImport(name="image")
     private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageImageArgs> image;
 
@@ -30,6 +42,10 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectItemArgs extend
         return this.image == null ? Input.empty() : this.image;
     }
 
+    /**
+     * Additional information about this option.
+     * 
+     */
     @InputImport(name="info", required=true)
     private final Input<GoogleCloudDialogflowV2IntentMessageSelectItemInfoArgs> info;
 
@@ -37,6 +53,10 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectItemArgs extend
         return this.info;
     }
 
+    /**
+     * The title of the list item.
+     * 
+     */
     @InputImport(name="title", required=true)
     private final Input<String> title;
 

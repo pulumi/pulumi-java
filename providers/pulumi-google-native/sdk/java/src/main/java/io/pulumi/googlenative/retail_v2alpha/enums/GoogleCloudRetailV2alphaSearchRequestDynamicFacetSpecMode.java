@@ -8,10 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Mode of the DynamicFacet feature. Defaults to Mode.DISABLED if it's unset.
+     * 
+     */
     @EnumType
     public enum GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecMode {
+        /**
+         * Default value.
+         * 
+         */
         ModeUnspecified("MODE_UNSPECIFIED"),
+        /**
+         * Disable Dynamic Facet.
+         * 
+         */
         Disabled("DISABLED"),
+        /**
+         * Automatic mode built by Google Retail Search.
+         * 
+         */
         Enabled("ENABLED");
 
         private final String value;

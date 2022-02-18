@@ -9,10 +9,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Represents a single Zypper package repository. This repository is added to a repo file that is stored at `/etc/zypp/repos.d/google_osconfig.repo`.
+ * 
+ */
 public final class ZypperRepositoryResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ZypperRepositoryResponse Empty = new ZypperRepositoryResponse();
 
+    /**
+     * The location of the repository directory.
+     * 
+     */
     @InputImport(name="baseUrl", required=true)
     private final String baseUrl;
 
@@ -20,6 +28,10 @@ public final class ZypperRepositoryResponse extends io.pulumi.resources.InvokeAr
         return this.baseUrl;
     }
 
+    /**
+     * The display name of the repository.
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final String displayName;
 
@@ -27,6 +39,10 @@ public final class ZypperRepositoryResponse extends io.pulumi.resources.InvokeAr
         return this.displayName;
     }
 
+    /**
+     * URIs of GPG keys.
+     * 
+     */
     @InputImport(name="gpgKeys", required=true)
     private final List<String> gpgKeys;
 

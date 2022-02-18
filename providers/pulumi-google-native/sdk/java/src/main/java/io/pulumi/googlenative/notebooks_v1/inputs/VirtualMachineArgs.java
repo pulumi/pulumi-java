@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Runtime using Virtual Machine for computing.
+ * 
+ */
 public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualMachineArgs Empty = new VirtualMachineArgs();
 
+    /**
+     * Virtual Machine configuration settings.
+     * 
+     */
     @InputImport(name="virtualMachineConfig")
     private final @Nullable Input<VirtualMachineConfigArgs> virtualMachineConfig;
 

@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Specifies a Metastore configuration.
+ * 
+ */
 public final class MetastoreConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MetastoreConfigResponse Empty = new MetastoreConfigResponse();
 
+    /**
+     * Resource name of an existing Dataproc Metastore service.Example: projects/[project_id]/locations/[dataproc_region]/services/[service-name]
+     * 
+     */
     @InputImport(name="dataprocMetastoreService", required=true)
     private final String dataprocMetastoreService;
 

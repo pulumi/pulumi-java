@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Attributes credit by computing the Aumann-Shapley value taking advantage of the model's fully differentiable structure. Refer to this paper for more details: https://arxiv.org/abs/1703.01365
+ * 
+ */
 public final class GoogleCloudMlV1__IntegratedGradientsAttributionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudMlV1__IntegratedGradientsAttributionArgs Empty = new GoogleCloudMlV1__IntegratedGradientsAttributionArgs();
 
+    /**
+     * Number of steps for approximating the path integral. A good value to start is 50 and gradually increase until the sum to diff property is met within the desired error range.
+     * 
+     */
     @InputImport(name="numIntegralSteps")
     private final @Nullable Input<Integer> numIntegralSteps;
 

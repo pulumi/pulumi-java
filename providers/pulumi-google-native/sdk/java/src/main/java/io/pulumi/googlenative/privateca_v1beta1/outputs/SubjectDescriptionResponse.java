@@ -11,12 +11,40 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SubjectDescriptionResponse {
+    /**
+     * The "common name" of the distinguished name.
+     * 
+     */
     private final String commonName;
+    /**
+     * The serial number encoded in lowercase hexadecimal.
+     * 
+     */
     private final String hexSerialNumber;
+    /**
+     * For convenience, the actual lifetime of an issued certificate. Corresponds to 'not_after_time' - 'not_before_time'.
+     * 
+     */
     private final String lifetime;
+    /**
+     * The time at which the certificate expires.
+     * 
+     */
     private final String notAfterTime;
+    /**
+     * The time at which the certificate becomes valid.
+     * 
+     */
     private final String notBeforeTime;
+    /**
+     * Contains distinguished name fields such as the location and organization.
+     * 
+     */
     private final SubjectResponse subject;
+    /**
+     * The subject alternative name fields.
+     * 
+     */
     private final SubjectAltNamesResponse subjectAltName;
 
     @OutputCustomType.Constructor({"commonName","hexSerialNumber","lifetime","notAfterTime","notBeforeTime","subject","subjectAltName"})
@@ -37,24 +65,52 @@ public final class SubjectDescriptionResponse {
         this.subjectAltName = Objects.requireNonNull(subjectAltName);
     }
 
+    /**
+     * The "common name" of the distinguished name.
+     * 
+     */
     public String getCommonName() {
         return this.commonName;
     }
+    /**
+     * The serial number encoded in lowercase hexadecimal.
+     * 
+     */
     public String getHexSerialNumber() {
         return this.hexSerialNumber;
     }
+    /**
+     * For convenience, the actual lifetime of an issued certificate. Corresponds to 'not_after_time' - 'not_before_time'.
+     * 
+     */
     public String getLifetime() {
         return this.lifetime;
     }
+    /**
+     * The time at which the certificate expires.
+     * 
+     */
     public String getNotAfterTime() {
         return this.notAfterTime;
     }
+    /**
+     * The time at which the certificate becomes valid.
+     * 
+     */
     public String getNotBeforeTime() {
         return this.notBeforeTime;
     }
+    /**
+     * Contains distinguished name fields such as the location and organization.
+     * 
+     */
     public SubjectResponse getSubject() {
         return this.subject;
     }
+    /**
+     * The subject alternative name fields.
+     * 
+     */
     public SubjectAltNamesResponse getSubjectAltName() {
         return this.subjectAltName;
     }

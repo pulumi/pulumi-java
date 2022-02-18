@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CloudAuditOptionsResponse {
+    /**
+     * Information used by the Cloud Audit Logging pipeline.
+     * 
+     */
     private final AuthorizationLoggingOptionsResponse authorizationLoggingOptions;
+    /**
+     * The log_name to populate in the Cloud Audit Record.
+     * 
+     */
     private final String logName;
 
     @OutputCustomType.Constructor({"authorizationLoggingOptions","logName"})
@@ -21,9 +29,17 @@ public final class CloudAuditOptionsResponse {
         this.logName = Objects.requireNonNull(logName);
     }
 
+    /**
+     * Information used by the Cloud Audit Logging pipeline.
+     * 
+     */
     public AuthorizationLoggingOptionsResponse getAuthorizationLoggingOptions() {
         return this.authorizationLoggingOptions;
     }
+    /**
+     * The log_name to populate in the Cloud Audit Record.
+     * 
+     */
     public String getLogName() {
         return this.logName;
     }

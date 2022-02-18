@@ -8,10 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Specifies the termination action for the instance.
+     * 
+     */
     @EnumType
     public enum SchedulingInstanceTerminationAction {
+        /**
+         * Delete the VM.
+         * 
+         */
         Delete("DELETE"),
+        /**
+         * Default value. This value is unused.
+         * 
+         */
         InstanceTerminationActionUnspecified("INSTANCE_TERMINATION_ACTION_UNSPECIFIED"),
+        /**
+         * Stop the VM without storing in-memory content. default action.
+         * 
+         */
         Stop("STOP");
 
         private final String value;

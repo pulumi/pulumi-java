@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GcfsConfigResponse {
+    /**
+     * Whether to use GCFS.
+     * 
+     */
     private final Boolean enabled;
 
     @OutputCustomType.Constructor({"enabled"})
@@ -16,6 +20,10 @@ public final class GcfsConfigResponse {
         this.enabled = Objects.requireNonNull(enabled);
     }
 
+    /**
+     * Whether to use GCFS.
+     * 
+     */
     public Boolean getEnabled() {
         return this.enabled;
     }

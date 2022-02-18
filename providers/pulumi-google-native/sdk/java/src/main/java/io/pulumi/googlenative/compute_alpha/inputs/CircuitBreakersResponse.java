@@ -9,10 +9,18 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
+/**
+ * Settings controlling the volume of requests, connections and retries to this backend service.
+ * 
+ */
 public final class CircuitBreakersResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CircuitBreakersResponse Empty = new CircuitBreakersResponse();
 
+    /**
+     * The timeout for new network connections to hosts.
+     * 
+     */
     @InputImport(name="connectTimeout", required=true)
     private final DurationResponse connectTimeout;
 
@@ -20,6 +28,10 @@ public final class CircuitBreakersResponse extends io.pulumi.resources.InvokeArg
         return this.connectTimeout;
     }
 
+    /**
+     * Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
+     * 
+     */
     @InputImport(name="maxConnections", required=true)
     private final Integer maxConnections;
 
@@ -27,6 +39,10 @@ public final class CircuitBreakersResponse extends io.pulumi.resources.InvokeArg
         return this.maxConnections;
     }
 
+    /**
+     * Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
+     * 
+     */
     @InputImport(name="maxPendingRequests", required=true)
     private final Integer maxPendingRequests;
 
@@ -34,6 +50,10 @@ public final class CircuitBreakersResponse extends io.pulumi.resources.InvokeArg
         return this.maxPendingRequests;
     }
 
+    /**
+     * The maximum number of parallel requests that allowed to the backend service. If not specified, there is no limit.
+     * 
+     */
     @InputImport(name="maxRequests", required=true)
     private final Integer maxRequests;
 
@@ -41,6 +61,10 @@ public final class CircuitBreakersResponse extends io.pulumi.resources.InvokeArg
         return this.maxRequests;
     }
 
+    /**
+     * Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
+     * 
+     */
     @InputImport(name="maxRequestsPerConnection", required=true)
     private final Integer maxRequestsPerConnection;
 
@@ -48,6 +72,10 @@ public final class CircuitBreakersResponse extends io.pulumi.resources.InvokeArg
         return this.maxRequestsPerConnection;
     }
 
+    /**
+     * Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
+     * 
+     */
     @InputImport(name="maxRetries", required=true)
     private final Integer maxRetries;
 

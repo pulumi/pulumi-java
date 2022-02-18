@@ -11,8 +11,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigResponse {
+    /**
+     * Whether to run test cases in TestCasesConfig.test_cases periodically. Default false. If set to true, run once a day.
+     * 
+     */
     private final Boolean enableContinuousRun;
+    /**
+     * Whether to run test cases in TestCasesConfig.test_cases before deploying a flow version to the environment. Default false.
+     * 
+     */
     private final Boolean enablePredeploymentRun;
+    /**
+     * A list of test case names to run. They should be under the same agent. Format of each test case name: `projects//locations/ /agents//testCases/`
+     * 
+     */
     private final List<String> testCases;
 
     @OutputCustomType.Constructor({"enableContinuousRun","enablePredeploymentRun","testCases"})
@@ -25,12 +37,24 @@ public final class GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigRespo
         this.testCases = Objects.requireNonNull(testCases);
     }
 
+    /**
+     * Whether to run test cases in TestCasesConfig.test_cases periodically. Default false. If set to true, run once a day.
+     * 
+     */
     public Boolean getEnableContinuousRun() {
         return this.enableContinuousRun;
     }
+    /**
+     * Whether to run test cases in TestCasesConfig.test_cases before deploying a flow version to the environment. Default false.
+     * 
+     */
     public Boolean getEnablePredeploymentRun() {
         return this.enablePredeploymentRun;
     }
+    /**
+     * A list of test case names to run. They should be under the same agent. Format of each test case name: `projects//locations/ /agents//testCases/`
+     * 
+     */
     public List<String> getTestCases() {
         return this.testCases;
     }

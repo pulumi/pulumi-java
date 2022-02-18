@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * An observed value of a metric.
+ * 
+ */
 public final class GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse Empty = new GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse();
 
+    /**
+     * The objective value at this training step.
+     * 
+     */
     @InputImport(name="objectiveValue", required=true)
     private final Double objectiveValue;
 
@@ -20,6 +28,10 @@ public final class GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResp
         return this.objectiveValue;
     }
 
+    /**
+     * The global training step for this metric.
+     * 
+     */
     @InputImport(name="trainingStep", required=true)
     private final String trainingStep;
 

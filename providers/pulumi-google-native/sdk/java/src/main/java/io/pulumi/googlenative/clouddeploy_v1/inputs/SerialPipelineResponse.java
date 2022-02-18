@@ -9,10 +9,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * SerialPipeline defines a sequential set of stages for a `DeliveryPipeline`.
+ * 
+ */
 public final class SerialPipelineResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SerialPipelineResponse Empty = new SerialPipelineResponse();
 
+    /**
+     * Each stage specifies configuration for a `Target`. The ordering of this list defines the promotion flow.
+     * 
+     */
     @InputImport(name="stages", required=true)
     private final List<StageResponse> stages;
 

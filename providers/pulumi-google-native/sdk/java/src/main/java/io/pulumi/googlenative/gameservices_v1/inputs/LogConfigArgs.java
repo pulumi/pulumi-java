@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specifies what kind of log the caller must write
+ * 
+ */
 public final class LogConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LogConfigArgs Empty = new LogConfigArgs();
 
+    /**
+     * Cloud audit options.
+     * 
+     */
     @InputImport(name="cloudAudit")
     private final @Nullable Input<CloudAuditOptionsArgs> cloudAudit;
 
@@ -23,6 +31,10 @@ public final class LogConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.cloudAudit == null ? Input.empty() : this.cloudAudit;
     }
 
+    /**
+     * Counter options.
+     * 
+     */
     @InputImport(name="counter")
     private final @Nullable Input<CounterOptionsArgs> counter;
 
@@ -30,6 +42,10 @@ public final class LogConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.counter == null ? Input.empty() : this.counter;
     }
 
+    /**
+     * Data access options.
+     * 
+     */
     @InputImport(name="dataAccess")
     private final @Nullable Input<DataAccessOptionsArgs> dataAccess;
 

@@ -23,6 +23,10 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
         return this.accessPolicyId;
     }
 
+    /**
+     * A `BasicLevel` composed of `Conditions`.
+     * 
+     */
     @InputImport(name="basic")
     private final @Nullable Input<BasicLevelArgs> basic;
 
@@ -30,6 +34,10 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
         return this.basic == null ? Input.empty() : this.basic;
     }
 
+    /**
+     * A `CustomLevel` written in the Common Expression Language.
+     * 
+     */
     @InputImport(name="custom")
     private final @Nullable Input<CustomLevelArgs> custom;
 
@@ -37,6 +45,10 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
         return this.custom == null ? Input.empty() : this.custom;
     }
 
+    /**
+     * Description of the `AccessLevel` and its use. Does not affect behavior.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -44,6 +56,10 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Resource name for the Access Level. The `short_name` component must begin with a letter and only include alphanumeric and '_'. Format: `accessPolicies/{access_policy}/accessLevels/{access_level}`. The maximum length of the `access_level` component is 50 characters.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -51,6 +67,10 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Human readable title. Must be unique within the Policy.
+     * 
+     */
     @InputImport(name="title")
     private final @Nullable Input<String> title;
 

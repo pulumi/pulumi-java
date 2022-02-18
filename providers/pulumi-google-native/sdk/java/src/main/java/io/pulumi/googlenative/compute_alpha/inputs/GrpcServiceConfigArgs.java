@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * [Deprecated] gRPC config to access the SDS server. gRPC config to access the SDS server.
+ * 
+ */
 public final class GrpcServiceConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GrpcServiceConfigArgs Empty = new GrpcServiceConfigArgs();
 
+    /**
+     * The call credentials to access the SDS server.
+     * 
+     */
     @InputImport(name="callCredentials")
     private final @Nullable Input<CallCredentialsArgs> callCredentials;
 
@@ -23,6 +31,10 @@ public final class GrpcServiceConfigArgs extends io.pulumi.resources.ResourceArg
         return this.callCredentials == null ? Input.empty() : this.callCredentials;
     }
 
+    /**
+     * The channel credentials to access the SDS server.
+     * 
+     */
     @InputImport(name="channelCredentials")
     private final @Nullable Input<ChannelCredentialsArgs> channelCredentials;
 
@@ -30,6 +42,10 @@ public final class GrpcServiceConfigArgs extends io.pulumi.resources.ResourceArg
         return this.channelCredentials == null ? Input.empty() : this.channelCredentials;
     }
 
+    /**
+     * The target URI of the SDS server.
+     * 
+     */
     @InputImport(name="targetUri")
     private final @Nullable Input<String> targetUri;
 

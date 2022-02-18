@@ -9,10 +9,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * A restriction for a specific service and optionally one or multiple specific methods. Both fields are case insensitive.
+ * 
+ */
 public final class V2ApiTargetResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final V2ApiTargetResponse Empty = new V2ApiTargetResponse();
 
+    /**
+     * Optional. List of one or more methods that can be called. If empty, all methods for the service are allowed. A wildcard (*) can be used as the last symbol. Valid examples: `google.cloud.translate.v2.TranslateService.GetSupportedLanguage` `TranslateText` `Get*` `translate.googleapis.com.Get*`
+     * 
+     */
     @InputImport(name="methods", required=true)
     private final List<String> methods;
 
@@ -20,6 +28,10 @@ public final class V2ApiTargetResponse extends io.pulumi.resources.InvokeArgs {
         return this.methods;
     }
 
+    /**
+     * The service for this restriction. It should be the canonical service name, for example: `translate.googleapis.com`. You can use [`gcloud services list`](/sdk/gcloud/reference/services/list) to get a list of services that are enabled in the project.
+     * 
+     */
     @InputImport(name="service", required=true)
     private final String service;
 

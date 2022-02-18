@@ -10,10 +10,18 @@ import io.pulumi.googlenative.compute_beta.inputs.ResourcePolicySnapshotSchedule
 import java.util.Objects;
 
 
+/**
+ * A snapshot schedule policy specifies when and how frequently snapshots are to be created for the target disk. Also specifies how many and how long these scheduled snapshots should be retained.
+ * 
+ */
 public final class ResourcePolicySnapshotSchedulePolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourcePolicySnapshotSchedulePolicyResponse Empty = new ResourcePolicySnapshotSchedulePolicyResponse();
 
+    /**
+     * Retention policy applied to snapshots created by this resource policy.
+     * 
+     */
     @InputImport(name="retentionPolicy", required=true)
     private final ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse retentionPolicy;
 
@@ -21,6 +29,10 @@ public final class ResourcePolicySnapshotSchedulePolicyResponse extends io.pulum
         return this.retentionPolicy;
     }
 
+    /**
+     * A Vm Maintenance Policy specifies what kind of infrastructure maintenance we are allowed to perform on this VM and when. Schedule that is applied to disks covered by this policy.
+     * 
+     */
     @InputImport(name="schedule", required=true)
     private final ResourcePolicySnapshotSchedulePolicyScheduleResponse schedule;
 
@@ -28,6 +40,10 @@ public final class ResourcePolicySnapshotSchedulePolicyResponse extends io.pulum
         return this.schedule;
     }
 
+    /**
+     * Properties with which snapshots are created such as labels, encryption keys.
+     * 
+     */
     @InputImport(name="snapshotProperties", required=true)
     private final ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse snapshotProperties;
 

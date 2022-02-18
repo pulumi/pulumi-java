@@ -20,6 +20,10 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
 
     public static final ConversationProfileArgs Empty = new ConversationProfileArgs();
 
+    /**
+     * Configuration for an automated agent to use with this profile.
+     * 
+     */
     @InputImport(name="automatedAgentConfig")
     private final @Nullable Input<GoogleCloudDialogflowV2AutomatedAgentConfigArgs> automatedAgentConfig;
 
@@ -27,6 +31,10 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
         return this.automatedAgentConfig == null ? Input.empty() : this.automatedAgentConfig;
     }
 
+    /**
+     * Human readable name for this profile. Max length 1024 bytes.
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -34,6 +42,10 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
         return this.displayName;
     }
 
+    /**
+     * Configuration for agent assistance to use with this profile.
+     * 
+     */
     @InputImport(name="humanAgentAssistantConfig")
     private final @Nullable Input<GoogleCloudDialogflowV2HumanAgentAssistantConfigArgs> humanAgentAssistantConfig;
 
@@ -41,6 +53,10 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
         return this.humanAgentAssistantConfig == null ? Input.empty() : this.humanAgentAssistantConfig;
     }
 
+    /**
+     * Configuration for connecting to a live agent. Currently, this feature is not general available, please contact Google to get access.
+     * 
+     */
     @InputImport(name="humanAgentHandoffConfig")
     private final @Nullable Input<GoogleCloudDialogflowV2HumanAgentHandoffConfigArgs> humanAgentHandoffConfig;
 
@@ -48,6 +64,10 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
         return this.humanAgentHandoffConfig == null ? Input.empty() : this.humanAgentHandoffConfig;
     }
 
+    /**
+     * Language code for the conversation profile. If not specified, the language is en-US. Language at ConversationProfile should be set for all non en-US languages. This should be a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag. Example: "en-US".
+     * 
+     */
     @InputImport(name="languageCode")
     private final @Nullable Input<String> languageCode;
 
@@ -62,6 +82,10 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Configuration for logging conversation lifecycle events.
+     * 
+     */
     @InputImport(name="loggingConfig")
     private final @Nullable Input<GoogleCloudDialogflowV2LoggingConfigArgs> loggingConfig;
 
@@ -69,6 +93,10 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
         return this.loggingConfig == null ? Input.empty() : this.loggingConfig;
     }
 
+    /**
+     * The unique identifier of this conversation profile. Format: `projects//locations//conversationProfiles/`.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -76,6 +104,10 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Configuration for publishing new message events. Event will be sent in format of ConversationEvent
+     * 
+     */
     @InputImport(name="newMessageEventNotificationConfig")
     private final @Nullable Input<GoogleCloudDialogflowV2NotificationConfigArgs> newMessageEventNotificationConfig;
 
@@ -83,6 +115,10 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
         return this.newMessageEventNotificationConfig == null ? Input.empty() : this.newMessageEventNotificationConfig;
     }
 
+    /**
+     * Configuration for publishing conversation lifecycle events.
+     * 
+     */
     @InputImport(name="notificationConfig")
     private final @Nullable Input<GoogleCloudDialogflowV2NotificationConfigArgs> notificationConfig;
 
@@ -97,6 +133,10 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Name of the CX SecuritySettings reference for the agent. Format: `projects//locations//securitySettings/`.
+     * 
+     */
     @InputImport(name="securitySettings")
     private final @Nullable Input<String> securitySettings;
 
@@ -104,6 +144,10 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
         return this.securitySettings == null ? Input.empty() : this.securitySettings;
     }
 
+    /**
+     * Settings for speech transcription.
+     * 
+     */
     @InputImport(name="sttConfig")
     private final @Nullable Input<GoogleCloudDialogflowV2SpeechToTextConfigArgs> sttConfig;
 
@@ -111,6 +155,10 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
         return this.sttConfig == null ? Input.empty() : this.sttConfig;
     }
 
+    /**
+     * The time zone of this conversational profile from the [time zone database](https://www.iana.org/time-zones), e.g., America/New_York, Europe/Paris. Defaults to America/New_York.
+     * 
+     */
     @InputImport(name="timeZone")
     private final @Nullable Input<String> timeZone;
 

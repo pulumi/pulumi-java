@@ -26,6 +26,10 @@ public final class PageArgs extends io.pulumi.resources.ResourceArgs {
         return this.agentId;
     }
 
+    /**
+     * The human-readable name of the page, unique within the agent.
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -33,6 +37,10 @@ public final class PageArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName;
     }
 
+    /**
+     * The fulfillment to call when the session is entering the page.
+     * 
+     */
     @InputImport(name="entryFulfillment")
     private final @Nullable Input<GoogleCloudDialogflowCxV3FulfillmentArgs> entryFulfillment;
 
@@ -40,6 +48,10 @@ public final class PageArgs extends io.pulumi.resources.ResourceArgs {
         return this.entryFulfillment == null ? Input.empty() : this.entryFulfillment;
     }
 
+    /**
+     * Handlers associated with the page to handle events such as webhook errors, no match or no input.
+     * 
+     */
     @InputImport(name="eventHandlers")
     private final @Nullable Input<List<GoogleCloudDialogflowCxV3EventHandlerArgs>> eventHandlers;
 
@@ -54,6 +66,10 @@ public final class PageArgs extends io.pulumi.resources.ResourceArgs {
         return this.flowId;
     }
 
+    /**
+     * The form associated with the page, used for collecting parameters relevant to the page.
+     * 
+     */
     @InputImport(name="form")
     private final @Nullable Input<GoogleCloudDialogflowCxV3FormArgs> form;
 
@@ -75,6 +91,10 @@ public final class PageArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The unique identifier of the page. Required for the Pages.UpdatePage method. Pages.CreatePage populates the name automatically. Format: `projects//locations//agents//flows//pages/`.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -89,6 +109,10 @@ public final class PageArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Ordered list of `TransitionRouteGroups` associated with the page. Transition route groups must be unique within a page. * If multiple transition routes within a page scope refer to the same intent, then the precedence order is: page's transition route -> page's transition route group -> flow's transition routes. * If multiple transition route groups within a page contain the same intent, then the first group in the ordered list takes precedence. Format:`projects//locations//agents//flows//transitionRouteGroups/`.
+     * 
+     */
     @InputImport(name="transitionRouteGroups")
     private final @Nullable Input<List<String>> transitionRouteGroups;
 
@@ -96,6 +120,10 @@ public final class PageArgs extends io.pulumi.resources.ResourceArgs {
         return this.transitionRouteGroups == null ? Input.empty() : this.transitionRouteGroups;
     }
 
+    /**
+     * A list of transitions for the transition rules of this page. They route the conversation to another page in the same flow, or another flow. When we are in a certain page, the TransitionRoutes are evalauted in the following order: * TransitionRoutes defined in the page with intent specified. * TransitionRoutes defined in the transition route groups with intent specified. * TransitionRoutes defined in flow with intent specified. * TransitionRoutes defined in the transition route groups with intent specified. * TransitionRoutes defined in the page with only condition specified. * TransitionRoutes defined in the transition route groups with only condition specified.
+     * 
+     */
     @InputImport(name="transitionRoutes")
     private final @Nullable Input<List<GoogleCloudDialogflowCxV3TransitionRouteArgs>> transitionRoutes;
 

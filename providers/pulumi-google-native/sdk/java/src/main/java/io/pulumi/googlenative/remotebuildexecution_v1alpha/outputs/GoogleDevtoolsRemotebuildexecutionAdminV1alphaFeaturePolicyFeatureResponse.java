@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse {
+    /**
+     * A list of acceptable values. Only effective when the policy is `RESTRICTED`.
+     * 
+     */
     private final List<String> allowedValues;
+    /**
+     * The policy of the feature.
+     * 
+     */
     private final String policy;
 
     @OutputCustomType.Constructor({"allowedValues","policy"})
@@ -21,9 +29,17 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFe
         this.policy = Objects.requireNonNull(policy);
     }
 
+    /**
+     * A list of acceptable values. Only effective when the policy is `RESTRICTED`.
+     * 
+     */
     public List<String> getAllowedValues() {
         return this.allowedValues;
     }
+    /**
+     * The policy of the feature.
+     * 
+     */
     public String getPolicy() {
         return this.policy;
     }

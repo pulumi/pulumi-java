@@ -13,13 +13,45 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ProbingDetailsResponse {
+    /**
+     * The reason probing was aborted.
+     * 
+     */
     private final String abortCause;
+    /**
+     * The source and destination endpoints derived from the test input and used for active probing.
+     * 
+     */
     private final EndpointInfoResponse endpointInfo;
+    /**
+     * Details about an internal failure or the cancellation of active probing.
+     * 
+     */
     private final StatusResponse error;
+    /**
+     * Latency as measured by active probing in one direction: from the source to the destination endpoint.
+     * 
+     */
     private final LatencyDistributionResponse probingLatency;
+    /**
+     * The overall result of active probing.
+     * 
+     */
     private final String result;
+    /**
+     * Number of probes sent.
+     * 
+     */
     private final Integer sentProbeCount;
+    /**
+     * Number of probes that reached the destination.
+     * 
+     */
     private final Integer successfulProbeCount;
+    /**
+     * The time that reachability was assessed through active probing.
+     * 
+     */
     private final String verifyTime;
 
     @OutputCustomType.Constructor({"abortCause","endpointInfo","error","probingLatency","result","sentProbeCount","successfulProbeCount","verifyTime"})
@@ -42,27 +74,59 @@ public final class ProbingDetailsResponse {
         this.verifyTime = Objects.requireNonNull(verifyTime);
     }
 
+    /**
+     * The reason probing was aborted.
+     * 
+     */
     public String getAbortCause() {
         return this.abortCause;
     }
+    /**
+     * The source and destination endpoints derived from the test input and used for active probing.
+     * 
+     */
     public EndpointInfoResponse getEndpointInfo() {
         return this.endpointInfo;
     }
+    /**
+     * Details about an internal failure or the cancellation of active probing.
+     * 
+     */
     public StatusResponse getError() {
         return this.error;
     }
+    /**
+     * Latency as measured by active probing in one direction: from the source to the destination endpoint.
+     * 
+     */
     public LatencyDistributionResponse getProbingLatency() {
         return this.probingLatency;
     }
+    /**
+     * The overall result of active probing.
+     * 
+     */
     public String getResult() {
         return this.result;
     }
+    /**
+     * Number of probes sent.
+     * 
+     */
     public Integer getSentProbeCount() {
         return this.sentProbeCount;
     }
+    /**
+     * Number of probes that reached the destination.
+     * 
+     */
     public Integer getSuccessfulProbeCount() {
         return this.successfulProbeCount;
     }
+    /**
+     * The time that reachability was assessed through active probing.
+     * 
+     */
     public String getVerifyTime() {
         return this.verifyTime;
     }

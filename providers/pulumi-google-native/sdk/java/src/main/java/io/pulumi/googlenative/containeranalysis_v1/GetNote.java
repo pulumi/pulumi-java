@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNote {
+/**
+ * Gets the specified note.
+ * 
+ */
     public static CompletableFuture<GetNoteResult> invokeAsync(GetNoteArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:containeranalysis/v1:getNote", TypeShape.of(GetNoteResult.class), args == null ? GetNoteArgs.Empty : args, Utilities.withVersion(options));
     }

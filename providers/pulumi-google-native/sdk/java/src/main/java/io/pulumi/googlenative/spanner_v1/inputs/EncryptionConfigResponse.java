@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Encryption configuration for a Cloud Spanner database.
+ * 
+ */
 public final class EncryptionConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EncryptionConfigResponse Empty = new EncryptionConfigResponse();
 
+    /**
+     * The Cloud KMS key to be used for encrypting and decrypting the database. Values are of the form `projects//locations//keyRings//cryptoKeys/`.
+     * 
+     */
     @InputImport(name="kmsKeyName", required=true)
     private final String kmsKeyName;
 

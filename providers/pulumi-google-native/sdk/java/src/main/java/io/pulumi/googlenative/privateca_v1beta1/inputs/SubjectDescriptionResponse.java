@@ -10,10 +10,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * These values describe fields in an issued X.509 certificate such as the distinguished name, subject alternative names, serial number, and lifetime.
+ * 
+ */
 public final class SubjectDescriptionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SubjectDescriptionResponse Empty = new SubjectDescriptionResponse();
 
+    /**
+     * The "common name" of the distinguished name.
+     * 
+     */
     @InputImport(name="commonName", required=true)
     private final String commonName;
 
@@ -21,6 +29,10 @@ public final class SubjectDescriptionResponse extends io.pulumi.resources.Invoke
         return this.commonName;
     }
 
+    /**
+     * The serial number encoded in lowercase hexadecimal.
+     * 
+     */
     @InputImport(name="hexSerialNumber", required=true)
     private final String hexSerialNumber;
 
@@ -28,6 +40,10 @@ public final class SubjectDescriptionResponse extends io.pulumi.resources.Invoke
         return this.hexSerialNumber;
     }
 
+    /**
+     * For convenience, the actual lifetime of an issued certificate. Corresponds to 'not_after_time' - 'not_before_time'.
+     * 
+     */
     @InputImport(name="lifetime", required=true)
     private final String lifetime;
 
@@ -35,6 +51,10 @@ public final class SubjectDescriptionResponse extends io.pulumi.resources.Invoke
         return this.lifetime;
     }
 
+    /**
+     * The time at which the certificate expires.
+     * 
+     */
     @InputImport(name="notAfterTime", required=true)
     private final String notAfterTime;
 
@@ -42,6 +62,10 @@ public final class SubjectDescriptionResponse extends io.pulumi.resources.Invoke
         return this.notAfterTime;
     }
 
+    /**
+     * The time at which the certificate becomes valid.
+     * 
+     */
     @InputImport(name="notBeforeTime", required=true)
     private final String notBeforeTime;
 
@@ -49,6 +73,10 @@ public final class SubjectDescriptionResponse extends io.pulumi.resources.Invoke
         return this.notBeforeTime;
     }
 
+    /**
+     * Contains distinguished name fields such as the location and organization.
+     * 
+     */
     @InputImport(name="subject", required=true)
     private final SubjectResponse subject;
 
@@ -56,6 +84,10 @@ public final class SubjectDescriptionResponse extends io.pulumi.resources.Invoke
         return this.subject;
     }
 
+    /**
+     * The subject alternative name fields.
+     * 
+     */
     @InputImport(name="subjectAltName", required=true)
     private final SubjectAltNamesResponse subjectAltName;
 

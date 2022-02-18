@@ -10,10 +10,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A request to launch a template.
+ * 
+ */
 public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse Empty = new GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse();
 
+    /**
+     * A Cloud Storage path to the template from which to create the job. Must be a valid Cloud Storage URL, beginning with 'gs://'.
+     * 
+     */
     @InputImport(name="gcsPath", required=true)
     private final String gcsPath;
 
@@ -21,6 +29,10 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse exten
         return this.gcsPath;
     }
 
+    /**
+     * The parameters of the template to launch. This should be part of the body of the POST request.
+     * 
+     */
     @InputImport(name="launchParameters", required=true)
     private final GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse launchParameters;
 
@@ -28,6 +40,10 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse exten
         return this.launchParameters;
     }
 
+    /**
+     * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to which to direct the request.
+     * 
+     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -35,6 +51,10 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse exten
         return this.location;
     }
 
+    /**
+     * The ID of the Cloud Platform project that the job belongs to.
+     * 
+     */
     @InputImport(name="project", required=true)
     private final String project;
 
@@ -42,6 +62,10 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse exten
         return this.project;
     }
 
+    /**
+     * If true, the request is validated but not actually executed. Defaults to false.
+     * 
+     */
     @InputImport(name="validateOnly", required=true)
     private final Boolean validateOnly;
 

@@ -11,9 +11,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class YumSettingsResponse {
+    /**
+     * List of packages to exclude from update. These packages are excluded by using the yum `--exclude` flag.
+     * 
+     */
     private final List<String> excludes;
+    /**
+     * An exclusive list of packages to be updated. These are the only packages that will be updated. If these packages are not installed, they will be ignored. This field must not be specified with any other patch configuration fields.
+     * 
+     */
     private final List<String> exclusivePackages;
+    /**
+     * Will cause patch to run `yum update-minimal` instead.
+     * 
+     */
     private final Boolean minimal;
+    /**
+     * Adds the `--security` flag to `yum update`. Not supported on all platforms.
+     * 
+     */
     private final Boolean security;
 
     @OutputCustomType.Constructor({"excludes","exclusivePackages","minimal","security"})
@@ -28,15 +44,31 @@ public final class YumSettingsResponse {
         this.security = Objects.requireNonNull(security);
     }
 
+    /**
+     * List of packages to exclude from update. These packages are excluded by using the yum `--exclude` flag.
+     * 
+     */
     public List<String> getExcludes() {
         return this.excludes;
     }
+    /**
+     * An exclusive list of packages to be updated. These are the only packages that will be updated. If these packages are not installed, they will be ignored. This field must not be specified with any other patch configuration fields.
+     * 
+     */
     public List<String> getExclusivePackages() {
         return this.exclusivePackages;
     }
+    /**
+     * Will cause patch to run `yum update-minimal` instead.
+     * 
+     */
     public Boolean getMinimal() {
         return this.minimal;
     }
+    /**
+     * Adds the `--security` flag to `yum update`. Not supported on all platforms.
+     * 
+     */
     public Boolean getSecurity() {
         return this.security;
     }

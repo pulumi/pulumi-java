@@ -11,8 +11,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SoftwareRecipeArtifactResponse {
+    /**
+     * Defaults to false. When false, recipes are subject to validations based on the artifact type: Remote: A checksum must be specified, and only protocols with transport-layer security are permitted. GCS: An object generation number must be specified.
+     * 
+     */
     private final Boolean allowInsecure;
+    /**
+     * A Google Cloud Storage artifact.
+     * 
+     */
     private final SoftwareRecipeArtifactGcsResponse gcs;
+    /**
+     * A generic remote artifact.
+     * 
+     */
     private final SoftwareRecipeArtifactRemoteResponse remote;
 
     @OutputCustomType.Constructor({"allowInsecure","gcs","remote"})
@@ -25,12 +37,24 @@ public final class SoftwareRecipeArtifactResponse {
         this.remote = Objects.requireNonNull(remote);
     }
 
+    /**
+     * Defaults to false. When false, recipes are subject to validations based on the artifact type: Remote: A checksum must be specified, and only protocols with transport-layer security are permitted. GCS: An object generation number must be specified.
+     * 
+     */
     public Boolean getAllowInsecure() {
         return this.allowInsecure;
     }
+    /**
+     * A Google Cloud Storage artifact.
+     * 
+     */
     public SoftwareRecipeArtifactGcsResponse getGcs() {
         return this.gcs;
     }
+    /**
+     * A generic remote artifact.
+     * 
+     */
     public SoftwareRecipeArtifactRemoteResponse getRemote() {
         return this.remote;
     }

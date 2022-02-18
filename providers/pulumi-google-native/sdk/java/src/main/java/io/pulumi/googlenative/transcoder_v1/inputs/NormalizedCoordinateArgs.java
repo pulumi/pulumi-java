@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 2D normalized coordinates. Default: `{0.0, 0.0}`
+ * 
+ */
 public final class NormalizedCoordinateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NormalizedCoordinateArgs Empty = new NormalizedCoordinateArgs();
 
+    /**
+     * Normalized x coordinate.
+     * 
+     */
     @InputImport(name="x")
     private final @Nullable Input<Double> x;
 
@@ -21,6 +29,10 @@ public final class NormalizedCoordinateArgs extends io.pulumi.resources.Resource
         return this.x == null ? Input.empty() : this.x;
     }
 
+    /**
+     * Normalized y coordinate.
+     * 
+     */
     @InputImport(name="y")
     private final @Nullable Input<Double> y;
 

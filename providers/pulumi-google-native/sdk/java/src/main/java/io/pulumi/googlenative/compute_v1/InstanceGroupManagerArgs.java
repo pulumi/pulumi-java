@@ -22,6 +22,10 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
 
     public static final InstanceGroupManagerArgs Empty = new InstanceGroupManagerArgs();
 
+    /**
+     * The autohealing policy for this managed instance group. You can specify only one value.
+     * 
+     */
     @InputImport(name="autoHealingPolicies")
     private final @Nullable Input<List<InstanceGroupManagerAutoHealingPolicyArgs>> autoHealingPolicies;
 
@@ -29,6 +33,10 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
         return this.autoHealingPolicies == null ? Input.empty() : this.autoHealingPolicies;
     }
 
+    /**
+     * The base instance name to use for instances in this group. The value must be 1-58 characters long. Instances are named by appending a hyphen and a random four-character string to the base instance name. The base instance name must comply with RFC1035.
+     * 
+     */
     @InputImport(name="baseInstanceName")
     private final @Nullable Input<String> baseInstanceName;
 
@@ -36,6 +44,10 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
         return this.baseInstanceName == null ? Input.empty() : this.baseInstanceName;
     }
 
+    /**
+     * An optional description of this resource.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -43,6 +55,10 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Policy specifying the intended distribution of managed instances across zones in a regional managed instance group.
+     * 
+     */
     @InputImport(name="distributionPolicy")
     private final @Nullable Input<DistributionPolicyArgs> distributionPolicy;
 
@@ -50,6 +66,10 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
         return this.distributionPolicy == null ? Input.empty() : this.distributionPolicy;
     }
 
+    /**
+     * The URL of the instance template that is specified for this managed instance group. The group uses this template to create all new instances in the managed instance group. The templates for existing instances in the group do not change unless you run recreateInstances, run applyUpdatesToInstances, or set the group's updatePolicy.type to PROACTIVE.
+     * 
+     */
     @InputImport(name="instanceTemplate")
     private final @Nullable Input<String> instanceTemplate;
 
@@ -57,6 +77,10 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
         return this.instanceTemplate == null ? Input.empty() : this.instanceTemplate;
     }
 
+    /**
+     * The name of the managed instance group. The name must be 1-63 characters long, and comply with RFC1035.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -64,6 +88,10 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Named ports configured for the Instance Groups complementary to this Instance Group Manager.
+     * 
+     */
     @InputImport(name="namedPorts")
     private final @Nullable Input<List<NamedPortArgs>> namedPorts;
 
@@ -85,6 +113,10 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
         return this.requestId == null ? Input.empty() : this.requestId;
     }
 
+    /**
+     * Stateful configuration for this Instanced Group Manager
+     * 
+     */
     @InputImport(name="statefulPolicy")
     private final @Nullable Input<StatefulPolicyArgs> statefulPolicy;
 
@@ -92,6 +124,10 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
         return this.statefulPolicy == null ? Input.empty() : this.statefulPolicy;
     }
 
+    /**
+     * The URLs for all TargetPool resources to which instances in the instanceGroup field are added. The target pools automatically apply to all of the instances in the managed instance group.
+     * 
+     */
     @InputImport(name="targetPools")
     private final @Nullable Input<List<String>> targetPools;
 
@@ -99,6 +135,10 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
         return this.targetPools == null ? Input.empty() : this.targetPools;
     }
 
+    /**
+     * The target number of running instances for this managed instance group. You can reduce this number by using the instanceGroupManager deleteInstances or abandonInstances methods. Resizing the group also changes this number.
+     * 
+     */
     @InputImport(name="targetSize")
     private final @Nullable Input<Integer> targetSize;
 
@@ -106,6 +146,10 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
         return this.targetSize == null ? Input.empty() : this.targetSize;
     }
 
+    /**
+     * The update policy for this managed instance group.
+     * 
+     */
     @InputImport(name="updatePolicy")
     private final @Nullable Input<InstanceGroupManagerUpdatePolicyArgs> updatePolicy;
 
@@ -113,6 +157,10 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
         return this.updatePolicy == null ? Input.empty() : this.updatePolicy;
     }
 
+    /**
+     * Specifies the instance templates used by this managed instance group to create instances. Each version is defined by an instanceTemplate and a name. Every version can appear at most once per instance group. This field overrides the top-level instanceTemplate field. Read more about the relationships between these fields. Exactly one version must leave the targetSize field unset. That version will be applied to all remaining instances. For more information, read about canary updates.
+     * 
+     */
     @InputImport(name="versions")
     private final @Nullable Input<List<InstanceGroupManagerVersionArgs>> versions;
 

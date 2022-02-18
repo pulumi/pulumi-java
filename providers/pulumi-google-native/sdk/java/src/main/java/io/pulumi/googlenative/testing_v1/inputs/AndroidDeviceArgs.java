@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A single Android device.
+ * 
+ */
 public final class AndroidDeviceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AndroidDeviceArgs Empty = new AndroidDeviceArgs();
 
+    /**
+     * The id of the Android device to be used. Use the TestEnvironmentDiscoveryService to get supported options.
+     * 
+     */
     @InputImport(name="androidModelId", required=true)
     private final Input<String> androidModelId;
 
@@ -20,6 +28,10 @@ public final class AndroidDeviceArgs extends io.pulumi.resources.ResourceArgs {
         return this.androidModelId;
     }
 
+    /**
+     * The id of the Android OS version to be used. Use the TestEnvironmentDiscoveryService to get supported options.
+     * 
+     */
     @InputImport(name="androidVersionId", required=true)
     private final Input<String> androidVersionId;
 
@@ -27,6 +39,10 @@ public final class AndroidDeviceArgs extends io.pulumi.resources.ResourceArgs {
         return this.androidVersionId;
     }
 
+    /**
+     * The locale the test device used for testing. Use the TestEnvironmentDiscoveryService to get supported options.
+     * 
+     */
     @InputImport(name="locale", required=true)
     private final Input<String> locale;
 
@@ -34,6 +50,10 @@ public final class AndroidDeviceArgs extends io.pulumi.resources.ResourceArgs {
         return this.locale;
     }
 
+    /**
+     * How the device is oriented during the test. Use the TestEnvironmentDiscoveryService to get supported options.
+     * 
+     */
     @InputImport(name="orientation", required=true)
     private final Input<String> orientation;
 

@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GcsProfileResponse {
+    /**
+     * The Cloud Storage bucket name.
+     * 
+     */
     private final String bucket;
+    /**
+     * The root path inside the Cloud Storage bucket.
+     * 
+     */
     private final String rootPath;
 
     @OutputCustomType.Constructor({"bucket","rootPath"})
@@ -20,9 +28,17 @@ public final class GcsProfileResponse {
         this.rootPath = Objects.requireNonNull(rootPath);
     }
 
+    /**
+     * The Cloud Storage bucket name.
+     * 
+     */
     public String getBucket() {
         return this.bucket;
     }
+    /**
+     * The root path inside the Cloud Storage bucket.
+     * 
+     */
     public String getRootPath() {
         return this.rootPath;
     }

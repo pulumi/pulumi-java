@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CloudRunConfigResponse {
+    /**
+     * Whether Cloud Run addon is enabled for this cluster.
+     * 
+     */
     private final Boolean disabled;
+    /**
+     * Which load balancer type is installed for Cloud Run.
+     * 
+     */
     private final String loadBalancerType;
 
     @OutputCustomType.Constructor({"disabled","loadBalancerType"})
@@ -21,9 +29,17 @@ public final class CloudRunConfigResponse {
         this.loadBalancerType = Objects.requireNonNull(loadBalancerType);
     }
 
+    /**
+     * Whether Cloud Run addon is enabled for this cluster.
+     * 
+     */
     public Boolean getDisabled() {
         return this.disabled;
     }
+    /**
+     * Which load balancer type is installed for Cloud Run.
+     * 
+     */
     public String getLoadBalancerType() {
         return this.loadBalancerType;
     }

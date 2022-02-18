@@ -10,6 +10,10 @@ import io.pulumi.googlenative.compute_alpha.inputs.ResourcePolicyWeeklyCycleResp
 import java.util.Objects;
 
 
+/**
+ * A schedule for disks where the schedueled operations are performed.
+ * 
+ */
 public final class ResourcePolicySnapshotSchedulePolicyScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourcePolicySnapshotSchedulePolicyScheduleResponse Empty = new ResourcePolicySnapshotSchedulePolicyScheduleResponse();

@@ -13,10 +13,18 @@ import java.util.Map;
 import java.util.Objects;
 
 
+/**
+ * Code and application artifacts used to deploy a version to App Engine.
+ * 
+ */
 public final class DeploymentResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DeploymentResponse Empty = new DeploymentResponse();
 
+    /**
+     * Google Cloud Build build information. Only applicable for instances running in the App Engine flexible environment.
+     * 
+     */
     @InputImport(name="build", required=true)
     private final BuildInfoResponse build;
 
@@ -24,6 +32,10 @@ public final class DeploymentResponse extends io.pulumi.resources.InvokeArgs {
         return this.build;
     }
 
+    /**
+     * Options for any Google Cloud Build builds created as a part of this deployment.These options will only be used if a new build is created, such as when deploying to the App Engine flexible environment using files or zip.
+     * 
+     */
     @InputImport(name="cloudBuildOptions", required=true)
     private final CloudBuildOptionsResponse cloudBuildOptions;
 
@@ -31,6 +43,10 @@ public final class DeploymentResponse extends io.pulumi.resources.InvokeArgs {
         return this.cloudBuildOptions;
     }
 
+    /**
+     * The Docker image for the container that runs the version. Only applicable for instances running in the App Engine flexible environment.
+     * 
+     */
     @InputImport(name="container", required=true)
     private final ContainerInfoResponse container;
 
@@ -38,6 +54,10 @@ public final class DeploymentResponse extends io.pulumi.resources.InvokeArgs {
         return this.container;
     }
 
+    /**
+     * Manifest of the files stored in Google Cloud Storage that are included as part of this version. All files must be readable using the credentials supplied with this call.
+     * 
+     */
     @InputImport(name="files", required=true)
     private final Map<String,String> files;
 
@@ -45,6 +65,10 @@ public final class DeploymentResponse extends io.pulumi.resources.InvokeArgs {
         return this.files;
     }
 
+    /**
+     * The zip file for this deployment, if this is a zip deployment.
+     * 
+     */
     @InputImport(name="zip", required=true)
     private final ZipInfoResponse zip;
 

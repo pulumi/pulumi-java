@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GcpFilestoreCsiDriverConfigResponse {
+    /**
+     * Whether the GCP Filestore CSI driver is enabled for this cluster.
+     * 
+     */
     private final Boolean enabled;
 
     @OutputCustomType.Constructor({"enabled"})
@@ -16,6 +20,10 @@ public final class GcpFilestoreCsiDriverConfigResponse {
         this.enabled = Objects.requireNonNull(enabled);
     }
 
+    /**
+     * Whether the GCP Filestore CSI driver is enabled for this cluster.
+     * 
+     */
     public Boolean getEnabled() {
         return this.enabled;
     }

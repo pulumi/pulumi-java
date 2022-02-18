@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Rich Business Messaging (RBM) suggestion. Suggestions allow user to easily select/click a predefined response or perform an action (like opening a web uri).
+ * 
+ */
 public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs Empty = new GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs();
 
+    /**
+     * Predefined client side actions that user can choose
+     * 
+     */
     @InputImport(name="action")
     private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionArgs> action;
 
@@ -22,6 +30,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs ex
         return this.action == null ? Input.empty() : this.action;
     }
 
+    /**
+     * Predefined replies for user to select instead of typing
+     * 
+     */
     @InputImport(name="reply")
     private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs> reply;
 

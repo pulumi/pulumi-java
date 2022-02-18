@@ -14,6 +14,10 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SslCertArgs Empty = new SslCertArgs();
 
+    /**
+     * User supplied name. Must be a distinct name from the other certificates for this instance.
+     * 
+     */
     @InputImport(name="commonName")
     private final @Nullable Input<String> commonName;
 

@@ -17,6 +17,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JobArgs Empty = new JobArgs();
 
+    /**
+     * [Required] Describes the job configuration.
+     * 
+     */
     @InputImport(name="configuration")
     private final @Nullable Input<JobConfigurationArgs> configuration;
 
@@ -24,6 +28,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.configuration == null ? Input.empty() : this.configuration;
     }
 
+    /**
+     * [Optional] Reference describing the unique-per-user name of the job.
+     * 
+     */
     @InputImport(name="jobReference")
     private final @Nullable Input<JobReferenceArgs> jobReference;
 

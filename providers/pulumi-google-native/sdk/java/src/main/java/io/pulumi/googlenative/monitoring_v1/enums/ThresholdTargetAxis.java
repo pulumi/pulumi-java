@@ -8,10 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The target axis to use for plotting the threshold. Target axis is not allowed in a Scorecard.
+     * 
+     */
     @EnumType
     public enum ThresholdTargetAxis {
+        /**
+         * The target axis was not specified. Defaults to Y1.
+         * 
+         */
         TargetAxisUnspecified("TARGET_AXIS_UNSPECIFIED"),
+        /**
+         * The y_axis (the right axis of chart).
+         * 
+         */
         Y1("Y1"),
+        /**
+         * The y2_axis (the left axis of chart).
+         * 
+         */
         Y2("Y2");
 
         private final String value;

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * User-specified flag to indicate which mode to use for advertisement.
+     * 
+     */
     @EnumType
     public enum RouterBgpPeerAdvertiseMode {
         Custom("CUSTOM"),

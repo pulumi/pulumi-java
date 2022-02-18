@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DomainRedirectResponse {
+    /**
+     * The domain name to redirect to.
+     * 
+     */
     private final String domainName;
+    /**
+     * The redirect status code.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"domainName","type"})
@@ -20,9 +28,17 @@ public final class DomainRedirectResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * The domain name to redirect to.
+     * 
+     */
     public String getDomainName() {
         return this.domainName;
     }
+    /**
+     * The redirect status code.
+     * 
+     */
     public String getType() {
         return this.type;
     }

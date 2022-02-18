@@ -13,15 +13,55 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class FieldResponse {
+    /**
+     * The field cardinality.
+     * 
+     */
     private final String cardinality;
+    /**
+     * The string value of the default value of this field. Proto2 syntax only.
+     * 
+     */
     private final String defaultValue;
+    /**
+     * The field JSON name.
+     * 
+     */
     private final String jsonName;
+    /**
+     * The field type.
+     * 
+     */
     private final String kind;
+    /**
+     * The field name.
+     * 
+     */
     private final String name;
+    /**
+     * The field number.
+     * 
+     */
     private final Integer number;
+    /**
+     * The index of the field type in `Type.oneofs`, for message or enumeration types. The first type has index 1; zero means the type is not in the list.
+     * 
+     */
     private final Integer oneofIndex;
+    /**
+     * The protocol buffer options.
+     * 
+     */
     private final List<OptionResponse> options;
+    /**
+     * Whether to use alternative packed wire representation.
+     * 
+     */
     private final Boolean packed;
+    /**
+     * The field type URL, without the scheme, for message or enumeration types. Example: `"type.googleapis.com/google.protobuf.Timestamp"`.
+     * 
+     */
     private final String typeUrl;
 
     @OutputCustomType.Constructor({"cardinality","defaultValue","jsonName","kind","name","number","oneofIndex","options","packed","typeUrl"})
@@ -48,33 +88,73 @@ public final class FieldResponse {
         this.typeUrl = Objects.requireNonNull(typeUrl);
     }
 
+    /**
+     * The field cardinality.
+     * 
+     */
     public String getCardinality() {
         return this.cardinality;
     }
+    /**
+     * The string value of the default value of this field. Proto2 syntax only.
+     * 
+     */
     public String getDefaultValue() {
         return this.defaultValue;
     }
+    /**
+     * The field JSON name.
+     * 
+     */
     public String getJsonName() {
         return this.jsonName;
     }
+    /**
+     * The field type.
+     * 
+     */
     public String getKind() {
         return this.kind;
     }
+    /**
+     * The field name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The field number.
+     * 
+     */
     public Integer getNumber() {
         return this.number;
     }
+    /**
+     * The index of the field type in `Type.oneofs`, for message or enumeration types. The first type has index 1; zero means the type is not in the list.
+     * 
+     */
     public Integer getOneofIndex() {
         return this.oneofIndex;
     }
+    /**
+     * The protocol buffer options.
+     * 
+     */
     public List<OptionResponse> getOptions() {
         return this.options;
     }
+    /**
+     * Whether to use alternative packed wire representation.
+     * 
+     */
     public Boolean getPacked() {
         return this.packed;
     }
+    /**
+     * The field type URL, without the scheme, for message or enumeration types. Example: `"type.googleapis.com/google.protobuf.Timestamp"`.
+     * 
+     */
     public String getTypeUrl() {
         return this.typeUrl;
     }

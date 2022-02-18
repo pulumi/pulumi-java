@@ -16,6 +16,10 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SourceArgs Empty = new SourceArgs();
 
+    /**
+     * User-provided description of the source.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -23,6 +27,10 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The labels of the source.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -58,6 +66,10 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceId;
     }
 
+    /**
+     * Vmware type source details.
+     * 
+     */
     @InputImport(name="vmware")
     private final @Nullable Input<VmwareSourceDetailsArgs> vmware;
 

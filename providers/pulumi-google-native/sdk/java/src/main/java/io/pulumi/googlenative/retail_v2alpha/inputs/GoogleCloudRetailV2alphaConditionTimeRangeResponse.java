@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Used for time-dependent conditions. Example: Want to have rule applied for week long sale.
+ * 
+ */
 public final class GoogleCloudRetailV2alphaConditionTimeRangeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudRetailV2alphaConditionTimeRangeResponse Empty = new GoogleCloudRetailV2alphaConditionTimeRangeResponse();
 
+    /**
+     * End of time range. Range is inclusive.
+     * 
+     */
     @InputImport(name="endTime", required=true)
     private final String endTime;
 
@@ -19,6 +27,10 @@ public final class GoogleCloudRetailV2alphaConditionTimeRangeResponse extends io
         return this.endTime;
     }
 
+    /**
+     * Start of time range. Range is inclusive.
+     * 
+     */
     @InputImport(name="startTime", required=true)
     private final String startTime;
 

@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A classification object with a product type and value.
+ * 
+ */
 public final class CaseClassificationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CaseClassificationResponse Empty = new CaseClassificationResponse();
 
+    /**
+     * The display name of the classification.
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final String displayName;
 

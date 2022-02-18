@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class IosTestLoopResponse {
+    /**
+     * Bundle ID of the app.
+     * 
+     */
     private final String bundleId;
 
     @OutputCustomType.Constructor({"bundleId"})
@@ -16,6 +20,10 @@ public final class IosTestLoopResponse {
         this.bundleId = Objects.requireNonNull(bundleId);
     }
 
+    /**
+     * Bundle ID of the app.
+     * 
+     */
     public String getBundleId() {
         return this.bundleId;
     }

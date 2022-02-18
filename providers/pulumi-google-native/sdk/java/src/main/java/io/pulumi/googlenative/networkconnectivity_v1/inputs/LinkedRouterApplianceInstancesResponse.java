@@ -10,10 +10,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * A collection of router appliance instances. If you have multiple router appliance instances connected to the same site, they should all be attached to the same spoke.
+ * 
+ */
 public final class LinkedRouterApplianceInstancesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LinkedRouterApplianceInstancesResponse Empty = new LinkedRouterApplianceInstancesResponse();
 
+    /**
+     * The list of router appliance instances.
+     * 
+     */
     @InputImport(name="instances", required=true)
     private final List<RouterApplianceInstanceResponse> instances;
 
@@ -21,6 +29,10 @@ public final class LinkedRouterApplianceInstancesResponse extends io.pulumi.reso
         return this.instances;
     }
 
+    /**
+     * A value that controls whether site-to-site data transfer is enabled for these resources. Data transfer is available only in [supported locations](https://cloud.google.com/network-connectivity/docs/network-connectivity-center/concepts/locations).
+     * 
+     */
     @InputImport(name="siteToSiteDataTransfer", required=true)
     private final Boolean siteToSiteDataTransfer;
 

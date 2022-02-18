@@ -8,10 +8,18 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
+/**
+ * Metadata from Dialogflow relating to the current transcript segment.
+ * 
+ */
 public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse Empty = new GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse();
 
+    /**
+     * Whether the transcript segment was covered under the configured smart reply allowlist in Agent Assist.
+     * 
+     */
     @InputImport(name="smartReplyAllowlistCovered", required=true)
     private final Boolean smartReplyAllowlistCovered;
 

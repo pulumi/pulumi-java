@@ -19,6 +19,10 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final PatchDeploymentArgs Empty = new PatchDeploymentArgs();
 
+    /**
+     * Optional. Description of the patch deployment. Length of the description is limited to 1024 characters.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -26,6 +30,10 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Optional. Duration of the patch. After the duration ends, the patch times out.
+     * 
+     */
     @InputImport(name="duration")
     private final @Nullable Input<String> duration;
 
@@ -33,6 +41,10 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
         return this.duration == null ? Input.empty() : this.duration;
     }
 
+    /**
+     * VM instances to patch.
+     * 
+     */
     @InputImport(name="instanceFilter", required=true)
     private final Input<PatchInstanceFilterArgs> instanceFilter;
 
@@ -40,6 +52,10 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
         return this.instanceFilter;
     }
 
+    /**
+     * Unique name for the patch deployment resource in a project. The patch deployment name is in the form: `projects/{project_id}/patchDeployments/{patch_deployment_id}`. This field is ignored when you create a new patch deployment.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -47,6 +63,10 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Schedule a one-time execution.
+     * 
+     */
     @InputImport(name="oneTimeSchedule", required=true)
     private final Input<OneTimeScheduleArgs> oneTimeSchedule;
 
@@ -54,6 +74,10 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
         return this.oneTimeSchedule;
     }
 
+    /**
+     * Optional. Patch configuration that is applied.
+     * 
+     */
     @InputImport(name="patchConfig")
     private final @Nullable Input<PatchConfigArgs> patchConfig;
 
@@ -75,6 +99,10 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Schedule recurring executions.
+     * 
+     */
     @InputImport(name="recurringSchedule", required=true)
     private final Input<RecurringScheduleArgs> recurringSchedule;
 
@@ -82,6 +110,10 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
         return this.recurringSchedule;
     }
 
+    /**
+     * Optional. Rollout strategy of the patch job.
+     * 
+     */
     @InputImport(name="rollout")
     private final @Nullable Input<PatchRolloutArgs> rollout;
 

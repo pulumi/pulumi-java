@@ -8,10 +8,18 @@ import io.pulumi.googlenative.cloudasset_v1.inputs.PubsubDestinationResponse;
 import java.util.Objects;
 
 
+/**
+ * Output configuration for asset feed destination.
+ * 
+ */
 public final class FeedOutputConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FeedOutputConfigResponse Empty = new FeedOutputConfigResponse();
 
+    /**
+     * Destination on Pub/Sub.
+     * 
+     */
     @InputImport(name="pubsubDestination", required=true)
     private final PubsubDestinationResponse pubsubDestination;
 

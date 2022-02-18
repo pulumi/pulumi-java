@@ -8,10 +8,18 @@ import io.pulumi.googlenative.apigateway_v1beta.inputs.ApigatewayApiConfigFileRe
 import java.util.Objects;
 
 
+/**
+ * An OpenAPI Specification Document describing an API.
+ * 
+ */
 public final class ApigatewayApiConfigOpenApiDocumentResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApigatewayApiConfigOpenApiDocumentResponse Empty = new ApigatewayApiConfigOpenApiDocumentResponse();
 
+    /**
+     * The OpenAPI Specification document file.
+     * 
+     */
     @InputImport(name="document", required=true)
     private final ApigatewayApiConfigFileResponse document;
 

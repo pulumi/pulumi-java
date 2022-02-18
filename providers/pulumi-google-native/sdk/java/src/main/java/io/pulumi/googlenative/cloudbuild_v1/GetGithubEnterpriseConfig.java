@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGithubEnterpriseConfig {
+/**
+ * Retrieve a GitHubEnterpriseConfig.
+ * 
+ */
     public static CompletableFuture<GetGithubEnterpriseConfigResult> invokeAsync(GetGithubEnterpriseConfigArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudbuild/v1:getGithubEnterpriseConfig", TypeShape.of(GetGithubEnterpriseConfigResult.class), args == null ? GetGithubEnterpriseConfigArgs.Empty : args, Utilities.withVersion(options));
     }

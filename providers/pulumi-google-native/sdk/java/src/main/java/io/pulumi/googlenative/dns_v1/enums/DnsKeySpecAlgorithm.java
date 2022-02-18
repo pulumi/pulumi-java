@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * String mnemonic specifying the DNSSEC algorithm of this key.
+     * 
+     */
     @EnumType
     public enum DnsKeySpecAlgorithm {
         Rsasha1("rsasha1"),

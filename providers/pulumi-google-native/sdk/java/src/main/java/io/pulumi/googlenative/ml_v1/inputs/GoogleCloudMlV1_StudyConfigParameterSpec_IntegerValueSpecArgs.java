@@ -14,6 +14,10 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecArgs
 
     public static final GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecArgs Empty = new GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecArgs();
 
+    /**
+     * Must be specified if type is `INTEGER`. Maximum value of the parameter.
+     * 
+     */
     @InputImport(name="maxValue")
     private final @Nullable Input<String> maxValue;
 
@@ -21,6 +25,10 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecArgs
         return this.maxValue == null ? Input.empty() : this.maxValue;
     }
 
+    /**
+     * Must be specified if type is `INTEGER`. Minimum value of the parameter.
+     * 
+     */
     @InputImport(name="minValue")
     private final @Nullable Input<String> minValue;
 

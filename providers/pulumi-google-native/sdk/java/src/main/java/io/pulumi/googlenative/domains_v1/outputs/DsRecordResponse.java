@@ -10,9 +10,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DsRecordResponse {
+    /**
+     * The algorithm used to generate the referenced DNSKEY.
+     * 
+     */
     private final String algorithm;
+    /**
+     * The digest generated from the referenced DNSKEY.
+     * 
+     */
     private final String digest;
+    /**
+     * The hash function used to generate the digest of the referenced DNSKEY.
+     * 
+     */
     private final String digestType;
+    /**
+     * The key tag of the record. Must be set in range 0 -- 65535.
+     * 
+     */
     private final Integer keyTag;
 
     @OutputCustomType.Constructor({"algorithm","digest","digestType","keyTag"})
@@ -27,15 +43,31 @@ public final class DsRecordResponse {
         this.keyTag = Objects.requireNonNull(keyTag);
     }
 
+    /**
+     * The algorithm used to generate the referenced DNSKEY.
+     * 
+     */
     public String getAlgorithm() {
         return this.algorithm;
     }
+    /**
+     * The digest generated from the referenced DNSKEY.
+     * 
+     */
     public String getDigest() {
         return this.digest;
     }
+    /**
+     * The hash function used to generate the digest of the referenced DNSKEY.
+     * 
+     */
     public String getDigestType() {
         return this.digestType;
     }
+    /**
+     * The key tag of the record. Must be set in range 0 -- 65535.
+     * 
+     */
     public Integer getKeyTag() {
         return this.keyTag;
     }

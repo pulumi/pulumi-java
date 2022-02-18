@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The configuration of the stream destination.
+ * 
+ */
 public final class DestinationConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DestinationConfigResponse Empty = new DestinationConfigResponse();
 
+    /**
+     * Destination connection profile resource. Format: `projects/{project}/locations/{location}/connectionProfiles/{name}`
+     * 
+     */
     @InputImport(name="destinationConnectionProfile", required=true)
     private final String destinationConnectionProfile;
 
@@ -20,6 +28,10 @@ public final class DestinationConfigResponse extends io.pulumi.resources.InvokeA
         return this.destinationConnectionProfile;
     }
 
+    /**
+     * A configuration for how data should be loaded to Cloud Storage.
+     * 
+     */
     @InputImport(name="gcsDestinationConfig", required=true)
     private final GcsDestinationConfigResponse gcsDestinationConfig;
 

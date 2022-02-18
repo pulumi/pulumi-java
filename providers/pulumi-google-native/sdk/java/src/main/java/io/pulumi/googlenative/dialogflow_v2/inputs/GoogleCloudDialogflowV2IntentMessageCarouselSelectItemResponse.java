@@ -10,10 +10,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * An item in the carousel.
+ * 
+ */
 public final class GoogleCloudDialogflowV2IntentMessageCarouselSelectItemResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowV2IntentMessageCarouselSelectItemResponse Empty = new GoogleCloudDialogflowV2IntentMessageCarouselSelectItemResponse();
 
+    /**
+     * Optional. The body text of the card.
+     * 
+     */
     @InputImport(name="description", required=true)
     private final String description;
 
@@ -21,6 +29,10 @@ public final class GoogleCloudDialogflowV2IntentMessageCarouselSelectItemRespons
         return this.description;
     }
 
+    /**
+     * Optional. The image to display.
+     * 
+     */
     @InputImport(name="image", required=true)
     private final GoogleCloudDialogflowV2IntentMessageImageResponse image;
 
@@ -28,6 +40,10 @@ public final class GoogleCloudDialogflowV2IntentMessageCarouselSelectItemRespons
         return this.image;
     }
 
+    /**
+     * Additional info about the option item.
+     * 
+     */
     @InputImport(name="info", required=true)
     private final GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse info;
 
@@ -35,6 +51,10 @@ public final class GoogleCloudDialogflowV2IntentMessageCarouselSelectItemRespons
         return this.info;
     }
 
+    /**
+     * Title of the carousel item.
+     * 
+     */
     @InputImport(name="title", required=true)
     private final String title;
 

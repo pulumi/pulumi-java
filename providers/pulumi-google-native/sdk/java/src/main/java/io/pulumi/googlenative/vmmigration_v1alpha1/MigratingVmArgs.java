@@ -17,6 +17,10 @@ public final class MigratingVmArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MigratingVmArgs Empty = new MigratingVmArgs();
 
+    /**
+     * Details of the target VM in Compute Engine.
+     * 
+     */
     @InputImport(name="computeEngineTargetDefaults")
     private final @Nullable Input<ComputeEngineTargetDefaultsArgs> computeEngineTargetDefaults;
 
@@ -24,6 +28,10 @@ public final class MigratingVmArgs extends io.pulumi.resources.ResourceArgs {
         return this.computeEngineTargetDefaults == null ? Input.empty() : this.computeEngineTargetDefaults;
     }
 
+    /**
+     * The description attached to the migrating VM by the user.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -31,6 +39,10 @@ public final class MigratingVmArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The display name attached to the MigratingVm by the user.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -38,6 +50,10 @@ public final class MigratingVmArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The labels of the migrating VM.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -59,6 +75,10 @@ public final class MigratingVmArgs extends io.pulumi.resources.ResourceArgs {
         return this.migratingVmId;
     }
 
+    /**
+     * The replication schedule policy.
+     * 
+     */
     @InputImport(name="policy")
     private final @Nullable Input<SchedulePolicyArgs> policy;
 
@@ -87,6 +107,10 @@ public final class MigratingVmArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceId;
     }
 
+    /**
+     * The unique ID of the VM in the source. The VM's name in vSphere can be changed, so this is not the VM's name but rather its moRef id. This id is of the form vm-.
+     * 
+     */
     @InputImport(name="sourceVmId")
     private final @Nullable Input<String> sourceVmId;
 

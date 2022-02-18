@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class WorkloadMetadataConfigResponse {
+    /**
+     * Mode is the configuration for how to expose metadata to workloads running on the node pool.
+     * 
+     */
     private final String mode;
 
     @OutputCustomType.Constructor({"mode"})
@@ -16,6 +20,10 @@ public final class WorkloadMetadataConfigResponse {
         this.mode = Objects.requireNonNull(mode);
     }
 
+    /**
+     * Mode is the configuration for how to expose metadata to workloads running on the node pool.
+     * 
+     */
     public String getMode() {
         return this.mode;
     }

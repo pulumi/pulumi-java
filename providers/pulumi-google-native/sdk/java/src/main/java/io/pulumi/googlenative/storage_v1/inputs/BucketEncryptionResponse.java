@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Encryption configuration for a bucket.
+ * 
+ */
 public final class BucketEncryptionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BucketEncryptionResponse Empty = new BucketEncryptionResponse();
 
+    /**
+     * A Cloud KMS key that will be used to encrypt objects inserted into this bucket, if no encryption method is specified.
+     * 
+     */
     @InputImport(name="defaultKmsKeyName", required=true)
     private final String defaultKmsKeyName;
 

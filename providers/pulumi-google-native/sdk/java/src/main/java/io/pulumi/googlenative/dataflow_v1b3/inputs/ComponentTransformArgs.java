@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Description of a transform executed as part of an execution stage.
+ * 
+ */
 public final class ComponentTransformArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ComponentTransformArgs Empty = new ComponentTransformArgs();
 
+    /**
+     * Dataflow service generated name for this source.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -21,6 +29,10 @@ public final class ComponentTransformArgs extends io.pulumi.resources.ResourceAr
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * User name for the original user transform with which this transform is most closely associated.
+     * 
+     */
     @InputImport(name="originalTransform")
     private final @Nullable Input<String> originalTransform;
 
@@ -28,6 +40,10 @@ public final class ComponentTransformArgs extends io.pulumi.resources.ResourceAr
         return this.originalTransform == null ? Input.empty() : this.originalTransform;
     }
 
+    /**
+     * Human-readable name for this transform; may be user or system generated.
+     * 
+     */
     @InputImport(name="userName")
     private final @Nullable Input<String> userName;
 

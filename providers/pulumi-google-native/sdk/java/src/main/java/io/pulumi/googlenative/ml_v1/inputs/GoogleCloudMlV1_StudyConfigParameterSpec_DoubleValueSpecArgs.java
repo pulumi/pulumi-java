@@ -14,6 +14,10 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecArgs 
 
     public static final GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecArgs Empty = new GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecArgs();
 
+    /**
+     * Must be specified if type is `DOUBLE`. Maximum value of the parameter.
+     * 
+     */
     @InputImport(name="maxValue")
     private final @Nullable Input<Double> maxValue;
 
@@ -21,6 +25,10 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecArgs 
         return this.maxValue == null ? Input.empty() : this.maxValue;
     }
 
+    /**
+     * Must be specified if type is `DOUBLE`. Minimum value of the parameter.
+     * 
+     */
     @InputImport(name="minValue")
     private final @Nullable Input<Double> minValue;
 

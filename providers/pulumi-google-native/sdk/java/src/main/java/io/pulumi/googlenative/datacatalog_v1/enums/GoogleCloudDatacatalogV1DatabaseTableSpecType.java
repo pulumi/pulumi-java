@@ -8,10 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Type of this table.
+     * 
+     */
     @EnumType
     public enum GoogleCloudDatacatalogV1DatabaseTableSpecType {
+        /**
+         * Default unknown table type.
+         * 
+         */
         TableTypeUnspecified("TABLE_TYPE_UNSPECIFIED"),
+        /**
+         * Native table.
+         * 
+         */
         Native("NATIVE"),
+        /**
+         * External table.
+         * 
+         */
         External("EXTERNAL");
 
         private final String value;

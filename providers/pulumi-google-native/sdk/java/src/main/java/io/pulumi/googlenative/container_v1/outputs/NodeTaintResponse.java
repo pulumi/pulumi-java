@@ -9,8 +9,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class NodeTaintResponse {
+    /**
+     * Effect for taint.
+     * 
+     */
     private final String effect;
+    /**
+     * Key for taint.
+     * 
+     */
     private final String key;
+    /**
+     * Value for taint.
+     * 
+     */
     private final String value;
 
     @OutputCustomType.Constructor({"effect","key","value"})
@@ -23,12 +35,24 @@ public final class NodeTaintResponse {
         this.value = Objects.requireNonNull(value);
     }
 
+    /**
+     * Effect for taint.
+     * 
+     */
     public String getEffect() {
         return this.effect;
     }
+    /**
+     * Key for taint.
+     * 
+     */
     public String getKey() {
         return this.key;
     }
+    /**
+     * Value for taint.
+     * 
+     */
     public String getValue() {
         return this.value;
     }

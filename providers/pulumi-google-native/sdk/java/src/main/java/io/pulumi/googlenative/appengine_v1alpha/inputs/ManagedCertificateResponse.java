@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A certificate managed by App Engine.
+ * 
+ */
 public final class ManagedCertificateResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ManagedCertificateResponse Empty = new ManagedCertificateResponse();
 
+    /**
+     * Time at which the certificate was last renewed. The renewal process is fully managed. Certificate renewal will automatically occur before the certificate expires. Renewal errors can be tracked via ManagementStatus.
+     * 
+     */
     @InputImport(name="lastRenewalTime", required=true)
     private final String lastRenewalTime;
 
@@ -19,6 +27,10 @@ public final class ManagedCertificateResponse extends io.pulumi.resources.Invoke
         return this.lastRenewalTime;
     }
 
+    /**
+     * Status of certificate management. Refers to the most recent certificate acquisition or renewal attempt.
+     * 
+     */
     @InputImport(name="status", required=true)
     private final String status;
 

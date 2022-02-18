@@ -15,10 +15,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes the restrictions on the key.
+ * 
+ */
 public final class V2RestrictionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final V2RestrictionsArgs Empty = new V2RestrictionsArgs();
 
+    /**
+     * The Android apps that are allowed to use the key.
+     * 
+     */
     @InputImport(name="androidKeyRestrictions")
     private final @Nullable Input<V2AndroidKeyRestrictionsArgs> androidKeyRestrictions;
 
@@ -26,6 +34,10 @@ public final class V2RestrictionsArgs extends io.pulumi.resources.ResourceArgs {
         return this.androidKeyRestrictions == null ? Input.empty() : this.androidKeyRestrictions;
     }
 
+    /**
+     * A restriction for a specific service and optionally one or more specific methods. Requests are allowed if they match any of these restrictions. If no restrictions are specified, all targets are allowed.
+     * 
+     */
     @InputImport(name="apiTargets")
     private final @Nullable Input<List<V2ApiTargetArgs>> apiTargets;
 
@@ -33,6 +45,10 @@ public final class V2RestrictionsArgs extends io.pulumi.resources.ResourceArgs {
         return this.apiTargets == null ? Input.empty() : this.apiTargets;
     }
 
+    /**
+     * The HTTP referrers (websites) that are allowed to use the key.
+     * 
+     */
     @InputImport(name="browserKeyRestrictions")
     private final @Nullable Input<V2BrowserKeyRestrictionsArgs> browserKeyRestrictions;
 
@@ -40,6 +56,10 @@ public final class V2RestrictionsArgs extends io.pulumi.resources.ResourceArgs {
         return this.browserKeyRestrictions == null ? Input.empty() : this.browserKeyRestrictions;
     }
 
+    /**
+     * The iOS apps that are allowed to use the key.
+     * 
+     */
     @InputImport(name="iosKeyRestrictions")
     private final @Nullable Input<V2IosKeyRestrictionsArgs> iosKeyRestrictions;
 
@@ -47,6 +67,10 @@ public final class V2RestrictionsArgs extends io.pulumi.resources.ResourceArgs {
         return this.iosKeyRestrictions == null ? Input.empty() : this.iosKeyRestrictions;
     }
 
+    /**
+     * The IP addresses of callers that are allowed to use the key.
+     * 
+     */
     @InputImport(name="serverKeyRestrictions")
     private final @Nullable Input<V2ServerKeyRestrictionsArgs> serverKeyRestrictions;
 

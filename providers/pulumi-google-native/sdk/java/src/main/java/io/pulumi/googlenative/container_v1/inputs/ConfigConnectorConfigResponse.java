@@ -8,10 +8,18 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
+/**
+ * Configuration options for the Config Connector add-on.
+ * 
+ */
 public final class ConfigConnectorConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConfigConnectorConfigResponse Empty = new ConfigConnectorConfigResponse();
 
+    /**
+     * Whether Cloud Connector is enabled for this cluster.
+     * 
+     */
     @InputImport(name="enabled", required=true)
     private final Boolean enabled;
 

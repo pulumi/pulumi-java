@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Specification for the BigQuery connection to a Cloud SQL instance.
+ * 
+ */
 public final class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse Empty = new GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse();
 
+    /**
+     * Database name.
+     * 
+     */
     @InputImport(name="database", required=true)
     private final String database;
 
@@ -19,6 +27,10 @@ public final class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecRespons
         return this.database;
     }
 
+    /**
+     * Cloud SQL instance ID in the format of `project:location:instance`.
+     * 
+     */
     @InputImport(name="instanceId", required=true)
     private final String instanceId;
 
@@ -26,6 +38,10 @@ public final class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecRespons
         return this.instanceId;
     }
 
+    /**
+     * Type of the Cloud SQL database.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

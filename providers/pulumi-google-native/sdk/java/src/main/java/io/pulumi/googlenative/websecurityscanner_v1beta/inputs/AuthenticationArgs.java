@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Scan authentication configuration.
+ * 
+ */
 public final class AuthenticationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AuthenticationArgs Empty = new AuthenticationArgs();
 
+    /**
+     * Authentication using a custom account.
+     * 
+     */
     @InputImport(name="customAccount")
     private final @Nullable Input<CustomAccountArgs> customAccount;
 
@@ -23,6 +31,10 @@ public final class AuthenticationArgs extends io.pulumi.resources.ResourceArgs {
         return this.customAccount == null ? Input.empty() : this.customAccount;
     }
 
+    /**
+     * Authentication using a Google account.
+     * 
+     */
     @InputImport(name="googleAccount")
     private final @Nullable Input<GoogleAccountArgs> googleAccount;
 
@@ -30,6 +42,10 @@ public final class AuthenticationArgs extends io.pulumi.resources.ResourceArgs {
         return this.googleAccount == null ? Input.empty() : this.googleAccount;
     }
 
+    /**
+     * Authentication using Identity-Aware-Proxy (IAP).
+     * 
+     */
     @InputImport(name="iapCredential")
     private final @Nullable Input<IapCredentialArgs> iapCredential;
 

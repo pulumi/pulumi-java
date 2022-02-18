@@ -9,10 +9,18 @@ import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2HotwordRuleRespons
 import java.util.Objects;
 
 
+/**
+ * A single inspection rule to be applied to infoTypes, specified in `InspectionRuleSet`.
+ * 
+ */
 public final class GooglePrivacyDlpV2InspectionRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2InspectionRuleResponse Empty = new GooglePrivacyDlpV2InspectionRuleResponse();
 
+    /**
+     * Exclusion rule.
+     * 
+     */
     @InputImport(name="exclusionRule", required=true)
     private final GooglePrivacyDlpV2ExclusionRuleResponse exclusionRule;
 
@@ -20,6 +28,10 @@ public final class GooglePrivacyDlpV2InspectionRuleResponse extends io.pulumi.re
         return this.exclusionRule;
     }
 
+    /**
+     * Hotword-based detection rule.
+     * 
+     */
     @InputImport(name="hotwordRule", required=true)
     private final GooglePrivacyDlpV2HotwordRuleResponse hotwordRule;
 

@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines the conditions under which an IngressPolicy matches a request. Conditions are based on information about the source of the request. The request must satisfy what is defined in `sources` AND identity related fields in order to match.
+ * 
+ */
 public final class IngressFromArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IngressFromArgs Empty = new IngressFromArgs();
 
+    /**
+     * A list of identities that are allowed access through this ingress policy. Should be in the format of email address. The email address should represent individual user or service account only.
+     * 
+     */
     @InputImport(name="identities")
     private final @Nullable Input<List<String>> identities;
 
@@ -24,6 +32,10 @@ public final class IngressFromArgs extends io.pulumi.resources.ResourceArgs {
         return this.identities == null ? Input.empty() : this.identities;
     }
 
+    /**
+     * Specifies the type of identities that are allowed access from outside the perimeter. If left unspecified, then members of `identities` field will be allowed access.
+     * 
+     */
     @InputImport(name="identityType")
     private final @Nullable Input<IngressFromIdentityType> identityType;
 
@@ -31,6 +43,10 @@ public final class IngressFromArgs extends io.pulumi.resources.ResourceArgs {
         return this.identityType == null ? Input.empty() : this.identityType;
     }
 
+    /**
+     * Sources that this IngressPolicy authorizes access from.
+     * 
+     */
     @InputImport(name="sources")
     private final @Nullable Input<List<IngressSourceArgs>> sources;
 

@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * An Android package file to install.
+ * 
+ */
 public final class ApkResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApkResponse Empty = new ApkResponse();
 
+    /**
+     * The path to an APK to be installed on the device before the test begins.
+     * 
+     */
     @InputImport(name="location", required=true)
     private final FileReferenceResponse location;
 
@@ -20,6 +28,10 @@ public final class ApkResponse extends io.pulumi.resources.InvokeArgs {
         return this.location;
     }
 
+    /**
+     * The java package for the APK to be installed. Value is determined by examining the application's manifest.
+     * 
+     */
     @InputImport(name="packageName", required=true)
     private final String packageName;
 

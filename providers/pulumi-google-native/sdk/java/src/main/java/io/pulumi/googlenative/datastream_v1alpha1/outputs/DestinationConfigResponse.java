@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DestinationConfigResponse {
+    /**
+     * Destination connection profile identifier.
+     * 
+     */
     private final String destinationConnectionProfileName;
+    /**
+     * GCS destination configuration.
+     * 
+     */
     private final GcsDestinationConfigResponse gcsDestinationConfig;
 
     @OutputCustomType.Constructor({"destinationConnectionProfileName","gcsDestinationConfig"})
@@ -21,9 +29,17 @@ public final class DestinationConfigResponse {
         this.gcsDestinationConfig = Objects.requireNonNull(gcsDestinationConfig);
     }
 
+    /**
+     * Destination connection profile identifier.
+     * 
+     */
     public String getDestinationConnectionProfileName() {
         return this.destinationConnectionProfileName;
     }
+    /**
+     * GCS destination configuration.
+     * 
+     */
     public GcsDestinationConfigResponse getGcsDestinationConfig() {
         return this.gcsDestinationConfig;
     }

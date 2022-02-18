@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RestoreInfoResponse {
+    /**
+     * Information about the backup used to restore the database. The backup may no longer exist.
+     * 
+     */
     private final BackupInfoResponse backupInfo;
+    /**
+     * The type of the restore source.
+     * 
+     */
     private final String sourceType;
 
     @OutputCustomType.Constructor({"backupInfo","sourceType"})
@@ -21,9 +29,17 @@ public final class RestoreInfoResponse {
         this.sourceType = Objects.requireNonNull(sourceType);
     }
 
+    /**
+     * Information about the backup used to restore the database. The backup may no longer exist.
+     * 
+     */
     public BackupInfoResponse getBackupInfo() {
         return this.backupInfo;
     }
+    /**
+     * The type of the restore source.
+     * 
+     */
     public String getSourceType() {
         return this.sourceType;
     }

@@ -12,39 +12,90 @@ import io.pulumi.googlenative.baremetalsolution_v2.SnapshotArgs;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Create a storage volume snapshot in a containing volume.
+ * Auto-naming is currently not supported for this resource.
+ * 
+ */
 @ResourceType(type="google-native:baremetalsolution/v2:Snapshot")
 public class Snapshot extends io.pulumi.resources.CustomResource {
+    /**
+     * The creation time of the storage volume snapshot.
+     * 
+     */
     @OutputExport(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
+    /**
+     * @return The creation time of the storage volume snapshot.
+     * 
+     */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
+    /**
+     * The description of the storage volume snapshot.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output<String> description;
 
+    /**
+     * @return The description of the storage volume snapshot.
+     * 
+     */
     public Output<String> getDescription() {
         return this.description;
     }
+    /**
+     * The name of the storage volume snapshot.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the storage volume snapshot.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The size of the storage volume snapshot, in bytes.
+     * 
+     */
     @OutputExport(name="sizeBytes", type=String.class, parameters={})
     private Output<String> sizeBytes;
 
+    /**
+     * @return The size of the storage volume snapshot, in bytes.
+     * 
+     */
     public Output<String> getSizeBytes() {
         return this.sizeBytes;
     }
+    /**
+     * The storage volume this snapshot belongs to.
+     * 
+     */
     @OutputExport(name="storageVolume", type=String.class, parameters={})
     private Output<String> storageVolume;
 
+    /**
+     * @return The storage volume this snapshot belongs to.
+     * 
+     */
     public Output<String> getStorageVolume() {
         return this.storageVolume;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Snapshot(String name, SnapshotArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:baremetalsolution/v2:Snapshot", name, args == null ? SnapshotArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -60,6 +111,14 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Snapshot get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Snapshot(name, id, options);
     }

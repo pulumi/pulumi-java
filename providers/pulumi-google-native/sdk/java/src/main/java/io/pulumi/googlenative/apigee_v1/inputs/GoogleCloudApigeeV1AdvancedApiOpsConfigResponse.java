@@ -8,10 +8,18 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
+/**
+ * Configuration for the Advanced API Ops add-on.
+ * 
+ */
 public final class GoogleCloudApigeeV1AdvancedApiOpsConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudApigeeV1AdvancedApiOpsConfigResponse Empty = new GoogleCloudApigeeV1AdvancedApiOpsConfigResponse();
 
+    /**
+     * Flag that specifies whether the Advanced API Ops add-on is enabled.
+     * 
+     */
     @InputImport(name="enabled", required=true)
     private final Boolean enabled;
 

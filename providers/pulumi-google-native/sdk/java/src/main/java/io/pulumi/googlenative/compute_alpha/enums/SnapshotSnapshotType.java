@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Indicates the type of the snapshot.
+     * 
+     */
     @EnumType
     public enum SnapshotSnapshotType {
         Archive("ARCHIVE"),

@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specifies the delay introduced by the load balancer before forwarding the request to the backend service as part of fault injection.
+ * 
+ */
 public final class HttpFaultDelayArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HttpFaultDelayArgs Empty = new HttpFaultDelayArgs();
 
+    /**
+     * Specifies the value of the fixed delay interval.
+     * 
+     */
     @InputImport(name="fixedDelay")
     private final @Nullable Input<DurationArgs> fixedDelay;
 
@@ -22,6 +30,10 @@ public final class HttpFaultDelayArgs extends io.pulumi.resources.ResourceArgs {
         return this.fixedDelay == null ? Input.empty() : this.fixedDelay;
     }
 
+    /**
+     * The percentage of traffic for connections, operations, or requests for which a delay is introduced as part of fault injection. The value must be from 0.0 to 100.0 inclusive.
+     * 
+     */
     @InputImport(name="percentage")
     private final @Nullable Input<Double> percentage;
 

@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The request and response header transformations that take effect before the request is passed along to the selected backendService.
+ * 
+ */
 public final class HttpHeaderActionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HttpHeaderActionArgs Empty = new HttpHeaderActionArgs();
 
+    /**
+     * Headers to add to a matching request before forwarding the request to the backendService.
+     * 
+     */
     @InputImport(name="requestHeadersToAdd")
     private final @Nullable Input<List<HttpHeaderOptionArgs>> requestHeadersToAdd;
 
@@ -23,6 +31,10 @@ public final class HttpHeaderActionArgs extends io.pulumi.resources.ResourceArgs
         return this.requestHeadersToAdd == null ? Input.empty() : this.requestHeadersToAdd;
     }
 
+    /**
+     * A list of header names for headers that need to be removed from the request before forwarding the request to the backendService.
+     * 
+     */
     @InputImport(name="requestHeadersToRemove")
     private final @Nullable Input<List<String>> requestHeadersToRemove;
 
@@ -30,6 +42,10 @@ public final class HttpHeaderActionArgs extends io.pulumi.resources.ResourceArgs
         return this.requestHeadersToRemove == null ? Input.empty() : this.requestHeadersToRemove;
     }
 
+    /**
+     * Headers to add the response before sending the response back to the client.
+     * 
+     */
     @InputImport(name="responseHeadersToAdd")
     private final @Nullable Input<List<HttpHeaderOptionArgs>> responseHeadersToAdd;
 
@@ -37,6 +53,10 @@ public final class HttpHeaderActionArgs extends io.pulumi.resources.ResourceArgs
         return this.responseHeadersToAdd == null ? Input.empty() : this.responseHeadersToAdd;
     }
 
+    /**
+     * A list of header names for headers that need to be removed from the response before sending the response back to the client.
+     * 
+     */
     @InputImport(name="responseHeadersToRemove")
     private final @Nullable Input<List<String>> responseHeadersToRemove;
 

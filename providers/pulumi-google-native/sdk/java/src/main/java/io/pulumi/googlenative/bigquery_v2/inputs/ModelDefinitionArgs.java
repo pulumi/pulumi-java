@@ -16,6 +16,10 @@ public final class ModelDefinitionArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final ModelDefinitionArgs Empty = new ModelDefinitionArgs();
 
+    /**
+     * [Output-only, Beta] Model options used for the first training run. These options are immutable for subsequent training runs. Default values are used for any options not specified in the input query.
+     * 
+     */
     @InputImport(name="modelOptions")
     private final @Nullable Input<ModelDefinitionModelOptionsArgs> modelOptions;
 
@@ -23,6 +27,10 @@ public final class ModelDefinitionArgs extends io.pulumi.resources.ResourceArgs 
         return this.modelOptions == null ? Input.empty() : this.modelOptions;
     }
 
+    /**
+     * [Output-only, Beta] Information about ml training runs, each training run comprises of multiple iterations and there may be multiple training runs for the model if warm start is used or if a user decides to continue a previously cancelled query.
+     * 
+     */
     @InputImport(name="trainingRuns")
     private final @Nullable Input<List<BqmlTrainingRunArgs>> trainingRuns;
 

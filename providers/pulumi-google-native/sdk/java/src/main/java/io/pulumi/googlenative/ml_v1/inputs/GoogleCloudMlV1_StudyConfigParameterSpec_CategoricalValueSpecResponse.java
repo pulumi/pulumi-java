@@ -13,6 +13,10 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpec
 
     public static final GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpecResponse Empty = new GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpecResponse();
 
+    /**
+     * Must be specified if type is `CATEGORICAL`. The list of possible categories.
+     * 
+     */
     @InputImport(name="values", required=true)
     private final List<String> values;
 

@@ -28,6 +28,10 @@ public final class BatchArgs extends io.pulumi.resources.ResourceArgs {
         return this.batchId == null ? Input.empty() : this.batchId;
     }
 
+    /**
+     * Optional. Environment configuration for the batch execution.
+     * 
+     */
     @InputImport(name="environmentConfig")
     private final @Nullable Input<EnvironmentConfigArgs> environmentConfig;
 
@@ -35,6 +39,10 @@ public final class BatchArgs extends io.pulumi.resources.ResourceArgs {
         return this.environmentConfig == null ? Input.empty() : this.environmentConfig;
     }
 
+    /**
+     * Optional. The labels to associate with this batch. Label keys must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a batch.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -56,6 +64,10 @@ public final class BatchArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Optional. PySpark batch config.
+     * 
+     */
     @InputImport(name="pysparkBatch")
     private final @Nullable Input<PySparkBatchArgs> pysparkBatch;
 
@@ -70,6 +82,10 @@ public final class BatchArgs extends io.pulumi.resources.ResourceArgs {
         return this.requestId == null ? Input.empty() : this.requestId;
     }
 
+    /**
+     * Optional. Runtime configuration for the batch execution.
+     * 
+     */
     @InputImport(name="runtimeConfig")
     private final @Nullable Input<RuntimeConfigArgs> runtimeConfig;
 
@@ -77,6 +93,10 @@ public final class BatchArgs extends io.pulumi.resources.ResourceArgs {
         return this.runtimeConfig == null ? Input.empty() : this.runtimeConfig;
     }
 
+    /**
+     * Optional. Spark batch config.
+     * 
+     */
     @InputImport(name="sparkBatch")
     private final @Nullable Input<SparkBatchArgs> sparkBatch;
 
@@ -84,6 +104,10 @@ public final class BatchArgs extends io.pulumi.resources.ResourceArgs {
         return this.sparkBatch == null ? Input.empty() : this.sparkBatch;
     }
 
+    /**
+     * Optional. SparkR batch config.
+     * 
+     */
     @InputImport(name="sparkRBatch")
     private final @Nullable Input<SparkRBatchArgs> sparkRBatch;
 
@@ -91,6 +115,10 @@ public final class BatchArgs extends io.pulumi.resources.ResourceArgs {
         return this.sparkRBatch == null ? Input.empty() : this.sparkRBatch;
     }
 
+    /**
+     * Optional. SparkSql batch config.
+     * 
+     */
     @InputImport(name="sparkSqlBatch")
     private final @Nullable Input<SparkSqlBatchArgs> sparkSqlBatch;
 

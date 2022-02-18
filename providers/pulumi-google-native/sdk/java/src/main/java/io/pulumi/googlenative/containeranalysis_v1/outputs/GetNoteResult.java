@@ -21,24 +21,100 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetNoteResult {
+    /**
+     * A note describing an attestation role.
+     * 
+     */
     private final AttestationNoteResponse attestation;
+    /**
+     * A note describing build provenance for a verifiable build.
+     * 
+     */
     private final BuildNoteResponse build;
+    /**
+     * A note describing a compliance check.
+     * 
+     */
     private final ComplianceNoteResponse compliance;
+    /**
+     * The time this note was created. This field can be used as a filter in list requests.
+     * 
+     */
     private final String createTime;
+    /**
+     * A note describing something that can be deployed.
+     * 
+     */
     private final DeploymentNoteResponse deployment;
+    /**
+     * A note describing the initial analysis of a resource.
+     * 
+     */
     private final DiscoveryNoteResponse discovery;
+    /**
+     * A note describing a dsse attestation note.
+     * 
+     */
     private final DSSEAttestationNoteResponse dsseAttestation;
+    /**
+     * Time of expiration for this note. Empty if note does not expire.
+     * 
+     */
     private final String expirationTime;
+    /**
+     * A note describing a base image.
+     * 
+     */
     private final ImageNoteResponse image;
+    /**
+     * The type of analysis. This field can be used as a filter in list requests.
+     * 
+     */
     private final String kind;
+    /**
+     * A detailed description of this note.
+     * 
+     */
     private final String longDescription;
+    /**
+     * The name of the note in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
+     * 
+     */
     private final String name;
+    /**
+     * A note describing a package hosted by various package managers.
+     * 
+     */
     private final PackageNoteResponse $package;
+    /**
+     * Other notes related to this note.
+     * 
+     */
     private final List<String> relatedNoteNames;
+    /**
+     * URLs associated with this note.
+     * 
+     */
     private final List<RelatedUrlResponse> relatedUrl;
+    /**
+     * A one sentence description of this note.
+     * 
+     */
     private final String shortDescription;
+    /**
+     * The time this note was last updated. This field can be used as a filter in list requests.
+     * 
+     */
     private final String updateTime;
+    /**
+     * A note describing available package upgrades.
+     * 
+     */
     private final UpgradeNoteResponse upgrade;
+    /**
+     * A note describing a package vulnerability.
+     * 
+     */
     private final VulnerabilityNoteResponse vulnerability;
 
     @OutputCustomType.Constructor({"attestation","build","compliance","createTime","deployment","discovery","dsseAttestation","expirationTime","image","kind","longDescription","name","$package","relatedNoteNames","relatedUrl","shortDescription","updateTime","upgrade","vulnerability"})
@@ -83,60 +159,136 @@ public final class GetNoteResult {
         this.vulnerability = Objects.requireNonNull(vulnerability);
     }
 
+    /**
+     * A note describing an attestation role.
+     * 
+     */
     public AttestationNoteResponse getAttestation() {
         return this.attestation;
     }
+    /**
+     * A note describing build provenance for a verifiable build.
+     * 
+     */
     public BuildNoteResponse getBuild() {
         return this.build;
     }
+    /**
+     * A note describing a compliance check.
+     * 
+     */
     public ComplianceNoteResponse getCompliance() {
         return this.compliance;
     }
+    /**
+     * The time this note was created. This field can be used as a filter in list requests.
+     * 
+     */
     public String getCreateTime() {
         return this.createTime;
     }
+    /**
+     * A note describing something that can be deployed.
+     * 
+     */
     public DeploymentNoteResponse getDeployment() {
         return this.deployment;
     }
+    /**
+     * A note describing the initial analysis of a resource.
+     * 
+     */
     public DiscoveryNoteResponse getDiscovery() {
         return this.discovery;
     }
+    /**
+     * A note describing a dsse attestation note.
+     * 
+     */
     public DSSEAttestationNoteResponse getDsseAttestation() {
         return this.dsseAttestation;
     }
+    /**
+     * Time of expiration for this note. Empty if note does not expire.
+     * 
+     */
     public String getExpirationTime() {
         return this.expirationTime;
     }
+    /**
+     * A note describing a base image.
+     * 
+     */
     public ImageNoteResponse getImage() {
         return this.image;
     }
+    /**
+     * The type of analysis. This field can be used as a filter in list requests.
+     * 
+     */
     public String getKind() {
         return this.kind;
     }
+    /**
+     * A detailed description of this note.
+     * 
+     */
     public String getLongDescription() {
         return this.longDescription;
     }
+    /**
+     * The name of the note in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * A note describing a package hosted by various package managers.
+     * 
+     */
     public PackageNoteResponse get$package() {
         return this.$package;
     }
+    /**
+     * Other notes related to this note.
+     * 
+     */
     public List<String> getRelatedNoteNames() {
         return this.relatedNoteNames;
     }
+    /**
+     * URLs associated with this note.
+     * 
+     */
     public List<RelatedUrlResponse> getRelatedUrl() {
         return this.relatedUrl;
     }
+    /**
+     * A one sentence description of this note.
+     * 
+     */
     public String getShortDescription() {
         return this.shortDescription;
     }
+    /**
+     * The time this note was last updated. This field can be used as a filter in list requests.
+     * 
+     */
     public String getUpdateTime() {
         return this.updateTime;
     }
+    /**
+     * A note describing available package upgrades.
+     * 
+     */
     public UpgradeNoteResponse getUpgrade() {
         return this.upgrade;
     }
+    /**
+     * A note describing a package vulnerability.
+     * 
+     */
     public VulnerabilityNoteResponse getVulnerability() {
         return this.vulnerability;
     }

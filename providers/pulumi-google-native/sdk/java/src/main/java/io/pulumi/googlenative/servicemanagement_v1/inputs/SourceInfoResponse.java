@@ -10,10 +10,18 @@ import java.util.Map;
 import java.util.Objects;
 
 
+/**
+ * Source information used to create a Service Config
+ * 
+ */
 public final class SourceInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SourceInfoResponse Empty = new SourceInfoResponse();
 
+    /**
+     * All files used during config generation.
+     * 
+     */
     @InputImport(name="sourceFiles", required=true)
     private final List<Map<String,String>> sourceFiles;
 

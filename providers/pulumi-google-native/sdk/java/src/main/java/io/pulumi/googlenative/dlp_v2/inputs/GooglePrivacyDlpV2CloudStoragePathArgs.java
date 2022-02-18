@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Message representing a single file or path in Cloud Storage.
+ * 
+ */
 public final class GooglePrivacyDlpV2CloudStoragePathArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GooglePrivacyDlpV2CloudStoragePathArgs Empty = new GooglePrivacyDlpV2CloudStoragePathArgs();
 
+    /**
+     * A url representing a file or path (no wildcards) in Cloud Storage. Example: gs://[BUCKET_NAME]/dictionary.txt
+     * 
+     */
     @InputImport(name="path")
     private final @Nullable Input<String> path;
 

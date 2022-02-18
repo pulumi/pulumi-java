@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOrganizationMuteConfig {
+/**
+ * Gets a mute config.
+ * 
+ */
     public static CompletableFuture<GetOrganizationMuteConfigResult> invokeAsync(GetOrganizationMuteConfigArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:securitycenter/v1:getOrganizationMuteConfig", TypeShape.of(GetOrganizationMuteConfigResult.class), args == null ? GetOrganizationMuteConfigArgs.Empty : args, Utilities.withVersion(options));
     }

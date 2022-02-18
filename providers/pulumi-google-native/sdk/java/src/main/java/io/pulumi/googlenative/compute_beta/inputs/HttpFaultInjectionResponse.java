@@ -9,10 +9,18 @@ import io.pulumi.googlenative.compute_beta.inputs.HttpFaultDelayResponse;
 import java.util.Objects;
 
 
+/**
+ * The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure. As part of fault injection, when clients send requests to a backend service, delays can be introduced by the load balancer on a percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted by the load balancer for a percentage of requests.
+ * 
+ */
 public final class HttpFaultInjectionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final HttpFaultInjectionResponse Empty = new HttpFaultInjectionResponse();
 
+    /**
+     * The specification for how client requests are aborted as part of fault injection.
+     * 
+     */
     @InputImport(name="abort", required=true)
     private final HttpFaultAbortResponse abort;
 
@@ -20,6 +28,10 @@ public final class HttpFaultInjectionResponse extends io.pulumi.resources.Invoke
         return this.abort;
     }
 
+    /**
+     * The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.
+     * 
+     */
     @InputImport(name="delay", required=true)
     private final HttpFaultDelayResponse delay;
 

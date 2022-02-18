@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Predefined content source for Google Apps.
+     * 
+     */
     @EnumType
     public enum SourcePredefinedSource {
         None("NONE"),
+        /**
+         * Suggests queries issued by the user in the past. Only valid when used with the suggest API. Ignored when used in the query API.
+         * 
+         */
         QueryHistory("QUERY_HISTORY"),
+        /**
+         * Suggests people in the organization. Only valid when used with the suggest API. Results in an error when used in the query API.
+         * 
+         */
         Person("PERSON"),
         GoogleDrive("GOOGLE_DRIVE"),
         GoogleGmail("GOOGLE_GMAIL"),

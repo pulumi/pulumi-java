@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specification for how requests are aborted as part of fault injection.
+ * 
+ */
 public final class HttpFaultAbortArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HttpFaultAbortArgs Empty = new HttpFaultAbortArgs();
 
+    /**
+     * The HTTP status code used to abort the request. The value must be from 200 to 599 inclusive. For gRPC protocol, the gRPC status code is mapped to HTTP status code according to this mapping table. HTTP status 200 is mapped to gRPC status UNKNOWN. Injecting an OK status is currently not supported by Traffic Director.
+     * 
+     */
     @InputImport(name="httpStatus")
     private final @Nullable Input<Integer> httpStatus;
 
@@ -22,6 +30,10 @@ public final class HttpFaultAbortArgs extends io.pulumi.resources.ResourceArgs {
         return this.httpStatus == null ? Input.empty() : this.httpStatus;
     }
 
+    /**
+     * The percentage of traffic for connections, operations, or requests that is aborted as part of fault injection. The value must be from 0.0 to 100.0 inclusive.
+     * 
+     */
     @InputImport(name="percentage")
     private final @Nullable Input<Double> percentage;
 

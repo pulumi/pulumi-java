@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A reference to a ToolExecution output file.
+ * 
+ */
 public final class ToolOutputReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ToolOutputReferenceArgs Empty = new ToolOutputReferenceArgs();
 
+    /**
+     * The creation time of the file. - In response: present if set by create/update request - In create/update request: optional
+     * 
+     */
     @InputImport(name="creationTime")
     private final @Nullable Input<TimestampArgs> creationTime;
 
@@ -23,6 +31,10 @@ public final class ToolOutputReferenceArgs extends io.pulumi.resources.ResourceA
         return this.creationTime == null ? Input.empty() : this.creationTime;
     }
 
+    /**
+     * A FileReference to an output file. - In response: always set - In create/update request: always set
+     * 
+     */
     @InputImport(name="output")
     private final @Nullable Input<FileReferenceArgs> output;
 
@@ -30,6 +42,10 @@ public final class ToolOutputReferenceArgs extends io.pulumi.resources.ResourceA
         return this.output == null ? Input.empty() : this.output;
     }
 
+    /**
+     * The test case to which this output file belongs. - In response: present if set by create/update request - In create/update request: optional
+     * 
+     */
     @InputImport(name="testCase")
     private final @Nullable Input<TestCaseReferenceArgs> testCase;
 

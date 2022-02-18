@@ -13,6 +13,10 @@ public final class SubjectResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SubjectResponse Empty = new SubjectResponse();
 
+    /**
+     * "": "" Algorithms can be e.g. sha256, sha512 See https://github.com/in-toto/attestation/blob/main/spec/field_types.md#DigestSet
+     * 
+     */
     @InputImport(name="digest", required=true)
     private final Map<String,String> digest;
 

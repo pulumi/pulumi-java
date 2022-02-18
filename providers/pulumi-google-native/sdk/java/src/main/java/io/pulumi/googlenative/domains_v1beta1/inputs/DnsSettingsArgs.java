@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines the DNS configuration of a `Registration`, including name servers, DNSSEC, and glue records.
+ * 
+ */
 public final class DnsSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DnsSettingsArgs Empty = new DnsSettingsArgs();
 
+    /**
+     * An arbitrary DNS provider identified by its name servers.
+     * 
+     */
     @InputImport(name="customDns")
     private final @Nullable Input<CustomDnsArgs> customDns;
 
@@ -24,6 +32,10 @@ public final class DnsSettingsArgs extends io.pulumi.resources.ResourceArgs {
         return this.customDns == null ? Input.empty() : this.customDns;
     }
 
+    /**
+     * The list of glue records for this `Registration`. Commonly empty.
+     * 
+     */
     @InputImport(name="glueRecords")
     private final @Nullable Input<List<GlueRecordArgs>> glueRecords;
 
@@ -31,6 +43,10 @@ public final class DnsSettingsArgs extends io.pulumi.resources.ResourceArgs {
         return this.glueRecords == null ? Input.empty() : this.glueRecords;
     }
 
+    /**
+     * The free DNS zone provided by [Google Domains](https://domains.google/).
+     * 
+     */
     @InputImport(name="googleDomainsDns")
     private final @Nullable Input<GoogleDomainsDnsArgs> googleDomainsDns;
 

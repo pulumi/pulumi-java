@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Promotion information.
+ * 
+ */
 public final class GoogleCloudRetailV2alphaPromotionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudRetailV2alphaPromotionResponse Empty = new GoogleCloudRetailV2alphaPromotionResponse();
 
+    /**
+     * ID of the promotion. For example, "free gift". The value must be a UTF-8 encoded string with a length limit of 128 characters, and match the pattern: `a-zA-Z*`. For example, id0LikeThis or ID_1_LIKE_THIS. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [promotion](https://support.google.com/merchants/answer/7050148).
+     * 
+     */
     @InputImport(name="promotionId", required=true)
     private final String promotionId;
 

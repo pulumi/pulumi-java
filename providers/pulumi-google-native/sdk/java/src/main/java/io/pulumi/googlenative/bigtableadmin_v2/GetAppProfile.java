@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAppProfile {
+/**
+ * Gets information about an app profile.
+ * 
+ */
     public static CompletableFuture<GetAppProfileResult> invokeAsync(GetAppProfileArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:bigtableadmin/v2:getAppProfile", TypeShape.of(GetAppProfileResult.class), args == null ? GetAppProfileArgs.Empty : args, Utilities.withVersion(options));
     }

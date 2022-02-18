@@ -6,6 +6,10 @@ package io.pulumi.googlenative.osconfig_v1.inputs;
 import java.util.Objects;
 
 
+/**
+ * Googet patching is performed by running `googet update`.
+ * 
+ */
 public final class GooSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooSettingsResponse Empty = new GooSettingsResponse();

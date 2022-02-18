@@ -10,7 +10,15 @@ import java.util.StringJoiner;
 
     @EnumType
     public enum MonitoringComponentConfigEnableComponentsItem {
+        /**
+         * Default value. This shouldn't be used.
+         * 
+         */
         ComponentUnspecified("COMPONENT_UNSPECIFIED"),
+        /**
+         * system components
+         * 
+         */
         SystemComponents("SYSTEM_COMPONENTS");
 
         private final String value;

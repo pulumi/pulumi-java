@@ -15,10 +15,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A task to execute on the completion of a job. See https://cloud.google.com/dlp/docs/concepts-actions to learn more.
+ * 
+ */
 public final class GooglePrivacyDlpV2ActionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GooglePrivacyDlpV2ActionArgs Empty = new GooglePrivacyDlpV2ActionArgs();
 
+    /**
+     * Enable email notification for project owners and editors on job's completion/failure.
+     * 
+     */
     @InputImport(name="jobNotificationEmails")
     private final @Nullable Input<GooglePrivacyDlpV2JobNotificationEmailsArgs> jobNotificationEmails;
 
@@ -26,6 +34,10 @@ public final class GooglePrivacyDlpV2ActionArgs extends io.pulumi.resources.Reso
         return this.jobNotificationEmails == null ? Input.empty() : this.jobNotificationEmails;
     }
 
+    /**
+     * Publish a notification to a pubsub topic.
+     * 
+     */
     @InputImport(name="pubSub")
     private final @Nullable Input<GooglePrivacyDlpV2PublishToPubSubArgs> pubSub;
 
@@ -33,6 +45,10 @@ public final class GooglePrivacyDlpV2ActionArgs extends io.pulumi.resources.Reso
         return this.pubSub == null ? Input.empty() : this.pubSub;
     }
 
+    /**
+     * Publish findings to Cloud Datahub.
+     * 
+     */
     @InputImport(name="publishFindingsToCloudDataCatalog")
     private final @Nullable Input<GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogArgs> publishFindingsToCloudDataCatalog;
 
@@ -40,6 +56,10 @@ public final class GooglePrivacyDlpV2ActionArgs extends io.pulumi.resources.Reso
         return this.publishFindingsToCloudDataCatalog == null ? Input.empty() : this.publishFindingsToCloudDataCatalog;
     }
 
+    /**
+     * Publish summary to Cloud Security Command Center (Alpha).
+     * 
+     */
     @InputImport(name="publishSummaryToCscc")
     private final @Nullable Input<GooglePrivacyDlpV2PublishSummaryToCsccArgs> publishSummaryToCscc;
 
@@ -47,6 +67,10 @@ public final class GooglePrivacyDlpV2ActionArgs extends io.pulumi.resources.Reso
         return this.publishSummaryToCscc == null ? Input.empty() : this.publishSummaryToCscc;
     }
 
+    /**
+     * Enable Stackdriver metric dlp.googleapis.com/finding_count.
+     * 
+     */
     @InputImport(name="publishToStackdriver")
     private final @Nullable Input<GooglePrivacyDlpV2PublishToStackdriverArgs> publishToStackdriver;
 
@@ -54,6 +78,10 @@ public final class GooglePrivacyDlpV2ActionArgs extends io.pulumi.resources.Reso
         return this.publishToStackdriver == null ? Input.empty() : this.publishToStackdriver;
     }
 
+    /**
+     * Save resulting findings in a provided location.
+     * 
+     */
     @InputImport(name="saveFindings")
     private final @Nullable Input<GooglePrivacyDlpV2SaveFindingsArgs> saveFindings;
 

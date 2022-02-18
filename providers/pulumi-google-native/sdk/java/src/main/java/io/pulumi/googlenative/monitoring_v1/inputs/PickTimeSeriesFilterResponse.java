@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Describes a ranking-based time series filter. Each input time series is ranked with an aligner. The filter will allow up to num_time_series time series to pass through it, selecting them based on the relative ranking.For example, if ranking_method is METHOD_MEAN,direction is BOTTOM, and num_time_series is 3, then the 3 times series with the lowest mean values will pass through the filter.
+ * 
+ */
 public final class PickTimeSeriesFilterResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PickTimeSeriesFilterResponse Empty = new PickTimeSeriesFilterResponse();
 
+    /**
+     * How to use the ranking to select time series that pass through the filter.
+     * 
+     */
     @InputImport(name="direction", required=true)
     private final String direction;
 
@@ -20,6 +28,10 @@ public final class PickTimeSeriesFilterResponse extends io.pulumi.resources.Invo
         return this.direction;
     }
 
+    /**
+     * How many time series to allow to pass through the filter.
+     * 
+     */
     @InputImport(name="numTimeSeries", required=true)
     private final Integer numTimeSeries;
 
@@ -27,6 +39,10 @@ public final class PickTimeSeriesFilterResponse extends io.pulumi.resources.Invo
         return this.numTimeSeries;
     }
 
+    /**
+     * ranking_method is applied to each time series independently to produce the value which will be used to compare the time series to other time series.
+     * 
+     */
     @InputImport(name="rankingMethod", required=true)
     private final String rankingMethod;
 

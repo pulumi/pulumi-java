@@ -10,12 +10,40 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class LivenessCheckResponse {
+    /**
+     * Interval between health checks.
+     * 
+     */
     private final String checkInterval;
+    /**
+     * Number of consecutive failed checks required before considering the VM unhealthy.
+     * 
+     */
     private final Integer failureThreshold;
+    /**
+     * Host header to send when performing a HTTP Liveness check. Example: "myapp.appspot.com"
+     * 
+     */
     private final String host;
+    /**
+     * The initial delay before starting to execute the checks.
+     * 
+     */
     private final String initialDelay;
+    /**
+     * The request path.
+     * 
+     */
     private final String path;
+    /**
+     * Number of consecutive successful checks required before considering the VM healthy.
+     * 
+     */
     private final Integer successThreshold;
+    /**
+     * Time before the check is considered failed.
+     * 
+     */
     private final String timeout;
 
     @OutputCustomType.Constructor({"checkInterval","failureThreshold","host","initialDelay","path","successThreshold","timeout"})
@@ -36,24 +64,52 @@ public final class LivenessCheckResponse {
         this.timeout = Objects.requireNonNull(timeout);
     }
 
+    /**
+     * Interval between health checks.
+     * 
+     */
     public String getCheckInterval() {
         return this.checkInterval;
     }
+    /**
+     * Number of consecutive failed checks required before considering the VM unhealthy.
+     * 
+     */
     public Integer getFailureThreshold() {
         return this.failureThreshold;
     }
+    /**
+     * Host header to send when performing a HTTP Liveness check. Example: "myapp.appspot.com"
+     * 
+     */
     public String getHost() {
         return this.host;
     }
+    /**
+     * The initial delay before starting to execute the checks.
+     * 
+     */
     public String getInitialDelay() {
         return this.initialDelay;
     }
+    /**
+     * The request path.
+     * 
+     */
     public String getPath() {
         return this.path;
     }
+    /**
+     * Number of consecutive successful checks required before considering the VM healthy.
+     * 
+     */
     public Integer getSuccessThreshold() {
         return this.successThreshold;
     }
+    /**
+     * Time before the check is considered failed.
+     * 
+     */
     public String getTimeout() {
         return this.timeout;
     }

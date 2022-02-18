@@ -9,9 +9,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BackupInfoResponse {
+    /**
+     * Name of the backup.
+     * 
+     */
     private final String backup;
+    /**
+     * This time that the backup was finished. Row data in the backup will be no newer than this timestamp.
+     * 
+     */
     private final String endTime;
+    /**
+     * Name of the table the backup was created from.
+     * 
+     */
     private final String sourceTable;
+    /**
+     * The time that the backup was started. Row data in the backup will be no older than this timestamp.
+     * 
+     */
     private final String startTime;
 
     @OutputCustomType.Constructor({"backup","endTime","sourceTable","startTime"})
@@ -26,15 +42,31 @@ public final class BackupInfoResponse {
         this.startTime = Objects.requireNonNull(startTime);
     }
 
+    /**
+     * Name of the backup.
+     * 
+     */
     public String getBackup() {
         return this.backup;
     }
+    /**
+     * This time that the backup was finished. Row data in the backup will be no newer than this timestamp.
+     * 
+     */
     public String getEndTime() {
         return this.endTime;
     }
+    /**
+     * Name of the table the backup was created from.
+     * 
+     */
     public String getSourceTable() {
         return this.sourceTable;
     }
+    /**
+     * The time that the backup was started. Row data in the backup will be no older than this timestamp.
+     * 
+     */
     public String getStartTime() {
         return this.startTime;
     }

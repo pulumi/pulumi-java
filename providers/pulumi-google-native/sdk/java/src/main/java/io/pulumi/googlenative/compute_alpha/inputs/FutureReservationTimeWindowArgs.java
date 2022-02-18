@@ -29,6 +29,10 @@ public final class FutureReservationTimeWindowArgs extends io.pulumi.resources.R
         return this.endTime == null ? Input.empty() : this.endTime;
     }
 
+    /**
+     * Start time of the Future Reservation. The start_time is an RFC3339 string.
+     * 
+     */
     @InputImport(name="startTime")
     private final @Nullable Input<String> startTime;
 

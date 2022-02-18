@@ -8,10 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Required. The type of endpoint policy. This is primarily used to validate the configuration.
+     * 
+     */
     @EnumType
     public enum EndpointPolicyType {
+        /**
+         * Default value. Must not be used.
+         * 
+         */
         EndpointPolicyTypeUnspecified("ENDPOINT_POLICY_TYPE_UNSPECIFIED"),
+        /**
+         * Represents a proxy deployed as a sidecar.
+         * 
+         */
         SidecarProxy("SIDECAR_PROXY"),
+        /**
+         * Represents a proxyless gRPC backend.
+         * 
+         */
         GrpcServer("GRPC_SERVER");
 
         private final String value;

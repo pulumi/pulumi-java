@@ -13,6 +13,10 @@ public final class GoogleCloudApigeeV1CertificateResponse extends io.pulumi.reso
 
     public static final GoogleCloudApigeeV1CertificateResponse Empty = new GoogleCloudApigeeV1CertificateResponse();
 
+    /**
+     * Chain of certificates under this name.
+     * 
+     */
     @InputImport(name="certInfo", required=true)
     private final List<GoogleCloudApigeeV1CertInfoResponse> certInfo;
 

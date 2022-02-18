@@ -19,10 +19,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The config settings for virtual machine.
+ * 
+ */
 public final class VirtualMachineConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualMachineConfigArgs Empty = new VirtualMachineConfigArgs();
 
+    /**
+     * Optional. The Compute Engine accelerator configuration for this runtime.
+     * 
+     */
     @InputImport(name="acceleratorConfig")
     private final @Nullable Input<RuntimeAcceleratorConfigArgs> acceleratorConfig;
 
@@ -30,6 +38,10 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
         return this.acceleratorConfig == null ? Input.empty() : this.acceleratorConfig;
     }
 
+    /**
+     * Optional. Use a list of container images to use as Kernels in the notebook instance.
+     * 
+     */
     @InputImport(name="containerImages")
     private final @Nullable Input<List<ContainerImageArgs>> containerImages;
 
@@ -37,6 +49,10 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
         return this.containerImages == null ? Input.empty() : this.containerImages;
     }
 
+    /**
+     * Data disk option configuration settings.
+     * 
+     */
     @InputImport(name="dataDisk", required=true)
     private final Input<LocalDiskArgs> dataDisk;
 
@@ -44,6 +60,10 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
         return this.dataDisk;
     }
 
+    /**
+     * Optional. Encryption settings for virtual machine data disk.
+     * 
+     */
     @InputImport(name="encryptionConfig")
     private final @Nullable Input<EncryptionConfigArgs> encryptionConfig;
 
@@ -51,6 +71,10 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
         return this.encryptionConfig == null ? Input.empty() : this.encryptionConfig;
     }
 
+    /**
+     * Optional. If true, runtime will only have internal IP addresses. By default, runtimes are not restricted to internal IP addresses, and will have ephemeral external IP addresses assigned to each vm. This `internal_ip_only` restriction can only be enabled for subnetwork enabled networks, and all dependencies must be configured to be accessible without external IP addresses.
+     * 
+     */
     @InputImport(name="internalIpOnly")
     private final @Nullable Input<Boolean> internalIpOnly;
 
@@ -58,6 +82,10 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
         return this.internalIpOnly == null ? Input.empty() : this.internalIpOnly;
     }
 
+    /**
+     * Optional. The labels to associate with this runtime. Label **keys** must contain 1 to 63 characters, and must conform to [RFC 1035](https://www.ietf.org/rfc/rfc1035.txt). Label **values** may be empty, but, if present, must contain 1 to 63 characters, and must conform to [RFC 1035](https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a cluster.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -65,6 +93,10 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The Compute Engine machine type used for runtimes. Short name is valid. Examples: * `n1-standard-2` * `e2-standard-8`
+     * 
+     */
     @InputImport(name="machineType", required=true)
     private final Input<String> machineType;
 
@@ -72,6 +104,10 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
         return this.machineType;
     }
 
+    /**
+     * Optional. The Compute Engine metadata entries to add to virtual machine. (see [Project and instance metadata](https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata)).
+     * 
+     */
     @InputImport(name="metadata")
     private final @Nullable Input<Map<String,String>> metadata;
 
@@ -79,6 +115,10 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
+    /**
+     * Optional. The Compute Engine network to be used for machine communications. Cannot be specified with subnetwork. If neither `network` nor `subnet` is specified, the "default" network of the project is used, if it exists. A full URL or partial URI. Examples: * `https://www.googleapis.com/compute/v1/projects/[project_id]/regions/global/default` * `projects/[project_id]/regions/global/default` Runtimes are managed resources inside Google Infrastructure. Runtimes support the following network configurations: * Google Managed Network (Network & subnet are empty) * Consumer Project VPC (network & subnet are required). Requires configuring Private Service Access. * Shared VPC (network & subnet are required). Requires configuring Private Service Access.
+     * 
+     */
     @InputImport(name="network")
     private final @Nullable Input<String> network;
 
@@ -86,6 +126,10 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
         return this.network == null ? Input.empty() : this.network;
     }
 
+    /**
+     * Optional. The type of vNIC to be used on this interface. This may be gVNIC or VirtioNet.
+     * 
+     */
     @InputImport(name="nicType")
     private final @Nullable Input<VirtualMachineConfigNicType> nicType;
 
@@ -93,6 +137,10 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
         return this.nicType == null ? Input.empty() : this.nicType;
     }
 
+    /**
+     * Optional. Shielded VM Instance configuration settings.
+     * 
+     */
     @InputImport(name="shieldedInstanceConfig")
     private final @Nullable Input<RuntimeShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
@@ -100,6 +148,10 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
         return this.shieldedInstanceConfig == null ? Input.empty() : this.shieldedInstanceConfig;
     }
 
+    /**
+     * Optional. The Compute Engine subnetwork to be used for machine communications. Cannot be specified with network. A full URL or partial URI are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/[project_id]/regions/us-east1/subnetworks/sub0` * `projects/[project_id]/regions/us-east1/subnetworks/sub0`
+     * 
+     */
     @InputImport(name="subnet")
     private final @Nullable Input<String> subnet;
 
@@ -107,6 +159,10 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
         return this.subnet == null ? Input.empty() : this.subnet;
     }
 
+    /**
+     * Optional. The Compute Engine tags to add to runtime (see [Tagging instances](https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<String>> tags;
 

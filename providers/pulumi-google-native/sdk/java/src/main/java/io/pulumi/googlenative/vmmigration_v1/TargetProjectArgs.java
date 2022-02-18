@@ -14,6 +14,10 @@ public final class TargetProjectArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TargetProjectArgs Empty = new TargetProjectArgs();
 
+    /**
+     * The target project's description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -28,6 +32,10 @@ public final class TargetProjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the target project.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -35,6 +43,10 @@ public final class TargetProjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The target project ID (number) or project name.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

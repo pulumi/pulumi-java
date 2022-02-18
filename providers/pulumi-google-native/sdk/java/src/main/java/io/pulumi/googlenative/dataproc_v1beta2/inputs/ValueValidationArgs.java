@@ -10,10 +10,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Validation based on a list of allowed values.
+ * 
+ */
 public final class ValueValidationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ValueValidationArgs Empty = new ValueValidationArgs();
 
+    /**
+     * List of allowed values for the parameter.
+     * 
+     */
     @InputImport(name="values", required=true)
     private final Input<List<String>> values;
 

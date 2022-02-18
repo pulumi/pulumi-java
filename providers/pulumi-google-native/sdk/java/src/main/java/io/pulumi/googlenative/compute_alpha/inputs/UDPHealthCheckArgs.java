@@ -15,6 +15,10 @@ public final class UDPHealthCheckArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final UDPHealthCheckArgs Empty = new UDPHealthCheckArgs();
 
+    /**
+     * The UDP port number for the health check request. Valid values are 1 through 65535.
+     * 
+     */
     @InputImport(name="port")
     private final @Nullable Input<Integer> port;
 
@@ -22,6 +26,10 @@ public final class UDPHealthCheckArgs extends io.pulumi.resources.ResourceArgs {
         return this.port == null ? Input.empty() : this.port;
     }
 
+    /**
+     * Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence.
+     * 
+     */
     @InputImport(name="portName")
     private final @Nullable Input<String> portName;
 
@@ -29,6 +37,10 @@ public final class UDPHealthCheckArgs extends io.pulumi.resources.ResourceArgs {
         return this.portName == null ? Input.empty() : this.portName;
     }
 
+    /**
+     * Raw data of request to send in payload of UDP packet. It is an error if this is empty. The request data can only be ASCII.
+     * 
+     */
     @InputImport(name="request")
     private final @Nullable Input<String> request;
 
@@ -36,6 +48,10 @@ public final class UDPHealthCheckArgs extends io.pulumi.resources.ResourceArgs {
         return this.request == null ? Input.empty() : this.request;
     }
 
+    /**
+     * The bytes to match against the beginning of the response data. It is an error if this is empty. The response data can only be ASCII.
+     * 
+     */
     @InputImport(name="response")
     private final @Nullable Input<String> response;
 

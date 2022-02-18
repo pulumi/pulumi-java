@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The query content.
+ * 
+ */
 public final class QueryContentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final QueryContentArgs Empty = new QueryContentArgs();
 
+    /**
+     * An IAM Policy Analysis query, which could be used in the AssetService.AnalyzeIamPolicy rpc or the AssetService.AnalyzeIamPolicyLongrunning rpc.
+     * 
+     */
     @InputImport(name="iamPolicyAnalysisQuery")
     private final @Nullable Input<IamPolicyAnalysisQueryArgs> iamPolicyAnalysisQuery;
 

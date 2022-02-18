@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Setting a parameter value.
+ * 
+ */
 public final class GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionArgs Empty = new GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionArgs();
 
+    /**
+     * Display name of the parameter.
+     * 
+     */
     @InputImport(name="parameter")
     private final @Nullable Input<String> parameter;
 
@@ -22,6 +30,10 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionAr
         return this.parameter == null ? Input.empty() : this.parameter;
     }
 
+    /**
+     * The new value of the parameter. A null value clears the parameter.
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable Input<Object> value;
 

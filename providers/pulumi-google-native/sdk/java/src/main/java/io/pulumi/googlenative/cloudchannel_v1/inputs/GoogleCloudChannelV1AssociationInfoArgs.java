@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Association links that an entitlement has to other entitlements.
+ * 
+ */
 public final class GoogleCloudChannelV1AssociationInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudChannelV1AssociationInfoArgs Empty = new GoogleCloudChannelV1AssociationInfoArgs();
 
+    /**
+     * The name of the base entitlement, for which this entitlement is an add-on.
+     * 
+     */
     @InputImport(name="baseEntitlement")
     private final @Nullable Input<String> baseEntitlement;
 

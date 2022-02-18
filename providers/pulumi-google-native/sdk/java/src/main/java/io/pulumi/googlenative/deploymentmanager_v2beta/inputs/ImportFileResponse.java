@@ -12,6 +12,10 @@ public final class ImportFileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ImportFileResponse Empty = new ImportFileResponse();
 
+    /**
+     * The contents of the file.
+     * 
+     */
     @InputImport(name="content", required=true)
     private final String content;
 
@@ -19,6 +23,10 @@ public final class ImportFileResponse extends io.pulumi.resources.InvokeArgs {
         return this.content;
     }
 
+    /**
+     * The name of the file.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

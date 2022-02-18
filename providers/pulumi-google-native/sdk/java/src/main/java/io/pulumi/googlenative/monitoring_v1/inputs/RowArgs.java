@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines the layout properties and content for a row.
+ * 
+ */
 public final class RowArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RowArgs Empty = new RowArgs();
 
+    /**
+     * The relative weight of this row. The row weight is used to adjust the height of rows on the screen (relative to peers). Greater the weight, greater the height of the row on the screen. If omitted, a value of 1 is used while rendering.
+     * 
+     */
     @InputImport(name="weight")
     private final @Nullable Input<String> weight;
 
@@ -23,6 +31,10 @@ public final class RowArgs extends io.pulumi.resources.ResourceArgs {
         return this.weight == null ? Input.empty() : this.weight;
     }
 
+    /**
+     * The display widgets arranged horizontally in this row.
+     * 
+     */
     @InputImport(name="widgets")
     private final @Nullable Input<List<WidgetArgs>> widgets;
 

@@ -10,10 +10,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Information about the client which invoked the test.
+ * 
+ */
 public final class ClientInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ClientInfoResponse Empty = new ClientInfoResponse();
 
+    /**
+     * The list of detailed information about client.
+     * 
+     */
     @InputImport(name="clientInfoDetails", required=true)
     private final List<ClientInfoDetailResponse> clientInfoDetails;
 
@@ -21,6 +29,10 @@ public final class ClientInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.clientInfoDetails;
     }
 
+    /**
+     * Client name, such as gcloud.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

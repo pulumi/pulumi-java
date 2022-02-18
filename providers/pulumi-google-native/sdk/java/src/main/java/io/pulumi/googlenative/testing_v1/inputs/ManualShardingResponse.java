@@ -9,10 +9,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Shards test cases into the specified groups of packages, classes, and/or methods. With manual sharding enabled, specifying test targets via environment_variables or in InstrumentationTest is invalid.
+ * 
+ */
 public final class ManualShardingResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ManualShardingResponse Empty = new ManualShardingResponse();
 
+    /**
+     * Group of packages, classes, and/or test methods to be run for each shard. When any physical devices are selected, the number of test_targets_for_shard must be >= 1 and <= 50. When no physical devices are selected, the number must be >= 1 and <= 500.
+     * 
+     */
     @InputImport(name="testTargetsForShard", required=true)
     private final List<TestTargetsForShardResponse> testTargetsForShard;
 

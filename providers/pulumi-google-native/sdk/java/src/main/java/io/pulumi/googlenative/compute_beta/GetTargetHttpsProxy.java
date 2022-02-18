@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTargetHttpsProxy {
+/**
+ * Returns the specified TargetHttpsProxy resource. Gets a list of available target HTTPS proxies by making a list() request.
+ * 
+ */
     public static CompletableFuture<GetTargetHttpsProxyResult> invokeAsync(GetTargetHttpsProxyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/beta:getTargetHttpsProxy", TypeShape.of(GetTargetHttpsProxyResult.class), args == null ? GetTargetHttpsProxyArgs.Empty : args, Utilities.withVersion(options));
     }

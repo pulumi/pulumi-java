@@ -18,22 +18,90 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetMigratingVmResult {
+    /**
+     * Details of the target VM in Compute Engine.
+     * 
+     */
     private final ComputeEngineTargetDefaultsResponse computeEngineTargetDefaults;
+    /**
+     * The time the migrating VM was created (this refers to this resource and not to the time it was installed in the source).
+     * 
+     */
     private final String createTime;
+    /**
+     * The percentage progress of the current running replication cycle.
+     * 
+     */
     private final ReplicationCycleResponse currentSyncInfo;
+    /**
+     * The description attached to the migrating VM by the user.
+     * 
+     */
     private final String description;
+    /**
+     * The display name attached to the MigratingVm by the user.
+     * 
+     */
     private final String displayName;
+    /**
+     * Provides details on the state of the Migrating VM in case of an error in replication.
+     * 
+     */
     private final StatusResponse error;
+    /**
+     * The group this migrating vm is included in, if any. The group is represented by the full path of the appropriate Group resource.
+     * 
+     */
     private final String group;
+    /**
+     * The labels of the migrating VM.
+     * 
+     */
     private final Map<String,String> labels;
+    /**
+     * The most updated snapshot created time in the source that finished replication.
+     * 
+     */
     private final ReplicationSyncResponse lastSync;
+    /**
+     * The identifier of the MigratingVm.
+     * 
+     */
     private final String name;
+    /**
+     * The replication schedule policy.
+     * 
+     */
     private final SchedulePolicyResponse policy;
+    /**
+     * The recent clone jobs performed on the migrating VM. This field holds the vm's last completed clone job and the vm's running clone job, if one exists. Note: To have this field populated you need to explicitly request it via the "view" parameter of the Get/List request.
+     * 
+     */
     private final List<CloneJobResponse> recentCloneJobs;
+    /**
+     * The recent cutover jobs performed on the migrating VM. This field holds the vm's last completed cutover job and the vm's running cutover job, if one exists. Note: To have this field populated you need to explicitly request it via the "view" parameter of the Get/List request.
+     * 
+     */
     private final List<CutoverJobResponse> recentCutoverJobs;
+    /**
+     * The unique ID of the VM in the source. The VM's name in vSphere can be changed, so this is not the VM's name but rather its moRef id. This id is of the form vm-.
+     * 
+     */
     private final String sourceVmId;
+    /**
+     * State of the MigratingVm.
+     * 
+     */
     private final String state;
+    /**
+     * The last time the migrating VM state was updated.
+     * 
+     */
     private final String stateTime;
+    /**
+     * The last time the migrating VM resource was updated.
+     * 
+     */
     private final String updateTime;
 
     @OutputCustomType.Constructor({"computeEngineTargetDefaults","createTime","currentSyncInfo","description","displayName","error","group","labels","lastSync","name","policy","recentCloneJobs","recentCutoverJobs","sourceVmId","state","stateTime","updateTime"})
@@ -74,54 +142,122 @@ public final class GetMigratingVmResult {
         this.updateTime = Objects.requireNonNull(updateTime);
     }
 
+    /**
+     * Details of the target VM in Compute Engine.
+     * 
+     */
     public ComputeEngineTargetDefaultsResponse getComputeEngineTargetDefaults() {
         return this.computeEngineTargetDefaults;
     }
+    /**
+     * The time the migrating VM was created (this refers to this resource and not to the time it was installed in the source).
+     * 
+     */
     public String getCreateTime() {
         return this.createTime;
     }
+    /**
+     * The percentage progress of the current running replication cycle.
+     * 
+     */
     public ReplicationCycleResponse getCurrentSyncInfo() {
         return this.currentSyncInfo;
     }
+    /**
+     * The description attached to the migrating VM by the user.
+     * 
+     */
     public String getDescription() {
         return this.description;
     }
+    /**
+     * The display name attached to the MigratingVm by the user.
+     * 
+     */
     public String getDisplayName() {
         return this.displayName;
     }
+    /**
+     * Provides details on the state of the Migrating VM in case of an error in replication.
+     * 
+     */
     public StatusResponse getError() {
         return this.error;
     }
+    /**
+     * The group this migrating vm is included in, if any. The group is represented by the full path of the appropriate Group resource.
+     * 
+     */
     public String getGroup() {
         return this.group;
     }
+    /**
+     * The labels of the migrating VM.
+     * 
+     */
     public Map<String,String> getLabels() {
         return this.labels;
     }
+    /**
+     * The most updated snapshot created time in the source that finished replication.
+     * 
+     */
     public ReplicationSyncResponse getLastSync() {
         return this.lastSync;
     }
+    /**
+     * The identifier of the MigratingVm.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The replication schedule policy.
+     * 
+     */
     public SchedulePolicyResponse getPolicy() {
         return this.policy;
     }
+    /**
+     * The recent clone jobs performed on the migrating VM. This field holds the vm's last completed clone job and the vm's running clone job, if one exists. Note: To have this field populated you need to explicitly request it via the "view" parameter of the Get/List request.
+     * 
+     */
     public List<CloneJobResponse> getRecentCloneJobs() {
         return this.recentCloneJobs;
     }
+    /**
+     * The recent cutover jobs performed on the migrating VM. This field holds the vm's last completed cutover job and the vm's running cutover job, if one exists. Note: To have this field populated you need to explicitly request it via the "view" parameter of the Get/List request.
+     * 
+     */
     public List<CutoverJobResponse> getRecentCutoverJobs() {
         return this.recentCutoverJobs;
     }
+    /**
+     * The unique ID of the VM in the source. The VM's name in vSphere can be changed, so this is not the VM's name but rather its moRef id. This id is of the form vm-.
+     * 
+     */
     public String getSourceVmId() {
         return this.sourceVmId;
     }
+    /**
+     * State of the MigratingVm.
+     * 
+     */
     public String getState() {
         return this.state;
     }
+    /**
+     * The last time the migrating VM state was updated.
+     * 
+     */
     public String getStateTime() {
         return this.stateTime;
     }
+    /**
+     * The last time the migrating VM resource was updated.
+     * 
+     */
     public String getUpdateTime() {
         return this.updateTime;
     }

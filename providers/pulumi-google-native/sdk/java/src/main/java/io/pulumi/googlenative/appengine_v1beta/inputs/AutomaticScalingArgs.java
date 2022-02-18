@@ -18,10 +18,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Automatic scaling is based on request rate, response latencies, and other application metrics.
+ * 
+ */
 public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AutomaticScalingArgs Empty = new AutomaticScalingArgs();
 
+    /**
+     * The time period that the Autoscaler (https://cloud.google.com/compute/docs/autoscaler/) should wait before it starts collecting information from a new instance. This prevents the autoscaler from collecting information when the instance is initializing, during which the collected usage would not be reliable. Only applicable in the App Engine flexible environment.
+     * 
+     */
     @InputImport(name="coolDownPeriod")
     private final @Nullable Input<String> coolDownPeriod;
 
@@ -29,6 +37,10 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
         return this.coolDownPeriod == null ? Input.empty() : this.coolDownPeriod;
     }
 
+    /**
+     * Target scaling by CPU usage.
+     * 
+     */
     @InputImport(name="cpuUtilization")
     private final @Nullable Input<CpuUtilizationArgs> cpuUtilization;
 
@@ -36,6 +48,10 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
         return this.cpuUtilization == null ? Input.empty() : this.cpuUtilization;
     }
 
+    /**
+     * Target scaling by user-provided metrics. Only applicable in the App Engine flexible environment.
+     * 
+     */
     @InputImport(name="customMetrics")
     private final @Nullable Input<List<CustomMetricArgs>> customMetrics;
 
@@ -43,6 +59,10 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
         return this.customMetrics == null ? Input.empty() : this.customMetrics;
     }
 
+    /**
+     * Target scaling by disk usage.
+     * 
+     */
     @InputImport(name="diskUtilization")
     private final @Nullable Input<DiskUtilizationArgs> diskUtilization;
 
@@ -50,6 +70,10 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
         return this.diskUtilization == null ? Input.empty() : this.diskUtilization;
     }
 
+    /**
+     * Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.Defaults to a runtime-specific value.
+     * 
+     */
     @InputImport(name="maxConcurrentRequests")
     private final @Nullable Input<Integer> maxConcurrentRequests;
 
@@ -57,6 +81,10 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
         return this.maxConcurrentRequests == null ? Input.empty() : this.maxConcurrentRequests;
     }
 
+    /**
+     * Maximum number of idle instances that should be maintained for this version.
+     * 
+     */
     @InputImport(name="maxIdleInstances")
     private final @Nullable Input<Integer> maxIdleInstances;
 
@@ -64,6 +92,10 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
         return this.maxIdleInstances == null ? Input.empty() : this.maxIdleInstances;
     }
 
+    /**
+     * Maximum amount of time that a request should wait in the pending queue before starting a new instance to handle it.
+     * 
+     */
     @InputImport(name="maxPendingLatency")
     private final @Nullable Input<String> maxPendingLatency;
 
@@ -71,6 +103,10 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
         return this.maxPendingLatency == null ? Input.empty() : this.maxPendingLatency;
     }
 
+    /**
+     * Maximum number of instances that should be started to handle requests for this version.
+     * 
+     */
     @InputImport(name="maxTotalInstances")
     private final @Nullable Input<Integer> maxTotalInstances;
 
@@ -78,6 +114,10 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
         return this.maxTotalInstances == null ? Input.empty() : this.maxTotalInstances;
     }
 
+    /**
+     * Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service.
+     * 
+     */
     @InputImport(name="minIdleInstances")
     private final @Nullable Input<Integer> minIdleInstances;
 
@@ -85,6 +125,10 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
         return this.minIdleInstances == null ? Input.empty() : this.minIdleInstances;
     }
 
+    /**
+     * Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it.
+     * 
+     */
     @InputImport(name="minPendingLatency")
     private final @Nullable Input<String> minPendingLatency;
 
@@ -92,6 +136,10 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
         return this.minPendingLatency == null ? Input.empty() : this.minPendingLatency;
     }
 
+    /**
+     * Minimum number of running instances that should be maintained for this version.
+     * 
+     */
     @InputImport(name="minTotalInstances")
     private final @Nullable Input<Integer> minTotalInstances;
 
@@ -99,6 +147,10 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
         return this.minTotalInstances == null ? Input.empty() : this.minTotalInstances;
     }
 
+    /**
+     * Target scaling by network usage.
+     * 
+     */
     @InputImport(name="networkUtilization")
     private final @Nullable Input<NetworkUtilizationArgs> networkUtilization;
 
@@ -106,6 +158,10 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
         return this.networkUtilization == null ? Input.empty() : this.networkUtilization;
     }
 
+    /**
+     * Target scaling by request utilization.
+     * 
+     */
     @InputImport(name="requestUtilization")
     private final @Nullable Input<RequestUtilizationArgs> requestUtilization;
 
@@ -113,6 +169,10 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
         return this.requestUtilization == null ? Input.empty() : this.requestUtilization;
     }
 
+    /**
+     * Scheduler settings for standard environment.
+     * 
+     */
     @InputImport(name="standardSchedulerSettings")
     private final @Nullable Input<StandardSchedulerSettingsArgs> standardSchedulerSettings;
 

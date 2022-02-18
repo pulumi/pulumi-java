@@ -10,10 +10,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * List of operation configuration details associated with Apigee API proxies or remote services. Remote services are non-Apigee proxies, such as Istio-Envoy.
+ * 
+ */
 public final class GoogleCloudApigeeV1OperationGroupResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudApigeeV1OperationGroupResponse Empty = new GoogleCloudApigeeV1OperationGroupResponse();
 
+    /**
+     * Flag that specifes whether the configuration is for Apigee API proxy or a remote service. Valid values include `proxy` or `remoteservice`. Defaults to `proxy`. Set to `proxy` when Apigee API proxies are associated with the API product. Set to `remoteservice` when non-Apigee proxies like Istio-Envoy are associated with the API product.
+     * 
+     */
     @InputImport(name="operationConfigType", required=true)
     private final String operationConfigType;
 
@@ -21,6 +29,10 @@ public final class GoogleCloudApigeeV1OperationGroupResponse extends io.pulumi.r
         return this.operationConfigType;
     }
 
+    /**
+     * List of operation configurations for either Apigee API proxies or other remote services that are associated with this API product.
+     * 
+     */
     @InputImport(name="operationConfigs", required=true)
     private final List<GoogleCloudApigeeV1OperationConfigResponse> operationConfigs;
 

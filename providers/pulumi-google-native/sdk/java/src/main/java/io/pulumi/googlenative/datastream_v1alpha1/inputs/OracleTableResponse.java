@@ -10,10 +10,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Oracle table.
+ * 
+ */
 public final class OracleTableResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OracleTableResponse Empty = new OracleTableResponse();
 
+    /**
+     * Oracle columns in the schema. When unspecified as part of inclue/exclude lists, includes/excludes everything.
+     * 
+     */
     @InputImport(name="oracleColumns", required=true)
     private final List<OracleColumnResponse> oracleColumns;
 
@@ -21,6 +29,10 @@ public final class OracleTableResponse extends io.pulumi.resources.InvokeArgs {
         return this.oracleColumns;
     }
 
+    /**
+     * Table name.
+     * 
+     */
     @InputImport(name="tableName", required=true)
     private final String tableName;
 

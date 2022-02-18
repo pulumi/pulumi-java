@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Runtime using Virtual Machine for computing.
+ * 
+ */
 public final class VirtualMachineResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VirtualMachineResponse Empty = new VirtualMachineResponse();
 
+    /**
+     * The unique identifier of the Managed Compute Engine instance.
+     * 
+     */
     @InputImport(name="instanceId", required=true)
     private final String instanceId;
 
@@ -20,6 +28,10 @@ public final class VirtualMachineResponse extends io.pulumi.resources.InvokeArgs
         return this.instanceId;
     }
 
+    /**
+     * The user-friendly name of the Managed Compute Engine instance.
+     * 
+     */
     @InputImport(name="instanceName", required=true)
     private final String instanceName;
 
@@ -27,6 +39,10 @@ public final class VirtualMachineResponse extends io.pulumi.resources.InvokeArgs
         return this.instanceName;
     }
 
+    /**
+     * Virtual Machine configuration settings.
+     * 
+     */
     @InputImport(name="virtualMachineConfig", required=true)
     private final VirtualMachineConfigResponse virtualMachineConfig;
 

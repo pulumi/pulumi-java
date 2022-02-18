@@ -14,10 +14,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Options allows customized resource handling by Deployment Manager.
+ * 
+ */
 public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OptionsArgs Empty = new OptionsArgs();
 
+    /**
+     * Options regarding how to thread async requests.
+     * 
+     */
     @InputImport(name="asyncOptions")
     private final @Nullable Input<List<AsyncOptionsArgs>> asyncOptions;
 
@@ -25,6 +33,10 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
         return this.asyncOptions == null ? Input.empty() : this.asyncOptions;
     }
 
+    /**
+     * The mappings that apply for requests.
+     * 
+     */
     @InputImport(name="inputMappings")
     private final @Nullable Input<List<InputMappingArgs>> inputMappings;
 
@@ -32,6 +44,10 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
         return this.inputMappings == null ? Input.empty() : this.inputMappings;
     }
 
+    /**
+     * The json path to the field in the resource JSON body into which the resource name should be mapped. Leaving this empty indicates that there should be no mapping performed.
+     * 
+     */
     @InputImport(name="nameProperty")
     private final @Nullable Input<String> nameProperty;
 
@@ -39,6 +55,10 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
         return this.nameProperty == null ? Input.empty() : this.nameProperty;
     }
 
+    /**
+     * Options for how to validate and process properties on a resource.
+     * 
+     */
     @InputImport(name="validationOptions")
     private final @Nullable Input<ValidationOptionsArgs> validationOptions;
 

@@ -15,6 +15,10 @@ public final class MetadataImportArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MetadataImportArgs Empty = new MetadataImportArgs();
 
+    /**
+     * Immutable. A database dump from a pre-existing metastore's database.
+     * 
+     */
     @InputImport(name="databaseDump")
     private final @Nullable Input<DatabaseDumpArgs> databaseDump;
 
@@ -22,6 +26,10 @@ public final class MetadataImportArgs extends io.pulumi.resources.ResourceArgs {
         return this.databaseDump == null ? Input.empty() : this.databaseDump;
     }
 
+    /**
+     * The description of the metadata import.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -43,6 +51,10 @@ public final class MetadataImportArgs extends io.pulumi.resources.ResourceArgs {
         return this.metadataImportId;
     }
 
+    /**
+     * Immutable. The relative resource name of the metadata import, of the form:projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImports/{metadata_import_id}.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

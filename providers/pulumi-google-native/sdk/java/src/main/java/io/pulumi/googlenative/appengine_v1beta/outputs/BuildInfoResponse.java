@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BuildInfoResponse {
+    /**
+     * The Google Cloud Build id. Example: "f966068f-08b2-42c8-bdfe-74137dff2bf9"
+     * 
+     */
     private final String cloudBuildId;
 
     @OutputCustomType.Constructor({"cloudBuildId"})
@@ -16,6 +20,10 @@ public final class BuildInfoResponse {
         this.cloudBuildId = Objects.requireNonNull(cloudBuildId);
     }
 
+    /**
+     * The Google Cloud Build id. Example: "f966068f-08b2-42c8-bdfe-74137dff2bf9"
+     * 
+     */
     public String getCloudBuildId() {
         return this.cloudBuildId;
     }

@@ -9,6 +9,10 @@ import java.util.Map;
 import java.util.Objects;
 
 
+/**
+ * Defines an object for the environment field in in-toto links. The suggested fields are "variables", "filesystem", and "workdir".
+ * 
+ */
 public final class EnvironmentResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EnvironmentResponse Empty = new EnvironmentResponse();

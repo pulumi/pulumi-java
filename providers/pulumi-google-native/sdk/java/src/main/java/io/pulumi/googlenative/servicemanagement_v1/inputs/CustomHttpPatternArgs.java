@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A custom pattern is used for defining custom HTTP verb.
+ * 
+ */
 public final class CustomHttpPatternArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CustomHttpPatternArgs Empty = new CustomHttpPatternArgs();
 
+    /**
+     * The name of this custom HTTP verb.
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -21,6 +29,10 @@ public final class CustomHttpPatternArgs extends io.pulumi.resources.ResourceArg
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * The path matched by this custom verb.
+     * 
+     */
     @InputImport(name="path")
     private final @Nullable Input<String> path;
 

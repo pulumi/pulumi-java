@@ -14,6 +14,10 @@ public final class BillingAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BillingAccountArgs Empty = new BillingAccountArgs();
 
+    /**
+     * The display name given to the billing account, such as `My Billing Account`. This name is displayed in the Google Cloud Console.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -21,6 +25,10 @@ public final class BillingAccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * If this account is a [subaccount](https://cloud.google.com/billing/docs/concepts), then this will be the resource name of the parent billing account that it is being resold through. Otherwise this will be empty.
+     * 
+     */
     @InputImport(name="masterBillingAccount")
     private final @Nullable Input<String> masterBillingAccount;
 

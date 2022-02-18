@@ -10,10 +10,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Encoding of a text stream. For example, closed captions or subtitles.
+ * 
+ */
 public final class TextStreamResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TextStreamResponse Empty = new TextStreamResponse();
 
+    /**
+     * The codec for this text stream. The default is `webvtt`. Supported text codecs: - `srt` - `ttml` - `cea608` - `cea708` - `webvtt`
+     * 
+     */
     @InputImport(name="codec", required=true)
     private final String codec;
 
@@ -21,6 +29,10 @@ public final class TextStreamResponse extends io.pulumi.resources.InvokeArgs {
         return this.codec;
     }
 
+    /**
+     * The mapping for the `Job.edit_list` atoms with text `EditAtom.inputs`.
+     * 
+     */
     @InputImport(name="mapping", required=true)
     private final List<TextMappingResponse> mapping;
 

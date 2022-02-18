@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Details of the final state "deliver" and associated resource.
+ * 
+ */
 public final class DeliverInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DeliverInfoResponse Empty = new DeliverInfoResponse();
 
+    /**
+     * URI of the resource that the packet is delivered to.
+     * 
+     */
     @InputImport(name="resourceUri", required=true)
     private final String resourceUri;
 
@@ -19,6 +27,10 @@ public final class DeliverInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.resourceUri;
     }
 
+    /**
+     * Target type where the packet is delivered to.
+     * 
+     */
     @InputImport(name="target", required=true)
     private final String target;
 

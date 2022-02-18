@@ -8,10 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Optional. Deployment type supported by the environment. The deployment type can be set when creating the environment and cannot be changed. When you enable archive deployment, you will be **prevented from performing** a [subset of actions](/apigee/docs/api-platform/local-development/overview#prevented-actions) within the environment, including: * Managing the deployment of API proxy or shared flow revisions * Creating, updating, or deleting resource files * Creating, updating, or deleting target servers
+     * 
+     */
     @EnumType
     public enum EnvironmentDeploymentType {
+        /**
+         * Deployment type not specified.
+         * 
+         */
         DeploymentTypeUnspecified("DEPLOYMENT_TYPE_UNSPECIFIED"),
+        /**
+         * Proxy deployment enables you to develop and deploy API proxies using Apigee on Google Cloud. This cannot currently be combined with the CONFIGURABLE API proxy type.
+         * 
+         */
         Proxy("PROXY"),
+        /**
+         * Archive deployment enables you to develop API proxies locally then deploy an archive of your API proxy configuration to an environment in Apigee on Google Cloud. You will be prevented from performing a [subset of actions](/apigee/docs/api-platform/local-development/overview#prevented-actions) within the environment.
+         * 
+         */
         Archive("ARCHIVE");
 
         private final String value;

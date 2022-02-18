@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigResponse {
+    /**
+     * Uses LivePerson (https://www.liveperson.com).
+     * 
+     */
     private final GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigResponse livePersonConfig;
+    /**
+     * Uses Salesforce Live Agent.
+     * 
+     */
     private final GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse salesforceLiveAgentConfig;
 
     @OutputCustomType.Constructor({"livePersonConfig","salesforceLiveAgentConfig"})
@@ -21,9 +29,17 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigResponse {
         this.salesforceLiveAgentConfig = Objects.requireNonNull(salesforceLiveAgentConfig);
     }
 
+    /**
+     * Uses LivePerson (https://www.liveperson.com).
+     * 
+     */
     public GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigResponse getLivePersonConfig() {
         return this.livePersonConfig;
     }
+    /**
+     * Uses Salesforce Live Agent.
+     * 
+     */
     public GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse getSalesforceLiveAgentConfig() {
         return this.salesforceLiveAgentConfig;
     }

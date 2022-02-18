@@ -16,22 +16,90 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetCertificateAuthorityResult {
+    /**
+     * URLs for accessing content published by this CA, such as the CA certificate and CRLs.
+     * 
+     */
     private final AccessUrlsResponse accessUrls;
+    /**
+     * A structured description of this CertificateAuthority's CA certificate and its issuers. Ordered as self-to-root.
+     * 
+     */
     private final List<CertificateDescriptionResponse> caCertificateDescriptions;
+    /**
+     * Immutable. The config used to create a self-signed X.509 certificate or CSR.
+     * 
+     */
     private final CertificateConfigResponse config;
+    /**
+     * The time at which this CertificateAuthority was created.
+     * 
+     */
     private final String createTime;
+    /**
+     * The time at which this CertificateAuthority was soft deleted, if it is in the DELETED state.
+     * 
+     */
     private final String deleteTime;
+    /**
+     * The time at which this CertificateAuthority will be permanently purged, if it is in the DELETED state.
+     * 
+     */
     private final String expireTime;
+    /**
+     * Immutable. The name of a Cloud Storage bucket where this CertificateAuthority will publish content, such as the CA certificate and CRLs. This must be a bucket name, without any prefixes (such as `gs://`) or suffixes (such as `.googleapis.com`). For example, to use a bucket named `my-bucket`, you would simply specify `my-bucket`. If not specified, a managed bucket will be created.
+     * 
+     */
     private final String gcsBucket;
+    /**
+     * Immutable. Used when issuing certificates for this CertificateAuthority. If this CertificateAuthority is a self-signed CertificateAuthority, this key is also used to sign the self-signed CA certificate. Otherwise, it is used to sign a CSR.
+     * 
+     */
     private final KeyVersionSpecResponse keySpec;
+    /**
+     * Optional. Labels with user-defined metadata.
+     * 
+     */
     private final Map<String,String> labels;
+    /**
+     * Immutable. The desired lifetime of the CA certificate. Used to create the "not_before_time" and "not_after_time" fields inside an X.509 certificate.
+     * 
+     */
     private final String lifetime;
+    /**
+     * The resource name for this CertificateAuthority in the format `projects/*{@literal /}locations/*{@literal /}caPools/*{@literal /}certificateAuthorities/*`.
+     * 
+     */
     private final String name;
+    /**
+     * This CertificateAuthority's certificate chain, including the current CertificateAuthority's certificate. Ordered such that the root issuer is the final element (consistent with RFC 5246). For a self-signed CA, this will only list the current CertificateAuthority's certificate.
+     * 
+     */
     private final List<String> pemCaCertificates;
+    /**
+     * The State for this CertificateAuthority.
+     * 
+     */
     private final String state;
+    /**
+     * Optional. If this is a subordinate CertificateAuthority, this field will be set with the subordinate configuration, which describes its issuers. This may be updated, but this CertificateAuthority must continue to validate.
+     * 
+     */
     private final SubordinateConfigResponse subordinateConfig;
+    /**
+     * The CaPool.Tier of the CaPool that includes this CertificateAuthority.
+     * 
+     */
     private final String tier;
+    /**
+     * Immutable. The Type of this CertificateAuthority.
+     * 
+     */
     private final String type;
+    /**
+     * The time at which this CertificateAuthority was last updated.
+     * 
+     */
     private final String updateTime;
 
     @OutputCustomType.Constructor({"accessUrls","caCertificateDescriptions","config","createTime","deleteTime","expireTime","gcsBucket","keySpec","labels","lifetime","name","pemCaCertificates","state","subordinateConfig","tier","type","updateTime"})
@@ -72,54 +140,122 @@ public final class GetCertificateAuthorityResult {
         this.updateTime = Objects.requireNonNull(updateTime);
     }
 
+    /**
+     * URLs for accessing content published by this CA, such as the CA certificate and CRLs.
+     * 
+     */
     public AccessUrlsResponse getAccessUrls() {
         return this.accessUrls;
     }
+    /**
+     * A structured description of this CertificateAuthority's CA certificate and its issuers. Ordered as self-to-root.
+     * 
+     */
     public List<CertificateDescriptionResponse> getCaCertificateDescriptions() {
         return this.caCertificateDescriptions;
     }
+    /**
+     * Immutable. The config used to create a self-signed X.509 certificate or CSR.
+     * 
+     */
     public CertificateConfigResponse getConfig() {
         return this.config;
     }
+    /**
+     * The time at which this CertificateAuthority was created.
+     * 
+     */
     public String getCreateTime() {
         return this.createTime;
     }
+    /**
+     * The time at which this CertificateAuthority was soft deleted, if it is in the DELETED state.
+     * 
+     */
     public String getDeleteTime() {
         return this.deleteTime;
     }
+    /**
+     * The time at which this CertificateAuthority will be permanently purged, if it is in the DELETED state.
+     * 
+     */
     public String getExpireTime() {
         return this.expireTime;
     }
+    /**
+     * Immutable. The name of a Cloud Storage bucket where this CertificateAuthority will publish content, such as the CA certificate and CRLs. This must be a bucket name, without any prefixes (such as `gs://`) or suffixes (such as `.googleapis.com`). For example, to use a bucket named `my-bucket`, you would simply specify `my-bucket`. If not specified, a managed bucket will be created.
+     * 
+     */
     public String getGcsBucket() {
         return this.gcsBucket;
     }
+    /**
+     * Immutable. Used when issuing certificates for this CertificateAuthority. If this CertificateAuthority is a self-signed CertificateAuthority, this key is also used to sign the self-signed CA certificate. Otherwise, it is used to sign a CSR.
+     * 
+     */
     public KeyVersionSpecResponse getKeySpec() {
         return this.keySpec;
     }
+    /**
+     * Optional. Labels with user-defined metadata.
+     * 
+     */
     public Map<String,String> getLabels() {
         return this.labels;
     }
+    /**
+     * Immutable. The desired lifetime of the CA certificate. Used to create the "not_before_time" and "not_after_time" fields inside an X.509 certificate.
+     * 
+     */
     public String getLifetime() {
         return this.lifetime;
     }
+    /**
+     * The resource name for this CertificateAuthority in the format `projects/*{@literal /}locations/*{@literal /}caPools/*{@literal /}certificateAuthorities/*`.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * This CertificateAuthority's certificate chain, including the current CertificateAuthority's certificate. Ordered such that the root issuer is the final element (consistent with RFC 5246). For a self-signed CA, this will only list the current CertificateAuthority's certificate.
+     * 
+     */
     public List<String> getPemCaCertificates() {
         return this.pemCaCertificates;
     }
+    /**
+     * The State for this CertificateAuthority.
+     * 
+     */
     public String getState() {
         return this.state;
     }
+    /**
+     * Optional. If this is a subordinate CertificateAuthority, this field will be set with the subordinate configuration, which describes its issuers. This may be updated, but this CertificateAuthority must continue to validate.
+     * 
+     */
     public SubordinateConfigResponse getSubordinateConfig() {
         return this.subordinateConfig;
     }
+    /**
+     * The CaPool.Tier of the CaPool that includes this CertificateAuthority.
+     * 
+     */
     public String getTier() {
         return this.tier;
     }
+    /**
+     * Immutable. The Type of this CertificateAuthority.
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * The time at which this CertificateAuthority was last updated.
+     * 
+     */
     public String getUpdateTime() {
         return this.updateTime;
     }

@@ -12,10 +12,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * ClusterAutoscaling contains global, per-cluster information required by Cluster Autoscaler to automatically adjust the size of the cluster and create/delete node pools based on the current needs.
+ * 
+ */
 public final class ClusterAutoscalingResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ClusterAutoscalingResponse Empty = new ClusterAutoscalingResponse();
 
+    /**
+     * The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool's nodes can be created by NAP.
+     * 
+     */
     @InputImport(name="autoprovisioningLocations", required=true)
     private final List<String> autoprovisioningLocations;
 
@@ -23,6 +31,10 @@ public final class ClusterAutoscalingResponse extends io.pulumi.resources.Invoke
         return this.autoprovisioningLocations;
     }
 
+    /**
+     * AutoprovisioningNodePoolDefaults contains defaults for a node pool created by NAP.
+     * 
+     */
     @InputImport(name="autoprovisioningNodePoolDefaults", required=true)
     private final AutoprovisioningNodePoolDefaultsResponse autoprovisioningNodePoolDefaults;
 
@@ -30,6 +42,10 @@ public final class ClusterAutoscalingResponse extends io.pulumi.resources.Invoke
         return this.autoprovisioningNodePoolDefaults;
     }
 
+    /**
+     * Defines autoscaling behaviour.
+     * 
+     */
     @InputImport(name="autoscalingProfile", required=true)
     private final String autoscalingProfile;
 
@@ -37,6 +53,10 @@ public final class ClusterAutoscalingResponse extends io.pulumi.resources.Invoke
         return this.autoscalingProfile;
     }
 
+    /**
+     * Enables automatic node pool creation and deletion.
+     * 
+     */
     @InputImport(name="enableNodeAutoprovisioning", required=true)
     private final Boolean enableNodeAutoprovisioning;
 
@@ -44,6 +64,10 @@ public final class ClusterAutoscalingResponse extends io.pulumi.resources.Invoke
         return this.enableNodeAutoprovisioning;
     }
 
+    /**
+     * Contains global constraints regarding minimum and maximum amount of resources in the cluster.
+     * 
+     */
     @InputImport(name="resourceLimits", required=true)
     private final List<ResourceLimitResponse> resourceLimits;
 

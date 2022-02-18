@@ -11,8 +11,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AuthenticationResponse {
+    /**
+     * Authentication using a custom account.
+     * 
+     */
     private final CustomAccountResponse customAccount;
+    /**
+     * Authentication using a Google account.
+     * 
+     */
     private final GoogleAccountResponse googleAccount;
+    /**
+     * Authentication using Identity-Aware-Proxy (IAP).
+     * 
+     */
     private final IapCredentialResponse iapCredential;
 
     @OutputCustomType.Constructor({"customAccount","googleAccount","iapCredential"})
@@ -25,12 +37,24 @@ public final class AuthenticationResponse {
         this.iapCredential = Objects.requireNonNull(iapCredential);
     }
 
+    /**
+     * Authentication using a custom account.
+     * 
+     */
     public CustomAccountResponse getCustomAccount() {
         return this.customAccount;
     }
+    /**
+     * Authentication using a Google account.
+     * 
+     */
     public GoogleAccountResponse getGoogleAccount() {
         return this.googleAccount;
     }
+    /**
+     * Authentication using Identity-Aware-Proxy (IAP).
+     * 
+     */
     public IapCredentialResponse getIapCredential() {
         return this.iapCredential;
     }

@@ -9,10 +9,18 @@ import java.util.Map;
 import java.util.Objects;
 
 
+/**
+ * Represents a group of VMs that can be identified as having all these labels, for example "env=prod and app=web".
+ * 
+ */
 public final class PatchInstanceFilterGroupLabelResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PatchInstanceFilterGroupLabelResponse Empty = new PatchInstanceFilterGroupLabelResponse();
 
+    /**
+     * Compute Engine instance labels that must be present for a VM instance to be targeted by this filter.
+     * 
+     */
     @InputImport(name="labels", required=true)
     private final Map<String,String> labels;
 

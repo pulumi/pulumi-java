@@ -10,10 +10,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * An opaque binary blob file to install on the device before the test starts.
+ * 
+ */
 public final class ObbFileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ObbFileArgs Empty = new ObbFileArgs();
 
+    /**
+     * Opaque Binary Blob (OBB) file(s) to install on the device.
+     * 
+     */
     @InputImport(name="obb", required=true)
     private final Input<FileReferenceArgs> obb;
 
@@ -21,6 +29,10 @@ public final class ObbFileArgs extends io.pulumi.resources.ResourceArgs {
         return this.obb;
     }
 
+    /**
+     * OBB file name which must conform to the format as specified by Android e.g. [main|patch].0300110.com.example.android.obb which will be installed into \/Android/obb/\/ on the device.
+     * 
+     */
     @InputImport(name="obbFileName", required=true)
     private final Input<String> obbFileName;
 

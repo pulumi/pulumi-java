@@ -21,6 +21,10 @@ public final class IdentityAwareProxyClientArgs extends io.pulumi.resources.Reso
         return this.brandId;
     }
 
+    /**
+     * Human-friendly name given to the OAuth client.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 

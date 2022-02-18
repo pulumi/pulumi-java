@@ -9,10 +9,18 @@ import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.DerivedArgs;
 import java.util.Objects;
 
 
+/**
+ * Details of an image occurrence.
+ * 
+ */
 public final class GrafeasV1beta1ImageDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GrafeasV1beta1ImageDetailsArgs Empty = new GrafeasV1beta1ImageDetailsArgs();
 
+    /**
+     * Immutable. The child image derived from the base image.
+     * 
+     */
     @InputImport(name="derivedImage", required=true)
     private final Input<DerivedArgs> derivedImage;
 

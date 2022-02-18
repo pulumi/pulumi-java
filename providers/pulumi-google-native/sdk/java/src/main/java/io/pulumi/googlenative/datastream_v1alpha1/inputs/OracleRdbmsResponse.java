@@ -9,10 +9,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Oracle database structure.
+ * 
+ */
 public final class OracleRdbmsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OracleRdbmsResponse Empty = new OracleRdbmsResponse();
 
+    /**
+     * Oracle schemas/databases in the database server.
+     * 
+     */
     @InputImport(name="oracleSchemas", required=true)
     private final List<OracleSchemaResponse> oracleSchemas;
 

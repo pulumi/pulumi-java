@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class FileReferenceResponse {
+    /**
+     * A path to a file in Google Cloud Storage. Example: gs://build-app-1414623860166/app%40debug-unaligned.apk These paths are expected to be url encoded (percent encoding)
+     * 
+     */
     private final String gcsPath;
 
     @OutputCustomType.Constructor({"gcsPath"})
@@ -16,6 +20,10 @@ public final class FileReferenceResponse {
         this.gcsPath = Objects.requireNonNull(gcsPath);
     }
 
+    /**
+     * A path to a file in Google Cloud Storage. Example: gs://build-app-1414623860166/app%40debug-unaligned.apk These paths are expected to be url encoded (percent encoding)
+     * 
+     */
     public String getGcsPath() {
         return this.gcsPath;
     }

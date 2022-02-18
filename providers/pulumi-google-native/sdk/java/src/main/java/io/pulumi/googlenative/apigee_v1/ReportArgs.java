@@ -17,6 +17,10 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ReportArgs Empty = new ReportArgs();
 
+    /**
+     * This field contains the chart type for the report
+     * 
+     */
     @InputImport(name="chartType")
     private final @Nullable Input<String> chartType;
 
@@ -24,6 +28,10 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
         return this.chartType == null ? Input.empty() : this.chartType;
     }
 
+    /**
+     * Legacy field: not used. This field contains a list of comments associated with custom report
+     * 
+     */
     @InputImport(name="comments")
     private final @Nullable Input<List<String>> comments;
 
@@ -31,6 +39,10 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
         return this.comments == null ? Input.empty() : this.comments;
     }
 
+    /**
+     * This contains the list of dimensions for the report
+     * 
+     */
     @InputImport(name="dimensions")
     private final @Nullable Input<List<String>> dimensions;
 
@@ -38,6 +50,10 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
         return this.dimensions == null ? Input.empty() : this.dimensions;
     }
 
+    /**
+     * This is the display name for the report
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -45,6 +61,10 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * This field contains the filter expression
+     * 
+     */
     @InputImport(name="filter")
     private final @Nullable Input<String> filter;
 
@@ -52,6 +72,10 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
         return this.filter == null ? Input.empty() : this.filter;
     }
 
+    /**
+     * Legacy field: not used. Contains the from time for the report
+     * 
+     */
     @InputImport(name="fromTime")
     private final @Nullable Input<String> fromTime;
 
@@ -59,6 +83,10 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
         return this.fromTime == null ? Input.empty() : this.fromTime;
     }
 
+    /**
+     * Legacy field: not used This field contains the limit for the result retrieved
+     * 
+     */
     @InputImport(name="limit")
     private final @Nullable Input<String> limit;
 
@@ -66,6 +94,10 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
         return this.limit == null ? Input.empty() : this.limit;
     }
 
+    /**
+     * This contains the list of metrics
+     * 
+     */
     @InputImport(name="metrics", required=true)
     private final Input<List<GoogleCloudApigeeV1CustomReportMetricArgs>> metrics;
 
@@ -73,6 +105,10 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
         return this.metrics;
     }
 
+    /**
+     * Unique identifier for the report T his is a legacy field used to encode custom report unique id
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -80,6 +116,10 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Legacy field: not used. This field contains the offset for the data
+     * 
+     */
     @InputImport(name="offset")
     private final @Nullable Input<String> offset;
 
@@ -94,6 +134,10 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
         return this.organizationId;
     }
 
+    /**
+     * This field contains report properties such as ui metadata etc.
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<List<GoogleCloudApigeeV1ReportPropertyArgs>> properties;
 
@@ -101,6 +145,10 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * Legacy field: not used much. Contains the list of sort by columns
+     * 
+     */
     @InputImport(name="sortByCols")
     private final @Nullable Input<List<String>> sortByCols;
 
@@ -108,6 +156,10 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
         return this.sortByCols == null ? Input.empty() : this.sortByCols;
     }
 
+    /**
+     * Legacy field: not used much. Contains the sort order for the sort columns
+     * 
+     */
     @InputImport(name="sortOrder")
     private final @Nullable Input<String> sortOrder;
 
@@ -115,6 +167,10 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
         return this.sortOrder == null ? Input.empty() : this.sortOrder;
     }
 
+    /**
+     * Legacy field: not used. This field contains a list of tags associated with custom report
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<String>> tags;
 
@@ -122,6 +178,10 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * This field contains the time unit of aggregation for the report
+     * 
+     */
     @InputImport(name="timeUnit")
     private final @Nullable Input<String> timeUnit;
 
@@ -129,6 +189,10 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
         return this.timeUnit == null ? Input.empty() : this.timeUnit;
     }
 
+    /**
+     * Legacy field: not used. Contains the end time for the report
+     * 
+     */
     @InputImport(name="toTime")
     private final @Nullable Input<String> toTime;
 
@@ -136,6 +200,10 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
         return this.toTime == null ? Input.empty() : this.toTime;
     }
 
+    /**
+     * Legacy field: not used. This field contains the top k parameter value for restricting the result
+     * 
+     */
     @InputImport(name="topk")
     private final @Nullable Input<String> topk;
 

@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCapacityCommitment {
+/**
+ * Returns information about the capacity commitment.
+ * 
+ */
     public static CompletableFuture<GetCapacityCommitmentResult> invokeAsync(GetCapacityCommitmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:bigqueryreservation/v1:getCapacityCommitment", TypeShape.of(GetCapacityCommitmentResult.class), args == null ? GetCapacityCommitmentArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -10,10 +10,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Yum patching is performed by executing `yum update`. Additional options can be set to control how this is executed. Note that not all settings are supported on all platforms.
+ * 
+ */
 public final class YumSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final YumSettingsResponse Empty = new YumSettingsResponse();
 
+    /**
+     * List of packages to exclude from update. These packages are excluded by using the yum `--exclude` flag.
+     * 
+     */
     @InputImport(name="excludes", required=true)
     private final List<String> excludes;
 
@@ -21,6 +29,10 @@ public final class YumSettingsResponse extends io.pulumi.resources.InvokeArgs {
         return this.excludes;
     }
 
+    /**
+     * An exclusive list of packages to be updated. These are the only packages that will be updated. If these packages are not installed, they will be ignored. This field must not be specified with any other patch configuration fields.
+     * 
+     */
     @InputImport(name="exclusivePackages", required=true)
     private final List<String> exclusivePackages;
 
@@ -28,6 +40,10 @@ public final class YumSettingsResponse extends io.pulumi.resources.InvokeArgs {
         return this.exclusivePackages;
     }
 
+    /**
+     * Will cause patch to run `yum update-minimal` instead.
+     * 
+     */
     @InputImport(name="minimal", required=true)
     private final Boolean minimal;
 
@@ -35,6 +51,10 @@ public final class YumSettingsResponse extends io.pulumi.resources.InvokeArgs {
         return this.minimal;
     }
 
+    /**
+     * Adds the `--security` flag to `yum update`. Not supported on all platforms.
+     * 
+     */
     @InputImport(name="security", required=true)
     private final Boolean security;
 

@@ -8,10 +8,18 @@ import io.pulumi.googlenative.container_v1beta1.inputs.NodeConfigDefaultsRespons
 import java.util.Objects;
 
 
+/**
+ * Subset of Nodepool message that has defaults.
+ * 
+ */
 public final class NodePoolDefaultsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NodePoolDefaultsResponse Empty = new NodePoolDefaultsResponse();
 
+    /**
+     * Subset of NodeConfig message that has defaults.
+     * 
+     */
     @InputImport(name="nodeConfigDefaults", required=true)
     private final NodeConfigDefaultsResponse nodeConfigDefaults;
 

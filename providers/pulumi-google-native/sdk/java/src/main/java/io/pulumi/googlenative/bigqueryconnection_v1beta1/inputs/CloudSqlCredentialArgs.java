@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Credential info for the Cloud SQL.
+ * 
+ */
 public final class CloudSqlCredentialArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CloudSqlCredentialArgs Empty = new CloudSqlCredentialArgs();
 
+    /**
+     * The password for the credential.
+     * 
+     */
     @InputImport(name="password")
     private final @Nullable Input<String> password;
 
@@ -21,6 +29,10 @@ public final class CloudSqlCredentialArgs extends io.pulumi.resources.ResourceAr
         return this.password == null ? Input.empty() : this.password;
     }
 
+    /**
+     * The username for the credential.
+     * 
+     */
     @InputImport(name="username")
     private final @Nullable Input<String> username;
 

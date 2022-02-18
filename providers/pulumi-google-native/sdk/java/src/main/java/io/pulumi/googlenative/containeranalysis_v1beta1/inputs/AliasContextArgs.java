@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * An alias to a repo revision.
+ * 
+ */
 public final class AliasContextArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AliasContextArgs Empty = new AliasContextArgs();
 
+    /**
+     * The alias kind.
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<AliasContextKind> kind;
 
@@ -22,6 +30,10 @@ public final class AliasContextArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * The alias name.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

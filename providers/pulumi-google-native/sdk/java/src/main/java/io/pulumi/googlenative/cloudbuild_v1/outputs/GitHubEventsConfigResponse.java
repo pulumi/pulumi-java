@@ -11,11 +11,35 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GitHubEventsConfigResponse {
+    /**
+     * Optional. The resource name of the github enterprise config that should be applied to this installation. For example: "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
+     * 
+     */
     private final String enterpriseConfigResourceName;
+    /**
+     * The installationID that emits the GitHub event.
+     * 
+     */
     private final String installationId;
+    /**
+     * Name of the repository. For example: The name for https://github.com/googlecloudplatform/cloud-builders is "cloud-builders".
+     * 
+     */
     private final String name;
+    /**
+     * Owner of the repository. For example: The owner for https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
+     * 
+     */
     private final String owner;
+    /**
+     * filter to match changes in pull requests.
+     * 
+     */
     private final PullRequestFilterResponse pullRequest;
+    /**
+     * filter to match changes in refs like branches, tags.
+     * 
+     */
     private final PushFilterResponse push;
 
     @OutputCustomType.Constructor({"enterpriseConfigResourceName","installationId","name","owner","pullRequest","push"})
@@ -34,21 +58,45 @@ public final class GitHubEventsConfigResponse {
         this.push = Objects.requireNonNull(push);
     }
 
+    /**
+     * Optional. The resource name of the github enterprise config that should be applied to this installation. For example: "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
+     * 
+     */
     public String getEnterpriseConfigResourceName() {
         return this.enterpriseConfigResourceName;
     }
+    /**
+     * The installationID that emits the GitHub event.
+     * 
+     */
     public String getInstallationId() {
         return this.installationId;
     }
+    /**
+     * Name of the repository. For example: The name for https://github.com/googlecloudplatform/cloud-builders is "cloud-builders".
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Owner of the repository. For example: The owner for https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
+     * 
+     */
     public String getOwner() {
         return this.owner;
     }
+    /**
+     * filter to match changes in pull requests.
+     * 
+     */
     public PullRequestFilterResponse getPullRequest() {
         return this.pullRequest;
     }
+    /**
+     * filter to match changes in refs like branches, tags.
+     * 
+     */
     public PushFilterResponse getPush() {
         return this.push;
     }

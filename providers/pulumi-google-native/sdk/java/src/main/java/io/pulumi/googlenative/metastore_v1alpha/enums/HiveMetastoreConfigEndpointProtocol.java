@@ -8,10 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The protocol to use for the metastore service endpoint. If unspecified, defaults to THRIFT.
+     * 
+     */
     @EnumType
     public enum HiveMetastoreConfigEndpointProtocol {
+        /**
+         * The protocol is not set.
+         * 
+         */
         EndpointProtocolUnspecified("ENDPOINT_PROTOCOL_UNSPECIFIED"),
+        /**
+         * Use the legacy Apache Thrift protocol for the metastore service endpoint.
+         * 
+         */
         Thrift("THRIFT"),
+        /**
+         * Use the modernized gRPC protocol for the metastore service endpoint.
+         * 
+         */
         Grpc("GRPC");
 
         private final String value;

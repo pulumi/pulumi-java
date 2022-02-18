@@ -12,9 +12,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ExecStepConfigResponse {
+    /**
+     * Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
+     * 
+     */
     private final List<Integer> allowedSuccessCodes;
+    /**
+     * A Google Cloud Storage object containing the executable.
+     * 
+     */
     private final GcsObjectResponse gcsObject;
+    /**
+     * The script interpreter to use to run the script. If no interpreter is specified the script will be executed directly, which will likely only succeed for scripts with [shebang lines] (https://en.wikipedia.org/wiki/Shebang_\(Unix\)).
+     * 
+     */
     private final String interpreter;
+    /**
+     * An absolute path to the executable on the VM.
+     * 
+     */
     private final String localPath;
 
     @OutputCustomType.Constructor({"allowedSuccessCodes","gcsObject","interpreter","localPath"})
@@ -29,15 +45,31 @@ public final class ExecStepConfigResponse {
         this.localPath = Objects.requireNonNull(localPath);
     }
 
+    /**
+     * Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
+     * 
+     */
     public List<Integer> getAllowedSuccessCodes() {
         return this.allowedSuccessCodes;
     }
+    /**
+     * A Google Cloud Storage object containing the executable.
+     * 
+     */
     public GcsObjectResponse getGcsObject() {
         return this.gcsObject;
     }
+    /**
+     * The script interpreter to use to run the script. If no interpreter is specified the script will be executed directly, which will likely only succeed for scripts with [shebang lines] (https://en.wikipedia.org/wiki/Shebang_\(Unix\)).
+     * 
+     */
     public String getInterpreter() {
         return this.interpreter;
     }
+    /**
+     * An absolute path to the executable on the VM.
+     * 
+     */
     public String getLocalPath() {
         return this.localPath;
     }

@@ -8,12 +8,36 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Specifies the load balancer type. A backend service created for one type of load balancer cannot be used with another. For more information, refer to Choosing a load balancer.
+     * 
+     */
     @EnumType
     public enum BackendServiceLoadBalancingScheme {
+        /**
+         * Signifies that this will be used for external HTTP(S), SSL Proxy, TCP Proxy, or Network Load Balancing
+         * 
+         */
         External("EXTERNAL"),
+        /**
+         * Signifies that this will be used for External Managed HTTP(S) Load Balancing.
+         * 
+         */
         ExternalManaged("EXTERNAL_MANAGED"),
+        /**
+         * Signifies that this will be used for Internal TCP/UDP Load Balancing.
+         * 
+         */
         Internal("INTERNAL"),
+        /**
+         * Signifies that this will be used for Internal HTTP(S) Load Balancing.
+         * 
+         */
         InternalManaged("INTERNAL_MANAGED"),
+        /**
+         * Signifies that this will be used by Traffic Director.
+         * 
+         */
         InternalSelfManaged("INTERNAL_SELF_MANAGED"),
         InvalidLoadBalancingScheme("INVALID_LOAD_BALANCING_SCHEME");
 

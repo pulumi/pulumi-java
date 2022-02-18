@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Evaluations of restrictions applied to parent group on this membership.
+ * 
+ */
 public final class RestrictionEvaluationsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RestrictionEvaluationsArgs Empty = new RestrictionEvaluationsArgs();
 
+    /**
+     * Evaluation of the member restriction applied to this membership. Empty if the user lacks permission to view the restriction evaluation.
+     * 
+     */
     @InputImport(name="memberRestrictionEvaluation")
     private final @Nullable Input<MembershipRoleRestrictionEvaluationArgs> memberRestrictionEvaluation;
 

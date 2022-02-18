@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ReplicaResponse {
+    /**
+     * The canonical IDs of the location to replicate data. For example: `"us-east1"`.
+     * 
+     */
     private final String location;
 
     @OutputCustomType.Constructor({"location"})
@@ -16,6 +20,10 @@ public final class ReplicaResponse {
         this.location = Objects.requireNonNull(location);
     }
 
+    /**
+     * The canonical IDs of the location to replicate data. For example: `"us-east1"`.
+     * 
+     */
     public String getLocation() {
         return this.location;
     }

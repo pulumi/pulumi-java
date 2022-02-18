@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDomainBackupIamPolicy {
+/**
+ * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+ * 
+ */
     public static CompletableFuture<GetDomainBackupIamPolicyResult> invokeAsync(GetDomainBackupIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:managedidentities/v1alpha1:getDomainBackupIamPolicy", TypeShape.of(GetDomainBackupIamPolicyResult.class), args == null ? GetDomainBackupIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

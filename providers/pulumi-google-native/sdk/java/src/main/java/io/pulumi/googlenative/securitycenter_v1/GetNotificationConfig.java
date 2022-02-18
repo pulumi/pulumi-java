@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNotificationConfig {
+/**
+ * Gets a notification config.
+ * 
+ */
     public static CompletableFuture<GetNotificationConfigResult> invokeAsync(GetNotificationConfigArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:securitycenter/v1:getNotificationConfig", TypeShape.of(GetNotificationConfigResult.class), args == null ? GetNotificationConfigArgs.Empty : args, Utilities.withVersion(options));
     }

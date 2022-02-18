@@ -14,51 +14,117 @@ import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Creates a Project resource. Initially, the Project resource is owned by its creator exclusively. The creator can later grant permission to others to read or update the Project. Several APIs are activated automatically for the Project, including Google Cloud Storage. The parent is identified by a specified ResourceId, which must include both an ID and a type, such as project, folder, or organization. This method does not associate the new project with a billing account. You can set or update the billing account associated with a project using the [`projects.updateBillingInfo`] (/billing/reference/rest/v1/projects/updateBillingInfo) method.
+ * 
+ */
 @ResourceType(type="google-native:cloudresourcemanager/v1beta1:Project")
 public class Project extends io.pulumi.resources.CustomResource {
+    /**
+     * Creation time. Read-only.
+     * 
+     */
     @OutputExport(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
+    /**
+     * @return Creation time. Read-only.
+     * 
+     */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
+    /**
+     * The labels associated with this Project. Label keys must be between 1 and 63 characters long and must conform to the following regular expression: a-z{0,62}. Label values must be between 0 and 63 characters long and must conform to the regular expression [a-z0-9_-]{0,63}. A label value can be empty. No more than 256 labels can be associated with a given resource. Clients should store labels in a representation such as JSON that does not depend on specific characters being disallowed. Example: `"environment" : "dev"` Read-write.
+     * 
+     */
     @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
+    /**
+     * @return The labels associated with this Project. Label keys must be between 1 and 63 characters long and must conform to the following regular expression: a-z{0,62}. Label values must be between 0 and 63 characters long and must conform to the regular expression [a-z0-9_-]{0,63}. A label value can be empty. No more than 256 labels can be associated with a given resource. Clients should store labels in a representation such as JSON that does not depend on specific characters being disallowed. Example: `"environment" : "dev"` Read-write.
+     * 
+     */
     public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
+    /**
+     * The Project lifecycle state. Read-only.
+     * 
+     */
     @OutputExport(name="lifecycleState", type=String.class, parameters={})
     private Output<String> lifecycleState;
 
+    /**
+     * @return The Project lifecycle state. Read-only.
+     * 
+     */
     public Output<String> getLifecycleState() {
         return this.lifecycleState;
     }
+    /**
+     * The optional user-assigned display name of the Project. When present it must be between 4 to 30 characters. Allowed characters are: lowercase and uppercase letters, numbers, hyphen, single-quote, double-quote, space, and exclamation point. Example: `My Project` Read-write.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The optional user-assigned display name of the Project. When present it must be between 4 to 30 characters. Allowed characters are: lowercase and uppercase letters, numbers, hyphen, single-quote, double-quote, space, and exclamation point. Example: `My Project` Read-write.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * An optional reference to a parent Resource. Supported parent types include "organization" and "folder". Once set, the parent cannot be cleared. The `parent` can be set on creation or using the `UpdateProject` method; the end user must have the `resourcemanager.projects.create` permission on the parent. Read-write.
+     * 
+     */
     @OutputExport(name="parent", type=ResourceIdResponse.class, parameters={})
     private Output<ResourceIdResponse> parent;
 
+    /**
+     * @return An optional reference to a parent Resource. Supported parent types include "organization" and "folder". Once set, the parent cannot be cleared. The `parent` can be set on creation or using the `UpdateProject` method; the end user must have the `resourcemanager.projects.create` permission on the parent. Read-write.
+     * 
+     */
     public Output<ResourceIdResponse> getParent() {
         return this.parent;
     }
+    /**
+     * The unique, user-assigned ID of the Project. It must be 6 to 30 lowercase letters, digits, or hyphens. It must start with a letter. Trailing hyphens are prohibited. Example: `tokyo-rain-123` Read-only after creation.
+     * 
+     */
     @OutputExport(name="projectId", type=String.class, parameters={})
     private Output<String> projectId;
 
+    /**
+     * @return The unique, user-assigned ID of the Project. It must be 6 to 30 lowercase letters, digits, or hyphens. It must start with a letter. Trailing hyphens are prohibited. Example: `tokyo-rain-123` Read-only after creation.
+     * 
+     */
     public Output<String> getProjectId() {
         return this.projectId;
     }
+    /**
+     * The number uniquely identifying the project. Example: `415104041262` Read-only.
+     * 
+     */
     @OutputExport(name="projectNumber", type=String.class, parameters={})
     private Output<String> projectNumber;
 
+    /**
+     * @return The number uniquely identifying the project. Example: `415104041262` Read-only.
+     * 
+     */
     public Output<String> getProjectNumber() {
         return this.projectNumber;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Project(String name, @Nullable ProjectArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:cloudresourcemanager/v1beta1:Project", name, args == null ? ProjectArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -74,6 +140,14 @@ public class Project extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Project get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Project(name, id, options);
     }

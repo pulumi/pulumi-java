@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Used for time-dependent conditions. Example: Want to have rule applied for week long sale.
+ * 
+ */
 public final class GoogleCloudRetailV2betaConditionTimeRangeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudRetailV2betaConditionTimeRangeArgs Empty = new GoogleCloudRetailV2betaConditionTimeRangeArgs();
 
+    /**
+     * End of time range. Range is inclusive.
+     * 
+     */
     @InputImport(name="endTime")
     private final @Nullable Input<String> endTime;
 
@@ -21,6 +29,10 @@ public final class GoogleCloudRetailV2betaConditionTimeRangeArgs extends io.pulu
         return this.endTime == null ? Input.empty() : this.endTime;
     }
 
+    /**
+     * Start of time range. Range is inclusive.
+     * 
+     */
     @InputImport(name="startTime")
     private final @Nullable Input<String> startTime;
 

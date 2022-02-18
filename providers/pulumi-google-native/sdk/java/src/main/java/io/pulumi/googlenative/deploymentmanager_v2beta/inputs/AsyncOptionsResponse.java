@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Async options that determine when a resource should finish.
+ * 
+ */
 public final class AsyncOptionsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AsyncOptionsResponse Empty = new AsyncOptionsResponse();
 
+    /**
+     * Method regex where this policy will apply.
+     * 
+     */
     @InputImport(name="methodMatch", required=true)
     private final String methodMatch;
 
@@ -20,6 +28,10 @@ public final class AsyncOptionsResponse extends io.pulumi.resources.InvokeArgs {
         return this.methodMatch;
     }
 
+    /**
+     * Deployment manager will poll instances for this API resource setting a RUNNING state, and blocking until polling conditions tell whether the resource is completed or failed.
+     * 
+     */
     @InputImport(name="pollingOptions", required=true)
     private final PollingOptionsResponse pollingOptions;
 

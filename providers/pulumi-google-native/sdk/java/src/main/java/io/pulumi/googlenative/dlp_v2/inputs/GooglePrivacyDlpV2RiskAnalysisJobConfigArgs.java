@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Configuration for a risk analysis job. See https://cloud.google.com/dlp/docs/concepts-risk-analysis to learn more.
+ * 
+ */
 public final class GooglePrivacyDlpV2RiskAnalysisJobConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GooglePrivacyDlpV2RiskAnalysisJobConfigArgs Empty = new GooglePrivacyDlpV2RiskAnalysisJobConfigArgs();
 
+    /**
+     * Actions to execute at the completion of the job. Are executed in the order provided.
+     * 
+     */
     @InputImport(name="actions")
     private final @Nullable Input<List<GooglePrivacyDlpV2ActionArgs>> actions;
 
@@ -24,6 +32,10 @@ public final class GooglePrivacyDlpV2RiskAnalysisJobConfigArgs extends io.pulumi
         return this.actions == null ? Input.empty() : this.actions;
     }
 
+    /**
+     * Privacy metric to compute.
+     * 
+     */
     @InputImport(name="privacyMetric")
     private final @Nullable Input<GooglePrivacyDlpV2PrivacyMetricArgs> privacyMetric;
 
@@ -31,6 +43,10 @@ public final class GooglePrivacyDlpV2RiskAnalysisJobConfigArgs extends io.pulumi
         return this.privacyMetric == null ? Input.empty() : this.privacyMetric;
     }
 
+    /**
+     * Input dataset to compute metrics over.
+     * 
+     */
     @InputImport(name="sourceTable")
     private final @Nullable Input<GooglePrivacyDlpV2BigQueryTableArgs> sourceTable;
 

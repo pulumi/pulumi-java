@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Write a Cloud Audit log
+ * 
+ */
 public final class CloudAuditOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CloudAuditOptionsArgs Empty = new CloudAuditOptionsArgs();
 
+    /**
+     * Information used by the Cloud Audit Logging pipeline.
+     * 
+     */
     @InputImport(name="authorizationLoggingOptions")
     private final @Nullable Input<AuthorizationLoggingOptionsArgs> authorizationLoggingOptions;
 
@@ -22,6 +30,10 @@ public final class CloudAuditOptionsArgs extends io.pulumi.resources.ResourceArg
         return this.authorizationLoggingOptions == null ? Input.empty() : this.authorizationLoggingOptions;
     }
 
+    /**
+     * The log_name to populate in the Cloud Audit Record.
+     * 
+     */
     @InputImport(name="logName")
     private final @Nullable Input<CloudAuditOptionsLogName> logName;
 

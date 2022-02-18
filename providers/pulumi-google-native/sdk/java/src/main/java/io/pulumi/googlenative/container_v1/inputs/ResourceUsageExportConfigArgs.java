@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Configuration for exporting cluster resource usages.
+ * 
+ */
 public final class ResourceUsageExportConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourceUsageExportConfigArgs Empty = new ResourceUsageExportConfigArgs();
 
+    /**
+     * Configuration to use BigQuery as usage export destination.
+     * 
+     */
     @InputImport(name="bigqueryDestination")
     private final @Nullable Input<BigQueryDestinationArgs> bigqueryDestination;
 
@@ -23,6 +31,10 @@ public final class ResourceUsageExportConfigArgs extends io.pulumi.resources.Res
         return this.bigqueryDestination == null ? Input.empty() : this.bigqueryDestination;
     }
 
+    /**
+     * Configuration to enable resource consumption metering.
+     * 
+     */
     @InputImport(name="consumptionMeteringConfig")
     private final @Nullable Input<ConsumptionMeteringConfigArgs> consumptionMeteringConfig;
 
@@ -30,6 +42,10 @@ public final class ResourceUsageExportConfigArgs extends io.pulumi.resources.Res
         return this.consumptionMeteringConfig == null ? Input.empty() : this.consumptionMeteringConfig;
     }
 
+    /**
+     * Whether to enable network egress metering for this cluster. If enabled, a daemonset will be created in the cluster to meter network egress traffic.
+     * 
+     */
     @InputImport(name="enableNetworkEgressMetering")
     private final @Nullable Input<Boolean> enableNetworkEgressMetering;
 

@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The bucket's billing configuration.
+ * 
+ */
 public final class BucketBillingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BucketBillingArgs Empty = new BucketBillingArgs();
 
+    /**
+     * When set to true, Requester Pays is enabled for this bucket.
+     * 
+     */
     @InputImport(name="requesterPays")
     private final @Nullable Input<Boolean> requesterPays;
 

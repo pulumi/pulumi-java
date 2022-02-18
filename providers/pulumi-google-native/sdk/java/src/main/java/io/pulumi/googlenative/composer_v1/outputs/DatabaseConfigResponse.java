@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DatabaseConfigResponse {
+    /**
+     * Optional. Cloud SQL machine type used by Airflow database. It has to be one of: db-n1-standard-2, db-n1-standard-4, db-n1-standard-8 or db-n1-standard-16. If not specified, db-n1-standard-2 will be used.
+     * 
+     */
     private final String machineType;
 
     @OutputCustomType.Constructor({"machineType"})
@@ -16,6 +20,10 @@ public final class DatabaseConfigResponse {
         this.machineType = Objects.requireNonNull(machineType);
     }
 
+    /**
+     * Optional. Cloud SQL machine type used by Airflow database. It has to be one of: db-n1-standard-2, db-n1-standard-4, db-n1-standard-8 or db-n1-standard-16. If not specified, db-n1-standard-2 will be used.
+     * 
+     */
     public String getMachineType() {
         return this.machineType;
     }

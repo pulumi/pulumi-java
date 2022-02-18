@@ -17,33 +17,145 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetServiceResult {
+    /**
+     * Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run will populate some annotations using 'run.googleapis.com' or 'serving.knative.dev' namespaces. This field follows Kubernetes annotations' namespacing, limits, and rules. More info: http://kubernetes.io/docs/user-guide/annotations
+     * 
+     */
     private final Map<String,String> annotations;
+    /**
+     * Settings for the Binary Authorization feature.
+     * 
+     */
     private final GoogleCloudRunOpV2BinaryAuthorizationResponse binaryAuthorization;
+    /**
+     * Arbitrary identifier for the API client.
+     * 
+     */
     private final String client;
+    /**
+     * Arbitrary version identifier for the API client.
+     * 
+     */
     private final String clientVersion;
+    /**
+     * The Conditions of all other associated sub-resources. They contain additional diagnostics information in case the Service does not reach its Serving state. See comments in `reconciling` for additional information on reconciliation process in Cloud Run.
+     * 
+     */
     private final List<GoogleCloudRunOpV2ConditionResponse> conditions;
+    /**
+     * The creation time.
+     * 
+     */
     private final String createTime;
+    /**
+     * Email address of the authenticated creator.
+     * 
+     */
     private final String creator;
+    /**
+     * The deletion time.
+     * 
+     */
     private final String deleteTime;
+    /**
+     * User-provided description of the Service.
+     * 
+     */
     private final String description;
+    /**
+     * A system-generated fingerprint for this version of the resource. May be used to detect modification conflict during updates.
+     * 
+     */
     private final String etag;
+    /**
+     * For a deleted resource, the time after which it will be permamently deleted.
+     * 
+     */
     private final String expireTime;
+    /**
+     * A number that monotonically increases every time the user modifies the desired state.
+     * 
+     */
     private final String generation;
+    /**
+     * Provides the ingress settings for this Service. On output, returns the currently observed ingress settings, or INGRESS_TRAFFIC_UNSPECIFIED if no revision is active.
+     * 
+     */
     private final String ingress;
+    /**
+     * Map of string keys and values that can be used to organize and categorize objects. User-provided labels are shared with Google's billing system, so they can be used to filter, or break down billing charges by team, component, environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels Cloud Run will populate some labels with 'run.googleapis.com' or 'serving.knative.dev' namespaces. Those labels are read-only, and user changes will not be preserved.
+     * 
+     */
     private final Map<String,String> labels;
+    /**
+     * Email address of the last authenticated modifier.
+     * 
+     */
     private final String lastModifier;
+    /**
+     * Name of the last created revision. See comments in `reconciling` for additional information on reconciliation process in Cloud Run.
+     * 
+     */
     private final String latestCreatedRevision;
+    /**
+     * Name of the latest revision that is serving traffic. See comments in `reconciling` for additional information on reconciliation process in Cloud Run.
+     * 
+     */
     private final String latestReadyRevision;
+    /**
+     * The launch stage as defined by [Google Cloud Platform Launch Stages](http://cloud.google.com/terms/launch-stages). Cloud Run supports `ALPHA`, `BETA`, and `GA`. If no value is specified, GA is assumed.
+     * 
+     */
     private final String launchStage;
+    /**
+     * The fully qualified name of this Service. In CreateServiceRequest, this field is ignored, and instead composed from CreateServiceRequest.parent and CreateServiceRequest.service_id. Format: projects/{project}/locations/{location}/services/{service_id}
+     * 
+     */
     private final String name;
+    /**
+     * The generation of this Service currently serving traffic. See comments in `reconciling` for additional information on reconciliation process in Cloud Run.
+     * 
+     */
     private final String observedGeneration;
+    /**
+     * Returns true if the Service is currently being acted upon by the system to bring it into the desired state. When a new Service is created, or an existing one is updated, Cloud Run will asynchronously perform all necessary steps to bring the Service to the desired serving state. This process is called reconciliation. While reconciliation is in process, `observed_generation`, `latest_ready_revison`, `traffic_statuses`, and `uri` will have transient values that might mismatch the intended state: Once reconciliation is over (and this field is false), there are two possible outcomes: reconciliation succeeded and the serving state matches the Service, or there was an error, and reconciliation failed. This state can be found in `terminal_condition.state`. If reconciliation succeeded, the following fields will match: `traffic` and `traffic_statuses`, `observed_generation` and `generation`, `latest_ready_revision` and `latest_created_revision`. If reconciliation failed, `traffic_statuses`, `observed_generation`, and `latest_ready_revision` will have the state of the last serving revision, or empty for newly created Services. Additional information on the failure can be found in `terminal_condition` and `conditions`.
+     * 
+     */
     private final Boolean reconciling;
+    /**
+     * The template used to create revisions for this Service.
+     * 
+     */
     private final GoogleCloudRunOpV2RevisionTemplateResponse template;
+    /**
+     * The Condition of this Service, containing its readiness status, and detailed error information in case it did not reach a serving state. See comments in `reconciling` for additional information on reconciliation process in Cloud Run.
+     * 
+     */
     private final GoogleCloudRunOpV2ConditionResponse terminalCondition;
+    /**
+     * Specifies how to distribute traffic over a collection of Revisions belonging to the Service. If traffic is empty or not provided, defaults to 100% traffic to the latest `Ready` Revision.
+     * 
+     */
     private final List<GoogleCloudRunOpV2TrafficTargetResponse> traffic;
+    /**
+     * Detailed status information for corresponding traffic targets. See comments in `reconciling` for additional information on reconciliation process in Cloud Run.
+     * 
+     */
     private final List<GoogleCloudRunOpV2TrafficTargetStatusResponse> trafficStatuses;
+    /**
+     * Server assigned unique identifier for the trigger. The value is a UUID4 string and guaranteed to remain unchanged until the resource is deleted.
+     * 
+     */
     private final String uid;
+    /**
+     * The last-modified time.
+     * 
+     */
     private final String updateTime;
+    /**
+     * The main URI in which this Service is serving traffic.
+     * 
+     */
     private final String uri;
 
     @OutputCustomType.Constructor({"annotations","binaryAuthorization","client","clientVersion","conditions","createTime","creator","deleteTime","description","etag","expireTime","generation","ingress","labels","lastModifier","latestCreatedRevision","latestReadyRevision","launchStage","name","observedGeneration","reconciling","template","terminalCondition","traffic","trafficStatuses","uid","updateTime","uri"})
@@ -106,87 +218,199 @@ public final class GetServiceResult {
         this.uri = Objects.requireNonNull(uri);
     }
 
+    /**
+     * Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run will populate some annotations using 'run.googleapis.com' or 'serving.knative.dev' namespaces. This field follows Kubernetes annotations' namespacing, limits, and rules. More info: http://kubernetes.io/docs/user-guide/annotations
+     * 
+     */
     public Map<String,String> getAnnotations() {
         return this.annotations;
     }
+    /**
+     * Settings for the Binary Authorization feature.
+     * 
+     */
     public GoogleCloudRunOpV2BinaryAuthorizationResponse getBinaryAuthorization() {
         return this.binaryAuthorization;
     }
+    /**
+     * Arbitrary identifier for the API client.
+     * 
+     */
     public String getClient() {
         return this.client;
     }
+    /**
+     * Arbitrary version identifier for the API client.
+     * 
+     */
     public String getClientVersion() {
         return this.clientVersion;
     }
+    /**
+     * The Conditions of all other associated sub-resources. They contain additional diagnostics information in case the Service does not reach its Serving state. See comments in `reconciling` for additional information on reconciliation process in Cloud Run.
+     * 
+     */
     public List<GoogleCloudRunOpV2ConditionResponse> getConditions() {
         return this.conditions;
     }
+    /**
+     * The creation time.
+     * 
+     */
     public String getCreateTime() {
         return this.createTime;
     }
+    /**
+     * Email address of the authenticated creator.
+     * 
+     */
     public String getCreator() {
         return this.creator;
     }
+    /**
+     * The deletion time.
+     * 
+     */
     public String getDeleteTime() {
         return this.deleteTime;
     }
+    /**
+     * User-provided description of the Service.
+     * 
+     */
     public String getDescription() {
         return this.description;
     }
+    /**
+     * A system-generated fingerprint for this version of the resource. May be used to detect modification conflict during updates.
+     * 
+     */
     public String getEtag() {
         return this.etag;
     }
+    /**
+     * For a deleted resource, the time after which it will be permamently deleted.
+     * 
+     */
     public String getExpireTime() {
         return this.expireTime;
     }
+    /**
+     * A number that monotonically increases every time the user modifies the desired state.
+     * 
+     */
     public String getGeneration() {
         return this.generation;
     }
+    /**
+     * Provides the ingress settings for this Service. On output, returns the currently observed ingress settings, or INGRESS_TRAFFIC_UNSPECIFIED if no revision is active.
+     * 
+     */
     public String getIngress() {
         return this.ingress;
     }
+    /**
+     * Map of string keys and values that can be used to organize and categorize objects. User-provided labels are shared with Google's billing system, so they can be used to filter, or break down billing charges by team, component, environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels Cloud Run will populate some labels with 'run.googleapis.com' or 'serving.knative.dev' namespaces. Those labels are read-only, and user changes will not be preserved.
+     * 
+     */
     public Map<String,String> getLabels() {
         return this.labels;
     }
+    /**
+     * Email address of the last authenticated modifier.
+     * 
+     */
     public String getLastModifier() {
         return this.lastModifier;
     }
+    /**
+     * Name of the last created revision. See comments in `reconciling` for additional information on reconciliation process in Cloud Run.
+     * 
+     */
     public String getLatestCreatedRevision() {
         return this.latestCreatedRevision;
     }
+    /**
+     * Name of the latest revision that is serving traffic. See comments in `reconciling` for additional information on reconciliation process in Cloud Run.
+     * 
+     */
     public String getLatestReadyRevision() {
         return this.latestReadyRevision;
     }
+    /**
+     * The launch stage as defined by [Google Cloud Platform Launch Stages](http://cloud.google.com/terms/launch-stages). Cloud Run supports `ALPHA`, `BETA`, and `GA`. If no value is specified, GA is assumed.
+     * 
+     */
     public String getLaunchStage() {
         return this.launchStage;
     }
+    /**
+     * The fully qualified name of this Service. In CreateServiceRequest, this field is ignored, and instead composed from CreateServiceRequest.parent and CreateServiceRequest.service_id. Format: projects/{project}/locations/{location}/services/{service_id}
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The generation of this Service currently serving traffic. See comments in `reconciling` for additional information on reconciliation process in Cloud Run.
+     * 
+     */
     public String getObservedGeneration() {
         return this.observedGeneration;
     }
+    /**
+     * Returns true if the Service is currently being acted upon by the system to bring it into the desired state. When a new Service is created, or an existing one is updated, Cloud Run will asynchronously perform all necessary steps to bring the Service to the desired serving state. This process is called reconciliation. While reconciliation is in process, `observed_generation`, `latest_ready_revison`, `traffic_statuses`, and `uri` will have transient values that might mismatch the intended state: Once reconciliation is over (and this field is false), there are two possible outcomes: reconciliation succeeded and the serving state matches the Service, or there was an error, and reconciliation failed. This state can be found in `terminal_condition.state`. If reconciliation succeeded, the following fields will match: `traffic` and `traffic_statuses`, `observed_generation` and `generation`, `latest_ready_revision` and `latest_created_revision`. If reconciliation failed, `traffic_statuses`, `observed_generation`, and `latest_ready_revision` will have the state of the last serving revision, or empty for newly created Services. Additional information on the failure can be found in `terminal_condition` and `conditions`.
+     * 
+     */
     public Boolean getReconciling() {
         return this.reconciling;
     }
+    /**
+     * The template used to create revisions for this Service.
+     * 
+     */
     public GoogleCloudRunOpV2RevisionTemplateResponse getTemplate() {
         return this.template;
     }
+    /**
+     * The Condition of this Service, containing its readiness status, and detailed error information in case it did not reach a serving state. See comments in `reconciling` for additional information on reconciliation process in Cloud Run.
+     * 
+     */
     public GoogleCloudRunOpV2ConditionResponse getTerminalCondition() {
         return this.terminalCondition;
     }
+    /**
+     * Specifies how to distribute traffic over a collection of Revisions belonging to the Service. If traffic is empty or not provided, defaults to 100% traffic to the latest `Ready` Revision.
+     * 
+     */
     public List<GoogleCloudRunOpV2TrafficTargetResponse> getTraffic() {
         return this.traffic;
     }
+    /**
+     * Detailed status information for corresponding traffic targets. See comments in `reconciling` for additional information on reconciliation process in Cloud Run.
+     * 
+     */
     public List<GoogleCloudRunOpV2TrafficTargetStatusResponse> getTrafficStatuses() {
         return this.trafficStatuses;
     }
+    /**
+     * Server assigned unique identifier for the trigger. The value is a UUID4 string and guaranteed to remain unchanged until the resource is deleted.
+     * 
+     */
     public String getUid() {
         return this.uid;
     }
+    /**
+     * The last-modified time.
+     * 
+     */
     public String getUpdateTime() {
         return this.updateTime;
     }
+    /**
+     * The main URI in which this Service is serving traffic.
+     * 
+     */
     public String getUri() {
         return this.uri;
     }

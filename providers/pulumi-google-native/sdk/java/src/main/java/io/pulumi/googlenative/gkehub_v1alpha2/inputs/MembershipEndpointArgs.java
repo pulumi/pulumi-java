@@ -14,10 +14,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * MembershipEndpoint contains information needed to contact a Kubernetes API, endpoint and any additional Kubernetes metadata.
+ * 
+ */
 public final class MembershipEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MembershipEndpointArgs Empty = new MembershipEndpointArgs();
 
+    /**
+     * Optional. Specific information for a Google Edge cluster.
+     * 
+     */
     @InputImport(name="edgeCluster")
     private final @Nullable Input<EdgeClusterArgs> edgeCluster;
 
@@ -25,6 +33,10 @@ public final class MembershipEndpointArgs extends io.pulumi.resources.ResourceAr
         return this.edgeCluster == null ? Input.empty() : this.edgeCluster;
     }
 
+    /**
+     * Optional. Specific information for a GKE-on-GCP cluster.
+     * 
+     */
     @InputImport(name="gkeCluster")
     private final @Nullable Input<GkeClusterArgs> gkeCluster;
 
@@ -32,6 +44,10 @@ public final class MembershipEndpointArgs extends io.pulumi.resources.ResourceAr
         return this.gkeCluster == null ? Input.empty() : this.gkeCluster;
     }
 
+    /**
+     * Optional. The in-cluster Kubernetes Resources that should be applied for a correctly registered cluster, in the steady state. These resources: * Ensure that the cluster is exclusively registered to one and only one Hub Membership. * Propagate Workload Pool Information available in the Membership Authority field. * Ensure proper initial configuration of default Hub Features.
+     * 
+     */
     @InputImport(name="kubernetesResource")
     private final @Nullable Input<KubernetesResourceArgs> kubernetesResource;
 
@@ -39,6 +55,10 @@ public final class MembershipEndpointArgs extends io.pulumi.resources.ResourceAr
         return this.kubernetesResource == null ? Input.empty() : this.kubernetesResource;
     }
 
+    /**
+     * Optional. Specific information for a GKE Multi-Cloud cluster.
+     * 
+     */
     @InputImport(name="multiCloudCluster")
     private final @Nullable Input<MultiCloudClusterArgs> multiCloudCluster;
 
@@ -46,6 +66,10 @@ public final class MembershipEndpointArgs extends io.pulumi.resources.ResourceAr
         return this.multiCloudCluster == null ? Input.empty() : this.multiCloudCluster;
     }
 
+    /**
+     * Optional. Specific information for a GKE On-Prem cluster. An onprem user-cluster who has no resourceLink is not allowed to use this field, it should have a nil "type" instead.
+     * 
+     */
     @InputImport(name="onPremCluster")
     private final @Nullable Input<OnPremClusterArgs> onPremCluster;
 

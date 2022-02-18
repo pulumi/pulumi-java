@@ -8,16 +8,56 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Required. The algorithm to use for creating a managed Cloud KMS key for a for a simplified experience. All managed keys will be have their ProtectionLevel as `HSM`.
+     * 
+     */
     @EnumType
     public enum KeyVersionSpecAlgorithm {
+        /**
+         * Not specified.
+         * 
+         */
         SignHashAlgorithmUnspecified("SIGN_HASH_ALGORITHM_UNSPECIFIED"),
+        /**
+         * maps to CryptoKeyVersionAlgorithm.RSA_SIGN_PSS_2048_SHA256
+         * 
+         */
         RsaPss2048Sha256("RSA_PSS_2048_SHA256"),
+        /**
+         * maps to CryptoKeyVersionAlgorithm. RSA_SIGN_PSS_3072_SHA256
+         * 
+         */
         RsaPss3072Sha256("RSA_PSS_3072_SHA256"),
+        /**
+         * maps to CryptoKeyVersionAlgorithm.RSA_SIGN_PSS_4096_SHA256
+         * 
+         */
         RsaPss4096Sha256("RSA_PSS_4096_SHA256"),
+        /**
+         * maps to CryptoKeyVersionAlgorithm.RSA_SIGN_PKCS1_2048_SHA256
+         * 
+         */
         RsaPkcs12048Sha256("RSA_PKCS1_2048_SHA256"),
+        /**
+         * maps to CryptoKeyVersionAlgorithm.RSA_SIGN_PKCS1_3072_SHA256
+         * 
+         */
         RsaPkcs13072Sha256("RSA_PKCS1_3072_SHA256"),
+        /**
+         * maps to CryptoKeyVersionAlgorithm.RSA_SIGN_PKCS1_4096_SHA256
+         * 
+         */
         RsaPkcs14096Sha256("RSA_PKCS1_4096_SHA256"),
+        /**
+         * maps to CryptoKeyVersionAlgorithm.EC_SIGN_P256_SHA256
+         * 
+         */
         EcP256Sha256("EC_P256_SHA256"),
+        /**
+         * maps to CryptoKeyVersionAlgorithm.EC_SIGN_P384_SHA384
+         * 
+         */
         EcP384Sha384("EC_P384_SHA384");
 
         private final String value;

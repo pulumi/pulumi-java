@@ -8,10 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Specifies which action to take on instance update with this disk. Default is to use the existing disk.
+     * 
+     */
     @EnumType
     public enum AttachedDiskInitializeParamsOnUpdateAction {
+        /**
+         * Always recreate the disk.
+         * 
+         */
         RecreateDisk("RECREATE_DISK"),
+        /**
+         * Recreate the disk if source (image, snapshot) of this disk is different from source of existing disk.
+         * 
+         */
         RecreateDiskIfSourceChanged("RECREATE_DISK_IF_SOURCE_CHANGED"),
+        /**
+         * Use the existing disk, this is the default behaviour.
+         * 
+         */
         UseExistingDisk("USE_EXISTING_DISK");
 
         private final String value;

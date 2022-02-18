@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specifies required connection parameters, and, optionally, the parameters required to create a Cloud SQL destination database instance.
+ * 
+ */
 public final class CloudSqlConnectionProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CloudSqlConnectionProfileArgs Empty = new CloudSqlConnectionProfileArgs();
 
+    /**
+     * Immutable. Metadata used to create the destination Cloud SQL database.
+     * 
+     */
     @InputImport(name="settings")
     private final @Nullable Input<CloudSqlSettingsArgs> settings;
 

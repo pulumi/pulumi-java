@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A package managed by Zypper. - install: `zypper -y install package` - remove: `zypper -y rm package`
+ * 
+ */
 public final class OSPolicyResourcePackageResourceZypperResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OSPolicyResourcePackageResourceZypperResponse Empty = new OSPolicyResourcePackageResourceZypperResponse();
 
+    /**
+     * Package name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Private Connectivity
+ * 
+ */
 public final class PrivateConnectivityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PrivateConnectivityResponse Empty = new PrivateConnectivityResponse();
 
+    /**
+     * A reference to a private connection resource. Format: `projects/{project}/locations/{location}/privateConnections/{name}`
+     * 
+     */
     @InputImport(name="privateConnection", required=true)
     private final String privateConnection;
 

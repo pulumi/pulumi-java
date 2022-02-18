@@ -15,6 +15,10 @@ public final class ResponsePolicyRuleLocalDataArgs extends io.pulumi.resources.R
 
     public static final ResponsePolicyRuleLocalDataArgs Empty = new ResponsePolicyRuleLocalDataArgs();
 
+    /**
+     * All resource record sets for this selector, one per resource record type. The name must match the dns_name.
+     * 
+     */
     @InputImport(name="localDatas")
     private final @Nullable Input<List<ResourceRecordSetArgs>> localDatas;
 

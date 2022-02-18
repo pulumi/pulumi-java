@@ -16,6 +16,10 @@ public final class AttributeDefinitionArgs extends io.pulumi.resources.ResourceA
 
     public static final AttributeDefinitionArgs Empty = new AttributeDefinitionArgs();
 
+    /**
+     * Possible values for the attribute. The number of allowed values must not exceed 500. An empty list is invalid. The list can only be expanded after creation.
+     * 
+     */
     @InputImport(name="allowedValues", required=true)
     private final Input<List<String>> allowedValues;
 
@@ -30,6 +34,10 @@ public final class AttributeDefinitionArgs extends io.pulumi.resources.ResourceA
         return this.attributeDefinitionId;
     }
 
+    /**
+     * The category of the attribute. The value of this field cannot be changed after creation.
+     * 
+     */
     @InputImport(name="category", required=true)
     private final Input<AttributeDefinitionCategory> category;
 
@@ -37,6 +45,10 @@ public final class AttributeDefinitionArgs extends io.pulumi.resources.ResourceA
         return this.category;
     }
 
+    /**
+     * Optional. Default values of the attribute in Consents. If no default values are specified, it defaults to an empty value.
+     * 
+     */
     @InputImport(name="consentDefaultValues")
     private final @Nullable Input<List<String>> consentDefaultValues;
 
@@ -51,6 +63,10 @@ public final class AttributeDefinitionArgs extends io.pulumi.resources.ResourceA
         return this.consentStoreId;
     }
 
+    /**
+     * Optional. Default value of the attribute in User data mappings. If no default value is specified, it defaults to an empty value. This field is only applicable to attributes of the category `RESOURCE`.
+     * 
+     */
     @InputImport(name="dataMappingDefaultValue")
     private final @Nullable Input<String> dataMappingDefaultValue;
 
@@ -65,6 +81,10 @@ public final class AttributeDefinitionArgs extends io.pulumi.resources.ResourceA
         return this.datasetId;
     }
 
+    /**
+     * Optional. A description of the attribute.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -79,6 +99,10 @@ public final class AttributeDefinitionArgs extends io.pulumi.resources.ResourceA
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Resource name of the Attribute definition, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/attributeDefinitions/{attribute_definition_id}`. Cannot be changed after creation.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

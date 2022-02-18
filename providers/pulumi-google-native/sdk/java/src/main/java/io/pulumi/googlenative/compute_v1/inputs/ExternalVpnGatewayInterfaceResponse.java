@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The interface for the external VPN gateway.
+ * 
+ */
 public final class ExternalVpnGatewayInterfaceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ExternalVpnGatewayInterfaceResponse Empty = new ExternalVpnGatewayInterfaceResponse();
 
+    /**
+     * IP address of the interface in the external VPN gateway. Only IPv4 is supported. This IP address can be either from your on-premise gateway or another Cloud provider's VPN gateway, it cannot be an IP address from Google Compute Engine.
+     * 
+     */
     @InputImport(name="ipAddress", required=true)
     private final String ipAddress;
 

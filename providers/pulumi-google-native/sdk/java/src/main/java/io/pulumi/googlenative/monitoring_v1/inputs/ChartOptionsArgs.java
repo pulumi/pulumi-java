@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Options to control visual rendering of a chart.
+ * 
+ */
 public final class ChartOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ChartOptionsArgs Empty = new ChartOptionsArgs();
 
+    /**
+     * The chart mode.
+     * 
+     */
     @InputImport(name="mode")
     private final @Nullable Input<ChartOptionsMode> mode;
 

@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GooglePrivacyDlpV2ValueFrequencyResponse {
+    /**
+     * How many times the value is contained in the field.
+     * 
+     */
     private final String count;
+    /**
+     * A value contained in the field in question.
+     * 
+     */
     private final GooglePrivacyDlpV2ValueResponse value;
 
     @OutputCustomType.Constructor({"count","value"})
@@ -21,9 +29,17 @@ public final class GooglePrivacyDlpV2ValueFrequencyResponse {
         this.value = Objects.requireNonNull(value);
     }
 
+    /**
+     * How many times the value is contained in the field.
+     * 
+     */
     public String getCount() {
         return this.count;
     }
+    /**
+     * A value contained in the field in question.
+     * 
+     */
     public GooglePrivacyDlpV2ValueResponse getValue() {
         return this.value;
     }

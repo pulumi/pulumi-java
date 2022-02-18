@@ -12,6 +12,10 @@ import java.util.Objects;
 @OutputCustomType
 public final class VolumeResponse {
     private final ConfigMapVolumeSourceResponse configMap;
+    /**
+     * Volume's name. In Cloud Run Fully Managed, the name 'cloudsql' is reserved.
+     * 
+     */
     private final String name;
     private final SecretVolumeSourceResponse secret;
 
@@ -28,6 +32,10 @@ public final class VolumeResponse {
     public ConfigMapVolumeSourceResponse getConfigMap() {
         return this.configMap;
     }
+    /**
+     * Volume's name. In Cloud Run Fully Managed, the name 'cloudsql' is reserved.
+     * 
+     */
     public String getName() {
         return this.name;
     }

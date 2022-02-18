@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AppEngineHttpTargetResponse {
+    /**
+     * Overrides for the task-level app_engine_routing. If set, `app_engine_routing_override` is used for all tasks in the queue, no matter what the setting is for the task-level app_engine_routing.
+     * 
+     */
     private final AppEngineRoutingResponse appEngineRoutingOverride;
 
     @OutputCustomType.Constructor({"appEngineRoutingOverride"})
@@ -16,6 +20,10 @@ public final class AppEngineHttpTargetResponse {
         this.appEngineRoutingOverride = Objects.requireNonNull(appEngineRoutingOverride);
     }
 
+    /**
+     * Overrides for the task-level app_engine_routing. If set, `app_engine_routing_override` is used for all tasks in the queue, no matter what the setting is for the task-level app_engine_routing.
+     * 
+     */
     public AppEngineRoutingResponse getAppEngineRoutingOverride() {
         return this.appEngineRoutingOverride;
     }

@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMetricDescriptor {
+/**
+ * Gets a single metric descriptor. This method does not require a Workspace.
+ * 
+ */
     public static CompletableFuture<GetMetricDescriptorResult> invokeAsync(GetMetricDescriptorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:monitoring/v3:getMetricDescriptor", TypeShape.of(GetMetricDescriptorResult.class), args == null ? GetMetricDescriptorArgs.Empty : args, Utilities.withVersion(options));
     }

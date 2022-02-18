@@ -34,6 +34,10 @@ public final class Hl7V2StoreArgs extends io.pulumi.resources.ResourceArgs {
         return this.hl7V2StoreId == null ? Input.empty() : this.hl7V2StoreId;
     }
 
+    /**
+     * User-supplied key-value pairs used to organize HL7v2 stores. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62} Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -48,6 +52,10 @@ public final class Hl7V2StoreArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Resource name of the HL7v2 store, of the form `projects/{project_id}/datasets/{dataset_id}/hl7V2Stores/{hl7v2_store_id}`.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -55,6 +63,10 @@ public final class Hl7V2StoreArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The notification destination all messages (both Ingest & Create) are published on. Only the message name is sent as part of the notification. If this is unset, no notifications are sent. Supplied by the client.
+     * 
+     */
     @InputImport(name="notificationConfig")
     private final @Nullable Input<NotificationConfigArgs> notificationConfig;
 
@@ -62,6 +74,10 @@ public final class Hl7V2StoreArgs extends io.pulumi.resources.ResourceArgs {
         return this.notificationConfig == null ? Input.empty() : this.notificationConfig;
     }
 
+    /**
+     * A list of notification configs. Each configuration uses a filter to determine whether to publish a message (both Ingest & Create) on the corresponding notification destination. Only the message name is sent as part of the notification. Supplied by the client.
+     * 
+     */
     @InputImport(name="notificationConfigs")
     private final @Nullable Input<List<Hl7V2NotificationConfigArgs>> notificationConfigs;
 
@@ -69,6 +85,10 @@ public final class Hl7V2StoreArgs extends io.pulumi.resources.ResourceArgs {
         return this.notificationConfigs == null ? Input.empty() : this.notificationConfigs;
     }
 
+    /**
+     * The configuration for the parser. It determines how the server parses the messages.
+     * 
+     */
     @InputImport(name="parserConfig")
     private final @Nullable Input<ParserConfigArgs> parserConfig;
 
@@ -83,6 +103,10 @@ public final class Hl7V2StoreArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Determines whether to reject duplicate messages. A duplicate message is a message with the same raw bytes as a message that has already been ingested/created in this HL7v2 store. The default value is false, meaning that the store accepts the duplicate messages and it also returns the same ACK message in the IngestMessageResponse as has been returned previously. Note that only one resource is created in the store. When this field is set to true, CreateMessage/IngestMessage requests with a duplicate message will be rejected by the store, and IngestMessageErrorDetail returns a NACK message upon rejection.
+     * 
+     */
     @InputImport(name="rejectDuplicateMessage")
     private final @Nullable Input<Boolean> rejectDuplicateMessage;
 

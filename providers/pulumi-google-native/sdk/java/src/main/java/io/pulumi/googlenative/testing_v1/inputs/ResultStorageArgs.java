@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Locations where the results of running the test are stored.
+ * 
+ */
 public final class ResultStorageArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResultStorageArgs Empty = new ResultStorageArgs();
 
+    /**
+     * Required.
+     * 
+     */
     @InputImport(name="googleCloudStorage", required=true)
     private final Input<GoogleCloudStorageArgs> googleCloudStorage;
 
@@ -22,6 +30,10 @@ public final class ResultStorageArgs extends io.pulumi.resources.ResourceArgs {
         return this.googleCloudStorage;
     }
 
+    /**
+     * The tool results history that contains the tool results execution that results are written to. If not provided, the service will choose an appropriate value.
+     * 
+     */
     @InputImport(name="toolResultsHistory")
     private final @Nullable Input<ToolResultsHistoryArgs> toolResultsHistory;
 

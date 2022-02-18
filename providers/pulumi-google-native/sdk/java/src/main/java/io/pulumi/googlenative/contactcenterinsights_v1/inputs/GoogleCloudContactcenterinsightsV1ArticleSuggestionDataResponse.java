@@ -10,10 +10,18 @@ import java.util.Map;
 import java.util.Objects;
 
 
+/**
+ * Agent Assist Article Suggestion data.
+ * 
+ */
 public final class GoogleCloudContactcenterinsightsV1ArticleSuggestionDataResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudContactcenterinsightsV1ArticleSuggestionDataResponse Empty = new GoogleCloudContactcenterinsightsV1ArticleSuggestionDataResponse();
 
+    /**
+     * The system's confidence score that this article is a good match for this conversation, ranging from 0.0 (completely uncertain) to 1.0 (completely certain).
+     * 
+     */
     @InputImport(name="confidenceScore", required=true)
     private final Double confidenceScore;
 
@@ -21,6 +29,10 @@ public final class GoogleCloudContactcenterinsightsV1ArticleSuggestionDataRespon
         return this.confidenceScore;
     }
 
+    /**
+     * Map that contains metadata about the Article Suggestion and the document that it originates from.
+     * 
+     */
     @InputImport(name="metadata", required=true)
     private final Map<String,String> metadata;
 
@@ -28,6 +40,10 @@ public final class GoogleCloudContactcenterinsightsV1ArticleSuggestionDataRespon
         return this.metadata;
     }
 
+    /**
+     * Name of the query record. Format: projects/{project}/locations/{location}/queryRecords/{query_record}
+     * 
+     */
     @InputImport(name="queryRecord", required=true)
     private final String queryRecord;
 
@@ -35,6 +51,10 @@ public final class GoogleCloudContactcenterinsightsV1ArticleSuggestionDataRespon
         return this.queryRecord;
     }
 
+    /**
+     * The knowledge document that this answer was extracted from. Format: projects/{project}/knowledgeBases/{knowledge_base}/documents/{document}
+     * 
+     */
     @InputImport(name="source", required=true)
     private final String source;
 
@@ -42,6 +62,10 @@ public final class GoogleCloudContactcenterinsightsV1ArticleSuggestionDataRespon
         return this.source;
     }
 
+    /**
+     * Article title.
+     * 
+     */
     @InputImport(name="title", required=true)
     private final String title;
 
@@ -49,6 +73,10 @@ public final class GoogleCloudContactcenterinsightsV1ArticleSuggestionDataRespon
         return this.title;
     }
 
+    /**
+     * Article URI.
+     * 
+     */
     @InputImport(name="uri", required=true)
     private final String uri;
 

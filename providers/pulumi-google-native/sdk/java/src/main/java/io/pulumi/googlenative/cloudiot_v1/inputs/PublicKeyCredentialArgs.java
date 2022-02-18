@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A public key format and data.
+ * 
+ */
 public final class PublicKeyCredentialArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PublicKeyCredentialArgs Empty = new PublicKeyCredentialArgs();
 
+    /**
+     * The format of the key.
+     * 
+     */
     @InputImport(name="format")
     private final @Nullable Input<PublicKeyCredentialFormat> format;
 
@@ -22,6 +30,10 @@ public final class PublicKeyCredentialArgs extends io.pulumi.resources.ResourceA
         return this.format == null ? Input.empty() : this.format;
     }
 
+    /**
+     * The key data.
+     * 
+     */
     @InputImport(name="key")
     private final @Nullable Input<String> key;
 

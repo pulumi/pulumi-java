@@ -22,6 +22,10 @@ public final class DataCollectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataCollectorId == null ? Input.empty() : this.dataCollectorId;
     }
 
+    /**
+     * A description of the data collector.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -29,6 +33,10 @@ public final class DataCollectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * ID of the data collector. Must begin with `dc_`.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -43,6 +51,10 @@ public final class DataCollectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.organizationId;
     }
 
+    /**
+     * Immutable. The type of data this data collector will collect.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<DataCollectorType> type;
 

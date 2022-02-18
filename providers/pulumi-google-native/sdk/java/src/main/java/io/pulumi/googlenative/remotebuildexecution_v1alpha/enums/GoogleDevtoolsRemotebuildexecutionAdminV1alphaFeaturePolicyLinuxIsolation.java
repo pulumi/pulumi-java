@@ -8,10 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * linux_isolation allows overriding the docker runtime used for containers started on Linux.
+     * 
+     */
     @EnumType
     public enum GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyLinuxIsolation {
+        /**
+         * Default value. Will be using Linux default runtime.
+         * 
+         */
         LinuxIsolationUnspecified("LINUX_ISOLATION_UNSPECIFIED"),
+        /**
+         * Use gVisor runsc runtime.
+         * 
+         */
         Gvisor("GVISOR"),
+        /**
+         * Use stardard Linux runtime. This has the same behaviour as unspecified, but it can be used to revert back from gVisor.
+         * 
+         */
         Off("OFF");
 
         private final String value;

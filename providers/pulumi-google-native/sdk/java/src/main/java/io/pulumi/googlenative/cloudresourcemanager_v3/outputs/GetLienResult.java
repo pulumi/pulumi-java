@@ -10,11 +10,35 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetLienResult {
+    /**
+     * The creation time of this Lien.
+     * 
+     */
     private final String createTime;
+    /**
+     * A system-generated unique identifier for this Lien. Example: `liens/1234abcd`
+     * 
+     */
     private final String name;
+    /**
+     * A stable, user-visible/meaningful string identifying the origin of the Lien, intended to be inspected programmatically. Maximum length of 200 characters. Example: 'compute.googleapis.com'
+     * 
+     */
     private final String origin;
+    /**
+     * A reference to the resource this Lien is attached to. The server will validate the parent against those for which Liens are supported. Example: `projects/1234`
+     * 
+     */
     private final String parent;
+    /**
+     * Concise user-visible strings indicating why an action cannot be performed on a resource. Maximum length of 200 characters. Example: 'Holds production API key'
+     * 
+     */
     private final String reason;
+    /**
+     * The types of operations which should be blocked as a result of this Lien. Each value should correspond to an IAM permission. The server will validate the permissions against those for which Liens are supported. An empty list is meaningless and will be rejected. Example: ['resourcemanager.projects.delete']
+     * 
+     */
     private final List<String> restrictions;
 
     @OutputCustomType.Constructor({"createTime","name","origin","parent","reason","restrictions"})
@@ -33,21 +57,45 @@ public final class GetLienResult {
         this.restrictions = Objects.requireNonNull(restrictions);
     }
 
+    /**
+     * The creation time of this Lien.
+     * 
+     */
     public String getCreateTime() {
         return this.createTime;
     }
+    /**
+     * A system-generated unique identifier for this Lien. Example: `liens/1234abcd`
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * A stable, user-visible/meaningful string identifying the origin of the Lien, intended to be inspected programmatically. Maximum length of 200 characters. Example: 'compute.googleapis.com'
+     * 
+     */
     public String getOrigin() {
         return this.origin;
     }
+    /**
+     * A reference to the resource this Lien is attached to. The server will validate the parent against those for which Liens are supported. Example: `projects/1234`
+     * 
+     */
     public String getParent() {
         return this.parent;
     }
+    /**
+     * Concise user-visible strings indicating why an action cannot be performed on a resource. Maximum length of 200 characters. Example: 'Holds production API key'
+     * 
+     */
     public String getReason() {
         return this.reason;
     }
+    /**
+     * The types of operations which should be blocked as a result of this Lien. Each value should correspond to an IAM permission. The server will validate the permissions against those for which Liens are supported. An empty list is meaningless and will be rejected. Example: ['resourcemanager.projects.delete']
+     * 
+     */
     public List<String> getRestrictions() {
         return this.restrictions;
     }

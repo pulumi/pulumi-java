@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Represents the intent to trigger programmatically rather than as a result of natural language processing.
+ * 
+ */
 public final class GoogleCloudDialogflowCxV3IntentInputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3IntentInputArgs Empty = new GoogleCloudDialogflowCxV3IntentInputArgs();
 
+    /**
+     * The unique identifier of the intent. Format: `projects//locations//agents//intents/`.
+     * 
+     */
     @InputImport(name="intent", required=true)
     private final Input<String> intent;
 

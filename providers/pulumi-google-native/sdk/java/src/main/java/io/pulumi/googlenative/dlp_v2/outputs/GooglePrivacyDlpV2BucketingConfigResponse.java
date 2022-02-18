@@ -10,6 +10,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GooglePrivacyDlpV2BucketingConfigResponse {
+    /**
+     * Set of buckets. Ranges must be non-overlapping.
+     * 
+     */
     private final List<GooglePrivacyDlpV2BucketResponse> buckets;
 
     @OutputCustomType.Constructor({"buckets"})
@@ -17,6 +21,10 @@ public final class GooglePrivacyDlpV2BucketingConfigResponse {
         this.buckets = Objects.requireNonNull(buckets);
     }
 
+    /**
+     * Set of buckets. Ranges must be non-overlapping.
+     * 
+     */
     public List<GooglePrivacyDlpV2BucketResponse> getBuckets() {
         return this.buckets;
     }

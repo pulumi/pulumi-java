@@ -15,6 +15,10 @@ public final class FolderReplayArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FolderReplayArgs Empty = new FolderReplayArgs();
 
+    /**
+     * The configuration used for the `Replay`.
+     * 
+     */
     @InputImport(name="config", required=true)
     private final Input<GoogleCloudPolicysimulatorV1ReplayConfigArgs> config;
 

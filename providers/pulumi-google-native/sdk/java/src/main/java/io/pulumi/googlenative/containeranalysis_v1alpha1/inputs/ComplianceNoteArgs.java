@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * ComplianceNote encapsulates all information about a specific compliance check.
+ * 
+ */
 public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ComplianceNoteArgs Empty = new ComplianceNoteArgs();
 
+    /**
+     * Right now we only have one compliance type, but we may add additional types in the future.
+     * 
+     */
     @InputImport(name="cisBenchmark")
     private final @Nullable Input<CisBenchmarkArgs> cisBenchmark;
 
@@ -24,6 +32,10 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
         return this.cisBenchmark == null ? Input.empty() : this.cisBenchmark;
     }
 
+    /**
+     * A description about this compliance check.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -31,6 +43,10 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * A rationale for the existence of this compliance check.
+     * 
+     */
     @InputImport(name="rationale")
     private final @Nullable Input<String> rationale;
 
@@ -38,6 +54,10 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
         return this.rationale == null ? Input.empty() : this.rationale;
     }
 
+    /**
+     * A description of remediation steps if the compliance check fails.
+     * 
+     */
     @InputImport(name="remediation")
     private final @Nullable Input<String> remediation;
 
@@ -45,6 +65,10 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
         return this.remediation == null ? Input.empty() : this.remediation;
     }
 
+    /**
+     * Serialized scan instructions with a predefined format.
+     * 
+     */
     @InputImport(name="scanInstructions")
     private final @Nullable Input<String> scanInstructions;
 
@@ -52,6 +76,10 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
         return this.scanInstructions == null ? Input.empty() : this.scanInstructions;
     }
 
+    /**
+     * The title that identifies this compliance check.
+     * 
+     */
     @InputImport(name="title")
     private final @Nullable Input<String> title;
 
@@ -59,6 +87,10 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
         return this.title == null ? Input.empty() : this.title;
     }
 
+    /**
+     * The OS and config versions the benchmark applies to.
+     * 
+     */
     @InputImport(name="version")
     private final @Nullable Input<List<ComplianceVersionArgs>> version;
 

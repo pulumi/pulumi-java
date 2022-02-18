@@ -8,9 +8,21 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Indicates whether the entity type can be automatically expanded.
+     * 
+     */
     @EnumType
     public enum EntityTypeAutoExpansionMode {
+        /**
+         * Auto expansion disabled for the entity.
+         * 
+         */
         AutoExpansionModeUnspecified("AUTO_EXPANSION_MODE_UNSPECIFIED"),
+        /**
+         * Allows an agent to recognize values that have not been explicitly listed in the entity.
+         * 
+         */
         AutoExpansionModeDefault("AUTO_EXPANSION_MODE_DEFAULT");
 
         private final String value;

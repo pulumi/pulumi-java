@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A CertificateConfig describes an X.509 certificate or CSR that is to be created, as an alternative to using ASN.1.
+ * 
+ */
 public final class CertificateConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CertificateConfigArgs Empty = new CertificateConfigArgs();
 
+    /**
+     * Optional. The public key that corresponds to this config. This is, for example, used when issuing Certificates, but not when creating a self-signed CertificateAuthority or CertificateAuthority CSR.
+     * 
+     */
     @InputImport(name="publicKey")
     private final @Nullable Input<PublicKeyArgs> publicKey;
 
@@ -23,6 +31,10 @@ public final class CertificateConfigArgs extends io.pulumi.resources.ResourceArg
         return this.publicKey == null ? Input.empty() : this.publicKey;
     }
 
+    /**
+     * Specifies some of the values in a certificate that are related to the subject.
+     * 
+     */
     @InputImport(name="subjectConfig", required=true)
     private final Input<SubjectConfigArgs> subjectConfig;
 
@@ -30,6 +42,10 @@ public final class CertificateConfigArgs extends io.pulumi.resources.ResourceArg
         return this.subjectConfig;
     }
 
+    /**
+     * Describes how some of the technical X.509 fields in a certificate should be populated.
+     * 
+     */
     @InputImport(name="x509Config", required=true)
     private final Input<X509ParametersArgs> x509Config;
 

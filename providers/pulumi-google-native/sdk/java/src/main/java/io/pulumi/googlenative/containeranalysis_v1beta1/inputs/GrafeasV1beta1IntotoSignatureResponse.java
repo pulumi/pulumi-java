@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A signature object consists of the KeyID used and the signature itself.
+ * 
+ */
 public final class GrafeasV1beta1IntotoSignatureResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GrafeasV1beta1IntotoSignatureResponse Empty = new GrafeasV1beta1IntotoSignatureResponse();

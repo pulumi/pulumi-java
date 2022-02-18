@@ -9,10 +9,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * For display only. Metadata associated with a specific load balancer backend.
+ * 
+ */
 public final class LoadBalancerBackendResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LoadBalancerBackendResponse Empty = new LoadBalancerBackendResponse();
 
+    /**
+     * Name of a Compute Engine instance or network endpoint.
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final String displayName;
 
@@ -20,6 +28,10 @@ public final class LoadBalancerBackendResponse extends io.pulumi.resources.Invok
         return this.displayName;
     }
 
+    /**
+     * A list of firewall rule URIs allowing probes from health check IP ranges.
+     * 
+     */
     @InputImport(name="healthCheckAllowingFirewallRules", required=true)
     private final List<String> healthCheckAllowingFirewallRules;
 
@@ -27,6 +39,10 @@ public final class LoadBalancerBackendResponse extends io.pulumi.resources.Invok
         return this.healthCheckAllowingFirewallRules;
     }
 
+    /**
+     * A list of firewall rule URIs blocking probes from health check IP ranges.
+     * 
+     */
     @InputImport(name="healthCheckBlockingFirewallRules", required=true)
     private final List<String> healthCheckBlockingFirewallRules;
 
@@ -34,6 +50,10 @@ public final class LoadBalancerBackendResponse extends io.pulumi.resources.Invok
         return this.healthCheckBlockingFirewallRules;
     }
 
+    /**
+     * State of the health check firewall configuration.
+     * 
+     */
     @InputImport(name="healthCheckFirewallState", required=true)
     private final String healthCheckFirewallState;
 
@@ -41,6 +61,10 @@ public final class LoadBalancerBackendResponse extends io.pulumi.resources.Invok
         return this.healthCheckFirewallState;
     }
 
+    /**
+     * URI of a Compute Engine instance or network endpoint.
+     * 
+     */
     @InputImport(name="uri", required=true)
     private final String uri;
 

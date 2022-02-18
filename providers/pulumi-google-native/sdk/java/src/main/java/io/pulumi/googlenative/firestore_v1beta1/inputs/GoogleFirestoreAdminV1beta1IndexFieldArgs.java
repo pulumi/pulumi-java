@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A field of an index.
+ * 
+ */
 public final class GoogleFirestoreAdminV1beta1IndexFieldArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleFirestoreAdminV1beta1IndexFieldArgs Empty = new GoogleFirestoreAdminV1beta1IndexFieldArgs();
 
+    /**
+     * The path of the field. Must match the field path specification described by google.firestore.v1beta1.Document.fields. Special field path `__name__` may be used by itself or at the end of a path. `__type__` may be used only at the end of path.
+     * 
+     */
     @InputImport(name="fieldPath")
     private final @Nullable Input<String> fieldPath;
 
@@ -22,6 +30,10 @@ public final class GoogleFirestoreAdminV1beta1IndexFieldArgs extends io.pulumi.r
         return this.fieldPath == null ? Input.empty() : this.fieldPath;
     }
 
+    /**
+     * The field's mode.
+     * 
+     */
     @InputImport(name="mode")
     private final @Nullable Input<GoogleFirestoreAdminV1beta1IndexFieldMode> mode;
 

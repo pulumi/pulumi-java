@@ -15,10 +15,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * AutoprovisioningNodePoolDefaults contains defaults for a node pool created by NAP.
+ * 
+ */
 public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AutoprovisioningNodePoolDefaultsArgs Empty = new AutoprovisioningNodePoolDefaultsArgs();
 
+    /**
+     * The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: https://cloud.google.com/compute/docs/disks/customer-managed-encryption
+     * 
+     */
     @InputImport(name="bootDiskKmsKey")
     private final @Nullable Input<String> bootDiskKmsKey;
 
@@ -26,6 +34,10 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
         return this.bootDiskKmsKey == null ? Input.empty() : this.bootDiskKmsKey;
     }
 
+    /**
+     * Size of the disk attached to each node, specified in GB. The smallest allowed disk size is 10GB. If unspecified, the default disk size is 100GB.
+     * 
+     */
     @InputImport(name="diskSizeGb")
     private final @Nullable Input<Integer> diskSizeGb;
 
@@ -33,6 +45,10 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
         return this.diskSizeGb == null ? Input.empty() : this.diskSizeGb;
     }
 
+    /**
+     * Type of the disk attached to each node (e.g. 'pd-standard', 'pd-ssd' or 'pd-balanced') If unspecified, the default disk type is 'pd-standard'
+     * 
+     */
     @InputImport(name="diskType")
     private final @Nullable Input<String> diskType;
 
@@ -40,6 +56,10 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
         return this.diskType == null ? Input.empty() : this.diskType;
     }
 
+    /**
+     * The image type to use for NAP created node.
+     * 
+     */
     @InputImport(name="imageType")
     private final @Nullable Input<String> imageType;
 
@@ -47,6 +67,10 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
         return this.imageType == null ? Input.empty() : this.imageType;
     }
 
+    /**
+     * Specifies the node management options for NAP created node-pools.
+     * 
+     */
     @InputImport(name="management")
     private final @Nullable Input<NodeManagementArgs> management;
 
@@ -54,6 +78,10 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
         return this.management == null ? Input.empty() : this.management;
     }
 
+    /**
+     * Minimum CPU platform to be used for NAP created node pools. The instance may be scheduled on the specified or newer CPU platform. Applicable values are the friendly names of CPU platforms, such as minCpuPlatform: Intel Haswell or minCpuPlatform: Intel Sandy Bridge. For more information, read [how to specify min CPU platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform) To unset the min cpu platform field pass "automatic" as field value.
+     * 
+     */
     @InputImport(name="minCpuPlatform")
     private final @Nullable Input<String> minCpuPlatform;
 
@@ -61,6 +89,10 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
         return this.minCpuPlatform == null ? Input.empty() : this.minCpuPlatform;
     }
 
+    /**
+     * Scopes that are used by NAP when creating node pools.
+     * 
+     */
     @InputImport(name="oauthScopes")
     private final @Nullable Input<List<String>> oauthScopes;
 
@@ -68,6 +100,10 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
         return this.oauthScopes == null ? Input.empty() : this.oauthScopes;
     }
 
+    /**
+     * The Google Cloud Platform Service Account to be used by the node VMs.
+     * 
+     */
     @InputImport(name="serviceAccount")
     private final @Nullable Input<String> serviceAccount;
 
@@ -75,6 +111,10 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
         return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
     }
 
+    /**
+     * Shielded Instance options.
+     * 
+     */
     @InputImport(name="shieldedInstanceConfig")
     private final @Nullable Input<ShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
@@ -82,6 +122,10 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
         return this.shieldedInstanceConfig == null ? Input.empty() : this.shieldedInstanceConfig;
     }
 
+    /**
+     * Specifies the upgrade settings for NAP created node pools
+     * 
+     */
     @InputImport(name="upgradeSettings")
     private final @Nullable Input<UpgradeSettingsArgs> upgradeSettings;
 

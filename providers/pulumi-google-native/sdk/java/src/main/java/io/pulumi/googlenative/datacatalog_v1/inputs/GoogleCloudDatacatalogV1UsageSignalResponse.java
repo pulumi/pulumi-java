@@ -9,10 +9,18 @@ import java.util.Map;
 import java.util.Objects;
 
 
+/**
+ * The set of all usage signals that Data Catalog stores. Note: Usually, these signals are updated daily. In rare cases, an update may fail but will be performed again on the next day.
+ * 
+ */
 public final class GoogleCloudDatacatalogV1UsageSignalResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDatacatalogV1UsageSignalResponse Empty = new GoogleCloudDatacatalogV1UsageSignalResponse();
 
+    /**
+     * The end timestamp of the duration of usage statistics.
+     * 
+     */
     @InputImport(name="updateTime", required=true)
     private final String updateTime;
 
@@ -20,6 +28,10 @@ public final class GoogleCloudDatacatalogV1UsageSignalResponse extends io.pulumi
         return this.updateTime;
     }
 
+    /**
+     * Usage statistics over each of the predefined time ranges. Supported time ranges are `{"24H", "7D", "30D"}`.
+     * 
+     */
     @InputImport(name="usageWithinTimeRange", required=true)
     private final Map<String,String> usageWithinTimeRange;
 

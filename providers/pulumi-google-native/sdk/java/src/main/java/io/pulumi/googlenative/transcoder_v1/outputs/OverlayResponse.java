@@ -11,7 +11,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class OverlayResponse {
+    /**
+     * List of Animations. The list should be chronological, without any time overlap.
+     * 
+     */
     private final List<AnimationResponse> animations;
+    /**
+     * Image overlay.
+     * 
+     */
     private final ImageResponse image;
 
     @OutputCustomType.Constructor({"animations","image"})
@@ -22,9 +30,17 @@ public final class OverlayResponse {
         this.image = Objects.requireNonNull(image);
     }
 
+    /**
+     * List of Animations. The list should be chronological, without any time overlap.
+     * 
+     */
     public List<AnimationResponse> getAnimations() {
         return this.animations;
     }
+    /**
+     * Image overlay.
+     * 
+     */
     public ImageResponse getImage() {
         return this.image;
     }

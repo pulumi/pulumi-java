@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * DocumentOccurrence represents an SPDX Document Creation Information section: https://spdx.github.io/spdx-spec/2-document-creation-information/
+ * 
+ */
 public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DocumentOccurrenceArgs Empty = new DocumentOccurrenceArgs();
 
+    /**
+     * Identify when the SPDX file was originally created. The date is to be specified according to combined date and time in UTC format as specified in ISO 8601 standard
+     * 
+     */
     @InputImport(name="createTime")
     private final @Nullable Input<String> createTime;
 
@@ -22,6 +30,10 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
         return this.createTime == null ? Input.empty() : this.createTime;
     }
 
+    /**
+     * A field for creators of the SPDX file to provide general comments about the creation of the SPDX file or any other relevant comment not included in the other fields
+     * 
+     */
     @InputImport(name="creatorComment")
     private final @Nullable Input<String> creatorComment;
 
@@ -29,6 +41,10 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
         return this.creatorComment == null ? Input.empty() : this.creatorComment;
     }
 
+    /**
+     * Identify who (or what, in the case of a tool) created the SPDX file. If the SPDX file was created by an individual, indicate the person's name
+     * 
+     */
     @InputImport(name="creators")
     private final @Nullable Input<List<String>> creators;
 
@@ -36,6 +52,10 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
         return this.creators == null ? Input.empty() : this.creators;
     }
 
+    /**
+     * A field for creators of the SPDX file content to provide comments to the consumers of the SPDX document
+     * 
+     */
     @InputImport(name="documentComment")
     private final @Nullable Input<String> documentComment;
 
@@ -43,6 +63,10 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
         return this.documentComment == null ? Input.empty() : this.documentComment;
     }
 
+    /**
+     * Identify any external SPDX documents referenced within this SPDX document
+     * 
+     */
     @InputImport(name="externalDocumentRefs")
     private final @Nullable Input<List<String>> externalDocumentRefs;
 
@@ -50,6 +74,10 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
         return this.externalDocumentRefs == null ? Input.empty() : this.externalDocumentRefs;
     }
 
+    /**
+     * Identify the current SPDX document which may be referenced in relationships by other files, packages internally and documents externally
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -57,6 +85,10 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * A field for creators of the SPDX file to provide the version of the SPDX License List used when the SPDX file was created
+     * 
+     */
     @InputImport(name="licenseListVersion")
     private final @Nullable Input<String> licenseListVersion;
 
@@ -64,6 +96,10 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
         return this.licenseListVersion == null ? Input.empty() : this.licenseListVersion;
     }
 
+    /**
+     * Provide an SPDX document specific namespace as a unique absolute Uniform Resource Identifier (URI) as specified in RFC-3986, with the exception of the ‘#’ delimiter
+     * 
+     */
     @InputImport(name="namespace")
     private final @Nullable Input<String> namespace;
 
@@ -71,6 +107,10 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
         return this.namespace == null ? Input.empty() : this.namespace;
     }
 
+    /**
+     * Identify name of this document as designated by creator
+     * 
+     */
     @InputImport(name="title")
     private final @Nullable Input<String> title;
 

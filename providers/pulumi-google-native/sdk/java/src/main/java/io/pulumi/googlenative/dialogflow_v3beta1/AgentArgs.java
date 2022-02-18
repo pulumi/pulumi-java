@@ -18,6 +18,10 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AgentArgs Empty = new AgentArgs();
 
+    /**
+     * Hierarchical advanced settings for this agent. The settings exposed at the lower level overrides the settings exposed at the higher level.
+     * 
+     */
     @InputImport(name="advancedSettings")
     private final @Nullable Input<GoogleCloudDialogflowCxV3beta1AdvancedSettingsArgs> advancedSettings;
 
@@ -25,6 +29,10 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
         return this.advancedSettings == null ? Input.empty() : this.advancedSettings;
     }
 
+    /**
+     * The URI of the agent's avatar. Avatars are used throughout the Dialogflow console and in the self-hosted [Web Demo](https://cloud.google.com/dialogflow/docs/integrations/web-demo) integration.
+     * 
+     */
     @InputImport(name="avatarUri")
     private final @Nullable Input<String> avatarUri;
 
@@ -32,6 +40,10 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
         return this.avatarUri == null ? Input.empty() : this.avatarUri;
     }
 
+    /**
+     * Immutable. The default language of the agent as a language tag. See [Language Support](https://cloud.google.com/dialogflow/cx/docs/reference/language) for a list of the currently supported language codes. This field cannot be set by the Agents.UpdateAgent method.
+     * 
+     */
     @InputImport(name="defaultLanguageCode", required=true)
     private final Input<String> defaultLanguageCode;
 
@@ -39,6 +51,10 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
         return this.defaultLanguageCode;
     }
 
+    /**
+     * The description of the agent. The maximum length is 500 characters. If exceeded, the request is rejected.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -46,6 +62,10 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The human-readable name of the agent, unique within the location.
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -53,6 +73,10 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName;
     }
 
+    /**
+     * Indicates if automatic spell correction is enabled in detect intent requests.
+     * 
+     */
     @InputImport(name="enableSpellCorrection")
     private final @Nullable Input<Boolean> enableSpellCorrection;
 
@@ -60,6 +84,10 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableSpellCorrection == null ? Input.empty() : this.enableSpellCorrection;
     }
 
+    /**
+     * Indicates if stackdriver logging is enabled for the agent. Please use agent.advanced_settings instead.
+     * 
+     */
     @InputImport(name="enableStackdriverLogging")
     private final @Nullable Input<Boolean> enableStackdriverLogging;
 
@@ -74,6 +102,10 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The unique identifier of the agent. Required for the Agents.UpdateAgent method. Agents.CreateAgent populates the name automatically. Format: `projects//locations//agents/`.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -88,6 +120,10 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Name of the SecuritySettings reference for the agent. Format: `projects//locations//securitySettings/`.
+     * 
+     */
     @InputImport(name="securitySettings")
     private final @Nullable Input<String> securitySettings;
 
@@ -95,6 +131,10 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
         return this.securitySettings == null ? Input.empty() : this.securitySettings;
     }
 
+    /**
+     * Speech recognition related settings.
+     * 
+     */
     @InputImport(name="speechToTextSettings")
     private final @Nullable Input<GoogleCloudDialogflowCxV3beta1SpeechToTextSettingsArgs> speechToTextSettings;
 
@@ -102,6 +142,10 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
         return this.speechToTextSettings == null ? Input.empty() : this.speechToTextSettings;
     }
 
+    /**
+     * Immutable. Name of the start flow in this agent. A start flow will be automatically created when the agent is created, and can only be deleted by deleting the agent. Format: `projects//locations//agents//flows/`.
+     * 
+     */
     @InputImport(name="startFlow")
     private final @Nullable Input<String> startFlow;
 
@@ -109,6 +153,10 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
         return this.startFlow == null ? Input.empty() : this.startFlow;
     }
 
+    /**
+     * The list of all languages supported by the agent (except for the `default_language_code`).
+     * 
+     */
     @InputImport(name="supportedLanguageCodes")
     private final @Nullable Input<List<String>> supportedLanguageCodes;
 
@@ -116,6 +164,10 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
         return this.supportedLanguageCodes == null ? Input.empty() : this.supportedLanguageCodes;
     }
 
+    /**
+     * The time zone of the agent from the [time zone database](https://www.iana.org/time-zones), e.g., America/New_York, Europe/Paris.
+     * 
+     */
     @InputImport(name="timeZone", required=true)
     private final Input<String> timeZone;
 

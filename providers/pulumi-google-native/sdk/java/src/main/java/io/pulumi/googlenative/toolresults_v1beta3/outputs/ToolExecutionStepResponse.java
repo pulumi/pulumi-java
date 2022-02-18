@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ToolExecutionStepResponse {
+    /**
+     * A Tool execution. - In response: present if set by create/update request - In create/update request: optional
+     * 
+     */
     private final ToolExecutionResponse toolExecution;
 
     @OutputCustomType.Constructor({"toolExecution"})
@@ -16,6 +20,10 @@ public final class ToolExecutionStepResponse {
         this.toolExecution = Objects.requireNonNull(toolExecution);
     }
 
+    /**
+     * A Tool execution. - In response: present if set by create/update request - In create/update request: optional
+     * 
+     */
     public ToolExecutionResponse getToolExecution() {
         return this.toolExecution;
     }

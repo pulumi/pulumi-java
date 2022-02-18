@@ -8,10 +8,18 @@ import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2RiskAnalysisJobCon
 import java.util.Objects;
 
 
+/**
+ * Risk analysis options.
+ * 
+ */
 public final class GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse Empty = new GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse();
 
+    /**
+     * The job config for the risk job.
+     * 
+     */
     @InputImport(name="jobConfig", required=true)
     private final GooglePrivacyDlpV2RiskAnalysisJobConfigResponse jobConfig;
 

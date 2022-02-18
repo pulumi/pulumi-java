@@ -16,6 +16,10 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RouteArgs Empty = new RouteArgs();
 
+    /**
+     * Destination address for connection
+     * 
+     */
     @InputImport(name="destinationAddress", required=true)
     private final Input<String> destinationAddress;
 
@@ -23,6 +27,10 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
         return this.destinationAddress;
     }
 
+    /**
+     * Destination port for connection
+     * 
+     */
     @InputImport(name="destinationPort")
     private final @Nullable Input<Integer> destinationPort;
 
@@ -30,6 +38,10 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
         return this.destinationPort == null ? Input.empty() : this.destinationPort;
     }
 
+    /**
+     * Display name.
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -37,6 +49,10 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName;
     }
 
+    /**
+     * Labels.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 

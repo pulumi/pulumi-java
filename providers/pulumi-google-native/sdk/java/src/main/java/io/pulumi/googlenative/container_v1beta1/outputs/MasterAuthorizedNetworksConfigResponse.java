@@ -11,7 +11,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MasterAuthorizedNetworksConfigResponse {
+    /**
+     * cidr_blocks define up to 10 external networks that could access Kubernetes master through HTTPS.
+     * 
+     */
     private final List<CidrBlockResponse> cidrBlocks;
+    /**
+     * Whether or not master authorized networks is enabled.
+     * 
+     */
     private final Boolean enabled;
 
     @OutputCustomType.Constructor({"cidrBlocks","enabled"})
@@ -22,9 +30,17 @@ public final class MasterAuthorizedNetworksConfigResponse {
         this.enabled = Objects.requireNonNull(enabled);
     }
 
+    /**
+     * cidr_blocks define up to 10 external networks that could access Kubernetes master through HTTPS.
+     * 
+     */
     public List<CidrBlockResponse> getCidrBlocks() {
         return this.cidrBlocks;
     }
+    /**
+     * Whether or not master authorized networks is enabled.
+     * 
+     */
     public Boolean getEnabled() {
         return this.enabled;
     }

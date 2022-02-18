@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BigQueryModelTrainingResponse {
+    /**
+     * [Output-only, Beta] Index of current ML training iteration. Updated during create model query job to show job progress.
+     * 
+     */
     private final Integer currentIteration;
+    /**
+     * [Output-only, Beta] Expected number of iterations for the create model query job specified as num_iterations in the input query. The actual total number of iterations may be less than this number due to early stop.
+     * 
+     */
     private final String expectedTotalIterations;
 
     @OutputCustomType.Constructor({"currentIteration","expectedTotalIterations"})
@@ -21,9 +29,17 @@ public final class BigQueryModelTrainingResponse {
         this.expectedTotalIterations = Objects.requireNonNull(expectedTotalIterations);
     }
 
+    /**
+     * [Output-only, Beta] Index of current ML training iteration. Updated during create model query job to show job progress.
+     * 
+     */
     public Integer getCurrentIteration() {
         return this.currentIteration;
     }
+    /**
+     * [Output-only, Beta] Expected number of iterations for the create model query job specified as num_iterations in the input query. The actual total number of iterations may be less than this number due to early stop.
+     * 
+     */
     public String getExpectedTotalIterations() {
         return this.expectedTotalIterations;
     }

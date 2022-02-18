@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DefaultSnatStatusResponse {
+    /**
+     * Disables cluster default sNAT rules.
+     * 
+     */
     private final Boolean disabled;
 
     @OutputCustomType.Constructor({"disabled"})
@@ -16,6 +20,10 @@ public final class DefaultSnatStatusResponse {
         this.disabled = Objects.requireNonNull(disabled);
     }
 
+    /**
+     * Disables cluster default sNAT rules.
+     * 
+     */
     public Boolean getDisabled() {
         return this.disabled;
     }

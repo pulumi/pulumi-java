@@ -8,9 +8,21 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Indicates that this field supports operations on `array_value`s.
+     * 
+     */
     @EnumType
     public enum GoogleFirestoreAdminV1beta2IndexFieldArrayConfig {
+        /**
+         * The index does not support additional array queries.
+         * 
+         */
         ArrayConfigUnspecified("ARRAY_CONFIG_UNSPECIFIED"),
+        /**
+         * The index supports array containment queries.
+         * 
+         */
         Contains("CONTAINS");
 
         private final String value;

@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The device configuration. Eventually delivered to devices.
+ * 
+ */
 public final class DeviceConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DeviceConfigArgs Empty = new DeviceConfigArgs();
 
+    /**
+     * The device configuration data.
+     * 
+     */
     @InputImport(name="binaryData")
     private final @Nullable Input<String> binaryData;
 

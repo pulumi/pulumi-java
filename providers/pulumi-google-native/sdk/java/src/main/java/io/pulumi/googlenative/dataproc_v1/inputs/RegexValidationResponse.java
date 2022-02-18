@@ -9,10 +9,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Validation based on regular expressions.
+ * 
+ */
 public final class RegexValidationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RegexValidationResponse Empty = new RegexValidationResponse();
 
+    /**
+     * RE2 regular expressions used to validate the parameter's value. The value must match the regex in its entirety (substring matches are not sufficient).
+     * 
+     */
     @InputImport(name="regexes", required=true)
     private final List<String> regexes;
 

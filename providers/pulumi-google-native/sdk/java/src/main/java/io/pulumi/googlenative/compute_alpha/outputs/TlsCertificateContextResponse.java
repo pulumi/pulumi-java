@@ -11,8 +11,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TlsCertificateContextResponse {
+    /**
+     * Specifies the certificate and private key paths. This field is applicable only if tlsCertificateSource is set to USE_PATH.
+     * 
+     */
     private final TlsCertificatePathsResponse certificatePaths;
+    /**
+     * Defines how TLS certificates are obtained.
+     * 
+     */
     private final String certificateSource;
+    /**
+     * Specifies the config to retrieve certificates through SDS. This field is applicable only if tlsCertificateSource is set to USE_SDS.
+     * 
+     */
     private final SdsConfigResponse sdsConfig;
 
     @OutputCustomType.Constructor({"certificatePaths","certificateSource","sdsConfig"})
@@ -25,12 +37,24 @@ public final class TlsCertificateContextResponse {
         this.sdsConfig = Objects.requireNonNull(sdsConfig);
     }
 
+    /**
+     * Specifies the certificate and private key paths. This field is applicable only if tlsCertificateSource is set to USE_PATH.
+     * 
+     */
     public TlsCertificatePathsResponse getCertificatePaths() {
         return this.certificatePaths;
     }
+    /**
+     * Defines how TLS certificates are obtained.
+     * 
+     */
     public String getCertificateSource() {
         return this.certificateSource;
     }
+    /**
+     * Specifies the config to retrieve certificates through SDS. This field is applicable only if tlsCertificateSource is set to USE_SDS.
+     * 
+     */
     public SdsConfigResponse getSdsConfig() {
         return this.sdsConfig;
     }

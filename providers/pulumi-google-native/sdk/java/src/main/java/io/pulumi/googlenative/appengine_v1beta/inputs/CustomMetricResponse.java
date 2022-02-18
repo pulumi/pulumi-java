@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Allows autoscaling based on Stackdriver metrics.
+ * 
+ */
 public final class CustomMetricResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CustomMetricResponse Empty = new CustomMetricResponse();
 
+    /**
+     * Allows filtering on the metric's fields.
+     * 
+     */
     @InputImport(name="filter", required=true)
     private final String filter;
 
@@ -20,6 +28,10 @@ public final class CustomMetricResponse extends io.pulumi.resources.InvokeArgs {
         return this.filter;
     }
 
+    /**
+     * The name of the metric.
+     * 
+     */
     @InputImport(name="metricName", required=true)
     private final String metricName;
 
@@ -27,6 +39,10 @@ public final class CustomMetricResponse extends io.pulumi.resources.InvokeArgs {
         return this.metricName;
     }
 
+    /**
+     * May be used instead of target_utilization when an instance can handle a specific amount of work/resources and the metric value is equal to the current amount of work remaining. The autoscaler will try to keep the number of instances equal to the metric value divided by single_instance_assignment.
+     * 
+     */
     @InputImport(name="singleInstanceAssignment", required=true)
     private final Double singleInstanceAssignment;
 
@@ -34,6 +50,10 @@ public final class CustomMetricResponse extends io.pulumi.resources.InvokeArgs {
         return this.singleInstanceAssignment;
     }
 
+    /**
+     * The type of the metric. Must be a string representing a Stackdriver metric type e.g. GAGUE, DELTA_PER_SECOND, etc.
+     * 
+     */
     @InputImport(name="targetType", required=true)
     private final String targetType;
 
@@ -41,6 +61,10 @@ public final class CustomMetricResponse extends io.pulumi.resources.InvokeArgs {
         return this.targetType;
     }
 
+    /**
+     * The target value for the metric.
+     * 
+     */
     @InputImport(name="targetUtilization", required=true)
     private final Double targetUtilization;
 

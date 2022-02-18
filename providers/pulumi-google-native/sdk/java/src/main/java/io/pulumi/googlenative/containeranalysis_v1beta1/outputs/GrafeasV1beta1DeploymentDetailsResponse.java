@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GrafeasV1beta1DeploymentDetailsResponse {
+    /**
+     * Deployment history for the resource.
+     * 
+     */
     private final DeploymentResponse deployment;
 
     @OutputCustomType.Constructor({"deployment"})
@@ -16,6 +20,10 @@ public final class GrafeasV1beta1DeploymentDetailsResponse {
         this.deployment = Objects.requireNonNull(deployment);
     }
 
+    /**
+     * Deployment history for the resource.
+     * 
+     */
     public DeploymentResponse getDeployment() {
         return this.deployment;
     }

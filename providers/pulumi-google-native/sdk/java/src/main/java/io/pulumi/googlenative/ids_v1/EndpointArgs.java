@@ -17,6 +17,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EndpointArgs Empty = new EndpointArgs();
 
+    /**
+     * User-provided description of the endpoint
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -31,6 +35,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
         return this.endpointId;
     }
 
+    /**
+     * The labels of the endpoint.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -45,6 +53,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The fully qualified URL of the network to which the IDS Endpoint is attached.
+     * 
+     */
     @InputImport(name="network", required=true)
     private final Input<String> network;
 
@@ -66,6 +78,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
         return this.requestId == null ? Input.empty() : this.requestId;
     }
 
+    /**
+     * Lowest threat severity that this endpoint will alert on.
+     * 
+     */
     @InputImport(name="severity", required=true)
     private final Input<EndpointSeverity> severity;
 
@@ -73,6 +89,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
         return this.severity;
     }
 
+    /**
+     * Whether the endpoint should report traffic logs in addition to threat logs.
+     * 
+     */
     @InputImport(name="trafficLogs")
     private final @Nullable Input<Boolean> trafficLogs;
 

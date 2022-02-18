@@ -8,10 +8,18 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
+/**
+ * Specifies how metastore metadata should be integrated with the Data Catalog service.
+ * 
+ */
 public final class DataCatalogConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DataCatalogConfigResponse Empty = new DataCatalogConfigResponse();
 
+    /**
+     * Defines whether the metastore metadata should be synced to Data Catalog. The default value is to disable syncing metastore metadata to Data Catalog.
+     * 
+     */
     @InputImport(name="enabled", required=true)
     private final Boolean enabled;
 

@@ -12,6 +12,10 @@ public final class DatasetTagsItemResponse extends io.pulumi.resources.InvokeArg
 
     public static final DatasetTagsItemResponse Empty = new DatasetTagsItemResponse();
 
+    /**
+     * [Required] The namespaced friendly name of the tag key, e.g. "12345/environment" where 12345 is org id.
+     * 
+     */
     @InputImport(name="tagKey", required=true)
     private final String tagKey;
 
@@ -19,6 +23,10 @@ public final class DatasetTagsItemResponse extends io.pulumi.resources.InvokeArg
         return this.tagKey;
     }
 
+    /**
+     * [Required] Friendly short name of the tag value, e.g. "production".
+     * 
+     */
     @InputImport(name="tagValue", required=true)
     private final String tagValue;
 

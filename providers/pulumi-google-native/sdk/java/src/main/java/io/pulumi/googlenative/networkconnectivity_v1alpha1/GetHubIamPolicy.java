@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetHubIamPolicy {
+/**
+ * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+ * 
+ */
     public static CompletableFuture<GetHubIamPolicyResult> invokeAsync(GetHubIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:networkconnectivity/v1alpha1:getHubIamPolicy", TypeShape.of(GetHubIamPolicyResult.class), args == null ? GetHubIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

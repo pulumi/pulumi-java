@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The input from the human user.
+ * 
+ */
 public final class GoogleCloudDialogflowCxV3ConversationTurnUserInputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3ConversationTurnUserInputArgs Empty = new GoogleCloudDialogflowCxV3ConversationTurnUserInputArgs();
 
+    /**
+     * Whether sentiment analysis is enabled.
+     * 
+     */
     @InputImport(name="enableSentimentAnalysis")
     private final @Nullable Input<Boolean> enableSentimentAnalysis;
 
@@ -24,6 +32,10 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnUserInputArgs extend
         return this.enableSentimentAnalysis == null ? Input.empty() : this.enableSentimentAnalysis;
     }
 
+    /**
+     * Parameters that need to be injected into the conversation during intent detection.
+     * 
+     */
     @InputImport(name="injectedParameters")
     private final @Nullable Input<Map<String,String>> injectedParameters;
 
@@ -31,6 +43,10 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnUserInputArgs extend
         return this.injectedParameters == null ? Input.empty() : this.injectedParameters;
     }
 
+    /**
+     * Supports text input, event input, dtmf input in the test case.
+     * 
+     */
     @InputImport(name="input")
     private final @Nullable Input<GoogleCloudDialogflowCxV3QueryInputArgs> input;
 
@@ -38,6 +54,10 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnUserInputArgs extend
         return this.input == null ? Input.empty() : this.input;
     }
 
+    /**
+     * If webhooks should be allowed to trigger in response to the user utterance. Often if parameters are injected, webhooks should not be enabled.
+     * 
+     */
     @InputImport(name="isWebhookEnabled")
     private final @Nullable Input<Boolean> isWebhookEnabled;
 

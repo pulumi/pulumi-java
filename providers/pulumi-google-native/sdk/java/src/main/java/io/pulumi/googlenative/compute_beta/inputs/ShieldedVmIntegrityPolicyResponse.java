@@ -8,10 +8,18 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
+/**
+ * The policy describes the baseline against which VM instance boot integrity is measured.
+ * 
+ */
 public final class ShieldedVmIntegrityPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ShieldedVmIntegrityPolicyResponse Empty = new ShieldedVmIntegrityPolicyResponse();
 
+    /**
+     * Updates the integrity policy baseline using the measurements from the VM instance's most recent boot.
+     * 
+     */
     @InputImport(name="updateAutoLearnPolicy", required=true)
     private final Boolean updateAutoLearnPolicy;
 

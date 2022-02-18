@@ -16,6 +16,10 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TemplateArgs Empty = new TemplateArgs();
 
+    /**
+     * The runtime environment for the job.
+     * 
+     */
     @InputImport(name="environment")
     private final @Nullable Input<RuntimeEnvironmentArgs> environment;
 
@@ -23,6 +27,10 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
         return this.environment == null ? Input.empty() : this.environment;
     }
 
+    /**
+     * A Cloud Storage path to the template from which to create the job. Must be a valid Cloud Storage URL, beginning with `gs://`.
+     * 
+     */
     @InputImport(name="gcsPath", required=true)
     private final Input<String> gcsPath;
 
@@ -30,6 +38,10 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
         return this.gcsPath;
     }
 
+    /**
+     * The job name to use for the created job.
+     * 
+     */
     @InputImport(name="jobName", required=true)
     private final Input<String> jobName;
 
@@ -37,6 +49,10 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
         return this.jobName;
     }
 
+    /**
+     * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to which to direct the request.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -44,6 +60,10 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The runtime parameters to pass to the job.
+     * 
+     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,String>> parameters;
 

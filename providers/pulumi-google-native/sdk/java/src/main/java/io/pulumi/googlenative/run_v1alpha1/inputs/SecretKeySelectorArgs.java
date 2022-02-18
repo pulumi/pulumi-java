@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * SecretKeySelector selects a key of a Secret.
+ * 
+ */
 public final class SecretKeySelectorArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SecretKeySelectorArgs Empty = new SecretKeySelectorArgs();
 
+    /**
+     * A Cloud Secret Manager secret version. Must be 'latest' for the latest version or an integer for a specific version. The key of the secret to select from. Must be a valid secret key.
+     * 
+     */
     @InputImport(name="key")
     private final @Nullable Input<String> key;
 
@@ -23,6 +31,10 @@ public final class SecretKeySelectorArgs extends io.pulumi.resources.ResourceArg
         return this.key == null ? Input.empty() : this.key;
     }
 
+    /**
+     * This field should not be used directly as it is meant to be inlined directly into the message. Use the "name" field instead.
+     * 
+     */
     @InputImport(name="localObjectReference")
     private final @Nullable Input<LocalObjectReferenceArgs> localObjectReference;
 
@@ -30,6 +42,10 @@ public final class SecretKeySelectorArgs extends io.pulumi.resources.ResourceArg
         return this.localObjectReference == null ? Input.empty() : this.localObjectReference;
     }
 
+    /**
+     * The name of the secret in Cloud Secret Manager. By default, the secret is assumed to be in the same project. If the secret is in another project, you must define an alias. An alias definition has the form: :projects//secrets/. If multiple alias definitions are needed, they must be separated by commas. The alias definitions must be set on the run.googleapis.com/secrets annotation. The name of the secret in the pod's namespace to select from.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -37,6 +53,10 @@ public final class SecretKeySelectorArgs extends io.pulumi.resources.ResourceArg
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * (Optional) Specify whether the Secret or its key must be defined
+     * 
+     */
     @InputImport(name="optional")
     private final @Nullable Input<Boolean> optional;
 

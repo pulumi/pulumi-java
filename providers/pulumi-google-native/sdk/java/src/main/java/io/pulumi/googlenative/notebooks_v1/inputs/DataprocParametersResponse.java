@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Parameters used in Dataproc JobType executions.
+ * 
+ */
 public final class DataprocParametersResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DataprocParametersResponse Empty = new DataprocParametersResponse();
 
+    /**
+     * URI for cluster used to run Dataproc execution. Format: `projects/{PROJECT_ID}/regions/{REGION}/clusters/{CLUSTER_NAME}`
+     * 
+     */
     @InputImport(name="cluster", required=true)
     private final String cluster;
 

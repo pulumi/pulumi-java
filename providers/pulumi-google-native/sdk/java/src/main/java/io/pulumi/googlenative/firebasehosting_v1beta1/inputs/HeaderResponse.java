@@ -9,10 +9,18 @@ import java.util.Map;
 import java.util.Objects;
 
 
+/**
+ * A [`Header`](https://firebase.google.com/docs/hosting/full-config#headers) specifies a URL pattern that, if matched to the request URL path, triggers Hosting to apply the specified custom response headers.
+ * 
+ */
 public final class HeaderResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final HeaderResponse Empty = new HeaderResponse();
 
+    /**
+     * The user-supplied [glob](https://firebase.google.com/docs/hosting/full-config#glob_pattern_matching) to match against the request URL path.
+     * 
+     */
     @InputImport(name="glob", required=true)
     private final String glob;
 
@@ -20,6 +28,10 @@ public final class HeaderResponse extends io.pulumi.resources.InvokeArgs {
         return this.glob;
     }
 
+    /**
+     * The additional headers to add to the response.
+     * 
+     */
     @InputImport(name="headers", required=true)
     private final Map<String,String> headers;
 
@@ -27,6 +39,10 @@ public final class HeaderResponse extends io.pulumi.resources.InvokeArgs {
         return this.headers;
     }
 
+    /**
+     * The user-supplied RE2 regular expression to match against the request URL path.
+     * 
+     */
     @InputImport(name="regex", required=true)
     private final String regex;
 

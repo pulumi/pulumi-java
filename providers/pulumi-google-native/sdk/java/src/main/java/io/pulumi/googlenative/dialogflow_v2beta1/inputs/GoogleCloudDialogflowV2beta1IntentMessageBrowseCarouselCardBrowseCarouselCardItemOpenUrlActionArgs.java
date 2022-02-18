@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Actions on Google action to open a given url.
+ * 
+ */
 public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionArgs Empty = new GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionArgs();
 
+    /**
+     * URL
+     * 
+     */
     @InputImport(name="url", required=true)
     private final Input<String> url;
 
@@ -22,6 +30,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBr
         return this.url;
     }
 
+    /**
+     * Optional. Specifies the type of viewer that is used when opening the URL. Defaults to opening via web browser.
+     * 
+     */
     @InputImport(name="urlTypeHint")
     private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionUrlTypeHint> urlTypeHint;
 

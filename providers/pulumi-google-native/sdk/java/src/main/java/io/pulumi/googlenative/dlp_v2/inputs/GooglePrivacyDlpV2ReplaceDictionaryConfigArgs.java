@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Replace each input value with a value randomly selected from the dictionary.
+ * 
+ */
 public final class GooglePrivacyDlpV2ReplaceDictionaryConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GooglePrivacyDlpV2ReplaceDictionaryConfigArgs Empty = new GooglePrivacyDlpV2ReplaceDictionaryConfigArgs();
 
+    /**
+     * A list of words to select from for random replacement. The [limits](https://cloud.google.com/dlp/limits) page contains details about the size limits of dictionaries.
+     * 
+     */
     @InputImport(name="wordList")
     private final @Nullable Input<GooglePrivacyDlpV2WordListArgs> wordList;
 

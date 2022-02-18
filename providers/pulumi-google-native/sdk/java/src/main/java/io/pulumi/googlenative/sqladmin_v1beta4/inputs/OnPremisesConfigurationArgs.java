@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * On-premises instance configuration.
+ * 
+ */
 public final class OnPremisesConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OnPremisesConfigurationArgs Empty = new OnPremisesConfigurationArgs();
 
+    /**
+     * PEM representation of the trusted CA's x509 certificate.
+     * 
+     */
     @InputImport(name="caCertificate")
     private final @Nullable Input<String> caCertificate;
 
@@ -22,6 +30,10 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
         return this.caCertificate == null ? Input.empty() : this.caCertificate;
     }
 
+    /**
+     * PEM representation of the replica's x509 certificate.
+     * 
+     */
     @InputImport(name="clientCertificate")
     private final @Nullable Input<String> clientCertificate;
 
@@ -29,6 +41,10 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
         return this.clientCertificate == null ? Input.empty() : this.clientCertificate;
     }
 
+    /**
+     * PEM representation of the replica's private key. The corresponsing public key is encoded in the client's certificate.
+     * 
+     */
     @InputImport(name="clientKey")
     private final @Nullable Input<String> clientKey;
 
@@ -36,6 +52,10 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
         return this.clientKey == null ? Input.empty() : this.clientKey;
     }
 
+    /**
+     * The dump file to create the Cloud SQL replica.
+     * 
+     */
     @InputImport(name="dumpFilePath")
     private final @Nullable Input<String> dumpFilePath;
 
@@ -43,6 +63,10 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
         return this.dumpFilePath == null ? Input.empty() : this.dumpFilePath;
     }
 
+    /**
+     * The host and port of the on-premises instance in host:port format
+     * 
+     */
     @InputImport(name="hostPort")
     private final @Nullable Input<String> hostPort;
 
@@ -50,6 +74,10 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
         return this.hostPort == null ? Input.empty() : this.hostPort;
     }
 
+    /**
+     * This is always `sql#onPremisesConfiguration`.
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -57,6 +85,10 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * The password for connecting to on-premises instance.
+     * 
+     */
     @InputImport(name="password")
     private final @Nullable Input<String> password;
 
@@ -64,6 +96,10 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
         return this.password == null ? Input.empty() : this.password;
     }
 
+    /**
+     * The reference to Cloud SQL instance if the source is Cloud SQL.
+     * 
+     */
     @InputImport(name="sourceInstance")
     private final @Nullable Input<InstanceReferenceArgs> sourceInstance;
 
@@ -71,6 +107,10 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
         return this.sourceInstance == null ? Input.empty() : this.sourceInstance;
     }
 
+    /**
+     * The username for connecting to on-premises instance.
+     * 
+     */
     @InputImport(name="username")
     private final @Nullable Input<String> username;
 

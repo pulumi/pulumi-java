@@ -9,10 +9,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * A table type
+ * 
+ */
 public final class StandardSqlTableTypeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StandardSqlTableTypeResponse Empty = new StandardSqlTableTypeResponse();
 
+    /**
+     * The columns in this table type
+     * 
+     */
     @InputImport(name="columns", required=true)
     private final List<StandardSqlFieldResponse> columns;
 

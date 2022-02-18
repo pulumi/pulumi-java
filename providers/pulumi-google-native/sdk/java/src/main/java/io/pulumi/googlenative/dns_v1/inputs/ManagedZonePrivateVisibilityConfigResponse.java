@@ -21,6 +21,10 @@ public final class ManagedZonePrivateVisibilityConfigResponse extends io.pulumi.
         return this.kind;
     }
 
+    /**
+     * The list of VPC networks that can see this zone.
+     * 
+     */
     @InputImport(name="networks", required=true)
     private final List<ManagedZonePrivateVisibilityConfigNetworkResponse> networks;
 

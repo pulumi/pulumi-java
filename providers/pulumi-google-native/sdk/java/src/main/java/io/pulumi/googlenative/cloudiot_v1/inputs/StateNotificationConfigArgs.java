@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The configuration for notification of new states received from the device.
+ * 
+ */
 public final class StateNotificationConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StateNotificationConfigArgs Empty = new StateNotificationConfigArgs();
 
+    /**
+     * A Cloud Pub/Sub topic name. For example, `projects/myProject/topics/deviceEvents`.
+     * 
+     */
     @InputImport(name="pubsubTopicName")
     private final @Nullable Input<String> pubsubTopicName;
 

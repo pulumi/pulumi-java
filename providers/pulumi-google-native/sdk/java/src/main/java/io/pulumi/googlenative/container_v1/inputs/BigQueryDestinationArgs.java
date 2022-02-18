@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Parameters for using BigQuery as the destination of resource usage export.
+ * 
+ */
 public final class BigQueryDestinationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BigQueryDestinationArgs Empty = new BigQueryDestinationArgs();
 
+    /**
+     * The ID of a BigQuery Dataset.
+     * 
+     */
     @InputImport(name="datasetId")
     private final @Nullable Input<String> datasetId;
 

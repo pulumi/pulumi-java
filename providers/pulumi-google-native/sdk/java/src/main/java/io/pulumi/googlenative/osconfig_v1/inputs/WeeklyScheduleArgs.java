@@ -9,10 +9,18 @@ import io.pulumi.googlenative.osconfig_v1.enums.WeeklyScheduleDayOfWeek;
 import java.util.Objects;
 
 
+/**
+ * Represents a weekly schedule.
+ * 
+ */
 public final class WeeklyScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WeeklyScheduleArgs Empty = new WeeklyScheduleArgs();
 
+    /**
+     * Day of the week.
+     * 
+     */
     @InputImport(name="dayOfWeek", required=true)
     private final Input<WeeklyScheduleDayOfWeek> dayOfWeek;
 

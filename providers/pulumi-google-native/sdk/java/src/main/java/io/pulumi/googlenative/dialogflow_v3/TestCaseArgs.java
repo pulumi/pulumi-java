@@ -25,6 +25,10 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.agentId;
     }
 
+    /**
+     * The human-readable name of the test case, unique within the agent. Limit of 200 characters.
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -32,6 +36,10 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName;
     }
 
+    /**
+     * The latest test result.
+     * 
+     */
     @InputImport(name="lastTestResult")
     private final @Nullable Input<GoogleCloudDialogflowCxV3TestCaseResultArgs> lastTestResult;
 
@@ -46,6 +54,10 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The unique identifier of the test case. TestCases.CreateTestCase will populate the name automatically. Otherwise use format: `projects//locations//agents/ /testCases/`.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -53,6 +65,10 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Additional freeform notes about the test case. Limit of 400 characters.
+     * 
+     */
     @InputImport(name="notes")
     private final @Nullable Input<String> notes;
 
@@ -67,6 +83,10 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Tags are short descriptions that users may apply to test cases for organizational and filtering purposes. Each tag should start with "#" and has a limit of 30 characters.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<String>> tags;
 
@@ -74,6 +94,10 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The conversation turns uttered when the test case was created, in chronological order. These include the canonical set of agent utterances that should occur when the agent is working properly.
+     * 
+     */
     @InputImport(name="testCaseConversationTurns")
     private final @Nullable Input<List<GoogleCloudDialogflowCxV3ConversationTurnArgs>> testCaseConversationTurns;
 
@@ -81,6 +105,10 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.testCaseConversationTurns == null ? Input.empty() : this.testCaseConversationTurns;
     }
 
+    /**
+     * Config for the test case.
+     * 
+     */
     @InputImport(name="testConfig")
     private final @Nullable Input<GoogleCloudDialogflowCxV3TestConfigArgs> testConfig;
 

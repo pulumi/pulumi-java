@@ -10,10 +10,18 @@ import java.util.Map;
 import java.util.Objects;
 
 
+/**
+ * Configuration and status of a managed SSL certificate.
+ * 
+ */
 public final class SslCertificateManagedSslCertificateResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SslCertificateManagedSslCertificateResponse Empty = new SslCertificateManagedSslCertificateResponse();
 
+    /**
+     * [Output only] Detailed statuses of the domains specified for managed certificate resource.
+     * 
+     */
     @InputImport(name="domainStatus", required=true)
     private final Map<String,String> domainStatus;
 
@@ -21,6 +29,10 @@ public final class SslCertificateManagedSslCertificateResponse extends io.pulumi
         return this.domainStatus;
     }
 
+    /**
+     * The domains for which a managed SSL certificate will be generated. Each Google-managed SSL certificate supports up to the [maximum number of domains per Google-managed SSL certificate](/load-balancing/docs/quotas#ssl_certificates).
+     * 
+     */
     @InputImport(name="domains", required=true)
     private final List<String> domains;
 
@@ -28,6 +40,10 @@ public final class SslCertificateManagedSslCertificateResponse extends io.pulumi
         return this.domains;
     }
 
+    /**
+     * [Output only] Status of the managed certificate resource.
+     * 
+     */
     @InputImport(name="status", required=true)
     private final String status;
 

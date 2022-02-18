@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * iOS app information
+ * 
+ */
 public final class IosAppInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IosAppInfoResponse Empty = new IosAppInfoResponse();
 
+    /**
+     * The name of the app. Required
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

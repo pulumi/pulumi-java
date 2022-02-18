@@ -14,6 +14,10 @@ public final class FirewallPolicyRuleSecureTagArgs extends io.pulumi.resources.R
 
     public static final FirewallPolicyRuleSecureTagArgs Empty = new FirewallPolicyRuleSecureTagArgs();
 
+    /**
+     * Name of the secure tag, created with TagManager's TagValue API.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The bucket's uniform bucket-level access configuration. The feature was formerly known as Bucket Policy Only. For backward compatibility, this field will be populated with identical information as the uniformBucketLevelAccess field. We recommend using the uniformBucketLevelAccess field to enable and disable the feature.
+ * 
+ */
 public final class BucketIamConfigurationBucketPolicyOnlyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BucketIamConfigurationBucketPolicyOnlyArgs Empty = new BucketIamConfigurationBucketPolicyOnlyArgs();
 
+    /**
+     * If set, access is controlled only by bucket-level or above IAM policies.
+     * 
+     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 
@@ -22,6 +30,10 @@ public final class BucketIamConfigurationBucketPolicyOnlyArgs extends io.pulumi.
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
+    /**
+     * The deadline for changing iamConfiguration.bucketPolicyOnly.enabled from true to false in RFC 3339 format. iamConfiguration.bucketPolicyOnly.enabled may be changed from true to false until the locked time, after which the field is immutable.
+     * 
+     */
     @InputImport(name="lockedTime")
     private final @Nullable Input<String> lockedTime;
 

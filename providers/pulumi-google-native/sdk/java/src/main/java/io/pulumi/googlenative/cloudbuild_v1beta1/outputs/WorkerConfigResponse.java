@@ -10,8 +10,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class WorkerConfigResponse {
+    /**
+     * Size of the disk attached to the worker, in GB. See [Worker pool config file](https://cloud.google.com/cloud-build/docs/custom-workers/worker-pool-config-file). Specify a value of up to 1000. If `0` is specified, Cloud Build will use a standard disk size.
+     * 
+     */
     private final String diskSizeGb;
+    /**
+     * Machine type of a worker, such as `n1-standard-1`. See [Worker pool config file](https://cloud.google.com/cloud-build/docs/custom-workers/worker-pool-config-file). If left blank, Cloud Build will use `n1-standard-1`.
+     * 
+     */
     private final String machineType;
+    /**
+     * If true, workers are created without any public address, which prevents network egress to public IPs.
+     * 
+     */
     private final Boolean noExternalIp;
 
     @OutputCustomType.Constructor({"diskSizeGb","machineType","noExternalIp"})
@@ -24,12 +36,24 @@ public final class WorkerConfigResponse {
         this.noExternalIp = Objects.requireNonNull(noExternalIp);
     }
 
+    /**
+     * Size of the disk attached to the worker, in GB. See [Worker pool config file](https://cloud.google.com/cloud-build/docs/custom-workers/worker-pool-config-file). Specify a value of up to 1000. If `0` is specified, Cloud Build will use a standard disk size.
+     * 
+     */
     public String getDiskSizeGb() {
         return this.diskSizeGb;
     }
+    /**
+     * Machine type of a worker, such as `n1-standard-1`. See [Worker pool config file](https://cloud.google.com/cloud-build/docs/custom-workers/worker-pool-config-file). If left blank, Cloud Build will use `n1-standard-1`.
+     * 
+     */
     public String getMachineType() {
         return this.machineType;
     }
+    /**
+     * If true, workers are created without any public address, which prevents network egress to public IPs.
+     * 
+     */
     public Boolean getNoExternalIp() {
         return this.noExternalIp;
     }

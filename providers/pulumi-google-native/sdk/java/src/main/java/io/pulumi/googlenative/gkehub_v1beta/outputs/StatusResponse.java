@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class StatusResponse {
+    /**
+     * Code specifies AppDevExperienceFeature's subcomponent ready state.
+     * 
+     */
     private final String code;
+    /**
+     * Description is populated if Code is Failed, explaining why it has failed.
+     * 
+     */
     private final String description;
 
     @OutputCustomType.Constructor({"code","description"})
@@ -20,9 +28,17 @@ public final class StatusResponse {
         this.description = Objects.requireNonNull(description);
     }
 
+    /**
+     * Code specifies AppDevExperienceFeature's subcomponent ready state.
+     * 
+     */
     public String getCode() {
         return this.code;
     }
+    /**
+     * Description is populated if Code is Failed, explaining why it has failed.
+     * 
+     */
     public String getDescription() {
         return this.description;
     }

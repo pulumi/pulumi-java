@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Commitment for a particular license resource.
+ * 
+ */
 public final class LicenseResourceCommitmentResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LicenseResourceCommitmentResponse Empty = new LicenseResourceCommitmentResponse();
 
+    /**
+     * The number of licenses purchased.
+     * 
+     */
     @InputImport(name="amount", required=true)
     private final String amount;
 
@@ -19,6 +27,10 @@ public final class LicenseResourceCommitmentResponse extends io.pulumi.resources
         return this.amount;
     }
 
+    /**
+     * Specifies the core range of the instance for which this license applies.
+     * 
+     */
     @InputImport(name="coresPerLicense", required=true)
     private final String coresPerLicense;
 
@@ -26,6 +38,10 @@ public final class LicenseResourceCommitmentResponse extends io.pulumi.resources
         return this.coresPerLicense;
     }
 
+    /**
+     * Any applicable license URI.
+     * 
+     */
     @InputImport(name="license", required=true)
     private final String license;
 

@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AuthenticationResponse {
+    /**
+     * Authentication using a custom account.
+     * 
+     */
     private final CustomAccountResponse customAccount;
+    /**
+     * Authentication using a Google account.
+     * 
+     */
     private final GoogleAccountResponse googleAccount;
 
     @OutputCustomType.Constructor({"customAccount","googleAccount"})
@@ -21,9 +29,17 @@ public final class AuthenticationResponse {
         this.googleAccount = Objects.requireNonNull(googleAccount);
     }
 
+    /**
+     * Authentication using a custom account.
+     * 
+     */
     public CustomAccountResponse getCustomAccount() {
         return this.customAccount;
     }
+    /**
+     * Authentication using a Google account.
+     * 
+     */
     public GoogleAccountResponse getGoogleAccount() {
         return this.googleAccount;
     }

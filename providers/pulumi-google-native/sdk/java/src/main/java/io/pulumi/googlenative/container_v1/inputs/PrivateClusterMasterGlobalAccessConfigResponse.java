@@ -8,10 +8,18 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
+/**
+ * Configuration for controlling master global access settings.
+ * 
+ */
 public final class PrivateClusterMasterGlobalAccessConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PrivateClusterMasterGlobalAccessConfigResponse Empty = new PrivateClusterMasterGlobalAccessConfigResponse();
 
+    /**
+     * Whenever master is accessible globally or not.
+     * 
+     */
     @InputImport(name="enabled", required=true)
     private final Boolean enabled;
 

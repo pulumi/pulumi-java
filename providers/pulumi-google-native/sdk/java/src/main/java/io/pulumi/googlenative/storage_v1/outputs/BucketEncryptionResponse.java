@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BucketEncryptionResponse {
+    /**
+     * A Cloud KMS key that will be used to encrypt objects inserted into this bucket, if no encryption method is specified.
+     * 
+     */
     private final String defaultKmsKeyName;
 
     @OutputCustomType.Constructor({"defaultKmsKeyName"})
@@ -16,6 +20,10 @@ public final class BucketEncryptionResponse {
         this.defaultKmsKeyName = Objects.requireNonNull(defaultKmsKeyName);
     }
 
+    /**
+     * A Cloud KMS key that will be used to encrypt objects inserted into this bucket, if no encryption method is specified.
+     * 
+     */
     public String getDefaultKmsKeyName() {
         return this.defaultKmsKeyName;
     }

@@ -11,7 +11,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudContactcenterinsightsV1IssueModelResultResponse {
+    /**
+     * Issue model that generates the result. Format: projects/{project}/locations/{location}/issueModels/{issue_model}
+     * 
+     */
     private final String issueModel;
+    /**
+     * All the matched issues.
+     * 
+     */
     private final List<GoogleCloudContactcenterinsightsV1IssueAssignmentResponse> issues;
 
     @OutputCustomType.Constructor({"issueModel","issues"})
@@ -22,9 +30,17 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelResultResponse {
         this.issues = Objects.requireNonNull(issues);
     }
 
+    /**
+     * Issue model that generates the result. Format: projects/{project}/locations/{location}/issueModels/{issue_model}
+     * 
+     */
     public String getIssueModel() {
         return this.issueModel;
     }
+    /**
+     * All the matched issues.
+     * 
+     */
     public List<GoogleCloudContactcenterinsightsV1IssueAssignmentResponse> getIssues() {
         return this.issues;
     }

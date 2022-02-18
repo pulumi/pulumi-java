@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A value of a field, including its frequency.
+ * 
+ */
 public final class GooglePrivacyDlpV2ValueFrequencyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2ValueFrequencyResponse Empty = new GooglePrivacyDlpV2ValueFrequencyResponse();
 
+    /**
+     * How many times the value is contained in the field.
+     * 
+     */
     @InputImport(name="count", required=true)
     private final String count;
 
@@ -20,6 +28,10 @@ public final class GooglePrivacyDlpV2ValueFrequencyResponse extends io.pulumi.re
         return this.count;
     }
 
+    /**
+     * A value contained in the field in question.
+     * 
+     */
     @InputImport(name="value", required=true)
     private final GooglePrivacyDlpV2ValueResponse value;
 

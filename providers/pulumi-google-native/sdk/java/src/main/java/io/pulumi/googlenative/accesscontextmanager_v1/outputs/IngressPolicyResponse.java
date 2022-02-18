@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class IngressPolicyResponse {
+    /**
+     * Defines the conditions on the source of a request causing this IngressPolicy to apply.
+     * 
+     */
     private final IngressFromResponse ingressFrom;
+    /**
+     * Defines the conditions on the ApiOperation and request destination that cause this IngressPolicy to apply.
+     * 
+     */
     private final IngressToResponse ingressTo;
 
     @OutputCustomType.Constructor({"ingressFrom","ingressTo"})
@@ -21,9 +29,17 @@ public final class IngressPolicyResponse {
         this.ingressTo = Objects.requireNonNull(ingressTo);
     }
 
+    /**
+     * Defines the conditions on the source of a request causing this IngressPolicy to apply.
+     * 
+     */
     public IngressFromResponse getIngressFrom() {
         return this.ingressFrom;
     }
+    /**
+     * Defines the conditions on the ApiOperation and request destination that cause this IngressPolicy to apply.
+     * 
+     */
     public IngressToResponse getIngressTo() {
         return this.ingressTo;
     }

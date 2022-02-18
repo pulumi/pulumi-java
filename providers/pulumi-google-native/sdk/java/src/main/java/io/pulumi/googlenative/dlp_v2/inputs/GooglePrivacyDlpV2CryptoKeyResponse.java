@@ -10,10 +10,18 @@ import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2UnwrappedCryptoKey
 import java.util.Objects;
 
 
+/**
+ * This is a data encryption key (DEK) (as opposed to a key encryption key (KEK) stored by Cloud Key Management Service (Cloud KMS). When using Cloud KMS to wrap or unwrap a DEK, be sure to set an appropriate IAM policy on the KEK to ensure an attacker cannot unwrap the DEK.
+ * 
+ */
 public final class GooglePrivacyDlpV2CryptoKeyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2CryptoKeyResponse Empty = new GooglePrivacyDlpV2CryptoKeyResponse();
 
+    /**
+     * Key wrapped using Cloud KMS
+     * 
+     */
     @InputImport(name="kmsWrapped", required=true)
     private final GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse kmsWrapped;
 
@@ -21,6 +29,10 @@ public final class GooglePrivacyDlpV2CryptoKeyResponse extends io.pulumi.resourc
         return this.kmsWrapped;
     }
 
+    /**
+     * Transient crypto key
+     * 
+     */
     @InputImport(name="transient", required=true)
     private final GooglePrivacyDlpV2TransientCryptoKeyResponse $transient;
 
@@ -28,6 +40,10 @@ public final class GooglePrivacyDlpV2CryptoKeyResponse extends io.pulumi.resourc
         return this.$transient;
     }
 
+    /**
+     * Unwrapped crypto key
+     * 
+     */
     @InputImport(name="unwrapped", required=true)
     private final GooglePrivacyDlpV2UnwrappedCryptoKeyResponse unwrapped;
 

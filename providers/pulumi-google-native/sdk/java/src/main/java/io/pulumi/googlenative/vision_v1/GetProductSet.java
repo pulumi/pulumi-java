@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetProductSet {
+/**
+ * Gets information associated with a ProductSet. Possible errors: * Returns NOT_FOUND if the ProductSet does not exist.
+ * 
+ */
     public static CompletableFuture<GetProductSetResult> invokeAsync(GetProductSetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:vision/v1:getProductSet", TypeShape.of(GetProductSetResult.class), args == null ? GetProductSetArgs.Empty : args, Utilities.withVersion(options));
     }

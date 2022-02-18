@@ -14,6 +14,10 @@ public final class SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs extend
 
     public static final SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs Empty = new SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs();
 
+    /**
+     * The name of the header to set.
+     * 
+     */
     @InputImport(name="headerName")
     private final @Nullable Input<String> headerName;
 
@@ -21,6 +25,10 @@ public final class SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs extend
         return this.headerName == null ? Input.empty() : this.headerName;
     }
 
+    /**
+     * The value to set the named header to.
+     * 
+     */
     @InputImport(name="headerValue")
     private final @Nullable Input<String> headerValue;
 

@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Reservation Affinity for consuming Zonal reservation.
+ * 
+ */
 public final class ReservationAffinityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ReservationAffinityArgs Empty = new ReservationAffinityArgs();
 
+    /**
+     * Optional. Type of reservation to consume
+     * 
+     */
     @InputImport(name="consumeReservationType")
     private final @Nullable Input<ReservationAffinityConsumeReservationType> consumeReservationType;
 
@@ -23,6 +31,10 @@ public final class ReservationAffinityArgs extends io.pulumi.resources.ResourceA
         return this.consumeReservationType == null ? Input.empty() : this.consumeReservationType;
     }
 
+    /**
+     * Optional. Corresponds to the label key of reservation resource.
+     * 
+     */
     @InputImport(name="key")
     private final @Nullable Input<String> key;
 
@@ -30,6 +42,10 @@ public final class ReservationAffinityArgs extends io.pulumi.resources.ResourceA
         return this.key == null ? Input.empty() : this.key;
     }
 
+    /**
+     * Optional. Corresponds to the label values of reservation resource.
+     * 
+     */
     @InputImport(name="values")
     private final @Nullable Input<List<String>> values;
 

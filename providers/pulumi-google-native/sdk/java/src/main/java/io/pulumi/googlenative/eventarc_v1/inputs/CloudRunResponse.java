@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Represents a Cloud Run destination.
+ * 
+ */
 public final class CloudRunResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CloudRunResponse Empty = new CloudRunResponse();
 
+    /**
+     * Optional. The relative path on the Cloud Run service the events should be sent to. The value must conform to the definition of a URI path segment (section 3.3 of RFC2396). Examples: "/route", "route", "route/subroute".
+     * 
+     */
     @InputImport(name="path", required=true)
     private final String path;
 
@@ -19,6 +27,10 @@ public final class CloudRunResponse extends io.pulumi.resources.InvokeArgs {
         return this.path;
     }
 
+    /**
+     * The region the Cloud Run service is deployed in.
+     * 
+     */
     @InputImport(name="region", required=true)
     private final String region;
 
@@ -26,6 +38,10 @@ public final class CloudRunResponse extends io.pulumi.resources.InvokeArgs {
         return this.region;
     }
 
+    /**
+     * The name of the Cloud Run service being addressed. See https://cloud.google.com/run/docs/reference/rest/v1/namespaces.services. Only services located in the same project as the trigger object can be addressed.
+     * 
+     */
     @InputImport(name="service", required=true)
     private final String service;
 

@@ -15,6 +15,10 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LocalDiskArgs Empty = new LocalDiskArgs();
 
+    /**
+     * Specifies the number of such disks.
+     * 
+     */
     @InputImport(name="diskCount")
     private final @Nullable Input<Integer> diskCount;
 
@@ -22,6 +26,10 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.diskCount == null ? Input.empty() : this.diskCount;
     }
 
+    /**
+     * Specifies the size of the disk in base-2 GB.
+     * 
+     */
     @InputImport(name="diskSizeGb")
     private final @Nullable Input<Integer> diskSizeGb;
 
@@ -29,6 +37,10 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.diskSizeGb == null ? Input.empty() : this.diskSizeGb;
     }
 
+    /**
+     * Specifies the desired disk type on the node. This disk type must be a local storage type (e.g.: local-ssd). Note that for nodeTemplates, this should be the name of the disk type and not its URL.
+     * 
+     */
     @InputImport(name="diskType")
     private final @Nullable Input<String> diskType;
 

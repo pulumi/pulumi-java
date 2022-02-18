@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTagKey {
+/**
+ * Retrieves a TagKey. This method will return `PERMISSION_DENIED` if the key does not exist or the user does not have permission to view it.
+ * 
+ */
     public static CompletableFuture<GetTagKeyResult> invokeAsync(GetTagKeyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudresourcemanager/v3:getTagKey", TypeShape.of(GetTagKeyResult.class), args == null ? GetTagKeyArgs.Empty : args, Utilities.withVersion(options));
     }

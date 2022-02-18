@@ -8,10 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Optional. The network connect mode of the Redis instance. If not provided, the connect mode defaults to DIRECT_PEERING.
+     * 
+     */
     @EnumType
     public enum InstanceConnectMode {
+        /**
+         * Not set.
+         * 
+         */
         ConnectModeUnspecified("CONNECT_MODE_UNSPECIFIED"),
+        /**
+         * Connect via direct peering to the Memorystore for Redis hosted service.
+         * 
+         */
         DirectPeering("DIRECT_PEERING"),
+        /**
+         * Connect your Memorystore for Redis instance using Private Service Access. Private services access provides an IP address range for multiple Google Cloud services, including Memorystore.
+         * 
+         */
         PrivateServiceAccess("PRIVATE_SERVICE_ACCESS");
 
         private final String value;
