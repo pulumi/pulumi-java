@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Valid enum values in case of an enum property.
+ * 
+ */
 public final class ProfileEnumValidValuesFormatResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ProfileEnumValidValuesFormatResponse Empty = new ProfileEnumValidValuesFormatResponse();
 
+    /**
+     * Localized names of the enum member.
+     * 
+     */
     @InputImport(name="localizedValueNames")
     private final @Nullable Map<String,String> localizedValueNames;
 
@@ -23,6 +31,10 @@ public final class ProfileEnumValidValuesFormatResponse extends io.pulumi.resour
         return this.localizedValueNames == null ? Map.of() : this.localizedValueNames;
     }
 
+    /**
+     * The integer value of the enum member.
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable Integer value;
 

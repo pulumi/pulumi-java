@@ -13,45 +13,103 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Resource schema for AWS::MediaConnect::FlowVpcInterface
+ * 
+ */
 @ResourceType(type="aws-native:mediaconnect:FlowVpcInterface")
 public class FlowVpcInterface extends io.pulumi.resources.CustomResource {
+    /**
+     * The Amazon Resource Name (ARN), a unique identifier for any AWS resource, of the flow.
+     * 
+     */
     @OutputExport(name="flowArn", type=String.class, parameters={})
     private Output<String> flowArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN), a unique identifier for any AWS resource, of the flow.
+     * 
+     */
     public Output<String> getFlowArn() {
         return this.flowArn;
     }
+    /**
+     * Immutable and has to be a unique against other VpcInterfaces in this Flow.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Immutable and has to be a unique against other VpcInterfaces in this Flow.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * IDs of the network interfaces created in customer's account by MediaConnect.
+     * 
+     */
     @OutputExport(name="networkInterfaceIds", type=List.class, parameters={String.class})
     private Output<List<String>> networkInterfaceIds;
 
+    /**
+     * @return IDs of the network interfaces created in customer's account by MediaConnect.
+     * 
+     */
     public Output<List<String>> getNetworkInterfaceIds() {
         return this.networkInterfaceIds;
     }
+    /**
+     * Role Arn MediaConnect can assumes to create ENIs in customer's account.
+     * 
+     */
     @OutputExport(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
+    /**
+     * @return Role Arn MediaConnect can assumes to create ENIs in customer's account.
+     * 
+     */
     public Output<String> getRoleArn() {
         return this.roleArn;
     }
+    /**
+     * Security Group IDs to be used on ENI.
+     * 
+     */
     @OutputExport(name="securityGroupIds", type=List.class, parameters={String.class})
     private Output<List<String>> securityGroupIds;
 
+    /**
+     * @return Security Group IDs to be used on ENI.
+     * 
+     */
     public Output<List<String>> getSecurityGroupIds() {
         return this.securityGroupIds;
     }
+    /**
+     * Subnet must be in the AZ of the Flow
+     * 
+     */
     @OutputExport(name="subnetId", type=String.class, parameters={})
     private Output<String> subnetId;
 
+    /**
+     * @return Subnet must be in the AZ of the Flow
+     * 
+     */
     public Output<String> getSubnetId() {
         return this.subnetId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public FlowVpcInterface(String name, FlowVpcInterfaceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:mediaconnect:FlowVpcInterface", name, args == null ? FlowVpcInterfaceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -67,6 +125,14 @@ public class FlowVpcInterface extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static FlowVpcInterface get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new FlowVpcInterface(name, id, options);
     }

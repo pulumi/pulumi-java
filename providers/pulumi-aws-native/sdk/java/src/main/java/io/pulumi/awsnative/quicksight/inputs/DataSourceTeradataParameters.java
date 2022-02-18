@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * <p>Teradata parameters.</p>
+ * 
+ */
 public final class DataSourceTeradataParameters extends io.pulumi.resources.InvokeArgs {
 
     public static final DataSourceTeradataParameters Empty = new DataSourceTeradataParameters();
 
+    /**
+     * <p>Database.</p>
+     * 
+     */
     @InputImport(name="database", required=true)
     private final String database;
 
@@ -20,6 +28,10 @@ public final class DataSourceTeradataParameters extends io.pulumi.resources.Invo
         return this.database;
     }
 
+    /**
+     * <p>Host.</p>
+     * 
+     */
     @InputImport(name="host", required=true)
     private final String host;
 
@@ -27,6 +39,10 @@ public final class DataSourceTeradataParameters extends io.pulumi.resources.Invo
         return this.host;
     }
 
+    /**
+     * <p>Port.</p>
+     * 
+     */
     @InputImport(name="port", required=true)
     private final Double port;
 

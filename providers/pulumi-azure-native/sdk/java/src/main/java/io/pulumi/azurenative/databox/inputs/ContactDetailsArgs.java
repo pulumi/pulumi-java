@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Contact Details.
+ * 
+ */
 public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContactDetailsArgs Empty = new ContactDetailsArgs();
 
+    /**
+     * Contact name of the person.
+     * 
+     */
     @InputImport(name="contactName", required=true)
     private final Input<String> contactName;
 
@@ -23,6 +31,10 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
         return this.contactName;
     }
 
+    /**
+     * List of Email-ids to be notified about job progress.
+     * 
+     */
     @InputImport(name="emailList", required=true)
     private final Input<List<String>> emailList;
 
@@ -30,6 +42,10 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
         return this.emailList;
     }
 
+    /**
+     * Mobile number of the contact person.
+     * 
+     */
     @InputImport(name="mobile")
     private final @Nullable Input<String> mobile;
 
@@ -37,6 +53,10 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
         return this.mobile == null ? Input.empty() : this.mobile;
     }
 
+    /**
+     * Notification preference for a job stage.
+     * 
+     */
     @InputImport(name="notificationPreference")
     private final @Nullable Input<List<NotificationPreferenceArgs>> notificationPreference;
 
@@ -44,6 +64,10 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
         return this.notificationPreference == null ? Input.empty() : this.notificationPreference;
     }
 
+    /**
+     * Phone number of the contact person.
+     * 
+     */
     @InputImport(name="phone", required=true)
     private final Input<String> phone;
 
@@ -51,6 +75,10 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
         return this.phone;
     }
 
+    /**
+     * Phone extension number of the contact person.
+     * 
+     */
     @InputImport(name="phoneExtension")
     private final @Nullable Input<String> phoneExtension;
 

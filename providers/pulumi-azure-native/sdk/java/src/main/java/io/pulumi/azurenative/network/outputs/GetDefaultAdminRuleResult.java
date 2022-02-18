@@ -15,23 +15,96 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetDefaultAdminRuleResult {
+    /**
+     * Indicates the access allowed for this particular rule
+     * 
+     */
     private final String access;
+    /**
+     * A description for this rule. Restricted to 140 chars.
+     * 
+     */
     private final String description;
+    /**
+     * The destination port ranges.
+     * 
+     */
     private final List<String> destinationPortRanges;
+    /**
+     * The destination address prefixes. CIDR or destination IP ranges.
+     * 
+     */
     private final List<AddressPrefixItemResponse> destinations;
+    /**
+     * Indicates if the traffic matched against the rule in inbound or outbound.
+     * 
+     */
     private final String direction;
+    /**
+     * A friendly name for the rule.
+     * 
+     */
     private final String displayName;
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     private final String etag;
+    /**
+     * Default rule flag.
+     * 
+     */
     private final @Nullable String flag;
+    /**
+     * Resource ID.
+     * 
+     */
     private final String id;
+    /**
+     * Whether the rule is custom or default.
+     * Expected value is 'Default'.
+     * 
+     */
     private final String kind;
+    /**
+     * Resource name.
+     * 
+     */
     private final String name;
+    /**
+     * The priority of the rule. The value can be between 1 and 4096. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule.
+     * 
+     */
     private final Integer priority;
+    /**
+     * Network protocol this rule applies to.
+     * 
+     */
     private final String protocol;
+    /**
+     * The provisioning state of the resource.
+     * 
+     */
     private final String provisioningState;
+    /**
+     * The source port ranges.
+     * 
+     */
     private final List<String> sourcePortRanges;
+    /**
+     * The CIDR or source IP ranges.
+     * 
+     */
     private final List<AddressPrefixItemResponse> sources;
+    /**
+     * The system metadata related to this resource.
+     * 
+     */
     private final SystemDataResponse systemData;
+    /**
+     * Resource type.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"access","description","destinationPortRanges","destinations","direction","displayName","etag","flag","id","kind","name","priority","protocol","provisioningState","sourcePortRanges","sources","systemData","type"})
@@ -74,57 +147,130 @@ public final class GetDefaultAdminRuleResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Indicates the access allowed for this particular rule
+     * 
+     */
     public String getAccess() {
         return this.access;
     }
+    /**
+     * A description for this rule. Restricted to 140 chars.
+     * 
+     */
     public String getDescription() {
         return this.description;
     }
+    /**
+     * The destination port ranges.
+     * 
+     */
     public List<String> getDestinationPortRanges() {
         return this.destinationPortRanges;
     }
+    /**
+     * The destination address prefixes. CIDR or destination IP ranges.
+     * 
+     */
     public List<AddressPrefixItemResponse> getDestinations() {
         return this.destinations;
     }
+    /**
+     * Indicates if the traffic matched against the rule in inbound or outbound.
+     * 
+     */
     public String getDirection() {
         return this.direction;
     }
+    /**
+     * A friendly name for the rule.
+     * 
+     */
     public String getDisplayName() {
         return this.displayName;
     }
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String getEtag() {
         return this.etag;
     }
+    /**
+     * Default rule flag.
+     * 
+     */
     public Optional<String> getFlag() {
         return Optional.ofNullable(this.flag);
     }
+    /**
+     * Resource ID.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Whether the rule is custom or default.
+     * Expected value is 'Default'.
+     * 
+     */
     public String getKind() {
         return this.kind;
     }
+    /**
+     * Resource name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The priority of the rule. The value can be between 1 and 4096. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule.
+     * 
+     */
     public Integer getPriority() {
         return this.priority;
     }
+    /**
+     * Network protocol this rule applies to.
+     * 
+     */
     public String getProtocol() {
         return this.protocol;
     }
+    /**
+     * The provisioning state of the resource.
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The source port ranges.
+     * 
+     */
     public List<String> getSourcePortRanges() {
         return this.sourcePortRanges;
     }
+    /**
+     * The CIDR or source IP ranges.
+     * 
+     */
     public List<AddressPrefixItemResponse> getSources() {
         return this.sources;
     }
+    /**
+     * The system metadata related to this resource.
+     * 
+     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+    /**
+     * Resource type.
+     * 
+     */
     public String getType() {
         return this.type;
     }

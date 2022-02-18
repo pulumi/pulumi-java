@@ -12,23 +12,95 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SelfHostedIntegrationRuntimeNodeResponse {
+    /**
+     * The integration runtime capabilities dictionary
+     * 
+     */
     private final Map<String,String> capabilities;
+    /**
+     * Maximum concurrent jobs on the integration runtime node.
+     * 
+     */
     private final Integer concurrentJobsLimit;
+    /**
+     * The time at which the integration runtime will expire in ISO8601 format.
+     * 
+     */
     private final String expiryTime;
+    /**
+     * URI for the host machine of the integration runtime.
+     * 
+     */
     private final String hostServiceUri;
+    /**
+     * Indicates whether this node is the active dispatcher for integration runtime requests.
+     * 
+     */
     private final Boolean isActiveDispatcher;
+    /**
+     * The most recent time at which the integration runtime was connected in ISO8601 format.
+     * 
+     */
     private final String lastConnectTime;
+    /**
+     * The last time for the integration runtime node update end.
+     * 
+     */
     private final String lastEndUpdateTime;
+    /**
+     * The time the node last started up.
+     * 
+     */
     private final String lastStartTime;
+    /**
+     * The last time for the integration runtime node update start.
+     * 
+     */
     private final String lastStartUpdateTime;
+    /**
+     * The integration runtime node last stop time.
+     * 
+     */
     private final String lastStopTime;
+    /**
+     * The result of the last integration runtime node update.
+     * 
+     */
     private final String lastUpdateResult;
+    /**
+     * Machine name of the integration runtime node.
+     * 
+     */
     private final String machineName;
+    /**
+     * The maximum concurrent jobs in this integration runtime.
+     * 
+     */
     private final Integer maxConcurrentJobs;
+    /**
+     * Name of the integration runtime node.
+     * 
+     */
     private final String nodeName;
+    /**
+     * The time at which the integration runtime node was registered in ISO8601 format.
+     * 
+     */
     private final String registerTime;
+    /**
+     * Status of the integration runtime node.
+     * 
+     */
     private final String status;
+    /**
+     * Version of the integration runtime node.
+     * 
+     */
     private final String version;
+    /**
+     * Status of the integration runtime node version.
+     * 
+     */
     private final String versionStatus;
 
     @OutputCustomType.Constructor({"capabilities","concurrentJobsLimit","expiryTime","hostServiceUri","isActiveDispatcher","lastConnectTime","lastEndUpdateTime","lastStartTime","lastStartUpdateTime","lastStopTime","lastUpdateResult","machineName","maxConcurrentJobs","nodeName","registerTime","status","version","versionStatus"})
@@ -71,57 +143,129 @@ public final class SelfHostedIntegrationRuntimeNodeResponse {
         this.versionStatus = Objects.requireNonNull(versionStatus);
     }
 
+    /**
+     * The integration runtime capabilities dictionary
+     * 
+     */
     public Map<String,String> getCapabilities() {
         return this.capabilities;
     }
+    /**
+     * Maximum concurrent jobs on the integration runtime node.
+     * 
+     */
     public Integer getConcurrentJobsLimit() {
         return this.concurrentJobsLimit;
     }
+    /**
+     * The time at which the integration runtime will expire in ISO8601 format.
+     * 
+     */
     public String getExpiryTime() {
         return this.expiryTime;
     }
+    /**
+     * URI for the host machine of the integration runtime.
+     * 
+     */
     public String getHostServiceUri() {
         return this.hostServiceUri;
     }
+    /**
+     * Indicates whether this node is the active dispatcher for integration runtime requests.
+     * 
+     */
     public Boolean getIsActiveDispatcher() {
         return this.isActiveDispatcher;
     }
+    /**
+     * The most recent time at which the integration runtime was connected in ISO8601 format.
+     * 
+     */
     public String getLastConnectTime() {
         return this.lastConnectTime;
     }
+    /**
+     * The last time for the integration runtime node update end.
+     * 
+     */
     public String getLastEndUpdateTime() {
         return this.lastEndUpdateTime;
     }
+    /**
+     * The time the node last started up.
+     * 
+     */
     public String getLastStartTime() {
         return this.lastStartTime;
     }
+    /**
+     * The last time for the integration runtime node update start.
+     * 
+     */
     public String getLastStartUpdateTime() {
         return this.lastStartUpdateTime;
     }
+    /**
+     * The integration runtime node last stop time.
+     * 
+     */
     public String getLastStopTime() {
         return this.lastStopTime;
     }
+    /**
+     * The result of the last integration runtime node update.
+     * 
+     */
     public String getLastUpdateResult() {
         return this.lastUpdateResult;
     }
+    /**
+     * Machine name of the integration runtime node.
+     * 
+     */
     public String getMachineName() {
         return this.machineName;
     }
+    /**
+     * The maximum concurrent jobs in this integration runtime.
+     * 
+     */
     public Integer getMaxConcurrentJobs() {
         return this.maxConcurrentJobs;
     }
+    /**
+     * Name of the integration runtime node.
+     * 
+     */
     public String getNodeName() {
         return this.nodeName;
     }
+    /**
+     * The time at which the integration runtime node was registered in ISO8601 format.
+     * 
+     */
     public String getRegisterTime() {
         return this.registerTime;
     }
+    /**
+     * Status of the integration runtime node.
+     * 
+     */
     public String getStatus() {
         return this.status;
     }
+    /**
+     * Version of the integration runtime node.
+     * 
+     */
     public String getVersion() {
         return this.version;
     }
+    /**
+     * Status of the integration runtime node version.
+     * 
+     */
     public String getVersionStatus() {
         return this.versionStatus;
     }

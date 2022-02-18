@@ -13,6 +13,10 @@ public final class BucketLifecycleConfiguration extends io.pulumi.resources.Invo
 
     public static final BucketLifecycleConfiguration Empty = new BucketLifecycleConfiguration();
 
+    /**
+     * A list of lifecycle rules for individual objects in an Amazon S3Outposts bucket.
+     * 
+     */
     @InputImport(name="rules", required=true)
     private final List<BucketRule> rules;
 

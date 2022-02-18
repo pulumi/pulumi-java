@@ -18,81 +18,187 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Resource schema for AWS::RDS::DBProxy
+ * 
+ */
 @ResourceType(type="aws-native:rds:DBProxy")
 public class DBProxy extends io.pulumi.resources.CustomResource {
+    /**
+     * The authorization mechanism that the proxy uses.
+     * 
+     */
     @OutputExport(name="auth", type=List.class, parameters={DBProxyAuthFormat.class})
     private Output<List<DBProxyAuthFormat>> auth;
 
+    /**
+     * @return The authorization mechanism that the proxy uses.
+     * 
+     */
     public Output<List<DBProxyAuthFormat>> getAuth() {
         return this.auth;
     }
+    /**
+     * The Amazon Resource Name (ARN) for the proxy.
+     * 
+     */
     @OutputExport(name="dBProxyArn", type=String.class, parameters={})
     private Output<String> dBProxyArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) for the proxy.
+     * 
+     */
     public Output<String> getDBProxyArn() {
         return this.dBProxyArn;
     }
+    /**
+     * The identifier for the proxy. This name must be unique for all proxies owned by your AWS account in the specified AWS Region.
+     * 
+     */
     @OutputExport(name="dBProxyName", type=String.class, parameters={})
     private Output<String> dBProxyName;
 
+    /**
+     * @return The identifier for the proxy. This name must be unique for all proxies owned by your AWS account in the specified AWS Region.
+     * 
+     */
     public Output<String> getDBProxyName() {
         return this.dBProxyName;
     }
+    /**
+     * Whether the proxy includes detailed information about SQL statements in its logs.
+     * 
+     */
     @OutputExport(name="debugLogging", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> debugLogging;
 
+    /**
+     * @return Whether the proxy includes detailed information about SQL statements in its logs.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getDebugLogging() {
         return this.debugLogging;
     }
+    /**
+     * The endpoint that you can use to connect to the proxy. You include the endpoint value in the connection string for a database client application.
+     * 
+     */
     @OutputExport(name="endpoint", type=String.class, parameters={})
     private Output<String> endpoint;
 
+    /**
+     * @return The endpoint that you can use to connect to the proxy. You include the endpoint value in the connection string for a database client application.
+     * 
+     */
     public Output<String> getEndpoint() {
         return this.endpoint;
     }
+    /**
+     * The kinds of databases that the proxy can connect to.
+     * 
+     */
     @OutputExport(name="engineFamily", type=DBProxyEngineFamily.class, parameters={})
     private Output<DBProxyEngineFamily> engineFamily;
 
+    /**
+     * @return The kinds of databases that the proxy can connect to.
+     * 
+     */
     public Output<DBProxyEngineFamily> getEngineFamily() {
         return this.engineFamily;
     }
+    /**
+     * The number of seconds that a connection to the proxy can be inactive before the proxy disconnects it.
+     * 
+     */
     @OutputExport(name="idleClientTimeout", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> idleClientTimeout;
 
+    /**
+     * @return The number of seconds that a connection to the proxy can be inactive before the proxy disconnects it.
+     * 
+     */
     public Output</* @Nullable */ Integer> getIdleClientTimeout() {
         return this.idleClientTimeout;
     }
+    /**
+     * A Boolean parameter that specifies whether Transport Layer Security (TLS) encryption is required for connections to the proxy.
+     * 
+     */
     @OutputExport(name="requireTLS", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> requireTLS;
 
+    /**
+     * @return A Boolean parameter that specifies whether Transport Layer Security (TLS) encryption is required for connections to the proxy.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getRequireTLS() {
         return this.requireTLS;
     }
+    /**
+     * The Amazon Resource Name (ARN) of the IAM role that the proxy uses to access secrets in AWS Secrets Manager.
+     * 
+     */
     @OutputExport(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the IAM role that the proxy uses to access secrets in AWS Secrets Manager.
+     * 
+     */
     public Output<String> getRoleArn() {
         return this.roleArn;
     }
+    /**
+     * An optional set of key-value pairs to associate arbitrary data of your choosing with the proxy.
+     * 
+     */
     @OutputExport(name="tags", type=List.class, parameters={DBProxyTagFormat.class})
     private Output</* @Nullable */ List<DBProxyTagFormat>> tags;
 
+    /**
+     * @return An optional set of key-value pairs to associate arbitrary data of your choosing with the proxy.
+     * 
+     */
     public Output</* @Nullable */ List<DBProxyTagFormat>> getTags() {
         return this.tags;
     }
+    /**
+     * VPC security group IDs to associate with the new proxy.
+     * 
+     */
     @OutputExport(name="vpcSecurityGroupIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> vpcSecurityGroupIds;
 
+    /**
+     * @return VPC security group IDs to associate with the new proxy.
+     * 
+     */
     public Output</* @Nullable */ List<String>> getVpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds;
     }
+    /**
+     * VPC subnet IDs to associate with the new proxy.
+     * 
+     */
     @OutputExport(name="vpcSubnetIds", type=List.class, parameters={String.class})
     private Output<List<String>> vpcSubnetIds;
 
+    /**
+     * @return VPC subnet IDs to associate with the new proxy.
+     * 
+     */
     public Output<List<String>> getVpcSubnetIds() {
         return this.vpcSubnetIds;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public DBProxy(String name, DBProxyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:rds:DBProxy", name, args == null ? DBProxyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -108,6 +214,14 @@ public class DBProxy extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static DBProxy get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DBProxy(name, id, options);
     }

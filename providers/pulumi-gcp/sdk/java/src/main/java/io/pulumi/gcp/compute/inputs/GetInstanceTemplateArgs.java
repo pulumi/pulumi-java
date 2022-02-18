@@ -15,6 +15,12 @@ public final class GetInstanceTemplateArgs extends io.pulumi.resources.InvokeArg
 
     public static final GetInstanceTemplateArgs Empty = new GetInstanceTemplateArgs();
 
+    /**
+     * A filter to retrieve the instance templates.
+     * See [gcloud topic filters](https://cloud.google.com/sdk/gcloud/reference/topic/filters) for reference.
+     * If multiple instance templates match, either adjust the filter or specify `most_recent`. One of `name` or `filter` must be provided.
+     * 
+     */
     @InputImport(name="filter")
     private final @Nullable String filter;
 
@@ -22,6 +28,10 @@ public final class GetInstanceTemplateArgs extends io.pulumi.resources.InvokeArg
         return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
     }
 
+    /**
+     * If `filter` is provided, ensures the most recent template is returned when multiple instance templates match. One of `name` or `filter` must be provided.
+     * 
+     */
     @InputImport(name="mostRecent")
     private final @Nullable Boolean mostRecent;
 
@@ -29,6 +39,10 @@ public final class GetInstanceTemplateArgs extends io.pulumi.resources.InvokeArg
         return this.mostRecent == null ? Optional.empty() : Optional.ofNullable(this.mostRecent);
     }
 
+    /**
+     * The name of the instance template. One of `name` or `filter` must be provided.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -36,6 +50,11 @@ public final class GetInstanceTemplateArgs extends io.pulumi.resources.InvokeArg
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If `project` is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project", required=true)
     private final String project;
 

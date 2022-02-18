@@ -8,10 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The type of address to reserve, either INTERNAL or EXTERNAL. If unspecified, defaults to EXTERNAL.
+     * 
+     */
     @EnumType
     public enum GlobalAddressAddressType {
+        /**
+         * DNS resolver address in the subnetwork.
+         * 
+         */
         DnsForwarding("DNS_FORWARDING"),
+        /**
+         * A publicly visible external IP address.
+         * 
+         */
         External("EXTERNAL"),
+        /**
+         * A private network IP address, for use with an Instance or Internal Load Balancer forwarding rule.
+         * 
+         */
         Internal("INTERNAL"),
         UnspecifiedType("UNSPECIFIED_TYPE");
 

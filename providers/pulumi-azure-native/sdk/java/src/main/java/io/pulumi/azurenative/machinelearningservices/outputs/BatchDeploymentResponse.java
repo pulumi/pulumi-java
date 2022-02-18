@@ -23,18 +23,76 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class BatchDeploymentResponse {
+    /**
+     * Code configuration for the endpoint deployment.
+     * 
+     */
     private final @Nullable CodeConfigurationResponse codeConfiguration;
+    /**
+     * Configuration for compute binding.
+     * 
+     */
     private final @Nullable ComputeConfigurationResponse compute;
+    /**
+     * Description of the endpoint deployment.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * ARM resource ID of the environment specification for the endpoint deployment.
+     * 
+     */
     private final @Nullable String environmentId;
+    /**
+     * Environment variables configuration for the deployment.
+     * 
+     */
     private final @Nullable Map<String,String> environmentVariables;
+    /**
+     * Error threshold, if the error count for the entire input goes above this value,
+     * the batch inference will be aborted. Range is [-1, int.MaxValue].
+     * For FileDataset, this value is the count of file failures.
+     * For TabularDataset, this value is the count of record failures.
+     * If set to -1 (the lower bound), all failures during batch inference will be ignored.
+     * 
+     */
     private final @Nullable Integer errorThreshold;
+    /**
+     * Logging level for batch inference operation.
+     * 
+     */
     private final @Nullable String loggingLevel;
+    /**
+     * Size of the mini-batch passed to each batch invocation.
+     * For FileDataset, this is the number of files per mini-batch.
+     * For TabularDataset, this is the size of the records in bytes, per mini-batch.
+     * 
+     */
     private final @Nullable Double miniBatchSize;
+    /**
+     * Reference to the model asset for the endpoint deployment.
+     * 
+     */
     private final @Nullable Object model;
+    /**
+     * Output configuration for the batch inference operation.
+     * 
+     */
     private final @Nullable BatchOutputConfigurationResponse outputConfiguration;
+    /**
+     * Partition keys list used for Named partitioning.
+     * 
+     */
     private final @Nullable List<String> partitionKeys;
+    /**
+     * Property dictionary. Properties can be added, but not removed or altered.
+     * 
+     */
     private final @Nullable Map<String,String> properties;
+    /**
+     * Retry Settings for the batch inference operation.
+     * 
+     */
     private final @Nullable BatchRetrySettingsResponse retrySettings;
 
     @OutputCustomType.Constructor({"codeConfiguration","compute","description","environmentId","environmentVariables","errorThreshold","loggingLevel","miniBatchSize","model","outputConfiguration","partitionKeys","properties","retrySettings"})
@@ -67,42 +125,100 @@ public final class BatchDeploymentResponse {
         this.retrySettings = retrySettings;
     }
 
+    /**
+     * Code configuration for the endpoint deployment.
+     * 
+     */
     public Optional<CodeConfigurationResponse> getCodeConfiguration() {
         return Optional.ofNullable(this.codeConfiguration);
     }
+    /**
+     * Configuration for compute binding.
+     * 
+     */
     public Optional<ComputeConfigurationResponse> getCompute() {
         return Optional.ofNullable(this.compute);
     }
+    /**
+     * Description of the endpoint deployment.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * ARM resource ID of the environment specification for the endpoint deployment.
+     * 
+     */
     public Optional<String> getEnvironmentId() {
         return Optional.ofNullable(this.environmentId);
     }
+    /**
+     * Environment variables configuration for the deployment.
+     * 
+     */
     public Map<String,String> getEnvironmentVariables() {
         return this.environmentVariables == null ? Map.of() : this.environmentVariables;
     }
+    /**
+     * Error threshold, if the error count for the entire input goes above this value,
+     * the batch inference will be aborted. Range is [-1, int.MaxValue].
+     * For FileDataset, this value is the count of file failures.
+     * For TabularDataset, this value is the count of record failures.
+     * If set to -1 (the lower bound), all failures during batch inference will be ignored.
+     * 
+     */
     public Optional<Integer> getErrorThreshold() {
         return Optional.ofNullable(this.errorThreshold);
     }
+    /**
+     * Logging level for batch inference operation.
+     * 
+     */
     public Optional<String> getLoggingLevel() {
         return Optional.ofNullable(this.loggingLevel);
     }
+    /**
+     * Size of the mini-batch passed to each batch invocation.
+     * For FileDataset, this is the number of files per mini-batch.
+     * For TabularDataset, this is the size of the records in bytes, per mini-batch.
+     * 
+     */
     public Optional<Double> getMiniBatchSize() {
         return Optional.ofNullable(this.miniBatchSize);
     }
+    /**
+     * Reference to the model asset for the endpoint deployment.
+     * 
+     */
     public Optional<Object> getModel() {
         return Optional.ofNullable(this.model);
     }
+    /**
+     * Output configuration for the batch inference operation.
+     * 
+     */
     public Optional<BatchOutputConfigurationResponse> getOutputConfiguration() {
         return Optional.ofNullable(this.outputConfiguration);
     }
+    /**
+     * Partition keys list used for Named partitioning.
+     * 
+     */
     public List<String> getPartitionKeys() {
         return this.partitionKeys == null ? List.of() : this.partitionKeys;
     }
+    /**
+     * Property dictionary. Properties can be added, but not removed or altered.
+     * 
+     */
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
     }
+    /**
+     * Retry Settings for the batch inference operation.
+     * 
+     */
     public Optional<BatchRetrySettingsResponse> getRetrySettings() {
         return Optional.ofNullable(this.retrySettings);
     }

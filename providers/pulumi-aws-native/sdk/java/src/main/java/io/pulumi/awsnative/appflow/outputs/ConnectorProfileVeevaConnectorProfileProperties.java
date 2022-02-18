@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ConnectorProfileVeevaConnectorProfileProperties {
+    /**
+     * The location of the Veeva resource
+     * 
+     */
     private final String instanceUrl;
 
     @OutputCustomType.Constructor({"instanceUrl"})
@@ -16,6 +20,10 @@ public final class ConnectorProfileVeevaConnectorProfileProperties {
         this.instanceUrl = Objects.requireNonNull(instanceUrl);
     }
 
+    /**
+     * The location of the Veeva resource
+     * 
+     */
     public String getInstanceUrl() {
         return this.instanceUrl;
     }

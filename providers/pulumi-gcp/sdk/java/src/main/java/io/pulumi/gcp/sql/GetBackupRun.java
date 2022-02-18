@@ -13,6 +13,18 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBackupRun {
+/**
+ * Use this data source to get information about a Cloud SQL instance backup run.
+ * 
+ * ## Example Usage
+ * 
+ *
+ * A collection of arguments for invoking getBackupRun.
+ * 
+ *
+ * A collection of values returned by getBackupRun.
+ * 
+ */
     public static CompletableFuture<GetBackupRunResult> invokeAsync(GetBackupRunArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:sql/getBackupRun:getBackupRun", TypeShape.of(GetBackupRunResult.class), args == null ? GetBackupRunArgs.Empty : args, Utilities.withVersion(options));
     }

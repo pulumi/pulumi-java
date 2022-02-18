@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The disks sku name. Can be Standard_LRS, Premium_LRS, StandardSSD_LRS, UltraSSD_LRS, Premium_ZRS, or StandardSSD_ZRS.
+ * 
+ */
 public final class DiskSkuArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DiskSkuArgs Empty = new DiskSkuArgs();
 
+    /**
+     * The sku name.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<Either<String,DiskStorageAccountTypes>> name;
 

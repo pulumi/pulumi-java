@@ -11,8 +11,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class LogConfigCounterOptionsResponse {
+    /**
+     * This is deprecated and has no effect. Do not use.
+     * 
+     */
     private final List<LogConfigCounterOptionsCustomFieldResponse> customFields;
+    /**
+     * This is deprecated and has no effect. Do not use.
+     * 
+     */
     private final String field;
+    /**
+     * This is deprecated and has no effect. Do not use.
+     * 
+     */
     private final String metric;
 
     @OutputCustomType.Constructor({"customFields","field","metric"})
@@ -25,12 +37,24 @@ public final class LogConfigCounterOptionsResponse {
         this.metric = Objects.requireNonNull(metric);
     }
 
+    /**
+     * This is deprecated and has no effect. Do not use.
+     * 
+     */
     public List<LogConfigCounterOptionsCustomFieldResponse> getCustomFields() {
         return this.customFields;
     }
+    /**
+     * This is deprecated and has no effect. Do not use.
+     * 
+     */
     public String getField() {
         return this.field;
     }
+    /**
+     * This is deprecated and has no effect. Do not use.
+     * 
+     */
     public String getMetric() {
         return this.metric;
     }

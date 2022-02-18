@@ -28,6 +28,11 @@ public final class InstanceTemplateNetworkInterfaceIpv6AccessConfigArgs extends 
         return this.externalIpv6PrefixLength == null ? Input.empty() : this.externalIpv6PrefixLength;
     }
 
+    /**
+     * The service-level to be provided for IPv6 traffic when the
+     * subnet has an external subnet. Only PREMIUM tier is valid for IPv6.
+     * 
+     */
     @InputImport(name="networkTier", required=true)
     private final Input<String> networkTier;
 

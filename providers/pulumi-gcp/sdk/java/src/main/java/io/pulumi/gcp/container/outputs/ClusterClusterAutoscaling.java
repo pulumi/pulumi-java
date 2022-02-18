@@ -15,9 +15,33 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ClusterClusterAutoscaling {
+    /**
+     * Contains defaults for a node pool created by NAP.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable ClusterClusterAutoscalingAutoProvisioningDefaults autoProvisioningDefaults;
+    /**
+     * ) Configuration
+     * options for the [Autoscaling profile](https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-autoscaler#autoscaling_profiles)
+     * feature, which lets you choose whether the cluster autoscaler should optimize for resource utilization or resource availability
+     * when deciding to remove nodes from a cluster. Can be `BALANCED` or `OPTIMIZE_UTILIZATION`. Defaults to `BALANCED`.
+     * 
+     */
     private final @Nullable String autoscalingProfile;
+    /**
+     * Enable the PodSecurityPolicy controller for this cluster.
+     * If enabled, pods must be valid under a PodSecurityPolicy to be created.
+     * 
+     */
     private final Boolean enabled;
+    /**
+     * Global constraints for machine resources in the
+     * cluster. Configuring the `cpu` and `memory` types is required if node
+     * auto-provisioning is enabled. These limits will apply to node pool autoscaling
+     * in addition to node auto-provisioning. Structure is documented below.
+     * 
+     */
     private final @Nullable List<ClusterClusterAutoscalingResourceLimit> resourceLimits;
 
     @OutputCustomType.Constructor({"autoProvisioningDefaults","autoscalingProfile","enabled","resourceLimits"})
@@ -32,15 +56,39 @@ public final class ClusterClusterAutoscaling {
         this.resourceLimits = resourceLimits;
     }
 
+    /**
+     * Contains defaults for a node pool created by NAP.
+     * Structure is documented below.
+     * 
+     */
     public Optional<ClusterClusterAutoscalingAutoProvisioningDefaults> getAutoProvisioningDefaults() {
         return Optional.ofNullable(this.autoProvisioningDefaults);
     }
+    /**
+     * ) Configuration
+     * options for the [Autoscaling profile](https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-autoscaler#autoscaling_profiles)
+     * feature, which lets you choose whether the cluster autoscaler should optimize for resource utilization or resource availability
+     * when deciding to remove nodes from a cluster. Can be `BALANCED` or `OPTIMIZE_UTILIZATION`. Defaults to `BALANCED`.
+     * 
+     */
     public Optional<String> getAutoscalingProfile() {
         return Optional.ofNullable(this.autoscalingProfile);
     }
+    /**
+     * Enable the PodSecurityPolicy controller for this cluster.
+     * If enabled, pods must be valid under a PodSecurityPolicy to be created.
+     * 
+     */
     public Boolean getEnabled() {
         return this.enabled;
     }
+    /**
+     * Global constraints for machine resources in the
+     * cluster. Configuring the `cpu` and `memory` types is required if node
+     * auto-provisioning is enabled. These limits will apply to node pool autoscaling
+     * in addition to node auto-provisioning. Structure is documented below.
+     * 
+     */
     public List<ClusterClusterAutoscalingResourceLimit> getResourceLimits() {
         return this.resourceLimits == null ? List.of() : this.resourceLimits;
     }

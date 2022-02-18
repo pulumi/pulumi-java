@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The kind of content the metadata is for.
+     * 
+     */
     @EnumType
     public enum Kind {
         DataConnector("DataConnector"),

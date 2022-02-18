@@ -13,6 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Contains a property type, which can be one of attribute, measurement, metric, or transform.
+ * 
+ */
 public final class AssetModelPropertyTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AssetModelPropertyTypeArgs Empty = new AssetModelPropertyTypeArgs();

@@ -11,7 +11,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowCxV3ResponseMessageTextResponse {
+    /**
+     * Whether the playback of this message can be interrupted by the end user's speech and the client can then starts the next Dialogflow request.
+     * 
+     */
     private final Boolean allowPlaybackInterruption;
+    /**
+     * A collection of text responses.
+     * 
+     */
     private final List<String> text;
 
     @OutputCustomType.Constructor({"allowPlaybackInterruption","text"})
@@ -22,9 +30,17 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageTextResponse {
         this.text = Objects.requireNonNull(text);
     }
 
+    /**
+     * Whether the playback of this message can be interrupted by the end user's speech and the client can then starts the next Dialogflow request.
+     * 
+     */
     public Boolean getAllowPlaybackInterruption() {
         return this.allowPlaybackInterruption;
     }
+    /**
+     * A collection of text responses.
+     * 
+     */
     public List<String> getText() {
         return this.text;
     }

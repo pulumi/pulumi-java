@@ -17,6 +17,13 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DatabaseArgs Empty = new DatabaseArgs();
 
+    /**
+     * An optional list of DDL statements to run inside the newly created
+     * database. Statements can create tables, indexes, etc. These statements
+     * execute atomically with the creation of the database: if there is an
+     * error in any statement, the database is not created.
+     * 
+     */
     @InputImport(name="ddls")
     private final @Nullable Input<List<String>> ddls;
 
@@ -24,6 +31,11 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.ddls == null ? Input.empty() : this.ddls;
     }
 
+    /**
+     * Whether or not to allow the provider to destroy the instance. Unless this field is set to false
+     * in state, a `destroy` or `update` that would delete the instance will fail.
+     * 
+     */
     @InputImport(name="deletionProtection")
     private final @Nullable Input<Boolean> deletionProtection;
 
@@ -31,6 +43,11 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.deletionProtection == null ? Input.empty() : this.deletionProtection;
     }
 
+    /**
+     * Encryption configuration for the database
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="encryptionConfig")
     private final @Nullable Input<DatabaseEncryptionConfigArgs> encryptionConfig;
 
@@ -38,6 +55,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.encryptionConfig == null ? Input.empty() : this.encryptionConfig;
     }
 
+    /**
+     * The instance to create the database on.
+     * 
+     */
     @InputImport(name="instance", required=true)
     private final Input<String> instance;
 
@@ -45,6 +66,11 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.instance;
     }
 
+    /**
+     * A unique identifier for the database, which cannot be changed after
+     * the instance is created. Values are of the form [a-z][-a-z0-9]*[a-z0-9].
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -52,6 +78,11 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

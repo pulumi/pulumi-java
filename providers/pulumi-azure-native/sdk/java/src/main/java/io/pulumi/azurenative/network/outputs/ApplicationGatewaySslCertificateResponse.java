@@ -11,14 +11,50 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ApplicationGatewaySslCertificateResponse {
+    /**
+     * Base-64 encoded pfx certificate. Only applicable in PUT Request.
+     * 
+     */
     private final @Nullable String data;
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     private final String etag;
+    /**
+     * Resource ID.
+     * 
+     */
     private final @Nullable String id;
+    /**
+     * Secret Id of (base-64 encoded unencrypted pfx) 'Secret' or 'Certificate' object stored in KeyVault.
+     * 
+     */
     private final @Nullable String keyVaultSecretId;
+    /**
+     * Name of the SSL certificate that is unique within an Application Gateway.
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * Password for the pfx file specified in data. Only applicable in PUT request.
+     * 
+     */
     private final @Nullable String password;
+    /**
+     * The provisioning state of the SSL certificate resource.
+     * 
+     */
     private final String provisioningState;
+    /**
+     * Base-64 encoded Public cert data corresponding to pfx specified in data. Only applicable in GET request.
+     * 
+     */
     private final String publicCertData;
+    /**
+     * Type of the resource.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"data","etag","id","keyVaultSecretId","name","password","provisioningState","publicCertData","type"})
@@ -43,30 +79,66 @@ public final class ApplicationGatewaySslCertificateResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Base-64 encoded pfx certificate. Only applicable in PUT Request.
+     * 
+     */
     public Optional<String> getData() {
         return Optional.ofNullable(this.data);
     }
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String getEtag() {
         return this.etag;
     }
+    /**
+     * Resource ID.
+     * 
+     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+    /**
+     * Secret Id of (base-64 encoded unencrypted pfx) 'Secret' or 'Certificate' object stored in KeyVault.
+     * 
+     */
     public Optional<String> getKeyVaultSecretId() {
         return Optional.ofNullable(this.keyVaultSecretId);
     }
+    /**
+     * Name of the SSL certificate that is unique within an Application Gateway.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * Password for the pfx file specified in data. Only applicable in PUT request.
+     * 
+     */
     public Optional<String> getPassword() {
         return Optional.ofNullable(this.password);
     }
+    /**
+     * The provisioning state of the SSL certificate resource.
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Base-64 encoded Public cert data corresponding to pfx specified in data. Only applicable in GET request.
+     * 
+     */
     public String getPublicCertData() {
         return this.publicCertData;
     }
+    /**
+     * Type of the resource.
+     * 
+     */
     public String getType() {
         return this.type;
     }

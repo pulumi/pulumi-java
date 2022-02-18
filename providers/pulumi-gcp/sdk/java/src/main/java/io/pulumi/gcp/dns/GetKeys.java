@@ -13,6 +13,20 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetKeys {
+/**
+ * Get the DNSKEY and DS records of DNSSEC-signed managed zones. For more information see the
+ * [official documentation](https://cloud.google.com/dns/docs/dnskeys/)
+ * and [API](https://cloud.google.com/dns/docs/reference/v1/dnsKeys).
+ * 
+ * ## Example Usage
+ * 
+ *
+ * A collection of arguments for invoking getKeys.
+ * 
+ *
+ * A collection of values returned by getKeys.
+ * 
+ */
     public static CompletableFuture<GetKeysResult> invokeAsync(GetKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:dns/getKeys:getKeys", TypeShape.of(GetKeysResult.class), args == null ? GetKeysArgs.Empty : args, Utilities.withVersion(options));
     }

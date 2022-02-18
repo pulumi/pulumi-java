@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Settings for Azure Files identity based authentication.
+ * 
+ */
 public final class AzureFilesIdentityBasedAuthenticationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureFilesIdentityBasedAuthenticationArgs Empty = new AzureFilesIdentityBasedAuthenticationArgs();
 
+    /**
+     * Required if choose AD.
+     * 
+     */
     @InputImport(name="activeDirectoryProperties")
     private final @Nullable Input<ActiveDirectoryPropertiesArgs> activeDirectoryProperties;
 
@@ -24,6 +32,10 @@ public final class AzureFilesIdentityBasedAuthenticationArgs extends io.pulumi.r
         return this.activeDirectoryProperties == null ? Input.empty() : this.activeDirectoryProperties;
     }
 
+    /**
+     * Indicates the directory service used.
+     * 
+     */
     @InputImport(name="directoryServiceOptions", required=true)
     private final Input<Either<String,DirectoryServiceOptions>> directoryServiceOptions;
 

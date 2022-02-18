@@ -16,147 +16,419 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * VPN tunnel resource.
+ * 
+ * To get more information about VpnTunnel, see:
+ * 
+ * * [API documentation](https://cloud.google.com/compute/docs/reference/rest/v1/vpnTunnels)
+ * * How-to Guides
+ *     * [Cloud VPN Overview](https://cloud.google.com/vpn/docs/concepts/overview)
+ *     * [Networks and Tunnel Routing](https://cloud.google.com/vpn/docs/concepts/choosing-networks-routing)
+ * 
+ * > **Warning:** All arguments including `shared_secret` will be stored in the raw
+ * state as plain-text.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * VpnTunnel can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/vPNTunnel:VPNTunnel default projects/{{project}}/regions/{{region}}/vpnTunnels/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/vPNTunnel:VPNTunnel default {{project}}/{{region}}/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/vPNTunnel:VPNTunnel default {{region}}/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/vPNTunnel:VPNTunnel default {{name}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:compute/vPNTunnel:VPNTunnel")
 public class VPNTunnel extends io.pulumi.resources.CustomResource {
+    /**
+     * Creation timestamp in RFC3339 text format.
+     * 
+     */
     @OutputExport(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
+    /**
+     * @return Creation timestamp in RFC3339 text format.
+     * 
+     */
     public Output<String> getCreationTimestamp() {
         return this.creationTimestamp;
     }
+    /**
+     * An optional description of this resource.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return An optional description of this resource.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * Detailed status message for the VPN tunnel.
+     * 
+     */
     @OutputExport(name="detailedStatus", type=String.class, parameters={})
     private Output<String> detailedStatus;
 
+    /**
+     * @return Detailed status message for the VPN tunnel.
+     * 
+     */
     public Output<String> getDetailedStatus() {
         return this.detailedStatus;
     }
+    /**
+     * IKE protocol version to use when establishing the VPN tunnel with
+     * peer VPN gateway.
+     * Acceptable IKE versions are 1 or 2. Default version is 2.
+     * 
+     */
     @OutputExport(name="ikeVersion", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> ikeVersion;
 
+    /**
+     * @return IKE protocol version to use when establishing the VPN tunnel with
+     * peer VPN gateway.
+     * Acceptable IKE versions are 1 or 2. Default version is 2.
+     * 
+     */
     public Output</* @Nullable */ Integer> getIkeVersion() {
         return this.ikeVersion;
     }
+    /**
+     * The fingerprint used for optimistic locking of this resource. Used internally during updates.
+     * 
+     */
     @OutputExport(name="labelFingerprint", type=String.class, parameters={})
     private Output<String> labelFingerprint;
 
+    /**
+     * @return The fingerprint used for optimistic locking of this resource. Used internally during updates.
+     * 
+     */
     public Output<String> getLabelFingerprint() {
         return this.labelFingerprint;
     }
+    /**
+     * Labels to apply to this VpnTunnel.
+     * 
+     */
     @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
+    /**
+     * @return Labels to apply to this VpnTunnel.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getLabels() {
         return this.labels;
     }
+    /**
+     * Local traffic selector to use when establishing the VPN tunnel with
+     * peer VPN gateway. The value should be a CIDR formatted string,
+     * for example `192.168.0.0/16`. The ranges should be disjoint.
+     * Only IPv4 is supported.
+     * 
+     */
     @OutputExport(name="localTrafficSelectors", type=List.class, parameters={String.class})
     private Output<List<String>> localTrafficSelectors;
 
+    /**
+     * @return Local traffic selector to use when establishing the VPN tunnel with
+     * peer VPN gateway. The value should be a CIDR formatted string,
+     * for example `192.168.0.0/16`. The ranges should be disjoint.
+     * Only IPv4 is supported.
+     * 
+     */
     public Output<List<String>> getLocalTrafficSelectors() {
         return this.localTrafficSelectors;
     }
+    /**
+     * Name of the resource. The name must be 1-63 characters long, and
+     * comply with RFC1035. Specifically, the name must be 1-63
+     * characters long and match the regular expression
+     * `a-z?` which means the first character
+     * must be a lowercase letter, and all following characters must
+     * be a dash, lowercase letter, or digit,
+     * except the last character, which cannot be a dash.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Name of the resource. The name must be 1-63 characters long, and
+     * comply with RFC1035. Specifically, the name must be 1-63
+     * characters long and match the regular expression
+     * `a-z?` which means the first character
+     * must be a lowercase letter, and all following characters must
+     * be a dash, lowercase letter, or digit,
+     * except the last character, which cannot be a dash.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * URL of the peer side external VPN gateway to which this VPN tunnel is connected.
+     * 
+     */
     @OutputExport(name="peerExternalGateway", type=String.class, parameters={})
     private Output</* @Nullable */ String> peerExternalGateway;
 
+    /**
+     * @return URL of the peer side external VPN gateway to which this VPN tunnel is connected.
+     * 
+     */
     public Output</* @Nullable */ String> getPeerExternalGateway() {
         return this.peerExternalGateway;
     }
+    /**
+     * The interface ID of the external VPN gateway to which this VPN tunnel is connected.
+     * 
+     */
     @OutputExport(name="peerExternalGatewayInterface", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> peerExternalGatewayInterface;
 
+    /**
+     * @return The interface ID of the external VPN gateway to which this VPN tunnel is connected.
+     * 
+     */
     public Output</* @Nullable */ Integer> getPeerExternalGatewayInterface() {
         return this.peerExternalGatewayInterface;
     }
+    /**
+     * URL of the peer side HA GCP VPN gateway to which this VPN tunnel is connected.
+     * If provided, the VPN tunnel will automatically use the same vpn_gateway_interface
+     * ID in the peer GCP VPN gateway.
+     * This field must reference a `gcp.compute.HaVpnGateway` resource.
+     * 
+     */
     @OutputExport(name="peerGcpGateway", type=String.class, parameters={})
     private Output</* @Nullable */ String> peerGcpGateway;
 
+    /**
+     * @return URL of the peer side HA GCP VPN gateway to which this VPN tunnel is connected.
+     * If provided, the VPN tunnel will automatically use the same vpn_gateway_interface
+     * ID in the peer GCP VPN gateway.
+     * This field must reference a `gcp.compute.HaVpnGateway` resource.
+     * 
+     */
     public Output</* @Nullable */ String> getPeerGcpGateway() {
         return this.peerGcpGateway;
     }
+    /**
+     * IP address of the peer VPN gateway. Only IPv4 is supported.
+     * 
+     */
     @OutputExport(name="peerIp", type=String.class, parameters={})
     private Output<String> peerIp;
 
+    /**
+     * @return IP address of the peer VPN gateway. Only IPv4 is supported.
+     * 
+     */
     public Output<String> getPeerIp() {
         return this.peerIp;
     }
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * The region where the tunnel is located. If unset, is set to the region of `target_vpn_gateway`.
+     * 
+     */
     @OutputExport(name="region", type=String.class, parameters={})
     private Output<String> region;
 
+    /**
+     * @return The region where the tunnel is located. If unset, is set to the region of `target_vpn_gateway`.
+     * 
+     */
     public Output<String> getRegion() {
         return this.region;
     }
+    /**
+     * Remote traffic selector to use when establishing the VPN tunnel with
+     * peer VPN gateway. The value should be a CIDR formatted string,
+     * for example `192.168.0.0/16`. The ranges should be disjoint.
+     * Only IPv4 is supported.
+     * 
+     */
     @OutputExport(name="remoteTrafficSelectors", type=List.class, parameters={String.class})
     private Output<List<String>> remoteTrafficSelectors;
 
+    /**
+     * @return Remote traffic selector to use when establishing the VPN tunnel with
+     * peer VPN gateway. The value should be a CIDR formatted string,
+     * for example `192.168.0.0/16`. The ranges should be disjoint.
+     * Only IPv4 is supported.
+     * 
+     */
     public Output<List<String>> getRemoteTrafficSelectors() {
         return this.remoteTrafficSelectors;
     }
+    /**
+     * URL of router resource to be used for dynamic routing.
+     * 
+     */
     @OutputExport(name="router", type=String.class, parameters={})
     private Output</* @Nullable */ String> router;
 
+    /**
+     * @return URL of router resource to be used for dynamic routing.
+     * 
+     */
     public Output</* @Nullable */ String> getRouter() {
         return this.router;
     }
+    /**
+     * The URI of the created resource.
+     * 
+     */
     @OutputExport(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
+    /**
+     * @return The URI of the created resource.
+     * 
+     */
     public Output<String> getSelfLink() {
         return this.selfLink;
     }
+    /**
+     * Shared secret used to set the secure session between the Cloud VPN
+     * gateway and the peer VPN gateway.
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     @OutputExport(name="sharedSecret", type=String.class, parameters={})
     private Output<String> sharedSecret;
 
+    /**
+     * @return Shared secret used to set the secure session between the Cloud VPN
+     * gateway and the peer VPN gateway.
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     public Output<String> getSharedSecret() {
         return this.sharedSecret;
     }
+    /**
+     * Hash of the shared secret.
+     * 
+     */
     @OutputExport(name="sharedSecretHash", type=String.class, parameters={})
     private Output<String> sharedSecretHash;
 
+    /**
+     * @return Hash of the shared secret.
+     * 
+     */
     public Output<String> getSharedSecretHash() {
         return this.sharedSecretHash;
     }
+    /**
+     * URL of the Target VPN gateway with which this VPN tunnel is
+     * associated.
+     * 
+     */
     @OutputExport(name="targetVpnGateway", type=String.class, parameters={})
     private Output</* @Nullable */ String> targetVpnGateway;
 
+    /**
+     * @return URL of the Target VPN gateway with which this VPN tunnel is
+     * associated.
+     * 
+     */
     public Output</* @Nullable */ String> getTargetVpnGateway() {
         return this.targetVpnGateway;
     }
+    /**
+     * The unique identifier for the resource. This identifier is defined by the server.
+     * 
+     */
     @OutputExport(name="tunnelId", type=String.class, parameters={})
     private Output<String> tunnelId;
 
+    /**
+     * @return The unique identifier for the resource. This identifier is defined by the server.
+     * 
+     */
     public Output<String> getTunnelId() {
         return this.tunnelId;
     }
+    /**
+     * URL of the VPN gateway with which this VPN tunnel is associated.
+     * This must be used if a High Availability VPN gateway resource is created.
+     * This field must reference a `gcp.compute.HaVpnGateway` resource.
+     * 
+     */
     @OutputExport(name="vpnGateway", type=String.class, parameters={})
     private Output</* @Nullable */ String> vpnGateway;
 
+    /**
+     * @return URL of the VPN gateway with which this VPN tunnel is associated.
+     * This must be used if a High Availability VPN gateway resource is created.
+     * This field must reference a `gcp.compute.HaVpnGateway` resource.
+     * 
+     */
     public Output</* @Nullable */ String> getVpnGateway() {
         return this.vpnGateway;
     }
+    /**
+     * The interface ID of the VPN gateway with which this VPN tunnel is associated.
+     * 
+     */
     @OutputExport(name="vpnGatewayInterface", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> vpnGatewayInterface;
 
+    /**
+     * @return The interface ID of the VPN gateway with which this VPN tunnel is associated.
+     * 
+     */
     public Output</* @Nullable */ Integer> getVpnGatewayInterface() {
         return this.vpnGatewayInterface;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public VPNTunnel(String name, VPNTunnelArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:compute/vPNTunnel:VPNTunnel", name, args == null ? VPNTunnelArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -172,6 +444,15 @@ public class VPNTunnel extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static VPNTunnel get(String name, Input<String> id, @Nullable VPNTunnelState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new VPNTunnel(name, id, state, options);
     }

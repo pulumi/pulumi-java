@@ -17,6 +17,10 @@ public final class FargateProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FargateProfileArgs Empty = new FargateProfileArgs();
 
+    /**
+     * Name of the Cluster
+     * 
+     */
     @InputImport(name="clusterName", required=true)
     private final Input<String> clusterName;
 
@@ -24,6 +28,10 @@ public final class FargateProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.clusterName;
     }
 
+    /**
+     * Name of FargateProfile
+     * 
+     */
     @InputImport(name="fargateProfileName")
     private final @Nullable Input<String> fargateProfileName;
 
@@ -31,6 +39,10 @@ public final class FargateProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.fargateProfileName == null ? Input.empty() : this.fargateProfileName;
     }
 
+    /**
+     * The IAM policy arn for pods
+     * 
+     */
     @InputImport(name="podExecutionRoleArn", required=true)
     private final Input<String> podExecutionRoleArn;
 
@@ -52,6 +64,10 @@ public final class FargateProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.subnets == null ? Input.empty() : this.subnets;
     }
 
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<FargateProfileTagArgs>> tags;
 

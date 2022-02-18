@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGalleryImage {
+/**
+ * Represents an image from the Azure Marketplace
+ * API Version: 2018-10-15.
+ * 
+ *
+ * Represents an image from the Azure Marketplace
+ * 
+ */
     public static CompletableFuture<GetGalleryImageResult> invokeAsync(GetGalleryImageArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:labservices:getGalleryImage", TypeShape.of(GetGalleryImageResult.class), args == null ? GetGalleryImageArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -18,6 +18,10 @@ public final class FeatureMembershipConfigmanagementArgs extends io.pulumi.resou
 
     public static final FeatureMembershipConfigmanagementArgs Empty = new FeatureMembershipConfigmanagementArgs();
 
+    /**
+     * Binauthz configuration for the cluster. Structure is documented below.
+     * 
+     */
     @InputImport(name="binauthz")
     private final @Nullable Input<FeatureMembershipConfigmanagementBinauthzArgs> binauthz;
 
@@ -25,6 +29,10 @@ public final class FeatureMembershipConfigmanagementArgs extends io.pulumi.resou
         return this.binauthz == null ? Input.empty() : this.binauthz;
     }
 
+    /**
+     * Config Sync configuration for the cluster. Structure is documented below.
+     * 
+     */
     @InputImport(name="configSync")
     private final @Nullable Input<FeatureMembershipConfigmanagementConfigSyncArgs> configSync;
 
@@ -32,6 +40,10 @@ public final class FeatureMembershipConfigmanagementArgs extends io.pulumi.resou
         return this.configSync == null ? Input.empty() : this.configSync;
     }
 
+    /**
+     * Hierarchy Controller configuration for the cluster. Structure is documented below.
+     * 
+     */
     @InputImport(name="hierarchyController")
     private final @Nullable Input<FeatureMembershipConfigmanagementHierarchyControllerArgs> hierarchyController;
 
@@ -39,6 +51,10 @@ public final class FeatureMembershipConfigmanagementArgs extends io.pulumi.resou
         return this.hierarchyController == null ? Input.empty() : this.hierarchyController;
     }
 
+    /**
+     * Policy Controller configuration for the cluster. Structure is documented below.
+     * 
+     */
     @InputImport(name="policyController")
     private final @Nullable Input<FeatureMembershipConfigmanagementPolicyControllerArgs> policyController;
 
@@ -46,6 +62,10 @@ public final class FeatureMembershipConfigmanagementArgs extends io.pulumi.resou
         return this.policyController == null ? Input.empty() : this.policyController;
     }
 
+    /**
+     * Version of ACM installed.
+     * 
+     */
     @InputImport(name="version")
     private final @Nullable Input<String> version;
 

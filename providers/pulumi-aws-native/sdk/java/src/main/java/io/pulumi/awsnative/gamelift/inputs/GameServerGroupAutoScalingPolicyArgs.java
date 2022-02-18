@@ -11,6 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Configuration settings to define a scaling policy for the Auto Scaling group that is optimized for game hosting
+ * 
+ */
 public final class GameServerGroupAutoScalingPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GameServerGroupAutoScalingPolicyArgs Empty = new GameServerGroupAutoScalingPolicyArgs();

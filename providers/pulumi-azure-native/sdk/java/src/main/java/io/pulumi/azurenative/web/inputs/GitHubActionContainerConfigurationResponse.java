@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The GitHub action container configuration.
+ * 
+ */
 public final class GitHubActionContainerConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GitHubActionContainerConfigurationResponse Empty = new GitHubActionContainerConfigurationResponse();
 
+    /**
+     * The image name for the build.
+     * 
+     */
     @InputImport(name="imageName")
     private final @Nullable String imageName;
 
@@ -21,6 +29,10 @@ public final class GitHubActionContainerConfigurationResponse extends io.pulumi.
         return this.imageName == null ? Optional.empty() : Optional.ofNullable(this.imageName);
     }
 
+    /**
+     * The password used to upload the image to the container registry.
+     * 
+     */
     @InputImport(name="password")
     private final @Nullable String password;
 
@@ -28,6 +40,10 @@ public final class GitHubActionContainerConfigurationResponse extends io.pulumi.
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
     }
 
+    /**
+     * The server URL for the container registry where the build will be hosted.
+     * 
+     */
     @InputImport(name="serverUrl")
     private final @Nullable String serverUrl;
 
@@ -35,6 +51,10 @@ public final class GitHubActionContainerConfigurationResponse extends io.pulumi.
         return this.serverUrl == null ? Optional.empty() : Optional.ofNullable(this.serverUrl);
     }
 
+    /**
+     * The username used to upload the image to the container registry.
+     * 
+     */
     @InputImport(name="username")
     private final @Nullable String username;
 

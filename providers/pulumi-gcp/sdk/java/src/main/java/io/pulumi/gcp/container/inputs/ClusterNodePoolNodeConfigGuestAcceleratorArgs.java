@@ -15,6 +15,10 @@ public final class ClusterNodePoolNodeConfigGuestAcceleratorArgs extends io.pulu
 
     public static final ClusterNodePoolNodeConfigGuestAcceleratorArgs Empty = new ClusterNodePoolNodeConfigGuestAcceleratorArgs();
 
+    /**
+     * The number of the guest accelerator cards exposed to this instance.
+     * 
+     */
     @InputImport(name="count", required=true)
     private final Input<Integer> count;
 
@@ -22,6 +26,10 @@ public final class ClusterNodePoolNodeConfigGuestAcceleratorArgs extends io.pulu
         return this.count;
     }
 
+    /**
+     * Size of partitions to create on the GPU. Valid values are described in the NVIDIA mig [user guide](https://docs.nvidia.com/datacenter/tesla/mig-user-guide/#partitioning).
+     * 
+     */
     @InputImport(name="gpuPartitionSize")
     private final @Nullable Input<String> gpuPartitionSize;
 
@@ -29,6 +37,10 @@ public final class ClusterNodePoolNodeConfigGuestAcceleratorArgs extends io.pulu
         return this.gpuPartitionSize == null ? Input.empty() : this.gpuPartitionSize;
     }
 
+    /**
+     * The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

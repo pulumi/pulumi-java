@@ -19,6 +19,10 @@ public final class NetworkManagerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NetworkManagerArgs Empty = new NetworkManagerArgs();
 
+    /**
+     * A description of the network manager.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -26,6 +30,10 @@ public final class NetworkManagerArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * A friendly name for the network manager.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -33,6 +41,10 @@ public final class NetworkManagerArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -40,6 +52,10 @@ public final class NetworkManagerArgs extends io.pulumi.resources.ResourceArgs {
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * Resource location.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -47,6 +63,10 @@ public final class NetworkManagerArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the network manager.
+     * 
+     */
     @InputImport(name="networkManagerName")
     private final @Nullable Input<String> networkManagerName;
 
@@ -54,6 +74,10 @@ public final class NetworkManagerArgs extends io.pulumi.resources.ResourceArgs {
         return this.networkManagerName == null ? Input.empty() : this.networkManagerName;
     }
 
+    /**
+     * Scope Access.
+     * 
+     */
     @InputImport(name="networkManagerScopeAccesses")
     private final @Nullable Input<List<Either<String,ConfigurationType>>> networkManagerScopeAccesses;
 
@@ -61,6 +85,10 @@ public final class NetworkManagerArgs extends io.pulumi.resources.ResourceArgs {
         return this.networkManagerScopeAccesses == null ? Input.empty() : this.networkManagerScopeAccesses;
     }
 
+    /**
+     * Scope of Network Manager.
+     * 
+     */
     @InputImport(name="networkManagerScopes")
     private final @Nullable Input<NetworkManagerPropertiesNetworkManagerScopesArgs> networkManagerScopes;
 
@@ -68,6 +96,10 @@ public final class NetworkManagerArgs extends io.pulumi.resources.ResourceArgs {
         return this.networkManagerScopes == null ? Input.empty() : this.networkManagerScopes;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -75,6 +107,10 @@ public final class NetworkManagerArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

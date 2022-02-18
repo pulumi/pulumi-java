@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTransitGatewayMulticastDomain {
+/**
+ * The AWS::EC2::TransitGatewayMulticastDomain type
+ * 
+ */
     public static CompletableFuture<GetTransitGatewayMulticastDomainResult> invokeAsync(GetTransitGatewayMulticastDomainArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ec2:getTransitGatewayMulticastDomain", TypeShape.of(GetTransitGatewayMulticastDomainResult.class), args == null ? GetTransitGatewayMulticastDomainArgs.Empty : args, Utilities.withVersion(options));
     }

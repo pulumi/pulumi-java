@@ -12,6 +12,10 @@ public final class FirewallSubnetMapping extends io.pulumi.resources.InvokeArgs 
 
     public static final FirewallSubnetMapping Empty = new FirewallSubnetMapping();
 
+    /**
+     * A SubnetId.
+     * 
+     */
     @InputImport(name="subnetId", required=true)
     private final String subnetId;
 

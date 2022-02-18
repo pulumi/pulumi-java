@@ -20,6 +20,10 @@ public final class VendorSkusArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VendorSkusArgs Empty = new VendorSkusArgs();
 
+    /**
+     * The sku deployment mode.
+     * 
+     */
     @InputImport(name="deploymentMode")
     private final @Nullable Input<Either<String,SkuDeploymentMode>> deploymentMode;
 
@@ -27,6 +31,10 @@ public final class VendorSkusArgs extends io.pulumi.resources.ResourceArgs {
         return this.deploymentMode == null ? Input.empty() : this.deploymentMode;
     }
 
+    /**
+     * The parameters for the managed application to be supplied by the vendor.
+     * 
+     */
     @InputImport(name="managedApplicationParameters")
     private final @Nullable Input<Object> managedApplicationParameters;
 
@@ -34,6 +42,10 @@ public final class VendorSkusArgs extends io.pulumi.resources.ResourceArgs {
         return this.managedApplicationParameters == null ? Input.empty() : this.managedApplicationParameters;
     }
 
+    /**
+     * The template for the managed application deployment.
+     * 
+     */
     @InputImport(name="managedApplicationTemplate")
     private final @Nullable Input<Object> managedApplicationTemplate;
 
@@ -41,6 +53,10 @@ public final class VendorSkusArgs extends io.pulumi.resources.ResourceArgs {
         return this.managedApplicationTemplate == null ? Input.empty() : this.managedApplicationTemplate;
     }
 
+    /**
+     * The template definition of the network function.
+     * 
+     */
     @InputImport(name="networkFunctionTemplate")
     private final @Nullable Input<NetworkFunctionTemplateArgs> networkFunctionTemplate;
 
@@ -48,6 +64,10 @@ public final class VendorSkusArgs extends io.pulumi.resources.ResourceArgs {
         return this.networkFunctionTemplate == null ? Input.empty() : this.networkFunctionTemplate;
     }
 
+    /**
+     * Indicates if the vendor sku is in preview mode.
+     * 
+     */
     @InputImport(name="preview")
     private final @Nullable Input<Boolean> preview;
 
@@ -55,6 +75,10 @@ public final class VendorSkusArgs extends io.pulumi.resources.ResourceArgs {
         return this.preview == null ? Input.empty() : this.preview;
     }
 
+    /**
+     * The name of the sku.
+     * 
+     */
     @InputImport(name="skuName")
     private final @Nullable Input<String> skuName;
 
@@ -62,6 +86,10 @@ public final class VendorSkusArgs extends io.pulumi.resources.ResourceArgs {
         return this.skuName == null ? Input.empty() : this.skuName;
     }
 
+    /**
+     * The sku type.
+     * 
+     */
     @InputImport(name="skuType")
     private final @Nullable Input<Either<String,SkuType>> skuType;
 
@@ -69,6 +97,10 @@ public final class VendorSkusArgs extends io.pulumi.resources.ResourceArgs {
         return this.skuType == null ? Input.empty() : this.skuType;
     }
 
+    /**
+     * The name of the vendor.
+     * 
+     */
     @InputImport(name="vendorName", required=true)
     private final Input<String> vendorName;
 

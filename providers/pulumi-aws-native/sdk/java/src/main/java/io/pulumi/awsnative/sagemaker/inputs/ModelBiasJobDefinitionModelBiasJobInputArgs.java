@@ -10,6 +10,10 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * The inputs for a monitoring job.
+ * 
+ */
 public final class ModelBiasJobDefinitionModelBiasJobInputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ModelBiasJobDefinitionModelBiasJobInputArgs Empty = new ModelBiasJobDefinitionModelBiasJobInputArgs();

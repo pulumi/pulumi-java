@@ -14,6 +14,10 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ViewArgs Empty = new ViewArgs();
 
+    /**
+     * The human-readable display name of the view.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -28,6 +32,10 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Immutable. The resource name of the view. Format: projects/{project}/locations/{location}/views/{view}
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -42,6 +50,10 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * String with specific view properties.
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

@@ -15,10 +15,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * This activity verifies that an external resource exists.
+ * 
+ */
 public final class ValidationActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ValidationActivityResponse Empty = new ValidationActivityResponse();
 
+    /**
+     * Can be used if dataset points to a folder. If set to true, the folder must have at least one file. If set to false, the folder must be empty. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     @InputImport(name="childItems")
     private final @Nullable Object childItems;
 
@@ -26,6 +34,10 @@ public final class ValidationActivityResponse extends io.pulumi.resources.Invoke
         return this.childItems == null ? Optional.empty() : Optional.ofNullable(this.childItems);
     }
 
+    /**
+     * Validation activity dataset reference.
+     * 
+     */
     @InputImport(name="dataset", required=true)
     private final DatasetReferenceResponse dataset;
 
@@ -33,6 +45,10 @@ public final class ValidationActivityResponse extends io.pulumi.resources.Invoke
         return this.dataset;
     }
 
+    /**
+     * Activity depends on condition.
+     * 
+     */
     @InputImport(name="dependsOn")
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
@@ -40,6 +56,10 @@ public final class ValidationActivityResponse extends io.pulumi.resources.Invoke
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
 
+    /**
+     * Activity description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -47,6 +67,10 @@ public final class ValidationActivityResponse extends io.pulumi.resources.Invoke
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * Can be used if dataset points to a file. The file must be greater than or equal in size to the value specified. Type: integer (or Expression with resultType integer).
+     * 
+     */
     @InputImport(name="minimumSize")
     private final @Nullable Object minimumSize;
 
@@ -54,6 +78,10 @@ public final class ValidationActivityResponse extends io.pulumi.resources.Invoke
         return this.minimumSize == null ? Optional.empty() : Optional.ofNullable(this.minimumSize);
     }
 
+    /**
+     * Activity name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -61,6 +89,10 @@ public final class ValidationActivityResponse extends io.pulumi.resources.Invoke
         return this.name;
     }
 
+    /**
+     * A delay in seconds between validation attempts. If no value is specified, 10 seconds will be used as the default. Type: integer (or Expression with resultType integer).
+     * 
+     */
     @InputImport(name="sleep")
     private final @Nullable Object sleep;
 
@@ -68,6 +100,10 @@ public final class ValidationActivityResponse extends io.pulumi.resources.Invoke
         return this.sleep == null ? Optional.empty() : Optional.ofNullable(this.sleep);
     }
 
+    /**
+     * Specifies the timeout for the activity to run. If there is no value specified, it takes the value of TimeSpan.FromDays(7) which is 1 week as default. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     @InputImport(name="timeout")
     private final @Nullable Object timeout;
 
@@ -75,6 +111,11 @@ public final class ValidationActivityResponse extends io.pulumi.resources.Invoke
         return this.timeout == null ? Optional.empty() : Optional.ofNullable(this.timeout);
     }
 
+    /**
+     * Type of activity.
+     * Expected value is 'Validation'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -82,6 +123,10 @@ public final class ValidationActivityResponse extends io.pulumi.resources.Invoke
         return this.type;
     }
 
+    /**
+     * Activity user properties.
+     * 
+     */
     @InputImport(name="userProperties")
     private final @Nullable List<UserPropertyResponse> userProperties;
 

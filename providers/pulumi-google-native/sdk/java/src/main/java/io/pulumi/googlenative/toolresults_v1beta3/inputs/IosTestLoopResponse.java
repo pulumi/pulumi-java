@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A game loop test of an iOS application.
+ * 
+ */
 public final class IosTestLoopResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IosTestLoopResponse Empty = new IosTestLoopResponse();
 
+    /**
+     * Bundle ID of the app.
+     * 
+     */
     @InputImport(name="bundleId", required=true)
     private final String bundleId;
 

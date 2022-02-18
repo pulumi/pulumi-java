@@ -15,6 +15,10 @@ public final class DomainResourceSpecArgs extends io.pulumi.resources.ResourceAr
 
     public static final DomainResourceSpecArgs Empty = new DomainResourceSpecArgs();
 
+    /**
+     * The instance type that the image version runs on.
+     * 
+     */
     @InputImport(name="instanceType")
     private final @Nullable Input<DomainResourceSpecInstanceType> instanceType;
 
@@ -22,6 +26,10 @@ public final class DomainResourceSpecArgs extends io.pulumi.resources.ResourceAr
         return this.instanceType == null ? Input.empty() : this.instanceType;
     }
 
+    /**
+     * The ARN of the SageMaker image that the image version belongs to.
+     * 
+     */
     @InputImport(name="sageMakerImageArn")
     private final @Nullable Input<String> sageMakerImageArn;
 
@@ -29,6 +37,10 @@ public final class DomainResourceSpecArgs extends io.pulumi.resources.ResourceAr
         return this.sageMakerImageArn == null ? Input.empty() : this.sageMakerImageArn;
     }
 
+    /**
+     * The ARN of the image version created on the instance.
+     * 
+     */
     @InputImport(name="sageMakerImageVersionArn")
     private final @Nullable Input<String> sageMakerImageVersionArn;
 

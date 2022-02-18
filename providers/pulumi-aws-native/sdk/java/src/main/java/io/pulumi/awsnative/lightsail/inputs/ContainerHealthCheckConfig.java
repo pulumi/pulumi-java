@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes the health check configuration of an Amazon Lightsail container service.
+ * 
+ */
 public final class ContainerHealthCheckConfig extends io.pulumi.resources.InvokeArgs {
 
     public static final ContainerHealthCheckConfig Empty = new ContainerHealthCheckConfig();
 
+    /**
+     * The number of consecutive health checks successes required before moving the container to the Healthy state. The default value is 2.
+     * 
+     */
     @InputImport(name="healthyThreshold")
     private final @Nullable Integer healthyThreshold;
 
@@ -22,6 +30,10 @@ public final class ContainerHealthCheckConfig extends io.pulumi.resources.Invoke
         return this.healthyThreshold == null ? Optional.empty() : Optional.ofNullable(this.healthyThreshold);
     }
 
+    /**
+     * The approximate interval, in seconds, between health checks of an individual container. You can specify between 5 and 300 seconds. The default value is 5.
+     * 
+     */
     @InputImport(name="intervalSeconds")
     private final @Nullable Integer intervalSeconds;
 
@@ -29,6 +41,10 @@ public final class ContainerHealthCheckConfig extends io.pulumi.resources.Invoke
         return this.intervalSeconds == null ? Optional.empty() : Optional.ofNullable(this.intervalSeconds);
     }
 
+    /**
+     * The path on the container on which to perform the health check. The default value is /.
+     * 
+     */
     @InputImport(name="path")
     private final @Nullable String path;
 
@@ -36,6 +52,10 @@ public final class ContainerHealthCheckConfig extends io.pulumi.resources.Invoke
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
     }
 
+    /**
+     * The HTTP codes to use when checking for a successful response from a container. You can specify values between 200 and 499. You can specify multiple values (for example, 200,202) or a range of values (for example, 200-299).
+     * 
+     */
     @InputImport(name="successCodes")
     private final @Nullable String successCodes;
 
@@ -43,6 +63,10 @@ public final class ContainerHealthCheckConfig extends io.pulumi.resources.Invoke
         return this.successCodes == null ? Optional.empty() : Optional.ofNullable(this.successCodes);
     }
 
+    /**
+     * The amount of time, in seconds, during which no response means a failed health check. You can specify between 2 and 60 seconds. The default value is 2.
+     * 
+     */
     @InputImport(name="timeoutSeconds")
     private final @Nullable Integer timeoutSeconds;
 
@@ -50,6 +74,10 @@ public final class ContainerHealthCheckConfig extends io.pulumi.resources.Invoke
         return this.timeoutSeconds == null ? Optional.empty() : Optional.ofNullable(this.timeoutSeconds);
     }
 
+    /**
+     * The number of consecutive health check failures required before moving the container to the Unhealthy state. The default value is 2.
+     * 
+     */
     @InputImport(name="unhealthyThreshold")
     private final @Nullable Integer unhealthyThreshold;
 

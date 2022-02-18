@@ -12,33 +12,75 @@ import io.pulumi.googlenative.apigee_v1.ReferenceArgs;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Creates a Reference in the specified environment.
+ * 
+ */
 @ResourceType(type="google-native:apigee/v1:Reference")
 public class Reference extends io.pulumi.resources.CustomResource {
+    /**
+     * Optional. A human-readable description of this reference.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output<String> description;
 
+    /**
+     * @return Optional. A human-readable description of this reference.
+     * 
+     */
     public Output<String> getDescription() {
         return this.description;
     }
+    /**
+     * The resource id of this reference. Values must match the regular expression [\w\s\-.]+.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The resource id of this reference. Values must match the regular expression [\w\s\-.]+.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The id of the resource to which this reference refers. Must be the id of a resource that exists in the parent environment and is of the given resource_type.
+     * 
+     */
     @OutputExport(name="refers", type=String.class, parameters={})
     private Output<String> refers;
 
+    /**
+     * @return The id of the resource to which this reference refers. Must be the id of a resource that exists in the parent environment and is of the given resource_type.
+     * 
+     */
     public Output<String> getRefers() {
         return this.refers;
     }
+    /**
+     * The type of resource referred to by this reference. Valid values are 'KeyStore' or 'TrustStore'.
+     * 
+     */
     @OutputExport(name="resourceType", type=String.class, parameters={})
     private Output<String> resourceType;
 
+    /**
+     * @return The type of resource referred to by this reference. Valid values are 'KeyStore' or 'TrustStore'.
+     * 
+     */
     public Output<String> getPropResourceType() {
         return this.resourceType;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Reference(String name, ReferenceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:apigee/v1:Reference", name, args == null ? ReferenceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -54,6 +96,14 @@ public class Reference extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Reference get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Reference(name, id, options);
     }

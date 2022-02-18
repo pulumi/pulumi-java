@@ -24,6 +24,10 @@ public final class DetectorOutcomeArgs extends io.pulumi.resources.ResourceArgs 
         return this.arn == null ? Input.empty() : this.arn;
     }
 
+    /**
+     * The time when the outcome was created.
+     * 
+     */
     @InputImport(name="createdTime")
     private final @Nullable Input<String> createdTime;
 
@@ -31,6 +35,10 @@ public final class DetectorOutcomeArgs extends io.pulumi.resources.ResourceArgs 
         return this.createdTime == null ? Input.empty() : this.createdTime;
     }
 
+    /**
+     * The description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -45,6 +53,10 @@ public final class DetectorOutcomeArgs extends io.pulumi.resources.ResourceArgs 
         return this.inline == null ? Input.empty() : this.inline;
     }
 
+    /**
+     * The time when the outcome was last updated.
+     * 
+     */
     @InputImport(name="lastUpdatedTime")
     private final @Nullable Input<String> lastUpdatedTime;
 
@@ -59,6 +71,10 @@ public final class DetectorOutcomeArgs extends io.pulumi.resources.ResourceArgs 
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Tags associated with this outcome.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<DetectorTagArgs>> tags;
 

@@ -14,6 +14,10 @@ public final class InstanceReservationAffinitySpecificReservationGetArgs extends
 
     public static final InstanceReservationAffinitySpecificReservationGetArgs Empty = new InstanceReservationAffinitySpecificReservationGetArgs();
 
+    /**
+     * Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify compute.googleapis.com/reservation-name as the key and specify the name of your reservation as the only value.
+     * 
+     */
     @InputImport(name="key", required=true)
     private final Input<String> key;
 
@@ -21,6 +25,10 @@ public final class InstanceReservationAffinitySpecificReservationGetArgs extends
         return this.key;
     }
 
+    /**
+     * Corresponds to the label values of a reservation resource.
+     * 
+     */
     @InputImport(name="values", required=true)
     private final Input<List<String>> values;
 

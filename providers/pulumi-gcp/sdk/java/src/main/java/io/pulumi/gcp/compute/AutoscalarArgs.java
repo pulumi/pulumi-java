@@ -15,6 +15,15 @@ public final class AutoscalarArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AutoscalarArgs Empty = new AutoscalarArgs();
 
+    /**
+     * The configuration parameters for the autoscaling algorithm. You can
+     * define one or more of the policies for an autoscaler: cpuUtilization,
+     * customMetricUtilizations, and loadBalancingUtilization.
+     * If none of these are specified, the default will be to autoscale based
+     * on cpuUtilization to 0.6 or 60%.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="autoscalingPolicy", required=true)
     private final Input<AutoscalarAutoscalingPolicyArgs> autoscalingPolicy;
 
@@ -22,6 +31,10 @@ public final class AutoscalarArgs extends io.pulumi.resources.ResourceArgs {
         return this.autoscalingPolicy;
     }
 
+    /**
+     * An optional description of this resource.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -29,6 +42,10 @@ public final class AutoscalarArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The identifier for this object. Format specified above.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -36,6 +53,11 @@ public final class AutoscalarArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -43,6 +65,12 @@ public final class AutoscalarArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Fraction of backend capacity utilization (set in HTTP(s) load
+     * balancing configuration) that autoscaler should maintain. Must
+     * be a positive float value. If not defined, the default is 0.8.
+     * 
+     */
     @InputImport(name="target", required=true)
     private final Input<String> target;
 
@@ -50,6 +78,10 @@ public final class AutoscalarArgs extends io.pulumi.resources.ResourceArgs {
         return this.target;
     }
 
+    /**
+     * URL of the zone where the instance group resides.
+     * 
+     */
     @InputImport(name="zone")
     private final @Nullable Input<String> zone;
 

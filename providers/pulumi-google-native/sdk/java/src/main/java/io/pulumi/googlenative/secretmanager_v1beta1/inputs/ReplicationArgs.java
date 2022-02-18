@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A policy that defines the replication configuration of data.
+ * 
+ */
 public final class ReplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ReplicationArgs Empty = new ReplicationArgs();
 
+    /**
+     * The Secret will automatically be replicated without any restrictions.
+     * 
+     */
     @InputImport(name="automatic")
     private final @Nullable Input<AutomaticArgs> automatic;
 
@@ -22,6 +30,10 @@ public final class ReplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.automatic == null ? Input.empty() : this.automatic;
     }
 
+    /**
+     * The Secret will only be replicated into the locations specified.
+     * 
+     */
     @InputImport(name="userManaged")
     private final @Nullable Input<UserManagedArgs> userManaged;
 

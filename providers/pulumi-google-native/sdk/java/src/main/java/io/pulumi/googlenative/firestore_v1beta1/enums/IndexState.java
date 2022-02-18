@@ -8,11 +8,31 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The state of the index. Output only.
+     * 
+     */
     @EnumType
     public enum IndexState {
+        /**
+         * The state is unspecified.
+         * 
+         */
         StateUnspecified("STATE_UNSPECIFIED"),
+        /**
+         * The index is being created. There is an active long-running operation for the index. The index is updated when writing a document. Some index data may exist.
+         * 
+         */
         Creating("CREATING"),
+        /**
+         * The index is ready to be used. The index is updated when writing a document. The index is fully populated from all stored documents it applies to.
+         * 
+         */
         Ready("READY"),
+        /**
+         * The index was being created, but something went wrong. There is no active long-running operation for the index, and the most recently finished long-running operation failed. The index is not updated when writing a document. Some index data may exist.
+         * 
+         */
         Error("ERROR");
 
         private final String value;

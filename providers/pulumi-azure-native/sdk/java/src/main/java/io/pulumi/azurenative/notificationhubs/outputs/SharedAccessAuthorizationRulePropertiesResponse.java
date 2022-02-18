@@ -12,14 +12,50 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SharedAccessAuthorizationRulePropertiesResponse {
+    /**
+     * A string that describes the claim type
+     * 
+     */
     private final String claimType;
+    /**
+     * A string that describes the claim value
+     * 
+     */
     private final String claimValue;
+    /**
+     * The created time for this rule
+     * 
+     */
     private final String createdTime;
+    /**
+     * A string that describes the authorization rule.
+     * 
+     */
     private final String keyName;
+    /**
+     * The last modified time for this rule
+     * 
+     */
     private final String modifiedTime;
+    /**
+     * A base64-encoded 256-bit primary key for signing and validating the SAS token.
+     * 
+     */
     private final String primaryKey;
+    /**
+     * The revision number for the rule
+     * 
+     */
     private final Integer revision;
+    /**
+     * The rights associated with the rule.
+     * 
+     */
     private final @Nullable List<String> rights;
+    /**
+     * A base64-encoded 256-bit primary key for signing and validating the SAS token.
+     * 
+     */
     private final String secondaryKey;
 
     @OutputCustomType.Constructor({"claimType","claimValue","createdTime","keyName","modifiedTime","primaryKey","revision","rights","secondaryKey"})
@@ -44,30 +80,66 @@ public final class SharedAccessAuthorizationRulePropertiesResponse {
         this.secondaryKey = Objects.requireNonNull(secondaryKey);
     }
 
+    /**
+     * A string that describes the claim type
+     * 
+     */
     public String getClaimType() {
         return this.claimType;
     }
+    /**
+     * A string that describes the claim value
+     * 
+     */
     public String getClaimValue() {
         return this.claimValue;
     }
+    /**
+     * The created time for this rule
+     * 
+     */
     public String getCreatedTime() {
         return this.createdTime;
     }
+    /**
+     * A string that describes the authorization rule.
+     * 
+     */
     public String getKeyName() {
         return this.keyName;
     }
+    /**
+     * The last modified time for this rule
+     * 
+     */
     public String getModifiedTime() {
         return this.modifiedTime;
     }
+    /**
+     * A base64-encoded 256-bit primary key for signing and validating the SAS token.
+     * 
+     */
     public String getPrimaryKey() {
         return this.primaryKey;
     }
+    /**
+     * The revision number for the rule
+     * 
+     */
     public Integer getRevision() {
         return this.revision;
     }
+    /**
+     * The rights associated with the rule.
+     * 
+     */
     public List<String> getRights() {
         return this.rights == null ? List.of() : this.rights;
     }
+    /**
+     * A base64-encoded 256-bit primary key for signing and validating the SAS token.
+     * 
+     */
     public String getSecondaryKey() {
         return this.secondaryKey;
     }

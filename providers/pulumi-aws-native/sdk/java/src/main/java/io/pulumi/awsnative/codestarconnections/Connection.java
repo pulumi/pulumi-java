@@ -14,51 +14,119 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Schema for AWS::CodeStarConnections::Connection resource which can be used to connect external source providers with AWS CodePipeline
+ * 
+ * ## Example Usage
+ * 
+ */
 @ResourceType(type="aws-native:codestarconnections:Connection")
 public class Connection extends io.pulumi.resources.CustomResource {
+    /**
+     * The Amazon Resource Name (ARN) of the  connection. The ARN is used as the connection reference when the connection is shared between AWS services.
+     * 
+     */
     @OutputExport(name="connectionArn", type=String.class, parameters={})
     private Output<String> connectionArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the  connection. The ARN is used as the connection reference when the connection is shared between AWS services.
+     * 
+     */
     public Output<String> getConnectionArn() {
         return this.connectionArn;
     }
+    /**
+     * The name of the connection. Connection names must be unique in an AWS user account.
+     * 
+     */
     @OutputExport(name="connectionName", type=String.class, parameters={})
     private Output<String> connectionName;
 
+    /**
+     * @return The name of the connection. Connection names must be unique in an AWS user account.
+     * 
+     */
     public Output<String> getConnectionName() {
         return this.connectionName;
     }
+    /**
+     * The current status of the connection.
+     * 
+     */
     @OutputExport(name="connectionStatus", type=String.class, parameters={})
     private Output<String> connectionStatus;
 
+    /**
+     * @return The current status of the connection.
+     * 
+     */
     public Output<String> getConnectionStatus() {
         return this.connectionStatus;
     }
+    /**
+     * The host arn configured to represent the infrastructure where your third-party provider is installed. You must specify either a ProviderType or a HostArn.
+     * 
+     */
     @OutputExport(name="hostArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> hostArn;
 
+    /**
+     * @return The host arn configured to represent the infrastructure where your third-party provider is installed. You must specify either a ProviderType or a HostArn.
+     * 
+     */
     public Output</* @Nullable */ String> getHostArn() {
         return this.hostArn;
     }
+    /**
+     * The name of the external provider where your third-party code repository is configured. For Bitbucket, this is the account ID of the owner of the Bitbucket repository.
+     * 
+     */
     @OutputExport(name="ownerAccountId", type=String.class, parameters={})
     private Output<String> ownerAccountId;
 
+    /**
+     * @return The name of the external provider where your third-party code repository is configured. For Bitbucket, this is the account ID of the owner of the Bitbucket repository.
+     * 
+     */
     public Output<String> getOwnerAccountId() {
         return this.ownerAccountId;
     }
+    /**
+     * The name of the external provider where your third-party code repository is configured. You must specify either a ProviderType or a HostArn.
+     * 
+     */
     @OutputExport(name="providerType", type=String.class, parameters={})
     private Output</* @Nullable */ String> providerType;
 
+    /**
+     * @return The name of the external provider where your third-party code repository is configured. You must specify either a ProviderType or a HostArn.
+     * 
+     */
     public Output</* @Nullable */ String> getProviderType() {
         return this.providerType;
     }
+    /**
+     * Specifies the tags applied to a connection.
+     * 
+     */
     @OutputExport(name="tags", type=List.class, parameters={ConnectionTag.class})
     private Output</* @Nullable */ List<ConnectionTag>> tags;
 
+    /**
+     * @return Specifies the tags applied to a connection.
+     * 
+     */
     public Output</* @Nullable */ List<ConnectionTag>> getTags() {
         return this.tags;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Connection(String name, @Nullable ConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:codestarconnections:Connection", name, args == null ? ConnectionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -74,6 +142,14 @@ public class Connection extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Connection get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Connection(name, id, options);
     }

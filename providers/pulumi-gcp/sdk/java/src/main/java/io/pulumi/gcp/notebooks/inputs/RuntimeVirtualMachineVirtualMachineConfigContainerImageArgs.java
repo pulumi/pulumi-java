@@ -14,6 +14,11 @@ public final class RuntimeVirtualMachineVirtualMachineConfigContainerImageArgs e
 
     public static final RuntimeVirtualMachineVirtualMachineConfigContainerImageArgs Empty = new RuntimeVirtualMachineVirtualMachineConfigContainerImageArgs();
 
+    /**
+     * The path to the container image repository.
+     * For example: gcr.io/{project_id}/{imageName}
+     * 
+     */
     @InputImport(name="repository", required=true)
     private final Input<String> repository;
 
@@ -21,6 +26,10 @@ public final class RuntimeVirtualMachineVirtualMachineConfigContainerImageArgs e
         return this.repository;
     }
 
+    /**
+     * The tag of the container image. If not specified, this defaults to the latest tag.
+     * 
+     */
     @InputImport(name="tag")
     private final @Nullable Input<String> tag;
 

@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegistry {
+/**
+ * Gets a device registry configuration.
+ * 
+ */
     public static CompletableFuture<GetRegistryResult> invokeAsync(GetRegistryArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudiot/v1:getRegistry", TypeShape.of(GetRegistryResult.class), args == null ? GetRegistryArgs.Empty : args, Utilities.withVersion(options));
     }

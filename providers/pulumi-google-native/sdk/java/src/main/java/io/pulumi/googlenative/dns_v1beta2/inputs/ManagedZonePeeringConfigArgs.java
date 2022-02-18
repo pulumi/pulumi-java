@@ -22,6 +22,10 @@ public final class ManagedZonePeeringConfigArgs extends io.pulumi.resources.Reso
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * The network with which to peer.
+     * 
+     */
     @InputImport(name="targetNetwork")
     private final @Nullable Input<ManagedZonePeeringConfigTargetNetworkArgs> targetNetwork;
 

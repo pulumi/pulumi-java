@@ -11,7 +11,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class JobCopyDestinationEncryptionConfiguration {
+    /**
+     * Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
+     * The BigQuery Service Account associated with your project requires access to this encryption key.
+     * 
+     */
     private final String kmsKeyName;
+    /**
+     * - 
+     * Describes the Cloud KMS encryption key version used to protect destination BigQuery table.
+     * 
+     */
     private final @Nullable String kmsKeyVersion;
 
     @OutputCustomType.Constructor({"kmsKeyName","kmsKeyVersion"})
@@ -22,9 +32,19 @@ public final class JobCopyDestinationEncryptionConfiguration {
         this.kmsKeyVersion = kmsKeyVersion;
     }
 
+    /**
+     * Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
+     * The BigQuery Service Account associated with your project requires access to this encryption key.
+     * 
+     */
     public String getKmsKeyName() {
         return this.kmsKeyName;
     }
+    /**
+     * - 
+     * Describes the Cloud KMS encryption key version used to protect destination BigQuery table.
+     * 
+     */
     public Optional<String> getKmsKeyVersion() {
         return Optional.ofNullable(this.kmsKeyVersion);
     }

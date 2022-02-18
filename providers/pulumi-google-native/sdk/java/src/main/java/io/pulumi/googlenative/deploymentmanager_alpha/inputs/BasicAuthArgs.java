@@ -10,6 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Basic Auth used as a credential.
+ * 
+ */
 public final class BasicAuthArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BasicAuthArgs Empty = new BasicAuthArgs();

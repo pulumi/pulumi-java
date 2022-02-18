@@ -11,11 +11,35 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetSuppressionResult {
+    /**
+     * Gets or sets the expiration time stamp.
+     * 
+     */
     private final String expirationTimeStamp;
+    /**
+     * The resource ID.
+     * 
+     */
     private final String id;
+    /**
+     * The name of the resource.
+     * 
+     */
     private final String name;
+    /**
+     * The GUID of the suppression.
+     * 
+     */
     private final @Nullable String suppressionId;
+    /**
+     * The duration for which the suppression is valid.
+     * 
+     */
     private final @Nullable String ttl;
+    /**
+     * The type of the resource.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"expirationTimeStamp","id","name","suppressionId","ttl","type"})
@@ -34,21 +58,45 @@ public final class GetSuppressionResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Gets or sets the expiration time stamp.
+     * 
+     */
     public String getExpirationTimeStamp() {
         return this.expirationTimeStamp;
     }
+    /**
+     * The resource ID.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * The name of the resource.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The GUID of the suppression.
+     * 
+     */
     public Optional<String> getSuppressionId() {
         return Optional.ofNullable(this.suppressionId);
     }
+    /**
+     * The duration for which the suppression is valid.
+     * 
+     */
     public Optional<String> getTtl() {
         return Optional.ofNullable(this.ttl);
     }
+    /**
+     * The type of the resource.
+     * 
+     */
     public String getType() {
         return this.type;
     }

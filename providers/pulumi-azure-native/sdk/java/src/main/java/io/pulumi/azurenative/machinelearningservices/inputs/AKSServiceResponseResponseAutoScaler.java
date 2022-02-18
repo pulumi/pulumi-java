@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The auto scaler properties.
+ * 
+ */
 public final class AKSServiceResponseResponseAutoScaler extends io.pulumi.resources.InvokeArgs {
 
     public static final AKSServiceResponseResponseAutoScaler Empty = new AKSServiceResponseResponseAutoScaler();
 
+    /**
+     * Option to enable/disable auto scaling.
+     * 
+     */
     @InputImport(name="autoscaleEnabled")
     private final @Nullable Boolean autoscaleEnabled;
 
@@ -22,6 +30,10 @@ public final class AKSServiceResponseResponseAutoScaler extends io.pulumi.resour
         return this.autoscaleEnabled == null ? Optional.empty() : Optional.ofNullable(this.autoscaleEnabled);
     }
 
+    /**
+     * The maximum number of replicas in the cluster.
+     * 
+     */
     @InputImport(name="maxReplicas")
     private final @Nullable Integer maxReplicas;
 
@@ -29,6 +41,10 @@ public final class AKSServiceResponseResponseAutoScaler extends io.pulumi.resour
         return this.maxReplicas == null ? Optional.empty() : Optional.ofNullable(this.maxReplicas);
     }
 
+    /**
+     * The minimum number of replicas to scale down to.
+     * 
+     */
     @InputImport(name="minReplicas")
     private final @Nullable Integer minReplicas;
 
@@ -36,6 +52,10 @@ public final class AKSServiceResponseResponseAutoScaler extends io.pulumi.resour
         return this.minReplicas == null ? Optional.empty() : Optional.ofNullable(this.minReplicas);
     }
 
+    /**
+     * The amount of seconds to wait between auto scale updates.
+     * 
+     */
     @InputImport(name="refreshPeriodInSeconds")
     private final @Nullable Integer refreshPeriodInSeconds;
 
@@ -43,6 +63,10 @@ public final class AKSServiceResponseResponseAutoScaler extends io.pulumi.resour
         return this.refreshPeriodInSeconds == null ? Optional.empty() : Optional.ofNullable(this.refreshPeriodInSeconds);
     }
 
+    /**
+     * The target utilization percentage to use for determining whether to scale the cluster.
+     * 
+     */
     @InputImport(name="targetUtilization")
     private final @Nullable Integer targetUtilization;
 

@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SoftwareRecipeStepInstallRpmResponse {
+    /**
+     * The id of the relevant artifact in the recipe.
+     * 
+     */
     private final String artifactId;
 
     @OutputCustomType.Constructor({"artifactId"})
@@ -16,6 +20,10 @@ public final class SoftwareRecipeStepInstallRpmResponse {
         this.artifactId = Objects.requireNonNull(artifactId);
     }
 
+    /**
+     * The id of the relevant artifact in the recipe.
+     * 
+     */
     public String getArtifactId() {
         return this.artifactId;
     }

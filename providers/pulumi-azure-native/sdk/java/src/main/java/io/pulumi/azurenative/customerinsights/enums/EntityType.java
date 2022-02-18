@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Type of target entity.
+     * 
+     */
     @EnumType
     public enum EntityType {
         None("None"),

@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class IPAMIpamOperatingRegion {
+    /**
+     * The name of the region.
+     * 
+     */
     private final String regionName;
 
     @OutputCustomType.Constructor({"regionName"})
@@ -16,6 +20,10 @@ public final class IPAMIpamOperatingRegion {
         this.regionName = Objects.requireNonNull(regionName);
     }
 
+    /**
+     * The name of the region.
+     * 
+     */
     public String getRegionName() {
         return this.regionName;
     }

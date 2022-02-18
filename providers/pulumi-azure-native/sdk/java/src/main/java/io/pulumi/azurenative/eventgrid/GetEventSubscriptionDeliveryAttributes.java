@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEventSubscriptionDeliveryAttributes {
+/**
+ * Result of the Get delivery attributes operation.
+ * API Version: 2021-06-01-preview.
+ * 
+ *
+ * Result of the Get delivery attributes operation.
+ * 
+ */
     public static CompletableFuture<GetEventSubscriptionDeliveryAttributesResult> invokeAsync(GetEventSubscriptionDeliveryAttributesArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getEventSubscriptionDeliveryAttributes", TypeShape.of(GetEventSubscriptionDeliveryAttributesResult.class), args == null ? GetEventSubscriptionDeliveryAttributesArgs.Empty : args, Utilities.withVersion(options));
     }

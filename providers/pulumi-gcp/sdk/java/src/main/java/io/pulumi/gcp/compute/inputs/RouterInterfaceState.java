@@ -14,6 +14,13 @@ public final class RouterInterfaceState extends io.pulumi.resources.ResourceArgs
 
     public static final RouterInterfaceState Empty = new RouterInterfaceState();
 
+    /**
+     * The name or resource link to the
+     * VLAN interconnect for this interface. Changing this forces a new interface to
+     * be created. Only one of `vpn_tunnel` and `interconnect_attachment` can be
+     * specified.
+     * 
+     */
     @InputImport(name="interconnectAttachment")
     private final @Nullable Input<String> interconnectAttachment;
 
@@ -21,6 +28,11 @@ public final class RouterInterfaceState extends io.pulumi.resources.ResourceArgs
         return this.interconnectAttachment == null ? Input.empty() : this.interconnectAttachment;
     }
 
+    /**
+     * IP address and range of the interface. The IP range must be
+     * in the RFC3927 link-local IP space. Changing this forces a new interface to be created.
+     * 
+     */
     @InputImport(name="ipRange")
     private final @Nullable Input<String> ipRange;
 
@@ -28,6 +40,11 @@ public final class RouterInterfaceState extends io.pulumi.resources.ResourceArgs
         return this.ipRange == null ? Input.empty() : this.ipRange;
     }
 
+    /**
+     * A unique name for the interface, required by GCE. Changing
+     * this forces a new interface to be created.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -35,6 +52,11 @@ public final class RouterInterfaceState extends io.pulumi.resources.ResourceArgs
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which this interface's router belongs. If it
+     * is not provided, the provider project is used. Changing this forces a new interface to be created.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -42,6 +64,12 @@ public final class RouterInterfaceState extends io.pulumi.resources.ResourceArgs
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The region this interface's router sits in. If not specified,
+     * the project region will be used. Changing this forces a new interface to be
+     * created.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 
@@ -49,6 +77,11 @@ public final class RouterInterfaceState extends io.pulumi.resources.ResourceArgs
         return this.region == null ? Input.empty() : this.region;
     }
 
+    /**
+     * The name of the router this interface will be attached to.
+     * Changing this forces a new interface to be created.
+     * 
+     */
     @InputImport(name="router")
     private final @Nullable Input<String> router;
 
@@ -56,6 +89,12 @@ public final class RouterInterfaceState extends io.pulumi.resources.ResourceArgs
         return this.router == null ? Input.empty() : this.router;
     }
 
+    /**
+     * The name or resource link to the VPN tunnel this
+     * interface will be linked to. Changing this forces a new interface to be created. Only
+     * one of `vpn_tunnel` and `interconnect_attachment` can be specified.
+     * 
+     */
     @InputImport(name="vpnTunnel")
     private final @Nullable Input<String> vpnTunnel;
 

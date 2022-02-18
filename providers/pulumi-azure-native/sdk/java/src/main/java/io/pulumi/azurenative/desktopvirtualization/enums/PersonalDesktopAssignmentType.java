@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * PersonalDesktopAssignment type for HostPool.
+     * 
+     */
     @EnumType
     public enum PersonalDesktopAssignmentType {
         Automatic("Automatic"),

@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The parameters to provide for the EnterpriseKnowledgeGraph.
+ * 
+ */
 public final class EnterpriseKnowledgeGraphPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EnterpriseKnowledgeGraphPropertiesArgs Empty = new EnterpriseKnowledgeGraphPropertiesArgs();
 
+    /**
+     * The description of the EnterpriseKnowledgeGraph
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -22,6 +30,10 @@ public final class EnterpriseKnowledgeGraphPropertiesArgs extends io.pulumi.reso
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Specifies the metadata  of the resource.
+     * 
+     */
     @InputImport(name="metadata")
     private final @Nullable Input<Object> metadata;
 
@@ -29,6 +41,10 @@ public final class EnterpriseKnowledgeGraphPropertiesArgs extends io.pulumi.reso
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
+    /**
+     * The state of EnterpriseKnowledgeGraph provisioning
+     * 
+     */
     @InputImport(name="provisioningState")
     private final @Nullable Input<String> provisioningState;
 

@@ -8,15 +8,51 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Optional. Frequency of the specified amount. Default is CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED.
+     * 
+     */
     @EnumType
     public enum CompensationEntryUnit {
+        /**
+         * Default value.
+         * 
+         */
         CompensationUnitUnspecified("COMPENSATION_UNIT_UNSPECIFIED"),
+        /**
+         * Hourly.
+         * 
+         */
         Hourly("HOURLY"),
+        /**
+         * Daily.
+         * 
+         */
         Daily("DAILY"),
+        /**
+         * Weekly
+         * 
+         */
         Weekly("WEEKLY"),
+        /**
+         * Monthly.
+         * 
+         */
         Monthly("MONTHLY"),
+        /**
+         * Yearly.
+         * 
+         */
         Yearly("YEARLY"),
+        /**
+         * One time.
+         * 
+         */
         OneTime("ONE_TIME"),
+        /**
+         * Other compensation units.
+         * 
+         */
         OtherCompensationUnit("OTHER_COMPENSATION_UNIT");
 
         private final String value;

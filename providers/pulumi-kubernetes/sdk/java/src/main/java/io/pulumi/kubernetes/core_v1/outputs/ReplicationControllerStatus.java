@@ -13,11 +13,35 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ReplicationControllerStatus {
+    /**
+     * The number of available replicas (ready for at least minReadySeconds) for this replication controller.
+     * 
+     */
     private final @Nullable Integer availableReplicas;
+    /**
+     * Represents the latest available observations of a replication controller's current state.
+     * 
+     */
     private final @Nullable List<ReplicationControllerCondition> conditions;
+    /**
+     * The number of pods that have labels matching the labels of the pod template of the replication controller.
+     * 
+     */
     private final @Nullable Integer fullyLabeledReplicas;
+    /**
+     * ObservedGeneration reflects the generation of the most recently observed replication controller.
+     * 
+     */
     private final @Nullable Integer observedGeneration;
+    /**
+     * The number of ready replicas for this replication controller.
+     * 
+     */
     private final @Nullable Integer readyReplicas;
+    /**
+     * Replicas is the most recently oberved number of replicas. More info: https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#what-is-a-replicationcontroller
+     * 
+     */
     private final Integer replicas;
 
     @OutputCustomType.Constructor({"availableReplicas","conditions","fullyLabeledReplicas","observedGeneration","readyReplicas","replicas"})
@@ -36,21 +60,45 @@ public final class ReplicationControllerStatus {
         this.replicas = Objects.requireNonNull(replicas);
     }
 
+    /**
+     * The number of available replicas (ready for at least minReadySeconds) for this replication controller.
+     * 
+     */
     public Optional<Integer> getAvailableReplicas() {
         return Optional.ofNullable(this.availableReplicas);
     }
+    /**
+     * Represents the latest available observations of a replication controller's current state.
+     * 
+     */
     public List<ReplicationControllerCondition> getConditions() {
         return this.conditions == null ? List.of() : this.conditions;
     }
+    /**
+     * The number of pods that have labels matching the labels of the pod template of the replication controller.
+     * 
+     */
     public Optional<Integer> getFullyLabeledReplicas() {
         return Optional.ofNullable(this.fullyLabeledReplicas);
     }
+    /**
+     * ObservedGeneration reflects the generation of the most recently observed replication controller.
+     * 
+     */
     public Optional<Integer> getObservedGeneration() {
         return Optional.ofNullable(this.observedGeneration);
     }
+    /**
+     * The number of ready replicas for this replication controller.
+     * 
+     */
     public Optional<Integer> getReadyReplicas() {
         return Optional.ofNullable(this.readyReplicas);
     }
+    /**
+     * Replicas is the most recently oberved number of replicas. More info: https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#what-is-a-replicationcontroller
+     * 
+     */
     public Integer getReplicas() {
         return this.replicas;
     }

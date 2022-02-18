@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Configuration for NetworkPolicy. This only tracks whether the addon is enabled or not on the Master, it does not track whether network policy is enabled for the nodes.
+ * 
+ */
 public final class NetworkPolicyConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NetworkPolicyConfigArgs Empty = new NetworkPolicyConfigArgs();
 
+    /**
+     * Whether NetworkPolicy is enabled for this cluster.
+     * 
+     */
     @InputImport(name="disabled")
     private final @Nullable Input<Boolean> disabled;
 

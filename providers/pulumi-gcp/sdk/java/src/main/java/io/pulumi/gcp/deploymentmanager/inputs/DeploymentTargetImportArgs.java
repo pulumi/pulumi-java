@@ -14,6 +14,10 @@ public final class DeploymentTargetImportArgs extends io.pulumi.resources.Resour
 
     public static final DeploymentTargetImportArgs Empty = new DeploymentTargetImportArgs();
 
+    /**
+     * The full contents of the template that you want to import.
+     * 
+     */
     @InputImport(name="content")
     private final @Nullable Input<String> content;
 
@@ -21,6 +25,11 @@ public final class DeploymentTargetImportArgs extends io.pulumi.resources.Resour
         return this.content == null ? Input.empty() : this.content;
     }
 
+    /**
+     * The name of the template to import, as declared in the YAML
+     * configuration.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

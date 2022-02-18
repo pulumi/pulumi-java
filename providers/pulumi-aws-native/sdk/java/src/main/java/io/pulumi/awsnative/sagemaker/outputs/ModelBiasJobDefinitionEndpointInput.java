@@ -14,15 +14,47 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ModelBiasJobDefinitionEndpointInput {
+    /**
+     * Monitoring end time offset, e.g. PT0H
+     * 
+     */
     private final @Nullable String endTimeOffset;
     private final String endpointName;
+    /**
+     * JSONpath to locate features in JSONlines dataset
+     * 
+     */
     private final @Nullable String featuresAttribute;
+    /**
+     * Index or JSONpath to locate predicted label(s)
+     * 
+     */
     private final @Nullable String inferenceAttribute;
+    /**
+     * Path to the filesystem where the endpoint data is available to the container.
+     * 
+     */
     private final String localPath;
+    /**
+     * Index or JSONpath to locate probabilities
+     * 
+     */
     private final @Nullable String probabilityAttribute;
     private final @Nullable Double probabilityThresholdAttribute;
+    /**
+     * Whether input data distributed in Amazon S3 is fully replicated or sharded by an S3 key. Defauts to FullyReplicated
+     * 
+     */
     private final @Nullable ModelBiasJobDefinitionEndpointInputS3DataDistributionType s3DataDistributionType;
+    /**
+     * Whether the Pipe or File is used as the input mode for transfering data for the monitoring job. Pipe mode is recommended for large datasets. File mode is useful for small files that fit in memory. Defaults to File.
+     * 
+     */
     private final @Nullable ModelBiasJobDefinitionEndpointInputS3InputMode s3InputMode;
+    /**
+     * Monitoring start time offset, e.g. -PT1H
+     * 
+     */
     private final @Nullable String startTimeOffset;
 
     @OutputCustomType.Constructor({"endTimeOffset","endpointName","featuresAttribute","inferenceAttribute","localPath","probabilityAttribute","probabilityThresholdAttribute","s3DataDistributionType","s3InputMode","startTimeOffset"})
@@ -49,33 +81,65 @@ public final class ModelBiasJobDefinitionEndpointInput {
         this.startTimeOffset = startTimeOffset;
     }
 
+    /**
+     * Monitoring end time offset, e.g. PT0H
+     * 
+     */
     public Optional<String> getEndTimeOffset() {
         return Optional.ofNullable(this.endTimeOffset);
     }
     public String getEndpointName() {
         return this.endpointName;
     }
+    /**
+     * JSONpath to locate features in JSONlines dataset
+     * 
+     */
     public Optional<String> getFeaturesAttribute() {
         return Optional.ofNullable(this.featuresAttribute);
     }
+    /**
+     * Index or JSONpath to locate predicted label(s)
+     * 
+     */
     public Optional<String> getInferenceAttribute() {
         return Optional.ofNullable(this.inferenceAttribute);
     }
+    /**
+     * Path to the filesystem where the endpoint data is available to the container.
+     * 
+     */
     public String getLocalPath() {
         return this.localPath;
     }
+    /**
+     * Index or JSONpath to locate probabilities
+     * 
+     */
     public Optional<String> getProbabilityAttribute() {
         return Optional.ofNullable(this.probabilityAttribute);
     }
     public Optional<Double> getProbabilityThresholdAttribute() {
         return Optional.ofNullable(this.probabilityThresholdAttribute);
     }
+    /**
+     * Whether input data distributed in Amazon S3 is fully replicated or sharded by an S3 key. Defauts to FullyReplicated
+     * 
+     */
     public Optional<ModelBiasJobDefinitionEndpointInputS3DataDistributionType> getS3DataDistributionType() {
         return Optional.ofNullable(this.s3DataDistributionType);
     }
+    /**
+     * Whether the Pipe or File is used as the input mode for transfering data for the monitoring job. Pipe mode is recommended for large datasets. File mode is useful for small files that fit in memory. Defaults to File.
+     * 
+     */
     public Optional<ModelBiasJobDefinitionEndpointInputS3InputMode> getS3InputMode() {
         return Optional.ofNullable(this.s3InputMode);
     }
+    /**
+     * Monitoring start time offset, e.g. -PT1H
+     * 
+     */
     public Optional<String> getStartTimeOffset() {
         return Optional.ofNullable(this.startTimeOffset);
     }

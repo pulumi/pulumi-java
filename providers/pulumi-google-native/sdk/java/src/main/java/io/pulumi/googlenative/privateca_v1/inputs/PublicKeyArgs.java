@@ -10,10 +10,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A PublicKey describes a public key.
+ * 
+ */
 public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PublicKeyArgs Empty = new PublicKeyArgs();
 
+    /**
+     * The format of the public key.
+     * 
+     */
     @InputImport(name="format", required=true)
     private final Input<PublicKeyFormat> format;
 
@@ -21,6 +29,10 @@ public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.format;
     }
 
+    /**
+     * A public key. The padding and encoding must match with the `KeyFormat` value specified for the `format` field.
+     * 
+     */
     @InputImport(name="key", required=true)
     private final Input<String> key;
 

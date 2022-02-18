@@ -12,7 +12,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SecurityScanConfigSchedule {
+    /**
+     * The duration of time between executions in days
+     * 
+     */
     private final Integer intervalDurationDays;
+    /**
+     * A timestamp indicates when the next run will be scheduled. The value is refreshed
+     * by the server after each run. If unspecified, it will default to current server time,
+     * which means the scan will be scheduled to start immediately.
+     * 
+     */
     private final @Nullable String scheduleTime;
 
     @OutputCustomType.Constructor({"intervalDurationDays","scheduleTime"})
@@ -23,9 +33,19 @@ public final class SecurityScanConfigSchedule {
         this.scheduleTime = scheduleTime;
     }
 
+    /**
+     * The duration of time between executions in days
+     * 
+     */
     public Integer getIntervalDurationDays() {
         return this.intervalDurationDays;
     }
+    /**
+     * A timestamp indicates when the next run will be scheduled. The value is refreshed
+     * by the server after each run. If unspecified, it will default to current server time,
+     * which means the scan will be scheduled to start immediately.
+     * 
+     */
     public Optional<String> getScheduleTime() {
         return Optional.ofNullable(this.scheduleTime);
     }

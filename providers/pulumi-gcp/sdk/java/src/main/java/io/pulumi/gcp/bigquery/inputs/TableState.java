@@ -24,6 +24,12 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
 
     public static final TableState Empty = new TableState();
 
+    /**
+     * Specifies column names to use for data clustering.
+     * Up to four top-level columns are allowed, and should be specified in
+     * descending priority order.
+     * 
+     */
     @InputImport(name="clusterings")
     private final @Nullable Input<List<String>> clusterings;
 
@@ -31,6 +37,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
         return this.clusterings == null ? Input.empty() : this.clusterings;
     }
 
+    /**
+     * The time when this table was created, in milliseconds since the epoch.
+     * 
+     */
     @InputImport(name="creationTime")
     private final @Nullable Input<Integer> creationTime;
 
@@ -38,6 +48,11 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
         return this.creationTime == null ? Input.empty() : this.creationTime;
     }
 
+    /**
+     * The dataset ID to create the table in.
+     * Changing this forces a new resource to be created.
+     * 
+     */
     @InputImport(name="datasetId")
     private final @Nullable Input<String> datasetId;
 
@@ -45,6 +60,11 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
         return this.datasetId == null ? Input.empty() : this.datasetId;
     }
 
+    /**
+     * Whether or not to allow the provider to destroy the instance. Unless this field is set to false
+     * in state, a `=destroy` or `=update` that would delete the instance will fail.
+     * 
+     */
     @InputImport(name="deletionProtection")
     private final @Nullable Input<Boolean> deletionProtection;
 
@@ -52,6 +72,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
         return this.deletionProtection == null ? Input.empty() : this.deletionProtection;
     }
 
+    /**
+     * The field description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -59,6 +83,12 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Specifies how the table should be encrypted.
+     * If left blank, the table will be encrypted with a Google-managed key; that process
+     * is transparent to the user.  Structure is documented below.
+     * 
+     */
     @InputImport(name="encryptionConfiguration")
     private final @Nullable Input<TableEncryptionConfigurationGetArgs> encryptionConfiguration;
 
@@ -66,6 +96,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
         return this.encryptionConfiguration == null ? Input.empty() : this.encryptionConfiguration;
     }
 
+    /**
+     * A hash of the resource.
+     * 
+     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -73,6 +107,13 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
+    /**
+     * The time when this table expires, in
+     * milliseconds since the epoch. If not present, the table will persist
+     * indefinitely. Expired tables will be deleted and their storage
+     * reclaimed.
+     * 
+     */
     @InputImport(name="expirationTime")
     private final @Nullable Input<Integer> expirationTime;
 
@@ -80,6 +121,13 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
         return this.expirationTime == null ? Input.empty() : this.expirationTime;
     }
 
+    /**
+     * Describes the data format,
+     * location, and other properties of a table stored outside of BigQuery.
+     * By defining these properties, the data source can then be queried as
+     * if it were a standard BigQuery table. Structure is documented below.
+     * 
+     */
     @InputImport(name="externalDataConfiguration")
     private final @Nullable Input<TableExternalDataConfigurationGetArgs> externalDataConfiguration;
 
@@ -87,6 +135,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
         return this.externalDataConfiguration == null ? Input.empty() : this.externalDataConfiguration;
     }
 
+    /**
+     * A descriptive name for the table.
+     * 
+     */
     @InputImport(name="friendlyName")
     private final @Nullable Input<String> friendlyName;
 
@@ -94,6 +146,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
     }
 
+    /**
+     * A mapping of labels to assign to the resource.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -101,6 +157,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The time when this table was last modified, in milliseconds since the epoch.
+     * 
+     */
     @InputImport(name="lastModifiedTime")
     private final @Nullable Input<Integer> lastModifiedTime;
 
@@ -108,6 +168,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
         return this.lastModifiedTime == null ? Input.empty() : this.lastModifiedTime;
     }
 
+    /**
+     * The geographic location where the table resides. This value is inherited from the dataset.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -115,6 +179,11 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * If specified, configures this table as a materialized view.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="materializedView")
     private final @Nullable Input<TableMaterializedViewGetArgs> materializedView;
 
@@ -122,6 +191,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
         return this.materializedView == null ? Input.empty() : this.materializedView;
     }
 
+    /**
+     * The size of this table in bytes, excluding any data in the streaming buffer.
+     * 
+     */
     @InputImport(name="numBytes")
     private final @Nullable Input<Integer> numBytes;
 
@@ -129,6 +202,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
         return this.numBytes == null ? Input.empty() : this.numBytes;
     }
 
+    /**
+     * The number of bytes in the table that are considered "long-term storage".
+     * 
+     */
     @InputImport(name="numLongTermBytes")
     private final @Nullable Input<Integer> numLongTermBytes;
 
@@ -136,6 +213,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
         return this.numLongTermBytes == null ? Input.empty() : this.numLongTermBytes;
     }
 
+    /**
+     * The number of rows of data in this table, excluding any data in the streaming buffer.
+     * 
+     */
     @InputImport(name="numRows")
     private final @Nullable Input<Integer> numRows;
 
@@ -143,6 +224,11 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
         return this.numRows == null ? Input.empty() : this.numRows;
     }
 
+    /**
+     * The ID of the project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -150,6 +236,11 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * If specified, configures range-based
+     * partitioning for this table. Structure is documented below.
+     * 
+     */
     @InputImport(name="rangePartitioning")
     private final @Nullable Input<TableRangePartitioningGetArgs> rangePartitioning;
 
@@ -157,6 +248,20 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
         return this.rangePartitioning == null ? Input.empty() : this.rangePartitioning;
     }
 
+    /**
+     * A JSON schema for the external table. Schema is required
+     * for CSV and JSON formats if autodetect is not on. Schema is disallowed
+     * for Google Cloud Bigtable, Cloud Datastore backups, Avro, ORC and Parquet formats.
+     * ~>**NOTE:** Because this field expects a JSON string, any changes to the
+     * string will create a diff, even if the JSON itself hasn't changed.
+     * Furthermore drift for this field cannot not be detected because BigQuery
+     * only uses this schema to compute the effective schema for the table, therefore
+     * any changes on the configured value will force the table to be recreated.
+     * This schema is effectively only applied when creating a table from an external
+     * datasource, after creation the computed schema will be stored in
+     * `google_bigquery_table.schema`
+     * 
+     */
     @InputImport(name="schema")
     private final @Nullable Input<String> schema;
 
@@ -164,6 +269,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
         return this.schema == null ? Input.empty() : this.schema;
     }
 
+    /**
+     * The URI of the created resource.
+     * 
+     */
     @InputImport(name="selfLink")
     private final @Nullable Input<String> selfLink;
 
@@ -171,6 +280,11 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
         return this.selfLink == null ? Input.empty() : this.selfLink;
     }
 
+    /**
+     * A unique ID for the resource.
+     * Changing this forces a new resource to be created.
+     * 
+     */
     @InputImport(name="tableId")
     private final @Nullable Input<String> tableId;
 
@@ -178,6 +292,11 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
         return this.tableId == null ? Input.empty() : this.tableId;
     }
 
+    /**
+     * If specified, configures time-based
+     * partitioning for this table. Structure is documented below.
+     * 
+     */
     @InputImport(name="timePartitioning")
     private final @Nullable Input<TableTimePartitioningGetArgs> timePartitioning;
 
@@ -185,6 +304,11 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
         return this.timePartitioning == null ? Input.empty() : this.timePartitioning;
     }
 
+    /**
+     * The supported types are DAY, HOUR, MONTH, and YEAR,
+     * which will generate one partition per day, hour, month, and year, respectively.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 
@@ -192,6 +316,11 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
         return this.type == null ? Input.empty() : this.type;
     }
 
+    /**
+     * If specified, configures this table as a view.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="view")
     private final @Nullable Input<TableViewGetArgs> view;
 

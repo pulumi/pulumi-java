@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties of an environment deployment.
+ * 
+ */
 public final class EnvironmentDeploymentPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EnvironmentDeploymentPropertiesArgs Empty = new EnvironmentDeploymentPropertiesArgs();
 
+    /**
+     * The Azure Resource Manager template's identifier.
+     * 
+     */
     @InputImport(name="armTemplateId")
     private final @Nullable Input<String> armTemplateId;
 
@@ -23,6 +31,10 @@ public final class EnvironmentDeploymentPropertiesArgs extends io.pulumi.resourc
         return this.armTemplateId == null ? Input.empty() : this.armTemplateId;
     }
 
+    /**
+     * The parameters of the Azure Resource Manager template.
+     * 
+     */
     @InputImport(name="parameters")
     private final @Nullable Input<List<ArmTemplateParameterPropertiesArgs>> parameters;
 

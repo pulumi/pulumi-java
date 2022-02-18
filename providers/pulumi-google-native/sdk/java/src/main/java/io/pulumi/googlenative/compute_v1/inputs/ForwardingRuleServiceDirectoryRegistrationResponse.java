@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Describes the auto-registration of the Forwarding Rule to Service Directory. The region and project of the Service Directory resource generated from this registration will be the same as this Forwarding Rule.
+ * 
+ */
 public final class ForwardingRuleServiceDirectoryRegistrationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ForwardingRuleServiceDirectoryRegistrationResponse Empty = new ForwardingRuleServiceDirectoryRegistrationResponse();
 
+    /**
+     * Service Directory namespace to register the forwarding rule under.
+     * 
+     */
     @InputImport(name="namespace", required=true)
     private final String namespace;
 
@@ -19,6 +27,10 @@ public final class ForwardingRuleServiceDirectoryRegistrationResponse extends io
         return this.namespace;
     }
 
+    /**
+     * Service Directory service to register the forwarding rule under.
+     * 
+     */
     @InputImport(name="service", required=true)
     private final String service;
 
@@ -26,6 +38,10 @@ public final class ForwardingRuleServiceDirectoryRegistrationResponse extends io
         return this.service;
     }
 
+    /**
+     * [Optional] Service Directory region to register this global forwarding rule under. Default to "us-central1". Only used for PSC for Google APIs. All PSC for Google APIs Forwarding Rules on the same network should use the same Service Directory region.
+     * 
+     */
     @InputImport(name="serviceDirectoryRegion", required=true)
     private final String serviceDirectoryRegion;
 

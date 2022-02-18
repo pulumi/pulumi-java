@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A message in plain text format.
+ * 
+ */
 public final class BotPlainTextMessageArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BotPlainTextMessageArgs Empty = new BotPlainTextMessageArgs();
 
+    /**
+     * The message to send to the user.
+     * 
+     */
     @InputImport(name="value", required=true)
     private final Input<String> value;
 

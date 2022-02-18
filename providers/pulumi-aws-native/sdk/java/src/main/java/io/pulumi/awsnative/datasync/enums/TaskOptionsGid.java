@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The group ID (GID) of the file's owners.
+     * 
+     */
     @EnumType
     public enum TaskOptionsGid {
         None("NONE"),

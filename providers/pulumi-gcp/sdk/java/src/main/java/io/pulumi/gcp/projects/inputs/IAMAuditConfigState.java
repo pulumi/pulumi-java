@@ -16,6 +16,10 @@ public final class IAMAuditConfigState extends io.pulumi.resources.ResourceArgs 
 
     public static final IAMAuditConfigState Empty = new IAMAuditConfigState();
 
+    /**
+     * The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.
+     * 
+     */
     @InputImport(name="auditLogConfigs")
     private final @Nullable Input<List<IAMAuditConfigAuditLogConfigGetArgs>> auditLogConfigs;
 
@@ -23,6 +27,10 @@ public final class IAMAuditConfigState extends io.pulumi.resources.ResourceArgs 
         return this.auditLogConfigs == null ? Input.empty() : this.auditLogConfigs;
     }
 
+    /**
+     * (Computed) The etag of the project's IAM policy.
+     * 
+     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -30,6 +38,11 @@ public final class IAMAuditConfigState extends io.pulumi.resources.ResourceArgs 
         return this.etag == null ? Input.empty() : this.etag;
     }
 
+    /**
+     * The project id of the target project. This is not
+     * inferred from the provider.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -37,6 +50,10 @@ public final class IAMAuditConfigState extends io.pulumi.resources.ResourceArgs 
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Service which will be enabled for audit logging.  The special value `allServices` covers all services.  Note that if there are google\_project\_iam\_audit\_config resources covering both `allServices` and a specific service then the union of the two AuditConfigs is used for that service: the `log_types` specified in each `audit_log_config` are enabled, and the `exempted_members` in each `audit_log_config` are exempted.
+     * 
+     */
     @InputImport(name="service")
     private final @Nullable Input<String> service;
 

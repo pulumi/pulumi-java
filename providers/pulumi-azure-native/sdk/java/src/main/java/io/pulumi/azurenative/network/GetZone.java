@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetZone {
+/**
+ * Describes a DNS zone.
+ * API Version: 2018-05-01.
+ * 
+ *
+ * Describes a DNS zone.
+ * 
+ */
     public static CompletableFuture<GetZoneResult> invokeAsync(GetZoneArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getZone", TypeShape.of(GetZoneResult.class), args == null ? GetZoneArgs.Empty : args, Utilities.withVersion(options));
     }

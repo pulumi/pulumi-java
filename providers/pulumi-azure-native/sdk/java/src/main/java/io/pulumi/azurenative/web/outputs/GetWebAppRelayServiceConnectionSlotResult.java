@@ -16,12 +16,28 @@ public final class GetWebAppRelayServiceConnectionSlotResult {
     private final @Nullable String entityConnectionString;
     private final @Nullable String entityName;
     private final @Nullable String hostname;
+    /**
+     * Resource Id.
+     * 
+     */
     private final String id;
+    /**
+     * Kind of resource.
+     * 
+     */
     private final @Nullable String kind;
+    /**
+     * Resource Name.
+     * 
+     */
     private final String name;
     private final @Nullable Integer port;
     private final @Nullable String resourceConnectionString;
     private final @Nullable String resourceType;
+    /**
+     * Resource type.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"biztalkUri","entityConnectionString","entityName","hostname","id","kind","name","port","resourceConnectionString","resourceType","type"})
@@ -62,12 +78,24 @@ public final class GetWebAppRelayServiceConnectionSlotResult {
     public Optional<String> getHostname() {
         return Optional.ofNullable(this.hostname);
     }
+    /**
+     * Resource Id.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Kind of resource.
+     * 
+     */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
+    /**
+     * Resource Name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
@@ -80,6 +108,10 @@ public final class GetWebAppRelayServiceConnectionSlotResult {
     public Optional<String> getPropResourceType() {
         return Optional.ofNullable(this.resourceType);
     }
+    /**
+     * Resource type.
+     * 
+     */
     public String getType() {
         return this.type;
     }

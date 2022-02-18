@@ -10,6 +10,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class LocationNFSOnPremConfig {
+    /**
+     * ARN(s) of the agent(s) to use for an NFS location.
+     * 
+     */
     private final List<String> agentArns;
 
     @OutputCustomType.Constructor({"agentArns"})
@@ -17,6 +21,10 @@ public final class LocationNFSOnPremConfig {
         this.agentArns = Objects.requireNonNull(agentArns);
     }
 
+    /**
+     * ARN(s) of the agent(s) to use for an NFS location.
+     * 
+     */
     public List<String> getAgentArns() {
         return this.agentArns;
     }

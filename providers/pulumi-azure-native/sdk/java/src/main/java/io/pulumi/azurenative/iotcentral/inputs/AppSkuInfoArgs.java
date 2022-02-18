@@ -11,10 +11,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Information about the SKU of the IoT Central application.
+ * 
+ */
 public final class AppSkuInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AppSkuInfoArgs Empty = new AppSkuInfoArgs();
 
+    /**
+     * The name of the SKU.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<Either<String,AppSku>> name;
 

@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetContentItem {
+/**
+ * Content type contract details.
+ * API Version: 2020-12-01.
+ * 
+ *
+ * Content type contract details.
+ * 
+ */
     public static CompletableFuture<GetContentItemResult> invokeAsync(GetContentItemArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getContentItem", TypeShape.of(GetContentItemResult.class), args == null ? GetContentItemArgs.Empty : args, Utilities.withVersion(options));
     }

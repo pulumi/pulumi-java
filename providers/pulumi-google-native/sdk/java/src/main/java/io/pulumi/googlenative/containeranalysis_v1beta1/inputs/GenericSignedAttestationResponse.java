@@ -10,10 +10,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * An attestation wrapper that uses the Grafeas `Signature` message. This attestation must define the `serialized_payload` that the `signatures` verify and any metadata necessary to interpret that plaintext. The signatures should always be over the `serialized_payload` bytestring.
+ * 
+ */
 public final class GenericSignedAttestationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GenericSignedAttestationResponse Empty = new GenericSignedAttestationResponse();
 
+    /**
+     * Type (for example schema) of the attestation payload that was signed. The verifier must ensure that the provided type is one that the verifier supports, and that the attestation payload is a valid instantiation of that type (for example by validating a JSON schema).
+     * 
+     */
     @InputImport(name="contentType", required=true)
     private final String contentType;
 
@@ -21,6 +29,10 @@ public final class GenericSignedAttestationResponse extends io.pulumi.resources.
         return this.contentType;
     }
 
+    /**
+     * The serialized payload that is verified by one or more `signatures`. The encoding and semantic meaning of this payload must match what is set in `content_type`.
+     * 
+     */
     @InputImport(name="serializedPayload", required=true)
     private final String serializedPayload;
 
@@ -28,6 +40,10 @@ public final class GenericSignedAttestationResponse extends io.pulumi.resources.
         return this.serializedPayload;
     }
 
+    /**
+     * One or more signatures over `serialized_payload`. Verifier implementations should consider this attestation message verified if at least one `signature` verifies `serialized_payload`. See `Signature` in common.proto for more details on signature structure and verification.
+     * 
+     */
     @InputImport(name="signatures", required=true)
     private final List<SignatureResponse> signatures;
 

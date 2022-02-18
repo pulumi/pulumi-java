@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIdentityAwareProxyClient {
+/**
+ * Retrieves an Identity Aware Proxy (IAP) OAuth client. Requires that the client is owned by IAP.
+ * 
+ */
     public static CompletableFuture<GetIdentityAwareProxyClientResult> invokeAsync(GetIdentityAwareProxyClientArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:iap/v1:getIdentityAwareProxyClient", TypeShape.of(GetIdentityAwareProxyClientResult.class), args == null ? GetIdentityAwareProxyClientArgs.Empty : args, Utilities.withVersion(options));
     }

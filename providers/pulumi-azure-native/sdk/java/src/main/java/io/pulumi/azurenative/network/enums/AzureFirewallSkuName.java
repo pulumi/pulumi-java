@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Name of an Azure Firewall SKU.
+     * 
+     */
     @EnumType
     public enum AzureFirewallSkuName {
         AZFW_VNet("AZFW_VNet"),

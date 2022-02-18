@@ -15,6 +15,10 @@ public final class BackendServiceConsistentHashHttpCookieGetArgs extends io.pulu
 
     public static final BackendServiceConsistentHashHttpCookieGetArgs Empty = new BackendServiceConsistentHashHttpCookieGetArgs();
 
+    /**
+     * Name of the cookie.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -22,6 +26,10 @@ public final class BackendServiceConsistentHashHttpCookieGetArgs extends io.pulu
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Path to set for the cookie.
+     * 
+     */
     @InputImport(name="path")
     private final @Nullable Input<String> path;
 
@@ -29,6 +37,11 @@ public final class BackendServiceConsistentHashHttpCookieGetArgs extends io.pulu
         return this.path == null ? Input.empty() : this.path;
     }
 
+    /**
+     * The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s
+     * (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
+     * 
+     */
     @InputImport(name="ttl")
     private final @Nullable Input<BackendServiceConsistentHashHttpCookieTtlGetArgs> ttl;
 

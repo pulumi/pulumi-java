@@ -12,6 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The identity for this access policy. Choose either an SSO user or group or an IAM user or role.
+ * 
+ */
 public final class AccessPolicyIdentityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AccessPolicyIdentityArgs Empty = new AccessPolicyIdentityArgs();

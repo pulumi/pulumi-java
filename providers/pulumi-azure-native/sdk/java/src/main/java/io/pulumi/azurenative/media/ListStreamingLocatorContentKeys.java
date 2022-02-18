@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListStreamingLocatorContentKeys {
+/**
+ * Class of response for listContentKeys action
+ * API Version: 2020-05-01.
+ * 
+ *
+ * Class of response for listContentKeys action
+ * 
+ */
     public static CompletableFuture<ListStreamingLocatorContentKeysResult> invokeAsync(ListStreamingLocatorContentKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:media:listStreamingLocatorContentKeys", TypeShape.of(ListStreamingLocatorContentKeysResult.class), args == null ? ListStreamingLocatorContentKeysArgs.Empty : args, Utilities.withVersion(options));
     }

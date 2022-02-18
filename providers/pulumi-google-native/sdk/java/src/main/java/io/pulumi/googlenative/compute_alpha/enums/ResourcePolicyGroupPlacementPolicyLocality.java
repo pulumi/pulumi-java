@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Specifies network locality
+     * 
+     */
     @EnumType
     public enum ResourcePolicyGroupPlacementPolicyLocality {
         BestEffort("BEST_EFFORT"),

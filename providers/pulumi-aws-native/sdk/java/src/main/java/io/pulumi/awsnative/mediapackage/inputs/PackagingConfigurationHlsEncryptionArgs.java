@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * An HTTP Live Streaming (HLS) encryption configuration.
+ * 
+ */
 public final class PackagingConfigurationHlsEncryptionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PackagingConfigurationHlsEncryptionArgs Empty = new PackagingConfigurationHlsEncryptionArgs();
 
+    /**
+     * An HTTP Live Streaming (HLS) encryption configuration.
+     * 
+     */
     @InputImport(name="constantInitializationVector")
     private final @Nullable Input<String> constantInitializationVector;
 
@@ -23,6 +31,10 @@ public final class PackagingConfigurationHlsEncryptionArgs extends io.pulumi.res
         return this.constantInitializationVector == null ? Input.empty() : this.constantInitializationVector;
     }
 
+    /**
+     * The encryption method to use.
+     * 
+     */
     @InputImport(name="encryptionMethod")
     private final @Nullable Input<PackagingConfigurationHlsEncryptionEncryptionMethod> encryptionMethod;
 

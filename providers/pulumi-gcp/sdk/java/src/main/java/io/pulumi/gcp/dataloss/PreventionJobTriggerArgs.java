@@ -17,6 +17,10 @@ public final class PreventionJobTriggerArgs extends io.pulumi.resources.Resource
 
     public static final PreventionJobTriggerArgs Empty = new PreventionJobTriggerArgs();
 
+    /**
+     * A description of the job trigger.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -24,6 +28,10 @@ public final class PreventionJobTriggerArgs extends io.pulumi.resources.Resource
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * User set display name of the job trigger.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -31,6 +39,11 @@ public final class PreventionJobTriggerArgs extends io.pulumi.resources.Resource
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * Controls what and how to inspect for findings.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="inspectJob")
     private final @Nullable Input<PreventionJobTriggerInspectJobArgs> inspectJob;
 
@@ -38,6 +51,11 @@ public final class PreventionJobTriggerArgs extends io.pulumi.resources.Resource
         return this.inspectJob == null ? Input.empty() : this.inspectJob;
     }
 
+    /**
+     * The parent of the trigger, either in the format `projects/{{project}}`
+     * or `projects/{{project}}/locations/{{location}}`
+     * 
+     */
     @InputImport(name="parent", required=true)
     private final Input<String> parent;
 
@@ -45,6 +63,12 @@ public final class PreventionJobTriggerArgs extends io.pulumi.resources.Resource
         return this.parent;
     }
 
+    /**
+     * Whether the trigger is currently active.
+     * Default value is `HEALTHY`.
+     * Possible values are `PAUSED`, `HEALTHY`, and `CANCELLED`.
+     * 
+     */
     @InputImport(name="status")
     private final @Nullable Input<String> status;
 
@@ -52,6 +76,11 @@ public final class PreventionJobTriggerArgs extends io.pulumi.resources.Resource
         return this.status == null ? Input.empty() : this.status;
     }
 
+    /**
+     * What event needs to occur for a new job to be started.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="triggers", required=true)
     private final Input<List<PreventionJobTriggerTriggerArgs>> triggers;
 

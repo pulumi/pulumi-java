@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * PortworxVolumeSource represents a Portworx volume resource.
+ * 
+ */
 public final class PortworxVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PortworxVolumeSourceArgs Empty = new PortworxVolumeSourceArgs();
 
+    /**
+     * FSType represents the filesystem type to mount Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs". Implicitly inferred to be "ext4" if unspecified.
+     * 
+     */
     @InputImport(name="fsType")
     private final @Nullable Input<String> fsType;
 
@@ -22,6 +30,10 @@ public final class PortworxVolumeSourceArgs extends io.pulumi.resources.Resource
         return this.fsType == null ? Input.empty() : this.fsType;
     }
 
+    /**
+     * Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+     * 
+     */
     @InputImport(name="readOnly")
     private final @Nullable Input<Boolean> readOnly;
 
@@ -29,6 +41,10 @@ public final class PortworxVolumeSourceArgs extends io.pulumi.resources.Resource
         return this.readOnly == null ? Input.empty() : this.readOnly;
     }
 
+    /**
+     * VolumeID uniquely identifies a Portworx volume
+     * 
+     */
     @InputImport(name="volumeID", required=true)
     private final Input<String> volumeID;
 

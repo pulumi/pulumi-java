@@ -11,7 +11,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse {
+    /**
+     * Optional. One or more suggestions to show to the user.
+     * 
+     */
     private final List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> rbmSuggestion;
+    /**
+     * Text sent and displayed to the user.
+     * 
+     */
     private final String text;
 
     @OutputCustomType.Constructor({"rbmSuggestion","text"})
@@ -22,9 +30,17 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse {
         this.text = Objects.requireNonNull(text);
     }
 
+    /**
+     * Optional. One or more suggestions to show to the user.
+     * 
+     */
     public List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> getRbmSuggestion() {
         return this.rbmSuggestion;
     }
+    /**
+     * Text sent and displayed to the user.
+     * 
+     */
     public String getText() {
         return this.text;
     }

@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AccessPolicyPortal {
+    /**
+     * The ID of the portal.
+     * 
+     */
     private final @Nullable String id;
 
     @OutputCustomType.Constructor({"id"})
@@ -18,6 +22,10 @@ public final class AccessPolicyPortal {
         this.id = id;
     }
 
+    /**
+     * The ID of the portal.
+     * 
+     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }

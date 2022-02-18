@@ -15,6 +15,10 @@ import javax.annotation.Nullable;
 public final class GetClusterIstioServiceResult {
     private final String clusterName;
     private final String displayName;
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
     private final String location;
     private final String name;
@@ -54,6 +58,10 @@ public final class GetClusterIstioServiceResult {
     public String getDisplayName() {
         return this.displayName;
     }
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }

@@ -19,6 +19,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationArgs Empty = new ApplicationArgs();
 
+    /**
+     * The name of the application group
+     * 
+     */
     @InputImport(name="applicationGroupName", required=true)
     private final Input<String> applicationGroupName;
 
@@ -26,6 +30,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.applicationGroupName;
     }
 
+    /**
+     * The name of the application within the specified application group
+     * 
+     */
     @InputImport(name="applicationName")
     private final @Nullable Input<String> applicationName;
 
@@ -33,6 +41,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.applicationName == null ? Input.empty() : this.applicationName;
     }
 
+    /**
+     * Resource Type of Application.
+     * 
+     */
     @InputImport(name="applicationType")
     private final @Nullable Input<Either<String,RemoteApplicationType>> applicationType;
 
@@ -40,6 +52,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.applicationType == null ? Input.empty() : this.applicationType;
     }
 
+    /**
+     * Command Line Arguments for Application.
+     * 
+     */
     @InputImport(name="commandLineArguments")
     private final @Nullable Input<String> commandLineArguments;
 
@@ -47,6 +63,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.commandLineArguments == null ? Input.empty() : this.commandLineArguments;
     }
 
+    /**
+     * Specifies whether this published application can be launched with command line arguments provided by the client, command line arguments specified at publish time, or no command line arguments at all.
+     * 
+     */
     @InputImport(name="commandLineSetting", required=true)
     private final Input<Either<String,CommandLineSetting>> commandLineSetting;
 
@@ -54,6 +74,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.commandLineSetting;
     }
 
+    /**
+     * Description of Application.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -61,6 +85,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Specifies a path for the executable file for the application.
+     * 
+     */
     @InputImport(name="filePath")
     private final @Nullable Input<String> filePath;
 
@@ -68,6 +96,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.filePath == null ? Input.empty() : this.filePath;
     }
 
+    /**
+     * Friendly name of Application.
+     * 
+     */
     @InputImport(name="friendlyName")
     private final @Nullable Input<String> friendlyName;
 
@@ -75,6 +107,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
     }
 
+    /**
+     * Index of the icon.
+     * 
+     */
     @InputImport(name="iconIndex")
     private final @Nullable Input<Integer> iconIndex;
 
@@ -82,6 +118,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.iconIndex == null ? Input.empty() : this.iconIndex;
     }
 
+    /**
+     * Path to icon.
+     * 
+     */
     @InputImport(name="iconPath")
     private final @Nullable Input<String> iconPath;
 
@@ -89,6 +129,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.iconPath == null ? Input.empty() : this.iconPath;
     }
 
+    /**
+     * Specifies the package application Id for MSIX applications
+     * 
+     */
     @InputImport(name="msixPackageApplicationId")
     private final @Nullable Input<String> msixPackageApplicationId;
 
@@ -96,6 +140,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.msixPackageApplicationId == null ? Input.empty() : this.msixPackageApplicationId;
     }
 
+    /**
+     * Specifies the package family name for MSIX applications
+     * 
+     */
     @InputImport(name="msixPackageFamilyName")
     private final @Nullable Input<String> msixPackageFamilyName;
 
@@ -103,6 +151,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.msixPackageFamilyName == null ? Input.empty() : this.msixPackageFamilyName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -110,6 +162,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Specifies whether to show the RemoteApp program in the RD Web Access server.
+     * 
+     */
     @InputImport(name="showInPortal")
     private final @Nullable Input<Boolean> showInPortal;
 

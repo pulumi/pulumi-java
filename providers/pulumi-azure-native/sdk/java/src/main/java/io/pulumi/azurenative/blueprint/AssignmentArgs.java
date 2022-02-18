@@ -19,6 +19,10 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AssignmentArgs Empty = new AssignmentArgs();
 
+    /**
+     * Name of the blueprint assignment.
+     * 
+     */
     @InputImport(name="assignmentName")
     private final @Nullable Input<String> assignmentName;
 
@@ -26,6 +30,10 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.assignmentName == null ? Input.empty() : this.assignmentName;
     }
 
+    /**
+     * ID of the published version of a blueprint definition.
+     * 
+     */
     @InputImport(name="blueprintId")
     private final @Nullable Input<String> blueprintId;
 
@@ -33,6 +41,10 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.blueprintId == null ? Input.empty() : this.blueprintId;
     }
 
+    /**
+     * Multi-line explain this resource.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -40,6 +52,10 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * One-liner string explain this resource.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -47,6 +63,10 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * Managed identity for this blueprint assignment.
+     * 
+     */
     @InputImport(name="identity", required=true)
     private final Input<ManagedServiceIdentityArgs> identity;
 
@@ -54,6 +74,10 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity;
     }
 
+    /**
+     * The location of this blueprint assignment.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -61,6 +85,10 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Defines how resources deployed by a blueprint assignment are locked.
+     * 
+     */
     @InputImport(name="locks")
     private final @Nullable Input<AssignmentLockSettingsArgs> locks;
 
@@ -68,6 +96,10 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.locks == null ? Input.empty() : this.locks;
     }
 
+    /**
+     * Blueprint assignment parameter values.
+     * 
+     */
     @InputImport(name="parameters", required=true)
     private final Input<Map<String,ParameterValueArgs>> parameters;
 
@@ -75,6 +107,10 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.parameters;
     }
 
+    /**
+     * Names and locations of resource group placeholders.
+     * 
+     */
     @InputImport(name="resourceGroups", required=true)
     private final Input<Map<String,ResourceGroupValueArgs>> resourceGroups;
 
@@ -82,6 +118,10 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroups;
     }
 
+    /**
+     * The scope of the resource. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}').
+     * 
+     */
     @InputImport(name="resourceScope", required=true)
     private final Input<String> resourceScope;
 
@@ -89,6 +129,10 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceScope;
     }
 
+    /**
+     * The target subscription scope of the blueprint assignment (format: '/subscriptions/{subscriptionId}'). For management group level assignments, the property is required.
+     * 
+     */
     @InputImport(name="scope")
     private final @Nullable Input<String> scope;
 

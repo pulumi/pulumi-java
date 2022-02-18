@@ -14,11 +14,25 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Resource schema for AWS::Cassandra::Keyspace
+ * 
+ * ## Example Usage
+ * 
+ */
 @ResourceType(type="aws-native:cassandra:Keyspace")
 public class Keyspace extends io.pulumi.resources.CustomResource {
+    /**
+     * Name for Cassandra keyspace
+     * 
+     */
     @OutputExport(name="keyspaceName", type=String.class, parameters={})
     private Output</* @Nullable */ String> keyspaceName;
 
+    /**
+     * @return Name for Cassandra keyspace
+     * 
+     */
     public Output</* @Nullable */ String> getKeyspaceName() {
         return this.keyspaceName;
     }
@@ -29,6 +43,12 @@ public class Keyspace extends io.pulumi.resources.CustomResource {
         return this.tags;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Keyspace(String name, @Nullable KeyspaceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:cassandra:Keyspace", name, args == null ? KeyspaceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -44,6 +64,14 @@ public class Keyspace extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Keyspace get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Keyspace(name, id, options);
     }

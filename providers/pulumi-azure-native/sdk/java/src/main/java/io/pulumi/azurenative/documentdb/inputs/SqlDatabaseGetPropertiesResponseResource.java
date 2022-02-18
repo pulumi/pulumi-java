@@ -15,6 +15,10 @@ public final class SqlDatabaseGetPropertiesResponseResource extends io.pulumi.re
 
     public static final SqlDatabaseGetPropertiesResponseResource Empty = new SqlDatabaseGetPropertiesResponseResource();
 
+    /**
+     * A system generated property that specified the addressable path of the collections resource.
+     * 
+     */
     @InputImport(name="colls")
     private final @Nullable String colls;
 
@@ -22,6 +26,10 @@ public final class SqlDatabaseGetPropertiesResponseResource extends io.pulumi.re
         return this.colls == null ? Optional.empty() : Optional.ofNullable(this.colls);
     }
 
+    /**
+     * A system generated property representing the resource etag required for optimistic concurrency control.
+     * 
+     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -29,6 +37,10 @@ public final class SqlDatabaseGetPropertiesResponseResource extends io.pulumi.re
         return this.etag;
     }
 
+    /**
+     * Name of the Cosmos DB SQL database
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -36,6 +48,10 @@ public final class SqlDatabaseGetPropertiesResponseResource extends io.pulumi.re
         return this.id;
     }
 
+    /**
+     * A system generated property. A unique identifier.
+     * 
+     */
     @InputImport(name="rid", required=true)
     private final String rid;
 
@@ -43,6 +59,10 @@ public final class SqlDatabaseGetPropertiesResponseResource extends io.pulumi.re
         return this.rid;
     }
 
+    /**
+     * A system generated property that denotes the last updated timestamp of the resource.
+     * 
+     */
     @InputImport(name="ts", required=true)
     private final Double ts;
 
@@ -50,6 +70,10 @@ public final class SqlDatabaseGetPropertiesResponseResource extends io.pulumi.re
         return this.ts;
     }
 
+    /**
+     * A system generated property that specifies the addressable path of the users resource.
+     * 
+     */
     @InputImport(name="users")
     private final @Nullable String users;
 

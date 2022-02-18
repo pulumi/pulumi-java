@@ -15,33 +15,75 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * An example resource schema demonstrating some basic constructs and validation rules.
+ * 
+ */
 @ResourceType(type="aws-native:iotwireless:ServiceProfile")
 public class ServiceProfile extends io.pulumi.resources.CustomResource {
+    /**
+     * Service profile Arn. Returned after successful create.
+     * 
+     */
     @OutputExport(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
+    /**
+     * @return Service profile Arn. Returned after successful create.
+     * 
+     */
     public Output<String> getArn() {
         return this.arn;
     }
+    /**
+     * LoRaWAN supports all LoRa specific attributes for service profile for CreateServiceProfile operation
+     * 
+     */
     @OutputExport(name="loRaWAN", type=ServiceProfileLoRaWANServiceProfile.class, parameters={})
     private Output</* @Nullable */ ServiceProfileLoRaWANServiceProfile> loRaWAN;
 
+    /**
+     * @return LoRaWAN supports all LoRa specific attributes for service profile for CreateServiceProfile operation
+     * 
+     */
     public Output</* @Nullable */ ServiceProfileLoRaWANServiceProfile> getLoRaWAN() {
         return this.loRaWAN;
     }
+    /**
+     * Name of service profile
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
+    /**
+     * @return Name of service profile
+     * 
+     */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
+    /**
+     * A list of key-value pairs that contain metadata for the service profile.
+     * 
+     */
     @OutputExport(name="tags", type=List.class, parameters={ServiceProfileTag.class})
     private Output</* @Nullable */ List<ServiceProfileTag>> tags;
 
+    /**
+     * @return A list of key-value pairs that contain metadata for the service profile.
+     * 
+     */
     public Output</* @Nullable */ List<ServiceProfileTag>> getTags() {
         return this.tags;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ServiceProfile(String name, @Nullable ServiceProfileArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:iotwireless:ServiceProfile", name, args == null ? ServiceProfileArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -57,6 +99,14 @@ public class ServiceProfile extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ServiceProfile get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ServiceProfile(name, id, options);
     }

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The key of a key-value pair that identifies the location of an attachment to a document.
+     * 
+     */
     @EnumType
     public enum DocumentAttachmentsSourceKey {
         SourceUrl("SourceUrl"),

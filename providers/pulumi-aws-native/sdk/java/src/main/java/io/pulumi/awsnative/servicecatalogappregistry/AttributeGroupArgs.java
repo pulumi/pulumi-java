@@ -23,6 +23,10 @@ public final class AttributeGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.attributes;
     }
 
+    /**
+     * The description of the attribute group.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -30,6 +34,10 @@ public final class AttributeGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The name of the attribute group.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

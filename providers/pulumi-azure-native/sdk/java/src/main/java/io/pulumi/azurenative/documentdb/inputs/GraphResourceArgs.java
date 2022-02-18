@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Cosmos DB Graph resource object
+ * 
+ */
 public final class GraphResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GraphResourceArgs Empty = new GraphResourceArgs();
 
+    /**
+     * Name of the Cosmos DB Graph
+     * 
+     */
     @InputImport(name="id", required=true)
     private final Input<String> id;
 

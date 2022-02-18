@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ *  The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).
+ * 
+ */
 public final class VirtualNetworkPeeringPropertiesFormatResponseRemoteVirtualNetwork extends io.pulumi.resources.InvokeArgs {
 
     public static final VirtualNetworkPeeringPropertiesFormatResponseRemoteVirtualNetwork Empty = new VirtualNetworkPeeringPropertiesFormatResponseRemoteVirtualNetwork();
 
+    /**
+     * The Id of the remote virtual network.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 

@@ -12,11 +12,35 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ReportConfigFilterResponse {
+    /**
+     * The logical "AND" expression. Must have at least 2 items.
+     * 
+     */
     private final @Nullable List<ReportConfigFilterResponse> and;
+    /**
+     * Has comparison expression for a dimension
+     * 
+     */
     private final @Nullable ReportConfigComparisonExpressionResponse dimensions;
+    /**
+     * The logical "OR" expression. Must have at least 2 items.
+     * 
+     */
     private final @Nullable List<ReportConfigFilterResponse> or;
+    /**
+     * Has comparison expression for a tag key
+     * 
+     */
     private final @Nullable ReportConfigComparisonExpressionResponse tagKey;
+    /**
+     * Has comparison expression for a tag value
+     * 
+     */
     private final @Nullable ReportConfigComparisonExpressionResponse tagValue;
+    /**
+     * Has comparison expression for a tag
+     * 
+     */
     private final @Nullable ReportConfigComparisonExpressionResponse tags;
 
     @OutputCustomType.Constructor({"and","dimensions","or","tagKey","tagValue","tags"})
@@ -35,21 +59,45 @@ public final class ReportConfigFilterResponse {
         this.tags = tags;
     }
 
+    /**
+     * The logical "AND" expression. Must have at least 2 items.
+     * 
+     */
     public List<ReportConfigFilterResponse> getAnd() {
         return this.and == null ? List.of() : this.and;
     }
+    /**
+     * Has comparison expression for a dimension
+     * 
+     */
     public Optional<ReportConfigComparisonExpressionResponse> getDimensions() {
         return Optional.ofNullable(this.dimensions);
     }
+    /**
+     * The logical "OR" expression. Must have at least 2 items.
+     * 
+     */
     public List<ReportConfigFilterResponse> getOr() {
         return this.or == null ? List.of() : this.or;
     }
+    /**
+     * Has comparison expression for a tag key
+     * 
+     */
     public Optional<ReportConfigComparisonExpressionResponse> getTagKey() {
         return Optional.ofNullable(this.tagKey);
     }
+    /**
+     * Has comparison expression for a tag value
+     * 
+     */
     public Optional<ReportConfigComparisonExpressionResponse> getTagValue() {
         return Optional.ofNullable(this.tagValue);
     }
+    /**
+     * Has comparison expression for a tag
+     * 
+     */
     public Optional<ReportConfigComparisonExpressionResponse> getTags() {
         return Optional.ofNullable(this.tags);
     }

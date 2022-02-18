@@ -12,10 +12,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Exclude variables from managed rule evaluation.
+ * 
+ */
 public final class ManagedRuleExclusionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagedRuleExclusionArgs Empty = new ManagedRuleExclusionArgs();
 
+    /**
+     * The variable type to be excluded.
+     * 
+     */
     @InputImport(name="matchVariable", required=true)
     private final Input<Either<String,ManagedRuleExclusionMatchVariable>> matchVariable;
 
@@ -23,6 +31,10 @@ public final class ManagedRuleExclusionArgs extends io.pulumi.resources.Resource
         return this.matchVariable;
     }
 
+    /**
+     * Selector value for which elements in the collection this exclusion applies to.
+     * 
+     */
     @InputImport(name="selector", required=true)
     private final Input<String> selector;
 
@@ -30,6 +42,10 @@ public final class ManagedRuleExclusionArgs extends io.pulumi.resources.Resource
         return this.selector;
     }
 
+    /**
+     * Comparison operator to apply to the selector when specifying which elements in the collection this exclusion applies to.
+     * 
+     */
     @InputImport(name="selectorMatchOperator", required=true)
     private final Input<Either<String,ManagedRuleExclusionSelectorMatchOperator>> selectorMatchOperator;
 

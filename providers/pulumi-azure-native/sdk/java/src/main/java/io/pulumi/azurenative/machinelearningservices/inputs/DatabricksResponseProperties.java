@@ -14,6 +14,10 @@ public final class DatabricksResponseProperties extends io.pulumi.resources.Invo
 
     public static final DatabricksResponseProperties Empty = new DatabricksResponseProperties();
 
+    /**
+     * Databricks access token
+     * 
+     */
     @InputImport(name="databricksAccessToken")
     private final @Nullable String databricksAccessToken;
 
@@ -21,6 +25,10 @@ public final class DatabricksResponseProperties extends io.pulumi.resources.Invo
         return this.databricksAccessToken == null ? Optional.empty() : Optional.ofNullable(this.databricksAccessToken);
     }
 
+    /**
+     * Workspace Url
+     * 
+     */
     @InputImport(name="workspaceUrl")
     private final @Nullable String workspaceUrl;
 

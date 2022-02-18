@@ -12,6 +12,10 @@ public final class GetFargateProfileArgs extends io.pulumi.resources.InvokeArgs 
 
     public static final GetFargateProfileArgs Empty = new GetFargateProfileArgs();
 
+    /**
+     * Name of the Cluster
+     * 
+     */
     @InputImport(name="clusterName", required=true)
     private final String clusterName;
 
@@ -19,6 +23,10 @@ public final class GetFargateProfileArgs extends io.pulumi.resources.InvokeArgs 
         return this.clusterName;
     }
 
+    /**
+     * Name of FargateProfile
+     * 
+     */
     @InputImport(name="fargateProfileName", required=true)
     private final String fargateProfileName;
 

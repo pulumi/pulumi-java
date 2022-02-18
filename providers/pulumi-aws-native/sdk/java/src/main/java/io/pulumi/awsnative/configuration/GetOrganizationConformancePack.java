@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOrganizationConformancePack {
+/**
+ * Resource schema for AWS::Config::OrganizationConformancePack.
+ * 
+ */
     public static CompletableFuture<GetOrganizationConformancePackResult> invokeAsync(GetOrganizationConformancePackArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:configuration:getOrganizationConformancePack", TypeShape.of(GetOrganizationConformancePackResult.class), args == null ? GetOrganizationConformancePackArgs.Empty : args, Utilities.withVersion(options));
     }

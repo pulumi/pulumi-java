@@ -12,6 +12,10 @@ public final class GetWorkspaceCollectionArgs extends io.pulumi.resources.Invoke
 
     public static final GetWorkspaceCollectionArgs Empty = new GetWorkspaceCollectionArgs();
 
+    /**
+     * Azure resource group
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +23,10 @@ public final class GetWorkspaceCollectionArgs extends io.pulumi.resources.Invoke
         return this.resourceGroupName;
     }
 
+    /**
+     * Power BI Embedded Workspace Collection name
+     * 
+     */
     @InputImport(name="workspaceCollectionName", required=true)
     private final String workspaceCollectionName;
 

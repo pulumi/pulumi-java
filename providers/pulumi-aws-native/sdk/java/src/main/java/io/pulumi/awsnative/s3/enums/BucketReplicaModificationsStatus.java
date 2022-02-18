@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Specifies whether Amazon S3 replicates modifications on replicas.
+     * 
+     */
     @EnumType
     public enum BucketReplicaModificationsStatus {
         Enabled("Enabled"),

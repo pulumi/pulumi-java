@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * An excluded entity phrase that should not be matched.
+ * 
+ */
 public final class GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhraseArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhraseArgs Empty = new GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhraseArgs();
 
+    /**
+     * The word or phrase to be excluded.
+     * 
+     */
     @InputImport(name="value", required=true)
     private final Input<String> value;
 

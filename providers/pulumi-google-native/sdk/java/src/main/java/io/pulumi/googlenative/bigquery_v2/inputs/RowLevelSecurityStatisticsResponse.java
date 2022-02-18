@@ -12,6 +12,10 @@ public final class RowLevelSecurityStatisticsResponse extends io.pulumi.resource
 
     public static final RowLevelSecurityStatisticsResponse Empty = new RowLevelSecurityStatisticsResponse();
 
+    /**
+     * [Preview] Whether any accessed data was protected by row access policies.
+     * 
+     */
     @InputImport(name="rowLevelSecurityApplied", required=true)
     private final Boolean rowLevelSecurityApplied;
 

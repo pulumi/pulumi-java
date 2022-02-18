@@ -12,7 +12,16 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SecretReplicationUserManagedReplica {
+    /**
+     * Customer Managed Encryption for the secret.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable SecretReplicationUserManagedReplicaCustomerManagedEncryption customerManagedEncryption;
+    /**
+     * The canonical IDs of the location to replicate data. For example: "us-east1".
+     * 
+     */
     private final String location;
 
     @OutputCustomType.Constructor({"customerManagedEncryption","location"})
@@ -23,9 +32,18 @@ public final class SecretReplicationUserManagedReplica {
         this.location = Objects.requireNonNull(location);
     }
 
+    /**
+     * Customer Managed Encryption for the secret.
+     * Structure is documented below.
+     * 
+     */
     public Optional<SecretReplicationUserManagedReplicaCustomerManagedEncryption> getCustomerManagedEncryption() {
         return Optional.ofNullable(this.customerManagedEncryption);
     }
+    /**
+     * The canonical IDs of the location to replicate data. For example: "us-east1".
+     * 
+     */
     public String getLocation() {
         return this.location;
     }

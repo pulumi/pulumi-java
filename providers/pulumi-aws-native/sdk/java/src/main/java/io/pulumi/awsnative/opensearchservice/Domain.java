@@ -25,6 +25,10 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * An example resource schema demonstrating some basic constructs and validation rules.
+ * 
+ */
 @ResourceType(type="aws-native:opensearchservice:Domain")
 public class Domain extends io.pulumi.resources.CustomResource {
     @OutputExport(name="accessPolicies", type=Object.class, parameters={})
@@ -135,9 +139,17 @@ public class Domain extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ DomainSnapshotOptions> getSnapshotOptions() {
         return this.snapshotOptions;
     }
+    /**
+     * An arbitrary set of tags (key-value pairs) for this Domain.
+     * 
+     */
     @OutputExport(name="tags", type=List.class, parameters={DomainTag.class})
     private Output</* @Nullable */ List<DomainTag>> tags;
 
+    /**
+     * @return An arbitrary set of tags (key-value pairs) for this Domain.
+     * 
+     */
     public Output</* @Nullable */ List<DomainTag>> getTags() {
         return this.tags;
     }
@@ -148,6 +160,12 @@ public class Domain extends io.pulumi.resources.CustomResource {
         return this.vPCOptions;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Domain(String name, @Nullable DomainArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:opensearchservice:Domain", name, args == null ? DomainArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -163,6 +181,14 @@ public class Domain extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Domain get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Domain(name, id, options);
     }

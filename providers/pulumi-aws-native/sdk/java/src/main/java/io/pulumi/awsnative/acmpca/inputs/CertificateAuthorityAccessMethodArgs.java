@@ -10,6 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Structure that contains X.509 AccessMethod information. Assign one and ONLY one field.
+ * 
+ */
 public final class CertificateAuthorityAccessMethodArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CertificateAuthorityAccessMethodArgs Empty = new CertificateAuthorityAccessMethodArgs();

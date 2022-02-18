@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Kubernetes cluster specific properties
+ * 
+ */
 public final class KubernetesClusterPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final KubernetesClusterPropertiesArgs Empty = new KubernetesClusterPropertiesArgs();
 
+    /**
+     * The Azure Service Principal used by Kubernetes
+     * 
+     */
     @InputImport(name="servicePrincipal")
     private final @Nullable Input<ServicePrincipalPropertiesArgs> servicePrincipal;
 

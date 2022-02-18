@@ -15,6 +15,10 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
 
     public static final StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs Empty = new StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs();
 
+    /**
+     * The stage site identifier.
+     * 
+     */
     @InputImport(name="environmentName", required=true)
     private final Input<String> environmentName;
 
@@ -22,6 +26,10 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
         return this.environmentName;
     }
 
+    /**
+     * Name of the function app to register with the static site build.
+     * 
+     */
     @InputImport(name="functionAppName")
     private final @Nullable Input<String> functionAppName;
 
@@ -29,6 +37,10 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
         return this.functionAppName == null ? Input.empty() : this.functionAppName;
     }
 
+    /**
+     * The region of the function app registered with the static site
+     * 
+     */
     @InputImport(name="functionAppRegion")
     private final @Nullable Input<String> functionAppRegion;
 
@@ -36,6 +48,10 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
         return this.functionAppRegion == null ? Input.empty() : this.functionAppRegion;
     }
 
+    /**
+     * The resource id of the function app registered with the static site
+     * 
+     */
     @InputImport(name="functionAppResourceId")
     private final @Nullable Input<String> functionAppResourceId;
 
@@ -43,6 +59,10 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
         return this.functionAppResourceId == null ? Input.empty() : this.functionAppResourceId;
     }
 
+    /**
+     * Specify <code>true</code> to force the update of the auth configuration on the function app even if an AzureStaticWebApps provider is already configured on the function app. The default is <code>false</code>.
+     * 
+     */
     @InputImport(name="isForced")
     private final @Nullable Input<Boolean> isForced;
 
@@ -50,6 +70,10 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
         return this.isForced == null ? Input.empty() : this.isForced;
     }
 
+    /**
+     * Kind of resource.
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -57,6 +81,10 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Name of the static site.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -64,6 +92,10 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
         return this.name;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

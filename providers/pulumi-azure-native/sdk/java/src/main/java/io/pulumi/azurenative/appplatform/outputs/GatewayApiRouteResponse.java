@@ -14,14 +14,50 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GatewayApiRouteResponse {
+    /**
+     * A description, will be applied to methods in the generated OpenAPI documentation.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * To modify the request before sending it to the target endpoint, or the received response.
+     * 
+     */
     private final @Nullable List<String> filters;
+    /**
+     * Route processing order.
+     * 
+     */
     private final @Nullable Integer order;
+    /**
+     * A number of conditions to evaluate a route for each request. Each predicate may be evaluated against request headers and parameter values. All of the predicates associated with a route must evaluate to true for the route to be matched to the request.
+     * 
+     */
     private final @Nullable List<String> predicates;
+    /**
+     * Enable sso validation.
+     * 
+     */
     private final @Nullable Boolean ssoEnabled;
+    /**
+     * Classification tags, will be applied to methods in the generated OpenAPI documentation.
+     * 
+     */
     private final @Nullable List<String> tags;
+    /**
+     * A title, will be applied to methods in the generated OpenAPI documentation.
+     * 
+     */
     private final @Nullable String title;
+    /**
+     * Pass currently-authenticated user's identity token to application service, default is 'false'
+     * 
+     */
     private final @Nullable Boolean tokenRelay;
+    /**
+     * Full uri, will override `appName`.
+     * 
+     */
     private final @Nullable String uri;
 
     @OutputCustomType.Constructor({"description","filters","order","predicates","ssoEnabled","tags","title","tokenRelay","uri"})
@@ -46,30 +82,66 @@ public final class GatewayApiRouteResponse {
         this.uri = uri;
     }
 
+    /**
+     * A description, will be applied to methods in the generated OpenAPI documentation.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * To modify the request before sending it to the target endpoint, or the received response.
+     * 
+     */
     public List<String> getFilters() {
         return this.filters == null ? List.of() : this.filters;
     }
+    /**
+     * Route processing order.
+     * 
+     */
     public Optional<Integer> getOrder() {
         return Optional.ofNullable(this.order);
     }
+    /**
+     * A number of conditions to evaluate a route for each request. Each predicate may be evaluated against request headers and parameter values. All of the predicates associated with a route must evaluate to true for the route to be matched to the request.
+     * 
+     */
     public List<String> getPredicates() {
         return this.predicates == null ? List.of() : this.predicates;
     }
+    /**
+     * Enable sso validation.
+     * 
+     */
     public Optional<Boolean> getSsoEnabled() {
         return Optional.ofNullable(this.ssoEnabled);
     }
+    /**
+     * Classification tags, will be applied to methods in the generated OpenAPI documentation.
+     * 
+     */
     public List<String> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
+    /**
+     * A title, will be applied to methods in the generated OpenAPI documentation.
+     * 
+     */
     public Optional<String> getTitle() {
         return Optional.ofNullable(this.title);
     }
+    /**
+     * Pass currently-authenticated user's identity token to application service, default is 'false'
+     * 
+     */
     public Optional<Boolean> getTokenRelay() {
         return Optional.ofNullable(this.tokenRelay);
     }
+    /**
+     * Full uri, will override `appName`.
+     * 
+     */
     public Optional<String> getUri() {
         return Optional.ofNullable(this.uri);
     }

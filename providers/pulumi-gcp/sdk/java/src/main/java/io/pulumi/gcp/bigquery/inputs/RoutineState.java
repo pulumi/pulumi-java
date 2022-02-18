@@ -17,6 +17,11 @@ public final class RoutineState extends io.pulumi.resources.ResourceArgs {
 
     public static final RoutineState Empty = new RoutineState();
 
+    /**
+     * Input/output argument of a function or a stored procedure.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="arguments")
     private final @Nullable Input<List<RoutineArgumentGetArgs>> arguments;
 
@@ -24,6 +29,10 @@ public final class RoutineState extends io.pulumi.resources.ResourceArgs {
         return this.arguments == null ? Input.empty() : this.arguments;
     }
 
+    /**
+     * The time when this routine was created, in milliseconds since the epoch.
+     * 
+     */
     @InputImport(name="creationTime")
     private final @Nullable Input<Integer> creationTime;
 
@@ -31,6 +40,10 @@ public final class RoutineState extends io.pulumi.resources.ResourceArgs {
         return this.creationTime == null ? Input.empty() : this.creationTime;
     }
 
+    /**
+     * The ID of the dataset containing this routine
+     * 
+     */
     @InputImport(name="datasetId")
     private final @Nullable Input<String> datasetId;
 
@@ -38,6 +51,11 @@ public final class RoutineState extends io.pulumi.resources.ResourceArgs {
         return this.datasetId == null ? Input.empty() : this.datasetId;
     }
 
+    /**
+     * The body of the routine. For functions, this is the expression in the AS clause.
+     * If language=SQL, it is the substring inside (but excluding) the parentheses.
+     * 
+     */
     @InputImport(name="definitionBody")
     private final @Nullable Input<String> definitionBody;
 
@@ -45,6 +63,10 @@ public final class RoutineState extends io.pulumi.resources.ResourceArgs {
         return this.definitionBody == null ? Input.empty() : this.definitionBody;
     }
 
+    /**
+     * The description of the routine if defined.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -52,6 +74,11 @@ public final class RoutineState extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The determinism level of the JavaScript UDF if defined.
+     * Possible values are `DETERMINISM_LEVEL_UNSPECIFIED`, `DETERMINISTIC`, and `NOT_DETERMINISTIC`.
+     * 
+     */
     @InputImport(name="determinismLevel")
     private final @Nullable Input<String> determinismLevel;
 
@@ -59,6 +86,11 @@ public final class RoutineState extends io.pulumi.resources.ResourceArgs {
         return this.determinismLevel == null ? Input.empty() : this.determinismLevel;
     }
 
+    /**
+     * Optional. If language = "JAVASCRIPT", this field stores the path of the
+     * imported JAVASCRIPT libraries.
+     * 
+     */
     @InputImport(name="importedLibraries")
     private final @Nullable Input<List<String>> importedLibraries;
 
@@ -66,6 +98,11 @@ public final class RoutineState extends io.pulumi.resources.ResourceArgs {
         return this.importedLibraries == null ? Input.empty() : this.importedLibraries;
     }
 
+    /**
+     * The language of the routine.
+     * Possible values are `SQL` and `JAVASCRIPT`.
+     * 
+     */
     @InputImport(name="language")
     private final @Nullable Input<String> language;
 
@@ -73,6 +110,10 @@ public final class RoutineState extends io.pulumi.resources.ResourceArgs {
         return this.language == null ? Input.empty() : this.language;
     }
 
+    /**
+     * The time when this routine was modified, in milliseconds since the epoch.
+     * 
+     */
     @InputImport(name="lastModifiedTime")
     private final @Nullable Input<Integer> lastModifiedTime;
 
@@ -80,6 +121,11 @@ public final class RoutineState extends io.pulumi.resources.ResourceArgs {
         return this.lastModifiedTime == null ? Input.empty() : this.lastModifiedTime;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -87,6 +133,13 @@ public final class RoutineState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Optional. Can be set only if routineType = "TABLE_VALUED_FUNCTION".
+     * If absent, the return table type is inferred from definitionBody at query time in each query
+     * that references this routine. If present, then the columns in the evaluated table result will
+     * be cast to match the column types specificed in return table type, at query time.
+     * 
+     */
     @InputImport(name="returnTableType")
     private final @Nullable Input<String> returnTableType;
 
@@ -94,6 +147,18 @@ public final class RoutineState extends io.pulumi.resources.ResourceArgs {
         return this.returnTableType == null ? Input.empty() : this.returnTableType;
     }
 
+    /**
+     * A JSON schema for the return type. Optional if language = "SQL"; required otherwise.
+     * If absent, the return type is inferred from definitionBody at query time in each query
+     * that references this routine. If present, then the evaluated result will be cast to
+     * the specified returned type at query time. ~>**NOTE**: Because this field expects a JSON
+     * string, any changes to the string will create a diff, even if the JSON itself hasn't
+     * changed. If the API returns a different value for the same schema, e.g. it switche
+     * d the order of values or replaced STRUCT field type with RECORD field type, we currently
+     * cannot suppress the recurring diff this causes. As a workaround, we recommend using
+     * the schema as returned by the API.
+     * 
+     */
     @InputImport(name="returnType")
     private final @Nullable Input<String> returnType;
 
@@ -101,6 +166,10 @@ public final class RoutineState extends io.pulumi.resources.ResourceArgs {
         return this.returnType == null ? Input.empty() : this.returnType;
     }
 
+    /**
+     * The ID of the the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.
+     * 
+     */
     @InputImport(name="routineId")
     private final @Nullable Input<String> routineId;
 
@@ -108,6 +177,11 @@ public final class RoutineState extends io.pulumi.resources.ResourceArgs {
         return this.routineId == null ? Input.empty() : this.routineId;
     }
 
+    /**
+     * The type of routine.
+     * Possible values are `SCALAR_FUNCTION`, `PROCEDURE`, and `TABLE_VALUED_FUNCTION`.
+     * 
+     */
     @InputImport(name="routineType")
     private final @Nullable Input<String> routineType;
 

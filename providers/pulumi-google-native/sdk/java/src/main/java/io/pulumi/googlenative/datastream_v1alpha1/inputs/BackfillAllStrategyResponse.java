@@ -9,10 +9,18 @@ import io.pulumi.googlenative.datastream_v1alpha1.inputs.OracleRdbmsResponse;
 import java.util.Objects;
 
 
+/**
+ * Backfill strategy to automatically backfill the Stream's objects. Specific objects can be excluded.
+ * 
+ */
 public final class BackfillAllStrategyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BackfillAllStrategyResponse Empty = new BackfillAllStrategyResponse();
 
+    /**
+     * MySQL data source objects to avoid backfilling.
+     * 
+     */
     @InputImport(name="mysqlExcludedObjects", required=true)
     private final MysqlRdbmsResponse mysqlExcludedObjects;
 
@@ -20,6 +28,10 @@ public final class BackfillAllStrategyResponse extends io.pulumi.resources.Invok
         return this.mysqlExcludedObjects;
     }
 
+    /**
+     * Oracle data source objects to avoid backfilling.
+     * 
+     */
     @InputImport(name="oracleExcludedObjects", required=true)
     private final OracleRdbmsResponse oracleExcludedObjects;
 

@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * For display only. Metadata associated with a Compute Engine VPN gateway.
+ * 
+ */
 public final class VpnGatewayInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VpnGatewayInfoResponse Empty = new VpnGatewayInfoResponse();
 
+    /**
+     * Name of a VPN gateway.
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final String displayName;
 
@@ -19,6 +27,10 @@ public final class VpnGatewayInfoResponse extends io.pulumi.resources.InvokeArgs
         return this.displayName;
     }
 
+    /**
+     * IP address of the VPN gateway.
+     * 
+     */
     @InputImport(name="ipAddress", required=true)
     private final String ipAddress;
 
@@ -26,6 +38,10 @@ public final class VpnGatewayInfoResponse extends io.pulumi.resources.InvokeArgs
         return this.ipAddress;
     }
 
+    /**
+     * URI of a Compute Engine network where the VPN gateway is configured.
+     * 
+     */
     @InputImport(name="networkUri", required=true)
     private final String networkUri;
 
@@ -33,6 +49,10 @@ public final class VpnGatewayInfoResponse extends io.pulumi.resources.InvokeArgs
         return this.networkUri;
     }
 
+    /**
+     * Name of a Google Cloud region where this VPN gateway is configured.
+     * 
+     */
     @InputImport(name="region", required=true)
     private final String region;
 
@@ -40,6 +60,10 @@ public final class VpnGatewayInfoResponse extends io.pulumi.resources.InvokeArgs
         return this.region;
     }
 
+    /**
+     * URI of a VPN gateway.
+     * 
+     */
     @InputImport(name="uri", required=true)
     private final String uri;
 
@@ -47,6 +71,10 @@ public final class VpnGatewayInfoResponse extends io.pulumi.resources.InvokeArgs
         return this.uri;
     }
 
+    /**
+     * A VPN tunnel that is associated with this VPN gateway. There may be multiple VPN tunnels configured on a VPN gateway, and only the one relevant to the test is displayed.
+     * 
+     */
     @InputImport(name="vpnTunnelUri", required=true)
     private final String vpnTunnelUri;
 

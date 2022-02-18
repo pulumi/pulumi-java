@@ -10,8 +10,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RobotApplicationSourceConfig {
+    /**
+     * The architecture of robot application.
+     * 
+     */
     private final RobotApplicationSourceConfigArchitecture architecture;
+    /**
+     * The Arn of the S3Bucket that stores the robot application source.
+     * 
+     */
     private final String s3Bucket;
+    /**
+     * The s3 key of robot application source.
+     * 
+     */
     private final String s3Key;
 
     @OutputCustomType.Constructor({"architecture","s3Bucket","s3Key"})
@@ -24,12 +36,24 @@ public final class RobotApplicationSourceConfig {
         this.s3Key = Objects.requireNonNull(s3Key);
     }
 
+    /**
+     * The architecture of robot application.
+     * 
+     */
     public RobotApplicationSourceConfigArchitecture getArchitecture() {
         return this.architecture;
     }
+    /**
+     * The Arn of the S3Bucket that stores the robot application source.
+     * 
+     */
     public String getS3Bucket() {
         return this.s3Bucket;
     }
+    /**
+     * The s3 key of robot application source.
+     * 
+     */
     public String getS3Key() {
         return this.s3Key;
     }

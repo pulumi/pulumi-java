@@ -13,10 +13,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The JSON object that contains the properties to determine origin health using real requests/responses.
+ * 
+ */
 public final class ResponseBasedOriginErrorDetectionParametersResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResponseBasedOriginErrorDetectionParametersResponse Empty = new ResponseBasedOriginErrorDetectionParametersResponse();
 
+    /**
+     * The list of Http status code ranges that are considered as server errors for origin and it is marked as unhealthy.
+     * 
+     */
     @InputImport(name="httpErrorRanges")
     private final @Nullable List<HttpErrorRangeParametersResponse> httpErrorRanges;
 
@@ -24,6 +32,10 @@ public final class ResponseBasedOriginErrorDetectionParametersResponse extends i
         return this.httpErrorRanges == null ? List.of() : this.httpErrorRanges;
     }
 
+    /**
+     * Type of response errors for real user requests for which origin will be deemed unhealthy
+     * 
+     */
     @InputImport(name="responseBasedDetectedErrorTypes")
     private final @Nullable String responseBasedDetectedErrorTypes;
 
@@ -31,6 +43,10 @@ public final class ResponseBasedOriginErrorDetectionParametersResponse extends i
         return this.responseBasedDetectedErrorTypes == null ? Optional.empty() : Optional.ofNullable(this.responseBasedDetectedErrorTypes);
     }
 
+    /**
+     * The percentage of failed requests in the sample where failover should trigger.
+     * 
+     */
     @InputImport(name="responseBasedFailoverThresholdPercentage")
     private final @Nullable Integer responseBasedFailoverThresholdPercentage;
 

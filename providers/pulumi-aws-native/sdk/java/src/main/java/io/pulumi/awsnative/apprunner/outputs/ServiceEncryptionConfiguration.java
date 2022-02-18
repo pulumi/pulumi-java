@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ServiceEncryptionConfiguration {
+    /**
+     * The KMS Key
+     * 
+     */
     private final String kmsKey;
 
     @OutputCustomType.Constructor({"kmsKey"})
@@ -16,6 +20,10 @@ public final class ServiceEncryptionConfiguration {
         this.kmsKey = Objects.requireNonNull(kmsKey);
     }
 
+    /**
+     * The KMS Key
+     * 
+     */
     public String getKmsKey() {
         return this.kmsKey;
     }

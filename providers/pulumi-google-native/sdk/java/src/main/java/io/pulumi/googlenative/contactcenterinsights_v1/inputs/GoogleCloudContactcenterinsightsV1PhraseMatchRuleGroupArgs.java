@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A message representing a rule in the phrase matcher.
+ * 
+ */
 public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs Empty = new GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs();
 
+    /**
+     * A list of phase match rules that are included in this group.
+     * 
+     */
     @InputImport(name="phraseMatchRules")
     private final @Nullable Input<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs>> phraseMatchRules;
 
@@ -23,6 +31,10 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs ex
         return this.phraseMatchRules == null ? Input.empty() : this.phraseMatchRules;
     }
 
+    /**
+     * The type of this phrase match rule group.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupType> type;
 

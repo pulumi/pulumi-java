@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The properties that define a BGP session.
+ * 
+ */
 public final class BgpSessionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BgpSessionArgs Empty = new BgpSessionArgs();
 
+    /**
+     * The maximum number of prefixes advertised over the IPv4 session.
+     * 
+     */
     @InputImport(name="maxPrefixesAdvertisedV4")
     private final @Nullable Input<Integer> maxPrefixesAdvertisedV4;
 
@@ -22,6 +30,10 @@ public final class BgpSessionArgs extends io.pulumi.resources.ResourceArgs {
         return this.maxPrefixesAdvertisedV4 == null ? Input.empty() : this.maxPrefixesAdvertisedV4;
     }
 
+    /**
+     * The maximum number of prefixes advertised over the IPv6 session.
+     * 
+     */
     @InputImport(name="maxPrefixesAdvertisedV6")
     private final @Nullable Input<Integer> maxPrefixesAdvertisedV6;
 
@@ -29,6 +41,10 @@ public final class BgpSessionArgs extends io.pulumi.resources.ResourceArgs {
         return this.maxPrefixesAdvertisedV6 == null ? Input.empty() : this.maxPrefixesAdvertisedV6;
     }
 
+    /**
+     * The MD5 authentication key of the session.
+     * 
+     */
     @InputImport(name="md5AuthenticationKey")
     private final @Nullable Input<String> md5AuthenticationKey;
 
@@ -36,6 +52,10 @@ public final class BgpSessionArgs extends io.pulumi.resources.ResourceArgs {
         return this.md5AuthenticationKey == null ? Input.empty() : this.md5AuthenticationKey;
     }
 
+    /**
+     * The IPv4 session address on Microsoft's end.
+     * 
+     */
     @InputImport(name="microsoftSessionIPv4Address")
     private final @Nullable Input<String> microsoftSessionIPv4Address;
 
@@ -43,6 +63,10 @@ public final class BgpSessionArgs extends io.pulumi.resources.ResourceArgs {
         return this.microsoftSessionIPv4Address == null ? Input.empty() : this.microsoftSessionIPv4Address;
     }
 
+    /**
+     * The IPv6 session address on Microsoft's end.
+     * 
+     */
     @InputImport(name="microsoftSessionIPv6Address")
     private final @Nullable Input<String> microsoftSessionIPv6Address;
 
@@ -50,6 +74,10 @@ public final class BgpSessionArgs extends io.pulumi.resources.ResourceArgs {
         return this.microsoftSessionIPv6Address == null ? Input.empty() : this.microsoftSessionIPv6Address;
     }
 
+    /**
+     * The IPv4 session address on peer's end.
+     * 
+     */
     @InputImport(name="peerSessionIPv4Address")
     private final @Nullable Input<String> peerSessionIPv4Address;
 
@@ -57,6 +85,10 @@ public final class BgpSessionArgs extends io.pulumi.resources.ResourceArgs {
         return this.peerSessionIPv4Address == null ? Input.empty() : this.peerSessionIPv4Address;
     }
 
+    /**
+     * The IPv6 session address on peer's end.
+     * 
+     */
     @InputImport(name="peerSessionIPv6Address")
     private final @Nullable Input<String> peerSessionIPv6Address;
 
@@ -64,6 +96,10 @@ public final class BgpSessionArgs extends io.pulumi.resources.ResourceArgs {
         return this.peerSessionIPv6Address == null ? Input.empty() : this.peerSessionIPv6Address;
     }
 
+    /**
+     * The IPv4 prefix that contains both ends' IPv4 addresses.
+     * 
+     */
     @InputImport(name="sessionPrefixV4")
     private final @Nullable Input<String> sessionPrefixV4;
 
@@ -71,6 +107,10 @@ public final class BgpSessionArgs extends io.pulumi.resources.ResourceArgs {
         return this.sessionPrefixV4 == null ? Input.empty() : this.sessionPrefixV4;
     }
 
+    /**
+     * The IPv6 prefix that contains both ends' IPv6 addresses.
+     * 
+     */
     @InputImport(name="sessionPrefixV6")
     private final @Nullable Input<String> sessionPrefixV6;
 

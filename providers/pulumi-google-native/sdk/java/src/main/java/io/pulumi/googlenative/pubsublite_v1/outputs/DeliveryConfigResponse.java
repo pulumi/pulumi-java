@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DeliveryConfigResponse {
+    /**
+     * The DeliveryRequirement for this subscription.
+     * 
+     */
     private final String deliveryRequirement;
 
     @OutputCustomType.Constructor({"deliveryRequirement"})
@@ -16,6 +20,10 @@ public final class DeliveryConfigResponse {
         this.deliveryRequirement = Objects.requireNonNull(deliveryRequirement);
     }
 
+    /**
+     * The DeliveryRequirement for this subscription.
+     * 
+     */
     public String getDeliveryRequirement() {
         return this.deliveryRequirement;
     }

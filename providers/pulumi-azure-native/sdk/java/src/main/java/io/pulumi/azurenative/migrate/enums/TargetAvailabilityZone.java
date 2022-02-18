@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Gets or sets the target availability zone.
+     * 
+     */
     @EnumType
     public enum TargetAvailabilityZone {
         One("1"),

@@ -13,6 +13,10 @@ public final class GuestPoliciesRecipeUpdateStepDpkgInstallationArgs extends io.
 
     public static final GuestPoliciesRecipeUpdateStepDpkgInstallationArgs Empty = new GuestPoliciesRecipeUpdateStepDpkgInstallationArgs();
 
+    /**
+     * The id of the relevant artifact in the recipe.
+     * 
+     */
     @InputImport(name="artifactId", required=true)
     private final Input<String> artifactId;
 

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The EDIFACT frame setting decimal indicator.
+     * 
+     */
     @EnumType
     public enum EdifactDecimalIndicator {
         NotSpecified("NotSpecified"),

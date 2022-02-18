@@ -9,10 +9,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Represents the spec to match integer values from parent parameter.
+ * 
+ */
 public final class GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecResponse Empty = new GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecResponse();
 
+    /**
+     * Matches values of the parent parameter with type 'INTEGER'. All values must lie in `integer_value_spec` of parent parameter.
+     * 
+     */
     @InputImport(name="values", required=true)
     private final List<String> values;
 

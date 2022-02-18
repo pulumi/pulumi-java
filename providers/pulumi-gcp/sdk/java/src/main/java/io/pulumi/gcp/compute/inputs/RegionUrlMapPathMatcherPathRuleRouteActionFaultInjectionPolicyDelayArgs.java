@@ -14,6 +14,11 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolic
 
     public static final RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayArgs Empty = new RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayArgs();
 
+    /**
+     * Specifies the value of the fixed delay interval.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="fixedDelay", required=true)
     private final Input<RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayArgs> fixedDelay;
 
@@ -21,6 +26,12 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolic
         return this.fixedDelay;
     }
 
+    /**
+     * The percentage of traffic (connections/operations/requests) on which delay will
+     * be introduced as part of fault injection. The value must be between 0.0 and
+     * 100.0 inclusive.
+     * 
+     */
     @InputImport(name="percentage", required=true)
     private final Input<Double> percentage;
 

@@ -14,9 +14,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ParameterDefinitionsValueResponse {
+    /**
+     * The allowed values for the parameter.
+     * 
+     */
     private final @Nullable List<Object> allowedValues;
+    /**
+     * The default value for the parameter if no value is provided.
+     * 
+     */
     private final @Nullable Object defaultValue;
+    /**
+     * General metadata for the parameter.
+     * 
+     */
     private final @Nullable ParameterDefinitionsValueResponseMetadata metadata;
+    /**
+     * The data type of the parameter.
+     * 
+     */
     private final @Nullable String type;
 
     @OutputCustomType.Constructor({"allowedValues","defaultValue","metadata","type"})
@@ -31,15 +47,31 @@ public final class ParameterDefinitionsValueResponse {
         this.type = type;
     }
 
+    /**
+     * The allowed values for the parameter.
+     * 
+     */
     public List<Object> getAllowedValues() {
         return this.allowedValues == null ? List.of() : this.allowedValues;
     }
+    /**
+     * The default value for the parameter if no value is provided.
+     * 
+     */
     public Optional<Object> getDefaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
+    /**
+     * General metadata for the parameter.
+     * 
+     */
     public Optional<ParameterDefinitionsValueResponseMetadata> getMetadata() {
         return Optional.ofNullable(this.metadata);
     }
+    /**
+     * The data type of the parameter.
+     * 
+     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

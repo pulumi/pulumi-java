@@ -15,8 +15,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ManagementEventRuleConditionResponse {
+    /**
+     * How the data that is collected should be combined over time and when the alert is activated. Note that for management event alerts aggregation is optional – if it is not provided then any event will cause the alert to activate.
+     * 
+     */
     private final @Nullable ManagementEventAggregationConditionResponse aggregation;
+    /**
+     * the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.
+     * 
+     */
     private final @Nullable Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse> dataSource;
+    /**
+     * specifies the type of condition. This can be one of three types: ManagementEventRuleCondition (occurrences of management events), LocationThresholdRuleCondition (based on the number of failures of a web test), and ThresholdRuleCondition (based on the threshold of a metric).
+     * Expected value is 'Microsoft.Azure.Management.Insights.Models.ManagementEventRuleCondition'.
+     * 
+     */
     private final String odataType;
 
     @OutputCustomType.Constructor({"aggregation","dataSource","odataType"})
@@ -29,12 +42,25 @@ public final class ManagementEventRuleConditionResponse {
         this.odataType = Objects.requireNonNull(odataType);
     }
 
+    /**
+     * How the data that is collected should be combined over time and when the alert is activated. Note that for management event alerts aggregation is optional – if it is not provided then any event will cause the alert to activate.
+     * 
+     */
     public Optional<ManagementEventAggregationConditionResponse> getAggregation() {
         return Optional.ofNullable(this.aggregation);
     }
+    /**
+     * the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.
+     * 
+     */
     public Optional<Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse>> getDataSource() {
         return Optional.ofNullable(this.dataSource);
     }
+    /**
+     * specifies the type of condition. This can be one of three types: ManagementEventRuleCondition (occurrences of management events), LocationThresholdRuleCondition (based on the number of failures of a web test), and ThresholdRuleCondition (based on the threshold of a metric).
+     * Expected value is 'Microsoft.Azure.Management.Insights.Models.ManagementEventRuleCondition'.
+     * 
+     */
     public String getOdataType() {
         return this.odataType;
     }

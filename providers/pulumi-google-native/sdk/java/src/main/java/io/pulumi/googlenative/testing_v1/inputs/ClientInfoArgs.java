@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Information about the client which invoked the test.
+ * 
+ */
 public final class ClientInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ClientInfoArgs Empty = new ClientInfoArgs();
 
+    /**
+     * The list of detailed information about client.
+     * 
+     */
     @InputImport(name="clientInfoDetails")
     private final @Nullable Input<List<ClientInfoDetailArgs>> clientInfoDetails;
 
@@ -23,6 +31,10 @@ public final class ClientInfoArgs extends io.pulumi.resources.ResourceArgs {
         return this.clientInfoDetails == null ? Input.empty() : this.clientInfoDetails;
     }
 
+    /**
+     * Client name, such as gcloud.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFilter {
+/**
+ * Inspector Filter resource schema
+ * 
+ */
     public static CompletableFuture<GetFilterResult> invokeAsync(GetFilterArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:inspectorv2:getFilter", TypeShape.of(GetFilterResult.class), args == null ? GetFilterArgs.Empty : args, Utilities.withVersion(options));
     }

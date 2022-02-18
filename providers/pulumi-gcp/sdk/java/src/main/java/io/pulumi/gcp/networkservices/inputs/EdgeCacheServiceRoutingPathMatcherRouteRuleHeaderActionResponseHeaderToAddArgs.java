@@ -15,6 +15,11 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRespon
 
     public static final EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddArgs Empty = new EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddArgs();
 
+    /**
+     * Headers to remove from the response prior to sending it back to the client.
+     * Response headers are only sent to the client, and do not have an effect on the cache serving the response.
+     * 
+     */
     @InputImport(name="headerName", required=true)
     private final Input<String> headerName;
 
@@ -22,6 +27,10 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRespon
         return this.headerName;
     }
 
+    /**
+     * The value of the header to add.
+     * 
+     */
     @InputImport(name="headerValue", required=true)
     private final Input<String> headerValue;
 
@@ -29,6 +38,10 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRespon
         return this.headerValue;
     }
 
+    /**
+     * Whether to replace all existing headers with the same name.
+     * 
+     */
     @InputImport(name="replace")
     private final @Nullable Input<Boolean> replace;
 

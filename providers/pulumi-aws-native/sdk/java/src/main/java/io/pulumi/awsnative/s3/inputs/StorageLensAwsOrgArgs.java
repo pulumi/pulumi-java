@@ -9,6 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The AWS Organizations ARN to use in the Amazon S3 Storage Lens configuration.
+ * 
+ */
 public final class StorageLensAwsOrgArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StorageLensAwsOrgArgs Empty = new StorageLensAwsOrgArgs();

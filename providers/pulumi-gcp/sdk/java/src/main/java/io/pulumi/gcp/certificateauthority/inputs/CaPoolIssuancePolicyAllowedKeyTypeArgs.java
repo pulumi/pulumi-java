@@ -15,6 +15,11 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeArgs extends io.pulumi.reso
 
     public static final CaPoolIssuancePolicyAllowedKeyTypeArgs Empty = new CaPoolIssuancePolicyAllowedKeyTypeArgs();
 
+    /**
+     * Represents an allowed Elliptic Curve key type.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="ellipticCurve")
     private final @Nullable Input<CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs> ellipticCurve;
 
@@ -22,6 +27,11 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeArgs extends io.pulumi.reso
         return this.ellipticCurve == null ? Input.empty() : this.ellipticCurve;
     }
 
+    /**
+     * Describes an RSA key that may be used in a Certificate issued from a CaPool.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="rsa")
     private final @Nullable Input<CaPoolIssuancePolicyAllowedKeyTypeRsaArgs> rsa;
 

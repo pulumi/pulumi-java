@@ -14,6 +14,10 @@ public final class ServiceBusAuthenticationResponse extends io.pulumi.resources.
 
     public static final ServiceBusAuthenticationResponse Empty = new ServiceBusAuthenticationResponse();
 
+    /**
+     * Gets or sets the SAS key.
+     * 
+     */
     @InputImport(name="sasKey")
     private final @Nullable String sasKey;
 
@@ -21,6 +25,10 @@ public final class ServiceBusAuthenticationResponse extends io.pulumi.resources.
         return this.sasKey == null ? Optional.empty() : Optional.ofNullable(this.sasKey);
     }
 
+    /**
+     * Gets or sets the SAS key name.
+     * 
+     */
     @InputImport(name="sasKeyName")
     private final @Nullable String sasKeyName;
 
@@ -28,6 +36,10 @@ public final class ServiceBusAuthenticationResponse extends io.pulumi.resources.
         return this.sasKeyName == null ? Optional.empty() : Optional.ofNullable(this.sasKeyName);
     }
 
+    /**
+     * Gets or sets the authentication type.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 

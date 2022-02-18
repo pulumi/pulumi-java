@@ -13,6 +13,11 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs extends i
 
     public static final CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs Empty = new CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs();
 
+    /**
+     * The algorithm used.
+     * Possible values are `ECDSA_P256`, `ECDSA_P384`, and `EDDSA_25519`.
+     * 
+     */
     @InputImport(name="signatureAlgorithm", required=true)
     private final Input<String> signatureAlgorithm;
 

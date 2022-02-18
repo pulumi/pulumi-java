@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The operator to be matched.
+     * 
+     */
     @EnumType
     public enum WebApplicationFirewallOperator {
         IPMatch("IPMatch"),

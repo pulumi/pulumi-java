@@ -15,6 +15,11 @@ public final class PreventionInspectTemplateInspectConfigRuleSetArgs extends io.
 
     public static final PreventionInspectTemplateInspectConfigRuleSetArgs Empty = new PreventionInspectTemplateInspectConfigRuleSetArgs();
 
+    /**
+     * If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="infoTypes", required=true)
     private final Input<List<PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs>> infoTypes;
 
@@ -22,6 +27,11 @@ public final class PreventionInspectTemplateInspectConfigRuleSetArgs extends io.
         return this.infoTypes;
     }
 
+    /**
+     * Set of rules to be applied to infoTypes. The rules are applied in order.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="rules", required=true)
     private final Input<List<PreventionInspectTemplateInspectConfigRuleSetRuleArgs>> rules;
 

@@ -8,11 +8,31 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Configures Unknown output handling settings of the license.
+     * 
+     */
     @EnumType
     public enum ContentKeyPolicyPlayReadyUnknownOutputPassingOption {
+        /**
+         * Represents a ContentKeyPolicyPlayReadyUnknownOutputPassingOption that is unavailable in current API version.
+         * 
+         */
         Unknown("Unknown"),
+        /**
+         * Passing the video portion of protected content to an Unknown Output is not allowed.
+         * 
+         */
         NotAllowed("NotAllowed"),
+        /**
+         * Passing the video portion of protected content to an Unknown Output is allowed.
+         * 
+         */
         Allowed("Allowed"),
+        /**
+         * Passing the video portion of protected content to an Unknown Output is allowed but with constrained resolution.
+         * 
+         */
         AllowedWithVideoConstriction("AllowedWithVideoConstriction");
 
         private final String value;

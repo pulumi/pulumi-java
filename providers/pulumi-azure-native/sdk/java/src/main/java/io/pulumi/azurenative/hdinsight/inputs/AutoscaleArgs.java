@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The autoscale request parameters
+ * 
+ */
 public final class AutoscaleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AutoscaleArgs Empty = new AutoscaleArgs();
 
+    /**
+     * Parameters for load-based autoscale
+     * 
+     */
     @InputImport(name="capacity")
     private final @Nullable Input<AutoscaleCapacityArgs> capacity;
 
@@ -22,6 +30,10 @@ public final class AutoscaleArgs extends io.pulumi.resources.ResourceArgs {
         return this.capacity == null ? Input.empty() : this.capacity;
     }
 
+    /**
+     * Parameters for schedule-based autoscale
+     * 
+     */
     @InputImport(name="recurrence")
     private final @Nullable Input<AutoscaleRecurrenceArgs> recurrence;
 

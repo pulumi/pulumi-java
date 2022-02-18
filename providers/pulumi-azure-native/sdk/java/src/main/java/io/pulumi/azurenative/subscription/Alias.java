@@ -14,27 +14,72 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Subscription Information with the alias.
+ * API Version: 2020-09-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:subscription:Alias aliasForNewSub /providers/Microsoft.Subscription/aliases/aliasForNewSub 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:subscription:Alias")
 public class Alias extends io.pulumi.resources.CustomResource {
+    /**
+     * Alias ID.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Alias ID.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Put Alias response properties.
+     * 
+     */
     @OutputExport(name="properties", type=PutAliasResponsePropertiesResponse.class, parameters={})
     private Output<PutAliasResponsePropertiesResponse> properties;
 
+    /**
+     * @return Put Alias response properties.
+     * 
+     */
     public Output<PutAliasResponsePropertiesResponse> getProperties() {
         return this.properties;
     }
+    /**
+     * Resource type, Microsoft.Subscription/aliases.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type, Microsoft.Subscription/aliases.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Alias(String name, AliasArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:subscription:Alias", name, args == null ? AliasArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -55,6 +100,14 @@ public class Alias extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Alias get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Alias(name, id, options);
     }

@@ -16,6 +16,10 @@ public final class DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs e
 
     public static final DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs Empty = new DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs();
 
+    /**
+     * The number of seconds for a proxy to wait for a connection to become available in the connection pool.
+     * 
+     */
     @InputImport(name="connectionBorrowTimeout")
     private final @Nullable Input<Integer> connectionBorrowTimeout;
 
@@ -23,6 +27,10 @@ public final class DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs e
         return this.connectionBorrowTimeout == null ? Input.empty() : this.connectionBorrowTimeout;
     }
 
+    /**
+     * One or more SQL statements for the proxy to run when opening each new database connection.
+     * 
+     */
     @InputImport(name="initQuery")
     private final @Nullable Input<String> initQuery;
 
@@ -30,6 +38,10 @@ public final class DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs e
         return this.initQuery == null ? Input.empty() : this.initQuery;
     }
 
+    /**
+     * The maximum size of the connection pool for each target in a target group.
+     * 
+     */
     @InputImport(name="maxConnectionsPercent")
     private final @Nullable Input<Integer> maxConnectionsPercent;
 
@@ -37,6 +49,10 @@ public final class DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs e
         return this.maxConnectionsPercent == null ? Input.empty() : this.maxConnectionsPercent;
     }
 
+    /**
+     * Controls how actively the proxy closes idle database connections in the connection pool.
+     * 
+     */
     @InputImport(name="maxIdleConnectionsPercent")
     private final @Nullable Input<Integer> maxIdleConnectionsPercent;
 
@@ -44,6 +60,10 @@ public final class DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs e
         return this.maxIdleConnectionsPercent == null ? Input.empty() : this.maxIdleConnectionsPercent;
     }
 
+    /**
+     * Each item in the list represents a class of SQL operations that normally cause all later statements in a session using a proxy to be pinned to the same underlying database connection.
+     * 
+     */
     @InputImport(name="sessionPinningFilters")
     private final @Nullable Input<List<String>> sessionPinningFilters;
 

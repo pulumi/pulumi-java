@@ -31,6 +31,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.projectName == null ? Input.empty() : this.projectName;
     }
 
+    /**
+     * Input ServiceCatalog Provisioning Details
+     * 
+     */
     @InputImport(name="serviceCatalogProvisioningDetails", required=true)
     private final Input<ServiceCatalogProvisioningDetailsPropertiesArgs> serviceCatalogProvisioningDetails;
 
@@ -38,6 +42,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceCatalogProvisioningDetails;
     }
 
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<ProjectTagArgs>> tags;
 

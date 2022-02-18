@@ -12,6 +12,10 @@ public final class GetDashboardArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDashboardArgs Empty = new GetDashboardArgs();
 
+    /**
+     * The name of the dashboard.
+     * 
+     */
     @InputImport(name="dashboardName", required=true)
     private final String dashboardName;
 
@@ -19,6 +23,10 @@ public final class GetDashboardArgs extends io.pulumi.resources.InvokeArgs {
         return this.dashboardName;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

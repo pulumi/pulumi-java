@@ -16,6 +16,10 @@ public final class JitNetworkAccessRequestPortResponse extends io.pulumi.resourc
 
     public static final JitNetworkAccessRequestPortResponse Empty = new JitNetworkAccessRequestPortResponse();
 
+    /**
+     * Mutually exclusive with the "allowedSourceAddressPrefixes" parameter. Should be an IP address or CIDR, for example "192.168.0.3" or "192.168.0.0/16".
+     * 
+     */
     @InputImport(name="allowedSourceAddressPrefix")
     private final @Nullable String allowedSourceAddressPrefix;
 
@@ -23,6 +27,10 @@ public final class JitNetworkAccessRequestPortResponse extends io.pulumi.resourc
         return this.allowedSourceAddressPrefix == null ? Optional.empty() : Optional.ofNullable(this.allowedSourceAddressPrefix);
     }
 
+    /**
+     * Mutually exclusive with the "allowedSourceAddressPrefix" parameter.
+     * 
+     */
     @InputImport(name="allowedSourceAddressPrefixes")
     private final @Nullable List<String> allowedSourceAddressPrefixes;
 
@@ -30,6 +38,10 @@ public final class JitNetworkAccessRequestPortResponse extends io.pulumi.resourc
         return this.allowedSourceAddressPrefixes == null ? List.of() : this.allowedSourceAddressPrefixes;
     }
 
+    /**
+     * The date & time at which the request ends in UTC
+     * 
+     */
     @InputImport(name="endTimeUtc", required=true)
     private final String endTimeUtc;
 
@@ -37,6 +49,10 @@ public final class JitNetworkAccessRequestPortResponse extends io.pulumi.resourc
         return this.endTimeUtc;
     }
 
+    /**
+     * The port which is mapped to this port's `number` in the Azure Firewall, if applicable
+     * 
+     */
     @InputImport(name="mappedPort")
     private final @Nullable Integer mappedPort;
 
@@ -51,6 +67,10 @@ public final class JitNetworkAccessRequestPortResponse extends io.pulumi.resourc
         return this.number;
     }
 
+    /**
+     * The status of the port
+     * 
+     */
     @InputImport(name="status", required=true)
     private final String status;
 
@@ -58,6 +78,10 @@ public final class JitNetworkAccessRequestPortResponse extends io.pulumi.resourc
         return this.status;
     }
 
+    /**
+     * A description of why the `status` has its value
+     * 
+     */
     @InputImport(name="statusReason", required=true)
     private final String statusReason;
 

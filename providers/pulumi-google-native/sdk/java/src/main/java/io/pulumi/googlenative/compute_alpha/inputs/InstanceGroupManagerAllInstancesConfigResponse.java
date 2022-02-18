@@ -12,6 +12,10 @@ public final class InstanceGroupManagerAllInstancesConfigResponse extends io.pul
 
     public static final InstanceGroupManagerAllInstancesConfigResponse Empty = new InstanceGroupManagerAllInstancesConfigResponse();
 
+    /**
+     * Properties for instances that are created using this instances config. You can add or modify properties using the instanceGroupManagers.patch or regionInstanceGroupManagers.patch. After setting instances_config, you must update your instances to use it; for example, you can use the applyUpdatesToInstances method.
+     * 
+     */
     @InputImport(name="properties", required=true)
     private final InstancePropertiesPatchResponse properties;
 

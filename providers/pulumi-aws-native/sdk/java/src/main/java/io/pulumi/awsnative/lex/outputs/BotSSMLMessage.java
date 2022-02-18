@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BotSSMLMessage {
+    /**
+     * The SSML text that defines the prompt.
+     * 
+     */
     private final String value;
 
     @OutputCustomType.Constructor({"value"})
@@ -16,6 +20,10 @@ public final class BotSSMLMessage {
         this.value = Objects.requireNonNull(value);
     }
 
+    /**
+     * The SSML text that defines the prompt.
+     * 
+     */
     public String getValue() {
         return this.value;
     }

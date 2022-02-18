@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * OutputConfig contains a destination for writing trace data.
+ * 
+ */
 public final class OutputConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OutputConfigResponse Empty = new OutputConfigResponse();
 
+    /**
+     * The destination for writing trace data. Currently only BigQuery is supported. E.g.: "bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]"
+     * 
+     */
     @InputImport(name="destination", required=true)
     private final String destination;
 

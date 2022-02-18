@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The logging properties of the connected registry.
+ * 
+ */
 public final class LoggingPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LoggingPropertiesArgs Empty = new LoggingPropertiesArgs();
 
+    /**
+     * Indicates whether audit logs are enabled on the connected registry.
+     * 
+     */
     @InputImport(name="auditLogStatus")
     private final @Nullable Input<Either<String,AuditLogStatus>> auditLogStatus;
 
@@ -24,6 +32,10 @@ public final class LoggingPropertiesArgs extends io.pulumi.resources.ResourceArg
         return this.auditLogStatus == null ? Input.empty() : this.auditLogStatus;
     }
 
+    /**
+     * The verbosity of logs persisted on the connected registry.
+     * 
+     */
     @InputImport(name="logLevel")
     private final @Nullable Input<Either<String,LogLevel>> logLevel;
 

@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The presentation time range, this is asset related and not recommended for Account Filter.
+ * 
+ */
 public final class PresentationTimeRangeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PresentationTimeRangeResponse Empty = new PresentationTimeRangeResponse();
 
+    /**
+     * The absolute end time boundary.
+     * 
+     */
     @InputImport(name="endTimestamp")
     private final @Nullable Double endTimestamp;
 
@@ -22,6 +30,10 @@ public final class PresentationTimeRangeResponse extends io.pulumi.resources.Inv
         return this.endTimestamp == null ? Optional.empty() : Optional.ofNullable(this.endTimestamp);
     }
 
+    /**
+     * The indicator of forcing existing of end time stamp.
+     * 
+     */
     @InputImport(name="forceEndTimestamp")
     private final @Nullable Boolean forceEndTimestamp;
 
@@ -29,6 +41,10 @@ public final class PresentationTimeRangeResponse extends io.pulumi.resources.Inv
         return this.forceEndTimestamp == null ? Optional.empty() : Optional.ofNullable(this.forceEndTimestamp);
     }
 
+    /**
+     * The relative to end right edge.
+     * 
+     */
     @InputImport(name="liveBackoffDuration")
     private final @Nullable Double liveBackoffDuration;
 
@@ -36,6 +52,10 @@ public final class PresentationTimeRangeResponse extends io.pulumi.resources.Inv
         return this.liveBackoffDuration == null ? Optional.empty() : Optional.ofNullable(this.liveBackoffDuration);
     }
 
+    /**
+     * The relative to end sliding window.
+     * 
+     */
     @InputImport(name="presentationWindowDuration")
     private final @Nullable Double presentationWindowDuration;
 
@@ -43,6 +63,10 @@ public final class PresentationTimeRangeResponse extends io.pulumi.resources.Inv
         return this.presentationWindowDuration == null ? Optional.empty() : Optional.ofNullable(this.presentationWindowDuration);
     }
 
+    /**
+     * The absolute start time boundary.
+     * 
+     */
     @InputImport(name="startTimestamp")
     private final @Nullable Double startTimestamp;
 
@@ -50,6 +74,10 @@ public final class PresentationTimeRangeResponse extends io.pulumi.resources.Inv
         return this.startTimestamp == null ? Optional.empty() : Optional.ofNullable(this.startTimestamp);
     }
 
+    /**
+     * The time scale of time stamps.
+     * 
+     */
     @InputImport(name="timescale")
     private final @Nullable Double timescale;
 

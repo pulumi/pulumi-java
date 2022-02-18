@@ -8,10 +8,18 @@ import io.pulumi.googlenative.dataproc_v1beta2.inputs.KerberosConfigResponse;
 import java.util.Objects;
 
 
+/**
+ * Security related configuration, including encryption, Kerberos, etc.
+ * 
+ */
 public final class SecurityConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SecurityConfigResponse Empty = new SecurityConfigResponse();
 
+    /**
+     * Optional. Kerberos related configuration.
+     * 
+     */
     @InputImport(name="kerberosConfig", required=true)
     private final KerberosConfigResponse kerberosConfig;
 

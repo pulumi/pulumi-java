@@ -9,10 +9,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Custom request handling.
+ * 
+ */
 public final class WebACLCustomRequestHandling extends io.pulumi.resources.InvokeArgs {
 
     public static final WebACLCustomRequestHandling Empty = new WebACLCustomRequestHandling();
 
+    /**
+     * Collection of HTTP headers.
+     * 
+     */
     @InputImport(name="insertHeaders", required=true)
     private final List<WebACLCustomHTTPHeader> insertHeaders;
 

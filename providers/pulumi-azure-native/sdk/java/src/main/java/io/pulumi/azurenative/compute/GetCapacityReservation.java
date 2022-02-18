@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCapacityReservation {
+/**
+ * Specifies information about the capacity reservation.
+ * API Version: 2021-04-01.
+ * 
+ *
+ * Specifies information about the capacity reservation.
+ * 
+ */
     public static CompletableFuture<GetCapacityReservationResult> invokeAsync(GetCapacityReservationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getCapacityReservation", TypeShape.of(GetCapacityReservationResult.class), args == null ? GetCapacityReservationArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCustomResourceProvider {
+/**
+ * A manifest file that defines the custom resource provider resources.
+ * API Version: 2018-09-01-preview.
+ * 
+ *
+ * A manifest file that defines the custom resource provider resources.
+ * 
+ */
     public static CompletableFuture<GetCustomResourceProviderResult> invokeAsync(GetCustomResourceProviderArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:customproviders:getCustomResourceProvider", TypeShape.of(GetCustomResourceProviderResult.class), args == null ? GetCustomResourceProviderArgs.Empty : args, Utilities.withVersion(options));
     }

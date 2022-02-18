@@ -10,6 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Provisioned ServiceCatalog  Details
+ * 
+ */
 public final class ServiceCatalogProvisionedProductDetailsProperties extends io.pulumi.resources.InvokeArgs {
 
     public static final ServiceCatalogProvisionedProductDetailsProperties Empty = new ServiceCatalogProvisionedProductDetailsProperties();

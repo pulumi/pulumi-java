@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes Windows Remote Management configuration of the VM
+ * 
+ */
 public final class WinRMConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final WinRMConfigurationResponse Empty = new WinRMConfigurationResponse();
 
+    /**
+     * The list of Windows Remote Management listeners
+     * 
+     */
     @InputImport(name="listeners")
     private final @Nullable List<WinRMListenerResponse> listeners;
 

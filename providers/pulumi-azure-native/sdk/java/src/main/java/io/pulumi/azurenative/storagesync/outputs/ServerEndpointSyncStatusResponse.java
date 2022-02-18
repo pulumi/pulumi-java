@@ -12,16 +12,60 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ServerEndpointSyncStatusResponse {
+    /**
+     * Combined Health Status.
+     * 
+     */
     private final String combinedHealth;
+    /**
+     * Download sync activity
+     * 
+     */
     private final ServerEndpointSyncActivityStatusResponse downloadActivity;
+    /**
+     * Download Health Status.
+     * 
+     */
     private final String downloadHealth;
+    /**
+     * Download Status
+     * 
+     */
     private final ServerEndpointSyncSessionStatusResponse downloadStatus;
+    /**
+     * Last Updated Timestamp
+     * 
+     */
     private final String lastUpdatedTimestamp;
+    /**
+     * Offline Data Transfer State
+     * 
+     */
     private final String offlineDataTransferStatus;
+    /**
+     * Sync activity
+     * 
+     */
     private final String syncActivity;
+    /**
+     * Total count of persistent files not syncing (combined upload + download).
+     * 
+     */
     private final Double totalPersistentFilesNotSyncingCount;
+    /**
+     * Upload sync activity
+     * 
+     */
     private final ServerEndpointSyncActivityStatusResponse uploadActivity;
+    /**
+     * Upload Health Status.
+     * 
+     */
     private final String uploadHealth;
+    /**
+     * Upload Status
+     * 
+     */
     private final ServerEndpointSyncSessionStatusResponse uploadStatus;
 
     @OutputCustomType.Constructor({"combinedHealth","downloadActivity","downloadHealth","downloadStatus","lastUpdatedTimestamp","offlineDataTransferStatus","syncActivity","totalPersistentFilesNotSyncingCount","uploadActivity","uploadHealth","uploadStatus"})
@@ -50,36 +94,80 @@ public final class ServerEndpointSyncStatusResponse {
         this.uploadStatus = Objects.requireNonNull(uploadStatus);
     }
 
+    /**
+     * Combined Health Status.
+     * 
+     */
     public String getCombinedHealth() {
         return this.combinedHealth;
     }
+    /**
+     * Download sync activity
+     * 
+     */
     public ServerEndpointSyncActivityStatusResponse getDownloadActivity() {
         return this.downloadActivity;
     }
+    /**
+     * Download Health Status.
+     * 
+     */
     public String getDownloadHealth() {
         return this.downloadHealth;
     }
+    /**
+     * Download Status
+     * 
+     */
     public ServerEndpointSyncSessionStatusResponse getDownloadStatus() {
         return this.downloadStatus;
     }
+    /**
+     * Last Updated Timestamp
+     * 
+     */
     public String getLastUpdatedTimestamp() {
         return this.lastUpdatedTimestamp;
     }
+    /**
+     * Offline Data Transfer State
+     * 
+     */
     public String getOfflineDataTransferStatus() {
         return this.offlineDataTransferStatus;
     }
+    /**
+     * Sync activity
+     * 
+     */
     public String getSyncActivity() {
         return this.syncActivity;
     }
+    /**
+     * Total count of persistent files not syncing (combined upload + download).
+     * 
+     */
     public Double getTotalPersistentFilesNotSyncingCount() {
         return this.totalPersistentFilesNotSyncingCount;
     }
+    /**
+     * Upload sync activity
+     * 
+     */
     public ServerEndpointSyncActivityStatusResponse getUploadActivity() {
         return this.uploadActivity;
     }
+    /**
+     * Upload Health Status.
+     * 
+     */
     public String getUploadHealth() {
         return this.uploadHealth;
     }
+    /**
+     * Upload Status
+     * 
+     */
     public ServerEndpointSyncSessionStatusResponse getUploadStatus() {
         return this.uploadStatus;
     }

@@ -11,8 +11,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class InstanceMaintenanceSchedule {
+    /**
+     * - 
+     * Output only. The end time of any upcoming scheduled maintenance for this instance.
+     * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
+     * resolution and up to nine fractional digits.
+     * 
+     */
     private final @Nullable String endTime;
+    /**
+     * - 
+     * Output only. The deadline that the maintenance schedule start time
+     * can not go beyond, including reschedule.
+     * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
+     * resolution and up to nine fractional digits.
+     * 
+     */
     private final @Nullable String scheduleDeadlineTime;
+    /**
+     * - 
+     * Output only. The start time of any upcoming scheduled maintenance for this instance.
+     * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
+     * resolution and up to nine fractional digits.
+     * 
+     */
     private final @Nullable String startTime;
 
     @OutputCustomType.Constructor({"endTime","scheduleDeadlineTime","startTime"})
@@ -25,12 +47,34 @@ public final class InstanceMaintenanceSchedule {
         this.startTime = startTime;
     }
 
+    /**
+     * - 
+     * Output only. The end time of any upcoming scheduled maintenance for this instance.
+     * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
+     * resolution and up to nine fractional digits.
+     * 
+     */
     public Optional<String> getEndTime() {
         return Optional.ofNullable(this.endTime);
     }
+    /**
+     * - 
+     * Output only. The deadline that the maintenance schedule start time
+     * can not go beyond, including reschedule.
+     * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
+     * resolution and up to nine fractional digits.
+     * 
+     */
     public Optional<String> getScheduleDeadlineTime() {
         return Optional.ofNullable(this.scheduleDeadlineTime);
     }
+    /**
+     * - 
+     * Output only. The start time of any upcoming scheduled maintenance for this instance.
+     * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
+     * resolution and up to nine fractional digits.
+     * 
+     */
     public Optional<String> getStartTime() {
         return Optional.ofNullable(this.startTime);
     }

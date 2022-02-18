@@ -15,6 +15,10 @@ public final class ReplicationMigrationItemArgs extends io.pulumi.resources.Reso
 
     public static final ReplicationMigrationItemArgs Empty = new ReplicationMigrationItemArgs();
 
+    /**
+     * Fabric name.
+     * 
+     */
     @InputImport(name="fabricName", required=true)
     private final Input<String> fabricName;
 
@@ -22,6 +26,10 @@ public final class ReplicationMigrationItemArgs extends io.pulumi.resources.Reso
         return this.fabricName;
     }
 
+    /**
+     * Migration item name.
+     * 
+     */
     @InputImport(name="migrationItemName")
     private final @Nullable Input<String> migrationItemName;
 
@@ -29,6 +37,10 @@ public final class ReplicationMigrationItemArgs extends io.pulumi.resources.Reso
         return this.migrationItemName == null ? Input.empty() : this.migrationItemName;
     }
 
+    /**
+     * Enable migration input properties.
+     * 
+     */
     @InputImport(name="properties", required=true)
     private final Input<EnableMigrationInputPropertiesArgs> properties;
 
@@ -36,6 +48,10 @@ public final class ReplicationMigrationItemArgs extends io.pulumi.resources.Reso
         return this.properties;
     }
 
+    /**
+     * Protection container name.
+     * 
+     */
     @InputImport(name="protectionContainerName", required=true)
     private final Input<String> protectionContainerName;
 
@@ -43,6 +59,10 @@ public final class ReplicationMigrationItemArgs extends io.pulumi.resources.Reso
         return this.protectionContainerName;
     }
 
+    /**
+     * The name of the resource group where the recovery services vault is present.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -50,6 +70,10 @@ public final class ReplicationMigrationItemArgs extends io.pulumi.resources.Reso
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the recovery services vault.
+     * 
+     */
     @InputImport(name="resourceName", required=true)
     private final Input<String> resourceName;
 

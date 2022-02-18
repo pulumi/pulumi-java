@@ -9,8 +9,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SdkVersionResponse {
+    /**
+     * The support status for this SDK version.
+     * 
+     */
     private final String sdkSupportStatus;
+    /**
+     * The version of the SDK used to run the job.
+     * 
+     */
     private final String version;
+    /**
+     * A readable string describing the version of the SDK.
+     * 
+     */
     private final String versionDisplayName;
 
     @OutputCustomType.Constructor({"sdkSupportStatus","version","versionDisplayName"})
@@ -23,12 +35,24 @@ public final class SdkVersionResponse {
         this.versionDisplayName = Objects.requireNonNull(versionDisplayName);
     }
 
+    /**
+     * The support status for this SDK version.
+     * 
+     */
     public String getSdkSupportStatus() {
         return this.sdkSupportStatus;
     }
+    /**
+     * The version of the SDK used to run the job.
+     * 
+     */
     public String getVersion() {
         return this.version;
     }
+    /**
+     * A readable string describing the version of the SDK.
+     * 
+     */
     public String getVersionDisplayName() {
         return this.versionDisplayName;
     }

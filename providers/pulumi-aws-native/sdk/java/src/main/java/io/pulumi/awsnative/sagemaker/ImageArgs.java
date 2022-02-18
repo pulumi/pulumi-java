@@ -44,6 +44,10 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.imageRoleArn;
     }
 
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<ImageTagArgs>> tags;
 

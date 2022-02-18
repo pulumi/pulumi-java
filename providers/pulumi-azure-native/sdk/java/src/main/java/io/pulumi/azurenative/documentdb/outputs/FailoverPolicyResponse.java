@@ -12,8 +12,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FailoverPolicyResponse {
+    /**
+     * The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists.
+     * 
+     */
     private final @Nullable Integer failoverPriority;
+    /**
+     * The unique identifier of the region in which the database account replicates to. Example: &lt;accountName&gt;-&lt;locationName&gt;.
+     * 
+     */
     private final String id;
+    /**
+     * The name of the region in which the database account exists.
+     * 
+     */
     private final @Nullable String locationName;
 
     @OutputCustomType.Constructor({"failoverPriority","id","locationName"})
@@ -26,12 +38,24 @@ public final class FailoverPolicyResponse {
         this.locationName = locationName;
     }
 
+    /**
+     * The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists.
+     * 
+     */
     public Optional<Integer> getFailoverPriority() {
         return Optional.ofNullable(this.failoverPriority);
     }
+    /**
+     * The unique identifier of the region in which the database account replicates to. Example: &lt;accountName&gt;-&lt;locationName&gt;.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * The name of the region in which the database account exists.
+     * 
+     */
     public Optional<String> getLocationName() {
         return Optional.ofNullable(this.locationName);
     }

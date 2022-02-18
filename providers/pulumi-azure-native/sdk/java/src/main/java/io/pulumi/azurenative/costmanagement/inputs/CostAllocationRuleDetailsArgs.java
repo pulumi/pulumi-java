@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Resource details of the cost allocation rule
+ * 
+ */
 public final class CostAllocationRuleDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CostAllocationRuleDetailsArgs Empty = new CostAllocationRuleDetailsArgs();
 
+    /**
+     * Source resources for cost allocation. At this time, this list can contain no more than one element.
+     * 
+     */
     @InputImport(name="sourceResources")
     private final @Nullable Input<List<SourceCostAllocationResourceArgs>> sourceResources;
 
@@ -23,6 +31,10 @@ public final class CostAllocationRuleDetailsArgs extends io.pulumi.resources.Res
         return this.sourceResources == null ? Input.empty() : this.sourceResources;
     }
 
+    /**
+     * Target resources for cost allocation. At this time, this list can contain no more than one element.
+     * 
+     */
     @InputImport(name="targetResources")
     private final @Nullable Input<List<TargetCostAllocationResourceArgs>> targetResources;
 

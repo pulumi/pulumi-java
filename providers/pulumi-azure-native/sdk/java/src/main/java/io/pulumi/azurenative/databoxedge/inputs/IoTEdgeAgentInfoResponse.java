@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * IoT edge agent details is optional, this will be used for download system Agent module while bootstrapping IoT Role if specified.
+ * 
+ */
 public final class IoTEdgeAgentInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IoTEdgeAgentInfoResponse Empty = new IoTEdgeAgentInfoResponse();
 
+    /**
+     * Name of the IoT edge agent image.
+     * 
+     */
     @InputImport(name="imageName", required=true)
     private final String imageName;
 
@@ -22,6 +30,10 @@ public final class IoTEdgeAgentInfoResponse extends io.pulumi.resources.InvokeAr
         return this.imageName;
     }
 
+    /**
+     * Image repository details.
+     * 
+     */
     @InputImport(name="imageRepository")
     private final @Nullable ImageRepositoryCredentialResponse imageRepository;
 
@@ -29,6 +41,10 @@ public final class IoTEdgeAgentInfoResponse extends io.pulumi.resources.InvokeAr
         return this.imageRepository == null ? Optional.empty() : Optional.ofNullable(this.imageRepository);
     }
 
+    /**
+     * Image Tag.
+     * 
+     */
     @InputImport(name="tag", required=true)
     private final String tag;
 

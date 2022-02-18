@@ -12,8 +12,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class WorkspaceSkuResponse {
+    /**
+     * The capacity reservation level for this workspace, when CapacityReservation sku is selected.
+     * 
+     */
     private final @Nullable Integer capacityReservationLevel;
+    /**
+     * The last time when the sku was updated.
+     * 
+     */
     private final String lastSkuUpdate;
+    /**
+     * The name of the SKU.
+     * 
+     */
     private final String name;
 
     @OutputCustomType.Constructor({"capacityReservationLevel","lastSkuUpdate","name"})
@@ -26,12 +38,24 @@ public final class WorkspaceSkuResponse {
         this.name = Objects.requireNonNull(name);
     }
 
+    /**
+     * The capacity reservation level for this workspace, when CapacityReservation sku is selected.
+     * 
+     */
     public Optional<Integer> getCapacityReservationLevel() {
         return Optional.ofNullable(this.capacityReservationLevel);
     }
+    /**
+     * The last time when the sku was updated.
+     * 
+     */
     public String getLastSkuUpdate() {
         return this.lastSkuUpdate;
     }
+    /**
+     * The name of the SKU.
+     * 
+     */
     public String getName() {
         return this.name;
     }

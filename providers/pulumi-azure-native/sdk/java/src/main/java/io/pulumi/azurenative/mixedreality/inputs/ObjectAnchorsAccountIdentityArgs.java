@@ -14,6 +14,10 @@ public final class ObjectAnchorsAccountIdentityArgs extends io.pulumi.resources.
 
     public static final ObjectAnchorsAccountIdentityArgs Empty = new ObjectAnchorsAccountIdentityArgs();
 
+    /**
+     * The identity type.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<ResourceIdentityType> type;
 

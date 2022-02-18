@@ -9,8 +9,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ForwardingRuleServiceDirectoryRegistrationResponse {
+    /**
+     * Service Directory namespace to register the forwarding rule under.
+     * 
+     */
     private final String namespace;
+    /**
+     * Service Directory service to register the forwarding rule under.
+     * 
+     */
     private final String service;
+    /**
+     * [Optional] Service Directory region to register this global forwarding rule under. Default to "us-central1". Only used for PSC for Google APIs. All PSC for Google APIs Forwarding Rules on the same network should use the same Service Directory region.
+     * 
+     */
     private final String serviceDirectoryRegion;
 
     @OutputCustomType.Constructor({"namespace","service","serviceDirectoryRegion"})
@@ -23,12 +35,24 @@ public final class ForwardingRuleServiceDirectoryRegistrationResponse {
         this.serviceDirectoryRegion = Objects.requireNonNull(serviceDirectoryRegion);
     }
 
+    /**
+     * Service Directory namespace to register the forwarding rule under.
+     * 
+     */
     public String getNamespace() {
         return this.namespace;
     }
+    /**
+     * Service Directory service to register the forwarding rule under.
+     * 
+     */
     public String getService() {
         return this.service;
     }
+    /**
+     * [Optional] Service Directory region to register this global forwarding rule under. Default to "us-central1". Only used for PSC for Google APIs. All PSC for Google APIs Forwarding Rules on the same network should use the same Service Directory region.
+     * 
+     */
     public String getServiceDirectoryRegion() {
         return this.serviceDirectoryRegion;
     }

@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Physical location of an entry.
+ * 
+ */
 public final class GoogleCloudDatacatalogV1DataSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDatacatalogV1DataSourceResponse Empty = new GoogleCloudDatacatalogV1DataSourceResponse();
 
+    /**
+     * Full name of a resource as defined by the service. For example: `//bigquery.googleapis.com/projects/{PROJECT_ID}/locations/{LOCATION}/datasets/{DATASET_ID}/tables/{TABLE_ID}`
+     * 
+     */
     @InputImport(name="resource", required=true)
     private final String resource;
 
@@ -19,6 +27,10 @@ public final class GoogleCloudDatacatalogV1DataSourceResponse extends io.pulumi.
         return this.resource;
     }
 
+    /**
+     * Service that physically stores the data.
+     * 
+     */
     @InputImport(name="service", required=true)
     private final String service;
 

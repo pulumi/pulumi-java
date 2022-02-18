@@ -16,57 +16,169 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Represents a Machine Image resource. Machine images store all the configuration,
+ * metadata, permissions, and data from one or more disks required to create a
+ * Virtual machine (VM) instance.
+ * 
+ * To get more information about MachineImage, see:
+ * 
+ * * [API documentation](https://cloud.google.com/compute/docs/reference/rest/beta/machineImages)
+ * * How-to Guides
+ *     * [Official Documentation](https://cloud.google.com/compute/docs/machine-images)
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * MachineImage can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/machineImage:MachineImage default projects/{{project}}/global/machineImages/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/machineImage:MachineImage default {{project}}/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/machineImage:MachineImage default {{name}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:compute/machineImage:MachineImage")
 public class MachineImage extends io.pulumi.resources.CustomResource {
+    /**
+     * A text description of the resource.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return A text description of the resource.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * Specify this to create an application consistent machine image by informing the OS to prepare for the snapshot process.
+     * Currently only supported on Windows instances using the Volume Shadow Copy Service (VSS).
+     * 
+     */
     @OutputExport(name="guestFlush", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> guestFlush;
 
+    /**
+     * @return Specify this to create an application consistent machine image by informing the OS to prepare for the snapshot process.
+     * Currently only supported on Windows instances using the Volume Shadow Copy Service (VSS).
+     * 
+     */
     public Output</* @Nullable */ Boolean> getGuestFlush() {
         return this.guestFlush;
     }
+    /**
+     * Encrypts the machine image using a customer-supplied encryption key.
+     * After you encrypt a machine image with a customer-supplied key, you must
+     * provide the same key if you use the machine image later (e.g. to create a
+     * instance from the image)
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="machineImageEncryptionKey", type=MachineImageMachineImageEncryptionKey.class, parameters={})
     private Output</* @Nullable */ MachineImageMachineImageEncryptionKey> machineImageEncryptionKey;
 
+    /**
+     * @return Encrypts the machine image using a customer-supplied encryption key.
+     * After you encrypt a machine image with a customer-supplied key, you must
+     * provide the same key if you use the machine image later (e.g. to create a
+     * instance from the image)
+     * Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ MachineImageMachineImageEncryptionKey> getMachineImageEncryptionKey() {
         return this.machineImageEncryptionKey;
     }
+    /**
+     * Name of the resource.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Name of the resource.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * The URI of the created resource.
+     * 
+     */
     @OutputExport(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
+    /**
+     * @return The URI of the created resource.
+     * 
+     */
     public Output<String> getSelfLink() {
         return this.selfLink;
     }
+    /**
+     * The source instance used to create the machine image. You can provide this as a partial or full URL to the resource.
+     * 
+     */
     @OutputExport(name="sourceInstance", type=String.class, parameters={})
     private Output<String> sourceInstance;
 
+    /**
+     * @return The source instance used to create the machine image. You can provide this as a partial or full URL to the resource.
+     * 
+     */
     public Output<String> getSourceInstance() {
         return this.sourceInstance;
     }
+    /**
+     * The regional or multi-regional Cloud Storage bucket location where the machine image is stored.
+     * 
+     */
     @OutputExport(name="storageLocations", type=List.class, parameters={String.class})
     private Output<List<String>> storageLocations;
 
+    /**
+     * @return The regional or multi-regional Cloud Storage bucket location where the machine image is stored.
+     * 
+     */
     public Output<List<String>> getStorageLocations() {
         return this.storageLocations;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public MachineImage(String name, MachineImageArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:compute/machineImage:MachineImage", name, args == null ? MachineImageArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -82,6 +194,15 @@ public class MachineImage extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static MachineImage get(String name, Input<String> id, @Nullable MachineImageState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new MachineImage(name, id, state, options);
     }

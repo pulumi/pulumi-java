@@ -14,9 +14,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EntityInsightItemResponse {
+    /**
+     * Query results for table insights query.
+     * 
+     */
     private final @Nullable List<InsightsTableResultResponse> chartQueryResults;
+    /**
+     * The query id of the insight
+     * 
+     */
     private final @Nullable String queryId;
+    /**
+     * The Time interval that the query actually executed on.
+     * 
+     */
     private final @Nullable EntityInsightItemResponseQueryTimeInterval queryTimeInterval;
+    /**
+     * Query results for table insights query.
+     * 
+     */
     private final @Nullable InsightsTableResultResponse tableQueryResults;
 
     @OutputCustomType.Constructor({"chartQueryResults","queryId","queryTimeInterval","tableQueryResults"})
@@ -31,15 +47,31 @@ public final class EntityInsightItemResponse {
         this.tableQueryResults = tableQueryResults;
     }
 
+    /**
+     * Query results for table insights query.
+     * 
+     */
     public List<InsightsTableResultResponse> getChartQueryResults() {
         return this.chartQueryResults == null ? List.of() : this.chartQueryResults;
     }
+    /**
+     * The query id of the insight
+     * 
+     */
     public Optional<String> getQueryId() {
         return Optional.ofNullable(this.queryId);
     }
+    /**
+     * The Time interval that the query actually executed on.
+     * 
+     */
     public Optional<EntityInsightItemResponseQueryTimeInterval> getQueryTimeInterval() {
         return Optional.ofNullable(this.queryTimeInterval);
     }
+    /**
+     * Query results for table insights query.
+     * 
+     */
     public Optional<InsightsTableResultResponse> getTableQueryResults() {
         return Optional.ofNullable(this.tableQueryResults);
     }

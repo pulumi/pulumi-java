@@ -15,6 +15,10 @@ public final class InstanceGroupManagerVersionGetArgs extends io.pulumi.resource
 
     public static final InstanceGroupManagerVersionGetArgs Empty = new InstanceGroupManagerVersionGetArgs();
 
+    /**
+     * - The full URL to an instance template from which all new instances of this version will be created.
+     * 
+     */
     @InputImport(name="instanceTemplate", required=true)
     private final Input<String> instanceTemplate;
 
@@ -22,6 +26,10 @@ public final class InstanceGroupManagerVersionGetArgs extends io.pulumi.resource
         return this.instanceTemplate;
     }
 
+    /**
+     * - Version name.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -29,6 +37,10 @@ public final class InstanceGroupManagerVersionGetArgs extends io.pulumi.resource
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * - The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.
+     * 
+     */
     @InputImport(name="targetSize")
     private final @Nullable Input<InstanceGroupManagerVersionTargetSizeGetArgs> targetSize;
 

@@ -15,6 +15,10 @@ import javax.annotation.Nullable;
 @OutputCustomType
 public final class FlowZendeskDestinationProperties {
     private final @Nullable FlowErrorHandlingConfig errorHandlingConfig;
+    /**
+     * List of fields used as ID when performing a write operation.
+     * 
+     */
     private final @Nullable List<String> idFieldNames;
     private final String object;
     private final @Nullable FlowWriteOperationType writeOperationType;
@@ -34,6 +38,10 @@ public final class FlowZendeskDestinationProperties {
     public Optional<FlowErrorHandlingConfig> getErrorHandlingConfig() {
         return Optional.ofNullable(this.errorHandlingConfig);
     }
+    /**
+     * List of fields used as ID when performing a write operation.
+     * 
+     */
     public List<String> getIdFieldNames() {
         return this.idFieldNames == null ? List.of() : this.idFieldNames;
     }

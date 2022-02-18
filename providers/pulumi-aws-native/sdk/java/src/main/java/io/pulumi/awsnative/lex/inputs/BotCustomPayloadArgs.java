@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A message in a custom format defined by the client application.
+ * 
+ */
 public final class BotCustomPayloadArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BotCustomPayloadArgs Empty = new BotCustomPayloadArgs();
 
+    /**
+     * The string that is sent to your application.
+     * 
+     */
     @InputImport(name="value", required=true)
     private final Input<String> value;
 

@@ -9,10 +9,19 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The authentication info when authType is servicePrincipal certificate
+ * 
+ */
 public final class ServicePrincipalCertificateAuthInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServicePrincipalCertificateAuthInfoArgs Empty = new ServicePrincipalCertificateAuthInfoArgs();
 
+    /**
+     * The authentication type.
+     * Expected value is 'servicePrincipalCertificate'.
+     * 
+     */
     @InputImport(name="authType", required=true)
     private final Input<String> authType;
 
@@ -20,6 +29,10 @@ public final class ServicePrincipalCertificateAuthInfoArgs extends io.pulumi.res
         return this.authType;
     }
 
+    /**
+     * ServicePrincipal certificate for servicePrincipal auth.
+     * 
+     */
     @InputImport(name="certificate", required=true)
     private final Input<String> certificate;
 
@@ -27,6 +40,10 @@ public final class ServicePrincipalCertificateAuthInfoArgs extends io.pulumi.res
         return this.certificate;
     }
 
+    /**
+     * Application clientId for servicePrincipal auth.
+     * 
+     */
     @InputImport(name="clientId", required=true)
     private final Input<String> clientId;
 
@@ -34,6 +51,10 @@ public final class ServicePrincipalCertificateAuthInfoArgs extends io.pulumi.res
         return this.clientId;
     }
 
+    /**
+     * Principal Id for servicePrincipal auth.
+     * 
+     */
     @InputImport(name="principalId", required=true)
     private final Input<String> principalId;
 

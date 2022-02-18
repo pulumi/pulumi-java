@@ -13,6 +13,10 @@ public final class ClusterClusterConfigAutoscalingConfigArgs extends io.pulumi.r
 
     public static final ClusterClusterConfigAutoscalingConfigArgs Empty = new ClusterClusterConfigAutoscalingConfigArgs();
 
+    /**
+     * The autoscaling policy used by the cluster.
+     * 
+     */
     @InputImport(name="policyUri", required=true)
     private final Input<String> policyUri;
 

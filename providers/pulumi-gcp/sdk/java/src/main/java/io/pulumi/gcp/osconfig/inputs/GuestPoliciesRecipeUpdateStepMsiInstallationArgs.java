@@ -16,6 +16,10 @@ public final class GuestPoliciesRecipeUpdateStepMsiInstallationArgs extends io.p
 
     public static final GuestPoliciesRecipeUpdateStepMsiInstallationArgs Empty = new GuestPoliciesRecipeUpdateStepMsiInstallationArgs();
 
+    /**
+     * Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
+     * 
+     */
     @InputImport(name="allowedExitCodes")
     private final @Nullable Input<List<Integer>> allowedExitCodes;
 
@@ -23,6 +27,10 @@ public final class GuestPoliciesRecipeUpdateStepMsiInstallationArgs extends io.p
         return this.allowedExitCodes == null ? Input.empty() : this.allowedExitCodes;
     }
 
+    /**
+     * The id of the relevant artifact in the recipe.
+     * 
+     */
     @InputImport(name="artifactId", required=true)
     private final Input<String> artifactId;
 
@@ -30,6 +38,10 @@ public final class GuestPoliciesRecipeUpdateStepMsiInstallationArgs extends io.p
         return this.artifactId;
     }
 
+    /**
+     * The flags to use when installing the MSI. Defaults to the install flag.
+     * 
+     */
     @InputImport(name="flags")
     private final @Nullable Input<List<String>> flags;
 

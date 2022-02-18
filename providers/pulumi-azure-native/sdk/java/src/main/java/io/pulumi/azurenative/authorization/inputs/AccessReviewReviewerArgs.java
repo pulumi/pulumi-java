@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Descriptor for what needs to be reviewed
+ * 
+ */
 public final class AccessReviewReviewerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AccessReviewReviewerArgs Empty = new AccessReviewReviewerArgs();
 
+    /**
+     * The id of the reviewer(user/servicePrincipal)
+     * 
+     */
     @InputImport(name="principalId")
     private final @Nullable Input<String> principalId;
 

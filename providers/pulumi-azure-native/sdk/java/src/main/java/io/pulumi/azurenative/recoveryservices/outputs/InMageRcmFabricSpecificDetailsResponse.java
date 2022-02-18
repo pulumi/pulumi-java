@@ -17,20 +17,81 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class InMageRcmFabricSpecificDetailsResponse {
+    /**
+     * The list of agent details.
+     * 
+     */
     private final List<AgentDetailsResponse> agentDetails;
+    /**
+     * The control plane Uri.
+     * 
+     */
     private final String controlPlaneUri;
+    /**
+     * The data plane Uri.
+     * 
+     */
     private final String dataPlaneUri;
+    /**
+     * The list of DRAs.
+     * 
+     */
     private final List<DraDetailsResponse> dras;
+    /**
+     * Gets the class type. Overridden in derived classes.
+     * Expected value is 'InMageRcm'.
+     * 
+     */
     private final String instanceType;
+    /**
+     * The ARM Id of the physical site.
+     * 
+     */
     private final String physicalSiteId;
+    /**
+     * The list of process servers.
+     * 
+     */
     private final List<ProcessServerDetailsResponse> processServers;
+    /**
+     * The list of push installers.
+     * 
+     */
     private final List<PushInstallerDetailsResponse> pushInstallers;
+    /**
+     * The list of RCM proxies.
+     * 
+     */
     private final List<RcmProxyDetailsResponse> rcmProxies;
+    /**
+     * The list of replication agents.
+     * 
+     */
     private final List<ReplicationAgentDetailsResponse> replicationAgents;
+    /**
+     * The list of reprotect agents.
+     * 
+     */
     private final List<ReprotectAgentDetailsResponse> reprotectAgents;
+    /**
+     * The service container Id.
+     * 
+     */
     private final String serviceContainerId;
+    /**
+     * The service endpoint.
+     * 
+     */
     private final String serviceEndpoint;
+    /**
+     * The service resource Id.
+     * 
+     */
     private final String serviceResourceId;
+    /**
+     * The ARM Id of the VMware site.
+     * 
+     */
     private final String vmwareSiteId;
 
     @OutputCustomType.Constructor({"agentDetails","controlPlaneUri","dataPlaneUri","dras","instanceType","physicalSiteId","processServers","pushInstallers","rcmProxies","replicationAgents","reprotectAgents","serviceContainerId","serviceEndpoint","serviceResourceId","vmwareSiteId"})
@@ -67,48 +128,109 @@ public final class InMageRcmFabricSpecificDetailsResponse {
         this.vmwareSiteId = Objects.requireNonNull(vmwareSiteId);
     }
 
+    /**
+     * The list of agent details.
+     * 
+     */
     public List<AgentDetailsResponse> getAgentDetails() {
         return this.agentDetails;
     }
+    /**
+     * The control plane Uri.
+     * 
+     */
     public String getControlPlaneUri() {
         return this.controlPlaneUri;
     }
+    /**
+     * The data plane Uri.
+     * 
+     */
     public String getDataPlaneUri() {
         return this.dataPlaneUri;
     }
+    /**
+     * The list of DRAs.
+     * 
+     */
     public List<DraDetailsResponse> getDras() {
         return this.dras;
     }
+    /**
+     * Gets the class type. Overridden in derived classes.
+     * Expected value is 'InMageRcm'.
+     * 
+     */
     public String getInstanceType() {
         return this.instanceType;
     }
+    /**
+     * The ARM Id of the physical site.
+     * 
+     */
     public String getPhysicalSiteId() {
         return this.physicalSiteId;
     }
+    /**
+     * The list of process servers.
+     * 
+     */
     public List<ProcessServerDetailsResponse> getProcessServers() {
         return this.processServers;
     }
+    /**
+     * The list of push installers.
+     * 
+     */
     public List<PushInstallerDetailsResponse> getPushInstallers() {
         return this.pushInstallers;
     }
+    /**
+     * The list of RCM proxies.
+     * 
+     */
     public List<RcmProxyDetailsResponse> getRcmProxies() {
         return this.rcmProxies;
     }
+    /**
+     * The list of replication agents.
+     * 
+     */
     public List<ReplicationAgentDetailsResponse> getReplicationAgents() {
         return this.replicationAgents;
     }
+    /**
+     * The list of reprotect agents.
+     * 
+     */
     public List<ReprotectAgentDetailsResponse> getReprotectAgents() {
         return this.reprotectAgents;
     }
+    /**
+     * The service container Id.
+     * 
+     */
     public String getServiceContainerId() {
         return this.serviceContainerId;
     }
+    /**
+     * The service endpoint.
+     * 
+     */
     public String getServiceEndpoint() {
         return this.serviceEndpoint;
     }
+    /**
+     * The service resource Id.
+     * 
+     */
     public String getServiceResourceId() {
         return this.serviceResourceId;
     }
+    /**
+     * The ARM Id of the VMware site.
+     * 
+     */
     public String getVmwareSiteId() {
         return this.vmwareSiteId;
     }

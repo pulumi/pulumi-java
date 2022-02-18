@@ -19,60 +19,281 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class InMageAzureV2ReplicationDetailsResponse {
+    /**
+     * Agent expiry date.
+     * 
+     */
     private final @Nullable String agentExpiryDate;
+    /**
+     * The agent version.
+     * 
+     */
     private final @Nullable String agentVersion;
+    /**
+     * Azure VM Disk details.
+     * 
+     */
     private final @Nullable List<AzureVmDiskDetailsResponse> azureVMDiskDetails;
+    /**
+     * The compressed data change rate in MB.
+     * 
+     */
     private final @Nullable Double compressedDataRateInMB;
+    /**
+     * The data stores of the on-premise machine. Value can be list of strings that contain data store names.
+     * 
+     */
     private final @Nullable List<String> datastores;
+    /**
+     * A value indicating the discovery type of the machine. Value can be vCenter or physical.
+     * 
+     */
     private final @Nullable String discoveryType;
+    /**
+     * A value indicating whether any disk is resized for this VM.
+     * 
+     */
     private final @Nullable String diskResized;
+    /**
+     * The selected option to enable RDP\SSH on target vm after failover. String value of {SrsDataContract.EnableRDPOnTargetOption} enum.
+     * 
+     */
     private final @Nullable String enableRdpOnTargetOption;
+    /**
+     * The infrastructure VM Id.
+     * 
+     */
     private final @Nullable String infrastructureVmId;
+    /**
+     * Gets the Instance type.
+     * Expected value is 'InMageAzureV2'.
+     * 
+     */
     private final String instanceType;
+    /**
+     * The source IP address.
+     * 
+     */
     private final @Nullable String ipAddress;
+    /**
+     * A value indicating whether installed agent needs to be updated.
+     * 
+     */
     private final @Nullable String isAgentUpdateRequired;
+    /**
+     * A value indicating whether the source server requires a restart after update.
+     * 
+     */
     private final @Nullable String isRebootAfterUpdateRequired;
+    /**
+     * The last heartbeat received from the source server.
+     * 
+     */
     private final @Nullable String lastHeartbeat;
+    /**
+     * The last RPO calculated time.
+     * 
+     */
     private final @Nullable String lastRpoCalculatedTime;
+    /**
+     * The last update time received from on-prem components.
+     * 
+     */
     private final @Nullable String lastUpdateReceivedTime;
+    /**
+     * License Type of the VM to be used.
+     * 
+     */
     private final @Nullable String licenseType;
+    /**
+     * The master target Id.
+     * 
+     */
     private final @Nullable String masterTargetId;
+    /**
+     * The multi vm group Id.
+     * 
+     */
     private final @Nullable String multiVmGroupId;
+    /**
+     * The multi vm group name.
+     * 
+     */
     private final @Nullable String multiVmGroupName;
+    /**
+     * A value indicating whether multi vm sync is enabled or disabled.
+     * 
+     */
     private final @Nullable String multiVmSyncStatus;
+    /**
+     * The id of the disk containing the OS.
+     * 
+     */
     private final @Nullable String osDiskId;
+    /**
+     * The type of the OS on the VM.
+     * 
+     */
     private final @Nullable String osType;
+    /**
+     * The OS Version of the protected item.
+     * 
+     */
     private final @Nullable String osVersion;
+    /**
+     * The process server Id.
+     * 
+     */
     private final @Nullable String processServerId;
+    /**
+     * The process server name.
+     * 
+     */
     private final String processServerName;
+    /**
+     * The list of protected disks.
+     * 
+     */
     private final @Nullable List<InMageAzureV2ProtectedDiskDetailsResponse> protectedDisks;
+    /**
+     * The list of protected managed disks.
+     * 
+     */
     private final @Nullable List<InMageAzureV2ManagedDiskDetailsResponse> protectedManagedDisks;
+    /**
+     * The protection stage.
+     * 
+     */
     private final @Nullable String protectionStage;
+    /**
+     * The recovery availability set Id.
+     * 
+     */
     private final @Nullable String recoveryAvailabilitySetId;
+    /**
+     * The ARM id of the log storage account used for replication. This will be set to null if no log storage account was provided during enable protection.
+     * 
+     */
     private final @Nullable String recoveryAzureLogStorageAccountId;
+    /**
+     * The target resource group Id.
+     * 
+     */
     private final @Nullable String recoveryAzureResourceGroupId;
+    /**
+     * The recovery Azure storage account.
+     * 
+     */
     private final @Nullable String recoveryAzureStorageAccount;
+    /**
+     * Recovery Azure given name.
+     * 
+     */
     private final @Nullable String recoveryAzureVMName;
+    /**
+     * The Recovery Azure VM size.
+     * 
+     */
     private final @Nullable String recoveryAzureVMSize;
+    /**
+     * The replica id of the protected item.
+     * 
+     */
     private final @Nullable String replicaId;
+    /**
+     * The resync progress percentage.
+     * 
+     */
     private final @Nullable Integer resyncProgressPercentage;
+    /**
+     * The RPO in seconds.
+     * 
+     */
     private final @Nullable Double rpoInSeconds;
+    /**
+     * The selected recovery azure network Id.
+     * 
+     */
     private final @Nullable String selectedRecoveryAzureNetworkId;
+    /**
+     * The selected source nic Id which will be used as the primary nic during failover.
+     * 
+     */
     private final @Nullable String selectedSourceNicId;
+    /**
+     * The test failover virtual network.
+     * 
+     */
     private final @Nullable String selectedTfoAzureNetworkId;
+    /**
+     * The CPU count of the VM on the primary side.
+     * 
+     */
     private final @Nullable Integer sourceVmCpuCount;
+    /**
+     * The RAM size of the VM on the primary side.
+     * 
+     */
     private final @Nullable Integer sourceVmRamSizeInMB;
+    /**
+     * The target availability zone.
+     * 
+     */
     private final @Nullable String targetAvailabilityZone;
+    /**
+     * The target proximity placement group Id.
+     * 
+     */
     private final @Nullable String targetProximityPlacementGroupId;
+    /**
+     * The ARM Id of the target Azure VM. This value will be null until the VM is failed over. Only after failure it will be populated with the ARM Id of the Azure VM.
+     * 
+     */
     private final @Nullable String targetVmId;
+    /**
+     * The uncompressed data change rate in MB.
+     * 
+     */
     private final @Nullable Double uncompressedDataRateInMB;
+    /**
+     * A value indicating whether managed disks should be used during failover.
+     * 
+     */
     private final @Nullable String useManagedDisks;
+    /**
+     * The vCenter infrastructure Id.
+     * 
+     */
     private final @Nullable String vCenterInfrastructureId;
+    /**
+     * The validation errors of the on-premise machine Value can be list of validation errors.
+     * 
+     */
     private final @Nullable List<HealthErrorResponse> validationErrors;
+    /**
+     * The OS disk VHD name.
+     * 
+     */
     private final @Nullable String vhdName;
+    /**
+     * The virtual machine Id.
+     * 
+     */
     private final @Nullable String vmId;
+    /**
+     * The PE Network details.
+     * 
+     */
     private final @Nullable List<VMNicDetailsResponse> vmNics;
+    /**
+     * The protection state for the vm.
+     * 
+     */
     private final @Nullable String vmProtectionState;
+    /**
+     * The protection state description for the vm.
+     * 
+     */
     private final @Nullable String vmProtectionStateDescription;
 
     @OutputCustomType.Constructor({"agentExpiryDate","agentVersion","azureVMDiskDetails","compressedDataRateInMB","datastores","discoveryType","diskResized","enableRdpOnTargetOption","infrastructureVmId","instanceType","ipAddress","isAgentUpdateRequired","isRebootAfterUpdateRequired","lastHeartbeat","lastRpoCalculatedTime","lastUpdateReceivedTime","licenseType","masterTargetId","multiVmGroupId","multiVmGroupName","multiVmSyncStatus","osDiskId","osType","osVersion","processServerId","processServerName","protectedDisks","protectedManagedDisks","protectionStage","recoveryAvailabilitySetId","recoveryAzureLogStorageAccountId","recoveryAzureResourceGroupId","recoveryAzureStorageAccount","recoveryAzureVMName","recoveryAzureVMSize","replicaId","resyncProgressPercentage","rpoInSeconds","selectedRecoveryAzureNetworkId","selectedSourceNicId","selectedTfoAzureNetworkId","sourceVmCpuCount","sourceVmRamSizeInMB","targetAvailabilityZone","targetProximityPlacementGroupId","targetVmId","uncompressedDataRateInMB","useManagedDisks","vCenterInfrastructureId","validationErrors","vhdName","vmId","vmNics","vmProtectionState","vmProtectionStateDescription"})
@@ -189,168 +410,389 @@ public final class InMageAzureV2ReplicationDetailsResponse {
         this.vmProtectionStateDescription = vmProtectionStateDescription;
     }
 
+    /**
+     * Agent expiry date.
+     * 
+     */
     public Optional<String> getAgentExpiryDate() {
         return Optional.ofNullable(this.agentExpiryDate);
     }
+    /**
+     * The agent version.
+     * 
+     */
     public Optional<String> getAgentVersion() {
         return Optional.ofNullable(this.agentVersion);
     }
+    /**
+     * Azure VM Disk details.
+     * 
+     */
     public List<AzureVmDiskDetailsResponse> getAzureVMDiskDetails() {
         return this.azureVMDiskDetails == null ? List.of() : this.azureVMDiskDetails;
     }
+    /**
+     * The compressed data change rate in MB.
+     * 
+     */
     public Optional<Double> getCompressedDataRateInMB() {
         return Optional.ofNullable(this.compressedDataRateInMB);
     }
+    /**
+     * The data stores of the on-premise machine. Value can be list of strings that contain data store names.
+     * 
+     */
     public List<String> getDatastores() {
         return this.datastores == null ? List.of() : this.datastores;
     }
+    /**
+     * A value indicating the discovery type of the machine. Value can be vCenter or physical.
+     * 
+     */
     public Optional<String> getDiscoveryType() {
         return Optional.ofNullable(this.discoveryType);
     }
+    /**
+     * A value indicating whether any disk is resized for this VM.
+     * 
+     */
     public Optional<String> getDiskResized() {
         return Optional.ofNullable(this.diskResized);
     }
+    /**
+     * The selected option to enable RDP\SSH on target vm after failover. String value of {SrsDataContract.EnableRDPOnTargetOption} enum.
+     * 
+     */
     public Optional<String> getEnableRdpOnTargetOption() {
         return Optional.ofNullable(this.enableRdpOnTargetOption);
     }
+    /**
+     * The infrastructure VM Id.
+     * 
+     */
     public Optional<String> getInfrastructureVmId() {
         return Optional.ofNullable(this.infrastructureVmId);
     }
+    /**
+     * Gets the Instance type.
+     * Expected value is 'InMageAzureV2'.
+     * 
+     */
     public String getInstanceType() {
         return this.instanceType;
     }
+    /**
+     * The source IP address.
+     * 
+     */
     public Optional<String> getIpAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
+    /**
+     * A value indicating whether installed agent needs to be updated.
+     * 
+     */
     public Optional<String> getIsAgentUpdateRequired() {
         return Optional.ofNullable(this.isAgentUpdateRequired);
     }
+    /**
+     * A value indicating whether the source server requires a restart after update.
+     * 
+     */
     public Optional<String> getIsRebootAfterUpdateRequired() {
         return Optional.ofNullable(this.isRebootAfterUpdateRequired);
     }
+    /**
+     * The last heartbeat received from the source server.
+     * 
+     */
     public Optional<String> getLastHeartbeat() {
         return Optional.ofNullable(this.lastHeartbeat);
     }
+    /**
+     * The last RPO calculated time.
+     * 
+     */
     public Optional<String> getLastRpoCalculatedTime() {
         return Optional.ofNullable(this.lastRpoCalculatedTime);
     }
+    /**
+     * The last update time received from on-prem components.
+     * 
+     */
     public Optional<String> getLastUpdateReceivedTime() {
         return Optional.ofNullable(this.lastUpdateReceivedTime);
     }
+    /**
+     * License Type of the VM to be used.
+     * 
+     */
     public Optional<String> getLicenseType() {
         return Optional.ofNullable(this.licenseType);
     }
+    /**
+     * The master target Id.
+     * 
+     */
     public Optional<String> getMasterTargetId() {
         return Optional.ofNullable(this.masterTargetId);
     }
+    /**
+     * The multi vm group Id.
+     * 
+     */
     public Optional<String> getMultiVmGroupId() {
         return Optional.ofNullable(this.multiVmGroupId);
     }
+    /**
+     * The multi vm group name.
+     * 
+     */
     public Optional<String> getMultiVmGroupName() {
         return Optional.ofNullable(this.multiVmGroupName);
     }
+    /**
+     * A value indicating whether multi vm sync is enabled or disabled.
+     * 
+     */
     public Optional<String> getMultiVmSyncStatus() {
         return Optional.ofNullable(this.multiVmSyncStatus);
     }
+    /**
+     * The id of the disk containing the OS.
+     * 
+     */
     public Optional<String> getOsDiskId() {
         return Optional.ofNullable(this.osDiskId);
     }
+    /**
+     * The type of the OS on the VM.
+     * 
+     */
     public Optional<String> getOsType() {
         return Optional.ofNullable(this.osType);
     }
+    /**
+     * The OS Version of the protected item.
+     * 
+     */
     public Optional<String> getOsVersion() {
         return Optional.ofNullable(this.osVersion);
     }
+    /**
+     * The process server Id.
+     * 
+     */
     public Optional<String> getProcessServerId() {
         return Optional.ofNullable(this.processServerId);
     }
+    /**
+     * The process server name.
+     * 
+     */
     public String getProcessServerName() {
         return this.processServerName;
     }
+    /**
+     * The list of protected disks.
+     * 
+     */
     public List<InMageAzureV2ProtectedDiskDetailsResponse> getProtectedDisks() {
         return this.protectedDisks == null ? List.of() : this.protectedDisks;
     }
+    /**
+     * The list of protected managed disks.
+     * 
+     */
     public List<InMageAzureV2ManagedDiskDetailsResponse> getProtectedManagedDisks() {
         return this.protectedManagedDisks == null ? List.of() : this.protectedManagedDisks;
     }
+    /**
+     * The protection stage.
+     * 
+     */
     public Optional<String> getProtectionStage() {
         return Optional.ofNullable(this.protectionStage);
     }
+    /**
+     * The recovery availability set Id.
+     * 
+     */
     public Optional<String> getRecoveryAvailabilitySetId() {
         return Optional.ofNullable(this.recoveryAvailabilitySetId);
     }
+    /**
+     * The ARM id of the log storage account used for replication. This will be set to null if no log storage account was provided during enable protection.
+     * 
+     */
     public Optional<String> getRecoveryAzureLogStorageAccountId() {
         return Optional.ofNullable(this.recoveryAzureLogStorageAccountId);
     }
+    /**
+     * The target resource group Id.
+     * 
+     */
     public Optional<String> getRecoveryAzureResourceGroupId() {
         return Optional.ofNullable(this.recoveryAzureResourceGroupId);
     }
+    /**
+     * The recovery Azure storage account.
+     * 
+     */
     public Optional<String> getRecoveryAzureStorageAccount() {
         return Optional.ofNullable(this.recoveryAzureStorageAccount);
     }
+    /**
+     * Recovery Azure given name.
+     * 
+     */
     public Optional<String> getRecoveryAzureVMName() {
         return Optional.ofNullable(this.recoveryAzureVMName);
     }
+    /**
+     * The Recovery Azure VM size.
+     * 
+     */
     public Optional<String> getRecoveryAzureVMSize() {
         return Optional.ofNullable(this.recoveryAzureVMSize);
     }
+    /**
+     * The replica id of the protected item.
+     * 
+     */
     public Optional<String> getReplicaId() {
         return Optional.ofNullable(this.replicaId);
     }
+    /**
+     * The resync progress percentage.
+     * 
+     */
     public Optional<Integer> getResyncProgressPercentage() {
         return Optional.ofNullable(this.resyncProgressPercentage);
     }
+    /**
+     * The RPO in seconds.
+     * 
+     */
     public Optional<Double> getRpoInSeconds() {
         return Optional.ofNullable(this.rpoInSeconds);
     }
+    /**
+     * The selected recovery azure network Id.
+     * 
+     */
     public Optional<String> getSelectedRecoveryAzureNetworkId() {
         return Optional.ofNullable(this.selectedRecoveryAzureNetworkId);
     }
+    /**
+     * The selected source nic Id which will be used as the primary nic during failover.
+     * 
+     */
     public Optional<String> getSelectedSourceNicId() {
         return Optional.ofNullable(this.selectedSourceNicId);
     }
+    /**
+     * The test failover virtual network.
+     * 
+     */
     public Optional<String> getSelectedTfoAzureNetworkId() {
         return Optional.ofNullable(this.selectedTfoAzureNetworkId);
     }
+    /**
+     * The CPU count of the VM on the primary side.
+     * 
+     */
     public Optional<Integer> getSourceVmCpuCount() {
         return Optional.ofNullable(this.sourceVmCpuCount);
     }
+    /**
+     * The RAM size of the VM on the primary side.
+     * 
+     */
     public Optional<Integer> getSourceVmRamSizeInMB() {
         return Optional.ofNullable(this.sourceVmRamSizeInMB);
     }
+    /**
+     * The target availability zone.
+     * 
+     */
     public Optional<String> getTargetAvailabilityZone() {
         return Optional.ofNullable(this.targetAvailabilityZone);
     }
+    /**
+     * The target proximity placement group Id.
+     * 
+     */
     public Optional<String> getTargetProximityPlacementGroupId() {
         return Optional.ofNullable(this.targetProximityPlacementGroupId);
     }
+    /**
+     * The ARM Id of the target Azure VM. This value will be null until the VM is failed over. Only after failure it will be populated with the ARM Id of the Azure VM.
+     * 
+     */
     public Optional<String> getTargetVmId() {
         return Optional.ofNullable(this.targetVmId);
     }
+    /**
+     * The uncompressed data change rate in MB.
+     * 
+     */
     public Optional<Double> getUncompressedDataRateInMB() {
         return Optional.ofNullable(this.uncompressedDataRateInMB);
     }
+    /**
+     * A value indicating whether managed disks should be used during failover.
+     * 
+     */
     public Optional<String> getUseManagedDisks() {
         return Optional.ofNullable(this.useManagedDisks);
     }
+    /**
+     * The vCenter infrastructure Id.
+     * 
+     */
     public Optional<String> getVCenterInfrastructureId() {
         return Optional.ofNullable(this.vCenterInfrastructureId);
     }
+    /**
+     * The validation errors of the on-premise machine Value can be list of validation errors.
+     * 
+     */
     public List<HealthErrorResponse> getValidationErrors() {
         return this.validationErrors == null ? List.of() : this.validationErrors;
     }
+    /**
+     * The OS disk VHD name.
+     * 
+     */
     public Optional<String> getVhdName() {
         return Optional.ofNullable(this.vhdName);
     }
+    /**
+     * The virtual machine Id.
+     * 
+     */
     public Optional<String> getVmId() {
         return Optional.ofNullable(this.vmId);
     }
+    /**
+     * The PE Network details.
+     * 
+     */
     public List<VMNicDetailsResponse> getVmNics() {
         return this.vmNics == null ? List.of() : this.vmNics;
     }
+    /**
+     * The protection state for the vm.
+     * 
+     */
     public Optional<String> getVmProtectionState() {
         return Optional.ofNullable(this.vmProtectionState);
     }
+    /**
+     * The protection state description for the vm.
+     * 
+     */
     public Optional<String> getVmProtectionStateDescription() {
         return Optional.ofNullable(this.vmProtectionStateDescription);
     }

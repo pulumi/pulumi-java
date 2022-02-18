@@ -15,6 +15,10 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AccessPolicyArgs Empty = new AccessPolicyArgs();
 
+    /**
+     * The identity for this access policy. Choose either a user or a group but not both.
+     * 
+     */
     @InputImport(name="accessPolicyIdentity", required=true)
     private final Input<AccessPolicyIdentityArgs> accessPolicyIdentity;
 
@@ -22,6 +26,10 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.accessPolicyIdentity;
     }
 
+    /**
+     * The permission level for this access policy. Valid values are ADMINISTRATOR or VIEWER.
+     * 
+     */
     @InputImport(name="accessPolicyPermission", required=true)
     private final Input<String> accessPolicyPermission;
 
@@ -29,6 +37,10 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.accessPolicyPermission;
     }
 
+    /**
+     * The AWS IoT SiteWise Monitor resource for this access policy. Choose either portal or project but not both.
+     * 
+     */
     @InputImport(name="accessPolicyResource", required=true)
     private final Input<AccessPolicyResourceArgs> accessPolicyResource;
 

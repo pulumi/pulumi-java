@@ -12,8 +12,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EndpointSubset {
+    /**
+     * IP addresses which offer the related ports that are marked as ready. These endpoints should be considered safe for load balancers and clients to utilize.
+     * 
+     */
     private final @Nullable List<EndpointAddress> addresses;
+    /**
+     * IP addresses which offer the related ports but are not currently marked as ready because they have not yet finished starting, have recently failed a readiness check, or have recently failed a liveness check.
+     * 
+     */
     private final @Nullable List<EndpointAddress> notReadyAddresses;
+    /**
+     * Port numbers available on the related IP addresses.
+     * 
+     */
     private final @Nullable List<EndpointPort> ports;
 
     @OutputCustomType.Constructor({"addresses","notReadyAddresses","ports"})
@@ -26,12 +38,24 @@ public final class EndpointSubset {
         this.ports = ports;
     }
 
+    /**
+     * IP addresses which offer the related ports that are marked as ready. These endpoints should be considered safe for load balancers and clients to utilize.
+     * 
+     */
     public List<EndpointAddress> getAddresses() {
         return this.addresses == null ? List.of() : this.addresses;
     }
+    /**
+     * IP addresses which offer the related ports but are not currently marked as ready because they have not yet finished starting, have recently failed a readiness check, or have recently failed a liveness check.
+     * 
+     */
     public List<EndpointAddress> getNotReadyAddresses() {
         return this.notReadyAddresses == null ? List.of() : this.notReadyAddresses;
     }
+    /**
+     * Port numbers available on the related IP addresses.
+     * 
+     */
     public List<EndpointPort> getPorts() {
         return this.ports == null ? List.of() : this.ports;
     }

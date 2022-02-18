@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class VolumeDevice {
+    /**
+     * devicePath is the path inside of the container that the device will be mapped to.
+     * 
+     */
     private final String devicePath;
+    /**
+     * name must match the name of a persistentVolumeClaim in the pod
+     * 
+     */
     private final String name;
 
     @OutputCustomType.Constructor({"devicePath","name"})
@@ -20,9 +28,17 @@ public final class VolumeDevice {
         this.name = Objects.requireNonNull(name);
     }
 
+    /**
+     * devicePath is the path inside of the container that the device will be mapped to.
+     * 
+     */
     public String getDevicePath() {
         return this.devicePath;
     }
+    /**
+     * name must match the name of a persistentVolumeClaim in the pod
+     * 
+     */
     public String getName() {
         return this.name;
     }

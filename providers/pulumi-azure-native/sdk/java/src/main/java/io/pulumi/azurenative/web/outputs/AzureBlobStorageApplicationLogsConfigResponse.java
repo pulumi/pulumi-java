@@ -12,8 +12,22 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AzureBlobStorageApplicationLogsConfigResponse {
+    /**
+     * Log level.
+     * 
+     */
     private final @Nullable String level;
+    /**
+     * Retention in days.
+     * Remove blobs older than X days.
+     * 0 or lower means no retention.
+     * 
+     */
     private final @Nullable Integer retentionInDays;
+    /**
+     * SAS url to a azure blob container with read/write/list/delete permissions.
+     * 
+     */
     private final @Nullable String sasUrl;
 
     @OutputCustomType.Constructor({"level","retentionInDays","sasUrl"})
@@ -26,12 +40,26 @@ public final class AzureBlobStorageApplicationLogsConfigResponse {
         this.sasUrl = sasUrl;
     }
 
+    /**
+     * Log level.
+     * 
+     */
     public Optional<String> getLevel() {
         return Optional.ofNullable(this.level);
     }
+    /**
+     * Retention in days.
+     * Remove blobs older than X days.
+     * 0 or lower means no retention.
+     * 
+     */
     public Optional<Integer> getRetentionInDays() {
         return Optional.ofNullable(this.retentionInDays);
     }
+    /**
+     * SAS url to a azure blob container with read/write/list/delete permissions.
+     * 
+     */
     public Optional<String> getSasUrl() {
         return Optional.ofNullable(this.sasUrl);
     }

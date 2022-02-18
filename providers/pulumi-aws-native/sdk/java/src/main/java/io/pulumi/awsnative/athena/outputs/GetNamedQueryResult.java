@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetNamedQueryResult {
+    /**
+     * The unique ID of the query.
+     * 
+     */
     private final @Nullable String namedQueryId;
 
     @OutputCustomType.Constructor({"namedQueryId"})
@@ -18,6 +22,10 @@ public final class GetNamedQueryResult {
         this.namedQueryId = namedQueryId;
     }
 
+    /**
+     * The unique ID of the query.
+     * 
+     */
     public Optional<String> getNamedQueryId() {
         return Optional.ofNullable(this.namedQueryId);
     }

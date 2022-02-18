@@ -16,10 +16,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines NIC IP configuration properties.
+ * 
+ */
 public final class NicIpConfigurationResourceSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NicIpConfigurationResourceSettingsArgs Empty = new NicIpConfigurationResourceSettingsArgs();
 
+    /**
+     * Gets or sets the references of the load balancer backend address pools.
+     * 
+     */
     @InputImport(name="loadBalancerBackendAddressPools")
     private final @Nullable Input<List<LoadBalancerBackendAddressPoolReferenceArgs>> loadBalancerBackendAddressPools;
 
@@ -27,6 +35,10 @@ public final class NicIpConfigurationResourceSettingsArgs extends io.pulumi.reso
         return this.loadBalancerBackendAddressPools == null ? Input.empty() : this.loadBalancerBackendAddressPools;
     }
 
+    /**
+     * Gets or sets the references of the load balancer NAT rules.
+     * 
+     */
     @InputImport(name="loadBalancerNatRules")
     private final @Nullable Input<List<LoadBalancerNatRuleReferenceArgs>> loadBalancerNatRules;
 
@@ -34,6 +46,10 @@ public final class NicIpConfigurationResourceSettingsArgs extends io.pulumi.reso
         return this.loadBalancerNatRules == null ? Input.empty() : this.loadBalancerNatRules;
     }
 
+    /**
+     * Gets or sets the IP configuration name.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -41,6 +57,10 @@ public final class NicIpConfigurationResourceSettingsArgs extends io.pulumi.reso
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Gets or sets a value indicating whether this IP configuration is the primary.
+     * 
+     */
     @InputImport(name="primary")
     private final @Nullable Input<Boolean> primary;
 
@@ -48,6 +68,10 @@ public final class NicIpConfigurationResourceSettingsArgs extends io.pulumi.reso
         return this.primary == null ? Input.empty() : this.primary;
     }
 
+    /**
+     * Gets or sets the private IP address of the network interface IP Configuration.
+     * 
+     */
     @InputImport(name="privateIpAddress")
     private final @Nullable Input<String> privateIpAddress;
 
@@ -55,6 +79,10 @@ public final class NicIpConfigurationResourceSettingsArgs extends io.pulumi.reso
         return this.privateIpAddress == null ? Input.empty() : this.privateIpAddress;
     }
 
+    /**
+     * Gets or sets the private IP address allocation method.
+     * 
+     */
     @InputImport(name="privateIpAllocationMethod")
     private final @Nullable Input<String> privateIpAllocationMethod;
 
@@ -62,6 +90,10 @@ public final class NicIpConfigurationResourceSettingsArgs extends io.pulumi.reso
         return this.privateIpAllocationMethod == null ? Input.empty() : this.privateIpAllocationMethod;
     }
 
+    /**
+     * Defines reference to a public IP.
+     * 
+     */
     @InputImport(name="publicIp")
     private final @Nullable Input<PublicIpReferenceArgs> publicIp;
 
@@ -69,6 +101,10 @@ public final class NicIpConfigurationResourceSettingsArgs extends io.pulumi.reso
         return this.publicIp == null ? Input.empty() : this.publicIp;
     }
 
+    /**
+     * Defines reference to subnet.
+     * 
+     */
     @InputImport(name="subnet")
     private final @Nullable Input<SubnetReferenceArgs> subnet;
 

@@ -10,8 +10,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ContainerServiceCredentialsResponse {
+    /**
+     * The ACS kube config file.
+     * 
+     */
     private final String acsKubeConfig;
+    /**
+     * The ACR image pull secret name which was created in Kubernetes.
+     * 
+     */
     private final String imagePullSecretName;
+    /**
+     * Service principal configuration used by Kubernetes.
+     * 
+     */
     private final ServicePrincipalPropertiesResponse servicePrincipalConfiguration;
 
     @OutputCustomType.Constructor({"acsKubeConfig","imagePullSecretName","servicePrincipalConfiguration"})
@@ -24,12 +36,24 @@ public final class ContainerServiceCredentialsResponse {
         this.servicePrincipalConfiguration = Objects.requireNonNull(servicePrincipalConfiguration);
     }
 
+    /**
+     * The ACS kube config file.
+     * 
+     */
     public String getAcsKubeConfig() {
         return this.acsKubeConfig;
     }
+    /**
+     * The ACR image pull secret name which was created in Kubernetes.
+     * 
+     */
     public String getImagePullSecretName() {
         return this.imagePullSecretName;
     }
+    /**
+     * Service principal configuration used by Kubernetes.
+     * 
+     */
     public ServicePrincipalPropertiesResponse getServicePrincipalConfiguration() {
         return this.servicePrincipalConfiguration;
     }

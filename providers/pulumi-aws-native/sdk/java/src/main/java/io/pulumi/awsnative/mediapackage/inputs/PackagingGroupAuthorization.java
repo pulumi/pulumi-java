@@ -12,6 +12,10 @@ public final class PackagingGroupAuthorization extends io.pulumi.resources.Invok
 
     public static final PackagingGroupAuthorization Empty = new PackagingGroupAuthorization();
 
+    /**
+     * The Amazon Resource Name (ARN) for the secret in AWS Secrets Manager that is used for CDN authorization.
+     * 
+     */
     @InputImport(name="cdnIdentifierSecret", required=true)
     private final String cdnIdentifierSecret;
 
@@ -19,6 +23,10 @@ public final class PackagingGroupAuthorization extends io.pulumi.resources.Invok
         return this.cdnIdentifierSecret;
     }
 
+    /**
+     * The Amazon Resource Name (ARN) for the IAM role that allows MediaPackage to communicate with AWS Secrets Manager.
+     * 
+     */
     @InputImport(name="secretsRoleArn", required=true)
     private final String secretsRoleArn;
 

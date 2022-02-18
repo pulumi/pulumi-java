@@ -9,8 +9,21 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReference {
+    /**
+     * Dataset ID of the table.
+     * 
+     */
     private final String datasetId;
+    /**
+     * The Google Cloud Platform project ID of the project containing the table.
+     * 
+     */
     private final String projectId;
+    /**
+     * Name of the table. If is not set a new one will be generated for you with the following format:
+     * `dlp_googleapis_yyyy_mm_dd_[dlp_job_id]`. Pacific timezone will be used for generating the date details.
+     * 
+     */
     private final String tableId;
 
     @OutputCustomType.Constructor({"datasetId","projectId","tableId"})
@@ -23,12 +36,25 @@ public final class PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTab
         this.tableId = Objects.requireNonNull(tableId);
     }
 
+    /**
+     * Dataset ID of the table.
+     * 
+     */
     public String getDatasetId() {
         return this.datasetId;
     }
+    /**
+     * The Google Cloud Platform project ID of the project containing the table.
+     * 
+     */
     public String getProjectId() {
         return this.projectId;
     }
+    /**
+     * Name of the table. If is not set a new one will be generated for you with the following format:
+     * `dlp_googleapis_yyyy_mm_dd_[dlp_job_id]`. Pacific timezone will be used for generating the date details.
+     * 
+     */
     public String getTableId() {
         return this.tableId;
     }

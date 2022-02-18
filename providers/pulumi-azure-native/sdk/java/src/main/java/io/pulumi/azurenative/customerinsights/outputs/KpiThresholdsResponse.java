@@ -10,8 +10,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class KpiThresholdsResponse {
+    /**
+     * Whether or not the KPI is an increasing KPI.
+     * 
+     */
     private final Boolean increasingKpi;
+    /**
+     * The lower threshold limit.
+     * 
+     */
     private final Double lowerLimit;
+    /**
+     * The upper threshold limit.
+     * 
+     */
     private final Double upperLimit;
 
     @OutputCustomType.Constructor({"increasingKpi","lowerLimit","upperLimit"})
@@ -24,12 +36,24 @@ public final class KpiThresholdsResponse {
         this.upperLimit = Objects.requireNonNull(upperLimit);
     }
 
+    /**
+     * Whether or not the KPI is an increasing KPI.
+     * 
+     */
     public Boolean getIncreasingKpi() {
         return this.increasingKpi;
     }
+    /**
+     * The lower threshold limit.
+     * 
+     */
     public Double getLowerLimit() {
         return this.lowerLimit;
     }
+    /**
+     * The upper threshold limit.
+     * 
+     */
     public Double getUpperLimit() {
         return this.upperLimit;
     }

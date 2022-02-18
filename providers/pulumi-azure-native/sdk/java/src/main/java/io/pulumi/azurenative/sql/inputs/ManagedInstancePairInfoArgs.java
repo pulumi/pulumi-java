@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Pairs of Managed Instances in the failover group.
+ * 
+ */
 public final class ManagedInstancePairInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagedInstancePairInfoArgs Empty = new ManagedInstancePairInfoArgs();
 
+    /**
+     * Id of Partner Managed Instance in pair.
+     * 
+     */
     @InputImport(name="partnerManagedInstanceId")
     private final @Nullable Input<String> partnerManagedInstanceId;
 
@@ -21,6 +29,10 @@ public final class ManagedInstancePairInfoArgs extends io.pulumi.resources.Resou
         return this.partnerManagedInstanceId == null ? Input.empty() : this.partnerManagedInstanceId;
     }
 
+    /**
+     * Id of Primary Managed Instance in pair.
+     * 
+     */
     @InputImport(name="primaryManagedInstanceId")
     private final @Nullable Input<String> primaryManagedInstanceId;
 

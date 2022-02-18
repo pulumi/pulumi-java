@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class IntegrationServiceEnvironmentAccessEndpointResponse {
+    /**
+     * The access endpoint type.
+     * 
+     */
     private final @Nullable String type;
 
     @OutputCustomType.Constructor({"type"})
@@ -18,6 +22,10 @@ public final class IntegrationServiceEnvironmentAccessEndpointResponse {
         this.type = type;
     }
 
+    /**
+     * The access endpoint type.
+     * 
+     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

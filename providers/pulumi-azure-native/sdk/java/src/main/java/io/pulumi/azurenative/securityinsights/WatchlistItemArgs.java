@@ -17,6 +17,10 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WatchlistItemArgs Empty = new WatchlistItemArgs();
 
+    /**
+     * The time the watchlist item was created
+     * 
+     */
     @InputImport(name="created")
     private final @Nullable Input<String> created;
 
@@ -24,6 +28,10 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
         return this.created == null ? Input.empty() : this.created;
     }
 
+    /**
+     * Describes a user that created the watchlist item
+     * 
+     */
     @InputImport(name="createdBy")
     private final @Nullable Input<WatchlistUserInfoArgs> createdBy;
 
@@ -31,6 +39,10 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
         return this.createdBy == null ? Input.empty() : this.createdBy;
     }
 
+    /**
+     * key-value pairs for a watchlist item entity mapping
+     * 
+     */
     @InputImport(name="entityMapping")
     private final @Nullable Input<Object> entityMapping;
 
@@ -38,6 +50,10 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
         return this.entityMapping == null ? Input.empty() : this.entityMapping;
     }
 
+    /**
+     * A flag that indicates if the watchlist item is deleted or not
+     * 
+     */
     @InputImport(name="isDeleted")
     private final @Nullable Input<Boolean> isDeleted;
 
@@ -45,6 +61,10 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
         return this.isDeleted == null ? Input.empty() : this.isDeleted;
     }
 
+    /**
+     * key-value pairs for a watchlist item
+     * 
+     */
     @InputImport(name="itemsKeyValue", required=true)
     private final Input<Object> itemsKeyValue;
 
@@ -52,6 +72,10 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
         return this.itemsKeyValue;
     }
 
+    /**
+     * The namespace of workspaces resource provider- Microsoft.OperationalInsights.
+     * 
+     */
     @InputImport(name="operationalInsightsResourceProvider", required=true)
     private final Input<String> operationalInsightsResourceProvider;
 
@@ -59,6 +83,10 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
         return this.operationalInsightsResourceProvider;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -66,6 +94,10 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The tenantId to which the watchlist item belongs to
+     * 
+     */
     @InputImport(name="tenantId")
     private final @Nullable Input<String> tenantId;
 
@@ -73,6 +105,10 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
         return this.tenantId == null ? Input.empty() : this.tenantId;
     }
 
+    /**
+     * The last time the watchlist item was updated
+     * 
+     */
     @InputImport(name="updated")
     private final @Nullable Input<String> updated;
 
@@ -80,6 +116,10 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
         return this.updated == null ? Input.empty() : this.updated;
     }
 
+    /**
+     * Describes a user that updated the watchlist item
+     * 
+     */
     @InputImport(name="updatedBy")
     private final @Nullable Input<WatchlistUserInfoArgs> updatedBy;
 
@@ -87,6 +127,10 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
         return this.updatedBy == null ? Input.empty() : this.updatedBy;
     }
 
+    /**
+     * Watchlist Alias
+     * 
+     */
     @InputImport(name="watchlistAlias", required=true)
     private final Input<String> watchlistAlias;
 
@@ -94,6 +138,10 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
         return this.watchlistAlias;
     }
 
+    /**
+     * The id (a Guid) of the watchlist item
+     * 
+     */
     @InputImport(name="watchlistItemId")
     private final @Nullable Input<String> watchlistItemId;
 
@@ -101,6 +149,10 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
         return this.watchlistItemId == null ? Input.empty() : this.watchlistItemId;
     }
 
+    /**
+     * The type of the watchlist item
+     * 
+     */
     @InputImport(name="watchlistItemType")
     private final @Nullable Input<String> watchlistItemType;
 
@@ -108,6 +160,10 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
         return this.watchlistItemType == null ? Input.empty() : this.watchlistItemType;
     }
 
+    /**
+     * The name of the workspace.
+     * 
+     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

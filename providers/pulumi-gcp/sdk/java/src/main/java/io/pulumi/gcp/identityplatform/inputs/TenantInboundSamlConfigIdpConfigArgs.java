@@ -17,6 +17,11 @@ public final class TenantInboundSamlConfigIdpConfigArgs extends io.pulumi.resour
 
     public static final TenantInboundSamlConfigIdpConfigArgs Empty = new TenantInboundSamlConfigIdpConfigArgs();
 
+    /**
+     * The IDP's certificate data to verify the signature in the SAMLResponse issued by the IDP.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="idpCertificates", required=true)
     private final Input<List<TenantInboundSamlConfigIdpConfigIdpCertificateArgs>> idpCertificates;
 
@@ -24,6 +29,10 @@ public final class TenantInboundSamlConfigIdpConfigArgs extends io.pulumi.resour
         return this.idpCertificates;
     }
 
+    /**
+     * Unique identifier for all SAML entities
+     * 
+     */
     @InputImport(name="idpEntityId", required=true)
     private final Input<String> idpEntityId;
 
@@ -31,6 +40,10 @@ public final class TenantInboundSamlConfigIdpConfigArgs extends io.pulumi.resour
         return this.idpEntityId;
     }
 
+    /**
+     * Indicates if outbounding SAMLRequest should be signed.
+     * 
+     */
     @InputImport(name="signRequest")
     private final @Nullable Input<Boolean> signRequest;
 
@@ -38,6 +51,10 @@ public final class TenantInboundSamlConfigIdpConfigArgs extends io.pulumi.resour
         return this.signRequest == null ? Input.empty() : this.signRequest;
     }
 
+    /**
+     * URL to send Authentication request to.
+     * 
+     */
     @InputImport(name="ssoUrl", required=true)
     private final Input<String> ssoUrl;
 

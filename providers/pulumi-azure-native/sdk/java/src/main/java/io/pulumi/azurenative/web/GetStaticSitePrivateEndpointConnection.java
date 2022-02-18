@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetStaticSitePrivateEndpointConnection {
+/**
+ * Remote Private Endpoint Connection ARM resource.
+ * API Version: 2020-12-01.
+ * 
+ *
+ * Remote Private Endpoint Connection ARM resource.
+ * 
+ */
     public static CompletableFuture<GetStaticSitePrivateEndpointConnectionResult> invokeAsync(GetStaticSitePrivateEndpointConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getStaticSitePrivateEndpointConnection", TypeShape.of(GetStaticSitePrivateEndpointConnectionResult.class), args == null ? GetStaticSitePrivateEndpointConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -16,6 +16,10 @@ public final class ApiDestinationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApiDestinationArgs Empty = new ApiDestinationArgs();
 
+    /**
+     * The arn of the connection.
+     * 
+     */
     @InputImport(name="connectionArn", required=true)
     private final Input<String> connectionArn;
 
@@ -37,6 +41,10 @@ public final class ApiDestinationArgs extends io.pulumi.resources.ResourceArgs {
         return this.httpMethod;
     }
 
+    /**
+     * Url endpoint to invoke.
+     * 
+     */
     @InputImport(name="invocationEndpoint", required=true)
     private final Input<String> invocationEndpoint;
 
@@ -51,6 +59,10 @@ public final class ApiDestinationArgs extends io.pulumi.resources.ResourceArgs {
         return this.invocationRateLimitPerSecond == null ? Input.empty() : this.invocationRateLimitPerSecond;
     }
 
+    /**
+     * Name of the apiDestination.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

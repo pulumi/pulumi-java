@@ -13,6 +13,10 @@ public final class ConnectorProfileSnowflakeConnectorProfileCredentialsArgs exte
 
     public static final ConnectorProfileSnowflakeConnectorProfileCredentialsArgs Empty = new ConnectorProfileSnowflakeConnectorProfileCredentialsArgs();
 
+    /**
+     * The password that corresponds to the username.
+     * 
+     */
     @InputImport(name="password", required=true)
     private final Input<String> password;
 
@@ -20,6 +24,10 @@ public final class ConnectorProfileSnowflakeConnectorProfileCredentialsArgs exte
         return this.password;
     }
 
+    /**
+     * The name of the user.
+     * 
+     */
     @InputImport(name="username", required=true)
     private final Input<String> username;
 

@@ -15,10 +15,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class BucketIntelligentTieringConfiguration {
+    /**
+     * The ID used to identify the S3 Intelligent-Tiering configuration.
+     * 
+     */
     private final String id;
+    /**
+     * An object key name prefix that identifies the subset of objects to which the rule applies.
+     * 
+     */
     private final @Nullable String prefix;
+    /**
+     * Specifies the status of the configuration.
+     * 
+     */
     private final BucketIntelligentTieringConfigurationStatus status;
+    /**
+     * A container for a key-value pair.
+     * 
+     */
     private final @Nullable List<BucketTagFilter> tagFilters;
+    /**
+     * Specifies a list of S3 Intelligent-Tiering storage class tiers in the configuration. At least one tier must be defined in the list. At most, you can specify two tiers in the list, one for each available AccessTier: ARCHIVE_ACCESS and DEEP_ARCHIVE_ACCESS.
+     * 
+     */
     private final List<BucketTiering> tierings;
 
     @OutputCustomType.Constructor({"id","prefix","status","tagFilters","tierings"})
@@ -35,18 +55,38 @@ public final class BucketIntelligentTieringConfiguration {
         this.tierings = Objects.requireNonNull(tierings);
     }
 
+    /**
+     * The ID used to identify the S3 Intelligent-Tiering configuration.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * An object key name prefix that identifies the subset of objects to which the rule applies.
+     * 
+     */
     public Optional<String> getPrefix() {
         return Optional.ofNullable(this.prefix);
     }
+    /**
+     * Specifies the status of the configuration.
+     * 
+     */
     public BucketIntelligentTieringConfigurationStatus getStatus() {
         return this.status;
     }
+    /**
+     * A container for a key-value pair.
+     * 
+     */
     public List<BucketTagFilter> getTagFilters() {
         return this.tagFilters == null ? List.of() : this.tagFilters;
     }
+    /**
+     * Specifies a list of S3 Intelligent-Tiering storage class tiers in the configuration. At least one tier must be defined in the list. At most, you can specify two tiers in the list, one for each available AccessTier: ARCHIVE_ACCESS and DEEP_ARCHIVE_ACCESS.
+     * 
+     */
     public List<BucketTiering> getTierings() {
         return this.tierings;
     }

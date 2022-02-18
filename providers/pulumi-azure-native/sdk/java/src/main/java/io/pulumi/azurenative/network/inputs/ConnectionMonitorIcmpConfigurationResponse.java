@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes the ICMP configuration.
+ * 
+ */
 public final class ConnectionMonitorIcmpConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConnectionMonitorIcmpConfigurationResponse Empty = new ConnectionMonitorIcmpConfigurationResponse();
 
+    /**
+     * Value indicating whether path evaluation with trace route should be disabled.
+     * 
+     */
     @InputImport(name="disableTraceRoute")
     private final @Nullable Boolean disableTraceRoute;
 

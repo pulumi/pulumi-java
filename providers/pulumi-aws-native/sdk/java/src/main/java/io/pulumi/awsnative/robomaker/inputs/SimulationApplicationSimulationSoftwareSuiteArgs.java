@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Information about a simulation software suite.
+ * 
+ */
 public final class SimulationApplicationSimulationSoftwareSuiteArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SimulationApplicationSimulationSoftwareSuiteArgs Empty = new SimulationApplicationSimulationSoftwareSuiteArgs();
 
+    /**
+     * The name of the simulation software suite.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<SimulationApplicationSimulationSoftwareSuiteName> name;
 
@@ -22,6 +30,10 @@ public final class SimulationApplicationSimulationSoftwareSuiteArgs extends io.p
         return this.name;
     }
 
+    /**
+     * The version of the simulation software suite.
+     * 
+     */
     @InputImport(name="version")
     private final @Nullable Input<SimulationApplicationSimulationSoftwareSuiteVersion> version;
 

@@ -6,6 +6,10 @@ package io.pulumi.awsnative.wafv2.inputs;
 import java.util.Objects;
 
 
+/**
+ * Custom response key and body map.
+ * 
+ */
 public final class RuleGroupCustomResponseBodies extends io.pulumi.resources.InvokeArgs {
 
     public static final RuleGroupCustomResponseBodies Empty = new RuleGroupCustomResponseBodies();

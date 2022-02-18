@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MonitoringScheduleScheduleConfig {
+    /**
+     * A cron expression that describes details about the monitoring schedule.
+     * 
+     */
     private final String scheduleExpression;
 
     @OutputCustomType.Constructor({"scheduleExpression"})
@@ -16,6 +20,10 @@ public final class MonitoringScheduleScheduleConfig {
         this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
     }
 
+    /**
+     * A cron expression that describes details about the monitoring schedule.
+     * 
+     */
     public String getScheduleExpression() {
         return this.scheduleExpression;
     }

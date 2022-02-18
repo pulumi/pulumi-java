@@ -15,6 +15,11 @@ public final class AppProfileSingleClusterRoutingGetArgs extends io.pulumi.resou
 
     public static final AppProfileSingleClusterRoutingGetArgs Empty = new AppProfileSingleClusterRoutingGetArgs();
 
+    /**
+     * If true, CheckAndMutateRow and ReadModifyWriteRow requests are allowed by this app profile.
+     * It is unsafe to send these requests to the same table/row/column in multiple clusters.
+     * 
+     */
     @InputImport(name="allowTransactionalWrites")
     private final @Nullable Input<Boolean> allowTransactionalWrites;
 
@@ -22,6 +27,10 @@ public final class AppProfileSingleClusterRoutingGetArgs extends io.pulumi.resou
         return this.allowTransactionalWrites == null ? Input.empty() : this.allowTransactionalWrites;
     }
 
+    /**
+     * The cluster to which read/write requests should be routed.
+     * 
+     */
     @InputImport(name="clusterId", required=true)
     private final Input<String> clusterId;
 

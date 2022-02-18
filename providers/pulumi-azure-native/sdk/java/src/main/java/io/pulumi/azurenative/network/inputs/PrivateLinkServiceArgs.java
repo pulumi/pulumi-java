@@ -18,10 +18,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Private link service resource.
+ * 
+ */
 public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PrivateLinkServiceArgs Empty = new PrivateLinkServiceArgs();
 
+    /**
+     * The auto-approval list of the private link service.
+     * 
+     */
     @InputImport(name="autoApproval")
     private final @Nullable Input<PrivateLinkServicePropertiesAutoApprovalArgs> autoApproval;
 
@@ -29,6 +37,10 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
         return this.autoApproval == null ? Input.empty() : this.autoApproval;
     }
 
+    /**
+     * Whether the private link service is enabled for proxy protocol or not.
+     * 
+     */
     @InputImport(name="enableProxyProtocol")
     private final @Nullable Input<Boolean> enableProxyProtocol;
 
@@ -36,6 +48,10 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
         return this.enableProxyProtocol == null ? Input.empty() : this.enableProxyProtocol;
     }
 
+    /**
+     * The extended location of the load balancer.
+     * 
+     */
     @InputImport(name="extendedLocation")
     private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
 
@@ -43,6 +59,10 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
         return this.extendedLocation == null ? Input.empty() : this.extendedLocation;
     }
 
+    /**
+     * The list of Fqdn.
+     * 
+     */
     @InputImport(name="fqdns")
     private final @Nullable Input<List<String>> fqdns;
 
@@ -50,6 +70,10 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
         return this.fqdns == null ? Input.empty() : this.fqdns;
     }
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -57,6 +81,10 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * An array of private link service IP configurations.
+     * 
+     */
     @InputImport(name="ipConfigurations")
     private final @Nullable Input<List<PrivateLinkServiceIpConfigurationArgs>> ipConfigurations;
 
@@ -64,6 +92,10 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
         return this.ipConfigurations == null ? Input.empty() : this.ipConfigurations;
     }
 
+    /**
+     * An array of references to the load balancer IP configurations.
+     * 
+     */
     @InputImport(name="loadBalancerFrontendIpConfigurations")
     private final @Nullable Input<List<FrontendIPConfigurationArgs>> loadBalancerFrontendIpConfigurations;
 
@@ -71,6 +103,10 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
         return this.loadBalancerFrontendIpConfigurations == null ? Input.empty() : this.loadBalancerFrontendIpConfigurations;
     }
 
+    /**
+     * Resource location.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -78,6 +114,10 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -85,6 +125,10 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The visibility list of the private link service.
+     * 
+     */
     @InputImport(name="visibility")
     private final @Nullable Input<PrivateLinkServicePropertiesVisibilityArgs> visibility;
 

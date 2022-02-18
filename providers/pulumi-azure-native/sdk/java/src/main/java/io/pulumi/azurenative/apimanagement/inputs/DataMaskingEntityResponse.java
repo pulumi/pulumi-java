@@ -14,6 +14,10 @@ public final class DataMaskingEntityResponse extends io.pulumi.resources.InvokeA
 
     public static final DataMaskingEntityResponse Empty = new DataMaskingEntityResponse();
 
+    /**
+     * Data masking mode.
+     * 
+     */
     @InputImport(name="mode")
     private final @Nullable String mode;
 
@@ -21,6 +25,10 @@ public final class DataMaskingEntityResponse extends io.pulumi.resources.InvokeA
         return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
     }
 
+    /**
+     * The name of an entity to mask (e.g. a name of a header or a query parameter).
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable String value;
 

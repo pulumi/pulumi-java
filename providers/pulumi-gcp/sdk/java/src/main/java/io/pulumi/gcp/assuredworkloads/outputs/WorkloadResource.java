@@ -12,7 +12,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class WorkloadResource {
+    /**
+     * Resource identifier. For a project this represents project_number. If the project is already taken, the workload creation will fail.
+     * 
+     */
     private final @Nullable Integer resourceId;
+    /**
+     * Indicates the type of resource. This field should be specified to correspond the id to the right project type (CONSUMER_PROJECT or ENCRYPTION_KEYS_PROJECT) Possible values: RESOURCE_TYPE_UNSPECIFIED, CONSUMER_PROJECT, ENCRYPTION_KEYS_PROJECT, KEYRING, CONSUMER_FOLDER
+     * 
+     */
     private final @Nullable String resourceType;
 
     @OutputCustomType.Constructor({"resourceId","resourceType"})
@@ -23,9 +31,17 @@ public final class WorkloadResource {
         this.resourceType = resourceType;
     }
 
+    /**
+     * Resource identifier. For a project this represents project_number. If the project is already taken, the workload creation will fail.
+     * 
+     */
     public Optional<Integer> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }
+    /**
+     * Indicates the type of resource. This field should be specified to correspond the id to the right project type (CONSUMER_PROJECT or ENCRYPTION_KEYS_PROJECT) Possible values: RESOURCE_TYPE_UNSPECIFIED, CONSUMER_PROJECT, ENCRYPTION_KEYS_PROJECT, KEYRING, CONSUMER_FOLDER
+     * 
+     */
     public Optional<String> getPropResourceType() {
         return Optional.ofNullable(this.resourceType);
     }

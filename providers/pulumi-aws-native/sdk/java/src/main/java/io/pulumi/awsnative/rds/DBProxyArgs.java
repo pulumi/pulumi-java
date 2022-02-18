@@ -20,6 +20,10 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DBProxyArgs Empty = new DBProxyArgs();
 
+    /**
+     * The authorization mechanism that the proxy uses.
+     * 
+     */
     @InputImport(name="auth", required=true)
     private final Input<List<DBProxyAuthFormatArgs>> auth;
 
@@ -27,6 +31,10 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
         return this.auth;
     }
 
+    /**
+     * The identifier for the proxy. This name must be unique for all proxies owned by your AWS account in the specified AWS Region.
+     * 
+     */
     @InputImport(name="dBProxyName")
     private final @Nullable Input<String> dBProxyName;
 
@@ -34,6 +42,10 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
         return this.dBProxyName == null ? Input.empty() : this.dBProxyName;
     }
 
+    /**
+     * Whether the proxy includes detailed information about SQL statements in its logs.
+     * 
+     */
     @InputImport(name="debugLogging")
     private final @Nullable Input<Boolean> debugLogging;
 
@@ -41,6 +53,10 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
         return this.debugLogging == null ? Input.empty() : this.debugLogging;
     }
 
+    /**
+     * The kinds of databases that the proxy can connect to.
+     * 
+     */
     @InputImport(name="engineFamily", required=true)
     private final Input<DBProxyEngineFamily> engineFamily;
 
@@ -48,6 +64,10 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
         return this.engineFamily;
     }
 
+    /**
+     * The number of seconds that a connection to the proxy can be inactive before the proxy disconnects it.
+     * 
+     */
     @InputImport(name="idleClientTimeout")
     private final @Nullable Input<Integer> idleClientTimeout;
 
@@ -55,6 +75,10 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
         return this.idleClientTimeout == null ? Input.empty() : this.idleClientTimeout;
     }
 
+    /**
+     * A Boolean parameter that specifies whether Transport Layer Security (TLS) encryption is required for connections to the proxy.
+     * 
+     */
     @InputImport(name="requireTLS")
     private final @Nullable Input<Boolean> requireTLS;
 
@@ -62,6 +86,10 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
         return this.requireTLS == null ? Input.empty() : this.requireTLS;
     }
 
+    /**
+     * The Amazon Resource Name (ARN) of the IAM role that the proxy uses to access secrets in AWS Secrets Manager.
+     * 
+     */
     @InputImport(name="roleArn", required=true)
     private final Input<String> roleArn;
 
@@ -69,6 +97,10 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
         return this.roleArn;
     }
 
+    /**
+     * An optional set of key-value pairs to associate arbitrary data of your choosing with the proxy.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<DBProxyTagFormatArgs>> tags;
 
@@ -76,6 +108,10 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * VPC security group IDs to associate with the new proxy.
+     * 
+     */
     @InputImport(name="vpcSecurityGroupIds")
     private final @Nullable Input<List<String>> vpcSecurityGroupIds;
 
@@ -83,6 +119,10 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
         return this.vpcSecurityGroupIds == null ? Input.empty() : this.vpcSecurityGroupIds;
     }
 
+    /**
+     * VPC subnet IDs to associate with the new proxy.
+     * 
+     */
     @InputImport(name="vpcSubnetIds", required=true)
     private final Input<List<String>> vpcSubnetIds;
 

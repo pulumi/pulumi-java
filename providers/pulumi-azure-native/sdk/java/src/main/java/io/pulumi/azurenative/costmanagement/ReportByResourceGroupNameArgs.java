@@ -19,6 +19,10 @@ public final class ReportByResourceGroupNameArgs extends io.pulumi.resources.Res
 
     public static final ReportByResourceGroupNameArgs Empty = new ReportByResourceGroupNameArgs();
 
+    /**
+     * Has definition for the report.
+     * 
+     */
     @InputImport(name="definition", required=true)
     private final Input<ReportDefinitionArgs> definition;
 
@@ -26,6 +30,10 @@ public final class ReportByResourceGroupNameArgs extends io.pulumi.resources.Res
         return this.definition;
     }
 
+    /**
+     * Has delivery information for the report.
+     * 
+     */
     @InputImport(name="deliveryInfo", required=true)
     private final Input<ReportDeliveryInfoArgs> deliveryInfo;
 
@@ -33,6 +41,10 @@ public final class ReportByResourceGroupNameArgs extends io.pulumi.resources.Res
         return this.deliveryInfo;
     }
 
+    /**
+     * The format of the report being delivered.
+     * 
+     */
     @InputImport(name="format")
     private final @Nullable Input<Either<String,FormatType>> format;
 
@@ -40,6 +52,10 @@ public final class ReportByResourceGroupNameArgs extends io.pulumi.resources.Res
         return this.format == null ? Input.empty() : this.format;
     }
 
+    /**
+     * Report Name.
+     * 
+     */
     @InputImport(name="reportName")
     private final @Nullable Input<String> reportName;
 
@@ -47,6 +63,10 @@ public final class ReportByResourceGroupNameArgs extends io.pulumi.resources.Res
         return this.reportName == null ? Input.empty() : this.reportName;
     }
 
+    /**
+     * Azure Resource Group Name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -54,6 +74,10 @@ public final class ReportByResourceGroupNameArgs extends io.pulumi.resources.Res
         return this.resourceGroupName;
     }
 
+    /**
+     * Has schedule information for the report.
+     * 
+     */
     @InputImport(name="schedule")
     private final @Nullable Input<ReportScheduleArgs> schedule;
 

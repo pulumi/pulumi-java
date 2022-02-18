@@ -21,6 +21,10 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * An entity that defines the scope of audit evidence collected by AWS Audit Manager.
+ * 
+ */
 @ResourceType(type="aws-native:auditmanager:Assessment")
 public class Assessment extends io.pulumi.resources.CustomResource {
     @OutputExport(name="arn", type=String.class, parameters={})
@@ -53,9 +57,17 @@ public class Assessment extends io.pulumi.resources.CustomResource {
     public Output<Double> getCreationTime() {
         return this.creationTime;
     }
+    /**
+     * The list of delegations.
+     * 
+     */
     @OutputExport(name="delegations", type=List.class, parameters={AssessmentDelegation.class})
     private Output<List<AssessmentDelegation>> delegations;
 
+    /**
+     * @return The list of delegations.
+     * 
+     */
     public Output<List<AssessmentDelegation>> getDelegations() {
         return this.delegations;
     }
@@ -77,9 +89,17 @@ public class Assessment extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
+    /**
+     * The list of roles for the specified assessment.
+     * 
+     */
     @OutputExport(name="roles", type=List.class, parameters={AssessmentRole.class})
     private Output</* @Nullable */ List<AssessmentRole>> roles;
 
+    /**
+     * @return The list of roles for the specified assessment.
+     * 
+     */
     public Output</* @Nullable */ List<AssessmentRole>> getRoles() {
         return this.roles;
     }
@@ -95,13 +115,27 @@ public class Assessment extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ AssessmentStatus> getStatus() {
         return this.status;
     }
+    /**
+     * The tags associated with the assessment.
+     * 
+     */
     @OutputExport(name="tags", type=List.class, parameters={AssessmentTag.class})
     private Output</* @Nullable */ List<AssessmentTag>> tags;
 
+    /**
+     * @return The tags associated with the assessment.
+     * 
+     */
     public Output</* @Nullable */ List<AssessmentTag>> getTags() {
         return this.tags;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Assessment(String name, @Nullable AssessmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:auditmanager:Assessment", name, args == null ? AssessmentArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -117,6 +151,14 @@ public class Assessment extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Assessment get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Assessment(name, id, options);
     }

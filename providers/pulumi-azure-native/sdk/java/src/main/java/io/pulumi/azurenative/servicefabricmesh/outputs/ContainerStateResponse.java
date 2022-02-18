@@ -11,10 +11,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ContainerStateResponse {
+    /**
+     * Human-readable status of this state.
+     * 
+     */
     private final @Nullable String detailStatus;
+    /**
+     * The container exit code.
+     * 
+     */
     private final @Nullable String exitCode;
+    /**
+     * Date/time when the container state finished.
+     * 
+     */
     private final @Nullable String finishTime;
+    /**
+     * Date/time when the container state started.
+     * 
+     */
     private final @Nullable String startTime;
+    /**
+     * The state of this container
+     * 
+     */
     private final @Nullable String state;
 
     @OutputCustomType.Constructor({"detailStatus","exitCode","finishTime","startTime","state"})
@@ -31,18 +51,38 @@ public final class ContainerStateResponse {
         this.state = state;
     }
 
+    /**
+     * Human-readable status of this state.
+     * 
+     */
     public Optional<String> getDetailStatus() {
         return Optional.ofNullable(this.detailStatus);
     }
+    /**
+     * The container exit code.
+     * 
+     */
     public Optional<String> getExitCode() {
         return Optional.ofNullable(this.exitCode);
     }
+    /**
+     * Date/time when the container state finished.
+     * 
+     */
     public Optional<String> getFinishTime() {
         return Optional.ofNullable(this.finishTime);
     }
+    /**
+     * Date/time when the container state started.
+     * 
+     */
     public Optional<String> getStartTime() {
         return Optional.ofNullable(this.startTime);
     }
+    /**
+     * The state of this container
+     * 
+     */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }

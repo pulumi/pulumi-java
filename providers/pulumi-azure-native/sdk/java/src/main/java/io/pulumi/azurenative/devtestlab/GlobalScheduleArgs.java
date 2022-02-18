@@ -21,6 +21,10 @@ public final class GlobalScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GlobalScheduleArgs Empty = new GlobalScheduleArgs();
 
+    /**
+     * If the schedule will occur once each day of the week, specify the daily recurrence.
+     * 
+     */
     @InputImport(name="dailyRecurrence")
     private final @Nullable Input<DayDetailsArgs> dailyRecurrence;
 
@@ -28,6 +32,10 @@ public final class GlobalScheduleArgs extends io.pulumi.resources.ResourceArgs {
         return this.dailyRecurrence == null ? Input.empty() : this.dailyRecurrence;
     }
 
+    /**
+     * If the schedule will occur multiple times a day, specify the hourly recurrence.
+     * 
+     */
     @InputImport(name="hourlyRecurrence")
     private final @Nullable Input<HourDetailsArgs> hourlyRecurrence;
 
@@ -35,6 +43,10 @@ public final class GlobalScheduleArgs extends io.pulumi.resources.ResourceArgs {
         return this.hourlyRecurrence == null ? Input.empty() : this.hourlyRecurrence;
     }
 
+    /**
+     * The location of the resource.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -42,6 +54,10 @@ public final class GlobalScheduleArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the schedule.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -49,6 +65,10 @@ public final class GlobalScheduleArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Notification settings.
+     * 
+     */
     @InputImport(name="notificationSettings")
     private final @Nullable Input<NotificationSettingsArgs> notificationSettings;
 
@@ -56,6 +76,10 @@ public final class GlobalScheduleArgs extends io.pulumi.resources.ResourceArgs {
         return this.notificationSettings == null ? Input.empty() : this.notificationSettings;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -63,6 +87,10 @@ public final class GlobalScheduleArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The status of the schedule (i.e. Enabled, Disabled)
+     * 
+     */
     @InputImport(name="status")
     private final @Nullable Input<Either<String,EnableStatus>> status;
 
@@ -70,6 +98,10 @@ public final class GlobalScheduleArgs extends io.pulumi.resources.ResourceArgs {
         return this.status == null ? Input.empty() : this.status;
     }
 
+    /**
+     * The tags of the resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -77,6 +109,10 @@ public final class GlobalScheduleArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The resource ID to which the schedule belongs
+     * 
+     */
     @InputImport(name="targetResourceId")
     private final @Nullable Input<String> targetResourceId;
 
@@ -84,6 +120,10 @@ public final class GlobalScheduleArgs extends io.pulumi.resources.ResourceArgs {
         return this.targetResourceId == null ? Input.empty() : this.targetResourceId;
     }
 
+    /**
+     * The task type of the schedule (e.g. LabVmsShutdownTask, LabVmAutoStart).
+     * 
+     */
     @InputImport(name="taskType")
     private final @Nullable Input<String> taskType;
 
@@ -91,6 +131,10 @@ public final class GlobalScheduleArgs extends io.pulumi.resources.ResourceArgs {
         return this.taskType == null ? Input.empty() : this.taskType;
     }
 
+    /**
+     * The time zone ID (e.g. Pacific Standard time).
+     * 
+     */
     @InputImport(name="timeZoneId")
     private final @Nullable Input<String> timeZoneId;
 
@@ -98,6 +142,10 @@ public final class GlobalScheduleArgs extends io.pulumi.resources.ResourceArgs {
         return this.timeZoneId == null ? Input.empty() : this.timeZoneId;
     }
 
+    /**
+     * If the schedule will occur only some days of the week, specify the weekly recurrence.
+     * 
+     */
     @InputImport(name="weeklyRecurrence")
     private final @Nullable Input<WeekDetailsArgs> weeklyRecurrence;
 

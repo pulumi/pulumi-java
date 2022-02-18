@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVpnTunnel {
+/**
+ * Returns the specified VpnTunnel resource. Gets a list of available VPN tunnels by making a list() request.
+ * 
+ */
     public static CompletableFuture<GetVpnTunnelResult> invokeAsync(GetVpnTunnelArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getVpnTunnel", TypeShape.of(GetVpnTunnelResult.class), args == null ? GetVpnTunnelArgs.Empty : args, Utilities.withVersion(options));
     }

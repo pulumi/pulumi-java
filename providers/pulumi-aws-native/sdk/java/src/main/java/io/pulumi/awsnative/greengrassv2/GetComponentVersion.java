@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetComponentVersion {
+/**
+ * Resource for Greengrass component version.
+ * 
+ */
     public static CompletableFuture<GetComponentVersionResult> invokeAsync(GetComponentVersionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:greengrassv2:getComponentVersion", TypeShape.of(GetComponentVersionResult.class), args == null ? GetComponentVersionArgs.Empty : args, Utilities.withVersion(options));
     }

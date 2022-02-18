@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTheme {
+/**
+ * Definition of AWS::AmplifyUIBuilder::Theme Resource Type
+ * 
+ */
     public static CompletableFuture<GetThemeResult> invokeAsync(GetThemeArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:amplifyuibuilder:getTheme", TypeShape.of(GetThemeResult.class), args == null ? GetThemeArgs.Empty : args, Utilities.withVersion(options));
     }

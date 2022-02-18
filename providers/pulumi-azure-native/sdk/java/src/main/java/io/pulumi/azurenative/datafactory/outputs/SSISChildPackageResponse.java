@@ -12,9 +12,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SSISChildPackageResponse {
+    /**
+     * Content for embedded child package. Type: string (or Expression with resultType string).
+     * 
+     */
     private final Object packageContent;
+    /**
+     * Last modified date for embedded child package.
+     * 
+     */
     private final @Nullable String packageLastModifiedDate;
+    /**
+     * Name for embedded child package.
+     * 
+     */
     private final @Nullable String packageName;
+    /**
+     * Path for embedded child package. Type: string (or Expression with resultType string).
+     * 
+     */
     private final Object packagePath;
 
     @OutputCustomType.Constructor({"packageContent","packageLastModifiedDate","packageName","packagePath"})
@@ -29,15 +45,31 @@ public final class SSISChildPackageResponse {
         this.packagePath = Objects.requireNonNull(packagePath);
     }
 
+    /**
+     * Content for embedded child package. Type: string (or Expression with resultType string).
+     * 
+     */
     public Object getPackageContent() {
         return this.packageContent;
     }
+    /**
+     * Last modified date for embedded child package.
+     * 
+     */
     public Optional<String> getPackageLastModifiedDate() {
         return Optional.ofNullable(this.packageLastModifiedDate);
     }
+    /**
+     * Name for embedded child package.
+     * 
+     */
     public Optional<String> getPackageName() {
         return Optional.ofNullable(this.packageName);
     }
+    /**
+     * Path for embedded child package. Type: string (or Expression with resultType string).
+     * 
+     */
     public Object getPackagePath() {
         return this.packagePath;
     }

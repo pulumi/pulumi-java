@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The authorization use status.
+     * 
+     */
     @EnumType
     public enum AuthorizationUseStatus {
         Available("Available"),

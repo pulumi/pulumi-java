@@ -14,8 +14,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSan {
+    /**
+     * Indicates whether or not this extension is critical (i.e., if the client does not know how to
+     * handle this extension, the client should consider this to be an error).
+     * 
+     */
     private final @Nullable Boolean critical;
     private final @Nullable List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectId> obectIds;
+    /**
+     * The value of this X.509 extension. A base64-encoded string.
+     * 
+     */
     private final @Nullable String value;
 
     @OutputCustomType.Constructor({"critical","obectIds","value"})
@@ -28,12 +37,21 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
         this.value = value;
     }
 
+    /**
+     * Indicates whether or not this extension is critical (i.e., if the client does not know how to
+     * handle this extension, the client should consider this to be an error).
+     * 
+     */
     public Optional<Boolean> getCritical() {
         return Optional.ofNullable(this.critical);
     }
     public List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectId> getObectIds() {
         return this.obectIds == null ? List.of() : this.obectIds;
     }
+    /**
+     * The value of this X.509 extension. A base64-encoded string.
+     * 
+     */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }

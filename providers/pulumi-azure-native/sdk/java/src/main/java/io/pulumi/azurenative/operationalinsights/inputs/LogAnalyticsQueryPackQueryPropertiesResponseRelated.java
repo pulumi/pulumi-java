@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The related metadata items for the function.
+ * 
+ */
 public final class LogAnalyticsQueryPackQueryPropertiesResponseRelated extends io.pulumi.resources.InvokeArgs {
 
     public static final LogAnalyticsQueryPackQueryPropertiesResponseRelated Empty = new LogAnalyticsQueryPackQueryPropertiesResponseRelated();
 
+    /**
+     * The related categories for the function.
+     * 
+     */
     @InputImport(name="categories")
     private final @Nullable List<String> categories;
 
@@ -22,6 +30,10 @@ public final class LogAnalyticsQueryPackQueryPropertiesResponseRelated extends i
         return this.categories == null ? List.of() : this.categories;
     }
 
+    /**
+     * The related resource types for the function.
+     * 
+     */
     @InputImport(name="resourceTypes")
     private final @Nullable List<String> resourceTypes;
 
@@ -29,6 +41,10 @@ public final class LogAnalyticsQueryPackQueryPropertiesResponseRelated extends i
         return this.resourceTypes == null ? List.of() : this.resourceTypes;
     }
 
+    /**
+     * The related Log Analytics solutions for the function.
+     * 
+     */
     @InputImport(name="solutions")
     private final @Nullable List<String> solutions;
 

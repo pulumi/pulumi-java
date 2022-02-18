@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetDeploymentResult {
+    /**
+     * Primary Id for this resource
+     * 
+     */
     private final @Nullable String deploymentId;
+    /**
+     * A description of the purpose of the API Gateway deployment.
+     * 
+     */
     private final @Nullable String description;
 
     @OutputCustomType.Constructor({"deploymentId","description"})
@@ -22,9 +30,17 @@ public final class GetDeploymentResult {
         this.description = description;
     }
 
+    /**
+     * Primary Id for this resource
+     * 
+     */
     public Optional<String> getDeploymentId() {
         return Optional.ofNullable(this.deploymentId);
     }
+    /**
+     * A description of the purpose of the API Gateway deployment.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }

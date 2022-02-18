@@ -14,6 +14,12 @@ public final class SubAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SubAccountArgs Empty = new SubAccountArgs();
 
+    /**
+     * If set to "RENAME_ON_DESTROY" the billing account display_name
+     * will be changed to "Destroyed" along with a timestamp.  If set to "" this will not occur.
+     * Default is "".
+     * 
+     */
     @InputImport(name="deletionPolicy")
     private final @Nullable Input<String> deletionPolicy;
 
@@ -21,6 +27,10 @@ public final class SubAccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.deletionPolicy == null ? Input.empty() : this.deletionPolicy;
     }
 
+    /**
+     * The display name of the billing account.
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -28,6 +38,11 @@ public final class SubAccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName;
     }
 
+    /**
+     * The name of the master billing account that the subaccount
+     * will be created under in the form `{billing_account_id}` or `billingAccounts/{billing_account_id}`.
+     * 
+     */
     @InputImport(name="masterBillingAccount", required=true)
     private final Input<String> masterBillingAccount;
 

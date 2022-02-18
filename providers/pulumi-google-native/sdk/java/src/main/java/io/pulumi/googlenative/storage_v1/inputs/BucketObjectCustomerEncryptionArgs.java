@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Metadata of customer-supplied encryption key, if the object is encrypted by such a key.
+ * 
+ */
 public final class BucketObjectCustomerEncryptionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BucketObjectCustomerEncryptionArgs Empty = new BucketObjectCustomerEncryptionArgs();
 
+    /**
+     * The encryption algorithm.
+     * 
+     */
     @InputImport(name="encryptionAlgorithm")
     private final @Nullable Input<String> encryptionAlgorithm;
 
@@ -21,6 +29,10 @@ public final class BucketObjectCustomerEncryptionArgs extends io.pulumi.resource
         return this.encryptionAlgorithm == null ? Input.empty() : this.encryptionAlgorithm;
     }
 
+    /**
+     * SHA256 hash value of the encryption key.
+     * 
+     */
     @InputImport(name="keySha256")
     private final @Nullable Input<String> keySha256;
 

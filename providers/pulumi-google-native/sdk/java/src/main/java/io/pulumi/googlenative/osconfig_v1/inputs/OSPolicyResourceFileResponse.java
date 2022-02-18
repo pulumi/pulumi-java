@@ -11,10 +11,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A remote or local file.
+ * 
+ */
 public final class OSPolicyResourceFileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OSPolicyResourceFileResponse Empty = new OSPolicyResourceFileResponse();
 
+    /**
+     * Defaults to false. When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.
+     * 
+     */
     @InputImport(name="allowInsecure", required=true)
     private final Boolean allowInsecure;
 
@@ -22,6 +30,10 @@ public final class OSPolicyResourceFileResponse extends io.pulumi.resources.Invo
         return this.allowInsecure;
     }
 
+    /**
+     * A Cloud Storage object.
+     * 
+     */
     @InputImport(name="gcs", required=true)
     private final OSPolicyResourceFileGcsResponse gcs;
 
@@ -29,6 +41,10 @@ public final class OSPolicyResourceFileResponse extends io.pulumi.resources.Invo
         return this.gcs;
     }
 
+    /**
+     * A local path within the VM to use.
+     * 
+     */
     @InputImport(name="localPath", required=true)
     private final String localPath;
 
@@ -36,6 +52,10 @@ public final class OSPolicyResourceFileResponse extends io.pulumi.resources.Invo
         return this.localPath;
     }
 
+    /**
+     * A generic remote file.
+     * 
+     */
     @InputImport(name="remote", required=true)
     private final OSPolicyResourceFileRemoteResponse remote;
 

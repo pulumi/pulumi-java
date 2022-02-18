@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSchemaVersion {
+/**
+ * This resource represents an individual schema version of a schema defined in Glue Schema Registry.
+ * 
+ */
     public static CompletableFuture<GetSchemaVersionResult> invokeAsync(GetSchemaVersionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:glue:getSchemaVersion", TypeShape.of(GetSchemaVersionResult.class), args == null ? GetSchemaVersionArgs.Empty : args, Utilities.withVersion(options));
     }

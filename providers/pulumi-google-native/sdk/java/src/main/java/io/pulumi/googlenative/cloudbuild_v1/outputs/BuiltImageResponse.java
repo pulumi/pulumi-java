@@ -10,8 +10,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BuiltImageResponse {
+    /**
+     * Docker Registry 2.0 digest.
+     * 
+     */
     private final String digest;
+    /**
+     * Name used to push the container image to Google Container Registry, as presented to `docker push`.
+     * 
+     */
     private final String name;
+    /**
+     * Stores timing information for pushing the specified image.
+     * 
+     */
     private final TimeSpanResponse pushTiming;
 
     @OutputCustomType.Constructor({"digest","name","pushTiming"})
@@ -24,12 +36,24 @@ public final class BuiltImageResponse {
         this.pushTiming = Objects.requireNonNull(pushTiming);
     }
 
+    /**
+     * Docker Registry 2.0 digest.
+     * 
+     */
     public String getDigest() {
         return this.digest;
     }
+    /**
+     * Name used to push the container image to Google Container Registry, as presented to `docker push`.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Stores timing information for pushing the specified image.
+     * 
+     */
     public TimeSpanResponse getPushTiming() {
         return this.pushTiming;
     }

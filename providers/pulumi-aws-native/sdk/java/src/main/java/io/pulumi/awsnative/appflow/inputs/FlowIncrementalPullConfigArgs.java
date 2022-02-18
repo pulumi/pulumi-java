@@ -10,6 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Configuration for scheduled incremental data pull
+ * 
+ */
 public final class FlowIncrementalPullConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FlowIncrementalPullConfigArgs Empty = new FlowIncrementalPullConfigArgs();

@@ -12,6 +12,10 @@ public final class GetStorageAccountArgs extends io.pulumi.resources.InvokeArgs 
 
     public static final GetStorageAccountArgs Empty = new GetStorageAccountArgs();
 
+    /**
+     * The device name.
+     * 
+     */
     @InputImport(name="deviceName", required=true)
     private final String deviceName;
 
@@ -19,6 +23,10 @@ public final class GetStorageAccountArgs extends io.pulumi.resources.InvokeArgs 
         return this.deviceName;
     }
 
+    /**
+     * The resource group name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetStorageAccountArgs extends io.pulumi.resources.InvokeArgs 
         return this.resourceGroupName;
     }
 
+    /**
+     * The storage account name.
+     * 
+     */
     @InputImport(name="storageAccountName", required=true)
     private final String storageAccountName;
 

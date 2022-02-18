@@ -12,7 +12,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class VariableSpecificationResponse {
+    /**
+     * Default value of variable.
+     * 
+     */
     private final @Nullable Object defaultValue;
+    /**
+     * Variable type.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"defaultValue","type"})
@@ -23,9 +31,17 @@ public final class VariableSpecificationResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Default value of variable.
+     * 
+     */
     public Optional<Object> getDefaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
+    /**
+     * Variable type.
+     * 
+     */
     public String getType() {
         return this.type;
     }

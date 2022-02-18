@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The type of Azure hop the packet should be sent to.
+     * 
+     */
     @EnumType
     public enum RouteNextHopType {
         VirtualNetworkGateway("VirtualNetworkGateway"),

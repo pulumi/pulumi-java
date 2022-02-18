@@ -14,6 +14,10 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TopicArgs Empty = new TopicArgs();
 
+    /**
+     * Name of the topic.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

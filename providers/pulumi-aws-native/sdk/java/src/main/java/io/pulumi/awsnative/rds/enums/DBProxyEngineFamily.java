@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The kinds of databases that the proxy can connect to.
+     * 
+     */
     @EnumType
     public enum DBProxyEngineFamily {
         Mysql("MYSQL"),

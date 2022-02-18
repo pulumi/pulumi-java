@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGen2Environment {
+/**
+ * An environment is a set of time-series data available for query, and is the top level Azure Time Series Insights resource. Gen2 environments do not have set data retention limits.
+ * API Version: 2020-05-15.
+ * 
+ *
+ * An environment is a set of time-series data available for query, and is the top level Azure Time Series Insights resource. Gen2 environments do not have set data retention limits.
+ * 
+ */
     public static CompletableFuture<GetGen2EnvironmentResult> invokeAsync(GetGen2EnvironmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:timeseriesinsights:getGen2Environment", TypeShape.of(GetGen2EnvironmentResult.class), args == null ? GetGen2EnvironmentArgs.Empty : args, Utilities.withVersion(options));
     }

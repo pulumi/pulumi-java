@@ -9,6 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The ReplicationSet regional configuration.
+ * 
+ */
 public final class ReplicationSetRegionConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ReplicationSetRegionConfigurationArgs Empty = new ReplicationSetRegionConfigurationArgs();

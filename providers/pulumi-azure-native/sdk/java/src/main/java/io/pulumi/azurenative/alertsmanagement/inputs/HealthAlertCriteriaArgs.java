@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specifies the resource health alert criteria for a single resource that has multiple metric criteria.
+ * 
+ */
 public final class HealthAlertCriteriaArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HealthAlertCriteriaArgs Empty = new HealthAlertCriteriaArgs();
 
+    /**
+     * The list of metric criteria for this 'all of' operation.
+     * 
+     */
     @InputImport(name="allOf")
     private final @Nullable Input<List<VmGuestHealthAlertCriterionArgs>> allOf;
 

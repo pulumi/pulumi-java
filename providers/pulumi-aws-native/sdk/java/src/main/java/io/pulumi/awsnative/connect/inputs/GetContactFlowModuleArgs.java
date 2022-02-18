@@ -12,6 +12,10 @@ public final class GetContactFlowModuleArgs extends io.pulumi.resources.InvokeAr
 
     public static final GetContactFlowModuleArgs Empty = new GetContactFlowModuleArgs();
 
+    /**
+     * The identifier of the contact flow module (ARN).
+     * 
+     */
     @InputImport(name="contactFlowModuleArn", required=true)
     private final String contactFlowModuleArn;
 

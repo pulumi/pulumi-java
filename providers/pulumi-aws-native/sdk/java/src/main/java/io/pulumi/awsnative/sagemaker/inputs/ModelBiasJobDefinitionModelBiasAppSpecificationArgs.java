@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Container image configuration object for the monitoring job.
+ * 
+ */
 public final class ModelBiasJobDefinitionModelBiasAppSpecificationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ModelBiasJobDefinitionModelBiasAppSpecificationArgs Empty = new ModelBiasJobDefinitionModelBiasAppSpecificationArgs();
 
+    /**
+     * The S3 URI to an analysis configuration file
+     * 
+     */
     @InputImport(name="configUri", required=true)
     private final Input<String> configUri;
 
@@ -22,6 +30,10 @@ public final class ModelBiasJobDefinitionModelBiasAppSpecificationArgs extends i
         return this.configUri;
     }
 
+    /**
+     * Sets the environment variables in the Docker container
+     * 
+     */
     @InputImport(name="environment")
     private final @Nullable Input<Object> environment;
 
@@ -29,6 +41,10 @@ public final class ModelBiasJobDefinitionModelBiasAppSpecificationArgs extends i
         return this.environment == null ? Input.empty() : this.environment;
     }
 
+    /**
+     * The container image to be run by the monitoring job.
+     * 
+     */
     @InputImport(name="imageUri", required=true)
     private final Input<String> imageUri;
 

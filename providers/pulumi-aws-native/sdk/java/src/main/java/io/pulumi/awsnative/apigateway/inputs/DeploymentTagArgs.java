@@ -13,6 +13,10 @@ public final class DeploymentTagArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DeploymentTagArgs Empty = new DeploymentTagArgs();
 
+    /**
+     * The key name of the tag
+     * 
+     */
     @InputImport(name="key", required=true)
     private final Input<String> key;
 
@@ -20,6 +24,10 @@ public final class DeploymentTagArgs extends io.pulumi.resources.ResourceArgs {
         return this.key;
     }
 
+    /**
+     * The value for the tag
+     * 
+     */
     @InputImport(name="value", required=true)
     private final Input<String> value;
 

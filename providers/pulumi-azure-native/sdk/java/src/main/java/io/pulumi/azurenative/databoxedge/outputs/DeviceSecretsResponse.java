@@ -11,13 +11,45 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DeviceSecretsResponse {
+    /**
+     * Keyvault Id of BMCDefaultUserPassword
+     * 
+     */
     private final @Nullable SecretResponse bmcDefaultUserPassword;
+    /**
+     * Keyvault Id of HcsDataVolumeBitLockerExternalKey
+     * 
+     */
     private final @Nullable SecretResponse hcsDataVolumeBitLockerExternalKey;
+    /**
+     * Keyvault Id of HcsInternalVolumeBitLockerExternalKey
+     * 
+     */
     private final @Nullable SecretResponse hcsInternalVolumeBitLockerExternalKey;
+    /**
+     * Keyvault Id of RotateKeyForDataVolumeBitlocker
+     * 
+     */
     private final @Nullable SecretResponse rotateKeyForDataVolumeBitlocker;
+    /**
+     * Keyvault Id of RotateKeysForSedDrivesSerialized
+     * 
+     */
     private final @Nullable SecretResponse rotateKeysForSedDrivesSerialized;
+    /**
+     * Keyvault Id of SEDEncryptionExternalKey
+     * 
+     */
     private final @Nullable SecretResponse sedEncryptionExternalKey;
+    /**
+     * Keyvault Id of SEDEncryptionExternalKeyId
+     * 
+     */
     private final @Nullable SecretResponse sedEncryptionExternalKeyId;
+    /**
+     * Keyvault Id of SystemVolumeBitLockerRecoveryKey
+     * 
+     */
     private final @Nullable SecretResponse systemVolumeBitLockerRecoveryKey;
 
     @OutputCustomType.Constructor({"bmcDefaultUserPassword","hcsDataVolumeBitLockerExternalKey","hcsInternalVolumeBitLockerExternalKey","rotateKeyForDataVolumeBitlocker","rotateKeysForSedDrivesSerialized","sedEncryptionExternalKey","sedEncryptionExternalKeyId","systemVolumeBitLockerRecoveryKey"})
@@ -40,27 +72,59 @@ public final class DeviceSecretsResponse {
         this.systemVolumeBitLockerRecoveryKey = systemVolumeBitLockerRecoveryKey;
     }
 
+    /**
+     * Keyvault Id of BMCDefaultUserPassword
+     * 
+     */
     public Optional<SecretResponse> getBmcDefaultUserPassword() {
         return Optional.ofNullable(this.bmcDefaultUserPassword);
     }
+    /**
+     * Keyvault Id of HcsDataVolumeBitLockerExternalKey
+     * 
+     */
     public Optional<SecretResponse> getHcsDataVolumeBitLockerExternalKey() {
         return Optional.ofNullable(this.hcsDataVolumeBitLockerExternalKey);
     }
+    /**
+     * Keyvault Id of HcsInternalVolumeBitLockerExternalKey
+     * 
+     */
     public Optional<SecretResponse> getHcsInternalVolumeBitLockerExternalKey() {
         return Optional.ofNullable(this.hcsInternalVolumeBitLockerExternalKey);
     }
+    /**
+     * Keyvault Id of RotateKeyForDataVolumeBitlocker
+     * 
+     */
     public Optional<SecretResponse> getRotateKeyForDataVolumeBitlocker() {
         return Optional.ofNullable(this.rotateKeyForDataVolumeBitlocker);
     }
+    /**
+     * Keyvault Id of RotateKeysForSedDrivesSerialized
+     * 
+     */
     public Optional<SecretResponse> getRotateKeysForSedDrivesSerialized() {
         return Optional.ofNullable(this.rotateKeysForSedDrivesSerialized);
     }
+    /**
+     * Keyvault Id of SEDEncryptionExternalKey
+     * 
+     */
     public Optional<SecretResponse> getSedEncryptionExternalKey() {
         return Optional.ofNullable(this.sedEncryptionExternalKey);
     }
+    /**
+     * Keyvault Id of SEDEncryptionExternalKeyId
+     * 
+     */
     public Optional<SecretResponse> getSedEncryptionExternalKeyId() {
         return Optional.ofNullable(this.sedEncryptionExternalKeyId);
     }
+    /**
+     * Keyvault Id of SystemVolumeBitLockerRecoveryKey
+     * 
+     */
     public Optional<SecretResponse> getSystemVolumeBitLockerRecoveryKey() {
         return Optional.ofNullable(this.systemVolumeBitLockerRecoveryKey);
     }

@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetSchemaVersionResult {
+    /**
+     * Represents the version ID associated with the schema version.
+     * 
+     */
     private final @Nullable String versionId;
 
     @OutputCustomType.Constructor({"versionId"})
@@ -18,6 +22,10 @@ public final class GetSchemaVersionResult {
         this.versionId = versionId;
     }
 
+    /**
+     * Represents the version ID associated with the schema version.
+     * 
+     */
     public Optional<String> getVersionId() {
         return Optional.ofNullable(this.versionId);
     }

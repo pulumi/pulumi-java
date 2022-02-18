@@ -13,6 +13,10 @@ public final class BucketReplicaModificationsArgs extends io.pulumi.resources.Re
 
     public static final BucketReplicaModificationsArgs Empty = new BucketReplicaModificationsArgs();
 
+    /**
+     * Specifies whether Amazon S3 replicates modifications on replicas.
+     * 
+     */
     @InputImport(name="status", required=true)
     private final Input<BucketReplicaModificationsStatus> status;
 

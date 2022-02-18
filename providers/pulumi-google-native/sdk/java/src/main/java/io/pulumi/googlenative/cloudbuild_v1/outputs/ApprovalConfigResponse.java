@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ApprovalConfigResponse {
+    /**
+     * Whether or not approval is needed. If this is set on a build, it will become pending when created, and will need to be explicitly approved to start.
+     * 
+     */
     private final Boolean approvalRequired;
 
     @OutputCustomType.Constructor({"approvalRequired"})
@@ -16,6 +20,10 @@ public final class ApprovalConfigResponse {
         this.approvalRequired = Objects.requireNonNull(approvalRequired);
     }
 
+    /**
+     * Whether or not approval is needed. If this is set on a build, it will become pending when created, and will need to be explicitly approved to start.
+     * 
+     */
     public Boolean getApprovalRequired() {
         return this.approvalRequired;
     }

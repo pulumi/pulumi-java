@@ -14,6 +14,11 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigArgs extends io.pulum
 
     public static final AiFeatureStoreEntityTypeMonitoringConfigArgs Empty = new AiFeatureStoreEntityTypeMonitoringConfigArgs();
 
+    /**
+     * Configuration of how features in Featurestore are monitored.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="snapshotAnalysis")
     private final @Nullable Input<AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisArgs> snapshotAnalysis;
 

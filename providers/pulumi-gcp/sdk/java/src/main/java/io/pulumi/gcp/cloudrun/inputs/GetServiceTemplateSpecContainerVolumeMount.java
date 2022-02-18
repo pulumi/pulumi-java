@@ -19,6 +19,10 @@ public final class GetServiceTemplateSpecContainerVolumeMount extends io.pulumi.
         return this.mountPath;
     }
 
+    /**
+     * The name of the Cloud Run Service.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

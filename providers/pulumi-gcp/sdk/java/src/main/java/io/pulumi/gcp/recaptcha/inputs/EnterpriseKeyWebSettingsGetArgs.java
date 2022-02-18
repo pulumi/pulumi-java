@@ -16,6 +16,10 @@ public final class EnterpriseKeyWebSettingsGetArgs extends io.pulumi.resources.R
 
     public static final EnterpriseKeyWebSettingsGetArgs Empty = new EnterpriseKeyWebSettingsGetArgs();
 
+    /**
+     * If set to true, it means allowed_domains will not be enforced.
+     * 
+     */
     @InputImport(name="allowAllDomains")
     private final @Nullable Input<Boolean> allowAllDomains;
 
@@ -23,6 +27,10 @@ public final class EnterpriseKeyWebSettingsGetArgs extends io.pulumi.resources.R
         return this.allowAllDomains == null ? Input.empty() : this.allowAllDomains;
     }
 
+    /**
+     * If set to true, the key can be used on AMP (Accelerated Mobile Pages) websites. This is supported only for the SCORE integration type.
+     * 
+     */
     @InputImport(name="allowAmpTraffic")
     private final @Nullable Input<Boolean> allowAmpTraffic;
 
@@ -30,6 +38,10 @@ public final class EnterpriseKeyWebSettingsGetArgs extends io.pulumi.resources.R
         return this.allowAmpTraffic == null ? Input.empty() : this.allowAmpTraffic;
     }
 
+    /**
+     * Domains or subdomains of websites allowed to use the key. All subdomains of an allowed domain are automatically allowed. A valid domain requires a host and must not include any path, port, query or fragment. Examples: 'example.com' or 'subdomain.example.com'
+     * 
+     */
     @InputImport(name="allowedDomains")
     private final @Nullable Input<List<String>> allowedDomains;
 
@@ -37,6 +49,10 @@ public final class EnterpriseKeyWebSettingsGetArgs extends io.pulumi.resources.R
         return this.allowedDomains == null ? Input.empty() : this.allowedDomains;
     }
 
+    /**
+     * Settings for the frequency and difficulty at which this key triggers captcha challenges. This should only be specified for IntegrationTypes CHECKBOX and INVISIBLE. Possible values: CHALLENGE_SECURITY_PREFERENCE_UNSPECIFIED, USABILITY, BALANCE, SECURITY
+     * 
+     */
     @InputImport(name="challengeSecurityPreference")
     private final @Nullable Input<String> challengeSecurityPreference;
 
@@ -44,6 +60,10 @@ public final class EnterpriseKeyWebSettingsGetArgs extends io.pulumi.resources.R
         return this.challengeSecurityPreference == null ? Input.empty() : this.challengeSecurityPreference;
     }
 
+    /**
+     * Required. Describes how this key is integrated with the website. Possible values: SCORE, CHECKBOX, INVISIBLE
+     * 
+     */
     @InputImport(name="integrationType", required=true)
     private final Input<String> integrationType;
 

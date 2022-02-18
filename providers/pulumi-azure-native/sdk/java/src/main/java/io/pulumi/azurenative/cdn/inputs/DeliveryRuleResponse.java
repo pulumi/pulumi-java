@@ -35,10 +35,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A rule that specifies a set of actions and conditions
+ * 
+ */
 public final class DeliveryRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DeliveryRuleResponse Empty = new DeliveryRuleResponse();
 
+    /**
+     * A list of actions that are executed when all the conditions of a rule are satisfied.
+     * 
+     */
     @InputImport(name="actions", required=true)
     private final List<Object> actions;
 
@@ -46,6 +54,10 @@ public final class DeliveryRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.actions;
     }
 
+    /**
+     * A list of conditions that must be matched for the actions to be executed
+     * 
+     */
     @InputImport(name="conditions")
     private final @Nullable List<Object> conditions;
 
@@ -53,6 +65,10 @@ public final class DeliveryRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.conditions == null ? List.of() : this.conditions;
     }
 
+    /**
+     * Name of the rule
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -60,6 +76,10 @@ public final class DeliveryRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The order in which the rules are applied for the endpoint. Possible values {0,1,2,3,………}. A rule with a lesser order will be applied before a rule with a greater order. Rule with order 0 is a special rule. It does not require any condition and actions listed in it will always be applied.
+     * 
+     */
     @InputImport(name="order", required=true)
     private final Integer order;
 

@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Service identity associated with a resource.
+ * 
+ */
 public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceIdentityResponse Empty = new ResourceIdentityResponse();
 
+    /**
+     * Client ID that is used when authenticating.
+     * 
+     */
     @InputImport(name="principalId", required=true)
     private final String principalId;
 
@@ -23,6 +31,10 @@ public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeAr
         return this.principalId;
     }
 
+    /**
+     * AAD Tenant where this identity lives.
+     * 
+     */
     @InputImport(name="tenantId", required=true)
     private final String tenantId;
 
@@ -30,6 +42,10 @@ public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeAr
         return this.tenantId;
     }
 
+    /**
+     * Defines values for a ResourceIdentity's type.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 
@@ -37,6 +53,10 @@ public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeAr
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
+    /**
+     * Dictionary of the user assigned identities, key is ARM resource ID of the UAI.
+     * 
+     */
     @InputImport(name="userAssignedIdentities")
     private final @Nullable Map<String,UserAssignedIdentityMetaResponse> userAssignedIdentities;
 

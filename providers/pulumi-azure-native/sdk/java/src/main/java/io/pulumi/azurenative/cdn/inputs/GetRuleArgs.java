@@ -12,6 +12,10 @@ public final class GetRuleArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetRuleArgs Empty = new GetRuleArgs();
 
+    /**
+     * Name of the CDN profile which is unique within the resource group.
+     * 
+     */
     @InputImport(name="profileName", required=true)
     private final String profileName;
 
@@ -19,6 +23,10 @@ public final class GetRuleArgs extends io.pulumi.resources.InvokeArgs {
         return this.profileName;
     }
 
+    /**
+     * Name of the Resource group within the Azure subscription.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetRuleArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of the delivery rule which is unique within the endpoint.
+     * 
+     */
     @InputImport(name="ruleName", required=true)
     private final String ruleName;
 
@@ -33,6 +45,10 @@ public final class GetRuleArgs extends io.pulumi.resources.InvokeArgs {
         return this.ruleName;
     }
 
+    /**
+     * Name of the rule set under the profile.
+     * 
+     */
     @InputImport(name="ruleSetName", required=true)
     private final String ruleSetName;
 

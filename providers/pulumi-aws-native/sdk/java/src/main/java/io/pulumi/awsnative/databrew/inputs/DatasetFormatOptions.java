@@ -12,6 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Format options for dataset
+ * 
+ */
 public final class DatasetFormatOptions extends io.pulumi.resources.InvokeArgs {
 
     public static final DatasetFormatOptions Empty = new DatasetFormatOptions();

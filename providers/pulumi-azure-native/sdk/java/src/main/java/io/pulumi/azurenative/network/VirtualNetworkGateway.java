@@ -23,147 +23,352 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * A common class for general resource information.
+ * API Version: 2020-11-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:network:VirtualNetworkGateway vpngw /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vpngw 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:network:VirtualNetworkGateway")
 public class VirtualNetworkGateway extends io.pulumi.resources.CustomResource {
+    /**
+     * ActiveActive flag.
+     * 
+     */
     @OutputExport(name="activeActive", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> activeActive;
 
+    /**
+     * @return ActiveActive flag.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getActiveActive() {
         return this.activeActive;
     }
+    /**
+     * Virtual network gateway's BGP speaker settings.
+     * 
+     */
     @OutputExport(name="bgpSettings", type=BgpSettingsResponse.class, parameters={})
     private Output</* @Nullable */ BgpSettingsResponse> bgpSettings;
 
+    /**
+     * @return Virtual network gateway's BGP speaker settings.
+     * 
+     */
     public Output</* @Nullable */ BgpSettingsResponse> getBgpSettings() {
         return this.bgpSettings;
     }
+    /**
+     * The reference to the address space resource which represents the custom routes address space specified by the customer for virtual network gateway and VpnClient.
+     * 
+     */
     @OutputExport(name="customRoutes", type=AddressSpaceResponse.class, parameters={})
     private Output</* @Nullable */ AddressSpaceResponse> customRoutes;
 
+    /**
+     * @return The reference to the address space resource which represents the custom routes address space specified by the customer for virtual network gateway and VpnClient.
+     * 
+     */
     public Output</* @Nullable */ AddressSpaceResponse> getCustomRoutes() {
         return this.customRoutes;
     }
+    /**
+     * Whether BGP is enabled for this virtual network gateway or not.
+     * 
+     */
     @OutputExport(name="enableBgp", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableBgp;
 
+    /**
+     * @return Whether BGP is enabled for this virtual network gateway or not.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getEnableBgp() {
         return this.enableBgp;
     }
+    /**
+     * Whether dns forwarding is enabled or not.
+     * 
+     */
     @OutputExport(name="enableDnsForwarding", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableDnsForwarding;
 
+    /**
+     * @return Whether dns forwarding is enabled or not.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getEnableDnsForwarding() {
         return this.enableDnsForwarding;
     }
+    /**
+     * Whether private IP needs to be enabled on this gateway for connections or not.
+     * 
+     */
     @OutputExport(name="enablePrivateIpAddress", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enablePrivateIpAddress;
 
+    /**
+     * @return Whether private IP needs to be enabled on this gateway for connections or not.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getEnablePrivateIpAddress() {
         return this.enablePrivateIpAddress;
     }
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * The extended location of type local virtual network gateway.
+     * 
+     */
     @OutputExport(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
     private Output</* @Nullable */ ExtendedLocationResponse> extendedLocation;
 
+    /**
+     * @return The extended location of type local virtual network gateway.
+     * 
+     */
     public Output</* @Nullable */ ExtendedLocationResponse> getExtendedLocation() {
         return this.extendedLocation;
     }
+    /**
+     * The reference to the LocalNetworkGateway resource which represents local network site having default routes. Assign Null value in case of removing existing default site setting.
+     * 
+     */
     @OutputExport(name="gatewayDefaultSite", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> gatewayDefaultSite;
 
+    /**
+     * @return The reference to the LocalNetworkGateway resource which represents local network site having default routes. Assign Null value in case of removing existing default site setting.
+     * 
+     */
     public Output</* @Nullable */ SubResourceResponse> getGatewayDefaultSite() {
         return this.gatewayDefaultSite;
     }
+    /**
+     * The type of this virtual network gateway.
+     * 
+     */
     @OutputExport(name="gatewayType", type=String.class, parameters={})
     private Output</* @Nullable */ String> gatewayType;
 
+    /**
+     * @return The type of this virtual network gateway.
+     * 
+     */
     public Output</* @Nullable */ String> getGatewayType() {
         return this.gatewayType;
     }
+    /**
+     * The IP address allocated by the gateway to which dns requests can be sent.
+     * 
+     */
     @OutputExport(name="inboundDnsForwardingEndpoint", type=String.class, parameters={})
     private Output<String> inboundDnsForwardingEndpoint;
 
+    /**
+     * @return The IP address allocated by the gateway to which dns requests can be sent.
+     * 
+     */
     public Output<String> getInboundDnsForwardingEndpoint() {
         return this.inboundDnsForwardingEndpoint;
     }
+    /**
+     * IP configurations for virtual network gateway.
+     * 
+     */
     @OutputExport(name="ipConfigurations", type=List.class, parameters={VirtualNetworkGatewayIPConfigurationResponse.class})
     private Output</* @Nullable */ List<VirtualNetworkGatewayIPConfigurationResponse>> ipConfigurations;
 
+    /**
+     * @return IP configurations for virtual network gateway.
+     * 
+     */
     public Output</* @Nullable */ List<VirtualNetworkGatewayIPConfigurationResponse>> getIpConfigurations() {
         return this.ipConfigurations;
     }
+    /**
+     * Resource location.
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * Resource name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The provisioning state of the virtual network gateway resource.
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning state of the virtual network gateway resource.
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The resource GUID property of the virtual network gateway resource.
+     * 
+     */
     @OutputExport(name="resourceGuid", type=String.class, parameters={})
     private Output<String> resourceGuid;
 
+    /**
+     * @return The resource GUID property of the virtual network gateway resource.
+     * 
+     */
     public Output<String> getResourceGuid() {
         return this.resourceGuid;
     }
+    /**
+     * The reference to the VirtualNetworkGatewaySku resource which represents the SKU selected for Virtual network gateway.
+     * 
+     */
     @OutputExport(name="sku", type=VirtualNetworkGatewaySkuResponse.class, parameters={})
     private Output</* @Nullable */ VirtualNetworkGatewaySkuResponse> sku;
 
+    /**
+     * @return The reference to the VirtualNetworkGatewaySku resource which represents the SKU selected for Virtual network gateway.
+     * 
+     */
     public Output</* @Nullable */ VirtualNetworkGatewaySkuResponse> getSku() {
         return this.sku;
     }
+    /**
+     * Resource tags.
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Resource type.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * Customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.
+     * 
+     */
     @OutputExport(name="vNetExtendedLocationResourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> vNetExtendedLocationResourceId;
 
+    /**
+     * @return Customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.
+     * 
+     */
     public Output</* @Nullable */ String> getVNetExtendedLocationResourceId() {
         return this.vNetExtendedLocationResourceId;
     }
+    /**
+     * The reference to the VpnClientConfiguration resource which represents the P2S VpnClient configurations.
+     * 
+     */
     @OutputExport(name="vpnClientConfiguration", type=VpnClientConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ VpnClientConfigurationResponse> vpnClientConfiguration;
 
+    /**
+     * @return The reference to the VpnClientConfiguration resource which represents the P2S VpnClient configurations.
+     * 
+     */
     public Output</* @Nullable */ VpnClientConfigurationResponse> getVpnClientConfiguration() {
         return this.vpnClientConfiguration;
     }
+    /**
+     * The generation for this VirtualNetworkGateway. Must be None if gatewayType is not VPN.
+     * 
+     */
     @OutputExport(name="vpnGatewayGeneration", type=String.class, parameters={})
     private Output</* @Nullable */ String> vpnGatewayGeneration;
 
+    /**
+     * @return The generation for this VirtualNetworkGateway. Must be None if gatewayType is not VPN.
+     * 
+     */
     public Output</* @Nullable */ String> getVpnGatewayGeneration() {
         return this.vpnGatewayGeneration;
     }
+    /**
+     * The type of this virtual network gateway.
+     * 
+     */
     @OutputExport(name="vpnType", type=String.class, parameters={})
     private Output</* @Nullable */ String> vpnType;
 
+    /**
+     * @return The type of this virtual network gateway.
+     * 
+     */
     public Output</* @Nullable */ String> getVpnType() {
         return this.vpnType;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public VirtualNetworkGateway(String name, VirtualNetworkGatewayArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:VirtualNetworkGateway", name, args == null ? VirtualNetworkGatewayArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -219,6 +424,14 @@ public class VirtualNetworkGateway extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static VirtualNetworkGateway get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new VirtualNetworkGateway(name, id, options);
     }

@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDocumentationVersion {
+/**
+ * A snapshot of the documentation of an API.
+ * 
+ */
     public static CompletableFuture<GetDocumentationVersionResult> invokeAsync(GetDocumentationVersionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:apigateway:getDocumentationVersion", TypeShape.of(GetDocumentationVersionResult.class), args == null ? GetDocumentationVersionArgs.Empty : args, Utilities.withVersion(options));
     }

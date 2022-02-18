@@ -11,11 +11,35 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetProviderInstanceResult {
+    /**
+     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * 
+     */
     private final String id;
+    /**
+     * A JSON string containing metadata of the provider instance.
+     * 
+     */
     private final @Nullable String metadata;
+    /**
+     * The name of the resource
+     * 
+     */
     private final String name;
+    /**
+     * A JSON string containing the properties of the provider instance.
+     * 
+     */
     private final String properties;
+    /**
+     * State of provisioning of the provider instance
+     * 
+     */
     private final String provisioningState;
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"id","metadata","name","properties","provisioningState","type"})
@@ -34,21 +58,45 @@ public final class GetProviderInstanceResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * A JSON string containing metadata of the provider instance.
+     * 
+     */
     public Optional<String> getMetadata() {
         return Optional.ofNullable(this.metadata);
     }
+    /**
+     * The name of the resource
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * A JSON string containing the properties of the provider instance.
+     * 
+     */
     public String getProperties() {
         return this.properties;
     }
+    /**
+     * State of provisioning of the provider instance
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     public String getType() {
         return this.type;
     }

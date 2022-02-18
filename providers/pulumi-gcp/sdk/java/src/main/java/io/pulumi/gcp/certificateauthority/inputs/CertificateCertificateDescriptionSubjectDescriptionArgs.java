@@ -24,6 +24,12 @@ public final class CertificateCertificateDescriptionSubjectDescriptionArgs exten
         return this.hexSerialNumber == null ? Input.empty() : this.hexSerialNumber;
     }
 
+    /**
+     * The desired lifetime of the CA certificate. Used to create the "notBeforeTime" and
+     * "notAfterTime" fields inside an X.509 certificate. A duration in seconds with up to nine
+     * fractional digits, terminated by 's'. Example: "3.5s".
+     * 
+     */
     @InputImport(name="lifetime")
     private final @Nullable Input<String> lifetime;
 
@@ -45,6 +51,11 @@ public final class CertificateCertificateDescriptionSubjectDescriptionArgs exten
         return this.notBeforeTime == null ? Input.empty() : this.notBeforeTime;
     }
 
+    /**
+     * The subject alternative name fields.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="subjectAltNames")
     private final @Nullable Input<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameArgs>> subjectAltNames;
 
@@ -52,6 +63,11 @@ public final class CertificateCertificateDescriptionSubjectDescriptionArgs exten
         return this.subjectAltNames == null ? Input.empty() : this.subjectAltNames;
     }
 
+    /**
+     * Contains distinguished name fields such as the location and organization.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="subjects")
     private final @Nullable Input<List<CertificateCertificateDescriptionSubjectDescriptionSubjectArgs>> subjects;
 

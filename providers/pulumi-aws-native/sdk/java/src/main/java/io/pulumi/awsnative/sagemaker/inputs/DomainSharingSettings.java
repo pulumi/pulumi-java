@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specifies options when sharing an Amazon SageMaker Studio notebook. These settings are specified as part of DefaultUserSettings when the CreateDomain API is called, and as part of UserSettings when the CreateUserProfile API is called.
+ * 
+ */
 public final class DomainSharingSettings extends io.pulumi.resources.InvokeArgs {
 
     public static final DomainSharingSettings Empty = new DomainSharingSettings();
 
+    /**
+     * Whether to include the notebook cell output when sharing the notebook. The default is Disabled.
+     * 
+     */
     @InputImport(name="notebookOutputOption")
     private final @Nullable DomainSharingSettingsNotebookOutputOption notebookOutputOption;
 
@@ -22,6 +30,10 @@ public final class DomainSharingSettings extends io.pulumi.resources.InvokeArgs 
         return this.notebookOutputOption == null ? Optional.empty() : Optional.ofNullable(this.notebookOutputOption);
     }
 
+    /**
+     * When NotebookOutputOption is Allowed, the AWS Key Management Service (KMS) encryption key ID used to encrypt the notebook cell output in the Amazon S3 bucket.
+     * 
+     */
     @InputImport(name="s3KmsKeyId")
     private final @Nullable String s3KmsKeyId;
 
@@ -29,6 +41,10 @@ public final class DomainSharingSettings extends io.pulumi.resources.InvokeArgs 
         return this.s3KmsKeyId == null ? Optional.empty() : Optional.ofNullable(this.s3KmsKeyId);
     }
 
+    /**
+     * When NotebookOutputOption is Allowed, the Amazon S3 bucket used to store the shared notebook snapshots.
+     * 
+     */
     @InputImport(name="s3OutputPath")
     private final @Nullable String s3OutputPath;
 

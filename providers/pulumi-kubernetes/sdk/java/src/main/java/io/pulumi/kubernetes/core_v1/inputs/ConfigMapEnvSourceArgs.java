@@ -11,10 +11,20 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * ConfigMapEnvSource selects a ConfigMap to populate the environment variables with.
+ * 
+ * The contents of the target ConfigMap's Data field will represent the key-value pairs as environment variables.
+ * 
+ */
 public final class ConfigMapEnvSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConfigMapEnvSourceArgs Empty = new ConfigMapEnvSourceArgs();
 
+    /**
+     * Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -22,6 +32,10 @@ public final class ConfigMapEnvSourceArgs extends io.pulumi.resources.ResourceAr
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Specify whether the ConfigMap must be defined
+     * 
+     */
     @InputImport(name="optional")
     private final @Nullable Input<Boolean> optional;
 

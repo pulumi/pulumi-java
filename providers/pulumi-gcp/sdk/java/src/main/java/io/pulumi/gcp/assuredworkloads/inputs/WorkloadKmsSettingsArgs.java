@@ -13,6 +13,10 @@ public final class WorkloadKmsSettingsArgs extends io.pulumi.resources.ResourceA
 
     public static final WorkloadKmsSettingsArgs Empty = new WorkloadKmsSettingsArgs();
 
+    /**
+     * Required. Input only. Immutable. The time at which the Key Management Service will automatically create a new version of the crypto key and mark it as the primary.
+     * 
+     */
     @InputImport(name="nextRotationTime", required=true)
     private final Input<String> nextRotationTime;
 
@@ -20,6 +24,10 @@ public final class WorkloadKmsSettingsArgs extends io.pulumi.resources.ResourceA
         return this.nextRotationTime;
     }
 
+    /**
+     * Required. Input only. Immutable. will be advanced by this period when the Key Management Service automatically rotates a key. Must be at least 24 hours and at most 876,000 hours.
+     * 
+     */
     @InputImport(name="rotationPeriod", required=true)
     private final Input<String> rotationPeriod;
 

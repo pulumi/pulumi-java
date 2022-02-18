@@ -9,7 +9,18 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GuestPoliciesPackageRepositoryGoo {
+    /**
+     * Unique identifier for the recipe. Only one recipe with a given name is installed on an instance.
+     * Names are also used to identify resources which helps to determine whether guest policies have conflicts.
+     * This means that requests to create multiple recipes with the same name and version are rejected since they
+     * could potentially have conflicting assignments.
+     * 
+     */
     private final String name;
+    /**
+     * The url of the repository.
+     * 
+     */
     private final String url;
 
     @OutputCustomType.Constructor({"name","url"})
@@ -20,9 +31,20 @@ public final class GuestPoliciesPackageRepositoryGoo {
         this.url = Objects.requireNonNull(url);
     }
 
+    /**
+     * Unique identifier for the recipe. Only one recipe with a given name is installed on an instance.
+     * Names are also used to identify resources which helps to determine whether guest policies have conflicts.
+     * This means that requests to create multiple recipes with the same name and version are rejected since they
+     * could potentially have conflicting assignments.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The url of the repository.
+     * 
+     */
     public String getUrl() {
         return this.url;
     }

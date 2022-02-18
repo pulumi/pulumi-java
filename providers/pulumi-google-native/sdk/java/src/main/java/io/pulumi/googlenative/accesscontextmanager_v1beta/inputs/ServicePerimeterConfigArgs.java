@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * `ServicePerimeterConfig` specifies a set of Google Cloud resources that describe specific Service Perimeter configuration.
+ * 
+ */
 public final class ServicePerimeterConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServicePerimeterConfigArgs Empty = new ServicePerimeterConfigArgs();
 
+    /**
+     * A list of `AccessLevel` resource names that allow resources within the `ServicePerimeter` to be accessed from the internet. `AccessLevels` listed must be in the same policy as this `ServicePerimeter`. Referencing a nonexistent `AccessLevel` is a syntax error. If no `AccessLevel` names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter. Example: `"accessPolicies/MY_POLICY/accessLevels/MY_LEVEL"`. For Service Perimeter Bridge, must be empty.
+     * 
+     */
     @InputImport(name="accessLevels")
     private final @Nullable Input<List<String>> accessLevels;
 
@@ -23,6 +31,10 @@ public final class ServicePerimeterConfigArgs extends io.pulumi.resources.Resour
         return this.accessLevels == null ? Input.empty() : this.accessLevels;
     }
 
+    /**
+     * A list of Google Cloud resources that are inside of the service perimeter. Currently only projects are allowed. Format: `projects/{project_number}`
+     * 
+     */
     @InputImport(name="resources")
     private final @Nullable Input<List<String>> resources;
 
@@ -30,6 +42,10 @@ public final class ServicePerimeterConfigArgs extends io.pulumi.resources.Resour
         return this.resources == null ? Input.empty() : this.resources;
     }
 
+    /**
+     * Google Cloud services that are subject to the Service Perimeter restrictions. Must contain a list of services. For example, if `storage.googleapis.com` is specified, access to the storage buckets inside the perimeter must meet the perimeter's access restrictions.
+     * 
+     */
     @InputImport(name="restrictedServices")
     private final @Nullable Input<List<String>> restrictedServices;
 
@@ -37,6 +53,10 @@ public final class ServicePerimeterConfigArgs extends io.pulumi.resources.Resour
         return this.restrictedServices == null ? Input.empty() : this.restrictedServices;
     }
 
+    /**
+     * Beta. Configuration for APIs allowed within Perimeter.
+     * 
+     */
     @InputImport(name="vpcAccessibleServices")
     private final @Nullable Input<VpcAccessibleServicesArgs> vpcAccessibleServices;
 

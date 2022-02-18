@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Tag type enables you to specify a key-value pair that can be used to store information about an AWS CloudFormation StackSet.
+ * 
+ */
 public final class StackSetTag extends io.pulumi.resources.InvokeArgs {
 
     public static final StackSetTag Empty = new StackSetTag();
 
+    /**
+     * A string used to identify this tag. You can specify a maximum of 127 characters for a tag key.
+     * 
+     */
     @InputImport(name="key", required=true)
     private final String key;
 
@@ -19,6 +27,10 @@ public final class StackSetTag extends io.pulumi.resources.InvokeArgs {
         return this.key;
     }
 
+    /**
+     * A string containing the value for this tag. You can specify a maximum of 256 characters for a tag value.
+     * 
+     */
     @InputImport(name="value", required=true)
     private final String value;
 

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Type of provider for OAuth.
+     * 
+     */
     @EnumType
     public enum OpenAuthenticationProviderType {
         AAD("AAD");

@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BucketEventBridgeConfiguration {
+    /**
+     * Specifies whether to send notifications to Amazon EventBridge when events occur in an Amazon S3 bucket.
+     * 
+     */
     private final Boolean eventBridgeEnabled;
 
     @OutputCustomType.Constructor({"eventBridgeEnabled"})
@@ -16,6 +20,10 @@ public final class BucketEventBridgeConfiguration {
         this.eventBridgeEnabled = Objects.requireNonNull(eventBridgeEnabled);
     }
 
+    /**
+     * Specifies whether to send notifications to Amazon EventBridge when events occur in an Amazon S3 bucket.
+     * 
+     */
     public Boolean getEventBridgeEnabled() {
         return this.eventBridgeEnabled;
     }

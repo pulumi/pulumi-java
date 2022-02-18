@@ -13,6 +13,10 @@ public final class GetInstanceServiceAccount extends io.pulumi.resources.InvokeA
 
     public static final GetInstanceServiceAccount Empty = new GetInstanceServiceAccount();
 
+    /**
+     * The service account e-mail address.
+     * 
+     */
     @InputImport(name="email", required=true)
     private final String email;
 
@@ -20,6 +24,10 @@ public final class GetInstanceServiceAccount extends io.pulumi.resources.InvokeA
         return this.email;
     }
 
+    /**
+     * A list of service scopes.
+     * 
+     */
     @InputImport(name="scopes", required=true)
     private final List<String> scopes;
 

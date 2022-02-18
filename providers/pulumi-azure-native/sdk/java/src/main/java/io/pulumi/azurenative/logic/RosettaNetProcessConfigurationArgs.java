@@ -17,6 +17,10 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
 
     public static final RosettaNetProcessConfigurationArgs Empty = new RosettaNetProcessConfigurationArgs();
 
+    /**
+     * The RosettaNet process configuration activity settings.
+     * 
+     */
     @InputImport(name="activitySettings", required=true)
     private final Input<RosettaNetPipActivitySettingsArgs> activitySettings;
 
@@ -24,6 +28,10 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
         return this.activitySettings;
     }
 
+    /**
+     * The integration account RosettaNet ProcessConfiguration properties.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -31,6 +39,10 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The RosettaNet initiator role settings.
+     * 
+     */
     @InputImport(name="initiatorRoleSettings", required=true)
     private final Input<RosettaNetPipRoleSettingsArgs> initiatorRoleSettings;
 
@@ -38,6 +50,10 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
         return this.initiatorRoleSettings;
     }
 
+    /**
+     * The integration account name.
+     * 
+     */
     @InputImport(name="integrationAccountName", required=true)
     private final Input<String> integrationAccountName;
 
@@ -45,6 +61,10 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
         return this.integrationAccountName;
     }
 
+    /**
+     * The resource location.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -52,6 +72,10 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The metadata.
+     * 
+     */
     @InputImport(name="metadata")
     private final @Nullable Input<Map<String,String>> metadata;
 
@@ -59,6 +83,10 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
+    /**
+     * The integration account RosettaNet process code.
+     * 
+     */
     @InputImport(name="processCode", required=true)
     private final Input<String> processCode;
 
@@ -66,6 +94,10 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
         return this.processCode;
     }
 
+    /**
+     * The integration account RosettaNet process name.
+     * 
+     */
     @InputImport(name="processName", required=true)
     private final Input<String> processName;
 
@@ -73,6 +105,10 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
         return this.processName;
     }
 
+    /**
+     * The integration account RosettaNet process version.
+     * 
+     */
     @InputImport(name="processVersion", required=true)
     private final Input<String> processVersion;
 
@@ -80,6 +116,10 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
         return this.processVersion;
     }
 
+    /**
+     * The resource group name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -87,6 +127,10 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
         return this.resourceGroupName;
     }
 
+    /**
+     * The RosettaNet responder role settings.
+     * 
+     */
     @InputImport(name="responderRoleSettings", required=true)
     private final Input<RosettaNetPipRoleSettingsArgs> responderRoleSettings;
 
@@ -94,6 +138,10 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
         return this.responderRoleSettings;
     }
 
+    /**
+     * The integration account RosettaNet ProcessConfiguration name.
+     * 
+     */
     @InputImport(name="rosettaNetProcessConfigurationName")
     private final @Nullable Input<String> rosettaNetProcessConfigurationName;
 
@@ -101,6 +149,10 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
         return this.rosettaNetProcessConfigurationName == null ? Input.empty() : this.rosettaNetProcessConfigurationName;
     }
 
+    /**
+     * The resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

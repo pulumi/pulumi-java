@@ -13,6 +13,20 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFolders {
+/**
+ * Retrieve information about a set of folders based on a parent ID. See the
+ * [REST API](https://cloud.google.com/resource-manager/reference/rest/v3/folders/list)
+ * for more details.
+ * 
+ * ## Example Usage
+ * 
+ *
+ * A collection of arguments for invoking getFolders.
+ * 
+ *
+ * A collection of values returned by getFolders.
+ * 
+ */
     public static CompletableFuture<GetFoldersResult> invokeAsync(GetFoldersArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:organizations/getFolders:getFolders", TypeShape.of(GetFoldersResult.class), args == null ? GetFoldersArgs.Empty : args, Utilities.withVersion(options));
     }

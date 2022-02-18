@@ -14,6 +14,10 @@ public final class ResourceAssociationArgs extends io.pulumi.resources.ResourceA
 
     public static final ResourceAssociationArgs Empty = new ResourceAssociationArgs();
 
+    /**
+     * The name or the Id of the Application.
+     * 
+     */
     @InputImport(name="application", required=true)
     private final Input<String> application;
 
@@ -21,6 +25,10 @@ public final class ResourceAssociationArgs extends io.pulumi.resources.ResourceA
         return this.application;
     }
 
+    /**
+     * The name or the Id of the Resource.
+     * 
+     */
     @InputImport(name="resource", required=true)
     private final Input<String> resource;
 
@@ -28,6 +36,10 @@ public final class ResourceAssociationArgs extends io.pulumi.resources.ResourceA
         return this.resource;
     }
 
+    /**
+     * The type of the CFN Resource for now it's enum CFN_STACK.
+     * 
+     */
     @InputImport(name="resourceType", required=true)
     private final Input<ResourceAssociationResourceType> resourceType;
 

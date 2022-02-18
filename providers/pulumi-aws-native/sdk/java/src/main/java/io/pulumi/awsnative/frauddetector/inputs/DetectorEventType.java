@@ -20,6 +20,10 @@ public final class DetectorEventType extends io.pulumi.resources.InvokeArgs {
 
     public static final DetectorEventType Empty = new DetectorEventType();
 
+    /**
+     * The ARN of the event type.
+     * 
+     */
     @InputImport(name="arn")
     private final @Nullable String arn;
 
@@ -27,6 +31,10 @@ public final class DetectorEventType extends io.pulumi.resources.InvokeArgs {
         return this.arn == null ? Optional.empty() : Optional.ofNullable(this.arn);
     }
 
+    /**
+     * The time when the event type was created.
+     * 
+     */
     @InputImport(name="createdTime")
     private final @Nullable String createdTime;
 
@@ -34,6 +42,10 @@ public final class DetectorEventType extends io.pulumi.resources.InvokeArgs {
         return this.createdTime == null ? Optional.empty() : Optional.ofNullable(this.createdTime);
     }
 
+    /**
+     * The description of the event type.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -69,6 +81,10 @@ public final class DetectorEventType extends io.pulumi.resources.InvokeArgs {
         return this.labels == null ? List.of() : this.labels;
     }
 
+    /**
+     * The time when the event type was last updated.
+     * 
+     */
     @InputImport(name="lastUpdatedTime")
     private final @Nullable String lastUpdatedTime;
 
@@ -76,6 +92,10 @@ public final class DetectorEventType extends io.pulumi.resources.InvokeArgs {
         return this.lastUpdatedTime == null ? Optional.empty() : Optional.ofNullable(this.lastUpdatedTime);
     }
 
+    /**
+     * The name for the event type
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -83,6 +103,10 @@ public final class DetectorEventType extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Tags associated with this event type.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable List<DetectorTag> tags;
 

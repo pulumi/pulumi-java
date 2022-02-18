@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Information required to publish the MQTT message through the AWS IoT message broker.
+ * 
+ */
 public final class DetectorModelIotTopicPublishArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DetectorModelIotTopicPublishArgs Empty = new DetectorModelIotTopicPublishArgs();
 
+    /**
+     * The MQTT topic of the message. You can use a string expression that includes variables (`$variable.<variable-name>`) and input values (`$input.<input-name>.<path-to-datum>`) as the topic string.
+     * 
+     */
     @InputImport(name="mqttTopic", required=true)
     private final Input<String> mqttTopic;
 

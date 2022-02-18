@@ -17,6 +17,10 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RepositoryArgs Empty = new RepositoryArgs();
 
+    /**
+     * The time when the repository was created.
+     * 
+     */
     @InputImport(name="createTime")
     private final @Nullable Input<String> createTime;
 
@@ -24,6 +28,10 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
         return this.createTime == null ? Input.empty() : this.createTime;
     }
 
+    /**
+     * The user-provided description of the repository.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -31,6 +39,10 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The format of packages that are stored in the repository.
+     * 
+     */
     @InputImport(name="format")
     private final @Nullable Input<RepositoryFormat> format;
 
@@ -38,6 +50,10 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
         return this.format == null ? Input.empty() : this.format;
     }
 
+    /**
+     * The Cloud KMS resource name of the customer managed encryption key that’s used to encrypt the contents of the Repository. Has the form: `projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key`. This value may not be changed after the Repository has been created.
+     * 
+     */
     @InputImport(name="kmsKeyName")
     private final @Nullable Input<String> kmsKeyName;
 
@@ -45,6 +61,10 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
         return this.kmsKeyName == null ? Input.empty() : this.kmsKeyName;
     }
 
+    /**
+     * Labels with user-defined metadata. This field may contain up to 64 entries. Label keys and values may be no longer than 63 characters. Label keys must begin with a lowercase letter and may only contain lowercase letters, numeric characters, underscores, and dashes.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -59,6 +79,10 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Maven repository config contains repository level configuration for the repositories of maven type.
+     * 
+     */
     @InputImport(name="mavenConfig")
     private final @Nullable Input<MavenRepositoryConfigArgs> mavenConfig;
 
@@ -66,6 +90,10 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
         return this.mavenConfig == null ? Input.empty() : this.mavenConfig;
     }
 
+    /**
+     * The name of the repository, for example: "projects/p1/locations/us-central1/repositories/repo1".
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -87,6 +115,10 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
         return this.repositoryId == null ? Input.empty() : this.repositoryId;
     }
 
+    /**
+     * The time when the repository was last updated.
+     * 
+     */
     @InputImport(name="updateTime")
     private final @Nullable Input<String> updateTime;
 

@@ -15,13 +15,45 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CertificateDescriptionResponse {
+    /**
+     * Describes lists of issuer CA certificate URLs that appear in the "Authority Information Access" extension in the certificate.
+     * 
+     */
     private final List<String> aiaIssuingCertificateUrls;
+    /**
+     * Identifies the subject_key_id of the parent certificate, per https://tools.ietf.org/html/rfc5280#section-4.2.1.1
+     * 
+     */
     private final KeyIdResponse authorityKeyId;
+    /**
+     * The hash of the x.509 certificate.
+     * 
+     */
     private final CertificateFingerprintResponse certFingerprint;
+    /**
+     * Describes some of the technical fields in a certificate.
+     * 
+     */
     private final ReusableConfigValuesResponse configValues;
+    /**
+     * Describes a list of locations to obtain CRL information, i.e. the DistributionPoint.fullName described by https://tools.ietf.org/html/rfc5280#section-4.2.1.13
+     * 
+     */
     private final List<String> crlDistributionPoints;
+    /**
+     * The public key that corresponds to an issued certificate.
+     * 
+     */
     private final PublicKeyResponse publicKey;
+    /**
+     * Describes some of the values in a certificate that are related to the subject and lifetime.
+     * 
+     */
     private final SubjectDescriptionResponse subjectDescription;
+    /**
+     * Provides a means of identifiying certificates that contain a particular public key, per https://tools.ietf.org/html/rfc5280#section-4.2.1.2.
+     * 
+     */
     private final KeyIdResponse subjectKeyId;
 
     @OutputCustomType.Constructor({"aiaIssuingCertificateUrls","authorityKeyId","certFingerprint","configValues","crlDistributionPoints","publicKey","subjectDescription","subjectKeyId"})
@@ -44,27 +76,59 @@ public final class CertificateDescriptionResponse {
         this.subjectKeyId = Objects.requireNonNull(subjectKeyId);
     }
 
+    /**
+     * Describes lists of issuer CA certificate URLs that appear in the "Authority Information Access" extension in the certificate.
+     * 
+     */
     public List<String> getAiaIssuingCertificateUrls() {
         return this.aiaIssuingCertificateUrls;
     }
+    /**
+     * Identifies the subject_key_id of the parent certificate, per https://tools.ietf.org/html/rfc5280#section-4.2.1.1
+     * 
+     */
     public KeyIdResponse getAuthorityKeyId() {
         return this.authorityKeyId;
     }
+    /**
+     * The hash of the x.509 certificate.
+     * 
+     */
     public CertificateFingerprintResponse getCertFingerprint() {
         return this.certFingerprint;
     }
+    /**
+     * Describes some of the technical fields in a certificate.
+     * 
+     */
     public ReusableConfigValuesResponse getConfigValues() {
         return this.configValues;
     }
+    /**
+     * Describes a list of locations to obtain CRL information, i.e. the DistributionPoint.fullName described by https://tools.ietf.org/html/rfc5280#section-4.2.1.13
+     * 
+     */
     public List<String> getCrlDistributionPoints() {
         return this.crlDistributionPoints;
     }
+    /**
+     * The public key that corresponds to an issued certificate.
+     * 
+     */
     public PublicKeyResponse getPublicKey() {
         return this.publicKey;
     }
+    /**
+     * Describes some of the values in a certificate that are related to the subject and lifetime.
+     * 
+     */
     public SubjectDescriptionResponse getSubjectDescription() {
         return this.subjectDescription;
     }
+    /**
+     * Provides a means of identifiying certificates that contain a particular public key, per https://tools.ietf.org/html/rfc5280#section-4.2.1.2.
+     * 
+     */
     public KeyIdResponse getSubjectKeyId() {
         return this.subjectKeyId;
     }

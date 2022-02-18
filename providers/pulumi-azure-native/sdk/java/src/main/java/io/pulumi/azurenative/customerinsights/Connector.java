@@ -18,87 +18,212 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * The connector resource format.
+ * API Version: 2017-04-26.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:customerinsights:Connector sdkTestHub/testConnector /subscriptions/c909e979-ef71-4def-a970-bc7c154db8c5/resourceGroups/TestHubRG/providers/Microsoft.CustomerInsights/hubs/sdkTestHub/connectors/testConnector 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:customerinsights:Connector")
 public class Connector extends io.pulumi.resources.CustomResource {
+    /**
+     * ID of the connector.
+     * 
+     */
     @OutputExport(name="connectorId", type=Integer.class, parameters={})
     private Output<Integer> connectorId;
 
+    /**
+     * @return ID of the connector.
+     * 
+     */
     public Output<Integer> getConnectorId() {
         return this.connectorId;
     }
+    /**
+     * Name of the connector.
+     * 
+     */
     @OutputExport(name="connectorName", type=String.class, parameters={})
     private Output</* @Nullable */ String> connectorName;
 
+    /**
+     * @return Name of the connector.
+     * 
+     */
     public Output</* @Nullable */ String> getConnectorName() {
         return this.connectorName;
     }
+    /**
+     * The connector properties.
+     * 
+     */
     @OutputExport(name="connectorProperties", type=Map.class, parameters={String.class, Object.class})
     private Output<Map<String,Object>> connectorProperties;
 
+    /**
+     * @return The connector properties.
+     * 
+     */
     public Output<Map<String,Object>> getConnectorProperties() {
         return this.connectorProperties;
     }
+    /**
+     * Type of connector.
+     * 
+     */
     @OutputExport(name="connectorType", type=String.class, parameters={})
     private Output<String> connectorType;
 
+    /**
+     * @return Type of connector.
+     * 
+     */
     public Output<String> getConnectorType() {
         return this.connectorType;
     }
+    /**
+     * The created time.
+     * 
+     */
     @OutputExport(name="created", type=String.class, parameters={})
     private Output<String> created;
 
+    /**
+     * @return The created time.
+     * 
+     */
     public Output<String> getCreated() {
         return this.created;
     }
+    /**
+     * Description of the connector.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return Description of the connector.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * Display name of the connector.
+     * 
+     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
+    /**
+     * @return Display name of the connector.
+     * 
+     */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
+    /**
+     * If this is an internal connector.
+     * 
+     */
     @OutputExport(name="isInternal", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isInternal;
 
+    /**
+     * @return If this is an internal connector.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getIsInternal() {
         return this.isInternal;
     }
+    /**
+     * The last modified time.
+     * 
+     */
     @OutputExport(name="lastModified", type=String.class, parameters={})
     private Output<String> lastModified;
 
+    /**
+     * @return The last modified time.
+     * 
+     */
     public Output<String> getLastModified() {
         return this.lastModified;
     }
+    /**
+     * Resource name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * State of connector.
+     * 
+     */
     @OutputExport(name="state", type=String.class, parameters={})
     private Output<String> state;
 
+    /**
+     * @return State of connector.
+     * 
+     */
     public Output<String> getState() {
         return this.state;
     }
+    /**
+     * The hub name.
+     * 
+     */
     @OutputExport(name="tenantId", type=String.class, parameters={})
     private Output<String> tenantId;
 
+    /**
+     * @return The hub name.
+     * 
+     */
     public Output<String> getTenantId() {
         return this.tenantId;
     }
+    /**
+     * Resource type.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Connector(String name, ConnectorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:customerinsights:Connector", name, args == null ? ConnectorArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -118,6 +243,14 @@ public class Connector extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Connector get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Connector(name, id, options);
     }

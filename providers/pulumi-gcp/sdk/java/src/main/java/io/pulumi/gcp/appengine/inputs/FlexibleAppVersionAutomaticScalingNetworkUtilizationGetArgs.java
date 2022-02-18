@@ -14,6 +14,10 @@ public final class FlexibleAppVersionAutomaticScalingNetworkUtilizationGetArgs e
 
     public static final FlexibleAppVersionAutomaticScalingNetworkUtilizationGetArgs Empty = new FlexibleAppVersionAutomaticScalingNetworkUtilizationGetArgs();
 
+    /**
+     * Target bytes received per second.
+     * 
+     */
     @InputImport(name="targetReceivedBytesPerSecond")
     private final @Nullable Input<Integer> targetReceivedBytesPerSecond;
 
@@ -21,6 +25,10 @@ public final class FlexibleAppVersionAutomaticScalingNetworkUtilizationGetArgs e
         return this.targetReceivedBytesPerSecond == null ? Input.empty() : this.targetReceivedBytesPerSecond;
     }
 
+    /**
+     * Target packets received per second.
+     * 
+     */
     @InputImport(name="targetReceivedPacketsPerSecond")
     private final @Nullable Input<Integer> targetReceivedPacketsPerSecond;
 
@@ -28,6 +36,10 @@ public final class FlexibleAppVersionAutomaticScalingNetworkUtilizationGetArgs e
         return this.targetReceivedPacketsPerSecond == null ? Input.empty() : this.targetReceivedPacketsPerSecond;
     }
 
+    /**
+     * Target bytes sent per second.
+     * 
+     */
     @InputImport(name="targetSentBytesPerSecond")
     private final @Nullable Input<Integer> targetSentBytesPerSecond;
 
@@ -35,6 +47,10 @@ public final class FlexibleAppVersionAutomaticScalingNetworkUtilizationGetArgs e
         return this.targetSentBytesPerSecond == null ? Input.empty() : this.targetSentBytesPerSecond;
     }
 
+    /**
+     * Target packets sent per second.
+     * 
+     */
     @InputImport(name="targetSentPacketsPerSecond")
     private final @Nullable Input<Integer> targetSentPacketsPerSecond;
 

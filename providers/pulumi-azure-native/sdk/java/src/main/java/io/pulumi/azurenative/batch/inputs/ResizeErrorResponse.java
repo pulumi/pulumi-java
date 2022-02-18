@@ -15,6 +15,10 @@ public final class ResizeErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResizeErrorResponse Empty = new ResizeErrorResponse();
 
+    /**
+     * An identifier for the error. Codes are invariant and are intended to be consumed programmatically.
+     * 
+     */
     @InputImport(name="code", required=true)
     private final String code;
 
@@ -29,6 +33,10 @@ public final class ResizeErrorResponse extends io.pulumi.resources.InvokeArgs {
         return this.details == null ? List.of() : this.details;
     }
 
+    /**
+     * A message describing the error, intended to be suitable for display in a user interface.
+     * 
+     */
     @InputImport(name="message", required=true)
     private final String message;
 

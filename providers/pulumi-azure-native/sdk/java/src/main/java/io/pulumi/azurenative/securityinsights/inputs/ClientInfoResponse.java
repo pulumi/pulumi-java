@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Information on the client (user or application) that made some action
+ * 
+ */
 public final class ClientInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ClientInfoResponse Empty = new ClientInfoResponse();
 
+    /**
+     * The email of the client.
+     * 
+     */
     @InputImport(name="email")
     private final @Nullable String email;
 
@@ -21,6 +29,10 @@ public final class ClientInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.email == null ? Optional.empty() : Optional.ofNullable(this.email);
     }
 
+    /**
+     * The name of the client.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -28,6 +40,10 @@ public final class ClientInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The object id of the client.
+     * 
+     */
     @InputImport(name="objectId")
     private final @Nullable String objectId;
 
@@ -35,6 +51,10 @@ public final class ClientInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.objectId == null ? Optional.empty() : Optional.ofNullable(this.objectId);
     }
 
+    /**
+     * The user principal name of the client.
+     * 
+     */
     @InputImport(name="userPrincipalName")
     private final @Nullable String userPrincipalName;
 

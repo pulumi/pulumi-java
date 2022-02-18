@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Migration Progress
+ * 
+ */
 public final class MigrationProgressResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MigrationProgressResponse Empty = new MigrationProgressResponse();
 
+    /**
+     * Completion Percentage
+     * 
+     */
     @InputImport(name="completionPercentage")
     private final @Nullable Double completionPercentage;
 
@@ -22,6 +30,10 @@ public final class MigrationProgressResponse extends io.pulumi.resources.InvokeA
         return this.completionPercentage == null ? Optional.empty() : Optional.ofNullable(this.completionPercentage);
     }
 
+    /**
+     * Progress Message
+     * 
+     */
     @InputImport(name="progressMessage")
     private final @Nullable String progressMessage;
 

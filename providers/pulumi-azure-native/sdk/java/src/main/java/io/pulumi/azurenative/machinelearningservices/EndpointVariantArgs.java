@@ -21,6 +21,11 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final EndpointVariantArgs Empty = new EndpointVariantArgs();
 
+    /**
+     * The compute environment type for the service.
+     * Expected value is 'Custom'.
+     * 
+     */
     @InputImport(name="computeType", required=true)
     private final Input<String> computeType;
 
@@ -28,6 +33,10 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
         return this.computeType;
     }
 
+    /**
+     * The description of the service.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -35,6 +44,10 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The Environment, models and assets needed for inferencing.
+     * 
+     */
     @InputImport(name="environmentImageRequest")
     private final @Nullable Input<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest;
 
@@ -42,6 +55,10 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
         return this.environmentImageRequest == null ? Input.empty() : this.environmentImageRequest;
     }
 
+    /**
+     * Is this the default variant.
+     * 
+     */
     @InputImport(name="isDefault")
     private final @Nullable Input<Boolean> isDefault;
 
@@ -49,6 +66,10 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
         return this.isDefault == null ? Input.empty() : this.isDefault;
     }
 
+    /**
+     * The authentication keys.
+     * 
+     */
     @InputImport(name="keys")
     private final @Nullable Input<CreateServiceRequestKeysArgs> keys;
 
@@ -56,6 +77,10 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
         return this.keys == null ? Input.empty() : this.keys;
     }
 
+    /**
+     * The service tag dictionary. Tags are mutable.
+     * 
+     */
     @InputImport(name="kvTags")
     private final @Nullable Input<Map<String,String>> kvTags;
 
@@ -63,6 +88,10 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
         return this.kvTags == null ? Input.empty() : this.kvTags;
     }
 
+    /**
+     * The name of the Azure location/region.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -70,6 +99,10 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The service properties dictionary. Properties are immutable.
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<Map<String,String>> properties;
 
@@ -77,6 +110,10 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * Name of the resource group in which workspace is located.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -84,6 +121,10 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of the Azure Machine Learning service.
+     * 
+     */
     @InputImport(name="serviceName")
     private final @Nullable Input<String> serviceName;
 
@@ -91,6 +132,10 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
         return this.serviceName == null ? Input.empty() : this.serviceName;
     }
 
+    /**
+     * The amount of traffic variant receives.
+     * 
+     */
     @InputImport(name="trafficPercentile")
     private final @Nullable Input<Double> trafficPercentile;
 
@@ -98,6 +143,10 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
         return this.trafficPercentile == null ? Input.empty() : this.trafficPercentile;
     }
 
+    /**
+     * The type of the variant.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<Either<String,VariantType>> type;
 
@@ -105,6 +154,10 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
         return this.type == null ? Input.empty() : this.type;
     }
 
+    /**
+     * Name of Azure Machine Learning workspace.
+     * 
+     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

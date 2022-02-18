@@ -17,6 +17,10 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MachineArgs Empty = new MachineArgs();
 
+    /**
+     * Public Key that the client provides to be used during initial resource onboarding
+     * 
+     */
     @InputImport(name="clientPublicKey")
     private final @Nullable Input<String> clientPublicKey;
 
@@ -31,6 +35,10 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity == null ? Input.empty() : this.identity;
     }
 
+    /**
+     * The geo-location where the resource lives
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -38,6 +46,10 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Metadata pertaining to the geographic location of the resource.
+     * 
+     */
     @InputImport(name="locationData")
     private final @Nullable Input<LocationDataArgs> locationData;
 
@@ -45,6 +57,10 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.locationData == null ? Input.empty() : this.locationData;
     }
 
+    /**
+     * The name of the hybrid machine.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -52,6 +68,10 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -59,6 +79,10 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -66,6 +90,10 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * Specifies the hybrid machine unique ID.
+     * 
+     */
     @InputImport(name="vmId")
     private final @Nullable Input<String> vmId;
 

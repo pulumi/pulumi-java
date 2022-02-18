@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Azure resource identifier.
+ * 
+ */
 public final class SubResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SubResourceArgs Empty = new SubResourceArgs();
 
+    /**
+     * Azure resource identifier.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 

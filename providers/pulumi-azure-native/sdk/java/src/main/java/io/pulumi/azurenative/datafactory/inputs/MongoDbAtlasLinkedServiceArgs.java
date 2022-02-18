@@ -15,10 +15,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Linked service for MongoDB Atlas data source.
+ * 
+ */
 public final class MongoDbAtlasLinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MongoDbAtlasLinkedServiceArgs Empty = new MongoDbAtlasLinkedServiceArgs();
 
+    /**
+     * List of tags that can be used for describing the linked service.
+     * 
+     */
     @InputImport(name="annotations")
     private final @Nullable Input<List<Object>> annotations;
 
@@ -26,6 +34,10 @@ public final class MongoDbAtlasLinkedServiceArgs extends io.pulumi.resources.Res
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
+    /**
+     * The integration runtime reference.
+     * 
+     */
     @InputImport(name="connectVia")
     private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
@@ -33,6 +45,10 @@ public final class MongoDbAtlasLinkedServiceArgs extends io.pulumi.resources.Res
         return this.connectVia == null ? Input.empty() : this.connectVia;
     }
 
+    /**
+     * The MongoDB Atlas connection string. Type: string, SecureString or AzureKeyVaultSecretReference. Type: string, SecureString or AzureKeyVaultSecretReference.
+     * 
+     */
     @InputImport(name="connectionString", required=true)
     private final Input<Object> connectionString;
 
@@ -40,6 +56,10 @@ public final class MongoDbAtlasLinkedServiceArgs extends io.pulumi.resources.Res
         return this.connectionString;
     }
 
+    /**
+     * The name of the MongoDB Atlas database that you want to access. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="database", required=true)
     private final Input<Object> database;
 
@@ -47,6 +67,10 @@ public final class MongoDbAtlasLinkedServiceArgs extends io.pulumi.resources.Res
         return this.database;
     }
 
+    /**
+     * Linked service description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -54,6 +78,10 @@ public final class MongoDbAtlasLinkedServiceArgs extends io.pulumi.resources.Res
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Parameters for linked service.
+     * 
+     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
@@ -61,6 +89,11 @@ public final class MongoDbAtlasLinkedServiceArgs extends io.pulumi.resources.Res
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
+    /**
+     * Type of linked service.
+     * Expected value is 'MongoDbAtlas'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

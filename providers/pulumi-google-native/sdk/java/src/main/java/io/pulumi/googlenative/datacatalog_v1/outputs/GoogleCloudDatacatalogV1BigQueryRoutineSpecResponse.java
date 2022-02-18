@@ -10,6 +10,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse {
+    /**
+     * Paths of the imported libraries.
+     * 
+     */
     private final List<String> importedLibraries;
 
     @OutputCustomType.Constructor({"importedLibraries"})
@@ -17,6 +21,10 @@ public final class GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse {
         this.importedLibraries = Objects.requireNonNull(importedLibraries);
     }
 
+    /**
+     * Paths of the imported libraries.
+     * 
+     */
     public List<String> getImportedLibraries() {
         return this.importedLibraries;
     }

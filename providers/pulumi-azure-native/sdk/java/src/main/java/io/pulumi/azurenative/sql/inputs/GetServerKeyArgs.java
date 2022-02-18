@@ -12,6 +12,10 @@ public final class GetServerKeyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetServerKeyArgs Empty = new GetServerKeyArgs();
 
+    /**
+     * The name of the server key to be retrieved.
+     * 
+     */
     @InputImport(name="keyName", required=true)
     private final String keyName;
 
@@ -19,6 +23,10 @@ public final class GetServerKeyArgs extends io.pulumi.resources.InvokeArgs {
         return this.keyName;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetServerKeyArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the server.
+     * 
+     */
     @InputImport(name="serverName", required=true)
     private final String serverName;
 

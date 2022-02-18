@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ApplicationHAClusterPrometheusExporter {
+    /**
+     * Prometheus exporter port.
+     * 
+     */
     private final @Nullable String prometheusPort;
 
     @OutputCustomType.Constructor({"prometheusPort"})
@@ -18,6 +22,10 @@ public final class ApplicationHAClusterPrometheusExporter {
         this.prometheusPort = prometheusPort;
     }
 
+    /**
+     * Prometheus exporter port.
+     * 
+     */
     public Optional<String> getPrometheusPort() {
         return Optional.ofNullable(this.prometheusPort);
     }

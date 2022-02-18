@@ -12,6 +12,10 @@ public final class GetOrderArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetOrderArgs Empty = new GetOrderArgs();
 
+    /**
+     * The device name.
+     * 
+     */
     @InputImport(name="deviceName", required=true)
     private final String deviceName;
 
@@ -19,6 +23,10 @@ public final class GetOrderArgs extends io.pulumi.resources.InvokeArgs {
         return this.deviceName;
     }
 
+    /**
+     * The resource group name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

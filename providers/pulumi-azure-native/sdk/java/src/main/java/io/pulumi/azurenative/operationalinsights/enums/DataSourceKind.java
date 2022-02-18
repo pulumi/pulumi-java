@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The kind of the DataSource.
+     * 
+     */
     @EnumType
     public enum DataSourceKind {
         WindowsEvent("WindowsEvent"),

@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class HostedZoneVPC {
+    /**
+     * The ID of an Amazon VPC.
+     * 
+     */
     private final String vPCId;
+    /**
+     * The region that an Amazon VPC was created in. See https://docs.aws.amazon.com/general/latest/gr/rande.html for a list of up to date regions.
+     * 
+     */
     private final String vPCRegion;
 
     @OutputCustomType.Constructor({"vPCId","vPCRegion"})
@@ -20,9 +28,17 @@ public final class HostedZoneVPC {
         this.vPCRegion = Objects.requireNonNull(vPCRegion);
     }
 
+    /**
+     * The ID of an Amazon VPC.
+     * 
+     */
     public String getVPCId() {
         return this.vPCId;
     }
+    /**
+     * The region that an Amazon VPC was created in. See https://docs.aws.amazon.com/general/latest/gr/rande.html for a list of up to date regions.
+     * 
+     */
     public String getVPCRegion() {
         return this.vPCRegion;
     }

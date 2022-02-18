@@ -12,6 +12,10 @@ public final class GetHubVirtualNetworkConnectionArgs extends io.pulumi.resource
 
     public static final GetHubVirtualNetworkConnectionArgs Empty = new GetHubVirtualNetworkConnectionArgs();
 
+    /**
+     * The name of the vpn connection.
+     * 
+     */
     @InputImport(name="connectionName", required=true)
     private final String connectionName;
 
@@ -19,6 +23,10 @@ public final class GetHubVirtualNetworkConnectionArgs extends io.pulumi.resource
         return this.connectionName;
     }
 
+    /**
+     * The resource group name of the VirtualHub.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetHubVirtualNetworkConnectionArgs extends io.pulumi.resource
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the VirtualHub.
+     * 
+     */
     @InputImport(name="virtualHubName", required=true)
     private final String virtualHubName;
 

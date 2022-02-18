@@ -14,6 +14,10 @@ public final class GetForwardingRuleArgs extends io.pulumi.resources.InvokeArgs 
 
     public static final GetForwardingRuleArgs Empty = new GetForwardingRuleArgs();
 
+    /**
+     * The name of the forwarding rule.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -21,6 +25,11 @@ public final class GetForwardingRuleArgs extends io.pulumi.resources.InvokeArgs 
         return this.name;
     }
 
+    /**
+     * The project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -28,6 +37,11 @@ public final class GetForwardingRuleArgs extends io.pulumi.resources.InvokeArgs 
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
+    /**
+     * The region in which the resource belongs. If it
+     * is not provided, the project region is used.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable String region;
 

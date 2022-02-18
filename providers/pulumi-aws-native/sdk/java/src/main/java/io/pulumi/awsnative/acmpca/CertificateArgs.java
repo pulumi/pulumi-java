@@ -16,6 +16,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CertificateArgs Empty = new CertificateArgs();
 
+    /**
+     * These are fields to be overridden in a certificate at the time of issuance. These requires an API_Passthrough template be used or they will be ignored.
+     * 
+     */
     @InputImport(name="apiPassthrough")
     private final @Nullable Input<CertificateApiPassthroughArgs> apiPassthrough;
 
@@ -23,6 +27,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.apiPassthrough == null ? Input.empty() : this.apiPassthrough;
     }
 
+    /**
+     * The Amazon Resource Name (ARN) for the private CA to issue the certificate.
+     * 
+     */
     @InputImport(name="certificateAuthorityArn", required=true)
     private final Input<String> certificateAuthorityArn;
 
@@ -30,6 +38,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.certificateAuthorityArn;
     }
 
+    /**
+     * The certificate signing request (CSR) for the Certificate.
+     * 
+     */
     @InputImport(name="certificateSigningRequest", required=true)
     private final Input<String> certificateSigningRequest;
 
@@ -37,6 +49,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.certificateSigningRequest;
     }
 
+    /**
+     * The name of the algorithm that will be used to sign the Certificate.
+     * 
+     */
     @InputImport(name="signingAlgorithm", required=true)
     private final Input<String> signingAlgorithm;
 
@@ -44,6 +60,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.signingAlgorithm;
     }
 
+    /**
+     * Specifies a custom configuration template to use when issuing a certificate. If this parameter is not provided, ACM Private CA defaults to the EndEntityCertificate/V1 template.
+     * 
+     */
     @InputImport(name="templateArn")
     private final @Nullable Input<String> templateArn;
 
@@ -51,6 +71,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.templateArn == null ? Input.empty() : this.templateArn;
     }
 
+    /**
+     * The time before which the Certificate will be valid.
+     * 
+     */
     @InputImport(name="validity", required=true)
     private final Input<CertificateValidityArgs> validity;
 
@@ -58,6 +82,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.validity;
     }
 
+    /**
+     * The time after which the Certificate will be valid.
+     * 
+     */
     @InputImport(name="validityNotBefore")
     private final @Nullable Input<CertificateValidityArgs> validityNotBefore;
 

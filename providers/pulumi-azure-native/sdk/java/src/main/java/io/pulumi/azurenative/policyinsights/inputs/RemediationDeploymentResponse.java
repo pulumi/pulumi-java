@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Details of a single deployment created by the remediation.
+ * 
+ */
 public final class RemediationDeploymentResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RemediationDeploymentResponse Empty = new RemediationDeploymentResponse();
 
+    /**
+     * The time at which the remediation was created.
+     * 
+     */
     @InputImport(name="createdOn", required=true)
     private final String createdOn;
 
@@ -20,6 +28,10 @@ public final class RemediationDeploymentResponse extends io.pulumi.resources.Inv
         return this.createdOn;
     }
 
+    /**
+     * Resource ID of the template deployment that will remediate the resource.
+     * 
+     */
     @InputImport(name="deploymentId", required=true)
     private final String deploymentId;
 
@@ -27,6 +39,10 @@ public final class RemediationDeploymentResponse extends io.pulumi.resources.Inv
         return this.deploymentId;
     }
 
+    /**
+     * Error encountered while remediated the resource.
+     * 
+     */
     @InputImport(name="error", required=true)
     private final ErrorDefinitionResponse error;
 
@@ -34,6 +50,10 @@ public final class RemediationDeploymentResponse extends io.pulumi.resources.Inv
         return this.error;
     }
 
+    /**
+     * The time at which the remediation deployment was last updated.
+     * 
+     */
     @InputImport(name="lastUpdatedOn", required=true)
     private final String lastUpdatedOn;
 
@@ -41,6 +61,10 @@ public final class RemediationDeploymentResponse extends io.pulumi.resources.Inv
         return this.lastUpdatedOn;
     }
 
+    /**
+     * Resource ID of the resource that is being remediated by the deployment.
+     * 
+     */
     @InputImport(name="remediatedResourceId", required=true)
     private final String remediatedResourceId;
 
@@ -48,6 +72,10 @@ public final class RemediationDeploymentResponse extends io.pulumi.resources.Inv
         return this.remediatedResourceId;
     }
 
+    /**
+     * Location of the resource that is being remediated.
+     * 
+     */
     @InputImport(name="resourceLocation", required=true)
     private final String resourceLocation;
 
@@ -55,6 +83,10 @@ public final class RemediationDeploymentResponse extends io.pulumi.resources.Inv
         return this.resourceLocation;
     }
 
+    /**
+     * Status of the remediation deployment.
+     * 
+     */
     @InputImport(name="status", required=true)
     private final String status;
 

@@ -12,6 +12,10 @@ public final class GetAccessPointPolicyArgs extends io.pulumi.resources.InvokeAr
 
     public static final GetAccessPointPolicyArgs Empty = new GetAccessPointPolicyArgs();
 
+    /**
+     * The name of the Amazon S3 ObjectLambdaAccessPoint to which the policy applies.
+     * 
+     */
     @InputImport(name="objectLambdaAccessPoint", required=true)
     private final String objectLambdaAccessPoint;
 

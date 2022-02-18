@@ -22,6 +22,10 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
         return this.allowedOperations == null ? Input.empty() : this.allowedOperations;
     }
 
+    /**
+     * Name for the created Grant.
+     * 
+     */
     @InputImport(name="grantName")
     private final @Nullable Input<String> grantName;
 
@@ -29,6 +33,10 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
         return this.grantName == null ? Input.empty() : this.grantName;
     }
 
+    /**
+     * Home region for the created grant.
+     * 
+     */
     @InputImport(name="homeRegion")
     private final @Nullable Input<String> homeRegion;
 
@@ -36,6 +44,10 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
         return this.homeRegion == null ? Input.empty() : this.homeRegion;
     }
 
+    /**
+     * License Arn for the grant.
+     * 
+     */
     @InputImport(name="licenseArn")
     private final @Nullable Input<String> licenseArn;
 

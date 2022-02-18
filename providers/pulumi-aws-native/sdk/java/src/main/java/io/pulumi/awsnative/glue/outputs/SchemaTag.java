@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SchemaTag {
+    /**
+     * A key to identify the tag.
+     * 
+     */
     private final String key;
+    /**
+     * Corresponding tag value for the key.
+     * 
+     */
     private final String value;
 
     @OutputCustomType.Constructor({"key","value"})
@@ -20,9 +28,17 @@ public final class SchemaTag {
         this.value = Objects.requireNonNull(value);
     }
 
+    /**
+     * A key to identify the tag.
+     * 
+     */
     public String getKey() {
         return this.key;
     }
+    /**
+     * Corresponding tag value for the key.
+     * 
+     */
     public String getValue() {
         return this.value;
     }

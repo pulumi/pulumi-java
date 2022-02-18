@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Optional. Defaults to FIXED_TYPE.
+     * 
+     */
     @EnumType
     public enum ArgumentArgumentKind {
         ArgumentKindUnspecified("ARGUMENT_KIND_UNSPECIFIED"),
+        /**
+         * The argument is a variable with fully specified type, which can be a struct or an array, but not a table.
+         * 
+         */
         FixedType("FIXED_TYPE"),
+        /**
+         * The argument is any type, including struct or array, but not a table. To be added: FIXED_TABLE, ANY_TABLE
+         * 
+         */
         AnyType("ANY_TYPE");
 
         private final String value;

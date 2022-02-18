@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The content type of the field. Used for determining equality when searching.
+     * 
+     */
     @EnumType
     public enum ObjectTypeFieldContentType {
         String("STRING"),

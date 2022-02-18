@@ -12,10 +12,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Binds the resources in a proxy or remote service with the GraphQL operation and its associated quota enforcement.
+ * 
+ */
 public final class GoogleCloudApigeeV1GraphQLOperationConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudApigeeV1GraphQLOperationConfigResponse Empty = new GoogleCloudApigeeV1GraphQLOperationConfigResponse();
 
+    /**
+     * Name of the API proxy endpoint or remote service with which the GraphQL operation and quota are associated.
+     * 
+     */
     @InputImport(name="apiSource", required=true)
     private final String apiSource;
 
@@ -23,6 +31,10 @@ public final class GoogleCloudApigeeV1GraphQLOperationConfigResponse extends io.
         return this.apiSource;
     }
 
+    /**
+     * Custom attributes associated with the operation.
+     * 
+     */
     @InputImport(name="attributes", required=true)
     private final List<GoogleCloudApigeeV1AttributeResponse> attributes;
 
@@ -30,6 +42,10 @@ public final class GoogleCloudApigeeV1GraphQLOperationConfigResponse extends io.
         return this.attributes;
     }
 
+    /**
+     * List of GraphQL name/operation type pairs for the proxy or remote service to which quota will be applied. If only operation types are specified, the quota will be applied to all GraphQL requests irrespective of the GraphQL name. **Note**: Currently, you can specify only a single GraphQLOperation. Specifying more than one will cause the operation to fail.
+     * 
+     */
     @InputImport(name="operations", required=true)
     private final List<GoogleCloudApigeeV1GraphQLOperationResponse> operations;
 
@@ -37,6 +53,10 @@ public final class GoogleCloudApigeeV1GraphQLOperationConfigResponse extends io.
         return this.operations;
     }
 
+    /**
+     * Quota parameters to be enforced for the resources, methods, and API source combination. If none are specified, quota enforcement will not be done.
+     * 
+     */
     @InputImport(name="quota", required=true)
     private final GoogleCloudApigeeV1QuotaResponse quota;
 

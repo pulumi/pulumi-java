@@ -12,6 +12,10 @@ public final class GetSecurityProfileArgs extends io.pulumi.resources.InvokeArgs
 
     public static final GetSecurityProfileArgs Empty = new GetSecurityProfileArgs();
 
+    /**
+     * A unique identifier for the security profile.
+     * 
+     */
     @InputImport(name="securityProfileName", required=true)
     private final String securityProfileName;
 

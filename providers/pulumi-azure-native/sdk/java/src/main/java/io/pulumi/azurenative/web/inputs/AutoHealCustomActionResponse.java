@@ -10,10 +10,19 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Custom action to be executed
+ * when an auto heal rule is triggered.
+ * 
+ */
 public final class AutoHealCustomActionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AutoHealCustomActionResponse Empty = new AutoHealCustomActionResponse();
 
+    /**
+     * Executable to be run.
+     * 
+     */
     @InputImport(name="exe")
     private final @Nullable String exe;
 
@@ -21,6 +30,10 @@ public final class AutoHealCustomActionResponse extends io.pulumi.resources.Invo
         return this.exe == null ? Optional.empty() : Optional.ofNullable(this.exe);
     }
 
+    /**
+     * Parameters for the executable.
+     * 
+     */
     @InputImport(name="parameters")
     private final @Nullable String parameters;
 

@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties of SqlServerInstance.
+ * 
+ */
 public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SqlServerInstancePropertiesArgs Empty = new SqlServerInstancePropertiesArgs();
 
+    /**
+     * SQL Server collation.
+     * 
+     */
     @InputImport(name="collation")
     private final @Nullable Input<String> collation;
 
@@ -21,6 +29,10 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
         return this.collation == null ? Input.empty() : this.collation;
     }
 
+    /**
+     * ARM Resource id of the container resource (Azure Arc for Servers).
+     * 
+     */
     @InputImport(name="containerResourceId", required=true)
     private final Input<String> containerResourceId;
 
@@ -28,6 +40,10 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
         return this.containerResourceId;
     }
 
+    /**
+     * SQL Server current version.
+     * 
+     */
     @InputImport(name="currentVersion")
     private final @Nullable Input<String> currentVersion;
 
@@ -35,6 +51,10 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
         return this.currentVersion == null ? Input.empty() : this.currentVersion;
     }
 
+    /**
+     * SQL Server edition.
+     * 
+     */
     @InputImport(name="edition")
     private final @Nullable Input<String> edition;
 
@@ -42,6 +62,10 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
         return this.edition == null ? Input.empty() : this.edition;
     }
 
+    /**
+     * SQL Server instance name.
+     * 
+     */
     @InputImport(name="instanceName")
     private final @Nullable Input<String> instanceName;
 
@@ -49,6 +73,10 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
         return this.instanceName == null ? Input.empty() : this.instanceName;
     }
 
+    /**
+     * SQL Server license type.
+     * 
+     */
     @InputImport(name="licenseType")
     private final @Nullable Input<String> licenseType;
 
@@ -56,6 +84,10 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
         return this.licenseType == null ? Input.empty() : this.licenseType;
     }
 
+    /**
+     * SQL Server update level.
+     * 
+     */
     @InputImport(name="patchLevel")
     private final @Nullable Input<String> patchLevel;
 
@@ -63,6 +95,10 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
         return this.patchLevel == null ? Input.empty() : this.patchLevel;
     }
 
+    /**
+     * SQL Server product ID.
+     * 
+     */
     @InputImport(name="productId")
     private final @Nullable Input<String> productId;
 
@@ -70,6 +106,10 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
         return this.productId == null ? Input.empty() : this.productId;
     }
 
+    /**
+     * The cloud connectivity status.
+     * 
+     */
     @InputImport(name="status", required=true)
     private final Input<String> status;
 
@@ -77,6 +117,10 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
         return this.status;
     }
 
+    /**
+     * Dynamic TCP ports used by SQL Server.
+     * 
+     */
     @InputImport(name="tcpDynamicPorts")
     private final @Nullable Input<String> tcpDynamicPorts;
 
@@ -84,6 +128,10 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
         return this.tcpDynamicPorts == null ? Input.empty() : this.tcpDynamicPorts;
     }
 
+    /**
+     * Static TCP ports used by SQL Server.
+     * 
+     */
     @InputImport(name="tcpStaticPorts")
     private final @Nullable Input<String> tcpStaticPorts;
 
@@ -91,6 +139,10 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
         return this.tcpStaticPorts == null ? Input.empty() : this.tcpStaticPorts;
     }
 
+    /**
+     * The number of logical processors used by the SQL Server instance.
+     * 
+     */
     @InputImport(name="vCore")
     private final @Nullable Input<String> vCore;
 
@@ -98,6 +150,10 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
         return this.vCore == null ? Input.empty() : this.vCore;
     }
 
+    /**
+     * SQL Server version.
+     * 
+     */
     @InputImport(name="version")
     private final @Nullable Input<String> version;
 

@@ -9,9 +9,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ListDeploymentInfoResult {
+    /**
+     * Disk capacity of the elasticsearch in Elastic cloud deployment.
+     * 
+     */
     private final String diskCapacity;
+    /**
+     * RAM capacity of the elasticsearch in Elastic cloud deployment.
+     * 
+     */
     private final String memoryCapacity;
+    /**
+     * The Elastic deployment status.
+     * 
+     */
     private final String status;
+    /**
+     * Version of the elasticsearch in Elastic cloud deployment.
+     * 
+     */
     private final String version;
 
     @OutputCustomType.Constructor({"diskCapacity","memoryCapacity","status","version"})
@@ -26,15 +42,31 @@ public final class ListDeploymentInfoResult {
         this.version = Objects.requireNonNull(version);
     }
 
+    /**
+     * Disk capacity of the elasticsearch in Elastic cloud deployment.
+     * 
+     */
     public String getDiskCapacity() {
         return this.diskCapacity;
     }
+    /**
+     * RAM capacity of the elasticsearch in Elastic cloud deployment.
+     * 
+     */
     public String getMemoryCapacity() {
         return this.memoryCapacity;
     }
+    /**
+     * The Elastic deployment status.
+     * 
+     */
     public String getStatus() {
         return this.status;
     }
+    /**
+     * Version of the elasticsearch in Elastic cloud deployment.
+     * 
+     */
     public String getVersion() {
         return this.version;
     }

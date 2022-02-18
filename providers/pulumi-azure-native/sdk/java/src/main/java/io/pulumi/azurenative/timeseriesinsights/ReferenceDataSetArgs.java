@@ -19,6 +19,10 @@ public final class ReferenceDataSetArgs extends io.pulumi.resources.ResourceArgs
 
     public static final ReferenceDataSetArgs Empty = new ReferenceDataSetArgs();
 
+    /**
+     * The reference data set key comparison behavior can be set using this property. By default, the value is 'Ordinal' - which means case sensitive key comparison will be performed while joining reference data with events or while adding new reference data. When 'OrdinalIgnoreCase' is set, case insensitive comparison will be used.
+     * 
+     */
     @InputImport(name="dataStringComparisonBehavior")
     private final @Nullable Input<Either<String,DataStringComparisonBehavior>> dataStringComparisonBehavior;
 
@@ -26,6 +30,10 @@ public final class ReferenceDataSetArgs extends io.pulumi.resources.ResourceArgs
         return this.dataStringComparisonBehavior == null ? Input.empty() : this.dataStringComparisonBehavior;
     }
 
+    /**
+     * The name of the Time Series Insights environment associated with the specified resource group.
+     * 
+     */
     @InputImport(name="environmentName", required=true)
     private final Input<String> environmentName;
 
@@ -33,6 +41,10 @@ public final class ReferenceDataSetArgs extends io.pulumi.resources.ResourceArgs
         return this.environmentName;
     }
 
+    /**
+     * The list of key properties for the reference data set.
+     * 
+     */
     @InputImport(name="keyProperties", required=true)
     private final Input<List<ReferenceDataSetKeyPropertyArgs>> keyProperties;
 
@@ -40,6 +52,10 @@ public final class ReferenceDataSetArgs extends io.pulumi.resources.ResourceArgs
         return this.keyProperties;
     }
 
+    /**
+     * The location of the resource.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -47,6 +63,10 @@ public final class ReferenceDataSetArgs extends io.pulumi.resources.ResourceArgs
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Name of the reference data set.
+     * 
+     */
     @InputImport(name="referenceDataSetName")
     private final @Nullable Input<String> referenceDataSetName;
 
@@ -54,6 +74,10 @@ public final class ReferenceDataSetArgs extends io.pulumi.resources.ResourceArgs
         return this.referenceDataSetName == null ? Input.empty() : this.referenceDataSetName;
     }
 
+    /**
+     * Name of an Azure Resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -61,6 +85,10 @@ public final class ReferenceDataSetArgs extends io.pulumi.resources.ResourceArgs
         return this.resourceGroupName;
     }
 
+    /**
+     * Key-value pairs of additional properties for the resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

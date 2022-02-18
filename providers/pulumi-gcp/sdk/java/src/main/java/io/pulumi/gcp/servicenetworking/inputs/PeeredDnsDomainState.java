@@ -14,6 +14,10 @@ public final class PeeredDnsDomainState extends io.pulumi.resources.ResourceArgs
 
     public static final PeeredDnsDomainState Empty = new PeeredDnsDomainState();
 
+    /**
+     * The DNS domain suffix of the peered DNS domain. Make sure to suffix with a `.` (dot).
+     * 
+     */
     @InputImport(name="dnsSuffix")
     private final @Nullable Input<String> dnsSuffix;
 
@@ -21,6 +25,10 @@ public final class PeeredDnsDomainState extends io.pulumi.resources.ResourceArgs
         return this.dnsSuffix == null ? Input.empty() : this.dnsSuffix;
     }
 
+    /**
+     * Internal name used for the peered DNS domain.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -28,6 +36,10 @@ public final class PeeredDnsDomainState extends io.pulumi.resources.ResourceArgs
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The network in the consumer project.
+     * 
+     */
     @InputImport(name="network")
     private final @Nullable Input<String> network;
 
@@ -35,6 +47,10 @@ public final class PeeredDnsDomainState extends io.pulumi.resources.ResourceArgs
         return this.network == null ? Input.empty() : this.network;
     }
 
+    /**
+     * an identifier for the resource with format `services/{{service}}/projects/{{project}}/global/networks/{{network}}`
+     * 
+     */
     @InputImport(name="parent")
     private final @Nullable Input<String> parent;
 
@@ -42,6 +58,10 @@ public final class PeeredDnsDomainState extends io.pulumi.resources.ResourceArgs
         return this.parent == null ? Input.empty() : this.parent;
     }
 
+    /**
+     * The producer project number. If not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -49,6 +69,10 @@ public final class PeeredDnsDomainState extends io.pulumi.resources.ResourceArgs
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Private service connection between service and consumer network, defaults to `servicenetworking.googleapis.com`
+     * 
+     */
     @InputImport(name="service")
     private final @Nullable Input<String> service;
 

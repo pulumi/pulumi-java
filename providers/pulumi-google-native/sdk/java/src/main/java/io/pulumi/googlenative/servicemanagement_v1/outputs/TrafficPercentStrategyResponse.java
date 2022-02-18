@@ -10,6 +10,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TrafficPercentStrategyResponse {
+    /**
+     * Maps service configuration IDs to their corresponding traffic percentage. Key is the service configuration ID, Value is the traffic percentage which must be greater than 0.0 and the sum must equal to 100.0.
+     * 
+     */
     private final Map<String,String> percentages;
 
     @OutputCustomType.Constructor({"percentages"})
@@ -17,6 +21,10 @@ public final class TrafficPercentStrategyResponse {
         this.percentages = Objects.requireNonNull(percentages);
     }
 
+    /**
+     * Maps service configuration IDs to their corresponding traffic percentage. Key is the service configuration ID, Value is the traffic percentage which must be greater than 0.0 and the sum must equal to 100.0.
+     * 
+     */
     public Map<String,String> getPercentages() {
         return this.percentages;
     }

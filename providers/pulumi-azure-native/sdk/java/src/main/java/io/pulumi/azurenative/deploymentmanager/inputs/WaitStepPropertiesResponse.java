@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Defines the properties of a Wait step.
+ * 
+ */
 public final class WaitStepPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final WaitStepPropertiesResponse Empty = new WaitStepPropertiesResponse();
 
+    /**
+     * The Wait attributes
+     * 
+     */
     @InputImport(name="attributes", required=true)
     private final WaitStepAttributesResponse attributes;
 
@@ -20,6 +28,11 @@ public final class WaitStepPropertiesResponse extends io.pulumi.resources.Invoke
         return this.attributes;
     }
 
+    /**
+     * The type of step.
+     * Expected value is 'Wait'.
+     * 
+     */
     @InputImport(name="stepType", required=true)
     private final String stepType;
 

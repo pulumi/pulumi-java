@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The repository type of the source control
+     * 
+     */
     @EnumType
     public enum RepoType {
         Github("Github"),

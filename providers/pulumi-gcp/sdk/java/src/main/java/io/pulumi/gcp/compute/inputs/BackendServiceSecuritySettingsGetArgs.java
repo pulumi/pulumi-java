@@ -14,6 +14,12 @@ public final class BackendServiceSecuritySettingsGetArgs extends io.pulumi.resou
 
     public static final BackendServiceSecuritySettingsGetArgs Empty = new BackendServiceSecuritySettingsGetArgs();
 
+    /**
+     * ClientTlsPolicy is a resource that specifies how a client should authenticate
+     * connections to backends of a service. This resource itself does not affect
+     * configuration unless it is attached to a backend service resource.
+     * 
+     */
     @InputImport(name="clientTlsPolicy", required=true)
     private final Input<String> clientTlsPolicy;
 
@@ -21,6 +27,12 @@ public final class BackendServiceSecuritySettingsGetArgs extends io.pulumi.resou
         return this.clientTlsPolicy;
     }
 
+    /**
+     * A list of alternate names to verify the subject identity in the certificate.
+     * If specified, the client will verify that the server certificate's subject
+     * alt name matches one of the specified values.
+     * 
+     */
     @InputImport(name="subjectAltNames", required=true)
     private final Input<List<String>> subjectAltNames;
 

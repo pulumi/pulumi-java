@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The Amazon Resource Name (ARN) of the AWS IAM role that is used to access an Amazon S3 bucket.
+ * 
+ */
 public final class LocationS3S3ConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LocationS3S3ConfigArgs Empty = new LocationS3S3ConfigArgs();
 
+    /**
+     * The ARN of the IAM role of the Amazon S3 bucket.
+     * 
+     */
     @InputImport(name="bucketAccessRoleArn", required=true)
     private final Input<String> bucketAccessRoleArn;
 

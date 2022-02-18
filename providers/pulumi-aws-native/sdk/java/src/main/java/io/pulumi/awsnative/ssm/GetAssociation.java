@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAssociation {
+/**
+ * The AWS::SSM::Association resource associates an SSM document in AWS Systems Manager with EC2 instances that contain a configuration agent to process the document.
+ * 
+ */
     public static CompletableFuture<GetAssociationResult> invokeAsync(GetAssociationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ssm:getAssociation", TypeShape.of(GetAssociationResult.class), args == null ? GetAssociationArgs.Empty : args, Utilities.withVersion(options));
     }

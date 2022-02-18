@@ -11,7 +11,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DashboardSourceTemplate {
+    /**
+     * <p>The Amazon Resource Name (ARN) of the resource.</p>
+     * 
+     */
     private final String arn;
+    /**
+     * <p>Dataset references.</p>
+     * 
+     */
     private final List<DashboardDataSetReference> dataSetReferences;
 
     @OutputCustomType.Constructor({"arn","dataSetReferences"})
@@ -22,9 +30,17 @@ public final class DashboardSourceTemplate {
         this.dataSetReferences = Objects.requireNonNull(dataSetReferences);
     }
 
+    /**
+     * <p>The Amazon Resource Name (ARN) of the resource.</p>
+     * 
+     */
     public String getArn() {
         return this.arn;
     }
+    /**
+     * <p>Dataset references.</p>
+     * 
+     */
     public List<DashboardDataSetReference> getDataSetReferences() {
         return this.dataSetReferences;
     }

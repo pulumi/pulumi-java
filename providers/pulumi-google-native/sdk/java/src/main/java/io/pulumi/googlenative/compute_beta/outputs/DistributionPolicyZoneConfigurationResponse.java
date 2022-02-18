@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DistributionPolicyZoneConfigurationResponse {
+    /**
+     * The URL of the zone. The zone must exist in the region where the managed instance group is located.
+     * 
+     */
     private final String zone;
 
     @OutputCustomType.Constructor({"zone"})
@@ -16,6 +20,10 @@ public final class DistributionPolicyZoneConfigurationResponse {
         this.zone = Objects.requireNonNull(zone);
     }
 
+    /**
+     * The URL of the zone. The zone must exist in the region where the managed instance group is located.
+     * 
+     */
     public String getZone() {
         return this.zone;
     }

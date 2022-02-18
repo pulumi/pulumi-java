@@ -12,6 +12,10 @@ public final class GetInstanceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetInstanceArgs Empty = new GetInstanceArgs();
 
+    /**
+     * Account name.
+     * 
+     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -19,6 +23,10 @@ public final class GetInstanceArgs extends io.pulumi.resources.InvokeArgs {
         return this.accountName;
     }
 
+    /**
+     * Instance name.
+     * 
+     */
     @InputImport(name="instanceName", required=true)
     private final String instanceName;
 
@@ -26,6 +34,10 @@ public final class GetInstanceArgs extends io.pulumi.resources.InvokeArgs {
         return this.instanceName;
     }
 
+    /**
+     * The resource group name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -12,6 +12,10 @@ public final class GetPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPolicyArgs Empty = new GetPolicyArgs();
 
+    /**
+     * The name of the Web Application Firewall Policy.
+     * 
+     */
     @InputImport(name="policyName", required=true)
     private final String policyName;
 
@@ -19,6 +23,10 @@ public final class GetPolicyArgs extends io.pulumi.resources.InvokeArgs {
         return this.policyName;
     }
 
+    /**
+     * Name of the Resource group within the Azure subscription.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

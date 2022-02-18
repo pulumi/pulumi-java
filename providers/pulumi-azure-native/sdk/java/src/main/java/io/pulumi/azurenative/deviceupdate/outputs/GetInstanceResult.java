@@ -17,16 +17,60 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetInstanceResult {
+    /**
+     * Parent Device Update Account name which Instance belongs to.
+     * 
+     */
     private final String accountName;
+    /**
+     * Customer-initiated diagnostic log collection storage properties
+     * 
+     */
     private final @Nullable DiagnosticStoragePropertiesResponse diagnosticStorageProperties;
+    /**
+     * Enables or Disables the diagnostic logs collection
+     * 
+     */
     private final @Nullable Boolean enableDiagnostics;
+    /**
+     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * 
+     */
     private final String id;
+    /**
+     * List of IoT Hubs associated with the account.
+     * 
+     */
     private final @Nullable List<IotHubSettingsResponse> iotHubs;
+    /**
+     * The geo-location where the resource lives
+     * 
+     */
     private final String location;
+    /**
+     * The name of the resource
+     * 
+     */
     private final String name;
+    /**
+     * Provisioning state.
+     * 
+     */
     private final String provisioningState;
+    /**
+     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     * 
+     */
     private final SystemDataResponse systemData;
+    /**
+     * Resource tags.
+     * 
+     */
     private final @Nullable Map<String,String> tags;
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"accountName","diagnosticStorageProperties","enableDiagnostics","id","iotHubs","location","name","provisioningState","systemData","tags","type"})
@@ -55,36 +99,80 @@ public final class GetInstanceResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Parent Device Update Account name which Instance belongs to.
+     * 
+     */
     public String getAccountName() {
         return this.accountName;
     }
+    /**
+     * Customer-initiated diagnostic log collection storage properties
+     * 
+     */
     public Optional<DiagnosticStoragePropertiesResponse> getDiagnosticStorageProperties() {
         return Optional.ofNullable(this.diagnosticStorageProperties);
     }
+    /**
+     * Enables or Disables the diagnostic logs collection
+     * 
+     */
     public Optional<Boolean> getEnableDiagnostics() {
         return Optional.ofNullable(this.enableDiagnostics);
     }
+    /**
+     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * List of IoT Hubs associated with the account.
+     * 
+     */
     public List<IotHubSettingsResponse> getIotHubs() {
         return this.iotHubs == null ? List.of() : this.iotHubs;
     }
+    /**
+     * The geo-location where the resource lives
+     * 
+     */
     public String getLocation() {
         return this.location;
     }
+    /**
+     * The name of the resource
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Provisioning state.
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     * 
+     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+    /**
+     * Resource tags.
+     * 
+     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     public String getType() {
         return this.type;
     }

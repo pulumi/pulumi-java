@@ -16,6 +16,10 @@ public final class ObjectReplicationPolicyArgs extends io.pulumi.resources.Resou
 
     public static final ObjectReplicationPolicyArgs Empty = new ObjectReplicationPolicyArgs();
 
+    /**
+     * The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+     * 
+     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -23,6 +27,10 @@ public final class ObjectReplicationPolicyArgs extends io.pulumi.resources.Resou
         return this.accountName;
     }
 
+    /**
+     * Required. Destination account name.
+     * 
+     */
     @InputImport(name="destinationAccount", required=true)
     private final Input<String> destinationAccount;
 
@@ -30,6 +38,10 @@ public final class ObjectReplicationPolicyArgs extends io.pulumi.resources.Resou
         return this.destinationAccount;
     }
 
+    /**
+     * The ID of object replication policy or 'default' if the policy ID is unknown.
+     * 
+     */
     @InputImport(name="objectReplicationPolicyId")
     private final @Nullable Input<String> objectReplicationPolicyId;
 
@@ -37,6 +49,10 @@ public final class ObjectReplicationPolicyArgs extends io.pulumi.resources.Resou
         return this.objectReplicationPolicyId == null ? Input.empty() : this.objectReplicationPolicyId;
     }
 
+    /**
+     * The name of the resource group within the user's subscription. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -44,6 +60,10 @@ public final class ObjectReplicationPolicyArgs extends io.pulumi.resources.Resou
         return this.resourceGroupName;
     }
 
+    /**
+     * The storage account object replication rules.
+     * 
+     */
     @InputImport(name="rules")
     private final @Nullable Input<List<ObjectReplicationPolicyRuleArgs>> rules;
 
@@ -51,6 +71,10 @@ public final class ObjectReplicationPolicyArgs extends io.pulumi.resources.Resou
         return this.rules == null ? Input.empty() : this.rules;
     }
 
+    /**
+     * Required. Source account name.
+     * 
+     */
     @InputImport(name="sourceAccount", required=true)
     private final Input<String> sourceAccount;
 

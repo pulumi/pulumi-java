@@ -11,9 +11,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigResponse {
+    /**
+     * Configuration for agent assistance of end user participant. Currently, this feature is not general available, please contact Google to get access.
+     * 
+     */
     private final GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigResponse endUserSuggestionConfig;
+    /**
+     * Configuration for agent assistance of human agent participant.
+     * 
+     */
     private final GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigResponse humanAgentSuggestionConfig;
+    /**
+     * Configuration for message analysis.
+     * 
+     */
     private final GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalysisConfigResponse messageAnalysisConfig;
+    /**
+     * Pub/Sub topic on which to publish new agent assistant events.
+     * 
+     */
     private final GoogleCloudDialogflowV2NotificationConfigResponse notificationConfig;
 
     @OutputCustomType.Constructor({"endUserSuggestionConfig","humanAgentSuggestionConfig","messageAnalysisConfig","notificationConfig"})
@@ -28,15 +44,31 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigResponse {
         this.notificationConfig = Objects.requireNonNull(notificationConfig);
     }
 
+    /**
+     * Configuration for agent assistance of end user participant. Currently, this feature is not general available, please contact Google to get access.
+     * 
+     */
     public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigResponse getEndUserSuggestionConfig() {
         return this.endUserSuggestionConfig;
     }
+    /**
+     * Configuration for agent assistance of human agent participant.
+     * 
+     */
     public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigResponse getHumanAgentSuggestionConfig() {
         return this.humanAgentSuggestionConfig;
     }
+    /**
+     * Configuration for message analysis.
+     * 
+     */
     public GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalysisConfigResponse getMessageAnalysisConfig() {
         return this.messageAnalysisConfig;
     }
+    /**
+     * Pub/Sub topic on which to publish new agent assistant events.
+     * 
+     */
     public GoogleCloudDialogflowV2NotificationConfigResponse getNotificationConfig() {
         return this.notificationConfig;
     }

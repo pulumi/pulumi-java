@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIPAMPool {
+/**
+ * Resource Schema of AWS::EC2::IPAMPool Type
+ * 
+ */
     public static CompletableFuture<GetIPAMPoolResult> invokeAsync(GetIPAMPoolArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ec2:getIPAMPool", TypeShape.of(GetIPAMPoolResult.class), args == null ? GetIPAMPoolArgs.Empty : args, Utilities.withVersion(options));
     }

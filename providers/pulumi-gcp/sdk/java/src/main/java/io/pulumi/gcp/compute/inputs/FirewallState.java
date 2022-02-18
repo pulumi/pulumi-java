@@ -20,6 +20,13 @@ public final class FirewallState extends io.pulumi.resources.ResourceArgs {
 
     public static final FirewallState Empty = new FirewallState();
 
+    /**
+     * The list of ALLOW rules specified by this firewall. Each rule
+     * specifies a protocol and port-range tuple that describes a permitted
+     * connection.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="allows")
     private final @Nullable Input<List<FirewallAllowGetArgs>> allows;
 
@@ -27,6 +34,10 @@ public final class FirewallState extends io.pulumi.resources.ResourceArgs {
         return this.allows == null ? Input.empty() : this.allows;
     }
 
+    /**
+     * Creation timestamp in RFC3339 text format.
+     * 
+     */
     @InputImport(name="creationTimestamp")
     private final @Nullable Input<String> creationTimestamp;
 
@@ -34,6 +45,12 @@ public final class FirewallState extends io.pulumi.resources.ResourceArgs {
         return this.creationTimestamp == null ? Input.empty() : this.creationTimestamp;
     }
 
+    /**
+     * The list of DENY rules specified by this firewall. Each rule specifies
+     * a protocol and port-range tuple that describes a denied connection.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="denies")
     private final @Nullable Input<List<FirewallDenyGetArgs>> denies;
 
@@ -41,6 +58,11 @@ public final class FirewallState extends io.pulumi.resources.ResourceArgs {
         return this.denies == null ? Input.empty() : this.denies;
     }
 
+    /**
+     * An optional description of this resource. Provide this property when
+     * you create the resource.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -48,6 +70,12 @@ public final class FirewallState extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * If destination ranges are specified, the firewall will apply only to
+     * traffic that has destination IP address in these ranges. These ranges
+     * must be expressed in CIDR format. Only IPv4 is supported.
+     * 
+     */
     @InputImport(name="destinationRanges")
     private final @Nullable Input<List<String>> destinationRanges;
 
@@ -55,6 +83,15 @@ public final class FirewallState extends io.pulumi.resources.ResourceArgs {
         return this.destinationRanges == null ? Input.empty() : this.destinationRanges;
     }
 
+    /**
+     * Direction of traffic to which this firewall applies; default is
+     * INGRESS. Note: For INGRESS traffic, it is NOT supported to specify
+     * destinationRanges; For EGRESS traffic, it is NOT supported to specify
+     * `source_ranges` OR `source_tags`. For INGRESS traffic, one of `source_ranges`,
+     * `source_tags` or `source_service_accounts` is required.
+     * Possible values are `INGRESS` and `EGRESS`.
+     * 
+     */
     @InputImport(name="direction")
     private final @Nullable Input<String> direction;
 
@@ -62,6 +99,13 @@ public final class FirewallState extends io.pulumi.resources.ResourceArgs {
         return this.direction == null ? Input.empty() : this.direction;
     }
 
+    /**
+     * Denotes whether the firewall rule is disabled, i.e not applied to the
+     * network it is associated with. When set to true, the firewall rule is
+     * not enforced and the network behaves as if it did not exist. If this
+     * is unspecified, the firewall rule will be enabled.
+     * 
+     */
     @InputImport(name="disabled")
     private final @Nullable Input<Boolean> disabled;
 
@@ -69,6 +113,15 @@ public final class FirewallState extends io.pulumi.resources.ResourceArgs {
         return this.disabled == null ? Input.empty() : this.disabled;
     }
 
+    /**
+     * This field denotes whether to enable logging for a particular firewall rule.
+     * If logging is enabled, logs will be exported to Stackdriver. Deprecated in favor of `log_config`
+     * 
+     * @deprecated
+     * Deprecated in favor of log_config
+     * 
+     */
+    @Deprecated /* Deprecated in favor of log_config */
     @InputImport(name="enableLogging")
     private final @Nullable Input<Boolean> enableLogging;
 
@@ -77,6 +130,12 @@ public final class FirewallState extends io.pulumi.resources.ResourceArgs {
         return this.enableLogging == null ? Input.empty() : this.enableLogging;
     }
 
+    /**
+     * This field denotes the logging options for a particular firewall rule.
+     * If defined, logging is enabled, and logs will be exported to Cloud Logging.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="logConfig")
     private final @Nullable Input<FirewallLogConfigGetArgs> logConfig;
 
@@ -84,6 +143,16 @@ public final class FirewallState extends io.pulumi.resources.ResourceArgs {
         return this.logConfig == null ? Input.empty() : this.logConfig;
     }
 
+    /**
+     * Name of the resource. Provided by the client when the resource is
+     * created. The name must be 1-63 characters long, and comply with
+     * RFC1035. Specifically, the name must be 1-63 characters long and match
+     * the regular expression `a-z?` which means the
+     * first character must be a lowercase letter, and all following
+     * characters must be a dash, lowercase letter, or digit, except the last
+     * character, which cannot be a dash.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -91,6 +160,10 @@ public final class FirewallState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The name or self_link of the network to attach this firewall to.
+     * 
+     */
     @InputImport(name="network")
     private final @Nullable Input<String> network;
 
@@ -98,6 +171,15 @@ public final class FirewallState extends io.pulumi.resources.ResourceArgs {
         return this.network == null ? Input.empty() : this.network;
     }
 
+    /**
+     * Priority for this rule. This is an integer between 0 and 65535, both
+     * inclusive. When not specified, the value assumed is 1000. Relative
+     * priorities determine precedence of conflicting rules. Lower value of
+     * priority implies higher precedence (eg, a rule with priority 0 has
+     * higher precedence than a rule with priority 1). DENY rules take
+     * precedence over ALLOW rules having equal priority.
+     * 
+     */
     @InputImport(name="priority")
     private final @Nullable Input<Integer> priority;
 
@@ -105,6 +187,11 @@ public final class FirewallState extends io.pulumi.resources.ResourceArgs {
         return this.priority == null ? Input.empty() : this.priority;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -112,6 +199,10 @@ public final class FirewallState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The URI of the created resource.
+     * 
+     */
     @InputImport(name="selfLink")
     private final @Nullable Input<String> selfLink;
 
@@ -119,6 +210,18 @@ public final class FirewallState extends io.pulumi.resources.ResourceArgs {
         return this.selfLink == null ? Input.empty() : this.selfLink;
     }
 
+    /**
+     * If source ranges are specified, the firewall will apply only to
+     * traffic that has source IP address in these ranges. These ranges must
+     * be expressed in CIDR format. One or both of sourceRanges and
+     * sourceTags may be set. If both properties are set, the firewall will
+     * apply to traffic that has source IP address within sourceRanges OR the
+     * source IP that belongs to a tag listed in the sourceTags property. The
+     * connection does not need to match both properties for the firewall to
+     * apply. Only IPv4 is supported. For INGRESS traffic, one of `source_ranges`,
+     * `source_tags` or `source_service_accounts` is required.
+     * 
+     */
     @InputImport(name="sourceRanges")
     private final @Nullable Input<List<String>> sourceRanges;
 
@@ -126,6 +229,21 @@ public final class FirewallState extends io.pulumi.resources.ResourceArgs {
         return this.sourceRanges == null ? Input.empty() : this.sourceRanges;
     }
 
+    /**
+     * If source service accounts are specified, the firewall will apply only
+     * to traffic originating from an instance with a service account in this
+     * list. Source service accounts cannot be used to control traffic to an
+     * instance's external IP address because service accounts are associated
+     * with an instance, not an IP address. sourceRanges can be set at the
+     * same time as sourceServiceAccounts. If both are set, the firewall will
+     * apply to traffic that has source IP address within sourceRanges OR the
+     * source IP belongs to an instance with service account listed in
+     * sourceServiceAccount. The connection does not need to match both
+     * properties for the firewall to apply. sourceServiceAccounts cannot be
+     * used at the same time as sourceTags or targetTags. For INGRESS traffic,
+     * one of `source_ranges`, `source_tags` or `source_service_accounts` is required.
+     * 
+     */
     @InputImport(name="sourceServiceAccounts")
     private final @Nullable Input<List<String>> sourceServiceAccounts;
 
@@ -133,6 +251,19 @@ public final class FirewallState extends io.pulumi.resources.ResourceArgs {
         return this.sourceServiceAccounts == null ? Input.empty() : this.sourceServiceAccounts;
     }
 
+    /**
+     * If source tags are specified, the firewall will apply only to traffic
+     * with source IP that belongs to a tag listed in source tags. Source
+     * tags cannot be used to control traffic to an instance's external IP
+     * address. Because tags are associated with an instance, not an IP
+     * address. One or both of sourceRanges and sourceTags may be set. If
+     * both properties are set, the firewall will apply to traffic that has
+     * source IP address within sourceRanges OR the source IP that belongs to
+     * a tag listed in the sourceTags property. The connection does not need
+     * to match both properties for the firewall to apply. For INGRESS traffic,
+     * one of `source_ranges`, `source_tags` or `source_service_accounts` is required.
+     * 
+     */
     @InputImport(name="sourceTags")
     private final @Nullable Input<List<String>> sourceTags;
 
@@ -140,6 +271,15 @@ public final class FirewallState extends io.pulumi.resources.ResourceArgs {
         return this.sourceTags == null ? Input.empty() : this.sourceTags;
     }
 
+    /**
+     * A list of service accounts indicating sets of instances located in the
+     * network that may make network connections as specified in allowed[].
+     * targetServiceAccounts cannot be used at the same time as targetTags or
+     * sourceTags. If neither targetServiceAccounts nor targetTags are
+     * specified, the firewall rule applies to all instances on the specified
+     * network.
+     * 
+     */
     @InputImport(name="targetServiceAccounts")
     private final @Nullable Input<List<String>> targetServiceAccounts;
 
@@ -147,6 +287,13 @@ public final class FirewallState extends io.pulumi.resources.ResourceArgs {
         return this.targetServiceAccounts == null ? Input.empty() : this.targetServiceAccounts;
     }
 
+    /**
+     * A list of instance tags indicating sets of instances located in the
+     * network that may make network connections as specified in allowed[].
+     * If no targetTags are specified, the firewall rule applies to all
+     * instances on the specified network.
+     * 
+     */
     @InputImport(name="targetTags")
     private final @Nullable Input<List<String>> targetTags;
 

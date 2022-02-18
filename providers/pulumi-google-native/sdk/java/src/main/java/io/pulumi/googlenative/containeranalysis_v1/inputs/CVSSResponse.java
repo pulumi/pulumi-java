@@ -9,6 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Common Vulnerability Scoring System. For details, see https://www.first.org/cvss/specification-document This is a message we will try to use for storing multiple versions of CVSS. The intention is that as new versions of CVSS scores get added, we will be able to modify this message rather than adding new protos for each new version of the score.
+ * 
+ */
 public final class CVSSResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CVSSResponse Empty = new CVSSResponse();
@@ -20,6 +24,10 @@ public final class CVSSResponse extends io.pulumi.resources.InvokeArgs {
         return this.attackComplexity;
     }
 
+    /**
+     * Base Metrics Represents the intrinsic characteristics of a vulnerability that are constant over time and across user environments.
+     * 
+     */
     @InputImport(name="attackVector", required=true)
     private final String attackVector;
 
@@ -41,6 +49,10 @@ public final class CVSSResponse extends io.pulumi.resources.InvokeArgs {
         return this.availabilityImpact;
     }
 
+    /**
+     * The base score is a function of the base metric scores.
+     * 
+     */
     @InputImport(name="baseScore", required=true)
     private final Double baseScore;
 

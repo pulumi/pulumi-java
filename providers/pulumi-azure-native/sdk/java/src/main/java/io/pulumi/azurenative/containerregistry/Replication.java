@@ -16,45 +16,114 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * An object that represents a replication for a container registry.
+ * API Version: 2019-05-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:containerregistry:Replication myReplication /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/replications/myReplication 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:containerregistry:Replication")
 public class Replication extends io.pulumi.resources.CustomResource {
+    /**
+     * The location of the resource. This cannot be changed after the resource is created.
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return The location of the resource. This cannot be changed after the resource is created.
+     * 
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * The name of the resource.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The provisioning state of the replication at the time the operation was called.
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning state of the replication at the time the operation was called.
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The status of the replication at the time the operation was called.
+     * 
+     */
     @OutputExport(name="status", type=StatusResponse.class, parameters={})
     private Output<StatusResponse> status;
 
+    /**
+     * @return The status of the replication at the time the operation was called.
+     * 
+     */
     public Output<StatusResponse> getStatus() {
         return this.status;
     }
+    /**
+     * The tags of the resource.
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return The tags of the resource.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * The type of the resource.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Replication(String name, ReplicationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:containerregistry:Replication", name, args == null ? ReplicationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -81,6 +150,14 @@ public class Replication extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Replication get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Replication(name, id, options);
     }

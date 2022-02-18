@@ -24,6 +24,10 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.agentId;
     }
 
+    /**
+     * The human-readable description of the environment. The maximum length is 500 characters. If exceeded, the request is rejected.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -31,6 +35,10 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The human-readable name of the environment (unique in an agent). Limit of 64 characters.
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -45,6 +53,10 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the environment. Format: `projects//locations//agents//environments/`.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -59,6 +71,10 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The test cases config for continuous tests of this environment.
+     * 
+     */
     @InputImport(name="testCasesConfig")
     private final @Nullable Input<GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigArgs> testCasesConfig;
 
@@ -66,6 +82,10 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.testCasesConfig == null ? Input.empty() : this.testCasesConfig;
     }
 
+    /**
+     * A list of configurations for flow versions. You should include version configs for all flows that are reachable from `Start Flow` in the agent. Otherwise, an error will be returned.
+     * 
+     */
     @InputImport(name="versionConfigs", required=true)
     private final Input<List<GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigArgs>> versionConfigs;
 

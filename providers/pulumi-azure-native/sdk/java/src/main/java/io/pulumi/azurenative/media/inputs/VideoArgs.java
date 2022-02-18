@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes the basic properties for encoding the input video.
+ * 
+ */
 public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VideoArgs Empty = new VideoArgs();
 
+    /**
+     * The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.
+     * 
+     */
     @InputImport(name="keyFrameInterval")
     private final @Nullable Input<String> keyFrameInterval;
 
@@ -24,6 +32,10 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
         return this.keyFrameInterval == null ? Input.empty() : this.keyFrameInterval;
     }
 
+    /**
+     * An optional label for the codec. The label can be used to control muxing behavior.
+     * 
+     */
     @InputImport(name="label")
     private final @Nullable Input<String> label;
 
@@ -31,6 +43,11 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
         return this.label == null ? Input.empty() : this.label;
     }
 
+    /**
+     * The discriminator for derived types.
+     * Expected value is '#Microsoft.Media.Video'.
+     * 
+     */
     @InputImport(name="odataType", required=true)
     private final Input<String> odataType;
 
@@ -38,6 +55,10 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
         return this.odataType;
     }
 
+    /**
+     * The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize
+     * 
+     */
     @InputImport(name="stretchMode")
     private final @Nullable Input<Either<String,StretchMode>> stretchMode;
 
@@ -45,6 +66,10 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
         return this.stretchMode == null ? Input.empty() : this.stretchMode;
     }
 
+    /**
+     * The Video Sync Mode
+     * 
+     */
     @InputImport(name="syncMode")
     private final @Nullable Input<Either<String,VideoSyncMode>> syncMode;
 

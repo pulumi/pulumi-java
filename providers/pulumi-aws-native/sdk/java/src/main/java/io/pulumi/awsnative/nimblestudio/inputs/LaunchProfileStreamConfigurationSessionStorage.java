@@ -12,10 +12,19 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * <p>The configuration for a streaming session’s upload storage.</p>
+ * 
+ */
 public final class LaunchProfileStreamConfigurationSessionStorage extends io.pulumi.resources.InvokeArgs {
 
     public static final LaunchProfileStreamConfigurationSessionStorage Empty = new LaunchProfileStreamConfigurationSessionStorage();
 
+    /**
+     * <p>Allows artists to upload files to their workstations. The only valid option is
+     *                 <code>UPLOAD</code>.</p>
+     * 
+     */
     @InputImport(name="mode")
     private final @Nullable List<LaunchProfileStreamingSessionStorageMode> mode;
 

@@ -16,15 +16,31 @@ import javax.annotation.Nullable;
 @OutputCustomType
 public final class DetectorRule {
     private final @Nullable String arn;
+    /**
+     * The time when the event type was created.
+     * 
+     */
     private final @Nullable String createdTime;
+    /**
+     * The description.
+     * 
+     */
     private final @Nullable String description;
     private final @Nullable String detectorId;
     private final @Nullable String expression;
     private final @Nullable DetectorRuleLanguage language;
+    /**
+     * The time when the event type was last updated.
+     * 
+     */
     private final @Nullable String lastUpdatedTime;
     private final @Nullable List<DetectorOutcome> outcomes;
     private final @Nullable String ruleId;
     private final @Nullable String ruleVersion;
+    /**
+     * Tags associated with this event type.
+     * 
+     */
     private final @Nullable List<DetectorTag> tags;
 
     @OutputCustomType.Constructor({"arn","createdTime","description","detectorId","expression","language","lastUpdatedTime","outcomes","ruleId","ruleVersion","tags"})
@@ -56,9 +72,17 @@ public final class DetectorRule {
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
+    /**
+     * The time when the event type was created.
+     * 
+     */
     public Optional<String> getCreatedTime() {
         return Optional.ofNullable(this.createdTime);
     }
+    /**
+     * The description.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
@@ -71,6 +95,10 @@ public final class DetectorRule {
     public Optional<DetectorRuleLanguage> getLanguage() {
         return Optional.ofNullable(this.language);
     }
+    /**
+     * The time when the event type was last updated.
+     * 
+     */
     public Optional<String> getLastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
@@ -83,6 +111,10 @@ public final class DetectorRule {
     public Optional<String> getRuleVersion() {
         return Optional.ofNullable(this.ruleVersion);
     }
+    /**
+     * Tags associated with this event type.
+     * 
+     */
     public List<DetectorTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

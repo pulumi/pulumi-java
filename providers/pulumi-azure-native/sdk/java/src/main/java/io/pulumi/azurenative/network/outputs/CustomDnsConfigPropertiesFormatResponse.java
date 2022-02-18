@@ -12,7 +12,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CustomDnsConfigPropertiesFormatResponse {
+    /**
+     * Fqdn that resolves to private endpoint ip address.
+     * 
+     */
     private final @Nullable String fqdn;
+    /**
+     * A list of private ip addresses of the private endpoint.
+     * 
+     */
     private final @Nullable List<String> ipAddresses;
 
     @OutputCustomType.Constructor({"fqdn","ipAddresses"})
@@ -23,9 +31,17 @@ public final class CustomDnsConfigPropertiesFormatResponse {
         this.ipAddresses = ipAddresses;
     }
 
+    /**
+     * Fqdn that resolves to private endpoint ip address.
+     * 
+     */
     public Optional<String> getFqdn() {
         return Optional.ofNullable(this.fqdn);
     }
+    /**
+     * A list of private ip addresses of the private endpoint.
+     * 
+     */
     public List<String> getIpAddresses() {
         return this.ipAddresses == null ? List.of() : this.ipAddresses;
     }

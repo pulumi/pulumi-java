@@ -16,6 +16,11 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EnvironmentArgs Empty = new EnvironmentArgs();
 
+    /**
+     * Use a container image to start the notebook instance.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="containerImage")
     private final @Nullable Input<EnvironmentContainerImageArgs> containerImage;
 
@@ -23,6 +28,10 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.containerImage == null ? Input.empty() : this.containerImage;
     }
 
+    /**
+     * A brief description of this environment.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -30,6 +39,10 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Display name of this environment for the UI.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -37,6 +50,10 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * A reference to the zone where the machine resides.
+     * 
+     */
     @InputImport(name="location", required=true)
     private final Input<String> location;
 
@@ -44,6 +61,11 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.location;
     }
 
+    /**
+     * The name specified for the Environment instance.
+     * Format: projects/{project_id}/locations/{location}/environments/{environmentId}
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -51,6 +73,11 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Path to a Bash script that automatically runs after a notebook instance fully boots up.
+     * The path must be a URL or Cloud Storage path. Example: "gs://path-to-file/file-name"
+     * 
+     */
     @InputImport(name="postStartupScript")
     private final @Nullable Input<String> postStartupScript;
 
@@ -58,6 +85,11 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.postStartupScript == null ? Input.empty() : this.postStartupScript;
     }
 
+    /**
+     * The name of the Google Cloud project that this VM image belongs to.
+     * Format: projects/{project_id}
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -65,6 +97,11 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Use a Compute Engine VM image to start the notebook instance.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="vmImage")
     private final @Nullable Input<EnvironmentVmImageArgs> vmImage;
 

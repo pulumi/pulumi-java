@@ -13,6 +13,10 @@ public final class ClusterNotificationConfigGetArgs extends io.pulumi.resources.
 
     public static final ClusterNotificationConfigGetArgs Empty = new ClusterNotificationConfigGetArgs();
 
+    /**
+     * The pubsub config for the cluster's upgrade notifications.
+     * 
+     */
     @InputImport(name="pubsub", required=true)
     private final Input<ClusterNotificationConfigPubsubGetArgs> pubsub;
 

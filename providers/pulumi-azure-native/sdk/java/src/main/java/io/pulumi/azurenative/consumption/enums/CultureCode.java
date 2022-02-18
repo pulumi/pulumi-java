@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Language in which the recipient will receive the notification
+     * 
+     */
     @EnumType
     public enum CultureCode {
         Enus("en-us"),

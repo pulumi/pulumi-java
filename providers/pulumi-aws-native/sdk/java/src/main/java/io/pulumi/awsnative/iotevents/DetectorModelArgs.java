@@ -25,6 +25,10 @@ public final class DetectorModelArgs extends io.pulumi.resources.ResourceArgs {
         return this.detectorModelDefinition;
     }
 
+    /**
+     * A brief description of the detector model.
+     * 
+     */
     @InputImport(name="detectorModelDescription")
     private final @Nullable Input<String> detectorModelDescription;
 
@@ -32,6 +36,10 @@ public final class DetectorModelArgs extends io.pulumi.resources.ResourceArgs {
         return this.detectorModelDescription == null ? Input.empty() : this.detectorModelDescription;
     }
 
+    /**
+     * The name of the detector model.
+     * 
+     */
     @InputImport(name="detectorModelName")
     private final @Nullable Input<String> detectorModelName;
 
@@ -39,6 +47,10 @@ public final class DetectorModelArgs extends io.pulumi.resources.ResourceArgs {
         return this.detectorModelName == null ? Input.empty() : this.detectorModelName;
     }
 
+    /**
+     * Information about the order in which events are evaluated and how actions are executed.
+     * 
+     */
     @InputImport(name="evaluationMethod")
     private final @Nullable Input<DetectorModelEvaluationMethod> evaluationMethod;
 
@@ -46,6 +58,12 @@ public final class DetectorModelArgs extends io.pulumi.resources.ResourceArgs {
         return this.evaluationMethod == null ? Input.empty() : this.evaluationMethod;
     }
 
+    /**
+     * The value used to identify a detector instance. When a device or system sends input, a new detector instance with a unique key value is created. AWS IoT Events can continue to route input to its corresponding detector instance based on this identifying information.
+     * 
+     * This parameter uses a JSON-path expression to select the attribute-value pair in the message payload that is used for identification. To route the message to the correct detector instance, the device must send a message payload that contains the same attribute-value.
+     * 
+     */
     @InputImport(name="key")
     private final @Nullable Input<String> key;
 
@@ -53,6 +71,10 @@ public final class DetectorModelArgs extends io.pulumi.resources.ResourceArgs {
         return this.key == null ? Input.empty() : this.key;
     }
 
+    /**
+     * The ARN of the role that grants permission to AWS IoT Events to perform its operations.
+     * 
+     */
     @InputImport(name="roleArn", required=true)
     private final Input<String> roleArn;
 
@@ -60,6 +82,12 @@ public final class DetectorModelArgs extends io.pulumi.resources.ResourceArgs {
         return this.roleArn;
     }
 
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     * For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html).
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<DetectorModelTagArgs>> tags;
 

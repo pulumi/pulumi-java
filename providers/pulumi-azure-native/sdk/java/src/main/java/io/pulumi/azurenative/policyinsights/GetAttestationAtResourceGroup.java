@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAttestationAtResourceGroup {
+/**
+ * An attestation resource.
+ * API Version: 2021-01-01.
+ * 
+ *
+ * An attestation resource.
+ * 
+ */
     public static CompletableFuture<GetAttestationAtResourceGroupResult> invokeAsync(GetAttestationAtResourceGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:policyinsights:getAttestationAtResourceGroup", TypeShape.of(GetAttestationAtResourceGroupResult.class), args == null ? GetAttestationAtResourceGroupArgs.Empty : args, Utilities.withVersion(options));
     }

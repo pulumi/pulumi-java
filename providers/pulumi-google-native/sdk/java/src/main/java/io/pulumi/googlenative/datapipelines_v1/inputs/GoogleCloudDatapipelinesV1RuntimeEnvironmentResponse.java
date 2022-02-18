@@ -12,10 +12,18 @@ import java.util.Map;
 import java.util.Objects;
 
 
+/**
+ * The environment values to set at runtime.
+ * 
+ */
 public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse Empty = new GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse();
 
+    /**
+     * Additional experiment flags for the job.
+     * 
+     */
     @InputImport(name="additionalExperiments", required=true)
     private final List<String> additionalExperiments;
 
@@ -23,6 +31,10 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
         return this.additionalExperiments;
     }
 
+    /**
+     * Additional user labels to be specified for the job. Keys and values should follow the restrictions specified in the [labeling restrictions](https://cloud.google.com/compute/docs/labeling-resources#restrictions) page. An object containing a list of key/value pairs. Example: { "name": "wrench", "mass": "1kg", "count": "3" }.
+     * 
+     */
     @InputImport(name="additionalUserLabels", required=true)
     private final Map<String,String> additionalUserLabels;
 
@@ -30,6 +42,10 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
         return this.additionalUserLabels;
     }
 
+    /**
+     * Whether to bypass the safety checks for the job's temporary directory. Use with caution.
+     * 
+     */
     @InputImport(name="bypassTempDirValidation", required=true)
     private final Boolean bypassTempDirValidation;
 
@@ -37,6 +53,10 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
         return this.bypassTempDirValidation;
     }
 
+    /**
+     * Whether to enable Streaming Engine for the job.
+     * 
+     */
     @InputImport(name="enableStreamingEngine", required=true)
     private final Boolean enableStreamingEngine;
 
@@ -44,6 +64,10 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
         return this.enableStreamingEngine;
     }
 
+    /**
+     * Configuration for VM IPs.
+     * 
+     */
     @InputImport(name="ipConfiguration", required=true)
     private final String ipConfiguration;
 
@@ -51,6 +75,10 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
         return this.ipConfiguration;
     }
 
+    /**
+     * Name for the Cloud KMS key for the job. The key format is: projects//locations//keyRings//cryptoKeys/
+     * 
+     */
     @InputImport(name="kmsKeyName", required=true)
     private final String kmsKeyName;
 
@@ -58,6 +86,10 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
         return this.kmsKeyName;
     }
 
+    /**
+     * The machine type to use for the job. Defaults to the value from the template if not specified.
+     * 
+     */
     @InputImport(name="machineType", required=true)
     private final String machineType;
 
@@ -65,6 +97,10 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
         return this.machineType;
     }
 
+    /**
+     * The maximum number of Compute Engine instances to be made available to your pipeline during execution, from 1 to 1000.
+     * 
+     */
     @InputImport(name="maxWorkers", required=true)
     private final Integer maxWorkers;
 
@@ -72,6 +108,10 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
         return this.maxWorkers;
     }
 
+    /**
+     * Network to which VMs will be assigned. If empty or unspecified, the service will use the network "default".
+     * 
+     */
     @InputImport(name="network", required=true)
     private final String network;
 
@@ -79,6 +119,10 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
         return this.network;
     }
 
+    /**
+     * The initial number of Compute Engine instances for the job.
+     * 
+     */
     @InputImport(name="numWorkers", required=true)
     private final Integer numWorkers;
 
@@ -86,6 +130,10 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
         return this.numWorkers;
     }
 
+    /**
+     * The email address of the service account to run the job as.
+     * 
+     */
     @InputImport(name="serviceAccountEmail", required=true)
     private final String serviceAccountEmail;
 
@@ -93,6 +141,10 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
         return this.serviceAccountEmail;
     }
 
+    /**
+     * Subnetwork to which VMs will be assigned, if desired. You can specify a subnetwork using either a complete URL or an abbreviated path. Expected to be of the form "https://www.googleapis.com/compute/v1/projects/HOST_PROJECT_ID/regions/REGION/subnetworks/SUBNETWORK" or "regions/REGION/subnetworks/SUBNETWORK". If the subnetwork is located in a Shared VPC network, you must use the complete URL.
+     * 
+     */
     @InputImport(name="subnetwork", required=true)
     private final String subnetwork;
 
@@ -100,6 +152,10 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
         return this.subnetwork;
     }
 
+    /**
+     * The Cloud Storage path to use for temporary files. Must be a valid Cloud Storage URL, beginning with `gs://`.
+     * 
+     */
     @InputImport(name="tempLocation", required=true)
     private final String tempLocation;
 
@@ -107,6 +163,10 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
         return this.tempLocation;
     }
 
+    /**
+     * The Compute Engine region (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. "us-west1". Mutually exclusive with worker_zone. If neither worker_region nor worker_zone is specified, default to the control plane's region.
+     * 
+     */
     @InputImport(name="workerRegion", required=true)
     private final String workerRegion;
 
@@ -114,6 +174,10 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
         return this.workerRegion;
     }
 
+    /**
+     * The Compute Engine zone (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. "us-west1-a". Mutually exclusive with worker_region. If neither worker_region nor worker_zone is specified, a zone in the control plane's region is chosen based on available capacity. If both `worker_zone` and `zone` are set, `worker_zone` takes precedence.
+     * 
+     */
     @InputImport(name="workerZone", required=true)
     private final String workerZone;
 
@@ -121,6 +185,10 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
         return this.workerZone;
     }
 
+    /**
+     * The Compute Engine [availability zone](https://cloud.google.com/compute/docs/regions-zones/regions-zones) for launching worker instances to run your pipeline. In the future, worker_zone will take precedence.
+     * 
+     */
     @InputImport(name="zone", required=true)
     private final String zone;
 

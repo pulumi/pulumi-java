@@ -14,15 +14,55 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetPolicyDefinitionAtManagementGroupResult {
+    /**
+     * The policy definition description.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * The display name of the policy definition.
+     * 
+     */
     private final @Nullable String displayName;
+    /**
+     * The ID of the policy definition.
+     * 
+     */
     private final String id;
+    /**
+     * The policy definition metadata.  Metadata is an open ended object and is typically a collection of key value pairs.
+     * 
+     */
     private final @Nullable Object metadata;
+    /**
+     * The policy definition mode. Some examples are All, Indexed, Microsoft.KeyVault.Data.
+     * 
+     */
     private final @Nullable String mode;
+    /**
+     * The name of the policy definition.
+     * 
+     */
     private final String name;
+    /**
+     * The parameter definitions for parameters used in the policy rule. The keys are the parameter names.
+     * 
+     */
     private final @Nullable Map<String,ParameterDefinitionsValueResponse> parameters;
+    /**
+     * The policy rule.
+     * 
+     */
     private final @Nullable Object policyRule;
+    /**
+     * The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static.
+     * 
+     */
     private final @Nullable String policyType;
+    /**
+     * The type of the resource (Microsoft.Authorization/policyDefinitions).
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"description","displayName","id","metadata","mode","name","parameters","policyRule","policyType","type"})
@@ -49,33 +89,73 @@ public final class GetPolicyDefinitionAtManagementGroupResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * The policy definition description.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * The display name of the policy definition.
+     * 
+     */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
+    /**
+     * The ID of the policy definition.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * The policy definition metadata.  Metadata is an open ended object and is typically a collection of key value pairs.
+     * 
+     */
     public Optional<Object> getMetadata() {
         return Optional.ofNullable(this.metadata);
     }
+    /**
+     * The policy definition mode. Some examples are All, Indexed, Microsoft.KeyVault.Data.
+     * 
+     */
     public Optional<String> getMode() {
         return Optional.ofNullable(this.mode);
     }
+    /**
+     * The name of the policy definition.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The parameter definitions for parameters used in the policy rule. The keys are the parameter names.
+     * 
+     */
     public Map<String,ParameterDefinitionsValueResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
+    /**
+     * The policy rule.
+     * 
+     */
     public Optional<Object> getPolicyRule() {
         return Optional.ofNullable(this.policyRule);
     }
+    /**
+     * The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static.
+     * 
+     */
     public Optional<String> getPolicyType() {
         return Optional.ofNullable(this.policyType);
     }
+    /**
+     * The type of the resource (Microsoft.Authorization/policyDefinitions).
+     * 
+     */
     public String getType() {
         return this.type;
     }

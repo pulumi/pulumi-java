@@ -11,10 +11,30 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class WindowsBasedSliResponse {
+    /**
+     * A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries with ValueType = BOOL. The window is good if any true values appear in the window.
+     * 
+     */
     private final String goodBadMetricFilter;
+    /**
+     * A window is good if its performance is high enough.
+     * 
+     */
     private final PerformanceThresholdResponse goodTotalRatioThreshold;
+    /**
+     * A window is good if the metric's value is in a good range, averaged across returned streams.
+     * 
+     */
     private final MetricRangeResponse metricMeanInRange;
+    /**
+     * A window is good if the metric's value is in a good range, summed across returned streams.
+     * 
+     */
     private final MetricRangeResponse metricSumInRange;
+    /**
+     * Duration over which window quality is evaluated. Must be an integer fraction of a day and at least 60s.
+     * 
+     */
     private final String windowPeriod;
 
     @OutputCustomType.Constructor({"goodBadMetricFilter","goodTotalRatioThreshold","metricMeanInRange","metricSumInRange","windowPeriod"})
@@ -31,18 +51,38 @@ public final class WindowsBasedSliResponse {
         this.windowPeriod = Objects.requireNonNull(windowPeriod);
     }
 
+    /**
+     * A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries with ValueType = BOOL. The window is good if any true values appear in the window.
+     * 
+     */
     public String getGoodBadMetricFilter() {
         return this.goodBadMetricFilter;
     }
+    /**
+     * A window is good if its performance is high enough.
+     * 
+     */
     public PerformanceThresholdResponse getGoodTotalRatioThreshold() {
         return this.goodTotalRatioThreshold;
     }
+    /**
+     * A window is good if the metric's value is in a good range, averaged across returned streams.
+     * 
+     */
     public MetricRangeResponse getMetricMeanInRange() {
         return this.metricMeanInRange;
     }
+    /**
+     * A window is good if the metric's value is in a good range, summed across returned streams.
+     * 
+     */
     public MetricRangeResponse getMetricSumInRange() {
         return this.metricSumInRange;
     }
+    /**
+     * Duration over which window quality is evaluated. Must be an integer fraction of a day and at least 60s.
+     * 
+     */
     public String getWindowPeriod() {
         return this.windowPeriod;
     }

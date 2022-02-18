@@ -20,6 +20,10 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ObjectTypeArgs Empty = new ObjectTypeArgs();
 
+    /**
+     * Indicates whether a profile should be created when data is received.
+     * 
+     */
     @InputImport(name="allowProfileCreation")
     private final @Nullable Input<Boolean> allowProfileCreation;
 
@@ -27,6 +31,10 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.allowProfileCreation == null ? Input.empty() : this.allowProfileCreation;
     }
 
+    /**
+     * Description of the profile object type.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -34,6 +42,10 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The unique name of the domain.
+     * 
+     */
     @InputImport(name="domainName", required=true)
     private final Input<String> domainName;
 
@@ -41,6 +53,10 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.domainName;
     }
 
+    /**
+     * The default encryption key
+     * 
+     */
     @InputImport(name="encryptionKey")
     private final @Nullable Input<String> encryptionKey;
 
@@ -48,6 +64,10 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.encryptionKey == null ? Input.empty() : this.encryptionKey;
     }
 
+    /**
+     * The default number of days until the data within the domain expires.
+     * 
+     */
     @InputImport(name="expirationDays")
     private final @Nullable Input<Integer> expirationDays;
 
@@ -55,6 +75,10 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.expirationDays == null ? Input.empty() : this.expirationDays;
     }
 
+    /**
+     * A list of the name and ObjectType field.
+     * 
+     */
     @InputImport(name="fields")
     private final @Nullable Input<List<ObjectTypeFieldMapArgs>> fields;
 
@@ -62,6 +86,10 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.fields == null ? Input.empty() : this.fields;
     }
 
+    /**
+     * A list of unique keys that can be used to map data to the profile.
+     * 
+     */
     @InputImport(name="keys")
     private final @Nullable Input<List<ObjectTypeKeyMapArgs>> keys;
 
@@ -69,6 +97,10 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.keys == null ? Input.empty() : this.keys;
     }
 
+    /**
+     * The name of the profile object type.
+     * 
+     */
     @InputImport(name="objectTypeName")
     private final @Nullable Input<String> objectTypeName;
 
@@ -76,6 +108,10 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.objectTypeName == null ? Input.empty() : this.objectTypeName;
     }
 
+    /**
+     * The tags (keys and values) associated with the integration.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<ObjectTypeTagArgs>> tags;
 
@@ -83,6 +119,10 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * A unique identifier for the object template.
+     * 
+     */
     @InputImport(name="templateId")
     private final @Nullable Input<String> templateId;
 

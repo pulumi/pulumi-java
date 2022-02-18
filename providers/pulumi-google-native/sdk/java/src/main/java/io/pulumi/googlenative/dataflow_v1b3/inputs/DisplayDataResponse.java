@@ -10,10 +10,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Data provided with a pipeline or transform to provide descriptive info.
+ * 
+ */
 public final class DisplayDataResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DisplayDataResponse Empty = new DisplayDataResponse();
 
+    /**
+     * Contains value if the data is of a boolean type.
+     * 
+     */
     @InputImport(name="boolValue", required=true)
     private final Boolean boolValue;
 
@@ -21,6 +29,10 @@ public final class DisplayDataResponse extends io.pulumi.resources.InvokeArgs {
         return this.boolValue;
     }
 
+    /**
+     * Contains value if the data is of duration type.
+     * 
+     */
     @InputImport(name="durationValue", required=true)
     private final String durationValue;
 
@@ -28,6 +40,10 @@ public final class DisplayDataResponse extends io.pulumi.resources.InvokeArgs {
         return this.durationValue;
     }
 
+    /**
+     * Contains value if the data is of float type.
+     * 
+     */
     @InputImport(name="floatValue", required=true)
     private final Double floatValue;
 
@@ -35,6 +51,10 @@ public final class DisplayDataResponse extends io.pulumi.resources.InvokeArgs {
         return this.floatValue;
     }
 
+    /**
+     * Contains value if the data is of int64 type.
+     * 
+     */
     @InputImport(name="int64Value", required=true)
     private final String int64Value;
 
@@ -42,6 +62,10 @@ public final class DisplayDataResponse extends io.pulumi.resources.InvokeArgs {
         return this.int64Value;
     }
 
+    /**
+     * Contains value if the data is of java class type.
+     * 
+     */
     @InputImport(name="javaClassValue", required=true)
     private final String javaClassValue;
 
@@ -49,6 +73,10 @@ public final class DisplayDataResponse extends io.pulumi.resources.InvokeArgs {
         return this.javaClassValue;
     }
 
+    /**
+     * The key identifying the display data. This is intended to be used as a label for the display data when viewed in a dax monitoring system.
+     * 
+     */
     @InputImport(name="key", required=true)
     private final String key;
 
@@ -56,6 +84,10 @@ public final class DisplayDataResponse extends io.pulumi.resources.InvokeArgs {
         return this.key;
     }
 
+    /**
+     * An optional label to display in a dax UI for the element.
+     * 
+     */
     @InputImport(name="label", required=true)
     private final String label;
 
@@ -63,6 +95,10 @@ public final class DisplayDataResponse extends io.pulumi.resources.InvokeArgs {
         return this.label;
     }
 
+    /**
+     * The namespace for the key. This is usually a class name or programming language namespace (i.e. python module) which defines the display data. This allows a dax monitoring system to specially handle the data and perform custom rendering.
+     * 
+     */
     @InputImport(name="namespace", required=true)
     private final String namespace;
 
@@ -70,6 +106,10 @@ public final class DisplayDataResponse extends io.pulumi.resources.InvokeArgs {
         return this.namespace;
     }
 
+    /**
+     * A possible additional shorter value to display. For example a java_class_name_value of com.mypackage.MyDoFn will be stored with MyDoFn as the short_str_value and com.mypackage.MyDoFn as the java_class_name value. short_str_value can be displayed and java_class_name_value will be displayed as a tooltip.
+     * 
+     */
     @InputImport(name="shortStrValue", required=true)
     private final String shortStrValue;
 
@@ -77,6 +117,10 @@ public final class DisplayDataResponse extends io.pulumi.resources.InvokeArgs {
         return this.shortStrValue;
     }
 
+    /**
+     * Contains value if the data is of string type.
+     * 
+     */
     @InputImport(name="strValue", required=true)
     private final String strValue;
 
@@ -84,6 +128,10 @@ public final class DisplayDataResponse extends io.pulumi.resources.InvokeArgs {
         return this.strValue;
     }
 
+    /**
+     * Contains value if the data is of timestamp type.
+     * 
+     */
     @InputImport(name="timestampValue", required=true)
     private final String timestampValue;
 
@@ -91,6 +139,10 @@ public final class DisplayDataResponse extends io.pulumi.resources.InvokeArgs {
         return this.timestampValue;
     }
 
+    /**
+     * An optional full URL.
+     * 
+     */
     @InputImport(name="url", required=true)
     private final String url;
 

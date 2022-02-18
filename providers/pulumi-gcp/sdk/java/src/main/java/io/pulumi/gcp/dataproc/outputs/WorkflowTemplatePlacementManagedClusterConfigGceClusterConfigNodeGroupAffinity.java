@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinity {
+    /**
+     * Required. The URI of a sole-tenant /zones/us-central1-a/nodeGroups/node-group-1`*`node-group-1`
+     * 
+     */
     private final String nodeGroup;
 
     @OutputCustomType.Constructor({"nodeGroup"})
@@ -16,6 +20,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
         this.nodeGroup = Objects.requireNonNull(nodeGroup);
     }
 
+    /**
+     * Required. The URI of a sole-tenant /zones/us-central1-a/nodeGroups/node-group-1`*`node-group-1`
+     * 
+     */
     public String getNodeGroup() {
         return this.nodeGroup;
     }

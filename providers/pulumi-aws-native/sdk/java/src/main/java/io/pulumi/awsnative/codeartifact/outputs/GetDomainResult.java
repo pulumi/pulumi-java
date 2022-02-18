@@ -14,10 +14,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetDomainResult {
+    /**
+     * The ARN of the domain.
+     * 
+     */
     private final @Nullable String arn;
+    /**
+     * The name of the domain. This field is used for GetAtt
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * The 12-digit account ID of the AWS account that owns the domain. This field is used for GetAtt
+     * 
+     */
     private final @Nullable String owner;
+    /**
+     * The access control resource policy on the provided domain.
+     * 
+     */
     private final @Nullable Object permissionsPolicyDocument;
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     private final @Nullable List<DomainTag> tags;
 
     @OutputCustomType.Constructor({"arn","name","owner","permissionsPolicyDocument","tags"})
@@ -34,18 +54,38 @@ public final class GetDomainResult {
         this.tags = tags;
     }
 
+    /**
+     * The ARN of the domain.
+     * 
+     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
+    /**
+     * The name of the domain. This field is used for GetAtt
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * The 12-digit account ID of the AWS account that owns the domain. This field is used for GetAtt
+     * 
+     */
     public Optional<String> getOwner() {
         return Optional.ofNullable(this.owner);
     }
+    /**
+     * The access control resource policy on the provided domain.
+     * 
+     */
     public Optional<Object> getPermissionsPolicyDocument() {
         return Optional.ofNullable(this.permissionsPolicyDocument);
     }
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     public List<DomainTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

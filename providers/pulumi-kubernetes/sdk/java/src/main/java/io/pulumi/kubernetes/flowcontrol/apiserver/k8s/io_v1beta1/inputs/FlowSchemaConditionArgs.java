@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * FlowSchemaCondition describes conditions for a FlowSchema.
+ * 
+ */
 public final class FlowSchemaConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FlowSchemaConditionArgs Empty = new FlowSchemaConditionArgs();
 
+    /**
+     * `lastTransitionTime` is the last time the condition transitioned from one status to another.
+     * 
+     */
     @InputImport(name="lastTransitionTime")
     private final @Nullable Input<String> lastTransitionTime;
 
@@ -21,6 +29,10 @@ public final class FlowSchemaConditionArgs extends io.pulumi.resources.ResourceA
         return this.lastTransitionTime == null ? Input.empty() : this.lastTransitionTime;
     }
 
+    /**
+     * `message` is a human-readable message indicating details about last transition.
+     * 
+     */
     @InputImport(name="message")
     private final @Nullable Input<String> message;
 
@@ -28,6 +40,10 @@ public final class FlowSchemaConditionArgs extends io.pulumi.resources.ResourceA
         return this.message == null ? Input.empty() : this.message;
     }
 
+    /**
+     * `reason` is a unique, one-word, CamelCase reason for the condition's last transition.
+     * 
+     */
     @InputImport(name="reason")
     private final @Nullable Input<String> reason;
 
@@ -35,6 +51,10 @@ public final class FlowSchemaConditionArgs extends io.pulumi.resources.ResourceA
         return this.reason == null ? Input.empty() : this.reason;
     }
 
+    /**
+     * `status` is the status of the condition. Can be True, False, Unknown. Required.
+     * 
+     */
     @InputImport(name="status")
     private final @Nullable Input<String> status;
 
@@ -42,6 +62,10 @@ public final class FlowSchemaConditionArgs extends io.pulumi.resources.ResourceA
         return this.status == null ? Input.empty() : this.status;
     }
 
+    /**
+     * `type` is the type of the condition. Required.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 

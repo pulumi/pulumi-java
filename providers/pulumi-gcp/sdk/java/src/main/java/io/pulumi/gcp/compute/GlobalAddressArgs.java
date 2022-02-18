@@ -16,6 +16,12 @@ public final class GlobalAddressArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GlobalAddressArgs Empty = new GlobalAddressArgs();
 
+    /**
+     * The IP address or beginning of the address range represented by this
+     * resource. This can be supplied as an input to reserve a specific
+     * address or omitted to allow GCP to choose a valid one for you.
+     * 
+     */
     @InputImport(name="address")
     private final @Nullable Input<String> address;
 
@@ -23,6 +29,14 @@ public final class GlobalAddressArgs extends io.pulumi.resources.ResourceArgs {
         return this.address == null ? Input.empty() : this.address;
     }
 
+    /**
+     * The type of the address to reserve.
+     * * EXTERNAL indicates public/external single IP address.
+     * * INTERNAL indicates internal IP ranges belonging to some network.
+     *   Default value is `EXTERNAL`.
+     *   Possible values are `EXTERNAL` and `INTERNAL`.
+     * 
+     */
     @InputImport(name="addressType")
     private final @Nullable Input<String> addressType;
 
@@ -30,6 +44,10 @@ public final class GlobalAddressArgs extends io.pulumi.resources.ResourceArgs {
         return this.addressType == null ? Input.empty() : this.addressType;
     }
 
+    /**
+     * An optional description of this resource.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -37,6 +55,11 @@ public final class GlobalAddressArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The IP Version that will be used by this address. The default value is `IPV4`.
+     * Possible values are `IPV4` and `IPV6`.
+     * 
+     */
     @InputImport(name="ipVersion")
     private final @Nullable Input<String> ipVersion;
 
@@ -44,6 +67,10 @@ public final class GlobalAddressArgs extends io.pulumi.resources.ResourceArgs {
         return this.ipVersion == null ? Input.empty() : this.ipVersion;
     }
 
+    /**
+     * Labels to apply to this address.  A list of key->value pairs.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -51,6 +78,16 @@ public final class GlobalAddressArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * Name of the resource. Provided by the client when the resource is
+     * created. The name must be 1-63 characters long, and comply with
+     * RFC1035.  Specifically, the name must be 1-63 characters long and
+     * match the regular expression `a-z?` which means
+     * the first character must be a lowercase letter, and all following
+     * characters must be a dash, lowercase letter, or digit, except the last
+     * character, which cannot be a dash.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -58,6 +95,13 @@ public final class GlobalAddressArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The URL of the network in which to reserve the IP range. The IP range
+     * must be in RFC1918 space. The network cannot be deleted if there are
+     * any reserved IP ranges referring to it.
+     * This should only be set when using an Internal address.
+     * 
+     */
     @InputImport(name="network")
     private final @Nullable Input<String> network;
 
@@ -65,6 +109,13 @@ public final class GlobalAddressArgs extends io.pulumi.resources.ResourceArgs {
         return this.network == null ? Input.empty() : this.network;
     }
 
+    /**
+     * The prefix length of the IP range. If not present, it means the
+     * address field is a single IP address.
+     * This field is not applicable to addresses with addressType=EXTERNAL,
+     * or addressType=INTERNAL when purpose=PRIVATE_SERVICE_CONNECT
+     * 
+     */
     @InputImport(name="prefixLength")
     private final @Nullable Input<Integer> prefixLength;
 
@@ -72,6 +123,11 @@ public final class GlobalAddressArgs extends io.pulumi.resources.ResourceArgs {
         return this.prefixLength == null ? Input.empty() : this.prefixLength;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -79,6 +135,12 @@ public final class GlobalAddressArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The purpose of the resource. Possible values include:
+     * * VPC_PEERING - for peer networks
+     * * PRIVATE_SERVICE_CONNECT - for Private Service Connect networks
+     * 
+     */
     @InputImport(name="purpose")
     private final @Nullable Input<String> purpose;
 

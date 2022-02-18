@@ -10,6 +10,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RuleGroupCustomRequestHandling {
+    /**
+     * Collection of HTTP headers.
+     * 
+     */
     private final List<RuleGroupCustomHTTPHeader> insertHeaders;
 
     @OutputCustomType.Constructor({"insertHeaders"})
@@ -17,6 +21,10 @@ public final class RuleGroupCustomRequestHandling {
         this.insertHeaders = Objects.requireNonNull(insertHeaders);
     }
 
+    /**
+     * Collection of HTTP headers.
+     * 
+     */
     public List<RuleGroupCustomHTTPHeader> getInsertHeaders() {
         return this.insertHeaders;
     }

@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The metric dimension
+ * 
+ */
 public final class MetricDimensionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MetricDimensionResponse Empty = new MetricDimensionResponse();
 
+    /**
+     * The dimension value.
+     * 
+     */
     @InputImport(name="sourceName", required=true)
     private final String sourceName;
 
@@ -19,6 +27,10 @@ public final class MetricDimensionResponse extends io.pulumi.resources.InvokeArg
         return this.sourceName;
     }
 
+    /**
+     * The dimension type.
+     * 
+     */
     @InputImport(name="sourceType", required=true)
     private final String sourceType;
 

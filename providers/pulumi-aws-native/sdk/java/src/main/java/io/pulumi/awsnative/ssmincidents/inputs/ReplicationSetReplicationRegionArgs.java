@@ -11,6 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The ReplicationSet regional configuration.
+ * 
+ */
 public final class ReplicationSetReplicationRegionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ReplicationSetReplicationRegionArgs Empty = new ReplicationSetReplicationRegionArgs();

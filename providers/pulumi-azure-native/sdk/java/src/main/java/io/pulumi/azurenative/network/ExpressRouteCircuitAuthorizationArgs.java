@@ -16,6 +16,10 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
 
     public static final ExpressRouteCircuitAuthorizationArgs Empty = new ExpressRouteCircuitAuthorizationArgs();
 
+    /**
+     * The authorization key.
+     * 
+     */
     @InputImport(name="authorizationKey")
     private final @Nullable Input<String> authorizationKey;
 
@@ -23,6 +27,10 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
         return this.authorizationKey == null ? Input.empty() : this.authorizationKey;
     }
 
+    /**
+     * The name of the authorization.
+     * 
+     */
     @InputImport(name="authorizationName")
     private final @Nullable Input<String> authorizationName;
 
@@ -30,6 +38,10 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
         return this.authorizationName == null ? Input.empty() : this.authorizationName;
     }
 
+    /**
+     * The authorization use status.
+     * 
+     */
     @InputImport(name="authorizationUseStatus")
     private final @Nullable Input<Either<String,AuthorizationUseStatus>> authorizationUseStatus;
 
@@ -37,6 +49,10 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
         return this.authorizationUseStatus == null ? Input.empty() : this.authorizationUseStatus;
     }
 
+    /**
+     * The name of the express route circuit.
+     * 
+     */
     @InputImport(name="circuitName", required=true)
     private final Input<String> circuitName;
 
@@ -44,6 +60,10 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
         return this.circuitName;
     }
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -51,6 +71,10 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -58,6 +82,10 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

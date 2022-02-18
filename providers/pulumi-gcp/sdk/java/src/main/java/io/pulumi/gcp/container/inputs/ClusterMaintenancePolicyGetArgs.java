@@ -17,6 +17,12 @@ public final class ClusterMaintenancePolicyGetArgs extends io.pulumi.resources.R
 
     public static final ClusterMaintenancePolicyGetArgs Empty = new ClusterMaintenancePolicyGetArgs();
 
+    /**
+     * Time window specified for daily maintenance operations.
+     * Specify `start_time` in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) format "HH:MM”,
+     * where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
+     * 
+     */
     @InputImport(name="dailyMaintenanceWindow")
     private final @Nullable Input<ClusterMaintenancePolicyDailyMaintenanceWindowGetArgs> dailyMaintenanceWindow;
 
@@ -24,6 +30,10 @@ public final class ClusterMaintenancePolicyGetArgs extends io.pulumi.resources.R
         return this.dailyMaintenanceWindow == null ? Input.empty() : this.dailyMaintenanceWindow;
     }
 
+    /**
+     * Exceptions to maintenance window. Non-emergency maintenance should not occur in these windows. A cluster can have up to three maintenance exclusions at a time [Maintenance Window and Exclusions](https://cloud.google.com/kubernetes-engine/docs/concepts/maintenance-windows-and-exclusions)
+     * 
+     */
     @InputImport(name="maintenanceExclusions")
     private final @Nullable Input<List<ClusterMaintenancePolicyMaintenanceExclusionGetArgs>> maintenanceExclusions;
 
@@ -31,6 +41,10 @@ public final class ClusterMaintenancePolicyGetArgs extends io.pulumi.resources.R
         return this.maintenanceExclusions == null ? Input.empty() : this.maintenanceExclusions;
     }
 
+    /**
+     * Time window for recurring maintenance operations.
+     * 
+     */
     @InputImport(name="recurringWindow")
     private final @Nullable Input<ClusterMaintenancePolicyRecurringWindowGetArgs> recurringWindow;
 

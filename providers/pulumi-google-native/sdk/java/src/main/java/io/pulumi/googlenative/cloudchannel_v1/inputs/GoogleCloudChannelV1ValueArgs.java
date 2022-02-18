@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Data type and value of a parameter.
+ * 
+ */
 public final class GoogleCloudChannelV1ValueArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudChannelV1ValueArgs Empty = new GoogleCloudChannelV1ValueArgs();
 
+    /**
+     * Represents a boolean value.
+     * 
+     */
     @InputImport(name="boolValue")
     private final @Nullable Input<Boolean> boolValue;
 
@@ -24,6 +32,10 @@ public final class GoogleCloudChannelV1ValueArgs extends io.pulumi.resources.Res
         return this.boolValue == null ? Input.empty() : this.boolValue;
     }
 
+    /**
+     * Represents a double value.
+     * 
+     */
     @InputImport(name="doubleValue")
     private final @Nullable Input<Double> doubleValue;
 
@@ -31,6 +43,10 @@ public final class GoogleCloudChannelV1ValueArgs extends io.pulumi.resources.Res
         return this.doubleValue == null ? Input.empty() : this.doubleValue;
     }
 
+    /**
+     * Represents an int64 value.
+     * 
+     */
     @InputImport(name="int64Value")
     private final @Nullable Input<String> int64Value;
 
@@ -38,6 +54,10 @@ public final class GoogleCloudChannelV1ValueArgs extends io.pulumi.resources.Res
         return this.int64Value == null ? Input.empty() : this.int64Value;
     }
 
+    /**
+     * Represents an 'Any' proto value.
+     * 
+     */
     @InputImport(name="protoValue")
     private final @Nullable Input<Map<String,String>> protoValue;
 
@@ -45,6 +65,10 @@ public final class GoogleCloudChannelV1ValueArgs extends io.pulumi.resources.Res
         return this.protoValue == null ? Input.empty() : this.protoValue;
     }
 
+    /**
+     * Represents a string value.
+     * 
+     */
     @InputImport(name="stringValue")
     private final @Nullable Input<String> stringValue;
 

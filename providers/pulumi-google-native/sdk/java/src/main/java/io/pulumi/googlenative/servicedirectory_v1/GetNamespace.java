@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNamespace {
+/**
+ * Gets a namespace.
+ * 
+ */
     public static CompletableFuture<GetNamespaceResult> invokeAsync(GetNamespaceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:servicedirectory/v1:getNamespace", TypeShape.of(GetNamespaceResult.class), args == null ? GetNamespaceArgs.Empty : args, Utilities.withVersion(options));
     }

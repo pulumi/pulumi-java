@@ -12,6 +12,10 @@ public final class GetWebAppSourceControlSlotArgs extends io.pulumi.resources.In
 
     public static final GetWebAppSourceControlSlotArgs Empty = new GetWebAppSourceControlSlotArgs();
 
+    /**
+     * Name of the app.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -19,6 +23,10 @@ public final class GetWebAppSourceControlSlotArgs extends io.pulumi.resources.In
         return this.name;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetWebAppSourceControlSlotArgs extends io.pulumi.resources.In
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of the deployment slot. If a slot is not specified, the API will get the source control configuration for the production slot.
+     * 
+     */
     @InputImport(name="slot", required=true)
     private final String slot;
 

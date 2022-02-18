@@ -15,6 +15,18 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
 
     public static final OccurenceState Empty = new OccurenceState();
 
+    /**
+     * Occurrence that represents a single "attestation". The authenticity
+     * of an attestation can be verified using the attached signature.
+     * If the verifier trusts the public key of the signer, then verifying
+     * the signature is sufficient to establish trust. In this circumstance,
+     * the authority to which this attestation is attached is primarily
+     * useful for lookup (how to find this attestation if you already
+     * know the authority and artifact to be verified) and intent (for
+     * which authority this attestation was intended to sign.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="attestation")
     private final @Nullable Input<OccurenceAttestationGetArgs> attestation;
 
@@ -22,6 +34,10 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
         return this.attestation == null ? Input.empty() : this.attestation;
     }
 
+    /**
+     * The time when the repository was created.
+     * 
+     */
     @InputImport(name="createTime")
     private final @Nullable Input<String> createTime;
 
@@ -29,6 +45,11 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
         return this.createTime == null ? Input.empty() : this.createTime;
     }
 
+    /**
+     * The note kind which explicitly denotes which of the occurrence details are specified. This field can be used as a filter
+     * in list requests.
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -36,6 +57,10 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * The name of the occurrence.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -43,6 +68,12 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The analysis note associated with this occurrence, in the form of
+     * projects/[PROJECT]/notes/[NOTE_ID]. This field can be used as a
+     * filter in list requests.
+     * 
+     */
     @InputImport(name="noteName")
     private final @Nullable Input<String> noteName;
 
@@ -50,6 +81,11 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
         return this.noteName == null ? Input.empty() : this.noteName;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -57,6 +93,10 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * A description of actions that can be taken to remedy the note.
+     * 
+     */
     @InputImport(name="remediation")
     private final @Nullable Input<String> remediation;
 
@@ -64,6 +104,12 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
         return this.remediation == null ? Input.empty() : this.remediation;
     }
 
+    /**
+     * Required. Immutable. A URI that represents the resource for which
+     * the occurrence applies. For example,
+     * https://gcr.io/project/image@sha256:123abc for a Docker image.
+     * 
+     */
     @InputImport(name="resourceUri")
     private final @Nullable Input<String> resourceUri;
 
@@ -71,6 +117,10 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
         return this.resourceUri == null ? Input.empty() : this.resourceUri;
     }
 
+    /**
+     * The time when the repository was last updated.
+     * 
+     */
     @InputImport(name="updateTime")
     private final @Nullable Input<String> updateTime;
 

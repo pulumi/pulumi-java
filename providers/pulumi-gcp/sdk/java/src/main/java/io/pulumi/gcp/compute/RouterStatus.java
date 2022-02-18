@@ -13,6 +13,23 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class RouterStatus {
+/**
+ * Get a Cloud Router's status within GCE from its name and region. This data source exposes the
+ * routes learned by a Cloud Router via BGP peers.
+ * 
+ * For more information see [the official documentation](https://cloud.google.com/network-connectivity/docs/router/how-to/viewing-router-details)
+ * and
+ * [API](https://cloud.google.com/compute/docs/reference/rest/v1/routers/getRouterStatus).
+ * 
+ * ## Example Usage
+ * 
+ *
+ * A collection of arguments for invoking RouterStatus.
+ * 
+ *
+ * A collection of values returned by RouterStatus.
+ * 
+ */
     public static CompletableFuture<RouterStatusResult> invokeAsync(RouterStatusArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/routerStatus:RouterStatus", TypeShape.of(RouterStatusResult.class), args == null ? RouterStatusArgs.Empty : args, Utilities.withVersion(options));
     }

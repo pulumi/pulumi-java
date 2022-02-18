@@ -17,10 +17,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Firewall Policy Filter Rule.
+ * 
+ */
 public final class FirewallPolicyFilterRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FirewallPolicyFilterRuleArgs Empty = new FirewallPolicyFilterRuleArgs();
 
+    /**
+     * The action type of a Filter rule.
+     * 
+     */
     @InputImport(name="action")
     private final @Nullable Input<FirewallPolicyFilterRuleActionArgs> action;
 
@@ -28,6 +36,10 @@ public final class FirewallPolicyFilterRuleArgs extends io.pulumi.resources.Reso
         return this.action == null ? Input.empty() : this.action;
     }
 
+    /**
+     * The name of the rule.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -35,6 +47,10 @@ public final class FirewallPolicyFilterRuleArgs extends io.pulumi.resources.Reso
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Priority of the Firewall Policy Rule resource.
+     * 
+     */
     @InputImport(name="priority")
     private final @Nullable Input<Integer> priority;
 
@@ -42,6 +58,10 @@ public final class FirewallPolicyFilterRuleArgs extends io.pulumi.resources.Reso
         return this.priority == null ? Input.empty() : this.priority;
     }
 
+    /**
+     * Collection of rule conditions used by a rule.
+     * 
+     */
     @InputImport(name="ruleConditions")
     private final @Nullable Input<List<Object>> ruleConditions;
 
@@ -49,6 +69,11 @@ public final class FirewallPolicyFilterRuleArgs extends io.pulumi.resources.Reso
         return this.ruleConditions == null ? Input.empty() : this.ruleConditions;
     }
 
+    /**
+     * The type of the rule.
+     * Expected value is 'FirewallPolicyFilterRule'.
+     * 
+     */
     @InputImport(name="ruleType", required=true)
     private final Input<String> ruleType;
 

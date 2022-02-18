@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetScriptExecutionLogs {
+/**
+ * An instance of a script executed by a user - custom or AVS
+ * API Version: 2021-06-01.
+ * 
+ *
+ * An instance of a script executed by a user - custom or AVS
+ * 
+ */
     public static CompletableFuture<GetScriptExecutionLogsResult> invokeAsync(GetScriptExecutionLogsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getScriptExecutionLogs", TypeShape.of(GetScriptExecutionLogsResult.class), args == null ? GetScriptExecutionLogsArgs.Empty : args, Utilities.withVersion(options));
     }

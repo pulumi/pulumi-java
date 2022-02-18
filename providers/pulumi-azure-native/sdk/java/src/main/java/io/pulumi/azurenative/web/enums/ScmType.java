@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * SCM type.
+     * 
+     */
     @EnumType
     public enum ScmType {
         None("None"),

@@ -8,14 +8,46 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The comparison to apply between the time series (indicated by filter and aggregation) and the threshold (indicated by threshold_value). The comparison is applied on each time series, with the time series on the left-hand side and the threshold on the right-hand side.Only COMPARISON_LT and COMPARISON_GT are supported currently.
+     * 
+     */
     @EnumType
     public enum MetricThresholdComparison {
+        /**
+         * No ordering relationship is specified.
+         * 
+         */
         ComparisonUnspecified("COMPARISON_UNSPECIFIED"),
+        /**
+         * True if the left argument is greater than the right argument.
+         * 
+         */
         ComparisonGt("COMPARISON_GT"),
+        /**
+         * True if the left argument is greater than or equal to the right argument.
+         * 
+         */
         ComparisonGe("COMPARISON_GE"),
+        /**
+         * True if the left argument is less than the right argument.
+         * 
+         */
         ComparisonLt("COMPARISON_LT"),
+        /**
+         * True if the left argument is less than or equal to the right argument.
+         * 
+         */
         ComparisonLe("COMPARISON_LE"),
+        /**
+         * True if the left argument is equal to the right argument.
+         * 
+         */
         ComparisonEq("COMPARISON_EQ"),
+        /**
+         * True if the left argument is not equal to the right argument.
+         * 
+         */
         ComparisonNe("COMPARISON_NE");
 
         private final String value;

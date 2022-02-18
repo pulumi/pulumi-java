@@ -11,10 +11,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * <p>Dashboard source template.</p>
+ * 
+ */
 public final class DashboardSourceTemplateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DashboardSourceTemplateArgs Empty = new DashboardSourceTemplateArgs();
 
+    /**
+     * <p>The Amazon Resource Name (ARN) of the resource.</p>
+     * 
+     */
     @InputImport(name="arn", required=true)
     private final Input<String> arn;
 
@@ -22,6 +30,10 @@ public final class DashboardSourceTemplateArgs extends io.pulumi.resources.Resou
         return this.arn;
     }
 
+    /**
+     * <p>Dataset references.</p>
+     * 
+     */
     @InputImport(name="dataSetReferences", required=true)
     private final Input<List<DashboardDataSetReferenceArgs>> dataSetReferences;
 

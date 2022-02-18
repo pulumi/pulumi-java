@@ -12,6 +12,10 @@ public final class GetFirewallDomainListArgs extends io.pulumi.resources.InvokeA
 
     public static final GetFirewallDomainListArgs Empty = new GetFirewallDomainListArgs();
 
+    /**
+     * ResourceId
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 

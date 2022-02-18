@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetModuleVersion {
+/**
+ * A module that has been registered in the CloudFormation registry.
+ * 
+ */
     public static CompletableFuture<GetModuleVersionResult> invokeAsync(GetModuleVersionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudformation:getModuleVersion", TypeShape.of(GetModuleVersionResult.class), args == null ? GetModuleVersionArgs.Empty : args, Utilities.withVersion(options));
     }

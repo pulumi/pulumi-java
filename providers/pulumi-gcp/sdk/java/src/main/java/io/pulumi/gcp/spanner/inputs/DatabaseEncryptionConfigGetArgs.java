@@ -13,6 +13,11 @@ public final class DatabaseEncryptionConfigGetArgs extends io.pulumi.resources.R
 
     public static final DatabaseEncryptionConfigGetArgs Empty = new DatabaseEncryptionConfigGetArgs();
 
+    /**
+     * Fully qualified name of the KMS key to use to encrypt this database. This key must exist
+     * in the same location as the Spanner Database.
+     * 
+     */
     @InputImport(name="kmsKeyName", required=true)
     private final Input<String> kmsKeyName;
 

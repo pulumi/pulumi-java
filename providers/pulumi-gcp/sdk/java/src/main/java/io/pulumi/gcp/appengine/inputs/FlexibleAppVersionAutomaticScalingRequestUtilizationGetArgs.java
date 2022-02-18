@@ -15,6 +15,10 @@ public final class FlexibleAppVersionAutomaticScalingRequestUtilizationGetArgs e
 
     public static final FlexibleAppVersionAutomaticScalingRequestUtilizationGetArgs Empty = new FlexibleAppVersionAutomaticScalingRequestUtilizationGetArgs();
 
+    /**
+     * Target number of concurrent requests.
+     * 
+     */
     @InputImport(name="targetConcurrentRequests")
     private final @Nullable Input<Double> targetConcurrentRequests;
 
@@ -22,6 +26,10 @@ public final class FlexibleAppVersionAutomaticScalingRequestUtilizationGetArgs e
         return this.targetConcurrentRequests == null ? Input.empty() : this.targetConcurrentRequests;
     }
 
+    /**
+     * Target requests per second.
+     * 
+     */
     @InputImport(name="targetRequestCountPerSecond")
     private final @Nullable Input<String> targetRequestCountPerSecond;
 

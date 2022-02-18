@@ -13,6 +13,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class BotResponseSpecification {
+    /**
+     * Indicates whether the user can interrupt a speech prompt from the bot.
+     * 
+     */
     private final @Nullable Boolean allowInterrupt;
     private final List<BotMessageGroup> messageGroupsList;
 
@@ -24,6 +28,10 @@ public final class BotResponseSpecification {
         this.messageGroupsList = Objects.requireNonNull(messageGroupsList);
     }
 
+    /**
+     * Indicates whether the user can interrupt a speech prompt from the bot.
+     * 
+     */
     public Optional<Boolean> getAllowInterrupt() {
         return Optional.ofNullable(this.allowInterrupt);
     }

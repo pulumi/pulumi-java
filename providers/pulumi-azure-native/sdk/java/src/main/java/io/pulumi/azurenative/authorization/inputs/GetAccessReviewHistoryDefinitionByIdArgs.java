@@ -12,6 +12,10 @@ public final class GetAccessReviewHistoryDefinitionByIdArgs extends io.pulumi.re
 
     public static final GetAccessReviewHistoryDefinitionByIdArgs Empty = new GetAccessReviewHistoryDefinitionByIdArgs();
 
+    /**
+     * The id of the access review history definition.
+     * 
+     */
     @InputImport(name="historyDefinitionId", required=true)
     private final String historyDefinitionId;
 

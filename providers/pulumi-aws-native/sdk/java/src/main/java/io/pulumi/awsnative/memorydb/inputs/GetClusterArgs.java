@@ -12,6 +12,10 @@ public final class GetClusterArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetClusterArgs Empty = new GetClusterArgs();
 
+    /**
+     * The name of the cluster. This value must be unique as it also serves as the cluster identifier.
+     * 
+     */
     @InputImport(name="clusterName", required=true)
     private final String clusterName;
 

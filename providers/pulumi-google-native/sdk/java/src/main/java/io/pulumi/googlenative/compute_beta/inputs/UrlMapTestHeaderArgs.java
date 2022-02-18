@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * HTTP headers used in UrlMapTests.
+ * 
+ */
 public final class UrlMapTestHeaderArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final UrlMapTestHeaderArgs Empty = new UrlMapTestHeaderArgs();
 
+    /**
+     * Header name.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -21,6 +29,10 @@ public final class UrlMapTestHeaderArgs extends io.pulumi.resources.ResourceArgs
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Header value.
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

@@ -15,6 +15,10 @@ public final class MulticastGroupLoRaWAN extends io.pulumi.resources.InvokeArgs 
 
     public static final MulticastGroupLoRaWAN Empty = new MulticastGroupLoRaWAN();
 
+    /**
+     * Multicast group LoRaWAN DL Class
+     * 
+     */
     @InputImport(name="dlClass", required=true)
     private final String dlClass;
 
@@ -22,6 +26,10 @@ public final class MulticastGroupLoRaWAN extends io.pulumi.resources.InvokeArgs 
         return this.dlClass;
     }
 
+    /**
+     * Multicast group number of devices in group. Returned after successful read.
+     * 
+     */
     @InputImport(name="numberOfDevicesInGroup")
     private final @Nullable Integer numberOfDevicesInGroup;
 
@@ -29,6 +37,10 @@ public final class MulticastGroupLoRaWAN extends io.pulumi.resources.InvokeArgs 
         return this.numberOfDevicesInGroup == null ? Optional.empty() : Optional.ofNullable(this.numberOfDevicesInGroup);
     }
 
+    /**
+     * Multicast group number of devices requested. Returned after successful read.
+     * 
+     */
     @InputImport(name="numberOfDevicesRequested")
     private final @Nullable Integer numberOfDevicesRequested;
 
@@ -36,6 +48,10 @@ public final class MulticastGroupLoRaWAN extends io.pulumi.resources.InvokeArgs 
         return this.numberOfDevicesRequested == null ? Optional.empty() : Optional.ofNullable(this.numberOfDevicesRequested);
     }
 
+    /**
+     * Multicast group LoRaWAN RF region
+     * 
+     */
     @InputImport(name="rfRegion", required=true)
     private final String rfRegion;
 

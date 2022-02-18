@@ -10,10 +10,18 @@ import java.util.Map;
 import java.util.Objects;
 
 
+/**
+ * Oracle database profile.
+ * 
+ */
 public final class OracleProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OracleProfileResponse Empty = new OracleProfileResponse();
 
+    /**
+     * Connection string attributes
+     * 
+     */
     @InputImport(name="connectionAttributes", required=true)
     private final Map<String,String> connectionAttributes;
 
@@ -21,6 +29,10 @@ public final class OracleProfileResponse extends io.pulumi.resources.InvokeArgs 
         return this.connectionAttributes;
     }
 
+    /**
+     * Database for the Oracle connection.
+     * 
+     */
     @InputImport(name="databaseService", required=true)
     private final String databaseService;
 
@@ -28,6 +40,10 @@ public final class OracleProfileResponse extends io.pulumi.resources.InvokeArgs 
         return this.databaseService;
     }
 
+    /**
+     * Hostname for the Oracle connection.
+     * 
+     */
     @InputImport(name="hostname", required=true)
     private final String hostname;
 
@@ -35,6 +51,10 @@ public final class OracleProfileResponse extends io.pulumi.resources.InvokeArgs 
         return this.hostname;
     }
 
+    /**
+     * Password for the Oracle connection.
+     * 
+     */
     @InputImport(name="password", required=true)
     private final String password;
 
@@ -42,6 +62,10 @@ public final class OracleProfileResponse extends io.pulumi.resources.InvokeArgs 
         return this.password;
     }
 
+    /**
+     * Port for the Oracle connection, default value is 1521.
+     * 
+     */
     @InputImport(name="port", required=true)
     private final Integer port;
 
@@ -49,6 +73,10 @@ public final class OracleProfileResponse extends io.pulumi.resources.InvokeArgs 
         return this.port;
     }
 
+    /**
+     * Username for the Oracle connection.
+     * 
+     */
     @InputImport(name="username", required=true)
     private final String username;
 

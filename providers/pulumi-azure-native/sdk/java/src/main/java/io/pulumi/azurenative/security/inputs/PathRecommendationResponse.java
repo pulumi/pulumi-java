@@ -14,10 +14,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents a path that is recommended to be allowed and its properties
+ * 
+ */
 public final class PathRecommendationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PathRecommendationResponse Empty = new PathRecommendationResponse();
 
+    /**
+     * The recommendation action of the machine or rule
+     * 
+     */
     @InputImport(name="action")
     private final @Nullable String action;
 
@@ -25,6 +33,10 @@ public final class PathRecommendationResponse extends io.pulumi.resources.Invoke
         return this.action == null ? Optional.empty() : Optional.ofNullable(this.action);
     }
 
+    /**
+     * Whether the application is commonly run on the machine
+     * 
+     */
     @InputImport(name="common")
     private final @Nullable Boolean common;
 
@@ -32,6 +44,10 @@ public final class PathRecommendationResponse extends io.pulumi.resources.Invoke
         return this.common == null ? Optional.empty() : Optional.ofNullable(this.common);
     }
 
+    /**
+     * The configuration status of the machines group or machine or rule
+     * 
+     */
     @InputImport(name="configurationStatus")
     private final @Nullable String configurationStatus;
 
@@ -39,6 +55,10 @@ public final class PathRecommendationResponse extends io.pulumi.resources.Invoke
         return this.configurationStatus == null ? Optional.empty() : Optional.ofNullable(this.configurationStatus);
     }
 
+    /**
+     * The type of the file (for Linux files - Executable is used)
+     * 
+     */
     @InputImport(name="fileType")
     private final @Nullable String fileType;
 
@@ -46,6 +66,10 @@ public final class PathRecommendationResponse extends io.pulumi.resources.Invoke
         return this.fileType == null ? Optional.empty() : Optional.ofNullable(this.fileType);
     }
 
+    /**
+     * The full path of the file, or an identifier of the application
+     * 
+     */
     @InputImport(name="path")
     private final @Nullable String path;
 
@@ -53,6 +77,10 @@ public final class PathRecommendationResponse extends io.pulumi.resources.Invoke
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
     }
 
+    /**
+     * Represents the publisher information of a process/rule
+     * 
+     */
     @InputImport(name="publisherInfo")
     private final @Nullable PublisherInfoResponse publisherInfo;
 
@@ -60,6 +88,10 @@ public final class PathRecommendationResponse extends io.pulumi.resources.Invoke
         return this.publisherInfo == null ? Optional.empty() : Optional.ofNullable(this.publisherInfo);
     }
 
+    /**
+     * The type of the rule to be allowed
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 

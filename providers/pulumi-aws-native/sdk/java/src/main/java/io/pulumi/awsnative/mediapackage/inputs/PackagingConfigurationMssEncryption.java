@@ -8,6 +8,10 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * A CMAF encryption configuration.
+ * 
+ */
 public final class PackagingConfigurationMssEncryption extends io.pulumi.resources.InvokeArgs {
 
     public static final PackagingConfigurationMssEncryption Empty = new PackagingConfigurationMssEncryption();

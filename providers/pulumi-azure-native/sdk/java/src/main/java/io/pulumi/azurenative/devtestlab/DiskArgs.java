@@ -18,6 +18,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DiskArgs Empty = new DiskArgs();
 
+    /**
+     * When backed by a blob, the name of the VHD blob without extension.
+     * 
+     */
     @InputImport(name="diskBlobName")
     private final @Nullable Input<String> diskBlobName;
 
@@ -25,6 +29,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.diskBlobName == null ? Input.empty() : this.diskBlobName;
     }
 
+    /**
+     * The size of the disk in Gibibytes.
+     * 
+     */
     @InputImport(name="diskSizeGiB")
     private final @Nullable Input<Integer> diskSizeGiB;
 
@@ -32,6 +40,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.diskSizeGiB == null ? Input.empty() : this.diskSizeGiB;
     }
 
+    /**
+     * The storage type for the disk (i.e. Standard, Premium).
+     * 
+     */
     @InputImport(name="diskType")
     private final @Nullable Input<Either<String,StorageType>> diskType;
 
@@ -39,6 +51,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.diskType == null ? Input.empty() : this.diskType;
     }
 
+    /**
+     * When backed by a blob, the URI of underlying blob.
+     * 
+     */
     @InputImport(name="diskUri")
     private final @Nullable Input<String> diskUri;
 
@@ -46,6 +62,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.diskUri == null ? Input.empty() : this.diskUri;
     }
 
+    /**
+     * The host caching policy of the disk (i.e. None, ReadOnly, ReadWrite).
+     * 
+     */
     @InputImport(name="hostCaching")
     private final @Nullable Input<String> hostCaching;
 
@@ -53,6 +73,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.hostCaching == null ? Input.empty() : this.hostCaching;
     }
 
+    /**
+     * The name of the lab.
+     * 
+     */
     @InputImport(name="labName", required=true)
     private final Input<String> labName;
 
@@ -60,6 +84,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.labName;
     }
 
+    /**
+     * The resource ID of the VM to which this disk is leased.
+     * 
+     */
     @InputImport(name="leasedByLabVmId")
     private final @Nullable Input<String> leasedByLabVmId;
 
@@ -67,6 +95,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.leasedByLabVmId == null ? Input.empty() : this.leasedByLabVmId;
     }
 
+    /**
+     * The location of the resource.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -74,6 +106,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * When backed by managed disk, this is the ID of the compute disk resource.
+     * 
+     */
     @InputImport(name="managedDiskId")
     private final @Nullable Input<String> managedDiskId;
 
@@ -81,6 +117,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.managedDiskId == null ? Input.empty() : this.managedDiskId;
     }
 
+    /**
+     * The name of the disk.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -88,6 +128,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -95,6 +139,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * When backed by a blob, the storage account where the blob is.
+     * 
+     */
     @InputImport(name="storageAccountId")
     private final @Nullable Input<String> storageAccountId;
 
@@ -102,6 +150,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.storageAccountId == null ? Input.empty() : this.storageAccountId;
     }
 
+    /**
+     * The tags of the resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -109,6 +161,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The name of the user profile.
+     * 
+     */
     @InputImport(name="userName", required=true)
     private final Input<String> userName;
 

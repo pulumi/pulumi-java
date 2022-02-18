@@ -20,6 +20,11 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DatasetArgs Empty = new DatasetArgs();
 
+    /**
+     * An array of objects that define dataset access for one or more entities.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="accesses")
     private final @Nullable Input<List<DatasetAccessArgs>> accesses;
 
@@ -27,6 +32,10 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.accesses == null ? Input.empty() : this.accesses;
     }
 
+    /**
+     * The ID of the dataset containing this table.
+     * 
+     */
     @InputImport(name="datasetId", required=true)
     private final Input<String> datasetId;
 
@@ -34,6 +43,13 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.datasetId;
     }
 
+    /**
+     * The default encryption key for all tables in the dataset. Once this property is set,
+     * all newly-created partitioned tables in the dataset will have encryption key set to
+     * this value, unless table creation request (or query) overrides the key.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="defaultEncryptionConfiguration")
     private final @Nullable Input<DatasetDefaultEncryptionConfigurationArgs> defaultEncryptionConfiguration;
 
@@ -41,6 +57,11 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.defaultEncryptionConfiguration == null ? Input.empty() : this.defaultEncryptionConfiguration;
     }
 
+    /**
+     * The default partition expiration for all partitioned tables in
+     * the dataset, in milliseconds.
+     * 
+     */
     @InputImport(name="defaultPartitionExpirationMs")
     private final @Nullable Input<Integer> defaultPartitionExpirationMs;
 
@@ -48,6 +69,11 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.defaultPartitionExpirationMs == null ? Input.empty() : this.defaultPartitionExpirationMs;
     }
 
+    /**
+     * The default lifetime of all tables in the dataset, in milliseconds.
+     * The minimum value is 3600000 milliseconds (one hour).
+     * 
+     */
     @InputImport(name="defaultTableExpirationMs")
     private final @Nullable Input<Integer> defaultTableExpirationMs;
 
@@ -55,6 +81,12 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.defaultTableExpirationMs == null ? Input.empty() : this.defaultTableExpirationMs;
     }
 
+    /**
+     * If set to `true`, delete all the tables in the
+     * dataset when destroying the resource; otherwise,
+     * destroying the resource will fail if tables are present.
+     * 
+     */
     @InputImport(name="deleteContentsOnDestroy")
     private final @Nullable Input<Boolean> deleteContentsOnDestroy;
 
@@ -62,6 +94,10 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.deleteContentsOnDestroy == null ? Input.empty() : this.deleteContentsOnDestroy;
     }
 
+    /**
+     * A user-friendly description of the dataset
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -69,6 +105,10 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * A descriptive name for the dataset
+     * 
+     */
     @InputImport(name="friendlyName")
     private final @Nullable Input<String> friendlyName;
 
@@ -76,6 +116,11 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
     }
 
+    /**
+     * The labels associated with this dataset. You can use these to
+     * organize and group your datasets
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -83,6 +128,11 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The geographic location where the dataset should reside.
+     * See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -90,6 +140,11 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

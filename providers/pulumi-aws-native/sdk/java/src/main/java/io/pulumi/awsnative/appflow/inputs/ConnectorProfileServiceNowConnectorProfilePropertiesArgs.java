@@ -13,6 +13,10 @@ public final class ConnectorProfileServiceNowConnectorProfilePropertiesArgs exte
 
     public static final ConnectorProfileServiceNowConnectorProfilePropertiesArgs Empty = new ConnectorProfileServiceNowConnectorProfilePropertiesArgs();
 
+    /**
+     * The location of the ServiceNow resource
+     * 
+     */
     @InputImport(name="instanceUrl", required=true)
     private final Input<String> instanceUrl;
 

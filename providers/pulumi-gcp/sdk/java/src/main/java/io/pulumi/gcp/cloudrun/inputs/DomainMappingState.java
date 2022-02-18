@@ -18,6 +18,10 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
 
     public static final DomainMappingState Empty = new DomainMappingState();
 
+    /**
+     * The location of the cloud run instance. eg us-central1
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -25,6 +29,11 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Metadata associated with this DomainMapping.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="metadata")
     private final @Nullable Input<DomainMappingMetadataGetArgs> metadata;
 
@@ -32,6 +41,10 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
+    /**
+     * Name should be a [verified](https://support.google.com/webmasters/answer/9008080) domain
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -39,6 +52,11 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -46,6 +64,11 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The spec for this DomainMapping.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="spec")
     private final @Nullable Input<DomainMappingSpecGetArgs> spec;
 
@@ -53,6 +76,10 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
         return this.spec == null ? Input.empty() : this.spec;
     }
 
+    /**
+     * The current status of the DomainMapping.
+     * 
+     */
     @InputImport(name="statuses")
     private final @Nullable Input<List<DomainMappingStatusGetArgs>> statuses;
 

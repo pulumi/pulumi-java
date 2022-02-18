@@ -18,6 +18,10 @@ public final class FlowEntitlementArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final FlowEntitlementArgs Empty = new FlowEntitlementArgs();
 
+    /**
+     * Percentage from 0-100 of the data transfer cost to be billed to the subscriber.
+     * 
+     */
     @InputImport(name="dataTransferSubscriberFeePercent")
     private final @Nullable Input<Integer> dataTransferSubscriberFeePercent;
 
@@ -25,6 +29,10 @@ public final class FlowEntitlementArgs extends io.pulumi.resources.ResourceArgs 
         return this.dataTransferSubscriberFeePercent == null ? Input.empty() : this.dataTransferSubscriberFeePercent;
     }
 
+    /**
+     * A description of the entitlement.
+     * 
+     */
     @InputImport(name="description", required=true)
     private final Input<String> description;
 
@@ -32,6 +40,10 @@ public final class FlowEntitlementArgs extends io.pulumi.resources.ResourceArgs 
         return this.description;
     }
 
+    /**
+     * The type of encryption that will be used on the output that is associated with this entitlement.
+     * 
+     */
     @InputImport(name="encryption")
     private final @Nullable Input<FlowEntitlementEncryptionArgs> encryption;
 
@@ -39,6 +51,10 @@ public final class FlowEntitlementArgs extends io.pulumi.resources.ResourceArgs 
         return this.encryption == null ? Input.empty() : this.encryption;
     }
 
+    /**
+     *  An indication of whether the entitlement is enabled.
+     * 
+     */
     @InputImport(name="entitlementStatus")
     private final @Nullable Input<FlowEntitlementEntitlementStatus> entitlementStatus;
 
@@ -46,6 +62,10 @@ public final class FlowEntitlementArgs extends io.pulumi.resources.ResourceArgs 
         return this.entitlementStatus == null ? Input.empty() : this.entitlementStatus;
     }
 
+    /**
+     * The ARN of the flow.
+     * 
+     */
     @InputImport(name="flowArn", required=true)
     private final Input<String> flowArn;
 
@@ -53,6 +73,10 @@ public final class FlowEntitlementArgs extends io.pulumi.resources.ResourceArgs 
         return this.flowArn;
     }
 
+    /**
+     * The name of the entitlement.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -60,6 +84,10 @@ public final class FlowEntitlementArgs extends io.pulumi.resources.ResourceArgs 
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The AWS account IDs that you want to share your content with. The receiving accounts (subscribers) will be allowed to create their own flow using your content as the source.
+     * 
+     */
     @InputImport(name="subscribers", required=true)
     private final Input<List<String>> subscribers;
 

@@ -12,6 +12,10 @@ public final class GetConnectionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetConnectionArgs Empty = new GetConnectionArgs();
 
+    /**
+     * Name of the connection.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

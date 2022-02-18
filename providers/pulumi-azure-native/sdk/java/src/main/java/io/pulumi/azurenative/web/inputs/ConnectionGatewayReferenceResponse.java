@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The gateway installation reference
+ * 
+ */
 public final class ConnectionGatewayReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConnectionGatewayReferenceResponse Empty = new ConnectionGatewayReferenceResponse();
 
+    /**
+     * Resource reference id
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -21,6 +29,10 @@ public final class ConnectionGatewayReferenceResponse extends io.pulumi.resource
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * Resource reference location
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable String location;
 
@@ -28,6 +40,10 @@ public final class ConnectionGatewayReferenceResponse extends io.pulumi.resource
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
+    /**
+     * Resource reference name
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -35,6 +51,10 @@ public final class ConnectionGatewayReferenceResponse extends io.pulumi.resource
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Resource reference type
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 

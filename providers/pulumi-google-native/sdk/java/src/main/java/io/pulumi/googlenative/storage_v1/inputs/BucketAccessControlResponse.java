@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * An access-control entry.
+ * 
+ */
 public final class BucketAccessControlResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BucketAccessControlResponse Empty = new BucketAccessControlResponse();
 
+    /**
+     * The name of the bucket.
+     * 
+     */
     @InputImport(name="bucket", required=true)
     private final String bucket;
 
@@ -20,6 +28,10 @@ public final class BucketAccessControlResponse extends io.pulumi.resources.Invok
         return this.bucket;
     }
 
+    /**
+     * The domain associated with the entity, if any.
+     * 
+     */
     @InputImport(name="domain", required=true)
     private final String domain;
 
@@ -27,6 +39,10 @@ public final class BucketAccessControlResponse extends io.pulumi.resources.Invok
         return this.domain;
     }
 
+    /**
+     * The email address associated with the entity, if any.
+     * 
+     */
     @InputImport(name="email", required=true)
     private final String email;
 
@@ -34,6 +50,21 @@ public final class BucketAccessControlResponse extends io.pulumi.resources.Invok
         return this.email;
     }
 
+    /**
+     * The entity holding the permission, in one of the following forms:
+     * - user-userId
+     * - user-email
+     * - group-groupId
+     * - group-email
+     * - domain-domain
+     * - project-team-projectId
+     * - allUsers
+     * - allAuthenticatedUsers Examples:
+     * - The user liz@example.com would be user-liz@example.com.
+     * - The group example@googlegroups.com would be group-example@googlegroups.com.
+     * - To refer to all members of the Google Apps for Business domain example.com, the entity would be domain-example.com.
+     * 
+     */
     @InputImport(name="entity", required=true)
     private final String entity;
 
@@ -41,6 +72,10 @@ public final class BucketAccessControlResponse extends io.pulumi.resources.Invok
         return this.entity;
     }
 
+    /**
+     * The ID for the entity, if any.
+     * 
+     */
     @InputImport(name="entityId", required=true)
     private final String entityId;
 
@@ -48,6 +83,10 @@ public final class BucketAccessControlResponse extends io.pulumi.resources.Invok
         return this.entityId;
     }
 
+    /**
+     * HTTP 1.1 Entity tag for the access-control entry.
+     * 
+     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -55,6 +94,10 @@ public final class BucketAccessControlResponse extends io.pulumi.resources.Invok
         return this.etag;
     }
 
+    /**
+     * The kind of item this is. For bucket access control entries, this is always storage#bucketAccessControl.
+     * 
+     */
     @InputImport(name="kind", required=true)
     private final String kind;
 
@@ -62,6 +105,10 @@ public final class BucketAccessControlResponse extends io.pulumi.resources.Invok
         return this.kind;
     }
 
+    /**
+     * The project team associated with the entity, if any.
+     * 
+     */
     @InputImport(name="projectTeam", required=true)
     private final BucketAccessControlProjectTeamResponse projectTeam;
 
@@ -69,6 +116,10 @@ public final class BucketAccessControlResponse extends io.pulumi.resources.Invok
         return this.projectTeam;
     }
 
+    /**
+     * The access permission for the entity.
+     * 
+     */
     @InputImport(name="role", required=true)
     private final String role;
 
@@ -76,6 +127,10 @@ public final class BucketAccessControlResponse extends io.pulumi.resources.Invok
         return this.role;
     }
 
+    /**
+     * The link to this access-control entry.
+     * 
+     */
     @InputImport(name="selfLink", required=true)
     private final String selfLink;
 

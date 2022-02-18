@@ -15,6 +15,10 @@ public final class SamplingRuleRecord extends io.pulumi.resources.InvokeArgs {
 
     public static final SamplingRuleRecord Empty = new SamplingRuleRecord();
 
+    /**
+     * When the rule was created, in Unix time seconds.
+     * 
+     */
     @InputImport(name="createdAt")
     private final @Nullable String createdAt;
 
@@ -22,6 +26,10 @@ public final class SamplingRuleRecord extends io.pulumi.resources.InvokeArgs {
         return this.createdAt == null ? Optional.empty() : Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * When the rule was modified, in Unix time seconds.
+     * 
+     */
     @InputImport(name="modifiedAt")
     private final @Nullable String modifiedAt;
 

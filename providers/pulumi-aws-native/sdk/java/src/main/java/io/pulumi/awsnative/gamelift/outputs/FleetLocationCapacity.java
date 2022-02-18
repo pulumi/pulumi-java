@@ -9,8 +9,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class FleetLocationCapacity {
+    /**
+     * The number of EC2 instances you want to maintain in the specified fleet location. This value must fall between the minimum and maximum size limits.
+     * 
+     */
     private final Integer desiredEC2Instances;
+    /**
+     * The maximum value that is allowed for the fleet's instance count for a location. When creating a new fleet, GameLift automatically sets this value to "1". Once the fleet is active, you can change this value.
+     * 
+     */
     private final Integer maxSize;
+    /**
+     * The minimum value allowed for the fleet's instance count for a location. When creating a new fleet, GameLift automatically sets this value to "0". After the fleet is active, you can change this value.
+     * 
+     */
     private final Integer minSize;
 
     @OutputCustomType.Constructor({"desiredEC2Instances","maxSize","minSize"})
@@ -23,12 +35,24 @@ public final class FleetLocationCapacity {
         this.minSize = Objects.requireNonNull(minSize);
     }
 
+    /**
+     * The number of EC2 instances you want to maintain in the specified fleet location. This value must fall between the minimum and maximum size limits.
+     * 
+     */
     public Integer getDesiredEC2Instances() {
         return this.desiredEC2Instances;
     }
+    /**
+     * The maximum value that is allowed for the fleet's instance count for a location. When creating a new fleet, GameLift automatically sets this value to "1". Once the fleet is active, you can change this value.
+     * 
+     */
     public Integer getMaxSize() {
         return this.maxSize;
     }
+    /**
+     * The minimum value allowed for the fleet's instance count for a location. When creating a new fleet, GameLift automatically sets this value to "0". After the fleet is active, you can change this value.
+     * 
+     */
     public Integer getMinSize() {
         return this.minSize;
     }

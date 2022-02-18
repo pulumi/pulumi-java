@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A rule governing the accessibility of a vault from a specific virtual network.
+ * 
+ */
 public final class VirtualNetworkRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VirtualNetworkRuleResponse Empty = new VirtualNetworkRuleResponse();
 
+    /**
+     * Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -22,6 +30,10 @@ public final class VirtualNetworkRuleResponse extends io.pulumi.resources.Invoke
         return this.id;
     }
 
+    /**
+     * Property to specify whether NRP will ignore the check if parent subnet has serviceEndpoints configured.
+     * 
+     */
     @InputImport(name="ignoreMissingVnetServiceEndpoint")
     private final @Nullable Boolean ignoreMissingVnetServiceEndpoint;
 

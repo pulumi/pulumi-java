@@ -12,6 +12,10 @@ import java.util.Objects;
 @OutputCustomType
 public final class GoogleCloudDatalabelingV1beta1AttemptResponse {
     private final String attemptTime;
+    /**
+     * Details of errors that occurred.
+     * 
+     */
     private final List<GoogleRpcStatusResponse> partialFailures;
 
     @OutputCustomType.Constructor({"attemptTime","partialFailures"})
@@ -25,6 +29,10 @@ public final class GoogleCloudDatalabelingV1beta1AttemptResponse {
     public String getAttemptTime() {
         return this.attemptTime;
     }
+    /**
+     * Details of errors that occurred.
+     * 
+     */
     public List<GoogleRpcStatusResponse> getPartialFailures() {
         return this.partialFailures;
     }

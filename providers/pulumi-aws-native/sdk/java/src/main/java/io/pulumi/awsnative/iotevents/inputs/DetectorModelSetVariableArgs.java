@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Information about the variable and its new value.
+ * 
+ */
 public final class DetectorModelSetVariableArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DetectorModelSetVariableArgs Empty = new DetectorModelSetVariableArgs();
 
+    /**
+     * The new value of the variable.
+     * 
+     */
     @InputImport(name="value", required=true)
     private final Input<String> value;
 
@@ -20,6 +28,10 @@ public final class DetectorModelSetVariableArgs extends io.pulumi.resources.Reso
         return this.value;
     }
 
+    /**
+     * The name of the variable.
+     * 
+     */
     @InputImport(name="variableName", required=true)
     private final Input<String> variableName;
 

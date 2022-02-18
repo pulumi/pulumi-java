@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCostAllocationRule {
+/**
+ * The cost allocation rule model definition
+ * API Version: 2020-03-01-preview.
+ * 
+ *
+ * The cost allocation rule model definition
+ * 
+ */
     public static CompletableFuture<GetCostAllocationRuleResult> invokeAsync(GetCostAllocationRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:costmanagement:getCostAllocationRule", TypeShape.of(GetCostAllocationRuleResult.class), args == null ? GetCostAllocationRuleArgs.Empty : args, Utilities.withVersion(options));
     }

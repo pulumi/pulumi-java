@@ -12,6 +12,10 @@ public final class GetB2CTenantArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetB2CTenantArgs Empty = new GetB2CTenantArgs();
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +23,10 @@ public final class GetB2CTenantArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The initial domain name of the B2C tenant.
+     * 
+     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 

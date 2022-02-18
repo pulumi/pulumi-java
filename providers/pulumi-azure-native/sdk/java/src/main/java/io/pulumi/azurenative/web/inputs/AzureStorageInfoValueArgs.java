@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Azure Files or Blob Storage access information value for dictionary storage.
+ * 
+ */
 public final class AzureStorageInfoValueArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureStorageInfoValueArgs Empty = new AzureStorageInfoValueArgs();
 
+    /**
+     * Access key for the storage account.
+     * 
+     */
     @InputImport(name="accessKey")
     private final @Nullable Input<String> accessKey;
 
@@ -22,6 +30,10 @@ public final class AzureStorageInfoValueArgs extends io.pulumi.resources.Resourc
         return this.accessKey == null ? Input.empty() : this.accessKey;
     }
 
+    /**
+     * Name of the storage account.
+     * 
+     */
     @InputImport(name="accountName")
     private final @Nullable Input<String> accountName;
 
@@ -29,6 +41,10 @@ public final class AzureStorageInfoValueArgs extends io.pulumi.resources.Resourc
         return this.accountName == null ? Input.empty() : this.accountName;
     }
 
+    /**
+     * Path to mount the storage within the site's runtime environment.
+     * 
+     */
     @InputImport(name="mountPath")
     private final @Nullable Input<String> mountPath;
 
@@ -36,6 +52,10 @@ public final class AzureStorageInfoValueArgs extends io.pulumi.resources.Resourc
         return this.mountPath == null ? Input.empty() : this.mountPath;
     }
 
+    /**
+     * Name of the file share (container name, for Blob storage).
+     * 
+     */
     @InputImport(name="shareName")
     private final @Nullable Input<String> shareName;
 
@@ -43,6 +63,10 @@ public final class AzureStorageInfoValueArgs extends io.pulumi.resources.Resourc
         return this.shareName == null ? Input.empty() : this.shareName;
     }
 
+    /**
+     * Type of storage.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<AzureStorageType> type;
 

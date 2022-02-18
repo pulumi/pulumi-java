@@ -19,6 +19,10 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ImageRecipeArgs Empty = new ImageRecipeArgs();
 
+    /**
+     * Specify additional settings and launch scripts for your build instances.
+     * 
+     */
     @InputImport(name="additionalInstanceConfiguration")
     private final @Nullable Input<ImageRecipeAdditionalInstanceConfigurationArgs> additionalInstanceConfiguration;
 
@@ -26,6 +30,10 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
         return this.additionalInstanceConfiguration == null ? Input.empty() : this.additionalInstanceConfiguration;
     }
 
+    /**
+     * The block device mappings to apply when creating images from this recipe.
+     * 
+     */
     @InputImport(name="blockDeviceMappings")
     private final @Nullable Input<List<ImageRecipeInstanceBlockDeviceMappingArgs>> blockDeviceMappings;
 
@@ -33,6 +41,10 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
         return this.blockDeviceMappings == null ? Input.empty() : this.blockDeviceMappings;
     }
 
+    /**
+     * The components of the image recipe.
+     * 
+     */
     @InputImport(name="components", required=true)
     private final Input<List<ImageRecipeComponentConfigurationArgs>> components;
 
@@ -40,6 +52,10 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
         return this.components;
     }
 
+    /**
+     * The description of the image recipe.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -47,6 +63,10 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The name of the image recipe.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -54,6 +74,10 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The parent image of the image recipe.
+     * 
+     */
     @InputImport(name="parentImage", required=true)
     private final Input<String> parentImage;
 
@@ -61,6 +85,10 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
         return this.parentImage;
     }
 
+    /**
+     * The tags of the image recipe.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Object> tags;
 
@@ -68,6 +96,10 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The version of the image recipe.
+     * 
+     */
     @InputImport(name="version", required=true)
     private final Input<String> version;
 
@@ -75,6 +107,10 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
         return this.version;
     }
 
+    /**
+     * The working directory to be used during build and test workflows.
+     * 
+     */
     @InputImport(name="workingDirectory")
     private final @Nullable Input<String> workingDirectory;
 

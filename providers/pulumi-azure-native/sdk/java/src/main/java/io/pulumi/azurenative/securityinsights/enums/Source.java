@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The source of the watchlist
+     * 
+     */
     @EnumType
     public enum Source {
         Local_file("Local file"),

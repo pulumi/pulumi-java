@@ -13,6 +13,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGooG
 
     public static final OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGooGetArgs Empty = new OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGooGetArgs();
 
+    /**
+     * Required. The name of the repository.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -20,6 +24,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGooG
         return this.name;
     }
 
+    /**
+     * Required. The url of the repository.
+     * 
+     */
     @InputImport(name="url", required=true)
     private final Input<String> url;
 

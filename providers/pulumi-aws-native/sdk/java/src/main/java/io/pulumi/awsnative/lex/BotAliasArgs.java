@@ -33,6 +33,10 @@ public final class BotAliasArgs extends io.pulumi.resources.ResourceArgs {
         return this.botAliasName == null ? Input.empty() : this.botAliasName;
     }
 
+    /**
+     * A list of tags to add to the bot alias.
+     * 
+     */
     @InputImport(name="botAliasTags")
     private final @Nullable Input<List<BotAliasTagArgs>> botAliasTags;
 
@@ -68,6 +72,10 @@ public final class BotAliasArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Determines whether Amazon Lex will use Amazon Comprehend to detect the sentiment of user utterances.
+     * 
+     */
     @InputImport(name="sentimentAnalysisSettings")
     private final @Nullable Input<SentimentAnalysisSettingsPropertiesArgs> sentimentAnalysisSettings;
 

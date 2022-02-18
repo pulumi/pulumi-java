@@ -12,6 +12,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetReplicationConfigurationResult {
+    /**
+     * The RegistryId associated with the aws account.
+     * 
+     */
     private final @Nullable String registryId;
     private final @Nullable ReplicationConfiguration replicationConfiguration;
 
@@ -23,6 +27,10 @@ public final class GetReplicationConfigurationResult {
         this.replicationConfiguration = replicationConfiguration;
     }
 
+    /**
+     * The RegistryId associated with the aws account.
+     * 
+     */
     public Optional<String> getRegistryId() {
         return Optional.ofNullable(this.registryId);
     }

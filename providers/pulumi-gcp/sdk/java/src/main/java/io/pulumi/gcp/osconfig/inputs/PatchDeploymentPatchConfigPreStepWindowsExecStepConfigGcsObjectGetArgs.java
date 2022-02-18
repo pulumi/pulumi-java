@@ -13,6 +13,10 @@ public final class PatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObje
 
     public static final PatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObjectGetArgs Empty = new PatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObjectGetArgs();
 
+    /**
+     * Bucket of the Cloud Storage object.
+     * 
+     */
     @InputImport(name="bucket", required=true)
     private final Input<String> bucket;
 
@@ -20,6 +24,10 @@ public final class PatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObje
         return this.bucket;
     }
 
+    /**
+     * Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
+     * 
+     */
     @InputImport(name="generationNumber", required=true)
     private final Input<String> generationNumber;
 
@@ -27,6 +35,10 @@ public final class PatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObje
         return this.generationNumber;
     }
 
+    /**
+     * Name of the Cloud Storage object.
+     * 
+     */
     @InputImport(name="object", required=true)
     private final Input<String> object;
 

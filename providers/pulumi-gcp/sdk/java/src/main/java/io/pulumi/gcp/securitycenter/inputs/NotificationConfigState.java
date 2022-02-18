@@ -15,6 +15,10 @@ public final class NotificationConfigState extends io.pulumi.resources.ResourceA
 
     public static final NotificationConfigState Empty = new NotificationConfigState();
 
+    /**
+     * This must be unique within the organization.
+     * 
+     */
     @InputImport(name="configId")
     private final @Nullable Input<String> configId;
 
@@ -22,6 +26,10 @@ public final class NotificationConfigState extends io.pulumi.resources.ResourceA
         return this.configId == null ? Input.empty() : this.configId;
     }
 
+    /**
+     * The description of the notification config (max of 1024 characters).
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -29,6 +37,11 @@ public final class NotificationConfigState extends io.pulumi.resources.ResourceA
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The resource name of this notification config, in the format
+     * 'organizations/{{organization}}/notificationConfigs/{{config_id}}'.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -36,6 +49,11 @@ public final class NotificationConfigState extends io.pulumi.resources.ResourceA
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The organization whose Cloud Security Command Center the Notification
+     * Config lives in.
+     * 
+     */
     @InputImport(name="organization")
     private final @Nullable Input<String> organization;
 
@@ -43,6 +61,11 @@ public final class NotificationConfigState extends io.pulumi.resources.ResourceA
         return this.organization == null ? Input.empty() : this.organization;
     }
 
+    /**
+     * The Pub/Sub topic to send notifications to. Its format is
+     * "projects/[project_id]/topics/[topic]".
+     * 
+     */
     @InputImport(name="pubsubTopic")
     private final @Nullable Input<String> pubsubTopic;
 
@@ -50,6 +73,10 @@ public final class NotificationConfigState extends io.pulumi.resources.ResourceA
         return this.pubsubTopic == null ? Input.empty() : this.pubsubTopic;
     }
 
+    /**
+     * The service account that needs "pubsub.topics.publish" permission to publish to the Pub/Sub topic.
+     * 
+     */
     @InputImport(name="serviceAccount")
     private final @Nullable Input<String> serviceAccount;
 
@@ -57,6 +84,11 @@ public final class NotificationConfigState extends io.pulumi.resources.ResourceA
         return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
     }
 
+    /**
+     * The config for triggering streaming-based notifications.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="streamingConfig")
     private final @Nullable Input<NotificationConfigStreamingConfigGetArgs> streamingConfig;
 

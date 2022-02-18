@@ -15,6 +15,11 @@ public final class URLMapDefaultRouteActionFaultInjectionPolicyAbortGetArgs exte
 
     public static final URLMapDefaultRouteActionFaultInjectionPolicyAbortGetArgs Empty = new URLMapDefaultRouteActionFaultInjectionPolicyAbortGetArgs();
 
+    /**
+     * The HTTP status code used to abort the request.
+     * The value must be between 200 and 599 inclusive.
+     * 
+     */
     @InputImport(name="httpStatus")
     private final @Nullable Input<Integer> httpStatus;
 
@@ -22,6 +27,11 @@ public final class URLMapDefaultRouteActionFaultInjectionPolicyAbortGetArgs exte
         return this.httpStatus == null ? Input.empty() : this.httpStatus;
     }
 
+    /**
+     * The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+     * The value must be between 0.0 and 100.0 inclusive.
+     * 
+     */
     @InputImport(name="percentage")
     private final @Nullable Input<Double> percentage;
 

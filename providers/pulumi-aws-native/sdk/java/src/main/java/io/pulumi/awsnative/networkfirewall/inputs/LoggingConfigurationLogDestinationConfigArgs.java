@@ -15,6 +15,10 @@ public final class LoggingConfigurationLogDestinationConfigArgs extends io.pulum
 
     public static final LoggingConfigurationLogDestinationConfigArgs Empty = new LoggingConfigurationLogDestinationConfigArgs();
 
+    /**
+     * A key-value pair to configure the logDestinations.
+     * 
+     */
     @InputImport(name="logDestination", required=true)
     private final Input<Object> logDestination;
 

@@ -12,6 +12,10 @@ public final class GetRequestValidatorArgs extends io.pulumi.resources.InvokeArg
 
     public static final GetRequestValidatorArgs Empty = new GetRequestValidatorArgs();
 
+    /**
+     * ID of the request validator.
+     * 
+     */
     @InputImport(name="requestValidatorId", required=true)
     private final String requestValidatorId;
 
@@ -19,6 +23,10 @@ public final class GetRequestValidatorArgs extends io.pulumi.resources.InvokeArg
         return this.requestValidatorId;
     }
 
+    /**
+     * The identifier of the targeted API entity.
+     * 
+     */
     @InputImport(name="restApiId", required=true)
     private final String restApiId;
 

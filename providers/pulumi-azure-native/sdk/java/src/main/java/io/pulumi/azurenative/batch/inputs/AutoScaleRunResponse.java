@@ -29,6 +29,10 @@ public final class AutoScaleRunResponse extends io.pulumi.resources.InvokeArgs {
         return this.evaluationTime;
     }
 
+    /**
+     * Each variable value is returned in the form $variable=value, and variables are separated by semicolons.
+     * 
+     */
     @InputImport(name="results")
     private final @Nullable String results;
 

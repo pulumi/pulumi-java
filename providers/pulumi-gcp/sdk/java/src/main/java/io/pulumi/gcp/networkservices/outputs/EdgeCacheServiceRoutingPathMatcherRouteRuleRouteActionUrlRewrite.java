@@ -11,8 +11,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewrite {
+    /**
+     * Prior to forwarding the request to the selected origin, the request's host header is replaced with contents of hostRewrite.
+     * 
+     */
     private final @Nullable String hostRewrite;
+    /**
+     * Prior to forwarding the request to the selected origin, the matching portion of the request's path is replaced by pathPrefixRewrite.
+     * 
+     */
     private final @Nullable String pathPrefixRewrite;
+    /**
+     * Prior to forwarding the request to the selected origin, if the
+     * request matched a pathTemplateMatch, the matching portion of the
+     * request's path is replaced re-written using the pattern specified
+     * by pathTemplateRewrite.
+     * pathTemplateRewrite must be between 1 and 255 characters
+     * (inclusive), must start with a '/', and must only use variables
+     * captured by the route's pathTemplate matchers.
+     * pathTemplateRewrite may only be used when all of a route's
+     * MatchRules specify pathTemplate.
+     * Only one of pathPrefixRewrite and pathTemplateRewrite may be
+     * specified.
+     * 
+     */
     private final @Nullable String pathTemplateRewrite;
 
     @OutputCustomType.Constructor({"hostRewrite","pathPrefixRewrite","pathTemplateRewrite"})
@@ -25,12 +47,34 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewr
         this.pathTemplateRewrite = pathTemplateRewrite;
     }
 
+    /**
+     * Prior to forwarding the request to the selected origin, the request's host header is replaced with contents of hostRewrite.
+     * 
+     */
     public Optional<String> getHostRewrite() {
         return Optional.ofNullable(this.hostRewrite);
     }
+    /**
+     * Prior to forwarding the request to the selected origin, the matching portion of the request's path is replaced by pathPrefixRewrite.
+     * 
+     */
     public Optional<String> getPathPrefixRewrite() {
         return Optional.ofNullable(this.pathPrefixRewrite);
     }
+    /**
+     * Prior to forwarding the request to the selected origin, if the
+     * request matched a pathTemplateMatch, the matching portion of the
+     * request's path is replaced re-written using the pattern specified
+     * by pathTemplateRewrite.
+     * pathTemplateRewrite must be between 1 and 255 characters
+     * (inclusive), must start with a '/', and must only use variables
+     * captured by the route's pathTemplate matchers.
+     * pathTemplateRewrite may only be used when all of a route's
+     * MatchRules specify pathTemplate.
+     * Only one of pathPrefixRewrite and pathTemplateRewrite may be
+     * specified.
+     * 
+     */
     public Optional<String> getPathTemplateRewrite() {
         return Optional.ofNullable(this.pathTemplateRewrite);
     }

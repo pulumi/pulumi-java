@@ -19,6 +19,11 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
 
     public static final RuntimeState Empty = new RuntimeState();
 
+    /**
+     * The config settings for accessing runtime.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="accessConfig")
     private final @Nullable Input<RuntimeAccessConfigGetArgs> accessConfig;
 
@@ -26,6 +31,11 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
         return this.accessConfig == null ? Input.empty() : this.accessConfig;
     }
 
+    /**
+     * The health state of this runtime. For a list of possible output values, see
+     * 'https://cloud.google.com/vertex-ai/docs/workbench/ reference/rest/v1/projects.locations.runtimes#healthstate'.
+     * 
+     */
     @InputImport(name="healthState")
     private final @Nullable Input<String> healthState;
 
@@ -33,6 +43,10 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
         return this.healthState == null ? Input.empty() : this.healthState;
     }
 
+    /**
+     * A reference to the zone where the machine resides.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -40,6 +54,10 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Contains Runtime daemon metrics such as Service status and JupyterLab status
+     * 
+     */
     @InputImport(name="metrics")
     private final @Nullable Input<List<RuntimeMetricGetArgs>> metrics;
 
@@ -47,6 +65,10 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
         return this.metrics == null ? Input.empty() : this.metrics;
     }
 
+    /**
+     * The name specified for the Notebook instance.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -54,6 +76,11 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -61,6 +88,11 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The config settings for software inside the runtime.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="softwareConfig")
     private final @Nullable Input<RuntimeSoftwareConfigGetArgs> softwareConfig;
 
@@ -68,6 +100,10 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
         return this.softwareConfig == null ? Input.empty() : this.softwareConfig;
     }
 
+    /**
+     * The state of this runtime.
+     * 
+     */
     @InputImport(name="state")
     private final @Nullable Input<String> state;
 
@@ -75,6 +111,11 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
         return this.state == null ? Input.empty() : this.state;
     }
 
+    /**
+     * Use a Compute Engine VM image to start the managed notebook instance.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="virtualMachine")
     private final @Nullable Input<RuntimeVirtualMachineGetArgs> virtualMachine;
 

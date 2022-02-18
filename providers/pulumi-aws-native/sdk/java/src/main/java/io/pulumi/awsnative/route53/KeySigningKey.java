@@ -13,33 +13,75 @@ import io.pulumi.core.internal.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Represents a key signing key (KSK) associated with a hosted zone. You can only have two KSKs per hosted zone.
+ * 
+ */
 @ResourceType(type="aws-native:route53:KeySigningKey")
 public class KeySigningKey extends io.pulumi.resources.CustomResource {
+    /**
+     * The unique string (ID) used to identify a hosted zone.
+     * 
+     */
     @OutputExport(name="hostedZoneId", type=String.class, parameters={})
     private Output<String> hostedZoneId;
 
+    /**
+     * @return The unique string (ID) used to identify a hosted zone.
+     * 
+     */
     public Output<String> getHostedZoneId() {
         return this.hostedZoneId;
     }
+    /**
+     * The Amazon resource name (ARN) for a customer managed key (CMK) in AWS Key Management Service (KMS). The KeyManagementServiceArn must be unique for each key signing key (KSK) in a single hosted zone.
+     * 
+     */
     @OutputExport(name="keyManagementServiceArn", type=String.class, parameters={})
     private Output<String> keyManagementServiceArn;
 
+    /**
+     * @return The Amazon resource name (ARN) for a customer managed key (CMK) in AWS Key Management Service (KMS). The KeyManagementServiceArn must be unique for each key signing key (KSK) in a single hosted zone.
+     * 
+     */
     public Output<String> getKeyManagementServiceArn() {
         return this.keyManagementServiceArn;
     }
+    /**
+     * An alphanumeric string used to identify a key signing key (KSK). Name must be unique for each key signing key in the same hosted zone.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return An alphanumeric string used to identify a key signing key (KSK). Name must be unique for each key signing key in the same hosted zone.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * A string specifying the initial status of the key signing key (KSK). You can set the value to ACTIVE or INACTIVE.
+     * 
+     */
     @OutputExport(name="status", type=KeySigningKeyStatus.class, parameters={})
     private Output<KeySigningKeyStatus> status;
 
+    /**
+     * @return A string specifying the initial status of the key signing key (KSK). You can set the value to ACTIVE or INACTIVE.
+     * 
+     */
     public Output<KeySigningKeyStatus> getStatus() {
         return this.status;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public KeySigningKey(String name, KeySigningKeyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:route53:KeySigningKey", name, args == null ? KeySigningKeyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -55,6 +97,14 @@ public class KeySigningKey extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static KeySigningKey get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new KeySigningKey(name, id, options);
     }

@@ -15,6 +15,10 @@ public final class FeatureMembershipArgs extends io.pulumi.resources.ResourceArg
 
     public static final FeatureMembershipArgs Empty = new FeatureMembershipArgs();
 
+    /**
+     * Config Management-specific spec. Structure is documented below.
+     * 
+     */
     @InputImport(name="configmanagement", required=true)
     private final Input<FeatureMembershipConfigmanagementArgs> configmanagement;
 
@@ -22,6 +26,10 @@ public final class FeatureMembershipArgs extends io.pulumi.resources.ResourceArg
         return this.configmanagement;
     }
 
+    /**
+     * The name of the feature
+     * 
+     */
     @InputImport(name="feature", required=true)
     private final Input<String> feature;
 
@@ -29,6 +37,10 @@ public final class FeatureMembershipArgs extends io.pulumi.resources.ResourceArg
         return this.feature;
     }
 
+    /**
+     * The location of the feature
+     * 
+     */
     @InputImport(name="location", required=true)
     private final Input<String> location;
 
@@ -36,6 +48,10 @@ public final class FeatureMembershipArgs extends io.pulumi.resources.ResourceArg
         return this.location;
     }
 
+    /**
+     * The name of the membership
+     * 
+     */
     @InputImport(name="membership", required=true)
     private final Input<String> membership;
 
@@ -43,6 +59,10 @@ public final class FeatureMembershipArgs extends io.pulumi.resources.ResourceArg
         return this.membership;
     }
 
+    /**
+     * The project of the feature
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * An event to be notified for.
+ * 
+ */
 public final class EventArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EventArgs Empty = new EventArgs();
 
+    /**
+     * The event type for which this notification is enabled (i.e. AutoShutdown, Cost)
+     * 
+     */
     @InputImport(name="eventName")
     private final @Nullable Input<Either<String,NotificationChannelEventType>> eventName;
 

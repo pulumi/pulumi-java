@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Virtual Network route contract used to pass routing information for a Virtual Network.
+ * 
+ */
 public final class VnetRouteResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VnetRouteResponse Empty = new VnetRouteResponse();
 
+    /**
+     * The ending address for this route. If the start address is specified in CIDR notation, this must be omitted.
+     * 
+     */
     @InputImport(name="endAddress")
     private final @Nullable String endAddress;
 
@@ -21,6 +29,10 @@ public final class VnetRouteResponse extends io.pulumi.resources.InvokeArgs {
         return this.endAddress == null ? Optional.empty() : Optional.ofNullable(this.endAddress);
     }
 
+    /**
+     * Resource Id.
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -28,6 +40,10 @@ public final class VnetRouteResponse extends io.pulumi.resources.InvokeArgs {
         return this.id;
     }
 
+    /**
+     * Kind of resource.
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable String kind;
 
@@ -35,6 +51,10 @@ public final class VnetRouteResponse extends io.pulumi.resources.InvokeArgs {
         return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
     }
 
+    /**
+     * Resource Name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -42,6 +62,15 @@ public final class VnetRouteResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    /**
+     * The type of route this is:
+     * DEFAULT - By default, every app has routes to the local address ranges specified by RFC1918
+     * INHERITED - Routes inherited from the real Virtual Network routes
+     * STATIC - Static route set on the app only
+     * 
+     * These values will be used for syncing an app's routes with those from a Virtual Network.
+     * 
+     */
     @InputImport(name="routeType")
     private final @Nullable String routeType;
 
@@ -49,6 +78,10 @@ public final class VnetRouteResponse extends io.pulumi.resources.InvokeArgs {
         return this.routeType == null ? Optional.empty() : Optional.ofNullable(this.routeType);
     }
 
+    /**
+     * The starting address for this route. This may also include a CIDR notation, in which case the end address must not be specified.
+     * 
+     */
     @InputImport(name="startAddress")
     private final @Nullable String startAddress;
 
@@ -56,6 +89,10 @@ public final class VnetRouteResponse extends io.pulumi.resources.InvokeArgs {
         return this.startAddress == null ? Optional.empty() : Optional.ofNullable(this.startAddress);
     }
 
+    /**
+     * Resource type.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

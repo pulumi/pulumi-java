@@ -14,6 +14,10 @@ public final class URLMapHeaderActionResponseHeadersToAddGetArgs extends io.pulu
 
     public static final URLMapHeaderActionResponseHeadersToAddGetArgs Empty = new URLMapHeaderActionResponseHeadersToAddGetArgs();
 
+    /**
+     * The name of the header to add.
+     * 
+     */
     @InputImport(name="headerName", required=true)
     private final Input<String> headerName;
 
@@ -21,6 +25,10 @@ public final class URLMapHeaderActionResponseHeadersToAddGetArgs extends io.pulu
         return this.headerName;
     }
 
+    /**
+     * The value of the header to add.
+     * 
+     */
     @InputImport(name="headerValue", required=true)
     private final Input<String> headerValue;
 
@@ -28,6 +36,11 @@ public final class URLMapHeaderActionResponseHeadersToAddGetArgs extends io.pulu
         return this.headerValue;
     }
 
+    /**
+     * If false, headerValue is appended to any values that already exist for the header.
+     * If true, headerValue is set for the header, discarding any values that were set for that header.
+     * 
+     */
     @InputImport(name="replace", required=true)
     private final Input<Boolean> replace;
 

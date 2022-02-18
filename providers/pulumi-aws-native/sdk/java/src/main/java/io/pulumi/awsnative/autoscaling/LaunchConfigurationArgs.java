@@ -18,6 +18,10 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
 
     public static final LaunchConfigurationArgs Empty = new LaunchConfigurationArgs();
 
+    /**
+     * For Auto Scaling groups that are running in a virtual private cloud (VPC), specifies whether to assign a public IP address to the group's instances.
+     * 
+     */
     @InputImport(name="associatePublicIpAddress")
     private final @Nullable Input<Boolean> associatePublicIpAddress;
 
@@ -25,6 +29,10 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
         return this.associatePublicIpAddress == null ? Input.empty() : this.associatePublicIpAddress;
     }
 
+    /**
+     * Specifies how block devices are exposed to the instance. You can specify virtual devices and EBS volumes.
+     * 
+     */
     @InputImport(name="blockDeviceMappings")
     private final @Nullable Input<List<LaunchConfigurationBlockDeviceMappingArgs>> blockDeviceMappings;
 
@@ -32,6 +40,10 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
         return this.blockDeviceMappings == null ? Input.empty() : this.blockDeviceMappings;
     }
 
+    /**
+     * The ID of a ClassicLink-enabled VPC to link your EC2-Classic instances to.
+     * 
+     */
     @InputImport(name="classicLinkVPCId")
     private final @Nullable Input<String> classicLinkVPCId;
 
@@ -39,6 +51,10 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
         return this.classicLinkVPCId == null ? Input.empty() : this.classicLinkVPCId;
     }
 
+    /**
+     * The IDs of one or more security groups for the VPC that you specified in the ClassicLinkVPCId property.
+     * 
+     */
     @InputImport(name="classicLinkVPCSecurityGroups")
     private final @Nullable Input<List<String>> classicLinkVPCSecurityGroups;
 
@@ -46,6 +62,10 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
         return this.classicLinkVPCSecurityGroups == null ? Input.empty() : this.classicLinkVPCSecurityGroups;
     }
 
+    /**
+     * Specifies whether the launch configuration is optimized for EBS I/O (true) or not (false).
+     * 
+     */
     @InputImport(name="ebsOptimized")
     private final @Nullable Input<Boolean> ebsOptimized;
 
@@ -53,6 +73,10 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
         return this.ebsOptimized == null ? Input.empty() : this.ebsOptimized;
     }
 
+    /**
+     * Provides the name or the Amazon Resource Name (ARN) of the instance profile associated with the IAM role for the instance. The instance profile contains the IAM role.
+     * 
+     */
     @InputImport(name="iamInstanceProfile")
     private final @Nullable Input<String> iamInstanceProfile;
 
@@ -60,6 +84,10 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
         return this.iamInstanceProfile == null ? Input.empty() : this.iamInstanceProfile;
     }
 
+    /**
+     * Provides the unique ID of the Amazon Machine Image (AMI) that was assigned during registration.
+     * 
+     */
     @InputImport(name="imageId", required=true)
     private final Input<String> imageId;
 
@@ -67,6 +95,10 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
         return this.imageId;
     }
 
+    /**
+     * The ID of the Amazon EC2 instance you want to use to create the launch configuration.
+     * 
+     */
     @InputImport(name="instanceId")
     private final @Nullable Input<String> instanceId;
 
@@ -74,6 +106,10 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
         return this.instanceId == null ? Input.empty() : this.instanceId;
     }
 
+    /**
+     * Controls whether instances in this group are launched with detailed (true) or basic (false) monitoring.
+     * 
+     */
     @InputImport(name="instanceMonitoring")
     private final @Nullable Input<Boolean> instanceMonitoring;
 
@@ -81,6 +117,10 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
         return this.instanceMonitoring == null ? Input.empty() : this.instanceMonitoring;
     }
 
+    /**
+     * Specifies the instance type of the EC2 instance.
+     * 
+     */
     @InputImport(name="instanceType", required=true)
     private final Input<String> instanceType;
 
@@ -88,6 +128,10 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
         return this.instanceType;
     }
 
+    /**
+     * Provides the ID of the kernel associated with the EC2 AMI.
+     * 
+     */
     @InputImport(name="kernelId")
     private final @Nullable Input<String> kernelId;
 
@@ -95,6 +139,10 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
         return this.kernelId == null ? Input.empty() : this.kernelId;
     }
 
+    /**
+     * Provides the name of the EC2 key pair.
+     * 
+     */
     @InputImport(name="keyName")
     private final @Nullable Input<String> keyName;
 
@@ -102,6 +150,10 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
         return this.keyName == null ? Input.empty() : this.keyName;
     }
 
+    /**
+     * The name of the launch configuration. This name must be unique per Region per account.
+     * 
+     */
     @InputImport(name="launchConfigurationName")
     private final @Nullable Input<String> launchConfigurationName;
 
@@ -109,6 +161,10 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
         return this.launchConfigurationName == null ? Input.empty() : this.launchConfigurationName;
     }
 
+    /**
+     * The metadata options for the instances.
+     * 
+     */
     @InputImport(name="metadataOptions")
     private final @Nullable Input<LaunchConfigurationMetadataOptionsArgs> metadataOptions;
 
@@ -116,6 +172,10 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
         return this.metadataOptions == null ? Input.empty() : this.metadataOptions;
     }
 
+    /**
+     * The tenancy of the instance, either default or dedicated.
+     * 
+     */
     @InputImport(name="placementTenancy")
     private final @Nullable Input<String> placementTenancy;
 
@@ -123,6 +183,10 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
         return this.placementTenancy == null ? Input.empty() : this.placementTenancy;
     }
 
+    /**
+     * The ID of the RAM disk to select.
+     * 
+     */
     @InputImport(name="ramDiskId")
     private final @Nullable Input<String> ramDiskId;
 
@@ -130,6 +194,10 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
         return this.ramDiskId == null ? Input.empty() : this.ramDiskId;
     }
 
+    /**
+     * A list that contains the security groups to assign to the instances in the Auto Scaling group.
+     * 
+     */
     @InputImport(name="securityGroups")
     private final @Nullable Input<List<String>> securityGroups;
 
@@ -137,6 +205,10 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
         return this.securityGroups == null ? Input.empty() : this.securityGroups;
     }
 
+    /**
+     * The maximum hourly price you are willing to pay for any Spot Instances launched to fulfill the request.
+     * 
+     */
     @InputImport(name="spotPrice")
     private final @Nullable Input<String> spotPrice;
 
@@ -144,6 +216,10 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
         return this.spotPrice == null ? Input.empty() : this.spotPrice;
     }
 
+    /**
+     * The Base64-encoded user data to make available to the launched EC2 instances.
+     * 
+     */
     @InputImport(name="userData")
     private final @Nullable Input<String> userData;
 

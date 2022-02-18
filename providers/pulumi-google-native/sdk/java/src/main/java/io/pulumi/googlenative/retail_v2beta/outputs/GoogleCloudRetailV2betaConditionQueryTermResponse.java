@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudRetailV2betaConditionQueryTermResponse {
+    /**
+     * Whether this is supposed to be a full or partial match.
+     * 
+     */
     private final Boolean fullMatch;
+    /**
+     * The value of the term to match on. Value cannot be empty. Value can have at most 3 terms if specified as a partial match. Each space separated string is considered as one term. Example) "a b c" is 3 terms and allowed, " a b c d" is 4 terms and not allowed for partial match.
+     * 
+     */
     private final String value;
 
     @OutputCustomType.Constructor({"fullMatch","value"})
@@ -21,9 +29,17 @@ public final class GoogleCloudRetailV2betaConditionQueryTermResponse {
         this.value = Objects.requireNonNull(value);
     }
 
+    /**
+     * Whether this is supposed to be a full or partial match.
+     * 
+     */
     public Boolean getFullMatch() {
         return this.fullMatch;
     }
+    /**
+     * The value of the term to match on. Value cannot be empty. Value can have at most 3 terms if specified as a partial match. Each space separated string is considered as one term. Example) "a b c" is 3 terms and allowed, " a b c d" is 4 terms and not allowed for partial match.
+     * 
+     */
     public String getValue() {
         return this.value;
     }

@@ -13,8 +13,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetRegexPatternSetResult {
+    /**
+     * ARN of the WAF entity.
+     * 
+     */
     private final @Nullable String arn;
+    /**
+     * Description of the entity.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * Id of the RegexPatternSet
+     * 
+     */
     private final @Nullable String id;
     private final @Nullable List<String> regularExpressionList;
     private final @Nullable List<RegexPatternSetTag> tags;
@@ -33,12 +45,24 @@ public final class GetRegexPatternSetResult {
         this.tags = tags;
     }
 
+    /**
+     * ARN of the WAF entity.
+     * 
+     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
+    /**
+     * Description of the entity.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * Id of the RegexPatternSet
+     * 
+     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }

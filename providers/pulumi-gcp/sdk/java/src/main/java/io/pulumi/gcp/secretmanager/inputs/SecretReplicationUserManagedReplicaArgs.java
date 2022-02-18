@@ -15,6 +15,11 @@ public final class SecretReplicationUserManagedReplicaArgs extends io.pulumi.res
 
     public static final SecretReplicationUserManagedReplicaArgs Empty = new SecretReplicationUserManagedReplicaArgs();
 
+    /**
+     * Customer Managed Encryption for the secret.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="customerManagedEncryption")
     private final @Nullable Input<SecretReplicationUserManagedReplicaCustomerManagedEncryptionArgs> customerManagedEncryption;
 
@@ -22,6 +27,10 @@ public final class SecretReplicationUserManagedReplicaArgs extends io.pulumi.res
         return this.customerManagedEncryption == null ? Input.empty() : this.customerManagedEncryption;
     }
 
+    /**
+     * The canonical IDs of the location to replicate data. For example: "us-east1".
+     * 
+     */
     @InputImport(name="location", required=true)
     private final Input<String> location;
 

@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Key Vault Key Url and vault id of KeK, KeK is optional and when provided is used to unwrap the encryptionKey
+ * 
+ */
 public final class KeyVaultAndKeyReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final KeyVaultAndKeyReferenceResponse Empty = new KeyVaultAndKeyReferenceResponse();
 
+    /**
+     * Url pointing to a key or secret in KeyVault
+     * 
+     */
     @InputImport(name="keyUrl", required=true)
     private final String keyUrl;
 
@@ -20,6 +28,10 @@ public final class KeyVaultAndKeyReferenceResponse extends io.pulumi.resources.I
         return this.keyUrl;
     }
 
+    /**
+     * Resource id of the KeyVault containing the key or secret
+     * 
+     */
     @InputImport(name="sourceVault", required=true)
     private final SourceVaultResponse sourceVault;
 

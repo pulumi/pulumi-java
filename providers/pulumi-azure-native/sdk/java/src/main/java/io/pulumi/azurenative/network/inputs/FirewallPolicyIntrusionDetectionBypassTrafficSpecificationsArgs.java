@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Intrusion detection bypass traffic specification.
+ * 
+ */
 public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsArgs Empty = new FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsArgs();
 
+    /**
+     * Description of the bypass traffic rule.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -24,6 +32,10 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsAr
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * List of destination IP addresses or ranges for this rule.
+     * 
+     */
     @InputImport(name="destinationAddresses")
     private final @Nullable Input<List<String>> destinationAddresses;
 
@@ -31,6 +43,10 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsAr
         return this.destinationAddresses == null ? Input.empty() : this.destinationAddresses;
     }
 
+    /**
+     * List of destination IpGroups for this rule.
+     * 
+     */
     @InputImport(name="destinationIpGroups")
     private final @Nullable Input<List<String>> destinationIpGroups;
 
@@ -38,6 +54,10 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsAr
         return this.destinationIpGroups == null ? Input.empty() : this.destinationIpGroups;
     }
 
+    /**
+     * List of destination ports or ranges.
+     * 
+     */
     @InputImport(name="destinationPorts")
     private final @Nullable Input<List<String>> destinationPorts;
 
@@ -45,6 +65,10 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsAr
         return this.destinationPorts == null ? Input.empty() : this.destinationPorts;
     }
 
+    /**
+     * Name of the bypass traffic rule.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -52,6 +76,10 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsAr
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The rule bypass protocol.
+     * 
+     */
     @InputImport(name="protocol")
     private final @Nullable Input<Either<String,FirewallPolicyIntrusionDetectionProtocol>> protocol;
 
@@ -59,6 +87,10 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsAr
         return this.protocol == null ? Input.empty() : this.protocol;
     }
 
+    /**
+     * List of source IP addresses or ranges for this rule.
+     * 
+     */
     @InputImport(name="sourceAddresses")
     private final @Nullable Input<List<String>> sourceAddresses;
 
@@ -66,6 +98,10 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsAr
         return this.sourceAddresses == null ? Input.empty() : this.sourceAddresses;
     }
 
+    /**
+     * List of source IpGroups for this rule.
+     * 
+     */
     @InputImport(name="sourceIpGroups")
     private final @Nullable Input<List<String>> sourceIpGroups;
 

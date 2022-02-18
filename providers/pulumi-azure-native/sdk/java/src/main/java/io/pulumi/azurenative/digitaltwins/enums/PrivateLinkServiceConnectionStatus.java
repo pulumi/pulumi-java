@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The status of a private endpoint connection.
+     * 
+     */
     @EnumType
     public enum PrivateLinkServiceConnectionStatus {
         Pending("Pending"),

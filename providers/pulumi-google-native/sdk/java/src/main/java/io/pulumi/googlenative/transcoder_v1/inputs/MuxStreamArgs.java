@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Multiplexing settings for output stream.
+ * 
+ */
 public final class MuxStreamArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MuxStreamArgs Empty = new MuxStreamArgs();
 
+    /**
+     * The container format. The default is `mp4` Supported container formats: - `ts` - `fmp4`- the corresponding file extension is `.m4s` - `mp4` - `vtt`
+     * 
+     */
     @InputImport(name="container")
     private final @Nullable Input<String> container;
 
@@ -23,6 +31,10 @@ public final class MuxStreamArgs extends io.pulumi.resources.ResourceArgs {
         return this.container == null ? Input.empty() : this.container;
     }
 
+    /**
+     * List of `ElementaryStream.key`s multiplexed in this stream.
+     * 
+     */
     @InputImport(name="elementaryStreams")
     private final @Nullable Input<List<String>> elementaryStreams;
 
@@ -30,6 +42,10 @@ public final class MuxStreamArgs extends io.pulumi.resources.ResourceArgs {
         return this.elementaryStreams == null ? Input.empty() : this.elementaryStreams;
     }
 
+    /**
+     * The name of the generated file. The default is `MuxStream.key` with the extension suffix corresponding to the `MuxStream.container`. Individual segments also have an incremental 10-digit zero-padded suffix starting from 0 before the extension, such as `mux_stream0000000123.ts`.
+     * 
+     */
     @InputImport(name="fileName")
     private final @Nullable Input<String> fileName;
 
@@ -37,6 +53,10 @@ public final class MuxStreamArgs extends io.pulumi.resources.ResourceArgs {
         return this.fileName == null ? Input.empty() : this.fileName;
     }
 
+    /**
+     * A unique key for this multiplexed stream. HLS media manifests will be named `MuxStream.key` with the `.m3u8` extension suffix.
+     * 
+     */
     @InputImport(name="key")
     private final @Nullable Input<String> key;
 
@@ -44,6 +64,10 @@ public final class MuxStreamArgs extends io.pulumi.resources.ResourceArgs {
         return this.key == null ? Input.empty() : this.key;
     }
 
+    /**
+     * Segment settings for `ts`, `fmp4` and `vtt`.
+     * 
+     */
     @InputImport(name="segmentSettings")
     private final @Nullable Input<SegmentSettingsArgs> segmentSettings;
 

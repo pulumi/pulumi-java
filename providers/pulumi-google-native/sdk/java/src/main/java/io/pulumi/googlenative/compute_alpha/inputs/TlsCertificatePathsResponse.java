@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * [Deprecated] The paths to the mounted TLS Certificates and private key. The paths to the mounted TLS Certificates and private key.
+ * 
+ */
 public final class TlsCertificatePathsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TlsCertificatePathsResponse Empty = new TlsCertificatePathsResponse();
 
+    /**
+     * The path to the file holding the client or server TLS certificate to use.
+     * 
+     */
     @InputImport(name="certificatePath", required=true)
     private final String certificatePath;
 
@@ -19,6 +27,10 @@ public final class TlsCertificatePathsResponse extends io.pulumi.resources.Invok
         return this.certificatePath;
     }
 
+    /**
+     * The path to the file holding the client or server private key.
+     * 
+     */
     @InputImport(name="privateKeyPath", required=true)
     private final String privateKeyPath;
 

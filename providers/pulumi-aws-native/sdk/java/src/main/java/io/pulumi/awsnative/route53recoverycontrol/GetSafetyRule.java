@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSafetyRule {
+/**
+ * Resource schema for AWS Route53 Recovery Control basic constructs and validation rules.
+ * 
+ */
     public static CompletableFuture<GetSafetyRuleResult> invokeAsync(GetSafetyRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:route53recoverycontrol:getSafetyRule", TypeShape.of(GetSafetyRuleResult.class), args == null ? GetSafetyRuleArgs.Empty : args, Utilities.withVersion(options));
     }

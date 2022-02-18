@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TimelineAggregationResponse {
+    /**
+     * the total items found for a kind
+     * 
+     */
     private final Integer count;
+    /**
+     * the query kind
+     * 
+     */
     private final String kind;
 
     @OutputCustomType.Constructor({"count","kind"})
@@ -21,9 +29,17 @@ public final class TimelineAggregationResponse {
         this.kind = Objects.requireNonNull(kind);
     }
 
+    /**
+     * the total items found for a kind
+     * 
+     */
     public Integer getCount() {
         return this.count;
     }
+    /**
+     * the query kind
+     * 
+     */
     public String getKind() {
         return this.kind;
     }

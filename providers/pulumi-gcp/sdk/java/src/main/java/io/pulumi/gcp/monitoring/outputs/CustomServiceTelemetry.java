@@ -11,6 +11,12 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CustomServiceTelemetry {
+    /**
+     * The full name of the resource that defines this service.
+     * Formatted as described in
+     * https://cloud.google.com/apis/design/resource_names.
+     * 
+     */
     private final @Nullable String resourceName;
 
     @OutputCustomType.Constructor({"resourceName"})
@@ -18,6 +24,12 @@ public final class CustomServiceTelemetry {
         this.resourceName = resourceName;
     }
 
+    /**
+     * The full name of the resource that defines this service.
+     * Formatted as described in
+     * https://cloud.google.com/apis/design/resource_names.
+     * 
+     */
     public Optional<String> getPropResourceName() {
         return Optional.ofNullable(this.resourceName);
     }

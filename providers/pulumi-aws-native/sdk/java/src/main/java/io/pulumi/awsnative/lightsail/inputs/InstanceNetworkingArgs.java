@@ -12,6 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Networking of the Instance.
+ * 
+ */
 public final class InstanceNetworkingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InstanceNetworkingArgs Empty = new InstanceNetworkingArgs();
@@ -23,6 +27,10 @@ public final class InstanceNetworkingArgs extends io.pulumi.resources.ResourceAr
         return this.monthlyTransfer == null ? Input.empty() : this.monthlyTransfer;
     }
 
+    /**
+     * Ports to the Instance.
+     * 
+     */
     @InputImport(name="ports", required=true)
     private final Input<List<InstancePortArgs>> ports;
 

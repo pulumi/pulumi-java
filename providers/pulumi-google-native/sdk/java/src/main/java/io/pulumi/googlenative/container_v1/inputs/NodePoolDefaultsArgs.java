@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Subset of Nodepool message that has defaults.
+ * 
+ */
 public final class NodePoolDefaultsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NodePoolDefaultsArgs Empty = new NodePoolDefaultsArgs();
 
+    /**
+     * Subset of NodeConfig message that has defaults.
+     * 
+     */
     @InputImport(name="nodeConfigDefaults")
     private final @Nullable Input<NodeConfigDefaultsArgs> nodeConfigDefaults;
 

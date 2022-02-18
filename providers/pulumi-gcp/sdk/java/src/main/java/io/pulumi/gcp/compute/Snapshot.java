@@ -18,105 +18,311 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Represents a Persistent Disk Snapshot resource.
+ * 
+ * Use snapshots to back up data from your persistent disks. Snapshots are
+ * different from public images and custom images, which are used primarily
+ * to create instances or configure instance templates. Snapshots are useful
+ * for periodic backup of the data on your persistent disks. You can create
+ * snapshots from persistent disks even while they are attached to running
+ * instances.
+ * 
+ * Snapshots are incremental, so you can create regular snapshots on a
+ * persistent disk faster and at a much lower cost than if you regularly
+ * created a full image of the disk.
+ * 
+ * To get more information about Snapshot, see:
+ * 
+ * * [API documentation](https://cloud.google.com/compute/docs/reference/rest/v1/snapshots)
+ * * How-to Guides
+ *     * [Official Documentation](https://cloud.google.com/compute/docs/disks/create-snapshots)
+ * 
+ * > **Warning:** All arguments including `snapshot_encryption_key.raw_key` and `source_disk_encryption_key.raw_key` will be stored in the raw
+ * state as plain-text. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * Snapshot can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/snapshot:Snapshot default projects/{{project}}/global/snapshots/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/snapshot:Snapshot default {{project}}/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/snapshot:Snapshot default {{name}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:compute/snapshot:Snapshot")
 public class Snapshot extends io.pulumi.resources.CustomResource {
+    /**
+     * Creation timestamp in RFC3339 text format.
+     * 
+     */
     @OutputExport(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
+    /**
+     * @return Creation timestamp in RFC3339 text format.
+     * 
+     */
     public Output<String> getCreationTimestamp() {
         return this.creationTimestamp;
     }
+    /**
+     * An optional description of this resource.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return An optional description of this resource.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * Size of the snapshot, specified in GB.
+     * 
+     */
     @OutputExport(name="diskSizeGb", type=Integer.class, parameters={})
     private Output<Integer> diskSizeGb;
 
+    /**
+     * @return Size of the snapshot, specified in GB.
+     * 
+     */
     public Output<Integer> getDiskSizeGb() {
         return this.diskSizeGb;
     }
+    /**
+     * The fingerprint used for optimistic locking of this resource. Used internally during updates.
+     * 
+     */
     @OutputExport(name="labelFingerprint", type=String.class, parameters={})
     private Output<String> labelFingerprint;
 
+    /**
+     * @return The fingerprint used for optimistic locking of this resource. Used internally during updates.
+     * 
+     */
     public Output<String> getLabelFingerprint() {
         return this.labelFingerprint;
     }
+    /**
+     * Labels to apply to this Snapshot.
+     * 
+     */
     @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
+    /**
+     * @return Labels to apply to this Snapshot.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getLabels() {
         return this.labels;
     }
+    /**
+     * A list of public visible licenses that apply to this snapshot. This can be because the original image had licenses
+     * attached (such as a Windows image). snapshotEncryptionKey nested object Encrypts the snapshot using a customer-supplied
+     * encryption key.
+     * 
+     */
     @OutputExport(name="licenses", type=List.class, parameters={String.class})
     private Output<List<String>> licenses;
 
+    /**
+     * @return A list of public visible licenses that apply to this snapshot. This can be because the original image had licenses
+     * attached (such as a Windows image). snapshotEncryptionKey nested object Encrypts the snapshot using a customer-supplied
+     * encryption key.
+     * 
+     */
     public Output<List<String>> getLicenses() {
         return this.licenses;
     }
+    /**
+     * Name of the resource; provided by the client when the resource is
+     * created. The name must be 1-63 characters long, and comply with
+     * RFC1035. Specifically, the name must be 1-63 characters long and match
+     * the regular expression `a-z?` which means the
+     * first character must be a lowercase letter, and all following
+     * characters must be a dash, lowercase letter, or digit, except the last
+     * character, which cannot be a dash.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Name of the resource; provided by the client when the resource is
+     * created. The name must be 1-63 characters long, and comply with
+     * RFC1035. Specifically, the name must be 1-63 characters long and match
+     * the regular expression `a-z?` which means the
+     * first character must be a lowercase letter, and all following
+     * characters must be a dash, lowercase letter, or digit, except the last
+     * character, which cannot be a dash.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * The URI of the created resource.
+     * 
+     */
     @OutputExport(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
+    /**
+     * @return The URI of the created resource.
+     * 
+     */
     public Output<String> getSelfLink() {
         return this.selfLink;
     }
+    /**
+     * The customer-supplied encryption key of the snapshot. Required if the
+     * source snapshot is protected by a customer-supplied encryption key.
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="snapshotEncryptionKey", type=SnapshotSnapshotEncryptionKey.class, parameters={})
     private Output</* @Nullable */ SnapshotSnapshotEncryptionKey> snapshotEncryptionKey;
 
+    /**
+     * @return The customer-supplied encryption key of the snapshot. Required if the
+     * source snapshot is protected by a customer-supplied encryption key.
+     * Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ SnapshotSnapshotEncryptionKey> getSnapshotEncryptionKey() {
         return this.snapshotEncryptionKey;
     }
+    /**
+     * The unique identifier for the resource.
+     * 
+     */
     @OutputExport(name="snapshotId", type=Integer.class, parameters={})
     private Output<Integer> snapshotId;
 
+    /**
+     * @return The unique identifier for the resource.
+     * 
+     */
     public Output<Integer> getSnapshotId() {
         return this.snapshotId;
     }
+    /**
+     * A reference to the disk used to create this snapshot.
+     * 
+     */
     @OutputExport(name="sourceDisk", type=String.class, parameters={})
     private Output<String> sourceDisk;
 
+    /**
+     * @return A reference to the disk used to create this snapshot.
+     * 
+     */
     public Output<String> getSourceDisk() {
         return this.sourceDisk;
     }
+    /**
+     * The customer-supplied encryption key of the source snapshot. Required
+     * if the source snapshot is protected by a customer-supplied encryption
+     * key.
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="sourceDiskEncryptionKey", type=SnapshotSourceDiskEncryptionKey.class, parameters={})
     private Output</* @Nullable */ SnapshotSourceDiskEncryptionKey> sourceDiskEncryptionKey;
 
+    /**
+     * @return The customer-supplied encryption key of the source snapshot. Required
+     * if the source snapshot is protected by a customer-supplied encryption
+     * key.
+     * Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ SnapshotSourceDiskEncryptionKey> getSourceDiskEncryptionKey() {
         return this.sourceDiskEncryptionKey;
     }
+    /**
+     * A size of the storage used by the snapshot. As snapshots share storage, this number is expected to change with snapshot
+     * creation/deletion.
+     * 
+     */
     @OutputExport(name="storageBytes", type=Integer.class, parameters={})
     private Output<Integer> storageBytes;
 
+    /**
+     * @return A size of the storage used by the snapshot. As snapshots share storage, this number is expected to change with snapshot
+     * creation/deletion.
+     * 
+     */
     public Output<Integer> getStorageBytes() {
         return this.storageBytes;
     }
+    /**
+     * Cloud Storage bucket storage location of the snapshot (regional or multi-regional).
+     * 
+     */
     @OutputExport(name="storageLocations", type=List.class, parameters={String.class})
     private Output<List<String>> storageLocations;
 
+    /**
+     * @return Cloud Storage bucket storage location of the snapshot (regional or multi-regional).
+     * 
+     */
     public Output<List<String>> getStorageLocations() {
         return this.storageLocations;
     }
+    /**
+     * A reference to the zone where the disk is hosted.
+     * 
+     */
     @OutputExport(name="zone", type=String.class, parameters={})
     private Output<String> zone;
 
+    /**
+     * @return A reference to the zone where the disk is hosted.
+     * 
+     */
     public Output<String> getZone() {
         return this.zone;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Snapshot(String name, SnapshotArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:compute/snapshot:Snapshot", name, args == null ? SnapshotArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -132,6 +338,15 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Snapshot get(String name, Input<String> id, @Nullable SnapshotState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Snapshot(name, id, state, options);
     }

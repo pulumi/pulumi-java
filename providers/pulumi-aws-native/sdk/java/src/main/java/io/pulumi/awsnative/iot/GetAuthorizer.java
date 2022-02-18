@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAuthorizer {
+/**
+ * Creates an authorizer.
+ * 
+ */
     public static CompletableFuture<GetAuthorizerResult> invokeAsync(GetAuthorizerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iot:getAuthorizer", TypeShape.of(GetAuthorizerResult.class), args == null ? GetAuthorizerArgs.Empty : args, Utilities.withVersion(options));
     }

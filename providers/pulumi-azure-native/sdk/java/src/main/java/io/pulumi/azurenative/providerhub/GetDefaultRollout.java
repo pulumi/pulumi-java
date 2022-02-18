@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDefaultRollout {
+/**
+ * Default rollout definition.
+ * API Version: 2020-11-20.
+ * 
+ *
+ * Default rollout definition.
+ * 
+ */
     public static CompletableFuture<GetDefaultRolloutResult> invokeAsync(GetDefaultRolloutArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:providerhub:getDefaultRollout", TypeShape.of(GetDefaultRolloutResult.class), args == null ? GetDefaultRolloutArgs.Empty : args, Utilities.withVersion(options));
     }

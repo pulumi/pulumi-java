@@ -11,8 +11,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class UserArtifactManageResponse {
+    /**
+     * Required. The path and arguments to install the gallery application. This is limited to 4096 characters.
+     * 
+     */
     private final String install;
+    /**
+     * Required. The path and arguments to remove the gallery application. This is limited to 4096 characters.
+     * 
+     */
     private final String remove;
+    /**
+     * Optional. The path and arguments to update the gallery application. If not present, then update operation will invoke remove command on the previous version and install command on the current version of the gallery application. This is limited to 4096 characters.
+     * 
+     */
     private final @Nullable String update;
 
     @OutputCustomType.Constructor({"install","remove","update"})
@@ -25,12 +37,24 @@ public final class UserArtifactManageResponse {
         this.update = update;
     }
 
+    /**
+     * Required. The path and arguments to install the gallery application. This is limited to 4096 characters.
+     * 
+     */
     public String getInstall() {
         return this.install;
     }
+    /**
+     * Required. The path and arguments to remove the gallery application. This is limited to 4096 characters.
+     * 
+     */
     public String getRemove() {
         return this.remove;
     }
+    /**
+     * Optional. The path and arguments to update the gallery application. If not present, then update operation will invoke remove command on the previous version and install command on the current version of the gallery application. This is limited to 4096 characters.
+     * 
+     */
     public Optional<String> getUpdate() {
         return Optional.ofNullable(this.update);
     }

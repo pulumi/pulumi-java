@@ -9,6 +9,10 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * Prefix-level metrics configurations.
+ * 
+ */
 public final class StorageLensPrefixLevelArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StorageLensPrefixLevelArgs Empty = new StorageLensPrefixLevelArgs();

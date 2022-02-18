@@ -18,6 +18,10 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Resource schema for AWS Route53 Recovery Control basic constructs and validation rules.
+ * 
+ */
 @ResourceType(type="aws-native:route53recoverycontrol:SafetyRule")
 public class SafetyRule extends io.pulumi.resources.CustomResource {
     @OutputExport(name="assertionRule", type=SafetyRuleAssertionRule.class, parameters={})
@@ -26,9 +30,17 @@ public class SafetyRule extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ SafetyRuleAssertionRule> getAssertionRule() {
         return this.assertionRule;
     }
+    /**
+     * The Amazon Resource Name (ARN) of the control panel.
+     * 
+     */
     @OutputExport(name="controlPanelArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> controlPanelArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the control panel.
+     * 
+     */
     public Output</* @Nullable */ String> getControlPanelArn() {
         return this.controlPanelArn;
     }
@@ -50,25 +62,55 @@ public class SafetyRule extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ SafetyRuleRuleConfig> getRuleConfig() {
         return this.ruleConfig;
     }
+    /**
+     * The Amazon Resource Name (ARN) of the safety rule.
+     * 
+     */
     @OutputExport(name="safetyRuleArn", type=String.class, parameters={})
     private Output<String> safetyRuleArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the safety rule.
+     * 
+     */
     public Output<String> getSafetyRuleArn() {
         return this.safetyRuleArn;
     }
+    /**
+     * The deployment status of the routing control. Status can be one of the following: PENDING, DEPLOYED, PENDING_DELETION.
+     * 
+     */
     @OutputExport(name="status", type=SafetyRuleStatus.class, parameters={})
     private Output<SafetyRuleStatus> status;
 
+    /**
+     * @return The deployment status of the routing control. Status can be one of the following: PENDING, DEPLOYED, PENDING_DELETION.
+     * 
+     */
     public Output<SafetyRuleStatus> getStatus() {
         return this.status;
     }
+    /**
+     * A collection of tags associated with a resource
+     * 
+     */
     @OutputExport(name="tags", type=List.class, parameters={SafetyRuleTag.class})
     private Output</* @Nullable */ List<SafetyRuleTag>> tags;
 
+    /**
+     * @return A collection of tags associated with a resource
+     * 
+     */
     public Output</* @Nullable */ List<SafetyRuleTag>> getTags() {
         return this.tags;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public SafetyRule(String name, @Nullable SafetyRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:route53recoverycontrol:SafetyRule", name, args == null ? SafetyRuleArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -84,6 +126,14 @@ public class SafetyRule extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static SafetyRule get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SafetyRule(name, id, options);
     }

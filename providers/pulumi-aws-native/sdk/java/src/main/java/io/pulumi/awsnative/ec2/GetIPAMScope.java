@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIPAMScope {
+/**
+ * Resource Schema of AWS::EC2::IPAMScope Type
+ * 
+ */
     public static CompletableFuture<GetIPAMScopeResult> invokeAsync(GetIPAMScopeArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ec2:getIPAMScope", TypeShape.of(GetIPAMScopeResult.class), args == null ? GetIPAMScopeArgs.Empty : args, Utilities.withVersion(options));
     }

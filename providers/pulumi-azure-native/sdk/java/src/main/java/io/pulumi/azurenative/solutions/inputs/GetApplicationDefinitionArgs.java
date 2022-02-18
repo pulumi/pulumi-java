@@ -12,6 +12,10 @@ public final class GetApplicationDefinitionArgs extends io.pulumi.resources.Invo
 
     public static final GetApplicationDefinitionArgs Empty = new GetApplicationDefinitionArgs();
 
+    /**
+     * The name of the managed application definition.
+     * 
+     */
     @InputImport(name="applicationDefinitionName", required=true)
     private final String applicationDefinitionName;
 
@@ -19,6 +23,10 @@ public final class GetApplicationDefinitionArgs extends io.pulumi.resources.Invo
         return this.applicationDefinitionName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

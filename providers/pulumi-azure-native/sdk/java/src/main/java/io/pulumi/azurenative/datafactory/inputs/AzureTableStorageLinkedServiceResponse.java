@@ -16,10 +16,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The azure table storage linked service.
+ * 
+ */
 public final class AzureTableStorageLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureTableStorageLinkedServiceResponse Empty = new AzureTableStorageLinkedServiceResponse();
 
+    /**
+     * The Azure key vault secret reference of accountKey in connection string.
+     * 
+     */
     @InputImport(name="accountKey")
     private final @Nullable AzureKeyVaultSecretReferenceResponse accountKey;
 
@@ -27,6 +35,10 @@ public final class AzureTableStorageLinkedServiceResponse extends io.pulumi.reso
         return this.accountKey == null ? Optional.empty() : Optional.ofNullable(this.accountKey);
     }
 
+    /**
+     * List of tags that can be used for describing the linked service.
+     * 
+     */
     @InputImport(name="annotations")
     private final @Nullable List<Object> annotations;
 
@@ -34,6 +46,10 @@ public final class AzureTableStorageLinkedServiceResponse extends io.pulumi.reso
         return this.annotations == null ? List.of() : this.annotations;
     }
 
+    /**
+     * The integration runtime reference.
+     * 
+     */
     @InputImport(name="connectVia")
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
@@ -41,6 +57,10 @@ public final class AzureTableStorageLinkedServiceResponse extends io.pulumi.reso
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
+    /**
+     * The connection string. It is mutually exclusive with sasUri property. Type: string, SecureString or AzureKeyVaultSecretReference.
+     * 
+     */
     @InputImport(name="connectionString")
     private final @Nullable Object connectionString;
 
@@ -48,6 +68,10 @@ public final class AzureTableStorageLinkedServiceResponse extends io.pulumi.reso
         return this.connectionString == null ? Optional.empty() : Optional.ofNullable(this.connectionString);
     }
 
+    /**
+     * Linked service description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -55,6 +79,10 @@ public final class AzureTableStorageLinkedServiceResponse extends io.pulumi.reso
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="encryptedCredential")
     private final @Nullable String encryptedCredential;
 
@@ -62,6 +90,10 @@ public final class AzureTableStorageLinkedServiceResponse extends io.pulumi.reso
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
+    /**
+     * Parameters for linked service.
+     * 
+     */
     @InputImport(name="parameters")
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
@@ -69,6 +101,10 @@ public final class AzureTableStorageLinkedServiceResponse extends io.pulumi.reso
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
+    /**
+     * The Azure key vault secret reference of sasToken in sas uri.
+     * 
+     */
     @InputImport(name="sasToken")
     private final @Nullable AzureKeyVaultSecretReferenceResponse sasToken;
 
@@ -76,6 +112,10 @@ public final class AzureTableStorageLinkedServiceResponse extends io.pulumi.reso
         return this.sasToken == null ? Optional.empty() : Optional.ofNullable(this.sasToken);
     }
 
+    /**
+     * SAS URI of the Azure Storage resource. It is mutually exclusive with connectionString property. Type: string, SecureString or AzureKeyVaultSecretReference.
+     * 
+     */
     @InputImport(name="sasUri")
     private final @Nullable Object sasUri;
 
@@ -83,6 +123,11 @@ public final class AzureTableStorageLinkedServiceResponse extends io.pulumi.reso
         return this.sasUri == null ? Optional.empty() : Optional.ofNullable(this.sasUri);
     }
 
+    /**
+     * Type of linked service.
+     * Expected value is 'AzureTableStorage'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

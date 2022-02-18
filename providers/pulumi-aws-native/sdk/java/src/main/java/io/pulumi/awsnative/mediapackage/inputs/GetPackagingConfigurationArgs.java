@@ -12,6 +12,10 @@ public final class GetPackagingConfigurationArgs extends io.pulumi.resources.Inv
 
     public static final GetPackagingConfigurationArgs Empty = new GetPackagingConfigurationArgs();
 
+    /**
+     * The ID of the PackagingConfiguration.
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 

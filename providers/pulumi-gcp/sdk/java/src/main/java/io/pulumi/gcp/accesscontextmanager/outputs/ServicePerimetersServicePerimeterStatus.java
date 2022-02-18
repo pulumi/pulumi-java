@@ -15,11 +15,61 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ServicePerimetersServicePerimeterStatus {
+    /**
+     * A list of AccessLevel resource names that allow resources within
+     * the ServicePerimeter to be accessed from the internet.
+     * AccessLevels listed must be in the same policy as this
+     * ServicePerimeter. Referencing a nonexistent AccessLevel is a
+     * syntax error. If no AccessLevel names are listed, resources within
+     * the perimeter can only be accessed via GCP calls with request
+     * origins within the perimeter. For Service Perimeter Bridge, must
+     * be empty.
+     * Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}
+     * 
+     */
     private final @Nullable List<String> accessLevels;
+    /**
+     * List of EgressPolicies to apply to the perimeter. A perimeter may
+     * have multiple EgressPolicies, each of which is evaluated separately.
+     * Access is granted if any EgressPolicy grants it. Must be empty for
+     * a perimeter bridge.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable List<ServicePerimetersServicePerimeterStatusEgressPolicy> egressPolicies;
+    /**
+     * List of `IngressPolicies` to apply to the perimeter. A perimeter may
+     * have multiple `IngressPolicies`, each of which is evaluated
+     * separately. Access is granted if any `Ingress Policy` grants it.
+     * Must be empty for a perimeter bridge.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable List<ServicePerimetersServicePerimeterStatusIngressPolicy> ingressPolicies;
+    /**
+     * A list of resources, currently only projects in the form
+     * `projects/<projectnumber>`, that match this to stanza. A request matches
+     * if it contains a resource in this list. If * is specified for resources,
+     * then this `EgressTo` rule will authorize access to all resources outside
+     * the perimeter.
+     * 
+     */
     private final @Nullable List<String> resources;
+    /**
+     * GCP services that are subject to the Service Perimeter
+     * restrictions. Must contain a list of services. For example, if
+     * `storage.googleapis.com` is specified, access to the storage
+     * buckets inside the perimeter must meet the perimeter's access
+     * restrictions.
+     * 
+     */
     private final @Nullable List<String> restrictedServices;
+    /**
+     * Specifies how APIs are allowed to communicate within the Service
+     * Perimeter.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable ServicePerimetersServicePerimeterStatusVpcAccessibleServices vpcAccessibleServices;
 
     @OutputCustomType.Constructor({"accessLevels","egressPolicies","ingressPolicies","resources","restrictedServices","vpcAccessibleServices"})
@@ -38,21 +88,71 @@ public final class ServicePerimetersServicePerimeterStatus {
         this.vpcAccessibleServices = vpcAccessibleServices;
     }
 
+    /**
+     * A list of AccessLevel resource names that allow resources within
+     * the ServicePerimeter to be accessed from the internet.
+     * AccessLevels listed must be in the same policy as this
+     * ServicePerimeter. Referencing a nonexistent AccessLevel is a
+     * syntax error. If no AccessLevel names are listed, resources within
+     * the perimeter can only be accessed via GCP calls with request
+     * origins within the perimeter. For Service Perimeter Bridge, must
+     * be empty.
+     * Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}
+     * 
+     */
     public List<String> getAccessLevels() {
         return this.accessLevels == null ? List.of() : this.accessLevels;
     }
+    /**
+     * List of EgressPolicies to apply to the perimeter. A perimeter may
+     * have multiple EgressPolicies, each of which is evaluated separately.
+     * Access is granted if any EgressPolicy grants it. Must be empty for
+     * a perimeter bridge.
+     * Structure is documented below.
+     * 
+     */
     public List<ServicePerimetersServicePerimeterStatusEgressPolicy> getEgressPolicies() {
         return this.egressPolicies == null ? List.of() : this.egressPolicies;
     }
+    /**
+     * List of `IngressPolicies` to apply to the perimeter. A perimeter may
+     * have multiple `IngressPolicies`, each of which is evaluated
+     * separately. Access is granted if any `Ingress Policy` grants it.
+     * Must be empty for a perimeter bridge.
+     * Structure is documented below.
+     * 
+     */
     public List<ServicePerimetersServicePerimeterStatusIngressPolicy> getIngressPolicies() {
         return this.ingressPolicies == null ? List.of() : this.ingressPolicies;
     }
+    /**
+     * A list of resources, currently only projects in the form
+     * `projects/<projectnumber>`, that match this to stanza. A request matches
+     * if it contains a resource in this list. If * is specified for resources,
+     * then this `EgressTo` rule will authorize access to all resources outside
+     * the perimeter.
+     * 
+     */
     public List<String> getResources() {
         return this.resources == null ? List.of() : this.resources;
     }
+    /**
+     * GCP services that are subject to the Service Perimeter
+     * restrictions. Must contain a list of services. For example, if
+     * `storage.googleapis.com` is specified, access to the storage
+     * buckets inside the perimeter must meet the perimeter's access
+     * restrictions.
+     * 
+     */
     public List<String> getRestrictedServices() {
         return this.restrictedServices == null ? List.of() : this.restrictedServices;
     }
+    /**
+     * Specifies how APIs are allowed to communicate within the Service
+     * Perimeter.
+     * Structure is documented below.
+     * 
+     */
     public Optional<ServicePerimetersServicePerimeterStatusVpcAccessibleServices> getVpcAccessibleServices() {
         return Optional.ofNullable(this.vpcAccessibleServices);
     }

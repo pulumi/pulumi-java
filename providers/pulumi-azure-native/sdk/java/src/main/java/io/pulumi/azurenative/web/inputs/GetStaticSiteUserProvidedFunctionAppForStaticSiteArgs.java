@@ -12,6 +12,10 @@ public final class GetStaticSiteUserProvidedFunctionAppForStaticSiteArgs extends
 
     public static final GetStaticSiteUserProvidedFunctionAppForStaticSiteArgs Empty = new GetStaticSiteUserProvidedFunctionAppForStaticSiteArgs();
 
+    /**
+     * Name of the function app registered with the static site.
+     * 
+     */
     @InputImport(name="functionAppName", required=true)
     private final String functionAppName;
 
@@ -19,6 +23,10 @@ public final class GetStaticSiteUserProvidedFunctionAppForStaticSiteArgs extends
         return this.functionAppName;
     }
 
+    /**
+     * Name of the static site.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -26,6 +34,10 @@ public final class GetStaticSiteUserProvidedFunctionAppForStaticSiteArgs extends
         return this.name;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

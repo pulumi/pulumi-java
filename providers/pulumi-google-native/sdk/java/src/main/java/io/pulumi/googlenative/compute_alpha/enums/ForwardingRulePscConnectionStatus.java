@@ -10,9 +10,25 @@ import java.util.StringJoiner;
 
     @EnumType
     public enum ForwardingRulePscConnectionStatus {
+        /**
+         * The connection has been accepted by the producer.
+         * 
+         */
         Accepted("ACCEPTED"),
+        /**
+         * The connection has been closed by the producer and will not serve traffic going forward.
+         * 
+         */
         Closed("CLOSED"),
+        /**
+         * The connection is pending acceptance by the producer.
+         * 
+         */
         Pending("PENDING"),
+        /**
+         * The connection has been rejected by the producer.
+         * 
+         */
         Rejected("REJECTED"),
         StatusUnspecified("STATUS_UNSPECIFIED");
 

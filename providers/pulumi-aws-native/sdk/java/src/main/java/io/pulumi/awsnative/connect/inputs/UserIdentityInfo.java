@@ -10,6 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Contains information about the identity of a user.
+ * 
+ */
 public final class UserIdentityInfo extends io.pulumi.resources.InvokeArgs {
 
     public static final UserIdentityInfo Empty = new UserIdentityInfo();

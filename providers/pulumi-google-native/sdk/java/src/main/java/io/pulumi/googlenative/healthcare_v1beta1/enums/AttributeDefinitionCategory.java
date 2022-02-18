@@ -8,10 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Required. The category of the attribute. The value of this field cannot be changed after creation.
+     * 
+     */
     @EnumType
     public enum AttributeDefinitionCategory {
+        /**
+         * No category specified. This option is invalid.
+         * 
+         */
         CategoryUnspecified("CATEGORY_UNSPECIFIED"),
+        /**
+         * Specify this category when this attribute describes the properties of resources. For example, data anonymity or data type.
+         * 
+         */
         Resource("RESOURCE"),
+        /**
+         * Specify this category when this attribute describes the properties of requests. For example, requester's role or requester's organization.
+         * 
+         */
         Request("REQUEST");
 
         private final String value;

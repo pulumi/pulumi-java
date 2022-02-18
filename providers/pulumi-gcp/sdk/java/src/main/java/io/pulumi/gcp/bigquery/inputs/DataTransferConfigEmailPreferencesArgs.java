@@ -13,6 +13,10 @@ public final class DataTransferConfigEmailPreferencesArgs extends io.pulumi.reso
 
     public static final DataTransferConfigEmailPreferencesArgs Empty = new DataTransferConfigEmailPreferencesArgs();
 
+    /**
+     * If true, email notifications will be sent on transfer run failures.
+     * 
+     */
     @InputImport(name="enableFailureEmail", required=true)
     private final Input<Boolean> enableFailureEmail;
 

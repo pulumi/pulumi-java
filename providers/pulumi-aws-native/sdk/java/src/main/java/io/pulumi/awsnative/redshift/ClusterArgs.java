@@ -20,6 +20,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ClusterArgs Empty = new ClusterArgs();
 
+    /**
+     * Major version upgrades can be applied during the maintenance window to the Amazon Redshift engine that is running on the cluster. Default value is True
+     * 
+     */
     @InputImport(name="allowVersionUpgrade")
     private final @Nullable Input<Boolean> allowVersionUpgrade;
 
@@ -27,6 +31,14 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.allowVersionUpgrade == null ? Input.empty() : this.allowVersionUpgrade;
     }
 
+    /**
+     * The value represents how the cluster is configured to use AQUA (Advanced Query Accelerator) after the cluster is restored. Possible values include the following.
+     * 
+     * enabled - Use AQUA if it is available for the current Region and Amazon Redshift node type.
+     * disabled - Don't use AQUA.
+     * auto - Amazon Redshift determines whether to use AQUA.
+     * 
+     */
     @InputImport(name="aquaConfigurationStatus")
     private final @Nullable Input<String> aquaConfigurationStatus;
 
@@ -34,6 +46,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.aquaConfigurationStatus == null ? Input.empty() : this.aquaConfigurationStatus;
     }
 
+    /**
+     * The number of days that automated snapshots are retained. If the value is 0, automated snapshots are disabled. Default value is 1
+     * 
+     */
     @InputImport(name="automatedSnapshotRetentionPeriod")
     private final @Nullable Input<Integer> automatedSnapshotRetentionPeriod;
 
@@ -41,6 +57,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.automatedSnapshotRetentionPeriod == null ? Input.empty() : this.automatedSnapshotRetentionPeriod;
     }
 
+    /**
+     * The EC2 Availability Zone (AZ) in which you want Amazon Redshift to provision the cluster. Default: A random, system-chosen Availability Zone in the region that is specified by the endpoint
+     * 
+     */
     @InputImport(name="availabilityZone")
     private final @Nullable Input<String> availabilityZone;
 
@@ -48,6 +68,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
     }
 
+    /**
+     * The option to enable relocation for an Amazon Redshift cluster between Availability Zones after the cluster modification is complete.
+     * 
+     */
     @InputImport(name="availabilityZoneRelocation")
     private final @Nullable Input<Boolean> availabilityZoneRelocation;
 
@@ -55,6 +79,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.availabilityZoneRelocation == null ? Input.empty() : this.availabilityZoneRelocation;
     }
 
+    /**
+     * The availability zone relocation status of the cluster
+     * 
+     */
     @InputImport(name="availabilityZoneRelocationStatus")
     private final @Nullable Input<String> availabilityZoneRelocationStatus;
 
@@ -62,6 +90,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.availabilityZoneRelocationStatus == null ? Input.empty() : this.availabilityZoneRelocationStatus;
     }
 
+    /**
+     * A boolean value indicating whether the resize operation is using the classic resize process. If you don't provide this parameter or set the value to false , the resize type is elastic.
+     * 
+     */
     @InputImport(name="classic")
     private final @Nullable Input<Boolean> classic;
 
@@ -69,6 +101,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.classic == null ? Input.empty() : this.classic;
     }
 
+    /**
+     * A unique identifier for the cluster. You use this identifier to refer to the cluster for any subsequent cluster operations such as deleting or modifying. All alphabetical characters must be lower case, no hypens at the end, no two consecutive hyphens. Cluster name should be unique for all clusters within an AWS account
+     * 
+     */
     @InputImport(name="clusterIdentifier")
     private final @Nullable Input<String> clusterIdentifier;
 
@@ -76,6 +112,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.clusterIdentifier == null ? Input.empty() : this.clusterIdentifier;
     }
 
+    /**
+     * The name of the parameter group to be associated with this cluster.
+     * 
+     */
     @InputImport(name="clusterParameterGroupName")
     private final @Nullable Input<String> clusterParameterGroupName;
 
@@ -83,6 +123,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.clusterParameterGroupName == null ? Input.empty() : this.clusterParameterGroupName;
     }
 
+    /**
+     * A list of security groups to be associated with this cluster.
+     * 
+     */
     @InputImport(name="clusterSecurityGroups")
     private final @Nullable Input<List<String>> clusterSecurityGroups;
 
@@ -90,6 +134,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.clusterSecurityGroups == null ? Input.empty() : this.clusterSecurityGroups;
     }
 
+    /**
+     * The name of a cluster subnet group to be associated with this cluster.
+     * 
+     */
     @InputImport(name="clusterSubnetGroupName")
     private final @Nullable Input<String> clusterSubnetGroupName;
 
@@ -97,6 +145,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.clusterSubnetGroupName == null ? Input.empty() : this.clusterSubnetGroupName;
     }
 
+    /**
+     * The type of the cluster. When cluster type is specified as single-node, the NumberOfNodes parameter is not required and if multi-node, the NumberOfNodes parameter is required
+     * 
+     */
     @InputImport(name="clusterType", required=true)
     private final Input<String> clusterType;
 
@@ -104,6 +156,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.clusterType;
     }
 
+    /**
+     * The version of the Amazon Redshift engine software that you want to deploy on the cluster.The version selected runs on all the nodes in the cluster.
+     * 
+     */
     @InputImport(name="clusterVersion")
     private final @Nullable Input<String> clusterVersion;
 
@@ -111,6 +167,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.clusterVersion == null ? Input.empty() : this.clusterVersion;
     }
 
+    /**
+     * The name of the first database to be created when the cluster is created. To create additional databases after the cluster is created, connect to the cluster with a SQL client and use SQL commands to create a database.
+     * 
+     */
     @InputImport(name="dBName", required=true)
     private final Input<String> dBName;
 
@@ -118,6 +178,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.dBName;
     }
 
+    /**
+     * A boolean indicating whether to enable the deferred maintenance window.
+     * 
+     */
     @InputImport(name="deferMaintenance")
     private final @Nullable Input<Boolean> deferMaintenance;
 
@@ -125,6 +189,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.deferMaintenance == null ? Input.empty() : this.deferMaintenance;
     }
 
+    /**
+     * An integer indicating the duration of the maintenance window in days. If you specify a duration, you can't specify an end time. The duration must be 45 days or less.
+     * 
+     */
     @InputImport(name="deferMaintenanceDuration")
     private final @Nullable Input<Integer> deferMaintenanceDuration;
 
@@ -132,6 +200,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.deferMaintenanceDuration == null ? Input.empty() : this.deferMaintenanceDuration;
     }
 
+    /**
+     * A timestamp indicating end time for the deferred maintenance window. If you specify an end time, you can't specify a duration.
+     * 
+     */
     @InputImport(name="deferMaintenanceEndTime")
     private final @Nullable Input<String> deferMaintenanceEndTime;
 
@@ -139,6 +211,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.deferMaintenanceEndTime == null ? Input.empty() : this.deferMaintenanceEndTime;
     }
 
+    /**
+     * A timestamp indicating the start time for the deferred maintenance window.
+     * 
+     */
     @InputImport(name="deferMaintenanceStartTime")
     private final @Nullable Input<String> deferMaintenanceStartTime;
 
@@ -146,6 +222,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.deferMaintenanceStartTime == null ? Input.empty() : this.deferMaintenanceStartTime;
     }
 
+    /**
+     * The destination AWS Region that you want to copy snapshots to. Constraints: Must be the name of a valid AWS Region. For more information, see Regions and Endpoints in the Amazon Web Services [https://docs.aws.amazon.com/general/latest/gr/rande.html#redshift_region] General Reference
+     * 
+     */
     @InputImport(name="destinationRegion")
     private final @Nullable Input<String> destinationRegion;
 
@@ -153,6 +233,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.destinationRegion == null ? Input.empty() : this.destinationRegion;
     }
 
+    /**
+     * The Elastic IP (EIP) address for the cluster.
+     * 
+     */
     @InputImport(name="elasticIp")
     private final @Nullable Input<String> elasticIp;
 
@@ -160,6 +244,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.elasticIp == null ? Input.empty() : this.elasticIp;
     }
 
+    /**
+     * If true, the data in the cluster is encrypted at rest.
+     * 
+     */
     @InputImport(name="encrypted")
     private final @Nullable Input<Boolean> encrypted;
 
@@ -174,6 +262,14 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.endpoint == null ? Input.empty() : this.endpoint;
     }
 
+    /**
+     * An option that specifies whether to create the cluster with enhanced VPC routing enabled. To create a cluster that uses enhanced VPC routing, the cluster must be in a VPC. For more information, see Enhanced VPC Routing in the Amazon Redshift Cluster Management Guide.
+     * 
+     * If this option is true , enhanced VPC routing is enabled.
+     * 
+     * Default: false
+     * 
+     */
     @InputImport(name="enhancedVpcRouting")
     private final @Nullable Input<Boolean> enhancedVpcRouting;
 
@@ -181,6 +277,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.enhancedVpcRouting == null ? Input.empty() : this.enhancedVpcRouting;
     }
 
+    /**
+     * Specifies the name of the HSM client certificate the Amazon Redshift cluster uses to retrieve the data encryption keys stored in an HSM
+     * 
+     */
     @InputImport(name="hsmClientCertificateIdentifier")
     private final @Nullable Input<String> hsmClientCertificateIdentifier;
 
@@ -188,6 +288,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.hsmClientCertificateIdentifier == null ? Input.empty() : this.hsmClientCertificateIdentifier;
     }
 
+    /**
+     * Specifies the name of the HSM configuration that contains the information the Amazon Redshift cluster can use to retrieve and store keys in an HSM.
+     * 
+     */
     @InputImport(name="hsmConfigurationIdentifier")
     private final @Nullable Input<String> hsmConfigurationIdentifier;
 
@@ -195,6 +299,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.hsmConfigurationIdentifier == null ? Input.empty() : this.hsmConfigurationIdentifier;
     }
 
+    /**
+     * A list of AWS Identity and Access Management (IAM) roles that can be used by the cluster to access other AWS services. You must supply the IAM roles in their Amazon Resource Name (ARN) format. You can supply up to 10 IAM roles in a single request
+     * 
+     */
     @InputImport(name="iamRoles")
     private final @Nullable Input<List<String>> iamRoles;
 
@@ -202,6 +310,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.iamRoles == null ? Input.empty() : this.iamRoles;
     }
 
+    /**
+     * The AWS Key Management Service (KMS) key ID of the encryption key that you want to use to encrypt data in the cluster.
+     * 
+     */
     @InputImport(name="kmsKeyId")
     private final @Nullable Input<String> kmsKeyId;
 
@@ -216,6 +328,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.loggingProperties == null ? Input.empty() : this.loggingProperties;
     }
 
+    /**
+     * The name for the maintenance track that you want to assign for the cluster. This name change is asynchronous. The new track name stays in the PendingModifiedValues for the cluster until the next maintenance window. When the maintenance track changes, the cluster is switched to the latest cluster release available for the maintenance track. At this point, the maintenance track name is applied.
+     * 
+     */
     @InputImport(name="maintenanceTrackName")
     private final @Nullable Input<String> maintenanceTrackName;
 
@@ -223,6 +339,12 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.maintenanceTrackName == null ? Input.empty() : this.maintenanceTrackName;
     }
 
+    /**
+     * The number of days to retain newly copied snapshots in the destination AWS Region after they are copied from the source AWS Region. If the value is -1, the manual snapshot is retained indefinitely.
+     * 
+     * The value must be either -1 or an integer between 1 and 3,653.
+     * 
+     */
     @InputImport(name="manualSnapshotRetentionPeriod")
     private final @Nullable Input<Integer> manualSnapshotRetentionPeriod;
 
@@ -230,6 +352,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.manualSnapshotRetentionPeriod == null ? Input.empty() : this.manualSnapshotRetentionPeriod;
     }
 
+    /**
+     * The password associated with the master user account for the cluster that is being created. Password must be between 8 and 64 characters in length, should have at least one uppercase letter.Must contain at least one lowercase letter.Must contain one number.Can be any printable ASCII character.
+     * 
+     */
     @InputImport(name="masterUserPassword", required=true)
     private final Input<String> masterUserPassword;
 
@@ -237,6 +363,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.masterUserPassword;
     }
 
+    /**
+     * The user name associated with the master user account for the cluster that is being created. The user name can't be PUBLIC and first character must be a letter.
+     * 
+     */
     @InputImport(name="masterUsername", required=true)
     private final Input<String> masterUsername;
 
@@ -244,6 +374,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.masterUsername;
     }
 
+    /**
+     * The node type to be provisioned for the cluster.Valid Values: ds2.xlarge | ds2.8xlarge | dc1.large | dc1.8xlarge | dc2.large | dc2.8xlarge | ra3.4xlarge | ra3.16xlarge
+     * 
+     */
     @InputImport(name="nodeType", required=true)
     private final Input<String> nodeType;
 
@@ -251,6 +385,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.nodeType;
     }
 
+    /**
+     * The number of compute nodes in the cluster. This parameter is required when the ClusterType parameter is specified as multi-node.
+     * 
+     */
     @InputImport(name="numberOfNodes")
     private final @Nullable Input<Integer> numberOfNodes;
 
@@ -265,6 +403,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.ownerAccount == null ? Input.empty() : this.ownerAccount;
     }
 
+    /**
+     * The port number on which the cluster accepts incoming connections. The cluster is accessible only via the JDBC and ODBC connection strings
+     * 
+     */
     @InputImport(name="port")
     private final @Nullable Input<Integer> port;
 
@@ -272,6 +414,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.port == null ? Input.empty() : this.port;
     }
 
+    /**
+     * The weekly time range (in UTC) during which automated cluster maintenance can occur.
+     * 
+     */
     @InputImport(name="preferredMaintenanceWindow")
     private final @Nullable Input<String> preferredMaintenanceWindow;
 
@@ -279,6 +425,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.preferredMaintenanceWindow == null ? Input.empty() : this.preferredMaintenanceWindow;
     }
 
+    /**
+     * If true, the cluster can be accessed from a public network.
+     * 
+     */
     @InputImport(name="publiclyAccessible")
     private final @Nullable Input<Boolean> publiclyAccessible;
 
@@ -286,6 +436,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.publiclyAccessible == null ? Input.empty() : this.publiclyAccessible;
     }
 
+    /**
+     * The Redshift operation to be performed. Resource Action supports pause-cluster, resume-cluster APIs
+     * 
+     */
     @InputImport(name="resourceAction")
     private final @Nullable Input<String> resourceAction;
 
@@ -293,6 +447,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceAction == null ? Input.empty() : this.resourceAction;
     }
 
+    /**
+     * The identifier of the database revision. You can retrieve this value from the response to the DescribeClusterDbRevisions request.
+     * 
+     */
     @InputImport(name="revisionTarget")
     private final @Nullable Input<String> revisionTarget;
 
@@ -300,6 +458,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.revisionTarget == null ? Input.empty() : this.revisionTarget;
     }
 
+    /**
+     * A boolean indicating if we want to rotate Encryption Keys.
+     * 
+     */
     @InputImport(name="rotateEncryptionKey")
     private final @Nullable Input<Boolean> rotateEncryptionKey;
 
@@ -307,6 +469,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.rotateEncryptionKey == null ? Input.empty() : this.rotateEncryptionKey;
     }
 
+    /**
+     * The name of the cluster the source snapshot was created from. This parameter is required if your IAM user has a policy containing a snapshot resource element that specifies anything other than * for the cluster name.
+     * 
+     */
     @InputImport(name="snapshotClusterIdentifier")
     private final @Nullable Input<String> snapshotClusterIdentifier;
 
@@ -314,6 +480,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.snapshotClusterIdentifier == null ? Input.empty() : this.snapshotClusterIdentifier;
     }
 
+    /**
+     * The name of the snapshot copy grant to use when snapshots of an AWS KMS-encrypted cluster are copied to the destination region.
+     * 
+     */
     @InputImport(name="snapshotCopyGrantName")
     private final @Nullable Input<String> snapshotCopyGrantName;
 
@@ -321,6 +491,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.snapshotCopyGrantName == null ? Input.empty() : this.snapshotCopyGrantName;
     }
 
+    /**
+     * Indicates whether to apply the snapshot retention period to newly copied manual snapshots instead of automated snapshots.
+     * 
+     */
     @InputImport(name="snapshotCopyManual")
     private final @Nullable Input<Boolean> snapshotCopyManual;
 
@@ -328,6 +502,14 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.snapshotCopyManual == null ? Input.empty() : this.snapshotCopyManual;
     }
 
+    /**
+     * The number of days to retain automated snapshots in the destination region after they are copied from the source region.
+     * 
+     *  Default is 7.
+     * 
+     *  Constraints: Must be at least 1 and no more than 35.
+     * 
+     */
     @InputImport(name="snapshotCopyRetentionPeriod")
     private final @Nullable Input<Integer> snapshotCopyRetentionPeriod;
 
@@ -335,6 +517,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.snapshotCopyRetentionPeriod == null ? Input.empty() : this.snapshotCopyRetentionPeriod;
     }
 
+    /**
+     * The name of the snapshot from which to create the new cluster. This parameter isn't case sensitive.
+     * 
+     */
     @InputImport(name="snapshotIdentifier")
     private final @Nullable Input<String> snapshotIdentifier;
 
@@ -342,6 +528,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.snapshotIdentifier == null ? Input.empty() : this.snapshotIdentifier;
     }
 
+    /**
+     * The list of tags for the cluster parameter group.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<ClusterTagArgs>> tags;
 
@@ -349,6 +539,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * A list of Virtual Private Cloud (VPC) security groups to be associated with the cluster.
+     * 
+     */
     @InputImport(name="vpcSecurityGroupIds")
     private final @Nullable Input<List<String>> vpcSecurityGroupIds;
 

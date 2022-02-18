@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * A flag to determine whether or not TlsV1 is enabled or disabled.
+     * 
+     */
     @EnumType
     public enum TlsV1 {
         Enabled("Enabled"),

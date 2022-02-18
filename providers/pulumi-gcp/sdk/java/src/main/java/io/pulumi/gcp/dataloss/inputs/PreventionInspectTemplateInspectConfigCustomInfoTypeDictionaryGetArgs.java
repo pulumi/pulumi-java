@@ -15,6 +15,11 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionar
 
     public static final PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryGetArgs Empty = new PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryGetArgs();
 
+    /**
+     * Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="cloudStoragePath")
     private final @Nullable Input<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePathGetArgs> cloudStoragePath;
 
@@ -22,6 +27,11 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionar
         return this.cloudStoragePath == null ? Input.empty() : this.cloudStoragePath;
     }
 
+    /**
+     * List of words or phrases to search for.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="wordList")
     private final @Nullable Input<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListGetArgs> wordList;
 

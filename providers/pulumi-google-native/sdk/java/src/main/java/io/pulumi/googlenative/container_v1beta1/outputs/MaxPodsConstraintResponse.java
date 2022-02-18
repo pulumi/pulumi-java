@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MaxPodsConstraintResponse {
+    /**
+     * Constraint enforced on the max num of pods per node.
+     * 
+     */
     private final String maxPodsPerNode;
 
     @OutputCustomType.Constructor({"maxPodsPerNode"})
@@ -16,6 +20,10 @@ public final class MaxPodsConstraintResponse {
         this.maxPodsPerNode = Objects.requireNonNull(maxPodsPerNode);
     }
 
+    /**
+     * Constraint enforced on the max num of pods per node.
+     * 
+     */
     public String getMaxPodsPerNode() {
         return this.maxPodsPerNode;
     }

@@ -16,6 +16,10 @@ public final class GalleryApplicationVersionArgs extends io.pulumi.resources.Res
 
     public static final GalleryApplicationVersionArgs Empty = new GalleryApplicationVersionArgs();
 
+    /**
+     * The name of the gallery Application Definition in which the Application Version is to be created.
+     * 
+     */
     @InputImport(name="galleryApplicationName", required=true)
     private final Input<String> galleryApplicationName;
 
@@ -23,6 +27,10 @@ public final class GalleryApplicationVersionArgs extends io.pulumi.resources.Res
         return this.galleryApplicationName;
     }
 
+    /**
+     * The name of the gallery Application Version to be created. Needs to follow semantic version name pattern: The allowed characters are digit and period. Digits must be within the range of a 32-bit integer. Format: <MajorVersion>.<MinorVersion>.<Patch>
+     * 
+     */
     @InputImport(name="galleryApplicationVersionName")
     private final @Nullable Input<String> galleryApplicationVersionName;
 
@@ -30,6 +38,10 @@ public final class GalleryApplicationVersionArgs extends io.pulumi.resources.Res
         return this.galleryApplicationVersionName == null ? Input.empty() : this.galleryApplicationVersionName;
     }
 
+    /**
+     * The name of the Shared Application Gallery in which the Application Definition resides.
+     * 
+     */
     @InputImport(name="galleryName", required=true)
     private final Input<String> galleryName;
 
@@ -37,6 +49,10 @@ public final class GalleryApplicationVersionArgs extends io.pulumi.resources.Res
         return this.galleryName;
     }
 
+    /**
+     * Resource location
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -44,6 +60,10 @@ public final class GalleryApplicationVersionArgs extends io.pulumi.resources.Res
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The publishing profile of a gallery image version.
+     * 
+     */
     @InputImport(name="publishingProfile", required=true)
     private final Input<GalleryApplicationVersionPublishingProfileArgs> publishingProfile;
 
@@ -51,6 +71,10 @@ public final class GalleryApplicationVersionArgs extends io.pulumi.resources.Res
         return this.publishingProfile;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -58,6 +82,10 @@ public final class GalleryApplicationVersionArgs extends io.pulumi.resources.Res
         return this.resourceGroupName;
     }
 
+    /**
+     * Resource tags
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Resource Health Status
+     * 
+     */
     @EnumType
     public enum ResourceHealthStatus {
         Healthy("Healthy"),

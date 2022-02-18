@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class UserSubject {
+    /**
+     * `name` is the username that matches, or "*" to match all usernames. Required.
+     * 
+     */
     private final String name;
 
     @OutputCustomType.Constructor({"name"})
@@ -16,6 +20,10 @@ public final class UserSubject {
         this.name = Objects.requireNonNull(name);
     }
 
+    /**
+     * `name` is the username that matches, or "*" to match all usernames. Required.
+     * 
+     */
     public String getName() {
         return this.name;
     }

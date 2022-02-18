@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * HttpRouteRuleMatch criteria for field values that must stay within the specified integer range.
+ * 
+ */
 public final class Int64RangeMatchResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final Int64RangeMatchResponse Empty = new Int64RangeMatchResponse();
 
+    /**
+     * The end of the range (exclusive) in signed long integer format.
+     * 
+     */
     @InputImport(name="rangeEnd", required=true)
     private final String rangeEnd;
 
@@ -19,6 +27,10 @@ public final class Int64RangeMatchResponse extends io.pulumi.resources.InvokeArg
         return this.rangeEnd;
     }
 
+    /**
+     * The start of the range (inclusive) in signed long integer format.
+     * 
+     */
     @InputImport(name="rangeStart", required=true)
     private final String rangeStart;
 

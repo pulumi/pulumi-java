@@ -10,6 +10,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TableSchemaResponse {
+    /**
+     * Describes the fields in a table.
+     * 
+     */
     private final List<TableFieldSchemaResponse> fields;
 
     @OutputCustomType.Constructor({"fields"})
@@ -17,6 +21,10 @@ public final class TableSchemaResponse {
         this.fields = Objects.requireNonNull(fields);
     }
 
+    /**
+     * Describes the fields in a table.
+     * 
+     */
     public List<TableFieldSchemaResponse> getFields() {
         return this.fields;
     }

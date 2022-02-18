@@ -9,10 +9,19 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * AWS cloud account connector based assume role, the role enables delegating access to your AWS resources. The role is composed of role Amazon Resource Name (ARN) and external ID. For more details, refer to <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html">Creating a Role to Delegate Permissions to an IAM User (write only)</a>
+ * 
+ */
 public final class AwAssumeRoleAuthenticationDetailsPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AwAssumeRoleAuthenticationDetailsPropertiesArgs Empty = new AwAssumeRoleAuthenticationDetailsPropertiesArgs();
 
+    /**
+     * Connect to your cloud account, for AWS use either account credentials or role-based authentication. For GCP use account organization credentials.
+     * Expected value is 'awsAssumeRole'.
+     * 
+     */
     @InputImport(name="authenticationType", required=true)
     private final Input<String> authenticationType;
 
@@ -20,6 +29,10 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesArgs extends io.pu
         return this.authenticationType;
     }
 
+    /**
+     * Assumed role ID is an identifier that you can use to create temporary security credentials.
+     * 
+     */
     @InputImport(name="awsAssumeRoleArn", required=true)
     private final Input<String> awsAssumeRoleArn;
 
@@ -27,6 +40,10 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesArgs extends io.pu
         return this.awsAssumeRoleArn;
     }
 
+    /**
+     * A unique identifier that is required when you assume a role in another account.
+     * 
+     */
     @InputImport(name="awsExternalId", required=true)
     private final Input<String> awsExternalId;
 

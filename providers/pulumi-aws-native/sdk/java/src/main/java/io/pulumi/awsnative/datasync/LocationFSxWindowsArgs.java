@@ -16,6 +16,10 @@ public final class LocationFSxWindowsArgs extends io.pulumi.resources.ResourceAr
 
     public static final LocationFSxWindowsArgs Empty = new LocationFSxWindowsArgs();
 
+    /**
+     * The name of the Windows domain that the FSx for Windows server belongs to.
+     * 
+     */
     @InputImport(name="domain")
     private final @Nullable Input<String> domain;
 
@@ -23,6 +27,10 @@ public final class LocationFSxWindowsArgs extends io.pulumi.resources.ResourceAr
         return this.domain == null ? Input.empty() : this.domain;
     }
 
+    /**
+     * The Amazon Resource Name (ARN) for the FSx for Windows file system.
+     * 
+     */
     @InputImport(name="fsxFilesystemArn", required=true)
     private final Input<String> fsxFilesystemArn;
 
@@ -30,6 +38,10 @@ public final class LocationFSxWindowsArgs extends io.pulumi.resources.ResourceAr
         return this.fsxFilesystemArn;
     }
 
+    /**
+     * The password of the user who has the permissions to access files and folders in the FSx for Windows file system.
+     * 
+     */
     @InputImport(name="password", required=true)
     private final Input<String> password;
 
@@ -37,6 +49,10 @@ public final class LocationFSxWindowsArgs extends io.pulumi.resources.ResourceAr
         return this.password;
     }
 
+    /**
+     * The ARNs of the security groups that are to use to configure the FSx for Windows file system.
+     * 
+     */
     @InputImport(name="securityGroupArns", required=true)
     private final Input<List<String>> securityGroupArns;
 
@@ -44,6 +60,10 @@ public final class LocationFSxWindowsArgs extends io.pulumi.resources.ResourceAr
         return this.securityGroupArns;
     }
 
+    /**
+     * A subdirectory in the location's path.
+     * 
+     */
     @InputImport(name="subdirectory")
     private final @Nullable Input<String> subdirectory;
 
@@ -51,6 +71,10 @@ public final class LocationFSxWindowsArgs extends io.pulumi.resources.ResourceAr
         return this.subdirectory == null ? Input.empty() : this.subdirectory;
     }
 
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<LocationFSxWindowsTagArgs>> tags;
 
@@ -58,6 +82,10 @@ public final class LocationFSxWindowsArgs extends io.pulumi.resources.ResourceAr
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The user who has the permissions to access files and folders in the FSx for Windows file system.
+     * 
+     */
     @InputImport(name="user", required=true)
     private final Input<String> user;
 

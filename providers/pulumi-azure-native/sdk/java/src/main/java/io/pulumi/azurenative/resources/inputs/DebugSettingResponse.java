@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The debug setting.
+ * 
+ */
 public final class DebugSettingResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DebugSettingResponse Empty = new DebugSettingResponse();
 
+    /**
+     * Specifies the type of information to log for debugging. The permitted values are none, requestContent, responseContent, or both requestContent and responseContent separated by a comma. The default is none. When setting this value, carefully consider the type of information you are passing in during deployment. By logging information about the request or response, you could potentially expose sensitive data that is retrieved through the deployment operations.
+     * 
+     */
     @InputImport(name="detailLevel")
     private final @Nullable String detailLevel;
 

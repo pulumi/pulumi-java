@@ -9,9 +9,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ClusterStatusResponse {
+    /**
+     * Optional details of cluster's state.
+     * 
+     */
     private final String detail;
+    /**
+     * The cluster's state.
+     * 
+     */
     private final String state;
+    /**
+     * Time when this state was entered (see JSON representation of Timestamp (https://developers.google.com/protocol-buffers/docs/proto3#json)).
+     * 
+     */
     private final String stateStartTime;
+    /**
+     * Additional state information that includes status reported by the agent.
+     * 
+     */
     private final String substate;
 
     @OutputCustomType.Constructor({"detail","state","stateStartTime","substate"})
@@ -26,15 +42,31 @@ public final class ClusterStatusResponse {
         this.substate = Objects.requireNonNull(substate);
     }
 
+    /**
+     * Optional details of cluster's state.
+     * 
+     */
     public String getDetail() {
         return this.detail;
     }
+    /**
+     * The cluster's state.
+     * 
+     */
     public String getState() {
         return this.state;
     }
+    /**
+     * Time when this state was entered (see JSON representation of Timestamp (https://developers.google.com/protocol-buffers/docs/proto3#json)).
+     * 
+     */
     public String getStateStartTime() {
         return this.stateStartTime;
     }
+    /**
+     * Additional state information that includes status reported by the agent.
+     * 
+     */
     public String getSubstate() {
         return this.substate;
     }

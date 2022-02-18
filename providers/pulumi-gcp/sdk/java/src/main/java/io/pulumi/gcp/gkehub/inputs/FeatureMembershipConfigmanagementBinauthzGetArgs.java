@@ -14,6 +14,10 @@ public final class FeatureMembershipConfigmanagementBinauthzGetArgs extends io.p
 
     public static final FeatureMembershipConfigmanagementBinauthzGetArgs Empty = new FeatureMembershipConfigmanagementBinauthzGetArgs();
 
+    /**
+     * Enables the installation of Policy Controller. If false, the rest of PolicyController fields take no effect.
+     * 
+     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 

@@ -20,6 +20,10 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FlowArgs Empty = new FlowArgs();
 
+    /**
+     * Description of the flow.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -27,6 +31,10 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * List of Destination connectors of the flow.
+     * 
+     */
     @InputImport(name="destinationFlowConfigList", required=true)
     private final Input<List<FlowDestinationFlowConfigArgs>> destinationFlowConfigList;
 
@@ -34,6 +42,10 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
         return this.destinationFlowConfigList;
     }
 
+    /**
+     * Name of the flow.
+     * 
+     */
     @InputImport(name="flowName")
     private final @Nullable Input<String> flowName;
 
@@ -41,6 +53,10 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
         return this.flowName == null ? Input.empty() : this.flowName;
     }
 
+    /**
+     * The ARN of the AWS Key Management Service (AWS KMS) key that's used to encrypt your function's environment variables. If it's not provided, AWS Lambda uses a default service key.
+     * 
+     */
     @InputImport(name="kMSArn")
     private final @Nullable Input<String> kMSArn;
 
@@ -48,6 +64,10 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
         return this.kMSArn == null ? Input.empty() : this.kMSArn;
     }
 
+    /**
+     * Configurations of Source connector of the flow.
+     * 
+     */
     @InputImport(name="sourceFlowConfig", required=true)
     private final Input<FlowSourceFlowConfigArgs> sourceFlowConfig;
 
@@ -55,6 +75,10 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceFlowConfig;
     }
 
+    /**
+     * List of Tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<FlowTagArgs>> tags;
 
@@ -62,6 +86,10 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * List of tasks for the flow.
+     * 
+     */
     @InputImport(name="tasks", required=true)
     private final Input<List<FlowTaskArgs>> tasks;
 
@@ -69,6 +97,10 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
         return this.tasks;
     }
 
+    /**
+     * Trigger settings of the flow.
+     * 
+     */
     @InputImport(name="triggerConfig", required=true)
     private final Input<FlowTriggerConfigArgs> triggerConfig;
 

@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DataSourceSparkParameters {
+    /**
+     * <p>Host.</p>
+     * 
+     */
     private final String host;
+    /**
+     * <p>Port.</p>
+     * 
+     */
     private final Double port;
 
     @OutputCustomType.Constructor({"host","port"})
@@ -21,9 +29,17 @@ public final class DataSourceSparkParameters {
         this.port = Objects.requireNonNull(port);
     }
 
+    /**
+     * <p>Host.</p>
+     * 
+     */
     public String getHost() {
         return this.host;
     }
+    /**
+     * <p>Port.</p>
+     * 
+     */
     public Double getPort() {
         return this.port;
     }

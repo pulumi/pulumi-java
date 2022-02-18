@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Username / Password Credentials to connect to vcenter.
+ * 
+ */
 public final class VICredentialArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VICredentialArgs Empty = new VICredentialArgs();
 
+    /**
+     * Gets or sets the password to connect with the vCenter.
+     * 
+     */
     @InputImport(name="password")
     private final @Nullable Input<String> password;
 
@@ -21,6 +29,10 @@ public final class VICredentialArgs extends io.pulumi.resources.ResourceArgs {
         return this.password == null ? Input.empty() : this.password;
     }
 
+    /**
+     * Gets or sets username to connect with the vCenter.
+     * 
+     */
     @InputImport(name="username")
     private final @Nullable Input<String> username;
 

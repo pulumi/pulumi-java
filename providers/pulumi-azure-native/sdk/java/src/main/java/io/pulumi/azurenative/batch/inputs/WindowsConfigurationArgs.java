@@ -14,6 +14,10 @@ public final class WindowsConfigurationArgs extends io.pulumi.resources.Resource
 
     public static final WindowsConfigurationArgs Empty = new WindowsConfigurationArgs();
 
+    /**
+     * If omitted, the default value is true.
+     * 
+     */
     @InputImport(name="enableAutomaticUpdates")
     private final @Nullable Input<Boolean> enableAutomaticUpdates;
 

@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specifies the metric alert criteria for a single resource that has multiple metric criteria.
+ * 
+ */
 public final class MetricAlertSingleResourceMultipleMetricCriteriaResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MetricAlertSingleResourceMultipleMetricCriteriaResponse Empty = new MetricAlertSingleResourceMultipleMetricCriteriaResponse();
 
+    /**
+     * The list of metric criteria for this 'all of' operation.
+     * 
+     */
     @InputImport(name="allOf")
     private final @Nullable List<MetricCriteriaResponse> allOf;
 
@@ -23,6 +31,11 @@ public final class MetricAlertSingleResourceMultipleMetricCriteriaResponse exten
         return this.allOf == null ? List.of() : this.allOf;
     }
 
+    /**
+     * specifies the type of the alert criteria.
+     * Expected value is 'Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria'.
+     * 
+     */
     @InputImport(name="odataType", required=true)
     private final String odataType;
 

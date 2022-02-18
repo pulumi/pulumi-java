@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The Defender for servers connection configuration
+ * 
+ */
 public final class DefenderForServersAwsOfferingResponseDefenderForServers extends io.pulumi.resources.InvokeArgs {
 
     public static final DefenderForServersAwsOfferingResponseDefenderForServers Empty = new DefenderForServersAwsOfferingResponseDefenderForServers();
 
+    /**
+     * The cloud role ARN in AWS for this feature
+     * 
+     */
     @InputImport(name="cloudRoleArn")
     private final @Nullable String cloudRoleArn;
 

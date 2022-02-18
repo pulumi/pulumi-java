@@ -17,6 +17,10 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DestinationArgs Empty = new DestinationArgs();
 
+    /**
+     * Destination description
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -24,6 +28,10 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Destination expression
+     * 
+     */
     @InputImport(name="expression", required=true)
     private final Input<String> expression;
 
@@ -31,6 +39,10 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
         return this.expression;
     }
 
+    /**
+     * Must be RuleName
+     * 
+     */
     @InputImport(name="expressionType", required=true)
     private final Input<DestinationExpressionType> expressionType;
 
@@ -38,6 +50,10 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
         return this.expressionType;
     }
 
+    /**
+     * Unique name of destination
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -45,6 +61,10 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * AWS role ARN that grants access
+     * 
+     */
     @InputImport(name="roleArn", required=true)
     private final Input<String> roleArn;
 
@@ -52,6 +72,10 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
         return this.roleArn;
     }
 
+    /**
+     * A list of key-value pairs that contain metadata for the destination.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<DestinationTagArgs>> tags;
 

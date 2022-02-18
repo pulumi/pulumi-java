@@ -23,6 +23,10 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RatePlanArgs Empty = new RatePlanArgs();
 
+    /**
+     * Name of the API product that the rate plan is associated with.
+     * 
+     */
     @InputImport(name="apiproduct")
     private final @Nullable Input<String> apiproduct;
 
@@ -37,6 +41,10 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.apiproductId;
     }
 
+    /**
+     * Frequency at which the customer will be billed.
+     * 
+     */
     @InputImport(name="billingPeriod")
     private final @Nullable Input<RatePlanBillingPeriod> billingPeriod;
 
@@ -44,6 +52,10 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.billingPeriod == null ? Input.empty() : this.billingPeriod;
     }
 
+    /**
+     * API call volume ranges and the fees charged when the total number of API calls is within a given range. The method used to calculate the final fee depends on the selected pricing model. For example, if the pricing model is `STAIRSTEP` and the ranges are defined as follows: ```{ "start": 1, "end": 100, "fee": 75 }, { "start": 101, "end": 200, "fee": 100 }, }``` Then the following fees would be charged based on the total number of API calls (assuming the currency selected is `USD`): * 1 call costs $75 * 50 calls cost $75 * 150 calls cost $100 The number of API calls cannot exceed 200.
+     * 
+     */
     @InputImport(name="consumptionPricingRates")
     private final @Nullable Input<List<GoogleCloudApigeeV1RateRangeArgs>> consumptionPricingRates;
 
@@ -51,6 +63,10 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.consumptionPricingRates == null ? Input.empty() : this.consumptionPricingRates;
     }
 
+    /**
+     * Pricing model used for consumption-based charges.
+     * 
+     */
     @InputImport(name="consumptionPricingType")
     private final @Nullable Input<RatePlanConsumptionPricingType> consumptionPricingType;
 
@@ -58,6 +74,10 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.consumptionPricingType == null ? Input.empty() : this.consumptionPricingType;
     }
 
+    /**
+     * Currency to be used for billing. Consists of a three-letter code as defined by the [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) standard.
+     * 
+     */
     @InputImport(name="currencyCode")
     private final @Nullable Input<String> currencyCode;
 
@@ -65,6 +85,10 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.currencyCode == null ? Input.empty() : this.currencyCode;
     }
 
+    /**
+     * Description of the rate plan.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -72,6 +96,10 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Display name of the rate plan.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -79,6 +107,10 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * Time when the rate plan will expire in milliseconds since epoch. Set to 0 or `null` to indicate that the rate plan should never expire.
+     * 
+     */
     @InputImport(name="endTime")
     private final @Nullable Input<String> endTime;
 
@@ -86,6 +118,10 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.endTime == null ? Input.empty() : this.endTime;
     }
 
+    /**
+     * Frequency at which the fixed fee is charged.
+     * 
+     */
     @InputImport(name="fixedFeeFrequency")
     private final @Nullable Input<Integer> fixedFeeFrequency;
 
@@ -93,6 +129,10 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.fixedFeeFrequency == null ? Input.empty() : this.fixedFeeFrequency;
     }
 
+    /**
+     * Fixed amount that is charged at a defined interval and billed in advance of use of the API product. The fee will be prorated for the first billing period.
+     * 
+     */
     @InputImport(name="fixedRecurringFee")
     private final @Nullable Input<GoogleTypeMoneyArgs> fixedRecurringFee;
 
@@ -107,6 +147,10 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.organizationId;
     }
 
+    /**
+     * Details of the revenue sharing model.
+     * 
+     */
     @InputImport(name="revenueShareRates")
     private final @Nullable Input<List<GoogleCloudApigeeV1RevenueShareRangeArgs>> revenueShareRates;
 
@@ -114,6 +158,10 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.revenueShareRates == null ? Input.empty() : this.revenueShareRates;
     }
 
+    /**
+     * Method used to calculate the revenue that is shared with developers.
+     * 
+     */
     @InputImport(name="revenueShareType")
     private final @Nullable Input<RatePlanRevenueShareType> revenueShareType;
 
@@ -121,6 +169,10 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.revenueShareType == null ? Input.empty() : this.revenueShareType;
     }
 
+    /**
+     * Initial, one-time fee paid when purchasing the API product.
+     * 
+     */
     @InputImport(name="setupFee")
     private final @Nullable Input<GoogleTypeMoneyArgs> setupFee;
 
@@ -128,6 +180,10 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.setupFee == null ? Input.empty() : this.setupFee;
     }
 
+    /**
+     * Time when the rate plan becomes active in milliseconds since epoch.
+     * 
+     */
     @InputImport(name="startTime")
     private final @Nullable Input<String> startTime;
 
@@ -135,6 +191,10 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.startTime == null ? Input.empty() : this.startTime;
     }
 
+    /**
+     * Current state of the rate plan (draft or published).
+     * 
+     */
     @InputImport(name="state")
     private final @Nullable Input<RatePlanState> state;
 

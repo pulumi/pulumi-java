@@ -15,6 +15,12 @@ public final class TagTemplateFieldTypeArgs extends io.pulumi.resources.Resource
 
     public static final TagTemplateFieldTypeArgs Empty = new TagTemplateFieldTypeArgs();
 
+    /**
+     * Represents an enum type.
+     * Exactly one of `primitive_type` or `enum_type` must be set
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="enumType")
     private final @Nullable Input<TagTemplateFieldTypeEnumTypeArgs> enumType;
 
@@ -22,6 +28,12 @@ public final class TagTemplateFieldTypeArgs extends io.pulumi.resources.Resource
         return this.enumType == null ? Input.empty() : this.enumType;
     }
 
+    /**
+     * Represents primitive types - string, bool etc.
+     * Exactly one of `primitive_type` or `enum_type` must be set
+     * Possible values are `DOUBLE`, `STRING`, `BOOL`, and `TIMESTAMP`.
+     * 
+     */
     @InputImport(name="primitiveType")
     private final @Nullable Input<String> primitiveType;
 

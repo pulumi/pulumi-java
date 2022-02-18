@@ -13,6 +13,10 @@ public final class KeyRingImportJobArgs extends io.pulumi.resources.ResourceArgs
 
     public static final KeyRingImportJobArgs Empty = new KeyRingImportJobArgs();
 
+    /**
+     * It must be unique within a KeyRing and match the regular expression [a-zA-Z0-9_-]{1,63}
+     * 
+     */
     @InputImport(name="importJobId", required=true)
     private final Input<String> importJobId;
 
@@ -20,6 +24,11 @@ public final class KeyRingImportJobArgs extends io.pulumi.resources.ResourceArgs
         return this.importJobId;
     }
 
+    /**
+     * The wrapping method to be used for incoming key material.
+     * Possible values are `RSA_OAEP_3072_SHA1_AES_256` and `RSA_OAEP_4096_SHA1_AES_256`.
+     * 
+     */
     @InputImport(name="importMethod", required=true)
     private final Input<String> importMethod;
 
@@ -27,6 +36,11 @@ public final class KeyRingImportJobArgs extends io.pulumi.resources.ResourceArgs
         return this.importMethod;
     }
 
+    /**
+     * The KeyRing that this import job belongs to.
+     * Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
+     * 
+     */
     @InputImport(name="keyRing", required=true)
     private final Input<String> keyRing;
 
@@ -34,6 +48,12 @@ public final class KeyRingImportJobArgs extends io.pulumi.resources.ResourceArgs
         return this.keyRing;
     }
 
+    /**
+     * The protection level of the ImportJob. This must match the protectionLevel of the
+     * versionTemplate on the CryptoKey you attempt to import into.
+     * Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
+     * 
+     */
     @InputImport(name="protectionLevel", required=true)
     private final Input<String> protectionLevel;
 

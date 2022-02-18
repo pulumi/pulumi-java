@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class IngestionConnectionStringResponse {
+    /**
+     * The region where ingested logs and data resides
+     * 
+     */
     private final String location;
+    /**
+     * Connection string value
+     * 
+     */
     private final String value;
 
     @OutputCustomType.Constructor({"location","value"})
@@ -20,9 +28,17 @@ public final class IngestionConnectionStringResponse {
         this.value = Objects.requireNonNull(value);
     }
 
+    /**
+     * The region where ingested logs and data resides
+     * 
+     */
     public String getLocation() {
         return this.location;
     }
+    /**
+     * Connection string value
+     * 
+     */
     public String getValue() {
         return this.value;
     }

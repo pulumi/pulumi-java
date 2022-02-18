@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DatabaseInstanceClone {
+    /**
+     * The timestamp of the point in time that should be restored.
+     * 
+     */
     private final @Nullable String pointInTime;
+    /**
+     * Name of the source instance which will be cloned.
+     * 
+     */
     private final String sourceInstanceName;
 
     @OutputCustomType.Constructor({"pointInTime","sourceInstanceName"})
@@ -22,9 +30,17 @@ public final class DatabaseInstanceClone {
         this.sourceInstanceName = Objects.requireNonNull(sourceInstanceName);
     }
 
+    /**
+     * The timestamp of the point in time that should be restored.
+     * 
+     */
     public Optional<String> getPointInTime() {
         return Optional.ofNullable(this.pointInTime);
     }
+    /**
+     * Name of the source instance which will be cloned.
+     * 
+     */
     public String getSourceInstanceName() {
         return this.sourceInstanceName;
     }

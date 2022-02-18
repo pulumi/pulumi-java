@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties of column in sync group table.
+ * 
+ */
 public final class SyncGroupSchemaTableColumnResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SyncGroupSchemaTableColumnResponse Empty = new SyncGroupSchemaTableColumnResponse();
 
+    /**
+     * Data size of the column.
+     * 
+     */
     @InputImport(name="dataSize")
     private final @Nullable String dataSize;
 
@@ -21,6 +29,10 @@ public final class SyncGroupSchemaTableColumnResponse extends io.pulumi.resource
         return this.dataSize == null ? Optional.empty() : Optional.ofNullable(this.dataSize);
     }
 
+    /**
+     * Data type of the column.
+     * 
+     */
     @InputImport(name="dataType")
     private final @Nullable String dataType;
 
@@ -28,6 +40,10 @@ public final class SyncGroupSchemaTableColumnResponse extends io.pulumi.resource
         return this.dataType == null ? Optional.empty() : Optional.ofNullable(this.dataType);
     }
 
+    /**
+     * Quoted name of sync group table column.
+     * 
+     */
     @InputImport(name="quotedName")
     private final @Nullable String quotedName;
 

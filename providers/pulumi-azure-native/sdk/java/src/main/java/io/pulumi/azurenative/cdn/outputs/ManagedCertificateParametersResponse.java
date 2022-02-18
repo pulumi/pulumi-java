@@ -9,6 +9,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ManagedCertificateParametersResponse {
+    /**
+     * The type of the Secret to create.
+     * Expected value is 'ManagedCertificate'.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"type"})
@@ -16,6 +21,11 @@ public final class ManagedCertificateParametersResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * The type of the Secret to create.
+     * Expected value is 'ManagedCertificate'.
+     * 
+     */
     public String getType() {
         return this.type;
     }

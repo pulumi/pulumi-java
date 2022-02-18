@@ -14,10 +14,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * JobStatus represents the current state of a Job.
+ * 
+ */
 public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JobStatusArgs Empty = new JobStatusArgs();
 
+    /**
+     * Optional. The number of actively running instances. +optional
+     * 
+     */
     @InputImport(name="active")
     private final @Nullable Input<Integer> active;
 
@@ -25,6 +33,10 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
         return this.active == null ? Input.empty() : this.active;
     }
 
+    /**
+     * Optional. Represents time when the job was completed. It is not guaranteed to be set in happens-before order across separate operations. It is represented in RFC3339 form and is in UTC. +optional
+     * 
+     */
     @InputImport(name="completionTime")
     private final @Nullable Input<String> completionTime;
 
@@ -32,6 +44,10 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
         return this.completionTime == null ? Input.empty() : this.completionTime;
     }
 
+    /**
+     * Optional. The latest available observations of a job's current state. More info: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/ +optional
+     * 
+     */
     @InputImport(name="conditions")
     private final @Nullable Input<List<JobConditionArgs>> conditions;
 
@@ -39,6 +55,10 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
         return this.conditions == null ? Input.empty() : this.conditions;
     }
 
+    /**
+     * Optional. The number of instances which reached phase Failed. +optional
+     * 
+     */
     @InputImport(name="failed")
     private final @Nullable Input<Integer> failed;
 
@@ -46,6 +66,10 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
         return this.failed == null ? Input.empty() : this.failed;
     }
 
+    /**
+     * Optional. ImageDigest holds the resolved digest for the image specified within .Spec.Template.Spec.Container.Image. The digest is resolved during the creation of the Job. This field holds the digest value regardless of whether a tag or digest was originally specified in the Container object.
+     * 
+     */
     @InputImport(name="imageDigest")
     private final @Nullable Input<String> imageDigest;
 
@@ -53,6 +77,10 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
         return this.imageDigest == null ? Input.empty() : this.imageDigest;
     }
 
+    /**
+     * Optional. Status of completed, failed, and running instances. +optional
+     * 
+     */
     @InputImport(name="instances")
     private final @Nullable Input<List<InstanceStatusArgs>> instances;
 
@@ -60,6 +88,10 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
         return this.instances == null ? Input.empty() : this.instances;
     }
 
+    /**
+     * Optional. The 'generation' of the job that was last processed by the controller.
+     * 
+     */
     @InputImport(name="observedGeneration")
     private final @Nullable Input<Integer> observedGeneration;
 
@@ -67,6 +99,10 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
         return this.observedGeneration == null ? Input.empty() : this.observedGeneration;
     }
 
+    /**
+     * Optional. Represents time when the job was acknowledged by the job controller. It is not guaranteed to be set in happens-before order across separate operations. It is represented in RFC3339 form and is in UTC. +optional
+     * 
+     */
     @InputImport(name="startTime")
     private final @Nullable Input<String> startTime;
 
@@ -74,6 +110,10 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
         return this.startTime == null ? Input.empty() : this.startTime;
     }
 
+    /**
+     * Optional. The number of instances which reached phase Succeeded. +optional
+     * 
+     */
     @InputImport(name="succeeded")
     private final @Nullable Input<Integer> succeeded;
 

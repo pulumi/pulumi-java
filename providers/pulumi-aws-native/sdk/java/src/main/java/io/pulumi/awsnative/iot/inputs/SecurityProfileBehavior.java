@@ -13,6 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A security profile behavior.
+ * 
+ */
 public final class SecurityProfileBehavior extends io.pulumi.resources.InvokeArgs {
 
     public static final SecurityProfileBehavior Empty = new SecurityProfileBehavior();
@@ -24,6 +28,10 @@ public final class SecurityProfileBehavior extends io.pulumi.resources.InvokeArg
         return this.criteria == null ? Optional.empty() : Optional.ofNullable(this.criteria);
     }
 
+    /**
+     * What is measured by the behavior.
+     * 
+     */
     @InputImport(name="metric")
     private final @Nullable String metric;
 
@@ -38,6 +46,10 @@ public final class SecurityProfileBehavior extends io.pulumi.resources.InvokeArg
         return this.metricDimension == null ? Optional.empty() : Optional.ofNullable(this.metricDimension);
     }
 
+    /**
+     * The name for the behavior.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -45,6 +57,10 @@ public final class SecurityProfileBehavior extends io.pulumi.resources.InvokeArg
         return this.name;
     }
 
+    /**
+     * Manage Detect alarm SNS notifications by setting behavior notification to on or suppressed. Detect will continue to performing device behavior evaluations. However, suppressed alarms wouldn't be forwarded for SNS notification.
+     * 
+     */
     @InputImport(name="suppressAlerts")
     private final @Nullable Boolean suppressAlerts;
 

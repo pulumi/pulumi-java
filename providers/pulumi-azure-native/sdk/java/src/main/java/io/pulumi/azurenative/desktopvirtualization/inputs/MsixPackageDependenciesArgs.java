@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Schema for MSIX Package Dependencies properties.
+ * 
+ */
 public final class MsixPackageDependenciesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MsixPackageDependenciesArgs Empty = new MsixPackageDependenciesArgs();
 
+    /**
+     * Name of package dependency.
+     * 
+     */
     @InputImport(name="dependencyName")
     private final @Nullable Input<String> dependencyName;
 
@@ -21,6 +29,10 @@ public final class MsixPackageDependenciesArgs extends io.pulumi.resources.Resou
         return this.dependencyName == null ? Input.empty() : this.dependencyName;
     }
 
+    /**
+     * Dependency version required.
+     * 
+     */
     @InputImport(name="minVersion")
     private final @Nullable Input<String> minVersion;
 
@@ -28,6 +40,10 @@ public final class MsixPackageDependenciesArgs extends io.pulumi.resources.Resou
         return this.minVersion == null ? Input.empty() : this.minVersion;
     }
 
+    /**
+     * Name of dependency publisher.
+     * 
+     */
     @InputImport(name="publisher")
     private final @Nullable Input<String> publisher;
 

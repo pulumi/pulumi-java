@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The offer type for the database
+     * 
+     */
     @EnumType
     public enum DatabaseAccountOfferType {
         Standard("Standard");

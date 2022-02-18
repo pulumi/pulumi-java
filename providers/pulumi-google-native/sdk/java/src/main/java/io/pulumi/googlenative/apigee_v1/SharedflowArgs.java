@@ -23,6 +23,10 @@ public final class SharedflowArgs extends io.pulumi.resources.ResourceArgs {
         return this.action;
     }
 
+    /**
+     * The HTTP Content-Type header value specifying the content type of the body.
+     * 
+     */
     @InputImport(name="contentType")
     private final @Nullable Input<String> contentType;
 
@@ -30,6 +34,10 @@ public final class SharedflowArgs extends io.pulumi.resources.ResourceArgs {
         return this.contentType == null ? Input.empty() : this.contentType;
     }
 
+    /**
+     * The HTTP request/response body as raw binary.
+     * 
+     */
     @InputImport(name="data")
     private final @Nullable Input<String> data;
 
@@ -37,6 +45,10 @@ public final class SharedflowArgs extends io.pulumi.resources.ResourceArgs {
         return this.data == null ? Input.empty() : this.data;
     }
 
+    /**
+     * Application specific response metadata. Must be set in the first response for streaming APIs.
+     * 
+     */
     @InputImport(name="extensions")
     private final @Nullable Input<List<Map<String,String>>> extensions;
 

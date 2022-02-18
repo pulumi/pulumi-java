@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TopicResponse {
+    /**
+     * The resource name of the Pub/Sub topic that will be published to, in the following format: `projects/*{@literal /}topics/*`. For publication to succeed, the Secret Manager P4SA must have `pubsub.publisher` permissions on the topic.
+     * 
+     */
     private final String name;
 
     @OutputCustomType.Constructor({"name"})
@@ -16,6 +20,10 @@ public final class TopicResponse {
         this.name = Objects.requireNonNull(name);
     }
 
+    /**
+     * The resource name of the Pub/Sub topic that will be published to, in the following format: `projects/*{@literal /}topics/*`. For publication to succeed, the Secret Manager P4SA must have `pubsub.publisher` permissions on the topic.
+     * 
+     */
     public String getName() {
         return this.name;
     }

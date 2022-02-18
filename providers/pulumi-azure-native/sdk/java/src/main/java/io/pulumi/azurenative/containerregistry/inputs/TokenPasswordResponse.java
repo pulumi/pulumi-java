@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The password that will be used for authenticating the token of a container registry.
+ * 
+ */
 public final class TokenPasswordResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TokenPasswordResponse Empty = new TokenPasswordResponse();
 
+    /**
+     * The creation datetime of the password.
+     * 
+     */
     @InputImport(name="creationTime")
     private final @Nullable String creationTime;
 
@@ -21,6 +29,10 @@ public final class TokenPasswordResponse extends io.pulumi.resources.InvokeArgs 
         return this.creationTime == null ? Optional.empty() : Optional.ofNullable(this.creationTime);
     }
 
+    /**
+     * The expiry datetime of the password.
+     * 
+     */
     @InputImport(name="expiry")
     private final @Nullable String expiry;
 
@@ -28,6 +40,10 @@ public final class TokenPasswordResponse extends io.pulumi.resources.InvokeArgs 
         return this.expiry == null ? Optional.empty() : Optional.ofNullable(this.expiry);
     }
 
+    /**
+     * The password name "password1" or "password2"
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -35,6 +51,10 @@ public final class TokenPasswordResponse extends io.pulumi.resources.InvokeArgs 
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The password value.
+     * 
+     */
     @InputImport(name="value", required=true)
     private final String value;
 

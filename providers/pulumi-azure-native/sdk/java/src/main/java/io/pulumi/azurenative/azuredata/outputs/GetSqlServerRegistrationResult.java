@@ -13,14 +13,50 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetSqlServerRegistrationResult {
+    /**
+     * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * 
+     */
     private final String id;
+    /**
+     * The geo-location where the resource lives
+     * 
+     */
     private final String location;
+    /**
+     * The name of the resource
+     * 
+     */
     private final String name;
+    /**
+     * Optional Properties as JSON string
+     * 
+     */
     private final @Nullable String propertyBag;
+    /**
+     * Resource Group Name
+     * 
+     */
     private final @Nullable String resourceGroup;
+    /**
+     * Subscription Id
+     * 
+     */
     private final @Nullable String subscriptionId;
+    /**
+     * Read only system data
+     * 
+     */
     private final SystemDataResponse systemData;
+    /**
+     * Resource tags.
+     * 
+     */
     private final @Nullable Map<String,String> tags;
+    /**
+     * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"id","location","name","propertyBag","resourceGroup","subscriptionId","systemData","tags","type"})
@@ -45,30 +81,66 @@ public final class GetSqlServerRegistrationResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * The geo-location where the resource lives
+     * 
+     */
     public String getLocation() {
         return this.location;
     }
+    /**
+     * The name of the resource
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Optional Properties as JSON string
+     * 
+     */
     public Optional<String> getPropertyBag() {
         return Optional.ofNullable(this.propertyBag);
     }
+    /**
+     * Resource Group Name
+     * 
+     */
     public Optional<String> getResourceGroup() {
         return Optional.ofNullable(this.resourceGroup);
     }
+    /**
+     * Subscription Id
+     * 
+     */
     public Optional<String> getSubscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
+    /**
+     * Read only system data
+     * 
+     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+    /**
+     * Resource tags.
+     * 
+     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+    /**
+     * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
+     * 
+     */
     public String getType() {
         return this.type;
     }

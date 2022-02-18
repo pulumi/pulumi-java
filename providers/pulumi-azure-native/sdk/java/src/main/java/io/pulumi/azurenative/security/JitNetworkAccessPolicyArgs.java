@@ -17,6 +17,10 @@ public final class JitNetworkAccessPolicyArgs extends io.pulumi.resources.Resour
 
     public static final JitNetworkAccessPolicyArgs Empty = new JitNetworkAccessPolicyArgs();
 
+    /**
+     * The location where ASC stores the data of the subscription. can be retrieved from Get locations
+     * 
+     */
     @InputImport(name="ascLocation", required=true)
     private final Input<String> ascLocation;
 
@@ -24,6 +28,10 @@ public final class JitNetworkAccessPolicyArgs extends io.pulumi.resources.Resour
         return this.ascLocation;
     }
 
+    /**
+     * Name of a Just-in-Time access configuration policy.
+     * 
+     */
     @InputImport(name="jitNetworkAccessPolicyName")
     private final @Nullable Input<String> jitNetworkAccessPolicyName;
 
@@ -31,6 +39,10 @@ public final class JitNetworkAccessPolicyArgs extends io.pulumi.resources.Resour
         return this.jitNetworkAccessPolicyName == null ? Input.empty() : this.jitNetworkAccessPolicyName;
     }
 
+    /**
+     * Kind of the resource
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -45,6 +57,10 @@ public final class JitNetworkAccessPolicyArgs extends io.pulumi.resources.Resour
         return this.requests == null ? Input.empty() : this.requests;
     }
 
+    /**
+     * The name of the resource group within the user's subscription. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -52,6 +68,10 @@ public final class JitNetworkAccessPolicyArgs extends io.pulumi.resources.Resour
         return this.resourceGroupName;
     }
 
+    /**
+     * Configurations for Microsoft.Compute/virtualMachines resource type.
+     * 
+     */
     @InputImport(name="virtualMachines", required=true)
     private final Input<List<JitNetworkAccessPolicyVirtualMachineArgs>> virtualMachines;
 

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Specify public IP sku tier
+     * 
+     */
     @EnumType
     public enum PublicIPAddressSkuTier {
         Regional("Regional"),

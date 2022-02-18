@@ -16,6 +16,10 @@ public final class ConsumerQuotaOverrideArgs extends io.pulumi.resources.Resourc
 
     public static final ConsumerQuotaOverrideArgs Empty = new ConsumerQuotaOverrideArgs();
 
+    /**
+     * If this map is nonempty, then this override applies only to specific values for dimensions defined in the limit unit.
+     * 
+     */
     @InputImport(name="dimensions")
     private final @Nullable Input<Map<String,String>> dimensions;
 
@@ -23,6 +27,11 @@ public final class ConsumerQuotaOverrideArgs extends io.pulumi.resources.Resourc
         return this.dimensions == null ? Input.empty() : this.dimensions;
     }
 
+    /**
+     * If the new quota would decrease the existing quota by more than 10%, the request is rejected.
+     * If `force` is `true`, that safety check is ignored.
+     * 
+     */
     @InputImport(name="force")
     private final @Nullable Input<Boolean> force;
 
@@ -30,6 +39,10 @@ public final class ConsumerQuotaOverrideArgs extends io.pulumi.resources.Resourc
         return this.force == null ? Input.empty() : this.force;
     }
 
+    /**
+     * The limit on the metric, e.g. `/project/region`.
+     * 
+     */
     @InputImport(name="limit", required=true)
     private final Input<String> limit;
 
@@ -37,6 +50,10 @@ public final class ConsumerQuotaOverrideArgs extends io.pulumi.resources.Resourc
         return this.limit;
     }
 
+    /**
+     * The metric that should be limited, e.g. `compute.googleapis.com/cpus`.
+     * 
+     */
     @InputImport(name="metric", required=true)
     private final Input<String> metric;
 
@@ -44,6 +61,10 @@ public final class ConsumerQuotaOverrideArgs extends io.pulumi.resources.Resourc
         return this.metric;
     }
 
+    /**
+     * The overriding quota limit value. Can be any nonnegative integer, or -1 (unlimited quota).
+     * 
+     */
     @InputImport(name="overrideValue", required=true)
     private final Input<String> overrideValue;
 
@@ -51,6 +72,11 @@ public final class ConsumerQuotaOverrideArgs extends io.pulumi.resources.Resourc
         return this.overrideValue;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -58,6 +84,10 @@ public final class ConsumerQuotaOverrideArgs extends io.pulumi.resources.Resourc
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The service that the metrics belong to, e.g. `compute.googleapis.com`.
+     * 
+     */
     @InputImport(name="service", required=true)
     private final Input<String> service;
 

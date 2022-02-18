@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A reference to a GKE cluster.
+ * 
+ */
 public final class GkeClusterReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GkeClusterReferenceResponse Empty = new GkeClusterReferenceResponse();
 
+    /**
+     * The full or partial name of a GKE cluster, using one of the following forms: * `projects/{project}/locations/{location}/clusters/{cluster}` * `locations/{location}/clusters/{cluster}` * `{cluster}` If project and location are not specified, the project and location of the GameServerCluster resource are used to generate the full name of the GKE cluster.
+     * 
+     */
     @InputImport(name="cluster", required=true)
     private final String cluster;
 

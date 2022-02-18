@@ -14,6 +14,11 @@ public final class GetMeshIstioServiceArgs extends io.pulumi.resources.InvokeArg
 
     public static final GetMeshIstioServiceArgs Empty = new GetMeshIstioServiceArgs();
 
+    /**
+     * Identifier for the mesh in which this Istio service is defined.
+     * Corresponds to the meshUid metric label in Istio metrics.
+     * 
+     */
     @InputImport(name="meshUid", required=true)
     private final String meshUid;
 
@@ -21,6 +26,11 @@ public final class GetMeshIstioServiceArgs extends io.pulumi.resources.InvokeArg
         return this.meshUid;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -28,6 +38,11 @@ public final class GetMeshIstioServiceArgs extends io.pulumi.resources.InvokeArg
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
+    /**
+     * The name of the Istio service underlying this service.
+     * Corresponds to the destination_service_name metric label in Istio metrics.
+     * 
+     */
     @InputImport(name="serviceName", required=true)
     private final String serviceName;
 
@@ -35,6 +50,11 @@ public final class GetMeshIstioServiceArgs extends io.pulumi.resources.InvokeArg
         return this.serviceName;
     }
 
+    /**
+     * The namespace of the Istio service underlying this service.
+     * Corresponds to the destination_service_namespace metric label in Istio metrics.
+     * 
+     */
     @InputImport(name="serviceNamespace", required=true)
     private final String serviceNamespace;
 

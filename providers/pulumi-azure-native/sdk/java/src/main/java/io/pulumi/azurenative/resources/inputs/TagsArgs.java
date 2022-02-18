@@ -11,6 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A dictionary of name and value pairs.
+ * 
+ */
 public final class TagsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TagsArgs Empty = new TagsArgs();

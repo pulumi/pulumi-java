@@ -13,6 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The configuration information that will be updated for this workgroup, which includes the location in Amazon S3 where query results are stored, the encryption option, if any, used for query results, whether the Amazon CloudWatch Metrics are enabled for the workgroup, whether the workgroup settings override the client-side settings, and the data usage limit for the amount of bytes scanned per query, if it is specified.
+ * 
+ */
 public final class WorkGroupConfigurationUpdatesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WorkGroupConfigurationUpdatesArgs Empty = new WorkGroupConfigurationUpdatesArgs();

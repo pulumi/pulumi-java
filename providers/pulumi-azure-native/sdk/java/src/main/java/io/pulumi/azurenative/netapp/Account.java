@@ -18,57 +18,142 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * NetApp account resource
+ * API Version: 2020-12-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:netapp:Account account1 /subscriptions/D633CC2E-722B-4AE1-B636-BBD9E4C60ED9/resourceGroups/myRG/providers/Microsoft.NetApp/netAppAccounts/account1 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:netapp:Account")
 public class Account extends io.pulumi.resources.CustomResource {
+    /**
+     * Active Directories
+     * 
+     */
     @OutputExport(name="activeDirectories", type=List.class, parameters={ActiveDirectoryResponse.class})
     private Output</* @Nullable */ List<ActiveDirectoryResponse>> activeDirectories;
 
+    /**
+     * @return Active Directories
+     * 
+     */
     public Output</* @Nullable */ List<ActiveDirectoryResponse>> getActiveDirectories() {
         return this.activeDirectories;
     }
+    /**
+     * Encryption settings
+     * 
+     */
     @OutputExport(name="encryption", type=AccountEncryptionResponse.class, parameters={})
     private Output</* @Nullable */ AccountEncryptionResponse> encryption;
 
+    /**
+     * @return Encryption settings
+     * 
+     */
     public Output</* @Nullable */ AccountEncryptionResponse> getEncryption() {
         return this.encryption;
     }
+    /**
+     * Resource location
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * Resource name
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Azure lifecycle management
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return Azure lifecycle management
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The system meta data relating to this resource.
+     * 
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return The system meta data relating to this resource.
+     * 
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * Resource tags
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Resource type
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Account(String name, AccountArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:netapp:Account", name, args == null ? AccountArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -107,6 +192,14 @@ public class Account extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Account get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Account(name, id, options);
     }

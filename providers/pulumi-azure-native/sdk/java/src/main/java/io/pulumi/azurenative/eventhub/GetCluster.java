@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCluster {
+/**
+ * Single Event Hubs Cluster resource in List or Get operations.
+ * API Version: 2018-01-01-preview.
+ * 
+ *
+ * Single Event Hubs Cluster resource in List or Get operations.
+ * 
+ */
     public static CompletableFuture<GetClusterResult> invokeAsync(GetClusterArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventhub:getCluster", TypeShape.of(GetClusterResult.class), args == null ? GetClusterArgs.Empty : args, Utilities.withVersion(options));
     }

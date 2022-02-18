@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties of a build argument.
+ * 
+ */
 public final class BuildArgumentResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BuildArgumentResponse Empty = new BuildArgumentResponse();
 
+    /**
+     * Flag to indicate whether the argument represents a secret and want to be removed from build logs.
+     * 
+     */
     @InputImport(name="isSecret")
     private final @Nullable Boolean isSecret;
 
@@ -22,6 +30,10 @@ public final class BuildArgumentResponse extends io.pulumi.resources.InvokeArgs 
         return this.isSecret == null ? Optional.empty() : Optional.ofNullable(this.isSecret);
     }
 
+    /**
+     * The name of the argument.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -29,6 +41,10 @@ public final class BuildArgumentResponse extends io.pulumi.resources.InvokeArgs 
         return this.name;
     }
 
+    /**
+     * The type of the argument.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -36,6 +52,10 @@ public final class BuildArgumentResponse extends io.pulumi.resources.InvokeArgs 
         return this.type;
     }
 
+    /**
+     * The value of the argument.
+     * 
+     */
     @InputImport(name="value", required=true)
     private final String value;
 

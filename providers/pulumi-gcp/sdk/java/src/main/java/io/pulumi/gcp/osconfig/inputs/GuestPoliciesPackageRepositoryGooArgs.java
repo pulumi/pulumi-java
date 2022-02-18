@@ -13,6 +13,13 @@ public final class GuestPoliciesPackageRepositoryGooArgs extends io.pulumi.resou
 
     public static final GuestPoliciesPackageRepositoryGooArgs Empty = new GuestPoliciesPackageRepositoryGooArgs();
 
+    /**
+     * Unique identifier for the recipe. Only one recipe with a given name is installed on an instance.
+     * Names are also used to identify resources which helps to determine whether guest policies have conflicts.
+     * This means that requests to create multiple recipes with the same name and version are rejected since they
+     * could potentially have conflicting assignments.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -20,6 +27,10 @@ public final class GuestPoliciesPackageRepositoryGooArgs extends io.pulumi.resou
         return this.name;
     }
 
+    /**
+     * The url of the repository.
+     * 
+     */
     @InputImport(name="url", required=true)
     private final Input<String> url;
 

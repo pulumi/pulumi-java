@@ -12,8 +12,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class LoadBalancerConfigurationResponse {
+    /**
+     * Resource Id
+     * 
+     */
     private final @Nullable String id;
+    /**
+     * The name of the Load balancer
+     * 
+     */
     private final String name;
+    /**
+     * Properties of the load balancer configuration.
+     * 
+     */
     private final LoadBalancerConfigurationPropertiesResponse properties;
 
     @OutputCustomType.Constructor({"id","name","properties"})
@@ -26,12 +38,24 @@ public final class LoadBalancerConfigurationResponse {
         this.properties = Objects.requireNonNull(properties);
     }
 
+    /**
+     * Resource Id
+     * 
+     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+    /**
+     * The name of the Load balancer
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Properties of the load balancer configuration.
+     * 
+     */
     public LoadBalancerConfigurationPropertiesResponse getProperties() {
         return this.properties;
     }

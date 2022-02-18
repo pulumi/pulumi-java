@@ -13,6 +13,11 @@ public final class DataStoreIndexPropertyGetArgs extends io.pulumi.resources.Res
 
     public static final DataStoreIndexPropertyGetArgs Empty = new DataStoreIndexPropertyGetArgs();
 
+    /**
+     * The direction the index should optimize for sorting.
+     * Possible values are `ASCENDING` and `DESCENDING`.
+     * 
+     */
     @InputImport(name="direction", required=true)
     private final Input<String> direction;
 
@@ -20,6 +25,10 @@ public final class DataStoreIndexPropertyGetArgs extends io.pulumi.resources.Res
         return this.direction;
     }
 
+    /**
+     * The property name to index.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

@@ -10,10 +10,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Row of TableCard.
+ * 
+ */
 public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardRowResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowV2beta1IntentMessageTableCardRowResponse Empty = new GoogleCloudDialogflowV2beta1IntentMessageTableCardRowResponse();
 
+    /**
+     * Optional. List of cells that make up this row.
+     * 
+     */
     @InputImport(name="cells", required=true)
     private final List<GoogleCloudDialogflowV2beta1IntentMessageTableCardCellResponse> cells;
 
@@ -21,6 +29,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardRowResponse
         return this.cells;
     }
 
+    /**
+     * Optional. Whether to add a visual divider after this row.
+     * 
+     */
     @InputImport(name="dividerAfter", required=true)
     private final Boolean dividerAfter;
 

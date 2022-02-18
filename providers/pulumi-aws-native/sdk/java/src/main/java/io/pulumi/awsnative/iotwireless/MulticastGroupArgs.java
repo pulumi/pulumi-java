@@ -17,6 +17,10 @@ public final class MulticastGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MulticastGroupArgs Empty = new MulticastGroupArgs();
 
+    /**
+     * Wireless device to associate. Only for update request.
+     * 
+     */
     @InputImport(name="associateWirelessDevice")
     private final @Nullable Input<String> associateWirelessDevice;
 
@@ -24,6 +28,10 @@ public final class MulticastGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.associateWirelessDevice == null ? Input.empty() : this.associateWirelessDevice;
     }
 
+    /**
+     * Multicast group description
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -31,6 +39,10 @@ public final class MulticastGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Wireless device to disassociate. Only for update request.
+     * 
+     */
     @InputImport(name="disassociateWirelessDevice")
     private final @Nullable Input<String> disassociateWirelessDevice;
 
@@ -38,6 +50,10 @@ public final class MulticastGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.disassociateWirelessDevice == null ? Input.empty() : this.disassociateWirelessDevice;
     }
 
+    /**
+     * Multicast group LoRaWAN
+     * 
+     */
     @InputImport(name="loRaWAN", required=true)
     private final Input<MulticastGroupLoRaWANArgs> loRaWAN;
 
@@ -45,6 +61,10 @@ public final class MulticastGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.loRaWAN;
     }
 
+    /**
+     * Name of Multicast group
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -52,6 +72,10 @@ public final class MulticastGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * A list of key-value pairs that contain metadata for the Multicast group.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<MulticastGroupTagArgs>> tags;
 

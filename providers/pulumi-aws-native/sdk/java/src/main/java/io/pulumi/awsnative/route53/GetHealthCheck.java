@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetHealthCheck {
+/**
+ * Resource schema for AWS::Route53::HealthCheck.
+ * 
+ */
     public static CompletableFuture<GetHealthCheckResult> invokeAsync(GetHealthCheckArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:route53:getHealthCheck", TypeShape.of(GetHealthCheckResult.class), args == null ? GetHealthCheckArgs.Empty : args, Utilities.withVersion(options));
     }

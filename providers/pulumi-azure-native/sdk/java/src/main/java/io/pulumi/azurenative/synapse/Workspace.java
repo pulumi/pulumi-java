@@ -24,141 +24,338 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * A workspace
+ * API Version: 2021-03-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:synapse:Workspace workspace1 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup1/providers/Microsoft.Synapse/workspaces/workspace1 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:synapse:Workspace")
 public class Workspace extends io.pulumi.resources.CustomResource {
+    /**
+     * The ADLA resource ID.
+     * 
+     */
     @OutputExport(name="adlaResourceId", type=String.class, parameters={})
     private Output<String> adlaResourceId;
 
+    /**
+     * @return The ADLA resource ID.
+     * 
+     */
     public Output<String> getAdlaResourceId() {
         return this.adlaResourceId;
     }
+    /**
+     * Connectivity endpoints
+     * 
+     */
     @OutputExport(name="connectivityEndpoints", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> connectivityEndpoints;
 
+    /**
+     * @return Connectivity endpoints
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getConnectivityEndpoints() {
         return this.connectivityEndpoints;
     }
+    /**
+     * Workspace default data lake storage account details
+     * 
+     */
     @OutputExport(name="defaultDataLakeStorage", type=DataLakeStorageAccountDetailsResponse.class, parameters={})
     private Output</* @Nullable */ DataLakeStorageAccountDetailsResponse> defaultDataLakeStorage;
 
+    /**
+     * @return Workspace default data lake storage account details
+     * 
+     */
     public Output</* @Nullable */ DataLakeStorageAccountDetailsResponse> getDefaultDataLakeStorage() {
         return this.defaultDataLakeStorage;
     }
+    /**
+     * The encryption details of the workspace
+     * 
+     */
     @OutputExport(name="encryption", type=EncryptionDetailsResponse.class, parameters={})
     private Output</* @Nullable */ EncryptionDetailsResponse> encryption;
 
+    /**
+     * @return The encryption details of the workspace
+     * 
+     */
     public Output</* @Nullable */ EncryptionDetailsResponse> getEncryption() {
         return this.encryption;
     }
+    /**
+     * Workspace level configs and feature flags
+     * 
+     */
     @OutputExport(name="extraProperties", type=Map.class, parameters={String.class, Object.class})
     private Output<Map<String,Object>> extraProperties;
 
+    /**
+     * @return Workspace level configs and feature flags
+     * 
+     */
     public Output<Map<String,Object>> getExtraProperties() {
         return this.extraProperties;
     }
+    /**
+     * Identity of the workspace
+     * 
+     */
     @OutputExport(name="identity", type=ManagedIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ManagedIdentityResponse> identity;
 
+    /**
+     * @return Identity of the workspace
+     * 
+     */
     public Output</* @Nullable */ ManagedIdentityResponse> getIdentity() {
         return this.identity;
     }
+    /**
+     * The geo-location where the resource lives
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * Workspace managed resource group. The resource group name uniquely identifies the resource group within the user subscriptionId. The resource group name must be no longer than 90 characters long, and must be alphanumeric characters (Char.IsLetterOrDigit()) and '-', '_', '(', ')' and'.'. Note that the name cannot end with '.'
+     * 
+     */
     @OutputExport(name="managedResourceGroupName", type=String.class, parameters={})
     private Output</* @Nullable */ String> managedResourceGroupName;
 
+    /**
+     * @return Workspace managed resource group. The resource group name uniquely identifies the resource group within the user subscriptionId. The resource group name must be no longer than 90 characters long, and must be alphanumeric characters (Char.IsLetterOrDigit()) and '-', '_', '(', ')' and'.'. Note that the name cannot end with '.'
+     * 
+     */
     public Output</* @Nullable */ String> getManagedResourceGroupName() {
         return this.managedResourceGroupName;
     }
+    /**
+     * Setting this to 'default' will ensure that all compute for this workspace is in a virtual network managed on behalf of the user.
+     * 
+     */
     @OutputExport(name="managedVirtualNetwork", type=String.class, parameters={})
     private Output</* @Nullable */ String> managedVirtualNetwork;
 
+    /**
+     * @return Setting this to 'default' will ensure that all compute for this workspace is in a virtual network managed on behalf of the user.
+     * 
+     */
     public Output</* @Nullable */ String> getManagedVirtualNetwork() {
         return this.managedVirtualNetwork;
     }
+    /**
+     * Managed Virtual Network Settings
+     * 
+     */
     @OutputExport(name="managedVirtualNetworkSettings", type=ManagedVirtualNetworkSettingsResponse.class, parameters={})
     private Output</* @Nullable */ ManagedVirtualNetworkSettingsResponse> managedVirtualNetworkSettings;
 
+    /**
+     * @return Managed Virtual Network Settings
+     * 
+     */
     public Output</* @Nullable */ ManagedVirtualNetworkSettingsResponse> getManagedVirtualNetworkSettings() {
         return this.managedVirtualNetworkSettings;
     }
+    /**
+     * The name of the resource
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Private endpoint connections to the workspace
+     * 
+     */
     @OutputExport(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
     private Output</* @Nullable */ List<PrivateEndpointConnectionResponse>> privateEndpointConnections;
 
+    /**
+     * @return Private endpoint connections to the workspace
+     * 
+     */
     public Output</* @Nullable */ List<PrivateEndpointConnectionResponse>> getPrivateEndpointConnections() {
         return this.privateEndpointConnections;
     }
+    /**
+     * Resource provisioning state
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return Resource provisioning state
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Enable or Disable public network access to workspace
+     * 
+     */
     @OutputExport(name="publicNetworkAccess", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicNetworkAccess;
 
+    /**
+     * @return Enable or Disable public network access to workspace
+     * 
+     */
     public Output</* @Nullable */ String> getPublicNetworkAccess() {
         return this.publicNetworkAccess;
     }
+    /**
+     * Purview Configuration
+     * 
+     */
     @OutputExport(name="purviewConfiguration", type=PurviewConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ PurviewConfigurationResponse> purviewConfiguration;
 
+    /**
+     * @return Purview Configuration
+     * 
+     */
     public Output</* @Nullable */ PurviewConfigurationResponse> getPurviewConfiguration() {
         return this.purviewConfiguration;
     }
+    /**
+     * Login for workspace SQL active directory administrator
+     * 
+     */
     @OutputExport(name="sqlAdministratorLogin", type=String.class, parameters={})
     private Output</* @Nullable */ String> sqlAdministratorLogin;
 
+    /**
+     * @return Login for workspace SQL active directory administrator
+     * 
+     */
     public Output</* @Nullable */ String> getSqlAdministratorLogin() {
         return this.sqlAdministratorLogin;
     }
+    /**
+     * SQL administrator login password
+     * 
+     */
     @OutputExport(name="sqlAdministratorLoginPassword", type=String.class, parameters={})
     private Output</* @Nullable */ String> sqlAdministratorLoginPassword;
 
+    /**
+     * @return SQL administrator login password
+     * 
+     */
     public Output</* @Nullable */ String> getSqlAdministratorLoginPassword() {
         return this.sqlAdministratorLoginPassword;
     }
+    /**
+     * Resource tags.
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * Virtual Network profile
+     * 
+     */
     @OutputExport(name="virtualNetworkProfile", type=VirtualNetworkProfileResponse.class, parameters={})
     private Output</* @Nullable */ VirtualNetworkProfileResponse> virtualNetworkProfile;
 
+    /**
+     * @return Virtual Network profile
+     * 
+     */
     public Output</* @Nullable */ VirtualNetworkProfileResponse> getVirtualNetworkProfile() {
         return this.virtualNetworkProfile;
     }
+    /**
+     * Git integration settings
+     * 
+     */
     @OutputExport(name="workspaceRepositoryConfiguration", type=WorkspaceRepositoryConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ WorkspaceRepositoryConfigurationResponse> workspaceRepositoryConfiguration;
 
+    /**
+     * @return Git integration settings
+     * 
+     */
     public Output</* @Nullable */ WorkspaceRepositoryConfigurationResponse> getWorkspaceRepositoryConfiguration() {
         return this.workspaceRepositoryConfiguration;
     }
+    /**
+     * The workspace unique identifier
+     * 
+     */
     @OutputExport(name="workspaceUID", type=String.class, parameters={})
     private Output<String> workspaceUID;
 
+    /**
+     * @return The workspace unique identifier
+     * 
+     */
     public Output<String> getWorkspaceUID() {
         return this.workspaceUID;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Workspace(String name, WorkspaceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:synapse:Workspace", name, args == null ? WorkspaceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -183,6 +380,14 @@ public class Workspace extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Workspace get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Workspace(name, id, options);
     }

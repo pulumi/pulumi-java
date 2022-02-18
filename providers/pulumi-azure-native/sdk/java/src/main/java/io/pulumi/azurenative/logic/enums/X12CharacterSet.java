@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The X12 character set.
+     * 
+     */
     @EnumType
     public enum X12CharacterSet {
         NotSpecified("NotSpecified"),

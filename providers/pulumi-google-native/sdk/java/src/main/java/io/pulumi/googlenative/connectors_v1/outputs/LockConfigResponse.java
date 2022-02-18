@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class LockConfigResponse {
+    /**
+     * Indicates whether or not the connection is locked.
+     * 
+     */
     private final Boolean locked;
+    /**
+     * Describes why a connection is locked.
+     * 
+     */
     private final String reason;
 
     @OutputCustomType.Constructor({"locked","reason"})
@@ -21,9 +29,17 @@ public final class LockConfigResponse {
         this.reason = Objects.requireNonNull(reason);
     }
 
+    /**
+     * Indicates whether or not the connection is locked.
+     * 
+     */
     public Boolean getLocked() {
         return this.locked;
     }
+    /**
+     * Describes why a connection is locked.
+     * 
+     */
     public String getReason() {
         return this.reason;
     }

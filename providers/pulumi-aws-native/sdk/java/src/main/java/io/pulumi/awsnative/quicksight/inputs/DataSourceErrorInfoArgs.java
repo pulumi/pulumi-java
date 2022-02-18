@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * <p>Error information for the data source creation or update.</p>
+ * 
+ */
 public final class DataSourceErrorInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataSourceErrorInfoArgs Empty = new DataSourceErrorInfoArgs();
 
+    /**
+     * <p>Error message.</p>
+     * 
+     */
     @InputImport(name="message")
     private final @Nullable Input<String> message;
 

@@ -11,10 +11,22 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The billing information of the resource.
+ * 
+ */
 public final class ResourceSkuResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceSkuResponse Empty = new ResourceSkuResponse();
 
+    /**
+     * Optional, integer. The unit count of the resource. 1 by default.
+     * 
+     * If present, following values are allowed:
+     *     Free: 1
+     *     Standard: 1,2,5,10,20,50,100
+     * 
+     */
     @InputImport(name="capacity")
     private final @Nullable Integer capacity;
 
@@ -22,6 +34,10 @@ public final class ResourceSkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
     }
 
+    /**
+     * Not used. Retained for future use.
+     * 
+     */
     @InputImport(name="family", required=true)
     private final String family;
 
@@ -29,6 +45,12 @@ public final class ResourceSkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.family;
     }
 
+    /**
+     * The name of the SKU. Required.
+     * 
+     * Allowed values: Standard_S1, Free_F1
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -36,6 +58,10 @@ public final class ResourceSkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    /**
+     * Not used. Retained for future use.
+     * 
+     */
     @InputImport(name="size", required=true)
     private final String size;
 
@@ -43,6 +69,12 @@ public final class ResourceSkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.size;
     }
 
+    /**
+     * Optional tier of this particular SKU. 'Standard' or 'Free'.
+     * 
+     * `Basic` is deprecated, use `Standard` instead.
+     * 
+     */
     @InputImport(name="tier")
     private final @Nullable String tier;
 

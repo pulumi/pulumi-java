@@ -18,6 +18,10 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WorkloadArgs Empty = new WorkloadArgs();
 
+    /**
+     * Required. Input only. The billing account used for the resources which are direct children of workload. This billing account is initially associated with the resources created as part of Workload creation. After the initial creation of these resources, the customer can change the assigned billing account. The resource name has the form `billingAccounts/{billing_account_id}`. For example, 'billingAccounts/012345-567890-ABCDEF`.
+     * 
+     */
     @InputImport(name="billingAccount", required=true)
     private final Input<String> billingAccount;
 
@@ -25,6 +29,10 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
         return this.billingAccount;
     }
 
+    /**
+     * Required. Immutable. Compliance Regime associated with this workload. Possible values: COMPLIANCE_REGIME_UNSPECIFIED, IL4, CJIS, FEDRAMP_HIGH, FEDRAMP_MODERATE, US_REGIONAL_ACCESS
+     * 
+     */
     @InputImport(name="complianceRegime", required=true)
     private final Input<String> complianceRegime;
 
@@ -32,6 +40,10 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
         return this.complianceRegime;
     }
 
+    /**
+     * Required. The user-assigned display name of the Workload. When present it must be between 4 to 30 characters. Allowed characters are: lowercase and uppercase letters, numbers, hyphen, and spaces. Example: My Workload
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -39,6 +51,10 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName;
     }
 
+    /**
+     * Input only. Settings used to create a CMEK crypto key. When set a project with a KMS CMEK key is provisioned. This field is mandatory for a subset of Compliance Regimes.
+     * 
+     */
     @InputImport(name="kmsSettings")
     private final @Nullable Input<WorkloadKmsSettingsArgs> kmsSettings;
 
@@ -46,6 +62,10 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
         return this.kmsSettings == null ? Input.empty() : this.kmsSettings;
     }
 
+    /**
+     * Optional. Labels applied to the workload.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -53,6 +73,10 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The location for the resource
+     * 
+     */
     @InputImport(name="location", required=true)
     private final Input<String> location;
 
@@ -60,6 +84,10 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
         return this.location;
     }
 
+    /**
+     * The organization for the resource
+     * 
+     */
     @InputImport(name="organization", required=true)
     private final Input<String> organization;
 
@@ -67,6 +95,10 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
         return this.organization;
     }
 
+    /**
+     * Input only. The parent resource for the resources managed by this Assured Workload. May be either an organization or a folder. Must be the same or a child of the Workload parent. If not specified all resources are created under the Workload parent. Formats: folders/{folder_id}, organizations/{organization_id}
+     * 
+     */
     @InputImport(name="provisionedResourcesParent")
     private final @Nullable Input<String> provisionedResourcesParent;
 
@@ -74,6 +106,10 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
         return this.provisionedResourcesParent == null ? Input.empty() : this.provisionedResourcesParent;
     }
 
+    /**
+     * Input only. Resource properties that are used to customize workload resources. These properties (such as custom project id) will be used to create workload resources if possible. This field is optional.
+     * 
+     */
     @InputImport(name="resourceSettings")
     private final @Nullable Input<List<WorkloadResourceSettingArgs>> resourceSettings;
 

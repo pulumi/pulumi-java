@@ -19,6 +19,10 @@ public final class DeviceSecurityGroupArgs extends io.pulumi.resources.ResourceA
 
     public static final DeviceSecurityGroupArgs Empty = new DeviceSecurityGroupArgs();
 
+    /**
+     * The allow-list custom alert rules.
+     * 
+     */
     @InputImport(name="allowlistRules")
     private final @Nullable Input<List<AllowlistCustomAlertRuleArgs>> allowlistRules;
 
@@ -26,6 +30,10 @@ public final class DeviceSecurityGroupArgs extends io.pulumi.resources.ResourceA
         return this.allowlistRules == null ? Input.empty() : this.allowlistRules;
     }
 
+    /**
+     * The deny-list custom alert rules.
+     * 
+     */
     @InputImport(name="denylistRules")
     private final @Nullable Input<List<DenylistCustomAlertRuleArgs>> denylistRules;
 
@@ -33,6 +41,10 @@ public final class DeviceSecurityGroupArgs extends io.pulumi.resources.ResourceA
         return this.denylistRules == null ? Input.empty() : this.denylistRules;
     }
 
+    /**
+     * The name of the device security group. Note that the name of the device security group is case insensitive.
+     * 
+     */
     @InputImport(name="deviceSecurityGroupName")
     private final @Nullable Input<String> deviceSecurityGroupName;
 
@@ -40,6 +52,10 @@ public final class DeviceSecurityGroupArgs extends io.pulumi.resources.ResourceA
         return this.deviceSecurityGroupName == null ? Input.empty() : this.deviceSecurityGroupName;
     }
 
+    /**
+     * The identifier of the resource.
+     * 
+     */
     @InputImport(name="resourceId", required=true)
     private final Input<String> resourceId;
 
@@ -47,6 +63,10 @@ public final class DeviceSecurityGroupArgs extends io.pulumi.resources.ResourceA
         return this.resourceId;
     }
 
+    /**
+     * The list of custom alert threshold rules.
+     * 
+     */
     @InputImport(name="thresholdRules")
     private final @Nullable Input<List<ThresholdCustomAlertRuleArgs>> thresholdRules;
 
@@ -54,6 +74,10 @@ public final class DeviceSecurityGroupArgs extends io.pulumi.resources.ResourceA
         return this.thresholdRules == null ? Input.empty() : this.thresholdRules;
     }
 
+    /**
+     * The list of custom alert time-window rules.
+     * 
+     */
     @InputImport(name="timeWindowRules")
     private final @Nullable Input<List<TimeWindowCustomAlertRuleArgs>> timeWindowRules;
 

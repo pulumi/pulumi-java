@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetProperty {
+/**
+ * Property details.
+ * API Version: 2019-01-01.
+ * 
+ *
+ * Property details.
+ * 
+ */
     public static CompletableFuture<GetPropertyResult> invokeAsync(GetPropertyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getProperty", TypeShape.of(GetPropertyResult.class), args == null ? GetPropertyArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The name of the Azure pricing tier to which the SKU applies.
+     * 
+     */
     @EnumType
     public enum VCoreSkuTier {
         AutoScale("AutoScale");

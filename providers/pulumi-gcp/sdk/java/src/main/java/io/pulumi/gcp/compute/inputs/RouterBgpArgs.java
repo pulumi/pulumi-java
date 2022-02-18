@@ -17,6 +17,12 @@ public final class RouterBgpArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RouterBgpArgs Empty = new RouterBgpArgs();
 
+    /**
+     * User-specified flag to indicate which mode to use for advertisement.
+     * Default value is `DEFAULT`.
+     * Possible values are `DEFAULT` and `CUSTOM`.
+     * 
+     */
     @InputImport(name="advertiseMode")
     private final @Nullable Input<String> advertiseMode;
 
@@ -24,6 +30,15 @@ public final class RouterBgpArgs extends io.pulumi.resources.ResourceArgs {
         return this.advertiseMode == null ? Input.empty() : this.advertiseMode;
     }
 
+    /**
+     * User-specified list of prefix groups to advertise in custom mode.
+     * This field can only be populated if advertiseMode is CUSTOM and
+     * is advertised to all peers of the router. These groups will be
+     * advertised in addition to any specified prefixes. Leave this field
+     * blank to advertise no custom groups.
+     * This enum field has the one valid value: ALL_SUBNETS
+     * 
+     */
     @InputImport(name="advertisedGroups")
     private final @Nullable Input<List<String>> advertisedGroups;
 
@@ -31,6 +46,15 @@ public final class RouterBgpArgs extends io.pulumi.resources.ResourceArgs {
         return this.advertisedGroups == null ? Input.empty() : this.advertisedGroups;
     }
 
+    /**
+     * User-specified list of individual IP ranges to advertise in
+     * custom mode. This field can only be populated if advertiseMode
+     * is CUSTOM and is advertised to all peers of the router. These IP
+     * ranges will be advertised in addition to any specified groups.
+     * Leave this field blank to advertise no custom IP ranges.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="advertisedIpRanges")
     private final @Nullable Input<List<RouterBgpAdvertisedIpRangeArgs>> advertisedIpRanges;
 
@@ -38,6 +62,13 @@ public final class RouterBgpArgs extends io.pulumi.resources.ResourceArgs {
         return this.advertisedIpRanges == null ? Input.empty() : this.advertisedIpRanges;
     }
 
+    /**
+     * Local BGP Autonomous System Number (ASN). Must be an RFC6996
+     * private ASN, either 16-bit or 32-bit. The value will be fixed for
+     * this router resource. All VPN tunnels that link to this router
+     * will have the same local ASN.
+     * 
+     */
     @InputImport(name="asn", required=true)
     private final Input<Integer> asn;
 

@@ -10,6 +10,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSuccessResponse {
+    /**
+     * Custom metadata. Dialogflow doesn't impose any structure on this.
+     * 
+     */
     private final Map<String,String> metadata;
 
     @OutputCustomType.Constructor({"metadata"})
@@ -17,6 +21,10 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSucc
         this.metadata = Objects.requireNonNull(metadata);
     }
 
+    /**
+     * Custom metadata. Dialogflow doesn't impose any structure on this.
+     * 
+     */
     public Map<String,String> getMetadata() {
         return this.metadata;
     }

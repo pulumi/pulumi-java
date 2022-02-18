@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The linked integration runtime information.
+ * 
+ */
 public final class LinkedIntegrationRuntimeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LinkedIntegrationRuntimeResponse Empty = new LinkedIntegrationRuntimeResponse();
 
+    /**
+     * The creating time of the linked integration runtime.
+     * 
+     */
     @InputImport(name="createTime", required=true)
     private final String createTime;
 
@@ -19,6 +27,10 @@ public final class LinkedIntegrationRuntimeResponse extends io.pulumi.resources.
         return this.createTime;
     }
 
+    /**
+     * The location of the workspace for which the linked integration runtime belong to.
+     * 
+     */
     @InputImport(name="dataFactoryLocation", required=true)
     private final String dataFactoryLocation;
 
@@ -26,6 +38,10 @@ public final class LinkedIntegrationRuntimeResponse extends io.pulumi.resources.
         return this.dataFactoryLocation;
     }
 
+    /**
+     * The name of the workspace for which the linked integration runtime belong to.
+     * 
+     */
     @InputImport(name="dataFactoryName", required=true)
     private final String dataFactoryName;
 
@@ -33,6 +49,10 @@ public final class LinkedIntegrationRuntimeResponse extends io.pulumi.resources.
         return this.dataFactoryName;
     }
 
+    /**
+     * The name of the linked integration runtime.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -40,6 +60,10 @@ public final class LinkedIntegrationRuntimeResponse extends io.pulumi.resources.
         return this.name;
     }
 
+    /**
+     * The subscription ID for which the linked integration runtime belong to.
+     * 
+     */
     @InputImport(name="subscriptionId", required=true)
     private final String subscriptionId;
 

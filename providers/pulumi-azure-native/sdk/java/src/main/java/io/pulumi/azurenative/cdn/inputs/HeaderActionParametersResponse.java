@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines the parameters for the request header action.
+ * 
+ */
 public final class HeaderActionParametersResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final HeaderActionParametersResponse Empty = new HeaderActionParametersResponse();
 
+    /**
+     * Action to perform
+     * 
+     */
     @InputImport(name="headerAction", required=true)
     private final String headerAction;
 
@@ -21,6 +29,10 @@ public final class HeaderActionParametersResponse extends io.pulumi.resources.In
         return this.headerAction;
     }
 
+    /**
+     * Name of the header to modify
+     * 
+     */
     @InputImport(name="headerName", required=true)
     private final String headerName;
 
@@ -35,6 +47,10 @@ public final class HeaderActionParametersResponse extends io.pulumi.resources.In
         return this.odataType;
     }
 
+    /**
+     * Value for the specified action
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable String value;
 

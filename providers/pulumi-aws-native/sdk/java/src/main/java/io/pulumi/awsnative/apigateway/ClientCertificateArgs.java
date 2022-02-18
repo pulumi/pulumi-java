@@ -16,6 +16,10 @@ public final class ClientCertificateArgs extends io.pulumi.resources.ResourceArg
 
     public static final ClientCertificateArgs Empty = new ClientCertificateArgs();
 
+    /**
+     * A description of the client certificate.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -23,6 +27,10 @@ public final class ClientCertificateArgs extends io.pulumi.resources.ResourceArg
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * An array of arbitrary tags (key-value pairs) to associate with the client certificate.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<ClientCertificateTagArgs>> tags;
 

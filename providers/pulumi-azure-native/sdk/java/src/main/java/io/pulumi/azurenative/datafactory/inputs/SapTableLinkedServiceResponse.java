@@ -18,10 +18,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * SAP Table Linked Service.
+ * 
+ */
 public final class SapTableLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SapTableLinkedServiceResponse Empty = new SapTableLinkedServiceResponse();
 
+    /**
+     * List of tags that can be used for describing the linked service.
+     * 
+     */
     @InputImport(name="annotations")
     private final @Nullable List<Object> annotations;
 
@@ -29,6 +37,10 @@ public final class SapTableLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.annotations == null ? List.of() : this.annotations;
     }
 
+    /**
+     * Client ID of the client on the SAP system where the table is located. (Usually a three-digit decimal number represented as a string) Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="clientId")
     private final @Nullable Object clientId;
 
@@ -36,6 +48,10 @@ public final class SapTableLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
     }
 
+    /**
+     * The integration runtime reference.
+     * 
+     */
     @InputImport(name="connectVia")
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
@@ -43,6 +59,10 @@ public final class SapTableLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
+    /**
+     * Linked service description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -50,6 +70,10 @@ public final class SapTableLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Object encryptedCredential;
 
@@ -57,6 +81,10 @@ public final class SapTableLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
+    /**
+     * Language of the SAP system where the table is located. The default value is EN. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="language")
     private final @Nullable Object language;
 
@@ -64,6 +92,10 @@ public final class SapTableLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.language == null ? Optional.empty() : Optional.ofNullable(this.language);
     }
 
+    /**
+     * The Logon Group for the SAP System. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="logonGroup")
     private final @Nullable Object logonGroup;
 
@@ -71,6 +103,10 @@ public final class SapTableLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.logonGroup == null ? Optional.empty() : Optional.ofNullable(this.logonGroup);
     }
 
+    /**
+     * The hostname of the SAP Message Server. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="messageServer")
     private final @Nullable Object messageServer;
 
@@ -78,6 +114,10 @@ public final class SapTableLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.messageServer == null ? Optional.empty() : Optional.ofNullable(this.messageServer);
     }
 
+    /**
+     * The service name or port number of the Message Server. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="messageServerService")
     private final @Nullable Object messageServerService;
 
@@ -85,6 +125,10 @@ public final class SapTableLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.messageServerService == null ? Optional.empty() : Optional.ofNullable(this.messageServerService);
     }
 
+    /**
+     * Parameters for linked service.
+     * 
+     */
     @InputImport(name="parameters")
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
@@ -92,6 +136,10 @@ public final class SapTableLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
+    /**
+     * Password to access the SAP server where the table is located.
+     * 
+     */
     @InputImport(name="password")
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
@@ -99,6 +147,10 @@ public final class SapTableLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.password == null ? null : this.password;
     }
 
+    /**
+     * Host name of the SAP instance where the table is located. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="server")
     private final @Nullable Object server;
 
@@ -106,6 +158,10 @@ public final class SapTableLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.server == null ? Optional.empty() : Optional.ofNullable(this.server);
     }
 
+    /**
+     * External security product's library to access the SAP server where the table is located. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="sncLibraryPath")
     private final @Nullable Object sncLibraryPath;
 
@@ -113,6 +169,10 @@ public final class SapTableLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.sncLibraryPath == null ? Optional.empty() : Optional.ofNullable(this.sncLibraryPath);
     }
 
+    /**
+     * SNC activation indicator to access the SAP server where the table is located. Must be either 0 (off) or 1 (on). Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="sncMode")
     private final @Nullable Object sncMode;
 
@@ -120,6 +180,10 @@ public final class SapTableLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.sncMode == null ? Optional.empty() : Optional.ofNullable(this.sncMode);
     }
 
+    /**
+     * Initiator's SNC name to access the SAP server where the table is located. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="sncMyName")
     private final @Nullable Object sncMyName;
 
@@ -127,6 +191,10 @@ public final class SapTableLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.sncMyName == null ? Optional.empty() : Optional.ofNullable(this.sncMyName);
     }
 
+    /**
+     * Communication partner's SNC name to access the SAP server where the table is located. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="sncPartnerName")
     private final @Nullable Object sncPartnerName;
 
@@ -134,6 +202,10 @@ public final class SapTableLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.sncPartnerName == null ? Optional.empty() : Optional.ofNullable(this.sncPartnerName);
     }
 
+    /**
+     * SNC Quality of Protection. Allowed value include: 1, 2, 3, 8, 9. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="sncQop")
     private final @Nullable Object sncQop;
 
@@ -141,6 +213,10 @@ public final class SapTableLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.sncQop == null ? Optional.empty() : Optional.ofNullable(this.sncQop);
     }
 
+    /**
+     * SystemID of the SAP system where the table is located. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="systemId")
     private final @Nullable Object systemId;
 
@@ -148,6 +224,10 @@ public final class SapTableLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.systemId == null ? Optional.empty() : Optional.ofNullable(this.systemId);
     }
 
+    /**
+     * System number of the SAP system where the table is located. (Usually a two-digit decimal number represented as a string.) Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="systemNumber")
     private final @Nullable Object systemNumber;
 
@@ -155,6 +235,11 @@ public final class SapTableLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.systemNumber == null ? Optional.empty() : Optional.ofNullable(this.systemNumber);
     }
 
+    /**
+     * Type of linked service.
+     * Expected value is 'SapTable'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -162,6 +247,10 @@ public final class SapTableLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.type;
     }
 
+    /**
+     * Username to access the SAP server where the table is located. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="userName")
     private final @Nullable Object userName;
 

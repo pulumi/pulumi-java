@@ -15,75 +15,184 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * An Asset.
+ * API Version: 2020-05-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:media:Asset ClimbingMountLogan /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contoso/providers/Microsoft.Media/mediaservices/contosomedia/assets/ClimbingMountLogan 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:media:Asset")
 public class Asset extends io.pulumi.resources.CustomResource {
+    /**
+     * The alternate ID of the Asset.
+     * 
+     */
     @OutputExport(name="alternateId", type=String.class, parameters={})
     private Output</* @Nullable */ String> alternateId;
 
+    /**
+     * @return The alternate ID of the Asset.
+     * 
+     */
     public Output</* @Nullable */ String> getAlternateId() {
         return this.alternateId;
     }
+    /**
+     * The Asset ID.
+     * 
+     */
     @OutputExport(name="assetId", type=String.class, parameters={})
     private Output<String> assetId;
 
+    /**
+     * @return The Asset ID.
+     * 
+     */
     public Output<String> getAssetId() {
         return this.assetId;
     }
+    /**
+     * The name of the asset blob container.
+     * 
+     */
     @OutputExport(name="container", type=String.class, parameters={})
     private Output</* @Nullable */ String> container;
 
+    /**
+     * @return The name of the asset blob container.
+     * 
+     */
     public Output</* @Nullable */ String> getContainer() {
         return this.container;
     }
+    /**
+     * The creation date of the Asset.
+     * 
+     */
     @OutputExport(name="created", type=String.class, parameters={})
     private Output<String> created;
 
+    /**
+     * @return The creation date of the Asset.
+     * 
+     */
     public Output<String> getCreated() {
         return this.created;
     }
+    /**
+     * The Asset description.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return The Asset description.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * The last modified date of the Asset.
+     * 
+     */
     @OutputExport(name="lastModified", type=String.class, parameters={})
     private Output<String> lastModified;
 
+    /**
+     * @return The last modified date of the Asset.
+     * 
+     */
     public Output<String> getLastModified() {
         return this.lastModified;
     }
+    /**
+     * The name of the resource
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The name of the storage account.
+     * 
+     */
     @OutputExport(name="storageAccountName", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageAccountName;
 
+    /**
+     * @return The name of the storage account.
+     * 
+     */
     public Output</* @Nullable */ String> getStorageAccountName() {
         return this.storageAccountName;
     }
+    /**
+     * The Asset encryption format. One of None or MediaStorageEncryption.
+     * 
+     */
     @OutputExport(name="storageEncryptionFormat", type=String.class, parameters={})
     private Output<String> storageEncryptionFormat;
 
+    /**
+     * @return The Asset encryption format. One of None or MediaStorageEncryption.
+     * 
+     */
     public Output<String> getStorageEncryptionFormat() {
         return this.storageEncryptionFormat;
     }
+    /**
+     * The system metadata relating to this resource.
+     * 
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return The system metadata relating to this resource.
+     * 
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Asset(String name, AssetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:media:Asset", name, args == null ? AssetArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -106,6 +215,14 @@ public class Asset extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Asset get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Asset(name, id, options);
     }

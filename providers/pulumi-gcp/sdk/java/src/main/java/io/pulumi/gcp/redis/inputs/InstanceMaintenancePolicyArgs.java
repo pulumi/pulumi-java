@@ -16,6 +16,13 @@ public final class InstanceMaintenancePolicyArgs extends io.pulumi.resources.Res
 
     public static final InstanceMaintenancePolicyArgs Empty = new InstanceMaintenancePolicyArgs();
 
+    /**
+     * - 
+     * Output only. The time when the policy was created.
+     * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
+     * resolution and up to nine fractional digits.
+     * 
+     */
     @InputImport(name="createTime")
     private final @Nullable Input<String> createTime;
 
@@ -23,6 +30,12 @@ public final class InstanceMaintenancePolicyArgs extends io.pulumi.resources.Res
         return this.createTime == null ? Input.empty() : this.createTime;
     }
 
+    /**
+     * Optional. Description of what this policy is for.
+     * Create/Update methods return INVALID_ARGUMENT if the
+     * length is greater than 512.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -30,6 +43,13 @@ public final class InstanceMaintenancePolicyArgs extends io.pulumi.resources.Res
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * - 
+     * Output only. The time when the policy was last updated.
+     * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
+     * resolution and up to nine fractional digits.
+     * 
+     */
     @InputImport(name="updateTime")
     private final @Nullable Input<String> updateTime;
 
@@ -37,6 +57,13 @@ public final class InstanceMaintenancePolicyArgs extends io.pulumi.resources.Res
         return this.updateTime == null ? Input.empty() : this.updateTime;
     }
 
+    /**
+     * Optional. Maintenance window that is applied to resources covered by this policy.
+     * Minimum 1. For the current version, the maximum number
+     * of weekly_window is expected to be one.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="weeklyMaintenanceWindows")
     private final @Nullable Input<List<InstanceMaintenancePolicyWeeklyMaintenanceWindowArgs>> weeklyMaintenanceWindows;
 

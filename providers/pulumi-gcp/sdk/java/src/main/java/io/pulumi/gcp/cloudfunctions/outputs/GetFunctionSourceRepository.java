@@ -10,6 +10,10 @@ import java.util.Objects;
 @OutputCustomType
 public final class GetFunctionSourceRepository {
     private final String deployedUrl;
+    /**
+     * The URL pointing to the hosted repository where the function is defined.
+     * 
+     */
     private final String url;
 
     @OutputCustomType.Constructor({"deployedUrl","url"})
@@ -23,6 +27,10 @@ public final class GetFunctionSourceRepository {
     public String getDeployedUrl() {
         return this.deployedUrl;
     }
+    /**
+     * The URL pointing to the hosted repository where the function is defined.
+     * 
+     */
     public String getUrl() {
         return this.url;
     }

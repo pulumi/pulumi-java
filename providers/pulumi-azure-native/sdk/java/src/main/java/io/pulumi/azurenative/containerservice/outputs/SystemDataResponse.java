@@ -11,11 +11,35 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SystemDataResponse {
+    /**
+     * The UTC timestamp of resource creation.
+     * 
+     */
     private final @Nullable String createdAt;
+    /**
+     * The identity that created the resource.
+     * 
+     */
     private final @Nullable String createdBy;
+    /**
+     * The type of identity that created the resource.
+     * 
+     */
     private final @Nullable String createdByType;
+    /**
+     * The type of identity that last modified the resource.
+     * 
+     */
     private final @Nullable String lastModifiedAt;
+    /**
+     * The identity that last modified the resource.
+     * 
+     */
     private final @Nullable String lastModifiedBy;
+    /**
+     * The type of identity that last modified the resource.
+     * 
+     */
     private final @Nullable String lastModifiedByType;
 
     @OutputCustomType.Constructor({"createdAt","createdBy","createdByType","lastModifiedAt","lastModifiedBy","lastModifiedByType"})
@@ -34,21 +58,45 @@ public final class SystemDataResponse {
         this.lastModifiedByType = lastModifiedByType;
     }
 
+    /**
+     * The UTC timestamp of resource creation.
+     * 
+     */
     public Optional<String> getCreatedAt() {
         return Optional.ofNullable(this.createdAt);
     }
+    /**
+     * The identity that created the resource.
+     * 
+     */
     public Optional<String> getCreatedBy() {
         return Optional.ofNullable(this.createdBy);
     }
+    /**
+     * The type of identity that created the resource.
+     * 
+     */
     public Optional<String> getCreatedByType() {
         return Optional.ofNullable(this.createdByType);
     }
+    /**
+     * The type of identity that last modified the resource.
+     * 
+     */
     public Optional<String> getLastModifiedAt() {
         return Optional.ofNullable(this.lastModifiedAt);
     }
+    /**
+     * The identity that last modified the resource.
+     * 
+     */
     public Optional<String> getLastModifiedBy() {
         return Optional.ofNullable(this.lastModifiedBy);
     }
+    /**
+     * The type of identity that last modified the resource.
+     * 
+     */
     public Optional<String> getLastModifiedByType() {
         return Optional.ofNullable(this.lastModifiedByType);
     }

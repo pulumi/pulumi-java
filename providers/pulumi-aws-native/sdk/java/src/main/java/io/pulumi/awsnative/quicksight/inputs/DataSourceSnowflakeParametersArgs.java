@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * <p>Snowflake parameters.</p>
+ * 
+ */
 public final class DataSourceSnowflakeParametersArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataSourceSnowflakeParametersArgs Empty = new DataSourceSnowflakeParametersArgs();
 
+    /**
+     * <p>Database.</p>
+     * 
+     */
     @InputImport(name="database", required=true)
     private final Input<String> database;
 
@@ -20,6 +28,10 @@ public final class DataSourceSnowflakeParametersArgs extends io.pulumi.resources
         return this.database;
     }
 
+    /**
+     * <p>Host.</p>
+     * 
+     */
     @InputImport(name="host", required=true)
     private final Input<String> host;
 
@@ -27,6 +39,10 @@ public final class DataSourceSnowflakeParametersArgs extends io.pulumi.resources
         return this.host;
     }
 
+    /**
+     * <p>Warehouse.</p>
+     * 
+     */
     @InputImport(name="warehouse", required=true)
     private final Input<String> warehouse;
 

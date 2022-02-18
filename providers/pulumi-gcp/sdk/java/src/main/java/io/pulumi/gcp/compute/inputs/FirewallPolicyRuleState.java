@@ -18,6 +18,10 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
 
     public static final FirewallPolicyRuleState Empty = new FirewallPolicyRuleState();
 
+    /**
+     * The Action to perform when the client connection triggers the rule. Can currently be either "allow" or "deny()" where valid values for status are 403, 404, and 502.
+     * 
+     */
     @InputImport(name="action")
     private final @Nullable Input<String> action;
 
@@ -25,6 +29,10 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
         return this.action == null ? Input.empty() : this.action;
     }
 
+    /**
+     * An optional description for this resource.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -32,6 +40,10 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The direction in which this rule applies. Possible values: INGRESS, EGRESS
+     * 
+     */
     @InputImport(name="direction")
     private final @Nullable Input<String> direction;
 
@@ -39,6 +51,10 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
         return this.direction == null ? Input.empty() : this.direction;
     }
 
+    /**
+     * Denotes whether the firewall policy rule is disabled. When set to true, the firewall policy rule is not enforced and traffic behaves as if it did not exist. If this is unspecified, the firewall policy rule will be enabled.
+     * 
+     */
     @InputImport(name="disabled")
     private final @Nullable Input<Boolean> disabled;
 
@@ -46,6 +62,10 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
         return this.disabled == null ? Input.empty() : this.disabled;
     }
 
+    /**
+     * Denotes whether to enable logging for a particular rule. If logging is enabled, logs will be exported to the configured export destination in Stackdriver. Logs may be exported to BigQuery or Pub/Sub. Note: you cannot enable logging on "goto_next" rules.
+     * 
+     */
     @InputImport(name="enableLogging")
     private final @Nullable Input<Boolean> enableLogging;
 
@@ -53,6 +73,10 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
         return this.enableLogging == null ? Input.empty() : this.enableLogging;
     }
 
+    /**
+     * The firewall policy of the resource.
+     * 
+     */
     @InputImport(name="firewallPolicy")
     private final @Nullable Input<String> firewallPolicy;
 
@@ -60,6 +84,10 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
         return this.firewallPolicy == null ? Input.empty() : this.firewallPolicy;
     }
 
+    /**
+     * Type of the resource. Always `compute#firewallPolicyRule` for firewall policy rules
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -67,6 +95,10 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced. Structure is documented below.
+     * 
+     */
     @InputImport(name="match")
     private final @Nullable Input<FirewallPolicyRuleMatchGetArgs> match;
 
@@ -74,6 +106,10 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
         return this.match == null ? Input.empty() : this.match;
     }
 
+    /**
+     * An integer indicating the priority of a rule in the list. The priority must be a positive value between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the highest priority and 2147483647 is the lowest prority.
+     * 
+     */
     @InputImport(name="priority")
     private final @Nullable Input<Integer> priority;
 
@@ -81,6 +117,10 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
         return this.priority == null ? Input.empty() : this.priority;
     }
 
+    /**
+     * Calculation of the complexity of a single firewall policy rule.
+     * 
+     */
     @InputImport(name="ruleTupleCount")
     private final @Nullable Input<Integer> ruleTupleCount;
 
@@ -88,6 +128,10 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
         return this.ruleTupleCount == null ? Input.empty() : this.ruleTupleCount;
     }
 
+    /**
+     * A list of network resource URLs to which this rule applies. This field allows you to control which network's VMs get this rule. If this field is left blank, all VMs within the organization will receive the rule.
+     * 
+     */
     @InputImport(name="targetResources")
     private final @Nullable Input<List<String>> targetResources;
 
@@ -95,6 +139,10 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
         return this.targetResources == null ? Input.empty() : this.targetResources;
     }
 
+    /**
+     * A list of service accounts indicating the sets of instances that are applied with this rule.
+     * 
+     */
     @InputImport(name="targetServiceAccounts")
     private final @Nullable Input<List<String>> targetServiceAccounts;
 

@@ -12,6 +12,10 @@ public final class GetAccountArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAccountArgs Empty = new GetAccountArgs();
 
+    /**
+     * Primary identifier which is manually generated.
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 

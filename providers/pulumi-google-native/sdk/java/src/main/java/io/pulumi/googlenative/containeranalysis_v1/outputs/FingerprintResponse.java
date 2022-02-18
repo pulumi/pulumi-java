@@ -10,8 +10,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class FingerprintResponse {
+    /**
+     * The layer ID of the final layer in the Docker image's v1 representation.
+     * 
+     */
     private final String v1Name;
+    /**
+     * The ordered list of v2 blobs that represent a given image.
+     * 
+     */
     private final List<String> v2Blob;
+    /**
+     * The name of the image's v2 blobs computed via: [bottom] := v2_blobbottom := sha256(v2_blob[N] + " " + v2_name[N+1]) Only the name of the final blob is kept.
+     * 
+     */
     private final String v2Name;
 
     @OutputCustomType.Constructor({"v1Name","v2Blob","v2Name"})
@@ -24,12 +36,24 @@ public final class FingerprintResponse {
         this.v2Name = Objects.requireNonNull(v2Name);
     }
 
+    /**
+     * The layer ID of the final layer in the Docker image's v1 representation.
+     * 
+     */
     public String getV1Name() {
         return this.v1Name;
     }
+    /**
+     * The ordered list of v2 blobs that represent a given image.
+     * 
+     */
     public List<String> getV2Blob() {
         return this.v2Blob;
     }
+    /**
+     * The name of the image's v2 blobs computed via: [bottom] := v2_blobbottom := sha256(v2_blob[N] + " " + v2_name[N+1]) Only the name of the final blob is kept.
+     * 
+     */
     public String getV2Name() {
         return this.v2Name;
     }

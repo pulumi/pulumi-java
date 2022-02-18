@@ -16,6 +16,10 @@ public final class WorkflowTemplateParameterArgs extends io.pulumi.resources.Res
 
     public static final WorkflowTemplateParameterArgs Empty = new WorkflowTemplateParameterArgs();
 
+    /**
+     * Optional. Brief description of the parameter. Must not exceed 1024 characters.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -23,6 +27,10 @@ public final class WorkflowTemplateParameterArgs extends io.pulumi.resources.Res
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Required. Paths to all fields that the parameter replaces. A field is allowed to appear in at most one parameter's list of field paths. A field path is similar in syntax to a .sparkJob.args
+     * 
+     */
     @InputImport(name="fields", required=true)
     private final Input<List<String>> fields;
 
@@ -30,6 +38,10 @@ public final class WorkflowTemplateParameterArgs extends io.pulumi.resources.Res
         return this.fields;
     }
 
+    /**
+     * Required. Parameter name. The parameter name is used as the key, and paired with the parameter value, which are passed to the template when the template is instantiated. The name must contain only capital letters (A-Z), numbers (0-9), and underscores (_), and must not start with a number. The maximum length is 40 characters.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -37,6 +49,10 @@ public final class WorkflowTemplateParameterArgs extends io.pulumi.resources.Res
         return this.name;
     }
 
+    /**
+     * Optional. Validation rules to be applied to this parameter's value.
+     * 
+     */
     @InputImport(name="validation")
     private final @Nullable Input<WorkflowTemplateParameterValidationArgs> validation;
 

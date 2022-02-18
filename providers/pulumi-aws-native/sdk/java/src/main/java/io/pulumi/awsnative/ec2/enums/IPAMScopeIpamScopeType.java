@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Determines whether this scope contains publicly routable space or space for a private network
+     * 
+     */
     @EnumType
     public enum IPAMScopeIpamScopeType {
         Public("public"),

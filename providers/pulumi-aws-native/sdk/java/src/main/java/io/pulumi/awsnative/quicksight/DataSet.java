@@ -25,11 +25,23 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Definition of the AWS::QuickSight::DataSet Resource Type.
+ * 
+ */
 @ResourceType(type="aws-native:quicksight:DataSet")
 public class DataSet extends io.pulumi.resources.CustomResource {
+    /**
+     * <p>The Amazon Resource Name (ARN) of the resource.</p>
+     * 
+     */
     @OutputExport(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
+    /**
+     * @return <p>The Amazon Resource Name (ARN) of the resource.</p>
+     * 
+     */
     public Output<String> getArn() {
         return this.arn;
     }
@@ -39,9 +51,17 @@ public class DataSet extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getAwsAccountId() {
         return this.awsAccountId;
     }
+    /**
+     * <p>Groupings of columns that work together in certain QuickSight features. Currently, only geospatial hierarchy is supported.</p>
+     * 
+     */
     @OutputExport(name="columnGroups", type=List.class, parameters={DataSetColumnGroup.class})
     private Output</* @Nullable */ List<DataSetColumnGroup>> columnGroups;
 
+    /**
+     * @return <p>Groupings of columns that work together in certain QuickSight features. Currently, only geospatial hierarchy is supported.</p>
+     * 
+     */
     public Output</* @Nullable */ List<DataSetColumnGroup>> getColumnGroups() {
         return this.columnGroups;
     }
@@ -51,15 +71,33 @@ public class DataSet extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ List<DataSetColumnLevelPermissionRule>> getColumnLevelPermissionRules() {
         return this.columnLevelPermissionRules;
     }
+    /**
+     * <p>The amount of SPICE capacity used by this dataset. This is 0 if the dataset isn't
+     *             imported into SPICE.</p>
+     * 
+     */
     @OutputExport(name="consumedSpiceCapacityInBytes", type=Double.class, parameters={})
     private Output<Double> consumedSpiceCapacityInBytes;
 
+    /**
+     * @return <p>The amount of SPICE capacity used by this dataset. This is 0 if the dataset isn't
+     *             imported into SPICE.</p>
+     * 
+     */
     public Output<Double> getConsumedSpiceCapacityInBytes() {
         return this.consumedSpiceCapacityInBytes;
     }
+    /**
+     * <p>The time that this dataset was created.</p>
+     * 
+     */
     @OutputExport(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
+    /**
+     * @return <p>The time that this dataset was created.</p>
+     * 
+     */
     public Output<String> getCreatedTime() {
         return this.createdTime;
     }
@@ -87,9 +125,17 @@ public class DataSet extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ DataSetIngestionWaitPolicy> getIngestionWaitPolicy() {
         return this.ingestionWaitPolicy;
     }
+    /**
+     * <p>The last time that this dataset was updated.</p>
+     * 
+     */
     @OutputExport(name="lastUpdatedTime", type=String.class, parameters={})
     private Output<String> lastUpdatedTime;
 
+    /**
+     * @return <p>The last time that this dataset was updated.</p>
+     * 
+     */
     public Output<String> getLastUpdatedTime() {
         return this.lastUpdatedTime;
     }
@@ -99,21 +145,47 @@ public class DataSet extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ DataSetLogicalTableMap> getLogicalTableMap() {
         return this.logicalTableMap;
     }
+    /**
+     * <p>The display name for the dataset.</p>
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
+    /**
+     * @return <p>The display name for the dataset.</p>
+     * 
+     */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
+    /**
+     * <p>The list of columns after all transforms. These columns are available in templates,
+     *             analyses, and dashboards.</p>
+     * 
+     */
     @OutputExport(name="outputColumns", type=List.class, parameters={DataSetOutputColumn.class})
     private Output<List<DataSetOutputColumn>> outputColumns;
 
+    /**
+     * @return <p>The list of columns after all transforms. These columns are available in templates,
+     *             analyses, and dashboards.</p>
+     * 
+     */
     public Output<List<DataSetOutputColumn>> getOutputColumns() {
         return this.outputColumns;
     }
+    /**
+     * <p>A list of resource permissions on the dataset.</p>
+     * 
+     */
     @OutputExport(name="permissions", type=List.class, parameters={DataSetResourcePermission.class})
     private Output</* @Nullable */ List<DataSetResourcePermission>> permissions;
 
+    /**
+     * @return <p>A list of resource permissions on the dataset.</p>
+     * 
+     */
     public Output</* @Nullable */ List<DataSetResourcePermission>> getPermissions() {
         return this.permissions;
     }
@@ -129,13 +201,27 @@ public class DataSet extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ DataSetRowLevelPermissionDataSet> getRowLevelPermissionDataSet() {
         return this.rowLevelPermissionDataSet;
     }
+    /**
+     * <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the dataset.</p>
+     * 
+     */
     @OutputExport(name="tags", type=List.class, parameters={DataSetTag.class})
     private Output</* @Nullable */ List<DataSetTag>> tags;
 
+    /**
+     * @return <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the dataset.</p>
+     * 
+     */
     public Output</* @Nullable */ List<DataSetTag>> getTags() {
         return this.tags;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public DataSet(String name, @Nullable DataSetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:quicksight:DataSet", name, args == null ? DataSetArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -151,6 +237,14 @@ public class DataSet extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static DataSet get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DataSet(name, id, options);
     }

@@ -12,7 +12,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetMultiRegionAccessPointPolicyResult {
+    /**
+     * Policy document to apply to a Multi Region Access Point
+     * 
+     */
     private final @Nullable Object policy;
+    /**
+     * The Policy Status associated with this Multi Region Access Point
+     * 
+     */
     private final @Nullable PolicyStatusProperties policyStatus;
 
     @OutputCustomType.Constructor({"policy","policyStatus"})
@@ -23,9 +31,17 @@ public final class GetMultiRegionAccessPointPolicyResult {
         this.policyStatus = policyStatus;
     }
 
+    /**
+     * Policy document to apply to a Multi Region Access Point
+     * 
+     */
     public Optional<Object> getPolicy() {
         return Optional.ofNullable(this.policy);
     }
+    /**
+     * The Policy Status associated with this Multi Region Access Point
+     * 
+     */
     public Optional<PolicyStatusProperties> getPolicyStatus() {
         return Optional.ofNullable(this.policyStatus);
     }

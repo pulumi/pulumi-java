@@ -12,6 +12,10 @@ public final class GetWebAppPublicCertificateSlotArgs extends io.pulumi.resource
 
     public static final GetWebAppPublicCertificateSlotArgs Empty = new GetWebAppPublicCertificateSlotArgs();
 
+    /**
+     * Name of the app.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -19,6 +23,10 @@ public final class GetWebAppPublicCertificateSlotArgs extends io.pulumi.resource
         return this.name;
     }
 
+    /**
+     * Public certificate name.
+     * 
+     */
     @InputImport(name="publicCertificateName", required=true)
     private final String publicCertificateName;
 
@@ -26,6 +34,10 @@ public final class GetWebAppPublicCertificateSlotArgs extends io.pulumi.resource
         return this.publicCertificateName;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -33,6 +45,10 @@ public final class GetWebAppPublicCertificateSlotArgs extends io.pulumi.resource
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of the deployment slot. If a slot is not specified, the API the named binding for the production slot.
+     * 
+     */
     @InputImport(name="slot", required=true)
     private final String slot;
 

@@ -16,6 +16,10 @@ public final class RegionBackendServiceCdnPolicyCacheKeyPolicyArgs extends io.pu
 
     public static final RegionBackendServiceCdnPolicyCacheKeyPolicyArgs Empty = new RegionBackendServiceCdnPolicyCacheKeyPolicyArgs();
 
+    /**
+     * If true requests to different hosts will be cached separately.
+     * 
+     */
     @InputImport(name="includeHost")
     private final @Nullable Input<Boolean> includeHost;
 
@@ -23,6 +27,10 @@ public final class RegionBackendServiceCdnPolicyCacheKeyPolicyArgs extends io.pu
         return this.includeHost == null ? Input.empty() : this.includeHost;
     }
 
+    /**
+     * If true, http and https requests will be cached separately.
+     * 
+     */
     @InputImport(name="includeProtocol")
     private final @Nullable Input<Boolean> includeProtocol;
 
@@ -30,6 +38,15 @@ public final class RegionBackendServiceCdnPolicyCacheKeyPolicyArgs extends io.pu
         return this.includeProtocol == null ? Input.empty() : this.includeProtocol;
     }
 
+    /**
+     * If true, include query string parameters in the cache key
+     * according to query_string_whitelist and
+     * query_string_blacklist. If neither is set, the entire query
+     * string will be included.
+     * If false, the query string will be excluded from the cache
+     * key entirely.
+     * 
+     */
     @InputImport(name="includeQueryString")
     private final @Nullable Input<Boolean> includeQueryString;
 
@@ -37,6 +54,14 @@ public final class RegionBackendServiceCdnPolicyCacheKeyPolicyArgs extends io.pu
         return this.includeQueryString == null ? Input.empty() : this.includeQueryString;
     }
 
+    /**
+     * Names of query string parameters to exclude in cache keys.
+     * All other parameters will be included. Either specify
+     * query_string_whitelist or query_string_blacklist, not both.
+     * '&' and '=' will be percent encoded and not treated as
+     * delimiters.
+     * 
+     */
     @InputImport(name="queryStringBlacklists")
     private final @Nullable Input<List<String>> queryStringBlacklists;
 
@@ -44,6 +69,14 @@ public final class RegionBackendServiceCdnPolicyCacheKeyPolicyArgs extends io.pu
         return this.queryStringBlacklists == null ? Input.empty() : this.queryStringBlacklists;
     }
 
+    /**
+     * Names of query string parameters to include in cache keys.
+     * All other parameters will be excluded. Either specify
+     * query_string_whitelist or query_string_blacklist, not both.
+     * '&' and '=' will be percent encoded and not treated as
+     * delimiters.
+     * 
+     */
     @InputImport(name="queryStringWhitelists")
     private final @Nullable Input<List<String>> queryStringWhitelists;
 

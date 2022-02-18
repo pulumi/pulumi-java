@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Note holding the version of the provider's builder and the signature of the provenance message in the build details occurrence.
+ * 
+ */
 public final class BuildNoteResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BuildNoteResponse Empty = new BuildNoteResponse();
 
+    /**
+     * Immutable. Version of the builder which produced this build.
+     * 
+     */
     @InputImport(name="builderVersion", required=true)
     private final String builderVersion;
 

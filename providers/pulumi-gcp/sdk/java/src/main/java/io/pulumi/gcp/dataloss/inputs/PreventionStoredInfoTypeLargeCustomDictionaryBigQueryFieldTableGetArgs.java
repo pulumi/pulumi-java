@@ -13,6 +13,10 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTab
 
     public static final PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableGetArgs Empty = new PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableGetArgs();
 
+    /**
+     * The dataset ID of the table.
+     * 
+     */
     @InputImport(name="datasetId", required=true)
     private final Input<String> datasetId;
 
@@ -20,6 +24,10 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTab
         return this.datasetId;
     }
 
+    /**
+     * The Google Cloud Platform project ID of the project containing the table.
+     * 
+     */
     @InputImport(name="projectId", required=true)
     private final Input<String> projectId;
 
@@ -27,6 +35,10 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTab
         return this.projectId;
     }
 
+    /**
+     * The name of the table.
+     * 
+     */
     @InputImport(name="tableId", required=true)
     private final Input<String> tableId;
 

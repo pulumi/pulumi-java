@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents resource specific settings
+ * 
+ */
 public final class ResourceSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourceSettingsArgs Empty = new ResourceSettingsArgs();
 
+    /**
+     * The resource id of the gallery image used for creating the virtual machine
+     * 
+     */
     @InputImport(name="galleryImageResourceId")
     private final @Nullable Input<String> galleryImageResourceId;
 
@@ -24,6 +32,10 @@ public final class ResourceSettingsArgs extends io.pulumi.resources.ResourceArgs
         return this.galleryImageResourceId == null ? Input.empty() : this.galleryImageResourceId;
     }
 
+    /**
+     * Details specific to Reference Vm
+     * 
+     */
     @InputImport(name="referenceVm", required=true)
     private final Input<ReferenceVmArgs> referenceVm;
 
@@ -31,6 +43,10 @@ public final class ResourceSettingsArgs extends io.pulumi.resources.ResourceArgs
         return this.referenceVm;
     }
 
+    /**
+     * The size of the virtual machine
+     * 
+     */
     @InputImport(name="size")
     private final @Nullable Input<Either<String,ManagedLabVmSize>> size;
 

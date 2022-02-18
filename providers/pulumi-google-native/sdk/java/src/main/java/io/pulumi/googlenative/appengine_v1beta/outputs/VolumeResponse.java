@@ -10,8 +10,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class VolumeResponse {
+    /**
+     * Unique name for the volume.
+     * 
+     */
     private final String name;
+    /**
+     * Volume size in gigabytes.
+     * 
+     */
     private final Double sizeGb;
+    /**
+     * Underlying volume type, e.g. 'tmpfs'.
+     * 
+     */
     private final String volumeType;
 
     @OutputCustomType.Constructor({"name","sizeGb","volumeType"})
@@ -24,12 +36,24 @@ public final class VolumeResponse {
         this.volumeType = Objects.requireNonNull(volumeType);
     }
 
+    /**
+     * Unique name for the volume.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Volume size in gigabytes.
+     * 
+     */
     public Double getSizeGb() {
         return this.sizeGb;
     }
+    /**
+     * Underlying volume type, e.g. 'tmpfs'.
+     * 
+     */
     public String getVolumeType() {
         return this.volumeType;
     }

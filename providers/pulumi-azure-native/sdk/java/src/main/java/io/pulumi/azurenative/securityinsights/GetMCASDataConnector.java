@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMCASDataConnector {
+/**
+ * Represents MCAS (Microsoft Cloud App Security) data connector.
+ * API Version: 2020-01-01.
+ * 
+ *
+ * Represents MCAS (Microsoft Cloud App Security) data connector.
+ * 
+ */
     public static CompletableFuture<GetMCASDataConnectorResult> invokeAsync(GetMCASDataConnectorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getMCASDataConnector", TypeShape.of(GetMCASDataConnectorResult.class), args == null ? GetMCASDataConnectorArgs.Empty : args, Utilities.withVersion(options));
     }

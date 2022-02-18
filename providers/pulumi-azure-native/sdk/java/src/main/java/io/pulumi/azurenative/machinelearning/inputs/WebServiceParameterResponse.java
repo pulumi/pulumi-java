@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Web Service Parameter object for node and global parameter
+ * 
+ */
 public final class WebServiceParameterResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final WebServiceParameterResponse Empty = new WebServiceParameterResponse();
 
+    /**
+     * If the parameter value in 'value' field is encrypted, the thumbprint of the certificate should be put here.
+     * 
+     */
     @InputImport(name="certificateThumbprint")
     private final @Nullable String certificateThumbprint;
 
@@ -22,6 +30,10 @@ public final class WebServiceParameterResponse extends io.pulumi.resources.Invok
         return this.certificateThumbprint == null ? Optional.empty() : Optional.ofNullable(this.certificateThumbprint);
     }
 
+    /**
+     * The parameter value
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable Object value;
 

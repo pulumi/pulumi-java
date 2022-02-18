@@ -11,10 +11,30 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PasswordValidationPolicyResponse {
+    /**
+     * The complexity of the password.
+     * 
+     */
     private final String complexity;
+    /**
+     * Disallow username as a part of the password.
+     * 
+     */
     private final Boolean disallowUsernameSubstring;
+    /**
+     * Minimum number of characters allowed.
+     * 
+     */
     private final Integer minLength;
+    /**
+     * Minimum interval after which the password can be changed. This flag is only supported for PostgresSQL.
+     * 
+     */
     private final String passwordChangeInterval;
+    /**
+     * Number of previous passwords that cannot be reused.
+     * 
+     */
     private final Integer reuseInterval;
 
     @OutputCustomType.Constructor({"complexity","disallowUsernameSubstring","minLength","passwordChangeInterval","reuseInterval"})
@@ -31,18 +51,38 @@ public final class PasswordValidationPolicyResponse {
         this.reuseInterval = Objects.requireNonNull(reuseInterval);
     }
 
+    /**
+     * The complexity of the password.
+     * 
+     */
     public String getComplexity() {
         return this.complexity;
     }
+    /**
+     * Disallow username as a part of the password.
+     * 
+     */
     public Boolean getDisallowUsernameSubstring() {
         return this.disallowUsernameSubstring;
     }
+    /**
+     * Minimum number of characters allowed.
+     * 
+     */
     public Integer getMinLength() {
         return this.minLength;
     }
+    /**
+     * Minimum interval after which the password can be changed. This flag is only supported for PostgresSQL.
+     * 
+     */
     public String getPasswordChangeInterval() {
         return this.passwordChangeInterval;
     }
+    /**
+     * Number of previous passwords that cannot be reused.
+     * 
+     */
     public Integer getReuseInterval() {
         return this.reuseInterval;
     }

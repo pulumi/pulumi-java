@@ -9,10 +9,18 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
+/**
+ * Attributes of a iSCSI target portal group.
+ * 
+ */
 public final class AttributesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AttributesArgs Empty = new AttributesArgs();
 
+    /**
+     * Indicates whether or not authentication is enabled on the ACL.
+     * 
+     */
     @InputImport(name="authentication", required=true)
     private final Input<Boolean> authentication;
 
@@ -20,6 +28,10 @@ public final class AttributesArgs extends io.pulumi.resources.ResourceArgs {
         return this.authentication;
     }
 
+    /**
+     * Indicates whether or not write protect is enabled on the LUNs.
+     * 
+     */
     @InputImport(name="prodModeWriteProtect", required=true)
     private final Input<Boolean> prodModeWriteProtect;
 

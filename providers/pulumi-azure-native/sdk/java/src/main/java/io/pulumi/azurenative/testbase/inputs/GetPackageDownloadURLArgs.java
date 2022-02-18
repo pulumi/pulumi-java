@@ -12,6 +12,10 @@ public final class GetPackageDownloadURLArgs extends io.pulumi.resources.InvokeA
 
     public static final GetPackageDownloadURLArgs Empty = new GetPackageDownloadURLArgs();
 
+    /**
+     * The resource name of the Test Base Package.
+     * 
+     */
     @InputImport(name="packageName", required=true)
     private final String packageName;
 
@@ -19,6 +23,10 @@ public final class GetPackageDownloadURLArgs extends io.pulumi.resources.InvokeA
         return this.packageName;
     }
 
+    /**
+     * The name of the resource group that contains the resource.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetPackageDownloadURLArgs extends io.pulumi.resources.InvokeA
         return this.resourceGroupName;
     }
 
+    /**
+     * The resource name of the Test Base Account.
+     * 
+     */
     @InputImport(name="testBaseAccountName", required=true)
     private final String testBaseAccountName;
 

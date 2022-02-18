@@ -17,6 +17,11 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IntentArgs Empty = new IntentArgs();
 
+    /**
+     * The name of the action associated with the intent.
+     * Note: The action name must not contain whitespaces.
+     * 
+     */
     @InputImport(name="action")
     private final @Nullable Input<String> action;
 
@@ -24,6 +29,12 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
         return this.action == null ? Input.empty() : this.action;
     }
 
+    /**
+     * The list of platforms for which the first responses will be copied from the messages in PLATFORM_UNSPECIFIED
+     * (i.e. default platform).
+     * Each value may be one of `FACEBOOK`, `SLACK`, `TELEGRAM`, `KIK`, `SKYPE`, `LINE`, `VIBER`, `ACTIONS_ON_GOOGLE`, and `GOOGLE_HANGOUTS`.
+     * 
+     */
     @InputImport(name="defaultResponsePlatforms")
     private final @Nullable Input<List<String>> defaultResponsePlatforms;
 
@@ -31,6 +42,10 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
         return this.defaultResponsePlatforms == null ? Input.empty() : this.defaultResponsePlatforms;
     }
 
+    /**
+     * The name of this intent to be displayed on the console.
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -38,6 +53,12 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName;
     }
 
+    /**
+     * The collection of event names that trigger the intent. If the collection of input contexts is not empty, all of
+     * the contexts must be present in the active user session for an event to trigger this intent. See the
+     * [events reference](https://cloud.google.com/dialogflow/docs/events-overview) for more details.
+     * 
+     */
     @InputImport(name="events")
     private final @Nullable Input<List<String>> events;
 
@@ -45,6 +66,11 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
         return this.events == null ? Input.empty() : this.events;
     }
 
+    /**
+     * The list of context names required for this intent to be triggered.
+     * Format: projects/<Project ID>/agent/sessions/-/contexts/<Context ID>.
+     * 
+     */
     @InputImport(name="inputContextNames")
     private final @Nullable Input<List<String>> inputContextNames;
 
@@ -52,6 +78,10 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
         return this.inputContextNames == null ? Input.empty() : this.inputContextNames;
     }
 
+    /**
+     * Indicates whether this is a fallback intent.
+     * 
+     */
     @InputImport(name="isFallback")
     private final @Nullable Input<Boolean> isFallback;
 
@@ -59,6 +89,12 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
         return this.isFallback == null ? Input.empty() : this.isFallback;
     }
 
+    /**
+     * Indicates whether Machine Learning is disabled for the intent.
+     * Note: If mlDisabled setting is set to true, then this intent is not taken into account during inference in ML
+     * ONLY match mode. Also, auto-markup in the UI is turned off.
+     * 
+     */
     @InputImport(name="mlDisabled")
     private final @Nullable Input<Boolean> mlDisabled;
 
@@ -66,6 +102,11 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
         return this.mlDisabled == null ? Input.empty() : this.mlDisabled;
     }
 
+    /**
+     * The unique identifier of the parent intent in the chain of followup intents.
+     * Format: projects/<Project ID>/agent/intents/<Intent ID>.
+     * 
+     */
     @InputImport(name="parentFollowupIntentName")
     private final @Nullable Input<String> parentFollowupIntentName;
 
@@ -73,6 +114,13 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
         return this.parentFollowupIntentName == null ? Input.empty() : this.parentFollowupIntentName;
     }
 
+    /**
+     * The priority of this intent. Higher numbers represent higher priorities.
+     * - If the supplied value is unspecified or 0, the service translates the value to 500,000, which corresponds
+     *   to the Normal priority in the console.
+     * - If the supplied value is negative, the intent is ignored in runtime detect intent requests.
+     * 
+     */
     @InputImport(name="priority")
     private final @Nullable Input<Integer> priority;
 
@@ -80,6 +128,11 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
         return this.priority == null ? Input.empty() : this.priority;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -87,6 +140,10 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Indicates whether to delete all contexts in the current session when this intent is matched.
+     * 
+     */
     @InputImport(name="resetContexts")
     private final @Nullable Input<Boolean> resetContexts;
 
@@ -94,6 +151,14 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
         return this.resetContexts == null ? Input.empty() : this.resetContexts;
     }
 
+    /**
+     * Indicates whether webhooks are enabled for the intent.
+     * * WEBHOOK_STATE_ENABLED: Webhook is enabled in the agent and in the intent.
+     * * WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING: Webhook is enabled in the agent and in the intent. Also, each slot
+     *   filling prompt is forwarded to the webhook.
+     *   Possible values are `WEBHOOK_STATE_ENABLED` and `WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING`.
+     * 
+     */
     @InputImport(name="webhookState")
     private final @Nullable Input<String> webhookState;
 

@@ -11,9 +11,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueTimeValue {
+    /**
+     * Hours of day in 24 hour format. Should be from 0 to 23.
+     * 
+     */
     private final @Nullable Integer hours;
+    /**
+     * Minutes of hour of day. Must be from 0 to 59.
+     * 
+     */
     private final @Nullable Integer minutes;
+    /**
+     * Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
+     * 
+     */
     private final @Nullable Integer nanos;
+    /**
+     * Seconds of minutes of the time. Must normally be from 0 to 59.
+     * 
+     */
     private final @Nullable Integer seconds;
 
     @OutputCustomType.Constructor({"hours","minutes","nanos","seconds"})
@@ -28,15 +44,31 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
         this.seconds = seconds;
     }
 
+    /**
+     * Hours of day in 24 hour format. Should be from 0 to 23.
+     * 
+     */
     public Optional<Integer> getHours() {
         return Optional.ofNullable(this.hours);
     }
+    /**
+     * Minutes of hour of day. Must be from 0 to 59.
+     * 
+     */
     public Optional<Integer> getMinutes() {
         return Optional.ofNullable(this.minutes);
     }
+    /**
+     * Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
+     * 
+     */
     public Optional<Integer> getNanos() {
         return Optional.ofNullable(this.nanos);
     }
+    /**
+     * Seconds of minutes of the time. Must normally be from 0 to 59.
+     * 
+     */
     public Optional<Integer> getSeconds() {
         return Optional.ofNullable(this.seconds);
     }

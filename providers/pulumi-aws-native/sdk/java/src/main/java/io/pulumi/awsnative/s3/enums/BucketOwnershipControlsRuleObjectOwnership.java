@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Specifies an object ownership rule.
+     * 
+     */
     @EnumType
     public enum BucketOwnershipControlsRuleObjectOwnership {
         ObjectWriter("ObjectWriter"),

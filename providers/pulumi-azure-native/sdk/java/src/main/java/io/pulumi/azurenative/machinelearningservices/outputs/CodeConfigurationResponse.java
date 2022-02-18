@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CodeConfigurationResponse {
+    /**
+     * ARM resource ID of the code asset.
+     * 
+     */
     private final @Nullable String codeId;
+    /**
+     * The script to execute on startup. eg. "score.py"
+     * 
+     */
     private final String scoringScript;
 
     @OutputCustomType.Constructor({"codeId","scoringScript"})
@@ -22,9 +30,17 @@ public final class CodeConfigurationResponse {
         this.scoringScript = Objects.requireNonNull(scoringScript);
     }
 
+    /**
+     * ARM resource ID of the code asset.
+     * 
+     */
     public Optional<String> getCodeId() {
         return Optional.ofNullable(this.codeId);
     }
+    /**
+     * The script to execute on startup. eg. "score.py"
+     * 
+     */
     public String getScoringScript() {
         return this.scoringScript;
     }

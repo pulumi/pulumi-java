@@ -12,6 +12,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DataSourceErrorInfo {
+    /**
+     * <p>Error message.</p>
+     * 
+     */
     private final @Nullable String message;
     private final @Nullable DataSourceErrorInfoType type;
 
@@ -23,6 +27,10 @@ public final class DataSourceErrorInfo {
         this.type = type;
     }
 
+    /**
+     * <p>Error message.</p>
+     * 
+     */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }

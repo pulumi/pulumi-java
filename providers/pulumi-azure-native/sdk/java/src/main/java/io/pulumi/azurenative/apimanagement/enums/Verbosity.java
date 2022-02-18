@@ -8,10 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The verbosity level applied to traces emitted by trace policies.
+     * 
+     */
     @EnumType
     public enum Verbosity {
+        /**
+         * All the traces emitted by trace policies will be sent to the logger attached to this diagnostic instance.
+         * 
+         */
         Verbose("verbose"),
+        /**
+         * Traces with 'severity' set to 'information' and 'error' will be sent to the logger attached to this diagnostic instance.
+         * 
+         */
         Information("information"),
+        /**
+         * Only traces with 'severity' set to 'error' will be sent to the logger attached to this diagnostic instance.
+         * 
+         */
         Error("error");
 
         private final String value;

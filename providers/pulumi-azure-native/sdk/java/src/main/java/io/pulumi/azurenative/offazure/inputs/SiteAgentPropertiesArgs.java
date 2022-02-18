@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Class for site agent properties.
+ * 
+ */
 public final class SiteAgentPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SiteAgentPropertiesArgs Empty = new SiteAgentPropertiesArgs();
 
+    /**
+     * Key vault ARM Id.
+     * 
+     */
     @InputImport(name="keyVaultId")
     private final @Nullable Input<String> keyVaultId;
 
@@ -21,6 +29,10 @@ public final class SiteAgentPropertiesArgs extends io.pulumi.resources.ResourceA
         return this.keyVaultId == null ? Input.empty() : this.keyVaultId;
     }
 
+    /**
+     * Key vault URI.
+     * 
+     */
     @InputImport(name="keyVaultUri")
     private final @Nullable Input<String> keyVaultUri;
 

@@ -14,6 +14,10 @@ public final class SecurityPolicyRuleRateLimitOptionsThresholdArgs extends io.pu
 
     public static final SecurityPolicyRuleRateLimitOptionsThresholdArgs Empty = new SecurityPolicyRuleRateLimitOptionsThresholdArgs();
 
+    /**
+     * Number of HTTP(S) requests for calculating the threshold.
+     * 
+     */
     @InputImport(name="count")
     private final @Nullable Input<Integer> count;
 
@@ -21,6 +25,10 @@ public final class SecurityPolicyRuleRateLimitOptionsThresholdArgs extends io.pu
         return this.count == null ? Input.empty() : this.count;
     }
 
+    /**
+     * Interval over which the threshold is computed.
+     * 
+     */
     @InputImport(name="intervalSec")
     private final @Nullable Input<Integer> intervalSec;
 

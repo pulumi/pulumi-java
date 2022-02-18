@@ -10,6 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * An Access Analyzer archive rule. Archive rules automatically archive new findings that meet the criteria you define when you create the rule.
+ * 
+ */
 public final class AnalyzerArchiveRule extends io.pulumi.resources.InvokeArgs {
 
     public static final AnalyzerArchiveRule Empty = new AnalyzerArchiveRule();
@@ -21,6 +25,10 @@ public final class AnalyzerArchiveRule extends io.pulumi.resources.InvokeArgs {
         return this.filter;
     }
 
+    /**
+     * The archive rule name
+     * 
+     */
     @InputImport(name="ruleName", required=true)
     private final String ruleName;
 

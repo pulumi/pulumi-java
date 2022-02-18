@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListNamedValueResult {
+    /**
+     * This is secret value of the NamedValue entity.
+     * 
+     */
     private final @Nullable String value;
 
     @OutputCustomType.Constructor({"value"})
@@ -18,6 +22,10 @@ public final class ListNamedValueResult {
         this.value = value;
     }
 
+    /**
+     * This is secret value of the NamedValue entity.
+     * 
+     */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }

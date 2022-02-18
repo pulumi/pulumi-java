@@ -12,7 +12,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TriggerBuildSource {
+    /**
+     * Location of the source in a Google Cloud Source Repository.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable TriggerBuildSourceRepoSource repoSource;
+    /**
+     * Location of the source in an archive file in Google Cloud Storage.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable TriggerBuildSourceStorageSource storageSource;
 
     @OutputCustomType.Constructor({"repoSource","storageSource"})
@@ -23,9 +33,19 @@ public final class TriggerBuildSource {
         this.storageSource = storageSource;
     }
 
+    /**
+     * Location of the source in a Google Cloud Source Repository.
+     * Structure is documented below.
+     * 
+     */
     public Optional<TriggerBuildSourceRepoSource> getRepoSource() {
         return Optional.ofNullable(this.repoSource);
     }
+    /**
+     * Location of the source in an archive file in Google Cloud Storage.
+     * Structure is documented below.
+     * 
+     */
     public Optional<TriggerBuildSourceStorageSource> getStorageSource() {
         return Optional.ofNullable(this.storageSource);
     }

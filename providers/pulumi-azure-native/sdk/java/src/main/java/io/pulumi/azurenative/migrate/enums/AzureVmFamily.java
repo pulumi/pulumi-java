@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Azure VM family.
+     * 
+     */
     @EnumType
     public enum AzureVmFamily {
         Unknown("Unknown"),

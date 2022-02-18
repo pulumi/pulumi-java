@@ -13,6 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDefaultServiceAccount {
+/**
+ * Get the email address of a project's unique BigQuery service account.
+ * 
+ * Each Google Cloud project has a unique service account used by BigQuery. When using
+ * BigQuery with [customer-managed encryption keys](https://cloud.google.com/bigquery/docs/customer-managed-encryption),
+ * this account needs to be granted the
+ * `cloudkms.cryptoKeyEncrypterDecrypter` IAM role on the customer-managed Cloud KMS key used to protect the data.
+ * 
+ * For more information see
+ * [the API reference](https://cloud.google.com/bigquery/docs/reference/rest/v2/projects/getServiceAccount).
+ * 
+ * ## Example Usage
+ * 
+ *
+ * A collection of arguments for invoking getDefaultServiceAccount.
+ * 
+ *
+ * A collection of values returned by getDefaultServiceAccount.
+ * 
+ */
     public static CompletableFuture<GetDefaultServiceAccountResult> invokeAsync(@Nullable GetDefaultServiceAccountArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:bigquery/getDefaultServiceAccount:getDefaultServiceAccount", TypeShape.of(GetDefaultServiceAccountResult.class), args == null ? GetDefaultServiceAccountArgs.Empty : args, Utilities.withVersion(options));
     }

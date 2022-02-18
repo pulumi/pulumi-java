@@ -16,10 +16,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The properties that are associated with a scalar function.
+ * 
+ */
 public final class ScalarFunctionPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ScalarFunctionPropertiesResponse Empty = new ScalarFunctionPropertiesResponse();
 
+    /**
+     * The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.
+     * 
+     */
     @InputImport(name="binding")
     private final @Nullable Either<AzureMachineLearningWebServiceFunctionBindingResponse,JavaScriptFunctionBindingResponse> binding;
 
@@ -27,6 +35,10 @@ public final class ScalarFunctionPropertiesResponse extends io.pulumi.resources.
         return this.binding == null ? null : this.binding;
     }
 
+    /**
+     * The current entity tag for the function. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
+     * 
+     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -34,6 +46,10 @@ public final class ScalarFunctionPropertiesResponse extends io.pulumi.resources.
         return this.etag;
     }
 
+    /**
+     * A list of inputs describing the parameters of the function.
+     * 
+     */
     @InputImport(name="inputs")
     private final @Nullable List<FunctionInputResponse> inputs;
 
@@ -41,6 +57,10 @@ public final class ScalarFunctionPropertiesResponse extends io.pulumi.resources.
         return this.inputs == null ? List.of() : this.inputs;
     }
 
+    /**
+     * The output of the function.
+     * 
+     */
     @InputImport(name="output")
     private final @Nullable FunctionOutputResponse output;
 
@@ -48,6 +68,11 @@ public final class ScalarFunctionPropertiesResponse extends io.pulumi.resources.
         return this.output == null ? Optional.empty() : Optional.ofNullable(this.output);
     }
 
+    /**
+     * Indicates the type of function.
+     * Expected value is 'Scalar'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

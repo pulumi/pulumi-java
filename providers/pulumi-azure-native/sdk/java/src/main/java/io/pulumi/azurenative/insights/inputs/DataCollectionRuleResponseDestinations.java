@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The specification of destinations.
+ * 
+ */
 public final class DataCollectionRuleResponseDestinations extends io.pulumi.resources.InvokeArgs {
 
     public static final DataCollectionRuleResponseDestinations Empty = new DataCollectionRuleResponseDestinations();
 
+    /**
+     * Azure Monitor Metrics destination.
+     * 
+     */
     @InputImport(name="azureMonitorMetrics")
     private final @Nullable DestinationsSpecResponseAzureMonitorMetrics azureMonitorMetrics;
 
@@ -23,6 +31,10 @@ public final class DataCollectionRuleResponseDestinations extends io.pulumi.reso
         return this.azureMonitorMetrics == null ? Optional.empty() : Optional.ofNullable(this.azureMonitorMetrics);
     }
 
+    /**
+     * List of Log Analytics destinations.
+     * 
+     */
     @InputImport(name="logAnalytics")
     private final @Nullable List<LogAnalyticsDestinationResponse> logAnalytics;
 

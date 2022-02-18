@@ -16,17 +16,65 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetStreamResult {
+    /**
+     * Automatically backfill objects included in the stream source configuration. Specific objects can be excluded.
+     * 
+     */
     private final BackfillAllStrategyResponse backfillAll;
+    /**
+     * Do not automatically backfill any objects.
+     * 
+     */
     private final BackfillNoneStrategyResponse backfillNone;
+    /**
+     * The creation time of the stream.
+     * 
+     */
     private final String createTime;
+    /**
+     * Immutable. A reference to a KMS encryption key. If provided, it will be used to encrypt the data. If left blank, data will be encrypted using an internal Stream-specific encryption key provisioned through KMS.
+     * 
+     */
     private final String customerManagedEncryptionKey;
+    /**
+     * Destination connection profile configuration.
+     * 
+     */
     private final DestinationConfigResponse destinationConfig;
+    /**
+     * Display name.
+     * 
+     */
     private final String displayName;
+    /**
+     * Errors on the Stream.
+     * 
+     */
     private final List<ErrorResponse> errors;
+    /**
+     * Labels.
+     * 
+     */
     private final Map<String,String> labels;
+    /**
+     * The stream's name.
+     * 
+     */
     private final String name;
+    /**
+     * Source connection profile configuration.
+     * 
+     */
     private final SourceConfigResponse sourceConfig;
+    /**
+     * The state of the stream.
+     * 
+     */
     private final String state;
+    /**
+     * The last update time of the stream.
+     * 
+     */
     private final String updateTime;
 
     @OutputCustomType.Constructor({"backfillAll","backfillNone","createTime","customerManagedEncryptionKey","destinationConfig","displayName","errors","labels","name","sourceConfig","state","updateTime"})
@@ -57,39 +105,87 @@ public final class GetStreamResult {
         this.updateTime = Objects.requireNonNull(updateTime);
     }
 
+    /**
+     * Automatically backfill objects included in the stream source configuration. Specific objects can be excluded.
+     * 
+     */
     public BackfillAllStrategyResponse getBackfillAll() {
         return this.backfillAll;
     }
+    /**
+     * Do not automatically backfill any objects.
+     * 
+     */
     public BackfillNoneStrategyResponse getBackfillNone() {
         return this.backfillNone;
     }
+    /**
+     * The creation time of the stream.
+     * 
+     */
     public String getCreateTime() {
         return this.createTime;
     }
+    /**
+     * Immutable. A reference to a KMS encryption key. If provided, it will be used to encrypt the data. If left blank, data will be encrypted using an internal Stream-specific encryption key provisioned through KMS.
+     * 
+     */
     public String getCustomerManagedEncryptionKey() {
         return this.customerManagedEncryptionKey;
     }
+    /**
+     * Destination connection profile configuration.
+     * 
+     */
     public DestinationConfigResponse getDestinationConfig() {
         return this.destinationConfig;
     }
+    /**
+     * Display name.
+     * 
+     */
     public String getDisplayName() {
         return this.displayName;
     }
+    /**
+     * Errors on the Stream.
+     * 
+     */
     public List<ErrorResponse> getErrors() {
         return this.errors;
     }
+    /**
+     * Labels.
+     * 
+     */
     public Map<String,String> getLabels() {
         return this.labels;
     }
+    /**
+     * The stream's name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Source connection profile configuration.
+     * 
+     */
     public SourceConfigResponse getSourceConfig() {
         return this.sourceConfig;
     }
+    /**
+     * The state of the stream.
+     * 
+     */
     public String getState() {
         return this.state;
     }
+    /**
+     * The last update time of the stream.
+     * 
+     */
     public String getUpdateTime() {
         return this.updateTime;
     }

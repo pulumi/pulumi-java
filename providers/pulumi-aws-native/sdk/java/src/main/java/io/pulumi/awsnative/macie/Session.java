@@ -14,33 +14,75 @@ import io.pulumi.core.internal.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * The AWS::Macie::Session resource specifies a new Amazon Macie session. A session is an object that represents the Amazon Macie service. A session is required for Amazon Macie to become operational.
+ * 
+ */
 @ResourceType(type="aws-native:macie:Session")
 public class Session extends io.pulumi.resources.CustomResource {
+    /**
+     * AWS account ID of customer
+     * 
+     */
     @OutputExport(name="awsAccountId", type=String.class, parameters={})
     private Output<String> awsAccountId;
 
+    /**
+     * @return AWS account ID of customer
+     * 
+     */
     public Output<String> getAwsAccountId() {
         return this.awsAccountId;
     }
+    /**
+     * A enumeration value that specifies how frequently finding updates are published.
+     * 
+     */
     @OutputExport(name="findingPublishingFrequency", type=SessionFindingPublishingFrequency.class, parameters={})
     private Output</* @Nullable */ SessionFindingPublishingFrequency> findingPublishingFrequency;
 
+    /**
+     * @return A enumeration value that specifies how frequently finding updates are published.
+     * 
+     */
     public Output</* @Nullable */ SessionFindingPublishingFrequency> getFindingPublishingFrequency() {
         return this.findingPublishingFrequency;
     }
+    /**
+     * Service role used by Macie
+     * 
+     */
     @OutputExport(name="serviceRole", type=String.class, parameters={})
     private Output<String> serviceRole;
 
+    /**
+     * @return Service role used by Macie
+     * 
+     */
     public Output<String> getServiceRole() {
         return this.serviceRole;
     }
+    /**
+     * A enumeration value that specifies the status of the Macie Session.
+     * 
+     */
     @OutputExport(name="status", type=SessionStatus.class, parameters={})
     private Output</* @Nullable */ SessionStatus> status;
 
+    /**
+     * @return A enumeration value that specifies the status of the Macie Session.
+     * 
+     */
     public Output</* @Nullable */ SessionStatus> getStatus() {
         return this.status;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Session(String name, @Nullable SessionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:macie:Session", name, args == null ? SessionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -56,6 +98,14 @@ public class Session extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Session get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Session(name, id, options);
     }

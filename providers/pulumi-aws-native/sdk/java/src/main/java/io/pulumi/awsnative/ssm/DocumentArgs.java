@@ -21,6 +21,10 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DocumentArgs Empty = new DocumentArgs();
 
+    /**
+     * A list of key and value pairs that describe attachments to a version of a document.
+     * 
+     */
     @InputImport(name="attachments")
     private final @Nullable Input<List<DocumentAttachmentsSourceArgs>> attachments;
 
@@ -28,6 +32,10 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
         return this.attachments == null ? Input.empty() : this.attachments;
     }
 
+    /**
+     * The content for the Systems Manager document in JSON, YAML or String format.
+     * 
+     */
     @InputImport(name="content", required=true)
     private final Input<Object> content;
 
@@ -35,6 +43,10 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
         return this.content;
     }
 
+    /**
+     * Specify the document format for the request. The document format can be either JSON or YAML. JSON is the default format.
+     * 
+     */
     @InputImport(name="documentFormat")
     private final @Nullable Input<DocumentFormat> documentFormat;
 
@@ -42,6 +54,10 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
         return this.documentFormat == null ? Input.empty() : this.documentFormat;
     }
 
+    /**
+     * The type of document to create.
+     * 
+     */
     @InputImport(name="documentType")
     private final @Nullable Input<DocumentType> documentType;
 
@@ -49,6 +65,10 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
         return this.documentType == null ? Input.empty() : this.documentType;
     }
 
+    /**
+     * A name for the Systems Manager document.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -56,6 +76,10 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * A list of SSM documents required by a document. For example, an ApplicationConfiguration document requires an ApplicationConfigurationSchema document.
+     * 
+     */
     @InputImport(name="requires")
     private final @Nullable Input<List<DocumentRequiresArgs>> requires;
 
@@ -63,6 +87,10 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
         return this.requires == null ? Input.empty() : this.requires;
     }
 
+    /**
+     * Optional metadata that you assign to a resource. Tags enable you to categorize a resource in different ways, such as by purpose, owner, or environment.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<DocumentTagArgs>> tags;
 
@@ -70,6 +98,10 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * Specify a target type to define the kinds of resources the document can run on.
+     * 
+     */
     @InputImport(name="targetType")
     private final @Nullable Input<String> targetType;
 
@@ -77,6 +109,10 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
         return this.targetType == null ? Input.empty() : this.targetType;
     }
 
+    /**
+     * An optional field specifying the version of the artifact you are creating with the document. This value is unique across all versions of a document, and cannot be changed.
+     * 
+     */
     @InputImport(name="versionName")
     private final @Nullable Input<String> versionName;
 

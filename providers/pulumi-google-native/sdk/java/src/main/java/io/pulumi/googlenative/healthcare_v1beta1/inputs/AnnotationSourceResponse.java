@@ -8,10 +8,18 @@ import io.pulumi.googlenative.healthcare_v1beta1.inputs.CloudHealthcareSourceRes
 import java.util.Objects;
 
 
+/**
+ * AnnotationSource holds the source information of the annotation.
+ * 
+ */
 public final class AnnotationSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AnnotationSourceResponse Empty = new AnnotationSourceResponse();
 
+    /**
+     * Cloud Healthcare API resource.
+     * 
+     */
     @InputImport(name="cloudHealthcareSource", required=true)
     private final CloudHealthcareSourceResponse cloudHealthcareSource;
 

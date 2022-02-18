@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Basis describes the base image portion (Note) of the DockerImage relationship. Linked occurrences are derived from this or an equivalent image via: FROM Or an equivalent reference, e.g. a tag of the resource_url.
+ * 
+ */
 public final class BasisArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BasisArgs Empty = new BasisArgs();
 
+    /**
+     * The fingerprint of the base image.
+     * 
+     */
     @InputImport(name="fingerprint")
     private final @Nullable Input<FingerprintArgs> fingerprint;
 
@@ -22,6 +30,10 @@ public final class BasisArgs extends io.pulumi.resources.ResourceArgs {
         return this.fingerprint == null ? Input.empty() : this.fingerprint;
     }
 
+    /**
+     * The resource_url for the resource representing the basis of associated occurrence images.
+     * 
+     */
     @InputImport(name="resourceUrl")
     private final @Nullable Input<String> resourceUrl;
 

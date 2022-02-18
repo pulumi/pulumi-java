@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMetricsSource {
+/**
+ * API Version: 2022-01-01-preview.
+ * 
+ */
     public static CompletableFuture<GetMetricsSourceResult> invokeAsync(GetMetricsSourceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logz:getMetricsSource", TypeShape.of(GetMetricsSourceResult.class), args == null ? GetMetricsSourceArgs.Empty : args, Utilities.withVersion(options));
     }

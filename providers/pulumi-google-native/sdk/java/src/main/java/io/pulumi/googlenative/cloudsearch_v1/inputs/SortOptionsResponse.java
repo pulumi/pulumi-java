@@ -12,6 +12,10 @@ public final class SortOptionsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SortOptionsResponse Empty = new SortOptionsResponse();
 
+    /**
+     * Name of the operator corresponding to the field to sort on. The corresponding property must be marked as sortable.
+     * 
+     */
     @InputImport(name="operatorName", required=true)
     private final String operatorName;
 
@@ -19,6 +23,10 @@ public final class SortOptionsResponse extends io.pulumi.resources.InvokeArgs {
         return this.operatorName;
     }
 
+    /**
+     * Ascending is the default sort order
+     * 
+     */
     @InputImport(name="sortOrder", required=true)
     private final String sortOrder;
 

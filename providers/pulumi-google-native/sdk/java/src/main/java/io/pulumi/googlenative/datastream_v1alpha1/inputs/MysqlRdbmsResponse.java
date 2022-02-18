@@ -9,10 +9,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * MySQL database structure
+ * 
+ */
 public final class MysqlRdbmsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MysqlRdbmsResponse Empty = new MysqlRdbmsResponse();
 
+    /**
+     * Mysql databases on the server
+     * 
+     */
     @InputImport(name="mysqlDatabases", required=true)
     private final List<MysqlDatabaseResponse> mysqlDatabases;
 

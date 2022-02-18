@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RestorePointCollectionSourcePropertiesResponse {
+    /**
+     * Resource Id of the source resource used to create this restore point collection
+     * 
+     */
     private final @Nullable String id;
+    /**
+     * Location of the source resource used to create this restore point collection.
+     * 
+     */
     private final String location;
 
     @OutputCustomType.Constructor({"id","location"})
@@ -22,9 +30,17 @@ public final class RestorePointCollectionSourcePropertiesResponse {
         this.location = Objects.requireNonNull(location);
     }
 
+    /**
+     * Resource Id of the source resource used to create this restore point collection
+     * 
+     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+    /**
+     * Location of the source resource used to create this restore point collection.
+     * 
+     */
     public String getLocation() {
         return this.location;
     }

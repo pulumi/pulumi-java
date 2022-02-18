@@ -16,6 +16,11 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
 
     public static final AiFeatureStoreEntityTypeState Empty = new AiFeatureStoreEntityTypeState();
 
+    /**
+     * The timestamp of when the featurestore was created in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to
+     * nine fractional digits.
+     * 
+     */
     @InputImport(name="createTime")
     private final @Nullable Input<String> createTime;
 
@@ -23,6 +28,10 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
         return this.createTime == null ? Input.empty() : this.createTime;
     }
 
+    /**
+     * Used to perform consistent read-modify-write updates.
+     * 
+     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -30,6 +39,10 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
         return this.etag == null ? Input.empty() : this.etag;
     }
 
+    /**
+     * The name of the Featurestore to use, in the format projects/{project}/locations/{location}/featurestores/{featurestore}.
+     * 
+     */
     @InputImport(name="featurestore")
     private final @Nullable Input<String> featurestore;
 
@@ -37,6 +50,10 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
         return this.featurestore == null ? Input.empty() : this.featurestore;
     }
 
+    /**
+     * A set of key/value label pairs to assign to this EntityType.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -44,6 +61,12 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The default monitoring configuration for all Features under this EntityType.
+     * If this is populated with [FeaturestoreMonitoringConfig.monitoring_interval] specified, snapshot analysis monitoring is enabled. Otherwise, snapshot analysis monitoring is disabled.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="monitoringConfig")
     private final @Nullable Input<AiFeatureStoreEntityTypeMonitoringConfigGetArgs> monitoringConfig;
 
@@ -51,6 +74,10 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
         return this.monitoringConfig == null ? Input.empty() : this.monitoringConfig;
     }
 
+    /**
+     * The name of the EntityType. This value may be up to 60 characters, and valid characters are [a-z0-9_]. The first character cannot be a number.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -58,6 +85,11 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The timestamp of when the featurestore was last updated in RFC3339 UTC "Zulu" format, with nanosecond resolution and up
+     * to nine fractional digits.
+     * 
+     */
     @InputImport(name="updateTime")
     private final @Nullable Input<String> updateTime;
 

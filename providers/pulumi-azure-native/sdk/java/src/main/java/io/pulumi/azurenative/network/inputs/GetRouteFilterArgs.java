@@ -14,6 +14,10 @@ public final class GetRouteFilterArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetRouteFilterArgs Empty = new GetRouteFilterArgs();
 
+    /**
+     * Expands referenced express route bgp peering resources.
+     * 
+     */
     @InputImport(name="expand")
     private final @Nullable String expand;
 
@@ -21,6 +25,10 @@ public final class GetRouteFilterArgs extends io.pulumi.resources.InvokeArgs {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -28,6 +36,10 @@ public final class GetRouteFilterArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the route filter.
+     * 
+     */
     @InputImport(name="routeFilterName", required=true)
     private final String routeFilterName;
 

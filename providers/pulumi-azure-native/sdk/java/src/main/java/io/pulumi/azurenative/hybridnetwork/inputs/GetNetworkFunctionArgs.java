@@ -12,6 +12,10 @@ public final class GetNetworkFunctionArgs extends io.pulumi.resources.InvokeArgs
 
     public static final GetNetworkFunctionArgs Empty = new GetNetworkFunctionArgs();
 
+    /**
+     * The name of the network function resource.
+     * 
+     */
     @InputImport(name="networkFunctionName", required=true)
     private final String networkFunctionName;
 
@@ -19,6 +23,10 @@ public final class GetNetworkFunctionArgs extends io.pulumi.resources.InvokeArgs
         return this.networkFunctionName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

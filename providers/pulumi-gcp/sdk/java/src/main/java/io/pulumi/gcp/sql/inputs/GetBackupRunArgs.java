@@ -16,6 +16,11 @@ public final class GetBackupRunArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetBackupRunArgs Empty = new GetBackupRunArgs();
 
+    /**
+     * The identifier for this backup run. Unique only for a specific Cloud SQL instance.
+     * If left empty and multiple backups exist for the instance, `most_recent` must be set to `true`.
+     * 
+     */
     @InputImport(name="backupId")
     private final @Nullable Integer backupId;
 
@@ -23,6 +28,10 @@ public final class GetBackupRunArgs extends io.pulumi.resources.InvokeArgs {
         return this.backupId == null ? Optional.empty() : Optional.ofNullable(this.backupId);
     }
 
+    /**
+     * The name of the instance the backup is taken from.
+     * 
+     */
     @InputImport(name="instance", required=true)
     private final String instance;
 
@@ -30,6 +39,11 @@ public final class GetBackupRunArgs extends io.pulumi.resources.InvokeArgs {
         return this.instance;
     }
 
+    /**
+     * Toggles use of the most recent backup run if multiple backups exist for a
+     * Cloud SQL instance.
+     * 
+     */
     @InputImport(name="mostRecent")
     private final @Nullable Boolean mostRecent;
 

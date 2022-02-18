@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The Compute Instance Authorization type. Available values are personal (default).
+     * 
+     */
     @EnumType
     public enum ComputeInstanceAuthorizationType {
         Personal("personal");

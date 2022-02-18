@@ -12,6 +12,11 @@ public final class GetInstanceNetworkInterfaceAccessConfig extends io.pulumi.res
 
     public static final GetInstanceNetworkInterfaceAccessConfig Empty = new GetInstanceNetworkInterfaceAccessConfig();
 
+    /**
+     * The IP address that is be 1:1 mapped to the instance's
+     * network ip.
+     * 
+     */
     @InputImport(name="natIp", required=true)
     private final String natIp;
 
@@ -19,6 +24,10 @@ public final class GetInstanceNetworkInterfaceAccessConfig extends io.pulumi.res
         return this.natIp;
     }
 
+    /**
+     * The [networking tier][network-tier] used for configuring this instance. One of `PREMIUM` or `STANDARD`.
+     * 
+     */
     @InputImport(name="networkTier", required=true)
     private final String networkTier;
 
@@ -26,6 +35,10 @@ public final class GetInstanceNetworkInterfaceAccessConfig extends io.pulumi.res
         return this.networkTier;
     }
 
+    /**
+     * The DNS domain name for the public PTR record.
+     * 
+     */
     @InputImport(name="publicPtrDomainName", required=true)
     private final String publicPtrDomainName;
 

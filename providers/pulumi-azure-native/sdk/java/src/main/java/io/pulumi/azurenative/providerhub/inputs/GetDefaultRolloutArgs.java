@@ -12,6 +12,10 @@ public final class GetDefaultRolloutArgs extends io.pulumi.resources.InvokeArgs 
 
     public static final GetDefaultRolloutArgs Empty = new GetDefaultRolloutArgs();
 
+    /**
+     * The name of the resource provider hosted within ProviderHub.
+     * 
+     */
     @InputImport(name="providerNamespace", required=true)
     private final String providerNamespace;
 
@@ -19,6 +23,10 @@ public final class GetDefaultRolloutArgs extends io.pulumi.resources.InvokeArgs 
         return this.providerNamespace;
     }
 
+    /**
+     * The rollout name.
+     * 
+     */
     @InputImport(name="rolloutName", required=true)
     private final String rolloutName;
 

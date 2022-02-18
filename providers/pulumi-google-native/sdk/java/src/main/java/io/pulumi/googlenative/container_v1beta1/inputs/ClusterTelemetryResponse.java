@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Telemetry integration for the cluster.
+ * 
+ */
 public final class ClusterTelemetryResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ClusterTelemetryResponse Empty = new ClusterTelemetryResponse();
 
+    /**
+     * Type of the integration.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

@@ -15,6 +15,10 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
 
     public static final PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetArgs Empty = new PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetArgs();
 
+    /**
+     * The name of a Cloud Storage bucket.
+     * 
+     */
     @InputImport(name="bucketName", required=true)
     private final Input<String> bucketName;
 
@@ -22,6 +26,11 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
         return this.bucketName;
     }
 
+    /**
+     * A list of regular expressions matching file paths to exclude. All files in the bucket that match at
+     * least one of these regular expressions will be excluded from the scan.
+     * 
+     */
     @InputImport(name="excludeRegexes")
     private final @Nullable Input<List<String>> excludeRegexes;
 
@@ -29,6 +38,13 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
         return this.excludeRegexes == null ? Input.empty() : this.excludeRegexes;
     }
 
+    /**
+     * A list of regular expressions matching file paths to include. All files in the bucket
+     * that match at least one of these regular expressions will be included in the set of files,
+     * except for those that also match an item in excludeRegex. Leaving this field empty will
+     * match all files by default (this is equivalent to including .* in the list)
+     * 
+     */
     @InputImport(name="includeRegexes")
     private final @Nullable Input<List<String>> includeRegexes;
 

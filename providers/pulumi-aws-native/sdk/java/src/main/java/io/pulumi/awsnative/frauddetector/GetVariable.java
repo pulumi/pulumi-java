@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVariable {
+/**
+ * A resource schema for a Variable in Amazon Fraud Detector.
+ * 
+ */
     public static CompletableFuture<GetVariableResult> invokeAsync(GetVariableArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:frauddetector:getVariable", TypeShape.of(GetVariableResult.class), args == null ? GetVariableArgs.Empty : args, Utilities.withVersion(options));
     }

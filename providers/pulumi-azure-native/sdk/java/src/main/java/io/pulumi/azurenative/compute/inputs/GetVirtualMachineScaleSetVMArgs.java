@@ -14,6 +14,10 @@ public final class GetVirtualMachineScaleSetVMArgs extends io.pulumi.resources.I
 
     public static final GetVirtualMachineScaleSetVMArgs Empty = new GetVirtualMachineScaleSetVMArgs();
 
+    /**
+     * The expand expression to apply on the operation. 'InstanceView' will retrieve the instance view of the virtual machine. 'UserData' will retrieve the UserData of the virtual machine.
+     * 
+     */
     @InputImport(name="expand")
     private final @Nullable String expand;
 
@@ -21,6 +25,10 @@ public final class GetVirtualMachineScaleSetVMArgs extends io.pulumi.resources.I
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
+    /**
+     * The instance ID of the virtual machine.
+     * 
+     */
     @InputImport(name="instanceId", required=true)
     private final String instanceId;
 
@@ -28,6 +36,10 @@ public final class GetVirtualMachineScaleSetVMArgs extends io.pulumi.resources.I
         return this.instanceId;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -35,6 +47,10 @@ public final class GetVirtualMachineScaleSetVMArgs extends io.pulumi.resources.I
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the VM scale set.
+     * 
+     */
     @InputImport(name="vmScaleSetName", required=true)
     private final String vmScaleSetName;
 

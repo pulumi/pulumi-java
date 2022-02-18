@@ -16,6 +16,10 @@ public final class PlaybackKeyPairArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final PlaybackKeyPairArgs Empty = new PlaybackKeyPairArgs();
 
+    /**
+     * An arbitrary string (a nickname) assigned to a playback key pair that helps the customer identify that resource. The value does not need to be unique.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -23,6 +27,10 @@ public final class PlaybackKeyPairArgs extends io.pulumi.resources.ResourceArgs 
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The public portion of a customer-generated key pair.
+     * 
+     */
     @InputImport(name="publicKeyMaterial", required=true)
     private final Input<String> publicKeyMaterial;
 
@@ -30,6 +38,10 @@ public final class PlaybackKeyPairArgs extends io.pulumi.resources.ResourceArgs 
         return this.publicKeyMaterial;
     }
 
+    /**
+     * A list of key-value pairs that contain metadata for the asset model.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<PlaybackKeyPairTagArgs>> tags;
 

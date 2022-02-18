@@ -10,6 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The metadata that you apply to the cluster to help you categorize and organize them. Each tag consists of a key and an optional value, both of which you define.
+ * 
+ */
 public final class ClusterTag extends io.pulumi.resources.InvokeArgs {
 
     public static final ClusterTag Empty = new ClusterTag();

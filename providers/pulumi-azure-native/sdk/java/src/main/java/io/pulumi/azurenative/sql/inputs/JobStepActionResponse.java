@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The action to be executed by a job step.
+ * 
+ */
 public final class JobStepActionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final JobStepActionResponse Empty = new JobStepActionResponse();
 
+    /**
+     * The source of the action to execute.
+     * 
+     */
     @InputImport(name="source")
     private final @Nullable String source;
 
@@ -21,6 +29,10 @@ public final class JobStepActionResponse extends io.pulumi.resources.InvokeArgs 
         return this.source == null ? Optional.empty() : Optional.ofNullable(this.source);
     }
 
+    /**
+     * Type of action being executed by the job step.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 
@@ -28,6 +40,10 @@ public final class JobStepActionResponse extends io.pulumi.resources.InvokeArgs 
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
+    /**
+     * The action value, for example the text of the T-SQL script to execute.
+     * 
+     */
     @InputImport(name="value", required=true)
     private final String value;
 

@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVersion {
+/**
+ * Gets the specified Version resource. By default, only a BASIC_VIEW will be returned. Specify the FULL_VIEW parameter to get the full resource.
+ * 
+ */
     public static CompletableFuture<GetVersionResult> invokeAsync(GetVersionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:appengine/v1:getVersion", TypeShape.of(GetVersionResult.class), args == null ? GetVersionArgs.Empty : args, Utilities.withVersion(options));
     }

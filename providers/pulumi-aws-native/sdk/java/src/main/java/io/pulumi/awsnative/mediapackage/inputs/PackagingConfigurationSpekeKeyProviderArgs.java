@@ -10,6 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * A configuration for accessing an external Secure Packager and Encoder Key Exchange (SPEKE) service that will provide encryption keys.
+ * 
+ */
 public final class PackagingConfigurationSpekeKeyProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PackagingConfigurationSpekeKeyProviderArgs Empty = new PackagingConfigurationSpekeKeyProviderArgs();
@@ -21,6 +25,10 @@ public final class PackagingConfigurationSpekeKeyProviderArgs extends io.pulumi.
         return this.roleArn;
     }
 
+    /**
+     * The system IDs to include in key requests.
+     * 
+     */
     @InputImport(name="systemIds", required=true)
     private final Input<List<String>> systemIds;
 
@@ -28,6 +36,10 @@ public final class PackagingConfigurationSpekeKeyProviderArgs extends io.pulumi.
         return this.systemIds;
     }
 
+    /**
+     * The URL of the external key provider service.
+     * 
+     */
     @InputImport(name="url", required=true)
     private final Input<String> url;
 

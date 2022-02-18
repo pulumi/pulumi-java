@@ -14,6 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties of the rollout.
+ * 
+ */
 public final class DefaultRolloutPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DefaultRolloutPropertiesArgs Empty = new DefaultRolloutPropertiesArgs();

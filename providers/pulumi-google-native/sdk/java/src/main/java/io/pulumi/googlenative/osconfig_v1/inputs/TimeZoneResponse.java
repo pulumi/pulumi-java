@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Represents a time zone from the [IANA Time Zone Database](https://www.iana.org/time-zones).
+ * 
+ */
 public final class TimeZoneResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TimeZoneResponse Empty = new TimeZoneResponse();
 
+    /**
+     * Optional. IANA Time Zone Database version number, e.g. "2019a".
+     * 
+     */
     @InputImport(name="version", required=true)
     private final String version;
 

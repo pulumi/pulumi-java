@@ -14,6 +14,11 @@ public final class TenantInboundSamlConfigIdpConfigIdpCertificateArgs extends io
 
     public static final TenantInboundSamlConfigIdpConfigIdpCertificateArgs Empty = new TenantInboundSamlConfigIdpConfigIdpCertificateArgs();
 
+    /**
+     * - 
+     * The x509 certificate
+     * 
+     */
     @InputImport(name="x509Certificate")
     private final @Nullable Input<String> x509Certificate;
 

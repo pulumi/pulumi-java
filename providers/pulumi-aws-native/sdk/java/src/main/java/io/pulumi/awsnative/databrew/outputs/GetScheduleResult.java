@@ -12,6 +12,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetScheduleResult {
+    /**
+     * Schedule cron
+     * 
+     */
     private final @Nullable String cronExpression;
     private final @Nullable List<String> jobNames;
 
@@ -23,6 +27,10 @@ public final class GetScheduleResult {
         this.jobNames = jobNames;
     }
 
+    /**
+     * Schedule cron
+     * 
+     */
     public Optional<String> getCronExpression() {
         return Optional.ofNullable(this.cronExpression);
     }

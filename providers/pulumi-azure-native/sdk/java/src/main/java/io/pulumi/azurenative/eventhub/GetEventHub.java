@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEventHub {
+/**
+ * Single item in List or Get Event Hub operation
+ * API Version: 2017-04-01.
+ * 
+ *
+ * Single item in List or Get Event Hub operation
+ * 
+ */
     public static CompletableFuture<GetEventHubResult> invokeAsync(GetEventHubArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventhub:getEventHub", TypeShape.of(GetEventHubResult.class), args == null ? GetEventHubArgs.Empty : args, Utilities.withVersion(options));
     }

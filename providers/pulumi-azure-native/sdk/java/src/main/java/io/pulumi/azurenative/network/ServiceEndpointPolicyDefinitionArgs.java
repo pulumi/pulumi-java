@@ -15,6 +15,10 @@ public final class ServiceEndpointPolicyDefinitionArgs extends io.pulumi.resourc
 
     public static final ServiceEndpointPolicyDefinitionArgs Empty = new ServiceEndpointPolicyDefinitionArgs();
 
+    /**
+     * A description for this rule. Restricted to 140 chars.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -22,6 +26,10 @@ public final class ServiceEndpointPolicyDefinitionArgs extends io.pulumi.resourc
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -29,6 +37,10 @@ public final class ServiceEndpointPolicyDefinitionArgs extends io.pulumi.resourc
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -36,6 +48,10 @@ public final class ServiceEndpointPolicyDefinitionArgs extends io.pulumi.resourc
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -43,6 +59,10 @@ public final class ServiceEndpointPolicyDefinitionArgs extends io.pulumi.resourc
         return this.resourceGroupName;
     }
 
+    /**
+     * Service endpoint name.
+     * 
+     */
     @InputImport(name="service")
     private final @Nullable Input<String> service;
 
@@ -50,6 +70,10 @@ public final class ServiceEndpointPolicyDefinitionArgs extends io.pulumi.resourc
         return this.service == null ? Input.empty() : this.service;
     }
 
+    /**
+     * The name of the service endpoint policy definition name.
+     * 
+     */
     @InputImport(name="serviceEndpointPolicyDefinitionName")
     private final @Nullable Input<String> serviceEndpointPolicyDefinitionName;
 
@@ -57,6 +81,10 @@ public final class ServiceEndpointPolicyDefinitionArgs extends io.pulumi.resourc
         return this.serviceEndpointPolicyDefinitionName == null ? Input.empty() : this.serviceEndpointPolicyDefinitionName;
     }
 
+    /**
+     * The name of the service endpoint policy.
+     * 
+     */
     @InputImport(name="serviceEndpointPolicyName", required=true)
     private final Input<String> serviceEndpointPolicyName;
 
@@ -64,6 +92,10 @@ public final class ServiceEndpointPolicyDefinitionArgs extends io.pulumi.resourc
         return this.serviceEndpointPolicyName;
     }
 
+    /**
+     * A list of service resources.
+     * 
+     */
     @InputImport(name="serviceResources")
     private final @Nullable Input<List<String>> serviceResources;
 

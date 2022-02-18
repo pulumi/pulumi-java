@@ -21,6 +21,10 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final KeyArgs Empty = new KeyArgs();
 
+    /**
+     * A description of the CMK. Use a description that helps you to distinguish this CMK from others in the account, such as its intended use.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -28,6 +32,10 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Enables automatic rotation of the key material for the specified customer master key (CMK). By default, automation key rotation is not enabled.
+     * 
+     */
     @InputImport(name="enableKeyRotation")
     private final @Nullable Input<Boolean> enableKeyRotation;
 
@@ -35,6 +43,10 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableKeyRotation == null ? Input.empty() : this.enableKeyRotation;
     }
 
+    /**
+     * Specifies whether the customer master key (CMK) is enabled. Disabled CMKs cannot be used in cryptographic operations.
+     * 
+     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 
@@ -42,6 +54,10 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
+    /**
+     * The key policy that authorizes use of the CMK. The key policy must observe the following rules.
+     * 
+     */
     @InputImport(name="keyPolicy", required=true)
     private final Input<Object> keyPolicy;
 
@@ -49,6 +65,10 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.keyPolicy;
     }
 
+    /**
+     * Specifies the type of CMK to create. The default value is SYMMETRIC_DEFAULT. This property is required only for asymmetric CMKs. You can't change the KeySpec value after the CMK is created.
+     * 
+     */
     @InputImport(name="keySpec")
     private final @Nullable Input<KeySpec> keySpec;
 
@@ -56,6 +76,10 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.keySpec == null ? Input.empty() : this.keySpec;
     }
 
+    /**
+     * Determines the cryptographic operations for which you can use the CMK. The default value is ENCRYPT_DECRYPT. This property is required only for asymmetric CMKs. You can't change the KeyUsage value after the CMK is created.
+     * 
+     */
     @InputImport(name="keyUsage")
     private final @Nullable Input<KeyUsage> keyUsage;
 
@@ -63,6 +87,10 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.keyUsage == null ? Input.empty() : this.keyUsage;
     }
 
+    /**
+     * Specifies whether the CMK should be Multi-Region. You can't change the MultiRegion value after the CMK is created.
+     * 
+     */
     @InputImport(name="multiRegion")
     private final @Nullable Input<Boolean> multiRegion;
 
@@ -70,6 +98,10 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.multiRegion == null ? Input.empty() : this.multiRegion;
     }
 
+    /**
+     * Specifies the number of days in the waiting period before AWS KMS deletes a CMK that has been removed from a CloudFormation stack. Enter a value between 7 and 30 days. The default value is 30 days.
+     * 
+     */
     @InputImport(name="pendingWindowInDays")
     private final @Nullable Input<Integer> pendingWindowInDays;
 
@@ -77,6 +109,10 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.pendingWindowInDays == null ? Input.empty() : this.pendingWindowInDays;
     }
 
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<KeyTagArgs>> tags;
 

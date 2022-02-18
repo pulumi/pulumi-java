@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Encoding of an input file such as an audio, video, or text track. Elementary streams must be packaged before mapping and sharing between different output formats.
+ * 
+ */
 public final class ElementaryStreamArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ElementaryStreamArgs Empty = new ElementaryStreamArgs();
 
+    /**
+     * Encoding of an audio stream.
+     * 
+     */
     @InputImport(name="audioStream")
     private final @Nullable Input<AudioStreamArgs> audioStream;
 
@@ -24,6 +32,10 @@ public final class ElementaryStreamArgs extends io.pulumi.resources.ResourceArgs
         return this.audioStream == null ? Input.empty() : this.audioStream;
     }
 
+    /**
+     * A unique key for this elementary stream.
+     * 
+     */
     @InputImport(name="key")
     private final @Nullable Input<String> key;
 
@@ -31,6 +43,10 @@ public final class ElementaryStreamArgs extends io.pulumi.resources.ResourceArgs
         return this.key == null ? Input.empty() : this.key;
     }
 
+    /**
+     * Encoding of a text stream. For example, closed captions or subtitles.
+     * 
+     */
     @InputImport(name="textStream")
     private final @Nullable Input<TextStreamArgs> textStream;
 
@@ -38,6 +54,10 @@ public final class ElementaryStreamArgs extends io.pulumi.resources.ResourceArgs
         return this.textStream == null ? Input.empty() : this.textStream;
     }
 
+    /**
+     * Encoding of a video stream.
+     * 
+     */
     @InputImport(name="videoStream")
     private final @Nullable Input<VideoStreamArgs> videoStream;
 

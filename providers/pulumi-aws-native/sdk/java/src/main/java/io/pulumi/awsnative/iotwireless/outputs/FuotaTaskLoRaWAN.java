@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FuotaTaskLoRaWAN {
+    /**
+     * FUOTA task LoRaWAN RF region
+     * 
+     */
     private final String rfRegion;
+    /**
+     * FUOTA task LoRaWAN start time
+     * 
+     */
     private final @Nullable String startTime;
 
     @OutputCustomType.Constructor({"rfRegion","startTime"})
@@ -22,9 +30,17 @@ public final class FuotaTaskLoRaWAN {
         this.startTime = startTime;
     }
 
+    /**
+     * FUOTA task LoRaWAN RF region
+     * 
+     */
     public String getRfRegion() {
         return this.rfRegion;
     }
+    /**
+     * FUOTA task LoRaWAN start time
+     * 
+     */
     public Optional<String> getStartTime() {
         return Optional.ofNullable(this.startTime);
     }

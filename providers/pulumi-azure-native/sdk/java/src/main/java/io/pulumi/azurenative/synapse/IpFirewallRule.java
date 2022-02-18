@@ -14,39 +14,100 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * IP firewall rule
+ * API Version: 2021-03-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:synapse:IpFirewallRule ExampleIpFirewallRule /subscriptions/01234567-89ab-4def-0123-456789abcdef/resourceGroups/ExampleResourceGroup/providers/Microsoft.Synapse/workspaces/ExampleWorkspace/firewallRules/ExampleIpFirewallRule 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:synapse:IpFirewallRule")
 public class IpFirewallRule extends io.pulumi.resources.CustomResource {
+    /**
+     * The end IP address of the firewall rule. Must be IPv4 format. Must be greater than or equal to startIpAddress
+     * 
+     */
     @OutputExport(name="endIpAddress", type=String.class, parameters={})
     private Output</* @Nullable */ String> endIpAddress;
 
+    /**
+     * @return The end IP address of the firewall rule. Must be IPv4 format. Must be greater than or equal to startIpAddress
+     * 
+     */
     public Output</* @Nullable */ String> getEndIpAddress() {
         return this.endIpAddress;
     }
+    /**
+     * The name of the resource
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Resource provisioning state
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return Resource provisioning state
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The start IP address of the firewall rule. Must be IPv4 format
+     * 
+     */
     @OutputExport(name="startIpAddress", type=String.class, parameters={})
     private Output</* @Nullable */ String> startIpAddress;
 
+    /**
+     * @return The start IP address of the firewall rule. Must be IPv4 format
+     * 
+     */
     public Output</* @Nullable */ String> getStartIpAddress() {
         return this.startIpAddress;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public IpFirewallRule(String name, IpFirewallRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:synapse:IpFirewallRule", name, args == null ? IpFirewallRuleArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -71,6 +132,14 @@ public class IpFirewallRule extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static IpFirewallRule get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new IpFirewallRule(name, id, options);
     }

@@ -10,6 +10,12 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ClusterNodeConfigLinuxNodeConfig {
+    /**
+     * The Linux kernel parameters to be applied to the nodes
+     * and all pods running on the nodes. Specified as a map from the key, such as
+     * `net.core.wmem_max`, to a string value.
+     * 
+     */
     private final Map<String,String> sysctls;
 
     @OutputCustomType.Constructor({"sysctls"})
@@ -17,6 +23,12 @@ public final class ClusterNodeConfigLinuxNodeConfig {
         this.sysctls = Objects.requireNonNull(sysctls);
     }
 
+    /**
+     * The Linux kernel parameters to be applied to the nodes
+     * and all pods running on the nodes. Specified as a map from the key, such as
+     * `net.core.wmem_max`, to a string value.
+     * 
+     */
     public Map<String,String> getSysctls() {
         return this.sysctls;
     }

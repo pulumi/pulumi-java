@@ -13,6 +13,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetOIDCProviderResult {
+    /**
+     * Amazon Resource Name (ARN) of the OIDC provider
+     * 
+     */
     private final @Nullable String arn;
     private final @Nullable List<String> clientIdList;
     private final @Nullable List<OIDCProviderTag> tags;
@@ -30,6 +34,10 @@ public final class GetOIDCProviderResult {
         this.thumbprintList = thumbprintList;
     }
 
+    /**
+     * Amazon Resource Name (ARN) of the OIDC provider
+     * 
+     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }

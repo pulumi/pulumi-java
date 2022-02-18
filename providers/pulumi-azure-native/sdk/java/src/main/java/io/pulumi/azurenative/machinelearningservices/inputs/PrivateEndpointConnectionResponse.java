@@ -16,10 +16,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The Private Endpoint Connection resource.
+ * 
+ */
 public final class PrivateEndpointConnectionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PrivateEndpointConnectionResponse Empty = new PrivateEndpointConnectionResponse();
 
+    /**
+     * Specifies the resource ID.
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -27,6 +35,10 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
         return this.id;
     }
 
+    /**
+     * The identity of the resource.
+     * 
+     */
     @InputImport(name="identity")
     private final @Nullable IdentityResponse identity;
 
@@ -34,6 +46,10 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
         return this.identity == null ? Optional.empty() : Optional.ofNullable(this.identity);
     }
 
+    /**
+     * Specifies the location of the resource.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable String location;
 
@@ -41,6 +57,10 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
+    /**
+     * Specifies the name of the resource.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -48,6 +68,10 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
         return this.name;
     }
 
+    /**
+     * The resource of private end point.
+     * 
+     */
     @InputImport(name="privateEndpoint")
     private final @Nullable PrivateEndpointResponse privateEndpoint;
 
@@ -55,6 +79,10 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
         return this.privateEndpoint == null ? Optional.empty() : Optional.ofNullable(this.privateEndpoint);
     }
 
+    /**
+     * A collection of information about the state of the connection between service consumer and provider.
+     * 
+     */
     @InputImport(name="privateLinkServiceConnectionState", required=true)
     private final PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
 
@@ -62,6 +90,10 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
         return this.privateLinkServiceConnectionState;
     }
 
+    /**
+     * The provisioning state of the private endpoint connection resource.
+     * 
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -69,6 +101,10 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
         return this.provisioningState;
     }
 
+    /**
+     * The sku of the workspace.
+     * 
+     */
     @InputImport(name="sku")
     private final @Nullable SkuResponse sku;
 
@@ -76,6 +112,10 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
         return this.sku == null ? Optional.empty() : Optional.ofNullable(this.sku);
     }
 
+    /**
+     * Read only system data
+     * 
+     */
     @InputImport(name="systemData", required=true)
     private final SystemDataResponse systemData;
 
@@ -83,6 +123,10 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
         return this.systemData;
     }
 
+    /**
+     * Contains resource tags defined as key/value pairs.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Map<String,String> tags;
 
@@ -90,6 +134,10 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
         return this.tags == null ? Map.of() : this.tags;
     }
 
+    /**
+     * Specifies the type of the resource.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

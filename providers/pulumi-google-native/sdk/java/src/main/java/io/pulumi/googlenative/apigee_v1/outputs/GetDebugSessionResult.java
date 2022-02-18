@@ -10,11 +10,35 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetDebugSessionResult {
+    /**
+     * Optional. The number of request to be traced. Min = 1, Max = 15, Default = 10.
+     * 
+     */
     private final Integer count;
+    /**
+     * Optional. A conditional statement which is evaluated against the request message to determine if it should be traced. Syntax matches that of on API Proxy bundle flow Condition.
+     * 
+     */
     private final String filter;
+    /**
+     * A unique ID for this DebugSession.
+     * 
+     */
     private final String name;
+    /**
+     * Optional. The time in seconds after which this DebugSession should end. This value will override the value in query param, if both are provided.
+     * 
+     */
     private final String timeout;
+    /**
+     * Optional. The maximum number of bytes captured from the response payload. Min = 0, Max = 5120, Default = 5120.
+     * 
+     */
     private final Integer tracesize;
+    /**
+     * Optional. The length of time, in seconds, that this debug session is valid, starting from when it's received in the control plane. Min = 1, Max = 15, Default = 10.
+     * 
+     */
     private final Integer validity;
 
     @OutputCustomType.Constructor({"count","filter","name","timeout","tracesize","validity"})
@@ -33,21 +57,45 @@ public final class GetDebugSessionResult {
         this.validity = Objects.requireNonNull(validity);
     }
 
+    /**
+     * Optional. The number of request to be traced. Min = 1, Max = 15, Default = 10.
+     * 
+     */
     public Integer getCount() {
         return this.count;
     }
+    /**
+     * Optional. A conditional statement which is evaluated against the request message to determine if it should be traced. Syntax matches that of on API Proxy bundle flow Condition.
+     * 
+     */
     public String getFilter() {
         return this.filter;
     }
+    /**
+     * A unique ID for this DebugSession.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Optional. The time in seconds after which this DebugSession should end. This value will override the value in query param, if both are provided.
+     * 
+     */
     public String getTimeout() {
         return this.timeout;
     }
+    /**
+     * Optional. The maximum number of bytes captured from the response payload. Min = 0, Max = 5120, Default = 5120.
+     * 
+     */
     public Integer getTracesize() {
         return this.tracesize;
     }
+    /**
+     * Optional. The length of time, in seconds, that this debug session is valid, starting from when it's received in the control plane. Min = 1, Max = 15, Default = 10.
+     * 
+     */
     public Integer getValidity() {
         return this.validity;
     }

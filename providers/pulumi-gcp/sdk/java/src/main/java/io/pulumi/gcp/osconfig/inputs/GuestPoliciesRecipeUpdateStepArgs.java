@@ -20,6 +20,11 @@ public final class GuestPoliciesRecipeUpdateStepArgs extends io.pulumi.resources
 
     public static final GuestPoliciesRecipeUpdateStepArgs Empty = new GuestPoliciesRecipeUpdateStepArgs();
 
+    /**
+     * Extracts an archive into the specified directory.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="archiveExtraction")
     private final @Nullable Input<GuestPoliciesRecipeUpdateStepArchiveExtractionArgs> archiveExtraction;
 
@@ -27,6 +32,11 @@ public final class GuestPoliciesRecipeUpdateStepArgs extends io.pulumi.resources
         return this.archiveExtraction == null ? Input.empty() : this.archiveExtraction;
     }
 
+    /**
+     * Installs a deb file via dpkg.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="dpkgInstallation")
     private final @Nullable Input<GuestPoliciesRecipeUpdateStepDpkgInstallationArgs> dpkgInstallation;
 
@@ -34,6 +44,11 @@ public final class GuestPoliciesRecipeUpdateStepArgs extends io.pulumi.resources
         return this.dpkgInstallation == null ? Input.empty() : this.dpkgInstallation;
     }
 
+    /**
+     * Copies a file onto the instance.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="fileCopy")
     private final @Nullable Input<GuestPoliciesRecipeUpdateStepFileCopyArgs> fileCopy;
 
@@ -41,6 +56,11 @@ public final class GuestPoliciesRecipeUpdateStepArgs extends io.pulumi.resources
         return this.fileCopy == null ? Input.empty() : this.fileCopy;
     }
 
+    /**
+     * Executes an artifact or local file.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="fileExec")
     private final @Nullable Input<GuestPoliciesRecipeUpdateStepFileExecArgs> fileExec;
 
@@ -48,6 +68,11 @@ public final class GuestPoliciesRecipeUpdateStepArgs extends io.pulumi.resources
         return this.fileExec == null ? Input.empty() : this.fileExec;
     }
 
+    /**
+     * Installs an MSI file.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="msiInstallation")
     private final @Nullable Input<GuestPoliciesRecipeUpdateStepMsiInstallationArgs> msiInstallation;
 
@@ -55,6 +80,11 @@ public final class GuestPoliciesRecipeUpdateStepArgs extends io.pulumi.resources
         return this.msiInstallation == null ? Input.empty() : this.msiInstallation;
     }
 
+    /**
+     * Installs an rpm file via the rpm utility.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="rpmInstallation")
     private final @Nullable Input<GuestPoliciesRecipeUpdateStepRpmInstallationArgs> rpmInstallation;
 
@@ -62,6 +92,11 @@ public final class GuestPoliciesRecipeUpdateStepArgs extends io.pulumi.resources
         return this.rpmInstallation == null ? Input.empty() : this.rpmInstallation;
     }
 
+    /**
+     * Runs commands in a shell.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="scriptRun")
     private final @Nullable Input<GuestPoliciesRecipeUpdateStepScriptRunArgs> scriptRun;
 

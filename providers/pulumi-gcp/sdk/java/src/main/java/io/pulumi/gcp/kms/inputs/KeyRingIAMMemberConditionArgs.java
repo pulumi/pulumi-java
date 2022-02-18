@@ -14,6 +14,10 @@ public final class KeyRingIAMMemberConditionArgs extends io.pulumi.resources.Res
 
     public static final KeyRingIAMMemberConditionArgs Empty = new KeyRingIAMMemberConditionArgs();
 
+    /**
+     * An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -21,6 +25,10 @@ public final class KeyRingIAMMemberConditionArgs extends io.pulumi.resources.Res
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Textual representation of an expression in Common Expression Language syntax.
+     * 
+     */
     @InputImport(name="expression", required=true)
     private final Input<String> expression;
 
@@ -28,6 +36,10 @@ public final class KeyRingIAMMemberConditionArgs extends io.pulumi.resources.Res
         return this.expression;
     }
 
+    /**
+     * A title for the expression, i.e. a short string describing its purpose.
+     * 
+     */
     @InputImport(name="title", required=true)
     private final Input<String> title;
 

@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNetworkInsightsAccessScope {
+/**
+ * Resource schema for AWS::EC2::NetworkInsightsAccessScope
+ * 
+ */
     public static CompletableFuture<GetNetworkInsightsAccessScopeResult> invokeAsync(GetNetworkInsightsAccessScopeArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ec2:getNetworkInsightsAccessScope", TypeShape.of(GetNetworkInsightsAccessScopeResult.class), args == null ? GetNetworkInsightsAccessScopeArgs.Empty : args, Utilities.withVersion(options));
     }

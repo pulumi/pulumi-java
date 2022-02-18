@@ -9,7 +9,16 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class UptimeCheckConfigHttpCheckAuthInfo {
+    /**
+     * The password to authenticate.
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     private final String password;
+    /**
+     * The username to authenticate.
+     * 
+     */
     private final String username;
 
     @OutputCustomType.Constructor({"password","username"})
@@ -20,9 +29,18 @@ public final class UptimeCheckConfigHttpCheckAuthInfo {
         this.username = Objects.requireNonNull(username);
     }
 
+    /**
+     * The password to authenticate.
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     public String getPassword() {
         return this.password;
     }
+    /**
+     * The username to authenticate.
+     * 
+     */
     public String getUsername() {
         return this.username;
     }

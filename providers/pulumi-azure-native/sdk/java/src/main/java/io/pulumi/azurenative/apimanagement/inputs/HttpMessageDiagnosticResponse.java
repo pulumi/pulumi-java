@@ -13,10 +13,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Http message diagnostic settings.
+ * 
+ */
 public final class HttpMessageDiagnosticResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final HttpMessageDiagnosticResponse Empty = new HttpMessageDiagnosticResponse();
 
+    /**
+     * Body logging settings.
+     * 
+     */
     @InputImport(name="body")
     private final @Nullable BodyDiagnosticSettingsResponse body;
 
@@ -24,6 +32,10 @@ public final class HttpMessageDiagnosticResponse extends io.pulumi.resources.Inv
         return this.body == null ? Optional.empty() : Optional.ofNullable(this.body);
     }
 
+    /**
+     * Data masking settings.
+     * 
+     */
     @InputImport(name="dataMasking")
     private final @Nullable DataMaskingResponse dataMasking;
 
@@ -31,6 +43,10 @@ public final class HttpMessageDiagnosticResponse extends io.pulumi.resources.Inv
         return this.dataMasking == null ? Optional.empty() : Optional.ofNullable(this.dataMasking);
     }
 
+    /**
+     * Array of HTTP Headers to log.
+     * 
+     */
     @InputImport(name="headers")
     private final @Nullable List<String> headers;
 

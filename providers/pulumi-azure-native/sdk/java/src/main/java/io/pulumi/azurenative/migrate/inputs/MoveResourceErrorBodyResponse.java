@@ -9,10 +9,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * An error response from the Azure Migrate service.
+ * 
+ */
 public final class MoveResourceErrorBodyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MoveResourceErrorBodyResponse Empty = new MoveResourceErrorBodyResponse();
 
+    /**
+     * An identifier for the error. Codes are invariant and are intended to be consumed programmatically.
+     * 
+     */
     @InputImport(name="code", required=true)
     private final String code;
 
@@ -20,6 +28,10 @@ public final class MoveResourceErrorBodyResponse extends io.pulumi.resources.Inv
         return this.code;
     }
 
+    /**
+     * A list of additional details about the error.
+     * 
+     */
     @InputImport(name="details", required=true)
     private final List<MoveResourceErrorBodyResponse> details;
 
@@ -27,6 +39,10 @@ public final class MoveResourceErrorBodyResponse extends io.pulumi.resources.Inv
         return this.details;
     }
 
+    /**
+     * A message describing the error, intended to be suitable for display in a user interface.
+     * 
+     */
     @InputImport(name="message", required=true)
     private final String message;
 
@@ -34,6 +50,10 @@ public final class MoveResourceErrorBodyResponse extends io.pulumi.resources.Inv
         return this.message;
     }
 
+    /**
+     * The target of the particular error. For example, the name of the property in error.
+     * 
+     */
     @InputImport(name="target", required=true)
     private final String target;
 

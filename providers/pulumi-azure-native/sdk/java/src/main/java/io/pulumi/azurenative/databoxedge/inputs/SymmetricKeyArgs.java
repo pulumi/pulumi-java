@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Symmetric key for authentication.
+ * 
+ */
 public final class SymmetricKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SymmetricKeyArgs Empty = new SymmetricKeyArgs();
 
+    /**
+     * Connection string based on the symmetric key.
+     * 
+     */
     @InputImport(name="connectionString")
     private final @Nullable Input<AsymmetricEncryptedSecretArgs> connectionString;
 

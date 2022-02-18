@@ -12,6 +12,10 @@ public final class GetResponsePlanArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetResponsePlanArgs Empty = new GetResponsePlanArgs();
 
+    /**
+     * The ARN of the response plan.
+     * 
+     */
     @InputImport(name="arn", required=true)
     private final String arn;
 

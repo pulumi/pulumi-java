@@ -10,6 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Indicates whether a slot can return multiple values.
+ * 
+ */
 public final class BotMultipleValuesSettingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BotMultipleValuesSettingArgs Empty = new BotMultipleValuesSettingArgs();

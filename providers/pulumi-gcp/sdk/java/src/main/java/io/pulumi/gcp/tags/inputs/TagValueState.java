@@ -14,6 +14,11 @@ public final class TagValueState extends io.pulumi.resources.ResourceArgs {
 
     public static final TagValueState Empty = new TagValueState();
 
+    /**
+     * Output only. Creation time. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine
+     * fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
+     * 
+     */
     @InputImport(name="createTime")
     private final @Nullable Input<String> createTime;
 
@@ -21,6 +26,10 @@ public final class TagValueState extends io.pulumi.resources.ResourceArgs {
         return this.createTime == null ? Input.empty() : this.createTime;
     }
 
+    /**
+     * User-assigned description of the TagValue. Must not exceed 256 characters.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -28,6 +37,10 @@ public final class TagValueState extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The generated numeric id for the TagValue.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -35,6 +48,10 @@ public final class TagValueState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Output only. Namespaced name of the TagValue. Will be in the format {organizationId}/{tag_key_short_name}/{shortName}.
+     * 
+     */
     @InputImport(name="namespacedName")
     private final @Nullable Input<String> namespacedName;
 
@@ -42,6 +59,10 @@ public final class TagValueState extends io.pulumi.resources.ResourceArgs {
         return this.namespacedName == null ? Input.empty() : this.namespacedName;
     }
 
+    /**
+     * Input only. The resource name of the new TagValue's parent. Must be of the form tagKeys/{tag_key_id}.
+     * 
+     */
     @InputImport(name="parent")
     private final @Nullable Input<String> parent;
 
@@ -49,6 +70,11 @@ public final class TagValueState extends io.pulumi.resources.ResourceArgs {
         return this.parent == null ? Input.empty() : this.parent;
     }
 
+    /**
+     * Input only. User-assigned short name for TagValue. The short name should be unique for TagValues within the same parent TagKey.
+     * The short name must be 63 characters or less, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
+     * 
+     */
     @InputImport(name="shortName")
     private final @Nullable Input<String> shortName;
 
@@ -56,6 +82,11 @@ public final class TagValueState extends io.pulumi.resources.ResourceArgs {
         return this.shortName == null ? Input.empty() : this.shortName;
     }
 
+    /**
+     * Output only. Update time. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional
+     * digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
+     * 
+     */
     @InputImport(name="updateTime")
     private final @Nullable Input<String> updateTime;
 

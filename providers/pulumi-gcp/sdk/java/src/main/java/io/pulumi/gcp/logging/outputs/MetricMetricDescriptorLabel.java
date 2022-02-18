@@ -11,8 +11,23 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MetricMetricDescriptorLabel {
+    /**
+     * A description of this metric, which is used in documentation. The maximum length of the
+     * description is 8000 characters.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * The label key.
+     * 
+     */
     private final String key;
+    /**
+     * The type of data that can be assigned to the label.
+     * Default value is `STRING`.
+     * Possible values are `BOOL`, `INT64`, and `STRING`.
+     * 
+     */
     private final @Nullable String valueType;
 
     @OutputCustomType.Constructor({"description","key","valueType"})
@@ -25,12 +40,27 @@ public final class MetricMetricDescriptorLabel {
         this.valueType = valueType;
     }
 
+    /**
+     * A description of this metric, which is used in documentation. The maximum length of the
+     * description is 8000 characters.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * The label key.
+     * 
+     */
     public String getKey() {
         return this.key;
     }
+    /**
+     * The type of data that can be assigned to the label.
+     * Default value is `STRING`.
+     * Possible values are `BOOL`, `INT64`, and `STRING`.
+     * 
+     */
     public Optional<String> getValueType() {
         return Optional.ofNullable(this.valueType);
     }

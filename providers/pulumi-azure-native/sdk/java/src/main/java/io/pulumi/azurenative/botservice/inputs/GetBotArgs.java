@@ -12,6 +12,10 @@ public final class GetBotArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetBotArgs Empty = new GetBotArgs();
 
+    /**
+     * The name of the Bot resource group in the user subscription.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +23,10 @@ public final class GetBotArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the Bot resource.
+     * 
+     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 

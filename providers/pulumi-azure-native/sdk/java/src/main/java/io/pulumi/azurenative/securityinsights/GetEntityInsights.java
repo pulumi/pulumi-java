@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEntityInsights {
+/**
+ * The Get Insights result operation response.
+ * API Version: 2019-01-01-preview.
+ * 
+ *
+ * The Get Insights result operation response.
+ * 
+ */
     public static CompletableFuture<GetEntityInsightsResult> invokeAsync(GetEntityInsightsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getEntityInsights", TypeShape.of(GetEntityInsightsResult.class), args == null ? GetEntityInsightsArgs.Empty : args, Utilities.withVersion(options));
     }

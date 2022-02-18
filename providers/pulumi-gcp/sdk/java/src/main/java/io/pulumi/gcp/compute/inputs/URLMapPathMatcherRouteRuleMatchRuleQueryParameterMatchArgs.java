@@ -15,6 +15,12 @@ public final class URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs ex
 
     public static final URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs Empty = new URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs();
 
+    /**
+     * The queryParameterMatch matches if the value of the parameter exactly matches
+     * the contents of exactMatch. Only one of presentMatch, exactMatch and regexMatch
+     * must be set.
+     * 
+     */
     @InputImport(name="exactMatch")
     private final @Nullable Input<String> exactMatch;
 
@@ -22,6 +28,11 @@ public final class URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs ex
         return this.exactMatch == null ? Input.empty() : this.exactMatch;
     }
 
+    /**
+     * The name of the query parameter to match. The query parameter must exist in the
+     * request, in the absence of which the request match fails.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -29,6 +40,12 @@ public final class URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs ex
         return this.name;
     }
 
+    /**
+     * Specifies that the queryParameterMatch matches if the request contains the query
+     * parameter, irrespective of whether the parameter has a value or not. Only one of
+     * presentMatch, exactMatch and regexMatch must be set.
+     * 
+     */
     @InputImport(name="presentMatch")
     private final @Nullable Input<Boolean> presentMatch;
 
@@ -36,6 +53,13 @@ public final class URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs ex
         return this.presentMatch == null ? Input.empty() : this.presentMatch;
     }
 
+    /**
+     * The queryParameterMatch matches if the value of the parameter matches the
+     * regular expression specified by regexMatch. For the regular expression grammar,
+     * please see en.cppreference.com/w/cpp/regex/ecmascript  Only one of presentMatch,
+     * exactMatch and regexMatch must be set.
+     * 
+     */
     @InputImport(name="regexMatch")
     private final @Nullable Input<String> regexMatch;
 

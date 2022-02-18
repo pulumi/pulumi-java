@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMongoDBResourceMongoUserDefinition {
+/**
+ * An Azure Cosmos DB User Definition
+ * API Version: 2021-10-15-preview.
+ * 
+ *
+ * An Azure Cosmos DB User Definition
+ * 
+ */
     public static CompletableFuture<GetMongoDBResourceMongoUserDefinitionResult> invokeAsync(GetMongoDBResourceMongoUserDefinitionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:getMongoDBResourceMongoUserDefinition", TypeShape.of(GetMongoDBResourceMongoUserDefinitionResult.class), args == null ? GetMongoDBResourceMongoUserDefinitionArgs.Empty : args, Utilities.withVersion(options));
     }

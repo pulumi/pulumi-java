@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Instance view status.
+ * 
+ */
 public final class InstanceViewStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InstanceViewStatusArgs Empty = new InstanceViewStatusArgs();
 
+    /**
+     * The status code.
+     * 
+     */
     @InputImport(name="code")
     private final @Nullable Input<String> code;
 
@@ -22,6 +30,10 @@ public final class InstanceViewStatusArgs extends io.pulumi.resources.ResourceAr
         return this.code == null ? Input.empty() : this.code;
     }
 
+    /**
+     * The short localizable label for the status.
+     * 
+     */
     @InputImport(name="displayStatus")
     private final @Nullable Input<String> displayStatus;
 
@@ -29,6 +41,10 @@ public final class InstanceViewStatusArgs extends io.pulumi.resources.ResourceAr
         return this.displayStatus == null ? Input.empty() : this.displayStatus;
     }
 
+    /**
+     * The level code.
+     * 
+     */
     @InputImport(name="level")
     private final @Nullable Input<StatusLevelTypes> level;
 
@@ -36,6 +52,10 @@ public final class InstanceViewStatusArgs extends io.pulumi.resources.ResourceAr
         return this.level == null ? Input.empty() : this.level;
     }
 
+    /**
+     * The detailed status message, including for alerts and error messages.
+     * 
+     */
     @InputImport(name="message")
     private final @Nullable Input<String> message;
 
@@ -43,6 +63,10 @@ public final class InstanceViewStatusArgs extends io.pulumi.resources.ResourceAr
         return this.message == null ? Input.empty() : this.message;
     }
 
+    /**
+     * The time of the status.
+     * 
+     */
     @InputImport(name="time")
     private final @Nullable Input<String> time;
 

@@ -14,6 +14,10 @@ public final class BucketLifecycleConfigurationArgs extends io.pulumi.resources.
 
     public static final BucketLifecycleConfigurationArgs Empty = new BucketLifecycleConfigurationArgs();
 
+    /**
+     * A lifecycle rule for individual objects in an Amazon S3 bucket.
+     * 
+     */
     @InputImport(name="rules", required=true)
     private final Input<List<BucketRuleArgs>> rules;
 

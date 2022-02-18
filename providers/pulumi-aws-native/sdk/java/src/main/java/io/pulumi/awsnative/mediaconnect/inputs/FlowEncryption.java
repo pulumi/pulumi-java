@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Information about the encryption of the flow.
+ * 
+ */
 public final class FlowEncryption extends io.pulumi.resources.InvokeArgs {
 
     public static final FlowEncryption Empty = new FlowEncryption();
 
+    /**
+     * The type of algorithm that is used for the encryption (such as aes128, aes192, or aes256).
+     * 
+     */
     @InputImport(name="algorithm")
     private final @Nullable FlowEncryptionAlgorithm algorithm;
 
@@ -23,6 +31,10 @@ public final class FlowEncryption extends io.pulumi.resources.InvokeArgs {
         return this.algorithm == null ? Optional.empty() : Optional.ofNullable(this.algorithm);
     }
 
+    /**
+     * A 128-bit, 16-byte hex value represented by a 32-character string, to be used with the key for encrypting content. This parameter is not valid for static key encryption.
+     * 
+     */
     @InputImport(name="constantInitializationVector")
     private final @Nullable String constantInitializationVector;
 
@@ -30,6 +42,10 @@ public final class FlowEncryption extends io.pulumi.resources.InvokeArgs {
         return this.constantInitializationVector == null ? Optional.empty() : Optional.ofNullable(this.constantInitializationVector);
     }
 
+    /**
+     * The value of one of the devices that you configured with your digital rights management (DRM) platform key provider. This parameter is required for SPEKE encryption and is not valid for static key encryption.
+     * 
+     */
     @InputImport(name="deviceId")
     private final @Nullable String deviceId;
 
@@ -37,6 +53,10 @@ public final class FlowEncryption extends io.pulumi.resources.InvokeArgs {
         return this.deviceId == null ? Optional.empty() : Optional.ofNullable(this.deviceId);
     }
 
+    /**
+     * The type of key that is used for the encryption. If no keyType is provided, the service will use the default setting (static-key).
+     * 
+     */
     @InputImport(name="keyType")
     private final @Nullable FlowEncryptionKeyType keyType;
 
@@ -44,6 +64,10 @@ public final class FlowEncryption extends io.pulumi.resources.InvokeArgs {
         return this.keyType == null ? Optional.empty() : Optional.ofNullable(this.keyType);
     }
 
+    /**
+     * The AWS Region that the API Gateway proxy endpoint was created in. This parameter is required for SPEKE encryption and is not valid for static key encryption.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable String region;
 
@@ -51,6 +75,10 @@ public final class FlowEncryption extends io.pulumi.resources.InvokeArgs {
         return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);
     }
 
+    /**
+     * An identifier for the content. The service sends this value to the key server to identify the current endpoint. The resource ID is also known as the content ID. This parameter is required for SPEKE encryption and is not valid for static key encryption.
+     * 
+     */
     @InputImport(name="resourceId")
     private final @Nullable String resourceId;
 
@@ -58,6 +86,10 @@ public final class FlowEncryption extends io.pulumi.resources.InvokeArgs {
         return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
     }
 
+    /**
+     * The ARN of the role that you created during setup (when you set up AWS Elemental MediaConnect as a trusted entity).
+     * 
+     */
     @InputImport(name="roleArn", required=true)
     private final String roleArn;
 
@@ -65,6 +97,10 @@ public final class FlowEncryption extends io.pulumi.resources.InvokeArgs {
         return this.roleArn;
     }
 
+    /**
+     *  The ARN of the secret that you created in AWS Secrets Manager to store the encryption key. This parameter is required for static key encryption and is not valid for SPEKE encryption.
+     * 
+     */
     @InputImport(name="secretArn")
     private final @Nullable String secretArn;
 
@@ -72,6 +108,10 @@ public final class FlowEncryption extends io.pulumi.resources.InvokeArgs {
         return this.secretArn == null ? Optional.empty() : Optional.ofNullable(this.secretArn);
     }
 
+    /**
+     * The URL from the API Gateway proxy that you set up to talk to your key server. This parameter is required for SPEKE encryption and is not valid for static key encryption.
+     * 
+     */
     @InputImport(name="url")
     private final @Nullable String url;
 

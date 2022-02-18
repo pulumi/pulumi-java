@@ -27,6 +27,10 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StreamingJobArgs Empty = new StreamingJobArgs();
 
+    /**
+     * Controls certain runtime behaviors of the streaming job.
+     * 
+     */
     @InputImport(name="compatibilityLevel")
     private final @Nullable Input<Either<String,CompatibilityLevel>> compatibilityLevel;
 
@@ -34,6 +38,10 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.compatibilityLevel == null ? Input.empty() : this.compatibilityLevel;
     }
 
+    /**
+     * The data locale of the stream analytics job. Value should be the name of a supported .NET Culture from the set https://msdn.microsoft.com/en-us/library/system.globalization.culturetypes(v=vs.110).aspx. Defaults to 'en-US' if none specified.
+     * 
+     */
     @InputImport(name="dataLocale")
     private final @Nullable Input<String> dataLocale;
 
@@ -41,6 +49,10 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataLocale == null ? Input.empty() : this.dataLocale;
     }
 
+    /**
+     * The maximum tolerable delay in seconds where events arriving late could be included.  Supported range is -1 to 1814399 (20.23:59:59 days) and -1 is used to specify wait indefinitely. If the property is absent, it is interpreted to have a value of -1.
+     * 
+     */
     @InputImport(name="eventsLateArrivalMaxDelayInSeconds")
     private final @Nullable Input<Integer> eventsLateArrivalMaxDelayInSeconds;
 
@@ -48,6 +60,10 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.eventsLateArrivalMaxDelayInSeconds == null ? Input.empty() : this.eventsLateArrivalMaxDelayInSeconds;
     }
 
+    /**
+     * The maximum tolerable delay in seconds where out-of-order events can be adjusted to be back in order.
+     * 
+     */
     @InputImport(name="eventsOutOfOrderMaxDelayInSeconds")
     private final @Nullable Input<Integer> eventsOutOfOrderMaxDelayInSeconds;
 
@@ -55,6 +71,10 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.eventsOutOfOrderMaxDelayInSeconds == null ? Input.empty() : this.eventsOutOfOrderMaxDelayInSeconds;
     }
 
+    /**
+     * Indicates the policy to apply to events that arrive out of order in the input event stream.
+     * 
+     */
     @InputImport(name="eventsOutOfOrderPolicy")
     private final @Nullable Input<Either<String,EventsOutOfOrderPolicy>> eventsOutOfOrderPolicy;
 
@@ -62,6 +82,10 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.eventsOutOfOrderPolicy == null ? Input.empty() : this.eventsOutOfOrderPolicy;
     }
 
+    /**
+     * A list of one or more functions for the streaming job. The name property for each function is required when specifying this property in a PUT request. This property cannot be modify via a PATCH operation. You must use the PATCH API available for the individual transformation.
+     * 
+     */
     @InputImport(name="functions")
     private final @Nullable Input<List<FunctionArgs>> functions;
 
@@ -69,6 +93,10 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.functions == null ? Input.empty() : this.functions;
     }
 
+    /**
+     * A list of one or more inputs to the streaming job. The name property for each input is required when specifying this property in a PUT request. This property cannot be modify via a PATCH operation. You must use the PATCH API available for the individual input.
+     * 
+     */
     @InputImport(name="inputs")
     private final @Nullable Input<List<InputArgs>> inputs;
 
@@ -76,6 +104,10 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.inputs == null ? Input.empty() : this.inputs;
     }
 
+    /**
+     * The name of the streaming job.
+     * 
+     */
     @InputImport(name="jobName")
     private final @Nullable Input<String> jobName;
 
@@ -83,6 +115,10 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.jobName == null ? Input.empty() : this.jobName;
     }
 
+    /**
+     * The geo-location where the resource lives
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -90,6 +126,10 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Indicates the policy to apply to events that arrive at the output and cannot be written to the external storage due to being malformed (missing column values, column values of wrong type or size).
+     * 
+     */
     @InputImport(name="outputErrorPolicy")
     private final @Nullable Input<Either<String,OutputErrorPolicy>> outputErrorPolicy;
 
@@ -97,6 +137,10 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.outputErrorPolicy == null ? Input.empty() : this.outputErrorPolicy;
     }
 
+    /**
+     * This property should only be utilized when it is desired that the job be started immediately upon creation. Value may be JobStartTime, CustomTime, or LastOutputEventTime to indicate whether the starting point of the output event stream should start whenever the job is started, start at a custom user time stamp specified via the outputStartTime property, or start from the last event output time.
+     * 
+     */
     @InputImport(name="outputStartMode")
     private final @Nullable Input<Either<String,OutputStartMode>> outputStartMode;
 
@@ -104,6 +148,10 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.outputStartMode == null ? Input.empty() : this.outputStartMode;
     }
 
+    /**
+     * Value is either an ISO-8601 formatted time stamp that indicates the starting point of the output event stream, or null to indicate that the output event stream will start whenever the streaming job is started. This property must have a value if outputStartMode is set to CustomTime.
+     * 
+     */
     @InputImport(name="outputStartTime")
     private final @Nullable Input<String> outputStartTime;
 
@@ -111,6 +159,10 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.outputStartTime == null ? Input.empty() : this.outputStartTime;
     }
 
+    /**
+     * A list of one or more outputs for the streaming job. The name property for each output is required when specifying this property in a PUT request. This property cannot be modify via a PATCH operation. You must use the PATCH API available for the individual output.
+     * 
+     */
     @InputImport(name="outputs")
     private final @Nullable Input<List<OutputArgs>> outputs;
 
@@ -118,6 +170,10 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.outputs == null ? Input.empty() : this.outputs;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -125,6 +181,10 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Describes the SKU of the streaming job. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     @InputImport(name="sku")
     private final @Nullable Input<SkuArgs> sku;
 
@@ -132,6 +192,10 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku == null ? Input.empty() : this.sku;
     }
 
+    /**
+     * Resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -139,6 +203,10 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * Indicates the query and the number of streaming units to use for the streaming job. The name property of the transformation is required when specifying this property in a PUT request. This property cannot be modify via a PATCH operation. You must use the PATCH API available for the individual transformation.
+     * 
+     */
     @InputImport(name="transformation")
     private final @Nullable Input<TransformationArgs> transformation;
 

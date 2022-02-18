@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GooglePrivacyDlpV2TransformationErrorHandlingResponse {
+    /**
+     * Ignore errors
+     * 
+     */
     private final GooglePrivacyDlpV2LeaveUntransformedResponse leaveUntransformed;
+    /**
+     * Throw an error
+     * 
+     */
     private final GooglePrivacyDlpV2ThrowErrorResponse throwError;
 
     @OutputCustomType.Constructor({"leaveUntransformed","throwError"})
@@ -21,9 +29,17 @@ public final class GooglePrivacyDlpV2TransformationErrorHandlingResponse {
         this.throwError = Objects.requireNonNull(throwError);
     }
 
+    /**
+     * Ignore errors
+     * 
+     */
     public GooglePrivacyDlpV2LeaveUntransformedResponse getLeaveUntransformed() {
         return this.leaveUntransformed;
     }
+    /**
+     * Throw an error
+     * 
+     */
     public GooglePrivacyDlpV2ThrowErrorResponse getThrowError() {
         return this.throwError;
     }

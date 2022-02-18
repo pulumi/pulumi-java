@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSqlPool {
+/**
+ * A SQL Analytics pool
+ * API Version: 2021-03-01.
+ * 
+ *
+ * A SQL Analytics pool
+ * 
+ */
     public static CompletableFuture<GetSqlPoolResult> invokeAsync(GetSqlPoolArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getSqlPool", TypeShape.of(GetSqlPoolResult.class), args == null ? GetSqlPoolArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVirtualRouter {
+/**
+ * VirtualRouter Resource.
+ * API Version: 2020-08-01.
+ * 
+ *
+ * VirtualRouter Resource.
+ * 
+ */
     public static CompletableFuture<GetVirtualRouterResult> invokeAsync(GetVirtualRouterArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getVirtualRouter", TypeShape.of(GetVirtualRouterResult.class), args == null ? GetVirtualRouterArgs.Empty : args, Utilities.withVersion(options));
     }

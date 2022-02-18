@@ -16,6 +16,11 @@ public final class PreventionJobTriggerInspectJobArgs extends io.pulumi.resource
 
     public static final PreventionJobTriggerInspectJobArgs Empty = new PreventionJobTriggerInspectJobArgs();
 
+    /**
+     * A task to execute on the completion of a job.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="actions", required=true)
     private final Input<List<PreventionJobTriggerInspectJobActionArgs>> actions;
 
@@ -23,6 +28,10 @@ public final class PreventionJobTriggerInspectJobArgs extends io.pulumi.resource
         return this.actions;
     }
 
+    /**
+     * The name of the template to run when this job is triggered.
+     * 
+     */
     @InputImport(name="inspectTemplateName", required=true)
     private final Input<String> inspectTemplateName;
 
@@ -30,6 +39,11 @@ public final class PreventionJobTriggerInspectJobArgs extends io.pulumi.resource
         return this.inspectTemplateName;
     }
 
+    /**
+     * Information on where to inspect
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="storageConfig", required=true)
     private final Input<PreventionJobTriggerInspectJobStorageConfigArgs> storageConfig;
 

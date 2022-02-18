@@ -20,24 +20,100 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DeploymentStageDescription {
+    /**
+     * Specifies settings for logging access in this stage.
+     * 
+     */
     private final @Nullable DeploymentAccessLogSetting accessLogSetting;
+    /**
+     * Indicates whether cache clustering is enabled for the stage.
+     * 
+     */
     private final @Nullable Boolean cacheClusterEnabled;
+    /**
+     * The size of the stage's cache cluster.
+     * 
+     */
     private final @Nullable String cacheClusterSize;
+    /**
+     * The time-to-live (TTL) period, in seconds, that specifies how long API Gateway caches responses.
+     * 
+     */
     private final @Nullable Boolean cacheDataEncrypted;
+    /**
+     * The time-to-live (TTL) period, in seconds, that specifies how long API Gateway caches responses.
+     * 
+     */
     private final @Nullable Integer cacheTtlInSeconds;
+    /**
+     * Indicates whether responses are cached and returned for requests. You must enable a cache cluster on the stage to cache responses.
+     * 
+     */
     private final @Nullable Boolean cachingEnabled;
+    /**
+     * Specifies settings for the canary deployment in this stage.
+     * 
+     */
     private final @Nullable DeploymentCanarySetting canarySetting;
+    /**
+     * The identifier of the client certificate that API Gateway uses to call your integration endpoints in the stage.
+     * 
+     */
     private final @Nullable String clientCertificateId;
+    /**
+     * Indicates whether data trace logging is enabled for methods in the stage. API Gateway pushes these logs to Amazon CloudWatch Logs.
+     * 
+     */
     private final @Nullable Boolean dataTraceEnabled;
+    /**
+     * A description of the purpose of the stage.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * The version identifier of the API documentation snapshot.
+     * 
+     */
     private final @Nullable String documentationVersion;
+    /**
+     * The logging level for this method. For valid values, see the loggingLevel property of the Stage resource in the Amazon API Gateway API Reference.
+     * 
+     */
     private final @Nullable String loggingLevel;
+    /**
+     * Configures settings for all of the stage's methods.
+     * 
+     */
     private final @Nullable List<DeploymentMethodSetting> methodSettings;
+    /**
+     * Indicates whether Amazon CloudWatch metrics are enabled for methods in the stage.
+     * 
+     */
     private final @Nullable Boolean metricsEnabled;
+    /**
+     * An array of arbitrary tags (key-value pairs) to associate with the stage.
+     * 
+     */
     private final @Nullable List<DeploymentTag> tags;
+    /**
+     * The number of burst requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account.
+     * 
+     */
     private final @Nullable Integer throttlingBurstLimit;
+    /**
+     * The number of steady-state requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account.
+     * 
+     */
     private final @Nullable Double throttlingRateLimit;
+    /**
+     * Specifies whether active tracing with X-ray is enabled for this stage.
+     * 
+     */
     private final @Nullable Boolean tracingEnabled;
+    /**
+     * A map that defines the stage variables. Variable names must consist of alphanumeric characters, and the values must match the following regular expression: [A-Za-z0-9-._~:/?#&=,]+.
+     * 
+     */
     private final @Nullable Object variables;
 
     @OutputCustomType.Constructor({"accessLogSetting","cacheClusterEnabled","cacheClusterSize","cacheDataEncrypted","cacheTtlInSeconds","cachingEnabled","canarySetting","clientCertificateId","dataTraceEnabled","description","documentationVersion","loggingLevel","methodSettings","metricsEnabled","tags","throttlingBurstLimit","throttlingRateLimit","tracingEnabled","variables"})
@@ -82,60 +158,136 @@ public final class DeploymentStageDescription {
         this.variables = variables;
     }
 
+    /**
+     * Specifies settings for logging access in this stage.
+     * 
+     */
     public Optional<DeploymentAccessLogSetting> getAccessLogSetting() {
         return Optional.ofNullable(this.accessLogSetting);
     }
+    /**
+     * Indicates whether cache clustering is enabled for the stage.
+     * 
+     */
     public Optional<Boolean> getCacheClusterEnabled() {
         return Optional.ofNullable(this.cacheClusterEnabled);
     }
+    /**
+     * The size of the stage's cache cluster.
+     * 
+     */
     public Optional<String> getCacheClusterSize() {
         return Optional.ofNullable(this.cacheClusterSize);
     }
+    /**
+     * The time-to-live (TTL) period, in seconds, that specifies how long API Gateway caches responses.
+     * 
+     */
     public Optional<Boolean> getCacheDataEncrypted() {
         return Optional.ofNullable(this.cacheDataEncrypted);
     }
+    /**
+     * The time-to-live (TTL) period, in seconds, that specifies how long API Gateway caches responses.
+     * 
+     */
     public Optional<Integer> getCacheTtlInSeconds() {
         return Optional.ofNullable(this.cacheTtlInSeconds);
     }
+    /**
+     * Indicates whether responses are cached and returned for requests. You must enable a cache cluster on the stage to cache responses.
+     * 
+     */
     public Optional<Boolean> getCachingEnabled() {
         return Optional.ofNullable(this.cachingEnabled);
     }
+    /**
+     * Specifies settings for the canary deployment in this stage.
+     * 
+     */
     public Optional<DeploymentCanarySetting> getCanarySetting() {
         return Optional.ofNullable(this.canarySetting);
     }
+    /**
+     * The identifier of the client certificate that API Gateway uses to call your integration endpoints in the stage.
+     * 
+     */
     public Optional<String> getClientCertificateId() {
         return Optional.ofNullable(this.clientCertificateId);
     }
+    /**
+     * Indicates whether data trace logging is enabled for methods in the stage. API Gateway pushes these logs to Amazon CloudWatch Logs.
+     * 
+     */
     public Optional<Boolean> getDataTraceEnabled() {
         return Optional.ofNullable(this.dataTraceEnabled);
     }
+    /**
+     * A description of the purpose of the stage.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * The version identifier of the API documentation snapshot.
+     * 
+     */
     public Optional<String> getDocumentationVersion() {
         return Optional.ofNullable(this.documentationVersion);
     }
+    /**
+     * The logging level for this method. For valid values, see the loggingLevel property of the Stage resource in the Amazon API Gateway API Reference.
+     * 
+     */
     public Optional<String> getLoggingLevel() {
         return Optional.ofNullable(this.loggingLevel);
     }
+    /**
+     * Configures settings for all of the stage's methods.
+     * 
+     */
     public List<DeploymentMethodSetting> getMethodSettings() {
         return this.methodSettings == null ? List.of() : this.methodSettings;
     }
+    /**
+     * Indicates whether Amazon CloudWatch metrics are enabled for methods in the stage.
+     * 
+     */
     public Optional<Boolean> getMetricsEnabled() {
         return Optional.ofNullable(this.metricsEnabled);
     }
+    /**
+     * An array of arbitrary tags (key-value pairs) to associate with the stage.
+     * 
+     */
     public List<DeploymentTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
+    /**
+     * The number of burst requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account.
+     * 
+     */
     public Optional<Integer> getThrottlingBurstLimit() {
         return Optional.ofNullable(this.throttlingBurstLimit);
     }
+    /**
+     * The number of steady-state requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account.
+     * 
+     */
     public Optional<Double> getThrottlingRateLimit() {
         return Optional.ofNullable(this.throttlingRateLimit);
     }
+    /**
+     * Specifies whether active tracing with X-ray is enabled for this stage.
+     * 
+     */
     public Optional<Boolean> getTracingEnabled() {
         return Optional.ofNullable(this.tracingEnabled);
     }
+    /**
+     * A map that defines the stage variables. Variable names must consist of alphanumeric characters, and the values must match the following regular expression: [A-Za-z0-9-._~:/?#&=,]+.
+     * 
+     */
     public Optional<Object> getVariables() {
         return Optional.ofNullable(this.variables);
     }

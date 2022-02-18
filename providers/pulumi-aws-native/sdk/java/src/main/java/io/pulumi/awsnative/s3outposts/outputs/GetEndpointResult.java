@@ -14,10 +14,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetEndpointResult {
+    /**
+     * The Amazon Resource Name (ARN) of the endpoint.
+     * 
+     */
     private final @Nullable String arn;
+    /**
+     * The VPC CIDR committed by this endpoint.
+     * 
+     */
     private final @Nullable String cidrBlock;
+    /**
+     * The time the endpoint was created.
+     * 
+     */
     private final @Nullable String creationTime;
+    /**
+     * The ID of the endpoint.
+     * 
+     */
     private final @Nullable String id;
+    /**
+     * The network interfaces of the endpoint.
+     * 
+     */
     private final @Nullable List<EndpointNetworkInterface> networkInterfaces;
     private final @Nullable EndpointStatus status;
 
@@ -37,18 +57,38 @@ public final class GetEndpointResult {
         this.status = status;
     }
 
+    /**
+     * The Amazon Resource Name (ARN) of the endpoint.
+     * 
+     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
+    /**
+     * The VPC CIDR committed by this endpoint.
+     * 
+     */
     public Optional<String> getCidrBlock() {
         return Optional.ofNullable(this.cidrBlock);
     }
+    /**
+     * The time the endpoint was created.
+     * 
+     */
     public Optional<String> getCreationTime() {
         return Optional.ofNullable(this.creationTime);
     }
+    /**
+     * The ID of the endpoint.
+     * 
+     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+    /**
+     * The network interfaces of the endpoint.
+     * 
+     */
     public List<EndpointNetworkInterface> getNetworkInterfaces() {
         return this.networkInterfaces == null ? List.of() : this.networkInterfaces;
     }

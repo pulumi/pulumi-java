@@ -11,8 +11,16 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CIFSMountConfigurationResponse {
+    /**
+     * These are 'net use' options in Windows and 'mount' options in Linux.
+     * 
+     */
     private final @Nullable String mountOptions;
     private final String password;
+    /**
+     * All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
+     * 
+     */
     private final String relativeMountPath;
     private final String source;
     private final String username;
@@ -31,12 +39,20 @@ public final class CIFSMountConfigurationResponse {
         this.username = Objects.requireNonNull(username);
     }
 
+    /**
+     * These are 'net use' options in Windows and 'mount' options in Linux.
+     * 
+     */
     public Optional<String> getMountOptions() {
         return Optional.ofNullable(this.mountOptions);
     }
     public String getPassword() {
         return this.password;
     }
+    /**
+     * All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
+     * 
+     */
     public String getRelativeMountPath() {
         return this.relativeMountPath;
     }

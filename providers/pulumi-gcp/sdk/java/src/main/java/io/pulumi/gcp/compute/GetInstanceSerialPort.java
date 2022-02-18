@@ -13,6 +13,19 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInstanceSerialPort {
+/**
+ * Get the serial port output from a Compute Instance. For more information see
+ * the official [API](https://cloud.google.com/compute/docs/instances/viewing-serial-port-output) documentation.
+ * 
+ * ## Example Usage
+ * 
+ *
+ * A collection of arguments for invoking getInstanceSerialPort.
+ * 
+ *
+ * A collection of values returned by getInstanceSerialPort.
+ * 
+ */
     public static CompletableFuture<GetInstanceSerialPortResult> invokeAsync(GetInstanceSerialPortArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getInstanceSerialPort:getInstanceSerialPort", TypeShape.of(GetInstanceSerialPortResult.class), args == null ? GetInstanceSerialPortArgs.Empty : args, Utilities.withVersion(options));
     }

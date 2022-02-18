@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Indicates the flow of the ingestion.
+     * 
+     */
     @EnumType
     public enum IngestionMode {
         ApplicationInsights("ApplicationInsights"),

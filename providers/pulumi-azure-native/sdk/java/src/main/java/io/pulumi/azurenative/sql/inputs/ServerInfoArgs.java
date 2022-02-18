@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Server info for the server trust group.
+ * 
+ */
 public final class ServerInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServerInfoArgs Empty = new ServerInfoArgs();
 
+    /**
+     * Server Id.
+     * 
+     */
     @InputImport(name="serverId", required=true)
     private final Input<String> serverId;
 

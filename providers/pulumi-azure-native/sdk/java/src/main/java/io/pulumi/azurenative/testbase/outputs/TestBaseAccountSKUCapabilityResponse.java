@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TestBaseAccountSKUCapabilityResponse {
+    /**
+     * An invariant to describe the feature, such as 'SLA'.
+     * 
+     */
     private final String name;
+    /**
+     * An invariant if the feature is measured by quantity, such as 99.9%.
+     * 
+     */
     private final String value;
 
     @OutputCustomType.Constructor({"name","value"})
@@ -20,9 +28,17 @@ public final class TestBaseAccountSKUCapabilityResponse {
         this.value = Objects.requireNonNull(value);
     }
 
+    /**
+     * An invariant to describe the feature, such as 'SLA'.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * An invariant if the feature is measured by quantity, such as 99.9%.
+     * 
+     */
     public String getValue() {
         return this.value;
     }

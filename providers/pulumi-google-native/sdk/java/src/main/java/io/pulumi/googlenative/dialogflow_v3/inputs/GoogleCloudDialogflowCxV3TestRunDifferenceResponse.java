@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The description of differences between original and replayed agent output.
+ * 
+ */
 public final class GoogleCloudDialogflowCxV3TestRunDifferenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowCxV3TestRunDifferenceResponse Empty = new GoogleCloudDialogflowCxV3TestRunDifferenceResponse();
 
+    /**
+     * A description of the diff, showing the actual output vs expected output.
+     * 
+     */
     @InputImport(name="description", required=true)
     private final String description;
 
@@ -19,6 +27,10 @@ public final class GoogleCloudDialogflowCxV3TestRunDifferenceResponse extends io
         return this.description;
     }
 
+    /**
+     * The type of diff.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

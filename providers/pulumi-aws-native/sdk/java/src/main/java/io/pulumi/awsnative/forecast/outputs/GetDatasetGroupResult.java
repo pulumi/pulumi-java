@@ -14,9 +14,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetDatasetGroupResult {
+    /**
+     * An array of Amazon Resource Names (ARNs) of the datasets that you want to include in the dataset group.
+     * 
+     */
     private final @Nullable List<String> datasetArns;
+    /**
+     * The Amazon Resource Name (ARN) of the dataset group to delete.
+     * 
+     */
     private final @Nullable String datasetGroupArn;
+    /**
+     * The domain associated with the dataset group. When you add a dataset to a dataset group, this value and the value specified for the Domain parameter of the CreateDataset operation must match.
+     * 
+     */
     private final @Nullable DatasetGroupDomain domain;
+    /**
+     * The tags of Application Insights application.
+     * 
+     */
     private final @Nullable List<DatasetGroupTag> tags;
 
     @OutputCustomType.Constructor({"datasetArns","datasetGroupArn","domain","tags"})
@@ -31,15 +47,31 @@ public final class GetDatasetGroupResult {
         this.tags = tags;
     }
 
+    /**
+     * An array of Amazon Resource Names (ARNs) of the datasets that you want to include in the dataset group.
+     * 
+     */
     public List<String> getDatasetArns() {
         return this.datasetArns == null ? List.of() : this.datasetArns;
     }
+    /**
+     * The Amazon Resource Name (ARN) of the dataset group to delete.
+     * 
+     */
     public Optional<String> getDatasetGroupArn() {
         return Optional.ofNullable(this.datasetGroupArn);
     }
+    /**
+     * The domain associated with the dataset group. When you add a dataset to a dataset group, this value and the value specified for the Domain parameter of the CreateDataset operation must match.
+     * 
+     */
     public Optional<DatasetGroupDomain> getDomain() {
         return Optional.ofNullable(this.domain);
     }
+    /**
+     * The tags of Application Insights application.
+     * 
+     */
     public List<DatasetGroupTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Rule type.
+     * 
+     */
     @EnumType
     public enum ApplicationGatewayRequestRoutingRuleType {
         Basic("Basic"),

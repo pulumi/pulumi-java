@@ -15,6 +15,10 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
 
     public static final ServiceBusBrokeredMessagePropertiesArgs Empty = new ServiceBusBrokeredMessagePropertiesArgs();
 
+    /**
+     * Gets or sets the content type.
+     * 
+     */
     @InputImport(name="contentType")
     private final @Nullable Input<String> contentType;
 
@@ -22,6 +26,10 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
         return this.contentType == null ? Input.empty() : this.contentType;
     }
 
+    /**
+     * Gets or sets the correlation ID.
+     * 
+     */
     @InputImport(name="correlationId")
     private final @Nullable Input<String> correlationId;
 
@@ -29,6 +37,10 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
         return this.correlationId == null ? Input.empty() : this.correlationId;
     }
 
+    /**
+     * Gets or sets the force persistence.
+     * 
+     */
     @InputImport(name="forcePersistence")
     private final @Nullable Input<Boolean> forcePersistence;
 
@@ -36,6 +48,10 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
         return this.forcePersistence == null ? Input.empty() : this.forcePersistence;
     }
 
+    /**
+     * Gets or sets the label.
+     * 
+     */
     @InputImport(name="label")
     private final @Nullable Input<String> label;
 
@@ -43,6 +59,10 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
         return this.label == null ? Input.empty() : this.label;
     }
 
+    /**
+     * Gets or sets the message ID.
+     * 
+     */
     @InputImport(name="messageId")
     private final @Nullable Input<String> messageId;
 
@@ -50,6 +70,10 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
         return this.messageId == null ? Input.empty() : this.messageId;
     }
 
+    /**
+     * Gets or sets the partition key.
+     * 
+     */
     @InputImport(name="partitionKey")
     private final @Nullable Input<String> partitionKey;
 
@@ -57,6 +81,10 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
         return this.partitionKey == null ? Input.empty() : this.partitionKey;
     }
 
+    /**
+     * Gets or sets the reply to.
+     * 
+     */
     @InputImport(name="replyTo")
     private final @Nullable Input<String> replyTo;
 
@@ -64,6 +92,10 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
         return this.replyTo == null ? Input.empty() : this.replyTo;
     }
 
+    /**
+     * Gets or sets the reply to session ID.
+     * 
+     */
     @InputImport(name="replyToSessionId")
     private final @Nullable Input<String> replyToSessionId;
 
@@ -71,6 +103,10 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
         return this.replyToSessionId == null ? Input.empty() : this.replyToSessionId;
     }
 
+    /**
+     * Gets or sets the scheduled enqueue time UTC.
+     * 
+     */
     @InputImport(name="scheduledEnqueueTimeUtc")
     private final @Nullable Input<String> scheduledEnqueueTimeUtc;
 
@@ -78,6 +114,10 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
         return this.scheduledEnqueueTimeUtc == null ? Input.empty() : this.scheduledEnqueueTimeUtc;
     }
 
+    /**
+     * Gets or sets the session ID.
+     * 
+     */
     @InputImport(name="sessionId")
     private final @Nullable Input<String> sessionId;
 
@@ -85,6 +125,10 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
         return this.sessionId == null ? Input.empty() : this.sessionId;
     }
 
+    /**
+     * Gets or sets the time to live.
+     * 
+     */
     @InputImport(name="timeToLive")
     private final @Nullable Input<String> timeToLive;
 
@@ -92,6 +136,10 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
         return this.timeToLive == null ? Input.empty() : this.timeToLive;
     }
 
+    /**
+     * Gets or sets the to.
+     * 
+     */
     @InputImport(name="to")
     private final @Nullable Input<String> to;
 
@@ -99,6 +147,10 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
         return this.to == null ? Input.empty() : this.to;
     }
 
+    /**
+     * Gets or sets the via partition key.
+     * 
+     */
     @InputImport(name="viaPartitionKey")
     private final @Nullable Input<String> viaPartitionKey;
 

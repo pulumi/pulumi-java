@@ -14,6 +14,10 @@ public final class GetKeysZoneSigningKeyDigest extends io.pulumi.resources.Invok
 
     public static final GetKeysZoneSigningKeyDigest Empty = new GetKeysZoneSigningKeyDigest();
 
+    /**
+     * The base-16 encoded bytes of this digest. Suitable for use in a DS resource record.
+     * 
+     */
     @InputImport(name="digest")
     private final @Nullable String digest;
 
@@ -21,6 +25,10 @@ public final class GetKeysZoneSigningKeyDigest extends io.pulumi.resources.Invok
         return this.digest == null ? Optional.empty() : Optional.ofNullable(this.digest);
     }
 
+    /**
+     * Specifies the algorithm used to calculate this digest. Possible values are `sha1`, `sha256` and `sha384`
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 

@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPrefixList {
+/**
+ * Resource schema of AWS::EC2::PrefixList Type
+ * 
+ */
     public static CompletableFuture<GetPrefixListResult> invokeAsync(GetPrefixListArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ec2:getPrefixList", TypeShape.of(GetPrefixListResult.class), args == null ? GetPrefixListArgs.Empty : args, Utilities.withVersion(options));
     }

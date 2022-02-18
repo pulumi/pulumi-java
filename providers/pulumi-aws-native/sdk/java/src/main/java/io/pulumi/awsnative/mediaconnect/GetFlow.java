@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFlow {
+/**
+ * Resource schema for AWS::MediaConnect::Flow
+ * 
+ */
     public static CompletableFuture<GetFlowResult> invokeAsync(GetFlowArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:mediaconnect:getFlow", TypeShape.of(GetFlowResult.class), args == null ? GetFlowArgs.Empty : args, Utilities.withVersion(options));
     }

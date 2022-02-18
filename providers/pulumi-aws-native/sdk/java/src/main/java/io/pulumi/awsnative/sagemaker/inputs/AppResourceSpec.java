@@ -15,6 +15,10 @@ public final class AppResourceSpec extends io.pulumi.resources.InvokeArgs {
 
     public static final AppResourceSpec Empty = new AppResourceSpec();
 
+    /**
+     * The instance type that the image version runs on.
+     * 
+     */
     @InputImport(name="instanceType")
     private final @Nullable AppResourceSpecInstanceType instanceType;
 
@@ -22,6 +26,10 @@ public final class AppResourceSpec extends io.pulumi.resources.InvokeArgs {
         return this.instanceType == null ? Optional.empty() : Optional.ofNullable(this.instanceType);
     }
 
+    /**
+     * The ARN of the SageMaker image that the image version belongs to.
+     * 
+     */
     @InputImport(name="sageMakerImageArn")
     private final @Nullable String sageMakerImageArn;
 
@@ -29,6 +37,10 @@ public final class AppResourceSpec extends io.pulumi.resources.InvokeArgs {
         return this.sageMakerImageArn == null ? Optional.empty() : Optional.ofNullable(this.sageMakerImageArn);
     }
 
+    /**
+     * The ARN of the image version created on the instance.
+     * 
+     */
     @InputImport(name="sageMakerImageVersionArn")
     private final @Nullable String sageMakerImageVersionArn;
 

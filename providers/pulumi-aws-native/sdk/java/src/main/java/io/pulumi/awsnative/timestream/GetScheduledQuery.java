@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetScheduledQuery {
+/**
+ * The AWS::Timestream::ScheduledQuery resource creates a Timestream Scheduled Query.
+ * 
+ */
     public static CompletableFuture<GetScheduledQueryResult> invokeAsync(GetScheduledQueryArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:timestream:getScheduledQuery", TypeShape.of(GetScheduledQueryResult.class), args == null ? GetScheduledQueryArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -13,10 +13,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Preferences related to the order
+ * 
+ */
 public final class PreferencesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PreferencesResponse Empty = new PreferencesResponse();
 
+    /**
+     * Preferences related to the Encryption.
+     * 
+     */
     @InputImport(name="encryptionPreferences")
     private final @Nullable EncryptionPreferencesResponse encryptionPreferences;
 
@@ -24,6 +32,10 @@ public final class PreferencesResponse extends io.pulumi.resources.InvokeArgs {
         return this.encryptionPreferences == null ? Optional.empty() : Optional.ofNullable(this.encryptionPreferences);
     }
 
+    /**
+     * Preferred data center region.
+     * 
+     */
     @InputImport(name="preferredDataCenterRegion")
     private final @Nullable List<String> preferredDataCenterRegion;
 
@@ -31,6 +43,10 @@ public final class PreferencesResponse extends io.pulumi.resources.InvokeArgs {
         return this.preferredDataCenterRegion == null ? List.of() : this.preferredDataCenterRegion;
     }
 
+    /**
+     * Preferences related to the shipment logistics of the sku.
+     * 
+     */
     @InputImport(name="transportPreferences")
     private final @Nullable TransportPreferencesResponse transportPreferences;
 

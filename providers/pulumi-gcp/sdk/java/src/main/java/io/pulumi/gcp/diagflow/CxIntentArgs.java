@@ -20,6 +20,10 @@ public final class CxIntentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CxIntentArgs Empty = new CxIntentArgs();
 
+    /**
+     * Human readable description for better understanding an intent like its scope, content, result etc. Maximum character limit: 140 characters.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -27,6 +31,10 @@ public final class CxIntentArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The human-readable name of the intent, unique within the agent.
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -34,6 +42,11 @@ public final class CxIntentArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName;
     }
 
+    /**
+     * Indicates whether this is a fallback intent. Currently only default fallback intent is allowed in the agent, which is added upon agent creation.
+     * Adding training phrases to fallback intent is useful in the case of requests that are mistakenly matched, since training phrases assigned to fallback intents act as negative examples that triggers no-match event.
+     * 
+     */
     @InputImport(name="isFallback")
     private final @Nullable Input<Boolean> isFallback;
 
@@ -41,6 +54,12 @@ public final class CxIntentArgs extends io.pulumi.resources.ResourceArgs {
         return this.isFallback == null ? Input.empty() : this.isFallback;
     }
 
+    /**
+     * The key/value metadata to label an intent. Labels can contain lowercase letters, digits and the symbols '-' and '_'. International characters are allowed, including letters from unicase alphabets. Keys must start with a letter. Keys and values can be no longer than 63 characters and no more than 128 bytes.
+     * Prefix "sys-" is reserved for Dialogflow defined labels. Currently allowed Dialogflow defined labels include: * sys-head * sys-contextual The above labels do not require value. "sys-head" means the intent is a head intent. "sys.contextual" means the intent is a contextual intent.
+     * An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -48,6 +67,12 @@ public final class CxIntentArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The language of the following fields in intent:
+     * Intent.training_phrases.parts.text
+     * If not specified, the agent's default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used.
+     * 
+     */
     @InputImport(name="languageCode")
     private final @Nullable Input<String> languageCode;
 
@@ -55,6 +80,11 @@ public final class CxIntentArgs extends io.pulumi.resources.ResourceArgs {
         return this.languageCode == null ? Input.empty() : this.languageCode;
     }
 
+    /**
+     * The collection of parameters associated with the intent.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="parameters")
     private final @Nullable Input<List<CxIntentParameterArgs>> parameters;
 
@@ -62,6 +92,11 @@ public final class CxIntentArgs extends io.pulumi.resources.ResourceArgs {
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
+    /**
+     * The agent to create an intent for.
+     * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>.
+     * 
+     */
     @InputImport(name="parent")
     private final @Nullable Input<String> parent;
 
@@ -69,6 +104,12 @@ public final class CxIntentArgs extends io.pulumi.resources.ResourceArgs {
         return this.parent == null ? Input.empty() : this.parent;
     }
 
+    /**
+     * The priority of this intent. Higher numbers represent higher priorities.
+     * If the supplied value is unspecified or 0, the service translates the value to 500,000, which corresponds to the Normal priority in the console.
+     * If the supplied value is negative, the intent is ignored in runtime detect intent requests.
+     * 
+     */
     @InputImport(name="priority")
     private final @Nullable Input<Integer> priority;
 
@@ -76,6 +117,11 @@ public final class CxIntentArgs extends io.pulumi.resources.ResourceArgs {
         return this.priority == null ? Input.empty() : this.priority;
     }
 
+    /**
+     * The collection of training phrases the agent is trained on to identify the intent.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="trainingPhrases")
     private final @Nullable Input<List<CxIntentTrainingPhraseArgs>> trainingPhrases;
 

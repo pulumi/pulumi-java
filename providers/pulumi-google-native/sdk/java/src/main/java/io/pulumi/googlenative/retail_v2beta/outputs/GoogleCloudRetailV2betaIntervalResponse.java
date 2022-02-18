@@ -9,9 +9,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudRetailV2betaIntervalResponse {
+    /**
+     * Exclusive upper bound.
+     * 
+     */
     private final Double exclusiveMaximum;
+    /**
+     * Exclusive lower bound.
+     * 
+     */
     private final Double exclusiveMinimum;
+    /**
+     * Inclusive upper bound.
+     * 
+     */
     private final Double maximum;
+    /**
+     * Inclusive lower bound.
+     * 
+     */
     private final Double minimum;
 
     @OutputCustomType.Constructor({"exclusiveMaximum","exclusiveMinimum","maximum","minimum"})
@@ -26,15 +42,31 @@ public final class GoogleCloudRetailV2betaIntervalResponse {
         this.minimum = Objects.requireNonNull(minimum);
     }
 
+    /**
+     * Exclusive upper bound.
+     * 
+     */
     public Double getExclusiveMaximum() {
         return this.exclusiveMaximum;
     }
+    /**
+     * Exclusive lower bound.
+     * 
+     */
     public Double getExclusiveMinimum() {
         return this.exclusiveMinimum;
     }
+    /**
+     * Inclusive upper bound.
+     * 
+     */
     public Double getMaximum() {
         return this.maximum;
     }
+    /**
+     * Inclusive lower bound.
+     * 
+     */
     public Double getMinimum() {
         return this.minimum;
     }

@@ -9,6 +9,10 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * Details of how to connect to the Kafka cluster.
+ * 
+ */
 public final class ConnectorKafkaClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectorKafkaClusterArgs Empty = new ConnectorKafkaClusterArgs();

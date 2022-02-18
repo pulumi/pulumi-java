@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines an Aml Instance application and its connectivity endpoint URI.
+ * 
+ */
 public final class ComputeInstanceApplicationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ComputeInstanceApplicationResponse Empty = new ComputeInstanceApplicationResponse();
 
+    /**
+     * Name of the ComputeInstance application.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable String displayName;
 
@@ -21,6 +29,10 @@ public final class ComputeInstanceApplicationResponse extends io.pulumi.resource
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
+    /**
+     * Application' endpoint URI.
+     * 
+     */
     @InputImport(name="endpointUri")
     private final @Nullable String endpointUri;
 

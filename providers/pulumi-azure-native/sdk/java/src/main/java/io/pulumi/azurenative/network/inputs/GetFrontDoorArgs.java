@@ -12,6 +12,10 @@ public final class GetFrontDoorArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetFrontDoorArgs Empty = new GetFrontDoorArgs();
 
+    /**
+     * Name of the Front Door which is globally unique.
+     * 
+     */
     @InputImport(name="frontDoorName", required=true)
     private final String frontDoorName;
 
@@ -19,6 +23,10 @@ public final class GetFrontDoorArgs extends io.pulumi.resources.InvokeArgs {
         return this.frontDoorName;
     }
 
+    /**
+     * Name of the Resource group within the Azure subscription.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

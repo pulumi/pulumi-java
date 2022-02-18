@@ -15,6 +15,13 @@ public final class BudgetThresholdRuleGetArgs extends io.pulumi.resources.Resour
 
     public static final BudgetThresholdRuleGetArgs Empty = new BudgetThresholdRuleGetArgs();
 
+    /**
+     * The type of basis used to determine if spend has passed
+     * the threshold.
+     * Default value is `CURRENT_SPEND`.
+     * Possible values are `CURRENT_SPEND` and `FORECASTED_SPEND`.
+     * 
+     */
     @InputImport(name="spendBasis")
     private final @Nullable Input<String> spendBasis;
 
@@ -22,6 +29,11 @@ public final class BudgetThresholdRuleGetArgs extends io.pulumi.resources.Resour
         return this.spendBasis == null ? Input.empty() : this.spendBasis;
     }
 
+    /**
+     * Send an alert when this threshold is exceeded. This is a
+     * 1.0-based percentage, so 0.5 = 50%. Must be >= 0.
+     * 
+     */
     @InputImport(name="thresholdPercent", required=true)
     private final Input<Double> thresholdPercent;
 

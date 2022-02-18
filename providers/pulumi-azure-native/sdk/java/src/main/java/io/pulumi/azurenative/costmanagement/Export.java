@@ -18,63 +18,156 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * An export resource.
+ * API Version: 2020-06-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:costmanagement:Export TestExport subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.CostManagement/exports/TestExport 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:costmanagement:Export")
 public class Export extends io.pulumi.resources.CustomResource {
+    /**
+     * Has the definition for the export.
+     * 
+     */
     @OutputExport(name="definition", type=ExportDefinitionResponse.class, parameters={})
     private Output<ExportDefinitionResponse> definition;
 
+    /**
+     * @return Has the definition for the export.
+     * 
+     */
     public Output<ExportDefinitionResponse> getDefinition() {
         return this.definition;
     }
+    /**
+     * Has delivery information for the export.
+     * 
+     */
     @OutputExport(name="deliveryInfo", type=ExportDeliveryInfoResponse.class, parameters={})
     private Output<ExportDeliveryInfoResponse> deliveryInfo;
 
+    /**
+     * @return Has delivery information for the export.
+     * 
+     */
     public Output<ExportDeliveryInfoResponse> getDeliveryInfo() {
         return this.deliveryInfo;
     }
+    /**
+     * eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
+     * 
+     */
     @OutputExport(name="eTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> eTag;
 
+    /**
+     * @return eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
+     * 
+     */
     public Output</* @Nullable */ String> getETag() {
         return this.eTag;
     }
+    /**
+     * The format of the export being delivered. Currently only 'Csv' is supported.
+     * 
+     */
     @OutputExport(name="format", type=String.class, parameters={})
     private Output</* @Nullable */ String> format;
 
+    /**
+     * @return The format of the export being delivered. Currently only 'Csv' is supported.
+     * 
+     */
     public Output</* @Nullable */ String> getFormat() {
         return this.format;
     }
+    /**
+     * Resource name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * If the export has an active schedule, provides an estimate of the next execution time.
+     * 
+     */
     @OutputExport(name="nextRunTimeEstimate", type=String.class, parameters={})
     private Output<String> nextRunTimeEstimate;
 
+    /**
+     * @return If the export has an active schedule, provides an estimate of the next execution time.
+     * 
+     */
     public Output<String> getNextRunTimeEstimate() {
         return this.nextRunTimeEstimate;
     }
+    /**
+     * If requested, has the most recent execution history for the export.
+     * 
+     */
     @OutputExport(name="runHistory", type=ExportExecutionListResultResponse.class, parameters={})
     private Output</* @Nullable */ ExportExecutionListResultResponse> runHistory;
 
+    /**
+     * @return If requested, has the most recent execution history for the export.
+     * 
+     */
     public Output</* @Nullable */ ExportExecutionListResultResponse> getRunHistory() {
         return this.runHistory;
     }
+    /**
+     * Has schedule information for the export.
+     * 
+     */
     @OutputExport(name="schedule", type=ExportScheduleResponse.class, parameters={})
     private Output</* @Nullable */ ExportScheduleResponse> schedule;
 
+    /**
+     * @return Has schedule information for the export.
+     * 
+     */
     public Output</* @Nullable */ ExportScheduleResponse> getSchedule() {
         return this.schedule;
     }
+    /**
+     * Resource type.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Export(String name, ExportArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:costmanagement:Export", name, args == null ? ExportArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -100,6 +193,14 @@ public class Export extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Export get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Export(name, id, options);
     }

@@ -16,6 +16,10 @@ public final class WindowsDetailArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WindowsDetailArgs Empty = new WindowsDetailArgs();
 
+    /**
+     * The [CPE URI](https://cpe.mitre.org/specification/) this vulnerability affects.
+     * 
+     */
     @InputImport(name="cpeUri", required=true)
     private final Input<String> cpeUri;
 
@@ -23,6 +27,10 @@ public final class WindowsDetailArgs extends io.pulumi.resources.ResourceArgs {
         return this.cpeUri;
     }
 
+    /**
+     * The description of this vulnerability.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -30,6 +38,10 @@ public final class WindowsDetailArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The names of the KBs which have hotfixes to mitigate this vulnerability. Note that there may be multiple hotfixes (and thus multiple KBs) that mitigate a given vulnerability. Currently any listed KBs presence is considered a fix.
+     * 
+     */
     @InputImport(name="fixingKbs", required=true)
     private final Input<List<KnowledgeBaseArgs>> fixingKbs;
 
@@ -37,6 +49,10 @@ public final class WindowsDetailArgs extends io.pulumi.resources.ResourceArgs {
         return this.fixingKbs;
     }
 
+    /**
+     * The name of this vulnerability.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

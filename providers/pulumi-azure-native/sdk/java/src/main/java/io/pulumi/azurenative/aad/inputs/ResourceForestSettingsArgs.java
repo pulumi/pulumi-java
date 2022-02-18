@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Settings for Resource Forest
+ * 
+ */
 public final class ResourceForestSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourceForestSettingsArgs Empty = new ResourceForestSettingsArgs();
 
+    /**
+     * Resource Forest
+     * 
+     */
     @InputImport(name="resourceForest")
     private final @Nullable Input<String> resourceForest;
 
@@ -23,6 +31,10 @@ public final class ResourceForestSettingsArgs extends io.pulumi.resources.Resour
         return this.resourceForest == null ? Input.empty() : this.resourceForest;
     }
 
+    /**
+     * List of settings for Resource Forest
+     * 
+     */
     @InputImport(name="settings")
     private final @Nullable Input<List<ForestTrustArgs>> settings;
 

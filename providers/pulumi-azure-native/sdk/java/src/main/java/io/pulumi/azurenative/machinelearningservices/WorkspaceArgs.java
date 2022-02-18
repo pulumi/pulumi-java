@@ -22,6 +22,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WorkspaceArgs Empty = new WorkspaceArgs();
 
+    /**
+     * The flag to indicate whether to allow public access when behind VNet.
+     * 
+     */
     @InputImport(name="allowPublicAccessWhenBehindVnet")
     private final @Nullable Input<Boolean> allowPublicAccessWhenBehindVnet;
 
@@ -29,6 +33,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.allowPublicAccessWhenBehindVnet == null ? Input.empty() : this.allowPublicAccessWhenBehindVnet;
     }
 
+    /**
+     * ARM id of the application insights associated with this workspace. This cannot be changed once the workspace has been created
+     * 
+     */
     @InputImport(name="applicationInsights")
     private final @Nullable Input<String> applicationInsights;
 
@@ -36,6 +44,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.applicationInsights == null ? Input.empty() : this.applicationInsights;
     }
 
+    /**
+     * ARM id of the container registry associated with this workspace. This cannot be changed once the workspace has been created
+     * 
+     */
     @InputImport(name="containerRegistry")
     private final @Nullable Input<String> containerRegistry;
 
@@ -43,6 +55,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.containerRegistry == null ? Input.empty() : this.containerRegistry;
     }
 
+    /**
+     * The description of this workspace.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -50,6 +66,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Url for the discovery service to identify regional endpoints for machine learning experimentation services
+     * 
+     */
     @InputImport(name="discoveryUrl")
     private final @Nullable Input<String> discoveryUrl;
 
@@ -57,6 +77,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.discoveryUrl == null ? Input.empty() : this.discoveryUrl;
     }
 
+    /**
+     * The encryption settings of Azure ML workspace.
+     * 
+     */
     @InputImport(name="encryption")
     private final @Nullable Input<EncryptionPropertyArgs> encryption;
 
@@ -64,6 +88,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.encryption == null ? Input.empty() : this.encryption;
     }
 
+    /**
+     * The friendly name for this workspace. This name in mutable
+     * 
+     */
     @InputImport(name="friendlyName")
     private final @Nullable Input<String> friendlyName;
 
@@ -71,6 +99,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
     }
 
+    /**
+     * The flag to signal HBI data in the workspace and reduce diagnostic data collected by the service
+     * 
+     */
     @InputImport(name="hbiWorkspace")
     private final @Nullable Input<Boolean> hbiWorkspace;
 
@@ -78,6 +110,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.hbiWorkspace == null ? Input.empty() : this.hbiWorkspace;
     }
 
+    /**
+     * The identity of the resource.
+     * 
+     */
     @InputImport(name="identity")
     private final @Nullable Input<IdentityArgs> identity;
 
@@ -85,6 +121,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity == null ? Input.empty() : this.identity;
     }
 
+    /**
+     * The compute name for image build
+     * 
+     */
     @InputImport(name="imageBuildCompute")
     private final @Nullable Input<String> imageBuildCompute;
 
@@ -92,6 +132,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.imageBuildCompute == null ? Input.empty() : this.imageBuildCompute;
     }
 
+    /**
+     * ARM id of the key vault associated with this workspace. This cannot be changed once the workspace has been created
+     * 
+     */
     @InputImport(name="keyVault")
     private final @Nullable Input<String> keyVault;
 
@@ -99,6 +143,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.keyVault == null ? Input.empty() : this.keyVault;
     }
 
+    /**
+     * Specifies the location of the resource.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -106,6 +154,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The user assigned identity resource id that represents the workspace identity.
+     * 
+     */
     @InputImport(name="primaryUserAssignedIdentity")
     private final @Nullable Input<String> primaryUserAssignedIdentity;
 
@@ -113,6 +165,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.primaryUserAssignedIdentity == null ? Input.empty() : this.primaryUserAssignedIdentity;
     }
 
+    /**
+     * Name of the resource group in which workspace is located.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -120,6 +176,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The service managed resource settings.
+     * 
+     */
     @InputImport(name="serviceManagedResourcesSettings")
     private final @Nullable Input<ServiceManagedResourcesSettingsArgs> serviceManagedResourcesSettings;
 
@@ -127,6 +187,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceManagedResourcesSettings == null ? Input.empty() : this.serviceManagedResourcesSettings;
     }
 
+    /**
+     * The list of shared private link resources in this workspace.
+     * 
+     */
     @InputImport(name="sharedPrivateLinkResources")
     private final @Nullable Input<List<SharedPrivateLinkResourceArgs>> sharedPrivateLinkResources;
 
@@ -134,6 +198,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.sharedPrivateLinkResources == null ? Input.empty() : this.sharedPrivateLinkResources;
     }
 
+    /**
+     * The sku of the workspace.
+     * 
+     */
     @InputImport(name="sku")
     private final @Nullable Input<SkuArgs> sku;
 
@@ -141,6 +209,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku == null ? Input.empty() : this.sku;
     }
 
+    /**
+     * ARM id of the storage account associated with this workspace. This cannot be changed once the workspace has been created
+     * 
+     */
     @InputImport(name="storageAccount")
     private final @Nullable Input<String> storageAccount;
 
@@ -148,6 +220,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.storageAccount == null ? Input.empty() : this.storageAccount;
     }
 
+    /**
+     * Contains resource tags defined as key/value pairs.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -155,6 +231,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * Name of Azure Machine Learning workspace.
+     * 
+     */
     @InputImport(name="workspaceName")
     private final @Nullable Input<String> workspaceName;
 

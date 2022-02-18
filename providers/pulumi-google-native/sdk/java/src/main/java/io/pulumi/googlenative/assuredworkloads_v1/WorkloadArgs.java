@@ -20,6 +20,10 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WorkloadArgs Empty = new WorkloadArgs();
 
+    /**
+     * Optional. The billing account used for the resources which are direct children of workload. This billing account is initially associated with the resources created as part of Workload creation. After the initial creation of these resources, the customer can change the assigned billing account. The resource name has the form `billingAccounts/{billing_account_id}`. For example, `billingAccounts/012345-567890-ABCDEF`.
+     * 
+     */
     @InputImport(name="billingAccount")
     private final @Nullable Input<String> billingAccount;
 
@@ -27,6 +31,10 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
         return this.billingAccount == null ? Input.empty() : this.billingAccount;
     }
 
+    /**
+     * Immutable. Compliance Regime associated with this workload.
+     * 
+     */
     @InputImport(name="complianceRegime", required=true)
     private final Input<WorkloadComplianceRegime> complianceRegime;
 
@@ -34,6 +42,10 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
         return this.complianceRegime;
     }
 
+    /**
+     * The user-assigned display name of the Workload. When present it must be between 4 to 30 characters. Allowed characters are: lowercase and uppercase letters, numbers, hyphen, and spaces. Example: My Workload
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -41,6 +53,10 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName;
     }
 
+    /**
+     * Optional. Indicates the sovereignty status of the given workload. Currently meant to be used by Europe/Canada customers.
+     * 
+     */
     @InputImport(name="enableSovereignControls")
     private final @Nullable Input<Boolean> enableSovereignControls;
 
@@ -48,6 +64,10 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableSovereignControls == null ? Input.empty() : this.enableSovereignControls;
     }
 
+    /**
+     * Optional. ETag of the workload, it is calculated on the basis of the Workload contents. It will be used in Update & Delete operations.
+     * 
+     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -62,6 +82,10 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
         return this.externalId == null ? Input.empty() : this.externalId;
     }
 
+    /**
+     * Input only. Settings used to create a CMEK crypto key. When set a project with a KMS CMEK key is provisioned. This field is mandatory for a subset of Compliance Regimes.
+     * 
+     */
     @InputImport(name="kmsSettings")
     private final @Nullable Input<GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs> kmsSettings;
 
@@ -69,6 +93,10 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
         return this.kmsSettings == null ? Input.empty() : this.kmsSettings;
     }
 
+    /**
+     * Optional. Labels applied to the workload.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -83,6 +111,10 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Optional. The resource name of the workload. Format: organizations/{organization}/locations/{location}/workloads/{workload} Read-only.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -97,6 +129,10 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
         return this.organizationId;
     }
 
+    /**
+     * Input only. The parent resource for the resources managed by this Assured Workload. May be either empty or a folder resource which is a child of the Workload parent. If not specified all resources are created under the parent organization. Format: folders/{folder_id}
+     * 
+     */
     @InputImport(name="provisionedResourcesParent")
     private final @Nullable Input<String> provisionedResourcesParent;
 
@@ -104,6 +140,10 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
         return this.provisionedResourcesParent == null ? Input.empty() : this.provisionedResourcesParent;
     }
 
+    /**
+     * Input only. Resource properties that are used to customize workload resources. These properties (such as custom project id) will be used to create workload resources if possible. This field is optional.
+     * 
+     */
     @InputImport(name="resourceSettings")
     private final @Nullable Input<List<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs>> resourceSettings;
 

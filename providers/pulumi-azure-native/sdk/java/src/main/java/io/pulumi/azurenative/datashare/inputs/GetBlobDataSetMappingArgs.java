@@ -12,6 +12,10 @@ public final class GetBlobDataSetMappingArgs extends io.pulumi.resources.InvokeA
 
     public static final GetBlobDataSetMappingArgs Empty = new GetBlobDataSetMappingArgs();
 
+    /**
+     * The name of the share account.
+     * 
+     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -19,6 +23,10 @@ public final class GetBlobDataSetMappingArgs extends io.pulumi.resources.InvokeA
         return this.accountName;
     }
 
+    /**
+     * The name of the dataSetMapping.
+     * 
+     */
     @InputImport(name="dataSetMappingName", required=true)
     private final String dataSetMappingName;
 
@@ -26,6 +34,10 @@ public final class GetBlobDataSetMappingArgs extends io.pulumi.resources.InvokeA
         return this.dataSetMappingName;
     }
 
+    /**
+     * The resource group name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -33,6 +45,10 @@ public final class GetBlobDataSetMappingArgs extends io.pulumi.resources.InvokeA
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the shareSubscription.
+     * 
+     */
     @InputImport(name="shareSubscriptionName", required=true)
     private final String shareSubscriptionName;
 

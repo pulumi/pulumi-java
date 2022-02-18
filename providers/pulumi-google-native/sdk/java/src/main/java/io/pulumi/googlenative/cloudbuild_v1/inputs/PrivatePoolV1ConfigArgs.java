@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Configuration for a V1 `PrivatePool`.
+ * 
+ */
 public final class PrivatePoolV1ConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PrivatePoolV1ConfigArgs Empty = new PrivatePoolV1ConfigArgs();
 
+    /**
+     * Network configuration for the pool.
+     * 
+     */
     @InputImport(name="networkConfig")
     private final @Nullable Input<NetworkConfigArgs> networkConfig;
 
@@ -22,6 +30,10 @@ public final class PrivatePoolV1ConfigArgs extends io.pulumi.resources.ResourceA
         return this.networkConfig == null ? Input.empty() : this.networkConfig;
     }
 
+    /**
+     * Machine configuration for the workers in the pool.
+     * 
+     */
     @InputImport(name="workerConfig")
     private final @Nullable Input<WorkerConfigArgs> workerConfig;
 

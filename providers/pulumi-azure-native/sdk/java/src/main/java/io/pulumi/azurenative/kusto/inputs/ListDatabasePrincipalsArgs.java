@@ -12,6 +12,10 @@ public final class ListDatabasePrincipalsArgs extends io.pulumi.resources.Invoke
 
     public static final ListDatabasePrincipalsArgs Empty = new ListDatabasePrincipalsArgs();
 
+    /**
+     * The name of the Kusto cluster.
+     * 
+     */
     @InputImport(name="clusterName", required=true)
     private final String clusterName;
 
@@ -19,6 +23,10 @@ public final class ListDatabasePrincipalsArgs extends io.pulumi.resources.Invoke
         return this.clusterName;
     }
 
+    /**
+     * The name of the database in the Kusto cluster.
+     * 
+     */
     @InputImport(name="databaseName", required=true)
     private final String databaseName;
 
@@ -26,6 +34,10 @@ public final class ListDatabasePrincipalsArgs extends io.pulumi.resources.Invoke
         return this.databaseName;
     }
 
+    /**
+     * The name of the resource group containing the Kusto cluster.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

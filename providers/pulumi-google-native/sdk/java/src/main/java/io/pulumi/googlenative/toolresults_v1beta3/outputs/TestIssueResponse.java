@@ -10,10 +10,30 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TestIssueResponse {
+    /**
+     * Category of issue. Required.
+     * 
+     */
     private final String category;
+    /**
+     * A brief human-readable message describing the issue. Required.
+     * 
+     */
     private final String errorMessage;
+    /**
+     * Severity of issue. Required.
+     * 
+     */
     private final String severity;
+    /**
+     * Type of issue. Required.
+     * 
+     */
     private final String type;
+    /**
+     * Warning message with additional details of the issue. Should always be a message from com.google.devtools.toolresults.v1.warnings
+     * 
+     */
     private final AnyResponse warning;
 
     @OutputCustomType.Constructor({"category","errorMessage","severity","type","warning"})
@@ -30,18 +50,38 @@ public final class TestIssueResponse {
         this.warning = Objects.requireNonNull(warning);
     }
 
+    /**
+     * Category of issue. Required.
+     * 
+     */
     public String getCategory() {
         return this.category;
     }
+    /**
+     * A brief human-readable message describing the issue. Required.
+     * 
+     */
     public String getErrorMessage() {
         return this.errorMessage;
     }
+    /**
+     * Severity of issue. Required.
+     * 
+     */
     public String getSeverity() {
         return this.severity;
     }
+    /**
+     * Type of issue. Required.
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * Warning message with additional details of the issue. Should always be a message from com.google.devtools.toolresults.v1.warnings
+     * 
+     */
     public AnyResponse getWarning() {
         return this.warning;
     }

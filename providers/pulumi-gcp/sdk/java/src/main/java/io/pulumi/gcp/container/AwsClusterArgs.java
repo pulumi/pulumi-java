@@ -19,6 +19,10 @@ public final class AwsClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AwsClusterArgs Empty = new AwsClusterArgs();
 
+    /**
+     * Optional. Annotations on the cluster. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Key can have 2 segments: prefix (optional) and name (required), separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between.
+     * 
+     */
     @InputImport(name="annotations")
     private final @Nullable Input<Map<String,String>> annotations;
 
@@ -26,6 +30,10 @@ public final class AwsClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
+    /**
+     * Required. Configuration related to the cluster RBAC settings.
+     * 
+     */
     @InputImport(name="authorization", required=true)
     private final Input<AwsClusterAuthorizationArgs> authorization;
 
@@ -33,6 +41,10 @@ public final class AwsClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.authorization;
     }
 
+    /**
+     * Required. The AWS region where the cluster runs. Each Google Cloud region supports a subset of nearby AWS regions. You can call to list all supported AWS regions within a given Google Cloud region.
+     * 
+     */
     @InputImport(name="awsRegion", required=true)
     private final Input<String> awsRegion;
 
@@ -40,6 +52,10 @@ public final class AwsClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.awsRegion;
     }
 
+    /**
+     * Required. Configuration related to the cluster control plane.
+     * 
+     */
     @InputImport(name="controlPlane", required=true)
     private final Input<AwsClusterControlPlaneArgs> controlPlane;
 
@@ -47,6 +63,10 @@ public final class AwsClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.controlPlane;
     }
 
+    /**
+     * Optional. A human readable description of this cluster. Cannot be longer than 255 UTF-8 encoded bytes.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -54,6 +74,10 @@ public final class AwsClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Fleet configuration.
+     * 
+     */
     @InputImport(name="fleet", required=true)
     private final Input<AwsClusterFleetArgs> fleet;
 
@@ -61,6 +85,10 @@ public final class AwsClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.fleet;
     }
 
+    /**
+     * The location for the resource
+     * 
+     */
     @InputImport(name="location", required=true)
     private final Input<String> location;
 
@@ -68,6 +96,10 @@ public final class AwsClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.location;
     }
 
+    /**
+     * The name of this resource.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -75,6 +107,10 @@ public final class AwsClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Required. Cluster-wide networking configuration.
+     * 
+     */
     @InputImport(name="networking", required=true)
     private final Input<AwsClusterNetworkingArgs> networking;
 
@@ -82,6 +118,10 @@ public final class AwsClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.networking;
     }
 
+    /**
+     * The project for the resource
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

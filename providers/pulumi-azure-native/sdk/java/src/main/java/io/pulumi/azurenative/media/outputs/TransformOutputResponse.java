@@ -17,8 +17,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TransformOutputResponse {
+    /**
+     * A Transform can define more than one outputs. This property defines what the service should do when one output fails - either continue to produce other outputs, or, stop the other outputs. The overall Job state will not reflect failures of outputs that are specified with 'ContinueJob'. The default is 'StopProcessingJob'.
+     * 
+     */
     private final @Nullable String onError;
+    /**
+     * Preset that describes the operations that will be used to modify, transcode, or extract insights from the source file to generate the output.
+     * 
+     */
     private final Object preset;
+    /**
+     * Sets the relative priority of the TransformOutputs within a Transform. This sets the priority that the service uses for processing TransformOutputs. The default priority is Normal.
+     * 
+     */
     private final @Nullable String relativePriority;
 
     @OutputCustomType.Constructor({"onError","preset","relativePriority"})
@@ -31,12 +43,24 @@ public final class TransformOutputResponse {
         this.relativePriority = relativePriority;
     }
 
+    /**
+     * A Transform can define more than one outputs. This property defines what the service should do when one output fails - either continue to produce other outputs, or, stop the other outputs. The overall Job state will not reflect failures of outputs that are specified with 'ContinueJob'. The default is 'StopProcessingJob'.
+     * 
+     */
     public Optional<String> getOnError() {
         return Optional.ofNullable(this.onError);
     }
+    /**
+     * Preset that describes the operations that will be used to modify, transcode, or extract insights from the source file to generate the output.
+     * 
+     */
     public Object getPreset() {
         return this.preset;
     }
+    /**
+     * Sets the relative priority of the TransformOutputs within a Transform. This sets the priority that the service uses for processing TransformOutputs. The default priority is Normal.
+     * 
+     */
     public Optional<String> getRelativePriority() {
         return Optional.ofNullable(this.relativePriority);
     }

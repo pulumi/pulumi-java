@@ -14,9 +14,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAction {
+    /**
+     * Describes a header to add.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAdd> requestHeaderToAdds;
+    /**
+     * A list of header names for headers that need to be removed from the request prior to forwarding the request to the origin.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemove> requestHeaderToRemoves;
+    /**
+     * Headers to add to the response prior to sending it back to the client.
+     * Response headers are only sent to the client, and do not have an effect on the cache serving the response.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAdd> responseHeaderToAdds;
+    /**
+     * A list of header names for headers that need to be removed from the request prior to forwarding the request to the origin.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemove> responseHeaderToRemoves;
 
     @OutputCustomType.Constructor({"requestHeaderToAdds","requestHeaderToRemoves","responseHeaderToAdds","responseHeaderToRemoves"})
@@ -31,15 +52,36 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAction {
         this.responseHeaderToRemoves = responseHeaderToRemoves;
     }
 
+    /**
+     * Describes a header to add.
+     * Structure is documented below.
+     * 
+     */
     public List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAdd> getRequestHeaderToAdds() {
         return this.requestHeaderToAdds == null ? List.of() : this.requestHeaderToAdds;
     }
+    /**
+     * A list of header names for headers that need to be removed from the request prior to forwarding the request to the origin.
+     * Structure is documented below.
+     * 
+     */
     public List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemove> getRequestHeaderToRemoves() {
         return this.requestHeaderToRemoves == null ? List.of() : this.requestHeaderToRemoves;
     }
+    /**
+     * Headers to add to the response prior to sending it back to the client.
+     * Response headers are only sent to the client, and do not have an effect on the cache serving the response.
+     * Structure is documented below.
+     * 
+     */
     public List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAdd> getResponseHeaderToAdds() {
         return this.responseHeaderToAdds == null ? List.of() : this.responseHeaderToAdds;
     }
+    /**
+     * A list of header names for headers that need to be removed from the request prior to forwarding the request to the origin.
+     * Structure is documented below.
+     * 
+     */
     public List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemove> getResponseHeaderToRemoves() {
         return this.responseHeaderToRemoves == null ? List.of() : this.responseHeaderToRemoves;
     }

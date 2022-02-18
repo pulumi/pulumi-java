@@ -10,10 +10,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Configuration for an arbitrary DNS provider.
+ * 
+ */
 public final class CustomDnsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CustomDnsResponse Empty = new CustomDnsResponse();
 
+    /**
+     * The list of DS records for this domain, which are used to enable DNSSEC. The domain's DNS provider can provide the values to set here. If this field is empty, DNSSEC is disabled.
+     * 
+     */
     @InputImport(name="dsRecords", required=true)
     private final List<DsRecordResponse> dsRecords;
 
@@ -21,6 +29,10 @@ public final class CustomDnsResponse extends io.pulumi.resources.InvokeArgs {
         return this.dsRecords;
     }
 
+    /**
+     * A list of name servers that store the DNS zone for this domain. Each name server is a domain name, with Unicode domain names expressed in Punycode format.
+     * 
+     */
     @InputImport(name="nameServers", required=true)
     private final List<String> nameServers;
 

@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The user owned storage for Cognitive Services account.
+ * 
+ */
 public final class UserOwnedStorageResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final UserOwnedStorageResponse Empty = new UserOwnedStorageResponse();
 
+    /**
+     * Full resource id of a Microsoft.Storage resource.
+     * 
+     */
     @InputImport(name="resourceId")
     private final @Nullable String resourceId;
 

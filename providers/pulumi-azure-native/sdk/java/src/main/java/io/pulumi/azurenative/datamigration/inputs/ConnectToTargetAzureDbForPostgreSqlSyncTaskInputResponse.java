@@ -8,10 +8,18 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * Input for the task that validates connection to Azure Database for PostgreSQL and target server requirements
+ * 
+ */
 public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskInputResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConnectToTargetAzureDbForPostgreSqlSyncTaskInputResponse Empty = new ConnectToTargetAzureDbForPostgreSqlSyncTaskInputResponse();
 
+    /**
+     * Connection information for source PostgreSQL server
+     * 
+     */
     @InputImport(name="sourceConnectionInfo", required=true)
     private final PostgreSqlConnectionInfoResponse sourceConnectionInfo;
 
@@ -19,6 +27,10 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskInputResponse exte
         return this.sourceConnectionInfo;
     }
 
+    /**
+     * Connection information for target Azure Database for PostgreSQL server
+     * 
+     */
     @InputImport(name="targetConnectionInfo", required=true)
     private final PostgreSqlConnectionInfoResponse targetConnectionInfo;
 

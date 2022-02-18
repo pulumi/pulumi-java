@@ -11,9 +11,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ResourceHealthDetailsResponse {
+    /**
+     * Health Code
+     * 
+     */
     private final Integer code;
+    /**
+     * Health Message
+     * 
+     */
     private final String message;
+    /**
+     * Health Recommended Actions
+     * 
+     */
     private final List<String> recommendations;
+    /**
+     * Health Title
+     * 
+     */
     private final String title;
 
     @OutputCustomType.Constructor({"code","message","recommendations","title"})
@@ -28,15 +44,31 @@ public final class ResourceHealthDetailsResponse {
         this.title = Objects.requireNonNull(title);
     }
 
+    /**
+     * Health Code
+     * 
+     */
     public Integer getCode() {
         return this.code;
     }
+    /**
+     * Health Message
+     * 
+     */
     public String getMessage() {
         return this.message;
     }
+    /**
+     * Health Recommended Actions
+     * 
+     */
     public List<String> getRecommendations() {
         return this.recommendations;
     }
+    /**
+     * Health Title
+     * 
+     */
     public String getTitle() {
         return this.title;
     }

@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Subset of NodeConfig message that has defaults.
+ * 
+ */
 public final class NodeConfigDefaultsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NodeConfigDefaultsArgs Empty = new NodeConfigDefaultsArgs();
 
+    /**
+     * GCFS (Google Container File System, a.k.a Riptide) options.
+     * 
+     */
     @InputImport(name="gcfsConfig")
     private final @Nullable Input<GcfsConfigArgs> gcfsConfig;
 

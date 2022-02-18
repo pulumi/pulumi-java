@@ -12,10 +12,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ServiceSkuResponse {
+    /**
+     * The capacity of the SKU, if it supports scaling
+     * 
+     */
     private final @Nullable Integer capacity;
+    /**
+     * The SKU family, used when the service has multiple performance classes within a tier, such as 'A', 'D', etc. for virtual machines
+     * 
+     */
     private final @Nullable String family;
+    /**
+     * The unique name of the SKU, such as 'P3'
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * The size of the SKU, used when the name alone does not denote a service size or when a SKU has multiple performance classes within a family, e.g. 'A1' for virtual machines
+     * 
+     */
     private final @Nullable String size;
+    /**
+     * The tier of the SKU, such as 'Free', 'Basic', 'Standard', or 'Premium'
+     * 
+     */
     private final @Nullable String tier;
 
     @OutputCustomType.Constructor({"capacity","family","name","size","tier"})
@@ -32,18 +52,38 @@ public final class ServiceSkuResponse {
         this.tier = tier;
     }
 
+    /**
+     * The capacity of the SKU, if it supports scaling
+     * 
+     */
     public Optional<Integer> getCapacity() {
         return Optional.ofNullable(this.capacity);
     }
+    /**
+     * The SKU family, used when the service has multiple performance classes within a tier, such as 'A', 'D', etc. for virtual machines
+     * 
+     */
     public Optional<String> getFamily() {
         return Optional.ofNullable(this.family);
     }
+    /**
+     * The unique name of the SKU, such as 'P3'
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * The size of the SKU, used when the name alone does not denote a service size or when a SKU has multiple performance classes within a family, e.g. 'A1' for virtual machines
+     * 
+     */
     public Optional<String> getSize() {
         return Optional.ofNullable(this.size);
     }
+    /**
+     * The tier of the SKU, such as 'Free', 'Basic', 'Standard', or 'Premium'
+     * 
+     */
     public Optional<String> getTier() {
         return Optional.ofNullable(this.tier);
     }

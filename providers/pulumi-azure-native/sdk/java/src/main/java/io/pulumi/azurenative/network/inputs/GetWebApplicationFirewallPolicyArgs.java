@@ -12,6 +12,10 @@ public final class GetWebApplicationFirewallPolicyArgs extends io.pulumi.resourc
 
     public static final GetWebApplicationFirewallPolicyArgs Empty = new GetWebApplicationFirewallPolicyArgs();
 
+    /**
+     * The name of the policy.
+     * 
+     */
     @InputImport(name="policyName", required=true)
     private final String policyName;
 
@@ -19,6 +23,10 @@ public final class GetWebApplicationFirewallPolicyArgs extends io.pulumi.resourc
         return this.policyName;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

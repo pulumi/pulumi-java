@@ -14,6 +14,10 @@ public final class FolderArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FolderArgs Empty = new FolderArgs();
 
+    /**
+     * The folder's display name. A folder's display name must be unique amongst its siblings, e.g. no two folders with the same parent can share the same display name. The display name must start and end with a letter or digit, may contain letters, digits, spaces, hyphens and underscores and can be no longer than 30 characters. This is captured by the regular expression: `[\p{L}\p{N}]([\p{L}\p{N}_- ]{0,28}[\p{L}\p{N}])?`.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -21,6 +25,10 @@ public final class FolderArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The Folder's parent's resource name. Updates to the folder's parent must be performed via MoveFolder.
+     * 
+     */
     @InputImport(name="parent", required=true)
     private final Input<String> parent;
 

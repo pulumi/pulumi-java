@@ -10,8 +10,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetAliasResult {
+    /**
+     * Resource ID for this alias. Values must match the regular expression `[^/]{1,255}`.
+     * 
+     */
     private final String alias;
+    /**
+     * Chain of certificates under this alias.
+     * 
+     */
     private final GoogleCloudApigeeV1CertificateResponse certsInfo;
+    /**
+     * Type of alias.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"alias","certsInfo","type"})
@@ -24,12 +36,24 @@ public final class GetAliasResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Resource ID for this alias. Values must match the regular expression `[^/]{1,255}`.
+     * 
+     */
     public String getAlias() {
         return this.alias;
     }
+    /**
+     * Chain of certificates under this alias.
+     * 
+     */
     public GoogleCloudApigeeV1CertificateResponse getCertsInfo() {
         return this.certsInfo;
     }
+    /**
+     * Type of alias.
+     * 
+     */
     public String getType() {
         return this.type;
     }

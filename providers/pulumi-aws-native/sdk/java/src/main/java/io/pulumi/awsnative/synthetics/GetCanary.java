@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCanary {
+/**
+ * Resource Type definition for AWS::Synthetics::Canary
+ * 
+ */
     public static CompletableFuture<GetCanaryResult> invokeAsync(GetCanaryArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:synthetics:getCanary", TypeShape.of(GetCanaryResult.class), args == null ? GetCanaryArgs.Empty : args, Utilities.withVersion(options));
     }

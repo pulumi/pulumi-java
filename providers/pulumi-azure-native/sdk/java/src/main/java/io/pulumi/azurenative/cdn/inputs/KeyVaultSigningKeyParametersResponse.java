@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Describes the parameters for using a user's KeyVault for URL Signing Key.
+ * 
+ */
 public final class KeyVaultSigningKeyParametersResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final KeyVaultSigningKeyParametersResponse Empty = new KeyVaultSigningKeyParametersResponse();
@@ -19,6 +23,10 @@ public final class KeyVaultSigningKeyParametersResponse extends io.pulumi.resour
         return this.odataType;
     }
 
+    /**
+     * Resource group of the user's Key Vault containing the secret
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class KeyVaultSigningKeyParametersResponse extends io.pulumi.resour
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of secret in Key Vault.
+     * 
+     */
     @InputImport(name="secretName", required=true)
     private final String secretName;
 
@@ -33,6 +45,10 @@ public final class KeyVaultSigningKeyParametersResponse extends io.pulumi.resour
         return this.secretName;
     }
 
+    /**
+     * The version(GUID) of secret in Key Vault.
+     * 
+     */
     @InputImport(name="secretVersion", required=true)
     private final String secretVersion;
 
@@ -40,6 +56,10 @@ public final class KeyVaultSigningKeyParametersResponse extends io.pulumi.resour
         return this.secretVersion;
     }
 
+    /**
+     * Subscription Id of the user's Key Vault containing the secret
+     * 
+     */
     @InputImport(name="subscriptionId", required=true)
     private final String subscriptionId;
 
@@ -47,6 +67,10 @@ public final class KeyVaultSigningKeyParametersResponse extends io.pulumi.resour
         return this.subscriptionId;
     }
 
+    /**
+     * The name of the user's Key Vault containing the secret
+     * 
+     */
     @InputImport(name="vaultName", required=true)
     private final String vaultName;
 

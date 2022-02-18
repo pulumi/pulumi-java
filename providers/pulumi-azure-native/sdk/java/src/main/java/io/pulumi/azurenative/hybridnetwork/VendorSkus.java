@@ -17,63 +17,156 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Sku sub resource.
+ * API Version: 2020-01-01-preview.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:hybridnetwork:VendorSkus TestSku /subscriptions/subid/providers/Microsoft.HybridNetwork/vendors/TestVendor/vendorskus/TestSku 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:hybridnetwork:VendorSkus")
 public class VendorSkus extends io.pulumi.resources.CustomResource {
+    /**
+     * The sku deployment mode.
+     * 
+     */
     @OutputExport(name="deploymentMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> deploymentMode;
 
+    /**
+     * @return The sku deployment mode.
+     * 
+     */
     public Output</* @Nullable */ String> getDeploymentMode() {
         return this.deploymentMode;
     }
+    /**
+     * The parameters for the managed application to be supplied by the vendor.
+     * 
+     */
     @OutputExport(name="managedApplicationParameters", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> managedApplicationParameters;
 
+    /**
+     * @return The parameters for the managed application to be supplied by the vendor.
+     * 
+     */
     public Output</* @Nullable */ Object> getManagedApplicationParameters() {
         return this.managedApplicationParameters;
     }
+    /**
+     * The template for the managed application deployment.
+     * 
+     */
     @OutputExport(name="managedApplicationTemplate", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> managedApplicationTemplate;
 
+    /**
+     * @return The template for the managed application deployment.
+     * 
+     */
     public Output</* @Nullable */ Object> getManagedApplicationTemplate() {
         return this.managedApplicationTemplate;
     }
+    /**
+     * The name of the resource
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The template definition of the network function.
+     * 
+     */
     @OutputExport(name="networkFunctionTemplate", type=NetworkFunctionTemplateResponse.class, parameters={})
     private Output</* @Nullable */ NetworkFunctionTemplateResponse> networkFunctionTemplate;
 
+    /**
+     * @return The template definition of the network function.
+     * 
+     */
     public Output</* @Nullable */ NetworkFunctionTemplateResponse> getNetworkFunctionTemplate() {
         return this.networkFunctionTemplate;
     }
+    /**
+     * Indicates if the vendor sku is in preview mode.
+     * 
+     */
     @OutputExport(name="preview", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> preview;
 
+    /**
+     * @return Indicates if the vendor sku is in preview mode.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getPreview() {
         return this.preview;
     }
+    /**
+     * The provisioning state of the vendor sku sub resource.
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning state of the vendor sku sub resource.
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The sku type.
+     * 
+     */
     @OutputExport(name="skuType", type=String.class, parameters={})
     private Output</* @Nullable */ String> skuType;
 
+    /**
+     * @return The sku type.
+     * 
+     */
     public Output</* @Nullable */ String> getSkuType() {
         return this.skuType;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public VendorSkus(String name, VendorSkusArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:hybridnetwork:VendorSkus", name, args == null ? VendorSkusArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -93,6 +186,14 @@ public class VendorSkus extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static VendorSkus get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new VendorSkus(name, id, options);
     }

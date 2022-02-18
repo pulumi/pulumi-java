@@ -15,6 +15,10 @@ public final class InstanceGroupNamedPortState extends io.pulumi.resources.Resou
 
     public static final InstanceGroupNamedPortState Empty = new InstanceGroupNamedPortState();
 
+    /**
+     * The name of the instance group.
+     * 
+     */
     @InputImport(name="group")
     private final @Nullable Input<String> group;
 
@@ -22,6 +26,11 @@ public final class InstanceGroupNamedPortState extends io.pulumi.resources.Resou
         return this.group == null ? Input.empty() : this.group;
     }
 
+    /**
+     * The name for this named port. The name must be 1-63 characters
+     * long, and comply with RFC1035.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -29,6 +38,10 @@ public final class InstanceGroupNamedPortState extends io.pulumi.resources.Resou
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The port number, which can be a value between 1 and 65535.
+     * 
+     */
     @InputImport(name="port")
     private final @Nullable Input<Integer> port;
 
@@ -36,6 +49,11 @@ public final class InstanceGroupNamedPortState extends io.pulumi.resources.Resou
         return this.port == null ? Input.empty() : this.port;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -43,6 +61,10 @@ public final class InstanceGroupNamedPortState extends io.pulumi.resources.Resou
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The zone of the instance group.
+     * 
+     */
     @InputImport(name="zone")
     private final @Nullable Input<String> zone;
 

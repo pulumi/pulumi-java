@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Type of the link target.
+     * 
+     */
     @EnumType
     public enum LinkedServiceLinkType {
         Synapse("Synapse");

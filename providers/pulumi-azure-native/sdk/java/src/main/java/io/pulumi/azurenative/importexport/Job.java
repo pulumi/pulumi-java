@@ -18,51 +18,128 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Contains the job information.
+ * API Version: 2020-08-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:importexport:Job myJob /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.ImportExport/jobs/myJob 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:importexport:Job")
 public class Job extends io.pulumi.resources.CustomResource {
+    /**
+     * Specifies the job identity details
+     * 
+     */
     @OutputExport(name="identity", type=IdentityDetailsResponse.class, parameters={})
     private Output</* @Nullable */ IdentityDetailsResponse> identity;
 
+    /**
+     * @return Specifies the job identity details
+     * 
+     */
     public Output</* @Nullable */ IdentityDetailsResponse> getIdentity() {
         return this.identity;
     }
+    /**
+     * Specifies the Azure location where the job is created.
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Specifies the Azure location where the job is created.
+     * 
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * Specifies the name of the job.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Specifies the name of the job.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Specifies the job properties
+     * 
+     */
     @OutputExport(name="properties", type=JobDetailsResponse.class, parameters={})
     private Output<JobDetailsResponse> properties;
 
+    /**
+     * @return Specifies the job properties
+     * 
+     */
     public Output<JobDetailsResponse> getProperties() {
         return this.properties;
     }
+    /**
+     * SystemData of ImportExport Jobs.
+     * 
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return SystemData of ImportExport Jobs.
+     * 
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * Specifies the tags that are assigned to the job.
+     * 
+     */
     @OutputExport(name="tags", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> tags;
 
+    /**
+     * @return Specifies the tags that are assigned to the job.
+     * 
+     */
     public Output</* @Nullable */ Object> getTags() {
         return this.tags;
     }
+    /**
+     * Specifies the type of the job resource.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Specifies the type of the job resource.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Job(String name, JobArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:importexport:Job", name, args == null ? JobArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -83,6 +160,14 @@ public class Job extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Job get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Job(name, id, options);
     }

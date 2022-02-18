@@ -26,153 +26,366 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Information about managed application.
+ * API Version: 2019-07-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:solutions:Application myManagedApplication /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Solutions/applications/myManagedApplication 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:solutions:Application")
 public class Application extends io.pulumi.resources.CustomResource {
+    /**
+     * The fully qualified path of managed application definition Id.
+     * 
+     */
     @OutputExport(name="applicationDefinitionId", type=String.class, parameters={})
     private Output</* @Nullable */ String> applicationDefinitionId;
 
+    /**
+     * @return The fully qualified path of managed application definition Id.
+     * 
+     */
     public Output</* @Nullable */ String> getApplicationDefinitionId() {
         return this.applicationDefinitionId;
     }
+    /**
+     * The collection of managed application artifacts.
+     * 
+     */
     @OutputExport(name="artifacts", type=List.class, parameters={ApplicationArtifactResponse.class})
     private Output<List<ApplicationArtifactResponse>> artifacts;
 
+    /**
+     * @return The collection of managed application artifacts.
+     * 
+     */
     public Output<List<ApplicationArtifactResponse>> getArtifacts() {
         return this.artifacts;
     }
+    /**
+     * The  read-only authorizations property that is retrieved from the application package.
+     * 
+     */
     @OutputExport(name="authorizations", type=List.class, parameters={ApplicationAuthorizationResponse.class})
     private Output<List<ApplicationAuthorizationResponse>> authorizations;
 
+    /**
+     * @return The  read-only authorizations property that is retrieved from the application package.
+     * 
+     */
     public Output<List<ApplicationAuthorizationResponse>> getAuthorizations() {
         return this.authorizations;
     }
+    /**
+     * The managed application billing details.
+     * 
+     */
     @OutputExport(name="billingDetails", type=ApplicationBillingDetailsDefinitionResponse.class, parameters={})
     private Output<ApplicationBillingDetailsDefinitionResponse> billingDetails;
 
+    /**
+     * @return The managed application billing details.
+     * 
+     */
     public Output<ApplicationBillingDetailsDefinitionResponse> getBillingDetails() {
         return this.billingDetails;
     }
+    /**
+     * The client entity that created the JIT request.
+     * 
+     */
     @OutputExport(name="createdBy", type=ApplicationClientDetailsResponse.class, parameters={})
     private Output<ApplicationClientDetailsResponse> createdBy;
 
+    /**
+     * @return The client entity that created the JIT request.
+     * 
+     */
     public Output<ApplicationClientDetailsResponse> getCreatedBy() {
         return this.createdBy;
     }
+    /**
+     * The read-only customer support property that is retrieved from the application package.
+     * 
+     */
     @OutputExport(name="customerSupport", type=ApplicationPackageContactResponse.class, parameters={})
     private Output<ApplicationPackageContactResponse> customerSupport;
 
+    /**
+     * @return The read-only customer support property that is retrieved from the application package.
+     * 
+     */
     public Output<ApplicationPackageContactResponse> getCustomerSupport() {
         return this.customerSupport;
     }
+    /**
+     * The identity of the resource.
+     * 
+     */
     @OutputExport(name="identity", type=IdentityResponse.class, parameters={})
     private Output</* @Nullable */ IdentityResponse> identity;
 
+    /**
+     * @return The identity of the resource.
+     * 
+     */
     public Output</* @Nullable */ IdentityResponse> getIdentity() {
         return this.identity;
     }
+    /**
+     * The managed application Jit access policy.
+     * 
+     */
     @OutputExport(name="jitAccessPolicy", type=ApplicationJitAccessPolicyResponse.class, parameters={})
     private Output</* @Nullable */ ApplicationJitAccessPolicyResponse> jitAccessPolicy;
 
+    /**
+     * @return The managed application Jit access policy.
+     * 
+     */
     public Output</* @Nullable */ ApplicationJitAccessPolicyResponse> getJitAccessPolicy() {
         return this.jitAccessPolicy;
     }
+    /**
+     * The kind of the managed application. Allowed values are MarketPlace and ServiceCatalog.
+     * 
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
+    /**
+     * @return The kind of the managed application. Allowed values are MarketPlace and ServiceCatalog.
+     * 
+     */
     public Output<String> getKind() {
         return this.kind;
     }
+    /**
+     * Resource location
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * ID of the resource that manages this resource.
+     * 
+     */
     @OutputExport(name="managedBy", type=String.class, parameters={})
     private Output</* @Nullable */ String> managedBy;
 
+    /**
+     * @return ID of the resource that manages this resource.
+     * 
+     */
     public Output</* @Nullable */ String> getManagedBy() {
         return this.managedBy;
     }
+    /**
+     * The managed resource group Id.
+     * 
+     */
     @OutputExport(name="managedResourceGroupId", type=String.class, parameters={})
     private Output</* @Nullable */ String> managedResourceGroupId;
 
+    /**
+     * @return The managed resource group Id.
+     * 
+     */
     public Output</* @Nullable */ String> getManagedResourceGroupId() {
         return this.managedResourceGroupId;
     }
+    /**
+     * The managed application management mode.
+     * 
+     */
     @OutputExport(name="managementMode", type=String.class, parameters={})
     private Output<String> managementMode;
 
+    /**
+     * @return The managed application management mode.
+     * 
+     */
     public Output<String> getManagementMode() {
         return this.managementMode;
     }
+    /**
+     * Resource name
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Name and value pairs that define the managed application outputs.
+     * 
+     */
     @OutputExport(name="outputs", type=Object.class, parameters={})
     private Output<Object> outputs;
 
+    /**
+     * @return Name and value pairs that define the managed application outputs.
+     * 
+     */
     public Output<Object> getOutputs() {
         return this.outputs;
     }
+    /**
+     * Name and value pairs that define the managed application parameters. It can be a JObject or a well formed JSON string.
+     * 
+     */
     @OutputExport(name="parameters", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> parameters;
 
+    /**
+     * @return Name and value pairs that define the managed application parameters. It can be a JObject or a well formed JSON string.
+     * 
+     */
     public Output</* @Nullable */ Object> getParameters() {
         return this.parameters;
     }
+    /**
+     * The plan information.
+     * 
+     */
     @OutputExport(name="plan", type=PlanResponse.class, parameters={})
     private Output</* @Nullable */ PlanResponse> plan;
 
+    /**
+     * @return The plan information.
+     * 
+     */
     public Output</* @Nullable */ PlanResponse> getPlan() {
         return this.plan;
     }
+    /**
+     * The managed application provisioning state.
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The managed application provisioning state.
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The publisher tenant Id.
+     * 
+     */
     @OutputExport(name="publisherTenantId", type=String.class, parameters={})
     private Output<String> publisherTenantId;
 
+    /**
+     * @return The publisher tenant Id.
+     * 
+     */
     public Output<String> getPublisherTenantId() {
         return this.publisherTenantId;
     }
+    /**
+     * The SKU of the resource.
+     * 
+     */
     @OutputExport(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
+    /**
+     * @return The SKU of the resource.
+     * 
+     */
     public Output</* @Nullable */ SkuResponse> getSku() {
         return this.sku;
     }
+    /**
+     * The read-only support URLs property that is retrieved from the application package.
+     * 
+     */
     @OutputExport(name="supportUrls", type=ApplicationPackageSupportUrlsResponse.class, parameters={})
     private Output<ApplicationPackageSupportUrlsResponse> supportUrls;
 
+    /**
+     * @return The read-only support URLs property that is retrieved from the application package.
+     * 
+     */
     public Output<ApplicationPackageSupportUrlsResponse> getSupportUrls() {
         return this.supportUrls;
     }
+    /**
+     * Resource tags
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Resource type
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * The client entity that last updated the JIT request.
+     * 
+     */
     @OutputExport(name="updatedBy", type=ApplicationClientDetailsResponse.class, parameters={})
     private Output<ApplicationClientDetailsResponse> updatedBy;
 
+    /**
+     * @return The client entity that last updated the JIT request.
+     * 
+     */
     public Output<ApplicationClientDetailsResponse> getUpdatedBy() {
         return this.updatedBy;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Application(String name, ApplicationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:solutions:Application", name, args == null ? ApplicationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -196,6 +409,14 @@ public class Application extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Application get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Application(name, id, options);
     }

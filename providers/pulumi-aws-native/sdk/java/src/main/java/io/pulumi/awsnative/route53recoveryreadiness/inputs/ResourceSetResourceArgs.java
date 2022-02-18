@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The resource element of a ResourceSet
+ * 
+ */
 public final class ResourceSetResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourceSetResourceArgs Empty = new ResourceSetResourceArgs();
 
+    /**
+     * The component identifier of the resource, generated when DNS target resource is used.
+     * 
+     */
     @InputImport(name="componentId")
     private final @Nullable Input<String> componentId;
 
@@ -30,6 +38,10 @@ public final class ResourceSetResourceArgs extends io.pulumi.resources.ResourceA
         return this.dnsTargetResource == null ? Input.empty() : this.dnsTargetResource;
     }
 
+    /**
+     * A list of recovery group Amazon Resource Names (ARNs) and cell ARNs that this resource is contained within.
+     * 
+     */
     @InputImport(name="readinessScopes")
     private final @Nullable Input<List<String>> readinessScopes;
 
@@ -37,6 +49,10 @@ public final class ResourceSetResourceArgs extends io.pulumi.resources.ResourceA
         return this.readinessScopes == null ? Input.empty() : this.readinessScopes;
     }
 
+    /**
+     * The Amazon Resource Name (ARN) of the AWS resource.
+     * 
+     */
     @InputImport(name="resourceArn")
     private final @Nullable Input<String> resourceArn;
 

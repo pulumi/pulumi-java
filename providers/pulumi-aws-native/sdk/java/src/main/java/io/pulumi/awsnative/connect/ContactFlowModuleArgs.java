@@ -17,6 +17,10 @@ public final class ContactFlowModuleArgs extends io.pulumi.resources.ResourceArg
 
     public static final ContactFlowModuleArgs Empty = new ContactFlowModuleArgs();
 
+    /**
+     * The content of the contact flow module in JSON format.
+     * 
+     */
     @InputImport(name="content", required=true)
     private final Input<String> content;
 
@@ -24,6 +28,10 @@ public final class ContactFlowModuleArgs extends io.pulumi.resources.ResourceArg
         return this.content;
     }
 
+    /**
+     * The description of the contact flow module.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -31,6 +39,10 @@ public final class ContactFlowModuleArgs extends io.pulumi.resources.ResourceArg
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The identifier of the Amazon Connect instance (ARN).
+     * 
+     */
     @InputImport(name="instanceArn", required=true)
     private final Input<String> instanceArn;
 
@@ -38,6 +50,10 @@ public final class ContactFlowModuleArgs extends io.pulumi.resources.ResourceArg
         return this.instanceArn;
     }
 
+    /**
+     * The name of the contact flow module.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -45,6 +61,10 @@ public final class ContactFlowModuleArgs extends io.pulumi.resources.ResourceArg
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The state of the contact flow module.
+     * 
+     */
     @InputImport(name="state")
     private final @Nullable Input<ContactFlowModuleState> state;
 
@@ -52,6 +72,10 @@ public final class ContactFlowModuleArgs extends io.pulumi.resources.ResourceArg
         return this.state == null ? Input.empty() : this.state;
     }
 
+    /**
+     * One or more tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<ContactFlowModuleTagArgs>> tags;
 

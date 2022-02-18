@@ -14,6 +14,11 @@ public final class MetastoreServiceMaintenanceWindowGetArgs extends io.pulumi.re
 
     public static final MetastoreServiceMaintenanceWindowGetArgs Empty = new MetastoreServiceMaintenanceWindowGetArgs();
 
+    /**
+     * The day of week, when the window starts.
+     * Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
+     * 
+     */
     @InputImport(name="dayOfWeek", required=true)
     private final Input<String> dayOfWeek;
 
@@ -21,6 +26,10 @@ public final class MetastoreServiceMaintenanceWindowGetArgs extends io.pulumi.re
         return this.dayOfWeek;
     }
 
+    /**
+     * The hour of day (0-23) when the window starts.
+     * 
+     */
     @InputImport(name="hourOfDay", required=true)
     private final Input<Integer> hourOfDay;
 

@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The location of http server.
+ * 
+ */
 public final class HttpServerLocationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HttpServerLocationArgs Empty = new HttpServerLocationArgs();
 
+    /**
+     * Specify the file name of dataset. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="fileName")
     private final @Nullable Input<Object> fileName;
 
@@ -22,6 +30,10 @@ public final class HttpServerLocationArgs extends io.pulumi.resources.ResourceAr
         return this.fileName == null ? Input.empty() : this.fileName;
     }
 
+    /**
+     * Specify the folder path of dataset. Type: string (or Expression with resultType string)
+     * 
+     */
     @InputImport(name="folderPath")
     private final @Nullable Input<Object> folderPath;
 
@@ -29,6 +41,10 @@ public final class HttpServerLocationArgs extends io.pulumi.resources.ResourceAr
         return this.folderPath == null ? Input.empty() : this.folderPath;
     }
 
+    /**
+     * Specify the relativeUrl of http server. Type: string (or Expression with resultType string)
+     * 
+     */
     @InputImport(name="relativeUrl")
     private final @Nullable Input<Object> relativeUrl;
 
@@ -36,6 +52,11 @@ public final class HttpServerLocationArgs extends io.pulumi.resources.ResourceAr
         return this.relativeUrl == null ? Input.empty() : this.relativeUrl;
     }
 
+    /**
+     * Type of dataset storage location.
+     * Expected value is 'HttpServerLocation'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

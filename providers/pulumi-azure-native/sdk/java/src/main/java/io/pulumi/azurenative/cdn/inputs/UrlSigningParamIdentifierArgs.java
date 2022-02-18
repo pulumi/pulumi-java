@@ -11,10 +11,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Defines how to identify a parameter for a specific purpose e.g. expires
+ * 
+ */
 public final class UrlSigningParamIdentifierArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final UrlSigningParamIdentifierArgs Empty = new UrlSigningParamIdentifierArgs();
 
+    /**
+     * Indicates the purpose of the parameter
+     * 
+     */
     @InputImport(name="paramIndicator", required=true)
     private final Input<Either<String,ParamIndicator>> paramIndicator;
 
@@ -22,6 +30,10 @@ public final class UrlSigningParamIdentifierArgs extends io.pulumi.resources.Res
         return this.paramIndicator;
     }
 
+    /**
+     * Parameter name
+     * 
+     */
     @InputImport(name="paramName", required=true)
     private final Input<String> paramName;
 

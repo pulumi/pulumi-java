@@ -16,6 +16,10 @@ public final class LinkedSubscriptionArgs extends io.pulumi.resources.ResourceAr
 
     public static final LinkedSubscriptionArgs Empty = new LinkedSubscriptionArgs();
 
+    /**
+     * The identifier associated with the device subscription.
+     * 
+     */
     @InputImport(name="linkedSubscriptionId", required=true)
     private final Input<String> linkedSubscriptionId;
 
@@ -23,6 +27,10 @@ public final class LinkedSubscriptionArgs extends io.pulumi.resources.ResourceAr
         return this.linkedSubscriptionId;
     }
 
+    /**
+     * Name of the Linked Subscription resource.
+     * 
+     */
     @InputImport(name="linkedSubscriptionName")
     private final @Nullable Input<String> linkedSubscriptionName;
 
@@ -30,6 +38,10 @@ public final class LinkedSubscriptionArgs extends io.pulumi.resources.ResourceAr
         return this.linkedSubscriptionName == null ? Input.empty() : this.linkedSubscriptionName;
     }
 
+    /**
+     * Location of the resource.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<Either<String,Location>> location;
 
@@ -37,6 +49,10 @@ public final class LinkedSubscriptionArgs extends io.pulumi.resources.ResourceAr
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The identifier associated with the device registration.
+     * 
+     */
     @InputImport(name="registrationResourceId", required=true)
     private final Input<String> registrationResourceId;
 
@@ -44,6 +60,10 @@ public final class LinkedSubscriptionArgs extends io.pulumi.resources.ResourceAr
         return this.registrationResourceId;
     }
 
+    /**
+     * Name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroup", required=true)
     private final Input<String> resourceGroup;
 

@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Will contain the filter name and values to operate on
+ * 
+ */
 public final class FilterItems extends io.pulumi.resources.InvokeArgs {
 
     public static final FilterItems Empty = new FilterItems();
 
+    /**
+     * The name of the field we would like to filter
+     * 
+     */
     @InputImport(name="field")
     private final @Nullable String field;
 
@@ -22,6 +30,10 @@ public final class FilterItems extends io.pulumi.resources.InvokeArgs {
         return this.field == null ? Optional.empty() : Optional.ofNullable(this.field);
     }
 
+    /**
+     * List of values to filter the current field by
+     * 
+     */
     @InputImport(name="values")
     private final @Nullable List<String> values;
 

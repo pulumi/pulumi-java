@@ -9,6 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Structure that contains a X.509 policy qualifier.
+ * 
+ */
 public final class CertificateQualifierArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CertificateQualifierArgs Empty = new CertificateQualifierArgs();

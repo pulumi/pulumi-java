@@ -12,45 +12,106 @@ import io.pulumi.googlenative.apigee_v1.SubscriptionArgs;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Creates a subscription to an API product.
+ * Auto-naming is currently not supported for this resource.
+ * Note - this resource's API doesn't support deletion. When deleted, the resource will persist
+ * on Google Cloud even though it will be deleted from Pulumi state.
+ * 
+ */
 @ResourceType(type="google-native:apigee/v1:Subscription")
 public class Subscription extends io.pulumi.resources.CustomResource {
+    /**
+     * Name of the API product for which the developer is purchasing a subscription.
+     * 
+     */
     @OutputExport(name="apiproduct", type=String.class, parameters={})
     private Output<String> apiproduct;
 
+    /**
+     * @return Name of the API product for which the developer is purchasing a subscription.
+     * 
+     */
     public Output<String> getApiproduct() {
         return this.apiproduct;
     }
+    /**
+     * Time when the API product subscription was created in milliseconds since epoch.
+     * 
+     */
     @OutputExport(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
+    /**
+     * @return Time when the API product subscription was created in milliseconds since epoch.
+     * 
+     */
     public Output<String> getCreatedAt() {
         return this.createdAt;
     }
+    /**
+     * Time when the API product subscription ends in milliseconds since epoch.
+     * 
+     */
     @OutputExport(name="endTime", type=String.class, parameters={})
     private Output<String> endTime;
 
+    /**
+     * @return Time when the API product subscription ends in milliseconds since epoch.
+     * 
+     */
     public Output<String> getEndTime() {
         return this.endTime;
     }
+    /**
+     * Time when the API product subscription was last modified in milliseconds since epoch.
+     * 
+     */
     @OutputExport(name="lastModifiedAt", type=String.class, parameters={})
     private Output<String> lastModifiedAt;
 
+    /**
+     * @return Time when the API product subscription was last modified in milliseconds since epoch.
+     * 
+     */
     public Output<String> getLastModifiedAt() {
         return this.lastModifiedAt;
     }
+    /**
+     * Name of the API product subscription.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Name of the API product subscription.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Time when the API product subscription starts in milliseconds since epoch.
+     * 
+     */
     @OutputExport(name="startTime", type=String.class, parameters={})
     private Output<String> startTime;
 
+    /**
+     * @return Time when the API product subscription starts in milliseconds since epoch.
+     * 
+     */
     public Output<String> getStartTime() {
         return this.startTime;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Subscription(String name, SubscriptionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:apigee/v1:Subscription", name, args == null ? SubscriptionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -66,6 +127,14 @@ public class Subscription extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Subscription get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Subscription(name, id, options);
     }

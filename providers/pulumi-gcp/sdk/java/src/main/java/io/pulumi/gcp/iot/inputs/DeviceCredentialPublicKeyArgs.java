@@ -13,6 +13,11 @@ public final class DeviceCredentialPublicKeyArgs extends io.pulumi.resources.Res
 
     public static final DeviceCredentialPublicKeyArgs Empty = new DeviceCredentialPublicKeyArgs();
 
+    /**
+     * The format of the key.
+     * Possible values are `RSA_PEM`, `RSA_X509_PEM`, `ES256_PEM`, and `ES256_X509_PEM`.
+     * 
+     */
     @InputImport(name="format", required=true)
     private final Input<String> format;
 
@@ -20,6 +25,10 @@ public final class DeviceCredentialPublicKeyArgs extends io.pulumi.resources.Res
         return this.format;
     }
 
+    /**
+     * The key data.
+     * 
+     */
     @InputImport(name="key", required=true)
     private final Input<String> key;
 

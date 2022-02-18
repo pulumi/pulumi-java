@@ -12,7 +12,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AttributesItemProperties {
+    /**
+     * Name of the dataset field
+     * 
+     */
     private final @Nullable String attributeName;
+    /**
+     * Data type of the field
+     * 
+     */
     private final @Nullable DatasetAttributesItemPropertiesAttributeType attributeType;
 
     @OutputCustomType.Constructor({"attributeName","attributeType"})
@@ -23,9 +31,17 @@ public final class AttributesItemProperties {
         this.attributeType = attributeType;
     }
 
+    /**
+     * Name of the dataset field
+     * 
+     */
     public Optional<String> getAttributeName() {
         return Optional.ofNullable(this.attributeName);
     }
+    /**
+     * Data type of the field
+     * 
+     */
     public Optional<DatasetAttributesItemPropertiesAttributeType> getAttributeType() {
         return Optional.ofNullable(this.attributeType);
     }

@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSkusNestedResourceTypeFirst {
+/**
+ * API Version: 2020-11-20.
+ * 
+ */
     public static CompletableFuture<GetSkusNestedResourceTypeFirstResult> invokeAsync(GetSkusNestedResourceTypeFirstArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:providerhub:getSkusNestedResourceTypeFirst", TypeShape.of(GetSkusNestedResourceTypeFirstResult.class), args == null ? GetSkusNestedResourceTypeFirstArgs.Empty : args, Utilities.withVersion(options));
     }

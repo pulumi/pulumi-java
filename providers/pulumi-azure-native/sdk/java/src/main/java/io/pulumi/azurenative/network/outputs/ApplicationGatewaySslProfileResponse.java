@@ -15,13 +15,45 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ApplicationGatewaySslProfileResponse {
+    /**
+     * Client authentication configuration of the application gateway resource.
+     * 
+     */
     private final @Nullable ApplicationGatewayClientAuthConfigurationResponse clientAuthConfiguration;
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     private final String etag;
+    /**
+     * Resource ID.
+     * 
+     */
     private final @Nullable String id;
+    /**
+     * Name of the SSL profile that is unique within an Application Gateway.
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * The provisioning state of the HTTP listener resource.
+     * 
+     */
     private final String provisioningState;
+    /**
+     * SSL policy of the application gateway resource.
+     * 
+     */
     private final @Nullable ApplicationGatewaySslPolicyResponse sslPolicy;
+    /**
+     * Array of references to application gateway trusted client certificates.
+     * 
+     */
     private final @Nullable List<SubResourceResponse> trustedClientCertificates;
+    /**
+     * Type of the resource.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"clientAuthConfiguration","etag","id","name","provisioningState","sslPolicy","trustedClientCertificates","type"})
@@ -44,27 +76,59 @@ public final class ApplicationGatewaySslProfileResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Client authentication configuration of the application gateway resource.
+     * 
+     */
     public Optional<ApplicationGatewayClientAuthConfigurationResponse> getClientAuthConfiguration() {
         return Optional.ofNullable(this.clientAuthConfiguration);
     }
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String getEtag() {
         return this.etag;
     }
+    /**
+     * Resource ID.
+     * 
+     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+    /**
+     * Name of the SSL profile that is unique within an Application Gateway.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * The provisioning state of the HTTP listener resource.
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * SSL policy of the application gateway resource.
+     * 
+     */
     public Optional<ApplicationGatewaySslPolicyResponse> getSslPolicy() {
         return Optional.ofNullable(this.sslPolicy);
     }
+    /**
+     * Array of references to application gateway trusted client certificates.
+     * 
+     */
     public List<SubResourceResponse> getTrustedClientCertificates() {
         return this.trustedClientCertificates == null ? List.of() : this.trustedClientCertificates;
     }
+    /**
+     * Type of the resource.
+     * 
+     */
     public String getType() {
         return this.type;
     }

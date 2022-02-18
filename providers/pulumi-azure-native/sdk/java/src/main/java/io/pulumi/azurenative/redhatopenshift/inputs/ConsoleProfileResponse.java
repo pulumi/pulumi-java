@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * ConsoleProfile represents a console profile.
+ * 
+ */
 public final class ConsoleProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConsoleProfileResponse Empty = new ConsoleProfileResponse();
 
+    /**
+     * The URL to access the cluster console (immutable).
+     * 
+     */
     @InputImport(name="url")
     private final @Nullable String url;
 

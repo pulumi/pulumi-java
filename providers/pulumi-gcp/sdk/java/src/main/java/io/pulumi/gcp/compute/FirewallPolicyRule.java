@@ -17,81 +17,203 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Hierarchical firewall policy rules let you create and enforce a consistent firewall policy across your organization. Rules can explicitly allow or deny connections or delegate evaluation to lower level policies.
+ * 
+ * For more information see the [official documentation](https://cloud.google.com/vpc/docs/using-firewall-policies#create-rules)
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * FirewallPolicyRule can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/firewallPolicyRule:FirewallPolicyRule default locations/global/firewallPolicies/{{firewall_policy}}/rules/{{priority}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/firewallPolicyRule:FirewallPolicyRule default {{firewall_policy}}/{{priority}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:compute/firewallPolicyRule:FirewallPolicyRule")
 public class FirewallPolicyRule extends io.pulumi.resources.CustomResource {
+    /**
+     * The Action to perform when the client connection triggers the rule. Can currently be either "allow" or "deny()" where valid values for status are 403, 404, and 502.
+     * 
+     */
     @OutputExport(name="action", type=String.class, parameters={})
     private Output<String> action;
 
+    /**
+     * @return The Action to perform when the client connection triggers the rule. Can currently be either "allow" or "deny()" where valid values for status are 403, 404, and 502.
+     * 
+     */
     public Output<String> getAction() {
         return this.action;
     }
+    /**
+     * An optional description for this resource.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return An optional description for this resource.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * The direction in which this rule applies. Possible values: INGRESS, EGRESS
+     * 
+     */
     @OutputExport(name="direction", type=String.class, parameters={})
     private Output<String> direction;
 
+    /**
+     * @return The direction in which this rule applies. Possible values: INGRESS, EGRESS
+     * 
+     */
     public Output<String> getDirection() {
         return this.direction;
     }
+    /**
+     * Denotes whether the firewall policy rule is disabled. When set to true, the firewall policy rule is not enforced and traffic behaves as if it did not exist. If this is unspecified, the firewall policy rule will be enabled.
+     * 
+     */
     @OutputExport(name="disabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> disabled;
 
+    /**
+     * @return Denotes whether the firewall policy rule is disabled. When set to true, the firewall policy rule is not enforced and traffic behaves as if it did not exist. If this is unspecified, the firewall policy rule will be enabled.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getDisabled() {
         return this.disabled;
     }
+    /**
+     * Denotes whether to enable logging for a particular rule. If logging is enabled, logs will be exported to the configured export destination in Stackdriver. Logs may be exported to BigQuery or Pub/Sub. Note: you cannot enable logging on "goto_next" rules.
+     * 
+     */
     @OutputExport(name="enableLogging", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableLogging;
 
+    /**
+     * @return Denotes whether to enable logging for a particular rule. If logging is enabled, logs will be exported to the configured export destination in Stackdriver. Logs may be exported to BigQuery or Pub/Sub. Note: you cannot enable logging on "goto_next" rules.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getEnableLogging() {
         return this.enableLogging;
     }
+    /**
+     * The firewall policy of the resource.
+     * 
+     */
     @OutputExport(name="firewallPolicy", type=String.class, parameters={})
     private Output<String> firewallPolicy;
 
+    /**
+     * @return The firewall policy of the resource.
+     * 
+     */
     public Output<String> getFirewallPolicy() {
         return this.firewallPolicy;
     }
+    /**
+     * Type of the resource. Always `compute#firewallPolicyRule` for firewall policy rules
+     * 
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
+    /**
+     * @return Type of the resource. Always `compute#firewallPolicyRule` for firewall policy rules
+     * 
+     */
     public Output<String> getKind() {
         return this.kind;
     }
+    /**
+     * A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced. Structure is documented below.
+     * 
+     */
     @OutputExport(name="match", type=FirewallPolicyRuleMatch.class, parameters={})
     private Output<FirewallPolicyRuleMatch> match;
 
+    /**
+     * @return A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced. Structure is documented below.
+     * 
+     */
     public Output<FirewallPolicyRuleMatch> getMatch() {
         return this.match;
     }
+    /**
+     * An integer indicating the priority of a rule in the list. The priority must be a positive value between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the highest priority and 2147483647 is the lowest prority.
+     * 
+     */
     @OutputExport(name="priority", type=Integer.class, parameters={})
     private Output<Integer> priority;
 
+    /**
+     * @return An integer indicating the priority of a rule in the list. The priority must be a positive value between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the highest priority and 2147483647 is the lowest prority.
+     * 
+     */
     public Output<Integer> getPriority() {
         return this.priority;
     }
+    /**
+     * Calculation of the complexity of a single firewall policy rule.
+     * 
+     */
     @OutputExport(name="ruleTupleCount", type=Integer.class, parameters={})
     private Output<Integer> ruleTupleCount;
 
+    /**
+     * @return Calculation of the complexity of a single firewall policy rule.
+     * 
+     */
     public Output<Integer> getRuleTupleCount() {
         return this.ruleTupleCount;
     }
+    /**
+     * A list of network resource URLs to which this rule applies. This field allows you to control which network's VMs get this rule. If this field is left blank, all VMs within the organization will receive the rule.
+     * 
+     */
     @OutputExport(name="targetResources", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> targetResources;
 
+    /**
+     * @return A list of network resource URLs to which this rule applies. This field allows you to control which network's VMs get this rule. If this field is left blank, all VMs within the organization will receive the rule.
+     * 
+     */
     public Output</* @Nullable */ List<String>> getTargetResources() {
         return this.targetResources;
     }
+    /**
+     * A list of service accounts indicating the sets of instances that are applied with this rule.
+     * 
+     */
     @OutputExport(name="targetServiceAccounts", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> targetServiceAccounts;
 
+    /**
+     * @return A list of service accounts indicating the sets of instances that are applied with this rule.
+     * 
+     */
     public Output</* @Nullable */ List<String>> getTargetServiceAccounts() {
         return this.targetServiceAccounts;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public FirewallPolicyRule(String name, FirewallPolicyRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:compute/firewallPolicyRule:FirewallPolicyRule", name, args == null ? FirewallPolicyRuleArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -107,6 +229,15 @@ public class FirewallPolicyRule extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static FirewallPolicyRule get(String name, Input<String> id, @Nullable FirewallPolicyRuleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new FirewallPolicyRule(name, id, state, options);
     }

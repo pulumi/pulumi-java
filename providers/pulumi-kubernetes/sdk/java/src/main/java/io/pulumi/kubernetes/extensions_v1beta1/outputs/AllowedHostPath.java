@@ -12,7 +12,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AllowedHostPath {
+    /**
+     * pathPrefix is the path prefix that the host volume must match. It does not support `*`. Trailing slashes are trimmed when validating the path prefix with a host path.
+     * 
+     * Examples: `/foo` would allow `/foo`, `/foo/` and `/foo/bar` `/foo` would not allow `/food` or `/etc/foo`
+     * 
+     */
     private final @Nullable String pathPrefix;
+    /**
+     * when set to true, will allow host volumes matching the pathPrefix only if all volume mounts are readOnly.
+     * 
+     */
     private final @Nullable Boolean readOnly;
 
     @OutputCustomType.Constructor({"pathPrefix","readOnly"})
@@ -23,9 +33,19 @@ public final class AllowedHostPath {
         this.readOnly = readOnly;
     }
 
+    /**
+     * pathPrefix is the path prefix that the host volume must match. It does not support `*`. Trailing slashes are trimmed when validating the path prefix with a host path.
+     * 
+     * Examples: `/foo` would allow `/foo`, `/foo/` and `/foo/bar` `/foo` would not allow `/food` or `/etc/foo`
+     * 
+     */
     public Optional<String> getPathPrefix() {
         return Optional.ofNullable(this.pathPrefix);
     }
+    /**
+     * when set to true, will allow host volumes matching the pathPrefix only if all volume mounts are readOnly.
+     * 
+     */
     public Optional<Boolean> getReadOnly() {
         return Optional.ofNullable(this.readOnly);
     }

@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * launchTemplateConfiguration settings that apply to image distribution.
+ * 
+ */
 public final class DistributionConfigurationLaunchTemplateConfiguration extends io.pulumi.resources.InvokeArgs {
 
     public static final DistributionConfigurationLaunchTemplateConfiguration Empty = new DistributionConfigurationLaunchTemplateConfiguration();
 
+    /**
+     * The account ID that this configuration applies to.
+     * 
+     */
     @InputImport(name="accountId")
     private final @Nullable String accountId;
 
@@ -22,6 +30,10 @@ public final class DistributionConfigurationLaunchTemplateConfiguration extends 
         return this.accountId == null ? Optional.empty() : Optional.ofNullable(this.accountId);
     }
 
+    /**
+     * Identifies the EC2 launch template to use.
+     * 
+     */
     @InputImport(name="launchTemplateId")
     private final @Nullable String launchTemplateId;
 
@@ -29,6 +41,10 @@ public final class DistributionConfigurationLaunchTemplateConfiguration extends 
         return this.launchTemplateId == null ? Optional.empty() : Optional.ofNullable(this.launchTemplateId);
     }
 
+    /**
+     * Set the specified EC2 launch template as the default launch template for the specified account.
+     * 
+     */
     @InputImport(name="setDefaultVersion")
     private final @Nullable Boolean setDefaultVersion;
 

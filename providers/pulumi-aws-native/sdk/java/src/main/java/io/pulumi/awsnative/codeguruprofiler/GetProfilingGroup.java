@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetProfilingGroup {
+/**
+ * This resource schema represents the Profiling Group resource in the Amazon CodeGuru Profiler service.
+ * 
+ */
     public static CompletableFuture<GetProfilingGroupResult> invokeAsync(GetProfilingGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:codeguruprofiler:getProfilingGroup", TypeShape.of(GetProfilingGroupResult.class), args == null ? GetProfilingGroupArgs.Empty : args, Utilities.withVersion(options));
     }

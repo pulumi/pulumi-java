@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Summary of information about monitoring job
+ * 
+ */
 public final class MonitoringScheduleMonitoringExecutionSummary extends io.pulumi.resources.InvokeArgs {
 
     public static final MonitoringScheduleMonitoringExecutionSummary Empty = new MonitoringScheduleMonitoringExecutionSummary();
 
+    /**
+     * The time at which the monitoring job was created.
+     * 
+     */
     @InputImport(name="creationTime", required=true)
     private final String creationTime;
 
@@ -29,6 +37,10 @@ public final class MonitoringScheduleMonitoringExecutionSummary extends io.pulum
         return this.endpointName == null ? Optional.empty() : Optional.ofNullable(this.endpointName);
     }
 
+    /**
+     * Contains the reason a monitoring job failed, if it failed.
+     * 
+     */
     @InputImport(name="failureReason")
     private final @Nullable String failureReason;
 
@@ -36,6 +48,10 @@ public final class MonitoringScheduleMonitoringExecutionSummary extends io.pulum
         return this.failureReason == null ? Optional.empty() : Optional.ofNullable(this.failureReason);
     }
 
+    /**
+     * A timestamp that indicates the last time the monitoring job was modified.
+     * 
+     */
     @InputImport(name="lastModifiedTime", required=true)
     private final String lastModifiedTime;
 
@@ -43,6 +59,10 @@ public final class MonitoringScheduleMonitoringExecutionSummary extends io.pulum
         return this.lastModifiedTime;
     }
 
+    /**
+     * The status of the monitoring job.
+     * 
+     */
     @InputImport(name="monitoringExecutionStatus", required=true)
     private final MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus monitoringExecutionStatus;
 
@@ -57,6 +77,10 @@ public final class MonitoringScheduleMonitoringExecutionSummary extends io.pulum
         return this.monitoringScheduleName;
     }
 
+    /**
+     * The Amazon Resource Name (ARN) of the monitoring job.
+     * 
+     */
     @InputImport(name="processingJobArn")
     private final @Nullable String processingJobArn;
 
@@ -64,6 +88,10 @@ public final class MonitoringScheduleMonitoringExecutionSummary extends io.pulum
         return this.processingJobArn == null ? Optional.empty() : Optional.ofNullable(this.processingJobArn);
     }
 
+    /**
+     * The time the monitoring job was scheduled.
+     * 
+     */
     @InputImport(name="scheduledTime", required=true)
     private final String scheduledTime;
 

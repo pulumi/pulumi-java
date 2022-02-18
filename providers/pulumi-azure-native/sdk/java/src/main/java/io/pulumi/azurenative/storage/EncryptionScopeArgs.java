@@ -19,6 +19,10 @@ public final class EncryptionScopeArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final EncryptionScopeArgs Empty = new EncryptionScopeArgs();
 
+    /**
+     * The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+     * 
+     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -26,6 +30,10 @@ public final class EncryptionScopeArgs extends io.pulumi.resources.ResourceArgs 
         return this.accountName;
     }
 
+    /**
+     * The name of the encryption scope within the specified storage account. Encryption scope names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.
+     * 
+     */
     @InputImport(name="encryptionScopeName")
     private final @Nullable Input<String> encryptionScopeName;
 
@@ -33,6 +41,10 @@ public final class EncryptionScopeArgs extends io.pulumi.resources.ResourceArgs 
         return this.encryptionScopeName == null ? Input.empty() : this.encryptionScopeName;
     }
 
+    /**
+     * The key vault properties for the encryption scope. This is a required field if encryption scope 'source' attribute is set to 'Microsoft.KeyVault'.
+     * 
+     */
     @InputImport(name="keyVaultProperties")
     private final @Nullable Input<EncryptionScopeKeyVaultPropertiesArgs> keyVaultProperties;
 
@@ -40,6 +52,10 @@ public final class EncryptionScopeArgs extends io.pulumi.resources.ResourceArgs 
         return this.keyVaultProperties == null ? Input.empty() : this.keyVaultProperties;
     }
 
+    /**
+     * A boolean indicating whether or not the service applies a secondary layer of encryption with platform managed keys for data at rest.
+     * 
+     */
     @InputImport(name="requireInfrastructureEncryption")
     private final @Nullable Input<Boolean> requireInfrastructureEncryption;
 
@@ -47,6 +63,10 @@ public final class EncryptionScopeArgs extends io.pulumi.resources.ResourceArgs 
         return this.requireInfrastructureEncryption == null ? Input.empty() : this.requireInfrastructureEncryption;
     }
 
+    /**
+     * The name of the resource group within the user's subscription. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -54,6 +74,10 @@ public final class EncryptionScopeArgs extends io.pulumi.resources.ResourceArgs 
         return this.resourceGroupName;
     }
 
+    /**
+     * The provider for the encryption scope. Possible values (case-insensitive):  Microsoft.Storage, Microsoft.KeyVault.
+     * 
+     */
     @InputImport(name="source")
     private final @Nullable Input<Either<String,EncryptionScopeSource>> source;
 
@@ -61,6 +85,10 @@ public final class EncryptionScopeArgs extends io.pulumi.resources.ResourceArgs 
         return this.source == null ? Input.empty() : this.source;
     }
 
+    /**
+     * The state of the encryption scope. Possible values (case-insensitive):  Enabled, Disabled.
+     * 
+     */
     @InputImport(name="state")
     private final @Nullable Input<Either<String,EncryptionScopeState>> state;
 

@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDataController {
+/**
+ * Data controller resource
+ * API Version: 2021-06-01-preview.
+ * 
+ *
+ * Data controller resource
+ * 
+ */
     public static CompletableFuture<GetDataControllerResult> invokeAsync(GetDataControllerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:azurearcdata:getDataController", TypeShape.of(GetDataControllerResult.class), args == null ? GetDataControllerArgs.Empty : args, Utilities.withVersion(options));
     }

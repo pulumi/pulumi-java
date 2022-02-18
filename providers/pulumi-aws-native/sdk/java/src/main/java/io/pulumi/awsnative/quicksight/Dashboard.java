@@ -19,11 +19,23 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Definition of the AWS::QuickSight::Dashboard Resource Type.
+ * 
+ */
 @ResourceType(type="aws-native:quicksight:Dashboard")
 public class Dashboard extends io.pulumi.resources.CustomResource {
+    /**
+     * <p>The Amazon Resource Name (ARN) of the resource.</p>
+     * 
+     */
     @OutputExport(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
+    /**
+     * @return <p>The Amazon Resource Name (ARN) of the resource.</p>
+     * 
+     */
     public Output<String> getArn() {
         return this.arn;
     }
@@ -33,9 +45,17 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
     public Output<String> getAwsAccountId() {
         return this.awsAccountId;
     }
+    /**
+     * <p>The time that this dataset was created.</p>
+     * 
+     */
     @OutputExport(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
+    /**
+     * @return <p>The time that this dataset was created.</p>
+     * 
+     */
     public Output<String> getCreatedTime() {
         return this.createdTime;
     }
@@ -51,21 +71,45 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ DashboardPublishOptions> getDashboardPublishOptions() {
         return this.dashboardPublishOptions;
     }
+    /**
+     * <p>The last time that this dataset was published.</p>
+     * 
+     */
     @OutputExport(name="lastPublishedTime", type=String.class, parameters={})
     private Output<String> lastPublishedTime;
 
+    /**
+     * @return <p>The last time that this dataset was published.</p>
+     * 
+     */
     public Output<String> getLastPublishedTime() {
         return this.lastPublishedTime;
     }
+    /**
+     * <p>The last time that this dataset was updated.</p>
+     * 
+     */
     @OutputExport(name="lastUpdatedTime", type=String.class, parameters={})
     private Output<String> lastUpdatedTime;
 
+    /**
+     * @return <p>The last time that this dataset was updated.</p>
+     * 
+     */
     public Output<String> getLastUpdatedTime() {
         return this.lastUpdatedTime;
     }
+    /**
+     * <p>The display name of the dashboard.</p>
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
+    /**
+     * @return <p>The display name of the dashboard.</p>
+     * 
+     */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
@@ -75,9 +119,25 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ DashboardParameters> getParameters() {
         return this.parameters;
     }
+    /**
+     * <p>A structure that contains the permissions of the dashboard. You can use this structure
+     *             for granting permissions by providing a list of IAM action information for each
+     *             principal ARN. </p>
+     * 
+     *         <p>To specify no permissions, omit the permissions list.</p>
+     * 
+     */
     @OutputExport(name="permissions", type=List.class, parameters={DashboardResourcePermission.class})
     private Output</* @Nullable */ List<DashboardResourcePermission>> permissions;
 
+    /**
+     * @return <p>A structure that contains the permissions of the dashboard. You can use this structure
+     *             for granting permissions by providing a list of IAM action information for each
+     *             principal ARN. </p>
+     * 
+     *         <p>To specify no permissions, omit the permissions list.</p>
+     * 
+     */
     public Output</* @Nullable */ List<DashboardResourcePermission>> getPermissions() {
         return this.permissions;
     }
@@ -87,15 +147,39 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
     public Output<DashboardSourceEntity> getSourceEntity() {
         return this.sourceEntity;
     }
+    /**
+     * <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the
+     *             dashboard.</p>
+     * 
+     */
     @OutputExport(name="tags", type=List.class, parameters={DashboardTag.class})
     private Output</* @Nullable */ List<DashboardTag>> tags;
 
+    /**
+     * @return <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the
+     *             dashboard.</p>
+     * 
+     */
     public Output</* @Nullable */ List<DashboardTag>> getTags() {
         return this.tags;
     }
+    /**
+     * <p>The Amazon Resource Name (ARN) of the theme that is being used for this dashboard. If
+     *             you add a value for this field, it overrides the value that is used in the source
+     *             entity. The theme ARN must exist in the same AWS account where you create the
+     *             dashboard.</p>
+     * 
+     */
     @OutputExport(name="themeArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> themeArn;
 
+    /**
+     * @return <p>The Amazon Resource Name (ARN) of the theme that is being used for this dashboard. If
+     *             you add a value for this field, it overrides the value that is used in the source
+     *             entity. The theme ARN must exist in the same AWS account where you create the
+     *             dashboard.</p>
+     * 
+     */
     public Output</* @Nullable */ String> getThemeArn() {
         return this.themeArn;
     }
@@ -105,13 +189,27 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
     public Output<DashboardVersion> getVersion() {
         return this.version;
     }
+    /**
+     * <p>A description for the first version of the dashboard being created.</p>
+     * 
+     */
     @OutputExport(name="versionDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> versionDescription;
 
+    /**
+     * @return <p>A description for the first version of the dashboard being created.</p>
+     * 
+     */
     public Output</* @Nullable */ String> getVersionDescription() {
         return this.versionDescription;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Dashboard(String name, DashboardArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:quicksight:Dashboard", name, args == null ? DashboardArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -127,6 +225,14 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Dashboard get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Dashboard(name, id, options);
     }

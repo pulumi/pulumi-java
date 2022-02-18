@@ -15,6 +15,10 @@ public final class ClusterNodePoolNetworkConfigGetArgs extends io.pulumi.resourc
 
     public static final ClusterNodePoolNetworkConfigGetArgs Empty = new ClusterNodePoolNetworkConfigGetArgs();
 
+    /**
+     * Whether to create a new range for pod IPs in this node pool. Defaults are provided for `pod_range` and `pod_ipv4_cidr_block` if they are not specified.
+     * 
+     */
     @InputImport(name="createPodRange")
     private final @Nullable Input<Boolean> createPodRange;
 
@@ -22,6 +26,10 @@ public final class ClusterNodePoolNetworkConfigGetArgs extends io.pulumi.resourc
         return this.createPodRange == null ? Input.empty() : this.createPodRange;
     }
 
+    /**
+     * The IP address range for pod IPs in this node pool. Only applicable if createPodRange is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. /14) to have a range chosen with a specific netmask. Set to a CIDR notation (e.g. 10.96.0.0/14) to pick a specific range to use.
+     * 
+     */
     @InputImport(name="podIpv4CidrBlock")
     private final @Nullable Input<String> podIpv4CidrBlock;
 
@@ -29,6 +37,10 @@ public final class ClusterNodePoolNetworkConfigGetArgs extends io.pulumi.resourc
         return this.podIpv4CidrBlock == null ? Input.empty() : this.podIpv4CidrBlock;
     }
 
+    /**
+     * The ID of the secondary range for pod IPs. If `create_pod_range` is true, this ID is used for the new range. If `create_pod_range` is false, uses an existing secondary range with this ID.
+     * 
+     */
     @InputImport(name="podRange", required=true)
     private final Input<String> podRange;
 

@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDNSSEC {
+/**
+ * Resource used to control (enable/disable) DNSSEC in a specific hosted zone.
+ * 
+ */
     public static CompletableFuture<GetDNSSECResult> invokeAsync(GetDNSSECArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:route53:getDNSSEC", TypeShape.of(GetDNSSECResult.class), args == null ? GetDNSSECArgs.Empty : args, Utilities.withVersion(options));
     }

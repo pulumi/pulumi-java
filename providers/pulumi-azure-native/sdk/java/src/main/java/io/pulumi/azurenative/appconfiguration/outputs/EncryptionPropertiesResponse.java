@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EncryptionPropertiesResponse {
+    /**
+     * Key vault properties.
+     * 
+     */
     private final @Nullable KeyVaultPropertiesResponse keyVaultProperties;
 
     @OutputCustomType.Constructor({"keyVaultProperties"})
@@ -18,6 +22,10 @@ public final class EncryptionPropertiesResponse {
         this.keyVaultProperties = keyVaultProperties;
     }
 
+    /**
+     * Key vault properties.
+     * 
+     */
     public Optional<KeyVaultPropertiesResponse> getKeyVaultProperties() {
         return Optional.ofNullable(this.keyVaultProperties);
     }

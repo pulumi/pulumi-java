@@ -18,11 +18,23 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Resource Type definition for AWS::LicenseManager::License
+ * 
+ */
 @ResourceType(type="aws-native:licensemanager:License")
 public class License extends io.pulumi.resources.CustomResource {
+    /**
+     * Beneficiary of the license.
+     * 
+     */
     @OutputExport(name="beneficiary", type=String.class, parameters={})
     private Output</* @Nullable */ String> beneficiary;
 
+    /**
+     * @return Beneficiary of the license.
+     * 
+     */
     public Output</* @Nullable */ String> getBeneficiary() {
         return this.beneficiary;
     }
@@ -38,9 +50,17 @@ public class License extends io.pulumi.resources.CustomResource {
     public Output<List<LicenseEntitlement>> getEntitlements() {
         return this.entitlements;
     }
+    /**
+     * Home region for the created license.
+     * 
+     */
     @OutputExport(name="homeRegion", type=String.class, parameters={})
     private Output<String> homeRegion;
 
+    /**
+     * @return Home region for the created license.
+     * 
+     */
     public Output<String> getHomeRegion() {
         return this.homeRegion;
     }
@@ -50,9 +70,17 @@ public class License extends io.pulumi.resources.CustomResource {
     public Output<LicenseIssuerData> getIssuer() {
         return this.issuer;
     }
+    /**
+     * Amazon Resource Name is a unique name for each resource.
+     * 
+     */
     @OutputExport(name="licenseArn", type=String.class, parameters={})
     private Output<String> licenseArn;
 
+    /**
+     * @return Amazon Resource Name is a unique name for each resource.
+     * 
+     */
     public Output<String> getLicenseArn() {
         return this.licenseArn;
     }
@@ -62,21 +90,45 @@ public class License extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ List<LicenseMetadata>> getLicenseMetadata() {
         return this.licenseMetadata;
     }
+    /**
+     * Name for the created license.
+     * 
+     */
     @OutputExport(name="licenseName", type=String.class, parameters={})
     private Output<String> licenseName;
 
+    /**
+     * @return Name for the created license.
+     * 
+     */
     public Output<String> getLicenseName() {
         return this.licenseName;
     }
+    /**
+     * Product name for the created license.
+     * 
+     */
     @OutputExport(name="productName", type=String.class, parameters={})
     private Output<String> productName;
 
+    /**
+     * @return Product name for the created license.
+     * 
+     */
     public Output<String> getProductName() {
         return this.productName;
     }
+    /**
+     * ProductSKU of the license.
+     * 
+     */
     @OutputExport(name="productSKU", type=String.class, parameters={})
     private Output</* @Nullable */ String> productSKU;
 
+    /**
+     * @return ProductSKU of the license.
+     * 
+     */
     public Output</* @Nullable */ String> getProductSKU() {
         return this.productSKU;
     }
@@ -92,13 +144,27 @@ public class License extends io.pulumi.resources.CustomResource {
     public Output<LicenseValidityDateFormat> getValidity() {
         return this.validity;
     }
+    /**
+     * The version of the license.
+     * 
+     */
     @OutputExport(name="version", type=String.class, parameters={})
     private Output<String> version;
 
+    /**
+     * @return The version of the license.
+     * 
+     */
     public Output<String> getVersion() {
         return this.version;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public License(String name, LicenseArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:licensemanager:License", name, args == null ? LicenseArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -114,6 +180,14 @@ public class License extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static License get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new License(name, id, options);
     }

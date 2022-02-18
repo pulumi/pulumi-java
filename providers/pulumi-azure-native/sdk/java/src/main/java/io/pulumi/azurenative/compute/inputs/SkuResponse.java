@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes a virtual machine scale set sku. NOTE: If the new VM SKU is not supported on the hardware the scale set is currently on, you need to deallocate the VMs in the scale set before you modify the SKU name.
+ * 
+ */
 public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SkuResponse Empty = new SkuResponse();
 
+    /**
+     * Specifies the number of virtual machines in the scale set.
+     * 
+     */
     @InputImport(name="capacity")
     private final @Nullable Double capacity;
 
@@ -22,6 +30,10 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
     }
 
+    /**
+     * The sku name.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -29,6 +41,10 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Specifies the tier of virtual machines in a scale set.<br /><br /> Possible Values:<br /><br /> **Standard**<br /><br /> **Basic**
+     * 
+     */
     @InputImport(name="tier")
     private final @Nullable String tier;
 

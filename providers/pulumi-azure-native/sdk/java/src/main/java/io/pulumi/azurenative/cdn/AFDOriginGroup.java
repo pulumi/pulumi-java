@@ -19,6 +19,21 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * AFDOrigin group comprising of origins is used for load balancing to origins when the content cannot be served from CDN.
+ * API Version: 2020-09-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:cdn:AFDOriginGroup origingroup1 /subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/origingroups/origingroup1 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:cdn:AFDOriginGroup")
 public class AFDOriginGroup extends io.pulumi.resources.CustomResource {
     @OutputExport(name="deploymentStatus", type=String.class, parameters={})
@@ -27,61 +42,139 @@ public class AFDOriginGroup extends io.pulumi.resources.CustomResource {
     public Output<String> getDeploymentStatus() {
         return this.deploymentStatus;
     }
+    /**
+     * Health probe settings to the origin that is used to determine the health of the origin.
+     * 
+     */
     @OutputExport(name="healthProbeSettings", type=HealthProbeParametersResponse.class, parameters={})
     private Output</* @Nullable */ HealthProbeParametersResponse> healthProbeSettings;
 
+    /**
+     * @return Health probe settings to the origin that is used to determine the health of the origin.
+     * 
+     */
     public Output</* @Nullable */ HealthProbeParametersResponse> getHealthProbeSettings() {
         return this.healthProbeSettings;
     }
+    /**
+     * Load balancing settings for a backend pool
+     * 
+     */
     @OutputExport(name="loadBalancingSettings", type=LoadBalancingSettingsParametersResponse.class, parameters={})
     private Output</* @Nullable */ LoadBalancingSettingsParametersResponse> loadBalancingSettings;
 
+    /**
+     * @return Load balancing settings for a backend pool
+     * 
+     */
     public Output</* @Nullable */ LoadBalancingSettingsParametersResponse> getLoadBalancingSettings() {
         return this.loadBalancingSettings;
     }
+    /**
+     * Resource name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Provisioning status
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return Provisioning status
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The JSON object that contains the properties to determine origin health using real requests/responses. This property is currently not supported.
+     * 
+     */
     @OutputExport(name="responseBasedAfdOriginErrorDetectionSettings", type=ResponseBasedOriginErrorDetectionParametersResponse.class, parameters={})
     private Output</* @Nullable */ ResponseBasedOriginErrorDetectionParametersResponse> responseBasedAfdOriginErrorDetectionSettings;
 
+    /**
+     * @return The JSON object that contains the properties to determine origin health using real requests/responses. This property is currently not supported.
+     * 
+     */
     public Output</* @Nullable */ ResponseBasedOriginErrorDetectionParametersResponse> getResponseBasedAfdOriginErrorDetectionSettings() {
         return this.responseBasedAfdOriginErrorDetectionSettings;
     }
+    /**
+     * Whether to allow session affinity on this host. Valid options are 'Enabled' or 'Disabled'
+     * 
+     */
     @OutputExport(name="sessionAffinityState", type=String.class, parameters={})
     private Output</* @Nullable */ String> sessionAffinityState;
 
+    /**
+     * @return Whether to allow session affinity on this host. Valid options are 'Enabled' or 'Disabled'
+     * 
+     */
     public Output</* @Nullable */ String> getSessionAffinityState() {
         return this.sessionAffinityState;
     }
+    /**
+     * Read only system data
+     * 
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return Read only system data
+     * 
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
+     * 
+     */
     @OutputExport(name="trafficRestorationTimeToHealedOrNewEndpointsInMinutes", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
 
+    /**
+     * @return Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
+     * 
+     */
     public Output</* @Nullable */ Integer> getTrafficRestorationTimeToHealedOrNewEndpointsInMinutes() {
         return this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
     }
+    /**
+     * Resource type.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public AFDOriginGroup(String name, AFDOriginGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:cdn:AFDOriginGroup", name, args == null ? AFDOriginGroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -101,6 +194,14 @@ public class AFDOriginGroup extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static AFDOriginGroup get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AFDOriginGroup(name, id, options);
     }

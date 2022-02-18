@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * PipelineReadyCondition contains information around the status of the Pipeline.
+ * 
+ */
 public final class PipelineReadyConditionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PipelineReadyConditionResponse Empty = new PipelineReadyConditionResponse();
 
+    /**
+     * True if the Pipeline is in a valid state. Otherwise at least one condition in `PipelineCondition` is in an invalid state. Iterate over those conditions and see which condition(s) has status = false to find out what is wrong with the Pipeline.
+     * 
+     */
     @InputImport(name="status", required=true)
     private final Boolean status;
 
@@ -20,6 +28,10 @@ public final class PipelineReadyConditionResponse extends io.pulumi.resources.In
         return this.status;
     }
 
+    /**
+     * Last time the condition was updated.
+     * 
+     */
     @InputImport(name="updateTime", required=true)
     private final String updateTime;
 

@@ -14,6 +14,11 @@ public final class ClusterMasterAuthorizedNetworksConfigCidrBlockArgs extends io
 
     public static final ClusterMasterAuthorizedNetworksConfigCidrBlockArgs Empty = new ClusterMasterAuthorizedNetworksConfigCidrBlockArgs();
 
+    /**
+     * External network that can access Kubernetes master through HTTPS.
+     * Must be specified in CIDR notation.
+     * 
+     */
     @InputImport(name="cidrBlock", required=true)
     private final Input<String> cidrBlock;
 
@@ -21,6 +26,10 @@ public final class ClusterMasterAuthorizedNetworksConfigCidrBlockArgs extends io
         return this.cidrBlock;
     }
 
+    /**
+     * Field for users to identify CIDR blocks.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 

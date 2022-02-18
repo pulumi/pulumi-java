@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     *  An indication of whether the entitlement is enabled.
+     * 
+     */
     @EnumType
     public enum FlowEntitlementEntitlementStatus {
         Enabled("ENABLED"),

@@ -17,6 +17,10 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StreamArgs Empty = new StreamArgs();
 
+    /**
+     * The number of hours till which Kinesis Video will retain the data in the stream
+     * 
+     */
     @InputImport(name="dataRetentionInHours")
     private final @Nullable Input<Integer> dataRetentionInHours;
 
@@ -24,6 +28,10 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataRetentionInHours == null ? Input.empty() : this.dataRetentionInHours;
     }
 
+    /**
+     * The name of the device that is writing to the stream.
+     * 
+     */
     @InputImport(name="deviceName")
     private final @Nullable Input<String> deviceName;
 
@@ -31,6 +39,10 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
         return this.deviceName == null ? Input.empty() : this.deviceName;
     }
 
+    /**
+     * AWS KMS key ID that Kinesis Video Streams uses to encrypt stream data.
+     * 
+     */
     @InputImport(name="kmsKeyId")
     private final @Nullable Input<String> kmsKeyId;
 
@@ -38,6 +50,10 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
     }
 
+    /**
+     * The media type of the stream. Consumers of the stream can use this information when processing the stream.
+     * 
+     */
     @InputImport(name="mediaType")
     private final @Nullable Input<String> mediaType;
 
@@ -45,6 +61,10 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
         return this.mediaType == null ? Input.empty() : this.mediaType;
     }
 
+    /**
+     * The name of the Kinesis Video stream.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -52,6 +72,10 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * An array of key-value pairs associated with the Kinesis Video Stream.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<StreamTagArgs>> tags;
 

@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Describes the server certificate details using common name.
+ * 
+ */
 public final class ServerCertificateCommonNameArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServerCertificateCommonNameArgs Empty = new ServerCertificateCommonNameArgs();
 
+    /**
+     * The common name of the server certificate.
+     * 
+     */
     @InputImport(name="certificateCommonName", required=true)
     private final Input<String> certificateCommonName;
 
@@ -20,6 +28,10 @@ public final class ServerCertificateCommonNameArgs extends io.pulumi.resources.R
         return this.certificateCommonName;
     }
 
+    /**
+     * The issuer thumbprint of the server certificate.
+     * 
+     */
     @InputImport(name="certificateIssuerThumbprint", required=true)
     private final Input<String> certificateIssuerThumbprint;
 

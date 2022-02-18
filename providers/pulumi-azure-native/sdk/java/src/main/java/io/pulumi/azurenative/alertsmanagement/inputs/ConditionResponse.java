@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * condition to trigger an action rule
+ * 
+ */
 public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConditionResponse Empty = new ConditionResponse();
 
+    /**
+     * operator for a given condition
+     * 
+     */
     @InputImport(name="operator")
     private final @Nullable String operator;
 
@@ -22,6 +30,10 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
         return this.operator == null ? Optional.empty() : Optional.ofNullable(this.operator);
     }
 
+    /**
+     * list of values to match for a given condition.
+     * 
+     */
     @InputImport(name="values")
     private final @Nullable List<String> values;
 

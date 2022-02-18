@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Guest configuration assignment properties.
+ * 
+ */
 public final class GuestConfigurationAssignmentPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GuestConfigurationAssignmentPropertiesArgs Empty = new GuestConfigurationAssignmentPropertiesArgs();
 
+    /**
+     * The source which initiated the guest configuration assignment. Ex: Azure Policy
+     * 
+     */
     @InputImport(name="context")
     private final @Nullable Input<String> context;
 
@@ -22,6 +30,10 @@ public final class GuestConfigurationAssignmentPropertiesArgs extends io.pulumi.
         return this.context == null ? Input.empty() : this.context;
     }
 
+    /**
+     * The guest configuration to assign.
+     * 
+     */
     @InputImport(name="guestConfiguration")
     private final @Nullable Input<GuestConfigurationNavigationArgs> guestConfiguration;
 

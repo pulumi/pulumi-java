@@ -9,6 +9,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class OrganizationFeedFeedOutputConfig {
+    /**
+     * Destination on Cloud Pubsub.
+     * Structure is documented below.
+     * 
+     */
     private final OrganizationFeedFeedOutputConfigPubsubDestination pubsubDestination;
 
     @OutputCustomType.Constructor({"pubsubDestination"})
@@ -16,6 +21,11 @@ public final class OrganizationFeedFeedOutputConfig {
         this.pubsubDestination = Objects.requireNonNull(pubsubDestination);
     }
 
+    /**
+     * Destination on Cloud Pubsub.
+     * Structure is documented below.
+     * 
+     */
     public OrganizationFeedFeedOutputConfigPubsubDestination getPubsubDestination() {
         return this.pubsubDestination;
     }

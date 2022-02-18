@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Private endpoint details
+ * 
+ */
 public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PrivateEndpointResponse Empty = new PrivateEndpointResponse();
 
+    /**
+     * Resource id of the private endpoint.
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 

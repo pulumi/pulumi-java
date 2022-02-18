@@ -22,6 +22,11 @@ public final class RegionHealthCheckArgs extends io.pulumi.resources.ResourceArg
 
     public static final RegionHealthCheckArgs Empty = new RegionHealthCheckArgs();
 
+    /**
+     * How often (in seconds) to send a health check. The default value is 5
+     * seconds.
+     * 
+     */
     @InputImport(name="checkIntervalSec")
     private final @Nullable Input<Integer> checkIntervalSec;
 
@@ -29,6 +34,11 @@ public final class RegionHealthCheckArgs extends io.pulumi.resources.ResourceArg
         return this.checkIntervalSec == null ? Input.empty() : this.checkIntervalSec;
     }
 
+    /**
+     * An optional description of this resource. Provide this property when
+     * you create the resource.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -36,6 +46,11 @@ public final class RegionHealthCheckArgs extends io.pulumi.resources.ResourceArg
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * A nested object resource
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="grpcHealthCheck")
     private final @Nullable Input<RegionHealthCheckGrpcHealthCheckArgs> grpcHealthCheck;
 
@@ -43,6 +58,11 @@ public final class RegionHealthCheckArgs extends io.pulumi.resources.ResourceArg
         return this.grpcHealthCheck == null ? Input.empty() : this.grpcHealthCheck;
     }
 
+    /**
+     * A so-far unhealthy instance will be marked healthy after this many
+     * consecutive successes. The default value is 2.
+     * 
+     */
     @InputImport(name="healthyThreshold")
     private final @Nullable Input<Integer> healthyThreshold;
 
@@ -50,6 +70,11 @@ public final class RegionHealthCheckArgs extends io.pulumi.resources.ResourceArg
         return this.healthyThreshold == null ? Input.empty() : this.healthyThreshold;
     }
 
+    /**
+     * A nested object resource
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="http2HealthCheck")
     private final @Nullable Input<RegionHealthCheckHttp2HealthCheckArgs> http2HealthCheck;
 
@@ -57,6 +82,11 @@ public final class RegionHealthCheckArgs extends io.pulumi.resources.ResourceArg
         return this.http2HealthCheck == null ? Input.empty() : this.http2HealthCheck;
     }
 
+    /**
+     * A nested object resource
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="httpHealthCheck")
     private final @Nullable Input<RegionHealthCheckHttpHealthCheckArgs> httpHealthCheck;
 
@@ -64,6 +94,11 @@ public final class RegionHealthCheckArgs extends io.pulumi.resources.ResourceArg
         return this.httpHealthCheck == null ? Input.empty() : this.httpHealthCheck;
     }
 
+    /**
+     * A nested object resource
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="httpsHealthCheck")
     private final @Nullable Input<RegionHealthCheckHttpsHealthCheckArgs> httpsHealthCheck;
 
@@ -71,6 +106,11 @@ public final class RegionHealthCheckArgs extends io.pulumi.resources.ResourceArg
         return this.httpsHealthCheck == null ? Input.empty() : this.httpsHealthCheck;
     }
 
+    /**
+     * Configure logging on this health check.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="logConfig")
     private final @Nullable Input<RegionHealthCheckLogConfigArgs> logConfig;
 
@@ -78,6 +118,16 @@ public final class RegionHealthCheckArgs extends io.pulumi.resources.ResourceArg
         return this.logConfig == null ? Input.empty() : this.logConfig;
     }
 
+    /**
+     * Name of the resource. Provided by the client when the resource is
+     * created. The name must be 1-63 characters long, and comply with
+     * RFC1035.  Specifically, the name must be 1-63 characters long and
+     * match the regular expression `a-z?` which means
+     * the first character must be a lowercase letter, and all following
+     * characters must be a dash, lowercase letter, or digit, except the
+     * last character, which cannot be a dash.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -85,6 +135,11 @@ public final class RegionHealthCheckArgs extends io.pulumi.resources.ResourceArg
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -92,6 +147,11 @@ public final class RegionHealthCheckArgs extends io.pulumi.resources.ResourceArg
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The Region in which the created health check should reside.
+     * If it is not provided, the provider region is used.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 
@@ -99,6 +159,11 @@ public final class RegionHealthCheckArgs extends io.pulumi.resources.ResourceArg
         return this.region == null ? Input.empty() : this.region;
     }
 
+    /**
+     * A nested object resource
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="sslHealthCheck")
     private final @Nullable Input<RegionHealthCheckSslHealthCheckArgs> sslHealthCheck;
 
@@ -106,6 +171,11 @@ public final class RegionHealthCheckArgs extends io.pulumi.resources.ResourceArg
         return this.sslHealthCheck == null ? Input.empty() : this.sslHealthCheck;
     }
 
+    /**
+     * A nested object resource
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="tcpHealthCheck")
     private final @Nullable Input<RegionHealthCheckTcpHealthCheckArgs> tcpHealthCheck;
 
@@ -113,6 +183,12 @@ public final class RegionHealthCheckArgs extends io.pulumi.resources.ResourceArg
         return this.tcpHealthCheck == null ? Input.empty() : this.tcpHealthCheck;
     }
 
+    /**
+     * How long (in seconds) to wait before claiming failure.
+     * The default value is 5 seconds.  It is invalid for timeoutSec to have
+     * greater value than checkIntervalSec.
+     * 
+     */
     @InputImport(name="timeoutSec")
     private final @Nullable Input<Integer> timeoutSec;
 
@@ -120,6 +196,11 @@ public final class RegionHealthCheckArgs extends io.pulumi.resources.ResourceArg
         return this.timeoutSec == null ? Input.empty() : this.timeoutSec;
     }
 
+    /**
+     * A so-far healthy instance will be marked unhealthy after this many
+     * consecutive failures. The default value is 2.
+     * 
+     */
     @InputImport(name="unhealthyThreshold")
     private final @Nullable Input<Integer> unhealthyThreshold;
 

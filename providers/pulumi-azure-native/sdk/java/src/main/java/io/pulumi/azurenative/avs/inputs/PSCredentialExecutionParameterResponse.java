@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * a powershell credential object
+ * 
+ */
 public final class PSCredentialExecutionParameterResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PSCredentialExecutionParameterResponse Empty = new PSCredentialExecutionParameterResponse();
 
+    /**
+     * The parameter name
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -21,6 +29,10 @@ public final class PSCredentialExecutionParameterResponse extends io.pulumi.reso
         return this.name;
     }
 
+    /**
+     * password for login
+     * 
+     */
     @InputImport(name="password")
     private final @Nullable String password;
 
@@ -28,6 +40,11 @@ public final class PSCredentialExecutionParameterResponse extends io.pulumi.reso
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
     }
 
+    /**
+     * The type of execution parameter
+     * Expected value is 'Credential'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -35,6 +52,10 @@ public final class PSCredentialExecutionParameterResponse extends io.pulumi.reso
         return this.type;
     }
 
+    /**
+     * username for login
+     * 
+     */
     @InputImport(name="username")
     private final @Nullable String username;
 

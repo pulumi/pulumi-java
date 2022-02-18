@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A specification of the type and number of accelerator cards attached to the instance.
+ * 
+ */
 public final class AcceleratorConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AcceleratorConfigArgs Empty = new AcceleratorConfigArgs();
 
+    /**
+     * The number of the guest accelerator cards exposed to this instance.
+     * 
+     */
     @InputImport(name="acceleratorCount")
     private final @Nullable Input<Integer> acceleratorCount;
 
@@ -22,6 +30,10 @@ public final class AcceleratorConfigArgs extends io.pulumi.resources.ResourceArg
         return this.acceleratorCount == null ? Input.empty() : this.acceleratorCount;
     }
 
+    /**
+     * Full or partial URL of the accelerator type resource to attach to this instance. For example: projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100 If you are creating an instance template, specify only the accelerator name. See GPUs on Compute Engine for a full list of accelerator types.
+     * 
+     */
     @InputImport(name="acceleratorType")
     private final @Nullable Input<String> acceleratorType;
 

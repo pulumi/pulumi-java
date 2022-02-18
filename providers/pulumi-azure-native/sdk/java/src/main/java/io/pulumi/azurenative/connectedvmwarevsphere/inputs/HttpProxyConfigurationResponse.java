@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * HTTP Proxy configuration for the VM.
+ * 
+ */
 public final class HttpProxyConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final HttpProxyConfigurationResponse Empty = new HttpProxyConfigurationResponse();
 
+    /**
+     * Gets or sets httpsProxy url.
+     * 
+     */
     @InputImport(name="httpsProxy")
     private final @Nullable String httpsProxy;
 

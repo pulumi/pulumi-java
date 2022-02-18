@@ -14,39 +14,113 @@ import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Manages a folder-level logging exclusion. For more information see:
+ * 
+ * * [API documentation](https://cloud.google.com/logging/docs/reference/v2/rest/v2/folders.exclusions)
+ * * How-to Guides
+ *     * [Excluding Logs](https://cloud.google.com/logging/docs/exclusions)
+ * 
+ * > You can specify exclusions for log sinks created by the provider by using the exclusions field of `gcp.logging.FolderSink`
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * Folder-level logging exclusions can be imported using their URI, e.g.
+ * 
+ * ```sh
+ *  $ pulumi import gcp:logging/folderExclusion:FolderExclusion my_exclusion folders/my-folder/exclusions/my-exclusion
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:logging/folderExclusion:FolderExclusion")
 public class FolderExclusion extends io.pulumi.resources.CustomResource {
+    /**
+     * A human-readable description.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return A human-readable description.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * Whether this exclusion rule should be disabled or not. This defaults to
+     * false.
+     * 
+     */
     @OutputExport(name="disabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> disabled;
 
+    /**
+     * @return Whether this exclusion rule should be disabled or not. This defaults to
+     * false.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getDisabled() {
         return this.disabled;
     }
+    /**
+     * The filter to apply when excluding logs. Only log entries that match the filter are excluded.
+     * See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced-filters) for information on how to
+     * write a filter.
+     * 
+     */
     @OutputExport(name="filter", type=String.class, parameters={})
     private Output<String> filter;
 
+    /**
+     * @return The filter to apply when excluding logs. Only log entries that match the filter are excluded.
+     * See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced-filters) for information on how to
+     * write a filter.
+     * 
+     */
     public Output<String> getFilter() {
         return this.filter;
     }
+    /**
+     * The folder to be exported to the sink. Note that either [FOLDER_ID] or "folders/[FOLDER_ID]" is
+     * accepted.
+     * 
+     */
     @OutputExport(name="folder", type=String.class, parameters={})
     private Output<String> folder;
 
+    /**
+     * @return The folder to be exported to the sink. Note that either [FOLDER_ID] or "folders/[FOLDER_ID]" is
+     * accepted.
+     * 
+     */
     public Output<String> getFolder() {
         return this.folder;
     }
+    /**
+     * The name of the logging exclusion.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the logging exclusion.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public FolderExclusion(String name, FolderExclusionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:logging/folderExclusion:FolderExclusion", name, args == null ? FolderExclusionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -62,6 +136,15 @@ public class FolderExclusion extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static FolderExclusion get(String name, Input<String> id, @Nullable FolderExclusionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new FolderExclusion(name, id, state, options);
     }

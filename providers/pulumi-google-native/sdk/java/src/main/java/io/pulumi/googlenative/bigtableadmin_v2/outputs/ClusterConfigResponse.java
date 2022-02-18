@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ClusterConfigResponse {
+    /**
+     * Autoscaling configuration for this cluster.
+     * 
+     */
     private final ClusterAutoscalingConfigResponse clusterAutoscalingConfig;
 
     @OutputCustomType.Constructor({"clusterAutoscalingConfig"})
@@ -16,6 +20,10 @@ public final class ClusterConfigResponse {
         this.clusterAutoscalingConfig = Objects.requireNonNull(clusterAutoscalingConfig);
     }
 
+    /**
+     * Autoscaling configuration for this cluster.
+     * 
+     */
     public ClusterAutoscalingConfigResponse getClusterAutoscalingConfig() {
         return this.clusterAutoscalingConfig;
     }

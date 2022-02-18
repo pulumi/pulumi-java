@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Retention schedule format for yearly retention policy.
+     * 
+     */
     @EnumType
     public enum RetentionScheduleFormat {
         Invalid("Invalid"),

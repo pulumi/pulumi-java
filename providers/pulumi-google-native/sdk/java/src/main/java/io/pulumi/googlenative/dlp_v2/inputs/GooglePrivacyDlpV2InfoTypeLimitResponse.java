@@ -9,10 +9,18 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
+/**
+ * Max findings configuration per infoType, per content item or long running DlpJob.
+ * 
+ */
 public final class GooglePrivacyDlpV2InfoTypeLimitResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2InfoTypeLimitResponse Empty = new GooglePrivacyDlpV2InfoTypeLimitResponse();
 
+    /**
+     * Type of information the findings limit applies to. Only one limit per info_type should be provided. If InfoTypeLimit does not have an info_type, the DLP API applies the limit against all info_types that are found but not specified in another InfoTypeLimit.
+     * 
+     */
     @InputImport(name="infoType", required=true)
     private final GooglePrivacyDlpV2InfoTypeResponse infoType;
 
@@ -20,6 +28,10 @@ public final class GooglePrivacyDlpV2InfoTypeLimitResponse extends io.pulumi.res
         return this.infoType;
     }
 
+    /**
+     * Max findings limit for the given infoType.
+     * 
+     */
     @InputImport(name="maxFindings", required=true)
     private final Integer maxFindings;
 

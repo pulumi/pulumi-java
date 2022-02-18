@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specifies settings for the canary deployment in this stage.
+ * 
+ */
 public final class StageCanarySettingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StageCanarySettingArgs Empty = new StageCanarySettingArgs();
 
+    /**
+     * The identifier of the deployment that the stage points to.
+     * 
+     */
     @InputImport(name="deploymentId")
     private final @Nullable Input<String> deploymentId;
 
@@ -24,6 +32,10 @@ public final class StageCanarySettingArgs extends io.pulumi.resources.ResourceAr
         return this.deploymentId == null ? Input.empty() : this.deploymentId;
     }
 
+    /**
+     * The percentage (0-100) of traffic diverted to a canary deployment.
+     * 
+     */
     @InputImport(name="percentTraffic")
     private final @Nullable Input<Double> percentTraffic;
 
@@ -31,6 +43,10 @@ public final class StageCanarySettingArgs extends io.pulumi.resources.ResourceAr
         return this.percentTraffic == null ? Input.empty() : this.percentTraffic;
     }
 
+    /**
+     * Stage variables overridden for a canary release deployment, including new stage variables introduced in the canary. These stage variables are represented as a string-to-string map between stage variable names and their values.
+     * 
+     */
     @InputImport(name="stageVariableOverrides")
     private final @Nullable Input<Object> stageVariableOverrides;
 
@@ -38,6 +54,10 @@ public final class StageCanarySettingArgs extends io.pulumi.resources.ResourceAr
         return this.stageVariableOverrides == null ? Input.empty() : this.stageVariableOverrides;
     }
 
+    /**
+     * Whether the canary deployment uses the stage cache or not.
+     * 
+     */
     @InputImport(name="useStageCache")
     private final @Nullable Input<Boolean> useStageCache;
 

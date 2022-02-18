@@ -17,23 +17,51 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * A resource schema for an EventType in Amazon Fraud Detector.
+ * 
+ */
 @ResourceType(type="aws-native:frauddetector:EventType")
 public class EventType extends io.pulumi.resources.CustomResource {
+    /**
+     * The ARN of the event type.
+     * 
+     */
     @OutputExport(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
+    /**
+     * @return The ARN of the event type.
+     * 
+     */
     public Output<String> getArn() {
         return this.arn;
     }
+    /**
+     * The time when the event type was created.
+     * 
+     */
     @OutputExport(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
+    /**
+     * @return The time when the event type was created.
+     * 
+     */
     public Output<String> getCreatedTime() {
         return this.createdTime;
     }
+    /**
+     * The description of the event type.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return The description of the event type.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
@@ -55,25 +83,55 @@ public class EventType extends io.pulumi.resources.CustomResource {
     public Output<List<EventTypeLabel>> getLabels() {
         return this.labels;
     }
+    /**
+     * The time when the event type was last updated.
+     * 
+     */
     @OutputExport(name="lastUpdatedTime", type=String.class, parameters={})
     private Output<String> lastUpdatedTime;
 
+    /**
+     * @return The time when the event type was last updated.
+     * 
+     */
     public Output<String> getLastUpdatedTime() {
         return this.lastUpdatedTime;
     }
+    /**
+     * The name for the event type
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name for the event type
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Tags associated with this event type.
+     * 
+     */
     @OutputExport(name="tags", type=List.class, parameters={EventTypeTag.class})
     private Output</* @Nullable */ List<EventTypeTag>> tags;
 
+    /**
+     * @return Tags associated with this event type.
+     * 
+     */
     public Output</* @Nullable */ List<EventTypeTag>> getTags() {
         return this.tags;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public EventType(String name, EventTypeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:frauddetector:EventType", name, args == null ? EventTypeArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -89,6 +147,14 @@ public class EventType extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static EventType get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new EventType(name, id, options);
     }

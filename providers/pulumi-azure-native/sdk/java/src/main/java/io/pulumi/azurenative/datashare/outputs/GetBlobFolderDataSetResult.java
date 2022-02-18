@@ -10,16 +10,61 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetBlobFolderDataSetResult {
+    /**
+     * Container that has the file path.
+     * 
+     */
     private final String containerName;
+    /**
+     * Unique id for identifying a data set resource
+     * 
+     */
     private final String dataSetId;
+    /**
+     * The resource id of the azure resource
+     * 
+     */
     private final String id;
+    /**
+     * Kind of data set.
+     * Expected value is 'BlobFolder'.
+     * 
+     */
     private final String kind;
+    /**
+     * Name of the azure resource
+     * 
+     */
     private final String name;
+    /**
+     * Prefix for blob folder
+     * 
+     */
     private final String prefix;
+    /**
+     * Resource group of storage account
+     * 
+     */
     private final String resourceGroup;
+    /**
+     * Storage account name of the source data set
+     * 
+     */
     private final String storageAccountName;
+    /**
+     * Subscription id of storage account
+     * 
+     */
     private final String subscriptionId;
+    /**
+     * System Data of the Azure resource.
+     * 
+     */
     private final SystemDataResponse systemData;
+    /**
+     * Type of the azure resource
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"containerName","dataSetId","id","kind","name","prefix","resourceGroup","storageAccountName","subscriptionId","systemData","type"})
@@ -48,36 +93,81 @@ public final class GetBlobFolderDataSetResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Container that has the file path.
+     * 
+     */
     public String getContainerName() {
         return this.containerName;
     }
+    /**
+     * Unique id for identifying a data set resource
+     * 
+     */
     public String getDataSetId() {
         return this.dataSetId;
     }
+    /**
+     * The resource id of the azure resource
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Kind of data set.
+     * Expected value is 'BlobFolder'.
+     * 
+     */
     public String getKind() {
         return this.kind;
     }
+    /**
+     * Name of the azure resource
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Prefix for blob folder
+     * 
+     */
     public String getPrefix() {
         return this.prefix;
     }
+    /**
+     * Resource group of storage account
+     * 
+     */
     public String getResourceGroup() {
         return this.resourceGroup;
     }
+    /**
+     * Storage account name of the source data set
+     * 
+     */
     public String getStorageAccountName() {
         return this.storageAccountName;
     }
+    /**
+     * Subscription id of storage account
+     * 
+     */
     public String getSubscriptionId() {
         return this.subscriptionId;
     }
+    /**
+     * System Data of the Azure resource.
+     * 
+     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+    /**
+     * Type of the azure resource
+     * 
+     */
     public String getType() {
         return this.type;
     }

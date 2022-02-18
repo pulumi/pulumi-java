@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Required. Gets or sets the Kind of the resource.
+     * 
+     */
     @EnumType
     public enum Kind {
         Sdk("sdk"),

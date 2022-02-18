@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListManagerPublicEncryptionKey {
+/**
+ * Represents the secrets encrypted using Symmetric Encryption Key.
+ * API Version: 2017-06-01.
+ * 
+ *
+ * Represents the secrets encrypted using Symmetric Encryption Key.
+ * 
+ */
     public static CompletableFuture<ListManagerPublicEncryptionKeyResult> invokeAsync(ListManagerPublicEncryptionKeyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storsimple:listManagerPublicEncryptionKey", TypeShape.of(ListManagerPublicEncryptionKeyResult.class), args == null ? ListManagerPublicEncryptionKeyArgs.Empty : args, Utilities.withVersion(options));
     }

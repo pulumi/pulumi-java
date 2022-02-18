@@ -22,6 +22,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The actions to be performed.
+ * 
+ */
 public final class DetectorModelAction extends io.pulumi.resources.InvokeArgs {
 
     public static final DetectorModelAction Empty = new DetectorModelAction();

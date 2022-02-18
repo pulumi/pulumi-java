@@ -20,23 +20,95 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetOccurrenceResult {
+    /**
+     * Describes an attestation of an artifact.
+     * 
+     */
     private final AttestationOccurrenceResponse attestation;
+    /**
+     * Describes a verifiable build.
+     * 
+     */
     private final BuildOccurrenceResponse build;
+    /**
+     * Describes a compliance violation on a linked resource.
+     * 
+     */
     private final ComplianceOccurrenceResponse compliance;
+    /**
+     * The time this occurrence was created.
+     * 
+     */
     private final String createTime;
+    /**
+     * Describes the deployment of an artifact on a runtime.
+     * 
+     */
     private final DeploymentOccurrenceResponse deployment;
+    /**
+     * Describes when a resource was discovered.
+     * 
+     */
     private final DiscoveryOccurrenceResponse discovery;
+    /**
+     * Describes an attestation of an artifact using dsse.
+     * 
+     */
     private final DSSEAttestationOccurrenceResponse dsseAttestation;
+    /**
+     * https://github.com/secure-systems-lab/dsse
+     * 
+     */
     private final EnvelopeResponse envelope;
+    /**
+     * Describes how this resource derives from the basis in the associated note.
+     * 
+     */
     private final ImageOccurrenceResponse image;
+    /**
+     * This explicitly denotes which of the occurrence details are specified. This field can be used as a filter in list requests.
+     * 
+     */
     private final String kind;
+    /**
+     * The name of the occurrence in the form of `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
+     * 
+     */
     private final String name;
+    /**
+     * Immutable. The analysis note associated with this occurrence, in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`. This field can be used as a filter in list requests.
+     * 
+     */
     private final String noteName;
+    /**
+     * Describes the installation of a package on the linked resource.
+     * 
+     */
     private final PackageOccurrenceResponse $package;
+    /**
+     * A description of actions that can be taken to remedy the note.
+     * 
+     */
     private final String remediation;
+    /**
+     * Immutable. A URI that represents the resource for which the occurrence applies. For example, `https://gcr.io/project/image@sha256:123abc` for a Docker image.
+     * 
+     */
     private final String resourceUri;
+    /**
+     * The time this occurrence was last updated.
+     * 
+     */
     private final String updateTime;
+    /**
+     * Describes an available package upgrade on the linked resource.
+     * 
+     */
     private final UpgradeOccurrenceResponse upgrade;
+    /**
+     * Describes a security vulnerability.
+     * 
+     */
     private final VulnerabilityOccurrenceResponse vulnerability;
 
     @OutputCustomType.Constructor({"attestation","build","compliance","createTime","deployment","discovery","dsseAttestation","envelope","image","kind","name","noteName","$package","remediation","resourceUri","updateTime","upgrade","vulnerability"})
@@ -79,57 +151,129 @@ public final class GetOccurrenceResult {
         this.vulnerability = Objects.requireNonNull(vulnerability);
     }
 
+    /**
+     * Describes an attestation of an artifact.
+     * 
+     */
     public AttestationOccurrenceResponse getAttestation() {
         return this.attestation;
     }
+    /**
+     * Describes a verifiable build.
+     * 
+     */
     public BuildOccurrenceResponse getBuild() {
         return this.build;
     }
+    /**
+     * Describes a compliance violation on a linked resource.
+     * 
+     */
     public ComplianceOccurrenceResponse getCompliance() {
         return this.compliance;
     }
+    /**
+     * The time this occurrence was created.
+     * 
+     */
     public String getCreateTime() {
         return this.createTime;
     }
+    /**
+     * Describes the deployment of an artifact on a runtime.
+     * 
+     */
     public DeploymentOccurrenceResponse getDeployment() {
         return this.deployment;
     }
+    /**
+     * Describes when a resource was discovered.
+     * 
+     */
     public DiscoveryOccurrenceResponse getDiscovery() {
         return this.discovery;
     }
+    /**
+     * Describes an attestation of an artifact using dsse.
+     * 
+     */
     public DSSEAttestationOccurrenceResponse getDsseAttestation() {
         return this.dsseAttestation;
     }
+    /**
+     * https://github.com/secure-systems-lab/dsse
+     * 
+     */
     public EnvelopeResponse getEnvelope() {
         return this.envelope;
     }
+    /**
+     * Describes how this resource derives from the basis in the associated note.
+     * 
+     */
     public ImageOccurrenceResponse getImage() {
         return this.image;
     }
+    /**
+     * This explicitly denotes which of the occurrence details are specified. This field can be used as a filter in list requests.
+     * 
+     */
     public String getKind() {
         return this.kind;
     }
+    /**
+     * The name of the occurrence in the form of `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Immutable. The analysis note associated with this occurrence, in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`. This field can be used as a filter in list requests.
+     * 
+     */
     public String getNoteName() {
         return this.noteName;
     }
+    /**
+     * Describes the installation of a package on the linked resource.
+     * 
+     */
     public PackageOccurrenceResponse get$package() {
         return this.$package;
     }
+    /**
+     * A description of actions that can be taken to remedy the note.
+     * 
+     */
     public String getRemediation() {
         return this.remediation;
     }
+    /**
+     * Immutable. A URI that represents the resource for which the occurrence applies. For example, `https://gcr.io/project/image@sha256:123abc` for a Docker image.
+     * 
+     */
     public String getResourceUri() {
         return this.resourceUri;
     }
+    /**
+     * The time this occurrence was last updated.
+     * 
+     */
     public String getUpdateTime() {
         return this.updateTime;
     }
+    /**
+     * Describes an available package upgrade on the linked resource.
+     * 
+     */
     public UpgradeOccurrenceResponse getUpgrade() {
         return this.upgrade;
     }
+    /**
+     * Describes a security vulnerability.
+     * 
+     */
     public VulnerabilityOccurrenceResponse getVulnerability() {
         return this.vulnerability;
     }

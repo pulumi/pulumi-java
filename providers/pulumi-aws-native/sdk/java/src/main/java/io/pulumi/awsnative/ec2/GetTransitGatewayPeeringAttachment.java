@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTransitGatewayPeeringAttachment {
+/**
+ * The AWS::EC2::TransitGatewayPeeringAttachment type
+ * 
+ */
     public static CompletableFuture<GetTransitGatewayPeeringAttachmentResult> invokeAsync(GetTransitGatewayPeeringAttachmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ec2:getTransitGatewayPeeringAttachment", TypeShape.of(GetTransitGatewayPeeringAttachmentResult.class), args == null ? GetTransitGatewayPeeringAttachmentArgs.Empty : args, Utilities.withVersion(options));
     }

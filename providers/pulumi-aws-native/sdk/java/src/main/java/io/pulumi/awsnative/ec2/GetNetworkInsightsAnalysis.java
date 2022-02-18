@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNetworkInsightsAnalysis {
+/**
+ * Resource schema for AWS::EC2::NetworkInsightsAnalysis
+ * 
+ */
     public static CompletableFuture<GetNetworkInsightsAnalysisResult> invokeAsync(GetNetworkInsightsAnalysisArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ec2:getNetworkInsightsAnalysis", TypeShape.of(GetNetworkInsightsAnalysisResult.class), args == null ? GetNetworkInsightsAnalysisArgs.Empty : args, Utilities.withVersion(options));
     }

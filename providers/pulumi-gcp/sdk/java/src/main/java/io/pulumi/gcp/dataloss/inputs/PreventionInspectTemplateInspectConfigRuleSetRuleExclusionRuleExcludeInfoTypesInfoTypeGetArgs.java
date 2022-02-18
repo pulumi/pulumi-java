@@ -13,6 +13,11 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
 
     public static final PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesInfoTypeGetArgs Empty = new PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesInfoTypeGetArgs();
 
+    /**
+     * Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
+     * or `projects/project-id/storedInfoTypes/432452342`.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

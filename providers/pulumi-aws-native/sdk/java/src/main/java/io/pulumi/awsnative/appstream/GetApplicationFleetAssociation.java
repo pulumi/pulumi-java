@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApplicationFleetAssociation {
+/**
+ * Resource Type definition for AWS::AppStream::ApplicationFleetAssociation
+ * 
+ */
     public static CompletableFuture<GetApplicationFleetAssociationResult> invokeAsync(GetApplicationFleetAssociationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:appstream:getApplicationFleetAssociation", TypeShape.of(GetApplicationFleetAssociationResult.class), args == null ? GetApplicationFleetAssociationArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -9,12 +9,32 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetVPNGatewayResult {
+    /**
+     * Description of this VPN gateway.
+     * 
+     */
     private final String description;
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
     private final String name;
+    /**
+     * The network of this VPN gateway.
+     * 
+     */
     private final String network;
     private final String project;
+    /**
+     * Region of this VPN gateway.
+     * 
+     */
     private final String region;
+    /**
+     * The URI of the resource.
+     * 
+     */
     private final String selfLink;
 
     @OutputCustomType.Constructor({"description","id","name","network","project","region","selfLink"})
@@ -35,24 +55,44 @@ public final class GetVPNGatewayResult {
         this.selfLink = Objects.requireNonNull(selfLink);
     }
 
+    /**
+     * Description of this VPN gateway.
+     * 
+     */
     public String getDescription() {
         return this.description;
     }
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }
     public String getName() {
         return this.name;
     }
+    /**
+     * The network of this VPN gateway.
+     * 
+     */
     public String getNetwork() {
         return this.network;
     }
     public String getProject() {
         return this.project;
     }
+    /**
+     * Region of this VPN gateway.
+     * 
+     */
     public String getRegion() {
         return this.region;
     }
+    /**
+     * The URI of the resource.
+     * 
+     */
     public String getSelfLink() {
         return this.selfLink;
     }

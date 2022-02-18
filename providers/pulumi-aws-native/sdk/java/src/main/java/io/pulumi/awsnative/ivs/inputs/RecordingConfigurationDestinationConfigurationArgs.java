@@ -9,6 +9,10 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * Recording Destination Configuration.
+ * 
+ */
 public final class RecordingConfigurationDestinationConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RecordingConfigurationDestinationConfigurationArgs Empty = new RecordingConfigurationDestinationConfigurationArgs();

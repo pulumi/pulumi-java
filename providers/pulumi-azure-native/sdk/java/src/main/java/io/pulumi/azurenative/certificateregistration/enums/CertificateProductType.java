@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Certificate product type.
+     * 
+     */
     @EnumType
     public enum CertificateProductType {
         StandardDomainValidatedSsl("StandardDomainValidatedSsl"),

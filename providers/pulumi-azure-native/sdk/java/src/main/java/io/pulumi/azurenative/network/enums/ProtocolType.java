@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * RNM supported protocol types.
+     * 
+     */
     @EnumType
     public enum ProtocolType {
         DoNotUse("DoNotUse"),

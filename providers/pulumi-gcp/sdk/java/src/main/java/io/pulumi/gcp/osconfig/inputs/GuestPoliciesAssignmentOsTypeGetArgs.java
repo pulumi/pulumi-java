@@ -14,6 +14,10 @@ public final class GuestPoliciesAssignmentOsTypeGetArgs extends io.pulumi.resour
 
     public static final GuestPoliciesAssignmentOsTypeGetArgs Empty = new GuestPoliciesAssignmentOsTypeGetArgs();
 
+    /**
+     * Targets VM instances with OS Inventory enabled and having the following OS architecture.
+     * 
+     */
     @InputImport(name="osArchitecture")
     private final @Nullable Input<String> osArchitecture;
 
@@ -21,6 +25,10 @@ public final class GuestPoliciesAssignmentOsTypeGetArgs extends io.pulumi.resour
         return this.osArchitecture == null ? Input.empty() : this.osArchitecture;
     }
 
+    /**
+     * Targets VM instances with OS Inventory enabled and having the following OS short name, for example "debian" or "windows".
+     * 
+     */
     @InputImport(name="osShortName")
     private final @Nullable Input<String> osShortName;
 
@@ -28,6 +36,10 @@ public final class GuestPoliciesAssignmentOsTypeGetArgs extends io.pulumi.resour
         return this.osShortName == null ? Input.empty() : this.osShortName;
     }
 
+    /**
+     * Targets VM instances with OS Inventory enabled and having the following following OS version.
+     * 
+     */
     @InputImport(name="osVersion")
     private final @Nullable Input<String> osVersion;
 

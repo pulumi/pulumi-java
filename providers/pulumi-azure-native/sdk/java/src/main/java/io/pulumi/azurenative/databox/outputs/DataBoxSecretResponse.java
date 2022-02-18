@@ -12,10 +12,30 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DataBoxSecretResponse {
+    /**
+     * Per account level access credentials.
+     * 
+     */
     private final List<AccountCredentialDetailsResponse> accountCredentialDetails;
+    /**
+     * Password for out of the box experience on device.
+     * 
+     */
     private final String devicePassword;
+    /**
+     * Serial number of the assigned device.
+     * 
+     */
     private final String deviceSerialNumber;
+    /**
+     * The base 64 encoded public key to authenticate with the device
+     * 
+     */
     private final String encodedValidationCertPubKey;
+    /**
+     * Network configuration of the appliance.
+     * 
+     */
     private final List<ApplianceNetworkConfigurationResponse> networkConfigurations;
 
     @OutputCustomType.Constructor({"accountCredentialDetails","devicePassword","deviceSerialNumber","encodedValidationCertPubKey","networkConfigurations"})
@@ -32,18 +52,38 @@ public final class DataBoxSecretResponse {
         this.networkConfigurations = Objects.requireNonNull(networkConfigurations);
     }
 
+    /**
+     * Per account level access credentials.
+     * 
+     */
     public List<AccountCredentialDetailsResponse> getAccountCredentialDetails() {
         return this.accountCredentialDetails;
     }
+    /**
+     * Password for out of the box experience on device.
+     * 
+     */
     public String getDevicePassword() {
         return this.devicePassword;
     }
+    /**
+     * Serial number of the assigned device.
+     * 
+     */
     public String getDeviceSerialNumber() {
         return this.deviceSerialNumber;
     }
+    /**
+     * The base 64 encoded public key to authenticate with the device
+     * 
+     */
     public String getEncodedValidationCertPubKey() {
         return this.encodedValidationCertPubKey;
     }
+    /**
+     * Network configuration of the appliance.
+     * 
+     */
     public List<ApplianceNetworkConfigurationResponse> getNetworkConfigurations() {
         return this.networkConfigurations;
     }

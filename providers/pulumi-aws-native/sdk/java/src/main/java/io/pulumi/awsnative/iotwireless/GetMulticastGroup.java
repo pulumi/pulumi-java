@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMulticastGroup {
+/**
+ * Create and manage Multicast groups.
+ * 
+ */
     public static CompletableFuture<GetMulticastGroupResult> invokeAsync(GetMulticastGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iotwireless:getMulticastGroup", TypeShape.of(GetMulticastGroupResult.class), args == null ? GetMulticastGroupArgs.Empty : args, Utilities.withVersion(options));
     }

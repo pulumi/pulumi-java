@@ -12,6 +12,10 @@ public final class GetAzurePowerShellScriptArgs extends io.pulumi.resources.Invo
 
     public static final GetAzurePowerShellScriptArgs Empty = new GetAzurePowerShellScriptArgs();
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +23,10 @@ public final class GetAzurePowerShellScriptArgs extends io.pulumi.resources.Invo
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of the deployment script.
+     * 
+     */
     @InputImport(name="scriptName", required=true)
     private final String scriptName;
 

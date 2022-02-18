@@ -12,6 +12,10 @@ public final class GetRuleGroupsNamespaceArgs extends io.pulumi.resources.Invoke
 
     public static final GetRuleGroupsNamespaceArgs Empty = new GetRuleGroupsNamespaceArgs();
 
+    /**
+     * The RuleGroupsNamespace ARN.
+     * 
+     */
     @InputImport(name="arn", required=true)
     private final String arn;
 

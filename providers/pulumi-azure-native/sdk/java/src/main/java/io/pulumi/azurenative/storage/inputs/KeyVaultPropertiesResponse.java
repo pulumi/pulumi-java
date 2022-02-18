@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties of key vault.
+ * 
+ */
 public final class KeyVaultPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final KeyVaultPropertiesResponse Empty = new KeyVaultPropertiesResponse();
 
+    /**
+     * The object identifier of the current versioned Key Vault Key in use.
+     * 
+     */
     @InputImport(name="currentVersionedKeyIdentifier", required=true)
     private final String currentVersionedKeyIdentifier;
 
@@ -21,6 +29,10 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
         return this.currentVersionedKeyIdentifier;
     }
 
+    /**
+     * The name of KeyVault key.
+     * 
+     */
     @InputImport(name="keyName")
     private final @Nullable String keyName;
 
@@ -28,6 +40,10 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
         return this.keyName == null ? Optional.empty() : Optional.ofNullable(this.keyName);
     }
 
+    /**
+     * The Uri of KeyVault.
+     * 
+     */
     @InputImport(name="keyVaultUri")
     private final @Nullable String keyVaultUri;
 
@@ -35,6 +51,10 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
         return this.keyVaultUri == null ? Optional.empty() : Optional.ofNullable(this.keyVaultUri);
     }
 
+    /**
+     * The version of KeyVault key.
+     * 
+     */
     @InputImport(name="keyVersion")
     private final @Nullable String keyVersion;
 
@@ -42,6 +62,10 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
         return this.keyVersion == null ? Optional.empty() : Optional.ofNullable(this.keyVersion);
     }
 
+    /**
+     * Timestamp of last rotation of the Key Vault Key.
+     * 
+     */
     @InputImport(name="lastKeyRotationTimestamp", required=true)
     private final String lastKeyRotationTimestamp;
 

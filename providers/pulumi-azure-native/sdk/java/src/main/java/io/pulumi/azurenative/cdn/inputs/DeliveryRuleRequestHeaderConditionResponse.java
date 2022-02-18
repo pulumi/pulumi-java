@@ -9,10 +9,19 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Defines the RequestHeader condition for the delivery rule.
+ * 
+ */
 public final class DeliveryRuleRequestHeaderConditionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DeliveryRuleRequestHeaderConditionResponse Empty = new DeliveryRuleRequestHeaderConditionResponse();
 
+    /**
+     * The name of the condition for the delivery rule.
+     * Expected value is 'RequestHeader'.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -20,6 +29,10 @@ public final class DeliveryRuleRequestHeaderConditionResponse extends io.pulumi.
         return this.name;
     }
 
+    /**
+     * Defines the parameters for the condition.
+     * 
+     */
     @InputImport(name="parameters", required=true)
     private final RequestHeaderMatchConditionParametersResponse parameters;
 

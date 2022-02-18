@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ParametersLinkResponse {
+    /**
+     * If included, must match the ContentVersion in the template.
+     * 
+     */
     private final @Nullable String contentVersion;
+    /**
+     * The URI of the parameters file.
+     * 
+     */
     private final String uri;
 
     @OutputCustomType.Constructor({"contentVersion","uri"})
@@ -22,9 +30,17 @@ public final class ParametersLinkResponse {
         this.uri = Objects.requireNonNull(uri);
     }
 
+    /**
+     * If included, must match the ContentVersion in the template.
+     * 
+     */
     public Optional<String> getContentVersion() {
         return Optional.ofNullable(this.contentVersion);
     }
+    /**
+     * The URI of the parameters file.
+     * 
+     */
     public String getUri() {
         return this.uri;
     }

@@ -15,6 +15,10 @@ public final class WorkflowTemplatePlacementGetArgs extends io.pulumi.resources.
 
     public static final WorkflowTemplatePlacementGetArgs Empty = new WorkflowTemplatePlacementGetArgs();
 
+    /**
+     * Optional. A selector that chooses target cluster for jobs based on metadata. The selector is evaluated at the time each job is submitted.
+     * 
+     */
     @InputImport(name="clusterSelector")
     private final @Nullable Input<WorkflowTemplatePlacementClusterSelectorGetArgs> clusterSelector;
 
@@ -22,6 +26,10 @@ public final class WorkflowTemplatePlacementGetArgs extends io.pulumi.resources.
         return this.clusterSelector == null ? Input.empty() : this.clusterSelector;
     }
 
+    /**
+     * A cluster that is managed by the workflow.
+     * 
+     */
     @InputImport(name="managedCluster")
     private final @Nullable Input<WorkflowTemplatePlacementManagedClusterGetArgs> managedCluster;
 

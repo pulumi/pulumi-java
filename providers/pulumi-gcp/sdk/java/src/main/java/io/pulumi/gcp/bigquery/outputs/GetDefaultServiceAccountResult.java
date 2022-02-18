@@ -9,7 +9,16 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetDefaultServiceAccountResult {
+    /**
+     * The email address of the service account. This value is often used to refer to the service account
+     * in order to grant IAM permissions.
+     * 
+     */
     private final String email;
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
     private final String project;
 
@@ -23,9 +32,18 @@ public final class GetDefaultServiceAccountResult {
         this.project = Objects.requireNonNull(project);
     }
 
+    /**
+     * The email address of the service account. This value is often used to refer to the service account
+     * in order to grant IAM permissions.
+     * 
+     */
     public String getEmail() {
         return this.email;
     }
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }

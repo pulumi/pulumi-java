@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The hardware profile.
+ * 
+ */
 public final class HardwareProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final HardwareProfileResponse Empty = new HardwareProfileResponse();
 
+    /**
+     * The size of the VM
+     * 
+     */
     @InputImport(name="vmSize")
     private final @Nullable String vmSize;
 

@@ -19,6 +19,10 @@ public final class WorkflowTemplateJobPrestoJobGetArgs extends io.pulumi.resourc
 
     public static final WorkflowTemplateJobPrestoJobGetArgs Empty = new WorkflowTemplateJobPrestoJobGetArgs();
 
+    /**
+     * Optional. Presto client tags to attach to this query
+     * 
+     */
     @InputImport(name="clientTags")
     private final @Nullable Input<List<String>> clientTags;
 
@@ -26,6 +30,10 @@ public final class WorkflowTemplateJobPrestoJobGetArgs extends io.pulumi.resourc
         return this.clientTags == null ? Input.empty() : this.clientTags;
     }
 
+    /**
+     * Optional. Whether to continue executing queries if a query fails. The default value is `false`. Setting to `true` can be useful when executing independent parallel queries.
+     * 
+     */
     @InputImport(name="continueOnFailure")
     private final @Nullable Input<Boolean> continueOnFailure;
 
@@ -33,6 +41,10 @@ public final class WorkflowTemplateJobPrestoJobGetArgs extends io.pulumi.resourc
         return this.continueOnFailure == null ? Input.empty() : this.continueOnFailure;
     }
 
+    /**
+     * Optional. The runtime log config for job execution.
+     * 
+     */
     @InputImport(name="loggingConfig")
     private final @Nullable Input<WorkflowTemplateJobPrestoJobLoggingConfigGetArgs> loggingConfig;
 
@@ -40,6 +52,10 @@ public final class WorkflowTemplateJobPrestoJobGetArgs extends io.pulumi.resourc
         return this.loggingConfig == null ? Input.empty() : this.loggingConfig;
     }
 
+    /**
+     * Optional. The format in which query output will be displayed. See the Presto documentation for supported output formats
+     * 
+     */
     @InputImport(name="outputFormat")
     private final @Nullable Input<String> outputFormat;
 
@@ -47,6 +63,10 @@ public final class WorkflowTemplateJobPrestoJobGetArgs extends io.pulumi.resourc
         return this.outputFormat == null ? Input.empty() : this.outputFormat;
     }
 
+    /**
+     * Optional. The properties to set on daemon config files. Property keys are specified in `prefix:property` format, for example `core:hadoop.tmp.dir`. The following are supported prefixes and their mappings: * capacity-scheduler: `capacity-scheduler.xml` * core: `core-site.xml` * distcp: `distcp-default.xml` * hdfs: `hdfs-site.xml` * hive: `hive-site.xml` * mapred: `mapred-site.xml` * pig: `pig.properties` * spark: `spark-defaults.conf` * yarn: `yarn-site.xml` For more information, see (https://cloud.google.com/dataproc/docs/concepts/cluster-properties).
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<Map<String,String>> properties;
 
@@ -54,6 +74,10 @@ public final class WorkflowTemplateJobPrestoJobGetArgs extends io.pulumi.resourc
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The HCFS URI of the script that contains SQL queries.
+     * 
+     */
     @InputImport(name="queryFileUri")
     private final @Nullable Input<String> queryFileUri;
 
@@ -61,6 +85,10 @@ public final class WorkflowTemplateJobPrestoJobGetArgs extends io.pulumi.resourc
         return this.queryFileUri == null ? Input.empty() : this.queryFileUri;
     }
 
+    /**
+     * A list of queries.
+     * 
+     */
     @InputImport(name="queryList")
     private final @Nullable Input<WorkflowTemplateJobPrestoJobQueryListGetArgs> queryList;
 

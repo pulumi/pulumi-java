@@ -18,6 +18,10 @@ public final class ServiceAttachmentState extends io.pulumi.resources.ResourceAr
 
     public static final ServiceAttachmentState Empty = new ServiceAttachmentState();
 
+    /**
+     * An array of the consumer forwarding rules connected to this service attachment.
+     * 
+     */
     @InputImport(name="connectedEndpoints")
     private final @Nullable Input<List<ServiceAttachmentConnectedEndpointGetArgs>> connectedEndpoints;
 
@@ -25,6 +29,11 @@ public final class ServiceAttachmentState extends io.pulumi.resources.ResourceAr
         return this.connectedEndpoints == null ? Input.empty() : this.connectedEndpoints;
     }
 
+    /**
+     * The connection preference to use for this service attachment. Valid
+     * values include "ACCEPT_AUTOMATIC", "ACCEPT_MANUAL".
+     * 
+     */
     @InputImport(name="connectionPreference")
     private final @Nullable Input<String> connectionPreference;
 
@@ -32,6 +41,12 @@ public final class ServiceAttachmentState extends io.pulumi.resources.ResourceAr
         return this.connectionPreference == null ? Input.empty() : this.connectionPreference;
     }
 
+    /**
+     * An array of projects that are allowed to connect to this service
+     * attachment.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="consumerAcceptLists")
     private final @Nullable Input<List<ServiceAttachmentConsumerAcceptListGetArgs>> consumerAcceptLists;
 
@@ -39,6 +54,11 @@ public final class ServiceAttachmentState extends io.pulumi.resources.ResourceAr
         return this.consumerAcceptLists == null ? Input.empty() : this.consumerAcceptLists;
     }
 
+    /**
+     * An array of projects that are not allowed to connect to this service
+     * attachment.
+     * 
+     */
     @InputImport(name="consumerRejectLists")
     private final @Nullable Input<List<String>> consumerRejectLists;
 
@@ -46,6 +66,10 @@ public final class ServiceAttachmentState extends io.pulumi.resources.ResourceAr
         return this.consumerRejectLists == null ? Input.empty() : this.consumerRejectLists;
     }
 
+    /**
+     * An optional description of this resource.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -53,6 +77,12 @@ public final class ServiceAttachmentState extends io.pulumi.resources.ResourceAr
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * If true, enable the proxy protocol which is for supplying client TCP/IP
+     * address data in TCP connections that traverse proxies on their way to
+     * destination servers.
+     * 
+     */
     @InputImport(name="enableProxyProtocol")
     private final @Nullable Input<Boolean> enableProxyProtocol;
 
@@ -60,6 +90,10 @@ public final class ServiceAttachmentState extends io.pulumi.resources.ResourceAr
         return this.enableProxyProtocol == null ? Input.empty() : this.enableProxyProtocol;
     }
 
+    /**
+     * Fingerprint of this resource. This field is used internally during updates of this resource.
+     * 
+     */
     @InputImport(name="fingerprint")
     private final @Nullable Input<String> fingerprint;
 
@@ -67,6 +101,15 @@ public final class ServiceAttachmentState extends io.pulumi.resources.ResourceAr
         return this.fingerprint == null ? Input.empty() : this.fingerprint;
     }
 
+    /**
+     * Name of the resource. The name must be 1-63 characters long, and
+     * comply with RFC1035. Specifically, the name must be 1-63 characters
+     * long and match the regular expression `a-z?`
+     * which means the first character must be a lowercase letter, and all
+     * following characters must be a dash, lowercase letter, or digit,
+     * except the last character, which cannot be a dash.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -74,6 +117,10 @@ public final class ServiceAttachmentState extends io.pulumi.resources.ResourceAr
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * An array of subnets that is provided for NAT in this service attachment.
+     * 
+     */
     @InputImport(name="natSubnets")
     private final @Nullable Input<List<String>> natSubnets;
 
@@ -81,6 +128,11 @@ public final class ServiceAttachmentState extends io.pulumi.resources.ResourceAr
         return this.natSubnets == null ? Input.empty() : this.natSubnets;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -88,6 +140,10 @@ public final class ServiceAttachmentState extends io.pulumi.resources.ResourceAr
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * URL of the region where the resource resides.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 
@@ -95,6 +151,10 @@ public final class ServiceAttachmentState extends io.pulumi.resources.ResourceAr
         return this.region == null ? Input.empty() : this.region;
     }
 
+    /**
+     * The URI of the created resource.
+     * 
+     */
     @InputImport(name="selfLink")
     private final @Nullable Input<String> selfLink;
 
@@ -102,6 +162,11 @@ public final class ServiceAttachmentState extends io.pulumi.resources.ResourceAr
         return this.selfLink == null ? Input.empty() : this.selfLink;
     }
 
+    /**
+     * The URL of a forwarding rule that represents the service identified by
+     * this service attachment.
+     * 
+     */
     @InputImport(name="targetService")
     private final @Nullable Input<String> targetService;
 

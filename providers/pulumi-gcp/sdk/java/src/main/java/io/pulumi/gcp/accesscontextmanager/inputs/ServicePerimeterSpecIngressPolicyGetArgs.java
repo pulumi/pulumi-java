@@ -15,6 +15,12 @@ public final class ServicePerimeterSpecIngressPolicyGetArgs extends io.pulumi.re
 
     public static final ServicePerimeterSpecIngressPolicyGetArgs Empty = new ServicePerimeterSpecIngressPolicyGetArgs();
 
+    /**
+     * Defines the conditions on the source of a request causing this `IngressPolicy`
+     * to apply.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="ingressFrom")
     private final @Nullable Input<ServicePerimeterSpecIngressPolicyIngressFromGetArgs> ingressFrom;
 
@@ -22,6 +28,12 @@ public final class ServicePerimeterSpecIngressPolicyGetArgs extends io.pulumi.re
         return this.ingressFrom == null ? Input.empty() : this.ingressFrom;
     }
 
+    /**
+     * Defines the conditions on the `ApiOperation` and request destination that cause
+     * this `IngressPolicy` to apply.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="ingressTo")
     private final @Nullable Input<ServicePerimeterSpecIngressPolicyIngressToGetArgs> ingressTo;
 

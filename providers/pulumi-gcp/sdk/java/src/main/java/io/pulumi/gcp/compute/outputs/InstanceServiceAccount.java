@@ -12,7 +12,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class InstanceServiceAccount {
+    /**
+     * The service account e-mail address. If not given, the
+     * default Google Compute Engine service account is used.
+     * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
+     * 
+     */
     private final @Nullable String email;
+    /**
+     * A list of service scopes. Both OAuth2 URLs and gcloud
+     * short names are supported. To allow full access to all Cloud APIs, use the
+     * `cloud-platform` scope. See a complete list of scopes [here](https://cloud.google.com/sdk/gcloud/reference/alpha/compute/instances/set-scopes#--scopes).
+     * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
+     * 
+     */
     private final List<String> scopes;
 
     @OutputCustomType.Constructor({"email","scopes"})
@@ -23,9 +36,22 @@ public final class InstanceServiceAccount {
         this.scopes = Objects.requireNonNull(scopes);
     }
 
+    /**
+     * The service account e-mail address. If not given, the
+     * default Google Compute Engine service account is used.
+     * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
+     * 
+     */
     public Optional<String> getEmail() {
         return Optional.ofNullable(this.email);
     }
+    /**
+     * A list of service scopes. Both OAuth2 URLs and gcloud
+     * short names are supported. To allow full access to all Cloud APIs, use the
+     * `cloud-platform` scope. See a complete list of scopes [here](https://cloud.google.com/sdk/gcloud/reference/alpha/compute/instances/set-scopes#--scopes).
+     * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
+     * 
+     */
     public List<String> getScopes() {
         return this.scopes;
     }

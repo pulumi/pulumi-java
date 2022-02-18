@@ -11,10 +11,19 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * PyTorch distribution configuration.
+ * 
+ */
 public final class PyTorchResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PyTorchResponse Empty = new PyTorchResponse();
 
+    /**
+     * Enum to determine the job distribution type.
+     * Expected value is 'PyTorch'.
+     * 
+     */
     @InputImport(name="distributionType", required=true)
     private final String distributionType;
 
@@ -22,6 +31,10 @@ public final class PyTorchResponse extends io.pulumi.resources.InvokeArgs {
         return this.distributionType;
     }
 
+    /**
+     * Total process count for the distributed job.
+     * 
+     */
     @InputImport(name="processCount")
     private final @Nullable Integer processCount;
 

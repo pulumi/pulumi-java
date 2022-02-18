@@ -13,9 +13,25 @@ import javax.annotation.Nullable;
 @OutputCustomType
 public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAltName {
     private final @Nullable List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSan> customSans;
+    /**
+     * Contains only valid, fully-qualified host names.
+     * 
+     */
     private final @Nullable List<String> dnsNames;
+    /**
+     * Contains only valid RFC 2822 E-mail addresses.
+     * 
+     */
     private final @Nullable List<String> emailAddresses;
+    /**
+     * Contains only valid 32-bit IPv4 addresses or RFC 4291 IPv6 addresses.
+     * 
+     */
     private final @Nullable List<String> ipAddresses;
+    /**
+     * Contains only valid RFC 3986 URIs.
+     * 
+     */
     private final @Nullable List<String> uris;
 
     @OutputCustomType.Constructor({"customSans","dnsNames","emailAddresses","ipAddresses","uris"})
@@ -35,15 +51,31 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
     public List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSan> getCustomSans() {
         return this.customSans == null ? List.of() : this.customSans;
     }
+    /**
+     * Contains only valid, fully-qualified host names.
+     * 
+     */
     public List<String> getDnsNames() {
         return this.dnsNames == null ? List.of() : this.dnsNames;
     }
+    /**
+     * Contains only valid RFC 2822 E-mail addresses.
+     * 
+     */
     public List<String> getEmailAddresses() {
         return this.emailAddresses == null ? List.of() : this.emailAddresses;
     }
+    /**
+     * Contains only valid 32-bit IPv4 addresses or RFC 4291 IPv6 addresses.
+     * 
+     */
     public List<String> getIpAddresses() {
         return this.ipAddresses == null ? List.of() : this.ipAddresses;
     }
+    /**
+     * Contains only valid RFC 3986 URIs.
+     * 
+     */
     public List<String> getUris() {
         return this.uris == null ? List.of() : this.uris;
     }

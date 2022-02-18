@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DefenderForContainersAwsOfferingResponseCloudWatchToKinesis {
+    /**
+     * The cloud role ARN in AWS for this feature
+     * 
+     */
     private final @Nullable String cloudRoleArn;
 
     @OutputCustomType.Constructor({"cloudRoleArn"})
@@ -18,6 +22,10 @@ public final class DefenderForContainersAwsOfferingResponseCloudWatchToKinesis {
         this.cloudRoleArn = cloudRoleArn;
     }
 
+    /**
+     * The cloud role ARN in AWS for this feature
+     * 
+     */
     public Optional<String> getCloudRoleArn() {
         return Optional.ofNullable(this.cloudRoleArn);
     }

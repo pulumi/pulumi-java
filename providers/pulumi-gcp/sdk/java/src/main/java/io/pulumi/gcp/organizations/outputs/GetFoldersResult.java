@@ -11,7 +11,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetFoldersResult {
+    /**
+     * A list of projects matching the provided filter. Structure is defined below.
+     * 
+     */
     private final List<GetFoldersFolder> folders;
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
     private final String parentId;
 
@@ -25,9 +33,17 @@ public final class GetFoldersResult {
         this.parentId = Objects.requireNonNull(parentId);
     }
 
+    /**
+     * A list of projects matching the provided filter. Structure is defined below.
+     * 
+     */
     public List<GetFoldersFolder> getFolders() {
         return this.folders;
     }
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }

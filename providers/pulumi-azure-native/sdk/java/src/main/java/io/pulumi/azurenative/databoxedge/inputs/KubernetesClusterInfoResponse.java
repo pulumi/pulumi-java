@@ -11,10 +11,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Kubernetes cluster configuration
+ * 
+ */
 public final class KubernetesClusterInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final KubernetesClusterInfoResponse Empty = new KubernetesClusterInfoResponse();
 
+    /**
+     * Etcd configuration
+     * 
+     */
     @InputImport(name="etcdInfo", required=true)
     private final EtcdInfoResponse etcdInfo;
 
@@ -22,6 +30,10 @@ public final class KubernetesClusterInfoResponse extends io.pulumi.resources.Inv
         return this.etcdInfo;
     }
 
+    /**
+     * Kubernetes cluster nodes
+     * 
+     */
     @InputImport(name="nodes", required=true)
     private final List<NodeInfoResponse> nodes;
 
@@ -29,6 +41,10 @@ public final class KubernetesClusterInfoResponse extends io.pulumi.resources.Inv
         return this.nodes;
     }
 
+    /**
+     * Kubernetes cluster version
+     * 
+     */
     @InputImport(name="version", required=true)
     private final String version;
 

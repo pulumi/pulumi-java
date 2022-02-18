@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWorkspaceCollection {
+/**
+ * API Version: 2016-01-29.
+ * 
+ */
     public static CompletableFuture<GetWorkspaceCollectionResult> invokeAsync(GetWorkspaceCollectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:powerbi:getWorkspaceCollection", TypeShape.of(GetWorkspaceCollectionResult.class), args == null ? GetWorkspaceCollectionArgs.Empty : args, Utilities.withVersion(options));
     }

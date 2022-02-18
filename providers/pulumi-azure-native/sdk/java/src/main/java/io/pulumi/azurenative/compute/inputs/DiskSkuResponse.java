@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The disks sku name. Can be Standard_LRS, Premium_LRS, StandardSSD_LRS, UltraSSD_LRS, Premium_ZRS, or StandardSSD_ZRS.
+ * 
+ */
 public final class DiskSkuResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DiskSkuResponse Empty = new DiskSkuResponse();
 
+    /**
+     * The sku name.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -21,6 +29,10 @@ public final class DiskSkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The sku tier.
+     * 
+     */
     @InputImport(name="tier", required=true)
     private final String tier;
 

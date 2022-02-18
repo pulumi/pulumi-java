@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ConnectorProfileServiceNowConnectorProfileCredentials {
+    /**
+     * The password that corresponds to the username.
+     * 
+     */
     private final String password;
+    /**
+     * The name of the user.
+     * 
+     */
     private final String username;
 
     @OutputCustomType.Constructor({"password","username"})
@@ -20,9 +28,17 @@ public final class ConnectorProfileServiceNowConnectorProfileCredentials {
         this.username = Objects.requireNonNull(username);
     }
 
+    /**
+     * The password that corresponds to the username.
+     * 
+     */
     public String getPassword() {
         return this.password;
     }
+    /**
+     * The name of the user.
+     * 
+     */
     public String getUsername() {
         return this.username;
     }

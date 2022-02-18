@@ -12,6 +12,10 @@ public final class GetGameServerDeploymentRolloutArgs extends io.pulumi.resource
 
     public static final GetGameServerDeploymentRolloutArgs Empty = new GetGameServerDeploymentRolloutArgs();
 
+    /**
+     * The deployment to get the rollout state from. Only 1 rollout must be associated with each deployment.
+     * 
+     */
     @InputImport(name="deploymentId", required=true)
     private final String deploymentId;
 

@@ -14,33 +14,86 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Linked storage accounts top level resource container.
+ * API Version: 2020-08-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:operationalinsights:LinkedStorageAccount CustomLogs /subscriptions/00000000-0000-0000-0000-00000000000/resourcegroups/mms-eus/providers/microsoft.operationalinsights/workspaces/testLinkStorageAccountsWS/linkedStorageAccounts/CustomLogs 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:operationalinsights:LinkedStorageAccount")
 public class LinkedStorageAccount extends io.pulumi.resources.CustomResource {
+    /**
+     * Linked storage accounts type.
+     * 
+     */
     @OutputExport(name="dataSourceType", type=String.class, parameters={})
     private Output<String> dataSourceType;
 
+    /**
+     * @return Linked storage accounts type.
+     * 
+     */
     public Output<String> getDataSourceType() {
         return this.dataSourceType;
     }
+    /**
+     * The name of the resource
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Linked storage accounts resources ids.
+     * 
+     */
     @OutputExport(name="storageAccountIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> storageAccountIds;
 
+    /**
+     * @return Linked storage accounts resources ids.
+     * 
+     */
     public Output</* @Nullable */ List<String>> getStorageAccountIds() {
         return this.storageAccountIds;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public LinkedStorageAccount(String name, LinkedStorageAccountArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:operationalinsights:LinkedStorageAccount", name, args == null ? LinkedStorageAccountArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -61,6 +114,14 @@ public class LinkedStorageAccount extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static LinkedStorageAccount get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new LinkedStorageAccount(name, id, options);
     }

@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ReportConfigAggregationResponse {
+    /**
+     * The name of the aggregation function to use.
+     * 
+     */
     private final String function;
+    /**
+     * The name of the column to aggregate.
+     * 
+     */
     private final String name;
 
     @OutputCustomType.Constructor({"function","name"})
@@ -20,9 +28,17 @@ public final class ReportConfigAggregationResponse {
         this.name = Objects.requireNonNull(name);
     }
 
+    /**
+     * The name of the aggregation function to use.
+     * 
+     */
     public String getFunction() {
         return this.function;
     }
+    /**
+     * The name of the column to aggregate.
+     * 
+     */
     public String getName() {
         return this.name;
     }

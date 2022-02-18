@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Operation request/response representation details.
+ * 
+ */
 public final class RepresentationContractResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RepresentationContractResponse Empty = new RepresentationContractResponse();
 
+    /**
+     * Specifies a registered or custom content type for this representation, e.g. application/xml.
+     * 
+     */
     @InputImport(name="contentType", required=true)
     private final String contentType;
 
@@ -23,6 +31,10 @@ public final class RepresentationContractResponse extends io.pulumi.resources.In
         return this.contentType;
     }
 
+    /**
+     * Collection of form parameters. Required if 'contentType' value is either 'application/x-www-form-urlencoded' or 'multipart/form-data'..
+     * 
+     */
     @InputImport(name="formParameters")
     private final @Nullable List<ParameterContractResponse> formParameters;
 
@@ -30,6 +42,10 @@ public final class RepresentationContractResponse extends io.pulumi.resources.In
         return this.formParameters == null ? List.of() : this.formParameters;
     }
 
+    /**
+     * An example of the representation.
+     * 
+     */
     @InputImport(name="sample")
     private final @Nullable String sample;
 
@@ -37,6 +53,10 @@ public final class RepresentationContractResponse extends io.pulumi.resources.In
         return this.sample == null ? Optional.empty() : Optional.ofNullable(this.sample);
     }
 
+    /**
+     * Schema identifier. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.
+     * 
+     */
     @InputImport(name="schemaId")
     private final @Nullable String schemaId;
 
@@ -44,6 +64,10 @@ public final class RepresentationContractResponse extends io.pulumi.resources.In
         return this.schemaId == null ? Optional.empty() : Optional.ofNullable(this.schemaId);
     }
 
+    /**
+     * Type name defined by the schema. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.
+     * 
+     */
     @InputImport(name="typeName")
     private final @Nullable String typeName;
 

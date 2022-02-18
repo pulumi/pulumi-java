@@ -14,6 +14,10 @@ public final class CanaryS3Encryption extends io.pulumi.resources.InvokeArgs {
 
     public static final CanaryS3Encryption Empty = new CanaryS3Encryption();
 
+    /**
+     * Encryption mode for encrypting artifacts when uploading to S3. Valid values: SSE_S3 and SSE_KMS.
+     * 
+     */
     @InputImport(name="encryptionMode")
     private final @Nullable String encryptionMode;
 
@@ -21,6 +25,10 @@ public final class CanaryS3Encryption extends io.pulumi.resources.InvokeArgs {
         return this.encryptionMode == null ? Optional.empty() : Optional.ofNullable(this.encryptionMode);
     }
 
+    /**
+     * KMS key Arn for encrypting artifacts when uploading to S3. You must specify KMS key Arn for SSE_KMS encryption mode only.
+     * 
+     */
     @InputImport(name="kmsKeyArn")
     private final @Nullable String kmsKeyArn;
 

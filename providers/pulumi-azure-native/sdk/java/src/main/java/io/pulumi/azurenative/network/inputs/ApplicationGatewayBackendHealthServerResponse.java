@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Application gateway backendhealth http settings.
+ * 
+ */
 public final class ApplicationGatewayBackendHealthServerResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApplicationGatewayBackendHealthServerResponse Empty = new ApplicationGatewayBackendHealthServerResponse();
 
+    /**
+     * IP address or FQDN of backend server.
+     * 
+     */
     @InputImport(name="address")
     private final @Nullable String address;
 
@@ -22,6 +30,10 @@ public final class ApplicationGatewayBackendHealthServerResponse extends io.pulu
         return this.address == null ? Optional.empty() : Optional.ofNullable(this.address);
     }
 
+    /**
+     * Health of backend server.
+     * 
+     */
     @InputImport(name="health")
     private final @Nullable String health;
 
@@ -29,6 +41,10 @@ public final class ApplicationGatewayBackendHealthServerResponse extends io.pulu
         return this.health == null ? Optional.empty() : Optional.ofNullable(this.health);
     }
 
+    /**
+     * Health Probe Log.
+     * 
+     */
     @InputImport(name="healthProbeLog")
     private final @Nullable String healthProbeLog;
 
@@ -36,6 +52,10 @@ public final class ApplicationGatewayBackendHealthServerResponse extends io.pulu
         return this.healthProbeLog == null ? Optional.empty() : Optional.ofNullable(this.healthProbeLog);
     }
 
+    /**
+     * Reference to IP configuration of backend server.
+     * 
+     */
     @InputImport(name="ipConfiguration")
     private final @Nullable NetworkInterfaceIPConfigurationResponse ipConfiguration;
 

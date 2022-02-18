@@ -19,17 +19,66 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SalesforceServiceCloudLinkedServiceResponse {
+    /**
+     * List of tags that can be used for describing the linked service.
+     * 
+     */
     private final @Nullable List<Object> annotations;
+    /**
+     * The Salesforce API version used in ADF. Type: string (or Expression with resultType string).
+     * 
+     */
     private final @Nullable Object apiVersion;
+    /**
+     * The integration runtime reference.
+     * 
+     */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+    /**
+     * Linked service description.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     private final @Nullable Object encryptedCredential;
+    /**
+     * The URL of Salesforce Service Cloud instance. Default is 'https://login.salesforce.com'. To copy data from sandbox, specify 'https://test.salesforce.com'. To copy data from custom domain, specify, for example, 'https://[domain].my.salesforce.com'. Type: string (or Expression with resultType string).
+     * 
+     */
     private final @Nullable Object environmentUrl;
+    /**
+     * Extended properties appended to the connection string. Type: string (or Expression with resultType string).
+     * 
+     */
     private final @Nullable Object extendedProperties;
+    /**
+     * Parameters for linked service.
+     * 
+     */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+    /**
+     * The password for Basic authentication of the Salesforce instance.
+     * 
+     */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
+    /**
+     * The security token is optional to remotely access Salesforce instance.
+     * 
+     */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> securityToken;
+    /**
+     * Type of linked service.
+     * Expected value is 'SalesforceServiceCloud'.
+     * 
+     */
     private final String type;
+    /**
+     * The username for Basic authentication of the Salesforce instance. Type: string (or Expression with resultType string).
+     * 
+     */
     private final @Nullable Object username;
 
     @OutputCustomType.Constructor({"annotations","apiVersion","connectVia","description","encryptedCredential","environmentUrl","extendedProperties","parameters","password","securityToken","type","username"})
@@ -60,39 +109,88 @@ public final class SalesforceServiceCloudLinkedServiceResponse {
         this.username = username;
     }
 
+    /**
+     * List of tags that can be used for describing the linked service.
+     * 
+     */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
+    /**
+     * The Salesforce API version used in ADF. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> getApiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
+    /**
+     * The integration runtime reference.
+     * 
+     */
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return Optional.ofNullable(this.connectVia);
     }
+    /**
+     * Linked service description.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> getEncryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
+    /**
+     * The URL of Salesforce Service Cloud instance. Default is 'https://login.salesforce.com'. To copy data from sandbox, specify 'https://test.salesforce.com'. To copy data from custom domain, specify, for example, 'https://[domain].my.salesforce.com'. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> getEnvironmentUrl() {
         return Optional.ofNullable(this.environmentUrl);
     }
+    /**
+     * Extended properties appended to the connection string. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> getExtendedProperties() {
         return Optional.ofNullable(this.extendedProperties);
     }
+    /**
+     * Parameters for linked service.
+     * 
+     */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
+    /**
+     * The password for Basic authentication of the Salesforce instance.
+     * 
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getPassword() {
         return Optional.ofNullable(this.password);
     }
+    /**
+     * The security token is optional to remotely access Salesforce instance.
+     * 
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getSecurityToken() {
         return Optional.ofNullable(this.securityToken);
     }
+    /**
+     * Type of linked service.
+     * Expected value is 'SalesforceServiceCloud'.
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * The username for Basic authentication of the Salesforce instance. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> getUsername() {
         return Optional.ofNullable(this.username);
     }

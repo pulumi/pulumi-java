@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * An object representing the VPC configuration to use for an Amazon EKS cluster.
+ * 
+ */
 public final class ClusterResourcesVpcConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ClusterResourcesVpcConfigArgs Empty = new ClusterResourcesVpcConfigArgs();
 
+    /**
+     * Set this value to true to enable private access for your cluster's Kubernetes API server endpoint. If you enable private access, Kubernetes API requests from within your cluster's VPC use the private VPC endpoint. The default value for this parameter is false, which disables private access for your Kubernetes API server. If you disable private access and you have nodes or AWS Fargate pods in the cluster, then ensure that publicAccessCidrs includes the necessary CIDR blocks for communication with the nodes or Fargate pods.
+     * 
+     */
     @InputImport(name="endpointPrivateAccess")
     private final @Nullable Input<Boolean> endpointPrivateAccess;
 
@@ -23,6 +31,10 @@ public final class ClusterResourcesVpcConfigArgs extends io.pulumi.resources.Res
         return this.endpointPrivateAccess == null ? Input.empty() : this.endpointPrivateAccess;
     }
 
+    /**
+     * Set this value to false to disable public access to your cluster's Kubernetes API server endpoint. If you disable public access, your cluster's Kubernetes API server can only receive requests from within the cluster VPC. The default value for this parameter is true, which enables public access for your Kubernetes API server.
+     * 
+     */
     @InputImport(name="endpointPublicAccess")
     private final @Nullable Input<Boolean> endpointPublicAccess;
 
@@ -30,6 +42,10 @@ public final class ClusterResourcesVpcConfigArgs extends io.pulumi.resources.Res
         return this.endpointPublicAccess == null ? Input.empty() : this.endpointPublicAccess;
     }
 
+    /**
+     * The CIDR blocks that are allowed access to your cluster's public Kubernetes API server endpoint. Communication to the endpoint from addresses outside of the CIDR blocks that you specify is denied. The default value is 0.0.0.0/0. If you've disabled private endpoint access and you have nodes or AWS Fargate pods in the cluster, then ensure that you specify the necessary CIDR blocks.
+     * 
+     */
     @InputImport(name="publicAccessCidrs")
     private final @Nullable Input<List<String>> publicAccessCidrs;
 
@@ -37,6 +53,10 @@ public final class ClusterResourcesVpcConfigArgs extends io.pulumi.resources.Res
         return this.publicAccessCidrs == null ? Input.empty() : this.publicAccessCidrs;
     }
 
+    /**
+     * Specify one or more security groups for the cross-account elastic network interfaces that Amazon EKS creates to use to allow communication between your worker nodes and the Kubernetes control plane. If you don't specify a security group, the default security group for your VPC is used.
+     * 
+     */
     @InputImport(name="securityGroupIds")
     private final @Nullable Input<List<String>> securityGroupIds;
 
@@ -44,6 +64,10 @@ public final class ClusterResourcesVpcConfigArgs extends io.pulumi.resources.Res
         return this.securityGroupIds == null ? Input.empty() : this.securityGroupIds;
     }
 
+    /**
+     * Specify subnets for your Amazon EKS nodes. Amazon EKS creates cross-account elastic network interfaces in these subnets to allow communication between your nodes and the Kubernetes control plane.
+     * 
+     */
     @InputImport(name="subnetIds", required=true)
     private final Input<List<String>> subnetIds;
 

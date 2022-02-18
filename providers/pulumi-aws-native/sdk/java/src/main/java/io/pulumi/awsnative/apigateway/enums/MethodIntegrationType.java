@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The type of backend that your method is running.
+     * 
+     */
     @EnumType
     public enum MethodIntegrationType {
         Aws("AWS"),

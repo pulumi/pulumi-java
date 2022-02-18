@@ -14,6 +14,13 @@ public final class InstanceMaintenanceScheduleGetArgs extends io.pulumi.resource
 
     public static final InstanceMaintenanceScheduleGetArgs Empty = new InstanceMaintenanceScheduleGetArgs();
 
+    /**
+     * - 
+     * Output only. The end time of any upcoming scheduled maintenance for this instance.
+     * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
+     * resolution and up to nine fractional digits.
+     * 
+     */
     @InputImport(name="endTime")
     private final @Nullable Input<String> endTime;
 
@@ -21,6 +28,14 @@ public final class InstanceMaintenanceScheduleGetArgs extends io.pulumi.resource
         return this.endTime == null ? Input.empty() : this.endTime;
     }
 
+    /**
+     * - 
+     * Output only. The deadline that the maintenance schedule start time
+     * can not go beyond, including reschedule.
+     * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
+     * resolution and up to nine fractional digits.
+     * 
+     */
     @InputImport(name="scheduleDeadlineTime")
     private final @Nullable Input<String> scheduleDeadlineTime;
 
@@ -28,6 +43,13 @@ public final class InstanceMaintenanceScheduleGetArgs extends io.pulumi.resource
         return this.scheduleDeadlineTime == null ? Input.empty() : this.scheduleDeadlineTime;
     }
 
+    /**
+     * - 
+     * Output only. The start time of any upcoming scheduled maintenance for this instance.
+     * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
+     * resolution and up to nine fractional digits.
+     * 
+     */
     @InputImport(name="startTime")
     private final @Nullable Input<String> startTime;
 

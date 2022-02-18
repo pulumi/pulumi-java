@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specification for the BigQuery connection.
+ * 
+ */
 public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs Empty = new GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs();
 
+    /**
+     * Specification for the BigQuery connection to a Cloud SQL instance.
+     * 
+     */
     @InputImport(name="cloudSql")
     private final @Nullable Input<GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs> cloudSql;
 
@@ -23,6 +31,10 @@ public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs extends io
         return this.cloudSql == null ? Input.empty() : this.cloudSql;
     }
 
+    /**
+     * The type of the BigQuery connection.
+     * 
+     */
     @InputImport(name="connectionType")
     private final @Nullable Input<GoogleCloudDatacatalogV1BigQueryConnectionSpecConnectionType> connectionType;
 
@@ -30,6 +42,10 @@ public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs extends io
         return this.connectionType == null ? Input.empty() : this.connectionType;
     }
 
+    /**
+     * True if there are credentials attached to the BigQuery connection; false otherwise.
+     * 
+     */
     @InputImport(name="hasCredential")
     private final @Nullable Input<Boolean> hasCredential;
 

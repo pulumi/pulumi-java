@@ -18,87 +18,235 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * EdgeCacheService defines the IP addresses, protocols, security policies, cache policies and routing configuration.
+ * 
+ * > **Warning:** These resources require allow-listing to use, and are not openly available to all Cloud customers. Engage with your Cloud account team to discuss how to onboard.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * EdgeCacheService can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:networkservices/edgeCacheService:EdgeCacheService default projects/{{project}}/locations/global/edgeCacheServices/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:networkservices/edgeCacheService:EdgeCacheService default {{project}}/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:networkservices/edgeCacheService:EdgeCacheService default {{name}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:networkservices/edgeCacheService:EdgeCacheService")
 public class EdgeCacheService extends io.pulumi.resources.CustomResource {
+    /**
+     * A human-readable description of the resource.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return A human-readable description of the resource.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * HTTP/3 (IETF QUIC) and Google QUIC are enabled by default.
+     * 
+     */
     @OutputExport(name="disableQuic", type=Boolean.class, parameters={})
     private Output<Boolean> disableQuic;
 
+    /**
+     * @return HTTP/3 (IETF QUIC) and Google QUIC are enabled by default.
+     * 
+     */
     public Output<Boolean> getDisableQuic() {
         return this.disableQuic;
     }
+    /**
+     * Resource URL that points at the Cloud Armor edge security policy that is applied on each request against the EdgeCacheService.
+     * 
+     */
     @OutputExport(name="edgeSecurityPolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> edgeSecurityPolicy;
 
+    /**
+     * @return Resource URL that points at the Cloud Armor edge security policy that is applied on each request against the EdgeCacheService.
+     * 
+     */
     public Output</* @Nullable */ String> getEdgeSecurityPolicy() {
         return this.edgeSecurityPolicy;
     }
+    /**
+     * URLs to sslCertificate resources that are used to authenticate connections between users and the EdgeCacheService.
+     * Note that only "global" certificates with a "scope" of "EDGE_CACHE" can be attached to an EdgeCacheService.
+     * 
+     */
     @OutputExport(name="edgeSslCertificates", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> edgeSslCertificates;
 
+    /**
+     * @return URLs to sslCertificate resources that are used to authenticate connections between users and the EdgeCacheService.
+     * Note that only "global" certificates with a "scope" of "EDGE_CACHE" can be attached to an EdgeCacheService.
+     * 
+     */
     public Output</* @Nullable */ List<String>> getEdgeSslCertificates() {
         return this.edgeSslCertificates;
     }
+    /**
+     * The IPv4 addresses associated with this service. Addresses are static for the lifetime of the service.
+     * 
+     */
     @OutputExport(name="ipv4Addresses", type=List.class, parameters={String.class})
     private Output<List<String>> ipv4Addresses;
 
+    /**
+     * @return The IPv4 addresses associated with this service. Addresses are static for the lifetime of the service.
+     * 
+     */
     public Output<List<String>> getIpv4Addresses() {
         return this.ipv4Addresses;
     }
+    /**
+     * The IPv6 addresses associated with this service. Addresses are static for the lifetime of the service.
+     * 
+     */
     @OutputExport(name="ipv6Addresses", type=List.class, parameters={String.class})
     private Output<List<String>> ipv6Addresses;
 
+    /**
+     * @return The IPv6 addresses associated with this service. Addresses are static for the lifetime of the service.
+     * 
+     */
     public Output<List<String>> getIpv6Addresses() {
         return this.ipv6Addresses;
     }
+    /**
+     * Set of label tags associated with the EdgeCache resource.
+     * 
+     */
     @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
+    /**
+     * @return Set of label tags associated with the EdgeCache resource.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getLabels() {
         return this.labels;
     }
+    /**
+     * Specifies the logging options for the traffic served by this service. If logging is enabled, logs will be exported to Cloud Logging.
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="logConfig", type=EdgeCacheServiceLogConfig.class, parameters={})
     private Output</* @Nullable */ EdgeCacheServiceLogConfig> logConfig;
 
+    /**
+     * @return Specifies the logging options for the traffic served by this service. If logging is enabled, logs will be exported to Cloud Logging.
+     * Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ EdgeCacheServiceLogConfig> getLogConfig() {
         return this.logConfig;
     }
+    /**
+     * The name of the query parameter to match. The query parameter must exist in the request, in the absence of which the request match fails.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the query parameter to match. The query parameter must exist in the request, in the absence of which the request match fails.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * Require TLS (HTTPS) for all clients connecting to this service.
+     * Clients who connect over HTTP (port 80) will receive a HTTP 301 to the same URL over HTTPS (port 443).
+     * You must have at least one (1) edgeSslCertificate specified to enable this.
+     * 
+     */
     @OutputExport(name="requireTls", type=Boolean.class, parameters={})
     private Output<Boolean> requireTls;
 
+    /**
+     * @return Require TLS (HTTPS) for all clients connecting to this service.
+     * Clients who connect over HTTP (port 80) will receive a HTTP 301 to the same URL over HTTPS (port 443).
+     * You must have at least one (1) edgeSslCertificate specified to enable this.
+     * 
+     */
     public Output<Boolean> getRequireTls() {
         return this.requireTls;
     }
+    /**
+     * Defines how requests are routed, modified, cached and/or which origin content is filled from.
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="routing", type=EdgeCacheServiceRouting.class, parameters={})
     private Output<EdgeCacheServiceRouting> routing;
 
+    /**
+     * @return Defines how requests are routed, modified, cached and/or which origin content is filled from.
+     * Structure is documented below.
+     * 
+     */
     public Output<EdgeCacheServiceRouting> getRouting() {
         return this.routing;
     }
+    /**
+     * URL of the SslPolicy resource that will be associated with the EdgeCacheService.
+     * If not set, the EdgeCacheService has no SSL policy configured, and will default to the "COMPATIBLE" policy.
+     * 
+     */
     @OutputExport(name="sslPolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> sslPolicy;
 
+    /**
+     * @return URL of the SslPolicy resource that will be associated with the EdgeCacheService.
+     * If not set, the EdgeCacheService has no SSL policy configured, and will default to the "COMPATIBLE" policy.
+     * 
+     */
     public Output</* @Nullable */ String> getSslPolicy() {
         return this.sslPolicy;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public EdgeCacheService(String name, EdgeCacheServiceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:networkservices/edgeCacheService:EdgeCacheService", name, args == null ? EdgeCacheServiceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -114,6 +262,15 @@ public class EdgeCacheService extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static EdgeCacheService get(String name, Input<String> id, @Nullable EdgeCacheServiceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new EdgeCacheService(name, id, state, options);
     }

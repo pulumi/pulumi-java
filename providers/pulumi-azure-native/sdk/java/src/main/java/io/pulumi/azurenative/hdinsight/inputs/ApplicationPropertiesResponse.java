@@ -16,10 +16,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The HDInsight cluster application GET response.
+ * 
+ */
 public final class ApplicationPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApplicationPropertiesResponse Empty = new ApplicationPropertiesResponse();
 
+    /**
+     * The application state.
+     * 
+     */
     @InputImport(name="applicationState", required=true)
     private final String applicationState;
 
@@ -27,6 +35,10 @@ public final class ApplicationPropertiesResponse extends io.pulumi.resources.Inv
         return this.applicationState;
     }
 
+    /**
+     * The application type.
+     * 
+     */
     @InputImport(name="applicationType")
     private final @Nullable String applicationType;
 
@@ -34,6 +46,10 @@ public final class ApplicationPropertiesResponse extends io.pulumi.resources.Inv
         return this.applicationType == null ? Optional.empty() : Optional.ofNullable(this.applicationType);
     }
 
+    /**
+     * The list of roles in the cluster.
+     * 
+     */
     @InputImport(name="computeProfile")
     private final @Nullable ComputeProfileResponse computeProfile;
 
@@ -41,6 +57,10 @@ public final class ApplicationPropertiesResponse extends io.pulumi.resources.Inv
         return this.computeProfile == null ? Optional.empty() : Optional.ofNullable(this.computeProfile);
     }
 
+    /**
+     * The application create date time.
+     * 
+     */
     @InputImport(name="createdDate", required=true)
     private final String createdDate;
 
@@ -48,6 +68,10 @@ public final class ApplicationPropertiesResponse extends io.pulumi.resources.Inv
         return this.createdDate;
     }
 
+    /**
+     * The list of errors.
+     * 
+     */
     @InputImport(name="errors")
     private final @Nullable List<ErrorsResponse> errors;
 
@@ -55,6 +79,10 @@ public final class ApplicationPropertiesResponse extends io.pulumi.resources.Inv
         return this.errors == null ? List.of() : this.errors;
     }
 
+    /**
+     * The list of application HTTPS endpoints.
+     * 
+     */
     @InputImport(name="httpsEndpoints")
     private final @Nullable List<ApplicationGetHttpsEndpointResponse> httpsEndpoints;
 
@@ -62,6 +90,10 @@ public final class ApplicationPropertiesResponse extends io.pulumi.resources.Inv
         return this.httpsEndpoints == null ? List.of() : this.httpsEndpoints;
     }
 
+    /**
+     * The list of install script actions.
+     * 
+     */
     @InputImport(name="installScriptActions")
     private final @Nullable List<RuntimeScriptActionResponse> installScriptActions;
 
@@ -69,6 +101,10 @@ public final class ApplicationPropertiesResponse extends io.pulumi.resources.Inv
         return this.installScriptActions == null ? List.of() : this.installScriptActions;
     }
 
+    /**
+     * The marketplace identifier.
+     * 
+     */
     @InputImport(name="marketplaceIdentifier", required=true)
     private final String marketplaceIdentifier;
 
@@ -76,6 +112,10 @@ public final class ApplicationPropertiesResponse extends io.pulumi.resources.Inv
         return this.marketplaceIdentifier;
     }
 
+    /**
+     * The provisioning state of the application.
+     * 
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -83,6 +123,10 @@ public final class ApplicationPropertiesResponse extends io.pulumi.resources.Inv
         return this.provisioningState;
     }
 
+    /**
+     * The list of application SSH endpoints.
+     * 
+     */
     @InputImport(name="sshEndpoints")
     private final @Nullable List<ApplicationGetEndpointResponse> sshEndpoints;
 
@@ -90,6 +134,10 @@ public final class ApplicationPropertiesResponse extends io.pulumi.resources.Inv
         return this.sshEndpoints == null ? List.of() : this.sshEndpoints;
     }
 
+    /**
+     * The list of uninstall script actions.
+     * 
+     */
     @InputImport(name="uninstallScriptActions")
     private final @Nullable List<RuntimeScriptActionResponse> uninstallScriptActions;
 

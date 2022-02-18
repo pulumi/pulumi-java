@@ -14,10 +14,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * SubjectAccessReviewSpec is a description of the access request.  Exactly one of ResourceAuthorizationAttributes and NonResourceAuthorizationAttributes must be set
+ * 
+ */
 public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SubjectAccessReviewSpecArgs Empty = new SubjectAccessReviewSpecArgs();
 
+    /**
+     * Extra corresponds to the user.Info.GetExtra() method from the authenticator.  Since that is input to the authorizer it needs a reflection here.
+     * 
+     */
     @InputImport(name="extra")
     private final @Nullable Input<Map<String,List<String>>> extra;
 
@@ -25,6 +33,10 @@ public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.Resou
         return this.extra == null ? Input.empty() : this.extra;
     }
 
+    /**
+     * Groups is the groups you're testing for.
+     * 
+     */
     @InputImport(name="group")
     private final @Nullable Input<List<String>> group;
 
@@ -32,6 +44,10 @@ public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.Resou
         return this.group == null ? Input.empty() : this.group;
     }
 
+    /**
+     * NonResourceAttributes describes information for a non-resource access request
+     * 
+     */
     @InputImport(name="nonResourceAttributes")
     private final @Nullable Input<NonResourceAttributesArgs> nonResourceAttributes;
 
@@ -39,6 +55,10 @@ public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.Resou
         return this.nonResourceAttributes == null ? Input.empty() : this.nonResourceAttributes;
     }
 
+    /**
+     * ResourceAuthorizationAttributes describes information for a resource access request
+     * 
+     */
     @InputImport(name="resourceAttributes")
     private final @Nullable Input<ResourceAttributesArgs> resourceAttributes;
 
@@ -46,6 +66,10 @@ public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.Resou
         return this.resourceAttributes == null ? Input.empty() : this.resourceAttributes;
     }
 
+    /**
+     * UID information about the requesting user.
+     * 
+     */
     @InputImport(name="uid")
     private final @Nullable Input<String> uid;
 
@@ -53,6 +77,10 @@ public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.Resou
         return this.uid == null ? Input.empty() : this.uid;
     }
 
+    /**
+     * User is the user you're testing for. If you specify "User" but not "Group", then is it interpreted as "What if User were not a member of any groups
+     * 
+     */
     @InputImport(name="user")
     private final @Nullable Input<String> user;
 

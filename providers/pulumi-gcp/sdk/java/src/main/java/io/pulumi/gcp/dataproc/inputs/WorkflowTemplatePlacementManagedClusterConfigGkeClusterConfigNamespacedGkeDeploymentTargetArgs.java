@@ -14,6 +14,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig
 
     public static final WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetArgs Empty = new WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetArgs();
 
+    /**
+     * Optional. A namespace within the GKE cluster to deploy into.
+     * 
+     */
     @InputImport(name="clusterNamespace")
     private final @Nullable Input<String> clusterNamespace;
 
@@ -21,6 +25,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig
         return this.clusterNamespace == null ? Input.empty() : this.clusterNamespace;
     }
 
+    /**
+     * Optional. The target GKE cluster to deploy to. Format: 'projects/{project}/locations/{location}/clusters/{cluster_id}'
+     * 
+     */
     @InputImport(name="targetGkeCluster")
     private final @Nullable Input<String> targetGkeCluster;
 

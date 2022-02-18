@@ -12,6 +12,10 @@ public final class QueryTimelineSampleResponse extends io.pulumi.resources.Invok
 
     public static final QueryTimelineSampleResponse Empty = new QueryTimelineSampleResponse();
 
+    /**
+     * Total number of units currently being processed by workers. This does not correspond directly to slot usage. This is the largest value observed since the last sample.
+     * 
+     */
     @InputImport(name="activeUnits", required=true)
     private final String activeUnits;
 
@@ -19,6 +23,10 @@ public final class QueryTimelineSampleResponse extends io.pulumi.resources.Invok
         return this.activeUnits;
     }
 
+    /**
+     * Total parallel units of work completed by this query.
+     * 
+     */
     @InputImport(name="completedUnits", required=true)
     private final String completedUnits;
 
@@ -26,6 +34,10 @@ public final class QueryTimelineSampleResponse extends io.pulumi.resources.Invok
         return this.completedUnits;
     }
 
+    /**
+     * Milliseconds elapsed since the start of query execution.
+     * 
+     */
     @InputImport(name="elapsedMs", required=true)
     private final String elapsedMs;
 
@@ -33,6 +45,10 @@ public final class QueryTimelineSampleResponse extends io.pulumi.resources.Invok
         return this.elapsedMs;
     }
 
+    /**
+     * Total parallel units of work remaining for the active stages.
+     * 
+     */
     @InputImport(name="pendingUnits", required=true)
     private final String pendingUnits;
 
@@ -40,6 +56,10 @@ public final class QueryTimelineSampleResponse extends io.pulumi.resources.Invok
         return this.pendingUnits;
     }
 
+    /**
+     * Cumulative slot-ms consumed by the query.
+     * 
+     */
     @InputImport(name="totalSlotMs", required=true)
     private final String totalSlotMs;
 

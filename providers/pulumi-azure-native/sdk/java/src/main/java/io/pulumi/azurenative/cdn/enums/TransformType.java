@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Describes what transforms were applied before matching.
+     * 
+     */
     @EnumType
     public enum TransformType {
         Lowercase("Lowercase"),

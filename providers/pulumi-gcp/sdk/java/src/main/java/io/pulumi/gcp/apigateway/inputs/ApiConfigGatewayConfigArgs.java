@@ -13,6 +13,11 @@ public final class ApiConfigGatewayConfigArgs extends io.pulumi.resources.Resour
 
     public static final ApiConfigGatewayConfigArgs Empty = new ApiConfigGatewayConfigArgs();
 
+    /**
+     * Backend settings that are applied to all backends of the Gateway.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="backendConfig", required=true)
     private final Input<ApiConfigGatewayConfigBackendConfigArgs> backendConfig;
 

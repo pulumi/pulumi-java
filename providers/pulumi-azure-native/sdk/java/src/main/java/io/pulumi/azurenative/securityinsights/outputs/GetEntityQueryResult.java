@@ -12,11 +12,35 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetEntityQueryResult {
+    /**
+     * Etag of the azure resource
+     * 
+     */
     private final @Nullable String etag;
+    /**
+     * Azure resource Id
+     * 
+     */
     private final String id;
+    /**
+     * the entity query kind
+     * 
+     */
     private final String kind;
+    /**
+     * Azure resource name
+     * 
+     */
     private final String name;
+    /**
+     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     * 
+     */
     private final SystemDataResponse systemData;
+    /**
+     * Azure resource type
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"etag","id","kind","name","systemData","type"})
@@ -35,21 +59,45 @@ public final class GetEntityQueryResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Etag of the azure resource
+     * 
+     */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
+    /**
+     * Azure resource Id
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * the entity query kind
+     * 
+     */
     public String getKind() {
         return this.kind;
     }
+    /**
+     * Azure resource name
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     * 
+     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+    /**
+     * Azure resource type
+     * 
+     */
     public String getType() {
         return this.type;
     }

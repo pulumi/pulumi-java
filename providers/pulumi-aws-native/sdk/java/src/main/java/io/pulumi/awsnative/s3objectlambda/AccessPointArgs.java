@@ -15,6 +15,10 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AccessPointArgs Empty = new AccessPointArgs();
 
+    /**
+     * The name you want to assign to this Object lambda Access Point.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -22,6 +26,10 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The Object lambda Access Point Configuration that configures transformations to be applied on the objects on specified S3 Actions
+     * 
+     */
     @InputImport(name="objectLambdaConfiguration", required=true)
     private final Input<AccessPointObjectLambdaConfigurationArgs> objectLambdaConfiguration;
 

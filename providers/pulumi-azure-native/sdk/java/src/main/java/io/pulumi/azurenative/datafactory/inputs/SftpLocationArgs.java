@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The location of SFTP dataset.
+ * 
+ */
 public final class SftpLocationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SftpLocationArgs Empty = new SftpLocationArgs();
 
+    /**
+     * Specify the file name of dataset. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="fileName")
     private final @Nullable Input<Object> fileName;
 
@@ -22,6 +30,10 @@ public final class SftpLocationArgs extends io.pulumi.resources.ResourceArgs {
         return this.fileName == null ? Input.empty() : this.fileName;
     }
 
+    /**
+     * Specify the folder path of dataset. Type: string (or Expression with resultType string)
+     * 
+     */
     @InputImport(name="folderPath")
     private final @Nullable Input<Object> folderPath;
 
@@ -29,6 +41,11 @@ public final class SftpLocationArgs extends io.pulumi.resources.ResourceArgs {
         return this.folderPath == null ? Input.empty() : this.folderPath;
     }
 
+    /**
+     * Type of dataset storage location.
+     * Expected value is 'SftpLocation'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

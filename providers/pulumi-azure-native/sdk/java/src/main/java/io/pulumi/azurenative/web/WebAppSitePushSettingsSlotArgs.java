@@ -15,6 +15,10 @@ public final class WebAppSitePushSettingsSlotArgs extends io.pulumi.resources.Re
 
     public static final WebAppSitePushSettingsSlotArgs Empty = new WebAppSitePushSettingsSlotArgs();
 
+    /**
+     * Gets or sets a JSON string containing a list of dynamic tags that will be evaluated from user claims in the push registration endpoint.
+     * 
+     */
     @InputImport(name="dynamicTagsJson")
     private final @Nullable Input<String> dynamicTagsJson;
 
@@ -22,6 +26,10 @@ public final class WebAppSitePushSettingsSlotArgs extends io.pulumi.resources.Re
         return this.dynamicTagsJson == null ? Input.empty() : this.dynamicTagsJson;
     }
 
+    /**
+     * Gets or sets a flag indicating whether the Push endpoint is enabled.
+     * 
+     */
     @InputImport(name="isPushEnabled", required=true)
     private final Input<Boolean> isPushEnabled;
 
@@ -29,6 +37,10 @@ public final class WebAppSitePushSettingsSlotArgs extends io.pulumi.resources.Re
         return this.isPushEnabled;
     }
 
+    /**
+     * Kind of resource.
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -36,6 +48,10 @@ public final class WebAppSitePushSettingsSlotArgs extends io.pulumi.resources.Re
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Name of web app.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -43,6 +59,10 @@ public final class WebAppSitePushSettingsSlotArgs extends io.pulumi.resources.Re
         return this.name;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -50,6 +70,10 @@ public final class WebAppSitePushSettingsSlotArgs extends io.pulumi.resources.Re
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of web app slot. If not specified then will default to production slot.
+     * 
+     */
     @InputImport(name="slot", required=true)
     private final Input<String> slot;
 
@@ -57,6 +81,10 @@ public final class WebAppSitePushSettingsSlotArgs extends io.pulumi.resources.Re
         return this.slot;
     }
 
+    /**
+     * Gets or sets a JSON string containing a list of tags that are whitelisted for use by the push registration endpoint.
+     * 
+     */
     @InputImport(name="tagWhitelistJson")
     private final @Nullable Input<String> tagWhitelistJson;
 
@@ -64,6 +92,13 @@ public final class WebAppSitePushSettingsSlotArgs extends io.pulumi.resources.Re
         return this.tagWhitelistJson == null ? Input.empty() : this.tagWhitelistJson;
     }
 
+    /**
+     * Gets or sets a JSON string containing a list of tags that require user authentication to be used in the push registration endpoint.
+     * Tags can consist of alphanumeric characters and the following:
+     * '_', '@', '#', '.', ':', '-'.
+     * Validation should be performed at the PushRequestHandler.
+     * 
+     */
     @InputImport(name="tagsRequiringAuth")
     private final @Nullable Input<String> tagsRequiringAuth;
 

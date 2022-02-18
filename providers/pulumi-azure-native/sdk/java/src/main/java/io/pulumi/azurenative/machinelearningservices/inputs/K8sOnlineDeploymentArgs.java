@@ -27,6 +27,10 @@ public final class K8sOnlineDeploymentArgs extends io.pulumi.resources.ResourceA
 
     public static final K8sOnlineDeploymentArgs Empty = new K8sOnlineDeploymentArgs();
 
+    /**
+     * If true, enables Application Insights logging.
+     * 
+     */
     @InputImport(name="appInsightsEnabled")
     private final @Nullable Input<Boolean> appInsightsEnabled;
 
@@ -34,6 +38,10 @@ public final class K8sOnlineDeploymentArgs extends io.pulumi.resources.ResourceA
         return this.appInsightsEnabled == null ? Input.empty() : this.appInsightsEnabled;
     }
 
+    /**
+     * Code configuration for the endpoint deployment.
+     * 
+     */
     @InputImport(name="codeConfiguration")
     private final @Nullable Input<CodeConfigurationArgs> codeConfiguration;
 
@@ -41,6 +49,10 @@ public final class K8sOnlineDeploymentArgs extends io.pulumi.resources.ResourceA
         return this.codeConfiguration == null ? Input.empty() : this.codeConfiguration;
     }
 
+    /**
+     * Resource requirements for each container instance within an online deployment.
+     * 
+     */
     @InputImport(name="containerResourceRequirements")
     private final @Nullable Input<ContainerResourceRequirementsArgs> containerResourceRequirements;
 
@@ -48,6 +60,10 @@ public final class K8sOnlineDeploymentArgs extends io.pulumi.resources.ResourceA
         return this.containerResourceRequirements == null ? Input.empty() : this.containerResourceRequirements;
     }
 
+    /**
+     * Description of the endpoint deployment.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -55,6 +71,11 @@ public final class K8sOnlineDeploymentArgs extends io.pulumi.resources.ResourceA
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Enum to determine endpoint compute type.
+     * Expected value is 'K8S'.
+     * 
+     */
     @InputImport(name="endpointComputeType", required=true)
     private final Input<String> endpointComputeType;
 
@@ -62,6 +83,10 @@ public final class K8sOnlineDeploymentArgs extends io.pulumi.resources.ResourceA
         return this.endpointComputeType;
     }
 
+    /**
+     * ARM resource ID of the environment specification for the endpoint deployment.
+     * 
+     */
     @InputImport(name="environmentId")
     private final @Nullable Input<String> environmentId;
 
@@ -69,6 +94,10 @@ public final class K8sOnlineDeploymentArgs extends io.pulumi.resources.ResourceA
         return this.environmentId == null ? Input.empty() : this.environmentId;
     }
 
+    /**
+     * Environment variables configuration for the deployment.
+     * 
+     */
     @InputImport(name="environmentVariables")
     private final @Nullable Input<Map<String,String>> environmentVariables;
 
@@ -76,6 +105,10 @@ public final class K8sOnlineDeploymentArgs extends io.pulumi.resources.ResourceA
         return this.environmentVariables == null ? Input.empty() : this.environmentVariables;
     }
 
+    /**
+     * Deployment container liveness/readiness probe configuration.
+     * 
+     */
     @InputImport(name="livenessProbe")
     private final @Nullable Input<ProbeSettingsArgs> livenessProbe;
 
@@ -83,6 +116,10 @@ public final class K8sOnlineDeploymentArgs extends io.pulumi.resources.ResourceA
         return this.livenessProbe == null ? Input.empty() : this.livenessProbe;
     }
 
+    /**
+     * Reference to the model asset for the endpoint deployment.
+     * 
+     */
     @InputImport(name="model")
     private final @Nullable Input<Object> model;
 
@@ -90,6 +127,10 @@ public final class K8sOnlineDeploymentArgs extends io.pulumi.resources.ResourceA
         return this.model == null ? Input.empty() : this.model;
     }
 
+    /**
+     * Property dictionary. Properties can be added, but not removed or altered.
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<Map<String,String>> properties;
 
@@ -97,6 +138,10 @@ public final class K8sOnlineDeploymentArgs extends io.pulumi.resources.ResourceA
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * Online deployment scoring requests configuration.
+     * 
+     */
     @InputImport(name="requestSettings")
     private final @Nullable Input<OnlineRequestSettingsArgs> requestSettings;
 
@@ -104,6 +149,10 @@ public final class K8sOnlineDeploymentArgs extends io.pulumi.resources.ResourceA
         return this.requestSettings == null ? Input.empty() : this.requestSettings;
     }
 
+    /**
+     * Online deployment scaling configuration.
+     * 
+     */
     @InputImport(name="scaleSettings")
     private final @Nullable Input<Either<AutoScaleSettingsArgs,ManualScaleSettingsArgs>> scaleSettings;
 

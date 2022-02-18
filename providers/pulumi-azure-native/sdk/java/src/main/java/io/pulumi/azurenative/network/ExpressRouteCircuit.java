@@ -23,129 +23,310 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * ExpressRouteCircuit resource.
+ * API Version: 2020-11-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:network:ExpressRouteCircuit expressRouteCircuit1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/expressRouteCircuits/expressRouteCircuit1 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:network:ExpressRouteCircuit")
 public class ExpressRouteCircuit extends io.pulumi.resources.CustomResource {
+    /**
+     * Allow classic operations.
+     * 
+     */
     @OutputExport(name="allowClassicOperations", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowClassicOperations;
 
+    /**
+     * @return Allow classic operations.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getAllowClassicOperations() {
         return this.allowClassicOperations;
     }
+    /**
+     * The list of authorizations.
+     * 
+     */
     @OutputExport(name="authorizations", type=List.class, parameters={ExpressRouteCircuitAuthorizationResponse.class})
     private Output</* @Nullable */ List<ExpressRouteCircuitAuthorizationResponse>> authorizations;
 
+    /**
+     * @return The list of authorizations.
+     * 
+     */
     public Output</* @Nullable */ List<ExpressRouteCircuitAuthorizationResponse>> getAuthorizations() {
         return this.authorizations;
     }
+    /**
+     * The bandwidth of the circuit when the circuit is provisioned on an ExpressRoutePort resource.
+     * 
+     */
     @OutputExport(name="bandwidthInGbps", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> bandwidthInGbps;
 
+    /**
+     * @return The bandwidth of the circuit when the circuit is provisioned on an ExpressRoutePort resource.
+     * 
+     */
     public Output</* @Nullable */ Double> getBandwidthInGbps() {
         return this.bandwidthInGbps;
     }
+    /**
+     * The CircuitProvisioningState state of the resource.
+     * 
+     */
     @OutputExport(name="circuitProvisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> circuitProvisioningState;
 
+    /**
+     * @return The CircuitProvisioningState state of the resource.
+     * 
+     */
     public Output</* @Nullable */ String> getCircuitProvisioningState() {
         return this.circuitProvisioningState;
     }
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * The reference to the ExpressRoutePort resource when the circuit is provisioned on an ExpressRoutePort resource.
+     * 
+     */
     @OutputExport(name="expressRoutePort", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> expressRoutePort;
 
+    /**
+     * @return The reference to the ExpressRoutePort resource when the circuit is provisioned on an ExpressRoutePort resource.
+     * 
+     */
     public Output</* @Nullable */ SubResourceResponse> getExpressRoutePort() {
         return this.expressRoutePort;
     }
+    /**
+     * The GatewayManager Etag.
+     * 
+     */
     @OutputExport(name="gatewayManagerEtag", type=String.class, parameters={})
     private Output</* @Nullable */ String> gatewayManagerEtag;
 
+    /**
+     * @return The GatewayManager Etag.
+     * 
+     */
     public Output</* @Nullable */ String> getGatewayManagerEtag() {
         return this.gatewayManagerEtag;
     }
+    /**
+     * Flag denoting global reach status.
+     * 
+     */
     @OutputExport(name="globalReachEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> globalReachEnabled;
 
+    /**
+     * @return Flag denoting global reach status.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getGlobalReachEnabled() {
         return this.globalReachEnabled;
     }
+    /**
+     * Resource location.
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * Resource name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The list of peerings.
+     * 
+     */
     @OutputExport(name="peerings", type=List.class, parameters={ExpressRouteCircuitPeeringResponse.class})
     private Output</* @Nullable */ List<ExpressRouteCircuitPeeringResponse>> peerings;
 
+    /**
+     * @return The list of peerings.
+     * 
+     */
     public Output</* @Nullable */ List<ExpressRouteCircuitPeeringResponse>> getPeerings() {
         return this.peerings;
     }
+    /**
+     * The provisioning state of the express route circuit resource.
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning state of the express route circuit resource.
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The ServiceKey.
+     * 
+     */
     @OutputExport(name="serviceKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> serviceKey;
 
+    /**
+     * @return The ServiceKey.
+     * 
+     */
     public Output</* @Nullable */ String> getServiceKey() {
         return this.serviceKey;
     }
+    /**
+     * The ServiceProviderNotes.
+     * 
+     */
     @OutputExport(name="serviceProviderNotes", type=String.class, parameters={})
     private Output</* @Nullable */ String> serviceProviderNotes;
 
+    /**
+     * @return The ServiceProviderNotes.
+     * 
+     */
     public Output</* @Nullable */ String> getServiceProviderNotes() {
         return this.serviceProviderNotes;
     }
+    /**
+     * The ServiceProviderProperties.
+     * 
+     */
     @OutputExport(name="serviceProviderProperties", type=ExpressRouteCircuitServiceProviderPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ ExpressRouteCircuitServiceProviderPropertiesResponse> serviceProviderProperties;
 
+    /**
+     * @return The ServiceProviderProperties.
+     * 
+     */
     public Output</* @Nullable */ ExpressRouteCircuitServiceProviderPropertiesResponse> getServiceProviderProperties() {
         return this.serviceProviderProperties;
     }
+    /**
+     * The ServiceProviderProvisioningState state of the resource.
+     * 
+     */
     @OutputExport(name="serviceProviderProvisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> serviceProviderProvisioningState;
 
+    /**
+     * @return The ServiceProviderProvisioningState state of the resource.
+     * 
+     */
     public Output</* @Nullable */ String> getServiceProviderProvisioningState() {
         return this.serviceProviderProvisioningState;
     }
+    /**
+     * The SKU.
+     * 
+     */
     @OutputExport(name="sku", type=ExpressRouteCircuitSkuResponse.class, parameters={})
     private Output</* @Nullable */ ExpressRouteCircuitSkuResponse> sku;
 
+    /**
+     * @return The SKU.
+     * 
+     */
     public Output</* @Nullable */ ExpressRouteCircuitSkuResponse> getSku() {
         return this.sku;
     }
+    /**
+     * The identifier of the circuit traffic. Outer tag for QinQ encapsulation.
+     * 
+     */
     @OutputExport(name="stag", type=Integer.class, parameters={})
     private Output<Integer> stag;
 
+    /**
+     * @return The identifier of the circuit traffic. Outer tag for QinQ encapsulation.
+     * 
+     */
     public Output<Integer> getStag() {
         return this.stag;
     }
+    /**
+     * Resource tags.
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Resource type.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ExpressRouteCircuit(String name, ExpressRouteCircuitArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:ExpressRouteCircuit", name, args == null ? ExpressRouteCircuitArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -202,6 +383,14 @@ public class ExpressRouteCircuit extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ExpressRouteCircuit get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ExpressRouteCircuit(name, id, options);
     }

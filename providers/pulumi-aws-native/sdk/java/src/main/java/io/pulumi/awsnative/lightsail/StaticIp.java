@@ -13,23 +13,51 @@ import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Resource Type definition for AWS::Lightsail::StaticIp
+ * 
+ */
 @ResourceType(type="aws-native:lightsail:StaticIp")
 public class StaticIp extends io.pulumi.resources.CustomResource {
+    /**
+     * The instance where the static IP is attached.
+     * 
+     */
     @OutputExport(name="attachedTo", type=String.class, parameters={})
     private Output</* @Nullable */ String> attachedTo;
 
+    /**
+     * @return The instance where the static IP is attached.
+     * 
+     */
     public Output</* @Nullable */ String> getAttachedTo() {
         return this.attachedTo;
     }
+    /**
+     * The static IP address.
+     * 
+     */
     @OutputExport(name="ipAddress", type=String.class, parameters={})
     private Output<String> ipAddress;
 
+    /**
+     * @return The static IP address.
+     * 
+     */
     public Output<String> getIpAddress() {
         return this.ipAddress;
     }
+    /**
+     * A Boolean value indicating whether the static IP is attached.
+     * 
+     */
     @OutputExport(name="isAttached", type=Boolean.class, parameters={})
     private Output<Boolean> isAttached;
 
+    /**
+     * @return A Boolean value indicating whether the static IP is attached.
+     * 
+     */
     public Output<Boolean> getIsAttached() {
         return this.isAttached;
     }
@@ -39,13 +67,27 @@ public class StaticIp extends io.pulumi.resources.CustomResource {
     public Output<String> getStaticIpArn() {
         return this.staticIpArn;
     }
+    /**
+     * The name of the static IP address.
+     * 
+     */
     @OutputExport(name="staticIpName", type=String.class, parameters={})
     private Output<String> staticIpName;
 
+    /**
+     * @return The name of the static IP address.
+     * 
+     */
     public Output<String> getStaticIpName() {
         return this.staticIpName;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public StaticIp(String name, @Nullable StaticIpArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:lightsail:StaticIp", name, args == null ? StaticIpArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -61,6 +103,14 @@ public class StaticIp extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static StaticIp get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new StaticIp(name, id, options);
     }

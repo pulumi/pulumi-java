@@ -12,6 +12,10 @@ public final class GetCloudServiceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetCloudServiceArgs Empty = new GetCloudServiceArgs();
 
+    /**
+     * Name of the cloud service.
+     * 
+     */
     @InputImport(name="cloudServiceName", required=true)
     private final String cloudServiceName;
 
@@ -19,6 +23,10 @@ public final class GetCloudServiceArgs extends io.pulumi.resources.InvokeArgs {
         return this.cloudServiceName;
     }
 
+    /**
+     * Name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

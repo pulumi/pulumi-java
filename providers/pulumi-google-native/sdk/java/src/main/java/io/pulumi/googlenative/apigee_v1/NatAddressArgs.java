@@ -21,6 +21,10 @@ public final class NatAddressArgs extends io.pulumi.resources.ResourceArgs {
         return this.instanceId;
     }
 
+    /**
+     * Resource ID of the NAT address.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

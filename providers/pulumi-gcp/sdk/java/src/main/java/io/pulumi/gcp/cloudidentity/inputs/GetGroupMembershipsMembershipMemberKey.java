@@ -12,6 +12,12 @@ public final class GetGroupMembershipsMembershipMemberKey extends io.pulumi.reso
 
     public static final GetGroupMembershipsMembershipMemberKey Empty = new GetGroupMembershipsMembershipMemberKey();
 
+    /**
+     * The ID of the entity. For Google-managed entities, the id is the email address of an existing
+     * group or user. For external-identity-mapped entities, the id is a string conforming
+     * to the Identity Source's requirements.
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -19,6 +25,13 @@ public final class GetGroupMembershipsMembershipMemberKey extends io.pulumi.reso
         return this.id;
     }
 
+    /**
+     * The namespace in which the entity exists.
+     * If not populated, the EntityKey represents a Google-managed entity
+     * such as a Google user or a Google Group.
+     * If populated, the EntityKey represents an external-identity-mapped group.
+     * 
+     */
     @InputImport(name="namespace", required=true)
     private final String namespace;
 

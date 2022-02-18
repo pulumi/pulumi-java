@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * An observed value of a metric.
+ * 
+ */
 public final class GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs Empty = new GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs();
 
+    /**
+     * The objective value at this training step.
+     * 
+     */
     @InputImport(name="objectiveValue")
     private final @Nullable Input<Double> objectiveValue;
 
@@ -22,6 +30,10 @@ public final class GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs
         return this.objectiveValue == null ? Input.empty() : this.objectiveValue;
     }
 
+    /**
+     * The global training step for this metric.
+     * 
+     */
     @InputImport(name="trainingStep")
     private final @Nullable Input<String> trainingStep;
 

@@ -14,11 +14,35 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ManagedPrivateEndpointResponse {
+    /**
+     * The managed private endpoint connection state
+     * 
+     */
     private final @Nullable ConnectionStatePropertiesResponse connectionState;
+    /**
+     * Fully qualified domain names
+     * 
+     */
     private final @Nullable List<String> fqdns;
+    /**
+     * The groupId to which the managed private endpoint is created
+     * 
+     */
     private final @Nullable String groupId;
+    /**
+     * Denotes whether the managed private endpoint is reserved
+     * 
+     */
     private final Boolean isReserved;
+    /**
+     * The ARM resource ID of the resource to which the managed private endpoint is created
+     * 
+     */
     private final @Nullable String privateLinkResourceId;
+    /**
+     * The managed private endpoint provisioning state
+     * 
+     */
     private final String provisioningState;
 
     @OutputCustomType.Constructor({"connectionState","fqdns","groupId","isReserved","privateLinkResourceId","provisioningState"})
@@ -37,21 +61,45 @@ public final class ManagedPrivateEndpointResponse {
         this.provisioningState = Objects.requireNonNull(provisioningState);
     }
 
+    /**
+     * The managed private endpoint connection state
+     * 
+     */
     public Optional<ConnectionStatePropertiesResponse> getConnectionState() {
         return Optional.ofNullable(this.connectionState);
     }
+    /**
+     * Fully qualified domain names
+     * 
+     */
     public List<String> getFqdns() {
         return this.fqdns == null ? List.of() : this.fqdns;
     }
+    /**
+     * The groupId to which the managed private endpoint is created
+     * 
+     */
     public Optional<String> getGroupId() {
         return Optional.ofNullable(this.groupId);
     }
+    /**
+     * Denotes whether the managed private endpoint is reserved
+     * 
+     */
     public Boolean getIsReserved() {
         return this.isReserved;
     }
+    /**
+     * The ARM resource ID of the resource to which the managed private endpoint is created
+     * 
+     */
     public Optional<String> getPrivateLinkResourceId() {
         return Optional.ofNullable(this.privateLinkResourceId);
     }
+    /**
+     * The managed private endpoint provisioning state
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }

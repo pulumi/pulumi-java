@@ -16,10 +16,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * InMageRcm provider specific details.
+ * 
+ */
 public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final InMageRcmReplicationDetailsResponse Empty = new InMageRcmReplicationDetailsResponse();
 
+    /**
+     * The agent upgrade blocking error information.
+     * 
+     */
     @InputImport(name="agentUpgradeBlockingErrorDetails", required=true)
     private final List<InMageRcmAgentUpgradeBlockingErrorDetailsResponse> agentUpgradeBlockingErrorDetails;
 
@@ -27,6 +35,10 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
         return this.agentUpgradeBlockingErrorDetails;
     }
 
+    /**
+     * The agent auto upgrade state.
+     * 
+     */
     @InputImport(name="agentUpgradeState", required=true)
     private final String agentUpgradeState;
 
@@ -34,6 +46,10 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
         return this.agentUpgradeState;
     }
 
+    /**
+     * The allocated memory in MB.
+     * 
+     */
     @InputImport(name="allocatedMemoryInMB", required=true)
     private final Double allocatedMemoryInMB;
 
@@ -41,6 +57,10 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
         return this.allocatedMemoryInMB;
     }
 
+    /**
+     * The type of the discovered VM.
+     * 
+     */
     @InputImport(name="discoveryType", required=true)
     private final String discoveryType;
 
@@ -48,6 +68,10 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
         return this.discoveryType;
     }
 
+    /**
+     * The ARM Id of the discovered VM.
+     * 
+     */
     @InputImport(name="fabricDiscoveryMachineId", required=true)
     private final String fabricDiscoveryMachineId;
 
@@ -55,6 +79,10 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
         return this.fabricDiscoveryMachineId;
     }
 
+    /**
+     * The recovery point Id to which the VM was failed over.
+     * 
+     */
     @InputImport(name="failoverRecoveryPointId", required=true)
     private final String failoverRecoveryPointId;
 
@@ -62,6 +90,10 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
         return this.failoverRecoveryPointId;
     }
 
+    /**
+     * The firmware type.
+     * 
+     */
     @InputImport(name="firmwareType", required=true)
     private final String firmwareType;
 
@@ -69,6 +101,10 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
         return this.firmwareType;
     }
 
+    /**
+     * The initial replication processed bytes. This includes sum of total bytes transferred and matched bytes on all selected disks in source VM.
+     * 
+     */
     @InputImport(name="initialReplicationProcessedBytes", required=true)
     private final Double initialReplicationProcessedBytes;
 
@@ -76,6 +112,10 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
         return this.initialReplicationProcessedBytes;
     }
 
+    /**
+     * The initial replication progress percentage. This is calculated based on total bytes processed for all disks in the source VM.
+     * 
+     */
     @InputImport(name="initialReplicationProgressPercentage", required=true)
     private final Integer initialReplicationProgressPercentage;
 
@@ -83,6 +123,10 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
         return this.initialReplicationProgressPercentage;
     }
 
+    /**
+     * The initial replication transferred bytes from source VM to azure for all selected disks on source VM.
+     * 
+     */
     @InputImport(name="initialReplicationTransferredBytes", required=true)
     private final Double initialReplicationTransferredBytes;
 
@@ -90,6 +134,11 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
         return this.initialReplicationTransferredBytes;
     }
 
+    /**
+     * Gets the Instance type.
+     * Expected value is 'InMageRcm'.
+     * 
+     */
     @InputImport(name="instanceType", required=true)
     private final String instanceType;
 
@@ -97,6 +146,10 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
         return this.instanceType;
     }
 
+    /**
+     * The virtual machine internal identifier.
+     * 
+     */
     @InputImport(name="internalIdentifier", required=true)
     private final String internalIdentifier;
 
@@ -104,6 +157,10 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
         return this.internalIdentifier;
     }
 
+    /**
+     * A value indicating whether last agent upgrade was successful or not.
+     * 
+     */
     @InputImport(name="isLastUpgradeSuccessful", required=true)
     private final String isLastUpgradeSuccessful;
 
@@ -111,6 +168,10 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
         return this.isLastUpgradeSuccessful;
     }
 
+    /**
+     * The last agent upgrade error information.
+     * 
+     */
     @InputImport(name="lastAgentUpgradeErrorDetails", required=true)
     private final List<InMageRcmLastAgentUpgradeErrorDetailsResponse> lastAgentUpgradeErrorDetails;
 
@@ -118,6 +179,10 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
         return this.lastAgentUpgradeErrorDetails;
     }
 
+    /**
+     * The last agent upgrade failed or cancelled job Id.
+     * 
+     */
     @InputImport(name="lastAgentUpgradeFailedJobId", required=true)
     private final String lastAgentUpgradeFailedJobId;
 
@@ -125,6 +190,10 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
         return this.lastAgentUpgradeFailedJobId;
     }
 
+    /**
+     * The last agent upgrade type.
+     * 
+     */
     @InputImport(name="lastAgentUpgradeType", required=true)
     private final String lastAgentUpgradeType;
 
@@ -132,6 +201,10 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
         return this.lastAgentUpgradeType;
     }
 
+    /**
+     * The last recovery point Id.
+     * 
+     */
     @InputImport(name="lastRecoveryPointId", required=true)
     private final String lastRecoveryPointId;
 
@@ -139,6 +212,10 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
         return this.lastRecoveryPointId;
     }
 
+    /**
+     * The last recovery point received time.
+     * 
+     */
     @InputImport(name="lastRecoveryPointReceived", required=true)
     private final String lastRecoveryPointReceived;
 
@@ -146,6 +223,10 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
         return this.lastRecoveryPointReceived;
     }
 
+    /**
+     * The last recovery point objective calculated time.
+     * 
+     */
     @InputImport(name="lastRpoCalculatedTime", required=true)
     private final String lastRpoCalculatedTime;
 
@@ -153,6 +234,10 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
         return this.lastRpoCalculatedTime;
     }
 
+    /**
+     * The last recovery point objective value.
+     * 
+     */
     @InputImport(name="lastRpoInSeconds", required=true)
     private final Double lastRpoInSeconds;
 
@@ -160,6 +245,10 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
         return this.lastRpoInSeconds;
     }
 
+    /**
+     * License Type of the VM to be used.
+     * 
+     */
     @InputImport(name="licenseType", required=true)
     private final String licenseType;
 
@@ -167,6 +256,10 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
         return this.licenseType;
     }
 
+    /**
+     * The mobility agent information.
+     * 
+     */
     @InputImport(name="mobilityAgentDetails", required=true)
     private final InMageRcmMobilityAgentDetailsResponse mobilityAgentDetails;
 
@@ -174,6 +267,10 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
         return this.mobilityAgentDetails;
     }
 
+    /**
+     * The multi VM group name.
+     * 
+     */
     @InputImport(name="multiVmGroupName", required=true)
     private final String multiVmGroupName;
 
@@ -181,6 +278,10 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
         return this.multiVmGroupName;
     }
 
+    /**
+     * The type of the OS on the VM.
+     * 
+     */
     @InputImport(name="osType", required=true)
     private final String osType;
 
@@ -188,6 +289,10 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
         return this.osType;
     }
 
+    /**
+     * The process server Id.
+     * 
+     */
     @InputImport(name="processServerId", required=true)
     private final String processServerId;
 
@@ -195,6 +300,10 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
         return this.processServerId;
     }
 
+    /**
+     * The process server name.
+     * 
+     */
     @InputImport(name="processServerName", required=true)
     private final String processServerName;
 
@@ -202,6 +311,10 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
         return this.processServerName;
     }
 
+    /**
+     * The processor core count.
+     * 
+     */
     @InputImport(name="processorCoreCount", required=true)
     private final Integer processorCoreCount;
 
@@ -209,6 +322,10 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
         return this.processorCoreCount;
     }
 
+    /**
+     * The list of protected disks.
+     * 
+     */
     @InputImport(name="protectedDisks", required=true)
     private final List<InMageRcmProtectedDiskDetailsResponse> protectedDisks;
 
@@ -216,6 +333,10 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
         return this.protectedDisks;
     }
 
+    /**
+     * The resync processed bytes. This includes sum of total bytes transferred and matched bytes on all selected disks in source VM.
+     * 
+     */
     @InputImport(name="resyncProcessedBytes", required=true)
     private final Double resyncProcessedBytes;
 
@@ -223,6 +344,10 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
         return this.resyncProcessedBytes;
     }
 
+    /**
+     * The resync progress percentage. This is calculated based on total bytes processed for all disks in the source VM.
+     * 
+     */
     @InputImport(name="resyncProgressPercentage", required=true)
     private final Integer resyncProgressPercentage;
 
@@ -230,6 +355,10 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
         return this.resyncProgressPercentage;
     }
 
+    /**
+     * A value indicating whether resync is required.
+     * 
+     */
     @InputImport(name="resyncRequired", required=true)
     private final String resyncRequired;
 
@@ -237,6 +366,10 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
         return this.resyncRequired;
     }
 
+    /**
+     * The resync state.
+     * 
+     */
     @InputImport(name="resyncState", required=true)
     private final String resyncState;
 
@@ -244,6 +377,10 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
         return this.resyncState;
     }
 
+    /**
+     * The resync transferred bytes from source VM to azure for all selected disks on source VM.
+     * 
+     */
     @InputImport(name="resyncTransferredBytes", required=true)
     private final Double resyncTransferredBytes;
 
@@ -251,6 +388,10 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
         return this.resyncTransferredBytes;
     }
 
+    /**
+     * The run-as account Id.
+     * 
+     */
     @InputImport(name="runAsAccountId", required=true)
     private final String runAsAccountId;
 
@@ -258,6 +399,10 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
         return this.runAsAccountId;
     }
 
+    /**
+     * The target availability set Id.
+     * 
+     */
     @InputImport(name="targetAvailabilitySetId", required=true)
     private final String targetAvailabilitySetId;
 
@@ -265,6 +410,10 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
         return this.targetAvailabilitySetId;
     }
 
+    /**
+     * The target availability zone.
+     * 
+     */
     @InputImport(name="targetAvailabilityZone", required=true)
     private final String targetAvailabilityZone;
 
@@ -272,6 +421,10 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
         return this.targetAvailabilityZone;
     }
 
+    /**
+     * The target boot diagnostics storage account ARM Id.
+     * 
+     */
     @InputImport(name="targetBootDiagnosticsStorageAccountId", required=true)
     private final String targetBootDiagnosticsStorageAccountId;
 
@@ -279,6 +432,10 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
         return this.targetBootDiagnosticsStorageAccountId;
     }
 
+    /**
+     * The target generation.
+     * 
+     */
     @InputImport(name="targetGeneration", required=true)
     private final String targetGeneration;
 
@@ -286,6 +443,10 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
         return this.targetGeneration;
     }
 
+    /**
+     * The target network Id.
+     * 
+     */
     @InputImport(name="targetNetworkId", required=true)
     private final String targetNetworkId;
 
@@ -293,6 +454,10 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
         return this.targetNetworkId;
     }
 
+    /**
+     * The target proximity placement group Id.
+     * 
+     */
     @InputImport(name="targetProximityPlacementGroupId", required=true)
     private final String targetProximityPlacementGroupId;
 
@@ -300,6 +465,10 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
         return this.targetProximityPlacementGroupId;
     }
 
+    /**
+     * The target resource group Id.
+     * 
+     */
     @InputImport(name="targetResourceGroupId", required=true)
     private final String targetResourceGroupId;
 
@@ -307,6 +476,10 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
         return this.targetResourceGroupId;
     }
 
+    /**
+     * Target VM name.
+     * 
+     */
     @InputImport(name="targetVmName", required=true)
     private final String targetVmName;
 
@@ -314,6 +487,10 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
         return this.targetVmName;
     }
 
+    /**
+     * The target VM size.
+     * 
+     */
     @InputImport(name="targetVmSize", required=true)
     private final String targetVmSize;
 
@@ -321,6 +498,10 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
         return this.targetVmSize;
     }
 
+    /**
+     * The test network Id.
+     * 
+     */
     @InputImport(name="testNetworkId", required=true)
     private final String testNetworkId;
 
@@ -328,6 +509,10 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
         return this.testNetworkId;
     }
 
+    /**
+     * The network details.
+     * 
+     */
     @InputImport(name="vmNics", required=true)
     private final List<InMageRcmNicDetailsResponse> vmNics;
 

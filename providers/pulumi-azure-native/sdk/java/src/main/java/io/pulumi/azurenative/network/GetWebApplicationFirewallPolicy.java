@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWebApplicationFirewallPolicy {
+/**
+ * Defines web application firewall policy.
+ * API Version: 2020-11-01.
+ * 
+ *
+ * Defines web application firewall policy.
+ * 
+ */
     public static CompletableFuture<GetWebApplicationFirewallPolicyResult> invokeAsync(GetWebApplicationFirewallPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getWebApplicationFirewallPolicy", TypeShape.of(GetWebApplicationFirewallPolicyResult.class), args == null ? GetWebApplicationFirewallPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -14,6 +14,10 @@ public final class AccessPolicyState extends io.pulumi.resources.ResourceArgs {
 
     public static final AccessPolicyState Empty = new AccessPolicyState();
 
+    /**
+     * Time the AccessPolicy was created in UTC.
+     * 
+     */
     @InputImport(name="createTime")
     private final @Nullable Input<String> createTime;
 
@@ -21,6 +25,10 @@ public final class AccessPolicyState extends io.pulumi.resources.ResourceArgs {
         return this.createTime == null ? Input.empty() : this.createTime;
     }
 
+    /**
+     * Resource name of the AccessPolicy. Format: {policy_id}
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -28,6 +36,11 @@ public final class AccessPolicyState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The parent of this AccessPolicy in the Cloud Resource Hierarchy.
+     * Format: organizations/{organization_id}
+     * 
+     */
     @InputImport(name="parent")
     private final @Nullable Input<String> parent;
 
@@ -35,6 +48,10 @@ public final class AccessPolicyState extends io.pulumi.resources.ResourceArgs {
         return this.parent == null ? Input.empty() : this.parent;
     }
 
+    /**
+     * Human readable title. Does not affect behavior.
+     * 
+     */
     @InputImport(name="title")
     private final @Nullable Input<String> title;
 
@@ -42,6 +59,10 @@ public final class AccessPolicyState extends io.pulumi.resources.ResourceArgs {
         return this.title == null ? Input.empty() : this.title;
     }
 
+    /**
+     * Time the AccessPolicy was updated in UTC.
+     * 
+     */
     @InputImport(name="updateTime")
     private final @Nullable Input<String> updateTime;
 

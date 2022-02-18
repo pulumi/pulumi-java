@@ -16,6 +16,10 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HealthCheckArgs Empty = new HealthCheckArgs();
 
+    /**
+     * A complex type that contains information about the health check.
+     * 
+     */
     @InputImport(name="healthCheckConfig", required=true)
     private final Input<HealthCheckConfigPropertiesArgs> healthCheckConfig;
 
@@ -23,6 +27,10 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
         return this.healthCheckConfig;
     }
 
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     @InputImport(name="healthCheckTags")
     private final @Nullable Input<List<HealthCheckTagArgs>> healthCheckTags;
 

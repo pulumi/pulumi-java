@@ -16,10 +16,26 @@ import javax.annotation.Nullable;
 public final class GetServiceResult {
     private final @Nullable ServiceHealthCheckConfiguration healthCheckConfiguration;
     private final @Nullable ServiceInstanceConfiguration instanceConfiguration;
+    /**
+     * The Amazon Resource Name (ARN) of the AppRunner Service.
+     * 
+     */
     private final @Nullable String serviceArn;
+    /**
+     * The AppRunner Service Id
+     * 
+     */
     private final @Nullable String serviceId;
+    /**
+     * The Service Url of the AppRunner Service.
+     * 
+     */
     private final @Nullable String serviceUrl;
     private final @Nullable ServiceSourceConfiguration sourceConfiguration;
+    /**
+     * AppRunner Service status.
+     * 
+     */
     private final @Nullable String status;
 
     @OutputCustomType.Constructor({"healthCheckConfiguration","instanceConfiguration","serviceArn","serviceId","serviceUrl","sourceConfiguration","status"})
@@ -46,18 +62,34 @@ public final class GetServiceResult {
     public Optional<ServiceInstanceConfiguration> getInstanceConfiguration() {
         return Optional.ofNullable(this.instanceConfiguration);
     }
+    /**
+     * The Amazon Resource Name (ARN) of the AppRunner Service.
+     * 
+     */
     public Optional<String> getServiceArn() {
         return Optional.ofNullable(this.serviceArn);
     }
+    /**
+     * The AppRunner Service Id
+     * 
+     */
     public Optional<String> getServiceId() {
         return Optional.ofNullable(this.serviceId);
     }
+    /**
+     * The Service Url of the AppRunner Service.
+     * 
+     */
     public Optional<String> getServiceUrl() {
         return Optional.ofNullable(this.serviceUrl);
     }
     public Optional<ServiceSourceConfiguration> getSourceConfiguration() {
         return Optional.ofNullable(this.sourceConfiguration);
     }
+    /**
+     * AppRunner Service status.
+     * 
+     */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }

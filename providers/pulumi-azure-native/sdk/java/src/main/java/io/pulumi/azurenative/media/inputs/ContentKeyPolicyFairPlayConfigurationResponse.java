@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specifies a configuration for FairPlay licenses.
+ * 
+ */
 public final class ContentKeyPolicyFairPlayConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ContentKeyPolicyFairPlayConfigurationResponse Empty = new ContentKeyPolicyFairPlayConfigurationResponse();
 
+    /**
+     * The key that must be used as FairPlay Application Secret key.
+     * 
+     */
     @InputImport(name="ask", required=true)
     private final String ask;
 
@@ -23,6 +31,10 @@ public final class ContentKeyPolicyFairPlayConfigurationResponse extends io.pulu
         return this.ask;
     }
 
+    /**
+     * The Base64 representation of FairPlay certificate in PKCS 12 (pfx) format (including private key).
+     * 
+     */
     @InputImport(name="fairPlayPfx", required=true)
     private final String fairPlayPfx;
 
@@ -30,6 +42,10 @@ public final class ContentKeyPolicyFairPlayConfigurationResponse extends io.pulu
         return this.fairPlayPfx;
     }
 
+    /**
+     * The password encrypting FairPlay certificate in PKCS 12 (pfx) format.
+     * 
+     */
     @InputImport(name="fairPlayPfxPassword", required=true)
     private final String fairPlayPfxPassword;
 
@@ -37,6 +53,11 @@ public final class ContentKeyPolicyFairPlayConfigurationResponse extends io.pulu
         return this.fairPlayPfxPassword;
     }
 
+    /**
+     * The discriminator for derived types.
+     * Expected value is '#Microsoft.Media.ContentKeyPolicyFairPlayConfiguration'.
+     * 
+     */
     @InputImport(name="odataType", required=true)
     private final String odataType;
 
@@ -44,6 +65,10 @@ public final class ContentKeyPolicyFairPlayConfigurationResponse extends io.pulu
         return this.odataType;
     }
 
+    /**
+     * Offline rental policy
+     * 
+     */
     @InputImport(name="offlineRentalConfiguration")
     private final @Nullable ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse offlineRentalConfiguration;
 
@@ -51,6 +76,10 @@ public final class ContentKeyPolicyFairPlayConfigurationResponse extends io.pulu
         return this.offlineRentalConfiguration == null ? Optional.empty() : Optional.ofNullable(this.offlineRentalConfiguration);
     }
 
+    /**
+     * The rental and lease key type.
+     * 
+     */
     @InputImport(name="rentalAndLeaseKeyType", required=true)
     private final String rentalAndLeaseKeyType;
 
@@ -58,6 +87,10 @@ public final class ContentKeyPolicyFairPlayConfigurationResponse extends io.pulu
         return this.rentalAndLeaseKeyType;
     }
 
+    /**
+     * The rental duration. Must be greater than or equal to 0.
+     * 
+     */
     @InputImport(name="rentalDuration", required=true)
     private final Double rentalDuration;
 

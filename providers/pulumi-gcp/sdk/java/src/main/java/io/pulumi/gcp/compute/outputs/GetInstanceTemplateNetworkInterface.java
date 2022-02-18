@@ -14,17 +14,58 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetInstanceTemplateNetworkInterface {
+    /**
+     * Access configurations, i.e. IPs via which this
+     * instance can be accessed via the Internet. Omit to ensure that the instance
+     * is not accessible from the Internet (this means that ssh provisioners will
+     * not work unless you are running the prvovider can send traffic to the instance's
+     * network (e.g. via tunnel or because it is running on another cloud instance
+     * on that network). This block can be repeated multiple times. Structure documented below.
+     * 
+     */
     private final List<GetInstanceTemplateNetworkInterfaceAccessConfig> accessConfigs;
+    /**
+     * An
+     * array of alias IP ranges for this network interface. Can only be specified for network
+     * interfaces on subnet-mode networks. Structure documented below.
+     * 
+     */
     private final List<GetInstanceTemplateNetworkInterfaceAliasIpRange> aliasIpRanges;
     private final List<GetInstanceTemplateNetworkInterfaceIpv6AccessConfig> ipv6AccessConfigs;
     private final String ipv6AccessType;
+    /**
+     * The name of the instance template. One of `name` or `filter` must be provided.
+     * 
+     */
     private final String name;
+    /**
+     * The name or self_link of the network to attach this interface to.
+     * Use `network` attribute for Legacy or Auto subnetted networks and
+     * `subnetwork` for custom subnetted networks.
+     * 
+     */
     private final String network;
+    /**
+     * The private IP address to assign to the instance. If
+     * empty, the address will be automatically assigned.
+     * 
+     */
     private final String networkIp;
     private final String nicType;
     private final Integer queueCount;
     private final String stackType;
+    /**
+     * the name of the subnetwork to attach this interface
+     * to. The subnetwork must exist in the same `region` this instance will be
+     * created in. Either `network` or `subnetwork` must be provided.
+     * 
+     */
     private final String subnetwork;
+    /**
+     * The ID of the project in which the subnetwork belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     private final String subnetworkProject;
 
     @OutputCustomType.Constructor({"accessConfigs","aliasIpRanges","ipv6AccessConfigs","ipv6AccessType","name","network","networkIp","nicType","queueCount","stackType","subnetwork","subnetworkProject"})
@@ -55,9 +96,24 @@ public final class GetInstanceTemplateNetworkInterface {
         this.subnetworkProject = Objects.requireNonNull(subnetworkProject);
     }
 
+    /**
+     * Access configurations, i.e. IPs via which this
+     * instance can be accessed via the Internet. Omit to ensure that the instance
+     * is not accessible from the Internet (this means that ssh provisioners will
+     * not work unless you are running the prvovider can send traffic to the instance's
+     * network (e.g. via tunnel or because it is running on another cloud instance
+     * on that network). This block can be repeated multiple times. Structure documented below.
+     * 
+     */
     public List<GetInstanceTemplateNetworkInterfaceAccessConfig> getAccessConfigs() {
         return this.accessConfigs;
     }
+    /**
+     * An
+     * array of alias IP ranges for this network interface. Can only be specified for network
+     * interfaces on subnet-mode networks. Structure documented below.
+     * 
+     */
     public List<GetInstanceTemplateNetworkInterfaceAliasIpRange> getAliasIpRanges() {
         return this.aliasIpRanges;
     }
@@ -67,12 +123,27 @@ public final class GetInstanceTemplateNetworkInterface {
     public String getIpv6AccessType() {
         return this.ipv6AccessType;
     }
+    /**
+     * The name of the instance template. One of `name` or `filter` must be provided.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The name or self_link of the network to attach this interface to.
+     * Use `network` attribute for Legacy or Auto subnetted networks and
+     * `subnetwork` for custom subnetted networks.
+     * 
+     */
     public String getNetwork() {
         return this.network;
     }
+    /**
+     * The private IP address to assign to the instance. If
+     * empty, the address will be automatically assigned.
+     * 
+     */
     public String getNetworkIp() {
         return this.networkIp;
     }
@@ -85,9 +156,20 @@ public final class GetInstanceTemplateNetworkInterface {
     public String getStackType() {
         return this.stackType;
     }
+    /**
+     * the name of the subnetwork to attach this interface
+     * to. The subnetwork must exist in the same `region` this instance will be
+     * created in. Either `network` or `subnetwork` must be provided.
+     * 
+     */
     public String getSubnetwork() {
         return this.subnetwork;
     }
+    /**
+     * The ID of the project in which the subnetwork belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public String getSubnetworkProject() {
         return this.subnetworkProject;
     }

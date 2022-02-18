@@ -16,6 +16,10 @@ public final class NetworkAclArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NetworkAclArgs Empty = new NetworkAclArgs();
 
+    /**
+     * The tags to assign to the network ACL.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<NetworkAclTagArgs>> tags;
 
@@ -23,6 +27,10 @@ public final class NetworkAclArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The ID of the VPC.
+     * 
+     */
     @InputImport(name="vpcId", required=true)
     private final Input<String> vpcId;
 

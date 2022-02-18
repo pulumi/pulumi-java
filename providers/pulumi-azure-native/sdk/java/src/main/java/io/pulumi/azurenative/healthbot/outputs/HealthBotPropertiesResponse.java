@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class HealthBotPropertiesResponse {
+    /**
+     * The link.
+     * 
+     */
     private final String botManagementPortalLink;
+    /**
+     * The provisioning state of the Healthbot resource.
+     * 
+     */
     private final String provisioningState;
 
     @OutputCustomType.Constructor({"botManagementPortalLink","provisioningState"})
@@ -20,9 +28,17 @@ public final class HealthBotPropertiesResponse {
         this.provisioningState = Objects.requireNonNull(provisioningState);
     }
 
+    /**
+     * The link.
+     * 
+     */
     public String getBotManagementPortalLink() {
         return this.botManagementPortalLink;
     }
+    /**
+     * The provisioning state of the Healthbot resource.
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }

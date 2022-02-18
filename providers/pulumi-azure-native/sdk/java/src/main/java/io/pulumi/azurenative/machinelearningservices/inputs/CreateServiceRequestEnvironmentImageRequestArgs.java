@@ -15,10 +15,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The Environment, models and assets needed for inferencing.
+ * 
+ */
 public final class CreateServiceRequestEnvironmentImageRequestArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CreateServiceRequestEnvironmentImageRequestArgs Empty = new CreateServiceRequestEnvironmentImageRequestArgs();
 
+    /**
+     * The list of assets.
+     * 
+     */
     @InputImport(name="assets")
     private final @Nullable Input<List<ImageAssetArgs>> assets;
 
@@ -26,6 +34,10 @@ public final class CreateServiceRequestEnvironmentImageRequestArgs extends io.pu
         return this.assets == null ? Input.empty() : this.assets;
     }
 
+    /**
+     * The name of the driver file.
+     * 
+     */
     @InputImport(name="driverProgram")
     private final @Nullable Input<String> driverProgram;
 
@@ -33,6 +45,10 @@ public final class CreateServiceRequestEnvironmentImageRequestArgs extends io.pu
         return this.driverProgram == null ? Input.empty() : this.driverProgram;
     }
 
+    /**
+     * The details of the AZURE ML environment.
+     * 
+     */
     @InputImport(name="environment")
     private final @Nullable Input<EnvironmentImageRequestEnvironmentArgs> environment;
 
@@ -40,6 +56,10 @@ public final class CreateServiceRequestEnvironmentImageRequestArgs extends io.pu
         return this.environment == null ? Input.empty() : this.environment;
     }
 
+    /**
+     * The unique identifying details of the AZURE ML environment.
+     * 
+     */
     @InputImport(name="environmentReference")
     private final @Nullable Input<EnvironmentImageRequestEnvironmentReferenceArgs> environmentReference;
 
@@ -47,6 +67,10 @@ public final class CreateServiceRequestEnvironmentImageRequestArgs extends io.pu
         return this.environmentReference == null ? Input.empty() : this.environmentReference;
     }
 
+    /**
+     * The list of model Ids.
+     * 
+     */
     @InputImport(name="modelIds")
     private final @Nullable Input<List<String>> modelIds;
 
@@ -54,6 +78,10 @@ public final class CreateServiceRequestEnvironmentImageRequestArgs extends io.pu
         return this.modelIds == null ? Input.empty() : this.modelIds;
     }
 
+    /**
+     * The list of models.
+     * 
+     */
     @InputImport(name="models")
     private final @Nullable Input<List<ModelArgs>> models;
 

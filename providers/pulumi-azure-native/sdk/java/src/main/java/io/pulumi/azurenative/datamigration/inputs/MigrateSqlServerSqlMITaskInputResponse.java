@@ -15,10 +15,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Input for task that migrates SQL Server databases to Azure SQL Database Managed Instance.
+ * 
+ */
 public final class MigrateSqlServerSqlMITaskInputResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MigrateSqlServerSqlMITaskInputResponse Empty = new MigrateSqlServerSqlMITaskInputResponse();
 
+    /**
+     * SAS URI of Azure Storage Account Container to be used for storing backup files.
+     * 
+     */
     @InputImport(name="backupBlobShare", required=true)
     private final BlobShareResponse backupBlobShare;
 
@@ -26,6 +34,10 @@ public final class MigrateSqlServerSqlMITaskInputResponse extends io.pulumi.reso
         return this.backupBlobShare;
     }
 
+    /**
+     * Backup file share information for all selected databases.
+     * 
+     */
     @InputImport(name="backupFileShare")
     private final @Nullable FileShareResponse backupFileShare;
 
@@ -33,6 +45,10 @@ public final class MigrateSqlServerSqlMITaskInputResponse extends io.pulumi.reso
         return this.backupFileShare == null ? Optional.empty() : Optional.ofNullable(this.backupFileShare);
     }
 
+    /**
+     * Backup Mode to specify whether to use existing backup or create new backup. If using existing backups, backup file paths are required to be provided in selectedDatabases.
+     * 
+     */
     @InputImport(name="backupMode")
     private final @Nullable String backupMode;
 
@@ -40,6 +56,10 @@ public final class MigrateSqlServerSqlMITaskInputResponse extends io.pulumi.reso
         return this.backupMode == null ? Optional.empty() : Optional.ofNullable(this.backupMode);
     }
 
+    /**
+     * Agent Jobs to migrate.
+     * 
+     */
     @InputImport(name="selectedAgentJobs")
     private final @Nullable List<String> selectedAgentJobs;
 
@@ -47,6 +67,10 @@ public final class MigrateSqlServerSqlMITaskInputResponse extends io.pulumi.reso
         return this.selectedAgentJobs == null ? List.of() : this.selectedAgentJobs;
     }
 
+    /**
+     * Databases to migrate
+     * 
+     */
     @InputImport(name="selectedDatabases", required=true)
     private final List<MigrateSqlServerSqlMIDatabaseInputResponse> selectedDatabases;
 
@@ -54,6 +78,10 @@ public final class MigrateSqlServerSqlMITaskInputResponse extends io.pulumi.reso
         return this.selectedDatabases;
     }
 
+    /**
+     * Logins to migrate.
+     * 
+     */
     @InputImport(name="selectedLogins")
     private final @Nullable List<String> selectedLogins;
 
@@ -61,6 +89,10 @@ public final class MigrateSqlServerSqlMITaskInputResponse extends io.pulumi.reso
         return this.selectedLogins == null ? List.of() : this.selectedLogins;
     }
 
+    /**
+     * Information for connecting to source
+     * 
+     */
     @InputImport(name="sourceConnectionInfo", required=true)
     private final SqlConnectionInfoResponse sourceConnectionInfo;
 
@@ -68,6 +100,10 @@ public final class MigrateSqlServerSqlMITaskInputResponse extends io.pulumi.reso
         return this.sourceConnectionInfo;
     }
 
+    /**
+     * Information for connecting to target
+     * 
+     */
     @InputImport(name="targetConnectionInfo", required=true)
     private final SqlConnectionInfoResponse targetConnectionInfo;
 

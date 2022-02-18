@@ -10,6 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A model to associate with a detector.
+ * 
+ */
 public final class DetectorModelArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DetectorModelArgs Empty = new DetectorModelArgs();

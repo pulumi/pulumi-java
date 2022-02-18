@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ApiPortalCustomDomainPropertiesResponse {
+    /**
+     * The thumbprint of bound certificate.
+     * 
+     */
     private final @Nullable String thumbprint;
 
     @OutputCustomType.Constructor({"thumbprint"})
@@ -18,6 +22,10 @@ public final class ApiPortalCustomDomainPropertiesResponse {
         this.thumbprint = thumbprint;
     }
 
+    /**
+     * The thumbprint of bound certificate.
+     * 
+     */
     public Optional<String> getThumbprint() {
         return Optional.ofNullable(this.thumbprint);
     }

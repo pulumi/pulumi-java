@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetStreamKey {
+/**
+ * Resource Type definition for AWS::IVS::StreamKey
+ * 
+ */
     public static CompletableFuture<GetStreamKeyResult> invokeAsync(GetStreamKeyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ivs:getStreamKey", TypeShape.of(GetStreamKeyResult.class), args == null ? GetStreamKeyArgs.Empty : args, Utilities.withVersion(options));
     }

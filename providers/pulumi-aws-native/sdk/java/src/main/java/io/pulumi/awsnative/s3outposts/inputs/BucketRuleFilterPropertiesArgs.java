@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The container for the filter of the lifecycle rule.
+ * 
+ */
 public final class BucketRuleFilterPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BucketRuleFilterPropertiesArgs Empty = new BucketRuleFilterPropertiesArgs();
 
+    /**
+     * The container for the AND condition for the lifecycle rule. A combination of Prefix and 1 or more Tags OR a minimum of 2 or more tags.
+     * 
+     */
     @InputImport(name="andOperator")
     private final @Nullable Input<BucketFilterAndOperatorArgs> andOperator;
 
@@ -23,6 +31,10 @@ public final class BucketRuleFilterPropertiesArgs extends io.pulumi.resources.Re
         return this.andOperator == null ? Input.empty() : this.andOperator;
     }
 
+    /**
+     * Object key prefix that identifies one or more objects to which this rule applies.
+     * 
+     */
     @InputImport(name="prefix")
     private final @Nullable Input<String> prefix;
 
@@ -30,6 +42,10 @@ public final class BucketRuleFilterPropertiesArgs extends io.pulumi.resources.Re
         return this.prefix == null ? Input.empty() : this.prefix;
     }
 
+    /**
+     * Specifies a tag used to identify a subset of objects for an Amazon S3Outposts bucket.
+     * 
+     */
     @InputImport(name="tag")
     private final @Nullable Input<BucketFilterTagArgs> tag;
 

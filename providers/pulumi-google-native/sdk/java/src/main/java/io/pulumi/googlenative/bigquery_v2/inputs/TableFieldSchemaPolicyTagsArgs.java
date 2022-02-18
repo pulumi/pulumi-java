@@ -15,6 +15,10 @@ public final class TableFieldSchemaPolicyTagsArgs extends io.pulumi.resources.Re
 
     public static final TableFieldSchemaPolicyTagsArgs Empty = new TableFieldSchemaPolicyTagsArgs();
 
+    /**
+     * A list of category resource names. For example, "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.
+     * 
+     */
     @InputImport(name="names")
     private final @Nullable Input<List<String>> names;
 

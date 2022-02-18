@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class X12MessageFilterResponse {
+    /**
+     * The message filter type.
+     * 
+     */
     private final String messageFilterType;
 
     @OutputCustomType.Constructor({"messageFilterType"})
@@ -16,6 +20,10 @@ public final class X12MessageFilterResponse {
         this.messageFilterType = Objects.requireNonNull(messageFilterType);
     }
 
+    /**
+     * The message filter type.
+     * 
+     */
     public String getMessageFilterType() {
         return this.messageFilterType;
     }

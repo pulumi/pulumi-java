@@ -15,6 +15,10 @@ public final class EdgeCacheServiceRoutingHostRuleGetArgs extends io.pulumi.reso
 
     public static final EdgeCacheServiceRoutingHostRuleGetArgs Empty = new EdgeCacheServiceRoutingHostRuleGetArgs();
 
+    /**
+     * A human-readable description of the resource.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -22,6 +26,13 @@ public final class EdgeCacheServiceRoutingHostRuleGetArgs extends io.pulumi.reso
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The list of host patterns to match.
+     * Host patterns must be valid hostnames with optional port numbers in the format host:port. * matches any string of ([a-z0-9-.]*).
+     * The only accepted ports are :80 and :443.
+     * Hosts are matched against the HTTP Host header, or for HTTP/2 and HTTP/3, the ":authority" header, from the incoming request.
+     * 
+     */
     @InputImport(name="hosts", required=true)
     private final Input<List<String>> hosts;
 
@@ -29,6 +40,10 @@ public final class EdgeCacheServiceRoutingHostRuleGetArgs extends io.pulumi.reso
         return this.hosts;
     }
 
+    /**
+     * The name of the pathMatcher associated with this hostRule.
+     * 
+     */
     @InputImport(name="pathMatcher", required=true)
     private final Input<String> pathMatcher;
 

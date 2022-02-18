@@ -12,7 +12,18 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbort {
+    /**
+     * The HTTP status code used to abort the request. The value must be between 200
+     * and 599 inclusive.
+     * 
+     */
     private final @Nullable Integer httpStatus;
+    /**
+     * The percentage of traffic (connections/operations/requests) on which delay will
+     * be introduced as part of fault injection. The value must be between 0.0 and
+     * 100.0 inclusive.
+     * 
+     */
     private final @Nullable Double percentage;
 
     @OutputCustomType.Constructor({"httpStatus","percentage"})
@@ -23,9 +34,20 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPoli
         this.percentage = percentage;
     }
 
+    /**
+     * The HTTP status code used to abort the request. The value must be between 200
+     * and 599 inclusive.
+     * 
+     */
     public Optional<Integer> getHttpStatus() {
         return Optional.ofNullable(this.httpStatus);
     }
+    /**
+     * The percentage of traffic (connections/operations/requests) on which delay will
+     * be introduced as part of fault injection. The value must be between 0.0 and
+     * 100.0 inclusive.
+     * 
+     */
     public Optional<Double> getPercentage() {
         return Optional.ofNullable(this.percentage);
     }

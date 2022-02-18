@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInstanceClusterBackupIamPolicy {
+/**
+ * Gets the access control policy for a Table resource. Returns an empty policy if the resource exists but does not have a policy set.
+ * 
+ */
     public static CompletableFuture<GetInstanceClusterBackupIamPolicyResult> invokeAsync(GetInstanceClusterBackupIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:bigtableadmin/v2:getInstanceClusterBackupIamPolicy", TypeShape.of(GetInstanceClusterBackupIamPolicyResult.class), args == null ? GetInstanceClusterBackupIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPool {
+/**
+ * Contains information about a pool.
+ * API Version: 2021-01-01.
+ * 
+ *
+ * Contains information about a pool.
+ * 
+ */
     public static CompletableFuture<GetPoolResult> invokeAsync(GetPoolArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:batch:getPool", TypeShape.of(GetPoolResult.class), args == null ? GetPoolArgs.Empty : args, Utilities.withVersion(options));
     }

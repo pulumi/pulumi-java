@@ -18,6 +18,10 @@ public final class SpokeState extends io.pulumi.resources.ResourceArgs {
 
     public static final SpokeState Empty = new SpokeState();
 
+    /**
+     * Output only. The time the spoke was created.
+     * 
+     */
     @InputImport(name="createTime")
     private final @Nullable Input<String> createTime;
 
@@ -25,6 +29,10 @@ public final class SpokeState extends io.pulumi.resources.ResourceArgs {
         return this.createTime == null ? Input.empty() : this.createTime;
     }
 
+    /**
+     * An optional description of the spoke.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -32,6 +40,10 @@ public final class SpokeState extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Immutable. The URI of the hub that this spoke is attached to.
+     * 
+     */
     @InputImport(name="hub")
     private final @Nullable Input<String> hub;
 
@@ -39,6 +51,10 @@ public final class SpokeState extends io.pulumi.resources.ResourceArgs {
         return this.hub == null ? Input.empty() : this.hub;
     }
 
+    /**
+     * Optional labels in key:value format. For more information about labels, see [Requirements for labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements).
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -46,6 +62,10 @@ public final class SpokeState extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * A collection of VLAN attachment resources. These resources should be redundant attachments that all advertise the same prefixes to Google Cloud. Alternatively, in active/passive configurations, all attachments should be capable of advertising the same prefixes.
+     * 
+     */
     @InputImport(name="linkedInterconnectAttachments")
     private final @Nullable Input<SpokeLinkedInterconnectAttachmentsGetArgs> linkedInterconnectAttachments;
 
@@ -53,6 +73,10 @@ public final class SpokeState extends io.pulumi.resources.ResourceArgs {
         return this.linkedInterconnectAttachments == null ? Input.empty() : this.linkedInterconnectAttachments;
     }
 
+    /**
+     * The URIs of linked Router appliance resources
+     * 
+     */
     @InputImport(name="linkedRouterApplianceInstances")
     private final @Nullable Input<SpokeLinkedRouterApplianceInstancesGetArgs> linkedRouterApplianceInstances;
 
@@ -60,6 +84,10 @@ public final class SpokeState extends io.pulumi.resources.ResourceArgs {
         return this.linkedRouterApplianceInstances == null ? Input.empty() : this.linkedRouterApplianceInstances;
     }
 
+    /**
+     * The URIs of linked VPN tunnel resources
+     * 
+     */
     @InputImport(name="linkedVpnTunnels")
     private final @Nullable Input<SpokeLinkedVpnTunnelsGetArgs> linkedVpnTunnels;
 
@@ -67,6 +95,10 @@ public final class SpokeState extends io.pulumi.resources.ResourceArgs {
         return this.linkedVpnTunnels == null ? Input.empty() : this.linkedVpnTunnels;
     }
 
+    /**
+     * The location for the resource
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -74,6 +106,10 @@ public final class SpokeState extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Immutable. The name of the spoke. Spoke names must be unique.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -81,6 +117,10 @@ public final class SpokeState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The project for the resource
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -88,6 +128,10 @@ public final class SpokeState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Output only. The current lifecycle state of this spoke. Possible values: STATE_UNSPECIFIED, CREATING, ACTIVE, DELETING
+     * 
+     */
     @InputImport(name="state")
     private final @Nullable Input<String> state;
 
@@ -95,6 +139,11 @@ public final class SpokeState extends io.pulumi.resources.ResourceArgs {
         return this.state == null ? Input.empty() : this.state;
     }
 
+    /**
+     * Output only. The Google-generated UUID for the spoke. This value is unique across all spoke resources. If a spoke is
+     * deleted and another with the same name is created, the new spoke is assigned a different unique_id.
+     * 
+     */
     @InputImport(name="uniqueId")
     private final @Nullable Input<String> uniqueId;
 
@@ -102,6 +151,10 @@ public final class SpokeState extends io.pulumi.resources.ResourceArgs {
         return this.uniqueId == null ? Input.empty() : this.uniqueId;
     }
 
+    /**
+     * Output only. The time the spoke was last updated.
+     * 
+     */
     @InputImport(name="updateTime")
     private final @Nullable Input<String> updateTime;
 

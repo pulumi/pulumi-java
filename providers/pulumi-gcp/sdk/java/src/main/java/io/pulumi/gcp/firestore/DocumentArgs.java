@@ -14,6 +14,10 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DocumentArgs Empty = new DocumentArgs();
 
+    /**
+     * The collection ID, relative to database. For example: chatrooms or chatrooms/my-document/private-messages.
+     * 
+     */
     @InputImport(name="collection", required=true)
     private final Input<String> collection;
 
@@ -21,6 +25,10 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
         return this.collection;
     }
 
+    /**
+     * The Firestore database id. Defaults to `"(default)"`.
+     * 
+     */
     @InputImport(name="database")
     private final @Nullable Input<String> database;
 
@@ -28,6 +36,10 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
         return this.database == null ? Input.empty() : this.database;
     }
 
+    /**
+     * The client-assigned document ID to use for this document during creation.
+     * 
+     */
     @InputImport(name="documentId", required=true)
     private final Input<String> documentId;
 
@@ -35,6 +47,10 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
         return this.documentId;
     }
 
+    /**
+     * The document's [fields](https://cloud.google.com/firestore/docs/reference/rest/v1/projects.databases.documents) formated as a json string.
+     * 
+     */
     @InputImport(name="fields", required=true)
     private final Input<String> fields;
 
@@ -42,6 +58,11 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
         return this.fields;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

@@ -9,10 +9,18 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * One type sub component configurations for the component.
+ * 
+ */
 public final class ApplicationSubComponentTypeConfiguration extends io.pulumi.resources.InvokeArgs {
 
     public static final ApplicationSubComponentTypeConfiguration Empty = new ApplicationSubComponentTypeConfiguration();
 
+    /**
+     * The configuration settings of sub components.
+     * 
+     */
     @InputImport(name="subComponentConfigurationDetails", required=true)
     private final ApplicationSubComponentConfigurationDetails subComponentConfigurationDetails;
 
@@ -20,6 +28,10 @@ public final class ApplicationSubComponentTypeConfiguration extends io.pulumi.re
         return this.subComponentConfigurationDetails;
     }
 
+    /**
+     * The sub component type.
+     * 
+     */
     @InputImport(name="subComponentType", required=true)
     private final ApplicationSubComponentTypeConfigurationSubComponentType subComponentType;
 

@@ -10,9 +10,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PackageIssueResponse {
+    /**
+     * The location of the vulnerability.
+     * 
+     */
     private final VulnerabilityLocationResponse affectedLocation;
+    /**
+     * The distro or language system assigned severity for this vulnerability when that is available and note provider assigned severity when distro or language system has not yet assigned a severity for this vulnerability.
+     * 
+     */
     private final String effectiveSeverity;
+    /**
+     * The location of the available fix for vulnerability.
+     * 
+     */
     private final VulnerabilityLocationResponse fixedLocation;
+    /**
+     * The type of package (e.g. OS, MAVEN, GO).
+     * 
+     */
     private final String packageType;
     private final String severityName;
 
@@ -30,15 +46,31 @@ public final class PackageIssueResponse {
         this.severityName = Objects.requireNonNull(severityName);
     }
 
+    /**
+     * The location of the vulnerability.
+     * 
+     */
     public VulnerabilityLocationResponse getAffectedLocation() {
         return this.affectedLocation;
     }
+    /**
+     * The distro or language system assigned severity for this vulnerability when that is available and note provider assigned severity when distro or language system has not yet assigned a severity for this vulnerability.
+     * 
+     */
     public String getEffectiveSeverity() {
         return this.effectiveSeverity;
     }
+    /**
+     * The location of the available fix for vulnerability.
+     * 
+     */
     public VulnerabilityLocationResponse getFixedLocation() {
         return this.fixedLocation;
     }
+    /**
+     * The type of package (e.g. OS, MAVEN, GO).
+     * 
+     */
     public String getPackageType() {
         return this.packageType;
     }

@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class IntegrationAccountMapPropertiesResponseParametersSchema {
+    /**
+     * The reference name.
+     * 
+     */
     private final @Nullable String ref;
 
     @OutputCustomType.Constructor({"ref"})
@@ -18,6 +22,10 @@ public final class IntegrationAccountMapPropertiesResponseParametersSchema {
         this.ref = ref;
     }
 
+    /**
+     * The reference name.
+     * 
+     */
     public Optional<String> getRef() {
         return Optional.ofNullable(this.ref);
     }

@@ -13,35 +13,107 @@ import io.pulumi.gcp.runtimeconfig.inputs.VariableState;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * ## Import
+ * 
+ * Runtime Config Variables can be imported using the `name` or full variable name, e.g.
+ * 
+ * ```sh
+ *  $ pulumi import gcp:runtimeconfig/variable:Variable myvariable myconfig/myvariable
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:runtimeconfig/variable:Variable myvariable projects/my-gcp-project/configs/myconfig/variables/myvariable
+ * ```
+ * 
+ *  When importing using only the name, the provider project must be set.
+ * 
+ */
 @ResourceType(type="gcp:runtimeconfig/variable:Variable")
 public class Variable extends io.pulumi.resources.CustomResource {
+    /**
+     * The name of the variable to manage. Note that variable
+     * names can be hierarchical using slashes (e.g. "prod-variables/hostname").
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the variable to manage. Note that variable
+     * names can be hierarchical using slashes (e.g. "prod-variables/hostname").
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The name of the RuntimeConfig resource containing this
+     * variable.
+     * 
+     */
     @OutputExport(name="parent", type=String.class, parameters={})
     private Output<String> parent;
 
+    /**
+     * @return The name of the RuntimeConfig resource containing this
+     * variable.
+     * 
+     */
     public Output<String> getParent() {
         return this.parent;
     }
+    /**
+     * The ID of the project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * or `value` - (Required) The content to associate with the variable.
+     * Exactly one of `text` or `variable` must be specified. If `text` is specified,
+     * it must be a valid UTF-8 string and less than 4096 bytes in length. If `value`
+     * is specified, it must be base64 encoded and less than 4096 bytes in length.
+     * 
+     */
     @OutputExport(name="text", type=String.class, parameters={})
     private Output</* @Nullable */ String> text;
 
+    /**
+     * @return or `value` - (Required) The content to associate with the variable.
+     * Exactly one of `text` or `variable` must be specified. If `text` is specified,
+     * it must be a valid UTF-8 string and less than 4096 bytes in length. If `value`
+     * is specified, it must be base64 encoded and less than 4096 bytes in length.
+     * 
+     */
     public Output</* @Nullable */ String> getText() {
         return this.text;
     }
+    /**
+     * (Computed) The timestamp in RFC3339 UTC "Zulu" format,
+     * accurate to nanoseconds, representing when the variable was last updated.
+     * Example: "2016-10-09T12:33:37.578138407Z".
+     * 
+     */
     @OutputExport(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
+    /**
+     * @return (Computed) The timestamp in RFC3339 UTC "Zulu" format,
+     * accurate to nanoseconds, representing when the variable was last updated.
+     * Example: "2016-10-09T12:33:37.578138407Z".
+     * 
+     */
     public Output<String> getUpdateTime() {
         return this.updateTime;
     }
@@ -52,6 +124,12 @@ public class Variable extends io.pulumi.resources.CustomResource {
         return this.value;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Variable(String name, VariableArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:runtimeconfig/variable:Variable", name, args == null ? VariableArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -67,6 +145,15 @@ public class Variable extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Variable get(String name, Input<String> id, @Nullable VariableState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Variable(name, id, state, options);
     }

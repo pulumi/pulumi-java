@@ -14,6 +14,10 @@ public final class TargetInstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TargetInstanceArgs Empty = new TargetInstanceArgs();
 
+    /**
+     * An optional description of this resource.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -21,6 +25,15 @@ public final class TargetInstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The Compute instance VM handling traffic for this target instance.
+     * Accepts the instance self-link, relative path
+     * (e.g. `projects/project/zones/zone/instances/instance`) or name. If
+     * name is given, the zone will default to the given zone or
+     * the provider-default zone and the project will default to the
+     * provider-level project.
+     * 
+     */
     @InputImport(name="instance", required=true)
     private final Input<String> instance;
 
@@ -28,6 +41,16 @@ public final class TargetInstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.instance;
     }
 
+    /**
+     * Name of the resource. Provided by the client when the resource is
+     * created. The name must be 1-63 characters long, and comply with
+     * RFC1035. Specifically, the name must be 1-63 characters long and match
+     * the regular expression `a-z?` which means the
+     * first character must be a lowercase letter, and all following
+     * characters must be a dash, lowercase letter, or digit, except the last
+     * character, which cannot be a dash.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -35,6 +58,13 @@ public final class TargetInstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * NAT option controlling how IPs are NAT'ed to the instance.
+     * Currently only NO_NAT (default value) is supported.
+     * Default value is `NO_NAT`.
+     * Possible values are `NO_NAT`.
+     * 
+     */
     @InputImport(name="natPolicy")
     private final @Nullable Input<String> natPolicy;
 
@@ -42,6 +72,10 @@ public final class TargetInstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.natPolicy == null ? Input.empty() : this.natPolicy;
     }
 
+    /**
+     * The URL of the network this target instance uses to forward traffic. If not specified, the traffic will be forwarded to the network that the default network interface belongs to.
+     * 
+     */
     @InputImport(name="network")
     private final @Nullable Input<String> network;
 
@@ -49,6 +83,11 @@ public final class TargetInstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.network == null ? Input.empty() : this.network;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -56,6 +95,10 @@ public final class TargetInstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * URL of the zone where the target instance resides.
+     * 
+     */
     @InputImport(name="zone")
     private final @Nullable Input<String> zone;
 

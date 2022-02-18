@@ -12,7 +12,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SchemaVersion {
+    /**
+     * Indicates if the latest version needs to be updated.
+     * 
+     */
     private final @Nullable Boolean isLatest;
+    /**
+     * Indicates the version number in the schema to update.
+     * 
+     */
     private final @Nullable Integer versionNumber;
 
     @OutputCustomType.Constructor({"isLatest","versionNumber"})
@@ -23,9 +31,17 @@ public final class SchemaVersion {
         this.versionNumber = versionNumber;
     }
 
+    /**
+     * Indicates if the latest version needs to be updated.
+     * 
+     */
     public Optional<Boolean> getIsLatest() {
         return Optional.ofNullable(this.isLatest);
     }
+    /**
+     * Indicates the version number in the schema to update.
+     * 
+     */
     public Optional<Integer> getVersionNumber() {
         return Optional.ofNullable(this.versionNumber);
     }

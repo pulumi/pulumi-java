@@ -23,6 +23,13 @@ public final class FhirStoreIamBindingArgs extends io.pulumi.resources.ResourceA
         return this.condition == null ? Input.empty() : this.condition;
     }
 
+    /**
+     * The FHIR store ID, in the form
+     * `{project_id}/{location_name}/{dataset_name}/{fhir_store_name}` or
+     * `{location_name}/{dataset_name}/{fhir_store_name}`. In the second form, the provider's
+     * project setting will be used as a fallback.
+     * 
+     */
     @InputImport(name="fhirStoreId", required=true)
     private final Input<String> fhirStoreId;
 
@@ -37,6 +44,12 @@ public final class FhirStoreIamBindingArgs extends io.pulumi.resources.ResourceA
         return this.members;
     }
 
+    /**
+     * The role that should be applied. Only one
+     * `gcp.healthcare.FhirStoreIamBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     @InputImport(name="role", required=true)
     private final Input<String> role;
 

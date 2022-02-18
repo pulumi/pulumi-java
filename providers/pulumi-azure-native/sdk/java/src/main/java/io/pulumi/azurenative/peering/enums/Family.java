@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The family of the peering SKU.
+     * 
+     */
     @EnumType
     public enum Family {
         Direct("Direct"),

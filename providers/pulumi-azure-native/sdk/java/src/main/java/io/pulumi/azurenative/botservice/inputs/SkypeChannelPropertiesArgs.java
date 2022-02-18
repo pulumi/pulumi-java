@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The parameters to provide for the Microsoft Teams channel.
+ * 
+ */
 public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SkypeChannelPropertiesArgs Empty = new SkypeChannelPropertiesArgs();
 
+    /**
+     * Calling web hook for Skype channel
+     * 
+     */
     @InputImport(name="callingWebHook")
     private final @Nullable Input<String> callingWebHook;
 
@@ -22,6 +30,10 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
         return this.callingWebHook == null ? Input.empty() : this.callingWebHook;
     }
 
+    /**
+     * Enable calling for Skype channel
+     * 
+     */
     @InputImport(name="enableCalling")
     private final @Nullable Input<Boolean> enableCalling;
 
@@ -29,6 +41,10 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
         return this.enableCalling == null ? Input.empty() : this.enableCalling;
     }
 
+    /**
+     * Enable groups for Skype channel
+     * 
+     */
     @InputImport(name="enableGroups")
     private final @Nullable Input<Boolean> enableGroups;
 
@@ -36,6 +52,10 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
         return this.enableGroups == null ? Input.empty() : this.enableGroups;
     }
 
+    /**
+     * Enable media cards for Skype channel
+     * 
+     */
     @InputImport(name="enableMediaCards")
     private final @Nullable Input<Boolean> enableMediaCards;
 
@@ -43,6 +63,10 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
         return this.enableMediaCards == null ? Input.empty() : this.enableMediaCards;
     }
 
+    /**
+     * Enable messaging for Skype channel
+     * 
+     */
     @InputImport(name="enableMessaging")
     private final @Nullable Input<Boolean> enableMessaging;
 
@@ -50,6 +74,10 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
         return this.enableMessaging == null ? Input.empty() : this.enableMessaging;
     }
 
+    /**
+     * Enable screen sharing for Skype channel
+     * 
+     */
     @InputImport(name="enableScreenSharing")
     private final @Nullable Input<Boolean> enableScreenSharing;
 
@@ -57,6 +85,10 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
         return this.enableScreenSharing == null ? Input.empty() : this.enableScreenSharing;
     }
 
+    /**
+     * Enable video for Skype channel
+     * 
+     */
     @InputImport(name="enableVideo")
     private final @Nullable Input<Boolean> enableVideo;
 
@@ -64,6 +96,10 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
         return this.enableVideo == null ? Input.empty() : this.enableVideo;
     }
 
+    /**
+     * Group mode for Skype channel
+     * 
+     */
     @InputImport(name="groupsMode")
     private final @Nullable Input<String> groupsMode;
 
@@ -71,6 +107,10 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
         return this.groupsMode == null ? Input.empty() : this.groupsMode;
     }
 
+    /**
+     * Incoming call route for Skype channel
+     * 
+     */
     @InputImport(name="incomingCallRoute")
     private final @Nullable Input<String> incomingCallRoute;
 
@@ -78,6 +118,10 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
         return this.incomingCallRoute == null ? Input.empty() : this.incomingCallRoute;
     }
 
+    /**
+     * Whether this channel is enabled for the bot
+     * 
+     */
     @InputImport(name="isEnabled", required=true)
     private final Input<Boolean> isEnabled;
 

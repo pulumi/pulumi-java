@@ -15,6 +15,12 @@ public final class TaxonomyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TaxonomyArgs Empty = new TaxonomyArgs();
 
+    /**
+     * A list of policy types that are activated for this taxonomy. If not set,
+     * defaults to an empty list.
+     * Each value may be one of `POLICY_TYPE_UNSPECIFIED` and `FINE_GRAINED_ACCESS_CONTROL`.
+     * 
+     */
     @InputImport(name="activatedPolicyTypes")
     private final @Nullable Input<List<String>> activatedPolicyTypes;
 
@@ -22,6 +28,12 @@ public final class TaxonomyArgs extends io.pulumi.resources.ResourceArgs {
         return this.activatedPolicyTypes == null ? Input.empty() : this.activatedPolicyTypes;
     }
 
+    /**
+     * Description of this taxonomy. It must: contain only unicode characters,
+     * tabs, newlines, carriage returns and page breaks; and be at most 2000 bytes
+     * long when encoded in UTF-8. If not set, defaults to an empty description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -29,6 +41,13 @@ public final class TaxonomyArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * User defined name of this taxonomy.
+     * It must: contain only unicode letters, numbers, underscores, dashes
+     * and spaces; not start or end with spaces; and be at most 200 bytes
+     * long when encoded in UTF-8.
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -36,6 +55,11 @@ public final class TaxonomyArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -43,6 +67,10 @@ public final class TaxonomyArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Taxonomy location region.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 

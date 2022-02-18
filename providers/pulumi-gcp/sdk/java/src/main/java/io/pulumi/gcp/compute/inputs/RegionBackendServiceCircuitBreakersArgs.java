@@ -15,6 +15,11 @@ public final class RegionBackendServiceCircuitBreakersArgs extends io.pulumi.res
 
     public static final RegionBackendServiceCircuitBreakersArgs Empty = new RegionBackendServiceCircuitBreakersArgs();
 
+    /**
+     * The timeout for new network connections to hosts.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="connectTimeout")
     private final @Nullable Input<RegionBackendServiceCircuitBreakersConnectTimeoutArgs> connectTimeout;
 
@@ -22,6 +27,11 @@ public final class RegionBackendServiceCircuitBreakersArgs extends io.pulumi.res
         return this.connectTimeout == null ? Input.empty() : this.connectTimeout;
     }
 
+    /**
+     * The maximum number of connections to the backend cluster.
+     * Defaults to 1024.
+     * 
+     */
     @InputImport(name="maxConnections")
     private final @Nullable Input<Integer> maxConnections;
 
@@ -29,6 +39,11 @@ public final class RegionBackendServiceCircuitBreakersArgs extends io.pulumi.res
         return this.maxConnections == null ? Input.empty() : this.maxConnections;
     }
 
+    /**
+     * The maximum number of pending requests to the backend cluster.
+     * Defaults to 1024.
+     * 
+     */
     @InputImport(name="maxPendingRequests")
     private final @Nullable Input<Integer> maxPendingRequests;
 
@@ -36,6 +51,11 @@ public final class RegionBackendServiceCircuitBreakersArgs extends io.pulumi.res
         return this.maxPendingRequests == null ? Input.empty() : this.maxPendingRequests;
     }
 
+    /**
+     * The maximum number of parallel requests to the backend cluster.
+     * Defaults to 1024.
+     * 
+     */
     @InputImport(name="maxRequests")
     private final @Nullable Input<Integer> maxRequests;
 
@@ -43,6 +63,13 @@ public final class RegionBackendServiceCircuitBreakersArgs extends io.pulumi.res
         return this.maxRequests == null ? Input.empty() : this.maxRequests;
     }
 
+    /**
+     * Maximum requests for a single backend connection. This parameter
+     * is respected by both the HTTP/1.1 and HTTP/2 implementations. If
+     * not specified, there is no limit. Setting this parameter to 1
+     * will effectively disable keep alive.
+     * 
+     */
     @InputImport(name="maxRequestsPerConnection")
     private final @Nullable Input<Integer> maxRequestsPerConnection;
 
@@ -50,6 +77,11 @@ public final class RegionBackendServiceCircuitBreakersArgs extends io.pulumi.res
         return this.maxRequestsPerConnection == null ? Input.empty() : this.maxRequestsPerConnection;
     }
 
+    /**
+     * The maximum number of parallel retries to the backend cluster.
+     * Defaults to 3.
+     * 
+     */
     @InputImport(name="maxRetries")
     private final @Nullable Input<Integer> maxRetries;
 

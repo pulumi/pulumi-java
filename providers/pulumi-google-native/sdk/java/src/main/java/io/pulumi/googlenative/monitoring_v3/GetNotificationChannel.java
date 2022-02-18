@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNotificationChannel {
+/**
+ * Gets a single notification channel. The channel includes the relevant configuration details with which the channel was created. However, the response may truncate or omit passwords, API keys, or other private key matter and thus the response may not be 100% identical to the information that was supplied in the call to the create method.
+ * 
+ */
     public static CompletableFuture<GetNotificationChannelResult> invokeAsync(GetNotificationChannelArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:monitoring/v3:getNotificationChannel", TypeShape.of(GetNotificationChannelResult.class), args == null ? GetNotificationChannelArgs.Empty : args, Utilities.withVersion(options));
     }

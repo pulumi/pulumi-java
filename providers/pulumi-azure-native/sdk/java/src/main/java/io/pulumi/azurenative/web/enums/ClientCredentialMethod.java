@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The method that should be used to authenticate the user.
+     * 
+     */
     @EnumType
     public enum ClientCredentialMethod {
         ClientSecretPost("ClientSecretPost");

@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CertificateTemplateResponse {
+    /**
+     * The Major version of the template. Example: 100.
+     * 
+     */
     private final Integer majorVersion;
+    /**
+     * The minor version of the template. Example: 12.
+     * 
+     */
     private final Integer minorVersion;
 
     @OutputCustomType.Constructor({"majorVersion","minorVersion"})
@@ -20,9 +28,17 @@ public final class CertificateTemplateResponse {
         this.minorVersion = Objects.requireNonNull(minorVersion);
     }
 
+    /**
+     * The Major version of the template. Example: 100.
+     * 
+     */
     public Integer getMajorVersion() {
         return this.majorVersion;
     }
+    /**
+     * The minor version of the template. Example: 12.
+     * 
+     */
     public Integer getMinorVersion() {
         return this.minorVersion;
     }

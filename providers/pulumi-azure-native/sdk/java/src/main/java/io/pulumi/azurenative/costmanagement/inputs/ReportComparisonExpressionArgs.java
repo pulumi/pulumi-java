@@ -12,10 +12,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * The comparison expression to be used in the report.
+ * 
+ */
 public final class ReportComparisonExpressionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ReportComparisonExpressionArgs Empty = new ReportComparisonExpressionArgs();
 
+    /**
+     * The name of the column to use in comparison.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -23,6 +31,10 @@ public final class ReportComparisonExpressionArgs extends io.pulumi.resources.Re
         return this.name;
     }
 
+    /**
+     * The operator to use for comparison.
+     * 
+     */
     @InputImport(name="operator", required=true)
     private final Input<Either<String,OperatorType>> operator;
 
@@ -30,6 +42,10 @@ public final class ReportComparisonExpressionArgs extends io.pulumi.resources.Re
         return this.operator;
     }
 
+    /**
+     * Array of values to use for comparison
+     * 
+     */
     @InputImport(name="values", required=true)
     private final Input<List<String>> values;
 

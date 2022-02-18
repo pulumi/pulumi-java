@@ -14,6 +14,10 @@ public final class AwsClusterNetworkingArgs extends io.pulumi.resources.Resource
 
     public static final AwsClusterNetworkingArgs Empty = new AwsClusterNetworkingArgs();
 
+    /**
+     * Required. All pods in the cluster are assigned an RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creation.
+     * 
+     */
     @InputImport(name="podAddressCidrBlocks", required=true)
     private final Input<List<String>> podAddressCidrBlocks;
 
@@ -21,6 +25,10 @@ public final class AwsClusterNetworkingArgs extends io.pulumi.resources.Resource
         return this.podAddressCidrBlocks;
     }
 
+    /**
+     * Required. All services in the cluster are assigned an RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creation.
+     * 
+     */
     @InputImport(name="serviceAddressCidrBlocks", required=true)
     private final Input<List<String>> serviceAddressCidrBlocks;
 
@@ -28,6 +36,10 @@ public final class AwsClusterNetworkingArgs extends io.pulumi.resources.Resource
         return this.serviceAddressCidrBlocks;
     }
 
+    /**
+     * Required. The VPC associated with the cluster. All component clusters (i.e. control plane and node pools) run on a single VPC. This field cannot be changed after creation.
+     * 
+     */
     @InputImport(name="vpcId", required=true)
     private final Input<String> vpcId;
 

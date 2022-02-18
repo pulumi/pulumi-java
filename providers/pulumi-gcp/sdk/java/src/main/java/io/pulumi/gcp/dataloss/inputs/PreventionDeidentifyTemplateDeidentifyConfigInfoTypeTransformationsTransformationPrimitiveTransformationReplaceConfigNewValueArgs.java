@@ -19,6 +19,10 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
 
     public static final PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueArgs Empty = new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueArgs();
 
+    /**
+     * A boolean value.
+     * 
+     */
     @InputImport(name="booleanValue")
     private final @Nullable Input<Boolean> booleanValue;
 
@@ -26,6 +30,11 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
         return this.booleanValue == null ? Input.empty() : this.booleanValue;
     }
 
+    /**
+     * Represents a whole or partial calendar date.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="dateValue")
     private final @Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValueArgs> dateValue;
 
@@ -33,6 +42,11 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
         return this.dateValue == null ? Input.empty() : this.dateValue;
     }
 
+    /**
+     * Represents a day of the week.
+     * Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
+     * 
+     */
     @InputImport(name="dayOfWeekValue")
     private final @Nullable Input<String> dayOfWeekValue;
 
@@ -40,6 +54,10 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
         return this.dayOfWeekValue == null ? Input.empty() : this.dayOfWeekValue;
     }
 
+    /**
+     * A float value.
+     * 
+     */
     @InputImport(name="floatValue")
     private final @Nullable Input<Double> floatValue;
 
@@ -47,6 +65,10 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
         return this.floatValue == null ? Input.empty() : this.floatValue;
     }
 
+    /**
+     * An integer value.
+     * 
+     */
     @InputImport(name="integerValue")
     private final @Nullable Input<Integer> integerValue;
 
@@ -54,6 +76,10 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
         return this.integerValue == null ? Input.empty() : this.integerValue;
     }
 
+    /**
+     * A string value.
+     * 
+     */
     @InputImport(name="stringValue")
     private final @Nullable Input<String> stringValue;
 
@@ -61,6 +87,11 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
         return this.stringValue == null ? Input.empty() : this.stringValue;
     }
 
+    /**
+     * Represents a time of day.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="timeValue")
     private final @Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueTimeValueArgs> timeValue;
 
@@ -68,6 +99,11 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
         return this.timeValue == null ? Input.empty() : this.timeValue;
     }
 
+    /**
+     * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits.
+     * Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
+     * 
+     */
     @InputImport(name="timestampValue")
     private final @Nullable Input<String> timestampValue;
 

@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPackagingConfiguration {
+/**
+ * Resource schema for AWS::MediaPackage::PackagingConfiguration
+ * 
+ */
     public static CompletableFuture<GetPackagingConfigurationResult> invokeAsync(GetPackagingConfigurationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:mediapackage:getPackagingConfiguration", TypeShape.of(GetPackagingConfigurationResult.class), args == null ? GetPackagingConfigurationArgs.Empty : args, Utilities.withVersion(options));
     }

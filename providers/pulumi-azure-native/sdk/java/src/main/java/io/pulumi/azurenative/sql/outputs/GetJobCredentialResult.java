@@ -9,9 +9,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetJobCredentialResult {
+    /**
+     * Resource ID.
+     * 
+     */
     private final String id;
+    /**
+     * Resource name.
+     * 
+     */
     private final String name;
+    /**
+     * Resource type.
+     * 
+     */
     private final String type;
+    /**
+     * The credential user name.
+     * 
+     */
     private final String username;
 
     @OutputCustomType.Constructor({"id","name","type","username"})
@@ -26,15 +42,31 @@ public final class GetJobCredentialResult {
         this.username = Objects.requireNonNull(username);
     }
 
+    /**
+     * Resource ID.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Resource name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Resource type.
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * The credential user name.
+     * 
+     */
     public String getUsername() {
         return this.username;
     }

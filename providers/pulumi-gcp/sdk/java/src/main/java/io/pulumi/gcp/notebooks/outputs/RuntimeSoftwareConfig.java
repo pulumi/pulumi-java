@@ -13,12 +13,46 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RuntimeSoftwareConfig {
+    /**
+     * Specify a custom Cloud Storage path where the GPU driver is stored.
+     * If not specified, we'll automatically choose from official GPU drivers.
+     * 
+     */
     private final @Nullable String customGpuDriverPath;
+    /**
+     * Verifies core internal services are running. Default: True.
+     * 
+     */
     private final @Nullable Boolean enableHealthMonitoring;
+    /**
+     * Runtime will automatically shutdown after idle_shutdown_time.
+     * Default: True
+     * 
+     */
     private final @Nullable Boolean idleShutdown;
+    /**
+     * Time in minutes to wait before shuting down runtime.
+     * Default: 180 minutes
+     * 
+     */
     private final @Nullable Integer idleShutdownTimeout;
+    /**
+     * Install Nvidia Driver automatically.
+     * 
+     */
     private final @Nullable Boolean installGpuDriver;
+    /**
+     * Cron expression in UTC timezone for schedule instance auto upgrade.
+     * Please follow the [cron format](https://en.wikipedia.org/wiki/Cron).
+     * 
+     */
     private final @Nullable String notebookUpgradeSchedule;
+    /**
+     * Path to a Bash script that automatically runs after a notebook instance
+     * fully boots up. The path must be a URL or
+     * Cloud Storage path (gs://path-to-file/file-name).
+     * 
+     */
     private final @Nullable String postStartupScript;
 
     @OutputCustomType.Constructor({"customGpuDriverPath","enableHealthMonitoring","idleShutdown","idleShutdownTimeout","installGpuDriver","notebookUpgradeSchedule","postStartupScript"})
@@ -39,24 +73,58 @@ public final class RuntimeSoftwareConfig {
         this.postStartupScript = postStartupScript;
     }
 
+    /**
+     * Specify a custom Cloud Storage path where the GPU driver is stored.
+     * If not specified, we'll automatically choose from official GPU drivers.
+     * 
+     */
     public Optional<String> getCustomGpuDriverPath() {
         return Optional.ofNullable(this.customGpuDriverPath);
     }
+    /**
+     * Verifies core internal services are running. Default: True.
+     * 
+     */
     public Optional<Boolean> getEnableHealthMonitoring() {
         return Optional.ofNullable(this.enableHealthMonitoring);
     }
+    /**
+     * Runtime will automatically shutdown after idle_shutdown_time.
+     * Default: True
+     * 
+     */
     public Optional<Boolean> getIdleShutdown() {
         return Optional.ofNullable(this.idleShutdown);
     }
+    /**
+     * Time in minutes to wait before shuting down runtime.
+     * Default: 180 minutes
+     * 
+     */
     public Optional<Integer> getIdleShutdownTimeout() {
         return Optional.ofNullable(this.idleShutdownTimeout);
     }
+    /**
+     * Install Nvidia Driver automatically.
+     * 
+     */
     public Optional<Boolean> getInstallGpuDriver() {
         return Optional.ofNullable(this.installGpuDriver);
     }
+    /**
+     * Cron expression in UTC timezone for schedule instance auto upgrade.
+     * Please follow the [cron format](https://en.wikipedia.org/wiki/Cron).
+     * 
+     */
     public Optional<String> getNotebookUpgradeSchedule() {
         return Optional.ofNullable(this.notebookUpgradeSchedule);
     }
+    /**
+     * Path to a Bash script that automatically runs after a notebook instance
+     * fully boots up. The path must be a URL or
+     * Cloud Storage path (gs://path-to-file/file-name).
+     * 
+     */
     public Optional<String> getPostStartupScript() {
         return Optional.ofNullable(this.postStartupScript);
     }

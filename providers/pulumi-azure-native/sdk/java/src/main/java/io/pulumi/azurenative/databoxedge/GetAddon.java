@@ -14,6 +14,18 @@ import javax.annotation.Nullable;
 
 @Deprecated /* Please use one of the variants: ArcAddon, IoTAddon. */
 public class GetAddon {
+/**
+ * Role Addon
+ * API Version: 2020-12-01.
+ * 
+ *
+ * Role Addon
+ * 
+ * @deprecated
+ * Please use one of the variants: ArcAddon, IoTAddon.
+ * 
+ */
+    @Deprecated /* Please use one of the variants: ArcAddon, IoTAddon. */
     public static CompletableFuture<GetAddonResult> invokeAsync(GetAddonArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getAddon", TypeShape.of(GetAddonResult.class), args == null ? GetAddonArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -12,6 +12,10 @@ public final class GetFunctionEventTriggerFailurePolicy extends io.pulumi.resour
 
     public static final GetFunctionEventTriggerFailurePolicy Empty = new GetFunctionEventTriggerFailurePolicy();
 
+    /**
+     * Whether the function should be retried on failure.
+     * 
+     */
     @InputImport(name="retry", required=true)
     private final Boolean retry;
 

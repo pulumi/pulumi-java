@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDataPool {
+/**
+ * ADP Data Pool
+ * API Version: 2021-02-01-preview.
+ * 
+ *
+ * ADP Data Pool
+ * 
+ */
     public static CompletableFuture<GetDataPoolResult> invokeAsync(GetDataPoolArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:autonomousdevelopmentplatform:getDataPool", TypeShape.of(GetDataPoolResult.class), args == null ? GetDataPoolArgs.Empty : args, Utilities.withVersion(options));
     }

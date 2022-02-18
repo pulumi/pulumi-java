@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * MetricTarget defines the target value, average value, or average utilization of a specific metric
+ * 
+ */
 public final class MetricTargetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MetricTargetArgs Empty = new MetricTargetArgs();
 
+    /**
+     * averageUtilization is the target value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods. Currently only valid for Resource metric source type
+     * 
+     */
     @InputImport(name="averageUtilization")
     private final @Nullable Input<Integer> averageUtilization;
 
@@ -22,6 +30,10 @@ public final class MetricTargetArgs extends io.pulumi.resources.ResourceArgs {
         return this.averageUtilization == null ? Input.empty() : this.averageUtilization;
     }
 
+    /**
+     * averageValue is the target value of the average of the metric across all relevant pods (as a quantity)
+     * 
+     */
     @InputImport(name="averageValue")
     private final @Nullable Input<String> averageValue;
 
@@ -29,6 +41,10 @@ public final class MetricTargetArgs extends io.pulumi.resources.ResourceArgs {
         return this.averageValue == null ? Input.empty() : this.averageValue;
     }
 
+    /**
+     * type represents whether the metric type is Utilization, Value, or AverageValue
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -36,6 +52,10 @@ public final class MetricTargetArgs extends io.pulumi.resources.ResourceArgs {
         return this.type;
     }
 
+    /**
+     * value is the target value of the metric (as a quantity).
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

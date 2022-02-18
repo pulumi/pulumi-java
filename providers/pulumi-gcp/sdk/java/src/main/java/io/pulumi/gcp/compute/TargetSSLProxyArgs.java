@@ -15,6 +15,10 @@ public final class TargetSSLProxyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TargetSSLProxyArgs Empty = new TargetSSLProxyArgs();
 
+    /**
+     * A reference to the BackendService resource.
+     * 
+     */
     @InputImport(name="backendService", required=true)
     private final Input<String> backendService;
 
@@ -22,6 +26,10 @@ public final class TargetSSLProxyArgs extends io.pulumi.resources.ResourceArgs {
         return this.backendService;
     }
 
+    /**
+     * An optional description of this resource.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -29,6 +37,16 @@ public final class TargetSSLProxyArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Name of the resource. Provided by the client when the resource is
+     * created. The name must be 1-63 characters long, and comply with
+     * RFC1035. Specifically, the name must be 1-63 characters long and match
+     * the regular expression `a-z?` which means the
+     * first character must be a lowercase letter, and all following
+     * characters must be a dash, lowercase letter, or digit, except the last
+     * character, which cannot be a dash.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -36,6 +54,11 @@ public final class TargetSSLProxyArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -43,6 +66,13 @@ public final class TargetSSLProxyArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Specifies the type of proxy header to append before sending data to
+     * the backend.
+     * Default value is `NONE`.
+     * Possible values are `NONE` and `PROXY_V1`.
+     * 
+     */
     @InputImport(name="proxyHeader")
     private final @Nullable Input<String> proxyHeader;
 
@@ -50,6 +80,12 @@ public final class TargetSSLProxyArgs extends io.pulumi.resources.ResourceArgs {
         return this.proxyHeader == null ? Input.empty() : this.proxyHeader;
     }
 
+    /**
+     * A list of SslCertificate resources that are used to authenticate
+     * connections between users and the load balancer. At least one
+     * SSL certificate must be specified.
+     * 
+     */
     @InputImport(name="sslCertificates", required=true)
     private final Input<List<String>> sslCertificates;
 
@@ -57,6 +93,12 @@ public final class TargetSSLProxyArgs extends io.pulumi.resources.ResourceArgs {
         return this.sslCertificates;
     }
 
+    /**
+     * A reference to the SslPolicy resource that will be associated with
+     * the TargetSslProxy resource. If not set, the TargetSslProxy
+     * resource will not have any SSL policy configured.
+     * 
+     */
     @InputImport(name="sslPolicy")
     private final @Nullable Input<String> sslPolicy;
 

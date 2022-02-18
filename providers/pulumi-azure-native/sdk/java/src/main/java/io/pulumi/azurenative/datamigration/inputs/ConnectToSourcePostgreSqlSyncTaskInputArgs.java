@@ -9,10 +9,18 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * Input for the task that validates connection to PostgreSQL and source server requirements
+ * 
+ */
 public final class ConnectToSourcePostgreSqlSyncTaskInputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectToSourcePostgreSqlSyncTaskInputArgs Empty = new ConnectToSourcePostgreSqlSyncTaskInputArgs();
 
+    /**
+     * Connection information for source PostgreSQL server
+     * 
+     */
     @InputImport(name="sourceConnectionInfo", required=true)
     private final Input<PostgreSqlConnectionInfoArgs> sourceConnectionInfo;
 

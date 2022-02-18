@@ -23,6 +23,18 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataSourceArgs Empty = new DataSourceArgs();
 
+    /**
+     * <p>A set of alternate data source parameters that you want to share for the credentials
+     *             stored with this data source. The credentials are applied in tandem with the data source
+     *             parameters when you copy a data source by using a create or update request. The API
+     *             operation compares the <code>DataSourceParameters</code> structure that's in the request
+     *             with the structures in the <code>AlternateDataSourceParameters</code> allow list. If the
+     *             structures are an exact match, the request is allowed to use the credentials from this
+     *             existing data source. If the <code>AlternateDataSourceParameters</code> list is null,
+     *             the <code>Credentials</code> originally used with this <code>DataSourceParameters</code>
+     *             are automatically allowed.</p>
+     * 
+     */
     @InputImport(name="alternateDataSourceParameters")
     private final @Nullable Input<List<DataSourceParametersArgs>> alternateDataSourceParameters;
 
@@ -65,6 +77,10 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.errorInfo == null ? Input.empty() : this.errorInfo;
     }
 
+    /**
+     * <p>A display name for the data source.</p>
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -72,6 +88,10 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * <p>A list of resource permissions on the data source.</p>
+     * 
+     */
     @InputImport(name="permissions")
     private final @Nullable Input<List<DataSourceResourcePermissionArgs>> permissions;
 
@@ -86,6 +106,10 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.sslProperties == null ? Input.empty() : this.sslProperties;
     }
 
+    /**
+     * <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the data source.</p>
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<DataSourceTagArgs>> tags;
 

@@ -11,6 +11,11 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class HealthCheckLogConfig {
+    /**
+     * Indicates whether or not to export logs. This is false by default,
+     * which means no health check logging will be done.
+     * 
+     */
     private final @Nullable Boolean enable;
 
     @OutputCustomType.Constructor({"enable"})
@@ -18,6 +23,11 @@ public final class HealthCheckLogConfig {
         this.enable = enable;
     }
 
+    /**
+     * Indicates whether or not to export logs. This is false by default,
+     * which means no health check logging will be done.
+     * 
+     */
     public Optional<Boolean> getEnable() {
         return Optional.ofNullable(this.enable);
     }

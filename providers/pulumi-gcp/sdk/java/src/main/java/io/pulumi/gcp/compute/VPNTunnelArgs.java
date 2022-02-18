@@ -17,6 +17,10 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VPNTunnelArgs Empty = new VPNTunnelArgs();
 
+    /**
+     * An optional description of this resource.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -24,6 +28,12 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * IKE protocol version to use when establishing the VPN tunnel with
+     * peer VPN gateway.
+     * Acceptable IKE versions are 1 or 2. Default version is 2.
+     * 
+     */
     @InputImport(name="ikeVersion")
     private final @Nullable Input<Integer> ikeVersion;
 
@@ -31,6 +41,10 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
         return this.ikeVersion == null ? Input.empty() : this.ikeVersion;
     }
 
+    /**
+     * Labels to apply to this VpnTunnel.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -38,6 +52,13 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * Local traffic selector to use when establishing the VPN tunnel with
+     * peer VPN gateway. The value should be a CIDR formatted string,
+     * for example `192.168.0.0/16`. The ranges should be disjoint.
+     * Only IPv4 is supported.
+     * 
+     */
     @InputImport(name="localTrafficSelectors")
     private final @Nullable Input<List<String>> localTrafficSelectors;
 
@@ -45,6 +66,16 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
         return this.localTrafficSelectors == null ? Input.empty() : this.localTrafficSelectors;
     }
 
+    /**
+     * Name of the resource. The name must be 1-63 characters long, and
+     * comply with RFC1035. Specifically, the name must be 1-63
+     * characters long and match the regular expression
+     * `a-z?` which means the first character
+     * must be a lowercase letter, and all following characters must
+     * be a dash, lowercase letter, or digit,
+     * except the last character, which cannot be a dash.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -52,6 +83,10 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * URL of the peer side external VPN gateway to which this VPN tunnel is connected.
+     * 
+     */
     @InputImport(name="peerExternalGateway")
     private final @Nullable Input<String> peerExternalGateway;
 
@@ -59,6 +94,10 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
         return this.peerExternalGateway == null ? Input.empty() : this.peerExternalGateway;
     }
 
+    /**
+     * The interface ID of the external VPN gateway to which this VPN tunnel is connected.
+     * 
+     */
     @InputImport(name="peerExternalGatewayInterface")
     private final @Nullable Input<Integer> peerExternalGatewayInterface;
 
@@ -66,6 +105,13 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
         return this.peerExternalGatewayInterface == null ? Input.empty() : this.peerExternalGatewayInterface;
     }
 
+    /**
+     * URL of the peer side HA GCP VPN gateway to which this VPN tunnel is connected.
+     * If provided, the VPN tunnel will automatically use the same vpn_gateway_interface
+     * ID in the peer GCP VPN gateway.
+     * This field must reference a `gcp.compute.HaVpnGateway` resource.
+     * 
+     */
     @InputImport(name="peerGcpGateway")
     private final @Nullable Input<String> peerGcpGateway;
 
@@ -73,6 +119,10 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
         return this.peerGcpGateway == null ? Input.empty() : this.peerGcpGateway;
     }
 
+    /**
+     * IP address of the peer VPN gateway. Only IPv4 is supported.
+     * 
+     */
     @InputImport(name="peerIp")
     private final @Nullable Input<String> peerIp;
 
@@ -80,6 +130,11 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
         return this.peerIp == null ? Input.empty() : this.peerIp;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -87,6 +142,10 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The region where the tunnel is located. If unset, is set to the region of `target_vpn_gateway`.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 
@@ -94,6 +153,13 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
         return this.region == null ? Input.empty() : this.region;
     }
 
+    /**
+     * Remote traffic selector to use when establishing the VPN tunnel with
+     * peer VPN gateway. The value should be a CIDR formatted string,
+     * for example `192.168.0.0/16`. The ranges should be disjoint.
+     * Only IPv4 is supported.
+     * 
+     */
     @InputImport(name="remoteTrafficSelectors")
     private final @Nullable Input<List<String>> remoteTrafficSelectors;
 
@@ -101,6 +167,10 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
         return this.remoteTrafficSelectors == null ? Input.empty() : this.remoteTrafficSelectors;
     }
 
+    /**
+     * URL of router resource to be used for dynamic routing.
+     * 
+     */
     @InputImport(name="router")
     private final @Nullable Input<String> router;
 
@@ -108,6 +178,12 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
         return this.router == null ? Input.empty() : this.router;
     }
 
+    /**
+     * Shared secret used to set the secure session between the Cloud VPN
+     * gateway and the peer VPN gateway.
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     @InputImport(name="sharedSecret", required=true)
     private final Input<String> sharedSecret;
 
@@ -115,6 +191,11 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
         return this.sharedSecret;
     }
 
+    /**
+     * URL of the Target VPN gateway with which this VPN tunnel is
+     * associated.
+     * 
+     */
     @InputImport(name="targetVpnGateway")
     private final @Nullable Input<String> targetVpnGateway;
 
@@ -122,6 +203,12 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
         return this.targetVpnGateway == null ? Input.empty() : this.targetVpnGateway;
     }
 
+    /**
+     * URL of the VPN gateway with which this VPN tunnel is associated.
+     * This must be used if a High Availability VPN gateway resource is created.
+     * This field must reference a `gcp.compute.HaVpnGateway` resource.
+     * 
+     */
     @InputImport(name="vpnGateway")
     private final @Nullable Input<String> vpnGateway;
 
@@ -129,6 +216,10 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
         return this.vpnGateway == null ? Input.empty() : this.vpnGateway;
     }
 
+    /**
+     * The interface ID of the VPN gateway with which this VPN tunnel is associated.
+     * 
+     */
     @InputImport(name="vpnGatewayInterface")
     private final @Nullable Input<Integer> vpnGatewayInterface;
 

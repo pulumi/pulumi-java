@@ -32,10 +32,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Delete activity.
+ * 
+ */
 public final class DeleteActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DeleteActivityResponse Empty = new DeleteActivityResponse();
 
+    /**
+     * Delete activity dataset reference.
+     * 
+     */
     @InputImport(name="dataset", required=true)
     private final DatasetReferenceResponse dataset;
 
@@ -43,6 +51,10 @@ public final class DeleteActivityResponse extends io.pulumi.resources.InvokeArgs
         return this.dataset;
     }
 
+    /**
+     * Activity depends on condition.
+     * 
+     */
     @InputImport(name="dependsOn")
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
@@ -50,6 +62,10 @@ public final class DeleteActivityResponse extends io.pulumi.resources.InvokeArgs
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
 
+    /**
+     * Activity description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -57,6 +73,10 @@ public final class DeleteActivityResponse extends io.pulumi.resources.InvokeArgs
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * Whether to record detailed logs of delete-activity execution. Default value is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     @InputImport(name="enableLogging")
     private final @Nullable Object enableLogging;
 
@@ -64,6 +84,10 @@ public final class DeleteActivityResponse extends io.pulumi.resources.InvokeArgs
         return this.enableLogging == null ? Optional.empty() : Optional.ofNullable(this.enableLogging);
     }
 
+    /**
+     * Linked service reference.
+     * 
+     */
     @InputImport(name="linkedServiceName")
     private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
@@ -71,6 +95,10 @@ public final class DeleteActivityResponse extends io.pulumi.resources.InvokeArgs
         return this.linkedServiceName == null ? Optional.empty() : Optional.ofNullable(this.linkedServiceName);
     }
 
+    /**
+     * Log storage settings customer need to provide when enableLogging is true.
+     * 
+     */
     @InputImport(name="logStorageSettings")
     private final @Nullable LogStorageSettingsResponse logStorageSettings;
 
@@ -78,6 +106,10 @@ public final class DeleteActivityResponse extends io.pulumi.resources.InvokeArgs
         return this.logStorageSettings == null ? Optional.empty() : Optional.ofNullable(this.logStorageSettings);
     }
 
+    /**
+     * The max concurrent connections to connect data source at the same time.
+     * 
+     */
     @InputImport(name="maxConcurrentConnections")
     private final @Nullable Integer maxConcurrentConnections;
 
@@ -85,6 +117,10 @@ public final class DeleteActivityResponse extends io.pulumi.resources.InvokeArgs
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
     }
 
+    /**
+     * Activity name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -92,6 +128,10 @@ public final class DeleteActivityResponse extends io.pulumi.resources.InvokeArgs
         return this.name;
     }
 
+    /**
+     * Activity policy.
+     * 
+     */
     @InputImport(name="policy")
     private final @Nullable ActivityPolicyResponse policy;
 
@@ -99,6 +139,10 @@ public final class DeleteActivityResponse extends io.pulumi.resources.InvokeArgs
         return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
     }
 
+    /**
+     * If true, files or sub-folders under current folder path will be deleted recursively. Default is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     @InputImport(name="recursive")
     private final @Nullable Object recursive;
 
@@ -106,6 +150,10 @@ public final class DeleteActivityResponse extends io.pulumi.resources.InvokeArgs
         return this.recursive == null ? Optional.empty() : Optional.ofNullable(this.recursive);
     }
 
+    /**
+     * Delete activity store settings.
+     * 
+     */
     @InputImport(name="storeSettings")
     private final @Nullable Object storeSettings;
 
@@ -113,6 +161,11 @@ public final class DeleteActivityResponse extends io.pulumi.resources.InvokeArgs
         return this.storeSettings == null ? null : this.storeSettings;
     }
 
+    /**
+     * Type of activity.
+     * Expected value is 'Delete'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -120,6 +173,10 @@ public final class DeleteActivityResponse extends io.pulumi.resources.InvokeArgs
         return this.type;
     }
 
+    /**
+     * Activity user properties.
+     * 
+     */
     @InputImport(name="userProperties")
     private final @Nullable List<UserPropertyResponse> userProperties;
 

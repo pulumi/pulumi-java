@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class HoursOfOperationTimeSlice {
+    /**
+     * The hours.
+     * 
+     */
     private final Integer hours;
+    /**
+     * The minutes.
+     * 
+     */
     private final Integer minutes;
 
     @OutputCustomType.Constructor({"hours","minutes"})
@@ -20,9 +28,17 @@ public final class HoursOfOperationTimeSlice {
         this.minutes = Objects.requireNonNull(minutes);
     }
 
+    /**
+     * The hours.
+     * 
+     */
     public Integer getHours() {
         return this.hours;
     }
+    /**
+     * The minutes.
+     * 
+     */
     public Integer getMinutes() {
         return this.minutes;
     }

@@ -12,10 +12,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ApplicationLog {
+    /**
+     * The type of encoding of the logs to be monitored.
+     * 
+     */
     private final @Nullable ApplicationLogEncoding encoding;
+    /**
+     * The CloudWatch log group name to be associated to the monitored log.
+     * 
+     */
     private final @Nullable String logGroupName;
+    /**
+     * The path of the logs to be monitored.
+     * 
+     */
     private final @Nullable String logPath;
+    /**
+     * The log type decides the log patterns against which Application Insights analyzes the log.
+     * 
+     */
     private final String logType;
+    /**
+     * The name of the log pattern set.
+     * 
+     */
     private final @Nullable String patternSet;
 
     @OutputCustomType.Constructor({"encoding","logGroupName","logPath","logType","patternSet"})
@@ -32,18 +52,38 @@ public final class ApplicationLog {
         this.patternSet = patternSet;
     }
 
+    /**
+     * The type of encoding of the logs to be monitored.
+     * 
+     */
     public Optional<ApplicationLogEncoding> getEncoding() {
         return Optional.ofNullable(this.encoding);
     }
+    /**
+     * The CloudWatch log group name to be associated to the monitored log.
+     * 
+     */
     public Optional<String> getLogGroupName() {
         return Optional.ofNullable(this.logGroupName);
     }
+    /**
+     * The path of the logs to be monitored.
+     * 
+     */
     public Optional<String> getLogPath() {
         return Optional.ofNullable(this.logPath);
     }
+    /**
+     * The log type decides the log patterns against which Application Insights analyzes the log.
+     * 
+     */
     public String getLogType() {
         return this.logType;
     }
+    /**
+     * The name of the log pattern set.
+     * 
+     */
     public Optional<String> getPatternSet() {
         return Optional.ofNullable(this.patternSet);
     }

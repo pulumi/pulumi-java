@@ -16,6 +16,10 @@ public final class GetIAMPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetIAMPolicyArgs Empty = new GetIAMPolicyArgs();
 
+    /**
+     * A nested configuration block that defines logging additional configuration for your project. This field is only supported on `gcp.projects.IAMPolicy`, `gcp.folder.IAMPolicy` and `gcp.organizations.IAMPolicy`.
+     * 
+     */
     @InputImport(name="auditConfigs")
     private final @Nullable List<GetIAMPolicyAuditConfig> auditConfigs;
 
@@ -23,6 +27,12 @@ public final class GetIAMPolicyArgs extends io.pulumi.resources.InvokeArgs {
         return this.auditConfigs == null ? List.of() : this.auditConfigs;
     }
 
+    /**
+     * A nested configuration block (described below)
+     * defining a binding to be included in the policy document. Multiple
+     * `binding` arguments are supported.
+     * 
+     */
     @InputImport(name="bindings")
     private final @Nullable List<GetIAMPolicyBinding> bindings;
 

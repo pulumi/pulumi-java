@@ -10,6 +10,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class NodeSelector {
+    /**
+     * Required. A list of node selector terms. The terms are ORed.
+     * 
+     */
     private final List<NodeSelectorTerm> nodeSelectorTerms;
 
     @OutputCustomType.Constructor({"nodeSelectorTerms"})
@@ -17,6 +21,10 @@ public final class NodeSelector {
         this.nodeSelectorTerms = Objects.requireNonNull(nodeSelectorTerms);
     }
 
+    /**
+     * Required. A list of node selector terms. The terms are ORed.
+     * 
+     */
     public List<NodeSelectorTerm> getNodeSelectorTerms() {
         return this.nodeSelectorTerms;
     }

@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Cognitive Services account commitment period.
+ * 
+ */
 public final class CommitmentPeriodResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CommitmentPeriodResponse Empty = new CommitmentPeriodResponse();
 
+    /**
+     * Commitment period commitment count.
+     * 
+     */
     @InputImport(name="count")
     private final @Nullable Integer count;
 
@@ -23,6 +31,10 @@ public final class CommitmentPeriodResponse extends io.pulumi.resources.InvokeAr
         return this.count == null ? Optional.empty() : Optional.ofNullable(this.count);
     }
 
+    /**
+     * Commitment period end date.
+     * 
+     */
     @InputImport(name="endDate", required=true)
     private final String endDate;
 
@@ -30,6 +42,10 @@ public final class CommitmentPeriodResponse extends io.pulumi.resources.InvokeAr
         return this.endDate;
     }
 
+    /**
+     * Cognitive Services account commitment quota.
+     * 
+     */
     @InputImport(name="quota", required=true)
     private final CommitmentQuotaResponse quota;
 
@@ -37,6 +53,10 @@ public final class CommitmentPeriodResponse extends io.pulumi.resources.InvokeAr
         return this.quota;
     }
 
+    /**
+     * Commitment period start date.
+     * 
+     */
     @InputImport(name="startDate", required=true)
     private final String startDate;
 
@@ -44,6 +64,10 @@ public final class CommitmentPeriodResponse extends io.pulumi.resources.InvokeAr
         return this.startDate;
     }
 
+    /**
+     * Commitment period commitment tier.
+     * 
+     */
     @InputImport(name="tier")
     private final @Nullable String tier;
 

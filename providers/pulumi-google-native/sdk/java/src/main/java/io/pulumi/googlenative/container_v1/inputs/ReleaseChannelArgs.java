@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * ReleaseChannel indicates which release channel a cluster is subscribed to. Release channels are arranged in order of risk. When a cluster is subscribed to a release channel, Google maintains both the master version and the node version. Node auto-upgrade defaults to true and cannot be disabled.
+ * 
+ */
 public final class ReleaseChannelArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ReleaseChannelArgs Empty = new ReleaseChannelArgs();
 
+    /**
+     * channel specifies which release channel the cluster is subscribed to.
+     * 
+     */
     @InputImport(name="channel")
     private final @Nullable Input<ReleaseChannelChannel> channel;
 

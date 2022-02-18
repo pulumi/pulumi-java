@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PatchDeploymentRolloutDisruptionBudget {
+    /**
+     * Specifies a fixed value.
+     * 
+     */
     private final @Nullable Integer fixed;
+    /**
+     * Specifies the relative value defined as a percentage, which will be multiplied by a reference value.
+     * 
+     */
     private final @Nullable Integer percentage;
 
     @OutputCustomType.Constructor({"fixed","percentage"})
@@ -22,9 +30,17 @@ public final class PatchDeploymentRolloutDisruptionBudget {
         this.percentage = percentage;
     }
 
+    /**
+     * Specifies a fixed value.
+     * 
+     */
     public Optional<Integer> getFixed() {
         return Optional.ofNullable(this.fixed);
     }
+    /**
+     * Specifies the relative value defined as a percentage, which will be multiplied by a reference value.
+     * 
+     */
     public Optional<Integer> getPercentage() {
         return Optional.ofNullable(this.percentage);
     }

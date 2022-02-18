@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The name of the condition for the delivery rule.
+     * 
+     */
     @EnumType
     public enum MatchVariable {
         RemoteAddress("RemoteAddress"),

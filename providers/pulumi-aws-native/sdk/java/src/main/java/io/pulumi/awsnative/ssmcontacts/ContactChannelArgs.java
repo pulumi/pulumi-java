@@ -16,6 +16,10 @@ public final class ContactChannelArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContactChannelArgs Empty = new ContactChannelArgs();
 
+    /**
+     * The details that SSM Incident Manager uses when trying to engage the contact channel.
+     * 
+     */
     @InputImport(name="channelAddress")
     private final @Nullable Input<String> channelAddress;
 
@@ -23,6 +27,10 @@ public final class ContactChannelArgs extends io.pulumi.resources.ResourceArgs {
         return this.channelAddress == null ? Input.empty() : this.channelAddress;
     }
 
+    /**
+     * The device name. String of 6 to 50 alphabetical, numeric, dash, and underscore characters.
+     * 
+     */
     @InputImport(name="channelName")
     private final @Nullable Input<String> channelName;
 
@@ -30,6 +38,10 @@ public final class ContactChannelArgs extends io.pulumi.resources.ResourceArgs {
         return this.channelName == null ? Input.empty() : this.channelName;
     }
 
+    /**
+     * Device type, which specify notification channel. Currently supported values: “SMS”, “VOICE”, “EMAIL”, “CHATBOT.
+     * 
+     */
     @InputImport(name="channelType")
     private final @Nullable Input<ContactChannelChannelType> channelType;
 
@@ -37,6 +49,10 @@ public final class ContactChannelArgs extends io.pulumi.resources.ResourceArgs {
         return this.channelType == null ? Input.empty() : this.channelType;
     }
 
+    /**
+     * ARN of the contact resource
+     * 
+     */
     @InputImport(name="contactId")
     private final @Nullable Input<String> contactId;
 
@@ -44,6 +60,10 @@ public final class ContactChannelArgs extends io.pulumi.resources.ResourceArgs {
         return this.contactId == null ? Input.empty() : this.contactId;
     }
 
+    /**
+     * If you want to activate the channel at a later time, you can choose to defer activation. SSM Incident Manager can't engage your contact channel until it has been activated.
+     * 
+     */
     @InputImport(name="deferActivation")
     private final @Nullable Input<Boolean> deferActivation;
 

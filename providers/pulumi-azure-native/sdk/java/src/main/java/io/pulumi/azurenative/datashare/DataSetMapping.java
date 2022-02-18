@@ -15,34 +15,90 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * A data set mapping data transfer object.
+ * API Version: 2020-09-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:datashare:DataSetMapping datasetMappingName1 /subscriptions/0f3dcfc3-18f8-4099-b381-8353e19d43a7/resourceGroups/SampleResourceGroup/providers/Microsoft.DataShare/accounts/consumerAccount/shareSubscriptions/ShareSubscription1/dataSetMappings/datasetMappingName1 
+ * ```
+ * 
+ * @deprecated
+ * Please use one of the variants: ADLSGen2FileDataSetMapping, ADLSGen2FileSystemDataSetMapping, ADLSGen2FolderDataSetMapping, BlobContainerDataSetMapping, BlobDataSetMapping, BlobFolderDataSetMapping, KustoClusterDataSetMapping, KustoDatabaseDataSetMapping, SqlDBTableDataSetMapping, SqlDWTableDataSetMapping, SynapseWorkspaceSqlPoolTableDataSetMapping.
+ * 
+ */
 @Deprecated /* Please use one of the variants: ADLSGen2FileDataSetMapping, ADLSGen2FileSystemDataSetMapping, ADLSGen2FolderDataSetMapping, BlobContainerDataSetMapping, BlobDataSetMapping, BlobFolderDataSetMapping, KustoClusterDataSetMapping, KustoDatabaseDataSetMapping, SqlDBTableDataSetMapping, SqlDWTableDataSetMapping, SynapseWorkspaceSqlPoolTableDataSetMapping. */
 @ResourceType(type="azure-native:datashare:DataSetMapping")
 public class DataSetMapping extends io.pulumi.resources.CustomResource {
+    /**
+     * Kind of data set mapping.
+     * 
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
+    /**
+     * @return Kind of data set mapping.
+     * 
+     */
     public Output<String> getKind() {
         return this.kind;
     }
+    /**
+     * Name of the azure resource
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Name of the azure resource
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * System Data of the Azure resource.
+     * 
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return System Data of the Azure resource.
+     * 
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * Type of the azure resource
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Type of the azure resource
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public DataSetMapping(String name, DataSetMappingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:datashare:DataSetMapping", name, args == null ? DataSetMappingArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -65,6 +121,14 @@ public class DataSetMapping extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static DataSetMapping get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DataSetMapping(name, id, options);
     }

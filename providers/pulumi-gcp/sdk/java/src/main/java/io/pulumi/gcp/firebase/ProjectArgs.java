@@ -14,6 +14,11 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ProjectArgs Empty = new ProjectArgs();
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

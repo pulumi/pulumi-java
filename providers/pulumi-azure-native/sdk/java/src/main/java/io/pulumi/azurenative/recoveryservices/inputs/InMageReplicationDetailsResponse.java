@@ -20,10 +20,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * InMage provider specific settings
+ * 
+ */
 public final class InMageReplicationDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final InMageReplicationDetailsResponse Empty = new InMageReplicationDetailsResponse();
 
+    /**
+     * The active location of the VM. If the VM is being protected from Azure, this field will take values from { Azure, OnPrem }. If the VM is being protected between two data-centers, this field will be OnPrem always.
+     * 
+     */
     @InputImport(name="activeSiteType")
     private final @Nullable String activeSiteType;
 
@@ -31,6 +39,10 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
         return this.activeSiteType == null ? Optional.empty() : Optional.ofNullable(this.activeSiteType);
     }
 
+    /**
+     * The agent details.
+     * 
+     */
     @InputImport(name="agentDetails")
     private final @Nullable InMageAgentDetailsResponse agentDetails;
 
@@ -38,6 +50,10 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
         return this.agentDetails == null ? Optional.empty() : Optional.ofNullable(this.agentDetails);
     }
 
+    /**
+     * A value indicating the underlying Azure storage account. If the VM is not running in Azure, this value shall be set to null.
+     * 
+     */
     @InputImport(name="azureStorageAccountId")
     private final @Nullable String azureStorageAccountId;
 
@@ -45,6 +61,10 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
         return this.azureStorageAccountId == null ? Optional.empty() : Optional.ofNullable(this.azureStorageAccountId);
     }
 
+    /**
+     * The compressed data change rate in MB.
+     * 
+     */
     @InputImport(name="compressedDataRateInMB")
     private final @Nullable Double compressedDataRateInMB;
 
@@ -52,6 +72,10 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
         return this.compressedDataRateInMB == null ? Optional.empty() : Optional.ofNullable(this.compressedDataRateInMB);
     }
 
+    /**
+     * The collection of Consistency points.
+     * 
+     */
     @InputImport(name="consistencyPoints")
     private final @Nullable Map<String,String> consistencyPoints;
 
@@ -59,6 +83,10 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
         return this.consistencyPoints == null ? Map.of() : this.consistencyPoints;
     }
 
+    /**
+     * The data stores of the on-premise machine Value can be list of strings that contain data store names
+     * 
+     */
     @InputImport(name="datastores")
     private final @Nullable List<String> datastores;
 
@@ -66,6 +94,10 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
         return this.datastores == null ? List.of() : this.datastores;
     }
 
+    /**
+     * A value indicating the discovery type of the machine.
+     * 
+     */
     @InputImport(name="discoveryType")
     private final @Nullable String discoveryType;
 
@@ -73,6 +105,10 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
         return this.discoveryType == null ? Optional.empty() : Optional.ofNullable(this.discoveryType);
     }
 
+    /**
+     * A value indicating whether any disk is resized for this VM.
+     * 
+     */
     @InputImport(name="diskResized")
     private final @Nullable String diskResized;
 
@@ -80,6 +116,10 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
         return this.diskResized == null ? Optional.empty() : Optional.ofNullable(this.diskResized);
     }
 
+    /**
+     * The infrastructure VM Id.
+     * 
+     */
     @InputImport(name="infrastructureVmId")
     private final @Nullable String infrastructureVmId;
 
@@ -87,6 +127,11 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
         return this.infrastructureVmId == null ? Optional.empty() : Optional.ofNullable(this.infrastructureVmId);
     }
 
+    /**
+     * Gets the Instance type.
+     * Expected value is 'InMage'.
+     * 
+     */
     @InputImport(name="instanceType", required=true)
     private final String instanceType;
 
@@ -94,6 +139,10 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
         return this.instanceType;
     }
 
+    /**
+     * The source IP address.
+     * 
+     */
     @InputImport(name="ipAddress")
     private final @Nullable String ipAddress;
 
@@ -101,6 +150,10 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
         return this.ipAddress == null ? Optional.empty() : Optional.ofNullable(this.ipAddress);
     }
 
+    /**
+     * The last heartbeat received from the source server.
+     * 
+     */
     @InputImport(name="lastHeartbeat")
     private final @Nullable String lastHeartbeat;
 
@@ -108,6 +161,10 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
         return this.lastHeartbeat == null ? Optional.empty() : Optional.ofNullable(this.lastHeartbeat);
     }
 
+    /**
+     * The last RPO calculated time.
+     * 
+     */
     @InputImport(name="lastRpoCalculatedTime")
     private final @Nullable String lastRpoCalculatedTime;
 
@@ -115,6 +172,10 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
         return this.lastRpoCalculatedTime == null ? Optional.empty() : Optional.ofNullable(this.lastRpoCalculatedTime);
     }
 
+    /**
+     * The last update time received from on-prem components.
+     * 
+     */
     @InputImport(name="lastUpdateReceivedTime")
     private final @Nullable String lastUpdateReceivedTime;
 
@@ -122,6 +183,10 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
         return this.lastUpdateReceivedTime == null ? Optional.empty() : Optional.ofNullable(this.lastUpdateReceivedTime);
     }
 
+    /**
+     * The master target Id.
+     * 
+     */
     @InputImport(name="masterTargetId")
     private final @Nullable String masterTargetId;
 
@@ -129,6 +194,10 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
         return this.masterTargetId == null ? Optional.empty() : Optional.ofNullable(this.masterTargetId);
     }
 
+    /**
+     * The multi vm group Id, if any.
+     * 
+     */
     @InputImport(name="multiVmGroupId")
     private final @Nullable String multiVmGroupId;
 
@@ -136,6 +205,10 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
         return this.multiVmGroupId == null ? Optional.empty() : Optional.ofNullable(this.multiVmGroupId);
     }
 
+    /**
+     * The multi vm group name, if any.
+     * 
+     */
     @InputImport(name="multiVmGroupName")
     private final @Nullable String multiVmGroupName;
 
@@ -143,6 +216,10 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
         return this.multiVmGroupName == null ? Optional.empty() : Optional.ofNullable(this.multiVmGroupName);
     }
 
+    /**
+     * A value indicating whether the multi vm sync is enabled or disabled.
+     * 
+     */
     @InputImport(name="multiVmSyncStatus")
     private final @Nullable String multiVmSyncStatus;
 
@@ -150,6 +227,10 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
         return this.multiVmSyncStatus == null ? Optional.empty() : Optional.ofNullable(this.multiVmSyncStatus);
     }
 
+    /**
+     * The OS details.
+     * 
+     */
     @InputImport(name="osDetails")
     private final @Nullable OSDiskDetailsResponse osDetails;
 
@@ -157,6 +238,10 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
         return this.osDetails == null ? Optional.empty() : Optional.ofNullable(this.osDetails);
     }
 
+    /**
+     * The OS Version of the protected item.
+     * 
+     */
     @InputImport(name="osVersion")
     private final @Nullable String osVersion;
 
@@ -164,6 +249,10 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
         return this.osVersion == null ? Optional.empty() : Optional.ofNullable(this.osVersion);
     }
 
+    /**
+     * The process server Id.
+     * 
+     */
     @InputImport(name="processServerId")
     private final @Nullable String processServerId;
 
@@ -171,6 +260,10 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
         return this.processServerId == null ? Optional.empty() : Optional.ofNullable(this.processServerId);
     }
 
+    /**
+     * The list of protected disks.
+     * 
+     */
     @InputImport(name="protectedDisks")
     private final @Nullable List<InMageProtectedDiskDetailsResponse> protectedDisks;
 
@@ -178,6 +271,10 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
         return this.protectedDisks == null ? List.of() : this.protectedDisks;
     }
 
+    /**
+     * The protection stage.
+     * 
+     */
     @InputImport(name="protectionStage")
     private final @Nullable String protectionStage;
 
@@ -185,6 +282,10 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
         return this.protectionStage == null ? Optional.empty() : Optional.ofNullable(this.protectionStage);
     }
 
+    /**
+     * A value indicating whether the source server requires a restart after update.
+     * 
+     */
     @InputImport(name="rebootAfterUpdateStatus")
     private final @Nullable String rebootAfterUpdateStatus;
 
@@ -192,6 +293,10 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
         return this.rebootAfterUpdateStatus == null ? Optional.empty() : Optional.ofNullable(this.rebootAfterUpdateStatus);
     }
 
+    /**
+     * The replica id of the protected item.
+     * 
+     */
     @InputImport(name="replicaId")
     private final @Nullable String replicaId;
 
@@ -199,6 +304,10 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
         return this.replicaId == null ? Optional.empty() : Optional.ofNullable(this.replicaId);
     }
 
+    /**
+     * The resync details of the machine
+     * 
+     */
     @InputImport(name="resyncDetails")
     private final @Nullable InitialReplicationDetailsResponse resyncDetails;
 
@@ -206,6 +315,10 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
         return this.resyncDetails == null ? Optional.empty() : Optional.ofNullable(this.resyncDetails);
     }
 
+    /**
+     * The retention window end time.
+     * 
+     */
     @InputImport(name="retentionWindowEnd")
     private final @Nullable String retentionWindowEnd;
 
@@ -213,6 +326,10 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
         return this.retentionWindowEnd == null ? Optional.empty() : Optional.ofNullable(this.retentionWindowEnd);
     }
 
+    /**
+     * The retention window start time.
+     * 
+     */
     @InputImport(name="retentionWindowStart")
     private final @Nullable String retentionWindowStart;
 
@@ -220,6 +337,10 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
         return this.retentionWindowStart == null ? Optional.empty() : Optional.ofNullable(this.retentionWindowStart);
     }
 
+    /**
+     * The RPO in seconds.
+     * 
+     */
     @InputImport(name="rpoInSeconds")
     private final @Nullable Double rpoInSeconds;
 
@@ -227,6 +348,10 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
         return this.rpoInSeconds == null ? Optional.empty() : Optional.ofNullable(this.rpoInSeconds);
     }
 
+    /**
+     * The CPU count of the VM on the primary side.
+     * 
+     */
     @InputImport(name="sourceVmCpuCount")
     private final @Nullable Integer sourceVmCpuCount;
 
@@ -234,6 +359,10 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
         return this.sourceVmCpuCount == null ? Optional.empty() : Optional.ofNullable(this.sourceVmCpuCount);
     }
 
+    /**
+     * The RAM size of the VM on the primary side.
+     * 
+     */
     @InputImport(name="sourceVmRamSizeInMB")
     private final @Nullable Integer sourceVmRamSizeInMB;
 
@@ -241,6 +370,10 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
         return this.sourceVmRamSizeInMB == null ? Optional.empty() : Optional.ofNullable(this.sourceVmRamSizeInMB);
     }
 
+    /**
+     * The uncompressed data change rate in MB.
+     * 
+     */
     @InputImport(name="uncompressedDataRateInMB")
     private final @Nullable Double uncompressedDataRateInMB;
 
@@ -248,6 +381,10 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
         return this.uncompressedDataRateInMB == null ? Optional.empty() : Optional.ofNullable(this.uncompressedDataRateInMB);
     }
 
+    /**
+     * The vCenter infrastructure Id.
+     * 
+     */
     @InputImport(name="vCenterInfrastructureId")
     private final @Nullable String vCenterInfrastructureId;
 
@@ -255,6 +392,10 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
         return this.vCenterInfrastructureId == null ? Optional.empty() : Optional.ofNullable(this.vCenterInfrastructureId);
     }
 
+    /**
+     * The validation errors of the on-premise machine Value can be list of validation errors
+     * 
+     */
     @InputImport(name="validationErrors")
     private final @Nullable List<HealthErrorResponse> validationErrors;
 
@@ -262,6 +403,10 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
         return this.validationErrors == null ? List.of() : this.validationErrors;
     }
 
+    /**
+     * The virtual machine Id.
+     * 
+     */
     @InputImport(name="vmId")
     private final @Nullable String vmId;
 
@@ -269,6 +414,10 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
         return this.vmId == null ? Optional.empty() : Optional.ofNullable(this.vmId);
     }
 
+    /**
+     * The PE Network details.
+     * 
+     */
     @InputImport(name="vmNics")
     private final @Nullable List<VMNicDetailsResponse> vmNics;
 
@@ -276,6 +425,10 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
         return this.vmNics == null ? List.of() : this.vmNics;
     }
 
+    /**
+     * The protection state for the vm.
+     * 
+     */
     @InputImport(name="vmProtectionState")
     private final @Nullable String vmProtectionState;
 
@@ -283,6 +436,10 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
         return this.vmProtectionState == null ? Optional.empty() : Optional.ofNullable(this.vmProtectionState);
     }
 
+    /**
+     * The protection state description for the vm.
+     * 
+     */
     @InputImport(name="vmProtectionStateDescription")
     private final @Nullable String vmProtectionStateDescription;
 

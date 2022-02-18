@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * ConfigMapNodeConfigSource contains the information to reference a ConfigMap as a config source for the Node. This API is deprecated since 1.22: https://git.k8s.io/enhancements/keps/sig-node/281-dynamic-kubelet-configuration
+ * 
+ */
 public final class ConfigMapNodeConfigSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConfigMapNodeConfigSourceArgs Empty = new ConfigMapNodeConfigSourceArgs();
 
+    /**
+     * KubeletConfigKey declares which key of the referenced ConfigMap corresponds to the KubeletConfiguration structure This field is required in all cases.
+     * 
+     */
     @InputImport(name="kubeletConfigKey", required=true)
     private final Input<String> kubeletConfigKey;
 
@@ -21,6 +29,10 @@ public final class ConfigMapNodeConfigSourceArgs extends io.pulumi.resources.Res
         return this.kubeletConfigKey;
     }
 
+    /**
+     * Name is the metadata.name of the referenced ConfigMap. This field is required in all cases.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -28,6 +40,10 @@ public final class ConfigMapNodeConfigSourceArgs extends io.pulumi.resources.Res
         return this.name;
     }
 
+    /**
+     * Namespace is the metadata.namespace of the referenced ConfigMap. This field is required in all cases.
+     * 
+     */
     @InputImport(name="namespace", required=true)
     private final Input<String> namespace;
 
@@ -35,6 +51,10 @@ public final class ConfigMapNodeConfigSourceArgs extends io.pulumi.resources.Res
         return this.namespace;
     }
 
+    /**
+     * ResourceVersion is the metadata.ResourceVersion of the referenced ConfigMap. This field is forbidden in Node.Spec, and required in Node.Status.
+     * 
+     */
     @InputImport(name="resourceVersion")
     private final @Nullable Input<String> resourceVersion;
 
@@ -42,6 +62,10 @@ public final class ConfigMapNodeConfigSourceArgs extends io.pulumi.resources.Res
         return this.resourceVersion == null ? Input.empty() : this.resourceVersion;
     }
 
+    /**
+     * UID is the metadata.UID of the referenced ConfigMap. This field is forbidden in Node.Spec, and required in Node.Status.
+     * 
+     */
     @InputImport(name="uid")
     private final @Nullable Input<String> uid;
 

@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The configuration with resource tag settings to apply across all resources handled by this provider. This is designed to replace redundant per-resource `tags` configurations. Provider tags can be overridden with new values, but not excluded from specific resources. To override provider tag values, use the `tags` argument within a resource to configure new tag values for matching keys.
+ * 
+ */
 public final class DefaultTags extends io.pulumi.resources.InvokeArgs {
 
     public static final DefaultTags Empty = new DefaultTags();
 
+    /**
+     * A group of tags to set across all resources.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Map<String,String> tags;
 

@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Container App container resource requirements.
+ * 
+ */
 public final class ContainerResourcesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContainerResourcesArgs Empty = new ContainerResourcesArgs();
 
+    /**
+     * Required CPU in cores, e.g. 0.5
+     * 
+     */
     @InputImport(name="cpu")
     private final @Nullable Input<Double> cpu;
 
@@ -22,6 +30,10 @@ public final class ContainerResourcesArgs extends io.pulumi.resources.ResourceAr
         return this.cpu == null ? Input.empty() : this.cpu;
     }
 
+    /**
+     * Required memory, e.g. "250Mb"
+     * 
+     */
     @InputImport(name="memory")
     private final @Nullable Input<String> memory;
 

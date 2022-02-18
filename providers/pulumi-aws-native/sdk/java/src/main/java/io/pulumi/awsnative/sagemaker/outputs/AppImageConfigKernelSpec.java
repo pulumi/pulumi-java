@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AppImageConfigKernelSpec {
+    /**
+     * The display name of the kernel.
+     * 
+     */
     private final @Nullable String displayName;
+    /**
+     * The name of the kernel.
+     * 
+     */
     private final String name;
 
     @OutputCustomType.Constructor({"displayName","name"})
@@ -22,9 +30,17 @@ public final class AppImageConfigKernelSpec {
         this.name = Objects.requireNonNull(name);
     }
 
+    /**
+     * The display name of the kernel.
+     * 
+     */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
+    /**
+     * The name of the kernel.
+     * 
+     */
     public String getName() {
         return this.name;
     }

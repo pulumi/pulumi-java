@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The init container definition.
+ * 
+ */
 public final class InitContainerDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InitContainerDefinitionArgs Empty = new InitContainerDefinitionArgs();
 
+    /**
+     * The command to execute within the init container in exec form.
+     * 
+     */
     @InputImport(name="command")
     private final @Nullable Input<List<String>> command;
 
@@ -24,6 +32,10 @@ public final class InitContainerDefinitionArgs extends io.pulumi.resources.Resou
         return this.command == null ? Input.empty() : this.command;
     }
 
+    /**
+     * The environment variables to set in the init container.
+     * 
+     */
     @InputImport(name="environmentVariables")
     private final @Nullable Input<List<EnvironmentVariableArgs>> environmentVariables;
 
@@ -31,6 +43,10 @@ public final class InitContainerDefinitionArgs extends io.pulumi.resources.Resou
         return this.environmentVariables == null ? Input.empty() : this.environmentVariables;
     }
 
+    /**
+     * The image of the init container.
+     * 
+     */
     @InputImport(name="image")
     private final @Nullable Input<String> image;
 
@@ -38,6 +54,10 @@ public final class InitContainerDefinitionArgs extends io.pulumi.resources.Resou
         return this.image == null ? Input.empty() : this.image;
     }
 
+    /**
+     * The name for the init container.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -45,6 +65,10 @@ public final class InitContainerDefinitionArgs extends io.pulumi.resources.Resou
         return this.name;
     }
 
+    /**
+     * The volume mounts available to the init container.
+     * 
+     */
     @InputImport(name="volumeMounts")
     private final @Nullable Input<List<VolumeMountArgs>> volumeMounts;
 

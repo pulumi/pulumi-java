@@ -12,8 +12,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GlobalReplicationGroupMember {
+    /**
+     * Regionally unique identifier for the member i.e. ReplicationGroupId.
+     * 
+     */
     private final @Nullable String replicationGroupId;
+    /**
+     * The AWS region of the Global Datastore member.
+     * 
+     */
     private final @Nullable String replicationGroupRegion;
+    /**
+     * Indicates the role of the member, primary or secondary.
+     * 
+     */
     private final @Nullable GlobalReplicationGroupMemberRole role;
 
     @OutputCustomType.Constructor({"replicationGroupId","replicationGroupRegion","role"})
@@ -26,12 +38,24 @@ public final class GlobalReplicationGroupMember {
         this.role = role;
     }
 
+    /**
+     * Regionally unique identifier for the member i.e. ReplicationGroupId.
+     * 
+     */
     public Optional<String> getReplicationGroupId() {
         return Optional.ofNullable(this.replicationGroupId);
     }
+    /**
+     * The AWS region of the Global Datastore member.
+     * 
+     */
     public Optional<String> getReplicationGroupRegion() {
         return Optional.ofNullable(this.replicationGroupRegion);
     }
+    /**
+     * Indicates the role of the member, primary or secondary.
+     * 
+     */
     public Optional<GlobalReplicationGroupMemberRole> getRole() {
         return Optional.ofNullable(this.role);
     }

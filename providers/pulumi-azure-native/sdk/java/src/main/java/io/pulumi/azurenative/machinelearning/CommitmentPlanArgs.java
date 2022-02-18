@@ -16,6 +16,10 @@ public final class CommitmentPlanArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CommitmentPlanArgs Empty = new CommitmentPlanArgs();
 
+    /**
+     * The Azure ML commitment plan name.
+     * 
+     */
     @InputImport(name="commitmentPlanName")
     private final @Nullable Input<String> commitmentPlanName;
 
@@ -23,6 +27,10 @@ public final class CommitmentPlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.commitmentPlanName == null ? Input.empty() : this.commitmentPlanName;
     }
 
+    /**
+     * Resource location.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -30,6 +38,10 @@ public final class CommitmentPlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The resource group name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -37,6 +49,10 @@ public final class CommitmentPlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The commitment plan SKU.
+     * 
+     */
     @InputImport(name="sku")
     private final @Nullable Input<ResourceSkuArgs> sku;
 
@@ -44,6 +60,10 @@ public final class CommitmentPlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku == null ? Input.empty() : this.sku;
     }
 
+    /**
+     * User-defined tags for the resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

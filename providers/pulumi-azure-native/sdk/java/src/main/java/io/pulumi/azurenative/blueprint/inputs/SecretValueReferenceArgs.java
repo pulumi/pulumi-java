@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Reference to a Key Vault secret.
+ * 
+ */
 public final class SecretValueReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SecretValueReferenceArgs Empty = new SecretValueReferenceArgs();
 
+    /**
+     * Specifies the reference to a given Azure Key Vault.
+     * 
+     */
     @InputImport(name="keyVault", required=true)
     private final Input<KeyVaultReferenceArgs> keyVault;
 
@@ -22,6 +30,10 @@ public final class SecretValueReferenceArgs extends io.pulumi.resources.Resource
         return this.keyVault;
     }
 
+    /**
+     * Name of the secret.
+     * 
+     */
     @InputImport(name="secretName", required=true)
     private final Input<String> secretName;
 
@@ -29,6 +41,10 @@ public final class SecretValueReferenceArgs extends io.pulumi.resources.Resource
         return this.secretName;
     }
 
+    /**
+     * The version of the secret to use. If left blank, the latest version of the secret is used.
+     * 
+     */
     @InputImport(name="secretVersion")
     private final @Nullable Input<String> secretVersion;
 

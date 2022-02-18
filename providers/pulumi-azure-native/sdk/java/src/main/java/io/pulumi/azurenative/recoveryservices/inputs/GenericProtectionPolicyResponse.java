@@ -13,10 +13,19 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Azure VM (Mercury) workload-specific backup policy.
+ * 
+ */
 public final class GenericProtectionPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GenericProtectionPolicyResponse Empty = new GenericProtectionPolicyResponse();
 
+    /**
+     * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+     * Expected value is 'GenericProtectionPolicy'.
+     * 
+     */
     @InputImport(name="backupManagementType", required=true)
     private final String backupManagementType;
 
@@ -24,6 +33,10 @@ public final class GenericProtectionPolicyResponse extends io.pulumi.resources.I
         return this.backupManagementType;
     }
 
+    /**
+     * Name of this policy's fabric.
+     * 
+     */
     @InputImport(name="fabricName")
     private final @Nullable String fabricName;
 
@@ -31,6 +44,10 @@ public final class GenericProtectionPolicyResponse extends io.pulumi.resources.I
         return this.fabricName == null ? Optional.empty() : Optional.ofNullable(this.fabricName);
     }
 
+    /**
+     * Number of items associated with this policy.
+     * 
+     */
     @InputImport(name="protectedItemsCount")
     private final @Nullable Integer protectedItemsCount;
 
@@ -38,6 +55,10 @@ public final class GenericProtectionPolicyResponse extends io.pulumi.resources.I
         return this.protectedItemsCount == null ? Optional.empty() : Optional.ofNullable(this.protectedItemsCount);
     }
 
+    /**
+     * List of sub-protection policies which includes schedule and retention
+     * 
+     */
     @InputImport(name="subProtectionPolicy")
     private final @Nullable List<SubProtectionPolicyResponse> subProtectionPolicy;
 
@@ -45,6 +66,10 @@ public final class GenericProtectionPolicyResponse extends io.pulumi.resources.I
         return this.subProtectionPolicy == null ? List.of() : this.subProtectionPolicy;
     }
 
+    /**
+     * TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".
+     * 
+     */
     @InputImport(name="timeZone")
     private final @Nullable String timeZone;
 

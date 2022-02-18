@@ -16,6 +16,10 @@ public final class OrganizationConformancePackArgs extends io.pulumi.resources.R
 
     public static final OrganizationConformancePackArgs Empty = new OrganizationConformancePackArgs();
 
+    /**
+     * A list of ConformancePackInputParameter objects.
+     * 
+     */
     @InputImport(name="conformancePackInputParameters")
     private final @Nullable Input<List<OrganizationConformancePackConformancePackInputParameterArgs>> conformancePackInputParameters;
 
@@ -23,6 +27,10 @@ public final class OrganizationConformancePackArgs extends io.pulumi.resources.R
         return this.conformancePackInputParameters == null ? Input.empty() : this.conformancePackInputParameters;
     }
 
+    /**
+     * AWS Config stores intermediate files while processing conformance pack template.
+     * 
+     */
     @InputImport(name="deliveryS3Bucket")
     private final @Nullable Input<String> deliveryS3Bucket;
 
@@ -30,6 +38,10 @@ public final class OrganizationConformancePackArgs extends io.pulumi.resources.R
         return this.deliveryS3Bucket == null ? Input.empty() : this.deliveryS3Bucket;
     }
 
+    /**
+     * The prefix for the delivery S3 bucket.
+     * 
+     */
     @InputImport(name="deliveryS3KeyPrefix")
     private final @Nullable Input<String> deliveryS3KeyPrefix;
 
@@ -37,6 +49,10 @@ public final class OrganizationConformancePackArgs extends io.pulumi.resources.R
         return this.deliveryS3KeyPrefix == null ? Input.empty() : this.deliveryS3KeyPrefix;
     }
 
+    /**
+     * A list of AWS accounts to be excluded from an organization conformance pack while deploying a conformance pack.
+     * 
+     */
     @InputImport(name="excludedAccounts")
     private final @Nullable Input<List<String>> excludedAccounts;
 
@@ -44,6 +60,10 @@ public final class OrganizationConformancePackArgs extends io.pulumi.resources.R
         return this.excludedAccounts == null ? Input.empty() : this.excludedAccounts;
     }
 
+    /**
+     * The name of the organization conformance pack.
+     * 
+     */
     @InputImport(name="organizationConformancePackName")
     private final @Nullable Input<String> organizationConformancePackName;
 
@@ -51,6 +71,10 @@ public final class OrganizationConformancePackArgs extends io.pulumi.resources.R
         return this.organizationConformancePackName == null ? Input.empty() : this.organizationConformancePackName;
     }
 
+    /**
+     * A string containing full conformance pack template body.
+     * 
+     */
     @InputImport(name="templateBody")
     private final @Nullable Input<String> templateBody;
 
@@ -58,6 +82,10 @@ public final class OrganizationConformancePackArgs extends io.pulumi.resources.R
         return this.templateBody == null ? Input.empty() : this.templateBody;
     }
 
+    /**
+     * Location of file containing the template body.
+     * 
+     */
     @InputImport(name="templateS3Uri")
     private final @Nullable Input<String> templateS3Uri;
 

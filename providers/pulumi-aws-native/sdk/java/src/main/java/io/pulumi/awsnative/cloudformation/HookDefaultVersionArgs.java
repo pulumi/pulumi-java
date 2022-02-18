@@ -14,6 +14,12 @@ public final class HookDefaultVersionArgs extends io.pulumi.resources.ResourceAr
 
     public static final HookDefaultVersionArgs Empty = new HookDefaultVersionArgs();
 
+    /**
+     * The name of the type being registered.
+     * 
+     * We recommend that type names adhere to the following pattern: company_or_organization::service::type.
+     * 
+     */
     @InputImport(name="typeName")
     private final @Nullable Input<String> typeName;
 
@@ -21,6 +27,10 @@ public final class HookDefaultVersionArgs extends io.pulumi.resources.ResourceAr
         return this.typeName == null ? Input.empty() : this.typeName;
     }
 
+    /**
+     * The Amazon Resource Name (ARN) of the type version.
+     * 
+     */
     @InputImport(name="typeVersionArn")
     private final @Nullable Input<String> typeVersionArn;
 
@@ -28,6 +38,10 @@ public final class HookDefaultVersionArgs extends io.pulumi.resources.ResourceAr
         return this.typeVersionArn == null ? Input.empty() : this.typeVersionArn;
     }
 
+    /**
+     * The ID of an existing version of the hook to set as the default.
+     * 
+     */
     @InputImport(name="versionId")
     private final @Nullable Input<String> versionId;
 

@@ -17,15 +17,56 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SqlServerTableDatasetResponse {
+    /**
+     * List of tags that can be used for describing the Dataset.
+     * 
+     */
     private final @Nullable List<Object> annotations;
+    /**
+     * Dataset description.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
+     * 
+     */
     private final @Nullable DatasetResponseFolder folder;
+    /**
+     * Linked service reference.
+     * 
+     */
     private final LinkedServiceReferenceResponse linkedServiceName;
+    /**
+     * Parameters for dataset.
+     * 
+     */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+    /**
+     * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
+     * 
+     */
     private final @Nullable Object schema;
+    /**
+     * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
+     * 
+     */
     private final @Nullable Object structure;
+    /**
+     * The table name of the SQL Server dataset. Type: string (or Expression with resultType string).
+     * 
+     */
     private final @Nullable Object table;
+    /**
+     * This property will be retired. Please consider using schema + table properties instead.
+     * 
+     */
     private final @Nullable Object tableName;
+    /**
+     * Type of dataset.
+     * Expected value is 'SqlServerTable'.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"annotations","description","folder","linkedServiceName","parameters","schema","structure","table","tableName","type"})
@@ -52,33 +93,74 @@ public final class SqlServerTableDatasetResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * List of tags that can be used for describing the Dataset.
+     * 
+     */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
+    /**
+     * Dataset description.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
+     * 
+     */
     public Optional<DatasetResponseFolder> getFolder() {
         return Optional.ofNullable(this.folder);
     }
+    /**
+     * Linked service reference.
+     * 
+     */
     public LinkedServiceReferenceResponse getLinkedServiceName() {
         return this.linkedServiceName;
     }
+    /**
+     * Parameters for dataset.
+     * 
+     */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
+    /**
+     * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
+     * 
+     */
     public Optional<Object> getSchema() {
         return Optional.ofNullable(this.schema);
     }
+    /**
+     * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
+     * 
+     */
     public Optional<Object> getStructure() {
         return Optional.ofNullable(this.structure);
     }
+    /**
+     * The table name of the SQL Server dataset. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> getTable() {
         return Optional.ofNullable(this.table);
     }
+    /**
+     * This property will be retired. Please consider using schema + table properties instead.
+     * 
+     */
     public Optional<Object> getTableName() {
         return Optional.ofNullable(this.tableName);
     }
+    /**
+     * Type of dataset.
+     * Expected value is 'SqlServerTable'.
+     * 
+     */
     public String getType() {
         return this.type;
     }

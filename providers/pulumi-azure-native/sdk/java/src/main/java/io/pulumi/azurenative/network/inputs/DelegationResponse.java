@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Details the service to which the subnet is delegated.
+ * 
+ */
 public final class DelegationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DelegationResponse Empty = new DelegationResponse();
 
+    /**
+     * The actions permitted to the service upon delegation.
+     * 
+     */
     @InputImport(name="actions", required=true)
     private final List<String> actions;
 
@@ -22,6 +30,10 @@ public final class DelegationResponse extends io.pulumi.resources.InvokeArgs {
         return this.actions;
     }
 
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -29,6 +41,10 @@ public final class DelegationResponse extends io.pulumi.resources.InvokeArgs {
         return this.etag;
     }
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -36,6 +52,10 @@ public final class DelegationResponse extends io.pulumi.resources.InvokeArgs {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * The name of the resource that is unique within a subnet. This name can be used to access the resource.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -43,6 +63,10 @@ public final class DelegationResponse extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The provisioning state of the service delegation resource.
+     * 
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -50,6 +74,10 @@ public final class DelegationResponse extends io.pulumi.resources.InvokeArgs {
         return this.provisioningState;
     }
 
+    /**
+     * The name of the service to whom the subnet should be delegated (e.g. Microsoft.Sql/servers).
+     * 
+     */
     @InputImport(name="serviceName")
     private final @Nullable String serviceName;
 
@@ -57,6 +85,10 @@ public final class DelegationResponse extends io.pulumi.resources.InvokeArgs {
         return this.serviceName == null ? Optional.empty() : Optional.ofNullable(this.serviceName);
     }
 
+    /**
+     * Resource type.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 

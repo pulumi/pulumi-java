@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Application logs to file system configuration.
+ * 
+ */
 public final class FileSystemApplicationLogsConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FileSystemApplicationLogsConfigArgs Empty = new FileSystemApplicationLogsConfigArgs();
 
+    /**
+     * Log level.
+     * 
+     */
     @InputImport(name="level")
     private final @Nullable Input<LogLevel> level;
 

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Name of the pricing tier.
+     * 
+     */
     @EnumType
     public enum SkuName {
         Standard_Verizon("Standard_Verizon"),

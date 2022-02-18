@@ -11,8 +11,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PolicyAssignmentPropertiesResponseRoleDefinition {
+    /**
+     * Display name of the role definition
+     * 
+     */
     private final @Nullable String displayName;
+    /**
+     * Id of the role definition
+     * 
+     */
     private final @Nullable String id;
+    /**
+     * Type of the role definition
+     * 
+     */
     private final @Nullable String type;
 
     @OutputCustomType.Constructor({"displayName","id","type"})
@@ -25,12 +37,24 @@ public final class PolicyAssignmentPropertiesResponseRoleDefinition {
         this.type = type;
     }
 
+    /**
+     * Display name of the role definition
+     * 
+     */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
+    /**
+     * Id of the role definition
+     * 
+     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+    /**
+     * Type of the role definition
+     * 
+     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

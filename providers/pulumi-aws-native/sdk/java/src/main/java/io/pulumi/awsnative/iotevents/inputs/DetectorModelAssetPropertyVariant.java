@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A structure that contains an asset property value. For more information, see [Variant](https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_Variant.html) in the *AWS IoT SiteWise API Reference*.
+ * 
+ */
 public final class DetectorModelAssetPropertyVariant extends io.pulumi.resources.InvokeArgs {
 
     public static final DetectorModelAssetPropertyVariant Empty = new DetectorModelAssetPropertyVariant();
 
+    /**
+     * The asset property value is a Boolean value that must be `TRUE` or `FALSE`. You can also specify an expression. If you use an expression, the evaluated result should be a Boolean value.
+     * 
+     */
     @InputImport(name="booleanValue")
     private final @Nullable String booleanValue;
 
@@ -21,6 +29,10 @@ public final class DetectorModelAssetPropertyVariant extends io.pulumi.resources
         return this.booleanValue == null ? Optional.empty() : Optional.ofNullable(this.booleanValue);
     }
 
+    /**
+     * The asset property value is a double. You can also specify an expression. If you use an expression, the evaluated result should be a double.
+     * 
+     */
     @InputImport(name="doubleValue")
     private final @Nullable String doubleValue;
 
@@ -28,6 +40,10 @@ public final class DetectorModelAssetPropertyVariant extends io.pulumi.resources
         return this.doubleValue == null ? Optional.empty() : Optional.ofNullable(this.doubleValue);
     }
 
+    /**
+     * The asset property value is an integer. You can also specify an expression. If you use an expression, the evaluated result should be an integer.
+     * 
+     */
     @InputImport(name="integerValue")
     private final @Nullable String integerValue;
 
@@ -35,6 +51,10 @@ public final class DetectorModelAssetPropertyVariant extends io.pulumi.resources
         return this.integerValue == null ? Optional.empty() : Optional.ofNullable(this.integerValue);
     }
 
+    /**
+     * The asset property value is a string. You can also specify an expression. If you use an expression, the evaluated result should be a string.
+     * 
+     */
     @InputImport(name="stringValue")
     private final @Nullable String stringValue;
 

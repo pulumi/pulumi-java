@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Key-value pair to store extra metadata.
+ * 
+ */
 public final class GoogleCloudApigeeV1AttributeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudApigeeV1AttributeArgs Empty = new GoogleCloudApigeeV1AttributeArgs();
 
+    /**
+     * API key of the attribute.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -21,6 +29,10 @@ public final class GoogleCloudApigeeV1AttributeArgs extends io.pulumi.resources.
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Value of the attribute.
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

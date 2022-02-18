@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * APIServiceStatus contains derived information about an API server
+ * 
+ */
 public final class APIServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final APIServiceStatusArgs Empty = new APIServiceStatusArgs();
 
+    /**
+     * Current service state of apiService.
+     * 
+     */
     @InputImport(name="conditions")
     private final @Nullable Input<List<APIServiceConditionArgs>> conditions;
 

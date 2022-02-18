@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Allocation policy to be used by this provisioning service.
+     * 
+     */
     @EnumType
     public enum AllocationPolicy {
         Hashed("Hashed"),

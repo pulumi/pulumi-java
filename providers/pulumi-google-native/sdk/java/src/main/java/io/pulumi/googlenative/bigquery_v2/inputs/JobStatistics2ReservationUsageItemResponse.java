@@ -12,6 +12,10 @@ public final class JobStatistics2ReservationUsageItemResponse extends io.pulumi.
 
     public static final JobStatistics2ReservationUsageItemResponse Empty = new JobStatistics2ReservationUsageItemResponse();
 
+    /**
+     * Reservation name or "unreserved" for on-demand resources usage.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -19,6 +23,10 @@ public final class JobStatistics2ReservationUsageItemResponse extends io.pulumi.
         return this.name;
     }
 
+    /**
+     * Slot-milliseconds the job spent in the given reservation.
+     * 
+     */
     @InputImport(name="slotMs", required=true)
     private final String slotMs;
 

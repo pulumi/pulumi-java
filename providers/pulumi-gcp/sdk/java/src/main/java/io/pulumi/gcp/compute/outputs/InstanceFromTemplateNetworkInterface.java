@@ -20,6 +20,11 @@ public final class InstanceFromTemplateNetworkInterface {
     private final @Nullable List<InstanceFromTemplateNetworkInterfaceAliasIpRange> aliasIpRanges;
     private final @Nullable List<InstanceFromTemplateNetworkInterfaceIpv6AccessConfig> ipv6AccessConfigs;
     private final @Nullable String ipv6AccessType;
+    /**
+     * A unique name for the resource, required by GCE.
+     * Changing this forces a new resource to be created.
+     * 
+     */
     private final @Nullable String name;
     private final @Nullable String network;
     private final @Nullable String networkIp;
@@ -69,6 +74,11 @@ public final class InstanceFromTemplateNetworkInterface {
     public Optional<String> getIpv6AccessType() {
         return Optional.ofNullable(this.ipv6AccessType);
     }
+    /**
+     * A unique name for the resource, required by GCE.
+     * Changing this forces a new resource to be created.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

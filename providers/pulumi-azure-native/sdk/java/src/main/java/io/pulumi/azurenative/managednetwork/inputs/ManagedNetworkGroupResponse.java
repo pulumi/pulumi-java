@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The Managed Network Group resource
+ * 
+ */
 public final class ManagedNetworkGroupResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ManagedNetworkGroupResponse Empty = new ManagedNetworkGroupResponse();
 
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -23,6 +31,10 @@ public final class ManagedNetworkGroupResponse extends io.pulumi.resources.Invok
         return this.etag;
     }
 
+    /**
+     * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -30,6 +42,10 @@ public final class ManagedNetworkGroupResponse extends io.pulumi.resources.Invok
         return this.id;
     }
 
+    /**
+     * Responsibility role under which this Managed Network Group will be created
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable String kind;
 
@@ -37,6 +53,10 @@ public final class ManagedNetworkGroupResponse extends io.pulumi.resources.Invok
         return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
     }
 
+    /**
+     * The geo-location where the resource lives
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable String location;
 
@@ -44,6 +64,10 @@ public final class ManagedNetworkGroupResponse extends io.pulumi.resources.Invok
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
+    /**
+     * The collection of management groups covered by the Managed Network
+     * 
+     */
     @InputImport(name="managementGroups")
     private final @Nullable List<ResourceIdResponse> managementGroups;
 
@@ -51,6 +75,10 @@ public final class ManagedNetworkGroupResponse extends io.pulumi.resources.Invok
         return this.managementGroups == null ? List.of() : this.managementGroups;
     }
 
+    /**
+     * The name of the resource
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -58,6 +86,10 @@ public final class ManagedNetworkGroupResponse extends io.pulumi.resources.Invok
         return this.name;
     }
 
+    /**
+     * Provisioning state of the ManagedNetwork resource.
+     * 
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -65,6 +97,10 @@ public final class ManagedNetworkGroupResponse extends io.pulumi.resources.Invok
         return this.provisioningState;
     }
 
+    /**
+     * The collection of  subnets covered by the Managed Network
+     * 
+     */
     @InputImport(name="subnets")
     private final @Nullable List<ResourceIdResponse> subnets;
 
@@ -72,6 +108,10 @@ public final class ManagedNetworkGroupResponse extends io.pulumi.resources.Invok
         return this.subnets == null ? List.of() : this.subnets;
     }
 
+    /**
+     * The collection of subscriptions covered by the Managed Network
+     * 
+     */
     @InputImport(name="subscriptions")
     private final @Nullable List<ResourceIdResponse> subscriptions;
 
@@ -79,6 +119,10 @@ public final class ManagedNetworkGroupResponse extends io.pulumi.resources.Invok
         return this.subscriptions == null ? List.of() : this.subscriptions;
     }
 
+    /**
+     * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -86,6 +130,10 @@ public final class ManagedNetworkGroupResponse extends io.pulumi.resources.Invok
         return this.type;
     }
 
+    /**
+     * The collection of virtual nets covered by the Managed Network
+     * 
+     */
     @InputImport(name="virtualNetworks")
     private final @Nullable List<ResourceIdResponse> virtualNetworks;
 

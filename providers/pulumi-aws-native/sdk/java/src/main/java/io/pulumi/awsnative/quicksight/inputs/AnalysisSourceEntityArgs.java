@@ -10,6 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * <p>The source entity of an analysis.</p>
+ * 
+ */
 public final class AnalysisSourceEntityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AnalysisSourceEntityArgs Empty = new AnalysisSourceEntityArgs();

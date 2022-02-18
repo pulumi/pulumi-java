@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApplicationGroup {
+/**
+ * Represents a ApplicationGroup definition.
+ * API Version: 2021-02-01-preview.
+ * 
+ *
+ * Represents a ApplicationGroup definition.
+ * 
+ */
     public static CompletableFuture<GetApplicationGroupResult> invokeAsync(GetApplicationGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:desktopvirtualization:getApplicationGroup", TypeShape.of(GetApplicationGroupResult.class), args == null ? GetApplicationGroupArgs.Empty : args, Utilities.withVersion(options));
     }

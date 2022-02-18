@@ -12,7 +12,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FlexibleAppVersionDeploymentZip {
+    /**
+     * files count
+     * 
+     */
     private final @Nullable Integer filesCount;
+    /**
+     * Source URL
+     * 
+     */
     private final String sourceUrl;
 
     @OutputCustomType.Constructor({"filesCount","sourceUrl"})
@@ -23,9 +31,17 @@ public final class FlexibleAppVersionDeploymentZip {
         this.sourceUrl = Objects.requireNonNull(sourceUrl);
     }
 
+    /**
+     * files count
+     * 
+     */
     public Optional<Integer> getFilesCount() {
         return Optional.ofNullable(this.filesCount);
     }
+    /**
+     * Source URL
+     * 
+     */
     public String getSourceUrl() {
         return this.sourceUrl;
     }

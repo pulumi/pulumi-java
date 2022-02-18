@@ -16,33 +16,75 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * RuntimeClass defines a class of container runtime supported in the cluster. The RuntimeClass is used to determine which container runtime is used to run all containers in a pod. RuntimeClasses are (currently) manually defined by a user or cluster provisioner, and referenced in the PodSpec. The Kubelet is responsible for resolving the RuntimeClassName reference before running the pod.  For more details, see https://git.k8s.io/enhancements/keps/sig-node/585-runtime-class
+ * 
+ */
 @ResourceType(type="kubernetes:node.k8s.io/v1alpha1:RuntimeClass")
 public class RuntimeClass extends io.pulumi.resources.CustomResource {
+    /**
+     * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+     * 
+     */
     @OutputExport(name="apiVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiVersion;
 
+    /**
+     * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+     * 
+     */
     public Output</* @Nullable */ String> getApiVersion() {
         return this.apiVersion;
     }
+    /**
+     * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+     * 
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
+    /**
+     * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+     * 
+     */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
+    /**
+     * More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     * 
+     */
     @OutputExport(name="metadata", type=ObjectMeta.class, parameters={})
     private Output</* @Nullable */ ObjectMeta> metadata;
 
+    /**
+     * @return More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     * 
+     */
     public Output</* @Nullable */ ObjectMeta> getMetadata() {
         return this.metadata;
     }
+    /**
+     * Specification of the RuntimeClass More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+     * 
+     */
     @OutputExport(name="spec", type=RuntimeClassSpec.class, parameters={})
     private Output<RuntimeClassSpec> spec;
 
+    /**
+     * @return Specification of the RuntimeClass More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+     * 
+     */
     public Output<RuntimeClassSpec> getSpec() {
         return this.spec;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public RuntimeClass(String name, RuntimeClassArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("kubernetes:node.k8s.io/v1alpha1:RuntimeClass", name, makeArgs(args), makeResourceOptions(options, Input.empty()));
     }
@@ -70,6 +112,14 @@ public class RuntimeClass extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static RuntimeClass get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RuntimeClass(name, id, options);
     }

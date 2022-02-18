@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SubnetPropertiesResponse {
+    /**
+     * Subnet name.
+     * 
+     */
     private final @Nullable String name;
 
     @OutputCustomType.Constructor({"name"})
@@ -18,6 +22,10 @@ public final class SubnetPropertiesResponse {
         this.name = name;
     }
 
+    /**
+     * Subnet name.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

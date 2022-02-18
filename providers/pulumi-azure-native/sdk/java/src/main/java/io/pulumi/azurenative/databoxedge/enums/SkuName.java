@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * SKU name.
+     * 
+     */
     @EnumType
     public enum SkuName {
         Gateway("Gateway"),

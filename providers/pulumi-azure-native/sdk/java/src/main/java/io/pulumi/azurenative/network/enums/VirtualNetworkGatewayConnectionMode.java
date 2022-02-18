@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The connection mode for this connection.
+     * 
+     */
     @EnumType
     public enum VirtualNetworkGatewayConnectionMode {
         Default("Default"),

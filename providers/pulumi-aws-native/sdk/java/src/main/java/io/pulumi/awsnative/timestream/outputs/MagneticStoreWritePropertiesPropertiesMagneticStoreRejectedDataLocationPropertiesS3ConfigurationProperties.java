@@ -11,9 +11,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesS3ConfigurationProperties {
+    /**
+     * The bucket name used to store the data.
+     * 
+     */
     private final String bucketName;
+    /**
+     * Either SSE_KMS or SSE_S3.
+     * 
+     */
     private final String encryptionOption;
+    /**
+     * Must be provided if SSE_KMS is specified as the encryption option
+     * 
+     */
     private final @Nullable String kmsKeyId;
+    /**
+     * String used to prefix all data in the bucket.
+     * 
+     */
     private final @Nullable String objectKeyPrefix;
 
     @OutputCustomType.Constructor({"bucketName","encryptionOption","kmsKeyId","objectKeyPrefix"})
@@ -28,15 +44,31 @@ public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDa
         this.objectKeyPrefix = objectKeyPrefix;
     }
 
+    /**
+     * The bucket name used to store the data.
+     * 
+     */
     public String getBucketName() {
         return this.bucketName;
     }
+    /**
+     * Either SSE_KMS or SSE_S3.
+     * 
+     */
     public String getEncryptionOption() {
         return this.encryptionOption;
     }
+    /**
+     * Must be provided if SSE_KMS is specified as the encryption option
+     * 
+     */
     public Optional<String> getKmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
+    /**
+     * String used to prefix all data in the bucket.
+     * 
+     */
     public Optional<String> getObjectKeyPrefix() {
         return Optional.ofNullable(this.objectKeyPrefix);
     }

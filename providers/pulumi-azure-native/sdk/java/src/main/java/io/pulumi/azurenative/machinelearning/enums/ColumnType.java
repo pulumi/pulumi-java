@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Data type of the column.
+     * 
+     */
     @EnumType
     public enum ColumnType {
         Boolean("Boolean"),

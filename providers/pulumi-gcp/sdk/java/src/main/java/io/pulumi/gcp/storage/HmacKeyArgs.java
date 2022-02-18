@@ -14,6 +14,11 @@ public final class HmacKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HmacKeyArgs Empty = new HmacKeyArgs();
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -21,6 +26,10 @@ public final class HmacKeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The email address of the key's associated service account.
+     * 
+     */
     @InputImport(name="serviceAccountEmail", required=true)
     private final Input<String> serviceAccountEmail;
 
@@ -28,6 +37,12 @@ public final class HmacKeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceAccountEmail;
     }
 
+    /**
+     * The state of the key. Can be set to one of ACTIVE, INACTIVE.
+     * Default value is `ACTIVE`.
+     * Possible values are `ACTIVE` and `INACTIVE`.
+     * 
+     */
     @InputImport(name="state")
     private final @Nullable Input<String> state;
 

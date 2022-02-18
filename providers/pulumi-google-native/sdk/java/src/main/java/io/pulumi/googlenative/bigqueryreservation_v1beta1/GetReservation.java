@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetReservation {
+/**
+ * Returns information about the reservation.
+ * 
+ */
     public static CompletableFuture<GetReservationResult> invokeAsync(GetReservationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:bigqueryreservation/v1beta1:getReservation", TypeShape.of(GetReservationResult.class), args == null ? GetReservationArgs.Empty : args, Utilities.withVersion(options));
     }

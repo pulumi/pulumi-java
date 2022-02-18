@@ -11,7 +11,18 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SnapshotSourceDiskEncryptionKey {
+    /**
+     * The service account used for the encryption request for the given KMS key.
+     * If absent, the Compute Engine Service Agent service account is used.
+     * 
+     */
     private final @Nullable String kmsKeyServiceAccount;
+    /**
+     * Specifies a 256-bit customer-supplied encryption key, encoded in
+     * RFC 4648 base64 to either encrypt or decrypt this resource.
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     private final @Nullable String rawKey;
 
     @OutputCustomType.Constructor({"kmsKeyServiceAccount","rawKey"})
@@ -22,9 +33,20 @@ public final class SnapshotSourceDiskEncryptionKey {
         this.rawKey = rawKey;
     }
 
+    /**
+     * The service account used for the encryption request for the given KMS key.
+     * If absent, the Compute Engine Service Agent service account is used.
+     * 
+     */
     public Optional<String> getKmsKeyServiceAccount() {
         return Optional.ofNullable(this.kmsKeyServiceAccount);
     }
+    /**
+     * Specifies a 256-bit customer-supplied encryption key, encoded in
+     * RFC 4648 base64 to either encrypt or decrypt this resource.
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     public Optional<String> getRawKey() {
         return Optional.ofNullable(this.rawKey);
     }

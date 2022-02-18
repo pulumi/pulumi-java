@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Script reference
+ * 
+ */
 public final class ScriptReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ScriptReferenceArgs Empty = new ScriptReferenceArgs();
 
+    /**
+     * Optional command line arguments passed to the script to run.
+     * 
+     */
     @InputImport(name="scriptArguments")
     private final @Nullable Input<String> scriptArguments;
 
@@ -21,6 +29,10 @@ public final class ScriptReferenceArgs extends io.pulumi.resources.ResourceArgs 
         return this.scriptArguments == null ? Input.empty() : this.scriptArguments;
     }
 
+    /**
+     * The location of scripts in the mounted volume.
+     * 
+     */
     @InputImport(name="scriptData")
     private final @Nullable Input<String> scriptData;
 
@@ -28,6 +40,10 @@ public final class ScriptReferenceArgs extends io.pulumi.resources.ResourceArgs 
         return this.scriptData == null ? Input.empty() : this.scriptData;
     }
 
+    /**
+     * The storage source of the script: inline, workspace.
+     * 
+     */
     @InputImport(name="scriptSource")
     private final @Nullable Input<String> scriptSource;
 
@@ -35,6 +51,10 @@ public final class ScriptReferenceArgs extends io.pulumi.resources.ResourceArgs 
         return this.scriptSource == null ? Input.empty() : this.scriptSource;
     }
 
+    /**
+     * Optional time period passed to timeout command.
+     * 
+     */
     @InputImport(name="timeout")
     private final @Nullable Input<String> timeout;
 

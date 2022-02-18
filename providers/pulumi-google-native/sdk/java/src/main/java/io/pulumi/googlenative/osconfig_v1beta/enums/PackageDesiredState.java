@@ -8,11 +8,31 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The desired_state the agent should maintain for this package. The default is to ensure the package is installed.
+     * 
+     */
     @EnumType
     public enum PackageDesiredState {
+        /**
+         * The default is to ensure the package is installed.
+         * 
+         */
         DesiredStateUnspecified("DESIRED_STATE_UNSPECIFIED"),
+        /**
+         * The agent ensures that the package is installed.
+         * 
+         */
         Installed("INSTALLED"),
+        /**
+         * The agent ensures that the package is installed and periodically checks for and install any updates.
+         * 
+         */
         Updated("UPDATED"),
+        /**
+         * The agent ensures that the package is not installed and uninstall it if detected.
+         * 
+         */
         Removed("REMOVED");
 
         private final String value;

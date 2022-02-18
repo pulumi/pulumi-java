@@ -12,6 +12,10 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceResponse extends io
 
     public static final ManagedZoneServiceDirectoryConfigNamespaceResponse Empty = new ManagedZoneServiceDirectoryConfigNamespaceResponse();
 
+    /**
+     * The time that the namespace backing this zone was deleted; an empty string if it still exists. This is in RFC3339 text format. Output only.
+     * 
+     */
     @InputImport(name="deletionTime", required=true)
     private final String deletionTime;
 
@@ -26,6 +30,10 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceResponse extends io
         return this.kind;
     }
 
+    /**
+     * The fully qualified URL of the namespace associated with the zone. Format must be https://servicedirectory.googleapis.com/v1/projects/{project}/locations/{location}/namespaces/{namespace}
+     * 
+     */
     @InputImport(name="namespaceUrl", required=true)
     private final String namespaceUrl;
 

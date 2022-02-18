@@ -11,6 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Default Action WebACL will take against ingress traffic when there is no matching Rule.
+ * 
+ */
 public final class WebACLDefaultAction extends io.pulumi.resources.InvokeArgs {
 
     public static final WebACLDefaultAction Empty = new WebACLDefaultAction();

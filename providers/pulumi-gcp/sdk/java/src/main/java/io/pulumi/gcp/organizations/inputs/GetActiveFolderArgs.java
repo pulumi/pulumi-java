@@ -12,6 +12,10 @@ public final class GetActiveFolderArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetActiveFolderArgs Empty = new GetActiveFolderArgs();
 
+    /**
+     * The folder's display name.
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final String displayName;
 
@@ -19,6 +23,10 @@ public final class GetActiveFolderArgs extends io.pulumi.resources.InvokeArgs {
         return this.displayName;
     }
 
+    /**
+     * The resource name of the parent Folder or Organization.
+     * 
+     */
     @InputImport(name="parent", required=true)
     private final String parent;
 

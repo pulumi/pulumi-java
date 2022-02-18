@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Target scaling by network usage. Only applicable in the App Engine flexible environment.
+ * 
+ */
 public final class NetworkUtilizationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NetworkUtilizationArgs Empty = new NetworkUtilizationArgs();
 
+    /**
+     * Target bytes received per second.
+     * 
+     */
     @InputImport(name="targetReceivedBytesPerSecond")
     private final @Nullable Input<Integer> targetReceivedBytesPerSecond;
 
@@ -21,6 +29,10 @@ public final class NetworkUtilizationArgs extends io.pulumi.resources.ResourceAr
         return this.targetReceivedBytesPerSecond == null ? Input.empty() : this.targetReceivedBytesPerSecond;
     }
 
+    /**
+     * Target packets received per second.
+     * 
+     */
     @InputImport(name="targetReceivedPacketsPerSecond")
     private final @Nullable Input<Integer> targetReceivedPacketsPerSecond;
 
@@ -28,6 +40,10 @@ public final class NetworkUtilizationArgs extends io.pulumi.resources.ResourceAr
         return this.targetReceivedPacketsPerSecond == null ? Input.empty() : this.targetReceivedPacketsPerSecond;
     }
 
+    /**
+     * Target bytes sent per second.
+     * 
+     */
     @InputImport(name="targetSentBytesPerSecond")
     private final @Nullable Input<Integer> targetSentBytesPerSecond;
 
@@ -35,6 +51,10 @@ public final class NetworkUtilizationArgs extends io.pulumi.resources.ResourceAr
         return this.targetSentBytesPerSecond == null ? Input.empty() : this.targetSentBytesPerSecond;
     }
 
+    /**
+     * Target packets sent per second.
+     * 
+     */
     @InputImport(name="targetSentPacketsPerSecond")
     private final @Nullable Input<Integer> targetSentPacketsPerSecond;
 

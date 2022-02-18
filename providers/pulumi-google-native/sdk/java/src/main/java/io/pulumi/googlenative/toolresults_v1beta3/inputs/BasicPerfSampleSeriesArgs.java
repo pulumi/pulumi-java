@@ -12,6 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Encapsulates the metadata for basic sample series represented by a line chart
+ * 
+ */
 public final class BasicPerfSampleSeriesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BasicPerfSampleSeriesArgs Empty = new BasicPerfSampleSeriesArgs();

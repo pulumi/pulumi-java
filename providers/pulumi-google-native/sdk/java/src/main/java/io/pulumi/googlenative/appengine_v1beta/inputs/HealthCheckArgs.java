@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Health checking configuration for VM instances. Unhealthy instances are killed and replaced with new instances. Only applicable for instances in App Engine flexible environment.
+ * 
+ */
 public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HealthCheckArgs Empty = new HealthCheckArgs();
 
+    /**
+     * Interval between health checks.
+     * 
+     */
     @InputImport(name="checkInterval")
     private final @Nullable Input<String> checkInterval;
 
@@ -23,6 +31,10 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
         return this.checkInterval == null ? Input.empty() : this.checkInterval;
     }
 
+    /**
+     * Whether to explicitly disable health checks for this instance.
+     * 
+     */
     @InputImport(name="disableHealthCheck")
     private final @Nullable Input<Boolean> disableHealthCheck;
 
@@ -30,6 +42,10 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
         return this.disableHealthCheck == null ? Input.empty() : this.disableHealthCheck;
     }
 
+    /**
+     * Number of consecutive successful health checks required before receiving traffic.
+     * 
+     */
     @InputImport(name="healthyThreshold")
     private final @Nullable Input<Integer> healthyThreshold;
 
@@ -37,6 +53,10 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
         return this.healthyThreshold == null ? Input.empty() : this.healthyThreshold;
     }
 
+    /**
+     * Host header to send when performing an HTTP health check. Example: "myapp.appspot.com"
+     * 
+     */
     @InputImport(name="host")
     private final @Nullable Input<String> host;
 
@@ -44,6 +64,10 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
         return this.host == null ? Input.empty() : this.host;
     }
 
+    /**
+     * Number of consecutive failed health checks required before an instance is restarted.
+     * 
+     */
     @InputImport(name="restartThreshold")
     private final @Nullable Input<Integer> restartThreshold;
 
@@ -51,6 +75,10 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
         return this.restartThreshold == null ? Input.empty() : this.restartThreshold;
     }
 
+    /**
+     * Time before the health check is considered failed.
+     * 
+     */
     @InputImport(name="timeout")
     private final @Nullable Input<String> timeout;
 
@@ -58,6 +86,10 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
         return this.timeout == null ? Input.empty() : this.timeout;
     }
 
+    /**
+     * Number of consecutive failed health checks required before removing traffic.
+     * 
+     */
     @InputImport(name="unhealthyThreshold")
     private final @Nullable Input<Integer> unhealthyThreshold;
 

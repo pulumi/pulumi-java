@@ -18,6 +18,10 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AcceleratorArgs Empty = new AcceleratorArgs();
 
+    /**
+     * Indicates whether an accelerator is enabled. The value is true or false.
+     * 
+     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 
@@ -25,6 +29,10 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
+    /**
+     * IP Address type.
+     * 
+     */
     @InputImport(name="ipAddressType")
     private final @Nullable Input<AcceleratorIpAddressType> ipAddressType;
 
@@ -32,6 +40,10 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
         return this.ipAddressType == null ? Input.empty() : this.ipAddressType;
     }
 
+    /**
+     * The IP addresses from BYOIP Prefix pool.
+     * 
+     */
     @InputImport(name="ipAddresses")
     private final @Nullable Input<List<String>> ipAddresses;
 
@@ -39,6 +51,10 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
         return this.ipAddresses == null ? Input.empty() : this.ipAddresses;
     }
 
+    /**
+     * Name of accelerator.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

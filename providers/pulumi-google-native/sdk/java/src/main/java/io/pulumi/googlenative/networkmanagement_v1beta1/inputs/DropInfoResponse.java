@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Details of the final state "drop" and associated resource.
+ * 
+ */
 public final class DropInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DropInfoResponse Empty = new DropInfoResponse();
 
+    /**
+     * Cause that the packet is dropped.
+     * 
+     */
     @InputImport(name="cause", required=true)
     private final String cause;
 
@@ -19,6 +27,10 @@ public final class DropInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.cause;
     }
 
+    /**
+     * URI of the resource that caused the drop.
+     * 
+     */
     @InputImport(name="resourceUri", required=true)
     private final String resourceUri;
 

@@ -13,6 +13,20 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetProject {
+/**
+ * Retrieve information about a set of projects based on a filter. See the
+ * [REST API](https://cloud.google.com/resource-manager/reference/rest/v1/projects/list)
+ * for more details.
+ * 
+ * ## Example Usage
+ * 
+ *
+ * A collection of arguments for invoking getProject.
+ * 
+ *
+ * A collection of values returned by getProject.
+ * 
+ */
     public static CompletableFuture<GetProjectResult> invokeAsync(GetProjectArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:projects/getProject:getProject", TypeShape.of(GetProjectResult.class), args == null ? GetProjectArgs.Empty : args, Utilities.withVersion(options));
     }

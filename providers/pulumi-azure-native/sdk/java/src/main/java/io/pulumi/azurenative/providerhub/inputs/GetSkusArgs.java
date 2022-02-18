@@ -12,6 +12,10 @@ public final class GetSkusArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSkusArgs Empty = new GetSkusArgs();
 
+    /**
+     * The name of the resource provider hosted within ProviderHub.
+     * 
+     */
     @InputImport(name="providerNamespace", required=true)
     private final String providerNamespace;
 
@@ -19,6 +23,10 @@ public final class GetSkusArgs extends io.pulumi.resources.InvokeArgs {
         return this.providerNamespace;
     }
 
+    /**
+     * The resource type.
+     * 
+     */
     @InputImport(name="resourceType", required=true)
     private final String resourceType;
 
@@ -26,6 +34,10 @@ public final class GetSkusArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceType;
     }
 
+    /**
+     * The SKU.
+     * 
+     */
     @InputImport(name="sku", required=true)
     private final String sku;
 

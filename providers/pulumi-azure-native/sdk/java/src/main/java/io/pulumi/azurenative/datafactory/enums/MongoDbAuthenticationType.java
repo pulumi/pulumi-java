@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The authentication type to be used to connect to the MongoDB database.
+     * 
+     */
     @EnumType
     public enum MongoDbAuthenticationType {
         Basic("Basic"),

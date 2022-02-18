@@ -13,10 +13,20 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The parameters that describes a set of credentials that will be used when a run is invoked.
+ * 
+ */
 public final class CredentialsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CredentialsResponse Empty = new CredentialsResponse();
 
+    /**
+     * Describes the credential parameters for accessing other custom registries. The key
+     * for the dictionary item will be the registry login server (myregistry.azurecr.io) and
+     * the value of the item will be the registry credentials for accessing the registry.
+     * 
+     */
     @InputImport(name="customRegistries")
     private final @Nullable Map<String,CustomRegistryCredentialsResponse> customRegistries;
 
@@ -24,6 +34,10 @@ public final class CredentialsResponse extends io.pulumi.resources.InvokeArgs {
         return this.customRegistries == null ? Map.of() : this.customRegistries;
     }
 
+    /**
+     * Describes the credential parameters for accessing the source registry.
+     * 
+     */
     @InputImport(name="sourceRegistry")
     private final @Nullable SourceRegistryCredentialsResponse sourceRegistry;
 

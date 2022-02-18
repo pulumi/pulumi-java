@@ -16,6 +16,10 @@ public final class AuthenticationModePropertiesArgs extends io.pulumi.resources.
 
     public static final AuthenticationModePropertiesArgs Empty = new AuthenticationModePropertiesArgs();
 
+    /**
+     * Passwords used for this user account. You can create up to two passwords for each user.
+     * 
+     */
     @InputImport(name="passwords")
     private final @Nullable Input<List<String>> passwords;
 
@@ -23,6 +27,10 @@ public final class AuthenticationModePropertiesArgs extends io.pulumi.resources.
         return this.passwords == null ? Input.empty() : this.passwords;
     }
 
+    /**
+     * Type of authentication strategy for this user.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<UserAuthenticationModePropertiesType> type;
 

@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A message that defines a response card that the client application can show to the user.
+ * 
+ */
 public final class BotImageResponseCardArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BotImageResponseCardArgs Empty = new BotImageResponseCardArgs();
 
+    /**
+     * A list of buttons that should be displayed on the response card.
+     * 
+     */
     @InputImport(name="buttons")
     private final @Nullable Input<List<BotButtonArgs>> buttons;
 
@@ -23,6 +31,10 @@ public final class BotImageResponseCardArgs extends io.pulumi.resources.Resource
         return this.buttons == null ? Input.empty() : this.buttons;
     }
 
+    /**
+     * The URL of an image to display on the response card.
+     * 
+     */
     @InputImport(name="imageUrl")
     private final @Nullable Input<String> imageUrl;
 
@@ -30,6 +42,10 @@ public final class BotImageResponseCardArgs extends io.pulumi.resources.Resource
         return this.imageUrl == null ? Input.empty() : this.imageUrl;
     }
 
+    /**
+     * The subtitle to display on the response card.
+     * 
+     */
     @InputImport(name="subtitle")
     private final @Nullable Input<String> subtitle;
 
@@ -37,6 +53,10 @@ public final class BotImageResponseCardArgs extends io.pulumi.resources.Resource
         return this.subtitle == null ? Input.empty() : this.subtitle;
     }
 
+    /**
+     * The title to display on the response card.
+     * 
+     */
     @InputImport(name="title", required=true)
     private final Input<String> title;
 

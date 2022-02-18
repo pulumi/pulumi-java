@@ -15,6 +15,12 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NamespaceArgs Empty = new NamespaceArgs();
 
+    /**
+     * Resource labels associated with this Namespace. No more than 64 user
+     * labels can be associated with a given resource. Label keys and values can
+     * be no longer than 63 characters.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -22,6 +28,12 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The location for the Namespace.
+     * A full list of valid locations can be found by running
+     * `gcloud beta service-directory locations list`.
+     * 
+     */
     @InputImport(name="location", required=true)
     private final Input<String> location;
 
@@ -29,6 +41,11 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.location;
     }
 
+    /**
+     * The Resource ID must be 1-63 characters long, including digits,
+     * lowercase letters or the hyphen character.
+     * 
+     */
     @InputImport(name="namespaceId", required=true)
     private final Input<String> namespaceId;
 
@@ -36,6 +53,11 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.namespaceId;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

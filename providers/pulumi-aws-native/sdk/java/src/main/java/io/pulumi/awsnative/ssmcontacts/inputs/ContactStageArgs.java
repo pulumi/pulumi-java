@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A set amount of time that an escalation plan or engagement plan engages the specified contacts or contact methods.
+ * 
+ */
 public final class ContactStageArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContactStageArgs Empty = new ContactStageArgs();
 
+    /**
+     * The time to wait until beginning the next stage.
+     * 
+     */
     @InputImport(name="durationInMinutes", required=true)
     private final Input<Integer> durationInMinutes;
 
@@ -23,6 +31,10 @@ public final class ContactStageArgs extends io.pulumi.resources.ResourceArgs {
         return this.durationInMinutes;
     }
 
+    /**
+     * The contacts or contact methods that the escalation plan or engagement plan is engaging.
+     * 
+     */
     @InputImport(name="targets")
     private final @Nullable Input<List<ContactTargetsArgs>> targets;
 

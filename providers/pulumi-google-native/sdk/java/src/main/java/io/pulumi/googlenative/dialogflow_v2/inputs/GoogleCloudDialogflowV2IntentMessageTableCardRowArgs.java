@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Row of TableCard.
+ * 
+ */
 public final class GoogleCloudDialogflowV2IntentMessageTableCardRowArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowV2IntentMessageTableCardRowArgs Empty = new GoogleCloudDialogflowV2IntentMessageTableCardRowArgs();
 
+    /**
+     * Optional. List of cells that make up this row.
+     * 
+     */
     @InputImport(name="cells")
     private final @Nullable Input<List<GoogleCloudDialogflowV2IntentMessageTableCardCellArgs>> cells;
 
@@ -23,6 +31,10 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardRowArgs extends 
         return this.cells == null ? Input.empty() : this.cells;
     }
 
+    /**
+     * Optional. Whether to add a visual divider after this row.
+     * 
+     */
     @InputImport(name="dividerAfter")
     private final @Nullable Input<Boolean> dividerAfter;
 

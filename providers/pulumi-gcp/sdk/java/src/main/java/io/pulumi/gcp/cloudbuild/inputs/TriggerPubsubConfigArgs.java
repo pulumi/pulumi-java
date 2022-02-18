@@ -14,6 +14,10 @@ public final class TriggerPubsubConfigArgs extends io.pulumi.resources.ResourceA
 
     public static final TriggerPubsubConfigArgs Empty = new TriggerPubsubConfigArgs();
 
+    /**
+     * Service account that will make the push request.
+     * 
+     */
     @InputImport(name="serviceAccountEmail")
     private final @Nullable Input<String> serviceAccountEmail;
 
@@ -21,6 +25,12 @@ public final class TriggerPubsubConfigArgs extends io.pulumi.resources.ResourceA
         return this.serviceAccountEmail == null ? Input.empty() : this.serviceAccountEmail;
     }
 
+    /**
+     * - 
+     * Potential issues with the underlying Pub/Sub subscription configuration.
+     * Only populated on get requests.
+     * 
+     */
     @InputImport(name="state")
     private final @Nullable Input<String> state;
 
@@ -28,6 +38,11 @@ public final class TriggerPubsubConfigArgs extends io.pulumi.resources.ResourceA
         return this.state == null ? Input.empty() : this.state;
     }
 
+    /**
+     * - 
+     * Output only. Name of the subscription.
+     * 
+     */
     @InputImport(name="subscription")
     private final @Nullable Input<String> subscription;
 
@@ -35,6 +50,10 @@ public final class TriggerPubsubConfigArgs extends io.pulumi.resources.ResourceA
         return this.subscription == null ? Input.empty() : this.subscription;
     }
 
+    /**
+     * The name of the topic from which this subscription is receiving messages.
+     * 
+     */
     @InputImport(name="topic", required=true)
     private final Input<String> topic;
 

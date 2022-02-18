@@ -12,6 +12,10 @@ public final class GetRuleArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetRuleArgs Empty = new GetRuleArgs();
 
+    /**
+     * The name of the Role to lookup in the form `roles/{ROLE_NAME}`, `organizations/{ORGANIZATION_ID}/roles/{ROLE_NAME}` or `projects/{PROJECT_ID}/roles/{ROLE_NAME}`
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

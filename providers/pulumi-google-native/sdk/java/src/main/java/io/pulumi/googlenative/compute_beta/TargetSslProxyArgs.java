@@ -16,6 +16,10 @@ public final class TargetSslProxyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TargetSslProxyArgs Empty = new TargetSslProxyArgs();
 
+    /**
+     * URL of a certificate map that identifies a certificate map associated with the given target proxy. This field can only be set for global target proxies. If set, sslCertificates will be ignored.
+     * 
+     */
     @InputImport(name="certificateMap")
     private final @Nullable Input<String> certificateMap;
 
@@ -23,6 +27,10 @@ public final class TargetSslProxyArgs extends io.pulumi.resources.ResourceArgs {
         return this.certificateMap == null ? Input.empty() : this.certificateMap;
     }
 
+    /**
+     * An optional description of this resource. Provide this property when you create the resource.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -30,6 +38,10 @@ public final class TargetSslProxyArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -44,6 +56,10 @@ public final class TargetSslProxyArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.
+     * 
+     */
     @InputImport(name="proxyHeader")
     private final @Nullable Input<TargetSslProxyProxyHeader> proxyHeader;
 
@@ -58,6 +74,10 @@ public final class TargetSslProxyArgs extends io.pulumi.resources.ResourceArgs {
         return this.requestId == null ? Input.empty() : this.requestId;
     }
 
+    /**
+     * URL to the BackendService resource.
+     * 
+     */
     @InputImport(name="service")
     private final @Nullable Input<String> service;
 
@@ -65,6 +85,10 @@ public final class TargetSslProxyArgs extends io.pulumi.resources.ResourceArgs {
         return this.service == null ? Input.empty() : this.service;
     }
 
+    /**
+     * URLs to SslCertificate resources that are used to authenticate connections to Backends. At least one SSL certificate must be specified. Currently, you may specify up to 15 SSL certificates. sslCertificates do not apply when the load balancing scheme is set to INTERNAL_SELF_MANAGED.
+     * 
+     */
     @InputImport(name="sslCertificates")
     private final @Nullable Input<List<String>> sslCertificates;
 
@@ -72,6 +96,10 @@ public final class TargetSslProxyArgs extends io.pulumi.resources.ResourceArgs {
         return this.sslCertificates == null ? Input.empty() : this.sslCertificates;
     }
 
+    /**
+     * URL of SslPolicy resource that will be associated with the TargetSslProxy resource. If not set, the TargetSslProxy resource will not have any SSL policy configured.
+     * 
+     */
     @InputImport(name="sslPolicy")
     private final @Nullable Input<String> sslPolicy;
 

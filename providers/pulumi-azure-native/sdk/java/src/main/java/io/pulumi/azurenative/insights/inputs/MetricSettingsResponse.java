@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Part of MultiTenantDiagnosticSettings. Specifies the settings for a particular metric.
+ * 
+ */
 public final class MetricSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MetricSettingsResponse Empty = new MetricSettingsResponse();
 
+    /**
+     * Name of a Diagnostic Metric category for a resource type this setting is applied to. To obtain the list of Diagnostic metric categories for a resource, first perform a GET diagnostic settings operation.
+     * 
+     */
     @InputImport(name="category")
     private final @Nullable String category;
 
@@ -23,6 +31,10 @@ public final class MetricSettingsResponse extends io.pulumi.resources.InvokeArgs
         return this.category == null ? Optional.empty() : Optional.ofNullable(this.category);
     }
 
+    /**
+     * a value indicating whether this category is enabled.
+     * 
+     */
     @InputImport(name="enabled", required=true)
     private final Boolean enabled;
 
@@ -30,6 +42,10 @@ public final class MetricSettingsResponse extends io.pulumi.resources.InvokeArgs
         return this.enabled;
     }
 
+    /**
+     * the retention policy for this category.
+     * 
+     */
     @InputImport(name="retentionPolicy")
     private final @Nullable RetentionPolicyResponse retentionPolicy;
 
@@ -37,6 +53,10 @@ public final class MetricSettingsResponse extends io.pulumi.resources.InvokeArgs
         return this.retentionPolicy == null ? Optional.empty() : Optional.ofNullable(this.retentionPolicy);
     }
 
+    /**
+     * the timegrain of the metric in ISO8601 format.
+     * 
+     */
     @InputImport(name="timeGrain")
     private final @Nullable String timeGrain;
 

@@ -14,6 +14,10 @@ public final class TagValueArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TagValueArgs Empty = new TagValueArgs();
 
+    /**
+     * Optional. User-assigned description of the TagValue. Must not exceed 256 characters. Read-write.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -21,6 +25,10 @@ public final class TagValueArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Optional. Entity tag which users can pass to prevent race conditions. This field is always set in server responses. See UpdateTagValueRequest for details.
+     * 
+     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -28,6 +36,10 @@ public final class TagValueArgs extends io.pulumi.resources.ResourceArgs {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
+    /**
+     * Immutable. Resource name for TagValue in the format `tagValues/456`.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -35,6 +47,10 @@ public final class TagValueArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Immutable. The resource name of the new TagValue's parent TagKey. Must be of the form `tagKeys/{tag_key_id}`.
+     * 
+     */
     @InputImport(name="parent")
     private final @Nullable Input<String> parent;
 
@@ -42,6 +58,10 @@ public final class TagValueArgs extends io.pulumi.resources.ResourceArgs {
         return this.parent == null ? Input.empty() : this.parent;
     }
 
+    /**
+     * Immutable. User-assigned short name for TagValue. The short name should be unique for TagValues within the same parent TagKey. The short name must be 63 characters or less, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
+     * 
+     */
     @InputImport(name="shortName", required=true)
     private final Input<String> shortName;
 

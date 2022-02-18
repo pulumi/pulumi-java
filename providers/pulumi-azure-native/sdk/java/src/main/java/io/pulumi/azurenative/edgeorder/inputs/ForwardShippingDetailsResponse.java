@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Forward shipment details.
+ * 
+ */
 public final class ForwardShippingDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ForwardShippingDetailsResponse Empty = new ForwardShippingDetailsResponse();
 
+    /**
+     * Carrier Name for display purpose. Not to be used for any processing.
+     * 
+     */
     @InputImport(name="carrierDisplayName", required=true)
     private final String carrierDisplayName;
 
@@ -19,6 +27,10 @@ public final class ForwardShippingDetailsResponse extends io.pulumi.resources.In
         return this.carrierDisplayName;
     }
 
+    /**
+     * Name of the carrier.
+     * 
+     */
     @InputImport(name="carrierName", required=true)
     private final String carrierName;
 
@@ -26,6 +38,10 @@ public final class ForwardShippingDetailsResponse extends io.pulumi.resources.In
         return this.carrierName;
     }
 
+    /**
+     * TrackingId of the package
+     * 
+     */
     @InputImport(name="trackingId", required=true)
     private final String trackingId;
 
@@ -33,6 +49,10 @@ public final class ForwardShippingDetailsResponse extends io.pulumi.resources.In
         return this.trackingId;
     }
 
+    /**
+     * TrackingUrl of the package.
+     * 
+     */
     @InputImport(name="trackingUrl", required=true)
     private final String trackingUrl;
 

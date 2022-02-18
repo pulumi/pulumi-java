@@ -12,6 +12,10 @@ public final class GetOrganizationConformancePackArgs extends io.pulumi.resource
 
     public static final GetOrganizationConformancePackArgs Empty = new GetOrganizationConformancePackArgs();
 
+    /**
+     * The name of the organization conformance pack.
+     * 
+     */
     @InputImport(name="organizationConformancePackName", required=true)
     private final String organizationConformancePackName;
 

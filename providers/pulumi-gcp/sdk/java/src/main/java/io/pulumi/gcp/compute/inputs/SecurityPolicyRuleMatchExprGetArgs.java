@@ -13,6 +13,11 @@ public final class SecurityPolicyRuleMatchExprGetArgs extends io.pulumi.resource
 
     public static final SecurityPolicyRuleMatchExprGetArgs Empty = new SecurityPolicyRuleMatchExprGetArgs();
 
+    /**
+     * Textual representation of an expression in Common Expression Language syntax.
+     * The application context of the containing message determines which well-known feature set of CEL is supported.
+     * 
+     */
     @InputImport(name="expression", required=true)
     private final Input<String> expression;
 

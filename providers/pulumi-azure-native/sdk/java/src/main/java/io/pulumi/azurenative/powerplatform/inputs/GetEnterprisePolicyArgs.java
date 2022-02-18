@@ -12,6 +12,10 @@ public final class GetEnterprisePolicyArgs extends io.pulumi.resources.InvokeArg
 
     public static final GetEnterprisePolicyArgs Empty = new GetEnterprisePolicyArgs();
 
+    /**
+     * The EnterprisePolicy name.
+     * 
+     */
     @InputImport(name="enterprisePolicyName", required=true)
     private final String enterprisePolicyName;
 
@@ -19,6 +23,10 @@ public final class GetEnterprisePolicyArgs extends io.pulumi.resources.InvokeArg
         return this.enterprisePolicyName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

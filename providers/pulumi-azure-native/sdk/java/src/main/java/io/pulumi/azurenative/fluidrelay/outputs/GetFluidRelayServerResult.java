@@ -14,14 +14,50 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetFluidRelayServerResult {
+    /**
+     * The Fluid Relay Service endpoints for this server.
+     * 
+     */
     private final FluidRelayEndpointsResponse fluidRelayEndpoints;
+    /**
+     * The Fluid tenantId for this server
+     * 
+     */
     private final String frsTenantId;
+    /**
+     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * 
+     */
     private final String id;
+    /**
+     * The geo-location where the resource lives
+     * 
+     */
     private final String location;
+    /**
+     * The name of the resource
+     * 
+     */
     private final String name;
+    /**
+     * Provision states for FluidRelay RP
+     * 
+     */
     private final @Nullable String provisioningState;
+    /**
+     * System meta data for this resource, including creation and modification information.
+     * 
+     */
     private final SystemDataResponse systemData;
+    /**
+     * Resource tags.
+     * 
+     */
     private final @Nullable Map<String,String> tags;
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"fluidRelayEndpoints","frsTenantId","id","location","name","provisioningState","systemData","tags","type"})
@@ -46,30 +82,66 @@ public final class GetFluidRelayServerResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * The Fluid Relay Service endpoints for this server.
+     * 
+     */
     public FluidRelayEndpointsResponse getFluidRelayEndpoints() {
         return this.fluidRelayEndpoints;
     }
+    /**
+     * The Fluid tenantId for this server
+     * 
+     */
     public String getFrsTenantId() {
         return this.frsTenantId;
     }
+    /**
+     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * The geo-location where the resource lives
+     * 
+     */
     public String getLocation() {
         return this.location;
     }
+    /**
+     * The name of the resource
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Provision states for FluidRelay RP
+     * 
+     */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
+    /**
+     * System meta data for this resource, including creation and modification information.
+     * 
+     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+    /**
+     * Resource tags.
+     * 
+     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     public String getType() {
         return this.type;
     }

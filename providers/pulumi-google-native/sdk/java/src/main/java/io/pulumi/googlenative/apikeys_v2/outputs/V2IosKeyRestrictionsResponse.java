@@ -10,6 +10,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class V2IosKeyRestrictionsResponse {
+    /**
+     * A list of bundle IDs that are allowed when making API calls with this key.
+     * 
+     */
     private final List<String> allowedBundleIds;
 
     @OutputCustomType.Constructor({"allowedBundleIds"})
@@ -17,6 +21,10 @@ public final class V2IosKeyRestrictionsResponse {
         this.allowedBundleIds = Objects.requireNonNull(allowedBundleIds);
     }
 
+    /**
+     * A list of bundle IDs that are allowed when making API calls with this key.
+     * 
+     */
     public List<String> getAllowedBundleIds() {
         return this.allowedBundleIds;
     }

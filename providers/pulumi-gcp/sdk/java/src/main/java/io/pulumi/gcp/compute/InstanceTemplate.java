@@ -27,171 +27,511 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Manages a VM instance template resource within GCE. For more information see
+ * [the official documentation](https://cloud.google.com/compute/docs/instance-templates)
+ * and
+ * [API](https://cloud.google.com/compute/docs/reference/latest/instanceTemplates).
+ * 
+ * ## Example Usage
+ * ## Using with Instance Group Manager
+ * 
+ * Instance Templates cannot be updated after creation with the Google
+ * Cloud Platform API. In order to update an Instance Template, this provider will
+ * create a replacement. In order to effectively
+ * use an Instance Template resource with an [Instance Group Manager resource](https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html).
+ * Either omit the Instance Template `name` attribute, or specify a partial name
+ * with `name_prefix`. Example:
+ * 
+ * With this setup, this provider generates a unique name for your Instance
+ * Template and can then update the Instance Group manager without conflict before
+ * destroying the previous Instance Template.
+ * 
+ * ## Deploying the Latest Image
+ * 
+ * A common way to use instance templates and managed instance groups is to deploy the
+ * latest image in a family, usually the latest build of your application. There are two
+ * ways to do this in the provider, and they have their pros and cons. The difference ends
+ * up being in how "latest" is interpreted. You can either deploy the latest image available
+ * when the provider runs, or you can have each instance check what the latest image is when
+ * it's being created, either as part of a scaling event or being rebuilt by the instance
+ * group manager.
+ * 
+ * If you're not sure, we recommend deploying the latest image available when the provider runs,
+ * because this means all the instances in your group will be based on the same image, always,
+ * and means that no upgrades or changes to your instances happen outside of a `pulumi up`.
+ * You can achieve this by using the `gcp.compute.Image`
+ * data source, which will retrieve the latest image on every `pulumi apply`, and will update
+ * the template to use that specific image:
+ * 
+ * To have instances update to the latest on every scaling event or instance re-creation,
+ * use the family as the image for the disk, and it will use GCP's default behavior, setting
+ * the image for the template to the family:
+ * 
+ * ## Import
+ * 
+ * Instance templates can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/instanceTemplate:InstanceTemplate default projects/{{project}}/global/instanceTemplates/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/instanceTemplate:InstanceTemplate default {{project}}/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/instanceTemplate:InstanceTemplate default {{name}}
+ * ```
+ * 
+ *  [custom-vm-types]https://cloud.google.com/dataproc/docs/concepts/compute/custom-machine-types [network-tier]https://cloud.google.com/network-tiers/docs/overview
+ * 
+ */
 @ResourceType(type="gcp:compute/instanceTemplate:InstanceTemplate")
 public class InstanceTemplate extends io.pulumi.resources.CustomResource {
+    /**
+     * Configure Nested Virtualisation and Simultaneous Hyper Threading on this VM. Structure is documented below
+     * 
+     */
     @OutputExport(name="advancedMachineFeatures", type=InstanceTemplateAdvancedMachineFeatures.class, parameters={})
     private Output</* @Nullable */ InstanceTemplateAdvancedMachineFeatures> advancedMachineFeatures;
 
+    /**
+     * @return Configure Nested Virtualisation and Simultaneous Hyper Threading on this VM. Structure is documented below
+     * 
+     */
     public Output</* @Nullable */ InstanceTemplateAdvancedMachineFeatures> getAdvancedMachineFeatures() {
         return this.advancedMachineFeatures;
     }
+    /**
+     * Whether to allow sending and receiving of
+     * packets with non-matching source or destination IPs. This defaults to false.
+     * 
+     */
     @OutputExport(name="canIpForward", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> canIpForward;
 
+    /**
+     * @return Whether to allow sending and receiving of
+     * packets with non-matching source or destination IPs. This defaults to false.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getCanIpForward() {
         return this.canIpForward;
     }
+    /**
+     * Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM. Structure is documented below
+     * 
+     */
     @OutputExport(name="confidentialInstanceConfig", type=InstanceTemplateConfidentialInstanceConfig.class, parameters={})
     private Output<InstanceTemplateConfidentialInstanceConfig> confidentialInstanceConfig;
 
+    /**
+     * @return Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM. Structure is documented below
+     * 
+     */
     public Output<InstanceTemplateConfidentialInstanceConfig> getConfidentialInstanceConfig() {
         return this.confidentialInstanceConfig;
     }
+    /**
+     * A brief description of this resource.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return A brief description of this resource.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * Disks to attach to instances created from this template.
+     * This can be specified multiple times for multiple disks. Structure is
+     * documented below.
+     * 
+     */
     @OutputExport(name="disks", type=List.class, parameters={InstanceTemplateDisk.class})
     private Output<List<InstanceTemplateDisk>> disks;
 
+    /**
+     * @return Disks to attach to instances created from this template.
+     * This can be specified multiple times for multiple disks. Structure is
+     * documented below.
+     * 
+     */
     public Output<List<InstanceTemplateDisk>> getDisks() {
         return this.disks;
     }
+    /**
+     * ) Enable [Virtual Displays](https://cloud.google.com/compute/docs/instances/enable-instance-virtual-display#verify_display_driver) on this instance.
+     * **Note**: `allow_stopping_for_update` must be set to true in order to update this field.
+     * 
+     */
     @OutputExport(name="enableDisplay", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableDisplay;
 
+    /**
+     * @return ) Enable [Virtual Displays](https://cloud.google.com/compute/docs/instances/enable-instance-virtual-display#verify_display_driver) on this instance.
+     * **Note**: `allow_stopping_for_update` must be set to true in order to update this field.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getEnableDisplay() {
         return this.enableDisplay;
     }
+    /**
+     * List of the type and count of accelerator cards attached to the instance. Structure documented below.
+     * 
+     */
     @OutputExport(name="guestAccelerators", type=List.class, parameters={InstanceTemplateGuestAccelerator.class})
     private Output</* @Nullable */ List<InstanceTemplateGuestAccelerator>> guestAccelerators;
 
+    /**
+     * @return List of the type and count of accelerator cards attached to the instance. Structure documented below.
+     * 
+     */
     public Output</* @Nullable */ List<InstanceTemplateGuestAccelerator>> getGuestAccelerators() {
         return this.guestAccelerators;
     }
+    /**
+     * A brief description to use for instances
+     * created from this template.
+     * 
+     */
     @OutputExport(name="instanceDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> instanceDescription;
 
+    /**
+     * @return A brief description to use for instances
+     * created from this template.
+     * 
+     */
     public Output</* @Nullable */ String> getInstanceDescription() {
         return this.instanceDescription;
     }
+    /**
+     * A set of ket/value label pairs to assign to disk created from
+     * this template
+     * 
+     */
     @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
+    /**
+     * @return A set of ket/value label pairs to assign to disk created from
+     * this template
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getLabels() {
         return this.labels;
     }
+    /**
+     * The machine type to create.
+     * 
+     */
     @OutputExport(name="machineType", type=String.class, parameters={})
     private Output<String> machineType;
 
+    /**
+     * @return The machine type to create.
+     * 
+     */
     public Output<String> getMachineType() {
         return this.machineType;
     }
+    /**
+     * Metadata key/value pairs to make available from
+     * within instances created from this template.
+     * 
+     */
     @OutputExport(name="metadata", type=Map.class, parameters={String.class, Object.class})
     private Output</* @Nullable */ Map<String,Object>> metadata;
 
+    /**
+     * @return Metadata key/value pairs to make available from
+     * within instances created from this template.
+     * 
+     */
     public Output</* @Nullable */ Map<String,Object>> getMetadata() {
         return this.metadata;
     }
+    /**
+     * The unique fingerprint of the metadata.
+     * 
+     */
     @OutputExport(name="metadataFingerprint", type=String.class, parameters={})
     private Output<String> metadataFingerprint;
 
+    /**
+     * @return The unique fingerprint of the metadata.
+     * 
+     */
     public Output<String> getMetadataFingerprint() {
         return this.metadataFingerprint;
     }
+    /**
+     * An alternative to using the
+     * startup-script metadata key, mostly to match the compute_instance resource.
+     * This replaces the startup-script metadata key on the created instance and
+     * thus the two mechanisms are not allowed to be used simultaneously.
+     * 
+     */
     @OutputExport(name="metadataStartupScript", type=String.class, parameters={})
     private Output</* @Nullable */ String> metadataStartupScript;
 
+    /**
+     * @return An alternative to using the
+     * startup-script metadata key, mostly to match the compute_instance resource.
+     * This replaces the startup-script metadata key on the created instance and
+     * thus the two mechanisms are not allowed to be used simultaneously.
+     * 
+     */
     public Output</* @Nullable */ String> getMetadataStartupScript() {
         return this.metadataStartupScript;
     }
+    /**
+     * Specifies a minimum CPU platform. Applicable values are the friendly names of CPU platforms, such as
+     * `Intel Haswell` or `Intel Skylake`. See the complete list [here](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform).
+     * 
+     */
     @OutputExport(name="minCpuPlatform", type=String.class, parameters={})
     private Output</* @Nullable */ String> minCpuPlatform;
 
+    /**
+     * @return Specifies a minimum CPU platform. Applicable values are the friendly names of CPU platforms, such as
+     * `Intel Haswell` or `Intel Skylake`. See the complete list [here](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform).
+     * 
+     */
     public Output</* @Nullable */ String> getMinCpuPlatform() {
         return this.minCpuPlatform;
     }
+    /**
+     * The name of the instance template. If you leave
+     * this blank, the provider will auto-generate a unique name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the instance template. If you leave
+     * this blank, the provider will auto-generate a unique name.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Creates a unique name beginning with the specified
+     * prefix. Conflicts with `name`.
+     * 
+     */
     @OutputExport(name="namePrefix", type=String.class, parameters={})
     private Output<String> namePrefix;
 
+    /**
+     * @return Creates a unique name beginning with the specified
+     * prefix. Conflicts with `name`.
+     * 
+     */
     public Output<String> getNamePrefix() {
         return this.namePrefix;
     }
+    /**
+     * Networks to attach to instances created from
+     * this template. This can be specified multiple times for multiple networks.
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="networkInterfaces", type=List.class, parameters={InstanceTemplateNetworkInterface.class})
     private Output</* @Nullable */ List<InstanceTemplateNetworkInterface>> networkInterfaces;
 
+    /**
+     * @return Networks to attach to instances created from
+     * this template. This can be specified multiple times for multiple networks.
+     * Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ List<InstanceTemplateNetworkInterface>> getNetworkInterfaces() {
         return this.networkInterfaces;
     }
+    /**
+     * Configures network performance settings for the instance created from the
+     * template. Structure is documented below. **Note**: `machine_type`
+     * must be a [supported type](https://cloud.google.com/compute/docs/networking/configure-vm-with-high-bandwidth-configuration),
+     * the `image` used must include the [`GVNIC`](https://cloud.google.com/compute/docs/networking/using-gvnic#create-instance-gvnic-image)
+     * in `guest-os-features`, and `network_interface.0.nic-type` must be `GVNIC`
+     * in order for this setting to take effect.
+     * 
+     */
     @OutputExport(name="networkPerformanceConfig", type=InstanceTemplateNetworkPerformanceConfig.class, parameters={})
     private Output</* @Nullable */ InstanceTemplateNetworkPerformanceConfig> networkPerformanceConfig;
 
+    /**
+     * @return Configures network performance settings for the instance created from the
+     * template. Structure is documented below. **Note**: `machine_type`
+     * must be a [supported type](https://cloud.google.com/compute/docs/networking/configure-vm-with-high-bandwidth-configuration),
+     * the `image` used must include the [`GVNIC`](https://cloud.google.com/compute/docs/networking/using-gvnic#create-instance-gvnic-image)
+     * in `guest-os-features`, and `network_interface.0.nic-type` must be `GVNIC`
+     * in order for this setting to take effect.
+     * 
+     */
     public Output</* @Nullable */ InstanceTemplateNetworkPerformanceConfig> getNetworkPerformanceConfig() {
         return this.networkPerformanceConfig;
     }
+    /**
+     * The ID of the project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * An instance template is a global resource that is not
+     * bound to a zone or a region. However, you can still specify some regional
+     * resources in an instance template, which restricts the template to the
+     * region where that resource resides. For example, a custom `subnetwork`
+     * resource is tied to a specific region. Defaults to the region of the
+     * Provider if no value is given.
+     * 
+     */
     @OutputExport(name="region", type=String.class, parameters={})
     private Output<String> region;
 
+    /**
+     * @return An instance template is a global resource that is not
+     * bound to a zone or a region. However, you can still specify some regional
+     * resources in an instance template, which restricts the template to the
+     * region where that resource resides. For example, a custom `subnetwork`
+     * resource is tied to a specific region. Defaults to the region of the
+     * Provider if no value is given.
+     * 
+     */
     public Output<String> getRegion() {
         return this.region;
     }
+    /**
+     * Specifies the reservations that this instance can consume from.
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="reservationAffinity", type=InstanceTemplateReservationAffinity.class, parameters={})
     private Output</* @Nullable */ InstanceTemplateReservationAffinity> reservationAffinity;
 
+    /**
+     * @return Specifies the reservations that this instance can consume from.
+     * Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ InstanceTemplateReservationAffinity> getReservationAffinity() {
         return this.reservationAffinity;
     }
+    /**
+     * The scheduling strategy to use. More details about
+     * this configuration option are detailed below.
+     * 
+     */
     @OutputExport(name="scheduling", type=InstanceTemplateScheduling.class, parameters={})
     private Output<InstanceTemplateScheduling> scheduling;
 
+    /**
+     * @return The scheduling strategy to use. More details about
+     * this configuration option are detailed below.
+     * 
+     */
     public Output<InstanceTemplateScheduling> getScheduling() {
         return this.scheduling;
     }
+    /**
+     * The URI of the created resource.
+     * 
+     */
     @OutputExport(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
+    /**
+     * @return The URI of the created resource.
+     * 
+     */
     public Output<String> getSelfLink() {
         return this.selfLink;
     }
+    /**
+     * Service account to attach to the instance. Structure is documented below.
+     * 
+     */
     @OutputExport(name="serviceAccount", type=InstanceTemplateServiceAccount.class, parameters={})
     private Output</* @Nullable */ InstanceTemplateServiceAccount> serviceAccount;
 
+    /**
+     * @return Service account to attach to the instance. Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ InstanceTemplateServiceAccount> getServiceAccount() {
         return this.serviceAccount;
     }
+    /**
+     * Enable [Shielded VM](https://cloud.google.com/security/shielded-cloud/shielded-vm) on this instance. Shielded VM provides verifiable integrity to prevent against malware and rootkits. Defaults to disabled. Structure is documented below.
+     * **Note**: `shielded_instance_config` can only be used with boot images with shielded vm support. See the complete list [here](https://cloud.google.com/compute/docs/images#shielded-images).
+     * 
+     */
     @OutputExport(name="shieldedInstanceConfig", type=InstanceTemplateShieldedInstanceConfig.class, parameters={})
     private Output<InstanceTemplateShieldedInstanceConfig> shieldedInstanceConfig;
 
+    /**
+     * @return Enable [Shielded VM](https://cloud.google.com/security/shielded-cloud/shielded-vm) on this instance. Shielded VM provides verifiable integrity to prevent against malware and rootkits. Defaults to disabled. Structure is documented below.
+     * **Note**: `shielded_instance_config` can only be used with boot images with shielded vm support. See the complete list [here](https://cloud.google.com/compute/docs/images#shielded-images).
+     * 
+     */
     public Output<InstanceTemplateShieldedInstanceConfig> getShieldedInstanceConfig() {
         return this.shieldedInstanceConfig;
     }
+    /**
+     * Tags to attach to the instance.
+     * 
+     */
     @OutputExport(name="tags", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> tags;
 
+    /**
+     * @return Tags to attach to the instance.
+     * 
+     */
     public Output</* @Nullable */ List<String>> getTags() {
         return this.tags;
     }
+    /**
+     * The unique fingerprint of the tags.
+     * 
+     */
     @OutputExport(name="tagsFingerprint", type=String.class, parameters={})
     private Output<String> tagsFingerprint;
 
+    /**
+     * @return The unique fingerprint of the tags.
+     * 
+     */
     public Output<String> getTagsFingerprint() {
         return this.tagsFingerprint;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public InstanceTemplate(String name, InstanceTemplateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:compute/instanceTemplate:InstanceTemplate", name, args == null ? InstanceTemplateArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -207,6 +547,15 @@ public class InstanceTemplate extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static InstanceTemplate get(String name, Input<String> id, @Nullable InstanceTemplateState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new InstanceTemplate(name, id, state, options);
     }

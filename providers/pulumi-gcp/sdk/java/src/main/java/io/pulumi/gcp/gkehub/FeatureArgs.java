@@ -16,6 +16,10 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FeatureArgs Empty = new FeatureArgs();
 
+    /**
+     * GCP labels for this Feature.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -23,6 +27,10 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The location for the resource
+     * 
+     */
     @InputImport(name="location", required=true)
     private final Input<String> location;
 
@@ -30,6 +38,10 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
         return this.location;
     }
 
+    /**
+     * The full, unique name of this Feature resource
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -37,6 +49,10 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The project for the resource
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -44,6 +60,10 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Optional. Hub-wide Feature configuration. If this Feature does not support any Hub-wide configuration, this field may be unused.
+     * 
+     */
     @InputImport(name="spec")
     private final @Nullable Input<FeatureSpecArgs> spec;
 

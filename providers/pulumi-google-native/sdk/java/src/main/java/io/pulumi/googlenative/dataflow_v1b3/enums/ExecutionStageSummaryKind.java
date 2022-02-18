@@ -8,16 +8,56 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Type of transform this stage is executing.
+     * 
+     */
     @EnumType
     public enum ExecutionStageSummaryKind {
+        /**
+         * Unrecognized transform type.
+         * 
+         */
         UnknownKind("UNKNOWN_KIND"),
+        /**
+         * ParDo transform.
+         * 
+         */
         ParDoKind("PAR_DO_KIND"),
+        /**
+         * Group By Key transform.
+         * 
+         */
         GroupByKeyKind("GROUP_BY_KEY_KIND"),
+        /**
+         * Flatten transform.
+         * 
+         */
         FlattenKind("FLATTEN_KIND"),
+        /**
+         * Read transform.
+         * 
+         */
         ReadKind("READ_KIND"),
+        /**
+         * Write transform.
+         * 
+         */
         WriteKind("WRITE_KIND"),
+        /**
+         * Constructs from a constant value, such as with Create.of.
+         * 
+         */
         ConstantKind("CONSTANT_KIND"),
+        /**
+         * Creates a Singleton view of a collection.
+         * 
+         */
         SingletonKind("SINGLETON_KIND"),
+        /**
+         * Opening or closing a shuffle session, often as part of a GroupByKey.
+         * 
+         */
         ShuffleKind("SHUFFLE_KIND");
 
         private final String value;

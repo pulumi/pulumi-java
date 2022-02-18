@@ -18,6 +18,10 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AuthorityArgs Empty = new AuthorityArgs();
 
+    /**
+     * The user provided Resource ID for this Certificate Authority.
+     * 
+     */
     @InputImport(name="certificateAuthorityId", required=true)
     private final Input<String> certificateAuthorityId;
 
@@ -25,6 +29,11 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
         return this.certificateAuthorityId;
     }
 
+    /**
+     * The config used to create a self-signed X.509 certificate or CSR.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="config", required=true)
     private final Input<AuthorityConfigArgs> config;
 
@@ -32,6 +41,14 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
         return this.config;
     }
 
+    /**
+     * The name of a Cloud Storage bucket where this CertificateAuthority will publish content,
+     * such as the CA certificate and CRLs. This must be a bucket name, without any prefixes
+     * (such as `gs://`) or suffixes (such as `.googleapis.com`). For example, to use a bucket named
+     * my-bucket, you would simply specify `my-bucket`. If not specified, a managed bucket will be
+     * created.
+     * 
+     */
     @InputImport(name="gcsBucket")
     private final @Nullable Input<String> gcsBucket;
 
@@ -39,6 +56,11 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
         return this.gcsBucket == null ? Input.empty() : this.gcsBucket;
     }
 
+    /**
+     * This field allows the CA to be deleted even if the CA has active certs. Active certs include both unrevoked and unexpired certs.
+     * Use with care. Defaults to `false`.
+     * 
+     */
     @InputImport(name="ignoreActiveCertificatesOnDeletion")
     private final @Nullable Input<Boolean> ignoreActiveCertificatesOnDeletion;
 
@@ -46,6 +68,13 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
         return this.ignoreActiveCertificatesOnDeletion == null ? Input.empty() : this.ignoreActiveCertificatesOnDeletion;
     }
 
+    /**
+     * Used when issuing certificates for this CertificateAuthority. If this CertificateAuthority
+     * is a self-signed CertificateAuthority, this key is also used to sign the self-signed CA
+     * certificate. Otherwise, it is used to sign a CSR.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="keySpec", required=true)
     private final Input<AuthorityKeySpecArgs> keySpec;
 
@@ -53,6 +82,12 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
         return this.keySpec;
     }
 
+    /**
+     * Labels with user-defined metadata.
+     * An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass":
+     * "1.3kg", "count": "3" }.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -60,6 +95,12 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The desired lifetime of the CA certificate. Used to create the "notBeforeTime" and
+     * "notAfterTime" fields inside an X.509 certificate. A duration in seconds with up to nine
+     * fractional digits, terminated by 's'. Example: "3.5s".
+     * 
+     */
     @InputImport(name="lifetime")
     private final @Nullable Input<String> lifetime;
 
@@ -67,6 +108,11 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
         return this.lifetime == null ? Input.empty() : this.lifetime;
     }
 
+    /**
+     * Location of the CertificateAuthority. A full list of valid locations can be found by
+     * running `gcloud privateca locations list`.
+     * 
+     */
     @InputImport(name="location", required=true)
     private final Input<String> location;
 
@@ -74,6 +120,10 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
         return this.location;
     }
 
+    /**
+     * The name of the CaPool this Certificate Authority belongs to.
+     * 
+     */
     @InputImport(name="pool", required=true)
     private final Input<String> pool;
 
@@ -81,6 +131,11 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
         return this.pool;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -88,6 +143,15 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The Type of this CertificateAuthority.
+     * > **Note:** For `SUBORDINATE` Certificate Authorities, they need to
+     * be manually activated (via Cloud Console of `gcloud`) before they can
+     * issue certificates.
+     * Default value is `SELF_SIGNED`.
+     * Possible values are `SELF_SIGNED` and `SUBORDINATE`.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 

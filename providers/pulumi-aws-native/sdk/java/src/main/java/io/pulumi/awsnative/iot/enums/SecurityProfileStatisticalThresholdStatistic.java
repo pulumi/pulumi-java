@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The percentile which resolves to a threshold value by which compliance with a behavior is determined
+     * 
+     */
     @EnumType
     public enum SecurityProfileStatisticalThresholdStatistic {
         Average("Average"),

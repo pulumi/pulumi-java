@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Identity for the Automanage account.
+ * 
+ */
 public final class AccountIdentityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AccountIdentityArgs Empty = new AccountIdentityArgs();
 
+    /**
+     * The type of identity used for the Automanage account. Currently, the only supported type is 'SystemAssigned', which implicitly creates an identity.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<ResourceIdentityType> type;
 

@@ -10,10 +10,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Information about a rendering engine.
+ * 
+ */
 public final class SimulationApplicationRenderingEngineArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SimulationApplicationRenderingEngineArgs Empty = new SimulationApplicationRenderingEngineArgs();
 
+    /**
+     * The name of the rendering engine.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<SimulationApplicationRenderingEngineName> name;
 
@@ -21,6 +29,10 @@ public final class SimulationApplicationRenderingEngineArgs extends io.pulumi.re
         return this.name;
     }
 
+    /**
+     * The version of the rendering engine.
+     * 
+     */
     @InputImport(name="version", required=true)
     private final Input<String> version;
 

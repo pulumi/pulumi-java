@@ -11,9 +11,26 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class UserSourceInfoResponse {
+    /**
+     * Selector for the artifact to be used for the deployment for multi-module projects. This should be
+     * the relative path to the target module/project.
+     * 
+     */
     private final @Nullable String artifactSelector;
+    /**
+     * Relative path of the storage which stores the source
+     * 
+     */
     private final @Nullable String relativePath;
+    /**
+     * Type of the source uploaded
+     * 
+     */
     private final @Nullable String type;
+    /**
+     * Version of the source
+     * 
+     */
     private final @Nullable String version;
 
     @OutputCustomType.Constructor({"artifactSelector","relativePath","type","version"})
@@ -28,15 +45,32 @@ public final class UserSourceInfoResponse {
         this.version = version;
     }
 
+    /**
+     * Selector for the artifact to be used for the deployment for multi-module projects. This should be
+     * the relative path to the target module/project.
+     * 
+     */
     public Optional<String> getArtifactSelector() {
         return Optional.ofNullable(this.artifactSelector);
     }
+    /**
+     * Relative path of the storage which stores the source
+     * 
+     */
     public Optional<String> getRelativePath() {
         return Optional.ofNullable(this.relativePath);
     }
+    /**
+     * Type of the source uploaded
+     * 
+     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
+    /**
+     * Version of the source
+     * 
+     */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }

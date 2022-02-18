@@ -12,6 +12,10 @@ public final class GetControlPanelArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetControlPanelArgs Empty = new GetControlPanelArgs();
 
+    /**
+     * The Amazon Resource Name (ARN) of the cluster.
+     * 
+     */
     @InputImport(name="controlPanelArn", required=true)
     private final String controlPanelArn;
 

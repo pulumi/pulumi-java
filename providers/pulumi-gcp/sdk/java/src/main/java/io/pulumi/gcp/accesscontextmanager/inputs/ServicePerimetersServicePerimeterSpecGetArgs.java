@@ -18,6 +18,18 @@ public final class ServicePerimetersServicePerimeterSpecGetArgs extends io.pulum
 
     public static final ServicePerimetersServicePerimeterSpecGetArgs Empty = new ServicePerimetersServicePerimeterSpecGetArgs();
 
+    /**
+     * A list of AccessLevel resource names that allow resources within
+     * the ServicePerimeter to be accessed from the internet.
+     * AccessLevels listed must be in the same policy as this
+     * ServicePerimeter. Referencing a nonexistent AccessLevel is a
+     * syntax error. If no AccessLevel names are listed, resources within
+     * the perimeter can only be accessed via GCP calls with request
+     * origins within the perimeter. For Service Perimeter Bridge, must
+     * be empty.
+     * Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}
+     * 
+     */
     @InputImport(name="accessLevels")
     private final @Nullable Input<List<String>> accessLevels;
 
@@ -25,6 +37,14 @@ public final class ServicePerimetersServicePerimeterSpecGetArgs extends io.pulum
         return this.accessLevels == null ? Input.empty() : this.accessLevels;
     }
 
+    /**
+     * List of EgressPolicies to apply to the perimeter. A perimeter may
+     * have multiple EgressPolicies, each of which is evaluated separately.
+     * Access is granted if any EgressPolicy grants it. Must be empty for
+     * a perimeter bridge.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="egressPolicies")
     private final @Nullable Input<List<ServicePerimetersServicePerimeterSpecEgressPolicyGetArgs>> egressPolicies;
 
@@ -32,6 +52,14 @@ public final class ServicePerimetersServicePerimeterSpecGetArgs extends io.pulum
         return this.egressPolicies == null ? Input.empty() : this.egressPolicies;
     }
 
+    /**
+     * List of `IngressPolicies` to apply to the perimeter. A perimeter may
+     * have multiple `IngressPolicies`, each of which is evaluated
+     * separately. Access is granted if any `Ingress Policy` grants it.
+     * Must be empty for a perimeter bridge.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="ingressPolicies")
     private final @Nullable Input<List<ServicePerimetersServicePerimeterSpecIngressPolicyGetArgs>> ingressPolicies;
 
@@ -39,6 +67,14 @@ public final class ServicePerimetersServicePerimeterSpecGetArgs extends io.pulum
         return this.ingressPolicies == null ? Input.empty() : this.ingressPolicies;
     }
 
+    /**
+     * A list of resources, currently only projects in the form
+     * `projects/<projectnumber>`, that match this to stanza. A request matches
+     * if it contains a resource in this list. If * is specified for resources,
+     * then this `EgressTo` rule will authorize access to all resources outside
+     * the perimeter.
+     * 
+     */
     @InputImport(name="resources")
     private final @Nullable Input<List<String>> resources;
 
@@ -46,6 +82,14 @@ public final class ServicePerimetersServicePerimeterSpecGetArgs extends io.pulum
         return this.resources == null ? Input.empty() : this.resources;
     }
 
+    /**
+     * GCP services that are subject to the Service Perimeter
+     * restrictions. Must contain a list of services. For example, if
+     * `storage.googleapis.com` is specified, access to the storage
+     * buckets inside the perimeter must meet the perimeter's access
+     * restrictions.
+     * 
+     */
     @InputImport(name="restrictedServices")
     private final @Nullable Input<List<String>> restrictedServices;
 
@@ -53,6 +97,12 @@ public final class ServicePerimetersServicePerimeterSpecGetArgs extends io.pulum
         return this.restrictedServices == null ? Input.empty() : this.restrictedServices;
     }
 
+    /**
+     * Specifies how APIs are allowed to communicate within the Service
+     * Perimeter.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="vpcAccessibleServices")
     private final @Nullable Input<ServicePerimetersServicePerimeterSpecVpcAccessibleServicesGetArgs> vpcAccessibleServices;
 

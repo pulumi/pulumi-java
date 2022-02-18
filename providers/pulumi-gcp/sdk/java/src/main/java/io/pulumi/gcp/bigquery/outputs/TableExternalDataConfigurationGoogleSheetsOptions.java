@@ -12,7 +12,18 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TableExternalDataConfigurationGoogleSheetsOptions {
+    /**
+     * Information required to partition based on ranges.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable String range;
+    /**
+     * The number of rows at the top of the sheet
+     * that BigQuery will skip when reading the data. At least one of `range` or
+     * `skip_leading_rows` must be set.
+     * 
+     */
     private final @Nullable Integer skipLeadingRows;
 
     @OutputCustomType.Constructor({"range","skipLeadingRows"})
@@ -23,9 +34,20 @@ public final class TableExternalDataConfigurationGoogleSheetsOptions {
         this.skipLeadingRows = skipLeadingRows;
     }
 
+    /**
+     * Information required to partition based on ranges.
+     * Structure is documented below.
+     * 
+     */
     public Optional<String> getRange() {
         return Optional.ofNullable(this.range);
     }
+    /**
+     * The number of rows at the top of the sheet
+     * that BigQuery will skip when reading the data. At least one of `range` or
+     * `skip_leading_rows` must be set.
+     * 
+     */
     public Optional<Integer> getSkipLeadingRows() {
         return Optional.ofNullable(this.skipLeadingRows);
     }

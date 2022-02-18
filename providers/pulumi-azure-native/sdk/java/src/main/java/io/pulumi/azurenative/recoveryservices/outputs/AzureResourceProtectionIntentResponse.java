@@ -11,12 +11,41 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AzureResourceProtectionIntentResponse {
+    /**
+     * Type of backup management for the backed up item.
+     * 
+     */
     private final @Nullable String backupManagementType;
+    /**
+     * Friendly name of the VM represented by this backup item.
+     * 
+     */
     private final @Nullable String friendlyName;
+    /**
+     * ID of the item which is getting protected, In case of Azure Vm , it is ProtectedItemId
+     * 
+     */
     private final @Nullable String itemId;
+    /**
+     * ID of the backup policy with which this item is backed up.
+     * 
+     */
     private final @Nullable String policyId;
+    /**
+     * backup protectionIntent type.
+     * Expected value is 'AzureResourceItem'.
+     * 
+     */
     private final String protectionIntentItemType;
+    /**
+     * Backup state of this backup item.
+     * 
+     */
     private final @Nullable String protectionState;
+    /**
+     * ARM ID of the resource to be backed up.
+     * 
+     */
     private final @Nullable String sourceResourceId;
 
     @OutputCustomType.Constructor({"backupManagementType","friendlyName","itemId","policyId","protectionIntentItemType","protectionState","sourceResourceId"})
@@ -37,24 +66,53 @@ public final class AzureResourceProtectionIntentResponse {
         this.sourceResourceId = sourceResourceId;
     }
 
+    /**
+     * Type of backup management for the backed up item.
+     * 
+     */
     public Optional<String> getBackupManagementType() {
         return Optional.ofNullable(this.backupManagementType);
     }
+    /**
+     * Friendly name of the VM represented by this backup item.
+     * 
+     */
     public Optional<String> getFriendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
+    /**
+     * ID of the item which is getting protected, In case of Azure Vm , it is ProtectedItemId
+     * 
+     */
     public Optional<String> getItemId() {
         return Optional.ofNullable(this.itemId);
     }
+    /**
+     * ID of the backup policy with which this item is backed up.
+     * 
+     */
     public Optional<String> getPolicyId() {
         return Optional.ofNullable(this.policyId);
     }
+    /**
+     * backup protectionIntent type.
+     * Expected value is 'AzureResourceItem'.
+     * 
+     */
     public String getProtectionIntentItemType() {
         return this.protectionIntentItemType;
     }
+    /**
+     * Backup state of this backup item.
+     * 
+     */
     public Optional<String> getProtectionState() {
         return Optional.ofNullable(this.protectionState);
     }
+    /**
+     * ARM ID of the resource to be backed up.
+     * 
+     */
     public Optional<String> getSourceResourceId() {
         return Optional.ofNullable(this.sourceResourceId);
     }

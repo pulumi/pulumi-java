@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ResourceGroupPropertiesResponse {
+    /**
+     * The provisioning state.
+     * 
+     */
     private final String provisioningState;
 
     @OutputCustomType.Constructor({"provisioningState"})
@@ -16,6 +20,10 @@ public final class ResourceGroupPropertiesResponse {
         this.provisioningState = Objects.requireNonNull(provisioningState);
     }
 
+    /**
+     * The provisioning state.
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }

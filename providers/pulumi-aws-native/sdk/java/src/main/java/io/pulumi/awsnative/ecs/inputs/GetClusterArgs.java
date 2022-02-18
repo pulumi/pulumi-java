@@ -12,6 +12,10 @@ public final class GetClusterArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetClusterArgs Empty = new GetClusterArgs();
 
+    /**
+     * A user-generated string that you use to identify your cluster. If you don't specify a name, AWS CloudFormation generates a unique physical ID for the name.
+     * 
+     */
     @InputImport(name="clusterName", required=true)
     private final String clusterName;
 

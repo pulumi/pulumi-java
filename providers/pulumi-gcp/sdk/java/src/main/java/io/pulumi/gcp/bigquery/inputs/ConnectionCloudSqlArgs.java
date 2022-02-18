@@ -14,6 +14,11 @@ public final class ConnectionCloudSqlArgs extends io.pulumi.resources.ResourceAr
 
     public static final ConnectionCloudSqlArgs Empty = new ConnectionCloudSqlArgs();
 
+    /**
+     * Cloud SQL properties.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="credential", required=true)
     private final Input<ConnectionCloudSqlCredentialArgs> credential;
 
@@ -21,6 +26,10 @@ public final class ConnectionCloudSqlArgs extends io.pulumi.resources.ResourceAr
         return this.credential;
     }
 
+    /**
+     * Database name.
+     * 
+     */
     @InputImport(name="database", required=true)
     private final Input<String> database;
 
@@ -28,6 +37,10 @@ public final class ConnectionCloudSqlArgs extends io.pulumi.resources.ResourceAr
         return this.database;
     }
 
+    /**
+     * Cloud SQL instance ID in the form project:location:instance.
+     * 
+     */
     @InputImport(name="instanceId", required=true)
     private final Input<String> instanceId;
 
@@ -35,6 +48,11 @@ public final class ConnectionCloudSqlArgs extends io.pulumi.resources.ResourceAr
         return this.instanceId;
     }
 
+    /**
+     * Type of the Cloud SQL database.
+     * Possible values are `DATABASE_TYPE_UNSPECIFIED`, `POSTGRES`, and `MYSQL`.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

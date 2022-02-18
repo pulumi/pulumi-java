@@ -12,6 +12,10 @@ public final class GetBandwidthScheduleArgs extends io.pulumi.resources.InvokeAr
 
     public static final GetBandwidthScheduleArgs Empty = new GetBandwidthScheduleArgs();
 
+    /**
+     * The device name.
+     * 
+     */
     @InputImport(name="deviceName", required=true)
     private final String deviceName;
 
@@ -19,6 +23,10 @@ public final class GetBandwidthScheduleArgs extends io.pulumi.resources.InvokeAr
         return this.deviceName;
     }
 
+    /**
+     * The bandwidth schedule name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -26,6 +34,10 @@ public final class GetBandwidthScheduleArgs extends io.pulumi.resources.InvokeAr
         return this.name;
     }
 
+    /**
+     * The resource group name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

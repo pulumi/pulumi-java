@@ -12,6 +12,10 @@ public final class ConnectionPropertiesResponsePrivateEndpoint extends io.pulumi
 
     public static final ConnectionPropertiesResponsePrivateEndpoint Empty = new ConnectionPropertiesResponsePrivateEndpoint();
 
+    /**
+     * The resource identifier.
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 

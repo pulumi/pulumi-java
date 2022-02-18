@@ -10,10 +10,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * RuntimeMetadata describing a runtime environment.
+ * 
+ */
 public final class RuntimeMetadataResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RuntimeMetadataResponse Empty = new RuntimeMetadataResponse();
 
+    /**
+     * The parameters for the template.
+     * 
+     */
     @InputImport(name="parameters", required=true)
     private final List<ParameterMetadataResponse> parameters;
 
@@ -21,6 +29,10 @@ public final class RuntimeMetadataResponse extends io.pulumi.resources.InvokeArg
         return this.parameters;
     }
 
+    /**
+     * SDK Info for the template.
+     * 
+     */
     @InputImport(name="sdkInfo", required=true)
     private final SDKInfoResponse sdkInfo;
 

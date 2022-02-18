@@ -12,12 +12,40 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GuestOSNICCustomizationResponse {
+    /**
+     * IP address allocation method
+     * 
+     */
     private final @Nullable String allocation;
+    /**
+     * List of dns servers to use
+     * 
+     */
     private final @Nullable List<String> dnsServers;
+    /**
+     * Gateway addresses assigned to nic
+     * 
+     */
     private final @Nullable List<String> gateway;
+    /**
+     * Static ip address for nic
+     * 
+     */
     private final @Nullable String ipAddress;
+    /**
+     * Network mask for nic
+     * 
+     */
     private final @Nullable String mask;
+    /**
+     * primary WINS server for Windows
+     * 
+     */
     private final @Nullable String primaryWinsServer;
+    /**
+     * secondary WINS server for Windows
+     * 
+     */
     private final @Nullable String secondaryWinsServer;
 
     @OutputCustomType.Constructor({"allocation","dnsServers","gateway","ipAddress","mask","primaryWinsServer","secondaryWinsServer"})
@@ -38,24 +66,52 @@ public final class GuestOSNICCustomizationResponse {
         this.secondaryWinsServer = secondaryWinsServer;
     }
 
+    /**
+     * IP address allocation method
+     * 
+     */
     public Optional<String> getAllocation() {
         return Optional.ofNullable(this.allocation);
     }
+    /**
+     * List of dns servers to use
+     * 
+     */
     public List<String> getDnsServers() {
         return this.dnsServers == null ? List.of() : this.dnsServers;
     }
+    /**
+     * Gateway addresses assigned to nic
+     * 
+     */
     public List<String> getGateway() {
         return this.gateway == null ? List.of() : this.gateway;
     }
+    /**
+     * Static ip address for nic
+     * 
+     */
     public Optional<String> getIpAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
+    /**
+     * Network mask for nic
+     * 
+     */
     public Optional<String> getMask() {
         return Optional.ofNullable(this.mask);
     }
+    /**
+     * primary WINS server for Windows
+     * 
+     */
     public Optional<String> getPrimaryWinsServer() {
         return Optional.ofNullable(this.primaryWinsServer);
     }
+    /**
+     * secondary WINS server for Windows
+     * 
+     */
     public Optional<String> getSecondaryWinsServer() {
         return Optional.ofNullable(this.secondaryWinsServer);
     }

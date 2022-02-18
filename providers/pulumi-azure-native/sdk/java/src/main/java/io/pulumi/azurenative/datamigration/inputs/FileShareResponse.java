@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * File share information with Path, Username, and Password.
+ * 
+ */
 public final class FileShareResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FileShareResponse Empty = new FileShareResponse();
 
+    /**
+     * Password credential used to connect to the share location.
+     * 
+     */
     @InputImport(name="password")
     private final @Nullable String password;
 
@@ -21,6 +29,10 @@ public final class FileShareResponse extends io.pulumi.resources.InvokeArgs {
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
     }
 
+    /**
+     * The folder path for this share.
+     * 
+     */
     @InputImport(name="path", required=true)
     private final String path;
 
@@ -28,6 +40,10 @@ public final class FileShareResponse extends io.pulumi.resources.InvokeArgs {
         return this.path;
     }
 
+    /**
+     * User name credential to connect to the share location
+     * 
+     */
     @InputImport(name="userName")
     private final @Nullable String userName;
 

@@ -10,6 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes whether StackSets performs non-conflicting operations concurrently and queues conflicting operations.
+ * 
+ */
 public final class ManagedExecutionPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagedExecutionPropertiesArgs Empty = new ManagedExecutionPropertiesArgs();

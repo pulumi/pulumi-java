@@ -12,6 +12,10 @@ public final class GetLifecycleHookArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetLifecycleHookArgs Empty = new GetLifecycleHookArgs();
 
+    /**
+     * The name of the Auto Scaling group for the lifecycle hook.
+     * 
+     */
     @InputImport(name="autoScalingGroupName", required=true)
     private final String autoScalingGroupName;
 
@@ -19,6 +23,10 @@ public final class GetLifecycleHookArgs extends io.pulumi.resources.InvokeArgs {
         return this.autoScalingGroupName;
     }
 
+    /**
+     * The name of the lifecycle hook.
+     * 
+     */
     @InputImport(name="lifecycleHookName", required=true)
     private final String lifecycleHookName;
 

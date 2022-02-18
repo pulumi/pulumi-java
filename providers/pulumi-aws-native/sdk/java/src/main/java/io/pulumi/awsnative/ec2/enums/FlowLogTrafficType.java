@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The type of traffic to log. You can log traffic that the resource accepts or rejects, or all traffic.
+     * 
+     */
     @EnumType
     public enum FlowLogTrafficType {
         Accept("ACCEPT"),

@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * SKU for the Cache.
+ * 
+ */
 public final class CacheResponseSku extends io.pulumi.resources.InvokeArgs {
 
     public static final CacheResponseSku Empty = new CacheResponseSku();
 
+    /**
+     * SKU name for this Cache.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 

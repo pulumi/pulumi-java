@@ -14,6 +14,10 @@ public final class ProviderInstanceArgs extends io.pulumi.resources.ResourceArgs
 
     public static final ProviderInstanceArgs Empty = new ProviderInstanceArgs();
 
+    /**
+     * A JSON string containing metadata of the provider instance.
+     * 
+     */
     @InputImport(name="metadata")
     private final @Nullable Input<String> metadata;
 
@@ -21,6 +25,10 @@ public final class ProviderInstanceArgs extends io.pulumi.resources.ResourceArgs
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
+    /**
+     * A JSON string containing the properties of the provider instance.
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<String> properties;
 
@@ -28,6 +36,10 @@ public final class ProviderInstanceArgs extends io.pulumi.resources.ResourceArgs
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * Name of the provider instance.
+     * 
+     */
     @InputImport(name="providerInstanceName")
     private final @Nullable Input<String> providerInstanceName;
 
@@ -35,6 +47,10 @@ public final class ProviderInstanceArgs extends io.pulumi.resources.ResourceArgs
         return this.providerInstanceName == null ? Input.empty() : this.providerInstanceName;
     }
 
+    /**
+     * Name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -42,6 +58,10 @@ public final class ProviderInstanceArgs extends io.pulumi.resources.ResourceArgs
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of the SAP monitor resource.
+     * 
+     */
     @InputImport(name="sapMonitorName", required=true)
     private final Input<String> sapMonitorName;
 
@@ -49,6 +69,10 @@ public final class ProviderInstanceArgs extends io.pulumi.resources.ResourceArgs
         return this.sapMonitorName;
     }
 
+    /**
+     * The type of provider instance.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 

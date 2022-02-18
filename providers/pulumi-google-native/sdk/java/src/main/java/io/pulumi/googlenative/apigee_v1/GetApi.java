@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApi {
+/**
+ * Gets an API proxy including a list of existing revisions.
+ * 
+ */
     public static CompletableFuture<GetApiResult> invokeAsync(GetApiArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:apigee/v1:getApi", TypeShape.of(GetApiResult.class), args == null ? GetApiArgs.Empty : args, Utilities.withVersion(options));
     }

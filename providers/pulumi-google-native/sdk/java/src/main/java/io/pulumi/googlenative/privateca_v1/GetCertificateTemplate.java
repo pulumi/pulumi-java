@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCertificateTemplate {
+/**
+ * Returns a CertificateTemplate.
+ * 
+ */
     public static CompletableFuture<GetCertificateTemplateResult> invokeAsync(GetCertificateTemplateArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:privateca/v1:getCertificateTemplate", TypeShape.of(GetCertificateTemplateResult.class), args == null ? GetCertificateTemplateArgs.Empty : args, Utilities.withVersion(options));
     }

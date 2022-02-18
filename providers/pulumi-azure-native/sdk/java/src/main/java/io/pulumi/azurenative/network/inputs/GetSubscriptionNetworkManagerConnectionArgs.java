@@ -12,6 +12,10 @@ public final class GetSubscriptionNetworkManagerConnectionArgs extends io.pulumi
 
     public static final GetSubscriptionNetworkManagerConnectionArgs Empty = new GetSubscriptionNetworkManagerConnectionArgs();
 
+    /**
+     * Name for the network manager connection.
+     * 
+     */
     @InputImport(name="networkManagerConnectionName", required=true)
     private final String networkManagerConnectionName;
 

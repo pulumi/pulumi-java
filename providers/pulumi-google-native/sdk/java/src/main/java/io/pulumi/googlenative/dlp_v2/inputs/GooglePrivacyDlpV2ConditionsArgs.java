@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A collection of conditions.
+ * 
+ */
 public final class GooglePrivacyDlpV2ConditionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GooglePrivacyDlpV2ConditionsArgs Empty = new GooglePrivacyDlpV2ConditionsArgs();
 
+    /**
+     * A collection of conditions.
+     * 
+     */
     @InputImport(name="conditions")
     private final @Nullable Input<List<GooglePrivacyDlpV2ConditionArgs>> conditions;
 

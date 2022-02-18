@@ -15,6 +15,10 @@ public final class UsagePlanApiStage extends io.pulumi.resources.InvokeArgs {
 
     public static final UsagePlanApiStage Empty = new UsagePlanApiStage();
 
+    /**
+     * The ID of an API that is in the specified Stage property that you want to associate with the usage plan.
+     * 
+     */
     @InputImport(name="apiId")
     private final @Nullable String apiId;
 
@@ -22,6 +26,10 @@ public final class UsagePlanApiStage extends io.pulumi.resources.InvokeArgs {
         return this.apiId == null ? Optional.empty() : Optional.ofNullable(this.apiId);
     }
 
+    /**
+     * The name of the stage to associate with the usage plan.
+     * 
+     */
     @InputImport(name="stage")
     private final @Nullable String stage;
 
@@ -29,6 +37,10 @@ public final class UsagePlanApiStage extends io.pulumi.resources.InvokeArgs {
         return this.stage == null ? Optional.empty() : Optional.ofNullable(this.stage);
     }
 
+    /**
+     * Map containing method-level throttling information for an API stage in a usage plan. The key for the map is the path and method for which to configure custom throttling, for example, '/pets/GET'. Duplicates are not allowed.
+     * 
+     */
     @InputImport(name="throttle")
     private final @Nullable Object throttle;
 

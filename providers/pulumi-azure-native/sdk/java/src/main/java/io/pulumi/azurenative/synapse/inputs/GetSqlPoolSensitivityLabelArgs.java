@@ -12,6 +12,10 @@ public final class GetSqlPoolSensitivityLabelArgs extends io.pulumi.resources.In
 
     public static final GetSqlPoolSensitivityLabelArgs Empty = new GetSqlPoolSensitivityLabelArgs();
 
+    /**
+     * The name of the column.
+     * 
+     */
     @InputImport(name="columnName", required=true)
     private final String columnName;
 
@@ -19,6 +23,10 @@ public final class GetSqlPoolSensitivityLabelArgs extends io.pulumi.resources.In
         return this.columnName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetSqlPoolSensitivityLabelArgs extends io.pulumi.resources.In
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the schema.
+     * 
+     */
     @InputImport(name="schemaName", required=true)
     private final String schemaName;
 
@@ -33,6 +45,10 @@ public final class GetSqlPoolSensitivityLabelArgs extends io.pulumi.resources.In
         return this.schemaName;
     }
 
+    /**
+     * The source of the sensitivity label.
+     * 
+     */
     @InputImport(name="sensitivityLabelSource", required=true)
     private final String sensitivityLabelSource;
 
@@ -40,6 +56,10 @@ public final class GetSqlPoolSensitivityLabelArgs extends io.pulumi.resources.In
         return this.sensitivityLabelSource;
     }
 
+    /**
+     * SQL pool name
+     * 
+     */
     @InputImport(name="sqlPoolName", required=true)
     private final String sqlPoolName;
 
@@ -47,6 +67,10 @@ public final class GetSqlPoolSensitivityLabelArgs extends io.pulumi.resources.In
         return this.sqlPoolName;
     }
 
+    /**
+     * The name of the table.
+     * 
+     */
     @InputImport(name="tableName", required=true)
     private final String tableName;
 
@@ -54,6 +78,10 @@ public final class GetSqlPoolSensitivityLabelArgs extends io.pulumi.resources.In
         return this.tableName;
     }
 
+    /**
+     * The name of the workspace
+     * 
+     */
     @InputImport(name="workspaceName", required=true)
     private final String workspaceName;
 

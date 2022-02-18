@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetClientTlsPolicy {
+/**
+ * Gets details of a single ClientTlsPolicy.
+ * 
+ */
     public static CompletableFuture<GetClientTlsPolicyResult> invokeAsync(GetClientTlsPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:networksecurity/v1:getClientTlsPolicy", TypeShape.of(GetClientTlsPolicyResult.class), args == null ? GetClientTlsPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -14,6 +14,12 @@ public final class ClientState extends io.pulumi.resources.ResourceArgs {
 
     public static final ClientState Empty = new ClientState();
 
+    /**
+     * Identifier of the brand to which this client
+     * is attached to. The format is
+     * `projects/{project_number}/brands/{brand_id}/identityAwareProxyClients/{client_id}`.
+     * 
+     */
     @InputImport(name="brand")
     private final @Nullable Input<String> brand;
 
@@ -21,6 +27,10 @@ public final class ClientState extends io.pulumi.resources.ResourceArgs {
         return this.brand == null ? Input.empty() : this.brand;
     }
 
+    /**
+     * Output only. Unique identifier of the OAuth client.
+     * 
+     */
     @InputImport(name="clientId")
     private final @Nullable Input<String> clientId;
 
@@ -28,6 +38,10 @@ public final class ClientState extends io.pulumi.resources.ResourceArgs {
         return this.clientId == null ? Input.empty() : this.clientId;
     }
 
+    /**
+     * Human-friendly name given to the OAuth client.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -35,6 +49,10 @@ public final class ClientState extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * Output only. Client secret of the OAuth client.
+     * 
+     */
     @InputImport(name="secret")
     private final @Nullable Input<String> secret;
 

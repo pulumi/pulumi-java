@@ -12,6 +12,10 @@ public final class GetScriptExecutionArgs extends io.pulumi.resources.InvokeArgs
 
     public static final GetScriptExecutionArgs Empty = new GetScriptExecutionArgs();
 
+    /**
+     * Name of the private cloud
+     * 
+     */
     @InputImport(name="privateCloudName", required=true)
     private final String privateCloudName;
 
@@ -19,6 +23,10 @@ public final class GetScriptExecutionArgs extends io.pulumi.resources.InvokeArgs
         return this.privateCloudName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetScriptExecutionArgs extends io.pulumi.resources.InvokeArgs
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of the user-invoked script execution resource
+     * 
+     */
     @InputImport(name="scriptExecutionName", required=true)
     private final String scriptExecutionName;
 

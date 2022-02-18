@@ -14,6 +14,10 @@ public final class LoggingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LoggingArgs Empty = new LoggingArgs();
 
+    /**
+     * Your 12-digit account ID (used as the primary identifier for the CloudFormation resource).
+     * 
+     */
     @InputImport(name="accountId", required=true)
     private final Input<String> accountId;
 
@@ -21,6 +25,10 @@ public final class LoggingArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountId;
     }
 
+    /**
+     * The log level to use. Valid values are: ERROR, WARN, INFO, DEBUG, or DISABLED.
+     * 
+     */
     @InputImport(name="defaultLogLevel", required=true)
     private final Input<LoggingDefaultLogLevel> defaultLogLevel;
 
@@ -28,6 +36,10 @@ public final class LoggingArgs extends io.pulumi.resources.ResourceArgs {
         return this.defaultLogLevel;
     }
 
+    /**
+     * The ARN of the role that allows IoT to write to Cloudwatch logs.
+     * 
+     */
     @InputImport(name="roleArn", required=true)
     private final Input<String> roleArn;
 

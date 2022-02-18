@@ -14,6 +14,10 @@ public final class ClusterClusterConfigGceClusterConfigShieldedInstanceConfigGet
 
     public static final ClusterClusterConfigGceClusterConfigShieldedInstanceConfigGetArgs Empty = new ClusterClusterConfigGceClusterConfigShieldedInstanceConfigGetArgs();
 
+    /**
+     * Defines whether instances have integrity monitoring enabled.
+     * 
+     */
     @InputImport(name="enableIntegrityMonitoring")
     private final @Nullable Input<Boolean> enableIntegrityMonitoring;
 
@@ -21,6 +25,10 @@ public final class ClusterClusterConfigGceClusterConfigShieldedInstanceConfigGet
         return this.enableIntegrityMonitoring == null ? Input.empty() : this.enableIntegrityMonitoring;
     }
 
+    /**
+     * Defines whether instances have Secure Boot enabled.
+     * 
+     */
     @InputImport(name="enableSecureBoot")
     private final @Nullable Input<Boolean> enableSecureBoot;
 
@@ -28,6 +36,10 @@ public final class ClusterClusterConfigGceClusterConfigShieldedInstanceConfigGet
         return this.enableSecureBoot == null ? Input.empty() : this.enableSecureBoot;
     }
 
+    /**
+     * Defines whether instances have the [vTPM](https://cloud.google.com/security/shielded-cloud/shielded-vm#vtpm) enabled.
+     * 
+     */
     @InputImport(name="enableVtpm")
     private final @Nullable Input<Boolean> enableVtpm;
 

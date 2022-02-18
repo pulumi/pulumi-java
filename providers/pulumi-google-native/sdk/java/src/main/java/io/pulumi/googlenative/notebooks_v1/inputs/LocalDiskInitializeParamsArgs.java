@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Input only. Specifies the parameters for a new disk that will be created alongside the new instance. Use initialization parameters to create boot disks or local SSDs attached to the new runtime. This property is mutually exclusive with the source property; you can only define one or the other, but not both.
+ * 
+ */
 public final class LocalDiskInitializeParamsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LocalDiskInitializeParamsArgs Empty = new LocalDiskInitializeParamsArgs();
 
+    /**
+     * Optional. Provide this property when creating the disk.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -23,6 +31,10 @@ public final class LocalDiskInitializeParamsArgs extends io.pulumi.resources.Res
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Optional. Specifies the disk name. If not specified, the default is to use the name of the instance. If the disk with the instance name exists already in the given zone/region, a new name will be automatically generated.
+     * 
+     */
     @InputImport(name="diskName")
     private final @Nullable Input<String> diskName;
 
@@ -30,6 +42,10 @@ public final class LocalDiskInitializeParamsArgs extends io.pulumi.resources.Res
         return this.diskName == null ? Input.empty() : this.diskName;
     }
 
+    /**
+     * Optional. Specifies the size of the disk in base-2 GB. If not specified, the disk will be the same size as the image (usually 10GB). If specified, the size must be equal to or larger than 10GB. Default 100 GB.
+     * 
+     */
     @InputImport(name="diskSizeGb")
     private final @Nullable Input<String> diskSizeGb;
 
@@ -37,6 +53,10 @@ public final class LocalDiskInitializeParamsArgs extends io.pulumi.resources.Res
         return this.diskSizeGb == null ? Input.empty() : this.diskSizeGb;
     }
 
+    /**
+     * Input only. The type of the boot disk attached to this instance, defaults to standard persistent disk (`PD_STANDARD`).
+     * 
+     */
     @InputImport(name="diskType")
     private final @Nullable Input<LocalDiskInitializeParamsDiskType> diskType;
 
@@ -44,6 +64,10 @@ public final class LocalDiskInitializeParamsArgs extends io.pulumi.resources.Res
         return this.diskType == null ? Input.empty() : this.diskType;
     }
 
+    /**
+     * Optional. Labels to apply to this disk. These can be later modified by the disks.setLabels method. This field is only applicable for persistent disks.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 

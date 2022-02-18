@@ -9,10 +9,18 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * The preloaded data configuration for the Data Store. Only data preloaded from Synthea is supported.
+ * 
+ */
 public final class FHIRDatastorePreloadDataConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FHIRDatastorePreloadDataConfigArgs Empty = new FHIRDatastorePreloadDataConfigArgs();
 
+    /**
+     * The type of preloaded data. Only Synthea preloaded data is supported.
+     * 
+     */
     @InputImport(name="preloadDataType", required=true)
     private final Input<FHIRDatastorePreloadDataConfigPreloadDataType> preloadDataType;
 

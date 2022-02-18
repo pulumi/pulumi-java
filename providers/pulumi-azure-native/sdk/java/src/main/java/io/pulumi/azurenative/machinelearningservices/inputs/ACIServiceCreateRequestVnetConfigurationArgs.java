@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The virtual network configuration.
+ * 
+ */
 public final class ACIServiceCreateRequestVnetConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ACIServiceCreateRequestVnetConfigurationArgs Empty = new ACIServiceCreateRequestVnetConfigurationArgs();
 
+    /**
+     * The name of the virtual network subnet.
+     * 
+     */
     @InputImport(name="subnetName")
     private final @Nullable Input<String> subnetName;
 
@@ -21,6 +29,10 @@ public final class ACIServiceCreateRequestVnetConfigurationArgs extends io.pulum
         return this.subnetName == null ? Input.empty() : this.subnetName;
     }
 
+    /**
+     * The name of the virtual network.
+     * 
+     */
     @InputImport(name="vnetName")
     private final @Nullable Input<String> vnetName;
 

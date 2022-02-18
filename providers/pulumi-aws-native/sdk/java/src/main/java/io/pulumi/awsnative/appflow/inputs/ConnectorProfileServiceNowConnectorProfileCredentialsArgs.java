@@ -13,6 +13,10 @@ public final class ConnectorProfileServiceNowConnectorProfileCredentialsArgs ext
 
     public static final ConnectorProfileServiceNowConnectorProfileCredentialsArgs Empty = new ConnectorProfileServiceNowConnectorProfileCredentialsArgs();
 
+    /**
+     * The password that corresponds to the username.
+     * 
+     */
     @InputImport(name="password", required=true)
     private final Input<String> password;
 
@@ -20,6 +24,10 @@ public final class ConnectorProfileServiceNowConnectorProfileCredentialsArgs ext
         return this.password;
     }
 
+    /**
+     * The name of the user.
+     * 
+     */
     @InputImport(name="username", required=true)
     private final Input<String> username;
 

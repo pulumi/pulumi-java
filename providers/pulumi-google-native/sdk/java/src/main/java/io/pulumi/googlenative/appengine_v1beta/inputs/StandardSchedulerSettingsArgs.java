@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Scheduler settings for standard environment.
+ * 
+ */
 public final class StandardSchedulerSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StandardSchedulerSettingsArgs Empty = new StandardSchedulerSettingsArgs();
 
+    /**
+     * Maximum number of instances to run for this version. Set to zero to disable max_instances configuration.
+     * 
+     */
     @InputImport(name="maxInstances")
     private final @Nullable Input<Integer> maxInstances;
 
@@ -22,6 +30,10 @@ public final class StandardSchedulerSettingsArgs extends io.pulumi.resources.Res
         return this.maxInstances == null ? Input.empty() : this.maxInstances;
     }
 
+    /**
+     * Minimum number of instances to run for this version. Set to zero to disable min_instances configuration.
+     * 
+     */
     @InputImport(name="minInstances")
     private final @Nullable Input<Integer> minInstances;
 
@@ -29,6 +41,10 @@ public final class StandardSchedulerSettingsArgs extends io.pulumi.resources.Res
         return this.minInstances == null ? Input.empty() : this.minInstances;
     }
 
+    /**
+     * Target CPU utilization ratio to maintain when scaling.
+     * 
+     */
     @InputImport(name="targetCpuUtilization")
     private final @Nullable Input<Double> targetCpuUtilization;
 
@@ -36,6 +52,10 @@ public final class StandardSchedulerSettingsArgs extends io.pulumi.resources.Res
         return this.targetCpuUtilization == null ? Input.empty() : this.targetCpuUtilization;
     }
 
+    /**
+     * Target throughput utilization ratio to maintain when scaling
+     * 
+     */
     @InputImport(name="targetThroughputUtilization")
     private final @Nullable Input<Double> targetThroughputUtilization;
 

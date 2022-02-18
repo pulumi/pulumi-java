@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Information about the Azure Container Registry which contains the images deployed to the cluster.
+ * 
+ */
 public final class ContainerServiceCredentialsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ContainerServiceCredentialsResponse Empty = new ContainerServiceCredentialsResponse();
 
+    /**
+     * The ACS kube config file.
+     * 
+     */
     @InputImport(name="acsKubeConfig", required=true)
     private final String acsKubeConfig;
 
@@ -20,6 +28,10 @@ public final class ContainerServiceCredentialsResponse extends io.pulumi.resourc
         return this.acsKubeConfig;
     }
 
+    /**
+     * The ACR image pull secret name which was created in Kubernetes.
+     * 
+     */
     @InputImport(name="imagePullSecretName", required=true)
     private final String imagePullSecretName;
 
@@ -27,6 +39,10 @@ public final class ContainerServiceCredentialsResponse extends io.pulumi.resourc
         return this.imagePullSecretName;
     }
 
+    /**
+     * Service principal configuration used by Kubernetes.
+     * 
+     */
     @InputImport(name="servicePrincipalConfiguration", required=true)
     private final ServicePrincipalPropertiesResponse servicePrincipalConfiguration;
 

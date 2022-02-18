@@ -15,9 +15,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class OriginEndpointHlsEncryption {
+    /**
+     * A constant initialization vector for encryption (optional). When not specified the initialization vector will be periodically rotated.
+     * 
+     */
     private final @Nullable String constantInitializationVector;
+    /**
+     * The encryption method to use.
+     * 
+     */
     private final @Nullable OriginEndpointHlsEncryptionEncryptionMethod encryptionMethod;
+    /**
+     * Interval (in seconds) between each encryption key rotation.
+     * 
+     */
     private final @Nullable Integer keyRotationIntervalSeconds;
+    /**
+     * When enabled, the EXT-X-KEY tag will be repeated in output manifests.
+     * 
+     */
     private final @Nullable Boolean repeatExtXKey;
     private final OriginEndpointSpekeKeyProvider spekeKeyProvider;
 
@@ -35,15 +51,31 @@ public final class OriginEndpointHlsEncryption {
         this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
     }
 
+    /**
+     * A constant initialization vector for encryption (optional). When not specified the initialization vector will be periodically rotated.
+     * 
+     */
     public Optional<String> getConstantInitializationVector() {
         return Optional.ofNullable(this.constantInitializationVector);
     }
+    /**
+     * The encryption method to use.
+     * 
+     */
     public Optional<OriginEndpointHlsEncryptionEncryptionMethod> getEncryptionMethod() {
         return Optional.ofNullable(this.encryptionMethod);
     }
+    /**
+     * Interval (in seconds) between each encryption key rotation.
+     * 
+     */
     public Optional<Integer> getKeyRotationIntervalSeconds() {
         return Optional.ofNullable(this.keyRotationIntervalSeconds);
     }
+    /**
+     * When enabled, the EXT-X-KEY tag will be repeated in output manifests.
+     * 
+     */
     public Optional<Boolean> getRepeatExtXKey() {
         return Optional.ofNullable(this.repeatExtXKey);
     }

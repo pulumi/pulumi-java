@@ -14,6 +14,10 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AliasArgs Empty = new AliasArgs();
 
+    /**
+     * Specifies the alias name. This value must begin with alias/ followed by a name, such as alias/ExampleAlias. The alias name cannot begin with alias/aws/. The alias/aws/ prefix is reserved for AWS managed CMKs.
+     * 
+     */
     @InputImport(name="aliasName")
     private final @Nullable Input<String> aliasName;
 
@@ -21,6 +25,10 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
         return this.aliasName == null ? Input.empty() : this.aliasName;
     }
 
+    /**
+     * Identifies the CMK to which the alias refers. Specify the key ID or the Amazon Resource Name (ARN) of the CMK. You cannot specify another alias. For help finding the key ID and ARN, see Finding the Key ID and ARN in the AWS Key Management Service Developer Guide.
+     * 
+     */
     @InputImport(name="targetKeyId", required=true)
     private final Input<String> targetKeyId;
 

@@ -14,10 +14,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A DASH manifest configuration.
+ * 
+ */
 public final class PackagingConfigurationDashManifest extends io.pulumi.resources.InvokeArgs {
 
     public static final PackagingConfigurationDashManifest Empty = new PackagingConfigurationDashManifest();
 
+    /**
+     * Determines the position of some tags in the Media Presentation Description (MPD). When set to FULL, elements like SegmentTemplate and ContentProtection are included in each Representation. When set to COMPACT, duplicate elements are combined and presented at the AdaptationSet level.
+     * 
+     */
     @InputImport(name="manifestLayout")
     private final @Nullable PackagingConfigurationDashManifestManifestLayout manifestLayout;
 
@@ -32,6 +40,10 @@ public final class PackagingConfigurationDashManifest extends io.pulumi.resource
         return this.manifestName == null ? Optional.empty() : Optional.ofNullable(this.manifestName);
     }
 
+    /**
+     * Minimum duration (in seconds) that a player will buffer media before starting the presentation.
+     * 
+     */
     @InputImport(name="minBufferTimeSeconds")
     private final @Nullable Integer minBufferTimeSeconds;
 
@@ -39,6 +51,10 @@ public final class PackagingConfigurationDashManifest extends io.pulumi.resource
         return this.minBufferTimeSeconds == null ? Optional.empty() : Optional.ofNullable(this.minBufferTimeSeconds);
     }
 
+    /**
+     * The Dynamic Adaptive Streaming over HTTP (DASH) profile type. When set to "HBBTV_1_5", HbbTV 1.5 compliant output is enabled.
+     * 
+     */
     @InputImport(name="profile")
     private final @Nullable PackagingConfigurationDashManifestProfile profile;
 

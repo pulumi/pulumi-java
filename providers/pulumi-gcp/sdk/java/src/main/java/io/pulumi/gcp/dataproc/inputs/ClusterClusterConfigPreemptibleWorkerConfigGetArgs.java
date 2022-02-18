@@ -17,6 +17,10 @@ public final class ClusterClusterConfigPreemptibleWorkerConfigGetArgs extends io
 
     public static final ClusterClusterConfigPreemptibleWorkerConfigGetArgs Empty = new ClusterClusterConfigPreemptibleWorkerConfigGetArgs();
 
+    /**
+     * Disk Config
+     * 
+     */
     @InputImport(name="diskConfig")
     private final @Nullable Input<ClusterClusterConfigPreemptibleWorkerConfigDiskConfigGetArgs> diskConfig;
 
@@ -31,6 +35,11 @@ public final class ClusterClusterConfigPreemptibleWorkerConfigGetArgs extends io
         return this.instanceNames == null ? Input.empty() : this.instanceNames;
     }
 
+    /**
+     * Specifies the number of preemptible nodes to create.
+     * Defaults to 0.
+     * 
+     */
     @InputImport(name="numInstances")
     private final @Nullable Input<Integer> numInstances;
 

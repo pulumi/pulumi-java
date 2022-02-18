@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Gets or set the SKU.
+     * 
+     */
     @EnumType
     public enum SkuDefinition {
         Standard("Standard"),

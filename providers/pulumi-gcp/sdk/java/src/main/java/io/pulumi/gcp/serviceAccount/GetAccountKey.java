@@ -13,6 +13,18 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAccountKey {
+/**
+ * Get service account public key. For more information, see [the official documentation](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) and [API](https://cloud.google.com/iam/reference/rest/v1/projects.serviceAccounts.keys/get).
+ * 
+ * ## Example Usage
+ * 
+ *
+ * A collection of arguments for invoking getAccountKey.
+ * 
+ *
+ * A collection of values returned by getAccountKey.
+ * 
+ */
     public static CompletableFuture<GetAccountKeyResult> invokeAsync(GetAccountKeyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:serviceAccount/getAccountKey:getAccountKey", TypeShape.of(GetAccountKeyResult.class), args == null ? GetAccountKeyArgs.Empty : args, Utilities.withVersion(options));
     }

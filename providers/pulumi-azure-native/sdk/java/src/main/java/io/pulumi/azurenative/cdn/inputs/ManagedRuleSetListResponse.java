@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines the list of managed rule sets for the policy.
+ * 
+ */
 public final class ManagedRuleSetListResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ManagedRuleSetListResponse Empty = new ManagedRuleSetListResponse();
 
+    /**
+     * List of rule sets.
+     * 
+     */
     @InputImport(name="managedRuleSets")
     private final @Nullable List<ManagedRuleSetResponse> managedRuleSets;
 

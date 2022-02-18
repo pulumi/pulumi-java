@@ -15,6 +15,10 @@ public final class FutureReservationSpecificSKUPropertiesArgs extends io.pulumi.
 
     public static final FutureReservationSpecificSKUPropertiesArgs Empty = new FutureReservationSpecificSKUPropertiesArgs();
 
+    /**
+     * Properties of the SKU instances being reserved.
+     * 
+     */
     @InputImport(name="instanceProperties")
     private final @Nullable Input<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> instanceProperties;
 
@@ -22,6 +26,10 @@ public final class FutureReservationSpecificSKUPropertiesArgs extends io.pulumi.
         return this.instanceProperties == null ? Input.empty() : this.instanceProperties;
     }
 
+    /**
+     * Total number of instances for which capacity assurance is requested at a future time period.
+     * 
+     */
     @InputImport(name="totalCount")
     private final @Nullable Input<String> totalCount;
 

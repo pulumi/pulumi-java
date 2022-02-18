@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The architecture of robot application.
+     * 
+     */
     @EnumType
     public enum RobotApplicationSourceConfigArchitecture {
         X8664("X86_64"),

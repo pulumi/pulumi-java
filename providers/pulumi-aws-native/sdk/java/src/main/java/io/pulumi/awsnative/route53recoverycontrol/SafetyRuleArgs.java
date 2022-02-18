@@ -26,6 +26,10 @@ public final class SafetyRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.assertionRule == null ? Input.empty() : this.assertionRule;
     }
 
+    /**
+     * The Amazon Resource Name (ARN) of the control panel.
+     * 
+     */
     @InputImport(name="controlPanelArn")
     private final @Nullable Input<String> controlPanelArn;
 
@@ -54,6 +58,10 @@ public final class SafetyRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.ruleConfig == null ? Input.empty() : this.ruleConfig;
     }
 
+    /**
+     * A collection of tags associated with a resource
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<SafetyRuleTagArgs>> tags;
 

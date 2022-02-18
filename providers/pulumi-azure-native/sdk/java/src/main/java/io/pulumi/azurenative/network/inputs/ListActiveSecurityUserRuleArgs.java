@@ -15,6 +15,10 @@ public final class ListActiveSecurityUserRuleArgs extends io.pulumi.resources.In
 
     public static final ListActiveSecurityUserRuleArgs Empty = new ListActiveSecurityUserRuleArgs();
 
+    /**
+     * The name of the network manager.
+     * 
+     */
     @InputImport(name="networkManagerName", required=true)
     private final String networkManagerName;
 
@@ -22,6 +26,10 @@ public final class ListActiveSecurityUserRuleArgs extends io.pulumi.resources.In
         return this.networkManagerName;
     }
 
+    /**
+     * List of regions.
+     * 
+     */
     @InputImport(name="regions")
     private final @Nullable List<String> regions;
 
@@ -29,6 +37,10 @@ public final class ListActiveSecurityUserRuleArgs extends io.pulumi.resources.In
         return this.regions == null ? List.of() : this.regions;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -36,6 +48,10 @@ public final class ListActiveSecurityUserRuleArgs extends io.pulumi.resources.In
         return this.resourceGroupName;
     }
 
+    /**
+     * When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
+     * 
+     */
     @InputImport(name="skipToken")
     private final @Nullable String skipToken;
 

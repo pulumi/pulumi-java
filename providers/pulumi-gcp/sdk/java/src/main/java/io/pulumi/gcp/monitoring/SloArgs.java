@@ -19,6 +19,16 @@ public final class SloArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SloArgs Empty = new SloArgs();
 
+    /**
+     * Basic Service-Level Indicator (SLI) on a well-known service type.
+     * Performance will be computed on the basis of pre-defined metrics.
+     * SLIs are used to measure and calculate the quality of the Service's
+     * performance with respect to a single aspect of service quality.
+     * Exactly one of the following must be set:
+     * `basic_sli`, `request_based_sli`, `windows_based_sli`
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="basicSli")
     private final @Nullable Input<SloBasicSliArgs> basicSli;
 
@@ -26,6 +36,12 @@ public final class SloArgs extends io.pulumi.resources.ResourceArgs {
         return this.basicSli == null ? Input.empty() : this.basicSli;
     }
 
+    /**
+     * A calendar period, semantically "since the start of the current
+     * <calendarPeriod>".
+     * Possible values are `DAY`, `WEEK`, `FORTNIGHT`, and `MONTH`.
+     * 
+     */
     @InputImport(name="calendarPeriod")
     private final @Nullable Input<String> calendarPeriod;
 
@@ -33,6 +49,10 @@ public final class SloArgs extends io.pulumi.resources.ResourceArgs {
         return this.calendarPeriod == null ? Input.empty() : this.calendarPeriod;
     }
 
+    /**
+     * Name used for UI elements listing this SLO.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -40,6 +60,11 @@ public final class SloArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The fraction of service that must be good in order for this objective
+     * to be met. 0 < goal <= 0.999
+     * 
+     */
     @InputImport(name="goal", required=true)
     private final Input<Double> goal;
 
@@ -47,6 +72,11 @@ public final class SloArgs extends io.pulumi.resources.ResourceArgs {
         return this.goal;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -54,6 +84,17 @@ public final class SloArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * A request-based SLI defines a SLI for which atomic units of
+     * service are counted directly.
+     * A SLI describes a good service.
+     * It is used to measure and calculate the quality of the Service's
+     * performance with respect to a single aspect of service quality.
+     * Exactly one of the following must be set:
+     * `basic_sli`, `request_based_sli`, `windows_based_sli`
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="requestBasedSli")
     private final @Nullable Input<SloRequestBasedSliArgs> requestBasedSli;
 
@@ -61,6 +102,11 @@ public final class SloArgs extends io.pulumi.resources.ResourceArgs {
         return this.requestBasedSli == null ? Input.empty() : this.requestBasedSli;
     }
 
+    /**
+     * A rolling time period, semantically "in the past X days".
+     * Must be between 1 to 30 days, inclusive.
+     * 
+     */
     @InputImport(name="rollingPeriodDays")
     private final @Nullable Input<Integer> rollingPeriodDays;
 
@@ -68,6 +114,10 @@ public final class SloArgs extends io.pulumi.resources.ResourceArgs {
         return this.rollingPeriodDays == null ? Input.empty() : this.rollingPeriodDays;
     }
 
+    /**
+     * ID of the service to which this SLO belongs.
+     * 
+     */
     @InputImport(name="service", required=true)
     private final Input<String> service;
 
@@ -75,6 +125,10 @@ public final class SloArgs extends io.pulumi.resources.ResourceArgs {
         return this.service;
     }
 
+    /**
+     * The id to use for this ServiceLevelObjective. If omitted, an id will be generated instead.
+     * 
+     */
     @InputImport(name="sloId")
     private final @Nullable Input<String> sloId;
 
@@ -82,6 +136,18 @@ public final class SloArgs extends io.pulumi.resources.ResourceArgs {
         return this.sloId == null ? Input.empty() : this.sloId;
     }
 
+    /**
+     * A windows-based SLI defines the criteria for time windows.
+     * good_service is defined based off the count of these time windows
+     * for which the provided service was of good quality.
+     * A SLI describes a good service. It is used to measure and calculate
+     * the quality of the Service's performance with respect to a single
+     * aspect of service quality.
+     * Exactly one of the following must be set:
+     * `basic_sli`, `request_based_sli`, `windows_based_sli`
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="windowsBasedSli")
     private final @Nullable Input<SloWindowsBasedSliArgs> windowsBasedSli;
 

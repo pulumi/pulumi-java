@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Business Context of the entry.
+ * 
+ */
 public final class GoogleCloudDatacatalogV1BusinessContextArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDatacatalogV1BusinessContextArgs Empty = new GoogleCloudDatacatalogV1BusinessContextArgs();
 
+    /**
+     * Contact people for the entry.
+     * 
+     */
     @InputImport(name="contacts")
     private final @Nullable Input<GoogleCloudDatacatalogV1ContactsArgs> contacts;
 
@@ -22,6 +30,10 @@ public final class GoogleCloudDatacatalogV1BusinessContextArgs extends io.pulumi
         return this.contacts == null ? Input.empty() : this.contacts;
     }
 
+    /**
+     * Entry overview fields for rich text descriptions of entries.
+     * 
+     */
     @InputImport(name="entryOverview")
     private final @Nullable Input<GoogleCloudDatacatalogV1EntryOverviewArgs> entryOverview;
 

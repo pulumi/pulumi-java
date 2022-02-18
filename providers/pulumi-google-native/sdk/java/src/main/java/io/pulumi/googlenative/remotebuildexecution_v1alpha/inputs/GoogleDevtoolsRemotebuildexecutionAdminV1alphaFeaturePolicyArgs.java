@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * FeaturePolicy defines features allowed to be used on RBE instances, as well as instance-wide behavior changes that take effect without opt-in or opt-out at usage time.
+ * 
+ */
 public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyArgs Empty = new GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyArgs();
 
+    /**
+     * Which container image sources are allowed. Currently only RBE-supported registry (gcr.io) is allowed. One can allow all repositories under a project or one specific repository only. E.g. container_image_sources { policy: RESTRICTED allowed_values: [ "gcr.io/project-foo", "gcr.io/project-bar/repo-baz", ] } will allow any repositories under "gcr.io/project-foo" plus the repository "gcr.io/project-bar/repo-baz". Default (UNSPECIFIED) is equivalent to any source is allowed.
+     * 
+     */
     @InputImport(name="containerImageSources")
     private final @Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> containerImageSources;
 
@@ -22,6 +30,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyAr
         return this.containerImageSources == null ? Input.empty() : this.containerImageSources;
     }
 
+    /**
+     * Whether dockerAddCapabilities can be used or what capabilities are allowed.
+     * 
+     */
     @InputImport(name="dockerAddCapabilities")
     private final @Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> dockerAddCapabilities;
 
@@ -29,6 +41,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyAr
         return this.dockerAddCapabilities == null ? Input.empty() : this.dockerAddCapabilities;
     }
 
+    /**
+     * Whether dockerChrootPath can be used.
+     * 
+     */
     @InputImport(name="dockerChrootPath")
     private final @Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> dockerChrootPath;
 
@@ -36,6 +52,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyAr
         return this.dockerChrootPath == null ? Input.empty() : this.dockerChrootPath;
     }
 
+    /**
+     * Whether dockerNetwork can be used or what network modes are allowed. E.g. one may allow `off` value only via `allowed_values`.
+     * 
+     */
     @InputImport(name="dockerNetwork")
     private final @Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> dockerNetwork;
 
@@ -43,6 +63,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyAr
         return this.dockerNetwork == null ? Input.empty() : this.dockerNetwork;
     }
 
+    /**
+     * Whether dockerPrivileged can be used.
+     * 
+     */
     @InputImport(name="dockerPrivileged")
     private final @Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> dockerPrivileged;
 
@@ -50,6 +74,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyAr
         return this.dockerPrivileged == null ? Input.empty() : this.dockerPrivileged;
     }
 
+    /**
+     * Whether dockerRunAsRoot can be used.
+     * 
+     */
     @InputImport(name="dockerRunAsRoot")
     private final @Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> dockerRunAsRoot;
 
@@ -57,6 +85,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyAr
         return this.dockerRunAsRoot == null ? Input.empty() : this.dockerRunAsRoot;
     }
 
+    /**
+     * Whether dockerRuntime is allowed to be set or what runtimes are allowed. Note linux_isolation takes precedence, and if set, docker_runtime values may be rejected if they are incompatible with the selected isolation.
+     * 
+     */
     @InputImport(name="dockerRuntime")
     private final @Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> dockerRuntime;
 
@@ -64,6 +96,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyAr
         return this.dockerRuntime == null ? Input.empty() : this.dockerRuntime;
     }
 
+    /**
+     * Whether dockerSiblingContainers can be used.
+     * 
+     */
     @InputImport(name="dockerSiblingContainers")
     private final @Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> dockerSiblingContainers;
 
@@ -71,6 +107,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyAr
         return this.dockerSiblingContainers == null ? Input.empty() : this.dockerSiblingContainers;
     }
 
+    /**
+     * linux_isolation allows overriding the docker runtime used for containers started on Linux.
+     * 
+     */
     @InputImport(name="linuxIsolation")
     private final @Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyLinuxIsolation> linuxIsolation;
 

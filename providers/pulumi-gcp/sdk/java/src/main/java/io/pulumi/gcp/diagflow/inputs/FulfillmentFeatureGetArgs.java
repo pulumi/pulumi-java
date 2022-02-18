@@ -13,6 +13,12 @@ public final class FulfillmentFeatureGetArgs extends io.pulumi.resources.Resourc
 
     public static final FulfillmentFeatureGetArgs Empty = new FulfillmentFeatureGetArgs();
 
+    /**
+     * The type of the feature that enabled for fulfillment.
+     * * SMALLTALK: Fulfillment is enabled for SmallTalk.
+     *   Possible values are `SMALLTALK`.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

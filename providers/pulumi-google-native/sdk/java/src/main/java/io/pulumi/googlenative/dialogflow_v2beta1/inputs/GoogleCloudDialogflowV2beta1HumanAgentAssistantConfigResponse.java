@@ -10,10 +10,18 @@ import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2b
 import java.util.Objects;
 
 
+/**
+ * Defines the Human Agent Assistant to connect to a conversation.
+ * 
+ */
 public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse Empty = new GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse();
 
+    /**
+     * Configuration for agent assistance of end user participant. Currently, this feature is not general available, please contact Google to get access.
+     * 
+     */
     @InputImport(name="endUserSuggestionConfig", required=true)
     private final GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse endUserSuggestionConfig;
 
@@ -21,6 +29,10 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse
         return this.endUserSuggestionConfig;
     }
 
+    /**
+     * Configuration for agent assistance of human agent participant.
+     * 
+     */
     @InputImport(name="humanAgentSuggestionConfig", required=true)
     private final GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse humanAgentSuggestionConfig;
 
@@ -28,6 +40,10 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse
         return this.humanAgentSuggestionConfig;
     }
 
+    /**
+     * Configuration for message analysis.
+     * 
+     */
     @InputImport(name="messageAnalysisConfig", required=true)
     private final GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigResponse messageAnalysisConfig;
 
@@ -35,6 +51,10 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse
         return this.messageAnalysisConfig;
     }
 
+    /**
+     * Pub/Sub topic on which to publish new agent assistant events.
+     * 
+     */
     @InputImport(name="notificationConfig", required=true)
     private final GoogleCloudDialogflowV2beta1NotificationConfigResponse notificationConfig;
 

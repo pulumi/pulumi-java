@@ -9,10 +9,19 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The custom setup of setting environment variable.
+ * 
+ */
 public final class EnvironmentVariableSetupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EnvironmentVariableSetupArgs Empty = new EnvironmentVariableSetupArgs();
 
+    /**
+     * The type of custom setup.
+     * Expected value is 'EnvironmentVariableSetup'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -20,6 +29,10 @@ public final class EnvironmentVariableSetupArgs extends io.pulumi.resources.Reso
         return this.type;
     }
 
+    /**
+     * The name of the environment variable.
+     * 
+     */
     @InputImport(name="variableName", required=true)
     private final Input<String> variableName;
 
@@ -27,6 +40,10 @@ public final class EnvironmentVariableSetupArgs extends io.pulumi.resources.Reso
         return this.variableName;
     }
 
+    /**
+     * The value of the environment variable.
+     * 
+     */
     @InputImport(name="variableValue", required=true)
     private final Input<String> variableValue;
 

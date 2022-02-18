@@ -18,6 +18,10 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LocalUserArgs Empty = new LocalUserArgs();
 
+    /**
+     * The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+     * 
+     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -25,6 +29,10 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountName;
     }
 
+    /**
+     * Indicates whether shared key exists. Set it to false to remove existing shared key.
+     * 
+     */
     @InputImport(name="hasSharedKey")
     private final @Nullable Input<Boolean> hasSharedKey;
 
@@ -32,6 +40,10 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
         return this.hasSharedKey == null ? Input.empty() : this.hasSharedKey;
     }
 
+    /**
+     * Indicates whether ssh key exists. Set it to false to remove existing SSH key.
+     * 
+     */
     @InputImport(name="hasSshKey")
     private final @Nullable Input<Boolean> hasSshKey;
 
@@ -39,6 +51,10 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
         return this.hasSshKey == null ? Input.empty() : this.hasSshKey;
     }
 
+    /**
+     * Indicates whether ssh password exists. Set it to false to remove existing SSH password.
+     * 
+     */
     @InputImport(name="hasSshPassword")
     private final @Nullable Input<Boolean> hasSshPassword;
 
@@ -46,6 +62,10 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
         return this.hasSshPassword == null ? Input.empty() : this.hasSshPassword;
     }
 
+    /**
+     * Optional, local user home directory.
+     * 
+     */
     @InputImport(name="homeDirectory")
     private final @Nullable Input<String> homeDirectory;
 
@@ -53,6 +73,10 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
         return this.homeDirectory == null ? Input.empty() : this.homeDirectory;
     }
 
+    /**
+     * The permission scopes of the local user.
+     * 
+     */
     @InputImport(name="permissionScopes")
     private final @Nullable Input<List<PermissionScopeArgs>> permissionScopes;
 
@@ -60,6 +84,10 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
         return this.permissionScopes == null ? Input.empty() : this.permissionScopes;
     }
 
+    /**
+     * The name of the resource group within the user's subscription. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -67,6 +95,10 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Optional, local user ssh authorized keys for SFTP.
+     * 
+     */
     @InputImport(name="sshAuthorizedKeys")
     private final @Nullable Input<List<SshPublicKeyArgs>> sshAuthorizedKeys;
 
@@ -74,6 +106,10 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
         return this.sshAuthorizedKeys == null ? Input.empty() : this.sshAuthorizedKeys;
     }
 
+    /**
+     * The name of local user. The username must contain lowercase letters and numbers only. It must be unique only within the storage account.
+     * 
+     */
     @InputImport(name="username")
     private final @Nullable Input<String> username;
 

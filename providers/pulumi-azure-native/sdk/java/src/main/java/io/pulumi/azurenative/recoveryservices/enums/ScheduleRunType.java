@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Frequency of the schedule operation of this policy.
+     * 
+     */
     @EnumType
     public enum ScheduleRunType {
         Invalid("Invalid"),

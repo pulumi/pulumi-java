@@ -11,8 +11,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ApplicationJMXPrometheusExporter {
+    /**
+     * Java agent host port
+     * 
+     */
     private final @Nullable String hostPort;
+    /**
+     * JMX service URL.
+     * 
+     */
     private final @Nullable String jMXURL;
+    /**
+     * Prometheus exporter port.
+     * 
+     */
     private final @Nullable String prometheusPort;
 
     @OutputCustomType.Constructor({"hostPort","jMXURL","prometheusPort"})
@@ -25,12 +37,24 @@ public final class ApplicationJMXPrometheusExporter {
         this.prometheusPort = prometheusPort;
     }
 
+    /**
+     * Java agent host port
+     * 
+     */
     public Optional<String> getHostPort() {
         return Optional.ofNullable(this.hostPort);
     }
+    /**
+     * JMX service URL.
+     * 
+     */
     public Optional<String> getJMXURL() {
         return Optional.ofNullable(this.jMXURL);
     }
+    /**
+     * Prometheus exporter port.
+     * 
+     */
     public Optional<String> getPrometheusPort() {
         return Optional.ofNullable(this.prometheusPort);
     }

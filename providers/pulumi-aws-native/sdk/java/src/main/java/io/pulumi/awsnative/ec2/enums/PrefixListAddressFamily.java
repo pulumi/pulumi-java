@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Ip Version of Prefix List.
+     * 
+     */
     @EnumType
     public enum PrefixListAddressFamily {
         IPv4("IPv4"),

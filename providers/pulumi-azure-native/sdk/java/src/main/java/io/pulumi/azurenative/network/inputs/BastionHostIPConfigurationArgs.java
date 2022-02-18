@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * IP configuration of an Bastion Host.
+ * 
+ */
 public final class BastionHostIPConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BastionHostIPConfigurationArgs Empty = new BastionHostIPConfigurationArgs();
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -24,6 +32,10 @@ public final class BastionHostIPConfigurationArgs extends io.pulumi.resources.Re
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * Name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -31,6 +43,10 @@ public final class BastionHostIPConfigurationArgs extends io.pulumi.resources.Re
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Private IP allocation method.
+     * 
+     */
     @InputImport(name="privateIPAllocationMethod")
     private final @Nullable Input<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
 
@@ -38,6 +54,10 @@ public final class BastionHostIPConfigurationArgs extends io.pulumi.resources.Re
         return this.privateIPAllocationMethod == null ? Input.empty() : this.privateIPAllocationMethod;
     }
 
+    /**
+     * Reference of the PublicIP resource.
+     * 
+     */
     @InputImport(name="publicIPAddress", required=true)
     private final Input<SubResourceArgs> publicIPAddress;
 
@@ -45,6 +65,10 @@ public final class BastionHostIPConfigurationArgs extends io.pulumi.resources.Re
         return this.publicIPAddress;
     }
 
+    /**
+     * Reference of the subnet resource.
+     * 
+     */
     @InputImport(name="subnet", required=true)
     private final Input<SubResourceArgs> subnet;
 

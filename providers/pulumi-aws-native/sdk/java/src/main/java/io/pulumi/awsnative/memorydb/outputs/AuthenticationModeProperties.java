@@ -13,7 +13,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AuthenticationModeProperties {
+    /**
+     * Passwords used for this user account. You can create up to two passwords for each user.
+     * 
+     */
     private final @Nullable List<String> passwords;
+    /**
+     * Type of authentication strategy for this user.
+     * 
+     */
     private final @Nullable UserAuthenticationModePropertiesType type;
 
     @OutputCustomType.Constructor({"passwords","type"})
@@ -24,9 +32,17 @@ public final class AuthenticationModeProperties {
         this.type = type;
     }
 
+    /**
+     * Passwords used for this user account. You can create up to two passwords for each user.
+     * 
+     */
     public List<String> getPasswords() {
         return this.passwords == null ? List.of() : this.passwords;
     }
+    /**
+     * Type of authentication strategy for this user.
+     * 
+     */
     public Optional<UserAuthenticationModePropertiesType> getType() {
         return Optional.ofNullable(this.type);
     }

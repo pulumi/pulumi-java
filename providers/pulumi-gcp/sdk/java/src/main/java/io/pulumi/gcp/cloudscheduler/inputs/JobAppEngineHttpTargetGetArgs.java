@@ -16,6 +16,11 @@ public final class JobAppEngineHttpTargetGetArgs extends io.pulumi.resources.Res
 
     public static final JobAppEngineHttpTargetGetArgs Empty = new JobAppEngineHttpTargetGetArgs();
 
+    /**
+     * App Engine Routing setting for the job.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="appEngineRouting")
     private final @Nullable Input<JobAppEngineHttpTargetAppEngineRoutingGetArgs> appEngineRouting;
 
@@ -23,6 +28,13 @@ public final class JobAppEngineHttpTargetGetArgs extends io.pulumi.resources.Res
         return this.appEngineRouting == null ? Input.empty() : this.appEngineRouting;
     }
 
+    /**
+     * HTTP request body.
+     * A request body is allowed only if the HTTP method is POST, PUT, or PATCH.
+     * It is an error to set body on a job with an incompatible HttpMethod.
+     * A base64-encoded string.
+     * 
+     */
     @InputImport(name="body")
     private final @Nullable Input<String> body;
 
@@ -30,6 +42,11 @@ public final class JobAppEngineHttpTargetGetArgs extends io.pulumi.resources.Res
         return this.body == null ? Input.empty() : this.body;
     }
 
+    /**
+     * This map contains the header field names and values.
+     * Repeated headers are not supported, but a header value can contain commas.
+     * 
+     */
     @InputImport(name="headers")
     private final @Nullable Input<Map<String,String>> headers;
 
@@ -37,6 +54,10 @@ public final class JobAppEngineHttpTargetGetArgs extends io.pulumi.resources.Res
         return this.headers == null ? Input.empty() : this.headers;
     }
 
+    /**
+     * Which HTTP method to use for the request.
+     * 
+     */
     @InputImport(name="httpMethod")
     private final @Nullable Input<String> httpMethod;
 
@@ -44,6 +65,14 @@ public final class JobAppEngineHttpTargetGetArgs extends io.pulumi.resources.Res
         return this.httpMethod == null ? Input.empty() : this.httpMethod;
     }
 
+    /**
+     * The relative URI.
+     * The relative URL must begin with "/" and must be a valid HTTP relative URL.
+     * It can contain a path, query string arguments, and \# fragments.
+     * If the relative URL is empty, then the root path "/" will be used.
+     * No spaces are allowed, and the maximum length allowed is 2083 characters
+     * 
+     */
     @InputImport(name="relativeUri", required=true)
     private final Input<String> relativeUri;
 

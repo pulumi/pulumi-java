@@ -17,10 +17,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes a virtual machine network interface configurations.
+ * 
+ */
 public final class VirtualMachineNetworkInterfaceConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualMachineNetworkInterfaceConfigurationArgs Empty = new VirtualMachineNetworkInterfaceConfigurationArgs();
 
+    /**
+     * Specify what happens to the network interface when the VM is deleted
+     * 
+     */
     @InputImport(name="deleteOption")
     private final @Nullable Input<Either<String,DeleteOptions>> deleteOption;
 
@@ -28,6 +36,10 @@ public final class VirtualMachineNetworkInterfaceConfigurationArgs extends io.pu
         return this.deleteOption == null ? Input.empty() : this.deleteOption;
     }
 
+    /**
+     * The dns settings to be applied on the network interfaces.
+     * 
+     */
     @InputImport(name="dnsSettings")
     private final @Nullable Input<VirtualMachineNetworkInterfaceDnsSettingsConfigurationArgs> dnsSettings;
 
@@ -42,6 +54,10 @@ public final class VirtualMachineNetworkInterfaceConfigurationArgs extends io.pu
         return this.dscpConfiguration == null ? Input.empty() : this.dscpConfiguration;
     }
 
+    /**
+     * Specifies whether the network interface is accelerated networking-enabled.
+     * 
+     */
     @InputImport(name="enableAcceleratedNetworking")
     private final @Nullable Input<Boolean> enableAcceleratedNetworking;
 
@@ -49,6 +65,10 @@ public final class VirtualMachineNetworkInterfaceConfigurationArgs extends io.pu
         return this.enableAcceleratedNetworking == null ? Input.empty() : this.enableAcceleratedNetworking;
     }
 
+    /**
+     * Specifies whether the network interface is FPGA networking-enabled.
+     * 
+     */
     @InputImport(name="enableFpga")
     private final @Nullable Input<Boolean> enableFpga;
 
@@ -56,6 +76,10 @@ public final class VirtualMachineNetworkInterfaceConfigurationArgs extends io.pu
         return this.enableFpga == null ? Input.empty() : this.enableFpga;
     }
 
+    /**
+     * Whether IP forwarding enabled on this NIC.
+     * 
+     */
     @InputImport(name="enableIPForwarding")
     private final @Nullable Input<Boolean> enableIPForwarding;
 
@@ -63,6 +87,10 @@ public final class VirtualMachineNetworkInterfaceConfigurationArgs extends io.pu
         return this.enableIPForwarding == null ? Input.empty() : this.enableIPForwarding;
     }
 
+    /**
+     * Specifies the IP configurations of the network interface.
+     * 
+     */
     @InputImport(name="ipConfigurations", required=true)
     private final Input<List<VirtualMachineNetworkInterfaceIPConfigurationArgs>> ipConfigurations;
 
@@ -70,6 +98,10 @@ public final class VirtualMachineNetworkInterfaceConfigurationArgs extends io.pu
         return this.ipConfigurations;
     }
 
+    /**
+     * The network interface configuration name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -77,6 +109,10 @@ public final class VirtualMachineNetworkInterfaceConfigurationArgs extends io.pu
         return this.name;
     }
 
+    /**
+     * The network security group.
+     * 
+     */
     @InputImport(name="networkSecurityGroup")
     private final @Nullable Input<SubResourceArgs> networkSecurityGroup;
 
@@ -84,6 +120,10 @@ public final class VirtualMachineNetworkInterfaceConfigurationArgs extends io.pu
         return this.networkSecurityGroup == null ? Input.empty() : this.networkSecurityGroup;
     }
 
+    /**
+     * Specifies the primary network interface in case the virtual machine has more than 1 network interface.
+     * 
+     */
     @InputImport(name="primary")
     private final @Nullable Input<Boolean> primary;
 

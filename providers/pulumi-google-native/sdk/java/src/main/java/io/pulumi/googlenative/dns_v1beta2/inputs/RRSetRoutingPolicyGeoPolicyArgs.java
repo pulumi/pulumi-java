@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Configures a RRSetRoutingPolicy that routes based on the geo location of the querying user.
+ * 
+ */
 public final class RRSetRoutingPolicyGeoPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RRSetRoutingPolicyGeoPolicyArgs Empty = new RRSetRoutingPolicyGeoPolicyArgs();
 
+    /**
+     * The primary geo routing configuration. If there are multiple items with the same location, an error is returned instead.
+     * 
+     */
     @InputImport(name="items")
     private final @Nullable Input<List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs>> items;
 

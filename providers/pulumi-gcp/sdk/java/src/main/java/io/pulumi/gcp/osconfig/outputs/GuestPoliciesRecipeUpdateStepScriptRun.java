@@ -13,8 +13,22 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GuestPoliciesRecipeUpdateStepScriptRun {
+    /**
+     * Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
+     * 
+     */
     private final @Nullable List<Integer> allowedExitCodes;
+    /**
+     * The script interpreter to use to run the script. If no interpreter is specified the script is executed directly,
+     * which likely only succeed for scripts with shebang lines.
+     * Possible values are `SHELL` and `POWERSHELL`.
+     * 
+     */
     private final @Nullable String interpreter;
+    /**
+     * The shell script to be executed.
+     * 
+     */
     private final String script;
 
     @OutputCustomType.Constructor({"allowedExitCodes","interpreter","script"})
@@ -27,12 +41,26 @@ public final class GuestPoliciesRecipeUpdateStepScriptRun {
         this.script = Objects.requireNonNull(script);
     }
 
+    /**
+     * Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
+     * 
+     */
     public List<Integer> getAllowedExitCodes() {
         return this.allowedExitCodes == null ? List.of() : this.allowedExitCodes;
     }
+    /**
+     * The script interpreter to use to run the script. If no interpreter is specified the script is executed directly,
+     * which likely only succeed for scripts with shebang lines.
+     * Possible values are `SHELL` and `POWERSHELL`.
+     * 
+     */
     public Optional<String> getInterpreter() {
         return Optional.ofNullable(this.interpreter);
     }
+    /**
+     * The shell script to be executed.
+     * 
+     */
     public String getScript() {
         return this.script;
     }

@@ -16,6 +16,11 @@ public final class DomainTrustArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DomainTrustArgs Empty = new DomainTrustArgs();
 
+    /**
+     * The fully qualified domain name. e.g. mydomain.myorganization.com, with the restrictions,
+     * https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locations.global.domains.
+     * 
+     */
     @InputImport(name="domain", required=true)
     private final Input<String> domain;
 
@@ -23,6 +28,11 @@ public final class DomainTrustArgs extends io.pulumi.resources.ResourceArgs {
         return this.domain;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -30,6 +40,10 @@ public final class DomainTrustArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Whether the trusted side has forest/domain wide access or selective access to an approved set of resources.
+     * 
+     */
     @InputImport(name="selectiveAuthentication")
     private final @Nullable Input<Boolean> selectiveAuthentication;
 
@@ -37,6 +51,10 @@ public final class DomainTrustArgs extends io.pulumi.resources.ResourceArgs {
         return this.selectiveAuthentication == null ? Input.empty() : this.selectiveAuthentication;
     }
 
+    /**
+     * The target DNS server IP addresses which can resolve the remote domain involved in the trust.
+     * 
+     */
     @InputImport(name="targetDnsIpAddresses", required=true)
     private final Input<List<String>> targetDnsIpAddresses;
 
@@ -44,6 +62,10 @@ public final class DomainTrustArgs extends io.pulumi.resources.ResourceArgs {
         return this.targetDnsIpAddresses;
     }
 
+    /**
+     * The fully qualified target domain name which will be in trust with the current domain.
+     * 
+     */
     @InputImport(name="targetDomainName", required=true)
     private final Input<String> targetDomainName;
 
@@ -51,6 +73,11 @@ public final class DomainTrustArgs extends io.pulumi.resources.ResourceArgs {
         return this.targetDomainName;
     }
 
+    /**
+     * The trust direction, which decides if the current domain is trusted, trusting, or both.
+     * Possible values are `INBOUND`, `OUTBOUND`, and `BIDIRECTIONAL`.
+     * 
+     */
     @InputImport(name="trustDirection", required=true)
     private final Input<String> trustDirection;
 
@@ -58,6 +85,11 @@ public final class DomainTrustArgs extends io.pulumi.resources.ResourceArgs {
         return this.trustDirection;
     }
 
+    /**
+     * The trust secret used for the handshake with the target domain. This will not be stored.
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     @InputImport(name="trustHandshakeSecret", required=true)
     private final Input<String> trustHandshakeSecret;
 
@@ -65,6 +97,11 @@ public final class DomainTrustArgs extends io.pulumi.resources.ResourceArgs {
         return this.trustHandshakeSecret;
     }
 
+    /**
+     * The type of trust represented by the trust resource.
+     * Possible values are `FOREST` and `EXTERNAL`.
+     * 
+     */
     @InputImport(name="trustType", required=true)
     private final Input<String> trustType;
 

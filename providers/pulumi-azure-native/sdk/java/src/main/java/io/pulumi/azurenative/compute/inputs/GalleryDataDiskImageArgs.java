@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * This is the data disk image.
+ * 
+ */
 public final class GalleryDataDiskImageArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GalleryDataDiskImageArgs Empty = new GalleryDataDiskImageArgs();
 
+    /**
+     * The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'
+     * 
+     */
     @InputImport(name="hostCaching")
     private final @Nullable Input<HostCaching> hostCaching;
 
@@ -23,6 +31,10 @@ public final class GalleryDataDiskImageArgs extends io.pulumi.resources.Resource
         return this.hostCaching == null ? Input.empty() : this.hostCaching;
     }
 
+    /**
+     * This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.
+     * 
+     */
     @InputImport(name="lun", required=true)
     private final Input<Integer> lun;
 
@@ -30,6 +42,10 @@ public final class GalleryDataDiskImageArgs extends io.pulumi.resources.Resource
         return this.lun;
     }
 
+    /**
+     * The gallery artifact version source.
+     * 
+     */
     @InputImport(name="source")
     private final @Nullable Input<GalleryArtifactVersionSourceArgs> source;
 

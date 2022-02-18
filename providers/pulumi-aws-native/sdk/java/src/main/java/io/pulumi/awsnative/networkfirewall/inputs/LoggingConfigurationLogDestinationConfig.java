@@ -14,6 +14,10 @@ public final class LoggingConfigurationLogDestinationConfig extends io.pulumi.re
 
     public static final LoggingConfigurationLogDestinationConfig Empty = new LoggingConfigurationLogDestinationConfig();
 
+    /**
+     * A key-value pair to configure the logDestinations.
+     * 
+     */
     @InputImport(name="logDestination", required=true)
     private final Object logDestination;
 

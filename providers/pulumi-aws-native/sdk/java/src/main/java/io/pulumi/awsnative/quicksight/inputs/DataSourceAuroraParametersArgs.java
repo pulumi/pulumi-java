@@ -10,10 +10,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * <p>Amazon Aurora parameters.</p>
+ * 
+ */
 public final class DataSourceAuroraParametersArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataSourceAuroraParametersArgs Empty = new DataSourceAuroraParametersArgs();
 
+    /**
+     * <p>Database.</p>
+     * 
+     */
     @InputImport(name="database", required=true)
     private final Input<String> database;
 
@@ -21,6 +29,10 @@ public final class DataSourceAuroraParametersArgs extends io.pulumi.resources.Re
         return this.database;
     }
 
+    /**
+     * <p>Host.</p>
+     * 
+     */
     @InputImport(name="host", required=true)
     private final Input<String> host;
 
@@ -28,6 +40,10 @@ public final class DataSourceAuroraParametersArgs extends io.pulumi.resources.Re
         return this.host;
     }
 
+    /**
+     * <p>Port.</p>
+     * 
+     */
     @InputImport(name="port", required=true)
     private final Input<Double> port;
 

@@ -11,6 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The AWS IoT SiteWise Monitor resource for this access policy. Choose either portal or project but not both.
+ * 
+ */
 public final class AccessPolicyResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AccessPolicyResourceArgs Empty = new AccessPolicyResourceArgs();

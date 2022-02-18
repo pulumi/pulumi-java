@@ -14,6 +14,10 @@ public final class ClusterNodeConfigShieldedInstanceConfigArgs extends io.pulumi
 
     public static final ClusterNodeConfigShieldedInstanceConfigArgs Empty = new ClusterNodeConfigShieldedInstanceConfigArgs();
 
+    /**
+     * Defines if the instance has integrity monitoring enabled.
+     * 
+     */
     @InputImport(name="enableIntegrityMonitoring")
     private final @Nullable Input<Boolean> enableIntegrityMonitoring;
 
@@ -21,6 +25,10 @@ public final class ClusterNodeConfigShieldedInstanceConfigArgs extends io.pulumi
         return this.enableIntegrityMonitoring == null ? Input.empty() : this.enableIntegrityMonitoring;
     }
 
+    /**
+     * Defines if the instance has Secure Boot enabled.
+     * 
+     */
     @InputImport(name="enableSecureBoot")
     private final @Nullable Input<Boolean> enableSecureBoot;
 

@@ -14,6 +14,10 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageGetArgs
 
     public static final CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageGetArgs Empty = new CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageGetArgs();
 
+    /**
+     * The key may be used to sign certificates.
+     * 
+     */
     @InputImport(name="certSign")
     private final @Nullable Input<Boolean> certSign;
 
@@ -21,6 +25,10 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageGetArgs
         return this.certSign == null ? Input.empty() : this.certSign;
     }
 
+    /**
+     * The key may be used for cryptographic commitments. Note that this may also be referred to as "non-repudiation".
+     * 
+     */
     @InputImport(name="contentCommitment")
     private final @Nullable Input<Boolean> contentCommitment;
 
@@ -28,6 +36,10 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageGetArgs
         return this.contentCommitment == null ? Input.empty() : this.contentCommitment;
     }
 
+    /**
+     * The key may be used sign certificate revocation lists.
+     * 
+     */
     @InputImport(name="crlSign")
     private final @Nullable Input<Boolean> crlSign;
 
@@ -35,6 +47,10 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageGetArgs
         return this.crlSign == null ? Input.empty() : this.crlSign;
     }
 
+    /**
+     * The key may be used to encipher data.
+     * 
+     */
     @InputImport(name="dataEncipherment")
     private final @Nullable Input<Boolean> dataEncipherment;
 
@@ -42,6 +58,10 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageGetArgs
         return this.dataEncipherment == null ? Input.empty() : this.dataEncipherment;
     }
 
+    /**
+     * The key may be used to decipher only.
+     * 
+     */
     @InputImport(name="decipherOnly")
     private final @Nullable Input<Boolean> decipherOnly;
 
@@ -49,6 +69,10 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageGetArgs
         return this.decipherOnly == null ? Input.empty() : this.decipherOnly;
     }
 
+    /**
+     * The key may be used for digital signatures.
+     * 
+     */
     @InputImport(name="digitalSignature")
     private final @Nullable Input<Boolean> digitalSignature;
 
@@ -56,6 +80,10 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageGetArgs
         return this.digitalSignature == null ? Input.empty() : this.digitalSignature;
     }
 
+    /**
+     * The key may be used to encipher only.
+     * 
+     */
     @InputImport(name="encipherOnly")
     private final @Nullable Input<Boolean> encipherOnly;
 
@@ -63,6 +91,10 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageGetArgs
         return this.encipherOnly == null ? Input.empty() : this.encipherOnly;
     }
 
+    /**
+     * The key may be used in a key agreement protocol.
+     * 
+     */
     @InputImport(name="keyAgreement")
     private final @Nullable Input<Boolean> keyAgreement;
 
@@ -70,6 +102,10 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageGetArgs
         return this.keyAgreement == null ? Input.empty() : this.keyAgreement;
     }
 
+    /**
+     * The key may be used to encipher other keys.
+     * 
+     */
     @InputImport(name="keyEncipherment")
     private final @Nullable Input<Boolean> keyEncipherment;
 

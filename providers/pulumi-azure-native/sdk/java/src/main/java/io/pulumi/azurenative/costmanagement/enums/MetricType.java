@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Metric to use when displaying costs.
+     * 
+     */
     @EnumType
     public enum MetricType {
         ActualCost("ActualCost"),

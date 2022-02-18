@@ -12,7 +12,16 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class InstanceMemcacheParameters {
+    /**
+     * - 
+     * This is a unique ID associated with this set of parameters.
+     * 
+     */
     private final @Nullable String id;
+    /**
+     * User-defined set of parameters to use in the memcache process.
+     * 
+     */
     private final @Nullable Map<String,String> params;
 
     @OutputCustomType.Constructor({"id","params"})
@@ -23,9 +32,18 @@ public final class InstanceMemcacheParameters {
         this.params = params;
     }
 
+    /**
+     * - 
+     * This is a unique ID associated with this set of parameters.
+     * 
+     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+    /**
+     * User-defined set of parameters to use in the memcache process.
+     * 
+     */
     public Map<String,String> getParams() {
         return this.params == null ? Map.of() : this.params;
     }

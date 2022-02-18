@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * API connection properties
+ * 
+ */
 public final class ApiConnectionTestLinkResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApiConnectionTestLinkResponse Empty = new ApiConnectionTestLinkResponse();
 
+    /**
+     * HTTP Method
+     * 
+     */
     @InputImport(name="method")
     private final @Nullable String method;
 
@@ -21,6 +29,10 @@ public final class ApiConnectionTestLinkResponse extends io.pulumi.resources.Inv
         return this.method == null ? Optional.empty() : Optional.ofNullable(this.method);
     }
 
+    /**
+     * Test link request URI
+     * 
+     */
     @InputImport(name="requestUri")
     private final @Nullable String requestUri;
 

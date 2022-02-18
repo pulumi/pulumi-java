@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A Google Compute Engine disk resource specification.
+ * 
+ */
 public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DiskArgs Empty = new DiskArgs();
 
+    /**
+     * Required at create time and cannot be overridden at run time. Specifies the path in the docker container where files on this disk should be located. For example, if `mountPoint` is `/mnt/disk`, and the parameter has `localPath` `inputs/file.txt`, the docker container can access the data at `/mnt/disk/inputs/file.txt`.
+     * 
+     */
     @InputImport(name="mountPoint")
     private final @Nullable Input<String> mountPoint;
 
@@ -24,6 +32,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.mountPoint == null ? Input.empty() : this.mountPoint;
     }
 
+    /**
+     * The name of the disk that can be used in the pipeline parameters. Must be 1 - 63 characters. The name "boot" is reserved for system use.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -31,6 +43,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
+    /**
+     * Specifies how a sourced-base persistent disk will be mounted. See https://cloud.google.com/compute/docs/disks/persistent-disks#use_multi_instances for more details. Can only be set at create time.
+     * 
+     */
     @InputImport(name="readOnly")
     private final @Nullable Input<Boolean> readOnly;
 
@@ -38,6 +54,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.readOnly == null ? Input.empty() : this.readOnly;
     }
 
+    /**
+     * The size of the disk. Defaults to 500 (GB). This field is not applicable for local SSD.
+     * 
+     */
     @InputImport(name="sizeGb")
     private final @Nullable Input<Integer> sizeGb;
 
@@ -45,6 +65,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.sizeGb == null ? Input.empty() : this.sizeGb;
     }
 
+    /**
+     * The full or partial URL of the persistent disk to attach. See https://cloud.google.com/compute/docs/reference/latest/instances#resource and https://cloud.google.com/compute/docs/disks/persistent-disks#snapshots for more details.
+     * 
+     */
     @InputImport(name="source")
     private final @Nullable Input<String> source;
 
@@ -52,6 +76,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.source == null ? Input.empty() : this.source;
     }
 
+    /**
+     * The type of the disk to create.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<DiskType> type;
 

@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes the settings of a container that will be launched, or that is launched, to an Amazon Lightsail container service.
+ * 
+ */
 public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContainerArgs Empty = new ContainerArgs();
 
+    /**
+     * The launch command for the container.
+     * 
+     */
     @InputImport(name="command")
     private final @Nullable Input<List<String>> command;
 
@@ -24,6 +32,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.command == null ? Input.empty() : this.command;
     }
 
+    /**
+     * The name of the container.
+     * 
+     */
     @InputImport(name="containerName")
     private final @Nullable Input<String> containerName;
 
@@ -31,6 +43,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.containerName == null ? Input.empty() : this.containerName;
     }
 
+    /**
+     * The environment variables of the container.
+     * 
+     */
     @InputImport(name="environment")
     private final @Nullable Input<List<ContainerEnvironmentVariableArgs>> environment;
 
@@ -38,6 +54,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.environment == null ? Input.empty() : this.environment;
     }
 
+    /**
+     * The name of the image used for the container.
+     * 
+     */
     @InputImport(name="image")
     private final @Nullable Input<String> image;
 
@@ -45,6 +65,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.image == null ? Input.empty() : this.image;
     }
 
+    /**
+     * The open firewall ports of the container.
+     * 
+     */
     @InputImport(name="ports")
     private final @Nullable Input<List<ContainerPortInfoArgs>> ports;
 

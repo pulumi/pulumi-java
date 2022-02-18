@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The authentication method used to access the Hive server.
+     * 
+     */
     @EnumType
     public enum HiveAuthenticationType {
         Anonymous("Anonymous"),

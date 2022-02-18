@@ -10,6 +10,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SourceResponse {
+    /**
+     * `File` set constituting the `Source` bundle.
+     * 
+     */
     private final List<FileResponse> files;
 
     @OutputCustomType.Constructor({"files"})
@@ -17,6 +21,10 @@ public final class SourceResponse {
         this.files = Objects.requireNonNull(files);
     }
 
+    /**
+     * `File` set constituting the `Source` bundle.
+     * 
+     */
     public List<FileResponse> getFiles() {
         return this.files;
     }

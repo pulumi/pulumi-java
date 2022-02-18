@@ -14,6 +14,10 @@ public final class GetManagedZoneArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetManagedZoneArgs Empty = new GetManagedZoneArgs();
 
+    /**
+     * A unique name for the resource.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -21,6 +25,10 @@ public final class GetManagedZoneArgs extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    /**
+     * The ID of the project for the Google Cloud DNS zone.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

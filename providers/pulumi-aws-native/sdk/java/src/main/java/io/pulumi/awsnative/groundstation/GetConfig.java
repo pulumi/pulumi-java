@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetConfig {
+/**
+ * AWS Ground Station config resource type for CloudFormation.
+ * 
+ */
     public static CompletableFuture<GetConfigResult> invokeAsync(GetConfigArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:groundstation:getConfig", TypeShape.of(GetConfigResult.class), args == null ? GetConfigArgs.Empty : args, Utilities.withVersion(options));
     }

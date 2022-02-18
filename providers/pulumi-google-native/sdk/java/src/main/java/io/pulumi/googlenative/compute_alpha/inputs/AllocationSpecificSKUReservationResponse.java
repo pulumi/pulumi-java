@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * This reservation type allows to pre allocate specific instance configuration. Next ID: 5
+ * 
+ */
 public final class AllocationSpecificSKUReservationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AllocationSpecificSKUReservationResponse Empty = new AllocationSpecificSKUReservationResponse();
 
+    /**
+     * Indicates how many instances are actually usable currently.
+     * 
+     */
     @InputImport(name="assuredCount", required=true)
     private final String assuredCount;
 
@@ -20,6 +28,10 @@ public final class AllocationSpecificSKUReservationResponse extends io.pulumi.re
         return this.assuredCount;
     }
 
+    /**
+     * Specifies the number of resources that are allocated.
+     * 
+     */
     @InputImport(name="count", required=true)
     private final String count;
 
@@ -27,6 +39,10 @@ public final class AllocationSpecificSKUReservationResponse extends io.pulumi.re
         return this.count;
     }
 
+    /**
+     * Indicates how many instances are in use.
+     * 
+     */
     @InputImport(name="inUseCount", required=true)
     private final String inUseCount;
 
@@ -34,6 +50,10 @@ public final class AllocationSpecificSKUReservationResponse extends io.pulumi.re
         return this.inUseCount;
     }
 
+    /**
+     * The instance properties for the reservation.
+     * 
+     */
     @InputImport(name="instanceProperties", required=true)
     private final AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties;
 

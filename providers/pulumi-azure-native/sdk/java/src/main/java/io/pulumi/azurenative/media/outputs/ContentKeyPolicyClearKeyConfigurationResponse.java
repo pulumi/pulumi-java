@@ -9,6 +9,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ContentKeyPolicyClearKeyConfigurationResponse {
+    /**
+     * The discriminator for derived types.
+     * Expected value is '#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration'.
+     * 
+     */
     private final String odataType;
 
     @OutputCustomType.Constructor({"odataType"})
@@ -16,6 +21,11 @@ public final class ContentKeyPolicyClearKeyConfigurationResponse {
         this.odataType = Objects.requireNonNull(odataType);
     }
 
+    /**
+     * The discriminator for derived types.
+     * Expected value is '#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration'.
+     * 
+     */
     public String getOdataType() {
         return this.odataType;
     }

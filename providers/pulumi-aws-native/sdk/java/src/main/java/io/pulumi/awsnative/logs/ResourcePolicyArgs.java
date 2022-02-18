@@ -13,6 +13,10 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourcePolicyArgs Empty = new ResourcePolicyArgs();
 
+    /**
+     * The policy document
+     * 
+     */
     @InputImport(name="policyDocument", required=true)
     private final Input<String> policyDocument;
 
@@ -20,6 +24,10 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.policyDocument;
     }
 
+    /**
+     * A name for resource policy
+     * 
+     */
     @InputImport(name="policyName", required=true)
     private final Input<String> policyName;
 

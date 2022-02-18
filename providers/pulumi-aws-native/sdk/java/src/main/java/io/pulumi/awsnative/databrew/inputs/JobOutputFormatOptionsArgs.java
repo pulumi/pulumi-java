@@ -10,6 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Format options for job Output
+ * 
+ */
 public final class JobOutputFormatOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JobOutputFormatOptionsArgs Empty = new JobOutputFormatOptionsArgs();

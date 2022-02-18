@@ -14,15 +14,55 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class VMSSExtensionResponse {
+    /**
+     * Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
+     * 
+     */
     private final @Nullable Boolean autoUpgradeMinorVersion;
+    /**
+     * If a value is provided and is different from the previous value, the extension handler will be forced to update even if the extension configuration has not changed.
+     * 
+     */
     private final @Nullable String forceUpdateTag;
+    /**
+     * The name of the extension.
+     * 
+     */
     private final String name;
+    /**
+     * The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
+     * 
+     */
     private final @Nullable Object protectedSettings;
+    /**
+     * Collection of extension names after which this extension needs to be provisioned.
+     * 
+     */
     private final @Nullable List<String> provisionAfterExtensions;
+    /**
+     * The provisioning state, which only appears in the response.
+     * 
+     */
     private final String provisioningState;
+    /**
+     * The name of the extension handler publisher.
+     * 
+     */
     private final String publisher;
+    /**
+     * Json formatted public settings for the extension.
+     * 
+     */
     private final @Nullable Object settings;
+    /**
+     * Specifies the type of the extension; an example is "CustomScriptExtension".
+     * 
+     */
     private final String type;
+    /**
+     * Specifies the version of the script handler.
+     * 
+     */
     private final String typeHandlerVersion;
 
     @OutputCustomType.Constructor({"autoUpgradeMinorVersion","forceUpdateTag","name","protectedSettings","provisionAfterExtensions","provisioningState","publisher","settings","type","typeHandlerVersion"})
@@ -49,33 +89,73 @@ public final class VMSSExtensionResponse {
         this.typeHandlerVersion = Objects.requireNonNull(typeHandlerVersion);
     }
 
+    /**
+     * Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
+     * 
+     */
     public Optional<Boolean> getAutoUpgradeMinorVersion() {
         return Optional.ofNullable(this.autoUpgradeMinorVersion);
     }
+    /**
+     * If a value is provided and is different from the previous value, the extension handler will be forced to update even if the extension configuration has not changed.
+     * 
+     */
     public Optional<String> getForceUpdateTag() {
         return Optional.ofNullable(this.forceUpdateTag);
     }
+    /**
+     * The name of the extension.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
+     * 
+     */
     public Optional<Object> getProtectedSettings() {
         return Optional.ofNullable(this.protectedSettings);
     }
+    /**
+     * Collection of extension names after which this extension needs to be provisioned.
+     * 
+     */
     public List<String> getProvisionAfterExtensions() {
         return this.provisionAfterExtensions == null ? List.of() : this.provisionAfterExtensions;
     }
+    /**
+     * The provisioning state, which only appears in the response.
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The name of the extension handler publisher.
+     * 
+     */
     public String getPublisher() {
         return this.publisher;
     }
+    /**
+     * Json formatted public settings for the extension.
+     * 
+     */
     public Optional<Object> getSettings() {
         return Optional.ofNullable(this.settings);
     }
+    /**
+     * Specifies the type of the extension; an example is "CustomScriptExtension".
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * Specifies the version of the script handler.
+     * 
+     */
     public String getTypeHandlerVersion() {
         return this.typeHandlerVersion;
     }

@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Orc write settings.
+ * 
+ */
 public final class OrcWriteSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OrcWriteSettingsResponse Empty = new OrcWriteSettingsResponse();
 
+    /**
+     * Specifies the file name pattern <fileNamePrefix>_<fileIndex>.<fileExtension> when copy from non-file based store without partitionOptions. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="fileNamePrefix")
     private final @Nullable Object fileNamePrefix;
 
@@ -22,6 +30,10 @@ public final class OrcWriteSettingsResponse extends io.pulumi.resources.InvokeAr
         return this.fileNamePrefix == null ? Optional.empty() : Optional.ofNullable(this.fileNamePrefix);
     }
 
+    /**
+     * Limit the written file's row count to be smaller than or equal to the specified count. Type: integer (or Expression with resultType integer).
+     * 
+     */
     @InputImport(name="maxRowsPerFile")
     private final @Nullable Object maxRowsPerFile;
 
@@ -29,6 +41,11 @@ public final class OrcWriteSettingsResponse extends io.pulumi.resources.InvokeAr
         return this.maxRowsPerFile == null ? Optional.empty() : Optional.ofNullable(this.maxRowsPerFile);
     }
 
+    /**
+     * The write setting type.
+     * Expected value is 'OrcWriteSettings'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The type of resource to be provsioned to, only aws account now
+     * 
+     */
     @EnumType
     public enum AssignmentTargetType {
         AwsAccount("AWS_ACCOUNT");

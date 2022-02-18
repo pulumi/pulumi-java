@@ -12,6 +12,10 @@ public final class GetEndpointAccessArgs extends io.pulumi.resources.InvokeArgs 
 
     public static final GetEndpointAccessArgs Empty = new GetEndpointAccessArgs();
 
+    /**
+     * The name of the endpoint.
+     * 
+     */
     @InputImport(name="endpointName", required=true)
     private final String endpointName;
 

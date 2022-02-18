@@ -14,6 +14,10 @@ public final class GetAzureVersionsArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAzureVersionsArgs Empty = new GetAzureVersionsArgs();
 
+    /**
+     * The location to list versions for.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable String location;
 
@@ -21,6 +25,11 @@ public final class GetAzureVersionsArgs extends io.pulumi.resources.InvokeArgs {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
+    /**
+     * ID of the project to list available cluster versions for. Should match the project the cluster will be deployed to.
+     * Defaults to the project that the provider is authenticated with.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

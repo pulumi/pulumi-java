@@ -12,7 +12,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ReservationSpecificReservationInstancePropertiesLocalSsd {
+    /**
+     * The size of the disk in base-2 GB.
+     * 
+     */
     private final Integer diskSizeGb;
+    /**
+     * The disk interface to use for attaching this disk.
+     * Default value is `SCSI`.
+     * Possible values are `SCSI` and `NVME`.
+     * 
+     */
     private final @Nullable String $interface;
 
     @OutputCustomType.Constructor({"diskSizeGb","$interface"})
@@ -23,9 +33,19 @@ public final class ReservationSpecificReservationInstancePropertiesLocalSsd {
         this.$interface = $interface;
     }
 
+    /**
+     * The size of the disk in base-2 GB.
+     * 
+     */
     public Integer getDiskSizeGb() {
         return this.diskSizeGb;
     }
+    /**
+     * The disk interface to use for attaching this disk.
+     * Default value is `SCSI`.
+     * Possible values are `SCSI` and `NVME`.
+     * 
+     */
     public Optional<String> get$interface() {
         return Optional.ofNullable(this.$interface);
     }

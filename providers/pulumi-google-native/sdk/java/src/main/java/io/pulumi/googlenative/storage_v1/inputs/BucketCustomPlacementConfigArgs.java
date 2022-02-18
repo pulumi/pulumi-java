@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The bucket's custom placement configuration for Custom Dual Regions.
+ * 
+ */
 public final class BucketCustomPlacementConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BucketCustomPlacementConfigArgs Empty = new BucketCustomPlacementConfigArgs();
 
+    /**
+     * The list of regional locations in which data is placed.
+     * 
+     */
     @InputImport(name="dataLocations")
     private final @Nullable Input<List<String>> dataLocations;
 

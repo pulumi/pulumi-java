@@ -15,6 +15,10 @@ public final class RouterNatSubnetworkGetArgs extends io.pulumi.resources.Resour
 
     public static final RouterNatSubnetworkGetArgs Empty = new RouterNatSubnetworkGetArgs();
 
+    /**
+     * Self-link of subnetwork to NAT
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -22,6 +26,13 @@ public final class RouterNatSubnetworkGetArgs extends io.pulumi.resources.Resour
         return this.name;
     }
 
+    /**
+     * List of the secondary ranges of the subnetwork that are allowed
+     * to use NAT. This can be populated only if
+     * `LIST_OF_SECONDARY_IP_RANGES` is one of the values in
+     * sourceIpRangesToNat
+     * 
+     */
     @InputImport(name="secondaryIpRangeNames")
     private final @Nullable Input<List<String>> secondaryIpRangeNames;
 
@@ -29,6 +40,13 @@ public final class RouterNatSubnetworkGetArgs extends io.pulumi.resources.Resour
         return this.secondaryIpRangeNames == null ? Input.empty() : this.secondaryIpRangeNames;
     }
 
+    /**
+     * List of options for which source IPs in the subnetwork
+     * should have NAT enabled. Supported values include:
+     * `ALL_IP_RANGES`, `LIST_OF_SECONDARY_IP_RANGES`,
+     * `PRIMARY_IP_RANGE`.
+     * 
+     */
     @InputImport(name="sourceIpRangesToNats", required=true)
     private final Input<List<String>> sourceIpRangesToNats;
 

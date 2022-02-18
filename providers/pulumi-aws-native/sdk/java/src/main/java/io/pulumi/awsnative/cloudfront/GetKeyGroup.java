@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetKeyGroup {
+/**
+ * Resource Type definition for AWS::CloudFront::KeyGroup
+ * 
+ */
     public static CompletableFuture<GetKeyGroupResult> invokeAsync(GetKeyGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudfront:getKeyGroup", TypeShape.of(GetKeyGroupResult.class), args == null ? GetKeyGroupArgs.Empty : args, Utilities.withVersion(options));
     }

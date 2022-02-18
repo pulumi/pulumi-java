@@ -12,6 +12,10 @@ public final class GetVirtualMachineRdpFileContentsArgs extends io.pulumi.resour
 
     public static final GetVirtualMachineRdpFileContentsArgs Empty = new GetVirtualMachineRdpFileContentsArgs();
 
+    /**
+     * The name of the lab.
+     * 
+     */
     @InputImport(name="labName", required=true)
     private final String labName;
 
@@ -19,6 +23,10 @@ public final class GetVirtualMachineRdpFileContentsArgs extends io.pulumi.resour
         return this.labName;
     }
 
+    /**
+     * The name of the virtual machine.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -26,6 +34,10 @@ public final class GetVirtualMachineRdpFileContentsArgs extends io.pulumi.resour
         return this.name;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

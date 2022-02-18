@@ -10,10 +10,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Configuration options for private clusters.
+ * 
+ */
 public final class PrivateClusterConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PrivateClusterConfigResponse Empty = new PrivateClusterConfigResponse();
 
+    /**
+     * Whether the master's internal IP address is used as the cluster endpoint.
+     * 
+     */
     @InputImport(name="enablePrivateEndpoint", required=true)
     private final Boolean enablePrivateEndpoint;
 
@@ -21,6 +29,10 @@ public final class PrivateClusterConfigResponse extends io.pulumi.resources.Invo
         return this.enablePrivateEndpoint;
     }
 
+    /**
+     * Whether nodes have internal IP addresses only. If enabled, all nodes are given only RFC 1918 private addresses and communicate with the master via private networking.
+     * 
+     */
     @InputImport(name="enablePrivateNodes", required=true)
     private final Boolean enablePrivateNodes;
 
@@ -28,6 +40,10 @@ public final class PrivateClusterConfigResponse extends io.pulumi.resources.Invo
         return this.enablePrivateNodes;
     }
 
+    /**
+     * Controls master global access settings.
+     * 
+     */
     @InputImport(name="masterGlobalAccessConfig", required=true)
     private final PrivateClusterMasterGlobalAccessConfigResponse masterGlobalAccessConfig;
 
@@ -35,6 +51,10 @@ public final class PrivateClusterConfigResponse extends io.pulumi.resources.Invo
         return this.masterGlobalAccessConfig;
     }
 
+    /**
+     * The IP range in CIDR notation to use for the hosted master network. This range will be used for assigning internal IP addresses to the master or set of masters, as well as the ILB VIP. This range must not overlap with any other ranges in use within the cluster's network.
+     * 
+     */
     @InputImport(name="masterIpv4CidrBlock", required=true)
     private final String masterIpv4CidrBlock;
 
@@ -42,6 +62,10 @@ public final class PrivateClusterConfigResponse extends io.pulumi.resources.Invo
         return this.masterIpv4CidrBlock;
     }
 
+    /**
+     * The peering name in the customer VPC used by this cluster.
+     * 
+     */
     @InputImport(name="peeringName", required=true)
     private final String peeringName;
 
@@ -49,6 +73,10 @@ public final class PrivateClusterConfigResponse extends io.pulumi.resources.Invo
         return this.peeringName;
     }
 
+    /**
+     * The internal IP address of this cluster's master endpoint.
+     * 
+     */
     @InputImport(name="privateEndpoint", required=true)
     private final String privateEndpoint;
 
@@ -56,6 +84,10 @@ public final class PrivateClusterConfigResponse extends io.pulumi.resources.Invo
         return this.privateEndpoint;
     }
 
+    /**
+     * The external IP address of this cluster's master endpoint.
+     * 
+     */
     @InputImport(name="publicEndpoint", required=true)
     private final String publicEndpoint;
 

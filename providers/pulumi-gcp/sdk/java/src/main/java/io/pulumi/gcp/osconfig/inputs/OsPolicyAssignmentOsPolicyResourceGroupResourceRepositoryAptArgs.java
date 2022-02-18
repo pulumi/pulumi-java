@@ -15,6 +15,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptA
 
     public static final OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptArgs Empty = new OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptArgs();
 
+    /**
+     * Required. Type of archive files in this repository. Possible values: ARCHIVE_TYPE_UNSPECIFIED, DEB, DEB_SRC
+     * 
+     */
     @InputImport(name="archiveType", required=true)
     private final Input<String> archiveType;
 
@@ -22,6 +26,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptA
         return this.archiveType;
     }
 
+    /**
+     * Required. List of components for this repository. Must contain at least one item.
+     * 
+     */
     @InputImport(name="components", required=true)
     private final Input<List<String>> components;
 
@@ -29,6 +37,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptA
         return this.components;
     }
 
+    /**
+     * Required. Distribution of this repository.
+     * 
+     */
     @InputImport(name="distribution", required=true)
     private final Input<String> distribution;
 
@@ -36,6 +48,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptA
         return this.distribution;
     }
 
+    /**
+     * URI of the key file for this repository. The agent maintains a keyring at `/etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg`.
+     * 
+     */
     @InputImport(name="gpgKey")
     private final @Nullable Input<String> gpgKey;
 
@@ -43,6 +59,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptA
         return this.gpgKey == null ? Input.empty() : this.gpgKey;
     }
 
+    /**
+     * Required. URI for this repository.
+     * 
+     */
     @InputImport(name="uri", required=true)
     private final Input<String> uri;
 

@@ -23,75 +23,184 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * The alert rule resource.
+ * API Version: 2016-03-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:insights:AlertRule chiricutin /subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/alertrules/chiricutin 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:insights:AlertRule")
 public class AlertRule extends io.pulumi.resources.CustomResource {
+    /**
+     * action that is performed when the alert rule becomes active, and when an alert condition is resolved.
+     * 
+     */
     @OutputExport(name="action", type=Either.class, parameters={RuleEmailActionResponse.class, RuleWebhookActionResponse.class})
     private Output</* @Nullable */ Either<RuleEmailActionResponse,RuleWebhookActionResponse>> action;
 
+    /**
+     * @return action that is performed when the alert rule becomes active, and when an alert condition is resolved.
+     * 
+     */
     public Output</* @Nullable */ Either<RuleEmailActionResponse,RuleWebhookActionResponse>> getAction() {
         return this.action;
     }
+    /**
+     * the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
+     * 
+     */
     @OutputExport(name="actions", type=List.class, parameters={Either.class})
     private Output</* @Nullable */ List<Either<RuleEmailActionResponse,RuleWebhookActionResponse>>> actions;
 
+    /**
+     * @return the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
+     * 
+     */
     public Output</* @Nullable */ List<Either<RuleEmailActionResponse,RuleWebhookActionResponse>>> getActions() {
         return this.actions;
     }
+    /**
+     * the condition that results in the alert rule being activated.
+     * 
+     */
     @OutputExport(name="condition", type=Object.class, parameters={})
     private Output<Object> condition;
 
+    /**
+     * @return the condition that results in the alert rule being activated.
+     * 
+     */
     public Output<Object> getCondition() {
         return this.condition;
     }
+    /**
+     * the description of the alert rule that will be included in the alert email.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return the description of the alert rule that will be included in the alert email.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * the flag that indicates whether the alert rule is enabled.
+     * 
+     */
     @OutputExport(name="isEnabled", type=Boolean.class, parameters={})
     private Output<Boolean> isEnabled;
 
+    /**
+     * @return the flag that indicates whether the alert rule is enabled.
+     * 
+     */
     public Output<Boolean> getIsEnabled() {
         return this.isEnabled;
     }
+    /**
+     * Last time the rule was updated in ISO8601 format.
+     * 
+     */
     @OutputExport(name="lastUpdatedTime", type=String.class, parameters={})
     private Output<String> lastUpdatedTime;
 
+    /**
+     * @return Last time the rule was updated in ISO8601 format.
+     * 
+     */
     public Output<String> getLastUpdatedTime() {
         return this.lastUpdatedTime;
     }
+    /**
+     * Resource location
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * Azure resource name
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Azure resource name
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * the provisioning state.
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
+    /**
+     * @return the provisioning state.
+     * 
+     */
     public Output</* @Nullable */ String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Resource tags
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Azure resource type
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Azure resource type
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public AlertRule(String name, AlertRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:insights:AlertRule", name, args == null ? AlertRuleArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -111,6 +220,14 @@ public class AlertRule extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static AlertRule get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AlertRule(name, id, options);
     }

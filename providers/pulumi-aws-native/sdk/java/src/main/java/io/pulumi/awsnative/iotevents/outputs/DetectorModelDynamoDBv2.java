@@ -13,6 +13,10 @@ import javax.annotation.Nullable;
 @OutputCustomType
 public final class DetectorModelDynamoDBv2 {
     private final @Nullable DetectorModelPayload payload;
+    /**
+     * The name of the DynamoDB table.
+     * 
+     */
     private final String tableName;
 
     @OutputCustomType.Constructor({"payload","tableName"})
@@ -26,6 +30,10 @@ public final class DetectorModelDynamoDBv2 {
     public Optional<DetectorModelPayload> getPayload() {
         return Optional.ofNullable(this.payload);
     }
+    /**
+     * The name of the DynamoDB table.
+     * 
+     */
     public String getTableName() {
         return this.tableName;
     }

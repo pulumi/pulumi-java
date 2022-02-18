@@ -12,7 +12,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AutoscaleResponse {
+    /**
+     * Parameters for load-based autoscale
+     * 
+     */
     private final @Nullable AutoscaleCapacityResponse capacity;
+    /**
+     * Parameters for schedule-based autoscale
+     * 
+     */
     private final @Nullable AutoscaleRecurrenceResponse recurrence;
 
     @OutputCustomType.Constructor({"capacity","recurrence"})
@@ -23,9 +31,17 @@ public final class AutoscaleResponse {
         this.recurrence = recurrence;
     }
 
+    /**
+     * Parameters for load-based autoscale
+     * 
+     */
     public Optional<AutoscaleCapacityResponse> getCapacity() {
         return Optional.ofNullable(this.capacity);
     }
+    /**
+     * Parameters for schedule-based autoscale
+     * 
+     */
     public Optional<AutoscaleRecurrenceResponse> getRecurrence() {
         return Optional.ofNullable(this.recurrence);
     }

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The version of the simulation software suite.
+     * 
+     */
     @EnumType
     public enum SimulationApplicationSimulationSoftwareSuiteVersion {
         Seven("7"),

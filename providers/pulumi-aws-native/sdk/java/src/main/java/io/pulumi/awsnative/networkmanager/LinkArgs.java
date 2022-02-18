@@ -17,6 +17,10 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LinkArgs Empty = new LinkArgs();
 
+    /**
+     * The Bandwidth for the link.
+     * 
+     */
     @InputImport(name="bandwidth", required=true)
     private final Input<LinkBandwidthArgs> bandwidth;
 
@@ -24,6 +28,10 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.bandwidth;
     }
 
+    /**
+     * The description of the link.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -31,6 +39,10 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The ID of the global network.
+     * 
+     */
     @InputImport(name="globalNetworkId", required=true)
     private final Input<String> globalNetworkId;
 
@@ -38,6 +50,10 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.globalNetworkId;
     }
 
+    /**
+     * The provider of the link.
+     * 
+     */
     @InputImport(name="provider")
     private final @Nullable Input<String> provider;
 
@@ -45,6 +61,10 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.provider == null ? Input.empty() : this.provider;
     }
 
+    /**
+     * The ID of the site
+     * 
+     */
     @InputImport(name="siteId", required=true)
     private final Input<String> siteId;
 
@@ -52,6 +72,10 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.siteId;
     }
 
+    /**
+     * The tags for the link.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<LinkTagArgs>> tags;
 
@@ -59,6 +83,10 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The type of the link.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 

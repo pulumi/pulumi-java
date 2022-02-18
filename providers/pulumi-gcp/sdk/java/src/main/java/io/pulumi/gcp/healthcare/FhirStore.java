@@ -18,75 +18,270 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * A FhirStore is a datastore inside a Healthcare dataset that conforms to the FHIR (https://www.hl7.org/fhir/STU3/)
+ * standard for Healthcare information exchange
+ * 
+ * To get more information about FhirStore, see:
+ * 
+ * * [API documentation](https://cloud.google.com/healthcare/docs/reference/rest/v1/projects.locations.datasets.fhirStores)
+ * * How-to Guides
+ *     * [Creating a FHIR store](https://cloud.google.com/healthcare/docs/how-tos/fhir)
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * FhirStore can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:healthcare/fhirStore:FhirStore default {{dataset}}/fhirStores/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:healthcare/fhirStore:FhirStore default {{dataset}}/{{name}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:healthcare/fhirStore:FhirStore")
 public class FhirStore extends io.pulumi.resources.CustomResource {
+    /**
+     * Identifies the dataset addressed by this request. Must be in the format
+     * 'projects/{project}/locations/{location}/datasets/{dataset}'
+     * 
+     */
     @OutputExport(name="dataset", type=String.class, parameters={})
     private Output<String> dataset;
 
+    /**
+     * @return Identifies the dataset addressed by this request. Must be in the format
+     * 'projects/{project}/locations/{location}/datasets/{dataset}'
+     * 
+     */
     public Output<String> getDataset() {
         return this.dataset;
     }
+    /**
+     * Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR store
+     * creation. The default value is false, meaning that the API will enforce referential integrity and fail the
+     * requests that will result in inconsistent state in the FHIR store. When this field is set to true, the API
+     * will skip referential integrity check. Consequently, operations that rely on references, such as
+     * Patient.get$everything, will not return all the results if broken references exist.
+     * ** Changing this property may recreate the FHIR store (removing all data) **
+     * 
+     */
     @OutputExport(name="disableReferentialIntegrity", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> disableReferentialIntegrity;
 
+    /**
+     * @return Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR store
+     * creation. The default value is false, meaning that the API will enforce referential integrity and fail the
+     * requests that will result in inconsistent state in the FHIR store. When this field is set to true, the API
+     * will skip referential integrity check. Consequently, operations that rely on references, such as
+     * Patient.get$everything, will not return all the results if broken references exist.
+     * ** Changing this property may recreate the FHIR store (removing all data) **
+     * 
+     */
     public Output</* @Nullable */ Boolean> getDisableReferentialIntegrity() {
         return this.disableReferentialIntegrity;
     }
+    /**
+     * Whether to disable resource versioning for this FHIR store. This field can not be changed after the creation
+     * of FHIR store. If set to false, which is the default behavior, all write operations will cause historical
+     * versions to be recorded automatically. The historical versions can be fetched through the history APIs, but
+     * cannot be updated. If set to true, no historical versions will be kept. The server will send back errors for
+     * attempts to read the historical versions.
+     * ** Changing this property may recreate the FHIR store (removing all data) **
+     * 
+     */
     @OutputExport(name="disableResourceVersioning", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> disableResourceVersioning;
 
+    /**
+     * @return Whether to disable resource versioning for this FHIR store. This field can not be changed after the creation
+     * of FHIR store. If set to false, which is the default behavior, all write operations will cause historical
+     * versions to be recorded automatically. The historical versions can be fetched through the history APIs, but
+     * cannot be updated. If set to true, no historical versions will be kept. The server will send back errors for
+     * attempts to read the historical versions.
+     * ** Changing this property may recreate the FHIR store (removing all data) **
+     * 
+     */
     public Output</* @Nullable */ Boolean> getDisableResourceVersioning() {
         return this.disableResourceVersioning;
     }
+    /**
+     * Whether to allow the bulk import API to accept history bundles and directly insert historical resource
+     * versions into the FHIR store. Importing resource histories creates resource interactions that appear to have
+     * occurred in the past, which clients may not want to allow. If set to false, history bundles within an import
+     * will fail with an error.
+     * ** Changing this property may recreate the FHIR store (removing all data) **
+     * ** This property can be changed manually in the Google Cloud Healthcare admin console without recreating the FHIR store **
+     * 
+     */
     @OutputExport(name="enableHistoryImport", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableHistoryImport;
 
+    /**
+     * @return Whether to allow the bulk import API to accept history bundles and directly insert historical resource
+     * versions into the FHIR store. Importing resource histories creates resource interactions that appear to have
+     * occurred in the past, which clients may not want to allow. If set to false, history bundles within an import
+     * will fail with an error.
+     * ** Changing this property may recreate the FHIR store (removing all data) **
+     * ** This property can be changed manually in the Google Cloud Healthcare admin console without recreating the FHIR store **
+     * 
+     */
     public Output</* @Nullable */ Boolean> getEnableHistoryImport() {
         return this.enableHistoryImport;
     }
+    /**
+     * Whether this FHIR store has the updateCreate capability. This determines if the client can use an Update
+     * operation to create a new resource with a client-specified ID. If false, all IDs are server-assigned through
+     * the Create operation and attempts to Update a non-existent resource will return errors. Please treat the audit
+     * logs with appropriate levels of care if client-specified resource IDs contain sensitive data such as patient
+     * identifiers, those IDs will be part of the FHIR resource path recorded in Cloud audit logs and Cloud Pub/Sub
+     * notifications.
+     * 
+     */
     @OutputExport(name="enableUpdateCreate", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableUpdateCreate;
 
+    /**
+     * @return Whether this FHIR store has the updateCreate capability. This determines if the client can use an Update
+     * operation to create a new resource with a client-specified ID. If false, all IDs are server-assigned through
+     * the Create operation and attempts to Update a non-existent resource will return errors. Please treat the audit
+     * logs with appropriate levels of care if client-specified resource IDs contain sensitive data such as patient
+     * identifiers, those IDs will be part of the FHIR resource path recorded in Cloud audit logs and Cloud Pub/Sub
+     * notifications.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getEnableUpdateCreate() {
         return this.enableUpdateCreate;
     }
+    /**
+     * User-supplied key-value pairs used to organize FHIR stores.
+     * Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must
+     * conform to the following PCRE regular expression: [\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}
+     * Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128
+     * bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}
+     * No more than 64 labels can be associated with a given store.
+     * An object containing a list of "key": value pairs.
+     * Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+     * 
+     */
     @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
+    /**
+     * @return User-supplied key-value pairs used to organize FHIR stores.
+     * Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must
+     * conform to the following PCRE regular expression: [\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}
+     * Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128
+     * bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}
+     * No more than 64 labels can be associated with a given store.
+     * An object containing a list of "key": value pairs.
+     * Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getLabels() {
         return this.labels;
     }
+    /**
+     * The resource name for the FhirStore.
+     * ** Changing this property may recreate the FHIR store (removing all data) **
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The resource name for the FhirStore.
+     * ** Changing this property may recreate the FHIR store (removing all data) **
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * A nested object resource
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="notificationConfig", type=FhirStoreNotificationConfig.class, parameters={})
     private Output</* @Nullable */ FhirStoreNotificationConfig> notificationConfig;
 
+    /**
+     * @return A nested object resource
+     * Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ FhirStoreNotificationConfig> getNotificationConfig() {
         return this.notificationConfig;
     }
+    /**
+     * The fully qualified name of this dataset
+     * 
+     */
     @OutputExport(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
+    /**
+     * @return The fully qualified name of this dataset
+     * 
+     */
     public Output<String> getSelfLink() {
         return this.selfLink;
     }
+    /**
+     * A list of streaming configs that configure the destinations of streaming export for every resource mutation in
+     * this FHIR store. Each store is allowed to have up to 10 streaming configs. After a new config is added, the next
+     * resource mutation is streamed to the new location in addition to the existing ones. When a location is removed
+     * from the list, the server stops streaming to that location. Before adding a new config, you must add the required
+     * bigquery.dataEditor role to your project's Cloud Healthcare Service Agent service account. Some lag (typically on
+     * the order of dozens of seconds) is expected before the results show up in the streaming destination.
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="streamConfigs", type=List.class, parameters={FhirStoreStreamConfig.class})
     private Output</* @Nullable */ List<FhirStoreStreamConfig>> streamConfigs;
 
+    /**
+     * @return A list of streaming configs that configure the destinations of streaming export for every resource mutation in
+     * this FHIR store. Each store is allowed to have up to 10 streaming configs. After a new config is added, the next
+     * resource mutation is streamed to the new location in addition to the existing ones. When a location is removed
+     * from the list, the server stops streaming to that location. Before adding a new config, you must add the required
+     * bigquery.dataEditor role to your project's Cloud Healthcare Service Agent service account. Some lag (typically on
+     * the order of dozens of seconds) is expected before the results show up in the streaming destination.
+     * Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ List<FhirStoreStreamConfig>> getStreamConfigs() {
         return this.streamConfigs;
     }
+    /**
+     * The FHIR specification version.
+     * Default value is `STU3`.
+     * Possible values are `DSTU2`, `STU3`, and `R4`.
+     * 
+     */
     @OutputExport(name="version", type=String.class, parameters={})
     private Output</* @Nullable */ String> version;
 
+    /**
+     * @return The FHIR specification version.
+     * Default value is `STU3`.
+     * Possible values are `DSTU2`, `STU3`, and `R4`.
+     * 
+     */
     public Output</* @Nullable */ String> getVersion() {
         return this.version;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public FhirStore(String name, FhirStoreArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:healthcare/fhirStore:FhirStore", name, args == null ? FhirStoreArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -102,6 +297,15 @@ public class FhirStore extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static FhirStore get(String name, Input<String> id, @Nullable FhirStoreState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new FhirStore(name, id, state, options);
     }

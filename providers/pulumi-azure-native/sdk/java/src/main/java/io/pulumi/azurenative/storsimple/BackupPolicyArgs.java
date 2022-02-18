@@ -16,6 +16,10 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BackupPolicyArgs Empty = new BackupPolicyArgs();
 
+    /**
+     * The name of the backup policy to be created/updated.
+     * 
+     */
     @InputImport(name="backupPolicyName")
     private final @Nullable Input<String> backupPolicyName;
 
@@ -23,6 +27,10 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.backupPolicyName == null ? Input.empty() : this.backupPolicyName;
     }
 
+    /**
+     * The device name
+     * 
+     */
     @InputImport(name="deviceName", required=true)
     private final Input<String> deviceName;
 
@@ -30,6 +38,10 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.deviceName;
     }
 
+    /**
+     * The Kind of the object. Currently only Series8000 is supported
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<Kind> kind;
 
@@ -37,6 +49,10 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * The manager name
+     * 
+     */
     @InputImport(name="managerName", required=true)
     private final Input<String> managerName;
 
@@ -44,6 +60,10 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.managerName;
     }
 
+    /**
+     * The resource group name
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -51,6 +71,10 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The path IDs of the volumes which are part of the backup policy.
+     * 
+     */
     @InputImport(name="volumeIds", required=true)
     private final Input<List<String>> volumeIds;
 

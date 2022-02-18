@@ -10,7 +10,16 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AutomationRulePropertyValuesConditionResponse {
+    /**
+     * The configuration of the automation rule condition
+     * 
+     */
     private final AutomationRulePropertyValuesConditionResponseConditionProperties conditionProperties;
+    /**
+     * The type of the automation rule condition
+     * Expected value is 'Property'.
+     * 
+     */
     private final String conditionType;
 
     @OutputCustomType.Constructor({"conditionProperties","conditionType"})
@@ -21,9 +30,18 @@ public final class AutomationRulePropertyValuesConditionResponse {
         this.conditionType = Objects.requireNonNull(conditionType);
     }
 
+    /**
+     * The configuration of the automation rule condition
+     * 
+     */
     public AutomationRulePropertyValuesConditionResponseConditionProperties getConditionProperties() {
         return this.conditionProperties;
     }
+    /**
+     * The type of the automation rule condition
+     * Expected value is 'Property'.
+     * 
+     */
     public String getConditionType() {
         return this.conditionType;
     }

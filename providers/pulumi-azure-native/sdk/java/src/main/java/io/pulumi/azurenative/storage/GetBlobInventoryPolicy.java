@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBlobInventoryPolicy {
+/**
+ * The storage account blob inventory policy.
+ * API Version: 2021-02-01.
+ * 
+ *
+ * The storage account blob inventory policy.
+ * 
+ */
     public static CompletableFuture<GetBlobInventoryPolicyResult> invokeAsync(GetBlobInventoryPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:getBlobInventoryPolicy", TypeShape.of(GetBlobInventoryPolicyResult.class), args == null ? GetBlobInventoryPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

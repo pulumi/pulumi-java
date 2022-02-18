@@ -11,10 +11,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Describes the properties of the last installed patch summary.
+ * 
+ */
 public final class LastPatchInstallationSummaryResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LastPatchInstallationSummaryResponse Empty = new LastPatchInstallationSummaryResponse();
 
+    /**
+     * The errors that were encountered during execution of the operation. The details array contains the list of them.
+     * 
+     */
     @InputImport(name="error", required=true)
     private final ApiErrorResponse error;
 
@@ -22,6 +30,10 @@ public final class LastPatchInstallationSummaryResponse extends io.pulumi.resour
         return this.error;
     }
 
+    /**
+     * The number of all available patches but excluded explicitly by a customer-specified exclusion list match.
+     * 
+     */
     @InputImport(name="excludedPatchCount", required=true)
     private final Integer excludedPatchCount;
 
@@ -29,6 +41,10 @@ public final class LastPatchInstallationSummaryResponse extends io.pulumi.resour
         return this.excludedPatchCount;
     }
 
+    /**
+     * The count of patches that failed installation.
+     * 
+     */
     @InputImport(name="failedPatchCount", required=true)
     private final Integer failedPatchCount;
 
@@ -36,6 +52,10 @@ public final class LastPatchInstallationSummaryResponse extends io.pulumi.resour
         return this.failedPatchCount;
     }
 
+    /**
+     * The activity ID of the operation that produced this result. It is used to correlate across CRP and extension logs.
+     * 
+     */
     @InputImport(name="installationActivityId", required=true)
     private final String installationActivityId;
 
@@ -43,6 +63,10 @@ public final class LastPatchInstallationSummaryResponse extends io.pulumi.resour
         return this.installationActivityId;
     }
 
+    /**
+     * The count of patches that successfully installed.
+     * 
+     */
     @InputImport(name="installedPatchCount", required=true)
     private final Integer installedPatchCount;
 
@@ -50,6 +74,10 @@ public final class LastPatchInstallationSummaryResponse extends io.pulumi.resour
         return this.installedPatchCount;
     }
 
+    /**
+     * The UTC timestamp when the operation began.
+     * 
+     */
     @InputImport(name="lastModifiedTime", required=true)
     private final String lastModifiedTime;
 
@@ -57,6 +85,10 @@ public final class LastPatchInstallationSummaryResponse extends io.pulumi.resour
         return this.lastModifiedTime;
     }
 
+    /**
+     * Describes whether the operation ran out of time before it completed all its intended actions
+     * 
+     */
     @InputImport(name="maintenanceWindowExceeded", required=true)
     private final Boolean maintenanceWindowExceeded;
 
@@ -64,6 +96,10 @@ public final class LastPatchInstallationSummaryResponse extends io.pulumi.resour
         return this.maintenanceWindowExceeded;
     }
 
+    /**
+     * The number of all available patches but not going to be installed because it didn't match a classification or inclusion list entry.
+     * 
+     */
     @InputImport(name="notSelectedPatchCount", required=true)
     private final Integer notSelectedPatchCount;
 
@@ -71,6 +107,10 @@ public final class LastPatchInstallationSummaryResponse extends io.pulumi.resour
         return this.notSelectedPatchCount;
     }
 
+    /**
+     * The number of all available patches expected to be installed over the course of the patch installation operation.
+     * 
+     */
     @InputImport(name="pendingPatchCount", required=true)
     private final Integer pendingPatchCount;
 
@@ -78,6 +118,10 @@ public final class LastPatchInstallationSummaryResponse extends io.pulumi.resour
         return this.pendingPatchCount;
     }
 
+    /**
+     * The UTC timestamp when the operation began.
+     * 
+     */
     @InputImport(name="startTime", required=true)
     private final String startTime;
 
@@ -85,6 +129,10 @@ public final class LastPatchInstallationSummaryResponse extends io.pulumi.resour
         return this.startTime;
     }
 
+    /**
+     * The overall success or failure status of the operation. It remains "InProgress" until the operation completes. At that point it will become "Unknown", "Failed", "Succeeded", or "CompletedWithWarnings."
+     * 
+     */
     @InputImport(name="status", required=true)
     private final String status;
 

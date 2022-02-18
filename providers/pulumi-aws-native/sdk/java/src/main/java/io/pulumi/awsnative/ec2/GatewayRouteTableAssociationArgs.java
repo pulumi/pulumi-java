@@ -13,6 +13,10 @@ public final class GatewayRouteTableAssociationArgs extends io.pulumi.resources.
 
     public static final GatewayRouteTableAssociationArgs Empty = new GatewayRouteTableAssociationArgs();
 
+    /**
+     * The ID of the gateway.
+     * 
+     */
     @InputImport(name="gatewayId", required=true)
     private final Input<String> gatewayId;
 
@@ -20,6 +24,10 @@ public final class GatewayRouteTableAssociationArgs extends io.pulumi.resources.
         return this.gatewayId;
     }
 
+    /**
+     * The ID of the route table.
+     * 
+     */
     @InputImport(name="routeTableId", required=true)
     private final Input<String> routeTableId;
 

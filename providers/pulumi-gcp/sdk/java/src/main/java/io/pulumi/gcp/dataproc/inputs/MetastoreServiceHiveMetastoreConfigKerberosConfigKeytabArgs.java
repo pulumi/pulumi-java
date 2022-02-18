@@ -13,6 +13,11 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabArgs e
 
     public static final MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabArgs Empty = new MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabArgs();
 
+    /**
+     * The relative resource name of a Secret Manager secret version, in the following form:
+     * "projects/{projectNumber}/secrets/{secret_id}/versions/{version_id}".
+     * 
+     */
     @InputImport(name="cloudSecret", required=true)
     private final Input<String> cloudSecret;
 

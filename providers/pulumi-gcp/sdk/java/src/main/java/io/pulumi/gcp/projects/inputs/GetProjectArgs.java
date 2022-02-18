@@ -12,6 +12,10 @@ public final class GetProjectArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetProjectArgs Empty = new GetProjectArgs();
 
+    /**
+     * A string filter as defined in the [REST API](https://cloud.google.com/resource-manager/reference/rest/v1/projects/list#query-parameters).
+     * 
+     */
     @InputImport(name="filter", required=true)
     private final String filter;
 

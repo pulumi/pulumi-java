@@ -9,6 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Tag used to identify a subset of objects for an Amazon S3Outposts bucket.
+ * 
+ */
 public final class BucketFilterTagArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BucketFilterTagArgs Empty = new BucketFilterTagArgs();

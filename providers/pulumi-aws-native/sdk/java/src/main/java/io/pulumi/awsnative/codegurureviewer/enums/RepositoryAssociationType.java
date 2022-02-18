@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The type of repository to be associated.
+     * 
+     */
     @EnumType
     public enum RepositoryAssociationType {
         CodeCommit("CodeCommit"),

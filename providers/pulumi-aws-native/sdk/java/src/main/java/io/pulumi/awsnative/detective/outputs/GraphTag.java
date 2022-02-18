@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GraphTag {
+    /**
+     * The key name of the tag. You can specify a value that is 1 to 128 Unicode characters in length and cannot be prefixed with aws:. Valid characters are Unicode letters, digits, white space, and any of the following symbols: _ . : / = + - @
+     * 
+     */
     private final @Nullable String key;
+    /**
+     * The value for the tag. You can specify a value that is 0 to 256 Unicode characters in length and cannot be prefixed with aws:. Valid characters are Unicode letters, digits, white space, and any of the following symbols: _ . : / = + - @
+     * 
+     */
     private final @Nullable String value;
 
     @OutputCustomType.Constructor({"key","value"})
@@ -22,9 +30,17 @@ public final class GraphTag {
         this.value = value;
     }
 
+    /**
+     * The key name of the tag. You can specify a value that is 1 to 128 Unicode characters in length and cannot be prefixed with aws:. Valid characters are Unicode letters, digits, white space, and any of the following symbols: _ . : / = + - @
+     * 
+     */
     public Optional<String> getKey() {
         return Optional.ofNullable(this.key);
     }
+    /**
+     * The value for the tag. You can specify a value that is 0 to 256 Unicode characters in length and cannot be prefixed with aws:. Valid characters are Unicode letters, digits, white space, and any of the following symbols: _ . : / = + - @
+     * 
+     */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }

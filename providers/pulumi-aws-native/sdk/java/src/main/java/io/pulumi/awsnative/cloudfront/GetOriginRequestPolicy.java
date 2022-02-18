@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOriginRequestPolicy {
+/**
+ * Resource Type definition for AWS::CloudFront::OriginRequestPolicy
+ * 
+ */
     public static CompletableFuture<GetOriginRequestPolicyResult> invokeAsync(GetOriginRequestPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudfront:getOriginRequestPolicy", TypeShape.of(GetOriginRequestPolicyResult.class), args == null ? GetOriginRequestPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

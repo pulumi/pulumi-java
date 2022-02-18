@@ -16,6 +16,10 @@ public final class RoutingIntentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RoutingIntentArgs Empty = new RoutingIntentArgs();
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -23,6 +27,10 @@ public final class RoutingIntentArgs extends io.pulumi.resources.ResourceArgs {
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -30,6 +38,10 @@ public final class RoutingIntentArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The resource group name of the RoutingIntent.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -37,6 +49,10 @@ public final class RoutingIntentArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the per VirtualHub singleton Routing Intent resource.
+     * 
+     */
     @InputImport(name="routingIntentName")
     private final @Nullable Input<String> routingIntentName;
 
@@ -44,6 +60,10 @@ public final class RoutingIntentArgs extends io.pulumi.resources.ResourceArgs {
         return this.routingIntentName == null ? Input.empty() : this.routingIntentName;
     }
 
+    /**
+     * List of routing policies.
+     * 
+     */
     @InputImport(name="routingPolicies")
     private final @Nullable Input<List<RoutingPolicyArgs>> routingPolicies;
 
@@ -51,6 +71,10 @@ public final class RoutingIntentArgs extends io.pulumi.resources.ResourceArgs {
         return this.routingPolicies == null ? Input.empty() : this.routingPolicies;
     }
 
+    /**
+     * The name of the VirtualHub.
+     * 
+     */
     @InputImport(name="virtualHubName", required=true)
     private final Input<String> virtualHubName;
 

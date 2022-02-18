@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * A rule can be one of the following: ATLEAST, AND, or OR.
+     * 
+     */
     @EnumType
     public enum SafetyRuleRuleType {
         And("AND"),

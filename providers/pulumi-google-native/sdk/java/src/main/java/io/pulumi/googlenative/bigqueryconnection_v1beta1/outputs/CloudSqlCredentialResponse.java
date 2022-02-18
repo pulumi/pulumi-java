@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CloudSqlCredentialResponse {
+    /**
+     * The password for the credential.
+     * 
+     */
     private final String password;
+    /**
+     * The username for the credential.
+     * 
+     */
     private final String username;
 
     @OutputCustomType.Constructor({"password","username"})
@@ -20,9 +28,17 @@ public final class CloudSqlCredentialResponse {
         this.username = Objects.requireNonNull(username);
     }
 
+    /**
+     * The password for the credential.
+     * 
+     */
     public String getPassword() {
         return this.password;
     }
+    /**
+     * The username for the credential.
+     * 
+     */
     public String getUsername() {
         return this.username;
     }

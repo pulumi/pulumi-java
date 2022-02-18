@@ -13,6 +13,10 @@ public final class NodePoolAutoscalingArgs extends io.pulumi.resources.ResourceA
 
     public static final NodePoolAutoscalingArgs Empty = new NodePoolAutoscalingArgs();
 
+    /**
+     * Maximum number of nodes in the NodePool. Must be >= min_node_count.
+     * 
+     */
     @InputImport(name="maxNodeCount", required=true)
     private final Input<Integer> maxNodeCount;
 
@@ -20,6 +24,11 @@ public final class NodePoolAutoscalingArgs extends io.pulumi.resources.ResourceA
         return this.maxNodeCount;
     }
 
+    /**
+     * Minimum number of nodes in the NodePool. Must be >=0 and
+     * <= `max_node_count`.
+     * 
+     */
     @InputImport(name="minNodeCount", required=true)
     private final Input<Integer> minNodeCount;
 

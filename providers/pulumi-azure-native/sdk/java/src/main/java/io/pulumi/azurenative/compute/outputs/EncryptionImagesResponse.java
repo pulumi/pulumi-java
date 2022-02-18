@@ -13,7 +13,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EncryptionImagesResponse {
+    /**
+     * A list of encryption specifications for data disk images.
+     * 
+     */
     private final @Nullable List<DataDiskImageEncryptionResponse> dataDiskImages;
+    /**
+     * Contains encryption settings for an OS disk image.
+     * 
+     */
     private final @Nullable OSDiskImageEncryptionResponse osDiskImage;
 
     @OutputCustomType.Constructor({"dataDiskImages","osDiskImage"})
@@ -24,9 +32,17 @@ public final class EncryptionImagesResponse {
         this.osDiskImage = osDiskImage;
     }
 
+    /**
+     * A list of encryption specifications for data disk images.
+     * 
+     */
     public List<DataDiskImageEncryptionResponse> getDataDiskImages() {
         return this.dataDiskImages == null ? List.of() : this.dataDiskImages;
     }
+    /**
+     * Contains encryption settings for an OS disk image.
+     * 
+     */
     public Optional<OSDiskImageEncryptionResponse> getOsDiskImage() {
         return Optional.ofNullable(this.osDiskImage);
     }

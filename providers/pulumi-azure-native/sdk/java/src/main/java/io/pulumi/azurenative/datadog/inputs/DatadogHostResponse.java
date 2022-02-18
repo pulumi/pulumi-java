@@ -16,6 +16,10 @@ public final class DatadogHostResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DatadogHostResponse Empty = new DatadogHostResponse();
 
+    /**
+     * The aliases for the host.
+     * 
+     */
     @InputImport(name="aliases")
     private final @Nullable List<String> aliases;
 
@@ -23,6 +27,10 @@ public final class DatadogHostResponse extends io.pulumi.resources.InvokeArgs {
         return this.aliases == null ? List.of() : this.aliases;
     }
 
+    /**
+     * The Datadog integrations reporting metrics for the host.
+     * 
+     */
     @InputImport(name="apps")
     private final @Nullable List<String> apps;
 
@@ -37,6 +45,10 @@ public final class DatadogHostResponse extends io.pulumi.resources.InvokeArgs {
         return this.meta == null ? Optional.empty() : Optional.ofNullable(this.meta);
     }
 
+    /**
+     * The name of the host.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 

@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ModelQualityJobDefinitionMonitoringGroundTruthS3Input {
+    /**
+     * A URI that identifies the Amazon S3 storage location where Amazon SageMaker saves the results of a monitoring job.
+     * 
+     */
     private final String s3Uri;
 
     @OutputCustomType.Constructor({"s3Uri"})
@@ -16,6 +20,10 @@ public final class ModelQualityJobDefinitionMonitoringGroundTruthS3Input {
         this.s3Uri = Objects.requireNonNull(s3Uri);
     }
 
+    /**
+     * A URI that identifies the Amazon S3 storage location where Amazon SageMaker saves the results of a monitoring job.
+     * 
+     */
     public String getS3Uri() {
         return this.s3Uri;
     }

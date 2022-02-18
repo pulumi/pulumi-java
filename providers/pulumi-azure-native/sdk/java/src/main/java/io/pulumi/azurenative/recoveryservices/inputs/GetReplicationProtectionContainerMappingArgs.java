@@ -12,6 +12,10 @@ public final class GetReplicationProtectionContainerMappingArgs extends io.pulum
 
     public static final GetReplicationProtectionContainerMappingArgs Empty = new GetReplicationProtectionContainerMappingArgs();
 
+    /**
+     * Fabric name.
+     * 
+     */
     @InputImport(name="fabricName", required=true)
     private final String fabricName;
 
@@ -19,6 +23,10 @@ public final class GetReplicationProtectionContainerMappingArgs extends io.pulum
         return this.fabricName;
     }
 
+    /**
+     * Protection Container mapping name.
+     * 
+     */
     @InputImport(name="mappingName", required=true)
     private final String mappingName;
 
@@ -26,6 +34,10 @@ public final class GetReplicationProtectionContainerMappingArgs extends io.pulum
         return this.mappingName;
     }
 
+    /**
+     * Protection container name.
+     * 
+     */
     @InputImport(name="protectionContainerName", required=true)
     private final String protectionContainerName;
 
@@ -33,6 +45,10 @@ public final class GetReplicationProtectionContainerMappingArgs extends io.pulum
         return this.protectionContainerName;
     }
 
+    /**
+     * The name of the resource group where the recovery services vault is present.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -40,6 +56,10 @@ public final class GetReplicationProtectionContainerMappingArgs extends io.pulum
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the recovery services vault.
+     * 
+     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 

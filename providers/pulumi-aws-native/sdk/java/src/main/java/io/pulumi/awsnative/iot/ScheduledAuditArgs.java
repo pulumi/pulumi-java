@@ -18,6 +18,10 @@ public final class ScheduledAuditArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ScheduledAuditArgs Empty = new ScheduledAuditArgs();
 
+    /**
+     * The day of the month on which the scheduled audit takes place. Can be 1 through 31 or LAST. This field is required if the frequency parameter is set to MONTHLY.
+     * 
+     */
     @InputImport(name="dayOfMonth")
     private final @Nullable Input<String> dayOfMonth;
 
@@ -25,6 +29,10 @@ public final class ScheduledAuditArgs extends io.pulumi.resources.ResourceArgs {
         return this.dayOfMonth == null ? Input.empty() : this.dayOfMonth;
     }
 
+    /**
+     * The day of the week on which the scheduled audit takes place. Can be one of SUN, MON, TUE,WED, THU, FRI, or SAT. This field is required if the frequency parameter is set to WEEKLY or BIWEEKLY.
+     * 
+     */
     @InputImport(name="dayOfWeek")
     private final @Nullable Input<ScheduledAuditDayOfWeek> dayOfWeek;
 
@@ -32,6 +40,10 @@ public final class ScheduledAuditArgs extends io.pulumi.resources.ResourceArgs {
         return this.dayOfWeek == null ? Input.empty() : this.dayOfWeek;
     }
 
+    /**
+     * How often the scheduled audit takes place. Can be one of DAILY, WEEKLY, BIWEEKLY, or MONTHLY.
+     * 
+     */
     @InputImport(name="frequency", required=true)
     private final Input<ScheduledAuditFrequency> frequency;
 
@@ -39,6 +51,10 @@ public final class ScheduledAuditArgs extends io.pulumi.resources.ResourceArgs {
         return this.frequency;
     }
 
+    /**
+     * The name you want to give to the scheduled audit.
+     * 
+     */
     @InputImport(name="scheduledAuditName")
     private final @Nullable Input<String> scheduledAuditName;
 
@@ -46,6 +62,10 @@ public final class ScheduledAuditArgs extends io.pulumi.resources.ResourceArgs {
         return this.scheduledAuditName == null ? Input.empty() : this.scheduledAuditName;
     }
 
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<ScheduledAuditTagArgs>> tags;
 
@@ -53,6 +73,10 @@ public final class ScheduledAuditArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * Which checks are performed during the scheduled audit. Checks must be enabled for your account.
+     * 
+     */
     @InputImport(name="targetCheckNames", required=true)
     private final Input<List<String>> targetCheckNames;
 

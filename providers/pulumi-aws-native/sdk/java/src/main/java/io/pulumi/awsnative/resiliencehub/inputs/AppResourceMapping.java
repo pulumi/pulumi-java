@@ -11,6 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Resource mapping is used to map logical resources from template to physical resource
+ * 
+ */
 public final class AppResourceMapping extends io.pulumi.resources.InvokeArgs {
 
     public static final AppResourceMapping Empty = new AppResourceMapping();

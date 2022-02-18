@@ -12,7 +12,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class BootstrapConfigurationResponse {
+    /**
+     * Repository containing the source code for the pipeline. Currently only 'azurePipeline' pipeline type supports this.
+     * 
+     */
     private final @Nullable CodeRepositoryResponse sourceRepository;
+    /**
+     * Template used to bootstrap the pipeline.
+     * 
+     */
     private final PipelineTemplateResponse template;
 
     @OutputCustomType.Constructor({"sourceRepository","template"})
@@ -23,9 +31,17 @@ public final class BootstrapConfigurationResponse {
         this.template = Objects.requireNonNull(template);
     }
 
+    /**
+     * Repository containing the source code for the pipeline. Currently only 'azurePipeline' pipeline type supports this.
+     * 
+     */
     public Optional<CodeRepositoryResponse> getSourceRepository() {
         return Optional.ofNullable(this.sourceRepository);
     }
+    /**
+     * Template used to bootstrap the pipeline.
+     * 
+     */
     public PipelineTemplateResponse getTemplate() {
         return this.template;
     }

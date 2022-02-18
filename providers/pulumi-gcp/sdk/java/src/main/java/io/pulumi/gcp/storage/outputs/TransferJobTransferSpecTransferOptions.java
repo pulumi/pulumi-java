@@ -11,8 +11,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TransferJobTransferSpecTransferOptions {
+    /**
+     * Whether objects should be deleted from the source after they are transferred to the sink. Note that this option and `delete_objects_unique_in_sink` are mutually exclusive.
+     * 
+     */
     private final @Nullable Boolean deleteObjectsFromSourceAfterTransfer;
+    /**
+     * Whether objects that exist only in the sink should be deleted. Note that this option and
+     * `delete_objects_from_source_after_transfer` are mutually exclusive.
+     * 
+     */
     private final @Nullable Boolean deleteObjectsUniqueInSink;
+    /**
+     * Whether overwriting objects that already exist in the sink is allowed.
+     * 
+     */
     private final @Nullable Boolean overwriteObjectsAlreadyExistingInSink;
 
     @OutputCustomType.Constructor({"deleteObjectsFromSourceAfterTransfer","deleteObjectsUniqueInSink","overwriteObjectsAlreadyExistingInSink"})
@@ -25,12 +38,25 @@ public final class TransferJobTransferSpecTransferOptions {
         this.overwriteObjectsAlreadyExistingInSink = overwriteObjectsAlreadyExistingInSink;
     }
 
+    /**
+     * Whether objects should be deleted from the source after they are transferred to the sink. Note that this option and `delete_objects_unique_in_sink` are mutually exclusive.
+     * 
+     */
     public Optional<Boolean> getDeleteObjectsFromSourceAfterTransfer() {
         return Optional.ofNullable(this.deleteObjectsFromSourceAfterTransfer);
     }
+    /**
+     * Whether objects that exist only in the sink should be deleted. Note that this option and
+     * `delete_objects_from_source_after_transfer` are mutually exclusive.
+     * 
+     */
     public Optional<Boolean> getDeleteObjectsUniqueInSink() {
         return Optional.ofNullable(this.deleteObjectsUniqueInSink);
     }
+    /**
+     * Whether overwriting objects that already exist in the sink is allowed.
+     * 
+     */
     public Optional<Boolean> getOverwriteObjectsAlreadyExistingInSink() {
         return Optional.ofNullable(this.overwriteObjectsAlreadyExistingInSink);
     }

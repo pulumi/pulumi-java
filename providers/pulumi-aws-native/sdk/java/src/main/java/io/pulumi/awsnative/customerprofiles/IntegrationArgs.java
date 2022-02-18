@@ -18,6 +18,10 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IntegrationArgs Empty = new IntegrationArgs();
 
+    /**
+     * The unique name of the domain.
+     * 
+     */
     @InputImport(name="domainName", required=true)
     private final Input<String> domainName;
 
@@ -32,6 +36,10 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
         return this.flowDefinition == null ? Input.empty() : this.flowDefinition;
     }
 
+    /**
+     * The name of the ObjectType defined for the 3rd party data in Profile Service
+     * 
+     */
     @InputImport(name="objectTypeName")
     private final @Nullable Input<String> objectTypeName;
 
@@ -39,6 +47,10 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
         return this.objectTypeName == null ? Input.empty() : this.objectTypeName;
     }
 
+    /**
+     * The mapping between 3rd party event types and ObjectType names
+     * 
+     */
     @InputImport(name="objectTypeNames")
     private final @Nullable Input<List<IntegrationObjectTypeMappingArgs>> objectTypeNames;
 
@@ -46,6 +58,10 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
         return this.objectTypeNames == null ? Input.empty() : this.objectTypeNames;
     }
 
+    /**
+     * The tags (keys and values) associated with the integration
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<IntegrationTagArgs>> tags;
 
@@ -53,6 +69,10 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The URI of the S3 bucket or any other type of data source.
+     * 
+     */
     @InputImport(name="uri")
     private final @Nullable Input<String> uri;
 

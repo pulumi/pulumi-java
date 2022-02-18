@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * An NS record.
+ * 
+ */
 public final class NsRecordArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NsRecordArgs Empty = new NsRecordArgs();
 
+    /**
+     * The name server name for this NS record.
+     * 
+     */
     @InputImport(name="nsdname")
     private final @Nullable Input<String> nsdname;
 

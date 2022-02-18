@@ -25,6 +25,12 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JobArgs Empty = new JobArgs();
 
+    /**
+     * By default, you can only delete inactive jobs within
+     * Dataproc. Setting this to true, and calling destroy, will ensure that the
+     * job is first cancelled before issuing the delete.
+     * 
+     */
     @InputImport(name="forceDelete")
     private final @Nullable Input<Boolean> forceDelete;
 
@@ -32,6 +38,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.forceDelete == null ? Input.empty() : this.forceDelete;
     }
 
+    /**
+     * The config of Hadoop job
+     * 
+     */
     @InputImport(name="hadoopConfig")
     private final @Nullable Input<JobHadoopConfigArgs> hadoopConfig;
 
@@ -39,6 +49,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.hadoopConfig == null ? Input.empty() : this.hadoopConfig;
     }
 
+    /**
+     * The config of hive job
+     * 
+     */
     @InputImport(name="hiveConfig")
     private final @Nullable Input<JobHiveConfigArgs> hiveConfig;
 
@@ -46,6 +60,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.hiveConfig == null ? Input.empty() : this.hiveConfig;
     }
 
+    /**
+     * The list of labels (key/value pairs) to add to the job.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -53,6 +71,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The config of pag job.
+     * 
+     */
     @InputImport(name="pigConfig")
     private final @Nullable Input<JobPigConfigArgs> pigConfig;
 
@@ -60,6 +82,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.pigConfig == null ? Input.empty() : this.pigConfig;
     }
 
+    /**
+     * The config of job placement.
+     * 
+     */
     @InputImport(name="placement", required=true)
     private final Input<JobPlacementArgs> placement;
 
@@ -67,6 +93,11 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.placement;
     }
 
+    /**
+     * The project in which the `cluster` can be found and jobs
+     * subsequently run against. If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -74,6 +105,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The config of pySpark job.
+     * 
+     */
     @InputImport(name="pysparkConfig")
     private final @Nullable Input<JobPysparkConfigArgs> pysparkConfig;
 
@@ -81,6 +116,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.pysparkConfig == null ? Input.empty() : this.pysparkConfig;
     }
 
+    /**
+     * The reference of the job
+     * 
+     */
     @InputImport(name="reference")
     private final @Nullable Input<JobReferenceArgs> reference;
 
@@ -88,6 +127,11 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.reference == null ? Input.empty() : this.reference;
     }
 
+    /**
+     * The Cloud Dataproc region. This essentially determines which clusters are available
+     * for this job to be submitted to. If not specified, defaults to `global`.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 
@@ -95,6 +139,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.region == null ? Input.empty() : this.region;
     }
 
+    /**
+     * Optional. Job scheduling configuration.
+     * 
+     */
     @InputImport(name="scheduling")
     private final @Nullable Input<JobSchedulingArgs> scheduling;
 
@@ -102,6 +150,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.scheduling == null ? Input.empty() : this.scheduling;
     }
 
+    /**
+     * The config of the Spark job.
+     * 
+     */
     @InputImport(name="sparkConfig")
     private final @Nullable Input<JobSparkConfigArgs> sparkConfig;
 
@@ -109,6 +161,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.sparkConfig == null ? Input.empty() : this.sparkConfig;
     }
 
+    /**
+     * The config of SparkSql job
+     * 
+     */
     @InputImport(name="sparksqlConfig")
     private final @Nullable Input<JobSparksqlConfigArgs> sparksqlConfig;
 

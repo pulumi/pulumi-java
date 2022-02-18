@@ -10,14 +10,50 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CertificateAttributesResponse {
+    /**
+     * The X.509 extension for CertificateTemplate.
+     * 
+     */
     private final CertificateTemplateResponse certificateTemplate;
+    /**
+     * The encoded certificate fingerprint.
+     * 
+     */
     private final String fingerprint;
+    /**
+     * The name of the issuer of this certificate.
+     * 
+     */
     private final String issuer;
+    /**
+     * Serial number of the certificate, Example: "123456789".
+     * 
+     */
     private final String serialNumber;
+    /**
+     * The subject name of this certificate.
+     * 
+     */
     private final String subject;
+    /**
+     * The certificate thumbprint.
+     * 
+     */
     private final String thumbprint;
+    /**
+     * Validation state of this certificate.
+     * 
+     */
     private final String validationState;
+    /**
+     * Certificate not valid at or after this timestamp.
+     * 
+     */
     private final String validityExpirationTime;
+    /**
+     * Certificate not valid before this timestamp.
+     * 
+     */
     private final String validityStartTime;
 
     @OutputCustomType.Constructor({"certificateTemplate","fingerprint","issuer","serialNumber","subject","thumbprint","validationState","validityExpirationTime","validityStartTime"})
@@ -42,30 +78,66 @@ public final class CertificateAttributesResponse {
         this.validityStartTime = Objects.requireNonNull(validityStartTime);
     }
 
+    /**
+     * The X.509 extension for CertificateTemplate.
+     * 
+     */
     public CertificateTemplateResponse getCertificateTemplate() {
         return this.certificateTemplate;
     }
+    /**
+     * The encoded certificate fingerprint.
+     * 
+     */
     public String getFingerprint() {
         return this.fingerprint;
     }
+    /**
+     * The name of the issuer of this certificate.
+     * 
+     */
     public String getIssuer() {
         return this.issuer;
     }
+    /**
+     * Serial number of the certificate, Example: "123456789".
+     * 
+     */
     public String getSerialNumber() {
         return this.serialNumber;
     }
+    /**
+     * The subject name of this certificate.
+     * 
+     */
     public String getSubject() {
         return this.subject;
     }
+    /**
+     * The certificate thumbprint.
+     * 
+     */
     public String getThumbprint() {
         return this.thumbprint;
     }
+    /**
+     * Validation state of this certificate.
+     * 
+     */
     public String getValidationState() {
         return this.validationState;
     }
+    /**
+     * Certificate not valid at or after this timestamp.
+     * 
+     */
     public String getValidityExpirationTime() {
         return this.validityExpirationTime;
     }
+    /**
+     * Certificate not valid before this timestamp.
+     * 
+     */
     public String getValidityStartTime() {
         return this.validityStartTime;
     }

@@ -10,10 +10,18 @@ import io.pulumi.googlenative.testing_v1.inputs.IosDeviceListResponse;
 import java.util.Objects;
 
 
+/**
+ * The matrix of environments in which the test is to be executed.
+ * 
+ */
 public final class EnvironmentMatrixResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EnvironmentMatrixResponse Empty = new EnvironmentMatrixResponse();
 
+    /**
+     * A list of Android devices; the test will be run only on the specified devices.
+     * 
+     */
     @InputImport(name="androidDeviceList", required=true)
     private final AndroidDeviceListResponse androidDeviceList;
 
@@ -21,6 +29,10 @@ public final class EnvironmentMatrixResponse extends io.pulumi.resources.InvokeA
         return this.androidDeviceList;
     }
 
+    /**
+     * A matrix of Android devices.
+     * 
+     */
     @InputImport(name="androidMatrix", required=true)
     private final AndroidMatrixResponse androidMatrix;
 
@@ -28,6 +40,10 @@ public final class EnvironmentMatrixResponse extends io.pulumi.resources.InvokeA
         return this.androidMatrix;
     }
 
+    /**
+     * A list of iOS devices.
+     * 
+     */
     @InputImport(name="iosDeviceList", required=true)
     private final IosDeviceListResponse iosDeviceList;
 

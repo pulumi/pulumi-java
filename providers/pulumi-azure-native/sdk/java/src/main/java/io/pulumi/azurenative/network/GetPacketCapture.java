@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPacketCapture {
+/**
+ * Information about packet capture session.
+ * API Version: 2020-11-01.
+ * 
+ *
+ * Information about packet capture session.
+ * 
+ */
     public static CompletableFuture<GetPacketCaptureResult> invokeAsync(GetPacketCaptureArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getPacketCapture", TypeShape.of(GetPacketCaptureResult.class), args == null ? GetPacketCaptureArgs.Empty : args, Utilities.withVersion(options));
     }

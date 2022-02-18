@@ -12,9 +12,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ParameterDefinitionsValueResponseMetadata {
+    /**
+     * Set to true to have Azure portal create role assignments on the resource ID or resource scope value of this parameter during policy assignment. This property is useful in case you wish to assign permissions outside the assignment scope.
+     * 
+     */
     private final @Nullable Boolean assignPermissions;
+    /**
+     * The description of the parameter.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * The display name for the parameter.
+     * 
+     */
     private final @Nullable String displayName;
+    /**
+     * Used when assigning the policy definition through the portal. Provides a context aware list of values for the user to choose from.
+     * 
+     */
     private final @Nullable String strongType;
 
     @OutputCustomType.Constructor({"assignPermissions","description","displayName","strongType"})
@@ -29,15 +45,31 @@ public final class ParameterDefinitionsValueResponseMetadata {
         this.strongType = strongType;
     }
 
+    /**
+     * Set to true to have Azure portal create role assignments on the resource ID or resource scope value of this parameter during policy assignment. This property is useful in case you wish to assign permissions outside the assignment scope.
+     * 
+     */
     public Optional<Boolean> getAssignPermissions() {
         return Optional.ofNullable(this.assignPermissions);
     }
+    /**
+     * The description of the parameter.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * The display name for the parameter.
+     * 
+     */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
+    /**
+     * Used when assigning the policy definition through the portal. Provides a context aware list of values for the user to choose from.
+     * 
+     */
     public Optional<String> getStrongType() {
         return Optional.ofNullable(this.strongType);
     }

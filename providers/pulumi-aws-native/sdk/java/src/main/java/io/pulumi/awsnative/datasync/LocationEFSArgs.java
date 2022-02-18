@@ -24,6 +24,10 @@ public final class LocationEFSArgs extends io.pulumi.resources.ResourceArgs {
         return this.ec2Config;
     }
 
+    /**
+     * The Amazon Resource Name (ARN) for the Amazon EFS file system.
+     * 
+     */
     @InputImport(name="efsFilesystemArn", required=true)
     private final Input<String> efsFilesystemArn;
 
@@ -31,6 +35,10 @@ public final class LocationEFSArgs extends io.pulumi.resources.ResourceArgs {
         return this.efsFilesystemArn;
     }
 
+    /**
+     * A subdirectory in the location's path. This subdirectory in the EFS file system is used to read data from the EFS source location or write data to the EFS destination.
+     * 
+     */
     @InputImport(name="subdirectory")
     private final @Nullable Input<String> subdirectory;
 
@@ -38,6 +46,10 @@ public final class LocationEFSArgs extends io.pulumi.resources.ResourceArgs {
         return this.subdirectory == null ? Input.empty() : this.subdirectory;
     }
 
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<LocationEFSTagArgs>> tags;
 

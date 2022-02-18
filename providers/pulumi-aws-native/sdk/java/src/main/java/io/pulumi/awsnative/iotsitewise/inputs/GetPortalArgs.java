@@ -12,6 +12,10 @@ public final class GetPortalArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPortalArgs Empty = new GetPortalArgs();
 
+    /**
+     * The ID of the portal.
+     * 
+     */
     @InputImport(name="portalId", required=true)
     private final String portalId;
 

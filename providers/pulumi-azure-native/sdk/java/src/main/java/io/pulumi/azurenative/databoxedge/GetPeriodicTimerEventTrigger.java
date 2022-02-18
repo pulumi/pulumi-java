@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPeriodicTimerEventTrigger {
+/**
+ * Trigger details.
+ * API Version: 2020-12-01.
+ * 
+ *
+ * Trigger details.
+ * 
+ */
     public static CompletableFuture<GetPeriodicTimerEventTriggerResult> invokeAsync(GetPeriodicTimerEventTriggerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getPeriodicTimerEventTrigger", TypeShape.of(GetPeriodicTimerEventTriggerResult.class), args == null ? GetPeriodicTimerEventTriggerArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -17,6 +17,10 @@ public final class MachineImageState extends io.pulumi.resources.ResourceArgs {
 
     public static final MachineImageState Empty = new MachineImageState();
 
+    /**
+     * A text description of the resource.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -24,6 +28,11 @@ public final class MachineImageState extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Specify this to create an application consistent machine image by informing the OS to prepare for the snapshot process.
+     * Currently only supported on Windows instances using the Volume Shadow Copy Service (VSS).
+     * 
+     */
     @InputImport(name="guestFlush")
     private final @Nullable Input<Boolean> guestFlush;
 
@@ -31,6 +40,14 @@ public final class MachineImageState extends io.pulumi.resources.ResourceArgs {
         return this.guestFlush == null ? Input.empty() : this.guestFlush;
     }
 
+    /**
+     * Encrypts the machine image using a customer-supplied encryption key.
+     * After you encrypt a machine image with a customer-supplied key, you must
+     * provide the same key if you use the machine image later (e.g. to create a
+     * instance from the image)
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="machineImageEncryptionKey")
     private final @Nullable Input<MachineImageMachineImageEncryptionKeyGetArgs> machineImageEncryptionKey;
 
@@ -38,6 +55,10 @@ public final class MachineImageState extends io.pulumi.resources.ResourceArgs {
         return this.machineImageEncryptionKey == null ? Input.empty() : this.machineImageEncryptionKey;
     }
 
+    /**
+     * Name of the resource.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -45,6 +66,11 @@ public final class MachineImageState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -52,6 +78,10 @@ public final class MachineImageState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The URI of the created resource.
+     * 
+     */
     @InputImport(name="selfLink")
     private final @Nullable Input<String> selfLink;
 
@@ -59,6 +89,10 @@ public final class MachineImageState extends io.pulumi.resources.ResourceArgs {
         return this.selfLink == null ? Input.empty() : this.selfLink;
     }
 
+    /**
+     * The source instance used to create the machine image. You can provide this as a partial or full URL to the resource.
+     * 
+     */
     @InputImport(name="sourceInstance")
     private final @Nullable Input<String> sourceInstance;
 
@@ -66,6 +100,10 @@ public final class MachineImageState extends io.pulumi.resources.ResourceArgs {
         return this.sourceInstance == null ? Input.empty() : this.sourceInstance;
     }
 
+    /**
+     * The regional or multi-regional Cloud Storage bucket location where the machine image is stored.
+     * 
+     */
     @InputImport(name="storageLocations")
     private final @Nullable Input<List<String>> storageLocations;
 

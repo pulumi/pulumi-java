@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListStaticSiteConfiguredRoles {
+/**
+ * String list resource.
+ * API Version: 2020-12-01.
+ * 
+ *
+ * String list resource.
+ * 
+ */
     public static CompletableFuture<ListStaticSiteConfiguredRolesResult> invokeAsync(ListStaticSiteConfiguredRolesArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listStaticSiteConfiguredRoles", TypeShape.of(ListStaticSiteConfiguredRolesResult.class), args == null ? ListStaticSiteConfiguredRolesArgs.Empty : args, Utilities.withVersion(options));
     }

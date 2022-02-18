@@ -12,6 +12,10 @@ public final class ListLocationConsortiumsArgs extends io.pulumi.resources.Invok
 
     public static final ListLocationConsortiumsArgs Empty = new ListLocationConsortiumsArgs();
 
+    /**
+     * Location Name.
+     * 
+     */
     @InputImport(name="locationName", required=true)
     private final String locationName;
 

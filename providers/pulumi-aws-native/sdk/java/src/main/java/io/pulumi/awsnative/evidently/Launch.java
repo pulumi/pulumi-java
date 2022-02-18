@@ -17,6 +17,10 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Resource Type definition for AWS::Evidently::Launch.
+ * 
+ */
 @ResourceType(type="aws-native:evidently:Launch")
 public class Launch extends io.pulumi.resources.CustomResource {
     @OutputExport(name="arn", type=String.class, parameters={})
@@ -67,13 +71,27 @@ public class Launch extends io.pulumi.resources.CustomResource {
     public Output<List<LaunchStepConfig>> getScheduledSplitsConfig() {
         return this.scheduledSplitsConfig;
     }
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     @OutputExport(name="tags", type=List.class, parameters={LaunchTag.class})
     private Output</* @Nullable */ List<LaunchTag>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     */
     public Output</* @Nullable */ List<LaunchTag>> getTags() {
         return this.tags;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Launch(String name, LaunchArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:evidently:Launch", name, args == null ? LaunchArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -89,6 +107,14 @@ public class Launch extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Launch get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Launch(name, id, options);
     }

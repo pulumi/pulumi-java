@@ -19,99 +19,275 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * A Google Cloud Memcache instance.
+ * 
+ * To get more information about Instance, see:
+ * 
+ * * [API documentation](https://cloud.google.com/memorystore/docs/memcached/reference/rest/v1/projects.locations.instances)
+ * * How-to Guides
+ *     * [Official Documentation](https://cloud.google.com/memcache/docs/creating-instances)
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * Instance can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:memcache/instance:Instance default projects/{{project}}/locations/{{region}}/instances/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:memcache/instance:Instance default {{project}}/{{region}}/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:memcache/instance:Instance default {{region}}/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:memcache/instance:Instance default {{name}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:memcache/instance:Instance")
 public class Instance extends io.pulumi.resources.CustomResource {
+    /**
+     * The full name of the GCE network to connect the instance to.  If not provided,
+     * 'default' will be used.
+     * 
+     */
     @OutputExport(name="authorizedNetwork", type=String.class, parameters={})
     private Output<String> authorizedNetwork;
 
+    /**
+     * @return The full name of the GCE network to connect the instance to.  If not provided,
+     * 'default' will be used.
+     * 
+     */
     public Output<String> getAuthorizedNetwork() {
         return this.authorizedNetwork;
     }
+    /**
+     * Creation timestamp in RFC3339 text format.
+     * 
+     */
     @OutputExport(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
+    /**
+     * @return Creation timestamp in RFC3339 text format.
+     * 
+     */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
+    /**
+     * Endpoint for Discovery API
+     * 
+     */
     @OutputExport(name="discoveryEndpoint", type=String.class, parameters={})
     private Output<String> discoveryEndpoint;
 
+    /**
+     * @return Endpoint for Discovery API
+     * 
+     */
     public Output<String> getDiscoveryEndpoint() {
         return this.discoveryEndpoint;
     }
+    /**
+     * A user-visible name for the instance.
+     * 
+     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
+    /**
+     * @return A user-visible name for the instance.
+     * 
+     */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
+    /**
+     * Resource labels to represent user-provided metadata.
+     * 
+     */
     @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
+    /**
+     * @return Resource labels to represent user-provided metadata.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getLabels() {
         return this.labels;
     }
+    /**
+     * The full version of memcached server running on this instance.
+     * 
+     */
     @OutputExport(name="memcacheFullVersion", type=String.class, parameters={})
     private Output<String> memcacheFullVersion;
 
+    /**
+     * @return The full version of memcached server running on this instance.
+     * 
+     */
     public Output<String> getMemcacheFullVersion() {
         return this.memcacheFullVersion;
     }
+    /**
+     * Additional information about the instance state, if available.
+     * 
+     */
     @OutputExport(name="memcacheNodes", type=List.class, parameters={InstanceMemcacheNode.class})
     private Output<List<InstanceMemcacheNode>> memcacheNodes;
 
+    /**
+     * @return Additional information about the instance state, if available.
+     * 
+     */
     public Output<List<InstanceMemcacheNode>> getMemcacheNodes() {
         return this.memcacheNodes;
     }
+    /**
+     * User-specified parameters for this memcache instance.
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="memcacheParameters", type=InstanceMemcacheParameters.class, parameters={})
     private Output</* @Nullable */ InstanceMemcacheParameters> memcacheParameters;
 
+    /**
+     * @return User-specified parameters for this memcache instance.
+     * Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ InstanceMemcacheParameters> getMemcacheParameters() {
         return this.memcacheParameters;
     }
+    /**
+     * The major version of Memcached software. If not provided, latest supported version will be used.
+     * Currently the latest supported major version is MEMCACHE_1_5. The minor version will be automatically
+     * determined by our system based on the latest supported minor version.
+     * Default value is `MEMCACHE_1_5`.
+     * Possible values are `MEMCACHE_1_5`.
+     * 
+     */
     @OutputExport(name="memcacheVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> memcacheVersion;
 
+    /**
+     * @return The major version of Memcached software. If not provided, latest supported version will be used.
+     * Currently the latest supported major version is MEMCACHE_1_5. The minor version will be automatically
+     * determined by our system based on the latest supported minor version.
+     * Default value is `MEMCACHE_1_5`.
+     * Possible values are `MEMCACHE_1_5`.
+     * 
+     */
     public Output</* @Nullable */ String> getMemcacheVersion() {
         return this.memcacheVersion;
     }
+    /**
+     * The resource name of the instance.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The resource name of the instance.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Configuration for memcache nodes.
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="nodeConfig", type=InstanceNodeConfig.class, parameters={})
     private Output<InstanceNodeConfig> nodeConfig;
 
+    /**
+     * @return Configuration for memcache nodes.
+     * Structure is documented below.
+     * 
+     */
     public Output<InstanceNodeConfig> getNodeConfig() {
         return this.nodeConfig;
     }
+    /**
+     * Number of nodes in the memcache instance.
+     * 
+     */
     @OutputExport(name="nodeCount", type=Integer.class, parameters={})
     private Output<Integer> nodeCount;
 
+    /**
+     * @return Number of nodes in the memcache instance.
+     * 
+     */
     public Output<Integer> getNodeCount() {
         return this.nodeCount;
     }
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * The region of the Memcache instance. If it is not provided, the provider region is used.
+     * 
+     */
     @OutputExport(name="region", type=String.class, parameters={})
     private Output<String> region;
 
+    /**
+     * @return The region of the Memcache instance. If it is not provided, the provider region is used.
+     * 
+     */
     public Output<String> getRegion() {
         return this.region;
     }
+    /**
+     * Zones where memcache nodes should be provisioned.  If not
+     * provided, all zones will be used.
+     * 
+     */
     @OutputExport(name="zones", type=List.class, parameters={String.class})
     private Output<List<String>> zones;
 
+    /**
+     * @return Zones where memcache nodes should be provisioned.  If not
+     * provided, all zones will be used.
+     * 
+     */
     public Output<List<String>> getZones() {
         return this.zones;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Instance(String name, InstanceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:memcache/instance:Instance", name, args == null ? InstanceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -127,6 +303,15 @@ public class Instance extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Instance get(String name, Input<String> id, @Nullable InstanceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Instance(name, id, state, options);
     }

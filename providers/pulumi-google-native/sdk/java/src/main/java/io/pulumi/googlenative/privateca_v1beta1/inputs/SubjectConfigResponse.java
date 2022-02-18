@@ -10,10 +10,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * These values are used to create the distinguished name and subject alternative name fields in an X.509 certificate.
+ * 
+ */
 public final class SubjectConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SubjectConfigResponse Empty = new SubjectConfigResponse();
 
+    /**
+     * Optional. The "common name" of the distinguished name.
+     * 
+     */
     @InputImport(name="commonName", required=true)
     private final String commonName;
 
@@ -21,6 +29,10 @@ public final class SubjectConfigResponse extends io.pulumi.resources.InvokeArgs 
         return this.commonName;
     }
 
+    /**
+     * Contains distinguished name fields such as the location and organization.
+     * 
+     */
     @InputImport(name="subject", required=true)
     private final SubjectResponse subject;
 
@@ -28,6 +40,10 @@ public final class SubjectConfigResponse extends io.pulumi.resources.InvokeArgs 
         return this.subject;
     }
 
+    /**
+     * Optional. The subject alternative name fields.
+     * 
+     */
     @InputImport(name="subjectAltName", required=true)
     private final SubjectAltNamesResponse subjectAltName;
 

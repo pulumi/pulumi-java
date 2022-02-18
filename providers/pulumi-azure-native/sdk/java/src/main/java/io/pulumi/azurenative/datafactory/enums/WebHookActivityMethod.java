@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Rest API method for target endpoint.
+     * 
+     */
     @EnumType
     public enum WebHookActivityMethod {
         POST("POST");

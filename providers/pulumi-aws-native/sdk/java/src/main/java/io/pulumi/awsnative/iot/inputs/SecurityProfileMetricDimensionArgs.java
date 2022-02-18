@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The dimension of a metric.
+ * 
+ */
 public final class SecurityProfileMetricDimensionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SecurityProfileMetricDimensionArgs Empty = new SecurityProfileMetricDimensionArgs();
 
+    /**
+     * A unique identifier for the dimension.
+     * 
+     */
     @InputImport(name="dimensionName", required=true)
     private final Input<String> dimensionName;
 
@@ -22,6 +30,10 @@ public final class SecurityProfileMetricDimensionArgs extends io.pulumi.resource
         return this.dimensionName;
     }
 
+    /**
+     * Defines how the dimensionValues of a dimension are interpreted.
+     * 
+     */
     @InputImport(name="operator")
     private final @Nullable Input<SecurityProfileMetricDimensionOperator> operator;
 

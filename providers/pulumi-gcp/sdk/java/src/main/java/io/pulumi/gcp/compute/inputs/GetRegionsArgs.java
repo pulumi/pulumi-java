@@ -14,6 +14,10 @@ public final class GetRegionsArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetRegionsArgs Empty = new GetRegionsArgs();
 
+    /**
+     * Project from which to list available regions. Defaults to project declared in the provider.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -21,6 +25,11 @@ public final class GetRegionsArgs extends io.pulumi.resources.InvokeArgs {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
+    /**
+     * Allows to filter list of regions based on their current status. Status can be either `UP` or `DOWN`.
+     * Defaults to no filtering (all available regions - both `UP` and `DOWN`).
+     * 
+     */
     @InputImport(name="status")
     private final @Nullable String status;
 

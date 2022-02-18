@@ -15,12 +15,43 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ClusterClusterConfigWorkerConfig {
+    /**
+     * The Compute Engine accelerator configuration for these instances. Can be specified multiple times.
+     * 
+     */
     private final @Nullable List<ClusterClusterConfigWorkerConfigAccelerator> accelerators;
+    /**
+     * Disk Config
+     * 
+     */
     private final @Nullable ClusterClusterConfigWorkerConfigDiskConfig diskConfig;
+    /**
+     * The URI for the image to use for this worker.  See [the guide](https://cloud.google.com/dataproc/docs/guides/dataproc-images)
+     * for more information.
+     * 
+     */
     private final @Nullable String imageUri;
     private final @Nullable List<String> instanceNames;
+    /**
+     * The name of a Google Compute Engine machine type
+     * to create for the worker nodes. If not specified, GCP will default to a predetermined
+     * computed value (currently `n1-standard-4`).
+     * 
+     */
     private final @Nullable String machineType;
+    /**
+     * The name of a minimum generation of CPU family
+     * for the master. If not specified, GCP will default to a predetermined computed value
+     * for each zone. See [the guide](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform)
+     * for details about which CPU families are available (and defaulted) for each zone.
+     * 
+     */
     private final @Nullable String minCpuPlatform;
+    /**
+     * Specifies the number of preemptible nodes to create.
+     * Defaults to 0.
+     * 
+     */
     private final @Nullable Integer numInstances;
 
     @OutputCustomType.Constructor({"accelerators","diskConfig","imageUri","instanceNames","machineType","minCpuPlatform","numInstances"})
@@ -41,24 +72,55 @@ public final class ClusterClusterConfigWorkerConfig {
         this.numInstances = numInstances;
     }
 
+    /**
+     * The Compute Engine accelerator configuration for these instances. Can be specified multiple times.
+     * 
+     */
     public List<ClusterClusterConfigWorkerConfigAccelerator> getAccelerators() {
         return this.accelerators == null ? List.of() : this.accelerators;
     }
+    /**
+     * Disk Config
+     * 
+     */
     public Optional<ClusterClusterConfigWorkerConfigDiskConfig> getDiskConfig() {
         return Optional.ofNullable(this.diskConfig);
     }
+    /**
+     * The URI for the image to use for this worker.  See [the guide](https://cloud.google.com/dataproc/docs/guides/dataproc-images)
+     * for more information.
+     * 
+     */
     public Optional<String> getImageUri() {
         return Optional.ofNullable(this.imageUri);
     }
     public List<String> getInstanceNames() {
         return this.instanceNames == null ? List.of() : this.instanceNames;
     }
+    /**
+     * The name of a Google Compute Engine machine type
+     * to create for the worker nodes. If not specified, GCP will default to a predetermined
+     * computed value (currently `n1-standard-4`).
+     * 
+     */
     public Optional<String> getMachineType() {
         return Optional.ofNullable(this.machineType);
     }
+    /**
+     * The name of a minimum generation of CPU family
+     * for the master. If not specified, GCP will default to a predetermined computed value
+     * for each zone. See [the guide](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform)
+     * for details about which CPU families are available (and defaulted) for each zone.
+     * 
+     */
     public Optional<String> getMinCpuPlatform() {
         return Optional.ofNullable(this.minCpuPlatform);
     }
+    /**
+     * Specifies the number of preemptible nodes to create.
+     * Defaults to 0.
+     * 
+     */
     public Optional<Integer> getNumInstances() {
         return Optional.ofNullable(this.numInstances);
     }

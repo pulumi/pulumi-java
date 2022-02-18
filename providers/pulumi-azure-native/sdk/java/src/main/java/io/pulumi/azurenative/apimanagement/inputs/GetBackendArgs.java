@@ -12,6 +12,10 @@ public final class GetBackendArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetBackendArgs Empty = new GetBackendArgs();
 
+    /**
+     * Identifier of the Backend entity. Must be unique in the current API Management service instance.
+     * 
+     */
     @InputImport(name="backendId", required=true)
     private final String backendId;
 
@@ -19,6 +23,10 @@ public final class GetBackendArgs extends io.pulumi.resources.InvokeArgs {
         return this.backendId;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetBackendArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the API Management service.
+     * 
+     */
     @InputImport(name="serviceName", required=true)
     private final String serviceName;
 

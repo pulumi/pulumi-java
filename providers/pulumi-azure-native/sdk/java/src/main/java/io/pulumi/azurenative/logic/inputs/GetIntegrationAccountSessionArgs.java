@@ -12,6 +12,10 @@ public final class GetIntegrationAccountSessionArgs extends io.pulumi.resources.
 
     public static final GetIntegrationAccountSessionArgs Empty = new GetIntegrationAccountSessionArgs();
 
+    /**
+     * The integration account name.
+     * 
+     */
     @InputImport(name="integrationAccountName", required=true)
     private final String integrationAccountName;
 
@@ -19,6 +23,10 @@ public final class GetIntegrationAccountSessionArgs extends io.pulumi.resources.
         return this.integrationAccountName;
     }
 
+    /**
+     * The resource group name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetIntegrationAccountSessionArgs extends io.pulumi.resources.
         return this.resourceGroupName;
     }
 
+    /**
+     * The integration account session name.
+     * 
+     */
     @InputImport(name="sessionName", required=true)
     private final String sessionName;
 

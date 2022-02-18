@@ -15,6 +15,12 @@ public final class PatchDeploymentRecurringScheduleMonthlyGetArgs extends io.pul
 
     public static final PatchDeploymentRecurringScheduleMonthlyGetArgs Empty = new PatchDeploymentRecurringScheduleMonthlyGetArgs();
 
+    /**
+     * One day of the month. 1-31 indicates the 1st to the 31st day. -1 indicates the last day of the month.
+     * Months without the target day will be skipped. For example, a schedule to run "every month on the 31st"
+     * will not run in February, April, June, etc.
+     * 
+     */
     @InputImport(name="monthDay")
     private final @Nullable Input<Integer> monthDay;
 
@@ -22,6 +28,11 @@ public final class PatchDeploymentRecurringScheduleMonthlyGetArgs extends io.pul
         return this.monthDay == null ? Input.empty() : this.monthDay;
     }
 
+    /**
+     * Week day in a month.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="weekDayOfMonth")
     private final @Nullable Input<PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthGetArgs> weekDayOfMonth;
 

@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPlaybackKeyPair {
+/**
+ * Resource Type definition for AWS::IVS::PlaybackKeyPair
+ * 
+ */
     public static CompletableFuture<GetPlaybackKeyPairResult> invokeAsync(GetPlaybackKeyPairArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ivs:getPlaybackKeyPair", TypeShape.of(GetPlaybackKeyPairResult.class), args == null ? GetPlaybackKeyPairArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -14,6 +14,10 @@ public final class SloBasicSliAvailabilityGetArgs extends io.pulumi.resources.Re
 
     public static final SloBasicSliAvailabilityGetArgs Empty = new SloBasicSliAvailabilityGetArgs();
 
+    /**
+     * Whether an availability SLI is enabled or not. Must be set to ` true. Defaults to  `true`.
+     * 
+     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 

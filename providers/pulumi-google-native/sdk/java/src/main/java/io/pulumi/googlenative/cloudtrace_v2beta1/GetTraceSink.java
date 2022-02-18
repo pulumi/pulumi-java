@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTraceSink {
+/**
+ * Get a trace sink by name under the parent resource (GCP project).
+ * 
+ */
     public static CompletableFuture<GetTraceSinkResult> invokeAsync(GetTraceSinkArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudtrace/v2beta1:getTraceSink", TypeShape.of(GetTraceSinkResult.class), args == null ? GetTraceSinkArgs.Empty : args, Utilities.withVersion(options));
     }

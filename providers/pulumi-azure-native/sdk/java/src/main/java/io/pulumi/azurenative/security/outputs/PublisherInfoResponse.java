@@ -11,9 +11,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PublisherInfoResponse {
+    /**
+     * The "OriginalName" field taken from the file's version resource
+     * 
+     */
     private final @Nullable String binaryName;
+    /**
+     * The product name taken from the file's version resource
+     * 
+     */
     private final @Nullable String productName;
+    /**
+     * The Subject field of the x.509 certificate used to sign the code, using the following fields -  O = Organization, L = Locality, S = State or Province, and C = Country
+     * 
+     */
     private final @Nullable String publisherName;
+    /**
+     * The binary file version taken from the file's version resource
+     * 
+     */
     private final @Nullable String version;
 
     @OutputCustomType.Constructor({"binaryName","productName","publisherName","version"})
@@ -28,15 +44,31 @@ public final class PublisherInfoResponse {
         this.version = version;
     }
 
+    /**
+     * The "OriginalName" field taken from the file's version resource
+     * 
+     */
     public Optional<String> getBinaryName() {
         return Optional.ofNullable(this.binaryName);
     }
+    /**
+     * The product name taken from the file's version resource
+     * 
+     */
     public Optional<String> getProductName() {
         return Optional.ofNullable(this.productName);
     }
+    /**
+     * The Subject field of the x.509 certificate used to sign the code, using the following fields -  O = Organization, L = Locality, S = State or Province, and C = Country
+     * 
+     */
     public Optional<String> getPublisherName() {
         return Optional.ofNullable(this.publisherName);
     }
+    /**
+     * The binary file version taken from the file's version resource
+     * 
+     */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }

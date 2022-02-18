@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ConnectionMonitorIcmpConfigurationResponse {
+    /**
+     * Value indicating whether path evaluation with trace route should be disabled.
+     * 
+     */
     private final @Nullable Boolean disableTraceRoute;
 
     @OutputCustomType.Constructor({"disableTraceRoute"})
@@ -18,6 +22,10 @@ public final class ConnectionMonitorIcmpConfigurationResponse {
         this.disableTraceRoute = disableTraceRoute;
     }
 
+    /**
+     * Value indicating whether path evaluation with trace route should be disabled.
+     * 
+     */
     public Optional<Boolean> getDisableTraceRoute() {
         return Optional.ofNullable(this.disableTraceRoute);
     }

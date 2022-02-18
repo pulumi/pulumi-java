@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Range of numerical values within min and max.
+ * 
+ */
 public final class GoogleMonitoringV3RangeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleMonitoringV3RangeArgs Empty = new GoogleMonitoringV3RangeArgs();
 
+    /**
+     * Range maximum.
+     * 
+     */
     @InputImport(name="max")
     private final @Nullable Input<Double> max;
 
@@ -21,6 +29,10 @@ public final class GoogleMonitoringV3RangeArgs extends io.pulumi.resources.Resou
         return this.max == null ? Input.empty() : this.max;
     }
 
+    /**
+     * Range minimum.
+     * 
+     */
     @InputImport(name="min")
     private final @Nullable Input<Double> min;
 

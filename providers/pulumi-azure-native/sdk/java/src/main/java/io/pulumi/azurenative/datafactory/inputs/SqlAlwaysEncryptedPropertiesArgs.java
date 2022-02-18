@@ -16,10 +16,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Sql always encrypted properties.
+ * 
+ */
 public final class SqlAlwaysEncryptedPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SqlAlwaysEncryptedPropertiesArgs Empty = new SqlAlwaysEncryptedPropertiesArgs();
 
+    /**
+     * Sql always encrypted AKV authentication type. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="alwaysEncryptedAkvAuthType", required=true)
     private final Input<Either<String,SqlAlwaysEncryptedAkvAuthType>> alwaysEncryptedAkvAuthType;
 
@@ -27,6 +35,10 @@ public final class SqlAlwaysEncryptedPropertiesArgs extends io.pulumi.resources.
         return this.alwaysEncryptedAkvAuthType;
     }
 
+    /**
+     * The credential reference containing authentication information.
+     * 
+     */
     @InputImport(name="credential")
     private final @Nullable Input<CredentialReferenceArgs> credential;
 
@@ -34,6 +46,10 @@ public final class SqlAlwaysEncryptedPropertiesArgs extends io.pulumi.resources.
         return this.credential == null ? Input.empty() : this.credential;
     }
 
+    /**
+     * The client ID of the application in Azure Active Directory used for Azure Key Vault authentication. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="servicePrincipalId")
     private final @Nullable Input<Object> servicePrincipalId;
 
@@ -41,6 +57,10 @@ public final class SqlAlwaysEncryptedPropertiesArgs extends io.pulumi.resources.
         return this.servicePrincipalId == null ? Input.empty() : this.servicePrincipalId;
     }
 
+    /**
+     * The key of the service principal used to authenticate against Azure Key Vault.
+     * 
+     */
     @InputImport(name="servicePrincipalKey")
     private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
 

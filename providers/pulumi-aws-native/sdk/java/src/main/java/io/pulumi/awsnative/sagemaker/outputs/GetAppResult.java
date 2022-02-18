@@ -12,7 +12,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetAppResult {
+    /**
+     * The Amazon Resource Name (ARN) of the app.
+     * 
+     */
     private final @Nullable String appArn;
+    /**
+     * The instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance.
+     * 
+     */
     private final @Nullable AppResourceSpec resourceSpec;
 
     @OutputCustomType.Constructor({"appArn","resourceSpec"})
@@ -23,9 +31,17 @@ public final class GetAppResult {
         this.resourceSpec = resourceSpec;
     }
 
+    /**
+     * The Amazon Resource Name (ARN) of the app.
+     * 
+     */
     public Optional<String> getAppArn() {
         return Optional.ofNullable(this.appArn);
     }
+    /**
+     * The instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance.
+     * 
+     */
     public Optional<AppResourceSpec> getResourceSpec() {
         return Optional.ofNullable(this.resourceSpec);
     }

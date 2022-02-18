@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The encryption-in-transit properties.
+ * 
+ */
 public final class EncryptionInTransitPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EncryptionInTransitPropertiesResponse Empty = new EncryptionInTransitPropertiesResponse();
 
+    /**
+     * Indicates whether or not inter cluster node communication is encrypted in transit.
+     * 
+     */
     @InputImport(name="isEncryptionInTransitEnabled")
     private final @Nullable Boolean isEncryptionInTransitEnabled;
 

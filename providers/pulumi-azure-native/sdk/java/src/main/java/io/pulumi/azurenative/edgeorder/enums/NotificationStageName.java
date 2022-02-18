@@ -8,9 +8,21 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Name of the stage.
+     * 
+     */
     @EnumType
     public enum NotificationStageName {
+        /**
+         * Notification at order item shipped from microsoft datacenter.
+         * 
+         */
         Shipped("Shipped"),
+        /**
+         * Notification at order item delivered to customer.
+         * 
+         */
         Delivered("Delivered");
 
         private final String value;

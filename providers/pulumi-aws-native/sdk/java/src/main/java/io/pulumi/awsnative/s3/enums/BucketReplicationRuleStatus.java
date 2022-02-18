@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Specifies whether the rule is enabled.
+     * 
+     */
     @EnumType
     public enum BucketReplicationRuleStatus {
         Disabled("Disabled"),

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Connector billing model
+     * 
+     */
     @EnumType
     public enum ConnectorBillingModel {
         Trial("trial"),

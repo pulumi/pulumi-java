@@ -14,6 +14,10 @@ public final class GetRegionInstanceGroupArgs extends io.pulumi.resources.Invoke
 
     public static final GetRegionInstanceGroupArgs Empty = new GetRegionInstanceGroupArgs();
 
+    /**
+     * The name of the instance group.  One of `name` or `self_link` must be provided.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -21,6 +25,12 @@ public final class GetRegionInstanceGroupArgs extends io.pulumi.resources.Invoke
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If `self_link` is provided, this value is ignored.  If neither `self_link`
+     * nor `project` are provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -28,6 +38,12 @@ public final class GetRegionInstanceGroupArgs extends io.pulumi.resources.Invoke
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
+    /**
+     * The region in which the resource belongs.  If `self_link`
+     * is provided, this value is ignored.  If neither `self_link` nor `region` are
+     * provided, the provider region is used.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable String region;
 
@@ -35,6 +51,10 @@ public final class GetRegionInstanceGroupArgs extends io.pulumi.resources.Invoke
         return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);
     }
 
+    /**
+     * The link to the instance group.  One of `name` or `self_link` must be provided.
+     * 
+     */
     @InputImport(name="selfLink")
     private final @Nullable String selfLink;
 

@@ -12,6 +12,10 @@ public final class GetResolverQueryLoggingConfigArgs extends io.pulumi.resources
 
     public static final GetResolverQueryLoggingConfigArgs Empty = new GetResolverQueryLoggingConfigArgs();
 
+    /**
+     * ResourceId
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 

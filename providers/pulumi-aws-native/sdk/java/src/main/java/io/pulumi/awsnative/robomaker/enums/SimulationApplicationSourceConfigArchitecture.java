@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The target processor architecture for the application.
+     * 
+     */
     @EnumType
     public enum SimulationApplicationSourceConfigArchitecture {
         X8664("X86_64"),

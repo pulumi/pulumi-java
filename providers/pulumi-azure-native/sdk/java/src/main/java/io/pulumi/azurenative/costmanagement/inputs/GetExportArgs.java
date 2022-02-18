@@ -14,6 +14,10 @@ public final class GetExportArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetExportArgs Empty = new GetExportArgs();
 
+    /**
+     * May be used to expand the properties within an export. Currently only 'runHistory' is supported and will return information for the last 10 executions of the export.
+     * 
+     */
     @InputImport(name="expand")
     private final @Nullable String expand;
 
@@ -21,6 +25,10 @@ public final class GetExportArgs extends io.pulumi.resources.InvokeArgs {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
+    /**
+     * Export Name.
+     * 
+     */
     @InputImport(name="exportName", required=true)
     private final String exportName;
 
@@ -28,6 +36,10 @@ public final class GetExportArgs extends io.pulumi.resources.InvokeArgs {
         return this.exportName;
     }
 
+    /**
+     * The scope associated with export operations. This includes '/subscriptions/{subscriptionId}/' for subscription scope, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope and '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, '/providers/Microsoft.Management/managementGroups/{managementGroupId} for Management Group scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for billingProfile scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}/invoiceSections/{invoiceSectionId}' for invoiceSection scope, and '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/customers/{customerId}' specific for partners.
+     * 
+     */
     @InputImport(name="scope", required=true)
     private final String scope;
 

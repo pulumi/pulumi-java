@@ -21,6 +21,10 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FlowLogArgs Empty = new FlowLogArgs();
 
+    /**
+     * The ARN for the IAM role that permits Amazon EC2 to publish flow logs to a CloudWatch Logs log group in your account. If you specify LogDestinationType as s3, do not specify DeliverLogsPermissionArn or LogGroupName.
+     * 
+     */
     @InputImport(name="deliverLogsPermissionArn")
     private final @Nullable Input<String> deliverLogsPermissionArn;
 
@@ -35,6 +39,10 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
         return this.destinationOptions == null ? Input.empty() : this.destinationOptions;
     }
 
+    /**
+     * Specifies the destination to which the flow log data is to be published. Flow log data can be published to a CloudWatch Logs log group or an Amazon S3 bucket. The value specified for this parameter depends on the value specified for LogDestinationType.
+     * 
+     */
     @InputImport(name="logDestination")
     private final @Nullable Input<String> logDestination;
 
@@ -42,6 +50,10 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
         return this.logDestination == null ? Input.empty() : this.logDestination;
     }
 
+    /**
+     * Specifies the type of destination to which the flow log data is to be published. Flow log data can be published to CloudWatch Logs or Amazon S3.
+     * 
+     */
     @InputImport(name="logDestinationType")
     private final @Nullable Input<FlowLogLogDestinationType> logDestinationType;
 
@@ -49,6 +61,10 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
         return this.logDestinationType == null ? Input.empty() : this.logDestinationType;
     }
 
+    /**
+     * The fields to include in the flow log record, in the order in which they should appear.
+     * 
+     */
     @InputImport(name="logFormat")
     private final @Nullable Input<String> logFormat;
 
@@ -56,6 +72,10 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
         return this.logFormat == null ? Input.empty() : this.logFormat;
     }
 
+    /**
+     * The name of a new or existing CloudWatch Logs log group where Amazon EC2 publishes your flow logs. If you specify LogDestinationType as s3, do not specify DeliverLogsPermissionArn or LogGroupName.
+     * 
+     */
     @InputImport(name="logGroupName")
     private final @Nullable Input<String> logGroupName;
 
@@ -63,6 +83,10 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
         return this.logGroupName == null ? Input.empty() : this.logGroupName;
     }
 
+    /**
+     * The maximum interval of time during which a flow of packets is captured and aggregated into a flow log record. You can specify 60 seconds (1 minute) or 600 seconds (10 minutes).
+     * 
+     */
     @InputImport(name="maxAggregationInterval")
     private final @Nullable Input<Integer> maxAggregationInterval;
 
@@ -70,6 +94,10 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
         return this.maxAggregationInterval == null ? Input.empty() : this.maxAggregationInterval;
     }
 
+    /**
+     * The ID of the subnet, network interface, or VPC for which you want to create a flow log.
+     * 
+     */
     @InputImport(name="resourceId", required=true)
     private final Input<String> resourceId;
 
@@ -77,6 +105,10 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceId;
     }
 
+    /**
+     * The type of resource for which to create the flow log. For example, if you specified a VPC ID for the ResourceId property, specify VPC for this property.
+     * 
+     */
     @InputImport(name="resourceType", required=true)
     private final Input<FlowLogResourceType> resourceType;
 
@@ -84,6 +116,10 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceType;
     }
 
+    /**
+     * The tags to apply to the flow logs.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<FlowLogTagArgs>> tags;
 
@@ -91,6 +127,10 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The type of traffic to log. You can log traffic that the resource accepts or rejects, or all traffic.
+     * 
+     */
     @InputImport(name="trafficType", required=true)
     private final Input<FlowLogTrafficType> trafficType;
 

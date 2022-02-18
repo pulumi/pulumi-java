@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ConnectorProfileZendeskConnectorProfileProperties {
+    /**
+     * The location of the Zendesk resource
+     * 
+     */
     private final String instanceUrl;
 
     @OutputCustomType.Constructor({"instanceUrl"})
@@ -16,6 +20,10 @@ public final class ConnectorProfileZendeskConnectorProfileProperties {
         this.instanceUrl = Objects.requireNonNull(instanceUrl);
     }
 
+    /**
+     * The location of the Zendesk resource
+     * 
+     */
     public String getInstanceUrl() {
         return this.instanceUrl;
     }

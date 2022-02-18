@@ -15,6 +15,10 @@ public final class HelmReleasePropertiesDefinitionResponse extends io.pulumi.res
 
     public static final HelmReleasePropertiesDefinitionResponse Empty = new HelmReleasePropertiesDefinitionResponse();
 
+    /**
+     * Total number of times that the HelmRelease failed to install or upgrade
+     * 
+     */
     @InputImport(name="failureCount")
     private final @Nullable Double failureCount;
 
@@ -22,6 +26,10 @@ public final class HelmReleasePropertiesDefinitionResponse extends io.pulumi.res
         return this.failureCount == null ? Optional.empty() : Optional.ofNullable(this.failureCount);
     }
 
+    /**
+     * The reference to the HelmChart object used as the source to this HelmRelease
+     * 
+     */
     @InputImport(name="helmChartRef")
     private final @Nullable ObjectReferenceDefinitionResponse helmChartRef;
 
@@ -29,6 +37,10 @@ public final class HelmReleasePropertiesDefinitionResponse extends io.pulumi.res
         return this.helmChartRef == null ? Optional.empty() : Optional.ofNullable(this.helmChartRef);
     }
 
+    /**
+     * Number of times that the HelmRelease failed to install
+     * 
+     */
     @InputImport(name="installFailureCount")
     private final @Nullable Double installFailureCount;
 
@@ -36,6 +48,10 @@ public final class HelmReleasePropertiesDefinitionResponse extends io.pulumi.res
         return this.installFailureCount == null ? Optional.empty() : Optional.ofNullable(this.installFailureCount);
     }
 
+    /**
+     * The revision number of the last released object change
+     * 
+     */
     @InputImport(name="lastRevisionApplied")
     private final @Nullable Double lastRevisionApplied;
 
@@ -43,6 +59,10 @@ public final class HelmReleasePropertiesDefinitionResponse extends io.pulumi.res
         return this.lastRevisionApplied == null ? Optional.empty() : Optional.ofNullable(this.lastRevisionApplied);
     }
 
+    /**
+     * Number of times that the HelmRelease failed to upgrade
+     * 
+     */
     @InputImport(name="upgradeFailureCount")
     private final @Nullable Double upgradeFailureCount;
 

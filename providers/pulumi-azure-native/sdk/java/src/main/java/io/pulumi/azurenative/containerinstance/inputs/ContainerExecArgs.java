@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The container execution command, for liveness or readiness probe
+ * 
+ */
 public final class ContainerExecArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContainerExecArgs Empty = new ContainerExecArgs();
 
+    /**
+     * The commands to execute within the container.
+     * 
+     */
     @InputImport(name="command")
     private final @Nullable Input<List<String>> command;
 

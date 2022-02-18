@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFramework {
+/**
+ * Contains detailed information about a framework. Frameworks contain controls, which evaluate and report on your backup events and resources. Frameworks generate daily compliance results.
+ * 
+ */
     public static CompletableFuture<GetFrameworkResult> invokeAsync(GetFrameworkArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:backup:getFramework", TypeShape.of(GetFrameworkResult.class), args == null ? GetFrameworkArgs.Empty : args, Utilities.withVersion(options));
     }

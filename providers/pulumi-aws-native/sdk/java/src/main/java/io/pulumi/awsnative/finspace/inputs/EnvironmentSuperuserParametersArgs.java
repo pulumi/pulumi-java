@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Parameters of the first Superuser for the FinSpace Environment
+ * 
+ */
 public final class EnvironmentSuperuserParametersArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EnvironmentSuperuserParametersArgs Empty = new EnvironmentSuperuserParametersArgs();
 
+    /**
+     * Email address
+     * 
+     */
     @InputImport(name="emailAddress")
     private final @Nullable Input<String> emailAddress;
 
@@ -21,6 +29,10 @@ public final class EnvironmentSuperuserParametersArgs extends io.pulumi.resource
         return this.emailAddress == null ? Input.empty() : this.emailAddress;
     }
 
+    /**
+     * First name
+     * 
+     */
     @InputImport(name="firstName")
     private final @Nullable Input<String> firstName;
 
@@ -28,6 +40,10 @@ public final class EnvironmentSuperuserParametersArgs extends io.pulumi.resource
         return this.firstName == null ? Input.empty() : this.firstName;
     }
 
+    /**
+     * Last name
+     * 
+     */
     @InputImport(name="lastName")
     private final @Nullable Input<String> lastName;
 

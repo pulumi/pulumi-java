@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A label for tagging Environment resource
+ * 
+ */
 public final class ServiceTag extends io.pulumi.resources.InvokeArgs {
 
     public static final ServiceTag Empty = new ServiceTag();
 
+    /**
+     * A string used to identify this tag
+     * 
+     */
     @InputImport(name="key", required=true)
     private final String key;
 
@@ -19,6 +27,10 @@ public final class ServiceTag extends io.pulumi.resources.InvokeArgs {
         return this.key;
     }
 
+    /**
+     * A string containing the value for the tag
+     * 
+     */
     @InputImport(name="value", required=true)
     private final String value;
 

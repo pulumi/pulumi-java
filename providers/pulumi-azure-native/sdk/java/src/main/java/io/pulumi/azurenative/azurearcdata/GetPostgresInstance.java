@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPostgresInstance {
+/**
+ * A Postgres Instance.
+ * API Version: 2021-06-01-preview.
+ * 
+ *
+ * A Postgres Instance.
+ * 
+ */
     public static CompletableFuture<GetPostgresInstanceResult> invokeAsync(GetPostgresInstanceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:azurearcdata:getPostgresInstance", TypeShape.of(GetPostgresInstanceResult.class), args == null ? GetPostgresInstanceArgs.Empty : args, Utilities.withVersion(options));
     }

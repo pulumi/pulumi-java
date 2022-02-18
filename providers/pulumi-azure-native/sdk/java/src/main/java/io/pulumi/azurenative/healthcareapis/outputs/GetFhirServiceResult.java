@@ -20,20 +20,80 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetFhirServiceResult {
+    /**
+     * Fhir Service access policies.
+     * 
+     */
     private final @Nullable List<FhirServiceAccessPolicyEntryResponse> accessPolicies;
+    /**
+     * Fhir Service Azure container registry configuration.
+     * 
+     */
     private final @Nullable FhirServiceAcrConfigurationResponse acrConfiguration;
+    /**
+     * Fhir Service authentication configuration.
+     * 
+     */
     private final @Nullable FhirServiceAuthenticationConfigurationResponse authenticationConfiguration;
+    /**
+     * Fhir Service Cors configuration.
+     * 
+     */
     private final @Nullable FhirServiceCorsConfigurationResponse corsConfiguration;
+    /**
+     * An etag associated with the resource, used for optimistic concurrency when editing it.
+     * 
+     */
     private final @Nullable String etag;
+    /**
+     * Fhir Service export configuration.
+     * 
+     */
     private final @Nullable FhirServiceExportConfigurationResponse exportConfiguration;
+    /**
+     * The resource identifier.
+     * 
+     */
     private final String id;
+    /**
+     * Setting indicating whether the service has a managed identity associated with it.
+     * 
+     */
     private final @Nullable ServiceManagedIdentityResponseIdentity identity;
+    /**
+     * The kind of the service.
+     * 
+     */
     private final @Nullable String kind;
+    /**
+     * The resource location.
+     * 
+     */
     private final @Nullable String location;
+    /**
+     * The resource name.
+     * 
+     */
     private final String name;
+    /**
+     * The provisioning state.
+     * 
+     */
     private final String provisioningState;
+    /**
+     * Metadata pertaining to creation and last modification of the resource.
+     * 
+     */
     private final SystemDataResponse systemData;
+    /**
+     * Resource tags.
+     * 
+     */
     private final @Nullable Map<String,String> tags;
+    /**
+     * The resource type.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"accessPolicies","acrConfiguration","authenticationConfiguration","corsConfiguration","etag","exportConfiguration","id","identity","kind","location","name","provisioningState","systemData","tags","type"})
@@ -70,48 +130,108 @@ public final class GetFhirServiceResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Fhir Service access policies.
+     * 
+     */
     public List<FhirServiceAccessPolicyEntryResponse> getAccessPolicies() {
         return this.accessPolicies == null ? List.of() : this.accessPolicies;
     }
+    /**
+     * Fhir Service Azure container registry configuration.
+     * 
+     */
     public Optional<FhirServiceAcrConfigurationResponse> getAcrConfiguration() {
         return Optional.ofNullable(this.acrConfiguration);
     }
+    /**
+     * Fhir Service authentication configuration.
+     * 
+     */
     public Optional<FhirServiceAuthenticationConfigurationResponse> getAuthenticationConfiguration() {
         return Optional.ofNullable(this.authenticationConfiguration);
     }
+    /**
+     * Fhir Service Cors configuration.
+     * 
+     */
     public Optional<FhirServiceCorsConfigurationResponse> getCorsConfiguration() {
         return Optional.ofNullable(this.corsConfiguration);
     }
+    /**
+     * An etag associated with the resource, used for optimistic concurrency when editing it.
+     * 
+     */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
+    /**
+     * Fhir Service export configuration.
+     * 
+     */
     public Optional<FhirServiceExportConfigurationResponse> getExportConfiguration() {
         return Optional.ofNullable(this.exportConfiguration);
     }
+    /**
+     * The resource identifier.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Setting indicating whether the service has a managed identity associated with it.
+     * 
+     */
     public Optional<ServiceManagedIdentityResponseIdentity> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
+    /**
+     * The kind of the service.
+     * 
+     */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
+    /**
+     * The resource location.
+     * 
+     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
+    /**
+     * The resource name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The provisioning state.
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Metadata pertaining to creation and last modification of the resource.
+     * 
+     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+    /**
+     * Resource tags.
+     * 
+     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+    /**
+     * The resource type.
+     * 
+     */
     public String getType() {
         return this.type;
     }

@@ -17,6 +17,12 @@ public final class EngineModelArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EngineModelArgs Empty = new EngineModelArgs();
 
+    /**
+     * The default version of the model. This version will be used to handle
+     * prediction requests that do not specify a version.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="defaultVersion")
     private final @Nullable Input<EngineModelDefaultVersionArgs> defaultVersion;
 
@@ -24,6 +30,10 @@ public final class EngineModelArgs extends io.pulumi.resources.ResourceArgs {
         return this.defaultVersion == null ? Input.empty() : this.defaultVersion;
     }
 
+    /**
+     * The description specified for the model when it was created.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -31,6 +41,10 @@ public final class EngineModelArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * One or more labels that you can add, to organize your models.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -38,6 +52,10 @@ public final class EngineModelArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The name specified for the version when it was created.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -45,6 +63,10 @@ public final class EngineModelArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * If true, online prediction nodes send stderr and stdout streams to Stackdriver Logging
+     * 
+     */
     @InputImport(name="onlinePredictionConsoleLogging")
     private final @Nullable Input<Boolean> onlinePredictionConsoleLogging;
 
@@ -52,6 +74,10 @@ public final class EngineModelArgs extends io.pulumi.resources.ResourceArgs {
         return this.onlinePredictionConsoleLogging == null ? Input.empty() : this.onlinePredictionConsoleLogging;
     }
 
+    /**
+     * If true, online prediction access logs are sent to StackDriver Logging.
+     * 
+     */
     @InputImport(name="onlinePredictionLogging")
     private final @Nullable Input<Boolean> onlinePredictionLogging;
 
@@ -59,6 +85,11 @@ public final class EngineModelArgs extends io.pulumi.resources.ResourceArgs {
         return this.onlinePredictionLogging == null ? Input.empty() : this.onlinePredictionLogging;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -66,6 +97,11 @@ public final class EngineModelArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The list of regions where the model is going to be deployed.
+     * Currently only one region per model is supported
+     * 
+     */
     @InputImport(name="regions")
     private final @Nullable Input<String> regions;
 

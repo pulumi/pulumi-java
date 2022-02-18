@@ -13,6 +13,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetSAMLProviderResult {
+    /**
+     * Amazon Resource Name (ARN) of the SAML provider
+     * 
+     */
     private final @Nullable String arn;
     private final @Nullable String samlMetadataDocument;
     private final @Nullable List<SAMLProviderTag> tags;
@@ -27,6 +31,10 @@ public final class GetSAMLProviderResult {
         this.tags = tags;
     }
 
+    /**
+     * Amazon Resource Name (ARN) of the SAML provider
+     * 
+     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }

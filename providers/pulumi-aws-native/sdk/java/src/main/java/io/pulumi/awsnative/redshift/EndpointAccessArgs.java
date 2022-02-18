@@ -15,6 +15,10 @@ public final class EndpointAccessArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EndpointAccessArgs Empty = new EndpointAccessArgs();
 
+    /**
+     * A unique identifier for the cluster. You use this identifier to refer to the cluster for any subsequent cluster operations such as deleting or modifying. All alphabetical characters must be lower case, no hypens at the end, no two consecutive hyphens. Cluster name should be unique for all clusters within an AWS account
+     * 
+     */
     @InputImport(name="clusterIdentifier")
     private final @Nullable Input<String> clusterIdentifier;
 
@@ -22,6 +26,10 @@ public final class EndpointAccessArgs extends io.pulumi.resources.ResourceArgs {
         return this.clusterIdentifier == null ? Input.empty() : this.clusterIdentifier;
     }
 
+    /**
+     * The name of the endpoint.
+     * 
+     */
     @InputImport(name="endpointName", required=true)
     private final Input<String> endpointName;
 
@@ -29,6 +37,10 @@ public final class EndpointAccessArgs extends io.pulumi.resources.ResourceArgs {
         return this.endpointName;
     }
 
+    /**
+     * The AWS account ID of the owner of the cluster.
+     * 
+     */
     @InputImport(name="resourceOwner")
     private final @Nullable Input<String> resourceOwner;
 
@@ -36,6 +48,10 @@ public final class EndpointAccessArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceOwner == null ? Input.empty() : this.resourceOwner;
     }
 
+    /**
+     * The subnet group name where Amazon Redshift chooses to deploy the endpoint.
+     * 
+     */
     @InputImport(name="subnetGroupName")
     private final @Nullable Input<String> subnetGroupName;
 
@@ -43,6 +59,10 @@ public final class EndpointAccessArgs extends io.pulumi.resources.ResourceArgs {
         return this.subnetGroupName == null ? Input.empty() : this.subnetGroupName;
     }
 
+    /**
+     * A list of vpc security group ids to apply to the created endpoint access.
+     * 
+     */
     @InputImport(name="vpcSecurityGroupIds", required=true)
     private final Input<List<String>> vpcSecurityGroupIds;
 

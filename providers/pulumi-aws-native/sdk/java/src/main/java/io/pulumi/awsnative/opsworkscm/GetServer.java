@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetServer {
+/**
+ * Resource Type definition for AWS::OpsWorksCM::Server
+ * 
+ */
     public static CompletableFuture<GetServerResult> invokeAsync(GetServerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:opsworkscm:getServer", TypeShape.of(GetServerResult.class), args == null ? GetServerArgs.Empty : args, Utilities.withVersion(options));
     }

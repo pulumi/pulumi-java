@@ -13,6 +13,10 @@ public final class EnclaveCertificateIamRoleAssociationArgs extends io.pulumi.re
 
     public static final EnclaveCertificateIamRoleAssociationArgs Empty = new EnclaveCertificateIamRoleAssociationArgs();
 
+    /**
+     * The Amazon Resource Name (ARN) of the ACM certificate with which to associate the IAM role.
+     * 
+     */
     @InputImport(name="certificateArn", required=true)
     private final Input<String> certificateArn;
 
@@ -20,6 +24,10 @@ public final class EnclaveCertificateIamRoleAssociationArgs extends io.pulumi.re
         return this.certificateArn;
     }
 
+    /**
+     * The Amazon Resource Name (ARN) of the IAM role to associate with the ACM certificate. You can associate up to 16 IAM roles with an ACM certificate.
+     * 
+     */
     @InputImport(name="roleArn", required=true)
     private final Input<String> roleArn;
 

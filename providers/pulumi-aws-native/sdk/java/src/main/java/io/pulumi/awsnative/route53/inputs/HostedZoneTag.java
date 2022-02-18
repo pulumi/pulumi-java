@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A complex type that contains information about a tag that you want to add or edit for the specified health check or hosted zone.
+ * 
+ */
 public final class HostedZoneTag extends io.pulumi.resources.InvokeArgs {
 
     public static final HostedZoneTag Empty = new HostedZoneTag();
 
+    /**
+     * The key name of the tag.
+     * 
+     */
     @InputImport(name="key", required=true)
     private final String key;
 
@@ -19,6 +27,10 @@ public final class HostedZoneTag extends io.pulumi.resources.InvokeArgs {
         return this.key;
     }
 
+    /**
+     * The value for the tag.
+     * 
+     */
     @InputImport(name="value", required=true)
     private final String value;
 

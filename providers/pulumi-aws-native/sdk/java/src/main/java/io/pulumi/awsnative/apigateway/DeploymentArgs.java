@@ -16,6 +16,10 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DeploymentArgs Empty = new DeploymentArgs();
 
+    /**
+     * Specifies settings for the canary deployment.
+     * 
+     */
     @InputImport(name="deploymentCanarySettings")
     private final @Nullable Input<DeploymentCanarySettingsArgs> deploymentCanarySettings;
 
@@ -23,6 +27,10 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
         return this.deploymentCanarySettings == null ? Input.empty() : this.deploymentCanarySettings;
     }
 
+    /**
+     * A description of the purpose of the API Gateway deployment.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -30,6 +38,10 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The ID of the RestApi resource to deploy.
+     * 
+     */
     @InputImport(name="restApiId", required=true)
     private final Input<String> restApiId;
 
@@ -37,6 +49,10 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
         return this.restApiId;
     }
 
+    /**
+     * Configures the stage that API Gateway creates with this deployment.
+     * 
+     */
     @InputImport(name="stageDescription")
     private final @Nullable Input<DeploymentStageDescriptionArgs> stageDescription;
 
@@ -44,6 +60,10 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
         return this.stageDescription == null ? Input.empty() : this.stageDescription;
     }
 
+    /**
+     * A name for the stage that API Gateway creates with this deployment. Use only alphanumeric characters.
+     * 
+     */
     @InputImport(name="stageName")
     private final @Nullable Input<String> stageName;
 

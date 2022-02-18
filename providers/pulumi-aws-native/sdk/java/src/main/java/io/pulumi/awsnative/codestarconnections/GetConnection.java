@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetConnection {
+/**
+ * Schema for AWS::CodeStarConnections::Connection resource which can be used to connect external source providers with AWS CodePipeline
+ * 
+ */
     public static CompletableFuture<GetConnectionResult> invokeAsync(GetConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:codestarconnections:getConnection", TypeShape.of(GetConnectionResult.class), args == null ? GetConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

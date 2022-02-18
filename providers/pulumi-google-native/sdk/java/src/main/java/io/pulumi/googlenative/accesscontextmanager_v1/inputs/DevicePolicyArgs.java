@@ -14,10 +14,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * `DevicePolicy` specifies device specific restrictions necessary to acquire a given access level. A `DevicePolicy` specifies requirements for requests from devices to be granted access levels, it does not do any enforcement on the device. `DevicePolicy` acts as an AND over all specified fields, and each repeated field is an OR over its elements. Any unset fields are ignored. For example, if the proto is { os_type : DESKTOP_WINDOWS, os_type : DESKTOP_LINUX, encryption_status: ENCRYPTED}, then the DevicePolicy will be true for requests originating from encrypted Linux desktops and encrypted Windows desktops.
+ * 
+ */
 public final class DevicePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DevicePolicyArgs Empty = new DevicePolicyArgs();
 
+    /**
+     * Allowed device management levels, an empty list allows all management levels.
+     * 
+     */
     @InputImport(name="allowedDeviceManagementLevels")
     private final @Nullable Input<List<DevicePolicyAllowedDeviceManagementLevelsItem>> allowedDeviceManagementLevels;
 
@@ -25,6 +33,10 @@ public final class DevicePolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.allowedDeviceManagementLevels == null ? Input.empty() : this.allowedDeviceManagementLevels;
     }
 
+    /**
+     * Allowed encryptions statuses, an empty list allows all statuses.
+     * 
+     */
     @InputImport(name="allowedEncryptionStatuses")
     private final @Nullable Input<List<DevicePolicyAllowedEncryptionStatusesItem>> allowedEncryptionStatuses;
 
@@ -32,6 +44,10 @@ public final class DevicePolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.allowedEncryptionStatuses == null ? Input.empty() : this.allowedEncryptionStatuses;
     }
 
+    /**
+     * Allowed OS versions, an empty list allows all types and all versions.
+     * 
+     */
     @InputImport(name="osConstraints")
     private final @Nullable Input<List<OsConstraintArgs>> osConstraints;
 
@@ -39,6 +55,10 @@ public final class DevicePolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.osConstraints == null ? Input.empty() : this.osConstraints;
     }
 
+    /**
+     * Whether the device needs to be approved by the customer admin.
+     * 
+     */
     @InputImport(name="requireAdminApproval")
     private final @Nullable Input<Boolean> requireAdminApproval;
 
@@ -46,6 +66,10 @@ public final class DevicePolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.requireAdminApproval == null ? Input.empty() : this.requireAdminApproval;
     }
 
+    /**
+     * Whether the device needs to be corp owned.
+     * 
+     */
     @InputImport(name="requireCorpOwned")
     private final @Nullable Input<Boolean> requireCorpOwned;
 
@@ -53,6 +77,10 @@ public final class DevicePolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.requireCorpOwned == null ? Input.empty() : this.requireCorpOwned;
     }
 
+    /**
+     * Whether or not screenlock is required for the DevicePolicy to be true. Defaults to `false`.
+     * 
+     */
     @InputImport(name="requireScreenlock")
     private final @Nullable Input<Boolean> requireScreenlock;
 

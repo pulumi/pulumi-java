@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Subnet information as returned by the Microsoft.Network API.
+ * 
+ */
 public final class ExternalSubnetResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ExternalSubnetResponse Empty = new ExternalSubnetResponse();
 
+    /**
+     * Gets or sets the identifier.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -21,6 +29,10 @@ public final class ExternalSubnetResponse extends io.pulumi.resources.InvokeArgs
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * Gets or sets the name.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 

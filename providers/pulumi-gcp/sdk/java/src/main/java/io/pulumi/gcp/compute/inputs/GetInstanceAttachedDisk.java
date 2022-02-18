@@ -12,6 +12,11 @@ public final class GetInstanceAttachedDisk extends io.pulumi.resources.InvokeArg
 
     public static final GetInstanceAttachedDisk Empty = new GetInstanceAttachedDisk();
 
+    /**
+     * Name with which the attached disk is accessible
+     * under `/dev/disk/by-id/`
+     * 
+     */
     @InputImport(name="deviceName", required=true)
     private final String deviceName;
 
@@ -40,6 +45,10 @@ public final class GetInstanceAttachedDisk extends io.pulumi.resources.InvokeArg
         return this.kmsKeySelfLink;
     }
 
+    /**
+     * Read/write mode for the disk. One of `"READ_ONLY"` or `"READ_WRITE"`.
+     * 
+     */
     @InputImport(name="mode", required=true)
     private final String mode;
 
@@ -47,6 +56,10 @@ public final class GetInstanceAttachedDisk extends io.pulumi.resources.InvokeArg
         return this.mode;
     }
 
+    /**
+     * The name or self_link of the disk attached to this instance.
+     * 
+     */
     @InputImport(name="source", required=true)
     private final String source;
 

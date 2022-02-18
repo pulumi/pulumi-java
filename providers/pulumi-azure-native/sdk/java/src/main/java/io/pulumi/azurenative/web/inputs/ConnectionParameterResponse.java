@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Connection provider parameters
+ * 
+ */
 public final class ConnectionParameterResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConnectionParameterResponse Empty = new ConnectionParameterResponse();
 
+    /**
+     * OAuth settings for the connection provider
+     * 
+     */
     @InputImport(name="oAuthSettings")
     private final @Nullable ApiOAuthSettingsResponse oAuthSettings;
 
@@ -22,6 +30,10 @@ public final class ConnectionParameterResponse extends io.pulumi.resources.Invok
         return this.oAuthSettings == null ? Optional.empty() : Optional.ofNullable(this.oAuthSettings);
     }
 
+    /**
+     * Type of the parameter
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 

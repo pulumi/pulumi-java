@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The kind of the environment.
+     * 
+     */
     @EnumType
     public enum EnvironmentKind {
         Gen1("Gen1"),

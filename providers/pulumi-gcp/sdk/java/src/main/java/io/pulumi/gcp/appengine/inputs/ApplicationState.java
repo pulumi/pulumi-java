@@ -18,6 +18,10 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationState Empty = new ApplicationState();
 
+    /**
+     * Identifier of the app, usually `{PROJECT_ID}`
+     * 
+     */
     @InputImport(name="appId")
     private final @Nullable Input<String> appId;
 
@@ -25,6 +29,10 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
         return this.appId == null ? Input.empty() : this.appId;
     }
 
+    /**
+     * The domain to authenticate users with when using App Engine's User API.
+     * 
+     */
     @InputImport(name="authDomain")
     private final @Nullable Input<String> authDomain;
 
@@ -32,6 +40,10 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
         return this.authDomain == null ? Input.empty() : this.authDomain;
     }
 
+    /**
+     * The GCS bucket code is being stored in for this app.
+     * 
+     */
     @InputImport(name="codeBucket")
     private final @Nullable Input<String> codeBucket;
 
@@ -39,6 +51,13 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
         return this.codeBucket == null ? Input.empty() : this.codeBucket;
     }
 
+    /**
+     * The type of the Cloud Firestore or Cloud Datastore database associated with this application.
+     * Can be `CLOUD_FIRESTORE` or `CLOUD_DATASTORE_COMPATIBILITY` for new
+     * instances.  To support old instances, the value `CLOUD_DATASTORE` is accepted
+     * by the provider, but will be rejected by the API.
+     * 
+     */
     @InputImport(name="databaseType")
     private final @Nullable Input<String> databaseType;
 
@@ -46,6 +65,10 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
         return this.databaseType == null ? Input.empty() : this.databaseType;
     }
 
+    /**
+     * The GCS bucket content is being stored in for this app.
+     * 
+     */
     @InputImport(name="defaultBucket")
     private final @Nullable Input<String> defaultBucket;
 
@@ -53,6 +76,10 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
         return this.defaultBucket == null ? Input.empty() : this.defaultBucket;
     }
 
+    /**
+     * The default hostname for this app.
+     * 
+     */
     @InputImport(name="defaultHostname")
     private final @Nullable Input<String> defaultHostname;
 
@@ -60,6 +87,10 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
         return this.defaultHostname == null ? Input.empty() : this.defaultHostname;
     }
 
+    /**
+     * A block of optional settings to configure specific App Engine features:
+     * 
+     */
     @InputImport(name="featureSettings")
     private final @Nullable Input<ApplicationFeatureSettingsGetArgs> featureSettings;
 
@@ -67,6 +98,10 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
         return this.featureSettings == null ? Input.empty() : this.featureSettings;
     }
 
+    /**
+     * The GCR domain used for storing managed Docker images for this app.
+     * 
+     */
     @InputImport(name="gcrDomain")
     private final @Nullable Input<String> gcrDomain;
 
@@ -74,6 +109,10 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
         return this.gcrDomain == null ? Input.empty() : this.gcrDomain;
     }
 
+    /**
+     * Settings for enabling Cloud Identity Aware Proxy
+     * 
+     */
     @InputImport(name="iap")
     private final @Nullable Input<ApplicationIapGetArgs> iap;
 
@@ -81,6 +120,11 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
         return this.iap == null ? Input.empty() : this.iap;
     }
 
+    /**
+     * The [location](https://cloud.google.com/appengine/docs/locations)
+     * to serve the app from.
+     * 
+     */
     @InputImport(name="locationId")
     private final @Nullable Input<String> locationId;
 
@@ -88,6 +132,10 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
         return this.locationId == null ? Input.empty() : this.locationId;
     }
 
+    /**
+     * Unique name of the app, usually `apps/{PROJECT_ID}`
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -95,6 +143,12 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The project ID to create the application under.
+     * ~>**NOTE:** GCP only accepts project ID, not project number. If you are using number,
+     * you may get a "Permission denied" error.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -102,6 +156,10 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The serving status of the app.
+     * 
+     */
     @InputImport(name="servingStatus")
     private final @Nullable Input<String> servingStatus;
 
@@ -109,6 +167,10 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
         return this.servingStatus == null ? Input.empty() : this.servingStatus;
     }
 
+    /**
+     * A list of dispatch rule blocks. Each block has a `domain`, `path`, and `service` field.
+     * 
+     */
     @InputImport(name="urlDispatchRules")
     private final @Nullable Input<List<ApplicationUrlDispatchRuleGetArgs>> urlDispatchRules;
 

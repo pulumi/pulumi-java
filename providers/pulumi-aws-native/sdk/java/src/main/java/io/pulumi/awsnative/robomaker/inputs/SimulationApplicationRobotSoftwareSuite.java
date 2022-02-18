@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Information about a robot software suite.
+ * 
+ */
 public final class SimulationApplicationRobotSoftwareSuite extends io.pulumi.resources.InvokeArgs {
 
     public static final SimulationApplicationRobotSoftwareSuite Empty = new SimulationApplicationRobotSoftwareSuite();
 
+    /**
+     * The name of the robot software suite.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final SimulationApplicationRobotSoftwareSuiteName name;
 
@@ -22,6 +30,10 @@ public final class SimulationApplicationRobotSoftwareSuite extends io.pulumi.res
         return this.name;
     }
 
+    /**
+     * The version of the robot software suite.
+     * 
+     */
     @InputImport(name="version")
     private final @Nullable SimulationApplicationRobotSoftwareSuiteVersion version;
 

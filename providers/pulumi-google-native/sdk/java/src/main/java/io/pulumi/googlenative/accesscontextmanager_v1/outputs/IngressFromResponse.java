@@ -11,8 +11,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class IngressFromResponse {
+    /**
+     * A list of identities that are allowed access through this ingress policy. Should be in the format of email address. The email address should represent individual user or service account only.
+     * 
+     */
     private final List<String> identities;
+    /**
+     * Specifies the type of identities that are allowed access from outside the perimeter. If left unspecified, then members of `identities` field will be allowed access.
+     * 
+     */
     private final String identityType;
+    /**
+     * Sources that this IngressPolicy authorizes access from.
+     * 
+     */
     private final List<IngressSourceResponse> sources;
 
     @OutputCustomType.Constructor({"identities","identityType","sources"})
@@ -25,12 +37,24 @@ public final class IngressFromResponse {
         this.sources = Objects.requireNonNull(sources);
     }
 
+    /**
+     * A list of identities that are allowed access through this ingress policy. Should be in the format of email address. The email address should represent individual user or service account only.
+     * 
+     */
     public List<String> getIdentities() {
         return this.identities;
     }
+    /**
+     * Specifies the type of identities that are allowed access from outside the perimeter. If left unspecified, then members of `identities` field will be allowed access.
+     * 
+     */
     public String getIdentityType() {
         return this.identityType;
     }
+    /**
+     * Sources that this IngressPolicy authorizes access from.
+     * 
+     */
     public List<IngressSourceResponse> getSources() {
         return this.sources;
     }

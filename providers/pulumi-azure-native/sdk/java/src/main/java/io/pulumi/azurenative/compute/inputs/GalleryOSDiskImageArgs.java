@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * This is the OS disk image.
+ * 
+ */
 public final class GalleryOSDiskImageArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GalleryOSDiskImageArgs Empty = new GalleryOSDiskImageArgs();
 
+    /**
+     * The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'
+     * 
+     */
     @InputImport(name="hostCaching")
     private final @Nullable Input<HostCaching> hostCaching;
 
@@ -22,6 +30,10 @@ public final class GalleryOSDiskImageArgs extends io.pulumi.resources.ResourceAr
         return this.hostCaching == null ? Input.empty() : this.hostCaching;
     }
 
+    /**
+     * The gallery artifact version source.
+     * 
+     */
     @InputImport(name="source")
     private final @Nullable Input<GalleryArtifactVersionSourceArgs> source;
 

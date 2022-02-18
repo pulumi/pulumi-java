@@ -13,6 +13,10 @@ public final class PacketMirroringNetworkArgs extends io.pulumi.resources.Resour
 
     public static final PacketMirroringNetworkArgs Empty = new PacketMirroringNetworkArgs();
 
+    /**
+     * The URL of the instances where this rule should be active.
+     * 
+     */
     @InputImport(name="url", required=true)
     private final Input<String> url;
 

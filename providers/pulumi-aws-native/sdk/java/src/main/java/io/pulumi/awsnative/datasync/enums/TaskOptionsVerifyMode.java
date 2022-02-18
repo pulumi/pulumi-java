@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * A value that determines whether a data integrity verification should be performed at the end of a task execution after all data and metadata have been transferred.
+     * 
+     */
     @EnumType
     public enum TaskOptionsVerifyMode {
         PointInTimeConsistent("POINT_IN_TIME_CONSISTENT"),

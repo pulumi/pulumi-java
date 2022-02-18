@@ -35,6 +35,10 @@ public final class CloneJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.migratingVmId;
     }
 
+    /**
+     * The name of the clone.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

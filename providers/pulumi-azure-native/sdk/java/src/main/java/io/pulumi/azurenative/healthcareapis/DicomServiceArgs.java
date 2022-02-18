@@ -15,6 +15,10 @@ public final class DicomServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DicomServiceArgs Empty = new DicomServiceArgs();
 
+    /**
+     * The name of DICOM Service resource.
+     * 
+     */
     @InputImport(name="dicomServiceName")
     private final @Nullable Input<String> dicomServiceName;
 
@@ -22,6 +26,10 @@ public final class DicomServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.dicomServiceName == null ? Input.empty() : this.dicomServiceName;
     }
 
+    /**
+     * The resource location.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -29,6 +37,10 @@ public final class DicomServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the resource group that contains the service instance.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -36,6 +48,10 @@ public final class DicomServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -43,6 +59,10 @@ public final class DicomServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The name of workspace resource.
+     * 
+     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

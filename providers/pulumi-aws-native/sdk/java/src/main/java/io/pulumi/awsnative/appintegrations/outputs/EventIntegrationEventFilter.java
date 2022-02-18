@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class EventIntegrationEventFilter {
+    /**
+     * The source of the events.
+     * 
+     */
     private final String source;
 
     @OutputCustomType.Constructor({"source"})
@@ -16,6 +20,10 @@ public final class EventIntegrationEventFilter {
         this.source = Objects.requireNonNull(source);
     }
 
+    /**
+     * The source of the events.
+     * 
+     */
     public String getSource() {
         return this.source;
     }

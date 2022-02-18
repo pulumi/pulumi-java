@@ -13,6 +13,10 @@ public final class EventIntegrationTagArgs extends io.pulumi.resources.ResourceA
 
     public static final EventIntegrationTagArgs Empty = new EventIntegrationTagArgs();
 
+    /**
+     * A key to identify the tag.
+     * 
+     */
     @InputImport(name="key", required=true)
     private final Input<String> key;
 
@@ -20,6 +24,10 @@ public final class EventIntegrationTagArgs extends io.pulumi.resources.ResourceA
         return this.key;
     }
 
+    /**
+     * Corresponding tag value for the key.
+     * 
+     */
     @InputImport(name="value", required=true)
     private final Input<String> value;
 

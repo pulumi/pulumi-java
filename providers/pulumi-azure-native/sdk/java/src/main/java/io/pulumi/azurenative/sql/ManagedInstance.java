@@ -21,95 +21,230 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * An Azure SQL managed instance.
+ * API Version: 2020-11-01-preview.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:sql:ManagedInstance testinstance /subscriptions/20d7082a-0fc7-4468-82bd-542694d5042b/resourceGroups/testrg/providers/Microsoft.Sql/managedInstances/testinstance 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:sql:ManagedInstance")
 public class ManagedInstance extends io.pulumi.resources.CustomResource {
+    /**
+     * Administrator username for the managed instance. Can only be specified when the managed instance is being created (and is required for creation).
+     * 
+     */
     @OutputExport(name="administratorLogin", type=String.class, parameters={})
     private Output</* @Nullable */ String> administratorLogin;
 
+    /**
+     * @return Administrator username for the managed instance. Can only be specified when the managed instance is being created (and is required for creation).
+     * 
+     */
     public Output</* @Nullable */ String> getAdministratorLogin() {
         return this.administratorLogin;
     }
+    /**
+     * The Azure Active Directory administrator of the server.
+     * 
+     */
     @OutputExport(name="administrators", type=ManagedInstanceExternalAdministratorResponse.class, parameters={})
     private Output</* @Nullable */ ManagedInstanceExternalAdministratorResponse> administrators;
 
+    /**
+     * @return The Azure Active Directory administrator of the server.
+     * 
+     */
     public Output</* @Nullable */ ManagedInstanceExternalAdministratorResponse> getAdministrators() {
         return this.administrators;
     }
+    /**
+     * Collation of the managed instance.
+     * 
+     */
     @OutputExport(name="collation", type=String.class, parameters={})
     private Output</* @Nullable */ String> collation;
 
+    /**
+     * @return Collation of the managed instance.
+     * 
+     */
     public Output</* @Nullable */ String> getCollation() {
         return this.collation;
     }
+    /**
+     * The Dns Zone that the managed instance is in.
+     * 
+     */
     @OutputExport(name="dnsZone", type=String.class, parameters={})
     private Output<String> dnsZone;
 
+    /**
+     * @return The Dns Zone that the managed instance is in.
+     * 
+     */
     public Output<String> getDnsZone() {
         return this.dnsZone;
     }
+    /**
+     * The fully qualified domain name of the managed instance.
+     * 
+     */
     @OutputExport(name="fullyQualifiedDomainName", type=String.class, parameters={})
     private Output<String> fullyQualifiedDomainName;
 
+    /**
+     * @return The fully qualified domain name of the managed instance.
+     * 
+     */
     public Output<String> getFullyQualifiedDomainName() {
         return this.fullyQualifiedDomainName;
     }
+    /**
+     * The Azure Active Directory identity of the managed instance.
+     * 
+     */
     @OutputExport(name="identity", type=ResourceIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ResourceIdentityResponse> identity;
 
+    /**
+     * @return The Azure Active Directory identity of the managed instance.
+     * 
+     */
     public Output</* @Nullable */ ResourceIdentityResponse> getIdentity() {
         return this.identity;
     }
+    /**
+     * The Id of the instance pool this managed server belongs to.
+     * 
+     */
     @OutputExport(name="instancePoolId", type=String.class, parameters={})
     private Output</* @Nullable */ String> instancePoolId;
 
+    /**
+     * @return The Id of the instance pool this managed server belongs to.
+     * 
+     */
     public Output</* @Nullable */ String> getInstancePoolId() {
         return this.instancePoolId;
     }
+    /**
+     * A CMK URI of the key to use for encryption.
+     * 
+     */
     @OutputExport(name="keyId", type=String.class, parameters={})
     private Output</* @Nullable */ String> keyId;
 
+    /**
+     * @return A CMK URI of the key to use for encryption.
+     * 
+     */
     public Output</* @Nullable */ String> getKeyId() {
         return this.keyId;
     }
+    /**
+     * The license type. Possible values are 'LicenseIncluded' (regular price inclusive of a new SQL license) and 'BasePrice' (discounted AHB price for bringing your own SQL licenses).
+     * 
+     */
     @OutputExport(name="licenseType", type=String.class, parameters={})
     private Output</* @Nullable */ String> licenseType;
 
+    /**
+     * @return The license type. Possible values are 'LicenseIncluded' (regular price inclusive of a new SQL license) and 'BasePrice' (discounted AHB price for bringing your own SQL licenses).
+     * 
+     */
     public Output</* @Nullable */ String> getLicenseType() {
         return this.licenseType;
     }
+    /**
+     * Resource location.
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * Specifies maintenance configuration id to apply to this managed instance.
+     * 
+     */
     @OutputExport(name="maintenanceConfigurationId", type=String.class, parameters={})
     private Output</* @Nullable */ String> maintenanceConfigurationId;
 
+    /**
+     * @return Specifies maintenance configuration id to apply to this managed instance.
+     * 
+     */
     public Output</* @Nullable */ String> getMaintenanceConfigurationId() {
         return this.maintenanceConfigurationId;
     }
+    /**
+     * Minimal TLS version. Allowed values: 'None', '1.0', '1.1', '1.2'
+     * 
+     */
     @OutputExport(name="minimalTlsVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> minimalTlsVersion;
 
+    /**
+     * @return Minimal TLS version. Allowed values: 'None', '1.0', '1.1', '1.2'
+     * 
+     */
     public Output</* @Nullable */ String> getMinimalTlsVersion() {
         return this.minimalTlsVersion;
     }
+    /**
+     * Resource name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The resource id of a user assigned identity to be used by default.
+     * 
+     */
     @OutputExport(name="primaryUserAssignedIdentityId", type=String.class, parameters={})
     private Output</* @Nullable */ String> primaryUserAssignedIdentityId;
 
+    /**
+     * @return The resource id of a user assigned identity to be used by default.
+     * 
+     */
     public Output</* @Nullable */ String> getPrimaryUserAssignedIdentityId() {
         return this.primaryUserAssignedIdentityId;
     }
+    /**
+     * List of private endpoint connections on a managed instance.
+     * 
+     */
     @OutputExport(name="privateEndpointConnections", type=List.class, parameters={ManagedInstancePecPropertyResponse.class})
     private Output<List<ManagedInstancePecPropertyResponse>> privateEndpointConnections;
 
+    /**
+     * @return List of private endpoint connections on a managed instance.
+     * 
+     */
     public Output<List<ManagedInstancePecPropertyResponse>> getPrivateEndpointConnections() {
         return this.privateEndpointConnections;
     }
@@ -119,79 +254,191 @@ public class ManagedInstance extends io.pulumi.resources.CustomResource {
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Connection type used for connecting to the instance.
+     * 
+     */
     @OutputExport(name="proxyOverride", type=String.class, parameters={})
     private Output</* @Nullable */ String> proxyOverride;
 
+    /**
+     * @return Connection type used for connecting to the instance.
+     * 
+     */
     public Output</* @Nullable */ String> getProxyOverride() {
         return this.proxyOverride;
     }
+    /**
+     * Whether or not the public data endpoint is enabled.
+     * 
+     */
     @OutputExport(name="publicDataEndpointEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> publicDataEndpointEnabled;
 
+    /**
+     * @return Whether or not the public data endpoint is enabled.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getPublicDataEndpointEnabled() {
         return this.publicDataEndpointEnabled;
     }
+    /**
+     * Managed instance SKU. Allowed values for sku.name: GP_Gen4, GP_Gen5, BC_Gen4, BC_Gen5
+     * 
+     */
     @OutputExport(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
+    /**
+     * @return Managed instance SKU. Allowed values for sku.name: GP_Gen4, GP_Gen5, BC_Gen4, BC_Gen5
+     * 
+     */
     public Output</* @Nullable */ SkuResponse> getSku() {
         return this.sku;
     }
+    /**
+     * The state of the managed instance.
+     * 
+     */
     @OutputExport(name="state", type=String.class, parameters={})
     private Output<String> state;
 
+    /**
+     * @return The state of the managed instance.
+     * 
+     */
     public Output<String> getState() {
         return this.state;
     }
+    /**
+     * The storage account type used to store backups for this instance. The options are LRS (LocallyRedundantStorage), ZRS (ZoneRedundantStorage) and GRS (GeoRedundantStorage)
+     * 
+     */
     @OutputExport(name="storageAccountType", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageAccountType;
 
+    /**
+     * @return The storage account type used to store backups for this instance. The options are LRS (LocallyRedundantStorage), ZRS (ZoneRedundantStorage) and GRS (GeoRedundantStorage)
+     * 
+     */
     public Output</* @Nullable */ String> getStorageAccountType() {
         return this.storageAccountType;
     }
+    /**
+     * Storage size in GB. Minimum value: 32. Maximum value: 8192. Increments of 32 GB allowed only.
+     * 
+     */
     @OutputExport(name="storageSizeInGB", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> storageSizeInGB;
 
+    /**
+     * @return Storage size in GB. Minimum value: 32. Maximum value: 8192. Increments of 32 GB allowed only.
+     * 
+     */
     public Output</* @Nullable */ Integer> getStorageSizeInGB() {
         return this.storageSizeInGB;
     }
+    /**
+     * Subnet resource ID for the managed instance.
+     * 
+     */
     @OutputExport(name="subnetId", type=String.class, parameters={})
     private Output</* @Nullable */ String> subnetId;
 
+    /**
+     * @return Subnet resource ID for the managed instance.
+     * 
+     */
     public Output</* @Nullable */ String> getSubnetId() {
         return this.subnetId;
     }
+    /**
+     * Resource tags.
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Id of the timezone. Allowed values are timezones supported by Windows.
+     * Windows keeps details on supported timezones, including the id, in registry under
+     * KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones.
+     * You can get those registry values via SQL Server by querying SELECT name AS timezone_id FROM sys.time_zone_info.
+     * List of Ids can also be obtained by executing [System.TimeZoneInfo]::GetSystemTimeZones() in PowerShell.
+     * An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standard Time".
+     * 
+     */
     @OutputExport(name="timezoneId", type=String.class, parameters={})
     private Output</* @Nullable */ String> timezoneId;
 
+    /**
+     * @return Id of the timezone. Allowed values are timezones supported by Windows.
+     * Windows keeps details on supported timezones, including the id, in registry under
+     * KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones.
+     * You can get those registry values via SQL Server by querying SELECT name AS timezone_id FROM sys.time_zone_info.
+     * List of Ids can also be obtained by executing [System.TimeZoneInfo]::GetSystemTimeZones() in PowerShell.
+     * An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standard Time".
+     * 
+     */
     public Output</* @Nullable */ String> getTimezoneId() {
         return this.timezoneId;
     }
+    /**
+     * Resource type.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * The number of vCores. Allowed values: 8, 16, 24, 32, 40, 64, 80.
+     * 
+     */
     @OutputExport(name="vCores", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> vCores;
 
+    /**
+     * @return The number of vCores. Allowed values: 8, 16, 24, 32, 40, 64, 80.
+     * 
+     */
     public Output</* @Nullable */ Integer> getVCores() {
         return this.vCores;
     }
+    /**
+     * Whether or not the multi-az is enabled.
+     * 
+     */
     @OutputExport(name="zoneRedundant", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> zoneRedundant;
 
+    /**
+     * @return Whether or not the multi-az is enabled.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getZoneRedundant() {
         return this.zoneRedundant;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ManagedInstance(String name, ManagedInstanceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:sql:ManagedInstance", name, args == null ? ManagedInstanceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -217,6 +464,14 @@ public class ManagedInstance extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ManagedInstance get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ManagedInstance(name, id, options);
     }

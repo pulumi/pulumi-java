@@ -14,6 +14,10 @@ public final class ApiIssueAttachmentArgs extends io.pulumi.resources.ResourceAr
 
     public static final ApiIssueAttachmentArgs Empty = new ApiIssueAttachmentArgs();
 
+    /**
+     * API identifier. Must be unique in the current API Management service instance.
+     * 
+     */
     @InputImport(name="apiId", required=true)
     private final Input<String> apiId;
 
@@ -21,6 +25,10 @@ public final class ApiIssueAttachmentArgs extends io.pulumi.resources.ResourceAr
         return this.apiId;
     }
 
+    /**
+     * Attachment identifier within an Issue. Must be unique in the current Issue.
+     * 
+     */
     @InputImport(name="attachmentId")
     private final @Nullable Input<String> attachmentId;
 
@@ -28,6 +36,10 @@ public final class ApiIssueAttachmentArgs extends io.pulumi.resources.ResourceAr
         return this.attachmentId == null ? Input.empty() : this.attachmentId;
     }
 
+    /**
+     * An HTTP link or Base64-encoded binary data.
+     * 
+     */
     @InputImport(name="content", required=true)
     private final Input<String> content;
 
@@ -35,6 +47,10 @@ public final class ApiIssueAttachmentArgs extends io.pulumi.resources.ResourceAr
         return this.content;
     }
 
+    /**
+     * Either 'link' if content is provided via an HTTP link or the MIME type of the Base64-encoded binary data provided in the 'content' property.
+     * 
+     */
     @InputImport(name="contentFormat", required=true)
     private final Input<String> contentFormat;
 
@@ -42,6 +58,10 @@ public final class ApiIssueAttachmentArgs extends io.pulumi.resources.ResourceAr
         return this.contentFormat;
     }
 
+    /**
+     * Issue identifier. Must be unique in the current API Management service instance.
+     * 
+     */
     @InputImport(name="issueId", required=true)
     private final Input<String> issueId;
 
@@ -49,6 +69,10 @@ public final class ApiIssueAttachmentArgs extends io.pulumi.resources.ResourceAr
         return this.issueId;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -56,6 +80,10 @@ public final class ApiIssueAttachmentArgs extends io.pulumi.resources.ResourceAr
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the API Management service.
+     * 
+     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 
@@ -63,6 +91,10 @@ public final class ApiIssueAttachmentArgs extends io.pulumi.resources.ResourceAr
         return this.serviceName;
     }
 
+    /**
+     * Filename by which the binary data will be saved.
+     * 
+     */
     @InputImport(name="title", required=true)
     private final Input<String> title;
 

@@ -41,6 +41,10 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
         return this.dashboardPublishOptions == null ? Input.empty() : this.dashboardPublishOptions;
     }
 
+    /**
+     * <p>The display name of the dashboard.</p>
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -55,6 +59,14 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
+    /**
+     * <p>A structure that contains the permissions of the dashboard. You can use this structure
+     *             for granting permissions by providing a list of IAM action information for each
+     *             principal ARN. </p>
+     * 
+     *         <p>To specify no permissions, omit the permissions list.</p>
+     * 
+     */
     @InputImport(name="permissions")
     private final @Nullable Input<List<DashboardResourcePermissionArgs>> permissions;
 
@@ -69,6 +81,11 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceEntity;
     }
 
+    /**
+     * <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the
+     *             dashboard.</p>
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<DashboardTagArgs>> tags;
 
@@ -76,6 +93,13 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * <p>The Amazon Resource Name (ARN) of the theme that is being used for this dashboard. If
+     *             you add a value for this field, it overrides the value that is used in the source
+     *             entity. The theme ARN must exist in the same AWS account where you create the
+     *             dashboard.</p>
+     * 
+     */
     @InputImport(name="themeArn")
     private final @Nullable Input<String> themeArn;
 
@@ -83,6 +107,10 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
         return this.themeArn == null ? Input.empty() : this.themeArn;
     }
 
+    /**
+     * <p>A description for the first version of the dashboard being created.</p>
+     * 
+     */
     @InputImport(name="versionDescription")
     private final @Nullable Input<String> versionDescription;
 

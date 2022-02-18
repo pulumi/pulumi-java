@@ -19,6 +19,10 @@ public final class GetDataControllerArgs extends io.pulumi.resources.InvokeArgs 
         return this.dataControllerName;
     }
 
+    /**
+     * The name of the Azure resource group
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

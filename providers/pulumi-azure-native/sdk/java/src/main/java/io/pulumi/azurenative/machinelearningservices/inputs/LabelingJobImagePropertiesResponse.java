@@ -14,6 +14,10 @@ public final class LabelingJobImagePropertiesResponse extends io.pulumi.resource
 
     public static final LabelingJobImagePropertiesResponse Empty = new LabelingJobImagePropertiesResponse();
 
+    /**
+     * Annotation type of image labeling tasks.
+     * 
+     */
     @InputImport(name="annotationType")
     private final @Nullable String annotationType;
 
@@ -21,6 +25,10 @@ public final class LabelingJobImagePropertiesResponse extends io.pulumi.resource
         return this.annotationType == null ? Optional.empty() : Optional.ofNullable(this.annotationType);
     }
 
+    /**
+     * Media type of data asset.
+     * 
+     */
     @InputImport(name="mediaType", required=true)
     private final String mediaType;
 

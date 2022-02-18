@@ -34,6 +34,10 @@ public final class AnalysisArgs extends io.pulumi.resources.ResourceArgs {
         return this.awsAccountId;
     }
 
+    /**
+     * <p>Errors associated with the analysis.</p>
+     * 
+     */
     @InputImport(name="errors")
     private final @Nullable Input<List<AnalysisErrorArgs>> errors;
 
@@ -41,6 +45,10 @@ public final class AnalysisArgs extends io.pulumi.resources.ResourceArgs {
         return this.errors == null ? Input.empty() : this.errors;
     }
 
+    /**
+     * <p>The descriptive name of the analysis.</p>
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -55,6 +63,15 @@ public final class AnalysisArgs extends io.pulumi.resources.ResourceArgs {
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
+    /**
+     * <p>A structure that describes the principals and the resource-level permissions on an
+     *             analysis. You can use the <code>Permissions</code> structure to grant permissions by
+     *             providing a list of AWS Identity and Access Management (IAM) action information for each
+     *             principal listed by Amazon Resource Name (ARN). </p>
+     * 
+     *         <p>To specify no permissions, omit <code>Permissions</code>.</p>
+     * 
+     */
     @InputImport(name="permissions")
     private final @Nullable Input<List<AnalysisResourcePermissionArgs>> permissions;
 
@@ -69,6 +86,11 @@ public final class AnalysisArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceEntity;
     }
 
+    /**
+     * <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the
+     *             analysis.</p>
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<AnalysisTagArgs>> tags;
 
@@ -76,6 +98,10 @@ public final class AnalysisArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * <p>The ARN of the theme of the analysis.</p>
+     * 
+     */
     @InputImport(name="themeArn")
     private final @Nullable Input<String> themeArn;
 

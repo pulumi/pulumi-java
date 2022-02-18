@@ -8,13 +8,41 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * An operator to apply the subject with.
+     * 
+     */
     @EnumType
     public enum ConditionOp {
+        /**
+         * Default no-op.
+         * 
+         */
         NoOp("NO_OP"),
+        /**
+         * DEPRECATED. Use IN instead.
+         * 
+         */
         Equals("EQUALS"),
+        /**
+         * DEPRECATED. Use NOT_IN instead.
+         * 
+         */
         NotEquals("NOT_EQUALS"),
+        /**
+         * The condition is true if the subject (or any element of it if it is a set) matches any of the supplied values.
+         * 
+         */
         In("IN"),
+        /**
+         * The condition is true if the subject (or every element of it if it is a set) matches none of the supplied values.
+         * 
+         */
         NotIn("NOT_IN"),
+        /**
+         * Subject is discharged
+         * 
+         */
         Discharged("DISCHARGED");
 
         private final String value;

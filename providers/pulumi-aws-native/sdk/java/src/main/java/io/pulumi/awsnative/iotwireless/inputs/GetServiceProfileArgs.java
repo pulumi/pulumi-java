@@ -12,6 +12,10 @@ public final class GetServiceProfileArgs extends io.pulumi.resources.InvokeArgs 
 
     public static final GetServiceProfileArgs Empty = new GetServiceProfileArgs();
 
+    /**
+     * Service profile Id. Returned after successful create.
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 

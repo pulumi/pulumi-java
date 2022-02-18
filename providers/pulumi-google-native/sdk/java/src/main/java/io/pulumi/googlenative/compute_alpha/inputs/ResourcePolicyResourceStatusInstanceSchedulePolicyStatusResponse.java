@@ -12,6 +12,10 @@ public final class ResourcePolicyResourceStatusInstanceSchedulePolicyStatusRespo
 
     public static final ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse Empty = new ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse();
 
+    /**
+     * The last time the schedule successfully ran. The timestamp is an RFC3339 string.
+     * 
+     */
     @InputImport(name="lastRunStartTime", required=true)
     private final String lastRunStartTime;
 
@@ -19,6 +23,10 @@ public final class ResourcePolicyResourceStatusInstanceSchedulePolicyStatusRespo
         return this.lastRunStartTime;
     }
 
+    /**
+     * The next time the schedule is planned to run. The actual time might be slightly different. The timestamp is an RFC3339 string.
+     * 
+     */
     @InputImport(name="nextRunStartTime", required=true)
     private final String nextRunStartTime;
 

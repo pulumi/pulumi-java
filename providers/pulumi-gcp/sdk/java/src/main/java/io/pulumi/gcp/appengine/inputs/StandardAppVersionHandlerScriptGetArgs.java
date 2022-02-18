@@ -13,6 +13,10 @@ public final class StandardAppVersionHandlerScriptGetArgs extends io.pulumi.reso
 
     public static final StandardAppVersionHandlerScriptGetArgs Empty = new StandardAppVersionHandlerScriptGetArgs();
 
+    /**
+     * Path to the script from the application root directory.
+     * 
+     */
     @InputImport(name="scriptPath", required=true)
     private final Input<String> scriptPath;
 

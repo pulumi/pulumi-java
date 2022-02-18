@@ -12,6 +12,10 @@ public final class GetPolicyDefinitionArgs extends io.pulumi.resources.InvokeArg
 
     public static final GetPolicyDefinitionArgs Empty = new GetPolicyDefinitionArgs();
 
+    /**
+     * The name of the policy definition to get.
+     * 
+     */
     @InputImport(name="policyDefinitionName", required=true)
     private final String policyDefinitionName;
 

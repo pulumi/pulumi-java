@@ -14,6 +14,10 @@ public final class GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedSt
 
     public static final GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigArgs Empty = new GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigArgs();
 
+    /**
+     * If true, measurement.elapsed_time is used as the x-axis of each Trials Decay Curve. Otherwise, Measurement.steps will be used as the x-axis.
+     * 
+     */
     @InputImport(name="useElapsedTime")
     private final @Nullable Input<Boolean> useElapsedTime;
 

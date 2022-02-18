@@ -18,6 +18,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
 
     public static final PrivateEndpointConnectionArgs Empty = new PrivateEndpointConnectionArgs();
 
+    /**
+     * Specifies the private endpoint.
+     * 
+     */
     @InputImport(name="privateEndpoint")
     private final @Nullable Input<PrivateEndpointArgs> privateEndpoint;
 
@@ -25,6 +29,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.privateEndpoint == null ? Input.empty() : this.privateEndpoint;
     }
 
+    /**
+     * Specifies the connection state.
+     * 
+     */
     @InputImport(name="privateLinkServiceConnectionState")
     private final @Nullable Input<ConnectionStateArgs> privateLinkServiceConnectionState;
 
@@ -32,6 +40,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.privateLinkServiceConnectionState == null ? Input.empty() : this.privateLinkServiceConnectionState;
     }
 
+    /**
+     * Provisioning state of the Private Endpoint Connection.
+     * 
+     */
     @InputImport(name="provisioningState")
     private final @Nullable Input<Either<String,ResourceProvisioningState>> provisioningState;
 

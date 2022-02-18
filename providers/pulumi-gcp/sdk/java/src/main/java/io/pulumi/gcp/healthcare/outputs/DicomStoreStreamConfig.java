@@ -9,6 +9,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DicomStoreStreamConfig {
+    /**
+     * BigQueryDestination to include a fully qualified BigQuery table URI where DICOM instance metadata will be streamed.
+     * Structure is documented below.
+     * 
+     */
     private final DicomStoreStreamConfigBigqueryDestination bigqueryDestination;
 
     @OutputCustomType.Constructor({"bigqueryDestination"})
@@ -16,6 +21,11 @@ public final class DicomStoreStreamConfig {
         this.bigqueryDestination = Objects.requireNonNull(bigqueryDestination);
     }
 
+    /**
+     * BigQueryDestination to include a fully qualified BigQuery table URI where DICOM instance metadata will be streamed.
+     * Structure is documented below.
+     * 
+     */
     public DicomStoreStreamConfigBigqueryDestination getBigqueryDestination() {
         return this.bigqueryDestination;
     }

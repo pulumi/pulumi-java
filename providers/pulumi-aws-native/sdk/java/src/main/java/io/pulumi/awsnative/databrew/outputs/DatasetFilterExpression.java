@@ -11,6 +11,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DatasetFilterExpression {
+    /**
+     * Filtering expression for a parameter
+     * 
+     */
     private final String expression;
     private final List<DatasetFilterValue> valuesMap;
 
@@ -22,6 +26,10 @@ public final class DatasetFilterExpression {
         this.valuesMap = Objects.requireNonNull(valuesMap);
     }
 
+    /**
+     * Filtering expression for a parameter
+     * 
+     */
     public String getExpression() {
         return this.expression;
     }

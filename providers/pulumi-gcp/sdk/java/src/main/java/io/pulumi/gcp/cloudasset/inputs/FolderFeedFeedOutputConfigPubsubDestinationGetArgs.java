@@ -13,6 +13,10 @@ public final class FolderFeedFeedOutputConfigPubsubDestinationGetArgs extends io
 
     public static final FolderFeedFeedOutputConfigPubsubDestinationGetArgs Empty = new FolderFeedFeedOutputConfigPubsubDestinationGetArgs();
 
+    /**
+     * Destination on Cloud Pubsub topic.
+     * 
+     */
     @InputImport(name="topic", required=true)
     private final Input<String> topic;
 

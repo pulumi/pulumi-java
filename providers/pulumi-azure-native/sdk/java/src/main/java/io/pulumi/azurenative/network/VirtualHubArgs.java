@@ -21,6 +21,10 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualHubArgs Empty = new VirtualHubArgs();
 
+    /**
+     * Address-prefix for this VirtualHub.
+     * 
+     */
     @InputImport(name="addressPrefix")
     private final @Nullable Input<String> addressPrefix;
 
@@ -28,6 +32,10 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
         return this.addressPrefix == null ? Input.empty() : this.addressPrefix;
     }
 
+    /**
+     * Flag to control transit for VirtualRouter hub.
+     * 
+     */
     @InputImport(name="allowBranchToBranchTraffic")
     private final @Nullable Input<Boolean> allowBranchToBranchTraffic;
 
@@ -35,6 +43,10 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
         return this.allowBranchToBranchTraffic == null ? Input.empty() : this.allowBranchToBranchTraffic;
     }
 
+    /**
+     * The azureFirewall associated with this VirtualHub.
+     * 
+     */
     @InputImport(name="azureFirewall")
     private final @Nullable Input<SubResourceArgs> azureFirewall;
 
@@ -42,6 +54,10 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
         return this.azureFirewall == null ? Input.empty() : this.azureFirewall;
     }
 
+    /**
+     * The expressRouteGateway associated with this VirtualHub.
+     * 
+     */
     @InputImport(name="expressRouteGateway")
     private final @Nullable Input<SubResourceArgs> expressRouteGateway;
 
@@ -49,6 +65,10 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
         return this.expressRouteGateway == null ? Input.empty() : this.expressRouteGateway;
     }
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -56,6 +76,10 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * Resource location.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -63,6 +87,10 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The P2SVpnGateway associated with this VirtualHub.
+     * 
+     */
     @InputImport(name="p2SVpnGateway")
     private final @Nullable Input<SubResourceArgs> p2SVpnGateway;
 
@@ -70,6 +98,10 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
         return this.p2SVpnGateway == null ? Input.empty() : this.p2SVpnGateway;
     }
 
+    /**
+     * The resource group name of the VirtualHub.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -77,6 +109,10 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The routeTable associated with this virtual hub.
+     * 
+     */
     @InputImport(name="routeTable")
     private final @Nullable Input<VirtualHubRouteTableArgs> routeTable;
 
@@ -84,6 +120,10 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
         return this.routeTable == null ? Input.empty() : this.routeTable;
     }
 
+    /**
+     * The securityPartnerProvider associated with this VirtualHub.
+     * 
+     */
     @InputImport(name="securityPartnerProvider")
     private final @Nullable Input<SubResourceArgs> securityPartnerProvider;
 
@@ -91,6 +131,10 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
         return this.securityPartnerProvider == null ? Input.empty() : this.securityPartnerProvider;
     }
 
+    /**
+     * The Security Provider name.
+     * 
+     */
     @InputImport(name="securityProviderName")
     private final @Nullable Input<String> securityProviderName;
 
@@ -98,6 +142,10 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
         return this.securityProviderName == null ? Input.empty() : this.securityProviderName;
     }
 
+    /**
+     * The sku of this VirtualHub.
+     * 
+     */
     @InputImport(name="sku")
     private final @Nullable Input<String> sku;
 
@@ -105,6 +153,10 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku == null ? Input.empty() : this.sku;
     }
 
+    /**
+     * Resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -112,6 +164,10 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The name of the VirtualHub.
+     * 
+     */
     @InputImport(name="virtualHubName")
     private final @Nullable Input<String> virtualHubName;
 
@@ -119,6 +175,10 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
         return this.virtualHubName == null ? Input.empty() : this.virtualHubName;
     }
 
+    /**
+     * List of all virtual hub route table v2s associated with this VirtualHub.
+     * 
+     */
     @InputImport(name="virtualHubRouteTableV2s")
     private final @Nullable Input<List<VirtualHubRouteTableV2Args>> virtualHubRouteTableV2s;
 
@@ -126,6 +186,10 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
         return this.virtualHubRouteTableV2s == null ? Input.empty() : this.virtualHubRouteTableV2s;
     }
 
+    /**
+     * VirtualRouter ASN.
+     * 
+     */
     @InputImport(name="virtualRouterAsn")
     private final @Nullable Input<Double> virtualRouterAsn;
 
@@ -133,6 +197,10 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
         return this.virtualRouterAsn == null ? Input.empty() : this.virtualRouterAsn;
     }
 
+    /**
+     * VirtualRouter IPs.
+     * 
+     */
     @InputImport(name="virtualRouterIps")
     private final @Nullable Input<List<String>> virtualRouterIps;
 
@@ -140,6 +208,10 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
         return this.virtualRouterIps == null ? Input.empty() : this.virtualRouterIps;
     }
 
+    /**
+     * The VirtualWAN to which the VirtualHub belongs.
+     * 
+     */
     @InputImport(name="virtualWan")
     private final @Nullable Input<SubResourceArgs> virtualWan;
 
@@ -147,6 +219,10 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
         return this.virtualWan == null ? Input.empty() : this.virtualWan;
     }
 
+    /**
+     * The VpnGateway associated with this VirtualHub.
+     * 
+     */
     @InputImport(name="vpnGateway")
     private final @Nullable Input<SubResourceArgs> vpnGateway;
 

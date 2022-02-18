@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSite {
+/**
+ * Site REST Resource.
+ * API Version: 2020-01-01.
+ * 
+ *
+ * Site REST Resource.
+ * 
+ */
     public static CompletableFuture<GetSiteResult> invokeAsync(GetSiteArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:offazure:getSite", TypeShape.of(GetSiteResult.class), args == null ? GetSiteArgs.Empty : args, Utilities.withVersion(options));
     }

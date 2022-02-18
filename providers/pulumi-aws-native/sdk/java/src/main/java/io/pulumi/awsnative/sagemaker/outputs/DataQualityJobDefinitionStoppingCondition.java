@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DataQualityJobDefinitionStoppingCondition {
+    /**
+     * The maximum runtime allowed in seconds.
+     * 
+     */
     private final Integer maxRuntimeInSeconds;
 
     @OutputCustomType.Constructor({"maxRuntimeInSeconds"})
@@ -16,6 +20,10 @@ public final class DataQualityJobDefinitionStoppingCondition {
         this.maxRuntimeInSeconds = Objects.requireNonNull(maxRuntimeInSeconds);
     }
 
+    /**
+     * The maximum runtime allowed in seconds.
+     * 
+     */
     public Integer getMaxRuntimeInSeconds() {
         return this.maxRuntimeInSeconds;
     }

@@ -13,6 +13,11 @@ public final class PatchDeploymentRecurringScheduleWeeklyGetArgs extends io.pulu
 
     public static final PatchDeploymentRecurringScheduleWeeklyGetArgs Empty = new PatchDeploymentRecurringScheduleWeeklyGetArgs();
 
+    /**
+     * A day of the week.
+     * Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
+     * 
+     */
     @InputImport(name="dayOfWeek", required=true)
     private final Input<String> dayOfWeek;
 

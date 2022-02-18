@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The storage Account.
+ * 
+ */
 public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StorageAccountResponse Empty = new StorageAccountResponse();
 
+    /**
+     * The container in the storage account, only to be specified for WASB storage accounts.
+     * 
+     */
     @InputImport(name="container")
     private final @Nullable String container;
 
@@ -22,6 +30,10 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
         return this.container == null ? Optional.empty() : Optional.ofNullable(this.container);
     }
 
+    /**
+     * The filesystem, only to be specified for Azure Data Lake Storage Gen 2.
+     * 
+     */
     @InputImport(name="fileSystem")
     private final @Nullable String fileSystem;
 
@@ -29,6 +41,10 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
         return this.fileSystem == null ? Optional.empty() : Optional.ofNullable(this.fileSystem);
     }
 
+    /**
+     * The file share name.
+     * 
+     */
     @InputImport(name="fileshare")
     private final @Nullable String fileshare;
 
@@ -36,6 +52,10 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
         return this.fileshare == null ? Optional.empty() : Optional.ofNullable(this.fileshare);
     }
 
+    /**
+     * Whether or not the storage account is the default storage account.
+     * 
+     */
     @InputImport(name="isDefault")
     private final @Nullable Boolean isDefault;
 
@@ -43,6 +63,10 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
         return this.isDefault == null ? Optional.empty() : Optional.ofNullable(this.isDefault);
     }
 
+    /**
+     * The storage account access key.
+     * 
+     */
     @InputImport(name="key")
     private final @Nullable String key;
 
@@ -50,6 +74,10 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
         return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
     }
 
+    /**
+     * The managed identity (MSI) that is allowed to access the storage account, only to be specified for Azure Data Lake Storage Gen 2.
+     * 
+     */
     @InputImport(name="msiResourceId")
     private final @Nullable String msiResourceId;
 
@@ -57,6 +85,10 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
         return this.msiResourceId == null ? Optional.empty() : Optional.ofNullable(this.msiResourceId);
     }
 
+    /**
+     * The name of the storage account.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -64,6 +96,10 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The resource ID of storage account, only to be specified for Azure Data Lake Storage Gen 2.
+     * 
+     */
     @InputImport(name="resourceId")
     private final @Nullable String resourceId;
 
@@ -71,6 +107,10 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
         return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
     }
 
+    /**
+     * The shared access signature key.
+     * 
+     */
     @InputImport(name="saskey")
     private final @Nullable String saskey;
 

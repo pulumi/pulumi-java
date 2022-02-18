@@ -14,6 +14,10 @@ public final class GetProjectArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetProjectArgs Empty = new GetProjectArgs();
 
+    /**
+     * The project ID. If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="projectId")
     private final @Nullable String projectId;
 

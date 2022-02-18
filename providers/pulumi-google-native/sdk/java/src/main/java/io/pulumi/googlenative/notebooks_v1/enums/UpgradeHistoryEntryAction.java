@@ -8,10 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Action. Rolloback or Upgrade.
+     * 
+     */
     @EnumType
     public enum UpgradeHistoryEntryAction {
+        /**
+         * Operation is not specified.
+         * 
+         */
         ActionUnspecified("ACTION_UNSPECIFIED"),
+        /**
+         * Upgrade.
+         * 
+         */
         Upgrade("UPGRADE"),
+        /**
+         * Rollback.
+         * 
+         */
         Rollback("ROLLBACK");
 
         private final String value;

@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ShieldedVmIntegrityPolicyResponse {
+    /**
+     * Updates the integrity policy baseline using the measurements from the VM instance's most recent boot.
+     * 
+     */
     private final Boolean updateAutoLearnPolicy;
 
     @OutputCustomType.Constructor({"updateAutoLearnPolicy"})
@@ -16,6 +20,10 @@ public final class ShieldedVmIntegrityPolicyResponse {
         this.updateAutoLearnPolicy = Objects.requireNonNull(updateAutoLearnPolicy);
     }
 
+    /**
+     * Updates the integrity policy baseline using the measurements from the VM instance's most recent boot.
+     * 
+     */
     public Boolean getUpdateAutoLearnPolicy() {
         return this.updateAutoLearnPolicy;
     }

@@ -13,10 +13,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The definition of a parameter that can be provided to the policy.
+ * 
+ */
 public final class ParameterDefinitionsValueResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ParameterDefinitionsValueResponse Empty = new ParameterDefinitionsValueResponse();
 
+    /**
+     * The allowed values for the parameter.
+     * 
+     */
     @InputImport(name="allowedValues")
     private final @Nullable List<Object> allowedValues;
 
@@ -24,6 +32,10 @@ public final class ParameterDefinitionsValueResponse extends io.pulumi.resources
         return this.allowedValues == null ? List.of() : this.allowedValues;
     }
 
+    /**
+     * The default value for the parameter if no value is provided.
+     * 
+     */
     @InputImport(name="defaultValue")
     private final @Nullable Object defaultValue;
 
@@ -31,6 +43,10 @@ public final class ParameterDefinitionsValueResponse extends io.pulumi.resources
         return this.defaultValue == null ? Optional.empty() : Optional.ofNullable(this.defaultValue);
     }
 
+    /**
+     * General metadata for the parameter.
+     * 
+     */
     @InputImport(name="metadata")
     private final @Nullable ParameterDefinitionsValueResponseMetadata metadata;
 
@@ -38,6 +54,10 @@ public final class ParameterDefinitionsValueResponse extends io.pulumi.resources
         return this.metadata == null ? Optional.empty() : Optional.ofNullable(this.metadata);
     }
 
+    /**
+     * The data type of the parameter.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 

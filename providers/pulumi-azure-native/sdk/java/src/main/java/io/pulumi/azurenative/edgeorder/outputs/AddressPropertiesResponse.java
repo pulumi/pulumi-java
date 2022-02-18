@@ -13,8 +13,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AddressPropertiesResponse {
+    /**
+     * Status of address validation
+     * 
+     */
     private final String addressValidationStatus;
+    /**
+     * Contact details for the address
+     * 
+     */
     private final ContactDetailsResponse contactDetails;
+    /**
+     * Shipping details for the address
+     * 
+     */
     private final @Nullable ShippingAddressResponse shippingAddress;
 
     @OutputCustomType.Constructor({"addressValidationStatus","contactDetails","shippingAddress"})
@@ -27,12 +39,24 @@ public final class AddressPropertiesResponse {
         this.shippingAddress = shippingAddress;
     }
 
+    /**
+     * Status of address validation
+     * 
+     */
     public String getAddressValidationStatus() {
         return this.addressValidationStatus;
     }
+    /**
+     * Contact details for the address
+     * 
+     */
     public ContactDetailsResponse getContactDetails() {
         return this.contactDetails;
     }
+    /**
+     * Shipping details for the address
+     * 
+     */
     public Optional<ShippingAddressResponse> getShippingAddress() {
         return Optional.ofNullable(this.shippingAddress);
     }

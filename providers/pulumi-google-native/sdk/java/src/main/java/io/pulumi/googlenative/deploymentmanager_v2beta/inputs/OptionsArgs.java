@@ -14,10 +14,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Options allows customized resource handling by Deployment Manager.
+ * 
+ */
 public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OptionsArgs Empty = new OptionsArgs();
 
+    /**
+     * Options regarding how to thread async requests.
+     * 
+     */
     @InputImport(name="asyncOptions")
     private final @Nullable Input<List<AsyncOptionsArgs>> asyncOptions;
 
@@ -25,6 +33,10 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
         return this.asyncOptions == null ? Input.empty() : this.asyncOptions;
     }
 
+    /**
+     * The mappings that apply for requests.
+     * 
+     */
     @InputImport(name="inputMappings")
     private final @Nullable Input<List<InputMappingArgs>> inputMappings;
 
@@ -32,6 +44,10 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
         return this.inputMappings == null ? Input.empty() : this.inputMappings;
     }
 
+    /**
+     * Options for how to validate and process properties on a resource.
+     * 
+     */
     @InputImport(name="validationOptions")
     private final @Nullable Input<ValidationOptionsArgs> validationOptions;
 
@@ -39,6 +55,10 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
         return this.validationOptions == null ? Input.empty() : this.validationOptions;
     }
 
+    /**
+     * Additional properties block described as a jsonSchema, these properties will never be part of the json payload, but they can be consumed by InputMappings, this must be a valid json schema draft-04. The properties specified here will be decouple in a different section. This schema will be merged to the schema validation, and properties here will be extracted From the payload and consumed explicitly by InputMappings. ex: field1: type: string field2: type: number
+     * 
+     */
     @InputImport(name="virtualProperties")
     private final @Nullable Input<String> virtualProperties;
 

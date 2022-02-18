@@ -20,10 +20,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes properties of an assessment metadata.
+ * 
+ */
 public final class SecurityAssessmentMetadataPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SecurityAssessmentMetadataPropertiesArgs Empty = new SecurityAssessmentMetadataPropertiesArgs();
 
+    /**
+     * BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition
+     * 
+     */
     @InputImport(name="assessmentType", required=true)
     private final Input<Either<String,AssessmentType>> assessmentType;
 
@@ -38,6 +46,10 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends io.pulumi.re
         return this.categories == null ? Input.empty() : this.categories;
     }
 
+    /**
+     * Human readable description of the assessment
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -45,6 +57,10 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends io.pulumi.re
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * User friendly display name of the assessment
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -52,6 +68,10 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends io.pulumi.re
         return this.displayName;
     }
 
+    /**
+     * The implementation effort required to remediate this assessment
+     * 
+     */
     @InputImport(name="implementationEffort")
     private final @Nullable Input<Either<String,ImplementationEffort>> implementationEffort;
 
@@ -59,6 +79,10 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends io.pulumi.re
         return this.implementationEffort == null ? Input.empty() : this.implementationEffort;
     }
 
+    /**
+     * Describes the partner that created the assessment
+     * 
+     */
     @InputImport(name="partnerData")
     private final @Nullable Input<SecurityAssessmentMetadataPartnerDataArgs> partnerData;
 
@@ -66,6 +90,10 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends io.pulumi.re
         return this.partnerData == null ? Input.empty() : this.partnerData;
     }
 
+    /**
+     * True if this assessment is in preview release status
+     * 
+     */
     @InputImport(name="preview")
     private final @Nullable Input<Boolean> preview;
 
@@ -73,6 +101,10 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends io.pulumi.re
         return this.preview == null ? Input.empty() : this.preview;
     }
 
+    /**
+     * Human readable description of what you should do to mitigate this security issue
+     * 
+     */
     @InputImport(name="remediationDescription")
     private final @Nullable Input<String> remediationDescription;
 
@@ -80,6 +112,10 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends io.pulumi.re
         return this.remediationDescription == null ? Input.empty() : this.remediationDescription;
     }
 
+    /**
+     * The severity level of the assessment
+     * 
+     */
     @InputImport(name="severity", required=true)
     private final Input<Either<String,Severity>> severity;
 
@@ -94,6 +130,10 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends io.pulumi.re
         return this.threats == null ? Input.empty() : this.threats;
     }
 
+    /**
+     * The user impact of the assessment
+     * 
+     */
     @InputImport(name="userImpact")
     private final @Nullable Input<Either<String,UserImpact>> userImpact;
 

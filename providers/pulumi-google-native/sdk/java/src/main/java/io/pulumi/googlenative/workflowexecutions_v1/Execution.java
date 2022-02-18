@@ -13,63 +13,148 @@ import io.pulumi.googlenative.workflowexecutions_v1.outputs.ErrorResponse;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Creates a new execution using the latest revision of the given workflow.
+ * Auto-naming is currently not supported for this resource.
+ * Note - this resource's API doesn't support deletion. When deleted, the resource will persist
+ * on Google Cloud even though it will be deleted from Pulumi state.
+ * 
+ */
 @ResourceType(type="google-native:workflowexecutions/v1:Execution")
 public class Execution extends io.pulumi.resources.CustomResource {
+    /**
+     * Input parameters of the execution represented as a JSON string. The size limit is 32KB. *Note*: If you are using the REST API directly to run your workflow, you must escape any JSON string value of `argument`. Example: `'{"argument":"{\"firstName\":\"FIRST\",\"lastName\":\"LAST\"}"}'`
+     * 
+     */
     @OutputExport(name="argument", type=String.class, parameters={})
     private Output<String> argument;
 
+    /**
+     * @return Input parameters of the execution represented as a JSON string. The size limit is 32KB. *Note*: If you are using the REST API directly to run your workflow, you must escape any JSON string value of `argument`. Example: `'{"argument":"{\"firstName\":\"FIRST\",\"lastName\":\"LAST\"}"}'`
+     * 
+     */
     public Output<String> getArgument() {
         return this.argument;
     }
+    /**
+     * The call logging level associated to this execution.
+     * 
+     */
     @OutputExport(name="callLogLevel", type=String.class, parameters={})
     private Output<String> callLogLevel;
 
+    /**
+     * @return The call logging level associated to this execution.
+     * 
+     */
     public Output<String> getCallLogLevel() {
         return this.callLogLevel;
     }
+    /**
+     * Marks the end of execution, successful or not.
+     * 
+     */
     @OutputExport(name="endTime", type=String.class, parameters={})
     private Output<String> endTime;
 
+    /**
+     * @return Marks the end of execution, successful or not.
+     * 
+     */
     public Output<String> getEndTime() {
         return this.endTime;
     }
+    /**
+     * The error which caused the execution to finish prematurely. The value is only present if the execution's state is `FAILED` or `CANCELLED`.
+     * 
+     */
     @OutputExport(name="error", type=ErrorResponse.class, parameters={})
     private Output<ErrorResponse> error;
 
+    /**
+     * @return The error which caused the execution to finish prematurely. The value is only present if the execution's state is `FAILED` or `CANCELLED`.
+     * 
+     */
     public Output<ErrorResponse> getError() {
         return this.error;
     }
+    /**
+     * The resource name of the execution. Format: projects/{project}/locations/{location}/workflows/{workflow}/executions/{execution}
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The resource name of the execution. Format: projects/{project}/locations/{location}/workflows/{workflow}/executions/{execution}
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Output of the execution represented as a JSON string. The value can only be present if the execution's state is `SUCCEEDED`.
+     * 
+     */
     @OutputExport(name="result", type=String.class, parameters={})
     private Output<String> result;
 
+    /**
+     * @return Output of the execution represented as a JSON string. The value can only be present if the execution's state is `SUCCEEDED`.
+     * 
+     */
     public Output<String> getResult() {
         return this.result;
     }
+    /**
+     * Marks the beginning of execution.
+     * 
+     */
     @OutputExport(name="startTime", type=String.class, parameters={})
     private Output<String> startTime;
 
+    /**
+     * @return Marks the beginning of execution.
+     * 
+     */
     public Output<String> getStartTime() {
         return this.startTime;
     }
+    /**
+     * Current state of the execution.
+     * 
+     */
     @OutputExport(name="state", type=String.class, parameters={})
     private Output<String> state;
 
+    /**
+     * @return Current state of the execution.
+     * 
+     */
     public Output<String> getState() {
         return this.state;
     }
+    /**
+     * Revision of the workflow this execution is using.
+     * 
+     */
     @OutputExport(name="workflowRevisionId", type=String.class, parameters={})
     private Output<String> workflowRevisionId;
 
+    /**
+     * @return Revision of the workflow this execution is using.
+     * 
+     */
     public Output<String> getWorkflowRevisionId() {
         return this.workflowRevisionId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Execution(String name, ExecutionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:workflowexecutions/v1:Execution", name, args == null ? ExecutionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -85,6 +170,14 @@ public class Execution extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Execution get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Execution(name, id, options);
     }

@@ -15,6 +15,10 @@ public final class GuestPoliciesRecipeInstallStepFileExecArgs extends io.pulumi.
 
     public static final GuestPoliciesRecipeInstallStepFileExecArgs Empty = new GuestPoliciesRecipeInstallStepFileExecArgs();
 
+    /**
+     * Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
+     * 
+     */
     @InputImport(name="allowedExitCodes")
     private final @Nullable Input<String> allowedExitCodes;
 
@@ -22,6 +26,10 @@ public final class GuestPoliciesRecipeInstallStepFileExecArgs extends io.pulumi.
         return this.allowedExitCodes == null ? Input.empty() : this.allowedExitCodes;
     }
 
+    /**
+     * Arguments to be passed to the provided executable.
+     * 
+     */
     @InputImport(name="args")
     private final @Nullable Input<List<String>> args;
 
@@ -29,6 +37,10 @@ public final class GuestPoliciesRecipeInstallStepFileExecArgs extends io.pulumi.
         return this.args == null ? Input.empty() : this.args;
     }
 
+    /**
+     * The id of the relevant artifact in the recipe.
+     * 
+     */
     @InputImport(name="artifactId")
     private final @Nullable Input<String> artifactId;
 
@@ -36,6 +48,10 @@ public final class GuestPoliciesRecipeInstallStepFileExecArgs extends io.pulumi.
         return this.artifactId == null ? Input.empty() : this.artifactId;
     }
 
+    /**
+     * The absolute path of the file on the local filesystem.
+     * 
+     */
     @InputImport(name="localPath")
     private final @Nullable Input<String> localPath;
 

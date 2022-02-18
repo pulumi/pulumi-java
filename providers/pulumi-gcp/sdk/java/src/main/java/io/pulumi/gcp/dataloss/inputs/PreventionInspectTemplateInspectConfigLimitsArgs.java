@@ -16,6 +16,11 @@ public final class PreventionInspectTemplateInspectConfigLimitsArgs extends io.p
 
     public static final PreventionInspectTemplateInspectConfigLimitsArgs Empty = new PreventionInspectTemplateInspectConfigLimitsArgs();
 
+    /**
+     * Configuration of findings limit given for specified infoTypes.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="maxFindingsPerInfoTypes")
     private final @Nullable Input<List<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeArgs>> maxFindingsPerInfoTypes;
 
@@ -23,6 +28,10 @@ public final class PreventionInspectTemplateInspectConfigLimitsArgs extends io.p
         return this.maxFindingsPerInfoTypes == null ? Input.empty() : this.maxFindingsPerInfoTypes;
     }
 
+    /**
+     * Max number of findings that will be returned for each item scanned. The maximum returned is 2000.
+     * 
+     */
     @InputImport(name="maxFindingsPerItem", required=true)
     private final Input<Integer> maxFindingsPerItem;
 
@@ -30,6 +39,10 @@ public final class PreventionInspectTemplateInspectConfigLimitsArgs extends io.p
         return this.maxFindingsPerItem;
     }
 
+    /**
+     * Max number of findings that will be returned per request/job. The maximum returned is 2000.
+     * 
+     */
     @InputImport(name="maxFindingsPerRequest", required=true)
     private final Input<Integer> maxFindingsPerRequest;
 

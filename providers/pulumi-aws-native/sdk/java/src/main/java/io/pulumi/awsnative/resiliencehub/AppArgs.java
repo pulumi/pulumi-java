@@ -17,6 +17,10 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AppArgs Empty = new AppArgs();
 
+    /**
+     * A string containing full ResilienceHub app template body.
+     * 
+     */
     @InputImport(name="appTemplateBody", required=true)
     private final Input<String> appTemplateBody;
 
@@ -24,6 +28,10 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
         return this.appTemplateBody;
     }
 
+    /**
+     * App description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -31,6 +39,10 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Name of the app.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -38,6 +50,10 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Amazon Resource Name (ARN) of the Resiliency Policy.
+     * 
+     */
     @InputImport(name="resiliencyPolicyArn")
     private final @Nullable Input<String> resiliencyPolicyArn;
 
@@ -45,6 +61,10 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
         return this.resiliencyPolicyArn == null ? Input.empty() : this.resiliencyPolicyArn;
     }
 
+    /**
+     * An array of ResourceMapping objects.
+     * 
+     */
     @InputImport(name="resourceMappings", required=true)
     private final Input<List<AppResourceMappingArgs>> resourceMappings;
 

@@ -12,6 +12,10 @@ public final class GetLabelArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetLabelArgs Empty = new GetLabelArgs();
 
+    /**
+     * The label ARN.
+     * 
+     */
     @InputImport(name="arn", required=true)
     private final String arn;
 

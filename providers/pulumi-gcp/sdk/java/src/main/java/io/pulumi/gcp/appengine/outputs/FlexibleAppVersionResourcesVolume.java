@@ -10,8 +10,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class FlexibleAppVersionResourcesVolume {
+    /**
+     * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
+     * 
+     */
     private final String name;
+    /**
+     * Volume size in gigabytes.
+     * 
+     */
     private final Integer sizeGb;
+    /**
+     * Underlying volume type, e.g. 'tmpfs'.
+     * 
+     */
     private final String volumeType;
 
     @OutputCustomType.Constructor({"name","sizeGb","volumeType"})
@@ -24,12 +36,24 @@ public final class FlexibleAppVersionResourcesVolume {
         this.volumeType = Objects.requireNonNull(volumeType);
     }
 
+    /**
+     * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Volume size in gigabytes.
+     * 
+     */
     public Integer getSizeGb() {
         return this.sizeGb;
     }
+    /**
+     * Underlying volume type, e.g. 'tmpfs'.
+     * 
+     */
     public String getVolumeType() {
         return this.volumeType;
     }

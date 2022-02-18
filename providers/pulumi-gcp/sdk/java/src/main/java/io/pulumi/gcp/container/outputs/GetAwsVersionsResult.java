@@ -12,10 +12,22 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetAwsVersionsResult {
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
     private final @Nullable String location;
     private final @Nullable String project;
+    /**
+     * A list of AWS regions that are available for use with this project and GCP location.
+     * 
+     */
     private final List<String> supportedRegions;
+    /**
+     * A list of versions available for use with this project and location.
+     * 
+     */
     private final List<String> validVersions;
 
     @OutputCustomType.Constructor({"id","location","project","supportedRegions","validVersions"})
@@ -32,6 +44,10 @@ public final class GetAwsVersionsResult {
         this.validVersions = Objects.requireNonNull(validVersions);
     }
 
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }
@@ -41,9 +57,17 @@ public final class GetAwsVersionsResult {
     public Optional<String> getProject() {
         return Optional.ofNullable(this.project);
     }
+    /**
+     * A list of AWS regions that are available for use with this project and GCP location.
+     * 
+     */
     public List<String> getSupportedRegions() {
         return this.supportedRegions;
     }
+    /**
+     * A list of versions available for use with this project and location.
+     * 
+     */
     public List<String> getValidVersions() {
         return this.validVersions;
     }

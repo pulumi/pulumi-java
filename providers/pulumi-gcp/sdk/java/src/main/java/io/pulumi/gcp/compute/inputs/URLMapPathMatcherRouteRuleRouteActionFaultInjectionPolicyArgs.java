@@ -15,6 +15,11 @@ public final class URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyArgs
 
     public static final URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyArgs Empty = new URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyArgs();
 
+    /**
+     * The specification for how client requests are aborted as part of fault injection.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="abort")
     private final @Nullable Input<URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbortArgs> abort;
 
@@ -22,6 +27,11 @@ public final class URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyArgs
         return this.abort == null ? Input.empty() : this.abort;
     }
 
+    /**
+     * The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="delay")
     private final @Nullable Input<URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayArgs> delay;
 

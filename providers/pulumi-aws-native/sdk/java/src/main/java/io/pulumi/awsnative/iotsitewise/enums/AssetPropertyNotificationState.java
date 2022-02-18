@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The MQTT notification state (ENABLED or DISABLED) for this asset property.
+     * 
+     */
     @EnumType
     public enum AssetPropertyNotificationState {
         Enabled("ENABLED"),

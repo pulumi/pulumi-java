@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Load balancer backend addresses.
+ * 
+ */
 public final class LoadBalancerBackendAddressArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LoadBalancerBackendAddressArgs Empty = new LoadBalancerBackendAddressArgs();
 
+    /**
+     * IP Address belonging to the referenced virtual network.
+     * 
+     */
     @InputImport(name="ipAddress")
     private final @Nullable Input<String> ipAddress;
 
@@ -22,6 +30,10 @@ public final class LoadBalancerBackendAddressArgs extends io.pulumi.resources.Re
         return this.ipAddress == null ? Input.empty() : this.ipAddress;
     }
 
+    /**
+     * Reference to the frontend ip address configuration defined in regional loadbalancer.
+     * 
+     */
     @InputImport(name="loadBalancerFrontendIPConfiguration")
     private final @Nullable Input<SubResourceArgs> loadBalancerFrontendIPConfiguration;
 
@@ -29,6 +41,10 @@ public final class LoadBalancerBackendAddressArgs extends io.pulumi.resources.Re
         return this.loadBalancerFrontendIPConfiguration == null ? Input.empty() : this.loadBalancerFrontendIPConfiguration;
     }
 
+    /**
+     * Name of the backend address.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -36,6 +52,10 @@ public final class LoadBalancerBackendAddressArgs extends io.pulumi.resources.Re
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Reference to an existing subnet.
+     * 
+     */
     @InputImport(name="subnet")
     private final @Nullable Input<SubResourceArgs> subnet;
 
@@ -43,6 +63,10 @@ public final class LoadBalancerBackendAddressArgs extends io.pulumi.resources.Re
         return this.subnet == null ? Input.empty() : this.subnet;
     }
 
+    /**
+     * Reference to an existing virtual network.
+     * 
+     */
     @InputImport(name="virtualNetwork")
     private final @Nullable Input<SubResourceArgs> virtualNetwork;
 

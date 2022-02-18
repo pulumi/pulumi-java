@@ -14,6 +14,10 @@ public final class ModelContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ModelContainerArgs Empty = new ModelContainerArgs();
 
+    /**
+     * Container name.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -21,6 +25,10 @@ public final class ModelContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Additional attributes of the entity.
+     * 
+     */
     @InputImport(name="properties", required=true)
     private final Input<io.pulumi.azurenative.machinelearningservices.inputs.ModelContainerArgs> properties;
 
@@ -28,6 +36,10 @@ public final class ModelContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -35,6 +47,10 @@ public final class ModelContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of Azure Machine Learning workspace.
+     * 
+     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

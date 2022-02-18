@@ -15,13 +15,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetResourcePolicyResult {
+    /**
+     * Description of this Resource Policy.
+     * 
+     */
     private final String description;
     private final List<GetResourcePolicyGroupPlacementPolicy> groupPlacementPolicies;
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
     private final List<GetResourcePolicyInstanceSchedulePolicy> instanceSchedulePolicies;
     private final String name;
     private final @Nullable String project;
     private final @Nullable String region;
+    /**
+     * The URI of the resource.
+     * 
+     */
     private final String selfLink;
     private final List<GetResourcePolicySnapshotSchedulePolicy> snapshotSchedulePolicies;
 
@@ -47,12 +59,20 @@ public final class GetResourcePolicyResult {
         this.snapshotSchedulePolicies = Objects.requireNonNull(snapshotSchedulePolicies);
     }
 
+    /**
+     * Description of this Resource Policy.
+     * 
+     */
     public String getDescription() {
         return this.description;
     }
     public List<GetResourcePolicyGroupPlacementPolicy> getGroupPlacementPolicies() {
         return this.groupPlacementPolicies;
     }
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }
@@ -68,6 +88,10 @@ public final class GetResourcePolicyResult {
     public Optional<String> getRegion() {
         return Optional.ofNullable(this.region);
     }
+    /**
+     * The URI of the resource.
+     * 
+     */
     public String getSelfLink() {
         return this.selfLink;
     }

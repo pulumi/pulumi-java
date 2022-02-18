@@ -8,10 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Required. Immutable. The Type of this CertificateAuthority.
+     * 
+     */
     @EnumType
     public enum CertificateAuthorityType {
+        /**
+         * Not specified.
+         * 
+         */
         TypeUnspecified("TYPE_UNSPECIFIED"),
+        /**
+         * Self-signed CA.
+         * 
+         */
         SelfSigned("SELF_SIGNED"),
+        /**
+         * Subordinate CA. Could be issued by a Private CA CertificateAuthority or an unmanaged CA.
+         * 
+         */
         Subordinate("SUBORDINATE");
 
         private final String value;

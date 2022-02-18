@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Elastic Resource Properties.
+ * 
+ */
 public final class ElasticPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ElasticPropertiesResponse Empty = new ElasticPropertiesResponse();
 
+    /**
+     * Details of the elastic cloud deployment.
+     * 
+     */
     @InputImport(name="elasticCloudDeployment")
     private final @Nullable ElasticCloudDeploymentResponse elasticCloudDeployment;
 
@@ -22,6 +30,10 @@ public final class ElasticPropertiesResponse extends io.pulumi.resources.InvokeA
         return this.elasticCloudDeployment == null ? Optional.empty() : Optional.ofNullable(this.elasticCloudDeployment);
     }
 
+    /**
+     * Details of the user's elastic account.
+     * 
+     */
     @InputImport(name="elasticCloudUser")
     private final @Nullable ElasticCloudUserResponse elasticCloudUser;
 

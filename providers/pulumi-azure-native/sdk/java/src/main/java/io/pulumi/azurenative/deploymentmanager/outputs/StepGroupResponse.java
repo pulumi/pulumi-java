@@ -12,10 +12,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class StepGroupResponse {
+    /**
+     * The list of step group names on which this step group depends on.
+     * 
+     */
     private final @Nullable List<String> dependsOnStepGroups;
+    /**
+     * The resource Id of service unit to be deployed. The service unit should be from the service topology referenced in targetServiceTopologyId
+     * 
+     */
     private final String deploymentTargetId;
+    /**
+     * The name of the step group.
+     * 
+     */
     private final String name;
+    /**
+     * The list of steps to be run after deploying the target.
+     * 
+     */
     private final @Nullable List<PrePostStepResponse> postDeploymentSteps;
+    /**
+     * The list of steps to be run before deploying the target.
+     * 
+     */
     private final @Nullable List<PrePostStepResponse> preDeploymentSteps;
 
     @OutputCustomType.Constructor({"dependsOnStepGroups","deploymentTargetId","name","postDeploymentSteps","preDeploymentSteps"})
@@ -32,18 +52,38 @@ public final class StepGroupResponse {
         this.preDeploymentSteps = preDeploymentSteps;
     }
 
+    /**
+     * The list of step group names on which this step group depends on.
+     * 
+     */
     public List<String> getDependsOnStepGroups() {
         return this.dependsOnStepGroups == null ? List.of() : this.dependsOnStepGroups;
     }
+    /**
+     * The resource Id of service unit to be deployed. The service unit should be from the service topology referenced in targetServiceTopologyId
+     * 
+     */
     public String getDeploymentTargetId() {
         return this.deploymentTargetId;
     }
+    /**
+     * The name of the step group.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The list of steps to be run after deploying the target.
+     * 
+     */
     public List<PrePostStepResponse> getPostDeploymentSteps() {
         return this.postDeploymentSteps == null ? List.of() : this.postDeploymentSteps;
     }
+    /**
+     * The list of steps to be run before deploying the target.
+     * 
+     */
     public List<PrePostStepResponse> getPreDeploymentSteps() {
         return this.preDeploymentSteps == null ? List.of() : this.preDeploymentSteps;
     }

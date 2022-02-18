@@ -18,51 +18,118 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * A report resource.
+ * API Version: 2018-08-01-preview.
+ * 
+ */
 @ResourceType(type="azure-native:costmanagement:ReportByBillingAccount")
 public class ReportByBillingAccount extends io.pulumi.resources.CustomResource {
+    /**
+     * Has definition for the report.
+     * 
+     */
     @OutputExport(name="definition", type=ReportDefinitionResponse.class, parameters={})
     private Output<ReportDefinitionResponse> definition;
 
+    /**
+     * @return Has definition for the report.
+     * 
+     */
     public Output<ReportDefinitionResponse> getDefinition() {
         return this.definition;
     }
+    /**
+     * Has delivery information for the report.
+     * 
+     */
     @OutputExport(name="deliveryInfo", type=ReportDeliveryInfoResponse.class, parameters={})
     private Output<ReportDeliveryInfoResponse> deliveryInfo;
 
+    /**
+     * @return Has delivery information for the report.
+     * 
+     */
     public Output<ReportDeliveryInfoResponse> getDeliveryInfo() {
         return this.deliveryInfo;
     }
+    /**
+     * The format of the report being delivered.
+     * 
+     */
     @OutputExport(name="format", type=String.class, parameters={})
     private Output</* @Nullable */ String> format;
 
+    /**
+     * @return The format of the report being delivered.
+     * 
+     */
     public Output</* @Nullable */ String> getFormat() {
         return this.format;
     }
+    /**
+     * Resource name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Has schedule information for the report.
+     * 
+     */
     @OutputExport(name="schedule", type=ReportScheduleResponse.class, parameters={})
     private Output</* @Nullable */ ReportScheduleResponse> schedule;
 
+    /**
+     * @return Has schedule information for the report.
+     * 
+     */
     public Output</* @Nullable */ ReportScheduleResponse> getSchedule() {
         return this.schedule;
     }
+    /**
+     * Resource tags.
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Output<Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Resource type.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ReportByBillingAccount(String name, ReportByBillingAccountArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:costmanagement:ReportByBillingAccount", name, args == null ? ReportByBillingAccountArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -81,6 +148,14 @@ public class ReportByBillingAccount extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ReportByBillingAccount get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ReportByBillingAccount(name, id, options);
     }

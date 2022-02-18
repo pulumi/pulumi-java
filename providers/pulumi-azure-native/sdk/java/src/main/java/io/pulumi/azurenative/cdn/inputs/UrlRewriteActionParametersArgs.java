@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines the parameters for the url rewrite action.
+ * 
+ */
 public final class UrlRewriteActionParametersArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final UrlRewriteActionParametersArgs Empty = new UrlRewriteActionParametersArgs();
 
+    /**
+     * Define the relative URL to which the above requests will be rewritten by.
+     * 
+     */
     @InputImport(name="destination", required=true)
     private final Input<String> destination;
 
@@ -29,6 +37,10 @@ public final class UrlRewriteActionParametersArgs extends io.pulumi.resources.Re
         return this.odataType;
     }
 
+    /**
+     * Whether to preserve unmatched path. Default value is true.
+     * 
+     */
     @InputImport(name="preserveUnmatchedPath")
     private final @Nullable Input<Boolean> preserveUnmatchedPath;
 
@@ -36,6 +48,10 @@ public final class UrlRewriteActionParametersArgs extends io.pulumi.resources.Re
         return this.preserveUnmatchedPath == null ? Input.empty() : this.preserveUnmatchedPath;
     }
 
+    /**
+     * define a request URI pattern that identifies the type of requests that may be rewritten. If value is blank, all strings are matched.
+     * 
+     */
     @InputImport(name="sourcePattern", required=true)
     private final Input<String> sourcePattern;
 

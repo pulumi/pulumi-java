@@ -14,10 +14,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Xml read settings.
+ * 
+ */
 public final class XmlReadSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final XmlReadSettingsArgs Empty = new XmlReadSettingsArgs();
 
+    /**
+     * Compression settings.
+     * 
+     */
     @InputImport(name="compressionProperties")
     private final @Nullable Input<Object> compressionProperties;
 
@@ -25,6 +33,10 @@ public final class XmlReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
         return this.compressionProperties == null ? Input.empty() : this.compressionProperties;
     }
 
+    /**
+     * Indicates whether type detection is enabled when reading the xml files. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     @InputImport(name="detectDataType")
     private final @Nullable Input<Object> detectDataType;
 
@@ -32,6 +44,10 @@ public final class XmlReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
         return this.detectDataType == null ? Input.empty() : this.detectDataType;
     }
 
+    /**
+     * Namespace uri to prefix mappings to override the prefixes in column names when namespace is enabled, if no prefix is defined for a namespace uri, the prefix of xml element/attribute name in the xml data file will be used. Example: "{"http://www.example.com/xml":"prefix"}" Type: object (or Expression with resultType object).
+     * 
+     */
     @InputImport(name="namespacePrefixes")
     private final @Nullable Input<Object> namespacePrefixes;
 
@@ -39,6 +55,10 @@ public final class XmlReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
         return this.namespacePrefixes == null ? Input.empty() : this.namespacePrefixes;
     }
 
+    /**
+     * Indicates whether namespace is enabled when reading the xml files. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     @InputImport(name="namespaces")
     private final @Nullable Input<Object> namespaces;
 
@@ -46,6 +66,11 @@ public final class XmlReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
         return this.namespaces == null ? Input.empty() : this.namespaces;
     }
 
+    /**
+     * The read setting type.
+     * Expected value is 'XmlReadSettings'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -53,6 +78,10 @@ public final class XmlReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
         return this.type;
     }
 
+    /**
+     * Indicates what validation method is used when reading the xml files. Allowed values: 'none', 'xsd', or 'dtd'. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="validationMode")
     private final @Nullable Input<Object> validationMode;
 

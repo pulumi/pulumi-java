@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The customer-managed-key (CMK) used when creating a Data Store. If a customer owned key is not specified, an AWS owned key will be used for encryption.
+ * 
+ */
 public final class FHIRDatastoreKmsEncryptionConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FHIRDatastoreKmsEncryptionConfigArgs Empty = new FHIRDatastoreKmsEncryptionConfigArgs();
 
+    /**
+     * The type of customer-managed-key (CMK) used for encryption. The two types of supported CMKs are customer owned CMKs and AWS owned CMKs.
+     * 
+     */
     @InputImport(name="cmkType", required=true)
     private final Input<FHIRDatastoreKmsEncryptionConfigCmkType> cmkType;
 
@@ -22,6 +30,10 @@ public final class FHIRDatastoreKmsEncryptionConfigArgs extends io.pulumi.resour
         return this.cmkType;
     }
 
+    /**
+     * The KMS encryption key id/alias used to encrypt the Data Store contents at rest.
+     * 
+     */
     @InputImport(name="kmsKeyId")
     private final @Nullable Input<String> kmsKeyId;
 

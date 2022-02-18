@@ -11,6 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Job Sample
+ * 
+ */
 public final class JobSample extends io.pulumi.resources.InvokeArgs {
 
     public static final JobSample Empty = new JobSample();

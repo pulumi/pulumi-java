@@ -13,6 +13,11 @@ public final class InstanceNetworkPerformanceConfigGetArgs extends io.pulumi.res
 
     public static final InstanceNetworkPerformanceConfigGetArgs Empty = new InstanceNetworkPerformanceConfigGetArgs();
 
+    /**
+     * The egress bandwidth tier to enable.
+     * Possible values: TIER_1, DEFAULT
+     * 
+     */
     @InputImport(name="totalEgressBandwidthTier", required=true)
     private final Input<String> totalEgressBandwidthTier;
 

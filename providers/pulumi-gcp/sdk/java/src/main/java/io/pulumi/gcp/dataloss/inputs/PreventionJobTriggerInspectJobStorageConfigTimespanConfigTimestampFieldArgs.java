@@ -13,6 +13,10 @@ public final class PreventionJobTriggerInspectJobStorageConfigTimespanConfigTime
 
     public static final PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampFieldArgs Empty = new PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampFieldArgs();
 
+    /**
+     * The name of the Datastore kind.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

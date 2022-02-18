@@ -12,10 +12,39 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class JobRetryConfig {
+    /**
+     * The maximum amount of time to wait before retrying a job after it fails.
+     * A duration in seconds with up to nine fractional digits, terminated by 's'.
+     * 
+     */
     private final @Nullable String maxBackoffDuration;
+    /**
+     * The time between retries will double maxDoublings times.
+     * A job's retry interval starts at minBackoffDuration,
+     * then doubles maxDoublings times, then increases linearly,
+     * and finally retries retries at intervals of maxBackoffDuration up to retryCount times.
+     * 
+     */
     private final @Nullable Integer maxDoublings;
+    /**
+     * The time limit for retrying a failed job, measured from time when an execution was first attempted.
+     * If specified with retryCount, the job will be retried until both limits are reached.
+     * A duration in seconds with up to nine fractional digits, terminated by 's'.
+     * 
+     */
     private final @Nullable String maxRetryDuration;
+    /**
+     * The minimum amount of time to wait before retrying a job after it fails.
+     * A duration in seconds with up to nine fractional digits, terminated by 's'.
+     * 
+     */
     private final @Nullable String minBackoffDuration;
+    /**
+     * The number of attempts that the system will make to run a
+     * job using the exponential backoff procedure described by maxDoublings.
+     * Values greater than 5 and negative values are not allowed.
+     * 
+     */
     private final @Nullable Integer retryCount;
 
     @OutputCustomType.Constructor({"maxBackoffDuration","maxDoublings","maxRetryDuration","minBackoffDuration","retryCount"})
@@ -32,18 +61,47 @@ public final class JobRetryConfig {
         this.retryCount = retryCount;
     }
 
+    /**
+     * The maximum amount of time to wait before retrying a job after it fails.
+     * A duration in seconds with up to nine fractional digits, terminated by 's'.
+     * 
+     */
     public Optional<String> getMaxBackoffDuration() {
         return Optional.ofNullable(this.maxBackoffDuration);
     }
+    /**
+     * The time between retries will double maxDoublings times.
+     * A job's retry interval starts at minBackoffDuration,
+     * then doubles maxDoublings times, then increases linearly,
+     * and finally retries retries at intervals of maxBackoffDuration up to retryCount times.
+     * 
+     */
     public Optional<Integer> getMaxDoublings() {
         return Optional.ofNullable(this.maxDoublings);
     }
+    /**
+     * The time limit for retrying a failed job, measured from time when an execution was first attempted.
+     * If specified with retryCount, the job will be retried until both limits are reached.
+     * A duration in seconds with up to nine fractional digits, terminated by 's'.
+     * 
+     */
     public Optional<String> getMaxRetryDuration() {
         return Optional.ofNullable(this.maxRetryDuration);
     }
+    /**
+     * The minimum amount of time to wait before retrying a job after it fails.
+     * A duration in seconds with up to nine fractional digits, terminated by 's'.
+     * 
+     */
     public Optional<String> getMinBackoffDuration() {
         return Optional.ofNullable(this.minBackoffDuration);
     }
+    /**
+     * The number of attempts that the system will make to run a
+     * job using the exponential backoff procedure described by maxDoublings.
+     * Values greater than 5 and negative values are not allowed.
+     * 
+     */
     public Optional<Integer> getRetryCount() {
         return Optional.ofNullable(this.retryCount);
     }

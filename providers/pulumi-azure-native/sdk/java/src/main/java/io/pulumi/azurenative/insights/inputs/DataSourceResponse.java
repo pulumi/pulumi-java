@@ -11,6 +11,10 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Data source object contains configuration to collect telemetry and one or more sinks to send that telemetry data to
+ * 
+ */
 public final class DataSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DataSourceResponse Empty = new DataSourceResponse();
@@ -22,6 +26,10 @@ public final class DataSourceResponse extends io.pulumi.resources.InvokeArgs {
         return this.configuration;
     }
 
+    /**
+     * Datasource kind
+     * 
+     */
     @InputImport(name="kind", required=true)
     private final String kind;
 

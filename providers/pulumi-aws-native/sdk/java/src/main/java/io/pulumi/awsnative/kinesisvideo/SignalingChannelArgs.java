@@ -18,6 +18,10 @@ public final class SignalingChannelArgs extends io.pulumi.resources.ResourceArgs
 
     public static final SignalingChannelArgs Empty = new SignalingChannelArgs();
 
+    /**
+     * The period of time a signaling channel retains undelivered messages before they are discarded.
+     * 
+     */
     @InputImport(name="messageTtlSeconds")
     private final @Nullable Input<Integer> messageTtlSeconds;
 
@@ -25,6 +29,10 @@ public final class SignalingChannelArgs extends io.pulumi.resources.ResourceArgs
         return this.messageTtlSeconds == null ? Input.empty() : this.messageTtlSeconds;
     }
 
+    /**
+     * The name of the Kinesis Video Signaling Channel.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -32,6 +40,10 @@ public final class SignalingChannelArgs extends io.pulumi.resources.ResourceArgs
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<SignalingChannelTagArgs>> tags;
 
@@ -39,6 +51,10 @@ public final class SignalingChannelArgs extends io.pulumi.resources.ResourceArgs
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The type of the Kinesis Video Signaling Channel to create. Currently, SINGLE_MASTER is the only supported channel type.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<SignalingChannelType> type;
 

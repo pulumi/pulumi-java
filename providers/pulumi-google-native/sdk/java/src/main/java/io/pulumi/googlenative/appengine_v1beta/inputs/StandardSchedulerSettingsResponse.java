@@ -9,10 +9,18 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
+/**
+ * Scheduler settings for standard environment.
+ * 
+ */
 public final class StandardSchedulerSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StandardSchedulerSettingsResponse Empty = new StandardSchedulerSettingsResponse();
 
+    /**
+     * Maximum number of instances to run for this version. Set to zero to disable max_instances configuration.
+     * 
+     */
     @InputImport(name="maxInstances", required=true)
     private final Integer maxInstances;
 
@@ -20,6 +28,10 @@ public final class StandardSchedulerSettingsResponse extends io.pulumi.resources
         return this.maxInstances;
     }
 
+    /**
+     * Minimum number of instances to run for this version. Set to zero to disable min_instances configuration.
+     * 
+     */
     @InputImport(name="minInstances", required=true)
     private final Integer minInstances;
 
@@ -27,6 +39,10 @@ public final class StandardSchedulerSettingsResponse extends io.pulumi.resources
         return this.minInstances;
     }
 
+    /**
+     * Target CPU utilization ratio to maintain when scaling.
+     * 
+     */
     @InputImport(name="targetCpuUtilization", required=true)
     private final Double targetCpuUtilization;
 
@@ -34,6 +50,10 @@ public final class StandardSchedulerSettingsResponse extends io.pulumi.resources
         return this.targetCpuUtilization;
     }
 
+    /**
+     * Target throughput utilization ratio to maintain when scaling
+     * 
+     */
     @InputImport(name="targetThroughputUtilization", required=true)
     private final Double targetThroughputUtilization;
 

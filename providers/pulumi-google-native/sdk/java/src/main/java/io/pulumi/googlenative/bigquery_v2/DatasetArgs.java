@@ -21,6 +21,10 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DatasetArgs Empty = new DatasetArgs();
 
+    /**
+     * [Optional] An array of objects that define dataset access for one or more entities. You can set this property when inserting or updating a dataset in order to control who is allowed to access the data. If unspecified at dataset creation time, BigQuery adds default dataset access for the following entities: access.specialGroup: projectReaders; access.role: READER; access.specialGroup: projectWriters; access.role: WRITER; access.specialGroup: projectOwners; access.role: OWNER; access.userByEmail: [dataset creator email]; access.role: OWNER;
+     * 
+     */
     @InputImport(name="access")
     private final @Nullable Input<List<DatasetAccessItemArgs>> access;
 
@@ -28,6 +32,10 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.access == null ? Input.empty() : this.access;
     }
 
+    /**
+     * [Required] A reference that identifies the dataset.
+     * 
+     */
     @InputImport(name="datasetReference")
     private final @Nullable Input<DatasetReferenceArgs> datasetReference;
 
@@ -42,6 +50,10 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.defaultEncryptionConfiguration == null ? Input.empty() : this.defaultEncryptionConfiguration;
     }
 
+    /**
+     * [Optional] The default partition expiration for all partitioned tables in the dataset, in milliseconds. Once this property is set, all newly-created partitioned tables in the dataset will have an expirationMs property in the timePartitioning settings set to this value, and changing the value will only affect new tables, not existing ones. The storage in a partition will have an expiration time of its partition time plus this value. Setting this property overrides the use of defaultTableExpirationMs for partitioned tables: only one of defaultTableExpirationMs and defaultPartitionExpirationMs will be used for any new partitioned table. If you provide an explicit timePartitioning.expirationMs when creating or updating a partitioned table, that value takes precedence over the default partition expiration time indicated by this property.
+     * 
+     */
     @InputImport(name="defaultPartitionExpirationMs")
     private final @Nullable Input<String> defaultPartitionExpirationMs;
 
@@ -49,6 +61,10 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.defaultPartitionExpirationMs == null ? Input.empty() : this.defaultPartitionExpirationMs;
     }
 
+    /**
+     * [Optional] The default lifetime of all tables in the dataset, in milliseconds. The minimum value is 3600000 milliseconds (one hour). Once this property is set, all newly-created tables in the dataset will have an expirationTime property set to the creation time plus the value in this property, and changing the value will only affect new tables, not existing ones. When the expirationTime for a given table is reached, that table will be deleted automatically. If a table's expirationTime is modified or removed before the table expires, or if you provide an explicit expirationTime when creating a table, that value takes precedence over the default expiration time indicated by this property.
+     * 
+     */
     @InputImport(name="defaultTableExpirationMs")
     private final @Nullable Input<String> defaultTableExpirationMs;
 
@@ -56,6 +72,10 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.defaultTableExpirationMs == null ? Input.empty() : this.defaultTableExpirationMs;
     }
 
+    /**
+     * [Optional] A user-friendly description of the dataset.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -63,6 +83,10 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * [Optional] A descriptive name for the dataset.
+     * 
+     */
     @InputImport(name="friendlyName")
     private final @Nullable Input<String> friendlyName;
 
@@ -70,6 +94,10 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
     }
 
+    /**
+     * [Optional] Indicates if table names are case insensitive in the dataset.
+     * 
+     */
     @InputImport(name="isCaseInsensitive")
     private final @Nullable Input<Boolean> isCaseInsensitive;
 
@@ -77,6 +105,10 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.isCaseInsensitive == null ? Input.empty() : this.isCaseInsensitive;
     }
 
+    /**
+     * The labels associated with this dataset. You can use these to organize and group your datasets. You can set this property when inserting or updating a dataset. See Creating and Updating Dataset Labels for more information.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -84,6 +116,10 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The geographic location where the dataset should reside. The default value is US. See details at https://cloud.google.com/bigquery/docs/locations.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -98,6 +134,10 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * [Optional]The tags associated with this dataset. Tag keys are globally unique.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<DatasetTagsItemArgs>> tags;
 

@@ -18,6 +18,10 @@ public final class FirewallPolicyRuleArgs extends io.pulumi.resources.ResourceAr
 
     public static final FirewallPolicyRuleArgs Empty = new FirewallPolicyRuleArgs();
 
+    /**
+     * The Action to perform when the client connection triggers the rule. Can currently be either "allow" or "deny()" where valid values for status are 403, 404, and 502.
+     * 
+     */
     @InputImport(name="action", required=true)
     private final Input<String> action;
 
@@ -25,6 +29,10 @@ public final class FirewallPolicyRuleArgs extends io.pulumi.resources.ResourceAr
         return this.action;
     }
 
+    /**
+     * An optional description for this resource.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -32,6 +40,10 @@ public final class FirewallPolicyRuleArgs extends io.pulumi.resources.ResourceAr
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The direction in which this rule applies. Possible values: INGRESS, EGRESS
+     * 
+     */
     @InputImport(name="direction", required=true)
     private final Input<String> direction;
 
@@ -39,6 +51,10 @@ public final class FirewallPolicyRuleArgs extends io.pulumi.resources.ResourceAr
         return this.direction;
     }
 
+    /**
+     * Denotes whether the firewall policy rule is disabled. When set to true, the firewall policy rule is not enforced and traffic behaves as if it did not exist. If this is unspecified, the firewall policy rule will be enabled.
+     * 
+     */
     @InputImport(name="disabled")
     private final @Nullable Input<Boolean> disabled;
 
@@ -46,6 +62,10 @@ public final class FirewallPolicyRuleArgs extends io.pulumi.resources.ResourceAr
         return this.disabled == null ? Input.empty() : this.disabled;
     }
 
+    /**
+     * Denotes whether to enable logging for a particular rule. If logging is enabled, logs will be exported to the configured export destination in Stackdriver. Logs may be exported to BigQuery or Pub/Sub. Note: you cannot enable logging on "goto_next" rules.
+     * 
+     */
     @InputImport(name="enableLogging")
     private final @Nullable Input<Boolean> enableLogging;
 
@@ -53,6 +73,10 @@ public final class FirewallPolicyRuleArgs extends io.pulumi.resources.ResourceAr
         return this.enableLogging == null ? Input.empty() : this.enableLogging;
     }
 
+    /**
+     * The firewall policy of the resource.
+     * 
+     */
     @InputImport(name="firewallPolicy", required=true)
     private final Input<String> firewallPolicy;
 
@@ -60,6 +84,10 @@ public final class FirewallPolicyRuleArgs extends io.pulumi.resources.ResourceAr
         return this.firewallPolicy;
     }
 
+    /**
+     * A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced. Structure is documented below.
+     * 
+     */
     @InputImport(name="match", required=true)
     private final Input<FirewallPolicyRuleMatchArgs> match;
 
@@ -67,6 +95,10 @@ public final class FirewallPolicyRuleArgs extends io.pulumi.resources.ResourceAr
         return this.match;
     }
 
+    /**
+     * An integer indicating the priority of a rule in the list. The priority must be a positive value between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the highest priority and 2147483647 is the lowest prority.
+     * 
+     */
     @InputImport(name="priority", required=true)
     private final Input<Integer> priority;
 
@@ -74,6 +106,10 @@ public final class FirewallPolicyRuleArgs extends io.pulumi.resources.ResourceAr
         return this.priority;
     }
 
+    /**
+     * A list of network resource URLs to which this rule applies. This field allows you to control which network's VMs get this rule. If this field is left blank, all VMs within the organization will receive the rule.
+     * 
+     */
     @InputImport(name="targetResources")
     private final @Nullable Input<List<String>> targetResources;
 
@@ -81,6 +117,10 @@ public final class FirewallPolicyRuleArgs extends io.pulumi.resources.ResourceAr
         return this.targetResources == null ? Input.empty() : this.targetResources;
     }
 
+    /**
+     * A list of service accounts indicating the sets of instances that are applied with this rule.
+     * 
+     */
     @InputImport(name="targetServiceAccounts")
     private final @Nullable Input<List<String>> targetServiceAccounts;
 

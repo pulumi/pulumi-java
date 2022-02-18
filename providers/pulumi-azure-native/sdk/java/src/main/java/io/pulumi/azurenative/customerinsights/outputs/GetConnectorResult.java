@@ -15,19 +15,75 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetConnectorResult {
+    /**
+     * ID of the connector.
+     * 
+     */
     private final Integer connectorId;
+    /**
+     * Name of the connector.
+     * 
+     */
     private final @Nullable String connectorName;
+    /**
+     * The connector properties.
+     * 
+     */
     private final Map<String,Object> connectorProperties;
+    /**
+     * Type of connector.
+     * 
+     */
     private final String connectorType;
+    /**
+     * The created time.
+     * 
+     */
     private final String created;
+    /**
+     * Description of the connector.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * Display name of the connector.
+     * 
+     */
     private final @Nullable String displayName;
+    /**
+     * Resource ID.
+     * 
+     */
     private final String id;
+    /**
+     * If this is an internal connector.
+     * 
+     */
     private final @Nullable Boolean isInternal;
+    /**
+     * The last modified time.
+     * 
+     */
     private final String lastModified;
+    /**
+     * Resource name.
+     * 
+     */
     private final String name;
+    /**
+     * State of connector.
+     * 
+     */
     private final String state;
+    /**
+     * The hub name.
+     * 
+     */
     private final String tenantId;
+    /**
+     * Resource type.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"connectorId","connectorName","connectorProperties","connectorType","created","description","displayName","id","isInternal","lastModified","name","state","tenantId","type"})
@@ -62,45 +118,101 @@ public final class GetConnectorResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * ID of the connector.
+     * 
+     */
     public Integer getConnectorId() {
         return this.connectorId;
     }
+    /**
+     * Name of the connector.
+     * 
+     */
     public Optional<String> getConnectorName() {
         return Optional.ofNullable(this.connectorName);
     }
+    /**
+     * The connector properties.
+     * 
+     */
     public Map<String,Object> getConnectorProperties() {
         return this.connectorProperties;
     }
+    /**
+     * Type of connector.
+     * 
+     */
     public String getConnectorType() {
         return this.connectorType;
     }
+    /**
+     * The created time.
+     * 
+     */
     public String getCreated() {
         return this.created;
     }
+    /**
+     * Description of the connector.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * Display name of the connector.
+     * 
+     */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
+    /**
+     * Resource ID.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * If this is an internal connector.
+     * 
+     */
     public Optional<Boolean> getIsInternal() {
         return Optional.ofNullable(this.isInternal);
     }
+    /**
+     * The last modified time.
+     * 
+     */
     public String getLastModified() {
         return this.lastModified;
     }
+    /**
+     * Resource name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * State of connector.
+     * 
+     */
     public String getState() {
         return this.state;
     }
+    /**
+     * The hub name.
+     * 
+     */
     public String getTenantId() {
         return this.tenantId;
     }
+    /**
+     * Resource type.
+     * 
+     */
     public String getType() {
         return this.type;
     }

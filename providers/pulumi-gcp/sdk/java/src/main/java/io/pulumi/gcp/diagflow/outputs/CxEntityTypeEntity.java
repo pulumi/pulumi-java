@@ -12,7 +12,16 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CxEntityTypeEntity {
+    /**
+     * A collection of value synonyms. For example, if the entity type is vegetable, and value is scallions, a synonym could be green onions.
+     * For KIND_LIST entity types: This collection must contain exactly one synonym equal to value.
+     * 
+     */
     private final @Nullable List<String> synonyms;
+    /**
+     * The word or phrase to be excluded.
+     * 
+     */
     private final @Nullable String value;
 
     @OutputCustomType.Constructor({"synonyms","value"})
@@ -23,9 +32,18 @@ public final class CxEntityTypeEntity {
         this.value = value;
     }
 
+    /**
+     * A collection of value synonyms. For example, if the entity type is vegetable, and value is scallions, a synonym could be green onions.
+     * For KIND_LIST entity types: This collection must contain exactly one synonym equal to value.
+     * 
+     */
     public List<String> getSynonyms() {
         return this.synonyms == null ? List.of() : this.synonyms;
     }
+    /**
+     * The word or phrase to be excluded.
+     * 
+     */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }

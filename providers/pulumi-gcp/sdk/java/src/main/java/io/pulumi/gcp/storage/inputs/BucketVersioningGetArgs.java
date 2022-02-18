@@ -13,6 +13,10 @@ public final class BucketVersioningGetArgs extends io.pulumi.resources.ResourceA
 
     public static final BucketVersioningGetArgs Empty = new BucketVersioningGetArgs();
 
+    /**
+     * While set to `true`, versioning is fully enabled for this bucket.
+     * 
+     */
     @InputImport(name="enabled", required=true)
     private final Input<Boolean> enabled;
 

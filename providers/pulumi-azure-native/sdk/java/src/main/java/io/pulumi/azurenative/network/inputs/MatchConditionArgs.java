@@ -16,10 +16,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Define match conditions.
+ * 
+ */
 public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MatchConditionArgs Empty = new MatchConditionArgs();
 
+    /**
+     * Match value.
+     * 
+     */
     @InputImport(name="matchValues", required=true)
     private final Input<List<String>> matchValues;
 
@@ -27,6 +35,10 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
         return this.matchValues;
     }
 
+    /**
+     * List of match variables.
+     * 
+     */
     @InputImport(name="matchVariables", required=true)
     private final Input<List<MatchVariableArgs>> matchVariables;
 
@@ -34,6 +46,10 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
         return this.matchVariables;
     }
 
+    /**
+     * Whether this is negate condition or not.
+     * 
+     */
     @InputImport(name="negationConditon")
     private final @Nullable Input<Boolean> negationConditon;
 
@@ -41,6 +57,10 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
         return this.negationConditon == null ? Input.empty() : this.negationConditon;
     }
 
+    /**
+     * The operator to be matched.
+     * 
+     */
     @InputImport(name="operator", required=true)
     private final Input<Either<String,WebApplicationFirewallOperator>> operator;
 
@@ -48,6 +68,10 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
         return this.operator;
     }
 
+    /**
+     * List of transforms.
+     * 
+     */
     @InputImport(name="transforms")
     private final @Nullable Input<List<Either<String,WebApplicationFirewallTransform>>> transforms;
 

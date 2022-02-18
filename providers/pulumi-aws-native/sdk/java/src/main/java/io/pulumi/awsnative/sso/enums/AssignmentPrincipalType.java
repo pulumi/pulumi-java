@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The assignee's type, user/group
+     * 
+     */
     @EnumType
     public enum AssignmentPrincipalType {
         User("USER"),

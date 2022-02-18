@@ -24,6 +24,10 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
 
     public static final ConnectionMonitorArgs Empty = new ConnectionMonitorArgs();
 
+    /**
+     * Determines if the connection monitor will start automatically once created.
+     * 
+     */
     @InputImport(name="autoStart")
     private final @Nullable Input<Boolean> autoStart;
 
@@ -31,6 +35,10 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
         return this.autoStart == null ? Input.empty() : this.autoStart;
     }
 
+    /**
+     * The name of the connection monitor.
+     * 
+     */
     @InputImport(name="connectionMonitorName")
     private final @Nullable Input<String> connectionMonitorName;
 
@@ -38,6 +46,10 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
         return this.connectionMonitorName == null ? Input.empty() : this.connectionMonitorName;
     }
 
+    /**
+     * Describes the destination of connection monitor.
+     * 
+     */
     @InputImport(name="destination")
     private final @Nullable Input<ConnectionMonitorDestinationArgs> destination;
 
@@ -45,6 +57,10 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
         return this.destination == null ? Input.empty() : this.destination;
     }
 
+    /**
+     * List of connection monitor endpoints.
+     * 
+     */
     @InputImport(name="endpoints")
     private final @Nullable Input<List<ConnectionMonitorEndpointArgs>> endpoints;
 
@@ -52,6 +68,10 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
         return this.endpoints == null ? Input.empty() : this.endpoints;
     }
 
+    /**
+     * Connection monitor location.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -59,6 +79,10 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Value indicating whether connection monitor V1 should be migrated to V2 format.
+     * 
+     */
     @InputImport(name="migrate")
     private final @Nullable Input<String> migrate;
 
@@ -66,6 +90,10 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
         return this.migrate == null ? Input.empty() : this.migrate;
     }
 
+    /**
+     * Monitoring interval in seconds.
+     * 
+     */
     @InputImport(name="monitoringIntervalInSeconds")
     private final @Nullable Input<Integer> monitoringIntervalInSeconds;
 
@@ -73,6 +101,10 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
         return this.monitoringIntervalInSeconds == null ? Input.empty() : this.monitoringIntervalInSeconds;
     }
 
+    /**
+     * The name of the Network Watcher resource.
+     * 
+     */
     @InputImport(name="networkWatcherName", required=true)
     private final Input<String> networkWatcherName;
 
@@ -80,6 +112,10 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
         return this.networkWatcherName;
     }
 
+    /**
+     * Optional notes to be associated with the connection monitor.
+     * 
+     */
     @InputImport(name="notes")
     private final @Nullable Input<String> notes;
 
@@ -87,6 +123,10 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
         return this.notes == null ? Input.empty() : this.notes;
     }
 
+    /**
+     * List of connection monitor outputs.
+     * 
+     */
     @InputImport(name="outputs")
     private final @Nullable Input<List<ConnectionMonitorOutputArgs>> outputs;
 
@@ -94,6 +134,10 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
         return this.outputs == null ? Input.empty() : this.outputs;
     }
 
+    /**
+     * The name of the resource group containing Network Watcher.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -101,6 +145,10 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
         return this.resourceGroupName;
     }
 
+    /**
+     * Describes the source of connection monitor.
+     * 
+     */
     @InputImport(name="source")
     private final @Nullable Input<ConnectionMonitorSourceArgs> source;
 
@@ -108,6 +156,10 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
         return this.source == null ? Input.empty() : this.source;
     }
 
+    /**
+     * Connection monitor tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -115,6 +167,10 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * List of connection monitor test configurations.
+     * 
+     */
     @InputImport(name="testConfigurations")
     private final @Nullable Input<List<ConnectionMonitorTestConfigurationArgs>> testConfigurations;
 
@@ -122,6 +178,10 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
         return this.testConfigurations == null ? Input.empty() : this.testConfigurations;
     }
 
+    /**
+     * List of connection monitor test groups.
+     * 
+     */
     @InputImport(name="testGroups")
     private final @Nullable Input<List<ConnectionMonitorTestGroupArgs>> testGroups;
 

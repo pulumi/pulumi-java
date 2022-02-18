@@ -14,6 +14,11 @@ public final class GetKMSKeyRingArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetKMSKeyRingArgs Empty = new GetKMSKeyRingArgs();
 
+    /**
+     * The Google Cloud Platform location for the KeyRing.
+     * A full list of valid locations can be found by running `gcloud kms locations list`.
+     * 
+     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -21,6 +26,11 @@ public final class GetKMSKeyRingArgs extends io.pulumi.resources.InvokeArgs {
         return this.location;
     }
 
+    /**
+     * The KeyRing's name.
+     * A KeyRing name must exist within the provided location and match the regular expression `[a-zA-Z0-9_-]{1,63}`
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -28,6 +38,11 @@ public final class GetKMSKeyRingArgs extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    /**
+     * The project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

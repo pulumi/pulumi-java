@@ -16,6 +16,10 @@ public final class AlertArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AlertArgs Empty = new AlertArgs();
 
+    /**
+     * The action to be taken by the alert when an anomaly is detected.
+     * 
+     */
     @InputImport(name="action", required=true)
     private final Input<AlertActionArgs> action;
 
@@ -23,6 +27,10 @@ public final class AlertArgs extends io.pulumi.resources.ResourceArgs {
         return this.action;
     }
 
+    /**
+     * A description for the alert.
+     * 
+     */
     @InputImport(name="alertDescription")
     private final @Nullable Input<String> alertDescription;
 
@@ -30,6 +38,10 @@ public final class AlertArgs extends io.pulumi.resources.ResourceArgs {
         return this.alertDescription == null ? Input.empty() : this.alertDescription;
     }
 
+    /**
+     * The name of the alert. If not provided, a name is generated automatically.
+     * 
+     */
     @InputImport(name="alertName")
     private final @Nullable Input<String> alertName;
 
@@ -37,6 +49,10 @@ public final class AlertArgs extends io.pulumi.resources.ResourceArgs {
         return this.alertName == null ? Input.empty() : this.alertName;
     }
 
+    /**
+     * A number between 0 and 100 (inclusive) that tunes the sensitivity of the alert.
+     * 
+     */
     @InputImport(name="alertSensitivityThreshold", required=true)
     private final Input<Integer> alertSensitivityThreshold;
 
@@ -44,6 +60,10 @@ public final class AlertArgs extends io.pulumi.resources.ResourceArgs {
         return this.alertSensitivityThreshold;
     }
 
+    /**
+     * The Amazon resource name (ARN) of the Anomaly Detector to alert.
+     * 
+     */
     @InputImport(name="anomalyDetectorArn", required=true)
     private final Input<String> anomalyDetectorArn;
 

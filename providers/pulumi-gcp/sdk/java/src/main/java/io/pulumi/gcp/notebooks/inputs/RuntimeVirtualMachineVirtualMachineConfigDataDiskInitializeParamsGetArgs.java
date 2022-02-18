@@ -16,6 +16,10 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializePa
 
     public static final RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsGetArgs Empty = new RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsGetArgs();
 
+    /**
+     * Provide this property when creating the disk.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -23,6 +27,13 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializePa
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Specifies the disk name. If not specified, the default is
+     * to use the name of the instance. If the disk with the
+     * instance name exists already in the given zone/region, a
+     * new name will be automatically generated.
+     * 
+     */
     @InputImport(name="diskName")
     private final @Nullable Input<String> diskName;
 
@@ -30,6 +41,13 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializePa
         return this.diskName == null ? Input.empty() : this.diskName;
     }
 
+    /**
+     * Specifies the size of the disk in base-2 GB. If not
+     * specified, the disk will be the same size as the image
+     * (usually 10GB). If specified, the size must be equal to
+     * or larger than 10GB. Default 100 GB.
+     * 
+     */
     @InputImport(name="diskSizeGb")
     private final @Nullable Input<Integer> diskSizeGb;
 
@@ -37,6 +55,13 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializePa
         return this.diskSizeGb == null ? Input.empty() : this.diskSizeGb;
     }
 
+    /**
+     * The type of the boot disk attached to this runtime,
+     * defaults to standard persistent disk. For valid values,
+     * see `https://cloud.google.com/vertex-ai/docs/workbench/
+     * reference/rest/v1/projects.locations.runtimes#disktype`
+     * 
+     */
     @InputImport(name="diskType")
     private final @Nullable Input<String> diskType;
 
@@ -44,6 +69,12 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializePa
         return this.diskType == null ? Input.empty() : this.diskType;
     }
 
+    /**
+     * Labels to apply to this disk. These can be later modified
+     * by the disks.setLabels method. This field is only
+     * applicable for persistent disks.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 

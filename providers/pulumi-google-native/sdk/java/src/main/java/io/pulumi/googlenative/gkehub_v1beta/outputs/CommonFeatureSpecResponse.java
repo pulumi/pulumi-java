@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CommonFeatureSpecResponse {
+    /**
+     * Appdevexperience specific spec.
+     * 
+     */
     private final AppDevExperienceFeatureSpecResponse appdevexperience;
+    /**
+     * Multicluster Ingress-specific spec.
+     * 
+     */
     private final MultiClusterIngressFeatureSpecResponse multiclusteringress;
 
     @OutputCustomType.Constructor({"appdevexperience","multiclusteringress"})
@@ -21,9 +29,17 @@ public final class CommonFeatureSpecResponse {
         this.multiclusteringress = Objects.requireNonNull(multiclusteringress);
     }
 
+    /**
+     * Appdevexperience specific spec.
+     * 
+     */
     public AppDevExperienceFeatureSpecResponse getAppdevexperience() {
         return this.appdevexperience;
     }
+    /**
+     * Multicluster Ingress-specific spec.
+     * 
+     */
     public MultiClusterIngressFeatureSpecResponse getMulticlusteringress() {
         return this.multiclusteringress;
     }

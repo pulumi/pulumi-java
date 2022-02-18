@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Contains information for an IAM user identity in an access policy.
+ * 
+ */
 public final class AccessPolicyIamUser extends io.pulumi.resources.InvokeArgs {
 
     public static final AccessPolicyIamUser Empty = new AccessPolicyIamUser();
 
+    /**
+     * The ARN of the IAM user.
+     * 
+     */
     @InputImport(name="arn")
     private final @Nullable String arn;
 

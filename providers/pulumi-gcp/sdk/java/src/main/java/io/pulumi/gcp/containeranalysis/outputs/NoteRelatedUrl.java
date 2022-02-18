@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class NoteRelatedUrl {
+    /**
+     * Label to describe usage of the URL
+     * 
+     */
     private final @Nullable String label;
+    /**
+     * Specific URL associated with the resource.
+     * 
+     */
     private final String url;
 
     @OutputCustomType.Constructor({"label","url"})
@@ -22,9 +30,17 @@ public final class NoteRelatedUrl {
         this.url = Objects.requireNonNull(url);
     }
 
+    /**
+     * Label to describe usage of the URL
+     * 
+     */
     public Optional<String> getLabel() {
         return Optional.ofNullable(this.label);
     }
+    /**
+     * Specific URL associated with the resource.
+     * 
+     */
     public String getUrl() {
         return this.url;
     }

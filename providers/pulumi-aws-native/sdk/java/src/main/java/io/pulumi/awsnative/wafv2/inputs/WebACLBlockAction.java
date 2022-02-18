@@ -10,6 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Block traffic towards application.
+ * 
+ */
 public final class WebACLBlockAction extends io.pulumi.resources.InvokeArgs {
 
     public static final WebACLBlockAction Empty = new WebACLBlockAction();

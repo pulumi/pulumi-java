@@ -13,6 +13,12 @@ import io.pulumi.core.internal.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * AWS::RoboMaker::Fleet resource creates an AWS RoboMaker fleet. Fleets contain robots and can receive deployments.
+ * 
+ * ## Example Usage
+ * 
+ */
 @ResourceType(type="aws-native:robomaker:Fleet")
 public class Fleet extends io.pulumi.resources.CustomResource {
     @OutputExport(name="arn", type=String.class, parameters={})
@@ -21,9 +27,17 @@ public class Fleet extends io.pulumi.resources.CustomResource {
     public Output<String> getArn() {
         return this.arn;
     }
+    /**
+     * The name of the fleet.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
+    /**
+     * @return The name of the fleet.
+     * 
+     */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
@@ -34,6 +48,12 @@ public class Fleet extends io.pulumi.resources.CustomResource {
         return this.tags;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Fleet(String name, @Nullable FleetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:robomaker:Fleet", name, args == null ? FleetArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -49,6 +69,14 @@ public class Fleet extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Fleet get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Fleet(name, id, options);
     }

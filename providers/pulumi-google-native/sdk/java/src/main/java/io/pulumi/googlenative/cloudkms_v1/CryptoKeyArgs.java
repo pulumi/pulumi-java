@@ -18,6 +18,10 @@ public final class CryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CryptoKeyArgs Empty = new CryptoKeyArgs();
 
+    /**
+     * Immutable. The resource name of the backend environment where the key material for all CryptoKeyVersions associated with this CryptoKey reside and where all related cryptographic operations are performed. Only applicable if CryptoKeyVersions have a ProtectionLevel of EXTERNAL_VPC, with the resource name in the format `projects/*{@literal /}locations/*{@literal /}ekmConnections/*`. Note, this list is non-exhaustive and may apply to additional ProtectionLevels in the future.
+     * 
+     */
     @InputImport(name="cryptoKeyBackend")
     private final @Nullable Input<String> cryptoKeyBackend;
 
@@ -32,6 +36,10 @@ public final class CryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.cryptoKeyId;
     }
 
+    /**
+     * Immutable. The period of time that versions of this key spend in the DESTROY_SCHEDULED state before transitioning to DESTROYED. If not specified at creation time, the default duration is 24 hours.
+     * 
+     */
     @InputImport(name="destroyScheduledDuration")
     private final @Nullable Input<String> destroyScheduledDuration;
 
@@ -39,6 +47,10 @@ public final class CryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.destroyScheduledDuration == null ? Input.empty() : this.destroyScheduledDuration;
     }
 
+    /**
+     * Immutable. Whether this key may contain imported versions only.
+     * 
+     */
     @InputImport(name="importOnly")
     private final @Nullable Input<Boolean> importOnly;
 
@@ -53,6 +65,10 @@ public final class CryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.keyRingId;
     }
 
+    /**
+     * Labels with user-defined metadata. For more information, see [Labeling Keys](https://cloud.google.com/kms/docs/labeling-keys).
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -67,6 +83,10 @@ public final class CryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * At next_rotation_time, the Key Management Service will automatically: 1. Create a new version of this CryptoKey. 2. Mark the new version as primary. Key rotations performed manually via CreateCryptoKeyVersion and UpdateCryptoKeyPrimaryVersion do not affect next_rotation_time. Keys with purpose ENCRYPT_DECRYPT support automatic rotation. For other keys, this field must be omitted.
+     * 
+     */
     @InputImport(name="nextRotationTime")
     private final @Nullable Input<String> nextRotationTime;
 
@@ -81,6 +101,10 @@ public final class CryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Immutable. The immutable purpose of this CryptoKey.
+     * 
+     */
     @InputImport(name="purpose")
     private final @Nullable Input<CryptoKeyPurpose> purpose;
 
@@ -88,6 +112,10 @@ public final class CryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.purpose == null ? Input.empty() : this.purpose;
     }
 
+    /**
+     * next_rotation_time will be advanced by this period when the service automatically rotates a key. Must be at least 24 hours and at most 876,000 hours. If rotation_period is set, next_rotation_time must also be set. Keys with purpose ENCRYPT_DECRYPT support automatic rotation. For other keys, this field must be omitted.
+     * 
+     */
     @InputImport(name="rotationPeriod")
     private final @Nullable Input<String> rotationPeriod;
 
@@ -102,6 +130,10 @@ public final class CryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.skipInitialVersionCreation == null ? Input.empty() : this.skipInitialVersionCreation;
     }
 
+    /**
+     * A template describing settings for new CryptoKeyVersion instances. The properties of new CryptoKeyVersion instances created by either CreateCryptoKeyVersion or auto-rotation are controlled by this template.
+     * 
+     */
     @InputImport(name="versionTemplate")
     private final @Nullable Input<CryptoKeyVersionTemplateArgs> versionTemplate;
 

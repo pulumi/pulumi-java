@@ -14,6 +14,16 @@ public final class RegionPerInstanceConfigPreservedStateDiskGetArgs extends io.p
 
     public static final RegionPerInstanceConfigPreservedStateDiskGetArgs Empty = new RegionPerInstanceConfigPreservedStateDiskGetArgs();
 
+    /**
+     * A value that prescribes what should happen to the stateful disk when the VM instance is deleted.
+     * The available options are `NEVER` and `ON_PERMANENT_INSTANCE_DELETION`.
+     * `NEVER` - detach the disk when the VM is deleted, but do not delete the disk.
+     * `ON_PERMANENT_INSTANCE_DELETION` will delete the stateful disk when the VM is permanently
+     * deleted from the instance group.
+     * Default value is `NEVER`.
+     * Possible values are `NEVER` and `ON_PERMANENT_INSTANCE_DELETION`.
+     * 
+     */
     @InputImport(name="deleteRule")
     private final @Nullable Input<String> deleteRule;
 
@@ -21,6 +31,10 @@ public final class RegionPerInstanceConfigPreservedStateDiskGetArgs extends io.p
         return this.deleteRule == null ? Input.empty() : this.deleteRule;
     }
 
+    /**
+     * A unique device name that is reflected into the /dev/ tree of a Linux operating system running within the instance.
+     * 
+     */
     @InputImport(name="deviceName", required=true)
     private final Input<String> deviceName;
 
@@ -28,6 +42,12 @@ public final class RegionPerInstanceConfigPreservedStateDiskGetArgs extends io.p
         return this.deviceName;
     }
 
+    /**
+     * The mode of the disk.
+     * Default value is `READ_WRITE`.
+     * Possible values are `READ_ONLY` and `READ_WRITE`.
+     * 
+     */
     @InputImport(name="mode")
     private final @Nullable Input<String> mode;
 
@@ -35,6 +55,11 @@ public final class RegionPerInstanceConfigPreservedStateDiskGetArgs extends io.p
         return this.mode == null ? Input.empty() : this.mode;
     }
 
+    /**
+     * The URI of an existing persistent disk to attach under the specified device-name in the format
+     * `projects/project-id/zones/zone/disks/disk-name`.
+     * 
+     */
     @InputImport(name="source", required=true)
     private final Input<String> source;
 

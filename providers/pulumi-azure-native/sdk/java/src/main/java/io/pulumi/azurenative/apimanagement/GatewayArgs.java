@@ -15,6 +15,10 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GatewayArgs Empty = new GatewayArgs();
 
+    /**
+     * Gateway description
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -22,6 +26,10 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Gateway entity identifier. Must be unique in the current API Management service instance. Must not have value 'managed'
+     * 
+     */
     @InputImport(name="gatewayId")
     private final @Nullable Input<String> gatewayId;
 
@@ -29,6 +37,10 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
         return this.gatewayId == null ? Input.empty() : this.gatewayId;
     }
 
+    /**
+     * Gateway location.
+     * 
+     */
     @InputImport(name="locationData")
     private final @Nullable Input<ResourceLocationDataContractArgs> locationData;
 
@@ -36,6 +48,10 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
         return this.locationData == null ? Input.empty() : this.locationData;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -43,6 +59,10 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the API Management service.
+     * 
+     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 

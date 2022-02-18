@@ -17,6 +17,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceAr
 
     public static final OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceArgs Empty = new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceArgs();
 
+    /**
+     * Defaults to false. When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.
+     * 
+     */
     @InputImport(name="allowInsecure")
     private final @Nullable Input<Boolean> allowInsecure;
 
@@ -24,6 +28,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceAr
         return this.allowInsecure == null ? Input.empty() : this.allowInsecure;
     }
 
+    /**
+     * A Cloud Storage object.
+     * 
+     */
     @InputImport(name="gcs")
     private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceGcsArgs> gcs;
 
@@ -31,6 +39,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceAr
         return this.gcs == null ? Input.empty() : this.gcs;
     }
 
+    /**
+     * A local path within the VM to use.
+     * 
+     */
     @InputImport(name="localPath")
     private final @Nullable Input<String> localPath;
 
@@ -38,6 +50,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceAr
         return this.localPath == null ? Input.empty() : this.localPath;
     }
 
+    /**
+     * A generic remote file.
+     * 
+     */
     @InputImport(name="remote")
     private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceRemoteArgs> remote;
 

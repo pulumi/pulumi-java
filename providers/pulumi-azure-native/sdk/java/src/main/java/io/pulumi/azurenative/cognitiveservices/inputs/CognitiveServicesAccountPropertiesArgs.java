@@ -18,10 +18,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties of Cognitive Services account.
+ * 
+ */
 public final class CognitiveServicesAccountPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CognitiveServicesAccountPropertiesArgs Empty = new CognitiveServicesAccountPropertiesArgs();
 
+    /**
+     * The api properties for special APIs.
+     * 
+     */
     @InputImport(name="apiProperties")
     private final @Nullable Input<CognitiveServicesAccountApiPropertiesArgs> apiProperties;
 
@@ -29,6 +37,10 @@ public final class CognitiveServicesAccountPropertiesArgs extends io.pulumi.reso
         return this.apiProperties == null ? Input.empty() : this.apiProperties;
     }
 
+    /**
+     * Optional subdomain name used for token-based authentication.
+     * 
+     */
     @InputImport(name="customSubDomainName")
     private final @Nullable Input<String> customSubDomainName;
 
@@ -36,6 +48,10 @@ public final class CognitiveServicesAccountPropertiesArgs extends io.pulumi.reso
         return this.customSubDomainName == null ? Input.empty() : this.customSubDomainName;
     }
 
+    /**
+     * The encryption properties for this resource.
+     * 
+     */
     @InputImport(name="encryption")
     private final @Nullable Input<EncryptionArgs> encryption;
 
@@ -43,6 +59,10 @@ public final class CognitiveServicesAccountPropertiesArgs extends io.pulumi.reso
         return this.encryption == null ? Input.empty() : this.encryption;
     }
 
+    /**
+     * A collection of rules governing the accessibility from specific network locations.
+     * 
+     */
     @InputImport(name="networkAcls")
     private final @Nullable Input<NetworkRuleSetArgs> networkAcls;
 
@@ -50,6 +70,10 @@ public final class CognitiveServicesAccountPropertiesArgs extends io.pulumi.reso
         return this.networkAcls == null ? Input.empty() : this.networkAcls;
     }
 
+    /**
+     * The private endpoint connection associated with the Cognitive Services account.
+     * 
+     */
     @InputImport(name="privateEndpointConnections")
     private final @Nullable Input<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
 
@@ -57,6 +81,10 @@ public final class CognitiveServicesAccountPropertiesArgs extends io.pulumi.reso
         return this.privateEndpointConnections == null ? Input.empty() : this.privateEndpointConnections;
     }
 
+    /**
+     * Whether or not public endpoint access is allowed for this account. Value is optional but if passed in, must be 'Enabled' or 'Disabled'
+     * 
+     */
     @InputImport(name="publicNetworkAccess")
     private final @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
@@ -64,6 +92,10 @@ public final class CognitiveServicesAccountPropertiesArgs extends io.pulumi.reso
         return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
     }
 
+    /**
+     * The storage accounts for this resource.
+     * 
+     */
     @InputImport(name="userOwnedStorage")
     private final @Nullable Input<List<UserOwnedStorageArgs>> userOwnedStorage;
 

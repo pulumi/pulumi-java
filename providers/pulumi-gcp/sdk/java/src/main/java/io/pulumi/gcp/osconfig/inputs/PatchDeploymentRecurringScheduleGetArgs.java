@@ -18,6 +18,11 @@ public final class PatchDeploymentRecurringScheduleGetArgs extends io.pulumi.res
 
     public static final PatchDeploymentRecurringScheduleGetArgs Empty = new PatchDeploymentRecurringScheduleGetArgs();
 
+    /**
+     * The end time at which a recurring patch deployment schedule is no longer active.
+     * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * 
+     */
     @InputImport(name="endTime")
     private final @Nullable Input<String> endTime;
 
@@ -25,6 +30,12 @@ public final class PatchDeploymentRecurringScheduleGetArgs extends io.pulumi.res
         return this.endTime == null ? Input.empty() : this.endTime;
     }
 
+    /**
+     * - 
+     * The time the last patch job ran successfully.
+     * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * 
+     */
     @InputImport(name="lastExecuteTime")
     private final @Nullable Input<String> lastExecuteTime;
 
@@ -32,6 +43,11 @@ public final class PatchDeploymentRecurringScheduleGetArgs extends io.pulumi.res
         return this.lastExecuteTime == null ? Input.empty() : this.lastExecuteTime;
     }
 
+    /**
+     * Schedule with monthly executions.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="monthly")
     private final @Nullable Input<PatchDeploymentRecurringScheduleMonthlyGetArgs> monthly;
 
@@ -39,6 +55,12 @@ public final class PatchDeploymentRecurringScheduleGetArgs extends io.pulumi.res
         return this.monthly == null ? Input.empty() : this.monthly;
     }
 
+    /**
+     * - 
+     * The time the next patch job is scheduled to run.
+     * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * 
+     */
     @InputImport(name="nextExecuteTime")
     private final @Nullable Input<String> nextExecuteTime;
 
@@ -46,6 +68,11 @@ public final class PatchDeploymentRecurringScheduleGetArgs extends io.pulumi.res
         return this.nextExecuteTime == null ? Input.empty() : this.nextExecuteTime;
     }
 
+    /**
+     * The time that the recurring schedule becomes effective. Defaults to createTime of the patch deployment.
+     * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * 
+     */
     @InputImport(name="startTime")
     private final @Nullable Input<String> startTime;
 
@@ -53,6 +80,11 @@ public final class PatchDeploymentRecurringScheduleGetArgs extends io.pulumi.res
         return this.startTime == null ? Input.empty() : this.startTime;
     }
 
+    /**
+     * Time of the day to run a recurring deployment.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="timeOfDay", required=true)
     private final Input<PatchDeploymentRecurringScheduleTimeOfDayGetArgs> timeOfDay;
 
@@ -60,6 +92,12 @@ public final class PatchDeploymentRecurringScheduleGetArgs extends io.pulumi.res
         return this.timeOfDay;
     }
 
+    /**
+     * Defines the time zone that timeOfDay is relative to. The rules for daylight saving time are
+     * determined by the chosen time zone.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="timeZone", required=true)
     private final Input<PatchDeploymentRecurringScheduleTimeZoneGetArgs> timeZone;
 
@@ -67,6 +105,11 @@ public final class PatchDeploymentRecurringScheduleGetArgs extends io.pulumi.res
         return this.timeZone;
     }
 
+    /**
+     * Schedule with weekly executions.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="weekly")
     private final @Nullable Input<PatchDeploymentRecurringScheduleWeeklyGetArgs> weekly;
 

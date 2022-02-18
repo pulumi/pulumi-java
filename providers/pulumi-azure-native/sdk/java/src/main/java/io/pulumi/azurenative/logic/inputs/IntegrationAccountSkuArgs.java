@@ -11,10 +11,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The integration account sku.
+ * 
+ */
 public final class IntegrationAccountSkuArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IntegrationAccountSkuArgs Empty = new IntegrationAccountSkuArgs();
 
+    /**
+     * The sku name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<Either<String,IntegrationAccountSkuName>> name;
 

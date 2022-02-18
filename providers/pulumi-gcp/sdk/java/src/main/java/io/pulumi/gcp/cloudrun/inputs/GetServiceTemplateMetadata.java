@@ -35,6 +35,10 @@ public final class GetServiceTemplateMetadata extends io.pulumi.resources.Invoke
         return this.labels;
     }
 
+    /**
+     * The name of the Cloud Run Service.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

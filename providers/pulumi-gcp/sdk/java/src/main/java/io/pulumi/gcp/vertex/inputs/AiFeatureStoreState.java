@@ -17,6 +17,11 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
 
     public static final AiFeatureStoreState Empty = new AiFeatureStoreState();
 
+    /**
+     * The timestamp of when the featurestore was created in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to
+     * nine fractional digits.
+     * 
+     */
     @InputImport(name="createTime")
     private final @Nullable Input<String> createTime;
 
@@ -24,6 +29,10 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
         return this.createTime == null ? Input.empty() : this.createTime;
     }
 
+    /**
+     * Used to perform consistent read-modify-write updates.
+     * 
+     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -31,6 +40,10 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
         return this.etag == null ? Input.empty() : this.etag;
     }
 
+    /**
+     * If set to true, any EntityTypes and Features for this Featurestore will also be deleted
+     * 
+     */
     @InputImport(name="forceDestroy")
     private final @Nullable Input<Boolean> forceDestroy;
 
@@ -38,6 +51,10 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
         return this.forceDestroy == null ? Input.empty() : this.forceDestroy;
     }
 
+    /**
+     * A set of key/value label pairs to assign to this Featurestore.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -45,6 +62,10 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The name of the Featurestore. This value may be up to 60 characters, and valid characters are [a-z0-9_]. The first character cannot be a number.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -52,6 +73,11 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Config for online serving resources.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="onlineServingConfig")
     private final @Nullable Input<AiFeatureStoreOnlineServingConfigGetArgs> onlineServingConfig;
 
@@ -59,6 +85,11 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
         return this.onlineServingConfig == null ? Input.empty() : this.onlineServingConfig;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -66,6 +97,10 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The region of the dataset. eg us-central1
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 
@@ -73,6 +108,11 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
         return this.region == null ? Input.empty() : this.region;
     }
 
+    /**
+     * The timestamp of when the featurestore was last updated in RFC3339 UTC "Zulu" format, with nanosecond resolution and up
+     * to nine fractional digits.
+     * 
+     */
     @InputImport(name="updateTime")
     private final @Nullable Input<String> updateTime;
 

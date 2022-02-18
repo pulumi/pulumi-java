@@ -18,6 +18,11 @@ public final class ClusterClusterAutoscalingArgs extends io.pulumi.resources.Res
 
     public static final ClusterClusterAutoscalingArgs Empty = new ClusterClusterAutoscalingArgs();
 
+    /**
+     * Contains defaults for a node pool created by NAP.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="autoProvisioningDefaults")
     private final @Nullable Input<ClusterClusterAutoscalingAutoProvisioningDefaultsArgs> autoProvisioningDefaults;
 
@@ -25,6 +30,13 @@ public final class ClusterClusterAutoscalingArgs extends io.pulumi.resources.Res
         return this.autoProvisioningDefaults == null ? Input.empty() : this.autoProvisioningDefaults;
     }
 
+    /**
+     * ) Configuration
+     * options for the [Autoscaling profile](https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-autoscaler#autoscaling_profiles)
+     * feature, which lets you choose whether the cluster autoscaler should optimize for resource utilization or resource availability
+     * when deciding to remove nodes from a cluster. Can be `BALANCED` or `OPTIMIZE_UTILIZATION`. Defaults to `BALANCED`.
+     * 
+     */
     @InputImport(name="autoscalingProfile")
     private final @Nullable Input<String> autoscalingProfile;
 
@@ -32,6 +44,11 @@ public final class ClusterClusterAutoscalingArgs extends io.pulumi.resources.Res
         return this.autoscalingProfile == null ? Input.empty() : this.autoscalingProfile;
     }
 
+    /**
+     * Enable the PodSecurityPolicy controller for this cluster.
+     * If enabled, pods must be valid under a PodSecurityPolicy to be created.
+     * 
+     */
     @InputImport(name="enabled", required=true)
     private final Input<Boolean> enabled;
 
@@ -39,6 +56,13 @@ public final class ClusterClusterAutoscalingArgs extends io.pulumi.resources.Res
         return this.enabled;
     }
 
+    /**
+     * Global constraints for machine resources in the
+     * cluster. Configuring the `cpu` and `memory` types is required if node
+     * auto-provisioning is enabled. These limits will apply to node pool autoscaling
+     * in addition to node auto-provisioning. Structure is documented below.
+     * 
+     */
     @InputImport(name="resourceLimits")
     private final @Nullable Input<List<ClusterClusterAutoscalingResourceLimitArgs>> resourceLimits;
 

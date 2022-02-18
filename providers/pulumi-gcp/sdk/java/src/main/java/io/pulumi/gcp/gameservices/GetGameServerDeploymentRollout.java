@@ -13,6 +13,20 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGameServerDeploymentRollout {
+/**
+ * Use this data source to get the rollout state.
+ * 
+ * https://cloud.google.com/game-servers/docs/reference/rest/v1beta/GameServerDeploymentRollout
+ * 
+ * ## Example Usage
+ * 
+ *
+ * A collection of arguments for invoking getGameServerDeploymentRollout.
+ * 
+ *
+ * A collection of values returned by getGameServerDeploymentRollout.
+ * 
+ */
     public static CompletableFuture<GetGameServerDeploymentRolloutResult> invokeAsync(GetGameServerDeploymentRolloutArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:gameservices/getGameServerDeploymentRollout:getGameServerDeploymentRollout", TypeShape.of(GetGameServerDeploymentRolloutResult.class), args == null ? GetGameServerDeploymentRolloutArgs.Empty : args, Utilities.withVersion(options));
     }

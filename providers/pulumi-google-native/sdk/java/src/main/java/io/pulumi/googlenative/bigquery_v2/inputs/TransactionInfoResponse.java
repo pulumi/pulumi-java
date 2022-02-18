@@ -12,6 +12,10 @@ public final class TransactionInfoResponse extends io.pulumi.resources.InvokeArg
 
     public static final TransactionInfoResponse Empty = new TransactionInfoResponse();
 
+    /**
+     * // [Alpha] Id of the transaction.
+     * 
+     */
     @InputImport(name="transactionId", required=true)
     private final String transactionId;
 

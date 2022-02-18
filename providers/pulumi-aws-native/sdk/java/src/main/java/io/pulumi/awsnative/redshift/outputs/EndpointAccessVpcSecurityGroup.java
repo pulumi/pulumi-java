@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EndpointAccessVpcSecurityGroup {
+    /**
+     * The status of the VPC security group.
+     * 
+     */
     private final @Nullable String status;
+    /**
+     * The identifier of the VPC security group.
+     * 
+     */
     private final @Nullable String vpcSecurityGroupId;
 
     @OutputCustomType.Constructor({"status","vpcSecurityGroupId"})
@@ -22,9 +30,17 @@ public final class EndpointAccessVpcSecurityGroup {
         this.vpcSecurityGroupId = vpcSecurityGroupId;
     }
 
+    /**
+     * The status of the VPC security group.
+     * 
+     */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
+    /**
+     * The identifier of the VPC security group.
+     * 
+     */
     public Optional<String> getVpcSecurityGroupId() {
         return Optional.ofNullable(this.vpcSecurityGroupId);
     }

@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFHIRDatastore {
+/**
+ * HealthLake FHIR Datastore
+ * 
+ */
     public static CompletableFuture<GetFHIRDatastoreResult> invokeAsync(GetFHIRDatastoreArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:healthlake:getFHIRDatastore", TypeShape.of(GetFHIRDatastoreResult.class), args == null ? GetFHIRDatastoreArgs.Empty : args, Utilities.withVersion(options));
     }

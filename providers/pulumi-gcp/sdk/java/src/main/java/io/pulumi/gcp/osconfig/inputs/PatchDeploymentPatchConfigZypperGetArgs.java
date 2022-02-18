@@ -16,6 +16,10 @@ public final class PatchDeploymentPatchConfigZypperGetArgs extends io.pulumi.res
 
     public static final PatchDeploymentPatchConfigZypperGetArgs Empty = new PatchDeploymentPatchConfigZypperGetArgs();
 
+    /**
+     * Install only patches with these categories. Common categories include security, recommended, and feature.
+     * 
+     */
     @InputImport(name="categories")
     private final @Nullable Input<List<String>> categories;
 
@@ -23,6 +27,10 @@ public final class PatchDeploymentPatchConfigZypperGetArgs extends io.pulumi.res
         return this.categories == null ? Input.empty() : this.categories;
     }
 
+    /**
+     * List of KBs to exclude from update.
+     * 
+     */
     @InputImport(name="excludes")
     private final @Nullable Input<List<String>> excludes;
 
@@ -30,6 +38,11 @@ public final class PatchDeploymentPatchConfigZypperGetArgs extends io.pulumi.res
         return this.excludes == null ? Input.empty() : this.excludes;
     }
 
+    /**
+     * An exclusive list of kbs to be updated. These are the only patches that will be updated.
+     * This field must not be used with other patch configurations.
+     * 
+     */
     @InputImport(name="exclusivePatches")
     private final @Nullable Input<List<String>> exclusivePatches;
 
@@ -37,6 +50,10 @@ public final class PatchDeploymentPatchConfigZypperGetArgs extends io.pulumi.res
         return this.exclusivePatches == null ? Input.empty() : this.exclusivePatches;
     }
 
+    /**
+     * Install only patches with these severities. Common severities include critical, important, moderate, and low.
+     * 
+     */
     @InputImport(name="severities")
     private final @Nullable Input<List<String>> severities;
 
@@ -44,6 +61,10 @@ public final class PatchDeploymentPatchConfigZypperGetArgs extends io.pulumi.res
         return this.severities == null ? Input.empty() : this.severities;
     }
 
+    /**
+     * Adds the --with-optional flag to zypper patch.
+     * 
+     */
     @InputImport(name="withOptional")
     private final @Nullable Input<Boolean> withOptional;
 
@@ -51,6 +72,10 @@ public final class PatchDeploymentPatchConfigZypperGetArgs extends io.pulumi.res
         return this.withOptional == null ? Input.empty() : this.withOptional;
     }
 
+    /**
+     * Adds the --with-update flag, to zypper patch.
+     * 
+     */
     @InputImport(name="withUpdate")
     private final @Nullable Input<Boolean> withUpdate;
 

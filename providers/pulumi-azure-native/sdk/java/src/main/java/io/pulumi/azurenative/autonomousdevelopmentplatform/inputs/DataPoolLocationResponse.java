@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Location of a Data Pool
+ * 
+ */
 public final class DataPoolLocationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DataPoolLocationResponse Empty = new DataPoolLocationResponse();
 
+    /**
+     * Encryption properties of a Data Pool location
+     * 
+     */
     @InputImport(name="encryption")
     private final @Nullable DataPoolEncryptionResponse encryption;
 
@@ -22,6 +30,10 @@ public final class DataPoolLocationResponse extends io.pulumi.resources.InvokeAr
         return this.encryption == null ? Optional.empty() : Optional.ofNullable(this.encryption);
     }
 
+    /**
+     * The location name
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

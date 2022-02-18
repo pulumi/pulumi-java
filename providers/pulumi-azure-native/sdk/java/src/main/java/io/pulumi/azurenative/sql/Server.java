@@ -18,111 +18,268 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * An Azure SQL Database server.
+ * API Version: 2020-11-01-preview.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:sql:Server sqlcrudtest-4645 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/sqlcrudtest-7398/providers/Microsoft.Sql/servers/sqlcrudtest-4645 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:sql:Server")
 public class Server extends io.pulumi.resources.CustomResource {
+    /**
+     * Administrator username for the server. Once created it cannot be changed.
+     * 
+     */
     @OutputExport(name="administratorLogin", type=String.class, parameters={})
     private Output</* @Nullable */ String> administratorLogin;
 
+    /**
+     * @return Administrator username for the server. Once created it cannot be changed.
+     * 
+     */
     public Output</* @Nullable */ String> getAdministratorLogin() {
         return this.administratorLogin;
     }
+    /**
+     * The Azure Active Directory identity of the server.
+     * 
+     */
     @OutputExport(name="administrators", type=ServerExternalAdministratorResponse.class, parameters={})
     private Output</* @Nullable */ ServerExternalAdministratorResponse> administrators;
 
+    /**
+     * @return The Azure Active Directory identity of the server.
+     * 
+     */
     public Output</* @Nullable */ ServerExternalAdministratorResponse> getAdministrators() {
         return this.administrators;
     }
+    /**
+     * The fully qualified domain name of the server.
+     * 
+     */
     @OutputExport(name="fullyQualifiedDomainName", type=String.class, parameters={})
     private Output<String> fullyQualifiedDomainName;
 
+    /**
+     * @return The fully qualified domain name of the server.
+     * 
+     */
     public Output<String> getFullyQualifiedDomainName() {
         return this.fullyQualifiedDomainName;
     }
+    /**
+     * The Azure Active Directory identity of the server.
+     * 
+     */
     @OutputExport(name="identity", type=ResourceIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ResourceIdentityResponse> identity;
 
+    /**
+     * @return The Azure Active Directory identity of the server.
+     * 
+     */
     public Output</* @Nullable */ ResourceIdentityResponse> getIdentity() {
         return this.identity;
     }
+    /**
+     * A CMK URI of the key to use for encryption.
+     * 
+     */
     @OutputExport(name="keyId", type=String.class, parameters={})
     private Output</* @Nullable */ String> keyId;
 
+    /**
+     * @return A CMK URI of the key to use for encryption.
+     * 
+     */
     public Output</* @Nullable */ String> getKeyId() {
         return this.keyId;
     }
+    /**
+     * Kind of sql server. This is metadata used for the Azure portal experience.
+     * 
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
+    /**
+     * @return Kind of sql server. This is metadata used for the Azure portal experience.
+     * 
+     */
     public Output<String> getKind() {
         return this.kind;
     }
+    /**
+     * Resource location.
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * Minimal TLS version. Allowed values: '1.0', '1.1', '1.2'
+     * 
+     */
     @OutputExport(name="minimalTlsVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> minimalTlsVersion;
 
+    /**
+     * @return Minimal TLS version. Allowed values: '1.0', '1.1', '1.2'
+     * 
+     */
     public Output</* @Nullable */ String> getMinimalTlsVersion() {
         return this.minimalTlsVersion;
     }
+    /**
+     * Resource name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The resource id of a user assigned identity to be used by default.
+     * 
+     */
     @OutputExport(name="primaryUserAssignedIdentityId", type=String.class, parameters={})
     private Output</* @Nullable */ String> primaryUserAssignedIdentityId;
 
+    /**
+     * @return The resource id of a user assigned identity to be used by default.
+     * 
+     */
     public Output</* @Nullable */ String> getPrimaryUserAssignedIdentityId() {
         return this.primaryUserAssignedIdentityId;
     }
+    /**
+     * List of private endpoint connections on a server
+     * 
+     */
     @OutputExport(name="privateEndpointConnections", type=List.class, parameters={ServerPrivateEndpointConnectionResponse.class})
     private Output<List<ServerPrivateEndpointConnectionResponse>> privateEndpointConnections;
 
+    /**
+     * @return List of private endpoint connections on a server
+     * 
+     */
     public Output<List<ServerPrivateEndpointConnectionResponse>> getPrivateEndpointConnections() {
         return this.privateEndpointConnections;
     }
+    /**
+     * Whether or not public endpoint access is allowed for this server.  Value is optional but if passed in, must be 'Enabled' or 'Disabled'
+     * 
+     */
     @OutputExport(name="publicNetworkAccess", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicNetworkAccess;
 
+    /**
+     * @return Whether or not public endpoint access is allowed for this server.  Value is optional but if passed in, must be 'Enabled' or 'Disabled'
+     * 
+     */
     public Output</* @Nullable */ String> getPublicNetworkAccess() {
         return this.publicNetworkAccess;
     }
+    /**
+     * The state of the server.
+     * 
+     */
     @OutputExport(name="state", type=String.class, parameters={})
     private Output<String> state;
 
+    /**
+     * @return The state of the server.
+     * 
+     */
     public Output<String> getState() {
         return this.state;
     }
+    /**
+     * Resource tags.
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Resource type.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * The version of the server.
+     * 
+     */
     @OutputExport(name="version", type=String.class, parameters={})
     private Output</* @Nullable */ String> version;
 
+    /**
+     * @return The version of the server.
+     * 
+     */
     public Output</* @Nullable */ String> getVersion() {
         return this.version;
     }
+    /**
+     * Whether or not existing server has a workspace created and if it allows connection from workspace
+     * 
+     */
     @OutputExport(name="workspaceFeature", type=String.class, parameters={})
     private Output<String> workspaceFeature;
 
+    /**
+     * @return Whether or not existing server has a workspace created and if it allows connection from workspace
+     * 
+     */
     public Output<String> getWorkspaceFeature() {
         return this.workspaceFeature;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Server(String name, ServerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:sql:Server", name, args == null ? ServerArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -149,6 +306,14 @@ public class Server extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Server get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Server(name, id, options);
     }

@@ -12,6 +12,10 @@ public final class ListWebAppFunctionSecretsSlotArgs extends io.pulumi.resources
 
     public static final ListWebAppFunctionSecretsSlotArgs Empty = new ListWebAppFunctionSecretsSlotArgs();
 
+    /**
+     * Function name.
+     * 
+     */
     @InputImport(name="functionName", required=true)
     private final String functionName;
 
@@ -19,6 +23,10 @@ public final class ListWebAppFunctionSecretsSlotArgs extends io.pulumi.resources
         return this.functionName;
     }
 
+    /**
+     * Site name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -26,6 +34,10 @@ public final class ListWebAppFunctionSecretsSlotArgs extends io.pulumi.resources
         return this.name;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -33,6 +45,10 @@ public final class ListWebAppFunctionSecretsSlotArgs extends io.pulumi.resources
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of the deployment slot.
+     * 
+     */
     @InputImport(name="slot", required=true)
     private final String slot;
 

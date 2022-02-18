@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNamespaceServiceIamPolicy {
+/**
+ * Gets the IAM Policy for a resource (namespace or service only).
+ * 
+ */
     public static CompletableFuture<GetNamespaceServiceIamPolicyResult> invokeAsync(GetNamespaceServiceIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:servicedirectory/v1beta1:getNamespaceServiceIamPolicy", TypeShape.of(GetNamespaceServiceIamPolicyResult.class), args == null ? GetNamespaceServiceIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

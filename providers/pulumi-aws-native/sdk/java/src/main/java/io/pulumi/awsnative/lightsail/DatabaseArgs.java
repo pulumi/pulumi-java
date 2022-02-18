@@ -18,6 +18,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DatabaseArgs Empty = new DatabaseArgs();
 
+    /**
+     * The Availability Zone in which to create your new database. Use the us-east-2a case-sensitive format.
+     * 
+     */
     @InputImport(name="availabilityZone")
     private final @Nullable Input<String> availabilityZone;
 
@@ -25,6 +29,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
     }
 
+    /**
+     * When true, enables automated backup retention for your database. Updates are applied during the next maintenance window because this can result in an outage.
+     * 
+     */
     @InputImport(name="backupRetention")
     private final @Nullable Input<Boolean> backupRetention;
 
@@ -32,6 +40,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.backupRetention == null ? Input.empty() : this.backupRetention;
     }
 
+    /**
+     * Indicates the certificate that needs to be associated with the database.
+     * 
+     */
     @InputImport(name="caCertificateIdentifier")
     private final @Nullable Input<String> caCertificateIdentifier;
 
@@ -39,6 +51,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.caCertificateIdentifier == null ? Input.empty() : this.caCertificateIdentifier;
     }
 
+    /**
+     * The name of the database to create when the Lightsail database resource is created. For MySQL, if this parameter isn't specified, no database is created in the database resource. For PostgreSQL, if this parameter isn't specified, a database named postgres is created in the database resource.
+     * 
+     */
     @InputImport(name="masterDatabaseName", required=true)
     private final Input<String> masterDatabaseName;
 
@@ -46,6 +62,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.masterDatabaseName;
     }
 
+    /**
+     * The password for the master user. The password can include any printable ASCII character except "/", """, or "@". It cannot contain spaces.
+     * 
+     */
     @InputImport(name="masterUserPassword")
     private final @Nullable Input<String> masterUserPassword;
 
@@ -53,6 +73,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.masterUserPassword == null ? Input.empty() : this.masterUserPassword;
     }
 
+    /**
+     * The name for the master user.
+     * 
+     */
     @InputImport(name="masterUsername", required=true)
     private final Input<String> masterUsername;
 
@@ -60,6 +84,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.masterUsername;
     }
 
+    /**
+     * The daily time range during which automated backups are created for your new database if automated backups are enabled.
+     * 
+     */
     @InputImport(name="preferredBackupWindow")
     private final @Nullable Input<String> preferredBackupWindow;
 
@@ -67,6 +95,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.preferredBackupWindow == null ? Input.empty() : this.preferredBackupWindow;
     }
 
+    /**
+     * The weekly time range during which system maintenance can occur on your new database.
+     * 
+     */
     @InputImport(name="preferredMaintenanceWindow")
     private final @Nullable Input<String> preferredMaintenanceWindow;
 
@@ -74,6 +106,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.preferredMaintenanceWindow == null ? Input.empty() : this.preferredMaintenanceWindow;
     }
 
+    /**
+     * Specifies the accessibility options for your new database. A value of true specifies a database that is available to resources outside of your Lightsail account. A value of false specifies a database that is available only to your Lightsail resources in the same region as your database.
+     * 
+     */
     @InputImport(name="publiclyAccessible")
     private final @Nullable Input<Boolean> publiclyAccessible;
 
@@ -81,6 +117,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.publiclyAccessible == null ? Input.empty() : this.publiclyAccessible;
     }
 
+    /**
+     * The blueprint ID for your new database. A blueprint describes the major engine version of a database.
+     * 
+     */
     @InputImport(name="relationalDatabaseBlueprintId", required=true)
     private final Input<String> relationalDatabaseBlueprintId;
 
@@ -88,6 +128,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.relationalDatabaseBlueprintId;
     }
 
+    /**
+     * The bundle ID for your new database. A bundle describes the performance specifications for your database.
+     * 
+     */
     @InputImport(name="relationalDatabaseBundleId", required=true)
     private final Input<String> relationalDatabaseBundleId;
 
@@ -95,6 +139,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.relationalDatabaseBundleId;
     }
 
+    /**
+     * The name to use for your new Lightsail database resource.
+     * 
+     */
     @InputImport(name="relationalDatabaseName", required=true)
     private final Input<String> relationalDatabaseName;
 
@@ -102,6 +150,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.relationalDatabaseName;
     }
 
+    /**
+     * Update one or more parameters of the relational database.
+     * 
+     */
     @InputImport(name="relationalDatabaseParameters")
     private final @Nullable Input<List<DatabaseRelationalDatabaseParameterArgs>> relationalDatabaseParameters;
 
@@ -109,6 +161,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.relationalDatabaseParameters == null ? Input.empty() : this.relationalDatabaseParameters;
     }
 
+    /**
+     * When true, the master user password is changed to a new strong password generated by Lightsail. Use the get relational database master user password operation to get the new password.
+     * 
+     */
     @InputImport(name="rotateMasterUserPassword")
     private final @Nullable Input<Boolean> rotateMasterUserPassword;
 
@@ -116,6 +172,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.rotateMasterUserPassword == null ? Input.empty() : this.rotateMasterUserPassword;
     }
 
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<DatabaseTagArgs>> tags;
 

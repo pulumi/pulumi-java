@@ -14,10 +14,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The transformation to apply to the field.
+ * 
+ */
 public final class GooglePrivacyDlpV2FieldTransformationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GooglePrivacyDlpV2FieldTransformationArgs Empty = new GooglePrivacyDlpV2FieldTransformationArgs();
 
+    /**
+     * Only apply the transformation if the condition evaluates to true for the given `RecordCondition`. The conditions are allowed to reference fields that are not used in the actual transformation. Example Use Cases: - Apply a different bucket transformation to an age column if the zip code column for the same record is within a specific range. - Redact a field if the date of birth field is greater than 85.
+     * 
+     */
     @InputImport(name="condition")
     private final @Nullable Input<GooglePrivacyDlpV2RecordConditionArgs> condition;
 
@@ -25,6 +33,10 @@ public final class GooglePrivacyDlpV2FieldTransformationArgs extends io.pulumi.r
         return this.condition == null ? Input.empty() : this.condition;
     }
 
+    /**
+     * Input field(s) to apply the transformation to. When you have columns that reference their position within a list, omit the index from the FieldId. FieldId name matching ignores the index. For example, instead of "contact.nums[0].type", use "contact.nums.type".
+     * 
+     */
     @InputImport(name="fields", required=true)
     private final Input<List<GooglePrivacyDlpV2FieldIdArgs>> fields;
 
@@ -32,6 +44,10 @@ public final class GooglePrivacyDlpV2FieldTransformationArgs extends io.pulumi.r
         return this.fields;
     }
 
+    /**
+     * Treat the contents of the field as free text, and selectively transform content that matches an `InfoType`.
+     * 
+     */
     @InputImport(name="infoTypeTransformations")
     private final @Nullable Input<GooglePrivacyDlpV2InfoTypeTransformationsArgs> infoTypeTransformations;
 
@@ -39,6 +55,10 @@ public final class GooglePrivacyDlpV2FieldTransformationArgs extends io.pulumi.r
         return this.infoTypeTransformations == null ? Input.empty() : this.infoTypeTransformations;
     }
 
+    /**
+     * Apply the transformation to the entire field.
+     * 
+     */
     @InputImport(name="primitiveTransformation")
     private final @Nullable Input<GooglePrivacyDlpV2PrimitiveTransformationArgs> primitiveTransformation;
 

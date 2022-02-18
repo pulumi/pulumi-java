@@ -12,6 +12,10 @@ public final class GetContentKeyPolicyArgs extends io.pulumi.resources.InvokeArg
 
     public static final GetContentKeyPolicyArgs Empty = new GetContentKeyPolicyArgs();
 
+    /**
+     * The Media Services account name.
+     * 
+     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -19,6 +23,10 @@ public final class GetContentKeyPolicyArgs extends io.pulumi.resources.InvokeArg
         return this.accountName;
     }
 
+    /**
+     * The Content Key Policy name.
+     * 
+     */
     @InputImport(name="contentKeyPolicyName", required=true)
     private final String contentKeyPolicyName;
 
@@ -26,6 +34,10 @@ public final class GetContentKeyPolicyArgs extends io.pulumi.resources.InvokeArg
         return this.contentKeyPolicyName;
     }
 
+    /**
+     * The name of the resource group within the Azure subscription.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

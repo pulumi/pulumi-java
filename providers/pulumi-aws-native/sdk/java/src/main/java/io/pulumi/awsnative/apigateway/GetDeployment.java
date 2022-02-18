@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDeployment {
+/**
+ * Resource Type definition for AWS::ApiGateway::Deployment
+ * 
+ */
     public static CompletableFuture<GetDeploymentResult> invokeAsync(GetDeploymentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:apigateway:getDeployment", TypeShape.of(GetDeploymentResult.class), args == null ? GetDeploymentArgs.Empty : args, Utilities.withVersion(options));
     }

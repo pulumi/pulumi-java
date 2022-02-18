@@ -14,6 +14,10 @@ public final class AzureClientState extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureClientState Empty = new AzureClientState();
 
+    /**
+     * Required. The Azure Active Directory Application ID.
+     * 
+     */
     @InputImport(name="applicationId")
     private final @Nullable Input<String> applicationId;
 
@@ -21,6 +25,10 @@ public final class AzureClientState extends io.pulumi.resources.ResourceArgs {
         return this.applicationId == null ? Input.empty() : this.applicationId;
     }
 
+    /**
+     * Output only. The PEM encoded x509 certificate.
+     * 
+     */
     @InputImport(name="certificate")
     private final @Nullable Input<String> certificate;
 
@@ -28,6 +36,10 @@ public final class AzureClientState extends io.pulumi.resources.ResourceArgs {
         return this.certificate == null ? Input.empty() : this.certificate;
     }
 
+    /**
+     * Output only. The time at which this resource was created.
+     * 
+     */
     @InputImport(name="createTime")
     private final @Nullable Input<String> createTime;
 
@@ -35,6 +47,10 @@ public final class AzureClientState extends io.pulumi.resources.ResourceArgs {
         return this.createTime == null ? Input.empty() : this.createTime;
     }
 
+    /**
+     * The location for the resource
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -42,6 +58,10 @@ public final class AzureClientState extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of this resource.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -49,6 +69,10 @@ public final class AzureClientState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The project for the resource
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -56,6 +80,10 @@ public final class AzureClientState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Required. The Azure Active Directory Tenant ID.
+     * 
+     */
     @InputImport(name="tenantId")
     private final @Nullable Input<String> tenantId;
 
@@ -63,6 +91,10 @@ public final class AzureClientState extends io.pulumi.resources.ResourceArgs {
         return this.tenantId == null ? Input.empty() : this.tenantId;
     }
 
+    /**
+     * Output only. A globally unique identifier for the client.
+     * 
+     */
     @InputImport(name="uid")
     private final @Nullable Input<String> uid;
 

@@ -12,9 +12,29 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class Hl7StoreParserConfig {
+    /**
+     * Determines whether messages with no header are allowed.
+     * 
+     */
     private final @Nullable Boolean allowNullHeader;
+    /**
+     * JSON encoded string for schemas used to parse messages in this
+     * store if schematized parsing is desired.
+     * 
+     */
     private final @Nullable String schema;
+    /**
+     * Byte(s) to be used as the segment terminator. If this is unset, '\r' will be used as segment terminator.
+     * A base64-encoded string.
+     * 
+     */
     private final @Nullable String segmentTerminator;
+    /**
+     * The version of the unschematized parser to be used when a custom `schema` is not set.
+     * Default value is `V1`.
+     * Possible values are `V1` and `V2`.
+     * 
+     */
     private final @Nullable String version;
 
     @OutputCustomType.Constructor({"allowNullHeader","schema","segmentTerminator","version"})
@@ -29,15 +49,35 @@ public final class Hl7StoreParserConfig {
         this.version = version;
     }
 
+    /**
+     * Determines whether messages with no header are allowed.
+     * 
+     */
     public Optional<Boolean> getAllowNullHeader() {
         return Optional.ofNullable(this.allowNullHeader);
     }
+    /**
+     * JSON encoded string for schemas used to parse messages in this
+     * store if schematized parsing is desired.
+     * 
+     */
     public Optional<String> getSchema() {
         return Optional.ofNullable(this.schema);
     }
+    /**
+     * Byte(s) to be used as the segment terminator. If this is unset, '\r' will be used as segment terminator.
+     * A base64-encoded string.
+     * 
+     */
     public Optional<String> getSegmentTerminator() {
         return Optional.ofNullable(this.segmentTerminator);
     }
+    /**
+     * The version of the unschematized parser to be used when a custom `schema` is not set.
+     * Default value is `V1`.
+     * Possible values are `V1` and `V2`.
+     * 
+     */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }

@@ -13,6 +13,10 @@ public final class ConnectorProfileMarketoConnectorProfilePropertiesArgs extends
 
     public static final ConnectorProfileMarketoConnectorProfilePropertiesArgs Empty = new ConnectorProfileMarketoConnectorProfilePropertiesArgs();
 
+    /**
+     * The location of the Marketo resource
+     * 
+     */
     @InputImport(name="instanceUrl", required=true)
     private final Input<String> instanceUrl;
 

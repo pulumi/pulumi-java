@@ -14,6 +14,10 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyArgs extends io.pu
 
     public static final InstanceGroupManagerInstanceLifecyclePolicyArgs Empty = new InstanceGroupManagerInstanceLifecyclePolicyArgs();
 
+    /**
+     * The configuration for metadata based readiness signal sent by the instance during initialization when stopping / suspending an instance. The Instance Group Manager will wait for a signal that indicates successful initialization before stopping / suspending an instance. If a successful readiness signal is not sent before timeout, the corresponding instance will not be stopped / suspended. Instead, an error will be visible in the lastAttempt.errors field of the managed instance in the listmanagedinstances method. If metadataBasedReadinessSignal.timeoutSec is unset, the Instance Group Manager will directly proceed to suspend / stop instances, skipping initialization on them.
+     * 
+     */
     @InputImport(name="metadataBasedReadinessSignal")
     private final @Nullable Input<InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs> metadataBasedReadinessSignal;
 

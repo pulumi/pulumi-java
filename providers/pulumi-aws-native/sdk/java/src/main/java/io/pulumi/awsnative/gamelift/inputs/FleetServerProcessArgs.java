@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A set of instructions for launching server processes on each instance in a fleet. Each instruction set identifies the location of the server executable, optional launch parameters, and the number of server processes with this configuration to maintain concurrently on the instance. Server process configurations make up a fleet's RuntimeConfiguration.
+ * 
+ */
 public final class FleetServerProcessArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FleetServerProcessArgs Empty = new FleetServerProcessArgs();
 
+    /**
+     * The number of server processes that use this configuration to run concurrently on an instance.
+     * 
+     */
     @InputImport(name="concurrentExecutions", required=true)
     private final Input<Integer> concurrentExecutions;
 
@@ -22,6 +30,14 @@ public final class FleetServerProcessArgs extends io.pulumi.resources.ResourceAr
         return this.concurrentExecutions;
     }
 
+    /**
+     * The location of the server executable in a custom game build or the name of the Realtime script file that contains the Init() function. Game builds and Realtime scripts are installed on instances at the root:
+     * 
+     * Windows (for custom game builds only): C:\game. Example: "C:\game\MyGame\server.exe"
+     * 
+     * Linux: /local/game. Examples: "/local/game/MyGame/server.exe" or "/local/game/MyRealtimeScript.js"
+     * 
+     */
     @InputImport(name="launchPath", required=true)
     private final Input<String> launchPath;
 
@@ -29,6 +45,10 @@ public final class FleetServerProcessArgs extends io.pulumi.resources.ResourceAr
         return this.launchPath;
     }
 
+    /**
+     * An optional list of parameters to pass to the server executable or Realtime script on launch.
+     * 
+     */
     @InputImport(name="parameters")
     private final @Nullable Input<String> parameters;
 

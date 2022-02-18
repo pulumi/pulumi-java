@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AppliancePropertiesResponseInfrastructureConfig {
+    /**
+     * Information about the connected appliance.
+     * 
+     */
     private final @Nullable String provider;
 
     @OutputCustomType.Constructor({"provider"})
@@ -18,6 +22,10 @@ public final class AppliancePropertiesResponseInfrastructureConfig {
         this.provider = provider;
     }
 
+    /**
+     * Information about the connected appliance.
+     * 
+     */
     public Optional<String> getProvider() {
         return Optional.ofNullable(this.provider);
     }

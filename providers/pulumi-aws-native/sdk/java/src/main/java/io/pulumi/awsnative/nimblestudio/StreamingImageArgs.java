@@ -15,6 +15,10 @@ public final class StreamingImageArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StreamingImageArgs Empty = new StreamingImageArgs();
 
+    /**
+     * <p>A human-readable description of the streaming image.</p>
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -22,6 +26,10 @@ public final class StreamingImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * <p>The ID of an EC2 machine image with which to create this streaming image.</p>
+     * 
+     */
     @InputImport(name="ec2ImageId", required=true)
     private final Input<String> ec2ImageId;
 
@@ -29,6 +37,10 @@ public final class StreamingImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.ec2ImageId;
     }
 
+    /**
+     * <p>A friendly name for a streaming image resource.</p>
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -36,6 +48,10 @@ public final class StreamingImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * <p>The studioId. </p>
+     * 
+     */
     @InputImport(name="studioId", required=true)
     private final Input<String> studioId;
 

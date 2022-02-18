@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The settings that will be leveraged for AmazonRdsForOracle source partitioning.
+ * 
+ */
 public final class AmazonRdsForOraclePartitionSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AmazonRdsForOraclePartitionSettingsArgs Empty = new AmazonRdsForOraclePartitionSettingsArgs();
 
+    /**
+     * The name of the column in integer type that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="partitionColumnName")
     private final @Nullable Input<Object> partitionColumnName;
 
@@ -22,6 +30,10 @@ public final class AmazonRdsForOraclePartitionSettingsArgs extends io.pulumi.res
         return this.partitionColumnName == null ? Input.empty() : this.partitionColumnName;
     }
 
+    /**
+     * The minimum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="partitionLowerBound")
     private final @Nullable Input<Object> partitionLowerBound;
 
@@ -29,6 +41,10 @@ public final class AmazonRdsForOraclePartitionSettingsArgs extends io.pulumi.res
         return this.partitionLowerBound == null ? Input.empty() : this.partitionLowerBound;
     }
 
+    /**
+     * Names of the physical partitions of AmazonRdsForOracle table.
+     * 
+     */
     @InputImport(name="partitionNames")
     private final @Nullable Input<List<Object>> partitionNames;
 
@@ -36,6 +52,10 @@ public final class AmazonRdsForOraclePartitionSettingsArgs extends io.pulumi.res
         return this.partitionNames == null ? Input.empty() : this.partitionNames;
     }
 
+    /**
+     * The maximum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="partitionUpperBound")
     private final @Nullable Input<Object> partitionUpperBound;
 

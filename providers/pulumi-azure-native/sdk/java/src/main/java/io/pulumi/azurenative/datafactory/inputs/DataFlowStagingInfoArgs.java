@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Staging info for execute data flow activity.
+ * 
+ */
 public final class DataFlowStagingInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataFlowStagingInfoArgs Empty = new DataFlowStagingInfoArgs();
 
+    /**
+     * Folder path for staging blob. Type: string (or Expression with resultType string)
+     * 
+     */
     @InputImport(name="folderPath")
     private final @Nullable Input<Object> folderPath;
 
@@ -22,6 +30,10 @@ public final class DataFlowStagingInfoArgs extends io.pulumi.resources.ResourceA
         return this.folderPath == null ? Input.empty() : this.folderPath;
     }
 
+    /**
+     * Staging linked service reference.
+     * 
+     */
     @InputImport(name="linkedService")
     private final @Nullable Input<LinkedServiceReferenceArgs> linkedService;
 

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * IP address allocation method.
+     * 
+     */
     @EnumType
     public enum IPAllocationMethod {
         Unknown("Unknown"),

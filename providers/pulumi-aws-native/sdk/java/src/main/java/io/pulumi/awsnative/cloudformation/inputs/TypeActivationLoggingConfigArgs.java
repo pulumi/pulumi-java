@@ -14,6 +14,10 @@ public final class TypeActivationLoggingConfigArgs extends io.pulumi.resources.R
 
     public static final TypeActivationLoggingConfigArgs Empty = new TypeActivationLoggingConfigArgs();
 
+    /**
+     * The Amazon CloudWatch log group to which CloudFormation sends error logging information when invoking the type's handlers.
+     * 
+     */
     @InputImport(name="logGroupName")
     private final @Nullable Input<String> logGroupName;
 
@@ -21,6 +25,10 @@ public final class TypeActivationLoggingConfigArgs extends io.pulumi.resources.R
         return this.logGroupName == null ? Input.empty() : this.logGroupName;
     }
 
+    /**
+     * The ARN of the role that CloudFormation should assume when sending log entries to CloudWatch logs.
+     * 
+     */
     @InputImport(name="logRoleArn")
     private final @Nullable Input<String> logRoleArn;
 

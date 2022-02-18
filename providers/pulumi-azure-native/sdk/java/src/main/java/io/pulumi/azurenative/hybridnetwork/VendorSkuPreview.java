@@ -14,21 +14,58 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Customer subscription which can use a sku.
+ * API Version: 2020-01-01-preview.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:hybridnetwork:VendorSkuPreview previewSub /subscriptions/subid/providers/Microsoft.HybridNetwork/vendors/TestVendor/vendorskus/TestSku/previewsubscriptions/previewSub 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:hybridnetwork:VendorSkuPreview")
 public class VendorSkuPreview extends io.pulumi.resources.CustomResource {
+    /**
+     * The preview subscription ID.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The preview subscription ID.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The type of the resource.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public VendorSkuPreview(String name, VendorSkuPreviewArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:hybridnetwork:VendorSkuPreview", name, args == null ? VendorSkuPreviewArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -48,6 +85,14 @@ public class VendorSkuPreview extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static VendorSkuPreview get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new VendorSkuPreview(name, id, options);
     }

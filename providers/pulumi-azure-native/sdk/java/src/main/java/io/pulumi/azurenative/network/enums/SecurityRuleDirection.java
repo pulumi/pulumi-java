@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The direction of the rule. The direction specifies if rule will be evaluated on incoming or outgoing traffic.
+     * 
+     */
     @EnumType
     public enum SecurityRuleDirection {
         Inbound("Inbound"),

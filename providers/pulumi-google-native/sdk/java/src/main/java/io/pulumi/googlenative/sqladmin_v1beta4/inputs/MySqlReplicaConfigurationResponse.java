@@ -10,10 +10,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Read-replica configuration specific to MySQL databases.
+ * 
+ */
 public final class MySqlReplicaConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MySqlReplicaConfigurationResponse Empty = new MySqlReplicaConfigurationResponse();
 
+    /**
+     * PEM representation of the trusted CA's x509 certificate.
+     * 
+     */
     @InputImport(name="caCertificate", required=true)
     private final String caCertificate;
 
@@ -21,6 +29,10 @@ public final class MySqlReplicaConfigurationResponse extends io.pulumi.resources
         return this.caCertificate;
     }
 
+    /**
+     * PEM representation of the replica's x509 certificate.
+     * 
+     */
     @InputImport(name="clientCertificate", required=true)
     private final String clientCertificate;
 
@@ -28,6 +40,10 @@ public final class MySqlReplicaConfigurationResponse extends io.pulumi.resources
         return this.clientCertificate;
     }
 
+    /**
+     * PEM representation of the replica's private key. The corresponsing public key is encoded in the client's certificate.
+     * 
+     */
     @InputImport(name="clientKey", required=true)
     private final String clientKey;
 
@@ -35,6 +51,10 @@ public final class MySqlReplicaConfigurationResponse extends io.pulumi.resources
         return this.clientKey;
     }
 
+    /**
+     * Seconds to wait between connect retries. MySQL's default is 60 seconds.
+     * 
+     */
     @InputImport(name="connectRetryInterval", required=true)
     private final Integer connectRetryInterval;
 
@@ -42,6 +62,10 @@ public final class MySqlReplicaConfigurationResponse extends io.pulumi.resources
         return this.connectRetryInterval;
     }
 
+    /**
+     * Path to a SQL dump file in Google Cloud Storage from which the replica instance is to be created. The URI is in the form gs://bucketName/fileName. Compressed gzip files (.gz) are also supported. Dumps have the binlog co-ordinates from which replication begins. This can be accomplished by setting --master-data to 1 when using mysqldump.
+     * 
+     */
     @InputImport(name="dumpFilePath", required=true)
     private final String dumpFilePath;
 
@@ -49,6 +73,10 @@ public final class MySqlReplicaConfigurationResponse extends io.pulumi.resources
         return this.dumpFilePath;
     }
 
+    /**
+     * This is always `sql#mysqlReplicaConfiguration`.
+     * 
+     */
     @InputImport(name="kind", required=true)
     private final String kind;
 
@@ -56,6 +84,10 @@ public final class MySqlReplicaConfigurationResponse extends io.pulumi.resources
         return this.kind;
     }
 
+    /**
+     * Interval in milliseconds between replication heartbeats.
+     * 
+     */
     @InputImport(name="masterHeartbeatPeriod", required=true)
     private final String masterHeartbeatPeriod;
 
@@ -63,6 +95,10 @@ public final class MySqlReplicaConfigurationResponse extends io.pulumi.resources
         return this.masterHeartbeatPeriod;
     }
 
+    /**
+     * The password for the replication connection.
+     * 
+     */
     @InputImport(name="password", required=true)
     private final String password;
 
@@ -70,6 +106,10 @@ public final class MySqlReplicaConfigurationResponse extends io.pulumi.resources
         return this.password;
     }
 
+    /**
+     * A list of permissible ciphers to use for SSL encryption.
+     * 
+     */
     @InputImport(name="sslCipher", required=true)
     private final String sslCipher;
 
@@ -77,6 +117,10 @@ public final class MySqlReplicaConfigurationResponse extends io.pulumi.resources
         return this.sslCipher;
     }
 
+    /**
+     * The username for the replication connection.
+     * 
+     */
     @InputImport(name="username", required=true)
     private final String username;
 
@@ -84,6 +128,10 @@ public final class MySqlReplicaConfigurationResponse extends io.pulumi.resources
         return this.username;
     }
 
+    /**
+     * Whether or not to check the primary instance's Common Name value in the certificate that it sends during the SSL handshake.
+     * 
+     */
     @InputImport(name="verifyServerCertificate", required=true)
     private final Boolean verifyServerCertificate;
 

@@ -11,7 +11,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class EndpointConfigResponse {
+    /**
+     * Optional. If true, enable http access to specific ports on the cluster from external sources. Defaults to false.
+     * 
+     */
     private final Boolean enableHttpPortAccess;
+    /**
+     * The map of port descriptions to URLs. Will only be populated if enable_http_port_access is true.
+     * 
+     */
     private final Map<String,String> httpPorts;
 
     @OutputCustomType.Constructor({"enableHttpPortAccess","httpPorts"})
@@ -22,9 +30,17 @@ public final class EndpointConfigResponse {
         this.httpPorts = Objects.requireNonNull(httpPorts);
     }
 
+    /**
+     * Optional. If true, enable http access to specific ports on the cluster from external sources. Defaults to false.
+     * 
+     */
     public Boolean getEnableHttpPortAccess() {
         return this.enableHttpPortAccess;
     }
+    /**
+     * The map of port descriptions to URLs. Will only be populated if enable_http_port_access is true.
+     * 
+     */
     public Map<String,String> getHttpPorts() {
         return this.httpPorts;
     }

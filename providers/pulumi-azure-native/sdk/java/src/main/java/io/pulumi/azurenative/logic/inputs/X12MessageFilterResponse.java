@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The X12 message filter for odata query.
+ * 
+ */
 public final class X12MessageFilterResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final X12MessageFilterResponse Empty = new X12MessageFilterResponse();
 
+    /**
+     * The message filter type.
+     * 
+     */
     @InputImport(name="messageFilterType", required=true)
     private final String messageFilterType;
 

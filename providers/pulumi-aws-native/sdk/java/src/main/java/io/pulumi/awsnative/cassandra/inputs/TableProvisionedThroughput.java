@@ -8,6 +8,10 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
+/**
+ * Throughput for the specified table, which consists of values for ReadCapacityUnits and WriteCapacityUnits
+ * 
+ */
 public final class TableProvisionedThroughput extends io.pulumi.resources.InvokeArgs {
 
     public static final TableProvisionedThroughput Empty = new TableProvisionedThroughput();

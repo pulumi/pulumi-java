@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * An object that represents additional parameters when enabling or modifying the automatic snapshot add-on
+ * 
+ */
 public final class InstanceAutoSnapshotAddOn extends io.pulumi.resources.InvokeArgs {
 
     public static final InstanceAutoSnapshotAddOn Empty = new InstanceAutoSnapshotAddOn();
 
+    /**
+     * The daily time when an automatic snapshot will be created.
+     * 
+     */
     @InputImport(name="snapshotTimeOfDay")
     private final @Nullable String snapshotTimeOfDay;
 

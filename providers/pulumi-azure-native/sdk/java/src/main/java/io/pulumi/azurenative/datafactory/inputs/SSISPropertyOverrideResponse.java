@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * SSIS property override.
+ * 
+ */
 public final class SSISPropertyOverrideResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SSISPropertyOverrideResponse Empty = new SSISPropertyOverrideResponse();
 
+    /**
+     * Whether SSIS package property override value is sensitive data. Value will be encrypted in SSISDB if it is true
+     * 
+     */
     @InputImport(name="isSensitive")
     private final @Nullable Boolean isSensitive;
 
@@ -22,6 +30,10 @@ public final class SSISPropertyOverrideResponse extends io.pulumi.resources.Invo
         return this.isSensitive == null ? Optional.empty() : Optional.ofNullable(this.isSensitive);
     }
 
+    /**
+     * SSIS package property override value. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="value", required=true)
     private final Object value;
 

@@ -13,8 +13,24 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TriggerBuildArtifactsObjects {
+    /**
+     * Cloud Storage bucket and optional object path, in the form "gs://bucket/path/to/somewhere/".
+     * Files in the workspace matching any path pattern will be uploaded to Cloud Storage with
+     * this location as a prefix.
+     * 
+     */
     private final @Nullable String location;
+    /**
+     * Path globs used to match files in the build's workspace.
+     * 
+     */
     private final @Nullable List<String> paths;
+    /**
+     * - 
+     * Output only. Stores timing information for pushing all artifact objects.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable List<TriggerBuildArtifactsObjectsTiming> timings;
 
     @OutputCustomType.Constructor({"location","paths","timings"})
@@ -27,12 +43,28 @@ public final class TriggerBuildArtifactsObjects {
         this.timings = timings;
     }
 
+    /**
+     * Cloud Storage bucket and optional object path, in the form "gs://bucket/path/to/somewhere/".
+     * Files in the workspace matching any path pattern will be uploaded to Cloud Storage with
+     * this location as a prefix.
+     * 
+     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
+    /**
+     * Path globs used to match files in the build's workspace.
+     * 
+     */
     public List<String> getPaths() {
         return this.paths == null ? List.of() : this.paths;
     }
+    /**
+     * - 
+     * Output only. Stores timing information for pushing all artifact objects.
+     * Structure is documented below.
+     * 
+     */
     public List<TriggerBuildArtifactsObjectsTiming> getTimings() {
         return this.timings == null ? List.of() : this.timings;
     }

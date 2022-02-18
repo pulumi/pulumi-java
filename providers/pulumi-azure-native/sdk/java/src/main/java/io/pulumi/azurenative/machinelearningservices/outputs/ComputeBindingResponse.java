@@ -12,7 +12,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ComputeBindingResponse {
+    /**
+     * ID of the compute resource.
+     * 
+     */
     private final @Nullable String computeId;
+    /**
+     * Number of nodes.
+     * 
+     */
     private final @Nullable Integer nodeCount;
 
     @OutputCustomType.Constructor({"computeId","nodeCount"})
@@ -23,9 +31,17 @@ public final class ComputeBindingResponse {
         this.nodeCount = nodeCount;
     }
 
+    /**
+     * ID of the compute resource.
+     * 
+     */
     public Optional<String> getComputeId() {
         return Optional.ofNullable(this.computeId);
     }
+    /**
+     * Number of nodes.
+     * 
+     */
     public Optional<Integer> getNodeCount() {
         return Optional.ofNullable(this.nodeCount);
     }

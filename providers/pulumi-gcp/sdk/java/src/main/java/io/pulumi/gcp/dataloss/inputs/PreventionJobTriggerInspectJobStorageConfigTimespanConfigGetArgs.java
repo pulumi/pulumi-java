@@ -16,6 +16,12 @@ public final class PreventionJobTriggerInspectJobStorageConfigTimespanConfigGetA
 
     public static final PreventionJobTriggerInspectJobStorageConfigTimespanConfigGetArgs Empty = new PreventionJobTriggerInspectJobStorageConfigTimespanConfigGetArgs();
 
+    /**
+     * When the job is started by a JobTrigger we will automatically figure out a valid startTime to avoid
+     * scanning files that have not been modified since the last time the JobTrigger executed. This will
+     * be based on the time of the execution of the last run of the JobTrigger.
+     * 
+     */
     @InputImport(name="enableAutoPopulationOfTimespanConfig")
     private final @Nullable Input<Boolean> enableAutoPopulationOfTimespanConfig;
 
@@ -23,6 +29,10 @@ public final class PreventionJobTriggerInspectJobStorageConfigTimespanConfigGetA
         return this.enableAutoPopulationOfTimespanConfig == null ? Input.empty() : this.enableAutoPopulationOfTimespanConfig;
     }
 
+    /**
+     * Exclude files or rows newer than this value. If set to zero, no upper time limit is applied.
+     * 
+     */
     @InputImport(name="endTime")
     private final @Nullable Input<String> endTime;
 
@@ -30,6 +40,10 @@ public final class PreventionJobTriggerInspectJobStorageConfigTimespanConfigGetA
         return this.endTime == null ? Input.empty() : this.endTime;
     }
 
+    /**
+     * Exclude files or rows older than this value.
+     * 
+     */
     @InputImport(name="startTime")
     private final @Nullable Input<String> startTime;
 
@@ -37,6 +51,11 @@ public final class PreventionJobTriggerInspectJobStorageConfigTimespanConfigGetA
         return this.startTime == null ? Input.empty() : this.startTime;
     }
 
+    /**
+     * Information on where to inspect
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="timestampField", required=true)
     private final Input<PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampFieldGetArgs> timestampField;
 

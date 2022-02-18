@@ -22,165 +22,394 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Virtual machine model
+ * API Version: 2019-04-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:vmwarecloudsimple:VirtualMachine myVirtualMachine /subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.VMwareCloudSimple/virtualMachines/myVirtualMachine 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:vmwarecloudsimple:VirtualMachine")
 public class VirtualMachine extends io.pulumi.resources.CustomResource {
+    /**
+     * The amount of memory
+     * 
+     */
     @OutputExport(name="amountOfRam", type=Integer.class, parameters={})
     private Output<Integer> amountOfRam;
 
+    /**
+     * @return The amount of memory
+     * 
+     */
     public Output<Integer> getAmountOfRam() {
         return this.amountOfRam;
     }
+    /**
+     * The list of Virtual Disks' Controllers
+     * 
+     */
     @OutputExport(name="controllers", type=List.class, parameters={VirtualDiskControllerResponse.class})
     private Output<List<VirtualDiskControllerResponse>> controllers;
 
+    /**
+     * @return The list of Virtual Disks' Controllers
+     * 
+     */
     public Output<List<VirtualDiskControllerResponse>> getControllers() {
         return this.controllers;
     }
+    /**
+     * Virtual machine properties
+     * 
+     */
     @OutputExport(name="customization", type=GuestOSCustomizationResponse.class, parameters={})
     private Output</* @Nullable */ GuestOSCustomizationResponse> customization;
 
+    /**
+     * @return Virtual machine properties
+     * 
+     */
     public Output</* @Nullable */ GuestOSCustomizationResponse> getCustomization() {
         return this.customization;
     }
+    /**
+     * The list of Virtual Disks
+     * 
+     */
     @OutputExport(name="disks", type=List.class, parameters={VirtualDiskResponse.class})
     private Output</* @Nullable */ List<VirtualDiskResponse>> disks;
 
+    /**
+     * @return The list of Virtual Disks
+     * 
+     */
     public Output</* @Nullable */ List<VirtualDiskResponse>> getDisks() {
         return this.disks;
     }
+    /**
+     * The DNS name of Virtual Machine in VCenter
+     * 
+     */
     @OutputExport(name="dnsname", type=String.class, parameters={})
     private Output<String> dnsname;
 
+    /**
+     * @return The DNS name of Virtual Machine in VCenter
+     * 
+     */
     public Output<String> getDnsname() {
         return this.dnsname;
     }
+    /**
+     * Expose Guest OS or not
+     * 
+     */
     @OutputExport(name="exposeToGuestVM", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> exposeToGuestVM;
 
+    /**
+     * @return Expose Guest OS or not
+     * 
+     */
     public Output</* @Nullable */ Boolean> getExposeToGuestVM() {
         return this.exposeToGuestVM;
     }
+    /**
+     * The path to virtual machine folder in VCenter
+     * 
+     */
     @OutputExport(name="folder", type=String.class, parameters={})
     private Output<String> folder;
 
+    /**
+     * @return The path to virtual machine folder in VCenter
+     * 
+     */
     public Output<String> getFolder() {
         return this.folder;
     }
+    /**
+     * The name of Guest OS
+     * 
+     */
     @OutputExport(name="guestOS", type=String.class, parameters={})
     private Output<String> guestOS;
 
+    /**
+     * @return The name of Guest OS
+     * 
+     */
     public Output<String> getGuestOS() {
         return this.guestOS;
     }
+    /**
+     * The Guest OS type
+     * 
+     */
     @OutputExport(name="guestOSType", type=String.class, parameters={})
     private Output<String> guestOSType;
 
+    /**
+     * @return The Guest OS type
+     * 
+     */
     public Output<String> getGuestOSType() {
         return this.guestOSType;
     }
+    /**
+     * Azure region
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return Azure region
+     * 
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * {virtualMachineName}
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return {virtualMachineName}
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The list of Virtual NICs
+     * 
+     */
     @OutputExport(name="nics", type=List.class, parameters={VirtualNicResponse.class})
     private Output</* @Nullable */ List<VirtualNicResponse>> nics;
 
+    /**
+     * @return The list of Virtual NICs
+     * 
+     */
     public Output</* @Nullable */ List<VirtualNicResponse>> getNics() {
         return this.nics;
     }
+    /**
+     * The number of CPU cores
+     * 
+     */
     @OutputExport(name="numberOfCores", type=Integer.class, parameters={})
     private Output<Integer> numberOfCores;
 
+    /**
+     * @return The number of CPU cores
+     * 
+     */
     public Output<Integer> getNumberOfCores() {
         return this.numberOfCores;
     }
+    /**
+     * Password for login. Deprecated - use customization property
+     * 
+     */
     @OutputExport(name="password", type=String.class, parameters={})
     private Output</* @Nullable */ String> password;
 
+    /**
+     * @return Password for login. Deprecated - use customization property
+     * 
+     */
     public Output</* @Nullable */ String> getPassword() {
         return this.password;
     }
+    /**
+     * Private Cloud Id
+     * 
+     */
     @OutputExport(name="privateCloudId", type=String.class, parameters={})
     private Output<String> privateCloudId;
 
+    /**
+     * @return Private Cloud Id
+     * 
+     */
     public Output<String> getPrivateCloudId() {
         return this.privateCloudId;
     }
+    /**
+     * The provisioning status of the resource
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning status of the resource
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The public ip of Virtual Machine
+     * 
+     */
     @OutputExport(name="publicIP", type=String.class, parameters={})
     private Output<String> publicIP;
 
+    /**
+     * @return The public ip of Virtual Machine
+     * 
+     */
     public Output<String> getPublicIP() {
         return this.publicIP;
     }
+    /**
+     * Virtual Machines Resource Pool
+     * 
+     */
     @OutputExport(name="resourcePool", type=ResourcePoolResponse.class, parameters={})
     private Output</* @Nullable */ ResourcePoolResponse> resourcePool;
 
+    /**
+     * @return Virtual Machines Resource Pool
+     * 
+     */
     public Output</* @Nullable */ ResourcePoolResponse> getResourcePool() {
         return this.resourcePool;
     }
+    /**
+     * The status of Virtual machine
+     * 
+     */
     @OutputExport(name="status", type=String.class, parameters={})
     private Output<String> status;
 
+    /**
+     * @return The status of Virtual machine
+     * 
+     */
     public Output<String> getStatus() {
         return this.status;
     }
+    /**
+     * The list of tags
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return The list of tags
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Virtual Machine Template Id
+     * 
+     */
     @OutputExport(name="templateId", type=String.class, parameters={})
     private Output</* @Nullable */ String> templateId;
 
+    /**
+     * @return Virtual Machine Template Id
+     * 
+     */
     public Output</* @Nullable */ String> getTemplateId() {
         return this.templateId;
     }
+    /**
+     * {resourceProviderNamespace}/{resourceType}
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return {resourceProviderNamespace}/{resourceType}
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * Username for login. Deprecated - use customization property
+     * 
+     */
     @OutputExport(name="username", type=String.class, parameters={})
     private Output</* @Nullable */ String> username;
 
+    /**
+     * @return Username for login. Deprecated - use customization property
+     * 
+     */
     public Output</* @Nullable */ String> getUsername() {
         return this.username;
     }
+    /**
+     * The list of Virtual VSphere Networks
+     * 
+     */
     @OutputExport(name="vSphereNetworks", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> vSphereNetworks;
 
+    /**
+     * @return The list of Virtual VSphere Networks
+     * 
+     */
     public Output</* @Nullable */ List<String>> getVSphereNetworks() {
         return this.vSphereNetworks;
     }
+    /**
+     * The internal id of Virtual Machine in VCenter
+     * 
+     */
     @OutputExport(name="vmId", type=String.class, parameters={})
     private Output<String> vmId;
 
+    /**
+     * @return The internal id of Virtual Machine in VCenter
+     * 
+     */
     public Output<String> getVmId() {
         return this.vmId;
     }
+    /**
+     * VMware tools version
+     * 
+     */
     @OutputExport(name="vmwaretools", type=String.class, parameters={})
     private Output<String> vmwaretools;
 
+    /**
+     * @return VMware tools version
+     * 
+     */
     public Output<String> getVmwaretools() {
         return this.vmwaretools;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public VirtualMachine(String name, VirtualMachineArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:vmwarecloudsimple:VirtualMachine", name, args == null ? VirtualMachineArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -199,6 +428,14 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static VirtualMachine get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new VirtualMachine(name, id, options);
     }

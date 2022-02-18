@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Allow to exclude some variable satisfy the condition for the WAF check.
+ * 
+ */
 public final class ApplicationGatewayFirewallExclusionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApplicationGatewayFirewallExclusionResponse Empty = new ApplicationGatewayFirewallExclusionResponse();
 
+    /**
+     * The variable to be excluded.
+     * 
+     */
     @InputImport(name="matchVariable", required=true)
     private final String matchVariable;
 
@@ -19,6 +27,10 @@ public final class ApplicationGatewayFirewallExclusionResponse extends io.pulumi
         return this.matchVariable;
     }
 
+    /**
+     * When matchVariable is a collection, operator used to specify which elements in the collection this exclusion applies to.
+     * 
+     */
     @InputImport(name="selector", required=true)
     private final String selector;
 
@@ -26,6 +38,10 @@ public final class ApplicationGatewayFirewallExclusionResponse extends io.pulumi
         return this.selector;
     }
 
+    /**
+     * When matchVariable is a collection, operate on the selector to specify which elements in the collection this exclusion applies to.
+     * 
+     */
     @InputImport(name="selectorMatchOperator", required=true)
     private final String selectorMatchOperator;
 

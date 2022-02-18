@@ -12,6 +12,10 @@ public final class GetUserGroupArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetUserGroupArgs Empty = new GetUserGroupArgs();
 
+    /**
+     * The ID of the user group.
+     * 
+     */
     @InputImport(name="userGroupId", required=true)
     private final String userGroupId;
 

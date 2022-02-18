@@ -12,7 +12,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class InstanceState {
+    /**
+     * Status code of the Instance.
+     * 
+     */
     private final @Nullable Integer code;
+    /**
+     * Status code of the Instance.
+     * 
+     */
     private final @Nullable String name;
 
     @OutputCustomType.Constructor({"code","name"})
@@ -23,9 +31,17 @@ public final class InstanceState {
         this.name = name;
     }
 
+    /**
+     * Status code of the Instance.
+     * 
+     */
     public Optional<Integer> getCode() {
         return Optional.ofNullable(this.code);
     }
+    /**
+     * Status code of the Instance.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListAccountChannelTypesResult {
+    /**
+     * Channel descriptions
+     * 
+     */
     private final @Nullable List<ChannelTypeDescriptionResponse> value;
 
     @OutputCustomType.Constructor({"value"})
@@ -18,6 +22,10 @@ public final class ListAccountChannelTypesResult {
         this.value = value;
     }
 
+    /**
+     * Channel descriptions
+     * 
+     */
     public List<ChannelTypeDescriptionResponse> getValue() {
         return this.value == null ? List.of() : this.value;
     }

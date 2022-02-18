@@ -12,27 +12,61 @@ import io.pulumi.googlenative.Utilities;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * The provider type for the Google Cloud package.
+ * 
+ */
 @ResourceType(type="pulumi:providers:google-native")
 public class Provider extends io.pulumi.resources.ProviderResource {
+    /**
+     * The default project to manage resources in. If another project is specified on a resource, it will take precedence.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output</* @Nullable */ String> project;
 
+    /**
+     * @return The default project to manage resources in. If another project is specified on a resource, it will take precedence.
+     * 
+     */
     public Output</* @Nullable */ String> getProject() {
         return this.project;
     }
+    /**
+     * The default region to manage resources in. If another region is specified on a regional resource, it will take precedence.
+     * 
+     */
     @OutputExport(name="region", type=String.class, parameters={})
     private Output</* @Nullable */ String> region;
 
+    /**
+     * @return The default region to manage resources in. If another region is specified on a regional resource, it will take precedence.
+     * 
+     */
     public Output</* @Nullable */ String> getRegion() {
         return this.region;
     }
+    /**
+     * The default zone to manage resources in. Generally, this zone should be within the default region you specified. If another zone is specified on a zonal resource, it will take precedence.
+     * 
+     */
     @OutputExport(name="zone", type=String.class, parameters={})
     private Output</* @Nullable */ String> zone;
 
+    /**
+     * @return The default zone to manage resources in. Generally, this zone should be within the default region you specified. If another zone is specified on a zonal resource, it will take precedence.
+     * 
+     */
     public Output</* @Nullable */ String> getZone() {
         return this.zone;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Provider(String name, @Nullable ProviderArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native", name, args == null ? ProviderArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }

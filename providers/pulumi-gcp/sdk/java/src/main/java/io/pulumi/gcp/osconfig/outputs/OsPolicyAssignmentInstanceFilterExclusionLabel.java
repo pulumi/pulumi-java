@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class OsPolicyAssignmentInstanceFilterExclusionLabel {
+    /**
+     * Labels are identified by key/value pairs in this map. A VM should contain all the key/value pairs specified in this map to be selected.
+     * 
+     */
     private final @Nullable Map<String,String> labels;
 
     @OutputCustomType.Constructor({"labels"})
@@ -18,6 +22,10 @@ public final class OsPolicyAssignmentInstanceFilterExclusionLabel {
         this.labels = labels;
     }
 
+    /**
+     * Labels are identified by key/value pairs in this map. A VM should contain all the key/value pairs specified in this map to be selected.
+     * 
+     */
     public Map<String,String> getLabels() {
         return this.labels == null ? Map.of() : this.labels;
     }

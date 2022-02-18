@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetQueueServiceProperties {
+/**
+ * The properties of a storage account’s Queue service.
+ * API Version: 2021-02-01.
+ * 
+ *
+ * The properties of a storage account’s Queue service.
+ * 
+ */
     public static CompletableFuture<GetQueueServicePropertiesResult> invokeAsync(GetQueueServicePropertiesArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:getQueueServiceProperties", TypeShape.of(GetQueueServicePropertiesResult.class), args == null ? GetQueueServicePropertiesArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -20,6 +20,10 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DatasetArgs Empty = new DatasetArgs();
 
+    /**
+     * Frequency of data collection. This parameter is required for RELATED_TIME_SERIES
+     * 
+     */
     @InputImport(name="dataFrequency")
     private final @Nullable Input<String> dataFrequency;
 
@@ -27,6 +31,10 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataFrequency == null ? Input.empty() : this.dataFrequency;
     }
 
+    /**
+     * A name for the dataset
+     * 
+     */
     @InputImport(name="datasetName")
     private final @Nullable Input<String> datasetName;
 
@@ -34,6 +42,10 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.datasetName == null ? Input.empty() : this.datasetName;
     }
 
+    /**
+     * The dataset type
+     * 
+     */
     @InputImport(name="datasetType", required=true)
     private final Input<DatasetType> datasetType;
 
@@ -41,6 +53,10 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.datasetType;
     }
 
+    /**
+     * The domain associated with the dataset
+     * 
+     */
     @InputImport(name="domain", required=true)
     private final Input<DatasetDomain> domain;
 

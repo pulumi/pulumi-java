@@ -9,10 +9,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Message for compatibility with legacy Edge specification for Java Properties object in JSON.
+ * 
+ */
 public final class GoogleCloudApigeeV1PropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudApigeeV1PropertiesResponse Empty = new GoogleCloudApigeeV1PropertiesResponse();
 
+    /**
+     * List of all properties in the object
+     * 
+     */
     @InputImport(name="property", required=true)
     private final List<GoogleCloudApigeeV1PropertyResponse> property;
 

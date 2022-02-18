@@ -12,6 +12,10 @@ public final class SchemaTag extends io.pulumi.resources.InvokeArgs {
 
     public static final SchemaTag Empty = new SchemaTag();
 
+    /**
+     * A key to identify the tag.
+     * 
+     */
     @InputImport(name="key", required=true)
     private final String key;
 
@@ -19,6 +23,10 @@ public final class SchemaTag extends io.pulumi.resources.InvokeArgs {
         return this.key;
     }
 
+    /**
+     * Corresponding tag value for the key.
+     * 
+     */
     @InputImport(name="value", required=true)
     private final String value;
 

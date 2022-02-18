@@ -14,6 +14,10 @@ public final class GetAssessmentArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAssessmentArgs Empty = new GetAssessmentArgs();
 
+    /**
+     * The Assessment Key - Unique key for the assessment type
+     * 
+     */
     @InputImport(name="assessmentName", required=true)
     private final String assessmentName;
 
@@ -21,6 +25,10 @@ public final class GetAssessmentArgs extends io.pulumi.resources.InvokeArgs {
         return this.assessmentName;
     }
 
+    /**
+     * OData expand. Optional.
+     * 
+     */
     @InputImport(name="expand")
     private final @Nullable String expand;
 
@@ -28,6 +36,10 @@ public final class GetAssessmentArgs extends io.pulumi.resources.InvokeArgs {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
+    /**
+     * The identifier of the resource.
+     * 
+     */
     @InputImport(name="resourceId", required=true)
     private final String resourceId;
 

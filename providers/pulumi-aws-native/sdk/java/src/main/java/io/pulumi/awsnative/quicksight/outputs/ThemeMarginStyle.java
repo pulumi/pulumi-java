@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ThemeMarginStyle {
+    /**
+     * <p>This Boolean value controls whether to display sheet margins.</p>
+     * 
+     */
     private final @Nullable Boolean show;
 
     @OutputCustomType.Constructor({"show"})
@@ -18,6 +22,10 @@ public final class ThemeMarginStyle {
         this.show = show;
     }
 
+    /**
+     * <p>This Boolean value controls whether to display sheet margins.</p>
+     * 
+     */
     public Optional<Boolean> getShow() {
         return Optional.ofNullable(this.show);
     }

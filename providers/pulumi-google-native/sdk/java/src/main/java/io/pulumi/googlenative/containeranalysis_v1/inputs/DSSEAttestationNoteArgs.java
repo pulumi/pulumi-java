@@ -14,6 +14,10 @@ public final class DSSEAttestationNoteArgs extends io.pulumi.resources.ResourceA
 
     public static final DSSEAttestationNoteArgs Empty = new DSSEAttestationNoteArgs();
 
+    /**
+     * DSSEHint hints at the purpose of the attestation authority.
+     * 
+     */
     @InputImport(name="hint")
     private final @Nullable Input<DSSEHintArgs> hint;
 

@@ -14,6 +14,10 @@ public final class PartnerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PartnerArgs Empty = new PartnerArgs();
 
+    /**
+     * Id of the Partner
+     * 
+     */
     @InputImport(name="partnerId")
     private final @Nullable Input<String> partnerId;
 

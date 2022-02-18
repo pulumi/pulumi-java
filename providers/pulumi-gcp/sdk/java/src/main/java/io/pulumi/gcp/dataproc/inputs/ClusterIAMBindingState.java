@@ -16,6 +16,10 @@ public final class ClusterIAMBindingState extends io.pulumi.resources.ResourceAr
 
     public static final ClusterIAMBindingState Empty = new ClusterIAMBindingState();
 
+    /**
+     * The name or relative resource id of the cluster to manage IAM policies for.
+     * 
+     */
     @InputImport(name="cluster")
     private final @Nullable Input<String> cluster;
 
@@ -30,6 +34,10 @@ public final class ClusterIAMBindingState extends io.pulumi.resources.ResourceAr
         return this.condition == null ? Input.empty() : this.condition;
     }
 
+    /**
+     * (Computed) The etag of the clusters's IAM policy.
+     * 
+     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -44,6 +52,11 @@ public final class ClusterIAMBindingState extends io.pulumi.resources.ResourceAr
         return this.members == null ? Input.empty() : this.members;
     }
 
+    /**
+     * The project in which the cluster belongs. If it
+     * is not provided, the provider will use a default.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -51,6 +64,11 @@ public final class ClusterIAMBindingState extends io.pulumi.resources.ResourceAr
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The region in which the cluster belongs. If it
+     * is not provided, the provider will use a default.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 
@@ -58,6 +76,12 @@ public final class ClusterIAMBindingState extends io.pulumi.resources.ResourceAr
         return this.region == null ? Input.empty() : this.region;
     }
 
+    /**
+     * The role that should be applied. Only one
+     * `gcp.dataproc.ClusterIAMBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     @InputImport(name="role")
     private final @Nullable Input<String> role;
 

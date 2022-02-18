@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The encryption method to use.
+     * 
+     */
     @EnumType
     public enum PackagingConfigurationHlsEncryptionEncryptionMethod {
         Aes128("AES_128"),

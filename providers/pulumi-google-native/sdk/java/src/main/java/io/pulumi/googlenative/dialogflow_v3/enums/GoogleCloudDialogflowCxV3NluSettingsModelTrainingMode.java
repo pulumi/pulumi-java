@@ -8,10 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Indicates NLU model training mode.
+     * 
+     */
     @EnumType
     public enum GoogleCloudDialogflowCxV3NluSettingsModelTrainingMode {
+        /**
+         * Not specified. `MODEL_TRAINING_MODE_AUTOMATIC` will be used.
+         * 
+         */
         ModelTrainingModeUnspecified("MODEL_TRAINING_MODE_UNSPECIFIED"),
+        /**
+         * NLU model training is automatically triggered when a flow gets modified. User can also manually trigger model training in this mode.
+         * 
+         */
         ModelTrainingModeAutomatic("MODEL_TRAINING_MODE_AUTOMATIC"),
+        /**
+         * User needs to manually trigger NLU model training. Best for large flows whose models take long time to train.
+         * 
+         */
         ModelTrainingModeManual("MODEL_TRAINING_MODE_MANUAL");
 
         private final String value;

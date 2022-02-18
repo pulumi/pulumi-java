@@ -21,6 +21,10 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OrganizationArgs Empty = new OrganizationArgs();
 
+    /**
+     * Addon configurations of the Apigee organization.
+     * 
+     */
     @InputImport(name="addonsConfig")
     private final @Nullable Input<GoogleCloudApigeeV1AddonsConfigArgs> addonsConfig;
 
@@ -28,6 +32,10 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
         return this.addonsConfig == null ? Input.empty() : this.addonsConfig;
     }
 
+    /**
+     * Primary GCP region for analytics data storage. For valid values, see [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org).
+     * 
+     */
     @InputImport(name="analyticsRegion", required=true)
     private final Input<String> analyticsRegion;
 
@@ -35,6 +43,10 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
         return this.analyticsRegion;
     }
 
+    /**
+     * Not used by Apigee.
+     * 
+     */
     @InputImport(name="attributes")
     private final @Nullable Input<List<String>> attributes;
 
@@ -42,6 +54,10 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
         return this.attributes == null ? Input.empty() : this.attributes;
     }
 
+    /**
+     * Compute Engine network used for Service Networking to be peered with Apigee runtime instances. See [Getting started with the Service Networking API](https://cloud.google.com/service-infrastructure/docs/service-networking/getting-started). Valid only when [RuntimeType](#RuntimeType) is set to `CLOUD`. The value must be set before the creation of a runtime instance and can be updated only when there are no runtime instances. For example: `default`. Apigee also supports shared VPC (that is, the host network project is not the same as the one that is peering with Apigee). See [Shared VPC overview](https://cloud.google.com/vpc/docs/shared-vpc). To use a shared VPC network, use the following format: `projects/{host-project-id}/{region}/networks/{network-name}`. For example: `projects/my-sharedvpc-host/global/networks/mynetwork` **Note:** Not supported for Apigee hybrid.
+     * 
+     */
     @InputImport(name="authorizedNetwork")
     private final @Nullable Input<String> authorizedNetwork;
 
@@ -49,6 +65,10 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
         return this.authorizedNetwork == null ? Input.empty() : this.authorizedNetwork;
     }
 
+    /**
+     * Billing type of the Apigee organization. See [Apigee pricing](https://cloud.google.com/apigee/pricing).
+     * 
+     */
     @InputImport(name="billingType")
     private final @Nullable Input<OrganizationBillingType> billingType;
 
@@ -56,6 +76,10 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
         return this.billingType == null ? Input.empty() : this.billingType;
     }
 
+    /**
+     * Not used by Apigee.
+     * 
+     */
     @InputImport(name="customerName")
     private final @Nullable Input<String> customerName;
 
@@ -63,6 +87,10 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
         return this.customerName == null ? Input.empty() : this.customerName;
     }
 
+    /**
+     * Description of the Apigee organization.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -70,6 +98,10 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Display name for the Apigee organization. Unused, but reserved for future use.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -84,6 +116,10 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
         return this.parent;
     }
 
+    /**
+     * Configuration for the Portals settings.
+     * 
+     */
     @InputImport(name="portalDisabled")
     private final @Nullable Input<Boolean> portalDisabled;
 
@@ -91,6 +127,10 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
         return this.portalDisabled == null ? Input.empty() : this.portalDisabled;
     }
 
+    /**
+     * Properties defined in the Apigee organization profile.
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<GoogleCloudApigeeV1PropertiesArgs> properties;
 
@@ -98,6 +138,10 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * Cloud KMS key name used for encrypting the data that is stored and replicated across runtime instances. Update is not allowed after the organization is created. Required when [RuntimeType](#RuntimeType) is `CLOUD`. If not specified when [RuntimeType](#RuntimeType) is `TRIAL`, a Google-Managed encryption key will be used. For example: "projects/foo/locations/us/keyRings/bar/cryptoKeys/baz". **Note:** Not supported for Apigee hybrid.
+     * 
+     */
     @InputImport(name="runtimeDatabaseEncryptionKeyName")
     private final @Nullable Input<String> runtimeDatabaseEncryptionKeyName;
 
@@ -105,6 +149,10 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
         return this.runtimeDatabaseEncryptionKeyName == null ? Input.empty() : this.runtimeDatabaseEncryptionKeyName;
     }
 
+    /**
+     * Runtime type of the Apigee organization based on the Apigee subscription purchased.
+     * 
+     */
     @InputImport(name="runtimeType", required=true)
     private final Input<OrganizationRuntimeType> runtimeType;
 
@@ -112,6 +160,10 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
         return this.runtimeType;
     }
 
+    /**
+     * Not used by Apigee.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<OrganizationType> type;
 

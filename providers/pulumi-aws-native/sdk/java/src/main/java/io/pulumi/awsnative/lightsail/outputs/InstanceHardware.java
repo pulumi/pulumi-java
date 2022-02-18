@@ -13,8 +13,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class InstanceHardware {
+    /**
+     * CPU count of the Instance.
+     * 
+     */
     private final @Nullable Integer cpuCount;
+    /**
+     * Disks attached to the Instance.
+     * 
+     */
     private final @Nullable List<InstanceDisk> disks;
+    /**
+     * RAM Size of the Instance.
+     * 
+     */
     private final @Nullable Integer ramSizeInGb;
 
     @OutputCustomType.Constructor({"cpuCount","disks","ramSizeInGb"})
@@ -27,12 +39,24 @@ public final class InstanceHardware {
         this.ramSizeInGb = ramSizeInGb;
     }
 
+    /**
+     * CPU count of the Instance.
+     * 
+     */
     public Optional<Integer> getCpuCount() {
         return Optional.ofNullable(this.cpuCount);
     }
+    /**
+     * Disks attached to the Instance.
+     * 
+     */
     public List<InstanceDisk> getDisks() {
         return this.disks == null ? List.of() : this.disks;
     }
+    /**
+     * RAM Size of the Instance.
+     * 
+     */
     public Optional<Integer> getRamSizeInGb() {
         return Optional.ofNullable(this.ramSizeInGb);
     }

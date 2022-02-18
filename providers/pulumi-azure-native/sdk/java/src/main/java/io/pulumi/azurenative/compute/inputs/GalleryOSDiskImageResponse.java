@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * This is the OS disk image.
+ * 
+ */
 public final class GalleryOSDiskImageResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GalleryOSDiskImageResponse Empty = new GalleryOSDiskImageResponse();
 
+    /**
+     * The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'
+     * 
+     */
     @InputImport(name="hostCaching")
     private final @Nullable String hostCaching;
 
@@ -23,6 +31,10 @@ public final class GalleryOSDiskImageResponse extends io.pulumi.resources.Invoke
         return this.hostCaching == null ? Optional.empty() : Optional.ofNullable(this.hostCaching);
     }
 
+    /**
+     * This property indicates the size of the VHD to be created.
+     * 
+     */
     @InputImport(name="sizeInGB", required=true)
     private final Integer sizeInGB;
 
@@ -30,6 +42,10 @@ public final class GalleryOSDiskImageResponse extends io.pulumi.resources.Invoke
         return this.sizeInGB;
     }
 
+    /**
+     * The gallery artifact version source.
+     * 
+     */
     @InputImport(name="source")
     private final @Nullable GalleryArtifactVersionSourceResponse source;
 

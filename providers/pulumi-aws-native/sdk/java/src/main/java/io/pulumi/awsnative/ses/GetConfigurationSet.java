@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetConfigurationSet {
+/**
+ * Resource schema for AWS::SES::ConfigurationSet.
+ * 
+ */
     public static CompletableFuture<GetConfigurationSetResult> invokeAsync(GetConfigurationSetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ses:getConfigurationSet", TypeShape.of(GetConfigurationSetResult.class), args == null ? GetConfigurationSetArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -12,6 +12,10 @@ public final class LicenseValidityDateFormat extends io.pulumi.resources.InvokeA
 
     public static final LicenseValidityDateFormat Empty = new LicenseValidityDateFormat();
 
+    /**
+     * Validity begin date for the license.
+     * 
+     */
     @InputImport(name="begin", required=true)
     private final String begin;
 
@@ -19,6 +23,10 @@ public final class LicenseValidityDateFormat extends io.pulumi.resources.InvokeA
         return this.begin;
     }
 
+    /**
+     * Validity begin date for the license.
+     * 
+     */
     @InputImport(name="end", required=true)
     private final String end;
 

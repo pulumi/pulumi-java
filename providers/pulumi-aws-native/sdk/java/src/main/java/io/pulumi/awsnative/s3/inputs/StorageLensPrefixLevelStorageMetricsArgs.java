@@ -15,6 +15,10 @@ public final class StorageLensPrefixLevelStorageMetricsArgs extends io.pulumi.re
 
     public static final StorageLensPrefixLevelStorageMetricsArgs Empty = new StorageLensPrefixLevelStorageMetricsArgs();
 
+    /**
+     * Specifies whether prefix-level storage metrics are enabled or disabled.
+     * 
+     */
     @InputImport(name="isEnabled")
     private final @Nullable Input<Boolean> isEnabled;
 

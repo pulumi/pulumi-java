@@ -11,10 +11,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The aggregation expression to be used in the report.
+ * 
+ */
 public final class ReportAggregationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ReportAggregationArgs Empty = new ReportAggregationArgs();
 
+    /**
+     * The name of the aggregation function to use.
+     * 
+     */
     @InputImport(name="function", required=true)
     private final Input<Either<String,FunctionType>> function;
 
@@ -22,6 +30,10 @@ public final class ReportAggregationArgs extends io.pulumi.resources.ResourceArg
         return this.function;
     }
 
+    /**
+     * The name of the column to aggregate.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

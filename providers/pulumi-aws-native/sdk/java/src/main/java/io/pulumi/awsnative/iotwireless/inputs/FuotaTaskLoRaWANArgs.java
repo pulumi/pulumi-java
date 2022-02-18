@@ -14,6 +14,10 @@ public final class FuotaTaskLoRaWANArgs extends io.pulumi.resources.ResourceArgs
 
     public static final FuotaTaskLoRaWANArgs Empty = new FuotaTaskLoRaWANArgs();
 
+    /**
+     * FUOTA task LoRaWAN RF region
+     * 
+     */
     @InputImport(name="rfRegion", required=true)
     private final Input<String> rfRegion;
 
@@ -21,6 +25,10 @@ public final class FuotaTaskLoRaWANArgs extends io.pulumi.resources.ResourceArgs
         return this.rfRegion;
     }
 
+    /**
+     * FUOTA task LoRaWAN start time
+     * 
+     */
     @InputImport(name="startTime")
     private final @Nullable Input<String> startTime;
 

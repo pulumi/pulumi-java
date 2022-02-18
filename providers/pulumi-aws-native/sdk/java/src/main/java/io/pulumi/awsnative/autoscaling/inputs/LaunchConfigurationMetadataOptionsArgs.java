@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * MetadataOptions is a property of AWS::AutoScaling::LaunchConfiguration that describes metadata options for the instances.
+ * 
+ */
 public final class LaunchConfigurationMetadataOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LaunchConfigurationMetadataOptionsArgs Empty = new LaunchConfigurationMetadataOptionsArgs();
 
+    /**
+     * This parameter enables or disables the HTTP metadata endpoint on your instances.
+     * 
+     */
     @InputImport(name="httpEndpoint")
     private final @Nullable Input<String> httpEndpoint;
 
@@ -22,6 +30,10 @@ public final class LaunchConfigurationMetadataOptionsArgs extends io.pulumi.reso
         return this.httpEndpoint == null ? Input.empty() : this.httpEndpoint;
     }
 
+    /**
+     * The desired HTTP PUT response hop limit for instance metadata requests.
+     * 
+     */
     @InputImport(name="httpPutResponseHopLimit")
     private final @Nullable Input<Integer> httpPutResponseHopLimit;
 
@@ -29,6 +41,10 @@ public final class LaunchConfigurationMetadataOptionsArgs extends io.pulumi.reso
         return this.httpPutResponseHopLimit == null ? Input.empty() : this.httpPutResponseHopLimit;
     }
 
+    /**
+     * The state of token usage for your instance metadata requests.
+     * 
+     */
     @InputImport(name="httpTokens")
     private final @Nullable Input<String> httpTokens;
 

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The compute platform of the profiling group.
+     * 
+     */
     @EnumType
     public enum ProfilingGroupComputePlatform {
         Default("Default"),

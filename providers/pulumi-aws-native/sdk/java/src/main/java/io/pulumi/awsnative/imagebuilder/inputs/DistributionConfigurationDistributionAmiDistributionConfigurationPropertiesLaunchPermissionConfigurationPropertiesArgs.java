@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Launch permissions can be used to configure which AWS accounts can use the AMI to launch instances.
+ * 
+ */
 public final class DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationPropertiesArgs Empty = new DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationPropertiesArgs();
 
+    /**
+     * The ARN for an Amazon Web Services Organization that you want to share your AMI with.
+     * 
+     */
     @InputImport(name="organizationArns")
     private final @Nullable Input<List<String>> organizationArns;
 
@@ -22,6 +30,10 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
         return this.organizationArns == null ? Input.empty() : this.organizationArns;
     }
 
+    /**
+     * The ARN for an Organizations organizational unit (OU) that you want to share your AMI with.
+     * 
+     */
     @InputImport(name="organizationalUnitArns")
     private final @Nullable Input<List<String>> organizationalUnitArns;
 
@@ -29,6 +41,10 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
         return this.organizationalUnitArns == null ? Input.empty() : this.organizationalUnitArns;
     }
 
+    /**
+     * The name of the group.
+     * 
+     */
     @InputImport(name="userGroups")
     private final @Nullable Input<List<String>> userGroups;
 
@@ -36,6 +52,10 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
         return this.userGroups == null ? Input.empty() : this.userGroups;
     }
 
+    /**
+     * The AWS account ID.
+     * 
+     */
     @InputImport(name="userIds")
     private final @Nullable Input<List<String>> userIds;
 

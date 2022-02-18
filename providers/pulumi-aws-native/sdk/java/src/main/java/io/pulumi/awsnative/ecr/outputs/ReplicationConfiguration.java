@@ -10,6 +10,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ReplicationConfiguration {
+    /**
+     * An array of objects representing the replication rules for a replication configuration. A replication configuration may contain a maximum of 10 rules.
+     * 
+     */
     private final List<ReplicationConfigurationReplicationRule> rules;
 
     @OutputCustomType.Constructor({"rules"})
@@ -17,6 +21,10 @@ public final class ReplicationConfiguration {
         this.rules = Objects.requireNonNull(rules);
     }
 
+    /**
+     * An array of objects representing the replication rules for a replication configuration. A replication configuration may contain a maximum of 10 rules.
+     * 
+     */
     public List<ReplicationConfigurationReplicationRule> getRules() {
         return this.rules;
     }

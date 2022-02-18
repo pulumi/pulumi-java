@@ -15,6 +15,50 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Three different resources help you manage your IAM policy for Healthcare HL7v2 store. Each of these resources serves a different use case:
+ * 
+ * * `gcp.healthcare.Hl7StoreIamPolicy`: Authoritative. Sets the IAM policy for the HL7v2 store and replaces any existing policy already attached.
+ * * `gcp.healthcare.Hl7StoreIamBinding`: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the HL7v2 store are preserved.
+ * * `gcp.healthcare.Hl7StoreIamMember`: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the HL7v2 store are preserved.
+ * 
+ * > **Note:** `gcp.healthcare.Hl7StoreIamPolicy` **cannot** be used in conjunction with `gcp.healthcare.Hl7StoreIamBinding` and `gcp.healthcare.Hl7StoreIamMember` or they will fight over what your policy should be.
+ * 
+ * > **Note:** `gcp.healthcare.Hl7StoreIamBinding` resources **can be** used in conjunction with `gcp.healthcare.Hl7StoreIamMember` resources **only if** they do not grant privilege to the same role.
+ * 
+ * ## google\_healthcare\_hl7\_v2\_store\_iam\_policy
+ * 
+ * ## google\_healthcare\_hl7\_v2\_store\_iam\_binding
+ * 
+ * ## google\_healthcare\_hl7\_v2\_store\_iam\_member
+ * 
+ * ## Import
+ * 
+ * IAM member imports use space-delimited identifiers; the resource in question, the role, and the account.
+ * 
+ * This member resource can be imported using the `hl7_v2_store_id`, role, and account e.g.
+ * 
+ * ```sh
+ *  $ pulumi import gcp:healthcare/hl7StoreIamBinding:Hl7StoreIamBinding hl7_v2_store_iam "your-project-id/location-name/dataset-name/hl7-v2-store-name roles/viewer user:foo@example.com"
+ * ```
+ * 
+ *  IAM binding imports use space-delimited identifiers; the resource in question and the role.
+ * 
+ * This binding resource can be imported using the `hl7_v2_store_id` and role, e.g.
+ * 
+ * ```sh
+ *  $ pulumi import gcp:healthcare/hl7StoreIamBinding:Hl7StoreIamBinding hl7_v2_store_iam "your-project-id/location-name/dataset-name/hl7-v2-store-name roles/viewer"
+ * ```
+ * 
+ *  IAM policy imports use the identifier of the resource in question.
+ * 
+ * This policy resource can be imported using the `hl7_v2_store_id`, role, and account e.g.
+ * 
+ * ```sh
+ *  $ pulumi import gcp:healthcare/hl7StoreIamBinding:Hl7StoreIamBinding hl7_v2_store_iam your-project-id/location-name/dataset-name/hl7-v2-store-name
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:healthcare/hl7StoreIamBinding:Hl7StoreIamBinding")
 public class Hl7StoreIamBinding extends io.pulumi.resources.CustomResource {
     @OutputExport(name="condition", type=Hl7StoreIamBindingCondition.class, parameters={})
@@ -23,15 +67,37 @@ public class Hl7StoreIamBinding extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ Hl7StoreIamBindingCondition> getCondition() {
         return this.condition;
     }
+    /**
+     * (Computed) The etag of the HL7v2 store's IAM policy.
+     * 
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return (Computed) The etag of the HL7v2 store's IAM policy.
+     * 
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * The HL7v2 store ID, in the form
+     * `{project_id}/{location_name}/{dataset_name}/{hl7_v2_store_name}` or
+     * `{location_name}/{dataset_name}/{hl7_v2_store_name}`. In the second form, the provider's
+     * project setting will be used as a fallback.
+     * 
+     */
     @OutputExport(name="hl7V2StoreId", type=String.class, parameters={})
     private Output<String> hl7V2StoreId;
 
+    /**
+     * @return The HL7v2 store ID, in the form
+     * `{project_id}/{location_name}/{dataset_name}/{hl7_v2_store_name}` or
+     * `{location_name}/{dataset_name}/{hl7_v2_store_name}`. In the second form, the provider's
+     * project setting will be used as a fallback.
+     * 
+     */
     public Output<String> getHl7V2StoreId() {
         return this.hl7V2StoreId;
     }
@@ -41,13 +107,31 @@ public class Hl7StoreIamBinding extends io.pulumi.resources.CustomResource {
     public Output<List<String>> getMembers() {
         return this.members;
     }
+    /**
+     * The role that should be applied. Only one
+     * `gcp.healthcare.Hl7StoreIamBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     @OutputExport(name="role", type=String.class, parameters={})
     private Output<String> role;
 
+    /**
+     * @return The role that should be applied. Only one
+     * `gcp.healthcare.Hl7StoreIamBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     public Output<String> getRole() {
         return this.role;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Hl7StoreIamBinding(String name, Hl7StoreIamBindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:healthcare/hl7StoreIamBinding:Hl7StoreIamBinding", name, args == null ? Hl7StoreIamBindingArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -63,6 +147,15 @@ public class Hl7StoreIamBinding extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Hl7StoreIamBinding get(String name, Input<String> id, @Nullable Hl7StoreIamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Hl7StoreIamBinding(name, id, state, options);
     }

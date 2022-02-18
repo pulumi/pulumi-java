@@ -14,6 +14,11 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
 
     public static final PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValueArgs Empty = new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValueArgs();
 
+    /**
+     * Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if specifying a
+     * year by itself or a year and month where the day is not significant.
+     * 
+     */
     @InputImport(name="day")
     private final @Nullable Input<Integer> day;
 
@@ -21,6 +26,10 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
         return this.day == null ? Input.empty() : this.day;
     }
 
+    /**
+     * Month of year. Must be from 1 to 12, or 0 if specifying a year without a month and day.
+     * 
+     */
     @InputImport(name="month")
     private final @Nullable Input<Integer> month;
 
@@ -28,6 +37,10 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
         return this.month == null ? Input.empty() : this.month;
     }
 
+    /**
+     * Year of date. Must be from 1 to 9999, or 0 if specifying a date without a year.
+     * 
+     */
     @InputImport(name="year")
     private final @Nullable Input<Integer> year;
 

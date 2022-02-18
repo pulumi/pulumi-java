@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines whether a feature can be used or what values are accepted.
+ * 
+ */
 public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs Empty = new GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs();
 
+    /**
+     * A list of acceptable values. Only effective when the policy is `RESTRICTED`.
+     * 
+     */
     @InputImport(name="allowedValues")
     private final @Nullable Input<List<String>> allowedValues;
 
@@ -23,6 +31,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFe
         return this.allowedValues == null ? Input.empty() : this.allowedValues;
     }
 
+    /**
+     * The policy of the feature.
+     * 
+     */
     @InputImport(name="policy")
     private final @Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicy> policy;
 

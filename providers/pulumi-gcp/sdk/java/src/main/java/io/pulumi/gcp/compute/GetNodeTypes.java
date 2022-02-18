@@ -13,6 +13,19 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNodeTypes {
+/**
+ * Provides available node types for Compute Engine sole-tenant nodes in a zone
+ * for a given project. For more information, see [the official documentation](https://cloud.google.com/compute/docs/nodes/#types) and [API](https://cloud.google.com/compute/docs/reference/rest/v1/nodeTypes).
+ * 
+ * ## Example Usage
+ * 
+ *
+ * A collection of arguments for invoking getNodeTypes.
+ * 
+ *
+ * A collection of values returned by getNodeTypes.
+ * 
+ */
     public static CompletableFuture<GetNodeTypesResult> invokeAsync(@Nullable GetNodeTypesArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getNodeTypes:getNodeTypes", TypeShape.of(GetNodeTypesResult.class), args == null ? GetNodeTypesArgs.Empty : args, Utilities.withVersion(options));
     }

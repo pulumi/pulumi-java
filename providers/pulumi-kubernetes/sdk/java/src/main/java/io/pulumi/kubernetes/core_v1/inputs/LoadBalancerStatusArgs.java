@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * LoadBalancerStatus represents the status of a load-balancer.
+ * 
+ */
 public final class LoadBalancerStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LoadBalancerStatusArgs Empty = new LoadBalancerStatusArgs();
 
+    /**
+     * Ingress is a list containing ingress points for the load-balancer. Traffic intended for the service should be sent to these ingress points.
+     * 
+     */
     @InputImport(name="ingress")
     private final @Nullable Input<List<LoadBalancerIngressArgs>> ingress;
 

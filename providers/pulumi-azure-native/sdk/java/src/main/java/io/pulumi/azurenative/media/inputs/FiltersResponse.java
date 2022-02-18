@@ -16,10 +16,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes all the filtering operations, such as de-interlacing, rotation etc. that are to be applied to the input media before encoding.
+ * 
+ */
 public final class FiltersResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FiltersResponse Empty = new FiltersResponse();
 
+    /**
+     * The parameters for the rectangular window with which to crop the input video.
+     * 
+     */
     @InputImport(name="crop")
     private final @Nullable RectangleResponse crop;
 
@@ -27,6 +35,10 @@ public final class FiltersResponse extends io.pulumi.resources.InvokeArgs {
         return this.crop == null ? Optional.empty() : Optional.ofNullable(this.crop);
     }
 
+    /**
+     * The de-interlacing settings.
+     * 
+     */
     @InputImport(name="deinterlace")
     private final @Nullable DeinterlaceResponse deinterlace;
 
@@ -34,6 +46,10 @@ public final class FiltersResponse extends io.pulumi.resources.InvokeArgs {
         return this.deinterlace == null ? Optional.empty() : Optional.ofNullable(this.deinterlace);
     }
 
+    /**
+     * The properties of overlays to be applied to the input video. These could be audio, image or video overlays.
+     * 
+     */
     @InputImport(name="overlays")
     private final @Nullable List<Either<AudioOverlayResponse,VideoOverlayResponse>> overlays;
 
@@ -41,6 +57,10 @@ public final class FiltersResponse extends io.pulumi.resources.InvokeArgs {
         return this.overlays == null ? List.of() : this.overlays;
     }
 
+    /**
+     * The rotation, if any, to be applied to the input video, before it is encoded. Default is Auto
+     * 
+     */
     @InputImport(name="rotation")
     private final @Nullable String rotation;
 

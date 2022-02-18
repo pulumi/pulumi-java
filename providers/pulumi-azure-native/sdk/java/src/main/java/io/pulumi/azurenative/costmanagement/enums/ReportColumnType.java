@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Has type of the column to group.
+     * 
+     */
     @EnumType
     public enum ReportColumnType {
         Tag("Tag"),

@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBlobServiceProperties {
+/**
+ * The properties of a storage account’s Blob service.
+ * API Version: 2021-02-01.
+ * 
+ *
+ * The properties of a storage account’s Blob service.
+ * 
+ */
     public static CompletableFuture<GetBlobServicePropertiesResult> invokeAsync(GetBlobServicePropertiesArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:getBlobServiceProperties", TypeShape.of(GetBlobServicePropertiesResult.class), args == null ? GetBlobServicePropertiesArgs.Empty : args, Utilities.withVersion(options));
     }

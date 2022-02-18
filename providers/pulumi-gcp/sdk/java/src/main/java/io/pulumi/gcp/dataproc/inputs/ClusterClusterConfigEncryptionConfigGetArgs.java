@@ -13,6 +13,11 @@ public final class ClusterClusterConfigEncryptionConfigGetArgs extends io.pulumi
 
     public static final ClusterClusterConfigEncryptionConfigGetArgs Empty = new ClusterClusterConfigEncryptionConfigGetArgs();
 
+    /**
+     * The Cloud KMS key name to use for PD disk encryption for
+     * all instances in the cluster.
+     * 
+     */
     @InputImport(name="kmsKeyName", required=true)
     private final Input<String> kmsKeyName;
 

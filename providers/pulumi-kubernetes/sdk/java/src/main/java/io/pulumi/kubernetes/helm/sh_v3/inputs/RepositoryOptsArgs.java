@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specification defining the Helm chart repository to use.
+ * 
+ */
 public final class RepositoryOptsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RepositoryOptsArgs Empty = new RepositoryOptsArgs();
 
+    /**
+     * The Repository's CA File
+     * 
+     */
     @InputImport(name="caFile")
     private final @Nullable Input<String> caFile;
 
@@ -21,6 +29,10 @@ public final class RepositoryOptsArgs extends io.pulumi.resources.ResourceArgs {
         return this.caFile == null ? Input.empty() : this.caFile;
     }
 
+    /**
+     * The repository's cert file
+     * 
+     */
     @InputImport(name="certFile")
     private final @Nullable Input<String> certFile;
 
@@ -28,6 +40,10 @@ public final class RepositoryOptsArgs extends io.pulumi.resources.ResourceArgs {
         return this.certFile == null ? Input.empty() : this.certFile;
     }
 
+    /**
+     * The repository's cert key file
+     * 
+     */
     @InputImport(name="keyFile")
     private final @Nullable Input<String> keyFile;
 
@@ -35,6 +51,10 @@ public final class RepositoryOptsArgs extends io.pulumi.resources.ResourceArgs {
         return this.keyFile == null ? Input.empty() : this.keyFile;
     }
 
+    /**
+     * Password for HTTP basic authentication
+     * 
+     */
     @InputImport(name="password")
     private final @Nullable Input<String> password;
 
@@ -42,6 +62,10 @@ public final class RepositoryOptsArgs extends io.pulumi.resources.ResourceArgs {
         return this.password == null ? Input.empty() : this.password;
     }
 
+    /**
+     * Repository where to locate the requested chart. If is a URL the chart is installed without installing the repository.
+     * 
+     */
     @InputImport(name="repo")
     private final @Nullable Input<String> repo;
 
@@ -49,6 +73,10 @@ public final class RepositoryOptsArgs extends io.pulumi.resources.ResourceArgs {
         return this.repo == null ? Input.empty() : this.repo;
     }
 
+    /**
+     * Username for HTTP basic authentication
+     * 
+     */
     @InputImport(name="username")
     private final @Nullable Input<String> username;
 

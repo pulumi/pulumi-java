@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBuild {
+/**
+ * Returns information about a previously requested build. The `Build` that is returned includes its status (such as `SUCCESS`, `FAILURE`, or `WORKING`), and timing information.
+ * 
+ */
     public static CompletableFuture<GetBuildResult> invokeAsync(GetBuildArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudbuild/v1:getBuild", TypeShape.of(GetBuildResult.class), args == null ? GetBuildArgs.Empty : args, Utilities.withVersion(options));
     }

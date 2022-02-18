@@ -14,6 +14,10 @@ public final class JobStatusErrorResultGetArgs extends io.pulumi.resources.Resou
 
     public static final JobStatusErrorResultGetArgs Empty = new JobStatusErrorResultGetArgs();
 
+    /**
+     * The geographic location of the job. The default value is US.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 

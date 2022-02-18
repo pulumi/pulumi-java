@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApplication {
+/**
+ * Schema for Application properties.
+ * API Version: 2021-02-01-preview.
+ * 
+ *
+ * Schema for Application properties.
+ * 
+ */
     public static CompletableFuture<GetApplicationResult> invokeAsync(GetApplicationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:desktopvirtualization:getApplication", TypeShape.of(GetApplicationResult.class), args == null ? GetApplicationArgs.Empty : args, Utilities.withVersion(options));
     }

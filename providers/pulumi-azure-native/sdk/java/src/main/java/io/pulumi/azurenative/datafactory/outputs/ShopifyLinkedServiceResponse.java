@@ -19,16 +19,61 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ShopifyLinkedServiceResponse {
+    /**
+     * The API access token that can be used to access Shopify’s data. The token won't expire if it is offline mode.
+     * 
+     */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken;
+    /**
+     * List of tags that can be used for describing the linked service.
+     * 
+     */
     private final @Nullable List<Object> annotations;
+    /**
+     * The integration runtime reference.
+     * 
+     */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+    /**
+     * Linked service description.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     private final @Nullable Object encryptedCredential;
+    /**
+     * The endpoint of the Shopify server. (i.e. mystore.myshopify.com)
+     * 
+     */
     private final Object host;
+    /**
+     * Parameters for linked service.
+     * 
+     */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+    /**
+     * Type of linked service.
+     * Expected value is 'Shopify'.
+     * 
+     */
     private final String type;
+    /**
+     * Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
+     * 
+     */
     private final @Nullable Object useEncryptedEndpoints;
+    /**
+     * Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
+     * 
+     */
     private final @Nullable Object useHostVerification;
+    /**
+     * Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
+     * 
+     */
     private final @Nullable Object usePeerVerification;
 
     @OutputCustomType.Constructor({"accessToken","annotations","connectVia","description","encryptedCredential","host","parameters","type","useEncryptedEndpoints","useHostVerification","usePeerVerification"})
@@ -57,36 +102,81 @@ public final class ShopifyLinkedServiceResponse {
         this.usePeerVerification = usePeerVerification;
     }
 
+    /**
+     * The API access token that can be used to access Shopify’s data. The token won't expire if it is offline mode.
+     * 
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getAccessToken() {
         return Optional.ofNullable(this.accessToken);
     }
+    /**
+     * List of tags that can be used for describing the linked service.
+     * 
+     */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
+    /**
+     * The integration runtime reference.
+     * 
+     */
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return Optional.ofNullable(this.connectVia);
     }
+    /**
+     * Linked service description.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> getEncryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
+    /**
+     * The endpoint of the Shopify server. (i.e. mystore.myshopify.com)
+     * 
+     */
     public Object getHost() {
         return this.host;
     }
+    /**
+     * Parameters for linked service.
+     * 
+     */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
+    /**
+     * Type of linked service.
+     * Expected value is 'Shopify'.
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
+     * 
+     */
     public Optional<Object> getUseEncryptedEndpoints() {
         return Optional.ofNullable(this.useEncryptedEndpoints);
     }
+    /**
+     * Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
+     * 
+     */
     public Optional<Object> getUseHostVerification() {
         return Optional.ofNullable(this.useHostVerification);
     }
+    /**
+     * Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
+     * 
+     */
     public Optional<Object> getUsePeerVerification() {
         return Optional.ofNullable(this.usePeerVerification);
     }

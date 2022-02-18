@@ -10,7 +10,15 @@ import java.util.StringJoiner;
 
     @EnumType
     public enum DataAccessOptionsLogMode {
+        /**
+         * Client is not required to write a partial Gin log immediately after the authorization check. If client chooses to write one and it fails, client may either fail open (allow the operation to continue) or fail closed (handle as a DENY outcome).
+         * 
+         */
         LogModeUnspecified("LOG_MODE_UNSPECIFIED"),
+        /**
+         * The application's operation in the context of which this authorization check is being made may only be performed if it is successfully logged to Gin. For instance, the authorization library may satisfy this obligation by emitting a partial log entry at authorization check time and only returning ALLOW to the application if it succeeds. If a matching Rule has this directive, but the client has not indicated that it will honor such requirements, then the IAM check will result in authorization failure by setting CheckPolicyResponse.success=false.
+         * 
+         */
         LogFailClosed("LOG_FAIL_CLOSED");
 
         private final String value;

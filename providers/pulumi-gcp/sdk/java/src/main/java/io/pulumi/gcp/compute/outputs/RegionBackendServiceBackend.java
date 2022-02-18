@@ -14,17 +14,119 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RegionBackendServiceBackend {
+    /**
+     * Specifies the balancing mode for this backend.
+     * Default value is `CONNECTION`.
+     * Possible values are `UTILIZATION`, `RATE`, and `CONNECTION`.
+     * 
+     */
     private final @Nullable String balancingMode;
+    /**
+     * A multiplier applied to the group's maximum servicing capacity
+     * (based on UTILIZATION, RATE or CONNECTION).
+     * ~>**NOTE**: This field cannot be set for
+     * INTERNAL region backend services (default loadBalancingScheme),
+     * but is required for non-INTERNAL backend service. The total
+     * capacity_scaler for all backends must be non-zero.
+     * A setting of 0 means the group is completely drained, offering
+     * 0% of its available Capacity. Valid range is [0.0,1.0].
+     * 
+     */
     private final @Nullable Double capacityScaler;
+    /**
+     * An optional description of this resource.
+     * Provide this property when you create the resource.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * This field designates whether this is a failover backend. More
+     * than one failover backend can be configured for a given RegionBackendService.
+     * 
+     */
     private final @Nullable Boolean failover;
+    /**
+     * The fully-qualified URL of an Instance Group or Network Endpoint
+     * Group resource. In case of instance group this defines the list
+     * of instances that serve traffic. Member virtual machine
+     * instances from each instance group must live in the same zone as
+     * the instance group itself. No two backends in a backend service
+     * are allowed to use same Instance Group resource.
+     * For Network Endpoint Groups this defines list of endpoints. All
+     * endpoints of Network Endpoint Group must be hosted on instances
+     * located in the same zone as the Network Endpoint Group.
+     * Backend services cannot mix Instance Group and
+     * Network Endpoint Group backends.
+     * When the `load_balancing_scheme` is INTERNAL, only instance groups
+     * are supported.
+     * Note that you must specify an Instance Group or Network Endpoint
+     * Group resource using the fully-qualified URL, rather than a
+     * partial URL.
+     * 
+     */
     private final String group;
+    /**
+     * The maximum number of connections to the backend cluster.
+     * Defaults to 1024.
+     * 
+     */
     private final @Nullable Integer maxConnections;
+    /**
+     * The max number of simultaneous connections that a single backend
+     * network endpoint can handle. Cannot be set
+     * for INTERNAL backend services.
+     * This is used to calculate the capacity of the group. Can be
+     * used in either CONNECTION or UTILIZATION balancing modes. For
+     * CONNECTION mode, either maxConnections or
+     * maxConnectionsPerEndpoint must be set.
+     * 
+     */
     private final @Nullable Integer maxConnectionsPerEndpoint;
+    /**
+     * The max number of simultaneous connections that a single
+     * backend instance can handle. Cannot be set for INTERNAL backend
+     * services.
+     * This is used to calculate the capacity of the group.
+     * Can be used in either CONNECTION or UTILIZATION balancing modes.
+     * For CONNECTION mode, either maxConnections or
+     * maxConnectionsPerInstance must be set.
+     * 
+     */
     private final @Nullable Integer maxConnectionsPerInstance;
+    /**
+     * The max requests per second (RPS) of the group. Cannot be set
+     * for INTERNAL backend services.
+     * Can be used with either RATE or UTILIZATION balancing modes,
+     * but required if RATE mode. Either maxRate or one
+     * of maxRatePerInstance or maxRatePerEndpoint, as appropriate for
+     * group type, must be set.
+     * 
+     */
     private final @Nullable Integer maxRate;
+    /**
+     * The max requests per second (RPS) that a single backend network
+     * endpoint can handle. This is used to calculate the capacity of
+     * the group. Can be used in either balancing mode. For RATE mode,
+     * either maxRate or maxRatePerEndpoint must be set. Cannot be set
+     * for INTERNAL backend services.
+     * 
+     */
     private final @Nullable Double maxRatePerEndpoint;
+    /**
+     * The max requests per second (RPS) that a single backend
+     * instance can handle. This is used to calculate the capacity of
+     * the group. Can be used in either balancing mode. For RATE mode,
+     * either maxRate or maxRatePerInstance must be set. Cannot be set
+     * for INTERNAL backend services.
+     * 
+     */
     private final @Nullable Double maxRatePerInstance;
+    /**
+     * Used when balancingMode is UTILIZATION. This ratio defines the
+     * CPU utilization target for the group. Valid range is [0.0, 1.0].
+     * Cannot be set for INTERNAL backend services.
+     * 
+     */
     private final @Nullable Double maxUtilization;
 
     @OutputCustomType.Constructor({"balancingMode","capacityScaler","description","failover","group","maxConnections","maxConnectionsPerEndpoint","maxConnectionsPerInstance","maxRate","maxRatePerEndpoint","maxRatePerInstance","maxUtilization"})
@@ -55,39 +157,141 @@ public final class RegionBackendServiceBackend {
         this.maxUtilization = maxUtilization;
     }
 
+    /**
+     * Specifies the balancing mode for this backend.
+     * Default value is `CONNECTION`.
+     * Possible values are `UTILIZATION`, `RATE`, and `CONNECTION`.
+     * 
+     */
     public Optional<String> getBalancingMode() {
         return Optional.ofNullable(this.balancingMode);
     }
+    /**
+     * A multiplier applied to the group's maximum servicing capacity
+     * (based on UTILIZATION, RATE or CONNECTION).
+     * ~>**NOTE**: This field cannot be set for
+     * INTERNAL region backend services (default loadBalancingScheme),
+     * but is required for non-INTERNAL backend service. The total
+     * capacity_scaler for all backends must be non-zero.
+     * A setting of 0 means the group is completely drained, offering
+     * 0% of its available Capacity. Valid range is [0.0,1.0].
+     * 
+     */
     public Optional<Double> getCapacityScaler() {
         return Optional.ofNullable(this.capacityScaler);
     }
+    /**
+     * An optional description of this resource.
+     * Provide this property when you create the resource.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * This field designates whether this is a failover backend. More
+     * than one failover backend can be configured for a given RegionBackendService.
+     * 
+     */
     public Optional<Boolean> getFailover() {
         return Optional.ofNullable(this.failover);
     }
+    /**
+     * The fully-qualified URL of an Instance Group or Network Endpoint
+     * Group resource. In case of instance group this defines the list
+     * of instances that serve traffic. Member virtual machine
+     * instances from each instance group must live in the same zone as
+     * the instance group itself. No two backends in a backend service
+     * are allowed to use same Instance Group resource.
+     * For Network Endpoint Groups this defines list of endpoints. All
+     * endpoints of Network Endpoint Group must be hosted on instances
+     * located in the same zone as the Network Endpoint Group.
+     * Backend services cannot mix Instance Group and
+     * Network Endpoint Group backends.
+     * When the `load_balancing_scheme` is INTERNAL, only instance groups
+     * are supported.
+     * Note that you must specify an Instance Group or Network Endpoint
+     * Group resource using the fully-qualified URL, rather than a
+     * partial URL.
+     * 
+     */
     public String getGroup() {
         return this.group;
     }
+    /**
+     * The maximum number of connections to the backend cluster.
+     * Defaults to 1024.
+     * 
+     */
     public Optional<Integer> getMaxConnections() {
         return Optional.ofNullable(this.maxConnections);
     }
+    /**
+     * The max number of simultaneous connections that a single backend
+     * network endpoint can handle. Cannot be set
+     * for INTERNAL backend services.
+     * This is used to calculate the capacity of the group. Can be
+     * used in either CONNECTION or UTILIZATION balancing modes. For
+     * CONNECTION mode, either maxConnections or
+     * maxConnectionsPerEndpoint must be set.
+     * 
+     */
     public Optional<Integer> getMaxConnectionsPerEndpoint() {
         return Optional.ofNullable(this.maxConnectionsPerEndpoint);
     }
+    /**
+     * The max number of simultaneous connections that a single
+     * backend instance can handle. Cannot be set for INTERNAL backend
+     * services.
+     * This is used to calculate the capacity of the group.
+     * Can be used in either CONNECTION or UTILIZATION balancing modes.
+     * For CONNECTION mode, either maxConnections or
+     * maxConnectionsPerInstance must be set.
+     * 
+     */
     public Optional<Integer> getMaxConnectionsPerInstance() {
         return Optional.ofNullable(this.maxConnectionsPerInstance);
     }
+    /**
+     * The max requests per second (RPS) of the group. Cannot be set
+     * for INTERNAL backend services.
+     * Can be used with either RATE or UTILIZATION balancing modes,
+     * but required if RATE mode. Either maxRate or one
+     * of maxRatePerInstance or maxRatePerEndpoint, as appropriate for
+     * group type, must be set.
+     * 
+     */
     public Optional<Integer> getMaxRate() {
         return Optional.ofNullable(this.maxRate);
     }
+    /**
+     * The max requests per second (RPS) that a single backend network
+     * endpoint can handle. This is used to calculate the capacity of
+     * the group. Can be used in either balancing mode. For RATE mode,
+     * either maxRate or maxRatePerEndpoint must be set. Cannot be set
+     * for INTERNAL backend services.
+     * 
+     */
     public Optional<Double> getMaxRatePerEndpoint() {
         return Optional.ofNullable(this.maxRatePerEndpoint);
     }
+    /**
+     * The max requests per second (RPS) that a single backend
+     * instance can handle. This is used to calculate the capacity of
+     * the group. Can be used in either balancing mode. For RATE mode,
+     * either maxRate or maxRatePerInstance must be set. Cannot be set
+     * for INTERNAL backend services.
+     * 
+     */
     public Optional<Double> getMaxRatePerInstance() {
         return Optional.ofNullable(this.maxRatePerInstance);
     }
+    /**
+     * Used when balancingMode is UTILIZATION. This ratio defines the
+     * CPU utilization target for the group. Valid range is [0.0, 1.0].
+     * Cannot be set for INTERNAL backend services.
+     * 
+     */
     public Optional<Double> getMaxUtilization() {
         return Optional.ofNullable(this.maxUtilization);
     }

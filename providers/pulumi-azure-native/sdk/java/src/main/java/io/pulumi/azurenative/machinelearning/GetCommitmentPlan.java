@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCommitmentPlan {
+/**
+ * An Azure ML commitment plan resource.
+ * API Version: 2016-05-01-preview.
+ * 
+ *
+ * An Azure ML commitment plan resource.
+ * 
+ */
     public static CompletableFuture<GetCommitmentPlanResult> invokeAsync(GetCommitmentPlanArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:machinelearning:getCommitmentPlan", TypeShape.of(GetCommitmentPlanResult.class), args == null ? GetCommitmentPlanArgs.Empty : args, Utilities.withVersion(options));
     }

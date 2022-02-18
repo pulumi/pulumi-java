@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Open authentication policy claim.
+ * 
+ */
 public final class OpenAuthenticationPolicyClaimArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OpenAuthenticationPolicyClaimArgs Empty = new OpenAuthenticationPolicyClaimArgs();
 
+    /**
+     * The name of the claim.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -21,6 +29,10 @@ public final class OpenAuthenticationPolicyClaimArgs extends io.pulumi.resources
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The value of the claim.
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

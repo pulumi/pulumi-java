@@ -14,6 +14,10 @@ public final class ProgressPropertiesResponse extends io.pulumi.resources.Invoke
 
     public static final ProgressPropertiesResponse Empty = new ProgressPropertiesResponse();
 
+    /**
+     * The percentage complete of the copy operation.
+     * 
+     */
     @InputImport(name="percentage")
     private final @Nullable String percentage;
 

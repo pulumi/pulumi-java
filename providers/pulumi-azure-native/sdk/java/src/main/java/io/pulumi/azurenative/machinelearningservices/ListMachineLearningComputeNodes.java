@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListMachineLearningComputeNodes {
+/**
+ * Compute node information related to a AmlCompute.
+ * API Version: 2021-01-01.
+ * 
+ *
+ * Compute node information related to a AmlCompute.
+ * 
+ */
     public static CompletableFuture<ListMachineLearningComputeNodesResult> invokeAsync(ListMachineLearningComputeNodesArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:listMachineLearningComputeNodes", TypeShape.of(ListMachineLearningComputeNodesResult.class), args == null ? ListMachineLearningComputeNodesArgs.Empty : args, Utilities.withVersion(options));
     }

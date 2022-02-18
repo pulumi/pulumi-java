@@ -15,15 +15,55 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetFirewallDomainListResult {
+    /**
+     * Arn
+     * 
+     */
     private final @Nullable String arn;
+    /**
+     * Rfc3339TimeString
+     * 
+     */
     private final @Nullable String creationTime;
+    /**
+     * The id of the creator request.
+     * 
+     */
     private final @Nullable String creatorRequestId;
+    /**
+     * Count
+     * 
+     */
     private final @Nullable Integer domainCount;
+    /**
+     * ResourceId
+     * 
+     */
     private final @Nullable String id;
+    /**
+     * ServicePrincipal
+     * 
+     */
     private final @Nullable String managedOwnerName;
+    /**
+     * Rfc3339TimeString
+     * 
+     */
     private final @Nullable String modificationTime;
+    /**
+     * ResolverFirewallDomainList, possible values are COMPLETE, DELETING, UPDATING, COMPLETE_IMPORT_FAILED, IMPORTING, and INACTIVE_OWNER_ACCOUNT_CLOSED.
+     * 
+     */
     private final @Nullable FirewallDomainListStatus status;
+    /**
+     * FirewallDomainListAssociationStatus
+     * 
+     */
     private final @Nullable String statusMessage;
+    /**
+     * Tags
+     * 
+     */
     private final @Nullable List<FirewallDomainListTag> tags;
 
     @OutputCustomType.Constructor({"arn","creationTime","creatorRequestId","domainCount","id","managedOwnerName","modificationTime","status","statusMessage","tags"})
@@ -50,33 +90,73 @@ public final class GetFirewallDomainListResult {
         this.tags = tags;
     }
 
+    /**
+     * Arn
+     * 
+     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
+    /**
+     * Rfc3339TimeString
+     * 
+     */
     public Optional<String> getCreationTime() {
         return Optional.ofNullable(this.creationTime);
     }
+    /**
+     * The id of the creator request.
+     * 
+     */
     public Optional<String> getCreatorRequestId() {
         return Optional.ofNullable(this.creatorRequestId);
     }
+    /**
+     * Count
+     * 
+     */
     public Optional<Integer> getDomainCount() {
         return Optional.ofNullable(this.domainCount);
     }
+    /**
+     * ResourceId
+     * 
+     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+    /**
+     * ServicePrincipal
+     * 
+     */
     public Optional<String> getManagedOwnerName() {
         return Optional.ofNullable(this.managedOwnerName);
     }
+    /**
+     * Rfc3339TimeString
+     * 
+     */
     public Optional<String> getModificationTime() {
         return Optional.ofNullable(this.modificationTime);
     }
+    /**
+     * ResolverFirewallDomainList, possible values are COMPLETE, DELETING, UPDATING, COMPLETE_IMPORT_FAILED, IMPORTING, and INACTIVE_OWNER_ACCOUNT_CLOSED.
+     * 
+     */
     public Optional<FirewallDomainListStatus> getStatus() {
         return Optional.ofNullable(this.status);
     }
+    /**
+     * FirewallDomainListAssociationStatus
+     * 
+     */
     public Optional<String> getStatusMessage() {
         return Optional.ofNullable(this.statusMessage);
     }
+    /**
+     * Tags
+     * 
+     */
     public List<FirewallDomainListTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

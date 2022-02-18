@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ProvisioningErrorResponse {
+    /**
+     * Verbose error message about the provisioning failure
+     * 
+     */
     private final @Nullable String message;
+    /**
+     * Error code of the provisioning failure
+     * 
+     */
     private final @Nullable String provisioningErrorCode;
 
     @OutputCustomType.Constructor({"message","provisioningErrorCode"})
@@ -22,9 +30,17 @@ public final class ProvisioningErrorResponse {
         this.provisioningErrorCode = provisioningErrorCode;
     }
 
+    /**
+     * Verbose error message about the provisioning failure
+     * 
+     */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
+    /**
+     * Error code of the provisioning failure
+     * 
+     */
     public Optional<String> getProvisioningErrorCode() {
         return Optional.ofNullable(this.provisioningErrorCode);
     }

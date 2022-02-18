@@ -18,6 +18,10 @@ import javax.annotation.Nullable;
 public final class GetSecretResult {
     private final String createTime;
     private final String expireTime;
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
     private final Map<String,String> labels;
     private final String name;
@@ -60,6 +64,10 @@ public final class GetSecretResult {
     public String getExpireTime() {
         return this.expireTime;
     }
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }

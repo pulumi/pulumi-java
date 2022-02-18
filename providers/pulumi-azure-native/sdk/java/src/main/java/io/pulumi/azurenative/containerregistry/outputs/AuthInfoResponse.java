@@ -12,10 +12,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AuthInfoResponse {
+    /**
+     * Time in seconds that the token remains valid
+     * 
+     */
     private final @Nullable Integer expiresIn;
+    /**
+     * The refresh token used to refresh the access token.
+     * 
+     */
     private final @Nullable String refreshToken;
+    /**
+     * The scope of the access token.
+     * 
+     */
     private final @Nullable String scope;
+    /**
+     * The access token used to access the source control provider.
+     * 
+     */
     private final String token;
+    /**
+     * The type of Auth token.
+     * 
+     */
     private final String tokenType;
 
     @OutputCustomType.Constructor({"expiresIn","refreshToken","scope","token","tokenType"})
@@ -32,18 +52,38 @@ public final class AuthInfoResponse {
         this.tokenType = Objects.requireNonNull(tokenType);
     }
 
+    /**
+     * Time in seconds that the token remains valid
+     * 
+     */
     public Optional<Integer> getExpiresIn() {
         return Optional.ofNullable(this.expiresIn);
     }
+    /**
+     * The refresh token used to refresh the access token.
+     * 
+     */
     public Optional<String> getRefreshToken() {
         return Optional.ofNullable(this.refreshToken);
     }
+    /**
+     * The scope of the access token.
+     * 
+     */
     public Optional<String> getScope() {
         return Optional.ofNullable(this.scope);
     }
+    /**
+     * The access token used to access the source control provider.
+     * 
+     */
     public String getToken() {
         return this.token;
     }
+    /**
+     * The type of Auth token.
+     * 
+     */
     public String getTokenType() {
         return this.tokenType;
     }

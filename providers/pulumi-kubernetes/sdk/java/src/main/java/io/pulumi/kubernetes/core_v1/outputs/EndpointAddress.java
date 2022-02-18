@@ -12,9 +12,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EndpointAddress {
+    /**
+     * The Hostname of this endpoint
+     * 
+     */
     private final @Nullable String hostname;
+    /**
+     * The IP of this endpoint. May not be loopback (127.0.0.0/8), link-local (169.254.0.0/16), or link-local multicast ((224.0.0.0/24). IPv6 is also accepted but not fully supported on all platforms. Also, certain kubernetes components, like kube-proxy, are not IPv6 ready.
+     * 
+     */
     private final String ip;
+    /**
+     * Optional: Node hosting this endpoint. This can be used to determine endpoints local to a node.
+     * 
+     */
     private final @Nullable String nodeName;
+    /**
+     * Reference to object providing the endpoint.
+     * 
+     */
     private final @Nullable ObjectReference targetRef;
 
     @OutputCustomType.Constructor({"hostname","ip","nodeName","targetRef"})
@@ -29,15 +45,31 @@ public final class EndpointAddress {
         this.targetRef = targetRef;
     }
 
+    /**
+     * The Hostname of this endpoint
+     * 
+     */
     public Optional<String> getHostname() {
         return Optional.ofNullable(this.hostname);
     }
+    /**
+     * The IP of this endpoint. May not be loopback (127.0.0.0/8), link-local (169.254.0.0/16), or link-local multicast ((224.0.0.0/24). IPv6 is also accepted but not fully supported on all platforms. Also, certain kubernetes components, like kube-proxy, are not IPv6 ready.
+     * 
+     */
     public String getIp() {
         return this.ip;
     }
+    /**
+     * Optional: Node hosting this endpoint. This can be used to determine endpoints local to a node.
+     * 
+     */
     public Optional<String> getNodeName() {
         return Optional.ofNullable(this.nodeName);
     }
+    /**
+     * Reference to object providing the endpoint.
+     * 
+     */
     public Optional<ObjectReference> getTargetRef() {
         return Optional.ofNullable(this.targetRef);
     }

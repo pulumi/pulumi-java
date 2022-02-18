@@ -12,12 +12,40 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CustomHttpsConfigurationResponse {
+    /**
+     * Defines the source of the SSL certificate
+     * 
+     */
     private final String certificateSource;
+    /**
+     * Defines the type of the certificate used for secure connections to a frontendEndpoint
+     * 
+     */
     private final @Nullable String certificateType;
+    /**
+     * The minimum TLS version required from the clients to establish an SSL handshake with Front Door.
+     * 
+     */
     private final String minimumTlsVersion;
+    /**
+     * Defines the TLS extension protocol that is used for secure delivery
+     * 
+     */
     private final String protocolType;
+    /**
+     * The name of the Key Vault secret representing the full certificate PFX
+     * 
+     */
     private final @Nullable String secretName;
+    /**
+     * The version of the Key Vault secret representing the full certificate PFX
+     * 
+     */
     private final @Nullable String secretVersion;
+    /**
+     * The Key Vault containing the SSL certificate
+     * 
+     */
     private final @Nullable KeyVaultCertificateSourceParametersResponseVault vault;
 
     @OutputCustomType.Constructor({"certificateSource","certificateType","minimumTlsVersion","protocolType","secretName","secretVersion","vault"})
@@ -38,24 +66,52 @@ public final class CustomHttpsConfigurationResponse {
         this.vault = vault;
     }
 
+    /**
+     * Defines the source of the SSL certificate
+     * 
+     */
     public String getCertificateSource() {
         return this.certificateSource;
     }
+    /**
+     * Defines the type of the certificate used for secure connections to a frontendEndpoint
+     * 
+     */
     public Optional<String> getCertificateType() {
         return Optional.ofNullable(this.certificateType);
     }
+    /**
+     * The minimum TLS version required from the clients to establish an SSL handshake with Front Door.
+     * 
+     */
     public String getMinimumTlsVersion() {
         return this.minimumTlsVersion;
     }
+    /**
+     * Defines the TLS extension protocol that is used for secure delivery
+     * 
+     */
     public String getProtocolType() {
         return this.protocolType;
     }
+    /**
+     * The name of the Key Vault secret representing the full certificate PFX
+     * 
+     */
     public Optional<String> getSecretName() {
         return Optional.ofNullable(this.secretName);
     }
+    /**
+     * The version of the Key Vault secret representing the full certificate PFX
+     * 
+     */
     public Optional<String> getSecretVersion() {
         return Optional.ofNullable(this.secretVersion);
     }
+    /**
+     * The Key Vault containing the SSL certificate
+     * 
+     */
     public Optional<KeyVaultCertificateSourceParametersResponseVault> getVault() {
         return Optional.ofNullable(this.vault);
     }

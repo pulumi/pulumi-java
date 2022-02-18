@@ -14,6 +14,10 @@ public final class InstanceGroupManagerAutoHealingPoliciesArgs extends io.pulumi
 
     public static final InstanceGroupManagerAutoHealingPoliciesArgs Empty = new InstanceGroupManagerAutoHealingPoliciesArgs();
 
+    /**
+     * The health check resource that signals autohealing.
+     * 
+     */
     @InputImport(name="healthCheck", required=true)
     private final Input<String> healthCheck;
 
@@ -21,6 +25,11 @@ public final class InstanceGroupManagerAutoHealingPoliciesArgs extends io.pulumi
         return this.healthCheck;
     }
 
+    /**
+     * The number of seconds that the managed instance group waits before
+     * it applies autohealing policies to new instances or recently recreated instances. Between 0 and 3600.
+     * 
+     */
     @InputImport(name="initialDelaySec", required=true)
     private final Input<Integer> initialDelaySec;
 

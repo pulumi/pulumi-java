@@ -17,6 +17,10 @@ public final class AnomalyDetectorArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final AnomalyDetectorArgs Empty = new AnomalyDetectorArgs();
 
+    /**
+     * Configuration options for the AnomalyDetector
+     * 
+     */
     @InputImport(name="anomalyDetectorConfig", required=true)
     private final Input<AnomalyDetectorConfigArgs> anomalyDetectorConfig;
 
@@ -24,6 +28,10 @@ public final class AnomalyDetectorArgs extends io.pulumi.resources.ResourceArgs 
         return this.anomalyDetectorConfig;
     }
 
+    /**
+     * A description for the AnomalyDetector.
+     * 
+     */
     @InputImport(name="anomalyDetectorDescription")
     private final @Nullable Input<String> anomalyDetectorDescription;
 
@@ -31,6 +39,10 @@ public final class AnomalyDetectorArgs extends io.pulumi.resources.ResourceArgs 
         return this.anomalyDetectorDescription == null ? Input.empty() : this.anomalyDetectorDescription;
     }
 
+    /**
+     * Name for the Amazon Lookout for Metrics Anomaly Detector
+     * 
+     */
     @InputImport(name="anomalyDetectorName")
     private final @Nullable Input<String> anomalyDetectorName;
 
@@ -38,6 +50,10 @@ public final class AnomalyDetectorArgs extends io.pulumi.resources.ResourceArgs 
         return this.anomalyDetectorName == null ? Input.empty() : this.anomalyDetectorName;
     }
 
+    /**
+     * KMS key used to encrypt the AnomalyDetector data
+     * 
+     */
     @InputImport(name="kmsKeyArn")
     private final @Nullable Input<String> kmsKeyArn;
 
@@ -45,6 +61,10 @@ public final class AnomalyDetectorArgs extends io.pulumi.resources.ResourceArgs 
         return this.kmsKeyArn == null ? Input.empty() : this.kmsKeyArn;
     }
 
+    /**
+     * List of metric sets for anomaly detection
+     * 
+     */
     @InputImport(name="metricSetList", required=true)
     private final Input<List<AnomalyDetectorMetricSetArgs>> metricSetList;
 

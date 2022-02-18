@@ -16,6 +16,10 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NamespaceArgs Empty = new NamespaceArgs();
 
+    /**
+     * The Geo-location where the resource lives
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -23,6 +27,10 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The namespace name.
+     * 
+     */
     @InputImport(name="namespaceName")
     private final @Nullable Input<String> namespaceName;
 
@@ -30,6 +38,10 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.namespaceName == null ? Input.empty() : this.namespaceName;
     }
 
+    /**
+     * Name of the Resource group within the Azure subscription.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -37,6 +49,10 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Properties of Sku
+     * 
+     */
     @InputImport(name="sku")
     private final @Nullable Input<SBSkuArgs> sku;
 
@@ -44,6 +60,10 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku == null ? Input.empty() : this.sku;
     }
 
+    /**
+     * Resource tags
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

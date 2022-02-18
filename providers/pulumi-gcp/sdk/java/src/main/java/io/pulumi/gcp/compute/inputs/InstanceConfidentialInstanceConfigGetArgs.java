@@ -13,6 +13,10 @@ public final class InstanceConfidentialInstanceConfigGetArgs extends io.pulumi.r
 
     public static final InstanceConfidentialInstanceConfigGetArgs Empty = new InstanceConfidentialInstanceConfigGetArgs();
 
+    /**
+     * Defines whether the instance should have confidential compute enabled. `on_host_maintenance` has to be set to TERMINATE or this will fail to create the VM.
+     * 
+     */
     @InputImport(name="enableConfidentialCompute", required=true)
     private final Input<Boolean> enableConfidentialCompute;
 

@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Live event preview settings.
+ * 
+ */
 public final class LiveEventPreviewArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LiveEventPreviewArgs Empty = new LiveEventPreviewArgs();
 
+    /**
+     * The access control for live event preview.
+     * 
+     */
     @InputImport(name="accessControl")
     private final @Nullable Input<LiveEventPreviewAccessControlArgs> accessControl;
 
@@ -24,6 +32,10 @@ public final class LiveEventPreviewArgs extends io.pulumi.resources.ResourceArgs
         return this.accessControl == null ? Input.empty() : this.accessControl;
     }
 
+    /**
+     * An alternative media identifier associated with the streaming locator created for the preview. This value is specified at creation time and cannot be updated. The identifier can be used in the CustomLicenseAcquisitionUrlTemplate or the CustomKeyAcquisitionUrlTemplate of the StreamingPolicy specified in the StreamingPolicyName field.
+     * 
+     */
     @InputImport(name="alternativeMediaId")
     private final @Nullable Input<String> alternativeMediaId;
 
@@ -31,6 +43,10 @@ public final class LiveEventPreviewArgs extends io.pulumi.resources.ResourceArgs
         return this.alternativeMediaId == null ? Input.empty() : this.alternativeMediaId;
     }
 
+    /**
+     * The endpoints for preview. Do not share the preview URL with the live event audience.
+     * 
+     */
     @InputImport(name="endpoints")
     private final @Nullable Input<List<LiveEventEndpointArgs>> endpoints;
 
@@ -38,6 +54,10 @@ public final class LiveEventPreviewArgs extends io.pulumi.resources.ResourceArgs
         return this.endpoints == null ? Input.empty() : this.endpoints;
     }
 
+    /**
+     * The identifier of the preview locator in Guid format. Specifying this at creation time allows the caller to know the preview locator url before the event is created. If omitted, the service will generate a random identifier. This value cannot be updated once the live event is created.
+     * 
+     */
     @InputImport(name="previewLocator")
     private final @Nullable Input<String> previewLocator;
 
@@ -45,6 +65,10 @@ public final class LiveEventPreviewArgs extends io.pulumi.resources.ResourceArgs
         return this.previewLocator == null ? Input.empty() : this.previewLocator;
     }
 
+    /**
+     * The name of streaming policy used for the live event preview. This value is specified at creation time and cannot be updated.
+     * 
+     */
     @InputImport(name="streamingPolicyName")
     private final @Nullable Input<String> streamingPolicyName;
 

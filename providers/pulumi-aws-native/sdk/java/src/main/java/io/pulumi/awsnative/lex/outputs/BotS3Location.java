@@ -11,8 +11,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class BotS3Location {
+    /**
+     * An Amazon S3 bucket in the same AWS Region as your function. The bucket can be in a different AWS account.
+     * 
+     */
     private final String s3Bucket;
+    /**
+     * The Amazon S3 key of the deployment package.
+     * 
+     */
     private final String s3ObjectKey;
+    /**
+     * For versioned objects, the version of the deployment package object to use. If not specified, the current object version will be used.
+     * 
+     */
     private final @Nullable String s3ObjectVersion;
 
     @OutputCustomType.Constructor({"s3Bucket","s3ObjectKey","s3ObjectVersion"})
@@ -25,12 +37,24 @@ public final class BotS3Location {
         this.s3ObjectVersion = s3ObjectVersion;
     }
 
+    /**
+     * An Amazon S3 bucket in the same AWS Region as your function. The bucket can be in a different AWS account.
+     * 
+     */
     public String getS3Bucket() {
         return this.s3Bucket;
     }
+    /**
+     * The Amazon S3 key of the deployment package.
+     * 
+     */
     public String getS3ObjectKey() {
         return this.s3ObjectKey;
     }
+    /**
+     * For versioned objects, the version of the deployment package object to use. If not specified, the current object version will be used.
+     * 
+     */
     public Optional<String> getS3ObjectVersion() {
         return Optional.ofNullable(this.s3ObjectVersion);
     }

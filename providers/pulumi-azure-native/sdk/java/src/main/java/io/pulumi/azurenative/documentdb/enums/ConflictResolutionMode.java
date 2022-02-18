@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Indicates the conflict resolution mode.
+     * 
+     */
     @EnumType
     public enum ConflictResolutionMode {
         LastWriterWins("LastWriterWins"),

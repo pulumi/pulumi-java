@@ -12,6 +12,10 @@ public final class ListContainerAppSecretsArgs extends io.pulumi.resources.Invok
 
     public static final ListContainerAppSecretsArgs Empty = new ListContainerAppSecretsArgs();
 
+    /**
+     * Name of the Container App.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

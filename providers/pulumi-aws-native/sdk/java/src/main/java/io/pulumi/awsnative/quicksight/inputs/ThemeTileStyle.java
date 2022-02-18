@@ -10,6 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * <p>Display options related to tiles on a sheet.</p>
+ * 
+ */
 public final class ThemeTileStyle extends io.pulumi.resources.InvokeArgs {
 
     public static final ThemeTileStyle Empty = new ThemeTileStyle();

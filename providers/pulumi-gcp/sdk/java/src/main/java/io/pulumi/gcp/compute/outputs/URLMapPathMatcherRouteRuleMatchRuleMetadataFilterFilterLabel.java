@@ -9,7 +9,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class URLMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabel {
+    /**
+     * The name of the query parameter to match. The query parameter must exist in the
+     * request, in the absence of which the request match fails.
+     * 
+     */
     private final String name;
+    /**
+     * The value of the label must match the specified value. value can have a maximum
+     * length of 1024 characters.
+     * 
+     */
     private final String value;
 
     @OutputCustomType.Constructor({"name","value"})
@@ -20,9 +30,19 @@ public final class URLMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabel 
         this.value = Objects.requireNonNull(value);
     }
 
+    /**
+     * The name of the query parameter to match. The query parameter must exist in the
+     * request, in the absence of which the request match fails.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The value of the label must match the specified value. value can have a maximum
+     * length of 1024 characters.
+     * 
+     */
     public String getValue() {
         return this.value;
     }

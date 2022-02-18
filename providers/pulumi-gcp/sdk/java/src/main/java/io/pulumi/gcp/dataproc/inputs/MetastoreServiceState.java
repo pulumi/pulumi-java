@@ -18,6 +18,10 @@ public final class MetastoreServiceState extends io.pulumi.resources.ResourceArg
 
     public static final MetastoreServiceState Empty = new MetastoreServiceState();
 
+    /**
+     * A Cloud Storage URI (starting with gs://) that specifies where artifacts related to the metastore service are stored.
+     * 
+     */
     @InputImport(name="artifactGcsUri")
     private final @Nullable Input<String> artifactGcsUri;
 
@@ -25,6 +29,10 @@ public final class MetastoreServiceState extends io.pulumi.resources.ResourceArg
         return this.artifactGcsUri == null ? Input.empty() : this.artifactGcsUri;
     }
 
+    /**
+     * The URI of the endpoint used to access the metastore service.
+     * 
+     */
     @InputImport(name="endpointUri")
     private final @Nullable Input<String> endpointUri;
 
@@ -32,6 +40,11 @@ public final class MetastoreServiceState extends io.pulumi.resources.ResourceArg
         return this.endpointUri == null ? Input.empty() : this.endpointUri;
     }
 
+    /**
+     * Configuration information specific to running Hive metastore software as the metastore service.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="hiveMetastoreConfig")
     private final @Nullable Input<MetastoreServiceHiveMetastoreConfigGetArgs> hiveMetastoreConfig;
 
@@ -39,6 +52,10 @@ public final class MetastoreServiceState extends io.pulumi.resources.ResourceArg
         return this.hiveMetastoreConfig == null ? Input.empty() : this.hiveMetastoreConfig;
     }
 
+    /**
+     * User-defined labels for the metastore service.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -46,6 +63,11 @@ public final class MetastoreServiceState extends io.pulumi.resources.ResourceArg
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The  location where the autoscaling policy should reside.
+     * The default value is `global`.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -53,6 +75,12 @@ public final class MetastoreServiceState extends io.pulumi.resources.ResourceArg
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The one hour maintenance window of the metastore service.
+     * This specifies when the service can be restarted for maintenance purposes in UTC time.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="maintenanceWindow")
     private final @Nullable Input<MetastoreServiceMaintenanceWindowGetArgs> maintenanceWindow;
 
@@ -60,6 +88,10 @@ public final class MetastoreServiceState extends io.pulumi.resources.ResourceArg
         return this.maintenanceWindow == null ? Input.empty() : this.maintenanceWindow;
     }
 
+    /**
+     * The relative resource name of the metastore service.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -67,6 +99,11 @@ public final class MetastoreServiceState extends io.pulumi.resources.ResourceArg
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The relative resource name of the VPC network on which the instance can be accessed. It is specified in the following form:
+     * "projects/{projectNumber}/global/networks/{network_id}".
+     * 
+     */
     @InputImport(name="network")
     private final @Nullable Input<String> network;
 
@@ -74,6 +111,10 @@ public final class MetastoreServiceState extends io.pulumi.resources.ResourceArg
         return this.network == null ? Input.empty() : this.network;
     }
 
+    /**
+     * The TCP port at which the metastore service is reached. Default: 9083.
+     * 
+     */
     @InputImport(name="port")
     private final @Nullable Input<Integer> port;
 
@@ -81,6 +122,11 @@ public final class MetastoreServiceState extends io.pulumi.resources.ResourceArg
         return this.port == null ? Input.empty() : this.port;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -88,6 +134,12 @@ public final class MetastoreServiceState extends io.pulumi.resources.ResourceArg
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The ID of the metastore service. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
+     * and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between
+     * 3 and 63 characters.
+     * 
+     */
     @InputImport(name="serviceId")
     private final @Nullable Input<String> serviceId;
 
@@ -95,6 +147,10 @@ public final class MetastoreServiceState extends io.pulumi.resources.ResourceArg
         return this.serviceId == null ? Input.empty() : this.serviceId;
     }
 
+    /**
+     * The current state of the metastore service.
+     * 
+     */
     @InputImport(name="state")
     private final @Nullable Input<String> state;
 
@@ -102,6 +158,10 @@ public final class MetastoreServiceState extends io.pulumi.resources.ResourceArg
         return this.state == null ? Input.empty() : this.state;
     }
 
+    /**
+     * Additional information about the current state of the metastore service, if available.
+     * 
+     */
     @InputImport(name="stateMessage")
     private final @Nullable Input<String> stateMessage;
 
@@ -109,6 +169,11 @@ public final class MetastoreServiceState extends io.pulumi.resources.ResourceArg
         return this.stateMessage == null ? Input.empty() : this.stateMessage;
     }
 
+    /**
+     * The tier of the service.
+     * Possible values are `DEVELOPER` and `ENTERPRISE`.
+     * 
+     */
     @InputImport(name="tier")
     private final @Nullable Input<String> tier;
 

@@ -15,6 +15,10 @@ public final class EdgeCacheServiceLogConfigGetArgs extends io.pulumi.resources.
 
     public static final EdgeCacheServiceLogConfigGetArgs Empty = new EdgeCacheServiceLogConfigGetArgs();
 
+    /**
+     * Specifies whether to enable logging for traffic served by this service.
+     * 
+     */
     @InputImport(name="enable")
     private final @Nullable Input<Boolean> enable;
 
@@ -22,6 +26,11 @@ public final class EdgeCacheServiceLogConfigGetArgs extends io.pulumi.resources.
         return this.enable == null ? Input.empty() : this.enable;
     }
 
+    /**
+     * Configures the sampling rate of requests, where 1.0 means all logged requests are reported and 0.0 means no logged requests are reported. The default value is 1.0, and the value of the field must be in [0, 1].
+     * This field can only be specified if logging is enabled for this service.
+     * 
+     */
     @InputImport(name="sampleRate")
     private final @Nullable Input<Double> sampleRate;
 

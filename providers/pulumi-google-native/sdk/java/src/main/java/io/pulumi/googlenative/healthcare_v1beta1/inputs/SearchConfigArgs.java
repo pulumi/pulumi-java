@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Contains the configuration for FHIR search.
+ * 
+ */
 public final class SearchConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SearchConfigArgs Empty = new SearchConfigArgs();
 
+    /**
+     * A list of search parameters in this FHIR store that are used to configure this FHIR store.
+     * 
+     */
     @InputImport(name="searchParameters")
     private final @Nullable Input<List<SearchParameterArgs>> searchParameters;
 

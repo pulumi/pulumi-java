@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetKMSKeyRingResult {
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
     private final String location;
     private final String name;
@@ -28,6 +32,10 @@ public final class GetKMSKeyRingResult {
         this.project = project;
     }
 
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }

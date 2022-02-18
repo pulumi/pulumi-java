@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRemediationAtSubscription {
+/**
+ * The remediation definition.
+ * API Version: 2019-07-01.
+ * 
+ *
+ * The remediation definition.
+ * 
+ */
     public static CompletableFuture<GetRemediationAtSubscriptionResult> invokeAsync(GetRemediationAtSubscriptionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:policyinsights:getRemediationAtSubscription", TypeShape.of(GetRemediationAtSubscriptionResult.class), args == null ? GetRemediationAtSubscriptionArgs.Empty : args, Utilities.withVersion(options));
     }

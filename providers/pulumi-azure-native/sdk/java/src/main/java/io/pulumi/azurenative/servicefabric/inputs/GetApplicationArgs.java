@@ -12,6 +12,10 @@ public final class GetApplicationArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetApplicationArgs Empty = new GetApplicationArgs();
 
+    /**
+     * The name of the application resource.
+     * 
+     */
     @InputImport(name="applicationName", required=true)
     private final String applicationName;
 
@@ -19,6 +23,10 @@ public final class GetApplicationArgs extends io.pulumi.resources.InvokeArgs {
         return this.applicationName;
     }
 
+    /**
+     * The name of the cluster resource.
+     * 
+     */
     @InputImport(name="clusterName", required=true)
     private final String clusterName;
 
@@ -26,6 +34,10 @@ public final class GetApplicationArgs extends io.pulumi.resources.InvokeArgs {
         return this.clusterName;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

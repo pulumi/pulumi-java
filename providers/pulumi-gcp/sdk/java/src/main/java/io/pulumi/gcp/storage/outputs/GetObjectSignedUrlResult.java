@@ -19,8 +19,16 @@ public final class GetObjectSignedUrlResult {
     private final @Nullable String duration;
     private final @Nullable Map<String,String> extensionHeaders;
     private final @Nullable String httpMethod;
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
     private final String path;
+    /**
+     * The signed URL that can be used to access the storage object without authentication.
+     * 
+     */
     private final String signedUrl;
 
     @OutputCustomType.Constructor({"bucket","contentMd5","contentType","credentials","duration","extensionHeaders","httpMethod","id","path","signedUrl"})
@@ -68,12 +76,20 @@ public final class GetObjectSignedUrlResult {
     public Optional<String> getHttpMethod() {
         return Optional.ofNullable(this.httpMethod);
     }
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }
     public String getPath() {
         return this.path;
     }
+    /**
+     * The signed URL that can be used to access the storage object without authentication.
+     * 
+     */
     public String getSignedUrl() {
         return this.signedUrl;
     }

@@ -15,6 +15,10 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
 
     public static final EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs Empty = new EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs();
 
+    /**
+     * The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch.
+     * 
+     */
     @InputImport(name="exactMatch")
     private final @Nullable Input<String> exactMatch;
 
@@ -22,6 +26,11 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
         return this.exactMatch == null ? Input.empty() : this.exactMatch;
     }
 
+    /**
+     * Headers to remove from the response prior to sending it back to the client.
+     * Response headers are only sent to the client, and do not have an effect on the cache serving the response.
+     * 
+     */
     @InputImport(name="headerName", required=true)
     private final Input<String> headerName;
 
@@ -29,6 +38,11 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
         return this.headerName;
     }
 
+    /**
+     * If set to false (default), the headerMatch is considered a match if the match criteria above are met.
+     * If set to true, the headerMatch is considered a match if the match criteria above are NOT met.
+     * 
+     */
     @InputImport(name="invertMatch")
     private final @Nullable Input<Boolean> invertMatch;
 
@@ -36,6 +50,10 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
         return this.invertMatch == null ? Input.empty() : this.invertMatch;
     }
 
+    /**
+     * The value of the header must start with the contents of prefixMatch.
+     * 
+     */
     @InputImport(name="prefixMatch")
     private final @Nullable Input<String> prefixMatch;
 
@@ -43,6 +61,10 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
         return this.prefixMatch == null ? Input.empty() : this.prefixMatch;
     }
 
+    /**
+     * Specifies that the queryParameterMatch matches if the request contains the query parameter, irrespective of whether the parameter has a value or not.
+     * 
+     */
     @InputImport(name="presentMatch")
     private final @Nullable Input<Boolean> presentMatch;
 
@@ -50,6 +72,10 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
         return this.presentMatch == null ? Input.empty() : this.presentMatch;
     }
 
+    /**
+     * The value of the header must end with the contents of suffixMatch.
+     * 
+     */
     @InputImport(name="suffixMatch")
     private final @Nullable Input<String> suffixMatch;
 

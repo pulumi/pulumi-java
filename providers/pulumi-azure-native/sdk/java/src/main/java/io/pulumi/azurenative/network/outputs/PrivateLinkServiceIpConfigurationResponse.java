@@ -13,15 +13,55 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PrivateLinkServiceIpConfigurationResponse {
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     private final String etag;
+    /**
+     * Resource ID.
+     * 
+     */
     private final @Nullable String id;
+    /**
+     * The name of private link service ip configuration.
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * Whether the ip configuration is primary or not.
+     * 
+     */
     private final @Nullable Boolean primary;
+    /**
+     * The private IP address of the IP configuration.
+     * 
+     */
     private final @Nullable String privateIPAddress;
+    /**
+     * Whether the specific IP configuration is IPv4 or IPv6. Default is IPv4.
+     * 
+     */
     private final @Nullable String privateIPAddressVersion;
+    /**
+     * The private IP address allocation method.
+     * 
+     */
     private final @Nullable String privateIPAllocationMethod;
+    /**
+     * The provisioning state of the private link service IP configuration resource.
+     * 
+     */
     private final String provisioningState;
+    /**
+     * The reference to the subnet resource.
+     * 
+     */
     private final @Nullable SubnetResponse subnet;
+    /**
+     * The resource type.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"etag","id","name","primary","privateIPAddress","privateIPAddressVersion","privateIPAllocationMethod","provisioningState","subnet","type"})
@@ -48,33 +88,73 @@ public final class PrivateLinkServiceIpConfigurationResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String getEtag() {
         return this.etag;
     }
+    /**
+     * Resource ID.
+     * 
+     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+    /**
+     * The name of private link service ip configuration.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * Whether the ip configuration is primary or not.
+     * 
+     */
     public Optional<Boolean> getPrimary() {
         return Optional.ofNullable(this.primary);
     }
+    /**
+     * The private IP address of the IP configuration.
+     * 
+     */
     public Optional<String> getPrivateIPAddress() {
         return Optional.ofNullable(this.privateIPAddress);
     }
+    /**
+     * Whether the specific IP configuration is IPv4 or IPv6. Default is IPv4.
+     * 
+     */
     public Optional<String> getPrivateIPAddressVersion() {
         return Optional.ofNullable(this.privateIPAddressVersion);
     }
+    /**
+     * The private IP address allocation method.
+     * 
+     */
     public Optional<String> getPrivateIPAllocationMethod() {
         return Optional.ofNullable(this.privateIPAllocationMethod);
     }
+    /**
+     * The provisioning state of the private link service IP configuration resource.
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The reference to the subnet resource.
+     * 
+     */
     public Optional<SubnetResponse> getSubnet() {
         return Optional.ofNullable(this.subnet);
     }
+    /**
+     * The resource type.
+     * 
+     */
     public String getType() {
         return this.type;
     }

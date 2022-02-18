@@ -10,7 +10,19 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoType {
+    /**
+     * CustomInfoType can either be a new infoType, or an extension of built-in infoType, when the name matches one of existing
+     * infoTypes and that infoType is specified in `info_types` field. Specifying the latter adds findings to the
+     * one detected by the system. If built-in info type is not specified in `info_types` list then the name is
+     * treated as a custom info type.
+     * Structure is documented below.
+     * 
+     */
     private final PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoType infoType;
+    /**
+     * Max findings limit for the given infoType.
+     * 
+     */
     private final Integer maxFindings;
 
     @OutputCustomType.Constructor({"infoType","maxFindings"})
@@ -21,9 +33,21 @@ public final class PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInf
         this.maxFindings = Objects.requireNonNull(maxFindings);
     }
 
+    /**
+     * CustomInfoType can either be a new infoType, or an extension of built-in infoType, when the name matches one of existing
+     * infoTypes and that infoType is specified in `info_types` field. Specifying the latter adds findings to the
+     * one detected by the system. If built-in info type is not specified in `info_types` list then the name is
+     * treated as a custom info type.
+     * Structure is documented below.
+     * 
+     */
     public PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoType getInfoType() {
         return this.infoType;
     }
+    /**
+     * Max findings limit for the given infoType.
+     * 
+     */
     public Integer getMaxFindings() {
         return this.maxFindings;
     }

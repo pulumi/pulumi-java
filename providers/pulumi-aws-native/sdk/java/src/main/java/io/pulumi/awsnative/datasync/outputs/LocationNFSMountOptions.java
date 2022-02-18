@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class LocationNFSMountOptions {
+    /**
+     * The specific NFS version that you want DataSync to use to mount your NFS share.
+     * 
+     */
     private final @Nullable LocationNFSMountOptionsVersion version;
 
     @OutputCustomType.Constructor({"version"})
@@ -18,6 +22,10 @@ public final class LocationNFSMountOptions {
         this.version = version;
     }
 
+    /**
+     * The specific NFS version that you want DataSync to use to mount your NFS share.
+     * 
+     */
     public Optional<LocationNFSMountOptionsVersion> getVersion() {
         return Optional.ofNullable(this.version);
     }

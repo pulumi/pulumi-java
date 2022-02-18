@@ -16,99 +16,240 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * An Application Insights workbook definition.
+ * API Version: 2020-10-20.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:insights:Workbook e378d137-1243-4256-b5c4-ad2a937cae79 /subscriptions/00000000-0000-0000-0000-00000000/resourcegroups/MyGroup/providers/Microsoft.Insights/workbooks/72377f0c-b7e7-4044-a882-471bcbd9696e 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:insights:Workbook")
 public class Workbook extends io.pulumi.resources.CustomResource {
+    /**
+     * Workbook category, as defined by the user at creation time.
+     * 
+     */
     @OutputExport(name="category", type=String.class, parameters={})
     private Output<String> category;
 
+    /**
+     * @return Workbook category, as defined by the user at creation time.
+     * 
+     */
     public Output<String> getCategory() {
         return this.category;
     }
+    /**
+     * The user-defined name (display name) of the workbook.
+     * 
+     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
+    /**
+     * @return The user-defined name (display name) of the workbook.
+     * 
+     */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
+    /**
+     * Resource etag
+     * 
+     */
     @OutputExport(name="etag", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> etag;
 
+    /**
+     * @return Resource etag
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getEtag() {
         return this.etag;
     }
+    /**
+     * Identity used for BYOS
+     * 
+     */
     @OutputExport(name="identity", type=WorkbookManagedIdentityResponse.class, parameters={})
     private Output</* @Nullable */ WorkbookManagedIdentityResponse> identity;
 
+    /**
+     * @return Identity used for BYOS
+     * 
+     */
     public Output</* @Nullable */ WorkbookManagedIdentityResponse> getIdentity() {
         return this.identity;
     }
+    /**
+     * The kind of workbook. Choices are user and shared.
+     * 
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
+    /**
+     * @return The kind of workbook. Choices are user and shared.
+     * 
+     */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
+    /**
+     * Resource location
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * Azure resource name
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
+    /**
+     * @return Azure resource name
+     * 
+     */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
+    /**
+     * Configuration of this particular workbook. Configuration data is a string containing valid JSON
+     * 
+     */
     @OutputExport(name="serializedData", type=String.class, parameters={})
     private Output<String> serializedData;
 
+    /**
+     * @return Configuration of this particular workbook. Configuration data is a string containing valid JSON
+     * 
+     */
     public Output<String> getSerializedData() {
         return this.serializedData;
     }
+    /**
+     * ResourceId for a source resource.
+     * 
+     */
     @OutputExport(name="sourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourceId;
 
+    /**
+     * @return ResourceId for a source resource.
+     * 
+     */
     public Output</* @Nullable */ String> getSourceId() {
         return this.sourceId;
     }
+    /**
+     * BYOS Storage Account URI
+     * 
+     */
     @OutputExport(name="storageUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageUri;
 
+    /**
+     * @return BYOS Storage Account URI
+     * 
+     */
     public Output</* @Nullable */ String> getStorageUri() {
         return this.storageUri;
     }
+    /**
+     * Resource tags
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Date and time in UTC of the last modification that was made to this workbook definition.
+     * 
+     */
     @OutputExport(name="timeModified", type=String.class, parameters={})
     private Output<String> timeModified;
 
+    /**
+     * @return Date and time in UTC of the last modification that was made to this workbook definition.
+     * 
+     */
     public Output<String> getTimeModified() {
         return this.timeModified;
     }
+    /**
+     * Azure resource type
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output</* @Nullable */ String> type;
 
+    /**
+     * @return Azure resource type
+     * 
+     */
     public Output</* @Nullable */ String> getType() {
         return this.type;
     }
+    /**
+     * Unique user id of the specific user that owns this workbook.
+     * 
+     */
     @OutputExport(name="userId", type=String.class, parameters={})
     private Output<String> userId;
 
+    /**
+     * @return Unique user id of the specific user that owns this workbook.
+     * 
+     */
     public Output<String> getUserId() {
         return this.userId;
     }
+    /**
+     * Workbook version
+     * 
+     */
     @OutputExport(name="version", type=String.class, parameters={})
     private Output</* @Nullable */ String> version;
 
+    /**
+     * @return Workbook version
+     * 
+     */
     public Output</* @Nullable */ String> getVersion() {
         return this.version;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Workbook(String name, WorkbookArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:insights:Workbook", name, args == null ? WorkbookArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -131,6 +272,14 @@ public class Workbook extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Workbook get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Workbook(name, id, options);
     }

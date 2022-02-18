@@ -12,6 +12,10 @@ public final class GetWebAppPrivateEndpointConnectionSlotArgs extends io.pulumi.
 
     public static final GetWebAppPrivateEndpointConnectionSlotArgs Empty = new GetWebAppPrivateEndpointConnectionSlotArgs();
 
+    /**
+     * Name of the site.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -19,6 +23,10 @@ public final class GetWebAppPrivateEndpointConnectionSlotArgs extends io.pulumi.
         return this.name;
     }
 
+    /**
+     * Name of the private endpoint connection.
+     * 
+     */
     @InputImport(name="privateEndpointConnectionName", required=true)
     private final String privateEndpointConnectionName;
 
@@ -26,6 +34,10 @@ public final class GetWebAppPrivateEndpointConnectionSlotArgs extends io.pulumi.
         return this.privateEndpointConnectionName;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -33,6 +45,10 @@ public final class GetWebAppPrivateEndpointConnectionSlotArgs extends io.pulumi.
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of the site deployment slot.
+     * 
+     */
     @InputImport(name="slot", required=true)
     private final String slot;
 

@@ -13,9 +13,27 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PatchDeploymentPatchConfigYum {
+    /**
+     * List of KBs to exclude from update.
+     * 
+     */
     private final @Nullable List<String> excludes;
+    /**
+     * An exclusive list of packages to be updated. These are the only packages that will be updated.
+     * If these packages are not installed, they will be ignored. This field cannot be specified with
+     * any other patch configuration fields.
+     * 
+     */
     private final @Nullable List<String> exclusivePackages;
+    /**
+     * Will cause patch to run yum update-minimal instead.
+     * 
+     */
     private final @Nullable Boolean minimal;
+    /**
+     * Adds the --security flag to yum update. Not supported on all platforms.
+     * 
+     */
     private final @Nullable Boolean security;
 
     @OutputCustomType.Constructor({"excludes","exclusivePackages","minimal","security"})
@@ -30,15 +48,33 @@ public final class PatchDeploymentPatchConfigYum {
         this.security = security;
     }
 
+    /**
+     * List of KBs to exclude from update.
+     * 
+     */
     public List<String> getExcludes() {
         return this.excludes == null ? List.of() : this.excludes;
     }
+    /**
+     * An exclusive list of packages to be updated. These are the only packages that will be updated.
+     * If these packages are not installed, they will be ignored. This field cannot be specified with
+     * any other patch configuration fields.
+     * 
+     */
     public List<String> getExclusivePackages() {
         return this.exclusivePackages == null ? List.of() : this.exclusivePackages;
     }
+    /**
+     * Will cause patch to run yum update-minimal instead.
+     * 
+     */
     public Optional<Boolean> getMinimal() {
         return Optional.ofNullable(this.minimal);
     }
+    /**
+     * Adds the --security flag to yum update. Not supported on all platforms.
+     * 
+     */
     public Optional<Boolean> getSecurity() {
         return Optional.ofNullable(this.security);
     }

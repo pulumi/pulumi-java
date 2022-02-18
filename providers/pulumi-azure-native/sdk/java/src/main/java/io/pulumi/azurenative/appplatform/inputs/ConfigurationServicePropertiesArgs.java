@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Application Configuration Service properties payload
+ * 
+ */
 public final class ConfigurationServicePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConfigurationServicePropertiesArgs Empty = new ConfigurationServicePropertiesArgs();
 
+    /**
+     * The settings of Application Configuration Service.
+     * 
+     */
     @InputImport(name="settings")
     private final @Nullable Input<ConfigurationServiceSettingsArgs> settings;
 

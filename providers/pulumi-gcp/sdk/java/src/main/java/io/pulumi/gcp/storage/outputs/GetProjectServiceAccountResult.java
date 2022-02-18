@@ -11,7 +11,16 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetProjectServiceAccountResult {
+    /**
+     * The email address of the service account. This value is often used to refer to the service account
+     * in order to grant IAM permissions.
+     * 
+     */
     private final String emailAddress;
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
     private final String project;
     private final @Nullable String userProject;
@@ -28,9 +37,18 @@ public final class GetProjectServiceAccountResult {
         this.userProject = userProject;
     }
 
+    /**
+     * The email address of the service account. This value is often used to refer to the service account
+     * in order to grant IAM permissions.
+     * 
+     */
     public String getEmailAddress() {
         return this.emailAddress;
     }
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }

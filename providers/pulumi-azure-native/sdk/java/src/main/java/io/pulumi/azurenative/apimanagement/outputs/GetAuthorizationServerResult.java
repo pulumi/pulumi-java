@@ -14,24 +14,100 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetAuthorizationServerResult {
+    /**
+     * OAuth authorization endpoint. See http://tools.ietf.org/html/rfc6749#section-3.2.
+     * 
+     */
     private final String authorizationEndpoint;
+    /**
+     * HTTP verbs supported by the authorization endpoint. GET must be always present. POST is optional.
+     * 
+     */
     private final @Nullable List<String> authorizationMethods;
+    /**
+     * Specifies the mechanism by which access token is passed to the API.
+     * 
+     */
     private final @Nullable List<String> bearerTokenSendingMethods;
+    /**
+     * Method of authentication supported by the token endpoint of this authorization server. Possible values are Basic and/or Body. When Body is specified, client credentials and other parameters are passed within the request body in the application/x-www-form-urlencoded format.
+     * 
+     */
     private final @Nullable List<String> clientAuthenticationMethod;
+    /**
+     * Client or app id registered with this authorization server.
+     * 
+     */
     private final String clientId;
+    /**
+     * Optional reference to a page where client or app registration for this authorization server is performed. Contains absolute URL to entity being referenced.
+     * 
+     */
     private final String clientRegistrationEndpoint;
+    /**
+     * Client or app secret registered with this authorization server. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
+     * 
+     */
     private final @Nullable String clientSecret;
+    /**
+     * Access token scope that is going to be requested by default. Can be overridden at the API level. Should be provided in the form of a string containing space-delimited values.
+     * 
+     */
     private final @Nullable String defaultScope;
+    /**
+     * Description of the authorization server. Can contain HTML formatting tags.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * User-friendly authorization server name.
+     * 
+     */
     private final String displayName;
+    /**
+     * Form of an authorization grant, which the client uses to request the access token.
+     * 
+     */
     private final List<String> grantTypes;
+    /**
+     * Resource ID.
+     * 
+     */
     private final String id;
+    /**
+     * Resource name.
+     * 
+     */
     private final String name;
+    /**
+     * Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner password.
+     * 
+     */
     private final @Nullable String resourceOwnerPassword;
+    /**
+     * Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner username.
+     * 
+     */
     private final @Nullable String resourceOwnerUsername;
+    /**
+     * If true, authorization server will include state parameter from the authorization request to its response. Client may use state parameter to raise protocol security.
+     * 
+     */
     private final @Nullable Boolean supportState;
+    /**
+     * Additional parameters required by the token endpoint of this authorization server represented as an array of JSON objects with name and value string properties, i.e. {"name" : "name value", "value": "a value"}.
+     * 
+     */
     private final @Nullable List<TokenBodyParameterContractResponse> tokenBodyParameters;
+    /**
+     * OAuth token endpoint. Contains absolute URI to entity being referenced.
+     * 
+     */
     private final @Nullable String tokenEndpoint;
+    /**
+     * Resource type for API Management resource.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"authorizationEndpoint","authorizationMethods","bearerTokenSendingMethods","clientAuthenticationMethod","clientId","clientRegistrationEndpoint","clientSecret","defaultScope","description","displayName","grantTypes","id","name","resourceOwnerPassword","resourceOwnerUsername","supportState","tokenBodyParameters","tokenEndpoint","type"})
@@ -76,60 +152,136 @@ public final class GetAuthorizationServerResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * OAuth authorization endpoint. See http://tools.ietf.org/html/rfc6749#section-3.2.
+     * 
+     */
     public String getAuthorizationEndpoint() {
         return this.authorizationEndpoint;
     }
+    /**
+     * HTTP verbs supported by the authorization endpoint. GET must be always present. POST is optional.
+     * 
+     */
     public List<String> getAuthorizationMethods() {
         return this.authorizationMethods == null ? List.of() : this.authorizationMethods;
     }
+    /**
+     * Specifies the mechanism by which access token is passed to the API.
+     * 
+     */
     public List<String> getBearerTokenSendingMethods() {
         return this.bearerTokenSendingMethods == null ? List.of() : this.bearerTokenSendingMethods;
     }
+    /**
+     * Method of authentication supported by the token endpoint of this authorization server. Possible values are Basic and/or Body. When Body is specified, client credentials and other parameters are passed within the request body in the application/x-www-form-urlencoded format.
+     * 
+     */
     public List<String> getClientAuthenticationMethod() {
         return this.clientAuthenticationMethod == null ? List.of() : this.clientAuthenticationMethod;
     }
+    /**
+     * Client or app id registered with this authorization server.
+     * 
+     */
     public String getClientId() {
         return this.clientId;
     }
+    /**
+     * Optional reference to a page where client or app registration for this authorization server is performed. Contains absolute URL to entity being referenced.
+     * 
+     */
     public String getClientRegistrationEndpoint() {
         return this.clientRegistrationEndpoint;
     }
+    /**
+     * Client or app secret registered with this authorization server. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
+     * 
+     */
     public Optional<String> getClientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
+    /**
+     * Access token scope that is going to be requested by default. Can be overridden at the API level. Should be provided in the form of a string containing space-delimited values.
+     * 
+     */
     public Optional<String> getDefaultScope() {
         return Optional.ofNullable(this.defaultScope);
     }
+    /**
+     * Description of the authorization server. Can contain HTML formatting tags.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * User-friendly authorization server name.
+     * 
+     */
     public String getDisplayName() {
         return this.displayName;
     }
+    /**
+     * Form of an authorization grant, which the client uses to request the access token.
+     * 
+     */
     public List<String> getGrantTypes() {
         return this.grantTypes;
     }
+    /**
+     * Resource ID.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Resource name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner password.
+     * 
+     */
     public Optional<String> getResourceOwnerPassword() {
         return Optional.ofNullable(this.resourceOwnerPassword);
     }
+    /**
+     * Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner username.
+     * 
+     */
     public Optional<String> getResourceOwnerUsername() {
         return Optional.ofNullable(this.resourceOwnerUsername);
     }
+    /**
+     * If true, authorization server will include state parameter from the authorization request to its response. Client may use state parameter to raise protocol security.
+     * 
+     */
     public Optional<Boolean> getSupportState() {
         return Optional.ofNullable(this.supportState);
     }
+    /**
+     * Additional parameters required by the token endpoint of this authorization server represented as an array of JSON objects with name and value string properties, i.e. {"name" : "name value", "value": "a value"}.
+     * 
+     */
     public List<TokenBodyParameterContractResponse> getTokenBodyParameters() {
         return this.tokenBodyParameters == null ? List.of() : this.tokenBodyParameters;
     }
+    /**
+     * OAuth token endpoint. Contains absolute URI to entity being referenced.
+     * 
+     */
     public Optional<String> getTokenEndpoint() {
         return Optional.ofNullable(this.tokenEndpoint);
     }
+    /**
+     * Resource type for API Management resource.
+     * 
+     */
     public String getType() {
         return this.type;
     }

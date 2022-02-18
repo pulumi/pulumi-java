@@ -9,10 +9,19 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Defines the disk encryption set resource settings.
+ * 
+ */
 public final class DiskEncryptionSetResourceSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DiskEncryptionSetResourceSettingsArgs Empty = new DiskEncryptionSetResourceSettingsArgs();
 
+    /**
+     * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+     * Expected value is 'Microsoft.Compute/diskEncryptionSets'.
+     * 
+     */
     @InputImport(name="resourceType", required=true)
     private final Input<String> resourceType;
 
@@ -20,6 +29,10 @@ public final class DiskEncryptionSetResourceSettingsArgs extends io.pulumi.resou
         return this.resourceType;
     }
 
+    /**
+     * Gets or sets the target Resource name.
+     * 
+     */
     @InputImport(name="targetResourceName", required=true)
     private final Input<String> targetResourceName;
 

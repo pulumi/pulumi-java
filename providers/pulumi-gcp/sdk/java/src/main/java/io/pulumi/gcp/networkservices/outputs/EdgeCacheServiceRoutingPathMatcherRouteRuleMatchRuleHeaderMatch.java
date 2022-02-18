@@ -12,11 +12,37 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatch {
+    /**
+     * The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch.
+     * 
+     */
     private final @Nullable String exactMatch;
+    /**
+     * Headers to remove from the response prior to sending it back to the client.
+     * Response headers are only sent to the client, and do not have an effect on the cache serving the response.
+     * 
+     */
     private final String headerName;
+    /**
+     * If set to false (default), the headerMatch is considered a match if the match criteria above are met.
+     * If set to true, the headerMatch is considered a match if the match criteria above are NOT met.
+     * 
+     */
     private final @Nullable Boolean invertMatch;
+    /**
+     * The value of the header must start with the contents of prefixMatch.
+     * 
+     */
     private final @Nullable String prefixMatch;
+    /**
+     * Specifies that the queryParameterMatch matches if the request contains the query parameter, irrespective of whether the parameter has a value or not.
+     * 
+     */
     private final @Nullable Boolean presentMatch;
+    /**
+     * The value of the header must end with the contents of suffixMatch.
+     * 
+     */
     private final @Nullable String suffixMatch;
 
     @OutputCustomType.Constructor({"exactMatch","headerName","invertMatch","prefixMatch","presentMatch","suffixMatch"})
@@ -35,21 +61,47 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
         this.suffixMatch = suffixMatch;
     }
 
+    /**
+     * The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch.
+     * 
+     */
     public Optional<String> getExactMatch() {
         return Optional.ofNullable(this.exactMatch);
     }
+    /**
+     * Headers to remove from the response prior to sending it back to the client.
+     * Response headers are only sent to the client, and do not have an effect on the cache serving the response.
+     * 
+     */
     public String getHeaderName() {
         return this.headerName;
     }
+    /**
+     * If set to false (default), the headerMatch is considered a match if the match criteria above are met.
+     * If set to true, the headerMatch is considered a match if the match criteria above are NOT met.
+     * 
+     */
     public Optional<Boolean> getInvertMatch() {
         return Optional.ofNullable(this.invertMatch);
     }
+    /**
+     * The value of the header must start with the contents of prefixMatch.
+     * 
+     */
     public Optional<String> getPrefixMatch() {
         return Optional.ofNullable(this.prefixMatch);
     }
+    /**
+     * Specifies that the queryParameterMatch matches if the request contains the query parameter, irrespective of whether the parameter has a value or not.
+     * 
+     */
     public Optional<Boolean> getPresentMatch() {
         return Optional.ofNullable(this.presentMatch);
     }
+    /**
+     * The value of the header must end with the contents of suffixMatch.
+     * 
+     */
     public Optional<String> getSuffixMatch() {
         return Optional.ofNullable(this.suffixMatch);
     }

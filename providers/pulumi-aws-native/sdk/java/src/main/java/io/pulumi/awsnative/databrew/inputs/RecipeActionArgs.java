@@ -17,6 +17,10 @@ public final class RecipeActionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RecipeActionArgs Empty = new RecipeActionArgs();
 
+    /**
+     * Step action operation
+     * 
+     */
     @InputImport(name="operation", required=true)
     private final Input<String> operation;
 

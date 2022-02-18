@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAsset {
+/**
+ * Resource schema for AWS::IoTSiteWise::Asset
+ * 
+ */
     public static CompletableFuture<GetAssetResult> invokeAsync(GetAssetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iotsitewise:getAsset", TypeShape.of(GetAssetResult.class), args == null ? GetAssetArgs.Empty : args, Utilities.withVersion(options));
     }

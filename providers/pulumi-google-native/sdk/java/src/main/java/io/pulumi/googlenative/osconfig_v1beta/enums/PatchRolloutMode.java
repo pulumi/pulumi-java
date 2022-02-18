@@ -8,10 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Mode of the patch rollout.
+     * 
+     */
     @EnumType
     public enum PatchRolloutMode {
+        /**
+         * Mode must be specified.
+         * 
+         */
         ModeUnspecified("MODE_UNSPECIFIED"),
+        /**
+         * Patches are applied one zone at a time. The patch job begins in the region with the lowest number of targeted VMs. Within the region, patching begins in the zone with the lowest number of targeted VMs. If multiple regions (or zones within a region) have the same number of targeted VMs, a tie-breaker is achieved by sorting the regions or zones in alphabetical order.
+         * 
+         */
         ZoneByZone("ZONE_BY_ZONE"),
+        /**
+         * Patches are applied to VMs in all zones at the same time.
+         * 
+         */
         ConcurrentZones("CONCURRENT_ZONES");
 
         private final String value;

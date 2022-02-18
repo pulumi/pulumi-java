@@ -12,6 +12,10 @@ public final class ListNamespaceKeysArgs extends io.pulumi.resources.InvokeArgs 
 
     public static final ListNamespaceKeysArgs Empty = new ListNamespaceKeysArgs();
 
+    /**
+     * The connection string of the namespace for the specified authorizationRule.
+     * 
+     */
     @InputImport(name="authorizationRuleName", required=true)
     private final String authorizationRuleName;
 
@@ -19,6 +23,10 @@ public final class ListNamespaceKeysArgs extends io.pulumi.resources.InvokeArgs 
         return this.authorizationRuleName;
     }
 
+    /**
+     * The namespace name.
+     * 
+     */
     @InputImport(name="namespaceName", required=true)
     private final String namespaceName;
 
@@ -26,6 +34,10 @@ public final class ListNamespaceKeysArgs extends io.pulumi.resources.InvokeArgs 
         return this.namespaceName;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -15,10 +15,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * ClusterAutoscaling contains global, per-cluster information required by Cluster Autoscaler to automatically adjust the size of the cluster and create/delete node pools based on the current needs.
+ * 
+ */
 public final class ClusterAutoscalingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ClusterAutoscalingArgs Empty = new ClusterAutoscalingArgs();
 
+    /**
+     * The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool's nodes can be created by NAP.
+     * 
+     */
     @InputImport(name="autoprovisioningLocations")
     private final @Nullable Input<List<String>> autoprovisioningLocations;
 
@@ -26,6 +34,10 @@ public final class ClusterAutoscalingArgs extends io.pulumi.resources.ResourceAr
         return this.autoprovisioningLocations == null ? Input.empty() : this.autoprovisioningLocations;
     }
 
+    /**
+     * AutoprovisioningNodePoolDefaults contains defaults for a node pool created by NAP.
+     * 
+     */
     @InputImport(name="autoprovisioningNodePoolDefaults")
     private final @Nullable Input<AutoprovisioningNodePoolDefaultsArgs> autoprovisioningNodePoolDefaults;
 
@@ -33,6 +45,10 @@ public final class ClusterAutoscalingArgs extends io.pulumi.resources.ResourceAr
         return this.autoprovisioningNodePoolDefaults == null ? Input.empty() : this.autoprovisioningNodePoolDefaults;
     }
 
+    /**
+     * Defines autoscaling behaviour.
+     * 
+     */
     @InputImport(name="autoscalingProfile")
     private final @Nullable Input<ClusterAutoscalingAutoscalingProfile> autoscalingProfile;
 
@@ -40,6 +56,10 @@ public final class ClusterAutoscalingArgs extends io.pulumi.resources.ResourceAr
         return this.autoscalingProfile == null ? Input.empty() : this.autoscalingProfile;
     }
 
+    /**
+     * Enables automatic node pool creation and deletion.
+     * 
+     */
     @InputImport(name="enableNodeAutoprovisioning")
     private final @Nullable Input<Boolean> enableNodeAutoprovisioning;
 
@@ -47,6 +67,10 @@ public final class ClusterAutoscalingArgs extends io.pulumi.resources.ResourceAr
         return this.enableNodeAutoprovisioning == null ? Input.empty() : this.enableNodeAutoprovisioning;
     }
 
+    /**
+     * Contains global constraints regarding minimum and maximum amount of resources in the cluster.
+     * 
+     */
     @InputImport(name="resourceLimits")
     private final @Nullable Input<List<ResourceLimitArgs>> resourceLimits;
 

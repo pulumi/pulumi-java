@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * For display only. Metadata associated with a Cloud SQL instance.
+ * 
+ */
 public final class CloudSQLInstanceInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CloudSQLInstanceInfoResponse Empty = new CloudSQLInstanceInfoResponse();
 
+    /**
+     * Name of a Cloud SQL instance.
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final String displayName;
 
@@ -19,6 +27,10 @@ public final class CloudSQLInstanceInfoResponse extends io.pulumi.resources.Invo
         return this.displayName;
     }
 
+    /**
+     * External IP address of a Cloud SQL instance.
+     * 
+     */
     @InputImport(name="externalIp", required=true)
     private final String externalIp;
 
@@ -26,6 +38,10 @@ public final class CloudSQLInstanceInfoResponse extends io.pulumi.resources.Invo
         return this.externalIp;
     }
 
+    /**
+     * Internal IP address of a Cloud SQL instance.
+     * 
+     */
     @InputImport(name="internalIp", required=true)
     private final String internalIp;
 
@@ -33,6 +49,10 @@ public final class CloudSQLInstanceInfoResponse extends io.pulumi.resources.Invo
         return this.internalIp;
     }
 
+    /**
+     * URI of a Cloud SQL instance network or empty string if the instance does not have one.
+     * 
+     */
     @InputImport(name="networkUri", required=true)
     private final String networkUri;
 
@@ -40,6 +60,10 @@ public final class CloudSQLInstanceInfoResponse extends io.pulumi.resources.Invo
         return this.networkUri;
     }
 
+    /**
+     * Region in which the Cloud SQL instance is running.
+     * 
+     */
     @InputImport(name="region", required=true)
     private final String region;
 
@@ -47,6 +71,10 @@ public final class CloudSQLInstanceInfoResponse extends io.pulumi.resources.Invo
         return this.region;
     }
 
+    /**
+     * URI of a Cloud SQL instance.
+     * 
+     */
     @InputImport(name="uri", required=true)
     private final String uri;
 

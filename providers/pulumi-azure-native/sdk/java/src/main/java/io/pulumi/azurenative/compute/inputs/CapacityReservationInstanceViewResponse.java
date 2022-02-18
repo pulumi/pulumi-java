@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The instance view of a capacity reservation that provides as snapshot of the runtime properties of the capacity reservation that is managed by the platform and can change outside of control plane operations.
+ * 
+ */
 public final class CapacityReservationInstanceViewResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CapacityReservationInstanceViewResponse Empty = new CapacityReservationInstanceViewResponse();
 
+    /**
+     * The resource status information.
+     * 
+     */
     @InputImport(name="statuses")
     private final @Nullable List<InstanceViewStatusResponse> statuses;
 
@@ -23,6 +31,10 @@ public final class CapacityReservationInstanceViewResponse extends io.pulumi.res
         return this.statuses == null ? List.of() : this.statuses;
     }
 
+    /**
+     * Unutilized capacity of the capacity reservation.
+     * 
+     */
     @InputImport(name="utilizationInfo")
     private final @Nullable CapacityReservationUtilizationResponse utilizationInfo;
 

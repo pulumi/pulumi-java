@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListRegistryCredentials {
+/**
+ * The response from the ListCredentials operation.
+ * API Version: 2019-05-01.
+ * 
+ *
+ * The response from the ListCredentials operation.
+ * 
+ */
     public static CompletableFuture<ListRegistryCredentialsResult> invokeAsync(ListRegistryCredentialsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerregistry:listRegistryCredentials", TypeShape.of(ListRegistryCredentialsResult.class), args == null ? ListRegistryCredentialsArgs.Empty : args, Utilities.withVersion(options));
     }

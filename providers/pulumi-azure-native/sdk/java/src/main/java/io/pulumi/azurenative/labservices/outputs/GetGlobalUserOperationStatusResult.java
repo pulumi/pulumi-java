@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetGlobalUserOperationStatusResult {
+    /**
+     * status of the long running operation for an environment
+     * 
+     */
     private final String status;
 
     @OutputCustomType.Constructor({"status"})
@@ -16,6 +20,10 @@ public final class GetGlobalUserOperationStatusResult {
         this.status = Objects.requireNonNull(status);
     }
 
+    /**
+     * status of the long running operation for an environment
+     * 
+     */
     public String getStatus() {
         return this.status;
     }

@@ -14,6 +14,11 @@ public final class EdgeCacheOriginTimeoutArgs extends io.pulumi.resources.Resour
 
     public static final EdgeCacheOriginTimeoutArgs Empty = new EdgeCacheOriginTimeoutArgs();
 
+    /**
+     * The maximum duration to wait for the origin connection to be established, including DNS lookup, TLS handshake and TCP/QUIC connection establishment.
+     * Defaults to 5 seconds. The timeout must be a value between 1s and 15s.
+     * 
+     */
     @InputImport(name="connectTimeout")
     private final @Nullable Input<String> connectTimeout;
 
@@ -21,6 +26,11 @@ public final class EdgeCacheOriginTimeoutArgs extends io.pulumi.resources.Resour
         return this.connectTimeout == null ? Input.empty() : this.connectTimeout;
     }
 
+    /**
+     * The maximum time across all connection attempts to the origin, including failover origins, before returning an error to the client. A HTTP 503 will be returned if the timeout is reached before a response is returned.
+     * Defaults to 5 seconds. The timeout must be a value between 1s and 15s.
+     * 
+     */
     @InputImport(name="maxAttemptsTimeout")
     private final @Nullable Input<String> maxAttemptsTimeout;
 
@@ -28,6 +38,11 @@ public final class EdgeCacheOriginTimeoutArgs extends io.pulumi.resources.Resour
         return this.maxAttemptsTimeout == null ? Input.empty() : this.maxAttemptsTimeout;
     }
 
+    /**
+     * The maximum duration to wait for data to arrive when reading from the HTTP connection/stream.
+     * Defaults to 5 seconds. The timeout must be a value between 1s and 30s.
+     * 
+     */
     @InputImport(name="responseTimeout")
     private final @Nullable Input<String> responseTimeout;
 

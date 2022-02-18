@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The dataset type
+     * 
+     */
     @EnumType
     public enum DatasetType {
         TargetTimeSeries("TARGET_TIME_SERIES"),

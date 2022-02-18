@@ -12,6 +12,10 @@ public final class GetGroupMembershipsMembershipRole extends io.pulumi.resources
 
     public static final GetGroupMembershipsMembershipRole Empty = new GetGroupMembershipsMembershipRole();
 
+    /**
+     * The name of the MembershipRole. One of OWNER, MANAGER, MEMBER.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

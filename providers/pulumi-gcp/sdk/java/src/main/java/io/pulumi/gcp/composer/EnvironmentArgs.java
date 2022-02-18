@@ -16,6 +16,10 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EnvironmentArgs Empty = new EnvironmentArgs();
 
+    /**
+     * Configuration parameters for this environment.
+     * 
+     */
     @InputImport(name="config")
     private final @Nullable Input<EnvironmentConfigArgs> config;
 
@@ -23,6 +27,14 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.config == null ? Input.empty() : this.config;
     }
 
+    /**
+     * User-defined labels for this environment. The labels map can contain no more than 64 entries. Entries of the labels map
+     * are UTF8 strings that comply with the following restrictions: Label keys must be between 1 and 63 characters long and
+     * must conform to the following regular expression: [a-z]([-a-z0-9]*[a-z0-9])?. Label values must be between 0 and 63
+     * characters long and must conform to the regular expression ([a-z]([-a-z0-9]*[a-z0-9])?)?. No more than 64 labels can be
+     * associated with a given environment. Both keys and values must be <= 128 bytes in size.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -30,6 +42,10 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * Name of the environment.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -37,6 +53,10 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -44,6 +64,10 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The location or Compute Engine region for the environment.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 

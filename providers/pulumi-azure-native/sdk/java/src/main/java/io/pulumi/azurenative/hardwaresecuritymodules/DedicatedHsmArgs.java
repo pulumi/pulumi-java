@@ -18,6 +18,10 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DedicatedHsmArgs Empty = new DedicatedHsmArgs();
 
+    /**
+     * The supported Azure location where the dedicated HSM should be created.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -25,6 +29,10 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Name of the dedicated Hsm
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -32,6 +40,10 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Specifies the network interfaces of the dedicated hsm.
+     * 
+     */
     @InputImport(name="networkProfile")
     private final @Nullable Input<NetworkProfileArgs> networkProfile;
 
@@ -39,6 +51,10 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
         return this.networkProfile == null ? Input.empty() : this.networkProfile;
     }
 
+    /**
+     * The name of the Resource Group to which the resource belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -46,6 +62,10 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * SKU details
+     * 
+     */
     @InputImport(name="sku", required=true)
     private final Input<SkuArgs> sku;
 
@@ -53,6 +73,10 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku;
     }
 
+    /**
+     * This field will be used when RP does not support Availability zones.
+     * 
+     */
     @InputImport(name="stampId")
     private final @Nullable Input<String> stampId;
 
@@ -60,6 +84,10 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
         return this.stampId == null ? Input.empty() : this.stampId;
     }
 
+    /**
+     * Resource tags
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -67,6 +95,10 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The Dedicated Hsm zones.
+     * 
+     */
     @InputImport(name="zones")
     private final @Nullable Input<List<String>> zones;
 

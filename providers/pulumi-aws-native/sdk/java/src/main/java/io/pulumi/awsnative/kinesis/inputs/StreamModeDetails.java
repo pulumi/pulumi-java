@@ -8,10 +8,18 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * When specified, enables or updates the mode of stream. Default is PROVISIONED.
+ * 
+ */
 public final class StreamModeDetails extends io.pulumi.resources.InvokeArgs {
 
     public static final StreamModeDetails Empty = new StreamModeDetails();
 
+    /**
+     * The mode of the stream
+     * 
+     */
     @InputImport(name="streamMode", required=true)
     private final StreamModeDetailsStreamMode streamMode;
 

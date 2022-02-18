@@ -11,9 +11,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TargetCostAllocationResourceResponse {
+    /**
+     * If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag
+     * 
+     */
     private final String name;
+    /**
+     * Method of cost allocation for the rule
+     * 
+     */
     private final String policyType;
+    /**
+     * Type of resources contained in this cost allocation rule
+     * 
+     */
     private final String resourceType;
+    /**
+     * Target resources for cost allocation. This list cannot contain more than 25 values.
+     * 
+     */
     private final List<CostAllocationProportionResponse> values;
 
     @OutputCustomType.Constructor({"name","policyType","resourceType","values"})
@@ -28,15 +44,31 @@ public final class TargetCostAllocationResourceResponse {
         this.values = Objects.requireNonNull(values);
     }
 
+    /**
+     * If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Method of cost allocation for the rule
+     * 
+     */
     public String getPolicyType() {
         return this.policyType;
     }
+    /**
+     * Type of resources contained in this cost allocation rule
+     * 
+     */
     public String getPropResourceType() {
         return this.resourceType;
     }
+    /**
+     * Target resources for cost allocation. This list cannot contain more than 25 values.
+     * 
+     */
     public List<CostAllocationProportionResponse> getValues() {
         return this.values;
     }

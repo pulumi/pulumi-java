@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A site for the Direct Line channel
+ * 
+ */
 public final class DirectLineSiteArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DirectLineSiteArgs Empty = new DirectLineSiteArgs();
 
+    /**
+     * Whether this site is enabled for block user upload.
+     * 
+     */
     @InputImport(name="isBlockUserUploadEnabled")
     private final @Nullable Input<Boolean> isBlockUserUploadEnabled;
 
@@ -23,6 +31,10 @@ public final class DirectLineSiteArgs extends io.pulumi.resources.ResourceArgs {
         return this.isBlockUserUploadEnabled == null ? Input.empty() : this.isBlockUserUploadEnabled;
     }
 
+    /**
+     * Whether this site is enabled for DirectLine channel.
+     * 
+     */
     @InputImport(name="isEnabled", required=true)
     private final Input<Boolean> isEnabled;
 
@@ -30,6 +42,10 @@ public final class DirectLineSiteArgs extends io.pulumi.resources.ResourceArgs {
         return this.isEnabled;
     }
 
+    /**
+     * Whether this site is enabled for authentication with Bot Framework.
+     * 
+     */
     @InputImport(name="isSecureSiteEnabled")
     private final @Nullable Input<Boolean> isSecureSiteEnabled;
 
@@ -37,6 +53,10 @@ public final class DirectLineSiteArgs extends io.pulumi.resources.ResourceArgs {
         return this.isSecureSiteEnabled == null ? Input.empty() : this.isSecureSiteEnabled;
     }
 
+    /**
+     * Whether this site is enabled for Bot Framework V1 protocol.
+     * 
+     */
     @InputImport(name="isV1Enabled", required=true)
     private final Input<Boolean> isV1Enabled;
 
@@ -44,6 +64,10 @@ public final class DirectLineSiteArgs extends io.pulumi.resources.ResourceArgs {
         return this.isV1Enabled;
     }
 
+    /**
+     * Whether this site is enabled for Bot Framework V1 protocol.
+     * 
+     */
     @InputImport(name="isV3Enabled", required=true)
     private final Input<Boolean> isV3Enabled;
 
@@ -51,6 +75,10 @@ public final class DirectLineSiteArgs extends io.pulumi.resources.ResourceArgs {
         return this.isV3Enabled;
     }
 
+    /**
+     * Site name
+     * 
+     */
     @InputImport(name="siteName", required=true)
     private final Input<String> siteName;
 
@@ -58,6 +86,10 @@ public final class DirectLineSiteArgs extends io.pulumi.resources.ResourceArgs {
         return this.siteName;
     }
 
+    /**
+     * List of Trusted Origin URLs for this site. This field is applicable only if isSecureSiteEnabled is True.
+     * 
+     */
     @InputImport(name="trustedOrigins")
     private final @Nullable Input<List<String>> trustedOrigins;
 

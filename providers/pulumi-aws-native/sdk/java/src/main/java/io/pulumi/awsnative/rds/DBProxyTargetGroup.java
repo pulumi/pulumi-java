@@ -15,6 +15,10 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Resource schema for AWS::RDS::DBProxyTargetGroup
+ * 
+ */
 @ResourceType(type="aws-native:rds:DBProxyTargetGroup")
 public class DBProxyTargetGroup extends io.pulumi.resources.CustomResource {
     @OutputExport(name="connectionPoolConfigurationInfo", type=DBProxyTargetGroupConnectionPoolConfigurationInfoFormat.class, parameters={})
@@ -35,25 +39,55 @@ public class DBProxyTargetGroup extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ List<String>> getDBInstanceIdentifiers() {
         return this.dBInstanceIdentifiers;
     }
+    /**
+     * The identifier for the proxy.
+     * 
+     */
     @OutputExport(name="dBProxyName", type=String.class, parameters={})
     private Output<String> dBProxyName;
 
+    /**
+     * @return The identifier for the proxy.
+     * 
+     */
     public Output<String> getDBProxyName() {
         return this.dBProxyName;
     }
+    /**
+     * The Amazon Resource Name (ARN) representing the target group.
+     * 
+     */
     @OutputExport(name="targetGroupArn", type=String.class, parameters={})
     private Output<String> targetGroupArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) representing the target group.
+     * 
+     */
     public Output<String> getTargetGroupArn() {
         return this.targetGroupArn;
     }
+    /**
+     * The identifier for the DBProxyTargetGroup
+     * 
+     */
     @OutputExport(name="targetGroupName", type=DBProxyTargetGroupTargetGroupName.class, parameters={})
     private Output<DBProxyTargetGroupTargetGroupName> targetGroupName;
 
+    /**
+     * @return The identifier for the DBProxyTargetGroup
+     * 
+     */
     public Output<DBProxyTargetGroupTargetGroupName> getTargetGroupName() {
         return this.targetGroupName;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public DBProxyTargetGroup(String name, DBProxyTargetGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:rds:DBProxyTargetGroup", name, args == null ? DBProxyTargetGroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -69,6 +103,14 @@ public class DBProxyTargetGroup extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static DBProxyTargetGroup get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DBProxyTargetGroup(name, id, options);
     }

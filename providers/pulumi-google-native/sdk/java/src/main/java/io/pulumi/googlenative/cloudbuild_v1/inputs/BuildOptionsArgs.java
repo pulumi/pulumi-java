@@ -20,10 +20,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Optional arguments to enable specific features of builds.
+ * 
+ */
 public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BuildOptionsArgs Empty = new BuildOptionsArgs();
 
+    /**
+     * Requested disk size for the VM that runs the build. Note that this is *NOT* "disk free"; some of the space will be used by the operating system and build utilities. Also note that this is the minimum disk size that will be allocated for the build -- the build may run with a larger disk than requested. At present, the maximum disk size is 1000GB; builds that request more than the maximum are rejected with an error.
+     * 
+     */
     @InputImport(name="diskSizeGb")
     private final @Nullable Input<String> diskSizeGb;
 
@@ -31,6 +39,10 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
         return this.diskSizeGb == null ? Input.empty() : this.diskSizeGb;
     }
 
+    /**
+     * Option to specify whether or not to apply bash style string operations to the substitutions. NOTE: this is always enabled for triggered builds and cannot be overridden in the build configuration file.
+     * 
+     */
     @InputImport(name="dynamicSubstitutions")
     private final @Nullable Input<Boolean> dynamicSubstitutions;
 
@@ -38,6 +50,10 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
         return this.dynamicSubstitutions == null ? Input.empty() : this.dynamicSubstitutions;
     }
 
+    /**
+     * A list of global environment variable definitions that will exist for all build steps in this build. If a variable is defined in both globally and in a build step, the variable will use the build step value. The elements are of the form "KEY=VALUE" for the environment variable "KEY" being given the value "VALUE".
+     * 
+     */
     @InputImport(name="env")
     private final @Nullable Input<List<String>> env;
 
@@ -45,6 +61,10 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
         return this.env == null ? Input.empty() : this.env;
     }
 
+    /**
+     * Option to define build log streaming behavior to Google Cloud Storage.
+     * 
+     */
     @InputImport(name="logStreamingOption")
     private final @Nullable Input<BuildOptionsLogStreamingOption> logStreamingOption;
 
@@ -52,6 +72,10 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
         return this.logStreamingOption == null ? Input.empty() : this.logStreamingOption;
     }
 
+    /**
+     * Option to specify the logging mode, which determines if and where build logs are stored.
+     * 
+     */
     @InputImport(name="logging")
     private final @Nullable Input<BuildOptionsLogging> logging;
 
@@ -59,6 +83,10 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
         return this.logging == null ? Input.empty() : this.logging;
     }
 
+    /**
+     * Compute Engine machine type on which to run the build.
+     * 
+     */
     @InputImport(name="machineType")
     private final @Nullable Input<BuildOptionsMachineType> machineType;
 
@@ -66,6 +94,10 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
         return this.machineType == null ? Input.empty() : this.machineType;
     }
 
+    /**
+     * Optional. Specification for execution on a `WorkerPool`. See [running builds in a private pool](https://cloud.google.com/build/docs/private-pools/run-builds-in-private-pool) for more information.
+     * 
+     */
     @InputImport(name="pool")
     private final @Nullable Input<PoolOptionArgs> pool;
 
@@ -73,6 +105,10 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
         return this.pool == null ? Input.empty() : this.pool;
     }
 
+    /**
+     * Requested verifiability options.
+     * 
+     */
     @InputImport(name="requestedVerifyOption")
     private final @Nullable Input<BuildOptionsRequestedVerifyOption> requestedVerifyOption;
 
@@ -80,6 +116,10 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
         return this.requestedVerifyOption == null ? Input.empty() : this.requestedVerifyOption;
     }
 
+    /**
+     * A list of global environment variables, which are encrypted using a Cloud Key Management Service crypto key. These values must be specified in the build's `Secret`. These variables will be available to all build steps in this build.
+     * 
+     */
     @InputImport(name="secretEnv")
     private final @Nullable Input<List<String>> secretEnv;
 
@@ -87,6 +127,10 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
         return this.secretEnv == null ? Input.empty() : this.secretEnv;
     }
 
+    /**
+     * Requested hash for SourceProvenance.
+     * 
+     */
     @InputImport(name="sourceProvenanceHash")
     private final @Nullable Input<List<BuildOptionsSourceProvenanceHashItem>> sourceProvenanceHash;
 
@@ -94,6 +138,10 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceProvenanceHash == null ? Input.empty() : this.sourceProvenanceHash;
     }
 
+    /**
+     * Option to specify behavior when there is an error in the substitution checks. NOTE: this is always set to ALLOW_LOOSE for triggered builds and cannot be overridden in the build configuration file.
+     * 
+     */
     @InputImport(name="substitutionOption")
     private final @Nullable Input<BuildOptionsSubstitutionOption> substitutionOption;
 
@@ -101,6 +149,10 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
         return this.substitutionOption == null ? Input.empty() : this.substitutionOption;
     }
 
+    /**
+     * Global list of volumes to mount for ALL build steps Each volume is created as an empty volume prior to starting the build process. Upon completion of the build, volumes and their contents are discarded. Global volume names and paths cannot conflict with the volumes defined a build step. Using a global volume in a build with only one step is not valid as it is indicative of a build request with an incorrect configuration.
+     * 
+     */
     @InputImport(name="volumes")
     private final @Nullable Input<List<VolumeArgs>> volumes;
 
@@ -108,6 +160,10 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
         return this.volumes == null ? Input.empty() : this.volumes;
     }
 
+    /**
+     * This field deprecated; please use `pool.name` instead.
+     * 
+     */
     @InputImport(name="workerPool")
     private final @Nullable Input<String> workerPool;
 

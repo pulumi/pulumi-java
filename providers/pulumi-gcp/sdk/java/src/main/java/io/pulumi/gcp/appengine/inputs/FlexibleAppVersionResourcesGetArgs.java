@@ -17,6 +17,10 @@ public final class FlexibleAppVersionResourcesGetArgs extends io.pulumi.resource
 
     public static final FlexibleAppVersionResourcesGetArgs Empty = new FlexibleAppVersionResourcesGetArgs();
 
+    /**
+     * Number of CPU cores needed.
+     * 
+     */
     @InputImport(name="cpu")
     private final @Nullable Input<Integer> cpu;
 
@@ -24,6 +28,10 @@ public final class FlexibleAppVersionResourcesGetArgs extends io.pulumi.resource
         return this.cpu == null ? Input.empty() : this.cpu;
     }
 
+    /**
+     * Disk size (GB) needed.
+     * 
+     */
     @InputImport(name="diskGb")
     private final @Nullable Input<Integer> diskGb;
 
@@ -31,6 +39,10 @@ public final class FlexibleAppVersionResourcesGetArgs extends io.pulumi.resource
         return this.diskGb == null ? Input.empty() : this.diskGb;
     }
 
+    /**
+     * Memory (GB) needed.
+     * 
+     */
     @InputImport(name="memoryGb")
     private final @Nullable Input<Double> memoryGb;
 
@@ -38,6 +50,11 @@ public final class FlexibleAppVersionResourcesGetArgs extends io.pulumi.resource
         return this.memoryGb == null ? Input.empty() : this.memoryGb;
     }
 
+    /**
+     * List of ports, or port pairs, to forward from the virtual machine to the application container.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="volumes")
     private final @Nullable Input<List<FlexibleAppVersionResourcesVolumeGetArgs>> volumes;
 

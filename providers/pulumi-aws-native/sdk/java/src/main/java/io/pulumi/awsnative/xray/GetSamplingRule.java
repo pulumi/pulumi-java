@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSamplingRule {
+/**
+ * This schema provides construct and validation rules for AWS-XRay SamplingRule resource parameters.
+ * 
+ */
     public static CompletableFuture<GetSamplingRuleResult> invokeAsync(GetSamplingRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:xray:getSamplingRule", TypeShape.of(GetSamplingRuleResult.class), args == null ? GetSamplingRuleArgs.Empty : args, Utilities.withVersion(options));
     }

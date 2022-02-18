@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Time window specified for hourly operations.
+ * 
+ */
 public final class ResourcePolicyHourlyCycleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourcePolicyHourlyCycleArgs Empty = new ResourcePolicyHourlyCycleArgs();
 
+    /**
+     * Defines a schedule with units measured in hours. The value determines how many hours pass between the start of each cycle.
+     * 
+     */
     @InputImport(name="hoursInCycle")
     private final @Nullable Input<Integer> hoursInCycle;
 
@@ -22,6 +30,10 @@ public final class ResourcePolicyHourlyCycleArgs extends io.pulumi.resources.Res
         return this.hoursInCycle == null ? Input.empty() : this.hoursInCycle;
     }
 
+    /**
+     * Time within the window to start the operations. It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
+     * 
+     */
     @InputImport(name="startTime")
     private final @Nullable Input<String> startTime;
 

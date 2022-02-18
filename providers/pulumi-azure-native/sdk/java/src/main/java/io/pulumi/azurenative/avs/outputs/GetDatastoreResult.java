@@ -13,11 +13,35 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetDatastoreResult {
+    /**
+     * An iSCSI volume
+     * 
+     */
     private final @Nullable DiskPoolVolumeResponse diskPoolVolume;
+    /**
+     * Resource ID.
+     * 
+     */
     private final String id;
+    /**
+     * Resource name.
+     * 
+     */
     private final String name;
+    /**
+     * An Azure NetApp Files volume
+     * 
+     */
     private final @Nullable NetAppVolumeResponse netAppVolume;
+    /**
+     * The state of the datastore provisioning
+     * 
+     */
     private final String provisioningState;
+    /**
+     * Resource type.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"diskPoolVolume","id","name","netAppVolume","provisioningState","type"})
@@ -36,21 +60,45 @@ public final class GetDatastoreResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * An iSCSI volume
+     * 
+     */
     public Optional<DiskPoolVolumeResponse> getDiskPoolVolume() {
         return Optional.ofNullable(this.diskPoolVolume);
     }
+    /**
+     * Resource ID.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Resource name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * An Azure NetApp Files volume
+     * 
+     */
     public Optional<NetAppVolumeResponse> getNetAppVolume() {
         return Optional.ofNullable(this.netAppVolume);
     }
+    /**
+     * The state of the datastore provisioning
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Resource type.
+     * 
+     */
     public String getType() {
         return this.type;
     }

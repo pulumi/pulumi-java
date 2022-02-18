@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ClusterNotificationConfig {
+    /**
+     * The pubsub config for the cluster's upgrade notifications.
+     * 
+     */
     private final ClusterNotificationConfigPubsub pubsub;
 
     @OutputCustomType.Constructor({"pubsub"})
@@ -16,6 +20,10 @@ public final class ClusterNotificationConfig {
         this.pubsub = Objects.requireNonNull(pubsub);
     }
 
+    /**
+     * The pubsub config for the cluster's upgrade notifications.
+     * 
+     */
     public ClusterNotificationConfigPubsub getPubsub() {
         return this.pubsub;
     }

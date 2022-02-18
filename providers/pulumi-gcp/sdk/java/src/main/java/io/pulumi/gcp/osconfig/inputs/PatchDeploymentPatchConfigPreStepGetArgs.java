@@ -15,6 +15,11 @@ public final class PatchDeploymentPatchConfigPreStepGetArgs extends io.pulumi.re
 
     public static final PatchDeploymentPatchConfigPreStepGetArgs Empty = new PatchDeploymentPatchConfigPreStepGetArgs();
 
+    /**
+     * The ExecStepConfig for all Linux VMs targeted by the PatchJob.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="linuxExecStepConfig")
     private final @Nullable Input<PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGetArgs> linuxExecStepConfig;
 
@@ -22,6 +27,11 @@ public final class PatchDeploymentPatchConfigPreStepGetArgs extends io.pulumi.re
         return this.linuxExecStepConfig == null ? Input.empty() : this.linuxExecStepConfig;
     }
 
+    /**
+     * The ExecStepConfig for all Windows VMs targeted by the PatchJob.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="windowsExecStepConfig")
     private final @Nullable Input<PatchDeploymentPatchConfigPreStepWindowsExecStepConfigGetArgs> windowsExecStepConfig;
 

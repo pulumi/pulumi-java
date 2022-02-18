@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOriginGroup {
+/**
+ * Origin group comprising of origins is used for load balancing to origins when the content cannot be served from CDN.
+ * API Version: 2020-09-01.
+ * 
+ *
+ * Origin group comprising of origins is used for load balancing to origins when the content cannot be served from CDN.
+ * 
+ */
     public static CompletableFuture<GetOriginGroupResult> invokeAsync(GetOriginGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cdn:getOriginGroup", TypeShape.of(GetOriginGroupResult.class), args == null ? GetOriginGroupArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -11,6 +11,10 @@ import java.util.Objects;
 @OutputCustomType
 public final class BotSlotPriority {
     private final Integer priority;
+    /**
+     * The name of the slot.
+     * 
+     */
     private final String slotName;
 
     @OutputCustomType.Constructor({"priority","slotName"})
@@ -24,6 +28,10 @@ public final class BotSlotPriority {
     public Integer getPriority() {
         return this.priority;
     }
+    /**
+     * The name of the slot.
+     * 
+     */
     public String getSlotName() {
         return this.slotName;
     }

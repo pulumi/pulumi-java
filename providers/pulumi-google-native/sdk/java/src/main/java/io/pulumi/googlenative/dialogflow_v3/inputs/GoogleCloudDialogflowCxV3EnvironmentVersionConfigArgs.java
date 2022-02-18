@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Configuration for the version.
+ * 
+ */
 public final class GoogleCloudDialogflowCxV3EnvironmentVersionConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3EnvironmentVersionConfigArgs Empty = new GoogleCloudDialogflowCxV3EnvironmentVersionConfigArgs();
 
+    /**
+     * Format: projects//locations//agents//flows//versions/.
+     * 
+     */
     @InputImport(name="version", required=true)
     private final Input<String> version;
 

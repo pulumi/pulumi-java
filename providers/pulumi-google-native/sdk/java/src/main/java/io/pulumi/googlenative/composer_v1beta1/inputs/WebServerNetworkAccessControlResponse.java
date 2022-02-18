@@ -9,10 +9,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Network-level access control policy for the Airflow web server.
+ * 
+ */
 public final class WebServerNetworkAccessControlResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final WebServerNetworkAccessControlResponse Empty = new WebServerNetworkAccessControlResponse();
 
+    /**
+     * A collection of allowed IP ranges with descriptions.
+     * 
+     */
     @InputImport(name="allowedIpRanges", required=true)
     private final List<AllowedIpRangeResponse> allowedIpRanges;
 

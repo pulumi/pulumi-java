@@ -14,10 +14,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Criterion for dynamic threshold.
+ * 
+ */
 public final class DynamicMetricCriteriaResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DynamicMetricCriteriaResponse Empty = new DynamicMetricCriteriaResponse();
 
+    /**
+     * The extent of deviation required to trigger an alert. This will affect how tight the threshold is to the metric series pattern.
+     * 
+     */
     @InputImport(name="alertSensitivity", required=true)
     private final String alertSensitivity;
 
@@ -25,6 +33,11 @@ public final class DynamicMetricCriteriaResponse extends io.pulumi.resources.Inv
         return this.alertSensitivity;
     }
 
+    /**
+     * Specifies the type of threshold criteria
+     * Expected value is 'DynamicThresholdCriterion'.
+     * 
+     */
     @InputImport(name="criterionType", required=true)
     private final String criterionType;
 
@@ -32,6 +45,10 @@ public final class DynamicMetricCriteriaResponse extends io.pulumi.resources.Inv
         return this.criterionType;
     }
 
+    /**
+     * List of dimension conditions.
+     * 
+     */
     @InputImport(name="dimensions")
     private final @Nullable List<MetricDimensionResponse> dimensions;
 
@@ -39,6 +56,10 @@ public final class DynamicMetricCriteriaResponse extends io.pulumi.resources.Inv
         return this.dimensions == null ? List.of() : this.dimensions;
     }
 
+    /**
+     * The minimum number of violations required within the selected lookback time window required to raise an alert.
+     * 
+     */
     @InputImport(name="failingPeriods", required=true)
     private final DynamicThresholdFailingPeriodsResponse failingPeriods;
 
@@ -46,6 +67,10 @@ public final class DynamicMetricCriteriaResponse extends io.pulumi.resources.Inv
         return this.failingPeriods;
     }
 
+    /**
+     * Use this option to set the date from which to start learning the metric historical data and calculate the dynamic thresholds (in ISO8601 format)
+     * 
+     */
     @InputImport(name="ignoreDataBefore")
     private final @Nullable String ignoreDataBefore;
 
@@ -53,6 +78,10 @@ public final class DynamicMetricCriteriaResponse extends io.pulumi.resources.Inv
         return this.ignoreDataBefore == null ? Optional.empty() : Optional.ofNullable(this.ignoreDataBefore);
     }
 
+    /**
+     * Name of the metric.
+     * 
+     */
     @InputImport(name="metricName", required=true)
     private final String metricName;
 
@@ -60,6 +89,10 @@ public final class DynamicMetricCriteriaResponse extends io.pulumi.resources.Inv
         return this.metricName;
     }
 
+    /**
+     * Namespace of the metric.
+     * 
+     */
     @InputImport(name="metricNamespace")
     private final @Nullable String metricNamespace;
 
@@ -67,6 +100,10 @@ public final class DynamicMetricCriteriaResponse extends io.pulumi.resources.Inv
         return this.metricNamespace == null ? Optional.empty() : Optional.ofNullable(this.metricNamespace);
     }
 
+    /**
+     * Name of the criteria.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -74,6 +111,10 @@ public final class DynamicMetricCriteriaResponse extends io.pulumi.resources.Inv
         return this.name;
     }
 
+    /**
+     * The operator used to compare the metric value against the threshold.
+     * 
+     */
     @InputImport(name="operator", required=true)
     private final String operator;
 
@@ -81,6 +122,10 @@ public final class DynamicMetricCriteriaResponse extends io.pulumi.resources.Inv
         return this.operator;
     }
 
+    /**
+     * Allows creating an alert rule on a custom metric that isn't yet emitted, by causing the metric validation to be skipped.
+     * 
+     */
     @InputImport(name="skipMetricValidation")
     private final @Nullable Boolean skipMetricValidation;
 
@@ -88,6 +133,10 @@ public final class DynamicMetricCriteriaResponse extends io.pulumi.resources.Inv
         return this.skipMetricValidation == null ? Optional.empty() : Optional.ofNullable(this.skipMetricValidation);
     }
 
+    /**
+     * the criteria time aggregation types.
+     * 
+     */
     @InputImport(name="timeAggregation", required=true)
     private final String timeAggregation;
 

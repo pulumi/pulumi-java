@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetLocationsResult {
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
+    /**
+     * The list of Cloud Run locations available for the given project.
+     * 
+     */
     private final List<String> locations;
     private final String project;
 
@@ -24,9 +32,17 @@ public final class GetLocationsResult {
         this.project = Objects.requireNonNull(project);
     }
 
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * The list of Cloud Run locations available for the given project.
+     * 
+     */
     public List<String> getLocations() {
         return this.locations;
     }

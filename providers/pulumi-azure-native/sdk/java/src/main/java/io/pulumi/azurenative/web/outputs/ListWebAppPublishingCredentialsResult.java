@@ -11,14 +11,50 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListWebAppPublishingCredentialsResult {
+    /**
+     * Resource Id.
+     * 
+     */
     private final String id;
+    /**
+     * Kind of resource.
+     * 
+     */
     private final @Nullable String kind;
+    /**
+     * Resource Name.
+     * 
+     */
     private final String name;
+    /**
+     * Password used for publishing.
+     * 
+     */
     private final @Nullable String publishingPassword;
+    /**
+     * Password hash used for publishing.
+     * 
+     */
     private final @Nullable String publishingPasswordHash;
+    /**
+     * Password hash salt used for publishing.
+     * 
+     */
     private final @Nullable String publishingPasswordHashSalt;
+    /**
+     * Username used for publishing.
+     * 
+     */
     private final String publishingUserName;
+    /**
+     * Url of SCM site.
+     * 
+     */
     private final @Nullable String scmUri;
+    /**
+     * Resource type.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"id","kind","name","publishingPassword","publishingPasswordHash","publishingPasswordHashSalt","publishingUserName","scmUri","type"})
@@ -43,30 +79,66 @@ public final class ListWebAppPublishingCredentialsResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Resource Id.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Kind of resource.
+     * 
+     */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
+    /**
+     * Resource Name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Password used for publishing.
+     * 
+     */
     public Optional<String> getPublishingPassword() {
         return Optional.ofNullable(this.publishingPassword);
     }
+    /**
+     * Password hash used for publishing.
+     * 
+     */
     public Optional<String> getPublishingPasswordHash() {
         return Optional.ofNullable(this.publishingPasswordHash);
     }
+    /**
+     * Password hash salt used for publishing.
+     * 
+     */
     public Optional<String> getPublishingPasswordHashSalt() {
         return Optional.ofNullable(this.publishingPasswordHashSalt);
     }
+    /**
+     * Username used for publishing.
+     * 
+     */
     public String getPublishingUserName() {
         return this.publishingUserName;
     }
+    /**
+     * Url of SCM site.
+     * 
+     */
     public Optional<String> getScmUri() {
         return Optional.ofNullable(this.scmUri);
     }
+    /**
+     * Resource type.
+     * 
+     */
     public String getType() {
         return this.type;
     }

@@ -9,6 +9,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class VideoTrackDescriptorResponse {
+    /**
+     * The discriminator for derived types.
+     * Expected value is '#Microsoft.Media.VideoTrackDescriptor'.
+     * 
+     */
     private final String odataType;
 
     @OutputCustomType.Constructor({"odataType"})
@@ -16,6 +21,11 @@ public final class VideoTrackDescriptorResponse {
         this.odataType = Objects.requireNonNull(odataType);
     }
 
+    /**
+     * The discriminator for derived types.
+     * Expected value is '#Microsoft.Media.VideoTrackDescriptor'.
+     * 
+     */
     public String getOdataType() {
         return this.odataType;
     }

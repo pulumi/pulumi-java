@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNotificationRegistration {
+/**
+ * The notification registration definition.
+ * API Version: 2020-11-20.
+ * 
+ *
+ * The notification registration definition.
+ * 
+ */
     public static CompletableFuture<GetNotificationRegistrationResult> invokeAsync(GetNotificationRegistrationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:providerhub:getNotificationRegistration", TypeShape.of(GetNotificationRegistrationResult.class), args == null ? GetNotificationRegistrationArgs.Empty : args, Utilities.withVersion(options));
     }

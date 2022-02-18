@@ -14,6 +14,10 @@ public final class GetHealthCheckArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetHealthCheckArgs Empty = new GetHealthCheckArgs();
 
+    /**
+     * Name of the resource.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -21,6 +25,11 @@ public final class GetHealthCheckArgs extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

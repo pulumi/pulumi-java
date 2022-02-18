@@ -15,6 +15,11 @@ public final class LiteSubscriptionArgs extends io.pulumi.resources.ResourceArgs
 
     public static final LiteSubscriptionArgs Empty = new LiteSubscriptionArgs();
 
+    /**
+     * The settings for this subscription's message delivery.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="deliveryConfig")
     private final @Nullable Input<LiteSubscriptionDeliveryConfigArgs> deliveryConfig;
 
@@ -22,6 +27,10 @@ public final class LiteSubscriptionArgs extends io.pulumi.resources.ResourceArgs
         return this.deliveryConfig == null ? Input.empty() : this.deliveryConfig;
     }
 
+    /**
+     * Name of the subscription.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -29,6 +38,11 @@ public final class LiteSubscriptionArgs extends io.pulumi.resources.ResourceArgs
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -36,6 +50,10 @@ public final class LiteSubscriptionArgs extends io.pulumi.resources.ResourceArgs
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The region of the pubsub lite topic.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 
@@ -43,6 +61,10 @@ public final class LiteSubscriptionArgs extends io.pulumi.resources.ResourceArgs
         return this.region == null ? Input.empty() : this.region;
     }
 
+    /**
+     * A reference to a Topic resource.
+     * 
+     */
     @InputImport(name="topic", required=true)
     private final Input<String> topic;
 
@@ -50,6 +72,10 @@ public final class LiteSubscriptionArgs extends io.pulumi.resources.ResourceArgs
         return this.topic;
     }
 
+    /**
+     * The zone of the pubsub lite topic.
+     * 
+     */
     @InputImport(name="zone")
     private final @Nullable Input<String> zone;
 

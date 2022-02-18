@@ -13,6 +13,10 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFile
 
     public static final PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetGetArgs Empty = new PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetGetArgs();
 
+    /**
+     * The url, in the format `gs://<bucket>/<path>`. Trailing wildcard in the path is allowed.
+     * 
+     */
     @InputImport(name="url", required=true)
     private final Input<String> url;
 

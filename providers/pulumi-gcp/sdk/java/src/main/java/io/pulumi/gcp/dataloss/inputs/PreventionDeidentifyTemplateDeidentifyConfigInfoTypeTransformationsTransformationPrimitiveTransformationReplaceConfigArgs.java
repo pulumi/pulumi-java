@@ -13,6 +13,11 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
 
     public static final PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigArgs Empty = new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigArgs();
 
+    /**
+     * Replace each input value with a given value.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="newValue", required=true)
     private final Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueArgs> newValue;
 

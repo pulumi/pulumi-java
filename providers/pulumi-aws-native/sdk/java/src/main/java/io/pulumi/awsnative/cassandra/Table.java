@@ -20,6 +20,12 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Resource schema for AWS::Cassandra::Table
+ * 
+ * ## Example Usage
+ * 
+ */
 @ResourceType(type="aws-native:cassandra:Table")
 public class Table extends io.pulumi.resources.CustomResource {
     @OutputExport(name="billingMode", type=TableBillingMode.class, parameters={})
@@ -28,15 +34,31 @@ public class Table extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ TableBillingMode> getBillingMode() {
         return this.billingMode;
     }
+    /**
+     * Clustering key columns of the table
+     * 
+     */
     @OutputExport(name="clusteringKeyColumns", type=List.class, parameters={TableClusteringKeyColumn.class})
     private Output</* @Nullable */ List<TableClusteringKeyColumn>> clusteringKeyColumns;
 
+    /**
+     * @return Clustering key columns of the table
+     * 
+     */
     public Output</* @Nullable */ List<TableClusteringKeyColumn>> getClusteringKeyColumns() {
         return this.clusteringKeyColumns;
     }
+    /**
+     * Default TTL (Time To Live) in seconds, where zero is disabled. If the value is greater than zero, TTL is enabled for the entire table and an expiration timestamp is added to each column.
+     * 
+     */
     @OutputExport(name="defaultTimeToLive", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> defaultTimeToLive;
 
+    /**
+     * @return Default TTL (Time To Live) in seconds, where zero is disabled. If the value is greater than zero, TTL is enabled for the entire table and an expiration timestamp is added to each column.
+     * 
+     */
     public Output</* @Nullable */ Integer> getDefaultTimeToLive() {
         return this.defaultTimeToLive;
     }
@@ -46,43 +68,97 @@ public class Table extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ TableEncryptionSpecification> getEncryptionSpecification() {
         return this.encryptionSpecification;
     }
+    /**
+     * Name for Cassandra keyspace
+     * 
+     */
     @OutputExport(name="keyspaceName", type=String.class, parameters={})
     private Output<String> keyspaceName;
 
+    /**
+     * @return Name for Cassandra keyspace
+     * 
+     */
     public Output<String> getKeyspaceName() {
         return this.keyspaceName;
     }
+    /**
+     * Partition key columns of the table
+     * 
+     */
     @OutputExport(name="partitionKeyColumns", type=List.class, parameters={TableColumn.class})
     private Output<List<TableColumn>> partitionKeyColumns;
 
+    /**
+     * @return Partition key columns of the table
+     * 
+     */
     public Output<List<TableColumn>> getPartitionKeyColumns() {
         return this.partitionKeyColumns;
     }
+    /**
+     * Indicates whether point in time recovery is enabled (true) or disabled (false) on the table
+     * 
+     */
     @OutputExport(name="pointInTimeRecoveryEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> pointInTimeRecoveryEnabled;
 
+    /**
+     * @return Indicates whether point in time recovery is enabled (true) or disabled (false) on the table
+     * 
+     */
     public Output</* @Nullable */ Boolean> getPointInTimeRecoveryEnabled() {
         return this.pointInTimeRecoveryEnabled;
     }
+    /**
+     * Non-key columns of the table
+     * 
+     */
     @OutputExport(name="regularColumns", type=List.class, parameters={TableColumn.class})
     private Output</* @Nullable */ List<TableColumn>> regularColumns;
 
+    /**
+     * @return Non-key columns of the table
+     * 
+     */
     public Output</* @Nullable */ List<TableColumn>> getRegularColumns() {
         return this.regularColumns;
     }
+    /**
+     * Name for Cassandra table
+     * 
+     */
     @OutputExport(name="tableName", type=String.class, parameters={})
     private Output</* @Nullable */ String> tableName;
 
+    /**
+     * @return Name for Cassandra table
+     * 
+     */
     public Output</* @Nullable */ String> getTableName() {
         return this.tableName;
     }
+    /**
+     * An array of key-value pairs to apply to this resource
+     * 
+     */
     @OutputExport(name="tags", type=List.class, parameters={TableTag.class})
     private Output</* @Nullable */ List<TableTag>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource
+     * 
+     */
     public Output</* @Nullable */ List<TableTag>> getTags() {
         return this.tags;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Table(String name, TableArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:cassandra:Table", name, args == null ? TableArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -98,6 +174,14 @@ public class Table extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Table get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Table(name, id, options);
     }

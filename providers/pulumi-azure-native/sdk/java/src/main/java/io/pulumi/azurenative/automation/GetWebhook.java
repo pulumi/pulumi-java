@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWebhook {
+/**
+ * Definition of the webhook type.
+ * API Version: 2015-10-31.
+ * 
+ *
+ * Definition of the webhook type.
+ * 
+ */
     public static CompletableFuture<GetWebhookResult> invokeAsync(GetWebhookArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getWebhook", TypeShape.of(GetWebhookResult.class), args == null ? GetWebhookArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The type of identity used for the cluster. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities.
+     * 
+     */
     @EnumType
     public enum ResourceIdentityType {
         SystemAssigned("SystemAssigned"),

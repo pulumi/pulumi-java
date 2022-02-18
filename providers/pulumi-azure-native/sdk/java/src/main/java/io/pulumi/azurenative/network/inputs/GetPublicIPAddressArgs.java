@@ -14,6 +14,10 @@ public final class GetPublicIPAddressArgs extends io.pulumi.resources.InvokeArgs
 
     public static final GetPublicIPAddressArgs Empty = new GetPublicIPAddressArgs();
 
+    /**
+     * Expands referenced resources.
+     * 
+     */
     @InputImport(name="expand")
     private final @Nullable String expand;
 
@@ -21,6 +25,10 @@ public final class GetPublicIPAddressArgs extends io.pulumi.resources.InvokeArgs
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
+    /**
+     * The name of the public IP address.
+     * 
+     */
     @InputImport(name="publicIpAddressName", required=true)
     private final String publicIpAddressName;
 
@@ -28,6 +36,10 @@ public final class GetPublicIPAddressArgs extends io.pulumi.resources.InvokeArgs
         return this.publicIpAddressName;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

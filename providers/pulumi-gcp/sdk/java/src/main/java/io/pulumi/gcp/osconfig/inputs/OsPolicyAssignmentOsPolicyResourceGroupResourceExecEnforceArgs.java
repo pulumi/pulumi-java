@@ -16,6 +16,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceArg
 
     public static final OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceArgs Empty = new OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceArgs();
 
+    /**
+     * Optional arguments to pass to the source during execution.
+     * 
+     */
     @InputImport(name="args")
     private final @Nullable Input<List<String>> args;
 
@@ -23,6 +27,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceArg
         return this.args == null ? Input.empty() : this.args;
     }
 
+    /**
+     * A remote or local source.
+     * 
+     */
     @InputImport(name="file")
     private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileArgs> file;
 
@@ -30,6 +38,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceArg
         return this.file == null ? Input.empty() : this.file;
     }
 
+    /**
+     * Required. The script interpreter to use. Possible values: INTERPRETER_UNSPECIFIED, NONE, SHELL, POWERSHELL
+     * 
+     */
     @InputImport(name="interpreter", required=true)
     private final Input<String> interpreter;
 
@@ -37,6 +49,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceArg
         return this.interpreter;
     }
 
+    /**
+     * Only recorded for enforce Exec. Path to an output file (that is created by this Exec) whose content will be recorded in OSPolicyResourceCompliance after a successful run. Absence or failure to read this file will result in this ExecResource being non-compliant. Output file size is limited to 100K bytes.
+     * 
+     */
     @InputImport(name="outputFilePath")
     private final @Nullable Input<String> outputFilePath;
 
@@ -44,6 +60,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceArg
         return this.outputFilePath == null ? Input.empty() : this.outputFilePath;
     }
 
+    /**
+     * An inline script. The size of the script is limited to 1024 characters.
+     * 
+     */
     @InputImport(name="script")
     private final @Nullable Input<String> script;
 

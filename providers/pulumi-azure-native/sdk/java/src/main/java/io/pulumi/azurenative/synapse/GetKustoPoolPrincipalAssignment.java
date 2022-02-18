@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetKustoPoolPrincipalAssignment {
+/**
+ * Class representing a cluster principal assignment.
+ * API Version: 2021-04-01-preview.
+ * 
+ *
+ * Class representing a cluster principal assignment.
+ * 
+ */
     public static CompletableFuture<GetKustoPoolPrincipalAssignmentResult> invokeAsync(GetKustoPoolPrincipalAssignmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getKustoPoolPrincipalAssignment", TypeShape.of(GetKustoPoolPrincipalAssignmentResult.class), args == null ? GetKustoPoolPrincipalAssignmentArgs.Empty : args, Utilities.withVersion(options));
     }

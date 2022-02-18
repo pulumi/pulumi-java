@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegistryIamPolicy {
+/**
+ * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+ * 
+ */
     public static CompletableFuture<GetRegistryIamPolicyResult> invokeAsync(GetRegistryIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudiot/v1:getRegistryIamPolicy", TypeShape.of(GetRegistryIamPolicyResult.class), args == null ? GetRegistryIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

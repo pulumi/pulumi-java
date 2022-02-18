@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The language extension object.
+ * 
+ */
 public final class LanguageExtensionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LanguageExtensionResponse Empty = new LanguageExtensionResponse();
 
+    /**
+     * The language extension name.
+     * 
+     */
     @InputImport(name="languageExtensionName")
     private final @Nullable String languageExtensionName;
 

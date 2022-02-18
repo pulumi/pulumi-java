@@ -14,6 +14,10 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
 
     public static final RegisteredServerArgs Empty = new RegisteredServerArgs();
 
+    /**
+     * Registered Server Agent Version
+     * 
+     */
     @InputImport(name="agentVersion")
     private final @Nullable Input<String> agentVersion;
 
@@ -21,6 +25,10 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
         return this.agentVersion == null ? Input.empty() : this.agentVersion;
     }
 
+    /**
+     * Registered Server clusterId
+     * 
+     */
     @InputImport(name="clusterId")
     private final @Nullable Input<String> clusterId;
 
@@ -28,6 +36,10 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
         return this.clusterId == null ? Input.empty() : this.clusterId;
     }
 
+    /**
+     * Registered Server clusterName
+     * 
+     */
     @InputImport(name="clusterName")
     private final @Nullable Input<String> clusterName;
 
@@ -35,6 +47,10 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
         return this.clusterName == null ? Input.empty() : this.clusterName;
     }
 
+    /**
+     * Friendly Name
+     * 
+     */
     @InputImport(name="friendlyName")
     private final @Nullable Input<String> friendlyName;
 
@@ -42,6 +58,10 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
     }
 
+    /**
+     * Registered Server last heart beat
+     * 
+     */
     @InputImport(name="lastHeartBeat")
     private final @Nullable Input<String> lastHeartBeat;
 
@@ -49,6 +69,10 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
         return this.lastHeartBeat == null ? Input.empty() : this.lastHeartBeat;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -56,6 +80,10 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
         return this.resourceGroupName;
     }
 
+    /**
+     * Registered Server Certificate
+     * 
+     */
     @InputImport(name="serverCertificate")
     private final @Nullable Input<String> serverCertificate;
 
@@ -63,6 +91,10 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
         return this.serverCertificate == null ? Input.empty() : this.serverCertificate;
     }
 
+    /**
+     * Registered Server serverId
+     * 
+     */
     @InputImport(name="serverId")
     private final @Nullable Input<String> serverId;
 
@@ -70,6 +102,10 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
         return this.serverId == null ? Input.empty() : this.serverId;
     }
 
+    /**
+     * Registered Server OS Version
+     * 
+     */
     @InputImport(name="serverOSVersion")
     private final @Nullable Input<String> serverOSVersion;
 
@@ -77,6 +113,10 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
         return this.serverOSVersion == null ? Input.empty() : this.serverOSVersion;
     }
 
+    /**
+     * Registered Server serverRole
+     * 
+     */
     @InputImport(name="serverRole")
     private final @Nullable Input<String> serverRole;
 
@@ -84,6 +124,10 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
         return this.serverRole == null ? Input.empty() : this.serverRole;
     }
 
+    /**
+     * Name of Storage Sync Service resource.
+     * 
+     */
     @InputImport(name="storageSyncServiceName", required=true)
     private final Input<String> storageSyncServiceName;
 

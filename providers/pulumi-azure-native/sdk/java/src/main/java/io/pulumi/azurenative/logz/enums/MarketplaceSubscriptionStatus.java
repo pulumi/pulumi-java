@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.
+     * 
+     */
     @EnumType
     public enum MarketplaceSubscriptionStatus {
         Active("Active"),

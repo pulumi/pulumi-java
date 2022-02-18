@@ -12,6 +12,10 @@ public final class JwtResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final JwtResponse Empty = new JwtResponse();
 
+    /**
+     * The compact encoding of a JWS, which is always three base64 encoded strings joined by periods. For details, see: https://tools.ietf.org/html/rfc7515.html#section-3.1
+     * 
+     */
     @InputImport(name="compactJwt", required=true)
     private final String compactJwt;
 

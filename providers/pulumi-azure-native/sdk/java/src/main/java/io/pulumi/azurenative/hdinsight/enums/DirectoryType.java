@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The directory type.
+     * 
+     */
     @EnumType
     public enum DirectoryType {
         ActiveDirectory("ActiveDirectory");

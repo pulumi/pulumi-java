@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Provisioning state of the connected cluster resource.
+     * 
+     */
     @EnumType
     public enum ProvisioningState {
         Succeeded("Succeeded"),

@@ -12,6 +12,10 @@ public final class ListWebAppBackupConfigurationArgs extends io.pulumi.resources
 
     public static final ListWebAppBackupConfigurationArgs Empty = new ListWebAppBackupConfigurationArgs();
 
+    /**
+     * Name of the app.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -19,6 +23,10 @@ public final class ListWebAppBackupConfigurationArgs extends io.pulumi.resources
         return this.name;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

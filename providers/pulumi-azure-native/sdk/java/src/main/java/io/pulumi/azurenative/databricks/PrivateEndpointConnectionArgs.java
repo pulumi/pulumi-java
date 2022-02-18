@@ -15,6 +15,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
 
     public static final PrivateEndpointConnectionArgs Empty = new PrivateEndpointConnectionArgs();
 
+    /**
+     * The name of the private endpoint connection
+     * 
+     */
     @InputImport(name="privateEndpointConnectionName")
     private final @Nullable Input<String> privateEndpointConnectionName;
 
@@ -22,6 +26,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.privateEndpointConnectionName == null ? Input.empty() : this.privateEndpointConnectionName;
     }
 
+    /**
+     * The private endpoint connection properties.
+     * 
+     */
     @InputImport(name="properties", required=true)
     private final Input<PrivateEndpointConnectionPropertiesArgs> properties;
 
@@ -29,6 +37,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.properties;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -36,6 +48,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the workspace.
+     * 
+     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

@@ -14,6 +14,11 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigGetArgs extends io.pu
 
     public static final AiFeatureStoreEntityTypeMonitoringConfigGetArgs Empty = new AiFeatureStoreEntityTypeMonitoringConfigGetArgs();
 
+    /**
+     * Configuration of how features in Featurestore are monitored.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="snapshotAnalysis")
     private final @Nullable Input<AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetArgs> snapshotAnalysis;
 

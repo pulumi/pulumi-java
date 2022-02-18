@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class NodeInitializationActionResponse {
+    /**
+     * Cloud Storage URI of executable file.
+     * 
+     */
     private final String executableFile;
+    /**
+     * Optional. Amount of time executable has to complete. Default is 10 minutes (see JSON representation of Duration (https://developers.google.com/protocol-buffers/docs/proto3#json)).Cluster creation fails with an explanatory error message (the name of the executable that caused the error and the exceeded timeout period) if the executable is not completed at end of the timeout period.
+     * 
+     */
     private final String executionTimeout;
 
     @OutputCustomType.Constructor({"executableFile","executionTimeout"})
@@ -20,9 +28,17 @@ public final class NodeInitializationActionResponse {
         this.executionTimeout = Objects.requireNonNull(executionTimeout);
     }
 
+    /**
+     * Cloud Storage URI of executable file.
+     * 
+     */
     public String getExecutableFile() {
         return this.executableFile;
     }
+    /**
+     * Optional. Amount of time executable has to complete. Default is 10 minutes (see JSON representation of Duration (https://developers.google.com/protocol-buffers/docs/proto3#json)).Cluster creation fails with an explanatory error message (the name of the executable that caused the error and the exceeded timeout period) if the executable is not completed at end of the timeout period.
+     * 
+     */
     public String getExecutionTimeout() {
         return this.executionTimeout;
     }

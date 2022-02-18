@@ -15,6 +15,10 @@ public final class IamAuditConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IamAuditConfigArgs Empty = new IamAuditConfigArgs();
 
+    /**
+     * The configuration for logging of each type of permission. This can be specified multiple times.
+     * 
+     */
     @InputImport(name="auditLogConfigs", required=true)
     private final Input<List<IamAuditConfigAuditLogConfigArgs>> auditLogConfigs;
 
@@ -29,6 +33,10 @@ public final class IamAuditConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.folder;
     }
 
+    /**
+     * Service which will be enabled for audit logging. The special value allServices covers all services.
+     * 
+     */
     @InputImport(name="service", required=true)
     private final Input<String> service;
 

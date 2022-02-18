@@ -16,6 +16,12 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
 
     public static final PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs Empty = new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs();
 
+    /**
+     * InfoTypes to apply the transformation to. Leaving this empty will apply the transformation to apply to
+     * all findings that correspond to infoTypes that were requested in InspectConfig.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="infoTypes")
     private final @Nullable Input<List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs>> infoTypes;
 
@@ -23,6 +29,11 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
         return this.infoTypes == null ? Input.empty() : this.infoTypes;
     }
 
+    /**
+     * Primitive transformation to apply to the infoType.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="primitiveTransformation", required=true)
     private final Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationArgs> primitiveTransformation;
 

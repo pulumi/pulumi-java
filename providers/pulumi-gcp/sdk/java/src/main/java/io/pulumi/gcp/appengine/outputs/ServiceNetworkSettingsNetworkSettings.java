@@ -11,6 +11,12 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ServiceNetworkSettingsNetworkSettings {
+    /**
+     * The ingress settings for version or service.
+     * Default value is `INGRESS_TRAFFIC_ALLOWED_UNSPECIFIED`.
+     * Possible values are `INGRESS_TRAFFIC_ALLOWED_UNSPECIFIED`, `INGRESS_TRAFFIC_ALLOWED_ALL`, `INGRESS_TRAFFIC_ALLOWED_INTERNAL_ONLY`, and `INGRESS_TRAFFIC_ALLOWED_INTERNAL_AND_LB`.
+     * 
+     */
     private final @Nullable String ingressTrafficAllowed;
 
     @OutputCustomType.Constructor({"ingressTrafficAllowed"})
@@ -18,6 +24,12 @@ public final class ServiceNetworkSettingsNetworkSettings {
         this.ingressTrafficAllowed = ingressTrafficAllowed;
     }
 
+    /**
+     * The ingress settings for version or service.
+     * Default value is `INGRESS_TRAFFIC_ALLOWED_UNSPECIFIED`.
+     * Possible values are `INGRESS_TRAFFIC_ALLOWED_UNSPECIFIED`, `INGRESS_TRAFFIC_ALLOWED_ALL`, `INGRESS_TRAFFIC_ALLOWED_INTERNAL_ONLY`, and `INGRESS_TRAFFIC_ALLOWED_INTERNAL_AND_LB`.
+     * 
+     */
     public Optional<String> getIngressTrafficAllowed() {
         return Optional.ofNullable(this.ingressTrafficAllowed);
     }

@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * All Redis Settings. Few possible keys: rdb-backup-enabled,rdb-storage-connection-string,rdb-backup-frequency,maxmemory-delta,maxmemory-policy,notify-keyspace-events,maxmemory-samples,slowlog-log-slower-than,slowlog-max-len,list-max-ziplist-entries,list-max-ziplist-value,hash-max-ziplist-entries,hash-max-ziplist-value,set-max-intset-entries,zset-max-ziplist-entries,zset-max-ziplist-value etc.
+ * 
+ */
 public final class RedisCommonPropertiesResponseRedisConfiguration extends io.pulumi.resources.InvokeArgs {
 
     public static final RedisCommonPropertiesResponseRedisConfiguration Empty = new RedisCommonPropertiesResponseRedisConfiguration();
 
+    /**
+     * First storage account connection string
+     * 
+     */
     @InputImport(name="aofStorageConnectionString0")
     private final @Nullable String aofStorageConnectionString0;
 
@@ -21,6 +29,10 @@ public final class RedisCommonPropertiesResponseRedisConfiguration extends io.pu
         return this.aofStorageConnectionString0 == null ? Optional.empty() : Optional.ofNullable(this.aofStorageConnectionString0);
     }
 
+    /**
+     * Second storage account connection string
+     * 
+     */
     @InputImport(name="aofStorageConnectionString1")
     private final @Nullable String aofStorageConnectionString1;
 
@@ -28,6 +40,10 @@ public final class RedisCommonPropertiesResponseRedisConfiguration extends io.pu
         return this.aofStorageConnectionString1 == null ? Optional.empty() : Optional.ofNullable(this.aofStorageConnectionString1);
     }
 
+    /**
+     * The max clients config
+     * 
+     */
     @InputImport(name="maxclients", required=true)
     private final String maxclients;
 
@@ -35,6 +51,10 @@ public final class RedisCommonPropertiesResponseRedisConfiguration extends io.pu
         return this.maxclients;
     }
 
+    /**
+     * Value in megabytes reserved for fragmentation per shard
+     * 
+     */
     @InputImport(name="maxfragmentationmemoryReserved")
     private final @Nullable String maxfragmentationmemoryReserved;
 
@@ -42,6 +62,10 @@ public final class RedisCommonPropertiesResponseRedisConfiguration extends io.pu
         return this.maxfragmentationmemoryReserved == null ? Optional.empty() : Optional.ofNullable(this.maxfragmentationmemoryReserved);
     }
 
+    /**
+     * Value in megabytes reserved for non-cache usage per shard e.g. failover.
+     * 
+     */
     @InputImport(name="maxmemoryDelta")
     private final @Nullable String maxmemoryDelta;
 
@@ -49,6 +73,10 @@ public final class RedisCommonPropertiesResponseRedisConfiguration extends io.pu
         return this.maxmemoryDelta == null ? Optional.empty() : Optional.ofNullable(this.maxmemoryDelta);
     }
 
+    /**
+     * The eviction strategy used when your data won't fit within its memory limit.
+     * 
+     */
     @InputImport(name="maxmemoryPolicy")
     private final @Nullable String maxmemoryPolicy;
 
@@ -56,6 +84,10 @@ public final class RedisCommonPropertiesResponseRedisConfiguration extends io.pu
         return this.maxmemoryPolicy == null ? Optional.empty() : Optional.ofNullable(this.maxmemoryPolicy);
     }
 
+    /**
+     * Value in megabytes reserved for non-cache usage per shard e.g. failover.
+     * 
+     */
     @InputImport(name="maxmemoryReserved")
     private final @Nullable String maxmemoryReserved;
 
@@ -63,6 +95,10 @@ public final class RedisCommonPropertiesResponseRedisConfiguration extends io.pu
         return this.maxmemoryReserved == null ? Optional.empty() : Optional.ofNullable(this.maxmemoryReserved);
     }
 
+    /**
+     * Specifies whether the rdb backup is enabled
+     * 
+     */
     @InputImport(name="rdbBackupEnabled")
     private final @Nullable String rdbBackupEnabled;
 
@@ -70,6 +106,10 @@ public final class RedisCommonPropertiesResponseRedisConfiguration extends io.pu
         return this.rdbBackupEnabled == null ? Optional.empty() : Optional.ofNullable(this.rdbBackupEnabled);
     }
 
+    /**
+     * Specifies the frequency for creating rdb backup
+     * 
+     */
     @InputImport(name="rdbBackupFrequency")
     private final @Nullable String rdbBackupFrequency;
 
@@ -77,6 +117,10 @@ public final class RedisCommonPropertiesResponseRedisConfiguration extends io.pu
         return this.rdbBackupFrequency == null ? Optional.empty() : Optional.ofNullable(this.rdbBackupFrequency);
     }
 
+    /**
+     * Specifies the maximum number of snapshots for rdb backup
+     * 
+     */
     @InputImport(name="rdbBackupMaxSnapshotCount")
     private final @Nullable String rdbBackupMaxSnapshotCount;
 
@@ -84,6 +128,10 @@ public final class RedisCommonPropertiesResponseRedisConfiguration extends io.pu
         return this.rdbBackupMaxSnapshotCount == null ? Optional.empty() : Optional.ofNullable(this.rdbBackupMaxSnapshotCount);
     }
 
+    /**
+     * The storage account connection string for storing rdb file
+     * 
+     */
     @InputImport(name="rdbStorageConnectionString")
     private final @Nullable String rdbStorageConnectionString;
 

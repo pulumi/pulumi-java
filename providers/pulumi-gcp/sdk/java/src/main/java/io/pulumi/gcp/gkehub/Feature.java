@@ -17,69 +17,173 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * ## Import
+ * 
+ * Feature can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:gkehub/feature:Feature default projects/{{project}}/locations/{{location}}/features/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:gkehub/feature:Feature default {{project}}/{{location}}/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:gkehub/feature:Feature default {{location}}/{{name}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:gkehub/feature:Feature")
 public class Feature extends io.pulumi.resources.CustomResource {
+    /**
+     * Output only. When the Feature resource was created.
+     * 
+     */
     @OutputExport(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
+    /**
+     * @return Output only. When the Feature resource was created.
+     * 
+     */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
+    /**
+     * Output only. When the Feature resource was deleted.
+     * 
+     */
     @OutputExport(name="deleteTime", type=String.class, parameters={})
     private Output<String> deleteTime;
 
+    /**
+     * @return Output only. When the Feature resource was deleted.
+     * 
+     */
     public Output<String> getDeleteTime() {
         return this.deleteTime;
     }
+    /**
+     * GCP labels for this Feature.
+     * 
+     */
     @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
+    /**
+     * @return GCP labels for this Feature.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getLabels() {
         return this.labels;
     }
+    /**
+     * The location for the resource
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return The location for the resource
+     * 
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * The full, unique name of this Feature resource
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The full, unique name of this Feature resource
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The project for the resource
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The project for the resource
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * State of the Feature resource itself.
+     * 
+     */
     @OutputExport(name="resourceStates", type=List.class, parameters={FeatureResourceState.class})
     private Output<List<FeatureResourceState>> resourceStates;
 
+    /**
+     * @return State of the Feature resource itself.
+     * 
+     */
     public Output<List<FeatureResourceState>> getResourceStates() {
         return this.resourceStates;
     }
+    /**
+     * Optional. Hub-wide Feature configuration. If this Feature does not support any Hub-wide configuration, this field may be unused.
+     * 
+     */
     @OutputExport(name="spec", type=FeatureSpec.class, parameters={})
     private Output</* @Nullable */ FeatureSpec> spec;
 
+    /**
+     * @return Optional. Hub-wide Feature configuration. If this Feature does not support any Hub-wide configuration, this field may be unused.
+     * 
+     */
     public Output</* @Nullable */ FeatureSpec> getSpec() {
         return this.spec;
     }
+    /**
+     * Output only. The Hub-wide Feature state
+     * 
+     */
     @OutputExport(name="states", type=List.class, parameters={FeatureState.class})
     private Output<List<FeatureState>> states;
 
+    /**
+     * @return Output only. The Hub-wide Feature state
+     * 
+     */
     public Output<List<FeatureState>> getStates() {
         return this.states;
     }
+    /**
+     * Output only. When the Feature resource was last updated.
+     * 
+     */
     @OutputExport(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
+    /**
+     * @return Output only. When the Feature resource was last updated.
+     * 
+     */
     public Output<String> getUpdateTime() {
         return this.updateTime;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Feature(String name, FeatureArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:gkehub/feature:Feature", name, args == null ? FeatureArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -95,6 +199,15 @@ public class Feature extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Feature get(String name, Input<String> id, @Nullable io.pulumi.gcp.gkehub.inputs.FeatureState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Feature(name, id, state, options);
     }

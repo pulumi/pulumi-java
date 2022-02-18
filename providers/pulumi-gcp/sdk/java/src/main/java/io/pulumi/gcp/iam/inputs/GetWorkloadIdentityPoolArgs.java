@@ -14,6 +14,11 @@ public final class GetWorkloadIdentityPoolArgs extends io.pulumi.resources.Invok
 
     public static final GetWorkloadIdentityPoolArgs Empty = new GetWorkloadIdentityPoolArgs();
 
+    /**
+     * The project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -21,6 +26,11 @@ public final class GetWorkloadIdentityPoolArgs extends io.pulumi.resources.Invok
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
+    /**
+     * The id of the pool which is the
+     * final component of the resource name.
+     * 
+     */
     @InputImport(name="workloadIdentityPoolId", required=true)
     private final String workloadIdentityPoolId;
 

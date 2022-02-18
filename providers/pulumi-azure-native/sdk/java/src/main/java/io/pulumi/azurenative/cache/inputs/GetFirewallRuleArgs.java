@@ -12,6 +12,10 @@ public final class GetFirewallRuleArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetFirewallRuleArgs Empty = new GetFirewallRuleArgs();
 
+    /**
+     * The name of the Redis cache.
+     * 
+     */
     @InputImport(name="cacheName", required=true)
     private final String cacheName;
 
@@ -19,6 +23,10 @@ public final class GetFirewallRuleArgs extends io.pulumi.resources.InvokeArgs {
         return this.cacheName;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetFirewallRuleArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the firewall rule.
+     * 
+     */
     @InputImport(name="ruleName", required=true)
     private final String ruleName;
 

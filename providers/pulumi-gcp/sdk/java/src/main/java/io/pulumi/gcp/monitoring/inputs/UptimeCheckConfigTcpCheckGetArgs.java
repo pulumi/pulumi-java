@@ -13,6 +13,10 @@ public final class UptimeCheckConfigTcpCheckGetArgs extends io.pulumi.resources.
 
     public static final UptimeCheckConfigTcpCheckGetArgs Empty = new UptimeCheckConfigTcpCheckGetArgs();
 
+    /**
+     * The port to the page to run the check against. Will be combined with host (specified within the MonitoredResource) to construct the full URL.
+     * 
+     */
     @InputImport(name="port", required=true)
     private final Input<Integer> port;
 

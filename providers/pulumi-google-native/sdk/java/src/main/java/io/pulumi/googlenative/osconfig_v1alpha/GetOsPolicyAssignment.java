@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOsPolicyAssignment {
+/**
+ * Retrieve an existing OS policy assignment. This method always returns the latest revision. In order to retrieve a previous revision of the assignment, also provide the revision ID in the `name` parameter.
+ * 
+ */
     public static CompletableFuture<GetOsPolicyAssignmentResult> invokeAsync(GetOsPolicyAssignmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:osconfig/v1alpha:getOsPolicyAssignment", TypeShape.of(GetOsPolicyAssignmentResult.class), args == null ? GetOsPolicyAssignmentArgs.Empty : args, Utilities.withVersion(options));
     }

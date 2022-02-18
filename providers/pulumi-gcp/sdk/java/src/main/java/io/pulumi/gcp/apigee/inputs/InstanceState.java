@@ -14,6 +14,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
 
     public static final InstanceState Empty = new InstanceState();
 
+    /**
+     * Description of the instance.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -21,6 +25,11 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Customer Managed Encryption Key (CMEK) used for disk and volume encryption. Required for Apigee paid subscriptions only.
+     * Use the following format: `projects/([^/]+)/locations/([^/]+)/keyRings/([^/]+)/cryptoKeys/([^/]+)`
+     * 
+     */
     @InputImport(name="diskEncryptionKeyName")
     private final @Nullable Input<String> diskEncryptionKeyName;
 
@@ -28,6 +37,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.diskEncryptionKeyName == null ? Input.empty() : this.diskEncryptionKeyName;
     }
 
+    /**
+     * Display name of the instance.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -35,6 +48,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * Output only. Hostname or IP address of the exposed Apigee endpoint used by clients to connect to the service.
+     * 
+     */
     @InputImport(name="host")
     private final @Nullable Input<String> host;
 
@@ -42,6 +59,16 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.host == null ? Input.empty() : this.host;
     }
 
+    /**
+     * IP range represents the customer-provided CIDR block of length 22 that will be used for
+     * the Apigee instance creation. This optional range, if provided, should be freely
+     * available as part of larger named range the customer has allocated to the Service
+     * Networking peering. If this is not provided, Apigee will automatically request for any
+     * available /22 CIDR block from Service Networking. The customer should use this CIDR block
+     * for configuring their firewall needs to allow traffic from Apigee.
+     * Input format: "a.b.c.d/22"
+     * 
+     */
     @InputImport(name="ipRange")
     private final @Nullable Input<String> ipRange;
 
@@ -49,6 +76,12 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.ipRange == null ? Input.empty() : this.ipRange;
     }
 
+    /**
+     * Compute Engine location where the instance resides. For trial organization
+     * subscriptions, the location must be a Compute Engine zone. For paid organization
+     * subscriptions, it should correspond to a Compute Engine region.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -56,6 +89,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Resource ID of the instance.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -63,6 +100,11 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The Apigee Organization associated with the Apigee instance,
+     * in the format `organizations/{{org_name}}`.
+     * 
+     */
     @InputImport(name="orgId")
     private final @Nullable Input<String> orgId;
 
@@ -70,6 +112,11 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.orgId == null ? Input.empty() : this.orgId;
     }
 
+    /**
+     * The size of the CIDR block range that will be reserved by the instance. For valid values,
+     * see [CidrRange](https://cloud.google.com/apigee/docs/reference/apis/apigee/rest/v1/organizations.instances#CidrRange) on the documentation.
+     * 
+     */
     @InputImport(name="peeringCidrRange")
     private final @Nullable Input<String> peeringCidrRange;
 
@@ -77,6 +124,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.peeringCidrRange == null ? Input.empty() : this.peeringCidrRange;
     }
 
+    /**
+     * Output only. Port number of the exposed Apigee endpoint.
+     * 
+     */
     @InputImport(name="port")
     private final @Nullable Input<String> port;
 

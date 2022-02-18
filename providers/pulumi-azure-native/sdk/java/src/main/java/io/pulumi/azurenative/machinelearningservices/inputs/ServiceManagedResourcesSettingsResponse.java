@@ -14,6 +14,10 @@ public final class ServiceManagedResourcesSettingsResponse extends io.pulumi.res
 
     public static final ServiceManagedResourcesSettingsResponse Empty = new ServiceManagedResourcesSettingsResponse();
 
+    /**
+     * The settings for the service managed cosmosdb account.
+     * 
+     */
     @InputImport(name="cosmosDb")
     private final @Nullable CosmosDbSettingsResponse cosmosDb;
 

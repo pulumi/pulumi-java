@@ -12,6 +12,10 @@ public final class OperationErrorErrorsItemResponse extends io.pulumi.resources.
 
     public static final OperationErrorErrorsItemResponse Empty = new OperationErrorErrorsItemResponse();
 
+    /**
+     * The error type identifier for this error.
+     * 
+     */
     @InputImport(name="code", required=true)
     private final String code;
 
@@ -19,6 +23,10 @@ public final class OperationErrorErrorsItemResponse extends io.pulumi.resources.
         return this.code;
     }
 
+    /**
+     * Indicates the field in the request that caused the error. This property is optional.
+     * 
+     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -26,6 +34,10 @@ public final class OperationErrorErrorsItemResponse extends io.pulumi.resources.
         return this.location;
     }
 
+    /**
+     * An optional, human-readable error message.
+     * 
+     */
     @InputImport(name="message", required=true)
     private final String message;
 

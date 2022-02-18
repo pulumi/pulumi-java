@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The type of monitoring job.
+     * 
+     */
     @EnumType
     public enum MonitoringScheduleMonitoringType {
         DataQuality("DataQuality"),

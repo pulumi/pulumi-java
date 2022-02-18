@@ -14,6 +14,13 @@ public final class GetEngineVersionsArgs extends io.pulumi.resources.InvokeArgs 
 
     public static final GetEngineVersionsArgs Empty = new GetEngineVersionsArgs();
 
+    /**
+     * The location (region or zone) to list versions for.
+     * Must exactly match the location the cluster will be deployed in, or listed
+     * versions may not be available. If `location`, `region`, and `zone` are not
+     * specified, the provider-level zone must be set and is used instead.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable String location;
 
@@ -21,6 +28,11 @@ public final class GetEngineVersionsArgs extends io.pulumi.resources.InvokeArgs 
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
+    /**
+     * ID of the project to list available cluster versions for. Should match the project the cluster will be deployed to.
+     * Defaults to the project that the provider is authenticated with.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -28,6 +40,15 @@ public final class GetEngineVersionsArgs extends io.pulumi.resources.InvokeArgs 
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
+    /**
+     * If provided, the provider will only return versions
+     * that match the string prefix. For example, `1.11.` will match all `1.11` series
+     * releases. Since this is just a string match, it's recommended that you append a
+     * `.` after minor versions to ensure that prefixes such as `1.1` don't match
+     * versions like `1.12.5-gke.10` accidentally. See [the docs on versioning schema](https://cloud.google.com/kubernetes-engine/versioning-and-upgrades#versioning_scheme)
+     * for full details on how version strings are formatted.
+     * 
+     */
     @InputImport(name="versionPrefix")
     private final @Nullable String versionPrefix;
 

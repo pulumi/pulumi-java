@@ -18,6 +18,10 @@ public final class SlsaProvenanceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SlsaProvenanceArgs Empty = new SlsaProvenanceArgs();
 
+    /**
+     * required
+     * 
+     */
     @InputImport(name="builder")
     private final @Nullable Input<SlsaBuilderArgs> builder;
 
@@ -25,6 +29,10 @@ public final class SlsaProvenanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.builder == null ? Input.empty() : this.builder;
     }
 
+    /**
+     * The collection of artifacts that influenced the build including sources, dependencies, build tools, base images, and so on. This is considered to be incomplete unless metadata.completeness.materials is true. Unset or null is equivalent to empty.
+     * 
+     */
     @InputImport(name="materials")
     private final @Nullable Input<List<MaterialArgs>> materials;
 
@@ -39,6 +47,10 @@ public final class SlsaProvenanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
+    /**
+     * Identifies the configuration used for the build. When combined with materials, this SHOULD fully describe the build, such that re-running this recipe results in bit-for-bit identical output (if the build is reproducible). required
+     * 
+     */
     @InputImport(name="recipe")
     private final @Nullable Input<SlsaRecipeArgs> recipe;
 

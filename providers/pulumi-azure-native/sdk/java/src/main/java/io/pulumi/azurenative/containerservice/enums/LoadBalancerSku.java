@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The load balancer sku for the managed cluster.
+     * 
+     */
     @EnumType
     public enum LoadBalancerSku {
         Standard("standard"),

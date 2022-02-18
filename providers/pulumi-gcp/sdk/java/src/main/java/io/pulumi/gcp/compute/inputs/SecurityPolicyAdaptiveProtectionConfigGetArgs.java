@@ -14,6 +14,10 @@ public final class SecurityPolicyAdaptiveProtectionConfigGetArgs extends io.pulu
 
     public static final SecurityPolicyAdaptiveProtectionConfigGetArgs Empty = new SecurityPolicyAdaptiveProtectionConfigGetArgs();
 
+    /**
+     * Configuration for [Google Cloud Armor Adaptive Protection Layer 7 DDoS Defense](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
+     * 
+     */
     @InputImport(name="layer7DdosDefenseConfig")
     private final @Nullable Input<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigGetArgs> layer7DdosDefenseConfig;
 

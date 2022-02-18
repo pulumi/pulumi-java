@@ -13,6 +13,10 @@ public final class TagBindingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TagBindingArgs Empty = new TagBindingArgs();
 
+    /**
+     * The full resource name of the resource the TagValue is bound to. E.g. //cloudresourcemanager.googleapis.com/projects/123
+     * 
+     */
     @InputImport(name="parent", required=true)
     private final Input<String> parent;
 
@@ -20,6 +24,10 @@ public final class TagBindingArgs extends io.pulumi.resources.ResourceArgs {
         return this.parent;
     }
 
+    /**
+     * The TagValue of the TagBinding. Must be of the form tagValues/456.
+     * 
+     */
     @InputImport(name="tagValue", required=true)
     private final Input<String> tagValue;
 

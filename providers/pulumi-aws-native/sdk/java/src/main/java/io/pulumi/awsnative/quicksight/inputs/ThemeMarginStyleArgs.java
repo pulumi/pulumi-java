@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * <p>The display options for margins around the outside edge of sheets.</p>
+ * 
+ */
 public final class ThemeMarginStyleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ThemeMarginStyleArgs Empty = new ThemeMarginStyleArgs();
 
+    /**
+     * <p>This Boolean value controls whether to display sheet margins.</p>
+     * 
+     */
     @InputImport(name="show")
     private final @Nullable Input<Boolean> show;
 

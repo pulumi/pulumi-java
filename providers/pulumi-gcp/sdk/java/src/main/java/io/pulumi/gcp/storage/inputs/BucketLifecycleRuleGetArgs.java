@@ -14,6 +14,10 @@ public final class BucketLifecycleRuleGetArgs extends io.pulumi.resources.Resour
 
     public static final BucketLifecycleRuleGetArgs Empty = new BucketLifecycleRuleGetArgs();
 
+    /**
+     * The Lifecycle Rule's action configuration. A single block of this type is supported. Structure is documented below.
+     * 
+     */
     @InputImport(name="action", required=true)
     private final Input<BucketLifecycleRuleActionGetArgs> action;
 
@@ -21,6 +25,10 @@ public final class BucketLifecycleRuleGetArgs extends io.pulumi.resources.Resour
         return this.action;
     }
 
+    /**
+     * The Lifecycle Rule's condition configuration. A single block of this type is supported. Structure is documented below.
+     * 
+     */
     @InputImport(name="condition", required=true)
     private final Input<BucketLifecycleRuleConditionGetArgs> condition;
 

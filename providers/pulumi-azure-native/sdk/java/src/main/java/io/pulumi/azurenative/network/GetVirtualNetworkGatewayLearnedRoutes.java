@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVirtualNetworkGatewayLearnedRoutes {
+/**
+ * List of virtual network gateway routes.
+ * API Version: 2020-11-01.
+ * 
+ *
+ * List of virtual network gateway routes.
+ * 
+ */
     public static CompletableFuture<GetVirtualNetworkGatewayLearnedRoutesResult> invokeAsync(GetVirtualNetworkGatewayLearnedRoutesArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getVirtualNetworkGatewayLearnedRoutes", TypeShape.of(GetVirtualNetworkGatewayLearnedRoutesResult.class), args == null ? GetVirtualNetworkGatewayLearnedRoutesArgs.Empty : args, Utilities.withVersion(options));
     }

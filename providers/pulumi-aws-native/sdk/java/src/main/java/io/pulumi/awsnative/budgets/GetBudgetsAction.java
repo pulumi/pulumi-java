@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBudgetsAction {
+/**
+ * An example resource schema demonstrating some basic constructs and validation rules.
+ * 
+ */
     public static CompletableFuture<GetBudgetsActionResult> invokeAsync(GetBudgetsActionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:budgets:getBudgetsAction", TypeShape.of(GetBudgetsActionResult.class), args == null ? GetBudgetsActionArgs.Empty : args, Utilities.withVersion(options));
     }

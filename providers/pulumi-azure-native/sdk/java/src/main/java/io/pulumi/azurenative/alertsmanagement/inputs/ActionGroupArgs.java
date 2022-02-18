@@ -14,10 +14,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Action rule with action group configuration
+ * 
+ */
 public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ActionGroupArgs Empty = new ActionGroupArgs();
 
+    /**
+     * Action group to trigger if action rule matches
+     * 
+     */
     @InputImport(name="actionGroupId", required=true)
     private final Input<String> actionGroupId;
 
@@ -25,6 +33,10 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.actionGroupId;
     }
 
+    /**
+     * conditions on which alerts will be filtered
+     * 
+     */
     @InputImport(name="conditions")
     private final @Nullable Input<ConditionsArgs> conditions;
 
@@ -32,6 +44,10 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.conditions == null ? Input.empty() : this.conditions;
     }
 
+    /**
+     * Description of action rule
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -39,6 +55,10 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * scope on which action rule will apply
+     * 
+     */
     @InputImport(name="scope")
     private final @Nullable Input<ScopeArgs> scope;
 
@@ -46,6 +66,10 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.scope == null ? Input.empty() : this.scope;
     }
 
+    /**
+     * Indicates if the given action rule is enabled or disabled
+     * 
+     */
     @InputImport(name="status")
     private final @Nullable Input<Either<String,ActionRuleStatus>> status;
 
@@ -53,6 +77,11 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.status == null ? Input.empty() : this.status;
     }
 
+    /**
+     * Indicates type of action rule
+     * Expected value is 'ActionGroup'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

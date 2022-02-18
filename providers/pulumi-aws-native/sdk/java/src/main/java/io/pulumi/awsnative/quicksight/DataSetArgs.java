@@ -32,6 +32,10 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.awsAccountId == null ? Input.empty() : this.awsAccountId;
     }
 
+    /**
+     * <p>Groupings of columns that work together in certain QuickSight features. Currently, only geospatial hierarchy is supported.</p>
+     * 
+     */
     @InputImport(name="columnGroups")
     private final @Nullable Input<List<DataSetColumnGroupArgs>> columnGroups;
 
@@ -81,6 +85,10 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.logicalTableMap == null ? Input.empty() : this.logicalTableMap;
     }
 
+    /**
+     * <p>The display name for the dataset.</p>
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -88,6 +96,10 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * <p>A list of resource permissions on the dataset.</p>
+     * 
+     */
     @InputImport(name="permissions")
     private final @Nullable Input<List<DataSetResourcePermissionArgs>> permissions;
 
@@ -109,6 +121,10 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.rowLevelPermissionDataSet == null ? Input.empty() : this.rowLevelPermissionDataSet;
     }
 
+    /**
+     * <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the dataset.</p>
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<DataSetTagArgs>> tags;
 

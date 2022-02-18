@@ -15,6 +15,10 @@ public final class URLMapHostRuleGetArgs extends io.pulumi.resources.ResourceArg
 
     public static final URLMapHostRuleGetArgs Empty = new URLMapHostRuleGetArgs();
 
+    /**
+     * Description of this test case.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -22,6 +26,12 @@ public final class URLMapHostRuleGetArgs extends io.pulumi.resources.ResourceArg
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The list of host patterns to match. They must be valid hostnames, except * will
+     * match any string of ([a-z0-9-.]*). In that case, * must be the first character
+     * and must be followed in the pattern by either - or ..
+     * 
+     */
     @InputImport(name="hosts", required=true)
     private final Input<List<String>> hosts;
 
@@ -29,6 +39,11 @@ public final class URLMapHostRuleGetArgs extends io.pulumi.resources.ResourceArg
         return this.hosts;
     }
 
+    /**
+     * The name of the PathMatcher to use to match the path portion of the URL if the
+     * hostRule matches the URL's host portion.
+     * 
+     */
     @InputImport(name="pathMatcher", required=true)
     private final Input<String> pathMatcher;
 

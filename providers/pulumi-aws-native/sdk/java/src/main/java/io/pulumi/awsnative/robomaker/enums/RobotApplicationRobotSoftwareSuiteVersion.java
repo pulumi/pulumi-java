@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The version of robot software suite.
+     * 
+     */
     @EnumType
     public enum RobotApplicationRobotSoftwareSuiteVersion {
         Kinetic("Kinetic"),

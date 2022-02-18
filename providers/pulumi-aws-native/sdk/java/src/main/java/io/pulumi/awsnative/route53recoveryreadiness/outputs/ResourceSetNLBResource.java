@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ResourceSetNLBResource {
+    /**
+     * A Network Load Balancer resource Amazon Resource Name (ARN).
+     * 
+     */
     private final @Nullable String arn;
 
     @OutputCustomType.Constructor({"arn"})
@@ -18,6 +22,10 @@ public final class ResourceSetNLBResource {
         this.arn = arn;
     }
 
+    /**
+     * A Network Load Balancer resource Amazon Resource Name (ARN).
+     * 
+     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }

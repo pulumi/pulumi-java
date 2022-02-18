@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Type of backup items associated with this container.
+     * 
+     */
     @EnumType
     public enum BackupItemType {
         Invalid("Invalid"),

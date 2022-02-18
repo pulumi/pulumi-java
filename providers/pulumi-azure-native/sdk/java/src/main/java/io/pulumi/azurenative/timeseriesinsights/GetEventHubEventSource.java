@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEventHubEventSource {
+/**
+ * An event source that receives its data from an Azure EventHub.
+ * API Version: 2020-05-15.
+ * 
+ *
+ * An event source that receives its data from an Azure EventHub.
+ * 
+ */
     public static CompletableFuture<GetEventHubEventSourceResult> invokeAsync(GetEventHubEventSourceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:timeseriesinsights:getEventHubEventSource", TypeShape.of(GetEventHubEventSourceResult.class), args == null ? GetEventHubEventSourceArgs.Empty : args, Utilities.withVersion(options));
     }

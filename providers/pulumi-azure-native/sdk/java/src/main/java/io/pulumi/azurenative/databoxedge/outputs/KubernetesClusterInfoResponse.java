@@ -12,8 +12,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class KubernetesClusterInfoResponse {
+    /**
+     * Etcd configuration
+     * 
+     */
     private final EtcdInfoResponse etcdInfo;
+    /**
+     * Kubernetes cluster nodes
+     * 
+     */
     private final List<NodeInfoResponse> nodes;
+    /**
+     * Kubernetes cluster version
+     * 
+     */
     private final String version;
 
     @OutputCustomType.Constructor({"etcdInfo","nodes","version"})
@@ -26,12 +38,24 @@ public final class KubernetesClusterInfoResponse {
         this.version = Objects.requireNonNull(version);
     }
 
+    /**
+     * Etcd configuration
+     * 
+     */
     public EtcdInfoResponse getEtcdInfo() {
         return this.etcdInfo;
     }
+    /**
+     * Kubernetes cluster nodes
+     * 
+     */
     public List<NodeInfoResponse> getNodes() {
         return this.nodes;
     }
+    /**
+     * Kubernetes cluster version
+     * 
+     */
     public String getVersion() {
         return this.version;
     }

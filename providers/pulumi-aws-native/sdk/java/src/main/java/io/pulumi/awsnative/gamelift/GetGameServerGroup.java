@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGameServerGroup {
+/**
+ * The AWS::GameLift::GameServerGroup resource creates an Amazon GameLift (GameLift) GameServerGroup.
+ * 
+ */
     public static CompletableFuture<GetGameServerGroupResult> invokeAsync(GetGameServerGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:gamelift:getGameServerGroup", TypeShape.of(GetGameServerGroupResult.class), args == null ? GetGameServerGroupArgs.Empty : args, Utilities.withVersion(options));
     }

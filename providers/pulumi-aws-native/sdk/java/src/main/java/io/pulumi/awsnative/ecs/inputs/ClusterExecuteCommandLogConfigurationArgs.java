@@ -11,6 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The session logging configuration for ExecuteCommand.
+ * 
+ */
 public final class ClusterExecuteCommandLogConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ClusterExecuteCommandLogConfigurationArgs Empty = new ClusterExecuteCommandLogConfigurationArgs();

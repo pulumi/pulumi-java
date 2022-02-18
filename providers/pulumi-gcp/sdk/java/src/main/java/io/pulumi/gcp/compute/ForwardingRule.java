@@ -16,147 +16,553 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * A ForwardingRule resource. A ForwardingRule resource specifies which pool
+ * of target virtual machines to forward a packet to if it matches the given
+ * [IPAddress, IPProtocol, portRange] tuple.
+ * 
+ * To get more information about ForwardingRule, see:
+ * 
+ * * [API documentation](https://cloud.google.com/compute/docs/reference/v1/forwardingRules)
+ * * How-to Guides
+ *     * [Official Documentation](https://cloud.google.com/compute/docs/load-balancing/network/forwarding-rules)
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * ForwardingRule can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/forwardingRule:ForwardingRule default projects/{{project}}/regions/{{region}}/forwardingRules/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/forwardingRule:ForwardingRule default {{project}}/{{region}}/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/forwardingRule:ForwardingRule default {{region}}/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/forwardingRule:ForwardingRule default {{name}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:compute/forwardingRule:ForwardingRule")
 public class ForwardingRule extends io.pulumi.resources.CustomResource {
+    /**
+     * This field can be used with internal load balancer or network load balancer
+     * when the forwarding rule references a backend service, or with the target
+     * field when it references a TargetInstance. Set this to true to
+     * allow packets addressed to any ports to be forwarded to the backends configured
+     * with this forwarding rule. This can be used when the protocol is TCP/UDP, and it
+     * must be set to true when the protocol is set to L3_DEFAULT.
+     * Cannot be set if port or portRange are set.
+     * 
+     */
     @OutputExport(name="allPorts", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allPorts;
 
+    /**
+     * @return This field can be used with internal load balancer or network load balancer
+     * when the forwarding rule references a backend service, or with the target
+     * field when it references a TargetInstance. Set this to true to
+     * allow packets addressed to any ports to be forwarded to the backends configured
+     * with this forwarding rule. This can be used when the protocol is TCP/UDP, and it
+     * must be set to true when the protocol is set to L3_DEFAULT.
+     * Cannot be set if port or portRange are set.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getAllPorts() {
         return this.allPorts;
     }
+    /**
+     * If true, clients can access ILB from all regions.
+     * Otherwise only allows from the local region the ILB is located at.
+     * 
+     */
     @OutputExport(name="allowGlobalAccess", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowGlobalAccess;
 
+    /**
+     * @return If true, clients can access ILB from all regions.
+     * Otherwise only allows from the local region the ILB is located at.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getAllowGlobalAccess() {
         return this.allowGlobalAccess;
     }
+    /**
+     * A BackendService to receive the matched traffic. This is used only
+     * for INTERNAL load balancing.
+     * 
+     */
     @OutputExport(name="backendService", type=String.class, parameters={})
     private Output</* @Nullable */ String> backendService;
 
+    /**
+     * @return A BackendService to receive the matched traffic. This is used only
+     * for INTERNAL load balancing.
+     * 
+     */
     public Output</* @Nullable */ String> getBackendService() {
         return this.backendService;
     }
+    /**
+     * [Output Only] Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * 
+     */
     @OutputExport(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
+    /**
+     * @return [Output Only] Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * 
+     */
     public Output<String> getCreationTimestamp() {
         return this.creationTimestamp;
     }
+    /**
+     * An optional description of this resource. Provide this property when
+     * you create the resource.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return An optional description of this resource. Provide this property when
+     * you create the resource.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * The IP address that this forwarding rule serves. When a client sends
+     * traffic to this IP address, the forwarding rule directs the traffic to
+     * the target that you specify in the forwarding rule. The
+     * loadBalancingScheme and the forwarding rule's target determine the
+     * type of IP address that you can use. For detailed information, refer
+     * to [IP address specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#ip_address_specifications).
+     * An address can be specified either by a literal IP address or a
+     * reference to an existing Address resource. If you don't specify a
+     * reserved IP address, an ephemeral IP address is assigned.
+     * The value must be set to 0.0.0.0 when the target is a targetGrpcProxy
+     * that has validateForProxyless field set to true.
+     * For Private Service Connect forwarding rules that forward traffic to
+     * Google APIs, IP address must be provided.
+     * 
+     */
     @OutputExport(name="ipAddress", type=String.class, parameters={})
     private Output<String> ipAddress;
 
+    /**
+     * @return The IP address that this forwarding rule serves. When a client sends
+     * traffic to this IP address, the forwarding rule directs the traffic to
+     * the target that you specify in the forwarding rule. The
+     * loadBalancingScheme and the forwarding rule's target determine the
+     * type of IP address that you can use. For detailed information, refer
+     * to [IP address specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#ip_address_specifications).
+     * An address can be specified either by a literal IP address or a
+     * reference to an existing Address resource. If you don't specify a
+     * reserved IP address, an ephemeral IP address is assigned.
+     * The value must be set to 0.0.0.0 when the target is a targetGrpcProxy
+     * that has validateForProxyless field set to true.
+     * For Private Service Connect forwarding rules that forward traffic to
+     * Google APIs, IP address must be provided.
+     * 
+     */
     public Output<String> getIpAddress() {
         return this.ipAddress;
     }
+    /**
+     * The IP protocol to which this rule applies.
+     * When the load balancing scheme is INTERNAL, only TCP and UDP are
+     * valid.
+     * Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, `ICMP`, and `L3_DEFAULT`.
+     * 
+     */
     @OutputExport(name="ipProtocol", type=String.class, parameters={})
     private Output<String> ipProtocol;
 
+    /**
+     * @return The IP protocol to which this rule applies.
+     * When the load balancing scheme is INTERNAL, only TCP and UDP are
+     * valid.
+     * Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, `ICMP`, and `L3_DEFAULT`.
+     * 
+     */
     public Output<String> getIpProtocol() {
         return this.ipProtocol;
     }
+    /**
+     * Indicates whether or not this load balancer can be used
+     * as a collector for packet mirroring. To prevent mirroring loops,
+     * instances behind this load balancer will not have their traffic
+     * mirrored even if a PacketMirroring rule applies to them. This
+     * can only be set to true for load balancers that have their
+     * loadBalancingScheme set to INTERNAL.
+     * 
+     */
     @OutputExport(name="isMirroringCollector", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isMirroringCollector;
 
+    /**
+     * @return Indicates whether or not this load balancer can be used
+     * as a collector for packet mirroring. To prevent mirroring loops,
+     * instances behind this load balancer will not have their traffic
+     * mirrored even if a PacketMirroring rule applies to them. This
+     * can only be set to true for load balancers that have their
+     * loadBalancingScheme set to INTERNAL.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getIsMirroringCollector() {
         return this.isMirroringCollector;
     }
+    /**
+     * Used internally during label updates.
+     * 
+     */
     @OutputExport(name="labelFingerprint", type=String.class, parameters={})
     private Output<String> labelFingerprint;
 
+    /**
+     * @return Used internally during label updates.
+     * 
+     */
     public Output<String> getLabelFingerprint() {
         return this.labelFingerprint;
     }
+    /**
+     * Labels to apply to this forwarding rule.  A list of key->value pairs.
+     * 
+     */
     @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
+    /**
+     * @return Labels to apply to this forwarding rule.  A list of key->value pairs.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getLabels() {
         return this.labels;
     }
+    /**
+     * This signifies what the ForwardingRule will be used for and can be
+     * EXTERNAL, EXTERNAL_MANAGED, INTERNAL, or INTERNAL_MANAGED. EXTERNAL is used for Classic
+     * Cloud VPN gateways, protocol forwarding to VMs from an external IP address,
+     * and HTTP(S), SSL Proxy, TCP Proxy, and Network TCP/UDP load balancers.
+     * INTERNAL is used for protocol forwarding to VMs from an internal IP address,
+     * and internal TCP/UDP load balancers.
+     * EXTERNAL_MANAGED is used for regional external HTTP(S) load balancers.
+     * INTERNAL_MANAGED is used for internal HTTP(S) load balancers.
+     * Default value is `EXTERNAL`.
+     * Possible values are `EXTERNAL`, `EXTERNAL_MANAGED`, `INTERNAL`, and `INTERNAL_MANAGED`.
+     * 
+     */
     @OutputExport(name="loadBalancingScheme", type=String.class, parameters={})
     private Output</* @Nullable */ String> loadBalancingScheme;
 
+    /**
+     * @return This signifies what the ForwardingRule will be used for and can be
+     * EXTERNAL, EXTERNAL_MANAGED, INTERNAL, or INTERNAL_MANAGED. EXTERNAL is used for Classic
+     * Cloud VPN gateways, protocol forwarding to VMs from an external IP address,
+     * and HTTP(S), SSL Proxy, TCP Proxy, and Network TCP/UDP load balancers.
+     * INTERNAL is used for protocol forwarding to VMs from an internal IP address,
+     * and internal TCP/UDP load balancers.
+     * EXTERNAL_MANAGED is used for regional external HTTP(S) load balancers.
+     * INTERNAL_MANAGED is used for internal HTTP(S) load balancers.
+     * Default value is `EXTERNAL`.
+     * Possible values are `EXTERNAL`, `EXTERNAL_MANAGED`, `INTERNAL`, and `INTERNAL_MANAGED`.
+     * 
+     */
     public Output</* @Nullable */ String> getLoadBalancingScheme() {
         return this.loadBalancingScheme;
     }
+    /**
+     * Name of the resource; provided by the client when the resource is
+     * created. The name must be 1-63 characters long, and comply with
+     * RFC1035. Specifically, the name must be 1-63 characters long and match
+     * the regular expression `a-z?` which means the
+     * first character must be a lowercase letter, and all following
+     * characters must be a dash, lowercase letter, or digit, except the last
+     * character, which cannot be a dash.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Name of the resource; provided by the client when the resource is
+     * created. The name must be 1-63 characters long, and comply with
+     * RFC1035. Specifically, the name must be 1-63 characters long and match
+     * the regular expression `a-z?` which means the
+     * first character must be a lowercase letter, and all following
+     * characters must be a dash, lowercase letter, or digit, except the last
+     * character, which cannot be a dash.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * For internal load balancing, this field identifies the network that
+     * the load balanced IP should belong to for this Forwarding Rule. If
+     * this field is not specified, the default network will be used.
+     * This field is only used for INTERNAL load balancing.
+     * 
+     */
     @OutputExport(name="network", type=String.class, parameters={})
     private Output<String> network;
 
+    /**
+     * @return For internal load balancing, this field identifies the network that
+     * the load balanced IP should belong to for this Forwarding Rule. If
+     * this field is not specified, the default network will be used.
+     * This field is only used for INTERNAL load balancing.
+     * 
+     */
     public Output<String> getNetwork() {
         return this.network;
     }
+    /**
+     * The networking tier used for configuring this address. If this field is not
+     * specified, it is assumed to be PREMIUM.
+     * Possible values are `PREMIUM` and `STANDARD`.
+     * 
+     */
     @OutputExport(name="networkTier", type=String.class, parameters={})
     private Output<String> networkTier;
 
+    /**
+     * @return The networking tier used for configuring this address. If this field is not
+     * specified, it is assumed to be PREMIUM.
+     * Possible values are `PREMIUM` and `STANDARD`.
+     * 
+     */
     public Output<String> getNetworkTier() {
         return this.networkTier;
     }
+    /**
+     * This field is used along with the target field for TargetHttpProxy,
+     * TargetHttpsProxy, TargetSslProxy, TargetTcpProxy, TargetVpnGateway,
+     * TargetPool, TargetInstance.
+     * Applicable only when IPProtocol is TCP, UDP, or SCTP, only packets
+     * addressed to ports in the specified range will be forwarded to target.
+     * Forwarding rules with the same [IPAddress, IPProtocol] pair must have
+     * disjoint port ranges.
+     * Some types of forwarding target have constraints on the acceptable
+     * ports:
+     * * TargetHttpProxy: 80, 8080
+     * * TargetHttpsProxy: 443
+     * * TargetTcpProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995,
+     *   1883, 5222
+     * * TargetSslProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995,
+     *   1883, 5222
+     * * TargetVpnGateway: 500, 4500
+     * 
+     */
     @OutputExport(name="portRange", type=String.class, parameters={})
     private Output</* @Nullable */ String> portRange;
 
+    /**
+     * @return This field is used along with the target field for TargetHttpProxy,
+     * TargetHttpsProxy, TargetSslProxy, TargetTcpProxy, TargetVpnGateway,
+     * TargetPool, TargetInstance.
+     * Applicable only when IPProtocol is TCP, UDP, or SCTP, only packets
+     * addressed to ports in the specified range will be forwarded to target.
+     * Forwarding rules with the same [IPAddress, IPProtocol] pair must have
+     * disjoint port ranges.
+     * Some types of forwarding target have constraints on the acceptable
+     * ports:
+     * * TargetHttpProxy: 80, 8080
+     * * TargetHttpsProxy: 443
+     * * TargetTcpProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995,
+     *   1883, 5222
+     * * TargetSslProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995,
+     *   1883, 5222
+     * * TargetVpnGateway: 500, 4500
+     * 
+     */
     public Output</* @Nullable */ String> getPortRange() {
         return this.portRange;
     }
+    /**
+     * This field is used along with internal load balancing and network
+     * load balancer when the forwarding rule references a backend service
+     * and when protocol is not L3_DEFAULT.
+     * A single port or a comma separated list of ports can be configured.
+     * Only packets addressed to these ports will be forwarded to the backends
+     * configured with this forwarding rule.
+     * You can only use one of ports and portRange, or allPorts.
+     * The three are mutually exclusive.
+     * You may specify a maximum of up to 5 ports, which can be non-contiguous.
+     * 
+     */
     @OutputExport(name="ports", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> ports;
 
+    /**
+     * @return This field is used along with internal load balancing and network
+     * load balancer when the forwarding rule references a backend service
+     * and when protocol is not L3_DEFAULT.
+     * A single port or a comma separated list of ports can be configured.
+     * Only packets addressed to these ports will be forwarded to the backends
+     * configured with this forwarding rule.
+     * You can only use one of ports and portRange, or allPorts.
+     * The three are mutually exclusive.
+     * You may specify a maximum of up to 5 ports, which can be non-contiguous.
+     * 
+     */
     public Output</* @Nullable */ List<String>> getPorts() {
         return this.ports;
     }
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * A reference to the region where the regional forwarding rule resides.
+     * This field is not applicable to global forwarding rules.
+     * 
+     */
     @OutputExport(name="region", type=String.class, parameters={})
     private Output<String> region;
 
+    /**
+     * @return A reference to the region where the regional forwarding rule resides.
+     * This field is not applicable to global forwarding rules.
+     * 
+     */
     public Output<String> getRegion() {
         return this.region;
     }
+    /**
+     * The URI of the created resource.
+     * 
+     */
     @OutputExport(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
+    /**
+     * @return The URI of the created resource.
+     * 
+     */
     public Output<String> getSelfLink() {
         return this.selfLink;
     }
+    /**
+     * An optional prefix to the service name for this Forwarding Rule.
+     * If specified, will be the first label of the fully qualified service
+     * name.
+     * The label must be 1-63 characters long, and comply with RFC1035.
+     * Specifically, the label must be 1-63 characters long and match the
+     * regular expression `a-z?` which means the first
+     * character must be a lowercase letter, and all following characters
+     * must be a dash, lowercase letter, or digit, except the last
+     * character, which cannot be a dash.
+     * This field is only used for INTERNAL load balancing.
+     * 
+     */
     @OutputExport(name="serviceLabel", type=String.class, parameters={})
     private Output</* @Nullable */ String> serviceLabel;
 
+    /**
+     * @return An optional prefix to the service name for this Forwarding Rule.
+     * If specified, will be the first label of the fully qualified service
+     * name.
+     * The label must be 1-63 characters long, and comply with RFC1035.
+     * Specifically, the label must be 1-63 characters long and match the
+     * regular expression `a-z?` which means the first
+     * character must be a lowercase letter, and all following characters
+     * must be a dash, lowercase letter, or digit, except the last
+     * character, which cannot be a dash.
+     * This field is only used for INTERNAL load balancing.
+     * 
+     */
     public Output</* @Nullable */ String> getServiceLabel() {
         return this.serviceLabel;
     }
+    /**
+     * [Output Only] The internal fully qualified service name for this Forwarding Rule. This field is only used for internal
+     * load balancing.
+     * 
+     */
     @OutputExport(name="serviceName", type=String.class, parameters={})
     private Output<String> serviceName;
 
+    /**
+     * @return [Output Only] The internal fully qualified service name for this Forwarding Rule. This field is only used for internal
+     * load balancing.
+     * 
+     */
     public Output<String> getServiceName() {
         return this.serviceName;
     }
+    /**
+     * The subnetwork that the load balanced IP should belong to for this
+     * Forwarding Rule.  This field is only used for INTERNAL load balancing.
+     * If the network specified is in auto subnet mode, this field is
+     * optional. However, if the network is in custom subnet mode, a
+     * subnetwork must be specified.
+     * 
+     */
     @OutputExport(name="subnetwork", type=String.class, parameters={})
     private Output<String> subnetwork;
 
+    /**
+     * @return The subnetwork that the load balanced IP should belong to for this
+     * Forwarding Rule.  This field is only used for INTERNAL load balancing.
+     * If the network specified is in auto subnet mode, this field is
+     * optional. However, if the network is in custom subnet mode, a
+     * subnetwork must be specified.
+     * 
+     */
     public Output<String> getSubnetwork() {
         return this.subnetwork;
     }
+    /**
+     * The URL of the target resource to receive the matched traffic.
+     * The target must live in the same region as the forwarding rule.
+     * The forwarded traffic must be of a type appropriate to the target
+     * object.
+     * 
+     */
     @OutputExport(name="target", type=String.class, parameters={})
     private Output</* @Nullable */ String> target;
 
+    /**
+     * @return The URL of the target resource to receive the matched traffic.
+     * The target must live in the same region as the forwarding rule.
+     * The forwarded traffic must be of a type appropriate to the target
+     * object.
+     * 
+     */
     public Output</* @Nullable */ String> getTarget() {
         return this.target;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ForwardingRule(String name, @Nullable ForwardingRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:compute/forwardingRule:ForwardingRule", name, args == null ? ForwardingRuleArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -172,6 +578,15 @@ public class ForwardingRule extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ForwardingRule get(String name, Input<String> id, @Nullable ForwardingRuleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ForwardingRule(name, id, state, options);
     }

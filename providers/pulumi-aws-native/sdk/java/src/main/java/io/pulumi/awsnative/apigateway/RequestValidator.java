@@ -13,39 +13,89 @@ import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Resource Type definition for AWS::ApiGateway::RequestValidator
+ * 
+ */
 @ResourceType(type="aws-native:apigateway:RequestValidator")
 public class RequestValidator extends io.pulumi.resources.CustomResource {
+    /**
+     * Name of the request validator.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
+    /**
+     * @return Name of the request validator.
+     * 
+     */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
+    /**
+     * ID of the request validator.
+     * 
+     */
     @OutputExport(name="requestValidatorId", type=String.class, parameters={})
     private Output<String> requestValidatorId;
 
+    /**
+     * @return ID of the request validator.
+     * 
+     */
     public Output<String> getRequestValidatorId() {
         return this.requestValidatorId;
     }
+    /**
+     * The identifier of the targeted API entity.
+     * 
+     */
     @OutputExport(name="restApiId", type=String.class, parameters={})
     private Output<String> restApiId;
 
+    /**
+     * @return The identifier of the targeted API entity.
+     * 
+     */
     public Output<String> getRestApiId() {
         return this.restApiId;
     }
+    /**
+     * Indicates whether to validate the request body according to the configured schema for the targeted API and method.
+     * 
+     */
     @OutputExport(name="validateRequestBody", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> validateRequestBody;
 
+    /**
+     * @return Indicates whether to validate the request body according to the configured schema for the targeted API and method.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getValidateRequestBody() {
         return this.validateRequestBody;
     }
+    /**
+     * Indicates whether to validate request parameters.
+     * 
+     */
     @OutputExport(name="validateRequestParameters", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> validateRequestParameters;
 
+    /**
+     * @return Indicates whether to validate request parameters.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getValidateRequestParameters() {
         return this.validateRequestParameters;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public RequestValidator(String name, RequestValidatorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:apigateway:RequestValidator", name, args == null ? RequestValidatorArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -61,6 +111,14 @@ public class RequestValidator extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static RequestValidator get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RequestValidator(name, id, options);
     }

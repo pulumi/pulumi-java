@@ -13,6 +13,10 @@ public final class ProjectFeedFeedOutputConfigPubsubDestinationGetArgs extends i
 
     public static final ProjectFeedFeedOutputConfigPubsubDestinationGetArgs Empty = new ProjectFeedFeedOutputConfigPubsubDestinationGetArgs();
 
+    /**
+     * Destination on Cloud Pubsub topic.
+     * 
+     */
     @InputImport(name="topic", required=true)
     private final Input<String> topic;
 

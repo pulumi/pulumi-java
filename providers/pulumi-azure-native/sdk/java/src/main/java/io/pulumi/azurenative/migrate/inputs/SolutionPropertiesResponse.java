@@ -14,10 +14,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Class for solution properties.
+ * 
+ */
 public final class SolutionPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SolutionPropertiesResponse Empty = new SolutionPropertiesResponse();
 
+    /**
+     * Gets or sets the cleanup state of the solution.
+     * 
+     */
     @InputImport(name="cleanupState")
     private final @Nullable String cleanupState;
 
@@ -25,6 +33,10 @@ public final class SolutionPropertiesResponse extends io.pulumi.resources.Invoke
         return this.cleanupState == null ? Optional.empty() : Optional.ofNullable(this.cleanupState);
     }
 
+    /**
+     * Gets or sets the details of the solution.
+     * 
+     */
     @InputImport(name="details")
     private final @Nullable SolutionDetailsResponse details;
 
@@ -32,6 +44,10 @@ public final class SolutionPropertiesResponse extends io.pulumi.resources.Invoke
         return this.details == null ? Optional.empty() : Optional.ofNullable(this.details);
     }
 
+    /**
+     * Gets or sets the goal of the solution.
+     * 
+     */
     @InputImport(name="goal")
     private final @Nullable String goal;
 
@@ -39,6 +55,10 @@ public final class SolutionPropertiesResponse extends io.pulumi.resources.Invoke
         return this.goal == null ? Optional.empty() : Optional.ofNullable(this.goal);
     }
 
+    /**
+     * Gets or sets the purpose of the solution.
+     * 
+     */
     @InputImport(name="purpose")
     private final @Nullable String purpose;
 
@@ -46,6 +66,10 @@ public final class SolutionPropertiesResponse extends io.pulumi.resources.Invoke
         return this.purpose == null ? Optional.empty() : Optional.ofNullable(this.purpose);
     }
 
+    /**
+     * Gets or sets the current status of the solution.
+     * 
+     */
     @InputImport(name="status")
     private final @Nullable String status;
 
@@ -53,6 +77,10 @@ public final class SolutionPropertiesResponse extends io.pulumi.resources.Invoke
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 
+    /**
+     * Gets or sets the summary of the solution.
+     * 
+     */
     @InputImport(name="summary")
     private final @Nullable Either<DatabasesSolutionSummaryResponse,ServersSolutionSummaryResponse> summary;
 
@@ -60,6 +88,10 @@ public final class SolutionPropertiesResponse extends io.pulumi.resources.Invoke
         return this.summary == null ? null : this.summary;
     }
 
+    /**
+     * Gets or sets the tool being used in the solution.
+     * 
+     */
     @InputImport(name="tool")
     private final @Nullable String tool;
 

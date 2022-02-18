@@ -13,6 +13,10 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
 
     public static final MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse Empty = new MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse();
 
+    /**
+     * Count of databases
+     * 
+     */
     @InputImport(name="databaseCount", required=true)
     private final Integer databaseCount;
 
@@ -20,6 +24,10 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
         return this.databaseCount;
     }
 
+    /**
+     * Number of database level errors
+     * 
+     */
     @InputImport(name="databaseErrorCount", required=true)
     private final Integer databaseErrorCount;
 
@@ -27,6 +35,10 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
         return this.databaseErrorCount;
     }
 
+    /**
+     * Migration end time
+     * 
+     */
     @InputImport(name="endedOn", required=true)
     private final String endedOn;
 
@@ -34,6 +46,10 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
         return this.endedOn;
     }
 
+    /**
+     * Result identifier
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -41,6 +57,11 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
         return this.id;
     }
 
+    /**
+     * Result type
+     * Expected value is 'MigrationLevelOutput'.
+     * 
+     */
     @InputImport(name="resultType", required=true)
     private final String resultType;
 
@@ -48,6 +69,10 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
         return this.resultType;
     }
 
+    /**
+     * Source server brand version
+     * 
+     */
     @InputImport(name="sourceServerBrandVersion", required=true)
     private final String sourceServerBrandVersion;
 
@@ -55,6 +80,10 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
         return this.sourceServerBrandVersion;
     }
 
+    /**
+     * Source server name
+     * 
+     */
     @InputImport(name="sourceServerName", required=true)
     private final String sourceServerName;
 
@@ -62,6 +91,10 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
         return this.sourceServerName;
     }
 
+    /**
+     * Source server version
+     * 
+     */
     @InputImport(name="sourceServerVersion", required=true)
     private final String sourceServerVersion;
 
@@ -69,6 +102,10 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
         return this.sourceServerVersion;
     }
 
+    /**
+     * Migration start time
+     * 
+     */
     @InputImport(name="startedOn", required=true)
     private final String startedOn;
 
@@ -76,6 +113,10 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
         return this.startedOn;
     }
 
+    /**
+     * Current state of migration
+     * 
+     */
     @InputImport(name="state", required=true)
     private final String state;
 
@@ -83,6 +124,10 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
         return this.state;
     }
 
+    /**
+     * Target server brand version
+     * 
+     */
     @InputImport(name="targetServerBrandVersion", required=true)
     private final String targetServerBrandVersion;
 
@@ -90,6 +135,10 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
         return this.targetServerBrandVersion;
     }
 
+    /**
+     * Target server name
+     * 
+     */
     @InputImport(name="targetServerName", required=true)
     private final String targetServerName;
 
@@ -97,6 +146,10 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
         return this.targetServerName;
     }
 
+    /**
+     * Target server version
+     * 
+     */
     @InputImport(name="targetServerVersion", required=true)
     private final String targetServerVersion;
 

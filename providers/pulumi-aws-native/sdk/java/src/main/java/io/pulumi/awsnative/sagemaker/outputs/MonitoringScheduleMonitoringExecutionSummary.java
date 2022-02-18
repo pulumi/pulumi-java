@@ -12,13 +12,37 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MonitoringScheduleMonitoringExecutionSummary {
+    /**
+     * The time at which the monitoring job was created.
+     * 
+     */
     private final String creationTime;
     private final @Nullable String endpointName;
+    /**
+     * Contains the reason a monitoring job failed, if it failed.
+     * 
+     */
     private final @Nullable String failureReason;
+    /**
+     * A timestamp that indicates the last time the monitoring job was modified.
+     * 
+     */
     private final String lastModifiedTime;
+    /**
+     * The status of the monitoring job.
+     * 
+     */
     private final MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus monitoringExecutionStatus;
     private final String monitoringScheduleName;
+    /**
+     * The Amazon Resource Name (ARN) of the monitoring job.
+     * 
+     */
     private final @Nullable String processingJobArn;
+    /**
+     * The time the monitoring job was scheduled.
+     * 
+     */
     private final String scheduledTime;
 
     @OutputCustomType.Constructor({"creationTime","endpointName","failureReason","lastModifiedTime","monitoringExecutionStatus","monitoringScheduleName","processingJobArn","scheduledTime"})
@@ -41,27 +65,51 @@ public final class MonitoringScheduleMonitoringExecutionSummary {
         this.scheduledTime = Objects.requireNonNull(scheduledTime);
     }
 
+    /**
+     * The time at which the monitoring job was created.
+     * 
+     */
     public String getCreationTime() {
         return this.creationTime;
     }
     public Optional<String> getEndpointName() {
         return Optional.ofNullable(this.endpointName);
     }
+    /**
+     * Contains the reason a monitoring job failed, if it failed.
+     * 
+     */
     public Optional<String> getFailureReason() {
         return Optional.ofNullable(this.failureReason);
     }
+    /**
+     * A timestamp that indicates the last time the monitoring job was modified.
+     * 
+     */
     public String getLastModifiedTime() {
         return this.lastModifiedTime;
     }
+    /**
+     * The status of the monitoring job.
+     * 
+     */
     public MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus getMonitoringExecutionStatus() {
         return this.monitoringExecutionStatus;
     }
     public String getMonitoringScheduleName() {
         return this.monitoringScheduleName;
     }
+    /**
+     * The Amazon Resource Name (ARN) of the monitoring job.
+     * 
+     */
     public Optional<String> getProcessingJobArn() {
         return Optional.ofNullable(this.processingJobArn);
     }
+    /**
+     * The time the monitoring job was scheduled.
+     * 
+     */
     public String getScheduledTime() {
         return this.scheduledTime;
     }

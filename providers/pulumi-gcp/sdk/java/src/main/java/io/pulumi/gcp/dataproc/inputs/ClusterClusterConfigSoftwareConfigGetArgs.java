@@ -17,6 +17,14 @@ public final class ClusterClusterConfigSoftwareConfigGetArgs extends io.pulumi.r
 
     public static final ClusterClusterConfigSoftwareConfigGetArgs Empty = new ClusterClusterConfigSoftwareConfigGetArgs();
 
+    /**
+     * The Cloud Dataproc image version to use
+     * for the cluster - this controls the sets of software versions
+     * installed onto the nodes when you create clusters. If not specified, defaults to the
+     * latest version. For a list of valid versions see
+     * [Cloud Dataproc versions](https://cloud.google.com/dataproc/docs/concepts/dataproc-versions)
+     * 
+     */
     @InputImport(name="imageVersion")
     private final @Nullable Input<String> imageVersion;
 
@@ -24,6 +32,22 @@ public final class ClusterClusterConfigSoftwareConfigGetArgs extends io.pulumi.r
         return this.imageVersion == null ? Input.empty() : this.imageVersion;
     }
 
+    /**
+     * The set of optional components to activate on the cluster.
+     * Accepted values are:
+     * * ANACONDA
+     * * DRUID
+     * * FLINK
+     * * HBASE
+     * * HIVE_WEBHCAT
+     * * JUPYTER
+     * * PRESTO
+     * * RANGER
+     * * SOLR
+     * * ZEPPELIN
+     * * ZOOKEEPER
+     * 
+     */
     @InputImport(name="optionalComponents")
     private final @Nullable Input<List<String>> optionalComponents;
 
@@ -31,6 +55,13 @@ public final class ClusterClusterConfigSoftwareConfigGetArgs extends io.pulumi.r
         return this.optionalComponents == null ? Input.empty() : this.optionalComponents;
     }
 
+    /**
+     * A list of override and additional properties (key/value pairs)
+     * used to modify various aspects of the common configuration files used when creating
+     * a cluster. For a list of valid properties please see
+     * [Cluster properties](https://cloud.google.com/dataproc/docs/concepts/cluster-properties)
+     * 
+     */
     @InputImport(name="overrideProperties")
     private final @Nullable Input<Map<String,String>> overrideProperties;
 

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Location of the resource.
+     * 
+     */
     @EnumType
     public enum Location {
         Global("global");

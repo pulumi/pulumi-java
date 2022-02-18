@@ -12,9 +12,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class StrongIdResponse {
+    /**
+     * Localized descriptions.
+     * 
+     */
     private final @Nullable Map<String,String> description;
+    /**
+     * Localized display name.
+     * 
+     */
     private final @Nullable Map<String,String> displayName;
+    /**
+     * The properties which make up the unique ID.
+     * 
+     */
     private final List<String> keyPropertyNames;
+    /**
+     * The Name identifying the strong ID.
+     * 
+     */
     private final String strongIdName;
 
     @OutputCustomType.Constructor({"description","displayName","keyPropertyNames","strongIdName"})
@@ -29,15 +45,31 @@ public final class StrongIdResponse {
         this.strongIdName = Objects.requireNonNull(strongIdName);
     }
 
+    /**
+     * Localized descriptions.
+     * 
+     */
     public Map<String,String> getDescription() {
         return this.description == null ? Map.of() : this.description;
     }
+    /**
+     * Localized display name.
+     * 
+     */
     public Map<String,String> getDisplayName() {
         return this.displayName == null ? Map.of() : this.displayName;
     }
+    /**
+     * The properties which make up the unique ID.
+     * 
+     */
     public List<String> getKeyPropertyNames() {
         return this.keyPropertyNames;
     }
+    /**
+     * The Name identifying the strong ID.
+     * 
+     */
     public String getStrongIdName() {
         return this.strongIdName;
     }

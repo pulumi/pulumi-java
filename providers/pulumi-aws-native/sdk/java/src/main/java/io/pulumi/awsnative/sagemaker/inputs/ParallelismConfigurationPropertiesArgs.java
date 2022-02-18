@@ -13,6 +13,10 @@ public final class ParallelismConfigurationPropertiesArgs extends io.pulumi.reso
 
     public static final ParallelismConfigurationPropertiesArgs Empty = new ParallelismConfigurationPropertiesArgs();
 
+    /**
+     * Maximum parallel execution steps
+     * 
+     */
     @InputImport(name="maxParallelExecutionSteps", required=true)
     private final Input<Integer> maxParallelExecutionSteps;
 

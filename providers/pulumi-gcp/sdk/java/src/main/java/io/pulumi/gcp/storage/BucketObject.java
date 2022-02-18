@@ -17,59 +17,150 @@ import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Creates a new object inside an existing bucket in Google cloud storage service (GCS).
+ * [ACLs](https://cloud.google.com/storage/docs/access-control/lists) can be applied using the `gcp.storage.ObjectACL` resource.
+ *  For more information see
+ * [the official documentation](https://cloud.google.com/storage/docs/key-terms#objects)
+ * and
+ * [API](https://cloud.google.com/storage/docs/json_api/v1/objects).
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * This resource does not support import.
+ * 
+ */
 @ResourceType(type="gcp:storage/bucketObject:BucketObject")
 public class BucketObject extends io.pulumi.resources.CustomResource {
+    /**
+     * The name of the containing bucket.
+     * 
+     */
     @OutputExport(name="bucket", type=String.class, parameters={})
     private Output<String> bucket;
 
+    /**
+     * @return The name of the containing bucket.
+     * 
+     */
     public Output<String> getBucket() {
         return this.bucket;
     }
+    /**
+     * [Cache-Control](https://tools.ietf.org/html/rfc7234#section-5.2)
+     * directive to specify caching behavior of object data. If omitted and object is accessible to all anonymous users, the default will be public, max-age=3600
+     * 
+     */
     @OutputExport(name="cacheControl", type=String.class, parameters={})
     private Output</* @Nullable */ String> cacheControl;
 
+    /**
+     * @return [Cache-Control](https://tools.ietf.org/html/rfc7234#section-5.2)
+     * directive to specify caching behavior of object data. If omitted and object is accessible to all anonymous users, the default will be public, max-age=3600
+     * 
+     */
     public Output</* @Nullable */ String> getCacheControl() {
         return this.cacheControl;
     }
+    /**
+     * Data as `string` to be uploaded. Must be defined if `source` is not. **Note**: The `content` field is marked as sensitive.
+     * 
+     */
     @OutputExport(name="content", type=String.class, parameters={})
     private Output</* @Nullable */ String> content;
 
+    /**
+     * @return Data as `string` to be uploaded. Must be defined if `source` is not. **Note**: The `content` field is marked as sensitive.
+     * 
+     */
     public Output</* @Nullable */ String> getContent() {
         return this.content;
     }
+    /**
+     * [Content-Disposition](https://tools.ietf.org/html/rfc6266) of the object data.
+     * 
+     */
     @OutputExport(name="contentDisposition", type=String.class, parameters={})
     private Output</* @Nullable */ String> contentDisposition;
 
+    /**
+     * @return [Content-Disposition](https://tools.ietf.org/html/rfc6266) of the object data.
+     * 
+     */
     public Output</* @Nullable */ String> getContentDisposition() {
         return this.contentDisposition;
     }
+    /**
+     * [Content-Encoding](https://tools.ietf.org/html/rfc7231#section-3.1.2.2) of the object data.
+     * 
+     */
     @OutputExport(name="contentEncoding", type=String.class, parameters={})
     private Output</* @Nullable */ String> contentEncoding;
 
+    /**
+     * @return [Content-Encoding](https://tools.ietf.org/html/rfc7231#section-3.1.2.2) of the object data.
+     * 
+     */
     public Output</* @Nullable */ String> getContentEncoding() {
         return this.contentEncoding;
     }
+    /**
+     * [Content-Language](https://tools.ietf.org/html/rfc7231#section-3.1.3.2) of the object data.
+     * 
+     */
     @OutputExport(name="contentLanguage", type=String.class, parameters={})
     private Output</* @Nullable */ String> contentLanguage;
 
+    /**
+     * @return [Content-Language](https://tools.ietf.org/html/rfc7231#section-3.1.3.2) of the object data.
+     * 
+     */
     public Output</* @Nullable */ String> getContentLanguage() {
         return this.contentLanguage;
     }
+    /**
+     * [Content-Type](https://tools.ietf.org/html/rfc7231#section-3.1.1.5) of the object data. Defaults to "application/octet-stream" or "text/plain; charset=utf-8".
+     * 
+     */
     @OutputExport(name="contentType", type=String.class, parameters={})
     private Output<String> contentType;
 
+    /**
+     * @return [Content-Type](https://tools.ietf.org/html/rfc7231#section-3.1.1.5) of the object data. Defaults to "application/octet-stream" or "text/plain; charset=utf-8".
+     * 
+     */
     public Output<String> getContentType() {
         return this.contentType;
     }
+    /**
+     * (Computed) Base 64 CRC32 hash of the uploaded data.
+     * 
+     */
     @OutputExport(name="crc32c", type=String.class, parameters={})
     private Output<String> crc32c;
 
+    /**
+     * @return (Computed) Base 64 CRC32 hash of the uploaded data.
+     * 
+     */
     public Output<String> getCrc32c() {
         return this.crc32c;
     }
+    /**
+     * Enables object encryption with Customer-Supplied Encryption Key (CSEK). Google [documentation about CSEK.](https://cloud.google.com/storage/docs/encryption/customer-supplied-keys)
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="customerEncryption", type=BucketObjectCustomerEncryption.class, parameters={})
     private Output</* @Nullable */ BucketObjectCustomerEncryption> customerEncryption;
 
+    /**
+     * @return Enables object encryption with Customer-Supplied Encryption Key (CSEK). Google [documentation about CSEK.](https://cloud.google.com/storage/docs/encryption/customer-supplied-keys)
+     * Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ BucketObjectCustomerEncryption> getCustomerEncryption() {
         return this.customerEncryption;
     }
@@ -79,73 +170,181 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getDetectMd5hash() {
         return this.detectMd5hash;
     }
+    /**
+     * Whether an object is under event-based hold. Event-based hold is a way to retain objects until an event occurs, which is
+     * signified by the hold's release (i.e. this value is set to false). After being released (set to false), such objects
+     * will be subject to bucket-level retention (if any).
+     * 
+     */
     @OutputExport(name="eventBasedHold", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> eventBasedHold;
 
+    /**
+     * @return Whether an object is under event-based hold. Event-based hold is a way to retain objects until an event occurs, which is
+     * signified by the hold's release (i.e. this value is set to false). After being released (set to false), such objects
+     * will be subject to bucket-level retention (if any).
+     * 
+     */
     public Output</* @Nullable */ Boolean> getEventBasedHold() {
         return this.eventBasedHold;
     }
+    /**
+     * The resource name of the Cloud KMS key that will be used to [encrypt](https://cloud.google.com/storage/docs/encryption/using-customer-managed-keys) the object.
+     * 
+     */
     @OutputExport(name="kmsKeyName", type=String.class, parameters={})
     private Output<String> kmsKeyName;
 
+    /**
+     * @return The resource name of the Cloud KMS key that will be used to [encrypt](https://cloud.google.com/storage/docs/encryption/using-customer-managed-keys) the object.
+     * 
+     */
     public Output<String> getKmsKeyName() {
         return this.kmsKeyName;
     }
+    /**
+     * (Computed) Base 64 MD5 hash of the uploaded data.
+     * 
+     */
     @OutputExport(name="md5hash", type=String.class, parameters={})
     private Output<String> md5hash;
 
+    /**
+     * @return (Computed) Base 64 MD5 hash of the uploaded data.
+     * 
+     */
     public Output<String> getMd5hash() {
         return this.md5hash;
     }
+    /**
+     * (Computed) A url reference to download this object.
+     * 
+     */
     @OutputExport(name="mediaLink", type=String.class, parameters={})
     private Output<String> mediaLink;
 
+    /**
+     * @return (Computed) A url reference to download this object.
+     * 
+     */
     public Output<String> getMediaLink() {
         return this.mediaLink;
     }
+    /**
+     * User-provided metadata, in key/value pairs.
+     * 
+     */
     @OutputExport(name="metadata", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> metadata;
 
+    /**
+     * @return User-provided metadata, in key/value pairs.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getMetadata() {
         return this.metadata;
     }
+    /**
+     * The name of the object. If you're interpolating the name of this object, see `output_name` instead.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the object. If you're interpolating the name of this object, see `output_name` instead.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * (Computed) The name of the object. Use this field in interpolations with `gcp.storage.ObjectACL` to recreate
+     * `gcp.storage.ObjectACL` resources when your `gcp.storage.BucketObject` is recreated.
+     * 
+     */
     @OutputExport(name="outputName", type=String.class, parameters={})
     private Output<String> outputName;
 
+    /**
+     * @return (Computed) The name of the object. Use this field in interpolations with `gcp.storage.ObjectACL` to recreate
+     * `gcp.storage.ObjectACL` resources when your `gcp.storage.BucketObject` is recreated.
+     * 
+     */
     public Output<String> getOutputName() {
         return this.outputName;
     }
+    /**
+     * (Computed) A url reference to this object.
+     * 
+     */
     @OutputExport(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
+    /**
+     * @return (Computed) A url reference to this object.
+     * 
+     */
     public Output<String> getSelfLink() {
         return this.selfLink;
     }
+    /**
+     * A path to the data you want to upload. Must be defined
+     * if `content` is not.
+     * 
+     */
     @OutputExport(name="source", type=AssetOrArchive.class, parameters={})
     private Output</* @Nullable */ AssetOrArchive> source;
 
+    /**
+     * @return A path to the data you want to upload. Must be defined
+     * if `content` is not.
+     * 
+     */
     public Output</* @Nullable */ AssetOrArchive> getSource() {
         return this.source;
     }
+    /**
+     * The [StorageClass](https://cloud.google.com/storage/docs/storage-classes) of the new bucket object.
+     * Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`. If not provided, this defaults to the bucket's default
+     * storage class or to a [standard](https://cloud.google.com/storage/docs/storage-classes#standard) class.
+     * 
+     */
     @OutputExport(name="storageClass", type=String.class, parameters={})
     private Output<String> storageClass;
 
+    /**
+     * @return The [StorageClass](https://cloud.google.com/storage/docs/storage-classes) of the new bucket object.
+     * Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`. If not provided, this defaults to the bucket's default
+     * storage class or to a [standard](https://cloud.google.com/storage/docs/storage-classes#standard) class.
+     * 
+     */
     public Output<String> getStorageClass() {
         return this.storageClass;
     }
+    /**
+     * Whether an object is under temporary hold. While this flag is set to true, the object is protected against deletion and
+     * overwrites.
+     * 
+     */
     @OutputExport(name="temporaryHold", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> temporaryHold;
 
+    /**
+     * @return Whether an object is under temporary hold. While this flag is set to true, the object is protected against deletion and
+     * overwrites.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getTemporaryHold() {
         return this.temporaryHold;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public BucketObject(String name, BucketObjectArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:storage/bucketObject:BucketObject", name, args == null ? BucketObjectArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -161,6 +360,15 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static BucketObject get(String name, Input<String> id, @Nullable BucketObjectState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new BucketObject(name, id, state, options);
     }

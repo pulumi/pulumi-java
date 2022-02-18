@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetUserSettingsResult {
+    /**
+     * The cloud shell user settings properties.
+     * 
+     */
     private final UserPropertiesResponse properties;
 
     @OutputCustomType.Constructor({"properties"})
@@ -16,6 +20,10 @@ public final class GetUserSettingsResult {
         this.properties = Objects.requireNonNull(properties);
     }
 
+    /**
+     * The cloud shell user settings properties.
+     * 
+     */
     public UserPropertiesResponse getProperties() {
         return this.properties;
     }

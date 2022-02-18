@@ -19,6 +19,10 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
 
     public static final SnapshotState Empty = new SnapshotState();
 
+    /**
+     * Creation timestamp in RFC3339 text format.
+     * 
+     */
     @InputImport(name="creationTimestamp")
     private final @Nullable Input<String> creationTimestamp;
 
@@ -26,6 +30,10 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
         return this.creationTimestamp == null ? Input.empty() : this.creationTimestamp;
     }
 
+    /**
+     * An optional description of this resource.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -33,6 +41,10 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Size of the snapshot, specified in GB.
+     * 
+     */
     @InputImport(name="diskSizeGb")
     private final @Nullable Input<Integer> diskSizeGb;
 
@@ -40,6 +52,10 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
         return this.diskSizeGb == null ? Input.empty() : this.diskSizeGb;
     }
 
+    /**
+     * The fingerprint used for optimistic locking of this resource. Used internally during updates.
+     * 
+     */
     @InputImport(name="labelFingerprint")
     private final @Nullable Input<String> labelFingerprint;
 
@@ -47,6 +63,10 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
         return this.labelFingerprint == null ? Input.empty() : this.labelFingerprint;
     }
 
+    /**
+     * Labels to apply to this Snapshot.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -54,6 +74,12 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * A list of public visible licenses that apply to this snapshot. This can be because the original image had licenses
+     * attached (such as a Windows image). snapshotEncryptionKey nested object Encrypts the snapshot using a customer-supplied
+     * encryption key.
+     * 
+     */
     @InputImport(name="licenses")
     private final @Nullable Input<List<String>> licenses;
 
@@ -61,6 +87,16 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
         return this.licenses == null ? Input.empty() : this.licenses;
     }
 
+    /**
+     * Name of the resource; provided by the client when the resource is
+     * created. The name must be 1-63 characters long, and comply with
+     * RFC1035. Specifically, the name must be 1-63 characters long and match
+     * the regular expression `a-z?` which means the
+     * first character must be a lowercase letter, and all following
+     * characters must be a dash, lowercase letter, or digit, except the last
+     * character, which cannot be a dash.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -68,6 +104,11 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -75,6 +116,10 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The URI of the created resource.
+     * 
+     */
     @InputImport(name="selfLink")
     private final @Nullable Input<String> selfLink;
 
@@ -82,6 +127,12 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
         return this.selfLink == null ? Input.empty() : this.selfLink;
     }
 
+    /**
+     * The customer-supplied encryption key of the snapshot. Required if the
+     * source snapshot is protected by a customer-supplied encryption key.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="snapshotEncryptionKey")
     private final @Nullable Input<SnapshotSnapshotEncryptionKeyGetArgs> snapshotEncryptionKey;
 
@@ -89,6 +140,10 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
         return this.snapshotEncryptionKey == null ? Input.empty() : this.snapshotEncryptionKey;
     }
 
+    /**
+     * The unique identifier for the resource.
+     * 
+     */
     @InputImport(name="snapshotId")
     private final @Nullable Input<Integer> snapshotId;
 
@@ -96,6 +151,10 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
         return this.snapshotId == null ? Input.empty() : this.snapshotId;
     }
 
+    /**
+     * A reference to the disk used to create this snapshot.
+     * 
+     */
     @InputImport(name="sourceDisk")
     private final @Nullable Input<String> sourceDisk;
 
@@ -103,6 +162,13 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
         return this.sourceDisk == null ? Input.empty() : this.sourceDisk;
     }
 
+    /**
+     * The customer-supplied encryption key of the source snapshot. Required
+     * if the source snapshot is protected by a customer-supplied encryption
+     * key.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="sourceDiskEncryptionKey")
     private final @Nullable Input<SnapshotSourceDiskEncryptionKeyGetArgs> sourceDiskEncryptionKey;
 
@@ -110,6 +176,11 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
         return this.sourceDiskEncryptionKey == null ? Input.empty() : this.sourceDiskEncryptionKey;
     }
 
+    /**
+     * A size of the storage used by the snapshot. As snapshots share storage, this number is expected to change with snapshot
+     * creation/deletion.
+     * 
+     */
     @InputImport(name="storageBytes")
     private final @Nullable Input<Integer> storageBytes;
 
@@ -117,6 +188,10 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
         return this.storageBytes == null ? Input.empty() : this.storageBytes;
     }
 
+    /**
+     * Cloud Storage bucket storage location of the snapshot (regional or multi-regional).
+     * 
+     */
     @InputImport(name="storageLocations")
     private final @Nullable Input<List<String>> storageLocations;
 
@@ -124,6 +199,10 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
         return this.storageLocations == null ? Input.empty() : this.storageLocations;
     }
 
+    /**
+     * A reference to the zone where the disk is hosted.
+     * 
+     */
     @InputImport(name="zone")
     private final @Nullable Input<String> zone;
 

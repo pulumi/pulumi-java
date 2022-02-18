@@ -17,6 +17,10 @@ public final class RouteFilterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RouteFilterArgs Empty = new RouteFilterArgs();
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -24,6 +28,10 @@ public final class RouteFilterArgs extends io.pulumi.resources.ResourceArgs {
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * Resource location.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -31,6 +39,10 @@ public final class RouteFilterArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -38,6 +50,10 @@ public final class RouteFilterArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the route filter.
+     * 
+     */
     @InputImport(name="routeFilterName")
     private final @Nullable Input<String> routeFilterName;
 
@@ -45,6 +61,10 @@ public final class RouteFilterArgs extends io.pulumi.resources.ResourceArgs {
         return this.routeFilterName == null ? Input.empty() : this.routeFilterName;
     }
 
+    /**
+     * Collection of RouteFilterRules contained within a route filter.
+     * 
+     */
     @InputImport(name="rules")
     private final @Nullable Input<List<RouteFilterRuleArgs>> rules;
 
@@ -52,6 +72,10 @@ public final class RouteFilterArgs extends io.pulumi.resources.ResourceArgs {
         return this.rules == null ? Input.empty() : this.rules;
     }
 
+    /**
+     * Resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

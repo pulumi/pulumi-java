@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Restore parameters.
+ * 
+ */
 public final class RestoredLogsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RestoredLogsArgs Empty = new RestoredLogsArgs();
 
+    /**
+     * The timestamp to end the restore by (UTC).
+     * 
+     */
     @InputImport(name="endRestoreTime")
     private final @Nullable Input<String> endRestoreTime;
 
@@ -21,6 +29,10 @@ public final class RestoredLogsArgs extends io.pulumi.resources.ResourceArgs {
         return this.endRestoreTime == null ? Input.empty() : this.endRestoreTime;
     }
 
+    /**
+     * The timestamp to start the restore from (UTC).
+     * 
+     */
     @InputImport(name="startRestoreTime")
     private final @Nullable Input<String> startRestoreTime;
 

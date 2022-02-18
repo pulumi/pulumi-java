@@ -11,8 +11,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ConnectToTargetSqlMISyncTaskOutputResponse {
+    /**
+     * Target server brand version
+     * 
+     */
     private final String targetServerBrandVersion;
+    /**
+     * Target server version
+     * 
+     */
     private final String targetServerVersion;
+    /**
+     * Validation errors
+     * 
+     */
     private final List<ReportableExceptionResponse> validationErrors;
 
     @OutputCustomType.Constructor({"targetServerBrandVersion","targetServerVersion","validationErrors"})
@@ -25,12 +37,24 @@ public final class ConnectToTargetSqlMISyncTaskOutputResponse {
         this.validationErrors = Objects.requireNonNull(validationErrors);
     }
 
+    /**
+     * Target server brand version
+     * 
+     */
     public String getTargetServerBrandVersion() {
         return this.targetServerBrandVersion;
     }
+    /**
+     * Target server version
+     * 
+     */
     public String getTargetServerVersion() {
         return this.targetServerVersion;
     }
+    /**
+     * Validation errors
+     * 
+     */
     public List<ReportableExceptionResponse> getValidationErrors() {
         return this.validationErrors;
     }

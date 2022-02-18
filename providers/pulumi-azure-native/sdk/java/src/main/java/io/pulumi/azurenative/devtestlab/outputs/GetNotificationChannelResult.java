@@ -14,18 +14,70 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetNotificationChannelResult {
+    /**
+     * The creation date of the notification channel.
+     * 
+     */
     private final String createdDate;
+    /**
+     * Description of notification.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * The email recipient to send notifications to (can be a list of semi-colon separated email addresses).
+     * 
+     */
     private final @Nullable String emailRecipient;
+    /**
+     * The list of event for which this notification is enabled.
+     * 
+     */
     private final @Nullable List<EventResponse> events;
+    /**
+     * The identifier of the resource.
+     * 
+     */
     private final String id;
+    /**
+     * The location of the resource.
+     * 
+     */
     private final @Nullable String location;
+    /**
+     * The name of the resource.
+     * 
+     */
     private final String name;
+    /**
+     * The locale to use when sending a notification (fallback for unsupported languages is EN).
+     * 
+     */
     private final @Nullable String notificationLocale;
+    /**
+     * The provisioning status of the resource.
+     * 
+     */
     private final String provisioningState;
+    /**
+     * The tags of the resource.
+     * 
+     */
     private final @Nullable Map<String,String> tags;
+    /**
+     * The type of the resource.
+     * 
+     */
     private final String type;
+    /**
+     * The unique immutable identifier of a resource (Guid).
+     * 
+     */
     private final String uniqueIdentifier;
+    /**
+     * The webhook URL to send notifications to.
+     * 
+     */
     private final @Nullable String webHookUrl;
 
     @OutputCustomType.Constructor({"createdDate","description","emailRecipient","events","id","location","name","notificationLocale","provisioningState","tags","type","uniqueIdentifier","webHookUrl"})
@@ -58,42 +110,94 @@ public final class GetNotificationChannelResult {
         this.webHookUrl = webHookUrl;
     }
 
+    /**
+     * The creation date of the notification channel.
+     * 
+     */
     public String getCreatedDate() {
         return this.createdDate;
     }
+    /**
+     * Description of notification.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * The email recipient to send notifications to (can be a list of semi-colon separated email addresses).
+     * 
+     */
     public Optional<String> getEmailRecipient() {
         return Optional.ofNullable(this.emailRecipient);
     }
+    /**
+     * The list of event for which this notification is enabled.
+     * 
+     */
     public List<EventResponse> getEvents() {
         return this.events == null ? List.of() : this.events;
     }
+    /**
+     * The identifier of the resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * The location of the resource.
+     * 
+     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
+    /**
+     * The name of the resource.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The locale to use when sending a notification (fallback for unsupported languages is EN).
+     * 
+     */
     public Optional<String> getNotificationLocale() {
         return Optional.ofNullable(this.notificationLocale);
     }
+    /**
+     * The provisioning status of the resource.
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The tags of the resource.
+     * 
+     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+    /**
+     * The type of the resource.
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * The unique immutable identifier of a resource (Guid).
+     * 
+     */
     public String getUniqueIdentifier() {
         return this.uniqueIdentifier;
     }
+    /**
+     * The webhook URL to send notifications to.
+     * 
+     */
     public Optional<String> getWebHookUrl() {
         return Optional.ofNullable(this.webHookUrl);
     }

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * operator for a given condition
+     * 
+     */
     @EnumType
     public enum Operator {
         Equals("Equals"),

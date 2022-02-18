@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Enum value definition.
+ * 
+ */
 public final class EnumValueArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EnumValueArgs Empty = new EnumValueArgs();
 
+    /**
+     * Enum value name.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -24,6 +32,10 @@ public final class EnumValueArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Enum value number.
+     * 
+     */
     @InputImport(name="number")
     private final @Nullable Input<Integer> number;
 
@@ -31,6 +43,10 @@ public final class EnumValueArgs extends io.pulumi.resources.ResourceArgs {
         return this.number == null ? Input.empty() : this.number;
     }
 
+    /**
+     * Protocol buffer options.
+     * 
+     */
     @InputImport(name="options")
     private final @Nullable Input<List<OptionArgs>> options;
 

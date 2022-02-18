@@ -9,6 +9,10 @@ import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1_AutomatedStoppingConf
 import java.util.Objects;
 
 
+/**
+ * Configuration for Automated Early Stopping of Trials. If no implementation_config is set, automated early stopping will not be run.
+ * 
+ */
 public final class GoogleCloudMlV1__AutomatedStoppingConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudMlV1__AutomatedStoppingConfigResponse Empty = new GoogleCloudMlV1__AutomatedStoppingConfigResponse();

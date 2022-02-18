@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The kind of the resource.
+     * 
+     */
     @EnumType
     public enum KnownDataCollectionEndpointResourceKind {
         Linux("Linux"),

@@ -69,6 +69,10 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
         return this.samplingRate == null ? Input.empty() : this.samplingRate;
     }
 
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<ExperimentTagArgs>> tags;
 

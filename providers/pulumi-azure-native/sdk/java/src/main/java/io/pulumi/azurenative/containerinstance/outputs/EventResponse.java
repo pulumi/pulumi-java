@@ -10,11 +10,35 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class EventResponse {
+    /**
+     * The count of the event.
+     * 
+     */
     private final Integer count;
+    /**
+     * The date-time of the earliest logged event.
+     * 
+     */
     private final String firstTimestamp;
+    /**
+     * The date-time of the latest logged event.
+     * 
+     */
     private final String lastTimestamp;
+    /**
+     * The event message.
+     * 
+     */
     private final String message;
+    /**
+     * The event name.
+     * 
+     */
     private final String name;
+    /**
+     * The event type.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"count","firstTimestamp","lastTimestamp","message","name","type"})
@@ -33,21 +57,45 @@ public final class EventResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * The count of the event.
+     * 
+     */
     public Integer getCount() {
         return this.count;
     }
+    /**
+     * The date-time of the earliest logged event.
+     * 
+     */
     public String getFirstTimestamp() {
         return this.firstTimestamp;
     }
+    /**
+     * The date-time of the latest logged event.
+     * 
+     */
     public String getLastTimestamp() {
         return this.lastTimestamp;
     }
+    /**
+     * The event message.
+     * 
+     */
     public String getMessage() {
         return this.message;
     }
+    /**
+     * The event name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The event type.
+     * 
+     */
     public String getType() {
         return this.type;
     }

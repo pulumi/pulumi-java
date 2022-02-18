@@ -9,10 +9,18 @@ import io.pulumi.googlenative.dataproc_v1.inputs.PeripheralsConfigResponse;
 import java.util.Objects;
 
 
+/**
+ * Environment configuration for a workload.
+ * 
+ */
 public final class EnvironmentConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EnvironmentConfigResponse Empty = new EnvironmentConfigResponse();
 
+    /**
+     * Optional. Execution configuration for a workload.
+     * 
+     */
     @InputImport(name="executionConfig", required=true)
     private final ExecutionConfigResponse executionConfig;
 
@@ -20,6 +28,10 @@ public final class EnvironmentConfigResponse extends io.pulumi.resources.InvokeA
         return this.executionConfig;
     }
 
+    /**
+     * Optional. Peripherals configuration that workload has access to.
+     * 
+     */
     @InputImport(name="peripheralsConfig", required=true)
     private final PeripheralsConfigResponse peripheralsConfig;
 

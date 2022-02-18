@@ -14,39 +14,126 @@ import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * A single firewall rule that is evaluated against incoming traffic
+ * and provides an action to take on matched requests.
+ * 
+ * To get more information about FirewallRule, see:
+ * 
+ * * [API documentation](https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.firewall.ingressRules)
+ * * How-to Guides
+ *     * [Official Documentation](https://cloud.google.com/appengine/docs/standard/python/creating-firewalls#creating_firewall_rules)
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * FirewallRule can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:appengine/firewallRule:FirewallRule default apps/{{project}}/firewall/ingressRules/{{priority}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:appengine/firewallRule:FirewallRule default {{project}}/{{priority}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:appengine/firewallRule:FirewallRule default {{priority}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:appengine/firewallRule:FirewallRule")
 public class FirewallRule extends io.pulumi.resources.CustomResource {
+    /**
+     * The action to take if this rule matches.
+     * Possible values are `UNSPECIFIED_ACTION`, `ALLOW`, and `DENY`.
+     * 
+     */
     @OutputExport(name="action", type=String.class, parameters={})
     private Output<String> action;
 
+    /**
+     * @return The action to take if this rule matches.
+     * Possible values are `UNSPECIFIED_ACTION`, `ALLOW`, and `DENY`.
+     * 
+     */
     public Output<String> getAction() {
         return this.action;
     }
+    /**
+     * An optional string description of this rule.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return An optional string description of this rule.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * A positive integer that defines the order of rule evaluation.
+     * Rules with the lowest priority are evaluated first.
+     * A default rule at priority Int32.MaxValue matches all IPv4 and
+     * IPv6 traffic when no previous rule matches. Only the action of
+     * this rule can be modified by the user.
+     * 
+     */
     @OutputExport(name="priority", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> priority;
 
+    /**
+     * @return A positive integer that defines the order of rule evaluation.
+     * Rules with the lowest priority are evaluated first.
+     * A default rule at priority Int32.MaxValue matches all IPv4 and
+     * IPv6 traffic when no previous rule matches. Only the action of
+     * this rule can be modified by the user.
+     * 
+     */
     public Output</* @Nullable */ Integer> getPriority() {
         return this.priority;
     }
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * IP address or range, defined using CIDR notation, of requests that this rule applies to.
+     * 
+     */
     @OutputExport(name="sourceRange", type=String.class, parameters={})
     private Output<String> sourceRange;
 
+    /**
+     * @return IP address or range, defined using CIDR notation, of requests that this rule applies to.
+     * 
+     */
     public Output<String> getSourceRange() {
         return this.sourceRange;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public FirewallRule(String name, FirewallRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:appengine/firewallRule:FirewallRule", name, args == null ? FirewallRuleArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -62,6 +149,15 @@ public class FirewallRule extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static FirewallRule get(String name, Input<String> id, @Nullable FirewallRuleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new FirewallRule(name, id, state, options);
     }

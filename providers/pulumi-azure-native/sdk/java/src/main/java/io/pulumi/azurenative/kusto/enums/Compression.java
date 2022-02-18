@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The event hub messages compression type
+     * 
+     */
     @EnumType
     public enum Compression {
         None("None"),

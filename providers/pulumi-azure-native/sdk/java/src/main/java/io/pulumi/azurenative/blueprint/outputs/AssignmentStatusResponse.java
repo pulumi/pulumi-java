@@ -10,8 +10,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AssignmentStatusResponse {
+    /**
+     * Last modified time of this blueprint definition.
+     * 
+     */
     private final String lastModified;
+    /**
+     * List of resources that were created by the blueprint assignment.
+     * 
+     */
     private final List<String> managedResources;
+    /**
+     * Creation time of this blueprint definition.
+     * 
+     */
     private final String timeCreated;
 
     @OutputCustomType.Constructor({"lastModified","managedResources","timeCreated"})
@@ -24,12 +36,24 @@ public final class AssignmentStatusResponse {
         this.timeCreated = Objects.requireNonNull(timeCreated);
     }
 
+    /**
+     * Last modified time of this blueprint definition.
+     * 
+     */
     public String getLastModified() {
         return this.lastModified;
     }
+    /**
+     * List of resources that were created by the blueprint assignment.
+     * 
+     */
     public List<String> getManagedResources() {
         return this.managedResources;
     }
+    /**
+     * Creation time of this blueprint definition.
+     * 
+     */
     public String getTimeCreated() {
         return this.timeCreated;
     }

@@ -17,10 +17,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Hyper V Replica Azure provider specific settings.
+ * 
+ */
 public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final HyperVReplicaAzureReplicationDetailsResponse Empty = new HyperVReplicaAzureReplicationDetailsResponse();
 
+    /**
+     * Azure VM Disk details.
+     * 
+     */
     @InputImport(name="azureVmDiskDetails")
     private final @Nullable List<AzureVmDiskDetailsResponse> azureVmDiskDetails;
 
@@ -28,6 +36,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
         return this.azureVmDiskDetails == null ? List.of() : this.azureVmDiskDetails;
     }
 
+    /**
+     * The selected option to enable RDP\SSH on target vm after failover. String value of {SrsDataContract.EnableRDPOnTargetOption} enum.
+     * 
+     */
     @InputImport(name="enableRdpOnTargetOption")
     private final @Nullable String enableRdpOnTargetOption;
 
@@ -35,6 +47,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
         return this.enableRdpOnTargetOption == null ? Optional.empty() : Optional.ofNullable(this.enableRdpOnTargetOption);
     }
 
+    /**
+     * The encryption info.
+     * 
+     */
     @InputImport(name="encryption")
     private final @Nullable String encryption;
 
@@ -42,6 +58,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
         return this.encryption == null ? Optional.empty() : Optional.ofNullable(this.encryption);
     }
 
+    /**
+     * Initial replication details.
+     * 
+     */
     @InputImport(name="initialReplicationDetails")
     private final @Nullable InitialReplicationDetailsResponse initialReplicationDetails;
 
@@ -49,6 +69,11 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
         return this.initialReplicationDetails == null ? Optional.empty() : Optional.ofNullable(this.initialReplicationDetails);
     }
 
+    /**
+     * Gets the Instance type.
+     * Expected value is 'HyperVReplicaAzure'.
+     * 
+     */
     @InputImport(name="instanceType", required=true)
     private final String instanceType;
 
@@ -56,6 +81,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
         return this.instanceType;
     }
 
+    /**
+     * The Last replication time.
+     * 
+     */
     @InputImport(name="lastReplicatedTime")
     private final @Nullable String lastReplicatedTime;
 
@@ -63,6 +92,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
         return this.lastReplicatedTime == null ? Optional.empty() : Optional.ofNullable(this.lastReplicatedTime);
     }
 
+    /**
+     * The last RPO calculated time.
+     * 
+     */
     @InputImport(name="lastRpoCalculatedTime")
     private final @Nullable String lastRpoCalculatedTime;
 
@@ -70,6 +103,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
         return this.lastRpoCalculatedTime == null ? Optional.empty() : Optional.ofNullable(this.lastRpoCalculatedTime);
     }
 
+    /**
+     * License Type of the VM to be used.
+     * 
+     */
     @InputImport(name="licenseType")
     private final @Nullable String licenseType;
 
@@ -77,6 +114,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
         return this.licenseType == null ? Optional.empty() : Optional.ofNullable(this.licenseType);
     }
 
+    /**
+     * The operating system info.
+     * 
+     */
     @InputImport(name="oSDetails")
     private final @Nullable OSDetailsResponse oSDetails;
 
@@ -84,6 +125,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
         return this.oSDetails == null ? Optional.empty() : Optional.ofNullable(this.oSDetails);
     }
 
+    /**
+     * The recovery availability set Id.
+     * 
+     */
     @InputImport(name="recoveryAvailabilitySetId")
     private final @Nullable String recoveryAvailabilitySetId;
 
@@ -91,6 +136,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
         return this.recoveryAvailabilitySetId == null ? Optional.empty() : Optional.ofNullable(this.recoveryAvailabilitySetId);
     }
 
+    /**
+     * The ARM id of the log storage account used for replication. This will be set to null if no log storage account was provided during enable protection.
+     * 
+     */
     @InputImport(name="recoveryAzureLogStorageAccountId")
     private final @Nullable String recoveryAzureLogStorageAccountId;
 
@@ -98,6 +147,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
         return this.recoveryAzureLogStorageAccountId == null ? Optional.empty() : Optional.ofNullable(this.recoveryAzureLogStorageAccountId);
     }
 
+    /**
+     * The target resource group Id.
+     * 
+     */
     @InputImport(name="recoveryAzureResourceGroupId")
     private final @Nullable String recoveryAzureResourceGroupId;
 
@@ -105,6 +158,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
         return this.recoveryAzureResourceGroupId == null ? Optional.empty() : Optional.ofNullable(this.recoveryAzureResourceGroupId);
     }
 
+    /**
+     * The recovery Azure storage account.
+     * 
+     */
     @InputImport(name="recoveryAzureStorageAccount")
     private final @Nullable String recoveryAzureStorageAccount;
 
@@ -112,6 +169,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
         return this.recoveryAzureStorageAccount == null ? Optional.empty() : Optional.ofNullable(this.recoveryAzureStorageAccount);
     }
 
+    /**
+     * The Recovery Azure VM size.
+     * 
+     */
     @InputImport(name="recoveryAzureVMSize")
     private final @Nullable String recoveryAzureVMSize;
 
@@ -119,6 +180,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
         return this.recoveryAzureVMSize == null ? Optional.empty() : Optional.ofNullable(this.recoveryAzureVMSize);
     }
 
+    /**
+     * Recovery Azure given name.
+     * 
+     */
     @InputImport(name="recoveryAzureVmName")
     private final @Nullable String recoveryAzureVmName;
 
@@ -126,6 +191,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
         return this.recoveryAzureVmName == null ? Optional.empty() : Optional.ofNullable(this.recoveryAzureVmName);
     }
 
+    /**
+     * Last RPO value.
+     * 
+     */
     @InputImport(name="rpoInSeconds")
     private final @Nullable Double rpoInSeconds;
 
@@ -133,6 +202,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
         return this.rpoInSeconds == null ? Optional.empty() : Optional.ofNullable(this.rpoInSeconds);
     }
 
+    /**
+     * The selected recovery azure network Id.
+     * 
+     */
     @InputImport(name="selectedRecoveryAzureNetworkId")
     private final @Nullable String selectedRecoveryAzureNetworkId;
 
@@ -140,6 +213,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
         return this.selectedRecoveryAzureNetworkId == null ? Optional.empty() : Optional.ofNullable(this.selectedRecoveryAzureNetworkId);
     }
 
+    /**
+     * The selected source nic Id which will be used as the primary nic during failover.
+     * 
+     */
     @InputImport(name="selectedSourceNicId")
     private final @Nullable String selectedSourceNicId;
 
@@ -147,6 +224,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
         return this.selectedSourceNicId == null ? Optional.empty() : Optional.ofNullable(this.selectedSourceNicId);
     }
 
+    /**
+     * The CPU count of the VM on the primary side.
+     * 
+     */
     @InputImport(name="sourceVmCpuCount")
     private final @Nullable Integer sourceVmCpuCount;
 
@@ -154,6 +235,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
         return this.sourceVmCpuCount == null ? Optional.empty() : Optional.ofNullable(this.sourceVmCpuCount);
     }
 
+    /**
+     * The RAM size of the VM on the primary side.
+     * 
+     */
     @InputImport(name="sourceVmRamSizeInMB")
     private final @Nullable Integer sourceVmRamSizeInMB;
 
@@ -161,6 +246,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
         return this.sourceVmRamSizeInMB == null ? Optional.empty() : Optional.ofNullable(this.sourceVmRamSizeInMB);
     }
 
+    /**
+     * The target availability zone.
+     * 
+     */
     @InputImport(name="targetAvailabilityZone")
     private final @Nullable String targetAvailabilityZone;
 
@@ -168,6 +257,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
         return this.targetAvailabilityZone == null ? Optional.empty() : Optional.ofNullable(this.targetAvailabilityZone);
     }
 
+    /**
+     * The target proximity placement group Id.
+     * 
+     */
     @InputImport(name="targetProximityPlacementGroupId")
     private final @Nullable String targetProximityPlacementGroupId;
 
@@ -175,6 +268,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
         return this.targetProximityPlacementGroupId == null ? Optional.empty() : Optional.ofNullable(this.targetProximityPlacementGroupId);
     }
 
+    /**
+     * A value indicating whether managed disks should be used during failover.
+     * 
+     */
     @InputImport(name="useManagedDisks")
     private final @Nullable String useManagedDisks;
 
@@ -182,6 +279,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
         return this.useManagedDisks == null ? Optional.empty() : Optional.ofNullable(this.useManagedDisks);
     }
 
+    /**
+     * The virtual machine Id.
+     * 
+     */
     @InputImport(name="vmId")
     private final @Nullable String vmId;
 
@@ -189,6 +290,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
         return this.vmId == null ? Optional.empty() : Optional.ofNullable(this.vmId);
     }
 
+    /**
+     * The PE Network details.
+     * 
+     */
     @InputImport(name="vmNics")
     private final @Nullable List<VMNicDetailsResponse> vmNics;
 
@@ -196,6 +301,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
         return this.vmNics == null ? List.of() : this.vmNics;
     }
 
+    /**
+     * The protection state for the vm.
+     * 
+     */
     @InputImport(name="vmProtectionState")
     private final @Nullable String vmProtectionState;
 
@@ -203,6 +312,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
         return this.vmProtectionState == null ? Optional.empty() : Optional.ofNullable(this.vmProtectionState);
     }
 
+    /**
+     * The protection state description for the vm.
+     * 
+     */
     @InputImport(name="vmProtectionStateDescription")
     private final @Nullable String vmProtectionStateDescription;
 

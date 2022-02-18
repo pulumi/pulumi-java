@@ -14,11 +14,35 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AssetModelProperty {
+    /**
+     * The data type of the asset model property.
+     * 
+     */
     private final AssetModelDataType dataType;
+    /**
+     * The data type of the structure for this property.
+     * 
+     */
     private final @Nullable AssetModelDataTypeSpec dataTypeSpec;
+    /**
+     * Customer provided ID for property.
+     * 
+     */
     private final String logicalId;
+    /**
+     * The name of the asset model property.
+     * 
+     */
     private final String name;
+    /**
+     * The property type
+     * 
+     */
     private final AssetModelPropertyType type;
+    /**
+     * The unit of the asset model property, such as Newtons or RPM.
+     * 
+     */
     private final @Nullable String unit;
 
     @OutputCustomType.Constructor({"dataType","dataTypeSpec","logicalId","name","type","unit"})
@@ -37,21 +61,45 @@ public final class AssetModelProperty {
         this.unit = unit;
     }
 
+    /**
+     * The data type of the asset model property.
+     * 
+     */
     public AssetModelDataType getDataType() {
         return this.dataType;
     }
+    /**
+     * The data type of the structure for this property.
+     * 
+     */
     public Optional<AssetModelDataTypeSpec> getDataTypeSpec() {
         return Optional.ofNullable(this.dataTypeSpec);
     }
+    /**
+     * Customer provided ID for property.
+     * 
+     */
     public String getLogicalId() {
         return this.logicalId;
     }
+    /**
+     * The name of the asset model property.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The property type
+     * 
+     */
     public AssetModelPropertyType getType() {
         return this.type;
     }
+    /**
+     * The unit of the asset model property, such as Newtons or RPM.
+     * 
+     */
     public Optional<String> getUnit() {
         return Optional.ofNullable(this.unit);
     }

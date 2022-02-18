@@ -14,6 +14,10 @@ public final class ClusterDnsConfigArgs extends io.pulumi.resources.ResourceArgs
 
     public static final ClusterDnsConfigArgs Empty = new ClusterDnsConfigArgs();
 
+    /**
+     * Which in-cluster DNS provider should be used. `PROVIDER_UNSPECIFIED` (default) or `PLATFORM_DEFAULT` or `CLOUD_DNS`.
+     * 
+     */
     @InputImport(name="clusterDns")
     private final @Nullable Input<String> clusterDns;
 
@@ -21,6 +25,10 @@ public final class ClusterDnsConfigArgs extends io.pulumi.resources.ResourceArgs
         return this.clusterDns == null ? Input.empty() : this.clusterDns;
     }
 
+    /**
+     * The suffix used for all cluster service records.
+     * 
+     */
     @InputImport(name="clusterDnsDomain")
     private final @Nullable Input<String> clusterDnsDomain;
 
@@ -28,6 +36,10 @@ public final class ClusterDnsConfigArgs extends io.pulumi.resources.ResourceArgs
         return this.clusterDnsDomain == null ? Input.empty() : this.clusterDnsDomain;
     }
 
+    /**
+     * The scope of access to cluster DNS records. `DNS_SCOPE_UNSPECIFIED` (default) or `CLUSTER_SCOPE` or `VPC_SCOPE`.
+     * 
+     */
     @InputImport(name="clusterDnsScope")
     private final @Nullable Input<String> clusterDnsScope;
 

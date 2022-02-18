@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Health Alert Description
+ * 
+ */
 public final class HealthAlertResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final HealthAlertResponse Empty = new HealthAlertResponse();
 
+    /**
+     * Health Alert Id
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -19,6 +27,10 @@ public final class HealthAlertResponse extends io.pulumi.resources.InvokeArgs {
         return this.id;
     }
 
+    /**
+     * Health Alert Issue
+     * 
+     */
     @InputImport(name="issue", required=true)
     private final String issue;
 
@@ -26,6 +38,10 @@ public final class HealthAlertResponse extends io.pulumi.resources.InvokeArgs {
         return this.issue;
     }
 
+    /**
+     * Health Alert Last Detected DateTime
+     * 
+     */
     @InputImport(name="lastDetected", required=true)
     private final String lastDetected;
 
@@ -33,6 +49,10 @@ public final class HealthAlertResponse extends io.pulumi.resources.InvokeArgs {
         return this.lastDetected;
     }
 
+    /**
+     * Health Alert Name
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -40,6 +60,10 @@ public final class HealthAlertResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    /**
+     * Health Alert Raised DateTime
+     * 
+     */
     @InputImport(name="raised", required=true)
     private final String raised;
 
@@ -47,6 +71,10 @@ public final class HealthAlertResponse extends io.pulumi.resources.InvokeArgs {
         return this.raised;
     }
 
+    /**
+     * Health Alert TSG Link
+     * 
+     */
     @InputImport(name="resolutionUri", required=true)
     private final String resolutionUri;
 
@@ -54,6 +82,10 @@ public final class HealthAlertResponse extends io.pulumi.resources.InvokeArgs {
         return this.resolutionUri;
     }
 
+    /**
+     * Health Alert Severity
+     * 
+     */
     @InputImport(name="severity", required=true)
     private final String severity;
 

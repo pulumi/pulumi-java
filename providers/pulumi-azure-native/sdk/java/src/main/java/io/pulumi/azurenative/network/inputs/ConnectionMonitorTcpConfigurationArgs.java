@@ -14,10 +14,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes the TCP configuration.
+ * 
+ */
 public final class ConnectionMonitorTcpConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectionMonitorTcpConfigurationArgs Empty = new ConnectionMonitorTcpConfigurationArgs();
 
+    /**
+     * Destination port behavior.
+     * 
+     */
     @InputImport(name="destinationPortBehavior")
     private final @Nullable Input<Either<String,DestinationPortBehavior>> destinationPortBehavior;
 
@@ -25,6 +33,10 @@ public final class ConnectionMonitorTcpConfigurationArgs extends io.pulumi.resou
         return this.destinationPortBehavior == null ? Input.empty() : this.destinationPortBehavior;
     }
 
+    /**
+     * Value indicating whether path evaluation with trace route should be disabled.
+     * 
+     */
     @InputImport(name="disableTraceRoute")
     private final @Nullable Input<Boolean> disableTraceRoute;
 
@@ -32,6 +44,10 @@ public final class ConnectionMonitorTcpConfigurationArgs extends io.pulumi.resou
         return this.disableTraceRoute == null ? Input.empty() : this.disableTraceRoute;
     }
 
+    /**
+     * The port to connect to.
+     * 
+     */
     @InputImport(name="port")
     private final @Nullable Input<Integer> port;
 

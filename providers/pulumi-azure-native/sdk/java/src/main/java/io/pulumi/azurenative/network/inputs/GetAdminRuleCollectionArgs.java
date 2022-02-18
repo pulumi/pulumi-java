@@ -12,6 +12,10 @@ public final class GetAdminRuleCollectionArgs extends io.pulumi.resources.Invoke
 
     public static final GetAdminRuleCollectionArgs Empty = new GetAdminRuleCollectionArgs();
 
+    /**
+     * The name of the network manager security Configuration.
+     * 
+     */
     @InputImport(name="configurationName", required=true)
     private final String configurationName;
 
@@ -19,6 +23,10 @@ public final class GetAdminRuleCollectionArgs extends io.pulumi.resources.Invoke
         return this.configurationName;
     }
 
+    /**
+     * The name of the network manager.
+     * 
+     */
     @InputImport(name="networkManagerName", required=true)
     private final String networkManagerName;
 
@@ -26,6 +34,10 @@ public final class GetAdminRuleCollectionArgs extends io.pulumi.resources.Invoke
         return this.networkManagerName;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -33,6 +45,10 @@ public final class GetAdminRuleCollectionArgs extends io.pulumi.resources.Invoke
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the network manager security Configuration rule collection.
+     * 
+     */
     @InputImport(name="ruleCollectionName", required=true)
     private final String ruleCollectionName;
 

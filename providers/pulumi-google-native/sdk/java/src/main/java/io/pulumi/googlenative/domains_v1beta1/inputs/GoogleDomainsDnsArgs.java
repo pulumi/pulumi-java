@@ -9,10 +9,18 @@ import io.pulumi.googlenative.domains_v1beta1.enums.GoogleDomainsDnsDsState;
 import java.util.Objects;
 
 
+/**
+ * Configuration for using the free DNS zone provided by Google Domains as a `Registration`'s `dns_provider`. You cannot configure the DNS zone itself using the API. To configure the DNS zone, go to [Google Domains](https://domains.google/).
+ * 
+ */
 public final class GoogleDomainsDnsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleDomainsDnsArgs Empty = new GoogleDomainsDnsArgs();
 
+    /**
+     * The state of DS records for this domain. Used to enable or disable automatic DNSSEC.
+     * 
+     */
     @InputImport(name="dsState", required=true)
     private final Input<GoogleDomainsDnsDsState> dsState;
 

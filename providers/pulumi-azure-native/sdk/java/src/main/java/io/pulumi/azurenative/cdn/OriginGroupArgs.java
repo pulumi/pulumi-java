@@ -19,6 +19,10 @@ public final class OriginGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OriginGroupArgs Empty = new OriginGroupArgs();
 
+    /**
+     * Name of the endpoint under the profile which is unique globally.
+     * 
+     */
     @InputImport(name="endpointName", required=true)
     private final Input<String> endpointName;
 
@@ -26,6 +30,10 @@ public final class OriginGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.endpointName;
     }
 
+    /**
+     * Health probe settings to the origin that is used to determine the health of the origin.
+     * 
+     */
     @InputImport(name="healthProbeSettings")
     private final @Nullable Input<HealthProbeParametersArgs> healthProbeSettings;
 
@@ -33,6 +41,10 @@ public final class OriginGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.healthProbeSettings == null ? Input.empty() : this.healthProbeSettings;
     }
 
+    /**
+     * Name of the origin group which is unique within the endpoint.
+     * 
+     */
     @InputImport(name="originGroupName")
     private final @Nullable Input<String> originGroupName;
 
@@ -40,6 +52,10 @@ public final class OriginGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.originGroupName == null ? Input.empty() : this.originGroupName;
     }
 
+    /**
+     * The source of the content being delivered via CDN within given origin group.
+     * 
+     */
     @InputImport(name="origins", required=true)
     private final Input<List<ResourceReferenceArgs>> origins;
 
@@ -47,6 +63,10 @@ public final class OriginGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.origins;
     }
 
+    /**
+     * Name of the CDN profile which is unique within the resource group.
+     * 
+     */
     @InputImport(name="profileName", required=true)
     private final Input<String> profileName;
 
@@ -54,6 +74,10 @@ public final class OriginGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.profileName;
     }
 
+    /**
+     * Name of the Resource group within the Azure subscription.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -61,6 +85,10 @@ public final class OriginGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The JSON object that contains the properties to determine origin health using real requests/responses. This property is currently not supported.
+     * 
+     */
     @InputImport(name="responseBasedOriginErrorDetectionSettings")
     private final @Nullable Input<ResponseBasedOriginErrorDetectionParametersArgs> responseBasedOriginErrorDetectionSettings;
 
@@ -68,6 +96,10 @@ public final class OriginGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.responseBasedOriginErrorDetectionSettings == null ? Input.empty() : this.responseBasedOriginErrorDetectionSettings;
     }
 
+    /**
+     * Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
+     * 
+     */
     @InputImport(name="trafficRestorationTimeToHealedOrNewEndpointsInMinutes")
     private final @Nullable Input<Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
 

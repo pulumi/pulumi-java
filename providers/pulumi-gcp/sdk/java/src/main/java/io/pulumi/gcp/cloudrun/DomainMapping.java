@@ -17,45 +17,133 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Resource to hold the state and status of a user's domain mapping.
+ * 
+ * To get more information about DomainMapping, see:
+ * 
+ * * [API documentation](https://cloud.google.com/run/docs/reference/rest/v1/projects.locations.domainmappings)
+ * * How-to Guides
+ *     * [Official Documentation](https://cloud.google.com/run/docs/mapping-custom-domains)
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * DomainMapping can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:cloudrun/domainMapping:DomainMapping default locations/{{location}}/namespaces/{{project}}/domainmappings/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:cloudrun/domainMapping:DomainMapping default {{location}}/{{project}}/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:cloudrun/domainMapping:DomainMapping default {{location}}/{{name}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:cloudrun/domainMapping:DomainMapping")
 public class DomainMapping extends io.pulumi.resources.CustomResource {
+    /**
+     * The location of the cloud run instance. eg us-central1
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return The location of the cloud run instance. eg us-central1
+     * 
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * Metadata associated with this DomainMapping.
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="metadata", type=DomainMappingMetadata.class, parameters={})
     private Output<DomainMappingMetadata> metadata;
 
+    /**
+     * @return Metadata associated with this DomainMapping.
+     * Structure is documented below.
+     * 
+     */
     public Output<DomainMappingMetadata> getMetadata() {
         return this.metadata;
     }
+    /**
+     * Name should be a [verified](https://support.google.com/webmasters/answer/9008080) domain
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Name should be a [verified](https://support.google.com/webmasters/answer/9008080) domain
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * The spec for this DomainMapping.
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="spec", type=DomainMappingSpec.class, parameters={})
     private Output<DomainMappingSpec> spec;
 
+    /**
+     * @return The spec for this DomainMapping.
+     * Structure is documented below.
+     * 
+     */
     public Output<DomainMappingSpec> getSpec() {
         return this.spec;
     }
+    /**
+     * The current status of the DomainMapping.
+     * 
+     */
     @OutputExport(name="statuses", type=List.class, parameters={DomainMappingStatus.class})
     private Output<List<DomainMappingStatus>> statuses;
 
+    /**
+     * @return The current status of the DomainMapping.
+     * 
+     */
     public Output<List<DomainMappingStatus>> getStatuses() {
         return this.statuses;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public DomainMapping(String name, DomainMappingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:cloudrun/domainMapping:DomainMapping", name, args == null ? DomainMappingArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -71,6 +159,15 @@ public class DomainMapping extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static DomainMapping get(String name, Input<String> id, @Nullable DomainMappingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DomainMapping(name, id, state, options);
     }

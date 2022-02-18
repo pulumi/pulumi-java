@@ -14,6 +14,10 @@ public final class LaunchMetricDefinitionObject extends io.pulumi.resources.Invo
 
     public static final LaunchMetricDefinitionObject Empty = new LaunchMetricDefinitionObject();
 
+    /**
+     * The JSON path to reference the entity id in the event.
+     * 
+     */
     @InputImport(name="entityIdKey", required=true)
     private final String entityIdKey;
 
@@ -21,6 +25,10 @@ public final class LaunchMetricDefinitionObject extends io.pulumi.resources.Invo
         return this.entityIdKey;
     }
 
+    /**
+     * Event patterns have the same structure as the events they match. Rules use event patterns to select events. An event pattern either matches an event or it doesn't.
+     * 
+     */
     @InputImport(name="eventPattern", required=true)
     private final String eventPattern;
 
@@ -42,6 +50,10 @@ public final class LaunchMetricDefinitionObject extends io.pulumi.resources.Invo
         return this.unitLabel == null ? Optional.empty() : Optional.ofNullable(this.unitLabel);
     }
 
+    /**
+     * The JSON path to reference the numerical metric value in the event.
+     * 
+     */
     @InputImport(name="valueKey", required=true)
     private final String valueKey;
 

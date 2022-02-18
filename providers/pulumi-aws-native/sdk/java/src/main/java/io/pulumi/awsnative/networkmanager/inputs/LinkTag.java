@@ -10,6 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A key-value pair to associate with a link resource.
+ * 
+ */
 public final class LinkTag extends io.pulumi.resources.InvokeArgs {
 
     public static final LinkTag Empty = new LinkTag();

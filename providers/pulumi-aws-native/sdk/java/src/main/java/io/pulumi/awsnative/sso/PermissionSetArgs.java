@@ -17,6 +17,10 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PermissionSetArgs Empty = new PermissionSetArgs();
 
+    /**
+     * The permission set description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -24,6 +28,10 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The inline policy to put in permission set.
+     * 
+     */
     @InputImport(name="inlinePolicy")
     private final @Nullable Input<Object> inlinePolicy;
 
@@ -31,6 +39,10 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.inlinePolicy == null ? Input.empty() : this.inlinePolicy;
     }
 
+    /**
+     * The sso instance arn that the permission set is owned.
+     * 
+     */
     @InputImport(name="instanceArn", required=true)
     private final Input<String> instanceArn;
 
@@ -45,6 +57,10 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.managedPolicies == null ? Input.empty() : this.managedPolicies;
     }
 
+    /**
+     * The name you want to assign to this permission set.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -52,6 +68,10 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The relay state URL that redirect links to any service in the AWS Management Console.
+     * 
+     */
     @InputImport(name="relayStateType")
     private final @Nullable Input<String> relayStateType;
 
@@ -59,6 +79,10 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.relayStateType == null ? Input.empty() : this.relayStateType;
     }
 
+    /**
+     * The length of time that a user can be signed in to an AWS account.
+     * 
+     */
     @InputImport(name="sessionDuration")
     private final @Nullable Input<String> sessionDuration;
 

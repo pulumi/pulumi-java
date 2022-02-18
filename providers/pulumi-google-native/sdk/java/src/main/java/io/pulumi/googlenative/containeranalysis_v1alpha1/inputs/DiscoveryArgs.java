@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A note that indicates a type of analysis a provider would perform. This note exists in a provider's project. A `Discovery` occurrence is created in a consumer's project at the start of analysis. The occurrence's operation will indicate the status of the analysis. Absence of an occurrence linked to this note for a resource indicates that analysis hasn't started.
+ * 
+ */
 public final class DiscoveryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DiscoveryArgs Empty = new DiscoveryArgs();
 
+    /**
+     * The kind of analysis that is handled by this discovery.
+     * 
+     */
     @InputImport(name="analysisKind")
     private final @Nullable Input<DiscoveryAnalysisKind> analysisKind;
 

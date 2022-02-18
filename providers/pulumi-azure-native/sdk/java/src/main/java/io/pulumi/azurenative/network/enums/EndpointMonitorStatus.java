@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The monitoring status of the endpoint.
+     * 
+     */
     @EnumType
     public enum EndpointMonitorStatus {
         CheckingEndpoint("CheckingEndpoint"),

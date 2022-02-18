@@ -8,10 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Required. The desired state the agent should maintain for this package.
+     * 
+     */
     @EnumType
     public enum OSPolicyResourcePackageResourceDesiredState {
+        /**
+         * Unspecified is invalid.
+         * 
+         */
         DesiredStateUnspecified("DESIRED_STATE_UNSPECIFIED"),
+        /**
+         * Ensure that the package is installed.
+         * 
+         */
         Installed("INSTALLED"),
+        /**
+         * The agent ensures that the package is not installed and uninstalls it if detected.
+         * 
+         */
         Removed("REMOVED");
 
         private final String value;

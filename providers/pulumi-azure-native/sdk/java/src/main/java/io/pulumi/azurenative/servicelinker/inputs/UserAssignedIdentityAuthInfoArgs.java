@@ -9,10 +9,19 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The authentication info when authType is userAssignedIdentity
+ * 
+ */
 public final class UserAssignedIdentityAuthInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final UserAssignedIdentityAuthInfoArgs Empty = new UserAssignedIdentityAuthInfoArgs();
 
+    /**
+     * The authentication type.
+     * Expected value is 'userAssignedIdentity'.
+     * 
+     */
     @InputImport(name="authType", required=true)
     private final Input<String> authType;
 
@@ -20,6 +29,10 @@ public final class UserAssignedIdentityAuthInfoArgs extends io.pulumi.resources.
         return this.authType;
     }
 
+    /**
+     * Client Id for userAssignedIdentity.
+     * 
+     */
     @InputImport(name="clientId", required=true)
     private final Input<String> clientId;
 
@@ -27,6 +40,10 @@ public final class UserAssignedIdentityAuthInfoArgs extends io.pulumi.resources.
         return this.clientId;
     }
 
+    /**
+     * Subscription id for userAssignedIdentity.
+     * 
+     */
     @InputImport(name="subscriptionId", required=true)
     private final Input<String> subscriptionId;
 

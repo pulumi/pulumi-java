@@ -9,9 +9,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BigQueryIODetailsResponse {
+    /**
+     * Dataset accessed in the connection.
+     * 
+     */
     private final String dataset;
+    /**
+     * Project accessed in the connection.
+     * 
+     */
     private final String project;
+    /**
+     * Query used to access data in the connection.
+     * 
+     */
     private final String query;
+    /**
+     * Table accessed in the connection.
+     * 
+     */
     private final String table;
 
     @OutputCustomType.Constructor({"dataset","project","query","table"})
@@ -26,15 +42,31 @@ public final class BigQueryIODetailsResponse {
         this.table = Objects.requireNonNull(table);
     }
 
+    /**
+     * Dataset accessed in the connection.
+     * 
+     */
     public String getDataset() {
         return this.dataset;
     }
+    /**
+     * Project accessed in the connection.
+     * 
+     */
     public String getProject() {
         return this.project;
     }
+    /**
+     * Query used to access data in the connection.
+     * 
+     */
     public String getQuery() {
         return this.query;
     }
+    /**
+     * Table accessed in the connection.
+     * 
+     */
     public String getTable() {
         return this.table;
     }

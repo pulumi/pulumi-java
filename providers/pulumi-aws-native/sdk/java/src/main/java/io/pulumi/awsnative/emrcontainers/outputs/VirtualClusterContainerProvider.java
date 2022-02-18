@@ -10,8 +10,16 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class VirtualClusterContainerProvider {
+    /**
+     * The ID of the container cluster
+     * 
+     */
     private final String id;
     private final VirtualClusterContainerInfo info;
+    /**
+     * The type of the container provider
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"id","info","type"})
@@ -24,12 +32,20 @@ public final class VirtualClusterContainerProvider {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * The ID of the container cluster
+     * 
+     */
     public String getId() {
         return this.id;
     }
     public VirtualClusterContainerInfo getInfo() {
         return this.info;
     }
+    /**
+     * The type of the container provider
+     * 
+     */
     public String getType() {
         return this.type;
     }

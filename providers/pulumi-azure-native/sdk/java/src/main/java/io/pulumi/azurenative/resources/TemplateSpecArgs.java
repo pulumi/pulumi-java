@@ -16,6 +16,10 @@ public final class TemplateSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TemplateSpecArgs Empty = new TemplateSpecArgs();
 
+    /**
+     * Template Spec description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -23,6 +27,10 @@ public final class TemplateSpecArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Template Spec display name.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -30,6 +38,10 @@ public final class TemplateSpecArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The location of the Template Spec. It cannot be changed after Template Spec creation. It must be one of the supported Azure locations.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -37,6 +49,10 @@ public final class TemplateSpecArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The Template Spec metadata. Metadata is an open-ended object and is typically a collection of key-value pairs.
+     * 
+     */
     @InputImport(name="metadata")
     private final @Nullable Input<Object> metadata;
 
@@ -44,6 +60,10 @@ public final class TemplateSpecArgs extends io.pulumi.resources.ResourceArgs {
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -51,6 +71,10 @@ public final class TemplateSpecArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -58,6 +82,10 @@ public final class TemplateSpecArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * Name of the Template Spec.
+     * 
+     */
     @InputImport(name="templateSpecName")
     private final @Nullable Input<String> templateSpecName;
 

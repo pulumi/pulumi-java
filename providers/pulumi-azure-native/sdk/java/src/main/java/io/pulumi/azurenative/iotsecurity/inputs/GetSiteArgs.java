@@ -12,6 +12,10 @@ public final class GetSiteArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSiteArgs Empty = new GetSiteArgs();
 
+    /**
+     * Scope of the query (IoT Hub, /providers/Microsoft.Devices/iotHubs/myHub)
+     * 
+     */
     @InputImport(name="scope", required=true)
     private final String scope;
 

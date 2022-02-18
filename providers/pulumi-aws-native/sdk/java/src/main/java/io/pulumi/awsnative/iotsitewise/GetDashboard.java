@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDashboard {
+/**
+ * Resource schema for AWS::IoTSiteWise::Dashboard
+ * 
+ */
     public static CompletableFuture<GetDashboardResult> invokeAsync(GetDashboardArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iotsitewise:getDashboard", TypeShape.of(GetDashboardResult.class), args == null ? GetDashboardArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Permission group for validations
+     * 
+     */
     @EnumType
     public enum ServerLevelPermissionsGroup {
         Default("Default"),

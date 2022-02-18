@@ -13,6 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * S3 data source configuration
+ * 
+ */
 public final class DataSourceS3DataSourceConfiguration extends io.pulumi.resources.InvokeArgs {
 
     public static final DataSourceS3DataSourceConfiguration Empty = new DataSourceS3DataSourceConfiguration();

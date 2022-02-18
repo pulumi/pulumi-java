@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AzureADMetricsPropertiesFormatResponse {
+    /**
+     * The provisioning state of the resource.
+     * 
+     */
     private final String provisioningState;
 
     @OutputCustomType.Constructor({"provisioningState"})
@@ -16,6 +20,10 @@ public final class AzureADMetricsPropertiesFormatResponse {
         this.provisioningState = Objects.requireNonNull(provisioningState);
     }
 
+    /**
+     * The provisioning state of the resource.
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }

@@ -12,10 +12,18 @@ import java.util.Map;
 import java.util.Objects;
 
 
+/**
+ * A Dataproc job for running Apache Hive (https://hive.apache.org/) queries on YARN.
+ * 
+ */
 public final class HiveJobResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final HiveJobResponse Empty = new HiveJobResponse();
 
+    /**
+     * Optional. Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries.
+     * 
+     */
     @InputImport(name="continueOnFailure", required=true)
     private final Boolean continueOnFailure;
 
@@ -23,6 +31,10 @@ public final class HiveJobResponse extends io.pulumi.resources.InvokeArgs {
         return this.continueOnFailure;
     }
 
+    /**
+     * Optional. HCFS URIs of jar files to add to the CLASSPATH of the Hive server and Hadoop MapReduce (MR) tasks. Can contain Hive SerDes and UDFs.
+     * 
+     */
     @InputImport(name="jarFileUris", required=true)
     private final List<String> jarFileUris;
 
@@ -30,6 +42,10 @@ public final class HiveJobResponse extends io.pulumi.resources.InvokeArgs {
         return this.jarFileUris;
     }
 
+    /**
+     * Optional. A mapping of property names and values, used to configure Hive. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site.xml, /etc/hive/conf/hive-site.xml, and classes in user code.
+     * 
+     */
     @InputImport(name="properties", required=true)
     private final Map<String,String> properties;
 
@@ -37,6 +53,10 @@ public final class HiveJobResponse extends io.pulumi.resources.InvokeArgs {
         return this.properties;
     }
 
+    /**
+     * The HCFS URI of the script that contains Hive queries.
+     * 
+     */
     @InputImport(name="queryFileUri", required=true)
     private final String queryFileUri;
 
@@ -44,6 +64,10 @@ public final class HiveJobResponse extends io.pulumi.resources.InvokeArgs {
         return this.queryFileUri;
     }
 
+    /**
+     * A list of queries.
+     * 
+     */
     @InputImport(name="queryList", required=true)
     private final QueryListResponse queryList;
 
@@ -51,6 +75,10 @@ public final class HiveJobResponse extends io.pulumi.resources.InvokeArgs {
         return this.queryList;
     }
 
+    /**
+     * Optional. Mapping of query variable names to values (equivalent to the Hive command: SET name="value";).
+     * 
+     */
     @InputImport(name="scriptVariables", required=true)
     private final Map<String,String> scriptVariables;
 

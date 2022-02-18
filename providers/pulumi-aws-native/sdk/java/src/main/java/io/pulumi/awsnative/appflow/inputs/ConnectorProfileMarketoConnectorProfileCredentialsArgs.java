@@ -15,6 +15,10 @@ public final class ConnectorProfileMarketoConnectorProfileCredentialsArgs extend
 
     public static final ConnectorProfileMarketoConnectorProfileCredentialsArgs Empty = new ConnectorProfileMarketoConnectorProfileCredentialsArgs();
 
+    /**
+     * The credentials used to access protected resources.
+     * 
+     */
     @InputImport(name="accessToken")
     private final @Nullable Input<String> accessToken;
 
@@ -22,6 +26,10 @@ public final class ConnectorProfileMarketoConnectorProfileCredentialsArgs extend
         return this.accessToken == null ? Input.empty() : this.accessToken;
     }
 
+    /**
+     * The identiﬁer for the desired client.
+     * 
+     */
     @InputImport(name="clientId", required=true)
     private final Input<String> clientId;
 
@@ -29,6 +37,10 @@ public final class ConnectorProfileMarketoConnectorProfileCredentialsArgs extend
         return this.clientId;
     }
 
+    /**
+     * The client secret used by the oauth client to authenticate to the authorization server.
+     * 
+     */
     @InputImport(name="clientSecret", required=true)
     private final Input<String> clientSecret;
 
@@ -36,6 +48,10 @@ public final class ConnectorProfileMarketoConnectorProfileCredentialsArgs extend
         return this.clientSecret;
     }
 
+    /**
+     * The oauth needed to request security tokens from the connector endpoint.
+     * 
+     */
     @InputImport(name="connectorOAuthRequest")
     private final @Nullable Input<ConnectorProfileConnectorOAuthRequestArgs> connectorOAuthRequest;
 

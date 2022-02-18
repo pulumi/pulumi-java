@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GrafeasV1beta1DiscoveryDetailsResponse {
+    /**
+     * Analysis status for the discovered resource.
+     * 
+     */
     private final DiscoveredResponse discovered;
 
     @OutputCustomType.Constructor({"discovered"})
@@ -16,6 +20,10 @@ public final class GrafeasV1beta1DiscoveryDetailsResponse {
         this.discovered = Objects.requireNonNull(discovered);
     }
 
+    /**
+     * Analysis status for the discovered resource.
+     * 
+     */
     public DiscoveredResponse getDiscovered() {
         return this.discovered;
     }

@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Details of customized scripts to execute for setting up the cluster.
+ * 
+ */
 public final class SetupScriptsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SetupScriptsResponse Empty = new SetupScriptsResponse();
 
+    /**
+     * Customized setup scripts
+     * 
+     */
     @InputImport(name="scripts")
     private final @Nullable ScriptsToExecuteResponse scripts;
 

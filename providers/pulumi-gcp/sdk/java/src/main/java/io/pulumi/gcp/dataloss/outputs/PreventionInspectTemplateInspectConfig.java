@@ -17,13 +17,54 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PreventionInspectTemplateInspectConfig {
+    /**
+     * List of options defining data content to scan. If empty, text, images, and other content will be included.
+     * Each value may be one of `CONTENT_TEXT` and `CONTENT_IMAGE`.
+     * 
+     */
     private final @Nullable List<String> contentOptions;
+    /**
+     * Custom info types to be used. See https://cloud.google.com/dlp/docs/creating-custom-infotypes to learn more.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable List<PreventionInspectTemplateInspectConfigCustomInfoType> customInfoTypes;
+    /**
+     * Set of infoTypes for which findings would affect this rule.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable Boolean excludeInfoTypes;
+    /**
+     * When true, a contextual quote from the data that triggered a finding is included in the response.
+     * 
+     */
     private final @Nullable Boolean includeQuote;
+    /**
+     * If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable List<PreventionInspectTemplateInspectConfigInfoType> infoTypes;
+    /**
+     * Configuration to control the number of findings returned.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable PreventionInspectTemplateInspectConfigLimits limits;
+    /**
+     * Only returns findings equal or above this threshold. See https://cloud.google.com/dlp/docs/likelihood for more info
+     * Default value is `POSSIBLE`.
+     * Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY_LIKELY`.
+     * 
+     */
     private final @Nullable String minLikelihood;
+    /**
+     * Set of rules to apply to the findings for this InspectConfig. Exclusion rules, contained in the set are executed in the end,
+     * other rules are executed in the order they are specified for each info type.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable List<PreventionInspectTemplateInspectConfigRuleSet> ruleSets;
 
     @OutputCustomType.Constructor({"contentOptions","customInfoTypes","excludeInfoTypes","includeQuote","infoTypes","limits","minLikelihood","ruleSets"})
@@ -46,27 +87,68 @@ public final class PreventionInspectTemplateInspectConfig {
         this.ruleSets = ruleSets;
     }
 
+    /**
+     * List of options defining data content to scan. If empty, text, images, and other content will be included.
+     * Each value may be one of `CONTENT_TEXT` and `CONTENT_IMAGE`.
+     * 
+     */
     public List<String> getContentOptions() {
         return this.contentOptions == null ? List.of() : this.contentOptions;
     }
+    /**
+     * Custom info types to be used. See https://cloud.google.com/dlp/docs/creating-custom-infotypes to learn more.
+     * Structure is documented below.
+     * 
+     */
     public List<PreventionInspectTemplateInspectConfigCustomInfoType> getCustomInfoTypes() {
         return this.customInfoTypes == null ? List.of() : this.customInfoTypes;
     }
+    /**
+     * Set of infoTypes for which findings would affect this rule.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Boolean> getExcludeInfoTypes() {
         return Optional.ofNullable(this.excludeInfoTypes);
     }
+    /**
+     * When true, a contextual quote from the data that triggered a finding is included in the response.
+     * 
+     */
     public Optional<Boolean> getIncludeQuote() {
         return Optional.ofNullable(this.includeQuote);
     }
+    /**
+     * If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
+     * Structure is documented below.
+     * 
+     */
     public List<PreventionInspectTemplateInspectConfigInfoType> getInfoTypes() {
         return this.infoTypes == null ? List.of() : this.infoTypes;
     }
+    /**
+     * Configuration to control the number of findings returned.
+     * Structure is documented below.
+     * 
+     */
     public Optional<PreventionInspectTemplateInspectConfigLimits> getLimits() {
         return Optional.ofNullable(this.limits);
     }
+    /**
+     * Only returns findings equal or above this threshold. See https://cloud.google.com/dlp/docs/likelihood for more info
+     * Default value is `POSSIBLE`.
+     * Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY_LIKELY`.
+     * 
+     */
     public Optional<String> getMinLikelihood() {
         return Optional.ofNullable(this.minLikelihood);
     }
+    /**
+     * Set of rules to apply to the findings for this InspectConfig. Exclusion rules, contained in the set are executed in the end,
+     * other rules are executed in the order they are specified for each info type.
+     * Structure is documented below.
+     * 
+     */
     public List<PreventionInspectTemplateInspectConfigRuleSet> getRuleSets() {
         return this.ruleSets == null ? List.of() : this.ruleSets;
     }

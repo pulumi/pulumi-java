@@ -14,8 +14,17 @@ public final class GetGameServerDeploymentRolloutResult {
     private final String defaultGameServerConfig;
     private final String deploymentId;
     private final List<GetGameServerDeploymentRolloutGameServerConfigOverride> gameServerConfigOverrides;
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
     private final String name;
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     private final String project;
 
     @OutputCustomType.Constructor({"defaultGameServerConfig","deploymentId","gameServerConfigOverrides","id","name","project"})
@@ -43,12 +52,21 @@ public final class GetGameServerDeploymentRolloutResult {
     public List<GetGameServerDeploymentRolloutGameServerConfigOverride> getGameServerConfigOverrides() {
         return this.gameServerConfigOverrides;
     }
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }
     public String getName() {
         return this.name;
     }
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public String getProject() {
         return this.project;
     }

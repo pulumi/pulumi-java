@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Details of the final state "abort" and associated resource.
+ * 
+ */
 public final class AbortInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AbortInfoResponse Empty = new AbortInfoResponse();
 
+    /**
+     * Causes that the analysis is aborted.
+     * 
+     */
     @InputImport(name="cause", required=true)
     private final String cause;
 
@@ -19,6 +27,10 @@ public final class AbortInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.cause;
     }
 
+    /**
+     * URI of the resource that caused the abort.
+     * 
+     */
     @InputImport(name="resourceUri", required=true)
     private final String resourceUri;
 

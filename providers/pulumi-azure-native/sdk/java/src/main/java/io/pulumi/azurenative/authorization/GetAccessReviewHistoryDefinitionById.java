@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAccessReviewHistoryDefinitionById {
+/**
+ * Access Review History Definition.
+ * API Version: 2021-11-16-preview.
+ * 
+ *
+ * Access Review History Definition.
+ * 
+ */
     public static CompletableFuture<GetAccessReviewHistoryDefinitionByIdResult> invokeAsync(GetAccessReviewHistoryDefinitionByIdArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getAccessReviewHistoryDefinitionById", TypeShape.of(GetAccessReviewHistoryDefinitionByIdResult.class), args == null ? GetAccessReviewHistoryDefinitionByIdArgs.Empty : args, Utilities.withVersion(options));
     }

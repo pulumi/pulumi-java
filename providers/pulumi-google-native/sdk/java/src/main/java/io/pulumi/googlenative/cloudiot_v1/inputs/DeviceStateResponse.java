@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The device state, as reported by the device.
+ * 
+ */
 public final class DeviceStateResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DeviceStateResponse Empty = new DeviceStateResponse();
 
+    /**
+     * The device state data.
+     * 
+     */
     @InputImport(name="binaryData", required=true)
     private final String binaryData;
 
@@ -19,6 +27,10 @@ public final class DeviceStateResponse extends io.pulumi.resources.InvokeArgs {
         return this.binaryData;
     }
 
+    /**
+     * [Output only] The time at which this state version was updated in Cloud IoT Core.
+     * 
+     */
     @InputImport(name="updateTime", required=true)
     private final String updateTime;
 

@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetUser {
+/**
+ * User details.
+ * API Version: 2020-12-01.
+ * 
+ *
+ * User details.
+ * 
+ */
     public static CompletableFuture<GetUserResult> invokeAsync(GetUserArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getUser", TypeShape.of(GetUserResult.class), args == null ? GetUserArgs.Empty : args, Utilities.withVersion(options));
     }

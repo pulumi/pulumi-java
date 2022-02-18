@@ -12,12 +12,40 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse {
+    /**
+     * Cloud Storage path to a file with a JSON-serialized ContainerSpec as content.
+     * 
+     */
     private final String containerSpecGcsPath;
+    /**
+     * The runtime environment for the Flex Template job.
+     * 
+     */
     private final GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentResponse environment;
+    /**
+     * The job name to use for the created job. For an update job request, the job name should be the same as the existing running job.
+     * 
+     */
     private final String jobName;
+    /**
+     * Launch options for this Flex Template job. This is a common set of options across languages and templates. This should not be used to pass job parameters.
+     * 
+     */
     private final Map<String,String> launchOptions;
+    /**
+     * The parameters for the Flex Template. Example: `{"num_workers":"5"}`
+     * 
+     */
     private final Map<String,String> parameters;
+    /**
+     * Use this to pass transform name mappings for streaming update jobs. Example: `{"oldTransformName":"newTransformName",...}`
+     * 
+     */
     private final Map<String,String> transformNameMappings;
+    /**
+     * Set this to true if you are sending a request to update a running streaming job. When set, the job name should be the same as the running job.
+     * 
+     */
     private final Boolean update;
 
     @OutputCustomType.Constructor({"containerSpecGcsPath","environment","jobName","launchOptions","parameters","transformNameMappings","update"})
@@ -38,24 +66,52 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse
         this.update = Objects.requireNonNull(update);
     }
 
+    /**
+     * Cloud Storage path to a file with a JSON-serialized ContainerSpec as content.
+     * 
+     */
     public String getContainerSpecGcsPath() {
         return this.containerSpecGcsPath;
     }
+    /**
+     * The runtime environment for the Flex Template job.
+     * 
+     */
     public GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentResponse getEnvironment() {
         return this.environment;
     }
+    /**
+     * The job name to use for the created job. For an update job request, the job name should be the same as the existing running job.
+     * 
+     */
     public String getJobName() {
         return this.jobName;
     }
+    /**
+     * Launch options for this Flex Template job. This is a common set of options across languages and templates. This should not be used to pass job parameters.
+     * 
+     */
     public Map<String,String> getLaunchOptions() {
         return this.launchOptions;
     }
+    /**
+     * The parameters for the Flex Template. Example: `{"num_workers":"5"}`
+     * 
+     */
     public Map<String,String> getParameters() {
         return this.parameters;
     }
+    /**
+     * Use this to pass transform name mappings for streaming update jobs. Example: `{"oldTransformName":"newTransformName",...}`
+     * 
+     */
     public Map<String,String> getTransformNameMappings() {
         return this.transformNameMappings;
     }
+    /**
+     * Set this to true if you are sending a request to update a running streaming job. When set, the job name should be the same as the running job.
+     * 
+     */
     public Boolean getUpdate() {
         return this.update;
     }

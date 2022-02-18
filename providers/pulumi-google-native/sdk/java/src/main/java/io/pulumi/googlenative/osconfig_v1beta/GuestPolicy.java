@@ -17,63 +17,145 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Create an OS Config guest policy.
+ * 
+ */
 @ResourceType(type="google-native:osconfig/v1beta:GuestPolicy")
 public class GuestPolicy extends io.pulumi.resources.CustomResource {
+    /**
+     * Specifies the VM instances that are assigned to this policy. This allows you to target sets or groups of VM instances by different parameters such as labels, names, OS, or zones. If left empty, all VM instances underneath this policy are targeted. At the same level in the resource hierarchy (that is within a project), the service prevents the creation of multiple policies that conflict with each other. For more information, see how the service [handles assignment conflicts](/compute/docs/os-config-management/create-guest-policy#handle-conflicts).
+     * 
+     */
     @OutputExport(name="assignment", type=AssignmentResponse.class, parameters={})
     private Output<AssignmentResponse> assignment;
 
+    /**
+     * @return Specifies the VM instances that are assigned to this policy. This allows you to target sets or groups of VM instances by different parameters such as labels, names, OS, or zones. If left empty, all VM instances underneath this policy are targeted. At the same level in the resource hierarchy (that is within a project), the service prevents the creation of multiple policies that conflict with each other. For more information, see how the service [handles assignment conflicts](/compute/docs/os-config-management/create-guest-policy#handle-conflicts).
+     * 
+     */
     public Output<AssignmentResponse> getAssignment() {
         return this.assignment;
     }
+    /**
+     * Time this guest policy was created.
+     * 
+     */
     @OutputExport(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
+    /**
+     * @return Time this guest policy was created.
+     * 
+     */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
+    /**
+     * Description of the guest policy. Length of the description is limited to 1024 characters.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output<String> description;
 
+    /**
+     * @return Description of the guest policy. Length of the description is limited to 1024 characters.
+     * 
+     */
     public Output<String> getDescription() {
         return this.description;
     }
+    /**
+     * The etag for this guest policy. If this is provided on update, it must match the server's etag.
+     * 
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return The etag for this guest policy. If this is provided on update, it must match the server's etag.
+     * 
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * Unique name of the resource in this project using one of the following forms: `projects/{project_number}/guestPolicies/{guest_policy_id}`.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Unique name of the resource in this project using one of the following forms: `projects/{project_number}/guestPolicies/{guest_policy_id}`.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * A list of package repositories to configure on the VM instance. This is done before any other configs are applied so they can use these repos. Package repositories are only configured if the corresponding package manager(s) are available.
+     * 
+     */
     @OutputExport(name="packageRepositories", type=List.class, parameters={PackageRepositoryResponse.class})
     private Output<List<PackageRepositoryResponse>> packageRepositories;
 
+    /**
+     * @return A list of package repositories to configure on the VM instance. This is done before any other configs are applied so they can use these repos. Package repositories are only configured if the corresponding package manager(s) are available.
+     * 
+     */
     public Output<List<PackageRepositoryResponse>> getPackageRepositories() {
         return this.packageRepositories;
     }
+    /**
+     * The software packages to be managed by this policy.
+     * 
+     */
     @OutputExport(name="packages", type=List.class, parameters={PackageResponse.class})
     private Output<List<PackageResponse>> packages;
 
+    /**
+     * @return The software packages to be managed by this policy.
+     * 
+     */
     public Output<List<PackageResponse>> getPackages() {
         return this.packages;
     }
+    /**
+     * A list of Recipes to install on the VM instance.
+     * 
+     */
     @OutputExport(name="recipes", type=List.class, parameters={SoftwareRecipeResponse.class})
     private Output<List<SoftwareRecipeResponse>> recipes;
 
+    /**
+     * @return A list of Recipes to install on the VM instance.
+     * 
+     */
     public Output<List<SoftwareRecipeResponse>> getRecipes() {
         return this.recipes;
     }
+    /**
+     * Last time this guest policy was updated.
+     * 
+     */
     @OutputExport(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
+    /**
+     * @return Last time this guest policy was updated.
+     * 
+     */
     public Output<String> getUpdateTime() {
         return this.updateTime;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public GuestPolicy(String name, GuestPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:osconfig/v1beta:GuestPolicy", name, args == null ? GuestPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -89,6 +171,14 @@ public class GuestPolicy extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static GuestPolicy get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new GuestPolicy(name, id, options);
     }

@@ -13,12 +13,40 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetResourceGroupResult {
+    /**
+     * The ID of the resource group.
+     * 
+     */
     private final String id;
+    /**
+     * The location of the resource group. It cannot be changed after the resource group has been created. It must be one of the supported Azure locations.
+     * 
+     */
     private final String location;
+    /**
+     * The ID of the resource that manages this resource group.
+     * 
+     */
     private final @Nullable String managedBy;
+    /**
+     * The name of the resource group.
+     * 
+     */
     private final String name;
+    /**
+     * The resource group properties.
+     * 
+     */
     private final ResourceGroupPropertiesResponse properties;
+    /**
+     * The tags attached to the resource group.
+     * 
+     */
     private final @Nullable Map<String,String> tags;
+    /**
+     * The type of the resource group.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"id","location","managedBy","name","properties","tags","type"})
@@ -39,24 +67,52 @@ public final class GetResourceGroupResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * The ID of the resource group.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * The location of the resource group. It cannot be changed after the resource group has been created. It must be one of the supported Azure locations.
+     * 
+     */
     public String getLocation() {
         return this.location;
     }
+    /**
+     * The ID of the resource that manages this resource group.
+     * 
+     */
     public Optional<String> getManagedBy() {
         return Optional.ofNullable(this.managedBy);
     }
+    /**
+     * The name of the resource group.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The resource group properties.
+     * 
+     */
     public ResourceGroupPropertiesResponse getProperties() {
         return this.properties;
     }
+    /**
+     * The tags attached to the resource group.
+     * 
+     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+    /**
+     * The type of the resource group.
+     * 
+     */
     public String getType() {
         return this.type;
     }

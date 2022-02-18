@@ -13,7 +13,16 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CxPageEventHandlerTriggerFulfillmentMessageText {
+    /**
+     * - 
+     * Whether the playback of this message can be interrupted by the end user's speech and the client can then starts the next Dialogflow request.
+     * 
+     */
     private final @Nullable Boolean allowPlaybackInterruption;
+    /**
+     * A collection of text responses.
+     * 
+     */
     private final @Nullable List<String> texts;
 
     @OutputCustomType.Constructor({"allowPlaybackInterruption","texts"})
@@ -24,9 +33,18 @@ public final class CxPageEventHandlerTriggerFulfillmentMessageText {
         this.texts = texts;
     }
 
+    /**
+     * - 
+     * Whether the playback of this message can be interrupted by the end user's speech and the client can then starts the next Dialogflow request.
+     * 
+     */
     public Optional<Boolean> getAllowPlaybackInterruption() {
         return Optional.ofNullable(this.allowPlaybackInterruption);
     }
+    /**
+     * A collection of text responses.
+     * 
+     */
     public List<String> getTexts() {
         return this.texts == null ? List.of() : this.texts;
     }

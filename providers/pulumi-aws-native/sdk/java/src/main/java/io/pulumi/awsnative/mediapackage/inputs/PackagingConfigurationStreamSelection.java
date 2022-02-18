@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A StreamSelection configuration.
+ * 
+ */
 public final class PackagingConfigurationStreamSelection extends io.pulumi.resources.InvokeArgs {
 
     public static final PackagingConfigurationStreamSelection Empty = new PackagingConfigurationStreamSelection();
 
+    /**
+     * The maximum video bitrate (bps) to include in output.
+     * 
+     */
     @InputImport(name="maxVideoBitsPerSecond")
     private final @Nullable Integer maxVideoBitsPerSecond;
 
@@ -22,6 +30,10 @@ public final class PackagingConfigurationStreamSelection extends io.pulumi.resou
         return this.maxVideoBitsPerSecond == null ? Optional.empty() : Optional.ofNullable(this.maxVideoBitsPerSecond);
     }
 
+    /**
+     * The minimum video bitrate (bps) to include in output.
+     * 
+     */
     @InputImport(name="minVideoBitsPerSecond")
     private final @Nullable Integer minVideoBitsPerSecond;
 
@@ -29,6 +41,10 @@ public final class PackagingConfigurationStreamSelection extends io.pulumi.resou
         return this.minVideoBitsPerSecond == null ? Optional.empty() : Optional.ofNullable(this.minVideoBitsPerSecond);
     }
 
+    /**
+     * A directive that determines the order of streams in the output.
+     * 
+     */
     @InputImport(name="streamOrder")
     private final @Nullable PackagingConfigurationStreamSelectionStreamOrder streamOrder;
 

@@ -12,27 +12,61 @@ import io.pulumi.core.internal.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * A module that has been registered in the CloudFormation registry as the default version
+ * 
+ */
 @ResourceType(type="aws-native:cloudformation:ModuleDefaultVersion")
 public class ModuleDefaultVersion extends io.pulumi.resources.CustomResource {
+    /**
+     * The Amazon Resource Name (ARN) of the module version to set as the default version.
+     * 
+     */
     @OutputExport(name="arn", type=String.class, parameters={})
     private Output</* @Nullable */ String> arn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the module version to set as the default version.
+     * 
+     */
     public Output</* @Nullable */ String> getArn() {
         return this.arn;
     }
+    /**
+     * The name of a module existing in the registry.
+     * 
+     */
     @OutputExport(name="moduleName", type=String.class, parameters={})
     private Output</* @Nullable */ String> moduleName;
 
+    /**
+     * @return The name of a module existing in the registry.
+     * 
+     */
     public Output</* @Nullable */ String> getModuleName() {
         return this.moduleName;
     }
+    /**
+     * The ID of an existing version of the named module to set as the default.
+     * 
+     */
     @OutputExport(name="versionId", type=String.class, parameters={})
     private Output</* @Nullable */ String> versionId;
 
+    /**
+     * @return The ID of an existing version of the named module to set as the default.
+     * 
+     */
     public Output</* @Nullable */ String> getVersionId() {
         return this.versionId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ModuleDefaultVersion(String name, @Nullable ModuleDefaultVersionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:cloudformation:ModuleDefaultVersion", name, args == null ? ModuleDefaultVersionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -48,6 +82,14 @@ public class ModuleDefaultVersion extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ModuleDefaultVersion get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ModuleDefaultVersion(name, id, options);
     }

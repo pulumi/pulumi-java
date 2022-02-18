@@ -12,6 +12,10 @@ public final class GetVendorArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetVendorArgs Empty = new GetVendorArgs();
 
+    /**
+     * The name of the vendor.
+     * 
+     */
     @InputImport(name="vendorName", required=true)
     private final String vendorName;
 

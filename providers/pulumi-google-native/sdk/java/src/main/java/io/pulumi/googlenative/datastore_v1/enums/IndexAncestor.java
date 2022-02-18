@@ -8,10 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Required. The index's ancestor mode. Must not be ANCESTOR_MODE_UNSPECIFIED.
+     * 
+     */
     @EnumType
     public enum IndexAncestor {
+        /**
+         * The ancestor mode is unspecified.
+         * 
+         */
         AncestorModeUnspecified("ANCESTOR_MODE_UNSPECIFIED"),
+        /**
+         * Do not include the entity's ancestors in the index.
+         * 
+         */
         None("NONE"),
+        /**
+         * Include all the entity's ancestors in the index.
+         * 
+         */
         AllAncestors("ALL_ANCESTORS");
 
         private final String value;

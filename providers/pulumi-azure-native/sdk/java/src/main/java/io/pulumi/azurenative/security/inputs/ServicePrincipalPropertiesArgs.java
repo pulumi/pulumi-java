@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Details of the service principal.
+ * 
+ */
 public final class ServicePrincipalPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServicePrincipalPropertiesArgs Empty = new ServicePrincipalPropertiesArgs();
 
+    /**
+     * Application ID of service principal.
+     * 
+     */
     @InputImport(name="applicationId")
     private final @Nullable Input<String> applicationId;
 
@@ -21,6 +29,10 @@ public final class ServicePrincipalPropertiesArgs extends io.pulumi.resources.Re
         return this.applicationId == null ? Input.empty() : this.applicationId;
     }
 
+    /**
+     * A secret string that the application uses to prove its identity, also can be referred to as application password (write only).
+     * 
+     */
     @InputImport(name="secret")
     private final @Nullable Input<String> secret;
 

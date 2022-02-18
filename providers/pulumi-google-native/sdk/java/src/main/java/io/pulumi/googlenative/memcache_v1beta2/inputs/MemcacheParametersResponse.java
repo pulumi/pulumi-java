@@ -13,6 +13,10 @@ public final class MemcacheParametersResponse extends io.pulumi.resources.Invoke
 
     public static final MemcacheParametersResponse Empty = new MemcacheParametersResponse();
 
+    /**
+     * User defined set of parameters to use in the memcached process.
+     * 
+     */
     @InputImport(name="params", required=true)
     private final Map<String,String> params;
 

@@ -15,6 +15,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecArgs exten
 
     public static final OsPolicyAssignmentOsPolicyResourceGroupResourceExecArgs Empty = new OsPolicyAssignmentOsPolicyResourceGroupResourceExecArgs();
 
+    /**
+     * What to run to bring this resource into the desired state. An exit code of 100 indicates "success", any other exit code indicates a failure running enforce.
+     * 
+     */
     @InputImport(name="enforce")
     private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceArgs> enforce;
 
@@ -22,6 +26,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecArgs exten
         return this.enforce == null ? Input.empty() : this.enforce;
     }
 
+    /**
+     * Required. What to run to validate this resource is in the desired state. An exit code of 100 indicates "in desired state", and exit code of 101 indicates "not in desired state". Any other exit code indicates a failure running validate.
+     * 
+     */
     @InputImport(name="validate", required=true)
     private final Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateArgs> validate;
 

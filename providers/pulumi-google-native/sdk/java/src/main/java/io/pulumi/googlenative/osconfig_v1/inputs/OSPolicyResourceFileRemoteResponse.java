@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Specifies a file available via some URI.
+ * 
+ */
 public final class OSPolicyResourceFileRemoteResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OSPolicyResourceFileRemoteResponse Empty = new OSPolicyResourceFileRemoteResponse();
 
+    /**
+     * SHA256 checksum of the remote file.
+     * 
+     */
     @InputImport(name="sha256Checksum", required=true)
     private final String sha256Checksum;
 
@@ -19,6 +27,10 @@ public final class OSPolicyResourceFileRemoteResponse extends io.pulumi.resource
         return this.sha256Checksum;
     }
 
+    /**
+     * URI from which to fetch the object. It should contain both the protocol and path following the format `{protocol}://{location}`.
+     * 
+     */
     @InputImport(name="uri", required=true)
     private final String uri;
 

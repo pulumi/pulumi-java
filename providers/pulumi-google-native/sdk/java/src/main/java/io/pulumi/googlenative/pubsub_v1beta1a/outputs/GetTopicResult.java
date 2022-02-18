@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetTopicResult {
+    /**
+     * Name of the topic.
+     * 
+     */
     private final String name;
 
     @OutputCustomType.Constructor({"name"})
@@ -16,6 +20,10 @@ public final class GetTopicResult {
         this.name = Objects.requireNonNull(name);
     }
 
+    /**
+     * Name of the topic.
+     * 
+     */
     public String getName() {
         return this.name;
     }

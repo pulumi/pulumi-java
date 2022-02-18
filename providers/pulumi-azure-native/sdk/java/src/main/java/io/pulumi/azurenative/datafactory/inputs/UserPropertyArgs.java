@@ -10,10 +10,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * User property.
+ * 
+ */
 public final class UserPropertyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final UserPropertyArgs Empty = new UserPropertyArgs();
 
+    /**
+     * User property name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -21,6 +29,10 @@ public final class UserPropertyArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
+    /**
+     * User property value. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="value", required=true)
     private final Input<Object> value;
 

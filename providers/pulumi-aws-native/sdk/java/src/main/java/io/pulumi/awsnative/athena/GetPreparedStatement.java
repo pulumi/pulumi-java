@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPreparedStatement {
+/**
+ * Resource schema for AWS::Athena::PreparedStatement
+ * 
+ */
     public static CompletableFuture<GetPreparedStatementResult> invokeAsync(GetPreparedStatementArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:athena:getPreparedStatement", TypeShape.of(GetPreparedStatementResult.class), args == null ? GetPreparedStatementArgs.Empty : args, Utilities.withVersion(options));
     }

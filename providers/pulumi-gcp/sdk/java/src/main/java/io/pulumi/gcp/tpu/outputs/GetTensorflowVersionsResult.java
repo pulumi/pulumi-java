@@ -10,8 +10,16 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetTensorflowVersionsResult {
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
     private final String project;
+    /**
+     * The list of TensorFlow versions available for the given project and zone.
+     * 
+     */
     private final List<String> versions;
     private final String zone;
 
@@ -27,12 +35,20 @@ public final class GetTensorflowVersionsResult {
         this.zone = Objects.requireNonNull(zone);
     }
 
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }
     public String getProject() {
         return this.project;
     }
+    /**
+     * The list of TensorFlow versions available for the given project and zone.
+     * 
+     */
     public List<String> getVersions() {
         return this.versions;
     }

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The Amazon S3 storage class you want to store your files in when this location is used as a task destination.
+     * 
+     */
     @EnumType
     public enum LocationS3S3StorageClass {
         Standard("STANDARD"),

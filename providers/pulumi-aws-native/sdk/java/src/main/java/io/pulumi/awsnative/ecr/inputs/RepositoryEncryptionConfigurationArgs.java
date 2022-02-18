@@ -11,6 +11,14 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The encryption configuration for the repository. This determines how the contents of your repository are encrypted at rest.
+ * 
+ * By default, when no encryption configuration is set or the AES256 encryption type is used, Amazon ECR uses server-side encryption with Amazon S3-managed encryption keys which encrypts your data at rest using an AES-256 encryption algorithm. This does not require any action on your part.
+ * 
+ * For more information, see https://docs.aws.amazon.com/AmazonECR/latest/userguide/encryption-at-rest.html
+ * 
+ */
 public final class RepositoryEncryptionConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RepositoryEncryptionConfigurationArgs Empty = new RepositoryEncryptionConfigurationArgs();

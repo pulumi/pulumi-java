@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Gets or sets the transport type.
+     * 
+     */
     @EnumType
     public enum ServiceBusTransportType {
         NotSpecified("NotSpecified"),

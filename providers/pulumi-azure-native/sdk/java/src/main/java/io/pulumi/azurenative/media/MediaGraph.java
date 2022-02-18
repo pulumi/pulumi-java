@@ -16,57 +16,142 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * The Media Graph.
+ * API Version: 2020-02-01-preview.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:media:MediaGraph SampleMediaGraph /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Media/mediaServices/{accountName}/mediaGraphs/{mediaGraphName} 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:media:MediaGraph")
 public class MediaGraph extends io.pulumi.resources.CustomResource {
+    /**
+     * Date the Media Graph was created.
+     * 
+     */
     @OutputExport(name="created", type=String.class, parameters={})
     private Output<String> created;
 
+    /**
+     * @return Date the Media Graph was created.
+     * 
+     */
     public Output<String> getCreated() {
         return this.created;
     }
+    /**
+     * Media Graph description.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return Media Graph description.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * Date the Media Graph was last modified.
+     * 
+     */
     @OutputExport(name="lastModified", type=String.class, parameters={})
     private Output<String> lastModified;
 
+    /**
+     * @return Date the Media Graph was last modified.
+     * 
+     */
     public Output<String> getLastModified() {
         return this.lastModified;
     }
+    /**
+     * The name of the resource.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Media Graph sinks.
+     * 
+     */
     @OutputExport(name="sinks", type=List.class, parameters={MediaGraphAssetSinkResponse.class})
     private Output<List<MediaGraphAssetSinkResponse>> sinks;
 
+    /**
+     * @return Media Graph sinks.
+     * 
+     */
     public Output<List<MediaGraphAssetSinkResponse>> getSinks() {
         return this.sinks;
     }
+    /**
+     * Media Graph sources.
+     * 
+     */
     @OutputExport(name="sources", type=List.class, parameters={MediaGraphRtspSourceResponse.class})
     private Output<List<MediaGraphRtspSourceResponse>> sources;
 
+    /**
+     * @return Media Graph sources.
+     * 
+     */
     public Output<List<MediaGraphRtspSourceResponse>> getSources() {
         return this.sources;
     }
+    /**
+     * Media Graph state which indicates the resource allocation status for running the media graph pipeline.
+     * 
+     */
     @OutputExport(name="state", type=String.class, parameters={})
     private Output<String> state;
 
+    /**
+     * @return Media Graph state which indicates the resource allocation status for running the media graph pipeline.
+     * 
+     */
     public Output<String> getState() {
         return this.state;
     }
+    /**
+     * The type of the resource.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public MediaGraph(String name, MediaGraphArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:media:MediaGraph", name, args == null ? MediaGraphArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -86,6 +171,14 @@ public class MediaGraph extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static MediaGraph get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new MediaGraph(name, id, options);
     }

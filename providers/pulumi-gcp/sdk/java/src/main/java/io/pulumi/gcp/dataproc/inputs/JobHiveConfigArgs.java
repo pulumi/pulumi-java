@@ -17,6 +17,10 @@ public final class JobHiveConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JobHiveConfigArgs Empty = new JobHiveConfigArgs();
 
+    /**
+     * Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries. Defaults to false.
+     * 
+     */
     @InputImport(name="continueOnFailure")
     private final @Nullable Input<Boolean> continueOnFailure;
 
@@ -24,6 +28,10 @@ public final class JobHiveConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.continueOnFailure == null ? Input.empty() : this.continueOnFailure;
     }
 
+    /**
+     * HCFS URIs of jar files to be added to the Spark CLASSPATH.
+     * 
+     */
     @InputImport(name="jarFileUris")
     private final @Nullable Input<List<String>> jarFileUris;
 
@@ -31,6 +39,10 @@ public final class JobHiveConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.jarFileUris == null ? Input.empty() : this.jarFileUris;
     }
 
+    /**
+     * A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<Map<String,String>> properties;
 
@@ -38,6 +50,11 @@ public final class JobHiveConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The HCFS URI of the script that contains SQL queries.
+     * Conflicts with `query_list`
+     * 
+     */
     @InputImport(name="queryFileUri")
     private final @Nullable Input<String> queryFileUri;
 
@@ -45,6 +62,11 @@ public final class JobHiveConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.queryFileUri == null ? Input.empty() : this.queryFileUri;
     }
 
+    /**
+     * The list of SQL queries or statements to execute as part of the job.
+     * Conflicts with `query_file_uri`
+     * 
+     */
     @InputImport(name="queryLists")
     private final @Nullable Input<List<String>> queryLists;
 
@@ -52,6 +74,10 @@ public final class JobHiveConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.queryLists == null ? Input.empty() : this.queryLists;
     }
 
+    /**
+     * Mapping of query variable names to values (equivalent to the Spark SQL command: `SET name="value";`).
+     * 
+     */
     @InputImport(name="scriptVariables")
     private final @Nullable Input<Map<String,String>> scriptVariables;
 

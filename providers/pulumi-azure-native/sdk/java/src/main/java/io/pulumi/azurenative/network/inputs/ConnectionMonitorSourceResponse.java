@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes the source of connection monitor.
+ * 
+ */
 public final class ConnectionMonitorSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConnectionMonitorSourceResponse Empty = new ConnectionMonitorSourceResponse();
 
+    /**
+     * The source port used by connection monitor.
+     * 
+     */
     @InputImport(name="port")
     private final @Nullable Integer port;
 
@@ -22,6 +30,10 @@ public final class ConnectionMonitorSourceResponse extends io.pulumi.resources.I
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
     }
 
+    /**
+     * The ID of the resource used as the source by connection monitor.
+     * 
+     */
     @InputImport(name="resourceId", required=true)
     private final String resourceId;
 

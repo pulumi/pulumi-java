@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Type of the endpoint for the event subscription destination.
+     * 
+     */
     @EnumType
     public enum EndpointType {
         WebHook("WebHook"),

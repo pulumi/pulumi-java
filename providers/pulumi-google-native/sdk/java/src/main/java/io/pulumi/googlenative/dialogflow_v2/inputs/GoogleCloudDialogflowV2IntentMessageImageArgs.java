@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The image response message.
+ * 
+ */
 public final class GoogleCloudDialogflowV2IntentMessageImageArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowV2IntentMessageImageArgs Empty = new GoogleCloudDialogflowV2IntentMessageImageArgs();
 
+    /**
+     * Optional. A text description of the image to be used for accessibility, e.g., screen readers.
+     * 
+     */
     @InputImport(name="accessibilityText")
     private final @Nullable Input<String> accessibilityText;
 
@@ -21,6 +29,10 @@ public final class GoogleCloudDialogflowV2IntentMessageImageArgs extends io.pulu
         return this.accessibilityText == null ? Input.empty() : this.accessibilityText;
     }
 
+    /**
+     * Optional. The public URI to an image file.
+     * 
+     */
     @InputImport(name="imageUri")
     private final @Nullable Input<String> imageUri;
 

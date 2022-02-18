@@ -11,12 +11,40 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetWorkspaceAadAdminResult {
+    /**
+     * Workspace active directory administrator type
+     * 
+     */
     private final @Nullable String administratorType;
+    /**
+     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * 
+     */
     private final String id;
+    /**
+     * Login of the workspace active directory administrator
+     * 
+     */
     private final @Nullable String login;
+    /**
+     * The name of the resource
+     * 
+     */
     private final String name;
+    /**
+     * Object ID of the workspace active directory administrator
+     * 
+     */
     private final @Nullable String sid;
+    /**
+     * Tenant ID of the workspace active directory administrator
+     * 
+     */
     private final @Nullable String tenantId;
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"administratorType","id","login","name","sid","tenantId","type"})
@@ -37,24 +65,52 @@ public final class GetWorkspaceAadAdminResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Workspace active directory administrator type
+     * 
+     */
     public Optional<String> getAdministratorType() {
         return Optional.ofNullable(this.administratorType);
     }
+    /**
+     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Login of the workspace active directory administrator
+     * 
+     */
     public Optional<String> getLogin() {
         return Optional.ofNullable(this.login);
     }
+    /**
+     * The name of the resource
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Object ID of the workspace active directory administrator
+     * 
+     */
     public Optional<String> getSid() {
         return Optional.ofNullable(this.sid);
     }
+    /**
+     * Tenant ID of the workspace active directory administrator
+     * 
+     */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     public String getType() {
         return this.type;
     }

@@ -10,6 +10,10 @@ import java.util.Objects;
 @OutputCustomType
 public final class GetServiceTemplateSpecContainerVolumeMount {
     private final String mountPath;
+    /**
+     * The name of the Cloud Run Service.
+     * 
+     */
     private final String name;
 
     @OutputCustomType.Constructor({"mountPath","name"})
@@ -23,6 +27,10 @@ public final class GetServiceTemplateSpecContainerVolumeMount {
     public String getMountPath() {
         return this.mountPath;
     }
+    /**
+     * The name of the Cloud Run Service.
+     * 
+     */
     public String getName() {
         return this.name;
     }

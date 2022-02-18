@@ -13,8 +13,23 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteAction {
+    /**
+     * The policy to use for defining caching and signed request behaviour for requests that match this route.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicy cdnPolicy;
+    /**
+     * CORSPolicy defines Cross-Origin-Resource-Sharing configuration, including which CORS response headers will be set.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicy corsPolicy;
+    /**
+     * The URL rewrite configuration for requests that match this route.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewrite urlRewrite;
 
     @OutputCustomType.Constructor({"cdnPolicy","corsPolicy","urlRewrite"})
@@ -27,12 +42,27 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteAction {
         this.urlRewrite = urlRewrite;
     }
 
+    /**
+     * The policy to use for defining caching and signed request behaviour for requests that match this route.
+     * Structure is documented below.
+     * 
+     */
     public Optional<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicy> getCdnPolicy() {
         return Optional.ofNullable(this.cdnPolicy);
     }
+    /**
+     * CORSPolicy defines Cross-Origin-Resource-Sharing configuration, including which CORS response headers will be set.
+     * Structure is documented below.
+     * 
+     */
     public Optional<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicy> getCorsPolicy() {
         return Optional.ofNullable(this.corsPolicy);
     }
+    /**
+     * The URL rewrite configuration for requests that match this route.
+     * Structure is documented below.
+     * 
+     */
     public Optional<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewrite> getUrlRewrite() {
         return Optional.ofNullable(this.urlRewrite);
     }

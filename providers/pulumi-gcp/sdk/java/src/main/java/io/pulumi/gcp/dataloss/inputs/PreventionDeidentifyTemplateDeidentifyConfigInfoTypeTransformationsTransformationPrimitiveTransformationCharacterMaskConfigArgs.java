@@ -18,6 +18,11 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
 
     public static final PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigArgs Empty = new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigArgs();
 
+    /**
+     * Characters to skip when doing de-identification of a value. These will be left alone and skipped.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="charactersToIgnores")
     private final @Nullable Input<List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreArgs>> charactersToIgnores;
 
@@ -25,6 +30,12 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
         return this.charactersToIgnores == null ? Input.empty() : this.charactersToIgnores;
     }
 
+    /**
+     * Character to use to mask the sensitive values—for example, * for an alphabetic string such as a name, or 0 for a numeric string
+     * such as ZIP code or credit card number. This string must have a length of 1. If not supplied, this value defaults to * for
+     * strings, and 0 for digits.
+     * 
+     */
     @InputImport(name="maskingCharacter")
     private final @Nullable Input<String> maskingCharacter;
 
@@ -32,6 +43,10 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
         return this.maskingCharacter == null ? Input.empty() : this.maskingCharacter;
     }
 
+    /**
+     * Number of characters to mask. If not set, all matching chars will be masked. Skipped characters do not count towards this tally.
+     * 
+     */
     @InputImport(name="numberToMask")
     private final @Nullable Input<Integer> numberToMask;
 
@@ -39,6 +54,11 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
         return this.numberToMask == null ? Input.empty() : this.numberToMask;
     }
 
+    /**
+     * Mask characters in reverse order. For example, if masking_character is 0, number_to_mask is 14, and reverse_order is `false`, then the
+     * input string `1234-5678-9012-3456` is masked as `00000000000000-3456`.
+     * 
+     */
     @InputImport(name="reverseOrder")
     private final @Nullable Input<Boolean> reverseOrder;
 

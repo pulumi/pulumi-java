@@ -13,6 +13,10 @@ public final class SecurityScanConfigAuthenticationCustomAccountArgs extends io.
 
     public static final SecurityScanConfigAuthenticationCustomAccountArgs Empty = new SecurityScanConfigAuthenticationCustomAccountArgs();
 
+    /**
+     * The login form URL of the website.
+     * 
+     */
     @InputImport(name="loginUrl", required=true)
     private final Input<String> loginUrl;
 
@@ -20,6 +24,12 @@ public final class SecurityScanConfigAuthenticationCustomAccountArgs extends io.
         return this.loginUrl;
     }
 
+    /**
+     * The password of the custom account. The credential is stored encrypted
+     * in GCP.
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     @InputImport(name="password", required=true)
     private final Input<String> password;
 
@@ -27,6 +37,10 @@ public final class SecurityScanConfigAuthenticationCustomAccountArgs extends io.
         return this.password;
     }
 
+    /**
+     * The user name of the custom account.
+     * 
+     */
     @InputImport(name="username", required=true)
     private final Input<String> username;
 

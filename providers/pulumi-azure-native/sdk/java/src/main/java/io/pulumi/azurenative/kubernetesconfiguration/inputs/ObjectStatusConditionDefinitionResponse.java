@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Status condition of Kubernetes object
+ * 
+ */
 public final class ObjectStatusConditionDefinitionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ObjectStatusConditionDefinitionResponse Empty = new ObjectStatusConditionDefinitionResponse();
 
+    /**
+     * Last time this status condition has changed
+     * 
+     */
     @InputImport(name="lastTransitionTime")
     private final @Nullable String lastTransitionTime;
 
@@ -21,6 +29,10 @@ public final class ObjectStatusConditionDefinitionResponse extends io.pulumi.res
         return this.lastTransitionTime == null ? Optional.empty() : Optional.ofNullable(this.lastTransitionTime);
     }
 
+    /**
+     * A more verbose description of the object status condition
+     * 
+     */
     @InputImport(name="message")
     private final @Nullable String message;
 
@@ -28,6 +40,10 @@ public final class ObjectStatusConditionDefinitionResponse extends io.pulumi.res
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
     }
 
+    /**
+     * Reason for the specified status condition type status
+     * 
+     */
     @InputImport(name="reason")
     private final @Nullable String reason;
 
@@ -35,6 +51,10 @@ public final class ObjectStatusConditionDefinitionResponse extends io.pulumi.res
         return this.reason == null ? Optional.empty() : Optional.ofNullable(this.reason);
     }
 
+    /**
+     * Status of the Kubernetes object condition type
+     * 
+     */
     @InputImport(name="status")
     private final @Nullable String status;
 
@@ -42,6 +62,10 @@ public final class ObjectStatusConditionDefinitionResponse extends io.pulumi.res
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 
+    /**
+     * Object status condition type for this object
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 

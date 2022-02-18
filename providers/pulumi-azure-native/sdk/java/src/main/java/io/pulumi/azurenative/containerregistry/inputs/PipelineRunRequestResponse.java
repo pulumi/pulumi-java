@@ -13,10 +13,21 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The request properties provided for a pipeline run.
+ * 
+ */
 public final class PipelineRunRequestResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PipelineRunRequestResponse Empty = new PipelineRunRequestResponse();
 
+    /**
+     * List of source artifacts to be transferred by the pipeline.
+     * Specify an image by repository ('hello-world'). This will use the 'latest' tag.
+     * Specify an image by tag ('hello-world:latest').
+     * Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').
+     * 
+     */
     @InputImport(name="artifacts")
     private final @Nullable List<String> artifacts;
 
@@ -24,6 +35,10 @@ public final class PipelineRunRequestResponse extends io.pulumi.resources.Invoke
         return this.artifacts == null ? List.of() : this.artifacts;
     }
 
+    /**
+     * The digest of the tar used to transfer the artifacts.
+     * 
+     */
     @InputImport(name="catalogDigest")
     private final @Nullable String catalogDigest;
 
@@ -31,6 +46,10 @@ public final class PipelineRunRequestResponse extends io.pulumi.resources.Invoke
         return this.catalogDigest == null ? Optional.empty() : Optional.ofNullable(this.catalogDigest);
     }
 
+    /**
+     * The resource ID of the pipeline to run.
+     * 
+     */
     @InputImport(name="pipelineResourceId")
     private final @Nullable String pipelineResourceId;
 
@@ -38,6 +57,10 @@ public final class PipelineRunRequestResponse extends io.pulumi.resources.Invoke
         return this.pipelineResourceId == null ? Optional.empty() : Optional.ofNullable(this.pipelineResourceId);
     }
 
+    /**
+     * The source properties of the pipeline run.
+     * 
+     */
     @InputImport(name="source")
     private final @Nullable PipelineRunSourcePropertiesResponse source;
 
@@ -45,6 +68,10 @@ public final class PipelineRunRequestResponse extends io.pulumi.resources.Invoke
         return this.source == null ? Optional.empty() : Optional.ofNullable(this.source);
     }
 
+    /**
+     * The target properties of the pipeline run.
+     * 
+     */
     @InputImport(name="target")
     private final @Nullable PipelineRunTargetPropertiesResponse target;
 

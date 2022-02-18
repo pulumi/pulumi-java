@@ -9,10 +9,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Authentication configuration information
+ * 
+ */
 public final class DicomServiceAuthenticationConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DicomServiceAuthenticationConfigurationResponse Empty = new DicomServiceAuthenticationConfigurationResponse();
 
+    /**
+     * The audiences for the service
+     * 
+     */
     @InputImport(name="audiences", required=true)
     private final List<String> audiences;
 
@@ -20,6 +28,10 @@ public final class DicomServiceAuthenticationConfigurationResponse extends io.pu
         return this.audiences;
     }
 
+    /**
+     * The authority url for the service
+     * 
+     */
     @InputImport(name="authority", required=true)
     private final String authority;
 

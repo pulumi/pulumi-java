@@ -13,6 +13,11 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
 
     public static final PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrappedArgs Empty = new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrappedArgs();
 
+    /**
+     * A 128/192/256 bit key.
+     * A base64-encoded string.
+     * 
+     */
     @InputImport(name="key", required=true)
     private final Input<String> key;
 

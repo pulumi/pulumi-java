@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties of an artifact parameter.
+ * 
+ */
 public final class ArtifactParameterPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ArtifactParameterPropertiesArgs Empty = new ArtifactParameterPropertiesArgs();
 
+    /**
+     * The name of the artifact parameter.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -21,6 +29,10 @@ public final class ArtifactParameterPropertiesArgs extends io.pulumi.resources.R
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The value of the artifact parameter.
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

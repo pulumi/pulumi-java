@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * When specified, enables or updates server-side encryption using an AWS KMS key for a specified stream. Removing this property from your stack template and updating your stack disables encryption.
+ * 
+ */
 public final class StreamEncryption extends io.pulumi.resources.InvokeArgs {
 
     public static final StreamEncryption Empty = new StreamEncryption();
 
+    /**
+     * The encryption type to use. The only valid value is KMS.
+     * 
+     */
     @InputImport(name="encryptionType", required=true)
     private final StreamEncryptionEncryptionType encryptionType;
 
@@ -20,6 +28,10 @@ public final class StreamEncryption extends io.pulumi.resources.InvokeArgs {
         return this.encryptionType;
     }
 
+    /**
+     * The GUID for the customer-managed AWS KMS key to use for encryption. This value can be a globally unique identifier, a fully specified Amazon Resource Name (ARN) to either an alias or a key, or an alias name prefixed by "alias/".You can also use a master key owned by Kinesis Data Streams by specifying the alias aws/kinesis.
+     * 
+     */
     @InputImport(name="keyId", required=true)
     private final String keyId;
 

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The hypervisor generation of the Virtual Machine. Applicable to OS disks only.
+     * 
+     */
     @EnumType
     public enum HyperVGeneration {
         V1("V1"),

@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListDeviceFailoverSets {
+/**
+ * The list of failover sets.
+ * API Version: 2017-06-01.
+ * 
+ *
+ * The list of failover sets.
+ * 
+ */
     public static CompletableFuture<ListDeviceFailoverSetsResult> invokeAsync(ListDeviceFailoverSetsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storsimple:listDeviceFailoverSets", TypeShape.of(ListDeviceFailoverSetsResult.class), args == null ? ListDeviceFailoverSetsArgs.Empty : args, Utilities.withVersion(options));
     }

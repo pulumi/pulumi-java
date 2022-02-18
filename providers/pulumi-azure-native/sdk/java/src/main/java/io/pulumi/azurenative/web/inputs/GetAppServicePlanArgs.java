@@ -12,6 +12,10 @@ public final class GetAppServicePlanArgs extends io.pulumi.resources.InvokeArgs 
 
     public static final GetAppServicePlanArgs Empty = new GetAppServicePlanArgs();
 
+    /**
+     * Name of the App Service plan.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -19,6 +23,10 @@ public final class GetAppServicePlanArgs extends io.pulumi.resources.InvokeArgs 
         return this.name;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

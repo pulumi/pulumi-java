@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Contains the security related information for the resource.
+ * 
+ */
 public final class DiskSecurityProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DiskSecurityProfileArgs Empty = new DiskSecurityProfileArgs();
 
+    /**
+     * Specifies the SecurityType of the VM. Applicable for OS disks only.
+     * 
+     */
     @InputImport(name="securityType")
     private final @Nullable Input<Either<String,DiskSecurityTypes>> securityType;
 

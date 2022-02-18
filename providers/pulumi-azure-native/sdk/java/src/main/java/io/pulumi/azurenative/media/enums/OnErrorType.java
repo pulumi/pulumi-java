@@ -8,9 +8,21 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * A Transform can define more than one outputs. This property defines what the service should do when one output fails - either continue to produce other outputs, or, stop the other outputs. The overall Job state will not reflect failures of outputs that are specified with 'ContinueJob'. The default is 'StopProcessingJob'.
+     * 
+     */
     @EnumType
     public enum OnErrorType {
+        /**
+         * Tells the service that if this TransformOutput fails, then any other incomplete TransformOutputs can be stopped.
+         * 
+         */
         StopProcessingJob("StopProcessingJob"),
+        /**
+         * Tells the service that if this TransformOutput fails, then allow any other TransformOutput to continue.
+         * 
+         */
         ContinueJob("ContinueJob");
 
         private final String value;

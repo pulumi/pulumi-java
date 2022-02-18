@@ -16,6 +16,10 @@ public final class GlobalNetworkArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GlobalNetworkArgs Empty = new GlobalNetworkArgs();
 
+    /**
+     * The description of the global network.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -23,6 +27,10 @@ public final class GlobalNetworkArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The tags for the global network.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<GlobalNetworkTagArgs>> tags;
 

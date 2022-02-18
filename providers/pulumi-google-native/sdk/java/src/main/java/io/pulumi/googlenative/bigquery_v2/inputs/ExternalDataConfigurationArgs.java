@@ -24,6 +24,10 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
 
     public static final ExternalDataConfigurationArgs Empty = new ExternalDataConfigurationArgs();
 
+    /**
+     * Try to detect schema and format options automatically. Any option specified explicitly will be honored.
+     * 
+     */
     @InputImport(name="autodetect")
     private final @Nullable Input<Boolean> autodetect;
 
@@ -31,6 +35,10 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
         return this.autodetect == null ? Input.empty() : this.autodetect;
     }
 
+    /**
+     * Additional properties to set if sourceFormat is set to Avro.
+     * 
+     */
     @InputImport(name="avroOptions")
     private final @Nullable Input<AvroOptionsArgs> avroOptions;
 
@@ -38,6 +46,10 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
         return this.avroOptions == null ? Input.empty() : this.avroOptions;
     }
 
+    /**
+     * [Optional] Additional options if sourceFormat is set to BIGTABLE.
+     * 
+     */
     @InputImport(name="bigtableOptions")
     private final @Nullable Input<BigtableOptionsArgs> bigtableOptions;
 
@@ -45,6 +57,10 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
         return this.bigtableOptions == null ? Input.empty() : this.bigtableOptions;
     }
 
+    /**
+     * [Optional] The compression type of the data source. Possible values include GZIP and NONE. The default value is NONE. This setting is ignored for Google Cloud Bigtable, Google Cloud Datastore backups and Avro formats.
+     * 
+     */
     @InputImport(name="compression")
     private final @Nullable Input<String> compression;
 
@@ -52,6 +68,10 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
         return this.compression == null ? Input.empty() : this.compression;
     }
 
+    /**
+     * [Optional, Trusted Tester] Connection for external data source.
+     * 
+     */
     @InputImport(name="connectionId")
     private final @Nullable Input<String> connectionId;
 
@@ -59,6 +79,10 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
         return this.connectionId == null ? Input.empty() : this.connectionId;
     }
 
+    /**
+     * Additional properties to set if sourceFormat is set to CSV.
+     * 
+     */
     @InputImport(name="csvOptions")
     private final @Nullable Input<CsvOptionsArgs> csvOptions;
 
@@ -66,6 +90,10 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
         return this.csvOptions == null ? Input.empty() : this.csvOptions;
     }
 
+    /**
+     * [Optional] Defines the list of possible SQL data types to which the source decimal values are converted. This list and the precision and the scale parameters of the decimal field determine the target type. In the order of NUMERIC, BIGNUMERIC, and STRING, a type is picked if it is in the specified list and if it supports the precision and the scale. STRING supports all precision and scale values. If none of the listed types supports the precision and the scale, the type supporting the widest range in the specified list is picked, and if a value exceeds the supported range when reading the data, an error will be thrown. Example: Suppose the value of this field is ["NUMERIC", "BIGNUMERIC"]. If (precision,scale) is: (38,9) -> NUMERIC; (39,9) -> BIGNUMERIC (NUMERIC cannot hold 30 integer digits); (38,10) -> BIGNUMERIC (NUMERIC cannot hold 10 fractional digits); (76,38) -> BIGNUMERIC; (77,38) -> BIGNUMERIC (error if value exeeds supported range). This field cannot contain duplicate types. The order of the types in this field is ignored. For example, ["BIGNUMERIC", "NUMERIC"] is the same as ["NUMERIC", "BIGNUMERIC"] and NUMERIC always takes precedence over BIGNUMERIC. Defaults to ["NUMERIC", "STRING"] for ORC and ["NUMERIC"] for the other file formats.
+     * 
+     */
     @InputImport(name="decimalTargetTypes")
     private final @Nullable Input<List<String>> decimalTargetTypes;
 
@@ -73,6 +101,10 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
         return this.decimalTargetTypes == null ? Input.empty() : this.decimalTargetTypes;
     }
 
+    /**
+     * [Optional] Additional options if sourceFormat is set to GOOGLE_SHEETS.
+     * 
+     */
     @InputImport(name="googleSheetsOptions")
     private final @Nullable Input<GoogleSheetsOptionsArgs> googleSheetsOptions;
 
@@ -80,6 +112,10 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
         return this.googleSheetsOptions == null ? Input.empty() : this.googleSheetsOptions;
     }
 
+    /**
+     * [Optional] Options to configure hive partitioning support.
+     * 
+     */
     @InputImport(name="hivePartitioningOptions")
     private final @Nullable Input<HivePartitioningOptionsArgs> hivePartitioningOptions;
 
@@ -87,6 +123,10 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
         return this.hivePartitioningOptions == null ? Input.empty() : this.hivePartitioningOptions;
     }
 
+    /**
+     * [Optional] Indicates if BigQuery should allow extra values that are not represented in the table schema. If true, the extra values are ignored. If false, records with extra columns are treated as bad records, and if there are too many bad records, an invalid error is returned in the job result. The default value is false. The sourceFormat property determines what BigQuery treats as an extra value: CSV: Trailing columns JSON: Named values that don't match any column names Google Cloud Bigtable: This setting is ignored. Google Cloud Datastore backups: This setting is ignored. Avro: This setting is ignored.
+     * 
+     */
     @InputImport(name="ignoreUnknownValues")
     private final @Nullable Input<Boolean> ignoreUnknownValues;
 
@@ -94,6 +134,10 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
         return this.ignoreUnknownValues == null ? Input.empty() : this.ignoreUnknownValues;
     }
 
+    /**
+     * [Optional] The maximum number of bad records that BigQuery can ignore when reading data. If the number of bad records exceeds this value, an invalid error is returned in the job result. This is only valid for CSV, JSON, and Google Sheets. The default value is 0, which requires that all records are valid. This setting is ignored for Google Cloud Bigtable, Google Cloud Datastore backups and Avro formats.
+     * 
+     */
     @InputImport(name="maxBadRecords")
     private final @Nullable Input<Integer> maxBadRecords;
 
@@ -101,6 +145,10 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
         return this.maxBadRecords == null ? Input.empty() : this.maxBadRecords;
     }
 
+    /**
+     * Additional properties to set if sourceFormat is set to Parquet.
+     * 
+     */
     @InputImport(name="parquetOptions")
     private final @Nullable Input<ParquetOptionsArgs> parquetOptions;
 
@@ -108,6 +156,10 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
         return this.parquetOptions == null ? Input.empty() : this.parquetOptions;
     }
 
+    /**
+     * [Optional] The schema for the data. Schema is required for CSV and JSON formats. Schema is disallowed for Google Cloud Bigtable, Cloud Datastore backups, and Avro formats.
+     * 
+     */
     @InputImport(name="schema")
     private final @Nullable Input<TableSchemaArgs> schema;
 
@@ -115,6 +167,10 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
         return this.schema == null ? Input.empty() : this.schema;
     }
 
+    /**
+     * [Required] The data format. For CSV files, specify "CSV". For Google sheets, specify "GOOGLE_SHEETS". For newline-delimited JSON, specify "NEWLINE_DELIMITED_JSON". For Avro files, specify "AVRO". For Google Cloud Datastore backups, specify "DATASTORE_BACKUP". [Beta] For Google Cloud Bigtable, specify "BIGTABLE".
+     * 
+     */
     @InputImport(name="sourceFormat")
     private final @Nullable Input<String> sourceFormat;
 
@@ -122,6 +178,10 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
         return this.sourceFormat == null ? Input.empty() : this.sourceFormat;
     }
 
+    /**
+     * [Required] The fully-qualified URIs that point to your data in Google Cloud. For Google Cloud Storage URIs: Each URI can contain one '*' wildcard character and it must come after the 'bucket' name. Size limits related to load jobs apply to external data sources. For Google Cloud Bigtable URIs: Exactly one URI can be specified and it has be a fully specified and valid HTTPS URL for a Google Cloud Bigtable table. For Google Cloud Datastore backups, exactly one URI can be specified. Also, the '*' wildcard character is not allowed.
+     * 
+     */
     @InputImport(name="sourceUris")
     private final @Nullable Input<List<String>> sourceUris;
 

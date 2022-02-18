@@ -13,10 +13,30 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DomainMappingStatusResponse {
+    /**
+     * Array of observed DomainMappingConditions, indicating the current state of the DomainMapping.
+     * 
+     */
     private final List<GoogleCloudRunV1ConditionResponse> conditions;
+    /**
+     * The name of the route that the mapping currently points to.
+     * 
+     */
     private final String mappedRouteName;
+    /**
+     * ObservedGeneration is the 'Generation' of the DomainMapping that was last processed by the controller. Clients polling for completed reconciliation should poll until observedGeneration = metadata.generation and the Ready condition's status is True or False.
+     * 
+     */
     private final Integer observedGeneration;
+    /**
+     * The resource records required to configure this domain mapping. These records must be added to the domain's DNS configuration in order to serve the application via this domain mapping.
+     * 
+     */
     private final List<ResourceRecordResponse> resourceRecords;
+    /**
+     * Optional. Cloud Run fully managed: not supported Cloud Run on GKE: supported Holds the URL that will serve the traffic of the DomainMapping.
+     * 
+     */
     private final String url;
 
     @OutputCustomType.Constructor({"conditions","mappedRouteName","observedGeneration","resourceRecords","url"})
@@ -33,18 +53,38 @@ public final class DomainMappingStatusResponse {
         this.url = Objects.requireNonNull(url);
     }
 
+    /**
+     * Array of observed DomainMappingConditions, indicating the current state of the DomainMapping.
+     * 
+     */
     public List<GoogleCloudRunV1ConditionResponse> getConditions() {
         return this.conditions;
     }
+    /**
+     * The name of the route that the mapping currently points to.
+     * 
+     */
     public String getMappedRouteName() {
         return this.mappedRouteName;
     }
+    /**
+     * ObservedGeneration is the 'Generation' of the DomainMapping that was last processed by the controller. Clients polling for completed reconciliation should poll until observedGeneration = metadata.generation and the Ready condition's status is True or False.
+     * 
+     */
     public Integer getObservedGeneration() {
         return this.observedGeneration;
     }
+    /**
+     * The resource records required to configure this domain mapping. These records must be added to the domain's DNS configuration in order to serve the application via this domain mapping.
+     * 
+     */
     public List<ResourceRecordResponse> getResourceRecords() {
         return this.resourceRecords;
     }
+    /**
+     * Optional. Cloud Run fully managed: not supported Cloud Run on GKE: supported Holds the URL that will serve the traffic of the DomainMapping.
+     * 
+     */
     public String getUrl() {
         return this.url;
     }

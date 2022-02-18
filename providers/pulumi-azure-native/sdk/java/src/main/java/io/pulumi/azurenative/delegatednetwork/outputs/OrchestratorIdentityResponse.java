@@ -11,8 +11,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class OrchestratorIdentityResponse {
+    /**
+     * The principal id of the system assigned identity which is used by orchestrator.
+     * 
+     */
     private final String principalId;
+    /**
+     * The tenant id of the system assigned identity which is used by orchestrator.
+     * 
+     */
     private final String tenantId;
+    /**
+     * The type of identity used for orchestrator cluster. Type 'SystemAssigned' will use an implicitly created identity orchestrator clusters
+     * 
+     */
     private final @Nullable String type;
 
     @OutputCustomType.Constructor({"principalId","tenantId","type"})
@@ -25,12 +37,24 @@ public final class OrchestratorIdentityResponse {
         this.type = type;
     }
 
+    /**
+     * The principal id of the system assigned identity which is used by orchestrator.
+     * 
+     */
     public String getPrincipalId() {
         return this.principalId;
     }
+    /**
+     * The tenant id of the system assigned identity which is used by orchestrator.
+     * 
+     */
     public String getTenantId() {
         return this.tenantId;
     }
+    /**
+     * The type of identity used for orchestrator cluster. Type 'SystemAssigned' will use an implicitly created identity orchestrator clusters
+     * 
+     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

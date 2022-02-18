@@ -14,39 +14,115 @@ import io.pulumi.gcp.monitoring.outputs.CustomServiceTelemetry;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * A Service is a discrete, autonomous, and network-accessible unit,
+ * designed to solve an individual concern (Wikipedia). In Cloud Monitoring,
+ * a Service acts as the root resource under which operational aspects of
+ * the service are accessible
+ * 
+ * To get more information about Service, see:
+ * 
+ * * [API documentation](https://cloud.google.com/monitoring/api/ref_v3/rest/v3/services)
+ * * How-to Guides
+ *     * [Service Monitoring](https://cloud.google.com/monitoring/service-monitoring)
+ *     * [Monitoring API Documentation](https://cloud.google.com/monitoring/api/v3/)
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * Service can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:monitoring/customService:CustomService default {{name}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:monitoring/customService:CustomService")
 public class CustomService extends io.pulumi.resources.CustomResource {
+    /**
+     * Name used for UI elements listing this Service.
+     * 
+     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
+    /**
+     * @return Name used for UI elements listing this Service.
+     * 
+     */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
+    /**
+     * The full resource name for this service. The syntax is: projects/[PROJECT_ID]/services/[SERVICE_ID].
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The full resource name for this service. The syntax is: projects/[PROJECT_ID]/services/[SERVICE_ID].
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * An optional service ID to use. If not given, the server will generate a
+     * service ID.
+     * 
+     */
     @OutputExport(name="serviceId", type=String.class, parameters={})
     private Output<String> serviceId;
 
+    /**
+     * @return An optional service ID to use. If not given, the server will generate a
+     * service ID.
+     * 
+     */
     public Output<String> getServiceId() {
         return this.serviceId;
     }
+    /**
+     * Configuration for how to query telemetry on a Service.
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="telemetry", type=CustomServiceTelemetry.class, parameters={})
     private Output</* @Nullable */ CustomServiceTelemetry> telemetry;
 
+    /**
+     * @return Configuration for how to query telemetry on a Service.
+     * Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ CustomServiceTelemetry> getTelemetry() {
         return this.telemetry;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public CustomService(String name, @Nullable CustomServiceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:monitoring/customService:CustomService", name, args == null ? CustomServiceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -62,6 +138,15 @@ public class CustomService extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static CustomService get(String name, Input<String> id, @Nullable CustomServiceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new CustomService(name, id, state, options);
     }

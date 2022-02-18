@@ -12,8 +12,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetResolverDNSSECConfigResult {
+    /**
+     * Id
+     * 
+     */
     private final @Nullable String id;
+    /**
+     * AccountId
+     * 
+     */
     private final @Nullable String ownerId;
+    /**
+     * ResolverDNSSECValidationStatus, possible values are ENABLING, ENABLED, DISABLING AND DISABLED.
+     * 
+     */
     private final @Nullable ResolverDNSSECConfigValidationStatus validationStatus;
 
     @OutputCustomType.Constructor({"id","ownerId","validationStatus"})
@@ -26,12 +38,24 @@ public final class GetResolverDNSSECConfigResult {
         this.validationStatus = validationStatus;
     }
 
+    /**
+     * Id
+     * 
+     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+    /**
+     * AccountId
+     * 
+     */
     public Optional<String> getOwnerId() {
         return Optional.ofNullable(this.ownerId);
     }
+    /**
+     * ResolverDNSSECValidationStatus, possible values are ENABLING, ENABLED, DISABLING AND DISABLED.
+     * 
+     */
     public Optional<ResolverDNSSECConfigValidationStatus> getValidationStatus() {
         return Optional.ofNullable(this.validationStatus);
     }

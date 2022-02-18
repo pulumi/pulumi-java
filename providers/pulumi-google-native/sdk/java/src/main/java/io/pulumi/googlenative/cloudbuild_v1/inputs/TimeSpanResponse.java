@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Start and end times for a build execution phase.
+ * 
+ */
 public final class TimeSpanResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TimeSpanResponse Empty = new TimeSpanResponse();
 
+    /**
+     * End of time span.
+     * 
+     */
     @InputImport(name="endTime", required=true)
     private final String endTime;
 
@@ -19,6 +27,10 @@ public final class TimeSpanResponse extends io.pulumi.resources.InvokeArgs {
         return this.endTime;
     }
 
+    /**
+     * Start of time span.
+     * 
+     */
     @InputImport(name="startTime", required=true)
     private final String startTime;
 

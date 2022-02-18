@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListWebAppConnectionStringsSlot {
+/**
+ * String dictionary resource.
+ * API Version: 2020-12-01.
+ * 
+ *
+ * String dictionary resource.
+ * 
+ */
     public static CompletableFuture<ListWebAppConnectionStringsSlotResult> invokeAsync(ListWebAppConnectionStringsSlotArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppConnectionStringsSlot", TypeShape.of(ListWebAppConnectionStringsSlotResult.class), args == null ? ListWebAppConnectionStringsSlotArgs.Empty : args, Utilities.withVersion(options));
     }

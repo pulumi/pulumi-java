@@ -17,6 +17,10 @@ public final class IotConnectorFhirDestinationArgs extends io.pulumi.resources.R
 
     public static final IotConnectorFhirDestinationArgs Empty = new IotConnectorFhirDestinationArgs();
 
+    /**
+     * The name of IoT Connector FHIR destination resource.
+     * 
+     */
     @InputImport(name="fhirDestinationName")
     private final @Nullable Input<String> fhirDestinationName;
 
@@ -24,6 +28,10 @@ public final class IotConnectorFhirDestinationArgs extends io.pulumi.resources.R
         return this.fhirDestinationName == null ? Input.empty() : this.fhirDestinationName;
     }
 
+    /**
+     * FHIR Mappings
+     * 
+     */
     @InputImport(name="fhirMapping", required=true)
     private final Input<IotMappingPropertiesArgs> fhirMapping;
 
@@ -31,6 +39,10 @@ public final class IotConnectorFhirDestinationArgs extends io.pulumi.resources.R
         return this.fhirMapping;
     }
 
+    /**
+     * Fully qualified resource id of the FHIR service to connect to.
+     * 
+     */
     @InputImport(name="fhirServiceResourceId", required=true)
     private final Input<String> fhirServiceResourceId;
 
@@ -38,6 +50,10 @@ public final class IotConnectorFhirDestinationArgs extends io.pulumi.resources.R
         return this.fhirServiceResourceId;
     }
 
+    /**
+     * The name of IoT Connector resource.
+     * 
+     */
     @InputImport(name="iotConnectorName", required=true)
     private final Input<String> iotConnectorName;
 
@@ -45,6 +61,10 @@ public final class IotConnectorFhirDestinationArgs extends io.pulumi.resources.R
         return this.iotConnectorName;
     }
 
+    /**
+     * The resource location.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -52,6 +72,10 @@ public final class IotConnectorFhirDestinationArgs extends io.pulumi.resources.R
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the resource group that contains the service instance.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -59,6 +83,10 @@ public final class IotConnectorFhirDestinationArgs extends io.pulumi.resources.R
         return this.resourceGroupName;
     }
 
+    /**
+     * Determines how resource identity is resolved on the destination.
+     * 
+     */
     @InputImport(name="resourceIdentityResolutionType", required=true)
     private final Input<Either<String,IotIdentityResolutionType>> resourceIdentityResolutionType;
 
@@ -66,6 +94,10 @@ public final class IotConnectorFhirDestinationArgs extends io.pulumi.resources.R
         return this.resourceIdentityResolutionType;
     }
 
+    /**
+     * The name of workspace resource.
+     * 
+     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

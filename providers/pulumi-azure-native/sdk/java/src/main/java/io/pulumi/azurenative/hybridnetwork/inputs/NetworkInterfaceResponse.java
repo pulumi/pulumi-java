@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Network interface properties.
+ * 
+ */
 public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NetworkInterfaceResponse Empty = new NetworkInterfaceResponse();
 
+    /**
+     * A list of IP configurations of the network interface.
+     * 
+     */
     @InputImport(name="ipConfigurations")
     private final @Nullable List<NetworkInterfaceIPConfigurationResponse> ipConfigurations;
 
@@ -23,6 +31,10 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
         return this.ipConfigurations == null ? List.of() : this.ipConfigurations;
     }
 
+    /**
+     * The MAC address of the network interface.
+     * 
+     */
     @InputImport(name="macAddress")
     private final @Nullable String macAddress;
 
@@ -30,6 +42,10 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
         return this.macAddress == null ? Optional.empty() : Optional.ofNullable(this.macAddress);
     }
 
+    /**
+     * The name of the network interface.
+     * 
+     */
     @InputImport(name="networkInterfaceName")
     private final @Nullable String networkInterfaceName;
 
@@ -37,6 +53,10 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
         return this.networkInterfaceName == null ? Optional.empty() : Optional.ofNullable(this.networkInterfaceName);
     }
 
+    /**
+     * The type of the VM switch.
+     * 
+     */
     @InputImport(name="vmSwitchType")
     private final @Nullable String vmSwitchType;
 

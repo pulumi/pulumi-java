@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The status of a modelpackage group job.
+     * 
+     */
     @EnumType
     public enum ModelPackageGroupStatus {
         Pending("Pending"),

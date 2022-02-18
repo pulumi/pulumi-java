@@ -13,6 +13,11 @@ public final class FolderFeedFeedOutputConfigArgs extends io.pulumi.resources.Re
 
     public static final FolderFeedFeedOutputConfigArgs Empty = new FolderFeedFeedOutputConfigArgs();
 
+    /**
+     * Destination on Cloud Pubsub.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="pubsubDestination", required=true)
     private final Input<FolderFeedFeedOutputConfigPubsubDestinationArgs> pubsubDestination;
 

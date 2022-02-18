@@ -18,6 +18,10 @@ public final class JobTriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JobTriggerArgs Empty = new JobTriggerArgs();
 
+    /**
+     * User provided description (max 256 chars)
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -25,6 +29,10 @@ public final class JobTriggerArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Display name (max 100 chars)
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -32,6 +40,10 @@ public final class JobTriggerArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * For inspect jobs, a snapshot of the configuration.
+     * 
+     */
     @InputImport(name="inspectJob")
     private final @Nullable Input<GooglePrivacyDlpV2InspectJobConfigArgs> inspectJob;
 
@@ -46,6 +58,10 @@ public final class JobTriggerArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Unique resource name for the triggeredJob, assigned by the service when the triggeredJob is created, for example `projects/dlp-test-project/jobTriggers/53234423`.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -60,6 +76,10 @@ public final class JobTriggerArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * A status for this trigger.
+     * 
+     */
     @InputImport(name="status", required=true)
     private final Input<JobTriggerStatus> status;
 
@@ -67,6 +87,10 @@ public final class JobTriggerArgs extends io.pulumi.resources.ResourceArgs {
         return this.status;
     }
 
+    /**
+     * The trigger id can contain uppercase and lowercase letters, numbers, and hyphens; that is, it must match the regular expression: `[a-zA-Z\d-_]+`. The maximum length is 100 characters. Can be empty to allow the system to generate one.
+     * 
+     */
     @InputImport(name="triggerId")
     private final @Nullable Input<String> triggerId;
 
@@ -74,6 +98,10 @@ public final class JobTriggerArgs extends io.pulumi.resources.ResourceArgs {
         return this.triggerId == null ? Input.empty() : this.triggerId;
     }
 
+    /**
+     * A list of triggers which will be OR'ed together. Only one in the list needs to trigger for a job to be started. The list may contain only a single Schedule trigger and must have at least one object.
+     * 
+     */
     @InputImport(name="triggers")
     private final @Nullable Input<List<GooglePrivacyDlpV2TriggerArgs>> triggers;
 

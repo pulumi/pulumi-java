@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Indicates whether or not private link is enabled.
+     * 
+     */
     @EnumType
     public enum PrivateLink {
         Disabled("Disabled"),

@@ -14,6 +14,10 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends io.pulumi.re
 
     public static final GetIntegrationRuntimeObjectMetadatumArgs Empty = new GetIntegrationRuntimeObjectMetadatumArgs();
 
+    /**
+     * The factory name.
+     * 
+     */
     @InputImport(name="factoryName", required=true)
     private final String factoryName;
 
@@ -21,6 +25,10 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends io.pulumi.re
         return this.factoryName;
     }
 
+    /**
+     * The integration runtime name.
+     * 
+     */
     @InputImport(name="integrationRuntimeName", required=true)
     private final String integrationRuntimeName;
 
@@ -28,6 +36,10 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends io.pulumi.re
         return this.integrationRuntimeName;
     }
 
+    /**
+     * Metadata path.
+     * 
+     */
     @InputImport(name="metadataPath")
     private final @Nullable String metadataPath;
 
@@ -35,6 +47,10 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends io.pulumi.re
         return this.metadataPath == null ? Optional.empty() : Optional.ofNullable(this.metadataPath);
     }
 
+    /**
+     * The resource group name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

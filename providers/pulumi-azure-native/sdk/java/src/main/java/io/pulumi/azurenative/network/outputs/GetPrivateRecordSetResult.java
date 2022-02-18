@@ -23,21 +23,85 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetPrivateRecordSetResult {
+    /**
+     * The list of A records in the record set.
+     * 
+     */
     private final @Nullable List<ARecordResponse> aRecords;
+    /**
+     * The list of AAAA records in the record set.
+     * 
+     */
     private final @Nullable List<AaaaRecordResponse> aaaaRecords;
+    /**
+     * The CNAME record in the record set.
+     * 
+     */
     private final @Nullable CnameRecordResponse cnameRecord;
+    /**
+     * The ETag of the record set.
+     * 
+     */
     private final @Nullable String etag;
+    /**
+     * Fully qualified domain name of the record set.
+     * 
+     */
     private final String fqdn;
+    /**
+     * Fully qualified resource Id for the resource. Example - '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateDnsZoneName}'.
+     * 
+     */
     private final String id;
+    /**
+     * Is the record set auto-registered in the Private DNS zone through a virtual network link?
+     * 
+     */
     private final Boolean isAutoRegistered;
+    /**
+     * The metadata attached to the record set.
+     * 
+     */
     private final @Nullable Map<String,String> metadata;
+    /**
+     * The list of MX records in the record set.
+     * 
+     */
     private final @Nullable List<MxRecordResponse> mxRecords;
+    /**
+     * The name of the resource
+     * 
+     */
     private final String name;
+    /**
+     * The list of PTR records in the record set.
+     * 
+     */
     private final @Nullable List<PtrRecordResponse> ptrRecords;
+    /**
+     * The SOA record in the record set.
+     * 
+     */
     private final @Nullable SoaRecordResponse soaRecord;
+    /**
+     * The list of SRV records in the record set.
+     * 
+     */
     private final @Nullable List<SrvRecordResponse> srvRecords;
+    /**
+     * The TTL (time-to-live) of the records in the record set.
+     * 
+     */
     private final @Nullable Double ttl;
+    /**
+     * The list of TXT records in the record set.
+     * 
+     */
     private final @Nullable List<TxtRecordResponse> txtRecords;
+    /**
+     * The type of the resource. Example - 'Microsoft.Network/privateDnsZones'.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"aRecords","aaaaRecords","cnameRecord","etag","fqdn","id","isAutoRegistered","metadata","mxRecords","name","ptrRecords","soaRecord","srvRecords","ttl","txtRecords","type"})
@@ -76,51 +140,115 @@ public final class GetPrivateRecordSetResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * The list of A records in the record set.
+     * 
+     */
     public List<ARecordResponse> getARecords() {
         return this.aRecords == null ? List.of() : this.aRecords;
     }
+    /**
+     * The list of AAAA records in the record set.
+     * 
+     */
     public List<AaaaRecordResponse> getAaaaRecords() {
         return this.aaaaRecords == null ? List.of() : this.aaaaRecords;
     }
+    /**
+     * The CNAME record in the record set.
+     * 
+     */
     public Optional<CnameRecordResponse> getCnameRecord() {
         return Optional.ofNullable(this.cnameRecord);
     }
+    /**
+     * The ETag of the record set.
+     * 
+     */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
+    /**
+     * Fully qualified domain name of the record set.
+     * 
+     */
     public String getFqdn() {
         return this.fqdn;
     }
+    /**
+     * Fully qualified resource Id for the resource. Example - '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateDnsZoneName}'.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Is the record set auto-registered in the Private DNS zone through a virtual network link?
+     * 
+     */
     public Boolean getIsAutoRegistered() {
         return this.isAutoRegistered;
     }
+    /**
+     * The metadata attached to the record set.
+     * 
+     */
     public Map<String,String> getMetadata() {
         return this.metadata == null ? Map.of() : this.metadata;
     }
+    /**
+     * The list of MX records in the record set.
+     * 
+     */
     public List<MxRecordResponse> getMxRecords() {
         return this.mxRecords == null ? List.of() : this.mxRecords;
     }
+    /**
+     * The name of the resource
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The list of PTR records in the record set.
+     * 
+     */
     public List<PtrRecordResponse> getPtrRecords() {
         return this.ptrRecords == null ? List.of() : this.ptrRecords;
     }
+    /**
+     * The SOA record in the record set.
+     * 
+     */
     public Optional<SoaRecordResponse> getSoaRecord() {
         return Optional.ofNullable(this.soaRecord);
     }
+    /**
+     * The list of SRV records in the record set.
+     * 
+     */
     public List<SrvRecordResponse> getSrvRecords() {
         return this.srvRecords == null ? List.of() : this.srvRecords;
     }
+    /**
+     * The TTL (time-to-live) of the records in the record set.
+     * 
+     */
     public Optional<Double> getTtl() {
         return Optional.ofNullable(this.ttl);
     }
+    /**
+     * The list of TXT records in the record set.
+     * 
+     */
     public List<TxtRecordResponse> getTxtRecords() {
         return this.txtRecords == null ? List.of() : this.txtRecords;
     }
+    /**
+     * The type of the resource. Example - 'Microsoft.Network/privateDnsZones'.
+     * 
+     */
     public String getType() {
         return this.type;
     }

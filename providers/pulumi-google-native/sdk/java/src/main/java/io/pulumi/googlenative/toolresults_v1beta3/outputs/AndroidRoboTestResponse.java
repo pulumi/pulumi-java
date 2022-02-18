@@ -10,10 +10,30 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AndroidRoboTestResponse {
+    /**
+     * The initial activity that should be used to start the app. Optional
+     * 
+     */
     private final String appInitialActivity;
+    /**
+     * The java package for the bootstrap. Optional
+     * 
+     */
     private final String bootstrapPackageId;
+    /**
+     * The runner class for the bootstrap. Optional
+     * 
+     */
     private final String bootstrapRunnerClass;
+    /**
+     * The max depth of the traversal stack Robo can explore. Optional
+     * 
+     */
     private final Integer maxDepth;
+    /**
+     * The max number of steps/actions Robo can execute. Default is no limit (0). Optional
+     * 
+     */
     private final Integer maxSteps;
 
     @OutputCustomType.Constructor({"appInitialActivity","bootstrapPackageId","bootstrapRunnerClass","maxDepth","maxSteps"})
@@ -30,18 +50,38 @@ public final class AndroidRoboTestResponse {
         this.maxSteps = Objects.requireNonNull(maxSteps);
     }
 
+    /**
+     * The initial activity that should be used to start the app. Optional
+     * 
+     */
     public String getAppInitialActivity() {
         return this.appInitialActivity;
     }
+    /**
+     * The java package for the bootstrap. Optional
+     * 
+     */
     public String getBootstrapPackageId() {
         return this.bootstrapPackageId;
     }
+    /**
+     * The runner class for the bootstrap. Optional
+     * 
+     */
     public String getBootstrapRunnerClass() {
         return this.bootstrapRunnerClass;
     }
+    /**
+     * The max depth of the traversal stack Robo can explore. Optional
+     * 
+     */
     public Integer getMaxDepth() {
         return this.maxDepth;
     }
+    /**
+     * The max number of steps/actions Robo can execute. Default is no limit (0). Optional
+     * 
+     */
     public Integer getMaxSteps() {
         return this.maxSteps;
     }

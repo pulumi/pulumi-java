@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Authentication Type
+     * 
+     */
     @EnumType
     public enum AuthenticationType {
         KeyBased("KeyBased");

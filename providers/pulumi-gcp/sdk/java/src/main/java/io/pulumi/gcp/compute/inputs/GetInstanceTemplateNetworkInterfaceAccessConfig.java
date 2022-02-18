@@ -12,6 +12,11 @@ public final class GetInstanceTemplateNetworkInterfaceAccessConfig extends io.pu
 
     public static final GetInstanceTemplateNetworkInterfaceAccessConfig Empty = new GetInstanceTemplateNetworkInterfaceAccessConfig();
 
+    /**
+     * The IP address that will be 1:1 mapped to the instance's
+     * network ip. If not given, one will be generated.
+     * 
+     */
     @InputImport(name="natIp", required=true)
     private final String natIp;
 
@@ -19,6 +24,12 @@ public final class GetInstanceTemplateNetworkInterfaceAccessConfig extends io.pu
         return this.natIp;
     }
 
+    /**
+     * The [networking tier][network-tier] used for configuring
+     * this instance template. This field can take the following values: PREMIUM or
+     * STANDARD. If this field is not specified, it is assumed to be PREMIUM.
+     * 
+     */
     @InputImport(name="networkTier", required=true)
     private final String networkTier;
 

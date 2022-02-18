@@ -17,6 +17,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs
 
     public static final OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs Empty = new OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs();
 
+    /**
+     * An Apt Repository.
+     * 
+     */
     @InputImport(name="apt")
     private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptArgs> apt;
 
@@ -24,6 +28,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs
         return this.apt == null ? Input.empty() : this.apt;
     }
 
+    /**
+     * A Goo Repository.
+     * 
+     */
     @InputImport(name="goo")
     private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGooArgs> goo;
 
@@ -31,6 +39,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs
         return this.goo == null ? Input.empty() : this.goo;
     }
 
+    /**
+     * A Yum Repository.
+     * 
+     */
     @InputImport(name="yum")
     private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYumArgs> yum;
 
@@ -38,6 +50,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs
         return this.yum == null ? Input.empty() : this.yum;
     }
 
+    /**
+     * A Zypper Repository.
+     * 
+     */
     @InputImport(name="zypper")
     private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypperArgs> zypper;
 

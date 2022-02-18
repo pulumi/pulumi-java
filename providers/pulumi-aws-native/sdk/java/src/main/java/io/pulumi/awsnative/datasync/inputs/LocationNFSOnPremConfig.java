@@ -9,10 +9,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Contains a list of Amazon Resource Names (ARNs) of agents that are used to connect an NFS server.
+ * 
+ */
 public final class LocationNFSOnPremConfig extends io.pulumi.resources.InvokeArgs {
 
     public static final LocationNFSOnPremConfig Empty = new LocationNFSOnPremConfig();
 
+    /**
+     * ARN(s) of the agent(s) to use for an NFS location.
+     * 
+     */
     @InputImport(name="agentArns", required=true)
     private final List<String> agentArns;
 

@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A group of fingerprints for the x509 certificate.
+ * 
+ */
 public final class CertificateFingerprintResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CertificateFingerprintResponse Empty = new CertificateFingerprintResponse();
 
+    /**
+     * The SHA 256 hash, encoded in hexadecimal, of the DER x509 certificate.
+     * 
+     */
     @InputImport(name="sha256Hash", required=true)
     private final String sha256Hash;
 

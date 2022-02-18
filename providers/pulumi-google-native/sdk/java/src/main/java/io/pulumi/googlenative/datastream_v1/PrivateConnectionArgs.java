@@ -16,6 +16,10 @@ public final class PrivateConnectionArgs extends io.pulumi.resources.ResourceArg
 
     public static final PrivateConnectionArgs Empty = new PrivateConnectionArgs();
 
+    /**
+     * Display name.
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -23,6 +27,10 @@ public final class PrivateConnectionArgs extends io.pulumi.resources.ResourceArg
         return this.displayName;
     }
 
+    /**
+     * Labels.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -58,6 +66,10 @@ public final class PrivateConnectionArgs extends io.pulumi.resources.ResourceArg
         return this.requestId == null ? Input.empty() : this.requestId;
     }
 
+    /**
+     * VPC Peering Config.
+     * 
+     */
     @InputImport(name="vpcPeeringConfig")
     private final @Nullable Input<VpcPeeringConfigArgs> vpcPeeringConfig;
 

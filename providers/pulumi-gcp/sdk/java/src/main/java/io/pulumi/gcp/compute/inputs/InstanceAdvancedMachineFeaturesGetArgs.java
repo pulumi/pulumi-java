@@ -15,6 +15,10 @@ public final class InstanceAdvancedMachineFeaturesGetArgs extends io.pulumi.reso
 
     public static final InstanceAdvancedMachineFeaturesGetArgs Empty = new InstanceAdvancedMachineFeaturesGetArgs();
 
+    /**
+     * Defines whether the instance should have nested virtualization  enabled. Defaults to false.
+     * 
+     */
     @InputImport(name="enableNestedVirtualization")
     private final @Nullable Input<Boolean> enableNestedVirtualization;
 
@@ -22,6 +26,10 @@ public final class InstanceAdvancedMachineFeaturesGetArgs extends io.pulumi.reso
         return this.enableNestedVirtualization == null ? Input.empty() : this.enableNestedVirtualization;
     }
 
+    /**
+     * he number of threads per physical core. To disable [simultaneous multithreading (SMT)](https://cloud.google.com/compute/docs/instances/disabling-smt) set this to 1.
+     * 
+     */
     @InputImport(name="threadsPerCore")
     private final @Nullable Input<Integer> threadsPerCore;
 

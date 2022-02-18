@@ -12,6 +12,10 @@ public final class GetEventSubscriptionArgs extends io.pulumi.resources.InvokeAr
 
     public static final GetEventSubscriptionArgs Empty = new GetEventSubscriptionArgs();
 
+    /**
+     * The name of the Amazon Redshift event notification subscription
+     * 
+     */
     @InputImport(name="subscriptionName", required=true)
     private final String subscriptionName;
 

@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCustomerGatewayAssociation {
+/**
+ * The AWS::NetworkManager::CustomerGatewayAssociation type associates a customer gateway with a device and optionally, with a link.
+ * 
+ */
     public static CompletableFuture<GetCustomerGatewayAssociationResult> invokeAsync(GetCustomerGatewayAssociationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:networkmanager:getCustomerGatewayAssociation", TypeShape.of(GetCustomerGatewayAssociationResult.class), args == null ? GetCustomerGatewayAssociationArgs.Empty : args, Utilities.withVersion(options));
     }

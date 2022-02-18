@@ -12,8 +12,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TransferAllDetailsResponse {
+    /**
+     * Type of the account of data
+     * 
+     */
     private final String dataAccountType;
+    /**
+     * To indicate if all Azure blobs have to be transferred
+     * 
+     */
     private final @Nullable Boolean transferAllBlobs;
+    /**
+     * To indicate if all Azure Files have to be transferred
+     * 
+     */
     private final @Nullable Boolean transferAllFiles;
 
     @OutputCustomType.Constructor({"dataAccountType","transferAllBlobs","transferAllFiles"})
@@ -26,12 +38,24 @@ public final class TransferAllDetailsResponse {
         this.transferAllFiles = transferAllFiles;
     }
 
+    /**
+     * Type of the account of data
+     * 
+     */
     public String getDataAccountType() {
         return this.dataAccountType;
     }
+    /**
+     * To indicate if all Azure blobs have to be transferred
+     * 
+     */
     public Optional<Boolean> getTransferAllBlobs() {
         return Optional.ofNullable(this.transferAllBlobs);
     }
+    /**
+     * To indicate if all Azure Files have to be transferred
+     * 
+     */
     public Optional<Boolean> getTransferAllFiles() {
         return Optional.ofNullable(this.transferAllFiles);
     }

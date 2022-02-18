@@ -18,6 +18,11 @@ public final class JobExtractGetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JobExtractGetArgs Empty = new JobExtractGetArgs();
 
+    /**
+     * The compression type to use for exported files. Possible values include GZIP, DEFLATE, SNAPPY, and NONE.
+     * The default value is NONE. DEFLATE and SNAPPY are only supported for Avro.
+     * 
+     */
     @InputImport(name="compression")
     private final @Nullable Input<String> compression;
 
@@ -25,6 +30,12 @@ public final class JobExtractGetArgs extends io.pulumi.resources.ResourceArgs {
         return this.compression == null ? Input.empty() : this.compression;
     }
 
+    /**
+     * The exported file format. Possible values include CSV, NEWLINE_DELIMITED_JSON and AVRO for tables and SAVED_MODEL for models.
+     * The default value for tables is CSV. Tables with nested or repeated fields cannot be exported as CSV.
+     * The default value for models is SAVED_MODEL.
+     * 
+     */
     @InputImport(name="destinationFormat")
     private final @Nullable Input<String> destinationFormat;
 
@@ -32,6 +43,10 @@ public final class JobExtractGetArgs extends io.pulumi.resources.ResourceArgs {
         return this.destinationFormat == null ? Input.empty() : this.destinationFormat;
     }
 
+    /**
+     * A list of fully-qualified Google Cloud Storage URIs where the extracted table should be written.
+     * 
+     */
     @InputImport(name="destinationUris", required=true)
     private final Input<List<String>> destinationUris;
 
@@ -39,6 +54,11 @@ public final class JobExtractGetArgs extends io.pulumi.resources.ResourceArgs {
         return this.destinationUris;
     }
 
+    /**
+     * When extracting data in CSV format, this defines the delimiter to use between fields in the exported data.
+     * Default is ','
+     * 
+     */
     @InputImport(name="fieldDelimiter")
     private final @Nullable Input<String> fieldDelimiter;
 
@@ -46,6 +66,10 @@ public final class JobExtractGetArgs extends io.pulumi.resources.ResourceArgs {
         return this.fieldDelimiter == null ? Input.empty() : this.fieldDelimiter;
     }
 
+    /**
+     * Whether to print out a header row in the results. Default is true.
+     * 
+     */
     @InputImport(name="printHeader")
     private final @Nullable Input<Boolean> printHeader;
 
@@ -53,6 +77,11 @@ public final class JobExtractGetArgs extends io.pulumi.resources.ResourceArgs {
         return this.printHeader == null ? Input.empty() : this.printHeader;
     }
 
+    /**
+     * A reference to the model being exported.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="sourceModel")
     private final @Nullable Input<JobExtractSourceModelGetArgs> sourceModel;
 
@@ -60,6 +89,11 @@ public final class JobExtractGetArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceModel == null ? Input.empty() : this.sourceModel;
     }
 
+    /**
+     * A reference to the table being exported.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="sourceTable")
     private final @Nullable Input<JobExtractSourceTableGetArgs> sourceTable;
 
@@ -67,6 +101,10 @@ public final class JobExtractGetArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceTable == null ? Input.empty() : this.sourceTable;
     }
 
+    /**
+     * Whether to use logical types when extracting to AVRO format.
+     * 
+     */
     @InputImport(name="useAvroLogicalTypes")
     private final @Nullable Input<Boolean> useAvroLogicalTypes;
 

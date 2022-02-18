@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * User information that made some action
+ * 
+ */
 public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final UserInfoArgs Empty = new UserInfoArgs();
 
+    /**
+     * The object id of the user.
+     * 
+     */
     @InputImport(name="objectId", required=true)
     private final Input<String> objectId;
 

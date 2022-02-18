@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ValidationOptionsResponse {
+    /**
+     * Customize how deployment manager will validate the resource against schema errors.
+     * 
+     */
     private final String schemaValidation;
+    /**
+     * Specify what to do with extra properties when executing a request.
+     * 
+     */
     private final String undeclaredProperties;
 
     @OutputCustomType.Constructor({"schemaValidation","undeclaredProperties"})
@@ -20,9 +28,17 @@ public final class ValidationOptionsResponse {
         this.undeclaredProperties = Objects.requireNonNull(undeclaredProperties);
     }
 
+    /**
+     * Customize how deployment manager will validate the resource against schema errors.
+     * 
+     */
     public String getSchemaValidation() {
         return this.schemaValidation;
     }
+    /**
+     * Specify what to do with extra properties when executing a request.
+     * 
+     */
     public String getUndeclaredProperties() {
         return this.undeclaredProperties;
     }

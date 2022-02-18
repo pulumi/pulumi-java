@@ -8,10 +8,18 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
+/**
+ * Details for an outcome with a SKIPPED outcome summary.
+ * 
+ */
 public final class SkippedDetailResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SkippedDetailResponse Empty = new SkippedDetailResponse();
 
+    /**
+     * If the App doesn't support the specific API level.
+     * 
+     */
     @InputImport(name="incompatibleAppVersion", required=true)
     private final Boolean incompatibleAppVersion;
 
@@ -19,6 +27,10 @@ public final class SkippedDetailResponse extends io.pulumi.resources.InvokeArgs 
         return this.incompatibleAppVersion;
     }
 
+    /**
+     * If the App doesn't run on the specific architecture, for example, x86.
+     * 
+     */
     @InputImport(name="incompatibleArchitecture", required=true)
     private final Boolean incompatibleArchitecture;
 
@@ -26,6 +38,10 @@ public final class SkippedDetailResponse extends io.pulumi.resources.InvokeArgs 
         return this.incompatibleArchitecture;
     }
 
+    /**
+     * If the requested OS version doesn't run on the specific device model.
+     * 
+     */
     @InputImport(name="incompatibleDevice", required=true)
     private final Boolean incompatibleDevice;
 

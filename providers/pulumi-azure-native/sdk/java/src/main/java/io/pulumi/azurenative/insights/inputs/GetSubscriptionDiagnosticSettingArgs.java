@@ -12,6 +12,10 @@ public final class GetSubscriptionDiagnosticSettingArgs extends io.pulumi.resour
 
     public static final GetSubscriptionDiagnosticSettingArgs Empty = new GetSubscriptionDiagnosticSettingArgs();
 
+    /**
+     * The name of the diagnostic setting.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

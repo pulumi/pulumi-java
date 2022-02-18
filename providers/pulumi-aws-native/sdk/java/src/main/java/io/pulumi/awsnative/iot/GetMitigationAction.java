@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMitigationAction {
+/**
+ * Mitigation actions can be used to take actions to mitigate issues that were found in an Audit finding or Detect violation.
+ * 
+ */
     public static CompletableFuture<GetMitigationActionResult> invokeAsync(GetMitigationActionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iot:getMitigationAction", TypeShape.of(GetMitigationActionResult.class), args == null ? GetMitigationActionArgs.Empty : args, Utilities.withVersion(options));
     }

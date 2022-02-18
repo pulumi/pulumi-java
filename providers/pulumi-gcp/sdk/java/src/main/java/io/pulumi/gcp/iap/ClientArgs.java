@@ -13,6 +13,12 @@ public final class ClientArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ClientArgs Empty = new ClientArgs();
 
+    /**
+     * Identifier of the brand to which this client
+     * is attached to. The format is
+     * `projects/{project_number}/brands/{brand_id}/identityAwareProxyClients/{client_id}`.
+     * 
+     */
     @InputImport(name="brand", required=true)
     private final Input<String> brand;
 
@@ -20,6 +26,10 @@ public final class ClientArgs extends io.pulumi.resources.ResourceArgs {
         return this.brand;
     }
 
+    /**
+     * Human-friendly name given to the OAuth client.
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 

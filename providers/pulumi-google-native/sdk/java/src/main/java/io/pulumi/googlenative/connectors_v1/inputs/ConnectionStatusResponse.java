@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * ConnectionStatus indicates the state of the connection.
+ * 
+ */
 public final class ConnectionStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConnectionStatusResponse Empty = new ConnectionStatusResponse();
 
+    /**
+     * Description.
+     * 
+     */
     @InputImport(name="description", required=true)
     private final String description;
 
@@ -19,6 +27,10 @@ public final class ConnectionStatusResponse extends io.pulumi.resources.InvokeAr
         return this.description;
     }
 
+    /**
+     * State.
+     * 
+     */
     @InputImport(name="state", required=true)
     private final String state;
 
@@ -26,6 +38,10 @@ public final class ConnectionStatusResponse extends io.pulumi.resources.InvokeAr
         return this.state;
     }
 
+    /**
+     * Status provides detailed information for the state.
+     * 
+     */
     @InputImport(name="status", required=true)
     private final String status;
 

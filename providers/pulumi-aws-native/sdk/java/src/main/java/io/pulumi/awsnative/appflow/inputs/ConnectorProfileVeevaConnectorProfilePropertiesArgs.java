@@ -13,6 +13,10 @@ public final class ConnectorProfileVeevaConnectorProfilePropertiesArgs extends i
 
     public static final ConnectorProfileVeevaConnectorProfilePropertiesArgs Empty = new ConnectorProfileVeevaConnectorProfilePropertiesArgs();
 
+    /**
+     * The location of the Veeva resource
+     * 
+     */
     @InputImport(name="instanceUrl", required=true)
     private final Input<String> instanceUrl;
 

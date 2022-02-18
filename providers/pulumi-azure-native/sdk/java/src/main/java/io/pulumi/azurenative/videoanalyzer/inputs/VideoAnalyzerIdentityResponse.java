@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The managed identity for the Video Analyzer resource.
+ * 
+ */
 public final class VideoAnalyzerIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VideoAnalyzerIdentityResponse Empty = new VideoAnalyzerIdentityResponse();
 
+    /**
+     * The identity type.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -23,6 +31,10 @@ public final class VideoAnalyzerIdentityResponse extends io.pulumi.resources.Inv
         return this.type;
     }
 
+    /**
+     * The User Assigned Managed Identities.
+     * 
+     */
     @InputImport(name="userAssignedIdentities")
     private final @Nullable Map<String,UserAssignedManagedIdentityResponse> userAssignedIdentities;
 

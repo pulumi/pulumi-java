@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Responsibility role under which this Managed Network Group will be created
+     * 
+     */
     @EnumType
     public enum Kind {
         Connectivity("Connectivity");

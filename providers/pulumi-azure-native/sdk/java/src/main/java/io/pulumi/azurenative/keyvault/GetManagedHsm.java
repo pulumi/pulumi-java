@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetManagedHsm {
+/**
+ * Resource information with extended details.
+ * API Version: 2021-06-01-preview.
+ * 
+ *
+ * Resource information with extended details.
+ * 
+ */
     public static CompletableFuture<GetManagedHsmResult> invokeAsync(GetManagedHsmArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:keyvault:getManagedHsm", TypeShape.of(GetManagedHsmResult.class), args == null ? GetManagedHsmArgs.Empty : args, Utilities.withVersion(options));
     }

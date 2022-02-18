@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * NIC type
+     * 
+     */
     @EnumType
     public enum NICType {
         E1000("E1000"),

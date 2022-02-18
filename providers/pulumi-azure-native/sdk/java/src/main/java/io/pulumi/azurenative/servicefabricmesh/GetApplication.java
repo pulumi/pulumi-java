@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApplication {
+/**
+ * This type describes an application resource.
+ * API Version: 2018-09-01-preview.
+ * 
+ *
+ * This type describes an application resource.
+ * 
+ */
     public static CompletableFuture<GetApplicationResult> invokeAsync(GetApplicationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicefabricmesh:getApplication", TypeShape.of(GetApplicationResult.class), args == null ? GetApplicationArgs.Empty : args, Utilities.withVersion(options));
     }

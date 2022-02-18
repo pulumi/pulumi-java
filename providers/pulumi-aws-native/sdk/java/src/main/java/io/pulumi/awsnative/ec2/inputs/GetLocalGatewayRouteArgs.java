@@ -12,6 +12,10 @@ public final class GetLocalGatewayRouteArgs extends io.pulumi.resources.InvokeAr
 
     public static final GetLocalGatewayRouteArgs Empty = new GetLocalGatewayRouteArgs();
 
+    /**
+     * The CIDR block used for destination matches.
+     * 
+     */
     @InputImport(name="destinationCidrBlock", required=true)
     private final String destinationCidrBlock;
 
@@ -19,6 +23,10 @@ public final class GetLocalGatewayRouteArgs extends io.pulumi.resources.InvokeAr
         return this.destinationCidrBlock;
     }
 
+    /**
+     * The ID of the local gateway route table.
+     * 
+     */
     @InputImport(name="localGatewayRouteTableId", required=true)
     private final String localGatewayRouteTableId;
 

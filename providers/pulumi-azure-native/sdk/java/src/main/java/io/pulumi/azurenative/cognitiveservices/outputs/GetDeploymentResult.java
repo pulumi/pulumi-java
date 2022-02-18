@@ -11,11 +11,35 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetDeploymentResult {
+    /**
+     * Resource Etag.
+     * 
+     */
     private final String etag;
+    /**
+     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * 
+     */
     private final String id;
+    /**
+     * The name of the resource
+     * 
+     */
     private final String name;
+    /**
+     * Properties of Cognitive Services account deployment.
+     * 
+     */
     private final DeploymentPropertiesResponse properties;
+    /**
+     * Metadata pertaining to creation and last modification of the resource.
+     * 
+     */
     private final SystemDataResponse systemData;
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"etag","id","name","properties","systemData","type"})
@@ -34,21 +58,45 @@ public final class GetDeploymentResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Resource Etag.
+     * 
+     */
     public String getEtag() {
         return this.etag;
     }
+    /**
+     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * The name of the resource
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Properties of Cognitive Services account deployment.
+     * 
+     */
     public DeploymentPropertiesResponse getProperties() {
         return this.properties;
     }
+    /**
+     * Metadata pertaining to creation and last modification of the resource.
+     * 
+     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     public String getType() {
         return this.type;
     }

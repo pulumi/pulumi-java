@@ -14,6 +14,10 @@ public final class RegistryState extends io.pulumi.resources.ResourceArgs {
 
     public static final RegistryState Empty = new RegistryState();
 
+    /**
+     * The URI of the created resource.
+     * 
+     */
     @InputImport(name="bucketSelfLink")
     private final @Nullable Input<String> bucketSelfLink;
 
@@ -21,6 +25,10 @@ public final class RegistryState extends io.pulumi.resources.ResourceArgs {
         return this.bucketSelfLink == null ? Input.empty() : this.bucketSelfLink;
     }
 
+    /**
+     * The location of the registry. One of `ASIA`, `EU`, `US` or not specified. See [the official documentation](https://cloud.google.com/container-registry/docs/pushing-and-pulling#pushing_an_image_to_a_registry) for more information on registry locations.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -28,6 +36,10 @@ public final class RegistryState extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

@@ -25,6 +25,10 @@ public final class ConfigurationAggregatorArgs extends io.pulumi.resources.Resou
         return this.accountAggregationSources == null ? Input.empty() : this.accountAggregationSources;
     }
 
+    /**
+     * The name of the aggregator.
+     * 
+     */
     @InputImport(name="configurationAggregatorName")
     private final @Nullable Input<String> configurationAggregatorName;
 
@@ -39,6 +43,10 @@ public final class ConfigurationAggregatorArgs extends io.pulumi.resources.Resou
         return this.organizationAggregationSource == null ? Input.empty() : this.organizationAggregationSource;
     }
 
+    /**
+     * The tags for the configuration aggregator.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<ConfigurationAggregatorTagArgs>> tags;
 

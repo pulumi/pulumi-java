@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CanaryS3Encryption {
+    /**
+     * Encryption mode for encrypting artifacts when uploading to S3. Valid values: SSE_S3 and SSE_KMS.
+     * 
+     */
     private final @Nullable String encryptionMode;
+    /**
+     * KMS key Arn for encrypting artifacts when uploading to S3. You must specify KMS key Arn for SSE_KMS encryption mode only.
+     * 
+     */
     private final @Nullable String kmsKeyArn;
 
     @OutputCustomType.Constructor({"encryptionMode","kmsKeyArn"})
@@ -22,9 +30,17 @@ public final class CanaryS3Encryption {
         this.kmsKeyArn = kmsKeyArn;
     }
 
+    /**
+     * Encryption mode for encrypting artifacts when uploading to S3. Valid values: SSE_S3 and SSE_KMS.
+     * 
+     */
     public Optional<String> getEncryptionMode() {
         return Optional.ofNullable(this.encryptionMode);
     }
+    /**
+     * KMS key Arn for encrypting artifacts when uploading to S3. You must specify KMS key Arn for SSE_KMS encryption mode only.
+     * 
+     */
     public Optional<String> getKmsKeyArn() {
         return Optional.ofNullable(this.kmsKeyArn);
     }

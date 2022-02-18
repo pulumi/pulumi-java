@@ -10,6 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The AWS account associated with the assessment.
+ * 
+ */
 public final class AssessmentAWSAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AssessmentAWSAccountArgs Empty = new AssessmentAWSAccountArgs();

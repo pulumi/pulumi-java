@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Details of the Azure plan.
+ * 
+ */
 public final class AzurePlanResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzurePlanResponse Empty = new AzurePlanResponse();
 
+    /**
+     * The sku description.
+     * 
+     */
     @InputImport(name="skuDescription", required=true)
     private final String skuDescription;
 
@@ -21,6 +29,10 @@ public final class AzurePlanResponse extends io.pulumi.resources.InvokeArgs {
         return this.skuDescription;
     }
 
+    /**
+     * The sku id.
+     * 
+     */
     @InputImport(name="skuId")
     private final @Nullable String skuId;
 

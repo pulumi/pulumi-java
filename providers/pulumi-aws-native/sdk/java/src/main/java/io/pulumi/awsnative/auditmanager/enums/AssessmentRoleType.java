@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     *  The IAM role type.
+     * 
+     */
     @EnumType
     public enum AssessmentRoleType {
         ProcessOwner("PROCESS_OWNER"),

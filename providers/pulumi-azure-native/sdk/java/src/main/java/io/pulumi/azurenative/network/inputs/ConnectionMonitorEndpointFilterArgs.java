@@ -14,10 +14,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes the connection monitor endpoint filter.
+ * 
+ */
 public final class ConnectionMonitorEndpointFilterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectionMonitorEndpointFilterArgs Empty = new ConnectionMonitorEndpointFilterArgs();
 
+    /**
+     * List of items in the filter.
+     * 
+     */
     @InputImport(name="items")
     private final @Nullable Input<List<ConnectionMonitorEndpointFilterItemArgs>> items;
 
@@ -25,6 +33,10 @@ public final class ConnectionMonitorEndpointFilterArgs extends io.pulumi.resourc
         return this.items == null ? Input.empty() : this.items;
     }
 
+    /**
+     * The behavior of the endpoint filter. Currently only 'Include' is supported.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<Either<String,ConnectionMonitorEndpointFilterType>> type;
 

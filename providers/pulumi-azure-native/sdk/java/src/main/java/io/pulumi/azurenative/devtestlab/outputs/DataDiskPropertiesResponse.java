@@ -12,8 +12,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DataDiskPropertiesResponse {
+    /**
+     * Specifies options to attach a new disk to the virtual machine.
+     * 
+     */
     private final @Nullable AttachNewDataDiskOptionsResponse attachNewDataDiskOptions;
+    /**
+     * Specifies the existing lab disk id to attach to virtual machine.
+     * 
+     */
     private final @Nullable String existingLabDiskId;
+    /**
+     * Caching option for a data disk (i.e. None, ReadOnly, ReadWrite).
+     * 
+     */
     private final @Nullable String hostCaching;
 
     @OutputCustomType.Constructor({"attachNewDataDiskOptions","existingLabDiskId","hostCaching"})
@@ -26,12 +38,24 @@ public final class DataDiskPropertiesResponse {
         this.hostCaching = hostCaching;
     }
 
+    /**
+     * Specifies options to attach a new disk to the virtual machine.
+     * 
+     */
     public Optional<AttachNewDataDiskOptionsResponse> getAttachNewDataDiskOptions() {
         return Optional.ofNullable(this.attachNewDataDiskOptions);
     }
+    /**
+     * Specifies the existing lab disk id to attach to virtual machine.
+     * 
+     */
     public Optional<String> getExistingLabDiskId() {
         return Optional.ofNullable(this.existingLabDiskId);
     }
+    /**
+     * Caching option for a data disk (i.e. None, ReadOnly, ReadWrite).
+     * 
+     */
     public Optional<String> getHostCaching() {
         return Optional.ofNullable(this.hostCaching);
     }

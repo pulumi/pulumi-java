@@ -12,6 +12,10 @@ import io.pulumi.core.internal.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Resource Type definition for AWS::AppSync::DomainName
+ * 
+ */
 @ResourceType(type="aws-native:appsync:DomainName")
 public class DomainName extends io.pulumi.resources.CustomResource {
     @OutputExport(name="appSyncDomainName", type=String.class, parameters={})
@@ -45,6 +49,12 @@ public class DomainName extends io.pulumi.resources.CustomResource {
         return this.hostedZoneId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public DomainName(String name, DomainNameArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:appsync:DomainName", name, args == null ? DomainNameArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -60,6 +70,14 @@ public class DomainName extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static DomainName get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DomainName(name, id, options);
     }

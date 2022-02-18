@@ -12,6 +12,10 @@ public final class GetGlobalNetworkArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetGlobalNetworkArgs Empty = new GetGlobalNetworkArgs();
 
+    /**
+     * The ID of the global network.
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 

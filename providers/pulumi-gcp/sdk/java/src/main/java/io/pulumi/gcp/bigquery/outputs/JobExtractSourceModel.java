@@ -9,8 +9,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class JobExtractSourceModel {
+    /**
+     * The ID of the dataset containing this model.
+     * 
+     */
     private final String datasetId;
+    /**
+     * The ID of the model.
+     * 
+     */
     private final String modelId;
+    /**
+     * The ID of the project containing this model.
+     * 
+     */
     private final String projectId;
 
     @OutputCustomType.Constructor({"datasetId","modelId","projectId"})
@@ -23,12 +35,24 @@ public final class JobExtractSourceModel {
         this.projectId = Objects.requireNonNull(projectId);
     }
 
+    /**
+     * The ID of the dataset containing this model.
+     * 
+     */
     public String getDatasetId() {
         return this.datasetId;
     }
+    /**
+     * The ID of the model.
+     * 
+     */
     public String getModelId() {
         return this.modelId;
     }
+    /**
+     * The ID of the project containing this model.
+     * 
+     */
     public String getProjectId() {
         return this.projectId;
     }

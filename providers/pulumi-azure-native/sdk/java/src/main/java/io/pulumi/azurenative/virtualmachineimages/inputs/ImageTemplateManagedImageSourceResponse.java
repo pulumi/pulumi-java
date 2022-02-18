@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Describes an image source that is a managed image in customer subscription.
+ * 
+ */
 public final class ImageTemplateManagedImageSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ImageTemplateManagedImageSourceResponse Empty = new ImageTemplateManagedImageSourceResponse();
 
+    /**
+     * ARM resource id of the managed image in customer subscription
+     * 
+     */
     @InputImport(name="imageId", required=true)
     private final String imageId;
 
@@ -19,6 +27,11 @@ public final class ImageTemplateManagedImageSourceResponse extends io.pulumi.res
         return this.imageId;
     }
 
+    /**
+     * Specifies the type of source image you want to start with.
+     * Expected value is 'ManagedImage'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

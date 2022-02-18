@@ -12,6 +12,10 @@ public final class GetServiceEndpointPolicyDefinitionArgs extends io.pulumi.reso
 
     public static final GetServiceEndpointPolicyDefinitionArgs Empty = new GetServiceEndpointPolicyDefinitionArgs();
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +23,10 @@ public final class GetServiceEndpointPolicyDefinitionArgs extends io.pulumi.reso
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the service endpoint policy definition name.
+     * 
+     */
     @InputImport(name="serviceEndpointPolicyDefinitionName", required=true)
     private final String serviceEndpointPolicyDefinitionName;
 
@@ -26,6 +34,10 @@ public final class GetServiceEndpointPolicyDefinitionArgs extends io.pulumi.reso
         return this.serviceEndpointPolicyDefinitionName;
     }
 
+    /**
+     * The name of the service endpoint policy name.
+     * 
+     */
     @InputImport(name="serviceEndpointPolicyName", required=true)
     private final String serviceEndpointPolicyName;
 

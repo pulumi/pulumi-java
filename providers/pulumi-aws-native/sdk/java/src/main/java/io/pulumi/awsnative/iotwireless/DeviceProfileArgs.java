@@ -17,6 +17,10 @@ public final class DeviceProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DeviceProfileArgs Empty = new DeviceProfileArgs();
 
+    /**
+     * LoRaWANDeviceProfile supports all LoRa specific attributes for service profile for CreateDeviceProfile operation
+     * 
+     */
     @InputImport(name="loRaWAN")
     private final @Nullable Input<DeviceProfileLoRaWANDeviceProfileArgs> loRaWAN;
 
@@ -24,6 +28,10 @@ public final class DeviceProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.loRaWAN == null ? Input.empty() : this.loRaWAN;
     }
 
+    /**
+     * Name of service profile
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -31,6 +39,10 @@ public final class DeviceProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * A list of key-value pairs that contain metadata for the device profile.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<DeviceProfileTagArgs>> tags;
 

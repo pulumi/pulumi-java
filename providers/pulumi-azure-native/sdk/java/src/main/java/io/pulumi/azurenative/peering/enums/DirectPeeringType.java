@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The type of direct peering.
+     * 
+     */
     @EnumType
     public enum DirectPeeringType {
         Edge("Edge"),

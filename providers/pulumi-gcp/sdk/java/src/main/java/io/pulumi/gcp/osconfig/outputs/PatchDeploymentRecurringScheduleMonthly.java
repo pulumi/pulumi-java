@@ -12,7 +12,18 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PatchDeploymentRecurringScheduleMonthly {
+    /**
+     * One day of the month. 1-31 indicates the 1st to the 31st day. -1 indicates the last day of the month.
+     * Months without the target day will be skipped. For example, a schedule to run "every month on the 31st"
+     * will not run in February, April, June, etc.
+     * 
+     */
     private final @Nullable Integer monthDay;
+    /**
+     * Week day in a month.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth weekDayOfMonth;
 
     @OutputCustomType.Constructor({"monthDay","weekDayOfMonth"})
@@ -23,9 +34,20 @@ public final class PatchDeploymentRecurringScheduleMonthly {
         this.weekDayOfMonth = weekDayOfMonth;
     }
 
+    /**
+     * One day of the month. 1-31 indicates the 1st to the 31st day. -1 indicates the last day of the month.
+     * Months without the target day will be skipped. For example, a schedule to run "every month on the 31st"
+     * will not run in February, April, June, etc.
+     * 
+     */
     public Optional<Integer> getMonthDay() {
         return Optional.ofNullable(this.monthDay);
     }
+    /**
+     * Week day in a month.
+     * Structure is documented below.
+     * 
+     */
     public Optional<PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth> getWeekDayOfMonth() {
         return Optional.ofNullable(this.weekDayOfMonth);
     }

@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Access Review Instance.
+ * 
+ */
 public final class AccessReviewInstanceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AccessReviewInstanceResponse Empty = new AccessReviewInstanceResponse();
 
+    /**
+     * The DateTime when the review instance is scheduled to end.
+     * 
+     */
     @InputImport(name="endDateTime")
     private final @Nullable String endDateTime;
 
@@ -21,6 +29,10 @@ public final class AccessReviewInstanceResponse extends io.pulumi.resources.Invo
         return this.endDateTime == null ? Optional.empty() : Optional.ofNullable(this.endDateTime);
     }
 
+    /**
+     * The access review instance id.
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -28,6 +40,10 @@ public final class AccessReviewInstanceResponse extends io.pulumi.resources.Invo
         return this.id;
     }
 
+    /**
+     * The access review instance name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -35,6 +51,10 @@ public final class AccessReviewInstanceResponse extends io.pulumi.resources.Invo
         return this.name;
     }
 
+    /**
+     * The DateTime when the review instance is scheduled to be start.
+     * 
+     */
     @InputImport(name="startDateTime")
     private final @Nullable String startDateTime;
 
@@ -42,6 +62,10 @@ public final class AccessReviewInstanceResponse extends io.pulumi.resources.Invo
         return this.startDateTime == null ? Optional.empty() : Optional.ofNullable(this.startDateTime);
     }
 
+    /**
+     * This read-only field specifies the status of an access review instance.
+     * 
+     */
     @InputImport(name="status", required=true)
     private final String status;
 
@@ -49,6 +73,10 @@ public final class AccessReviewInstanceResponse extends io.pulumi.resources.Invo
         return this.status;
     }
 
+    /**
+     * The resource type.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

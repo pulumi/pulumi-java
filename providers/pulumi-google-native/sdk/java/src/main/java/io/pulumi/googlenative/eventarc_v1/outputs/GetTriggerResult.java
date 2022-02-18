@@ -14,15 +14,55 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetTriggerResult {
+    /**
+     * The creation time.
+     * 
+     */
     private final String createTime;
+    /**
+     * Destination specifies where the events should be sent to.
+     * 
+     */
     private final DestinationResponse destination;
+    /**
+     * This checksum is computed by the server based on the value of other fields, and might be sent only on create requests to ensure that the client has an up-to-date value before proceeding.
+     * 
+     */
     private final String etag;
+    /**
+     * null The list of filters that applies to event attributes. Only events that match all the provided filters are sent to the destination.
+     * 
+     */
     private final List<EventFilterResponse> eventFilters;
+    /**
+     * Optional. User labels attached to the triggers that can be used to group resources.
+     * 
+     */
     private final Map<String,String> labels;
+    /**
+     * The resource name of the trigger. Must be unique within the location of the project and must be in `projects/{project}/locations/{location}/triggers/{trigger}` format.
+     * 
+     */
     private final String name;
+    /**
+     * Optional. The IAM service account email associated with the trigger. The service account represents the identity of the trigger. The principal who calls this API must have the `iam.serviceAccounts.actAs` permission in the service account. See https://cloud.google.com/iam/docs/understanding-service-accounts?hl=en#sa_common for more information. For Cloud Run destinations, this service account is used to generate identity tokens when invoking the service. See https://cloud.google.com/run/docs/triggering/pubsub-push#create-service-account for information on how to invoke authenticated Cloud Run services. To create Audit Log triggers, the service account should also have the `roles/eventarc.eventReceiver` IAM role.
+     * 
+     */
     private final String serviceAccount;
+    /**
+     * Optional. To deliver messages, Eventarc might use other GCP products as a transport intermediary. This field contains a reference to that transport intermediary. This information can be used for debugging purposes.
+     * 
+     */
     private final TransportResponse transport;
+    /**
+     * Server-assigned unique identifier for the trigger. The value is a UUID4 string and guaranteed to remain unchanged until the resource is deleted.
+     * 
+     */
     private final String uid;
+    /**
+     * The last-modified time.
+     * 
+     */
     private final String updateTime;
 
     @OutputCustomType.Constructor({"createTime","destination","etag","eventFilters","labels","name","serviceAccount","transport","uid","updateTime"})
@@ -49,33 +89,73 @@ public final class GetTriggerResult {
         this.updateTime = Objects.requireNonNull(updateTime);
     }
 
+    /**
+     * The creation time.
+     * 
+     */
     public String getCreateTime() {
         return this.createTime;
     }
+    /**
+     * Destination specifies where the events should be sent to.
+     * 
+     */
     public DestinationResponse getDestination() {
         return this.destination;
     }
+    /**
+     * This checksum is computed by the server based on the value of other fields, and might be sent only on create requests to ensure that the client has an up-to-date value before proceeding.
+     * 
+     */
     public String getEtag() {
         return this.etag;
     }
+    /**
+     * null The list of filters that applies to event attributes. Only events that match all the provided filters are sent to the destination.
+     * 
+     */
     public List<EventFilterResponse> getEventFilters() {
         return this.eventFilters;
     }
+    /**
+     * Optional. User labels attached to the triggers that can be used to group resources.
+     * 
+     */
     public Map<String,String> getLabels() {
         return this.labels;
     }
+    /**
+     * The resource name of the trigger. Must be unique within the location of the project and must be in `projects/{project}/locations/{location}/triggers/{trigger}` format.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Optional. The IAM service account email associated with the trigger. The service account represents the identity of the trigger. The principal who calls this API must have the `iam.serviceAccounts.actAs` permission in the service account. See https://cloud.google.com/iam/docs/understanding-service-accounts?hl=en#sa_common for more information. For Cloud Run destinations, this service account is used to generate identity tokens when invoking the service. See https://cloud.google.com/run/docs/triggering/pubsub-push#create-service-account for information on how to invoke authenticated Cloud Run services. To create Audit Log triggers, the service account should also have the `roles/eventarc.eventReceiver` IAM role.
+     * 
+     */
     public String getServiceAccount() {
         return this.serviceAccount;
     }
+    /**
+     * Optional. To deliver messages, Eventarc might use other GCP products as a transport intermediary. This field contains a reference to that transport intermediary. This information can be used for debugging purposes.
+     * 
+     */
     public TransportResponse getTransport() {
         return this.transport;
     }
+    /**
+     * Server-assigned unique identifier for the trigger. The value is a UUID4 string and guaranteed to remain unchanged until the resource is deleted.
+     * 
+     */
     public String getUid() {
         return this.uid;
     }
+    /**
+     * The last-modified time.
+     * 
+     */
     public String getUpdateTime() {
         return this.updateTime;
     }

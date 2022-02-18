@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines a SDK harness container for executing Dataflow pipelines.
+ * 
+ */
 public final class SdkHarnessContainerImageArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SdkHarnessContainerImageArgs Empty = new SdkHarnessContainerImageArgs();
 
+    /**
+     * A docker container image that resides in Google Container Registry.
+     * 
+     */
     @InputImport(name="containerImage")
     private final @Nullable Input<String> containerImage;
 
@@ -22,6 +30,10 @@ public final class SdkHarnessContainerImageArgs extends io.pulumi.resources.Reso
         return this.containerImage == null ? Input.empty() : this.containerImage;
     }
 
+    /**
+     * Environment ID for the Beam runner API proto Environment that corresponds to the current SDK Harness.
+     * 
+     */
     @InputImport(name="environmentId")
     private final @Nullable Input<String> environmentId;
 
@@ -29,6 +41,10 @@ public final class SdkHarnessContainerImageArgs extends io.pulumi.resources.Reso
         return this.environmentId == null ? Input.empty() : this.environmentId;
     }
 
+    /**
+     * If true, recommends the Dataflow service to use only one core per SDK container instance with this image. If false (or unset) recommends using more than one core per SDK container instance with this image for efficiency. Note that Dataflow service may choose to override this property if needed.
+     * 
+     */
     @InputImport(name="useSingleCorePerContainer")
     private final @Nullable Input<Boolean> useSingleCorePerContainer;
 

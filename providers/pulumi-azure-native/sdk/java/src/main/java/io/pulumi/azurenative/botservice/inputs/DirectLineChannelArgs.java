@@ -11,10 +11,19 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Direct Line channel definition
+ * 
+ */
 public final class DirectLineChannelArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DirectLineChannelArgs Empty = new DirectLineChannelArgs();
 
+    /**
+     * The channel name
+     * Expected value is 'DirectLineChannel'.
+     * 
+     */
     @InputImport(name="channelName", required=true)
     private final Input<String> channelName;
 
@@ -22,6 +31,10 @@ public final class DirectLineChannelArgs extends io.pulumi.resources.ResourceArg
         return this.channelName;
     }
 
+    /**
+     * Entity Tag of the resource
+     * 
+     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -29,6 +42,10 @@ public final class DirectLineChannelArgs extends io.pulumi.resources.ResourceArg
         return this.etag == null ? Input.empty() : this.etag;
     }
 
+    /**
+     * Specifies the location of the resource.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -36,6 +53,10 @@ public final class DirectLineChannelArgs extends io.pulumi.resources.ResourceArg
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The set of properties specific to Direct Line channel resource
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<DirectLineChannelPropertiesArgs> properties;
 

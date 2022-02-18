@@ -16,6 +16,13 @@ public final class ServiceTrafficArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceTrafficArgs Empty = new ServiceTrafficArgs();
 
+    /**
+     * LatestRevision may be optionally provided to indicate that the latest ready
+     * Revision of the Configuration should be used for this traffic target. When
+     * provided LatestRevision must be true if RevisionName is empty; it must be
+     * false when RevisionName is non-empty.
+     * 
+     */
     @InputImport(name="latestRevision")
     private final @Nullable Input<Boolean> latestRevision;
 
@@ -23,6 +30,10 @@ public final class ServiceTrafficArgs extends io.pulumi.resources.ResourceArgs {
         return this.latestRevision == null ? Input.empty() : this.latestRevision;
     }
 
+    /**
+     * Percent specifies percent of the traffic to this Revision or Configuration.
+     * 
+     */
     @InputImport(name="percent", required=true)
     private final Input<Integer> percent;
 
@@ -30,6 +41,10 @@ public final class ServiceTrafficArgs extends io.pulumi.resources.ResourceArgs {
         return this.percent;
     }
 
+    /**
+     * RevisionName of a specific revision to which to send this portion of traffic.
+     * 
+     */
     @InputImport(name="revisionName")
     private final @Nullable Input<String> revisionName;
 

@@ -13,6 +13,11 @@ public final class ServiceTemplateSpecContainerEnvValueFromSecretKeyRefGetArgs e
 
     public static final ServiceTemplateSpecContainerEnvValueFromSecretKeyRefGetArgs Empty = new ServiceTemplateSpecContainerEnvValueFromSecretKeyRefGetArgs();
 
+    /**
+     * The Cloud Secret Manager secret version.
+     * Can be 'latest' for the latest value or an integer for a specific version.
+     * 
+     */
     @InputImport(name="key", required=true)
     private final Input<String> key;
 
@@ -20,6 +25,10 @@ public final class ServiceTemplateSpecContainerEnvValueFromSecretKeyRefGetArgs e
         return this.key;
     }
 
+    /**
+     * Volume's name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

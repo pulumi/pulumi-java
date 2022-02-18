@@ -15,6 +15,10 @@ public final class SubAccountState extends io.pulumi.resources.ResourceArgs {
 
     public static final SubAccountState Empty = new SubAccountState();
 
+    /**
+     * The billing account id.
+     * 
+     */
     @InputImport(name="billingAccountId")
     private final @Nullable Input<String> billingAccountId;
 
@@ -22,6 +26,12 @@ public final class SubAccountState extends io.pulumi.resources.ResourceArgs {
         return this.billingAccountId == null ? Input.empty() : this.billingAccountId;
     }
 
+    /**
+     * If set to "RENAME_ON_DESTROY" the billing account display_name
+     * will be changed to "Destroyed" along with a timestamp.  If set to "" this will not occur.
+     * Default is "".
+     * 
+     */
     @InputImport(name="deletionPolicy")
     private final @Nullable Input<String> deletionPolicy;
 
@@ -29,6 +39,10 @@ public final class SubAccountState extends io.pulumi.resources.ResourceArgs {
         return this.deletionPolicy == null ? Input.empty() : this.deletionPolicy;
     }
 
+    /**
+     * The display name of the billing account.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -36,6 +50,11 @@ public final class SubAccountState extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The name of the master billing account that the subaccount
+     * will be created under in the form `{billing_account_id}` or `billingAccounts/{billing_account_id}`.
+     * 
+     */
     @InputImport(name="masterBillingAccount")
     private final @Nullable Input<String> masterBillingAccount;
 
@@ -43,6 +62,10 @@ public final class SubAccountState extends io.pulumi.resources.ResourceArgs {
         return this.masterBillingAccount == null ? Input.empty() : this.masterBillingAccount;
     }
 
+    /**
+     * The resource name of the billing account in the form `billingAccounts/{billing_account_id}`.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -50,6 +73,10 @@ public final class SubAccountState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * `true` if the billing account is open, `false` if the billing account is closed.
+     * 
+     */
     @InputImport(name="open")
     private final @Nullable Input<Boolean> open;
 

@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Consortium payload
+ * 
+ */
 public final class ConsortiumResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConsortiumResponse Empty = new ConsortiumResponse();
 
+    /**
+     * Gets or sets the blockchain member name.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -21,6 +29,10 @@ public final class ConsortiumResponse extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Gets or sets the protocol for the consortium.
+     * 
+     */
     @InputImport(name="protocol")
     private final @Nullable String protocol;
 

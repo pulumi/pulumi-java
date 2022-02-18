@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Basic Auth used as a credential.
+ * 
+ */
 public final class BasicAuthResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BasicAuthResponse Empty = new BasicAuthResponse();

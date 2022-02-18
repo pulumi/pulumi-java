@@ -15,6 +15,10 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SiteArgs Empty = new SiteArgs();
 
+    /**
+     * Optional. The [ID of a Web App](https://firebase.google.com/docs/projects/api/reference/rest/v1beta1/projects.webApps#WebApp.FIELDS.app_id) associated with the Hosting site.
+     * 
+     */
     @InputImport(name="appId")
     private final @Nullable Input<String> appId;
 
@@ -22,6 +26,10 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
         return this.appId == null ? Input.empty() : this.appId;
     }
 
+    /**
+     * Optional. User-specified labels for the Hosting site.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 

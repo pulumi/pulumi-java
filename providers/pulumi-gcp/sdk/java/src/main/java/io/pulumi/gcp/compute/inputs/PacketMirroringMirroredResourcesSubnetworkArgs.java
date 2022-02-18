@@ -13,6 +13,10 @@ public final class PacketMirroringMirroredResourcesSubnetworkArgs extends io.pul
 
     public static final PacketMirroringMirroredResourcesSubnetworkArgs Empty = new PacketMirroringMirroredResourcesSubnetworkArgs();
 
+    /**
+     * The URL of the instances where this rule should be active.
+     * 
+     */
     @InputImport(name="url", required=true)
     private final Input<String> url;
 

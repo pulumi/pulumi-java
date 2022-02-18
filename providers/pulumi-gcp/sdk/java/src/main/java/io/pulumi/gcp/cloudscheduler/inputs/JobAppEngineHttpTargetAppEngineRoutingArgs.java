@@ -14,6 +14,11 @@ public final class JobAppEngineHttpTargetAppEngineRoutingArgs extends io.pulumi.
 
     public static final JobAppEngineHttpTargetAppEngineRoutingArgs Empty = new JobAppEngineHttpTargetAppEngineRoutingArgs();
 
+    /**
+     * App instance.
+     * By default, the job is sent to an instance which is available when the job is attempted.
+     * 
+     */
     @InputImport(name="instance")
     private final @Nullable Input<String> instance;
 
@@ -21,6 +26,11 @@ public final class JobAppEngineHttpTargetAppEngineRoutingArgs extends io.pulumi.
         return this.instance == null ? Input.empty() : this.instance;
     }
 
+    /**
+     * App service.
+     * By default, the job is sent to the service which is the default service when the job is attempted.
+     * 
+     */
     @InputImport(name="service")
     private final @Nullable Input<String> service;
 
@@ -28,6 +38,11 @@ public final class JobAppEngineHttpTargetAppEngineRoutingArgs extends io.pulumi.
         return this.service == null ? Input.empty() : this.service;
     }
 
+    /**
+     * App version.
+     * By default, the job is sent to the version which is the default version when the job is attempted.
+     * 
+     */
     @InputImport(name="version")
     private final @Nullable Input<String> version;
 

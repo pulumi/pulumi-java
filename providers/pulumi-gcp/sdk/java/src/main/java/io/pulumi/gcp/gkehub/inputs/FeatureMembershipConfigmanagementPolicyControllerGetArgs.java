@@ -16,6 +16,10 @@ public final class FeatureMembershipConfigmanagementPolicyControllerGetArgs exte
 
     public static final FeatureMembershipConfigmanagementPolicyControllerGetArgs Empty = new FeatureMembershipConfigmanagementPolicyControllerGetArgs();
 
+    /**
+     * Sets the interval for Policy Controller Audit Scans (in seconds). When set to 0, this disables audit functionality altogether.
+     * 
+     */
     @InputImport(name="auditIntervalSeconds")
     private final @Nullable Input<String> auditIntervalSeconds;
 
@@ -23,6 +27,10 @@ public final class FeatureMembershipConfigmanagementPolicyControllerGetArgs exte
         return this.auditIntervalSeconds == null ? Input.empty() : this.auditIntervalSeconds;
     }
 
+    /**
+     * Enables the installation of Policy Controller. If false, the rest of PolicyController fields take no effect.
+     * 
+     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 
@@ -30,6 +38,10 @@ public final class FeatureMembershipConfigmanagementPolicyControllerGetArgs exte
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
+    /**
+     * The set of namespaces that are excluded from Policy Controller checks. Namespaces do not need to currently exist on the cluster.
+     * 
+     */
     @InputImport(name="exemptableNamespaces")
     private final @Nullable Input<List<String>> exemptableNamespaces;
 
@@ -37,6 +49,10 @@ public final class FeatureMembershipConfigmanagementPolicyControllerGetArgs exte
         return this.exemptableNamespaces == null ? Input.empty() : this.exemptableNamespaces;
     }
 
+    /**
+     * Logs all denies and dry run failures.
+     * 
+     */
     @InputImport(name="logDeniesEnabled")
     private final @Nullable Input<Boolean> logDeniesEnabled;
 
@@ -44,6 +60,10 @@ public final class FeatureMembershipConfigmanagementPolicyControllerGetArgs exte
         return this.logDeniesEnabled == null ? Input.empty() : this.logDeniesEnabled;
     }
 
+    /**
+     * Enables the ability to use Constraint Templates that reference to objects other than the object currently being evaluated.
+     * 
+     */
     @InputImport(name="referentialRulesEnabled")
     private final @Nullable Input<Boolean> referentialRulesEnabled;
 
@@ -51,6 +71,10 @@ public final class FeatureMembershipConfigmanagementPolicyControllerGetArgs exte
         return this.referentialRulesEnabled == null ? Input.empty() : this.referentialRulesEnabled;
     }
 
+    /**
+     * Installs the default template library along with Policy Controller.
+     * 
+     */
     @InputImport(name="templateLibraryInstalled")
     private final @Nullable Input<Boolean> templateLibraryInstalled;
 

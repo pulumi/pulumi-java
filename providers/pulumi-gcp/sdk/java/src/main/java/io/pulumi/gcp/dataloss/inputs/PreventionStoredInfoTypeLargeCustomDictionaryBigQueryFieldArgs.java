@@ -14,6 +14,11 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldArg
 
     public static final PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldArgs Empty = new PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldArgs();
 
+    /**
+     * Designated field in the BigQuery table.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="field", required=true)
     private final Input<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldArgs> field;
 
@@ -21,6 +26,11 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldArg
         return this.field;
     }
 
+    /**
+     * Field in a BigQuery table where each cell represents a dictionary phrase.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="table", required=true)
     private final Input<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableArgs> table;
 

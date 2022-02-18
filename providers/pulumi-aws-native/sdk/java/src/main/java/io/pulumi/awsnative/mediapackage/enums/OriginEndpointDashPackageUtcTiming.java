@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Determines the type of UTCTiming included in the Media Presentation Description (MPD)
+     * 
+     */
     @EnumType
     public enum OriginEndpointDashPackageUtcTiming {
         HttpIso("HTTP-ISO"),

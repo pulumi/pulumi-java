@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * BlockResponse
+     * 
+     */
     @EnumType
     public enum FirewallRuleGroupFirewallRuleBlockResponse {
         Nodata("NODATA"),

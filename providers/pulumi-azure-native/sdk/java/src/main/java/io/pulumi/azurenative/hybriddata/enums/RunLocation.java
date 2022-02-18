@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * This is the preferred geo location for the job to run.
+     * 
+     */
     @EnumType
     public enum RunLocation {
         None("none"),

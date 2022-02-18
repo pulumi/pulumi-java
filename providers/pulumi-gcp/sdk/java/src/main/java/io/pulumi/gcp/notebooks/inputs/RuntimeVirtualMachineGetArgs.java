@@ -15,6 +15,11 @@ public final class RuntimeVirtualMachineGetArgs extends io.pulumi.resources.Reso
 
     public static final RuntimeVirtualMachineGetArgs Empty = new RuntimeVirtualMachineGetArgs();
 
+    /**
+     * - 
+     * The unique identifier of the Managed Compute Engine instance.
+     * 
+     */
     @InputImport(name="instanceId")
     private final @Nullable Input<String> instanceId;
 
@@ -22,6 +27,11 @@ public final class RuntimeVirtualMachineGetArgs extends io.pulumi.resources.Reso
         return this.instanceId == null ? Input.empty() : this.instanceId;
     }
 
+    /**
+     * - 
+     * The user-friendly name of the Managed Compute Engine instance.
+     * 
+     */
     @InputImport(name="instanceName")
     private final @Nullable Input<String> instanceName;
 
@@ -29,6 +39,11 @@ public final class RuntimeVirtualMachineGetArgs extends io.pulumi.resources.Reso
         return this.instanceName == null ? Input.empty() : this.instanceName;
     }
 
+    /**
+     * Virtual Machine configuration settings.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="virtualMachineConfig")
     private final @Nullable Input<RuntimeVirtualMachineVirtualMachineConfigGetArgs> virtualMachineConfig;
 

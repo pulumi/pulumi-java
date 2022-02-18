@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Encryption configuration (KMS key)
+ * 
+ */
 public final class ServiceEncryptionConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceEncryptionConfigurationArgs Empty = new ServiceEncryptionConfigurationArgs();
 
+    /**
+     * The KMS Key
+     * 
+     */
     @InputImport(name="kmsKey", required=true)
     private final Input<String> kmsKey;
 

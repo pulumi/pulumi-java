@@ -20,53 +20,132 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Describes a hybrid machine.
+ * API Version: 2020-08-02.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:hybridcompute:Machine myMachine /subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.HybridCompute/machines/myMachine 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:hybridcompute:Machine")
 public class Machine extends io.pulumi.resources.CustomResource {
+    /**
+     * Specifies the AD fully qualified display name.
+     * 
+     */
     @OutputExport(name="adFqdn", type=String.class, parameters={})
     private Output<String> adFqdn;
 
+    /**
+     * @return Specifies the AD fully qualified display name.
+     * 
+     */
     public Output<String> getAdFqdn() {
         return this.adFqdn;
     }
+    /**
+     * The hybrid machine agent full version.
+     * 
+     */
     @OutputExport(name="agentVersion", type=String.class, parameters={})
     private Output<String> agentVersion;
 
+    /**
+     * @return The hybrid machine agent full version.
+     * 
+     */
     public Output<String> getAgentVersion() {
         return this.agentVersion;
     }
+    /**
+     * Public Key that the client provides to be used during initial resource onboarding
+     * 
+     */
     @OutputExport(name="clientPublicKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> clientPublicKey;
 
+    /**
+     * @return Public Key that the client provides to be used during initial resource onboarding
+     * 
+     */
     public Output</* @Nullable */ String> getClientPublicKey() {
         return this.clientPublicKey;
     }
+    /**
+     * Specifies the hybrid machine display name.
+     * 
+     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
+    /**
+     * @return Specifies the hybrid machine display name.
+     * 
+     */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
+    /**
+     * Specifies the DNS fully qualified display name.
+     * 
+     */
     @OutputExport(name="dnsFqdn", type=String.class, parameters={})
     private Output<String> dnsFqdn;
 
+    /**
+     * @return Specifies the DNS fully qualified display name.
+     * 
+     */
     public Output<String> getDnsFqdn() {
         return this.dnsFqdn;
     }
+    /**
+     * Specifies the Windows domain name.
+     * 
+     */
     @OutputExport(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
+    /**
+     * @return Specifies the Windows domain name.
+     * 
+     */
     public Output<String> getDomainName() {
         return this.domainName;
     }
+    /**
+     * Details about the error state.
+     * 
+     */
     @OutputExport(name="errorDetails", type=List.class, parameters={ErrorDetailResponse.class})
     private Output<List<ErrorDetailResponse>> errorDetails;
 
+    /**
+     * @return Details about the error state.
+     * 
+     */
     public Output<List<ErrorDetailResponse>> getErrorDetails() {
         return this.errorDetails;
     }
+    /**
+     * Machine Extensions information
+     * 
+     */
     @OutputExport(name="extensions", type=List.class, parameters={MachineExtensionInstanceViewResponse.class})
     private Output<List<MachineExtensionInstanceViewResponse>> extensions;
 
+    /**
+     * @return Machine Extensions information
+     * 
+     */
     public Output<List<MachineExtensionInstanceViewResponse>> getExtensions() {
         return this.extensions;
     }
@@ -76,97 +155,223 @@ public class Machine extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ MachineResponseIdentity> getIdentity() {
         return this.identity;
     }
+    /**
+     * The time of the last status change.
+     * 
+     */
     @OutputExport(name="lastStatusChange", type=String.class, parameters={})
     private Output<String> lastStatusChange;
 
+    /**
+     * @return The time of the last status change.
+     * 
+     */
     public Output<String> getLastStatusChange() {
         return this.lastStatusChange;
     }
+    /**
+     * The geo-location where the resource lives
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * Metadata pertaining to the geographic location of the resource.
+     * 
+     */
     @OutputExport(name="locationData", type=LocationDataResponse.class, parameters={})
     private Output</* @Nullable */ LocationDataResponse> locationData;
 
+    /**
+     * @return Metadata pertaining to the geographic location of the resource.
+     * 
+     */
     public Output</* @Nullable */ LocationDataResponse> getLocationData() {
         return this.locationData;
     }
+    /**
+     * Specifies the hybrid machine FQDN.
+     * 
+     */
     @OutputExport(name="machineFqdn", type=String.class, parameters={})
     private Output<String> machineFqdn;
 
+    /**
+     * @return Specifies the hybrid machine FQDN.
+     * 
+     */
     public Output<String> getMachineFqdn() {
         return this.machineFqdn;
     }
+    /**
+     * The name of the resource
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The Operating System running on the hybrid machine.
+     * 
+     */
     @OutputExport(name="osName", type=String.class, parameters={})
     private Output<String> osName;
 
+    /**
+     * @return The Operating System running on the hybrid machine.
+     * 
+     */
     public Output<String> getOsName() {
         return this.osName;
     }
+    /**
+     * Specifies the operating system settings for the hybrid machine.
+     * 
+     */
     @OutputExport(name="osProfile", type=MachinePropertiesResponseOsProfile.class, parameters={})
     private Output</* @Nullable */ MachinePropertiesResponseOsProfile> osProfile;
 
+    /**
+     * @return Specifies the operating system settings for the hybrid machine.
+     * 
+     */
     public Output</* @Nullable */ MachinePropertiesResponseOsProfile> getOsProfile() {
         return this.osProfile;
     }
+    /**
+     * Specifies the Operating System product SKU.
+     * 
+     */
     @OutputExport(name="osSku", type=String.class, parameters={})
     private Output<String> osSku;
 
+    /**
+     * @return Specifies the Operating System product SKU.
+     * 
+     */
     public Output<String> getOsSku() {
         return this.osSku;
     }
+    /**
+     * The version of Operating System running on the hybrid machine.
+     * 
+     */
     @OutputExport(name="osVersion", type=String.class, parameters={})
     private Output<String> osVersion;
 
+    /**
+     * @return The version of Operating System running on the hybrid machine.
+     * 
+     */
     public Output<String> getOsVersion() {
         return this.osVersion;
     }
+    /**
+     * The provisioning state, which only appears in the response.
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning state, which only appears in the response.
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The status of the hybrid machine agent.
+     * 
+     */
     @OutputExport(name="status", type=String.class, parameters={})
     private Output<String> status;
 
+    /**
+     * @return The status of the hybrid machine agent.
+     * 
+     */
     public Output<String> getStatus() {
         return this.status;
     }
+    /**
+     * Resource tags.
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * Specifies the hybrid machine unique ID.
+     * 
+     */
     @OutputExport(name="vmId", type=String.class, parameters={})
     private Output</* @Nullable */ String> vmId;
 
+    /**
+     * @return Specifies the hybrid machine unique ID.
+     * 
+     */
     public Output</* @Nullable */ String> getVmId() {
         return this.vmId;
     }
+    /**
+     * Specifies the Arc Machine's unique SMBIOS ID
+     * 
+     */
     @OutputExport(name="vmUuid", type=String.class, parameters={})
     private Output<String> vmUuid;
 
+    /**
+     * @return Specifies the Arc Machine's unique SMBIOS ID
+     * 
+     */
     public Output<String> getVmUuid() {
         return this.vmUuid;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Machine(String name, MachineArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:hybridcompute:Machine", name, args == null ? MachineArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -197,6 +402,14 @@ public class Machine extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Machine get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Machine(name, id, options);
     }

@@ -17,6 +17,11 @@ public final class GlobalForwardingRuleArgs extends io.pulumi.resources.Resource
 
     public static final GlobalForwardingRuleArgs Empty = new GlobalForwardingRuleArgs();
 
+    /**
+     * An optional description of this resource. Provide this property when
+     * you create the resource.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -24,6 +29,22 @@ public final class GlobalForwardingRuleArgs extends io.pulumi.resources.Resource
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The IP address that this forwarding rule serves. When a client sends
+     * traffic to this IP address, the forwarding rule directs the traffic to
+     * the target that you specify in the forwarding rule. The
+     * loadBalancingScheme and the forwarding rule's target determine the
+     * type of IP address that you can use. For detailed information, refer
+     * to [IP address specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#ip_address_specifications).
+     * An address can be specified either by a literal IP address or a
+     * reference to an existing Address resource. If you don't specify a
+     * reserved IP address, an ephemeral IP address is assigned.
+     * The value must be set to 0.0.0.0 when the target is a targetGrpcProxy
+     * that has validateForProxyless field set to true.
+     * For Private Service Connect forwarding rules that forward traffic to
+     * Google APIs, IP address must be provided.
+     * 
+     */
     @InputImport(name="ipAddress")
     private final @Nullable Input<String> ipAddress;
 
@@ -31,6 +52,14 @@ public final class GlobalForwardingRuleArgs extends io.pulumi.resources.Resource
         return this.ipAddress == null ? Input.empty() : this.ipAddress;
     }
 
+    /**
+     * The IP protocol to which this rule applies. When the load balancing scheme is
+     * INTERNAL_SELF_MANAGED, only TCP is valid. This field must not be set if the
+     * global address is configured as a purpose of PRIVATE_SERVICE_CONNECT
+     * and addressType of INTERNAL
+     * Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
+     * 
+     */
     @InputImport(name="ipProtocol")
     private final @Nullable Input<String> ipProtocol;
 
@@ -38,6 +67,11 @@ public final class GlobalForwardingRuleArgs extends io.pulumi.resources.Resource
         return this.ipProtocol == null ? Input.empty() : this.ipProtocol;
     }
 
+    /**
+     * The IP Version that will be used by this global forwarding rule.
+     * Possible values are `IPV4` and `IPV6`.
+     * 
+     */
     @InputImport(name="ipVersion")
     private final @Nullable Input<String> ipVersion;
 
@@ -45,6 +79,10 @@ public final class GlobalForwardingRuleArgs extends io.pulumi.resources.Resource
         return this.ipVersion == null ? Input.empty() : this.ipVersion;
     }
 
+    /**
+     * Labels to apply to this forwarding rule.  A list of key->value pairs.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -52,6 +90,21 @@ public final class GlobalForwardingRuleArgs extends io.pulumi.resources.Resource
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * This signifies what the GlobalForwardingRule will be used for.
+     * The value of INTERNAL_SELF_MANAGED means that this will be used for
+     * Internal Global HTTP(S) LB. The value of EXTERNAL means that this
+     * will be used for External Global Load Balancing (HTTP(S) LB,
+     * External TCP/UDP LB, SSL Proxy)
+     * Note: This field must be set "" if the global address is
+     * External TCP/UDP LB, SSL Proxy). The value of EXTERNAL_MANAGED means
+     * that this will be used for Global external HTTP(S) load balancers.
+     * Note: This field must be set "" if the global address is
+     * configured as a purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL.
+     * Default value is `EXTERNAL`.
+     * Possible values are `EXTERNAL`, `EXTERNAL_MANAGED`, and `INTERNAL_SELF_MANAGED`.
+     * 
+     */
     @InputImport(name="loadBalancingScheme")
     private final @Nullable Input<String> loadBalancingScheme;
 
@@ -59,6 +112,24 @@ public final class GlobalForwardingRuleArgs extends io.pulumi.resources.Resource
         return this.loadBalancingScheme == null ? Input.empty() : this.loadBalancingScheme;
     }
 
+    /**
+     * Opaque filter criteria used by Loadbalancer to restrict routing
+     * configuration to a limited set xDS compliant clients. In their xDS
+     * requests to Loadbalancer, xDS clients present node metadata. If a
+     * match takes place, the relevant routing configuration is made available
+     * to those proxies.
+     * For each metadataFilter in this list, if its filterMatchCriteria is set
+     * to MATCH_ANY, at least one of the filterLabels must match the
+     * corresponding label provided in the metadata. If its filterMatchCriteria
+     * is set to MATCH_ALL, then all of its filterLabels must match with
+     * corresponding labels in the provided metadata.
+     * metadataFilters specified here can be overridden by those specified in
+     * the UrlMap that this ForwardingRule references.
+     * metadataFilters only applies to Loadbalancers that have their
+     * loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="metadataFilters")
     private final @Nullable Input<List<GlobalForwardingRuleMetadataFilterArgs>> metadataFilters;
 
@@ -66,6 +137,11 @@ public final class GlobalForwardingRuleArgs extends io.pulumi.resources.Resource
         return this.metadataFilters == null ? Input.empty() : this.metadataFilters;
     }
 
+    /**
+     * Name of the metadata label. The length must be between
+     * 1 and 1024 characters, inclusive.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -73,6 +149,14 @@ public final class GlobalForwardingRuleArgs extends io.pulumi.resources.Resource
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * This field is not used for external load balancing.
+     * For INTERNAL_SELF_MANAGED load balancing, this field
+     * identifies the network that the load balanced IP should belong to
+     * for this global forwarding rule. If this field is not specified,
+     * the default network will be used.
+     * 
+     */
     @InputImport(name="network")
     private final @Nullable Input<String> network;
 
@@ -80,6 +164,25 @@ public final class GlobalForwardingRuleArgs extends io.pulumi.resources.Resource
         return this.network == null ? Input.empty() : this.network;
     }
 
+    /**
+     * This field is used along with the target field for TargetHttpProxy,
+     * TargetHttpsProxy, TargetSslProxy, TargetTcpProxy, TargetVpnGateway,
+     * TargetPool, TargetInstance.
+     * Applicable only when IPProtocol is TCP, UDP, or SCTP, only packets
+     * addressed to ports in the specified range will be forwarded to target.
+     * Forwarding rules with the same [IPAddress, IPProtocol] pair must have
+     * disjoint port ranges.
+     * Some types of forwarding target have constraints on the acceptable
+     * ports:
+     * * TargetHttpProxy: 80, 8080
+     * * TargetHttpsProxy: 443
+     * * TargetTcpProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995,
+     *   1883, 5222
+     * * TargetSslProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995,
+     *   1883, 5222
+     * * TargetVpnGateway: 500, 4500
+     * 
+     */
     @InputImport(name="portRange")
     private final @Nullable Input<String> portRange;
 
@@ -87,6 +190,11 @@ public final class GlobalForwardingRuleArgs extends io.pulumi.resources.Resource
         return this.portRange == null ? Input.empty() : this.portRange;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -94,6 +202,15 @@ public final class GlobalForwardingRuleArgs extends io.pulumi.resources.Resource
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The URL of the target resource to receive the matched traffic.
+     * The forwarded traffic must be of a type appropriate to the target object.
+     * For INTERNAL_SELF_MANAGED load balancing, only HTTP and HTTPS targets
+     * are valid.
+     * For global address with a purpose of PRIVATE_SERVICE_CONNECT and
+     * addressType of INTERNAL, only "all-apis" and "vpc-sc" are valid.
+     * 
+     */
     @InputImport(name="target", required=true)
     private final Input<String> target;
 

@@ -14,6 +14,10 @@ public final class GetBucketObjectContentArgs extends io.pulumi.resources.Invoke
 
     public static final GetBucketObjectContentArgs Empty = new GetBucketObjectContentArgs();
 
+    /**
+     * The name of the containing bucket.
+     * 
+     */
     @InputImport(name="bucket", required=true)
     private final String bucket;
 
@@ -21,6 +25,10 @@ public final class GetBucketObjectContentArgs extends io.pulumi.resources.Invoke
         return this.bucket;
     }
 
+    /**
+     * (Computed) [Content-Language](https://tools.ietf.org/html/rfc7231#section-3.1.3.2) of the object content.
+     * 
+     */
     @InputImport(name="content")
     private final @Nullable String content;
 
@@ -28,6 +36,10 @@ public final class GetBucketObjectContentArgs extends io.pulumi.resources.Invoke
         return this.content == null ? Optional.empty() : Optional.ofNullable(this.content);
     }
 
+    /**
+     * The name of the object.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

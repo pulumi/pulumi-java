@@ -13,6 +13,10 @@ public final class ResourcePolicyInstanceSchedulePolicyVmStartScheduleGetArgs ex
 
     public static final ResourcePolicyInstanceSchedulePolicyVmStartScheduleGetArgs Empty = new ResourcePolicyInstanceSchedulePolicyVmStartScheduleGetArgs();
 
+    /**
+     * Specifies the frequency for the operation, using the unix-cron format.
+     * 
+     */
     @InputImport(name="schedule", required=true)
     private final Input<String> schedule;
 

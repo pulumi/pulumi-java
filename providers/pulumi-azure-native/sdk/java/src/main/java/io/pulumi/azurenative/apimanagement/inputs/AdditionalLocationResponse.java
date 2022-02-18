@@ -14,10 +14,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Description of an additional API Management resource location.
+ * 
+ */
 public final class AdditionalLocationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AdditionalLocationResponse Empty = new AdditionalLocationResponse();
 
+    /**
+     * Property only valid for an Api Management service deployed in multiple locations. This can be used to disable the gateway in this additional location.
+     * 
+     */
     @InputImport(name="disableGateway")
     private final @Nullable Boolean disableGateway;
 
@@ -25,6 +33,10 @@ public final class AdditionalLocationResponse extends io.pulumi.resources.Invoke
         return this.disableGateway == null ? Optional.empty() : Optional.ofNullable(this.disableGateway);
     }
 
+    /**
+     * Gateway URL of the API Management service in the Region.
+     * 
+     */
     @InputImport(name="gatewayRegionalUrl", required=true)
     private final String gatewayRegionalUrl;
 
@@ -32,6 +44,10 @@ public final class AdditionalLocationResponse extends io.pulumi.resources.Invoke
         return this.gatewayRegionalUrl;
     }
 
+    /**
+     * The location name of the additional region among Azure Data center regions.
+     * 
+     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -39,6 +55,10 @@ public final class AdditionalLocationResponse extends io.pulumi.resources.Invoke
         return this.location;
     }
 
+    /**
+     * Private Static Load Balanced IP addresses of the API Management service which is deployed in an Internal Virtual Network in a particular additional location. Available only for Basic, Standard, Premium and Isolated SKU.
+     * 
+     */
     @InputImport(name="privateIPAddresses", required=true)
     private final List<String> privateIPAddresses;
 
@@ -46,6 +66,10 @@ public final class AdditionalLocationResponse extends io.pulumi.resources.Invoke
         return this.privateIPAddresses;
     }
 
+    /**
+     * Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard, Premium and Isolated SKU.
+     * 
+     */
     @InputImport(name="publicIPAddresses", required=true)
     private final List<String> publicIPAddresses;
 
@@ -53,6 +77,10 @@ public final class AdditionalLocationResponse extends io.pulumi.resources.Invoke
         return this.publicIPAddresses;
     }
 
+    /**
+     * SKU properties of the API Management service.
+     * 
+     */
     @InputImport(name="sku", required=true)
     private final ApiManagementServiceSkuPropertiesResponse sku;
 
@@ -60,6 +88,10 @@ public final class AdditionalLocationResponse extends io.pulumi.resources.Invoke
         return this.sku;
     }
 
+    /**
+     * Virtual network configuration for the location.
+     * 
+     */
     @InputImport(name="virtualNetworkConfiguration")
     private final @Nullable VirtualNetworkConfigurationResponse virtualNetworkConfiguration;
 
@@ -67,6 +99,10 @@ public final class AdditionalLocationResponse extends io.pulumi.resources.Invoke
         return this.virtualNetworkConfiguration == null ? Optional.empty() : Optional.ofNullable(this.virtualNetworkConfiguration);
     }
 
+    /**
+     * A list of availability zones denoting where the resource needs to come from.
+     * 
+     */
     @InputImport(name="zones")
     private final @Nullable List<String> zones;
 

@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Field of the request to match.
+ * 
+ */
 public final class WebACLFieldToMatchArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WebACLFieldToMatchArgs Empty = new WebACLFieldToMatchArgs();
 
+    /**
+     * All query arguments of a web request.
+     * 
+     */
     @InputImport(name="allQueryArguments")
     private final @Nullable Input<Object> allQueryArguments;
 
@@ -24,6 +32,10 @@ public final class WebACLFieldToMatchArgs extends io.pulumi.resources.ResourceAr
         return this.allQueryArguments == null ? Input.empty() : this.allQueryArguments;
     }
 
+    /**
+     * The body of a web request. This immediately follows the request headers.
+     * 
+     */
     @InputImport(name="body")
     private final @Nullable Input<Object> body;
 
@@ -38,6 +50,10 @@ public final class WebACLFieldToMatchArgs extends io.pulumi.resources.ResourceAr
         return this.jsonBody == null ? Input.empty() : this.jsonBody;
     }
 
+    /**
+     * The HTTP method of a web request. The method indicates the type of operation that the request is asking the origin to perform.
+     * 
+     */
     @InputImport(name="method")
     private final @Nullable Input<Object> method;
 
@@ -45,6 +61,10 @@ public final class WebACLFieldToMatchArgs extends io.pulumi.resources.ResourceAr
         return this.method == null ? Input.empty() : this.method;
     }
 
+    /**
+     * The query string of a web request. This is the part of a URL that appears after a ? character, if any.
+     * 
+     */
     @InputImport(name="queryString")
     private final @Nullable Input<Object> queryString;
 
@@ -59,6 +79,10 @@ public final class WebACLFieldToMatchArgs extends io.pulumi.resources.ResourceAr
         return this.singleHeader == null ? Input.empty() : this.singleHeader;
     }
 
+    /**
+     * One query argument in a web request, identified by name, for example UserName or SalesRegion. The name can be up to 30 characters long and isn't case sensitive.
+     * 
+     */
     @InputImport(name="singleQueryArgument")
     private final @Nullable Input<WebACLFieldToMatchSingleQueryArgumentPropertiesArgs> singleQueryArgument;
 
@@ -66,6 +90,10 @@ public final class WebACLFieldToMatchArgs extends io.pulumi.resources.ResourceAr
         return this.singleQueryArgument == null ? Input.empty() : this.singleQueryArgument;
     }
 
+    /**
+     * The path component of the URI of a web request. This is the part of a web request that identifies a resource, for example, /images/daily-ad.jpg.
+     * 
+     */
     @InputImport(name="uriPath")
     private final @Nullable Input<Object> uriPath;
 

@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The Private Endpoint resource.
+ * 
+ */
 public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PrivateEndpointResponse Empty = new PrivateEndpointResponse();
 
+    /**
+     * The ARM identifier for Private Endpoint
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -19,6 +27,10 @@ public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArg
         return this.id;
     }
 
+    /**
+     * The ARM identifier for Subnet resource that private endpoint links to
+     * 
+     */
     @InputImport(name="subnetArmId", required=true)
     private final String subnetArmId;
 

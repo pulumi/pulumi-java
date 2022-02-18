@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class BudgetFilterPropertiesResponse {
+    /**
+     * Has comparison expression for a dimension
+     * 
+     */
     private final @Nullable BudgetComparisonExpressionResponse dimensions;
+    /**
+     * Has comparison expression for a tag
+     * 
+     */
     private final @Nullable BudgetComparisonExpressionResponse tags;
 
     @OutputCustomType.Constructor({"dimensions","tags"})
@@ -22,9 +30,17 @@ public final class BudgetFilterPropertiesResponse {
         this.tags = tags;
     }
 
+    /**
+     * Has comparison expression for a dimension
+     * 
+     */
     public Optional<BudgetComparisonExpressionResponse> getDimensions() {
         return Optional.ofNullable(this.dimensions);
     }
+    /**
+     * Has comparison expression for a tag
+     * 
+     */
     public Optional<BudgetComparisonExpressionResponse> getTags() {
         return Optional.ofNullable(this.tags);
     }

@@ -15,10 +15,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A single application container. This specifies both the container to run, the command to run in the container and the arguments to supply to it. Note that additional arguments may be supplied by the system to the container at runtime.
+ * 
+ */
 public final class GoogleCloudRunOpV2ContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudRunOpV2ContainerArgs Empty = new GoogleCloudRunOpV2ContainerArgs();
 
+    /**
+     * Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
+     * 
+     */
     @InputImport(name="args")
     private final @Nullable Input<List<String>> args;
 
@@ -26,6 +34,10 @@ public final class GoogleCloudRunOpV2ContainerArgs extends io.pulumi.resources.R
         return this.args == null ? Input.empty() : this.args;
     }
 
+    /**
+     * Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
+     * 
+     */
     @InputImport(name="command")
     private final @Nullable Input<List<String>> command;
 
@@ -33,6 +45,10 @@ public final class GoogleCloudRunOpV2ContainerArgs extends io.pulumi.resources.R
         return this.command == null ? Input.empty() : this.command;
     }
 
+    /**
+     * List of environment variables to set in the container.
+     * 
+     */
     @InputImport(name="env")
     private final @Nullable Input<List<GoogleCloudRunOpV2EnvVarArgs>> env;
 
@@ -40,6 +56,10 @@ public final class GoogleCloudRunOpV2ContainerArgs extends io.pulumi.resources.R
         return this.env == null ? Input.empty() : this.env;
     }
 
+    /**
+     * URL of the Container image in Google Container Registry or Docker More info: https://kubernetes.io/docs/concepts/containers/images
+     * 
+     */
     @InputImport(name="image", required=true)
     private final Input<String> image;
 
@@ -47,6 +67,10 @@ public final class GoogleCloudRunOpV2ContainerArgs extends io.pulumi.resources.R
         return this.image;
     }
 
+    /**
+     * Name of the container specified as a DNS_LABEL.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -54,6 +78,10 @@ public final class GoogleCloudRunOpV2ContainerArgs extends io.pulumi.resources.R
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * List of ports to expose from the container. Only a single port can be specified. The specified ports must be listening on all interfaces (0.0.0.0) within the container to be accessible. If omitted, a port number will be chosen and passed to the container through the PORT environment variable for the container to listen on.
+     * 
+     */
     @InputImport(name="ports")
     private final @Nullable Input<List<GoogleCloudRunOpV2ContainerPortArgs>> ports;
 
@@ -61,6 +89,10 @@ public final class GoogleCloudRunOpV2ContainerArgs extends io.pulumi.resources.R
         return this.ports == null ? Input.empty() : this.ports;
     }
 
+    /**
+     * Compute Resource requirements by this container. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources
+     * 
+     */
     @InputImport(name="resources")
     private final @Nullable Input<GoogleCloudRunOpV2ResourceRequirementsArgs> resources;
 
@@ -68,6 +100,10 @@ public final class GoogleCloudRunOpV2ContainerArgs extends io.pulumi.resources.R
         return this.resources == null ? Input.empty() : this.resources;
     }
 
+    /**
+     * Volume to mount into the container's filesystem.
+     * 
+     */
     @InputImport(name="volumeMounts")
     private final @Nullable Input<List<GoogleCloudRunOpV2VolumeMountArgs>> volumeMounts;
 

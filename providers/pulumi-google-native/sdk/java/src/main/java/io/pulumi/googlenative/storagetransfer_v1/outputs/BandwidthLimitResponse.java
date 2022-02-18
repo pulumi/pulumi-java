@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BandwidthLimitResponse {
+    /**
+     * Bandwidth rate in megabytes per second, distributed across all the agents in the pool.
+     * 
+     */
     private final String limitMbps;
 
     @OutputCustomType.Constructor({"limitMbps"})
@@ -16,6 +20,10 @@ public final class BandwidthLimitResponse {
         this.limitMbps = Objects.requireNonNull(limitMbps);
     }
 
+    /**
+     * Bandwidth rate in megabytes per second, distributed across all the agents in the pool.
+     * 
+     */
     public String getLimitMbps() {
         return this.limitMbps;
     }

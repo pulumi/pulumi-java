@@ -19,6 +19,10 @@ public final class PhraseMatcherArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PhraseMatcherArgs Empty = new PhraseMatcherArgs();
 
+    /**
+     * Applies the phrase matcher only when it is active.
+     * 
+     */
     @InputImport(name="active")
     private final @Nullable Input<Boolean> active;
 
@@ -26,6 +30,10 @@ public final class PhraseMatcherArgs extends io.pulumi.resources.ResourceArgs {
         return this.active == null ? Input.empty() : this.active;
     }
 
+    /**
+     * The human-readable name of the phrase matcher.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -40,6 +48,10 @@ public final class PhraseMatcherArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The resource name of the phrase matcher. Format: projects/{project}/locations/{location}/phraseMatchers/{phrase_matcher}
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -47,6 +59,10 @@ public final class PhraseMatcherArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * A list of phase match rule groups that are included in this matcher.
+     * 
+     */
     @InputImport(name="phraseMatchRuleGroups")
     private final @Nullable Input<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs>> phraseMatchRuleGroups;
 
@@ -61,6 +77,10 @@ public final class PhraseMatcherArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The role whose utterances the phrase matcher should be matched against. If the role is ROLE_UNSPECIFIED it will be matched against any utterances in the transcript.
+     * 
+     */
     @InputImport(name="roleMatch")
     private final @Nullable Input<PhraseMatcherRoleMatch> roleMatch;
 
@@ -68,6 +88,10 @@ public final class PhraseMatcherArgs extends io.pulumi.resources.ResourceArgs {
         return this.roleMatch == null ? Input.empty() : this.roleMatch;
     }
 
+    /**
+     * The type of this phrase matcher.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<PhraseMatcherType> type;
 
@@ -75,6 +99,10 @@ public final class PhraseMatcherArgs extends io.pulumi.resources.ResourceArgs {
         return this.type;
     }
 
+    /**
+     * The customized version tag to use for the phrase matcher. If not specified, it will default to `revision_id`.
+     * 
+     */
     @InputImport(name="versionTag")
     private final @Nullable Input<String> versionTag;
 

@@ -12,6 +12,10 @@ public final class GetFlowLogArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetFlowLogArgs Empty = new GetFlowLogArgs();
 
+    /**
+     * The name of the flow log resource.
+     * 
+     */
     @InputImport(name="flowLogName", required=true)
     private final String flowLogName;
 
@@ -19,6 +23,10 @@ public final class GetFlowLogArgs extends io.pulumi.resources.InvokeArgs {
         return this.flowLogName;
     }
 
+    /**
+     * The name of the network watcher.
+     * 
+     */
     @InputImport(name="networkWatcherName", required=true)
     private final String networkWatcherName;
 
@@ -26,6 +34,10 @@ public final class GetFlowLogArgs extends io.pulumi.resources.InvokeArgs {
         return this.networkWatcherName;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

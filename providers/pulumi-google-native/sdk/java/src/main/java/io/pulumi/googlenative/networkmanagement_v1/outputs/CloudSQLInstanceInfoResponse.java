@@ -9,11 +9,35 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CloudSQLInstanceInfoResponse {
+    /**
+     * Name of a Cloud SQL instance.
+     * 
+     */
     private final String displayName;
+    /**
+     * External IP address of a Cloud SQL instance.
+     * 
+     */
     private final String externalIp;
+    /**
+     * Internal IP address of a Cloud SQL instance.
+     * 
+     */
     private final String internalIp;
+    /**
+     * URI of a Cloud SQL instance network or empty string if the instance does not have one.
+     * 
+     */
     private final String networkUri;
+    /**
+     * Region in which the Cloud SQL instance is running.
+     * 
+     */
     private final String region;
+    /**
+     * URI of a Cloud SQL instance.
+     * 
+     */
     private final String uri;
 
     @OutputCustomType.Constructor({"displayName","externalIp","internalIp","networkUri","region","uri"})
@@ -32,21 +56,45 @@ public final class CloudSQLInstanceInfoResponse {
         this.uri = Objects.requireNonNull(uri);
     }
 
+    /**
+     * Name of a Cloud SQL instance.
+     * 
+     */
     public String getDisplayName() {
         return this.displayName;
     }
+    /**
+     * External IP address of a Cloud SQL instance.
+     * 
+     */
     public String getExternalIp() {
         return this.externalIp;
     }
+    /**
+     * Internal IP address of a Cloud SQL instance.
+     * 
+     */
     public String getInternalIp() {
         return this.internalIp;
     }
+    /**
+     * URI of a Cloud SQL instance network or empty string if the instance does not have one.
+     * 
+     */
     public String getNetworkUri() {
         return this.networkUri;
     }
+    /**
+     * Region in which the Cloud SQL instance is running.
+     * 
+     */
     public String getRegion() {
         return this.region;
     }
+    /**
+     * URI of a Cloud SQL instance.
+     * 
+     */
     public String getUri() {
         return this.uri;
     }

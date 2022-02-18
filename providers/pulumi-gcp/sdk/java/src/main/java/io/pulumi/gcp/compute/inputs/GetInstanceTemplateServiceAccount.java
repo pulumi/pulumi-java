@@ -13,6 +13,11 @@ public final class GetInstanceTemplateServiceAccount extends io.pulumi.resources
 
     public static final GetInstanceTemplateServiceAccount Empty = new GetInstanceTemplateServiceAccount();
 
+    /**
+     * The service account e-mail address. If not given, the
+     * default Google Compute Engine service account is used.
+     * 
+     */
     @InputImport(name="email", required=true)
     private final String email;
 
@@ -20,6 +25,12 @@ public final class GetInstanceTemplateServiceAccount extends io.pulumi.resources
         return this.email;
     }
 
+    /**
+     * A list of service scopes. Both OAuth2 URLs and gcloud
+     * short names are supported. To allow full access to all Cloud APIs, use the
+     * `cloud-platform` scope. See a complete list of scopes [here](https://cloud.google.com/sdk/gcloud/reference/alpha/compute/instances/set-scopes#--scopes).
+     * 
+     */
     @InputImport(name="scopes", required=true)
     private final List<String> scopes;
 

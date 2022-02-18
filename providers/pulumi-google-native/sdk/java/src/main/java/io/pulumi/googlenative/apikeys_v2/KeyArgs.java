@@ -15,6 +15,10 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final KeyArgs Empty = new KeyArgs();
 
+    /**
+     * Human-readable display name of this key that you can modify. The maximum length is 63 characters.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -43,6 +47,10 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Key restrictions.
+     * 
+     */
     @InputImport(name="restrictions")
     private final @Nullable Input<V2RestrictionsArgs> restrictions;
 

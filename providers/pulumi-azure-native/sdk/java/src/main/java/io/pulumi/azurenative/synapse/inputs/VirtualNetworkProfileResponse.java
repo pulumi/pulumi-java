@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Virtual Network Profile
+ * 
+ */
 public final class VirtualNetworkProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VirtualNetworkProfileResponse Empty = new VirtualNetworkProfileResponse();
 
+    /**
+     * Subnet ID used for computes in workspace
+     * 
+     */
     @InputImport(name="computeSubnetId")
     private final @Nullable String computeSubnetId;
 

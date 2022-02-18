@@ -9,9 +9,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class EndPointResponse {
+    /**
+     * Name of an end point.
+     * 
+     */
     private final String endPointName;
+    /**
+     * IP Address.
+     * 
+     */
     private final String ipAddress;
+    /**
+     * TCP port to listen on to receive data.
+     * 
+     */
     private final String port;
+    /**
+     * Protocol either UDP or TCP.
+     * 
+     */
     private final String protocol;
 
     @OutputCustomType.Constructor({"endPointName","ipAddress","port","protocol"})
@@ -26,15 +42,31 @@ public final class EndPointResponse {
         this.protocol = Objects.requireNonNull(protocol);
     }
 
+    /**
+     * Name of an end point.
+     * 
+     */
     public String getEndPointName() {
         return this.endPointName;
     }
+    /**
+     * IP Address.
+     * 
+     */
     public String getIpAddress() {
         return this.ipAddress;
     }
+    /**
+     * TCP port to listen on to receive data.
+     * 
+     */
     public String getPort() {
         return this.port;
     }
+    /**
+     * Protocol either UDP or TCP.
+     * 
+     */
     public String getProtocol() {
         return this.protocol;
     }

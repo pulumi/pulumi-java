@@ -24,6 +24,10 @@ public final class FlowZendeskDestinationPropertiesArgs extends io.pulumi.resour
         return this.errorHandlingConfig == null ? Input.empty() : this.errorHandlingConfig;
     }
 
+    /**
+     * List of fields used as ID when performing a write operation.
+     * 
+     */
     @InputImport(name="idFieldNames")
     private final @Nullable Input<List<String>> idFieldNames;
 

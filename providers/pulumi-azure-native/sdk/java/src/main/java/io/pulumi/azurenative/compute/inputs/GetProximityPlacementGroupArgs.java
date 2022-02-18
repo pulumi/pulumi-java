@@ -14,6 +14,10 @@ public final class GetProximityPlacementGroupArgs extends io.pulumi.resources.In
 
     public static final GetProximityPlacementGroupArgs Empty = new GetProximityPlacementGroupArgs();
 
+    /**
+     * includeColocationStatus=true enables fetching the colocation status of all the resources in the proximity placement group.
+     * 
+     */
     @InputImport(name="includeColocationStatus")
     private final @Nullable String includeColocationStatus;
 
@@ -21,6 +25,10 @@ public final class GetProximityPlacementGroupArgs extends io.pulumi.resources.In
         return this.includeColocationStatus == null ? Optional.empty() : Optional.ofNullable(this.includeColocationStatus);
     }
 
+    /**
+     * The name of the proximity placement group.
+     * 
+     */
     @InputImport(name="proximityPlacementGroupName", required=true)
     private final String proximityPlacementGroupName;
 
@@ -28,6 +36,10 @@ public final class GetProximityPlacementGroupArgs extends io.pulumi.resources.In
         return this.proximityPlacementGroupName;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

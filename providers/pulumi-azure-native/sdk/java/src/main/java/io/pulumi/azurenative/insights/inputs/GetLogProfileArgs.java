@@ -12,6 +12,10 @@ public final class GetLogProfileArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetLogProfileArgs Empty = new GetLogProfileArgs();
 
+    /**
+     * The name of the log profile.
+     * 
+     */
     @InputImport(name="logProfileName", required=true)
     private final String logProfileName;
 

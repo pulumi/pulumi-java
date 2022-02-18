@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * VerticalPodAutoscaling contains global, per-cluster information required by Vertical Pod Autoscaler to automatically adjust the resources of pods controlled by it.
+ * 
+ */
 public final class VerticalPodAutoscalingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VerticalPodAutoscalingArgs Empty = new VerticalPodAutoscalingArgs();
 
+    /**
+     * Enables vertical pod autoscaling.
+     * 
+     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 

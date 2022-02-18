@@ -19,6 +19,10 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
 
     public static final CertificateState Empty = new CertificateState();
 
+    /**
+     * Certificate Authority name.
+     * 
+     */
     @InputImport(name="certificateAuthority")
     private final @Nullable Input<String> certificateAuthority;
 
@@ -26,6 +30,11 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
         return this.certificateAuthority == null ? Input.empty() : this.certificateAuthority;
     }
 
+    /**
+     * Output only. Details regarding the revocation of this Certificate. This Certificate is considered revoked if and only if
+     * this field is present.
+     * 
+     */
     @InputImport(name="certificateDescriptions")
     private final @Nullable Input<List<CertificateCertificateDescriptionGetArgs>> certificateDescriptions;
 
@@ -33,6 +42,14 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
         return this.certificateDescriptions == null ? Input.empty() : this.certificateDescriptions;
     }
 
+    /**
+     * The resource name for a CertificateTemplate used to issue this certificate,
+     * in the format `projects/*{@literal /}locations/*{@literal /}certificateTemplates/*`. If this is specified,
+     * the caller must have the necessary permission to use this template. If this is
+     * omitted, no template will be used. This template must be in the same location
+     * as the Certificate.
+     * 
+     */
     @InputImport(name="certificateTemplate")
     private final @Nullable Input<String> certificateTemplate;
 
@@ -40,6 +57,11 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
         return this.certificateTemplate == null ? Input.empty() : this.certificateTemplate;
     }
 
+    /**
+     * The config used to create a self-signed X.509 certificate or CSR.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="config")
     private final @Nullable Input<CertificateConfigGetArgs> config;
 
@@ -47,6 +69,10 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
         return this.config == null ? Input.empty() : this.config;
     }
 
+    /**
+     * The time that this resource was created on the server. This is in RFC3339 text format.
+     * 
+     */
     @InputImport(name="createTime")
     private final @Nullable Input<String> createTime;
 
@@ -54,6 +80,10 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
         return this.createTime == null ? Input.empty() : this.createTime;
     }
 
+    /**
+     * Labels with user-defined metadata to apply to this resource.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -61,6 +91,12 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The desired lifetime of the CA certificate. Used to create the "notBeforeTime" and
+     * "notAfterTime" fields inside an X.509 certificate. A duration in seconds with up to nine
+     * fractional digits, terminated by 's'. Example: "3.5s".
+     * 
+     */
     @InputImport(name="lifetime")
     private final @Nullable Input<String> lifetime;
 
@@ -68,6 +104,11 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
         return this.lifetime == null ? Input.empty() : this.lifetime;
     }
 
+    /**
+     * Location of the Certificate. A full list of valid locations can be found by
+     * running `gcloud privateca locations list`.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -75,6 +116,10 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name for this Certificate.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -82,6 +127,10 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Output only. The pem-encoded, signed X.509 certificate.
+     * 
+     */
     @InputImport(name="pemCertificate")
     private final @Nullable Input<String> pemCertificate;
 
@@ -89,6 +138,10 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
         return this.pemCertificate == null ? Input.empty() : this.pemCertificate;
     }
 
+    /**
+     * Required. Expected to be in leaf-to-root order according to RFC 5246.
+     * 
+     */
     @InputImport(name="pemCertificates")
     private final @Nullable Input<List<String>> pemCertificates;
 
@@ -96,6 +149,10 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
         return this.pemCertificates == null ? Input.empty() : this.pemCertificates;
     }
 
+    /**
+     * Immutable. A pem-encoded X.509 certificate signing request (CSR).
+     * 
+     */
     @InputImport(name="pemCsr")
     private final @Nullable Input<String> pemCsr;
 
@@ -103,6 +160,10 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
         return this.pemCsr == null ? Input.empty() : this.pemCsr;
     }
 
+    /**
+     * The name of the CaPool this Certificate belongs to.
+     * 
+     */
     @InputImport(name="pool")
     private final @Nullable Input<String> pool;
 
@@ -110,6 +171,11 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
         return this.pool == null ? Input.empty() : this.pool;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -117,6 +183,11 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Output only. Details regarding the revocation of this Certificate. This Certificate is considered revoked if and only if
+     * this field is present.
+     * 
+     */
     @InputImport(name="revocationDetails")
     private final @Nullable Input<List<CertificateRevocationDetailGetArgs>> revocationDetails;
 
@@ -124,6 +195,10 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
         return this.revocationDetails == null ? Input.empty() : this.revocationDetails;
     }
 
+    /**
+     * Output only. The time at which this CertificateAuthority was updated. This is in RFC3339 text format.
+     * 
+     */
     @InputImport(name="updateTime")
     private final @Nullable Input<String> updateTime;
 

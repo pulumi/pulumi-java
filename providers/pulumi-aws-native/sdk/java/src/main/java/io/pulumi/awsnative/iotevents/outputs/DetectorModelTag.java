@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DetectorModelTag {
+    /**
+     * Key of the Tag.
+     * 
+     */
     private final String key;
+    /**
+     * Value of the Tag.
+     * 
+     */
     private final String value;
 
     @OutputCustomType.Constructor({"key","value"})
@@ -20,9 +28,17 @@ public final class DetectorModelTag {
         this.value = Objects.requireNonNull(value);
     }
 
+    /**
+     * Key of the Tag.
+     * 
+     */
     public String getKey() {
         return this.key;
     }
+    /**
+     * Value of the Tag.
+     * 
+     */
     public String getValue() {
         return this.value;
     }

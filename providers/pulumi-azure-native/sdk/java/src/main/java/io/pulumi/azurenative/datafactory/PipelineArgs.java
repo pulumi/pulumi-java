@@ -60,6 +60,10 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PipelineArgs Empty = new PipelineArgs();
 
+    /**
+     * List of activities in pipeline.
+     * 
+     */
     @InputImport(name="activities")
     private final @Nullable Input<List<Object>> activities;
 
@@ -67,6 +71,10 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
         return this.activities == null ? Input.empty() : this.activities;
     }
 
+    /**
+     * List of tags that can be used for describing the Pipeline.
+     * 
+     */
     @InputImport(name="annotations")
     private final @Nullable Input<List<Object>> annotations;
 
@@ -74,6 +82,10 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
+    /**
+     * The max number of concurrent runs for the pipeline.
+     * 
+     */
     @InputImport(name="concurrency")
     private final @Nullable Input<Integer> concurrency;
 
@@ -81,6 +93,10 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
         return this.concurrency == null ? Input.empty() : this.concurrency;
     }
 
+    /**
+     * The description of the pipeline.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -88,6 +104,10 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The factory name.
+     * 
+     */
     @InputImport(name="factoryName", required=true)
     private final Input<String> factoryName;
 
@@ -95,6 +115,10 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
         return this.factoryName;
     }
 
+    /**
+     * The folder that this Pipeline is in. If not specified, Pipeline will appear at the root level.
+     * 
+     */
     @InputImport(name="folder")
     private final @Nullable Input<PipelineFolderArgs> folder;
 
@@ -102,6 +126,10 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
         return this.folder == null ? Input.empty() : this.folder;
     }
 
+    /**
+     * List of parameters for pipeline.
+     * 
+     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
@@ -109,6 +137,10 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
+    /**
+     * The pipeline name.
+     * 
+     */
     @InputImport(name="pipelineName")
     private final @Nullable Input<String> pipelineName;
 
@@ -116,6 +148,10 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
         return this.pipelineName == null ? Input.empty() : this.pipelineName;
     }
 
+    /**
+     * Pipeline Policy.
+     * 
+     */
     @InputImport(name="policy")
     private final @Nullable Input<PipelinePolicyArgs> policy;
 
@@ -123,6 +159,10 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
         return this.policy == null ? Input.empty() : this.policy;
     }
 
+    /**
+     * The resource group name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -130,6 +170,10 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Dimensions emitted by Pipeline.
+     * 
+     */
     @InputImport(name="runDimensions")
     private final @Nullable Input<Map<String,Object>> runDimensions;
 
@@ -137,6 +181,10 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
         return this.runDimensions == null ? Input.empty() : this.runDimensions;
     }
 
+    /**
+     * List of variables for pipeline.
+     * 
+     */
     @InputImport(name="variables")
     private final @Nullable Input<Map<String,VariableSpecificationArgs>> variables;
 

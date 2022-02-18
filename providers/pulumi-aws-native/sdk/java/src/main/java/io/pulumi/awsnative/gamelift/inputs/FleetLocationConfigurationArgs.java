@@ -11,6 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A remote location where a multi-location fleet can deploy EC2 instances for game hosting.
+ * 
+ */
 public final class FleetLocationConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FleetLocationConfigurationArgs Empty = new FleetLocationConfigurationArgs();

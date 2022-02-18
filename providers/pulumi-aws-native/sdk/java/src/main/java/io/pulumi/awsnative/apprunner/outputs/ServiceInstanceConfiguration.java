@@ -11,8 +11,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ServiceInstanceConfiguration {
+    /**
+     * CPU
+     * 
+     */
     private final @Nullable String cpu;
+    /**
+     * Instance Role Arn
+     * 
+     */
     private final @Nullable String instanceRoleArn;
+    /**
+     * Memory
+     * 
+     */
     private final @Nullable String memory;
 
     @OutputCustomType.Constructor({"cpu","instanceRoleArn","memory"})
@@ -25,12 +37,24 @@ public final class ServiceInstanceConfiguration {
         this.memory = memory;
     }
 
+    /**
+     * CPU
+     * 
+     */
     public Optional<String> getCpu() {
         return Optional.ofNullable(this.cpu);
     }
+    /**
+     * Instance Role Arn
+     * 
+     */
     public Optional<String> getInstanceRoleArn() {
         return Optional.ofNullable(this.instanceRoleArn);
     }
+    /**
+     * Memory
+     * 
+     */
     public Optional<String> getMemory() {
         return Optional.ofNullable(this.memory);
     }

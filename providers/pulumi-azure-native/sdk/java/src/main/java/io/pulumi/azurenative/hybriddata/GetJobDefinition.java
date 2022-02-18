@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetJobDefinition {
+/**
+ * Job Definition.
+ * API Version: 2019-06-01.
+ * 
+ *
+ * Job Definition.
+ * 
+ */
     public static CompletableFuture<GetJobDefinitionResult> invokeAsync(GetJobDefinitionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hybriddata:getJobDefinition", TypeShape.of(GetJobDefinitionResult.class), args == null ? GetJobDefinitionArgs.Empty : args, Utilities.withVersion(options));
     }

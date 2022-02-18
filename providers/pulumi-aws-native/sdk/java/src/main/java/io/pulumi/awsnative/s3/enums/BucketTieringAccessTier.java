@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * S3 Intelligent-Tiering access tier. See Storage class for automatically optimizing frequently and infrequently accessed objects for a list of access tiers in the S3 Intelligent-Tiering storage class.
+     * 
+     */
     @EnumType
     public enum BucketTieringAccessTier {
         ArchiveAccess("ARCHIVE_ACCESS"),

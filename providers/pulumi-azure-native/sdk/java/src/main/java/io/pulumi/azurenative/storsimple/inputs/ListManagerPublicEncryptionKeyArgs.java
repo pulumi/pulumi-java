@@ -12,6 +12,10 @@ public final class ListManagerPublicEncryptionKeyArgs extends io.pulumi.resource
 
     public static final ListManagerPublicEncryptionKeyArgs Empty = new ListManagerPublicEncryptionKeyArgs();
 
+    /**
+     * The manager name
+     * 
+     */
     @InputImport(name="managerName", required=true)
     private final String managerName;
 
@@ -19,6 +23,10 @@ public final class ListManagerPublicEncryptionKeyArgs extends io.pulumi.resource
         return this.managerName;
     }
 
+    /**
+     * The resource group name
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

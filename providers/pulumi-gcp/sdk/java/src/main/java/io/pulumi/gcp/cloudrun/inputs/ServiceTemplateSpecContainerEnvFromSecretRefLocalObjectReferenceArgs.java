@@ -13,6 +13,10 @@ public final class ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectRefere
 
     public static final ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReferenceArgs Empty = new ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReferenceArgs();
 
+    /**
+     * Volume's name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

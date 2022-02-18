@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * <p>The row-level security configuration for the dataset.</p>
+ * 
+ */
 public final class DataSetRowLevelPermissionDataSetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataSetRowLevelPermissionDataSetArgs Empty = new DataSetRowLevelPermissionDataSetArgs();
 
+    /**
+     * <p>The Amazon Resource Name (ARN) of the permission dataset.</p>
+     * 
+     */
     @InputImport(name="arn", required=true)
     private final Input<String> arn;
 
@@ -30,6 +38,10 @@ public final class DataSetRowLevelPermissionDataSetArgs extends io.pulumi.resour
         return this.formatVersion == null ? Input.empty() : this.formatVersion;
     }
 
+    /**
+     * <p>The namespace associated with the row-level permissions dataset.</p>
+     * 
+     */
     @InputImport(name="namespace")
     private final @Nullable Input<String> namespace;
 

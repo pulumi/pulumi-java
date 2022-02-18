@@ -19,6 +19,10 @@ public final class EdgeCacheServiceArgs extends io.pulumi.resources.ResourceArgs
 
     public static final EdgeCacheServiceArgs Empty = new EdgeCacheServiceArgs();
 
+    /**
+     * A human-readable description of the resource.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -26,6 +30,10 @@ public final class EdgeCacheServiceArgs extends io.pulumi.resources.ResourceArgs
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * HTTP/3 (IETF QUIC) and Google QUIC are enabled by default.
+     * 
+     */
     @InputImport(name="disableQuic")
     private final @Nullable Input<Boolean> disableQuic;
 
@@ -33,6 +41,10 @@ public final class EdgeCacheServiceArgs extends io.pulumi.resources.ResourceArgs
         return this.disableQuic == null ? Input.empty() : this.disableQuic;
     }
 
+    /**
+     * Resource URL that points at the Cloud Armor edge security policy that is applied on each request against the EdgeCacheService.
+     * 
+     */
     @InputImport(name="edgeSecurityPolicy")
     private final @Nullable Input<String> edgeSecurityPolicy;
 
@@ -40,6 +52,11 @@ public final class EdgeCacheServiceArgs extends io.pulumi.resources.ResourceArgs
         return this.edgeSecurityPolicy == null ? Input.empty() : this.edgeSecurityPolicy;
     }
 
+    /**
+     * URLs to sslCertificate resources that are used to authenticate connections between users and the EdgeCacheService.
+     * Note that only "global" certificates with a "scope" of "EDGE_CACHE" can be attached to an EdgeCacheService.
+     * 
+     */
     @InputImport(name="edgeSslCertificates")
     private final @Nullable Input<List<String>> edgeSslCertificates;
 
@@ -47,6 +64,10 @@ public final class EdgeCacheServiceArgs extends io.pulumi.resources.ResourceArgs
         return this.edgeSslCertificates == null ? Input.empty() : this.edgeSslCertificates;
     }
 
+    /**
+     * Set of label tags associated with the EdgeCache resource.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -54,6 +75,11 @@ public final class EdgeCacheServiceArgs extends io.pulumi.resources.ResourceArgs
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * Specifies the logging options for the traffic served by this service. If logging is enabled, logs will be exported to Cloud Logging.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="logConfig")
     private final @Nullable Input<EdgeCacheServiceLogConfigArgs> logConfig;
 
@@ -61,6 +87,10 @@ public final class EdgeCacheServiceArgs extends io.pulumi.resources.ResourceArgs
         return this.logConfig == null ? Input.empty() : this.logConfig;
     }
 
+    /**
+     * The name of the query parameter to match. The query parameter must exist in the request, in the absence of which the request match fails.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -68,6 +98,11 @@ public final class EdgeCacheServiceArgs extends io.pulumi.resources.ResourceArgs
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -75,6 +110,12 @@ public final class EdgeCacheServiceArgs extends io.pulumi.resources.ResourceArgs
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Require TLS (HTTPS) for all clients connecting to this service.
+     * Clients who connect over HTTP (port 80) will receive a HTTP 301 to the same URL over HTTPS (port 443).
+     * You must have at least one (1) edgeSslCertificate specified to enable this.
+     * 
+     */
     @InputImport(name="requireTls")
     private final @Nullable Input<Boolean> requireTls;
 
@@ -82,6 +123,11 @@ public final class EdgeCacheServiceArgs extends io.pulumi.resources.ResourceArgs
         return this.requireTls == null ? Input.empty() : this.requireTls;
     }
 
+    /**
+     * Defines how requests are routed, modified, cached and/or which origin content is filled from.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="routing", required=true)
     private final Input<EdgeCacheServiceRoutingArgs> routing;
 
@@ -89,6 +135,11 @@ public final class EdgeCacheServiceArgs extends io.pulumi.resources.ResourceArgs
         return this.routing;
     }
 
+    /**
+     * URL of the SslPolicy resource that will be associated with the EdgeCacheService.
+     * If not set, the EdgeCacheService has no SSL policy configured, and will default to the "COMPATIBLE" policy.
+     * 
+     */
     @InputImport(name="sslPolicy")
     private final @Nullable Input<String> sslPolicy;
 

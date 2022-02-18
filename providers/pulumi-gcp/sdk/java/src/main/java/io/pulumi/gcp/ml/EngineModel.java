@@ -16,57 +16,166 @@ import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Represents a machine learning solution.
+ * 
+ * A model can have multiple versions, each of which is a deployed, trained model
+ * ready to receive prediction requests. The model itself is just a container.
+ * 
+ * To get more information about Model, see:
+ * 
+ * * [API documentation](https://cloud.google.com/ai-platform/prediction/docs/reference/rest/v1/projects.models)
+ * * How-to Guides
+ *     * [Official Documentation](https://cloud.google.com/ai-platform/prediction/docs/deploying-models)
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * Model can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:ml/engineModel:EngineModel default projects/{{project}}/models/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:ml/engineModel:EngineModel default {{project}}/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:ml/engineModel:EngineModel default {{name}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:ml/engineModel:EngineModel")
 public class EngineModel extends io.pulumi.resources.CustomResource {
+    /**
+     * The default version of the model. This version will be used to handle
+     * prediction requests that do not specify a version.
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="defaultVersion", type=EngineModelDefaultVersion.class, parameters={})
     private Output</* @Nullable */ EngineModelDefaultVersion> defaultVersion;
 
+    /**
+     * @return The default version of the model. This version will be used to handle
+     * prediction requests that do not specify a version.
+     * Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ EngineModelDefaultVersion> getDefaultVersion() {
         return this.defaultVersion;
     }
+    /**
+     * The description specified for the model when it was created.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return The description specified for the model when it was created.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * One or more labels that you can add, to organize your models.
+     * 
+     */
     @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
+    /**
+     * @return One or more labels that you can add, to organize your models.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getLabels() {
         return this.labels;
     }
+    /**
+     * The name specified for the version when it was created.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name specified for the version when it was created.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * If true, online prediction nodes send stderr and stdout streams to Stackdriver Logging
+     * 
+     */
     @OutputExport(name="onlinePredictionConsoleLogging", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> onlinePredictionConsoleLogging;
 
+    /**
+     * @return If true, online prediction nodes send stderr and stdout streams to Stackdriver Logging
+     * 
+     */
     public Output</* @Nullable */ Boolean> getOnlinePredictionConsoleLogging() {
         return this.onlinePredictionConsoleLogging;
     }
+    /**
+     * If true, online prediction access logs are sent to StackDriver Logging.
+     * 
+     */
     @OutputExport(name="onlinePredictionLogging", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> onlinePredictionLogging;
 
+    /**
+     * @return If true, online prediction access logs are sent to StackDriver Logging.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getOnlinePredictionLogging() {
         return this.onlinePredictionLogging;
     }
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * The list of regions where the model is going to be deployed.
+     * Currently only one region per model is supported
+     * 
+     */
     @OutputExport(name="regions", type=String.class, parameters={})
     private Output</* @Nullable */ String> regions;
 
+    /**
+     * @return The list of regions where the model is going to be deployed.
+     * Currently only one region per model is supported
+     * 
+     */
     public Output</* @Nullable */ String> getRegions() {
         return this.regions;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public EngineModel(String name, @Nullable EngineModelArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:ml/engineModel:EngineModel", name, args == null ? EngineModelArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -82,6 +191,15 @@ public class EngineModel extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static EngineModel get(String name, Input<String> id, @Nullable EngineModelState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new EngineModel(name, id, state, options);
     }

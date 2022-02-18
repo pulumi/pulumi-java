@@ -17,6 +17,10 @@ public final class TokenArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TokenArgs Empty = new TokenArgs();
 
+    /**
+     * The credentials that can be used for authenticating the token.
+     * 
+     */
     @InputImport(name="credentials")
     private final @Nullable Input<TokenCredentialsPropertiesArgs> credentials;
 
@@ -24,6 +28,10 @@ public final class TokenArgs extends io.pulumi.resources.ResourceArgs {
         return this.credentials == null ? Input.empty() : this.credentials;
     }
 
+    /**
+     * The name of the container registry.
+     * 
+     */
     @InputImport(name="registryName", required=true)
     private final Input<String> registryName;
 
@@ -31,6 +39,10 @@ public final class TokenArgs extends io.pulumi.resources.ResourceArgs {
         return this.registryName;
     }
 
+    /**
+     * The name of the resource group to which the container registry belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -38,6 +50,10 @@ public final class TokenArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The resource ID of the scope map to which the token will be associated with.
+     * 
+     */
     @InputImport(name="scopeMapId")
     private final @Nullable Input<String> scopeMapId;
 
@@ -45,6 +61,10 @@ public final class TokenArgs extends io.pulumi.resources.ResourceArgs {
         return this.scopeMapId == null ? Input.empty() : this.scopeMapId;
     }
 
+    /**
+     * The status of the token example enabled or disabled.
+     * 
+     */
     @InputImport(name="status")
     private final @Nullable Input<Either<String,TokenStatus>> status;
 
@@ -52,6 +72,10 @@ public final class TokenArgs extends io.pulumi.resources.ResourceArgs {
         return this.status == null ? Input.empty() : this.status;
     }
 
+    /**
+     * The name of the token.
+     * 
+     */
     @InputImport(name="tokenName")
     private final @Nullable Input<String> tokenName;
 

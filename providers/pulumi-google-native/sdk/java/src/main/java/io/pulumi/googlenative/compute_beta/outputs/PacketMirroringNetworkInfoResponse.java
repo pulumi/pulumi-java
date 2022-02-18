@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PacketMirroringNetworkInfoResponse {
+    /**
+     * Unique identifier for the network; defined by the server.
+     * 
+     */
     private final String canonicalUrl;
+    /**
+     * URL of the network resource.
+     * 
+     */
     private final String url;
 
     @OutputCustomType.Constructor({"canonicalUrl","url"})
@@ -20,9 +28,17 @@ public final class PacketMirroringNetworkInfoResponse {
         this.url = Objects.requireNonNull(url);
     }
 
+    /**
+     * Unique identifier for the network; defined by the server.
+     * 
+     */
     public String getCanonicalUrl() {
         return this.canonicalUrl;
     }
+    /**
+     * URL of the network resource.
+     * 
+     */
     public String getUrl() {
         return this.url;
     }

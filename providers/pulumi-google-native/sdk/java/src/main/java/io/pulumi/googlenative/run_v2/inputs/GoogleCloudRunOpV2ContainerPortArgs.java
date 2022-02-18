@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * ContainerPort represents a network port in a single container.
+ * 
+ */
 public final class GoogleCloudRunOpV2ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudRunOpV2ContainerPortArgs Empty = new GoogleCloudRunOpV2ContainerPortArgs();
 
+    /**
+     * Port number the container listens on. This must be a valid TCP port number, 0 < container_port < 65536.
+     * 
+     */
     @InputImport(name="containerPort")
     private final @Nullable Input<Integer> containerPort;
 
@@ -22,6 +30,10 @@ public final class GoogleCloudRunOpV2ContainerPortArgs extends io.pulumi.resourc
         return this.containerPort == null ? Input.empty() : this.containerPort;
     }
 
+    /**
+     * If specified, used to specify which protocol to use. Allowed values are "http1" and "h2c".
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

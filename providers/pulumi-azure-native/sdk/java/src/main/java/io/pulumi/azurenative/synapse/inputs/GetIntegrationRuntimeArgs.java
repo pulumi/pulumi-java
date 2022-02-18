@@ -12,6 +12,10 @@ public final class GetIntegrationRuntimeArgs extends io.pulumi.resources.InvokeA
 
     public static final GetIntegrationRuntimeArgs Empty = new GetIntegrationRuntimeArgs();
 
+    /**
+     * Integration runtime name
+     * 
+     */
     @InputImport(name="integrationRuntimeName", required=true)
     private final String integrationRuntimeName;
 
@@ -19,6 +23,10 @@ public final class GetIntegrationRuntimeArgs extends io.pulumi.resources.InvokeA
         return this.integrationRuntimeName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetIntegrationRuntimeArgs extends io.pulumi.resources.InvokeA
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the workspace.
+     * 
+     */
     @InputImport(name="workspaceName", required=true)
     private final String workspaceName;
 

@@ -16,6 +16,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
 
     public static final PrivateEndpointConnectionArgs Empty = new PrivateEndpointConnectionArgs();
 
+    /**
+     * The name of the configuration store.
+     * 
+     */
     @InputImport(name="configStoreName", required=true)
     private final Input<String> configStoreName;
 
@@ -23,6 +27,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.configStoreName;
     }
 
+    /**
+     * The resource of private endpoint.
+     * 
+     */
     @InputImport(name="privateEndpoint")
     private final @Nullable Input<PrivateEndpointArgs> privateEndpoint;
 
@@ -30,6 +38,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.privateEndpoint == null ? Input.empty() : this.privateEndpoint;
     }
 
+    /**
+     * Private endpoint connection name
+     * 
+     */
     @InputImport(name="privateEndpointConnectionName")
     private final @Nullable Input<String> privateEndpointConnectionName;
 
@@ -37,6 +49,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.privateEndpointConnectionName == null ? Input.empty() : this.privateEndpointConnectionName;
     }
 
+    /**
+     * A collection of information about the state of the connection between service consumer and provider.
+     * 
+     */
     @InputImport(name="privateLinkServiceConnectionState", required=true)
     private final Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
@@ -44,6 +60,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.privateLinkServiceConnectionState;
     }
 
+    /**
+     * The name of the resource group to which the container registry belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

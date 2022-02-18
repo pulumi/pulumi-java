@@ -10,7 +10,16 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ServiceAttachmentConsumerAcceptList {
+    /**
+     * The number of consumer forwarding rules the consumer project can
+     * create.
+     * 
+     */
     private final Integer connectionLimit;
+    /**
+     * A project that is allowed to connect to this service attachment.
+     * 
+     */
     private final String projectIdOrNum;
 
     @OutputCustomType.Constructor({"connectionLimit","projectIdOrNum"})
@@ -21,9 +30,18 @@ public final class ServiceAttachmentConsumerAcceptList {
         this.projectIdOrNum = Objects.requireNonNull(projectIdOrNum);
     }
 
+    /**
+     * The number of consumer forwarding rules the consumer project can
+     * create.
+     * 
+     */
     public Integer getConnectionLimit() {
         return this.connectionLimit;
     }
+    /**
+     * A project that is allowed to connect to this service attachment.
+     * 
+     */
     public String getProjectIdOrNum() {
         return this.projectIdOrNum;
     }

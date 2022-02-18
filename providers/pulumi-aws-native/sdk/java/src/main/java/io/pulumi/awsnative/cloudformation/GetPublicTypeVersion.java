@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPublicTypeVersion {
+/**
+ * Test and Publish a resource that has been registered in the CloudFormation Registry.
+ * 
+ */
     public static CompletableFuture<GetPublicTypeVersionResult> invokeAsync(GetPublicTypeVersionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudformation:getPublicTypeVersion", TypeShape.of(GetPublicTypeVersionResult.class), args == null ? GetPublicTypeVersionArgs.Empty : args, Utilities.withVersion(options));
     }

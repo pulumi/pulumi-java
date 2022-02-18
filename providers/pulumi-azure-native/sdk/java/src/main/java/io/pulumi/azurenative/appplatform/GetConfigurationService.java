@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetConfigurationService {
+/**
+ * Application Configuration Service resource
+ * API Version: 2022-01-01-preview.
+ * 
+ *
+ * Application Configuration Service resource
+ * 
+ */
     public static CompletableFuture<GetConfigurationServiceResult> invokeAsync(GetConfigurationServiceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getConfigurationService", TypeShape.of(GetConfigurationServiceResult.class), args == null ? GetConfigurationServiceArgs.Empty : args, Utilities.withVersion(options));
     }

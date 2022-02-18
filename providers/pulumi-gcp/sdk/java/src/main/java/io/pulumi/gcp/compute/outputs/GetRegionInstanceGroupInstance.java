@@ -11,8 +11,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetRegionInstanceGroupInstance {
+    /**
+     * URL to the instance.
+     * 
+     */
     private final String instance;
+    /**
+     * List of named ports in the group, as a list of resources, each containing:
+     * 
+     */
     private final List<GetRegionInstanceGroupInstanceNamedPort> namedPorts;
+    /**
+     * String description of current state of the instance.
+     * 
+     */
     private final String status;
 
     @OutputCustomType.Constructor({"instance","namedPorts","status"})
@@ -25,12 +37,24 @@ public final class GetRegionInstanceGroupInstance {
         this.status = Objects.requireNonNull(status);
     }
 
+    /**
+     * URL to the instance.
+     * 
+     */
     public String getInstance() {
         return this.instance;
     }
+    /**
+     * List of named ports in the group, as a list of resources, each containing:
+     * 
+     */
     public List<GetRegionInstanceGroupInstanceNamedPort> getNamedPorts() {
         return this.namedPorts;
     }
+    /**
+     * String description of current state of the instance.
+     * 
+     */
     public String getStatus() {
         return this.status;
     }

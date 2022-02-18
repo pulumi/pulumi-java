@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLocalGatewayRouteTableVPCAssociation {
+/**
+ * Describes an association between a local gateway route table and a VPC.
+ * 
+ */
     public static CompletableFuture<GetLocalGatewayRouteTableVPCAssociationResult> invokeAsync(GetLocalGatewayRouteTableVPCAssociationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ec2:getLocalGatewayRouteTableVPCAssociation", TypeShape.of(GetLocalGatewayRouteTableVPCAssociationResult.class), args == null ? GetLocalGatewayRouteTableVPCAssociationArgs.Empty : args, Utilities.withVersion(options));
     }

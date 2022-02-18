@@ -12,6 +12,10 @@ public final class GetTransitGatewayRegistrationArgs extends io.pulumi.resources
 
     public static final GetTransitGatewayRegistrationArgs Empty = new GetTransitGatewayRegistrationArgs();
 
+    /**
+     * The ID of the global network.
+     * 
+     */
     @InputImport(name="globalNetworkId", required=true)
     private final String globalNetworkId;
 
@@ -19,6 +23,10 @@ public final class GetTransitGatewayRegistrationArgs extends io.pulumi.resources
         return this.globalNetworkId;
     }
 
+    /**
+     * The Amazon Resource Name (ARN) of the transit gateway.
+     * 
+     */
     @InputImport(name="transitGatewayArn", required=true)
     private final String transitGatewayArn;
 

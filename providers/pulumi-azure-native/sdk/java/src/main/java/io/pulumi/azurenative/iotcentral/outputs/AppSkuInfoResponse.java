@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AppSkuInfoResponse {
+    /**
+     * The name of the SKU.
+     * 
+     */
     private final String name;
 
     @OutputCustomType.Constructor({"name"})
@@ -16,6 +20,10 @@ public final class AppSkuInfoResponse {
         this.name = Objects.requireNonNull(name);
     }
 
+    /**
+     * The name of the SKU.
+     * 
+     */
     public String getName() {
         return this.name;
     }

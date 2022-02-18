@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Current state of the provisioning service.
+     * 
+     */
     @EnumType
     public enum State {
         Activating("Activating"),

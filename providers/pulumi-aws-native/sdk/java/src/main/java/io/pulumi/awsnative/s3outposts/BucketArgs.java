@@ -17,6 +17,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BucketArgs Empty = new BucketArgs();
 
+    /**
+     * A name for the bucket.
+     * 
+     */
     @InputImport(name="bucketName")
     private final @Nullable Input<String> bucketName;
 
@@ -24,6 +28,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.bucketName == null ? Input.empty() : this.bucketName;
     }
 
+    /**
+     * Rules that define how Amazon S3Outposts manages objects during their lifetime.
+     * 
+     */
     @InputImport(name="lifecycleConfiguration")
     private final @Nullable Input<BucketLifecycleConfigurationArgs> lifecycleConfiguration;
 
@@ -31,6 +39,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.lifecycleConfiguration == null ? Input.empty() : this.lifecycleConfiguration;
     }
 
+    /**
+     * The id of the customer outpost on which the bucket resides.
+     * 
+     */
     @InputImport(name="outpostId", required=true)
     private final Input<String> outpostId;
 
@@ -38,6 +50,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.outpostId;
     }
 
+    /**
+     * An arbitrary set of tags (key-value pairs) for this S3Outposts bucket.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<BucketTagArgs>> tags;
 

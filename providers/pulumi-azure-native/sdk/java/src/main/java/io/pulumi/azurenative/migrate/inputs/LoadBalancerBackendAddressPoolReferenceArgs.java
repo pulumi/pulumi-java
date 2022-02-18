@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines reference to load balancer backend address pools.
+ * 
+ */
 public final class LoadBalancerBackendAddressPoolReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LoadBalancerBackendAddressPoolReferenceArgs Empty = new LoadBalancerBackendAddressPoolReferenceArgs();
 
+    /**
+     * Gets the name of the proxy resource on the target side.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -21,6 +29,10 @@ public final class LoadBalancerBackendAddressPoolReferenceArgs extends io.pulumi
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Gets the ARM resource ID of the tracked resource being referenced.
+     * 
+     */
     @InputImport(name="sourceArmResourceId", required=true)
     private final Input<String> sourceArmResourceId;
 

@@ -9,10 +9,18 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
+/**
+ * DaemonEndpoint contains information about a single Daemon endpoint.
+ * 
+ */
 public final class DaemonEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DaemonEndpointArgs Empty = new DaemonEndpointArgs();
 
+    /**
+     * Port number of the given endpoint.
+     * 
+     */
     @InputImport(name="Port", required=true)
     private final Input<Integer> Port;
 

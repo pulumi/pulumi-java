@@ -18,6 +18,10 @@ public final class ManagementLockAtResourceLevelArgs extends io.pulumi.resources
 
     public static final ManagementLockAtResourceLevelArgs Empty = new ManagementLockAtResourceLevelArgs();
 
+    /**
+     * The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can't modify or delete it.
+     * 
+     */
     @InputImport(name="level", required=true)
     private final Input<Either<String,LockLevel>> level;
 
@@ -25,6 +29,10 @@ public final class ManagementLockAtResourceLevelArgs extends io.pulumi.resources
         return this.level;
     }
 
+    /**
+     * The name of lock. The lock name can be a maximum of 260 characters. It cannot contain <, > %, &, :, \, ?, /, or any control characters.
+     * 
+     */
     @InputImport(name="lockName")
     private final @Nullable Input<String> lockName;
 
@@ -32,6 +40,10 @@ public final class ManagementLockAtResourceLevelArgs extends io.pulumi.resources
         return this.lockName == null ? Input.empty() : this.lockName;
     }
 
+    /**
+     * Notes about the lock. Maximum of 512 characters.
+     * 
+     */
     @InputImport(name="notes")
     private final @Nullable Input<String> notes;
 
@@ -39,6 +51,10 @@ public final class ManagementLockAtResourceLevelArgs extends io.pulumi.resources
         return this.notes == null ? Input.empty() : this.notes;
     }
 
+    /**
+     * The owners of the lock.
+     * 
+     */
     @InputImport(name="owners")
     private final @Nullable Input<List<ManagementLockOwnerArgs>> owners;
 
@@ -46,6 +62,10 @@ public final class ManagementLockAtResourceLevelArgs extends io.pulumi.resources
         return this.owners == null ? Input.empty() : this.owners;
     }
 
+    /**
+     * The parent resource identity.
+     * 
+     */
     @InputImport(name="parentResourcePath", required=true)
     private final Input<String> parentResourcePath;
 
@@ -53,6 +73,10 @@ public final class ManagementLockAtResourceLevelArgs extends io.pulumi.resources
         return this.parentResourcePath;
     }
 
+    /**
+     * The name of the resource group containing the resource to lock.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -60,6 +84,10 @@ public final class ManagementLockAtResourceLevelArgs extends io.pulumi.resources
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the resource to lock.
+     * 
+     */
     @InputImport(name="resourceName", required=true)
     private final Input<String> resourceName;
 
@@ -67,6 +95,10 @@ public final class ManagementLockAtResourceLevelArgs extends io.pulumi.resources
         return this.resourceName;
     }
 
+    /**
+     * The resource provider namespace of the resource to lock.
+     * 
+     */
     @InputImport(name="resourceProviderNamespace", required=true)
     private final Input<String> resourceProviderNamespace;
 
@@ -74,6 +106,10 @@ public final class ManagementLockAtResourceLevelArgs extends io.pulumi.resources
         return this.resourceProviderNamespace;
     }
 
+    /**
+     * The resource type of the resource to lock.
+     * 
+     */
     @InputImport(name="resourceType", required=true)
     private final Input<String> resourceType;
 

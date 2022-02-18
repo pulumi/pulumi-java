@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes a virtual machines network configuration's DNS settings.
+ * 
+ */
 public final class VirtualMachineNetworkInterfaceDnsSettingsConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualMachineNetworkInterfaceDnsSettingsConfigurationArgs Empty = new VirtualMachineNetworkInterfaceDnsSettingsConfigurationArgs();
 
+    /**
+     * List of DNS servers IP addresses
+     * 
+     */
     @InputImport(name="dnsServers")
     private final @Nullable Input<List<String>> dnsServers;
 

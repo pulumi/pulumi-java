@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class LoggingResponse {
+    /**
+     * Logging configurations for sending logs to the consumer project. There can be multiple consumer destinations, each one must have a different monitored resource type. A log can be used in at most one consumer destination.
+     * 
+     */
     private final List<LoggingDestinationResponse> consumerDestinations;
+    /**
+     * Logging configurations for sending logs to the producer project. There can be multiple producer destinations, each one must have a different monitored resource type. A log can be used in at most one producer destination.
+     * 
+     */
     private final List<LoggingDestinationResponse> producerDestinations;
 
     @OutputCustomType.Constructor({"consumerDestinations","producerDestinations"})
@@ -21,9 +29,17 @@ public final class LoggingResponse {
         this.producerDestinations = Objects.requireNonNull(producerDestinations);
     }
 
+    /**
+     * Logging configurations for sending logs to the consumer project. There can be multiple consumer destinations, each one must have a different monitored resource type. A log can be used in at most one consumer destination.
+     * 
+     */
     public List<LoggingDestinationResponse> getConsumerDestinations() {
         return this.consumerDestinations;
     }
+    /**
+     * Logging configurations for sending logs to the producer project. There can be multiple producer destinations, each one must have a different monitored resource type. A log can be used in at most one producer destination.
+     * 
+     */
     public List<LoggingDestinationResponse> getProducerDestinations() {
         return this.producerDestinations;
     }

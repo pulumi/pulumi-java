@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Container distribution settings for encryption, licensing, and sharing in a specific Region.
+ * 
+ */
 public final class DistributionConfigurationDistributionContainerDistributionConfigurationPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DistributionConfigurationDistributionContainerDistributionConfigurationPropertiesArgs Empty = new DistributionConfigurationDistributionContainerDistributionConfigurationPropertiesArgs();
 
+    /**
+     * Tags that are attached to the container distribution configuration.
+     * 
+     */
     @InputImport(name="containerTags")
     private final @Nullable Input<List<String>> containerTags;
 
@@ -23,6 +31,10 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
         return this.containerTags == null ? Input.empty() : this.containerTags;
     }
 
+    /**
+     * The description of the container distribution configuration.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -30,6 +42,10 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The destination repository for the container distribution configuration.
+     * 
+     */
     @InputImport(name="targetRepository")
     private final @Nullable Input<DistributionConfigurationTargetContainerRepositoryArgs> targetRepository;
 

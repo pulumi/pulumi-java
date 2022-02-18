@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The contact detail class.
+ * 
+ */
 public final class ContactDetailArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContactDetailArgs Empty = new ContactDetailArgs();
 
+    /**
+     * The e-mail address of the contact.
+     * 
+     */
     @InputImport(name="email")
     private final @Nullable Input<String> email;
 
@@ -23,6 +31,10 @@ public final class ContactDetailArgs extends io.pulumi.resources.ResourceArgs {
         return this.email == null ? Input.empty() : this.email;
     }
 
+    /**
+     * The phone number of the contact.
+     * 
+     */
     @InputImport(name="phone")
     private final @Nullable Input<String> phone;
 
@@ -30,6 +42,10 @@ public final class ContactDetailArgs extends io.pulumi.resources.ResourceArgs {
         return this.phone == null ? Input.empty() : this.phone;
     }
 
+    /**
+     * The role of the contact.
+     * 
+     */
     @InputImport(name="role")
     private final @Nullable Input<Either<String,Role>> role;
 

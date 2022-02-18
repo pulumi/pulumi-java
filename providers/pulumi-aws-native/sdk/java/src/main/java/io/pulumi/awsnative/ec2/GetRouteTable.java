@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRouteTable {
+/**
+ * Resource Type definition for AWS::EC2::RouteTable
+ * 
+ */
     public static CompletableFuture<GetRouteTableResult> invokeAsync(GetRouteTableArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ec2:getRouteTable", TypeShape.of(GetRouteTableResult.class), args == null ? GetRouteTableArgs.Empty : args, Utilities.withVersion(options));
     }

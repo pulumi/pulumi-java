@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * UrlPathMaps give a url path to the backend mapping information for PathBasedRouting.
+ * 
+ */
 public final class ApplicationGatewayUrlPathMapArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationGatewayUrlPathMapArgs Empty = new ApplicationGatewayUrlPathMapArgs();
 
+    /**
+     * Default backend address pool resource of URL path map.
+     * 
+     */
     @InputImport(name="defaultBackendAddressPool")
     private final @Nullable Input<SubResourceArgs> defaultBackendAddressPool;
 
@@ -24,6 +32,10 @@ public final class ApplicationGatewayUrlPathMapArgs extends io.pulumi.resources.
         return this.defaultBackendAddressPool == null ? Input.empty() : this.defaultBackendAddressPool;
     }
 
+    /**
+     * Default backend http settings resource of URL path map.
+     * 
+     */
     @InputImport(name="defaultBackendHttpSettings")
     private final @Nullable Input<SubResourceArgs> defaultBackendHttpSettings;
 
@@ -31,6 +43,10 @@ public final class ApplicationGatewayUrlPathMapArgs extends io.pulumi.resources.
         return this.defaultBackendHttpSettings == null ? Input.empty() : this.defaultBackendHttpSettings;
     }
 
+    /**
+     * Default redirect configuration resource of URL path map.
+     * 
+     */
     @InputImport(name="defaultRedirectConfiguration")
     private final @Nullable Input<SubResourceArgs> defaultRedirectConfiguration;
 
@@ -38,6 +54,10 @@ public final class ApplicationGatewayUrlPathMapArgs extends io.pulumi.resources.
         return this.defaultRedirectConfiguration == null ? Input.empty() : this.defaultRedirectConfiguration;
     }
 
+    /**
+     * Default Rewrite rule set resource of URL path map.
+     * 
+     */
     @InputImport(name="defaultRewriteRuleSet")
     private final @Nullable Input<SubResourceArgs> defaultRewriteRuleSet;
 
@@ -45,6 +65,10 @@ public final class ApplicationGatewayUrlPathMapArgs extends io.pulumi.resources.
         return this.defaultRewriteRuleSet == null ? Input.empty() : this.defaultRewriteRuleSet;
     }
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -52,6 +76,10 @@ public final class ApplicationGatewayUrlPathMapArgs extends io.pulumi.resources.
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * Name of the URL path map that is unique within an Application Gateway.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -59,6 +87,10 @@ public final class ApplicationGatewayUrlPathMapArgs extends io.pulumi.resources.
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Path rule of URL path map resource.
+     * 
+     */
     @InputImport(name="pathRules")
     private final @Nullable Input<List<ApplicationGatewayPathRuleArgs>> pathRules;
 

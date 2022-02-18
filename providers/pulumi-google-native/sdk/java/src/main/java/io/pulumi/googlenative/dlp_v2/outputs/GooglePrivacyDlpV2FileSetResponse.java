@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GooglePrivacyDlpV2FileSetResponse {
+    /**
+     * The regex-filtered set of files to scan. Exactly one of `url` or `regex_file_set` must be set.
+     * 
+     */
     private final GooglePrivacyDlpV2CloudStorageRegexFileSetResponse regexFileSet;
+    /**
+     * The Cloud Storage url of the file(s) to scan, in the format `gs:///`. Trailing wildcard in the path is allowed. If the url ends in a trailing slash, the bucket or directory represented by the url will be scanned non-recursively (content in sub-directories will not be scanned). This means that `gs://mybucket/` is equivalent to `gs://mybucket/*`, and `gs://mybucket/directory/` is equivalent to `gs://mybucket/directory/*`. Exactly one of `url` or `regex_file_set` must be set.
+     * 
+     */
     private final String url;
 
     @OutputCustomType.Constructor({"regexFileSet","url"})
@@ -21,9 +29,17 @@ public final class GooglePrivacyDlpV2FileSetResponse {
         this.url = Objects.requireNonNull(url);
     }
 
+    /**
+     * The regex-filtered set of files to scan. Exactly one of `url` or `regex_file_set` must be set.
+     * 
+     */
     public GooglePrivacyDlpV2CloudStorageRegexFileSetResponse getRegexFileSet() {
         return this.regexFileSet;
     }
+    /**
+     * The Cloud Storage url of the file(s) to scan, in the format `gs:///`. Trailing wildcard in the path is allowed. If the url ends in a trailing slash, the bucket or directory represented by the url will be scanned non-recursively (content in sub-directories will not be scanned). This means that `gs://mybucket/` is equivalent to `gs://mybucket/*`, and `gs://mybucket/directory/` is equivalent to `gs://mybucket/directory/*`. Exactly one of `url` or `regex_file_set` must be set.
+     * 
+     */
     public String getUrl() {
         return this.url;
     }

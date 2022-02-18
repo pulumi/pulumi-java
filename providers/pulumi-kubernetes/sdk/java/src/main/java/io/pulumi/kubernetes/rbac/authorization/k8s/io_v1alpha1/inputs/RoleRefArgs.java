@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * RoleRef contains information that points to the role being used
+ * 
+ */
 public final class RoleRefArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RoleRefArgs Empty = new RoleRefArgs();
 
+    /**
+     * APIGroup is the group for the resource being referenced
+     * 
+     */
     @InputImport(name="apiGroup", required=true)
     private final Input<String> apiGroup;
 
@@ -20,6 +28,10 @@ public final class RoleRefArgs extends io.pulumi.resources.ResourceArgs {
         return this.apiGroup;
     }
 
+    /**
+     * Kind is the type of resource being referenced
+     * 
+     */
     @InputImport(name="kind", required=true)
     private final Input<String> kind;
 
@@ -27,6 +39,10 @@ public final class RoleRefArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind;
     }
 
+    /**
+     * Name is the name of resource being referenced
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

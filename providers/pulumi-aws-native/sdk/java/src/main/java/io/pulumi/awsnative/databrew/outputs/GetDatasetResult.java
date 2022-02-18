@@ -14,9 +14,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetDatasetResult {
+    /**
+     * Dataset format
+     * 
+     */
     private final @Nullable DatasetFormat format;
+    /**
+     * Format options for dataset
+     * 
+     */
     private final @Nullable DatasetFormatOptions formatOptions;
+    /**
+     * Input
+     * 
+     */
     private final @Nullable DatasetInput input;
+    /**
+     * PathOptions
+     * 
+     */
     private final @Nullable DatasetPathOptions pathOptions;
 
     @OutputCustomType.Constructor({"format","formatOptions","input","pathOptions"})
@@ -31,15 +47,31 @@ public final class GetDatasetResult {
         this.pathOptions = pathOptions;
     }
 
+    /**
+     * Dataset format
+     * 
+     */
     public Optional<DatasetFormat> getFormat() {
         return Optional.ofNullable(this.format);
     }
+    /**
+     * Format options for dataset
+     * 
+     */
     public Optional<DatasetFormatOptions> getFormatOptions() {
         return Optional.ofNullable(this.formatOptions);
     }
+    /**
+     * Input
+     * 
+     */
     public Optional<DatasetInput> getInput() {
         return Optional.ofNullable(this.input);
     }
+    /**
+     * PathOptions
+     * 
+     */
     public Optional<DatasetPathOptions> getPathOptions() {
         return Optional.ofNullable(this.pathOptions);
     }

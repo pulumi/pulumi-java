@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Automanage configuration profile assignment properties.
+ * 
+ */
 public final class ConfigurationProfileAssignmentPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConfigurationProfileAssignmentPropertiesArgs Empty = new ConfigurationProfileAssignmentPropertiesArgs();
 
+    /**
+     * The Automanage account ARM Resource URI
+     * 
+     */
     @InputImport(name="accountId")
     private final @Nullable Input<String> accountId;
 
@@ -23,6 +31,10 @@ public final class ConfigurationProfileAssignmentPropertiesArgs extends io.pulum
         return this.accountId == null ? Input.empty() : this.accountId;
     }
 
+    /**
+     * A value indicating configuration profile.
+     * 
+     */
     @InputImport(name="configurationProfile")
     private final @Nullable Input<Either<String,ConfigurationProfile>> configurationProfile;
 
@@ -30,6 +42,10 @@ public final class ConfigurationProfileAssignmentPropertiesArgs extends io.pulum
         return this.configurationProfile == null ? Input.empty() : this.configurationProfile;
     }
 
+    /**
+     * The configuration profile custom preferences ARM resource URI
+     * 
+     */
     @InputImport(name="configurationProfilePreferenceId")
     private final @Nullable Input<String> configurationProfilePreferenceId;
 
@@ -37,6 +53,10 @@ public final class ConfigurationProfileAssignmentPropertiesArgs extends io.pulum
         return this.configurationProfilePreferenceId == null ? Input.empty() : this.configurationProfilePreferenceId;
     }
 
+    /**
+     * The target VM resource URI
+     * 
+     */
     @InputImport(name="targetId")
     private final @Nullable Input<String> targetId;
 

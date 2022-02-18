@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * FlexVolume represents a generic volume resource that is provisioned/attached using an exec based plugin.
+ * 
+ */
 public final class FlexVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FlexVolumeSourceArgs Empty = new FlexVolumeSourceArgs();
 
+    /**
+     * Driver is the name of the driver to use for this volume.
+     * 
+     */
     @InputImport(name="driver", required=true)
     private final Input<String> driver;
 
@@ -24,6 +32,10 @@ public final class FlexVolumeSourceArgs extends io.pulumi.resources.ResourceArgs
         return this.driver;
     }
 
+    /**
+     * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". The default filesystem depends on FlexVolume script.
+     * 
+     */
     @InputImport(name="fsType")
     private final @Nullable Input<String> fsType;
 
@@ -31,6 +43,10 @@ public final class FlexVolumeSourceArgs extends io.pulumi.resources.ResourceArgs
         return this.fsType == null ? Input.empty() : this.fsType;
     }
 
+    /**
+     * Optional: Extra command options if any.
+     * 
+     */
     @InputImport(name="options")
     private final @Nullable Input<Map<String,String>> options;
 
@@ -38,6 +54,10 @@ public final class FlexVolumeSourceArgs extends io.pulumi.resources.ResourceArgs
         return this.options == null ? Input.empty() : this.options;
     }
 
+    /**
+     * Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+     * 
+     */
     @InputImport(name="readOnly")
     private final @Nullable Input<Boolean> readOnly;
 
@@ -45,6 +65,10 @@ public final class FlexVolumeSourceArgs extends io.pulumi.resources.ResourceArgs
         return this.readOnly == null ? Input.empty() : this.readOnly;
     }
 
+    /**
+     * Optional: SecretRef is reference to the secret object containing sensitive information to pass to the plugin scripts. This may be empty if no secret object is specified. If the secret object contains more than one secret, all secrets are passed to the plugin scripts.
+     * 
+     */
     @InputImport(name="secretRef")
     private final @Nullable Input<LocalObjectReferenceArgs> secretRef;
 

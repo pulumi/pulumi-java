@@ -14,6 +14,10 @@ public final class AzureClusterControlPlaneMainVolumeGetArgs extends io.pulumi.r
 
     public static final AzureClusterControlPlaneMainVolumeGetArgs Empty = new AzureClusterControlPlaneMainVolumeGetArgs();
 
+    /**
+     * Optional. The size of the disk, in GiBs. When unspecified, a default value is provided. See the specific reference in the parent resource.
+     * 
+     */
     @InputImport(name="sizeGib")
     private final @Nullable Input<Integer> sizeGib;
 

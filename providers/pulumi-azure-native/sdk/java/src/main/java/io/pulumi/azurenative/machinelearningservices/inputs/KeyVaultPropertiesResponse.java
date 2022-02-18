@@ -14,6 +14,10 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
 
     public static final KeyVaultPropertiesResponse Empty = new KeyVaultPropertiesResponse();
 
+    /**
+     * For future use - The client id of the identity which will be used to access key vault.
+     * 
+     */
     @InputImport(name="identityClientId")
     private final @Nullable String identityClientId;
 
@@ -21,6 +25,10 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
         return this.identityClientId == null ? Optional.empty() : Optional.ofNullable(this.identityClientId);
     }
 
+    /**
+     * Key vault uri to access the encryption key.
+     * 
+     */
     @InputImport(name="keyIdentifier", required=true)
     private final String keyIdentifier;
 
@@ -28,6 +36,10 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
         return this.keyIdentifier;
     }
 
+    /**
+     * The ArmId of the keyVault where the customer owned encryption key is present.
+     * 
+     */
     @InputImport(name="keyVaultArmId", required=true)
     private final String keyVaultArmId;
 

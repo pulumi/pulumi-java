@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBastionShareableLink {
+/**
+ * Response for all the Bastion Shareable Link endpoints.
+ * API Version: 2020-11-01.
+ * 
+ *
+ * Response for all the Bastion Shareable Link endpoints.
+ * 
+ */
     public static CompletableFuture<GetBastionShareableLinkResult> invokeAsync(GetBastionShareableLinkArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getBastionShareableLink", TypeShape.of(GetBastionShareableLinkResult.class), args == null ? GetBastionShareableLinkArgs.Empty : args, Utilities.withVersion(options));
     }

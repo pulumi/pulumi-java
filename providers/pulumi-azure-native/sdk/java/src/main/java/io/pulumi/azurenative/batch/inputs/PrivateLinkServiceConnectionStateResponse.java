@@ -10,6 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The private link service connection state of the private endpoint connection
+ * 
+ */
 public final class PrivateLinkServiceConnectionStateResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PrivateLinkServiceConnectionStateResponse Empty = new PrivateLinkServiceConnectionStateResponse();

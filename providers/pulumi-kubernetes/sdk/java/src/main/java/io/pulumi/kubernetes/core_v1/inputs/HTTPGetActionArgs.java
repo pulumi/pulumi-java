@@ -14,10 +14,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * HTTPGetAction describes an action based on HTTP Get requests.
+ * 
+ */
 public final class HTTPGetActionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HTTPGetActionArgs Empty = new HTTPGetActionArgs();
 
+    /**
+     * Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead.
+     * 
+     */
     @InputImport(name="host")
     private final @Nullable Input<String> host;
 
@@ -25,6 +33,10 @@ public final class HTTPGetActionArgs extends io.pulumi.resources.ResourceArgs {
         return this.host == null ? Input.empty() : this.host;
     }
 
+    /**
+     * Custom headers to set in the request. HTTP allows repeated headers.
+     * 
+     */
     @InputImport(name="httpHeaders")
     private final @Nullable Input<List<HTTPHeaderArgs>> httpHeaders;
 
@@ -32,6 +44,10 @@ public final class HTTPGetActionArgs extends io.pulumi.resources.ResourceArgs {
         return this.httpHeaders == null ? Input.empty() : this.httpHeaders;
     }
 
+    /**
+     * Path to access on the HTTP server.
+     * 
+     */
     @InputImport(name="path")
     private final @Nullable Input<String> path;
 
@@ -39,6 +55,10 @@ public final class HTTPGetActionArgs extends io.pulumi.resources.ResourceArgs {
         return this.path == null ? Input.empty() : this.path;
     }
 
+    /**
+     * Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
+     * 
+     */
     @InputImport(name="port", required=true)
     private final Input<Either<Integer,String>> port;
 
@@ -46,6 +66,14 @@ public final class HTTPGetActionArgs extends io.pulumi.resources.ResourceArgs {
         return this.port;
     }
 
+    /**
+     * Scheme to use for connecting to the host. Defaults to HTTP.
+     * 
+     * Possible enum values:
+     *  - `"HTTP"` means that the scheme used will be http://
+     *  - `"HTTPS"` means that the scheme used will be https://
+     * 
+     */
     @InputImport(name="scheme")
     private final @Nullable Input<String> scheme;
 

@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetServiceAction {
+/**
+ * Resource Schema for AWS::ServiceCatalog::ServiceAction
+ * 
+ */
     public static CompletableFuture<GetServiceActionResult> invokeAsync(GetServiceActionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:servicecatalog:getServiceAction", TypeShape.of(GetServiceActionResult.class), args == null ? GetServiceActionArgs.Empty : args, Utilities.withVersion(options));
     }

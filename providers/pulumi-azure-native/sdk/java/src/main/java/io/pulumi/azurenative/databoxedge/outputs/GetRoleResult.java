@@ -10,10 +10,30 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetRoleResult {
+    /**
+     * The path ID that uniquely identifies the object.
+     * 
+     */
     private final String id;
+    /**
+     * Role type.
+     * 
+     */
     private final String kind;
+    /**
+     * The object name.
+     * 
+     */
     private final String name;
+    /**
+     * Role configured on ASE resource
+     * 
+     */
     private final SystemDataResponse systemData;
+    /**
+     * The hierarchical type of the object.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"id","kind","name","systemData","type"})
@@ -30,18 +50,38 @@ public final class GetRoleResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * The path ID that uniquely identifies the object.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Role type.
+     * 
+     */
     public String getKind() {
         return this.kind;
     }
+    /**
+     * The object name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Role configured on ASE resource
+     * 
+     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+    /**
+     * The hierarchical type of the object.
+     * 
+     */
     public String getType() {
         return this.type;
     }

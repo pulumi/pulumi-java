@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Public Certificate Location
+     * 
+     */
     @EnumType
     public enum PublicCertificateLocation {
         CurrentUserMy("CurrentUserMy"),

@@ -13,6 +13,13 @@ public final class TriggerBuildAvailableSecretsSecretManagerArgs extends io.pulu
 
     public static final TriggerBuildAvailableSecretsSecretManagerArgs Empty = new TriggerBuildAvailableSecretsSecretManagerArgs();
 
+    /**
+     * A list of global environment variable definitions that will exist for all build steps
+     * in this build. If a variable is defined in both globally and in a build step,
+     * the variable will use the build step value.
+     * The elements are of the form "KEY=VALUE" for the environment variable "KEY" being given the value "VALUE".
+     * 
+     */
     @InputImport(name="env", required=true)
     private final Input<String> env;
 
@@ -20,6 +27,10 @@ public final class TriggerBuildAvailableSecretsSecretManagerArgs extends io.pulu
         return this.env;
     }
 
+    /**
+     * Resource name of the SecretVersion. In format: projects/*{@literal /}secrets/*{@literal /}versions/*
+     * 
+     */
     @InputImport(name="versionName", required=true)
     private final Input<String> versionName;
 

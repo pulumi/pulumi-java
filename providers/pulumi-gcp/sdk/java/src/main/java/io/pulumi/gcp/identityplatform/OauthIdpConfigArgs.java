@@ -15,6 +15,10 @@ public final class OauthIdpConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OauthIdpConfigArgs Empty = new OauthIdpConfigArgs();
 
+    /**
+     * The client id of an OAuth client.
+     * 
+     */
     @InputImport(name="clientId", required=true)
     private final Input<String> clientId;
 
@@ -22,6 +26,10 @@ public final class OauthIdpConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.clientId;
     }
 
+    /**
+     * The client secret of the OAuth client, to enable OIDC code flow.
+     * 
+     */
     @InputImport(name="clientSecret")
     private final @Nullable Input<String> clientSecret;
 
@@ -29,6 +37,10 @@ public final class OauthIdpConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.clientSecret == null ? Input.empty() : this.clientSecret;
     }
 
+    /**
+     * Human friendly display name.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -36,6 +48,10 @@ public final class OauthIdpConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * If this config allows users to sign in with the provider.
+     * 
+     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 
@@ -43,6 +59,10 @@ public final class OauthIdpConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
+    /**
+     * For OIDC Idps, the issuer identifier.
+     * 
+     */
     @InputImport(name="issuer", required=true)
     private final Input<String> issuer;
 
@@ -50,6 +70,10 @@ public final class OauthIdpConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.issuer;
     }
 
+    /**
+     * The name of the OauthIdpConfig. Must start with `oidc.`.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -57,6 +81,11 @@ public final class OauthIdpConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

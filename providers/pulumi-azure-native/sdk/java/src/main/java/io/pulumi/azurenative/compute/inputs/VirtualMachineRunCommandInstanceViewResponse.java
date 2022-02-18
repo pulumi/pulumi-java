@@ -13,10 +13,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The instance view of a virtual machine run command.
+ * 
+ */
 public final class VirtualMachineRunCommandInstanceViewResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VirtualMachineRunCommandInstanceViewResponse Empty = new VirtualMachineRunCommandInstanceViewResponse();
 
+    /**
+     * Script end time.
+     * 
+     */
     @InputImport(name="endTime")
     private final @Nullable String endTime;
 
@@ -24,6 +32,10 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends io.pulum
         return this.endTime == null ? Optional.empty() : Optional.ofNullable(this.endTime);
     }
 
+    /**
+     * Script error stream.
+     * 
+     */
     @InputImport(name="error")
     private final @Nullable String error;
 
@@ -31,6 +43,10 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends io.pulum
         return this.error == null ? Optional.empty() : Optional.ofNullable(this.error);
     }
 
+    /**
+     * Communicate script configuration errors or execution messages.
+     * 
+     */
     @InputImport(name="executionMessage")
     private final @Nullable String executionMessage;
 
@@ -38,6 +54,10 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends io.pulum
         return this.executionMessage == null ? Optional.empty() : Optional.ofNullable(this.executionMessage);
     }
 
+    /**
+     * Script execution status.
+     * 
+     */
     @InputImport(name="executionState")
     private final @Nullable String executionState;
 
@@ -45,6 +65,10 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends io.pulum
         return this.executionState == null ? Optional.empty() : Optional.ofNullable(this.executionState);
     }
 
+    /**
+     * Exit code returned from script execution.
+     * 
+     */
     @InputImport(name="exitCode")
     private final @Nullable Integer exitCode;
 
@@ -52,6 +76,10 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends io.pulum
         return this.exitCode == null ? Optional.empty() : Optional.ofNullable(this.exitCode);
     }
 
+    /**
+     * Script output stream.
+     * 
+     */
     @InputImport(name="output")
     private final @Nullable String output;
 
@@ -59,6 +87,10 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends io.pulum
         return this.output == null ? Optional.empty() : Optional.ofNullable(this.output);
     }
 
+    /**
+     * Script start time.
+     * 
+     */
     @InputImport(name="startTime")
     private final @Nullable String startTime;
 
@@ -66,6 +98,10 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends io.pulum
         return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
     }
 
+    /**
+     * The resource status information.
+     * 
+     */
     @InputImport(name="statuses")
     private final @Nullable List<InstanceViewStatusResponse> statuses;
 

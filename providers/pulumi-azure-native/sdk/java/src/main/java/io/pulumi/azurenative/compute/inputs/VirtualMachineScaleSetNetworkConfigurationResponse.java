@@ -15,10 +15,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes a virtual machine scale set network profile's network configurations.
+ * 
+ */
 public final class VirtualMachineScaleSetNetworkConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VirtualMachineScaleSetNetworkConfigurationResponse Empty = new VirtualMachineScaleSetNetworkConfigurationResponse();
 
+    /**
+     * Specify what happens to the network interface when the VM is deleted
+     * 
+     */
     @InputImport(name="deleteOption")
     private final @Nullable String deleteOption;
 
@@ -26,6 +34,10 @@ public final class VirtualMachineScaleSetNetworkConfigurationResponse extends io
         return this.deleteOption == null ? Optional.empty() : Optional.ofNullable(this.deleteOption);
     }
 
+    /**
+     * The dns settings to be applied on the network interfaces.
+     * 
+     */
     @InputImport(name="dnsSettings")
     private final @Nullable VirtualMachineScaleSetNetworkConfigurationDnsSettingsResponse dnsSettings;
 
@@ -33,6 +45,10 @@ public final class VirtualMachineScaleSetNetworkConfigurationResponse extends io
         return this.dnsSettings == null ? Optional.empty() : Optional.ofNullable(this.dnsSettings);
     }
 
+    /**
+     * Specifies whether the network interface is accelerated networking-enabled.
+     * 
+     */
     @InputImport(name="enableAcceleratedNetworking")
     private final @Nullable Boolean enableAcceleratedNetworking;
 
@@ -40,6 +56,10 @@ public final class VirtualMachineScaleSetNetworkConfigurationResponse extends io
         return this.enableAcceleratedNetworking == null ? Optional.empty() : Optional.ofNullable(this.enableAcceleratedNetworking);
     }
 
+    /**
+     * Specifies whether the network interface is FPGA networking-enabled.
+     * 
+     */
     @InputImport(name="enableFpga")
     private final @Nullable Boolean enableFpga;
 
@@ -47,6 +67,10 @@ public final class VirtualMachineScaleSetNetworkConfigurationResponse extends io
         return this.enableFpga == null ? Optional.empty() : Optional.ofNullable(this.enableFpga);
     }
 
+    /**
+     * Whether IP forwarding enabled on this NIC.
+     * 
+     */
     @InputImport(name="enableIPForwarding")
     private final @Nullable Boolean enableIPForwarding;
 
@@ -54,6 +78,10 @@ public final class VirtualMachineScaleSetNetworkConfigurationResponse extends io
         return this.enableIPForwarding == null ? Optional.empty() : Optional.ofNullable(this.enableIPForwarding);
     }
 
+    /**
+     * Resource Id
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -61,6 +89,10 @@ public final class VirtualMachineScaleSetNetworkConfigurationResponse extends io
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * Specifies the IP configurations of the network interface.
+     * 
+     */
     @InputImport(name="ipConfigurations", required=true)
     private final List<VirtualMachineScaleSetIPConfigurationResponse> ipConfigurations;
 
@@ -68,6 +100,10 @@ public final class VirtualMachineScaleSetNetworkConfigurationResponse extends io
         return this.ipConfigurations;
     }
 
+    /**
+     * The network configuration name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -75,6 +111,10 @@ public final class VirtualMachineScaleSetNetworkConfigurationResponse extends io
         return this.name;
     }
 
+    /**
+     * The network security group.
+     * 
+     */
     @InputImport(name="networkSecurityGroup")
     private final @Nullable SubResourceResponse networkSecurityGroup;
 
@@ -82,6 +122,10 @@ public final class VirtualMachineScaleSetNetworkConfigurationResponse extends io
         return this.networkSecurityGroup == null ? Optional.empty() : Optional.ofNullable(this.networkSecurityGroup);
     }
 
+    /**
+     * Specifies the primary network interface in case the virtual machine has more than 1 network interface.
+     * 
+     */
     @InputImport(name="primary")
     private final @Nullable Boolean primary;
 

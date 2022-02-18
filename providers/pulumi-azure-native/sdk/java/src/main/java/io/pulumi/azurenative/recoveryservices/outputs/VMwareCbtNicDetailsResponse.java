@@ -11,14 +11,50 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class VMwareCbtNicDetailsResponse {
+    /**
+     * A value indicating whether this is the primary NIC.
+     * 
+     */
     private final @Nullable String isPrimaryNic;
+    /**
+     * A value indicating whether this NIC is selected for migration.
+     * 
+     */
     private final @Nullable String isSelectedForMigration;
+    /**
+     * The NIC Id.
+     * 
+     */
     private final String nicId;
+    /**
+     * The source IP address.
+     * 
+     */
     private final String sourceIPAddress;
+    /**
+     * The source IP address type.
+     * 
+     */
     private final String sourceIPAddressType;
+    /**
+     * Source network Id.
+     * 
+     */
     private final String sourceNetworkId;
+    /**
+     * The target IP address.
+     * 
+     */
     private final @Nullable String targetIPAddress;
+    /**
+     * The target IP address type.
+     * 
+     */
     private final @Nullable String targetIPAddressType;
+    /**
+     * Target subnet name.
+     * 
+     */
     private final @Nullable String targetSubnetName;
 
     @OutputCustomType.Constructor({"isPrimaryNic","isSelectedForMigration","nicId","sourceIPAddress","sourceIPAddressType","sourceNetworkId","targetIPAddress","targetIPAddressType","targetSubnetName"})
@@ -43,30 +79,66 @@ public final class VMwareCbtNicDetailsResponse {
         this.targetSubnetName = targetSubnetName;
     }
 
+    /**
+     * A value indicating whether this is the primary NIC.
+     * 
+     */
     public Optional<String> getIsPrimaryNic() {
         return Optional.ofNullable(this.isPrimaryNic);
     }
+    /**
+     * A value indicating whether this NIC is selected for migration.
+     * 
+     */
     public Optional<String> getIsSelectedForMigration() {
         return Optional.ofNullable(this.isSelectedForMigration);
     }
+    /**
+     * The NIC Id.
+     * 
+     */
     public String getNicId() {
         return this.nicId;
     }
+    /**
+     * The source IP address.
+     * 
+     */
     public String getSourceIPAddress() {
         return this.sourceIPAddress;
     }
+    /**
+     * The source IP address type.
+     * 
+     */
     public String getSourceIPAddressType() {
         return this.sourceIPAddressType;
     }
+    /**
+     * Source network Id.
+     * 
+     */
     public String getSourceNetworkId() {
         return this.sourceNetworkId;
     }
+    /**
+     * The target IP address.
+     * 
+     */
     public Optional<String> getTargetIPAddress() {
         return Optional.ofNullable(this.targetIPAddress);
     }
+    /**
+     * The target IP address type.
+     * 
+     */
     public Optional<String> getTargetIPAddressType() {
         return Optional.ofNullable(this.targetIPAddressType);
     }
+    /**
+     * Target subnet name.
+     * 
+     */
     public Optional<String> getTargetSubnetName() {
         return Optional.ofNullable(this.targetSubnetName);
     }

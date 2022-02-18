@@ -12,45 +12,103 @@ import io.pulumi.core.internal.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * The AWS::EC2::TransitGatewayMulticastDomainAssociation type
+ * 
+ */
 @ResourceType(type="aws-native:ec2:TransitGatewayMulticastDomainAssociation")
 public class TransitGatewayMulticastDomainAssociation extends io.pulumi.resources.CustomResource {
+    /**
+     * The ID of the resource.
+     * 
+     */
     @OutputExport(name="resourceId", type=String.class, parameters={})
     private Output<String> resourceId;
 
+    /**
+     * @return The ID of the resource.
+     * 
+     */
     public Output<String> getResourceId() {
         return this.resourceId;
     }
+    /**
+     * The type of resource, for example a VPC attachment.
+     * 
+     */
     @OutputExport(name="resourceType", type=String.class, parameters={})
     private Output<String> resourceType;
 
+    /**
+     * @return The type of resource, for example a VPC attachment.
+     * 
+     */
     public Output<String> getPropResourceType() {
         return this.resourceType;
     }
+    /**
+     * The state of the subnet association.
+     * 
+     */
     @OutputExport(name="state", type=String.class, parameters={})
     private Output<String> state;
 
+    /**
+     * @return The state of the subnet association.
+     * 
+     */
     public Output<String> getState() {
         return this.state;
     }
+    /**
+     * The IDs of the subnets to associate with the transit gateway multicast domain.
+     * 
+     */
     @OutputExport(name="subnetId", type=String.class, parameters={})
     private Output<String> subnetId;
 
+    /**
+     * @return The IDs of the subnets to associate with the transit gateway multicast domain.
+     * 
+     */
     public Output<String> getSubnetId() {
         return this.subnetId;
     }
+    /**
+     * The ID of the transit gateway attachment.
+     * 
+     */
     @OutputExport(name="transitGatewayAttachmentId", type=String.class, parameters={})
     private Output<String> transitGatewayAttachmentId;
 
+    /**
+     * @return The ID of the transit gateway attachment.
+     * 
+     */
     public Output<String> getTransitGatewayAttachmentId() {
         return this.transitGatewayAttachmentId;
     }
+    /**
+     * The ID of the transit gateway multicast domain.
+     * 
+     */
     @OutputExport(name="transitGatewayMulticastDomainId", type=String.class, parameters={})
     private Output<String> transitGatewayMulticastDomainId;
 
+    /**
+     * @return The ID of the transit gateway multicast domain.
+     * 
+     */
     public Output<String> getTransitGatewayMulticastDomainId() {
         return this.transitGatewayMulticastDomainId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public TransitGatewayMulticastDomainAssociation(String name, TransitGatewayMulticastDomainAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:ec2:TransitGatewayMulticastDomainAssociation", name, args == null ? TransitGatewayMulticastDomainAssociationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -66,6 +124,14 @@ public class TransitGatewayMulticastDomainAssociation extends io.pulumi.resource
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static TransitGatewayMulticastDomainAssociation get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new TransitGatewayMulticastDomainAssociation(name, id, options);
     }

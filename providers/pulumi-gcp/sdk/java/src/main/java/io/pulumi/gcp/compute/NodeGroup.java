@@ -16,81 +16,228 @@ import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Represents a NodeGroup resource to manage a group of sole-tenant nodes.
+ * 
+ * To get more information about NodeGroup, see:
+ * 
+ * * [API documentation](https://cloud.google.com/compute/docs/reference/rest/v1/nodeGroups)
+ * * How-to Guides
+ *     * [Sole-Tenant Nodes](https://cloud.google.com/compute/docs/nodes/)
+ * 
+ * > **Warning:** Due to limitations of the API, this provider cannot update the
+ * number of nodes in a node group and changes to node group size either
+ * through provider config or through external changes will cause
+ * the provider to delete and recreate the node group.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * NodeGroup can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/nodeGroup:NodeGroup default projects/{{project}}/zones/{{zone}}/nodeGroups/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/nodeGroup:NodeGroup default {{project}}/{{zone}}/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/nodeGroup:NodeGroup default {{zone}}/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/nodeGroup:NodeGroup default {{name}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:compute/nodeGroup:NodeGroup")
 public class NodeGroup extends io.pulumi.resources.CustomResource {
+    /**
+     * If you use sole-tenant nodes for your workloads, you can use the node
+     * group autoscaler to automatically manage the sizes of your node groups.
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="autoscalingPolicy", type=NodeGroupAutoscalingPolicy.class, parameters={})
     private Output<NodeGroupAutoscalingPolicy> autoscalingPolicy;
 
+    /**
+     * @return If you use sole-tenant nodes for your workloads, you can use the node
+     * group autoscaler to automatically manage the sizes of your node groups.
+     * Structure is documented below.
+     * 
+     */
     public Output<NodeGroupAutoscalingPolicy> getAutoscalingPolicy() {
         return this.autoscalingPolicy;
     }
+    /**
+     * Creation timestamp in RFC3339 text format.
+     * 
+     */
     @OutputExport(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
+    /**
+     * @return Creation timestamp in RFC3339 text format.
+     * 
+     */
     public Output<String> getCreationTimestamp() {
         return this.creationTimestamp;
     }
+    /**
+     * An optional textual description of the resource.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return An optional textual description of the resource.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * The initial number of nodes in the node group. One of `initial_size` or `size` must be specified.
+     * 
+     */
     @OutputExport(name="initialSize", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> initialSize;
 
+    /**
+     * @return The initial number of nodes in the node group. One of `initial_size` or `size` must be specified.
+     * 
+     */
     public Output</* @Nullable */ Integer> getInitialSize() {
         return this.initialSize;
     }
+    /**
+     * Specifies how to handle instances when a node in the group undergoes maintenance. Set to one of: DEFAULT, RESTART_IN_PLACE, or MIGRATE_WITHIN_NODE_GROUP. The default value is DEFAULT.
+     * 
+     */
     @OutputExport(name="maintenancePolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> maintenancePolicy;
 
+    /**
+     * @return Specifies how to handle instances when a node in the group undergoes maintenance. Set to one of: DEFAULT, RESTART_IN_PLACE, or MIGRATE_WITHIN_NODE_GROUP. The default value is DEFAULT.
+     * 
+     */
     public Output</* @Nullable */ String> getMaintenancePolicy() {
         return this.maintenancePolicy;
     }
+    /**
+     * contains properties for the timeframe of maintenance
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="maintenanceWindow", type=NodeGroupMaintenanceWindow.class, parameters={})
     private Output</* @Nullable */ NodeGroupMaintenanceWindow> maintenanceWindow;
 
+    /**
+     * @return contains properties for the timeframe of maintenance
+     * Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ NodeGroupMaintenanceWindow> getMaintenanceWindow() {
         return this.maintenanceWindow;
     }
+    /**
+     * Name of the resource.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Name of the resource.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The URL of the node template to which this node group belongs.
+     * 
+     */
     @OutputExport(name="nodeTemplate", type=String.class, parameters={})
     private Output<String> nodeTemplate;
 
+    /**
+     * @return The URL of the node template to which this node group belongs.
+     * 
+     */
     public Output<String> getNodeTemplate() {
         return this.nodeTemplate;
     }
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * The URI of the created resource.
+     * 
+     */
     @OutputExport(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
+    /**
+     * @return The URI of the created resource.
+     * 
+     */
     public Output<String> getSelfLink() {
         return this.selfLink;
     }
+    /**
+     * The total number of nodes in the node group. One of `initial_size` or `size` must be specified.
+     * 
+     */
     @OutputExport(name="size", type=Integer.class, parameters={})
     private Output<Integer> size;
 
+    /**
+     * @return The total number of nodes in the node group. One of `initial_size` or `size` must be specified.
+     * 
+     */
     public Output<Integer> getSize() {
         return this.size;
     }
+    /**
+     * Zone where this node group is located
+     * 
+     */
     @OutputExport(name="zone", type=String.class, parameters={})
     private Output<String> zone;
 
+    /**
+     * @return Zone where this node group is located
+     * 
+     */
     public Output<String> getZone() {
         return this.zone;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public NodeGroup(String name, NodeGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:compute/nodeGroup:NodeGroup", name, args == null ? NodeGroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -106,6 +253,15 @@ public class NodeGroup extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static NodeGroup get(String name, Input<String> id, @Nullable NodeGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new NodeGroup(name, id, state, options);
     }

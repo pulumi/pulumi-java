@@ -17,6 +17,10 @@ public final class HoursOfOperationArgs extends io.pulumi.resources.ResourceArgs
 
     public static final HoursOfOperationArgs Empty = new HoursOfOperationArgs();
 
+    /**
+     * Configuration information for the hours of operation: day, start time, and end time.
+     * 
+     */
     @InputImport(name="config", required=true)
     private final Input<List<HoursOfOperationConfigArgs>> config;
 
@@ -24,6 +28,10 @@ public final class HoursOfOperationArgs extends io.pulumi.resources.ResourceArgs
         return this.config;
     }
 
+    /**
+     * The description of the hours of operation.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -31,6 +39,10 @@ public final class HoursOfOperationArgs extends io.pulumi.resources.ResourceArgs
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The identifier of the Amazon Connect instance.
+     * 
+     */
     @InputImport(name="instanceArn", required=true)
     private final Input<String> instanceArn;
 
@@ -38,6 +50,10 @@ public final class HoursOfOperationArgs extends io.pulumi.resources.ResourceArgs
         return this.instanceArn;
     }
 
+    /**
+     * The name of the hours of operation.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -45,6 +61,10 @@ public final class HoursOfOperationArgs extends io.pulumi.resources.ResourceArgs
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * One or more tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<HoursOfOperationTagArgs>> tags;
 
@@ -52,6 +72,10 @@ public final class HoursOfOperationArgs extends io.pulumi.resources.ResourceArgs
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The time zone of the hours of operation.
+     * 
+     */
     @InputImport(name="timeZone", required=true)
     private final Input<String> timeZone;
 

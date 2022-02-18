@@ -18,6 +18,10 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BlobArgs Empty = new BlobArgs();
 
+    /**
+     * The access tier of the storage blob.
+     * 
+     */
     @InputImport(name="accessTier")
     private final @Nullable Input<BlobAccessTier> accessTier;
 
@@ -25,6 +29,10 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
         return this.accessTier == null ? Input.empty() : this.accessTier;
     }
 
+    /**
+     * Specifies the storage account in which to create the storage container.
+     * 
+     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -32,6 +40,10 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountName;
     }
 
+    /**
+     * The name of the storage blob. Must be unique within the storage container the blob is located.
+     * 
+     */
     @InputImport(name="blobName")
     private final @Nullable Input<String> blobName;
 
@@ -39,6 +51,10 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
         return this.blobName == null ? Input.empty() : this.blobName;
     }
 
+    /**
+     * The name of the storage container in which this blob should be created.
+     * 
+     */
     @InputImport(name="containerName", required=true)
     private final Input<String> containerName;
 
@@ -46,6 +62,10 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
         return this.containerName;
     }
 
+    /**
+     * The MD5 sum of the blob contents. Cannot be defined if blob type is Append.
+     * 
+     */
     @InputImport(name="contentMd5")
     private final @Nullable Input<String> contentMd5;
 
@@ -53,6 +73,10 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
         return this.contentMd5 == null ? Input.empty() : this.contentMd5;
     }
 
+    /**
+     * The content type of the storage blob. Defaults to `application/octet-stream`.
+     * 
+     */
     @InputImport(name="contentType")
     private final @Nullable Input<String> contentType;
 
@@ -60,6 +84,10 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
         return this.contentType == null ? Input.empty() : this.contentType;
     }
 
+    /**
+     * A map of custom blob metadata.
+     * 
+     */
     @InputImport(name="metadata")
     private final @Nullable Input<Map<String,String>> metadata;
 
@@ -67,6 +95,10 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
+    /**
+     * The name of the resource group within the user's subscription.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -74,6 +106,10 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * An asset to copy to the blob contents. This field cannot be specified for Append blobs.
+     * 
+     */
     @InputImport(name="source")
     private final @Nullable Input<AssetOrArchive> source;
 
@@ -81,6 +117,10 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
         return this.source == null ? Input.empty() : this.source;
     }
 
+    /**
+     * The type of the storage blob to be created. Defaults to 'Block'.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<BlobType> type;
 

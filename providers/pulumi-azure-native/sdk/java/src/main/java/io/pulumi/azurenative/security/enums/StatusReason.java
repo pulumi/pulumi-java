@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * A description of why the `status` has its value
+     * 
+     */
     @EnumType
     public enum StatusReason {
         Expired("Expired"),

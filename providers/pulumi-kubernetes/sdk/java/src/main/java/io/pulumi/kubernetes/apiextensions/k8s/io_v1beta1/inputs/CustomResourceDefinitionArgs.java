@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * CustomResourceDefinition represents a resource that should be exposed on the API server.  Its name MUST be in the format <.spec.name>.<.spec.group>. Deprecated in v1.16, planned for removal in v1.19. Use apiextensions.k8s.io/v1 CustomResourceDefinition instead.
+ * 
+ */
 public final class CustomResourceDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CustomResourceDefinitionArgs Empty = new CustomResourceDefinitionArgs();
 
+    /**
+     * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+     * 
+     */
     @InputImport(name="apiVersion")
     private final @Nullable Input<String> apiVersion;
 
@@ -24,6 +32,10 @@ public final class CustomResourceDefinitionArgs extends io.pulumi.resources.Reso
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
     }
 
+    /**
+     * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -38,6 +50,10 @@ public final class CustomResourceDefinitionArgs extends io.pulumi.resources.Reso
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
+    /**
+     * spec describes how the user wants the resources to appear
+     * 
+     */
     @InputImport(name="spec", required=true)
     private final Input<CustomResourceDefinitionSpecArgs> spec;
 
@@ -45,6 +61,10 @@ public final class CustomResourceDefinitionArgs extends io.pulumi.resources.Reso
         return this.spec;
     }
 
+    /**
+     * status indicates the actual state of the CustomResourceDefinition
+     * 
+     */
     @InputImport(name="status")
     private final @Nullable Input<CustomResourceDefinitionStatusArgs> status;
 

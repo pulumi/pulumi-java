@@ -15,6 +15,10 @@ public final class WorkflowTemplateJobPysparkJobLoggingConfigArgs extends io.pul
 
     public static final WorkflowTemplateJobPysparkJobLoggingConfigArgs Empty = new WorkflowTemplateJobPysparkJobLoggingConfigArgs();
 
+    /**
+     * The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
+     * 
+     */
     @InputImport(name="driverLogLevels")
     private final @Nullable Input<Map<String,String>> driverLogLevels;
 

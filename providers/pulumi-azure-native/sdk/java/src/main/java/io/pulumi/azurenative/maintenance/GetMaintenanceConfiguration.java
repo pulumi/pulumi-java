@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMaintenanceConfiguration {
+/**
+ * Maintenance configuration record type
+ * API Version: 2020-04-01.
+ * 
+ *
+ * Maintenance configuration record type
+ * 
+ */
     public static CompletableFuture<GetMaintenanceConfigurationResult> invokeAsync(GetMaintenanceConfigurationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:maintenance:getMaintenanceConfiguration", TypeShape.of(GetMaintenanceConfigurationResult.class), args == null ? GetMaintenanceConfigurationArgs.Empty : args, Utilities.withVersion(options));
     }

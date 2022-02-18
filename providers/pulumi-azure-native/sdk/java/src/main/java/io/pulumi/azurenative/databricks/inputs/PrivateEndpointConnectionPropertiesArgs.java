@@ -9,10 +9,18 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * The properties of a private endpoint connection
+ * 
+ */
 public final class PrivateEndpointConnectionPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PrivateEndpointConnectionPropertiesArgs Empty = new PrivateEndpointConnectionPropertiesArgs();
 
+    /**
+     * Private endpoint connection state
+     * 
+     */
     @InputImport(name="privateLinkServiceConnectionState", required=true)
     private final Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 

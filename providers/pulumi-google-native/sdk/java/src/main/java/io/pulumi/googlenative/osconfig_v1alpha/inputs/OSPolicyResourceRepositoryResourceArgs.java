@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A resource that manages a package repository.
+ * 
+ */
 public final class OSPolicyResourceRepositoryResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OSPolicyResourceRepositoryResourceArgs Empty = new OSPolicyResourceRepositoryResourceArgs();
 
+    /**
+     * An Apt Repository.
+     * 
+     */
     @InputImport(name="apt")
     private final @Nullable Input<OSPolicyResourceRepositoryResourceAptRepositoryArgs> apt;
 
@@ -24,6 +32,10 @@ public final class OSPolicyResourceRepositoryResourceArgs extends io.pulumi.reso
         return this.apt == null ? Input.empty() : this.apt;
     }
 
+    /**
+     * A Goo Repository.
+     * 
+     */
     @InputImport(name="goo")
     private final @Nullable Input<OSPolicyResourceRepositoryResourceGooRepositoryArgs> goo;
 
@@ -31,6 +43,10 @@ public final class OSPolicyResourceRepositoryResourceArgs extends io.pulumi.reso
         return this.goo == null ? Input.empty() : this.goo;
     }
 
+    /**
+     * A Yum Repository.
+     * 
+     */
     @InputImport(name="yum")
     private final @Nullable Input<OSPolicyResourceRepositoryResourceYumRepositoryArgs> yum;
 
@@ -38,6 +54,10 @@ public final class OSPolicyResourceRepositoryResourceArgs extends io.pulumi.reso
         return this.yum == null ? Input.empty() : this.yum;
     }
 
+    /**
+     * A Zypper Repository.
+     * 
+     */
     @InputImport(name="zypper")
     private final @Nullable Input<OSPolicyResourceRepositoryResourceZypperRepositoryArgs> zypper;
 

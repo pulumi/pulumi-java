@@ -24,6 +24,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceArgs Empty = new ServiceArgs();
 
+    /**
+     * Immutable. The database type that the Metastore service stores its data.
+     * 
+     */
     @InputImport(name="databaseType")
     private final @Nullable Input<ServiceDatabaseType> databaseType;
 
@@ -31,6 +35,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.databaseType == null ? Input.empty() : this.databaseType;
     }
 
+    /**
+     * Immutable. Information used to configure the Dataproc Metastore service to encrypt customer data at rest. Cannot be updated.
+     * 
+     */
     @InputImport(name="encryptionConfig")
     private final @Nullable Input<EncryptionConfigArgs> encryptionConfig;
 
@@ -38,6 +46,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.encryptionConfig == null ? Input.empty() : this.encryptionConfig;
     }
 
+    /**
+     * Configuration information specific to running Hive metastore software as the metastore service.
+     * 
+     */
     @InputImport(name="hiveMetastoreConfig")
     private final @Nullable Input<HiveMetastoreConfigArgs> hiveMetastoreConfig;
 
@@ -45,6 +57,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.hiveMetastoreConfig == null ? Input.empty() : this.hiveMetastoreConfig;
     }
 
+    /**
+     * User-defined labels for the metastore service.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -59,6 +75,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The one hour maintenance window of the metastore service. This specifies when the service can be restarted for maintenance purposes in UTC time. Maintenance window is not needed for services with the SPANNER database type.
+     * 
+     */
     @InputImport(name="maintenanceWindow")
     private final @Nullable Input<MaintenanceWindowArgs> maintenanceWindow;
 
@@ -66,6 +86,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.maintenanceWindow == null ? Input.empty() : this.maintenanceWindow;
     }
 
+    /**
+     * The setting that defines how metastore metadata should be integrated with external services and systems.
+     * 
+     */
     @InputImport(name="metadataIntegration")
     private final @Nullable Input<MetadataIntegrationArgs> metadataIntegration;
 
@@ -73,6 +97,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.metadataIntegration == null ? Input.empty() : this.metadataIntegration;
     }
 
+    /**
+     * Immutable. The relative resource name of the metastore service, of the form:projects/{project_number}/locations/{location_id}/services/{service_id}.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -80,6 +108,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Immutable. The relative resource name of the VPC network on which the instance can be accessed. It is specified in the following form:projects/{project_number}/global/networks/{network_id}.
+     * 
+     */
     @InputImport(name="network")
     private final @Nullable Input<String> network;
 
@@ -87,6 +119,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.network == null ? Input.empty() : this.network;
     }
 
+    /**
+     * Immutable. The configuration specifying the network settings for the Dataproc Metastore service.
+     * 
+     */
     @InputImport(name="networkConfig")
     private final @Nullable Input<NetworkConfigArgs> networkConfig;
 
@@ -94,6 +130,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.networkConfig == null ? Input.empty() : this.networkConfig;
     }
 
+    /**
+     * The TCP port at which the metastore service is reached. Default: 9083.
+     * 
+     */
     @InputImport(name="port")
     private final @Nullable Input<Integer> port;
 
@@ -108,6 +148,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Immutable. The release channel of the service. If unspecified, defaults to STABLE.
+     * 
+     */
     @InputImport(name="releaseChannel")
     private final @Nullable Input<ServiceReleaseChannel> releaseChannel;
 
@@ -129,6 +173,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceId;
     }
 
+    /**
+     * The tier of the service.
+     * 
+     */
     @InputImport(name="tier")
     private final @Nullable Input<ServiceTier> tier;
 

@@ -13,8 +13,20 @@ import javax.annotation.Nullable;
 public final class AzureFileShareConfigurationResponse {
     private final String accountKey;
     private final String accountName;
+    /**
+     * This is of the form 'https://{account}.file.core.windows.net/'.
+     * 
+     */
     private final String azureFileUrl;
+    /**
+     * These are 'net use' options in Windows and 'mount' options in Linux.
+     * 
+     */
     private final @Nullable String mountOptions;
+    /**
+     * All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
+     * 
+     */
     private final String relativeMountPath;
 
     @OutputCustomType.Constructor({"accountKey","accountName","azureFileUrl","mountOptions","relativeMountPath"})
@@ -37,12 +49,24 @@ public final class AzureFileShareConfigurationResponse {
     public String getAccountName() {
         return this.accountName;
     }
+    /**
+     * This is of the form 'https://{account}.file.core.windows.net/'.
+     * 
+     */
     public String getAzureFileUrl() {
         return this.azureFileUrl;
     }
+    /**
+     * These are 'net use' options in Windows and 'mount' options in Linux.
+     * 
+     */
     public Optional<String> getMountOptions() {
         return Optional.ofNullable(this.mountOptions);
     }
+    /**
+     * All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
+     * 
+     */
     public String getRelativeMountPath() {
         return this.relativeMountPath;
     }

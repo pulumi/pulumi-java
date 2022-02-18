@@ -12,6 +12,10 @@ public final class GetFlowArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetFlowArgs Empty = new GetFlowArgs();
 
+    /**
+     * The Amazon Resource Name (ARN), a unique identifier for any AWS resource, of the flow.
+     * 
+     */
     @InputImport(name="flowArn", required=true)
     private final String flowArn;
 

@@ -31,6 +31,10 @@ public final class MetricsSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Metrics Account resource name
+     * 
+     */
     @InputImport(name="metricsSourceName")
     private final @Nullable Input<String> metricsSourceName;
 
@@ -38,6 +42,10 @@ public final class MetricsSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.metricsSourceName == null ? Input.empty() : this.metricsSourceName;
     }
 
+    /**
+     * Monitor resource name
+     * 
+     */
     @InputImport(name="monitorName", required=true)
     private final Input<String> monitorName;
 
@@ -45,6 +53,10 @@ public final class MetricsSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.monitorName;
     }
 
+    /**
+     * Properties specific to the monitor resource.
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<MonitorPropertiesArgs> properties;
 
@@ -52,6 +64,10 @@ public final class MetricsSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

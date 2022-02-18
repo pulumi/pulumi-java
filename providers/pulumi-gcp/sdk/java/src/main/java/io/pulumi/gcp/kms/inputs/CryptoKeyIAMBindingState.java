@@ -16,6 +16,11 @@ public final class CryptoKeyIAMBindingState extends io.pulumi.resources.Resource
 
     public static final CryptoKeyIAMBindingState Empty = new CryptoKeyIAMBindingState();
 
+    /**
+     * ) An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="condition")
     private final @Nullable Input<CryptoKeyIAMBindingConditionGetArgs> condition;
 
@@ -23,6 +28,13 @@ public final class CryptoKeyIAMBindingState extends io.pulumi.resources.Resource
         return this.condition == null ? Input.empty() : this.condition;
     }
 
+    /**
+     * The crypto key ID, in the form
+     * `{project_id}/{location_name}/{key_ring_name}/{crypto_key_name}` or
+     * `{location_name}/{key_ring_name}/{crypto_key_name}`. In the second form,
+     * the provider's project setting will be used as a fallback.
+     * 
+     */
     @InputImport(name="cryptoKeyId")
     private final @Nullable Input<String> cryptoKeyId;
 
@@ -30,6 +42,10 @@ public final class CryptoKeyIAMBindingState extends io.pulumi.resources.Resource
         return this.cryptoKeyId == null ? Input.empty() : this.cryptoKeyId;
     }
 
+    /**
+     * (Computed) The etag of the project's IAM policy.
+     * 
+     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -44,6 +60,11 @@ public final class CryptoKeyIAMBindingState extends io.pulumi.resources.Resource
         return this.members == null ? Input.empty() : this.members;
     }
 
+    /**
+     * The role that should be applied. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     @InputImport(name="role")
     private final @Nullable Input<String> role;
 

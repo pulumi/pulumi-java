@@ -10,7 +10,18 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GameServerClusterConnectionInfo {
+    /**
+     * Reference of the GKE cluster where the game servers are installed.
+     * Structure is documented below.
+     * 
+     */
     private final GameServerClusterConnectionInfoGkeClusterReference gkeClusterReference;
+    /**
+     * Namespace designated on the game server cluster where the game server
+     * instances will be created. The namespace existence will be validated
+     * during creation.
+     * 
+     */
     private final String namespace;
 
     @OutputCustomType.Constructor({"gkeClusterReference","namespace"})
@@ -21,9 +32,20 @@ public final class GameServerClusterConnectionInfo {
         this.namespace = Objects.requireNonNull(namespace);
     }
 
+    /**
+     * Reference of the GKE cluster where the game servers are installed.
+     * Structure is documented below.
+     * 
+     */
     public GameServerClusterConnectionInfoGkeClusterReference getGkeClusterReference() {
         return this.gkeClusterReference;
     }
+    /**
+     * Namespace designated on the game server cluster where the game server
+     * instances will be created. The namespace existence will be validated
+     * during creation.
+     * 
+     */
     public String getNamespace() {
         return this.namespace;
     }

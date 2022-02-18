@@ -15,6 +15,10 @@ import javax.annotation.Nullable;
 public final class SchedulingPolicyFairsharePolicy {
     private final @Nullable Double computeReservation;
     private final @Nullable Double shareDecaySeconds;
+    /**
+     * List of Share Attributes
+     * 
+     */
     private final @Nullable List<SchedulingPolicyShareAttributes> shareDistribution;
 
     @OutputCustomType.Constructor({"computeReservation","shareDecaySeconds","shareDistribution"})
@@ -33,6 +37,10 @@ public final class SchedulingPolicyFairsharePolicy {
     public Optional<Double> getShareDecaySeconds() {
         return Optional.ofNullable(this.shareDecaySeconds);
     }
+    /**
+     * List of Share Attributes
+     * 
+     */
     public List<SchedulingPolicyShareAttributes> getShareDistribution() {
         return this.shareDistribution == null ? List.of() : this.shareDistribution;
     }

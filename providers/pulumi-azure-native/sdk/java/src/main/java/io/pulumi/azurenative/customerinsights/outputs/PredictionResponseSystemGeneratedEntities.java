@@ -12,8 +12,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PredictionResponseSystemGeneratedEntities {
+    /**
+     * Generated interaction types.
+     * 
+     */
     private final @Nullable List<String> generatedInteractionTypes;
+    /**
+     * Generated KPIs.
+     * 
+     */
     private final @Nullable Map<String,String> generatedKpis;
+    /**
+     * Generated links.
+     * 
+     */
     private final @Nullable List<String> generatedLinks;
 
     @OutputCustomType.Constructor({"generatedInteractionTypes","generatedKpis","generatedLinks"})
@@ -26,12 +38,24 @@ public final class PredictionResponseSystemGeneratedEntities {
         this.generatedLinks = generatedLinks;
     }
 
+    /**
+     * Generated interaction types.
+     * 
+     */
     public List<String> getGeneratedInteractionTypes() {
         return this.generatedInteractionTypes == null ? List.of() : this.generatedInteractionTypes;
     }
+    /**
+     * Generated KPIs.
+     * 
+     */
     public Map<String,String> getGeneratedKpis() {
         return this.generatedKpis == null ? Map.of() : this.generatedKpis;
     }
+    /**
+     * Generated links.
+     * 
+     */
     public List<String> getGeneratedLinks() {
         return this.generatedLinks == null ? List.of() : this.generatedLinks;
     }

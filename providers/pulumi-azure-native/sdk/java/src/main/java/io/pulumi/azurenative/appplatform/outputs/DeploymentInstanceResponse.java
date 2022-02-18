@@ -9,10 +9,30 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DeploymentInstanceResponse {
+    /**
+     * Discovery status of the deployment instance
+     * 
+     */
     private final String discoveryStatus;
+    /**
+     * Name of the deployment instance
+     * 
+     */
     private final String name;
+    /**
+     * Failed reason of the deployment instance
+     * 
+     */
     private final String reason;
+    /**
+     * Start time of the deployment instance
+     * 
+     */
     private final String startTime;
+    /**
+     * Status of the deployment instance
+     * 
+     */
     private final String status;
 
     @OutputCustomType.Constructor({"discoveryStatus","name","reason","startTime","status"})
@@ -29,18 +49,38 @@ public final class DeploymentInstanceResponse {
         this.status = Objects.requireNonNull(status);
     }
 
+    /**
+     * Discovery status of the deployment instance
+     * 
+     */
     public String getDiscoveryStatus() {
         return this.discoveryStatus;
     }
+    /**
+     * Name of the deployment instance
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Failed reason of the deployment instance
+     * 
+     */
     public String getReason() {
         return this.reason;
     }
+    /**
+     * Start time of the deployment instance
+     * 
+     */
     public String getStartTime() {
         return this.startTime;
     }
+    /**
+     * Status of the deployment instance
+     * 
+     */
     public String getStatus() {
         return this.status;
     }

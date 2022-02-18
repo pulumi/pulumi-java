@@ -12,6 +12,10 @@ public final class ListMonitorVMHostsArgs extends io.pulumi.resources.InvokeArgs
 
     public static final ListMonitorVMHostsArgs Empty = new ListMonitorVMHostsArgs();
 
+    /**
+     * Monitor resource name
+     * 
+     */
     @InputImport(name="monitorName", required=true)
     private final String monitorName;
 
@@ -19,6 +23,10 @@ public final class ListMonitorVMHostsArgs extends io.pulumi.resources.InvokeArgs
         return this.monitorName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

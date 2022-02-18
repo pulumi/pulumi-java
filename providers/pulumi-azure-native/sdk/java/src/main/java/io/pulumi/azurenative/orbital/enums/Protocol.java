@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Protocol either UDP or TCP.
+     * 
+     */
     @EnumType
     public enum Protocol {
         TCP("TCP"),

@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties of the FirewallPolicyNatRuleCollectionAction.
+ * 
+ */
 public final class FirewallPolicyNatRuleCollectionActionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FirewallPolicyNatRuleCollectionActionArgs Empty = new FirewallPolicyNatRuleCollectionActionArgs();
 
+    /**
+     * The type of action.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<Either<String,FirewallPolicyNatRuleCollectionActionType>> type;
 

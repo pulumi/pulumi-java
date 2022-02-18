@@ -9,6 +9,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SecretTopic {
+    /**
+     * The resource name of the Pub/Sub topic that will be published to, in the following format: projects/*{@literal /}topics/*.
+     * For publication to succeed, the Secret Manager Service Agent service account must have pubsub.publisher permissions on the topic.
+     * 
+     */
     private final String name;
 
     @OutputCustomType.Constructor({"name"})
@@ -16,6 +21,11 @@ public final class SecretTopic {
         this.name = Objects.requireNonNull(name);
     }
 
+    /**
+     * The resource name of the Pub/Sub topic that will be published to, in the following format: projects/*{@literal /}topics/*.
+     * For publication to succeed, the Secret Manager Service Agent service account must have pubsub.publisher permissions on the topic.
+     * 
+     */
     public String getName() {
         return this.name;
     }

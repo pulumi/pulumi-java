@@ -10,6 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * S3 Output location
+ * 
+ */
 public final class JobS3LocationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JobS3LocationArgs Empty = new JobS3LocationArgs();

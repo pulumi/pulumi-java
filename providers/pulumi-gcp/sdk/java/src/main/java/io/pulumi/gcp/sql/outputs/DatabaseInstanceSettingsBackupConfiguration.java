@@ -14,12 +14,42 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DatabaseInstanceSettingsBackupConfiguration {
+    /**
+     * Backup retention settings. The configuration is detailed below.
+     * 
+     */
     private final @Nullable DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettings backupRetentionSettings;
+    /**
+     * True if binary logging is enabled.
+     * Cannot be used with Postgres.
+     * 
+     */
     private final @Nullable Boolean binaryLogEnabled;
+    /**
+     * True if backup configuration is enabled.
+     * 
+     */
     private final @Nullable Boolean enabled;
+    /**
+     * The region where the backup will be stored
+     * 
+     */
     private final @Nullable String location;
+    /**
+     * True if Point-in-time recovery is enabled. Will restart database if enabled after instance creation. Valid only for PostgreSQL instances.
+     * 
+     */
     private final @Nullable Boolean pointInTimeRecoveryEnabled;
+    /**
+     * `HH:MM` format time indicating when backup
+     * configuration starts.
+     * 
+     */
     private final @Nullable String startTime;
+    /**
+     * The number of days of transaction logs we retain for point in time restore, from 1-7.
+     * 
+     */
     private final @Nullable Integer transactionLogRetentionDays;
 
     @OutputCustomType.Constructor({"backupRetentionSettings","binaryLogEnabled","enabled","location","pointInTimeRecoveryEnabled","startTime","transactionLogRetentionDays"})
@@ -40,24 +70,54 @@ public final class DatabaseInstanceSettingsBackupConfiguration {
         this.transactionLogRetentionDays = transactionLogRetentionDays;
     }
 
+    /**
+     * Backup retention settings. The configuration is detailed below.
+     * 
+     */
     public Optional<DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettings> getBackupRetentionSettings() {
         return Optional.ofNullable(this.backupRetentionSettings);
     }
+    /**
+     * True if binary logging is enabled.
+     * Cannot be used with Postgres.
+     * 
+     */
     public Optional<Boolean> getBinaryLogEnabled() {
         return Optional.ofNullable(this.binaryLogEnabled);
     }
+    /**
+     * True if backup configuration is enabled.
+     * 
+     */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
+    /**
+     * The region where the backup will be stored
+     * 
+     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
+    /**
+     * True if Point-in-time recovery is enabled. Will restart database if enabled after instance creation. Valid only for PostgreSQL instances.
+     * 
+     */
     public Optional<Boolean> getPointInTimeRecoveryEnabled() {
         return Optional.ofNullable(this.pointInTimeRecoveryEnabled);
     }
+    /**
+     * `HH:MM` format time indicating when backup
+     * configuration starts.
+     * 
+     */
     public Optional<String> getStartTime() {
         return Optional.ofNullable(this.startTime);
     }
+    /**
+     * The number of days of transaction logs we retain for point in time restore, from 1-7.
+     * 
+     */
     public Optional<Integer> getTransactionLogRetentionDays() {
         return Optional.ofNullable(this.transactionLogRetentionDays);
     }

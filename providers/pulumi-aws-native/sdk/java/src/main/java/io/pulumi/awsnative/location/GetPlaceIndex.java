@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPlaceIndex {
+/**
+ * Definition of AWS::Location::PlaceIndex Resource Type
+ * 
+ */
     public static CompletableFuture<GetPlaceIndexResult> invokeAsync(GetPlaceIndexArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:location:getPlaceIndex", TypeShape.of(GetPlaceIndexResult.class), args == null ? GetPlaceIndexArgs.Empty : args, Utilities.withVersion(options));
     }

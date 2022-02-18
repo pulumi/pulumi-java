@@ -23,6 +23,10 @@ public final class InstanceIAMBindingState extends io.pulumi.resources.ResourceA
         return this.condition == null ? Input.empty() : this.condition;
     }
 
+    /**
+     * (Computed) The etag of the instance's IAM policy.
+     * 
+     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -30,6 +34,10 @@ public final class InstanceIAMBindingState extends io.pulumi.resources.ResourceA
         return this.etag == null ? Input.empty() : this.etag;
     }
 
+    /**
+     * The name of the instance.
+     * 
+     */
     @InputImport(name="instance")
     private final @Nullable Input<String> instance;
 
@@ -44,6 +52,11 @@ public final class InstanceIAMBindingState extends io.pulumi.resources.ResourceA
         return this.members == null ? Input.empty() : this.members;
     }
 
+    /**
+     * The ID of the project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -51,6 +64,12 @@ public final class InstanceIAMBindingState extends io.pulumi.resources.ResourceA
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The role that should be applied. Only one
+     * `gcp.spanner.InstanceIAMBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     @InputImport(name="role")
     private final @Nullable Input<String> role;
 

@@ -15,6 +15,10 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DomainMappingArgs Empty = new DomainMappingArgs();
 
+    /**
+     * Relative name of the domain serving the application. Example: example.com.
+     * 
+     */
     @InputImport(name="domainName", required=true)
     private final Input<String> domainName;
 
@@ -22,6 +26,13 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
         return this.domainName;
     }
 
+    /**
+     * Whether the domain creation should override any existing mappings for this domain.
+     * By default, overrides are rejected.
+     * Default value is `STRICT`.
+     * Possible values are `STRICT` and `OVERRIDE`.
+     * 
+     */
     @InputImport(name="overrideStrategy")
     private final @Nullable Input<String> overrideStrategy;
 
@@ -29,6 +40,11 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
         return this.overrideStrategy == null ? Input.empty() : this.overrideStrategy;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -36,6 +52,11 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * SSL configuration for this domain. If unconfigured, this domain will not serve with SSL.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="sslSettings")
     private final @Nullable Input<DomainMappingSslSettingsArgs> sslSettings;
 

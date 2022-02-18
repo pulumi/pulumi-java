@@ -20,6 +20,10 @@ public final class TransferJobTransferSpecGetArgs extends io.pulumi.resources.Re
 
     public static final TransferJobTransferSpecGetArgs Empty = new TransferJobTransferSpecGetArgs();
 
+    /**
+     * An AWS S3 data source. Structure documented below.
+     * 
+     */
     @InputImport(name="awsS3DataSource")
     private final @Nullable Input<TransferJobTransferSpecAwsS3DataSourceGetArgs> awsS3DataSource;
 
@@ -27,6 +31,10 @@ public final class TransferJobTransferSpecGetArgs extends io.pulumi.resources.Re
         return this.awsS3DataSource == null ? Input.empty() : this.awsS3DataSource;
     }
 
+    /**
+     * An Azure Blob Storage data source. Structure documented below.
+     * 
+     */
     @InputImport(name="azureBlobStorageDataSource")
     private final @Nullable Input<TransferJobTransferSpecAzureBlobStorageDataSourceGetArgs> azureBlobStorageDataSource;
 
@@ -34,6 +42,10 @@ public final class TransferJobTransferSpecGetArgs extends io.pulumi.resources.Re
         return this.azureBlobStorageDataSource == null ? Input.empty() : this.azureBlobStorageDataSource;
     }
 
+    /**
+     * A Google Cloud Storage data sink. Structure documented below.
+     * 
+     */
     @InputImport(name="gcsDataSink")
     private final @Nullable Input<TransferJobTransferSpecGcsDataSinkGetArgs> gcsDataSink;
 
@@ -41,6 +53,10 @@ public final class TransferJobTransferSpecGetArgs extends io.pulumi.resources.Re
         return this.gcsDataSink == null ? Input.empty() : this.gcsDataSink;
     }
 
+    /**
+     * A Google Cloud Storage data source. Structure documented below.
+     * 
+     */
     @InputImport(name="gcsDataSource")
     private final @Nullable Input<TransferJobTransferSpecGcsDataSourceGetArgs> gcsDataSource;
 
@@ -48,6 +64,10 @@ public final class TransferJobTransferSpecGetArgs extends io.pulumi.resources.Re
         return this.gcsDataSource == null ? Input.empty() : this.gcsDataSource;
     }
 
+    /**
+     * A HTTP URL data source. Structure documented below.
+     * 
+     */
     @InputImport(name="httpDataSource")
     private final @Nullable Input<TransferJobTransferSpecHttpDataSourceGetArgs> httpDataSource;
 
@@ -55,6 +75,10 @@ public final class TransferJobTransferSpecGetArgs extends io.pulumi.resources.Re
         return this.httpDataSource == null ? Input.empty() : this.httpDataSource;
     }
 
+    /**
+     * Only objects that satisfy these object conditions are included in the set of data source and data sink objects. Object conditions based on objects' `last_modification_time` do not exclude objects in a data sink. Structure documented below.
+     * 
+     */
     @InputImport(name="objectConditions")
     private final @Nullable Input<TransferJobTransferSpecObjectConditionsGetArgs> objectConditions;
 
@@ -62,6 +86,10 @@ public final class TransferJobTransferSpecGetArgs extends io.pulumi.resources.Re
         return this.objectConditions == null ? Input.empty() : this.objectConditions;
     }
 
+    /**
+     * Characteristics of how to treat files from datasource and sink during job. If the option `delete_objects_unique_in_sink` is true, object conditions based on objects' `last_modification_time` are ignored and do not exclude objects in a data source or a data sink. Structure documented below.
+     * 
+     */
     @InputImport(name="transferOptions")
     private final @Nullable Input<TransferJobTransferSpecTransferOptionsGetArgs> transferOptions;
 

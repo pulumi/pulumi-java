@@ -15,6 +15,10 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JobTemplateArgs Empty = new JobTemplateArgs();
 
+    /**
+     * The configuration for this template.
+     * 
+     */
     @InputImport(name="config")
     private final @Nullable Input<JobConfigArgs> config;
 
@@ -36,6 +40,10 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The resource name of the job template. Format: `projects/{project_number}/locations/{location}/jobTemplates/{job_template}`
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

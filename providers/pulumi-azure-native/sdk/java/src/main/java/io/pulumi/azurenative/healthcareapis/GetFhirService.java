@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFhirService {
+/**
+ * The description of Fhir Service
+ * API Version: 2021-06-01-preview.
+ * 
+ *
+ * The description of Fhir Service
+ * 
+ */
     public static CompletableFuture<GetFhirServiceResult> invokeAsync(GetFhirServiceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:healthcareapis:getFhirService", TypeShape.of(GetFhirServiceResult.class), args == null ? GetFhirServiceArgs.Empty : args, Utilities.withVersion(options));
     }

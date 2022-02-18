@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The robot software suite used by the robot application.
+ * 
+ */
 public final class RobotApplicationRobotSoftwareSuiteArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RobotApplicationRobotSoftwareSuiteArgs Empty = new RobotApplicationRobotSoftwareSuiteArgs();
 
+    /**
+     * The name of robot software suite.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<RobotApplicationRobotSoftwareSuiteName> name;
 
@@ -22,6 +30,10 @@ public final class RobotApplicationRobotSoftwareSuiteArgs extends io.pulumi.reso
         return this.name;
     }
 
+    /**
+     * The version of robot software suite.
+     * 
+     */
     @InputImport(name="version")
     private final @Nullable Input<RobotApplicationRobotSoftwareSuiteVersion> version;
 

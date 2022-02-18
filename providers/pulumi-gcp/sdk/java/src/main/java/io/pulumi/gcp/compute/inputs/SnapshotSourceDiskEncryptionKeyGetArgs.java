@@ -14,6 +14,11 @@ public final class SnapshotSourceDiskEncryptionKeyGetArgs extends io.pulumi.reso
 
     public static final SnapshotSourceDiskEncryptionKeyGetArgs Empty = new SnapshotSourceDiskEncryptionKeyGetArgs();
 
+    /**
+     * The service account used for the encryption request for the given KMS key.
+     * If absent, the Compute Engine Service Agent service account is used.
+     * 
+     */
     @InputImport(name="kmsKeyServiceAccount")
     private final @Nullable Input<String> kmsKeyServiceAccount;
 
@@ -21,6 +26,12 @@ public final class SnapshotSourceDiskEncryptionKeyGetArgs extends io.pulumi.reso
         return this.kmsKeyServiceAccount == null ? Input.empty() : this.kmsKeyServiceAccount;
     }
 
+    /**
+     * Specifies a 256-bit customer-supplied encryption key, encoded in
+     * RFC 4648 base64 to either encrypt or decrypt this resource.
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     @InputImport(name="rawKey")
     private final @Nullable Input<String> rawKey;
 

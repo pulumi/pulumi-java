@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Set the access level and network port settings for SQL Server.
+ * 
+ */
 public final class SqlConnectivityUpdateSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SqlConnectivityUpdateSettingsArgs Empty = new SqlConnectivityUpdateSettingsArgs();
 
+    /**
+     * SQL Server connectivity option.
+     * 
+     */
     @InputImport(name="connectivityType")
     private final @Nullable Input<Either<String,ConnectivityType>> connectivityType;
 
@@ -24,6 +32,10 @@ public final class SqlConnectivityUpdateSettingsArgs extends io.pulumi.resources
         return this.connectivityType == null ? Input.empty() : this.connectivityType;
     }
 
+    /**
+     * SQL Server port.
+     * 
+     */
     @InputImport(name="port")
     private final @Nullable Input<Integer> port;
 
@@ -31,6 +43,10 @@ public final class SqlConnectivityUpdateSettingsArgs extends io.pulumi.resources
         return this.port == null ? Input.empty() : this.port;
     }
 
+    /**
+     * SQL Server sysadmin login password.
+     * 
+     */
     @InputImport(name="sqlAuthUpdatePassword")
     private final @Nullable Input<String> sqlAuthUpdatePassword;
 
@@ -38,6 +54,10 @@ public final class SqlConnectivityUpdateSettingsArgs extends io.pulumi.resources
         return this.sqlAuthUpdatePassword == null ? Input.empty() : this.sqlAuthUpdatePassword;
     }
 
+    /**
+     * SQL Server sysadmin login to create.
+     * 
+     */
     @InputImport(name="sqlAuthUpdateUserName")
     private final @Nullable Input<String> sqlAuthUpdateUserName;
 

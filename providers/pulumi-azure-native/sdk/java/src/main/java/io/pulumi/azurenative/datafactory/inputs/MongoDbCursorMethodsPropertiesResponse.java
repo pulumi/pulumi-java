@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Cursor methods for Mongodb query
+ * 
+ */
 public final class MongoDbCursorMethodsPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MongoDbCursorMethodsPropertiesResponse Empty = new MongoDbCursorMethodsPropertiesResponse();
 
+    /**
+     * Specifies the maximum number of documents the server returns. limit() is analogous to the LIMIT statement in a SQL database. Type: integer (or Expression with resultType integer).
+     * 
+     */
     @InputImport(name="limit")
     private final @Nullable Object limit;
 
@@ -21,6 +29,10 @@ public final class MongoDbCursorMethodsPropertiesResponse extends io.pulumi.reso
         return this.limit == null ? Optional.empty() : Optional.ofNullable(this.limit);
     }
 
+    /**
+     * Specifies the fields to return in the documents that match the query filter. To return all fields in the matching documents, omit this parameter. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Object project;
 
@@ -28,6 +40,10 @@ public final class MongoDbCursorMethodsPropertiesResponse extends io.pulumi.reso
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
+    /**
+     * Specifies the how many documents skipped and where MongoDB begins returning results. This approach may be useful in implementing paginated results. Type: integer (or Expression with resultType integer).
+     * 
+     */
     @InputImport(name="skip")
     private final @Nullable Object skip;
 
@@ -35,6 +51,10 @@ public final class MongoDbCursorMethodsPropertiesResponse extends io.pulumi.reso
         return this.skip == null ? Optional.empty() : Optional.ofNullable(this.skip);
     }
 
+    /**
+     * Specifies the order in which the query returns matching documents. Type: string (or Expression with resultType string). Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="sort")
     private final @Nullable Object sort;
 

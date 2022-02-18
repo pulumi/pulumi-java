@@ -10,10 +10,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Describes a partitioning scheme where an integer range is allocated evenly across a number of partitions.
+ * 
+ */
 public final class UniformInt64RangePartitionSchemeDescriptionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final UniformInt64RangePartitionSchemeDescriptionArgs Empty = new UniformInt64RangePartitionSchemeDescriptionArgs();
 
+    /**
+     * The number of partitions.
+     * 
+     */
     @InputImport(name="count", required=true)
     private final Input<Integer> count;
 
@@ -21,6 +29,11 @@ public final class UniformInt64RangePartitionSchemeDescriptionArgs extends io.pu
         return this.count;
     }
 
+    /**
+     * String indicating the upper bound of the partition key range that
+     * should be split between the partition ‘count’
+     * 
+     */
     @InputImport(name="highKey", required=true)
     private final Input<String> highKey;
 
@@ -28,6 +41,11 @@ public final class UniformInt64RangePartitionSchemeDescriptionArgs extends io.pu
         return this.highKey;
     }
 
+    /**
+     * String indicating the lower bound of the partition key range that
+     * should be split between the partition ‘count’
+     * 
+     */
     @InputImport(name="lowKey", required=true)
     private final Input<String> lowKey;
 
@@ -35,6 +53,11 @@ public final class UniformInt64RangePartitionSchemeDescriptionArgs extends io.pu
         return this.lowKey;
     }
 
+    /**
+     * Enumerates the ways that a service can be partitioned.
+     * Expected value is 'UniformInt64Range'.
+     * 
+     */
     @InputImport(name="partitionScheme", required=true)
     private final Input<String> partitionScheme;
 

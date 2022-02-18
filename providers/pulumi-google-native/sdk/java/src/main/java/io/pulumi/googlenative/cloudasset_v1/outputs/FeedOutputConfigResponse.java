@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class FeedOutputConfigResponse {
+    /**
+     * Destination on Pub/Sub.
+     * 
+     */
     private final PubsubDestinationResponse pubsubDestination;
 
     @OutputCustomType.Constructor({"pubsubDestination"})
@@ -16,6 +20,10 @@ public final class FeedOutputConfigResponse {
         this.pubsubDestination = Objects.requireNonNull(pubsubDestination);
     }
 
+    /**
+     * Destination on Pub/Sub.
+     * 
+     */
     public PubsubDestinationResponse getPubsubDestination() {
         return this.pubsubDestination;
     }

@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The unique identifying details of the AZURE ML environment.
+ * 
+ */
 public final class EnvironmentImageResponseResponseEnvironmentReference extends io.pulumi.resources.InvokeArgs {
 
     public static final EnvironmentImageResponseResponseEnvironmentReference Empty = new EnvironmentImageResponseResponseEnvironmentReference();
 
+    /**
+     * Name of the environment.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -21,6 +29,10 @@ public final class EnvironmentImageResponseResponseEnvironmentReference extends 
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Version of the environment.
+     * 
+     */
     @InputImport(name="version")
     private final @Nullable String version;
 

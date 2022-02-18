@@ -9,6 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A key-value pair to tag a resource.
+ * 
+ */
 public final class ResponsePlanTagArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResponsePlanTagArgs Empty = new ResponsePlanTagArgs();

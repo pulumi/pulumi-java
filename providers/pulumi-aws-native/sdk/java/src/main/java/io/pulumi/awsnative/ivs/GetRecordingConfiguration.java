@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRecordingConfiguration {
+/**
+ * Resource Type definition for AWS::IVS::RecordingConfiguration
+ * 
+ */
     public static CompletableFuture<GetRecordingConfigurationResult> invokeAsync(GetRecordingConfigurationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ivs:getRecordingConfiguration", TypeShape.of(GetRecordingConfigurationResult.class), args == null ? GetRecordingConfigurationArgs.Empty : args, Utilities.withVersion(options));
     }

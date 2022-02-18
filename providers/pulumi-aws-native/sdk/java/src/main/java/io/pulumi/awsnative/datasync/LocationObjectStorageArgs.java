@@ -18,6 +18,10 @@ public final class LocationObjectStorageArgs extends io.pulumi.resources.Resourc
 
     public static final LocationObjectStorageArgs Empty = new LocationObjectStorageArgs();
 
+    /**
+     * Optional. The access key is used if credentials are required to access the self-managed object storage server.
+     * 
+     */
     @InputImport(name="accessKey")
     private final @Nullable Input<String> accessKey;
 
@@ -25,6 +29,10 @@ public final class LocationObjectStorageArgs extends io.pulumi.resources.Resourc
         return this.accessKey == null ? Input.empty() : this.accessKey;
     }
 
+    /**
+     * The Amazon Resource Name (ARN) of the agents associated with the self-managed object storage server location.
+     * 
+     */
     @InputImport(name="agentArns", required=true)
     private final Input<List<String>> agentArns;
 
@@ -32,6 +40,10 @@ public final class LocationObjectStorageArgs extends io.pulumi.resources.Resourc
         return this.agentArns;
     }
 
+    /**
+     * The name of the bucket on the self-managed object storage server.
+     * 
+     */
     @InputImport(name="bucketName", required=true)
     private final Input<String> bucketName;
 
@@ -39,6 +51,10 @@ public final class LocationObjectStorageArgs extends io.pulumi.resources.Resourc
         return this.bucketName;
     }
 
+    /**
+     * Optional. The secret key is used if credentials are required to access the self-managed object storage server.
+     * 
+     */
     @InputImport(name="secretKey")
     private final @Nullable Input<String> secretKey;
 
@@ -46,6 +62,10 @@ public final class LocationObjectStorageArgs extends io.pulumi.resources.Resourc
         return this.secretKey == null ? Input.empty() : this.secretKey;
     }
 
+    /**
+     * The name of the self-managed object storage server. This value is the IP address or Domain Name Service (DNS) name of the object storage server.
+     * 
+     */
     @InputImport(name="serverHostname", required=true)
     private final Input<String> serverHostname;
 
@@ -53,6 +73,10 @@ public final class LocationObjectStorageArgs extends io.pulumi.resources.Resourc
         return this.serverHostname;
     }
 
+    /**
+     * The port that your self-managed server accepts inbound network traffic on.
+     * 
+     */
     @InputImport(name="serverPort")
     private final @Nullable Input<Integer> serverPort;
 
@@ -60,6 +84,10 @@ public final class LocationObjectStorageArgs extends io.pulumi.resources.Resourc
         return this.serverPort == null ? Input.empty() : this.serverPort;
     }
 
+    /**
+     * The protocol that the object storage server uses to communicate.
+     * 
+     */
     @InputImport(name="serverProtocol")
     private final @Nullable Input<LocationObjectStorageServerProtocol> serverProtocol;
 
@@ -67,6 +95,10 @@ public final class LocationObjectStorageArgs extends io.pulumi.resources.Resourc
         return this.serverProtocol == null ? Input.empty() : this.serverProtocol;
     }
 
+    /**
+     * The subdirectory in the self-managed object storage server that is used to read data from.
+     * 
+     */
     @InputImport(name="subdirectory")
     private final @Nullable Input<String> subdirectory;
 
@@ -74,6 +106,10 @@ public final class LocationObjectStorageArgs extends io.pulumi.resources.Resourc
         return this.subdirectory == null ? Input.empty() : this.subdirectory;
     }
 
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<LocationObjectStorageTagArgs>> tags;
 

@@ -14,6 +14,12 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * The AWS::IoTEvents::Input resource creates an input. To monitor your devices and processes, they must have a way to get telemetry data into AWS IoT Events. This is done by sending messages as *inputs* to AWS IoT Events. For more information, see [How to Use AWS IoT Events](https://docs.aws.amazon.com/iotevents/latest/developerguide/how-to-use-iotevents.html) in the *AWS IoT Events Developer Guide*.
+ * 
+ * ## Example Usage
+ * 
+ */
 @ResourceType(type="aws-native:iotevents:Input")
 public class Input extends io.pulumi.resources.CustomResource {
     @OutputExport(name="inputDefinition", type=InputDefinition.class, parameters={})
@@ -22,25 +28,59 @@ public class Input extends io.pulumi.resources.CustomResource {
     public Output<InputDefinition> getInputDefinition() {
         return this.inputDefinition;
     }
+    /**
+     * A brief description of the input.
+     * 
+     */
     @OutputExport(name="inputDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> inputDescription;
 
+    /**
+     * @return A brief description of the input.
+     * 
+     */
     public Output</* @Nullable */ String> getInputDescription() {
         return this.inputDescription;
     }
+    /**
+     * The name of the input.
+     * 
+     */
     @OutputExport(name="inputName", type=String.class, parameters={})
     private Output</* @Nullable */ String> inputName;
 
+    /**
+     * @return The name of the input.
+     * 
+     */
     public Output</* @Nullable */ String> getInputName() {
         return this.inputName;
     }
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     * For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html).
+     * 
+     */
     @OutputExport(name="tags", type=List.class, parameters={InputTag.class})
     private Output</* @Nullable */ List<InputTag>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     * For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html).
+     * 
+     */
     public Output</* @Nullable */ List<InputTag>> getTags() {
         return this.tags;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Input(String name, InputArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:iotevents:Input", name, args == null ? InputArgs.Empty : args, makeResourceOptions(options, io.pulumi.core.Input.empty()));
     }
@@ -56,6 +96,14 @@ public class Input extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Input get(String name, io.pulumi.core.Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Input(name, id, options);
     }

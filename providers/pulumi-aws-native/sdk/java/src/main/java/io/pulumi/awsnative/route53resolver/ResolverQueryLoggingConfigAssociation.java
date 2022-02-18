@@ -14,45 +14,103 @@ import io.pulumi.core.internal.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Resource schema for AWS::Route53Resolver::ResolverQueryLoggingConfigAssociation.
+ * 
+ */
 @ResourceType(type="aws-native:route53resolver:ResolverQueryLoggingConfigAssociation")
 public class ResolverQueryLoggingConfigAssociation extends io.pulumi.resources.CustomResource {
+    /**
+     * Rfc3339TimeString
+     * 
+     */
     @OutputExport(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
+    /**
+     * @return Rfc3339TimeString
+     * 
+     */
     public Output<String> getCreationTime() {
         return this.creationTime;
     }
+    /**
+     * ResolverQueryLogConfigAssociationError
+     * 
+     */
     @OutputExport(name="error", type=ResolverQueryLoggingConfigAssociationError.class, parameters={})
     private Output<ResolverQueryLoggingConfigAssociationError> error;
 
+    /**
+     * @return ResolverQueryLogConfigAssociationError
+     * 
+     */
     public Output<ResolverQueryLoggingConfigAssociationError> getError() {
         return this.error;
     }
+    /**
+     * ResolverQueryLogConfigAssociationErrorMessage
+     * 
+     */
     @OutputExport(name="errorMessage", type=String.class, parameters={})
     private Output<String> errorMessage;
 
+    /**
+     * @return ResolverQueryLogConfigAssociationErrorMessage
+     * 
+     */
     public Output<String> getErrorMessage() {
         return this.errorMessage;
     }
+    /**
+     * ResolverQueryLogConfigId
+     * 
+     */
     @OutputExport(name="resolverQueryLogConfigId", type=String.class, parameters={})
     private Output</* @Nullable */ String> resolverQueryLogConfigId;
 
+    /**
+     * @return ResolverQueryLogConfigId
+     * 
+     */
     public Output</* @Nullable */ String> getResolverQueryLogConfigId() {
         return this.resolverQueryLogConfigId;
     }
+    /**
+     * ResourceId
+     * 
+     */
     @OutputExport(name="resourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceId;
 
+    /**
+     * @return ResourceId
+     * 
+     */
     public Output</* @Nullable */ String> getResourceId() {
         return this.resourceId;
     }
+    /**
+     * ResolverQueryLogConfigAssociationStatus
+     * 
+     */
     @OutputExport(name="status", type=ResolverQueryLoggingConfigAssociationStatus.class, parameters={})
     private Output<ResolverQueryLoggingConfigAssociationStatus> status;
 
+    /**
+     * @return ResolverQueryLogConfigAssociationStatus
+     * 
+     */
     public Output<ResolverQueryLoggingConfigAssociationStatus> getStatus() {
         return this.status;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ResolverQueryLoggingConfigAssociation(String name, @Nullable ResolverQueryLoggingConfigAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:route53resolver:ResolverQueryLoggingConfigAssociation", name, args == null ? ResolverQueryLoggingConfigAssociationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -68,6 +126,14 @@ public class ResolverQueryLoggingConfigAssociation extends io.pulumi.resources.C
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ResolverQueryLoggingConfigAssociation get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ResolverQueryLoggingConfigAssociation(name, id, options);
     }

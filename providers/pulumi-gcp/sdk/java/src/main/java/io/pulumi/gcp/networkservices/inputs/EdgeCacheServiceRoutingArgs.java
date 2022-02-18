@@ -15,6 +15,11 @@ public final class EdgeCacheServiceRoutingArgs extends io.pulumi.resources.Resou
 
     public static final EdgeCacheServiceRoutingArgs Empty = new EdgeCacheServiceRoutingArgs();
 
+    /**
+     * The list of hostRules to match against. These rules define which hostnames the EdgeCacheService will match against, and which route configurations apply.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="hostRules", required=true)
     private final Input<List<EdgeCacheServiceRoutingHostRuleArgs>> hostRules;
 
@@ -22,6 +27,10 @@ public final class EdgeCacheServiceRoutingArgs extends io.pulumi.resources.Resou
         return this.hostRules;
     }
 
+    /**
+     * The name of the pathMatcher associated with this hostRule.
+     * 
+     */
     @InputImport(name="pathMatchers", required=true)
     private final Input<List<EdgeCacheServiceRoutingPathMatcherArgs>> pathMatchers;
 

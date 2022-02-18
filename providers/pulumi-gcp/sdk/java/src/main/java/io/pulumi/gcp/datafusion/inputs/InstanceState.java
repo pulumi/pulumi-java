@@ -17,6 +17,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
 
     public static final InstanceState Empty = new InstanceState();
 
+    /**
+     * The time the instance was created in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
+     * 
+     */
     @InputImport(name="createTime")
     private final @Nullable Input<String> createTime;
 
@@ -24,6 +28,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.createTime == null ? Input.empty() : this.createTime;
     }
 
+    /**
+     * User-managed service account to set on Dataproc when Cloud Data Fusion creates Dataproc to run data processing pipelines.
+     * 
+     */
     @InputImport(name="dataprocServiceAccount")
     private final @Nullable Input<String> dataprocServiceAccount;
 
@@ -31,6 +39,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.dataprocServiceAccount == null ? Input.empty() : this.dataprocServiceAccount;
     }
 
+    /**
+     * An optional description of the instance.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -38,6 +50,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Option to enable Stackdriver Logging.
+     * 
+     */
     @InputImport(name="enableStackdriverLogging")
     private final @Nullable Input<Boolean> enableStackdriverLogging;
 
@@ -45,6 +61,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.enableStackdriverLogging == null ? Input.empty() : this.enableStackdriverLogging;
     }
 
+    /**
+     * Option to enable Stackdriver Monitoring.
+     * 
+     */
     @InputImport(name="enableStackdriverMonitoring")
     private final @Nullable Input<Boolean> enableStackdriverMonitoring;
 
@@ -52,6 +72,11 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.enableStackdriverMonitoring == null ? Input.empty() : this.enableStackdriverMonitoring;
     }
 
+    /**
+     * The resource labels for instance to use to annotate any related underlying resources,
+     * such as Compute Engine VMs.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -59,6 +84,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The ID of the instance or a fully qualified identifier for the instance.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -66,6 +95,11 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Network configuration options. These are required when a private Data Fusion instance is to be created.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="networkConfig")
     private final @Nullable Input<InstanceNetworkConfigGetArgs> networkConfig;
 
@@ -73,6 +107,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.networkConfig == null ? Input.empty() : this.networkConfig;
     }
 
+    /**
+     * Map of additional options used to configure the behavior of Data Fusion instance.
+     * 
+     */
     @InputImport(name="options")
     private final @Nullable Input<Map<String,String>> options;
 
@@ -80,6 +118,12 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.options == null ? Input.empty() : this.options;
     }
 
+    /**
+     * Specifies whether the Data Fusion instance should be private. If set to
+     * true, all Data Fusion nodes will have private IP addresses and will not be
+     * able to access the public internet.
+     * 
+     */
     @InputImport(name="privateInstance")
     private final @Nullable Input<Boolean> privateInstance;
 
@@ -87,6 +131,11 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.privateInstance == null ? Input.empty() : this.privateInstance;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -94,6 +143,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The region of the Data Fusion instance.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 
@@ -101,6 +154,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.region == null ? Input.empty() : this.region;
     }
 
+    /**
+     * Service account which will be used to access resources in the customer project.
+     * 
+     */
     @InputImport(name="serviceAccount")
     private final @Nullable Input<String> serviceAccount;
 
@@ -108,6 +165,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
     }
 
+    /**
+     * Endpoint on which the Data Fusion UI and REST APIs are accessible.
+     * 
+     */
     @InputImport(name="serviceEndpoint")
     private final @Nullable Input<String> serviceEndpoint;
 
@@ -115,6 +176,12 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.serviceEndpoint == null ? Input.empty() : this.serviceEndpoint;
     }
 
+    /**
+     * The current state of this Data Fusion instance. - CREATING: Instance is being created - RUNNING: Instance is running and
+     * ready for requests - FAILED: Instance creation failed - DELETING: Instance is being deleted - UPGRADING: Instance is
+     * being upgraded - RESTARTING: Instance is being restarted
+     * 
+     */
     @InputImport(name="state")
     private final @Nullable Input<String> state;
 
@@ -122,6 +189,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.state == null ? Input.empty() : this.state;
     }
 
+    /**
+     * Additional information about the current state of this Data Fusion instance if available.
+     * 
+     */
     @InputImport(name="stateMessage")
     private final @Nullable Input<String> stateMessage;
 
@@ -129,6 +200,20 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.stateMessage == null ? Input.empty() : this.stateMessage;
     }
 
+    /**
+     * Represents the type of Data Fusion instance. Each type is configured with
+     * the default settings for processing and memory.
+     * - BASIC: Basic Data Fusion instance. In Basic type, the user will be able to create data pipelines
+     *   using point and click UI. However, there are certain limitations, such as fewer number
+     *   of concurrent pipelines, no support for streaming pipelines, etc.
+     * - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more features
+     *   available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
+     * - DEVELOPER: Developer Data Fusion instance. In Developer type, the user will have all features available but
+     *   with restrictive capabilities. This is to help enterprises design and develop their data ingestion and integration
+     *   pipelines at low cost.
+     *   Possible values are `BASIC`, `ENTERPRISE`, and `DEVELOPER`.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 
@@ -136,6 +221,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.type == null ? Input.empty() : this.type;
     }
 
+    /**
+     * The time the instance was last updated in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
+     * 
+     */
     @InputImport(name="updateTime")
     private final @Nullable Input<String> updateTime;
 
@@ -143,6 +232,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.updateTime == null ? Input.empty() : this.updateTime;
     }
 
+    /**
+     * Current version of the Data Fusion.
+     * 
+     */
     @InputImport(name="version")
     private final @Nullable Input<String> version;
 

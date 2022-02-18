@@ -12,45 +12,105 @@ import io.pulumi.core.internal.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Resource schema for AWS::Athena::NamedQuery
+ * 
+ * ## Example Usage
+ * 
+ */
 @ResourceType(type="aws-native:athena:NamedQuery")
 public class NamedQuery extends io.pulumi.resources.CustomResource {
+    /**
+     * The database to which the query belongs.
+     * 
+     */
     @OutputExport(name="database", type=String.class, parameters={})
     private Output<String> database;
 
+    /**
+     * @return The database to which the query belongs.
+     * 
+     */
     public Output<String> getDatabase() {
         return this.database;
     }
+    /**
+     * The query description.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return The query description.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * The query name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
+    /**
+     * @return The query name.
+     * 
+     */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
+    /**
+     * The unique ID of the query.
+     * 
+     */
     @OutputExport(name="namedQueryId", type=String.class, parameters={})
     private Output<String> namedQueryId;
 
+    /**
+     * @return The unique ID of the query.
+     * 
+     */
     public Output<String> getNamedQueryId() {
         return this.namedQueryId;
     }
+    /**
+     * The contents of the query with all query statements.
+     * 
+     */
     @OutputExport(name="queryString", type=String.class, parameters={})
     private Output<String> queryString;
 
+    /**
+     * @return The contents of the query with all query statements.
+     * 
+     */
     public Output<String> getQueryString() {
         return this.queryString;
     }
+    /**
+     * The name of the workgroup that contains the named query.
+     * 
+     */
     @OutputExport(name="workGroup", type=String.class, parameters={})
     private Output</* @Nullable */ String> workGroup;
 
+    /**
+     * @return The name of the workgroup that contains the named query.
+     * 
+     */
     public Output</* @Nullable */ String> getWorkGroup() {
         return this.workGroup;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public NamedQuery(String name, NamedQueryArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:athena:NamedQuery", name, args == null ? NamedQueryArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -66,6 +126,14 @@ public class NamedQuery extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static NamedQuery get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new NamedQuery(name, id, options);
     }

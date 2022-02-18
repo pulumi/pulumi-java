@@ -25,6 +25,10 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
         return this.assetHierarchies == null ? Input.empty() : this.assetHierarchies;
     }
 
+    /**
+     * The ID of the asset model from which to create the asset.
+     * 
+     */
     @InputImport(name="assetModelId", required=true)
     private final Input<String> assetModelId;
 
@@ -32,6 +36,10 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
         return this.assetModelId;
     }
 
+    /**
+     * A unique, friendly name for the asset.
+     * 
+     */
     @InputImport(name="assetName")
     private final @Nullable Input<String> assetName;
 
@@ -46,6 +54,10 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
         return this.assetProperties == null ? Input.empty() : this.assetProperties;
     }
 
+    /**
+     * A list of key-value pairs that contain metadata for the asset.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<AssetTagArgs>> tags;
 

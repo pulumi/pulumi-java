@@ -13,10 +13,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Data used when creating a disk.
+ * 
+ */
 public final class CreationDataResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CreationDataResponse Empty = new CreationDataResponse();
 
+    /**
+     * This enumerates the possible sources of a disk's creation.
+     * 
+     */
     @InputImport(name="createOption", required=true)
     private final String createOption;
 
@@ -24,6 +32,10 @@ public final class CreationDataResponse extends io.pulumi.resources.InvokeArgs {
         return this.createOption;
     }
 
+    /**
+     * Required if creating from a Gallery Image. The id of the ImageDiskReference will be the ARM id of the shared galley image version from which to create a disk.
+     * 
+     */
     @InputImport(name="galleryImageReference")
     private final @Nullable ImageDiskReferenceResponse galleryImageReference;
 
@@ -31,6 +43,10 @@ public final class CreationDataResponse extends io.pulumi.resources.InvokeArgs {
         return this.galleryImageReference == null ? Optional.empty() : Optional.ofNullable(this.galleryImageReference);
     }
 
+    /**
+     * Disk source information.
+     * 
+     */
     @InputImport(name="imageReference")
     private final @Nullable ImageDiskReferenceResponse imageReference;
 
@@ -38,6 +54,10 @@ public final class CreationDataResponse extends io.pulumi.resources.InvokeArgs {
         return this.imageReference == null ? Optional.empty() : Optional.ofNullable(this.imageReference);
     }
 
+    /**
+     * Logical sector size in bytes for Ultra disks. Supported values are 512 ad 4096. 4096 is the default.
+     * 
+     */
     @InputImport(name="logicalSectorSize")
     private final @Nullable Integer logicalSectorSize;
 
@@ -45,6 +65,10 @@ public final class CreationDataResponse extends io.pulumi.resources.InvokeArgs {
         return this.logicalSectorSize == null ? Optional.empty() : Optional.ofNullable(this.logicalSectorSize);
     }
 
+    /**
+     * If createOption is Copy, this is the ARM id of the source snapshot or disk.
+     * 
+     */
     @InputImport(name="sourceResourceId")
     private final @Nullable String sourceResourceId;
 
@@ -52,6 +76,10 @@ public final class CreationDataResponse extends io.pulumi.resources.InvokeArgs {
         return this.sourceResourceId == null ? Optional.empty() : Optional.ofNullable(this.sourceResourceId);
     }
 
+    /**
+     * If this field is set, this is the unique id identifying the source of this resource.
+     * 
+     */
     @InputImport(name="sourceUniqueId", required=true)
     private final String sourceUniqueId;
 
@@ -59,6 +87,10 @@ public final class CreationDataResponse extends io.pulumi.resources.InvokeArgs {
         return this.sourceUniqueId;
     }
 
+    /**
+     * If createOption is Import, this is the URI of a blob to be imported into a managed disk.
+     * 
+     */
     @InputImport(name="sourceUri")
     private final @Nullable String sourceUri;
 
@@ -66,6 +98,10 @@ public final class CreationDataResponse extends io.pulumi.resources.InvokeArgs {
         return this.sourceUri == null ? Optional.empty() : Optional.ofNullable(this.sourceUri);
     }
 
+    /**
+     * Required if createOption is Import. The Azure Resource Manager identifier of the storage account containing the blob to import as a disk.
+     * 
+     */
     @InputImport(name="storageAccountId")
     private final @Nullable String storageAccountId;
 
@@ -73,6 +109,10 @@ public final class CreationDataResponse extends io.pulumi.resources.InvokeArgs {
         return this.storageAccountId == null ? Optional.empty() : Optional.ofNullable(this.storageAccountId);
     }
 
+    /**
+     * If createOption is Upload, this is the size of the contents of the upload including the VHD footer. This value should be between 20972032 (20 MiB + 512 bytes for the VHD footer) and 35183298347520 bytes (32 TiB + 512 bytes for the VHD footer).
+     * 
+     */
     @InputImport(name="uploadSizeBytes")
     private final @Nullable Double uploadSizeBytes;
 

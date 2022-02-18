@@ -27,6 +27,10 @@ public final class FutureReservationTimeWindowResponse extends io.pulumi.resourc
         return this.endTime;
     }
 
+    /**
+     * Start time of the Future Reservation. The start_time is an RFC3339 string.
+     * 
+     */
     @InputImport(name="startTime", required=true)
     private final String startTime;
 

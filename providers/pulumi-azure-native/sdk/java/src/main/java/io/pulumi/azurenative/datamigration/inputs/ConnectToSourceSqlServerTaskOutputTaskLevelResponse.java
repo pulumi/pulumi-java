@@ -11,10 +11,18 @@ import java.util.Map;
 import java.util.Objects;
 
 
+/**
+ * Task level output for the task that validates connection to SQL Server and also validates source server requirements
+ * 
+ */
 public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConnectToSourceSqlServerTaskOutputTaskLevelResponse Empty = new ConnectToSourceSqlServerTaskOutputTaskLevelResponse();
 
+    /**
+     * Source agent jobs as a map from agent job name to id.
+     * 
+     */
     @InputImport(name="agentJobs", required=true)
     private final Map<String,String> agentJobs;
 
@@ -22,6 +30,10 @@ public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse extends i
         return this.agentJobs;
     }
 
+    /**
+     * Source databases as a map from database name to database id
+     * 
+     */
     @InputImport(name="databases", required=true)
     private final Map<String,String> databases;
 
@@ -29,6 +41,10 @@ public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse extends i
         return this.databases;
     }
 
+    /**
+     * Result identifier
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -36,6 +52,10 @@ public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse extends i
         return this.id;
     }
 
+    /**
+     * Source logins as a map from login name to login id.
+     * 
+     */
     @InputImport(name="logins", required=true)
     private final Map<String,String> logins;
 
@@ -43,6 +63,11 @@ public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse extends i
         return this.logins;
     }
 
+    /**
+     * Type of result - database level or task level
+     * Expected value is 'TaskLevelOutput'.
+     * 
+     */
     @InputImport(name="resultType", required=true)
     private final String resultType;
 
@@ -50,6 +75,10 @@ public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse extends i
         return this.resultType;
     }
 
+    /**
+     * Source server brand version
+     * 
+     */
     @InputImport(name="sourceServerBrandVersion", required=true)
     private final String sourceServerBrandVersion;
 
@@ -57,6 +86,10 @@ public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse extends i
         return this.sourceServerBrandVersion;
     }
 
+    /**
+     * Source server version
+     * 
+     */
     @InputImport(name="sourceServerVersion", required=true)
     private final String sourceServerVersion;
 
@@ -64,6 +97,10 @@ public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse extends i
         return this.sourceServerVersion;
     }
 
+    /**
+     * Validation errors
+     * 
+     */
     @InputImport(name="validationErrors", required=true)
     private final List<ReportableExceptionResponse> validationErrors;
 

@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The properties related to the auto-storage account.
+ * 
+ */
 public final class AutoStorageBasePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AutoStorageBasePropertiesArgs Empty = new AutoStorageBasePropertiesArgs();
 
+    /**
+     * The resource ID of the storage account to be used for auto-storage account.
+     * 
+     */
     @InputImport(name="storageAccountId", required=true)
     private final Input<String> storageAccountId;
 

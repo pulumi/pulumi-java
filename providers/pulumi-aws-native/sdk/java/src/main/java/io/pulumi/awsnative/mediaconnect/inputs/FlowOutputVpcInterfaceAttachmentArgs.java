@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The settings for attaching a VPC interface to an output.
+ * 
+ */
 public final class FlowOutputVpcInterfaceAttachmentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FlowOutputVpcInterfaceAttachmentArgs Empty = new FlowOutputVpcInterfaceAttachmentArgs();
 
+    /**
+     * The name of the VPC interface to use for this output.
+     * 
+     */
     @InputImport(name="vpcInterfaceName")
     private final @Nullable Input<String> vpcInterfaceName;
 

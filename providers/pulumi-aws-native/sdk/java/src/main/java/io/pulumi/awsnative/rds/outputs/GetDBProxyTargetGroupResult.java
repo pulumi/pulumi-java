@@ -16,6 +16,10 @@ public final class GetDBProxyTargetGroupResult {
     private final @Nullable DBProxyTargetGroupConnectionPoolConfigurationInfoFormat connectionPoolConfigurationInfo;
     private final @Nullable List<String> dBClusterIdentifiers;
     private final @Nullable List<String> dBInstanceIdentifiers;
+    /**
+     * The Amazon Resource Name (ARN) representing the target group.
+     * 
+     */
     private final @Nullable String targetGroupArn;
 
     @OutputCustomType.Constructor({"connectionPoolConfigurationInfo","dBClusterIdentifiers","dBInstanceIdentifiers","targetGroupArn"})
@@ -39,6 +43,10 @@ public final class GetDBProxyTargetGroupResult {
     public List<String> getDBInstanceIdentifiers() {
         return this.dBInstanceIdentifiers == null ? List.of() : this.dBInstanceIdentifiers;
     }
+    /**
+     * The Amazon Resource Name (ARN) representing the target group.
+     * 
+     */
     public Optional<String> getTargetGroupArn() {
         return Optional.ofNullable(this.targetGroupArn);
     }

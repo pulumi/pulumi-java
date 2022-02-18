@@ -16,6 +16,10 @@ public final class TargetConfigurationArgs extends io.pulumi.resources.ResourceA
 
     public static final TargetConfigurationArgs Empty = new TargetConfigurationArgs();
 
+    /**
+     * The configuration to use for this deployment.
+     * 
+     */
     @InputImport(name="config")
     private final @Nullable Input<ConfigFileArgs> config;
 
@@ -23,6 +27,10 @@ public final class TargetConfigurationArgs extends io.pulumi.resources.ResourceA
         return this.config == null ? Input.empty() : this.config;
     }
 
+    /**
+     * Specifies any files to import for this configuration. This can be used to import templates or other files. For example, you might import a text file in order to use the file in a template.
+     * 
+     */
     @InputImport(name="imports")
     private final @Nullable Input<List<ImportFileArgs>> imports;
 

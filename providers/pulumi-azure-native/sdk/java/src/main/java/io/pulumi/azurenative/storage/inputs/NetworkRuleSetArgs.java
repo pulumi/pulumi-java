@@ -17,10 +17,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Network rule set
+ * 
+ */
 public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NetworkRuleSetArgs Empty = new NetworkRuleSetArgs();
 
+    /**
+     * Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Possible values are any combination of Logging|Metrics|AzureServices (For example, "Logging, Metrics"), or None to bypass none of those traffics.
+     * 
+     */
     @InputImport(name="bypass")
     private final @Nullable Input<Either<String,Bypass>> bypass;
 
@@ -28,6 +36,10 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.bypass == null ? Input.empty() : this.bypass;
     }
 
+    /**
+     * Specifies the default action of allow or deny when no other rules match.
+     * 
+     */
     @InputImport(name="defaultAction", required=true)
     private final Input<DefaultAction> defaultAction;
 
@@ -35,6 +47,10 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.defaultAction;
     }
 
+    /**
+     * Sets the IP ACL rules
+     * 
+     */
     @InputImport(name="ipRules")
     private final @Nullable Input<List<IPRuleArgs>> ipRules;
 
@@ -42,6 +58,10 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.ipRules == null ? Input.empty() : this.ipRules;
     }
 
+    /**
+     * Sets the resource access rules
+     * 
+     */
     @InputImport(name="resourceAccessRules")
     private final @Nullable Input<List<ResourceAccessRuleArgs>> resourceAccessRules;
 
@@ -49,6 +69,10 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceAccessRules == null ? Input.empty() : this.resourceAccessRules;
     }
 
+    /**
+     * Sets the virtual network rules
+     * 
+     */
     @InputImport(name="virtualNetworkRules")
     private final @Nullable Input<List<VirtualNetworkRuleArgs>> virtualNetworkRules;
 

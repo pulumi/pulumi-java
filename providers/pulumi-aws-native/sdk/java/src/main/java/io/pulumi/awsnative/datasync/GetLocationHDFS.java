@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLocationHDFS {
+/**
+ * Resource schema for AWS::DataSync::LocationHDFS.
+ * 
+ */
     public static CompletableFuture<GetLocationHDFSResult> invokeAsync(GetLocationHDFSArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:datasync:getLocationHDFS", TypeShape.of(GetLocationHDFSResult.class), args == null ? GetLocationHDFSArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -14,6 +14,10 @@ public final class GetBucketObjectArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetBucketObjectArgs Empty = new GetBucketObjectArgs();
 
+    /**
+     * The name of the containing bucket.
+     * 
+     */
     @InputImport(name="bucket")
     private final @Nullable String bucket;
 
@@ -21,6 +25,10 @@ public final class GetBucketObjectArgs extends io.pulumi.resources.InvokeArgs {
         return this.bucket == null ? Optional.empty() : Optional.ofNullable(this.bucket);
     }
 
+    /**
+     * The name of the object.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 

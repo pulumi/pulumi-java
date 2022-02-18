@@ -13,9 +13,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class BotWaitAndContinueSpecification {
+    /**
+     * The response that Amazon Lex sends to indicate that the bot is ready to continue the conversation.
+     * 
+     */
     private final BotResponseSpecification continueResponse;
+    /**
+     * Specifies whether the bot will wait for a user to respond.
+     * 
+     */
     private final @Nullable Boolean isActive;
+    /**
+     * The response that Amazon Lex sends periodically to the user to indicate that the bot is still waiting for input from the user.
+     * 
+     */
     private final @Nullable BotStillWaitingResponseSpecification stillWaitingResponse;
+    /**
+     * The response that Amazon Lex sends to indicate that the bot is waiting for the conversation to continue.
+     * 
+     */
     private final BotResponseSpecification waitingResponse;
 
     @OutputCustomType.Constructor({"continueResponse","isActive","stillWaitingResponse","waitingResponse"})
@@ -30,15 +46,31 @@ public final class BotWaitAndContinueSpecification {
         this.waitingResponse = Objects.requireNonNull(waitingResponse);
     }
 
+    /**
+     * The response that Amazon Lex sends to indicate that the bot is ready to continue the conversation.
+     * 
+     */
     public BotResponseSpecification getContinueResponse() {
         return this.continueResponse;
     }
+    /**
+     * Specifies whether the bot will wait for a user to respond.
+     * 
+     */
     public Optional<Boolean> getIsActive() {
         return Optional.ofNullable(this.isActive);
     }
+    /**
+     * The response that Amazon Lex sends periodically to the user to indicate that the bot is still waiting for input from the user.
+     * 
+     */
     public Optional<BotStillWaitingResponseSpecification> getStillWaitingResponse() {
         return Optional.ofNullable(this.stillWaitingResponse);
     }
+    /**
+     * The response that Amazon Lex sends to indicate that the bot is waiting for the conversation to continue.
+     * 
+     */
     public BotResponseSpecification getWaitingResponse() {
         return this.waitingResponse;
     }

@@ -15,6 +15,10 @@ public final class TenantDefaultSupportedIdpConfigState extends io.pulumi.resour
 
     public static final TenantDefaultSupportedIdpConfigState Empty = new TenantDefaultSupportedIdpConfigState();
 
+    /**
+     * OAuth client ID
+     * 
+     */
     @InputImport(name="clientId")
     private final @Nullable Input<String> clientId;
 
@@ -22,6 +26,10 @@ public final class TenantDefaultSupportedIdpConfigState extends io.pulumi.resour
         return this.clientId == null ? Input.empty() : this.clientId;
     }
 
+    /**
+     * OAuth client secret
+     * 
+     */
     @InputImport(name="clientSecret")
     private final @Nullable Input<String> clientSecret;
 
@@ -29,6 +37,10 @@ public final class TenantDefaultSupportedIdpConfigState extends io.pulumi.resour
         return this.clientSecret == null ? Input.empty() : this.clientSecret;
     }
 
+    /**
+     * If this IDP allows the user to sign in
+     * 
+     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 
@@ -36,6 +48,20 @@ public final class TenantDefaultSupportedIdpConfigState extends io.pulumi.resour
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
+    /**
+     * ID of the IDP. Possible values include:
+     * * `apple.com`
+     * * `facebook.com`
+     * * `gc.apple.com`
+     * * `github.com`
+     * * `google.com`
+     * * `linkedin.com`
+     * * `microsoft.com`
+     * * `playgames.google.com`
+     * * `twitter.com`
+     * * `yahoo.com`
+     * 
+     */
     @InputImport(name="idpId")
     private final @Nullable Input<String> idpId;
 
@@ -43,6 +69,10 @@ public final class TenantDefaultSupportedIdpConfigState extends io.pulumi.resour
         return this.idpId == null ? Input.empty() : this.idpId;
     }
 
+    /**
+     * The name of the default supported IDP config resource
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -50,6 +80,11 @@ public final class TenantDefaultSupportedIdpConfigState extends io.pulumi.resour
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -57,6 +92,10 @@ public final class TenantDefaultSupportedIdpConfigState extends io.pulumi.resour
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The name of the tenant where this DefaultSupportedIdpConfig resource exists
+     * 
+     */
     @InputImport(name="tenant")
     private final @Nullable Input<String> tenant;
 

@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration {
+    /**
+     * Minimum and maximum number of scale units to deploy.
+     * 
+     */
     private final @Nullable ExpressRouteGatewayPropertiesResponseBounds bounds;
 
     @OutputCustomType.Constructor({"bounds"})
@@ -18,6 +22,10 @@ public final class ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration {
         this.bounds = bounds;
     }
 
+    /**
+     * Minimum and maximum number of scale units to deploy.
+     * 
+     */
     public Optional<ExpressRouteGatewayPropertiesResponseBounds> getBounds() {
         return Optional.ofNullable(this.bounds);
     }

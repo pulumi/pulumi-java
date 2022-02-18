@@ -28,6 +28,15 @@ public final class ClusterNodePoolGetArgs extends io.pulumi.resources.ResourceAr
         return this.autoscaling == null ? Input.empty() : this.autoscaling;
     }
 
+    /**
+     * The number of nodes to create in this
+     * cluster's default node pool. In regional or multi-zonal clusters, this is the
+     * number of nodes per zone. Must be set if `node_pool` is not set. If you're using
+     * `gcp.container.NodePool` objects with no default node pool, you'll need to
+     * set this to a value of at least `1`, alongside setting
+     * `remove_default_node_pool` to `true`.
+     * 
+     */
     @InputImport(name="initialNodeCount")
     private final @Nullable Input<Integer> initialNodeCount;
 
@@ -63,6 +72,11 @@ public final class ClusterNodePoolGetArgs extends io.pulumi.resources.ResourceAr
         return this.maxPodsPerNode == null ? Input.empty() : this.maxPodsPerNode;
     }
 
+    /**
+     * The name of the cluster, unique within the project and
+     * location.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -77,6 +91,11 @@ public final class ClusterNodePoolGetArgs extends io.pulumi.resources.ResourceAr
         return this.namePrefix == null ? Input.empty() : this.namePrefix;
     }
 
+    /**
+     * Configuration for
+     * [Adding Pod IP address ranges](https://cloud.google.com/kubernetes-engine/docs/how-to/multi-pod-cidr)) to the node pool. Structure is documented below
+     * 
+     */
     @InputImport(name="networkConfig")
     private final @Nullable Input<ClusterNodePoolNetworkConfigGetArgs> networkConfig;
 
@@ -84,6 +103,14 @@ public final class ClusterNodePoolGetArgs extends io.pulumi.resources.ResourceAr
         return this.networkConfig == null ? Input.empty() : this.networkConfig;
     }
 
+    /**
+     * Parameters used in creating the default node pool.
+     * Generally, this field should not be used at the same time as a
+     * `gcp.container.NodePool` or a `node_pool` block; this configuration
+     * manages the default node pool, which isn't recommended to be used.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="nodeConfig")
     private final @Nullable Input<ClusterNodePoolNodeConfigGetArgs> nodeConfig;
 
@@ -98,6 +125,13 @@ public final class ClusterNodePoolGetArgs extends io.pulumi.resources.ResourceAr
         return this.nodeCount == null ? Input.empty() : this.nodeCount;
     }
 
+    /**
+     * The list of zones in which the cluster's nodes
+     * are located. Nodes must be in the region of their regional cluster or in the
+     * same region as their cluster's zone for zonal clusters. If this is specified for
+     * a zonal cluster, omit the cluster's zone.
+     * 
+     */
     @InputImport(name="nodeLocations")
     private final @Nullable Input<List<String>> nodeLocations;
 

@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ReplicationCycleResponse {
+    /**
+     * The current progress in percentage of this cycle.
+     * 
+     */
     private final Integer progressPercent;
+    /**
+     * The time the replication cycle has started.
+     * 
+     */
     private final String startTime;
 
     @OutputCustomType.Constructor({"progressPercent","startTime"})
@@ -21,9 +29,17 @@ public final class ReplicationCycleResponse {
         this.startTime = Objects.requireNonNull(startTime);
     }
 
+    /**
+     * The current progress in percentage of this cycle.
+     * 
+     */
     public Integer getProgressPercent() {
         return this.progressPercent;
     }
+    /**
+     * The time the replication cycle has started.
+     * 
+     */
     public String getStartTime() {
         return this.startTime;
     }

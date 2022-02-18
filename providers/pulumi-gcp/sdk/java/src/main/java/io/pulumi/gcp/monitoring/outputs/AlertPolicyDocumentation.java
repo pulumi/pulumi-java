@@ -11,7 +11,19 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AlertPolicyDocumentation {
+    /**
+     * The text of the documentation, interpreted according to mimeType.
+     * The content may not exceed 8,192 Unicode characters and may not
+     * exceed more than 10,240 bytes when encoded in UTF-8 format,
+     * whichever is smaller.
+     * 
+     */
     private final @Nullable String content;
+    /**
+     * The format of the content field. Presently, only the value
+     * "text/markdown" is supported.
+     * 
+     */
     private final @Nullable String mimeType;
 
     @OutputCustomType.Constructor({"content","mimeType"})
@@ -22,9 +34,21 @@ public final class AlertPolicyDocumentation {
         this.mimeType = mimeType;
     }
 
+    /**
+     * The text of the documentation, interpreted according to mimeType.
+     * The content may not exceed 8,192 Unicode characters and may not
+     * exceed more than 10,240 bytes when encoded in UTF-8 format,
+     * whichever is smaller.
+     * 
+     */
     public Optional<String> getContent() {
         return Optional.ofNullable(this.content);
     }
+    /**
+     * The format of the content field. Presently, only the value
+     * "text/markdown" is supported.
+     * 
+     */
     public Optional<String> getMimeType() {
         return Optional.ofNullable(this.mimeType);
     }

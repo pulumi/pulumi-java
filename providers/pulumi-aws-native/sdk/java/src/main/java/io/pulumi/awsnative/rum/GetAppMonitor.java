@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAppMonitor {
+/**
+ * Resource Type definition for AWS::RUM::AppMonitor
+ * 
+ */
     public static CompletableFuture<GetAppMonitorResult> invokeAsync(GetAppMonitorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:rum:getAppMonitor", TypeShape.of(GetAppMonitorResult.class), args == null ? GetAppMonitorArgs.Empty : args, Utilities.withVersion(options));
     }

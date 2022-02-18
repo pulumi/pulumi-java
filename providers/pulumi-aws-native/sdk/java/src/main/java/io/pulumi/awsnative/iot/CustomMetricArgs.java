@@ -17,6 +17,10 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CustomMetricArgs Empty = new CustomMetricArgs();
 
+    /**
+     * Field represents a friendly name in the console for the custom metric; it doesn't have to be unique. Don't use this name as the metric identifier in the device metric report. Can be updated once defined.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -24,6 +28,10 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The name of the custom metric. This will be used in the metric report submitted from the device/thing. Shouldn't begin with aws: . Cannot be updated once defined.
+     * 
+     */
     @InputImport(name="metricName")
     private final @Nullable Input<String> metricName;
 
@@ -31,6 +39,10 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
         return this.metricName == null ? Input.empty() : this.metricName;
     }
 
+    /**
+     * The type of the custom metric. Types include string-list, ip-address-list, number-list, and number.
+     * 
+     */
     @InputImport(name="metricType", required=true)
     private final Input<CustomMetricMetricType> metricType;
 
@@ -38,6 +50,10 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
         return this.metricType;
     }
 
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<CustomMetricTagArgs>> tags;
 

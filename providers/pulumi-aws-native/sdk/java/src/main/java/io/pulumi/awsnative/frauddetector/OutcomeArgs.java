@@ -16,6 +16,10 @@ public final class OutcomeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OutcomeArgs Empty = new OutcomeArgs();
 
+    /**
+     * The outcome description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -23,6 +27,10 @@ public final class OutcomeArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The name of the outcome.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -30,6 +38,10 @@ public final class OutcomeArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Tags associated with this outcome.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<OutcomeTagArgs>> tags;
 

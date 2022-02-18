@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ConnectorProfileDatadogConnectorProfileProperties {
+    /**
+     * The location of the Datadog resource
+     * 
+     */
     private final String instanceUrl;
 
     @OutputCustomType.Constructor({"instanceUrl"})
@@ -16,6 +20,10 @@ public final class ConnectorProfileDatadogConnectorProfileProperties {
         this.instanceUrl = Objects.requireNonNull(instanceUrl);
     }
 
+    /**
+     * The location of the Datadog resource
+     * 
+     */
     public String getInstanceUrl() {
         return this.instanceUrl;
     }

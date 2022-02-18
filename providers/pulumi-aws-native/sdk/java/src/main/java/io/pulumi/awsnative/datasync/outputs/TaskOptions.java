@@ -24,19 +24,75 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TaskOptions {
+    /**
+     * A file metadata value that shows the last time a file was accessed (that is, when the file was read or written to).
+     * 
+     */
     private final @Nullable TaskOptionsAtime atime;
+    /**
+     * A value that limits the bandwidth used by AWS DataSync.
+     * 
+     */
     private final @Nullable Integer bytesPerSecond;
+    /**
+     * The group ID (GID) of the file's owners.
+     * 
+     */
     private final @Nullable TaskOptionsGid gid;
+    /**
+     * A value that determines the types of logs that DataSync publishes to a log stream in the Amazon CloudWatch log group that you provide.
+     * 
+     */
     private final @Nullable TaskOptionsLogLevel logLevel;
+    /**
+     * A value that indicates the last time that a file was modified (that is, a file was written to) before the PREPARING phase.
+     * 
+     */
     private final @Nullable TaskOptionsMtime mtime;
+    /**
+     * A value that determines whether files at the destination should be overwritten or preserved when copying files.
+     * 
+     */
     private final @Nullable TaskOptionsOverwriteMode overwriteMode;
+    /**
+     * A value that determines which users or groups can access a file for a specific purpose such as reading, writing, or execution of the file.
+     * 
+     */
     private final @Nullable TaskOptionsPosixPermissions posixPermissions;
+    /**
+     * A value that specifies whether files in the destination that don't exist in the source file system should be preserved.
+     * 
+     */
     private final @Nullable TaskOptionsPreserveDeletedFiles preserveDeletedFiles;
+    /**
+     * A value that determines whether AWS DataSync should preserve the metadata of block and character devices in the source file system, and recreate the files with that device name and metadata on the destination.
+     * 
+     */
     private final @Nullable TaskOptionsPreserveDevices preserveDevices;
+    /**
+     * A value that determines which components of the SMB security descriptor are copied during transfer.
+     * 
+     */
     private final @Nullable TaskOptionsSecurityDescriptorCopyFlags securityDescriptorCopyFlags;
+    /**
+     * A value that determines whether tasks should be queued before executing the tasks.
+     * 
+     */
     private final @Nullable TaskOptionsTaskQueueing taskQueueing;
+    /**
+     * A value that determines whether DataSync transfers only the data and metadata that differ between the source and the destination location, or whether DataSync transfers all the content from the source, without comparing to the destination location.
+     * 
+     */
     private final @Nullable TaskOptionsTransferMode transferMode;
+    /**
+     * The user ID (UID) of the file's owner.
+     * 
+     */
     private final @Nullable TaskOptionsUid uid;
+    /**
+     * A value that determines whether a data integrity verification should be performed at the end of a task execution after all data and metadata have been transferred.
+     * 
+     */
     private final @Nullable TaskOptionsVerifyMode verifyMode;
 
     @OutputCustomType.Constructor({"atime","bytesPerSecond","gid","logLevel","mtime","overwriteMode","posixPermissions","preserveDeletedFiles","preserveDevices","securityDescriptorCopyFlags","taskQueueing","transferMode","uid","verifyMode"})
@@ -71,45 +127,101 @@ public final class TaskOptions {
         this.verifyMode = verifyMode;
     }
 
+    /**
+     * A file metadata value that shows the last time a file was accessed (that is, when the file was read or written to).
+     * 
+     */
     public Optional<TaskOptionsAtime> getAtime() {
         return Optional.ofNullable(this.atime);
     }
+    /**
+     * A value that limits the bandwidth used by AWS DataSync.
+     * 
+     */
     public Optional<Integer> getBytesPerSecond() {
         return Optional.ofNullable(this.bytesPerSecond);
     }
+    /**
+     * The group ID (GID) of the file's owners.
+     * 
+     */
     public Optional<TaskOptionsGid> getGid() {
         return Optional.ofNullable(this.gid);
     }
+    /**
+     * A value that determines the types of logs that DataSync publishes to a log stream in the Amazon CloudWatch log group that you provide.
+     * 
+     */
     public Optional<TaskOptionsLogLevel> getLogLevel() {
         return Optional.ofNullable(this.logLevel);
     }
+    /**
+     * A value that indicates the last time that a file was modified (that is, a file was written to) before the PREPARING phase.
+     * 
+     */
     public Optional<TaskOptionsMtime> getMtime() {
         return Optional.ofNullable(this.mtime);
     }
+    /**
+     * A value that determines whether files at the destination should be overwritten or preserved when copying files.
+     * 
+     */
     public Optional<TaskOptionsOverwriteMode> getOverwriteMode() {
         return Optional.ofNullable(this.overwriteMode);
     }
+    /**
+     * A value that determines which users or groups can access a file for a specific purpose such as reading, writing, or execution of the file.
+     * 
+     */
     public Optional<TaskOptionsPosixPermissions> getPosixPermissions() {
         return Optional.ofNullable(this.posixPermissions);
     }
+    /**
+     * A value that specifies whether files in the destination that don't exist in the source file system should be preserved.
+     * 
+     */
     public Optional<TaskOptionsPreserveDeletedFiles> getPreserveDeletedFiles() {
         return Optional.ofNullable(this.preserveDeletedFiles);
     }
+    /**
+     * A value that determines whether AWS DataSync should preserve the metadata of block and character devices in the source file system, and recreate the files with that device name and metadata on the destination.
+     * 
+     */
     public Optional<TaskOptionsPreserveDevices> getPreserveDevices() {
         return Optional.ofNullable(this.preserveDevices);
     }
+    /**
+     * A value that determines which components of the SMB security descriptor are copied during transfer.
+     * 
+     */
     public Optional<TaskOptionsSecurityDescriptorCopyFlags> getSecurityDescriptorCopyFlags() {
         return Optional.ofNullable(this.securityDescriptorCopyFlags);
     }
+    /**
+     * A value that determines whether tasks should be queued before executing the tasks.
+     * 
+     */
     public Optional<TaskOptionsTaskQueueing> getTaskQueueing() {
         return Optional.ofNullable(this.taskQueueing);
     }
+    /**
+     * A value that determines whether DataSync transfers only the data and metadata that differ between the source and the destination location, or whether DataSync transfers all the content from the source, without comparing to the destination location.
+     * 
+     */
     public Optional<TaskOptionsTransferMode> getTransferMode() {
         return Optional.ofNullable(this.transferMode);
     }
+    /**
+     * The user ID (UID) of the file's owner.
+     * 
+     */
     public Optional<TaskOptionsUid> getUid() {
         return Optional.ofNullable(this.uid);
     }
+    /**
+     * A value that determines whether a data integrity verification should be performed at the end of a task execution after all data and metadata have been transferred.
+     * 
+     */
     public Optional<TaskOptionsVerifyMode> getVerifyMode() {
         return Optional.ofNullable(this.verifyMode);
     }

@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GlusterFsSectionResponse {
+    /**
+     * The server address of one of the servers that hosts the GlusterFS. Can be either the IP address or server name.
+     * 
+     */
     private final String serverAddress;
+    /**
+     * The name of the created GlusterFS volume.
+     * 
+     */
     private final String volumeName;
 
     @OutputCustomType.Constructor({"serverAddress","volumeName"})
@@ -20,9 +28,17 @@ public final class GlusterFsSectionResponse {
         this.volumeName = Objects.requireNonNull(volumeName);
     }
 
+    /**
+     * The server address of one of the servers that hosts the GlusterFS. Can be either the IP address or server name.
+     * 
+     */
     public String getServerAddress() {
         return this.serverAddress;
     }
+    /**
+     * The name of the created GlusterFS volume.
+     * 
+     */
     public String getVolumeName() {
         return this.volumeName;
     }

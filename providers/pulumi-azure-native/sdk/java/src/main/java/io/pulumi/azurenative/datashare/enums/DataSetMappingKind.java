@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Kind of data set mapping.
+     * 
+     */
     @EnumType
     public enum DataSetMappingKind {
         Blob("Blob"),

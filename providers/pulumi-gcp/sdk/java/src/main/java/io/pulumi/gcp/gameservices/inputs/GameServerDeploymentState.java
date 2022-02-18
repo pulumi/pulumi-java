@@ -15,6 +15,10 @@ public final class GameServerDeploymentState extends io.pulumi.resources.Resourc
 
     public static final GameServerDeploymentState Empty = new GameServerDeploymentState();
 
+    /**
+     * A unique id for the deployment.
+     * 
+     */
     @InputImport(name="deploymentId")
     private final @Nullable Input<String> deploymentId;
 
@@ -22,6 +26,10 @@ public final class GameServerDeploymentState extends io.pulumi.resources.Resourc
         return this.deploymentId == null ? Input.empty() : this.deploymentId;
     }
 
+    /**
+     * Human readable description of the game server deployment.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -29,6 +37,11 @@ public final class GameServerDeploymentState extends io.pulumi.resources.Resourc
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The labels associated with this game server deployment. Each label is a
+     * key-value pair.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -36,6 +49,10 @@ public final class GameServerDeploymentState extends io.pulumi.resources.Resourc
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * Location of the Deployment.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -43,6 +60,12 @@ public final class GameServerDeploymentState extends io.pulumi.resources.Resourc
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The resource id of the game server deployment, eg:
+     * 'projects/{project_id}/locations/{location}/gameServerDeployments/{deployment_id}'. For example,
+     * 'projects/my-project/locations/{location}/gameServerDeployments/my-deployment'.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -50,6 +73,11 @@ public final class GameServerDeploymentState extends io.pulumi.resources.Resourc
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

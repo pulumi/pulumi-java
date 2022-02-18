@@ -12,6 +12,10 @@ public final class GetSpatialAnchorsAccountArgs extends io.pulumi.resources.Invo
 
     public static final GetSpatialAnchorsAccountArgs Empty = new GetSpatialAnchorsAccountArgs();
 
+    /**
+     * Name of an Mixed Reality Account.
+     * 
+     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -19,6 +23,10 @@ public final class GetSpatialAnchorsAccountArgs extends io.pulumi.resources.Invo
         return this.accountName;
     }
 
+    /**
+     * Name of an Azure resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

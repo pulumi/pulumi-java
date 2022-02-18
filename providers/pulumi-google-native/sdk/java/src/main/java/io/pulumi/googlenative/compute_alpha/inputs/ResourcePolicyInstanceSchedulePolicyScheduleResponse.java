@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Schedule for an instance operation.
+ * 
+ */
 public final class ResourcePolicyInstanceSchedulePolicyScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourcePolicyInstanceSchedulePolicyScheduleResponse Empty = new ResourcePolicyInstanceSchedulePolicyScheduleResponse();
 
+    /**
+     * Specifies the frequency for the operation, using the unix-cron format.
+     * 
+     */
     @InputImport(name="schedule", required=true)
     private final String schedule;
 

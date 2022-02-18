@@ -12,6 +12,10 @@ public final class GetprivateLinkServicesForMIPPolicySyncArgs extends io.pulumi.
 
     public static final GetprivateLinkServicesForMIPPolicySyncArgs Empty = new GetprivateLinkServicesForMIPPolicySyncArgs();
 
+    /**
+     * The name of the resource group that contains the service instance.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +23,10 @@ public final class GetprivateLinkServicesForMIPPolicySyncArgs extends io.pulumi.
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the service instance.
+     * 
+     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 

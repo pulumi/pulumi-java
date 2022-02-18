@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * HTTP redirection type.
+     * 
+     */
     @EnumType
     public enum ApplicationGatewayRedirectType {
         Permanent("Permanent"),

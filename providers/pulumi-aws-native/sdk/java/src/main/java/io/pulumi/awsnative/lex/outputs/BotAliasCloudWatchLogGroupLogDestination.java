@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BotAliasCloudWatchLogGroupLogDestination {
+    /**
+     * A string used to identify this tag
+     * 
+     */
     private final String cloudWatchLogGroupArn;
+    /**
+     * A string containing the value for the tag
+     * 
+     */
     private final String logPrefix;
 
     @OutputCustomType.Constructor({"cloudWatchLogGroupArn","logPrefix"})
@@ -20,9 +28,17 @@ public final class BotAliasCloudWatchLogGroupLogDestination {
         this.logPrefix = Objects.requireNonNull(logPrefix);
     }
 
+    /**
+     * A string used to identify this tag
+     * 
+     */
     public String getCloudWatchLogGroupArn() {
         return this.cloudWatchLogGroupArn;
     }
+    /**
+     * A string containing the value for the tag
+     * 
+     */
     public String getLogPrefix() {
         return this.logPrefix;
     }

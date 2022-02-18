@@ -15,6 +15,10 @@ public final class SensitivityLabelArgs extends io.pulumi.resources.ResourceArgs
 
     public static final SensitivityLabelArgs Empty = new SensitivityLabelArgs();
 
+    /**
+     * The name of the column.
+     * 
+     */
     @InputImport(name="columnName", required=true)
     private final Input<String> columnName;
 
@@ -22,6 +26,10 @@ public final class SensitivityLabelArgs extends io.pulumi.resources.ResourceArgs
         return this.columnName;
     }
 
+    /**
+     * The name of the database.
+     * 
+     */
     @InputImport(name="databaseName", required=true)
     private final Input<String> databaseName;
 
@@ -29,6 +37,10 @@ public final class SensitivityLabelArgs extends io.pulumi.resources.ResourceArgs
         return this.databaseName;
     }
 
+    /**
+     * The information type.
+     * 
+     */
     @InputImport(name="informationType")
     private final @Nullable Input<String> informationType;
 
@@ -36,6 +48,10 @@ public final class SensitivityLabelArgs extends io.pulumi.resources.ResourceArgs
         return this.informationType == null ? Input.empty() : this.informationType;
     }
 
+    /**
+     * The information type ID.
+     * 
+     */
     @InputImport(name="informationTypeId")
     private final @Nullable Input<String> informationTypeId;
 
@@ -43,6 +59,10 @@ public final class SensitivityLabelArgs extends io.pulumi.resources.ResourceArgs
         return this.informationTypeId == null ? Input.empty() : this.informationTypeId;
     }
 
+    /**
+     * The label ID.
+     * 
+     */
     @InputImport(name="labelId")
     private final @Nullable Input<String> labelId;
 
@@ -50,6 +70,10 @@ public final class SensitivityLabelArgs extends io.pulumi.resources.ResourceArgs
         return this.labelId == null ? Input.empty() : this.labelId;
     }
 
+    /**
+     * The label name.
+     * 
+     */
     @InputImport(name="labelName")
     private final @Nullable Input<String> labelName;
 
@@ -64,6 +88,10 @@ public final class SensitivityLabelArgs extends io.pulumi.resources.ResourceArgs
         return this.rank == null ? Input.empty() : this.rank;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -71,6 +99,10 @@ public final class SensitivityLabelArgs extends io.pulumi.resources.ResourceArgs
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the schema.
+     * 
+     */
     @InputImport(name="schemaName", required=true)
     private final Input<String> schemaName;
 
@@ -78,6 +110,10 @@ public final class SensitivityLabelArgs extends io.pulumi.resources.ResourceArgs
         return this.schemaName;
     }
 
+    /**
+     * The source of the sensitivity label.
+     * 
+     */
     @InputImport(name="sensitivityLabelSource")
     private final @Nullable Input<String> sensitivityLabelSource;
 
@@ -85,6 +121,10 @@ public final class SensitivityLabelArgs extends io.pulumi.resources.ResourceArgs
         return this.sensitivityLabelSource == null ? Input.empty() : this.sensitivityLabelSource;
     }
 
+    /**
+     * The name of the server.
+     * 
+     */
     @InputImport(name="serverName", required=true)
     private final Input<String> serverName;
 
@@ -92,6 +132,10 @@ public final class SensitivityLabelArgs extends io.pulumi.resources.ResourceArgs
         return this.serverName;
     }
 
+    /**
+     * The name of the table.
+     * 
+     */
     @InputImport(name="tableName", required=true)
     private final Input<String> tableName;
 

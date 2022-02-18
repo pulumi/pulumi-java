@@ -14,11 +14,35 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetMaintenanceConfigurationResult {
+    /**
+     * Resource ID.
+     * 
+     */
     private final String id;
+    /**
+     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     private final String name;
+    /**
+     * Time slots on which upgrade is not allowed.
+     * 
+     */
     private final @Nullable List<TimeSpanResponse> notAllowedTime;
+    /**
+     * The system meta data relating to this resource.
+     * 
+     */
     private final SystemDataResponse systemData;
+    /**
+     * Weekday time slots allowed to upgrade.
+     * 
+     */
     private final @Nullable List<TimeInWeekResponse> timeInWeek;
+    /**
+     * Resource type
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"id","name","notAllowedTime","systemData","timeInWeek","type"})
@@ -37,21 +61,45 @@ public final class GetMaintenanceConfigurationResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Resource ID.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Time slots on which upgrade is not allowed.
+     * 
+     */
     public List<TimeSpanResponse> getNotAllowedTime() {
         return this.notAllowedTime == null ? List.of() : this.notAllowedTime;
     }
+    /**
+     * The system meta data relating to this resource.
+     * 
+     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+    /**
+     * Weekday time slots allowed to upgrade.
+     * 
+     */
     public List<TimeInWeekResponse> getTimeInWeek() {
         return this.timeInWeek == null ? List.of() : this.timeInWeek;
     }
+    /**
+     * Resource type
+     * 
+     */
     public String getType() {
         return this.type;
     }

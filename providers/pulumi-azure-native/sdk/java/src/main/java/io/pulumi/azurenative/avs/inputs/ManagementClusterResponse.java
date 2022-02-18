@@ -10,10 +10,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * The properties of a default cluster
+ * 
+ */
 public final class ManagementClusterResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ManagementClusterResponse Empty = new ManagementClusterResponse();
 
+    /**
+     * The identity
+     * 
+     */
     @InputImport(name="clusterId", required=true)
     private final Integer clusterId;
 
@@ -21,6 +29,10 @@ public final class ManagementClusterResponse extends io.pulumi.resources.InvokeA
         return this.clusterId;
     }
 
+    /**
+     * The cluster size
+     * 
+     */
     @InputImport(name="clusterSize", required=true)
     private final Integer clusterSize;
 
@@ -28,6 +40,10 @@ public final class ManagementClusterResponse extends io.pulumi.resources.InvokeA
         return this.clusterSize;
     }
 
+    /**
+     * The hosts
+     * 
+     */
     @InputImport(name="hosts", required=true)
     private final List<String> hosts;
 
@@ -35,6 +51,10 @@ public final class ManagementClusterResponse extends io.pulumi.resources.InvokeA
         return this.hosts;
     }
 
+    /**
+     * The state of the cluster provisioning
+     * 
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 

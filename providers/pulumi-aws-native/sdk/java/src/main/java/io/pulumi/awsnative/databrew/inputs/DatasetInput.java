@@ -13,6 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Input
+ * 
+ */
 public final class DatasetInput extends io.pulumi.resources.InvokeArgs {
 
     public static final DatasetInput Empty = new DatasetInput();

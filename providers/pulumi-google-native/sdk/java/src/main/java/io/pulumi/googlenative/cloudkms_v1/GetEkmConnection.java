@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEkmConnection {
+/**
+ * Returns metadata for a given EkmConnection.
+ * 
+ */
     public static CompletableFuture<GetEkmConnectionResult> invokeAsync(GetEkmConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudkms/v1:getEkmConnection", TypeShape.of(GetEkmConnectionResult.class), args == null ? GetEkmConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

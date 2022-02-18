@@ -12,10 +12,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetReplicationMigrationItemResult {
+    /**
+     * Resource Id
+     * 
+     */
     private final String id;
+    /**
+     * Resource Location
+     * 
+     */
     private final @Nullable String location;
+    /**
+     * Resource Name
+     * 
+     */
     private final String name;
+    /**
+     * The migration item properties.
+     * 
+     */
     private final MigrationItemPropertiesResponse properties;
+    /**
+     * Resource Type
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"id","location","name","properties","type"})
@@ -32,18 +52,38 @@ public final class GetReplicationMigrationItemResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Resource Id
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Resource Location
+     * 
+     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
+    /**
+     * Resource Name
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The migration item properties.
+     * 
+     */
     public MigrationItemPropertiesResponse getProperties() {
         return this.properties;
     }
+    /**
+     * Resource Type
+     * 
+     */
     public String getType() {
         return this.type;
     }

@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInternalRangeIamPolicy {
+/**
+ * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+ * 
+ */
     public static CompletableFuture<GetInternalRangeIamPolicyResult> invokeAsync(GetInternalRangeIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:networkconnectivity/v1alpha1:getInternalRangeIamPolicy", TypeShape.of(GetInternalRangeIamPolicyResult.class), args == null ? GetInternalRangeIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

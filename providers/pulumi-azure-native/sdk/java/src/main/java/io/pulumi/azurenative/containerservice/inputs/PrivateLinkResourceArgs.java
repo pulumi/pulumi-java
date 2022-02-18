@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A private link resource
+ * 
+ */
 public final class PrivateLinkResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PrivateLinkResourceArgs Empty = new PrivateLinkResourceArgs();
 
+    /**
+     * The group ID of the resource.
+     * 
+     */
     @InputImport(name="groupId")
     private final @Nullable Input<String> groupId;
 
@@ -22,6 +30,10 @@ public final class PrivateLinkResourceArgs extends io.pulumi.resources.ResourceA
         return this.groupId == null ? Input.empty() : this.groupId;
     }
 
+    /**
+     * The ID of the private link resource.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -29,6 +41,10 @@ public final class PrivateLinkResourceArgs extends io.pulumi.resources.ResourceA
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * The name of the private link resource.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -36,6 +52,10 @@ public final class PrivateLinkResourceArgs extends io.pulumi.resources.ResourceA
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * RequiredMembers of the resource
+     * 
+     */
     @InputImport(name="requiredMembers")
     private final @Nullable Input<List<String>> requiredMembers;
 
@@ -43,6 +63,10 @@ public final class PrivateLinkResourceArgs extends io.pulumi.resources.ResourceA
         return this.requiredMembers == null ? Input.empty() : this.requiredMembers;
     }
 
+    /**
+     * The resource type.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 

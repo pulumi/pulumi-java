@@ -14,6 +14,11 @@ public final class AzureClusterFleetArgs extends io.pulumi.resources.ResourceArg
 
     public static final AzureClusterFleetArgs Empty = new AzureClusterFleetArgs();
 
+    /**
+     * - 
+     * The name of the managed Hub Membership resource associated to this cluster. Membership names are formatted as projects/<project-number>/locations/global/membership/<cluster-id>.
+     * 
+     */
     @InputImport(name="membership")
     private final @Nullable Input<String> membership;
 
@@ -21,6 +26,10 @@ public final class AzureClusterFleetArgs extends io.pulumi.resources.ResourceArg
         return this.membership == null ? Input.empty() : this.membership;
     }
 
+    /**
+     * The project for the resource
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

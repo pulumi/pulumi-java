@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The Object used to describe a Service Provider supported by Bot Service
+ * 
+ */
 public final class ServiceProviderPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ServiceProviderPropertiesResponse Empty = new ServiceProviderPropertiesResponse();
 
+    /**
+     * Display Name of the Service Provider
+     * 
+     */
     @InputImport(name="devPortalUrl", required=true)
     private final String devPortalUrl;
 
@@ -23,6 +31,10 @@ public final class ServiceProviderPropertiesResponse extends io.pulumi.resources
         return this.devPortalUrl;
     }
 
+    /**
+     * Display Name of the Service Provider
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final String displayName;
 
@@ -30,6 +42,10 @@ public final class ServiceProviderPropertiesResponse extends io.pulumi.resources
         return this.displayName;
     }
 
+    /**
+     * Display Name of the Service Provider
+     * 
+     */
     @InputImport(name="iconUrl", required=true)
     private final String iconUrl;
 
@@ -37,6 +53,10 @@ public final class ServiceProviderPropertiesResponse extends io.pulumi.resources
         return this.iconUrl;
     }
 
+    /**
+     * Id for Service Provider
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -44,6 +64,10 @@ public final class ServiceProviderPropertiesResponse extends io.pulumi.resources
         return this.id;
     }
 
+    /**
+     * The list of parameters for the Service Provider
+     * 
+     */
     @InputImport(name="parameters")
     private final @Nullable List<ServiceProviderParameterResponse> parameters;
 
@@ -51,6 +75,10 @@ public final class ServiceProviderPropertiesResponse extends io.pulumi.resources
         return this.parameters == null ? List.of() : this.parameters;
     }
 
+    /**
+     * Display Name of the Service Provider
+     * 
+     */
     @InputImport(name="serviceProviderName", required=true)
     private final String serviceProviderName;
 

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Tier of an Azure Firewall.
+     * 
+     */
     @EnumType
     public enum AzureFirewallSkuTier {
         Standard("Standard"),

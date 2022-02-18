@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BucketReplicaModifications {
+    /**
+     * Specifies whether Amazon S3 replicates modifications on replicas.
+     * 
+     */
     private final BucketReplicaModificationsStatus status;
 
     @OutputCustomType.Constructor({"status"})
@@ -16,6 +20,10 @@ public final class BucketReplicaModifications {
         this.status = Objects.requireNonNull(status);
     }
 
+    /**
+     * Specifies whether Amazon S3 replicates modifications on replicas.
+     * 
+     */
     public BucketReplicaModificationsStatus getStatus() {
         return this.status;
     }

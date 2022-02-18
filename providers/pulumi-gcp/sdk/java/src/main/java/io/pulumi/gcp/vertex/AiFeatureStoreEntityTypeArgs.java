@@ -16,6 +16,10 @@ public final class AiFeatureStoreEntityTypeArgs extends io.pulumi.resources.Reso
 
     public static final AiFeatureStoreEntityTypeArgs Empty = new AiFeatureStoreEntityTypeArgs();
 
+    /**
+     * The name of the Featurestore to use, in the format projects/{project}/locations/{location}/featurestores/{featurestore}.
+     * 
+     */
     @InputImport(name="featurestore", required=true)
     private final Input<String> featurestore;
 
@@ -23,6 +27,10 @@ public final class AiFeatureStoreEntityTypeArgs extends io.pulumi.resources.Reso
         return this.featurestore;
     }
 
+    /**
+     * A set of key/value label pairs to assign to this EntityType.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -30,6 +38,12 @@ public final class AiFeatureStoreEntityTypeArgs extends io.pulumi.resources.Reso
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The default monitoring configuration for all Features under this EntityType.
+     * If this is populated with [FeaturestoreMonitoringConfig.monitoring_interval] specified, snapshot analysis monitoring is enabled. Otherwise, snapshot analysis monitoring is disabled.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="monitoringConfig")
     private final @Nullable Input<AiFeatureStoreEntityTypeMonitoringConfigArgs> monitoringConfig;
 
@@ -37,6 +51,10 @@ public final class AiFeatureStoreEntityTypeArgs extends io.pulumi.resources.Reso
         return this.monitoringConfig == null ? Input.empty() : this.monitoringConfig;
     }
 
+    /**
+     * The name of the EntityType. This value may be up to 60 characters, and valid characters are [a-z0-9_]. The first character cannot be a number.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

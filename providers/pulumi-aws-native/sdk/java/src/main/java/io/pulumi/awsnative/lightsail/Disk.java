@@ -18,29 +18,65 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Resource Type definition for AWS::Lightsail::Disk
+ * 
+ */
 @ResourceType(type="aws-native:lightsail:Disk")
 public class Disk extends io.pulumi.resources.CustomResource {
+    /**
+     * An array of objects representing the add-ons to enable for the new instance.
+     * 
+     */
     @OutputExport(name="addOns", type=List.class, parameters={DiskAddOn.class})
     private Output</* @Nullable */ List<DiskAddOn>> addOns;
 
+    /**
+     * @return An array of objects representing the add-ons to enable for the new instance.
+     * 
+     */
     public Output</* @Nullable */ List<DiskAddOn>> getAddOns() {
         return this.addOns;
     }
+    /**
+     * Name of the attached Lightsail Instance
+     * 
+     */
     @OutputExport(name="attachedTo", type=String.class, parameters={})
     private Output<String> attachedTo;
 
+    /**
+     * @return Name of the attached Lightsail Instance
+     * 
+     */
     public Output<String> getAttachedTo() {
         return this.attachedTo;
     }
+    /**
+     * Attachment State of the Lightsail disk
+     * 
+     */
     @OutputExport(name="attachmentState", type=String.class, parameters={})
     private Output<String> attachmentState;
 
+    /**
+     * @return Attachment State of the Lightsail disk
+     * 
+     */
     public Output<String> getAttachmentState() {
         return this.attachmentState;
     }
+    /**
+     * The Availability Zone in which to create your instance. Use the following format: us-east-2a (case sensitive). Be sure to add the include Availability Zones parameter to your request.
+     * 
+     */
     @OutputExport(name="availabilityZone", type=String.class, parameters={})
     private Output</* @Nullable */ String> availabilityZone;
 
+    /**
+     * @return The Availability Zone in which to create your instance. Use the following format: us-east-2a (case sensitive). Be sure to add the include Availability Zones parameter to your request.
+     * 
+     */
     public Output</* @Nullable */ String> getAvailabilityZone() {
         return this.availabilityZone;
     }
@@ -50,21 +86,45 @@ public class Disk extends io.pulumi.resources.CustomResource {
     public Output<String> getDiskArn() {
         return this.diskArn;
     }
+    /**
+     * The names to use for your new Lightsail disk.
+     * 
+     */
     @OutputExport(name="diskName", type=String.class, parameters={})
     private Output<String> diskName;
 
+    /**
+     * @return The names to use for your new Lightsail disk.
+     * 
+     */
     public Output<String> getDiskName() {
         return this.diskName;
     }
+    /**
+     * Iops of the Lightsail disk
+     * 
+     */
     @OutputExport(name="iops", type=Integer.class, parameters={})
     private Output<Integer> iops;
 
+    /**
+     * @return Iops of the Lightsail disk
+     * 
+     */
     public Output<Integer> getIops() {
         return this.iops;
     }
+    /**
+     * Check is Disk is attached state
+     * 
+     */
     @OutputExport(name="isAttached", type=Boolean.class, parameters={})
     private Output<Boolean> isAttached;
 
+    /**
+     * @return Check is Disk is attached state
+     * 
+     */
     public Output<Boolean> getIsAttached() {
         return this.isAttached;
     }
@@ -74,43 +134,97 @@ public class Disk extends io.pulumi.resources.CustomResource {
     public Output<DiskLocation> getLocation() {
         return this.location;
     }
+    /**
+     * Path of the  attached Disk
+     * 
+     */
     @OutputExport(name="path", type=String.class, parameters={})
     private Output<String> path;
 
+    /**
+     * @return Path of the  attached Disk
+     * 
+     */
     public Output<String> getPath() {
         return this.path;
     }
+    /**
+     * Resource type of Lightsail instance.
+     * 
+     */
     @OutputExport(name="resourceType", type=String.class, parameters={})
     private Output<String> resourceType;
 
+    /**
+     * @return Resource type of Lightsail instance.
+     * 
+     */
     public Output<String> getPropResourceType() {
         return this.resourceType;
     }
+    /**
+     * Size of the Lightsail disk
+     * 
+     */
     @OutputExport(name="sizeInGb", type=Integer.class, parameters={})
     private Output<Integer> sizeInGb;
 
+    /**
+     * @return Size of the Lightsail disk
+     * 
+     */
     public Output<Integer> getSizeInGb() {
         return this.sizeInGb;
     }
+    /**
+     * State of the Lightsail disk
+     * 
+     */
     @OutputExport(name="state", type=String.class, parameters={})
     private Output<String> state;
 
+    /**
+     * @return State of the Lightsail disk
+     * 
+     */
     public Output<String> getState() {
         return this.state;
     }
+    /**
+     * Support code to help identify any issues
+     * 
+     */
     @OutputExport(name="supportCode", type=String.class, parameters={})
     private Output<String> supportCode;
 
+    /**
+     * @return Support code to help identify any issues
+     * 
+     */
     public Output<String> getSupportCode() {
         return this.supportCode;
     }
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     @OutputExport(name="tags", type=List.class, parameters={DiskTag.class})
     private Output</* @Nullable */ List<DiskTag>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     */
     public Output</* @Nullable */ List<DiskTag>> getTags() {
         return this.tags;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Disk(String name, DiskArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:lightsail:Disk", name, args == null ? DiskArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -126,6 +240,14 @@ public class Disk extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Disk get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Disk(name, id, options);
     }

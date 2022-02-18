@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AppleRegistrationResponse {
+    /**
+     * The Client ID of the app used for login.
+     * 
+     */
     private final @Nullable String clientId;
+    /**
+     * The app setting name that contains the client secret.
+     * 
+     */
     private final @Nullable String clientSecretSettingName;
 
     @OutputCustomType.Constructor({"clientId","clientSecretSettingName"})
@@ -22,9 +30,17 @@ public final class AppleRegistrationResponse {
         this.clientSecretSettingName = clientSecretSettingName;
     }
 
+    /**
+     * The Client ID of the app used for login.
+     * 
+     */
     public Optional<String> getClientId() {
         return Optional.ofNullable(this.clientId);
     }
+    /**
+     * The app setting name that contains the client secret.
+     * 
+     */
     public Optional<String> getClientSecretSettingName() {
         return Optional.ofNullable(this.clientSecretSettingName);
     }

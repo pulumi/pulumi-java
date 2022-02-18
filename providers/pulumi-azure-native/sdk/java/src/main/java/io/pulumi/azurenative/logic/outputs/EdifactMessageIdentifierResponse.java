@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class EdifactMessageIdentifierResponse {
+    /**
+     * The message id on which this envelope settings has to be applied.
+     * 
+     */
     private final String messageId;
 
     @OutputCustomType.Constructor({"messageId"})
@@ -16,6 +20,10 @@ public final class EdifactMessageIdentifierResponse {
         this.messageId = Objects.requireNonNull(messageId);
     }
 
+    /**
+     * The message id on which this envelope settings has to be applied.
+     * 
+     */
     public String getMessageId() {
         return this.messageId;
     }

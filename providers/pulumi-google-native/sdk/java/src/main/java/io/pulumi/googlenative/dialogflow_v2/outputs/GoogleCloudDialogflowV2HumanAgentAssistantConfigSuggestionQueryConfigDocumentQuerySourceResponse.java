@@ -10,6 +10,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceResponse {
+    /**
+     * Knowledge documents to query from. Format: `projects//locations//knowledgeBases//documents/`. Currently, at most 5 documents are supported.
+     * 
+     */
     private final List<String> documents;
 
     @OutputCustomType.Constructor({"documents"})
@@ -17,6 +21,10 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
         this.documents = Objects.requireNonNull(documents);
     }
 
+    /**
+     * Knowledge documents to query from. Format: `projects//locations//knowledgeBases//documents/`. Currently, at most 5 documents are supported.
+     * 
+     */
     public List<String> getDocuments() {
         return this.documents;
     }

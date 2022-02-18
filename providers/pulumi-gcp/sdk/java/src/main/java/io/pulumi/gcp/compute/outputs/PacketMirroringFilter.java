@@ -12,8 +12,24 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PacketMirroringFilter {
+    /**
+     * IP CIDR ranges that apply as a filter on the source (ingress) or
+     * destination (egress) IP in the IP header. Only IPv4 is supported.
+     * 
+     */
     private final @Nullable List<String> cidrRanges;
+    /**
+     * Direction of traffic to mirror.
+     * Default value is `BOTH`.
+     * Possible values are `INGRESS`, `EGRESS`, and `BOTH`.
+     * 
+     */
     private final @Nullable String direction;
+    /**
+     * Protocols that apply as a filter on mirrored traffic.
+     * Each value may be one of `tcp`, `udp`, and `icmp`.
+     * 
+     */
     private final @Nullable List<String> ipProtocols;
 
     @OutputCustomType.Constructor({"cidrRanges","direction","ipProtocols"})
@@ -26,12 +42,28 @@ public final class PacketMirroringFilter {
         this.ipProtocols = ipProtocols;
     }
 
+    /**
+     * IP CIDR ranges that apply as a filter on the source (ingress) or
+     * destination (egress) IP in the IP header. Only IPv4 is supported.
+     * 
+     */
     public List<String> getCidrRanges() {
         return this.cidrRanges == null ? List.of() : this.cidrRanges;
     }
+    /**
+     * Direction of traffic to mirror.
+     * Default value is `BOTH`.
+     * Possible values are `INGRESS`, `EGRESS`, and `BOTH`.
+     * 
+     */
     public Optional<String> getDirection() {
         return Optional.ofNullable(this.direction);
     }
+    /**
+     * Protocols that apply as a filter on mirrored traffic.
+     * Each value may be one of `tcp`, `udp`, and `icmp`.
+     * 
+     */
     public List<String> getIpProtocols() {
         return this.ipProtocols == null ? List.of() : this.ipProtocols;
     }

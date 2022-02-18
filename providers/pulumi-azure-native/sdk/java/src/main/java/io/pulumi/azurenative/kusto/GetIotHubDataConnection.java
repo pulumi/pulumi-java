@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIotHubDataConnection {
+/**
+ * Class representing an iot hub data connection.
+ * API Version: 2021-01-01.
+ * 
+ *
+ * Class representing an iot hub data connection.
+ * 
+ */
     public static CompletableFuture<GetIotHubDataConnectionResult> invokeAsync(GetIotHubDataConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kusto:getIotHubDataConnection", TypeShape.of(GetIotHubDataConnectionResult.class), args == null ? GetIotHubDataConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

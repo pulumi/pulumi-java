@@ -10,10 +10,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * <p>A string parameter.</p>
+ * 
+ */
 public final class DashboardStringParameterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DashboardStringParameterArgs Empty = new DashboardStringParameterArgs();
 
+    /**
+     * <p>A display name for a string parameter.</p>
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -21,6 +29,10 @@ public final class DashboardStringParameterArgs extends io.pulumi.resources.Reso
         return this.name;
     }
 
+    /**
+     * <p>The values of a string parameter.</p>
+     * 
+     */
     @InputImport(name="values", required=true)
     private final Input<List<String>> values;
 

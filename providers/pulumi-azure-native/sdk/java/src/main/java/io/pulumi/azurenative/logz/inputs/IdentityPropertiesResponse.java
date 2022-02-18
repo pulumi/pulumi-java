@@ -14,6 +14,10 @@ public final class IdentityPropertiesResponse extends io.pulumi.resources.Invoke
 
     public static final IdentityPropertiesResponse Empty = new IdentityPropertiesResponse();
 
+    /**
+     * The identity ID.
+     * 
+     */
     @InputImport(name="principalId", required=true)
     private final String principalId;
 
@@ -21,6 +25,10 @@ public final class IdentityPropertiesResponse extends io.pulumi.resources.Invoke
         return this.principalId;
     }
 
+    /**
+     * The tenant ID of resource.
+     * 
+     */
     @InputImport(name="tenantId", required=true)
     private final String tenantId;
 

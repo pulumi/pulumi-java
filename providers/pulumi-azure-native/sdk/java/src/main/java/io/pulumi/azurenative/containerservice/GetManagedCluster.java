@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetManagedCluster {
+/**
+ * Managed cluster.
+ * API Version: 2021-03-01.
+ * 
+ *
+ * Managed cluster.
+ * 
+ */
     public static CompletableFuture<GetManagedClusterResult> invokeAsync(GetManagedClusterArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerservice:getManagedCluster", TypeShape.of(GetManagedClusterResult.class), args == null ? GetManagedClusterArgs.Empty : args, Utilities.withVersion(options));
     }

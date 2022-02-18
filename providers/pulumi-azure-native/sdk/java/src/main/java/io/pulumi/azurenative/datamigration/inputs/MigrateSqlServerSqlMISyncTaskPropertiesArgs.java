@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties for task that migrates SQL Server databases to Azure SQL Database Managed Instance sync scenario
+ * 
+ */
 public final class MigrateSqlServerSqlMISyncTaskPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MigrateSqlServerSqlMISyncTaskPropertiesArgs Empty = new MigrateSqlServerSqlMISyncTaskPropertiesArgs();
 
+    /**
+     * Task input
+     * 
+     */
     @InputImport(name="input")
     private final @Nullable Input<MigrateSqlServerSqlMISyncTaskInputArgs> input;
 
@@ -22,6 +30,11 @@ public final class MigrateSqlServerSqlMISyncTaskPropertiesArgs extends io.pulumi
         return this.input == null ? Input.empty() : this.input;
     }
 
+    /**
+     * Task type.
+     * Expected value is 'Migrate.SqlServer.AzureSqlDbMI.Sync.LRS'.
+     * 
+     */
     @InputImport(name="taskType", required=true)
     private final Input<String> taskType;
 

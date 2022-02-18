@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAnnotationSpecSet {
+/**
+ * Gets an annotation spec set by resource name.
+ * 
+ */
     public static CompletableFuture<GetAnnotationSpecSetResult> invokeAsync(GetAnnotationSpecSetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:datalabeling/v1beta1:getAnnotationSpecSet", TypeShape.of(GetAnnotationSpecSetResult.class), args == null ? GetAnnotationSpecSetArgs.Empty : args, Utilities.withVersion(options));
     }

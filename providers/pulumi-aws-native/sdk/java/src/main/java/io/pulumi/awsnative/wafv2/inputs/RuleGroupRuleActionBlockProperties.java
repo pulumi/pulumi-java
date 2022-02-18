@@ -10,6 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Block traffic towards application.
+ * 
+ */
 public final class RuleGroupRuleActionBlockProperties extends io.pulumi.resources.InvokeArgs {
 
     public static final RuleGroupRuleActionBlockProperties Empty = new RuleGroupRuleActionBlockProperties();

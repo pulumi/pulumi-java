@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Name of a public IP prefix SKU.
+     * 
+     */
     @EnumType
     public enum PublicIPPrefixSkuName {
         Standard("Standard");

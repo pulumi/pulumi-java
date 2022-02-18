@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetProtectionIntent {
+/**
+ * Base class for backup ProtectionIntent.
+ * API Version: 2021-02-01.
+ * 
+ *
+ * Base class for backup ProtectionIntent.
+ * 
+ */
     public static CompletableFuture<GetProtectionIntentResult> invokeAsync(GetProtectionIntentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:recoveryservices:getProtectionIntent", TypeShape.of(GetProtectionIntentResult.class), args == null ? GetProtectionIntentArgs.Empty : args, Utilities.withVersion(options));
     }

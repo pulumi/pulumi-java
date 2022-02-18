@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A collection of Cloud VPN tunnel resources. These resources should be redundant HA VPN tunnels that all advertise the same prefixes to Google Cloud. Alternatively, in a passive/active configuration, all tunnels should be capable of advertising the same prefixes.
+ * 
+ */
 public final class LinkedVpnTunnelsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LinkedVpnTunnelsArgs Empty = new LinkedVpnTunnelsArgs();
 
+    /**
+     * A value that controls whether site-to-site data transfer is enabled for these resources. Data transfer is available only in [supported locations](https://cloud.google.com/network-connectivity/docs/network-connectivity-center/concepts/locations).
+     * 
+     */
     @InputImport(name="siteToSiteDataTransfer")
     private final @Nullable Input<Boolean> siteToSiteDataTransfer;
 
@@ -23,6 +31,10 @@ public final class LinkedVpnTunnelsArgs extends io.pulumi.resources.ResourceArgs
         return this.siteToSiteDataTransfer == null ? Input.empty() : this.siteToSiteDataTransfer;
     }
 
+    /**
+     * The URIs of linked VPN tunnel resources.
+     * 
+     */
     @InputImport(name="uris")
     private final @Nullable Input<List<String>> uris;
 

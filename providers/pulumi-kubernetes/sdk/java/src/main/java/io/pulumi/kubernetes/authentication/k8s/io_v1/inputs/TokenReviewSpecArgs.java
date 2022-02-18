@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * TokenReviewSpec is a description of the token authentication request.
+ * 
+ */
 public final class TokenReviewSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TokenReviewSpecArgs Empty = new TokenReviewSpecArgs();
 
+    /**
+     * Audiences is a list of the identifiers that the resource server presented with the token identifies as. Audience-aware token authenticators will verify that the token was intended for at least one of the audiences in this list. If no audiences are provided, the audience will default to the audience of the Kubernetes apiserver.
+     * 
+     */
     @InputImport(name="audiences")
     private final @Nullable Input<List<String>> audiences;
 
@@ -22,6 +30,10 @@ public final class TokenReviewSpecArgs extends io.pulumi.resources.ResourceArgs 
         return this.audiences == null ? Input.empty() : this.audiences;
     }
 
+    /**
+     * Token is the opaque bearer token.
+     * 
+     */
     @InputImport(name="token")
     private final @Nullable Input<String> token;
 

@@ -13,10 +13,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Markdown part metadata.
+ * 
+ */
 public final class MarkdownPartMetadataResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MarkdownPartMetadataResponse Empty = new MarkdownPartMetadataResponse();
 
+    /**
+     * Input to dashboard part.
+     * 
+     */
     @InputImport(name="inputs")
     private final @Nullable List<Object> inputs;
 
@@ -24,6 +32,10 @@ public final class MarkdownPartMetadataResponse extends io.pulumi.resources.Invo
         return this.inputs == null ? List.of() : this.inputs;
     }
 
+    /**
+     * Markdown part settings.
+     * 
+     */
     @InputImport(name="settings")
     private final @Nullable MarkdownPartMetadataResponseSettings settings;
 
@@ -31,6 +43,11 @@ public final class MarkdownPartMetadataResponse extends io.pulumi.resources.Invo
         return this.settings == null ? Optional.empty() : Optional.ofNullable(this.settings);
     }
 
+    /**
+     * The type of dashboard part.
+     * Expected value is 'Extension/HubsExtension/PartType/MarkdownPart'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

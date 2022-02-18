@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAssignment {
+/**
+ * Represents a blueprint assignment.
+ * API Version: 2018-11-01-preview.
+ * 
+ *
+ * Represents a blueprint assignment.
+ * 
+ */
     public static CompletableFuture<GetAssignmentResult> invokeAsync(GetAssignmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:blueprint:getAssignment", TypeShape.of(GetAssignmentResult.class), args == null ? GetAssignmentArgs.Empty : args, Utilities.withVersion(options));
     }

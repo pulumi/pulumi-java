@@ -20,6 +20,10 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TaskDefinitionArgs Empty = new TaskDefinitionArgs();
 
+    /**
+     * Whether to automatically create tasks using this task definition for all gateways with the specified current version. If false, the task must me created by calling CreateWirelessGatewayTask.
+     * 
+     */
     @InputImport(name="autoCreateTasks", required=true)
     private final Input<Boolean> autoCreateTasks;
 
@@ -27,6 +31,10 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
         return this.autoCreateTasks;
     }
 
+    /**
+     * The list of task definitions.
+     * 
+     */
     @InputImport(name="loRaWANUpdateGatewayTaskEntry")
     private final @Nullable Input<TaskDefinitionLoRaWANUpdateGatewayTaskEntryArgs> loRaWANUpdateGatewayTaskEntry;
 
@@ -34,6 +42,10 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
         return this.loRaWANUpdateGatewayTaskEntry == null ? Input.empty() : this.loRaWANUpdateGatewayTaskEntry;
     }
 
+    /**
+     * The name of the new resource.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -41,6 +53,10 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * A list of key-value pairs that contain metadata for the destination.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<TaskDefinitionTagArgs>> tags;
 
@@ -48,6 +64,10 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * A filter to list only the wireless gateway task definitions that use this task definition type
+     * 
+     */
     @InputImport(name="taskDefinitionType")
     private final @Nullable Input<TaskDefinitionType> taskDefinitionType;
 
@@ -55,6 +75,10 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
         return this.taskDefinitionType == null ? Input.empty() : this.taskDefinitionType;
     }
 
+    /**
+     * Information about the gateways to update.
+     * 
+     */
     @InputImport(name="update")
     private final @Nullable Input<TaskDefinitionUpdateWirelessGatewayTaskCreateArgs> update;
 

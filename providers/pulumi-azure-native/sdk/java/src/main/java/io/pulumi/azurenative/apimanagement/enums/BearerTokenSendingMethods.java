@@ -8,9 +8,21 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Form of an authorization grant, which the client uses to request the access token.
+     * 
+     */
     @EnumType
     public enum BearerTokenSendingMethods {
+        /**
+         * Access token will be transmitted in the Authorization header using Bearer schema
+         * 
+         */
         AuthorizationHeader("authorizationHeader"),
+        /**
+         * Access token will be transmitted as query parameters.
+         * 
+         */
         Query("query");
 
         private final String value;

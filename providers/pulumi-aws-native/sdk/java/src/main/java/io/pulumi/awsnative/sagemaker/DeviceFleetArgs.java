@@ -17,6 +17,10 @@ public final class DeviceFleetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DeviceFleetArgs Empty = new DeviceFleetArgs();
 
+    /**
+     * Description for the edge device fleet
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -24,6 +28,10 @@ public final class DeviceFleetArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The name of the edge device fleet
+     * 
+     */
     @InputImport(name="deviceFleetName")
     private final @Nullable Input<String> deviceFleetName;
 
@@ -31,6 +39,10 @@ public final class DeviceFleetArgs extends io.pulumi.resources.ResourceArgs {
         return this.deviceFleetName == null ? Input.empty() : this.deviceFleetName;
     }
 
+    /**
+     * S3 bucket and an ecryption key id (if available) to store outputs for the fleet
+     * 
+     */
     @InputImport(name="outputConfig", required=true)
     private final Input<DeviceFleetEdgeOutputConfigArgs> outputConfig;
 
@@ -38,6 +50,10 @@ public final class DeviceFleetArgs extends io.pulumi.resources.ResourceArgs {
         return this.outputConfig;
     }
 
+    /**
+     * Role associated with the device fleet
+     * 
+     */
     @InputImport(name="roleArn", required=true)
     private final Input<String> roleArn;
 
@@ -45,6 +61,10 @@ public final class DeviceFleetArgs extends io.pulumi.resources.ResourceArgs {
         return this.roleArn;
     }
 
+    /**
+     * Associate tags with the resource
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<DeviceFleetTagArgs>> tags;
 

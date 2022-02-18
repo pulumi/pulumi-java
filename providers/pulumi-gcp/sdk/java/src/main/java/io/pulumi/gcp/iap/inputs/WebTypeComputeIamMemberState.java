@@ -15,6 +15,11 @@ public final class WebTypeComputeIamMemberState extends io.pulumi.resources.Reso
 
     public static final WebTypeComputeIamMemberState Empty = new WebTypeComputeIamMemberState();
 
+    /**
+     * ) An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="condition")
     private final @Nullable Input<WebTypeComputeIamMemberConditionGetArgs> condition;
 
@@ -22,6 +27,10 @@ public final class WebTypeComputeIamMemberState extends io.pulumi.resources.Reso
         return this.condition == null ? Input.empty() : this.condition;
     }
 
+    /**
+     * (Computed) The etag of the IAM policy.
+     * 
+     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -36,6 +45,11 @@ public final class WebTypeComputeIamMemberState extends io.pulumi.resources.Reso
         return this.member == null ? Input.empty() : this.member;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -43,6 +57,12 @@ public final class WebTypeComputeIamMemberState extends io.pulumi.resources.Reso
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The role that should be applied. Only one
+     * `gcp.iap.WebTypeComputeIamBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     @InputImport(name="role")
     private final @Nullable Input<String> role;
 

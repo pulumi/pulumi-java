@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Data format name to use for the schema. Accepted values: 'AVRO', 'JSON', 'PROTOBUF'
+     * 
+     */
     @EnumType
     public enum SchemaDataFormat {
         Avro("AVRO"),

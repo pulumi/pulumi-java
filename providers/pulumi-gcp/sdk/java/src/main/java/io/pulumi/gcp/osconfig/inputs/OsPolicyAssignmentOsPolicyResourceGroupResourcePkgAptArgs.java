@@ -13,6 +13,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgAptArgs ext
 
     public static final OsPolicyAssignmentOsPolicyResourceGroupResourcePkgAptArgs Empty = new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgAptArgs();
 
+    /**
+     * Required. The name of the repository.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Gets or sets the SKU name of the account.
+     * 
+     */
     @EnumType
     public enum SkuNameEnum {
         Free("Free"),

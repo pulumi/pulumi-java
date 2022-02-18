@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Configuration for Binary Authorization.
+ * 
+ */
 public final class BinaryAuthorizationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BinaryAuthorizationArgs Empty = new BinaryAuthorizationArgs();
 
+    /**
+     * Enable Binary Authorization for this cluster. If enabled, all container images will be validated by Binary Authorization.
+     * 
+     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 

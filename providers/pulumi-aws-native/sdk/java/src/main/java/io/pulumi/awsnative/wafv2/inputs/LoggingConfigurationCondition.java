@@ -15,6 +15,10 @@ public final class LoggingConfigurationCondition extends io.pulumi.resources.Inv
 
     public static final LoggingConfigurationCondition Empty = new LoggingConfigurationCondition();
 
+    /**
+     * A single action condition.
+     * 
+     */
     @InputImport(name="actionCondition")
     private final @Nullable LoggingConfigurationConditionActionConditionProperties actionCondition;
 
@@ -22,6 +26,10 @@ public final class LoggingConfigurationCondition extends io.pulumi.resources.Inv
         return this.actionCondition == null ? Optional.empty() : Optional.ofNullable(this.actionCondition);
     }
 
+    /**
+     * A single label name condition.
+     * 
+     */
     @InputImport(name="labelNameCondition")
     private final @Nullable LoggingConfigurationConditionLabelNameConditionProperties labelNameCondition;
 

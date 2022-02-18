@@ -17,6 +17,10 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AddonArgs Empty = new AddonArgs();
 
+    /**
+     * Name of Addon
+     * 
+     */
     @InputImport(name="addonName")
     private final @Nullable Input<String> addonName;
 
@@ -24,6 +28,10 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
         return this.addonName == null ? Input.empty() : this.addonName;
     }
 
+    /**
+     * Version of Addon
+     * 
+     */
     @InputImport(name="addonVersion")
     private final @Nullable Input<String> addonVersion;
 
@@ -31,6 +39,10 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
         return this.addonVersion == null ? Input.empty() : this.addonVersion;
     }
 
+    /**
+     * Name of Cluster
+     * 
+     */
     @InputImport(name="clusterName", required=true)
     private final Input<String> clusterName;
 
@@ -38,6 +50,10 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
         return this.clusterName;
     }
 
+    /**
+     * Resolve parameter value conflicts
+     * 
+     */
     @InputImport(name="resolveConflicts")
     private final @Nullable Input<AddonResolveConflicts> resolveConflicts;
 
@@ -45,6 +61,10 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
         return this.resolveConflicts == null ? Input.empty() : this.resolveConflicts;
     }
 
+    /**
+     * IAM role to bind to the add-on's service account
+     * 
+     */
     @InputImport(name="serviceAccountRoleArn")
     private final @Nullable Input<String> serviceAccountRoleArn;
 
@@ -52,6 +72,10 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceAccountRoleArn == null ? Input.empty() : this.serviceAccountRoleArn;
     }
 
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<AddonTagArgs>> tags;
 

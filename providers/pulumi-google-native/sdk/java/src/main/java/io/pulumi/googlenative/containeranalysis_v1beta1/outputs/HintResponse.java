@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class HintResponse {
+    /**
+     * The human readable name of this attestation authority, for example "qa".
+     * 
+     */
     private final String humanReadableName;
 
     @OutputCustomType.Constructor({"humanReadableName"})
@@ -16,6 +20,10 @@ public final class HintResponse {
         this.humanReadableName = Objects.requireNonNull(humanReadableName);
     }
 
+    /**
+     * The human readable name of this attestation authority, for example "qa".
+     * 
+     */
     public String getHumanReadableName() {
         return this.humanReadableName;
     }

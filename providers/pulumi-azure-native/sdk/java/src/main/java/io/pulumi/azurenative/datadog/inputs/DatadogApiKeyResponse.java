@@ -14,6 +14,10 @@ public final class DatadogApiKeyResponse extends io.pulumi.resources.InvokeArgs 
 
     public static final DatadogApiKeyResponse Empty = new DatadogApiKeyResponse();
 
+    /**
+     * The time of creation of the API key.
+     * 
+     */
     @InputImport(name="created")
     private final @Nullable String created;
 
@@ -21,6 +25,10 @@ public final class DatadogApiKeyResponse extends io.pulumi.resources.InvokeArgs 
         return this.created == null ? Optional.empty() : Optional.ofNullable(this.created);
     }
 
+    /**
+     * The user that created the API key.
+     * 
+     */
     @InputImport(name="createdBy")
     private final @Nullable String createdBy;
 
@@ -28,6 +36,10 @@ public final class DatadogApiKeyResponse extends io.pulumi.resources.InvokeArgs 
         return this.createdBy == null ? Optional.empty() : Optional.ofNullable(this.createdBy);
     }
 
+    /**
+     * The value of the API key.
+     * 
+     */
     @InputImport(name="key", required=true)
     private final String key;
 
@@ -35,6 +47,10 @@ public final class DatadogApiKeyResponse extends io.pulumi.resources.InvokeArgs 
         return this.key;
     }
 
+    /**
+     * The name of the API key.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 

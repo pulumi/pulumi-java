@@ -16,51 +16,117 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Resource Type definition for AWS::SageMaker::App
+ * 
+ */
 @ResourceType(type="aws-native:sagemaker:App")
 public class App extends io.pulumi.resources.CustomResource {
+    /**
+     * The Amazon Resource Name (ARN) of the app.
+     * 
+     */
     @OutputExport(name="appArn", type=String.class, parameters={})
     private Output<String> appArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the app.
+     * 
+     */
     public Output<String> getAppArn() {
         return this.appArn;
     }
+    /**
+     * The name of the app.
+     * 
+     */
     @OutputExport(name="appName", type=String.class, parameters={})
     private Output<String> appName;
 
+    /**
+     * @return The name of the app.
+     * 
+     */
     public Output<String> getAppName() {
         return this.appName;
     }
+    /**
+     * The type of app.
+     * 
+     */
     @OutputExport(name="appType", type=AppType.class, parameters={})
     private Output<AppType> appType;
 
+    /**
+     * @return The type of app.
+     * 
+     */
     public Output<AppType> getAppType() {
         return this.appType;
     }
+    /**
+     * The domain ID.
+     * 
+     */
     @OutputExport(name="domainId", type=String.class, parameters={})
     private Output<String> domainId;
 
+    /**
+     * @return The domain ID.
+     * 
+     */
     public Output<String> getDomainId() {
         return this.domainId;
     }
+    /**
+     * The instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance.
+     * 
+     */
     @OutputExport(name="resourceSpec", type=AppResourceSpec.class, parameters={})
     private Output</* @Nullable */ AppResourceSpec> resourceSpec;
 
+    /**
+     * @return The instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance.
+     * 
+     */
     public Output</* @Nullable */ AppResourceSpec> getResourceSpec() {
         return this.resourceSpec;
     }
+    /**
+     * A list of tags to apply to the app.
+     * 
+     */
     @OutputExport(name="tags", type=List.class, parameters={AppTag.class})
     private Output</* @Nullable */ List<AppTag>> tags;
 
+    /**
+     * @return A list of tags to apply to the app.
+     * 
+     */
     public Output</* @Nullable */ List<AppTag>> getTags() {
         return this.tags;
     }
+    /**
+     * The user profile name.
+     * 
+     */
     @OutputExport(name="userProfileName", type=String.class, parameters={})
     private Output<String> userProfileName;
 
+    /**
+     * @return The user profile name.
+     * 
+     */
     public Output<String> getUserProfileName() {
         return this.userProfileName;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public App(String name, AppArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:sagemaker:App", name, args == null ? AppArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -76,6 +142,14 @@ public class App extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static App get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new App(name, id, options);
     }

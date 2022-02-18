@@ -19,135 +19,336 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Define the resourcePool.
+ * API Version: 2020-10-01-preview.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:connectedvmwarevsphere:ResourcePool ContosoAgent /subscriptions/fd3c3665-1729-4b7b-9a38-238e83b0f98b/resourceGroups/testrg/providers/Microsoft.ConnectedVMwarevSphere/ResourcePools/ContosoAgent 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:connectedvmwarevsphere:ResourcePool")
 public class ResourcePool extends io.pulumi.resources.CustomResource {
+    /**
+     * Gets or sets CPULimitMHz which specifies a CPU usage limit in MHz.
+     * Utilization will not exceed this limit even if there are available resources.
+     * 
+     */
     @OutputExport(name="cpuLimitMHz", type=Double.class, parameters={})
     private Output<Double> cpuLimitMHz;
 
+    /**
+     * @return Gets or sets CPULimitMHz which specifies a CPU usage limit in MHz.
+     * Utilization will not exceed this limit even if there are available resources.
+     * 
+     */
     public Output<Double> getCpuLimitMHz() {
         return this.cpuLimitMHz;
     }
+    /**
+     * Gets or sets CPUReservationMHz which specifies the CPU size in MHz that is guaranteed
+     * to be available.
+     * 
+     */
     @OutputExport(name="cpuReservationMHz", type=Double.class, parameters={})
     private Output<Double> cpuReservationMHz;
 
+    /**
+     * @return Gets or sets CPUReservationMHz which specifies the CPU size in MHz that is guaranteed
+     * to be available.
+     * 
+     */
     public Output<Double> getCpuReservationMHz() {
         return this.cpuReservationMHz;
     }
+    /**
+     * Gets or sets CPUSharesLevel which specifies the CPU allocation level for this pool.
+     * This property is used in relative allocation between resource consumers.
+     * 
+     */
     @OutputExport(name="cpuSharesLevel", type=String.class, parameters={})
     private Output<String> cpuSharesLevel;
 
+    /**
+     * @return Gets or sets CPUSharesLevel which specifies the CPU allocation level for this pool.
+     * This property is used in relative allocation between resource consumers.
+     * 
+     */
     public Output<String> getCpuSharesLevel() {
         return this.cpuSharesLevel;
     }
+    /**
+     * Gets the name of the corresponding resource in Kubernetes.
+     * 
+     */
     @OutputExport(name="customResourceName", type=String.class, parameters={})
     private Output<String> customResourceName;
 
+    /**
+     * @return Gets the name of the corresponding resource in Kubernetes.
+     * 
+     */
     public Output<String> getCustomResourceName() {
         return this.customResourceName;
     }
+    /**
+     * Gets or sets the extended location.
+     * 
+     */
     @OutputExport(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
     private Output</* @Nullable */ ExtendedLocationResponse> extendedLocation;
 
+    /**
+     * @return Gets or sets the extended location.
+     * 
+     */
     public Output</* @Nullable */ ExtendedLocationResponse> getExtendedLocation() {
         return this.extendedLocation;
     }
+    /**
+     * Gets or sets the inventory Item ID for the resource pool.
+     * 
+     */
     @OutputExport(name="inventoryItemId", type=String.class, parameters={})
     private Output</* @Nullable */ String> inventoryItemId;
 
+    /**
+     * @return Gets or sets the inventory Item ID for the resource pool.
+     * 
+     */
     public Output</* @Nullable */ String> getInventoryItemId() {
         return this.inventoryItemId;
     }
+    /**
+     * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
+     * 
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
+    /**
+     * @return Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
+     * 
+     */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
+    /**
+     * Gets or sets the location.
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return Gets or sets the location.
+     * 
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * Gets or sets MemLimitMB specifies a memory usage limit in megabytes.
+     * Utilization will not exceed the specified limit even if there are available resources.
+     * 
+     */
     @OutputExport(name="memLimitMB", type=Double.class, parameters={})
     private Output<Double> memLimitMB;
 
+    /**
+     * @return Gets or sets MemLimitMB specifies a memory usage limit in megabytes.
+     * Utilization will not exceed the specified limit even if there are available resources.
+     * 
+     */
     public Output<Double> getMemLimitMB() {
         return this.memLimitMB;
     }
+    /**
+     * Gets or sets MemReservationMB which specifies the guaranteed available memory in
+     * megabytes.
+     * 
+     */
     @OutputExport(name="memReservationMB", type=Double.class, parameters={})
     private Output<Double> memReservationMB;
 
+    /**
+     * @return Gets or sets MemReservationMB which specifies the guaranteed available memory in
+     * megabytes.
+     * 
+     */
     public Output<Double> getMemReservationMB() {
         return this.memReservationMB;
     }
+    /**
+     * Gets or sets CPUSharesLevel which specifies the memory allocation level for this pool.
+     * This property is used in relative allocation between resource consumers.
+     * 
+     */
     @OutputExport(name="memSharesLevel", type=String.class, parameters={})
     private Output<String> memSharesLevel;
 
+    /**
+     * @return Gets or sets CPUSharesLevel which specifies the memory allocation level for this pool.
+     * This property is used in relative allocation between resource consumers.
+     * 
+     */
     public Output<String> getMemSharesLevel() {
         return this.memSharesLevel;
     }
+    /**
+     * Gets or sets the vCenter Managed Object name for the resource pool.
+     * 
+     */
     @OutputExport(name="moName", type=String.class, parameters={})
     private Output<String> moName;
 
+    /**
+     * @return Gets or sets the vCenter Managed Object name for the resource pool.
+     * 
+     */
     public Output<String> getMoName() {
         return this.moName;
     }
+    /**
+     * Gets or sets the vCenter MoRef (Managed Object Reference) ID for the resource pool.
+     * 
+     */
     @OutputExport(name="moRefId", type=String.class, parameters={})
     private Output</* @Nullable */ String> moRefId;
 
+    /**
+     * @return Gets or sets the vCenter MoRef (Managed Object Reference) ID for the resource pool.
+     * 
+     */
     public Output</* @Nullable */ String> getMoRefId() {
         return this.moRefId;
     }
+    /**
+     * Gets or sets the name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Gets or sets the name.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Gets or sets the provisioning state.
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return Gets or sets the provisioning state.
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The resource status information.
+     * 
+     */
     @OutputExport(name="statuses", type=List.class, parameters={ResourceStatusResponse.class})
     private Output<List<ResourceStatusResponse>> statuses;
 
+    /**
+     * @return The resource status information.
+     * 
+     */
     public Output<List<ResourceStatusResponse>> getStatuses() {
         return this.statuses;
     }
+    /**
+     * The system data.
+     * 
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return The system data.
+     * 
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * Gets or sets the Resource tags.
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Gets or sets the Resource tags.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Gets or sets the type of the resource.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Gets or sets the type of the resource.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * Gets or sets a unique identifier for this resource.
+     * 
+     */
     @OutputExport(name="uuid", type=String.class, parameters={})
     private Output<String> uuid;
 
+    /**
+     * @return Gets or sets a unique identifier for this resource.
+     * 
+     */
     public Output<String> getUuid() {
         return this.uuid;
     }
+    /**
+     * Gets or sets the ARM Id of the vCenter resource in which this resource pool resides.
+     * 
+     */
     @OutputExport(name="vCenterId", type=String.class, parameters={})
     private Output</* @Nullable */ String> vCenterId;
 
+    /**
+     * @return Gets or sets the ARM Id of the vCenter resource in which this resource pool resides.
+     * 
+     */
     public Output</* @Nullable */ String> getVCenterId() {
         return this.vCenterId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ResourcePool(String name, ResourcePoolArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:connectedvmwarevsphere:ResourcePool", name, args == null ? ResourcePoolArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -166,6 +367,14 @@ public class ResourcePool extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ResourcePool get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ResourcePool(name, id, options);
     }

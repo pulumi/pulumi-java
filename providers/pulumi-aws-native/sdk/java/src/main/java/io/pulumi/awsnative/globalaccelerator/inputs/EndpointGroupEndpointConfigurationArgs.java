@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The configuration for a given endpoint
+ * 
+ */
 public final class EndpointGroupEndpointConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EndpointGroupEndpointConfigurationArgs Empty = new EndpointGroupEndpointConfigurationArgs();
 
+    /**
+     * true if client ip should be preserved
+     * 
+     */
     @InputImport(name="clientIPPreservationEnabled")
     private final @Nullable Input<Boolean> clientIPPreservationEnabled;
 
@@ -23,6 +31,10 @@ public final class EndpointGroupEndpointConfigurationArgs extends io.pulumi.reso
         return this.clientIPPreservationEnabled == null ? Input.empty() : this.clientIPPreservationEnabled;
     }
 
+    /**
+     * Id of the endpoint. For Network/Application Load Balancer this value is the ARN.  For EIP, this value is the allocation ID.  For EC2 instances, this is the EC2 instance ID
+     * 
+     */
     @InputImport(name="endpointId", required=true)
     private final Input<String> endpointId;
 
@@ -30,6 +42,10 @@ public final class EndpointGroupEndpointConfigurationArgs extends io.pulumi.reso
         return this.endpointId;
     }
 
+    /**
+     * The weight for the endpoint.
+     * 
+     */
     @InputImport(name="weight")
     private final @Nullable Input<Integer> weight;
 

@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOrderItemByName {
+/**
+ * Represents order item contract
+ * API Version: 2021-12-01.
+ * 
+ *
+ * Represents order item contract
+ * 
+ */
     public static CompletableFuture<GetOrderItemByNameResult> invokeAsync(GetOrderItemByNameArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:edgeorder:getOrderItemByName", TypeShape.of(GetOrderItemByNameResult.class), args == null ? GetOrderItemByNameArgs.Empty : args, Utilities.withVersion(options));
     }

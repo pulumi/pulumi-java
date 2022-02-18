@@ -28,6 +28,10 @@ public final class StudioComponentArgs extends io.pulumi.resources.ResourceArgs 
         return this.configuration == null ? Input.empty() : this.configuration;
     }
 
+    /**
+     * <p>The description.</p>
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -35,6 +39,10 @@ public final class StudioComponentArgs extends io.pulumi.resources.ResourceArgs 
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * <p>The EC2 security groups that control access to the studio component.</p>
+     * 
+     */
     @InputImport(name="ec2SecurityGroupIds")
     private final @Nullable Input<List<String>> ec2SecurityGroupIds;
 
@@ -42,6 +50,10 @@ public final class StudioComponentArgs extends io.pulumi.resources.ResourceArgs 
         return this.ec2SecurityGroupIds == null ? Input.empty() : this.ec2SecurityGroupIds;
     }
 
+    /**
+     * <p>Initialization scripts for studio components.</p>
+     * 
+     */
     @InputImport(name="initializationScripts")
     private final @Nullable Input<List<StudioComponentInitializationScriptArgs>> initializationScripts;
 
@@ -49,6 +61,10 @@ public final class StudioComponentArgs extends io.pulumi.resources.ResourceArgs 
         return this.initializationScripts == null ? Input.empty() : this.initializationScripts;
     }
 
+    /**
+     * <p>The name for the studio component.</p>
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -56,6 +72,10 @@ public final class StudioComponentArgs extends io.pulumi.resources.ResourceArgs 
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * <p>Parameters for the studio component scripts.</p>
+     * 
+     */
     @InputImport(name="scriptParameters")
     private final @Nullable Input<List<StudioComponentScriptParameterKeyValueArgs>> scriptParameters;
 
@@ -63,6 +83,10 @@ public final class StudioComponentArgs extends io.pulumi.resources.ResourceArgs 
         return this.scriptParameters == null ? Input.empty() : this.scriptParameters;
     }
 
+    /**
+     * <p>The studioId. </p>
+     * 
+     */
     @InputImport(name="studioId", required=true)
     private final Input<String> studioId;
 

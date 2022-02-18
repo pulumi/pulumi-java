@@ -16,10 +16,40 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CaPoolIssuancePolicy {
+    /**
+     * IssuanceModes specifies the allowed ways in which Certificates may be requested from this CaPool.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable CaPoolIssuancePolicyAllowedIssuanceModes allowedIssuanceModes;
+    /**
+     * If any AllowedKeyType is specified, then the certificate request's public key must match one of the key types listed here.
+     * Otherwise, any key may be used.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable List<CaPoolIssuancePolicyAllowedKeyType> allowedKeyTypes;
+    /**
+     * A set of X.509 values that will be applied to all certificates issued through this CaPool. If a certificate request
+     * includes conflicting values for the same properties, they will be overwritten by the values defined here. If a certificate
+     * request uses a CertificateTemplate that defines conflicting predefinedValues for the same properties, the certificate
+     * issuance request will fail.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable CaPoolIssuancePolicyBaselineValues baselineValues;
+    /**
+     * Describes constraints on identities that may appear in Certificates issued through this CaPool.
+     * If this is omitted, then this CaPool will not add restrictions on a certificate's identity.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable CaPoolIssuancePolicyIdentityConstraints identityConstraints;
+    /**
+     * The maximum lifetime allowed for issued Certificates. Note that if the issuing CertificateAuthority
+     * expires before a Certificate's requested maximumLifetime, the effective lifetime will be explicitly truncated to match it.
+     * 
+     */
     private final @Nullable String maximumLifetime;
 
     @OutputCustomType.Constructor({"allowedIssuanceModes","allowedKeyTypes","baselineValues","identityConstraints","maximumLifetime"})
@@ -36,18 +66,48 @@ public final class CaPoolIssuancePolicy {
         this.maximumLifetime = maximumLifetime;
     }
 
+    /**
+     * IssuanceModes specifies the allowed ways in which Certificates may be requested from this CaPool.
+     * Structure is documented below.
+     * 
+     */
     public Optional<CaPoolIssuancePolicyAllowedIssuanceModes> getAllowedIssuanceModes() {
         return Optional.ofNullable(this.allowedIssuanceModes);
     }
+    /**
+     * If any AllowedKeyType is specified, then the certificate request's public key must match one of the key types listed here.
+     * Otherwise, any key may be used.
+     * Structure is documented below.
+     * 
+     */
     public List<CaPoolIssuancePolicyAllowedKeyType> getAllowedKeyTypes() {
         return this.allowedKeyTypes == null ? List.of() : this.allowedKeyTypes;
     }
+    /**
+     * A set of X.509 values that will be applied to all certificates issued through this CaPool. If a certificate request
+     * includes conflicting values for the same properties, they will be overwritten by the values defined here. If a certificate
+     * request uses a CertificateTemplate that defines conflicting predefinedValues for the same properties, the certificate
+     * issuance request will fail.
+     * Structure is documented below.
+     * 
+     */
     public Optional<CaPoolIssuancePolicyBaselineValues> getBaselineValues() {
         return Optional.ofNullable(this.baselineValues);
     }
+    /**
+     * Describes constraints on identities that may appear in Certificates issued through this CaPool.
+     * If this is omitted, then this CaPool will not add restrictions on a certificate's identity.
+     * Structure is documented below.
+     * 
+     */
     public Optional<CaPoolIssuancePolicyIdentityConstraints> getIdentityConstraints() {
         return Optional.ofNullable(this.identityConstraints);
     }
+    /**
+     * The maximum lifetime allowed for issued Certificates. Note that if the issuing CertificateAuthority
+     * expires before a Certificate's requested maximumLifetime, the effective lifetime will be explicitly truncated to match it.
+     * 
+     */
     public Optional<String> getMaximumLifetime() {
         return Optional.ofNullable(this.maximumLifetime);
     }
