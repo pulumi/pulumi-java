@@ -19,6 +19,7 @@ import io.pulumi.gcp.container.inputs.NodePoolManagementArgs;
 import io.pulumi.gcp.container.inputs.NodePoolNodeConfigArgs;
 import io.pulumi.kubernetes.Provider;
 import io.pulumi.kubernetes.ProviderArgs;
+import io.pulumi.kubernetes.inputs.KubeClientSettingsArgs;
 import io.pulumi.kubernetes.apps_v1.Deployment;
 import io.pulumi.kubernetes.apps_v1.DeploymentArgs;
 import io.pulumi.kubernetes.apps_v1.inputs.DeploymentSpecArgs;
@@ -155,43 +156,11 @@ public final class MyStack extends Stack {
         export const clusterName = cluster.name;
         */
         this.clusterName = cluster.getName();
-        System.out.println(nodePool.getResourceName());
-        System.out.println(cluster.getResourceName());
         /*
 
         // Manufacture a GKE-style kubeconfig. Note that this is slightly "different"
         // because of the way GKE requires gcloud to be in the picture for cluster
         // authentication (rather than using the client cert/key directly).
-        export const kubeconfig = pulumi.
-            all([ cluster.name, cluster.endpoint, cluster.masterAuth ]).
-            apply(([ name, endpoint, masterAuth ]) => {
-                const context = `${gcp.config.project}_${gcp.config.zone}_${name}`;
-                return `apiVersion: v1
-        clusters:
-        - cluster:
-            certificate-authority-data: ${masterAuth.clusterCaCertificate}
-            server: https://${endpoint}
-        name: ${context}
-        contexts:
-        - context:
-            cluster: ${context}
-            user: ${context}
-        name: ${context}
-        current-context: ${context}
-        kind: Config
-        preferences: {}
-        users:
-        - name: ${context}
-        user:
-            auth-provider:
-            config:
-                cmd-args: config config-helper --format=json
-                cmd-path: gcloud
-                expiry-key: '{.credential.token_expiry}'
-                token-key: '{.credential.access_token}'
-            name: gcp
-        `;
-            });
 apiVersion: v1
 clusters:
 - cluster:
@@ -222,7 +191,6 @@ users:
         //const context = `${gcp.config.project}_${gcp.config.zone}_${name}`;
         final var gcpConfig = new io.pulumi.gcp.Config();
         var clusterName = gcpConfig.project().get() + "_" + gcpConfig.zone().get() + "_" + name;
-        System.out.println(clusterName);
 
         var masterAuthClusterCaCertificate = cluster.getMasterAuth().applyOptional(args -> args.getClusterCaCertificate());
         this.kubeconfig = cluster.getEndpoint()
@@ -250,11 +218,10 @@ users:
                         "      config:",
                         "        cmd-args: config config-helper --format=json",
                         "        cmd-path: gcloud",
-                        "        expiry-key: '{.credential.token_expiry}'",
-                        "        token-key: '{.credential.access_token}'",
+                        "        expiry-key: \"'{.credential.token_expiry}'\"",
+                        "        token-key: \"'{.credential.access_token}'\"",
                         "      name: gcp"
                     ), clusterName, endpoint, caCert);
-                    System.out.println(retval);
                     return retval;
                 }
             ));
@@ -266,6 +233,10 @@ users:
         dependsOn: [nodePool],
         });
         */
+        this.kubeconfig.applyValue(func -> {
+            System.out.println(func);
+            return 1;
+        });
         final var clusterProvider = new Provider(name,
             ProviderArgs.builder()
                 .setKubeconfig(this.kubeconfig.toInput())
