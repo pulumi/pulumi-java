@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.autoscaling_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.autoscaling_v2.outputs.HPAScalingPolicy;
 import java.lang.Integer;
 import java.lang.String;

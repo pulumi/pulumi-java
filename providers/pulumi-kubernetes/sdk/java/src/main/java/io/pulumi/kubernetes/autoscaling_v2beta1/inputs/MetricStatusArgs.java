@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.autoscaling_v2beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.autoscaling_v2beta1.inputs.ContainerResourceMetricStatusArgs;
 import io.pulumi.kubernetes.autoscaling_v2beta1.inputs.ExternalMetricStatusArgs;
 import io.pulumi.kubernetes.autoscaling_v2beta1.inputs.ObjectMetricStatusArgs;

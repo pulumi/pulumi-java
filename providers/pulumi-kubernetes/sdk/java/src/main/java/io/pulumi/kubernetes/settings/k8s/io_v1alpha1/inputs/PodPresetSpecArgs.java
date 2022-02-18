@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.settings.k8s.io_v1alpha1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.EnvFromSourceArgs;
 import io.pulumi.kubernetes.core_v1.inputs.EnvVarArgs;
 import io.pulumi.kubernetes.core_v1.inputs.VolumeArgs;

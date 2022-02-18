@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apps_v1beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.apps_v1beta2.outputs.StatefulSetSpec;
 import io.pulumi.kubernetes.apps_v1beta2.outputs.StatefulSetStatus;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;

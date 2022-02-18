@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs.FlowSchemaSpecArgs;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs.FlowSchemaStatusArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;

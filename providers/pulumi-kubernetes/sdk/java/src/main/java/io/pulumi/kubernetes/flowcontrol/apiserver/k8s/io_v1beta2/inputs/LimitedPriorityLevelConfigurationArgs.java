@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.inputs.LimitResponseArgs;
 import java.lang.Integer;
 import java.util.Objects;

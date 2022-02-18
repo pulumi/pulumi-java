@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.networking.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import io.pulumi.kubernetes.networking.k8s.io_v1beta1.outputs.IngressClassSpec;
 import java.lang.String;

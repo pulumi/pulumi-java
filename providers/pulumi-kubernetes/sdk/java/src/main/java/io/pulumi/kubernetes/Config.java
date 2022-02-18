@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Optional;

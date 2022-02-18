@@ -5,8 +5,8 @@ package io.pulumi.kubernetes.autoscaling_v2beta2;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.autoscaling_v2beta2.HorizontalPodAutoscalerListArgs;
 import io.pulumi.kubernetes.autoscaling_v2beta2.outputs.HorizontalPodAutoscaler;

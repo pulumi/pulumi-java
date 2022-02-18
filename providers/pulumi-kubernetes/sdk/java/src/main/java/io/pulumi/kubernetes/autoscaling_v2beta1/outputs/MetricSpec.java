@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.autoscaling_v2beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.autoscaling_v2beta1.outputs.ContainerResourceMetricSource;
 import io.pulumi.kubernetes.autoscaling_v2beta1.outputs.ExternalMetricSource;
 import io.pulumi.kubernetes.autoscaling_v2beta1.outputs.ObjectMetricSource;

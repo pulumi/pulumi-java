@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.authorization.k8s.io_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.authorization.k8s.io_v1.outputs.NonResourceAttributes;
 import io.pulumi.kubernetes.authorization.k8s.io_v1.outputs.ResourceAttributes;
 import java.lang.String;

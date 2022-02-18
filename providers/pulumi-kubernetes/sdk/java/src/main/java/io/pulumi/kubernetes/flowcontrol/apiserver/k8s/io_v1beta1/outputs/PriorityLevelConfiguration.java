@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.outputs.PriorityLevelConfigurationSpec;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.outputs.PriorityLevelConfigurationStatus;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;

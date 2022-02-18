@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apps_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.apps_v1beta1.inputs.DeploymentStrategyArgs;
 import io.pulumi.kubernetes.apps_v1beta1.inputs.RollbackConfigArgs;
 import io.pulumi.kubernetes.core_v1.inputs.PodTemplateSpecArgs;
