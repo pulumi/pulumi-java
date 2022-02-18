@@ -4,6 +4,7 @@ import io.pulumi.resources.Resource;
 
 import javax.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
+import java.util.logging.Level;
 
 public interface EngineLogger extends CountingLogger {
 
@@ -64,24 +65,75 @@ public interface EngineLogger extends CountingLogger {
         return errorAsync(message, resource, null, null);
     }
 
+    CompletableFuture<Void> logAsync(Level level,
+                                     String message,
+                                     @Nullable Resource resource,
+                                     @Nullable Integer streamId,
+                                     @Nullable Boolean ephemeral);
+
     /**
      * Logs a debug-level message that is generally hidden from end-users.
      */
-    CompletableFuture<Void> debugAsync(String message, @Nullable Resource resource, @Nullable Integer streamId, @Nullable Boolean ephemeral);
+    default CompletableFuture<Void> debugAsync(String message,
+                                               @Nullable Resource resource,
+                                               @Nullable Integer streamId,
+                                               @Nullable Boolean ephemeral) {
+        return logAsync(Level.FINE, message, resource, streamId, ephemeral);
+    }
 
     /**
      * Logs an informational message that is generally printed to stdout during resource operations.
      */
-    CompletableFuture<Void> infoAsync(String message, @Nullable Resource resource, @Nullable Integer streamId, @Nullable Boolean ephemeral);
+    default CompletableFuture<Void> infoAsync(String message,
+                                              @Nullable Resource resource,
+                                              @Nullable Integer streamId,
+                                              @Nullable Boolean ephemeral) {
+        return logAsync(Level.INFO, message, resource, streamId, ephemeral);
+    }
 
     /**
      * Warn logs a warning to indicate that something went wrong, but not catastrophically so.
      */
-    CompletableFuture<Void> warnAsync(String message, @Nullable Resource resource, @Nullable Integer streamId, @Nullable Boolean ephemeral);
+    default CompletableFuture<Void> warnAsync(String message,
+                                              @Nullable Resource resource,
+                                              @Nullable Integer streamId,
+                                              @Nullable Boolean ephemeral) {
+        return logAsync(Level.WARNING, message, resource, streamId, ephemeral);
+    }
 
     /**
      * Logs a fatal condition. Consider raising an exception
      * after calling this method to stop the Pulumi program.
      */
-    CompletableFuture<Void> errorAsync(String message, @Nullable Resource resource, @Nullable Integer streamId, @Nullable Boolean ephemeral);
+    default CompletableFuture<Void> errorAsync(String message,
+                                               @Nullable Resource resource,
+                                               @Nullable Integer streamId,
+                                               @Nullable Boolean ephemeral) {
+        return logAsync(Level.SEVERE, message, resource, streamId, ephemeral);
+    }
+
+    static EngineLogger ignore() {
+        return new NullLogger();
+    }
+
+    class NullLogger implements EngineLogger {
+        @Override
+        public CompletableFuture<Void> logAsync(Level level,
+                                                String message,
+                                                @Nullable Resource resource,
+                                                @Nullable Integer streamId,
+                                                @Nullable Boolean ephemeral) {
+            return CompletableFuture.completedFuture(null);
+        }
+
+        @Override
+        public int getErrorCount() {
+            return 0;
+        }
+
+        @Override
+        public boolean hasLoggedErrors() {
+            return false;
+        }
+    }
 }
