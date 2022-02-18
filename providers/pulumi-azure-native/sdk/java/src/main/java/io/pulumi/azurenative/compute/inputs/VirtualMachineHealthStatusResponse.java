@@ -8,10 +8,18 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * The health status of the VM.
+ * 
+ */
 public final class VirtualMachineHealthStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VirtualMachineHealthStatusResponse Empty = new VirtualMachineHealthStatusResponse();
 
+    /**
+     * The health status information for the VM.
+     * 
+     */
     @InputImport(name="status", required=true)
     private final InstanceViewStatusResponse status;
 

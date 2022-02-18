@@ -10,12 +10,40 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ServerEndpointSyncActivityStatusResponse {
+    /**
+     * Applied bytes
+     * 
+     */
     private final Double appliedBytes;
+    /**
+     * Applied item count.
+     * 
+     */
     private final Double appliedItemCount;
+    /**
+     * Per item error count
+     * 
+     */
     private final Double perItemErrorCount;
+    /**
+     * Sync mode
+     * 
+     */
     private final String syncMode;
+    /**
+     * Timestamp when properties were updated
+     * 
+     */
     private final String timestamp;
+    /**
+     * Total bytes (if available)
+     * 
+     */
     private final Double totalBytes;
+    /**
+     * Total item count (if available)
+     * 
+     */
     private final Double totalItemCount;
 
     @OutputCustomType.Constructor({"appliedBytes","appliedItemCount","perItemErrorCount","syncMode","timestamp","totalBytes","totalItemCount"})
@@ -36,24 +64,52 @@ public final class ServerEndpointSyncActivityStatusResponse {
         this.totalItemCount = Objects.requireNonNull(totalItemCount);
     }
 
+    /**
+     * Applied bytes
+     * 
+     */
     public Double getAppliedBytes() {
         return this.appliedBytes;
     }
+    /**
+     * Applied item count.
+     * 
+     */
     public Double getAppliedItemCount() {
         return this.appliedItemCount;
     }
+    /**
+     * Per item error count
+     * 
+     */
     public Double getPerItemErrorCount() {
         return this.perItemErrorCount;
     }
+    /**
+     * Sync mode
+     * 
+     */
     public String getSyncMode() {
         return this.syncMode;
     }
+    /**
+     * Timestamp when properties were updated
+     * 
+     */
     public String getTimestamp() {
         return this.timestamp;
     }
+    /**
+     * Total bytes (if available)
+     * 
+     */
     public Double getTotalBytes() {
         return this.totalBytes;
     }
+    /**
+     * Total item count (if available)
+     * 
+     */
     public Double getTotalItemCount() {
         return this.totalItemCount;
     }

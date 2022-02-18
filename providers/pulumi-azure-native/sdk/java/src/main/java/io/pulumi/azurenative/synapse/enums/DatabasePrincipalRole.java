@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Database principal role.
+     * 
+     */
     @EnumType
     public enum DatabasePrincipalRole {
         Admin("Admin"),

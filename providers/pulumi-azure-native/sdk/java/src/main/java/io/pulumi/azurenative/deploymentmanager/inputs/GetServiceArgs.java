@@ -12,6 +12,10 @@ public final class GetServiceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetServiceArgs Empty = new GetServiceArgs();
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +23,10 @@ public final class GetServiceArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the service resource.
+     * 
+     */
     @InputImport(name="serviceName", required=true)
     private final String serviceName;
 
@@ -26,6 +34,10 @@ public final class GetServiceArgs extends io.pulumi.resources.InvokeArgs {
         return this.serviceName;
     }
 
+    /**
+     * The name of the service topology .
+     * 
+     */
     @InputImport(name="serviceTopologyName", required=true)
     private final String serviceTopologyName;
 

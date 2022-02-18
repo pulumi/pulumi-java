@@ -22,6 +22,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
 
     public static final AccessReviewScheduleDefinitionByIdArgs Empty = new AccessReviewScheduleDefinitionByIdArgs();
 
+    /**
+     * Flag to indicate whether auto-apply capability, to automatically change the target object access resource, is enabled. If not enabled, a user must, after the review completes, apply the access review.
+     * 
+     */
     @InputImport(name="autoApplyDecisionsEnabled")
     private final @Nullable Input<Boolean> autoApplyDecisionsEnabled;
 
@@ -29,6 +33,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
         return this.autoApplyDecisionsEnabled == null ? Input.empty() : this.autoApplyDecisionsEnabled;
     }
 
+    /**
+     * This is the collection of backup reviewers.
+     * 
+     */
     @InputImport(name="backupReviewers")
     private final @Nullable Input<List<AccessReviewReviewerArgs>> backupReviewers;
 
@@ -36,6 +44,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
         return this.backupReviewers == null ? Input.empty() : this.backupReviewers;
     }
 
+    /**
+     * This specifies the behavior for the autoReview feature when an access review completes.
+     * 
+     */
     @InputImport(name="defaultDecision")
     private final @Nullable Input<Either<String,DefaultDecisionType>> defaultDecision;
 
@@ -43,6 +55,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
         return this.defaultDecision == null ? Input.empty() : this.defaultDecision;
     }
 
+    /**
+     * Flag to indicate whether reviewers are required to provide a justification when reviewing access.
+     * 
+     */
     @InputImport(name="defaultDecisionEnabled")
     private final @Nullable Input<Boolean> defaultDecisionEnabled;
 
@@ -50,6 +66,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
         return this.defaultDecisionEnabled == null ? Input.empty() : this.defaultDecisionEnabled;
     }
 
+    /**
+     * The description provided by the access review creator and visible to admins.
+     * 
+     */
     @InputImport(name="descriptionForAdmins")
     private final @Nullable Input<String> descriptionForAdmins;
 
@@ -57,6 +77,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
         return this.descriptionForAdmins == null ? Input.empty() : this.descriptionForAdmins;
     }
 
+    /**
+     * The description provided by the access review creator to be shown to reviewers.
+     * 
+     */
     @InputImport(name="descriptionForReviewers")
     private final @Nullable Input<String> descriptionForReviewers;
 
@@ -64,6 +88,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
         return this.descriptionForReviewers == null ? Input.empty() : this.descriptionForReviewers;
     }
 
+    /**
+     * The display name for the schedule definition.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -71,6 +99,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The DateTime when the review is scheduled to end. Required if type is endDate
+     * 
+     */
     @InputImport(name="endDate")
     private final @Nullable Input<String> endDate;
 
@@ -78,6 +110,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
         return this.endDate == null ? Input.empty() : this.endDate;
     }
 
+    /**
+     * Duration users are inactive for. The value should be in ISO  8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations).This code can be used to convert TimeSpan to a valid interval string: XmlConvert.ToString(new TimeSpan(hours, minutes, seconds))
+     * 
+     */
     @InputImport(name="inactiveDuration")
     private final @Nullable Input<String> inactiveDuration;
 
@@ -85,6 +121,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
         return this.inactiveDuration == null ? Input.empty() : this.inactiveDuration;
     }
 
+    /**
+     * The duration in days for an instance.
+     * 
+     */
     @InputImport(name="instanceDurationInDays")
     private final @Nullable Input<Integer> instanceDurationInDays;
 
@@ -92,6 +132,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
         return this.instanceDurationInDays == null ? Input.empty() : this.instanceDurationInDays;
     }
 
+    /**
+     * This is the collection of instances returned when one does an expand on it.
+     * 
+     */
     @InputImport(name="instances")
     private final @Nullable Input<List<AccessReviewInstanceArgs>> instances;
 
@@ -99,6 +143,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
         return this.instances == null ? Input.empty() : this.instances;
     }
 
+    /**
+     * The interval for recurrence. For a quarterly review, the interval is 3 for type : absoluteMonthly.
+     * 
+     */
     @InputImport(name="interval")
     private final @Nullable Input<Integer> interval;
 
@@ -106,6 +154,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
         return this.interval == null ? Input.empty() : this.interval;
     }
 
+    /**
+     * Flag to indicate whether the reviewer is required to pass justification when recording a decision.
+     * 
+     */
     @InputImport(name="justificationRequiredOnApproval")
     private final @Nullable Input<Boolean> justificationRequiredOnApproval;
 
@@ -113,6 +165,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
         return this.justificationRequiredOnApproval == null ? Input.empty() : this.justificationRequiredOnApproval;
     }
 
+    /**
+     * Flag to indicate whether sending mails to reviewers and the review creator is enabled.
+     * 
+     */
     @InputImport(name="mailNotificationsEnabled")
     private final @Nullable Input<Boolean> mailNotificationsEnabled;
 
@@ -120,6 +176,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
         return this.mailNotificationsEnabled == null ? Input.empty() : this.mailNotificationsEnabled;
     }
 
+    /**
+     * The number of times to repeat the access review. Required and must be positive if type is numbered.
+     * 
+     */
     @InputImport(name="numberOfOccurrences")
     private final @Nullable Input<Integer> numberOfOccurrences;
 
@@ -127,6 +187,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
         return this.numberOfOccurrences == null ? Input.empty() : this.numberOfOccurrences;
     }
 
+    /**
+     * Flag to indicate whether showing recommendations to reviewers is enabled.
+     * 
+     */
     @InputImport(name="recommendationsEnabled")
     private final @Nullable Input<Boolean> recommendationsEnabled;
 
@@ -134,6 +198,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
         return this.recommendationsEnabled == null ? Input.empty() : this.recommendationsEnabled;
     }
 
+    /**
+     * Flag to indicate whether sending reminder emails to reviewers are enabled.
+     * 
+     */
     @InputImport(name="reminderNotificationsEnabled")
     private final @Nullable Input<Boolean> reminderNotificationsEnabled;
 
@@ -141,6 +209,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
         return this.reminderNotificationsEnabled == null ? Input.empty() : this.reminderNotificationsEnabled;
     }
 
+    /**
+     * This is the collection of reviewers.
+     * 
+     */
     @InputImport(name="reviewers")
     private final @Nullable Input<List<AccessReviewReviewerArgs>> reviewers;
 
@@ -148,6 +220,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
         return this.reviewers == null ? Input.empty() : this.reviewers;
     }
 
+    /**
+     * The id of the access review schedule definition.
+     * 
+     */
     @InputImport(name="scheduleDefinitionId")
     private final @Nullable Input<String> scheduleDefinitionId;
 
@@ -155,6 +231,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
         return this.scheduleDefinitionId == null ? Input.empty() : this.scheduleDefinitionId;
     }
 
+    /**
+     * The DateTime when the review is scheduled to be start. This could be a date in the future. Required on create.
+     * 
+     */
     @InputImport(name="startDate")
     private final @Nullable Input<String> startDate;
 
@@ -162,6 +242,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
         return this.startDate == null ? Input.empty() : this.startDate;
     }
 
+    /**
+     * The recurrence range type. The possible values are: endDate, noEnd, numbered.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<Either<String,AccessReviewRecurrenceRangeType>> type;
 

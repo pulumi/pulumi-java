@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A path element of a management group ancestors.
+ * 
+ */
 public final class ManagementGroupPathElementResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ManagementGroupPathElementResponse Empty = new ManagementGroupPathElementResponse();
 
+    /**
+     * The friendly name of the group.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable String displayName;
 
@@ -21,6 +29,10 @@ public final class ManagementGroupPathElementResponse extends io.pulumi.resource
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
+    /**
+     * The name of the group.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 

@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The Key Vault containing the SSL certificate
+ * 
+ */
 public final class KeyVaultCertificateSourceParametersResponseVault extends io.pulumi.resources.InvokeArgs {
 
     public static final KeyVaultCertificateSourceParametersResponseVault Empty = new KeyVaultCertificateSourceParametersResponseVault();
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 

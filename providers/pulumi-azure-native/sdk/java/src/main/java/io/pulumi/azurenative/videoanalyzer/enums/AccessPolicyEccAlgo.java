@@ -8,10 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Elliptical curve algorithm to be used: ES256, ES384 or ES512.
+     * 
+     */
     @EnumType
     public enum AccessPolicyEccAlgo {
+        /**
+         * ES265
+         * 
+         */
         ES256("ES256"),
+        /**
+         * ES384
+         * 
+         */
         ES384("ES384"),
+        /**
+         * ES512
+         * 
+         */
         ES512("ES512");
 
         private final String value;

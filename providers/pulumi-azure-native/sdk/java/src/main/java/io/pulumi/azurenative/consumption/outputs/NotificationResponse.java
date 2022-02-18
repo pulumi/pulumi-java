@@ -14,13 +14,45 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class NotificationResponse {
+    /**
+     * Email addresses to send the budget notification to when the threshold is exceeded. Must have at least one contact email or contact group specified at the Subscription or Resource Group scopes. All other scopes must have at least one contact email specified.
+     * 
+     */
     private final List<String> contactEmails;
+    /**
+     * Action groups to send the budget notification to when the threshold is exceeded. Must be provided as a fully qualified Azure resource id. Only supported at Subscription or Resource Group scopes.
+     * 
+     */
     private final @Nullable List<String> contactGroups;
+    /**
+     * Contact roles to send the budget notification to when the threshold is exceeded.
+     * 
+     */
     private final @Nullable List<String> contactRoles;
+    /**
+     * The notification is enabled or not.
+     * 
+     */
     private final Boolean enabled;
+    /**
+     * Language in which the recipient will receive the notification
+     * 
+     */
     private final @Nullable String locale;
+    /**
+     * The comparison operator.
+     * 
+     */
     private final String operator;
+    /**
+     * Threshold value associated with a notification. Notification is sent when the cost exceeded the threshold. It is always percent and has to be between 0 and 1000.
+     * 
+     */
     private final Double threshold;
+    /**
+     * The type of threshold
+     * 
+     */
     private final @Nullable String thresholdType;
 
     @OutputCustomType.Constructor({"contactEmails","contactGroups","contactRoles","enabled","locale","operator","threshold","thresholdType"})
@@ -43,27 +75,59 @@ public final class NotificationResponse {
         this.thresholdType = thresholdType;
     }
 
+    /**
+     * Email addresses to send the budget notification to when the threshold is exceeded. Must have at least one contact email or contact group specified at the Subscription or Resource Group scopes. All other scopes must have at least one contact email specified.
+     * 
+     */
     public List<String> getContactEmails() {
         return this.contactEmails;
     }
+    /**
+     * Action groups to send the budget notification to when the threshold is exceeded. Must be provided as a fully qualified Azure resource id. Only supported at Subscription or Resource Group scopes.
+     * 
+     */
     public List<String> getContactGroups() {
         return this.contactGroups == null ? List.of() : this.contactGroups;
     }
+    /**
+     * Contact roles to send the budget notification to when the threshold is exceeded.
+     * 
+     */
     public List<String> getContactRoles() {
         return this.contactRoles == null ? List.of() : this.contactRoles;
     }
+    /**
+     * The notification is enabled or not.
+     * 
+     */
     public Boolean getEnabled() {
         return this.enabled;
     }
+    /**
+     * Language in which the recipient will receive the notification
+     * 
+     */
     public Optional<String> getLocale() {
         return Optional.ofNullable(this.locale);
     }
+    /**
+     * The comparison operator.
+     * 
+     */
     public String getOperator() {
         return this.operator;
     }
+    /**
+     * Threshold value associated with a notification. Notification is sent when the cost exceeded the threshold. It is always percent and has to be between 0 and 1000.
+     * 
+     */
     public Double getThreshold() {
         return this.threshold;
     }
+    /**
+     * The type of threshold
+     * 
+     */
     public Optional<String> getThresholdType() {
         return Optional.ofNullable(this.thresholdType);
     }

@@ -15,6 +15,10 @@ public final class StaticSitePrivateEndpointConnectionArgs extends io.pulumi.res
 
     public static final StaticSitePrivateEndpointConnectionArgs Empty = new StaticSitePrivateEndpointConnectionArgs();
 
+    /**
+     * Kind of resource.
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -22,6 +26,10 @@ public final class StaticSitePrivateEndpointConnectionArgs extends io.pulumi.res
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Name of the static site.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -29,6 +37,10 @@ public final class StaticSitePrivateEndpointConnectionArgs extends io.pulumi.res
         return this.name;
     }
 
+    /**
+     * Name of the private endpoint connection.
+     * 
+     */
     @InputImport(name="privateEndpointConnectionName")
     private final @Nullable Input<String> privateEndpointConnectionName;
 
@@ -36,6 +48,10 @@ public final class StaticSitePrivateEndpointConnectionArgs extends io.pulumi.res
         return this.privateEndpointConnectionName == null ? Input.empty() : this.privateEndpointConnectionName;
     }
 
+    /**
+     * The state of a private link connection
+     * 
+     */
     @InputImport(name="privateLinkServiceConnectionState")
     private final @Nullable Input<PrivateLinkConnectionStateArgs> privateLinkServiceConnectionState;
 
@@ -43,6 +59,10 @@ public final class StaticSitePrivateEndpointConnectionArgs extends io.pulumi.res
         return this.privateLinkServiceConnectionState == null ? Input.empty() : this.privateLinkServiceConnectionState;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

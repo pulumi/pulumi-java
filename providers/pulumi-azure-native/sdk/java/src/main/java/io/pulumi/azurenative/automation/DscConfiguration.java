@@ -19,99 +19,240 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Definition of the configuration type.
+ * API Version: 2019-06-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:automation:DscConfiguration SetupServer /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/myAutomationAccount33/configurations/SetupServer 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:automation:DscConfiguration")
 public class DscConfiguration extends io.pulumi.resources.CustomResource {
+    /**
+     * Gets or sets the creation time.
+     * 
+     */
     @OutputExport(name="creationTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> creationTime;
 
+    /**
+     * @return Gets or sets the creation time.
+     * 
+     */
     public Output</* @Nullable */ String> getCreationTime() {
         return this.creationTime;
     }
+    /**
+     * Gets or sets the description.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return Gets or sets the description.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * Gets or sets the etag of the resource.
+     * 
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
+    /**
+     * @return Gets or sets the etag of the resource.
+     * 
+     */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
+    /**
+     * Gets or sets the job count of the configuration.
+     * 
+     */
     @OutputExport(name="jobCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> jobCount;
 
+    /**
+     * @return Gets or sets the job count of the configuration.
+     * 
+     */
     public Output</* @Nullable */ Integer> getJobCount() {
         return this.jobCount;
     }
+    /**
+     * Gets or sets the last modified time.
+     * 
+     */
     @OutputExport(name="lastModifiedTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedTime;
 
+    /**
+     * @return Gets or sets the last modified time.
+     * 
+     */
     public Output</* @Nullable */ String> getLastModifiedTime() {
         return this.lastModifiedTime;
     }
+    /**
+     * The Azure Region where the resource lives
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return The Azure Region where the resource lives
+     * 
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * Gets or sets verbose log option.
+     * 
+     */
     @OutputExport(name="logVerbose", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> logVerbose;
 
+    /**
+     * @return Gets or sets verbose log option.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getLogVerbose() {
         return this.logVerbose;
     }
+    /**
+     * The name of the resource
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Gets the number of compiled node configurations.
+     * 
+     */
     @OutputExport(name="nodeConfigurationCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> nodeConfigurationCount;
 
+    /**
+     * @return Gets the number of compiled node configurations.
+     * 
+     */
     public Output</* @Nullable */ Integer> getNodeConfigurationCount() {
         return this.nodeConfigurationCount;
     }
+    /**
+     * Gets or sets the configuration parameters.
+     * 
+     */
     @OutputExport(name="parameters", type=Map.class, parameters={String.class, DscConfigurationParameterResponse.class})
     private Output</* @Nullable */ Map<String,DscConfigurationParameterResponse>> parameters;
 
+    /**
+     * @return Gets or sets the configuration parameters.
+     * 
+     */
     public Output</* @Nullable */ Map<String,DscConfigurationParameterResponse>> getParameters() {
         return this.parameters;
     }
+    /**
+     * Gets or sets the provisioning state of the configuration.
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
+    /**
+     * @return Gets or sets the provisioning state of the configuration.
+     * 
+     */
     public Output</* @Nullable */ String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Gets or sets the source.
+     * 
+     */
     @OutputExport(name="source", type=ContentSourceResponse.class, parameters={})
     private Output</* @Nullable */ ContentSourceResponse> source;
 
+    /**
+     * @return Gets or sets the source.
+     * 
+     */
     public Output</* @Nullable */ ContentSourceResponse> getSource() {
         return this.source;
     }
+    /**
+     * Gets or sets the state of the configuration.
+     * 
+     */
     @OutputExport(name="state", type=String.class, parameters={})
     private Output</* @Nullable */ String> state;
 
+    /**
+     * @return Gets or sets the state of the configuration.
+     * 
+     */
     public Output</* @Nullable */ String> getState() {
         return this.state;
     }
+    /**
+     * Resource tags.
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * The type of the resource.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public DscConfiguration(String name, DscConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:automation:DscConfiguration", name, args == null ? DscConfigurationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -131,6 +272,14 @@ public class DscConfiguration extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static DscConfiguration get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DscConfiguration(name, id, options);
     }

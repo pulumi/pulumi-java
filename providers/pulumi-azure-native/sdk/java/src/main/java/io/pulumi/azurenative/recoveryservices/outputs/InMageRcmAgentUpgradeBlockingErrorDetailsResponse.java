@@ -10,11 +10,35 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class InMageRcmAgentUpgradeBlockingErrorDetailsResponse {
+    /**
+     * The error code.
+     * 
+     */
     private final String errorCode;
+    /**
+     * The error message.
+     * 
+     */
     private final String errorMessage;
+    /**
+     * The error message parameters.
+     * 
+     */
     private final Map<String,String> errorMessageParameters;
+    /**
+     * The error tags.
+     * 
+     */
     private final Map<String,String> errorTags;
+    /**
+     * The possible causes.
+     * 
+     */
     private final String possibleCauses;
+    /**
+     * The recommended action.
+     * 
+     */
     private final String recommendedAction;
 
     @OutputCustomType.Constructor({"errorCode","errorMessage","errorMessageParameters","errorTags","possibleCauses","recommendedAction"})
@@ -33,21 +57,45 @@ public final class InMageRcmAgentUpgradeBlockingErrorDetailsResponse {
         this.recommendedAction = Objects.requireNonNull(recommendedAction);
     }
 
+    /**
+     * The error code.
+     * 
+     */
     public String getErrorCode() {
         return this.errorCode;
     }
+    /**
+     * The error message.
+     * 
+     */
     public String getErrorMessage() {
         return this.errorMessage;
     }
+    /**
+     * The error message parameters.
+     * 
+     */
     public Map<String,String> getErrorMessageParameters() {
         return this.errorMessageParameters;
     }
+    /**
+     * The error tags.
+     * 
+     */
     public Map<String,String> getErrorTags() {
         return this.errorTags;
     }
+    /**
+     * The possible causes.
+     * 
+     */
     public String getPossibleCauses() {
         return this.possibleCauses;
     }
+    /**
+     * The recommended action.
+     * 
+     */
     public String getRecommendedAction() {
         return this.recommendedAction;
     }

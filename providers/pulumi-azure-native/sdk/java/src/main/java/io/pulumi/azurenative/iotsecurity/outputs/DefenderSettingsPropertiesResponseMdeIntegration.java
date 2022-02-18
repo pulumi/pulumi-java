@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DefenderSettingsPropertiesResponseMdeIntegration {
+    /**
+     * Integration status
+     * 
+     */
     private final String status;
 
     @OutputCustomType.Constructor({"status"})
@@ -16,6 +20,10 @@ public final class DefenderSettingsPropertiesResponseMdeIntegration {
         this.status = Objects.requireNonNull(status);
     }
 
+    /**
+     * Integration status
+     * 
+     */
     public String getStatus() {
         return this.status;
     }

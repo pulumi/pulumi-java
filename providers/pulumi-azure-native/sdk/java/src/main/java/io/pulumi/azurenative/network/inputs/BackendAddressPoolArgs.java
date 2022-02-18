@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Pool of backend IP addresses.
+ * 
+ */
 public final class BackendAddressPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BackendAddressPoolArgs Empty = new BackendAddressPoolArgs();
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -23,6 +31,10 @@ public final class BackendAddressPoolArgs extends io.pulumi.resources.ResourceAr
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * An array of backend addresses.
+     * 
+     */
     @InputImport(name="loadBalancerBackendAddresses")
     private final @Nullable Input<List<LoadBalancerBackendAddressArgs>> loadBalancerBackendAddresses;
 
@@ -30,6 +42,10 @@ public final class BackendAddressPoolArgs extends io.pulumi.resources.ResourceAr
         return this.loadBalancerBackendAddresses == null ? Input.empty() : this.loadBalancerBackendAddresses;
     }
 
+    /**
+     * The location of the backend address pool.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -37,6 +53,10 @@ public final class BackendAddressPoolArgs extends io.pulumi.resources.ResourceAr
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the resource that is unique within the set of backend address pools used by the load balancer. This name can be used to access the resource.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

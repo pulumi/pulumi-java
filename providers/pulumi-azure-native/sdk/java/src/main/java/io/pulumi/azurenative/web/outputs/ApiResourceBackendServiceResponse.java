@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ApiResourceBackendServiceResponse {
+    /**
+     * The service URL
+     * 
+     */
     private final @Nullable String serviceUrl;
 
     @OutputCustomType.Constructor({"serviceUrl"})
@@ -18,6 +22,10 @@ public final class ApiResourceBackendServiceResponse {
         this.serviceUrl = serviceUrl;
     }
 
+    /**
+     * The service URL
+     * 
+     */
     public Optional<String> getServiceUrl() {
         return Optional.ofNullable(this.serviceUrl);
     }

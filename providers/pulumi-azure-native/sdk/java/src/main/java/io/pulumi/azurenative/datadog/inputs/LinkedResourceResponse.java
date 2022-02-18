@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The definition of a linked resource.
+ * 
+ */
 public final class LinkedResourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LinkedResourceResponse Empty = new LinkedResourceResponse();
 
+    /**
+     * The ARM id of the linked resource.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 

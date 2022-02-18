@@ -16,6 +16,10 @@ public final class JobTargetGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JobTargetGroupArgs Empty = new JobTargetGroupArgs();
 
+    /**
+     * The name of the job agent.
+     * 
+     */
     @InputImport(name="jobAgentName", required=true)
     private final Input<String> jobAgentName;
 
@@ -23,6 +27,10 @@ public final class JobTargetGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.jobAgentName;
     }
 
+    /**
+     * Members of the target group.
+     * 
+     */
     @InputImport(name="members", required=true)
     private final Input<List<JobTargetArgs>> members;
 
@@ -30,6 +38,10 @@ public final class JobTargetGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.members;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -37,6 +49,10 @@ public final class JobTargetGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the server.
+     * 
+     */
     @InputImport(name="serverName", required=true)
     private final Input<String> serverName;
 
@@ -44,6 +60,10 @@ public final class JobTargetGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.serverName;
     }
 
+    /**
+     * The name of the target group.
+     * 
+     */
     @InputImport(name="targetGroupName")
     private final @Nullable Input<String> targetGroupName;
 

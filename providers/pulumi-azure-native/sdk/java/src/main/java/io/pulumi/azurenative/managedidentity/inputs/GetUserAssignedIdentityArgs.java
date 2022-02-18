@@ -12,6 +12,10 @@ public final class GetUserAssignedIdentityArgs extends io.pulumi.resources.Invok
 
     public static final GetUserAssignedIdentityArgs Empty = new GetUserAssignedIdentityArgs();
 
+    /**
+     * The name of the Resource Group to which the identity belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +23,10 @@ public final class GetUserAssignedIdentityArgs extends io.pulumi.resources.Invok
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the identity resource.
+     * 
+     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 

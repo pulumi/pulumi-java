@@ -13,10 +13,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A copy activity Azure Data Lake Storage Gen2 sink.
+ * 
+ */
 public final class AzureBlobFSSinkResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureBlobFSSinkResponse Empty = new AzureBlobFSSinkResponse();
 
+    /**
+     * The type of copy behavior for copy sink.
+     * 
+     */
     @InputImport(name="copyBehavior")
     private final @Nullable Object copyBehavior;
 
@@ -24,6 +32,10 @@ public final class AzureBlobFSSinkResponse extends io.pulumi.resources.InvokeArg
         return this.copyBehavior == null ? Optional.empty() : Optional.ofNullable(this.copyBehavior);
     }
 
+    /**
+     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     @InputImport(name="disableMetricsCollection")
     private final @Nullable Object disableMetricsCollection;
 
@@ -31,6 +43,10 @@ public final class AzureBlobFSSinkResponse extends io.pulumi.resources.InvokeArg
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
     }
 
+    /**
+     * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
+     * 
+     */
     @InputImport(name="maxConcurrentConnections")
     private final @Nullable Object maxConcurrentConnections;
 
@@ -38,6 +54,10 @@ public final class AzureBlobFSSinkResponse extends io.pulumi.resources.InvokeArg
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
     }
 
+    /**
+     * Specify the custom metadata to be added to sink data. Type: array of objects (or Expression with resultType array of objects).
+     * 
+     */
     @InputImport(name="metadata")
     private final @Nullable List<MetadataItemResponse> metadata;
 
@@ -45,6 +65,10 @@ public final class AzureBlobFSSinkResponse extends io.pulumi.resources.InvokeArg
         return this.metadata == null ? List.of() : this.metadata;
     }
 
+    /**
+     * Sink retry count. Type: integer (or Expression with resultType integer).
+     * 
+     */
     @InputImport(name="sinkRetryCount")
     private final @Nullable Object sinkRetryCount;
 
@@ -52,6 +76,10 @@ public final class AzureBlobFSSinkResponse extends io.pulumi.resources.InvokeArg
         return this.sinkRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryCount);
     }
 
+    /**
+     * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     @InputImport(name="sinkRetryWait")
     private final @Nullable Object sinkRetryWait;
 
@@ -59,6 +87,11 @@ public final class AzureBlobFSSinkResponse extends io.pulumi.resources.InvokeArg
         return this.sinkRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryWait);
     }
 
+    /**
+     * Copy sink type.
+     * Expected value is 'AzureBlobFSSink'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -66,6 +99,10 @@ public final class AzureBlobFSSinkResponse extends io.pulumi.resources.InvokeArg
         return this.type;
     }
 
+    /**
+     * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
+     * 
+     */
     @InputImport(name="writeBatchSize")
     private final @Nullable Object writeBatchSize;
 
@@ -73,6 +110,10 @@ public final class AzureBlobFSSinkResponse extends io.pulumi.resources.InvokeArg
         return this.writeBatchSize == null ? Optional.empty() : Optional.ofNullable(this.writeBatchSize);
     }
 
+    /**
+     * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     @InputImport(name="writeBatchTimeout")
     private final @Nullable Object writeBatchTimeout;
 

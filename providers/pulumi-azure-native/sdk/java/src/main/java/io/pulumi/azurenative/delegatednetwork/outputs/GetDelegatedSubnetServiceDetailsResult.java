@@ -14,14 +14,50 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetDelegatedSubnetServiceDetailsResult {
+    /**
+     * Properties of the controller.
+     * 
+     */
     private final @Nullable ControllerDetailsResponse controllerDetails;
+    /**
+     * An identifier that represents the resource.
+     * 
+     */
     private final String id;
+    /**
+     * Location of the resource.
+     * 
+     */
     private final @Nullable String location;
+    /**
+     * The name of the resource.
+     * 
+     */
     private final String name;
+    /**
+     * The current state of dnc delegated subnet resource.
+     * 
+     */
     private final String provisioningState;
+    /**
+     * Resource guid.
+     * 
+     */
     private final String resourceGuid;
+    /**
+     * subnet details
+     * 
+     */
     private final @Nullable SubnetDetailsResponse subnetDetails;
+    /**
+     * The resource tags.
+     * 
+     */
     private final @Nullable Map<String,String> tags;
+    /**
+     * The type of resource.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"controllerDetails","id","location","name","provisioningState","resourceGuid","subnetDetails","tags","type"})
@@ -46,30 +82,66 @@ public final class GetDelegatedSubnetServiceDetailsResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Properties of the controller.
+     * 
+     */
     public Optional<ControllerDetailsResponse> getControllerDetails() {
         return Optional.ofNullable(this.controllerDetails);
     }
+    /**
+     * An identifier that represents the resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Location of the resource.
+     * 
+     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
+    /**
+     * The name of the resource.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The current state of dnc delegated subnet resource.
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Resource guid.
+     * 
+     */
     public String getResourceGuid() {
         return this.resourceGuid;
     }
+    /**
+     * subnet details
+     * 
+     */
     public Optional<SubnetDetailsResponse> getSubnetDetails() {
         return Optional.ofNullable(this.subnetDetails);
     }
+    /**
+     * The resource tags.
+     * 
+     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+    /**
+     * The type of resource.
+     * 
+     */
     public String getType() {
         return this.type;
     }

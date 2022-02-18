@@ -9,9 +9,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class NetworkInterfaceResponse {
+    /**
+     * PrivateIp address of the Compute VM
+     * 
+     */
     private final String privateIpAddress;
+    /**
+     * Connection information for Windows
+     * 
+     */
     private final String rdpAuthority;
+    /**
+     * Connection information for Linux
+     * 
+     */
     private final String sshAuthority;
+    /**
+     * Username of the VM
+     * 
+     */
     private final String username;
 
     @OutputCustomType.Constructor({"privateIpAddress","rdpAuthority","sshAuthority","username"})
@@ -26,15 +42,31 @@ public final class NetworkInterfaceResponse {
         this.username = Objects.requireNonNull(username);
     }
 
+    /**
+     * PrivateIp address of the Compute VM
+     * 
+     */
     public String getPrivateIpAddress() {
         return this.privateIpAddress;
     }
+    /**
+     * Connection information for Windows
+     * 
+     */
     public String getRdpAuthority() {
         return this.rdpAuthority;
     }
+    /**
+     * Connection information for Linux
+     * 
+     */
     public String getSshAuthority() {
         return this.sshAuthority;
     }
+    /**
+     * Username of the VM
+     * 
+     */
     public String getUsername() {
         return this.username;
     }

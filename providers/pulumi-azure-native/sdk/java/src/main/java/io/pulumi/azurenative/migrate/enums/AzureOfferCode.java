@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Offer code according to which cost estimation is done.
+     * 
+     */
     @EnumType
     public enum AzureOfferCode {
         Unknown("Unknown"),

@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * PrivateLinkServiceConnection resource.
+ * 
+ */
 public final class PrivateLinkServiceConnectionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PrivateLinkServiceConnectionResponse Empty = new PrivateLinkServiceConnectionResponse();
 
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -23,6 +31,10 @@ public final class PrivateLinkServiceConnectionResponse extends io.pulumi.resour
         return this.etag;
     }
 
+    /**
+     * The ID(s) of the group(s) obtained from the remote resource that this private endpoint should connect to.
+     * 
+     */
     @InputImport(name="groupIds")
     private final @Nullable List<String> groupIds;
 
@@ -30,6 +42,10 @@ public final class PrivateLinkServiceConnectionResponse extends io.pulumi.resour
         return this.groupIds == null ? List.of() : this.groupIds;
     }
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -37,6 +53,10 @@ public final class PrivateLinkServiceConnectionResponse extends io.pulumi.resour
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -44,6 +64,10 @@ public final class PrivateLinkServiceConnectionResponse extends io.pulumi.resour
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * A collection of read-only information about the state of the connection to the remote resource.
+     * 
+     */
     @InputImport(name="privateLinkServiceConnectionState")
     private final @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
 
@@ -51,6 +75,10 @@ public final class PrivateLinkServiceConnectionResponse extends io.pulumi.resour
         return this.privateLinkServiceConnectionState == null ? Optional.empty() : Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
 
+    /**
+     * The resource id of private link service.
+     * 
+     */
     @InputImport(name="privateLinkServiceId")
     private final @Nullable String privateLinkServiceId;
 
@@ -58,6 +86,10 @@ public final class PrivateLinkServiceConnectionResponse extends io.pulumi.resour
         return this.privateLinkServiceId == null ? Optional.empty() : Optional.ofNullable(this.privateLinkServiceId);
     }
 
+    /**
+     * The provisioning state of the private link service connection resource.
+     * 
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -65,6 +97,10 @@ public final class PrivateLinkServiceConnectionResponse extends io.pulumi.resour
         return this.provisioningState;
     }
 
+    /**
+     * A message passed to the owner of the remote resource with this connection request. Restricted to 140 chars.
+     * 
+     */
     @InputImport(name="requestMessage")
     private final @Nullable String requestMessage;
 
@@ -72,6 +108,10 @@ public final class PrivateLinkServiceConnectionResponse extends io.pulumi.resour
         return this.requestMessage == null ? Optional.empty() : Optional.ofNullable(this.requestMessage);
     }
 
+    /**
+     * The resource type.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

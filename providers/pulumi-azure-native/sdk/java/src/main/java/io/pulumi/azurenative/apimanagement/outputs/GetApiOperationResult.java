@@ -15,16 +15,60 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetApiOperationResult {
+    /**
+     * Description of the operation. May include HTML formatting tags.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * Operation Name.
+     * 
+     */
     private final String displayName;
+    /**
+     * Resource ID.
+     * 
+     */
     private final String id;
+    /**
+     * A Valid HTTP Operation Method. Typical Http Methods like GET, PUT, POST but not limited by only them.
+     * 
+     */
     private final String method;
+    /**
+     * Resource name.
+     * 
+     */
     private final String name;
+    /**
+     * Operation Policies
+     * 
+     */
     private final @Nullable String policies;
+    /**
+     * An entity containing request details.
+     * 
+     */
     private final @Nullable RequestContractResponse request;
+    /**
+     * Array of Operation responses.
+     * 
+     */
     private final @Nullable List<ResponseContractResponse> responses;
+    /**
+     * Collection of URL template parameters.
+     * 
+     */
     private final @Nullable List<ParameterContractResponse> templateParameters;
+    /**
+     * Resource type for API Management resource.
+     * 
+     */
     private final String type;
+    /**
+     * Relative URL template identifying the target resource for this operation. May include parameters. Example: /customers/{cid}/orders/{oid}/?date={date}
+     * 
+     */
     private final String urlTemplate;
 
     @OutputCustomType.Constructor({"description","displayName","id","method","name","policies","request","responses","templateParameters","type","urlTemplate"})
@@ -53,36 +97,80 @@ public final class GetApiOperationResult {
         this.urlTemplate = Objects.requireNonNull(urlTemplate);
     }
 
+    /**
+     * Description of the operation. May include HTML formatting tags.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * Operation Name.
+     * 
+     */
     public String getDisplayName() {
         return this.displayName;
     }
+    /**
+     * Resource ID.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * A Valid HTTP Operation Method. Typical Http Methods like GET, PUT, POST but not limited by only them.
+     * 
+     */
     public String getMethod() {
         return this.method;
     }
+    /**
+     * Resource name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Operation Policies
+     * 
+     */
     public Optional<String> getPolicies() {
         return Optional.ofNullable(this.policies);
     }
+    /**
+     * An entity containing request details.
+     * 
+     */
     public Optional<RequestContractResponse> getRequest() {
         return Optional.ofNullable(this.request);
     }
+    /**
+     * Array of Operation responses.
+     * 
+     */
     public List<ResponseContractResponse> getResponses() {
         return this.responses == null ? List.of() : this.responses;
     }
+    /**
+     * Collection of URL template parameters.
+     * 
+     */
     public List<ParameterContractResponse> getTemplateParameters() {
         return this.templateParameters == null ? List.of() : this.templateParameters;
     }
+    /**
+     * Resource type for API Management resource.
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * Relative URL template identifying the target resource for this operation. May include parameters. Example: /customers/{cid}/orders/{oid}/?date={date}
+     * 
+     */
     public String getUrlTemplate() {
         return this.urlTemplate;
     }

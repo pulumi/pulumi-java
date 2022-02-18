@@ -14,6 +14,10 @@ public final class KustoClusterDataSetArgs extends io.pulumi.resources.ResourceA
 
     public static final KustoClusterDataSetArgs Empty = new KustoClusterDataSetArgs();
 
+    /**
+     * The name of the share account.
+     * 
+     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -21,6 +25,10 @@ public final class KustoClusterDataSetArgs extends io.pulumi.resources.ResourceA
         return this.accountName;
     }
 
+    /**
+     * The name of the dataSet.
+     * 
+     */
     @InputImport(name="dataSetName")
     private final @Nullable Input<String> dataSetName;
 
@@ -28,6 +36,11 @@ public final class KustoClusterDataSetArgs extends io.pulumi.resources.ResourceA
         return this.dataSetName == null ? Input.empty() : this.dataSetName;
     }
 
+    /**
+     * Kind of data set.
+     * Expected value is 'KustoCluster'.
+     * 
+     */
     @InputImport(name="kind", required=true)
     private final Input<String> kind;
 
@@ -35,6 +48,10 @@ public final class KustoClusterDataSetArgs extends io.pulumi.resources.ResourceA
         return this.kind;
     }
 
+    /**
+     * Resource id of the kusto cluster.
+     * 
+     */
     @InputImport(name="kustoClusterResourceId", required=true)
     private final Input<String> kustoClusterResourceId;
 
@@ -42,6 +59,10 @@ public final class KustoClusterDataSetArgs extends io.pulumi.resources.ResourceA
         return this.kustoClusterResourceId;
     }
 
+    /**
+     * The resource group name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -49,6 +70,10 @@ public final class KustoClusterDataSetArgs extends io.pulumi.resources.ResourceA
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the share to add the data set to.
+     * 
+     */
     @InputImport(name="shareName", required=true)
     private final Input<String> shareName;
 

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Target Azure location for which the machines should be assessed. These enums are the same as used by Compute API.
+     * 
+     */
     @EnumType
     public enum AzureLocation {
         Unknown("Unknown"),

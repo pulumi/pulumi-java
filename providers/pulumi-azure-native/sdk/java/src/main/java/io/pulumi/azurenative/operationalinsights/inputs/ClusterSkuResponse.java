@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The cluster sku definition.
+ * 
+ */
 public final class ClusterSkuResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ClusterSkuResponse Empty = new ClusterSkuResponse();
 
+    /**
+     * The capacity value
+     * 
+     */
     @InputImport(name="capacity")
     private final @Nullable Double capacity;
 
@@ -22,6 +30,10 @@ public final class ClusterSkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
     }
 
+    /**
+     * The name of the SKU.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 

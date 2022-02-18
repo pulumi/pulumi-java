@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBuildServiceBuilder {
+/**
+ * KPack Builder resource
+ * API Version: 2022-01-01-preview.
+ * 
+ *
+ * KPack Builder resource
+ * 
+ */
     public static CompletableFuture<GetBuildServiceBuilderResult> invokeAsync(GetBuildServiceBuilderArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getBuildServiceBuilder", TypeShape.of(GetBuildServiceBuilderResult.class), args == null ? GetBuildServiceBuilderArgs.Empty : args, Utilities.withVersion(options));
     }

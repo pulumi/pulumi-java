@@ -19,6 +19,10 @@ public final class RedisEnterpriseArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final RedisEnterpriseArgs Empty = new RedisEnterpriseArgs();
 
+    /**
+     * The name of the RedisEnterprise cluster.
+     * 
+     */
     @InputImport(name="clusterName")
     private final @Nullable Input<String> clusterName;
 
@@ -26,6 +30,10 @@ public final class RedisEnterpriseArgs extends io.pulumi.resources.ResourceArgs 
         return this.clusterName == null ? Input.empty() : this.clusterName;
     }
 
+    /**
+     * The geo-location where the resource lives
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -33,6 +41,10 @@ public final class RedisEnterpriseArgs extends io.pulumi.resources.ResourceArgs 
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The minimum TLS version for the cluster to support, e.g. '1.2'
+     * 
+     */
     @InputImport(name="minimumTlsVersion")
     private final @Nullable Input<Either<String,TlsVersion>> minimumTlsVersion;
 
@@ -40,6 +52,10 @@ public final class RedisEnterpriseArgs extends io.pulumi.resources.ResourceArgs 
         return this.minimumTlsVersion == null ? Input.empty() : this.minimumTlsVersion;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -47,6 +63,10 @@ public final class RedisEnterpriseArgs extends io.pulumi.resources.ResourceArgs 
         return this.resourceGroupName;
     }
 
+    /**
+     * The SKU to create, which affects price, performance, and features.
+     * 
+     */
     @InputImport(name="sku", required=true)
     private final Input<EnterpriseSkuArgs> sku;
 
@@ -54,6 +74,10 @@ public final class RedisEnterpriseArgs extends io.pulumi.resources.ResourceArgs 
         return this.sku;
     }
 
+    /**
+     * Resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -61,6 +85,10 @@ public final class RedisEnterpriseArgs extends io.pulumi.resources.ResourceArgs 
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The Availability Zones where this cluster will be deployed.
+     * 
+     */
     @InputImport(name="zones")
     private final @Nullable Input<List<String>> zones;
 

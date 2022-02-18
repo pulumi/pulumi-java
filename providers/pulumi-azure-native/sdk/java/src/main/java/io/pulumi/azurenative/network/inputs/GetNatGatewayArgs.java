@@ -14,6 +14,10 @@ public final class GetNatGatewayArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetNatGatewayArgs Empty = new GetNatGatewayArgs();
 
+    /**
+     * Expands referenced resources.
+     * 
+     */
     @InputImport(name="expand")
     private final @Nullable String expand;
 
@@ -21,6 +25,10 @@ public final class GetNatGatewayArgs extends io.pulumi.resources.InvokeArgs {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
+    /**
+     * The name of the nat gateway.
+     * 
+     */
     @InputImport(name="natGatewayName", required=true)
     private final String natGatewayName;
 
@@ -28,6 +36,10 @@ public final class GetNatGatewayArgs extends io.pulumi.resources.InvokeArgs {
         return this.natGatewayName;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

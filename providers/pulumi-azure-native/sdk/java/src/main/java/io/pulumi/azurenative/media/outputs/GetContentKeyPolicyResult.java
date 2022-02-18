@@ -14,14 +14,50 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetContentKeyPolicyResult {
+    /**
+     * The creation date of the Policy
+     * 
+     */
     private final String created;
+    /**
+     * A description for the Policy.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * 
+     */
     private final String id;
+    /**
+     * The last modified date of the Policy
+     * 
+     */
     private final String lastModified;
+    /**
+     * The name of the resource
+     * 
+     */
     private final String name;
+    /**
+     * The Key Policy options.
+     * 
+     */
     private final List<ContentKeyPolicyOptionResponse> options;
+    /**
+     * The legacy Policy ID.
+     * 
+     */
     private final String policyId;
+    /**
+     * The system metadata relating to this resource.
+     * 
+     */
     private final SystemDataResponse systemData;
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"created","description","id","lastModified","name","options","policyId","systemData","type"})
@@ -46,30 +82,66 @@ public final class GetContentKeyPolicyResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * The creation date of the Policy
+     * 
+     */
     public String getCreated() {
         return this.created;
     }
+    /**
+     * A description for the Policy.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * The last modified date of the Policy
+     * 
+     */
     public String getLastModified() {
         return this.lastModified;
     }
+    /**
+     * The name of the resource
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The Key Policy options.
+     * 
+     */
     public List<ContentKeyPolicyOptionResponse> getOptions() {
         return this.options;
     }
+    /**
+     * The legacy Policy ID.
+     * 
+     */
     public String getPolicyId() {
         return this.policyId;
     }
+    /**
+     * The system metadata relating to this resource.
+     * 
+     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     public String getType() {
         return this.type;
     }

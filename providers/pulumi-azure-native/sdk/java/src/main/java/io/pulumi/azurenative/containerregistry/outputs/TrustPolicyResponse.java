@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TrustPolicyResponse {
+    /**
+     * The value that indicates whether the policy is enabled or not.
+     * 
+     */
     private final @Nullable String status;
+    /**
+     * The type of trust policy.
+     * 
+     */
     private final @Nullable String type;
 
     @OutputCustomType.Constructor({"status","type"})
@@ -22,9 +30,17 @@ public final class TrustPolicyResponse {
         this.type = type;
     }
 
+    /**
+     * The value that indicates whether the policy is enabled or not.
+     * 
+     */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
+    /**
+     * The type of trust policy.
+     * 
+     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

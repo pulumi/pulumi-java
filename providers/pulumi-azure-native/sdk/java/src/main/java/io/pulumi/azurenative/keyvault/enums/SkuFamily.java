@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * SKU family name
+     * 
+     */
     @EnumType
     public enum SkuFamily {
         A("A");

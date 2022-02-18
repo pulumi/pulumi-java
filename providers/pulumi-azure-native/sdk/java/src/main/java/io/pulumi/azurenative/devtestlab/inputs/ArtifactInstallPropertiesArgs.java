@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties of an artifact.
+ * 
+ */
 public final class ArtifactInstallPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ArtifactInstallPropertiesArgs Empty = new ArtifactInstallPropertiesArgs();
 
+    /**
+     * The artifact's identifier.
+     * 
+     */
     @InputImport(name="artifactId")
     private final @Nullable Input<String> artifactId;
 
@@ -23,6 +31,10 @@ public final class ArtifactInstallPropertiesArgs extends io.pulumi.resources.Res
         return this.artifactId == null ? Input.empty() : this.artifactId;
     }
 
+    /**
+     * The artifact's title.
+     * 
+     */
     @InputImport(name="artifactTitle")
     private final @Nullable Input<String> artifactTitle;
 
@@ -30,6 +42,10 @@ public final class ArtifactInstallPropertiesArgs extends io.pulumi.resources.Res
         return this.artifactTitle == null ? Input.empty() : this.artifactTitle;
     }
 
+    /**
+     * The status message from the deployment.
+     * 
+     */
     @InputImport(name="deploymentStatusMessage")
     private final @Nullable Input<String> deploymentStatusMessage;
 
@@ -37,6 +53,10 @@ public final class ArtifactInstallPropertiesArgs extends io.pulumi.resources.Res
         return this.deploymentStatusMessage == null ? Input.empty() : this.deploymentStatusMessage;
     }
 
+    /**
+     * The time that the artifact starts to install on the virtual machine.
+     * 
+     */
     @InputImport(name="installTime")
     private final @Nullable Input<String> installTime;
 
@@ -44,6 +64,10 @@ public final class ArtifactInstallPropertiesArgs extends io.pulumi.resources.Res
         return this.installTime == null ? Input.empty() : this.installTime;
     }
 
+    /**
+     * The parameters of the artifact.
+     * 
+     */
     @InputImport(name="parameters")
     private final @Nullable Input<List<ArtifactParameterPropertiesArgs>> parameters;
 
@@ -51,6 +75,10 @@ public final class ArtifactInstallPropertiesArgs extends io.pulumi.resources.Res
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
+    /**
+     * The status of the artifact.
+     * 
+     */
     @InputImport(name="status")
     private final @Nullable Input<String> status;
 
@@ -58,6 +86,10 @@ public final class ArtifactInstallPropertiesArgs extends io.pulumi.resources.Res
         return this.status == null ? Input.empty() : this.status;
     }
 
+    /**
+     * The status message from the virtual machine extension.
+     * 
+     */
     @InputImport(name="vmExtensionStatusMessage")
     private final @Nullable Input<String> vmExtensionStatusMessage;
 

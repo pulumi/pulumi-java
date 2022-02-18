@@ -15,17 +15,65 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetJobDefinitionResult {
+    /**
+     * List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.
+     * 
+     */
     private final @Nullable List<CustomerSecretResponse> customerSecrets;
+    /**
+     * A generic json used differently by each data service type.
+     * 
+     */
     private final @Nullable Object dataServiceInput;
+    /**
+     * Data Sink Id associated to the job definition.
+     * 
+     */
     private final String dataSinkId;
+    /**
+     * Data Source Id associated to the job definition.
+     * 
+     */
     private final String dataSourceId;
+    /**
+     * Id of the object.
+     * 
+     */
     private final String id;
+    /**
+     * Last modified time of the job definition.
+     * 
+     */
     private final @Nullable String lastModifiedTime;
+    /**
+     * Name of the object.
+     * 
+     */
     private final String name;
+    /**
+     * This is the preferred geo location for the job to run.
+     * 
+     */
     private final @Nullable String runLocation;
+    /**
+     * Schedule for running the job definition
+     * 
+     */
     private final @Nullable List<ScheduleResponse> schedules;
+    /**
+     * State of the job definition.
+     * 
+     */
     private final String state;
+    /**
+     * Type of the object.
+     * 
+     */
     private final String type;
+    /**
+     * Enum to detect if user confirmation is required. If not passed will default to NotRequired.
+     * 
+     */
     private final @Nullable String userConfirmation;
 
     @OutputCustomType.Constructor({"customerSecrets","dataServiceInput","dataSinkId","dataSourceId","id","lastModifiedTime","name","runLocation","schedules","state","type","userConfirmation"})
@@ -56,39 +104,87 @@ public final class GetJobDefinitionResult {
         this.userConfirmation = userConfirmation;
     }
 
+    /**
+     * List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.
+     * 
+     */
     public List<CustomerSecretResponse> getCustomerSecrets() {
         return this.customerSecrets == null ? List.of() : this.customerSecrets;
     }
+    /**
+     * A generic json used differently by each data service type.
+     * 
+     */
     public Optional<Object> getDataServiceInput() {
         return Optional.ofNullable(this.dataServiceInput);
     }
+    /**
+     * Data Sink Id associated to the job definition.
+     * 
+     */
     public String getDataSinkId() {
         return this.dataSinkId;
     }
+    /**
+     * Data Source Id associated to the job definition.
+     * 
+     */
     public String getDataSourceId() {
         return this.dataSourceId;
     }
+    /**
+     * Id of the object.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Last modified time of the job definition.
+     * 
+     */
     public Optional<String> getLastModifiedTime() {
         return Optional.ofNullable(this.lastModifiedTime);
     }
+    /**
+     * Name of the object.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * This is the preferred geo location for the job to run.
+     * 
+     */
     public Optional<String> getRunLocation() {
         return Optional.ofNullable(this.runLocation);
     }
+    /**
+     * Schedule for running the job definition
+     * 
+     */
     public List<ScheduleResponse> getSchedules() {
         return this.schedules == null ? List.of() : this.schedules;
     }
+    /**
+     * State of the job definition.
+     * 
+     */
     public String getState() {
         return this.state;
     }
+    /**
+     * Type of the object.
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * Enum to detect if user confirmation is required. If not passed will default to NotRequired.
+     * 
+     */
     public Optional<String> getUserConfirmation() {
         return Optional.ofNullable(this.userConfirmation);
     }

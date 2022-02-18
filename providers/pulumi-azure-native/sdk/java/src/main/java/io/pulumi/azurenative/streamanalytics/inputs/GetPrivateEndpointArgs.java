@@ -12,6 +12,10 @@ public final class GetPrivateEndpointArgs extends io.pulumi.resources.InvokeArgs
 
     public static final GetPrivateEndpointArgs Empty = new GetPrivateEndpointArgs();
 
+    /**
+     * The name of the cluster.
+     * 
+     */
     @InputImport(name="clusterName", required=true)
     private final String clusterName;
 
@@ -19,6 +23,10 @@ public final class GetPrivateEndpointArgs extends io.pulumi.resources.InvokeArgs
         return this.clusterName;
     }
 
+    /**
+     * The name of the private endpoint.
+     * 
+     */
     @InputImport(name="privateEndpointName", required=true)
     private final String privateEndpointName;
 
@@ -26,6 +34,10 @@ public final class GetPrivateEndpointArgs extends io.pulumi.resources.InvokeArgs
         return this.privateEndpointName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Instance type for the service.
+     * 
+     */
     @EnumType
     public enum ServiceSize {
         Cosmos_D4s("Cosmos.D4s"),

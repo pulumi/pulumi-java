@@ -8,9 +8,21 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Level of the logs to be collected.
+     * 
+     */
     @EnumType
     public enum LogCollectionLevel {
+        /**
+         * Only Errors will be collected in the logs.
+         * 
+         */
         Error("Error"),
+        /**
+         * Verbose logging (includes Errors, CRC, size information and others).
+         * 
+         */
         Verbose("Verbose");
 
         private final String value;

@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetContactProfile {
+/**
+ * Customer creates a Contact Profile Resource, which will contain all of the configurations required for scheduling a contact.
+ * API Version: 2021-04-04-preview.
+ * 
+ *
+ * Customer creates a Contact Profile Resource, which will contain all of the configurations required for scheduling a contact.
+ * 
+ */
     public static CompletableFuture<GetContactProfileResult> invokeAsync(GetContactProfileArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:orbital:getContactProfile", TypeShape.of(GetContactProfileResult.class), args == null ? GetContactProfileArgs.Empty : args, Utilities.withVersion(options));
     }

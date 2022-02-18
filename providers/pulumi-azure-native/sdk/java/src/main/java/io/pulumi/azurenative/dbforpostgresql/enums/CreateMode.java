@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The mode to create a new server.
+     * 
+     */
     @EnumType
     public enum CreateMode {
         Default("Default"),

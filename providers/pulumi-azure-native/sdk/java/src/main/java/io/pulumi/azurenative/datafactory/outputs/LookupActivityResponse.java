@@ -113,15 +113,56 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class LookupActivityResponse {
+    /**
+     * Lookup activity dataset reference.
+     * 
+     */
     private final DatasetReferenceResponse dataset;
+    /**
+     * Activity depends on condition.
+     * 
+     */
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
+    /**
+     * Activity description.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * Whether to return first row or all rows. Default value is true. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     private final @Nullable Object firstRowOnly;
+    /**
+     * Linked service reference.
+     * 
+     */
     private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
+    /**
+     * Activity name.
+     * 
+     */
     private final String name;
+    /**
+     * Activity policy.
+     * 
+     */
     private final @Nullable ActivityPolicyResponse policy;
+    /**
+     * Dataset-specific source properties, same as copy activity source.
+     * 
+     */
     private final Object source;
+    /**
+     * Type of activity.
+     * Expected value is 'Lookup'.
+     * 
+     */
     private final String type;
+    /**
+     * Activity user properties.
+     * 
+     */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
     @OutputCustomType.Constructor({"dataset","dependsOn","description","firstRowOnly","linkedServiceName","name","policy","source","type","userProperties"})
@@ -148,33 +189,74 @@ public final class LookupActivityResponse {
         this.userProperties = userProperties;
     }
 
+    /**
+     * Lookup activity dataset reference.
+     * 
+     */
     public DatasetReferenceResponse getDataset() {
         return this.dataset;
     }
+    /**
+     * Activity depends on condition.
+     * 
+     */
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
+    /**
+     * Activity description.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * Whether to return first row or all rows. Default value is true. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> getFirstRowOnly() {
         return Optional.ofNullable(this.firstRowOnly);
     }
+    /**
+     * Linked service reference.
+     * 
+     */
     public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
+    /**
+     * Activity name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Activity policy.
+     * 
+     */
     public Optional<ActivityPolicyResponse> getPolicy() {
         return Optional.ofNullable(this.policy);
     }
+    /**
+     * Dataset-specific source properties, same as copy activity source.
+     * 
+     */
     public Object getSource() {
         return this.source;
     }
+    /**
+     * Type of activity.
+     * Expected value is 'Lookup'.
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * Activity user properties.
+     * 
+     */
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }

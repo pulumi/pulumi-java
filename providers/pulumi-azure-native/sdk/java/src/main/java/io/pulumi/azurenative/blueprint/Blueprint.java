@@ -19,69 +19,170 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Represents a Blueprint definition.
+ * API Version: 2018-11-01-preview.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:blueprint:Blueprint simpleBlueprint /subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Blueprint/blueprints/simpleBlueprint 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:blueprint:Blueprint")
 public class Blueprint extends io.pulumi.resources.CustomResource {
+    /**
+     * Multi-line explain this resource.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return Multi-line explain this resource.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * One-liner string explain this resource.
+     * 
+     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
+    /**
+     * @return One-liner string explain this resource.
+     * 
+     */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
+    /**
+     * Layout view of the blueprint definition for UI reference.
+     * 
+     */
     @OutputExport(name="layout", type=Object.class, parameters={})
     private Output<Object> layout;
 
+    /**
+     * @return Layout view of the blueprint definition for UI reference.
+     * 
+     */
     public Output<Object> getLayout() {
         return this.layout;
     }
+    /**
+     * Name of this resource.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Name of this resource.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Parameters required by this blueprint definition.
+     * 
+     */
     @OutputExport(name="parameters", type=Map.class, parameters={String.class, ParameterDefinitionResponse.class})
     private Output</* @Nullable */ Map<String,ParameterDefinitionResponse>> parameters;
 
+    /**
+     * @return Parameters required by this blueprint definition.
+     * 
+     */
     public Output</* @Nullable */ Map<String,ParameterDefinitionResponse>> getParameters() {
         return this.parameters;
     }
+    /**
+     * Resource group placeholders defined by this blueprint definition.
+     * 
+     */
     @OutputExport(name="resourceGroups", type=Map.class, parameters={String.class, ResourceGroupDefinitionResponse.class})
     private Output</* @Nullable */ Map<String,ResourceGroupDefinitionResponse>> resourceGroups;
 
+    /**
+     * @return Resource group placeholders defined by this blueprint definition.
+     * 
+     */
     public Output</* @Nullable */ Map<String,ResourceGroupDefinitionResponse>> getResourceGroups() {
         return this.resourceGroups;
     }
+    /**
+     * Status of the blueprint. This field is readonly.
+     * 
+     */
     @OutputExport(name="status", type=BlueprintStatusResponse.class, parameters={})
     private Output<BlueprintStatusResponse> status;
 
+    /**
+     * @return Status of the blueprint. This field is readonly.
+     * 
+     */
     public Output<BlueprintStatusResponse> getStatus() {
         return this.status;
     }
+    /**
+     * The scope where this blueprint definition can be assigned.
+     * 
+     */
     @OutputExport(name="targetScope", type=String.class, parameters={})
     private Output<String> targetScope;
 
+    /**
+     * @return The scope where this blueprint definition can be assigned.
+     * 
+     */
     public Output<String> getTargetScope() {
         return this.targetScope;
     }
+    /**
+     * Type of this resource.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Type of this resource.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * Published versions of this blueprint definition.
+     * 
+     */
     @OutputExport(name="versions", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> versions;
 
+    /**
+     * @return Published versions of this blueprint definition.
+     * 
+     */
     public Output</* @Nullable */ Object> getVersions() {
         return this.versions;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Blueprint(String name, BlueprintArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:blueprint:Blueprint", name, args == null ? BlueprintArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -100,6 +201,14 @@ public class Blueprint extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Blueprint get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Blueprint(name, id, options);
     }

@@ -12,6 +12,10 @@ public final class GetVpnSiteArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetVpnSiteArgs Empty = new GetVpnSiteArgs();
 
+    /**
+     * The resource group name of the VpnSite.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +23,10 @@ public final class GetVpnSiteArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the VpnSite being retrieved.
+     * 
+     */
     @InputImport(name="vpnSiteName", required=true)
     private final String vpnSiteName;
 

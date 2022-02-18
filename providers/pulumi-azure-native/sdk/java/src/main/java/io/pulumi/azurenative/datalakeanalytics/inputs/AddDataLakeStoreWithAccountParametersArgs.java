@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The parameters used to add a new Data Lake Store account while creating a new Data Lake Analytics account.
+ * 
+ */
 public final class AddDataLakeStoreWithAccountParametersArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AddDataLakeStoreWithAccountParametersArgs Empty = new AddDataLakeStoreWithAccountParametersArgs();
 
+    /**
+     * The unique name of the Data Lake Store account to add.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -21,6 +29,10 @@ public final class AddDataLakeStoreWithAccountParametersArgs extends io.pulumi.r
         return this.name;
     }
 
+    /**
+     * The optional suffix for the Data Lake Store account.
+     * 
+     */
     @InputImport(name="suffix")
     private final @Nullable Input<String> suffix;
 

@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVault {
+/**
+ * Resource information with extended details.
+ * API Version: 2019-09-01.
+ * 
+ *
+ * Resource information with extended details.
+ * 
+ */
     public static CompletableFuture<GetVaultResult> invokeAsync(GetVaultArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:keyvault:getVault", TypeShape.of(GetVaultResult.class), args == null ? GetVaultArgs.Empty : args, Utilities.withVersion(options));
     }

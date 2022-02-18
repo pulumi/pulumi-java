@@ -15,6 +15,10 @@ public final class PipelineRunArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PipelineRunArgs Empty = new PipelineRunArgs();
 
+    /**
+     * How the pipeline run should be forced to recreate even if the pipeline run configuration has not changed.
+     * 
+     */
     @InputImport(name="forceUpdateTag")
     private final @Nullable Input<String> forceUpdateTag;
 
@@ -22,6 +26,10 @@ public final class PipelineRunArgs extends io.pulumi.resources.ResourceArgs {
         return this.forceUpdateTag == null ? Input.empty() : this.forceUpdateTag;
     }
 
+    /**
+     * The name of the pipeline run.
+     * 
+     */
     @InputImport(name="pipelineRunName")
     private final @Nullable Input<String> pipelineRunName;
 
@@ -29,6 +37,10 @@ public final class PipelineRunArgs extends io.pulumi.resources.ResourceArgs {
         return this.pipelineRunName == null ? Input.empty() : this.pipelineRunName;
     }
 
+    /**
+     * The name of the container registry.
+     * 
+     */
     @InputImport(name="registryName", required=true)
     private final Input<String> registryName;
 
@@ -36,6 +48,10 @@ public final class PipelineRunArgs extends io.pulumi.resources.ResourceArgs {
         return this.registryName;
     }
 
+    /**
+     * The request parameters for a pipeline run.
+     * 
+     */
     @InputImport(name="request")
     private final @Nullable Input<PipelineRunRequestArgs> request;
 
@@ -43,6 +59,10 @@ public final class PipelineRunArgs extends io.pulumi.resources.ResourceArgs {
         return this.request == null ? Input.empty() : this.request;
     }
 
+    /**
+     * The name of the resource group to which the container registry belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

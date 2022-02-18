@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetProjectKeys {
+/**
+ * ID and Key for Migration Project.
+ * API Version: 2018-02-02.
+ * 
+ *
+ * ID and Key for Migration Project.
+ * 
+ */
     public static CompletableFuture<GetProjectKeysResult> invokeAsync(GetProjectKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:migrate:getProjectKeys", TypeShape.of(GetProjectKeysResult.class), args == null ? GetProjectKeysArgs.Empty : args, Utilities.withVersion(options));
     }

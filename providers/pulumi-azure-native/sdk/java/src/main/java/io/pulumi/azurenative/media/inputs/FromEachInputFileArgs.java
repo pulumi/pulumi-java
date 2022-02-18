@@ -18,10 +18,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * An InputDefinition that looks at each input file provided to select tracks specified by the IncludedTracks property. Generally used with the AudioTrackByAttribute and VideoTrackByAttribute to select tracks from each file given.
+ * 
+ */
 public final class FromEachInputFileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FromEachInputFileArgs Empty = new FromEachInputFileArgs();
 
+    /**
+     * The list of TrackDescriptors which define the metadata and selection of tracks in the input.
+     * 
+     */
     @InputImport(name="includedTracks")
     private final @Nullable Input<List<Object>> includedTracks;
 
@@ -29,6 +37,11 @@ public final class FromEachInputFileArgs extends io.pulumi.resources.ResourceArg
         return this.includedTracks == null ? Input.empty() : this.includedTracks;
     }
 
+    /**
+     * The discriminator for derived types.
+     * Expected value is '#Microsoft.Media.FromEachInputFile'.
+     * 
+     */
     @InputImport(name="odataType", required=true)
     private final Input<String> odataType;
 

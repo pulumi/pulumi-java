@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ConnectionPropertiesResponsePrivateEndpoint {
+    /**
+     * The resource identifier.
+     * 
+     */
     private final String id;
 
     @OutputCustomType.Constructor({"id"})
@@ -16,6 +20,10 @@ public final class ConnectionPropertiesResponsePrivateEndpoint {
         this.id = Objects.requireNonNull(id);
     }
 
+    /**
+     * The resource identifier.
+     * 
+     */
     public String getId() {
         return this.id;
     }

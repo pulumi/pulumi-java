@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The properties of the messaging endpoints used by this IoT hub.
+ * 
+ */
 public final class MessagingEndpointPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MessagingEndpointPropertiesArgs Empty = new MessagingEndpointPropertiesArgs();
 
+    /**
+     * The lock duration. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.
+     * 
+     */
     @InputImport(name="lockDurationAsIso8601")
     private final @Nullable Input<String> lockDurationAsIso8601;
 
@@ -22,6 +30,10 @@ public final class MessagingEndpointPropertiesArgs extends io.pulumi.resources.R
         return this.lockDurationAsIso8601 == null ? Input.empty() : this.lockDurationAsIso8601;
     }
 
+    /**
+     * The number of times the IoT hub attempts to deliver a message. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.
+     * 
+     */
     @InputImport(name="maxDeliveryCount")
     private final @Nullable Input<Integer> maxDeliveryCount;
 
@@ -29,6 +41,10 @@ public final class MessagingEndpointPropertiesArgs extends io.pulumi.resources.R
         return this.maxDeliveryCount == null ? Input.empty() : this.maxDeliveryCount;
     }
 
+    /**
+     * The period of time for which a message is available to consume before it is expired by the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.
+     * 
+     */
     @InputImport(name="ttlAsIso8601")
     private final @Nullable Input<String> ttlAsIso8601;
 

@@ -16,10 +16,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Define match conditions
+ * 
+ */
 public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MatchConditionArgs Empty = new MatchConditionArgs();
 
+    /**
+     * List of possible match values.
+     * 
+     */
     @InputImport(name="matchValue", required=true)
     private final Input<List<String>> matchValue;
 
@@ -27,6 +35,10 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
         return this.matchValue;
     }
 
+    /**
+     * Match variable to compare against.
+     * 
+     */
     @InputImport(name="matchVariable", required=true)
     private final Input<Either<String,MatchVariable>> matchVariable;
 
@@ -34,6 +46,10 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
         return this.matchVariable;
     }
 
+    /**
+     * Describes if the result of this condition should be negated.
+     * 
+     */
     @InputImport(name="negateCondition")
     private final @Nullable Input<Boolean> negateCondition;
 
@@ -41,6 +57,10 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
         return this.negateCondition == null ? Input.empty() : this.negateCondition;
     }
 
+    /**
+     * Describes operator to be matched
+     * 
+     */
     @InputImport(name="operator", required=true)
     private final Input<Either<String,Operator>> operator;
 
@@ -48,6 +68,10 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
         return this.operator;
     }
 
+    /**
+     * Selector can used to match a specific key for QueryString, Cookies, RequestHeader or PostArgs.
+     * 
+     */
     @InputImport(name="selector")
     private final @Nullable Input<String> selector;
 
@@ -55,6 +79,10 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
         return this.selector == null ? Input.empty() : this.selector;
     }
 
+    /**
+     * List of transforms.
+     * 
+     */
     @InputImport(name="transforms")
     private final @Nullable Input<List<Either<String,TransformType>>> transforms;
 

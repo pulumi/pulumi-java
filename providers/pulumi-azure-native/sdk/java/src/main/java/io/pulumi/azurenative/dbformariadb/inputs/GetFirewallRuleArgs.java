@@ -12,6 +12,10 @@ public final class GetFirewallRuleArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetFirewallRuleArgs Empty = new GetFirewallRuleArgs();
 
+    /**
+     * The name of the server firewall rule.
+     * 
+     */
     @InputImport(name="firewallRuleName", required=true)
     private final String firewallRuleName;
 
@@ -19,6 +23,10 @@ public final class GetFirewallRuleArgs extends io.pulumi.resources.InvokeArgs {
         return this.firewallRuleName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetFirewallRuleArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the server.
+     * 
+     */
     @InputImport(name="serverName", required=true)
     private final String serverName;
 

@@ -12,6 +12,10 @@ public final class GetPrivateEndpointConnectionsAdtAPIArgs extends io.pulumi.res
 
     public static final GetPrivateEndpointConnectionsAdtAPIArgs Empty = new GetPrivateEndpointConnectionsAdtAPIArgs();
 
+    /**
+     * The name of the private endpoint connection associated with the Azure resource
+     * 
+     */
     @InputImport(name="privateEndpointConnectionName", required=true)
     private final String privateEndpointConnectionName;
 
@@ -19,6 +23,10 @@ public final class GetPrivateEndpointConnectionsAdtAPIArgs extends io.pulumi.res
         return this.privateEndpointConnectionName;
     }
 
+    /**
+     * The name of the resource group that contains the service instance.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetPrivateEndpointConnectionsAdtAPIArgs extends io.pulumi.res
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the service instance.
+     * 
+     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 

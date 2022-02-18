@@ -22,207 +22,492 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * A Data Lake Analytics account object, containing all information associated with the named Data Lake Analytics account.
+ * API Version: 2016-11-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:datalakeanalytics:Account test_account /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/rgaba12041/providers/Microsoft.DataLakeAnalytics/accounts/testaba15818 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:datalakeanalytics:Account")
 public class Account extends io.pulumi.resources.CustomResource {
+    /**
+     * The unique identifier associated with this Data Lake Analytics account.
+     * 
+     */
     @OutputExport(name="accountId", type=String.class, parameters={})
     private Output<String> accountId;
 
+    /**
+     * @return The unique identifier associated with this Data Lake Analytics account.
+     * 
+     */
     public Output<String> getAccountId() {
         return this.accountId;
     }
+    /**
+     * The list of compute policies associated with this account.
+     * 
+     */
     @OutputExport(name="computePolicies", type=List.class, parameters={ComputePolicyResponse.class})
     private Output<List<ComputePolicyResponse>> computePolicies;
 
+    /**
+     * @return The list of compute policies associated with this account.
+     * 
+     */
     public Output<List<ComputePolicyResponse>> getComputePolicies() {
         return this.computePolicies;
     }
+    /**
+     * The account creation time.
+     * 
+     */
     @OutputExport(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
+    /**
+     * @return The account creation time.
+     * 
+     */
     public Output<String> getCreationTime() {
         return this.creationTime;
     }
+    /**
+     * The commitment tier in use for the current month.
+     * 
+     */
     @OutputExport(name="currentTier", type=String.class, parameters={})
     private Output<String> currentTier;
 
+    /**
+     * @return The commitment tier in use for the current month.
+     * 
+     */
     public Output<String> getCurrentTier() {
         return this.currentTier;
     }
+    /**
+     * The list of Data Lake Store accounts associated with this account.
+     * 
+     */
     @OutputExport(name="dataLakeStoreAccounts", type=List.class, parameters={DataLakeStoreAccountInformationResponse.class})
     private Output<List<DataLakeStoreAccountInformationResponse>> dataLakeStoreAccounts;
 
+    /**
+     * @return The list of Data Lake Store accounts associated with this account.
+     * 
+     */
     public Output<List<DataLakeStoreAccountInformationResponse>> getDataLakeStoreAccounts() {
         return this.dataLakeStoreAccounts;
     }
+    /**
+     * The current state of the DebugDataAccessLevel for this account.
+     * 
+     */
     @OutputExport(name="debugDataAccessLevel", type=String.class, parameters={})
     private Output<String> debugDataAccessLevel;
 
+    /**
+     * @return The current state of the DebugDataAccessLevel for this account.
+     * 
+     */
     public Output<String> getDebugDataAccessLevel() {
         return this.debugDataAccessLevel;
     }
+    /**
+     * The default Data Lake Store account associated with this account.
+     * 
+     */
     @OutputExport(name="defaultDataLakeStoreAccount", type=String.class, parameters={})
     private Output<String> defaultDataLakeStoreAccount;
 
+    /**
+     * @return The default Data Lake Store account associated with this account.
+     * 
+     */
     public Output<String> getDefaultDataLakeStoreAccount() {
         return this.defaultDataLakeStoreAccount;
     }
+    /**
+     * The full CName endpoint for this account.
+     * 
+     */
     @OutputExport(name="endpoint", type=String.class, parameters={})
     private Output<String> endpoint;
 
+    /**
+     * @return The full CName endpoint for this account.
+     * 
+     */
     public Output<String> getEndpoint() {
         return this.endpoint;
     }
+    /**
+     * The current state of allowing or disallowing IPs originating within Azure through the firewall. If the firewall is disabled, this is not enforced.
+     * 
+     */
     @OutputExport(name="firewallAllowAzureIps", type=String.class, parameters={})
     private Output</* @Nullable */ String> firewallAllowAzureIps;
 
+    /**
+     * @return The current state of allowing or disallowing IPs originating within Azure through the firewall. If the firewall is disabled, this is not enforced.
+     * 
+     */
     public Output</* @Nullable */ String> getFirewallAllowAzureIps() {
         return this.firewallAllowAzureIps;
     }
+    /**
+     * The list of firewall rules associated with this account.
+     * 
+     */
     @OutputExport(name="firewallRules", type=List.class, parameters={FirewallRuleResponse.class})
     private Output<List<FirewallRuleResponse>> firewallRules;
 
+    /**
+     * @return The list of firewall rules associated with this account.
+     * 
+     */
     public Output<List<FirewallRuleResponse>> getFirewallRules() {
         return this.firewallRules;
     }
+    /**
+     * The current state of the IP address firewall for this account.
+     * 
+     */
     @OutputExport(name="firewallState", type=String.class, parameters={})
     private Output</* @Nullable */ String> firewallState;
 
+    /**
+     * @return The current state of the IP address firewall for this account.
+     * 
+     */
     public Output</* @Nullable */ String> getFirewallState() {
         return this.firewallState;
     }
+    /**
+     * The list of hiveMetastores associated with this account.
+     * 
+     */
     @OutputExport(name="hiveMetastores", type=List.class, parameters={HiveMetastoreResponse.class})
     private Output<List<HiveMetastoreResponse>> hiveMetastores;
 
+    /**
+     * @return The list of hiveMetastores associated with this account.
+     * 
+     */
     public Output<List<HiveMetastoreResponse>> getHiveMetastores() {
         return this.hiveMetastores;
     }
+    /**
+     * The account last modified time.
+     * 
+     */
     @OutputExport(name="lastModifiedTime", type=String.class, parameters={})
     private Output<String> lastModifiedTime;
 
+    /**
+     * @return The account last modified time.
+     * 
+     */
     public Output<String> getLastModifiedTime() {
         return this.lastModifiedTime;
     }
+    /**
+     * The resource location.
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return The resource location.
+     * 
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * The maximum supported active jobs under the account at the same time.
+     * 
+     */
     @OutputExport(name="maxActiveJobCountPerUser", type=Integer.class, parameters={})
     private Output<Integer> maxActiveJobCountPerUser;
 
+    /**
+     * @return The maximum supported active jobs under the account at the same time.
+     * 
+     */
     public Output<Integer> getMaxActiveJobCountPerUser() {
         return this.maxActiveJobCountPerUser;
     }
+    /**
+     * The maximum supported degree of parallelism for this account.
+     * 
+     */
     @OutputExport(name="maxDegreeOfParallelism", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxDegreeOfParallelism;
 
+    /**
+     * @return The maximum supported degree of parallelism for this account.
+     * 
+     */
     public Output</* @Nullable */ Integer> getMaxDegreeOfParallelism() {
         return this.maxDegreeOfParallelism;
     }
+    /**
+     * The maximum supported degree of parallelism per job for this account.
+     * 
+     */
     @OutputExport(name="maxDegreeOfParallelismPerJob", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxDegreeOfParallelismPerJob;
 
+    /**
+     * @return The maximum supported degree of parallelism per job for this account.
+     * 
+     */
     public Output</* @Nullable */ Integer> getMaxDegreeOfParallelismPerJob() {
         return this.maxDegreeOfParallelismPerJob;
     }
+    /**
+     * The maximum supported jobs running under the account at the same time.
+     * 
+     */
     @OutputExport(name="maxJobCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxJobCount;
 
+    /**
+     * @return The maximum supported jobs running under the account at the same time.
+     * 
+     */
     public Output</* @Nullable */ Integer> getMaxJobCount() {
         return this.maxJobCount;
     }
+    /**
+     * The maximum supported active jobs under the account at the same time.
+     * 
+     */
     @OutputExport(name="maxJobRunningTimeInMin", type=Integer.class, parameters={})
     private Output<Integer> maxJobRunningTimeInMin;
 
+    /**
+     * @return The maximum supported active jobs under the account at the same time.
+     * 
+     */
     public Output<Integer> getMaxJobRunningTimeInMin() {
         return this.maxJobRunningTimeInMin;
     }
+    /**
+     * The maximum supported jobs queued under the account at the same time.
+     * 
+     */
     @OutputExport(name="maxQueuedJobCountPerUser", type=Integer.class, parameters={})
     private Output<Integer> maxQueuedJobCountPerUser;
 
+    /**
+     * @return The maximum supported jobs queued under the account at the same time.
+     * 
+     */
     public Output<Integer> getMaxQueuedJobCountPerUser() {
         return this.maxQueuedJobCountPerUser;
     }
+    /**
+     * The minimum supported priority per job for this account.
+     * 
+     */
     @OutputExport(name="minPriorityPerJob", type=Integer.class, parameters={})
     private Output<Integer> minPriorityPerJob;
 
+    /**
+     * @return The minimum supported priority per job for this account.
+     * 
+     */
     public Output<Integer> getMinPriorityPerJob() {
         return this.minPriorityPerJob;
     }
+    /**
+     * The resource name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The resource name.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The commitment tier for the next month.
+     * 
+     */
     @OutputExport(name="newTier", type=String.class, parameters={})
     private Output</* @Nullable */ String> newTier;
 
+    /**
+     * @return The commitment tier for the next month.
+     * 
+     */
     public Output</* @Nullable */ String> getNewTier() {
         return this.newTier;
     }
+    /**
+     * The provisioning status of the Data Lake Analytics account.
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning status of the Data Lake Analytics account.
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The list of Data Lake Store accounts associated with this account.
+     * 
+     */
     @OutputExport(name="publicDataLakeStoreAccounts", type=List.class, parameters={DataLakeStoreAccountInformationResponse.class})
     private Output</* @Nullable */ List<DataLakeStoreAccountInformationResponse>> publicDataLakeStoreAccounts;
 
+    /**
+     * @return The list of Data Lake Store accounts associated with this account.
+     * 
+     */
     public Output</* @Nullable */ List<DataLakeStoreAccountInformationResponse>> getPublicDataLakeStoreAccounts() {
         return this.publicDataLakeStoreAccounts;
     }
+    /**
+     * The number of days that job metadata is retained.
+     * 
+     */
     @OutputExport(name="queryStoreRetention", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> queryStoreRetention;
 
+    /**
+     * @return The number of days that job metadata is retained.
+     * 
+     */
     public Output</* @Nullable */ Integer> getQueryStoreRetention() {
         return this.queryStoreRetention;
     }
+    /**
+     * The state of the Data Lake Analytics account.
+     * 
+     */
     @OutputExport(name="state", type=String.class, parameters={})
     private Output<String> state;
 
+    /**
+     * @return The state of the Data Lake Analytics account.
+     * 
+     */
     public Output<String> getState() {
         return this.state;
     }
+    /**
+     * The list of Azure Blob Storage accounts associated with this account.
+     * 
+     */
     @OutputExport(name="storageAccounts", type=List.class, parameters={StorageAccountInformationResponse.class})
     private Output<List<StorageAccountInformationResponse>> storageAccounts;
 
+    /**
+     * @return The list of Azure Blob Storage accounts associated with this account.
+     * 
+     */
     public Output<List<StorageAccountInformationResponse>> getStorageAccounts() {
         return this.storageAccounts;
     }
+    /**
+     * The system defined maximum supported degree of parallelism for this account, which restricts the maximum value of parallelism the user can set for the account.
+     * 
+     */
     @OutputExport(name="systemMaxDegreeOfParallelism", type=Integer.class, parameters={})
     private Output<Integer> systemMaxDegreeOfParallelism;
 
+    /**
+     * @return The system defined maximum supported degree of parallelism for this account, which restricts the maximum value of parallelism the user can set for the account.
+     * 
+     */
     public Output<Integer> getSystemMaxDegreeOfParallelism() {
         return this.systemMaxDegreeOfParallelism;
     }
+    /**
+     * The system defined maximum supported jobs running under the account at the same time, which restricts the maximum number of running jobs the user can set for the account.
+     * 
+     */
     @OutputExport(name="systemMaxJobCount", type=Integer.class, parameters={})
     private Output<Integer> systemMaxJobCount;
 
+    /**
+     * @return The system defined maximum supported jobs running under the account at the same time, which restricts the maximum number of running jobs the user can set for the account.
+     * 
+     */
     public Output<Integer> getSystemMaxJobCount() {
         return this.systemMaxJobCount;
     }
+    /**
+     * The resource tags.
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tags;
 
+    /**
+     * @return The resource tags.
+     * 
+     */
     public Output<Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * The resource type.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The resource type.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * The list of virtualNetwork rules associated with this account.
+     * 
+     */
     @OutputExport(name="virtualNetworkRules", type=List.class, parameters={VirtualNetworkRuleResponse.class})
     private Output<List<VirtualNetworkRuleResponse>> virtualNetworkRules;
 
+    /**
+     * @return The list of virtualNetwork rules associated with this account.
+     * 
+     */
     public Output<List<VirtualNetworkRuleResponse>> getVirtualNetworkRules() {
         return this.virtualNetworkRules;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Account(String name, AccountArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:datalakeanalytics:Account", name, args == null ? AccountArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -243,6 +528,14 @@ public class Account extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Account get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Account(name, id, options);
     }

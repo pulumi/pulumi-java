@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The Edifact message identifier.
+ * 
+ */
 public final class EdifactMessageIdentifierResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EdifactMessageIdentifierResponse Empty = new EdifactMessageIdentifierResponse();
 
+    /**
+     * The message id on which this envelope settings has to be applied.
+     * 
+     */
     @InputImport(name="messageId", required=true)
     private final String messageId;
 

@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Pairs of Managed Instances in the failover group.
+ * 
+ */
 public final class ManagedInstancePairInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ManagedInstancePairInfoResponse Empty = new ManagedInstancePairInfoResponse();
 
+    /**
+     * Id of Partner Managed Instance in pair.
+     * 
+     */
     @InputImport(name="partnerManagedInstanceId")
     private final @Nullable String partnerManagedInstanceId;
 
@@ -21,6 +29,10 @@ public final class ManagedInstancePairInfoResponse extends io.pulumi.resources.I
         return this.partnerManagedInstanceId == null ? Optional.empty() : Optional.ofNullable(this.partnerManagedInstanceId);
     }
 
+    /**
+     * Id of Primary Managed Instance in pair.
+     * 
+     */
     @InputImport(name="primaryManagedInstanceId")
     private final @Nullable String primaryManagedInstanceId;
 

@@ -15,13 +15,33 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetMonitorResult {
+    /**
+     * ARM id of the monitor resource.
+     * 
+     */
     private final String id;
     private final @Nullable IdentityPropertiesResponse identity;
     private final String location;
+    /**
+     * Name of the monitor resource.
+     * 
+     */
     private final String name;
+    /**
+     * Properties specific to the monitor resource.
+     * 
+     */
     private final MonitorPropertiesResponse properties;
+    /**
+     * The system metadata relating to this resource
+     * 
+     */
     private final SystemDataResponse systemData;
     private final @Nullable Map<String,String> tags;
+    /**
+     * The type of the monitor resource.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"id","identity","location","name","properties","systemData","tags","type"})
@@ -44,6 +64,10 @@ public final class GetMonitorResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * ARM id of the monitor resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }
@@ -53,18 +77,34 @@ public final class GetMonitorResult {
     public String getLocation() {
         return this.location;
     }
+    /**
+     * Name of the monitor resource.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Properties specific to the monitor resource.
+     * 
+     */
     public MonitorPropertiesResponse getProperties() {
         return this.properties;
     }
+    /**
+     * The system metadata relating to this resource
+     * 
+     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+    /**
+     * The type of the monitor resource.
+     * 
+     */
     public String getType() {
         return this.type;
     }

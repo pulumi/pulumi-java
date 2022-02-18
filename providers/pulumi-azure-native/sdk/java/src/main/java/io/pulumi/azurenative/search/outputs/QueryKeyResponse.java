@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class QueryKeyResponse {
+    /**
+     * The value of the query API key.
+     * 
+     */
     private final String key;
+    /**
+     * The name of the query API key; may be empty.
+     * 
+     */
     private final String name;
 
     @OutputCustomType.Constructor({"key","name"})
@@ -20,9 +28,17 @@ public final class QueryKeyResponse {
         this.name = Objects.requireNonNull(name);
     }
 
+    /**
+     * The value of the query API key.
+     * 
+     */
     public String getKey() {
         return this.key;
     }
+    /**
+     * The name of the query API key; may be empty.
+     * 
+     */
     public String getName() {
         return this.name;
     }

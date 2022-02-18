@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The implementation effort required to remediate this assessment
+     * 
+     */
     @EnumType
     public enum ImplementationEffort {
         Low("Low"),

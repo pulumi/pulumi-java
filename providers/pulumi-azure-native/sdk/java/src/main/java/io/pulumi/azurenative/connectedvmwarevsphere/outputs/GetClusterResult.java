@@ -16,23 +16,95 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetClusterResult {
+    /**
+     * Gets the name of the corresponding resource in Kubernetes.
+     * 
+     */
     private final String customResourceName;
+    /**
+     * Gets or sets the datastore ARM ids.
+     * 
+     */
     private final List<String> datastoreIds;
+    /**
+     * Gets or sets the extended location.
+     * 
+     */
     private final @Nullable ExtendedLocationResponse extendedLocation;
+    /**
+     * Gets or sets the Id.
+     * 
+     */
     private final String id;
+    /**
+     * Gets or sets the inventory Item ID for the cluster.
+     * 
+     */
     private final @Nullable String inventoryItemId;
+    /**
+     * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
+     * 
+     */
     private final @Nullable String kind;
+    /**
+     * Gets or sets the location.
+     * 
+     */
     private final String location;
+    /**
+     * Gets or sets the vCenter Managed Object name for the cluster.
+     * 
+     */
     private final String moName;
+    /**
+     * Gets or sets the vCenter MoRef (Managed Object Reference) ID for the cluster.
+     * 
+     */
     private final @Nullable String moRefId;
+    /**
+     * Gets or sets the name.
+     * 
+     */
     private final String name;
+    /**
+     * Gets or sets the network ARM ids.
+     * 
+     */
     private final List<String> networkIds;
+    /**
+     * Gets or sets the provisioning state.
+     * 
+     */
     private final String provisioningState;
+    /**
+     * The resource status information.
+     * 
+     */
     private final List<ResourceStatusResponse> statuses;
+    /**
+     * The system data.
+     * 
+     */
     private final SystemDataResponse systemData;
+    /**
+     * Gets or sets the Resource tags.
+     * 
+     */
     private final @Nullable Map<String,String> tags;
+    /**
+     * Gets or sets the type of the resource.
+     * 
+     */
     private final String type;
+    /**
+     * Gets or sets a unique identifier for this resource.
+     * 
+     */
     private final String uuid;
+    /**
+     * Gets or sets the ARM Id of the vCenter resource in which this cluster resides.
+     * 
+     */
     private final @Nullable String vCenterId;
 
     @OutputCustomType.Constructor({"customResourceName","datastoreIds","extendedLocation","id","inventoryItemId","kind","location","moName","moRefId","name","networkIds","provisioningState","statuses","systemData","tags","type","uuid","vCenterId"})
@@ -75,57 +147,129 @@ public final class GetClusterResult {
         this.vCenterId = vCenterId;
     }
 
+    /**
+     * Gets the name of the corresponding resource in Kubernetes.
+     * 
+     */
     public String getCustomResourceName() {
         return this.customResourceName;
     }
+    /**
+     * Gets or sets the datastore ARM ids.
+     * 
+     */
     public List<String> getDatastoreIds() {
         return this.datastoreIds;
     }
+    /**
+     * Gets or sets the extended location.
+     * 
+     */
     public Optional<ExtendedLocationResponse> getExtendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
+    /**
+     * Gets or sets the Id.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Gets or sets the inventory Item ID for the cluster.
+     * 
+     */
     public Optional<String> getInventoryItemId() {
         return Optional.ofNullable(this.inventoryItemId);
     }
+    /**
+     * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
+     * 
+     */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
+    /**
+     * Gets or sets the location.
+     * 
+     */
     public String getLocation() {
         return this.location;
     }
+    /**
+     * Gets or sets the vCenter Managed Object name for the cluster.
+     * 
+     */
     public String getMoName() {
         return this.moName;
     }
+    /**
+     * Gets or sets the vCenter MoRef (Managed Object Reference) ID for the cluster.
+     * 
+     */
     public Optional<String> getMoRefId() {
         return Optional.ofNullable(this.moRefId);
     }
+    /**
+     * Gets or sets the name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Gets or sets the network ARM ids.
+     * 
+     */
     public List<String> getNetworkIds() {
         return this.networkIds;
     }
+    /**
+     * Gets or sets the provisioning state.
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The resource status information.
+     * 
+     */
     public List<ResourceStatusResponse> getStatuses() {
         return this.statuses;
     }
+    /**
+     * The system data.
+     * 
+     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+    /**
+     * Gets or sets the Resource tags.
+     * 
+     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+    /**
+     * Gets or sets the type of the resource.
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * Gets or sets a unique identifier for this resource.
+     * 
+     */
     public String getUuid() {
         return this.uuid;
     }
+    /**
+     * Gets or sets the ARM Id of the vCenter resource in which this cluster resides.
+     * 
+     */
     public Optional<String> getVCenterId() {
         return Optional.ofNullable(this.vCenterId);
     }

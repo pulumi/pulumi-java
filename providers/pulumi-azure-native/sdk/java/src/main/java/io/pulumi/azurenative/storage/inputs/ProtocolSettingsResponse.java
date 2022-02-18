@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Protocol settings for file service
+ * 
+ */
 public final class ProtocolSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ProtocolSettingsResponse Empty = new ProtocolSettingsResponse();
 
+    /**
+     * Setting for SMB protocol
+     * 
+     */
     @InputImport(name="smb")
     private final @Nullable SmbSettingResponse smb;
 

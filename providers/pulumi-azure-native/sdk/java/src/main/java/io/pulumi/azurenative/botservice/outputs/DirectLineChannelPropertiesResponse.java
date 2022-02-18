@@ -13,7 +13,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DirectLineChannelPropertiesResponse {
+    /**
+     * Direct Line embed code of the resource
+     * 
+     */
     private final @Nullable String directLineEmbedCode;
+    /**
+     * The list of Direct Line sites
+     * 
+     */
     private final @Nullable List<DirectLineSiteResponse> sites;
 
     @OutputCustomType.Constructor({"directLineEmbedCode","sites"})
@@ -24,9 +32,17 @@ public final class DirectLineChannelPropertiesResponse {
         this.sites = sites;
     }
 
+    /**
+     * Direct Line embed code of the resource
+     * 
+     */
     public Optional<String> getDirectLineEmbedCode() {
         return Optional.ofNullable(this.directLineEmbedCode);
     }
+    /**
+     * The list of Direct Line sites
+     * 
+     */
     public List<DirectLineSiteResponse> getSites() {
         return this.sites == null ? List.of() : this.sites;
     }

@@ -18,93 +18,226 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * An Azure SQL Database sync group.
+ * API Version: 2020-11-01-preview.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:sql:SyncGroup syncgroupcrud-3187 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-3521/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328/syncGroups/syncgroupcrud-3187 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:sql:SyncGroup")
 public class SyncGroup extends io.pulumi.resources.CustomResource {
+    /**
+     * Conflict logging retention period.
+     * 
+     */
     @OutputExport(name="conflictLoggingRetentionInDays", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> conflictLoggingRetentionInDays;
 
+    /**
+     * @return Conflict logging retention period.
+     * 
+     */
     public Output</* @Nullable */ Integer> getConflictLoggingRetentionInDays() {
         return this.conflictLoggingRetentionInDays;
     }
+    /**
+     * Conflict resolution policy of the sync group.
+     * 
+     */
     @OutputExport(name="conflictResolutionPolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> conflictResolutionPolicy;
 
+    /**
+     * @return Conflict resolution policy of the sync group.
+     * 
+     */
     public Output</* @Nullable */ String> getConflictResolutionPolicy() {
         return this.conflictResolutionPolicy;
     }
+    /**
+     * If conflict logging is enabled.
+     * 
+     */
     @OutputExport(name="enableConflictLogging", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableConflictLogging;
 
+    /**
+     * @return If conflict logging is enabled.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getEnableConflictLogging() {
         return this.enableConflictLogging;
     }
+    /**
+     * User name for the sync group hub database credential.
+     * 
+     */
     @OutputExport(name="hubDatabaseUserName", type=String.class, parameters={})
     private Output</* @Nullable */ String> hubDatabaseUserName;
 
+    /**
+     * @return User name for the sync group hub database credential.
+     * 
+     */
     public Output</* @Nullable */ String> getHubDatabaseUserName() {
         return this.hubDatabaseUserName;
     }
+    /**
+     * Sync interval of the sync group.
+     * 
+     */
     @OutputExport(name="interval", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> interval;
 
+    /**
+     * @return Sync interval of the sync group.
+     * 
+     */
     public Output</* @Nullable */ Integer> getInterval() {
         return this.interval;
     }
+    /**
+     * Last sync time of the sync group.
+     * 
+     */
     @OutputExport(name="lastSyncTime", type=String.class, parameters={})
     private Output<String> lastSyncTime;
 
+    /**
+     * @return Last sync time of the sync group.
+     * 
+     */
     public Output<String> getLastSyncTime() {
         return this.lastSyncTime;
     }
+    /**
+     * Resource name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Private endpoint name of the sync group if use private link connection is enabled.
+     * 
+     */
     @OutputExport(name="privateEndpointName", type=String.class, parameters={})
     private Output<String> privateEndpointName;
 
+    /**
+     * @return Private endpoint name of the sync group if use private link connection is enabled.
+     * 
+     */
     public Output<String> getPrivateEndpointName() {
         return this.privateEndpointName;
     }
+    /**
+     * Sync schema of the sync group.
+     * 
+     */
     @OutputExport(name="schema", type=SyncGroupSchemaResponse.class, parameters={})
     private Output</* @Nullable */ SyncGroupSchemaResponse> schema;
 
+    /**
+     * @return Sync schema of the sync group.
+     * 
+     */
     public Output</* @Nullable */ SyncGroupSchemaResponse> getSchema() {
         return this.schema;
     }
+    /**
+     * The name and capacity of the SKU.
+     * 
+     */
     @OutputExport(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
+    /**
+     * @return The name and capacity of the SKU.
+     * 
+     */
     public Output</* @Nullable */ SkuResponse> getSku() {
         return this.sku;
     }
+    /**
+     * ARM resource id of the sync database in the sync group.
+     * 
+     */
     @OutputExport(name="syncDatabaseId", type=String.class, parameters={})
     private Output</* @Nullable */ String> syncDatabaseId;
 
+    /**
+     * @return ARM resource id of the sync database in the sync group.
+     * 
+     */
     public Output</* @Nullable */ String> getSyncDatabaseId() {
         return this.syncDatabaseId;
     }
+    /**
+     * Sync state of the sync group.
+     * 
+     */
     @OutputExport(name="syncState", type=String.class, parameters={})
     private Output<String> syncState;
 
+    /**
+     * @return Sync state of the sync group.
+     * 
+     */
     public Output<String> getSyncState() {
         return this.syncState;
     }
+    /**
+     * Resource type.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * If use private link connection is enabled.
+     * 
+     */
     @OutputExport(name="usePrivateLinkConnection", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> usePrivateLinkConnection;
 
+    /**
+     * @return If use private link connection is enabled.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getUsePrivateLinkConnection() {
         return this.usePrivateLinkConnection;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public SyncGroup(String name, SyncGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:sql:SyncGroup", name, args == null ? SyncGroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -130,6 +263,14 @@ public class SyncGroup extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static SyncGroup get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SyncGroup(name, id, options);
     }

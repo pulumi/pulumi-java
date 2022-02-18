@@ -18,81 +18,198 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Backup policy information
+ * API Version: 2020-12-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:netapp:BackupPolicy account1/backupPolicyName /subscriptions/D633CC2E-722B-4AE1-B636-BBD9E4C60ED9/resourceGroups/myRG/providers/Microsoft.NetApp/netAppAccounts/account1/backupPolocies/backupPolicyName 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:netapp:BackupPolicy")
 public class BackupPolicy extends io.pulumi.resources.CustomResource {
+    /**
+     * Daily backups count to keep
+     * 
+     */
     @OutputExport(name="dailyBackupsToKeep", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> dailyBackupsToKeep;
 
+    /**
+     * @return Daily backups count to keep
+     * 
+     */
     public Output</* @Nullable */ Integer> getDailyBackupsToKeep() {
         return this.dailyBackupsToKeep;
     }
+    /**
+     * The property to decide policy is enabled or not
+     * 
+     */
     @OutputExport(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
+    /**
+     * @return The property to decide policy is enabled or not
+     * 
+     */
     public Output</* @Nullable */ Boolean> getEnabled() {
         return this.enabled;
     }
+    /**
+     * Resource location
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * Monthly backups count to keep
+     * 
+     */
     @OutputExport(name="monthlyBackupsToKeep", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> monthlyBackupsToKeep;
 
+    /**
+     * @return Monthly backups count to keep
+     * 
+     */
     public Output</* @Nullable */ Integer> getMonthlyBackupsToKeep() {
         return this.monthlyBackupsToKeep;
     }
+    /**
+     * Name of backup policy
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Name of backup policy
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Azure lifecycle management
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return Azure lifecycle management
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Resource tags
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Resource type
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * A list of volumes assigned to this policy
+     * 
+     */
     @OutputExport(name="volumeBackups", type=List.class, parameters={VolumeBackupsResponse.class})
     private Output</* @Nullable */ List<VolumeBackupsResponse>> volumeBackups;
 
+    /**
+     * @return A list of volumes assigned to this policy
+     * 
+     */
     public Output</* @Nullable */ List<VolumeBackupsResponse>> getVolumeBackups() {
         return this.volumeBackups;
     }
+    /**
+     * Volumes using current backup policy
+     * 
+     */
     @OutputExport(name="volumesAssigned", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> volumesAssigned;
 
+    /**
+     * @return Volumes using current backup policy
+     * 
+     */
     public Output</* @Nullable */ Integer> getVolumesAssigned() {
         return this.volumesAssigned;
     }
+    /**
+     * Weekly backups count to keep
+     * 
+     */
     @OutputExport(name="weeklyBackupsToKeep", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> weeklyBackupsToKeep;
 
+    /**
+     * @return Weekly backups count to keep
+     * 
+     */
     public Output</* @Nullable */ Integer> getWeeklyBackupsToKeep() {
         return this.weeklyBackupsToKeep;
     }
+    /**
+     * Yearly backups count to keep
+     * 
+     */
     @OutputExport(name="yearlyBackupsToKeep", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> yearlyBackupsToKeep;
 
+    /**
+     * @return Yearly backups count to keep
+     * 
+     */
     public Output</* @Nullable */ Integer> getYearlyBackupsToKeep() {
         return this.yearlyBackupsToKeep;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public BackupPolicy(String name, BackupPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:netapp:BackupPolicy", name, args == null ? BackupPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -122,6 +239,14 @@ public class BackupPolicy extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static BackupPolicy get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new BackupPolicy(name, id, options);
     }

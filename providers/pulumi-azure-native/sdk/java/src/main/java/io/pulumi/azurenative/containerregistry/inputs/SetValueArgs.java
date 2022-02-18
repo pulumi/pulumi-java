@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The properties of a overridable value that can be passed to a task template.
+ * 
+ */
 public final class SetValueArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SetValueArgs Empty = new SetValueArgs();
 
+    /**
+     * Flag to indicate whether the value represents a secret or not.
+     * 
+     */
     @InputImport(name="isSecret")
     private final @Nullable Input<Boolean> isSecret;
 
@@ -22,6 +30,10 @@ public final class SetValueArgs extends io.pulumi.resources.ResourceArgs {
         return this.isSecret == null ? Input.empty() : this.isSecret;
     }
 
+    /**
+     * The name of the overridable value.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -29,6 +41,10 @@ public final class SetValueArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
+    /**
+     * The overridable value.
+     * 
+     */
     @InputImport(name="value", required=true)
     private final Input<String> value;
 

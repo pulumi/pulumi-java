@@ -19,6 +19,10 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PolicyArgs Empty = new PolicyArgs();
 
+    /**
+     * The description of the policy.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -26,6 +30,10 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The evaluator type of the policy (i.e. AllowedValuesPolicy, MaxValuePolicy).
+     * 
+     */
     @InputImport(name="evaluatorType")
     private final @Nullable Input<Either<String,PolicyEvaluatorType>> evaluatorType;
 
@@ -33,6 +41,10 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.evaluatorType == null ? Input.empty() : this.evaluatorType;
     }
 
+    /**
+     * The fact data of the policy.
+     * 
+     */
     @InputImport(name="factData")
     private final @Nullable Input<String> factData;
 
@@ -40,6 +52,10 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.factData == null ? Input.empty() : this.factData;
     }
 
+    /**
+     * The fact name of the policy (e.g. LabVmCount, LabVmSize, MaxVmsAllowedPerLab, etc.
+     * 
+     */
     @InputImport(name="factName")
     private final @Nullable Input<Either<String,PolicyFactName>> factName;
 
@@ -47,6 +63,10 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.factName == null ? Input.empty() : this.factName;
     }
 
+    /**
+     * The name of the lab.
+     * 
+     */
     @InputImport(name="labName", required=true)
     private final Input<String> labName;
 
@@ -54,6 +74,10 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.labName;
     }
 
+    /**
+     * The location of the resource.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -61,6 +85,10 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the policy.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -68,6 +96,10 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The name of the policy set.
+     * 
+     */
     @InputImport(name="policySetName", required=true)
     private final Input<String> policySetName;
 
@@ -75,6 +107,10 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.policySetName;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -82,6 +118,10 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The status of the policy.
+     * 
+     */
     @InputImport(name="status")
     private final @Nullable Input<Either<String,PolicyStatus>> status;
 
@@ -89,6 +129,10 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.status == null ? Input.empty() : this.status;
     }
 
+    /**
+     * The tags of the resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -96,6 +140,10 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The threshold of the policy (i.e. a number for MaxValuePolicy, and a JSON array of values for AllowedValuesPolicy).
+     * 
+     */
     @InputImport(name="threshold")
     private final @Nullable Input<String> threshold;
 

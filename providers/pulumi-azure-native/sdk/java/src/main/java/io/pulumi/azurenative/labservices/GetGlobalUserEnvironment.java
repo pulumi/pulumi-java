@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGlobalUserEnvironment {
+/**
+ * Represents the environments details
+ * API Version: 2018-10-15.
+ * 
+ *
+ * Represents the environments details
+ * 
+ */
     public static CompletableFuture<GetGlobalUserEnvironmentResult> invokeAsync(GetGlobalUserEnvironmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:labservices:getGlobalUserEnvironment", TypeShape.of(GetGlobalUserEnvironmentResult.class), args == null ? GetGlobalUserEnvironmentArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Details the service to which the subnet is delegated.
+ * 
+ */
 public final class DelegationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DelegationArgs Empty = new DelegationArgs();
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -21,6 +29,10 @@ public final class DelegationArgs extends io.pulumi.resources.ResourceArgs {
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * The name of the resource that is unique within a subnet. This name can be used to access the resource.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -28,6 +40,10 @@ public final class DelegationArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The name of the service to whom the subnet should be delegated (e.g. Microsoft.Sql/servers).
+     * 
+     */
     @InputImport(name="serviceName")
     private final @Nullable Input<String> serviceName;
 
@@ -35,6 +51,10 @@ public final class DelegationArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceName == null ? Input.empty() : this.serviceName;
     }
 
+    /**
+     * Resource type.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 

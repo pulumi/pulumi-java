@@ -15,27 +15,72 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * A function object, containing all information associated with the named function. All functions are contained under a streaming job.
+ * API Version: 2016-03-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:streamanalytics:Function function588 /subscriptions/56b5e0a9-b645-407d-99b0-c64f86013e3d/resourceGroups/sjrg7/providers/Microsoft.StreamAnalytics/streamingjobs/sj9093/functions/function588 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:streamanalytics:Function")
 public class Function extends io.pulumi.resources.CustomResource {
+    /**
+     * Resource name
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
+    /**
+     * @return Resource name
+     * 
+     */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
+    /**
+     * The properties that are associated with a function.
+     * 
+     */
     @OutputExport(name="properties", type=ScalarFunctionPropertiesResponse.class, parameters={})
     private Output<ScalarFunctionPropertiesResponse> properties;
 
+    /**
+     * @return The properties that are associated with a function.
+     * 
+     */
     public Output<ScalarFunctionPropertiesResponse> getProperties() {
         return this.properties;
     }
+    /**
+     * Resource type
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Function(String name, FunctionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:streamanalytics:Function", name, args == null ? FunctionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -57,6 +102,14 @@ public class Function extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Function get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Function(name, id, options);
     }

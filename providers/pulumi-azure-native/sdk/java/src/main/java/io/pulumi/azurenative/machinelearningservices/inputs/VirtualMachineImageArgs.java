@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Virtual Machine image for Windows AML Compute
+ * 
+ */
 public final class VirtualMachineImageArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualMachineImageArgs Empty = new VirtualMachineImageArgs();
 
+    /**
+     * Virtual Machine image path
+     * 
+     */
     @InputImport(name="id", required=true)
     private final Input<String> id;
 

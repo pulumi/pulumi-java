@@ -13,10 +13,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The status of virtual machine patch operations.
+ * 
+ */
 public final class VirtualMachinePatchStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VirtualMachinePatchStatusResponse Empty = new VirtualMachinePatchStatusResponse();
 
+    /**
+     * The available patch summary of the latest assessment operation for the virtual machine.
+     * 
+     */
     @InputImport(name="availablePatchSummary")
     private final @Nullable AvailablePatchSummaryResponse availablePatchSummary;
 
@@ -24,6 +32,10 @@ public final class VirtualMachinePatchStatusResponse extends io.pulumi.resources
         return this.availablePatchSummary == null ? Optional.empty() : Optional.ofNullable(this.availablePatchSummary);
     }
 
+    /**
+     * The enablement status of the specified patchMode
+     * 
+     */
     @InputImport(name="configurationStatuses", required=true)
     private final List<InstanceViewStatusResponse> configurationStatuses;
 
@@ -31,6 +43,10 @@ public final class VirtualMachinePatchStatusResponse extends io.pulumi.resources
         return this.configurationStatuses;
     }
 
+    /**
+     * The installation summary of the latest installation operation for the virtual machine.
+     * 
+     */
     @InputImport(name="lastPatchInstallationSummary")
     private final @Nullable LastPatchInstallationSummaryResponse lastPatchInstallationSummary;
 

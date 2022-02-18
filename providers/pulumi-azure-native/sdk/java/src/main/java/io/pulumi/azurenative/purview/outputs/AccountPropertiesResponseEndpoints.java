@@ -9,8 +9,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AccountPropertiesResponseEndpoints {
+    /**
+     * Gets the catalog endpoint.
+     * 
+     */
     private final String catalog;
+    /**
+     * Gets the guardian endpoint.
+     * 
+     */
     private final String guardian;
+    /**
+     * Gets the scan endpoint.
+     * 
+     */
     private final String scan;
 
     @OutputCustomType.Constructor({"catalog","guardian","scan"})
@@ -23,12 +35,24 @@ public final class AccountPropertiesResponseEndpoints {
         this.scan = Objects.requireNonNull(scan);
     }
 
+    /**
+     * Gets the catalog endpoint.
+     * 
+     */
     public String getCatalog() {
         return this.catalog;
     }
+    /**
+     * Gets the guardian endpoint.
+     * 
+     */
     public String getGuardian() {
         return this.guardian;
     }
+    /**
+     * Gets the scan endpoint.
+     * 
+     */
     public String getScan() {
         return this.scan;
     }

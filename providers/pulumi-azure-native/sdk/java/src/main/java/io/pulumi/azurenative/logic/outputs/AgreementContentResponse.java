@@ -13,8 +13,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AgreementContentResponse {
+    /**
+     * The AS2 agreement content.
+     * 
+     */
     private final @Nullable AS2AgreementContentResponse aS2;
+    /**
+     * The EDIFACT agreement content.
+     * 
+     */
     private final @Nullable EdifactAgreementContentResponse edifact;
+    /**
+     * The X12 agreement content.
+     * 
+     */
     private final @Nullable X12AgreementContentResponse x12;
 
     @OutputCustomType.Constructor({"aS2","edifact","x12"})
@@ -27,12 +39,24 @@ public final class AgreementContentResponse {
         this.x12 = x12;
     }
 
+    /**
+     * The AS2 agreement content.
+     * 
+     */
     public Optional<AS2AgreementContentResponse> getAS2() {
         return Optional.ofNullable(this.aS2);
     }
+    /**
+     * The EDIFACT agreement content.
+     * 
+     */
     public Optional<EdifactAgreementContentResponse> getEdifact() {
         return Optional.ofNullable(this.edifact);
     }
+    /**
+     * The X12 agreement content.
+     * 
+     */
     public Optional<X12AgreementContentResponse> getX12() {
         return Optional.ofNullable(this.x12);
     }

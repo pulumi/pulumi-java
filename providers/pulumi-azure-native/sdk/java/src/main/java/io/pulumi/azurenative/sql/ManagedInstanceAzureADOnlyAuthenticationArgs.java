@@ -15,6 +15,10 @@ public final class ManagedInstanceAzureADOnlyAuthenticationArgs extends io.pulum
 
     public static final ManagedInstanceAzureADOnlyAuthenticationArgs Empty = new ManagedInstanceAzureADOnlyAuthenticationArgs();
 
+    /**
+     * The name of server azure active directory only authentication.
+     * 
+     */
     @InputImport(name="authenticationName")
     private final @Nullable Input<String> authenticationName;
 
@@ -22,6 +26,10 @@ public final class ManagedInstanceAzureADOnlyAuthenticationArgs extends io.pulum
         return this.authenticationName == null ? Input.empty() : this.authenticationName;
     }
 
+    /**
+     * Azure Active Directory only Authentication enabled.
+     * 
+     */
     @InputImport(name="azureADOnlyAuthentication", required=true)
     private final Input<Boolean> azureADOnlyAuthentication;
 
@@ -29,6 +37,10 @@ public final class ManagedInstanceAzureADOnlyAuthenticationArgs extends io.pulum
         return this.azureADOnlyAuthentication;
     }
 
+    /**
+     * The name of the managed instance.
+     * 
+     */
     @InputImport(name="managedInstanceName", required=true)
     private final Input<String> managedInstanceName;
 
@@ -36,6 +48,10 @@ public final class ManagedInstanceAzureADOnlyAuthenticationArgs extends io.pulum
         return this.managedInstanceName;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The data format of the message. Optionally the data format can be added to each message.
+     * 
+     */
     @EnumType
     public enum EventHubDataFormat {
         MULTIJSON("MULTIJSON"),

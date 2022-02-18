@@ -12,6 +12,10 @@ public final class GetDatabaseSecurityAlertPolicyArgs extends io.pulumi.resource
 
     public static final GetDatabaseSecurityAlertPolicyArgs Empty = new GetDatabaseSecurityAlertPolicyArgs();
 
+    /**
+     * The name of the  database for which the security alert policy is defined.
+     * 
+     */
     @InputImport(name="databaseName", required=true)
     private final String databaseName;
 
@@ -19,6 +23,10 @@ public final class GetDatabaseSecurityAlertPolicyArgs extends io.pulumi.resource
         return this.databaseName;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetDatabaseSecurityAlertPolicyArgs extends io.pulumi.resource
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the security alert policy.
+     * 
+     */
     @InputImport(name="securityAlertPolicyName", required=true)
     private final String securityAlertPolicyName;
 
@@ -33,6 +45,10 @@ public final class GetDatabaseSecurityAlertPolicyArgs extends io.pulumi.resource
         return this.securityAlertPolicyName;
     }
 
+    /**
+     * The name of the  server.
+     * 
+     */
     @InputImport(name="serverName", required=true)
     private final String serverName;
 

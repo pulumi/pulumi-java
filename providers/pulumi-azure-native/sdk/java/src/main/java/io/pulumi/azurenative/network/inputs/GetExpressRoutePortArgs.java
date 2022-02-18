@@ -12,6 +12,10 @@ public final class GetExpressRoutePortArgs extends io.pulumi.resources.InvokeArg
 
     public static final GetExpressRoutePortArgs Empty = new GetExpressRoutePortArgs();
 
+    /**
+     * The name of ExpressRoutePort.
+     * 
+     */
     @InputImport(name="expressRoutePortName", required=true)
     private final String expressRoutePortName;
 
@@ -19,6 +23,10 @@ public final class GetExpressRoutePortArgs extends io.pulumi.resources.InvokeArg
         return this.expressRoutePortName;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The managed application lock level.
+     * 
+     */
     @EnumType
     public enum ApplicationLockLevel {
         CanNotDelete("CanNotDelete"),

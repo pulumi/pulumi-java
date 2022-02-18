@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Provisioning state of the console.
+     * 
+     */
     @EnumType
     public enum ProvisioningState {
         NotSpecified("NotSpecified"),

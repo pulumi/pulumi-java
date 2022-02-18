@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Identifies an object.
+ * 
+ */
 public final class NameIdentifierResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NameIdentifierResponse Empty = new NameIdentifierResponse();
 
+    /**
+     * Name of the object.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 

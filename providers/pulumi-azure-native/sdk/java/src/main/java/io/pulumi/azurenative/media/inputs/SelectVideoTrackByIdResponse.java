@@ -9,10 +9,19 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Select video tracks from the input by specifying a track identifier.
+ * 
+ */
 public final class SelectVideoTrackByIdResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SelectVideoTrackByIdResponse Empty = new SelectVideoTrackByIdResponse();
 
+    /**
+     * The discriminator for derived types.
+     * Expected value is '#Microsoft.Media.SelectVideoTrackById'.
+     * 
+     */
     @InputImport(name="odataType", required=true)
     private final String odataType;
 
@@ -20,6 +29,10 @@ public final class SelectVideoTrackByIdResponse extends io.pulumi.resources.Invo
         return this.odataType;
     }
 
+    /**
+     * Track identifier to select
+     * 
+     */
     @InputImport(name="trackId", required=true)
     private final Double trackId;
 

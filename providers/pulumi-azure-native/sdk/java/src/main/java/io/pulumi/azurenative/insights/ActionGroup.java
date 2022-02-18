@@ -26,117 +26,282 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * An action group resource.
+ * API Version: 2019-06-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:insights:ActionGroup SampleActionGroup /subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/Default-NotificationRules/providers/microsoft.insights/actionGroups/SampleActionGroup 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:insights:ActionGroup")
 public class ActionGroup extends io.pulumi.resources.CustomResource {
+    /**
+     * The list of ARM role receivers that are part of this action group. Roles are Azure RBAC roles and only built-in roles are supported.
+     * 
+     */
     @OutputExport(name="armRoleReceivers", type=List.class, parameters={ArmRoleReceiverResponse.class})
     private Output</* @Nullable */ List<ArmRoleReceiverResponse>> armRoleReceivers;
 
+    /**
+     * @return The list of ARM role receivers that are part of this action group. Roles are Azure RBAC roles and only built-in roles are supported.
+     * 
+     */
     public Output</* @Nullable */ List<ArmRoleReceiverResponse>> getArmRoleReceivers() {
         return this.armRoleReceivers;
     }
+    /**
+     * The list of AutomationRunbook receivers that are part of this action group.
+     * 
+     */
     @OutputExport(name="automationRunbookReceivers", type=List.class, parameters={AutomationRunbookReceiverResponse.class})
     private Output</* @Nullable */ List<AutomationRunbookReceiverResponse>> automationRunbookReceivers;
 
+    /**
+     * @return The list of AutomationRunbook receivers that are part of this action group.
+     * 
+     */
     public Output</* @Nullable */ List<AutomationRunbookReceiverResponse>> getAutomationRunbookReceivers() {
         return this.automationRunbookReceivers;
     }
+    /**
+     * The list of AzureAppPush receivers that are part of this action group.
+     * 
+     */
     @OutputExport(name="azureAppPushReceivers", type=List.class, parameters={AzureAppPushReceiverResponse.class})
     private Output</* @Nullable */ List<AzureAppPushReceiverResponse>> azureAppPushReceivers;
 
+    /**
+     * @return The list of AzureAppPush receivers that are part of this action group.
+     * 
+     */
     public Output</* @Nullable */ List<AzureAppPushReceiverResponse>> getAzureAppPushReceivers() {
         return this.azureAppPushReceivers;
     }
+    /**
+     * The list of azure function receivers that are part of this action group.
+     * 
+     */
     @OutputExport(name="azureFunctionReceivers", type=List.class, parameters={AzureFunctionReceiverResponse.class})
     private Output</* @Nullable */ List<AzureFunctionReceiverResponse>> azureFunctionReceivers;
 
+    /**
+     * @return The list of azure function receivers that are part of this action group.
+     * 
+     */
     public Output</* @Nullable */ List<AzureFunctionReceiverResponse>> getAzureFunctionReceivers() {
         return this.azureFunctionReceivers;
     }
+    /**
+     * The list of email receivers that are part of this action group.
+     * 
+     */
     @OutputExport(name="emailReceivers", type=List.class, parameters={EmailReceiverResponse.class})
     private Output</* @Nullable */ List<EmailReceiverResponse>> emailReceivers;
 
+    /**
+     * @return The list of email receivers that are part of this action group.
+     * 
+     */
     public Output</* @Nullable */ List<EmailReceiverResponse>> getEmailReceivers() {
         return this.emailReceivers;
     }
+    /**
+     * Indicates whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications.
+     * 
+     */
     @OutputExport(name="enabled", type=Boolean.class, parameters={})
     private Output<Boolean> enabled;
 
+    /**
+     * @return Indicates whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications.
+     * 
+     */
     public Output<Boolean> getEnabled() {
         return this.enabled;
     }
+    /**
+     * The short name of the action group. This will be used in SMS messages.
+     * 
+     */
     @OutputExport(name="groupShortName", type=String.class, parameters={})
     private Output<String> groupShortName;
 
+    /**
+     * @return The short name of the action group. This will be used in SMS messages.
+     * 
+     */
     public Output<String> getGroupShortName() {
         return this.groupShortName;
     }
+    /**
+     * Azure resource identity
+     * 
+     */
     @OutputExport(name="identity", type=String.class, parameters={})
     private Output<String> identity;
 
+    /**
+     * @return Azure resource identity
+     * 
+     */
     public Output<String> getIdentity() {
         return this.identity;
     }
+    /**
+     * The list of ITSM receivers that are part of this action group.
+     * 
+     */
     @OutputExport(name="itsmReceivers", type=List.class, parameters={ItsmReceiverResponse.class})
     private Output</* @Nullable */ List<ItsmReceiverResponse>> itsmReceivers;
 
+    /**
+     * @return The list of ITSM receivers that are part of this action group.
+     * 
+     */
     public Output</* @Nullable */ List<ItsmReceiverResponse>> getItsmReceivers() {
         return this.itsmReceivers;
     }
+    /**
+     * Azure resource kind
+     * 
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
+    /**
+     * @return Azure resource kind
+     * 
+     */
     public Output<String> getKind() {
         return this.kind;
     }
+    /**
+     * Resource location
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * The list of logic app receivers that are part of this action group.
+     * 
+     */
     @OutputExport(name="logicAppReceivers", type=List.class, parameters={LogicAppReceiverResponse.class})
     private Output</* @Nullable */ List<LogicAppReceiverResponse>> logicAppReceivers;
 
+    /**
+     * @return The list of logic app receivers that are part of this action group.
+     * 
+     */
     public Output</* @Nullable */ List<LogicAppReceiverResponse>> getLogicAppReceivers() {
         return this.logicAppReceivers;
     }
+    /**
+     * Azure resource name
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Azure resource name
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The list of SMS receivers that are part of this action group.
+     * 
+     */
     @OutputExport(name="smsReceivers", type=List.class, parameters={SmsReceiverResponse.class})
     private Output</* @Nullable */ List<SmsReceiverResponse>> smsReceivers;
 
+    /**
+     * @return The list of SMS receivers that are part of this action group.
+     * 
+     */
     public Output</* @Nullable */ List<SmsReceiverResponse>> getSmsReceivers() {
         return this.smsReceivers;
     }
+    /**
+     * Resource tags
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Azure resource type
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Azure resource type
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * The list of voice receivers that are part of this action group.
+     * 
+     */
     @OutputExport(name="voiceReceivers", type=List.class, parameters={VoiceReceiverResponse.class})
     private Output</* @Nullable */ List<VoiceReceiverResponse>> voiceReceivers;
 
+    /**
+     * @return The list of voice receivers that are part of this action group.
+     * 
+     */
     public Output</* @Nullable */ List<VoiceReceiverResponse>> getVoiceReceivers() {
         return this.voiceReceivers;
     }
+    /**
+     * The list of webhook receivers that are part of this action group.
+     * 
+     */
     @OutputExport(name="webhookReceivers", type=List.class, parameters={WebhookReceiverResponse.class})
     private Output</* @Nullable */ List<WebhookReceiverResponse>> webhookReceivers;
 
+    /**
+     * @return The list of webhook receivers that are part of this action group.
+     * 
+     */
     public Output</* @Nullable */ List<WebhookReceiverResponse>> getWebhookReceivers() {
         return this.webhookReceivers;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ActionGroup(String name, ActionGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:insights:ActionGroup", name, args == null ? ActionGroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -160,6 +325,14 @@ public class ActionGroup extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ActionGroup get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ActionGroup(name, id, options);
     }

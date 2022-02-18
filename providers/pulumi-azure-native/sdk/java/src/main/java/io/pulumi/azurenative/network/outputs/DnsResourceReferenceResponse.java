@@ -12,7 +12,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DnsResourceReferenceResponse {
+    /**
+     * A list of dns Records
+     * 
+     */
     private final @Nullable List<SubResourceResponse> dnsResources;
+    /**
+     * A reference to an azure resource from where the dns resource value is taken.
+     * 
+     */
     private final @Nullable SubResourceResponse targetResource;
 
     @OutputCustomType.Constructor({"dnsResources","targetResource"})
@@ -23,9 +31,17 @@ public final class DnsResourceReferenceResponse {
         this.targetResource = targetResource;
     }
 
+    /**
+     * A list of dns Records
+     * 
+     */
     public List<SubResourceResponse> getDnsResources() {
         return this.dnsResources == null ? List.of() : this.dnsResources;
     }
+    /**
+     * A reference to an azure resource from where the dns resource value is taken.
+     * 
+     */
     public Optional<SubResourceResponse> getTargetResource() {
         return Optional.ofNullable(this.targetResource);
     }

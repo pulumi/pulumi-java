@@ -13,8 +13,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CbcsDrmConfigurationResponse {
+    /**
+     * FairPlay configurations
+     * 
+     */
     private final @Nullable StreamingPolicyFairPlayConfigurationResponse fairPlay;
+    /**
+     * PlayReady configurations
+     * 
+     */
     private final @Nullable StreamingPolicyPlayReadyConfigurationResponse playReady;
+    /**
+     * Widevine configurations
+     * 
+     */
     private final @Nullable StreamingPolicyWidevineConfigurationResponse widevine;
 
     @OutputCustomType.Constructor({"fairPlay","playReady","widevine"})
@@ -27,12 +39,24 @@ public final class CbcsDrmConfigurationResponse {
         this.widevine = widevine;
     }
 
+    /**
+     * FairPlay configurations
+     * 
+     */
     public Optional<StreamingPolicyFairPlayConfigurationResponse> getFairPlay() {
         return Optional.ofNullable(this.fairPlay);
     }
+    /**
+     * PlayReady configurations
+     * 
+     */
     public Optional<StreamingPolicyPlayReadyConfigurationResponse> getPlayReady() {
         return Optional.ofNullable(this.playReady);
     }
+    /**
+     * Widevine configurations
+     * 
+     */
     public Optional<StreamingPolicyWidevineConfigurationResponse> getWidevine() {
         return Optional.ofNullable(this.widevine);
     }

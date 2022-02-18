@@ -10,10 +10,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Model that represents a selector in the Experiment resource.
+ * 
+ */
 public final class SelectorResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SelectorResponse Empty = new SelectorResponse();
 
+    /**
+     * String of the selector ID.
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -21,6 +29,10 @@ public final class SelectorResponse extends io.pulumi.resources.InvokeArgs {
         return this.id;
     }
 
+    /**
+     * List of Target references.
+     * 
+     */
     @InputImport(name="targets", required=true)
     private final List<TargetReferenceResponse> targets;
 
@@ -28,6 +40,10 @@ public final class SelectorResponse extends io.pulumi.resources.InvokeArgs {
         return this.targets;
     }
 
+    /**
+     * Enum of the selector type.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

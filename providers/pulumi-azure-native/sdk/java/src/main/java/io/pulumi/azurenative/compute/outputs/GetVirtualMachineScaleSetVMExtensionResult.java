@@ -14,17 +14,65 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetVirtualMachineScaleSetVMExtensionResult {
+    /**
+     * Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
+     * 
+     */
     private final @Nullable Boolean autoUpgradeMinorVersion;
+    /**
+     * Indicates whether the extension should be automatically upgraded by the platform if there is a newer version of the extension available.
+     * 
+     */
     private final @Nullable Boolean enableAutomaticUpgrade;
+    /**
+     * How the extension handler should be forced to update even if the extension configuration has not changed.
+     * 
+     */
     private final @Nullable String forceUpdateTag;
+    /**
+     * Resource Id
+     * 
+     */
     private final String id;
+    /**
+     * The virtual machine extension instance view.
+     * 
+     */
     private final @Nullable VirtualMachineExtensionInstanceViewResponse instanceView;
+    /**
+     * The name of the extension.
+     * 
+     */
     private final String name;
+    /**
+     * The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
+     * 
+     */
     private final @Nullable Object protectedSettings;
+    /**
+     * The provisioning state, which only appears in the response.
+     * 
+     */
     private final String provisioningState;
+    /**
+     * The name of the extension handler publisher.
+     * 
+     */
     private final @Nullable String publisher;
+    /**
+     * Json formatted public settings for the extension.
+     * 
+     */
     private final @Nullable Object settings;
+    /**
+     * Resource type
+     * 
+     */
     private final String type;
+    /**
+     * Specifies the version of the script handler.
+     * 
+     */
     private final @Nullable String typeHandlerVersion;
 
     @OutputCustomType.Constructor({"autoUpgradeMinorVersion","enableAutomaticUpgrade","forceUpdateTag","id","instanceView","name","protectedSettings","provisioningState","publisher","settings","type","typeHandlerVersion"})
@@ -55,39 +103,87 @@ public final class GetVirtualMachineScaleSetVMExtensionResult {
         this.typeHandlerVersion = typeHandlerVersion;
     }
 
+    /**
+     * Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
+     * 
+     */
     public Optional<Boolean> getAutoUpgradeMinorVersion() {
         return Optional.ofNullable(this.autoUpgradeMinorVersion);
     }
+    /**
+     * Indicates whether the extension should be automatically upgraded by the platform if there is a newer version of the extension available.
+     * 
+     */
     public Optional<Boolean> getEnableAutomaticUpgrade() {
         return Optional.ofNullable(this.enableAutomaticUpgrade);
     }
+    /**
+     * How the extension handler should be forced to update even if the extension configuration has not changed.
+     * 
+     */
     public Optional<String> getForceUpdateTag() {
         return Optional.ofNullable(this.forceUpdateTag);
     }
+    /**
+     * Resource Id
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * The virtual machine extension instance view.
+     * 
+     */
     public Optional<VirtualMachineExtensionInstanceViewResponse> getInstanceView() {
         return Optional.ofNullable(this.instanceView);
     }
+    /**
+     * The name of the extension.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
+     * 
+     */
     public Optional<Object> getProtectedSettings() {
         return Optional.ofNullable(this.protectedSettings);
     }
+    /**
+     * The provisioning state, which only appears in the response.
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The name of the extension handler publisher.
+     * 
+     */
     public Optional<String> getPublisher() {
         return Optional.ofNullable(this.publisher);
     }
+    /**
+     * Json formatted public settings for the extension.
+     * 
+     */
     public Optional<Object> getSettings() {
         return Optional.ofNullable(this.settings);
     }
+    /**
+     * Resource type
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * Specifies the version of the script handler.
+     * 
+     */
     public Optional<String> getTypeHandlerVersion() {
         return Optional.ofNullable(this.typeHandlerVersion);
     }

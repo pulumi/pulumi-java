@@ -15,51 +15,128 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * The replication policy between two storage accounts. Multiple rules can be defined in one policy.
+ * API Version: 2021-02-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:storage:ObjectReplicationPolicy 2a20bb73-5717-4635-985a-5d4cf777438f /subscriptions/{subscription-id}/resourceGroups/res7687/providers/Microsoft.Storage/storageAccounts/src1122/objectReplicationPolicies/2a20bb73-5717-4635-985a-5d4cf777438f 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:storage:ObjectReplicationPolicy")
 public class ObjectReplicationPolicy extends io.pulumi.resources.CustomResource {
+    /**
+     * Required. Destination account name.
+     * 
+     */
     @OutputExport(name="destinationAccount", type=String.class, parameters={})
     private Output<String> destinationAccount;
 
+    /**
+     * @return Required. Destination account name.
+     * 
+     */
     public Output<String> getDestinationAccount() {
         return this.destinationAccount;
     }
+    /**
+     * Indicates when the policy is enabled on the source account.
+     * 
+     */
     @OutputExport(name="enabledTime", type=String.class, parameters={})
     private Output<String> enabledTime;
 
+    /**
+     * @return Indicates when the policy is enabled on the source account.
+     * 
+     */
     public Output<String> getEnabledTime() {
         return this.enabledTime;
     }
+    /**
+     * The name of the resource
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * A unique id for object replication policy.
+     * 
+     */
     @OutputExport(name="policyId", type=String.class, parameters={})
     private Output<String> policyId;
 
+    /**
+     * @return A unique id for object replication policy.
+     * 
+     */
     public Output<String> getPolicyId() {
         return this.policyId;
     }
+    /**
+     * The storage account object replication rules.
+     * 
+     */
     @OutputExport(name="rules", type=List.class, parameters={ObjectReplicationPolicyRuleResponse.class})
     private Output</* @Nullable */ List<ObjectReplicationPolicyRuleResponse>> rules;
 
+    /**
+     * @return The storage account object replication rules.
+     * 
+     */
     public Output</* @Nullable */ List<ObjectReplicationPolicyRuleResponse>> getRules() {
         return this.rules;
     }
+    /**
+     * Required. Source account name.
+     * 
+     */
     @OutputExport(name="sourceAccount", type=String.class, parameters={})
     private Output<String> sourceAccount;
 
+    /**
+     * @return Required. Source account name.
+     * 
+     */
     public Output<String> getSourceAccount() {
         return this.sourceAccount;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ObjectReplicationPolicy(String name, ObjectReplicationPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:storage:ObjectReplicationPolicy", name, args == null ? ObjectReplicationPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -84,6 +161,14 @@ public class ObjectReplicationPolicy extends io.pulumi.resources.CustomResource 
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ObjectReplicationPolicy get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ObjectReplicationPolicy(name, id, options);
     }

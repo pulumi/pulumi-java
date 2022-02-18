@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGraphQuery {
+/**
+ * Graph Query entity definition.
+ * API Version: 2018-09-01-preview.
+ * 
+ *
+ * Graph Query entity definition.
+ * 
+ */
     public static CompletableFuture<GetGraphQueryResult> invokeAsync(GetGraphQueryArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:resourcegraph:getGraphQuery", TypeShape.of(GetGraphQueryResult.class), args == null ? GetGraphQueryArgs.Empty : args, Utilities.withVersion(options));
     }

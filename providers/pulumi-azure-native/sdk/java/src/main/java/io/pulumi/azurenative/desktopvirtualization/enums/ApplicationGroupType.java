@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Resource Type of ApplicationGroup.
+     * 
+     */
     @EnumType
     public enum ApplicationGroupType {
         RemoteApp("RemoteApp"),

@@ -16,6 +16,10 @@ public final class WebPubSubPrivateEndpointConnectionArgs extends io.pulumi.reso
 
     public static final WebPubSubPrivateEndpointConnectionArgs Empty = new WebPubSubPrivateEndpointConnectionArgs();
 
+    /**
+     * Private endpoint associated with the private endpoint connection
+     * 
+     */
     @InputImport(name="privateEndpoint")
     private final @Nullable Input<PrivateEndpointArgs> privateEndpoint;
 
@@ -23,6 +27,10 @@ public final class WebPubSubPrivateEndpointConnectionArgs extends io.pulumi.reso
         return this.privateEndpoint == null ? Input.empty() : this.privateEndpoint;
     }
 
+    /**
+     * The name of the private endpoint connection
+     * 
+     */
     @InputImport(name="privateEndpointConnectionName")
     private final @Nullable Input<String> privateEndpointConnectionName;
 
@@ -30,6 +38,10 @@ public final class WebPubSubPrivateEndpointConnectionArgs extends io.pulumi.reso
         return this.privateEndpointConnectionName == null ? Input.empty() : this.privateEndpointConnectionName;
     }
 
+    /**
+     * Connection state
+     * 
+     */
     @InputImport(name="privateLinkServiceConnectionState")
     private final @Nullable Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
@@ -37,6 +49,10 @@ public final class WebPubSubPrivateEndpointConnectionArgs extends io.pulumi.reso
         return this.privateLinkServiceConnectionState == null ? Input.empty() : this.privateLinkServiceConnectionState;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -44,6 +60,10 @@ public final class WebPubSubPrivateEndpointConnectionArgs extends io.pulumi.reso
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the resource.
+     * 
+     */
     @InputImport(name="resourceName", required=true)
     private final Input<String> resourceName;
 

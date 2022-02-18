@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDnsResourceReferenceByTarResources {
+/**
+ * Represents the properties of the Dns Resource Reference Result.
+ * API Version: 2018-05-01.
+ * 
+ *
+ * Represents the properties of the Dns Resource Reference Result.
+ * 
+ */
     public static CompletableFuture<GetDnsResourceReferenceByTarResourcesResult> invokeAsync(@Nullable GetDnsResourceReferenceByTarResourcesArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getDnsResourceReferenceByTarResources", TypeShape.of(GetDnsResourceReferenceByTarResourcesResult.class), args == null ? GetDnsResourceReferenceByTarResourcesArgs.Empty : args, Utilities.withVersion(options));
     }

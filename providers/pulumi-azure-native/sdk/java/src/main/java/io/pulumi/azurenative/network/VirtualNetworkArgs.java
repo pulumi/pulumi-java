@@ -24,6 +24,10 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualNetworkArgs Empty = new VirtualNetworkArgs();
 
+    /**
+     * The AddressSpace that contains an array of IP address ranges that can be used by subnets.
+     * 
+     */
     @InputImport(name="addressSpace")
     private final @Nullable Input<AddressSpaceArgs> addressSpace;
 
@@ -31,6 +35,10 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
         return this.addressSpace == null ? Input.empty() : this.addressSpace;
     }
 
+    /**
+     * Bgp Communities sent over ExpressRoute with each route corresponding to a prefix in this VNET.
+     * 
+     */
     @InputImport(name="bgpCommunities")
     private final @Nullable Input<VirtualNetworkBgpCommunitiesArgs> bgpCommunities;
 
@@ -38,6 +46,10 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
         return this.bgpCommunities == null ? Input.empty() : this.bgpCommunities;
     }
 
+    /**
+     * The DDoS protection plan associated with the virtual network.
+     * 
+     */
     @InputImport(name="ddosProtectionPlan")
     private final @Nullable Input<SubResourceArgs> ddosProtectionPlan;
 
@@ -45,6 +57,10 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
         return this.ddosProtectionPlan == null ? Input.empty() : this.ddosProtectionPlan;
     }
 
+    /**
+     * The dhcpOptions that contains an array of DNS servers available to VMs deployed in the virtual network.
+     * 
+     */
     @InputImport(name="dhcpOptions")
     private final @Nullable Input<DhcpOptionsArgs> dhcpOptions;
 
@@ -52,6 +68,10 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
         return this.dhcpOptions == null ? Input.empty() : this.dhcpOptions;
     }
 
+    /**
+     * Indicates if DDoS protection is enabled for all the protected resources in the virtual network. It requires a DDoS protection plan associated with the resource.
+     * 
+     */
     @InputImport(name="enableDdosProtection")
     private final @Nullable Input<Boolean> enableDdosProtection;
 
@@ -59,6 +79,10 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableDdosProtection == null ? Input.empty() : this.enableDdosProtection;
     }
 
+    /**
+     * Indicates if VM protection is enabled for all the subnets in the virtual network.
+     * 
+     */
     @InputImport(name="enableVmProtection")
     private final @Nullable Input<Boolean> enableVmProtection;
 
@@ -66,6 +90,10 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableVmProtection == null ? Input.empty() : this.enableVmProtection;
     }
 
+    /**
+     * The extended location of the virtual network.
+     * 
+     */
     @InputImport(name="extendedLocation")
     private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
 
@@ -73,6 +101,10 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
         return this.extendedLocation == null ? Input.empty() : this.extendedLocation;
     }
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -80,6 +112,10 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * Array of IpAllocation which reference this VNET.
+     * 
+     */
     @InputImport(name="ipAllocations")
     private final @Nullable Input<List<SubResourceArgs>> ipAllocations;
 
@@ -87,6 +123,10 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
         return this.ipAllocations == null ? Input.empty() : this.ipAllocations;
     }
 
+    /**
+     * Resource location.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -94,6 +134,10 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -101,6 +145,10 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * A list of subnets in a Virtual Network.
+     * 
+     */
     @InputImport(name="subnets")
     private final @Nullable Input<List<SubnetArgs>> subnets;
 
@@ -108,6 +156,10 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
         return this.subnets == null ? Input.empty() : this.subnets;
     }
 
+    /**
+     * Resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -115,6 +167,10 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The name of the virtual network.
+     * 
+     */
     @InputImport(name="virtualNetworkName")
     private final @Nullable Input<String> virtualNetworkName;
 
@@ -122,6 +178,10 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
         return this.virtualNetworkName == null ? Input.empty() : this.virtualNetworkName;
     }
 
+    /**
+     * A list of peerings in a Virtual Network.
+     * 
+     */
     @InputImport(name="virtualNetworkPeerings")
     private final @Nullable Input<List<VirtualNetworkPeeringArgs>> virtualNetworkPeerings;
 

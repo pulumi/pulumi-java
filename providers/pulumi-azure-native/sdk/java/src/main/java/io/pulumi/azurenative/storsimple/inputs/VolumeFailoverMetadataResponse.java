@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The metadata of a volume that has valid cloud snapshot.
+ * 
+ */
 public final class VolumeFailoverMetadataResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VolumeFailoverMetadataResponse Empty = new VolumeFailoverMetadataResponse();
 
+    /**
+     * The date at which the snapshot was taken.
+     * 
+     */
     @InputImport(name="backupCreatedDate")
     private final @Nullable String backupCreatedDate;
 
@@ -22,6 +30,10 @@ public final class VolumeFailoverMetadataResponse extends io.pulumi.resources.In
         return this.backupCreatedDate == null ? Optional.empty() : Optional.ofNullable(this.backupCreatedDate);
     }
 
+    /**
+     * The path ID of the backup-element for this volume, inside the backup set.
+     * 
+     */
     @InputImport(name="backupElementId")
     private final @Nullable String backupElementId;
 
@@ -29,6 +41,10 @@ public final class VolumeFailoverMetadataResponse extends io.pulumi.resources.In
         return this.backupElementId == null ? Optional.empty() : Optional.ofNullable(this.backupElementId);
     }
 
+    /**
+     * The path ID of the backup set.
+     * 
+     */
     @InputImport(name="backupId")
     private final @Nullable String backupId;
 
@@ -36,6 +52,10 @@ public final class VolumeFailoverMetadataResponse extends io.pulumi.resources.In
         return this.backupId == null ? Optional.empty() : Optional.ofNullable(this.backupId);
     }
 
+    /**
+     * The path ID of the backup policy using which the snapshot was taken.
+     * 
+     */
     @InputImport(name="backupPolicyId")
     private final @Nullable String backupPolicyId;
 
@@ -43,6 +63,10 @@ public final class VolumeFailoverMetadataResponse extends io.pulumi.resources.In
         return this.backupPolicyId == null ? Optional.empty() : Optional.ofNullable(this.backupPolicyId);
     }
 
+    /**
+     * The size of the volume in bytes at the time the snapshot was taken.
+     * 
+     */
     @InputImport(name="sizeInBytes")
     private final @Nullable Double sizeInBytes;
 
@@ -50,6 +74,10 @@ public final class VolumeFailoverMetadataResponse extends io.pulumi.resources.In
         return this.sizeInBytes == null ? Optional.empty() : Optional.ofNullable(this.sizeInBytes);
     }
 
+    /**
+     * The path ID of the volume.
+     * 
+     */
     @InputImport(name="volumeId")
     private final @Nullable String volumeId;
 
@@ -57,6 +85,10 @@ public final class VolumeFailoverMetadataResponse extends io.pulumi.resources.In
         return this.volumeId == null ? Optional.empty() : Optional.ofNullable(this.volumeId);
     }
 
+    /**
+     * The type of the volume.
+     * 
+     */
     @InputImport(name="volumeType")
     private final @Nullable String volumeType;
 

@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The activation properties of the connected registry.
+ * 
+ */
 public final class ActivationPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ActivationPropertiesResponse Empty = new ActivationPropertiesResponse();
 
+    /**
+     * The activation status of the connected registry.
+     * 
+     */
     @InputImport(name="status", required=true)
     private final String status;
 

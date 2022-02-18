@@ -17,10 +17,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Input for task that migrates SQL Server databases to Azure SQL Database Managed Instance.
+ * 
+ */
 public final class MigrateSqlServerSqlMITaskInputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MigrateSqlServerSqlMITaskInputArgs Empty = new MigrateSqlServerSqlMITaskInputArgs();
 
+    /**
+     * SAS URI of Azure Storage Account Container to be used for storing backup files.
+     * 
+     */
     @InputImport(name="backupBlobShare", required=true)
     private final Input<BlobShareArgs> backupBlobShare;
 
@@ -28,6 +36,10 @@ public final class MigrateSqlServerSqlMITaskInputArgs extends io.pulumi.resource
         return this.backupBlobShare;
     }
 
+    /**
+     * Backup file share information for all selected databases.
+     * 
+     */
     @InputImport(name="backupFileShare")
     private final @Nullable Input<FileShareArgs> backupFileShare;
 
@@ -35,6 +47,10 @@ public final class MigrateSqlServerSqlMITaskInputArgs extends io.pulumi.resource
         return this.backupFileShare == null ? Input.empty() : this.backupFileShare;
     }
 
+    /**
+     * Backup Mode to specify whether to use existing backup or create new backup. If using existing backups, backup file paths are required to be provided in selectedDatabases.
+     * 
+     */
     @InputImport(name="backupMode")
     private final @Nullable Input<Either<String,BackupMode>> backupMode;
 
@@ -42,6 +58,10 @@ public final class MigrateSqlServerSqlMITaskInputArgs extends io.pulumi.resource
         return this.backupMode == null ? Input.empty() : this.backupMode;
     }
 
+    /**
+     * Agent Jobs to migrate.
+     * 
+     */
     @InputImport(name="selectedAgentJobs")
     private final @Nullable Input<List<String>> selectedAgentJobs;
 
@@ -49,6 +69,10 @@ public final class MigrateSqlServerSqlMITaskInputArgs extends io.pulumi.resource
         return this.selectedAgentJobs == null ? Input.empty() : this.selectedAgentJobs;
     }
 
+    /**
+     * Databases to migrate
+     * 
+     */
     @InputImport(name="selectedDatabases", required=true)
     private final Input<List<MigrateSqlServerSqlMIDatabaseInputArgs>> selectedDatabases;
 
@@ -56,6 +80,10 @@ public final class MigrateSqlServerSqlMITaskInputArgs extends io.pulumi.resource
         return this.selectedDatabases;
     }
 
+    /**
+     * Logins to migrate.
+     * 
+     */
     @InputImport(name="selectedLogins")
     private final @Nullable Input<List<String>> selectedLogins;
 
@@ -63,6 +91,10 @@ public final class MigrateSqlServerSqlMITaskInputArgs extends io.pulumi.resource
         return this.selectedLogins == null ? Input.empty() : this.selectedLogins;
     }
 
+    /**
+     * Information for connecting to source
+     * 
+     */
     @InputImport(name="sourceConnectionInfo", required=true)
     private final Input<SqlConnectionInfoArgs> sourceConnectionInfo;
 
@@ -70,6 +102,10 @@ public final class MigrateSqlServerSqlMITaskInputArgs extends io.pulumi.resource
         return this.sourceConnectionInfo;
     }
 
+    /**
+     * Information for connecting to target
+     * 
+     */
     @InputImport(name="targetConnectionInfo", required=true)
     private final Input<SqlConnectionInfoArgs> targetConnectionInfo;
 

@@ -15,6 +15,10 @@ public final class NotificationHubAuthorizationRuleArgs extends io.pulumi.resour
 
     public static final NotificationHubAuthorizationRuleArgs Empty = new NotificationHubAuthorizationRuleArgs();
 
+    /**
+     * Authorization Rule Name.
+     * 
+     */
     @InputImport(name="authorizationRuleName")
     private final @Nullable Input<String> authorizationRuleName;
 
@@ -22,6 +26,10 @@ public final class NotificationHubAuthorizationRuleArgs extends io.pulumi.resour
         return this.authorizationRuleName == null ? Input.empty() : this.authorizationRuleName;
     }
 
+    /**
+     * The namespace name.
+     * 
+     */
     @InputImport(name="namespaceName", required=true)
     private final Input<String> namespaceName;
 
@@ -29,6 +37,10 @@ public final class NotificationHubAuthorizationRuleArgs extends io.pulumi.resour
         return this.namespaceName;
     }
 
+    /**
+     * The notification hub name.
+     * 
+     */
     @InputImport(name="notificationHubName", required=true)
     private final Input<String> notificationHubName;
 
@@ -36,6 +48,10 @@ public final class NotificationHubAuthorizationRuleArgs extends io.pulumi.resour
         return this.notificationHubName;
     }
 
+    /**
+     * Properties of the Namespace AuthorizationRules.
+     * 
+     */
     @InputImport(name="properties", required=true)
     private final Input<SharedAccessAuthorizationRulePropertiesArgs> properties;
 
@@ -43,6 +59,10 @@ public final class NotificationHubAuthorizationRuleArgs extends io.pulumi.resour
         return this.properties;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

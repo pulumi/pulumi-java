@@ -15,6 +15,10 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
 
     public static final LongTermRetentionPolicyArgs Empty = new LongTermRetentionPolicyArgs();
 
+    /**
+     * The name of the database.
+     * 
+     */
     @InputImport(name="databaseName", required=true)
     private final Input<String> databaseName;
 
@@ -22,6 +26,10 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
         return this.databaseName;
     }
 
+    /**
+     * The monthly retention policy for an LTR backup in an ISO 8601 format.
+     * 
+     */
     @InputImport(name="monthlyRetention")
     private final @Nullable Input<String> monthlyRetention;
 
@@ -29,6 +37,10 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
         return this.monthlyRetention == null ? Input.empty() : this.monthlyRetention;
     }
 
+    /**
+     * The policy name. Should always be Default.
+     * 
+     */
     @InputImport(name="policyName")
     private final @Nullable Input<String> policyName;
 
@@ -36,6 +48,10 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
         return this.policyName == null ? Input.empty() : this.policyName;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -43,6 +59,10 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the server.
+     * 
+     */
     @InputImport(name="serverName", required=true)
     private final Input<String> serverName;
 
@@ -50,6 +70,10 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
         return this.serverName;
     }
 
+    /**
+     * The week of year to take the yearly backup in an ISO 8601 format.
+     * 
+     */
     @InputImport(name="weekOfYear")
     private final @Nullable Input<Integer> weekOfYear;
 
@@ -57,6 +81,10 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
         return this.weekOfYear == null ? Input.empty() : this.weekOfYear;
     }
 
+    /**
+     * The weekly retention policy for an LTR backup in an ISO 8601 format.
+     * 
+     */
     @InputImport(name="weeklyRetention")
     private final @Nullable Input<String> weeklyRetention;
 
@@ -64,6 +92,10 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
         return this.weeklyRetention == null ? Input.empty() : this.weeklyRetention;
     }
 
+    /**
+     * The yearly retention policy for an LTR backup in an ISO 8601 format.
+     * 
+     */
     @InputImport(name="yearlyRetention")
     private final @Nullable Input<String> yearlyRetention;
 

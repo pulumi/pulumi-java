@@ -14,10 +14,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Virtual disk model
+ * 
+ */
 public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualDiskArgs Empty = new VirtualDiskArgs();
 
+    /**
+     * Gets or sets the controller id.
+     * 
+     */
     @InputImport(name="controllerKey")
     private final @Nullable Input<Integer> controllerKey;
 
@@ -25,6 +33,10 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.controllerKey == null ? Input.empty() : this.controllerKey;
     }
 
+    /**
+     * Gets or sets the device key value.
+     * 
+     */
     @InputImport(name="deviceKey")
     private final @Nullable Input<Integer> deviceKey;
 
@@ -32,6 +44,10 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.deviceKey == null ? Input.empty() : this.deviceKey;
     }
 
+    /**
+     * Gets or sets the device name.
+     * 
+     */
     @InputImport(name="deviceName")
     private final @Nullable Input<String> deviceName;
 
@@ -39,6 +55,10 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.deviceName == null ? Input.empty() : this.deviceName;
     }
 
+    /**
+     * Gets or sets the disk mode.
+     * 
+     */
     @InputImport(name="diskMode")
     private final @Nullable Input<Either<String,DiskMode>> diskMode;
 
@@ -46,6 +66,10 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.diskMode == null ? Input.empty() : this.diskMode;
     }
 
+    /**
+     * Gets or sets the disk total size.
+     * 
+     */
     @InputImport(name="diskSizeGB")
     private final @Nullable Input<Integer> diskSizeGB;
 
@@ -53,6 +77,10 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.diskSizeGB == null ? Input.empty() : this.diskSizeGB;
     }
 
+    /**
+     * Gets or sets the disk backing type.
+     * 
+     */
     @InputImport(name="diskType")
     private final @Nullable Input<Either<String,DiskType>> diskType;
 
@@ -60,6 +88,10 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.diskType == null ? Input.empty() : this.diskType;
     }
 
+    /**
+     * Gets or sets the name of the virtual disk.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -67,6 +99,10 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Gets or sets the unit number of the disk on the controller.
+     * 
+     */
     @InputImport(name="unitNumber")
     private final @Nullable Input<Integer> unitNumber;
 

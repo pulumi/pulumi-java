@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRoleAssignment {
+/**
+ * Role Assignments
+ * API Version: 2020-08-01-preview.
+ * 
+ *
+ * Role Assignments
+ * 
+ */
     public static CompletableFuture<GetRoleAssignmentResult> invokeAsync(GetRoleAssignmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getRoleAssignment", TypeShape.of(GetRoleAssignmentResult.class), args == null ? GetRoleAssignmentArgs.Empty : args, Utilities.withVersion(options));
     }

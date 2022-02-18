@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * VMWare Azure specific protection profile Input.
+ * 
+ */
 public final class InMagePolicyInputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InMagePolicyInputArgs Empty = new InMagePolicyInputArgs();
 
+    /**
+     * The app consistent snapshot frequency (in minutes).
+     * 
+     */
     @InputImport(name="appConsistentFrequencyInMinutes")
     private final @Nullable Input<Integer> appConsistentFrequencyInMinutes;
 
@@ -24,6 +32,11 @@ public final class InMagePolicyInputArgs extends io.pulumi.resources.ResourceArg
         return this.appConsistentFrequencyInMinutes == null ? Input.empty() : this.appConsistentFrequencyInMinutes;
     }
 
+    /**
+     * The class type.
+     * Expected value is 'InMage'.
+     * 
+     */
     @InputImport(name="instanceType")
     private final @Nullable Input<String> instanceType;
 
@@ -31,6 +44,10 @@ public final class InMagePolicyInputArgs extends io.pulumi.resources.ResourceArg
         return this.instanceType == null ? Input.empty() : this.instanceType;
     }
 
+    /**
+     * A value indicating whether multi-VM sync has to be enabled. Value should be 'Enabled' or 'Disabled'.
+     * 
+     */
     @InputImport(name="multiVmSyncStatus", required=true)
     private final Input<Either<String,SetMultiVmSyncStatus>> multiVmSyncStatus;
 
@@ -38,6 +55,10 @@ public final class InMagePolicyInputArgs extends io.pulumi.resources.ResourceArg
         return this.multiVmSyncStatus;
     }
 
+    /**
+     * The duration in minutes until which the recovery points need to be stored.
+     * 
+     */
     @InputImport(name="recoveryPointHistory")
     private final @Nullable Input<Integer> recoveryPointHistory;
 
@@ -45,6 +66,10 @@ public final class InMagePolicyInputArgs extends io.pulumi.resources.ResourceArg
         return this.recoveryPointHistory == null ? Input.empty() : this.recoveryPointHistory;
     }
 
+    /**
+     * The recovery point threshold in minutes.
+     * 
+     */
     @InputImport(name="recoveryPointThresholdInMinutes")
     private final @Nullable Input<Integer> recoveryPointThresholdInMinutes;
 

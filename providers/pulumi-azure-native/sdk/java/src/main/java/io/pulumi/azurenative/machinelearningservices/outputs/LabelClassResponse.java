@@ -12,7 +12,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class LabelClassResponse {
+    /**
+     * Display name of the label class.
+     * 
+     */
     private final @Nullable String displayName;
+    /**
+     * Dictionary of subclasses of the label class.
+     * 
+     */
     private final @Nullable Map<String,LabelClassResponse> subclasses;
 
     @OutputCustomType.Constructor({"displayName","subclasses"})
@@ -23,9 +31,17 @@ public final class LabelClassResponse {
         this.subclasses = subclasses;
     }
 
+    /**
+     * Display name of the label class.
+     * 
+     */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
+    /**
+     * Dictionary of subclasses of the label class.
+     * 
+     */
     public Map<String,LabelClassResponse> getSubclasses() {
         return this.subclasses == null ? Map.of() : this.subclasses;
     }

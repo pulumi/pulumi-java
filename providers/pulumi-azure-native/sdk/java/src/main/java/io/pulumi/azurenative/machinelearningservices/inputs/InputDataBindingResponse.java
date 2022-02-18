@@ -14,6 +14,10 @@ public final class InputDataBindingResponse extends io.pulumi.resources.InvokeAr
 
     public static final InputDataBindingResponse Empty = new InputDataBindingResponse();
 
+    /**
+     * ARM resource ID of the registered dataVersion.
+     * 
+     */
     @InputImport(name="dataId")
     private final @Nullable String dataId;
 
@@ -21,6 +25,10 @@ public final class InputDataBindingResponse extends io.pulumi.resources.InvokeAr
         return this.dataId == null ? Optional.empty() : Optional.ofNullable(this.dataId);
     }
 
+    /**
+     * Mechanism for accessing the data artifact.
+     * 
+     */
     @InputImport(name="mode")
     private final @Nullable String mode;
 
@@ -28,6 +36,10 @@ public final class InputDataBindingResponse extends io.pulumi.resources.InvokeAr
         return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
     }
 
+    /**
+     * Location of data inside the container process.
+     * 
+     */
     @InputImport(name="pathOnCompute")
     private final @Nullable String pathOnCompute;
 

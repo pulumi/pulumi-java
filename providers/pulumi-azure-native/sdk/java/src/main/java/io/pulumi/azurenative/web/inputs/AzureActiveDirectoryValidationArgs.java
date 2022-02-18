@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The configuration settings of the Azure Active Directory token validation flow.
+ * 
+ */
 public final class AzureActiveDirectoryValidationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureActiveDirectoryValidationArgs Empty = new AzureActiveDirectoryValidationArgs();
 
+    /**
+     * The list of audiences that can make successful authentication/authorization requests.
+     * 
+     */
     @InputImport(name="allowedAudiences")
     private final @Nullable Input<List<String>> allowedAudiences;
 
@@ -23,6 +31,10 @@ public final class AzureActiveDirectoryValidationArgs extends io.pulumi.resource
         return this.allowedAudiences == null ? Input.empty() : this.allowedAudiences;
     }
 
+    /**
+     * The configuration settings of the checks that should be made while validating the JWT Claims.
+     * 
+     */
     @InputImport(name="jwtClaimChecks")
     private final @Nullable Input<JwtClaimChecksArgs> jwtClaimChecks;
 

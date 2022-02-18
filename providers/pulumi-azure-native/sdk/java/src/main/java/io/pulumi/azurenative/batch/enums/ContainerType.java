@@ -10,6 +10,10 @@ import java.util.StringJoiner;
 
     @EnumType
     public enum ContainerType {
+        /**
+         * A Docker compatible container technology will be used to launch the containers.
+         * 
+         */
         DockerCompatible("DockerCompatible");
 
         private final String value;

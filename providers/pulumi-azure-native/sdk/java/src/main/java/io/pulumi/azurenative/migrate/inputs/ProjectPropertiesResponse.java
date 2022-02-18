@@ -13,10 +13,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties of a project.
+ * 
+ */
 public final class ProjectPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ProjectPropertiesResponse Empty = new ProjectPropertiesResponse();
 
+    /**
+     * Assessment solution ARM id tracked by Microsoft.Migrate/migrateProjects.
+     * 
+     */
     @InputImport(name="assessmentSolutionId")
     private final @Nullable String assessmentSolutionId;
 
@@ -24,6 +32,10 @@ public final class ProjectPropertiesResponse extends io.pulumi.resources.InvokeA
         return this.assessmentSolutionId == null ? Optional.empty() : Optional.ofNullable(this.assessmentSolutionId);
     }
 
+    /**
+     * Time when this project was created. Date-Time represented in ISO-8601 format.
+     * 
+     */
     @InputImport(name="createdTimestamp", required=true)
     private final String createdTimestamp;
 
@@ -31,6 +43,10 @@ public final class ProjectPropertiesResponse extends io.pulumi.resources.InvokeA
         return this.createdTimestamp;
     }
 
+    /**
+     * The ARM id of the storage account used for interactions when public access is disabled.
+     * 
+     */
     @InputImport(name="customerStorageAccountArmId")
     private final @Nullable String customerStorageAccountArmId;
 
@@ -38,6 +54,10 @@ public final class ProjectPropertiesResponse extends io.pulumi.resources.InvokeA
         return this.customerStorageAccountArmId == null ? Optional.empty() : Optional.ofNullable(this.customerStorageAccountArmId);
     }
 
+    /**
+     * The ARM id of service map workspace created by customer.
+     * 
+     */
     @InputImport(name="customerWorkspaceId")
     private final @Nullable String customerWorkspaceId;
 
@@ -45,6 +65,10 @@ public final class ProjectPropertiesResponse extends io.pulumi.resources.InvokeA
         return this.customerWorkspaceId == null ? Optional.empty() : Optional.ofNullable(this.customerWorkspaceId);
     }
 
+    /**
+     * Location of service map workspace created by customer.
+     * 
+     */
     @InputImport(name="customerWorkspaceLocation")
     private final @Nullable String customerWorkspaceLocation;
 
@@ -52,6 +76,10 @@ public final class ProjectPropertiesResponse extends io.pulumi.resources.InvokeA
         return this.customerWorkspaceLocation == null ? Optional.empty() : Optional.ofNullable(this.customerWorkspaceLocation);
     }
 
+    /**
+     * Time when last assessment was created. Date-Time represented in ISO-8601 format. This value will be null until assessment is created.
+     * 
+     */
     @InputImport(name="lastAssessmentTimestamp", required=true)
     private final String lastAssessmentTimestamp;
 
@@ -59,6 +87,10 @@ public final class ProjectPropertiesResponse extends io.pulumi.resources.InvokeA
         return this.lastAssessmentTimestamp;
     }
 
+    /**
+     * Number of assessments created in the project.
+     * 
+     */
     @InputImport(name="numberOfAssessments", required=true)
     private final Integer numberOfAssessments;
 
@@ -66,6 +98,10 @@ public final class ProjectPropertiesResponse extends io.pulumi.resources.InvokeA
         return this.numberOfAssessments;
     }
 
+    /**
+     * Number of groups created in the project.
+     * 
+     */
     @InputImport(name="numberOfGroups", required=true)
     private final Integer numberOfGroups;
 
@@ -73,6 +109,10 @@ public final class ProjectPropertiesResponse extends io.pulumi.resources.InvokeA
         return this.numberOfGroups;
     }
 
+    /**
+     * Number of machines in the project.
+     * 
+     */
     @InputImport(name="numberOfMachines", required=true)
     private final Integer numberOfMachines;
 
@@ -80,6 +120,10 @@ public final class ProjectPropertiesResponse extends io.pulumi.resources.InvokeA
         return this.numberOfMachines;
     }
 
+    /**
+     * The list of private endpoint connections to the project.
+     * 
+     */
     @InputImport(name="privateEndpointConnections", required=true)
     private final List<PrivateEndpointConnectionResponse> privateEndpointConnections;
 
@@ -87,6 +131,10 @@ public final class ProjectPropertiesResponse extends io.pulumi.resources.InvokeA
         return this.privateEndpointConnections;
     }
 
+    /**
+     * Assessment project status.
+     * 
+     */
     @InputImport(name="projectStatus")
     private final @Nullable String projectStatus;
 
@@ -94,6 +142,10 @@ public final class ProjectPropertiesResponse extends io.pulumi.resources.InvokeA
         return this.projectStatus == null ? Optional.empty() : Optional.ofNullable(this.projectStatus);
     }
 
+    /**
+     * Provisioning state of the project.
+     * 
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -101,6 +153,10 @@ public final class ProjectPropertiesResponse extends io.pulumi.resources.InvokeA
         return this.provisioningState;
     }
 
+    /**
+     * This value can be set to 'enabled' to avoid breaking changes on existing customer resources and templates. If set to 'disabled', traffic over public interface is not allowed, and private endpoint connections would be the exclusive access method.
+     * 
+     */
     @InputImport(name="publicNetworkAccess")
     private final @Nullable String publicNetworkAccess;
 
@@ -108,6 +164,10 @@ public final class ProjectPropertiesResponse extends io.pulumi.resources.InvokeA
         return this.publicNetworkAccess == null ? Optional.empty() : Optional.ofNullable(this.publicNetworkAccess);
     }
 
+    /**
+     * Endpoint at which the collector agent can call agent REST API.
+     * 
+     */
     @InputImport(name="serviceEndpoint", required=true)
     private final String serviceEndpoint;
 
@@ -115,6 +175,10 @@ public final class ProjectPropertiesResponse extends io.pulumi.resources.InvokeA
         return this.serviceEndpoint;
     }
 
+    /**
+     * Time when this project was last updated. Date-Time represented in ISO-8601 format.
+     * 
+     */
     @InputImport(name="updatedTimestamp", required=true)
     private final String updatedTimestamp;
 

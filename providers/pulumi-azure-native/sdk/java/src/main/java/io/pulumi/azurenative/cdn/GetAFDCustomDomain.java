@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAFDCustomDomain {
+/**
+ * Friendly domain name mapping to the endpoint hostname that the customer provides for branding purposes, e.g. www.contoso.com.
+ * API Version: 2020-09-01.
+ * 
+ *
+ * Friendly domain name mapping to the endpoint hostname that the customer provides for branding purposes, e.g. www.contoso.com.
+ * 
+ */
     public static CompletableFuture<GetAFDCustomDomainResult> invokeAsync(GetAFDCustomDomainArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cdn:getAFDCustomDomain", TypeShape.of(GetAFDCustomDomainResult.class), args == null ? GetAFDCustomDomainArgs.Empty : args, Utilities.withVersion(options));
     }

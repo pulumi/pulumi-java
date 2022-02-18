@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SasTokenInformationResponse {
+    /**
+     * The access token for the associated Azure Storage Container.
+     * 
+     */
     private final String accessToken;
 
     @OutputCustomType.Constructor({"accessToken"})
@@ -16,6 +20,10 @@ public final class SasTokenInformationResponse {
         this.accessToken = Objects.requireNonNull(accessToken);
     }
 
+    /**
+     * The access token for the associated Azure Storage Container.
+     * 
+     */
     public String getAccessToken() {
         return this.accessToken;
     }

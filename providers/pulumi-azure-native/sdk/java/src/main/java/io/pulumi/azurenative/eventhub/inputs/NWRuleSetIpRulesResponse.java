@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Description of NetWorkRuleSet - IpRules resource.
+ * 
+ */
 public final class NWRuleSetIpRulesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NWRuleSetIpRulesResponse Empty = new NWRuleSetIpRulesResponse();
 
+    /**
+     * The IP Filter Action
+     * 
+     */
     @InputImport(name="action")
     private final @Nullable String action;
 
@@ -21,6 +29,10 @@ public final class NWRuleSetIpRulesResponse extends io.pulumi.resources.InvokeAr
         return this.action == null ? Optional.empty() : Optional.ofNullable(this.action);
     }
 
+    /**
+     * IP Mask
+     * 
+     */
     @InputImport(name="ipMask")
     private final @Nullable String ipMask;
 

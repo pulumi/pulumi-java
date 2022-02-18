@@ -14,10 +14,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Class for CommonEncryptionCbcs encryption scheme
+ * 
+ */
 public final class CommonEncryptionCbcsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CommonEncryptionCbcsResponse Empty = new CommonEncryptionCbcsResponse();
 
+    /**
+     * Representing which tracks should not be encrypted
+     * 
+     */
     @InputImport(name="clearTracks")
     private final @Nullable List<TrackSelectionResponse> clearTracks;
 
@@ -25,6 +33,10 @@ public final class CommonEncryptionCbcsResponse extends io.pulumi.resources.Invo
         return this.clearTracks == null ? List.of() : this.clearTracks;
     }
 
+    /**
+     * Representing default content key for each encryption scheme and separate content keys for specific tracks
+     * 
+     */
     @InputImport(name="contentKeys")
     private final @Nullable StreamingPolicyContentKeysResponse contentKeys;
 
@@ -32,6 +44,10 @@ public final class CommonEncryptionCbcsResponse extends io.pulumi.resources.Invo
         return this.contentKeys == null ? Optional.empty() : Optional.ofNullable(this.contentKeys);
     }
 
+    /**
+     * Configuration of DRMs for current encryption scheme
+     * 
+     */
     @InputImport(name="drm")
     private final @Nullable CbcsDrmConfigurationResponse drm;
 
@@ -39,6 +55,10 @@ public final class CommonEncryptionCbcsResponse extends io.pulumi.resources.Invo
         return this.drm == null ? Optional.empty() : Optional.ofNullable(this.drm);
     }
 
+    /**
+     * Representing supported protocols
+     * 
+     */
     @InputImport(name="enabledProtocols")
     private final @Nullable EnabledProtocolsResponse enabledProtocols;
 

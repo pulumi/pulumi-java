@@ -13,8 +13,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class OfficeDataConnectorDataTypesResponse {
+    /**
+     * Exchange data type connection.
+     * 
+     */
     private final @Nullable OfficeDataConnectorDataTypesResponseExchange exchange;
+    /**
+     * SharePoint data type connection.
+     * 
+     */
     private final @Nullable OfficeDataConnectorDataTypesResponseSharePoint sharePoint;
+    /**
+     * Teams data type connection.
+     * 
+     */
     private final @Nullable OfficeDataConnectorDataTypesResponseTeams teams;
 
     @OutputCustomType.Constructor({"exchange","sharePoint","teams"})
@@ -27,12 +39,24 @@ public final class OfficeDataConnectorDataTypesResponse {
         this.teams = teams;
     }
 
+    /**
+     * Exchange data type connection.
+     * 
+     */
     public Optional<OfficeDataConnectorDataTypesResponseExchange> getExchange() {
         return Optional.ofNullable(this.exchange);
     }
+    /**
+     * SharePoint data type connection.
+     * 
+     */
     public Optional<OfficeDataConnectorDataTypesResponseSharePoint> getSharePoint() {
         return Optional.ofNullable(this.sharePoint);
     }
+    /**
+     * Teams data type connection.
+     * 
+     */
     public Optional<OfficeDataConnectorDataTypesResponseTeams> getTeams() {
         return Optional.ofNullable(this.teams);
     }

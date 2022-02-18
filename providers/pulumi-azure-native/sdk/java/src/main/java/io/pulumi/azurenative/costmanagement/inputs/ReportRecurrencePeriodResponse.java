@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The start and end date for recurrence schedule.
+ * 
+ */
 public final class ReportRecurrencePeriodResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ReportRecurrencePeriodResponse Empty = new ReportRecurrencePeriodResponse();
 
+    /**
+     * The start date of recurrence.
+     * 
+     */
     @InputImport(name="from", required=true)
     private final String from;
 
@@ -21,6 +29,10 @@ public final class ReportRecurrencePeriodResponse extends io.pulumi.resources.In
         return this.from;
     }
 
+    /**
+     * The end date of recurrence.
+     * 
+     */
     @InputImport(name="to")
     private final @Nullable String to;
 

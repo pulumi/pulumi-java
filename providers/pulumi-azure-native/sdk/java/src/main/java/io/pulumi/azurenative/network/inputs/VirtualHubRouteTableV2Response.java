@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * VirtualHubRouteTableV2 Resource.
+ * 
+ */
 public final class VirtualHubRouteTableV2Response extends io.pulumi.resources.InvokeArgs {
 
     public static final VirtualHubRouteTableV2Response Empty = new VirtualHubRouteTableV2Response();
 
+    /**
+     * List of all connections attached to this route table v2.
+     * 
+     */
     @InputImport(name="attachedConnections")
     private final @Nullable List<String> attachedConnections;
 
@@ -23,6 +31,10 @@ public final class VirtualHubRouteTableV2Response extends io.pulumi.resources.In
         return this.attachedConnections == null ? List.of() : this.attachedConnections;
     }
 
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -30,6 +42,10 @@ public final class VirtualHubRouteTableV2Response extends io.pulumi.resources.In
         return this.etag;
     }
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -37,6 +53,10 @@ public final class VirtualHubRouteTableV2Response extends io.pulumi.resources.In
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -44,6 +64,10 @@ public final class VirtualHubRouteTableV2Response extends io.pulumi.resources.In
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The provisioning state of the virtual hub route table v2 resource.
+     * 
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -51,6 +75,10 @@ public final class VirtualHubRouteTableV2Response extends io.pulumi.resources.In
         return this.provisioningState;
     }
 
+    /**
+     * List of all routes.
+     * 
+     */
     @InputImport(name="routes")
     private final @Nullable List<VirtualHubRouteV2Response> routes;
 

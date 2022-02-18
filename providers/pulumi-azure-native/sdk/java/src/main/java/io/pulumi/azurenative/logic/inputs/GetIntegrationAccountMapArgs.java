@@ -12,6 +12,10 @@ public final class GetIntegrationAccountMapArgs extends io.pulumi.resources.Invo
 
     public static final GetIntegrationAccountMapArgs Empty = new GetIntegrationAccountMapArgs();
 
+    /**
+     * The integration account name.
+     * 
+     */
     @InputImport(name="integrationAccountName", required=true)
     private final String integrationAccountName;
 
@@ -19,6 +23,10 @@ public final class GetIntegrationAccountMapArgs extends io.pulumi.resources.Invo
         return this.integrationAccountName;
     }
 
+    /**
+     * The integration account map name.
+     * 
+     */
     @InputImport(name="mapName", required=true)
     private final String mapName;
 
@@ -26,6 +34,10 @@ public final class GetIntegrationAccountMapArgs extends io.pulumi.resources.Invo
         return this.mapName;
     }
 
+    /**
+     * The resource group name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

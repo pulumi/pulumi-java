@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Cloud shell console properties.
+ * 
+ */
 public final class ConsolePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConsolePropertiesResponse Empty = new ConsolePropertiesResponse();
 
+    /**
+     * The operating system type of the cloud shell.
+     * 
+     */
     @InputImport(name="osType", required=true)
     private final String osType;
 
@@ -19,6 +27,10 @@ public final class ConsolePropertiesResponse extends io.pulumi.resources.InvokeA
         return this.osType;
     }
 
+    /**
+     * Provisioning state of the console.
+     * 
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -26,6 +38,10 @@ public final class ConsolePropertiesResponse extends io.pulumi.resources.InvokeA
         return this.provisioningState;
     }
 
+    /**
+     * Uri of the console.
+     * 
+     */
     @InputImport(name="uri", required=true)
     private final String uri;
 

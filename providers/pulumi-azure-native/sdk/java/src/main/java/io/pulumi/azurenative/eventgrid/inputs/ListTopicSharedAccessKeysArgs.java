@@ -12,6 +12,10 @@ public final class ListTopicSharedAccessKeysArgs extends io.pulumi.resources.Inv
 
     public static final ListTopicSharedAccessKeysArgs Empty = new ListTopicSharedAccessKeysArgs();
 
+    /**
+     * The name of the resource group within the user's subscription.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +23,10 @@ public final class ListTopicSharedAccessKeysArgs extends io.pulumi.resources.Inv
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of the topic.
+     * 
+     */
     @InputImport(name="topicName", required=true)
     private final String topicName;
 

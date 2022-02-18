@@ -18,6 +18,10 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final PolicyExemptionArgs Empty = new PolicyExemptionArgs();
 
+    /**
+     * The description of the policy exemption.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -25,6 +29,10 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The display name of the policy exemption.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -32,6 +40,10 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The policy exemption category. Possible values are Waiver and Mitigated.
+     * 
+     */
     @InputImport(name="exemptionCategory", required=true)
     private final Input<Either<String,ExemptionCategory>> exemptionCategory;
 
@@ -39,6 +51,10 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
         return this.exemptionCategory;
     }
 
+    /**
+     * The expiration date and time (in UTC ISO 8601 format yyyy-MM-ddTHH:mm:ssZ) of the policy exemption.
+     * 
+     */
     @InputImport(name="expiresOn")
     private final @Nullable Input<String> expiresOn;
 
@@ -46,6 +62,10 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
         return this.expiresOn == null ? Input.empty() : this.expiresOn;
     }
 
+    /**
+     * The policy exemption metadata. Metadata is an open ended object and is typically a collection of key value pairs.
+     * 
+     */
     @InputImport(name="metadata")
     private final @Nullable Input<Object> metadata;
 
@@ -53,6 +73,10 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
+    /**
+     * The ID of the policy assignment that is being exempted.
+     * 
+     */
     @InputImport(name="policyAssignmentId", required=true)
     private final Input<String> policyAssignmentId;
 
@@ -60,6 +84,10 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
         return this.policyAssignmentId;
     }
 
+    /**
+     * The policy definition reference ID list when the associated policy assignment is an assignment of a policy set definition.
+     * 
+     */
     @InputImport(name="policyDefinitionReferenceIds")
     private final @Nullable Input<List<String>> policyDefinitionReferenceIds;
 
@@ -67,6 +95,10 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
         return this.policyDefinitionReferenceIds == null ? Input.empty() : this.policyDefinitionReferenceIds;
     }
 
+    /**
+     * The name of the policy exemption to delete.
+     * 
+     */
     @InputImport(name="policyExemptionName")
     private final @Nullable Input<String> policyExemptionName;
 
@@ -74,6 +106,10 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
         return this.policyExemptionName == null ? Input.empty() : this.policyExemptionName;
     }
 
+    /**
+     * The scope of the policy exemption. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}'), resource group (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'
+     * 
+     */
     @InputImport(name="scope", required=true)
     private final Input<String> scope;
 

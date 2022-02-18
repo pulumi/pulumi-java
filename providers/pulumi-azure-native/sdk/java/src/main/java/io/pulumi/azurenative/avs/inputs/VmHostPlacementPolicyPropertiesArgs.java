@@ -14,10 +14,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * VM-Host placement policy properties
+ * 
+ */
 public final class VmHostPlacementPolicyPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VmHostPlacementPolicyPropertiesArgs Empty = new VmHostPlacementPolicyPropertiesArgs();
 
+    /**
+     * placement policy affinity type
+     * 
+     */
     @InputImport(name="affinityType", required=true)
     private final Input<Either<String,AffinityType>> affinityType;
 
@@ -25,6 +33,10 @@ public final class VmHostPlacementPolicyPropertiesArgs extends io.pulumi.resourc
         return this.affinityType;
     }
 
+    /**
+     * Display name of the placement policy
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -32,6 +44,10 @@ public final class VmHostPlacementPolicyPropertiesArgs extends io.pulumi.resourc
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * Host members list
+     * 
+     */
     @InputImport(name="hostMembers", required=true)
     private final Input<List<String>> hostMembers;
 
@@ -39,6 +55,10 @@ public final class VmHostPlacementPolicyPropertiesArgs extends io.pulumi.resourc
         return this.hostMembers;
     }
 
+    /**
+     * Whether the placement policy is enabled or disabled
+     * 
+     */
     @InputImport(name="state")
     private final @Nullable Input<Either<String,PlacementPolicyState>> state;
 
@@ -46,6 +66,11 @@ public final class VmHostPlacementPolicyPropertiesArgs extends io.pulumi.resourc
         return this.state == null ? Input.empty() : this.state;
     }
 
+    /**
+     * placement policy type
+     * Expected value is 'VmHost'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -53,6 +78,10 @@ public final class VmHostPlacementPolicyPropertiesArgs extends io.pulumi.resourc
         return this.type;
     }
 
+    /**
+     * Virtual machine members list
+     * 
+     */
     @InputImport(name="vmMembers", required=true)
     private final Input<List<String>> vmMembers;
 

@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The resource model definition representing SKU for Azure Managed Instance - Azure Arc
+ * 
+ */
 public final class SqlManagedInstanceSkuResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SqlManagedInstanceSkuResponse Empty = new SqlManagedInstanceSkuResponse();
 
+    /**
+     * If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.
+     * 
+     */
     @InputImport(name="capacity")
     private final @Nullable Integer capacity;
 
@@ -23,6 +31,10 @@ public final class SqlManagedInstanceSkuResponse extends io.pulumi.resources.Inv
         return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
     }
 
+    /**
+     * Whether dev/test is enabled. When the dev field is set to true, the resource is used for dev/test purpose.
+     * 
+     */
     @InputImport(name="dev")
     private final @Nullable Boolean dev;
 
@@ -30,6 +42,10 @@ public final class SqlManagedInstanceSkuResponse extends io.pulumi.resources.Inv
         return this.dev == null ? Optional.empty() : Optional.ofNullable(this.dev);
     }
 
+    /**
+     * If the service has different generations of hardware, for the same SKU, then that can be captured here.
+     * 
+     */
     @InputImport(name="family")
     private final @Nullable String family;
 
@@ -37,6 +53,10 @@ public final class SqlManagedInstanceSkuResponse extends io.pulumi.resources.Inv
         return this.family == null ? Optional.empty() : Optional.ofNullable(this.family);
     }
 
+    /**
+     * The name of the SKU.  It is typically a letter+number code
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -44,6 +64,10 @@ public final class SqlManagedInstanceSkuResponse extends io.pulumi.resources.Inv
         return this.name;
     }
 
+    /**
+     * The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code.
+     * 
+     */
     @InputImport(name="size")
     private final @Nullable String size;
 
@@ -51,6 +75,10 @@ public final class SqlManagedInstanceSkuResponse extends io.pulumi.resources.Inv
         return this.size == null ? Optional.empty() : Optional.ofNullable(this.size);
     }
 
+    /**
+     * This field is required to be implemented by the Resource Provider if the service has more than one tier.
+     * 
+     */
     @InputImport(name="tier")
     private final @Nullable String tier;
 

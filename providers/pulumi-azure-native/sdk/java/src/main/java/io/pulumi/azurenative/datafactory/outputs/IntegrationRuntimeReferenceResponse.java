@@ -12,8 +12,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class IntegrationRuntimeReferenceResponse {
+    /**
+     * Arguments for integration runtime.
+     * 
+     */
     private final @Nullable Map<String,Object> parameters;
+    /**
+     * Reference integration runtime name.
+     * 
+     */
     private final String referenceName;
+    /**
+     * Type of integration runtime.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"parameters","referenceName","type"})
@@ -26,12 +38,24 @@ public final class IntegrationRuntimeReferenceResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Arguments for integration runtime.
+     * 
+     */
     public Map<String,Object> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
+    /**
+     * Reference integration runtime name.
+     * 
+     */
     public String getReferenceName() {
         return this.referenceName;
     }
+    /**
+     * Type of integration runtime.
+     * 
+     */
     public String getType() {
         return this.type;
     }

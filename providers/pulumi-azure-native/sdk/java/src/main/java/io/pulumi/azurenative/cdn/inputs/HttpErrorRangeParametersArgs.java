@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The JSON object that represents the range for http status codes
+ * 
+ */
 public final class HttpErrorRangeParametersArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HttpErrorRangeParametersArgs Empty = new HttpErrorRangeParametersArgs();
 
+    /**
+     * The inclusive start of the http status code range.
+     * 
+     */
     @InputImport(name="begin")
     private final @Nullable Input<Integer> begin;
 
@@ -21,6 +29,10 @@ public final class HttpErrorRangeParametersArgs extends io.pulumi.resources.Reso
         return this.begin == null ? Input.empty() : this.begin;
     }
 
+    /**
+     * The inclusive end of the http status code range.
+     * 
+     */
     @InputImport(name="end")
     private final @Nullable Input<Integer> end;
 

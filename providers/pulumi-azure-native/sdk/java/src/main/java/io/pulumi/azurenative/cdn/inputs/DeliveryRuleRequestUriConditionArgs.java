@@ -10,10 +10,19 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Defines the RequestUri condition for the delivery rule.
+ * 
+ */
 public final class DeliveryRuleRequestUriConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DeliveryRuleRequestUriConditionArgs Empty = new DeliveryRuleRequestUriConditionArgs();
 
+    /**
+     * The name of the condition for the delivery rule.
+     * Expected value is 'RequestUri'.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -21,6 +30,10 @@ public final class DeliveryRuleRequestUriConditionArgs extends io.pulumi.resourc
         return this.name;
     }
 
+    /**
+     * Defines the parameters for the condition.
+     * 
+     */
     @InputImport(name="parameters", required=true)
     private final Input<RequestUriMatchConditionParametersArgs> parameters;
 

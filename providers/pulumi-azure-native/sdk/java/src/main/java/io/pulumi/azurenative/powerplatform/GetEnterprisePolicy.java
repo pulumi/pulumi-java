@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEnterprisePolicy {
+/**
+ * Definition of the EnterprisePolicy.
+ * API Version: 2020-10-30-preview.
+ * 
+ *
+ * Definition of the EnterprisePolicy.
+ * 
+ */
     public static CompletableFuture<GetEnterprisePolicyResult> invokeAsync(GetEnterprisePolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:powerplatform:getEnterprisePolicy", TypeShape.of(GetEnterprisePolicyResult.class), args == null ? GetEnterprisePolicyArgs.Empty : args, Utilities.withVersion(options));
     }

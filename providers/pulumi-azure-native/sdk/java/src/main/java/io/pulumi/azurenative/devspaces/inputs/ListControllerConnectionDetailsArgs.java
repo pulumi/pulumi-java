@@ -12,6 +12,10 @@ public final class ListControllerConnectionDetailsArgs extends io.pulumi.resourc
 
     public static final ListControllerConnectionDetailsArgs Empty = new ListControllerConnectionDetailsArgs();
 
+    /**
+     * Name of the resource.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -19,6 +23,10 @@ public final class ListControllerConnectionDetailsArgs extends io.pulumi.resourc
         return this.name;
     }
 
+    /**
+     * Resource group to which the resource belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class ListControllerConnectionDetailsArgs extends io.pulumi.resourc
         return this.resourceGroupName;
     }
 
+    /**
+     * Resource ID of the target container host mapped to the Azure Dev Spaces Controller.
+     * 
+     */
     @InputImport(name="targetContainerHostResourceId", required=true)
     private final String targetContainerHostResourceId;
 

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * the metric statistic type. How the metrics from multiple instances are combined.
+     * 
+     */
     @EnumType
     public enum MetricStatisticType {
         Average("Average"),

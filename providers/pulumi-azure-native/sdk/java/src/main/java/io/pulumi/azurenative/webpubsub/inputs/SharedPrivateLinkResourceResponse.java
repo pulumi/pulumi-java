@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes a Shared Private Link Resource
+ * 
+ */
 public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SharedPrivateLinkResourceResponse Empty = new SharedPrivateLinkResourceResponse();
 
+    /**
+     * The group id from the provider of resource the shared private link resource is for
+     * 
+     */
     @InputImport(name="groupId", required=true)
     private final String groupId;
 
@@ -22,6 +30,10 @@ public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources
         return this.groupId;
     }
 
+    /**
+     * Fully qualified resource Id for the resource.
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -29,6 +41,10 @@ public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources
         return this.id;
     }
 
+    /**
+     * The name of the resource.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -36,6 +52,10 @@ public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources
         return this.name;
     }
 
+    /**
+     * The resource id of the resource the shared private link resource is for
+     * 
+     */
     @InputImport(name="privateLinkResourceId", required=true)
     private final String privateLinkResourceId;
 
@@ -43,6 +63,10 @@ public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources
         return this.privateLinkResourceId;
     }
 
+    /**
+     * Provisioning state of the shared private link resource
+     * 
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -50,6 +74,10 @@ public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources
         return this.provisioningState;
     }
 
+    /**
+     * The request message for requesting approval of the shared private link resource
+     * 
+     */
     @InputImport(name="requestMessage")
     private final @Nullable String requestMessage;
 
@@ -57,6 +85,10 @@ public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources
         return this.requestMessage == null ? Optional.empty() : Optional.ofNullable(this.requestMessage);
     }
 
+    /**
+     * Status of the shared private link resource
+     * 
+     */
     @InputImport(name="status", required=true)
     private final String status;
 
@@ -64,6 +96,10 @@ public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources
         return this.status;
     }
 
+    /**
+     * Metadata pertaining to creation and last modification of the resource.
+     * 
+     */
     @InputImport(name="systemData", required=true)
     private final SystemDataResponse systemData;
 
@@ -71,6 +107,10 @@ public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources
         return this.systemData;
     }
 
+    /**
+     * The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

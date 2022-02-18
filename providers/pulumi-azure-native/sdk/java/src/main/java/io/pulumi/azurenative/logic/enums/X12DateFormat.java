@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The group header date format.
+     * 
+     */
     @EnumType
     public enum X12DateFormat {
         NotSpecified("NotSpecified"),

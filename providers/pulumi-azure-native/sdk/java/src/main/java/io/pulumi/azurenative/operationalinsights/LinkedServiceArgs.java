@@ -17,6 +17,10 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LinkedServiceArgs Empty = new LinkedServiceArgs();
 
+    /**
+     * Name of the linkedServices resource
+     * 
+     */
     @InputImport(name="linkedServiceName")
     private final @Nullable Input<String> linkedServiceName;
 
@@ -24,6 +28,10 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.linkedServiceName == null ? Input.empty() : this.linkedServiceName;
     }
 
+    /**
+     * The provisioning state of the linked service.
+     * 
+     */
     @InputImport(name="provisioningState")
     private final @Nullable Input<Either<String,LinkedServiceEntityStatus>> provisioningState;
 
@@ -31,6 +39,10 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -38,6 +50,10 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The resource id of the resource that will be linked to the workspace. This should be used for linking resources which require read access
+     * 
+     */
     @InputImport(name="resourceId")
     private final @Nullable Input<String> resourceId;
 
@@ -45,6 +61,10 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceId == null ? Input.empty() : this.resourceId;
     }
 
+    /**
+     * Resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -52,6 +72,10 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The name of the workspace.
+     * 
+     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 
@@ -59,6 +83,10 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.workspaceName;
     }
 
+    /**
+     * The resource id of the resource that will be linked to the workspace. This should be used for linking resources which require write access
+     * 
+     */
     @InputImport(name="writeAccessResourceId")
     private final @Nullable Input<String> writeAccessResourceId;
 

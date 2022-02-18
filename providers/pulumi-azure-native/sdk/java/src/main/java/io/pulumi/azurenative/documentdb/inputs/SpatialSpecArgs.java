@@ -17,6 +17,10 @@ public final class SpatialSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SpatialSpecArgs Empty = new SpatialSpecArgs();
 
+    /**
+     * The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
+     * 
+     */
     @InputImport(name="path")
     private final @Nullable Input<String> path;
 
@@ -24,6 +28,10 @@ public final class SpatialSpecArgs extends io.pulumi.resources.ResourceArgs {
         return this.path == null ? Input.empty() : this.path;
     }
 
+    /**
+     * List of path's spatial type
+     * 
+     */
     @InputImport(name="types")
     private final @Nullable Input<List<Either<String,SpatialType>>> types;
 

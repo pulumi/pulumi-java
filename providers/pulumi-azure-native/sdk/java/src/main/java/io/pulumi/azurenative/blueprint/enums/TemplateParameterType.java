@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Allowed data types for Resource Manager template parameters.
+     * 
+     */
     @EnumType
     public enum TemplateParameterType {
         String("string"),

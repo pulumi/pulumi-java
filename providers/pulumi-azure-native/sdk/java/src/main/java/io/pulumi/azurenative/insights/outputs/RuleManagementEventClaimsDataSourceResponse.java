@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RuleManagementEventClaimsDataSourceResponse {
+    /**
+     * the email address.
+     * 
+     */
     private final @Nullable String emailAddress;
 
     @OutputCustomType.Constructor({"emailAddress"})
@@ -18,6 +22,10 @@ public final class RuleManagementEventClaimsDataSourceResponse {
         this.emailAddress = emailAddress;
     }
 
+    /**
+     * the email address.
+     * 
+     */
     public Optional<String> getEmailAddress() {
         return Optional.ofNullable(this.emailAddress);
     }

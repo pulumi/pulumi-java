@@ -12,6 +12,10 @@ public final class ListClusterStreamingJobsArgs extends io.pulumi.resources.Invo
 
     public static final ListClusterStreamingJobsArgs Empty = new ListClusterStreamingJobsArgs();
 
+    /**
+     * The name of the cluster.
+     * 
+     */
     @InputImport(name="clusterName", required=true)
     private final String clusterName;
 
@@ -19,6 +23,10 @@ public final class ListClusterStreamingJobsArgs extends io.pulumi.resources.Invo
         return this.clusterName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

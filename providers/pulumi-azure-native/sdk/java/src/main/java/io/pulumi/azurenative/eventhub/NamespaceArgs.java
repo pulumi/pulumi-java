@@ -18,6 +18,10 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NamespaceArgs Empty = new NamespaceArgs();
 
+    /**
+     * Value that indicates whether AutoInflate is enabled for eventhub namespace.
+     * 
+     */
     @InputImport(name="isAutoInflateEnabled")
     private final @Nullable Input<Boolean> isAutoInflateEnabled;
 
@@ -25,6 +29,10 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.isAutoInflateEnabled == null ? Input.empty() : this.isAutoInflateEnabled;
     }
 
+    /**
+     * Value that indicates whether Kafka is enabled for eventhub namespace.
+     * 
+     */
     @InputImport(name="kafkaEnabled")
     private final @Nullable Input<Boolean> kafkaEnabled;
 
@@ -32,6 +40,10 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.kafkaEnabled == null ? Input.empty() : this.kafkaEnabled;
     }
 
+    /**
+     * Resource location.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -39,6 +51,10 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Upper limit of throughput units when AutoInflate is enabled, value should be within 0 to 20 throughput units. ( '0' if AutoInflateEnabled = true)
+     * 
+     */
     @InputImport(name="maximumThroughputUnits")
     private final @Nullable Input<Integer> maximumThroughputUnits;
 
@@ -46,6 +62,10 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.maximumThroughputUnits == null ? Input.empty() : this.maximumThroughputUnits;
     }
 
+    /**
+     * The Namespace name
+     * 
+     */
     @InputImport(name="namespaceName")
     private final @Nullable Input<String> namespaceName;
 
@@ -53,6 +73,10 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.namespaceName == null ? Input.empty() : this.namespaceName;
     }
 
+    /**
+     * Name of the resource group within the azure subscription.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -60,6 +84,10 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Properties of sku resource
+     * 
+     */
     @InputImport(name="sku")
     private final @Nullable Input<SkuArgs> sku;
 
@@ -67,6 +95,10 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku == null ? Input.empty() : this.sku;
     }
 
+    /**
+     * Resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

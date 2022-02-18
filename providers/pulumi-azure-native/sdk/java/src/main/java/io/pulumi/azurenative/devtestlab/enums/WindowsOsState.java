@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The state of the Windows OS (i.e. NonSysprepped, SysprepRequested, SysprepApplied).
+     * 
+     */
     @EnumType
     public enum WindowsOsState {
         NonSysprepped("NonSysprepped"),

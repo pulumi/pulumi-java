@@ -13,10 +13,26 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RemoteAddressMatchConditionParametersResponse {
+    /**
+     * Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.
+     * 
+     */
     private final @Nullable List<String> matchValues;
+    /**
+     * Describes if this is negate condition or not
+     * 
+     */
     private final @Nullable Boolean negateCondition;
     private final String odataType;
+    /**
+     * Describes operator to be matched
+     * 
+     */
     private final String operator;
+    /**
+     * List of transforms
+     * 
+     */
     private final @Nullable List<String> transforms;
 
     @OutputCustomType.Constructor({"matchValues","negateCondition","odataType","operator","transforms"})
@@ -33,18 +49,34 @@ public final class RemoteAddressMatchConditionParametersResponse {
         this.transforms = transforms;
     }
 
+    /**
+     * Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.
+     * 
+     */
     public List<String> getMatchValues() {
         return this.matchValues == null ? List.of() : this.matchValues;
     }
+    /**
+     * Describes if this is negate condition or not
+     * 
+     */
     public Optional<Boolean> getNegateCondition() {
         return Optional.ofNullable(this.negateCondition);
     }
     public String getOdataType() {
         return this.odataType;
     }
+    /**
+     * Describes operator to be matched
+     * 
+     */
     public String getOperator() {
         return this.operator;
     }
+    /**
+     * List of transforms
+     * 
+     */
     public List<String> getTransforms() {
         return this.transforms == null ? List.of() : this.transforms;
     }

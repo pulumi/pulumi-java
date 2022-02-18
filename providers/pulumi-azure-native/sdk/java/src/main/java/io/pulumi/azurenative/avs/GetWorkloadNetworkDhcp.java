@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWorkloadNetworkDhcp {
+/**
+ * NSX DHCP
+ * API Version: 2020-07-17-preview.
+ * 
+ *
+ * NSX DHCP
+ * 
+ */
     public static CompletableFuture<GetWorkloadNetworkDhcpResult> invokeAsync(GetWorkloadNetworkDhcpArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getWorkloadNetworkDhcp", TypeShape.of(GetWorkloadNetworkDhcpResult.class), args == null ? GetWorkloadNetworkDhcpArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -16,6 +16,10 @@ public final class UserRuleCollectionArgs extends io.pulumi.resources.ResourceAr
 
     public static final UserRuleCollectionArgs Empty = new UserRuleCollectionArgs();
 
+    /**
+     * Groups for configuration
+     * 
+     */
     @InputImport(name="appliesToGroups")
     private final @Nullable Input<List<NetworkManagerSecurityGroupItemArgs>> appliesToGroups;
 
@@ -23,6 +27,10 @@ public final class UserRuleCollectionArgs extends io.pulumi.resources.ResourceAr
         return this.appliesToGroups == null ? Input.empty() : this.appliesToGroups;
     }
 
+    /**
+     * The name of the network manager security Configuration.
+     * 
+     */
     @InputImport(name="configurationName", required=true)
     private final Input<String> configurationName;
 
@@ -30,6 +38,10 @@ public final class UserRuleCollectionArgs extends io.pulumi.resources.ResourceAr
         return this.configurationName;
     }
 
+    /**
+     * A description of the rule collection.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -37,6 +49,10 @@ public final class UserRuleCollectionArgs extends io.pulumi.resources.ResourceAr
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * A display name of the rule collection.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -44,6 +60,10 @@ public final class UserRuleCollectionArgs extends io.pulumi.resources.ResourceAr
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The name of the network manager.
+     * 
+     */
     @InputImport(name="networkManagerName", required=true)
     private final Input<String> networkManagerName;
 
@@ -51,6 +71,10 @@ public final class UserRuleCollectionArgs extends io.pulumi.resources.ResourceAr
         return this.networkManagerName;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -58,6 +82,10 @@ public final class UserRuleCollectionArgs extends io.pulumi.resources.ResourceAr
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the network manager security Configuration rule collection.
+     * 
+     */
     @InputImport(name="ruleCollectionName")
     private final @Nullable Input<String> ruleCollectionName;
 

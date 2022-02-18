@@ -13,10 +13,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Model that represents the Experiment properties model.
+ * 
+ */
 public final class ExperimentPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ExperimentPropertiesResponse Empty = new ExperimentPropertiesResponse();
 
+    /**
+     * List of selectors.
+     * 
+     */
     @InputImport(name="selectors", required=true)
     private final List<SelectorResponse> selectors;
 
@@ -24,6 +32,10 @@ public final class ExperimentPropertiesResponse extends io.pulumi.resources.Invo
         return this.selectors;
     }
 
+    /**
+     * A boolean value that indicates if experiment should be started on creation or not.
+     * 
+     */
     @InputImport(name="startOnCreation")
     private final @Nullable Boolean startOnCreation;
 
@@ -31,6 +43,10 @@ public final class ExperimentPropertiesResponse extends io.pulumi.resources.Invo
         return this.startOnCreation == null ? Optional.empty() : Optional.ofNullable(this.startOnCreation);
     }
 
+    /**
+     * List of steps.
+     * 
+     */
     @InputImport(name="steps", required=true)
     private final List<StepResponse> steps;
 

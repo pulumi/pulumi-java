@@ -12,12 +12,40 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class LoadBalancingSettingsModelResponse {
+    /**
+     * The additional latency in milliseconds for probes to fall into the lowest latency bucket
+     * 
+     */
     private final @Nullable Integer additionalLatencyMilliseconds;
+    /**
+     * Resource ID.
+     * 
+     */
     private final @Nullable String id;
+    /**
+     * Resource name.
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * Resource status.
+     * 
+     */
     private final String resourceState;
+    /**
+     * The number of samples to consider for load balancing decisions
+     * 
+     */
     private final @Nullable Integer sampleSize;
+    /**
+     * The number of samples within the sample period that must succeed
+     * 
+     */
     private final @Nullable Integer successfulSamplesRequired;
+    /**
+     * Resource type.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"additionalLatencyMilliseconds","id","name","resourceState","sampleSize","successfulSamplesRequired","type"})
@@ -38,24 +66,52 @@ public final class LoadBalancingSettingsModelResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * The additional latency in milliseconds for probes to fall into the lowest latency bucket
+     * 
+     */
     public Optional<Integer> getAdditionalLatencyMilliseconds() {
         return Optional.ofNullable(this.additionalLatencyMilliseconds);
     }
+    /**
+     * Resource ID.
+     * 
+     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+    /**
+     * Resource name.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * Resource status.
+     * 
+     */
     public String getResourceState() {
         return this.resourceState;
     }
+    /**
+     * The number of samples to consider for load balancing decisions
+     * 
+     */
     public Optional<Integer> getSampleSize() {
         return Optional.ofNullable(this.sampleSize);
     }
+    /**
+     * The number of samples within the sample period that must succeed
+     * 
+     */
     public Optional<Integer> getSuccessfulSamplesRequired() {
         return Optional.ofNullable(this.successfulSamplesRequired);
     }
+    /**
+     * Resource type.
+     * 
+     */
     public String getType() {
         return this.type;
     }

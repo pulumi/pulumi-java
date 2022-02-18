@@ -15,11 +15,36 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class WaitActivityResponse {
+    /**
+     * Activity depends on condition.
+     * 
+     */
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
+    /**
+     * Activity description.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * Activity name.
+     * 
+     */
     private final String name;
+    /**
+     * Type of activity.
+     * Expected value is 'Wait'.
+     * 
+     */
     private final String type;
+    /**
+     * Activity user properties.
+     * 
+     */
     private final @Nullable List<UserPropertyResponse> userProperties;
+    /**
+     * Duration in seconds.
+     * 
+     */
     private final Object waitTimeInSeconds;
 
     @OutputCustomType.Constructor({"dependsOn","description","name","type","userProperties","waitTimeInSeconds"})
@@ -38,21 +63,46 @@ public final class WaitActivityResponse {
         this.waitTimeInSeconds = Objects.requireNonNull(waitTimeInSeconds);
     }
 
+    /**
+     * Activity depends on condition.
+     * 
+     */
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
+    /**
+     * Activity description.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * Activity name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Type of activity.
+     * Expected value is 'Wait'.
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * Activity user properties.
+     * 
+     */
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
+    /**
+     * Duration in seconds.
+     * 
+     */
     public Object getWaitTimeInSeconds() {
         return this.waitTimeInSeconds;
     }

@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The Sku description for a namespace
+ * 
+ */
 public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SkuResponse Empty = new SkuResponse();
 
+    /**
+     * The capacity of the resource
+     * 
+     */
     @InputImport(name="capacity")
     private final @Nullable Integer capacity;
 
@@ -22,6 +30,10 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
     }
 
+    /**
+     * The Sku Family
+     * 
+     */
     @InputImport(name="family")
     private final @Nullable String family;
 
@@ -29,6 +41,10 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.family == null ? Optional.empty() : Optional.ofNullable(this.family);
     }
 
+    /**
+     * Name of the notification hub sku
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -36,6 +52,10 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    /**
+     * The Sku size
+     * 
+     */
     @InputImport(name="size")
     private final @Nullable String size;
 
@@ -43,6 +63,10 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.size == null ? Optional.empty() : Optional.ofNullable(this.size);
     }
 
+    /**
+     * The tier of particular sku
+     * 
+     */
     @InputImport(name="tier")
     private final @Nullable String tier;
 

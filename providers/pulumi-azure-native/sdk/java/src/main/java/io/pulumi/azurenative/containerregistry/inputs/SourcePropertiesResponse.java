@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The properties of the source code repository.
+ * 
+ */
 public final class SourcePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SourcePropertiesResponse Empty = new SourcePropertiesResponse();
 
+    /**
+     * The branch name of the source code.
+     * 
+     */
     @InputImport(name="branch")
     private final @Nullable String branch;
 
@@ -22,6 +30,10 @@ public final class SourcePropertiesResponse extends io.pulumi.resources.InvokeAr
         return this.branch == null ? Optional.empty() : Optional.ofNullable(this.branch);
     }
 
+    /**
+     * The full URL to the source code repository
+     * 
+     */
     @InputImport(name="repositoryUrl", required=true)
     private final String repositoryUrl;
 
@@ -29,6 +41,11 @@ public final class SourcePropertiesResponse extends io.pulumi.resources.InvokeAr
         return this.repositoryUrl;
     }
 
+    /**
+     * The authorization properties for accessing the source code repository and to set up
+     * webhooks for notifications.
+     * 
+     */
     @InputImport(name="sourceControlAuthProperties")
     private final @Nullable AuthInfoResponse sourceControlAuthProperties;
 
@@ -36,6 +53,10 @@ public final class SourcePropertiesResponse extends io.pulumi.resources.InvokeAr
         return this.sourceControlAuthProperties == null ? Optional.empty() : Optional.ofNullable(this.sourceControlAuthProperties);
     }
 
+    /**
+     * The type of source control service.
+     * 
+     */
     @InputImport(name="sourceControlType", required=true)
     private final String sourceControlType;
 

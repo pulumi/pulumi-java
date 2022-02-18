@@ -12,9 +12,26 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AzureFunctionEventSubscriptionDestinationResponse {
+    /**
+     * Type of the endpoint for the event subscription destination.
+     * Expected value is 'AzureFunction'.
+     * 
+     */
     private final String endpointType;
+    /**
+     * Maximum number of events per batch.
+     * 
+     */
     private final @Nullable Integer maxEventsPerBatch;
+    /**
+     * Preferred batch size in Kilobytes.
+     * 
+     */
     private final @Nullable Integer preferredBatchSizeInKilobytes;
+    /**
+     * The Azure Resource Id that represents the endpoint of the Azure Function destination of an event subscription.
+     * 
+     */
     private final @Nullable String resourceId;
 
     @OutputCustomType.Constructor({"endpointType","maxEventsPerBatch","preferredBatchSizeInKilobytes","resourceId"})
@@ -29,15 +46,32 @@ public final class AzureFunctionEventSubscriptionDestinationResponse {
         this.resourceId = resourceId;
     }
 
+    /**
+     * Type of the endpoint for the event subscription destination.
+     * Expected value is 'AzureFunction'.
+     * 
+     */
     public String getEndpointType() {
         return this.endpointType;
     }
+    /**
+     * Maximum number of events per batch.
+     * 
+     */
     public Optional<Integer> getMaxEventsPerBatch() {
         return Optional.ofNullable(this.maxEventsPerBatch);
     }
+    /**
+     * Preferred batch size in Kilobytes.
+     * 
+     */
     public Optional<Integer> getPreferredBatchSizeInKilobytes() {
         return Optional.ofNullable(this.preferredBatchSizeInKilobytes);
     }
+    /**
+     * The Azure Resource Id that represents the endpoint of the Azure Function destination of an event subscription.
+     * 
+     */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }

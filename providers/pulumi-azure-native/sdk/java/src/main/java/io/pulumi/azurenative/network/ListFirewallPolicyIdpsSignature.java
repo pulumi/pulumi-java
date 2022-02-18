@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListFirewallPolicyIdpsSignature {
+/**
+ * Query result
+ * API Version: 2021-05-01.
+ * 
+ *
+ * Query result
+ * 
+ */
     public static CompletableFuture<ListFirewallPolicyIdpsSignatureResult> invokeAsync(ListFirewallPolicyIdpsSignatureArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:listFirewallPolicyIdpsSignature", TypeShape.of(ListFirewallPolicyIdpsSignatureResult.class), args == null ? ListFirewallPolicyIdpsSignatureArgs.Empty : args, Utilities.withVersion(options));
     }

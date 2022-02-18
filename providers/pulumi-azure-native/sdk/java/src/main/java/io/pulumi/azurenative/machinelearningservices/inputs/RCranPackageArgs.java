@@ -14,6 +14,10 @@ public final class RCranPackageArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RCranPackageArgs Empty = new RCranPackageArgs();
 
+    /**
+     * The package name.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -21,6 +25,10 @@ public final class RCranPackageArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The repository name.
+     * 
+     */
     @InputImport(name="repository")
     private final @Nullable Input<String> repository;
 

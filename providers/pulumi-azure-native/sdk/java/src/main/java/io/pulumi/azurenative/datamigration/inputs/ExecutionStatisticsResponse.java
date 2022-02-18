@@ -15,10 +15,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Description about the errors happen while performing migration validation
+ * 
+ */
 public final class ExecutionStatisticsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ExecutionStatisticsResponse Empty = new ExecutionStatisticsResponse();
 
+    /**
+     * CPU Time in millisecond(s) for the query execution
+     * 
+     */
     @InputImport(name="cpuTimeMs", required=true)
     private final Double cpuTimeMs;
 
@@ -26,6 +34,10 @@ public final class ExecutionStatisticsResponse extends io.pulumi.resources.Invok
         return this.cpuTimeMs;
     }
 
+    /**
+     * Time taken in millisecond(s) for executing the query
+     * 
+     */
     @InputImport(name="elapsedTimeMs", required=true)
     private final Double elapsedTimeMs;
 
@@ -33,6 +45,10 @@ public final class ExecutionStatisticsResponse extends io.pulumi.resources.Invok
         return this.elapsedTimeMs;
     }
 
+    /**
+     * No. of query executions
+     * 
+     */
     @InputImport(name="executionCount", required=true)
     private final Double executionCount;
 
@@ -40,6 +56,10 @@ public final class ExecutionStatisticsResponse extends io.pulumi.resources.Invok
         return this.executionCount;
     }
 
+    /**
+     * Indicates whether the query resulted in an error
+     * 
+     */
     @InputImport(name="hasErrors", required=true)
     private final Boolean hasErrors;
 
@@ -47,6 +67,10 @@ public final class ExecutionStatisticsResponse extends io.pulumi.resources.Invok
         return this.hasErrors;
     }
 
+    /**
+     * List of sql Errors
+     * 
+     */
     @InputImport(name="sqlErrors", required=true)
     private final List<String> sqlErrors;
 
@@ -54,6 +78,10 @@ public final class ExecutionStatisticsResponse extends io.pulumi.resources.Invok
         return this.sqlErrors;
     }
 
+    /**
+     * Dictionary of sql query execution wait types and the respective statistics
+     * 
+     */
     @InputImport(name="waitStats")
     private final @Nullable Map<String,WaitStatisticsResponse> waitStats;
 

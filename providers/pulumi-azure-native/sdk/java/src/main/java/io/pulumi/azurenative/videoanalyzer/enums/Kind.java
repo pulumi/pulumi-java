@@ -8,9 +8,21 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Topology kind.
+     * 
+     */
     @EnumType
     public enum Kind {
+        /**
+         * Live pipeline topology resource.
+         * 
+         */
         Live("Live"),
+        /**
+         * Batch pipeline topology resource.
+         * 
+         */
         Batch("Batch");
 
         private final String value;

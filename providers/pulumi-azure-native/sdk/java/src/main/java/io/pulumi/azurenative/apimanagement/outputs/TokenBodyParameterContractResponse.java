@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TokenBodyParameterContractResponse {
+    /**
+     * body parameter name.
+     * 
+     */
     private final String name;
+    /**
+     * body parameter value.
+     * 
+     */
     private final String value;
 
     @OutputCustomType.Constructor({"name","value"})
@@ -20,9 +28,17 @@ public final class TokenBodyParameterContractResponse {
         this.value = Objects.requireNonNull(value);
     }
 
+    /**
+     * body parameter name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * body parameter value.
+     * 
+     */
     public String getValue() {
         return this.value;
     }

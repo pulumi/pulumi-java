@@ -16,6 +16,10 @@ public final class PeriodicTimerEventTriggerArgs extends io.pulumi.resources.Res
 
     public static final PeriodicTimerEventTriggerArgs Empty = new PeriodicTimerEventTriggerArgs();
 
+    /**
+     * A custom context tag typically used to correlate the trigger against its usage. For example, if a periodic timer trigger is intended for certain specific IoT modules in the device, the tag can be the name or the image URL of the module.
+     * 
+     */
     @InputImport(name="customContextTag")
     private final @Nullable Input<String> customContextTag;
 
@@ -23,6 +27,10 @@ public final class PeriodicTimerEventTriggerArgs extends io.pulumi.resources.Res
         return this.customContextTag == null ? Input.empty() : this.customContextTag;
     }
 
+    /**
+     * Creates or updates a trigger
+     * 
+     */
     @InputImport(name="deviceName", required=true)
     private final Input<String> deviceName;
 
@@ -30,6 +38,11 @@ public final class PeriodicTimerEventTriggerArgs extends io.pulumi.resources.Res
         return this.deviceName;
     }
 
+    /**
+     * Trigger Kind.
+     * Expected value is 'PeriodicTimerEvent'.
+     * 
+     */
     @InputImport(name="kind", required=true)
     private final Input<String> kind;
 
@@ -37,6 +50,10 @@ public final class PeriodicTimerEventTriggerArgs extends io.pulumi.resources.Res
         return this.kind;
     }
 
+    /**
+     * The trigger name.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -44,6 +61,10 @@ public final class PeriodicTimerEventTriggerArgs extends io.pulumi.resources.Res
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The resource group name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -51,6 +72,10 @@ public final class PeriodicTimerEventTriggerArgs extends io.pulumi.resources.Res
         return this.resourceGroupName;
     }
 
+    /**
+     * Role Sink information.
+     * 
+     */
     @InputImport(name="sinkInfo", required=true)
     private final Input<RoleSinkInfoArgs> sinkInfo;
 
@@ -58,6 +83,10 @@ public final class PeriodicTimerEventTriggerArgs extends io.pulumi.resources.Res
         return this.sinkInfo;
     }
 
+    /**
+     * Periodic timer details.
+     * 
+     */
     @InputImport(name="sourceInfo", required=true)
     private final Input<PeriodicTimerSourceInfoArgs> sourceInfo;
 

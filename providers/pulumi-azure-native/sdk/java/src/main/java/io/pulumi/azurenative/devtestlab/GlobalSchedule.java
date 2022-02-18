@@ -19,99 +19,240 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * A schedule.
+ * API Version: 2018-09-15.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:devtestlab:GlobalSchedule LabVmAutoStart /subscriptions/{subscriptionId}/resourcegroups/resourceGroupName/providers/microsoft.devtestlab/labs/{labName}/schedules/labvmautostart 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:devtestlab:GlobalSchedule")
 public class GlobalSchedule extends io.pulumi.resources.CustomResource {
+    /**
+     * The creation date of the schedule.
+     * 
+     */
     @OutputExport(name="createdDate", type=String.class, parameters={})
     private Output<String> createdDate;
 
+    /**
+     * @return The creation date of the schedule.
+     * 
+     */
     public Output<String> getCreatedDate() {
         return this.createdDate;
     }
+    /**
+     * If the schedule will occur once each day of the week, specify the daily recurrence.
+     * 
+     */
     @OutputExport(name="dailyRecurrence", type=DayDetailsResponse.class, parameters={})
     private Output</* @Nullable */ DayDetailsResponse> dailyRecurrence;
 
+    /**
+     * @return If the schedule will occur once each day of the week, specify the daily recurrence.
+     * 
+     */
     public Output</* @Nullable */ DayDetailsResponse> getDailyRecurrence() {
         return this.dailyRecurrence;
     }
+    /**
+     * If the schedule will occur multiple times a day, specify the hourly recurrence.
+     * 
+     */
     @OutputExport(name="hourlyRecurrence", type=HourDetailsResponse.class, parameters={})
     private Output</* @Nullable */ HourDetailsResponse> hourlyRecurrence;
 
+    /**
+     * @return If the schedule will occur multiple times a day, specify the hourly recurrence.
+     * 
+     */
     public Output</* @Nullable */ HourDetailsResponse> getHourlyRecurrence() {
         return this.hourlyRecurrence;
     }
+    /**
+     * The location of the resource.
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return The location of the resource.
+     * 
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * The name of the resource.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Notification settings.
+     * 
+     */
     @OutputExport(name="notificationSettings", type=NotificationSettingsResponse.class, parameters={})
     private Output</* @Nullable */ NotificationSettingsResponse> notificationSettings;
 
+    /**
+     * @return Notification settings.
+     * 
+     */
     public Output</* @Nullable */ NotificationSettingsResponse> getNotificationSettings() {
         return this.notificationSettings;
     }
+    /**
+     * The provisioning status of the resource.
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning status of the resource.
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The status of the schedule (i.e. Enabled, Disabled)
+     * 
+     */
     @OutputExport(name="status", type=String.class, parameters={})
     private Output</* @Nullable */ String> status;
 
+    /**
+     * @return The status of the schedule (i.e. Enabled, Disabled)
+     * 
+     */
     public Output</* @Nullable */ String> getStatus() {
         return this.status;
     }
+    /**
+     * The tags of the resource.
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return The tags of the resource.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * The resource ID to which the schedule belongs
+     * 
+     */
     @OutputExport(name="targetResourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> targetResourceId;
 
+    /**
+     * @return The resource ID to which the schedule belongs
+     * 
+     */
     public Output</* @Nullable */ String> getTargetResourceId() {
         return this.targetResourceId;
     }
+    /**
+     * The task type of the schedule (e.g. LabVmsShutdownTask, LabVmAutoStart).
+     * 
+     */
     @OutputExport(name="taskType", type=String.class, parameters={})
     private Output</* @Nullable */ String> taskType;
 
+    /**
+     * @return The task type of the schedule (e.g. LabVmsShutdownTask, LabVmAutoStart).
+     * 
+     */
     public Output</* @Nullable */ String> getTaskType() {
         return this.taskType;
     }
+    /**
+     * The time zone ID (e.g. Pacific Standard time).
+     * 
+     */
     @OutputExport(name="timeZoneId", type=String.class, parameters={})
     private Output</* @Nullable */ String> timeZoneId;
 
+    /**
+     * @return The time zone ID (e.g. Pacific Standard time).
+     * 
+     */
     public Output</* @Nullable */ String> getTimeZoneId() {
         return this.timeZoneId;
     }
+    /**
+     * The type of the resource.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * The unique immutable identifier of a resource (Guid).
+     * 
+     */
     @OutputExport(name="uniqueIdentifier", type=String.class, parameters={})
     private Output<String> uniqueIdentifier;
 
+    /**
+     * @return The unique immutable identifier of a resource (Guid).
+     * 
+     */
     public Output<String> getUniqueIdentifier() {
         return this.uniqueIdentifier;
     }
+    /**
+     * If the schedule will occur only some days of the week, specify the weekly recurrence.
+     * 
+     */
     @OutputExport(name="weeklyRecurrence", type=WeekDetailsResponse.class, parameters={})
     private Output</* @Nullable */ WeekDetailsResponse> weeklyRecurrence;
 
+    /**
+     * @return If the schedule will occur only some days of the week, specify the weekly recurrence.
+     * 
+     */
     public Output</* @Nullable */ WeekDetailsResponse> getWeeklyRecurrence() {
         return this.weeklyRecurrence;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public GlobalSchedule(String name, GlobalScheduleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:devtestlab:GlobalSchedule", name, args == null ? GlobalScheduleArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -131,6 +272,14 @@ public class GlobalSchedule extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static GlobalSchedule get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new GlobalSchedule(name, id, options);
     }

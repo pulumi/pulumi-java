@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Stored procedure parameter type.
+     * 
+     */
     @EnumType
     public enum StoredProcedureParameterType {
         String("String"),

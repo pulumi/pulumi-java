@@ -12,6 +12,10 @@ public final class GetGraphQueryArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetGraphQueryArgs Empty = new GetGraphQueryArgs();
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +23,10 @@ public final class GetGraphQueryArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the Graph Query resource.
+     * 
+     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Provisioning status field
+     * 
+     */
     @EnumType
     public enum Status {
         Succeeded("Succeeded"),

@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Azure File Storage write settings.
+ * 
+ */
 public final class AzureFileStorageWriteSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureFileStorageWriteSettingsArgs Empty = new AzureFileStorageWriteSettingsArgs();
 
+    /**
+     * The type of copy behavior for copy sink.
+     * 
+     */
     @InputImport(name="copyBehavior")
     private final @Nullable Input<Object> copyBehavior;
 
@@ -22,6 +30,10 @@ public final class AzureFileStorageWriteSettingsArgs extends io.pulumi.resources
         return this.copyBehavior == null ? Input.empty() : this.copyBehavior;
     }
 
+    /**
+     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     @InputImport(name="disableMetricsCollection")
     private final @Nullable Input<Object> disableMetricsCollection;
 
@@ -29,6 +41,10 @@ public final class AzureFileStorageWriteSettingsArgs extends io.pulumi.resources
         return this.disableMetricsCollection == null ? Input.empty() : this.disableMetricsCollection;
     }
 
+    /**
+     * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+     * 
+     */
     @InputImport(name="maxConcurrentConnections")
     private final @Nullable Input<Object> maxConcurrentConnections;
 
@@ -36,6 +52,11 @@ public final class AzureFileStorageWriteSettingsArgs extends io.pulumi.resources
         return this.maxConcurrentConnections == null ? Input.empty() : this.maxConcurrentConnections;
     }
 
+    /**
+     * The write setting type.
+     * Expected value is 'AzureFileStorageWriteSettings'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

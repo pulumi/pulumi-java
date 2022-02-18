@@ -16,18 +16,71 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetDataCollectionRuleResult {
+    /**
+     * The specification of data flows.
+     * 
+     */
     private final @Nullable List<DataFlowResponse> dataFlows;
+    /**
+     * The specification of data sources.
+     * This property is optional and can be omitted if the rule is meant to be used via direct calls to the provisioned endpoint.
+     * 
+     */
     private final @Nullable DataCollectionRuleResponseDataSources dataSources;
+    /**
+     * Description of the data collection rule.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * The specification of destinations.
+     * 
+     */
     private final @Nullable DataCollectionRuleResponseDestinations destinations;
+    /**
+     * Resource entity tag (ETag).
+     * 
+     */
     private final String etag;
+    /**
+     * Fully qualified ID of the resource.
+     * 
+     */
     private final String id;
+    /**
+     * The immutable ID of this data collection rule. This property is READ-ONLY.
+     * 
+     */
     private final String immutableId;
+    /**
+     * The kind of the resource.
+     * 
+     */
     private final @Nullable String kind;
+    /**
+     * The geo-location where the resource lives.
+     * 
+     */
     private final String location;
+    /**
+     * The name of the resource.
+     * 
+     */
     private final String name;
+    /**
+     * The resource provisioning state.
+     * 
+     */
     private final String provisioningState;
+    /**
+     * Resource tags.
+     * 
+     */
     private final @Nullable Map<String,String> tags;
+    /**
+     * The type of the resource.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"dataFlows","dataSources","description","destinations","etag","id","immutableId","kind","location","name","provisioningState","tags","type"})
@@ -60,42 +113,95 @@ public final class GetDataCollectionRuleResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * The specification of data flows.
+     * 
+     */
     public List<DataFlowResponse> getDataFlows() {
         return this.dataFlows == null ? List.of() : this.dataFlows;
     }
+    /**
+     * The specification of data sources.
+     * This property is optional and can be omitted if the rule is meant to be used via direct calls to the provisioned endpoint.
+     * 
+     */
     public Optional<DataCollectionRuleResponseDataSources> getDataSources() {
         return Optional.ofNullable(this.dataSources);
     }
+    /**
+     * Description of the data collection rule.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * The specification of destinations.
+     * 
+     */
     public Optional<DataCollectionRuleResponseDestinations> getDestinations() {
         return Optional.ofNullable(this.destinations);
     }
+    /**
+     * Resource entity tag (ETag).
+     * 
+     */
     public String getEtag() {
         return this.etag;
     }
+    /**
+     * Fully qualified ID of the resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * The immutable ID of this data collection rule. This property is READ-ONLY.
+     * 
+     */
     public String getImmutableId() {
         return this.immutableId;
     }
+    /**
+     * The kind of the resource.
+     * 
+     */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
+    /**
+     * The geo-location where the resource lives.
+     * 
+     */
     public String getLocation() {
         return this.location;
     }
+    /**
+     * The name of the resource.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The resource provisioning state.
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Resource tags.
+     * 
+     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+    /**
+     * The type of the resource.
+     * 
+     */
     public String getType() {
         return this.type;
     }

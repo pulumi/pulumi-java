@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class NodePlacementConfigurationResponse {
+    /**
+     * Allocation policy used by Batch Service to provision the nodes. If not specified, Batch will use the regional policy.
+     * 
+     */
     private final @Nullable String policy;
 
     @OutputCustomType.Constructor({"policy"})
@@ -18,6 +22,10 @@ public final class NodePlacementConfigurationResponse {
         this.policy = policy;
     }
 
+    /**
+     * Allocation policy used by Batch Service to provision the nodes. If not specified, Batch will use the regional policy.
+     * 
+     */
     public Optional<String> getPolicy() {
         return Optional.ofNullable(this.policy);
     }

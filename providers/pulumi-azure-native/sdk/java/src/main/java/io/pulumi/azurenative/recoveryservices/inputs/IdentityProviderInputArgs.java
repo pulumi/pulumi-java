@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Identity provider input.
+ * 
+ */
 public final class IdentityProviderInputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IdentityProviderInputArgs Empty = new IdentityProviderInputArgs();
 
+    /**
+     * The base authority for Azure Active Directory authentication.
+     * 
+     */
     @InputImport(name="aadAuthority", required=true)
     private final Input<String> aadAuthority;
 
@@ -20,6 +28,10 @@ public final class IdentityProviderInputArgs extends io.pulumi.resources.Resourc
         return this.aadAuthority;
     }
 
+    /**
+     * The application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+     * 
+     */
     @InputImport(name="applicationId", required=true)
     private final Input<String> applicationId;
 
@@ -27,6 +39,10 @@ public final class IdentityProviderInputArgs extends io.pulumi.resources.Resourc
         return this.applicationId;
     }
 
+    /**
+     * The intended Audience of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+     * 
+     */
     @InputImport(name="audience", required=true)
     private final Input<String> audience;
 
@@ -34,6 +50,10 @@ public final class IdentityProviderInputArgs extends io.pulumi.resources.Resourc
         return this.audience;
     }
 
+    /**
+     * The object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+     * 
+     */
     @InputImport(name="objectId", required=true)
     private final Input<String> objectId;
 
@@ -41,6 +61,10 @@ public final class IdentityProviderInputArgs extends io.pulumi.resources.Resourc
         return this.objectId;
     }
 
+    /**
+     * The tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+     * 
+     */
     @InputImport(name="tenantId", required=true)
     private final Input<String> tenantId;
 

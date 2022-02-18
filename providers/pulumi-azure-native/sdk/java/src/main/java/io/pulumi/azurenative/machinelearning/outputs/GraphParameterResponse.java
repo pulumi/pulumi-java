@@ -13,8 +13,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GraphParameterResponse {
+    /**
+     * Description of this graph parameter.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * Association links for this parameter to nodes in the graph.
+     * 
+     */
     private final List<GraphParameterLinkResponse> links;
+    /**
+     * Graph parameter's type.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"description","links","type"})
@@ -27,12 +39,24 @@ public final class GraphParameterResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Description of this graph parameter.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * Association links for this parameter to nodes in the graph.
+     * 
+     */
     public List<GraphParameterLinkResponse> getLinks() {
         return this.links;
     }
+    /**
+     * Graph parameter's type.
+     * 
+     */
     public String getType() {
         return this.type;
     }

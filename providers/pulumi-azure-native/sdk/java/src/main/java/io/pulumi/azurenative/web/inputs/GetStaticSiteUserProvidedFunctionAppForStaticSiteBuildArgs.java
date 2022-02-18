@@ -12,6 +12,10 @@ public final class GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs ex
 
     public static final GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs Empty = new GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs();
 
+    /**
+     * The stage site identifier.
+     * 
+     */
     @InputImport(name="environmentName", required=true)
     private final String environmentName;
 
@@ -19,6 +23,10 @@ public final class GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs ex
         return this.environmentName;
     }
 
+    /**
+     * Name of the function app registered with the static site build.
+     * 
+     */
     @InputImport(name="functionAppName", required=true)
     private final String functionAppName;
 
@@ -26,6 +34,10 @@ public final class GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs ex
         return this.functionAppName;
     }
 
+    /**
+     * Name of the static site.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -33,6 +45,10 @@ public final class GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs ex
         return this.name;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

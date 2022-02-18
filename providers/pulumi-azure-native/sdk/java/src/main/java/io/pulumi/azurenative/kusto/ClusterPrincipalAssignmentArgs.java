@@ -17,6 +17,10 @@ public final class ClusterPrincipalAssignmentArgs extends io.pulumi.resources.Re
 
     public static final ClusterPrincipalAssignmentArgs Empty = new ClusterPrincipalAssignmentArgs();
 
+    /**
+     * The name of the Kusto cluster.
+     * 
+     */
     @InputImport(name="clusterName", required=true)
     private final Input<String> clusterName;
 
@@ -24,6 +28,10 @@ public final class ClusterPrincipalAssignmentArgs extends io.pulumi.resources.Re
         return this.clusterName;
     }
 
+    /**
+     * The name of the Kusto principalAssignment.
+     * 
+     */
     @InputImport(name="principalAssignmentName")
     private final @Nullable Input<String> principalAssignmentName;
 
@@ -31,6 +39,10 @@ public final class ClusterPrincipalAssignmentArgs extends io.pulumi.resources.Re
         return this.principalAssignmentName == null ? Input.empty() : this.principalAssignmentName;
     }
 
+    /**
+     * The principal ID assigned to the cluster principal. It can be a user email, application ID, or security group name.
+     * 
+     */
     @InputImport(name="principalId", required=true)
     private final Input<String> principalId;
 
@@ -38,6 +50,10 @@ public final class ClusterPrincipalAssignmentArgs extends io.pulumi.resources.Re
         return this.principalId;
     }
 
+    /**
+     * Principal type.
+     * 
+     */
     @InputImport(name="principalType", required=true)
     private final Input<Either<String,PrincipalType>> principalType;
 
@@ -45,6 +61,10 @@ public final class ClusterPrincipalAssignmentArgs extends io.pulumi.resources.Re
         return this.principalType;
     }
 
+    /**
+     * The name of the resource group containing the Kusto cluster.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -52,6 +72,10 @@ public final class ClusterPrincipalAssignmentArgs extends io.pulumi.resources.Re
         return this.resourceGroupName;
     }
 
+    /**
+     * Cluster principal role.
+     * 
+     */
     @InputImport(name="role", required=true)
     private final Input<Either<String,ClusterPrincipalRole>> role;
 
@@ -59,6 +83,10 @@ public final class ClusterPrincipalAssignmentArgs extends io.pulumi.resources.Re
         return this.role;
     }
 
+    /**
+     * The tenant id of the principal
+     * 
+     */
     @InputImport(name="tenantId")
     private final @Nullable Input<String> tenantId;
 

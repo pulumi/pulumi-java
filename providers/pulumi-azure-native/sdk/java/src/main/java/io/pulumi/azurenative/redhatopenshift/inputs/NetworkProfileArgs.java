@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * NetworkProfile represents a network profile.
+ * 
+ */
 public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NetworkProfileArgs Empty = new NetworkProfileArgs();
 
+    /**
+     * The CIDR used for OpenShift/Kubernetes Pods (immutable).
+     * 
+     */
     @InputImport(name="podCidr")
     private final @Nullable Input<String> podCidr;
 
@@ -21,6 +29,10 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.podCidr == null ? Input.empty() : this.podCidr;
     }
 
+    /**
+     * The CIDR used for OpenShift/Kubernetes Services (immutable).
+     * 
+     */
     @InputImport(name="serviceCidr")
     private final @Nullable Input<String> serviceCidr;
 

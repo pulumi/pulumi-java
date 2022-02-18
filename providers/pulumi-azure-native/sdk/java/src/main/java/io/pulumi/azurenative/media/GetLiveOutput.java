@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLiveOutput {
+/**
+ * The Live Output.
+ * API Version: 2020-05-01.
+ * 
+ *
+ * The Live Output.
+ * 
+ */
     public static CompletableFuture<GetLiveOutputResult> invokeAsync(GetLiveOutputArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:media:getLiveOutput", TypeShape.of(GetLiveOutputResult.class), args == null ? GetLiveOutputArgs.Empty : args, Utilities.withVersion(options));
     }

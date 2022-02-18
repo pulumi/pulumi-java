@@ -8,9 +8,21 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Type of the data transfer.
+     * 
+     */
     @EnumType
     public enum TransferType {
+        /**
+         * Import data to azure.
+         * 
+         */
         ImportToAzure("ImportToAzure"),
+        /**
+         * Export data from azure.
+         * 
+         */
         ExportFromAzure("ExportFromAzure");
 
         private final String value;

@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Actions are applied to the filtered blobs when the execution condition is met.
+ * 
+ */
 public final class ManagementPolicyActionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagementPolicyActionArgs Empty = new ManagementPolicyActionArgs();
 
+    /**
+     * The management policy action for base blob
+     * 
+     */
     @InputImport(name="baseBlob")
     private final @Nullable Input<ManagementPolicyBaseBlobArgs> baseBlob;
 
@@ -23,6 +31,10 @@ public final class ManagementPolicyActionArgs extends io.pulumi.resources.Resour
         return this.baseBlob == null ? Input.empty() : this.baseBlob;
     }
 
+    /**
+     * The management policy action for snapshot
+     * 
+     */
     @InputImport(name="snapshot")
     private final @Nullable Input<ManagementPolicySnapShotArgs> snapshot;
 
@@ -30,6 +42,10 @@ public final class ManagementPolicyActionArgs extends io.pulumi.resources.Resour
         return this.snapshot == null ? Input.empty() : this.snapshot;
     }
 
+    /**
+     * The management policy action for version
+     * 
+     */
     @InputImport(name="version")
     private final @Nullable Input<ManagementPolicyVersionArgs> version;
 

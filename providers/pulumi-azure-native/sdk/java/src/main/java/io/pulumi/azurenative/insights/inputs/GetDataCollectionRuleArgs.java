@@ -12,6 +12,10 @@ public final class GetDataCollectionRuleArgs extends io.pulumi.resources.InvokeA
 
     public static final GetDataCollectionRuleArgs Empty = new GetDataCollectionRuleArgs();
 
+    /**
+     * The name of the data collection rule. The name is case insensitive.
+     * 
+     */
     @InputImport(name="dataCollectionRuleName", required=true)
     private final String dataCollectionRuleName;
 
@@ -19,6 +23,10 @@ public final class GetDataCollectionRuleArgs extends io.pulumi.resources.InvokeA
         return this.dataCollectionRuleName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

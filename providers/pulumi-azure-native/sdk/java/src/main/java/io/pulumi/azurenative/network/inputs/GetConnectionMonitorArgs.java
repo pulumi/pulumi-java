@@ -12,6 +12,10 @@ public final class GetConnectionMonitorArgs extends io.pulumi.resources.InvokeAr
 
     public static final GetConnectionMonitorArgs Empty = new GetConnectionMonitorArgs();
 
+    /**
+     * The name of the connection monitor.
+     * 
+     */
     @InputImport(name="connectionMonitorName", required=true)
     private final String connectionMonitorName;
 
@@ -19,6 +23,10 @@ public final class GetConnectionMonitorArgs extends io.pulumi.resources.InvokeAr
         return this.connectionMonitorName;
     }
 
+    /**
+     * The name of the Network Watcher resource.
+     * 
+     */
     @InputImport(name="networkWatcherName", required=true)
     private final String networkWatcherName;
 
@@ -26,6 +34,10 @@ public final class GetConnectionMonitorArgs extends io.pulumi.resources.InvokeAr
         return this.networkWatcherName;
     }
 
+    /**
+     * The name of the resource group containing Network Watcher.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

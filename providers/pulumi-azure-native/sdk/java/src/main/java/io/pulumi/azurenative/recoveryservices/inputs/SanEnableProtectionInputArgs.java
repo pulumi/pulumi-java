@@ -10,10 +10,19 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * San enable protection provider specific input.
+ * 
+ */
 public final class SanEnableProtectionInputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SanEnableProtectionInputArgs Empty = new SanEnableProtectionInputArgs();
 
+    /**
+     * The class type.
+     * Expected value is 'San'.
+     * 
+     */
     @InputImport(name="instanceType")
     private final @Nullable Input<String> instanceType;
 

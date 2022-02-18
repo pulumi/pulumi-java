@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetGetPrivateDnsZoneSuffixExecuteResult {
+    /**
+     * Represents the private DNS zone suffix.
+     * 
+     */
     private final @Nullable String privateDnsZoneSuffix;
 
     @OutputCustomType.Constructor({"privateDnsZoneSuffix"})
@@ -18,6 +22,10 @@ public final class GetGetPrivateDnsZoneSuffixExecuteResult {
         this.privateDnsZoneSuffix = privateDnsZoneSuffix;
     }
 
+    /**
+     * Represents the private DNS zone suffix.
+     * 
+     */
     public Optional<String> getPrivateDnsZoneSuffix() {
         return Optional.ofNullable(this.privateDnsZoneSuffix);
     }

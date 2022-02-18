@@ -12,7 +12,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class HttpRouteMatchRuleResponse {
+    /**
+     * headers and their values to match in request.
+     * 
+     */
     private final @Nullable List<HttpRouteMatchHeaderResponse> headers;
+    /**
+     * Path to match for routing.
+     * 
+     */
     private final HttpRouteMatchPathResponse path;
 
     @OutputCustomType.Constructor({"headers","path"})
@@ -23,9 +31,17 @@ public final class HttpRouteMatchRuleResponse {
         this.path = Objects.requireNonNull(path);
     }
 
+    /**
+     * headers and their values to match in request.
+     * 
+     */
     public List<HttpRouteMatchHeaderResponse> getHeaders() {
         return this.headers == null ? List.of() : this.headers;
     }
+    /**
+     * Path to match for routing.
+     * 
+     */
     public HttpRouteMatchPathResponse getPath() {
         return this.path;
     }

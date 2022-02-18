@@ -13,15 +13,56 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetRoleAssignmentArtifactResult {
+    /**
+     * Artifacts which need to be deployed before the specified artifact.
+     * 
+     */
     private final @Nullable List<String> dependsOn;
+    /**
+     * Multi-line explain this resource.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * One-liner string explain this resource.
+     * 
+     */
     private final @Nullable String displayName;
+    /**
+     * String Id used to locate any resource on Azure.
+     * 
+     */
     private final String id;
+    /**
+     * Specifies the kind of blueprint artifact.
+     * Expected value is 'roleAssignment'.
+     * 
+     */
     private final String kind;
+    /**
+     * Name of this resource.
+     * 
+     */
     private final String name;
+    /**
+     * Array of user or group identities in Azure Active Directory. The roleDefinition will apply to each identity.
+     * 
+     */
     private final Object principalIds;
+    /**
+     * RoleAssignment will be scope to this resourceGroup. If empty, it scopes to the subscription.
+     * 
+     */
     private final @Nullable String resourceGroup;
+    /**
+     * Azure resource ID of the RoleDefinition.
+     * 
+     */
     private final String roleDefinitionId;
+    /**
+     * Type of this resource.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"dependsOn","description","displayName","id","kind","name","principalIds","resourceGroup","roleDefinitionId","type"})
@@ -48,33 +89,74 @@ public final class GetRoleAssignmentArtifactResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Artifacts which need to be deployed before the specified artifact.
+     * 
+     */
     public List<String> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
+    /**
+     * Multi-line explain this resource.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * One-liner string explain this resource.
+     * 
+     */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
+    /**
+     * String Id used to locate any resource on Azure.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Specifies the kind of blueprint artifact.
+     * Expected value is 'roleAssignment'.
+     * 
+     */
     public String getKind() {
         return this.kind;
     }
+    /**
+     * Name of this resource.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Array of user or group identities in Azure Active Directory. The roleDefinition will apply to each identity.
+     * 
+     */
     public Object getPrincipalIds() {
         return this.principalIds;
     }
+    /**
+     * RoleAssignment will be scope to this resourceGroup. If empty, it scopes to the subscription.
+     * 
+     */
     public Optional<String> getResourceGroup() {
         return Optional.ofNullable(this.resourceGroup);
     }
+    /**
+     * Azure resource ID of the RoleDefinition.
+     * 
+     */
     public String getRoleDefinitionId() {
         return this.roleDefinitionId;
     }
+    /**
+     * Type of this resource.
+     * 
+     */
     public String getType() {
         return this.type;
     }

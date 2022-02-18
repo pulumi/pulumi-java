@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Authentication mechanism for IoT devices.
+ * 
+ */
 public final class AuthenticationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AuthenticationResponse Empty = new AuthenticationResponse();
 
+    /**
+     * Symmetric key for authentication.
+     * 
+     */
     @InputImport(name="symmetricKey")
     private final @Nullable SymmetricKeyResponse symmetricKey;
 

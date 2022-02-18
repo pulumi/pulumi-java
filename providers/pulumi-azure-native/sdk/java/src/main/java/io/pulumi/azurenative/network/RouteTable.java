@@ -18,69 +18,170 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Route table resource.
+ * API Version: 2020-11-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:network:RouteTable testrt /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/routeTables/testrt 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:network:RouteTable")
 public class RouteTable extends io.pulumi.resources.CustomResource {
+    /**
+     * Whether to disable the routes learned by BGP on that route table. True means disable.
+     * 
+     */
     @OutputExport(name="disableBgpRoutePropagation", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> disableBgpRoutePropagation;
 
+    /**
+     * @return Whether to disable the routes learned by BGP on that route table. True means disable.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getDisableBgpRoutePropagation() {
         return this.disableBgpRoutePropagation;
     }
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * Resource location.
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * Resource name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The provisioning state of the route table resource.
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning state of the route table resource.
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The resource GUID property of the route table.
+     * 
+     */
     @OutputExport(name="resourceGuid", type=String.class, parameters={})
     private Output<String> resourceGuid;
 
+    /**
+     * @return The resource GUID property of the route table.
+     * 
+     */
     public Output<String> getResourceGuid() {
         return this.resourceGuid;
     }
+    /**
+     * Collection of routes contained within a route table.
+     * 
+     */
     @OutputExport(name="routes", type=List.class, parameters={RouteResponse.class})
     private Output</* @Nullable */ List<RouteResponse>> routes;
 
+    /**
+     * @return Collection of routes contained within a route table.
+     * 
+     */
     public Output</* @Nullable */ List<RouteResponse>> getRoutes() {
         return this.routes;
     }
+    /**
+     * A collection of references to subnets.
+     * 
+     */
     @OutputExport(name="subnets", type=List.class, parameters={SubnetResponse.class})
     private Output<List<SubnetResponse>> subnets;
 
+    /**
+     * @return A collection of references to subnets.
+     * 
+     */
     public Output<List<SubnetResponse>> getSubnets() {
         return this.subnets;
     }
+    /**
+     * Resource tags.
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Resource type.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public RouteTable(String name, RouteTableArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:RouteTable", name, args == null ? RouteTableArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -137,6 +238,14 @@ public class RouteTable extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static RouteTable get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RouteTable(name, id, options);
     }

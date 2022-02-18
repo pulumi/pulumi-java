@@ -14,10 +14,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Operation response details.
+ * 
+ */
 public final class ResponseContractResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResponseContractResponse Empty = new ResponseContractResponse();
 
+    /**
+     * Operation response description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -25,6 +33,10 @@ public final class ResponseContractResponse extends io.pulumi.resources.InvokeAr
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * Collection of operation response headers.
+     * 
+     */
     @InputImport(name="headers")
     private final @Nullable List<ParameterContractResponse> headers;
 
@@ -32,6 +44,10 @@ public final class ResponseContractResponse extends io.pulumi.resources.InvokeAr
         return this.headers == null ? List.of() : this.headers;
     }
 
+    /**
+     * Collection of operation response representations.
+     * 
+     */
     @InputImport(name="representations")
     private final @Nullable List<RepresentationContractResponse> representations;
 
@@ -39,6 +55,10 @@ public final class ResponseContractResponse extends io.pulumi.resources.InvokeAr
         return this.representations == null ? List.of() : this.representations;
     }
 
+    /**
+     * Operation response HTTP status code.
+     * 
+     */
     @InputImport(name="statusCode", required=true)
     private final Integer statusCode;
 

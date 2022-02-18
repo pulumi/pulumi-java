@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Rule of type application.
+ * 
+ */
 public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationRuleArgs Empty = new ApplicationRuleArgs();
 
+    /**
+     * Description of the rule.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -24,6 +32,10 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * List of destination IP addresses or Service Tags.
+     * 
+     */
     @InputImport(name="destinationAddresses")
     private final @Nullable Input<List<String>> destinationAddresses;
 
@@ -31,6 +43,10 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
         return this.destinationAddresses == null ? Input.empty() : this.destinationAddresses;
     }
 
+    /**
+     * List of FQDN Tags for this rule.
+     * 
+     */
     @InputImport(name="fqdnTags")
     private final @Nullable Input<List<String>> fqdnTags;
 
@@ -38,6 +54,10 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
         return this.fqdnTags == null ? Input.empty() : this.fqdnTags;
     }
 
+    /**
+     * Name of the rule.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -45,6 +65,10 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Array of Application Protocols.
+     * 
+     */
     @InputImport(name="protocols")
     private final @Nullable Input<List<FirewallPolicyRuleApplicationProtocolArgs>> protocols;
 
@@ -52,6 +76,11 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
         return this.protocols == null ? Input.empty() : this.protocols;
     }
 
+    /**
+     * Rule Type.
+     * Expected value is 'ApplicationRule'.
+     * 
+     */
     @InputImport(name="ruleType", required=true)
     private final Input<String> ruleType;
 
@@ -59,6 +88,10 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
         return this.ruleType;
     }
 
+    /**
+     * List of source IP addresses for this rule.
+     * 
+     */
     @InputImport(name="sourceAddresses")
     private final @Nullable Input<List<String>> sourceAddresses;
 
@@ -66,6 +99,10 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
         return this.sourceAddresses == null ? Input.empty() : this.sourceAddresses;
     }
 
+    /**
+     * List of source IpGroups for this rule.
+     * 
+     */
     @InputImport(name="sourceIpGroups")
     private final @Nullable Input<List<String>> sourceIpGroups;
 
@@ -73,6 +110,10 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
         return this.sourceIpGroups == null ? Input.empty() : this.sourceIpGroups;
     }
 
+    /**
+     * List of FQDNs for this rule.
+     * 
+     */
     @InputImport(name="targetFqdns")
     private final @Nullable Input<List<String>> targetFqdns;
 
@@ -80,6 +121,10 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
         return this.targetFqdns == null ? Input.empty() : this.targetFqdns;
     }
 
+    /**
+     * List of Urls for this rule condition.
+     * 
+     */
     @InputImport(name="targetUrls")
     private final @Nullable Input<List<String>> targetUrls;
 
@@ -87,6 +132,10 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
         return this.targetUrls == null ? Input.empty() : this.targetUrls;
     }
 
+    /**
+     * Terminate TLS connections for this rule.
+     * 
+     */
     @InputImport(name="terminateTLS")
     private final @Nullable Input<Boolean> terminateTLS;
 
@@ -94,6 +143,10 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
         return this.terminateTLS == null ? Input.empty() : this.terminateTLS;
     }
 
+    /**
+     * List of destination azure web categories.
+     * 
+     */
     @InputImport(name="webCategories")
     private final @Nullable Input<List<String>> webCategories;
 

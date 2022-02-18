@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The data type of the parameter.
+     * 
+     */
     @EnumType
     public enum ParameterType {
         String("String"),

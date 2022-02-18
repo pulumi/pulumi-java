@@ -11,11 +11,35 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PushInstallerDetailsResponse {
+    /**
+     * The health of the push installer.
+     * 
+     */
     private final String health;
+    /**
+     * The health errors.
+     * 
+     */
     private final List<HealthErrorResponse> healthErrors;
+    /**
+     * The push installer Id.
+     * 
+     */
     private final String id;
+    /**
+     * The last heartbeat received from the push installer.
+     * 
+     */
     private final String lastHeartbeatUtc;
+    /**
+     * The push installer name.
+     * 
+     */
     private final String name;
+    /**
+     * The push installer version.
+     * 
+     */
     private final String version;
 
     @OutputCustomType.Constructor({"health","healthErrors","id","lastHeartbeatUtc","name","version"})
@@ -34,21 +58,45 @@ public final class PushInstallerDetailsResponse {
         this.version = Objects.requireNonNull(version);
     }
 
+    /**
+     * The health of the push installer.
+     * 
+     */
     public String getHealth() {
         return this.health;
     }
+    /**
+     * The health errors.
+     * 
+     */
     public List<HealthErrorResponse> getHealthErrors() {
         return this.healthErrors;
     }
+    /**
+     * The push installer Id.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * The last heartbeat received from the push installer.
+     * 
+     */
     public String getLastHeartbeatUtc() {
         return this.lastHeartbeatUtc;
     }
+    /**
+     * The push installer name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The push installer version.
+     * 
+     */
     public String getVersion() {
         return this.version;
     }

@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLivePipeline {
+/**
+ * Live pipeline represents a unique instance of a live topology, used for real-time ingestion, archiving and publishing of content for a unique RTSP camera.
+ * API Version: 2021-11-01-preview.
+ * 
+ *
+ * Live pipeline represents a unique instance of a live topology, used for real-time ingestion, archiving and publishing of content for a unique RTSP camera.
+ * 
+ */
     public static CompletableFuture<GetLivePipelineResult> invokeAsync(GetLivePipelineArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:videoanalyzer:getLivePipeline", TypeShape.of(GetLivePipelineResult.class), args == null ? GetLivePipelineArgs.Empty : args, Utilities.withVersion(options));
     }

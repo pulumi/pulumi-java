@@ -16,10 +16,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Define a match condition.
+ * 
+ */
 public final class FrontDoorMatchConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FrontDoorMatchConditionArgs Empty = new FrontDoorMatchConditionArgs();
 
+    /**
+     * List of possible match values.
+     * 
+     */
     @InputImport(name="matchValue", required=true)
     private final Input<List<String>> matchValue;
 
@@ -27,6 +35,10 @@ public final class FrontDoorMatchConditionArgs extends io.pulumi.resources.Resou
         return this.matchValue;
     }
 
+    /**
+     * Request variable to compare with.
+     * 
+     */
     @InputImport(name="matchVariable", required=true)
     private final Input<Either<String,FrontDoorMatchVariable>> matchVariable;
 
@@ -34,6 +46,10 @@ public final class FrontDoorMatchConditionArgs extends io.pulumi.resources.Resou
         return this.matchVariable;
     }
 
+    /**
+     * Describes if the result of this condition should be negated.
+     * 
+     */
     @InputImport(name="negateCondition")
     private final @Nullable Input<Boolean> negateCondition;
 
@@ -41,6 +57,10 @@ public final class FrontDoorMatchConditionArgs extends io.pulumi.resources.Resou
         return this.negateCondition == null ? Input.empty() : this.negateCondition;
     }
 
+    /**
+     * Comparison type to use for matching with the variable value.
+     * 
+     */
     @InputImport(name="operator", required=true)
     private final Input<Either<String,Operator>> operator;
 
@@ -48,6 +68,10 @@ public final class FrontDoorMatchConditionArgs extends io.pulumi.resources.Resou
         return this.operator;
     }
 
+    /**
+     * Match against a specific key from the QueryString, PostArgs, RequestHeader or Cookies variables. Default is null.
+     * 
+     */
     @InputImport(name="selector")
     private final @Nullable Input<String> selector;
 
@@ -55,6 +79,10 @@ public final class FrontDoorMatchConditionArgs extends io.pulumi.resources.Resou
         return this.selector == null ? Input.empty() : this.selector;
     }
 
+    /**
+     * List of transforms.
+     * 
+     */
     @InputImport(name="transforms")
     private final @Nullable Input<List<Either<String,TransformType>>> transforms;
 

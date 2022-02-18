@@ -13,10 +13,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Guest configuration is an artifact that encapsulates DSC configuration and its dependencies. The artifact is a zip file containing DSC configuration (as MOF) and dependent resources and other dependencies like modules.
+ * 
+ */
 public final class GuestConfigurationNavigationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GuestConfigurationNavigationResponse Empty = new GuestConfigurationNavigationResponse();
 
+    /**
+     * Specifies the assignment type and execution of the configuration. Possible values are Audit, DeployAndAutoCorrect, ApplyAndAutoCorrect and ApplyAndMonitor.
+     * 
+     */
     @InputImport(name="assignmentType")
     private final @Nullable String assignmentType;
 
@@ -24,6 +32,10 @@ public final class GuestConfigurationNavigationResponse extends io.pulumi.resour
         return this.assignmentType == null ? Optional.empty() : Optional.ofNullable(this.assignmentType);
     }
 
+    /**
+     * The configuration parameters for the guest configuration.
+     * 
+     */
     @InputImport(name="configurationParameter")
     private final @Nullable List<ConfigurationParameterResponse> configurationParameter;
 
@@ -31,6 +43,10 @@ public final class GuestConfigurationNavigationResponse extends io.pulumi.resour
         return this.configurationParameter == null ? List.of() : this.configurationParameter;
     }
 
+    /**
+     * The protected configuration parameters for the guest configuration.
+     * 
+     */
     @InputImport(name="configurationProtectedParameter")
     private final @Nullable List<ConfigurationParameterResponse> configurationProtectedParameter;
 
@@ -38,6 +54,10 @@ public final class GuestConfigurationNavigationResponse extends io.pulumi.resour
         return this.configurationProtectedParameter == null ? List.of() : this.configurationProtectedParameter;
     }
 
+    /**
+     * The configuration setting for the guest configuration.
+     * 
+     */
     @InputImport(name="configurationSetting")
     private final @Nullable ConfigurationSettingResponse configurationSetting;
 
@@ -45,6 +65,10 @@ public final class GuestConfigurationNavigationResponse extends io.pulumi.resour
         return this.configurationSetting == null ? Optional.empty() : Optional.ofNullable(this.configurationSetting);
     }
 
+    /**
+     * Combined hash of the guest configuration package and configuration parameters.
+     * 
+     */
     @InputImport(name="contentHash")
     private final @Nullable String contentHash;
 
@@ -52,6 +76,10 @@ public final class GuestConfigurationNavigationResponse extends io.pulumi.resour
         return this.contentHash == null ? Optional.empty() : Optional.ofNullable(this.contentHash);
     }
 
+    /**
+     * Specifies the content type of the configuration. Possible values could be Builtin or Custom.
+     * 
+     */
     @InputImport(name="contentType", required=true)
     private final String contentType;
 
@@ -59,6 +87,10 @@ public final class GuestConfigurationNavigationResponse extends io.pulumi.resour
         return this.contentType;
     }
 
+    /**
+     * Uri of the storage where guest configuration package is uploaded.
+     * 
+     */
     @InputImport(name="contentUri")
     private final @Nullable String contentUri;
 
@@ -66,6 +98,10 @@ public final class GuestConfigurationNavigationResponse extends io.pulumi.resour
         return this.contentUri == null ? Optional.empty() : Optional.ofNullable(this.contentUri);
     }
 
+    /**
+     * Kind of the guest configuration. For example:DSC
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable String kind;
 
@@ -73,6 +109,10 @@ public final class GuestConfigurationNavigationResponse extends io.pulumi.resour
         return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
     }
 
+    /**
+     * Name of the guest configuration.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -80,6 +120,10 @@ public final class GuestConfigurationNavigationResponse extends io.pulumi.resour
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Version of the guest configuration.
+     * 
+     */
     @InputImport(name="version")
     private final @Nullable String version;
 

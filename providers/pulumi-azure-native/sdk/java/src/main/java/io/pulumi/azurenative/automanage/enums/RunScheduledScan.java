@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Enables or disables a periodic scan for antimalware
+     * 
+     */
     @EnumType
     public enum RunScheduledScan {
         True("True"),

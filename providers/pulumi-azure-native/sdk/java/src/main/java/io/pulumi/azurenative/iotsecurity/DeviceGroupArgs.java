@@ -14,6 +14,10 @@ public final class DeviceGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DeviceGroupArgs Empty = new DeviceGroupArgs();
 
+    /**
+     * Device group name
+     * 
+     */
     @InputImport(name="deviceGroupName")
     private final @Nullable Input<String> deviceGroupName;
 
@@ -21,6 +25,10 @@ public final class DeviceGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.deviceGroupName == null ? Input.empty() : this.deviceGroupName;
     }
 
+    /**
+     * Defender for IoT location
+     * 
+     */
     @InputImport(name="iotDefenderLocation", required=true)
     private final Input<String> iotDefenderLocation;
 

@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Qos Traffic Profiler IP Range properties.
+ * 
+ */
 public final class QosIpRangeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final QosIpRangeResponse Empty = new QosIpRangeResponse();
 
+    /**
+     * End IP Address.
+     * 
+     */
     @InputImport(name="endIP")
     private final @Nullable String endIP;
 
@@ -21,6 +29,10 @@ public final class QosIpRangeResponse extends io.pulumi.resources.InvokeArgs {
         return this.endIP == null ? Optional.empty() : Optional.ofNullable(this.endIP);
     }
 
+    /**
+     * Start IP Address.
+     * 
+     */
     @InputImport(name="startIP")
     private final @Nullable String startIP;
 

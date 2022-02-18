@@ -12,6 +12,10 @@ public final class GetGatewayArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetGatewayArgs Empty = new GetGatewayArgs();
 
+    /**
+     * Gateway entity identifier. Must be unique in the current API Management service instance. Must not have value 'managed'
+     * 
+     */
     @InputImport(name="gatewayId", required=true)
     private final String gatewayId;
 
@@ -19,6 +23,10 @@ public final class GetGatewayArgs extends io.pulumi.resources.InvokeArgs {
         return this.gatewayId;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetGatewayArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the API Management service.
+     * 
+     */
     @InputImport(name="serviceName", required=true)
     private final String serviceName;
 

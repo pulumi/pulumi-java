@@ -16,6 +16,10 @@ public final class GalleryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GalleryArgs Empty = new GalleryArgs();
 
+    /**
+     * The description of this Shared Image Gallery resource. This property is updatable.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -23,6 +27,10 @@ public final class GalleryArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The name of the Shared Image Gallery. The allowed characters are alphabets and numbers with dots and periods allowed in the middle. The maximum length is 80 characters.
+     * 
+     */
     @InputImport(name="galleryName")
     private final @Nullable Input<String> galleryName;
 
@@ -30,6 +38,10 @@ public final class GalleryArgs extends io.pulumi.resources.ResourceArgs {
         return this.galleryName == null ? Input.empty() : this.galleryName;
     }
 
+    /**
+     * Resource location
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -37,6 +49,10 @@ public final class GalleryArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -44,6 +60,10 @@ public final class GalleryArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Profile for gallery sharing to subscription or tenant
+     * 
+     */
     @InputImport(name="sharingProfile")
     private final @Nullable Input<SharingProfileArgs> sharingProfile;
 
@@ -51,6 +71,10 @@ public final class GalleryArgs extends io.pulumi.resources.ResourceArgs {
         return this.sharingProfile == null ? Input.empty() : this.sharingProfile;
     }
 
+    /**
+     * Resource tags
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

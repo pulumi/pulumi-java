@@ -12,11 +12,35 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MetadataDependenciesResponse {
+    /**
+     * Id of the content item we depend on
+     * 
+     */
     private final @Nullable String contentId;
+    /**
+     * This is the list of dependencies we must fulfill, according to the AND/OR operator
+     * 
+     */
     private final @Nullable List<MetadataDependenciesResponse> criteria;
+    /**
+     * Type of the content item we depend on
+     * 
+     */
     private final @Nullable String kind;
+    /**
+     * Name of the content item
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * Operator used for list of dependencies in criteria array.
+     * 
+     */
     private final @Nullable String operator;
+    /**
+     * Version of the the content item we depend on.  Can be blank, * or missing to indicate any version fulfills the dependency.  If version does not match our defined numeric format then an exact match is required.
+     * 
+     */
     private final @Nullable String version;
 
     @OutputCustomType.Constructor({"contentId","criteria","kind","name","operator","version"})
@@ -35,21 +59,45 @@ public final class MetadataDependenciesResponse {
         this.version = version;
     }
 
+    /**
+     * Id of the content item we depend on
+     * 
+     */
     public Optional<String> getContentId() {
         return Optional.ofNullable(this.contentId);
     }
+    /**
+     * This is the list of dependencies we must fulfill, according to the AND/OR operator
+     * 
+     */
     public List<MetadataDependenciesResponse> getCriteria() {
         return this.criteria == null ? List.of() : this.criteria;
     }
+    /**
+     * Type of the content item we depend on
+     * 
+     */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
+    /**
+     * Name of the content item
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * Operator used for list of dependencies in criteria array.
+     * 
+     */
     public Optional<String> getOperator() {
         return Optional.ofNullable(this.operator);
     }
+    /**
+     * Version of the the content item we depend on.  Can be blank, * or missing to indicate any version fulfills the dependency.  If version does not match our defined numeric format then an exact match is required.
+     * 
+     */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }

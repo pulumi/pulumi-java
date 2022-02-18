@@ -10,14 +10,50 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CertificateDetailsResponse {
+    /**
+     * Certificate Issuer.
+     * 
+     */
     private final String issuer;
+    /**
+     * Date Certificate is valid to.
+     * 
+     */
     private final String notAfter;
+    /**
+     * Date Certificate is valid from.
+     * 
+     */
     private final String notBefore;
+    /**
+     * Raw certificate data.
+     * 
+     */
     private final String rawData;
+    /**
+     * Certificate Serial Number.
+     * 
+     */
     private final String serialNumber;
+    /**
+     * Certificate Signature algorithm.
+     * 
+     */
     private final String signatureAlgorithm;
+    /**
+     * Certificate Subject.
+     * 
+     */
     private final String subject;
+    /**
+     * Certificate Thumbprint.
+     * 
+     */
     private final String thumbprint;
+    /**
+     * Certificate Version.
+     * 
+     */
     private final Integer version;
 
     @OutputCustomType.Constructor({"issuer","notAfter","notBefore","rawData","serialNumber","signatureAlgorithm","subject","thumbprint","version"})
@@ -42,30 +78,66 @@ public final class CertificateDetailsResponse {
         this.version = Objects.requireNonNull(version);
     }
 
+    /**
+     * Certificate Issuer.
+     * 
+     */
     public String getIssuer() {
         return this.issuer;
     }
+    /**
+     * Date Certificate is valid to.
+     * 
+     */
     public String getNotAfter() {
         return this.notAfter;
     }
+    /**
+     * Date Certificate is valid from.
+     * 
+     */
     public String getNotBefore() {
         return this.notBefore;
     }
+    /**
+     * Raw certificate data.
+     * 
+     */
     public String getRawData() {
         return this.rawData;
     }
+    /**
+     * Certificate Serial Number.
+     * 
+     */
     public String getSerialNumber() {
         return this.serialNumber;
     }
+    /**
+     * Certificate Signature algorithm.
+     * 
+     */
     public String getSignatureAlgorithm() {
         return this.signatureAlgorithm;
     }
+    /**
+     * Certificate Subject.
+     * 
+     */
     public String getSubject() {
         return this.subject;
     }
+    /**
+     * Certificate Thumbprint.
+     * 
+     */
     public String getThumbprint() {
         return this.thumbprint;
     }
+    /**
+     * Certificate Version.
+     * 
+     */
     public Integer getVersion() {
         return this.version;
     }

@@ -14,6 +14,10 @@ public final class PipelineRunSourcePropertiesResponse extends io.pulumi.resourc
 
     public static final PipelineRunSourcePropertiesResponse Empty = new PipelineRunSourcePropertiesResponse();
 
+    /**
+     * The name of the source.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -21,6 +25,10 @@ public final class PipelineRunSourcePropertiesResponse extends io.pulumi.resourc
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The type of the source.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 

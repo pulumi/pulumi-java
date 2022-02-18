@@ -15,10 +15,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Network ACLs for SignalR
+ * 
+ */
 public final class SignalRNetworkACLsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SignalRNetworkACLsArgs Empty = new SignalRNetworkACLsArgs();
 
+    /**
+     * Default action when no other rule matches
+     * 
+     */
     @InputImport(name="defaultAction")
     private final @Nullable Input<Either<String,ACLAction>> defaultAction;
 
@@ -26,6 +34,10 @@ public final class SignalRNetworkACLsArgs extends io.pulumi.resources.ResourceAr
         return this.defaultAction == null ? Input.empty() : this.defaultAction;
     }
 
+    /**
+     * ACLs for requests from private endpoints
+     * 
+     */
     @InputImport(name="privateEndpoints")
     private final @Nullable Input<List<PrivateEndpointACLArgs>> privateEndpoints;
 
@@ -33,6 +45,10 @@ public final class SignalRNetworkACLsArgs extends io.pulumi.resources.ResourceAr
         return this.privateEndpoints == null ? Input.empty() : this.privateEndpoints;
     }
 
+    /**
+     * ACL for requests from public network
+     * 
+     */
     @InputImport(name="publicNetwork")
     private final @Nullable Input<NetworkACLArgs> publicNetwork;
 

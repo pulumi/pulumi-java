@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The protocol associated with the port.
+     * 
+     */
     @EnumType
     public enum ContainerNetworkProtocol {
         TCP("TCP"),

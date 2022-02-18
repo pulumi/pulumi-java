@@ -17,63 +17,156 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Network profile resource.
+ * API Version: 2020-11-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:network:NetworkProfile networkProfile1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/networkProfiles/networkProfile1 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:network:NetworkProfile")
 public class NetworkProfile extends io.pulumi.resources.CustomResource {
+    /**
+     * List of chid container network interface configurations.
+     * 
+     */
     @OutputExport(name="containerNetworkInterfaceConfigurations", type=List.class, parameters={ContainerNetworkInterfaceConfigurationResponse.class})
     private Output</* @Nullable */ List<ContainerNetworkInterfaceConfigurationResponse>> containerNetworkInterfaceConfigurations;
 
+    /**
+     * @return List of chid container network interface configurations.
+     * 
+     */
     public Output</* @Nullable */ List<ContainerNetworkInterfaceConfigurationResponse>> getContainerNetworkInterfaceConfigurations() {
         return this.containerNetworkInterfaceConfigurations;
     }
+    /**
+     * List of child container network interfaces.
+     * 
+     */
     @OutputExport(name="containerNetworkInterfaces", type=List.class, parameters={ContainerNetworkInterfaceResponse.class})
     private Output<List<ContainerNetworkInterfaceResponse>> containerNetworkInterfaces;
 
+    /**
+     * @return List of child container network interfaces.
+     * 
+     */
     public Output<List<ContainerNetworkInterfaceResponse>> getContainerNetworkInterfaces() {
         return this.containerNetworkInterfaces;
     }
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * Resource location.
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * Resource name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The provisioning state of the network profile resource.
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning state of the network profile resource.
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The resource GUID property of the network profile resource.
+     * 
+     */
     @OutputExport(name="resourceGuid", type=String.class, parameters={})
     private Output<String> resourceGuid;
 
+    /**
+     * @return The resource GUID property of the network profile resource.
+     * 
+     */
     public Output<String> getResourceGuid() {
         return this.resourceGuid;
     }
+    /**
+     * Resource tags.
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Resource type.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public NetworkProfile(String name, NetworkProfileArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:NetworkProfile", name, args == null ? NetworkProfileArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -113,6 +206,14 @@ public class NetworkProfile extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static NetworkProfile get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new NetworkProfile(name, id, options);
     }

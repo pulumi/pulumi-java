@@ -26,17 +26,37 @@ public final class GetIoMAMPolicyByNameResult {
     private final @Nullable String fileSharingSaveAs;
     private final String friendlyName;
     private final String groupStatus;
+    /**
+     * Resource Id
+     * 
+     */
     private final String id;
     private final String lastModifiedTime;
+    /**
+     * Resource Location
+     * 
+     */
     private final @Nullable String location;
     private final @Nullable String managedBrowser;
+    /**
+     * Resource name
+     * 
+     */
     private final String name;
     private final Integer numOfApps;
     private final @Nullable String offlineWipeTimeout;
     private final @Nullable String pin;
     private final @Nullable Integer pinNumRetry;
+    /**
+     * Resource Tags
+     * 
+     */
     private final @Nullable Map<String,String> tags;
     private final @Nullable String touchId;
+    /**
+     * Resource type
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"accessRecheckOfflineTimeout","accessRecheckOnlineTimeout","appSharingFromLevel","appSharingToLevel","authentication","clipboardSharingLevel","dataBackup","description","deviceCompliance","fileEncryptionLevel","fileSharingSaveAs","friendlyName","groupStatus","id","lastModifiedTime","location","managedBrowser","name","numOfApps","offlineWipeTimeout","pin","pinNumRetry","tags","touchId","type"})
@@ -132,18 +152,30 @@ public final class GetIoMAMPolicyByNameResult {
     public String getGroupStatus() {
         return this.groupStatus;
     }
+    /**
+     * Resource Id
+     * 
+     */
     public String getId() {
         return this.id;
     }
     public String getLastModifiedTime() {
         return this.lastModifiedTime;
     }
+    /**
+     * Resource Location
+     * 
+     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     public Optional<String> getManagedBrowser() {
         return Optional.ofNullable(this.managedBrowser);
     }
+    /**
+     * Resource name
+     * 
+     */
     public String getName() {
         return this.name;
     }
@@ -159,12 +191,20 @@ public final class GetIoMAMPolicyByNameResult {
     public Optional<Integer> getPinNumRetry() {
         return Optional.ofNullable(this.pinNumRetry);
     }
+    /**
+     * Resource Tags
+     * 
+     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     public Optional<String> getTouchId() {
         return Optional.ofNullable(this.touchId);
     }
+    /**
+     * Resource type
+     * 
+     */
     public String getType() {
         return this.type;
     }

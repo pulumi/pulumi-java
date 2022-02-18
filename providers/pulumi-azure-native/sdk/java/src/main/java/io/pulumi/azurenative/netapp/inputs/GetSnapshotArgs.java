@@ -12,6 +12,10 @@ public final class GetSnapshotArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSnapshotArgs Empty = new GetSnapshotArgs();
 
+    /**
+     * The name of the NetApp account
+     * 
+     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -19,6 +23,10 @@ public final class GetSnapshotArgs extends io.pulumi.resources.InvokeArgs {
         return this.accountName;
     }
 
+    /**
+     * The name of the capacity pool
+     * 
+     */
     @InputImport(name="poolName", required=true)
     private final String poolName;
 
@@ -26,6 +34,10 @@ public final class GetSnapshotArgs extends io.pulumi.resources.InvokeArgs {
         return this.poolName;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -33,6 +45,10 @@ public final class GetSnapshotArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the snapshot
+     * 
+     */
     @InputImport(name="snapshotName", required=true)
     private final String snapshotName;
 
@@ -40,6 +56,10 @@ public final class GetSnapshotArgs extends io.pulumi.resources.InvokeArgs {
         return this.snapshotName;
     }
 
+    /**
+     * The name of the volume
+     * 
+     */
     @InputImport(name="volumeName", required=true)
     private final String volumeName;
 

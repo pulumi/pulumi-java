@@ -12,11 +12,35 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class NetworkInterfaceIPConfigurationResponse {
+    /**
+     * The list of DNS servers IP addresses.
+     * 
+     */
     private final @Nullable List<String> dnsServers;
+    /**
+     * The value of the gateway.
+     * 
+     */
     private final @Nullable String gateway;
+    /**
+     * The value of the IP address.
+     * 
+     */
     private final @Nullable String ipAddress;
+    /**
+     * IP address allocation method.
+     * 
+     */
     private final @Nullable String ipAllocationMethod;
+    /**
+     * IP address version.
+     * 
+     */
     private final @Nullable String ipVersion;
+    /**
+     * The value of the subnet.
+     * 
+     */
     private final @Nullable String subnet;
 
     @OutputCustomType.Constructor({"dnsServers","gateway","ipAddress","ipAllocationMethod","ipVersion","subnet"})
@@ -35,21 +59,45 @@ public final class NetworkInterfaceIPConfigurationResponse {
         this.subnet = subnet;
     }
 
+    /**
+     * The list of DNS servers IP addresses.
+     * 
+     */
     public List<String> getDnsServers() {
         return this.dnsServers == null ? List.of() : this.dnsServers;
     }
+    /**
+     * The value of the gateway.
+     * 
+     */
     public Optional<String> getGateway() {
         return Optional.ofNullable(this.gateway);
     }
+    /**
+     * The value of the IP address.
+     * 
+     */
     public Optional<String> getIpAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
+    /**
+     * IP address allocation method.
+     * 
+     */
     public Optional<String> getIpAllocationMethod() {
         return Optional.ofNullable(this.ipAllocationMethod);
     }
+    /**
+     * IP address version.
+     * 
+     */
     public Optional<String> getIpVersion() {
         return Optional.ofNullable(this.ipVersion);
     }
+    /**
+     * The value of the subnet.
+     * 
+     */
     public Optional<String> getSubnet() {
         return Optional.ofNullable(this.subnet);
     }

@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AppInsightsCredentialsResponse {
+    /**
+     * The AppInsights application ID.
+     * 
+     */
     private final @Nullable String appId;
+    /**
+     * The AppInsights instrumentation key. This is not returned in response of GET/PUT on the resource. To see this please call listKeys API.
+     * 
+     */
     private final @Nullable String instrumentationKey;
 
     @OutputCustomType.Constructor({"appId","instrumentationKey"})
@@ -22,9 +30,17 @@ public final class AppInsightsCredentialsResponse {
         this.instrumentationKey = instrumentationKey;
     }
 
+    /**
+     * The AppInsights application ID.
+     * 
+     */
     public Optional<String> getAppId() {
         return Optional.ofNullable(this.appId);
     }
+    /**
+     * The AppInsights instrumentation key. This is not returned in response of GET/PUT on the resource. To see this please call listKeys API.
+     * 
+     */
     public Optional<String> getInstrumentationKey() {
         return Optional.ofNullable(this.instrumentationKey);
     }

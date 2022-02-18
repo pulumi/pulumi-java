@@ -14,8 +14,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EncryptionSettingsCollectionResponse {
+    /**
+     * Set this flag to true and provide DiskEncryptionKey and optional KeyEncryptionKey to enable encryption. Set this flag to false and remove DiskEncryptionKey and KeyEncryptionKey to disable encryption. If EncryptionSettings is null in the request object, the existing settings remain unchanged.
+     * 
+     */
     private final Boolean enabled;
+    /**
+     * A collection of encryption settings, one for each disk volume.
+     * 
+     */
     private final @Nullable List<EncryptionSettingsElementResponse> encryptionSettings;
+    /**
+     * Describes what type of encryption is used for the disks. Once this field is set, it cannot be overwritten. '1.0' corresponds to Azure Disk Encryption with AAD app.'1.1' corresponds to Azure Disk Encryption.
+     * 
+     */
     private final @Nullable String encryptionSettingsVersion;
 
     @OutputCustomType.Constructor({"enabled","encryptionSettings","encryptionSettingsVersion"})
@@ -28,12 +40,24 @@ public final class EncryptionSettingsCollectionResponse {
         this.encryptionSettingsVersion = encryptionSettingsVersion;
     }
 
+    /**
+     * Set this flag to true and provide DiskEncryptionKey and optional KeyEncryptionKey to enable encryption. Set this flag to false and remove DiskEncryptionKey and KeyEncryptionKey to disable encryption. If EncryptionSettings is null in the request object, the existing settings remain unchanged.
+     * 
+     */
     public Boolean getEnabled() {
         return this.enabled;
     }
+    /**
+     * A collection of encryption settings, one for each disk volume.
+     * 
+     */
     public List<EncryptionSettingsElementResponse> getEncryptionSettings() {
         return this.encryptionSettings == null ? List.of() : this.encryptionSettings;
     }
+    /**
+     * Describes what type of encryption is used for the disks. Once this field is set, it cannot be overwritten. '1.0' corresponds to Azure Disk Encryption with AAD app.'1.1' corresponds to Azure Disk Encryption.
+     * 
+     */
     public Optional<String> getEncryptionSettingsVersion() {
         return Optional.ofNullable(this.encryptionSettingsVersion);
     }

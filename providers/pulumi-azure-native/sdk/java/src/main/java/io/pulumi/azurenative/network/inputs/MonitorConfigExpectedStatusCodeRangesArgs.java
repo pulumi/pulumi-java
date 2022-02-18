@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Min and max value of a status code range.
+ * 
+ */
 public final class MonitorConfigExpectedStatusCodeRangesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MonitorConfigExpectedStatusCodeRangesArgs Empty = new MonitorConfigExpectedStatusCodeRangesArgs();
 
+    /**
+     * Max status code.
+     * 
+     */
     @InputImport(name="max")
     private final @Nullable Input<Integer> max;
 
@@ -21,6 +29,10 @@ public final class MonitorConfigExpectedStatusCodeRangesArgs extends io.pulumi.r
         return this.max == null ? Input.empty() : this.max;
     }
 
+    /**
+     * Min status code.
+     * 
+     */
     @InputImport(name="min")
     private final @Nullable Input<Integer> min;
 

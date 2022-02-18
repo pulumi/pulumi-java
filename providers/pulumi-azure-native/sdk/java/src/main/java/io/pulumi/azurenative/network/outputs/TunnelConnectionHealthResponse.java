@@ -10,10 +10,30 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TunnelConnectionHealthResponse {
+    /**
+     * Virtual Network Gateway connection status.
+     * 
+     */
     private final String connectionStatus;
+    /**
+     * The Egress Bytes Transferred in this connection.
+     * 
+     */
     private final Double egressBytesTransferred;
+    /**
+     * The Ingress Bytes Transferred in this connection.
+     * 
+     */
     private final Double ingressBytesTransferred;
+    /**
+     * The time at which connection was established in Utc format.
+     * 
+     */
     private final String lastConnectionEstablishedUtcTime;
+    /**
+     * Tunnel name.
+     * 
+     */
     private final String tunnel;
 
     @OutputCustomType.Constructor({"connectionStatus","egressBytesTransferred","ingressBytesTransferred","lastConnectionEstablishedUtcTime","tunnel"})
@@ -30,18 +50,38 @@ public final class TunnelConnectionHealthResponse {
         this.tunnel = Objects.requireNonNull(tunnel);
     }
 
+    /**
+     * Virtual Network Gateway connection status.
+     * 
+     */
     public String getConnectionStatus() {
         return this.connectionStatus;
     }
+    /**
+     * The Egress Bytes Transferred in this connection.
+     * 
+     */
     public Double getEgressBytesTransferred() {
         return this.egressBytesTransferred;
     }
+    /**
+     * The Ingress Bytes Transferred in this connection.
+     * 
+     */
     public Double getIngressBytesTransferred() {
         return this.ingressBytesTransferred;
     }
+    /**
+     * The time at which connection was established in Utc format.
+     * 
+     */
     public String getLastConnectionEstablishedUtcTime() {
         return this.lastConnectionEstablishedUtcTime;
     }
+    /**
+     * Tunnel name.
+     * 
+     */
     public String getTunnel() {
         return this.tunnel;
     }

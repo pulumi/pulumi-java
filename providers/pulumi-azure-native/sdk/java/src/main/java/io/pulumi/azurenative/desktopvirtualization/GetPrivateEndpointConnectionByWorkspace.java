@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPrivateEndpointConnectionByWorkspace {
+/**
+ * The Private Endpoint Connection resource.
+ * API Version: 2021-04-01-preview.
+ * 
+ *
+ * The Private Endpoint Connection resource.
+ * 
+ */
     public static CompletableFuture<GetPrivateEndpointConnectionByWorkspaceResult> invokeAsync(GetPrivateEndpointConnectionByWorkspaceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:desktopvirtualization:getPrivateEndpointConnectionByWorkspace", TypeShape.of(GetPrivateEndpointConnectionByWorkspaceResult.class), args == null ? GetPrivateEndpointConnectionByWorkspaceArgs.Empty : args, Utilities.withVersion(options));
     }

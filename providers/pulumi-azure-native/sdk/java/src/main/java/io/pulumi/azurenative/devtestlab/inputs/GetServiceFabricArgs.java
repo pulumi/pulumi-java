@@ -14,6 +14,10 @@ public final class GetServiceFabricArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetServiceFabricArgs Empty = new GetServiceFabricArgs();
 
+    /**
+     * Specify the $expand query. Example: 'properties($expand=applicableSchedule)'
+     * 
+     */
     @InputImport(name="expand")
     private final @Nullable String expand;
 
@@ -21,6 +25,10 @@ public final class GetServiceFabricArgs extends io.pulumi.resources.InvokeArgs {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
+    /**
+     * The name of the lab.
+     * 
+     */
     @InputImport(name="labName", required=true)
     private final String labName;
 
@@ -28,6 +36,10 @@ public final class GetServiceFabricArgs extends io.pulumi.resources.InvokeArgs {
         return this.labName;
     }
 
+    /**
+     * The name of the service fabric.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -35,6 +47,10 @@ public final class GetServiceFabricArgs extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -42,6 +58,10 @@ public final class GetServiceFabricArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the user profile.
+     * 
+     */
     @InputImport(name="userName", required=true)
     private final String userName;
 

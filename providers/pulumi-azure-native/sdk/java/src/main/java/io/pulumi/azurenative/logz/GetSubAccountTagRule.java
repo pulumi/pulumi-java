@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSubAccountTagRule {
+/**
+ * Capture logs and metrics of Azure resources based on ARM tags.
+ * API Version: 2020-10-01.
+ * 
+ *
+ * Capture logs and metrics of Azure resources based on ARM tags.
+ * 
+ */
     public static CompletableFuture<GetSubAccountTagRuleResult> invokeAsync(GetSubAccountTagRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logz:getSubAccountTagRule", TypeShape.of(GetSubAccountTagRuleResult.class), args == null ? GetSubAccountTagRuleArgs.Empty : args, Utilities.withVersion(options));
     }

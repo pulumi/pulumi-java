@@ -15,6 +15,10 @@ public final class DiskAccessAPrivateEndpointConnectionArgs extends io.pulumi.re
 
     public static final DiskAccessAPrivateEndpointConnectionArgs Empty = new DiskAccessAPrivateEndpointConnectionArgs();
 
+    /**
+     * The name of the disk access resource that is being created. The name can't be changed after the disk encryption set is created. Supported characters for the name are a-z, A-Z, 0-9 and _. The maximum name length is 80 characters.
+     * 
+     */
     @InputImport(name="diskAccessName", required=true)
     private final Input<String> diskAccessName;
 
@@ -22,6 +26,10 @@ public final class DiskAccessAPrivateEndpointConnectionArgs extends io.pulumi.re
         return this.diskAccessName;
     }
 
+    /**
+     * The name of the private endpoint connection
+     * 
+     */
     @InputImport(name="privateEndpointConnectionName")
     private final @Nullable Input<String> privateEndpointConnectionName;
 
@@ -29,6 +37,10 @@ public final class DiskAccessAPrivateEndpointConnectionArgs extends io.pulumi.re
         return this.privateEndpointConnectionName == null ? Input.empty() : this.privateEndpointConnectionName;
     }
 
+    /**
+     * A collection of information about the state of the connection between DiskAccess and Virtual Network.
+     * 
+     */
     @InputImport(name="privateLinkServiceConnectionState", required=true)
     private final Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
@@ -36,6 +48,10 @@ public final class DiskAccessAPrivateEndpointConnectionArgs extends io.pulumi.re
         return this.privateLinkServiceConnectionState;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

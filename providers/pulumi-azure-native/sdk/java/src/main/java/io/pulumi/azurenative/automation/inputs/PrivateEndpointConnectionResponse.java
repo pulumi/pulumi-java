@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A private endpoint connection
+ * 
+ */
 public final class PrivateEndpointConnectionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PrivateEndpointConnectionResponse Empty = new PrivateEndpointConnectionResponse();
 
+    /**
+     * Fully qualified resource Id for the resource
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -23,6 +31,10 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
         return this.id;
     }
 
+    /**
+     * The name of the resource
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -30,6 +42,10 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
         return this.name;
     }
 
+    /**
+     * Private endpoint which the connection belongs to.
+     * 
+     */
     @InputImport(name="privateEndpoint")
     private final @Nullable PrivateEndpointPropertyResponse privateEndpoint;
 
@@ -37,6 +53,10 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
         return this.privateEndpoint == null ? Optional.empty() : Optional.ofNullable(this.privateEndpoint);
     }
 
+    /**
+     * Connection State of the Private Endpoint Connection.
+     * 
+     */
     @InputImport(name="privateLinkServiceConnectionState")
     private final @Nullable PrivateLinkServiceConnectionStatePropertyResponse privateLinkServiceConnectionState;
 
@@ -44,6 +64,10 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
         return this.privateLinkServiceConnectionState == null ? Optional.empty() : Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
 
+    /**
+     * The type of the resource.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

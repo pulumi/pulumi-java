@@ -15,6 +15,10 @@ public final class TagRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TagRuleArgs Empty = new TagRuleArgs();
 
+    /**
+     * Monitor resource name
+     * 
+     */
     @InputImport(name="monitorName", required=true)
     private final Input<String> monitorName;
 
@@ -22,6 +26,10 @@ public final class TagRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.monitorName;
     }
 
+    /**
+     * Definition of the properties for a TagRules resource.
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<MonitoringTagRulesPropertiesArgs> properties;
 
@@ -29,6 +37,10 @@ public final class TagRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

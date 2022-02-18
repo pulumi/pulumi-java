@@ -12,8 +12,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SelectAudioTrackByIdResponse {
+    /**
+     * Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.
+     * 
+     */
     private final @Nullable String channelMapping;
+    /**
+     * The discriminator for derived types.
+     * Expected value is '#Microsoft.Media.SelectAudioTrackById'.
+     * 
+     */
     private final String odataType;
+    /**
+     * Track identifier to select
+     * 
+     */
     private final Double trackId;
 
     @OutputCustomType.Constructor({"channelMapping","odataType","trackId"})
@@ -26,12 +39,25 @@ public final class SelectAudioTrackByIdResponse {
         this.trackId = Objects.requireNonNull(trackId);
     }
 
+    /**
+     * Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.
+     * 
+     */
     public Optional<String> getChannelMapping() {
         return Optional.ofNullable(this.channelMapping);
     }
+    /**
+     * The discriminator for derived types.
+     * Expected value is '#Microsoft.Media.SelectAudioTrackById'.
+     * 
+     */
     public String getOdataType() {
         return this.odataType;
     }
+    /**
+     * Track identifier to select
+     * 
+     */
     public Double getTrackId() {
         return this.trackId;
     }

@@ -8,11 +8,31 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition
+     * 
+     */
     @EnumType
     public enum AssessmentType {
+        /**
+         * Azure Security Center managed assessments
+         * 
+         */
         BuiltIn("BuiltIn"),
+        /**
+         * User defined policies that are automatically ingested from Azure Policy to Azure Security Center
+         * 
+         */
         CustomPolicy("CustomPolicy"),
+        /**
+         * User assessments pushed directly by the user or other third party to Azure Security Center
+         * 
+         */
         CustomerManaged("CustomerManaged"),
+        /**
+         * An assessment that was created by a verified 3rd party if the user connected it to ASC
+         * 
+         */
         VerifiedPartner("VerifiedPartner");
 
         private final String value;

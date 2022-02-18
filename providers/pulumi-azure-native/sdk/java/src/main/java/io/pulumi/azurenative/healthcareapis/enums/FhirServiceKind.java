@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The kind of the service.
+     * 
+     */
     @EnumType
     public enum FhirServiceKind {
         FhirStu3("fhir-Stu3"),

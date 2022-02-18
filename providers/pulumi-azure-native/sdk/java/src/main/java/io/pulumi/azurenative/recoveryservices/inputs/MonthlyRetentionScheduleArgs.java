@@ -16,10 +16,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Monthly retention schedule.
+ * 
+ */
 public final class MonthlyRetentionScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MonthlyRetentionScheduleArgs Empty = new MonthlyRetentionScheduleArgs();
 
+    /**
+     * Retention duration of retention Policy.
+     * 
+     */
     @InputImport(name="retentionDuration")
     private final @Nullable Input<RetentionDurationArgs> retentionDuration;
 
@@ -27,6 +35,10 @@ public final class MonthlyRetentionScheduleArgs extends io.pulumi.resources.Reso
         return this.retentionDuration == null ? Input.empty() : this.retentionDuration;
     }
 
+    /**
+     * Daily retention format for monthly retention policy.
+     * 
+     */
     @InputImport(name="retentionScheduleDaily")
     private final @Nullable Input<DailyRetentionFormatArgs> retentionScheduleDaily;
 
@@ -34,6 +46,10 @@ public final class MonthlyRetentionScheduleArgs extends io.pulumi.resources.Reso
         return this.retentionScheduleDaily == null ? Input.empty() : this.retentionScheduleDaily;
     }
 
+    /**
+     * Retention schedule format type for monthly retention policy.
+     * 
+     */
     @InputImport(name="retentionScheduleFormatType")
     private final @Nullable Input<Either<String,RetentionScheduleFormat>> retentionScheduleFormatType;
 
@@ -41,6 +57,10 @@ public final class MonthlyRetentionScheduleArgs extends io.pulumi.resources.Reso
         return this.retentionScheduleFormatType == null ? Input.empty() : this.retentionScheduleFormatType;
     }
 
+    /**
+     * Weekly retention format for monthly retention policy.
+     * 
+     */
     @InputImport(name="retentionScheduleWeekly")
     private final @Nullable Input<WeeklyRetentionFormatArgs> retentionScheduleWeekly;
 
@@ -48,6 +68,10 @@ public final class MonthlyRetentionScheduleArgs extends io.pulumi.resources.Reso
         return this.retentionScheduleWeekly == null ? Input.empty() : this.retentionScheduleWeekly;
     }
 
+    /**
+     * Retention times of retention policy.
+     * 
+     */
     @InputImport(name="retentionTimes")
     private final @Nullable Input<List<String>> retentionTimes;
 

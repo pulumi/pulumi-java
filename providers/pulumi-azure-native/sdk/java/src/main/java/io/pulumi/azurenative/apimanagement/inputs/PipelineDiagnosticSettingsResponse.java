@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.
+ * 
+ */
 public final class PipelineDiagnosticSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PipelineDiagnosticSettingsResponse Empty = new PipelineDiagnosticSettingsResponse();
 
+    /**
+     * Diagnostic settings for request.
+     * 
+     */
     @InputImport(name="request")
     private final @Nullable HttpMessageDiagnosticResponse request;
 
@@ -21,6 +29,10 @@ public final class PipelineDiagnosticSettingsResponse extends io.pulumi.resource
         return this.request == null ? Optional.empty() : Optional.ofNullable(this.request);
     }
 
+    /**
+     * Diagnostic settings for response.
+     * 
+     */
     @InputImport(name="response")
     private final @Nullable HttpMessageDiagnosticResponse response;
 

@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CacheUsernameDownloadSettingsResponseCredentials {
+    /**
+     * The Bind Distinguished Name identity to be used in the secure LDAP connection. This value is stored encrypted and not returned on response.
+     * 
+     */
     private final @Nullable String bindDn;
+    /**
+     * The Bind password to be used in the secure LDAP connection. This value is stored encrypted and not returned on response.
+     * 
+     */
     private final @Nullable String bindPassword;
 
     @OutputCustomType.Constructor({"bindDn","bindPassword"})
@@ -22,9 +30,17 @@ public final class CacheUsernameDownloadSettingsResponseCredentials {
         this.bindPassword = bindPassword;
     }
 
+    /**
+     * The Bind Distinguished Name identity to be used in the secure LDAP connection. This value is stored encrypted and not returned on response.
+     * 
+     */
     public Optional<String> getBindDn() {
         return Optional.ofNullable(this.bindDn);
     }
+    /**
+     * The Bind password to be used in the secure LDAP connection. This value is stored encrypted and not returned on response.
+     * 
+     */
     public Optional<String> getBindPassword() {
         return Optional.ofNullable(this.bindPassword);
     }

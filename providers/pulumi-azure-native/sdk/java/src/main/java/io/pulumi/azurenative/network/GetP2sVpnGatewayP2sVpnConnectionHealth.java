@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetP2sVpnGatewayP2sVpnConnectionHealth {
+/**
+ * P2SVpnGateway Resource.
+ * API Version: 2020-11-01.
+ * 
+ *
+ * P2SVpnGateway Resource.
+ * 
+ */
     public static CompletableFuture<GetP2sVpnGatewayP2sVpnConnectionHealthResult> invokeAsync(GetP2sVpnGatewayP2sVpnConnectionHealthArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getP2sVpnGatewayP2sVpnConnectionHealth", TypeShape.of(GetP2sVpnGatewayP2sVpnConnectionHealthResult.class), args == null ? GetP2sVpnGatewayP2sVpnConnectionHealthArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -12,6 +12,10 @@ public final class GetIntegrationAccountCertificateArgs extends io.pulumi.resour
 
     public static final GetIntegrationAccountCertificateArgs Empty = new GetIntegrationAccountCertificateArgs();
 
+    /**
+     * The integration account certificate name.
+     * 
+     */
     @InputImport(name="certificateName", required=true)
     private final String certificateName;
 
@@ -19,6 +23,10 @@ public final class GetIntegrationAccountCertificateArgs extends io.pulumi.resour
         return this.certificateName;
     }
 
+    /**
+     * The integration account name.
+     * 
+     */
     @InputImport(name="integrationAccountName", required=true)
     private final String integrationAccountName;
 
@@ -26,6 +34,10 @@ public final class GetIntegrationAccountCertificateArgs extends io.pulumi.resour
         return this.integrationAccountName;
     }
 
+    /**
+     * The resource group name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

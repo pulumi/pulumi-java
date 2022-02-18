@@ -14,10 +14,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Route table resource.
+ * 
+ */
 public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RouteTableArgs Empty = new RouteTableArgs();
 
+    /**
+     * Whether to disable the routes learned by BGP on that route table. True means disable.
+     * 
+     */
     @InputImport(name="disableBgpRoutePropagation")
     private final @Nullable Input<Boolean> disableBgpRoutePropagation;
 
@@ -25,6 +33,10 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
         return this.disableBgpRoutePropagation == null ? Input.empty() : this.disableBgpRoutePropagation;
     }
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -32,6 +44,10 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * Resource location.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -39,6 +55,10 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Collection of routes contained within a route table.
+     * 
+     */
     @InputImport(name="routes")
     private final @Nullable Input<List<RouteArgs>> routes;
 
@@ -46,6 +66,10 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
         return this.routes == null ? Input.empty() : this.routes;
     }
 
+    /**
+     * Resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

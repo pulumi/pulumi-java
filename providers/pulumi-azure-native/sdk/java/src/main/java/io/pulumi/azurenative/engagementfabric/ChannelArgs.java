@@ -16,6 +16,10 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ChannelArgs Empty = new ChannelArgs();
 
+    /**
+     * Account Name
+     * 
+     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -23,6 +27,10 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountName;
     }
 
+    /**
+     * The functions to be enabled for the channel
+     * 
+     */
     @InputImport(name="channelFunctions")
     private final @Nullable Input<List<String>> channelFunctions;
 
@@ -30,6 +38,10 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
         return this.channelFunctions == null ? Input.empty() : this.channelFunctions;
     }
 
+    /**
+     * Channel Name
+     * 
+     */
     @InputImport(name="channelName")
     private final @Nullable Input<String> channelName;
 
@@ -37,6 +49,10 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
         return this.channelName == null ? Input.empty() : this.channelName;
     }
 
+    /**
+     * The channel type
+     * 
+     */
     @InputImport(name="channelType", required=true)
     private final Input<String> channelType;
 
@@ -44,6 +60,10 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
         return this.channelType;
     }
 
+    /**
+     * The channel credentials
+     * 
+     */
     @InputImport(name="credentials")
     private final @Nullable Input<Map<String,String>> credentials;
 
@@ -51,6 +71,10 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
         return this.credentials == null ? Input.empty() : this.credentials;
     }
 
+    /**
+     * Resource Group Name
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

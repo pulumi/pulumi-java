@@ -14,6 +14,10 @@ public final class ListNetworkManagerEffectiveSecurityAdminRuleArgs extends io.p
 
     public static final ListNetworkManagerEffectiveSecurityAdminRuleArgs Empty = new ListNetworkManagerEffectiveSecurityAdminRuleArgs();
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -21,6 +25,10 @@ public final class ListNetworkManagerEffectiveSecurityAdminRuleArgs extends io.p
         return this.resourceGroupName;
     }
 
+    /**
+     * When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
+     * 
+     */
     @InputImport(name="skipToken")
     private final @Nullable String skipToken;
 
@@ -28,6 +36,10 @@ public final class ListNetworkManagerEffectiveSecurityAdminRuleArgs extends io.p
         return this.skipToken == null ? Optional.empty() : Optional.ofNullable(this.skipToken);
     }
 
+    /**
+     * The name of the virtual network.
+     * 
+     */
     @InputImport(name="virtualNetworkName", required=true)
     private final String virtualNetworkName;
 

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The status of the Traffic Manager profile.
+     * 
+     */
     @EnumType
     public enum ProfileStatus {
         Enabled("Enabled"),

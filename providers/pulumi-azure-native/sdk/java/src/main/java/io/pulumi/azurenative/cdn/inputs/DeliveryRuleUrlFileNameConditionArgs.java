@@ -10,10 +10,19 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Defines the UrlFileName condition for the delivery rule.
+ * 
+ */
 public final class DeliveryRuleUrlFileNameConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DeliveryRuleUrlFileNameConditionArgs Empty = new DeliveryRuleUrlFileNameConditionArgs();
 
+    /**
+     * The name of the condition for the delivery rule.
+     * Expected value is 'UrlFileName'.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -21,6 +30,10 @@ public final class DeliveryRuleUrlFileNameConditionArgs extends io.pulumi.resour
         return this.name;
     }
 
+    /**
+     * Defines the parameters for the condition.
+     * 
+     */
     @InputImport(name="parameters", required=true)
     private final Input<UrlFileNameMatchConditionParametersArgs> parameters;
 

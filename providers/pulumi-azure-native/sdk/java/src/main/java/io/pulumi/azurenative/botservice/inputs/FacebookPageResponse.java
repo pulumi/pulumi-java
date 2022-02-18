@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A Facebook page for Facebook channel registration
+ * 
+ */
 public final class FacebookPageResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FacebookPageResponse Empty = new FacebookPageResponse();
 
+    /**
+     * Facebook application access token. Value only returned through POST to the action Channel List API, otherwise empty.
+     * 
+     */
     @InputImport(name="accessToken")
     private final @Nullable String accessToken;
 
@@ -21,6 +29,10 @@ public final class FacebookPageResponse extends io.pulumi.resources.InvokeArgs {
         return this.accessToken == null ? Optional.empty() : Optional.ofNullable(this.accessToken);
     }
 
+    /**
+     * Page id
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 

@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDeploymentAtScope {
+/**
+ * Deployment information.
+ * API Version: 2021-01-01.
+ * 
+ *
+ * Deployment information.
+ * 
+ */
     public static CompletableFuture<GetDeploymentAtScopeResult> invokeAsync(GetDeploymentAtScopeArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:resources:getDeploymentAtScope", TypeShape.of(GetDeploymentAtScopeResult.class), args == null ? GetDeploymentAtScopeArgs.Empty : args, Utilities.withVersion(options));
     }

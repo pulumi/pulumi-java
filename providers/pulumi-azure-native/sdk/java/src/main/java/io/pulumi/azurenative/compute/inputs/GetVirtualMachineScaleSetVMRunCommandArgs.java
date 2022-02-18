@@ -14,6 +14,10 @@ public final class GetVirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.r
 
     public static final GetVirtualMachineScaleSetVMRunCommandArgs Empty = new GetVirtualMachineScaleSetVMRunCommandArgs();
 
+    /**
+     * The expand expression to apply on the operation.
+     * 
+     */
     @InputImport(name="expand")
     private final @Nullable String expand;
 
@@ -21,6 +25,10 @@ public final class GetVirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.r
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
+    /**
+     * The instance ID of the virtual machine.
+     * 
+     */
     @InputImport(name="instanceId", required=true)
     private final String instanceId;
 
@@ -28,6 +36,10 @@ public final class GetVirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.r
         return this.instanceId;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -35,6 +47,10 @@ public final class GetVirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.r
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the virtual machine run command.
+     * 
+     */
     @InputImport(name="runCommandName", required=true)
     private final String runCommandName;
 
@@ -42,6 +58,10 @@ public final class GetVirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.r
         return this.runCommandName;
     }
 
+    /**
+     * The name of the VM scale set.
+     * 
+     */
     @InputImport(name="vmScaleSetName", required=true)
     private final String vmScaleSetName;
 

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Reject type.
+     * 
+     */
     @EnumType
     public enum PolybaseSettingsRejectType {
         Value("value"),

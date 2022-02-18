@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Upstream auth type enum.
+     * 
+     */
     @EnumType
     public enum UpstreamAuthType {
         None("None"),

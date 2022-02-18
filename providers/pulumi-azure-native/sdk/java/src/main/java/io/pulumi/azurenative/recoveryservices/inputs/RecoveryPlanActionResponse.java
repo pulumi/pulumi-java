@@ -13,10 +13,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Recovery plan action details.
+ * 
+ */
 public final class RecoveryPlanActionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RecoveryPlanActionResponse Empty = new RecoveryPlanActionResponse();
 
+    /**
+     * The action name.
+     * 
+     */
     @InputImport(name="actionName", required=true)
     private final String actionName;
 
@@ -24,6 +32,10 @@ public final class RecoveryPlanActionResponse extends io.pulumi.resources.Invoke
         return this.actionName;
     }
 
+    /**
+     * The custom details.
+     * 
+     */
     @InputImport(name="customDetails", required=true)
     private final Object customDetails;
 
@@ -31,6 +43,10 @@ public final class RecoveryPlanActionResponse extends io.pulumi.resources.Invoke
         return this.customDetails;
     }
 
+    /**
+     * The list of failover directions.
+     * 
+     */
     @InputImport(name="failoverDirections", required=true)
     private final List<String> failoverDirections;
 
@@ -38,6 +54,10 @@ public final class RecoveryPlanActionResponse extends io.pulumi.resources.Invoke
         return this.failoverDirections;
     }
 
+    /**
+     * The list of failover types.
+     * 
+     */
     @InputImport(name="failoverTypes", required=true)
     private final List<String> failoverTypes;
 

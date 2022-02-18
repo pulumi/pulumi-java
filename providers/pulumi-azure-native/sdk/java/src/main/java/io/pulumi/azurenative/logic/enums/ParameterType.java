@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The type.
+     * 
+     */
     @EnumType
     public enum ParameterType {
         NotSpecified("NotSpecified"),

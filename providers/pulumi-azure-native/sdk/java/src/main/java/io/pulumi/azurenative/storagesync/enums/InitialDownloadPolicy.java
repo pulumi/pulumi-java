@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Policy for how namespace and files are recalled during FastDr.
+     * 
+     */
     @EnumType
     public enum InitialDownloadPolicy {
         NamespaceOnly("NamespaceOnly"),

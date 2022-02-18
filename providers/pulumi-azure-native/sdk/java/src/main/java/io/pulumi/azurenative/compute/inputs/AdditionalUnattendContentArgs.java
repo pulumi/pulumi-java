@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specifies additional XML formatted information that can be included in the Unattend.xml file, which is used by Windows Setup. Contents are defined by setting name, component name, and the pass in which the content is applied.
+ * 
+ */
 public final class AdditionalUnattendContentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AdditionalUnattendContentArgs Empty = new AdditionalUnattendContentArgs();
 
+    /**
+     * The component name. Currently, the only allowable value is Microsoft-Windows-Shell-Setup.
+     * 
+     */
     @InputImport(name="componentName")
     private final @Nullable Input<ComponentNames> componentName;
 
@@ -24,6 +32,10 @@ public final class AdditionalUnattendContentArgs extends io.pulumi.resources.Res
         return this.componentName == null ? Input.empty() : this.componentName;
     }
 
+    /**
+     * Specifies the XML formatted content that is added to the unattend.xml file for the specified path and component. The XML must be less than 4KB and must include the root element for the setting or feature that is being inserted.
+     * 
+     */
     @InputImport(name="content")
     private final @Nullable Input<String> content;
 
@@ -31,6 +43,10 @@ public final class AdditionalUnattendContentArgs extends io.pulumi.resources.Res
         return this.content == null ? Input.empty() : this.content;
     }
 
+    /**
+     * The pass name. Currently, the only allowable value is OobeSystem.
+     * 
+     */
     @InputImport(name="passName")
     private final @Nullable Input<PassNames> passName;
 
@@ -38,6 +54,10 @@ public final class AdditionalUnattendContentArgs extends io.pulumi.resources.Res
         return this.passName == null ? Input.empty() : this.passName;
     }
 
+    /**
+     * Specifies the name of the setting to which the content applies. Possible values are: FirstLogonCommands and AutoLogon.
+     * 
+     */
     @InputImport(name="settingName")
     private final @Nullable Input<SettingNames> settingName;
 

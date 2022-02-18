@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * An alert action.
+ * 
+ */
 public final class MetricAlertActionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MetricAlertActionArgs Empty = new MetricAlertActionArgs();
 
+    /**
+     * the id of the action group to use.
+     * 
+     */
     @InputImport(name="actionGroupId")
     private final @Nullable Input<String> actionGroupId;
 
@@ -22,6 +30,10 @@ public final class MetricAlertActionArgs extends io.pulumi.resources.ResourceArg
         return this.actionGroupId == null ? Input.empty() : this.actionGroupId;
     }
 
+    /**
+     * This field allows specifying custom properties, which would be appended to the alert payload sent as input to the webhook.
+     * 
+     */
     @InputImport(name="webHookProperties")
     private final @Nullable Input<Map<String,String>> webHookProperties;
 

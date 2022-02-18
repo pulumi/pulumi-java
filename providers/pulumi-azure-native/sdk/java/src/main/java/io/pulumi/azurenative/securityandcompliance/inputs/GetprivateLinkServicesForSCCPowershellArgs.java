@@ -12,6 +12,10 @@ public final class GetprivateLinkServicesForSCCPowershellArgs extends io.pulumi.
 
     public static final GetprivateLinkServicesForSCCPowershellArgs Empty = new GetprivateLinkServicesForSCCPowershellArgs();
 
+    /**
+     * The name of the resource group that contains the service instance.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +23,10 @@ public final class GetprivateLinkServicesForSCCPowershellArgs extends io.pulumi.
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the service instance.
+     * 
+     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 

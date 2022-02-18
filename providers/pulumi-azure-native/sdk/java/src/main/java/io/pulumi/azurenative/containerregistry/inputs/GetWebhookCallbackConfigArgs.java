@@ -12,6 +12,10 @@ public final class GetWebhookCallbackConfigArgs extends io.pulumi.resources.Invo
 
     public static final GetWebhookCallbackConfigArgs Empty = new GetWebhookCallbackConfigArgs();
 
+    /**
+     * The name of the container registry.
+     * 
+     */
     @InputImport(name="registryName", required=true)
     private final String registryName;
 
@@ -19,6 +23,10 @@ public final class GetWebhookCallbackConfigArgs extends io.pulumi.resources.Invo
         return this.registryName;
     }
 
+    /**
+     * The name of the resource group to which the container registry belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetWebhookCallbackConfigArgs extends io.pulumi.resources.Invo
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the webhook.
+     * 
+     */
     @InputImport(name="webhookName", required=true)
     private final String webhookName;
 

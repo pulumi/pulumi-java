@@ -18,45 +18,114 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * An Account Filter.
+ * API Version: 2020-05-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:media:AccountFilter newAccountFilter /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contoso/providers/Microsoft.Media/mediaservices/contosomedia/accountFilters/newAccountFilter 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:media:AccountFilter")
 public class AccountFilter extends io.pulumi.resources.CustomResource {
+    /**
+     * The first quality.
+     * 
+     */
     @OutputExport(name="firstQuality", type=FirstQualityResponse.class, parameters={})
     private Output</* @Nullable */ FirstQualityResponse> firstQuality;
 
+    /**
+     * @return The first quality.
+     * 
+     */
     public Output</* @Nullable */ FirstQualityResponse> getFirstQuality() {
         return this.firstQuality;
     }
+    /**
+     * The name of the resource
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The presentation time range.
+     * 
+     */
     @OutputExport(name="presentationTimeRange", type=PresentationTimeRangeResponse.class, parameters={})
     private Output</* @Nullable */ PresentationTimeRangeResponse> presentationTimeRange;
 
+    /**
+     * @return The presentation time range.
+     * 
+     */
     public Output</* @Nullable */ PresentationTimeRangeResponse> getPresentationTimeRange() {
         return this.presentationTimeRange;
     }
+    /**
+     * The system metadata relating to this resource.
+     * 
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return The system metadata relating to this resource.
+     * 
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * The tracks selection conditions.
+     * 
+     */
     @OutputExport(name="tracks", type=List.class, parameters={FilterTrackSelectionResponse.class})
     private Output</* @Nullable */ List<FilterTrackSelectionResponse>> tracks;
 
+    /**
+     * @return The tracks selection conditions.
+     * 
+     */
     public Output</* @Nullable */ List<FilterTrackSelectionResponse>> getTracks() {
         return this.tracks;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public AccountFilter(String name, AccountFilterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:media:AccountFilter", name, args == null ? AccountFilterArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -77,6 +146,14 @@ public class AccountFilter extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static AccountFilter get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AccountFilter(name, id, options);
     }

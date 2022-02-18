@@ -21,41 +21,104 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Represents a scaling plan definition.
+ * API Version: 2021-02-01-preview.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:desktopvirtualization:ScalingPlan scalingPlan1 /subscriptions/daefabc0-95b4-48b3-b645-8a753a63c4fa/resourceGroups/resourceGroup1/providers/Microsoft.DesktopVirtualization/scalingPlans/scalingPlan1 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:desktopvirtualization:ScalingPlan")
 public class ScalingPlan extends io.pulumi.resources.CustomResource {
+    /**
+     * Description of scaling plan.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return Description of scaling plan.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
+     * 
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
+     * 
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * Exclusion tag for scaling plan.
+     * 
+     */
     @OutputExport(name="exclusionTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> exclusionTag;
 
+    /**
+     * @return Exclusion tag for scaling plan.
+     * 
+     */
     public Output</* @Nullable */ String> getExclusionTag() {
         return this.exclusionTag;
     }
+    /**
+     * User friendly name of scaling plan.
+     * 
+     */
     @OutputExport(name="friendlyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> friendlyName;
 
+    /**
+     * @return User friendly name of scaling plan.
+     * 
+     */
     public Output</* @Nullable */ String> getFriendlyName() {
         return this.friendlyName;
     }
+    /**
+     * List of ScalingHostPoolReference definitions.
+     * 
+     */
     @OutputExport(name="hostPoolReferences", type=List.class, parameters={ScalingHostPoolReferenceResponse.class})
     private Output</* @Nullable */ List<ScalingHostPoolReferenceResponse>> hostPoolReferences;
 
+    /**
+     * @return List of ScalingHostPoolReference definitions.
+     * 
+     */
     public Output</* @Nullable */ List<ScalingHostPoolReferenceResponse>> getHostPoolReferences() {
         return this.hostPoolReferences;
     }
+    /**
+     * HostPool type for desktop.
+     * 
+     */
     @OutputExport(name="hostPoolType", type=String.class, parameters={})
     private Output</* @Nullable */ String> hostPoolType;
 
+    /**
+     * @return HostPool type for desktop.
+     * 
+     */
     public Output</* @Nullable */ String> getHostPoolType() {
         return this.hostPoolType;
     }
@@ -65,33 +128,73 @@ public class ScalingPlan extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ ResourceModelWithAllowedPropertySetResponseIdentity> getIdentity() {
         return this.identity;
     }
+    /**
+     * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
+     * 
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
+    /**
+     * @return Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
+     * 
+     */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
+    /**
+     * The geo-location where the resource lives
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
+     * 
+     */
     @OutputExport(name="managedBy", type=String.class, parameters={})
     private Output</* @Nullable */ String> managedBy;
 
+    /**
+     * @return The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
+     * 
+     */
     public Output</* @Nullable */ String> getManagedBy() {
         return this.managedBy;
     }
+    /**
+     * The name of the resource
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * ObjectId of scaling plan. (internal use)
+     * 
+     */
     @OutputExport(name="objectId", type=String.class, parameters={})
     private Output<String> objectId;
 
+    /**
+     * @return ObjectId of scaling plan. (internal use)
+     * 
+     */
     public Output<String> getObjectId() {
         return this.objectId;
     }
@@ -101,15 +204,31 @@ public class ScalingPlan extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ ResourceModelWithAllowedPropertySetResponsePlan> getPlan() {
         return this.plan;
     }
+    /**
+     * The ring number of scaling plan.
+     * 
+     */
     @OutputExport(name="ring", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> ring;
 
+    /**
+     * @return The ring number of scaling plan.
+     * 
+     */
     public Output</* @Nullable */ Integer> getRing() {
         return this.ring;
     }
+    /**
+     * List of ScalingSchedule definitions.
+     * 
+     */
     @OutputExport(name="schedules", type=List.class, parameters={ScalingScheduleResponse.class})
     private Output</* @Nullable */ List<ScalingScheduleResponse>> schedules;
 
+    /**
+     * @return List of ScalingSchedule definitions.
+     * 
+     */
     public Output</* @Nullable */ List<ScalingScheduleResponse>> getSchedules() {
         return this.schedules;
     }
@@ -119,25 +238,55 @@ public class ScalingPlan extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ ResourceModelWithAllowedPropertySetResponseSku> getSku() {
         return this.sku;
     }
+    /**
+     * Resource tags.
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Timezone of the scaling plan.
+     * 
+     */
     @OutputExport(name="timeZone", type=String.class, parameters={})
     private Output</* @Nullable */ String> timeZone;
 
+    /**
+     * @return Timezone of the scaling plan.
+     * 
+     */
     public Output</* @Nullable */ String> getTimeZone() {
         return this.timeZone;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ScalingPlan(String name, ScalingPlanArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:desktopvirtualization:ScalingPlan", name, args == null ? ScalingPlanArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -162,6 +311,14 @@ public class ScalingPlan extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ScalingPlan get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ScalingPlan(name, id, options);
     }

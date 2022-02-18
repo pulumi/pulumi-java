@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes a script action on a running cluster.
+ * 
+ */
 public final class RuntimeScriptActionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RuntimeScriptActionArgs Empty = new RuntimeScriptActionArgs();
 
+    /**
+     * The name of the script action.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -22,6 +30,10 @@ public final class RuntimeScriptActionArgs extends io.pulumi.resources.ResourceA
         return this.name;
     }
 
+    /**
+     * The parameters for the script
+     * 
+     */
     @InputImport(name="parameters")
     private final @Nullable Input<String> parameters;
 
@@ -29,6 +41,10 @@ public final class RuntimeScriptActionArgs extends io.pulumi.resources.ResourceA
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
+    /**
+     * The list of roles where script will be executed.
+     * 
+     */
     @InputImport(name="roles", required=true)
     private final Input<List<String>> roles;
 
@@ -36,6 +52,10 @@ public final class RuntimeScriptActionArgs extends io.pulumi.resources.ResourceA
         return this.roles;
     }
 
+    /**
+     * The URI to the script.
+     * 
+     */
     @InputImport(name="uri", required=true)
     private final Input<String> uri;
 

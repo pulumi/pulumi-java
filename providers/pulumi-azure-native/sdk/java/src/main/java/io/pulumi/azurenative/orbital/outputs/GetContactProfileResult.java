@@ -16,17 +16,65 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetContactProfileResult {
+    /**
+     * Auto track configuration.
+     * 
+     */
     private final @Nullable String autoTrackingConfiguration;
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     private final String etag;
+    /**
+     * The URI of the Event Hub used for telemetry
+     * 
+     */
     private final @Nullable String eventHubUri;
+    /**
+     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * 
+     */
     private final String id;
+    /**
+     * Links of the Contact Profile
+     * 
+     */
     private final List<ContactProfileLinkResponse> links;
+    /**
+     * The geo-location where the resource lives
+     * 
+     */
     private final String location;
+    /**
+     * Minimum viable elevation for the contact in decimal degrees.
+     * 
+     */
     private final @Nullable Double minimumElevationDegrees;
+    /**
+     * Minimum viable contact duration in ISO 8601 format.
+     * 
+     */
     private final @Nullable String minimumViableContactDuration;
+    /**
+     * The name of the resource
+     * 
+     */
     private final String name;
+    /**
+     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     * 
+     */
     private final SystemDataResponse systemData;
+    /**
+     * Resource tags.
+     * 
+     */
     private final @Nullable Map<String,String> tags;
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"autoTrackingConfiguration","etag","eventHubUri","id","links","location","minimumElevationDegrees","minimumViableContactDuration","name","systemData","tags","type"})
@@ -57,39 +105,87 @@ public final class GetContactProfileResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Auto track configuration.
+     * 
+     */
     public Optional<String> getAutoTrackingConfiguration() {
         return Optional.ofNullable(this.autoTrackingConfiguration);
     }
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String getEtag() {
         return this.etag;
     }
+    /**
+     * The URI of the Event Hub used for telemetry
+     * 
+     */
     public Optional<String> getEventHubUri() {
         return Optional.ofNullable(this.eventHubUri);
     }
+    /**
+     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Links of the Contact Profile
+     * 
+     */
     public List<ContactProfileLinkResponse> getLinks() {
         return this.links;
     }
+    /**
+     * The geo-location where the resource lives
+     * 
+     */
     public String getLocation() {
         return this.location;
     }
+    /**
+     * Minimum viable elevation for the contact in decimal degrees.
+     * 
+     */
     public Optional<Double> getMinimumElevationDegrees() {
         return Optional.ofNullable(this.minimumElevationDegrees);
     }
+    /**
+     * Minimum viable contact duration in ISO 8601 format.
+     * 
+     */
     public Optional<String> getMinimumViableContactDuration() {
         return Optional.ofNullable(this.minimumViableContactDuration);
     }
+    /**
+     * The name of the resource
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     * 
+     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+    /**
+     * Resource tags.
+     * 
+     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     public String getType() {
         return this.type;
     }

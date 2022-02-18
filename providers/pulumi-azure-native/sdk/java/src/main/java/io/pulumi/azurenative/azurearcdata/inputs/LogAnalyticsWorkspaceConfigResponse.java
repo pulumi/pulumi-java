@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Log analytics workspace id and primary key
+ * 
+ */
 public final class LogAnalyticsWorkspaceConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LogAnalyticsWorkspaceConfigResponse Empty = new LogAnalyticsWorkspaceConfigResponse();
 
+    /**
+     * Azure Log Analytics workspace ID
+     * 
+     */
     @InputImport(name="workspaceId")
     private final @Nullable String workspaceId;
 

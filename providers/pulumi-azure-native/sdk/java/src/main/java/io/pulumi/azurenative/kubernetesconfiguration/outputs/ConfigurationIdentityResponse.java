@@ -11,8 +11,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ConfigurationIdentityResponse {
+    /**
+     * The principal id of the system assigned identity which is used by the configuration.
+     * 
+     */
     private final String principalId;
+    /**
+     * The tenant id of the system assigned identity which is used by the configuration.
+     * 
+     */
     private final String tenantId;
+    /**
+     * The type of identity used for the configuration. Type 'SystemAssigned' will use an implicitly created identity. Type 'None' will not use Managed Identity for the configuration.
+     * 
+     */
     private final @Nullable String type;
 
     @OutputCustomType.Constructor({"principalId","tenantId","type"})
@@ -25,12 +37,24 @@ public final class ConfigurationIdentityResponse {
         this.type = type;
     }
 
+    /**
+     * The principal id of the system assigned identity which is used by the configuration.
+     * 
+     */
     public String getPrincipalId() {
         return this.principalId;
     }
+    /**
+     * The tenant id of the system assigned identity which is used by the configuration.
+     * 
+     */
     public String getTenantId() {
         return this.tenantId;
     }
+    /**
+     * The type of identity used for the configuration. Type 'SystemAssigned' will use an implicitly created identity. Type 'None' will not use Managed Identity for the configuration.
+     * 
+     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

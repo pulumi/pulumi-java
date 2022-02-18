@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A function object, containing all information associated with the named function. All functions are contained under a streaming job.
+ * 
+ */
 public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FunctionArgs Empty = new FunctionArgs();
 
+    /**
+     * Resource name
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -22,6 +30,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The properties that are associated with a function.
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<ScalarFunctionPropertiesArgs> properties;
 

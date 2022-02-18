@@ -12,6 +12,10 @@ public final class GetSqlResourceSqlTriggerArgs extends io.pulumi.resources.Invo
 
     public static final GetSqlResourceSqlTriggerArgs Empty = new GetSqlResourceSqlTriggerArgs();
 
+    /**
+     * Cosmos DB database account name.
+     * 
+     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -19,6 +23,10 @@ public final class GetSqlResourceSqlTriggerArgs extends io.pulumi.resources.Invo
         return this.accountName;
     }
 
+    /**
+     * Cosmos DB container name.
+     * 
+     */
     @InputImport(name="containerName", required=true)
     private final String containerName;
 
@@ -26,6 +34,10 @@ public final class GetSqlResourceSqlTriggerArgs extends io.pulumi.resources.Invo
         return this.containerName;
     }
 
+    /**
+     * Cosmos DB database name.
+     * 
+     */
     @InputImport(name="databaseName", required=true)
     private final String databaseName;
 
@@ -33,6 +45,10 @@ public final class GetSqlResourceSqlTriggerArgs extends io.pulumi.resources.Invo
         return this.databaseName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -40,6 +56,10 @@ public final class GetSqlResourceSqlTriggerArgs extends io.pulumi.resources.Invo
         return this.resourceGroupName;
     }
 
+    /**
+     * Cosmos DB trigger name.
+     * 
+     */
     @InputImport(name="triggerName", required=true)
     private final String triggerName;
 

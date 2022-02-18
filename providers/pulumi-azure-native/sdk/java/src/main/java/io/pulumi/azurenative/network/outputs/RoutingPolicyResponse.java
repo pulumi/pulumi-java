@@ -10,8 +10,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RoutingPolicyResponse {
+    /**
+     * List of all destinations which this routing policy is applicable to (for example: Internet, PrivateTraffic).
+     * 
+     */
     private final List<String> destinations;
+    /**
+     * The unique name for the routing policy.
+     * 
+     */
     private final String name;
+    /**
+     * The next hop resource id on which this routing policy is applicable to.
+     * 
+     */
     private final String nextHop;
 
     @OutputCustomType.Constructor({"destinations","name","nextHop"})
@@ -24,12 +36,24 @@ public final class RoutingPolicyResponse {
         this.nextHop = Objects.requireNonNull(nextHop);
     }
 
+    /**
+     * List of all destinations which this routing policy is applicable to (for example: Internet, PrivateTraffic).
+     * 
+     */
     public List<String> getDestinations() {
         return this.destinations;
     }
+    /**
+     * The unique name for the routing policy.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The next hop resource id on which this routing policy is applicable to.
+     * 
+     */
     public String getNextHop() {
         return this.nextHop;
     }

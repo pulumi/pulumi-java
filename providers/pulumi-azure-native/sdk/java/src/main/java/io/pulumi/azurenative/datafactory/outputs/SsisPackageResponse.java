@@ -14,13 +14,46 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SsisPackageResponse {
+    /**
+     * Metadata description.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * Folder id which contains package.
+     * 
+     */
     private final @Nullable Double folderId;
+    /**
+     * Metadata id.
+     * 
+     */
     private final @Nullable Double id;
+    /**
+     * Metadata name.
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * Parameters in package
+     * 
+     */
     private final @Nullable List<SsisParameterResponse> parameters;
+    /**
+     * Project id which contains package.
+     * 
+     */
     private final @Nullable Double projectId;
+    /**
+     * Project version which contains package.
+     * 
+     */
     private final @Nullable Double projectVersion;
+    /**
+     * The type of SSIS object metadata.
+     * Expected value is 'Package'.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"description","folderId","id","name","parameters","projectId","projectVersion","type"})
@@ -43,27 +76,60 @@ public final class SsisPackageResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Metadata description.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * Folder id which contains package.
+     * 
+     */
     public Optional<Double> getFolderId() {
         return Optional.ofNullable(this.folderId);
     }
+    /**
+     * Metadata id.
+     * 
+     */
     public Optional<Double> getId() {
         return Optional.ofNullable(this.id);
     }
+    /**
+     * Metadata name.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * Parameters in package
+     * 
+     */
     public List<SsisParameterResponse> getParameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
+    /**
+     * Project id which contains package.
+     * 
+     */
     public Optional<Double> getProjectId() {
         return Optional.ofNullable(this.projectId);
     }
+    /**
+     * Project version which contains package.
+     * 
+     */
     public Optional<Double> getProjectVersion() {
         return Optional.ofNullable(this.projectVersion);
     }
+    /**
+     * The type of SSIS object metadata.
+     * Expected value is 'Package'.
+     * 
+     */
     public String getType() {
         return this.type;
     }

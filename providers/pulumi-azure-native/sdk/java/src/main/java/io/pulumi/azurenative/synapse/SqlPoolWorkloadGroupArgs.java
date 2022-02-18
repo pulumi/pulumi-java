@@ -16,6 +16,10 @@ public final class SqlPoolWorkloadGroupArgs extends io.pulumi.resources.Resource
 
     public static final SqlPoolWorkloadGroupArgs Empty = new SqlPoolWorkloadGroupArgs();
 
+    /**
+     * The workload group importance level.
+     * 
+     */
     @InputImport(name="importance")
     private final @Nullable Input<String> importance;
 
@@ -23,6 +27,10 @@ public final class SqlPoolWorkloadGroupArgs extends io.pulumi.resources.Resource
         return this.importance == null ? Input.empty() : this.importance;
     }
 
+    /**
+     * The workload group cap percentage resource.
+     * 
+     */
     @InputImport(name="maxResourcePercent", required=true)
     private final Input<Integer> maxResourcePercent;
 
@@ -30,6 +38,10 @@ public final class SqlPoolWorkloadGroupArgs extends io.pulumi.resources.Resource
         return this.maxResourcePercent;
     }
 
+    /**
+     * The workload group request maximum grant percentage.
+     * 
+     */
     @InputImport(name="maxResourcePercentPerRequest")
     private final @Nullable Input<Double> maxResourcePercentPerRequest;
 
@@ -37,6 +49,10 @@ public final class SqlPoolWorkloadGroupArgs extends io.pulumi.resources.Resource
         return this.maxResourcePercentPerRequest == null ? Input.empty() : this.maxResourcePercentPerRequest;
     }
 
+    /**
+     * The workload group minimum percentage resource.
+     * 
+     */
     @InputImport(name="minResourcePercent", required=true)
     private final Input<Integer> minResourcePercent;
 
@@ -44,6 +60,10 @@ public final class SqlPoolWorkloadGroupArgs extends io.pulumi.resources.Resource
         return this.minResourcePercent;
     }
 
+    /**
+     * The workload group request minimum grant percentage.
+     * 
+     */
     @InputImport(name="minResourcePercentPerRequest", required=true)
     private final Input<Double> minResourcePercentPerRequest;
 
@@ -51,6 +71,10 @@ public final class SqlPoolWorkloadGroupArgs extends io.pulumi.resources.Resource
         return this.minResourcePercentPerRequest;
     }
 
+    /**
+     * The workload group query execution timeout.
+     * 
+     */
     @InputImport(name="queryExecutionTimeout")
     private final @Nullable Input<Integer> queryExecutionTimeout;
 
@@ -58,6 +82,10 @@ public final class SqlPoolWorkloadGroupArgs extends io.pulumi.resources.Resource
         return this.queryExecutionTimeout == null ? Input.empty() : this.queryExecutionTimeout;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -65,6 +93,10 @@ public final class SqlPoolWorkloadGroupArgs extends io.pulumi.resources.Resource
         return this.resourceGroupName;
     }
 
+    /**
+     * SQL pool name
+     * 
+     */
     @InputImport(name="sqlPoolName", required=true)
     private final Input<String> sqlPoolName;
 
@@ -72,6 +104,10 @@ public final class SqlPoolWorkloadGroupArgs extends io.pulumi.resources.Resource
         return this.sqlPoolName;
     }
 
+    /**
+     * The name of the workload group.
+     * 
+     */
     @InputImport(name="workloadGroupName")
     private final @Nullable Input<String> workloadGroupName;
 
@@ -79,6 +115,10 @@ public final class SqlPoolWorkloadGroupArgs extends io.pulumi.resources.Resource
         return this.workloadGroupName == null ? Input.empty() : this.workloadGroupName;
     }
 
+    /**
+     * The name of the workspace
+     * 
+     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

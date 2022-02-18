@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Query results for table insights query.
+ * 
+ */
 public final class InsightsTableResultResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final InsightsTableResultResponse Empty = new InsightsTableResultResponse();
 
+    /**
+     * Columns Metadata of the table
+     * 
+     */
     @InputImport(name="columns")
     private final @Nullable List<InsightsTableResultResponseColumns> columns;
 
@@ -23,6 +31,10 @@ public final class InsightsTableResultResponse extends io.pulumi.resources.Invok
         return this.columns == null ? List.of() : this.columns;
     }
 
+    /**
+     * Rows data of the table
+     * 
+     */
     @InputImport(name="rows")
     private final @Nullable List<List<String>> rows;
 

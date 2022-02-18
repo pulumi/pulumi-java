@@ -23,111 +23,268 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Virtual Network resource.
+ * API Version: 2020-11-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:network:VirtualNetwork test-vnet /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:network:VirtualNetwork")
 public class VirtualNetwork extends io.pulumi.resources.CustomResource {
+    /**
+     * The AddressSpace that contains an array of IP address ranges that can be used by subnets.
+     * 
+     */
     @OutputExport(name="addressSpace", type=AddressSpaceResponse.class, parameters={})
     private Output</* @Nullable */ AddressSpaceResponse> addressSpace;
 
+    /**
+     * @return The AddressSpace that contains an array of IP address ranges that can be used by subnets.
+     * 
+     */
     public Output</* @Nullable */ AddressSpaceResponse> getAddressSpace() {
         return this.addressSpace;
     }
+    /**
+     * Bgp Communities sent over ExpressRoute with each route corresponding to a prefix in this VNET.
+     * 
+     */
     @OutputExport(name="bgpCommunities", type=VirtualNetworkBgpCommunitiesResponse.class, parameters={})
     private Output</* @Nullable */ VirtualNetworkBgpCommunitiesResponse> bgpCommunities;
 
+    /**
+     * @return Bgp Communities sent over ExpressRoute with each route corresponding to a prefix in this VNET.
+     * 
+     */
     public Output</* @Nullable */ VirtualNetworkBgpCommunitiesResponse> getBgpCommunities() {
         return this.bgpCommunities;
     }
+    /**
+     * The DDoS protection plan associated with the virtual network.
+     * 
+     */
     @OutputExport(name="ddosProtectionPlan", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> ddosProtectionPlan;
 
+    /**
+     * @return The DDoS protection plan associated with the virtual network.
+     * 
+     */
     public Output</* @Nullable */ SubResourceResponse> getDdosProtectionPlan() {
         return this.ddosProtectionPlan;
     }
+    /**
+     * The dhcpOptions that contains an array of DNS servers available to VMs deployed in the virtual network.
+     * 
+     */
     @OutputExport(name="dhcpOptions", type=DhcpOptionsResponse.class, parameters={})
     private Output</* @Nullable */ DhcpOptionsResponse> dhcpOptions;
 
+    /**
+     * @return The dhcpOptions that contains an array of DNS servers available to VMs deployed in the virtual network.
+     * 
+     */
     public Output</* @Nullable */ DhcpOptionsResponse> getDhcpOptions() {
         return this.dhcpOptions;
     }
+    /**
+     * Indicates if DDoS protection is enabled for all the protected resources in the virtual network. It requires a DDoS protection plan associated with the resource.
+     * 
+     */
     @OutputExport(name="enableDdosProtection", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableDdosProtection;
 
+    /**
+     * @return Indicates if DDoS protection is enabled for all the protected resources in the virtual network. It requires a DDoS protection plan associated with the resource.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getEnableDdosProtection() {
         return this.enableDdosProtection;
     }
+    /**
+     * Indicates if VM protection is enabled for all the subnets in the virtual network.
+     * 
+     */
     @OutputExport(name="enableVmProtection", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableVmProtection;
 
+    /**
+     * @return Indicates if VM protection is enabled for all the subnets in the virtual network.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getEnableVmProtection() {
         return this.enableVmProtection;
     }
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * The extended location of the virtual network.
+     * 
+     */
     @OutputExport(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
     private Output</* @Nullable */ ExtendedLocationResponse> extendedLocation;
 
+    /**
+     * @return The extended location of the virtual network.
+     * 
+     */
     public Output</* @Nullable */ ExtendedLocationResponse> getExtendedLocation() {
         return this.extendedLocation;
     }
+    /**
+     * Array of IpAllocation which reference this VNET.
+     * 
+     */
     @OutputExport(name="ipAllocations", type=List.class, parameters={SubResourceResponse.class})
     private Output</* @Nullable */ List<SubResourceResponse>> ipAllocations;
 
+    /**
+     * @return Array of IpAllocation which reference this VNET.
+     * 
+     */
     public Output</* @Nullable */ List<SubResourceResponse>> getIpAllocations() {
         return this.ipAllocations;
     }
+    /**
+     * Resource location.
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * Resource name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The provisioning state of the virtual network resource.
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning state of the virtual network resource.
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The resourceGuid property of the Virtual Network resource.
+     * 
+     */
     @OutputExport(name="resourceGuid", type=String.class, parameters={})
     private Output<String> resourceGuid;
 
+    /**
+     * @return The resourceGuid property of the Virtual Network resource.
+     * 
+     */
     public Output<String> getResourceGuid() {
         return this.resourceGuid;
     }
+    /**
+     * A list of subnets in a Virtual Network.
+     * 
+     */
     @OutputExport(name="subnets", type=List.class, parameters={SubnetResponse.class})
     private Output</* @Nullable */ List<SubnetResponse>> subnets;
 
+    /**
+     * @return A list of subnets in a Virtual Network.
+     * 
+     */
     public Output</* @Nullable */ List<SubnetResponse>> getSubnets() {
         return this.subnets;
     }
+    /**
+     * Resource tags.
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Resource type.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * A list of peerings in a Virtual Network.
+     * 
+     */
     @OutputExport(name="virtualNetworkPeerings", type=List.class, parameters={VirtualNetworkPeeringResponse.class})
     private Output</* @Nullable */ List<VirtualNetworkPeeringResponse>> virtualNetworkPeerings;
 
+    /**
+     * @return A list of peerings in a Virtual Network.
+     * 
+     */
     public Output</* @Nullable */ List<VirtualNetworkPeeringResponse>> getVirtualNetworkPeerings() {
         return this.virtualNetworkPeerings;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public VirtualNetwork(String name, VirtualNetworkArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:VirtualNetwork", name, args == null ? VirtualNetworkArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -184,6 +341,14 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static VirtualNetwork get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new VirtualNetwork(name, id, options);
     }

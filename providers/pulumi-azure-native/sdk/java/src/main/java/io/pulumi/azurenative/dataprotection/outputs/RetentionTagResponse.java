@@ -9,8 +9,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RetentionTagResponse {
+    /**
+     * Retention Tag version.
+     * 
+     */
     private final String eTag;
+    /**
+     * Retention Tag version.
+     * 
+     */
     private final String id;
+    /**
+     * Retention Tag Name to relate it to retention rule.
+     * 
+     */
     private final String tagName;
 
     @OutputCustomType.Constructor({"eTag","id","tagName"})
@@ -23,12 +35,24 @@ public final class RetentionTagResponse {
         this.tagName = Objects.requireNonNull(tagName);
     }
 
+    /**
+     * Retention Tag version.
+     * 
+     */
     public String getETag() {
         return this.eTag;
     }
+    /**
+     * Retention Tag version.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Retention Tag Name to relate it to retention rule.
+     * 
+     */
     public String getTagName() {
         return this.tagName;
     }

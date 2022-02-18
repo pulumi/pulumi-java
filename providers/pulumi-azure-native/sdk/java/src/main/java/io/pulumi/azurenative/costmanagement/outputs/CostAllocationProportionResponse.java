@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CostAllocationProportionResponse {
+    /**
+     * Target resource for cost allocation
+     * 
+     */
     private final String name;
+    /**
+     * Percentage of source cost to allocate to this resource. This value can be specified to two decimal places and the total percentage of all resources in this rule must sum to 100.00.
+     * 
+     */
     private final Double percentage;
 
     @OutputCustomType.Constructor({"name","percentage"})
@@ -21,9 +29,17 @@ public final class CostAllocationProportionResponse {
         this.percentage = Objects.requireNonNull(percentage);
     }
 
+    /**
+     * Target resource for cost allocation
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Percentage of source cost to allocate to this resource. This value can be specified to two decimal places and the total percentage of all resources in this rule must sum to 100.00.
+     * 
+     */
     public Double getPercentage() {
         return this.percentage;
     }

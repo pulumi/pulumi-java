@@ -24,6 +24,10 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AlertRuleArgs Empty = new AlertRuleArgs();
 
+    /**
+     * action that is performed when the alert rule becomes active, and when an alert condition is resolved.
+     * 
+     */
     @InputImport(name="action")
     private final @Nullable Input<Either<RuleEmailActionArgs,RuleWebhookActionArgs>> action;
 
@@ -31,6 +35,10 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.action == null ? Input.empty() : this.action;
     }
 
+    /**
+     * the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
+     * 
+     */
     @InputImport(name="actions")
     private final @Nullable Input<List<Either<RuleEmailActionArgs,RuleWebhookActionArgs>>> actions;
 
@@ -38,6 +46,10 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.actions == null ? Input.empty() : this.actions;
     }
 
+    /**
+     * the condition that results in the alert rule being activated.
+     * 
+     */
     @InputImport(name="condition", required=true)
     private final Input<Object> condition;
 
@@ -45,6 +57,10 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.condition;
     }
 
+    /**
+     * the description of the alert rule that will be included in the alert email.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -52,6 +68,10 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * the flag that indicates whether the alert rule is enabled.
+     * 
+     */
     @InputImport(name="isEnabled", required=true)
     private final Input<Boolean> isEnabled;
 
@@ -59,6 +79,10 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.isEnabled;
     }
 
+    /**
+     * Resource location
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -66,6 +90,10 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * the name of the alert rule.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -73,6 +101,10 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
+    /**
+     * the provisioning state.
+     * 
+     */
     @InputImport(name="provisioningState")
     private final @Nullable Input<String> provisioningState;
 
@@ -80,6 +112,10 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -87,6 +123,10 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the rule.
+     * 
+     */
     @InputImport(name="ruleName")
     private final @Nullable Input<String> ruleName;
 
@@ -94,6 +134,10 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.ruleName == null ? Input.empty() : this.ruleName;
     }
 
+    /**
+     * Resource tags
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

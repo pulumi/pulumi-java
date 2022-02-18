@@ -12,6 +12,10 @@ public final class ListStaticSiteBuildAppSettingsArgs extends io.pulumi.resource
 
     public static final ListStaticSiteBuildAppSettingsArgs Empty = new ListStaticSiteBuildAppSettingsArgs();
 
+    /**
+     * The stage site identifier.
+     * 
+     */
     @InputImport(name="environmentName", required=true)
     private final String environmentName;
 
@@ -19,6 +23,10 @@ public final class ListStaticSiteBuildAppSettingsArgs extends io.pulumi.resource
         return this.environmentName;
     }
 
+    /**
+     * Name of the static site.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -26,6 +34,10 @@ public final class ListStaticSiteBuildAppSettingsArgs extends io.pulumi.resource
         return this.name;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

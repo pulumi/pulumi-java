@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The profile-level monitoring status of the Traffic Manager profile.
+     * 
+     */
     @EnumType
     public enum ProfileMonitorStatus {
         CheckingEndpoints("CheckingEndpoints"),

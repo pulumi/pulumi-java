@@ -14,6 +14,10 @@ public final class GlobalReachConnectionArgs extends io.pulumi.resources.Resourc
 
     public static final GlobalReachConnectionArgs Empty = new GlobalReachConnectionArgs();
 
+    /**
+     * Authorization key from the peer express route used for the global reach connection
+     * 
+     */
     @InputImport(name="authorizationKey")
     private final @Nullable Input<String> authorizationKey;
 
@@ -21,6 +25,10 @@ public final class GlobalReachConnectionArgs extends io.pulumi.resources.Resourc
         return this.authorizationKey == null ? Input.empty() : this.authorizationKey;
     }
 
+    /**
+     * Name of the global reach connection in the private cloud
+     * 
+     */
     @InputImport(name="globalReachConnectionName")
     private final @Nullable Input<String> globalReachConnectionName;
 
@@ -28,6 +36,10 @@ public final class GlobalReachConnectionArgs extends io.pulumi.resources.Resourc
         return this.globalReachConnectionName == null ? Input.empty() : this.globalReachConnectionName;
     }
 
+    /**
+     * Identifier of the ExpressRoute Circuit to peer with in the global reach connection
+     * 
+     */
     @InputImport(name="peerExpressRouteCircuit")
     private final @Nullable Input<String> peerExpressRouteCircuit;
 
@@ -35,6 +47,10 @@ public final class GlobalReachConnectionArgs extends io.pulumi.resources.Resourc
         return this.peerExpressRouteCircuit == null ? Input.empty() : this.peerExpressRouteCircuit;
     }
 
+    /**
+     * The name of the private cloud.
+     * 
+     */
     @InputImport(name="privateCloudName", required=true)
     private final Input<String> privateCloudName;
 
@@ -42,6 +58,10 @@ public final class GlobalReachConnectionArgs extends io.pulumi.resources.Resourc
         return this.privateCloudName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

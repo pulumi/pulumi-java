@@ -16,19 +16,75 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DataDiskResponse {
+    /**
+     * Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**
+     * 
+     */
     private final @Nullable String caching;
+    /**
+     * Specifies how the virtual machine should be created.<br><br> Possible values are:<br><br> **Attach** \u2013 This value is used when you are using a specialized disk to create the virtual machine.<br><br> **FromImage** \u2013 This value is used when you are using an image to create the virtual machine. If you are using a platform image, you also use the imageReference element described above. If you are using a marketplace image, you  also use the plan element previously described.
+     * 
+     */
     private final String createOption;
+    /**
+     * Specifies whether data disk should be deleted or detached upon VM deletion.<br><br> Possible values: <br><br> **Delete** If this value is used, the data disk is deleted when VM is deleted.<br><br> **Detach** If this value is used, the data disk is retained after VM is deleted.<br><br> The default value is set to **detach**
+     * 
+     */
     private final @Nullable String deleteOption;
+    /**
+     * Specifies the detach behavior to be used while detaching a disk or which is already in the process of detachment from the virtual machine. Supported values: **ForceDetach**. <br><br> detachOption: **ForceDetach** is applicable only for managed data disks. If a previous detachment attempt of the data disk did not complete due to an unexpected failure from the virtual machine and the disk is still not released then use force-detach as a last resort option to detach the disk forcibly from the VM. All writes might not have been flushed when using this detach behavior. <br><br> This feature is still in preview mode and is not supported for VirtualMachineScaleSet. To force-detach a data disk update toBeDetached to 'true' along with setting detachOption: 'ForceDetach'.
+     * 
+     */
     private final @Nullable String detachOption;
+    /**
+     * Specifies the Read-Write IOPS for the managed disk when StorageAccountType is UltraSSD_LRS. Returned only for VirtualMachine ScaleSet VM disks. Can be updated only via updates to the VirtualMachine Scale Set.
+     * 
+     */
     private final Double diskIOPSReadWrite;
+    /**
+     * Specifies the bandwidth in MB per second for the managed disk when StorageAccountType is UltraSSD_LRS. Returned only for VirtualMachine ScaleSet VM disks. Can be updated only via updates to the VirtualMachine Scale Set.
+     * 
+     */
     private final Double diskMBpsReadWrite;
+    /**
+     * Specifies the size of an empty data disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB
+     * 
+     */
     private final @Nullable Integer diskSizeGB;
+    /**
+     * The source user image virtual hard disk. The virtual hard disk will be copied before being attached to the virtual machine. If SourceImage is provided, the destination virtual hard drive must not exist.
+     * 
+     */
     private final @Nullable VirtualHardDiskResponse image;
+    /**
+     * Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.
+     * 
+     */
     private final Integer lun;
+    /**
+     * The managed disk parameters.
+     * 
+     */
     private final @Nullable ManagedDiskParametersResponse managedDisk;
+    /**
+     * The disk name.
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * Specifies whether the data disk is in process of detachment from the VirtualMachine/VirtualMachineScaleset
+     * 
+     */
     private final @Nullable Boolean toBeDetached;
+    /**
+     * The virtual hard disk.
+     * 
+     */
     private final @Nullable VirtualHardDiskResponse vhd;
+    /**
+     * Specifies whether writeAccelerator should be enabled or disabled on the disk.
+     * 
+     */
     private final @Nullable Boolean writeAcceleratorEnabled;
 
     @OutputCustomType.Constructor({"caching","createOption","deleteOption","detachOption","diskIOPSReadWrite","diskMBpsReadWrite","diskSizeGB","image","lun","managedDisk","name","toBeDetached","vhd","writeAcceleratorEnabled"})
@@ -63,45 +119,101 @@ public final class DataDiskResponse {
         this.writeAcceleratorEnabled = writeAcceleratorEnabled;
     }
 
+    /**
+     * Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**
+     * 
+     */
     public Optional<String> getCaching() {
         return Optional.ofNullable(this.caching);
     }
+    /**
+     * Specifies how the virtual machine should be created.<br><br> Possible values are:<br><br> **Attach** \u2013 This value is used when you are using a specialized disk to create the virtual machine.<br><br> **FromImage** \u2013 This value is used when you are using an image to create the virtual machine. If you are using a platform image, you also use the imageReference element described above. If you are using a marketplace image, you  also use the plan element previously described.
+     * 
+     */
     public String getCreateOption() {
         return this.createOption;
     }
+    /**
+     * Specifies whether data disk should be deleted or detached upon VM deletion.<br><br> Possible values: <br><br> **Delete** If this value is used, the data disk is deleted when VM is deleted.<br><br> **Detach** If this value is used, the data disk is retained after VM is deleted.<br><br> The default value is set to **detach**
+     * 
+     */
     public Optional<String> getDeleteOption() {
         return Optional.ofNullable(this.deleteOption);
     }
+    /**
+     * Specifies the detach behavior to be used while detaching a disk or which is already in the process of detachment from the virtual machine. Supported values: **ForceDetach**. <br><br> detachOption: **ForceDetach** is applicable only for managed data disks. If a previous detachment attempt of the data disk did not complete due to an unexpected failure from the virtual machine and the disk is still not released then use force-detach as a last resort option to detach the disk forcibly from the VM. All writes might not have been flushed when using this detach behavior. <br><br> This feature is still in preview mode and is not supported for VirtualMachineScaleSet. To force-detach a data disk update toBeDetached to 'true' along with setting detachOption: 'ForceDetach'.
+     * 
+     */
     public Optional<String> getDetachOption() {
         return Optional.ofNullable(this.detachOption);
     }
+    /**
+     * Specifies the Read-Write IOPS for the managed disk when StorageAccountType is UltraSSD_LRS. Returned only for VirtualMachine ScaleSet VM disks. Can be updated only via updates to the VirtualMachine Scale Set.
+     * 
+     */
     public Double getDiskIOPSReadWrite() {
         return this.diskIOPSReadWrite;
     }
+    /**
+     * Specifies the bandwidth in MB per second for the managed disk when StorageAccountType is UltraSSD_LRS. Returned only for VirtualMachine ScaleSet VM disks. Can be updated only via updates to the VirtualMachine Scale Set.
+     * 
+     */
     public Double getDiskMBpsReadWrite() {
         return this.diskMBpsReadWrite;
     }
+    /**
+     * Specifies the size of an empty data disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB
+     * 
+     */
     public Optional<Integer> getDiskSizeGB() {
         return Optional.ofNullable(this.diskSizeGB);
     }
+    /**
+     * The source user image virtual hard disk. The virtual hard disk will be copied before being attached to the virtual machine. If SourceImage is provided, the destination virtual hard drive must not exist.
+     * 
+     */
     public Optional<VirtualHardDiskResponse> getImage() {
         return Optional.ofNullable(this.image);
     }
+    /**
+     * Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.
+     * 
+     */
     public Integer getLun() {
         return this.lun;
     }
+    /**
+     * The managed disk parameters.
+     * 
+     */
     public Optional<ManagedDiskParametersResponse> getManagedDisk() {
         return Optional.ofNullable(this.managedDisk);
     }
+    /**
+     * The disk name.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * Specifies whether the data disk is in process of detachment from the VirtualMachine/VirtualMachineScaleset
+     * 
+     */
     public Optional<Boolean> getToBeDetached() {
         return Optional.ofNullable(this.toBeDetached);
     }
+    /**
+     * The virtual hard disk.
+     * 
+     */
     public Optional<VirtualHardDiskResponse> getVhd() {
         return Optional.ofNullable(this.vhd);
     }
+    /**
+     * Specifies whether writeAccelerator should be enabled or disabled on the disk.
+     * 
+     */
     public Optional<Boolean> getWriteAcceleratorEnabled() {
         return Optional.ofNullable(this.writeAcceleratorEnabled);
     }

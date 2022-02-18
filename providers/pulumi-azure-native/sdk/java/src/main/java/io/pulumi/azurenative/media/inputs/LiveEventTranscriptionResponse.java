@@ -13,10 +13,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes the transcription tracks in the output of a live event, generated using speech-to-text transcription. This property is reserved for future use, any value set on this property will be ignored.
+ * 
+ */
 public final class LiveEventTranscriptionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LiveEventTranscriptionResponse Empty = new LiveEventTranscriptionResponse();
 
+    /**
+     * Provides a mechanism to select the audio track in the input live feed, to which speech-to-text transcription is applied. This property is reserved for future use, any value set on this property will be ignored.
+     * 
+     */
     @InputImport(name="inputTrackSelection")
     private final @Nullable List<LiveEventInputTrackSelectionResponse> inputTrackSelection;
 
@@ -24,6 +32,10 @@ public final class LiveEventTranscriptionResponse extends io.pulumi.resources.In
         return this.inputTrackSelection == null ? List.of() : this.inputTrackSelection;
     }
 
+    /**
+     * Specifies the language (locale) to be used for speech-to-text transcription – it should match the spoken language in the audio track. The value should be in BCP-47 format (e.g: 'en-US'). See https://go.microsoft.com/fwlink/?linkid=2133742 for more information about the live transcription feature and the list of supported languages.
+     * 
+     */
     @InputImport(name="language")
     private final @Nullable String language;
 
@@ -31,6 +43,10 @@ public final class LiveEventTranscriptionResponse extends io.pulumi.resources.In
         return this.language == null ? Optional.empty() : Optional.ofNullable(this.language);
     }
 
+    /**
+     * Describes a transcription track in the output of a live event, generated using speech-to-text transcription. This property is reserved for future use, any value set on this property will be ignored.
+     * 
+     */
     @InputImport(name="outputTranscriptionTrack")
     private final @Nullable LiveEventOutputTranscriptionTrackResponse outputTranscriptionTrack;
 

@@ -17,6 +17,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
 
     public static final PrivateEndpointConnectionArgs Empty = new PrivateEndpointConnectionArgs();
 
+    /**
+     * The name of the private link policy in Azure AD.
+     * 
+     */
     @InputImport(name="policyName", required=true)
     private final Input<String> policyName;
 
@@ -24,6 +28,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.policyName;
     }
 
+    /**
+     * Properties of the private endpoint object.
+     * 
+     */
     @InputImport(name="privateEndpoint")
     private final @Nullable Input<PrivateEndpointArgs> privateEndpoint;
 
@@ -31,6 +39,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.privateEndpoint == null ? Input.empty() : this.privateEndpoint;
     }
 
+    /**
+     * The PrivateEndpointConnection name.
+     * 
+     */
     @InputImport(name="privateEndpointConnectionName")
     private final @Nullable Input<String> privateEndpointConnectionName;
 
@@ -38,6 +50,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.privateEndpointConnectionName == null ? Input.empty() : this.privateEndpointConnectionName;
     }
 
+    /**
+     * Updated tag information to set into the PrivateLinkConnection instance.
+     * 
+     */
     @InputImport(name="privateLinkConnectionTags")
     private final @Nullable Input<TagsResourceArgs> privateLinkConnectionTags;
 
@@ -45,6 +61,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.privateLinkConnectionTags == null ? Input.empty() : this.privateLinkConnectionTags;
     }
 
+    /**
+     * Approval state of the private link connection.
+     * 
+     */
     @InputImport(name="privateLinkServiceConnectionState")
     private final @Nullable Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
@@ -52,6 +72,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.privateLinkServiceConnectionState == null ? Input.empty() : this.privateLinkServiceConnectionState;
     }
 
+    /**
+     * Name of an Azure resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

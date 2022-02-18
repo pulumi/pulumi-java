@@ -12,6 +12,10 @@ public final class ListWebAppSyncFunctionTriggersSlotArgs extends io.pulumi.reso
 
     public static final ListWebAppSyncFunctionTriggersSlotArgs Empty = new ListWebAppSyncFunctionTriggersSlotArgs();
 
+    /**
+     * Name of the app.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -19,6 +23,10 @@ public final class ListWebAppSyncFunctionTriggersSlotArgs extends io.pulumi.reso
         return this.name;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class ListWebAppSyncFunctionTriggersSlotArgs extends io.pulumi.reso
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of the deployment slot.
+     * 
+     */
     @InputImport(name="slot", required=true)
     private final String slot;
 

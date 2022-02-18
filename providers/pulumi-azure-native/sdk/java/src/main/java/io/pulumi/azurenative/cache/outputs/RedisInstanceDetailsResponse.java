@@ -11,10 +11,30 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RedisInstanceDetailsResponse {
+    /**
+     * Specifies whether the instance is a master node.
+     * 
+     */
     private final Boolean isMaster;
+    /**
+     * If enableNonSslPort is true, provides Redis instance Non-SSL port.
+     * 
+     */
     private final Integer nonSslPort;
+    /**
+     * If clustering is enabled, the Shard ID of Redis Instance
+     * 
+     */
     private final Integer shardId;
+    /**
+     * Redis instance SSL port.
+     * 
+     */
     private final Integer sslPort;
+    /**
+     * If the Cache uses availability zones, specifies availability zone where this instance is located.
+     * 
+     */
     private final String zone;
 
     @OutputCustomType.Constructor({"isMaster","nonSslPort","shardId","sslPort","zone"})
@@ -31,18 +51,38 @@ public final class RedisInstanceDetailsResponse {
         this.zone = Objects.requireNonNull(zone);
     }
 
+    /**
+     * Specifies whether the instance is a master node.
+     * 
+     */
     public Boolean getIsMaster() {
         return this.isMaster;
     }
+    /**
+     * If enableNonSslPort is true, provides Redis instance Non-SSL port.
+     * 
+     */
     public Integer getNonSslPort() {
         return this.nonSslPort;
     }
+    /**
+     * If clustering is enabled, the Shard ID of Redis Instance
+     * 
+     */
     public Integer getShardId() {
         return this.shardId;
     }
+    /**
+     * Redis instance SSL port.
+     * 
+     */
     public Integer getSslPort() {
         return this.sslPort;
     }
+    /**
+     * If the Cache uses availability zones, specifies availability zone where this instance is located.
+     * 
+     */
     public String getZone() {
         return this.zone;
     }

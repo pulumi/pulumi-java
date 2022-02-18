@@ -12,6 +12,10 @@ public final class GetCloudEndpointArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetCloudEndpointArgs Empty = new GetCloudEndpointArgs();
 
+    /**
+     * Name of Cloud Endpoint object.
+     * 
+     */
     @InputImport(name="cloudEndpointName", required=true)
     private final String cloudEndpointName;
 
@@ -19,6 +23,10 @@ public final class GetCloudEndpointArgs extends io.pulumi.resources.InvokeArgs {
         return this.cloudEndpointName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetCloudEndpointArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of Storage Sync Service resource.
+     * 
+     */
     @InputImport(name="storageSyncServiceName", required=true)
     private final String storageSyncServiceName;
 
@@ -33,6 +45,10 @@ public final class GetCloudEndpointArgs extends io.pulumi.resources.InvokeArgs {
         return this.storageSyncServiceName;
     }
 
+    /**
+     * Name of Sync Group resource.
+     * 
+     */
     @InputImport(name="syncGroupName", required=true)
     private final String syncGroupName;
 

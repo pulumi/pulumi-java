@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The policy definition group.
+ * 
+ */
 public final class PolicyDefinitionGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PolicyDefinitionGroupArgs Empty = new PolicyDefinitionGroupArgs();
 
+    /**
+     * A resource ID of a resource that contains additional metadata about the group.
+     * 
+     */
     @InputImport(name="additionalMetadataId")
     private final @Nullable Input<String> additionalMetadataId;
 
@@ -21,6 +29,10 @@ public final class PolicyDefinitionGroupArgs extends io.pulumi.resources.Resourc
         return this.additionalMetadataId == null ? Input.empty() : this.additionalMetadataId;
     }
 
+    /**
+     * The group's category.
+     * 
+     */
     @InputImport(name="category")
     private final @Nullable Input<String> category;
 
@@ -28,6 +40,10 @@ public final class PolicyDefinitionGroupArgs extends io.pulumi.resources.Resourc
         return this.category == null ? Input.empty() : this.category;
     }
 
+    /**
+     * The group's description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -35,6 +51,10 @@ public final class PolicyDefinitionGroupArgs extends io.pulumi.resources.Resourc
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The group's display name.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -42,6 +62,10 @@ public final class PolicyDefinitionGroupArgs extends io.pulumi.resources.Resourc
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The name of the group.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

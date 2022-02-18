@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Firmware type
+     * 
+     */
     @EnumType
     public enum FirmwareType {
         Bios("bios"),

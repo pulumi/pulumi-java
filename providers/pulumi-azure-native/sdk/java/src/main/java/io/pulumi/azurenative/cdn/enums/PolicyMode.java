@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Describes if it is in detection mode or prevention mode at policy level.
+     * 
+     */
     @EnumType
     public enum PolicyMode {
         Prevention("Prevention"),

@@ -11,10 +11,19 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Common settings field for backup management
+ * 
+ */
 public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SettingsArgs Empty = new SettingsArgs();
 
+    /**
+     * Workload compression flag. This has been added so that 'isSqlCompression'
+     * will be deprecated once clients upgrade to consider this flag.
+     * 
+     */
     @InputImport(name="isCompression")
     private final @Nullable Input<Boolean> isCompression;
 
@@ -22,6 +31,10 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
         return this.isCompression == null ? Input.empty() : this.isCompression;
     }
 
+    /**
+     * SQL compression flag
+     * 
+     */
     @InputImport(name="issqlcompression")
     private final @Nullable Input<Boolean> issqlcompression;
 
@@ -29,6 +42,10 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
         return this.issqlcompression == null ? Input.empty() : this.issqlcompression;
     }
 
+    /**
+     * TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".
+     * 
+     */
     @InputImport(name="timeZone")
     private final @Nullable Input<String> timeZone;
 

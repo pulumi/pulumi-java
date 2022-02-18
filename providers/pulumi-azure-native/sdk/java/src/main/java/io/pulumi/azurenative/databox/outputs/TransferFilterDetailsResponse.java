@@ -15,9 +15,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TransferFilterDetailsResponse {
+    /**
+     * Filter details to transfer Azure files.
+     * 
+     */
     private final @Nullable AzureFileFilterDetailsResponse azureFileFilterDetails;
+    /**
+     * Filter details to transfer blobs.
+     * 
+     */
     private final @Nullable BlobFilterDetailsResponse blobFilterDetails;
+    /**
+     * Type of the account of data.
+     * 
+     */
     private final String dataAccountType;
+    /**
+     * Details of the filter files to be used for data transfer.
+     * 
+     */
     private final @Nullable List<FilterFileDetailsResponse> filterFileDetails;
 
     @OutputCustomType.Constructor({"azureFileFilterDetails","blobFilterDetails","dataAccountType","filterFileDetails"})
@@ -32,15 +48,31 @@ public final class TransferFilterDetailsResponse {
         this.filterFileDetails = filterFileDetails;
     }
 
+    /**
+     * Filter details to transfer Azure files.
+     * 
+     */
     public Optional<AzureFileFilterDetailsResponse> getAzureFileFilterDetails() {
         return Optional.ofNullable(this.azureFileFilterDetails);
     }
+    /**
+     * Filter details to transfer blobs.
+     * 
+     */
     public Optional<BlobFilterDetailsResponse> getBlobFilterDetails() {
         return Optional.ofNullable(this.blobFilterDetails);
     }
+    /**
+     * Type of the account of data.
+     * 
+     */
     public String getDataAccountType() {
         return this.dataAccountType;
     }
+    /**
+     * Details of the filter files to be used for data transfer.
+     * 
+     */
     public List<FilterFileDetailsResponse> getFilterFileDetails() {
         return this.filterFileDetails == null ? List.of() : this.filterFileDetails;
     }

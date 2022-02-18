@@ -16,57 +16,142 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * A Content Key Policy resource.
+ * API Version: 2020-05-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:media:ContentKeyPolicy PolicyCreatedWithMultipleOptions /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contoso/providers/Microsoft.Media/mediaservices/contosomedia/contentKeyPolicies/PolicyCreatedWithMultipleOptions 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:media:ContentKeyPolicy")
 public class ContentKeyPolicy extends io.pulumi.resources.CustomResource {
+    /**
+     * The creation date of the Policy
+     * 
+     */
     @OutputExport(name="created", type=String.class, parameters={})
     private Output<String> created;
 
+    /**
+     * @return The creation date of the Policy
+     * 
+     */
     public Output<String> getCreated() {
         return this.created;
     }
+    /**
+     * A description for the Policy.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return A description for the Policy.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * The last modified date of the Policy
+     * 
+     */
     @OutputExport(name="lastModified", type=String.class, parameters={})
     private Output<String> lastModified;
 
+    /**
+     * @return The last modified date of the Policy
+     * 
+     */
     public Output<String> getLastModified() {
         return this.lastModified;
     }
+    /**
+     * The name of the resource
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The Key Policy options.
+     * 
+     */
     @OutputExport(name="options", type=List.class, parameters={ContentKeyPolicyOptionResponse.class})
     private Output<List<ContentKeyPolicyOptionResponse>> options;
 
+    /**
+     * @return The Key Policy options.
+     * 
+     */
     public Output<List<ContentKeyPolicyOptionResponse>> getOptions() {
         return this.options;
     }
+    /**
+     * The legacy Policy ID.
+     * 
+     */
     @OutputExport(name="policyId", type=String.class, parameters={})
     private Output<String> policyId;
 
+    /**
+     * @return The legacy Policy ID.
+     * 
+     */
     public Output<String> getPolicyId() {
         return this.policyId;
     }
+    /**
+     * The system metadata relating to this resource.
+     * 
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return The system metadata relating to this resource.
+     * 
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ContentKeyPolicy(String name, ContentKeyPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:media:ContentKeyPolicy", name, args == null ? ContentKeyPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -89,6 +174,14 @@ public class ContentKeyPolicy extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ContentKeyPolicy get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ContentKeyPolicy(name, id, options);
     }

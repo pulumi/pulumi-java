@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A machine reference with a hint of the machine's name and operating system.
+ * 
+ */
 public final class MachineReferenceWithHintsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MachineReferenceWithHintsResponse Empty = new MachineReferenceWithHintsResponse();
 
+    /**
+     * Last known display name.
+     * 
+     */
     @InputImport(name="displayNameHint", required=true)
     private final String displayNameHint;
 
@@ -19,6 +27,10 @@ public final class MachineReferenceWithHintsResponse extends io.pulumi.resources
         return this.displayNameHint;
     }
 
+    /**
+     * Resource URI.
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -26,6 +38,11 @@ public final class MachineReferenceWithHintsResponse extends io.pulumi.resources
         return this.id;
     }
 
+    /**
+     * Specifies the sub-class of the reference.
+     * Expected value is 'ref:machinewithhints'.
+     * 
+     */
     @InputImport(name="kind", required=true)
     private final String kind;
 
@@ -33,6 +50,10 @@ public final class MachineReferenceWithHintsResponse extends io.pulumi.resources
         return this.kind;
     }
 
+    /**
+     * Resource name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -40,6 +61,10 @@ public final class MachineReferenceWithHintsResponse extends io.pulumi.resources
         return this.name;
     }
 
+    /**
+     * Last known operating system family.
+     * 
+     */
     @InputImport(name="osFamilyHint", required=true)
     private final String osFamilyHint;
 
@@ -47,6 +72,10 @@ public final class MachineReferenceWithHintsResponse extends io.pulumi.resources
         return this.osFamilyHint;
     }
 
+    /**
+     * Resource type qualifier.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * VPN authentication types enabled for the VpnServerConfiguration.
+     * 
+     */
     @EnumType
     public enum VpnAuthenticationType {
         Certificate("Certificate"),

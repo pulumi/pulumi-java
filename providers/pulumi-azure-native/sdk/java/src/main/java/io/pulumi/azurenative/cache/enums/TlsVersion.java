@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The minimum TLS version for the cluster to support, e.g. '1.2'
+     * 
+     */
     @EnumType
     public enum TlsVersion {
         TlsVersion_1_0("1.0"),

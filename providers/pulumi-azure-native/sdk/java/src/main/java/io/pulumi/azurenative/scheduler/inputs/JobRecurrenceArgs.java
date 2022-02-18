@@ -17,6 +17,10 @@ public final class JobRecurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JobRecurrenceArgs Empty = new JobRecurrenceArgs();
 
+    /**
+     * Gets or sets the maximum number of times that the job should run.
+     * 
+     */
     @InputImport(name="count")
     private final @Nullable Input<Integer> count;
 
@@ -24,6 +28,10 @@ public final class JobRecurrenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.count == null ? Input.empty() : this.count;
     }
 
+    /**
+     * Gets or sets the time at which the job will complete.
+     * 
+     */
     @InputImport(name="endTime")
     private final @Nullable Input<String> endTime;
 
@@ -31,6 +39,10 @@ public final class JobRecurrenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.endTime == null ? Input.empty() : this.endTime;
     }
 
+    /**
+     * Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).
+     * 
+     */
     @InputImport(name="frequency")
     private final @Nullable Input<RecurrenceFrequency> frequency;
 
@@ -38,6 +50,10 @@ public final class JobRecurrenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.frequency == null ? Input.empty() : this.frequency;
     }
 
+    /**
+     * Gets or sets the interval between retries.
+     * 
+     */
     @InputImport(name="interval")
     private final @Nullable Input<Integer> interval;
 

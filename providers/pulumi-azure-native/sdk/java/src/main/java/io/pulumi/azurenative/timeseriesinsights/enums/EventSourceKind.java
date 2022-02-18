@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The kind of the event source.
+     * 
+     */
     @EnumType
     public enum EventSourceKind {
         Microsoft_EventHub("Microsoft.EventHub"),

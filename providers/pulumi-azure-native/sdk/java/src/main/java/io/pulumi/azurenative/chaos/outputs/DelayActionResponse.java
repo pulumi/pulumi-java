@@ -9,8 +9,21 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DelayActionResponse {
+    /**
+     * ISO8601 formatted string that represents a duration.
+     * 
+     */
     private final String duration;
+    /**
+     * String that represents a Capability URN.
+     * 
+     */
     private final String name;
+    /**
+     * Enum that discriminates between action models.
+     * Expected value is 'delay'.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"duration","name","type"})
@@ -23,12 +36,25 @@ public final class DelayActionResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * ISO8601 formatted string that represents a duration.
+     * 
+     */
     public String getDuration() {
         return this.duration;
     }
+    /**
+     * String that represents a Capability URN.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Enum that discriminates between action models.
+     * Expected value is 'delay'.
+     * 
+     */
     public String getType() {
         return this.type;
     }

@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Settings for a personal compute instance.
+ * 
+ */
 public final class PersonalComputeInstanceSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PersonalComputeInstanceSettingsResponse Empty = new PersonalComputeInstanceSettingsResponse();
 
+    /**
+     * A user explicitly assigned to a personal compute instance.
+     * 
+     */
     @InputImport(name="assignedUser")
     private final @Nullable AssignedUserResponse assignedUser;
 

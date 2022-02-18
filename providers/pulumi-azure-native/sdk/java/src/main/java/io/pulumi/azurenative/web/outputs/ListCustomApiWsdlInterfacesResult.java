@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListCustomApiWsdlInterfacesResult {
+    /**
+     * Collection of WSDL interfaces
+     * 
+     */
     private final @Nullable List<WsdlServiceResponse> value;
 
     @OutputCustomType.Constructor({"value"})
@@ -18,6 +22,10 @@ public final class ListCustomApiWsdlInterfacesResult {
         this.value = value;
     }
 
+    /**
+     * Collection of WSDL interfaces
+     * 
+     */
     public List<WsdlServiceResponse> getValue() {
         return this.value == null ? List.of() : this.value;
     }

@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DatabricksResponseProperties {
+    /**
+     * Databricks access token
+     * 
+     */
     private final @Nullable String databricksAccessToken;
+    /**
+     * Workspace Url
+     * 
+     */
     private final @Nullable String workspaceUrl;
 
     @OutputCustomType.Constructor({"databricksAccessToken","workspaceUrl"})
@@ -22,9 +30,17 @@ public final class DatabricksResponseProperties {
         this.workspaceUrl = workspaceUrl;
     }
 
+    /**
+     * Databricks access token
+     * 
+     */
     public Optional<String> getDatabricksAccessToken() {
         return Optional.ofNullable(this.databricksAccessToken);
     }
+    /**
+     * Workspace Url
+     * 
+     */
     public Optional<String> getWorkspaceUrl() {
         return Optional.ofNullable(this.workspaceUrl);
     }

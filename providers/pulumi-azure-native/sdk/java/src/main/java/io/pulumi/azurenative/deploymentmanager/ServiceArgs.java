@@ -15,6 +15,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceArgs Empty = new ServiceArgs();
 
+    /**
+     * The geo-location where the resource lives
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -22,6 +26,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -29,6 +37,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the service resource.
+     * 
+     */
     @InputImport(name="serviceName")
     private final @Nullable Input<String> serviceName;
 
@@ -36,6 +48,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceName == null ? Input.empty() : this.serviceName;
     }
 
+    /**
+     * The name of the service topology .
+     * 
+     */
     @InputImport(name="serviceTopologyName", required=true)
     private final Input<String> serviceTopologyName;
 
@@ -43,6 +59,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceTopologyName;
     }
 
+    /**
+     * Resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -50,6 +70,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The Azure location to which the resources in the service belong to or should be deployed to.
+     * 
+     */
     @InputImport(name="targetLocation", required=true)
     private final Input<String> targetLocation;
 
@@ -57,6 +81,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.targetLocation;
     }
 
+    /**
+     * The subscription to which the resources in the service belong to or should be deployed to.
+     * 
+     */
     @InputImport(name="targetSubscriptionId", required=true)
     private final Input<String> targetSubscriptionId;
 

@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Error definition.
+ * 
+ */
 public final class ErrorDefinitionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ErrorDefinitionResponse Empty = new ErrorDefinitionResponse();
 
+    /**
+     * Service specific error code which serves as the substatus for the HTTP error code.
+     * 
+     */
     @InputImport(name="code", required=true)
     private final String code;
 
@@ -19,6 +27,10 @@ public final class ErrorDefinitionResponse extends io.pulumi.resources.InvokeArg
         return this.code;
     }
 
+    /**
+     * Description of the error.
+     * 
+     */
     @InputImport(name="message", required=true)
     private final String message;
 

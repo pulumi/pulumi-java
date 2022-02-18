@@ -12,6 +12,10 @@ public final class GetVMwareCollectorArgs extends io.pulumi.resources.InvokeArgs
 
     public static final GetVMwareCollectorArgs Empty = new GetVMwareCollectorArgs();
 
+    /**
+     * Name of the Azure Migrate project.
+     * 
+     */
     @InputImport(name="projectName", required=true)
     private final String projectName;
 
@@ -19,6 +23,10 @@ public final class GetVMwareCollectorArgs extends io.pulumi.resources.InvokeArgs
         return this.projectName;
     }
 
+    /**
+     * Name of the Azure Resource Group that project is part of.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetVMwareCollectorArgs extends io.pulumi.resources.InvokeArgs
         return this.resourceGroupName;
     }
 
+    /**
+     * Unique name of a VMware collector within a project.
+     * 
+     */
     @InputImport(name="vmWareCollectorName", required=true)
     private final String vmWareCollectorName;
 

@@ -12,6 +12,10 @@ public final class SubResourceReadOnlyResponse extends io.pulumi.resources.Invok
 
     public static final SubResourceReadOnlyResponse Empty = new SubResourceReadOnlyResponse();
 
+    /**
+     * Resource Id
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 

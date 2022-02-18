@@ -14,6 +14,10 @@ public final class CloudLinkArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CloudLinkArgs Empty = new CloudLinkArgs();
 
+    /**
+     * Name of the cloud link resource
+     * 
+     */
     @InputImport(name="cloudLinkName")
     private final @Nullable Input<String> cloudLinkName;
 
@@ -21,6 +25,10 @@ public final class CloudLinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.cloudLinkName == null ? Input.empty() : this.cloudLinkName;
     }
 
+    /**
+     * Identifier of the other private cloud participating in the link.
+     * 
+     */
     @InputImport(name="linkedCloud")
     private final @Nullable Input<String> linkedCloud;
 
@@ -28,6 +36,10 @@ public final class CloudLinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.linkedCloud == null ? Input.empty() : this.linkedCloud;
     }
 
+    /**
+     * The name of the private cloud.
+     * 
+     */
     @InputImport(name="privateCloudName", required=true)
     private final Input<String> privateCloudName;
 
@@ -35,6 +47,10 @@ public final class CloudLinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.privateCloudName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

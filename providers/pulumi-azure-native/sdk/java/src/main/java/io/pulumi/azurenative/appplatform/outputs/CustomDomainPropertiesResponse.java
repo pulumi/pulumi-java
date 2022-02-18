@@ -11,8 +11,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CustomDomainPropertiesResponse {
+    /**
+     * The app name of domain.
+     * 
+     */
     private final String appName;
+    /**
+     * The bound certificate name of domain.
+     * 
+     */
     private final @Nullable String certName;
+    /**
+     * The thumbprint of bound certificate.
+     * 
+     */
     private final @Nullable String thumbprint;
 
     @OutputCustomType.Constructor({"appName","certName","thumbprint"})
@@ -25,12 +37,24 @@ public final class CustomDomainPropertiesResponse {
         this.thumbprint = thumbprint;
     }
 
+    /**
+     * The app name of domain.
+     * 
+     */
     public String getAppName() {
         return this.appName;
     }
+    /**
+     * The bound certificate name of domain.
+     * 
+     */
     public Optional<String> getCertName() {
         return Optional.ofNullable(this.certName);
     }
+    /**
+     * The thumbprint of bound certificate.
+     * 
+     */
     public Optional<String> getThumbprint() {
         return Optional.ofNullable(this.thumbprint);
     }

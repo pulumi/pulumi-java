@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Source type of the content
+     * 
+     */
     @EnumType
     public enum SourceKind {
         LocalWorkspace("LocalWorkspace"),

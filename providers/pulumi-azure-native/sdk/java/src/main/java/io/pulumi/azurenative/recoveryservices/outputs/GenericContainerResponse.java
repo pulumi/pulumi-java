@@ -12,12 +12,44 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GenericContainerResponse {
+    /**
+     * Type of backup management for the container.
+     * 
+     */
     private final @Nullable String backupManagementType;
+    /**
+     * Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
+     * Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
+     * Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
+     * Backup is VMAppContainer
+     * Expected value is 'GenericContainer'.
+     * 
+     */
     private final String containerType;
+    /**
+     * Extended information (not returned in List container API calls)
+     * 
+     */
     private final @Nullable GenericContainerExtendedInfoResponse extendedInformation;
+    /**
+     * Name of the container's fabric
+     * 
+     */
     private final @Nullable String fabricName;
+    /**
+     * Friendly name of the container.
+     * 
+     */
     private final @Nullable String friendlyName;
+    /**
+     * Status of health of the container.
+     * 
+     */
     private final @Nullable String healthStatus;
+    /**
+     * Status of registration of the container with the Recovery Services Vault.
+     * 
+     */
     private final @Nullable String registrationStatus;
 
     @OutputCustomType.Constructor({"backupManagementType","containerType","extendedInformation","fabricName","friendlyName","healthStatus","registrationStatus"})
@@ -38,24 +70,56 @@ public final class GenericContainerResponse {
         this.registrationStatus = registrationStatus;
     }
 
+    /**
+     * Type of backup management for the container.
+     * 
+     */
     public Optional<String> getBackupManagementType() {
         return Optional.ofNullable(this.backupManagementType);
     }
+    /**
+     * Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
+     * Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
+     * Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
+     * Backup is VMAppContainer
+     * Expected value is 'GenericContainer'.
+     * 
+     */
     public String getContainerType() {
         return this.containerType;
     }
+    /**
+     * Extended information (not returned in List container API calls)
+     * 
+     */
     public Optional<GenericContainerExtendedInfoResponse> getExtendedInformation() {
         return Optional.ofNullable(this.extendedInformation);
     }
+    /**
+     * Name of the container's fabric
+     * 
+     */
     public Optional<String> getFabricName() {
         return Optional.ofNullable(this.fabricName);
     }
+    /**
+     * Friendly name of the container.
+     * 
+     */
     public Optional<String> getFriendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
+    /**
+     * Status of health of the container.
+     * 
+     */
     public Optional<String> getHealthStatus() {
         return Optional.ofNullable(this.healthStatus);
     }
+    /**
+     * Status of registration of the container with the Recovery Services Vault.
+     * 
+     */
     public Optional<String> getRegistrationStatus() {
         return Optional.ofNullable(this.registrationStatus);
     }

@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A class that contains virtual network definition.
+ * 
+ */
 public final class VirtualNetworkConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VirtualNetworkConfigurationResponse Empty = new VirtualNetworkConfigurationResponse();
 
+    /**
+     * Data management's service public IP address resource id.
+     * 
+     */
     @InputImport(name="dataManagementPublicIpId", required=true)
     private final String dataManagementPublicIpId;
 
@@ -19,6 +27,10 @@ public final class VirtualNetworkConfigurationResponse extends io.pulumi.resourc
         return this.dataManagementPublicIpId;
     }
 
+    /**
+     * Engine service's public IP address resource id.
+     * 
+     */
     @InputImport(name="enginePublicIpId", required=true)
     private final String enginePublicIpId;
 
@@ -26,6 +38,10 @@ public final class VirtualNetworkConfigurationResponse extends io.pulumi.resourc
         return this.enginePublicIpId;
     }
 
+    /**
+     * The subnet resource id.
+     * 
+     */
     @InputImport(name="subnetId", required=true)
     private final String subnetId;
 

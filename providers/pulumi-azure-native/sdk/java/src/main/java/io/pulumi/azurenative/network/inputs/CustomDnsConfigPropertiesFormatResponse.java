@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Contains custom Dns resolution configuration from customer.
+ * 
+ */
 public final class CustomDnsConfigPropertiesFormatResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CustomDnsConfigPropertiesFormatResponse Empty = new CustomDnsConfigPropertiesFormatResponse();
 
+    /**
+     * Fqdn that resolves to private endpoint ip address.
+     * 
+     */
     @InputImport(name="fqdn")
     private final @Nullable String fqdn;
 
@@ -22,6 +30,10 @@ public final class CustomDnsConfigPropertiesFormatResponse extends io.pulumi.res
         return this.fqdn == null ? Optional.empty() : Optional.ofNullable(this.fqdn);
     }
 
+    /**
+     * A list of private ip addresses of the private endpoint.
+     * 
+     */
     @InputImport(name="ipAddresses")
     private final @Nullable List<String> ipAddresses;
 

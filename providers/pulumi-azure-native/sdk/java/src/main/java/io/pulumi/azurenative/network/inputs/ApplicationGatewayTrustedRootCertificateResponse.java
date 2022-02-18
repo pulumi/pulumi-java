@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Trusted Root certificates of an application gateway.
+ * 
+ */
 public final class ApplicationGatewayTrustedRootCertificateResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApplicationGatewayTrustedRootCertificateResponse Empty = new ApplicationGatewayTrustedRootCertificateResponse();
 
+    /**
+     * Certificate public data.
+     * 
+     */
     @InputImport(name="data")
     private final @Nullable String data;
 
@@ -21,6 +29,10 @@ public final class ApplicationGatewayTrustedRootCertificateResponse extends io.p
         return this.data == null ? Optional.empty() : Optional.ofNullable(this.data);
     }
 
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -28,6 +40,10 @@ public final class ApplicationGatewayTrustedRootCertificateResponse extends io.p
         return this.etag;
     }
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -35,6 +51,10 @@ public final class ApplicationGatewayTrustedRootCertificateResponse extends io.p
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * Secret Id of (base-64 encoded unencrypted pfx) 'Secret' or 'Certificate' object stored in KeyVault.
+     * 
+     */
     @InputImport(name="keyVaultSecretId")
     private final @Nullable String keyVaultSecretId;
 
@@ -42,6 +62,10 @@ public final class ApplicationGatewayTrustedRootCertificateResponse extends io.p
         return this.keyVaultSecretId == null ? Optional.empty() : Optional.ofNullable(this.keyVaultSecretId);
     }
 
+    /**
+     * Name of the trusted root certificate that is unique within an Application Gateway.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -49,6 +73,10 @@ public final class ApplicationGatewayTrustedRootCertificateResponse extends io.p
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The provisioning state of the trusted root certificate resource.
+     * 
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -56,6 +84,10 @@ public final class ApplicationGatewayTrustedRootCertificateResponse extends io.p
         return this.provisioningState;
     }
 
+    /**
+     * Type of the resource.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

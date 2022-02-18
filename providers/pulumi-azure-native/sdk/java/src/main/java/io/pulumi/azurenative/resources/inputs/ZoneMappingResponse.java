@@ -15,6 +15,10 @@ public final class ZoneMappingResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ZoneMappingResponse Empty = new ZoneMappingResponse();
 
+    /**
+     * The location of the zone mapping.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable String location;
 

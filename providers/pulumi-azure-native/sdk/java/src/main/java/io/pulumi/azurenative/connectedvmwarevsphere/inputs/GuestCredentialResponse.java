@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Username / Password Credentials to connect to guest.
+ * 
+ */
 public final class GuestCredentialResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GuestCredentialResponse Empty = new GuestCredentialResponse();
 
+    /**
+     * Gets or sets username to connect with the guest.
+     * 
+     */
     @InputImport(name="username")
     private final @Nullable String username;
 

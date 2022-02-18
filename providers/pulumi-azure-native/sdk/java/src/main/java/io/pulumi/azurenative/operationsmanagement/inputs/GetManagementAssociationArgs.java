@@ -12,6 +12,10 @@ public final class GetManagementAssociationArgs extends io.pulumi.resources.Invo
 
     public static final GetManagementAssociationArgs Empty = new GetManagementAssociationArgs();
 
+    /**
+     * User ManagementAssociation Name.
+     * 
+     */
     @InputImport(name="managementAssociationName", required=true)
     private final String managementAssociationName;
 
@@ -19,6 +23,10 @@ public final class GetManagementAssociationArgs extends io.pulumi.resources.Invo
         return this.managementAssociationName;
     }
 
+    /**
+     * Provider name for the parent resource.
+     * 
+     */
     @InputImport(name="providerName", required=true)
     private final String providerName;
 
@@ -26,6 +34,10 @@ public final class GetManagementAssociationArgs extends io.pulumi.resources.Invo
         return this.providerName;
     }
 
+    /**
+     * The name of the resource group to get. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -33,6 +45,10 @@ public final class GetManagementAssociationArgs extends io.pulumi.resources.Invo
         return this.resourceGroupName;
     }
 
+    /**
+     * Parent resource name.
+     * 
+     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 
@@ -40,6 +56,10 @@ public final class GetManagementAssociationArgs extends io.pulumi.resources.Invo
         return this.resourceName;
     }
 
+    /**
+     * Resource type for the parent resource
+     * 
+     */
     @InputImport(name="resourceType", required=true)
     private final String resourceType;
 

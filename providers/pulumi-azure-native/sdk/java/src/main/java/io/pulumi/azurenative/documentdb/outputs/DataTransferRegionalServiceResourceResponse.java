@@ -9,8 +9,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DataTransferRegionalServiceResourceResponse {
+    /**
+     * The location name.
+     * 
+     */
     private final String location;
+    /**
+     * The regional service name.
+     * 
+     */
     private final String name;
+    /**
+     * Describes the status of a service.
+     * 
+     */
     private final String status;
 
     @OutputCustomType.Constructor({"location","name","status"})
@@ -23,12 +35,24 @@ public final class DataTransferRegionalServiceResourceResponse {
         this.status = Objects.requireNonNull(status);
     }
 
+    /**
+     * The location name.
+     * 
+     */
     public String getLocation() {
         return this.location;
     }
+    /**
+     * The regional service name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Describes the status of a service.
+     * 
+     */
     public String getStatus() {
         return this.status;
     }

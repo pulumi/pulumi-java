@@ -17,6 +17,10 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HubArgs Empty = new HubArgs();
 
+    /**
+     * Billing settings of the hub.
+     * 
+     */
     @InputImport(name="hubBillingInfo")
     private final @Nullable Input<HubBillingInfoFormatArgs> hubBillingInfo;
 
@@ -24,6 +28,10 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
         return this.hubBillingInfo == null ? Input.empty() : this.hubBillingInfo;
     }
 
+    /**
+     * The name of the Hub.
+     * 
+     */
     @InputImport(name="hubName")
     private final @Nullable Input<String> hubName;
 
@@ -31,6 +39,10 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
         return this.hubName == null ? Input.empty() : this.hubName;
     }
 
+    /**
+     * Resource location.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -38,6 +50,10 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -45,6 +61,10 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -52,6 +72,10 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The bit flags for enabled hub features. Bit 0 is set to 1 indicates graph is enabled, or disabled if set to 0. Bit 1 is set to 1 indicates the hub is disabled, or enabled if set to 0.
+     * 
+     */
     @InputImport(name="tenantFeatures")
     private final @Nullable Input<Integer> tenantFeatures;
 

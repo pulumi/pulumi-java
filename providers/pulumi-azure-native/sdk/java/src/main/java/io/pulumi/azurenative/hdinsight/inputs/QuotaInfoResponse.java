@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The quota properties for the cluster.
+ * 
+ */
 public final class QuotaInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final QuotaInfoResponse Empty = new QuotaInfoResponse();
 
+    /**
+     * The cores used by the cluster.
+     * 
+     */
     @InputImport(name="coresUsed")
     private final @Nullable Integer coresUsed;
 

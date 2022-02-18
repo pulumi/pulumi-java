@@ -9,7 +9,16 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class StorageAccountDetailsResponse {
+    /**
+     * Account Type of the data to be transferred.
+     * Expected value is 'StorageAccount'.
+     * 
+     */
     private final String dataAccountType;
+    /**
+     * Storage Account Resource Id.
+     * 
+     */
     private final String storageAccountId;
 
     @OutputCustomType.Constructor({"dataAccountType","storageAccountId"})
@@ -20,9 +29,18 @@ public final class StorageAccountDetailsResponse {
         this.storageAccountId = Objects.requireNonNull(storageAccountId);
     }
 
+    /**
+     * Account Type of the data to be transferred.
+     * Expected value is 'StorageAccount'.
+     * 
+     */
     public String getDataAccountType() {
         return this.dataAccountType;
     }
+    /**
+     * Storage Account Resource Id.
+     * 
+     */
     public String getStorageAccountId() {
         return this.storageAccountId;
     }

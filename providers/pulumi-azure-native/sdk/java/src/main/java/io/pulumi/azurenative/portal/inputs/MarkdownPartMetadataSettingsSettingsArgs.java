@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The setting of the content of markdown part.
+ * 
+ */
 public final class MarkdownPartMetadataSettingsSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MarkdownPartMetadataSettingsSettingsArgs Empty = new MarkdownPartMetadataSettingsSettingsArgs();
 
+    /**
+     * The content of the markdown part.
+     * 
+     */
     @InputImport(name="content")
     private final @Nullable Input<String> content;
 
@@ -22,6 +30,10 @@ public final class MarkdownPartMetadataSettingsSettingsArgs extends io.pulumi.re
         return this.content == null ? Input.empty() : this.content;
     }
 
+    /**
+     * The source of the content of the markdown part.
+     * 
+     */
     @InputImport(name="markdownSource")
     private final @Nullable Input<Integer> markdownSource;
 
@@ -29,6 +41,10 @@ public final class MarkdownPartMetadataSettingsSettingsArgs extends io.pulumi.re
         return this.markdownSource == null ? Input.empty() : this.markdownSource;
     }
 
+    /**
+     * The uri of markdown content.
+     * 
+     */
     @InputImport(name="markdownUri")
     private final @Nullable Input<String> markdownUri;
 
@@ -36,6 +52,10 @@ public final class MarkdownPartMetadataSettingsSettingsArgs extends io.pulumi.re
         return this.markdownUri == null ? Input.empty() : this.markdownUri;
     }
 
+    /**
+     * The subtitle of the markdown part.
+     * 
+     */
     @InputImport(name="subtitle")
     private final @Nullable Input<String> subtitle;
 
@@ -43,6 +63,10 @@ public final class MarkdownPartMetadataSettingsSettingsArgs extends io.pulumi.re
         return this.subtitle == null ? Input.empty() : this.subtitle;
     }
 
+    /**
+     * The title of the markdown part.
+     * 
+     */
     @InputImport(name="title")
     private final @Nullable Input<String> title;
 

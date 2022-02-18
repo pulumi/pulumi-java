@@ -16,6 +16,10 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataExportArgs Empty = new DataExportArgs();
 
+    /**
+     * The latest data export rule modification time.
+     * 
+     */
     @InputImport(name="createdDate")
     private final @Nullable Input<String> createdDate;
 
@@ -23,6 +27,10 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
         return this.createdDate == null ? Input.empty() : this.createdDate;
     }
 
+    /**
+     * The data export rule ID.
+     * 
+     */
     @InputImport(name="dataExportId")
     private final @Nullable Input<String> dataExportId;
 
@@ -30,6 +38,10 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataExportId == null ? Input.empty() : this.dataExportId;
     }
 
+    /**
+     * The data export rule name.
+     * 
+     */
     @InputImport(name="dataExportName")
     private final @Nullable Input<String> dataExportName;
 
@@ -37,6 +49,10 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataExportName == null ? Input.empty() : this.dataExportName;
     }
 
+    /**
+     * Active when enabled.
+     * 
+     */
     @InputImport(name="enable")
     private final @Nullable Input<Boolean> enable;
 
@@ -44,6 +60,10 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
         return this.enable == null ? Input.empty() : this.enable;
     }
 
+    /**
+     * Optional. Allows to define an Event Hub name. Not applicable when destination is Storage Account.
+     * 
+     */
     @InputImport(name="eventHubName")
     private final @Nullable Input<String> eventHubName;
 
@@ -51,6 +71,10 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
         return this.eventHubName == null ? Input.empty() : this.eventHubName;
     }
 
+    /**
+     * Date and time when the export was last modified.
+     * 
+     */
     @InputImport(name="lastModifiedDate")
     private final @Nullable Input<String> lastModifiedDate;
 
@@ -58,6 +82,10 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
         return this.lastModifiedDate == null ? Input.empty() : this.lastModifiedDate;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -65,6 +93,10 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The destination resource ID. This can be copied from the Properties entry of the destination resource in Azure.
+     * 
+     */
     @InputImport(name="resourceId", required=true)
     private final Input<String> resourceId;
 
@@ -72,6 +104,10 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceId;
     }
 
+    /**
+     * An array of tables to export, for example: [“Heartbeat, SecurityEvent”].
+     * 
+     */
     @InputImport(name="tableNames", required=true)
     private final Input<List<String>> tableNames;
 
@@ -79,6 +115,10 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
         return this.tableNames;
     }
 
+    /**
+     * The name of the workspace.
+     * 
+     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

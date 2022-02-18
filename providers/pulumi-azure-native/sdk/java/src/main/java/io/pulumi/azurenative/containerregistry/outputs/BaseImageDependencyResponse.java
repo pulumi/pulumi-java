@@ -11,10 +11,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class BaseImageDependencyResponse {
+    /**
+     * The sha256-based digest of the image manifest.
+     * 
+     */
     private final @Nullable String digest;
+    /**
+     * The registry login server.
+     * 
+     */
     private final @Nullable String registry;
+    /**
+     * The repository name.
+     * 
+     */
     private final @Nullable String repository;
+    /**
+     * The tag name.
+     * 
+     */
     private final @Nullable String tag;
+    /**
+     * The type of the base image dependency.
+     * 
+     */
     private final @Nullable String type;
 
     @OutputCustomType.Constructor({"digest","registry","repository","tag","type"})
@@ -31,18 +51,38 @@ public final class BaseImageDependencyResponse {
         this.type = type;
     }
 
+    /**
+     * The sha256-based digest of the image manifest.
+     * 
+     */
     public Optional<String> getDigest() {
         return Optional.ofNullable(this.digest);
     }
+    /**
+     * The registry login server.
+     * 
+     */
     public Optional<String> getRegistry() {
         return Optional.ofNullable(this.registry);
     }
+    /**
+     * The repository name.
+     * 
+     */
     public Optional<String> getRepository() {
         return Optional.ofNullable(this.repository);
     }
+    /**
+     * The tag name.
+     * 
+     */
     public Optional<String> getTag() {
         return Optional.ofNullable(this.tag);
     }
+    /**
+     * The type of the base image dependency.
+     * 
+     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

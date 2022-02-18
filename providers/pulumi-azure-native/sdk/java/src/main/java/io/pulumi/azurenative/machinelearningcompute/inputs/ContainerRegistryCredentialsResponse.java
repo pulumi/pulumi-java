@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Information about the Azure Container Registry which contains the images deployed to the cluster.
+ * 
+ */
 public final class ContainerRegistryCredentialsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ContainerRegistryCredentialsResponse Empty = new ContainerRegistryCredentialsResponse();
 
+    /**
+     * The ACR login server name. User name is the first part of the FQDN.
+     * 
+     */
     @InputImport(name="loginServer", required=true)
     private final String loginServer;
 
@@ -19,6 +27,10 @@ public final class ContainerRegistryCredentialsResponse extends io.pulumi.resour
         return this.loginServer;
     }
 
+    /**
+     * The ACR primary password.
+     * 
+     */
     @InputImport(name="password", required=true)
     private final String password;
 
@@ -26,6 +38,10 @@ public final class ContainerRegistryCredentialsResponse extends io.pulumi.resour
         return this.password;
     }
 
+    /**
+     * The ACR secondary password.
+     * 
+     */
     @InputImport(name="password2", required=true)
     private final String password2;
 
@@ -33,6 +49,10 @@ public final class ContainerRegistryCredentialsResponse extends io.pulumi.resour
         return this.password2;
     }
 
+    /**
+     * The ACR login username.
+     * 
+     */
     @InputImport(name="username", required=true)
     private final String username;
 

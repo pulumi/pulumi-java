@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The resource requirements.
+ * 
+ */
 public final class ResourceRequirementsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourceRequirementsArgs Empty = new ResourceRequirementsArgs();
 
+    /**
+     * The resource limits of this container instance.
+     * 
+     */
     @InputImport(name="limits")
     private final @Nullable Input<ResourceLimitsArgs> limits;
 
@@ -22,6 +30,10 @@ public final class ResourceRequirementsArgs extends io.pulumi.resources.Resource
         return this.limits == null ? Input.empty() : this.limits;
     }
 
+    /**
+     * The resource requests of this container instance.
+     * 
+     */
     @InputImport(name="requests", required=true)
     private final Input<ResourceRequestsArgs> requests;
 

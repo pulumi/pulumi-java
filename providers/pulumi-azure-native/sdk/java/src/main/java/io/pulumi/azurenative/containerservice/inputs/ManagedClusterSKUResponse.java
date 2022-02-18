@@ -14,6 +14,10 @@ public final class ManagedClusterSKUResponse extends io.pulumi.resources.InvokeA
 
     public static final ManagedClusterSKUResponse Empty = new ManagedClusterSKUResponse();
 
+    /**
+     * Name of a managed cluster SKU.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -21,6 +25,10 @@ public final class ManagedClusterSKUResponse extends io.pulumi.resources.InvokeA
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Tier of a managed cluster SKU.
+     * 
+     */
     @InputImport(name="tier")
     private final @Nullable String tier;
 

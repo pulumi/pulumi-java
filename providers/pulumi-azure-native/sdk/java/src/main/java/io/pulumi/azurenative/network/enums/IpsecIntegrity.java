@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The IPSec integrity algorithm (IKE phase 1).
+     * 
+     */
     @EnumType
     public enum IpsecIntegrity {
         MD5("MD5"),

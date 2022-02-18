@@ -12,6 +12,10 @@ public final class GetIPv6FirewallRuleArgs extends io.pulumi.resources.InvokeArg
 
     public static final GetIPv6FirewallRuleArgs Empty = new GetIPv6FirewallRuleArgs();
 
+    /**
+     * The name of the firewall rule.
+     * 
+     */
     @InputImport(name="firewallRuleName", required=true)
     private final String firewallRuleName;
 
@@ -19,6 +23,10 @@ public final class GetIPv6FirewallRuleArgs extends io.pulumi.resources.InvokeArg
         return this.firewallRuleName;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetIPv6FirewallRuleArgs extends io.pulumi.resources.InvokeArg
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the server.
+     * 
+     */
     @InputImport(name="serverName", required=true)
     private final String serverName;
 

@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Managed identity properties.
+ * 
+ */
 public final class IdentityPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IdentityPropertiesArgs Empty = new IdentityPropertiesArgs();
 
+    /**
+     * Managed service identity type.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 
@@ -22,6 +30,10 @@ public final class IdentityPropertiesArgs extends io.pulumi.resources.ResourceAr
         return this.type == null ? Input.empty() : this.type;
     }
 
+    /**
+     * User assigned identity properties.
+     * 
+     */
     @InputImport(name="userAssigned")
     private final @Nullable Input<UserAssignedPropertiesArgs> userAssigned;
 

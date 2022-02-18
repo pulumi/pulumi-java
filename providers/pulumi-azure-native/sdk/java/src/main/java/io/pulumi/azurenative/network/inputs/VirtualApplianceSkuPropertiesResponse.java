@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Network Virtual Appliance Sku Properties.
+ * 
+ */
 public final class VirtualApplianceSkuPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VirtualApplianceSkuPropertiesResponse Empty = new VirtualApplianceSkuPropertiesResponse();
 
+    /**
+     * Virtual Appliance Scale Unit.
+     * 
+     */
     @InputImport(name="bundledScaleUnit")
     private final @Nullable String bundledScaleUnit;
 
@@ -21,6 +29,10 @@ public final class VirtualApplianceSkuPropertiesResponse extends io.pulumi.resou
         return this.bundledScaleUnit == null ? Optional.empty() : Optional.ofNullable(this.bundledScaleUnit);
     }
 
+    /**
+     * Virtual Appliance Version.
+     * 
+     */
     @InputImport(name="marketPlaceVersion")
     private final @Nullable String marketPlaceVersion;
 
@@ -28,6 +40,10 @@ public final class VirtualApplianceSkuPropertiesResponse extends io.pulumi.resou
         return this.marketPlaceVersion == null ? Optional.empty() : Optional.ofNullable(this.marketPlaceVersion);
     }
 
+    /**
+     * Virtual Appliance Vendor.
+     * 
+     */
     @InputImport(name="vendor")
     private final @Nullable String vendor;
 

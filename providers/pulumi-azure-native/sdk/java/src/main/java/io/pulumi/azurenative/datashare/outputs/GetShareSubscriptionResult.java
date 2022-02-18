@@ -12,24 +12,100 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetShareSubscriptionResult {
+    /**
+     * Time at which the share subscription was created.
+     * 
+     */
     private final String createdAt;
+    /**
+     * The expiration date of the share subscription.
+     * 
+     */
     private final @Nullable String expirationDate;
+    /**
+     * The resource id of the azure resource
+     * 
+     */
     private final String id;
+    /**
+     * The invitation id.
+     * 
+     */
     private final String invitationId;
+    /**
+     * Name of the azure resource
+     * 
+     */
     private final String name;
+    /**
+     * Email of the provider who created the resource
+     * 
+     */
     private final String providerEmail;
+    /**
+     * Name of the provider who created the resource
+     * 
+     */
     private final String providerName;
+    /**
+     * Tenant name of the provider who created the resource
+     * 
+     */
     private final String providerTenantName;
+    /**
+     * Provisioning state of the share subscription
+     * 
+     */
     private final String provisioningState;
+    /**
+     * Description of share
+     * 
+     */
     private final String shareDescription;
+    /**
+     * Kind of share
+     * 
+     */
     private final String shareKind;
+    /**
+     * Name of the share
+     * 
+     */
     private final String shareName;
+    /**
+     * Gets the current status of share subscription.
+     * 
+     */
     private final String shareSubscriptionStatus;
+    /**
+     * Terms of a share
+     * 
+     */
     private final String shareTerms;
+    /**
+     * Source share location.
+     * 
+     */
     private final String sourceShareLocation;
+    /**
+     * System Data of the Azure resource.
+     * 
+     */
     private final SystemDataResponse systemData;
+    /**
+     * Type of the azure resource
+     * 
+     */
     private final String type;
+    /**
+     * Email of the user who created the resource
+     * 
+     */
     private final String userEmail;
+    /**
+     * Name of the user who created the resource
+     * 
+     */
     private final String userName;
 
     @OutputCustomType.Constructor({"createdAt","expirationDate","id","invitationId","name","providerEmail","providerName","providerTenantName","provisioningState","shareDescription","shareKind","shareName","shareSubscriptionStatus","shareTerms","sourceShareLocation","systemData","type","userEmail","userName"})
@@ -74,60 +150,136 @@ public final class GetShareSubscriptionResult {
         this.userName = Objects.requireNonNull(userName);
     }
 
+    /**
+     * Time at which the share subscription was created.
+     * 
+     */
     public String getCreatedAt() {
         return this.createdAt;
     }
+    /**
+     * The expiration date of the share subscription.
+     * 
+     */
     public Optional<String> getExpirationDate() {
         return Optional.ofNullable(this.expirationDate);
     }
+    /**
+     * The resource id of the azure resource
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * The invitation id.
+     * 
+     */
     public String getInvitationId() {
         return this.invitationId;
     }
+    /**
+     * Name of the azure resource
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Email of the provider who created the resource
+     * 
+     */
     public String getProviderEmail() {
         return this.providerEmail;
     }
+    /**
+     * Name of the provider who created the resource
+     * 
+     */
     public String getProviderName() {
         return this.providerName;
     }
+    /**
+     * Tenant name of the provider who created the resource
+     * 
+     */
     public String getProviderTenantName() {
         return this.providerTenantName;
     }
+    /**
+     * Provisioning state of the share subscription
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Description of share
+     * 
+     */
     public String getShareDescription() {
         return this.shareDescription;
     }
+    /**
+     * Kind of share
+     * 
+     */
     public String getShareKind() {
         return this.shareKind;
     }
+    /**
+     * Name of the share
+     * 
+     */
     public String getShareName() {
         return this.shareName;
     }
+    /**
+     * Gets the current status of share subscription.
+     * 
+     */
     public String getShareSubscriptionStatus() {
         return this.shareSubscriptionStatus;
     }
+    /**
+     * Terms of a share
+     * 
+     */
     public String getShareTerms() {
         return this.shareTerms;
     }
+    /**
+     * Source share location.
+     * 
+     */
     public String getSourceShareLocation() {
         return this.sourceShareLocation;
     }
+    /**
+     * System Data of the Azure resource.
+     * 
+     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+    /**
+     * Type of the azure resource
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * Email of the user who created the resource
+     * 
+     */
     public String getUserEmail() {
         return this.userEmail;
     }
+    /**
+     * Name of the user who created the resource
+     * 
+     */
     public String getUserName() {
         return this.userName;
     }

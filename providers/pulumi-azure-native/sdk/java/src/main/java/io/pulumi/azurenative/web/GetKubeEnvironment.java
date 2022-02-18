@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetKubeEnvironment {
+/**
+ * A Kubernetes cluster specialized for web workloads by Azure App Service
+ * API Version: 2021-01-01.
+ * 
+ *
+ * A Kubernetes cluster specialized for web workloads by Azure App Service
+ * 
+ */
     public static CompletableFuture<GetKubeEnvironmentResult> invokeAsync(GetKubeEnvironmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getKubeEnvironment", TypeShape.of(GetKubeEnvironmentResult.class), args == null ? GetKubeEnvironmentArgs.Empty : args, Utilities.withVersion(options));
     }

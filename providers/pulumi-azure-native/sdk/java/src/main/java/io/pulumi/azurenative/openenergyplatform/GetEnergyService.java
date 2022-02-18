@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEnergyService {
+/**
+ * API Version: 2021-06-01-preview.
+ * 
+ */
     public static CompletableFuture<GetEnergyServiceResult> invokeAsync(GetEnergyServiceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:openenergyplatform:getEnergyService", TypeShape.of(GetEnergyServiceResult.class), args == null ? GetEnergyServiceArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -30,6 +30,11 @@ public final class PartnerTopicEventSubscriptionArgs extends io.pulumi.resources
 
     public static final PartnerTopicEventSubscriptionArgs Empty = new PartnerTopicEventSubscriptionArgs();
 
+    /**
+     * The dead letter destination of the event subscription. Any event that cannot be delivered to its' destination is sent to the dead letter destination.
+     * Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.
+     * 
+     */
     @InputImport(name="deadLetterDestination")
     private final @Nullable Input<StorageBlobDeadLetterDestinationArgs> deadLetterDestination;
 
@@ -37,6 +42,11 @@ public final class PartnerTopicEventSubscriptionArgs extends io.pulumi.resources
         return this.deadLetterDestination == null ? Input.empty() : this.deadLetterDestination;
     }
 
+    /**
+     * The dead letter destination of the event subscription. Any event that cannot be delivered to its' destination is sent to the dead letter destination.
+     * Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.
+     * 
+     */
     @InputImport(name="deadLetterWithResourceIdentity")
     private final @Nullable Input<DeadLetterWithResourceIdentityArgs> deadLetterWithResourceIdentity;
 
@@ -44,6 +54,11 @@ public final class PartnerTopicEventSubscriptionArgs extends io.pulumi.resources
         return this.deadLetterWithResourceIdentity == null ? Input.empty() : this.deadLetterWithResourceIdentity;
     }
 
+    /**
+     * Information about the destination where events have to be delivered for the event subscription.
+     * Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.
+     * 
+     */
     @InputImport(name="deliveryWithResourceIdentity")
     private final @Nullable Input<DeliveryWithResourceIdentityArgs> deliveryWithResourceIdentity;
 
@@ -51,6 +66,11 @@ public final class PartnerTopicEventSubscriptionArgs extends io.pulumi.resources
         return this.deliveryWithResourceIdentity == null ? Input.empty() : this.deliveryWithResourceIdentity;
     }
 
+    /**
+     * Information about the destination where events have to be delivered for the event subscription.
+     * Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.
+     * 
+     */
     @InputImport(name="destination")
     private final @Nullable Input<Object> destination;
 
@@ -58,6 +78,10 @@ public final class PartnerTopicEventSubscriptionArgs extends io.pulumi.resources
         return this.destination == null ? Input.empty() : this.destination;
     }
 
+    /**
+     * The event delivery schema for the event subscription.
+     * 
+     */
     @InputImport(name="eventDeliverySchema")
     private final @Nullable Input<Either<String,EventDeliverySchema>> eventDeliverySchema;
 
@@ -65,6 +89,10 @@ public final class PartnerTopicEventSubscriptionArgs extends io.pulumi.resources
         return this.eventDeliverySchema == null ? Input.empty() : this.eventDeliverySchema;
     }
 
+    /**
+     * Name of the event subscription to be created. Event subscription names must be between 3 and 100 characters in length and use alphanumeric letters only.
+     * 
+     */
     @InputImport(name="eventSubscriptionName")
     private final @Nullable Input<String> eventSubscriptionName;
 
@@ -72,6 +100,10 @@ public final class PartnerTopicEventSubscriptionArgs extends io.pulumi.resources
         return this.eventSubscriptionName == null ? Input.empty() : this.eventSubscriptionName;
     }
 
+    /**
+     * Expiration time of the event subscription.
+     * 
+     */
     @InputImport(name="expirationTimeUtc")
     private final @Nullable Input<String> expirationTimeUtc;
 
@@ -79,6 +111,10 @@ public final class PartnerTopicEventSubscriptionArgs extends io.pulumi.resources
         return this.expirationTimeUtc == null ? Input.empty() : this.expirationTimeUtc;
     }
 
+    /**
+     * Information about the filter for the event subscription.
+     * 
+     */
     @InputImport(name="filter")
     private final @Nullable Input<EventSubscriptionFilterArgs> filter;
 
@@ -86,6 +122,10 @@ public final class PartnerTopicEventSubscriptionArgs extends io.pulumi.resources
         return this.filter == null ? Input.empty() : this.filter;
     }
 
+    /**
+     * List of user defined labels.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<List<String>> labels;
 
@@ -93,6 +133,10 @@ public final class PartnerTopicEventSubscriptionArgs extends io.pulumi.resources
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * Name of the partner topic.
+     * 
+     */
     @InputImport(name="partnerTopicName", required=true)
     private final Input<String> partnerTopicName;
 
@@ -100,6 +144,10 @@ public final class PartnerTopicEventSubscriptionArgs extends io.pulumi.resources
         return this.partnerTopicName;
     }
 
+    /**
+     * The name of the resource group within the user's subscription.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -107,6 +155,10 @@ public final class PartnerTopicEventSubscriptionArgs extends io.pulumi.resources
         return this.resourceGroupName;
     }
 
+    /**
+     * The retry policy for events. This can be used to configure maximum number of delivery attempts and time to live for events.
+     * 
+     */
     @InputImport(name="retryPolicy")
     private final @Nullable Input<RetryPolicyArgs> retryPolicy;
 

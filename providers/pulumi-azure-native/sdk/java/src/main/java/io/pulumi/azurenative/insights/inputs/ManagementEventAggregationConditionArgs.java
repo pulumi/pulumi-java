@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * How the data that is collected should be combined over time.
+ * 
+ */
 public final class ManagementEventAggregationConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagementEventAggregationConditionArgs Empty = new ManagementEventAggregationConditionArgs();
 
+    /**
+     * the condition operator.
+     * 
+     */
     @InputImport(name="operator")
     private final @Nullable Input<ConditionOperator> operator;
 
@@ -23,6 +31,10 @@ public final class ManagementEventAggregationConditionArgs extends io.pulumi.res
         return this.operator == null ? Input.empty() : this.operator;
     }
 
+    /**
+     * The threshold value that activates the alert.
+     * 
+     */
     @InputImport(name="threshold")
     private final @Nullable Input<Double> threshold;
 
@@ -30,6 +42,10 @@ public final class ManagementEventAggregationConditionArgs extends io.pulumi.res
         return this.threshold == null ? Input.empty() : this.threshold;
     }
 
+    /**
+     * the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.
+     * 
+     */
     @InputImport(name="windowSize")
     private final @Nullable Input<String> windowSize;
 

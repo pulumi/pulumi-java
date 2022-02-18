@@ -11,8 +11,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SelectorResponse {
+    /**
+     * String of the selector ID.
+     * 
+     */
     private final String id;
+    /**
+     * List of Target references.
+     * 
+     */
     private final List<TargetReferenceResponse> targets;
+    /**
+     * Enum of the selector type.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"id","targets","type"})
@@ -25,12 +37,24 @@ public final class SelectorResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * String of the selector ID.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * List of Target references.
+     * 
+     */
     public List<TargetReferenceResponse> getTargets() {
         return this.targets;
     }
+    /**
+     * Enum of the selector type.
+     * 
+     */
     public String getType() {
         return this.type;
     }

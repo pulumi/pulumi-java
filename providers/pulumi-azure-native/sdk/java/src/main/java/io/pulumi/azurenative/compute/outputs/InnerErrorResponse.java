@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class InnerErrorResponse {
+    /**
+     * The internal error message or exception dump.
+     * 
+     */
     private final @Nullable String errordetail;
+    /**
+     * The exception type.
+     * 
+     */
     private final @Nullable String exceptiontype;
 
     @OutputCustomType.Constructor({"errordetail","exceptiontype"})
@@ -22,9 +30,17 @@ public final class InnerErrorResponse {
         this.exceptiontype = exceptiontype;
     }
 
+    /**
+     * The internal error message or exception dump.
+     * 
+     */
     public Optional<String> getErrordetail() {
         return Optional.ofNullable(this.errordetail);
     }
+    /**
+     * The exception type.
+     * 
+     */
     public Optional<String> getExceptiontype() {
         return Optional.ofNullable(this.exceptiontype);
     }

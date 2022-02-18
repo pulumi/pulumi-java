@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListRunLogSasUrlResult {
+    /**
+     * The link to logs in registry for a run on a azure container registry.
+     * 
+     */
     private final @Nullable String logArtifactLink;
+    /**
+     * The link to logs for a run on a azure container registry.
+     * 
+     */
     private final @Nullable String logLink;
 
     @OutputCustomType.Constructor({"logArtifactLink","logLink"})
@@ -22,9 +30,17 @@ public final class ListRunLogSasUrlResult {
         this.logLink = logLink;
     }
 
+    /**
+     * The link to logs in registry for a run on a azure container registry.
+     * 
+     */
     public Optional<String> getLogArtifactLink() {
         return Optional.ofNullable(this.logArtifactLink);
     }
+    /**
+     * The link to logs for a run on a azure container registry.
+     * 
+     */
     public Optional<String> getLogLink() {
         return Optional.ofNullable(this.logLink);
     }

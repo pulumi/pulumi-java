@@ -16,6 +16,10 @@ public final class GetEntityInsightsArgs extends io.pulumi.resources.InvokeArgs 
 
     public static final GetEntityInsightsArgs Empty = new GetEntityInsightsArgs();
 
+    /**
+     * Indicates if query time range should be extended with default time range of the query. Default value is false
+     * 
+     */
     @InputImport(name="addDefaultExtendedTimeRange")
     private final @Nullable Boolean addDefaultExtendedTimeRange;
 
@@ -23,6 +27,10 @@ public final class GetEntityInsightsArgs extends io.pulumi.resources.InvokeArgs 
         return this.addDefaultExtendedTimeRange == null ? Optional.empty() : Optional.ofNullable(this.addDefaultExtendedTimeRange);
     }
 
+    /**
+     * The end timeline date, so the results returned are before this date.
+     * 
+     */
     @InputImport(name="endTime", required=true)
     private final String endTime;
 
@@ -30,6 +38,10 @@ public final class GetEntityInsightsArgs extends io.pulumi.resources.InvokeArgs 
         return this.endTime;
     }
 
+    /**
+     * entity ID
+     * 
+     */
     @InputImport(name="entityId", required=true)
     private final String entityId;
 
@@ -37,6 +49,10 @@ public final class GetEntityInsightsArgs extends io.pulumi.resources.InvokeArgs 
         return this.entityId;
     }
 
+    /**
+     * List of Insights Query Id. If empty, default value is all insights of this entity
+     * 
+     */
     @InputImport(name="insightQueryIds")
     private final @Nullable List<String> insightQueryIds;
 
@@ -44,6 +60,10 @@ public final class GetEntityInsightsArgs extends io.pulumi.resources.InvokeArgs 
         return this.insightQueryIds == null ? List.of() : this.insightQueryIds;
     }
 
+    /**
+     * The namespace of workspaces resource provider- Microsoft.OperationalInsights.
+     * 
+     */
     @InputImport(name="operationalInsightsResourceProvider", required=true)
     private final String operationalInsightsResourceProvider;
 
@@ -51,6 +71,10 @@ public final class GetEntityInsightsArgs extends io.pulumi.resources.InvokeArgs 
         return this.operationalInsightsResourceProvider;
     }
 
+    /**
+     * The name of the resource group within the user's subscription. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -58,6 +82,10 @@ public final class GetEntityInsightsArgs extends io.pulumi.resources.InvokeArgs 
         return this.resourceGroupName;
     }
 
+    /**
+     * The start timeline date, so the results returned are after this date.
+     * 
+     */
     @InputImport(name="startTime", required=true)
     private final String startTime;
 
@@ -65,6 +93,10 @@ public final class GetEntityInsightsArgs extends io.pulumi.resources.InvokeArgs 
         return this.startTime;
     }
 
+    /**
+     * The name of the workspace.
+     * 
+     */
     @InputImport(name="workspaceName", required=true)
     private final String workspaceName;
 

@@ -13,9 +13,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MigrateSqlServerSqlMIDatabaseInputResponse {
+    /**
+     * The list of backup files to be used in case of existing backups.
+     * 
+     */
     private final @Nullable List<String> backupFilePaths;
+    /**
+     * Backup file share information for backing up this database.
+     * 
+     */
     private final @Nullable FileShareResponse backupFileShare;
+    /**
+     * Name of the database
+     * 
+     */
     private final String name;
+    /**
+     * Name of the database at destination
+     * 
+     */
     private final String restoreDatabaseName;
 
     @OutputCustomType.Constructor({"backupFilePaths","backupFileShare","name","restoreDatabaseName"})
@@ -30,15 +46,31 @@ public final class MigrateSqlServerSqlMIDatabaseInputResponse {
         this.restoreDatabaseName = Objects.requireNonNull(restoreDatabaseName);
     }
 
+    /**
+     * The list of backup files to be used in case of existing backups.
+     * 
+     */
     public List<String> getBackupFilePaths() {
         return this.backupFilePaths == null ? List.of() : this.backupFilePaths;
     }
+    /**
+     * Backup file share information for backing up this database.
+     * 
+     */
     public Optional<FileShareResponse> getBackupFileShare() {
         return Optional.ofNullable(this.backupFileShare);
     }
+    /**
+     * Name of the database
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Name of the database at destination
+     * 
+     */
     public String getRestoreDatabaseName() {
         return this.restoreDatabaseName;
     }

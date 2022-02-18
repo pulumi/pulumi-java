@@ -14,10 +14,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Set value for a Variable.
+ * 
+ */
 public final class SetVariableActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SetVariableActivityResponse Empty = new SetVariableActivityResponse();
 
+    /**
+     * Activity depends on condition.
+     * 
+     */
     @InputImport(name="dependsOn")
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
@@ -25,6 +33,10 @@ public final class SetVariableActivityResponse extends io.pulumi.resources.Invok
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
 
+    /**
+     * Activity description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -32,6 +44,10 @@ public final class SetVariableActivityResponse extends io.pulumi.resources.Invok
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * Activity name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -39,6 +55,11 @@ public final class SetVariableActivityResponse extends io.pulumi.resources.Invok
         return this.name;
     }
 
+    /**
+     * Type of activity.
+     * Expected value is 'SetVariable'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -46,6 +67,10 @@ public final class SetVariableActivityResponse extends io.pulumi.resources.Invok
         return this.type;
     }
 
+    /**
+     * Activity user properties.
+     * 
+     */
     @InputImport(name="userProperties")
     private final @Nullable List<UserPropertyResponse> userProperties;
 
@@ -53,6 +78,10 @@ public final class SetVariableActivityResponse extends io.pulumi.resources.Invok
         return this.userProperties == null ? List.of() : this.userProperties;
     }
 
+    /**
+     * Value to be set. Could be a static value or Expression
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable Object value;
 
@@ -60,6 +89,10 @@ public final class SetVariableActivityResponse extends io.pulumi.resources.Invok
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
     }
 
+    /**
+     * Name of the variable whose value needs to be set.
+     * 
+     */
     @InputImport(name="variableName")
     private final @Nullable String variableName;
 

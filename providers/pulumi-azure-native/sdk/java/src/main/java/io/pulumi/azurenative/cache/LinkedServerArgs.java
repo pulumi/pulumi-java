@@ -15,6 +15,10 @@ public final class LinkedServerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LinkedServerArgs Empty = new LinkedServerArgs();
 
+    /**
+     * Fully qualified resourceId of the linked redis cache.
+     * 
+     */
     @InputImport(name="linkedRedisCacheId", required=true)
     private final Input<String> linkedRedisCacheId;
 
@@ -22,6 +26,10 @@ public final class LinkedServerArgs extends io.pulumi.resources.ResourceArgs {
         return this.linkedRedisCacheId;
     }
 
+    /**
+     * Location of the linked redis cache.
+     * 
+     */
     @InputImport(name="linkedRedisCacheLocation", required=true)
     private final Input<String> linkedRedisCacheLocation;
 
@@ -29,6 +37,10 @@ public final class LinkedServerArgs extends io.pulumi.resources.ResourceArgs {
         return this.linkedRedisCacheLocation;
     }
 
+    /**
+     * The name of the linked server that is being added to the Redis cache.
+     * 
+     */
     @InputImport(name="linkedServerName")
     private final @Nullable Input<String> linkedServerName;
 
@@ -36,6 +48,10 @@ public final class LinkedServerArgs extends io.pulumi.resources.ResourceArgs {
         return this.linkedServerName == null ? Input.empty() : this.linkedServerName;
     }
 
+    /**
+     * The name of the Redis cache.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -43,6 +59,10 @@ public final class LinkedServerArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -50,6 +70,10 @@ public final class LinkedServerArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Role of the linked server.
+     * 
+     */
     @InputImport(name="serverRole", required=true)
     private final Input<ReplicationRole> serverRole;
 

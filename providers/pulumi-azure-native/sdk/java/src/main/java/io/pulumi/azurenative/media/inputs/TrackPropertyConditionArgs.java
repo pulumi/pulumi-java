@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Class to specify one track property condition
+ * 
+ */
 public final class TrackPropertyConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TrackPropertyConditionArgs Empty = new TrackPropertyConditionArgs();
 
+    /**
+     * Track property condition operation
+     * 
+     */
     @InputImport(name="operation", required=true)
     private final Input<Either<String,TrackPropertyCompareOperation>> operation;
 
@@ -24,6 +32,10 @@ public final class TrackPropertyConditionArgs extends io.pulumi.resources.Resour
         return this.operation;
     }
 
+    /**
+     * Track property type
+     * 
+     */
     @InputImport(name="property", required=true)
     private final Input<Either<String,TrackPropertyType>> property;
 
@@ -31,6 +43,10 @@ public final class TrackPropertyConditionArgs extends io.pulumi.resources.Resour
         return this.property;
     }
 
+    /**
+     * Track property value
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

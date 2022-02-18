@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Container group log analytics information.
+ * 
+ */
 public final class LogAnalyticsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LogAnalyticsArgs Empty = new LogAnalyticsArgs();
 
+    /**
+     * The log type to be used.
+     * 
+     */
     @InputImport(name="logType")
     private final @Nullable Input<Either<String,LogAnalyticsLogType>> logType;
 
@@ -24,6 +32,10 @@ public final class LogAnalyticsArgs extends io.pulumi.resources.ResourceArgs {
         return this.logType == null ? Input.empty() : this.logType;
     }
 
+    /**
+     * Metadata for log analytics.
+     * 
+     */
     @InputImport(name="metadata")
     private final @Nullable Input<Map<String,String>> metadata;
 
@@ -31,6 +43,10 @@ public final class LogAnalyticsArgs extends io.pulumi.resources.ResourceArgs {
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
+    /**
+     * The workspace id for log analytics
+     * 
+     */
     @InputImport(name="workspaceId", required=true)
     private final Input<String> workspaceId;
 
@@ -38,6 +54,10 @@ public final class LogAnalyticsArgs extends io.pulumi.resources.ResourceArgs {
         return this.workspaceId;
     }
 
+    /**
+     * The workspace key for log analytics
+     * 
+     */
     @InputImport(name="workspaceKey", required=true)
     private final Input<String> workspaceKey;
 
@@ -45,6 +65,10 @@ public final class LogAnalyticsArgs extends io.pulumi.resources.ResourceArgs {
         return this.workspaceKey;
     }
 
+    /**
+     * The workspace resource id for log analytics
+     * 
+     */
     @InputImport(name="workspaceResourceId")
     private final @Nullable Input<Map<String,String>> workspaceResourceId;
 

@@ -15,6 +15,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FunctionArgs Empty = new FunctionArgs();
 
+    /**
+     * The name of the function.
+     * 
+     */
     @InputImport(name="functionName")
     private final @Nullable Input<String> functionName;
 
@@ -22,6 +26,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.functionName == null ? Input.empty() : this.functionName;
     }
 
+    /**
+     * The name of the streaming job.
+     * 
+     */
     @InputImport(name="jobName", required=true)
     private final Input<String> jobName;
 
@@ -29,6 +37,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.jobName;
     }
 
+    /**
+     * Resource name
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -36,6 +48,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The properties that are associated with a function.
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<ScalarFunctionPropertiesArgs> properties;
 
@@ -43,6 +59,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

@@ -16,39 +16,100 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * The Customer Notification Event resource.
+ * API Version: 2020-12-16-preview.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:testbase:CustomerEvent WeeklySummary /subscriptions/476f61a4-952c-422a-b4db-568a828f35df/resourceGroups/contoso-rg1/providers/Microsoft.TestBase/testBaseAccounts/contoso-testBaseAccount1/customerEvents/WeeklySummary 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:testbase:CustomerEvent")
 public class CustomerEvent extends io.pulumi.resources.CustomResource {
+    /**
+     * The name of the event subscribed to.
+     * 
+     */
     @OutputExport(name="eventName", type=String.class, parameters={})
     private Output<String> eventName;
 
+    /**
+     * @return The name of the event subscribed to.
+     * 
+     */
     public Output<String> getEventName() {
         return this.eventName;
     }
+    /**
+     * Resource name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The notification event receivers.
+     * 
+     */
     @OutputExport(name="receivers", type=List.class, parameters={NotificationEventReceiverResponse.class})
     private Output<List<NotificationEventReceiverResponse>> receivers;
 
+    /**
+     * @return The notification event receivers.
+     * 
+     */
     public Output<List<NotificationEventReceiverResponse>> getReceivers() {
         return this.receivers;
     }
+    /**
+     * The system metadata relating to this resource
+     * 
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return The system metadata relating to this resource
+     * 
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * Resource type.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public CustomerEvent(String name, CustomerEventArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:testbase:CustomerEvent", name, args == null ? CustomerEventArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -67,6 +128,14 @@ public class CustomerEvent extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static CustomerEvent get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new CustomerEvent(name, id, options);
     }

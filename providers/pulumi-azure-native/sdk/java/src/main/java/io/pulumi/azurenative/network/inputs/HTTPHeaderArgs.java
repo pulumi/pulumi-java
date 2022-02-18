@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The HTTP header.
+ * 
+ */
 public final class HTTPHeaderArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HTTPHeaderArgs Empty = new HTTPHeaderArgs();
 
+    /**
+     * The name in HTTP header.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -21,6 +29,10 @@ public final class HTTPHeaderArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The value in HTTP header.
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

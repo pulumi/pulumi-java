@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MyWorkbookUserAssignedIdentitiesResponse {
+    /**
+     * The principal ID of resource identity.
+     * 
+     */
     private final String principalId;
+    /**
+     * The tenant ID of resource.
+     * 
+     */
     private final String tenantId;
 
     @OutputCustomType.Constructor({"principalId","tenantId"})
@@ -20,9 +28,17 @@ public final class MyWorkbookUserAssignedIdentitiesResponse {
         this.tenantId = Objects.requireNonNull(tenantId);
     }
 
+    /**
+     * The principal ID of resource identity.
+     * 
+     */
     public String getPrincipalId() {
         return this.principalId;
     }
+    /**
+     * The tenant ID of resource.
+     * 
+     */
     public String getTenantId() {
         return this.tenantId;
     }

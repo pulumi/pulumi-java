@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Container App container environment variable.
+ * 
+ */
 public final class EnvironmentVarResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EnvironmentVarResponse Empty = new EnvironmentVarResponse();
 
+    /**
+     * Environment variable name.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -21,6 +29,10 @@ public final class EnvironmentVarResponse extends io.pulumi.resources.InvokeArgs
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Name of the Container App secret from which to pull the environment variable value.
+     * 
+     */
     @InputImport(name="secretRef")
     private final @Nullable String secretRef;
 
@@ -28,6 +40,10 @@ public final class EnvironmentVarResponse extends io.pulumi.resources.InvokeArgs
         return this.secretRef == null ? Optional.empty() : Optional.ofNullable(this.secretRef);
     }
 
+    /**
+     * Non-secret environment variable value.
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable String value;
 

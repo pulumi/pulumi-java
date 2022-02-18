@@ -14,10 +14,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ServiceUnitResponse {
+    /**
+     * The artifacts for the service unit.
+     * 
+     */
     private final @Nullable ServiceUnitArtifactsResponse artifacts;
+    /**
+     * Describes the type of ARM deployment to be performed on the resource.
+     * 
+     */
     private final String deploymentMode;
+    /**
+     * Name of the service unit.
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * Detailed step information, if present.
+     * 
+     */
     private final @Nullable List<RolloutStepResponse> steps;
+    /**
+     * The Azure Resource Group to which the resources in the service unit belong to or should be deployed to.
+     * 
+     */
     private final String targetResourceGroup;
 
     @OutputCustomType.Constructor({"artifacts","deploymentMode","name","steps","targetResourceGroup"})
@@ -34,18 +54,38 @@ public final class ServiceUnitResponse {
         this.targetResourceGroup = Objects.requireNonNull(targetResourceGroup);
     }
 
+    /**
+     * The artifacts for the service unit.
+     * 
+     */
     public Optional<ServiceUnitArtifactsResponse> getArtifacts() {
         return Optional.ofNullable(this.artifacts);
     }
+    /**
+     * Describes the type of ARM deployment to be performed on the resource.
+     * 
+     */
     public String getDeploymentMode() {
         return this.deploymentMode;
     }
+    /**
+     * Name of the service unit.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * Detailed step information, if present.
+     * 
+     */
     public List<RolloutStepResponse> getSteps() {
         return this.steps == null ? List.of() : this.steps;
     }
+    /**
+     * The Azure Resource Group to which the resources in the service unit belong to or should be deployed to.
+     * 
+     */
     public String getTargetResourceGroup() {
         return this.targetResourceGroup;
     }

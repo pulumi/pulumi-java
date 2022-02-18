@@ -12,6 +12,10 @@ public final class GetSapMonitorArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSapMonitorArgs Empty = new GetSapMonitorArgs();
 
+    /**
+     * Name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +23,10 @@ public final class GetSapMonitorArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of the SAP monitor resource.
+     * 
+     */
     @InputImport(name="sapMonitorName", required=true)
     private final String sapMonitorName;
 

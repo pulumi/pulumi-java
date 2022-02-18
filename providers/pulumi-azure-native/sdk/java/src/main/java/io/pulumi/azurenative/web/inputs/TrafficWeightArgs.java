@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Traffic weight assigned to a revision
+ * 
+ */
 public final class TrafficWeightArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TrafficWeightArgs Empty = new TrafficWeightArgs();
 
+    /**
+     * Indicates that the traffic weight belongs to a latest stable revision
+     * 
+     */
     @InputImport(name="latestRevision")
     private final @Nullable Input<Boolean> latestRevision;
 
@@ -23,6 +31,10 @@ public final class TrafficWeightArgs extends io.pulumi.resources.ResourceArgs {
         return this.latestRevision == null ? Input.empty() : this.latestRevision;
     }
 
+    /**
+     * Name of a revision
+     * 
+     */
     @InputImport(name="revisionName")
     private final @Nullable Input<String> revisionName;
 
@@ -30,6 +42,10 @@ public final class TrafficWeightArgs extends io.pulumi.resources.ResourceArgs {
         return this.revisionName == null ? Input.empty() : this.revisionName;
     }
 
+    /**
+     * Traffic weight assigned to a revision
+     * 
+     */
     @InputImport(name="weight")
     private final @Nullable Input<Integer> weight;
 

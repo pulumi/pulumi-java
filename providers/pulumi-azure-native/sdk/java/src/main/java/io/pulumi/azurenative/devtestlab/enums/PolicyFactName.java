@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The fact name of the policy (e.g. LabVmCount, LabVmSize, MaxVmsAllowedPerLab, etc.
+     * 
+     */
     @EnumType
     public enum PolicyFactName {
         UserOwnedLabVmCount("UserOwnedLabVmCount"),

@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ContainerServiceSshPublicKeyResponse {
+    /**
+     * Certificate public key used to authenticate with VMs through SSH. The certificate must be in PEM format with or without headers.
+     * 
+     */
     private final String keyData;
 
     @OutputCustomType.Constructor({"keyData"})
@@ -16,6 +20,10 @@ public final class ContainerServiceSshPublicKeyResponse {
         this.keyData = Objects.requireNonNull(keyData);
     }
 
+    /**
+     * Certificate public key used to authenticate with VMs through SSH. The certificate must be in PEM format with or without headers.
+     * 
+     */
     public String getKeyData() {
         return this.keyData;
     }

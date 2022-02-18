@@ -15,6 +15,10 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ScriptArgs Empty = new ScriptArgs();
 
+    /**
+     * The name of the Kusto cluster.
+     * 
+     */
     @InputImport(name="clusterName", required=true)
     private final Input<String> clusterName;
 
@@ -22,6 +26,10 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
         return this.clusterName;
     }
 
+    /**
+     * Flag that indicates whether to continue if one of the command fails.
+     * 
+     */
     @InputImport(name="continueOnErrors")
     private final @Nullable Input<Boolean> continueOnErrors;
 
@@ -29,6 +37,10 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
         return this.continueOnErrors == null ? Input.empty() : this.continueOnErrors;
     }
 
+    /**
+     * The name of the database in the Kusto cluster.
+     * 
+     */
     @InputImport(name="databaseName", required=true)
     private final Input<String> databaseName;
 
@@ -36,6 +48,10 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
         return this.databaseName;
     }
 
+    /**
+     * A unique string. If changed the script will be applied again.
+     * 
+     */
     @InputImport(name="forceUpdateTag")
     private final @Nullable Input<String> forceUpdateTag;
 
@@ -43,6 +59,10 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
         return this.forceUpdateTag == null ? Input.empty() : this.forceUpdateTag;
     }
 
+    /**
+     * The name of the resource group containing the Kusto cluster.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -50,6 +70,10 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the Kusto database script.
+     * 
+     */
     @InputImport(name="scriptName")
     private final @Nullable Input<String> scriptName;
 
@@ -57,6 +81,10 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
         return this.scriptName == null ? Input.empty() : this.scriptName;
     }
 
+    /**
+     * The url to the KQL script blob file.
+     * 
+     */
     @InputImport(name="scriptUrl", required=true)
     private final Input<String> scriptUrl;
 
@@ -64,6 +92,10 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
         return this.scriptUrl;
     }
 
+    /**
+     * The SaS token.
+     * 
+     */
     @InputImport(name="scriptUrlSasToken", required=true)
     private final Input<String> scriptUrlSasToken;
 

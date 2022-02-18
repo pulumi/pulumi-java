@@ -12,6 +12,10 @@ public final class GetIotDpsResourcePrivateEndpointConnectionArgs extends io.pul
 
     public static final GetIotDpsResourcePrivateEndpointConnectionArgs Empty = new GetIotDpsResourcePrivateEndpointConnectionArgs();
 
+    /**
+     * The name of the private endpoint connection
+     * 
+     */
     @InputImport(name="privateEndpointConnectionName", required=true)
     private final String privateEndpointConnectionName;
 
@@ -19,6 +23,10 @@ public final class GetIotDpsResourcePrivateEndpointConnectionArgs extends io.pul
         return this.privateEndpointConnectionName;
     }
 
+    /**
+     * The name of the resource group that contains the provisioning service.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetIotDpsResourcePrivateEndpointConnectionArgs extends io.pul
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the provisioning service.
+     * 
+     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 

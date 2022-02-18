@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAutomationAccount {
+/**
+ * Definition of the automation account type.
+ * API Version: 2021-06-22.
+ * 
+ *
+ * Definition of the automation account type.
+ * 
+ */
     public static CompletableFuture<GetAutomationAccountResult> invokeAsync(GetAutomationAccountArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getAutomationAccount", TypeShape.of(GetAutomationAccountResult.class), args == null ? GetAutomationAccountArgs.Empty : args, Utilities.withVersion(options));
     }

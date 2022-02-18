@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Guest OS Customization properties
+ * 
+ */
 public final class GuestOSCustomizationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GuestOSCustomizationResponse Empty = new GuestOSCustomizationResponse();
 
+    /**
+     * List of dns servers to use
+     * 
+     */
     @InputImport(name="dnsServers")
     private final @Nullable List<String> dnsServers;
 
@@ -22,6 +30,10 @@ public final class GuestOSCustomizationResponse extends io.pulumi.resources.Invo
         return this.dnsServers == null ? List.of() : this.dnsServers;
     }
 
+    /**
+     * Virtual Machine hostname
+     * 
+     */
     @InputImport(name="hostName")
     private final @Nullable String hostName;
 
@@ -29,6 +41,10 @@ public final class GuestOSCustomizationResponse extends io.pulumi.resources.Invo
         return this.hostName == null ? Optional.empty() : Optional.ofNullable(this.hostName);
     }
 
+    /**
+     * Password for login
+     * 
+     */
     @InputImport(name="password")
     private final @Nullable String password;
 
@@ -36,6 +52,10 @@ public final class GuestOSCustomizationResponse extends io.pulumi.resources.Invo
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
     }
 
+    /**
+     * id of customization policy
+     * 
+     */
     @InputImport(name="policyId")
     private final @Nullable String policyId;
 
@@ -43,6 +63,10 @@ public final class GuestOSCustomizationResponse extends io.pulumi.resources.Invo
         return this.policyId == null ? Optional.empty() : Optional.ofNullable(this.policyId);
     }
 
+    /**
+     * Username for login
+     * 
+     */
     @InputImport(name="username")
     private final @Nullable String username;
 

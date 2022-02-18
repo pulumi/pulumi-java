@@ -19,10 +19,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A2A provider specific settings.
+ * 
+ */
 public final class A2AReplicationDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final A2AReplicationDetailsResponse Empty = new A2AReplicationDetailsResponse();
 
+    /**
+     * The agent version.
+     * 
+     */
     @InputImport(name="agentVersion")
     private final @Nullable String agentVersion;
 
@@ -30,6 +38,10 @@ public final class A2AReplicationDetailsResponse extends io.pulumi.resources.Inv
         return this.agentVersion == null ? Optional.empty() : Optional.ofNullable(this.agentVersion);
     }
 
+    /**
+     * The fabric specific object Id of the virtual machine.
+     * 
+     */
     @InputImport(name="fabricObjectId")
     private final @Nullable String fabricObjectId;
 
@@ -37,6 +49,10 @@ public final class A2AReplicationDetailsResponse extends io.pulumi.resources.Inv
         return this.fabricObjectId == null ? Optional.empty() : Optional.ofNullable(this.fabricObjectId);
     }
 
+    /**
+     * The initial primary fabric location.
+     * 
+     */
     @InputImport(name="initialPrimaryFabricLocation", required=true)
     private final String initialPrimaryFabricLocation;
 
@@ -44,6 +60,10 @@ public final class A2AReplicationDetailsResponse extends io.pulumi.resources.Inv
         return this.initialPrimaryFabricLocation;
     }
 
+    /**
+     * The initial primary availability zone.
+     * 
+     */
     @InputImport(name="initialPrimaryZone", required=true)
     private final String initialPrimaryZone;
 
@@ -51,6 +71,10 @@ public final class A2AReplicationDetailsResponse extends io.pulumi.resources.Inv
         return this.initialPrimaryZone;
     }
 
+    /**
+     * The initial recovery fabric location.
+     * 
+     */
     @InputImport(name="initialRecoveryFabricLocation", required=true)
     private final String initialRecoveryFabricLocation;
 
@@ -58,6 +82,10 @@ public final class A2AReplicationDetailsResponse extends io.pulumi.resources.Inv
         return this.initialRecoveryFabricLocation;
     }
 
+    /**
+     * The initial recovery availability zone.
+     * 
+     */
     @InputImport(name="initialRecoveryZone", required=true)
     private final String initialRecoveryZone;
 
@@ -65,6 +93,11 @@ public final class A2AReplicationDetailsResponse extends io.pulumi.resources.Inv
         return this.initialRecoveryZone;
     }
 
+    /**
+     * Gets the Instance type.
+     * Expected value is 'A2A'.
+     * 
+     */
     @InputImport(name="instanceType", required=true)
     private final String instanceType;
 
@@ -72,6 +105,10 @@ public final class A2AReplicationDetailsResponse extends io.pulumi.resources.Inv
         return this.instanceType;
     }
 
+    /**
+     * A value indicating whether replication agent update is required.
+     * 
+     */
     @InputImport(name="isReplicationAgentUpdateRequired")
     private final @Nullable Boolean isReplicationAgentUpdateRequired;
 
@@ -79,6 +116,10 @@ public final class A2AReplicationDetailsResponse extends io.pulumi.resources.Inv
         return this.isReplicationAgentUpdateRequired == null ? Optional.empty() : Optional.ofNullable(this.isReplicationAgentUpdateRequired);
     }
 
+    /**
+     * The last heartbeat received from the source server.
+     * 
+     */
     @InputImport(name="lastHeartbeat")
     private final @Nullable String lastHeartbeat;
 
@@ -86,6 +127,10 @@ public final class A2AReplicationDetailsResponse extends io.pulumi.resources.Inv
         return this.lastHeartbeat == null ? Optional.empty() : Optional.ofNullable(this.lastHeartbeat);
     }
 
+    /**
+     * The time (in UTC) when the last RPO value was calculated by Protection Service.
+     * 
+     */
     @InputImport(name="lastRpoCalculatedTime")
     private final @Nullable String lastRpoCalculatedTime;
 
@@ -93,6 +138,10 @@ public final class A2AReplicationDetailsResponse extends io.pulumi.resources.Inv
         return this.lastRpoCalculatedTime == null ? Optional.empty() : Optional.ofNullable(this.lastRpoCalculatedTime);
     }
 
+    /**
+     * An id associated with the PE that survives actions like switch protection which change the backing PE/CPE objects internally.The lifecycle id gets carried forward to have a link/continuity in being able to have an Id that denotes the "same" protected item even though other internal Ids/ARM Id might be changing.
+     * 
+     */
     @InputImport(name="lifecycleId")
     private final @Nullable String lifecycleId;
 
@@ -100,6 +149,10 @@ public final class A2AReplicationDetailsResponse extends io.pulumi.resources.Inv
         return this.lifecycleId == null ? Optional.empty() : Optional.ofNullable(this.lifecycleId);
     }
 
+    /**
+     * The management Id.
+     * 
+     */
     @InputImport(name="managementId")
     private final @Nullable String managementId;
 
@@ -107,6 +160,10 @@ public final class A2AReplicationDetailsResponse extends io.pulumi.resources.Inv
         return this.managementId == null ? Optional.empty() : Optional.ofNullable(this.managementId);
     }
 
+    /**
+     * The type of the monitoring job. The progress is contained in MonitoringPercentageCompletion property.
+     * 
+     */
     @InputImport(name="monitoringJobType")
     private final @Nullable String monitoringJobType;
 
@@ -114,6 +171,10 @@ public final class A2AReplicationDetailsResponse extends io.pulumi.resources.Inv
         return this.monitoringJobType == null ? Optional.empty() : Optional.ofNullable(this.monitoringJobType);
     }
 
+    /**
+     * The percentage of the monitoring job. The type of the monitoring job is defined by MonitoringJobType property.
+     * 
+     */
     @InputImport(name="monitoringPercentageCompletion")
     private final @Nullable Integer monitoringPercentageCompletion;
 
@@ -121,6 +182,10 @@ public final class A2AReplicationDetailsResponse extends io.pulumi.resources.Inv
         return this.monitoringPercentageCompletion == null ? Optional.empty() : Optional.ofNullable(this.monitoringPercentageCompletion);
     }
 
+    /**
+     * Whether Multi VM group is auto created or specified by user.
+     * 
+     */
     @InputImport(name="multiVmGroupCreateOption")
     private final @Nullable String multiVmGroupCreateOption;
 
@@ -128,6 +193,10 @@ public final class A2AReplicationDetailsResponse extends io.pulumi.resources.Inv
         return this.multiVmGroupCreateOption == null ? Optional.empty() : Optional.ofNullable(this.multiVmGroupCreateOption);
     }
 
+    /**
+     * The multi vm group Id.
+     * 
+     */
     @InputImport(name="multiVmGroupId")
     private final @Nullable String multiVmGroupId;
 
@@ -135,6 +204,10 @@ public final class A2AReplicationDetailsResponse extends io.pulumi.resources.Inv
         return this.multiVmGroupId == null ? Optional.empty() : Optional.ofNullable(this.multiVmGroupId);
     }
 
+    /**
+     * The multi vm group name.
+     * 
+     */
     @InputImport(name="multiVmGroupName")
     private final @Nullable String multiVmGroupName;
 
@@ -142,6 +215,10 @@ public final class A2AReplicationDetailsResponse extends io.pulumi.resources.Inv
         return this.multiVmGroupName == null ? Optional.empty() : Optional.ofNullable(this.multiVmGroupName);
     }
 
+    /**
+     * The type of operating system.
+     * 
+     */
     @InputImport(name="osType")
     private final @Nullable String osType;
 
@@ -149,6 +226,10 @@ public final class A2AReplicationDetailsResponse extends io.pulumi.resources.Inv
         return this.osType == null ? Optional.empty() : Optional.ofNullable(this.osType);
     }
 
+    /**
+     * Primary fabric location.
+     * 
+     */
     @InputImport(name="primaryFabricLocation")
     private final @Nullable String primaryFabricLocation;
 
@@ -156,6 +237,10 @@ public final class A2AReplicationDetailsResponse extends io.pulumi.resources.Inv
         return this.primaryFabricLocation == null ? Optional.empty() : Optional.ofNullable(this.primaryFabricLocation);
     }
 
+    /**
+     * The list of protected disks.
+     * 
+     */
     @InputImport(name="protectedDisks")
     private final @Nullable List<A2AProtectedDiskDetailsResponse> protectedDisks;
 
@@ -163,6 +248,10 @@ public final class A2AReplicationDetailsResponse extends io.pulumi.resources.Inv
         return this.protectedDisks == null ? List.of() : this.protectedDisks;
     }
 
+    /**
+     * The list of protected managed disks.
+     * 
+     */
     @InputImport(name="protectedManagedDisks")
     private final @Nullable List<A2AProtectedManagedDiskDetailsResponse> protectedManagedDisks;
 
@@ -170,6 +259,10 @@ public final class A2AReplicationDetailsResponse extends io.pulumi.resources.Inv
         return this.protectedManagedDisks == null ? List.of() : this.protectedManagedDisks;
     }
 
+    /**
+     * The recovery availability set.
+     * 
+     */
     @InputImport(name="recoveryAvailabilitySet")
     private final @Nullable String recoveryAvailabilitySet;
 
@@ -177,6 +270,10 @@ public final class A2AReplicationDetailsResponse extends io.pulumi.resources.Inv
         return this.recoveryAvailabilitySet == null ? Optional.empty() : Optional.ofNullable(this.recoveryAvailabilitySet);
     }
 
+    /**
+     * The recovery availability zone.
+     * 
+     */
     @InputImport(name="recoveryAvailabilityZone")
     private final @Nullable String recoveryAvailabilityZone;
 
@@ -184,6 +281,10 @@ public final class A2AReplicationDetailsResponse extends io.pulumi.resources.Inv
         return this.recoveryAvailabilityZone == null ? Optional.empty() : Optional.ofNullable(this.recoveryAvailabilityZone);
     }
 
+    /**
+     * The recovery resource group.
+     * 
+     */
     @InputImport(name="recoveryAzureResourceGroupId")
     private final @Nullable String recoveryAzureResourceGroupId;
 
@@ -191,6 +292,10 @@ public final class A2AReplicationDetailsResponse extends io.pulumi.resources.Inv
         return this.recoveryAzureResourceGroupId == null ? Optional.empty() : Optional.ofNullable(this.recoveryAzureResourceGroupId);
     }
 
+    /**
+     * The name of recovery virtual machine.
+     * 
+     */
     @InputImport(name="recoveryAzureVMName")
     private final @Nullable String recoveryAzureVMName;
 
@@ -198,6 +303,10 @@ public final class A2AReplicationDetailsResponse extends io.pulumi.resources.Inv
         return this.recoveryAzureVMName == null ? Optional.empty() : Optional.ofNullable(this.recoveryAzureVMName);
     }
 
+    /**
+     * The size of recovery virtual machine.
+     * 
+     */
     @InputImport(name="recoveryAzureVMSize")
     private final @Nullable String recoveryAzureVMSize;
 
@@ -205,6 +314,10 @@ public final class A2AReplicationDetailsResponse extends io.pulumi.resources.Inv
         return this.recoveryAzureVMSize == null ? Optional.empty() : Optional.ofNullable(this.recoveryAzureVMSize);
     }
 
+    /**
+     * The recovery boot diagnostic storage account Arm Id.
+     * 
+     */
     @InputImport(name="recoveryBootDiagStorageAccountId")
     private final @Nullable String recoveryBootDiagStorageAccountId;
 
@@ -212,6 +325,10 @@ public final class A2AReplicationDetailsResponse extends io.pulumi.resources.Inv
         return this.recoveryBootDiagStorageAccountId == null ? Optional.empty() : Optional.ofNullable(this.recoveryBootDiagStorageAccountId);
     }
 
+    /**
+     * The recovery cloud service.
+     * 
+     */
     @InputImport(name="recoveryCloudService")
     private final @Nullable String recoveryCloudService;
 
@@ -219,6 +336,10 @@ public final class A2AReplicationDetailsResponse extends io.pulumi.resources.Inv
         return this.recoveryCloudService == null ? Optional.empty() : Optional.ofNullable(this.recoveryCloudService);
     }
 
+    /**
+     * The recovery fabric location.
+     * 
+     */
     @InputImport(name="recoveryFabricLocation")
     private final @Nullable String recoveryFabricLocation;
 
@@ -226,6 +347,10 @@ public final class A2AReplicationDetailsResponse extends io.pulumi.resources.Inv
         return this.recoveryFabricLocation == null ? Optional.empty() : Optional.ofNullable(this.recoveryFabricLocation);
     }
 
+    /**
+     * The recovery fabric object Id.
+     * 
+     */
     @InputImport(name="recoveryFabricObjectId")
     private final @Nullable String recoveryFabricObjectId;
 
@@ -233,6 +358,10 @@ public final class A2AReplicationDetailsResponse extends io.pulumi.resources.Inv
         return this.recoveryFabricObjectId == null ? Optional.empty() : Optional.ofNullable(this.recoveryFabricObjectId);
     }
 
+    /**
+     * The recovery proximity placement group Id.
+     * 
+     */
     @InputImport(name="recoveryProximityPlacementGroupId")
     private final @Nullable String recoveryProximityPlacementGroupId;
 
@@ -240,6 +369,10 @@ public final class A2AReplicationDetailsResponse extends io.pulumi.resources.Inv
         return this.recoveryProximityPlacementGroupId == null ? Optional.empty() : Optional.ofNullable(this.recoveryProximityPlacementGroupId);
     }
 
+    /**
+     * The last RPO value in seconds.
+     * 
+     */
     @InputImport(name="rpoInSeconds")
     private final @Nullable Double rpoInSeconds;
 
@@ -247,6 +380,10 @@ public final class A2AReplicationDetailsResponse extends io.pulumi.resources.Inv
         return this.rpoInSeconds == null ? Optional.empty() : Optional.ofNullable(this.rpoInSeconds);
     }
 
+    /**
+     * The recovery virtual network.
+     * 
+     */
     @InputImport(name="selectedRecoveryAzureNetworkId")
     private final @Nullable String selectedRecoveryAzureNetworkId;
 
@@ -254,6 +391,10 @@ public final class A2AReplicationDetailsResponse extends io.pulumi.resources.Inv
         return this.selectedRecoveryAzureNetworkId == null ? Optional.empty() : Optional.ofNullable(this.selectedRecoveryAzureNetworkId);
     }
 
+    /**
+     * The test failover virtual network.
+     * 
+     */
     @InputImport(name="selectedTfoAzureNetworkId")
     private final @Nullable String selectedTfoAzureNetworkId;
 
@@ -261,6 +402,10 @@ public final class A2AReplicationDetailsResponse extends io.pulumi.resources.Inv
         return this.selectedTfoAzureNetworkId == null ? Optional.empty() : Optional.ofNullable(this.selectedTfoAzureNetworkId);
     }
 
+    /**
+     * The test failover fabric object Id.
+     * 
+     */
     @InputImport(name="testFailoverRecoveryFabricObjectId")
     private final @Nullable String testFailoverRecoveryFabricObjectId;
 
@@ -268,6 +413,10 @@ public final class A2AReplicationDetailsResponse extends io.pulumi.resources.Inv
         return this.testFailoverRecoveryFabricObjectId == null ? Optional.empty() : Optional.ofNullable(this.testFailoverRecoveryFabricObjectId);
     }
 
+    /**
+     * The test failover VM name.
+     * 
+     */
     @InputImport(name="tfoAzureVMName")
     private final @Nullable String tfoAzureVMName;
 
@@ -275,6 +424,10 @@ public final class A2AReplicationDetailsResponse extends io.pulumi.resources.Inv
         return this.tfoAzureVMName == null ? Optional.empty() : Optional.ofNullable(this.tfoAzureVMName);
     }
 
+    /**
+     * The list of unprotected disks.
+     * 
+     */
     @InputImport(name="unprotectedDisks")
     private final @Nullable List<A2AUnprotectedDiskDetailsResponse> unprotectedDisks;
 
@@ -282,6 +435,10 @@ public final class A2AReplicationDetailsResponse extends io.pulumi.resources.Inv
         return this.unprotectedDisks == null ? List.of() : this.unprotectedDisks;
     }
 
+    /**
+     * The encryption type of the VM.
+     * 
+     */
     @InputImport(name="vmEncryptionType", required=true)
     private final String vmEncryptionType;
 
@@ -289,6 +446,10 @@ public final class A2AReplicationDetailsResponse extends io.pulumi.resources.Inv
         return this.vmEncryptionType;
     }
 
+    /**
+     * The virtual machine nic details.
+     * 
+     */
     @InputImport(name="vmNics")
     private final @Nullable List<VMNicDetailsResponse> vmNics;
 
@@ -296,6 +457,10 @@ public final class A2AReplicationDetailsResponse extends io.pulumi.resources.Inv
         return this.vmNics == null ? List.of() : this.vmNics;
     }
 
+    /**
+     * The protection state for the vm.
+     * 
+     */
     @InputImport(name="vmProtectionState")
     private final @Nullable String vmProtectionState;
 
@@ -303,6 +468,10 @@ public final class A2AReplicationDetailsResponse extends io.pulumi.resources.Inv
         return this.vmProtectionState == null ? Optional.empty() : Optional.ofNullable(this.vmProtectionState);
     }
 
+    /**
+     * The protection state description for the vm.
+     * 
+     */
     @InputImport(name="vmProtectionStateDescription")
     private final @Nullable String vmProtectionStateDescription;
 
@@ -310,6 +479,10 @@ public final class A2AReplicationDetailsResponse extends io.pulumi.resources.Inv
         return this.vmProtectionStateDescription == null ? Optional.empty() : Optional.ofNullable(this.vmProtectionStateDescription);
     }
 
+    /**
+     * The synced configuration details.
+     * 
+     */
     @InputImport(name="vmSyncedConfigDetails")
     private final @Nullable AzureToAzureVmSyncedConfigDetailsResponse vmSyncedConfigDetails;
 

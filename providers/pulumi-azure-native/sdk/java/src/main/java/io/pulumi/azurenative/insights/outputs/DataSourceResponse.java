@@ -13,6 +13,10 @@ import java.util.Objects;
 @OutputCustomType
 public final class DataSourceResponse {
     private final DataSourceConfigurationResponse configuration;
+    /**
+     * Datasource kind
+     * 
+     */
     private final String kind;
     private final List<SinkConfigurationResponse> sinks;
 
@@ -29,6 +33,10 @@ public final class DataSourceResponse {
     public DataSourceConfigurationResponse getConfiguration() {
         return this.configuration;
     }
+    /**
+     * Datasource kind
+     * 
+     */
     public String getKind() {
         return this.kind;
     }

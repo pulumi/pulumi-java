@@ -12,13 +12,45 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ApiReferenceResponse {
+    /**
+     * Brand color
+     * 
+     */
     private final @Nullable String brandColor;
+    /**
+     * The custom API description
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * The display name
+     * 
+     */
     private final @Nullable String displayName;
+    /**
+     * The icon URI
+     * 
+     */
     private final @Nullable String iconUri;
+    /**
+     * Resource reference id
+     * 
+     */
     private final @Nullable String id;
+    /**
+     * The name of the API
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * The JSON representation of the swagger
+     * 
+     */
     private final @Nullable Object swagger;
+    /**
+     * Resource reference type
+     * 
+     */
     private final @Nullable String type;
 
     @OutputCustomType.Constructor({"brandColor","description","displayName","iconUri","id","name","swagger","type"})
@@ -41,27 +73,59 @@ public final class ApiReferenceResponse {
         this.type = type;
     }
 
+    /**
+     * Brand color
+     * 
+     */
     public Optional<String> getBrandColor() {
         return Optional.ofNullable(this.brandColor);
     }
+    /**
+     * The custom API description
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * The display name
+     * 
+     */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
+    /**
+     * The icon URI
+     * 
+     */
     public Optional<String> getIconUri() {
         return Optional.ofNullable(this.iconUri);
     }
+    /**
+     * Resource reference id
+     * 
+     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+    /**
+     * The name of the API
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * The JSON representation of the swagger
+     * 
+     */
     public Optional<Object> getSwagger() {
         return Optional.ofNullable(this.swagger);
     }
+    /**
+     * Resource reference type
+     * 
+     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

@@ -10,10 +10,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Information about migration eligibility of a server object
+ * 
+ */
 public final class MigrationEligibilityInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MigrationEligibilityInfoResponse Empty = new MigrationEligibilityInfoResponse();
 
+    /**
+     * Whether object is eligible for migration or not.
+     * 
+     */
     @InputImport(name="isEligibleForMigration", required=true)
     private final Boolean isEligibleForMigration;
 
@@ -21,6 +29,10 @@ public final class MigrationEligibilityInfoResponse extends io.pulumi.resources.
         return this.isEligibleForMigration;
     }
 
+    /**
+     * Information about eligibility failure for the server object.
+     * 
+     */
     @InputImport(name="validationMessages", required=true)
     private final List<String> validationMessages;
 

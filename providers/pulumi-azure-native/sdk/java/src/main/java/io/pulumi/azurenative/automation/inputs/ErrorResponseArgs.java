@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Error response of an operation failure
+ * 
+ */
 public final class ErrorResponseArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ErrorResponseArgs Empty = new ErrorResponseArgs();
 
+    /**
+     * Error code
+     * 
+     */
     @InputImport(name="code")
     private final @Nullable Input<String> code;
 
@@ -21,6 +29,10 @@ public final class ErrorResponseArgs extends io.pulumi.resources.ResourceArgs {
         return this.code == null ? Input.empty() : this.code;
     }
 
+    /**
+     * Error message indicating why the operation failed.
+     * 
+     */
     @InputImport(name="message")
     private final @Nullable Input<String> message;
 

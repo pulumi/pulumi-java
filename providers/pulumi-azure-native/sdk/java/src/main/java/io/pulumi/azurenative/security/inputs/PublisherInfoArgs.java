@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents the publisher information of a process/rule
+ * 
+ */
 public final class PublisherInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PublisherInfoArgs Empty = new PublisherInfoArgs();
 
+    /**
+     * The "OriginalName" field taken from the file's version resource
+     * 
+     */
     @InputImport(name="binaryName")
     private final @Nullable Input<String> binaryName;
 
@@ -21,6 +29,10 @@ public final class PublisherInfoArgs extends io.pulumi.resources.ResourceArgs {
         return this.binaryName == null ? Input.empty() : this.binaryName;
     }
 
+    /**
+     * The product name taken from the file's version resource
+     * 
+     */
     @InputImport(name="productName")
     private final @Nullable Input<String> productName;
 
@@ -28,6 +40,10 @@ public final class PublisherInfoArgs extends io.pulumi.resources.ResourceArgs {
         return this.productName == null ? Input.empty() : this.productName;
     }
 
+    /**
+     * The Subject field of the x.509 certificate used to sign the code, using the following fields -  O = Organization, L = Locality, S = State or Province, and C = Country
+     * 
+     */
     @InputImport(name="publisherName")
     private final @Nullable Input<String> publisherName;
 
@@ -35,6 +51,10 @@ public final class PublisherInfoArgs extends io.pulumi.resources.ResourceArgs {
         return this.publisherName == null ? Input.empty() : this.publisherName;
     }
 
+    /**
+     * The binary file version taken from the file's version resource
+     * 
+     */
     @InputImport(name="version")
     private final @Nullable Input<String> version;
 

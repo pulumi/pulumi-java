@@ -14,10 +14,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The expression root.
+ * 
+ */
 public final class ExpressionRootResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ExpressionRootResponse Empty = new ExpressionRootResponse();
 
+    /**
+     * The azure resource error info.
+     * 
+     */
     @InputImport(name="error")
     private final @Nullable AzureResourceErrorInfoResponse error;
 
@@ -25,6 +33,10 @@ public final class ExpressionRootResponse extends io.pulumi.resources.InvokeArgs
         return this.error == null ? Optional.empty() : Optional.ofNullable(this.error);
     }
 
+    /**
+     * The path.
+     * 
+     */
     @InputImport(name="path")
     private final @Nullable String path;
 
@@ -32,6 +44,10 @@ public final class ExpressionRootResponse extends io.pulumi.resources.InvokeArgs
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
     }
 
+    /**
+     * The sub expressions.
+     * 
+     */
     @InputImport(name="subexpressions")
     private final @Nullable List<ExpressionResponse> subexpressions;
 
@@ -39,6 +55,10 @@ public final class ExpressionRootResponse extends io.pulumi.resources.InvokeArgs
         return this.subexpressions == null ? List.of() : this.subexpressions;
     }
 
+    /**
+     * The text.
+     * 
+     */
     @InputImport(name="text")
     private final @Nullable String text;
 

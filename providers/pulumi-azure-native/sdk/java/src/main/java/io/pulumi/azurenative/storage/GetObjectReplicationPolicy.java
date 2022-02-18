@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetObjectReplicationPolicy {
+/**
+ * The replication policy between two storage accounts. Multiple rules can be defined in one policy.
+ * API Version: 2021-02-01.
+ * 
+ *
+ * The replication policy between two storage accounts. Multiple rules can be defined in one policy.
+ * 
+ */
     public static CompletableFuture<GetObjectReplicationPolicyResult> invokeAsync(GetObjectReplicationPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:getObjectReplicationPolicy", TypeShape.of(GetObjectReplicationPolicyResult.class), args == null ? GetObjectReplicationPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

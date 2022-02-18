@@ -9,10 +9,30 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ConnectionDetailsResponse {
+    /**
+     * Group ID.
+     * 
+     */
     private final String groupId;
+    /**
+     * Connection details ID.
+     * 
+     */
     private final String id;
+    /**
+     * Link ID.
+     * 
+     */
     private final String linkIdentifier;
+    /**
+     * Member name.
+     * 
+     */
     private final String memberName;
+    /**
+     * Private IP address.
+     * 
+     */
     private final String privateIpAddress;
 
     @OutputCustomType.Constructor({"groupId","id","linkIdentifier","memberName","privateIpAddress"})
@@ -29,18 +49,38 @@ public final class ConnectionDetailsResponse {
         this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
     }
 
+    /**
+     * Group ID.
+     * 
+     */
     public String getGroupId() {
         return this.groupId;
     }
+    /**
+     * Connection details ID.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Link ID.
+     * 
+     */
     public String getLinkIdentifier() {
         return this.linkIdentifier;
     }
+    /**
+     * Member name.
+     * 
+     */
     public String getMemberName() {
         return this.memberName;
     }
+    /**
+     * Private IP address.
+     * 
+     */
     public String getPrivateIpAddress() {
         return this.privateIpAddress;
     }

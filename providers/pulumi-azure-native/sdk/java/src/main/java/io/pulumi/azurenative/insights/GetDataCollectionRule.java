@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDataCollectionRule {
+/**
+ * Definition of ARM tracked top level resource.
+ * API Version: 2019-11-01-preview.
+ * 
+ *
+ * Definition of ARM tracked top level resource.
+ * 
+ */
     public static CompletableFuture<GetDataCollectionRuleResult> invokeAsync(GetDataCollectionRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getDataCollectionRule", TypeShape.of(GetDataCollectionRuleResult.class), args == null ? GetDataCollectionRuleArgs.Empty : args, Utilities.withVersion(options));
     }

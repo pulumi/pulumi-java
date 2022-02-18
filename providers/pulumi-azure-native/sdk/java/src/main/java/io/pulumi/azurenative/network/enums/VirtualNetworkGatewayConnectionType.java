@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Gateway connection type.
+     * 
+     */
     @EnumType
     public enum VirtualNetworkGatewayConnectionType {
         IPsec("IPsec"),

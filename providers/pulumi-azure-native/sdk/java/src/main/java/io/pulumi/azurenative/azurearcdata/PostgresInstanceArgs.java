@@ -18,6 +18,10 @@ public final class PostgresInstanceArgs extends io.pulumi.resources.ResourceArgs
 
     public static final PostgresInstanceArgs Empty = new PostgresInstanceArgs();
 
+    /**
+     * The extendedLocation of the resource.
+     * 
+     */
     @InputImport(name="extendedLocation")
     private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
 
@@ -25,6 +29,10 @@ public final class PostgresInstanceArgs extends io.pulumi.resources.ResourceArgs
         return this.extendedLocation == null ? Input.empty() : this.extendedLocation;
     }
 
+    /**
+     * The geo-location where the resource lives
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -32,6 +40,10 @@ public final class PostgresInstanceArgs extends io.pulumi.resources.ResourceArgs
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Name of PostgresInstance
+     * 
+     */
     @InputImport(name="postgresInstanceName")
     private final @Nullable Input<String> postgresInstanceName;
 
@@ -39,6 +51,10 @@ public final class PostgresInstanceArgs extends io.pulumi.resources.ResourceArgs
         return this.postgresInstanceName == null ? Input.empty() : this.postgresInstanceName;
     }
 
+    /**
+     * null
+     * 
+     */
     @InputImport(name="properties", required=true)
     private final Input<PostgresInstancePropertiesArgs> properties;
 
@@ -46,6 +62,10 @@ public final class PostgresInstanceArgs extends io.pulumi.resources.ResourceArgs
         return this.properties;
     }
 
+    /**
+     * The name of the Azure resource group
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -53,6 +73,10 @@ public final class PostgresInstanceArgs extends io.pulumi.resources.ResourceArgs
         return this.resourceGroupName;
     }
 
+    /**
+     * Resource sku.
+     * 
+     */
     @InputImport(name="sku")
     private final @Nullable Input<PostgresInstanceSkuArgs> sku;
 
@@ -60,6 +84,10 @@ public final class PostgresInstanceArgs extends io.pulumi.resources.ResourceArgs
         return this.sku == null ? Input.empty() : this.sku;
     }
 
+    /**
+     * Resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

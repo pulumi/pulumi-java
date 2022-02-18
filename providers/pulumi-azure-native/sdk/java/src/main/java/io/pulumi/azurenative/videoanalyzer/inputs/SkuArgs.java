@@ -11,10 +11,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The SKU details.
+ * 
+ */
 public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SkuArgs Empty = new SkuArgs();
 
+    /**
+     * The SKU name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<Either<String,SkuName>> name;
 

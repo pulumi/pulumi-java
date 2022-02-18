@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Container App Dapr component metadata.
+ * 
+ */
 public final class DaprMetadataResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DaprMetadataResponse Empty = new DaprMetadataResponse();
 
+    /**
+     * Metadata property name.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -21,6 +29,10 @@ public final class DaprMetadataResponse extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Name of the Container App secret from which to pull the metadata property value.
+     * 
+     */
     @InputImport(name="secretRef")
     private final @Nullable String secretRef;
 
@@ -28,6 +40,10 @@ public final class DaprMetadataResponse extends io.pulumi.resources.InvokeArgs {
         return this.secretRef == null ? Optional.empty() : Optional.ofNullable(this.secretRef);
     }
 
+    /**
+     * Metadata property value.
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable String value;
 

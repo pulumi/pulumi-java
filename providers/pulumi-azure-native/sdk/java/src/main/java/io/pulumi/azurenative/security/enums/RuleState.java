@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Possible states of the rule
+     * 
+     */
     @EnumType
     public enum RuleState {
         Enabled("Enabled"),

@@ -12,10 +12,19 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents a single status change.
+ * 
+ */
 public final class OrderStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OrderStatusResponse Empty = new OrderStatusResponse();
 
+    /**
+     * Dictionary to hold generic information which is not stored
+     * by the already existing properties
+     * 
+     */
     @InputImport(name="additionalOrderDetails", required=true)
     private final Map<String,String> additionalOrderDetails;
 
@@ -23,6 +32,10 @@ public final class OrderStatusResponse extends io.pulumi.resources.InvokeArgs {
         return this.additionalOrderDetails;
     }
 
+    /**
+     * Comments related to this status change.
+     * 
+     */
     @InputImport(name="comments")
     private final @Nullable String comments;
 
@@ -30,6 +43,10 @@ public final class OrderStatusResponse extends io.pulumi.resources.InvokeArgs {
         return this.comments == null ? Optional.empty() : Optional.ofNullable(this.comments);
     }
 
+    /**
+     * Status of the order as per the allowed status types.
+     * 
+     */
     @InputImport(name="status", required=true)
     private final String status;
 
@@ -37,6 +54,10 @@ public final class OrderStatusResponse extends io.pulumi.resources.InvokeArgs {
         return this.status;
     }
 
+    /**
+     * Tracking information related to the state in the ordering flow
+     * 
+     */
     @InputImport(name="trackingInformation", required=true)
     private final TrackingInfoResponse trackingInformation;
 
@@ -44,6 +65,10 @@ public final class OrderStatusResponse extends io.pulumi.resources.InvokeArgs {
         return this.trackingInformation;
     }
 
+    /**
+     * Time of status update.
+     * 
+     */
     @InputImport(name="updateDateTime", required=true)
     private final String updateDateTime;
 

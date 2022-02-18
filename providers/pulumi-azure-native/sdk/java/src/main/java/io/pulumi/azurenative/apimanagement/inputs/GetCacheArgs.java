@@ -12,6 +12,10 @@ public final class GetCacheArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetCacheArgs Empty = new GetCacheArgs();
 
+    /**
+     * Identifier of the Cache entity. Cache identifier (should be either 'default' or valid Azure region identifier).
+     * 
+     */
     @InputImport(name="cacheId", required=true)
     private final String cacheId;
 
@@ -19,6 +23,10 @@ public final class GetCacheArgs extends io.pulumi.resources.InvokeArgs {
         return this.cacheId;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetCacheArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the API Management service.
+     * 
+     */
     @InputImport(name="serviceName", required=true)
     private final String serviceName;
 

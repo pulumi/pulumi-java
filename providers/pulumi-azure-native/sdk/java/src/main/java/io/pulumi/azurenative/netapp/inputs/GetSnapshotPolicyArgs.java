@@ -12,6 +12,10 @@ public final class GetSnapshotPolicyArgs extends io.pulumi.resources.InvokeArgs 
 
     public static final GetSnapshotPolicyArgs Empty = new GetSnapshotPolicyArgs();
 
+    /**
+     * The name of the NetApp account
+     * 
+     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -19,6 +23,10 @@ public final class GetSnapshotPolicyArgs extends io.pulumi.resources.InvokeArgs 
         return this.accountName;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetSnapshotPolicyArgs extends io.pulumi.resources.InvokeArgs 
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the snapshot policy
+     * 
+     */
     @InputImport(name="snapshotPolicyName", required=true)
     private final String snapshotPolicyName;
 

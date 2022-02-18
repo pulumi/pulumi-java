@@ -19,10 +19,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Dynamics linked service.
+ * 
+ */
 public final class DynamicsLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DynamicsLinkedServiceResponse Empty = new DynamicsLinkedServiceResponse();
 
+    /**
+     * List of tags that can be used for describing the linked service.
+     * 
+     */
     @InputImport(name="annotations")
     private final @Nullable List<Object> annotations;
 
@@ -30,6 +38,10 @@ public final class DynamicsLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.annotations == null ? List.of() : this.annotations;
     }
 
+    /**
+     * The authentication type to connect to Dynamics server. 'Office365' for online scenario, 'Ifd' for on-premises with Ifd scenario, 'AADServicePrincipal' for Server-To-Server authentication in online scenario. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="authenticationType", required=true)
     private final Object authenticationType;
 
@@ -37,6 +49,10 @@ public final class DynamicsLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.authenticationType;
     }
 
+    /**
+     * The integration runtime reference.
+     * 
+     */
     @InputImport(name="connectVia")
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
@@ -44,6 +60,10 @@ public final class DynamicsLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
+    /**
+     * The credential reference containing authentication information.
+     * 
+     */
     @InputImport(name="credential")
     private final @Nullable CredentialReferenceResponse credential;
 
@@ -51,6 +71,10 @@ public final class DynamicsLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.credential == null ? Optional.empty() : Optional.ofNullable(this.credential);
     }
 
+    /**
+     * The deployment type of the Dynamics instance. 'Online' for Dynamics Online and 'OnPremisesWithIfd' for Dynamics on-premises with Ifd. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="deploymentType", required=true)
     private final Object deploymentType;
 
@@ -58,6 +82,10 @@ public final class DynamicsLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.deploymentType;
     }
 
+    /**
+     * Linked service description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -65,6 +93,10 @@ public final class DynamicsLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Object encryptedCredential;
 
@@ -72,6 +104,10 @@ public final class DynamicsLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
+    /**
+     * The host name of the on-premises Dynamics server. The property is required for on-prem and not allowed for online. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="hostName")
     private final @Nullable Object hostName;
 
@@ -79,6 +115,10 @@ public final class DynamicsLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.hostName == null ? Optional.empty() : Optional.ofNullable(this.hostName);
     }
 
+    /**
+     * The organization name of the Dynamics instance. The property is required for on-prem and required for online when there are more than one Dynamics instances associated with the user. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="organizationName")
     private final @Nullable Object organizationName;
 
@@ -86,6 +126,10 @@ public final class DynamicsLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.organizationName == null ? Optional.empty() : Optional.ofNullable(this.organizationName);
     }
 
+    /**
+     * Parameters for linked service.
+     * 
+     */
     @InputImport(name="parameters")
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
@@ -93,6 +137,10 @@ public final class DynamicsLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
+    /**
+     * Password to access the Dynamics instance.
+     * 
+     */
     @InputImport(name="password")
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
@@ -100,6 +148,10 @@ public final class DynamicsLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.password == null ? null : this.password;
     }
 
+    /**
+     * The port of on-premises Dynamics server. The property is required for on-prem and not allowed for online. Default is 443. Type: integer (or Expression with resultType integer), minimum: 0.
+     * 
+     */
     @InputImport(name="port")
     private final @Nullable Object port;
 
@@ -107,6 +159,10 @@ public final class DynamicsLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
     }
 
+    /**
+     * The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.
+     * 
+     */
     @InputImport(name="servicePrincipalCredential")
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalCredential;
 
@@ -114,6 +170,10 @@ public final class DynamicsLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.servicePrincipalCredential == null ? null : this.servicePrincipalCredential;
     }
 
+    /**
+     * The service principal credential type to use in Server-To-Server authentication. 'ServicePrincipalKey' for key/secret, 'ServicePrincipalCert' for certificate. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="servicePrincipalCredentialType")
     private final @Nullable Object servicePrincipalCredentialType;
 
@@ -121,6 +181,10 @@ public final class DynamicsLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.servicePrincipalCredentialType == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalCredentialType);
     }
 
+    /**
+     * The client ID of the application in Azure Active Directory used for Server-To-Server authentication. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="servicePrincipalId")
     private final @Nullable Object servicePrincipalId;
 
@@ -128,6 +192,10 @@ public final class DynamicsLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.servicePrincipalId == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalId);
     }
 
+    /**
+     * The URL to the Microsoft Dynamics server. The property is required for on-line and not allowed for on-prem. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="serviceUri")
     private final @Nullable Object serviceUri;
 
@@ -135,6 +203,11 @@ public final class DynamicsLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.serviceUri == null ? Optional.empty() : Optional.ofNullable(this.serviceUri);
     }
 
+    /**
+     * Type of linked service.
+     * Expected value is 'Dynamics'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -142,6 +215,10 @@ public final class DynamicsLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.type;
     }
 
+    /**
+     * User name to access the Dynamics instance. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="username")
     private final @Nullable Object username;
 

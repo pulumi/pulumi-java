@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Collection of instances belong to the Service Registry
+ * 
+ */
 public final class ServiceRegistryInstanceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ServiceRegistryInstanceResponse Empty = new ServiceRegistryInstanceResponse();
 
+    /**
+     * Name of the Service Registry instance
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -19,6 +27,10 @@ public final class ServiceRegistryInstanceResponse extends io.pulumi.resources.I
         return this.name;
     }
 
+    /**
+     * Status of the Service Registry instance
+     * 
+     */
     @InputImport(name="status", required=true)
     private final String status;
 

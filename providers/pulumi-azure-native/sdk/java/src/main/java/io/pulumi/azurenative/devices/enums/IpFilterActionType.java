@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The desired action for requests captured by this rule.
+     * 
+     */
     @EnumType
     public enum IpFilterActionType {
         Accept("Accept"),

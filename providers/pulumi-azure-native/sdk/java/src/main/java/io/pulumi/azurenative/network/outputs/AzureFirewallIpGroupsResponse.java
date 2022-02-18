@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AzureFirewallIpGroupsResponse {
+    /**
+     * The iteration number.
+     * 
+     */
     private final String changeNumber;
+    /**
+     * Resource ID.
+     * 
+     */
     private final String id;
 
     @OutputCustomType.Constructor({"changeNumber","id"})
@@ -20,9 +28,17 @@ public final class AzureFirewallIpGroupsResponse {
         this.id = Objects.requireNonNull(id);
     }
 
+    /**
+     * The iteration number.
+     * 
+     */
     public String getChangeNumber() {
         return this.changeNumber;
     }
+    /**
+     * Resource ID.
+     * 
+     */
     public String getId() {
         return this.id;
     }

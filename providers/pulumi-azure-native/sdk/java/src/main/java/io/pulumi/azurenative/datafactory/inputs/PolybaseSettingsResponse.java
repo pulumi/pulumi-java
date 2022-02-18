@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * PolyBase settings.
+ * 
+ */
 public final class PolybaseSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PolybaseSettingsResponse Empty = new PolybaseSettingsResponse();
 
+    /**
+     * Determines the number of rows to attempt to retrieve before the PolyBase recalculates the percentage of rejected rows. Type: integer (or Expression with resultType integer), minimum: 0.
+     * 
+     */
     @InputImport(name="rejectSampleValue")
     private final @Nullable Object rejectSampleValue;
 
@@ -22,6 +30,10 @@ public final class PolybaseSettingsResponse extends io.pulumi.resources.InvokeAr
         return this.rejectSampleValue == null ? Optional.empty() : Optional.ofNullable(this.rejectSampleValue);
     }
 
+    /**
+     * Reject type.
+     * 
+     */
     @InputImport(name="rejectType")
     private final @Nullable String rejectType;
 
@@ -29,6 +41,10 @@ public final class PolybaseSettingsResponse extends io.pulumi.resources.InvokeAr
         return this.rejectType == null ? Optional.empty() : Optional.ofNullable(this.rejectType);
     }
 
+    /**
+     * Specifies the value or the percentage of rows that can be rejected before the query fails. Type: number (or Expression with resultType number), minimum: 0.
+     * 
+     */
     @InputImport(name="rejectValue")
     private final @Nullable Object rejectValue;
 
@@ -36,6 +52,10 @@ public final class PolybaseSettingsResponse extends io.pulumi.resources.InvokeAr
         return this.rejectValue == null ? Optional.empty() : Optional.ofNullable(this.rejectValue);
     }
 
+    /**
+     * Specifies how to handle missing values in delimited text files when PolyBase retrieves data from the text file. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     @InputImport(name="useTypeDefault")
     private final @Nullable Object useTypeDefault;
 

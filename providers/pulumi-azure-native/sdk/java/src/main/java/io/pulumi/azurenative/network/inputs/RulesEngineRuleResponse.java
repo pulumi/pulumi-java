@@ -14,10 +14,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Contains a list of match conditions, and an action on how to modify the request/response. If multiple rules match, the actions from one rule that conflict with a previous rule overwrite for a singular action, or append in the case of headers manipulation.
+ * 
+ */
 public final class RulesEngineRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RulesEngineRuleResponse Empty = new RulesEngineRuleResponse();
 
+    /**
+     * Actions to perform on the request and response if all of the match conditions are met.
+     * 
+     */
     @InputImport(name="action", required=true)
     private final RulesEngineActionResponse action;
 
@@ -25,6 +33,10 @@ public final class RulesEngineRuleResponse extends io.pulumi.resources.InvokeArg
         return this.action;
     }
 
+    /**
+     * A list of match conditions that must meet in order for the actions of this rule to run. Having no match conditions means the actions will always run.
+     * 
+     */
     @InputImport(name="matchConditions")
     private final @Nullable List<RulesEngineMatchConditionResponse> matchConditions;
 
@@ -32,6 +44,10 @@ public final class RulesEngineRuleResponse extends io.pulumi.resources.InvokeArg
         return this.matchConditions == null ? List.of() : this.matchConditions;
     }
 
+    /**
+     * If this rule is a match should the rules engine continue running the remaining rules or stop. If not present, defaults to Continue.
+     * 
+     */
     @InputImport(name="matchProcessingBehavior")
     private final @Nullable String matchProcessingBehavior;
 
@@ -39,6 +55,10 @@ public final class RulesEngineRuleResponse extends io.pulumi.resources.InvokeArg
         return this.matchProcessingBehavior == null ? Optional.empty() : Optional.ofNullable(this.matchProcessingBehavior);
     }
 
+    /**
+     * A name to refer to this specific rule.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -46,6 +66,10 @@ public final class RulesEngineRuleResponse extends io.pulumi.resources.InvokeArg
         return this.name;
     }
 
+    /**
+     * A priority assigned to this rule.
+     * 
+     */
     @InputImport(name="priority", required=true)
     private final Integer priority;
 

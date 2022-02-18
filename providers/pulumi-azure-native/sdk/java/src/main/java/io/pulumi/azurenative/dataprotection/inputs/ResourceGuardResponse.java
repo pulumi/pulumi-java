@@ -15,6 +15,10 @@ public final class ResourceGuardResponse extends io.pulumi.resources.InvokeArgs 
 
     public static final ResourceGuardResponse Empty = new ResourceGuardResponse();
 
+    /**
+     * This flag indicates whether auto approval is allowed or not.
+     * 
+     */
     @InputImport(name="allowAutoApprovals", required=true)
     private final Boolean allowAutoApprovals;
 
@@ -22,6 +26,10 @@ public final class ResourceGuardResponse extends io.pulumi.resources.InvokeArgs 
         return this.allowAutoApprovals;
     }
 
+    /**
+     * Description about the pre-req steps to perform all the critical operations.
+     * 
+     */
     @InputImport(name="description", required=true)
     private final String description;
 
@@ -29,6 +37,10 @@ public final class ResourceGuardResponse extends io.pulumi.resources.InvokeArgs 
         return this.description;
     }
 
+    /**
+     * Provisioning state of the BackupVault resource
+     * 
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -36,6 +48,10 @@ public final class ResourceGuardResponse extends io.pulumi.resources.InvokeArgs 
         return this.provisioningState;
     }
 
+    /**
+     * {readonly} List of operation details those are protected by the ResourceGuard resource
+     * 
+     */
     @InputImport(name="resourceGuardOperations", required=true)
     private final List<ResourceGuardOperationResponse> resourceGuardOperations;
 
@@ -43,6 +59,10 @@ public final class ResourceGuardResponse extends io.pulumi.resources.InvokeArgs 
         return this.resourceGuardOperations;
     }
 
+    /**
+     * List of critical operations which are not protected by this resourceGuard
+     * 
+     */
     @InputImport(name="vaultCriticalOperationExclusionList", required=true)
     private final List<String> vaultCriticalOperationExclusionList;
 

@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The location of amazon S3 dataset.
+ * 
+ */
 public final class AmazonS3LocationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AmazonS3LocationArgs Empty = new AmazonS3LocationArgs();
 
+    /**
+     * Specify the bucketName of amazon S3. Type: string (or Expression with resultType string)
+     * 
+     */
     @InputImport(name="bucketName")
     private final @Nullable Input<Object> bucketName;
 
@@ -22,6 +30,10 @@ public final class AmazonS3LocationArgs extends io.pulumi.resources.ResourceArgs
         return this.bucketName == null ? Input.empty() : this.bucketName;
     }
 
+    /**
+     * Specify the file name of dataset. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="fileName")
     private final @Nullable Input<Object> fileName;
 
@@ -29,6 +41,10 @@ public final class AmazonS3LocationArgs extends io.pulumi.resources.ResourceArgs
         return this.fileName == null ? Input.empty() : this.fileName;
     }
 
+    /**
+     * Specify the folder path of dataset. Type: string (or Expression with resultType string)
+     * 
+     */
     @InputImport(name="folderPath")
     private final @Nullable Input<Object> folderPath;
 
@@ -36,6 +52,11 @@ public final class AmazonS3LocationArgs extends io.pulumi.resources.ResourceArgs
         return this.folderPath == null ? Input.empty() : this.folderPath;
     }
 
+    /**
+     * Type of dataset storage location.
+     * Expected value is 'AmazonS3Location'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -43,6 +64,10 @@ public final class AmazonS3LocationArgs extends io.pulumi.resources.ResourceArgs
         return this.type;
     }
 
+    /**
+     * Specify the version of amazon S3. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="version")
     private final @Nullable Input<Object> version;
 

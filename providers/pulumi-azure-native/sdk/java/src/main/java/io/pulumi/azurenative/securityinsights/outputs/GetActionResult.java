@@ -11,11 +11,35 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetActionResult {
+    /**
+     * Etag of the action.
+     * 
+     */
     private final @Nullable String etag;
+    /**
+     * Azure resource Id
+     * 
+     */
     private final String id;
+    /**
+     * Logic App Resource Id, /subscriptions/{my-subscription}/resourceGroups/{my-resource-group}/providers/Microsoft.Logic/workflows/{my-workflow-id}.
+     * 
+     */
     private final String logicAppResourceId;
+    /**
+     * Azure resource name
+     * 
+     */
     private final String name;
+    /**
+     * Azure resource type
+     * 
+     */
     private final String type;
+    /**
+     * The name of the logic app's workflow.
+     * 
+     */
     private final @Nullable String workflowId;
 
     @OutputCustomType.Constructor({"etag","id","logicAppResourceId","name","type","workflowId"})
@@ -34,21 +58,45 @@ public final class GetActionResult {
         this.workflowId = workflowId;
     }
 
+    /**
+     * Etag of the action.
+     * 
+     */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
+    /**
+     * Azure resource Id
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Logic App Resource Id, /subscriptions/{my-subscription}/resourceGroups/{my-resource-group}/providers/Microsoft.Logic/workflows/{my-workflow-id}.
+     * 
+     */
     public String getLogicAppResourceId() {
         return this.logicAppResourceId;
     }
+    /**
+     * Azure resource name
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Azure resource type
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * The name of the logic app's workflow.
+     * 
+     */
     public Optional<String> getWorkflowId() {
         return Optional.ofNullable(this.workflowId);
     }

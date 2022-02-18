@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIotHubResourceEventHubConsumerGroup {
+/**
+ * The properties of the EventHubConsumerGroupInfo object.
+ * API Version: 2020-08-31.
+ * 
+ *
+ * The properties of the EventHubConsumerGroupInfo object.
+ * 
+ */
     public static CompletableFuture<GetIotHubResourceEventHubConsumerGroupResult> invokeAsync(GetIotHubResourceEventHubConsumerGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devices:getIotHubResourceEventHubConsumerGroup", TypeShape.of(GetIotHubResourceEventHubConsumerGroupResult.class), args == null ? GetIotHubResourceEventHubConsumerGroupArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -15,33 +15,86 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Recovery plan details.
+ * API Version: 2018-07-10.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:recoveryservices:ReplicationRecoveryPlan RPtest1 /Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationRecoveryPlans/RPtest1 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:recoveryservices:ReplicationRecoveryPlan")
 public class ReplicationRecoveryPlan extends io.pulumi.resources.CustomResource {
+    /**
+     * Resource Location
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Resource Location
+     * 
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * Resource Name
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource Name
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The custom details.
+     * 
+     */
     @OutputExport(name="properties", type=RecoveryPlanPropertiesResponse.class, parameters={})
     private Output<RecoveryPlanPropertiesResponse> properties;
 
+    /**
+     * @return The custom details.
+     * 
+     */
     public Output<RecoveryPlanPropertiesResponse> getProperties() {
         return this.properties;
     }
+    /**
+     * Resource Type
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource Type
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ReplicationRecoveryPlan(String name, ReplicationRecoveryPlanArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:recoveryservices:ReplicationRecoveryPlan", name, args == null ? ReplicationRecoveryPlanArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -71,6 +124,14 @@ public class ReplicationRecoveryPlan extends io.pulumi.resources.CustomResource 
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ReplicationRecoveryPlan get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ReplicationRecoveryPlan(name, id, options);
     }

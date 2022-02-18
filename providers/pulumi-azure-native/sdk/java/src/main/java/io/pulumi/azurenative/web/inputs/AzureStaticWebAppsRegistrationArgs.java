@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The configuration settings of the registration for the Azure Static Web Apps provider
+ * 
+ */
 public final class AzureStaticWebAppsRegistrationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureStaticWebAppsRegistrationArgs Empty = new AzureStaticWebAppsRegistrationArgs();
 
+    /**
+     * The Client ID of the app used for login.
+     * 
+     */
     @InputImport(name="clientId")
     private final @Nullable Input<String> clientId;
 

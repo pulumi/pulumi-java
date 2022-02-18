@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Type of workload for the backup management
+     * 
+     */
     @EnumType
     public enum WorkloadType {
         Invalid("Invalid"),

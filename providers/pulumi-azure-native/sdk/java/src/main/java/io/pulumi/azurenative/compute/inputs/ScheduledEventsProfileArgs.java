@@ -14,6 +14,10 @@ public final class ScheduledEventsProfileArgs extends io.pulumi.resources.Resour
 
     public static final ScheduledEventsProfileArgs Empty = new ScheduledEventsProfileArgs();
 
+    /**
+     * Specifies Terminate Scheduled Event related configurations.
+     * 
+     */
     @InputImport(name="terminateNotificationProfile")
     private final @Nullable Input<TerminateNotificationProfileArgs> terminateNotificationProfile;
 

@@ -12,9 +12,26 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SsisFolderResponse {
+    /**
+     * Metadata description.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * Metadata id.
+     * 
+     */
     private final @Nullable Double id;
+    /**
+     * Metadata name.
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * The type of SSIS object metadata.
+     * Expected value is 'Folder'.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"description","id","name","type"})
@@ -29,15 +46,32 @@ public final class SsisFolderResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Metadata description.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * Metadata id.
+     * 
+     */
     public Optional<Double> getId() {
         return Optional.ofNullable(this.id);
     }
+    /**
+     * Metadata name.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * The type of SSIS object metadata.
+     * Expected value is 'Folder'.
+     * 
+     */
     public String getType() {
         return this.type;
     }

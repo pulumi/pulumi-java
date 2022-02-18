@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * An iSCSI volume from Microsoft.StoragePool provider
+ * 
+ */
 public final class DiskPoolVolumeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DiskPoolVolumeResponse Empty = new DiskPoolVolumeResponse();
 
+    /**
+     * iSCSI provider target IP address list
+     * 
+     */
     @InputImport(name="endpoints")
     private final @Nullable List<String> endpoints;
 
@@ -22,6 +30,10 @@ public final class DiskPoolVolumeResponse extends io.pulumi.resources.InvokeArgs
         return this.endpoints == null ? List.of() : this.endpoints;
     }
 
+    /**
+     * Name of the LUN to be used
+     * 
+     */
     @InputImport(name="lunName")
     private final @Nullable String lunName;
 

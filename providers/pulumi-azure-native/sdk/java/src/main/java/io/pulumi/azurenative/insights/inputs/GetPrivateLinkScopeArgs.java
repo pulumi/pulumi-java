@@ -12,6 +12,10 @@ public final class GetPrivateLinkScopeArgs extends io.pulumi.resources.InvokeArg
 
     public static final GetPrivateLinkScopeArgs Empty = new GetPrivateLinkScopeArgs();
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +23,10 @@ public final class GetPrivateLinkScopeArgs extends io.pulumi.resources.InvokeArg
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the Azure Monitor PrivateLinkScope resource.
+     * 
+     */
     @InputImport(name="scopeName", required=true)
     private final String scopeName;
 

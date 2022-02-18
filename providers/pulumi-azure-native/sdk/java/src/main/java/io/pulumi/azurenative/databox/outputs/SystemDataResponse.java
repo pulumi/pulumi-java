@@ -9,11 +9,35 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SystemDataResponse {
+    /**
+     * The timestamp of resource creation (UTC)
+     * 
+     */
     private final String createdAt;
+    /**
+     * A string identifier for the identity that created the resource
+     * 
+     */
     private final String createdBy;
+    /**
+     * The type of identity that created the resource: user, application, managedIdentity
+     * 
+     */
     private final String createdByType;
+    /**
+     * The timestamp of resource last modification (UTC)
+     * 
+     */
     private final String lastModifiedAt;
+    /**
+     * A string identifier for the identity that last modified the resource
+     * 
+     */
     private final String lastModifiedBy;
+    /**
+     * The type of identity that last modified the resource: user, application, managedIdentity
+     * 
+     */
     private final String lastModifiedByType;
 
     @OutputCustomType.Constructor({"createdAt","createdBy","createdByType","lastModifiedAt","lastModifiedBy","lastModifiedByType"})
@@ -32,21 +56,45 @@ public final class SystemDataResponse {
         this.lastModifiedByType = Objects.requireNonNull(lastModifiedByType);
     }
 
+    /**
+     * The timestamp of resource creation (UTC)
+     * 
+     */
     public String getCreatedAt() {
         return this.createdAt;
     }
+    /**
+     * A string identifier for the identity that created the resource
+     * 
+     */
     public String getCreatedBy() {
         return this.createdBy;
     }
+    /**
+     * The type of identity that created the resource: user, application, managedIdentity
+     * 
+     */
     public String getCreatedByType() {
         return this.createdByType;
     }
+    /**
+     * The timestamp of resource last modification (UTC)
+     * 
+     */
     public String getLastModifiedAt() {
         return this.lastModifiedAt;
     }
+    /**
+     * A string identifier for the identity that last modified the resource
+     * 
+     */
     public String getLastModifiedBy() {
         return this.lastModifiedBy;
     }
+    /**
+     * The type of identity that last modified the resource: user, application, managedIdentity
+     * 
+     */
     public String getLastModifiedByType() {
         return this.lastModifiedByType;
     }

@@ -12,19 +12,76 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RuleManagementEventDataSourceResponse {
+    /**
+     * the claims.
+     * 
+     */
     private final @Nullable RuleManagementEventClaimsDataSourceResponse claims;
+    /**
+     * the event name.
+     * 
+     */
     private final @Nullable String eventName;
+    /**
+     * the event source.
+     * 
+     */
     private final @Nullable String eventSource;
+    /**
+     * the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.
+     * 
+     */
     private final @Nullable String legacyResourceId;
+    /**
+     * the level.
+     * 
+     */
     private final @Nullable String level;
+    /**
+     * the namespace of the metric.
+     * 
+     */
     private final @Nullable String metricNamespace;
+    /**
+     * specifies the type of data source. There are two types of rule data sources: RuleMetricDataSource and RuleManagementEventDataSource
+     * Expected value is 'Microsoft.Azure.Management.Insights.Models.RuleManagementEventDataSource'.
+     * 
+     */
     private final String odataType;
+    /**
+     * The name of the operation that should be checked for. If no name is provided, any operation will match.
+     * 
+     */
     private final @Nullable String operationName;
+    /**
+     * the resource group name.
+     * 
+     */
     private final @Nullable String resourceGroupName;
+    /**
+     * the location of the resource.
+     * 
+     */
     private final @Nullable String resourceLocation;
+    /**
+     * the resource provider name.
+     * 
+     */
     private final @Nullable String resourceProviderName;
+    /**
+     * the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.
+     * 
+     */
     private final @Nullable String resourceUri;
+    /**
+     * The status of the operation that should be checked for. If no status is provided, any status will match.
+     * 
+     */
     private final @Nullable String status;
+    /**
+     * the substatus.
+     * 
+     */
     private final @Nullable String subStatus;
 
     @OutputCustomType.Constructor({"claims","eventName","eventSource","legacyResourceId","level","metricNamespace","odataType","operationName","resourceGroupName","resourceLocation","resourceProviderName","resourceUri","status","subStatus"})
@@ -59,45 +116,102 @@ public final class RuleManagementEventDataSourceResponse {
         this.subStatus = subStatus;
     }
 
+    /**
+     * the claims.
+     * 
+     */
     public Optional<RuleManagementEventClaimsDataSourceResponse> getClaims() {
         return Optional.ofNullable(this.claims);
     }
+    /**
+     * the event name.
+     * 
+     */
     public Optional<String> getEventName() {
         return Optional.ofNullable(this.eventName);
     }
+    /**
+     * the event source.
+     * 
+     */
     public Optional<String> getEventSource() {
         return Optional.ofNullable(this.eventSource);
     }
+    /**
+     * the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.
+     * 
+     */
     public Optional<String> getLegacyResourceId() {
         return Optional.ofNullable(this.legacyResourceId);
     }
+    /**
+     * the level.
+     * 
+     */
     public Optional<String> getLevel() {
         return Optional.ofNullable(this.level);
     }
+    /**
+     * the namespace of the metric.
+     * 
+     */
     public Optional<String> getMetricNamespace() {
         return Optional.ofNullable(this.metricNamespace);
     }
+    /**
+     * specifies the type of data source. There are two types of rule data sources: RuleMetricDataSource and RuleManagementEventDataSource
+     * Expected value is 'Microsoft.Azure.Management.Insights.Models.RuleManagementEventDataSource'.
+     * 
+     */
     public String getOdataType() {
         return this.odataType;
     }
+    /**
+     * The name of the operation that should be checked for. If no name is provided, any operation will match.
+     * 
+     */
     public Optional<String> getOperationName() {
         return Optional.ofNullable(this.operationName);
     }
+    /**
+     * the resource group name.
+     * 
+     */
     public Optional<String> getResourceGroupName() {
         return Optional.ofNullable(this.resourceGroupName);
     }
+    /**
+     * the location of the resource.
+     * 
+     */
     public Optional<String> getResourceLocation() {
         return Optional.ofNullable(this.resourceLocation);
     }
+    /**
+     * the resource provider name.
+     * 
+     */
     public Optional<String> getResourceProviderName() {
         return Optional.ofNullable(this.resourceProviderName);
     }
+    /**
+     * the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.
+     * 
+     */
     public Optional<String> getResourceUri() {
         return Optional.ofNullable(this.resourceUri);
     }
+    /**
+     * The status of the operation that should be checked for. If no status is provided, any status will match.
+     * 
+     */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
+    /**
+     * the substatus.
+     * 
+     */
     public Optional<String> getSubStatus() {
         return Optional.ofNullable(this.subStatus);
     }

@@ -9,10 +9,19 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Long term policy schedule.
+ * 
+ */
 public final class LongTermSchedulePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LongTermSchedulePolicyArgs Empty = new LongTermSchedulePolicyArgs();
 
+    /**
+     * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+     * Expected value is 'LongTermSchedulePolicy'.
+     * 
+     */
     @InputImport(name="schedulePolicyType", required=true)
     private final Input<String> schedulePolicyType;
 

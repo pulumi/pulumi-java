@@ -12,10 +12,31 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AverageLoadScalingTriggerResponse {
+    /**
+     * Enumerates the triggers for auto scaling.
+     * Expected value is 'AverageLoad'.
+     * 
+     */
     private final String kind;
+    /**
+     * Lower load threshold (if average load is below this threshold, service will scale down).
+     * 
+     */
     private final Double lowerLoadThreshold;
+    /**
+     * Description of the metric that is used for scaling.
+     * 
+     */
     private final AutoScalingResourceMetricResponse metric;
+    /**
+     * Scale interval that indicates how often will this trigger be checked.
+     * 
+     */
     private final Integer scaleIntervalInSeconds;
+    /**
+     * Upper load threshold (if average load is above this threshold, service will scale up).
+     * 
+     */
     private final Double upperLoadThreshold;
 
     @OutputCustomType.Constructor({"kind","lowerLoadThreshold","metric","scaleIntervalInSeconds","upperLoadThreshold"})
@@ -32,18 +53,39 @@ public final class AverageLoadScalingTriggerResponse {
         this.upperLoadThreshold = Objects.requireNonNull(upperLoadThreshold);
     }
 
+    /**
+     * Enumerates the triggers for auto scaling.
+     * Expected value is 'AverageLoad'.
+     * 
+     */
     public String getKind() {
         return this.kind;
     }
+    /**
+     * Lower load threshold (if average load is below this threshold, service will scale down).
+     * 
+     */
     public Double getLowerLoadThreshold() {
         return this.lowerLoadThreshold;
     }
+    /**
+     * Description of the metric that is used for scaling.
+     * 
+     */
     public AutoScalingResourceMetricResponse getMetric() {
         return this.metric;
     }
+    /**
+     * Scale interval that indicates how often will this trigger be checked.
+     * 
+     */
     public Integer getScaleIntervalInSeconds() {
         return this.scaleIntervalInSeconds;
     }
+    /**
+     * Upper load threshold (if average load is above this threshold, service will scale up).
+     * 
+     */
     public Double getUpperLoadThreshold() {
         return this.upperLoadThreshold;
     }

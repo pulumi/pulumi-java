@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Identity for the managed cluster.
+ * 
+ */
 public final class ManagedClusterIdentityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagedClusterIdentityArgs Empty = new ManagedClusterIdentityArgs();
 
+    /**
+     * The type of identity used for the managed cluster. Type 'SystemAssigned' will use an implicitly created identity in master components and an auto-created user assigned identity in MC_ resource group in agent nodes. Type 'None' will not use MSI for the managed cluster, service principal will be used instead.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<ResourceIdentityType> type;
 
@@ -24,6 +32,10 @@ public final class ManagedClusterIdentityArgs extends io.pulumi.resources.Resour
         return this.type == null ? Input.empty() : this.type;
     }
 
+    /**
+     * The user identity associated with the managed cluster. This identity will be used in control plane and only one user assigned identity is allowed. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+     * 
+     */
     @InputImport(name="userAssignedIdentities")
     private final @Nullable Input<Map<String,Object>> userAssignedIdentities;
 

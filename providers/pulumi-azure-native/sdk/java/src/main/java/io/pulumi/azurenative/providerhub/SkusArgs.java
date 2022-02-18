@@ -22,6 +22,10 @@ public final class SkusArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The name of the resource provider hosted within ProviderHub.
+     * 
+     */
     @InputImport(name="providerNamespace", required=true)
     private final Input<String> providerNamespace;
 
@@ -29,6 +33,10 @@ public final class SkusArgs extends io.pulumi.resources.ResourceArgs {
         return this.providerNamespace;
     }
 
+    /**
+     * The resource type.
+     * 
+     */
     @InputImport(name="resourceType", required=true)
     private final Input<String> resourceType;
 
@@ -36,6 +44,10 @@ public final class SkusArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceType;
     }
 
+    /**
+     * The SKU.
+     * 
+     */
     @InputImport(name="sku")
     private final @Nullable Input<String> sku;
 

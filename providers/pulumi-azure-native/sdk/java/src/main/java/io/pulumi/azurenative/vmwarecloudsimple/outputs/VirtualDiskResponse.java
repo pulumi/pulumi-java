@@ -12,10 +12,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class VirtualDiskResponse {
+    /**
+     * Disk's Controller id
+     * 
+     */
     private final String controllerId;
+    /**
+     * Disk's independence mode type
+     * 
+     */
     private final String independenceMode;
+    /**
+     * Disk's total size
+     * 
+     */
     private final Integer totalSize;
+    /**
+     * Disk's id
+     * 
+     */
     private final @Nullable String virtualDiskId;
+    /**
+     * Disk's display name
+     * 
+     */
     private final String virtualDiskName;
 
     @OutputCustomType.Constructor({"controllerId","independenceMode","totalSize","virtualDiskId","virtualDiskName"})
@@ -32,18 +52,38 @@ public final class VirtualDiskResponse {
         this.virtualDiskName = Objects.requireNonNull(virtualDiskName);
     }
 
+    /**
+     * Disk's Controller id
+     * 
+     */
     public String getControllerId() {
         return this.controllerId;
     }
+    /**
+     * Disk's independence mode type
+     * 
+     */
     public String getIndependenceMode() {
         return this.independenceMode;
     }
+    /**
+     * Disk's total size
+     * 
+     */
     public Integer getTotalSize() {
         return this.totalSize;
     }
+    /**
+     * Disk's id
+     * 
+     */
     public Optional<String> getVirtualDiskId() {
         return Optional.ofNullable(this.virtualDiskId);
     }
+    /**
+     * Disk's display name
+     * 
+     */
     public String getVirtualDiskName() {
         return this.virtualDiskName;
     }

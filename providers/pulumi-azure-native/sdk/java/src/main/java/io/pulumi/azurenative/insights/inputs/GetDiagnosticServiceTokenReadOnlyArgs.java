@@ -12,6 +12,10 @@ public final class GetDiagnosticServiceTokenReadOnlyArgs extends io.pulumi.resou
 
     public static final GetDiagnosticServiceTokenReadOnlyArgs Empty = new GetDiagnosticServiceTokenReadOnlyArgs();
 
+    /**
+     * The identifier of the resource.
+     * 
+     */
     @InputImport(name="resourceUri", required=true)
     private final String resourceUri;
 

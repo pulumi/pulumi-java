@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The routes that specify the endpoints used for login and logout requests.
+ * 
+ */
 public final class LoginRoutesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LoginRoutesArgs Empty = new LoginRoutesArgs();
 
+    /**
+     * The endpoint at which a logout request should be made.
+     * 
+     */
     @InputImport(name="logoutEndpoint")
     private final @Nullable Input<String> logoutEndpoint;
 

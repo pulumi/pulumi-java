@@ -10,10 +10,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Error response information.
+ * 
+ */
 public final class ErrorResponseResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ErrorResponseResponse Empty = new ErrorResponseResponse();
 
+    /**
+     * Error code.
+     * 
+     */
     @InputImport(name="code", required=true)
     private final String code;
 
@@ -21,6 +29,10 @@ public final class ErrorResponseResponse extends io.pulumi.resources.InvokeArgs 
         return this.code;
     }
 
+    /**
+     * An array of error detail objects.
+     * 
+     */
     @InputImport(name="details", required=true)
     private final List<ErrorDetailResponse> details;
 
@@ -28,6 +40,10 @@ public final class ErrorResponseResponse extends io.pulumi.resources.InvokeArgs 
         return this.details;
     }
 
+    /**
+     * Error message.
+     * 
+     */
     @InputImport(name="message", required=true)
     private final String message;
 

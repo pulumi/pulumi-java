@@ -16,75 +16,184 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Defines the properties of an Experiment
+ * API Version: 2019-11-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:network:Experiment MyExperiment /subscriptions/subid/resourceGroups/MyResourceGroup/providers/Microsoft.Network/NetworkExperimentProfiles/MyProfile/Experiments/MyExperiment 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:network:Experiment")
 public class Experiment extends io.pulumi.resources.CustomResource {
+    /**
+     * The description of the details or intents of the Experiment
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return The description of the details or intents of the Experiment
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * The state of the Experiment
+     * 
+     */
     @OutputExport(name="enabledState", type=String.class, parameters={})
     private Output</* @Nullable */ String> enabledState;
 
+    /**
+     * @return The state of the Experiment
+     * 
+     */
     public Output</* @Nullable */ String> getEnabledState() {
         return this.enabledState;
     }
+    /**
+     * The endpoint A of an experiment
+     * 
+     */
     @OutputExport(name="endpointA", type=ExperimentEndpointResponse.class, parameters={})
     private Output</* @Nullable */ ExperimentEndpointResponse> endpointA;
 
+    /**
+     * @return The endpoint A of an experiment
+     * 
+     */
     public Output</* @Nullable */ ExperimentEndpointResponse> getEndpointA() {
         return this.endpointA;
     }
+    /**
+     * The endpoint B of an experiment
+     * 
+     */
     @OutputExport(name="endpointB", type=ExperimentEndpointResponse.class, parameters={})
     private Output</* @Nullable */ ExperimentEndpointResponse> endpointB;
 
+    /**
+     * @return The endpoint B of an experiment
+     * 
+     */
     public Output</* @Nullable */ ExperimentEndpointResponse> getEndpointB() {
         return this.endpointB;
     }
+    /**
+     * Resource location.
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * Resource name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Resource status.
+     * 
+     */
     @OutputExport(name="resourceState", type=String.class, parameters={})
     private Output<String> resourceState;
 
+    /**
+     * @return Resource status.
+     * 
+     */
     public Output<String> getResourceState() {
         return this.resourceState;
     }
+    /**
+     * The uri to the Script used in the Experiment
+     * 
+     */
     @OutputExport(name="scriptFileUri", type=String.class, parameters={})
     private Output<String> scriptFileUri;
 
+    /**
+     * @return The uri to the Script used in the Experiment
+     * 
+     */
     public Output<String> getScriptFileUri() {
         return this.scriptFileUri;
     }
+    /**
+     * The description of Experiment status from the server side
+     * 
+     */
     @OutputExport(name="status", type=String.class, parameters={})
     private Output<String> status;
 
+    /**
+     * @return The description of Experiment status from the server side
+     * 
+     */
     public Output<String> getStatus() {
         return this.status;
     }
+    /**
+     * Resource tags.
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Resource type.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Experiment(String name, ExperimentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:Experiment", name, args == null ? ExperimentArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -103,6 +212,14 @@ public class Experiment extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Experiment get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Experiment(name, id, options);
     }

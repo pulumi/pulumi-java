@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * An input object, containing all information associated with the named input. All inputs are contained under a streaming job.
+ * 
+ */
 public final class InputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InputArgs Empty = new InputArgs();
 
+    /**
+     * Resource name
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -24,6 +32,10 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<Either<ReferenceInputPropertiesArgs,StreamInputPropertiesArgs>> properties;
 

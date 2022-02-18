@@ -12,6 +12,10 @@ public final class GetConsoleWithLocationArgs extends io.pulumi.resources.Invoke
 
     public static final GetConsoleWithLocationArgs Empty = new GetConsoleWithLocationArgs();
 
+    /**
+     * The name of the console
+     * 
+     */
     @InputImport(name="consoleName", required=true)
     private final String consoleName;
 
@@ -19,6 +23,10 @@ public final class GetConsoleWithLocationArgs extends io.pulumi.resources.Invoke
         return this.consoleName;
     }
 
+    /**
+     * The provider location
+     * 
+     */
     @InputImport(name="location", required=true)
     private final String location;
 

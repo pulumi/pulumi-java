@@ -12,6 +12,10 @@ public final class GetWorkloadNetworkPublicIPArgs extends io.pulumi.resources.In
 
     public static final GetWorkloadNetworkPublicIPArgs Empty = new GetWorkloadNetworkPublicIPArgs();
 
+    /**
+     * Name of the private cloud
+     * 
+     */
     @InputImport(name="privateCloudName", required=true)
     private final String privateCloudName;
 
@@ -19,6 +23,10 @@ public final class GetWorkloadNetworkPublicIPArgs extends io.pulumi.resources.In
         return this.privateCloudName;
     }
 
+    /**
+     * NSX Public IP Block identifier. Generally the same as the Public IP Block's display name
+     * 
+     */
     @InputImport(name="publicIPId", required=true)
     private final String publicIPId;
 
@@ -26,6 +34,10 @@ public final class GetWorkloadNetworkPublicIPArgs extends io.pulumi.resources.In
         return this.publicIPId;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

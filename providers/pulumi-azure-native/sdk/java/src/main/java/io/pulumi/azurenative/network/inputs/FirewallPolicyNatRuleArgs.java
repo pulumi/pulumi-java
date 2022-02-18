@@ -16,10 +16,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Firewall Policy NAT Rule.
+ * 
+ */
 public final class FirewallPolicyNatRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FirewallPolicyNatRuleArgs Empty = new FirewallPolicyNatRuleArgs();
 
+    /**
+     * The action type of a Nat rule.
+     * 
+     */
     @InputImport(name="action")
     private final @Nullable Input<FirewallPolicyNatRuleActionArgs> action;
 
@@ -27,6 +35,10 @@ public final class FirewallPolicyNatRuleArgs extends io.pulumi.resources.Resourc
         return this.action == null ? Input.empty() : this.action;
     }
 
+    /**
+     * The name of the rule.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -34,6 +46,10 @@ public final class FirewallPolicyNatRuleArgs extends io.pulumi.resources.Resourc
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Priority of the Firewall Policy Rule resource.
+     * 
+     */
     @InputImport(name="priority")
     private final @Nullable Input<Integer> priority;
 
@@ -41,6 +57,10 @@ public final class FirewallPolicyNatRuleArgs extends io.pulumi.resources.Resourc
         return this.priority == null ? Input.empty() : this.priority;
     }
 
+    /**
+     * The match conditions for incoming traffic.
+     * 
+     */
     @InputImport(name="ruleCondition")
     private final @Nullable Input<Object> ruleCondition;
 
@@ -48,6 +68,11 @@ public final class FirewallPolicyNatRuleArgs extends io.pulumi.resources.Resourc
         return this.ruleCondition == null ? Input.empty() : this.ruleCondition;
     }
 
+    /**
+     * The type of the rule.
+     * Expected value is 'FirewallPolicyNatRule'.
+     * 
+     */
     @InputImport(name="ruleType", required=true)
     private final Input<String> ruleType;
 
@@ -55,6 +80,10 @@ public final class FirewallPolicyNatRuleArgs extends io.pulumi.resources.Resourc
         return this.ruleType;
     }
 
+    /**
+     * The translated address for this NAT rule.
+     * 
+     */
     @InputImport(name="translatedAddress")
     private final @Nullable Input<String> translatedAddress;
 
@@ -62,6 +91,10 @@ public final class FirewallPolicyNatRuleArgs extends io.pulumi.resources.Resourc
         return this.translatedAddress == null ? Input.empty() : this.translatedAddress;
     }
 
+    /**
+     * The translated port for this NAT rule.
+     * 
+     */
     @InputImport(name="translatedPort")
     private final @Nullable Input<String> translatedPort;
 

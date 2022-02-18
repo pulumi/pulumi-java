@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Indicates if the given action rule is enabled or disabled
+     * 
+     */
     @EnumType
     public enum ActionRuleStatus {
         Enabled("Enabled"),

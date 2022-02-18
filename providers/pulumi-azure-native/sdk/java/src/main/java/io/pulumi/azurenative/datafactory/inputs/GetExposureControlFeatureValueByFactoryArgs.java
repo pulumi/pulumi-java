@@ -14,6 +14,10 @@ public final class GetExposureControlFeatureValueByFactoryArgs extends io.pulumi
 
     public static final GetExposureControlFeatureValueByFactoryArgs Empty = new GetExposureControlFeatureValueByFactoryArgs();
 
+    /**
+     * The factory name.
+     * 
+     */
     @InputImport(name="factoryName", required=true)
     private final String factoryName;
 
@@ -21,6 +25,10 @@ public final class GetExposureControlFeatureValueByFactoryArgs extends io.pulumi
         return this.factoryName;
     }
 
+    /**
+     * The feature name.
+     * 
+     */
     @InputImport(name="featureName")
     private final @Nullable String featureName;
 
@@ -28,6 +36,10 @@ public final class GetExposureControlFeatureValueByFactoryArgs extends io.pulumi
         return this.featureName == null ? Optional.empty() : Optional.ofNullable(this.featureName);
     }
 
+    /**
+     * The feature type.
+     * 
+     */
     @InputImport(name="featureType")
     private final @Nullable String featureType;
 
@@ -35,6 +47,10 @@ public final class GetExposureControlFeatureValueByFactoryArgs extends io.pulumi
         return this.featureType == null ? Optional.empty() : Optional.ofNullable(this.featureType);
     }
 
+    /**
+     * The resource group name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

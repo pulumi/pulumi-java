@@ -15,6 +15,10 @@ public final class CreatorArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CreatorArgs Empty = new CreatorArgs();
 
+    /**
+     * The name of the Maps Account.
+     * 
+     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -22,6 +26,10 @@ public final class CreatorArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountName;
     }
 
+    /**
+     * The name of the Maps Creator instance.
+     * 
+     */
     @InputImport(name="creatorName")
     private final @Nullable Input<String> creatorName;
 
@@ -29,6 +37,10 @@ public final class CreatorArgs extends io.pulumi.resources.ResourceArgs {
         return this.creatorName == null ? Input.empty() : this.creatorName;
     }
 
+    /**
+     * The location of the resource.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -36,6 +48,10 @@ public final class CreatorArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -43,6 +59,10 @@ public final class CreatorArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Gets or sets a list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

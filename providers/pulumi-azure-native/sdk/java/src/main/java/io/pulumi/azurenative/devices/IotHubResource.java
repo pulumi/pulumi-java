@@ -17,51 +17,128 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * The description of the IoT hub.
+ * API Version: 2020-08-31.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:devices:IotHubResource testHub /subscriptions/ae24ff83-d2ca-4fc8-9717-05dae4bba489/resourceGroups/myResourceGroup/providers/Microsoft.Devices/IotHubs/testHub 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:devices:IotHubResource")
 public class IotHubResource extends io.pulumi.resources.CustomResource {
+    /**
+     * The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention.
+     * 
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
+    /**
+     * @return The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention.
+     * 
+     */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
+    /**
+     * The resource location.
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return The resource location.
+     * 
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * The resource name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The resource name.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * IotHub properties
+     * 
+     */
     @OutputExport(name="properties", type=IotHubPropertiesResponse.class, parameters={})
     private Output<IotHubPropertiesResponse> properties;
 
+    /**
+     * @return IotHub properties
+     * 
+     */
     public Output<IotHubPropertiesResponse> getProperties() {
         return this.properties;
     }
+    /**
+     * IotHub SKU info
+     * 
+     */
     @OutputExport(name="sku", type=IotHubSkuInfoResponse.class, parameters={})
     private Output<IotHubSkuInfoResponse> sku;
 
+    /**
+     * @return IotHub SKU info
+     * 
+     */
     public Output<IotHubSkuInfoResponse> getSku() {
         return this.sku;
     }
+    /**
+     * The resource tags.
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return The resource tags.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * The resource type.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The resource type.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public IotHubResource(String name, IotHubResourceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:devices:IotHubResource", name, args == null ? IotHubResourceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -103,6 +180,14 @@ public class IotHubResource extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static IotHubResource get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new IotHubResource(name, id, options);
     }

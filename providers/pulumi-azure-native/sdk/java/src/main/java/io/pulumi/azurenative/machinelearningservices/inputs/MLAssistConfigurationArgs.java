@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents configuration for machine learning assisted features in a labeling job.
+ * 
+ */
 public final class MLAssistConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MLAssistConfigurationArgs Empty = new MLAssistConfigurationArgs();
 
+    /**
+     * The compute designated for inferencing.
+     * 
+     */
     @InputImport(name="inferencingComputeBinding", required=true)
     private final Input<ComputeBindingArgs> inferencingComputeBinding;
 
@@ -24,6 +32,10 @@ public final class MLAssistConfigurationArgs extends io.pulumi.resources.Resourc
         return this.inferencingComputeBinding;
     }
 
+    /**
+     * Indicates whether MLAssist feature is enabled.
+     * 
+     */
     @InputImport(name="mlAssistEnabled")
     private final @Nullable Input<Boolean> mlAssistEnabled;
 
@@ -31,6 +43,10 @@ public final class MLAssistConfigurationArgs extends io.pulumi.resources.Resourc
         return this.mlAssistEnabled == null ? Input.empty() : this.mlAssistEnabled;
     }
 
+    /**
+     * Name prefix to use for machine learning model. For each iteration modelName will be appended with iteration e.g.{modelName}_{i}.
+     * 
+     */
     @InputImport(name="modelNamePrefix", required=true)
     private final Input<String> modelNamePrefix;
 
@@ -38,6 +54,10 @@ public final class MLAssistConfigurationArgs extends io.pulumi.resources.Resourc
         return this.modelNamePrefix;
     }
 
+    /**
+     * Prelabel accuracy threshold used in MLAssist feature.
+     * 
+     */
     @InputImport(name="prelabelAccuracyThreshold")
     private final @Nullable Input<Double> prelabelAccuracyThreshold;
 
@@ -45,6 +65,10 @@ public final class MLAssistConfigurationArgs extends io.pulumi.resources.Resourc
         return this.prelabelAccuracyThreshold == null ? Input.empty() : this.prelabelAccuracyThreshold;
     }
 
+    /**
+     * The compute designated for training.
+     * 
+     */
     @InputImport(name="trainingComputeBinding", required=true)
     private final Input<ComputeBindingArgs> trainingComputeBinding;
 

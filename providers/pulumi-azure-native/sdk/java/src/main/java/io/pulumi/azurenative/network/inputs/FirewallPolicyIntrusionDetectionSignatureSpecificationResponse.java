@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Intrusion detection signatures specification states.
+ * 
+ */
 public final class FirewallPolicyIntrusionDetectionSignatureSpecificationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FirewallPolicyIntrusionDetectionSignatureSpecificationResponse Empty = new FirewallPolicyIntrusionDetectionSignatureSpecificationResponse();
 
+    /**
+     * Signature id.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -21,6 +29,10 @@ public final class FirewallPolicyIntrusionDetectionSignatureSpecificationRespons
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * The signature state.
+     * 
+     */
     @InputImport(name="mode")
     private final @Nullable String mode;
 

@@ -12,6 +12,10 @@ public final class GetprivateLinkServicesForEDMUploadArgs extends io.pulumi.reso
 
     public static final GetprivateLinkServicesForEDMUploadArgs Empty = new GetprivateLinkServicesForEDMUploadArgs();
 
+    /**
+     * The name of the resource group that contains the service instance.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +23,10 @@ public final class GetprivateLinkServicesForEDMUploadArgs extends io.pulumi.reso
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the service instance.
+     * 
+     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 

@@ -12,6 +12,10 @@ public final class GetClusterGatewaySettingsArgs extends io.pulumi.resources.Inv
 
     public static final GetClusterGatewaySettingsArgs Empty = new GetClusterGatewaySettingsArgs();
 
+    /**
+     * The name of the cluster.
+     * 
+     */
     @InputImport(name="clusterName", required=true)
     private final String clusterName;
 
@@ -19,6 +23,10 @@ public final class GetClusterGatewaySettingsArgs extends io.pulumi.resources.Inv
         return this.clusterName;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Replication properties
+ * 
+ */
 public final class ReplicationObjectArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ReplicationObjectArgs Empty = new ReplicationObjectArgs();
 
+    /**
+     * Indicates whether the local volume is the source or destination for the Volume Replication
+     * 
+     */
     @InputImport(name="endpointType")
     private final @Nullable Input<Either<String,EndpointType>> endpointType;
 
@@ -24,6 +32,10 @@ public final class ReplicationObjectArgs extends io.pulumi.resources.ResourceArg
         return this.endpointType == null ? Input.empty() : this.endpointType;
     }
 
+    /**
+     * The remote region for the other end of the Volume Replication.
+     * 
+     */
     @InputImport(name="remoteVolumeRegion")
     private final @Nullable Input<String> remoteVolumeRegion;
 
@@ -31,6 +43,10 @@ public final class ReplicationObjectArgs extends io.pulumi.resources.ResourceArg
         return this.remoteVolumeRegion == null ? Input.empty() : this.remoteVolumeRegion;
     }
 
+    /**
+     * The resource ID of the remote volume.
+     * 
+     */
     @InputImport(name="remoteVolumeResourceId", required=true)
     private final Input<String> remoteVolumeResourceId;
 
@@ -38,6 +54,10 @@ public final class ReplicationObjectArgs extends io.pulumi.resources.ResourceArg
         return this.remoteVolumeResourceId;
     }
 
+    /**
+     * Id
+     * 
+     */
     @InputImport(name="replicationId")
     private final @Nullable Input<String> replicationId;
 
@@ -45,6 +65,10 @@ public final class ReplicationObjectArgs extends io.pulumi.resources.ResourceArg
         return this.replicationId == null ? Input.empty() : this.replicationId;
     }
 
+    /**
+     * Schedule
+     * 
+     */
     @InputImport(name="replicationSchedule", required=true)
     private final Input<Either<String,ReplicationSchedule>> replicationSchedule;
 

@@ -15,6 +15,10 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SecurityPolicyArgs Empty = new SecurityPolicyArgs();
 
+    /**
+     * object which contains security policy parameters
+     * 
+     */
     @InputImport(name="parameters")
     private final @Nullable Input<SecurityPolicyWebApplicationFirewallParametersArgs> parameters;
 
@@ -22,6 +26,10 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
+    /**
+     * Name of the CDN profile which is unique within the resource group.
+     * 
+     */
     @InputImport(name="profileName", required=true)
     private final Input<String> profileName;
 
@@ -29,6 +37,10 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.profileName;
     }
 
+    /**
+     * Name of the Resource group within the Azure subscription.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -36,6 +48,10 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of the security policy under the profile.
+     * 
+     */
     @InputImport(name="securityPolicyName")
     private final @Nullable Input<String> securityPolicyName;
 

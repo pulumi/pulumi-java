@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The encryption algorithm.
+     * 
+     */
     @EnumType
     public enum EncryptionAlgorithm {
         NotSpecified("NotSpecified"),

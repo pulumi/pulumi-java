@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents a configuration parameter.
+ * 
+ */
 public final class ConfigurationParameterResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConfigurationParameterResponse Empty = new ConfigurationParameterResponse();
 
+    /**
+     * Name of the configuration parameter.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -21,6 +29,10 @@ public final class ConfigurationParameterResponse extends io.pulumi.resources.In
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Value of the configuration parameter.
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable String value;
 

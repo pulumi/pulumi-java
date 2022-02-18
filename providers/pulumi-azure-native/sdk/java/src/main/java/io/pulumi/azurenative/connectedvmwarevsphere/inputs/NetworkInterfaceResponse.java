@@ -13,10 +13,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Network Interface model
+ * 
+ */
 public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NetworkInterfaceResponse Empty = new NetworkInterfaceResponse();
 
+    /**
+     * Gets or sets the device key value.
+     * 
+     */
     @InputImport(name="deviceKey")
     private final @Nullable Integer deviceKey;
 
@@ -24,6 +32,10 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
         return this.deviceKey == null ? Optional.empty() : Optional.ofNullable(this.deviceKey);
     }
 
+    /**
+     * Gets or sets the nic ip addresses.
+     * 
+     */
     @InputImport(name="ipAddresses", required=true)
     private final List<String> ipAddresses;
 
@@ -31,6 +43,10 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
         return this.ipAddresses;
     }
 
+    /**
+     * Gets or sets the ipsettings.
+     * 
+     */
     @InputImport(name="ipSettings")
     private final @Nullable NicIPSettingsResponse ipSettings;
 
@@ -38,6 +54,10 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
         return this.ipSettings == null ? Optional.empty() : Optional.ofNullable(this.ipSettings);
     }
 
+    /**
+     * Gets or sets the label of the virtual network in vCenter that the nic is connected to.
+     * 
+     */
     @InputImport(name="label", required=true)
     private final String label;
 
@@ -45,6 +65,10 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
         return this.label;
     }
 
+    /**
+     * Gets or sets the NIC MAC address.
+     * 
+     */
     @InputImport(name="macAddress", required=true)
     private final String macAddress;
 
@@ -52,6 +76,10 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
         return this.macAddress;
     }
 
+    /**
+     * Gets or sets the name of the network interface.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -59,6 +87,10 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Gets or sets the ARM Id of the network resource to connect the virtual machine.
+     * 
+     */
     @InputImport(name="networkId")
     private final @Nullable String networkId;
 
@@ -66,6 +98,10 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
         return this.networkId == null ? Optional.empty() : Optional.ofNullable(this.networkId);
     }
 
+    /**
+     * Gets or sets the name of the virtual network in vCenter that the nic is connected to.
+     * 
+     */
     @InputImport(name="networkMoName", required=true)
     private final String networkMoName;
 
@@ -73,6 +109,11 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
         return this.networkMoName;
     }
 
+    /**
+     * Gets or sets the vCenter MoRef (Managed Object Reference) ID of the virtual network
+     * that the nic is connected to.
+     * 
+     */
     @InputImport(name="networkMoRefId", required=true)
     private final String networkMoRefId;
 
@@ -80,6 +121,10 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
         return this.networkMoRefId;
     }
 
+    /**
+     * NIC type
+     * 
+     */
     @InputImport(name="nicType")
     private final @Nullable String nicType;
 
@@ -87,6 +132,10 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
         return this.nicType == null ? Optional.empty() : Optional.ofNullable(this.nicType);
     }
 
+    /**
+     * Gets or sets the power on boot.
+     * 
+     */
     @InputImport(name="powerOnBoot")
     private final @Nullable String powerOnBoot;
 

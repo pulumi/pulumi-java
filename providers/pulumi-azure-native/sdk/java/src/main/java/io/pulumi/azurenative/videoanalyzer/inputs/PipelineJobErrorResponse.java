@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Details about the error for a failed pipeline job.
+ * 
+ */
 public final class PipelineJobErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PipelineJobErrorResponse Empty = new PipelineJobErrorResponse();
 
+    /**
+     * The error code.
+     * 
+     */
     @InputImport(name="code")
     private final @Nullable String code;
 
@@ -21,6 +29,10 @@ public final class PipelineJobErrorResponse extends io.pulumi.resources.InvokeAr
         return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
     }
 
+    /**
+     * The error message.
+     * 
+     */
     @InputImport(name="message")
     private final @Nullable String message;
 

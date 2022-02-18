@@ -14,10 +14,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents a path that is recommended to be allowed and its properties
+ * 
+ */
 public final class PathRecommendationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PathRecommendationArgs Empty = new PathRecommendationArgs();
 
+    /**
+     * The recommendation action of the machine or rule
+     * 
+     */
     @InputImport(name="action")
     private final @Nullable Input<String> action;
 
@@ -25,6 +33,10 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
         return this.action == null ? Input.empty() : this.action;
     }
 
+    /**
+     * Whether the application is commonly run on the machine
+     * 
+     */
     @InputImport(name="common")
     private final @Nullable Input<Boolean> common;
 
@@ -32,6 +44,10 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
         return this.common == null ? Input.empty() : this.common;
     }
 
+    /**
+     * The configuration status of the machines group or machine or rule
+     * 
+     */
     @InputImport(name="configurationStatus")
     private final @Nullable Input<String> configurationStatus;
 
@@ -39,6 +55,10 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
         return this.configurationStatus == null ? Input.empty() : this.configurationStatus;
     }
 
+    /**
+     * The type of the file (for Linux files - Executable is used)
+     * 
+     */
     @InputImport(name="fileType")
     private final @Nullable Input<String> fileType;
 
@@ -46,6 +66,10 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
         return this.fileType == null ? Input.empty() : this.fileType;
     }
 
+    /**
+     * The full path of the file, or an identifier of the application
+     * 
+     */
     @InputImport(name="path")
     private final @Nullable Input<String> path;
 
@@ -53,6 +77,10 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
         return this.path == null ? Input.empty() : this.path;
     }
 
+    /**
+     * Represents the publisher information of a process/rule
+     * 
+     */
     @InputImport(name="publisherInfo")
     private final @Nullable Input<PublisherInfoArgs> publisherInfo;
 
@@ -60,6 +88,10 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
         return this.publisherInfo == null ? Input.empty() : this.publisherInfo;
     }
 
+    /**
+     * The type of the rule to be allowed
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 

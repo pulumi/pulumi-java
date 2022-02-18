@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The type of private cloud addon
+     * 
+     */
     @EnumType
     public enum AddonType {
         SRM("SRM"),

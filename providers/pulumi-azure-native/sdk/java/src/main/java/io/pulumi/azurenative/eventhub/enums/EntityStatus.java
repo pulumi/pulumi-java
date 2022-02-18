@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Enumerates the possible values for the status of the Event Hub.
+     * 
+     */
     @EnumType
     public enum EntityStatus {
         Active("Active"),

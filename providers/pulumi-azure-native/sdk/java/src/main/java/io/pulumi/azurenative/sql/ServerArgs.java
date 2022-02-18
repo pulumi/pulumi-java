@@ -19,6 +19,10 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServerArgs Empty = new ServerArgs();
 
+    /**
+     * Administrator username for the server. Once created it cannot be changed.
+     * 
+     */
     @InputImport(name="administratorLogin")
     private final @Nullable Input<String> administratorLogin;
 
@@ -26,6 +30,10 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
         return this.administratorLogin == null ? Input.empty() : this.administratorLogin;
     }
 
+    /**
+     * The administrator login password (required for server creation).
+     * 
+     */
     @InputImport(name="administratorLoginPassword")
     private final @Nullable Input<String> administratorLoginPassword;
 
@@ -33,6 +41,10 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
         return this.administratorLoginPassword == null ? Input.empty() : this.administratorLoginPassword;
     }
 
+    /**
+     * The Azure Active Directory identity of the server.
+     * 
+     */
     @InputImport(name="administrators")
     private final @Nullable Input<ServerExternalAdministratorArgs> administrators;
 
@@ -40,6 +52,10 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
         return this.administrators == null ? Input.empty() : this.administrators;
     }
 
+    /**
+     * The Azure Active Directory identity of the server.
+     * 
+     */
     @InputImport(name="identity")
     private final @Nullable Input<ResourceIdentityArgs> identity;
 
@@ -47,6 +63,10 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity == null ? Input.empty() : this.identity;
     }
 
+    /**
+     * A CMK URI of the key to use for encryption.
+     * 
+     */
     @InputImport(name="keyId")
     private final @Nullable Input<String> keyId;
 
@@ -54,6 +74,10 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
         return this.keyId == null ? Input.empty() : this.keyId;
     }
 
+    /**
+     * Resource location.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -61,6 +85,10 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Minimal TLS version. Allowed values: '1.0', '1.1', '1.2'
+     * 
+     */
     @InputImport(name="minimalTlsVersion")
     private final @Nullable Input<String> minimalTlsVersion;
 
@@ -68,6 +96,10 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
         return this.minimalTlsVersion == null ? Input.empty() : this.minimalTlsVersion;
     }
 
+    /**
+     * The resource id of a user assigned identity to be used by default.
+     * 
+     */
     @InputImport(name="primaryUserAssignedIdentityId")
     private final @Nullable Input<String> primaryUserAssignedIdentityId;
 
@@ -75,6 +107,10 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
         return this.primaryUserAssignedIdentityId == null ? Input.empty() : this.primaryUserAssignedIdentityId;
     }
 
+    /**
+     * Whether or not public endpoint access is allowed for this server.  Value is optional but if passed in, must be 'Enabled' or 'Disabled'
+     * 
+     */
     @InputImport(name="publicNetworkAccess")
     private final @Nullable Input<Either<String,ServerPublicNetworkAccess>> publicNetworkAccess;
 
@@ -82,6 +118,10 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
         return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -89,6 +129,10 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the server.
+     * 
+     */
     @InputImport(name="serverName")
     private final @Nullable Input<String> serverName;
 
@@ -96,6 +140,10 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
         return this.serverName == null ? Input.empty() : this.serverName;
     }
 
+    /**
+     * Resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -103,6 +151,10 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The version of the server.
+     * 
+     */
     @InputImport(name="version")
     private final @Nullable Input<String> version;
 

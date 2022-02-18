@@ -15,10 +15,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Autoscale profile.
+ * 
+ */
 public final class AutoscaleProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AutoscaleProfileResponse Empty = new AutoscaleProfileResponse();
 
+    /**
+     * the number of instances that can be used during this profile.
+     * 
+     */
     @InputImport(name="capacity", required=true)
     private final ScaleCapacityResponse capacity;
 
@@ -26,6 +34,10 @@ public final class AutoscaleProfileResponse extends io.pulumi.resources.InvokeAr
         return this.capacity;
     }
 
+    /**
+     * the specific date-time for the profile. This element is not used if the Recurrence element is used.
+     * 
+     */
     @InputImport(name="fixedDate")
     private final @Nullable TimeWindowResponse fixedDate;
 
@@ -33,6 +45,10 @@ public final class AutoscaleProfileResponse extends io.pulumi.resources.InvokeAr
         return this.fixedDate == null ? Optional.empty() : Optional.ofNullable(this.fixedDate);
     }
 
+    /**
+     * the name of the profile.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -40,6 +56,10 @@ public final class AutoscaleProfileResponse extends io.pulumi.resources.InvokeAr
         return this.name;
     }
 
+    /**
+     * the repeating times at which this profile begins. This element is not used if the FixedDate element is used.
+     * 
+     */
     @InputImport(name="recurrence")
     private final @Nullable RecurrenceResponse recurrence;
 
@@ -47,6 +67,10 @@ public final class AutoscaleProfileResponse extends io.pulumi.resources.InvokeAr
         return this.recurrence == null ? Optional.empty() : Optional.ofNullable(this.recurrence);
     }
 
+    /**
+     * the collection of rules that provide the triggers and parameters for the scaling action. A maximum of 10 rules can be specified.
+     * 
+     */
     @InputImport(name="rules", required=true)
     private final List<ScaleRuleResponse> rules;
 

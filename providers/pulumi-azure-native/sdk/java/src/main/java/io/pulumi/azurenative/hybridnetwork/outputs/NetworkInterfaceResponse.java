@@ -13,9 +13,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class NetworkInterfaceResponse {
+    /**
+     * A list of IP configurations of the network interface.
+     * 
+     */
     private final @Nullable List<NetworkInterfaceIPConfigurationResponse> ipConfigurations;
+    /**
+     * The MAC address of the network interface.
+     * 
+     */
     private final @Nullable String macAddress;
+    /**
+     * The name of the network interface.
+     * 
+     */
     private final @Nullable String networkInterfaceName;
+    /**
+     * The type of the VM switch.
+     * 
+     */
     private final @Nullable String vmSwitchType;
 
     @OutputCustomType.Constructor({"ipConfigurations","macAddress","networkInterfaceName","vmSwitchType"})
@@ -30,15 +46,31 @@ public final class NetworkInterfaceResponse {
         this.vmSwitchType = vmSwitchType;
     }
 
+    /**
+     * A list of IP configurations of the network interface.
+     * 
+     */
     public List<NetworkInterfaceIPConfigurationResponse> getIpConfigurations() {
         return this.ipConfigurations == null ? List.of() : this.ipConfigurations;
     }
+    /**
+     * The MAC address of the network interface.
+     * 
+     */
     public Optional<String> getMacAddress() {
         return Optional.ofNullable(this.macAddress);
     }
+    /**
+     * The name of the network interface.
+     * 
+     */
     public Optional<String> getNetworkInterfaceName() {
         return Optional.ofNullable(this.networkInterfaceName);
     }
+    /**
+     * The type of the VM switch.
+     * 
+     */
     public Optional<String> getVmSwitchType() {
         return Optional.ofNullable(this.vmSwitchType);
     }

@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListPrivateCloudAdminCredentials {
+/**
+ * Administrative credentials for accessing vCenter and NSX-T
+ * API Version: 2020-03-20.
+ * 
+ *
+ * Administrative credentials for accessing vCenter and NSX-T
+ * 
+ */
     public static CompletableFuture<ListPrivateCloudAdminCredentialsResult> invokeAsync(ListPrivateCloudAdminCredentialsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:listPrivateCloudAdminCredentials", TypeShape.of(ListPrivateCloudAdminCredentialsResult.class), args == null ? ListPrivateCloudAdminCredentialsArgs.Empty : args, Utilities.withVersion(options));
     }

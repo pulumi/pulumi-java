@@ -14,6 +14,10 @@ public final class ApplicationPackageArgs extends io.pulumi.resources.ResourceAr
 
     public static final ApplicationPackageArgs Empty = new ApplicationPackageArgs();
 
+    /**
+     * The name of the Batch account.
+     * 
+     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -21,6 +25,10 @@ public final class ApplicationPackageArgs extends io.pulumi.resources.ResourceAr
         return this.accountName;
     }
 
+    /**
+     * The name of the application. This must be unique within the account.
+     * 
+     */
     @InputImport(name="applicationName", required=true)
     private final Input<String> applicationName;
 
@@ -28,6 +36,10 @@ public final class ApplicationPackageArgs extends io.pulumi.resources.ResourceAr
         return this.applicationName;
     }
 
+    /**
+     * The name of the resource group that contains the Batch account.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -35,6 +47,10 @@ public final class ApplicationPackageArgs extends io.pulumi.resources.ResourceAr
         return this.resourceGroupName;
     }
 
+    /**
+     * The version of the application.
+     * 
+     */
     @InputImport(name="versionName")
     private final @Nullable Input<String> versionName;
 

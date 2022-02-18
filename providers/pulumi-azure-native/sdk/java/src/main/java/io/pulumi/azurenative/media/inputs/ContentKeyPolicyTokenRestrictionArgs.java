@@ -18,10 +18,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents a token restriction. Provided token must match these requirements for successful license or key delivery.
+ * 
+ */
 public final class ContentKeyPolicyTokenRestrictionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContentKeyPolicyTokenRestrictionArgs Empty = new ContentKeyPolicyTokenRestrictionArgs();
 
+    /**
+     * A list of alternative verification keys.
+     * 
+     */
     @InputImport(name="alternateVerificationKeys")
     private final @Nullable Input<List<Object>> alternateVerificationKeys;
 
@@ -29,6 +37,10 @@ public final class ContentKeyPolicyTokenRestrictionArgs extends io.pulumi.resour
         return this.alternateVerificationKeys == null ? Input.empty() : this.alternateVerificationKeys;
     }
 
+    /**
+     * The audience for the token.
+     * 
+     */
     @InputImport(name="audience", required=true)
     private final Input<String> audience;
 
@@ -36,6 +48,10 @@ public final class ContentKeyPolicyTokenRestrictionArgs extends io.pulumi.resour
         return this.audience;
     }
 
+    /**
+     * The token issuer.
+     * 
+     */
     @InputImport(name="issuer", required=true)
     private final Input<String> issuer;
 
@@ -43,6 +59,11 @@ public final class ContentKeyPolicyTokenRestrictionArgs extends io.pulumi.resour
         return this.issuer;
     }
 
+    /**
+     * The discriminator for derived types.
+     * Expected value is '#Microsoft.Media.ContentKeyPolicyTokenRestriction'.
+     * 
+     */
     @InputImport(name="odataType", required=true)
     private final Input<String> odataType;
 
@@ -50,6 +71,10 @@ public final class ContentKeyPolicyTokenRestrictionArgs extends io.pulumi.resour
         return this.odataType;
     }
 
+    /**
+     * The OpenID connect discovery document.
+     * 
+     */
     @InputImport(name="openIdConnectDiscoveryDocument")
     private final @Nullable Input<String> openIdConnectDiscoveryDocument;
 
@@ -57,6 +82,10 @@ public final class ContentKeyPolicyTokenRestrictionArgs extends io.pulumi.resour
         return this.openIdConnectDiscoveryDocument == null ? Input.empty() : this.openIdConnectDiscoveryDocument;
     }
 
+    /**
+     * The primary verification key.
+     * 
+     */
     @InputImport(name="primaryVerificationKey", required=true)
     private final Input<Object> primaryVerificationKey;
 
@@ -64,6 +93,10 @@ public final class ContentKeyPolicyTokenRestrictionArgs extends io.pulumi.resour
         return this.primaryVerificationKey;
     }
 
+    /**
+     * A list of required token claims.
+     * 
+     */
     @InputImport(name="requiredClaims")
     private final @Nullable Input<List<ContentKeyPolicyTokenClaimArgs>> requiredClaims;
 
@@ -71,6 +104,10 @@ public final class ContentKeyPolicyTokenRestrictionArgs extends io.pulumi.resour
         return this.requiredClaims == null ? Input.empty() : this.requiredClaims;
     }
 
+    /**
+     * The type of token.
+     * 
+     */
     @InputImport(name="restrictionTokenType", required=true)
     private final Input<Either<String,ContentKeyPolicyRestrictionTokenType>> restrictionTokenType;
 

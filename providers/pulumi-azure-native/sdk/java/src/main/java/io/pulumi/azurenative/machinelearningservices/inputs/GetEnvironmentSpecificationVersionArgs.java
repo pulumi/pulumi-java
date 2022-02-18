@@ -12,6 +12,10 @@ public final class GetEnvironmentSpecificationVersionArgs extends io.pulumi.reso
 
     public static final GetEnvironmentSpecificationVersionArgs Empty = new GetEnvironmentSpecificationVersionArgs();
 
+    /**
+     * Container name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -19,6 +23,10 @@ public final class GetEnvironmentSpecificationVersionArgs extends io.pulumi.reso
         return this.name;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetEnvironmentSpecificationVersionArgs extends io.pulumi.reso
         return this.resourceGroupName;
     }
 
+    /**
+     * Version identifier.
+     * 
+     */
     @InputImport(name="version", required=true)
     private final String version;
 
@@ -33,6 +45,10 @@ public final class GetEnvironmentSpecificationVersionArgs extends io.pulumi.reso
         return this.version;
     }
 
+    /**
+     * Name of Azure Machine Learning workspace.
+     * 
+     */
     @InputImport(name="workspaceName", required=true)
     private final String workspaceName;
 

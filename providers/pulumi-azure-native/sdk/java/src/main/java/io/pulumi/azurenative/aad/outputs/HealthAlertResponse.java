@@ -9,12 +9,40 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class HealthAlertResponse {
+    /**
+     * Health Alert Id
+     * 
+     */
     private final String id;
+    /**
+     * Health Alert Issue
+     * 
+     */
     private final String issue;
+    /**
+     * Health Alert Last Detected DateTime
+     * 
+     */
     private final String lastDetected;
+    /**
+     * Health Alert Name
+     * 
+     */
     private final String name;
+    /**
+     * Health Alert Raised DateTime
+     * 
+     */
     private final String raised;
+    /**
+     * Health Alert TSG Link
+     * 
+     */
     private final String resolutionUri;
+    /**
+     * Health Alert Severity
+     * 
+     */
     private final String severity;
 
     @OutputCustomType.Constructor({"id","issue","lastDetected","name","raised","resolutionUri","severity"})
@@ -35,24 +63,52 @@ public final class HealthAlertResponse {
         this.severity = Objects.requireNonNull(severity);
     }
 
+    /**
+     * Health Alert Id
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Health Alert Issue
+     * 
+     */
     public String getIssue() {
         return this.issue;
     }
+    /**
+     * Health Alert Last Detected DateTime
+     * 
+     */
     public String getLastDetected() {
         return this.lastDetected;
     }
+    /**
+     * Health Alert Name
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Health Alert Raised DateTime
+     * 
+     */
     public String getRaised() {
         return this.raised;
     }
+    /**
+     * Health Alert TSG Link
+     * 
+     */
     public String getResolutionUri() {
         return this.resolutionUri;
     }
+    /**
+     * Health Alert Severity
+     * 
+     */
     public String getSeverity() {
         return this.severity;
     }

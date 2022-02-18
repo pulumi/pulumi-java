@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines contents of a web application firewall global configuration.
+ * 
+ */
 public final class PolicySettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PolicySettingsResponse Empty = new PolicySettingsResponse();
 
+    /**
+     * Maximum file upload size in Mb for WAF.
+     * 
+     */
     @InputImport(name="fileUploadLimitInMb")
     private final @Nullable Integer fileUploadLimitInMb;
 
@@ -23,6 +31,10 @@ public final class PolicySettingsResponse extends io.pulumi.resources.InvokeArgs
         return this.fileUploadLimitInMb == null ? Optional.empty() : Optional.ofNullable(this.fileUploadLimitInMb);
     }
 
+    /**
+     * Maximum request body size in Kb for WAF.
+     * 
+     */
     @InputImport(name="maxRequestBodySizeInKb")
     private final @Nullable Integer maxRequestBodySizeInKb;
 
@@ -30,6 +42,10 @@ public final class PolicySettingsResponse extends io.pulumi.resources.InvokeArgs
         return this.maxRequestBodySizeInKb == null ? Optional.empty() : Optional.ofNullable(this.maxRequestBodySizeInKb);
     }
 
+    /**
+     * The mode of the policy.
+     * 
+     */
     @InputImport(name="mode")
     private final @Nullable String mode;
 
@@ -37,6 +53,10 @@ public final class PolicySettingsResponse extends io.pulumi.resources.InvokeArgs
         return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
     }
 
+    /**
+     * Whether to allow WAF to check request Body.
+     * 
+     */
     @InputImport(name="requestBodyCheck")
     private final @Nullable Boolean requestBodyCheck;
 
@@ -44,6 +64,10 @@ public final class PolicySettingsResponse extends io.pulumi.resources.InvokeArgs
         return this.requestBodyCheck == null ? Optional.empty() : Optional.ofNullable(this.requestBodyCheck);
     }
 
+    /**
+     * The state of the policy.
+     * 
+     */
     @InputImport(name="state")
     private final @Nullable String state;
 

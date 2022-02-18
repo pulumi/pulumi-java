@@ -18,6 +18,66 @@ public final class ExtendedDatabaseBlobAuditingPolicyArgs extends io.pulumi.reso
 
     public static final ExtendedDatabaseBlobAuditingPolicyArgs Empty = new ExtendedDatabaseBlobAuditingPolicyArgs();
 
+    /**
+     * Specifies the Actions-Groups and Actions to audit.
+     * 
+     * The recommended set of action groups to use is the following combination - this will audit all the queries and stored procedures executed against the database, as well as successful and failed logins:
+     * 
+     * BATCH_COMPLETED_GROUP,
+     * SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP,
+     * FAILED_DATABASE_AUTHENTICATION_GROUP.
+     * 
+     * This above combination is also the set that is configured by default when enabling auditing from the Azure portal.
+     * 
+     * The supported action groups to audit are (note: choose only specific groups that cover your auditing needs. Using unnecessary groups could lead to very large quantities of audit records):
+     * 
+     * APPLICATION_ROLE_CHANGE_PASSWORD_GROUP
+     * BACKUP_RESTORE_GROUP
+     * DATABASE_LOGOUT_GROUP
+     * DATABASE_OBJECT_CHANGE_GROUP
+     * DATABASE_OBJECT_OWNERSHIP_CHANGE_GROUP
+     * DATABASE_OBJECT_PERMISSION_CHANGE_GROUP
+     * DATABASE_OPERATION_GROUP
+     * DATABASE_PERMISSION_CHANGE_GROUP
+     * DATABASE_PRINCIPAL_CHANGE_GROUP
+     * DATABASE_PRINCIPAL_IMPERSONATION_GROUP
+     * DATABASE_ROLE_MEMBER_CHANGE_GROUP
+     * FAILED_DATABASE_AUTHENTICATION_GROUP
+     * SCHEMA_OBJECT_ACCESS_GROUP
+     * SCHEMA_OBJECT_CHANGE_GROUP
+     * SCHEMA_OBJECT_OWNERSHIP_CHANGE_GROUP
+     * SCHEMA_OBJECT_PERMISSION_CHANGE_GROUP
+     * SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP
+     * USER_CHANGE_PASSWORD_GROUP
+     * BATCH_STARTED_GROUP
+     * BATCH_COMPLETED_GROUP
+     * 
+     * These are groups that cover all sql statements and stored procedures executed against the database, and should not be used in combination with other groups as this will result in duplicate audit logs.
+     * 
+     * For more information, see [Database-Level Audit Action Groups](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-action-groups).
+     * 
+     * For Database auditing policy, specific Actions can also be specified (note that Actions cannot be specified for Server auditing policy). The supported actions to audit are:
+     * SELECT
+     * UPDATE
+     * INSERT
+     * DELETE
+     * EXECUTE
+     * RECEIVE
+     * REFERENCES
+     * 
+     * The general form for defining an action to be audited is:
+     * {action} ON {object} BY {principal}
+     * 
+     * Note that <object> in the above format can refer to an object like a table, view, or stored procedure, or an entire database or schema. For the latter cases, the forms DATABASE::{db_name} and SCHEMA::{schema_name} are used, respectively.
+     * 
+     * For example:
+     * SELECT on dbo.myTable by public
+     * SELECT on DATABASE::myDatabase by public
+     * SELECT on SCHEMA::mySchema by public
+     * 
+     * For more information, see [Database-Level Audit Actions](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-actions)
+     * 
+     */
     @InputImport(name="auditActionsAndGroups")
     private final @Nullable Input<List<String>> auditActionsAndGroups;
 
@@ -25,6 +85,10 @@ public final class ExtendedDatabaseBlobAuditingPolicyArgs extends io.pulumi.reso
         return this.auditActionsAndGroups == null ? Input.empty() : this.auditActionsAndGroups;
     }
 
+    /**
+     * The name of the blob auditing policy.
+     * 
+     */
     @InputImport(name="blobAuditingPolicyName")
     private final @Nullable Input<String> blobAuditingPolicyName;
 
@@ -32,6 +96,10 @@ public final class ExtendedDatabaseBlobAuditingPolicyArgs extends io.pulumi.reso
         return this.blobAuditingPolicyName == null ? Input.empty() : this.blobAuditingPolicyName;
     }
 
+    /**
+     * The name of the database.
+     * 
+     */
     @InputImport(name="databaseName", required=true)
     private final Input<String> databaseName;
 
@@ -39,6 +107,20 @@ public final class ExtendedDatabaseBlobAuditingPolicyArgs extends io.pulumi.reso
         return this.databaseName;
     }
 
+    /**
+     * Specifies whether audit events are sent to Azure Monitor.
+     * In order to send the events to Azure Monitor, specify 'State' as 'Enabled' and 'IsAzureMonitorTargetEnabled' as true.
+     * 
+     * When using REST API to configure auditing, Diagnostic Settings with 'SQLSecurityAuditEvents' diagnostic logs category on the database should be also created.
+     * Note that for server level audit you should use the 'master' database as {databaseName}.
+     * 
+     * Diagnostic Settings URI format:
+     * PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/providers/microsoft.insights/diagnosticSettings/{settingsName}?api-version=2017-05-01-preview
+     * 
+     * For more information, see [Diagnostic Settings REST API](https://go.microsoft.com/fwlink/?linkid=2033207)
+     * or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033043)
+     * 
+     */
     @InputImport(name="isAzureMonitorTargetEnabled")
     private final @Nullable Input<Boolean> isAzureMonitorTargetEnabled;
 
@@ -46,6 +128,10 @@ public final class ExtendedDatabaseBlobAuditingPolicyArgs extends io.pulumi.reso
         return this.isAzureMonitorTargetEnabled == null ? Input.empty() : this.isAzureMonitorTargetEnabled;
     }
 
+    /**
+     * Specifies whether storageAccountAccessKey value is the storage's secondary key.
+     * 
+     */
     @InputImport(name="isStorageSecondaryKeyInUse")
     private final @Nullable Input<Boolean> isStorageSecondaryKeyInUse;
 
@@ -53,6 +139,10 @@ public final class ExtendedDatabaseBlobAuditingPolicyArgs extends io.pulumi.reso
         return this.isStorageSecondaryKeyInUse == null ? Input.empty() : this.isStorageSecondaryKeyInUse;
     }
 
+    /**
+     * Specifies condition of where clause when creating an audit.
+     * 
+     */
     @InputImport(name="predicateExpression")
     private final @Nullable Input<String> predicateExpression;
 
@@ -60,6 +150,11 @@ public final class ExtendedDatabaseBlobAuditingPolicyArgs extends io.pulumi.reso
         return this.predicateExpression == null ? Input.empty() : this.predicateExpression;
     }
 
+    /**
+     * Specifies the amount of time in milliseconds that can elapse before audit actions are forced to be processed.
+     * The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.
+     * 
+     */
     @InputImport(name="queueDelayMs")
     private final @Nullable Input<Integer> queueDelayMs;
 
@@ -67,6 +162,10 @@ public final class ExtendedDatabaseBlobAuditingPolicyArgs extends io.pulumi.reso
         return this.queueDelayMs == null ? Input.empty() : this.queueDelayMs;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -74,6 +173,10 @@ public final class ExtendedDatabaseBlobAuditingPolicyArgs extends io.pulumi.reso
         return this.resourceGroupName;
     }
 
+    /**
+     * Specifies the number of days to keep in the audit logs in the storage account.
+     * 
+     */
     @InputImport(name="retentionDays")
     private final @Nullable Input<Integer> retentionDays;
 
@@ -81,6 +184,10 @@ public final class ExtendedDatabaseBlobAuditingPolicyArgs extends io.pulumi.reso
         return this.retentionDays == null ? Input.empty() : this.retentionDays;
     }
 
+    /**
+     * The name of the server.
+     * 
+     */
     @InputImport(name="serverName", required=true)
     private final Input<String> serverName;
 
@@ -88,6 +195,10 @@ public final class ExtendedDatabaseBlobAuditingPolicyArgs extends io.pulumi.reso
         return this.serverName;
     }
 
+    /**
+     * Specifies the state of the audit. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
+     * 
+     */
     @InputImport(name="state", required=true)
     private final Input<BlobAuditingPolicyState> state;
 
@@ -95,6 +206,15 @@ public final class ExtendedDatabaseBlobAuditingPolicyArgs extends io.pulumi.reso
         return this.state;
     }
 
+    /**
+     * Specifies the identifier key of the auditing storage account.
+     * If state is Enabled and storageEndpoint is specified, not specifying the storageAccountAccessKey will use SQL server system-assigned managed identity to access the storage.
+     * Prerequisites for using managed identity authentication:
+     * 1. Assign SQL Server a system-assigned managed identity in Azure Active Directory (AAD).
+     * 2. Grant SQL Server identity access to the storage account by adding 'Storage Blob Data Contributor' RBAC role to the server identity.
+     *    For more information, see [Auditing to storage using Managed Identity authentication](https://go.microsoft.com/fwlink/?linkid=2114355)
+     * 
+     */
     @InputImport(name="storageAccountAccessKey")
     private final @Nullable Input<String> storageAccountAccessKey;
 
@@ -102,6 +222,10 @@ public final class ExtendedDatabaseBlobAuditingPolicyArgs extends io.pulumi.reso
         return this.storageAccountAccessKey == null ? Input.empty() : this.storageAccountAccessKey;
     }
 
+    /**
+     * Specifies the blob storage subscription Id.
+     * 
+     */
     @InputImport(name="storageAccountSubscriptionId")
     private final @Nullable Input<String> storageAccountSubscriptionId;
 
@@ -109,6 +233,10 @@ public final class ExtendedDatabaseBlobAuditingPolicyArgs extends io.pulumi.reso
         return this.storageAccountSubscriptionId == null ? Input.empty() : this.storageAccountSubscriptionId;
     }
 
+    /**
+     * Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled is required.
+     * 
+     */
     @InputImport(name="storageEndpoint")
     private final @Nullable Input<String> storageEndpoint;
 

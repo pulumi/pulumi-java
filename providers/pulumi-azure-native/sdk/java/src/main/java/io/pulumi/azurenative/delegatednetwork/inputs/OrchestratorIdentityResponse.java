@@ -14,6 +14,10 @@ public final class OrchestratorIdentityResponse extends io.pulumi.resources.Invo
 
     public static final OrchestratorIdentityResponse Empty = new OrchestratorIdentityResponse();
 
+    /**
+     * The principal id of the system assigned identity which is used by orchestrator.
+     * 
+     */
     @InputImport(name="principalId", required=true)
     private final String principalId;
 
@@ -21,6 +25,10 @@ public final class OrchestratorIdentityResponse extends io.pulumi.resources.Invo
         return this.principalId;
     }
 
+    /**
+     * The tenant id of the system assigned identity which is used by orchestrator.
+     * 
+     */
     @InputImport(name="tenantId", required=true)
     private final String tenantId;
 
@@ -28,6 +36,10 @@ public final class OrchestratorIdentityResponse extends io.pulumi.resources.Invo
         return this.tenantId;
     }
 
+    /**
+     * The type of identity used for orchestrator cluster. Type 'SystemAssigned' will use an implicitly created identity orchestrator clusters
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 

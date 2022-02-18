@@ -15,15 +15,55 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetRouteFilterResult {
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     private final String etag;
+    /**
+     * Resource ID.
+     * 
+     */
     private final @Nullable String id;
+    /**
+     * A collection of references to express route circuit ipv6 peerings.
+     * 
+     */
     private final List<ExpressRouteCircuitPeeringResponse> ipv6Peerings;
+    /**
+     * Resource location.
+     * 
+     */
     private final String location;
+    /**
+     * Resource name.
+     * 
+     */
     private final String name;
+    /**
+     * A collection of references to express route circuit peerings.
+     * 
+     */
     private final List<ExpressRouteCircuitPeeringResponse> peerings;
+    /**
+     * The provisioning state of the route filter resource.
+     * 
+     */
     private final String provisioningState;
+    /**
+     * Collection of RouteFilterRules contained within a route filter.
+     * 
+     */
     private final @Nullable List<RouteFilterRuleResponse> rules;
+    /**
+     * Resource tags.
+     * 
+     */
     private final @Nullable Map<String,String> tags;
+    /**
+     * Resource type.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"etag","id","ipv6Peerings","location","name","peerings","provisioningState","rules","tags","type"})
@@ -50,33 +90,73 @@ public final class GetRouteFilterResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String getEtag() {
         return this.etag;
     }
+    /**
+     * Resource ID.
+     * 
+     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+    /**
+     * A collection of references to express route circuit ipv6 peerings.
+     * 
+     */
     public List<ExpressRouteCircuitPeeringResponse> getIpv6Peerings() {
         return this.ipv6Peerings;
     }
+    /**
+     * Resource location.
+     * 
+     */
     public String getLocation() {
         return this.location;
     }
+    /**
+     * Resource name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * A collection of references to express route circuit peerings.
+     * 
+     */
     public List<ExpressRouteCircuitPeeringResponse> getPeerings() {
         return this.peerings;
     }
+    /**
+     * The provisioning state of the route filter resource.
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Collection of RouteFilterRules contained within a route filter.
+     * 
+     */
     public List<RouteFilterRuleResponse> getRules() {
         return this.rules == null ? List.of() : this.rules;
     }
+    /**
+     * Resource tags.
+     * 
+     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+    /**
+     * Resource type.
+     * 
+     */
     public String getType() {
         return this.type;
     }

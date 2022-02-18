@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Trigger reference type.
+ * 
+ */
 public final class TriggerReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TriggerReferenceResponse Empty = new TriggerReferenceResponse();
 
+    /**
+     * Reference trigger name.
+     * 
+     */
     @InputImport(name="referenceName", required=true)
     private final String referenceName;
 
@@ -19,6 +27,10 @@ public final class TriggerReferenceResponse extends io.pulumi.resources.InvokeAr
         return this.referenceName;
     }
 
+    /**
+     * Trigger reference type.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

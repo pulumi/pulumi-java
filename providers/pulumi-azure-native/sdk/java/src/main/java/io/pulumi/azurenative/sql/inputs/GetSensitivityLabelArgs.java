@@ -12,6 +12,10 @@ public final class GetSensitivityLabelArgs extends io.pulumi.resources.InvokeArg
 
     public static final GetSensitivityLabelArgs Empty = new GetSensitivityLabelArgs();
 
+    /**
+     * The name of the column.
+     * 
+     */
     @InputImport(name="columnName", required=true)
     private final String columnName;
 
@@ -19,6 +23,10 @@ public final class GetSensitivityLabelArgs extends io.pulumi.resources.InvokeArg
         return this.columnName;
     }
 
+    /**
+     * The name of the database.
+     * 
+     */
     @InputImport(name="databaseName", required=true)
     private final String databaseName;
 
@@ -26,6 +34,10 @@ public final class GetSensitivityLabelArgs extends io.pulumi.resources.InvokeArg
         return this.databaseName;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -33,6 +45,10 @@ public final class GetSensitivityLabelArgs extends io.pulumi.resources.InvokeArg
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the schema.
+     * 
+     */
     @InputImport(name="schemaName", required=true)
     private final String schemaName;
 
@@ -40,6 +56,10 @@ public final class GetSensitivityLabelArgs extends io.pulumi.resources.InvokeArg
         return this.schemaName;
     }
 
+    /**
+     * The source of the sensitivity label.
+     * 
+     */
     @InputImport(name="sensitivityLabelSource", required=true)
     private final String sensitivityLabelSource;
 
@@ -47,6 +67,10 @@ public final class GetSensitivityLabelArgs extends io.pulumi.resources.InvokeArg
         return this.sensitivityLabelSource;
     }
 
+    /**
+     * The name of the server.
+     * 
+     */
     @InputImport(name="serverName", required=true)
     private final String serverName;
 
@@ -54,6 +78,10 @@ public final class GetSensitivityLabelArgs extends io.pulumi.resources.InvokeArg
         return this.serverName;
     }
 
+    /**
+     * The name of the table.
+     * 
+     */
     @InputImport(name="tableName", required=true)
     private final String tableName;
 

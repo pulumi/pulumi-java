@@ -12,6 +12,10 @@ public final class GetStorageAccountCredentialArgs extends io.pulumi.resources.I
 
     public static final GetStorageAccountCredentialArgs Empty = new GetStorageAccountCredentialArgs();
 
+    /**
+     * The manager name
+     * 
+     */
     @InputImport(name="managerName", required=true)
     private final String managerName;
 
@@ -19,6 +23,10 @@ public final class GetStorageAccountCredentialArgs extends io.pulumi.resources.I
         return this.managerName;
     }
 
+    /**
+     * The resource group name
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetStorageAccountCredentialArgs extends io.pulumi.resources.I
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of storage account credential to be fetched.
+     * 
+     */
     @InputImport(name="storageAccountCredentialName", required=true)
     private final String storageAccountCredentialName;
 

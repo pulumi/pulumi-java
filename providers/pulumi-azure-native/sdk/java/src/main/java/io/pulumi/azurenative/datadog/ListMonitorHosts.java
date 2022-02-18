@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListMonitorHosts {
+/**
+ * Response of a list operation.
+ * API Version: 2021-03-01.
+ * 
+ *
+ * Response of a list operation.
+ * 
+ */
     public static CompletableFuture<ListMonitorHostsResult> invokeAsync(ListMonitorHostsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datadog:listMonitorHosts", TypeShape.of(ListMonitorHostsResult.class), args == null ? ListMonitorHostsArgs.Empty : args, Utilities.withVersion(options));
     }

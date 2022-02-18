@@ -12,6 +12,10 @@ public final class GetKubernetesRoleArgs extends io.pulumi.resources.InvokeArgs 
 
     public static final GetKubernetesRoleArgs Empty = new GetKubernetesRoleArgs();
 
+    /**
+     * The device name.
+     * 
+     */
     @InputImport(name="deviceName", required=true)
     private final String deviceName;
 
@@ -19,6 +23,10 @@ public final class GetKubernetesRoleArgs extends io.pulumi.resources.InvokeArgs 
         return this.deviceName;
     }
 
+    /**
+     * The role name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -26,6 +34,10 @@ public final class GetKubernetesRoleArgs extends io.pulumi.resources.InvokeArgs 
         return this.name;
     }
 
+    /**
+     * The resource group name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

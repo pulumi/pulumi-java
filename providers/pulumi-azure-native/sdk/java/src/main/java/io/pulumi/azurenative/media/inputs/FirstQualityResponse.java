@@ -8,10 +8,18 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
+/**
+ * Filter First Quality
+ * 
+ */
 public final class FirstQualityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FirstQualityResponse Empty = new FirstQualityResponse();
 
+    /**
+     * The first quality bitrate.
+     * 
+     */
     @InputImport(name="bitrate", required=true)
     private final Integer bitrate;
 

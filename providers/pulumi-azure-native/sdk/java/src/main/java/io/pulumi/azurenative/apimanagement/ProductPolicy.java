@@ -14,33 +14,86 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Policy Contract details.
+ * API Version: 2020-12-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:apimanagement:ProductPolicy policy /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/products/5702e97e5157a50f48dce801/policies/policy 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:apimanagement:ProductPolicy")
 public class ProductPolicy extends io.pulumi.resources.CustomResource {
+    /**
+     * Format of the policyContent.
+     * 
+     */
     @OutputExport(name="format", type=String.class, parameters={})
     private Output</* @Nullable */ String> format;
 
+    /**
+     * @return Format of the policyContent.
+     * 
+     */
     public Output</* @Nullable */ String> getFormat() {
         return this.format;
     }
+    /**
+     * Resource name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Resource type for API Management resource.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type for API Management resource.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * Contents of the Policy as defined by the format.
+     * 
+     */
     @OutputExport(name="value", type=String.class, parameters={})
     private Output<String> value;
 
+    /**
+     * @return Contents of the Policy as defined by the format.
+     * 
+     */
     public Output<String> getValue() {
         return this.value;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ProductPolicy(String name, ProductPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:apimanagement:ProductPolicy", name, args == null ? ProductPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -69,6 +122,14 @@ public class ProductPolicy extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ProductPolicy get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ProductPolicy(name, id, options);
     }

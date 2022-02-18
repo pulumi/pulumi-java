@@ -15,10 +15,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * AKS properties
+ * 
+ */
 public final class AKSPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AKSPropertiesArgs Empty = new AKSPropertiesArgs();
 
+    /**
+     * Number of agents
+     * 
+     */
     @InputImport(name="agentCount")
     private final @Nullable Input<Integer> agentCount;
 
@@ -26,6 +34,10 @@ public final class AKSPropertiesArgs extends io.pulumi.resources.ResourceArgs {
         return this.agentCount == null ? Input.empty() : this.agentCount;
     }
 
+    /**
+     * Agent virtual machine size
+     * 
+     */
     @InputImport(name="agentVmSize")
     private final @Nullable Input<String> agentVmSize;
 
@@ -33,6 +45,10 @@ public final class AKSPropertiesArgs extends io.pulumi.resources.ResourceArgs {
         return this.agentVmSize == null ? Input.empty() : this.agentVmSize;
     }
 
+    /**
+     * AKS networking configuration for vnet
+     * 
+     */
     @InputImport(name="aksNetworkingConfiguration")
     private final @Nullable Input<AksNetworkingConfigurationArgs> aksNetworkingConfiguration;
 
@@ -40,6 +56,10 @@ public final class AKSPropertiesArgs extends io.pulumi.resources.ResourceArgs {
         return this.aksNetworkingConfiguration == null ? Input.empty() : this.aksNetworkingConfiguration;
     }
 
+    /**
+     * Cluster full qualified domain name
+     * 
+     */
     @InputImport(name="clusterFqdn")
     private final @Nullable Input<String> clusterFqdn;
 
@@ -47,6 +67,10 @@ public final class AKSPropertiesArgs extends io.pulumi.resources.ResourceArgs {
         return this.clusterFqdn == null ? Input.empty() : this.clusterFqdn;
     }
 
+    /**
+     * Intended usage of the cluster
+     * 
+     */
     @InputImport(name="clusterPurpose")
     private final @Nullable Input<Either<String,ClusterPurpose>> clusterPurpose;
 
@@ -54,6 +78,10 @@ public final class AKSPropertiesArgs extends io.pulumi.resources.ResourceArgs {
         return this.clusterPurpose == null ? Input.empty() : this.clusterPurpose;
     }
 
+    /**
+     * SSL configuration
+     * 
+     */
     @InputImport(name="sslConfiguration")
     private final @Nullable Input<SslConfigurationArgs> sslConfiguration;
 

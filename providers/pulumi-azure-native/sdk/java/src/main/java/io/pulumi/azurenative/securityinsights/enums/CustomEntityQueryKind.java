@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * the entity query kind
+     * 
+     */
     @EnumType
     public enum CustomEntityQueryKind {
         Activity("Activity");

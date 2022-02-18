@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetScheduledAlertRule {
+/**
+ * Represents scheduled alert rule.
+ * API Version: 2020-01-01.
+ * 
+ *
+ * Represents scheduled alert rule.
+ * 
+ */
     public static CompletableFuture<GetScheduledAlertRuleResult> invokeAsync(GetScheduledAlertRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getScheduledAlertRule", TypeShape.of(GetScheduledAlertRuleResult.class), args == null ? GetScheduledAlertRuleArgs.Empty : args, Utilities.withVersion(options));
     }

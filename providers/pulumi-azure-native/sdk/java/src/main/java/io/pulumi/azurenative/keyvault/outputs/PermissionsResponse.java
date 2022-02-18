@@ -11,9 +11,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PermissionsResponse {
+    /**
+     * Permissions to certificates
+     * 
+     */
     private final @Nullable List<String> certificates;
+    /**
+     * Permissions to keys
+     * 
+     */
     private final @Nullable List<String> keys;
+    /**
+     * Permissions to secrets
+     * 
+     */
     private final @Nullable List<String> secrets;
+    /**
+     * Permissions to storage accounts
+     * 
+     */
     private final @Nullable List<String> storage;
 
     @OutputCustomType.Constructor({"certificates","keys","secrets","storage"})
@@ -28,15 +44,31 @@ public final class PermissionsResponse {
         this.storage = storage;
     }
 
+    /**
+     * Permissions to certificates
+     * 
+     */
     public List<String> getCertificates() {
         return this.certificates == null ? List.of() : this.certificates;
     }
+    /**
+     * Permissions to keys
+     * 
+     */
     public List<String> getKeys() {
         return this.keys == null ? List.of() : this.keys;
     }
+    /**
+     * Permissions to secrets
+     * 
+     */
     public List<String> getSecrets() {
         return this.secrets == null ? List.of() : this.secrets;
     }
+    /**
+     * Permissions to storage accounts
+     * 
+     */
     public List<String> getStorage() {
         return this.storage == null ? List.of() : this.storage;
     }

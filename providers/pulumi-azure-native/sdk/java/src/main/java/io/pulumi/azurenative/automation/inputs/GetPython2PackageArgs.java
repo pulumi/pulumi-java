@@ -12,6 +12,10 @@ public final class GetPython2PackageArgs extends io.pulumi.resources.InvokeArgs 
 
     public static final GetPython2PackageArgs Empty = new GetPython2PackageArgs();
 
+    /**
+     * The name of the automation account.
+     * 
+     */
     @InputImport(name="automationAccountName", required=true)
     private final String automationAccountName;
 
@@ -19,6 +23,10 @@ public final class GetPython2PackageArgs extends io.pulumi.resources.InvokeArgs 
         return this.automationAccountName;
     }
 
+    /**
+     * The python package name.
+     * 
+     */
     @InputImport(name="packageName", required=true)
     private final String packageName;
 
@@ -26,6 +34,10 @@ public final class GetPython2PackageArgs extends io.pulumi.resources.InvokeArgs 
         return this.packageName;
     }
 
+    /**
+     * Name of an Azure Resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

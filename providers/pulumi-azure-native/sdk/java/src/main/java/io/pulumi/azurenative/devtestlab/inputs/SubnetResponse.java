@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Subnet information.
+ * 
+ */
 public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SubnetResponse Empty = new SubnetResponse();
 
+    /**
+     * The permission policy of the subnet for allowing public IP addresses (i.e. Allow, Deny)).
+     * 
+     */
     @InputImport(name="allowPublicIp")
     private final @Nullable String allowPublicIp;
 
@@ -21,6 +29,10 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
         return this.allowPublicIp == null ? Optional.empty() : Optional.ofNullable(this.allowPublicIp);
     }
 
+    /**
+     * The name of the subnet as seen in the lab.
+     * 
+     */
     @InputImport(name="labSubnetName")
     private final @Nullable String labSubnetName;
 
@@ -28,6 +40,10 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
         return this.labSubnetName == null ? Optional.empty() : Optional.ofNullable(this.labSubnetName);
     }
 
+    /**
+     * The resource ID of the subnet.
+     * 
+     */
     @InputImport(name="resourceId")
     private final @Nullable String resourceId;
 

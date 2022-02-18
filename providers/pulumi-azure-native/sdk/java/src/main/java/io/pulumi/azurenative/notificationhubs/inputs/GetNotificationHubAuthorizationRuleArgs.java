@@ -12,6 +12,10 @@ public final class GetNotificationHubAuthorizationRuleArgs extends io.pulumi.res
 
     public static final GetNotificationHubAuthorizationRuleArgs Empty = new GetNotificationHubAuthorizationRuleArgs();
 
+    /**
+     * authorization rule name.
+     * 
+     */
     @InputImport(name="authorizationRuleName", required=true)
     private final String authorizationRuleName;
 
@@ -19,6 +23,10 @@ public final class GetNotificationHubAuthorizationRuleArgs extends io.pulumi.res
         return this.authorizationRuleName;
     }
 
+    /**
+     * The namespace name
+     * 
+     */
     @InputImport(name="namespaceName", required=true)
     private final String namespaceName;
 
@@ -26,6 +34,10 @@ public final class GetNotificationHubAuthorizationRuleArgs extends io.pulumi.res
         return this.namespaceName;
     }
 
+    /**
+     * The notification hub name.
+     * 
+     */
     @InputImport(name="notificationHubName", required=true)
     private final String notificationHubName;
 
@@ -33,6 +45,10 @@ public final class GetNotificationHubAuthorizationRuleArgs extends io.pulumi.res
         return this.notificationHubName;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

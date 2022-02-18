@@ -14,6 +14,10 @@ public final class ResourceModelWithAllowedPropertySetIdentityArgs extends io.pu
 
     public static final ResourceModelWithAllowedPropertySetIdentityArgs Empty = new ResourceModelWithAllowedPropertySetIdentityArgs();
 
+    /**
+     * The identity type.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<ResourceIdentityType> type;
 

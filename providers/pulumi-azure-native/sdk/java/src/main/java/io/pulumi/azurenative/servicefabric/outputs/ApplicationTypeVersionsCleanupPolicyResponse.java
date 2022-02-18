@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ApplicationTypeVersionsCleanupPolicyResponse {
+    /**
+     * Number of unused versions per application type to keep.
+     * 
+     */
     private final Double maxUnusedVersionsToKeep;
 
     @OutputCustomType.Constructor({"maxUnusedVersionsToKeep"})
@@ -16,6 +20,10 @@ public final class ApplicationTypeVersionsCleanupPolicyResponse {
         this.maxUnusedVersionsToKeep = Objects.requireNonNull(maxUnusedVersionsToKeep);
     }
 
+    /**
+     * Number of unused versions per application type to keep.
+     * 
+     */
     public Double getMaxUnusedVersionsToKeep() {
         return this.maxUnusedVersionsToKeep;
     }

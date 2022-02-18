@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAzurePowerShellScript {
+/**
+ * Object model for the Azure PowerShell script.
+ * API Version: 2020-10-01.
+ * 
+ *
+ * Object model for the Azure PowerShell script.
+ * 
+ */
     public static CompletableFuture<GetAzurePowerShellScriptResult> invokeAsync(GetAzurePowerShellScriptArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:resources:getAzurePowerShellScript", TypeShape.of(GetAzurePowerShellScriptResult.class), args == null ? GetAzurePowerShellScriptArgs.Empty : args, Utilities.withVersion(options));
     }

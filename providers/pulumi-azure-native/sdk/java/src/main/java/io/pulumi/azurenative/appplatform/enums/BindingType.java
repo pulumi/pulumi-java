@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Buildpack Binding Type
+     * 
+     */
     @EnumType
     public enum BindingType {
         ApplicationInsights("ApplicationInsights"),

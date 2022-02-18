@@ -14,6 +14,10 @@ public final class DatadogLogsAgentResponse extends io.pulumi.resources.InvokeAr
 
     public static final DatadogLogsAgentResponse Empty = new DatadogLogsAgentResponse();
 
+    /**
+     * The transport.
+     * 
+     */
     @InputImport(name="transport")
     private final @Nullable String transport;
 

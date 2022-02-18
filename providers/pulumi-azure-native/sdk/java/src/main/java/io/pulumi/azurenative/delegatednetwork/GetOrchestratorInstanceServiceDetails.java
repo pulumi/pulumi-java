@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOrchestratorInstanceServiceDetails {
+/**
+ * Represents an instance of a orchestrator.
+ * API Version: 2021-03-15.
+ * 
+ *
+ * Represents an instance of a orchestrator.
+ * 
+ */
     public static CompletableFuture<GetOrchestratorInstanceServiceDetailsResult> invokeAsync(GetOrchestratorInstanceServiceDetailsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:delegatednetwork:getOrchestratorInstanceServiceDetails", TypeShape.of(GetOrchestratorInstanceServiceDetailsResult.class), args == null ? GetOrchestratorInstanceServiceDetailsArgs.Empty : args, Utilities.withVersion(options));
     }

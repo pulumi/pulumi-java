@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListScheduleApplicable {
+/**
+ * The response of a list operation.
+ * API Version: 2018-09-15.
+ * 
+ *
+ * The response of a list operation.
+ * 
+ */
     public static CompletableFuture<ListScheduleApplicableResult> invokeAsync(ListScheduleApplicableArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devtestlab:listScheduleApplicable", TypeShape.of(ListScheduleApplicableResult.class), args == null ? ListScheduleApplicableArgs.Empty : args, Utilities.withVersion(options));
     }

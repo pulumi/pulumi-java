@@ -12,6 +12,10 @@ public final class ListWorkspaceCollectionAccessKeysArgs extends io.pulumi.resou
 
     public static final ListWorkspaceCollectionAccessKeysArgs Empty = new ListWorkspaceCollectionAccessKeysArgs();
 
+    /**
+     * Azure resource group
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +23,10 @@ public final class ListWorkspaceCollectionAccessKeysArgs extends io.pulumi.resou
         return this.resourceGroupName;
     }
 
+    /**
+     * Power BI Embedded Workspace Collection name
+     * 
+     */
     @InputImport(name="workspaceCollectionName", required=true)
     private final String workspaceCollectionName;
 

@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines the artifacts of a service unit.
+ * 
+ */
 public final class ServiceUnitArtifactsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceUnitArtifactsArgs Empty = new ServiceUnitArtifactsArgs();
 
+    /**
+     * The path to the ARM parameters file relative to the artifact source.
+     * 
+     */
     @InputImport(name="parametersArtifactSourceRelativePath")
     private final @Nullable Input<String> parametersArtifactSourceRelativePath;
 
@@ -21,6 +29,10 @@ public final class ServiceUnitArtifactsArgs extends io.pulumi.resources.Resource
         return this.parametersArtifactSourceRelativePath == null ? Input.empty() : this.parametersArtifactSourceRelativePath;
     }
 
+    /**
+     * The full URI of the ARM parameters file with the SAS token.
+     * 
+     */
     @InputImport(name="parametersUri")
     private final @Nullable Input<String> parametersUri;
 
@@ -28,6 +40,10 @@ public final class ServiceUnitArtifactsArgs extends io.pulumi.resources.Resource
         return this.parametersUri == null ? Input.empty() : this.parametersUri;
     }
 
+    /**
+     * The path to the ARM template file relative to the artifact source.
+     * 
+     */
     @InputImport(name="templateArtifactSourceRelativePath")
     private final @Nullable Input<String> templateArtifactSourceRelativePath;
 
@@ -35,6 +51,10 @@ public final class ServiceUnitArtifactsArgs extends io.pulumi.resources.Resource
         return this.templateArtifactSourceRelativePath == null ? Input.empty() : this.templateArtifactSourceRelativePath;
     }
 
+    /**
+     * The full URI of the ARM template file with the SAS token.
+     * 
+     */
     @InputImport(name="templateUri")
     private final @Nullable Input<String> templateUri;
 

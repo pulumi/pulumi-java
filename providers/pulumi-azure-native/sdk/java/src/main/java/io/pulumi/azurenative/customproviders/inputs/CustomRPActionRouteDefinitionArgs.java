@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The route definition for an action implemented by the custom resource provider.
+ * 
+ */
 public final class CustomRPActionRouteDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CustomRPActionRouteDefinitionArgs Empty = new CustomRPActionRouteDefinitionArgs();
 
+    /**
+     * The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. 'https://testendpoint/') or can specify to route via a path (e.g. 'https://testendpoint/{requestPath}')
+     * 
+     */
     @InputImport(name="endpoint", required=true)
     private final Input<String> endpoint;
 
@@ -23,6 +31,10 @@ public final class CustomRPActionRouteDefinitionArgs extends io.pulumi.resources
         return this.endpoint;
     }
 
+    /**
+     * The name of the route definition. This becomes the name for the ARM extension (e.g. '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}')
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -30,6 +42,10 @@ public final class CustomRPActionRouteDefinitionArgs extends io.pulumi.resources
         return this.name;
     }
 
+    /**
+     * The routing types that are supported for action requests.
+     * 
+     */
     @InputImport(name="routingType")
     private final @Nullable Input<Either<String,ActionRouting>> routingType;
 

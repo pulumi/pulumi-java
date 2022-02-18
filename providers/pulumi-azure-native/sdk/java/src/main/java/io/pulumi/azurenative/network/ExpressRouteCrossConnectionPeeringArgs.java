@@ -21,6 +21,10 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends io.pulumi.reso
 
     public static final ExpressRouteCrossConnectionPeeringArgs Empty = new ExpressRouteCrossConnectionPeeringArgs();
 
+    /**
+     * The name of the ExpressRouteCrossConnection.
+     * 
+     */
     @InputImport(name="crossConnectionName", required=true)
     private final Input<String> crossConnectionName;
 
@@ -28,6 +32,10 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends io.pulumi.reso
         return this.crossConnectionName;
     }
 
+    /**
+     * The GatewayManager Etag.
+     * 
+     */
     @InputImport(name="gatewayManagerEtag")
     private final @Nullable Input<String> gatewayManagerEtag;
 
@@ -35,6 +43,10 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends io.pulumi.reso
         return this.gatewayManagerEtag == null ? Input.empty() : this.gatewayManagerEtag;
     }
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -42,6 +54,10 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends io.pulumi.reso
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * The IPv6 peering configuration.
+     * 
+     */
     @InputImport(name="ipv6PeeringConfig")
     private final @Nullable Input<Ipv6ExpressRouteCircuitPeeringConfigArgs> ipv6PeeringConfig;
 
@@ -49,6 +65,10 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends io.pulumi.reso
         return this.ipv6PeeringConfig == null ? Input.empty() : this.ipv6PeeringConfig;
     }
 
+    /**
+     * The Microsoft peering configuration.
+     * 
+     */
     @InputImport(name="microsoftPeeringConfig")
     private final @Nullable Input<ExpressRouteCircuitPeeringConfigArgs> microsoftPeeringConfig;
 
@@ -56,6 +76,10 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends io.pulumi.reso
         return this.microsoftPeeringConfig == null ? Input.empty() : this.microsoftPeeringConfig;
     }
 
+    /**
+     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -63,6 +87,10 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends io.pulumi.reso
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The peer ASN.
+     * 
+     */
     @InputImport(name="peerASN")
     private final @Nullable Input<Double> peerASN;
 
@@ -70,6 +98,10 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends io.pulumi.reso
         return this.peerASN == null ? Input.empty() : this.peerASN;
     }
 
+    /**
+     * The name of the peering.
+     * 
+     */
     @InputImport(name="peeringName")
     private final @Nullable Input<String> peeringName;
 
@@ -77,6 +109,10 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends io.pulumi.reso
         return this.peeringName == null ? Input.empty() : this.peeringName;
     }
 
+    /**
+     * The peering type.
+     * 
+     */
     @InputImport(name="peeringType")
     private final @Nullable Input<Either<String,ExpressRoutePeeringType>> peeringType;
 
@@ -84,6 +120,10 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends io.pulumi.reso
         return this.peeringType == null ? Input.empty() : this.peeringType;
     }
 
+    /**
+     * The primary address prefix.
+     * 
+     */
     @InputImport(name="primaryPeerAddressPrefix")
     private final @Nullable Input<String> primaryPeerAddressPrefix;
 
@@ -91,6 +131,10 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends io.pulumi.reso
         return this.primaryPeerAddressPrefix == null ? Input.empty() : this.primaryPeerAddressPrefix;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -98,6 +142,10 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends io.pulumi.reso
         return this.resourceGroupName;
     }
 
+    /**
+     * The secondary address prefix.
+     * 
+     */
     @InputImport(name="secondaryPeerAddressPrefix")
     private final @Nullable Input<String> secondaryPeerAddressPrefix;
 
@@ -105,6 +153,10 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends io.pulumi.reso
         return this.secondaryPeerAddressPrefix == null ? Input.empty() : this.secondaryPeerAddressPrefix;
     }
 
+    /**
+     * The shared key.
+     * 
+     */
     @InputImport(name="sharedKey")
     private final @Nullable Input<String> sharedKey;
 
@@ -112,6 +164,10 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends io.pulumi.reso
         return this.sharedKey == null ? Input.empty() : this.sharedKey;
     }
 
+    /**
+     * The peering state.
+     * 
+     */
     @InputImport(name="state")
     private final @Nullable Input<Either<String,ExpressRoutePeeringState>> state;
 
@@ -119,6 +175,10 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends io.pulumi.reso
         return this.state == null ? Input.empty() : this.state;
     }
 
+    /**
+     * The VLAN ID.
+     * 
+     */
     @InputImport(name="vlanId")
     private final @Nullable Input<Integer> vlanId;
 

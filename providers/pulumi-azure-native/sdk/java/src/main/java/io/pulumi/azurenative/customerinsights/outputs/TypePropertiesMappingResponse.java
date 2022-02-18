@@ -11,8 +11,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TypePropertiesMappingResponse {
+    /**
+     * Link type.
+     * 
+     */
     private final @Nullable String linkType;
+    /**
+     *  Property name on the source Entity Type.
+     * 
+     */
     private final String sourcePropertyName;
+    /**
+     * Property name on the target Entity Type.
+     * 
+     */
     private final String targetPropertyName;
 
     @OutputCustomType.Constructor({"linkType","sourcePropertyName","targetPropertyName"})
@@ -25,12 +37,24 @@ public final class TypePropertiesMappingResponse {
         this.targetPropertyName = Objects.requireNonNull(targetPropertyName);
     }
 
+    /**
+     * Link type.
+     * 
+     */
     public Optional<String> getLinkType() {
         return Optional.ofNullable(this.linkType);
     }
+    /**
+     *  Property name on the source Entity Type.
+     * 
+     */
     public String getSourcePropertyName() {
         return this.sourcePropertyName;
     }
+    /**
+     * Property name on the target Entity Type.
+     * 
+     */
     public String getTargetPropertyName() {
         return this.targetPropertyName;
     }

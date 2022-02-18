@@ -16,6 +16,10 @@ public final class PeeringServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PeeringServiceArgs Empty = new PeeringServiceArgs();
 
+    /**
+     * The location of the resource.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -23,6 +27,10 @@ public final class PeeringServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The location (state/province) of the customer.
+     * 
+     */
     @InputImport(name="peeringServiceLocation")
     private final @Nullable Input<String> peeringServiceLocation;
 
@@ -30,6 +38,10 @@ public final class PeeringServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.peeringServiceLocation == null ? Input.empty() : this.peeringServiceLocation;
     }
 
+    /**
+     * The name of the peering service.
+     * 
+     */
     @InputImport(name="peeringServiceName")
     private final @Nullable Input<String> peeringServiceName;
 
@@ -37,6 +49,10 @@ public final class PeeringServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.peeringServiceName == null ? Input.empty() : this.peeringServiceName;
     }
 
+    /**
+     * The name of the service provider.
+     * 
+     */
     @InputImport(name="peeringServiceProvider")
     private final @Nullable Input<String> peeringServiceProvider;
 
@@ -44,6 +60,10 @@ public final class PeeringServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.peeringServiceProvider == null ? Input.empty() : this.peeringServiceProvider;
     }
 
+    /**
+     * The backup peering (Microsoft/service provider) location to be used for customer traffic.
+     * 
+     */
     @InputImport(name="providerBackupPeeringLocation")
     private final @Nullable Input<String> providerBackupPeeringLocation;
 
@@ -51,6 +71,10 @@ public final class PeeringServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.providerBackupPeeringLocation == null ? Input.empty() : this.providerBackupPeeringLocation;
     }
 
+    /**
+     * The primary peering (Microsoft/service provider) location to be used for customer traffic.
+     * 
+     */
     @InputImport(name="providerPrimaryPeeringLocation")
     private final @Nullable Input<String> providerPrimaryPeeringLocation;
 
@@ -58,6 +82,10 @@ public final class PeeringServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.providerPrimaryPeeringLocation == null ? Input.empty() : this.providerPrimaryPeeringLocation;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -65,6 +93,10 @@ public final class PeeringServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The SKU that defines the type of the peering service.
+     * 
+     */
     @InputImport(name="sku")
     private final @Nullable Input<PeeringServiceSkuArgs> sku;
 
@@ -72,6 +104,10 @@ public final class PeeringServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku == null ? Input.empty() : this.sku;
     }
 
+    /**
+     * The resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

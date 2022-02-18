@@ -15,6 +15,10 @@ public final class ListConnectedClusterUserCredentialsArgs extends io.pulumi.res
 
     public static final ListConnectedClusterUserCredentialsArgs Empty = new ListConnectedClusterUserCredentialsArgs();
 
+    /**
+     * The mode of client authentication.
+     * 
+     */
     @InputImport(name="authenticationMethod", required=true)
     private final Either<String,AuthenticationMethod> authenticationMethod;
 
@@ -22,6 +26,10 @@ public final class ListConnectedClusterUserCredentialsArgs extends io.pulumi.res
         return this.authenticationMethod;
     }
 
+    /**
+     * Boolean value to indicate whether the request is for client side proxy or not
+     * 
+     */
     @InputImport(name="clientProxy", required=true)
     private final Boolean clientProxy;
 
@@ -29,6 +37,10 @@ public final class ListConnectedClusterUserCredentialsArgs extends io.pulumi.res
         return this.clientProxy;
     }
 
+    /**
+     * The name of the Kubernetes cluster on which get is called.
+     * 
+     */
     @InputImport(name="clusterName", required=true)
     private final String clusterName;
 
@@ -36,6 +48,10 @@ public final class ListConnectedClusterUserCredentialsArgs extends io.pulumi.res
         return this.clusterName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListAgentPoolQueueStatus {
+/**
+ * The QueueStatus of Agent Pool
+ * API Version: 2019-06-01-preview.
+ * 
+ *
+ * The QueueStatus of Agent Pool
+ * 
+ */
     public static CompletableFuture<ListAgentPoolQueueStatusResult> invokeAsync(ListAgentPoolQueueStatusArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerregistry:listAgentPoolQueueStatus", TypeShape.of(ListAgentPoolQueueStatusResult.class), args == null ? ListAgentPoolQueueStatusArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class OfficeDataConnectorDataTypesResponseTeams {
+    /**
+     * Describe whether this data type connection is enabled or not.
+     * 
+     */
     private final @Nullable String state;
 
     @OutputCustomType.Constructor({"state"})
@@ -18,6 +22,10 @@ public final class OfficeDataConnectorDataTypesResponseTeams {
         this.state = state;
     }
 
+    /**
+     * Describe whether this data type connection is enabled or not.
+     * 
+     */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }

@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SubscriptionKeyParameterNamesContractResponse {
+    /**
+     * Subscription key header name.
+     * 
+     */
     private final @Nullable String header;
+    /**
+     * Subscription key query string parameter name.
+     * 
+     */
     private final @Nullable String query;
 
     @OutputCustomType.Constructor({"header","query"})
@@ -22,9 +30,17 @@ public final class SubscriptionKeyParameterNamesContractResponse {
         this.query = query;
     }
 
+    /**
+     * Subscription key header name.
+     * 
+     */
     public Optional<String> getHeader() {
         return Optional.ofNullable(this.header);
     }
+    /**
+     * Subscription key query string parameter name.
+     * 
+     */
     public Optional<String> getQuery() {
         return Optional.ofNullable(this.query);
     }

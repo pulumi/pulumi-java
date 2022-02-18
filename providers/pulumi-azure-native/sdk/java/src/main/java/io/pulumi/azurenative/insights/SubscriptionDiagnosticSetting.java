@@ -15,63 +15,156 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * The subscription diagnostic setting resource.
+ * API Version: 2017-05-01-preview.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:insights:SubscriptionDiagnosticSetting ds4 subscriptions/fb9f25f9-5785-4510-a38f-a62f188eb9f8/providers/AzureResourceManager/diagnosticSettings/ds4 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:insights:SubscriptionDiagnosticSetting")
 public class SubscriptionDiagnosticSetting extends io.pulumi.resources.CustomResource {
+    /**
+     * The resource Id for the event hub authorization rule.
+     * 
+     */
     @OutputExport(name="eventHubAuthorizationRuleId", type=String.class, parameters={})
     private Output</* @Nullable */ String> eventHubAuthorizationRuleId;
 
+    /**
+     * @return The resource Id for the event hub authorization rule.
+     * 
+     */
     public Output</* @Nullable */ String> getEventHubAuthorizationRuleId() {
         return this.eventHubAuthorizationRuleId;
     }
+    /**
+     * The name of the event hub. If none is specified, the default event hub will be selected.
+     * 
+     */
     @OutputExport(name="eventHubName", type=String.class, parameters={})
     private Output</* @Nullable */ String> eventHubName;
 
+    /**
+     * @return The name of the event hub. If none is specified, the default event hub will be selected.
+     * 
+     */
     public Output</* @Nullable */ String> getEventHubName() {
         return this.eventHubName;
     }
+    /**
+     * Location of the resource
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Location of the resource
+     * 
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * The list of logs settings.
+     * 
+     */
     @OutputExport(name="logs", type=List.class, parameters={SubscriptionLogSettingsResponse.class})
     private Output</* @Nullable */ List<SubscriptionLogSettingsResponse>> logs;
 
+    /**
+     * @return The list of logs settings.
+     * 
+     */
     public Output</* @Nullable */ List<SubscriptionLogSettingsResponse>> getLogs() {
         return this.logs;
     }
+    /**
+     * Azure resource name
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Azure resource name
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The service bus rule Id of the diagnostic setting. This is here to maintain backwards compatibility.
+     * 
+     */
     @OutputExport(name="serviceBusRuleId", type=String.class, parameters={})
     private Output</* @Nullable */ String> serviceBusRuleId;
 
+    /**
+     * @return The service bus rule Id of the diagnostic setting. This is here to maintain backwards compatibility.
+     * 
+     */
     public Output</* @Nullable */ String> getServiceBusRuleId() {
         return this.serviceBusRuleId;
     }
+    /**
+     * The resource ID of the storage account to which you would like to send Diagnostic Logs.
+     * 
+     */
     @OutputExport(name="storageAccountId", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageAccountId;
 
+    /**
+     * @return The resource ID of the storage account to which you would like to send Diagnostic Logs.
+     * 
+     */
     public Output</* @Nullable */ String> getStorageAccountId() {
         return this.storageAccountId;
     }
+    /**
+     * Azure resource type
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Azure resource type
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * The full ARM resource ID of the Log Analytics workspace to which you would like to send Diagnostic Logs. Example: /subscriptions/4b9e8510-67ab-4e9a-95a9-e2f1e570ea9c/resourceGroups/insights-integration/providers/Microsoft.OperationalInsights/workspaces/viruela2
+     * 
+     */
     @OutputExport(name="workspaceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> workspaceId;
 
+    /**
+     * @return The full ARM resource ID of the Log Analytics workspace to which you would like to send Diagnostic Logs. Example: /subscriptions/4b9e8510-67ab-4e9a-95a9-e2f1e570ea9c/resourceGroups/insights-integration/providers/Microsoft.OperationalInsights/workspaces/viruela2
+     * 
+     */
     public Output</* @Nullable */ String> getWorkspaceId() {
         return this.workspaceId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public SubscriptionDiagnosticSetting(String name, @Nullable SubscriptionDiagnosticSettingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:insights:SubscriptionDiagnosticSetting", name, args == null ? SubscriptionDiagnosticSettingArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -91,6 +184,14 @@ public class SubscriptionDiagnosticSetting extends io.pulumi.resources.CustomRes
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static SubscriptionDiagnosticSetting get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SubscriptionDiagnosticSetting(name, id, options);
     }

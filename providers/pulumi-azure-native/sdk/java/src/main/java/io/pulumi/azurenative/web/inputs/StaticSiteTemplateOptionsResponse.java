@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Template Options for the static site.
+ * 
+ */
 public final class StaticSiteTemplateOptionsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StaticSiteTemplateOptionsResponse Empty = new StaticSiteTemplateOptionsResponse();
 
+    /**
+     * Description of the newly generated repository.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -22,6 +30,10 @@ public final class StaticSiteTemplateOptionsResponse extends io.pulumi.resources
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * Whether or not the newly generated repository is a private repository. Defaults to false (i.e. public).
+     * 
+     */
     @InputImport(name="isPrivate")
     private final @Nullable Boolean isPrivate;
 
@@ -29,6 +41,10 @@ public final class StaticSiteTemplateOptionsResponse extends io.pulumi.resources
         return this.isPrivate == null ? Optional.empty() : Optional.ofNullable(this.isPrivate);
     }
 
+    /**
+     * Owner of the newly generated repository.
+     * 
+     */
     @InputImport(name="owner")
     private final @Nullable String owner;
 
@@ -36,6 +52,10 @@ public final class StaticSiteTemplateOptionsResponse extends io.pulumi.resources
         return this.owner == null ? Optional.empty() : Optional.ofNullable(this.owner);
     }
 
+    /**
+     * Name of the newly generated repository.
+     * 
+     */
     @InputImport(name="repositoryName")
     private final @Nullable String repositoryName;
 
@@ -43,6 +63,10 @@ public final class StaticSiteTemplateOptionsResponse extends io.pulumi.resources
         return this.repositoryName == null ? Optional.empty() : Optional.ofNullable(this.repositoryName);
     }
 
+    /**
+     * URL of the template repository. The newly generated repository will be based on this one.
+     * 
+     */
     @InputImport(name="templateRepositoryUrl")
     private final @Nullable String templateRepositoryUrl;
 

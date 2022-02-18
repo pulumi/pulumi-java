@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Header type.
+     * 
+     */
     @EnumType
     public enum Header {
         All_files_have_same_headers("all_files_have_same_headers"),

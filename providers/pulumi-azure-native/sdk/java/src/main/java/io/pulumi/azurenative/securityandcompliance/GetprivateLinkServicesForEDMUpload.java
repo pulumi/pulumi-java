@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetprivateLinkServicesForEDMUpload {
+/**
+ * The description of the service.
+ * API Version: 2021-03-08.
+ * 
+ *
+ * The description of the service.
+ * 
+ */
     public static CompletableFuture<GetprivateLinkServicesForEDMUploadResult> invokeAsync(GetprivateLinkServicesForEDMUploadArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityandcompliance:getprivateLinkServicesForEDMUpload", TypeShape.of(GetprivateLinkServicesForEDMUploadResult.class), args == null ? GetprivateLinkServicesForEDMUploadArgs.Empty : args, Utilities.withVersion(options));
     }

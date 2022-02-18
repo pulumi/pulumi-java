@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TransferConfigurationResponseTransferAllDetails {
+    /**
+     * Details to transfer all data.
+     * 
+     */
     private final @Nullable TransferAllDetailsResponse include;
 
     @OutputCustomType.Constructor({"include"})
@@ -18,6 +22,10 @@ public final class TransferConfigurationResponseTransferAllDetails {
         this.include = include;
     }
 
+    /**
+     * Details to transfer all data.
+     * 
+     */
     public Optional<TransferAllDetailsResponse> getInclude() {
         return Optional.ofNullable(this.include);
     }

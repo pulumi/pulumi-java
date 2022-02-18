@@ -15,10 +15,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Base class for all execution activities.
+ * 
+ */
 public final class ExecutionActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ExecutionActivityArgs Empty = new ExecutionActivityArgs();
 
+    /**
+     * Activity depends on condition.
+     * 
+     */
     @InputImport(name="dependsOn")
     private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
 
@@ -26,6 +34,10 @@ public final class ExecutionActivityArgs extends io.pulumi.resources.ResourceArg
         return this.dependsOn == null ? Input.empty() : this.dependsOn;
     }
 
+    /**
+     * Activity description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -33,6 +45,10 @@ public final class ExecutionActivityArgs extends io.pulumi.resources.ResourceArg
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Linked service reference.
+     * 
+     */
     @InputImport(name="linkedServiceName")
     private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
 
@@ -40,6 +56,10 @@ public final class ExecutionActivityArgs extends io.pulumi.resources.ResourceArg
         return this.linkedServiceName == null ? Input.empty() : this.linkedServiceName;
     }
 
+    /**
+     * Activity name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -47,6 +67,10 @@ public final class ExecutionActivityArgs extends io.pulumi.resources.ResourceArg
         return this.name;
     }
 
+    /**
+     * Activity policy.
+     * 
+     */
     @InputImport(name="policy")
     private final @Nullable Input<ActivityPolicyArgs> policy;
 
@@ -54,6 +78,11 @@ public final class ExecutionActivityArgs extends io.pulumi.resources.ResourceArg
         return this.policy == null ? Input.empty() : this.policy;
     }
 
+    /**
+     * Type of activity.
+     * Expected value is 'Execution'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -61,6 +90,10 @@ public final class ExecutionActivityArgs extends io.pulumi.resources.ResourceArg
         return this.type;
     }
 
+    /**
+     * Activity user properties.
+     * 
+     */
     @InputImport(name="userProperties")
     private final @Nullable Input<List<UserPropertyArgs>> userProperties;
 

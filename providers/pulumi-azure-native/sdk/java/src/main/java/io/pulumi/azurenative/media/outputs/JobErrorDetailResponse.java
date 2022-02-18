@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class JobErrorDetailResponse {
+    /**
+     * Code describing the error detail.
+     * 
+     */
     private final String code;
+    /**
+     * A human-readable representation of the error.
+     * 
+     */
     private final String message;
 
     @OutputCustomType.Constructor({"code","message"})
@@ -20,9 +28,17 @@ public final class JobErrorDetailResponse {
         this.message = Objects.requireNonNull(message);
     }
 
+    /**
+     * Code describing the error detail.
+     * 
+     */
     public String getCode() {
         return this.code;
     }
+    /**
+     * A human-readable representation of the error.
+     * 
+     */
     public String getMessage() {
         return this.message;
     }

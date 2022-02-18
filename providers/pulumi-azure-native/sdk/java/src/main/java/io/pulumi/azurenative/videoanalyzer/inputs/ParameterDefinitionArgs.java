@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines the parameter value of an specific pipeline topology parameter. See pipeline topology parameters for more information.
+ * 
+ */
 public final class ParameterDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ParameterDefinitionArgs Empty = new ParameterDefinitionArgs();
 
+    /**
+     * Name of the parameter declared in the pipeline topology.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -21,6 +29,10 @@ public final class ParameterDefinitionArgs extends io.pulumi.resources.ResourceA
         return this.name;
     }
 
+    /**
+     * Parameter value to be applied on this specific pipeline.
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

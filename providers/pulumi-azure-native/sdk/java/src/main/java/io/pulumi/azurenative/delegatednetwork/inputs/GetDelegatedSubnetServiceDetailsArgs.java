@@ -12,6 +12,10 @@ public final class GetDelegatedSubnetServiceDetailsArgs extends io.pulumi.resour
 
     public static final GetDelegatedSubnetServiceDetailsArgs Empty = new GetDelegatedSubnetServiceDetailsArgs();
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +23,10 @@ public final class GetDelegatedSubnetServiceDetailsArgs extends io.pulumi.resour
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the resource. It must be a minimum of 3 characters, and a maximum of 63.
+     * 
+     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 

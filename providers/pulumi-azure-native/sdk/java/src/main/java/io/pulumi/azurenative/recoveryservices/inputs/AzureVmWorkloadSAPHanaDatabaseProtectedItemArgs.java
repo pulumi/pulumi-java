@@ -21,10 +21,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Azure VM workload-specific protected item representing SAP HANA Database.
+ * 
+ */
 public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs Empty = new AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs();
 
+    /**
+     * Type of backup management for the backed up item.
+     * 
+     */
     @InputImport(name="backupManagementType")
     private final @Nullable Input<Either<String,BackupManagementType>> backupManagementType;
 
@@ -32,6 +40,10 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends io.pu
         return this.backupManagementType == null ? Input.empty() : this.backupManagementType;
     }
 
+    /**
+     * Name of the backup set the backup item belongs to
+     * 
+     */
     @InputImport(name="backupSetName")
     private final @Nullable Input<String> backupSetName;
 
@@ -39,6 +51,10 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends io.pu
         return this.backupSetName == null ? Input.empty() : this.backupSetName;
     }
 
+    /**
+     * Unique name of container
+     * 
+     */
     @InputImport(name="containerName")
     private final @Nullable Input<String> containerName;
 
@@ -46,6 +62,10 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends io.pu
         return this.containerName == null ? Input.empty() : this.containerName;
     }
 
+    /**
+     * Create mode to indicate recovery of existing soft deleted data source or creation of new data source.
+     * 
+     */
     @InputImport(name="createMode")
     private final @Nullable Input<Either<String,CreateMode>> createMode;
 
@@ -53,6 +73,10 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends io.pu
         return this.createMode == null ? Input.empty() : this.createMode;
     }
 
+    /**
+     * Time for deferred deletion in UTC
+     * 
+     */
     @InputImport(name="deferredDeleteTimeInUTC")
     private final @Nullable Input<String> deferredDeleteTimeInUTC;
 
@@ -60,6 +84,10 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends io.pu
         return this.deferredDeleteTimeInUTC == null ? Input.empty() : this.deferredDeleteTimeInUTC;
     }
 
+    /**
+     * Time remaining before the DS marked for deferred delete is permanently deleted
+     * 
+     */
     @InputImport(name="deferredDeleteTimeRemaining")
     private final @Nullable Input<String> deferredDeleteTimeRemaining;
 
@@ -67,6 +95,10 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends io.pu
         return this.deferredDeleteTimeRemaining == null ? Input.empty() : this.deferredDeleteTimeRemaining;
     }
 
+    /**
+     * Additional information for this backup item.
+     * 
+     */
     @InputImport(name="extendedInfo")
     private final @Nullable Input<AzureVmWorkloadProtectedItemExtendedInfoArgs> extendedInfo;
 
@@ -74,6 +106,10 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends io.pu
         return this.extendedInfo == null ? Input.empty() : this.extendedInfo;
     }
 
+    /**
+     * Friendly name of the DB represented by this backup item.
+     * 
+     */
     @InputImport(name="friendlyName")
     private final @Nullable Input<String> friendlyName;
 
@@ -81,6 +117,10 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends io.pu
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
     }
 
+    /**
+     * Flag to identify whether the deferred deleted DS is to be purged soon
+     * 
+     */
     @InputImport(name="isDeferredDeleteScheduleUpcoming")
     private final @Nullable Input<Boolean> isDeferredDeleteScheduleUpcoming;
 
@@ -88,6 +128,10 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends io.pu
         return this.isDeferredDeleteScheduleUpcoming == null ? Input.empty() : this.isDeferredDeleteScheduleUpcoming;
     }
 
+    /**
+     * Flag to identify that deferred deleted DS is to be moved into Pause state
+     * 
+     */
     @InputImport(name="isRehydrate")
     private final @Nullable Input<Boolean> isRehydrate;
 
@@ -95,6 +139,10 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends io.pu
         return this.isRehydrate == null ? Input.empty() : this.isRehydrate;
     }
 
+    /**
+     * Flag to identify whether the DS is scheduled for deferred delete
+     * 
+     */
     @InputImport(name="isScheduledForDeferredDelete")
     private final @Nullable Input<Boolean> isScheduledForDeferredDelete;
 
@@ -102,6 +150,10 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends io.pu
         return this.isScheduledForDeferredDelete == null ? Input.empty() : this.isScheduledForDeferredDelete;
     }
 
+    /**
+     * Health details of different KPIs
+     * 
+     */
     @InputImport(name="kpisHealths")
     private final @Nullable Input<Map<String,KPIResourceHealthDetailsArgs>> kpisHealths;
 
@@ -109,6 +161,10 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends io.pu
         return this.kpisHealths == null ? Input.empty() : this.kpisHealths;
     }
 
+    /**
+     * Last backup operation status. Possible values: Healthy, Unhealthy.
+     * 
+     */
     @InputImport(name="lastBackupStatus")
     private final @Nullable Input<Either<String,LastBackupStatus>> lastBackupStatus;
 
@@ -116,6 +172,10 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends io.pu
         return this.lastBackupStatus == null ? Input.empty() : this.lastBackupStatus;
     }
 
+    /**
+     * Timestamp of the last backup operation on this backup item.
+     * 
+     */
     @InputImport(name="lastBackupTime")
     private final @Nullable Input<String> lastBackupTime;
 
@@ -123,6 +183,10 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends io.pu
         return this.lastBackupTime == null ? Input.empty() : this.lastBackupTime;
     }
 
+    /**
+     * Timestamp when the last (latest) backup copy was created for this backup item.
+     * 
+     */
     @InputImport(name="lastRecoveryPoint")
     private final @Nullable Input<String> lastRecoveryPoint;
 
@@ -130,6 +194,10 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends io.pu
         return this.lastRecoveryPoint == null ? Input.empty() : this.lastRecoveryPoint;
     }
 
+    /**
+     * Parent name of the DB such as Instance or Availability Group.
+     * 
+     */
     @InputImport(name="parentName")
     private final @Nullable Input<String> parentName;
 
@@ -137,6 +205,10 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends io.pu
         return this.parentName == null ? Input.empty() : this.parentName;
     }
 
+    /**
+     * Parent type of protected item, example: for a DB, standalone server or distributed
+     * 
+     */
     @InputImport(name="parentType")
     private final @Nullable Input<String> parentType;
 
@@ -144,6 +216,10 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends io.pu
         return this.parentType == null ? Input.empty() : this.parentType;
     }
 
+    /**
+     * ID of the backup policy with which this item is backed up.
+     * 
+     */
     @InputImport(name="policyId")
     private final @Nullable Input<String> policyId;
 
@@ -151,6 +227,10 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends io.pu
         return this.policyId == null ? Input.empty() : this.policyId;
     }
 
+    /**
+     * Data ID of the protected item.
+     * 
+     */
     @InputImport(name="protectedItemDataSourceId")
     private final @Nullable Input<String> protectedItemDataSourceId;
 
@@ -158,6 +238,10 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends io.pu
         return this.protectedItemDataSourceId == null ? Input.empty() : this.protectedItemDataSourceId;
     }
 
+    /**
+     * Health status of the backup item, evaluated based on last heartbeat received
+     * 
+     */
     @InputImport(name="protectedItemHealthStatus")
     private final @Nullable Input<Either<String,ProtectedItemHealthStatus>> protectedItemHealthStatus;
 
@@ -165,6 +249,11 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends io.pu
         return this.protectedItemHealthStatus == null ? Input.empty() : this.protectedItemHealthStatus;
     }
 
+    /**
+     * backup item type.
+     * Expected value is 'AzureVmWorkloadSAPHanaDatabase'.
+     * 
+     */
     @InputImport(name="protectedItemType", required=true)
     private final Input<String> protectedItemType;
 
@@ -172,6 +261,10 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends io.pu
         return this.protectedItemType;
     }
 
+    /**
+     * Backup state of this backup item.
+     * 
+     */
     @InputImport(name="protectionState")
     private final @Nullable Input<Either<String,ProtectionState>> protectionState;
 
@@ -179,6 +272,10 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends io.pu
         return this.protectionState == null ? Input.empty() : this.protectionState;
     }
 
+    /**
+     * Backup status of this backup item.
+     * 
+     */
     @InputImport(name="protectionStatus")
     private final @Nullable Input<String> protectionStatus;
 
@@ -186,6 +283,10 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends io.pu
         return this.protectionStatus == null ? Input.empty() : this.protectionStatus;
     }
 
+    /**
+     * Host/Cluster Name for instance or AG
+     * 
+     */
     @InputImport(name="serverName")
     private final @Nullable Input<String> serverName;
 
@@ -193,6 +294,10 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends io.pu
         return this.serverName == null ? Input.empty() : this.serverName;
     }
 
+    /**
+     * ARM ID of the resource to be backed up.
+     * 
+     */
     @InputImport(name="sourceResourceId")
     private final @Nullable Input<String> sourceResourceId;
 
@@ -200,6 +305,10 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends io.pu
         return this.sourceResourceId == null ? Input.empty() : this.sourceResourceId;
     }
 
+    /**
+     * Type of workload this item represents.
+     * 
+     */
     @InputImport(name="workloadType")
     private final @Nullable Input<Either<String,DataSourceType>> workloadType;
 

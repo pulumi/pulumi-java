@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListMachineLearningComputeKeys {
+/**
+ * Secrets related to a Machine Learning compute. Might differ for every type of compute.
+ * API Version: 2021-01-01.
+ * 
+ *
+ * Secrets related to a Machine Learning compute. Might differ for every type of compute.
+ * 
+ */
     public static CompletableFuture<ListMachineLearningComputeKeysResult> invokeAsync(ListMachineLearningComputeKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:listMachineLearningComputeKeys", TypeShape.of(ListMachineLearningComputeKeysResult.class), args == null ? ListMachineLearningComputeKeysArgs.Empty : args, Utilities.withVersion(options));
     }

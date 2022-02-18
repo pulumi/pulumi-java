@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines a service.
+ * 
+ */
 public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ServiceResponse Empty = new ServiceResponse();
 
+    /**
+     * Name of the service.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -23,6 +31,10 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The detailed information about the units that make up the service.
+     * 
+     */
     @InputImport(name="serviceUnits")
     private final @Nullable List<ServiceUnitResponse> serviceUnits;
 
@@ -30,6 +42,10 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
         return this.serviceUnits == null ? List.of() : this.serviceUnits;
     }
 
+    /**
+     * The Azure location to which the resources in the service belong to or should be deployed to.
+     * 
+     */
     @InputImport(name="targetLocation", required=true)
     private final String targetLocation;
 
@@ -37,6 +53,10 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
         return this.targetLocation;
     }
 
+    /**
+     * The subscription to which the resources in the service belong to or should be deployed to.
+     * 
+     */
     @InputImport(name="targetSubscriptionId", required=true)
     private final String targetSubscriptionId;
 

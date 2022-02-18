@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetComputePolicy {
+/**
+ * Data Lake Analytics compute policy information.
+ * API Version: 2016-11-01.
+ * 
+ *
+ * Data Lake Analytics compute policy information.
+ * 
+ */
     public static CompletableFuture<GetComputePolicyResult> invokeAsync(GetComputePolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datalakeanalytics:getComputePolicy", TypeShape.of(GetComputePolicyResult.class), args == null ? GetComputePolicyArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -10,9 +10,25 @@ import java.util.StringJoiner;
 
     @EnumType
     public enum GrantType {
+        /**
+         * Authorization Code Grant flow as described https://tools.ietf.org/html/rfc6749#section-4.1.
+         * 
+         */
         AuthorizationCode("authorizationCode"),
+        /**
+         * Implicit Code Grant flow as described https://tools.ietf.org/html/rfc6749#section-4.2.
+         * 
+         */
         Implicit("implicit"),
+        /**
+         * Resource Owner Password Grant flow as described https://tools.ietf.org/html/rfc6749#section-4.3.
+         * 
+         */
         ResourceOwnerPassword("resourceOwnerPassword"),
+        /**
+         * Client Credentials Grant flow as described https://tools.ietf.org/html/rfc6749#section-4.4.
+         * 
+         */
         ClientCredentials("clientCredentials");
 
         private final String value;

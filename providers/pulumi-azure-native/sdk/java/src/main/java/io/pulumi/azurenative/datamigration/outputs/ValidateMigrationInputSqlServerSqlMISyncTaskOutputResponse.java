@@ -11,8 +11,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ValidateMigrationInputSqlServerSqlMISyncTaskOutputResponse {
+    /**
+     * Database identifier
+     * 
+     */
     private final String id;
+    /**
+     * Name of database
+     * 
+     */
     private final String name;
+    /**
+     * Errors associated with a selected database object
+     * 
+     */
     private final List<ReportableExceptionResponse> validationErrors;
 
     @OutputCustomType.Constructor({"id","name","validationErrors"})
@@ -25,12 +37,24 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskOutputResponse {
         this.validationErrors = Objects.requireNonNull(validationErrors);
     }
 
+    /**
+     * Database identifier
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Name of database
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Errors associated with a selected database object
+     * 
+     */
     public List<ReportableExceptionResponse> getValidationErrors() {
         return this.validationErrors;
     }

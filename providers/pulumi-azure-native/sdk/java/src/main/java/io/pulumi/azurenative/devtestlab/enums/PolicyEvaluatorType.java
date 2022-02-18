@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The evaluator type of the policy (i.e. AllowedValuesPolicy, MaxValuePolicy).
+     * 
+     */
     @EnumType
     public enum PolicyEvaluatorType {
         AllowedValuesPolicy("AllowedValuesPolicy"),

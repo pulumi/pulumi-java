@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MonitorConfigResponseExpectedStatusCodeRanges {
+    /**
+     * Max status code.
+     * 
+     */
     private final @Nullable Integer max;
+    /**
+     * Min status code.
+     * 
+     */
     private final @Nullable Integer min;
 
     @OutputCustomType.Constructor({"max","min"})
@@ -22,9 +30,17 @@ public final class MonitorConfigResponseExpectedStatusCodeRanges {
         this.min = min;
     }
 
+    /**
+     * Max status code.
+     * 
+     */
     public Optional<Integer> getMax() {
         return Optional.ofNullable(this.max);
     }
+    /**
+     * Min status code.
+     * 
+     */
     public Optional<Integer> getMin() {
         return Optional.ofNullable(this.min);
     }

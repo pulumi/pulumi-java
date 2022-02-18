@@ -19,6 +19,10 @@ public final class FailoverGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FailoverGroupArgs Empty = new FailoverGroupArgs();
 
+    /**
+     * List of databases in the failover group.
+     * 
+     */
     @InputImport(name="databases")
     private final @Nullable Input<List<String>> databases;
 
@@ -26,6 +30,10 @@ public final class FailoverGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.databases == null ? Input.empty() : this.databases;
     }
 
+    /**
+     * The name of the failover group.
+     * 
+     */
     @InputImport(name="failoverGroupName")
     private final @Nullable Input<String> failoverGroupName;
 
@@ -33,6 +41,10 @@ public final class FailoverGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.failoverGroupName == null ? Input.empty() : this.failoverGroupName;
     }
 
+    /**
+     * List of partner server information for the failover group.
+     * 
+     */
     @InputImport(name="partnerServers", required=true)
     private final Input<List<PartnerInfoArgs>> partnerServers;
 
@@ -40,6 +52,10 @@ public final class FailoverGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.partnerServers;
     }
 
+    /**
+     * Read-only endpoint of the failover group instance.
+     * 
+     */
     @InputImport(name="readOnlyEndpoint")
     private final @Nullable Input<FailoverGroupReadOnlyEndpointArgs> readOnlyEndpoint;
 
@@ -47,6 +63,10 @@ public final class FailoverGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.readOnlyEndpoint == null ? Input.empty() : this.readOnlyEndpoint;
     }
 
+    /**
+     * Read-write endpoint of the failover group instance.
+     * 
+     */
     @InputImport(name="readWriteEndpoint", required=true)
     private final Input<FailoverGroupReadWriteEndpointArgs> readWriteEndpoint;
 
@@ -54,6 +74,10 @@ public final class FailoverGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.readWriteEndpoint;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -61,6 +85,10 @@ public final class FailoverGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the server containing the failover group.
+     * 
+     */
     @InputImport(name="serverName", required=true)
     private final Input<String> serverName;
 
@@ -68,6 +96,10 @@ public final class FailoverGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.serverName;
     }
 
+    /**
+     * Resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGuestDiagnosticsSettingsAssociation {
+/**
+ * Virtual machine guest diagnostic settings resource.
+ * API Version: 2018-06-01-preview.
+ * 
+ *
+ * Virtual machine guest diagnostic settings resource.
+ * 
+ */
     public static CompletableFuture<GetGuestDiagnosticsSettingsAssociationResult> invokeAsync(GetGuestDiagnosticsSettingsAssociationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getGuestDiagnosticsSettingsAssociation", TypeShape.of(GetGuestDiagnosticsSettingsAssociationResult.class), args == null ? GetGuestDiagnosticsSettingsAssociationArgs.Empty : args, Utilities.withVersion(options));
     }

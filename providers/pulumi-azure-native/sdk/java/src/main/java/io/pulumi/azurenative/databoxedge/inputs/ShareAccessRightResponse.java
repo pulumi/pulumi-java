@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Specifies the mapping between this particular user and the type of access he has on shares on this device.
+ * 
+ */
 public final class ShareAccessRightResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ShareAccessRightResponse Empty = new ShareAccessRightResponse();
 
+    /**
+     * Type of access to be allowed on the share for this user.
+     * 
+     */
     @InputImport(name="accessType", required=true)
     private final String accessType;
 
@@ -19,6 +27,10 @@ public final class ShareAccessRightResponse extends io.pulumi.resources.InvokeAr
         return this.accessType;
     }
 
+    /**
+     * The share ID.
+     * 
+     */
     @InputImport(name="shareId", required=true)
     private final String shareId;
 

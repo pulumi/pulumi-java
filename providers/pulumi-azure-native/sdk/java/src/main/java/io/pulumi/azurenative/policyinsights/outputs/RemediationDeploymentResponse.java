@@ -10,12 +10,40 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RemediationDeploymentResponse {
+    /**
+     * The time at which the remediation was created.
+     * 
+     */
     private final String createdOn;
+    /**
+     * Resource ID of the template deployment that will remediate the resource.
+     * 
+     */
     private final String deploymentId;
+    /**
+     * Error encountered while remediated the resource.
+     * 
+     */
     private final ErrorDefinitionResponse error;
+    /**
+     * The time at which the remediation deployment was last updated.
+     * 
+     */
     private final String lastUpdatedOn;
+    /**
+     * Resource ID of the resource that is being remediated by the deployment.
+     * 
+     */
     private final String remediatedResourceId;
+    /**
+     * Location of the resource that is being remediated.
+     * 
+     */
     private final String resourceLocation;
+    /**
+     * Status of the remediation deployment.
+     * 
+     */
     private final String status;
 
     @OutputCustomType.Constructor({"createdOn","deploymentId","error","lastUpdatedOn","remediatedResourceId","resourceLocation","status"})
@@ -36,24 +64,52 @@ public final class RemediationDeploymentResponse {
         this.status = Objects.requireNonNull(status);
     }
 
+    /**
+     * The time at which the remediation was created.
+     * 
+     */
     public String getCreatedOn() {
         return this.createdOn;
     }
+    /**
+     * Resource ID of the template deployment that will remediate the resource.
+     * 
+     */
     public String getDeploymentId() {
         return this.deploymentId;
     }
+    /**
+     * Error encountered while remediated the resource.
+     * 
+     */
     public ErrorDefinitionResponse getError() {
         return this.error;
     }
+    /**
+     * The time at which the remediation deployment was last updated.
+     * 
+     */
     public String getLastUpdatedOn() {
         return this.lastUpdatedOn;
     }
+    /**
+     * Resource ID of the resource that is being remediated by the deployment.
+     * 
+     */
     public String getRemediatedResourceId() {
         return this.remediatedResourceId;
     }
+    /**
+     * Location of the resource that is being remediated.
+     * 
+     */
     public String getResourceLocation() {
         return this.resourceLocation;
     }
+    /**
+     * Status of the remediation deployment.
+     * 
+     */
     public String getStatus() {
         return this.status;
     }

@@ -14,10 +14,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Yearly retention schedule.
+ * 
+ */
 public final class YearlyRetentionScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final YearlyRetentionScheduleResponse Empty = new YearlyRetentionScheduleResponse();
 
+    /**
+     * List of months of year of yearly retention policy.
+     * 
+     */
     @InputImport(name="monthsOfYear")
     private final @Nullable List<String> monthsOfYear;
 
@@ -25,6 +33,10 @@ public final class YearlyRetentionScheduleResponse extends io.pulumi.resources.I
         return this.monthsOfYear == null ? List.of() : this.monthsOfYear;
     }
 
+    /**
+     * Retention duration of retention Policy.
+     * 
+     */
     @InputImport(name="retentionDuration")
     private final @Nullable RetentionDurationResponse retentionDuration;
 
@@ -32,6 +44,10 @@ public final class YearlyRetentionScheduleResponse extends io.pulumi.resources.I
         return this.retentionDuration == null ? Optional.empty() : Optional.ofNullable(this.retentionDuration);
     }
 
+    /**
+     * Daily retention format for yearly retention policy.
+     * 
+     */
     @InputImport(name="retentionScheduleDaily")
     private final @Nullable DailyRetentionFormatResponse retentionScheduleDaily;
 
@@ -39,6 +55,10 @@ public final class YearlyRetentionScheduleResponse extends io.pulumi.resources.I
         return this.retentionScheduleDaily == null ? Optional.empty() : Optional.ofNullable(this.retentionScheduleDaily);
     }
 
+    /**
+     * Retention schedule format for yearly retention policy.
+     * 
+     */
     @InputImport(name="retentionScheduleFormatType")
     private final @Nullable String retentionScheduleFormatType;
 
@@ -46,6 +66,10 @@ public final class YearlyRetentionScheduleResponse extends io.pulumi.resources.I
         return this.retentionScheduleFormatType == null ? Optional.empty() : Optional.ofNullable(this.retentionScheduleFormatType);
     }
 
+    /**
+     * Weekly retention format for yearly retention policy.
+     * 
+     */
     @InputImport(name="retentionScheduleWeekly")
     private final @Nullable WeeklyRetentionFormatResponse retentionScheduleWeekly;
 
@@ -53,6 +77,10 @@ public final class YearlyRetentionScheduleResponse extends io.pulumi.resources.I
         return this.retentionScheduleWeekly == null ? Optional.empty() : Optional.ofNullable(this.retentionScheduleWeekly);
     }
 
+    /**
+     * Retention times of retention policy.
+     * 
+     */
     @InputImport(name="retentionTimes")
     private final @Nullable List<String> retentionTimes;
 

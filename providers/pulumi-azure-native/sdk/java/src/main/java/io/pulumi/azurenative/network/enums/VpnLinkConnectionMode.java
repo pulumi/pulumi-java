@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Vpn link connection mode.
+     * 
+     */
     @EnumType
     public enum VpnLinkConnectionMode {
         Default("Default"),

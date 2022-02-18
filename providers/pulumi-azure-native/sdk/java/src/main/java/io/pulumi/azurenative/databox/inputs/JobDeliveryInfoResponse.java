@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Additional delivery info.
+ * 
+ */
 public final class JobDeliveryInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final JobDeliveryInfoResponse Empty = new JobDeliveryInfoResponse();
 
+    /**
+     * Scheduled date time.
+     * 
+     */
     @InputImport(name="scheduledDateTime")
     private final @Nullable String scheduledDateTime;
 

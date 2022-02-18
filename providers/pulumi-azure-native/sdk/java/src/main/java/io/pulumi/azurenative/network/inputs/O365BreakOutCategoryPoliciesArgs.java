@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Office365 breakout categories.
+ * 
+ */
 public final class O365BreakOutCategoryPoliciesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final O365BreakOutCategoryPoliciesArgs Empty = new O365BreakOutCategoryPoliciesArgs();
 
+    /**
+     * Flag to control allow category.
+     * 
+     */
     @InputImport(name="allow")
     private final @Nullable Input<Boolean> allow;
 
@@ -21,6 +29,10 @@ public final class O365BreakOutCategoryPoliciesArgs extends io.pulumi.resources.
         return this.allow == null ? Input.empty() : this.allow;
     }
 
+    /**
+     * Flag to control default category.
+     * 
+     */
     @InputImport(name="default")
     private final @Nullable Input<Boolean> $default;
 
@@ -28,6 +40,10 @@ public final class O365BreakOutCategoryPoliciesArgs extends io.pulumi.resources.
         return this.$default == null ? Input.empty() : this.$default;
     }
 
+    /**
+     * Flag to control optimize category.
+     * 
+     */
     @InputImport(name="optimize")
     private final @Nullable Input<Boolean> optimize;
 

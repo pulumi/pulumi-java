@@ -15,10 +15,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The properties that define a direct connection.
+ * 
+ */
 public final class DirectConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DirectConnectionArgs Empty = new DirectConnectionArgs();
 
+    /**
+     * The bandwidth of the connection.
+     * 
+     */
     @InputImport(name="bandwidthInMbps")
     private final @Nullable Input<Integer> bandwidthInMbps;
 
@@ -26,6 +34,10 @@ public final class DirectConnectionArgs extends io.pulumi.resources.ResourceArgs
         return this.bandwidthInMbps == null ? Input.empty() : this.bandwidthInMbps;
     }
 
+    /**
+     * The BGP session associated with the connection.
+     * 
+     */
     @InputImport(name="bgpSession")
     private final @Nullable Input<BgpSessionArgs> bgpSession;
 
@@ -33,6 +45,10 @@ public final class DirectConnectionArgs extends io.pulumi.resources.ResourceArgs
         return this.bgpSession == null ? Input.empty() : this.bgpSession;
     }
 
+    /**
+     * The unique identifier (GUID) for the connection.
+     * 
+     */
     @InputImport(name="connectionIdentifier")
     private final @Nullable Input<String> connectionIdentifier;
 
@@ -40,6 +56,10 @@ public final class DirectConnectionArgs extends io.pulumi.resources.ResourceArgs
         return this.connectionIdentifier == null ? Input.empty() : this.connectionIdentifier;
     }
 
+    /**
+     * The PeeringDB.com ID of the facility at which the connection has to be set up.
+     * 
+     */
     @InputImport(name="peeringDBFacilityId")
     private final @Nullable Input<Integer> peeringDBFacilityId;
 
@@ -47,6 +67,10 @@ public final class DirectConnectionArgs extends io.pulumi.resources.ResourceArgs
         return this.peeringDBFacilityId == null ? Input.empty() : this.peeringDBFacilityId;
     }
 
+    /**
+     * The field indicating if Microsoft provides session ip addresses.
+     * 
+     */
     @InputImport(name="sessionAddressProvider")
     private final @Nullable Input<Either<String,SessionAddressProvider>> sessionAddressProvider;
 
@@ -54,6 +78,10 @@ public final class DirectConnectionArgs extends io.pulumi.resources.ResourceArgs
         return this.sessionAddressProvider == null ? Input.empty() : this.sessionAddressProvider;
     }
 
+    /**
+     * The flag that indicates whether or not the connection is used for peering service.
+     * 
+     */
     @InputImport(name="useForPeeringService")
     private final @Nullable Input<Boolean> useForPeeringService;
 

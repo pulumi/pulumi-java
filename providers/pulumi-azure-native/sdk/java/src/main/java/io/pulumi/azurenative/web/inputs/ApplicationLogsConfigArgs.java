@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Application logs configuration.
+ * 
+ */
 public final class ApplicationLogsConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationLogsConfigArgs Empty = new ApplicationLogsConfigArgs();
 
+    /**
+     * Application logs to blob storage configuration.
+     * 
+     */
     @InputImport(name="azureBlobStorage")
     private final @Nullable Input<AzureBlobStorageApplicationLogsConfigArgs> azureBlobStorage;
 
@@ -23,6 +31,10 @@ public final class ApplicationLogsConfigArgs extends io.pulumi.resources.Resourc
         return this.azureBlobStorage == null ? Input.empty() : this.azureBlobStorage;
     }
 
+    /**
+     * Application logs to azure table storage configuration.
+     * 
+     */
     @InputImport(name="azureTableStorage")
     private final @Nullable Input<AzureTableStorageApplicationLogsConfigArgs> azureTableStorage;
 
@@ -30,6 +42,10 @@ public final class ApplicationLogsConfigArgs extends io.pulumi.resources.Resourc
         return this.azureTableStorage == null ? Input.empty() : this.azureTableStorage;
     }
 
+    /**
+     * Application logs to file system configuration.
+     * 
+     */
     @InputImport(name="fileSystem")
     private final @Nullable Input<FileSystemApplicationLogsConfigArgs> fileSystem;
 

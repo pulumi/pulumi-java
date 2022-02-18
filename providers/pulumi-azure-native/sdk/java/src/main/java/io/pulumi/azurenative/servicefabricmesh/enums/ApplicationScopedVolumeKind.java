@@ -8,8 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Specifies the application-scoped volume kind.
+     * 
+     */
     @EnumType
     public enum ApplicationScopedVolumeKind {
+        /**
+         * Provides Service Fabric High Availability Volume Disk
+         * 
+         */
         ServiceFabricVolumeDisk("ServiceFabricVolumeDisk");
 
         private final String value;

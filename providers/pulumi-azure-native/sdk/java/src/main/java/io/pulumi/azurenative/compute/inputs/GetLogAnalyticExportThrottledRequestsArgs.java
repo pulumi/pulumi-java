@@ -15,6 +15,10 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends io.pulumi.r
 
     public static final GetLogAnalyticExportThrottledRequestsArgs Empty = new GetLogAnalyticExportThrottledRequestsArgs();
 
+    /**
+     * SAS Uri of the logging blob container to which LogAnalytics Api writes output logs to.
+     * 
+     */
     @InputImport(name="blobContainerSasUri", required=true)
     private final String blobContainerSasUri;
 
@@ -22,6 +26,10 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends io.pulumi.r
         return this.blobContainerSasUri;
     }
 
+    /**
+     * From time of the query
+     * 
+     */
     @InputImport(name="fromTime", required=true)
     private final String fromTime;
 
@@ -29,6 +37,10 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends io.pulumi.r
         return this.fromTime;
     }
 
+    /**
+     * Group query result by Client Application ID.
+     * 
+     */
     @InputImport(name="groupByClientApplicationId")
     private final @Nullable Boolean groupByClientApplicationId;
 
@@ -36,6 +48,10 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends io.pulumi.r
         return this.groupByClientApplicationId == null ? Optional.empty() : Optional.ofNullable(this.groupByClientApplicationId);
     }
 
+    /**
+     * Group query result by Operation Name.
+     * 
+     */
     @InputImport(name="groupByOperationName")
     private final @Nullable Boolean groupByOperationName;
 
@@ -43,6 +59,10 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends io.pulumi.r
         return this.groupByOperationName == null ? Optional.empty() : Optional.ofNullable(this.groupByOperationName);
     }
 
+    /**
+     * Group query result by Resource Name.
+     * 
+     */
     @InputImport(name="groupByResourceName")
     private final @Nullable Boolean groupByResourceName;
 
@@ -50,6 +70,10 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends io.pulumi.r
         return this.groupByResourceName == null ? Optional.empty() : Optional.ofNullable(this.groupByResourceName);
     }
 
+    /**
+     * Group query result by Throttle Policy applied.
+     * 
+     */
     @InputImport(name="groupByThrottlePolicy")
     private final @Nullable Boolean groupByThrottlePolicy;
 
@@ -57,6 +81,10 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends io.pulumi.r
         return this.groupByThrottlePolicy == null ? Optional.empty() : Optional.ofNullable(this.groupByThrottlePolicy);
     }
 
+    /**
+     * Group query result by User Agent.
+     * 
+     */
     @InputImport(name="groupByUserAgent")
     private final @Nullable Boolean groupByUserAgent;
 
@@ -64,6 +92,10 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends io.pulumi.r
         return this.groupByUserAgent == null ? Optional.empty() : Optional.ofNullable(this.groupByUserAgent);
     }
 
+    /**
+     * The location upon which virtual-machine-sizes is queried.
+     * 
+     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -71,6 +103,10 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends io.pulumi.r
         return this.location;
     }
 
+    /**
+     * To time of the query
+     * 
+     */
     @InputImport(name="toTime", required=true)
     private final String toTime;
 

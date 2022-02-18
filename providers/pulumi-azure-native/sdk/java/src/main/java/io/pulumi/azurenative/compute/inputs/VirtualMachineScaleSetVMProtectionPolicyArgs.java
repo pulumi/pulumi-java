@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The protection policy of a virtual machine scale set VM.
+ * 
+ */
 public final class VirtualMachineScaleSetVMProtectionPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualMachineScaleSetVMProtectionPolicyArgs Empty = new VirtualMachineScaleSetVMProtectionPolicyArgs();
 
+    /**
+     * Indicates that the virtual machine scale set VM shouldn't be considered for deletion during a scale-in operation.
+     * 
+     */
     @InputImport(name="protectFromScaleIn")
     private final @Nullable Input<Boolean> protectFromScaleIn;
 
@@ -21,6 +29,10 @@ public final class VirtualMachineScaleSetVMProtectionPolicyArgs extends io.pulum
         return this.protectFromScaleIn == null ? Input.empty() : this.protectFromScaleIn;
     }
 
+    /**
+     * Indicates that model updates or actions (including scale-in) initiated on the virtual machine scale set should not be applied to the virtual machine scale set VM.
+     * 
+     */
     @InputImport(name="protectFromScaleSetActions")
     private final @Nullable Input<Boolean> protectFromScaleSetActions;
 

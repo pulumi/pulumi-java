@@ -12,6 +12,10 @@ public final class GetDigitalTwinArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDigitalTwinArgs Empty = new GetDigitalTwinArgs();
 
+    /**
+     * The name of the resource group that contains the DigitalTwinsInstance.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +23,10 @@ public final class GetDigitalTwinArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the DigitalTwinsInstance.
+     * 
+     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 

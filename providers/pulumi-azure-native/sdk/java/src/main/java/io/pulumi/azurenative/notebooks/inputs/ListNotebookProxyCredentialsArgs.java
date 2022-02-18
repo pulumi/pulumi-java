@@ -12,6 +12,10 @@ public final class ListNotebookProxyCredentialsArgs extends io.pulumi.resources.
 
     public static final ListNotebookProxyCredentialsArgs Empty = new ListNotebookProxyCredentialsArgs();
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +23,10 @@ public final class ListNotebookProxyCredentialsArgs extends io.pulumi.resources.
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the resource.
+     * 
+     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 

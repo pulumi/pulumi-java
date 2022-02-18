@@ -18,6 +18,10 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final QueryArgs Empty = new QueryArgs();
 
+    /**
+     * Body of the query.
+     * 
+     */
     @InputImport(name="body", required=true)
     private final Input<String> body;
 
@@ -25,6 +29,10 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
         return this.body;
     }
 
+    /**
+     * Description of the query.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -32,6 +40,10 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Unique display name for your query within the Query Pack.
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -39,6 +51,10 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName;
     }
 
+    /**
+     * The id of a specific query defined in the Log Analytics QueryPack
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -46,6 +62,10 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * Additional properties that can be set for the query.
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<Object> properties;
 
@@ -53,6 +73,10 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The name of the Log Analytics QueryPack resource.
+     * 
+     */
     @InputImport(name="queryPackName", required=true)
     private final Input<String> queryPackName;
 
@@ -60,6 +84,10 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
         return this.queryPackName;
     }
 
+    /**
+     * The related metadata items for the function.
+     * 
+     */
     @InputImport(name="related")
     private final @Nullable Input<LogAnalyticsQueryPackQueryPropertiesRelatedArgs> related;
 
@@ -67,6 +95,10 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
         return this.related == null ? Input.empty() : this.related;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -74,6 +106,10 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Tags associated with the query.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,List<String>>> tags;
 

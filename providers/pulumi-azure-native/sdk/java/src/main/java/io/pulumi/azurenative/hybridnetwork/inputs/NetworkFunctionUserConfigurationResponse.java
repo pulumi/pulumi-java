@@ -14,10 +14,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The network function user configuration.
+ * 
+ */
 public final class NetworkFunctionUserConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NetworkFunctionUserConfigurationResponse Empty = new NetworkFunctionUserConfigurationResponse();
 
+    /**
+     * The network interface configuration.
+     * 
+     */
     @InputImport(name="networkInterfaces")
     private final @Nullable List<NetworkInterfaceResponse> networkInterfaces;
 
@@ -25,6 +33,10 @@ public final class NetworkFunctionUserConfigurationResponse extends io.pulumi.re
         return this.networkInterfaces == null ? List.of() : this.networkInterfaces;
     }
 
+    /**
+     * Specifies the operating system settings for the role instance.
+     * 
+     */
     @InputImport(name="osProfile")
     private final @Nullable NetworkFunctionUserConfigurationResponseOsProfile osProfile;
 
@@ -32,6 +44,10 @@ public final class NetworkFunctionUserConfigurationResponse extends io.pulumi.re
         return this.osProfile == null ? Optional.empty() : Optional.ofNullable(this.osProfile);
     }
 
+    /**
+     * The name of the network function role.
+     * 
+     */
     @InputImport(name="roleName")
     private final @Nullable String roleName;
 
@@ -39,6 +55,10 @@ public final class NetworkFunctionUserConfigurationResponse extends io.pulumi.re
         return this.roleName == null ? Optional.empty() : Optional.ofNullable(this.roleName);
     }
 
+    /**
+     * The user data parameters from the customer.
+     * 
+     */
     @InputImport(name="userDataParameters")
     private final @Nullable Object userDataParameters;
 

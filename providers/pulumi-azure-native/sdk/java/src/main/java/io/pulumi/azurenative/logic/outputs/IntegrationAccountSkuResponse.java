@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class IntegrationAccountSkuResponse {
+    /**
+     * The sku name.
+     * 
+     */
     private final String name;
 
     @OutputCustomType.Constructor({"name"})
@@ -16,6 +20,10 @@ public final class IntegrationAccountSkuResponse {
         this.name = Objects.requireNonNull(name);
     }
 
+    /**
+     * The sku name.
+     * 
+     */
     public String getName() {
         return this.name;
     }

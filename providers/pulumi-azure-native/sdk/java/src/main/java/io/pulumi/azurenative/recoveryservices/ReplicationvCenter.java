@@ -15,33 +15,86 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * vCenter definition.
+ * API Version: 2018-07-10.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:recoveryservices:ReplicationvCenter esx-78 /Subscriptions/7c943c1b-5122-4097-90c8-861411bdd574/resourceGroups/MadhaviVRG/providers/Microsoft.RecoveryServices/vaults/MadhaviVault/replicationFabrics/239f778f368e34f78216d81f030725cdf2033174b47879b9f2eeede06fdd9c4d/replicationvCenters/esx-78 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:recoveryservices:ReplicationvCenter")
 public class ReplicationvCenter extends io.pulumi.resources.CustomResource {
+    /**
+     * Resource Location
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Resource Location
+     * 
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * Resource Name
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource Name
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * VCenter related data.
+     * 
+     */
     @OutputExport(name="properties", type=VCenterPropertiesResponse.class, parameters={})
     private Output<VCenterPropertiesResponse> properties;
 
+    /**
+     * @return VCenter related data.
+     * 
+     */
     public Output<VCenterPropertiesResponse> getProperties() {
         return this.properties;
     }
+    /**
+     * Resource Type
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource Type
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ReplicationvCenter(String name, ReplicationvCenterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:recoveryservices:ReplicationvCenter", name, args == null ? ReplicationvCenterArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -71,6 +124,14 @@ public class ReplicationvCenter extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ReplicationvCenter get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ReplicationvCenter(name, id, options);
     }

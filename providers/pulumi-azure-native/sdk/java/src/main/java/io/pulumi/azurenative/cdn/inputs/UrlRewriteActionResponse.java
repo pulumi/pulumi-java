@@ -9,10 +9,19 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Defines the url rewrite action for the delivery rule.
+ * 
+ */
 public final class UrlRewriteActionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final UrlRewriteActionResponse Empty = new UrlRewriteActionResponse();
 
+    /**
+     * The name of the action for the delivery rule.
+     * Expected value is 'UrlRewrite'.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -20,6 +29,10 @@ public final class UrlRewriteActionResponse extends io.pulumi.resources.InvokeAr
         return this.name;
     }
 
+    /**
+     * Defines the parameters for the action.
+     * 
+     */
     @InputImport(name="parameters", required=true)
     private final UrlRewriteActionParametersResponse parameters;
 

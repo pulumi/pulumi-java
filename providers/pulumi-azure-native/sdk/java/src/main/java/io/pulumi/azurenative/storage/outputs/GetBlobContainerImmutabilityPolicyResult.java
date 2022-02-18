@@ -13,12 +13,40 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetBlobContainerImmutabilityPolicyResult {
+    /**
+     * This property can only be changed for unlocked time-based retention policies. When enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted. This property cannot be changed with ExtendImmutabilityPolicy API
+     * 
+     */
     private final @Nullable Boolean allowProtectedAppendWrites;
+    /**
+     * Resource Etag.
+     * 
+     */
     private final String etag;
+    /**
+     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * 
+     */
     private final String id;
+    /**
+     * The immutability period for the blobs in the container since the policy creation, in days.
+     * 
+     */
     private final @Nullable Integer immutabilityPeriodSinceCreationInDays;
+    /**
+     * The name of the resource
+     * 
+     */
     private final String name;
+    /**
+     * The ImmutabilityPolicy state of a blob container, possible values include: Locked and Unlocked.
+     * 
+     */
     private final String state;
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"allowProtectedAppendWrites","etag","id","immutabilityPeriodSinceCreationInDays","name","state","type"})
@@ -39,24 +67,52 @@ public final class GetBlobContainerImmutabilityPolicyResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * This property can only be changed for unlocked time-based retention policies. When enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted. This property cannot be changed with ExtendImmutabilityPolicy API
+     * 
+     */
     public Optional<Boolean> getAllowProtectedAppendWrites() {
         return Optional.ofNullable(this.allowProtectedAppendWrites);
     }
+    /**
+     * Resource Etag.
+     * 
+     */
     public String getEtag() {
         return this.etag;
     }
+    /**
+     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * The immutability period for the blobs in the container since the policy creation, in days.
+     * 
+     */
     public Optional<Integer> getImmutabilityPeriodSinceCreationInDays() {
         return Optional.ofNullable(this.immutabilityPeriodSinceCreationInDays);
     }
+    /**
+     * The name of the resource
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The ImmutabilityPolicy state of a blob container, possible values include: Locked and Unlocked.
+     * 
+     */
     public String getState() {
         return this.state;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     public String getType() {
         return this.type;
     }

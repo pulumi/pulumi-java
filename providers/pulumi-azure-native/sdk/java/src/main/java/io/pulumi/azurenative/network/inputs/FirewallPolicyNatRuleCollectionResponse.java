@@ -17,10 +17,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Firewall Policy NAT Rule Collection.
+ * 
+ */
 public final class FirewallPolicyNatRuleCollectionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FirewallPolicyNatRuleCollectionResponse Empty = new FirewallPolicyNatRuleCollectionResponse();
 
+    /**
+     * The action type of a Nat rule collection.
+     * 
+     */
     @InputImport(name="action")
     private final @Nullable FirewallPolicyNatRuleCollectionActionResponse action;
 
@@ -28,6 +36,10 @@ public final class FirewallPolicyNatRuleCollectionResponse extends io.pulumi.res
         return this.action == null ? Optional.empty() : Optional.ofNullable(this.action);
     }
 
+    /**
+     * The name of the rule collection.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -35,6 +47,10 @@ public final class FirewallPolicyNatRuleCollectionResponse extends io.pulumi.res
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Priority of the Firewall Policy Rule Collection resource.
+     * 
+     */
     @InputImport(name="priority")
     private final @Nullable Integer priority;
 
@@ -42,6 +58,11 @@ public final class FirewallPolicyNatRuleCollectionResponse extends io.pulumi.res
         return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
     }
 
+    /**
+     * The type of the rule collection.
+     * Expected value is 'FirewallPolicyNatRuleCollection'.
+     * 
+     */
     @InputImport(name="ruleCollectionType", required=true)
     private final String ruleCollectionType;
 
@@ -49,6 +70,10 @@ public final class FirewallPolicyNatRuleCollectionResponse extends io.pulumi.res
         return this.ruleCollectionType;
     }
 
+    /**
+     * List of rules included in a rule collection.
+     * 
+     */
     @InputImport(name="rules")
     private final @Nullable List<Object> rules;
 

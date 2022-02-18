@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Defines the job status.
+ * 
+ */
 public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final JobStatusResponse Empty = new JobStatusResponse();
 
+    /**
+     * Defines the job name.
+     * 
+     */
     @InputImport(name="jobName", required=true)
     private final String jobName;
 
@@ -19,6 +27,10 @@ public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
         return this.jobName;
     }
 
+    /**
+     * Gets or sets the monitoring job percentage.
+     * 
+     */
     @InputImport(name="jobProgress", required=true)
     private final String jobProgress;
 

@@ -14,57 +14,142 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * An application package which represents a particular version of an application.
+ * API Version: 2021-01-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:batch:ApplicationPackage 1 /subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Batch/batchAccounts/sampleacct/applications/app1/versions/1 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:batch:ApplicationPackage")
 public class ApplicationPackage extends io.pulumi.resources.CustomResource {
+    /**
+     * The ETag of the resource, used for concurrency statements.
+     * 
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return The ETag of the resource, used for concurrency statements.
+     * 
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * The format of the application package, if the package is active.
+     * 
+     */
     @OutputExport(name="format", type=String.class, parameters={})
     private Output<String> format;
 
+    /**
+     * @return The format of the application package, if the package is active.
+     * 
+     */
     public Output<String> getFormat() {
         return this.format;
     }
+    /**
+     * The time at which the package was last activated, if the package is active.
+     * 
+     */
     @OutputExport(name="lastActivationTime", type=String.class, parameters={})
     private Output<String> lastActivationTime;
 
+    /**
+     * @return The time at which the package was last activated, if the package is active.
+     * 
+     */
     public Output<String> getLastActivationTime() {
         return this.lastActivationTime;
     }
+    /**
+     * The name of the resource.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The current state of the application package.
+     * 
+     */
     @OutputExport(name="state", type=String.class, parameters={})
     private Output<String> state;
 
+    /**
+     * @return The current state of the application package.
+     * 
+     */
     public Output<String> getState() {
         return this.state;
     }
+    /**
+     * The URL for the application package in Azure Storage.
+     * 
+     */
     @OutputExport(name="storageUrl", type=String.class, parameters={})
     private Output<String> storageUrl;
 
+    /**
+     * @return The URL for the application package in Azure Storage.
+     * 
+     */
     public Output<String> getStorageUrl() {
         return this.storageUrl;
     }
+    /**
+     * The UTC time at which the Azure Storage URL will expire.
+     * 
+     */
     @OutputExport(name="storageUrlExpiry", type=String.class, parameters={})
     private Output<String> storageUrlExpiry;
 
+    /**
+     * @return The UTC time at which the Azure Storage URL will expire.
+     * 
+     */
     public Output<String> getStorageUrlExpiry() {
         return this.storageUrlExpiry;
     }
+    /**
+     * The type of the resource.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ApplicationPackage(String name, ApplicationPackageArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:batch:ApplicationPackage", name, args == null ? ApplicationPackageArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -94,6 +179,14 @@ public class ApplicationPackage extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ApplicationPackage get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ApplicationPackage(name, id, options);
     }

@@ -43,6 +43,10 @@ public final class WebAppRelayServiceConnectionSlotArgs extends io.pulumi.resour
         return this.hostname == null ? Input.empty() : this.hostname;
     }
 
+    /**
+     * Kind of resource.
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -50,6 +54,10 @@ public final class WebAppRelayServiceConnectionSlotArgs extends io.pulumi.resour
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Name of the app.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -71,6 +79,10 @@ public final class WebAppRelayServiceConnectionSlotArgs extends io.pulumi.resour
         return this.resourceConnectionString == null ? Input.empty() : this.resourceConnectionString;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -85,6 +97,10 @@ public final class WebAppRelayServiceConnectionSlotArgs extends io.pulumi.resour
         return this.resourceType == null ? Input.empty() : this.resourceType;
     }
 
+    /**
+     * Name of the deployment slot. If a slot is not specified, the API will create or update a hybrid connection for the production slot.
+     * 
+     */
     @InputImport(name="slot", required=true)
     private final Input<String> slot;
 

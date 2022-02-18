@@ -12,6 +12,10 @@ public final class ListTopicKeysArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListTopicKeysArgs Empty = new ListTopicKeysArgs();
 
+    /**
+     * The authorization rule name.
+     * 
+     */
     @InputImport(name="authorizationRuleName", required=true)
     private final String authorizationRuleName;
 
@@ -19,6 +23,10 @@ public final class ListTopicKeysArgs extends io.pulumi.resources.InvokeArgs {
         return this.authorizationRuleName;
     }
 
+    /**
+     * The namespace name
+     * 
+     */
     @InputImport(name="namespaceName", required=true)
     private final String namespaceName;
 
@@ -26,6 +34,10 @@ public final class ListTopicKeysArgs extends io.pulumi.resources.InvokeArgs {
         return this.namespaceName;
     }
 
+    /**
+     * Name of the Resource group within the Azure subscription.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -33,6 +45,10 @@ public final class ListTopicKeysArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The topic name.
+     * 
+     */
     @InputImport(name="topicName", required=true)
     private final String topicName;
 

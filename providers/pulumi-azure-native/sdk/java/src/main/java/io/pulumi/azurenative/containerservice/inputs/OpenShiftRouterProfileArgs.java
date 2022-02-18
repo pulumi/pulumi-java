@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents an OpenShift router
+ * 
+ */
 public final class OpenShiftRouterProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OpenShiftRouterProfileArgs Empty = new OpenShiftRouterProfileArgs();
 
+    /**
+     * Name of the router profile.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

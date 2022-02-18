@@ -14,6 +14,10 @@ public final class GetFileShareArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetFileShareArgs Empty = new GetFileShareArgs();
 
+    /**
+     * The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+     * 
+     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -21,6 +25,10 @@ public final class GetFileShareArgs extends io.pulumi.resources.InvokeArgs {
         return this.accountName;
     }
 
+    /**
+     * Optional, used to expand the properties within share's properties.
+     * 
+     */
     @InputImport(name="expand")
     private final @Nullable String expand;
 
@@ -28,6 +36,10 @@ public final class GetFileShareArgs extends io.pulumi.resources.InvokeArgs {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
+    /**
+     * The name of the resource group within the user's subscription. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -35,6 +47,10 @@ public final class GetFileShareArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the file share within the specified storage account. File share names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.
+     * 
+     */
     @InputImport(name="shareName", required=true)
     private final String shareName;
 

@@ -12,6 +12,10 @@ public final class GetGatewayArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetGatewayArgs Empty = new GetGatewayArgs();
 
+    /**
+     * The name of Spring Cloud Gateway.
+     * 
+     */
     @InputImport(name="gatewayName", required=true)
     private final String gatewayName;
 
@@ -19,6 +23,10 @@ public final class GetGatewayArgs extends io.pulumi.resources.InvokeArgs {
         return this.gatewayName;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetGatewayArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the Service resource.
+     * 
+     */
     @InputImport(name="serviceName", required=true)
     private final String serviceName;
 

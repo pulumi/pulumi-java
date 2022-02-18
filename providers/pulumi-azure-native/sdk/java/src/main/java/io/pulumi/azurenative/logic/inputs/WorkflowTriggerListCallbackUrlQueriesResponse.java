@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Gets the workflow trigger callback URL query parameters.
+ * 
+ */
 public final class WorkflowTriggerListCallbackUrlQueriesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final WorkflowTriggerListCallbackUrlQueriesResponse Empty = new WorkflowTriggerListCallbackUrlQueriesResponse();
 
+    /**
+     * The api version.
+     * 
+     */
     @InputImport(name="apiVersion")
     private final @Nullable String apiVersion;
 
@@ -21,6 +29,10 @@ public final class WorkflowTriggerListCallbackUrlQueriesResponse extends io.pulu
         return this.apiVersion == null ? Optional.empty() : Optional.ofNullable(this.apiVersion);
     }
 
+    /**
+     * The SAS timestamp.
+     * 
+     */
     @InputImport(name="se")
     private final @Nullable String se;
 
@@ -28,6 +40,10 @@ public final class WorkflowTriggerListCallbackUrlQueriesResponse extends io.pulu
         return this.se == null ? Optional.empty() : Optional.ofNullable(this.se);
     }
 
+    /**
+     * The SAS signature.
+     * 
+     */
     @InputImport(name="sig")
     private final @Nullable String sig;
 
@@ -35,6 +51,10 @@ public final class WorkflowTriggerListCallbackUrlQueriesResponse extends io.pulu
         return this.sig == null ? Optional.empty() : Optional.ofNullable(this.sig);
     }
 
+    /**
+     * The SAS permissions.
+     * 
+     */
     @InputImport(name="sp")
     private final @Nullable String sp;
 
@@ -42,6 +62,10 @@ public final class WorkflowTriggerListCallbackUrlQueriesResponse extends io.pulu
         return this.sp == null ? Optional.empty() : Optional.ofNullable(this.sp);
     }
 
+    /**
+     * The SAS version.
+     * 
+     */
     @InputImport(name="sv")
     private final @Nullable String sv;
 

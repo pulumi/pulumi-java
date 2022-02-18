@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Connectivity to internet is enabled or disabled
+     * 
+     */
     @EnumType
     public enum InternetEnum {
         Enabled("Enabled"),

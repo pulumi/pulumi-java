@@ -14,6 +14,10 @@ public final class ListEffectiveVirtualNetworkByNetworkGroupArgs extends io.pulu
 
     public static final ListEffectiveVirtualNetworkByNetworkGroupArgs Empty = new ListEffectiveVirtualNetworkByNetworkGroupArgs();
 
+    /**
+     * The name of the network group to get.
+     * 
+     */
     @InputImport(name="networkGroupName", required=true)
     private final String networkGroupName;
 
@@ -21,6 +25,10 @@ public final class ListEffectiveVirtualNetworkByNetworkGroupArgs extends io.pulu
         return this.networkGroupName;
     }
 
+    /**
+     * The name of the network manager.
+     * 
+     */
     @InputImport(name="networkManagerName", required=true)
     private final String networkManagerName;
 
@@ -28,6 +36,10 @@ public final class ListEffectiveVirtualNetworkByNetworkGroupArgs extends io.pulu
         return this.networkManagerName;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -35,6 +47,10 @@ public final class ListEffectiveVirtualNetworkByNetworkGroupArgs extends io.pulu
         return this.resourceGroupName;
     }
 
+    /**
+     * When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
+     * 
+     */
     @InputImport(name="skipToken")
     private final @Nullable String skipToken;
 

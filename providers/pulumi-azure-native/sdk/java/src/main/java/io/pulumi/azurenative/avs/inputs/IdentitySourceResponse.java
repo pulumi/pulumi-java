@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * vCenter Single Sign On Identity Source
+ * 
+ */
 public final class IdentitySourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IdentitySourceResponse Empty = new IdentitySourceResponse();
 
+    /**
+     * The domain's NetBIOS name
+     * 
+     */
     @InputImport(name="alias")
     private final @Nullable String alias;
 
@@ -21,6 +29,10 @@ public final class IdentitySourceResponse extends io.pulumi.resources.InvokeArgs
         return this.alias == null ? Optional.empty() : Optional.ofNullable(this.alias);
     }
 
+    /**
+     * The base distinguished name for groups
+     * 
+     */
     @InputImport(name="baseGroupDN")
     private final @Nullable String baseGroupDN;
 
@@ -28,6 +40,10 @@ public final class IdentitySourceResponse extends io.pulumi.resources.InvokeArgs
         return this.baseGroupDN == null ? Optional.empty() : Optional.ofNullable(this.baseGroupDN);
     }
 
+    /**
+     * The base distinguished name for users
+     * 
+     */
     @InputImport(name="baseUserDN")
     private final @Nullable String baseUserDN;
 
@@ -35,6 +51,10 @@ public final class IdentitySourceResponse extends io.pulumi.resources.InvokeArgs
         return this.baseUserDN == null ? Optional.empty() : Optional.ofNullable(this.baseUserDN);
     }
 
+    /**
+     * The domain's dns name
+     * 
+     */
     @InputImport(name="domain")
     private final @Nullable String domain;
 
@@ -42,6 +62,10 @@ public final class IdentitySourceResponse extends io.pulumi.resources.InvokeArgs
         return this.domain == null ? Optional.empty() : Optional.ofNullable(this.domain);
     }
 
+    /**
+     * The name of the identity source
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -49,6 +73,10 @@ public final class IdentitySourceResponse extends io.pulumi.resources.InvokeArgs
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The password of the Active Directory user with a minimum of read-only access to Base DN for users and groups.
+     * 
+     */
     @InputImport(name="password")
     private final @Nullable String password;
 
@@ -56,6 +84,10 @@ public final class IdentitySourceResponse extends io.pulumi.resources.InvokeArgs
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
     }
 
+    /**
+     * Primary server URL
+     * 
+     */
     @InputImport(name="primaryServer")
     private final @Nullable String primaryServer;
 
@@ -63,6 +95,10 @@ public final class IdentitySourceResponse extends io.pulumi.resources.InvokeArgs
         return this.primaryServer == null ? Optional.empty() : Optional.ofNullable(this.primaryServer);
     }
 
+    /**
+     * Secondary server URL
+     * 
+     */
     @InputImport(name="secondaryServer")
     private final @Nullable String secondaryServer;
 
@@ -70,6 +106,10 @@ public final class IdentitySourceResponse extends io.pulumi.resources.InvokeArgs
         return this.secondaryServer == null ? Optional.empty() : Optional.ofNullable(this.secondaryServer);
     }
 
+    /**
+     * Protect LDAP communication using SSL certificate (LDAPS)
+     * 
+     */
     @InputImport(name="ssl")
     private final @Nullable String ssl;
 
@@ -77,6 +117,10 @@ public final class IdentitySourceResponse extends io.pulumi.resources.InvokeArgs
         return this.ssl == null ? Optional.empty() : Optional.ofNullable(this.ssl);
     }
 
+    /**
+     * The ID of an Active Directory user with a minimum of read-only access to Base DN for users and group
+     * 
+     */
     @InputImport(name="username")
     private final @Nullable String username;
 

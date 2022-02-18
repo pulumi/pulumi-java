@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A message that describes why a resource is non-compliant with the policy. This is shown in 'deny' error messages and on resource's non-compliant compliance results.
+ * 
+ */
 public final class NonComplianceMessageResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NonComplianceMessageResponse Empty = new NonComplianceMessageResponse();
 
+    /**
+     * A message that describes why a resource is non-compliant with the policy. This is shown in 'deny' error messages and on resource's non-compliant compliance results.
+     * 
+     */
     @InputImport(name="message", required=true)
     private final String message;
 
@@ -21,6 +29,10 @@ public final class NonComplianceMessageResponse extends io.pulumi.resources.Invo
         return this.message;
     }
 
+    /**
+     * The policy definition reference ID within a policy set definition the message is intended for. This is only applicable if the policy assignment assigns a policy set definition. If this is not provided the message applies to all policies assigned by this policy assignment.
+     * 
+     */
     @InputImport(name="policyDefinitionReferenceId")
     private final @Nullable String policyDefinitionReferenceId;
 

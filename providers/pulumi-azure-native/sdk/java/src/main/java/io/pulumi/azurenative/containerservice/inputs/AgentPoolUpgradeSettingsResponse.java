@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Settings for upgrading an agentpool
+ * 
+ */
 public final class AgentPoolUpgradeSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AgentPoolUpgradeSettingsResponse Empty = new AgentPoolUpgradeSettingsResponse();
 
+    /**
+     * Count or percentage of additional nodes to be added during upgrade. If empty uses AKS default
+     * 
+     */
     @InputImport(name="maxSurge")
     private final @Nullable String maxSurge;
 

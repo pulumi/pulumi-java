@@ -18,6 +18,10 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
 
     public static final WorkloadNetworkDnsServiceArgs Empty = new WorkloadNetworkDnsServiceArgs();
 
+    /**
+     * Default DNS zone of the DNS Service.
+     * 
+     */
     @InputImport(name="defaultDnsZone")
     private final @Nullable Input<String> defaultDnsZone;
 
@@ -25,6 +29,10 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
         return this.defaultDnsZone == null ? Input.empty() : this.defaultDnsZone;
     }
 
+    /**
+     * Display name of the DNS Service.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -32,6 +40,10 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * NSX DNS Service identifier. Generally the same as the DNS Service's display name
+     * 
+     */
     @InputImport(name="dnsServiceId")
     private final @Nullable Input<String> dnsServiceId;
 
@@ -39,6 +51,10 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
         return this.dnsServiceId == null ? Input.empty() : this.dnsServiceId;
     }
 
+    /**
+     * DNS service IP of the DNS Service.
+     * 
+     */
     @InputImport(name="dnsServiceIp")
     private final @Nullable Input<String> dnsServiceIp;
 
@@ -46,6 +62,10 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
         return this.dnsServiceIp == null ? Input.empty() : this.dnsServiceIp;
     }
 
+    /**
+     * FQDN zones of the DNS Service.
+     * 
+     */
     @InputImport(name="fqdnZones")
     private final @Nullable Input<List<String>> fqdnZones;
 
@@ -53,6 +73,10 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
         return this.fqdnZones == null ? Input.empty() : this.fqdnZones;
     }
 
+    /**
+     * DNS Service log level.
+     * 
+     */
     @InputImport(name="logLevel")
     private final @Nullable Input<Either<String,DnsServiceLogLevelEnum>> logLevel;
 
@@ -60,6 +84,10 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
         return this.logLevel == null ? Input.empty() : this.logLevel;
     }
 
+    /**
+     * Name of the private cloud
+     * 
+     */
     @InputImport(name="privateCloudName", required=true)
     private final Input<String> privateCloudName;
 
@@ -67,6 +95,10 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
         return this.privateCloudName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -74,6 +106,10 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
         return this.resourceGroupName;
     }
 
+    /**
+     * NSX revision number.
+     * 
+     */
     @InputImport(name="revision")
     private final @Nullable Input<Double> revision;
 

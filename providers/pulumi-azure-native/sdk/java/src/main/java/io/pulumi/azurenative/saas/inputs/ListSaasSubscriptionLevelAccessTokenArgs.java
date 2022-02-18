@@ -12,6 +12,10 @@ public final class ListSaasSubscriptionLevelAccessTokenArgs extends io.pulumi.re
 
     public static final ListSaasSubscriptionLevelAccessTokenArgs Empty = new ListSaasSubscriptionLevelAccessTokenArgs();
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +23,10 @@ public final class ListSaasSubscriptionLevelAccessTokenArgs extends io.pulumi.re
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the resource.
+     * 
+     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 

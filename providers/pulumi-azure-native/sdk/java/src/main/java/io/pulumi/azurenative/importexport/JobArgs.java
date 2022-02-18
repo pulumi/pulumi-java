@@ -16,6 +16,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JobArgs Empty = new JobArgs();
 
+    /**
+     * The name of the import/export job.
+     * 
+     */
     @InputImport(name="jobName")
     private final @Nullable Input<String> jobName;
 
@@ -23,6 +27,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.jobName == null ? Input.empty() : this.jobName;
     }
 
+    /**
+     * Specifies the supported Azure location where the job should be created
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -30,6 +38,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Specifies the job properties
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<JobDetailsArgs> properties;
 
@@ -37,6 +49,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The resource group name uniquely identifies the resource group within the user subscription.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -44,6 +60,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Specifies the tags that will be assigned to the job.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Object> tags;
 

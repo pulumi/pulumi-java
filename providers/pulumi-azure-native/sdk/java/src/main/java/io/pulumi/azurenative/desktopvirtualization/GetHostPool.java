@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetHostPool {
+/**
+ * Represents a HostPool definition.
+ * API Version: 2021-02-01-preview.
+ * 
+ *
+ * Represents a HostPool definition.
+ * 
+ */
     public static CompletableFuture<GetHostPoolResult> invokeAsync(GetHostPoolArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:desktopvirtualization:getHostPool", TypeShape.of(GetHostPoolResult.class), args == null ? GetHostPoolArgs.Empty : args, Utilities.withVersion(options));
     }

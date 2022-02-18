@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The workload type of the subscription. It can be either Production or DevTest.
+     * 
+     */
     @EnumType
     public enum Workload {
         Production("Production"),

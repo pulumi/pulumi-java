@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The data stored in Parquet format.
+ * 
+ */
 public final class ParquetFormatResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ParquetFormatResponse Empty = new ParquetFormatResponse();
 
+    /**
+     * Deserializer. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="deserializer")
     private final @Nullable Object deserializer;
 
@@ -22,6 +30,10 @@ public final class ParquetFormatResponse extends io.pulumi.resources.InvokeArgs 
         return this.deserializer == null ? Optional.empty() : Optional.ofNullable(this.deserializer);
     }
 
+    /**
+     * Serializer. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="serializer")
     private final @Nullable Object serializer;
 
@@ -29,6 +41,11 @@ public final class ParquetFormatResponse extends io.pulumi.resources.InvokeArgs 
         return this.serializer == null ? Optional.empty() : Optional.ofNullable(this.serializer);
     }
 
+    /**
+     * Type of dataset storage format.
+     * Expected value is 'ParquetFormat'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

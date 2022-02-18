@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The ip address range.
+ * 
+ */
 public final class IpAddressRangeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IpAddressRangeResponse Empty = new IpAddressRangeResponse();
 
+    /**
+     * The IP address range.
+     * 
+     */
     @InputImport(name="addressRange")
     private final @Nullable String addressRange;
 

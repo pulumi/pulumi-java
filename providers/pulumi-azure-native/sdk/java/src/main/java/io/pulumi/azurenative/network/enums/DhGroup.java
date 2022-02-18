@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The DH Group used in IKE Phase 1 for initial SA.
+     * 
+     */
     @EnumType
     public enum DhGroup {
         None("None"),

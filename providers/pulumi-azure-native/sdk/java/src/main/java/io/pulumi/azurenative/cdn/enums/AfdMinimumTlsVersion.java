@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * TLS protocol version that will be used for Https
+     * 
+     */
     @EnumType
     public enum AfdMinimumTlsVersion {
         TLS10("TLS10"),

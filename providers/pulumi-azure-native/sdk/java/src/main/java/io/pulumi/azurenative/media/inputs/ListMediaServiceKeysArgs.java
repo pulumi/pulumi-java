@@ -12,6 +12,10 @@ public final class ListMediaServiceKeysArgs extends io.pulumi.resources.InvokeAr
 
     public static final ListMediaServiceKeysArgs Empty = new ListMediaServiceKeysArgs();
 
+    /**
+     * Name of the Media Service.
+     * 
+     */
     @InputImport(name="mediaServiceName", required=true)
     private final String mediaServiceName;
 
@@ -19,6 +23,10 @@ public final class ListMediaServiceKeysArgs extends io.pulumi.resources.InvokeAr
         return this.mediaServiceName;
     }
 
+    /**
+     * Name of the resource group within the Azure subscription.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

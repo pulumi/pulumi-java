@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The consistency policy for the Cosmos DB database account.
+ * 
+ */
 public final class ConsistencyPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConsistencyPolicyArgs Empty = new ConsistencyPolicyArgs();
 
+    /**
+     * The default consistency level and configuration settings of the Cosmos DB account.
+     * 
+     */
     @InputImport(name="defaultConsistencyLevel", required=true)
     private final Input<DefaultConsistencyLevel> defaultConsistencyLevel;
 
@@ -23,6 +31,10 @@ public final class ConsistencyPolicyArgs extends io.pulumi.resources.ResourceArg
         return this.defaultConsistencyLevel;
     }
 
+    /**
+     * When used with the Bounded Staleness consistency level, this value represents the time amount of staleness (in seconds) tolerated. Accepted range for this value is 5 - 86400. Required when defaultConsistencyPolicy is set to 'BoundedStaleness'.
+     * 
+     */
     @InputImport(name="maxIntervalInSeconds")
     private final @Nullable Input<Integer> maxIntervalInSeconds;
 
@@ -30,6 +42,10 @@ public final class ConsistencyPolicyArgs extends io.pulumi.resources.ResourceArg
         return this.maxIntervalInSeconds == null ? Input.empty() : this.maxIntervalInSeconds;
     }
 
+    /**
+     * When used with the Bounded Staleness consistency level, this value represents the number of stale requests tolerated. Accepted range for this value is 1 – 2,147,483,647. Required when defaultConsistencyPolicy is set to 'BoundedStaleness'.
+     * 
+     */
     @InputImport(name="maxStalenessPrefix")
     private final @Nullable Input<Double> maxStalenessPrefix;
 

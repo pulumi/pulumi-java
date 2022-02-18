@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DatabaseAccountConnectionStringResponse {
+    /**
+     * Value of the connection string
+     * 
+     */
     private final String connectionString;
+    /**
+     * Description of the connection string
+     * 
+     */
     private final String description;
 
     @OutputCustomType.Constructor({"connectionString","description"})
@@ -20,9 +28,17 @@ public final class DatabaseAccountConnectionStringResponse {
         this.description = Objects.requireNonNull(description);
     }
 
+    /**
+     * Value of the connection string
+     * 
+     */
     public String getConnectionString() {
         return this.connectionString;
     }
+    /**
+     * Description of the connection string
+     * 
+     */
     public String getDescription() {
         return this.description;
     }

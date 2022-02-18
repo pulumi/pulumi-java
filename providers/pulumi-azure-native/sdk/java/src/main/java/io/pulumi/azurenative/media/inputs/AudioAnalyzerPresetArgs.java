@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The Audio Analyzer preset applies a pre-defined set of AI-based analysis operations, including speech transcription. Currently, the preset supports processing of content with a single audio track.
+ * 
+ */
 public final class AudioAnalyzerPresetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AudioAnalyzerPresetArgs Empty = new AudioAnalyzerPresetArgs();
 
+    /**
+     * The language for the audio payload in the input using the BCP-47 format of 'language tag-region' (e.g: 'en-US').  If you know the language of your content, it is recommended that you specify it. The language must be specified explicitly for AudioAnalysisMode::Basic, since automatic language detection is not included in basic mode. If the language isn't specified or set to null, automatic language detection will choose the first language detected and process with the selected language for the duration of the file. It does not currently support dynamically switching between languages after the first language is detected. The automatic detection works best with audio recordings with clearly discernable speech. If automatic detection fails to find the language, transcription would fallback to 'en-US'." The list of supported languages is available here: https://go.microsoft.com/fwlink/?linkid=2109463
+     * 
+     */
     @InputImport(name="audioLanguage")
     private final @Nullable Input<String> audioLanguage;
 
@@ -24,6 +32,10 @@ public final class AudioAnalyzerPresetArgs extends io.pulumi.resources.ResourceA
         return this.audioLanguage == null ? Input.empty() : this.audioLanguage;
     }
 
+    /**
+     * Dictionary containing key value pairs for parameters not exposed in the preset itself
+     * 
+     */
     @InputImport(name="experimentalOptions")
     private final @Nullable Input<Map<String,String>> experimentalOptions;
 
@@ -31,6 +43,10 @@ public final class AudioAnalyzerPresetArgs extends io.pulumi.resources.ResourceA
         return this.experimentalOptions == null ? Input.empty() : this.experimentalOptions;
     }
 
+    /**
+     * Determines the set of audio analysis operations to be performed. If unspecified, the Standard AudioAnalysisMode would be chosen.
+     * 
+     */
     @InputImport(name="mode")
     private final @Nullable Input<Either<String,AudioAnalysisMode>> mode;
 
@@ -38,6 +54,11 @@ public final class AudioAnalyzerPresetArgs extends io.pulumi.resources.ResourceA
         return this.mode == null ? Input.empty() : this.mode;
     }
 
+    /**
+     * The discriminator for derived types.
+     * Expected value is '#Microsoft.Media.AudioAnalyzerPreset'.
+     * 
+     */
     @InputImport(name="odataType", required=true)
     private final Input<String> odataType;
 

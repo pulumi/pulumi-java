@@ -12,6 +12,10 @@ public final class GetScheduledTriggerArgs extends io.pulumi.resources.InvokeArg
 
     public static final GetScheduledTriggerArgs Empty = new GetScheduledTriggerArgs();
 
+    /**
+     * The name of the share account.
+     * 
+     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -19,6 +23,10 @@ public final class GetScheduledTriggerArgs extends io.pulumi.resources.InvokeArg
         return this.accountName;
     }
 
+    /**
+     * The resource group name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetScheduledTriggerArgs extends io.pulumi.resources.InvokeArg
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the shareSubscription.
+     * 
+     */
     @InputImport(name="shareSubscriptionName", required=true)
     private final String shareSubscriptionName;
 
@@ -33,6 +45,10 @@ public final class GetScheduledTriggerArgs extends io.pulumi.resources.InvokeArg
         return this.shareSubscriptionName;
     }
 
+    /**
+     * The name of the trigger.
+     * 
+     */
     @InputImport(name="triggerName", required=true)
     private final String triggerName;
 

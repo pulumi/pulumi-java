@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Sku name.
+     * 
+     */
     @EnumType
     public enum IotDpsSku {
         S1("S1");

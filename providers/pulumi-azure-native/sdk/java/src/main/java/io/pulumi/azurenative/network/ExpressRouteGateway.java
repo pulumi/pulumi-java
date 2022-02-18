@@ -18,63 +18,156 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * ExpressRoute gateway resource.
+ * API Version: 2020-11-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:network:ExpressRouteGateway gateway-2 /subscriptions/subid/resourceGroups/resourceGroupName/providers/Microsoft.Network/expressRouteGateways/gateway-2 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:network:ExpressRouteGateway")
 public class ExpressRouteGateway extends io.pulumi.resources.CustomResource {
+    /**
+     * Configuration for auto scaling.
+     * 
+     */
     @OutputExport(name="autoScaleConfiguration", type=ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration.class, parameters={})
     private Output</* @Nullable */ ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration> autoScaleConfiguration;
 
+    /**
+     * @return Configuration for auto scaling.
+     * 
+     */
     public Output</* @Nullable */ ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration> getAutoScaleConfiguration() {
         return this.autoScaleConfiguration;
     }
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * List of ExpressRoute connections to the ExpressRoute gateway.
+     * 
+     */
     @OutputExport(name="expressRouteConnections", type=List.class, parameters={ExpressRouteConnectionResponse.class})
     private Output<List<ExpressRouteConnectionResponse>> expressRouteConnections;
 
+    /**
+     * @return List of ExpressRoute connections to the ExpressRoute gateway.
+     * 
+     */
     public Output<List<ExpressRouteConnectionResponse>> getExpressRouteConnections() {
         return this.expressRouteConnections;
     }
+    /**
+     * Resource location.
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * Resource name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The provisioning state of the express route gateway resource.
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning state of the express route gateway resource.
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Resource tags.
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Resource type.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * The Virtual Hub where the ExpressRoute gateway is or will be deployed.
+     * 
+     */
     @OutputExport(name="virtualHub", type=VirtualHubIdResponse.class, parameters={})
     private Output<VirtualHubIdResponse> virtualHub;
 
+    /**
+     * @return The Virtual Hub where the ExpressRoute gateway is or will be deployed.
+     * 
+     */
     public Output<VirtualHubIdResponse> getVirtualHub() {
         return this.virtualHub;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ExpressRouteGateway(String name, ExpressRouteGatewayArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:ExpressRouteGateway", name, args == null ? ExpressRouteGatewayArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -114,6 +207,14 @@ public class ExpressRouteGateway extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ExpressRouteGateway get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ExpressRouteGateway(name, id, options);
     }

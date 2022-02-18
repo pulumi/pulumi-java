@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Collation of the metadata catalog.
+     * 
+     */
     @EnumType
     public enum CatalogCollationType {
         DATABASE_DEFAULT("DATABASE_DEFAULT"),

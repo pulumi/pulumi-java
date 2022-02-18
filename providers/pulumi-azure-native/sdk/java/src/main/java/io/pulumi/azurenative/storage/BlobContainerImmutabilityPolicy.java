@@ -16,45 +16,114 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * The ImmutabilityPolicy property of a blob container, including Id, resource name, resource type, Etag.
+ * API Version: 2021-02-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:storage:BlobContainerImmutabilityPolicy default /subscriptions/{subscription-id}/resourceGroups/res1782/providers/Microsoft.Storage/storageAccounts/sto7069/blobServices/default/containers/container6397/immutabilityPolicies/default 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:storage:BlobContainerImmutabilityPolicy")
 public class BlobContainerImmutabilityPolicy extends io.pulumi.resources.CustomResource {
+    /**
+     * This property can only be changed for unlocked time-based retention policies. When enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted. This property cannot be changed with ExtendImmutabilityPolicy API
+     * 
+     */
     @OutputExport(name="allowProtectedAppendWrites", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowProtectedAppendWrites;
 
+    /**
+     * @return This property can only be changed for unlocked time-based retention policies. When enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted. This property cannot be changed with ExtendImmutabilityPolicy API
+     * 
+     */
     public Output</* @Nullable */ Boolean> getAllowProtectedAppendWrites() {
         return this.allowProtectedAppendWrites;
     }
+    /**
+     * Resource Etag.
+     * 
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return Resource Etag.
+     * 
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * The immutability period for the blobs in the container since the policy creation, in days.
+     * 
+     */
     @OutputExport(name="immutabilityPeriodSinceCreationInDays", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> immutabilityPeriodSinceCreationInDays;
 
+    /**
+     * @return The immutability period for the blobs in the container since the policy creation, in days.
+     * 
+     */
     public Output</* @Nullable */ Integer> getImmutabilityPeriodSinceCreationInDays() {
         return this.immutabilityPeriodSinceCreationInDays;
     }
+    /**
+     * The name of the resource
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The ImmutabilityPolicy state of a blob container, possible values include: Locked and Unlocked.
+     * 
+     */
     @OutputExport(name="state", type=String.class, parameters={})
     private Output<String> state;
 
+    /**
+     * @return The ImmutabilityPolicy state of a blob container, possible values include: Locked and Unlocked.
+     * 
+     */
     public Output<String> getState() {
         return this.state;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public BlobContainerImmutabilityPolicy(String name, BlobContainerImmutabilityPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:storage:BlobContainerImmutabilityPolicy", name, args == null ? BlobContainerImmutabilityPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -84,6 +153,14 @@ public class BlobContainerImmutabilityPolicy extends io.pulumi.resources.CustomR
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static BlobContainerImmutabilityPolicy get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new BlobContainerImmutabilityPolicy(name, id, options);
     }

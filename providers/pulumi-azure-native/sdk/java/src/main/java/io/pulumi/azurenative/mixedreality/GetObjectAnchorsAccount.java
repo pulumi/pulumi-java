@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetObjectAnchorsAccount {
+/**
+ * ObjectAnchorsAccount Response.
+ * API Version: 2021-03-01-preview.
+ * 
+ *
+ * ObjectAnchorsAccount Response.
+ * 
+ */
     public static CompletableFuture<GetObjectAnchorsAccountResult> invokeAsync(GetObjectAnchorsAccountArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:mixedreality:getObjectAnchorsAccount", TypeShape.of(GetObjectAnchorsAccountResult.class), args == null ? GetObjectAnchorsAccountArgs.Empty : args, Utilities.withVersion(options));
     }

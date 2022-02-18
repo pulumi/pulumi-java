@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CapacityReservationPropertiesResponse {
+    /**
+     * The last time Sku was updated.
+     * 
+     */
     private final String lastSkuUpdate;
+    /**
+     * Minimum CapacityReservation value in GB.
+     * 
+     */
     private final Double minCapacity;
 
     @OutputCustomType.Constructor({"lastSkuUpdate","minCapacity"})
@@ -21,9 +29,17 @@ public final class CapacityReservationPropertiesResponse {
         this.minCapacity = Objects.requireNonNull(minCapacity);
     }
 
+    /**
+     * The last time Sku was updated.
+     * 
+     */
     public String getLastSkuUpdate() {
         return this.lastSkuUpdate;
     }
+    /**
+     * Minimum CapacityReservation value in GB.
+     * 
+     */
     public Double getMinCapacity() {
         return this.minCapacity;
     }

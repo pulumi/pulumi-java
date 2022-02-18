@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Cosmos DB Cassandra table partition key
+ * 
+ */
 public final class CassandraPartitionKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CassandraPartitionKeyArgs Empty = new CassandraPartitionKeyArgs();
 
+    /**
+     * Name of the Cosmos DB Cassandra table partition key
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

@@ -13,6 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Azure retention rule
+ * 
+ */
 public final class AzureRetentionRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureRetentionRuleResponse Empty = new AzureRetentionRuleResponse();
@@ -38,6 +42,10 @@ public final class AzureRetentionRuleResponse extends io.pulumi.resources.Invoke
         return this.name;
     }
 
+    /**
+     * Expected value is 'AzureRetentionRule'.
+     * 
+     */
     @InputImport(name="objectType", required=true)
     private final String objectType;
 

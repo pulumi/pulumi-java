@@ -11,7 +11,16 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MoveResourceDependencyOverrideResponse {
+    /**
+     * Gets or sets the ARM ID of the dependent resource.
+     * 
+     */
     private final @Nullable String id;
+    /**
+     * Gets or sets the resource ARM id of either the MoveResource or the resource ARM ID of
+     * the dependent resource.
+     * 
+     */
     private final @Nullable String targetId;
 
     @OutputCustomType.Constructor({"id","targetId"})
@@ -22,9 +31,18 @@ public final class MoveResourceDependencyOverrideResponse {
         this.targetId = targetId;
     }
 
+    /**
+     * Gets or sets the ARM ID of the dependent resource.
+     * 
+     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+    /**
+     * Gets or sets the resource ARM id of either the MoveResource or the resource ARM ID of
+     * the dependent resource.
+     * 
+     */
     public Optional<String> getTargetId() {
         return Optional.ofNullable(this.targetId);
     }

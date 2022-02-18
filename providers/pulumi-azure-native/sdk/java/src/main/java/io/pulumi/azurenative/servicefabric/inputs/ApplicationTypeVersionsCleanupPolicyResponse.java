@@ -12,6 +12,10 @@ public final class ApplicationTypeVersionsCleanupPolicyResponse extends io.pulum
 
     public static final ApplicationTypeVersionsCleanupPolicyResponse Empty = new ApplicationTypeVersionsCleanupPolicyResponse();
 
+    /**
+     * Number of unused versions per application type to keep.
+     * 
+     */
     @InputImport(name="maxUnusedVersionsToKeep", required=true)
     private final Double maxUnusedVersionsToKeep;
 

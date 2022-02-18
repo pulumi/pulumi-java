@@ -17,6 +17,10 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
 
     public static final PrivateLinkForAzureAdArgs Empty = new PrivateLinkForAzureAdArgs();
 
+    /**
+     * Flag indicating whether all tenants are allowed
+     * 
+     */
     @InputImport(name="allTenants")
     private final @Nullable Input<Boolean> allTenants;
 
@@ -24,6 +28,10 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
         return this.allTenants == null ? Input.empty() : this.allTenants;
     }
 
+    /**
+     * Name of this resource.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -31,6 +39,10 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Guid of the owner tenant
+     * 
+     */
     @InputImport(name="ownerTenantId")
     private final @Nullable Input<String> ownerTenantId;
 
@@ -38,6 +50,10 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
         return this.ownerTenantId == null ? Input.empty() : this.ownerTenantId;
     }
 
+    /**
+     * The name of the private link policy in Azure AD.
+     * 
+     */
     @InputImport(name="policyName")
     private final @Nullable Input<String> policyName;
 
@@ -45,6 +61,10 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
         return this.policyName == null ? Input.empty() : this.policyName;
     }
 
+    /**
+     * Name of the resource group
+     * 
+     */
     @InputImport(name="resourceGroup")
     private final @Nullable Input<String> resourceGroup;
 
@@ -52,6 +72,10 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
         return this.resourceGroup == null ? Input.empty() : this.resourceGroup;
     }
 
+    /**
+     * Name of an Azure resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -59,6 +83,10 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of the private link policy resource
+     * 
+     */
     @InputImport(name="resourceName")
     private final @Nullable Input<String> resourceName;
 
@@ -66,6 +94,10 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
         return this.resourceName == null ? Input.empty() : this.resourceName;
     }
 
+    /**
+     * Subscription Identifier
+     * 
+     */
     @InputImport(name="subscriptionId")
     private final @Nullable Input<String> subscriptionId;
 
@@ -73,6 +105,10 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
         return this.subscriptionId == null ? Input.empty() : this.subscriptionId;
     }
 
+    /**
+     * Resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -80,6 +116,10 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The list of tenantIds.
+     * 
+     */
     @InputImport(name="tenants")
     private final @Nullable Input<List<String>> tenants;
 

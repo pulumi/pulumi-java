@@ -8,10 +8,18 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * The X12 agreement content.
+ * 
+ */
 public final class X12AgreementContentResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final X12AgreementContentResponse Empty = new X12AgreementContentResponse();
 
+    /**
+     * The X12 one-way receive agreement.
+     * 
+     */
     @InputImport(name="receiveAgreement", required=true)
     private final X12OneWayAgreementResponse receiveAgreement;
 
@@ -19,6 +27,10 @@ public final class X12AgreementContentResponse extends io.pulumi.resources.Invok
         return this.receiveAgreement;
     }
 
+    /**
+     * The X12 one-way send agreement.
+     * 
+     */
     @InputImport(name="sendAgreement", required=true)
     private final X12OneWayAgreementResponse sendAgreement;
 

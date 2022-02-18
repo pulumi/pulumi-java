@@ -12,6 +12,10 @@ public final class GetDataCollectionRuleAssociationArgs extends io.pulumi.resour
 
     public static final GetDataCollectionRuleAssociationArgs Empty = new GetDataCollectionRuleAssociationArgs();
 
+    /**
+     * The name of the association. The name is case insensitive.
+     * 
+     */
     @InputImport(name="associationName", required=true)
     private final String associationName;
 
@@ -19,6 +23,10 @@ public final class GetDataCollectionRuleAssociationArgs extends io.pulumi.resour
         return this.associationName;
     }
 
+    /**
+     * The identifier of the resource.
+     * 
+     */
     @InputImport(name="resourceUri", required=true)
     private final String resourceUri;
 

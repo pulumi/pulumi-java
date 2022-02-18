@@ -21,10 +21,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties for the task that validates connection to SQL Server and source server requirements for online migration
+ * 
+ */
 public final class ConnectToSourceSqlServerSyncTaskPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConnectToSourceSqlServerSyncTaskPropertiesResponse Empty = new ConnectToSourceSqlServerSyncTaskPropertiesResponse();
 
+    /**
+     * Array of command properties.
+     * 
+     */
     @InputImport(name="commands", required=true)
     private final List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands;
 
@@ -32,6 +40,10 @@ public final class ConnectToSourceSqlServerSyncTaskPropertiesResponse extends io
         return this.commands;
     }
 
+    /**
+     * Array of errors. This is ignored if submitted.
+     * 
+     */
     @InputImport(name="errors", required=true)
     private final List<ODataErrorResponse> errors;
 
@@ -39,6 +51,10 @@ public final class ConnectToSourceSqlServerSyncTaskPropertiesResponse extends io
         return this.errors;
     }
 
+    /**
+     * Task input
+     * 
+     */
     @InputImport(name="input")
     private final @Nullable ConnectToSourceSqlServerTaskInputResponse input;
 
@@ -46,6 +62,10 @@ public final class ConnectToSourceSqlServerSyncTaskPropertiesResponse extends io
         return this.input == null ? Optional.empty() : Optional.ofNullable(this.input);
     }
 
+    /**
+     * Task output. This is ignored if submitted.
+     * 
+     */
     @InputImport(name="output", required=true)
     private final List<Object> output;
 
@@ -53,6 +73,10 @@ public final class ConnectToSourceSqlServerSyncTaskPropertiesResponse extends io
         return this.output;
     }
 
+    /**
+     * The state of the task. This is ignored if submitted.
+     * 
+     */
     @InputImport(name="state", required=true)
     private final String state;
 
@@ -60,6 +84,11 @@ public final class ConnectToSourceSqlServerSyncTaskPropertiesResponse extends io
         return this.state;
     }
 
+    /**
+     * Task type.
+     * Expected value is 'ConnectToSource.SqlServer.Sync'.
+     * 
+     */
     @InputImport(name="taskType", required=true)
     private final String taskType;
 

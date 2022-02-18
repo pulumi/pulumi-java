@@ -13,6 +13,10 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputErrorResponse extend
 
     public static final MigrateMySqlAzureDbForMySqlSyncTaskOutputErrorResponse Empty = new MigrateMySqlAzureDbForMySqlSyncTaskOutputErrorResponse();
 
+    /**
+     * Migration error
+     * 
+     */
     @InputImport(name="error", required=true)
     private final ReportableExceptionResponse error;
 
@@ -20,6 +24,10 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputErrorResponse extend
         return this.error;
     }
 
+    /**
+     * Result identifier
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -27,6 +35,11 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputErrorResponse extend
         return this.id;
     }
 
+    /**
+     * Result type
+     * Expected value is 'ErrorOutput'.
+     * 
+     */
     @InputImport(name="resultType", required=true)
     private final String resultType;
 

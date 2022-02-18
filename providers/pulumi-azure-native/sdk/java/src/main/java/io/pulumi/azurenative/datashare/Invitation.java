@@ -15,87 +15,216 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * A Invitation data transfer object.
+ * API Version: 2020-09-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:datashare:Invitation Invitation1 /subscriptions/433a8dfd-e5d5-4e77-ad86-90acdc75eb1a/resourceGroups/SampleResourceGroup/providers/Microsoft.DataShare/accounts/Account1/shares/Share1/invitations/Invitation1 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:datashare:Invitation")
 public class Invitation extends io.pulumi.resources.CustomResource {
+    /**
+     * The expiration date for the invitation and share subscription.
+     * 
+     */
     @OutputExport(name="expirationDate", type=String.class, parameters={})
     private Output</* @Nullable */ String> expirationDate;
 
+    /**
+     * @return The expiration date for the invitation and share subscription.
+     * 
+     */
     public Output</* @Nullable */ String> getExpirationDate() {
         return this.expirationDate;
     }
+    /**
+     * unique invitation id
+     * 
+     */
     @OutputExport(name="invitationId", type=String.class, parameters={})
     private Output<String> invitationId;
 
+    /**
+     * @return unique invitation id
+     * 
+     */
     public Output<String> getInvitationId() {
         return this.invitationId;
     }
+    /**
+     * The status of the invitation.
+     * 
+     */
     @OutputExport(name="invitationStatus", type=String.class, parameters={})
     private Output<String> invitationStatus;
 
+    /**
+     * @return The status of the invitation.
+     * 
+     */
     public Output<String> getInvitationStatus() {
         return this.invitationStatus;
     }
+    /**
+     * Name of the azure resource
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Name of the azure resource
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The time the recipient responded to the invitation.
+     * 
+     */
     @OutputExport(name="respondedAt", type=String.class, parameters={})
     private Output<String> respondedAt;
 
+    /**
+     * @return The time the recipient responded to the invitation.
+     * 
+     */
     public Output<String> getRespondedAt() {
         return this.respondedAt;
     }
+    /**
+     * Gets the time at which the invitation was sent.
+     * 
+     */
     @OutputExport(name="sentAt", type=String.class, parameters={})
     private Output<String> sentAt;
 
+    /**
+     * @return Gets the time at which the invitation was sent.
+     * 
+     */
     public Output<String> getSentAt() {
         return this.sentAt;
     }
+    /**
+     * System Data of the Azure resource.
+     * 
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return System Data of the Azure resource.
+     * 
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * The target Azure AD Id. Can't be combined with email.
+     * 
+     */
     @OutputExport(name="targetActiveDirectoryId", type=String.class, parameters={})
     private Output</* @Nullable */ String> targetActiveDirectoryId;
 
+    /**
+     * @return The target Azure AD Id. Can't be combined with email.
+     * 
+     */
     public Output</* @Nullable */ String> getTargetActiveDirectoryId() {
         return this.targetActiveDirectoryId;
     }
+    /**
+     * The email the invitation is directed to.
+     * 
+     */
     @OutputExport(name="targetEmail", type=String.class, parameters={})
     private Output</* @Nullable */ String> targetEmail;
 
+    /**
+     * @return The email the invitation is directed to.
+     * 
+     */
     public Output</* @Nullable */ String> getTargetEmail() {
         return this.targetEmail;
     }
+    /**
+     * The target user or application Id that invitation is being sent to.
+     * Must be specified along TargetActiveDirectoryId. This enables sending
+     * invitations to specific users or applications in an AD tenant.
+     * 
+     */
     @OutputExport(name="targetObjectId", type=String.class, parameters={})
     private Output</* @Nullable */ String> targetObjectId;
 
+    /**
+     * @return The target user or application Id that invitation is being sent to.
+     * Must be specified along TargetActiveDirectoryId. This enables sending
+     * invitations to specific users or applications in an AD tenant.
+     * 
+     */
     public Output</* @Nullable */ String> getTargetObjectId() {
         return this.targetObjectId;
     }
+    /**
+     * Type of the azure resource
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Type of the azure resource
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * Email of the user who created the resource
+     * 
+     */
     @OutputExport(name="userEmail", type=String.class, parameters={})
     private Output<String> userEmail;
 
+    /**
+     * @return Email of the user who created the resource
+     * 
+     */
     public Output<String> getUserEmail() {
         return this.userEmail;
     }
+    /**
+     * Name of the user who created the resource
+     * 
+     */
     @OutputExport(name="userName", type=String.class, parameters={})
     private Output<String> userName;
 
+    /**
+     * @return Name of the user who created the resource
+     * 
+     */
     public Output<String> getUserName() {
         return this.userName;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Invitation(String name, InvitationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:datashare:Invitation", name, args == null ? InvitationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -118,6 +247,14 @@ public class Invitation extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Invitation get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Invitation(name, id, options);
     }

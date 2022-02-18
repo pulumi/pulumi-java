@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Parameters that define the retention policy for flow log.
+ * 
+ */
 public final class RetentionPolicyParametersArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RetentionPolicyParametersArgs Empty = new RetentionPolicyParametersArgs();
 
+    /**
+     * Number of days to retain flow log records.
+     * 
+     */
     @InputImport(name="days")
     private final @Nullable Input<Integer> days;
 
@@ -22,6 +30,10 @@ public final class RetentionPolicyParametersArgs extends io.pulumi.resources.Res
         return this.days == null ? Input.empty() : this.days;
     }
 
+    /**
+     * Flag to enable/disable retention.
+     * 
+     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 

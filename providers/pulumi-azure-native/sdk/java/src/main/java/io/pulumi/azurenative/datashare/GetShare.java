@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetShare {
+/**
+ * A share data transfer object.
+ * API Version: 2020-09-01.
+ * 
+ *
+ * A share data transfer object.
+ * 
+ */
     public static CompletableFuture<GetShareResult> invokeAsync(GetShareArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datashare:getShare", TypeShape.of(GetShareResult.class), args == null ? GetShareArgs.Empty : args, Utilities.withVersion(options));
     }

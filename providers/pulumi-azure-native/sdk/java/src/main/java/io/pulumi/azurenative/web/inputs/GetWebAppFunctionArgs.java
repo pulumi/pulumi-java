@@ -12,6 +12,10 @@ public final class GetWebAppFunctionArgs extends io.pulumi.resources.InvokeArgs 
 
     public static final GetWebAppFunctionArgs Empty = new GetWebAppFunctionArgs();
 
+    /**
+     * Function name.
+     * 
+     */
     @InputImport(name="functionName", required=true)
     private final String functionName;
 
@@ -19,6 +23,10 @@ public final class GetWebAppFunctionArgs extends io.pulumi.resources.InvokeArgs 
         return this.functionName;
     }
 
+    /**
+     * Site name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -26,6 +34,10 @@ public final class GetWebAppFunctionArgs extends io.pulumi.resources.InvokeArgs 
         return this.name;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

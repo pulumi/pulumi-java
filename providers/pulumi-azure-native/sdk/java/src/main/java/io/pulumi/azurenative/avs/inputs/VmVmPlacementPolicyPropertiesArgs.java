@@ -14,10 +14,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * VM-VM placement policy properties
+ * 
+ */
 public final class VmVmPlacementPolicyPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VmVmPlacementPolicyPropertiesArgs Empty = new VmVmPlacementPolicyPropertiesArgs();
 
+    /**
+     * placement policy affinity type
+     * 
+     */
     @InputImport(name="affinityType", required=true)
     private final Input<Either<String,AffinityType>> affinityType;
 
@@ -25,6 +33,10 @@ public final class VmVmPlacementPolicyPropertiesArgs extends io.pulumi.resources
         return this.affinityType;
     }
 
+    /**
+     * Display name of the placement policy
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -32,6 +44,10 @@ public final class VmVmPlacementPolicyPropertiesArgs extends io.pulumi.resources
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * Whether the placement policy is enabled or disabled
+     * 
+     */
     @InputImport(name="state")
     private final @Nullable Input<Either<String,PlacementPolicyState>> state;
 
@@ -39,6 +55,11 @@ public final class VmVmPlacementPolicyPropertiesArgs extends io.pulumi.resources
         return this.state == null ? Input.empty() : this.state;
     }
 
+    /**
+     * placement policy type
+     * Expected value is 'VmVm'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -46,6 +67,10 @@ public final class VmVmPlacementPolicyPropertiesArgs extends io.pulumi.resources
         return this.type;
     }
 
+    /**
+     * Virtual machine members list
+     * 
+     */
     @InputImport(name="vmMembers", required=true)
     private final Input<List<String>> vmMembers;
 

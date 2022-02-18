@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The current state of the IP address firewall for this account.
+     * 
+     */
     @EnumType
     public enum FirewallState {
         Enabled("Enabled"),

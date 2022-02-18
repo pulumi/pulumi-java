@@ -8,10 +8,19 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Describes a built-in preset for encoding the input video with the Standard Encoder.
+ * 
+ */
 public final class BuiltInStandardEncoderPresetResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BuiltInStandardEncoderPresetResponse Empty = new BuiltInStandardEncoderPresetResponse();
 
+    /**
+     * The discriminator for derived types.
+     * Expected value is '#Microsoft.Media.BuiltInStandardEncoderPreset'.
+     * 
+     */
     @InputImport(name="odataType", required=true)
     private final String odataType;
 
@@ -19,6 +28,10 @@ public final class BuiltInStandardEncoderPresetResponse extends io.pulumi.resour
         return this.odataType;
     }
 
+    /**
+     * The built-in preset to be used for encoding videos.
+     * 
+     */
     @InputImport(name="presetName", required=true)
     private final String presetName;
 

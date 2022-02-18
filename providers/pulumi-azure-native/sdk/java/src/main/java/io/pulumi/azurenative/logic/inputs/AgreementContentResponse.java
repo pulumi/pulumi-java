@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The integration account agreement content.
+ * 
+ */
 public final class AgreementContentResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AgreementContentResponse Empty = new AgreementContentResponse();
 
+    /**
+     * The AS2 agreement content.
+     * 
+     */
     @InputImport(name="aS2")
     private final @Nullable AS2AgreementContentResponse aS2;
 
@@ -23,6 +31,10 @@ public final class AgreementContentResponse extends io.pulumi.resources.InvokeAr
         return this.aS2 == null ? Optional.empty() : Optional.ofNullable(this.aS2);
     }
 
+    /**
+     * The EDIFACT agreement content.
+     * 
+     */
     @InputImport(name="edifact")
     private final @Nullable EdifactAgreementContentResponse edifact;
 
@@ -30,6 +42,10 @@ public final class AgreementContentResponse extends io.pulumi.resources.InvokeAr
         return this.edifact == null ? Optional.empty() : Optional.ofNullable(this.edifact);
     }
 
+    /**
+     * The X12 agreement content.
+     * 
+     */
     @InputImport(name="x12")
     private final @Nullable X12AgreementContentResponse x12;
 

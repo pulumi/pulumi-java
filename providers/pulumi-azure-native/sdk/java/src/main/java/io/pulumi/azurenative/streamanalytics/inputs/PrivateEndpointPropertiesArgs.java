@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The properties associated with a private endpoint.
+ * 
+ */
 public final class PrivateEndpointPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PrivateEndpointPropertiesArgs Empty = new PrivateEndpointPropertiesArgs();
 
+    /**
+     * A list of connections to the remote resource. Immutable after it is set.
+     * 
+     */
     @InputImport(name="manualPrivateLinkServiceConnections")
     private final @Nullable Input<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections;
 

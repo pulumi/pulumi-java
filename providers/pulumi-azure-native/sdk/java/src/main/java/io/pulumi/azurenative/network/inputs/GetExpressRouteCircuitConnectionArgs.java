@@ -12,6 +12,10 @@ public final class GetExpressRouteCircuitConnectionArgs extends io.pulumi.resour
 
     public static final GetExpressRouteCircuitConnectionArgs Empty = new GetExpressRouteCircuitConnectionArgs();
 
+    /**
+     * The name of the express route circuit.
+     * 
+     */
     @InputImport(name="circuitName", required=true)
     private final String circuitName;
 
@@ -19,6 +23,10 @@ public final class GetExpressRouteCircuitConnectionArgs extends io.pulumi.resour
         return this.circuitName;
     }
 
+    /**
+     * The name of the express route circuit connection.
+     * 
+     */
     @InputImport(name="connectionName", required=true)
     private final String connectionName;
 
@@ -26,6 +34,10 @@ public final class GetExpressRouteCircuitConnectionArgs extends io.pulumi.resour
         return this.connectionName;
     }
 
+    /**
+     * The name of the peering.
+     * 
+     */
     @InputImport(name="peeringName", required=true)
     private final String peeringName;
 
@@ -33,6 +45,10 @@ public final class GetExpressRouteCircuitConnectionArgs extends io.pulumi.resour
         return this.peeringName;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

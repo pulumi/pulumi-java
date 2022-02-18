@@ -12,6 +12,10 @@ public final class GetVirtualNetworkGatewayVpnclientConnectionHealthArgs extends
 
     public static final GetVirtualNetworkGatewayVpnclientConnectionHealthArgs Empty = new GetVirtualNetworkGatewayVpnclientConnectionHealthArgs();
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +23,10 @@ public final class GetVirtualNetworkGatewayVpnclientConnectionHealthArgs extends
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the virtual network gateway.
+     * 
+     */
     @InputImport(name="virtualNetworkGatewayName", required=true)
     private final String virtualNetworkGatewayName;
 

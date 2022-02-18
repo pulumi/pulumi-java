@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNetworkExperimentProfile {
+/**
+ * Defines an Network Experiment Profile and lists of Experiments
+ * API Version: 2019-11-01.
+ * 
+ *
+ * Defines an Network Experiment Profile and lists of Experiments
+ * 
+ */
     public static CompletableFuture<GetNetworkExperimentProfileResult> invokeAsync(GetNetworkExperimentProfileArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getNetworkExperimentProfile", TypeShape.of(GetNetworkExperimentProfileResult.class), args == null ? GetNetworkExperimentProfileArgs.Empty : args, Utilities.withVersion(options));
     }

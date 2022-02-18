@@ -12,10 +12,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class WorkerProfileResponse {
+    /**
+     * The number of worker VMs.  Must be between 3 and 20 (immutable).
+     * 
+     */
     private final @Nullable Integer count;
+    /**
+     * The disk size of the worker VMs.  Must be 128 or greater (immutable).
+     * 
+     */
     private final @Nullable Integer diskSizeGB;
+    /**
+     * The worker profile name.  Must be "worker" (immutable).
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * The Azure resource ID of the worker subnet (immutable).
+     * 
+     */
     private final @Nullable String subnetId;
+    /**
+     * The size of the worker VMs (immutable).
+     * 
+     */
     private final @Nullable String vmSize;
 
     @OutputCustomType.Constructor({"count","diskSizeGB","name","subnetId","vmSize"})
@@ -32,18 +52,38 @@ public final class WorkerProfileResponse {
         this.vmSize = vmSize;
     }
 
+    /**
+     * The number of worker VMs.  Must be between 3 and 20 (immutable).
+     * 
+     */
     public Optional<Integer> getCount() {
         return Optional.ofNullable(this.count);
     }
+    /**
+     * The disk size of the worker VMs.  Must be 128 or greater (immutable).
+     * 
+     */
     public Optional<Integer> getDiskSizeGB() {
         return Optional.ofNullable(this.diskSizeGB);
     }
+    /**
+     * The worker profile name.  Must be "worker" (immutable).
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * The Azure resource ID of the worker subnet (immutable).
+     * 
+     */
     public Optional<String> getSubnetId() {
         return Optional.ofNullable(this.subnetId);
     }
+    /**
+     * The size of the worker VMs (immutable).
+     * 
+     */
     public Optional<String> getVmSize() {
         return Optional.ofNullable(this.vmSize);
     }

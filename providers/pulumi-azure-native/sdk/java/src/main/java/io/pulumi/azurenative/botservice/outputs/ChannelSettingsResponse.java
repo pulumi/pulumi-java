@@ -14,14 +14,50 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ChannelSettingsResponse {
+    /**
+     * The bot icon url
+     * 
+     */
     private final @Nullable String botIconUrl;
+    /**
+     * The bot id
+     * 
+     */
     private final @Nullable String botId;
+    /**
+     * The channel display name
+     * 
+     */
     private final @Nullable String channelDisplayName;
+    /**
+     * The channel id
+     * 
+     */
     private final @Nullable String channelId;
+    /**
+     * Opt-out of local authentication and ensure only MSI and AAD can be used exclusively for authentication.
+     * 
+     */
     private final @Nullable Boolean disableLocalAuth;
+    /**
+     * The extensionKey1
+     * 
+     */
     private final @Nullable String extensionKey1;
+    /**
+     * The extensionKey2
+     * 
+     */
     private final @Nullable String extensionKey2;
+    /**
+     * Whether this channel is enabled for the bot
+     * 
+     */
     private final @Nullable Boolean isEnabled;
+    /**
+     * The list of sites
+     * 
+     */
     private final @Nullable List<SiteResponse> sites;
 
     @OutputCustomType.Constructor({"botIconUrl","botId","channelDisplayName","channelId","disableLocalAuth","extensionKey1","extensionKey2","isEnabled","sites"})
@@ -46,30 +82,66 @@ public final class ChannelSettingsResponse {
         this.sites = sites;
     }
 
+    /**
+     * The bot icon url
+     * 
+     */
     public Optional<String> getBotIconUrl() {
         return Optional.ofNullable(this.botIconUrl);
     }
+    /**
+     * The bot id
+     * 
+     */
     public Optional<String> getBotId() {
         return Optional.ofNullable(this.botId);
     }
+    /**
+     * The channel display name
+     * 
+     */
     public Optional<String> getChannelDisplayName() {
         return Optional.ofNullable(this.channelDisplayName);
     }
+    /**
+     * The channel id
+     * 
+     */
     public Optional<String> getChannelId() {
         return Optional.ofNullable(this.channelId);
     }
+    /**
+     * Opt-out of local authentication and ensure only MSI and AAD can be used exclusively for authentication.
+     * 
+     */
     public Optional<Boolean> getDisableLocalAuth() {
         return Optional.ofNullable(this.disableLocalAuth);
     }
+    /**
+     * The extensionKey1
+     * 
+     */
     public Optional<String> getExtensionKey1() {
         return Optional.ofNullable(this.extensionKey1);
     }
+    /**
+     * The extensionKey2
+     * 
+     */
     public Optional<String> getExtensionKey2() {
         return Optional.ofNullable(this.extensionKey2);
     }
+    /**
+     * Whether this channel is enabled for the bot
+     * 
+     */
     public Optional<Boolean> getIsEnabled() {
         return Optional.ofNullable(this.isEnabled);
     }
+    /**
+     * The list of sites
+     * 
+     */
     public List<SiteResponse> getSites() {
         return this.sites == null ? List.of() : this.sites;
     }

@@ -14,45 +14,114 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Authorization in an ExpressRouteCircuit resource.
+ * API Version: 2020-11-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:network:ExpressRouteCircuitAuthorization authorizationName /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/expressRouteCircuits/circuitName/authorizations/authorizationName 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:network:ExpressRouteCircuitAuthorization")
 public class ExpressRouteCircuitAuthorization extends io.pulumi.resources.CustomResource {
+    /**
+     * The authorization key.
+     * 
+     */
     @OutputExport(name="authorizationKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> authorizationKey;
 
+    /**
+     * @return The authorization key.
+     * 
+     */
     public Output</* @Nullable */ String> getAuthorizationKey() {
         return this.authorizationKey;
     }
+    /**
+     * The authorization use status.
+     * 
+     */
     @OutputExport(name="authorizationUseStatus", type=String.class, parameters={})
     private Output</* @Nullable */ String> authorizationUseStatus;
 
+    /**
+     * @return The authorization use status.
+     * 
+     */
     public Output</* @Nullable */ String> getAuthorizationUseStatus() {
         return this.authorizationUseStatus;
     }
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
+    /**
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
+    /**
+     * The provisioning state of the authorization resource.
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning state of the authorization resource.
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Type of the resource.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Type of the resource.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ExpressRouteCircuitAuthorization(String name, ExpressRouteCircuitAuthorizationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:ExpressRouteCircuitAuthorization", name, args == null ? ExpressRouteCircuitAuthorizationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -109,6 +178,14 @@ public class ExpressRouteCircuitAuthorization extends io.pulumi.resources.Custom
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ExpressRouteCircuitAuthorization get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ExpressRouteCircuitAuthorization(name, id, options);
     }

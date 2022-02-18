@@ -16,6 +16,10 @@ public final class JitNetworkAccessPolicyVirtualMachineArgs extends io.pulumi.re
 
     public static final JitNetworkAccessPolicyVirtualMachineArgs Empty = new JitNetworkAccessPolicyVirtualMachineArgs();
 
+    /**
+     * Resource ID of the virtual machine that is linked to this policy
+     * 
+     */
     @InputImport(name="id", required=true)
     private final Input<String> id;
 
@@ -23,6 +27,10 @@ public final class JitNetworkAccessPolicyVirtualMachineArgs extends io.pulumi.re
         return this.id;
     }
 
+    /**
+     * Port configurations for the virtual machine
+     * 
+     */
     @InputImport(name="ports", required=true)
     private final Input<List<JitNetworkAccessPortRuleArgs>> ports;
 
@@ -30,6 +38,10 @@ public final class JitNetworkAccessPolicyVirtualMachineArgs extends io.pulumi.re
         return this.ports;
     }
 
+    /**
+     * Public IP address of the Azure Firewall that is linked to this policy, if applicable
+     * 
+     */
     @InputImport(name="publicIpAddress")
     private final @Nullable Input<String> publicIpAddress;
 

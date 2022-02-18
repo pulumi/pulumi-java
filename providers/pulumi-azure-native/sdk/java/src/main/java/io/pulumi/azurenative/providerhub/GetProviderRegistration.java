@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetProviderRegistration {
+/**
+ * API Version: 2020-11-20.
+ * 
+ */
     public static CompletableFuture<GetProviderRegistrationResult> invokeAsync(GetProviderRegistrationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:providerhub:getProviderRegistration", TypeShape.of(GetProviderRegistrationResult.class), args == null ? GetProviderRegistrationArgs.Empty : args, Utilities.withVersion(options));
     }

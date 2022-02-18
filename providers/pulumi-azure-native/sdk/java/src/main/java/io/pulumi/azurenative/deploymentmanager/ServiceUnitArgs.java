@@ -17,6 +17,10 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceUnitArgs Empty = new ServiceUnitArgs();
 
+    /**
+     * The artifacts for the service unit.
+     * 
+     */
     @InputImport(name="artifacts")
     private final @Nullable Input<ServiceUnitArtifactsArgs> artifacts;
 
@@ -24,6 +28,10 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
         return this.artifacts == null ? Input.empty() : this.artifacts;
     }
 
+    /**
+     * Describes the type of ARM deployment to be performed on the resource.
+     * 
+     */
     @InputImport(name="deploymentMode", required=true)
     private final Input<DeploymentMode> deploymentMode;
 
@@ -31,6 +39,10 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
         return this.deploymentMode;
     }
 
+    /**
+     * The geo-location where the resource lives
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -38,6 +50,10 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -45,6 +61,10 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the service resource.
+     * 
+     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 
@@ -52,6 +72,10 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceName;
     }
 
+    /**
+     * The name of the service topology .
+     * 
+     */
     @InputImport(name="serviceTopologyName", required=true)
     private final Input<String> serviceTopologyName;
 
@@ -59,6 +83,10 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceTopologyName;
     }
 
+    /**
+     * The name of the service unit resource.
+     * 
+     */
     @InputImport(name="serviceUnitName")
     private final @Nullable Input<String> serviceUnitName;
 
@@ -66,6 +94,10 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceUnitName == null ? Input.empty() : this.serviceUnitName;
     }
 
+    /**
+     * Resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -73,6 +105,10 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The Azure Resource Group to which the resources in the service unit belong to or should be deployed to.
+     * 
+     */
     @InputImport(name="targetResourceGroup", required=true)
     private final Input<String> targetResourceGroup;
 

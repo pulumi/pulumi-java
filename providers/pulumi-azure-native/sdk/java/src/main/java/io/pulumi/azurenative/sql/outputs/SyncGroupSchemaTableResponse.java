@@ -13,7 +13,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SyncGroupSchemaTableResponse {
+    /**
+     * List of columns in sync group schema.
+     * 
+     */
     private final @Nullable List<SyncGroupSchemaTableColumnResponse> columns;
+    /**
+     * Quoted name of sync group schema table.
+     * 
+     */
     private final @Nullable String quotedName;
 
     @OutputCustomType.Constructor({"columns","quotedName"})
@@ -24,9 +32,17 @@ public final class SyncGroupSchemaTableResponse {
         this.quotedName = quotedName;
     }
 
+    /**
+     * List of columns in sync group schema.
+     * 
+     */
     public List<SyncGroupSchemaTableColumnResponse> getColumns() {
         return this.columns == null ? List.of() : this.columns;
     }
+    /**
+     * Quoted name of sync group schema table.
+     * 
+     */
     public Optional<String> getQuotedName() {
         return Optional.ofNullable(this.quotedName);
     }

@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A container event.
+ * 
+ */
 public final class ContainerEventResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ContainerEventResponse Empty = new ContainerEventResponse();
 
+    /**
+     * The count of the event.
+     * 
+     */
     @InputImport(name="count")
     private final @Nullable Integer count;
 
@@ -22,6 +30,10 @@ public final class ContainerEventResponse extends io.pulumi.resources.InvokeArgs
         return this.count == null ? Optional.empty() : Optional.ofNullable(this.count);
     }
 
+    /**
+     * Date/time of the first event.
+     * 
+     */
     @InputImport(name="firstTimestamp")
     private final @Nullable String firstTimestamp;
 
@@ -29,6 +41,10 @@ public final class ContainerEventResponse extends io.pulumi.resources.InvokeArgs
         return this.firstTimestamp == null ? Optional.empty() : Optional.ofNullable(this.firstTimestamp);
     }
 
+    /**
+     * Date/time of the last event.
+     * 
+     */
     @InputImport(name="lastTimestamp")
     private final @Nullable String lastTimestamp;
 
@@ -36,6 +52,10 @@ public final class ContainerEventResponse extends io.pulumi.resources.InvokeArgs
         return this.lastTimestamp == null ? Optional.empty() : Optional.ofNullable(this.lastTimestamp);
     }
 
+    /**
+     * The event message
+     * 
+     */
     @InputImport(name="message")
     private final @Nullable String message;
 
@@ -43,6 +63,10 @@ public final class ContainerEventResponse extends io.pulumi.resources.InvokeArgs
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
     }
 
+    /**
+     * The name of the container event.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -50,6 +74,10 @@ public final class ContainerEventResponse extends io.pulumi.resources.InvokeArgs
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The event type.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 

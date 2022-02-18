@@ -12,6 +12,10 @@ public final class GetVideoArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetVideoArgs Empty = new GetVideoArgs();
 
+    /**
+     * The Azure Video Analyzer account name.
+     * 
+     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -19,6 +23,10 @@ public final class GetVideoArgs extends io.pulumi.resources.InvokeArgs {
         return this.accountName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetVideoArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the video to retrieve.
+     * 
+     */
     @InputImport(name="videoName", required=true)
     private final String videoName;
 

@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties of a registration definition.
+ * 
+ */
 public final class RegistrationDefinitionPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RegistrationDefinitionPropertiesResponse Empty = new RegistrationDefinitionPropertiesResponse();
 
+    /**
+     * Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.
+     * 
+     */
     @InputImport(name="authorizations", required=true)
     private final List<AuthorizationResponse> authorizations;
 
@@ -23,6 +31,10 @@ public final class RegistrationDefinitionPropertiesResponse extends io.pulumi.re
         return this.authorizations;
     }
 
+    /**
+     * Description of the registration definition.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -30,6 +42,10 @@ public final class RegistrationDefinitionPropertiesResponse extends io.pulumi.re
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * Id of the managedBy tenant.
+     * 
+     */
     @InputImport(name="managedByTenantId", required=true)
     private final String managedByTenantId;
 
@@ -37,6 +53,10 @@ public final class RegistrationDefinitionPropertiesResponse extends io.pulumi.re
         return this.managedByTenantId;
     }
 
+    /**
+     * Name of the managedBy tenant.
+     * 
+     */
     @InputImport(name="managedByTenantName", required=true)
     private final String managedByTenantName;
 
@@ -44,6 +64,10 @@ public final class RegistrationDefinitionPropertiesResponse extends io.pulumi.re
         return this.managedByTenantName;
     }
 
+    /**
+     * Current state of the registration definition.
+     * 
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -51,6 +75,10 @@ public final class RegistrationDefinitionPropertiesResponse extends io.pulumi.re
         return this.provisioningState;
     }
 
+    /**
+     * Name of the registration definition.
+     * 
+     */
     @InputImport(name="registrationDefinitionName")
     private final @Nullable String registrationDefinitionName;
 

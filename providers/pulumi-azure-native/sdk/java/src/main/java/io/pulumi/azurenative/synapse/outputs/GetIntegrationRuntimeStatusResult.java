@@ -12,7 +12,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetIntegrationRuntimeStatusResult {
+    /**
+     * The integration runtime name.
+     * 
+     */
     private final String name;
+    /**
+     * Integration runtime properties.
+     * 
+     */
     private final Either<ManagedIntegrationRuntimeStatusResponse,SelfHostedIntegrationRuntimeStatusResponse> properties;
 
     @OutputCustomType.Constructor({"name","properties"})
@@ -23,9 +31,17 @@ public final class GetIntegrationRuntimeStatusResult {
         this.properties = Objects.requireNonNull(properties);
     }
 
+    /**
+     * The integration runtime name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Integration runtime properties.
+     * 
+     */
     public Either<ManagedIntegrationRuntimeStatusResponse,SelfHostedIntegrationRuntimeStatusResponse> getProperties() {
         return this.properties;
     }

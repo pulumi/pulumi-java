@@ -12,9 +12,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class BatchAccountIdentityResponse {
+    /**
+     * The principal id of the Batch account. This property will only be provided for a system assigned identity.
+     * 
+     */
     private final String principalId;
+    /**
+     * The tenant id associated with the Batch account. This property will only be provided for a system assigned identity.
+     * 
+     */
     private final String tenantId;
+    /**
+     * The type of identity used for the Batch account.
+     * 
+     */
     private final String type;
+    /**
+     * The list of user identities associated with the Batch account. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+     * 
+     */
     private final @Nullable Map<String,BatchAccountIdentityResponseUserAssignedIdentities> userAssignedIdentities;
 
     @OutputCustomType.Constructor({"principalId","tenantId","type","userAssignedIdentities"})
@@ -29,15 +45,31 @@ public final class BatchAccountIdentityResponse {
         this.userAssignedIdentities = userAssignedIdentities;
     }
 
+    /**
+     * The principal id of the Batch account. This property will only be provided for a system assigned identity.
+     * 
+     */
     public String getPrincipalId() {
         return this.principalId;
     }
+    /**
+     * The tenant id associated with the Batch account. This property will only be provided for a system assigned identity.
+     * 
+     */
     public String getTenantId() {
         return this.tenantId;
     }
+    /**
+     * The type of identity used for the Batch account.
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * The list of user identities associated with the Batch account. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+     * 
+     */
     public Map<String,BatchAccountIdentityResponseUserAssignedIdentities> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }

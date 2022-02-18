@@ -22,6 +22,10 @@ public final class ProviderRegistrationArgs extends io.pulumi.resources.Resource
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The name of the resource provider hosted within ProviderHub.
+     * 
+     */
     @InputImport(name="providerNamespace")
     private final @Nullable Input<String> providerNamespace;
 

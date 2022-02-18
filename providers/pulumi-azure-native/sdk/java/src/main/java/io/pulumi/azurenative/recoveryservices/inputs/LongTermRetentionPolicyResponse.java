@@ -14,10 +14,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Long term retention policy.
+ * 
+ */
 public final class LongTermRetentionPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LongTermRetentionPolicyResponse Empty = new LongTermRetentionPolicyResponse();
 
+    /**
+     * Daily retention schedule of the protection policy.
+     * 
+     */
     @InputImport(name="dailySchedule")
     private final @Nullable DailyRetentionScheduleResponse dailySchedule;
 
@@ -25,6 +33,10 @@ public final class LongTermRetentionPolicyResponse extends io.pulumi.resources.I
         return this.dailySchedule == null ? Optional.empty() : Optional.ofNullable(this.dailySchedule);
     }
 
+    /**
+     * Monthly retention schedule of the protection policy.
+     * 
+     */
     @InputImport(name="monthlySchedule")
     private final @Nullable MonthlyRetentionScheduleResponse monthlySchedule;
 
@@ -32,6 +44,11 @@ public final class LongTermRetentionPolicyResponse extends io.pulumi.resources.I
         return this.monthlySchedule == null ? Optional.empty() : Optional.ofNullable(this.monthlySchedule);
     }
 
+    /**
+     * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+     * Expected value is 'LongTermRetentionPolicy'.
+     * 
+     */
     @InputImport(name="retentionPolicyType", required=true)
     private final String retentionPolicyType;
 
@@ -39,6 +56,10 @@ public final class LongTermRetentionPolicyResponse extends io.pulumi.resources.I
         return this.retentionPolicyType;
     }
 
+    /**
+     * Weekly retention schedule of the protection policy.
+     * 
+     */
     @InputImport(name="weeklySchedule")
     private final @Nullable WeeklyRetentionScheduleResponse weeklySchedule;
 
@@ -46,6 +67,10 @@ public final class LongTermRetentionPolicyResponse extends io.pulumi.resources.I
         return this.weeklySchedule == null ? Optional.empty() : Optional.ofNullable(this.weeklySchedule);
     }
 
+    /**
+     * Yearly retention schedule of the protection policy.
+     * 
+     */
     @InputImport(name="yearlySchedule")
     private final @Nullable YearlyRetentionScheduleResponse yearlySchedule;
 

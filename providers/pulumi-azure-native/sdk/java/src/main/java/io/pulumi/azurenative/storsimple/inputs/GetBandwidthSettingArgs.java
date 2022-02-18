@@ -12,6 +12,10 @@ public final class GetBandwidthSettingArgs extends io.pulumi.resources.InvokeArg
 
     public static final GetBandwidthSettingArgs Empty = new GetBandwidthSettingArgs();
 
+    /**
+     * The name of bandwidth setting to be fetched.
+     * 
+     */
     @InputImport(name="bandwidthSettingName", required=true)
     private final String bandwidthSettingName;
 
@@ -19,6 +23,10 @@ public final class GetBandwidthSettingArgs extends io.pulumi.resources.InvokeArg
         return this.bandwidthSettingName;
     }
 
+    /**
+     * The manager name
+     * 
+     */
     @InputImport(name="managerName", required=true)
     private final String managerName;
 
@@ -26,6 +34,10 @@ public final class GetBandwidthSettingArgs extends io.pulumi.resources.InvokeArg
         return this.managerName;
     }
 
+    /**
+     * The resource group name
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

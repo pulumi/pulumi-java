@@ -13,7 +13,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TargetCopySettingResponse {
+    /**
+     * It can be CustomCopyOption or ImmediateCopyOption.
+     * 
+     */
     private final Object copyAfter;
+    /**
+     * Info of target datastore
+     * 
+     */
     private final DataStoreInfoBaseResponse dataStore;
 
     @OutputCustomType.Constructor({"copyAfter","dataStore"})
@@ -24,9 +32,17 @@ public final class TargetCopySettingResponse {
         this.dataStore = Objects.requireNonNull(dataStore);
     }
 
+    /**
+     * It can be CustomCopyOption or ImmediateCopyOption.
+     * 
+     */
     public Object getCopyAfter() {
         return this.copyAfter;
     }
+    /**
+     * Info of target datastore
+     * 
+     */
     public DataStoreInfoBaseResponse getDataStore() {
         return this.dataStore;
     }

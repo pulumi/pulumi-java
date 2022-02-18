@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Collection of instances belong to the Spring Cloud Gateway
+ * 
+ */
 public final class GatewayInstanceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GatewayInstanceResponse Empty = new GatewayInstanceResponse();
 
+    /**
+     * Name of the Spring Cloud Gateway instance
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -19,6 +27,10 @@ public final class GatewayInstanceResponse extends io.pulumi.resources.InvokeArg
         return this.name;
     }
 
+    /**
+     * Status of the Spring Cloud Gateway instance
+     * 
+     */
     @InputImport(name="status", required=true)
     private final String status;
 

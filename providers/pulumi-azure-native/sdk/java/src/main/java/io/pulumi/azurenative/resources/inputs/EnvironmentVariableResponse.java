@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The environment variable to pass to the script in the container instance.
+ * 
+ */
 public final class EnvironmentVariableResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EnvironmentVariableResponse Empty = new EnvironmentVariableResponse();
 
+    /**
+     * The name of the environment variable.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -21,6 +29,10 @@ public final class EnvironmentVariableResponse extends io.pulumi.resources.Invok
         return this.name;
     }
 
+    /**
+     * The value of the secure environment variable.
+     * 
+     */
     @InputImport(name="secureValue")
     private final @Nullable String secureValue;
 
@@ -28,6 +40,10 @@ public final class EnvironmentVariableResponse extends io.pulumi.resources.Invok
         return this.secureValue == null ? Optional.empty() : Optional.ofNullable(this.secureValue);
     }
 
+    /**
+     * The value of the environment variable.
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable String value;
 

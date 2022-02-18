@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Schedule interval type
+     * 
+     */
     @EnumType
     public enum JobScheduleType {
         Once("Once"),

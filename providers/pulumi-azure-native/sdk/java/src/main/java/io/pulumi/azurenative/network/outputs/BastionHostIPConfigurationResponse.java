@@ -12,13 +12,45 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class BastionHostIPConfigurationResponse {
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     private final String etag;
+    /**
+     * Resource ID.
+     * 
+     */
     private final @Nullable String id;
+    /**
+     * Name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * Private IP allocation method.
+     * 
+     */
     private final @Nullable String privateIPAllocationMethod;
+    /**
+     * The provisioning state of the bastion host IP configuration resource.
+     * 
+     */
     private final String provisioningState;
+    /**
+     * Reference of the PublicIP resource.
+     * 
+     */
     private final SubResourceResponse publicIPAddress;
+    /**
+     * Reference of the subnet resource.
+     * 
+     */
     private final SubResourceResponse subnet;
+    /**
+     * Ip configuration type.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"etag","id","name","privateIPAllocationMethod","provisioningState","publicIPAddress","subnet","type"})
@@ -41,27 +73,59 @@ public final class BastionHostIPConfigurationResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String getEtag() {
         return this.etag;
     }
+    /**
+     * Resource ID.
+     * 
+     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+    /**
+     * Name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * Private IP allocation method.
+     * 
+     */
     public Optional<String> getPrivateIPAllocationMethod() {
         return Optional.ofNullable(this.privateIPAllocationMethod);
     }
+    /**
+     * The provisioning state of the bastion host IP configuration resource.
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Reference of the PublicIP resource.
+     * 
+     */
     public SubResourceResponse getPublicIPAddress() {
         return this.publicIPAddress;
     }
+    /**
+     * Reference of the subnet resource.
+     * 
+     */
     public SubResourceResponse getSubnet() {
         return this.subnet;
     }
+    /**
+     * Ip configuration type.
+     * 
+     */
     public String getType() {
         return this.type;
     }

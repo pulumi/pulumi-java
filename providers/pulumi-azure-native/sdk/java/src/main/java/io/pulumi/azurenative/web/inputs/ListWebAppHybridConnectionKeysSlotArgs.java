@@ -12,6 +12,10 @@ public final class ListWebAppHybridConnectionKeysSlotArgs extends io.pulumi.reso
 
     public static final ListWebAppHybridConnectionKeysSlotArgs Empty = new ListWebAppHybridConnectionKeysSlotArgs();
 
+    /**
+     * The name of the web app.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -19,6 +23,10 @@ public final class ListWebAppHybridConnectionKeysSlotArgs extends io.pulumi.reso
         return this.name;
     }
 
+    /**
+     * The namespace for this hybrid connection.
+     * 
+     */
     @InputImport(name="namespaceName", required=true)
     private final String namespaceName;
 
@@ -26,6 +34,10 @@ public final class ListWebAppHybridConnectionKeysSlotArgs extends io.pulumi.reso
         return this.namespaceName;
     }
 
+    /**
+     * The relay name for this hybrid connection.
+     * 
+     */
     @InputImport(name="relayName", required=true)
     private final String relayName;
 
@@ -33,6 +45,10 @@ public final class ListWebAppHybridConnectionKeysSlotArgs extends io.pulumi.reso
         return this.relayName;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -40,6 +56,10 @@ public final class ListWebAppHybridConnectionKeysSlotArgs extends io.pulumi.reso
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the slot for the web app.
+     * 
+     */
     @InputImport(name="slot", required=true)
     private final String slot;
 

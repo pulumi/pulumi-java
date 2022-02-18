@@ -12,6 +12,10 @@ public final class GetManagementGroupDiagnosticSettingArgs extends io.pulumi.res
 
     public static final GetManagementGroupDiagnosticSettingArgs Empty = new GetManagementGroupDiagnosticSettingArgs();
 
+    /**
+     * The management group id.
+     * 
+     */
     @InputImport(name="managementGroupId", required=true)
     private final String managementGroupId;
 
@@ -19,6 +23,10 @@ public final class GetManagementGroupDiagnosticSettingArgs extends io.pulumi.res
         return this.managementGroupId;
     }
 
+    /**
+     * The name of the diagnostic setting.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

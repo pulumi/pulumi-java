@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * IpGroups associated with azure firewall.
+ * 
+ */
 public final class AzureFirewallIpGroupsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureFirewallIpGroupsResponse Empty = new AzureFirewallIpGroupsResponse();
 
+    /**
+     * The iteration number.
+     * 
+     */
     @InputImport(name="changeNumber", required=true)
     private final String changeNumber;
 
@@ -19,6 +27,10 @@ public final class AzureFirewallIpGroupsResponse extends io.pulumi.resources.Inv
         return this.changeNumber;
     }
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 

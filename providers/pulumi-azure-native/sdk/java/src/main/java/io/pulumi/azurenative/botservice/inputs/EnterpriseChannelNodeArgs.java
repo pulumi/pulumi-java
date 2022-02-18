@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The properties specific to an Enterprise Channel Node.
+ * 
+ */
 public final class EnterpriseChannelNodeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EnterpriseChannelNodeArgs Empty = new EnterpriseChannelNodeArgs();
 
+    /**
+     * The location of the Enterprise Channel Node.
+     * 
+     */
     @InputImport(name="azureLocation", required=true)
     private final Input<String> azureLocation;
 
@@ -23,6 +31,10 @@ public final class EnterpriseChannelNodeArgs extends io.pulumi.resources.Resourc
         return this.azureLocation;
     }
 
+    /**
+     * The sku of the Enterprise Channel Node.
+     * 
+     */
     @InputImport(name="azureSku", required=true)
     private final Input<String> azureSku;
 
@@ -30,6 +42,10 @@ public final class EnterpriseChannelNodeArgs extends io.pulumi.resources.Resourc
         return this.azureSku;
     }
 
+    /**
+     * The name of the Enterprise Channel Node.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -37,6 +53,10 @@ public final class EnterpriseChannelNodeArgs extends io.pulumi.resources.Resourc
         return this.name;
     }
 
+    /**
+     * The current state of the Enterprise Channel Node.
+     * 
+     */
     @InputImport(name="state")
     private final @Nullable Input<Either<String,EnterpriseChannelNodeState>> state;
 

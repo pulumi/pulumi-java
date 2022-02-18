@@ -12,6 +12,10 @@ public final class ShareInfoElementResponse extends io.pulumi.resources.InvokeAr
 
     public static final ShareInfoElementResponse Empty = new ShareInfoElementResponse();
 
+    /**
+     * A relative URI containing the ID of the VM that has the disk attached.
+     * 
+     */
     @InputImport(name="vmUri", required=true)
     private final String vmUri;
 

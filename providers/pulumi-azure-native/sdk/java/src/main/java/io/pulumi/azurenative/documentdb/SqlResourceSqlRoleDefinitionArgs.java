@@ -17,6 +17,10 @@ public final class SqlResourceSqlRoleDefinitionArgs extends io.pulumi.resources.
 
     public static final SqlResourceSqlRoleDefinitionArgs Empty = new SqlResourceSqlRoleDefinitionArgs();
 
+    /**
+     * Cosmos DB database account name.
+     * 
+     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -24,6 +28,10 @@ public final class SqlResourceSqlRoleDefinitionArgs extends io.pulumi.resources.
         return this.accountName;
     }
 
+    /**
+     * A set of fully qualified Scopes at or below which Role Assignments may be created using this Role Definition. This will allow application of this Role Definition on the entire database account or any underlying Database / Collection. Must have at least one element. Scopes higher than Database account are not enforceable as assignable Scopes. Note that resources referenced in assignable Scopes need not exist.
+     * 
+     */
     @InputImport(name="assignableScopes")
     private final @Nullable Input<List<String>> assignableScopes;
 
@@ -31,6 +39,10 @@ public final class SqlResourceSqlRoleDefinitionArgs extends io.pulumi.resources.
         return this.assignableScopes == null ? Input.empty() : this.assignableScopes;
     }
 
+    /**
+     * The set of operations allowed through this Role Definition.
+     * 
+     */
     @InputImport(name="permissions")
     private final @Nullable Input<List<PermissionArgs>> permissions;
 
@@ -38,6 +50,10 @@ public final class SqlResourceSqlRoleDefinitionArgs extends io.pulumi.resources.
         return this.permissions == null ? Input.empty() : this.permissions;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -45,6 +61,10 @@ public final class SqlResourceSqlRoleDefinitionArgs extends io.pulumi.resources.
         return this.resourceGroupName;
     }
 
+    /**
+     * The GUID for the Role Definition.
+     * 
+     */
     @InputImport(name="roleDefinitionId")
     private final @Nullable Input<String> roleDefinitionId;
 
@@ -52,6 +72,10 @@ public final class SqlResourceSqlRoleDefinitionArgs extends io.pulumi.resources.
         return this.roleDefinitionId == null ? Input.empty() : this.roleDefinitionId;
     }
 
+    /**
+     * A user-friendly name for the Role Definition. Must be unique for the database account.
+     * 
+     */
     @InputImport(name="roleName")
     private final @Nullable Input<String> roleName;
 
@@ -59,6 +83,10 @@ public final class SqlResourceSqlRoleDefinitionArgs extends io.pulumi.resources.
         return this.roleName == null ? Input.empty() : this.roleName;
     }
 
+    /**
+     * Indicates whether the Role Definition was built-in or user created.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<RoleDefinitionType> type;
 

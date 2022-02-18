@@ -22,6 +22,10 @@ public final class ImportCollectorArgs extends io.pulumi.resources.ResourceArgs 
         return this.eTag == null ? Input.empty() : this.eTag;
     }
 
+    /**
+     * Unique name of a Import collector within a project.
+     * 
+     */
     @InputImport(name="importCollectorName")
     private final @Nullable Input<String> importCollectorName;
 
@@ -29,6 +33,10 @@ public final class ImportCollectorArgs extends io.pulumi.resources.ResourceArgs 
         return this.importCollectorName == null ? Input.empty() : this.importCollectorName;
     }
 
+    /**
+     * Name of the Azure Migrate project.
+     * 
+     */
     @InputImport(name="projectName", required=true)
     private final Input<String> projectName;
 
@@ -43,6 +51,10 @@ public final class ImportCollectorArgs extends io.pulumi.resources.ResourceArgs 
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * Name of the Azure Resource Group that project is part of.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

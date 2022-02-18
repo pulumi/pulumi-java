@@ -12,6 +12,10 @@ public final class GetNetworkArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetNetworkArgs Empty = new GetNetworkArgs();
 
+    /**
+     * The identity of the network.
+     * 
+     */
     @InputImport(name="networkResourceName", required=true)
     private final String networkResourceName;
 
@@ -19,6 +23,10 @@ public final class GetNetworkArgs extends io.pulumi.resources.InvokeArgs {
         return this.networkResourceName;
     }
 
+    /**
+     * Azure resource group name
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

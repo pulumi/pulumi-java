@@ -15,10 +15,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents product details
+ * 
+ */
 public final class ProductDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ProductDetailsResponse Empty = new ProductDetailsResponse();
 
+    /**
+     * Quantity of the product
+     * 
+     */
     @InputImport(name="count", required=true)
     private final Integer count;
 
@@ -26,6 +34,10 @@ public final class ProductDetailsResponse extends io.pulumi.resources.InvokeArgs
         return this.count;
     }
 
+    /**
+     * list of device details
+     * 
+     */
     @InputImport(name="deviceDetails", required=true)
     private final List<DeviceDetailsResponse> deviceDetails;
 
@@ -33,6 +45,10 @@ public final class ProductDetailsResponse extends io.pulumi.resources.InvokeArgs
         return this.deviceDetails;
     }
 
+    /**
+     * Display details of the product
+     * 
+     */
     @InputImport(name="displayInfo")
     private final @Nullable DisplayInfoResponse displayInfo;
 
@@ -40,6 +56,10 @@ public final class ProductDetailsResponse extends io.pulumi.resources.InvokeArgs
         return this.displayInfo == null ? Optional.empty() : Optional.ofNullable(this.displayInfo);
     }
 
+    /**
+     * Hierarchy of the product which uniquely identifies the product
+     * 
+     */
     @InputImport(name="hierarchyInformation", required=true)
     private final HierarchyInformationResponse hierarchyInformation;
 
@@ -47,6 +67,10 @@ public final class ProductDetailsResponse extends io.pulumi.resources.InvokeArgs
         return this.hierarchyInformation;
     }
 
+    /**
+     * Double encryption status of the configuration. Read-only field.
+     * 
+     */
     @InputImport(name="productDoubleEncryptionStatus", required=true)
     private final String productDoubleEncryptionStatus;
 

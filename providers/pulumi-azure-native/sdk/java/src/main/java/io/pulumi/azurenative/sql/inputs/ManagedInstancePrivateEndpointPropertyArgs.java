@@ -14,6 +14,10 @@ public final class ManagedInstancePrivateEndpointPropertyArgs extends io.pulumi.
 
     public static final ManagedInstancePrivateEndpointPropertyArgs Empty = new ManagedInstancePrivateEndpointPropertyArgs();
 
+    /**
+     * Resource id of the private endpoint.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 

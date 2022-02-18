@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBinding {
+/**
+ * Binding resource payload
+ * API Version: 2020-07-01.
+ * 
+ *
+ * Binding resource payload
+ * 
+ */
     public static CompletableFuture<GetBindingResult> invokeAsync(GetBindingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getBinding", TypeShape.of(GetBindingResult.class), args == null ? GetBindingArgs.Empty : args, Utilities.withVersion(options));
     }

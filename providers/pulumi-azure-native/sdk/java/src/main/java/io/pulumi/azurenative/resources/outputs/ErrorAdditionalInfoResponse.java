@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ErrorAdditionalInfoResponse {
+    /**
+     * The additional info.
+     * 
+     */
     private final Object info;
+    /**
+     * The additional info type.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"info","type"})
@@ -21,9 +29,17 @@ public final class ErrorAdditionalInfoResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * The additional info.
+     * 
+     */
     public Object getInfo() {
         return this.info;
     }
+    /**
+     * The additional info type.
+     * 
+     */
     public String getType() {
         return this.type;
     }

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The action to take when an unauthenticated client attempts to access the app.
+     * 
+     */
     @EnumType
     public enum UnauthenticatedClientActionV2 {
         RedirectToLoginPage("RedirectToLoginPage"),

@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The data store details of the MT.
+ * 
+ */
 public final class DataStoreResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DataStoreResponse Empty = new DataStoreResponse();
 
+    /**
+     * The capacity of data store in GBs.
+     * 
+     */
     @InputImport(name="capacity")
     private final @Nullable String capacity;
 
@@ -21,6 +29,10 @@ public final class DataStoreResponse extends io.pulumi.resources.InvokeArgs {
         return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
     }
 
+    /**
+     * The free space of data store in GBs.
+     * 
+     */
     @InputImport(name="freeSpace")
     private final @Nullable String freeSpace;
 
@@ -28,6 +40,10 @@ public final class DataStoreResponse extends io.pulumi.resources.InvokeArgs {
         return this.freeSpace == null ? Optional.empty() : Optional.ofNullable(this.freeSpace);
     }
 
+    /**
+     * The symbolic name of data store.
+     * 
+     */
     @InputImport(name="symbolicName")
     private final @Nullable String symbolicName;
 
@@ -35,6 +51,10 @@ public final class DataStoreResponse extends io.pulumi.resources.InvokeArgs {
         return this.symbolicName == null ? Optional.empty() : Optional.ofNullable(this.symbolicName);
     }
 
+    /**
+     * The type of data store.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 
@@ -42,6 +62,10 @@ public final class DataStoreResponse extends io.pulumi.resources.InvokeArgs {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
+    /**
+     * The uuid of data store.
+     * 
+     */
     @InputImport(name="uuid")
     private final @Nullable String uuid;
 

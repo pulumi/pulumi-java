@@ -20,105 +20,254 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Security Assignment on a resource group over a given scope
+ * API Version: 2021-08-01-preview.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:security:Assignment 1f3afdf9-d0c9-4c3d-847f-89da613e70a8 subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myResourceGroup/providers/Microsoft.Security/assignments/1f3afdf9-d0c9-4c3d-847f-89da613e70a8 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:security:Assignment")
 public class Assignment extends io.pulumi.resources.CustomResource {
+    /**
+     * Additional data about the assignment
+     * 
+     */
     @OutputExport(name="additionalData", type=AssignmentPropertiesResponseAdditionalData.class, parameters={})
     private Output</* @Nullable */ AssignmentPropertiesResponseAdditionalData> additionalData;
 
+    /**
+     * @return Additional data about the assignment
+     * 
+     */
     public Output</* @Nullable */ AssignmentPropertiesResponseAdditionalData> getAdditionalData() {
         return this.additionalData;
     }
+    /**
+     * Component item with key as applied to this standard assignment over the given scope
+     * 
+     */
     @OutputExport(name="assignedComponent", type=AssignedComponentItemResponse.class, parameters={})
     private Output</* @Nullable */ AssignedComponentItemResponse> assignedComponent;
 
+    /**
+     * @return Component item with key as applied to this standard assignment over the given scope
+     * 
+     */
     public Output</* @Nullable */ AssignedComponentItemResponse> getAssignedComponent() {
         return this.assignedComponent;
     }
+    /**
+     * Standard item with key as applied to this standard assignment over the given scope
+     * 
+     */
     @OutputExport(name="assignedStandard", type=AssignedStandardItemResponse.class, parameters={})
     private Output</* @Nullable */ AssignedStandardItemResponse> assignedStandard;
 
+    /**
+     * @return Standard item with key as applied to this standard assignment over the given scope
+     * 
+     */
     public Output</* @Nullable */ AssignedStandardItemResponse> getAssignedStandard() {
         return this.assignedStandard;
     }
+    /**
+     * description of the standardAssignment
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return description of the standardAssignment
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * display name of the standardAssignment
+     * 
+     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
+    /**
+     * @return display name of the standardAssignment
+     * 
+     */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
+    /**
+     * expected effect of this assignment (Disable/Exempt/etc)
+     * 
+     */
     @OutputExport(name="effect", type=String.class, parameters={})
     private Output</* @Nullable */ String> effect;
 
+    /**
+     * @return expected effect of this assignment (Disable/Exempt/etc)
+     * 
+     */
     public Output</* @Nullable */ String> getEffect() {
         return this.effect;
     }
+    /**
+     * Entity tag is used for comparing two or more entities from the same requested resource.
+     * 
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
+    /**
+     * @return Entity tag is used for comparing two or more entities from the same requested resource.
+     * 
+     */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
+    /**
+     * Expiration date of this assignment as a full ISO date
+     * 
+     */
     @OutputExport(name="expiresOn", type=String.class, parameters={})
     private Output</* @Nullable */ String> expiresOn;
 
+    /**
+     * @return Expiration date of this assignment as a full ISO date
+     * 
+     */
     public Output</* @Nullable */ String> getExpiresOn() {
         return this.expiresOn;
     }
+    /**
+     * Kind of the resource
+     * 
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
+    /**
+     * @return Kind of the resource
+     * 
+     */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
+    /**
+     * Location where the resource is stored
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Location where the resource is stored
+     * 
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * The assignment metadata. Metadata is an open ended object and is typically a collection of key value pairs.
+     * 
+     */
     @OutputExport(name="metadata", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> metadata;
 
+    /**
+     * @return The assignment metadata. Metadata is an open ended object and is typically a collection of key value pairs.
+     * 
+     */
     public Output</* @Nullable */ Object> getMetadata() {
         return this.metadata;
     }
+    /**
+     * Resource name
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Scope to which the standardAssignment applies - can be a subscription path or a resource group under that subscription
+     * 
+     */
     @OutputExport(name="scope", type=String.class, parameters={})
     private Output</* @Nullable */ String> scope;
 
+    /**
+     * @return Scope to which the standardAssignment applies - can be a subscription path or a resource group under that subscription
+     * 
+     */
     public Output</* @Nullable */ String> getScope() {
         return this.scope;
     }
+    /**
+     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     * 
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     * 
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * A list of key value pairs that describe the resource.
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return A list of key value pairs that describe the resource.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Resource type
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Assignment(String name, AssignmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:security:Assignment", name, args == null ? AssignmentArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -137,6 +286,14 @@ public class Assignment extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Assignment get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Assignment(name, id, options);
     }

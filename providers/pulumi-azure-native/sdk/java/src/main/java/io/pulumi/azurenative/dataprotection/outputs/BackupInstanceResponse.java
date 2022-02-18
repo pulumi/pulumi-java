@@ -16,14 +16,46 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class BackupInstanceResponse {
+    /**
+     * Specifies the current protection state of the resource
+     * 
+     */
     private final String currentProtectionState;
+    /**
+     * Gets or sets the data source information.
+     * 
+     */
     private final DatasourceResponse dataSourceInfo;
+    /**
+     * Gets or sets the data source set information.
+     * 
+     */
     private final @Nullable DatasourceSetResponse dataSourceSetInfo;
+    /**
+     * Gets or sets the Backup Instance friendly name.
+     * 
+     */
     private final @Nullable String friendlyName;
     private final String objectType;
+    /**
+     * Gets or sets the policy information.
+     * 
+     */
     private final PolicyInfoResponse policyInfo;
+    /**
+     * Specifies the protection error of the resource
+     * 
+     */
     private final UserFacingErrorResponse protectionErrorDetails;
+    /**
+     * Specifies the protection status of the resource
+     * 
+     */
     private final ProtectionStatusDetailsResponse protectionStatus;
+    /**
+     * Specifies the provisioning state of the resource i.e. provisioning/updating/Succeeded/Failed
+     * 
+     */
     private final String provisioningState;
 
     @OutputCustomType.Constructor({"currentProtectionState","dataSourceInfo","dataSourceSetInfo","friendlyName","objectType","policyInfo","protectionErrorDetails","protectionStatus","provisioningState"})
@@ -48,30 +80,62 @@ public final class BackupInstanceResponse {
         this.provisioningState = Objects.requireNonNull(provisioningState);
     }
 
+    /**
+     * Specifies the current protection state of the resource
+     * 
+     */
     public String getCurrentProtectionState() {
         return this.currentProtectionState;
     }
+    /**
+     * Gets or sets the data source information.
+     * 
+     */
     public DatasourceResponse getDataSourceInfo() {
         return this.dataSourceInfo;
     }
+    /**
+     * Gets or sets the data source set information.
+     * 
+     */
     public Optional<DatasourceSetResponse> getDataSourceSetInfo() {
         return Optional.ofNullable(this.dataSourceSetInfo);
     }
+    /**
+     * Gets or sets the Backup Instance friendly name.
+     * 
+     */
     public Optional<String> getFriendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     public String getObjectType() {
         return this.objectType;
     }
+    /**
+     * Gets or sets the policy information.
+     * 
+     */
     public PolicyInfoResponse getPolicyInfo() {
         return this.policyInfo;
     }
+    /**
+     * Specifies the protection error of the resource
+     * 
+     */
     public UserFacingErrorResponse getProtectionErrorDetails() {
         return this.protectionErrorDetails;
     }
+    /**
+     * Specifies the protection status of the resource
+     * 
+     */
     public ProtectionStatusDetailsResponse getProtectionStatus() {
         return this.protectionStatus;
     }
+    /**
+     * Specifies the provisioning state of the resource i.e. provisioning/updating/Succeeded/Failed
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }

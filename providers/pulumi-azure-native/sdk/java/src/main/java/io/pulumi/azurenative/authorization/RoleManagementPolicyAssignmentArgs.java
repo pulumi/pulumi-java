@@ -14,6 +14,10 @@ public final class RoleManagementPolicyAssignmentArgs extends io.pulumi.resource
 
     public static final RoleManagementPolicyAssignmentArgs Empty = new RoleManagementPolicyAssignmentArgs();
 
+    /**
+     * The policy id role management policy assignment.
+     * 
+     */
     @InputImport(name="policyId")
     private final @Nullable Input<String> policyId;
 
@@ -21,6 +25,10 @@ public final class RoleManagementPolicyAssignmentArgs extends io.pulumi.resource
         return this.policyId == null ? Input.empty() : this.policyId;
     }
 
+    /**
+     * The role definition of management policy assignment.
+     * 
+     */
     @InputImport(name="roleDefinitionId")
     private final @Nullable Input<String> roleDefinitionId;
 
@@ -28,6 +36,10 @@ public final class RoleManagementPolicyAssignmentArgs extends io.pulumi.resource
         return this.roleDefinitionId == null ? Input.empty() : this.roleDefinitionId;
     }
 
+    /**
+     * The name of format {guid_guid} the role management policy assignment to upsert.
+     * 
+     */
     @InputImport(name="roleManagementPolicyAssignmentName")
     private final @Nullable Input<String> roleManagementPolicyAssignmentName;
 
@@ -35,6 +47,10 @@ public final class RoleManagementPolicyAssignmentArgs extends io.pulumi.resource
         return this.roleManagementPolicyAssignmentName == null ? Input.empty() : this.roleManagementPolicyAssignmentName;
     }
 
+    /**
+     * The role management policy scope.
+     * 
+     */
     @InputImport(name="scope", required=true)
     private final Input<String> scope;
 

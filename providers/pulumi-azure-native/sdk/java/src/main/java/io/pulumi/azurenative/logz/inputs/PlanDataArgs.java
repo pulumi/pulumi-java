@@ -14,6 +14,10 @@ public final class PlanDataArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PlanDataArgs Empty = new PlanDataArgs();
 
+    /**
+     * different billing cycles like MONTHLY/WEEKLY. this could be enum
+     * 
+     */
     @InputImport(name="billingCycle")
     private final @Nullable Input<String> billingCycle;
 
@@ -21,6 +25,10 @@ public final class PlanDataArgs extends io.pulumi.resources.ResourceArgs {
         return this.billingCycle == null ? Input.empty() : this.billingCycle;
     }
 
+    /**
+     * date when plan was applied
+     * 
+     */
     @InputImport(name="effectiveDate")
     private final @Nullable Input<String> effectiveDate;
 
@@ -28,6 +36,10 @@ public final class PlanDataArgs extends io.pulumi.resources.ResourceArgs {
         return this.effectiveDate == null ? Input.empty() : this.effectiveDate;
     }
 
+    /**
+     * plan id as published by Logz
+     * 
+     */
     @InputImport(name="planDetails")
     private final @Nullable Input<String> planDetails;
 
@@ -35,6 +47,10 @@ public final class PlanDataArgs extends io.pulumi.resources.ResourceArgs {
         return this.planDetails == null ? Input.empty() : this.planDetails;
     }
 
+    /**
+     * different usage type like PAYG/COMMITTED. this could be enum
+     * 
+     */
     @InputImport(name="usageType")
     private final @Nullable Input<String> usageType;
 

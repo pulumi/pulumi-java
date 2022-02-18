@@ -10,10 +10,20 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents the delta health policy used to evaluate the health of services belonging to a service type when upgrading the cluster.
+ * 
+ */
 public final class ServiceTypeDeltaHealthPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ServiceTypeDeltaHealthPolicyResponse Empty = new ServiceTypeDeltaHealthPolicyResponse();
 
+    /**
+     * The maximum allowed percentage of services health degradation allowed during cluster upgrades.
+     * The delta is measured between the state of the services at the beginning of upgrade and the state of the services at the time of the health evaluation.
+     * The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits.
+     * 
+     */
     @InputImport(name="maxPercentDeltaUnhealthyServices")
     private final @Nullable Integer maxPercentDeltaUnhealthyServices;
 

@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Definition of a single parameter for an entity.
+ * 
+ */
 public final class ParameterSpecificationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ParameterSpecificationArgs Empty = new ParameterSpecificationArgs();
 
+    /**
+     * Default value of parameter.
+     * 
+     */
     @InputImport(name="defaultValue")
     private final @Nullable Input<Object> defaultValue;
 
@@ -24,6 +32,10 @@ public final class ParameterSpecificationArgs extends io.pulumi.resources.Resour
         return this.defaultValue == null ? Input.empty() : this.defaultValue;
     }
 
+    /**
+     * Parameter type.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<Either<String,ParameterType>> type;
 

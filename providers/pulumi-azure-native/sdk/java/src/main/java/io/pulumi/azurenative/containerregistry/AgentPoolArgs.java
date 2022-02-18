@@ -18,6 +18,10 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AgentPoolArgs Empty = new AgentPoolArgs();
 
+    /**
+     * The name of the agent pool.
+     * 
+     */
     @InputImport(name="agentPoolName")
     private final @Nullable Input<String> agentPoolName;
 
@@ -25,6 +29,10 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.agentPoolName == null ? Input.empty() : this.agentPoolName;
     }
 
+    /**
+     * The count of agent machine
+     * 
+     */
     @InputImport(name="count")
     private final @Nullable Input<Integer> count;
 
@@ -32,6 +40,10 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.count == null ? Input.empty() : this.count;
     }
 
+    /**
+     * The location of the resource. This cannot be changed after the resource is created.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -39,6 +51,10 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The OS of agent machine
+     * 
+     */
     @InputImport(name="os")
     private final @Nullable Input<Either<String,OS>> os;
 
@@ -46,6 +62,10 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.os == null ? Input.empty() : this.os;
     }
 
+    /**
+     * The name of the container registry.
+     * 
+     */
     @InputImport(name="registryName", required=true)
     private final Input<String> registryName;
 
@@ -53,6 +73,10 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.registryName;
     }
 
+    /**
+     * The name of the resource group to which the container registry belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -60,6 +84,10 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The tags of the resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -67,6 +95,10 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The Tier of agent machine
+     * 
+     */
     @InputImport(name="tier")
     private final @Nullable Input<String> tier;
 
@@ -74,6 +106,10 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.tier == null ? Input.empty() : this.tier;
     }
 
+    /**
+     * The Virtual Network Subnet Resource Id of the agent machine
+     * 
+     */
     @InputImport(name="virtualNetworkSubnetResourceId")
     private final @Nullable Input<String> virtualNetworkSubnetResourceId;
 

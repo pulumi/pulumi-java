@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Storage mapping input properties.
+ * 
+ */
 public final class StorageMappingInputPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StorageMappingInputPropertiesArgs Empty = new StorageMappingInputPropertiesArgs();
 
+    /**
+     * The ID of the storage object.
+     * 
+     */
     @InputImport(name="targetStorageClassificationId")
     private final @Nullable Input<String> targetStorageClassificationId;
 

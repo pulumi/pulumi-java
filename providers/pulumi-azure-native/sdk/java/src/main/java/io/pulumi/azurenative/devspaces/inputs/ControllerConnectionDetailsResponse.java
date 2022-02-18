@@ -14,6 +14,10 @@ public final class ControllerConnectionDetailsResponse extends io.pulumi.resourc
 
     public static final ControllerConnectionDetailsResponse Empty = new ControllerConnectionDetailsResponse();
 
+    /**
+     * Base class for types that supply values used to connect to container orchestrators
+     * 
+     */
     @InputImport(name="orchestratorSpecificConnectionDetails")
     private final @Nullable KubernetesConnectionDetailsResponse orchestratorSpecificConnectionDetails;
 

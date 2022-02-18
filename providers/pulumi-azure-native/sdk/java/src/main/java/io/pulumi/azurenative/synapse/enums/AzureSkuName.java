@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * SKU name.
+     * 
+     */
     @EnumType
     public enum AzureSkuName {
         Standard_DS13_v2_1TB_PS("Standard_DS13_v2+1TB_PS"),

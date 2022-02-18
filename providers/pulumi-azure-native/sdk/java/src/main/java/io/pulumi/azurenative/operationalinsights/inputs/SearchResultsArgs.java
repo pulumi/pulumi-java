@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Parameters of the search job that initiated this table.
+ * 
+ */
 public final class SearchResultsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SearchResultsArgs Empty = new SearchResultsArgs();
 
+    /**
+     * Search results table's Description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -22,6 +30,10 @@ public final class SearchResultsArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The timestamp to end the search by (UTC)
+     * 
+     */
     @InputImport(name="endSearchTime")
     private final @Nullable Input<String> endSearchTime;
 
@@ -29,6 +41,10 @@ public final class SearchResultsArgs extends io.pulumi.resources.ResourceArgs {
         return this.endSearchTime == null ? Input.empty() : this.endSearchTime;
     }
 
+    /**
+     * Limit the search job to return up to specified number of rows.
+     * 
+     */
     @InputImport(name="limit")
     private final @Nullable Input<Integer> limit;
 
@@ -36,6 +52,10 @@ public final class SearchResultsArgs extends io.pulumi.resources.ResourceArgs {
         return this.limit == null ? Input.empty() : this.limit;
     }
 
+    /**
+     * Search job query.
+     * 
+     */
     @InputImport(name="query")
     private final @Nullable Input<String> query;
 
@@ -43,6 +63,10 @@ public final class SearchResultsArgs extends io.pulumi.resources.ResourceArgs {
         return this.query == null ? Input.empty() : this.query;
     }
 
+    /**
+     * The timestamp to start the search from (UTC)
+     * 
+     */
     @InputImport(name="startSearchTime")
     private final @Nullable Input<String> startSearchTime;
 

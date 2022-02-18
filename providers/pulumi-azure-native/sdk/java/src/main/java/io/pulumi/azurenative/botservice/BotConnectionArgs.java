@@ -19,6 +19,10 @@ public final class BotConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BotConnectionArgs Empty = new BotConnectionArgs();
 
+    /**
+     * The name of the Bot Service Connection Setting resource.
+     * 
+     */
     @InputImport(name="connectionName")
     private final @Nullable Input<String> connectionName;
 
@@ -26,6 +30,10 @@ public final class BotConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.connectionName == null ? Input.empty() : this.connectionName;
     }
 
+    /**
+     * Required. Gets or sets the Kind of the resource.
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<Either<String,Kind>> kind;
 
@@ -33,6 +41,10 @@ public final class BotConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Specifies the location of the resource.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -40,6 +52,10 @@ public final class BotConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The set of properties specific to bot channel resource
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<ConnectionSettingPropertiesArgs> properties;
 
@@ -47,6 +63,10 @@ public final class BotConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The name of the Bot resource group in the user subscription.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -54,6 +74,10 @@ public final class BotConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the Bot resource.
+     * 
+     */
     @InputImport(name="resourceName", required=true)
     private final Input<String> resourceName;
 
@@ -61,6 +85,10 @@ public final class BotConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceName;
     }
 
+    /**
+     * Gets or sets the SKU of the resource.
+     * 
+     */
     @InputImport(name="sku")
     private final @Nullable Input<SkuArgs> sku;
 
@@ -68,6 +96,10 @@ public final class BotConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku == null ? Input.empty() : this.sku;
     }
 
+    /**
+     * Contains resource tags defined as key/value pairs.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

@@ -12,9 +12,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetOnlineEndpointTokenResult {
+    /**
+     * Access token.
+     * 
+     */
     private final @Nullable String accessToken;
+    /**
+     * Access token expiry time (UTC).
+     * 
+     */
     private final @Nullable Double expiryTimeUtc;
+    /**
+     * Refresh access token after time (UTC).
+     * 
+     */
     private final @Nullable Double refreshAfterTimeUtc;
+    /**
+     * Access token type.
+     * 
+     */
     private final @Nullable String tokenType;
 
     @OutputCustomType.Constructor({"accessToken","expiryTimeUtc","refreshAfterTimeUtc","tokenType"})
@@ -29,15 +45,31 @@ public final class GetOnlineEndpointTokenResult {
         this.tokenType = tokenType;
     }
 
+    /**
+     * Access token.
+     * 
+     */
     public Optional<String> getAccessToken() {
         return Optional.ofNullable(this.accessToken);
     }
+    /**
+     * Access token expiry time (UTC).
+     * 
+     */
     public Optional<Double> getExpiryTimeUtc() {
         return Optional.ofNullable(this.expiryTimeUtc);
     }
+    /**
+     * Refresh access token after time (UTC).
+     * 
+     */
     public Optional<Double> getRefreshAfterTimeUtc() {
         return Optional.ofNullable(this.refreshAfterTimeUtc);
     }
+    /**
+     * Access token type.
+     * 
+     */
     public Optional<String> getTokenType() {
         return Optional.ofNullable(this.tokenType);
     }

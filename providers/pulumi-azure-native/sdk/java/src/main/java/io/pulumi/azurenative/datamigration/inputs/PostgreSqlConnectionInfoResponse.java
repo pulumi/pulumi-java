@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Information for connecting to PostgreSQL server
+ * 
+ */
 public final class PostgreSqlConnectionInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PostgreSqlConnectionInfoResponse Empty = new PostgreSqlConnectionInfoResponse();
 
+    /**
+     * Name of the database
+     * 
+     */
     @InputImport(name="databaseName")
     private final @Nullable String databaseName;
 
@@ -22,6 +30,10 @@ public final class PostgreSqlConnectionInfoResponse extends io.pulumi.resources.
         return this.databaseName == null ? Optional.empty() : Optional.ofNullable(this.databaseName);
     }
 
+    /**
+     * Password credential.
+     * 
+     */
     @InputImport(name="password")
     private final @Nullable String password;
 
@@ -29,6 +41,10 @@ public final class PostgreSqlConnectionInfoResponse extends io.pulumi.resources.
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
     }
 
+    /**
+     * Port for Server
+     * 
+     */
     @InputImport(name="port", required=true)
     private final Integer port;
 
@@ -36,6 +52,10 @@ public final class PostgreSqlConnectionInfoResponse extends io.pulumi.resources.
         return this.port;
     }
 
+    /**
+     * Name of the server
+     * 
+     */
     @InputImport(name="serverName", required=true)
     private final String serverName;
 
@@ -43,6 +63,11 @@ public final class PostgreSqlConnectionInfoResponse extends io.pulumi.resources.
         return this.serverName;
     }
 
+    /**
+     * Type of connection info
+     * Expected value is 'PostgreSqlConnectionInfo'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -50,6 +75,10 @@ public final class PostgreSqlConnectionInfoResponse extends io.pulumi.resources.
         return this.type;
     }
 
+    /**
+     * User name
+     * 
+     */
     @InputImport(name="userName")
     private final @Nullable String userName;
 

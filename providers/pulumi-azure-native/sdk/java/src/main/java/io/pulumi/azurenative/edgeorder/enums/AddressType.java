@@ -8,10 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Type of address.
+     * 
+     */
     @EnumType
     public enum AddressType {
+        /**
+         * Address type not known.
+         * 
+         */
         None("None"),
+        /**
+         * Residential Address.
+         * 
+         */
         Residential("Residential"),
+        /**
+         * Commercial Address.
+         * 
+         */
         Commercial("Commercial");
 
         private final String value;

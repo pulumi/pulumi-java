@@ -22,6 +22,10 @@ public final class DatasetCreateRequestPathArgs extends io.pulumi.resources.Reso
         return this.dataPath == null ? Input.empty() : this.dataPath;
     }
 
+    /**
+     * The Http URL.
+     * 
+     */
     @InputImport(name="httpUrl")
     private final @Nullable Input<String> httpUrl;
 

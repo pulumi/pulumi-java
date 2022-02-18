@@ -10,7 +10,16 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DeliveryRuleUrlFileNameConditionResponse {
+    /**
+     * The name of the condition for the delivery rule.
+     * Expected value is 'UrlFileName'.
+     * 
+     */
     private final String name;
+    /**
+     * Defines the parameters for the condition.
+     * 
+     */
     private final UrlFileNameMatchConditionParametersResponse parameters;
 
     @OutputCustomType.Constructor({"name","parameters"})
@@ -21,9 +30,18 @@ public final class DeliveryRuleUrlFileNameConditionResponse {
         this.parameters = Objects.requireNonNull(parameters);
     }
 
+    /**
+     * The name of the condition for the delivery rule.
+     * Expected value is 'UrlFileName'.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Defines the parameters for the condition.
+     * 
+     */
     public UrlFileNameMatchConditionParametersResponse getParameters() {
         return this.parameters;
     }

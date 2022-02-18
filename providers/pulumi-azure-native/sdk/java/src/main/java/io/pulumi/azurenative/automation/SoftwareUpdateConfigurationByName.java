@@ -18,75 +18,184 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Software update configuration properties.
+ * API Version: 2019-06-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:automation:SoftwareUpdateConfigurationByName testpatch /subscriptions/51766542-3ed7-4a72-a187-0c8ab644ddab/resourceGroups/mygroup/providers/Microsoft.Automation/automationAccounts/myaccount/softwareUpdateConfigurations/testpatch 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:automation:SoftwareUpdateConfigurationByName")
 public class SoftwareUpdateConfigurationByName extends io.pulumi.resources.CustomResource {
+    /**
+     * CreatedBy property, which only appears in the response.
+     * 
+     */
     @OutputExport(name="createdBy", type=String.class, parameters={})
     private Output<String> createdBy;
 
+    /**
+     * @return CreatedBy property, which only appears in the response.
+     * 
+     */
     public Output<String> getCreatedBy() {
         return this.createdBy;
     }
+    /**
+     * Creation time of the resource, which only appears in the response.
+     * 
+     */
     @OutputExport(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
+    /**
+     * @return Creation time of the resource, which only appears in the response.
+     * 
+     */
     public Output<String> getCreationTime() {
         return this.creationTime;
     }
+    /**
+     * Details of provisioning error
+     * 
+     */
     @OutputExport(name="error", type=ErrorResponseResponse.class, parameters={})
     private Output</* @Nullable */ ErrorResponseResponse> error;
 
+    /**
+     * @return Details of provisioning error
+     * 
+     */
     public Output</* @Nullable */ ErrorResponseResponse> getError() {
         return this.error;
     }
+    /**
+     * LastModifiedBy property, which only appears in the response.
+     * 
+     */
     @OutputExport(name="lastModifiedBy", type=String.class, parameters={})
     private Output<String> lastModifiedBy;
 
+    /**
+     * @return LastModifiedBy property, which only appears in the response.
+     * 
+     */
     public Output<String> getLastModifiedBy() {
         return this.lastModifiedBy;
     }
+    /**
+     * Last time resource was modified, which only appears in the response.
+     * 
+     */
     @OutputExport(name="lastModifiedTime", type=String.class, parameters={})
     private Output<String> lastModifiedTime;
 
+    /**
+     * @return Last time resource was modified, which only appears in the response.
+     * 
+     */
     public Output<String> getLastModifiedTime() {
         return this.lastModifiedTime;
     }
+    /**
+     * Resource name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Provisioning state for the software update configuration, which only appears in the response.
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return Provisioning state for the software update configuration, which only appears in the response.
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Schedule information for the Software update configuration
+     * 
+     */
     @OutputExport(name="scheduleInfo", type=SUCSchedulePropertiesResponse.class, parameters={})
     private Output<SUCSchedulePropertiesResponse> scheduleInfo;
 
+    /**
+     * @return Schedule information for the Software update configuration
+     * 
+     */
     public Output<SUCSchedulePropertiesResponse> getScheduleInfo() {
         return this.scheduleInfo;
     }
+    /**
+     * Tasks information for the Software update configuration.
+     * 
+     */
     @OutputExport(name="tasks", type=SoftwareUpdateConfigurationTasksResponse.class, parameters={})
     private Output</* @Nullable */ SoftwareUpdateConfigurationTasksResponse> tasks;
 
+    /**
+     * @return Tasks information for the Software update configuration.
+     * 
+     */
     public Output</* @Nullable */ SoftwareUpdateConfigurationTasksResponse> getTasks() {
         return this.tasks;
     }
+    /**
+     * Resource type
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * update specific properties for the Software update configuration
+     * 
+     */
     @OutputExport(name="updateConfiguration", type=UpdateConfigurationResponse.class, parameters={})
     private Output<UpdateConfigurationResponse> updateConfiguration;
 
+    /**
+     * @return update specific properties for the Software update configuration
+     * 
+     */
     public Output<UpdateConfigurationResponse> getUpdateConfiguration() {
         return this.updateConfiguration;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public SoftwareUpdateConfigurationByName(String name, SoftwareUpdateConfigurationByNameArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:automation:SoftwareUpdateConfigurationByName", name, args == null ? SoftwareUpdateConfigurationByNameArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -106,6 +215,14 @@ public class SoftwareUpdateConfigurationByName extends io.pulumi.resources.Custo
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static SoftwareUpdateConfigurationByName get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SoftwareUpdateConfigurationByName(name, id, options);
     }

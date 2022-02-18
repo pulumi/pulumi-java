@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Additional information about Azure File Share backup item.
+ * 
+ */
 public final class AzureFileshareProtectedItemExtendedInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureFileshareProtectedItemExtendedInfoArgs Empty = new AzureFileshareProtectedItemExtendedInfoArgs();
 
+    /**
+     * The oldest backup copy available for this item in the service.
+     * 
+     */
     @InputImport(name="oldestRecoveryPoint")
     private final @Nullable Input<String> oldestRecoveryPoint;
 
@@ -22,6 +30,10 @@ public final class AzureFileshareProtectedItemExtendedInfoArgs extends io.pulumi
         return this.oldestRecoveryPoint == null ? Input.empty() : this.oldestRecoveryPoint;
     }
 
+    /**
+     * Indicates consistency of policy object and policy applied to this backup item.
+     * 
+     */
     @InputImport(name="policyState")
     private final @Nullable Input<String> policyState;
 
@@ -29,6 +41,10 @@ public final class AzureFileshareProtectedItemExtendedInfoArgs extends io.pulumi
         return this.policyState == null ? Input.empty() : this.policyState;
     }
 
+    /**
+     * Number of available backup copies associated with this backup item.
+     * 
+     */
     @InputImport(name="recoveryPointCount")
     private final @Nullable Input<Integer> recoveryPointCount;
 

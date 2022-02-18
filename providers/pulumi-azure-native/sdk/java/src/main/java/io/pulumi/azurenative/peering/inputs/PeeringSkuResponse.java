@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The SKU that defines the tier and kind of the peering.
+ * 
+ */
 public final class PeeringSkuResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PeeringSkuResponse Empty = new PeeringSkuResponse();
 
+    /**
+     * The family of the peering SKU.
+     * 
+     */
     @InputImport(name="family")
     private final @Nullable String family;
 
@@ -21,6 +29,10 @@ public final class PeeringSkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.family == null ? Optional.empty() : Optional.ofNullable(this.family);
     }
 
+    /**
+     * The name of the peering SKU.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -28,6 +40,10 @@ public final class PeeringSkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The size of the peering SKU.
+     * 
+     */
     @InputImport(name="size")
     private final @Nullable String size;
 
@@ -35,6 +51,10 @@ public final class PeeringSkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.size == null ? Optional.empty() : Optional.ofNullable(this.size);
     }
 
+    /**
+     * The tier of the peering SKU.
+     * 
+     */
     @InputImport(name="tier")
     private final @Nullable String tier;
 

@@ -12,6 +12,10 @@ public final class GetEncryptionProtectorArgs extends io.pulumi.resources.Invoke
 
     public static final GetEncryptionProtectorArgs Empty = new GetEncryptionProtectorArgs();
 
+    /**
+     * The name of the encryption protector to be retrieved.
+     * 
+     */
     @InputImport(name="encryptionProtectorName", required=true)
     private final String encryptionProtectorName;
 
@@ -19,6 +23,10 @@ public final class GetEncryptionProtectorArgs extends io.pulumi.resources.Invoke
         return this.encryptionProtectorName;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetEncryptionProtectorArgs extends io.pulumi.resources.Invoke
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the server.
+     * 
+     */
     @InputImport(name="serverName", required=true)
     private final String serverName;
 

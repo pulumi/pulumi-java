@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVCenter {
+/**
+ * Defines the vCenter.
+ * API Version: 2020-10-01-preview.
+ * 
+ *
+ * Defines the vCenter.
+ * 
+ */
     public static CompletableFuture<GetVCenterResult> invokeAsync(GetVCenterArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:connectedvmwarevsphere:getVCenter", TypeShape.of(GetVCenterResult.class), args == null ? GetVCenterArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SubnetSharedPublicIpAddressConfigurationResponse {
+    /**
+     * Backend ports that virtual machines on this subnet are allowed to expose
+     * 
+     */
     private final @Nullable List<PortResponse> allowedPorts;
 
     @OutputCustomType.Constructor({"allowedPorts"})
@@ -18,6 +22,10 @@ public final class SubnetSharedPublicIpAddressConfigurationResponse {
         this.allowedPorts = allowedPorts;
     }
 
+    /**
+     * Backend ports that virtual machines on this subnet are allowed to expose
+     * 
+     */
     public List<PortResponse> getAllowedPorts() {
         return this.allowedPorts == null ? List.of() : this.allowedPorts;
     }

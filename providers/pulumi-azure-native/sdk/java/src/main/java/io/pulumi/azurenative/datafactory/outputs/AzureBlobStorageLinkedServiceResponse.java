@@ -20,22 +20,91 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AzureBlobStorageLinkedServiceResponse {
+    /**
+     * The Azure key vault secret reference of accountKey in connection string.
+     * 
+     */
     private final @Nullable AzureKeyVaultSecretReferenceResponse accountKey;
+    /**
+     * Specify the kind of your storage account. Allowed values are: Storage (general purpose v1), StorageV2 (general purpose v2), BlobStorage, or BlockBlobStorage. Type: string (or Expression with resultType string).
+     * 
+     */
     private final @Nullable String accountKind;
+    /**
+     * List of tags that can be used for describing the linked service.
+     * 
+     */
     private final @Nullable List<Object> annotations;
+    /**
+     * Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
+     * 
+     */
     private final @Nullable Object azureCloudType;
+    /**
+     * The integration runtime reference.
+     * 
+     */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+    /**
+     * The connection string. It is mutually exclusive with sasUri, serviceEndpoint property. Type: string, SecureString or AzureKeyVaultSecretReference.
+     * 
+     */
     private final @Nullable Object connectionString;
+    /**
+     * The credential reference containing authentication information.
+     * 
+     */
     private final @Nullable CredentialReferenceResponse credential;
+    /**
+     * Linked service description.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     private final @Nullable String encryptedCredential;
+    /**
+     * Parameters for linked service.
+     * 
+     */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+    /**
+     * The Azure key vault secret reference of sasToken in sas uri.
+     * 
+     */
     private final @Nullable AzureKeyVaultSecretReferenceResponse sasToken;
+    /**
+     * SAS URI of the Azure Blob Storage resource. It is mutually exclusive with connectionString, serviceEndpoint property. Type: string, SecureString or AzureKeyVaultSecretReference.
+     * 
+     */
     private final @Nullable Object sasUri;
+    /**
+     * Blob service endpoint of the Azure Blob Storage resource. It is mutually exclusive with connectionString, sasUri property.
+     * 
+     */
     private final @Nullable String serviceEndpoint;
+    /**
+     * The ID of the service principal used to authenticate against Azure SQL Data Warehouse. Type: string (or Expression with resultType string).
+     * 
+     */
     private final @Nullable Object servicePrincipalId;
+    /**
+     * The key of the service principal used to authenticate against Azure SQL Data Warehouse.
+     * 
+     */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
+    /**
+     * The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
+     * 
+     */
     private final @Nullable Object tenant;
+    /**
+     * Type of linked service.
+     * Expected value is 'AzureBlobStorage'.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"accountKey","accountKind","annotations","azureCloudType","connectVia","connectionString","credential","description","encryptedCredential","parameters","sasToken","sasUri","serviceEndpoint","servicePrincipalId","servicePrincipalKey","tenant","type"})
@@ -76,54 +145,123 @@ public final class AzureBlobStorageLinkedServiceResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * The Azure key vault secret reference of accountKey in connection string.
+     * 
+     */
     public Optional<AzureKeyVaultSecretReferenceResponse> getAccountKey() {
         return Optional.ofNullable(this.accountKey);
     }
+    /**
+     * Specify the kind of your storage account. Allowed values are: Storage (general purpose v1), StorageV2 (general purpose v2), BlobStorage, or BlockBlobStorage. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<String> getAccountKind() {
         return Optional.ofNullable(this.accountKind);
     }
+    /**
+     * List of tags that can be used for describing the linked service.
+     * 
+     */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
+    /**
+     * Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> getAzureCloudType() {
         return Optional.ofNullable(this.azureCloudType);
     }
+    /**
+     * The integration runtime reference.
+     * 
+     */
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return Optional.ofNullable(this.connectVia);
     }
+    /**
+     * The connection string. It is mutually exclusive with sasUri, serviceEndpoint property. Type: string, SecureString or AzureKeyVaultSecretReference.
+     * 
+     */
     public Optional<Object> getConnectionString() {
         return Optional.ofNullable(this.connectionString);
     }
+    /**
+     * The credential reference containing authentication information.
+     * 
+     */
     public Optional<CredentialReferenceResponse> getCredential() {
         return Optional.ofNullable(this.credential);
     }
+    /**
+     * Linked service description.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<String> getEncryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
+    /**
+     * Parameters for linked service.
+     * 
+     */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
+    /**
+     * The Azure key vault secret reference of sasToken in sas uri.
+     * 
+     */
     public Optional<AzureKeyVaultSecretReferenceResponse> getSasToken() {
         return Optional.ofNullable(this.sasToken);
     }
+    /**
+     * SAS URI of the Azure Blob Storage resource. It is mutually exclusive with connectionString, serviceEndpoint property. Type: string, SecureString or AzureKeyVaultSecretReference.
+     * 
+     */
     public Optional<Object> getSasUri() {
         return Optional.ofNullable(this.sasUri);
     }
+    /**
+     * Blob service endpoint of the Azure Blob Storage resource. It is mutually exclusive with connectionString, sasUri property.
+     * 
+     */
     public Optional<String> getServiceEndpoint() {
         return Optional.ofNullable(this.serviceEndpoint);
     }
+    /**
+     * The ID of the service principal used to authenticate against Azure SQL Data Warehouse. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> getServicePrincipalId() {
         return Optional.ofNullable(this.servicePrincipalId);
     }
+    /**
+     * The key of the service principal used to authenticate against Azure SQL Data Warehouse.
+     * 
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getServicePrincipalKey() {
         return Optional.ofNullable(this.servicePrincipalKey);
     }
+    /**
+     * The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> getTenant() {
         return Optional.ofNullable(this.tenant);
     }
+    /**
+     * Type of linked service.
+     * Expected value is 'AzureBlobStorage'.
+     * 
+     */
     public String getType() {
         return this.type;
     }

@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetGlobalUserEnvironmentResult {
+    /**
+     * Details of the environment
+     * 
+     */
     private final EnvironmentDetailsResponse environment;
 
     @OutputCustomType.Constructor({"environment"})
@@ -16,6 +20,10 @@ public final class GetGlobalUserEnvironmentResult {
         this.environment = Objects.requireNonNull(environment);
     }
 
+    /**
+     * Details of the environment
+     * 
+     */
     public EnvironmentDetailsResponse getEnvironment() {
         return this.environment;
     }

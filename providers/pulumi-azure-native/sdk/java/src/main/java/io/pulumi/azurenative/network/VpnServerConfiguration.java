@@ -23,117 +23,282 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * VpnServerConfiguration Resource.
+ * API Version: 2020-11-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:network:VpnServerConfiguration vpnServerConfiguration1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnServerConfigurations/vpnServerConfiguration1 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:network:VpnServerConfiguration")
 public class VpnServerConfiguration extends io.pulumi.resources.CustomResource {
+    /**
+     * The set of aad vpn authentication parameters.
+     * 
+     */
     @OutputExport(name="aadAuthenticationParameters", type=AadAuthenticationParametersResponse.class, parameters={})
     private Output</* @Nullable */ AadAuthenticationParametersResponse> aadAuthenticationParameters;
 
+    /**
+     * @return The set of aad vpn authentication parameters.
+     * 
+     */
     public Output</* @Nullable */ AadAuthenticationParametersResponse> getAadAuthenticationParameters() {
         return this.aadAuthenticationParameters;
     }
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * Resource location.
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * Resource name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * List of references to P2SVpnGateways.
+     * 
+     */
     @OutputExport(name="p2SVpnGateways", type=List.class, parameters={P2SVpnGatewayResponse.class})
     private Output<List<P2SVpnGatewayResponse>> p2SVpnGateways;
 
+    /**
+     * @return List of references to P2SVpnGateways.
+     * 
+     */
     public Output<List<P2SVpnGatewayResponse>> getP2SVpnGateways() {
         return this.p2SVpnGateways;
     }
+    /**
+     * The provisioning state of the VpnServerConfiguration resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning state of the VpnServerConfiguration resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Radius client root certificate of VpnServerConfiguration.
+     * 
+     */
     @OutputExport(name="radiusClientRootCertificates", type=List.class, parameters={VpnServerConfigRadiusClientRootCertificateResponse.class})
     private Output</* @Nullable */ List<VpnServerConfigRadiusClientRootCertificateResponse>> radiusClientRootCertificates;
 
+    /**
+     * @return Radius client root certificate of VpnServerConfiguration.
+     * 
+     */
     public Output</* @Nullable */ List<VpnServerConfigRadiusClientRootCertificateResponse>> getRadiusClientRootCertificates() {
         return this.radiusClientRootCertificates;
     }
+    /**
+     * The radius server address property of the VpnServerConfiguration resource for point to site client connection.
+     * 
+     */
     @OutputExport(name="radiusServerAddress", type=String.class, parameters={})
     private Output</* @Nullable */ String> radiusServerAddress;
 
+    /**
+     * @return The radius server address property of the VpnServerConfiguration resource for point to site client connection.
+     * 
+     */
     public Output</* @Nullable */ String> getRadiusServerAddress() {
         return this.radiusServerAddress;
     }
+    /**
+     * Radius Server root certificate of VpnServerConfiguration.
+     * 
+     */
     @OutputExport(name="radiusServerRootCertificates", type=List.class, parameters={VpnServerConfigRadiusServerRootCertificateResponse.class})
     private Output</* @Nullable */ List<VpnServerConfigRadiusServerRootCertificateResponse>> radiusServerRootCertificates;
 
+    /**
+     * @return Radius Server root certificate of VpnServerConfiguration.
+     * 
+     */
     public Output</* @Nullable */ List<VpnServerConfigRadiusServerRootCertificateResponse>> getRadiusServerRootCertificates() {
         return this.radiusServerRootCertificates;
     }
+    /**
+     * The radius secret property of the VpnServerConfiguration resource for point to site client connection.
+     * 
+     */
     @OutputExport(name="radiusServerSecret", type=String.class, parameters={})
     private Output</* @Nullable */ String> radiusServerSecret;
 
+    /**
+     * @return The radius secret property of the VpnServerConfiguration resource for point to site client connection.
+     * 
+     */
     public Output</* @Nullable */ String> getRadiusServerSecret() {
         return this.radiusServerSecret;
     }
+    /**
+     * Multiple Radius Server configuration for VpnServerConfiguration.
+     * 
+     */
     @OutputExport(name="radiusServers", type=List.class, parameters={RadiusServerResponse.class})
     private Output</* @Nullable */ List<RadiusServerResponse>> radiusServers;
 
+    /**
+     * @return Multiple Radius Server configuration for VpnServerConfiguration.
+     * 
+     */
     public Output</* @Nullable */ List<RadiusServerResponse>> getRadiusServers() {
         return this.radiusServers;
     }
+    /**
+     * Resource tags.
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Resource type.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * VPN authentication types for the VpnServerConfiguration.
+     * 
+     */
     @OutputExport(name="vpnAuthenticationTypes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> vpnAuthenticationTypes;
 
+    /**
+     * @return VPN authentication types for the VpnServerConfiguration.
+     * 
+     */
     public Output</* @Nullable */ List<String>> getVpnAuthenticationTypes() {
         return this.vpnAuthenticationTypes;
     }
+    /**
+     * VpnClientIpsecPolicies for VpnServerConfiguration.
+     * 
+     */
     @OutputExport(name="vpnClientIpsecPolicies", type=List.class, parameters={IpsecPolicyResponse.class})
     private Output</* @Nullable */ List<IpsecPolicyResponse>> vpnClientIpsecPolicies;
 
+    /**
+     * @return VpnClientIpsecPolicies for VpnServerConfiguration.
+     * 
+     */
     public Output</* @Nullable */ List<IpsecPolicyResponse>> getVpnClientIpsecPolicies() {
         return this.vpnClientIpsecPolicies;
     }
+    /**
+     * VPN client revoked certificate of VpnServerConfiguration.
+     * 
+     */
     @OutputExport(name="vpnClientRevokedCertificates", type=List.class, parameters={VpnServerConfigVpnClientRevokedCertificateResponse.class})
     private Output</* @Nullable */ List<VpnServerConfigVpnClientRevokedCertificateResponse>> vpnClientRevokedCertificates;
 
+    /**
+     * @return VPN client revoked certificate of VpnServerConfiguration.
+     * 
+     */
     public Output</* @Nullable */ List<VpnServerConfigVpnClientRevokedCertificateResponse>> getVpnClientRevokedCertificates() {
         return this.vpnClientRevokedCertificates;
     }
+    /**
+     * VPN client root certificate of VpnServerConfiguration.
+     * 
+     */
     @OutputExport(name="vpnClientRootCertificates", type=List.class, parameters={VpnServerConfigVpnClientRootCertificateResponse.class})
     private Output</* @Nullable */ List<VpnServerConfigVpnClientRootCertificateResponse>> vpnClientRootCertificates;
 
+    /**
+     * @return VPN client root certificate of VpnServerConfiguration.
+     * 
+     */
     public Output</* @Nullable */ List<VpnServerConfigVpnClientRootCertificateResponse>> getVpnClientRootCertificates() {
         return this.vpnClientRootCertificates;
     }
+    /**
+     * VPN protocols for the VpnServerConfiguration.
+     * 
+     */
     @OutputExport(name="vpnProtocols", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> vpnProtocols;
 
+    /**
+     * @return VPN protocols for the VpnServerConfiguration.
+     * 
+     */
     public Output</* @Nullable */ List<String>> getVpnProtocols() {
         return this.vpnProtocols;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public VpnServerConfiguration(String name, VpnServerConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:VpnServerConfiguration", name, args == null ? VpnServerConfigurationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -165,6 +330,14 @@ public class VpnServerConfiguration extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static VpnServerConfiguration get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new VpnServerConfiguration(name, id, options);
     }

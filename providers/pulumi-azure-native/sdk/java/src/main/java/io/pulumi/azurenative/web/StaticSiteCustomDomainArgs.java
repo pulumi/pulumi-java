@@ -14,6 +14,10 @@ public final class StaticSiteCustomDomainArgs extends io.pulumi.resources.Resour
 
     public static final StaticSiteCustomDomainArgs Empty = new StaticSiteCustomDomainArgs();
 
+    /**
+     * The custom domain to create.
+     * 
+     */
     @InputImport(name="domainName")
     private final @Nullable Input<String> domainName;
 
@@ -21,6 +25,10 @@ public final class StaticSiteCustomDomainArgs extends io.pulumi.resources.Resour
         return this.domainName == null ? Input.empty() : this.domainName;
     }
 
+    /**
+     * Kind of resource.
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -28,6 +36,10 @@ public final class StaticSiteCustomDomainArgs extends io.pulumi.resources.Resour
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Name of the static site.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -35,6 +47,10 @@ public final class StaticSiteCustomDomainArgs extends io.pulumi.resources.Resour
         return this.name;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -42,6 +58,10 @@ public final class StaticSiteCustomDomainArgs extends io.pulumi.resources.Resour
         return this.resourceGroupName;
     }
 
+    /**
+     * Validation method for adding a custom domain
+     * 
+     */
     @InputImport(name="validationMethod")
     private final @Nullable Input<String> validationMethod;
 

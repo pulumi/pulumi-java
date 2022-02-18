@@ -12,10 +12,31 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class OracleCloudStorageLocationResponse {
+    /**
+     * Specify the bucketName of Oracle Cloud Storage. Type: string (or Expression with resultType string)
+     * 
+     */
     private final @Nullable Object bucketName;
+    /**
+     * Specify the file name of dataset. Type: string (or Expression with resultType string).
+     * 
+     */
     private final @Nullable Object fileName;
+    /**
+     * Specify the folder path of dataset. Type: string (or Expression with resultType string)
+     * 
+     */
     private final @Nullable Object folderPath;
+    /**
+     * Type of dataset storage location.
+     * Expected value is 'OracleCloudStorageLocation'.
+     * 
+     */
     private final String type;
+    /**
+     * Specify the version of Oracle Cloud Storage. Type: string (or Expression with resultType string).
+     * 
+     */
     private final @Nullable Object version;
 
     @OutputCustomType.Constructor({"bucketName","fileName","folderPath","type","version"})
@@ -32,18 +53,39 @@ public final class OracleCloudStorageLocationResponse {
         this.version = version;
     }
 
+    /**
+     * Specify the bucketName of Oracle Cloud Storage. Type: string (or Expression with resultType string)
+     * 
+     */
     public Optional<Object> getBucketName() {
         return Optional.ofNullable(this.bucketName);
     }
+    /**
+     * Specify the file name of dataset. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> getFileName() {
         return Optional.ofNullable(this.fileName);
     }
+    /**
+     * Specify the folder path of dataset. Type: string (or Expression with resultType string)
+     * 
+     */
     public Optional<Object> getFolderPath() {
         return Optional.ofNullable(this.folderPath);
     }
+    /**
+     * Type of dataset storage location.
+     * Expected value is 'OracleCloudStorageLocation'.
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * Specify the version of Oracle Cloud Storage. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> getVersion() {
         return Optional.ofNullable(this.version);
     }

@@ -11,11 +11,35 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SystemMetadataResponse {
+    /**
+     * The timestamp of resource creation (UTC).
+     * 
+     */
     private final @Nullable String createdAt;
+    /**
+     * A string identifier for the identity that created the resource.
+     * 
+     */
     private final @Nullable String createdBy;
+    /**
+     * The type of identity that created the resource: user, application, managedIdentity.
+     * 
+     */
     private final @Nullable String createdByType;
+    /**
+     * The timestamp of resource last modification (UTC).
+     * 
+     */
     private final @Nullable String lastModifiedAt;
+    /**
+     * A string identifier for the identity that last modified the resource.
+     * 
+     */
     private final @Nullable String lastModifiedBy;
+    /**
+     * The type of identity that last modified the resource: user, application, managedIdentity.
+     * 
+     */
     private final @Nullable String lastModifiedByType;
 
     @OutputCustomType.Constructor({"createdAt","createdBy","createdByType","lastModifiedAt","lastModifiedBy","lastModifiedByType"})
@@ -34,21 +58,45 @@ public final class SystemMetadataResponse {
         this.lastModifiedByType = lastModifiedByType;
     }
 
+    /**
+     * The timestamp of resource creation (UTC).
+     * 
+     */
     public Optional<String> getCreatedAt() {
         return Optional.ofNullable(this.createdAt);
     }
+    /**
+     * A string identifier for the identity that created the resource.
+     * 
+     */
     public Optional<String> getCreatedBy() {
         return Optional.ofNullable(this.createdBy);
     }
+    /**
+     * The type of identity that created the resource: user, application, managedIdentity.
+     * 
+     */
     public Optional<String> getCreatedByType() {
         return Optional.ofNullable(this.createdByType);
     }
+    /**
+     * The timestamp of resource last modification (UTC).
+     * 
+     */
     public Optional<String> getLastModifiedAt() {
         return Optional.ofNullable(this.lastModifiedAt);
     }
+    /**
+     * A string identifier for the identity that last modified the resource.
+     * 
+     */
     public Optional<String> getLastModifiedBy() {
         return Optional.ofNullable(this.lastModifiedBy);
     }
+    /**
+     * The type of identity that last modified the resource: user, application, managedIdentity.
+     * 
+     */
     public Optional<String> getLastModifiedByType() {
         return Optional.ofNullable(this.lastModifiedByType);
     }

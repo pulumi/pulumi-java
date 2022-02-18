@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * An azure function receiver.
+ * 
+ */
 public final class AzureFunctionReceiverResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureFunctionReceiverResponse Empty = new AzureFunctionReceiverResponse();
 
+    /**
+     * The azure resource id of the function app.
+     * 
+     */
     @InputImport(name="functionAppResourceId", required=true)
     private final String functionAppResourceId;
 
@@ -22,6 +30,10 @@ public final class AzureFunctionReceiverResponse extends io.pulumi.resources.Inv
         return this.functionAppResourceId;
     }
 
+    /**
+     * The function name in the function app.
+     * 
+     */
     @InputImport(name="functionName", required=true)
     private final String functionName;
 
@@ -29,6 +41,10 @@ public final class AzureFunctionReceiverResponse extends io.pulumi.resources.Inv
         return this.functionName;
     }
 
+    /**
+     * The http trigger url where http request sent to.
+     * 
+     */
     @InputImport(name="httpTriggerUrl", required=true)
     private final String httpTriggerUrl;
 
@@ -36,6 +52,10 @@ public final class AzureFunctionReceiverResponse extends io.pulumi.resources.Inv
         return this.httpTriggerUrl;
     }
 
+    /**
+     * The name of the azure function receiver. Names must be unique across all receivers within an action group.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -43,6 +63,10 @@ public final class AzureFunctionReceiverResponse extends io.pulumi.resources.Inv
         return this.name;
     }
 
+    /**
+     * Indicates whether to use common alert schema.
+     * 
+     */
     @InputImport(name="useCommonAlertSchema")
     private final @Nullable Boolean useCommonAlertSchema;
 

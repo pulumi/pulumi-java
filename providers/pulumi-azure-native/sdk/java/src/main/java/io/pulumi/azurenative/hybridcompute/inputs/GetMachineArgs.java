@@ -14,6 +14,10 @@ public final class GetMachineArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetMachineArgs Empty = new GetMachineArgs();
 
+    /**
+     * The expand expression to apply on the operation.
+     * 
+     */
     @InputImport(name="expand")
     private final @Nullable String expand;
 
@@ -21,6 +25,10 @@ public final class GetMachineArgs extends io.pulumi.resources.InvokeArgs {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
+    /**
+     * The name of the hybrid machine.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -28,6 +36,10 @@ public final class GetMachineArgs extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

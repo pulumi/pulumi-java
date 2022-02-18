@@ -12,8 +12,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TaskContainerSettingsResponse {
+    /**
+     * These additional options are supplied as arguments to the "docker create" command, in addition to those controlled by the Batch Service.
+     * 
+     */
     private final @Nullable String containerRunOptions;
+    /**
+     * This is the full image reference, as would be specified to "docker pull". If no tag is provided as part of the image name, the tag ":latest" is used as a default.
+     * 
+     */
     private final String imageName;
+    /**
+     * This setting can be omitted if was already provided at pool creation.
+     * 
+     */
     private final @Nullable ContainerRegistryResponse registry;
     private final @Nullable String workingDirectory;
 
@@ -29,12 +41,24 @@ public final class TaskContainerSettingsResponse {
         this.workingDirectory = workingDirectory;
     }
 
+    /**
+     * These additional options are supplied as arguments to the "docker create" command, in addition to those controlled by the Batch Service.
+     * 
+     */
     public Optional<String> getContainerRunOptions() {
         return Optional.ofNullable(this.containerRunOptions);
     }
+    /**
+     * This is the full image reference, as would be specified to "docker pull". If no tag is provided as part of the image name, the tag ":latest" is used as a default.
+     * 
+     */
     public String getImageName() {
         return this.imageName;
     }
+    /**
+     * This setting can be omitted if was already provided at pool creation.
+     * 
+     */
     public Optional<ContainerRegistryResponse> getRegistry() {
         return Optional.ofNullable(this.registry);
     }

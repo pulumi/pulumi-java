@@ -16,6 +16,10 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ProfileArgs Empty = new ProfileArgs();
 
+    /**
+     * Resource location.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -23,6 +27,10 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Name of the CDN profile which is unique within the resource group.
+     * 
+     */
     @InputImport(name="profileName")
     private final @Nullable Input<String> profileName;
 
@@ -30,6 +38,10 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.profileName == null ? Input.empty() : this.profileName;
     }
 
+    /**
+     * Name of the Resource group within the Azure subscription.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -37,6 +49,10 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The pricing tier (defines a CDN provider, feature list and rate) of the CDN profile.
+     * 
+     */
     @InputImport(name="sku", required=true)
     private final Input<SkuArgs> sku;
 
@@ -44,6 +60,10 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku;
     }
 
+    /**
+     * Resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

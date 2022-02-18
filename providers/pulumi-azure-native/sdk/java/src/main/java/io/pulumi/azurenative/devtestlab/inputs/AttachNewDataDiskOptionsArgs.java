@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties to attach new disk to the Virtual Machine.
+ * 
+ */
 public final class AttachNewDataDiskOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AttachNewDataDiskOptionsArgs Empty = new AttachNewDataDiskOptionsArgs();
 
+    /**
+     * The name of the disk to be attached.
+     * 
+     */
     @InputImport(name="diskName")
     private final @Nullable Input<String> diskName;
 
@@ -24,6 +32,10 @@ public final class AttachNewDataDiskOptionsArgs extends io.pulumi.resources.Reso
         return this.diskName == null ? Input.empty() : this.diskName;
     }
 
+    /**
+     * Size of the disk to be attached in Gibibytes.
+     * 
+     */
     @InputImport(name="diskSizeGiB")
     private final @Nullable Input<Integer> diskSizeGiB;
 
@@ -31,6 +43,10 @@ public final class AttachNewDataDiskOptionsArgs extends io.pulumi.resources.Reso
         return this.diskSizeGiB == null ? Input.empty() : this.diskSizeGiB;
     }
 
+    /**
+     * The storage type for the disk (i.e. Standard, Premium).
+     * 
+     */
     @InputImport(name="diskType")
     private final @Nullable Input<Either<String,StorageType>> diskType;
 

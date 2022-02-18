@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Backup state of this backup item.
+     * 
+     */
     @EnumType
     public enum ProtectionStatus {
         Invalid("Invalid"),

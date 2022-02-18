@@ -13,11 +13,35 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetJobCollectionResult {
+    /**
+     * Gets the job collection resource identifier.
+     * 
+     */
     private final String id;
+    /**
+     * Gets or sets the storage account location.
+     * 
+     */
     private final @Nullable String location;
+    /**
+     * Gets or sets the job collection resource name.
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * Gets or sets the job collection properties.
+     * 
+     */
     private final JobCollectionPropertiesResponse properties;
+    /**
+     * Gets or sets the tags.
+     * 
+     */
     private final @Nullable Map<String,String> tags;
+    /**
+     * Gets the job collection resource type.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"id","location","name","properties","tags","type"})
@@ -36,21 +60,45 @@ public final class GetJobCollectionResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Gets the job collection resource identifier.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Gets or sets the storage account location.
+     * 
+     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
+    /**
+     * Gets or sets the job collection resource name.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * Gets or sets the job collection properties.
+     * 
+     */
     public JobCollectionPropertiesResponse getProperties() {
         return this.properties;
     }
+    /**
+     * Gets or sets the tags.
+     * 
+     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+    /**
+     * Gets the job collection resource type.
+     * 
+     */
     public String getType() {
         return this.type;
     }

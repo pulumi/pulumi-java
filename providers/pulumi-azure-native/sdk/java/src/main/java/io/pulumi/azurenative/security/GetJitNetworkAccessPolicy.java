@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetJitNetworkAccessPolicy {
+/**
+ * API Version: 2020-01-01.
+ * 
+ */
     public static CompletableFuture<GetJitNetworkAccessPolicyResult> invokeAsync(GetJitNetworkAccessPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:security:getJitNetworkAccessPolicy", TypeShape.of(GetJitNetworkAccessPolicyResult.class), args == null ? GetJitNetworkAccessPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

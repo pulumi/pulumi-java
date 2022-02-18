@@ -11,10 +11,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * ExtendedLocation complex type.
+ * 
+ */
 public final class ExtendedLocationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ExtendedLocationArgs Empty = new ExtendedLocationArgs();
 
+    /**
+     * The name of the extended location.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -22,6 +30,10 @@ public final class ExtendedLocationArgs extends io.pulumi.resources.ResourceArgs
         return this.name;
     }
 
+    /**
+     * The type of the extended location.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<Either<String,ExtendedLocationTypes>> type;
 

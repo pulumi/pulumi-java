@@ -15,6 +15,10 @@ public final class PrivateEndpointConnectionProxyArgs extends io.pulumi.resource
 
     public static final PrivateEndpointConnectionProxyArgs Empty = new PrivateEndpointConnectionProxyArgs();
 
+    /**
+     * Account name.
+     * 
+     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -22,6 +26,10 @@ public final class PrivateEndpointConnectionProxyArgs extends io.pulumi.resource
         return this.accountName;
     }
 
+    /**
+     * The ID of the private endpoint connection proxy object.
+     * 
+     */
     @InputImport(name="privateEndpointConnectionProxyId")
     private final @Nullable Input<String> privateEndpointConnectionProxyId;
 
@@ -29,6 +37,10 @@ public final class PrivateEndpointConnectionProxyArgs extends io.pulumi.resource
         return this.privateEndpointConnectionProxyId == null ? Input.empty() : this.privateEndpointConnectionProxyId;
     }
 
+    /**
+     * Remote private endpoint details.
+     * 
+     */
     @InputImport(name="remotePrivateEndpoint")
     private final @Nullable Input<RemotePrivateEndpointArgs> remotePrivateEndpoint;
 
@@ -36,6 +48,10 @@ public final class PrivateEndpointConnectionProxyArgs extends io.pulumi.resource
         return this.remotePrivateEndpoint == null ? Input.empty() : this.remotePrivateEndpoint;
     }
 
+    /**
+     * The resource group name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -43,6 +59,10 @@ public final class PrivateEndpointConnectionProxyArgs extends io.pulumi.resource
         return this.resourceGroupName;
     }
 
+    /**
+     * Operation status.
+     * 
+     */
     @InputImport(name="status")
     private final @Nullable Input<String> status;
 

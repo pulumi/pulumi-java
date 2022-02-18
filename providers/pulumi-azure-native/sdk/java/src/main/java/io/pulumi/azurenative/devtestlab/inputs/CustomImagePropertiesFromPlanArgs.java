@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties for plan on a custom image.
+ * 
+ */
 public final class CustomImagePropertiesFromPlanArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CustomImagePropertiesFromPlanArgs Empty = new CustomImagePropertiesFromPlanArgs();
 
+    /**
+     * The id of the plan, equivalent to name of the plan
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -21,6 +29,10 @@ public final class CustomImagePropertiesFromPlanArgs extends io.pulumi.resources
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * The offer for the plan from the marketplace image the custom image is derived from
+     * 
+     */
     @InputImport(name="offer")
     private final @Nullable Input<String> offer;
 
@@ -28,6 +40,10 @@ public final class CustomImagePropertiesFromPlanArgs extends io.pulumi.resources
         return this.offer == null ? Input.empty() : this.offer;
     }
 
+    /**
+     * The publisher for the plan from the marketplace image the custom image is derived from
+     * 
+     */
     @InputImport(name="publisher")
     private final @Nullable Input<String> publisher;
 

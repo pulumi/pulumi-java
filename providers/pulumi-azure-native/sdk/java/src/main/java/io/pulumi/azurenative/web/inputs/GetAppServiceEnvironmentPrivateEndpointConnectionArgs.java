@@ -12,6 +12,10 @@ public final class GetAppServiceEnvironmentPrivateEndpointConnectionArgs extends
 
     public static final GetAppServiceEnvironmentPrivateEndpointConnectionArgs Empty = new GetAppServiceEnvironmentPrivateEndpointConnectionArgs();
 
+    /**
+     * Name of the App Service Environment.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -19,6 +23,10 @@ public final class GetAppServiceEnvironmentPrivateEndpointConnectionArgs extends
         return this.name;
     }
 
+    /**
+     * Name of the private endpoint connection.
+     * 
+     */
     @InputImport(name="privateEndpointConnectionName", required=true)
     private final String privateEndpointConnectionName;
 
@@ -26,6 +34,10 @@ public final class GetAppServiceEnvironmentPrivateEndpointConnectionArgs extends
         return this.privateEndpointConnectionName;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -20,6 +20,10 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LabPlanArgs Empty = new LabPlanArgs();
 
+    /**
+     * The allowed regions for the lab creator to use when creating labs using this lab plan.
+     * 
+     */
     @InputImport(name="allowedRegions")
     private final @Nullable Input<List<String>> allowedRegions;
 
@@ -27,6 +31,10 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.allowedRegions == null ? Input.empty() : this.allowedRegions;
     }
 
+    /**
+     * The default lab shutdown profile. This can be changed on a lab resource and only provides a default profile.
+     * 
+     */
     @InputImport(name="defaultAutoShutdownProfile")
     private final @Nullable Input<AutoShutdownProfileArgs> defaultAutoShutdownProfile;
 
@@ -34,6 +42,10 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.defaultAutoShutdownProfile == null ? Input.empty() : this.defaultAutoShutdownProfile;
     }
 
+    /**
+     * The default lab connection profile. This can be changed on a lab resource and only provides a default profile.
+     * 
+     */
     @InputImport(name="defaultConnectionProfile")
     private final @Nullable Input<ConnectionProfileArgs> defaultConnectionProfile;
 
@@ -41,6 +53,10 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.defaultConnectionProfile == null ? Input.empty() : this.defaultConnectionProfile;
     }
 
+    /**
+     * The lab plan network profile. To enforce lab network policies they must be defined here and cannot be changed when there are existing labs associated with this lab plan.
+     * 
+     */
     @InputImport(name="defaultNetworkProfile")
     private final @Nullable Input<LabPlanNetworkProfileArgs> defaultNetworkProfile;
 
@@ -48,6 +64,10 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.defaultNetworkProfile == null ? Input.empty() : this.defaultNetworkProfile;
     }
 
+    /**
+     * The name of the lab plan that uniquely identifies it within containing resource group. Used in resource URIs and in UI.
+     * 
+     */
     @InputImport(name="labPlanName")
     private final @Nullable Input<String> labPlanName;
 
@@ -55,6 +75,10 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.labPlanName == null ? Input.empty() : this.labPlanName;
     }
 
+    /**
+     * Base Url of the lms instance this lab plan can link lab rosters against.
+     * 
+     */
     @InputImport(name="linkedLmsInstance")
     private final @Nullable Input<String> linkedLmsInstance;
 
@@ -62,6 +86,10 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.linkedLmsInstance == null ? Input.empty() : this.linkedLmsInstance;
     }
 
+    /**
+     * The geo-location where the resource lives
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -69,6 +97,10 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -76,6 +108,10 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Resource ID of the Shared Image Gallery attached to this lab plan. When saving a lab template virtual machine image it will be persisted in this gallery. Shared images from the gallery can be made available to use when creating new labs.
+     * 
+     */
     @InputImport(name="sharedGalleryId")
     private final @Nullable Input<String> sharedGalleryId;
 
@@ -83,6 +119,10 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.sharedGalleryId == null ? Input.empty() : this.sharedGalleryId;
     }
 
+    /**
+     * Support contact information and instructions for users of the lab plan. This information is displayed to lab owners and virtual machine users for all labs in the lab plan.
+     * 
+     */
     @InputImport(name="supportInfo")
     private final @Nullable Input<SupportInfoArgs> supportInfo;
 
@@ -90,6 +130,10 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.supportInfo == null ? Input.empty() : this.supportInfo;
     }
 
+    /**
+     * Resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

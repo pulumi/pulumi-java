@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBlobContainerDataSet {
+/**
+ * An Azure storage blob container data set.
+ * API Version: 2020-09-01.
+ * 
+ *
+ * An Azure storage blob container data set.
+ * 
+ */
     public static CompletableFuture<GetBlobContainerDataSetResult> invokeAsync(GetBlobContainerDataSetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datashare:getBlobContainerDataSet", TypeShape.of(GetBlobContainerDataSetResult.class), args == null ? GetBlobContainerDataSetArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Filter details to transfer Azure Blobs
+ * 
+ */
 public final class BlobFilterDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BlobFilterDetailsResponse Empty = new BlobFilterDetailsResponse();
 
+    /**
+     * List of full path of the blobs to be transferred.
+     * 
+     */
     @InputImport(name="blobPathList")
     private final @Nullable List<String> blobPathList;
 
@@ -22,6 +30,10 @@ public final class BlobFilterDetailsResponse extends io.pulumi.resources.InvokeA
         return this.blobPathList == null ? List.of() : this.blobPathList;
     }
 
+    /**
+     * Prefix list of the Azure blobs to be transferred.
+     * 
+     */
     @InputImport(name="blobPrefixList")
     private final @Nullable List<String> blobPrefixList;
 
@@ -29,6 +41,10 @@ public final class BlobFilterDetailsResponse extends io.pulumi.resources.InvokeA
         return this.blobPrefixList == null ? List.of() : this.blobPrefixList;
     }
 
+    /**
+     * List of blob containers to be transferred.
+     * 
+     */
     @InputImport(name="containerList")
     private final @Nullable List<String> containerList;
 

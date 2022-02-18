@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
+     * 
+     */
     @EnumType
     public enum OSType {
         Linux("Linux"),

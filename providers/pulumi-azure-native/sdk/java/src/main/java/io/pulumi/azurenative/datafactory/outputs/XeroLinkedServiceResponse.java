@@ -19,18 +19,72 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class XeroLinkedServiceResponse {
+    /**
+     * List of tags that can be used for describing the linked service.
+     * 
+     */
     private final @Nullable List<Object> annotations;
+    /**
+     * The integration runtime reference.
+     * 
+     */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+    /**
+     * Properties used to connect to Xero. It is mutually exclusive with any other properties in the linked service. Type: object.
+     * 
+     */
     private final @Nullable Object connectionProperties;
+    /**
+     * The consumer key associated with the Xero application.
+     * 
+     */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> consumerKey;
+    /**
+     * Linked service description.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     private final @Nullable Object encryptedCredential;
+    /**
+     * The endpoint of the Xero server. (i.e. api.xero.com)
+     * 
+     */
     private final @Nullable Object host;
+    /**
+     * Parameters for linked service.
+     * 
+     */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+    /**
+     * The private key from the .pem file that was generated for your Xero private application. You must include all the text from the .pem file, including the Unix line endings(
+     * ).
+     * 
+     */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> privateKey;
+    /**
+     * Type of linked service.
+     * Expected value is 'Xero'.
+     * 
+     */
     private final String type;
+    /**
+     * Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
+     * 
+     */
     private final @Nullable Object useEncryptedEndpoints;
+    /**
+     * Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
+     * 
+     */
     private final @Nullable Object useHostVerification;
+    /**
+     * Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
+     * 
+     */
     private final @Nullable Object usePeerVerification;
 
     @OutputCustomType.Constructor({"annotations","connectVia","connectionProperties","consumerKey","description","encryptedCredential","host","parameters","privateKey","type","useEncryptedEndpoints","useHostVerification","usePeerVerification"})
@@ -63,42 +117,96 @@ public final class XeroLinkedServiceResponse {
         this.usePeerVerification = usePeerVerification;
     }
 
+    /**
+     * List of tags that can be used for describing the linked service.
+     * 
+     */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
+    /**
+     * The integration runtime reference.
+     * 
+     */
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return Optional.ofNullable(this.connectVia);
     }
+    /**
+     * Properties used to connect to Xero. It is mutually exclusive with any other properties in the linked service. Type: object.
+     * 
+     */
     public Optional<Object> getConnectionProperties() {
         return Optional.ofNullable(this.connectionProperties);
     }
+    /**
+     * The consumer key associated with the Xero application.
+     * 
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getConsumerKey() {
         return Optional.ofNullable(this.consumerKey);
     }
+    /**
+     * Linked service description.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> getEncryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
+    /**
+     * The endpoint of the Xero server. (i.e. api.xero.com)
+     * 
+     */
     public Optional<Object> getHost() {
         return Optional.ofNullable(this.host);
     }
+    /**
+     * Parameters for linked service.
+     * 
+     */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
+    /**
+     * The private key from the .pem file that was generated for your Xero private application. You must include all the text from the .pem file, including the Unix line endings(
+     * ).
+     * 
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getPrivateKey() {
         return Optional.ofNullable(this.privateKey);
     }
+    /**
+     * Type of linked service.
+     * Expected value is 'Xero'.
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
+     * 
+     */
     public Optional<Object> getUseEncryptedEndpoints() {
         return Optional.ofNullable(this.useEncryptedEndpoints);
     }
+    /**
+     * Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
+     * 
+     */
     public Optional<Object> getUseHostVerification() {
         return Optional.ofNullable(this.useHostVerification);
     }
+    /**
+     * Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
+     * 
+     */
     public Optional<Object> getUsePeerVerification() {
         return Optional.ofNullable(this.usePeerVerification);
     }

@@ -14,6 +14,10 @@ public final class GetGalleryImageArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetGalleryImageArgs Empty = new GetGalleryImageArgs();
 
+    /**
+     * Specify the $expand query. Example: 'properties($select=author)'
+     * 
+     */
     @InputImport(name="expand")
     private final @Nullable String expand;
 
@@ -21,6 +25,10 @@ public final class GetGalleryImageArgs extends io.pulumi.resources.InvokeArgs {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
+    /**
+     * The name of the gallery Image.
+     * 
+     */
     @InputImport(name="galleryImageName", required=true)
     private final String galleryImageName;
 
@@ -28,6 +36,10 @@ public final class GetGalleryImageArgs extends io.pulumi.resources.InvokeArgs {
         return this.galleryImageName;
     }
 
+    /**
+     * The name of the lab Account.
+     * 
+     */
     @InputImport(name="labAccountName", required=true)
     private final String labAccountName;
 
@@ -35,6 +47,10 @@ public final class GetGalleryImageArgs extends io.pulumi.resources.InvokeArgs {
         return this.labAccountName;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

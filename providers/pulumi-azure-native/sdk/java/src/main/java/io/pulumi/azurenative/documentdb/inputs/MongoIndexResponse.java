@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Cosmos DB MongoDB collection index key
+ * 
+ */
 public final class MongoIndexResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MongoIndexResponse Empty = new MongoIndexResponse();
 
+    /**
+     * Cosmos DB MongoDB collection index keys
+     * 
+     */
     @InputImport(name="key")
     private final @Nullable MongoIndexKeysResponse key;
 
@@ -22,6 +30,10 @@ public final class MongoIndexResponse extends io.pulumi.resources.InvokeArgs {
         return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
     }
 
+    /**
+     * Cosmos DB MongoDB collection index key options
+     * 
+     */
     @InputImport(name="options")
     private final @Nullable MongoIndexOptionsResponse options;
 

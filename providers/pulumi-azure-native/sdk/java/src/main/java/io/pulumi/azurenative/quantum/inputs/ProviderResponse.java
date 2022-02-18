@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Information about a Provider. A Provider is an entity that offers Targets to run Azure Quantum Jobs.
+ * 
+ */
 public final class ProviderResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ProviderResponse Empty = new ProviderResponse();
 
+    /**
+     * The provider's marketplace application display name.
+     * 
+     */
     @InputImport(name="applicationName")
     private final @Nullable String applicationName;
 
@@ -21,6 +29,10 @@ public final class ProviderResponse extends io.pulumi.resources.InvokeArgs {
         return this.applicationName == null ? Optional.empty() : Optional.ofNullable(this.applicationName);
     }
 
+    /**
+     * A Uri identifying the specific instance of this provider.
+     * 
+     */
     @InputImport(name="instanceUri")
     private final @Nullable String instanceUri;
 
@@ -28,6 +40,10 @@ public final class ProviderResponse extends io.pulumi.resources.InvokeArgs {
         return this.instanceUri == null ? Optional.empty() : Optional.ofNullable(this.instanceUri);
     }
 
+    /**
+     * Unique id of this provider.
+     * 
+     */
     @InputImport(name="providerId")
     private final @Nullable String providerId;
 
@@ -35,6 +51,10 @@ public final class ProviderResponse extends io.pulumi.resources.InvokeArgs {
         return this.providerId == null ? Optional.empty() : Optional.ofNullable(this.providerId);
     }
 
+    /**
+     * The sku associated with pricing information for this provider.
+     * 
+     */
     @InputImport(name="providerSku")
     private final @Nullable String providerSku;
 
@@ -42,6 +62,10 @@ public final class ProviderResponse extends io.pulumi.resources.InvokeArgs {
         return this.providerSku == null ? Optional.empty() : Optional.ofNullable(this.providerSku);
     }
 
+    /**
+     * Provisioning status field
+     * 
+     */
     @InputImport(name="provisioningState")
     private final @Nullable String provisioningState;
 
@@ -49,6 +73,10 @@ public final class ProviderResponse extends io.pulumi.resources.InvokeArgs {
         return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
     }
 
+    /**
+     * Id to track resource usage for the provider.
+     * 
+     */
     @InputImport(name="resourceUsageId")
     private final @Nullable String resourceUsageId;
 

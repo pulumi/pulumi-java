@@ -16,6 +16,10 @@ public final class JitNetworkAccessRequestResponse extends io.pulumi.resources.I
 
     public static final JitNetworkAccessRequestResponse Empty = new JitNetworkAccessRequestResponse();
 
+    /**
+     * The justification for making the initiate request
+     * 
+     */
     @InputImport(name="justification")
     private final @Nullable String justification;
 
@@ -23,6 +27,10 @@ public final class JitNetworkAccessRequestResponse extends io.pulumi.resources.I
         return this.justification == null ? Optional.empty() : Optional.ofNullable(this.justification);
     }
 
+    /**
+     * The identity of the person who made the request
+     * 
+     */
     @InputImport(name="requestor", required=true)
     private final String requestor;
 
@@ -30,6 +38,10 @@ public final class JitNetworkAccessRequestResponse extends io.pulumi.resources.I
         return this.requestor;
     }
 
+    /**
+     * The start time of the request in UTC
+     * 
+     */
     @InputImport(name="startTimeUtc", required=true)
     private final String startTimeUtc;
 

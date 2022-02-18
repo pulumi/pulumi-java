@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Threats impact of the assessment
+     * 
+     */
     @EnumType
     public enum Threats {
         AccountBreach("accountBreach"),

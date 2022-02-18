@@ -14,6 +14,10 @@ public final class GetIpAllocationArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetIpAllocationArgs Empty = new GetIpAllocationArgs();
 
+    /**
+     * Expands referenced resources.
+     * 
+     */
     @InputImport(name="expand")
     private final @Nullable String expand;
 
@@ -21,6 +25,10 @@ public final class GetIpAllocationArgs extends io.pulumi.resources.InvokeArgs {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
+    /**
+     * The name of the IpAllocation.
+     * 
+     */
     @InputImport(name="ipAllocationName", required=true)
     private final String ipAllocationName;
 
@@ -28,6 +36,10 @@ public final class GetIpAllocationArgs extends io.pulumi.resources.InvokeArgs {
         return this.ipAllocationName;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

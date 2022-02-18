@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFavorite {
+/**
+ * Properties that define a favorite that is associated to an Application Insights component.
+ * API Version: 2015-05-01.
+ * 
+ *
+ * Properties that define a favorite that is associated to an Application Insights component.
+ * 
+ */
     public static CompletableFuture<GetFavoriteResult> invokeAsync(GetFavoriteArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getFavorite", TypeShape.of(GetFavoriteResult.class), args == null ? GetFavoriteArgs.Empty : args, Utilities.withVersion(options));
     }

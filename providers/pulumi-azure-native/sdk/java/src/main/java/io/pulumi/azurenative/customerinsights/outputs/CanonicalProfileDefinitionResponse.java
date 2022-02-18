@@ -13,7 +13,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CanonicalProfileDefinitionResponse {
+    /**
+     * Canonical profile ID.
+     * 
+     */
     private final @Nullable Integer canonicalProfileId;
+    /**
+     * Properties of the canonical profile.
+     * 
+     */
     private final @Nullable List<CanonicalProfileDefinitionResponseProperties> properties;
 
     @OutputCustomType.Constructor({"canonicalProfileId","properties"})
@@ -24,9 +32,17 @@ public final class CanonicalProfileDefinitionResponse {
         this.properties = properties;
     }
 
+    /**
+     * Canonical profile ID.
+     * 
+     */
     public Optional<Integer> getCanonicalProfileId() {
         return Optional.ofNullable(this.canonicalProfileId);
     }
+    /**
+     * Properties of the canonical profile.
+     * 
+     */
     public List<CanonicalProfileDefinitionResponseProperties> getProperties() {
         return this.properties == null ? List.of() : this.properties;
     }

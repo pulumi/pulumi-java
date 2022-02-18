@@ -14,39 +14,100 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * ExpressRoute Circuit Authorization
+ * API Version: 2020-03-20.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:avs:Authorization authorization1 /subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/authorizations/authorization1 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:avs:Authorization")
 public class Authorization extends io.pulumi.resources.CustomResource {
+    /**
+     * The ID of the ExpressRoute Circuit Authorization
+     * 
+     */
     @OutputExport(name="expressRouteAuthorizationId", type=String.class, parameters={})
     private Output<String> expressRouteAuthorizationId;
 
+    /**
+     * @return The ID of the ExpressRoute Circuit Authorization
+     * 
+     */
     public Output<String> getExpressRouteAuthorizationId() {
         return this.expressRouteAuthorizationId;
     }
+    /**
+     * The key of the ExpressRoute Circuit Authorization
+     * 
+     */
     @OutputExport(name="expressRouteAuthorizationKey", type=String.class, parameters={})
     private Output<String> expressRouteAuthorizationKey;
 
+    /**
+     * @return The key of the ExpressRoute Circuit Authorization
+     * 
+     */
     public Output<String> getExpressRouteAuthorizationKey() {
         return this.expressRouteAuthorizationKey;
     }
+    /**
+     * Resource name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The state of the  ExpressRoute Circuit Authorization provisioning
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The state of the  ExpressRoute Circuit Authorization provisioning
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Resource type.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Authorization(String name, AuthorizationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:avs:Authorization", name, args == null ? AuthorizationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -69,6 +130,14 @@ public class Authorization extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Authorization get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Authorization(name, id, options);
     }

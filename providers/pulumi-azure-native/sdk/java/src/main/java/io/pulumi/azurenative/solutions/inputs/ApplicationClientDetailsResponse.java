@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The application client details to track the entity creating/updating the managed app resource.
+ * 
+ */
 public final class ApplicationClientDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApplicationClientDetailsResponse Empty = new ApplicationClientDetailsResponse();
 
+    /**
+     * The client application Id.
+     * 
+     */
     @InputImport(name="applicationId")
     private final @Nullable String applicationId;
 
@@ -21,6 +29,10 @@ public final class ApplicationClientDetailsResponse extends io.pulumi.resources.
         return this.applicationId == null ? Optional.empty() : Optional.ofNullable(this.applicationId);
     }
 
+    /**
+     * The client Oid.
+     * 
+     */
     @InputImport(name="oid")
     private final @Nullable String oid;
 
@@ -28,6 +40,10 @@ public final class ApplicationClientDetailsResponse extends io.pulumi.resources.
         return this.oid == null ? Optional.empty() : Optional.ofNullable(this.oid);
     }
 
+    /**
+     * The client Puid
+     * 
+     */
     @InputImport(name="puid")
     private final @Nullable String puid;
 

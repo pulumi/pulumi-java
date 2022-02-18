@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DisallowedResponse {
+    /**
+     * A list of disk types.
+     * 
+     */
     private final @Nullable List<String> diskTypes;
 
     @OutputCustomType.Constructor({"diskTypes"})
@@ -18,6 +22,10 @@ public final class DisallowedResponse {
         this.diskTypes = diskTypes;
     }
 
+    /**
+     * A list of disk types.
+     * 
+     */
     public List<String> getDiskTypes() {
         return this.diskTypes == null ? List.of() : this.diskTypes;
     }

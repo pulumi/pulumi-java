@@ -15,6 +15,10 @@ public final class NotificationRegistrationArgs extends io.pulumi.resources.Reso
 
     public static final NotificationRegistrationArgs Empty = new NotificationRegistrationArgs();
 
+    /**
+     * The notification registration.
+     * 
+     */
     @InputImport(name="notificationRegistrationName")
     private final @Nullable Input<String> notificationRegistrationName;
 
@@ -29,6 +33,10 @@ public final class NotificationRegistrationArgs extends io.pulumi.resources.Reso
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The name of the resource provider hosted within ProviderHub.
+     * 
+     */
     @InputImport(name="providerNamespace", required=true)
     private final Input<String> providerNamespace;
 

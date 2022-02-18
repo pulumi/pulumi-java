@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListWebAppBackupConfigurationSlot {
+/**
+ * Description of a backup which will be performed.
+ * API Version: 2020-12-01.
+ * 
+ *
+ * Description of a backup which will be performed.
+ * 
+ */
     public static CompletableFuture<ListWebAppBackupConfigurationSlotResult> invokeAsync(ListWebAppBackupConfigurationSlotArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppBackupConfigurationSlot", TypeShape.of(ListWebAppBackupConfigurationSlotResult.class), args == null ? ListWebAppBackupConfigurationSlotArgs.Empty : args, Utilities.withVersion(options));
     }

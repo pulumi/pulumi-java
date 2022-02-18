@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FlowEndpointsResponse {
+    /**
+     * The access endpoint ip address.
+     * 
+     */
     private final @Nullable List<IpAddressResponse> accessEndpointIpAddresses;
+    /**
+     * The outgoing ip address.
+     * 
+     */
     private final @Nullable List<IpAddressResponse> outgoingIpAddresses;
 
     @OutputCustomType.Constructor({"accessEndpointIpAddresses","outgoingIpAddresses"})
@@ -22,9 +30,17 @@ public final class FlowEndpointsResponse {
         this.outgoingIpAddresses = outgoingIpAddresses;
     }
 
+    /**
+     * The access endpoint ip address.
+     * 
+     */
     public List<IpAddressResponse> getAccessEndpointIpAddresses() {
         return this.accessEndpointIpAddresses == null ? List.of() : this.accessEndpointIpAddresses;
     }
+    /**
+     * The outgoing ip address.
+     * 
+     */
     public List<IpAddressResponse> getOutgoingIpAddresses() {
         return this.outgoingIpAddresses == null ? List.of() : this.outgoingIpAddresses;
     }

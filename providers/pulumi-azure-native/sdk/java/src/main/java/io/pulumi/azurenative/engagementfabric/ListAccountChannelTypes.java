@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListAccountChannelTypes {
+/**
+ * List of the EngagementFabric channel descriptions
+ * API Version: 2018-09-01-preview.
+ * 
+ *
+ * List of the EngagementFabric channel descriptions
+ * 
+ */
     public static CompletableFuture<ListAccountChannelTypesResult> invokeAsync(ListAccountChannelTypesArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:engagementfabric:listAccountChannelTypes", TypeShape.of(ListAccountChannelTypesResult.class), args == null ? ListAccountChannelTypesArgs.Empty : args, Utilities.withVersion(options));
     }

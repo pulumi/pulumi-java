@@ -14,13 +14,45 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse {
+    /**
+     * Errors associated with the BackupFolder path
+     * 
+     */
     private final List<ReportableExceptionResponse> backupFolderErrors;
+    /**
+     * Errors associated with backup share user name and password credentials
+     * 
+     */
     private final List<ReportableExceptionResponse> backupShareCredentialsErrors;
+    /**
+     * Errors associated with the storage account provided.
+     * 
+     */
     private final List<ReportableExceptionResponse> backupStorageAccountErrors;
+    /**
+     * Information about backup files when existing backup mode is used.
+     * 
+     */
     private final @Nullable DatabaseBackupInfoResponse databaseBackupInfo;
+    /**
+     * Errors associated with existing backup files.
+     * 
+     */
     private final List<ReportableExceptionResponse> existingBackupErrors;
+    /**
+     * Result identifier
+     * 
+     */
     private final String id;
+    /**
+     * Name of database
+     * 
+     */
     private final String name;
+    /**
+     * Errors associated with the RestoreDatabaseName
+     * 
+     */
     private final List<ReportableExceptionResponse> restoreDatabaseNameErrors;
 
     @OutputCustomType.Constructor({"backupFolderErrors","backupShareCredentialsErrors","backupStorageAccountErrors","databaseBackupInfo","existingBackupErrors","id","name","restoreDatabaseNameErrors"})
@@ -43,27 +75,59 @@ public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse {
         this.restoreDatabaseNameErrors = Objects.requireNonNull(restoreDatabaseNameErrors);
     }
 
+    /**
+     * Errors associated with the BackupFolder path
+     * 
+     */
     public List<ReportableExceptionResponse> getBackupFolderErrors() {
         return this.backupFolderErrors;
     }
+    /**
+     * Errors associated with backup share user name and password credentials
+     * 
+     */
     public List<ReportableExceptionResponse> getBackupShareCredentialsErrors() {
         return this.backupShareCredentialsErrors;
     }
+    /**
+     * Errors associated with the storage account provided.
+     * 
+     */
     public List<ReportableExceptionResponse> getBackupStorageAccountErrors() {
         return this.backupStorageAccountErrors;
     }
+    /**
+     * Information about backup files when existing backup mode is used.
+     * 
+     */
     public Optional<DatabaseBackupInfoResponse> getDatabaseBackupInfo() {
         return Optional.ofNullable(this.databaseBackupInfo);
     }
+    /**
+     * Errors associated with existing backup files.
+     * 
+     */
     public List<ReportableExceptionResponse> getExistingBackupErrors() {
         return this.existingBackupErrors;
     }
+    /**
+     * Result identifier
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Name of database
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Errors associated with the RestoreDatabaseName
+     * 
+     */
     public List<ReportableExceptionResponse> getRestoreDatabaseNameErrors() {
         return this.restoreDatabaseNameErrors;
     }

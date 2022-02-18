@@ -12,6 +12,10 @@ public final class GetWebAppPublicCertificateArgs extends io.pulumi.resources.In
 
     public static final GetWebAppPublicCertificateArgs Empty = new GetWebAppPublicCertificateArgs();
 
+    /**
+     * Name of the app.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -19,6 +23,10 @@ public final class GetWebAppPublicCertificateArgs extends io.pulumi.resources.In
         return this.name;
     }
 
+    /**
+     * Public certificate name.
+     * 
+     */
     @InputImport(name="publicCertificateName", required=true)
     private final String publicCertificateName;
 
@@ -26,6 +34,10 @@ public final class GetWebAppPublicCertificateArgs extends io.pulumi.resources.In
         return this.publicCertificateName;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

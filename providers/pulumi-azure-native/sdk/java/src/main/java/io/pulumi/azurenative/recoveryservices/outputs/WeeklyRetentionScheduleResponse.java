@@ -13,8 +13,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class WeeklyRetentionScheduleResponse {
+    /**
+     * List of days of week for weekly retention policy.
+     * 
+     */
     private final @Nullable List<String> daysOfTheWeek;
+    /**
+     * Retention duration of retention Policy.
+     * 
+     */
     private final @Nullable RetentionDurationResponse retentionDuration;
+    /**
+     * Retention times of retention policy.
+     * 
+     */
     private final @Nullable List<String> retentionTimes;
 
     @OutputCustomType.Constructor({"daysOfTheWeek","retentionDuration","retentionTimes"})
@@ -27,12 +39,24 @@ public final class WeeklyRetentionScheduleResponse {
         this.retentionTimes = retentionTimes;
     }
 
+    /**
+     * List of days of week for weekly retention policy.
+     * 
+     */
     public List<String> getDaysOfTheWeek() {
         return this.daysOfTheWeek == null ? List.of() : this.daysOfTheWeek;
     }
+    /**
+     * Retention duration of retention Policy.
+     * 
+     */
     public Optional<RetentionDurationResponse> getRetentionDuration() {
         return Optional.ofNullable(this.retentionDuration);
     }
+    /**
+     * Retention times of retention policy.
+     * 
+     */
     public List<String> getRetentionTimes() {
         return this.retentionTimes == null ? List.of() : this.retentionTimes;
     }

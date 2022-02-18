@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Extra Parameter in a Connection Setting Properties to indicate service provider specific properties
+ * 
+ */
 public final class ConnectionSettingParameterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectionSettingParameterArgs Empty = new ConnectionSettingParameterArgs();
 
+    /**
+     * Key for the Connection Setting Parameter.
+     * 
+     */
     @InputImport(name="key")
     private final @Nullable Input<String> key;
 
@@ -21,6 +29,10 @@ public final class ConnectionSettingParameterArgs extends io.pulumi.resources.Re
         return this.key == null ? Input.empty() : this.key;
     }
 
+    /**
+     * Value associated with the Connection Setting Parameter.
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

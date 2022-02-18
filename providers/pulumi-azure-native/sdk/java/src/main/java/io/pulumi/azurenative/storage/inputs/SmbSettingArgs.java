@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Setting for SMB protocol
+ * 
+ */
 public final class SmbSettingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SmbSettingArgs Empty = new SmbSettingArgs();
 
+    /**
+     * SMB authentication methods supported by server. Valid values are NTLMv2, Kerberos. Should be passed as a string with delimiter ';'.
+     * 
+     */
     @InputImport(name="authenticationMethods")
     private final @Nullable Input<String> authenticationMethods;
 
@@ -22,6 +30,10 @@ public final class SmbSettingArgs extends io.pulumi.resources.ResourceArgs {
         return this.authenticationMethods == null ? Input.empty() : this.authenticationMethods;
     }
 
+    /**
+     * SMB channel encryption supported by server. Valid values are AES-128-CCM, AES-128-GCM, AES-256-GCM. Should be passed as a string with delimiter ';'.
+     * 
+     */
     @InputImport(name="channelEncryption")
     private final @Nullable Input<String> channelEncryption;
 
@@ -29,6 +41,10 @@ public final class SmbSettingArgs extends io.pulumi.resources.ResourceArgs {
         return this.channelEncryption == null ? Input.empty() : this.channelEncryption;
     }
 
+    /**
+     * Kerberos ticket encryption supported by server. Valid values are RC4-HMAC, AES-256. Should be passed as a string with delimiter ';'
+     * 
+     */
     @InputImport(name="kerberosTicketEncryption")
     private final @Nullable Input<String> kerberosTicketEncryption;
 
@@ -36,6 +52,10 @@ public final class SmbSettingArgs extends io.pulumi.resources.ResourceArgs {
         return this.kerberosTicketEncryption == null ? Input.empty() : this.kerberosTicketEncryption;
     }
 
+    /**
+     * Multichannel setting. Applies to Premium FileStorage only.
+     * 
+     */
     @InputImport(name="multichannel")
     private final @Nullable Input<MultichannelArgs> multichannel;
 
@@ -43,6 +63,10 @@ public final class SmbSettingArgs extends io.pulumi.resources.ResourceArgs {
         return this.multichannel == null ? Input.empty() : this.multichannel;
     }
 
+    /**
+     * SMB protocol versions supported by server. Valid values are SMB2.1, SMB3.0, SMB3.1.1. Should be passed as a string with delimiter ';'.
+     * 
+     */
     @InputImport(name="versions")
     private final @Nullable Input<String> versions;
 

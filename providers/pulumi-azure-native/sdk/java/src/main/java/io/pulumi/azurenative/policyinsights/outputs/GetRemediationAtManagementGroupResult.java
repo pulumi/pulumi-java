@@ -13,16 +13,60 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetRemediationAtManagementGroupResult {
+    /**
+     * The time at which the remediation was created.
+     * 
+     */
     private final String createdOn;
+    /**
+     * The deployment status summary for all deployments created by the remediation.
+     * 
+     */
     private final RemediationDeploymentSummaryResponse deploymentStatus;
+    /**
+     * The filters that will be applied to determine which resources to remediate.
+     * 
+     */
     private final @Nullable RemediationFiltersResponse filters;
+    /**
+     * The ID of the remediation.
+     * 
+     */
     private final String id;
+    /**
+     * The time at which the remediation was last updated.
+     * 
+     */
     private final String lastUpdatedOn;
+    /**
+     * The name of the remediation.
+     * 
+     */
     private final String name;
+    /**
+     * The resource ID of the policy assignment that should be remediated.
+     * 
+     */
     private final @Nullable String policyAssignmentId;
+    /**
+     * The policy definition reference ID of the individual definition that should be remediated. Required when the policy assignment being remediated assigns a policy set definition.
+     * 
+     */
     private final @Nullable String policyDefinitionReferenceId;
+    /**
+     * The status of the remediation.
+     * 
+     */
     private final String provisioningState;
+    /**
+     * The way resources to remediate are discovered. Defaults to ExistingNonCompliant if not specified.
+     * 
+     */
     private final @Nullable String resourceDiscoveryMode;
+    /**
+     * The type of the remediation.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"createdOn","deploymentStatus","filters","id","lastUpdatedOn","name","policyAssignmentId","policyDefinitionReferenceId","provisioningState","resourceDiscoveryMode","type"})
@@ -51,36 +95,80 @@ public final class GetRemediationAtManagementGroupResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * The time at which the remediation was created.
+     * 
+     */
     public String getCreatedOn() {
         return this.createdOn;
     }
+    /**
+     * The deployment status summary for all deployments created by the remediation.
+     * 
+     */
     public RemediationDeploymentSummaryResponse getDeploymentStatus() {
         return this.deploymentStatus;
     }
+    /**
+     * The filters that will be applied to determine which resources to remediate.
+     * 
+     */
     public Optional<RemediationFiltersResponse> getFilters() {
         return Optional.ofNullable(this.filters);
     }
+    /**
+     * The ID of the remediation.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * The time at which the remediation was last updated.
+     * 
+     */
     public String getLastUpdatedOn() {
         return this.lastUpdatedOn;
     }
+    /**
+     * The name of the remediation.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The resource ID of the policy assignment that should be remediated.
+     * 
+     */
     public Optional<String> getPolicyAssignmentId() {
         return Optional.ofNullable(this.policyAssignmentId);
     }
+    /**
+     * The policy definition reference ID of the individual definition that should be remediated. Required when the policy assignment being remediated assigns a policy set definition.
+     * 
+     */
     public Optional<String> getPolicyDefinitionReferenceId() {
         return Optional.ofNullable(this.policyDefinitionReferenceId);
     }
+    /**
+     * The status of the remediation.
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The way resources to remediate are discovered. Defaults to ExistingNonCompliant if not specified.
+     * 
+     */
     public Optional<String> getResourceDiscoveryMode() {
         return Optional.ofNullable(this.resourceDiscoveryMode);
     }
+    /**
+     * The type of the remediation.
+     * 
+     */
     public String getType() {
         return this.type;
     }

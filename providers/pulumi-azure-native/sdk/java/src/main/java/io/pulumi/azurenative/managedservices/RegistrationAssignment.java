@@ -15,27 +15,72 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Registration assignment.
+ * API Version: 2019-09-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:managedservices:RegistrationAssignment 484a7d5f-9729-4b87-bc9b-26610985a013 /subscriptions/0afefe50-734e-4610-8c82-a144aff49dea/providers/Microsoft.ManagedServices/registrationAssignments/484a7d5f-9729-4b87-bc9b-26610985a013 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:managedservices:RegistrationAssignment")
 public class RegistrationAssignment extends io.pulumi.resources.CustomResource {
+    /**
+     * Name of the registration assignment.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Name of the registration assignment.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Properties of a registration assignment.
+     * 
+     */
     @OutputExport(name="properties", type=RegistrationAssignmentPropertiesResponse.class, parameters={})
     private Output<RegistrationAssignmentPropertiesResponse> properties;
 
+    /**
+     * @return Properties of a registration assignment.
+     * 
+     */
     public Output<RegistrationAssignmentPropertiesResponse> getProperties() {
         return this.properties;
     }
+    /**
+     * Type of the resource.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Type of the resource.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public RegistrationAssignment(String name, RegistrationAssignmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:managedservices:RegistrationAssignment", name, args == null ? RegistrationAssignmentArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -58,6 +103,14 @@ public class RegistrationAssignment extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static RegistrationAssignment get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RegistrationAssignment(name, id, options);
     }

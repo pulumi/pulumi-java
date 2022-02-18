@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Streaming endpoint access control definition.
+ * 
+ */
 public final class StreamingEndpointAccessControlResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StreamingEndpointAccessControlResponse Empty = new StreamingEndpointAccessControlResponse();
 
+    /**
+     * The access control of Akamai
+     * 
+     */
     @InputImport(name="akamai")
     private final @Nullable AkamaiAccessControlResponse akamai;
 
@@ -22,6 +30,10 @@ public final class StreamingEndpointAccessControlResponse extends io.pulumi.reso
         return this.akamai == null ? Optional.empty() : Optional.ofNullable(this.akamai);
     }
 
+    /**
+     * The IP access control of the streaming endpoint.
+     * 
+     */
     @InputImport(name="ip")
     private final @Nullable IPAccessControlResponse ip;
 

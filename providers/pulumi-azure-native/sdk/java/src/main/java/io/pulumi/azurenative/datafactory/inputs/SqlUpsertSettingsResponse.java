@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Sql upsert option settings
+ * 
+ */
 public final class SqlUpsertSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SqlUpsertSettingsResponse Empty = new SqlUpsertSettingsResponse();
 
+    /**
+     * Schema name for interim table. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="interimSchemaName")
     private final @Nullable Object interimSchemaName;
 
@@ -21,6 +29,10 @@ public final class SqlUpsertSettingsResponse extends io.pulumi.resources.InvokeA
         return this.interimSchemaName == null ? Optional.empty() : Optional.ofNullable(this.interimSchemaName);
     }
 
+    /**
+     * Key column names for unique row identification. Type: array of strings (or Expression with resultType array of strings).
+     * 
+     */
     @InputImport(name="keys")
     private final @Nullable Object keys;
 
@@ -28,6 +40,10 @@ public final class SqlUpsertSettingsResponse extends io.pulumi.resources.InvokeA
         return this.keys == null ? Optional.empty() : Optional.ofNullable(this.keys);
     }
 
+    /**
+     * Specifies whether to use temp db for upsert interim table. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     @InputImport(name="useTempDB")
     private final @Nullable Object useTempDB;
 

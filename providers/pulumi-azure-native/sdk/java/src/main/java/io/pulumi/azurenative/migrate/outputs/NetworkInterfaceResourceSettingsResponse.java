@@ -14,9 +14,26 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class NetworkInterfaceResourceSettingsResponse {
+    /**
+     * Gets or sets a value indicating whether accelerated networking is enabled.
+     * 
+     */
     private final @Nullable Boolean enableAcceleratedNetworking;
+    /**
+     * Gets or sets the IP configurations of the NIC.
+     * 
+     */
     private final @Nullable List<NicIpConfigurationResourceSettingsResponse> ipConfigurations;
+    /**
+     * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+     * Expected value is 'Microsoft.Network/networkInterfaces'.
+     * 
+     */
     private final String resourceType;
+    /**
+     * Gets or sets the target Resource name.
+     * 
+     */
     private final String targetResourceName;
 
     @OutputCustomType.Constructor({"enableAcceleratedNetworking","ipConfigurations","resourceType","targetResourceName"})
@@ -31,15 +48,32 @@ public final class NetworkInterfaceResourceSettingsResponse {
         this.targetResourceName = Objects.requireNonNull(targetResourceName);
     }
 
+    /**
+     * Gets or sets a value indicating whether accelerated networking is enabled.
+     * 
+     */
     public Optional<Boolean> getEnableAcceleratedNetworking() {
         return Optional.ofNullable(this.enableAcceleratedNetworking);
     }
+    /**
+     * Gets or sets the IP configurations of the NIC.
+     * 
+     */
     public List<NicIpConfigurationResourceSettingsResponse> getIpConfigurations() {
         return this.ipConfigurations == null ? List.of() : this.ipConfigurations;
     }
+    /**
+     * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+     * Expected value is 'Microsoft.Network/networkInterfaces'.
+     * 
+     */
     public String getPropResourceType() {
         return this.resourceType;
     }
+    /**
+     * Gets or sets the target Resource name.
+     * 
+     */
     public String getTargetResourceName() {
         return this.targetResourceName;
     }

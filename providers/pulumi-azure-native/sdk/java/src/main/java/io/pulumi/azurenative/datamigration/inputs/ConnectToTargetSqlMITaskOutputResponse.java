@@ -10,10 +10,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Output for the task that validates connection to Azure SQL Database Managed Instance.
+ * 
+ */
 public final class ConnectToTargetSqlMITaskOutputResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConnectToTargetSqlMITaskOutputResponse Empty = new ConnectToTargetSqlMITaskOutputResponse();
 
+    /**
+     * List of agent jobs on the target server.
+     * 
+     */
     @InputImport(name="agentJobs", required=true)
     private final List<String> agentJobs;
 
@@ -21,6 +29,10 @@ public final class ConnectToTargetSqlMITaskOutputResponse extends io.pulumi.reso
         return this.agentJobs;
     }
 
+    /**
+     * Result identifier
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -28,6 +40,10 @@ public final class ConnectToTargetSqlMITaskOutputResponse extends io.pulumi.reso
         return this.id;
     }
 
+    /**
+     * List of logins on the target server.
+     * 
+     */
     @InputImport(name="logins", required=true)
     private final List<String> logins;
 
@@ -35,6 +51,10 @@ public final class ConnectToTargetSqlMITaskOutputResponse extends io.pulumi.reso
         return this.logins;
     }
 
+    /**
+     * Target server brand version
+     * 
+     */
     @InputImport(name="targetServerBrandVersion", required=true)
     private final String targetServerBrandVersion;
 
@@ -42,6 +62,10 @@ public final class ConnectToTargetSqlMITaskOutputResponse extends io.pulumi.reso
         return this.targetServerBrandVersion;
     }
 
+    /**
+     * Target server version
+     * 
+     */
     @InputImport(name="targetServerVersion", required=true)
     private final String targetServerVersion;
 
@@ -49,6 +73,10 @@ public final class ConnectToTargetSqlMITaskOutputResponse extends io.pulumi.reso
         return this.targetServerVersion;
     }
 
+    /**
+     * Validation errors
+     * 
+     */
     @InputImport(name="validationErrors", required=true)
     private final List<ReportableExceptionResponse> validationErrors;
 

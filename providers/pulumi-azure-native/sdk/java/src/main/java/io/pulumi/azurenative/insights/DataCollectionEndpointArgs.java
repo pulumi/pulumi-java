@@ -18,6 +18,10 @@ public final class DataCollectionEndpointArgs extends io.pulumi.resources.Resour
 
     public static final DataCollectionEndpointArgs Empty = new DataCollectionEndpointArgs();
 
+    /**
+     * The name of the data collection endpoint. The name is case insensitive.
+     * 
+     */
     @InputImport(name="dataCollectionEndpointName")
     private final @Nullable Input<String> dataCollectionEndpointName;
 
@@ -25,6 +29,10 @@ public final class DataCollectionEndpointArgs extends io.pulumi.resources.Resour
         return this.dataCollectionEndpointName == null ? Input.empty() : this.dataCollectionEndpointName;
     }
 
+    /**
+     * Description of the data collection endpoint.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -32,6 +40,10 @@ public final class DataCollectionEndpointArgs extends io.pulumi.resources.Resour
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The immutable ID of this data collection endpoint resource. This property is READ-ONLY.
+     * 
+     */
     @InputImport(name="immutableId")
     private final @Nullable Input<String> immutableId;
 
@@ -39,6 +51,10 @@ public final class DataCollectionEndpointArgs extends io.pulumi.resources.Resour
         return this.immutableId == null ? Input.empty() : this.immutableId;
     }
 
+    /**
+     * The kind of the resource.
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<Either<String,KnownDataCollectionEndpointResourceKind>> kind;
 
@@ -46,6 +62,10 @@ public final class DataCollectionEndpointArgs extends io.pulumi.resources.Resour
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * The geo-location where the resource lives.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -53,6 +73,10 @@ public final class DataCollectionEndpointArgs extends io.pulumi.resources.Resour
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Network access control rules for the endpoints.
+     * 
+     */
     @InputImport(name="networkAcls")
     private final @Nullable Input<DataCollectionEndpointNetworkAclsArgs> networkAcls;
 
@@ -60,6 +84,10 @@ public final class DataCollectionEndpointArgs extends io.pulumi.resources.Resour
         return this.networkAcls == null ? Input.empty() : this.networkAcls;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -67,6 +95,10 @@ public final class DataCollectionEndpointArgs extends io.pulumi.resources.Resour
         return this.resourceGroupName;
     }
 
+    /**
+     * Resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

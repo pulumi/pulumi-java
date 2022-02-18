@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The configuration settings of the session cookie's expiration.
+ * 
+ */
 public final class CookieExpirationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CookieExpirationArgs Empty = new CookieExpirationArgs();
 
+    /**
+     * The convention used when determining the session cookie's expiration.
+     * 
+     */
     @InputImport(name="convention")
     private final @Nullable Input<CookieExpirationConvention> convention;
 
@@ -22,6 +30,10 @@ public final class CookieExpirationArgs extends io.pulumi.resources.ResourceArgs
         return this.convention == null ? Input.empty() : this.convention;
     }
 
+    /**
+     * The time after the request is made when the session cookie should expire.
+     * 
+     */
     @InputImport(name="timeToExpiration")
     private final @Nullable Input<String> timeToExpiration;
 

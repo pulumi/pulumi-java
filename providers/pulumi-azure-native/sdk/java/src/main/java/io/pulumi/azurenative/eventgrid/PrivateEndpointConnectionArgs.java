@@ -19,6 +19,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
 
     public static final PrivateEndpointConnectionArgs Empty = new PrivateEndpointConnectionArgs();
 
+    /**
+     * GroupIds from the private link service resource.
+     * 
+     */
     @InputImport(name="groupIds")
     private final @Nullable Input<List<String>> groupIds;
 
@@ -26,6 +30,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.groupIds == null ? Input.empty() : this.groupIds;
     }
 
+    /**
+     * The name of the parent resource (namely, either, the topic name or domain name).
+     * 
+     */
     @InputImport(name="parentName", required=true)
     private final Input<String> parentName;
 
@@ -33,6 +41,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.parentName;
     }
 
+    /**
+     * The type of the parent resource. This can be either \'topics\' or \'domains\'.
+     * 
+     */
     @InputImport(name="parentType", required=true)
     private final Input<String> parentType;
 
@@ -40,6 +52,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.parentType;
     }
 
+    /**
+     * The Private Endpoint resource for this Connection.
+     * 
+     */
     @InputImport(name="privateEndpoint")
     private final @Nullable Input<PrivateEndpointArgs> privateEndpoint;
 
@@ -47,6 +63,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.privateEndpoint == null ? Input.empty() : this.privateEndpoint;
     }
 
+    /**
+     * The name of the private endpoint connection connection.
+     * 
+     */
     @InputImport(name="privateEndpointConnectionName")
     private final @Nullable Input<String> privateEndpointConnectionName;
 
@@ -54,6 +74,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.privateEndpointConnectionName == null ? Input.empty() : this.privateEndpointConnectionName;
     }
 
+    /**
+     * Details about the state of the connection.
+     * 
+     */
     @InputImport(name="privateLinkServiceConnectionState")
     private final @Nullable Input<ConnectionStateArgs> privateLinkServiceConnectionState;
 
@@ -61,6 +85,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.privateLinkServiceConnectionState == null ? Input.empty() : this.privateLinkServiceConnectionState;
     }
 
+    /**
+     * Provisioning state of the Private Endpoint Connection.
+     * 
+     */
     @InputImport(name="provisioningState")
     private final @Nullable Input<Either<String,ResourceProvisioningState>> provisioningState;
 
@@ -68,6 +96,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
     }
 
+    /**
+     * The name of the resource group within the user's subscription.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

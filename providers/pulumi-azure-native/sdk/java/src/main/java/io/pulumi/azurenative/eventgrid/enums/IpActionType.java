@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Action to perform based on the match or no match of the IpMask.
+     * 
+     */
     @EnumType
     public enum IpActionType {
         Allow("Allow");

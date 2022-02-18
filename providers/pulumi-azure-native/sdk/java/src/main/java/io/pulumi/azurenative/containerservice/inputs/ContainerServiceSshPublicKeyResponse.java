@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Contains information about SSH certificate public key data.
+ * 
+ */
 public final class ContainerServiceSshPublicKeyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ContainerServiceSshPublicKeyResponse Empty = new ContainerServiceSshPublicKeyResponse();
 
+    /**
+     * Certificate public key used to authenticate with VMs through SSH. The certificate must be in PEM format with or without headers.
+     * 
+     */
     @InputImport(name="keyData", required=true)
     private final String keyData;
 

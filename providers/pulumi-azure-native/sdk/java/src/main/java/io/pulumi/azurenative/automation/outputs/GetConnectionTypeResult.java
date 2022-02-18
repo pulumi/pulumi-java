@@ -14,13 +14,45 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetConnectionTypeResult {
+    /**
+     * Gets the creation time.
+     * 
+     */
     private final String creationTime;
+    /**
+     * Gets or sets the description.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * Gets the field definitions of the connection type.
+     * 
+     */
     private final Map<String,FieldDefinitionResponse> fieldDefinitions;
+    /**
+     * Gets the id of the resource.
+     * 
+     */
     private final String id;
+    /**
+     * Gets or sets a Boolean value to indicate if the connection type is global.
+     * 
+     */
     private final @Nullable Boolean isGlobal;
+    /**
+     * Gets or sets the last modified time.
+     * 
+     */
     private final @Nullable String lastModifiedTime;
+    /**
+     * Gets the name of the connection type.
+     * 
+     */
     private final String name;
+    /**
+     * Resource type
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"creationTime","description","fieldDefinitions","id","isGlobal","lastModifiedTime","name","type"})
@@ -43,27 +75,59 @@ public final class GetConnectionTypeResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Gets the creation time.
+     * 
+     */
     public String getCreationTime() {
         return this.creationTime;
     }
+    /**
+     * Gets or sets the description.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * Gets the field definitions of the connection type.
+     * 
+     */
     public Map<String,FieldDefinitionResponse> getFieldDefinitions() {
         return this.fieldDefinitions;
     }
+    /**
+     * Gets the id of the resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Gets or sets a Boolean value to indicate if the connection type is global.
+     * 
+     */
     public Optional<Boolean> getIsGlobal() {
         return Optional.ofNullable(this.isGlobal);
     }
+    /**
+     * Gets or sets the last modified time.
+     * 
+     */
     public Optional<String> getLastModifiedTime() {
         return Optional.ofNullable(this.lastModifiedTime);
     }
+    /**
+     * Gets the name of the connection type.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Resource type
+     * 
+     */
     public String getType() {
         return this.type;
     }

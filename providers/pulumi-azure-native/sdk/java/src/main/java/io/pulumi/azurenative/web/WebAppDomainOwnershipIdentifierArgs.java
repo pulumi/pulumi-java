@@ -14,6 +14,10 @@ public final class WebAppDomainOwnershipIdentifierArgs extends io.pulumi.resourc
 
     public static final WebAppDomainOwnershipIdentifierArgs Empty = new WebAppDomainOwnershipIdentifierArgs();
 
+    /**
+     * Name of domain ownership identifier.
+     * 
+     */
     @InputImport(name="domainOwnershipIdentifierName")
     private final @Nullable Input<String> domainOwnershipIdentifierName;
 
@@ -21,6 +25,10 @@ public final class WebAppDomainOwnershipIdentifierArgs extends io.pulumi.resourc
         return this.domainOwnershipIdentifierName == null ? Input.empty() : this.domainOwnershipIdentifierName;
     }
 
+    /**
+     * Kind of resource.
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -28,6 +36,10 @@ public final class WebAppDomainOwnershipIdentifierArgs extends io.pulumi.resourc
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Name of the app.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -35,6 +47,10 @@ public final class WebAppDomainOwnershipIdentifierArgs extends io.pulumi.resourc
         return this.name;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -42,6 +58,10 @@ public final class WebAppDomainOwnershipIdentifierArgs extends io.pulumi.resourc
         return this.resourceGroupName;
     }
 
+    /**
+     * String representation of the identity.
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Base class for file properties.
+ * 
+ */
 public final class ProjectFilePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ProjectFilePropertiesArgs Empty = new ProjectFilePropertiesArgs();
 
+    /**
+     * Optional File extension. If submitted it should not have a leading period and must match the extension from filePath.
+     * 
+     */
     @InputImport(name="extension")
     private final @Nullable Input<String> extension;
 
@@ -21,6 +29,10 @@ public final class ProjectFilePropertiesArgs extends io.pulumi.resources.Resourc
         return this.extension == null ? Input.empty() : this.extension;
     }
 
+    /**
+     * Relative path of this file resource. This property can be set when creating or updating the file resource.
+     * 
+     */
     @InputImport(name="filePath")
     private final @Nullable Input<String> filePath;
 
@@ -28,6 +40,10 @@ public final class ProjectFilePropertiesArgs extends io.pulumi.resources.Resourc
         return this.filePath == null ? Input.empty() : this.filePath;
     }
 
+    /**
+     * File content type. This property can be modified to reflect the file content type.
+     * 
+     */
     @InputImport(name="mediaType")
     private final @Nullable Input<String> mediaType;
 

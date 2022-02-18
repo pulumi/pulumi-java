@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Provisioning state of the Private Endpoint Connection.
+     * 
+     */
     @EnumType
     public enum ResourceProvisioningState {
         Creating("Creating"),

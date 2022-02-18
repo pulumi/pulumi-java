@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Time and capacity request parameters
+ * 
+ */
 public final class AutoscaleTimeAndCapacityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AutoscaleTimeAndCapacityResponse Empty = new AutoscaleTimeAndCapacityResponse();
 
+    /**
+     * The maximum instance count of the cluster
+     * 
+     */
     @InputImport(name="maxInstanceCount")
     private final @Nullable Integer maxInstanceCount;
 
@@ -22,6 +30,10 @@ public final class AutoscaleTimeAndCapacityResponse extends io.pulumi.resources.
         return this.maxInstanceCount == null ? Optional.empty() : Optional.ofNullable(this.maxInstanceCount);
     }
 
+    /**
+     * The minimum instance count of the cluster
+     * 
+     */
     @InputImport(name="minInstanceCount")
     private final @Nullable Integer minInstanceCount;
 
@@ -29,6 +41,10 @@ public final class AutoscaleTimeAndCapacityResponse extends io.pulumi.resources.
         return this.minInstanceCount == null ? Optional.empty() : Optional.ofNullable(this.minInstanceCount);
     }
 
+    /**
+     * 24-hour time in the form xx:xx
+     * 
+     */
     @InputImport(name="time")
     private final @Nullable String time;
 

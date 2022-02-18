@@ -12,6 +12,10 @@ public final class GetEdgeModuleArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetEdgeModuleArgs Empty = new GetEdgeModuleArgs();
 
+    /**
+     * The Azure Video Analyzer account name.
+     * 
+     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -19,6 +23,10 @@ public final class GetEdgeModuleArgs extends io.pulumi.resources.InvokeArgs {
         return this.accountName;
     }
 
+    /**
+     * The name of the edge module to retrieve.
+     * 
+     */
     @InputImport(name="edgeModuleName", required=true)
     private final String edgeModuleName;
 
@@ -26,6 +34,10 @@ public final class GetEdgeModuleArgs extends io.pulumi.resources.InvokeArgs {
         return this.edgeModuleName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

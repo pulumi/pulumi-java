@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Contains encryption settings for a data disk image.
+ * 
+ */
 public final class DataDiskImageEncryptionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DataDiskImageEncryptionResponse Empty = new DataDiskImageEncryptionResponse();
 
+    /**
+     * A relative URI containing the resource ID of the disk encryption set.
+     * 
+     */
     @InputImport(name="diskEncryptionSetId")
     private final @Nullable String diskEncryptionSetId;
 
@@ -22,6 +30,10 @@ public final class DataDiskImageEncryptionResponse extends io.pulumi.resources.I
         return this.diskEncryptionSetId == null ? Optional.empty() : Optional.ofNullable(this.diskEncryptionSetId);
     }
 
+    /**
+     * This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.
+     * 
+     */
     @InputImport(name="lun", required=true)
     private final Integer lun;
 

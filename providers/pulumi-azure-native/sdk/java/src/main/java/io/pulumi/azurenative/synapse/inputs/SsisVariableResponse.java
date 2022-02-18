@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Ssis variable.
+ * 
+ */
 public final class SsisVariableResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SsisVariableResponse Empty = new SsisVariableResponse();
 
+    /**
+     * Variable type.
+     * 
+     */
     @InputImport(name="dataType")
     private final @Nullable String dataType;
 
@@ -23,6 +31,10 @@ public final class SsisVariableResponse extends io.pulumi.resources.InvokeArgs {
         return this.dataType == null ? Optional.empty() : Optional.ofNullable(this.dataType);
     }
 
+    /**
+     * Variable description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -30,6 +42,10 @@ public final class SsisVariableResponse extends io.pulumi.resources.InvokeArgs {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * Variable id.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Double id;
 
@@ -37,6 +53,10 @@ public final class SsisVariableResponse extends io.pulumi.resources.InvokeArgs {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * Variable name.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -44,6 +64,10 @@ public final class SsisVariableResponse extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Whether variable is sensitive.
+     * 
+     */
     @InputImport(name="sensitive")
     private final @Nullable Boolean sensitive;
 
@@ -51,6 +75,10 @@ public final class SsisVariableResponse extends io.pulumi.resources.InvokeArgs {
         return this.sensitive == null ? Optional.empty() : Optional.ofNullable(this.sensitive);
     }
 
+    /**
+     * Variable sensitive value.
+     * 
+     */
     @InputImport(name="sensitiveValue")
     private final @Nullable String sensitiveValue;
 
@@ -58,6 +86,10 @@ public final class SsisVariableResponse extends io.pulumi.resources.InvokeArgs {
         return this.sensitiveValue == null ? Optional.empty() : Optional.ofNullable(this.sensitiveValue);
     }
 
+    /**
+     * Variable value.
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable String value;
 

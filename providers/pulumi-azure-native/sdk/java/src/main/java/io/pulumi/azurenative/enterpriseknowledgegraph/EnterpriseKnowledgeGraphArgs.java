@@ -17,6 +17,10 @@ public final class EnterpriseKnowledgeGraphArgs extends io.pulumi.resources.Reso
 
     public static final EnterpriseKnowledgeGraphArgs Empty = new EnterpriseKnowledgeGraphArgs();
 
+    /**
+     * Specifies the location of the resource.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -24,6 +28,10 @@ public final class EnterpriseKnowledgeGraphArgs extends io.pulumi.resources.Reso
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The set of properties specific to EnterpriseKnowledgeGraph resource
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<EnterpriseKnowledgeGraphPropertiesArgs> properties;
 
@@ -31,6 +39,10 @@ public final class EnterpriseKnowledgeGraphArgs extends io.pulumi.resources.Reso
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The name of the EnterpriseKnowledgeGraph resource group in the user subscription.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -38,6 +50,10 @@ public final class EnterpriseKnowledgeGraphArgs extends io.pulumi.resources.Reso
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the EnterpriseKnowledgeGraph resource.
+     * 
+     */
     @InputImport(name="resourceName")
     private final @Nullable Input<String> resourceName;
 
@@ -45,6 +61,10 @@ public final class EnterpriseKnowledgeGraphArgs extends io.pulumi.resources.Reso
         return this.resourceName == null ? Input.empty() : this.resourceName;
     }
 
+    /**
+     * Gets or sets the SKU of the resource.
+     * 
+     */
     @InputImport(name="sku")
     private final @Nullable Input<SkuArgs> sku;
 
@@ -52,6 +72,10 @@ public final class EnterpriseKnowledgeGraphArgs extends io.pulumi.resources.Reso
         return this.sku == null ? Input.empty() : this.sku;
     }
 
+    /**
+     * Contains resource tags defined as key/value pairs.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

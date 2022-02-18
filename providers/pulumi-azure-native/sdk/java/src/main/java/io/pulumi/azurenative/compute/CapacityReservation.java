@@ -18,75 +18,184 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Specifies information about the capacity reservation.
+ * API Version: 2021-04-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:compute:CapacityReservation myCapacityReservation /subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/capacityReservationGroups/myCapacityReservationGroup/capacityReservations/myCapacityReservation 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:compute:CapacityReservation")
 public class CapacityReservation extends io.pulumi.resources.CustomResource {
+    /**
+     * The Capacity reservation instance view.
+     * 
+     */
     @OutputExport(name="instanceView", type=CapacityReservationInstanceViewResponse.class, parameters={})
     private Output<CapacityReservationInstanceViewResponse> instanceView;
 
+    /**
+     * @return The Capacity reservation instance view.
+     * 
+     */
     public Output<CapacityReservationInstanceViewResponse> getInstanceView() {
         return this.instanceView;
     }
+    /**
+     * Resource location
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * Resource name
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The provisioning state, which only appears in the response.
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning state, which only appears in the response.
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The date time when the capacity reservation was last updated.
+     * 
+     */
     @OutputExport(name="provisioningTime", type=String.class, parameters={})
     private Output<String> provisioningTime;
 
+    /**
+     * @return The date time when the capacity reservation was last updated.
+     * 
+     */
     public Output<String> getProvisioningTime() {
         return this.provisioningTime;
     }
+    /**
+     * A unique id generated and assigned to the capacity reservation by the platform which does not change throughout the lifetime of the resource.
+     * 
+     */
     @OutputExport(name="reservationId", type=String.class, parameters={})
     private Output<String> reservationId;
 
+    /**
+     * @return A unique id generated and assigned to the capacity reservation by the platform which does not change throughout the lifetime of the resource.
+     * 
+     */
     public Output<String> getReservationId() {
         return this.reservationId;
     }
+    /**
+     * SKU of the resource for which capacity needs be reserved. The SKU name and capacity is required to be set. Currently VM Skus with the capability called 'CapacityReservationSupported' set to true are supported. Refer to List Microsoft.Compute SKUs in a region (https://docs.microsoft.com/rest/api/compute/resourceskus/list) for supported values.
+     * 
+     */
     @OutputExport(name="sku", type=SkuResponse.class, parameters={})
     private Output<SkuResponse> sku;
 
+    /**
+     * @return SKU of the resource for which capacity needs be reserved. The SKU name and capacity is required to be set. Currently VM Skus with the capability called 'CapacityReservationSupported' set to true are supported. Refer to List Microsoft.Compute SKUs in a region (https://docs.microsoft.com/rest/api/compute/resourceskus/list) for supported values.
+     * 
+     */
     public Output<SkuResponse> getSku() {
         return this.sku;
     }
+    /**
+     * Resource tags
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Resource type
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * A list of all virtual machine resource ids that are associated with the capacity reservation.
+     * 
+     */
     @OutputExport(name="virtualMachinesAssociated", type=List.class, parameters={SubResourceReadOnlyResponse.class})
     private Output<List<SubResourceReadOnlyResponse>> virtualMachinesAssociated;
 
+    /**
+     * @return A list of all virtual machine resource ids that are associated with the capacity reservation.
+     * 
+     */
     public Output<List<SubResourceReadOnlyResponse>> getVirtualMachinesAssociated() {
         return this.virtualMachinesAssociated;
     }
+    /**
+     * Availability Zone to use for this capacity reservation. The zone has to be single value and also should be part for the list of zones specified during the capacity reservation group creation. The zone can be assigned only during creation. If not provided, the reservation supports only non-zonal deployments. If provided, enforces VM/VMSS using this capacity reservation to be in same zone.
+     * 
+     */
     @OutputExport(name="zones", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> zones;
 
+    /**
+     * @return Availability Zone to use for this capacity reservation. The zone has to be single value and also should be part for the list of zones specified during the capacity reservation group creation. The zone can be assigned only during creation. If not provided, the reservation supports only non-zonal deployments. If provided, enforces VM/VMSS using this capacity reservation to be in same zone.
+     * 
+     */
     public Output</* @Nullable */ List<String>> getZones() {
         return this.zones;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public CapacityReservation(String name, CapacityReservationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:compute:CapacityReservation", name, args == null ? CapacityReservationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -107,6 +216,14 @@ public class CapacityReservation extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static CapacityReservation get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new CapacityReservation(name, id, options);
     }

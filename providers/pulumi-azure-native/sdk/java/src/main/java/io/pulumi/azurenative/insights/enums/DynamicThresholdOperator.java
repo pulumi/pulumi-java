@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The operator used to compare the metric value against the threshold.
+     * 
+     */
     @EnumType
     public enum DynamicThresholdOperator {
         GreaterThan("GreaterThan"),

@@ -19,123 +19,296 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * The prediction resource format.
+ * API Version: 2017-04-26.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:customerinsights:Prediction sdkTestHub/sdktest /subscriptions/c909e979-ef71-4def-a970-bc7c154db8c5/resourceGroups/TestHubRG/providers/Microsoft.CustomerInsights/hubs/azSdkTestHub/predictions/sdktest 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:customerinsights:Prediction")
 public class Prediction extends io.pulumi.resources.CustomResource {
+    /**
+     * Whether do auto analyze.
+     * 
+     */
     @OutputExport(name="autoAnalyze", type=Boolean.class, parameters={})
     private Output<Boolean> autoAnalyze;
 
+    /**
+     * @return Whether do auto analyze.
+     * 
+     */
     public Output<Boolean> getAutoAnalyze() {
         return this.autoAnalyze;
     }
+    /**
+     * Description of the prediction.
+     * 
+     */
     @OutputExport(name="description", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> description;
 
+    /**
+     * @return Description of the prediction.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getDescription() {
         return this.description;
     }
+    /**
+     * Display name of the prediction.
+     * 
+     */
     @OutputExport(name="displayName", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> displayName;
 
+    /**
+     * @return Display name of the prediction.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getDisplayName() {
         return this.displayName;
     }
+    /**
+     * The prediction grades.
+     * 
+     */
     @OutputExport(name="grades", type=List.class, parameters={PredictionResponseGrades.class})
     private Output</* @Nullable */ List<PredictionResponseGrades>> grades;
 
+    /**
+     * @return The prediction grades.
+     * 
+     */
     public Output</* @Nullable */ List<PredictionResponseGrades>> getGrades() {
         return this.grades;
     }
+    /**
+     * Interaction types involved in the prediction.
+     * 
+     */
     @OutputExport(name="involvedInteractionTypes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> involvedInteractionTypes;
 
+    /**
+     * @return Interaction types involved in the prediction.
+     * 
+     */
     public Output</* @Nullable */ List<String>> getInvolvedInteractionTypes() {
         return this.involvedInteractionTypes;
     }
+    /**
+     * KPI types involved in the prediction.
+     * 
+     */
     @OutputExport(name="involvedKpiTypes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> involvedKpiTypes;
 
+    /**
+     * @return KPI types involved in the prediction.
+     * 
+     */
     public Output</* @Nullable */ List<String>> getInvolvedKpiTypes() {
         return this.involvedKpiTypes;
     }
+    /**
+     * Relationships involved in the prediction.
+     * 
+     */
     @OutputExport(name="involvedRelationships", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> involvedRelationships;
 
+    /**
+     * @return Relationships involved in the prediction.
+     * 
+     */
     public Output</* @Nullable */ List<String>> getInvolvedRelationships() {
         return this.involvedRelationships;
     }
+    /**
+     * Definition of the link mapping of prediction.
+     * 
+     */
     @OutputExport(name="mappings", type=PredictionResponseMappings.class, parameters={})
     private Output<PredictionResponseMappings> mappings;
 
+    /**
+     * @return Definition of the link mapping of prediction.
+     * 
+     */
     public Output<PredictionResponseMappings> getMappings() {
         return this.mappings;
     }
+    /**
+     * Resource name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Negative outcome expression.
+     * 
+     */
     @OutputExport(name="negativeOutcomeExpression", type=String.class, parameters={})
     private Output<String> negativeOutcomeExpression;
 
+    /**
+     * @return Negative outcome expression.
+     * 
+     */
     public Output<String> getNegativeOutcomeExpression() {
         return this.negativeOutcomeExpression;
     }
+    /**
+     * Positive outcome expression.
+     * 
+     */
     @OutputExport(name="positiveOutcomeExpression", type=String.class, parameters={})
     private Output<String> positiveOutcomeExpression;
 
+    /**
+     * @return Positive outcome expression.
+     * 
+     */
     public Output<String> getPositiveOutcomeExpression() {
         return this.positiveOutcomeExpression;
     }
+    /**
+     * Name of the prediction.
+     * 
+     */
     @OutputExport(name="predictionName", type=String.class, parameters={})
     private Output</* @Nullable */ String> predictionName;
 
+    /**
+     * @return Name of the prediction.
+     * 
+     */
     public Output</* @Nullable */ String> getPredictionName() {
         return this.predictionName;
     }
+    /**
+     * Primary profile type.
+     * 
+     */
     @OutputExport(name="primaryProfileType", type=String.class, parameters={})
     private Output<String> primaryProfileType;
 
+    /**
+     * @return Primary profile type.
+     * 
+     */
     public Output<String> getPrimaryProfileType() {
         return this.primaryProfileType;
     }
+    /**
+     * Provisioning state.
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return Provisioning state.
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Scope expression.
+     * 
+     */
     @OutputExport(name="scopeExpression", type=String.class, parameters={})
     private Output<String> scopeExpression;
 
+    /**
+     * @return Scope expression.
+     * 
+     */
     public Output<String> getScopeExpression() {
         return this.scopeExpression;
     }
+    /**
+     * Score label.
+     * 
+     */
     @OutputExport(name="scoreLabel", type=String.class, parameters={})
     private Output<String> scoreLabel;
 
+    /**
+     * @return Score label.
+     * 
+     */
     public Output<String> getScoreLabel() {
         return this.scoreLabel;
     }
+    /**
+     * System generated entities.
+     * 
+     */
     @OutputExport(name="systemGeneratedEntities", type=PredictionResponseSystemGeneratedEntities.class, parameters={})
     private Output<PredictionResponseSystemGeneratedEntities> systemGeneratedEntities;
 
+    /**
+     * @return System generated entities.
+     * 
+     */
     public Output<PredictionResponseSystemGeneratedEntities> getSystemGeneratedEntities() {
         return this.systemGeneratedEntities;
     }
+    /**
+     * The hub name.
+     * 
+     */
     @OutputExport(name="tenantId", type=String.class, parameters={})
     private Output<String> tenantId;
 
+    /**
+     * @return The hub name.
+     * 
+     */
     public Output<String> getTenantId() {
         return this.tenantId;
     }
+    /**
+     * Resource type.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Prediction(String name, PredictionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:customerinsights:Prediction", name, args == null ? PredictionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -154,6 +327,14 @@ public class Prediction extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Prediction get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Prediction(name, id, options);
     }

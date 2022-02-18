@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The data connector kind
+     * 
+     */
     @EnumType
     public enum DataConnectorKind {
         AzureActiveDirectory("AzureActiveDirectory"),

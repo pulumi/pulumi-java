@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The map type.
+     * 
+     */
     @EnumType
     public enum MapType {
         NotSpecified("NotSpecified"),

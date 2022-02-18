@@ -17,25 +17,105 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetPredictionResult {
+    /**
+     * Whether do auto analyze.
+     * 
+     */
     private final Boolean autoAnalyze;
+    /**
+     * Description of the prediction.
+     * 
+     */
     private final @Nullable Map<String,String> description;
+    /**
+     * Display name of the prediction.
+     * 
+     */
     private final @Nullable Map<String,String> displayName;
+    /**
+     * The prediction grades.
+     * 
+     */
     private final @Nullable List<PredictionResponseGrades> grades;
+    /**
+     * Resource ID.
+     * 
+     */
     private final String id;
+    /**
+     * Interaction types involved in the prediction.
+     * 
+     */
     private final @Nullable List<String> involvedInteractionTypes;
+    /**
+     * KPI types involved in the prediction.
+     * 
+     */
     private final @Nullable List<String> involvedKpiTypes;
+    /**
+     * Relationships involved in the prediction.
+     * 
+     */
     private final @Nullable List<String> involvedRelationships;
+    /**
+     * Definition of the link mapping of prediction.
+     * 
+     */
     private final PredictionResponseMappings mappings;
+    /**
+     * Resource name.
+     * 
+     */
     private final String name;
+    /**
+     * Negative outcome expression.
+     * 
+     */
     private final String negativeOutcomeExpression;
+    /**
+     * Positive outcome expression.
+     * 
+     */
     private final String positiveOutcomeExpression;
+    /**
+     * Name of the prediction.
+     * 
+     */
     private final @Nullable String predictionName;
+    /**
+     * Primary profile type.
+     * 
+     */
     private final String primaryProfileType;
+    /**
+     * Provisioning state.
+     * 
+     */
     private final String provisioningState;
+    /**
+     * Scope expression.
+     * 
+     */
     private final String scopeExpression;
+    /**
+     * Score label.
+     * 
+     */
     private final String scoreLabel;
+    /**
+     * System generated entities.
+     * 
+     */
     private final PredictionResponseSystemGeneratedEntities systemGeneratedEntities;
+    /**
+     * The hub name.
+     * 
+     */
     private final String tenantId;
+    /**
+     * Resource type.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"autoAnalyze","description","displayName","grades","id","involvedInteractionTypes","involvedKpiTypes","involvedRelationships","mappings","name","negativeOutcomeExpression","positiveOutcomeExpression","predictionName","primaryProfileType","provisioningState","scopeExpression","scoreLabel","systemGeneratedEntities","tenantId","type"})
@@ -82,63 +162,143 @@ public final class GetPredictionResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Whether do auto analyze.
+     * 
+     */
     public Boolean getAutoAnalyze() {
         return this.autoAnalyze;
     }
+    /**
+     * Description of the prediction.
+     * 
+     */
     public Map<String,String> getDescription() {
         return this.description == null ? Map.of() : this.description;
     }
+    /**
+     * Display name of the prediction.
+     * 
+     */
     public Map<String,String> getDisplayName() {
         return this.displayName == null ? Map.of() : this.displayName;
     }
+    /**
+     * The prediction grades.
+     * 
+     */
     public List<PredictionResponseGrades> getGrades() {
         return this.grades == null ? List.of() : this.grades;
     }
+    /**
+     * Resource ID.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Interaction types involved in the prediction.
+     * 
+     */
     public List<String> getInvolvedInteractionTypes() {
         return this.involvedInteractionTypes == null ? List.of() : this.involvedInteractionTypes;
     }
+    /**
+     * KPI types involved in the prediction.
+     * 
+     */
     public List<String> getInvolvedKpiTypes() {
         return this.involvedKpiTypes == null ? List.of() : this.involvedKpiTypes;
     }
+    /**
+     * Relationships involved in the prediction.
+     * 
+     */
     public List<String> getInvolvedRelationships() {
         return this.involvedRelationships == null ? List.of() : this.involvedRelationships;
     }
+    /**
+     * Definition of the link mapping of prediction.
+     * 
+     */
     public PredictionResponseMappings getMappings() {
         return this.mappings;
     }
+    /**
+     * Resource name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Negative outcome expression.
+     * 
+     */
     public String getNegativeOutcomeExpression() {
         return this.negativeOutcomeExpression;
     }
+    /**
+     * Positive outcome expression.
+     * 
+     */
     public String getPositiveOutcomeExpression() {
         return this.positiveOutcomeExpression;
     }
+    /**
+     * Name of the prediction.
+     * 
+     */
     public Optional<String> getPredictionName() {
         return Optional.ofNullable(this.predictionName);
     }
+    /**
+     * Primary profile type.
+     * 
+     */
     public String getPrimaryProfileType() {
         return this.primaryProfileType;
     }
+    /**
+     * Provisioning state.
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Scope expression.
+     * 
+     */
     public String getScopeExpression() {
         return this.scopeExpression;
     }
+    /**
+     * Score label.
+     * 
+     */
     public String getScoreLabel() {
         return this.scoreLabel;
     }
+    /**
+     * System generated entities.
+     * 
+     */
     public PredictionResponseSystemGeneratedEntities getSystemGeneratedEntities() {
         return this.systemGeneratedEntities;
     }
+    /**
+     * The hub name.
+     * 
+     */
     public String getTenantId() {
         return this.tenantId;
     }
+    /**
+     * Resource type.
+     * 
+     */
     public String getType() {
         return this.type;
     }

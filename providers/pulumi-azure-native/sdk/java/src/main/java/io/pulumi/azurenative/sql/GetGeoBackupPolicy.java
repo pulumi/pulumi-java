@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGeoBackupPolicy {
+/**
+ * A database geo backup policy.
+ * API Version: 2014-04-01.
+ * 
+ *
+ * A database geo backup policy.
+ * 
+ */
     public static CompletableFuture<GetGeoBackupPolicyResult> invokeAsync(GetGeoBackupPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getGeoBackupPolicy", TypeShape.of(GetGeoBackupPolicyResult.class), args == null ? GetGeoBackupPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

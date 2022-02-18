@@ -16,10 +16,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Application Gateway Ssl policy.
+ * 
+ */
 public final class ApplicationGatewaySslPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationGatewaySslPolicyArgs Empty = new ApplicationGatewaySslPolicyArgs();
 
+    /**
+     * Ssl cipher suites to be enabled in the specified order to application gateway.
+     * 
+     */
     @InputImport(name="cipherSuites")
     private final @Nullable Input<List<Either<String,ApplicationGatewaySslCipherSuite>>> cipherSuites;
 
@@ -27,6 +35,10 @@ public final class ApplicationGatewaySslPolicyArgs extends io.pulumi.resources.R
         return this.cipherSuites == null ? Input.empty() : this.cipherSuites;
     }
 
+    /**
+     * Ssl protocols to be disabled on application gateway.
+     * 
+     */
     @InputImport(name="disabledSslProtocols")
     private final @Nullable Input<List<Either<String,ApplicationGatewaySslProtocol>>> disabledSslProtocols;
 
@@ -34,6 +46,10 @@ public final class ApplicationGatewaySslPolicyArgs extends io.pulumi.resources.R
         return this.disabledSslProtocols == null ? Input.empty() : this.disabledSslProtocols;
     }
 
+    /**
+     * Minimum version of Ssl protocol to be supported on application gateway.
+     * 
+     */
     @InputImport(name="minProtocolVersion")
     private final @Nullable Input<Either<String,ApplicationGatewaySslProtocol>> minProtocolVersion;
 
@@ -41,6 +57,10 @@ public final class ApplicationGatewaySslPolicyArgs extends io.pulumi.resources.R
         return this.minProtocolVersion == null ? Input.empty() : this.minProtocolVersion;
     }
 
+    /**
+     * Name of Ssl predefined policy.
+     * 
+     */
     @InputImport(name="policyName")
     private final @Nullable Input<Either<String,ApplicationGatewaySslPolicyName>> policyName;
 
@@ -48,6 +68,10 @@ public final class ApplicationGatewaySslPolicyArgs extends io.pulumi.resources.R
         return this.policyName == null ? Input.empty() : this.policyName;
     }
 
+    /**
+     * Type of Ssl Policy.
+     * 
+     */
     @InputImport(name="policyType")
     private final @Nullable Input<Either<String,ApplicationGatewaySslPolicyType>> policyType;
 

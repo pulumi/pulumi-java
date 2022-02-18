@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes the load balancer configuration.
+ * 
+ */
 public final class LoadBalancerConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LoadBalancerConfigurationResponse Empty = new LoadBalancerConfigurationResponse();
 
+    /**
+     * Resource Id
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -22,6 +30,10 @@ public final class LoadBalancerConfigurationResponse extends io.pulumi.resources
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * The name of the Load balancer
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -29,6 +41,10 @@ public final class LoadBalancerConfigurationResponse extends io.pulumi.resources
         return this.name;
     }
 
+    /**
+     * Properties of the load balancer configuration.
+     * 
+     */
     @InputImport(name="properties", required=true)
     private final LoadBalancerConfigurationPropertiesResponse properties;
 

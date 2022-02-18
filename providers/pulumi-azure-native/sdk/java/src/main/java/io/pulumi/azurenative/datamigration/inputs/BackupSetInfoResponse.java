@@ -13,10 +13,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Information of backup set
+ * 
+ */
 public final class BackupSetInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BackupSetInfoResponse Empty = new BackupSetInfoResponse();
 
+    /**
+     * Date and time that the backup operation finished
+     * 
+     */
     @InputImport(name="backupFinishedDate")
     private final @Nullable String backupFinishedDate;
 
@@ -24,6 +32,10 @@ public final class BackupSetInfoResponse extends io.pulumi.resources.InvokeArgs 
         return this.backupFinishedDate == null ? Optional.empty() : Optional.ofNullable(this.backupFinishedDate);
     }
 
+    /**
+     * Id for the set of backup files
+     * 
+     */
     @InputImport(name="backupSetId")
     private final @Nullable String backupSetId;
 
@@ -31,6 +43,10 @@ public final class BackupSetInfoResponse extends io.pulumi.resources.InvokeArgs 
         return this.backupSetId == null ? Optional.empty() : Optional.ofNullable(this.backupSetId);
     }
 
+    /**
+     * Date and time that the backup operation began
+     * 
+     */
     @InputImport(name="backupStartDate")
     private final @Nullable String backupStartDate;
 
@@ -38,6 +54,10 @@ public final class BackupSetInfoResponse extends io.pulumi.resources.InvokeArgs 
         return this.backupStartDate == null ? Optional.empty() : Optional.ofNullable(this.backupStartDate);
     }
 
+    /**
+     * Enum of the different backup types
+     * 
+     */
     @InputImport(name="backupType")
     private final @Nullable String backupType;
 
@@ -45,6 +65,10 @@ public final class BackupSetInfoResponse extends io.pulumi.resources.InvokeArgs 
         return this.backupType == null ? Optional.empty() : Optional.ofNullable(this.backupType);
     }
 
+    /**
+     * Name of the database to which the backup set belongs
+     * 
+     */
     @InputImport(name="databaseName")
     private final @Nullable String databaseName;
 
@@ -52,6 +76,10 @@ public final class BackupSetInfoResponse extends io.pulumi.resources.InvokeArgs 
         return this.databaseName == null ? Optional.empty() : Optional.ofNullable(this.databaseName);
     }
 
+    /**
+     * First log sequence number of the backup file
+     * 
+     */
     @InputImport(name="firstLsn")
     private final @Nullable String firstLsn;
 
@@ -59,6 +87,10 @@ public final class BackupSetInfoResponse extends io.pulumi.resources.InvokeArgs 
         return this.firstLsn == null ? Optional.empty() : Optional.ofNullable(this.firstLsn);
     }
 
+    /**
+     * Whether the backup set is restored or not
+     * 
+     */
     @InputImport(name="isBackupRestored")
     private final @Nullable Boolean isBackupRestored;
 
@@ -66,6 +98,10 @@ public final class BackupSetInfoResponse extends io.pulumi.resources.InvokeArgs 
         return this.isBackupRestored == null ? Optional.empty() : Optional.ofNullable(this.isBackupRestored);
     }
 
+    /**
+     * Last log sequence number of the backup file
+     * 
+     */
     @InputImport(name="lastLsn")
     private final @Nullable String lastLsn;
 
@@ -73,6 +109,10 @@ public final class BackupSetInfoResponse extends io.pulumi.resources.InvokeArgs 
         return this.lastLsn == null ? Optional.empty() : Optional.ofNullable(this.lastLsn);
     }
 
+    /**
+     * Last modified time of the backup file in share location
+     * 
+     */
     @InputImport(name="lastModifiedTime")
     private final @Nullable String lastModifiedTime;
 
@@ -80,6 +120,10 @@ public final class BackupSetInfoResponse extends io.pulumi.resources.InvokeArgs 
         return this.lastModifiedTime == null ? Optional.empty() : Optional.ofNullable(this.lastModifiedTime);
     }
 
+    /**
+     * List of files in the backup set
+     * 
+     */
     @InputImport(name="listOfBackupFiles")
     private final @Nullable List<BackupFileInfoResponse> listOfBackupFiles;
 

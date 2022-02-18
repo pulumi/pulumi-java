@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The capabilities and features enabled for the IoT hub.
+     * 
+     */
     @EnumType
     public enum Capabilities {
         None("None"),

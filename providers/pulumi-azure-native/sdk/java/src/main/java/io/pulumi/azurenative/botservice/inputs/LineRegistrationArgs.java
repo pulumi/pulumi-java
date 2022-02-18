@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The properties corresponding to a line channel registration
+ * 
+ */
 public final class LineRegistrationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LineRegistrationArgs Empty = new LineRegistrationArgs();
 
+    /**
+     * Access token for the line channel registration
+     * 
+     */
     @InputImport(name="channelAccessToken")
     private final @Nullable Input<String> channelAccessToken;
 
@@ -21,6 +29,10 @@ public final class LineRegistrationArgs extends io.pulumi.resources.ResourceArgs
         return this.channelAccessToken == null ? Input.empty() : this.channelAccessToken;
     }
 
+    /**
+     * Secret for the line channel registration
+     * 
+     */
     @InputImport(name="channelSecret")
     private final @Nullable Input<String> channelSecret;
 

@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes a network interface reference.
+ * 
+ */
 public final class NetworkInterfaceReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NetworkInterfaceReferenceArgs Empty = new NetworkInterfaceReferenceArgs();
 
+    /**
+     * Specify what happens to the network interface when the VM is deleted
+     * 
+     */
     @InputImport(name="deleteOption")
     private final @Nullable Input<Either<String,DeleteOptions>> deleteOption;
 
@@ -24,6 +32,10 @@ public final class NetworkInterfaceReferenceArgs extends io.pulumi.resources.Res
         return this.deleteOption == null ? Input.empty() : this.deleteOption;
     }
 
+    /**
+     * Resource Id
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -31,6 +43,10 @@ public final class NetworkInterfaceReferenceArgs extends io.pulumi.resources.Res
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * Specifies the primary network interface in case the virtual machine has more than 1 network interface.
+     * 
+     */
     @InputImport(name="primary")
     private final @Nullable Input<Boolean> primary;
 

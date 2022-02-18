@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Exception object for all custom exceptions
+ * 
+ */
 public final class ReportableExceptionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ReportableExceptionResponse Empty = new ReportableExceptionResponse();
 
+    /**
+     * Actionable steps for this exception
+     * 
+     */
     @InputImport(name="actionableMessage")
     private final @Nullable String actionableMessage;
 
@@ -22,6 +30,10 @@ public final class ReportableExceptionResponse extends io.pulumi.resources.Invok
         return this.actionableMessage == null ? Optional.empty() : Optional.ofNullable(this.actionableMessage);
     }
 
+    /**
+     * The path to the file where exception occurred
+     * 
+     */
     @InputImport(name="filePath", required=true)
     private final String filePath;
 
@@ -29,6 +41,10 @@ public final class ReportableExceptionResponse extends io.pulumi.resources.Invok
         return this.filePath;
     }
 
+    /**
+     * Coded numerical value that is assigned to a specific exception
+     * 
+     */
     @InputImport(name="hResult", required=true)
     private final Integer hResult;
 
@@ -36,6 +52,10 @@ public final class ReportableExceptionResponse extends io.pulumi.resources.Invok
         return this.hResult;
     }
 
+    /**
+     * The line number where exception occurred
+     * 
+     */
     @InputImport(name="lineNumber", required=true)
     private final String lineNumber;
 
@@ -43,6 +63,10 @@ public final class ReportableExceptionResponse extends io.pulumi.resources.Invok
         return this.lineNumber;
     }
 
+    /**
+     * Error message
+     * 
+     */
     @InputImport(name="message", required=true)
     private final String message;
 
@@ -50,6 +74,10 @@ public final class ReportableExceptionResponse extends io.pulumi.resources.Invok
         return this.message;
     }
 
+    /**
+     * Stack trace
+     * 
+     */
     @InputImport(name="stackTrace", required=true)
     private final String stackTrace;
 

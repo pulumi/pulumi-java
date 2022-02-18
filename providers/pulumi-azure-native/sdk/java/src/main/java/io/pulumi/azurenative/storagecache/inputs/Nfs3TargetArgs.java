@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties pertaining to the Nfs3Target
+ * 
+ */
 public final class Nfs3TargetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final Nfs3TargetArgs Empty = new Nfs3TargetArgs();
 
+    /**
+     * IP address or host name of an NFSv3 host (e.g., 10.0.44.44).
+     * 
+     */
     @InputImport(name="target")
     private final @Nullable Input<String> target;
 
@@ -21,6 +29,10 @@ public final class Nfs3TargetArgs extends io.pulumi.resources.ResourceArgs {
         return this.target == null ? Input.empty() : this.target;
     }
 
+    /**
+     * Identifies the StorageCache usage model to be used for this storage target.
+     * 
+     */
     @InputImport(name="usageModel")
     private final @Nullable Input<String> usageModel;
 

@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWebAppPremierAddOn {
+/**
+ * Premier add-on.
+ * API Version: 2020-12-01.
+ * 
+ *
+ * Premier add-on.
+ * 
+ */
     public static CompletableFuture<GetWebAppPremierAddOnResult> invokeAsync(GetWebAppPremierAddOnArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppPremierAddOn", TypeShape.of(GetWebAppPremierAddOnResult.class), args == null ? GetWebAppPremierAddOnArgs.Empty : args, Utilities.withVersion(options));
     }

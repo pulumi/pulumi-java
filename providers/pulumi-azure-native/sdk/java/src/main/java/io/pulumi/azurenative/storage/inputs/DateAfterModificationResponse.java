@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Object to define the number of days after object last modification Or last access. Properties daysAfterModificationGreaterThan and daysAfterLastAccessTimeGreaterThan are mutually exclusive.
+ * 
+ */
 public final class DateAfterModificationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DateAfterModificationResponse Empty = new DateAfterModificationResponse();
 
+    /**
+     * Value indicating the age in days after last blob access. This property can only be used in conjunction with last access time tracking policy
+     * 
+     */
     @InputImport(name="daysAfterLastAccessTimeGreaterThan")
     private final @Nullable Double daysAfterLastAccessTimeGreaterThan;
 
@@ -21,6 +29,10 @@ public final class DateAfterModificationResponse extends io.pulumi.resources.Inv
         return this.daysAfterLastAccessTimeGreaterThan == null ? Optional.empty() : Optional.ofNullable(this.daysAfterLastAccessTimeGreaterThan);
     }
 
+    /**
+     * Value indicating the age in days after last modification
+     * 
+     */
     @InputImport(name="daysAfterModificationGreaterThan")
     private final @Nullable Double daysAfterModificationGreaterThan;
 

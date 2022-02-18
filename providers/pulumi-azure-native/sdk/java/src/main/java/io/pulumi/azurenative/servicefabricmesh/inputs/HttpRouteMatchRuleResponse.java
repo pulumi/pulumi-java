@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes a rule for http route matching.
+ * 
+ */
 public final class HttpRouteMatchRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final HttpRouteMatchRuleResponse Empty = new HttpRouteMatchRuleResponse();
 
+    /**
+     * headers and their values to match in request.
+     * 
+     */
     @InputImport(name="headers")
     private final @Nullable List<HttpRouteMatchHeaderResponse> headers;
 
@@ -23,6 +31,10 @@ public final class HttpRouteMatchRuleResponse extends io.pulumi.resources.Invoke
         return this.headers == null ? List.of() : this.headers;
     }
 
+    /**
+     * Path to match for routing.
+     * 
+     */
     @InputImport(name="path", required=true)
     private final HttpRouteMatchPathResponse path;
 

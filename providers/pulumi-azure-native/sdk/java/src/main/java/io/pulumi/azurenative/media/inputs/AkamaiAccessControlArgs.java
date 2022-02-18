@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Akamai access control
+ * 
+ */
 public final class AkamaiAccessControlArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AkamaiAccessControlArgs Empty = new AkamaiAccessControlArgs();
 
+    /**
+     * authentication key list
+     * 
+     */
     @InputImport(name="akamaiSignatureHeaderAuthenticationKeyList")
     private final @Nullable Input<List<AkamaiSignatureHeaderAuthenticationKeyArgs>> akamaiSignatureHeaderAuthenticationKeyList;
 

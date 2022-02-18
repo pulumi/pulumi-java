@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetScheduledTrigger {
+/**
+ * A type of trigger based on schedule
+ * API Version: 2020-09-01.
+ * 
+ *
+ * A type of trigger based on schedule
+ * 
+ */
     public static CompletableFuture<GetScheduledTriggerResult> invokeAsync(GetScheduledTriggerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datashare:getScheduledTrigger", TypeShape.of(GetScheduledTriggerResult.class), args == null ? GetScheduledTriggerArgs.Empty : args, Utilities.withVersion(options));
     }

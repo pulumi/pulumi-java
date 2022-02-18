@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes properties of a network resource.
+ * 
+ */
 public final class NetworkResourcePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NetworkResourcePropertiesResponse Empty = new NetworkResourcePropertiesResponse();
 
+    /**
+     * User readable description of the network.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -21,6 +29,11 @@ public final class NetworkResourcePropertiesResponse extends io.pulumi.resources
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * The type of a Service Fabric container network.
+     * Expected value is 'NetworkResourceProperties'.
+     * 
+     */
     @InputImport(name="kind", required=true)
     private final String kind;
 
@@ -28,6 +41,10 @@ public final class NetworkResourcePropertiesResponse extends io.pulumi.resources
         return this.kind;
     }
 
+    /**
+     * State of the resource.
+     * 
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -35,6 +52,10 @@ public final class NetworkResourcePropertiesResponse extends io.pulumi.resources
         return this.provisioningState;
     }
 
+    /**
+     * Status of the network.
+     * 
+     */
     @InputImport(name="status", required=true)
     private final String status;
 
@@ -42,6 +63,10 @@ public final class NetworkResourcePropertiesResponse extends io.pulumi.resources
         return this.status;
     }
 
+    /**
+     * Gives additional information about the current status of the network.
+     * 
+     */
     @InputImport(name="statusDetails", required=true)
     private final String statusDetails;
 
