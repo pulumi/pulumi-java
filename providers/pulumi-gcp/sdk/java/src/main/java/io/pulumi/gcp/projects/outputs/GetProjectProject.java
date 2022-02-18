@@ -16,6 +16,10 @@ public final class GetProjectProject {
     private final String name;
     private final String number;
     private final Map<String,String> parent;
+    /**
+     * The project id of the project.
+     * 
+     */
     private final String projectId;
 
     @OutputCustomType.Constructor({"createTime","labels","lifecycleState","name","number","parent","projectId"})
@@ -54,6 +58,10 @@ public final class GetProjectProject {
     public Map<String,String> getParent() {
         return this.parent;
     }
+    /**
+     * The project id of the project.
+     * 
+     */
     public String getProjectId() {
         return this.projectId;
     }

@@ -18,6 +18,11 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InstanceArgs Empty = new InstanceArgs();
 
+    /**
+     * A block of cluster configuration options. This can be specified at least once, and up to 4 times.
+     * See structure below.
+     * 
+     */
     @InputImport(name="clusters")
     private final @Nullable Input<List<InstanceClusterArgs>> clusters;
 
@@ -25,6 +30,11 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.clusters == null ? Input.empty() : this.clusters;
     }
 
+    /**
+     * Whether or not to allow this provider to destroy the instance. Unless this field is set to false
+     * in the statefile, a `pulumi destroy` or `pulumi up` that would delete the instance will fail.
+     * 
+     */
     @InputImport(name="deletionProtection")
     private final @Nullable Input<Boolean> deletionProtection;
 
@@ -32,6 +42,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.deletionProtection == null ? Input.empty() : this.deletionProtection;
     }
 
+    /**
+     * The human-readable display name of the Bigtable instance. Defaults to the instance `name`.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -39,6 +53,18 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The instance type to create. One of `"DEVELOPMENT"` or `"PRODUCTION"`. Defaults to `"PRODUCTION"`.
+     * It is recommended to leave this field unspecified since the distinction between `"DEVELOPMENT"` and `"PRODUCTION"` instances is going away,
+     * and all instances will become `"PRODUCTION"` instances. This means that new and existing `"DEVELOPMENT"` instances will be converted to
+     * `"PRODUCTION"` instances. It is recommended for users to use `"PRODUCTION"` instances in any case, since a 1-node `"PRODUCTION"` instance
+     * is functionally identical to a `"DEVELOPMENT"` instance, but without the accompanying restrictions.
+     * 
+     * @deprecated
+     * It is recommended to leave this field unspecified since the distinction between "DEVELOPMENT" and "PRODUCTION" instances is going away, and all instances will become "PRODUCTION" instances. This means that new and existing "DEVELOPMENT" instances will be converted to "PRODUCTION" instances. It is recommended for users to use "PRODUCTION" instances in any case, since a 1-node "PRODUCTION" instance is functionally identical to a "DEVELOPMENT" instance, but without the accompanying restrictions.
+     * 
+     */
+    @Deprecated /* It is recommended to leave this field unspecified since the distinction between ""DEVELOPMENT"" and ""PRODUCTION"" instances is going away, and all instances will become ""PRODUCTION"" instances. This means that new and existing ""DEVELOPMENT"" instances will be converted to ""PRODUCTION"" instances. It is recommended for users to use ""PRODUCTION"" instances in any case, since a 1-node ""PRODUCTION"" instance is functionally identical to a ""DEVELOPMENT"" instance, but without the accompanying restrictions. */
     @InputImport(name="instanceType")
     private final @Nullable Input<String> instanceType;
 
@@ -47,6 +73,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.instanceType == null ? Input.empty() : this.instanceType;
     }
 
+    /**
+     * A set of key/value label pairs to assign to the resource. Label keys must follow the requirements at https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -54,6 +84,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The name (also called Instance Id in the Cloud Console) of the Cloud Bigtable instance.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -61,6 +95,11 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

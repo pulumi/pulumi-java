@@ -13,6 +13,20 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTopic {
+/**
+ * Get information about a Google Cloud Pub/Sub Topic. For more information see
+ * the [official documentation](https://cloud.google.com/pubsub/docs/)
+ * and [API](https://cloud.google.com/pubsub/docs/apis).
+ * 
+ * ## Example Usage
+ * 
+ *
+ * A collection of arguments for invoking getTopic.
+ * 
+ *
+ * A collection of values returned by getTopic.
+ * 
+ */
     public static CompletableFuture<GetTopicResult> invokeAsync(GetTopicArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:pubsub/getTopic:getTopic", TypeShape.of(GetTopicResult.class), args == null ? GetTopicArgs.Empty : args, Utilities.withVersion(options));
     }

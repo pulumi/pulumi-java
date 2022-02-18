@@ -15,6 +15,10 @@ public final class DeviceCredentialGetArgs extends io.pulumi.resources.ResourceA
 
     public static final DeviceCredentialGetArgs Empty = new DeviceCredentialGetArgs();
 
+    /**
+     * The time at which this credential becomes invalid.
+     * 
+     */
     @InputImport(name="expirationTime")
     private final @Nullable Input<String> expirationTime;
 
@@ -22,6 +26,11 @@ public final class DeviceCredentialGetArgs extends io.pulumi.resources.ResourceA
         return this.expirationTime == null ? Input.empty() : this.expirationTime;
     }
 
+    /**
+     * A public key used to verify the signature of JSON Web Tokens (JWTs).
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="publicKey", required=true)
     private final Input<DeviceCredentialPublicKeyGetArgs> publicKey;
 

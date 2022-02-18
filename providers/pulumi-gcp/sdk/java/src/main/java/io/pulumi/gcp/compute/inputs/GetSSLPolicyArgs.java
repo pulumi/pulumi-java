@@ -14,6 +14,10 @@ public final class GetSSLPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSSLPolicyArgs Empty = new GetSSLPolicyArgs();
 
+    /**
+     * The name of the SSL Policy.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -21,6 +25,11 @@ public final class GetSSLPolicyArgs extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

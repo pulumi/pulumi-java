@@ -21,6 +21,10 @@ public final class GetInstanceReservationAffinity extends io.pulumi.resources.In
         return this.specificReservations;
     }
 
+    /**
+     * The accelerator type resource exposed to this instance. E.g. `nvidia-tesla-k80`.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

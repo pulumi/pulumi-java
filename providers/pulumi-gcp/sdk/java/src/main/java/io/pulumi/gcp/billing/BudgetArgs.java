@@ -19,6 +19,13 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BudgetArgs Empty = new BudgetArgs();
 
+    /**
+     * Defines notifications that are sent on every update to the
+     * billing account's spend, regardless of the thresholds defined
+     * using threshold rules.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="allUpdatesRule")
     private final @Nullable Input<BudgetAllUpdatesRuleArgs> allUpdatesRule;
 
@@ -26,6 +33,11 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
         return this.allUpdatesRule == null ? Input.empty() : this.allUpdatesRule;
     }
 
+    /**
+     * The budgeted amount for each usage period.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="amount", required=true)
     private final Input<BudgetAmountArgs> amount;
 
@@ -33,6 +45,10 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
         return this.amount;
     }
 
+    /**
+     * ID of the billing account to set a budget on.
+     * 
+     */
     @InputImport(name="billingAccount", required=true)
     private final Input<String> billingAccount;
 
@@ -40,6 +56,12 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
         return this.billingAccount;
     }
 
+    /**
+     * Filters that define which resources are used to compute the actual
+     * spend against the budget.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="budgetFilter")
     private final @Nullable Input<BudgetBudgetFilterArgs> budgetFilter;
 
@@ -47,6 +69,10 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
         return this.budgetFilter == null ? Input.empty() : this.budgetFilter;
     }
 
+    /**
+     * User data for display name in UI. Must be <= 60 chars.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -54,6 +80,13 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * Rules that trigger alerts (notifications of thresholds being
+     * crossed) when spend exceeds the specified percentages of the
+     * budget.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="thresholdRules", required=true)
     private final Input<List<BudgetThresholdRuleArgs>> thresholdRules;
 

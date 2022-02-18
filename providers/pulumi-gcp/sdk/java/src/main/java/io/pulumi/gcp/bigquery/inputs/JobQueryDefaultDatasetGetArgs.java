@@ -14,6 +14,10 @@ public final class JobQueryDefaultDatasetGetArgs extends io.pulumi.resources.Res
 
     public static final JobQueryDefaultDatasetGetArgs Empty = new JobQueryDefaultDatasetGetArgs();
 
+    /**
+     * The ID of the dataset containing this model.
+     * 
+     */
     @InputImport(name="datasetId", required=true)
     private final Input<String> datasetId;
 
@@ -21,6 +25,10 @@ public final class JobQueryDefaultDatasetGetArgs extends io.pulumi.resources.Res
         return this.datasetId;
     }
 
+    /**
+     * The ID of the project containing this model.
+     * 
+     */
     @InputImport(name="projectId")
     private final @Nullable Input<String> projectId;
 

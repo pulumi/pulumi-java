@@ -13,6 +13,10 @@ public final class TagTemplateFieldTypeEnumTypeAllowedValueGetArgs extends io.pu
 
     public static final TagTemplateFieldTypeEnumTypeAllowedValueGetArgs Empty = new TagTemplateFieldTypeEnumTypeAllowedValueGetArgs();
 
+    /**
+     * The display name for this template.
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 

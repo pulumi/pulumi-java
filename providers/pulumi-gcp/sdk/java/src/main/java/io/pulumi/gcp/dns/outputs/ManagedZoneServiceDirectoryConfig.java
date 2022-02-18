@@ -9,6 +9,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ManagedZoneServiceDirectoryConfig {
+    /**
+     * The namespace associated with the zone.
+     * Structure is documented below.
+     * 
+     */
     private final ManagedZoneServiceDirectoryConfigNamespace namespace;
 
     @OutputCustomType.Constructor({"namespace"})
@@ -16,6 +21,11 @@ public final class ManagedZoneServiceDirectoryConfig {
         this.namespace = Objects.requireNonNull(namespace);
     }
 
+    /**
+     * The namespace associated with the zone.
+     * Structure is documented below.
+     * 
+     */
     public ManagedZoneServiceDirectoryConfigNamespace getNamespace() {
         return this.namespace;
     }

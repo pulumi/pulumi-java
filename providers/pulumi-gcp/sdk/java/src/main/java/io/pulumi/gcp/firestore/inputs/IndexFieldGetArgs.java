@@ -14,6 +14,12 @@ public final class IndexFieldGetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IndexFieldGetArgs Empty = new IndexFieldGetArgs();
 
+    /**
+     * Indicates that this field supports operations on arrayValues. Only one of `order` and `arrayConfig` can
+     * be specified.
+     * Possible values are `CONTAINS`.
+     * 
+     */
     @InputImport(name="arrayConfig")
     private final @Nullable Input<String> arrayConfig;
 
@@ -21,6 +27,10 @@ public final class IndexFieldGetArgs extends io.pulumi.resources.ResourceArgs {
         return this.arrayConfig == null ? Input.empty() : this.arrayConfig;
     }
 
+    /**
+     * Name of the field.
+     * 
+     */
     @InputImport(name="fieldPath")
     private final @Nullable Input<String> fieldPath;
 
@@ -28,6 +38,12 @@ public final class IndexFieldGetArgs extends io.pulumi.resources.ResourceArgs {
         return this.fieldPath == null ? Input.empty() : this.fieldPath;
     }
 
+    /**
+     * Indicates that this field supports ordering by the specified order or comparing using =, <, <=, >, >=.
+     * Only one of `order` and `arrayConfig` can be specified.
+     * Possible values are `ASCENDING` and `DESCENDING`.
+     * 
+     */
     @InputImport(name="order")
     private final @Nullable Input<String> order;
 

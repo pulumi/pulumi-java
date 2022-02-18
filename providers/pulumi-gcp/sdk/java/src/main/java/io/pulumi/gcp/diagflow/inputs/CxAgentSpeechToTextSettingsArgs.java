@@ -14,6 +14,10 @@ public final class CxAgentSpeechToTextSettingsArgs extends io.pulumi.resources.R
 
     public static final CxAgentSpeechToTextSettingsArgs Empty = new CxAgentSpeechToTextSettingsArgs();
 
+    /**
+     * Whether to use speech adaptation for speech recognition.
+     * 
+     */
     @InputImport(name="enableSpeechAdaptation")
     private final @Nullable Input<Boolean> enableSpeechAdaptation;
 

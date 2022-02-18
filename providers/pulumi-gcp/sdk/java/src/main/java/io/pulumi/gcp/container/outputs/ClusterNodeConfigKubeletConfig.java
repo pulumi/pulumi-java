@@ -12,8 +12,26 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ClusterNodeConfigKubeletConfig {
+    /**
+     * If true, enables CPU CFS quota enforcement for
+     * containers that specify CPU limits.
+     * 
+     */
     private final @Nullable Boolean cpuCfsQuota;
+    /**
+     * The CPU CFS quota period value. Specified
+     * as a sequence of decimal numbers, each with optional fraction and a unit suffix,
+     * such as `"300ms"`. Valid time units are "ns", "us" (or "µs"), "ms", "s", "m",
+     * "h". The value must be a positive duration.
+     * 
+     */
     private final @Nullable String cpuCfsQuotaPeriod;
+    /**
+     * The CPU management policy on the node. See
+     * [K8S CPU Management Policies](https://kubernetes.io/docs/tasks/administer-cluster/cpu-management-policies/).
+     * One of `"none"` or `"static"`. Defaults to `none` when `kubelet_config` is unset.
+     * 
+     */
     private final String cpuManagerPolicy;
 
     @OutputCustomType.Constructor({"cpuCfsQuota","cpuCfsQuotaPeriod","cpuManagerPolicy"})
@@ -26,12 +44,30 @@ public final class ClusterNodeConfigKubeletConfig {
         this.cpuManagerPolicy = Objects.requireNonNull(cpuManagerPolicy);
     }
 
+    /**
+     * If true, enables CPU CFS quota enforcement for
+     * containers that specify CPU limits.
+     * 
+     */
     public Optional<Boolean> getCpuCfsQuota() {
         return Optional.ofNullable(this.cpuCfsQuota);
     }
+    /**
+     * The CPU CFS quota period value. Specified
+     * as a sequence of decimal numbers, each with optional fraction and a unit suffix,
+     * such as `"300ms"`. Valid time units are "ns", "us" (or "µs"), "ms", "s", "m",
+     * "h". The value must be a positive duration.
+     * 
+     */
     public Optional<String> getCpuCfsQuotaPeriod() {
         return Optional.ofNullable(this.cpuCfsQuotaPeriod);
     }
+    /**
+     * The CPU management policy on the node. See
+     * [K8S CPU Management Policies](https://kubernetes.io/docs/tasks/administer-cluster/cpu-management-policies/).
+     * One of `"none"` or `"static"`. Defaults to `none` when `kubelet_config` is unset.
+     * 
+     */
     public String getCpuManagerPolicy() {
         return this.cpuManagerPolicy;
     }

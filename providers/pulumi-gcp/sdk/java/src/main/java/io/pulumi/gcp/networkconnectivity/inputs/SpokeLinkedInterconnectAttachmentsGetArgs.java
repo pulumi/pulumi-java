@@ -15,6 +15,10 @@ public final class SpokeLinkedInterconnectAttachmentsGetArgs extends io.pulumi.r
 
     public static final SpokeLinkedInterconnectAttachmentsGetArgs Empty = new SpokeLinkedInterconnectAttachmentsGetArgs();
 
+    /**
+     * A value that controls whether site-to-site data transfer is enabled for these resources. Note that data transfer is available only in supported locations.
+     * 
+     */
     @InputImport(name="siteToSiteDataTransfer", required=true)
     private final Input<Boolean> siteToSiteDataTransfer;
 
@@ -22,6 +26,10 @@ public final class SpokeLinkedInterconnectAttachmentsGetArgs extends io.pulumi.r
         return this.siteToSiteDataTransfer;
     }
 
+    /**
+     * The URIs of linked VPN tunnel resources.
+     * 
+     */
     @InputImport(name="uris", required=true)
     private final Input<List<String>> uris;
 

@@ -14,6 +14,10 @@ public final class BucketLifecycleRuleActionGetArgs extends io.pulumi.resources.
 
     public static final BucketLifecycleRuleActionGetArgs Empty = new BucketLifecycleRuleActionGetArgs();
 
+    /**
+     * The target [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects affected by this Lifecycle Rule. Supported values include: `STANDARD`, `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`.
+     * 
+     */
     @InputImport(name="storageClass")
     private final @Nullable Input<String> storageClass;
 
@@ -21,6 +25,10 @@ public final class BucketLifecycleRuleActionGetArgs extends io.pulumi.resources.
         return this.storageClass == null ? Input.empty() : this.storageClass;
     }
 
+    /**
+     * The type of the action of this Lifecycle Rule. Supported values include: `Delete` and `SetStorageClass`.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

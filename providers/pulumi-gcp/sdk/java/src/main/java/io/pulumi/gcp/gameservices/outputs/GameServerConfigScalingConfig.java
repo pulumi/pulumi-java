@@ -13,9 +13,31 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GameServerConfigScalingConfig {
+    /**
+     * Fleet autoscaler spec, which is sent to Agones.
+     * Example spec can be found :
+     * https://agones.dev/site/docs/reference/fleetautoscaler/
+     * 
+     */
     private final String fleetAutoscalerSpec;
+    /**
+     * The name of the ScalingConfig
+     * 
+     */
     private final String name;
+    /**
+     * The schedules to which this scaling config applies.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable List<GameServerConfigScalingConfigSchedule> schedules;
+    /**
+     * Labels used to identify the clusters to which this scaling config
+     * applies. A cluster is subject to this scaling config if its labels match
+     * any of the selector entries.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable List<GameServerConfigScalingConfigSelector> selectors;
 
     @OutputCustomType.Constructor({"fleetAutoscalerSpec","name","schedules","selectors"})
@@ -30,15 +52,37 @@ public final class GameServerConfigScalingConfig {
         this.selectors = selectors;
     }
 
+    /**
+     * Fleet autoscaler spec, which is sent to Agones.
+     * Example spec can be found :
+     * https://agones.dev/site/docs/reference/fleetautoscaler/
+     * 
+     */
     public String getFleetAutoscalerSpec() {
         return this.fleetAutoscalerSpec;
     }
+    /**
+     * The name of the ScalingConfig
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The schedules to which this scaling config applies.
+     * Structure is documented below.
+     * 
+     */
     public List<GameServerConfigScalingConfigSchedule> getSchedules() {
         return this.schedules == null ? List.of() : this.schedules;
     }
+    /**
+     * Labels used to identify the clusters to which this scaling config
+     * applies. A cluster is subject to this scaling config if its labels match
+     * any of the selector entries.
+     * Structure is documented below.
+     * 
+     */
     public List<GameServerConfigScalingConfigSelector> getSelectors() {
         return this.selectors == null ? List.of() : this.selectors;
     }

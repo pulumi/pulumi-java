@@ -14,6 +14,12 @@ public final class LienArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LienArgs Empty = new LienArgs();
 
+    /**
+     * A stable, user-visible/meaningful string identifying the origin
+     * of the Lien, intended to be inspected programmatically. Maximum length of
+     * 200 characters.
+     * 
+     */
     @InputImport(name="origin", required=true)
     private final Input<String> origin;
 
@@ -21,6 +27,13 @@ public final class LienArgs extends io.pulumi.resources.ResourceArgs {
         return this.origin;
     }
 
+    /**
+     * A reference to the resource this Lien is attached to.
+     * The server will validate the parent against those for which Liens are supported.
+     * Since a variety of objects can have Liens against them, you must provide the type
+     * prefix (e.g. "projects/my-project-name").
+     * 
+     */
     @InputImport(name="parent", required=true)
     private final Input<String> parent;
 
@@ -28,6 +41,11 @@ public final class LienArgs extends io.pulumi.resources.ResourceArgs {
         return this.parent;
     }
 
+    /**
+     * Concise user-visible strings indicating why an action cannot be performed
+     * on a resource. Maximum length of 200 characters.
+     * 
+     */
     @InputImport(name="reason", required=true)
     private final Input<String> reason;
 
@@ -35,6 +53,14 @@ public final class LienArgs extends io.pulumi.resources.ResourceArgs {
         return this.reason;
     }
 
+    /**
+     * The types of operations which should be blocked as a result of this Lien.
+     * Each value should correspond to an IAM permission. The server will validate
+     * the permissions against those for which Liens are supported.  An empty
+     * list is meaningless and will be rejected.
+     * e.g. ['resourcemanager.projects.delete']
+     * 
+     */
     @InputImport(name="restrictions", required=true)
     private final Input<List<String>> restrictions;
 

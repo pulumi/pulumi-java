@@ -13,6 +13,10 @@ public final class CxEnvironmentVersionConfigArgs extends io.pulumi.resources.Re
 
     public static final CxEnvironmentVersionConfigArgs Empty = new CxEnvironmentVersionConfigArgs();
 
+    /**
+     * Format: projects/{{project}}/locations/{{location}}/agents/{{agent}}/flows/{{flow}}/versions/{{version}}.
+     * 
+     */
     @InputImport(name="version", required=true)
     private final Input<String> version;
 

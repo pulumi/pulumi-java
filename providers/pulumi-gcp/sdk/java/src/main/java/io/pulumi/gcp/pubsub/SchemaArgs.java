@@ -14,6 +14,12 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SchemaArgs Empty = new SchemaArgs();
 
+    /**
+     * The definition of the schema.
+     * This should contain a string representing the full definition of the schema
+     * that is a valid schema definition of the type specified in type.
+     * 
+     */
     @InputImport(name="definition")
     private final @Nullable Input<String> definition;
 
@@ -21,6 +27,10 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
         return this.definition == null ? Input.empty() : this.definition;
     }
 
+    /**
+     * The ID to use for the schema, which will become the final component of the schema's resource name.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -28,6 +38,11 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -35,6 +50,12 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The type of the schema definition
+     * Default value is `TYPE_UNSPECIFIED`.
+     * Possible values are `TYPE_UNSPECIFIED`, `PROTOCOL_BUFFER`, and `AVRO`.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 

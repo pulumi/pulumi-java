@@ -16,6 +16,12 @@ public final class TriggerBuildSourceRepoSourceGetArgs extends io.pulumi.resourc
 
     public static final TriggerBuildSourceRepoSourceGetArgs Empty = new TriggerBuildSourceRepoSourceGetArgs();
 
+    /**
+     * Regex matching branches to build. Exactly one a of branch name, tag, or commit SHA must be provided.
+     * The syntax of the regular expressions accepted is the syntax accepted by RE2 and
+     * described at https://github.com/google/re2/wiki/Syntax
+     * 
+     */
     @InputImport(name="branchName")
     private final @Nullable Input<String> branchName;
 
@@ -23,6 +29,10 @@ public final class TriggerBuildSourceRepoSourceGetArgs extends io.pulumi.resourc
         return this.branchName == null ? Input.empty() : this.branchName;
     }
 
+    /**
+     * Explicit commit SHA to build. Exactly one a of branch name, tag, or commit SHA must be provided.
+     * 
+     */
     @InputImport(name="commitSha")
     private final @Nullable Input<String> commitSha;
 
@@ -30,6 +40,18 @@ public final class TriggerBuildSourceRepoSourceGetArgs extends io.pulumi.resourc
         return this.commitSha == null ? Input.empty() : this.commitSha;
     }
 
+    /**
+     * Working directory to use when running this step's container.
+     * If this value is a relative path, it is relative to the build's working
+     * directory. If this value is absolute, it may be outside the build's working
+     * directory, in which case the contents of the path may not be persisted
+     * across build step executions, unless a `volume` for that path is specified.
+     * If the build specifies a `RepoSource` with `dir` and a step with a
+     * `dir`,
+     * which specifies an absolute path, the `RepoSource` `dir` is ignored
+     * for the step's execution.
+     * 
+     */
     @InputImport(name="dir")
     private final @Nullable Input<String> dir;
 
@@ -37,6 +59,10 @@ public final class TriggerBuildSourceRepoSourceGetArgs extends io.pulumi.resourc
         return this.dir == null ? Input.empty() : this.dir;
     }
 
+    /**
+     * Only trigger a build if the revision regex does NOT match the revision regex.
+     * 
+     */
     @InputImport(name="invertRegex")
     private final @Nullable Input<Boolean> invertRegex;
 
@@ -44,6 +70,11 @@ public final class TriggerBuildSourceRepoSourceGetArgs extends io.pulumi.resourc
         return this.invertRegex == null ? Input.empty() : this.invertRegex;
     }
 
+    /**
+     * ID of the project that owns the Cloud Source Repository.
+     * If omitted, the project ID requesting the build is assumed.
+     * 
+     */
     @InputImport(name="projectId")
     private final @Nullable Input<String> projectId;
 
@@ -51,6 +82,10 @@ public final class TriggerBuildSourceRepoSourceGetArgs extends io.pulumi.resourc
         return this.projectId == null ? Input.empty() : this.projectId;
     }
 
+    /**
+     * Name of the Cloud Source Repository.
+     * 
+     */
     @InputImport(name="repoName", required=true)
     private final Input<String> repoName;
 
@@ -58,6 +93,10 @@ public final class TriggerBuildSourceRepoSourceGetArgs extends io.pulumi.resourc
         return this.repoName;
     }
 
+    /**
+     * Substitutions to use in a triggered build. Should only be used with triggers.run
+     * 
+     */
     @InputImport(name="substitutions")
     private final @Nullable Input<Map<String,String>> substitutions;
 
@@ -65,6 +104,12 @@ public final class TriggerBuildSourceRepoSourceGetArgs extends io.pulumi.resourc
         return this.substitutions == null ? Input.empty() : this.substitutions;
     }
 
+    /**
+     * Regex matching tags to build. Exactly one a of branch name, tag, or commit SHA must be provided.
+     * The syntax of the regular expressions accepted is the syntax accepted by RE2 and
+     * described at https://github.com/google/re2/wiki/Syntax
+     * 
+     */
     @InputImport(name="tagName")
     private final @Nullable Input<String> tagName;
 

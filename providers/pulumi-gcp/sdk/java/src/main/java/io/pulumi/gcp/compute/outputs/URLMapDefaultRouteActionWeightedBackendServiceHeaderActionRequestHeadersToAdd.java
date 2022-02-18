@@ -12,8 +12,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class URLMapDefaultRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAdd {
+    /**
+     * The name of the header to add.
+     * 
+     */
     private final @Nullable String headerName;
+    /**
+     * The value of the header to add.
+     * 
+     */
     private final @Nullable String headerValue;
+    /**
+     * If false, headerValue is appended to any values that already exist for the header.
+     * If true, headerValue is set for the header, discarding any values that were set for that header.
+     * 
+     */
     private final @Nullable Boolean replace;
 
     @OutputCustomType.Constructor({"headerName","headerValue","replace"})
@@ -26,12 +39,25 @@ public final class URLMapDefaultRouteActionWeightedBackendServiceHeaderActionReq
         this.replace = replace;
     }
 
+    /**
+     * The name of the header to add.
+     * 
+     */
     public Optional<String> getHeaderName() {
         return Optional.ofNullable(this.headerName);
     }
+    /**
+     * The value of the header to add.
+     * 
+     */
     public Optional<String> getHeaderValue() {
         return Optional.ofNullable(this.headerValue);
     }
+    /**
+     * If false, headerValue is appended to any values that already exist for the header.
+     * If true, headerValue is set for the header, discarding any values that were set for that header.
+     * 
+     */
     public Optional<Boolean> getReplace() {
         return Optional.ofNullable(this.replace);
     }

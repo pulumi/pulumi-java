@@ -13,6 +13,11 @@ public final class ServiceTemplateSpecContainerEnvValueFromArgs extends io.pulum
 
     public static final ServiceTemplateSpecContainerEnvValueFromArgs Empty = new ServiceTemplateSpecContainerEnvValueFromArgs();
 
+    /**
+     * Selects a key (version) of a secret in Secret Manager.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="secretKeyRef", required=true)
     private final Input<ServiceTemplateSpecContainerEnvValueFromSecretKeyRefArgs> secretKeyRef;
 

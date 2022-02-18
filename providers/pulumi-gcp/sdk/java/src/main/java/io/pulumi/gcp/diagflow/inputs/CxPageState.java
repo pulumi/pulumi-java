@@ -19,6 +19,10 @@ public final class CxPageState extends io.pulumi.resources.ResourceArgs {
 
     public static final CxPageState Empty = new CxPageState();
 
+    /**
+     * The human-readable name of the parameter, unique within the form.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -26,6 +30,11 @@ public final class CxPageState extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The fulfillment to call when the session is entering the page.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="entryFulfillment")
     private final @Nullable Input<CxPageEntryFulfillmentGetArgs> entryFulfillment;
 
@@ -33,6 +42,11 @@ public final class CxPageState extends io.pulumi.resources.ResourceArgs {
         return this.entryFulfillment == null ? Input.empty() : this.entryFulfillment;
     }
 
+    /**
+     * Handlers associated with the page to handle events such as webhook errors, no match or no input.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="eventHandlers")
     private final @Nullable Input<List<CxPageEventHandlerGetArgs>> eventHandlers;
 
@@ -40,6 +54,11 @@ public final class CxPageState extends io.pulumi.resources.ResourceArgs {
         return this.eventHandlers == null ? Input.empty() : this.eventHandlers;
     }
 
+    /**
+     * The form associated with the page, used for collecting parameters relevant to the page.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="form")
     private final @Nullable Input<CxPageFormGetArgs> form;
 
@@ -47,6 +66,21 @@ public final class CxPageState extends io.pulumi.resources.ResourceArgs {
         return this.form == null ? Input.empty() : this.form;
     }
 
+    /**
+     * The language of the following fields in page:
+     * Page.entry_fulfillment.messages
+     * Page.entry_fulfillment.conditional_cases
+     * Page.event_handlers.trigger_fulfillment.messages
+     * Page.event_handlers.trigger_fulfillment.conditional_cases
+     * Page.form.parameters.fill_behavior.initial_prompt_fulfillment.messages
+     * Page.form.parameters.fill_behavior.initial_prompt_fulfillment.conditional_cases
+     * Page.form.parameters.fill_behavior.reprompt_event_handlers.messages
+     * Page.form.parameters.fill_behavior.reprompt_event_handlers.conditional_cases
+     * Page.transition_routes.trigger_fulfillment.messages
+     * Page.transition_routes.trigger_fulfillment.conditional_cases
+     * If not specified, the agent's default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used.
+     * 
+     */
     @InputImport(name="languageCode")
     private final @Nullable Input<String> languageCode;
 
@@ -54,6 +88,11 @@ public final class CxPageState extends io.pulumi.resources.ResourceArgs {
         return this.languageCode == null ? Input.empty() : this.languageCode;
     }
 
+    /**
+     * - 
+     * The unique identifier of this event handler.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -61,6 +100,11 @@ public final class CxPageState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The flow to create a page for.
+     * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.
+     * 
+     */
     @InputImport(name="parent")
     private final @Nullable Input<String> parent;
 
@@ -68,6 +112,13 @@ public final class CxPageState extends io.pulumi.resources.ResourceArgs {
         return this.parent == null ? Input.empty() : this.parent;
     }
 
+    /**
+     * Ordered list of TransitionRouteGroups associated with the page. Transition route groups must be unique within a page.
+     * If multiple transition routes within a page scope refer to the same intent, then the precedence order is: page's transition route > page's transition route group > flow's transition routes.
+     * If multiple transition route groups within a page contain the same intent, then the first group in the ordered list takes precedence.
+     * Format:projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/transitionRouteGroups/<TransitionRouteGroup ID>.
+     * 
+     */
     @InputImport(name="transitionRouteGroups")
     private final @Nullable Input<List<String>> transitionRouteGroups;
 
@@ -75,6 +126,18 @@ public final class CxPageState extends io.pulumi.resources.ResourceArgs {
         return this.transitionRouteGroups == null ? Input.empty() : this.transitionRouteGroups;
     }
 
+    /**
+     * A list of transitions for the transition rules of this page. They route the conversation to another page in the same flow, or another flow.
+     * When we are in a certain page, the TransitionRoutes are evalauted in the following order:
+     * TransitionRoutes defined in the page with intent specified.
+     * TransitionRoutes defined in the transition route groups with intent specified.
+     * TransitionRoutes defined in flow with intent specified.
+     * TransitionRoutes defined in the transition route groups with intent specified.
+     * TransitionRoutes defined in the page with only condition specified.
+     * TransitionRoutes defined in the transition route groups with only condition specified.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="transitionRoutes")
     private final @Nullable Input<List<CxPageTransitionRouteGetArgs>> transitionRoutes;
 

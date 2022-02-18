@@ -17,6 +17,10 @@ public final class TenantInboundSamlConfigArgs extends io.pulumi.resources.Resou
 
     public static final TenantInboundSamlConfigArgs Empty = new TenantInboundSamlConfigArgs();
 
+    /**
+     * Human friendly display name.
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -24,6 +28,10 @@ public final class TenantInboundSamlConfigArgs extends io.pulumi.resources.Resou
         return this.displayName;
     }
 
+    /**
+     * If this config allows users to sign in with the provider.
+     * 
+     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 
@@ -31,6 +39,11 @@ public final class TenantInboundSamlConfigArgs extends io.pulumi.resources.Resou
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
+    /**
+     * SAML IdP configuration when the project acts as the relying party
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="idpConfig", required=true)
     private final Input<TenantInboundSamlConfigIdpConfigArgs> idpConfig;
 
@@ -38,6 +51,12 @@ public final class TenantInboundSamlConfigArgs extends io.pulumi.resources.Resou
         return this.idpConfig;
     }
 
+    /**
+     * The name of the InboundSamlConfig resource. Must start with 'saml.' and can only have alphanumeric characters,
+     * hyphens, underscores or periods. The part after 'saml.' must also start with a lowercase letter, end with an
+     * alphanumeric character, and have at least 2 characters.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -45,6 +64,11 @@ public final class TenantInboundSamlConfigArgs extends io.pulumi.resources.Resou
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -52,6 +76,12 @@ public final class TenantInboundSamlConfigArgs extends io.pulumi.resources.Resou
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * SAML SP (Service Provider) configuration when the project acts as the relying party to receive
+     * and accept an authentication assertion issued by a SAML identity provider.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="spConfig", required=true)
     private final Input<TenantInboundSamlConfigSpConfigArgs> spConfig;
 
@@ -59,6 +89,10 @@ public final class TenantInboundSamlConfigArgs extends io.pulumi.resources.Resou
         return this.spConfig;
     }
 
+    /**
+     * The name of the tenant where this inbound SAML config resource exists
+     * 
+     */
     @InputImport(name="tenant", required=true)
     private final Input<String> tenant;
 

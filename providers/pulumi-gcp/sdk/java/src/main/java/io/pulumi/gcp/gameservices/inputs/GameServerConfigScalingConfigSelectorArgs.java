@@ -15,6 +15,10 @@ public final class GameServerConfigScalingConfigSelectorArgs extends io.pulumi.r
 
     public static final GameServerConfigScalingConfigSelectorArgs Empty = new GameServerConfigScalingConfigSelectorArgs();
 
+    /**
+     * Set of labels to group by.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 

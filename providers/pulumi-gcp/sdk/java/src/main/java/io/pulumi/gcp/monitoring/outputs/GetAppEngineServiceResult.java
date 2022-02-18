@@ -14,6 +14,10 @@ import javax.annotation.Nullable;
 @OutputCustomType
 public final class GetAppEngineServiceResult {
     private final String displayName;
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
     private final String moduleId;
     private final String name;
@@ -42,6 +46,10 @@ public final class GetAppEngineServiceResult {
     public String getDisplayName() {
         return this.displayName;
     }
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }

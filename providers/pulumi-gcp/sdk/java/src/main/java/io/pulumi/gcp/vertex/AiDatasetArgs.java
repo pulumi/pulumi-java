@@ -16,6 +16,10 @@ public final class AiDatasetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AiDatasetArgs Empty = new AiDatasetArgs();
 
+    /**
+     * The user-defined name of the Dataset. The name can be up to 128 characters long and can be consist of any UTF-8 characters.
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -23,6 +27,11 @@ public final class AiDatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName;
     }
 
+    /**
+     * Customer-managed encryption key spec for a Dataset. If set, this Dataset and all sub-resources of this Dataset will be secured by this key.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="encryptionSpec")
     private final @Nullable Input<AiDatasetEncryptionSpecArgs> encryptionSpec;
 
@@ -30,6 +39,10 @@ public final class AiDatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.encryptionSpec == null ? Input.empty() : this.encryptionSpec;
     }
 
+    /**
+     * A set of key/value label pairs to assign to this Workflow.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -37,6 +50,10 @@ public final class AiDatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * Points to a YAML file stored on Google Cloud Storage describing additional information about the Dataset. The schema is defined as an OpenAPI 3.0.2 Schema Object. The schema files that can be used here are found in gs://google-cloud-aiplatform/schema/dataset/metadata/.
+     * 
+     */
     @InputImport(name="metadataSchemaUri", required=true)
     private final Input<String> metadataSchemaUri;
 
@@ -44,6 +61,11 @@ public final class AiDatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.metadataSchemaUri;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -51,6 +73,10 @@ public final class AiDatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The region of the dataset. eg us-central1
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 

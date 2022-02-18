@@ -14,6 +14,10 @@ public final class SourceState extends io.pulumi.resources.ResourceArgs {
 
     public static final SourceState Empty = new SourceState();
 
+    /**
+     * The description of the source (max of 1024 characters).
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -21,6 +25,14 @@ public final class SourceState extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The source’s display name. A source’s display name must be unique
+     * amongst its siblings, for example, two sources with the same parent
+     * can't share the same display name. The display name must start and end
+     * with a letter or digit, may contain letters, digits, spaces, hyphens,
+     * and underscores, and can be no longer than 32 characters.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -28,6 +40,10 @@ public final class SourceState extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The resource name of this source, in the format 'organizations/{{organization}}/sources/{{source}}'.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -35,6 +51,11 @@ public final class SourceState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The organization whose Cloud Security Command Center the Source
+     * lives in.
+     * 
+     */
     @InputImport(name="organization")
     private final @Nullable Input<String> organization;
 

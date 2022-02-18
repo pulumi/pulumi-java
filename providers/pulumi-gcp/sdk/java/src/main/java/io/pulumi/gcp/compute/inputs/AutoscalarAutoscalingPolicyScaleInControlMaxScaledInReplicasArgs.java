@@ -14,6 +14,11 @@ public final class AutoscalarAutoscalingPolicyScaleInControlMaxScaledInReplicasA
 
     public static final AutoscalarAutoscalingPolicyScaleInControlMaxScaledInReplicasArgs Empty = new AutoscalarAutoscalingPolicyScaleInControlMaxScaledInReplicasArgs();
 
+    /**
+     * Specifies a fixed number of VM instances. This must be a positive
+     * integer.
+     * 
+     */
     @InputImport(name="fixed")
     private final @Nullable Input<Integer> fixed;
 
@@ -21,6 +26,11 @@ public final class AutoscalarAutoscalingPolicyScaleInControlMaxScaledInReplicasA
         return this.fixed == null ? Input.empty() : this.fixed;
     }
 
+    /**
+     * Specifies a percentage of instances between 0 to 100%, inclusive.
+     * For example, specify 80 for 80%.
+     * 
+     */
     @InputImport(name="percent")
     private final @Nullable Input<Integer> percent;
 

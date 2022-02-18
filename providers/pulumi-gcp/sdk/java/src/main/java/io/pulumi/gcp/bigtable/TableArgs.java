@@ -16,6 +16,10 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TableArgs Empty = new TableArgs();
 
+    /**
+     * A group of columns within a table which share a common configuration. This can be specified multiple times. Structure is documented below.
+     * 
+     */
     @InputImport(name="columnFamilies")
     private final @Nullable Input<List<TableColumnFamilyArgs>> columnFamilies;
 
@@ -23,6 +27,10 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
         return this.columnFamilies == null ? Input.empty() : this.columnFamilies;
     }
 
+    /**
+     * The name of the Bigtable instance.
+     * 
+     */
     @InputImport(name="instanceName", required=true)
     private final Input<String> instanceName;
 
@@ -30,6 +38,10 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
         return this.instanceName;
     }
 
+    /**
+     * The name of the table.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -37,6 +49,11 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -44,6 +61,12 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * A list of predefined keys to split the table on.
+     * !> **Warning:** Modifying the `split_keys` of an existing table will cause the provider
+     * to delete/recreate the entire `gcp.bigtable.Table` resource.
+     * 
+     */
     @InputImport(name="splitKeys")
     private final @Nullable Input<List<String>> splitKeys;
 

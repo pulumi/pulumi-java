@@ -12,12 +12,28 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetRegionInstanceGroupResult {
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
+    /**
+     * List of instances in the group, as a list of resources, each containing:
+     * 
+     */
     private final List<GetRegionInstanceGroupInstance> instances;
+    /**
+     * String port name
+     * 
+     */
     private final String name;
     private final String project;
     private final String region;
     private final String selfLink;
+    /**
+     * The number of instances in the group.
+     * 
+     */
     private final Integer size;
 
     @OutputCustomType.Constructor({"id","instances","name","project","region","selfLink","size"})
@@ -38,12 +54,24 @@ public final class GetRegionInstanceGroupResult {
         this.size = Objects.requireNonNull(size);
     }
 
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * List of instances in the group, as a list of resources, each containing:
+     * 
+     */
     public List<GetRegionInstanceGroupInstance> getInstances() {
         return this.instances;
     }
+    /**
+     * String port name
+     * 
+     */
     public String getName() {
         return this.name;
     }
@@ -56,6 +84,10 @@ public final class GetRegionInstanceGroupResult {
     public String getSelfLink() {
         return this.selfLink;
     }
+    /**
+     * The number of instances in the group.
+     * 
+     */
     public Integer getSize() {
         return this.size;
     }

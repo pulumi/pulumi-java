@@ -13,6 +13,10 @@ public final class OrganizationFeedFeedOutputConfigPubsubDestinationArgs extends
 
     public static final OrganizationFeedFeedOutputConfigPubsubDestinationArgs Empty = new OrganizationFeedFeedOutputConfigPubsubDestinationArgs();
 
+    /**
+     * Destination on Cloud Pubsub topic.
+     * 
+     */
     @InputImport(name="topic", required=true)
     private final Input<String> topic;
 

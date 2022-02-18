@@ -9,6 +9,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PatchDeploymentRecurringScheduleWeekly {
+    /**
+     * A day of the week.
+     * Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
+     * 
+     */
     private final String dayOfWeek;
 
     @OutputCustomType.Constructor({"dayOfWeek"})
@@ -16,6 +21,11 @@ public final class PatchDeploymentRecurringScheduleWeekly {
         this.dayOfWeek = Objects.requireNonNull(dayOfWeek);
     }
 
+    /**
+     * A day of the week.
+     * Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
+     * 
+     */
     public String getDayOfWeek() {
         return this.dayOfWeek;
     }

@@ -14,6 +14,11 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfigGetArgs exte
 
     public static final MetastoreServiceHiveMetastoreConfigKerberosConfigGetArgs Empty = new MetastoreServiceHiveMetastoreConfigKerberosConfigGetArgs();
 
+    /**
+     * A Kerberos keytab file that can be used to authenticate a service principal with a Kerberos Key Distribution Center (KDC).
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="keytab", required=true)
     private final Input<MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArgs> keytab;
 
@@ -21,6 +26,10 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfigGetArgs exte
         return this.keytab;
     }
 
+    /**
+     * A Cloud Storage URI that specifies the path to a krb5.conf file. It is of the form gs://{bucket_name}/path/to/krb5.conf, although the file does not need to be named krb5.conf explicitly.
+     * 
+     */
     @InputImport(name="krb5ConfigGcsUri", required=true)
     private final Input<String> krb5ConfigGcsUri;
 
@@ -28,6 +37,10 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfigGetArgs exte
         return this.krb5ConfigGcsUri;
     }
 
+    /**
+     * A Kerberos principal that exists in the both the keytab the KDC to authenticate as. A typical principal is of the form "primary/instance@REALM", but there is no exact format.
+     * 
+     */
     @InputImport(name="principal", required=true)
     private final Input<String> principal;
 

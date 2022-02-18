@@ -18,6 +18,12 @@ public final class InstanceTemplateSchedulingGetArgs extends io.pulumi.resources
 
     public static final InstanceTemplateSchedulingGetArgs Empty = new InstanceTemplateSchedulingGetArgs();
 
+    /**
+     * Specifies whether the instance should be
+     * automatically restarted if it is terminated by Compute Engine (not
+     * terminated by a user). This defaults to true.
+     * 
+     */
     @InputImport(name="automaticRestart")
     private final @Nullable Input<Boolean> automaticRestart;
 
@@ -32,6 +38,14 @@ public final class InstanceTemplateSchedulingGetArgs extends io.pulumi.resources
         return this.minNodeCpus == null ? Input.empty() : this.minNodeCpus;
     }
 
+    /**
+     * Specifies node affinities or anti-affinities
+     * to determine which sole-tenant nodes your instances and managed instance
+     * groups will use as host systems. Read more on sole-tenant node creation
+     * [here](https://cloud.google.com/compute/docs/nodes/create-nodes).
+     * Structure documented below.
+     * 
+     */
     @InputImport(name="nodeAffinities")
     private final @Nullable Input<List<InstanceTemplateSchedulingNodeAffinityGetArgs>> nodeAffinities;
 
@@ -39,6 +53,11 @@ public final class InstanceTemplateSchedulingGetArgs extends io.pulumi.resources
         return this.nodeAffinities == null ? Input.empty() : this.nodeAffinities;
     }
 
+    /**
+     * Defines the maintenance behavior for this
+     * instance.
+     * 
+     */
     @InputImport(name="onHostMaintenance")
     private final @Nullable Input<String> onHostMaintenance;
 
@@ -46,6 +65,12 @@ public final class InstanceTemplateSchedulingGetArgs extends io.pulumi.resources
         return this.onHostMaintenance == null ? Input.empty() : this.onHostMaintenance;
     }
 
+    /**
+     * Allows instance to be preempted. This defaults to
+     * false. Read more on this
+     * [here](https://cloud.google.com/compute/docs/instances/preemptible).
+     * 
+     */
     @InputImport(name="preemptible")
     private final @Nullable Input<Boolean> preemptible;
 

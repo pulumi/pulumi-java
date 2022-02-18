@@ -15,6 +15,10 @@ public final class GameServerDeploymentRolloutGameServerConfigOverrideRealmsSele
 
     public static final GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelectorArgs Empty = new GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelectorArgs();
 
+    /**
+     * List of realms to match against.
+     * 
+     */
     @InputImport(name="realms")
     private final @Nullable Input<List<String>> realms;
 

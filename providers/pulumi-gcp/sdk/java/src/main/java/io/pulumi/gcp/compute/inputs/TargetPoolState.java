@@ -16,6 +16,11 @@ public final class TargetPoolState extends io.pulumi.resources.ResourceArgs {
 
     public static final TargetPoolState Empty = new TargetPoolState();
 
+    /**
+     * URL to the backup target pool. Must also set
+     * failover\_ratio.
+     * 
+     */
     @InputImport(name="backupPool")
     private final @Nullable Input<String> backupPool;
 
@@ -23,6 +28,10 @@ public final class TargetPoolState extends io.pulumi.resources.ResourceArgs {
         return this.backupPool == null ? Input.empty() : this.backupPool;
     }
 
+    /**
+     * Textual description field.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -30,6 +39,11 @@ public final class TargetPoolState extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Ratio (0 to 1) of failed nodes before using the
+     * backup pool (which must also be set).
+     * 
+     */
     @InputImport(name="failoverRatio")
     private final @Nullable Input<Double> failoverRatio;
 
@@ -37,6 +51,11 @@ public final class TargetPoolState extends io.pulumi.resources.ResourceArgs {
         return this.failoverRatio == null ? Input.empty() : this.failoverRatio;
     }
 
+    /**
+     * List of zero or one health check name or self_link. Only
+     * legacy `gcp.compute.HttpHealthCheck` is supported.
+     * 
+     */
     @InputImport(name="healthChecks")
     private final @Nullable Input<String> healthChecks;
 
@@ -44,6 +63,14 @@ public final class TargetPoolState extends io.pulumi.resources.ResourceArgs {
         return this.healthChecks == null ? Input.empty() : this.healthChecks;
     }
 
+    /**
+     * List of instances in the pool. They can be given as
+     * URLs, or in the form of "zone/name". Note that the instances need not exist
+     * at the time of target pool creation, so there is no need to use the
+     * interpolation to create a dependency on the instances from the
+     * target pool.
+     * 
+     */
     @InputImport(name="instances")
     private final @Nullable Input<List<String>> instances;
 
@@ -51,6 +78,11 @@ public final class TargetPoolState extends io.pulumi.resources.ResourceArgs {
         return this.instances == null ? Input.empty() : this.instances;
     }
 
+    /**
+     * A unique name for the resource, required by GCE. Changing
+     * this forces a new resource to be created.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -58,6 +90,11 @@ public final class TargetPoolState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -65,6 +102,11 @@ public final class TargetPoolState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Where the target pool resides. Defaults to project
+     * region.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 
@@ -72,6 +114,10 @@ public final class TargetPoolState extends io.pulumi.resources.ResourceArgs {
         return this.region == null ? Input.empty() : this.region;
     }
 
+    /**
+     * The URI of the created resource.
+     * 
+     */
     @InputImport(name="selfLink")
     private final @Nullable Input<String> selfLink;
 
@@ -79,6 +125,12 @@ public final class TargetPoolState extends io.pulumi.resources.ResourceArgs {
         return this.selfLink == null ? Input.empty() : this.selfLink;
     }
 
+    /**
+     * How to distribute load. Options are "NONE" (no
+     * affinity). "CLIENT\_IP" (hash of the source/dest addresses / ports), and
+     * "CLIENT\_IP\_PROTO" also includes the protocol (default "NONE").
+     * 
+     */
     @InputImport(name="sessionAffinity")
     private final @Nullable Input<String> sessionAffinity;
 

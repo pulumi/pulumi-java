@@ -11,7 +11,18 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class BackendServiceOutlierDetectionBaseEjectionTime {
+    /**
+     * Span of time that's a fraction of a second at nanosecond resolution. Durations
+     * less than one second are represented with a 0 `seconds` field and a positive
+     * `nanos` field. Must be from 0 to 999,999,999 inclusive.
+     * 
+     */
     private final @Nullable Integer nanos;
+    /**
+     * Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
+     * inclusive.
+     * 
+     */
     private final Integer seconds;
 
     @OutputCustomType.Constructor({"nanos","seconds"})
@@ -22,9 +33,20 @@ public final class BackendServiceOutlierDetectionBaseEjectionTime {
         this.seconds = Objects.requireNonNull(seconds);
     }
 
+    /**
+     * Span of time that's a fraction of a second at nanosecond resolution. Durations
+     * less than one second are represented with a 0 `seconds` field and a positive
+     * `nanos` field. Must be from 0 to 999,999,999 inclusive.
+     * 
+     */
     public Optional<Integer> getNanos() {
         return Optional.ofNullable(this.nanos);
     }
+    /**
+     * Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
+     * inclusive.
+     * 
+     */
     public Integer getSeconds() {
         return this.seconds;
     }

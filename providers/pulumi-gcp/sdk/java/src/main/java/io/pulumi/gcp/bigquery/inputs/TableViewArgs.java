@@ -15,6 +15,10 @@ public final class TableViewArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TableViewArgs Empty = new TableViewArgs();
 
+    /**
+     * A query whose result is persisted.
+     * 
+     */
     @InputImport(name="query", required=true)
     private final Input<String> query;
 
@@ -22,6 +26,11 @@ public final class TableViewArgs extends io.pulumi.resources.ResourceArgs {
         return this.query;
     }
 
+    /**
+     * Specifies whether to use BigQuery's legacy SQL for this view.
+     * The default value is true. If set to false, the view will use BigQuery's standard SQL.
+     * 
+     */
     @InputImport(name="useLegacySql")
     private final @Nullable Input<Boolean> useLegacySql;
 

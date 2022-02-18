@@ -16,6 +16,11 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RepositoryArgs Empty = new RepositoryArgs();
 
+    /**
+     * Resource name of the repository, of the form `{{repo}}`.
+     * The repo name may contain slashes. eg, `name/with/slash`
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -23,6 +28,11 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -30,6 +40,12 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * How this repository publishes a change in the repository through Cloud Pub/Sub.
+     * Keyed by the topic names.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="pubsubConfigs")
     private final @Nullable Input<List<RepositoryPubsubConfigArgs>> pubsubConfigs;
 

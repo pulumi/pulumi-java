@@ -18,6 +18,10 @@ public final class FolderSinkState extends io.pulumi.resources.ResourceArgs {
 
     public static final FolderSinkState Empty = new FolderSinkState();
 
+    /**
+     * Options that affect sinks exporting data to BigQuery. Structure documented below.
+     * 
+     */
     @InputImport(name="bigqueryOptions")
     private final @Nullable Input<FolderSinkBigqueryOptionsGetArgs> bigqueryOptions;
 
@@ -25,6 +29,10 @@ public final class FolderSinkState extends io.pulumi.resources.ResourceArgs {
         return this.bigqueryOptions == null ? Input.empty() : this.bigqueryOptions;
     }
 
+    /**
+     * A description of this exclusion.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -32,6 +40,13 @@ public final class FolderSinkState extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The destination of the sink (or, in other words, where logs are written to). Can be a
+     * Cloud Storage bucket, a PubSub topic, a BigQuery dataset or a Cloud Logging bucket. Examples:
+     * 
+     * The writer associated with the sink must have access to write to the above resource.
+     * 
+     */
     @InputImport(name="destination")
     private final @Nullable Input<String> destination;
 
@@ -39,6 +54,10 @@ public final class FolderSinkState extends io.pulumi.resources.ResourceArgs {
         return this.destination == null ? Input.empty() : this.destination;
     }
 
+    /**
+     * If set to True, then this exclusion is disabled and it does not exclude any log entries.
+     * 
+     */
     @InputImport(name="disabled")
     private final @Nullable Input<Boolean> disabled;
 
@@ -46,6 +65,10 @@ public final class FolderSinkState extends io.pulumi.resources.ResourceArgs {
         return this.disabled == null ? Input.empty() : this.disabled;
     }
 
+    /**
+     * Log entries that match any of the exclusion filters will not be exported. If a log entry is matched by both filter and one of exclusion_filters it will not be exported.  Can be repeated multiple times for multiple exclusions. Structure is documented below.
+     * 
+     */
     @InputImport(name="exclusions")
     private final @Nullable Input<List<FolderSinkExclusionGetArgs>> exclusions;
 
@@ -53,6 +76,11 @@ public final class FolderSinkState extends io.pulumi.resources.ResourceArgs {
         return this.exclusions == null ? Input.empty() : this.exclusions;
     }
 
+    /**
+     * An advanced logs filter that matches the log entries to be excluded. By using the sample function, you can exclude less than 100% of the matching log entries. See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced_filters) for information on how to
+     * write a filter.
+     * 
+     */
     @InputImport(name="filter")
     private final @Nullable Input<String> filter;
 
@@ -60,6 +88,11 @@ public final class FolderSinkState extends io.pulumi.resources.ResourceArgs {
         return this.filter == null ? Input.empty() : this.filter;
     }
 
+    /**
+     * The folder to be exported to the sink. Note that either [FOLDER_ID] or "folders/[FOLDER_ID]" is
+     * accepted.
+     * 
+     */
     @InputImport(name="folder")
     private final @Nullable Input<String> folder;
 
@@ -67,6 +100,11 @@ public final class FolderSinkState extends io.pulumi.resources.ResourceArgs {
         return this.folder == null ? Input.empty() : this.folder;
     }
 
+    /**
+     * Whether or not to include children folders in the sink export. If true, logs
+     * associated with child projects are also exported; otherwise only logs relating to the provided folder are included.
+     * 
+     */
     @InputImport(name="includeChildren")
     private final @Nullable Input<Boolean> includeChildren;
 
@@ -74,6 +112,10 @@ public final class FolderSinkState extends io.pulumi.resources.ResourceArgs {
         return this.includeChildren == null ? Input.empty() : this.includeChildren;
     }
 
+    /**
+     * A client-assigned identifier, such as `load-balancer-exclusion`. Identifiers are limited to 100 characters and can include only letters, digits, underscores, hyphens, and periods. First character has to be alphanumeric.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -81,6 +123,11 @@ public final class FolderSinkState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The identity associated with this sink. This identity must be granted write access to the
+     * configured `destination`.
+     * 
+     */
     @InputImport(name="writerIdentity")
     private final @Nullable Input<String> writerIdentity;
 

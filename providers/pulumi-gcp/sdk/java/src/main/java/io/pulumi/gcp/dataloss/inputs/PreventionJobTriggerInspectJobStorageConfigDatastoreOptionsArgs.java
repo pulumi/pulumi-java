@@ -14,6 +14,11 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsAr
 
     public static final PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsArgs Empty = new PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsArgs();
 
+    /**
+     * A representation of a Datastore kind.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="kind", required=true)
     private final Input<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKindArgs> kind;
 
@@ -21,6 +26,12 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsAr
         return this.kind;
     }
 
+    /**
+     * Datastore partition ID. A partition ID identifies a grouping of entities. The grouping
+     * is always by project and namespace, however the namespace ID may be empty.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="partitionId", required=true)
     private final Input<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdArgs> partitionId;
 

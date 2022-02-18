@@ -14,6 +14,10 @@ public final class JobExtractSourceTableArgs extends io.pulumi.resources.Resourc
 
     public static final JobExtractSourceTableArgs Empty = new JobExtractSourceTableArgs();
 
+    /**
+     * The ID of the dataset containing this model.
+     * 
+     */
     @InputImport(name="datasetId")
     private final @Nullable Input<String> datasetId;
 
@@ -21,6 +25,10 @@ public final class JobExtractSourceTableArgs extends io.pulumi.resources.Resourc
         return this.datasetId == null ? Input.empty() : this.datasetId;
     }
 
+    /**
+     * The ID of the project containing this model.
+     * 
+     */
     @InputImport(name="projectId")
     private final @Nullable Input<String> projectId;
 
@@ -28,6 +36,11 @@ public final class JobExtractSourceTableArgs extends io.pulumi.resources.Resourc
         return this.projectId == null ? Input.empty() : this.projectId;
     }
 
+    /**
+     * The table. Can be specified `{{table_id}}` if `project_id` and `dataset_id` are also set,
+     * or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}` if not.
+     * 
+     */
     @InputImport(name="tableId", required=true)
     private final Input<String> tableId;
 

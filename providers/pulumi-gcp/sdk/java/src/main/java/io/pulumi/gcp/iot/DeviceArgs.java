@@ -19,6 +19,10 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DeviceArgs Empty = new DeviceArgs();
 
+    /**
+     * If a device is blocked, connections or requests from this device will fail.
+     * 
+     */
     @InputImport(name="blocked")
     private final @Nullable Input<Boolean> blocked;
 
@@ -26,6 +30,11 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
         return this.blocked == null ? Input.empty() : this.blocked;
     }
 
+    /**
+     * The credentials used to authenticate this device.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="credentials")
     private final @Nullable Input<List<DeviceCredentialArgs>> credentials;
 
@@ -33,6 +42,11 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
         return this.credentials == null ? Input.empty() : this.credentials;
     }
 
+    /**
+     * Gateway-related configuration and state.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="gatewayConfig")
     private final @Nullable Input<DeviceGatewayConfigArgs> gatewayConfig;
 
@@ -40,6 +54,11 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
         return this.gatewayConfig == null ? Input.empty() : this.gatewayConfig;
     }
 
+    /**
+     * The logging verbosity for device activity.
+     * Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
+     * 
+     */
     @InputImport(name="logLevel")
     private final @Nullable Input<String> logLevel;
 
@@ -47,6 +66,10 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
         return this.logLevel == null ? Input.empty() : this.logLevel;
     }
 
+    /**
+     * The metadata key-value pairs assigned to the device.
+     * 
+     */
     @InputImport(name="metadata")
     private final @Nullable Input<Map<String,String>> metadata;
 
@@ -54,6 +77,10 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
+    /**
+     * A unique name for the resource.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -61,6 +88,10 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The name of the device registry where this device should be created.
+     * 
+     */
     @InputImport(name="registry", required=true)
     private final Input<String> registry;
 

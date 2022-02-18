@@ -14,6 +14,10 @@ public final class GetServiceTemplateMetadata {
     private final Map<String,String> annotations;
     private final Integer generation;
     private final Map<String,String> labels;
+    /**
+     * The name of the Cloud Run Service.
+     * 
+     */
     private final String name;
     private final String namespace;
     private final String resourceVersion;
@@ -49,6 +53,10 @@ public final class GetServiceTemplateMetadata {
     public Map<String,String> getLabels() {
         return this.labels;
     }
+    /**
+     * The name of the Cloud Run Service.
+     * 
+     */
     public String getName() {
         return this.name;
     }

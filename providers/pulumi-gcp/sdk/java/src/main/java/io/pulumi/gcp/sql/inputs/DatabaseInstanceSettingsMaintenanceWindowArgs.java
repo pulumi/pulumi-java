@@ -15,6 +15,10 @@ public final class DatabaseInstanceSettingsMaintenanceWindowArgs extends io.pulu
 
     public static final DatabaseInstanceSettingsMaintenanceWindowArgs Empty = new DatabaseInstanceSettingsMaintenanceWindowArgs();
 
+    /**
+     * Day of week (`1-7`), starting on Monday
+     * 
+     */
     @InputImport(name="day")
     private final @Nullable Input<Integer> day;
 
@@ -22,6 +26,10 @@ public final class DatabaseInstanceSettingsMaintenanceWindowArgs extends io.pulu
         return this.day == null ? Input.empty() : this.day;
     }
 
+    /**
+     * Hour of day (`0-23`), ignored if `day` not set
+     * 
+     */
     @InputImport(name="hour")
     private final @Nullable Input<Integer> hour;
 
@@ -29,6 +37,11 @@ public final class DatabaseInstanceSettingsMaintenanceWindowArgs extends io.pulu
         return this.hour == null ? Input.empty() : this.hour;
     }
 
+    /**
+     * Receive updates earlier (`canary`) or later
+     * (`stable`)
+     * 
+     */
     @InputImport(name="updateTrack")
     private final @Nullable Input<String> updateTrack;
 

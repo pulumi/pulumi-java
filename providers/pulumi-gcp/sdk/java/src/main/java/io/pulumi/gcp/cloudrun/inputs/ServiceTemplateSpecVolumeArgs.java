@@ -14,6 +14,10 @@ public final class ServiceTemplateSpecVolumeArgs extends io.pulumi.resources.Res
 
     public static final ServiceTemplateSpecVolumeArgs Empty = new ServiceTemplateSpecVolumeArgs();
 
+    /**
+     * Volume's name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -21,6 +25,13 @@ public final class ServiceTemplateSpecVolumeArgs extends io.pulumi.resources.Res
         return this.name;
     }
 
+    /**
+     * The secret's value will be presented as the content of a file whose
+     * name is defined in the item path. If no items are defined, the name of
+     * the file is the secret_name.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="secret", required=true)
     private final Input<ServiceTemplateSpecVolumeSecretArgs> secret;
 

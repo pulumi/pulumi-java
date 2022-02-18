@@ -14,6 +14,11 @@ public final class SecretCiphertextArgs extends io.pulumi.resources.ResourceArgs
 
     public static final SecretCiphertextArgs Empty = new SecretCiphertextArgs();
 
+    /**
+     * The additional authenticated data used for integrity checks during encryption and decryption.
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     @InputImport(name="additionalAuthenticatedData")
     private final @Nullable Input<String> additionalAuthenticatedData;
 
@@ -21,6 +26,11 @@ public final class SecretCiphertextArgs extends io.pulumi.resources.ResourceArgs
         return this.additionalAuthenticatedData == null ? Input.empty() : this.additionalAuthenticatedData;
     }
 
+    /**
+     * The full name of the CryptoKey that will be used to encrypt the provided plaintext.
+     * Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/cryptoKeys/{{cryptoKey}}'`
+     * 
+     */
     @InputImport(name="cryptoKey", required=true)
     private final Input<String> cryptoKey;
 
@@ -28,6 +38,11 @@ public final class SecretCiphertextArgs extends io.pulumi.resources.ResourceArgs
         return this.cryptoKey;
     }
 
+    /**
+     * The plaintext to be encrypted.
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     @InputImport(name="plaintext", required=true)
     private final Input<String> plaintext;
 

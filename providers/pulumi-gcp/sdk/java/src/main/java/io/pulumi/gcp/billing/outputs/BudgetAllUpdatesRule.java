@@ -13,9 +13,36 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class BudgetAllUpdatesRule {
+    /**
+     * Boolean. When set to true, disables default notifications sent
+     * when a threshold is exceeded. Default recipients are
+     * those with Billing Account Administrators and Billing
+     * Account Users IAM roles for the target account.
+     * 
+     */
     private final @Nullable Boolean disableDefaultIamRecipients;
+    /**
+     * The full resource name of a monitoring notification
+     * channel in the form
+     * projects/{project_id}/notificationChannels/{channel_id}.
+     * A maximum of 5 channels are allowed.
+     * 
+     */
     private final @Nullable List<String> monitoringNotificationChannels;
+    /**
+     * The name of the Cloud Pub/Sub topic where budget related
+     * messages will be published, in the form
+     * projects/{project_id}/topics/{topic_id}. Updates are sent
+     * at regular intervals to the topic.
+     * 
+     */
     private final @Nullable String pubsubTopic;
+    /**
+     * The schema version of the notification. Only "1.0" is
+     * accepted. It represents the JSON schema as defined in
+     * https://cloud.google.com/billing/docs/how-to/budgets#notification_format.
+     * 
+     */
     private final @Nullable String schemaVersion;
 
     @OutputCustomType.Constructor({"disableDefaultIamRecipients","monitoringNotificationChannels","pubsubTopic","schemaVersion"})
@@ -30,15 +57,42 @@ public final class BudgetAllUpdatesRule {
         this.schemaVersion = schemaVersion;
     }
 
+    /**
+     * Boolean. When set to true, disables default notifications sent
+     * when a threshold is exceeded. Default recipients are
+     * those with Billing Account Administrators and Billing
+     * Account Users IAM roles for the target account.
+     * 
+     */
     public Optional<Boolean> getDisableDefaultIamRecipients() {
         return Optional.ofNullable(this.disableDefaultIamRecipients);
     }
+    /**
+     * The full resource name of a monitoring notification
+     * channel in the form
+     * projects/{project_id}/notificationChannels/{channel_id}.
+     * A maximum of 5 channels are allowed.
+     * 
+     */
     public List<String> getMonitoringNotificationChannels() {
         return this.monitoringNotificationChannels == null ? List.of() : this.monitoringNotificationChannels;
     }
+    /**
+     * The name of the Cloud Pub/Sub topic where budget related
+     * messages will be published, in the form
+     * projects/{project_id}/topics/{topic_id}. Updates are sent
+     * at regular intervals to the topic.
+     * 
+     */
     public Optional<String> getPubsubTopic() {
         return Optional.ofNullable(this.pubsubTopic);
     }
+    /**
+     * The schema version of the notification. Only "1.0" is
+     * accepted. It represents the JSON schema as defined in
+     * https://cloud.google.com/billing/docs/how-to/budgets#notification_format.
+     * 
+     */
     public Optional<String> getSchemaVersion() {
         return Optional.ofNullable(this.schemaVersion);
     }

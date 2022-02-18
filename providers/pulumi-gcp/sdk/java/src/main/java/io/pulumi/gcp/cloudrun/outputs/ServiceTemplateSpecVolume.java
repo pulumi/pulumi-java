@@ -10,7 +10,18 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ServiceTemplateSpecVolume {
+    /**
+     * Volume's name.
+     * 
+     */
     private final String name;
+    /**
+     * The secret's value will be presented as the content of a file whose
+     * name is defined in the item path. If no items are defined, the name of
+     * the file is the secret_name.
+     * Structure is documented below.
+     * 
+     */
     private final ServiceTemplateSpecVolumeSecret secret;
 
     @OutputCustomType.Constructor({"name","secret"})
@@ -21,9 +32,20 @@ public final class ServiceTemplateSpecVolume {
         this.secret = Objects.requireNonNull(secret);
     }
 
+    /**
+     * Volume's name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The secret's value will be presented as the content of a file whose
+     * name is defined in the item path. If no items are defined, the name of
+     * the file is the secret_name.
+     * Structure is documented below.
+     * 
+     */
     public ServiceTemplateSpecVolumeSecret getSecret() {
         return this.secret;
     }

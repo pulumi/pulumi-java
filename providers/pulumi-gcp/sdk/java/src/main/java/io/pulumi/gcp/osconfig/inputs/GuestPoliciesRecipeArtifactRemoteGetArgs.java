@@ -14,6 +14,12 @@ public final class GuestPoliciesRecipeArtifactRemoteGetArgs extends io.pulumi.re
 
     public static final GuestPoliciesRecipeArtifactRemoteGetArgs Empty = new GuestPoliciesRecipeArtifactRemoteGetArgs();
 
+    /**
+     * Must be provided if allowInsecure is false. SHA256 checksum in hex format, to compare to the checksum of the artifact.
+     * If the checksum is not empty and it doesn't match the artifact then the recipe installation fails before running any
+     * of the steps.
+     * 
+     */
     @InputImport(name="checkSum")
     private final @Nullable Input<String> checkSum;
 
@@ -21,6 +27,10 @@ public final class GuestPoliciesRecipeArtifactRemoteGetArgs extends io.pulumi.re
         return this.checkSum == null ? Input.empty() : this.checkSum;
     }
 
+    /**
+     * URI from which to fetch the object. It should contain both the protocol and path following the format {protocol}://{location}.
+     * 
+     */
     @InputImport(name="uri")
     private final @Nullable Input<String> uri;
 

@@ -13,6 +13,10 @@ public final class FlexibleAppVersionVpcAccessConnectorArgs extends io.pulumi.re
 
     public static final FlexibleAppVersionVpcAccessConnectorArgs Empty = new FlexibleAppVersionVpcAccessConnectorArgs();
 
+    /**
+     * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

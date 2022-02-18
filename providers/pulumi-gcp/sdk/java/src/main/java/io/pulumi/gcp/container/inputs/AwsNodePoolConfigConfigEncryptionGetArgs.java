@@ -13,6 +13,10 @@ public final class AwsNodePoolConfigConfigEncryptionGetArgs extends io.pulumi.re
 
     public static final AwsNodePoolConfigConfigEncryptionGetArgs Empty = new AwsNodePoolConfigConfigEncryptionGetArgs();
 
+    /**
+     * Optional. The Amazon Resource Name (ARN) of the Customer Managed Key (CMK) used to encrypt AWS EBS volumes. If not specified, the default Amazon managed key associated to the AWS region where this cluster runs will be used.
+     * 
+     */
     @InputImport(name="kmsKeyArn", required=true)
     private final Input<String> kmsKeyArn;
 

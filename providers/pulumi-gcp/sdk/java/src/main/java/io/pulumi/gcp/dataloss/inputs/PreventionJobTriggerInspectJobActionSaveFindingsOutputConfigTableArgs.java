@@ -14,6 +14,10 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigT
 
     public static final PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableArgs Empty = new PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableArgs();
 
+    /**
+     * Dataset ID of the table.
+     * 
+     */
     @InputImport(name="datasetId", required=true)
     private final Input<String> datasetId;
 
@@ -21,6 +25,10 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigT
         return this.datasetId;
     }
 
+    /**
+     * The Google Cloud Platform project ID of the project containing the table.
+     * 
+     */
     @InputImport(name="projectId", required=true)
     private final Input<String> projectId;
 
@@ -28,6 +36,11 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigT
         return this.projectId;
     }
 
+    /**
+     * Name of the table. If is not set a new one will be generated for you with the following format:
+     * `dlp_googleapis_yyyy_mm_dd_[dlp_job_id]`. Pacific timezone will be used for generating the date details.
+     * 
+     */
     @InputImport(name="tableId")
     private final @Nullable Input<String> tableId;
 

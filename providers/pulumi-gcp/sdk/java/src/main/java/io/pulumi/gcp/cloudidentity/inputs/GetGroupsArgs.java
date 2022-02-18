@@ -12,6 +12,10 @@ public final class GetGroupsArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetGroupsArgs Empty = new GetGroupsArgs();
 
+    /**
+     * The parent resource under which to list all Groups. Must be of the form identitysources/{identity_source_id} for external- identity-mapped groups or customers/{customer_id} for Google Groups.
+     * 
+     */
     @InputImport(name="parent", required=true)
     private final String parent;
 

@@ -13,6 +13,10 @@ public final class InstanceTemplateNetworkPerformanceConfigGetArgs extends io.pu
 
     public static final InstanceTemplateNetworkPerformanceConfigGetArgs Empty = new InstanceTemplateNetworkPerformanceConfigGetArgs();
 
+    /**
+     * The egress bandwidth tier to enable. Possible values: TIER_1, DEFAULT
+     * 
+     */
     @InputImport(name="totalEgressBandwidthTier", required=true)
     private final Input<String> totalEgressBandwidthTier;
 

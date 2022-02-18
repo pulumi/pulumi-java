@@ -14,6 +14,11 @@ public final class GetSubnetworkArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSubnetworkArgs Empty = new GetSubnetworkArgs();
 
+    /**
+     * The name of the subnetwork. One of `name` or `self_link`
+     * must be specified.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -21,6 +26,11 @@ public final class GetSubnetworkArgs extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The ID of the project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -28,6 +38,11 @@ public final class GetSubnetworkArgs extends io.pulumi.resources.InvokeArgs {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
+    /**
+     * The region this subnetwork has been created in. If
+     * unspecified, this defaults to the region configured in the provider.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable String region;
 
@@ -35,6 +50,11 @@ public final class GetSubnetworkArgs extends io.pulumi.resources.InvokeArgs {
         return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);
     }
 
+    /**
+     * The self link of the subnetwork. If `self_link` is
+     * specified, `name`, `project`, and `region` are ignored.
+     * 
+     */
     @InputImport(name="selfLink")
     private final @Nullable String selfLink;
 

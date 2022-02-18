@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ClusterNodeConfigShieldedInstanceConfig {
+    /**
+     * Defines if the instance has integrity monitoring enabled.
+     * 
+     */
     private final @Nullable Boolean enableIntegrityMonitoring;
+    /**
+     * Defines if the instance has Secure Boot enabled.
+     * 
+     */
     private final @Nullable Boolean enableSecureBoot;
 
     @OutputCustomType.Constructor({"enableIntegrityMonitoring","enableSecureBoot"})
@@ -22,9 +30,17 @@ public final class ClusterNodeConfigShieldedInstanceConfig {
         this.enableSecureBoot = enableSecureBoot;
     }
 
+    /**
+     * Defines if the instance has integrity monitoring enabled.
+     * 
+     */
     public Optional<Boolean> getEnableIntegrityMonitoring() {
         return Optional.ofNullable(this.enableIntegrityMonitoring);
     }
+    /**
+     * Defines if the instance has Secure Boot enabled.
+     * 
+     */
     public Optional<Boolean> getEnableSecureBoot() {
         return Optional.ofNullable(this.enableSecureBoot);
     }

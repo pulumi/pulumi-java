@@ -13,6 +13,12 @@ public final class TriggerBuildStepVolumeArgs extends io.pulumi.resources.Resour
 
     public static final TriggerBuildStepVolumeArgs Empty = new TriggerBuildStepVolumeArgs();
 
+    /**
+     * Name of the volume to mount.
+     * Volume names must be unique per build step and must be valid names for Docker volumes.
+     * Each named volume must be used by at least two build steps.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -20,6 +26,12 @@ public final class TriggerBuildStepVolumeArgs extends io.pulumi.resources.Resour
         return this.name;
     }
 
+    /**
+     * Path at which to mount the volume.
+     * Paths must be absolute and cannot conflict with other volume paths on the same
+     * build step or with certain reserved volume paths.
+     * 
+     */
     @InputImport(name="path", required=true)
     private final Input<String> path;
 

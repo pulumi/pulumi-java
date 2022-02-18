@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ClusterClusterConfigSecurityConfig {
+    /**
+     * Kerberos Configuration
+     * 
+     */
     private final ClusterClusterConfigSecurityConfigKerberosConfig kerberosConfig;
 
     @OutputCustomType.Constructor({"kerberosConfig"})
@@ -16,6 +20,10 @@ public final class ClusterClusterConfigSecurityConfig {
         this.kerberosConfig = Objects.requireNonNull(kerberosConfig);
     }
 
+    /**
+     * Kerberos Configuration
+     * 
+     */
     public ClusterClusterConfigSecurityConfigKerberosConfig getKerberosConfig() {
         return this.kerberosConfig;
     }

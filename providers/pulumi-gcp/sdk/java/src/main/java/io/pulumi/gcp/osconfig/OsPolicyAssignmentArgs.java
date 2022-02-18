@@ -18,6 +18,10 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
 
     public static final OsPolicyAssignmentArgs Empty = new OsPolicyAssignmentArgs();
 
+    /**
+     * OS policy assignment description. Length of the description is limited to 1024 characters.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -25,6 +29,10 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Required. Filter to select VMs.
+     * 
+     */
     @InputImport(name="instanceFilter", required=true)
     private final Input<OsPolicyAssignmentInstanceFilterArgs> instanceFilter;
 
@@ -32,6 +40,10 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
         return this.instanceFilter;
     }
 
+    /**
+     * The location for the resource
+     * 
+     */
     @InputImport(name="location", required=true)
     private final Input<String> location;
 
@@ -39,6 +51,10 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
         return this.location;
     }
 
+    /**
+     * Required. The name of the repository.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -46,6 +62,10 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Required. List of OS policies to be applied to the VMs.
+     * 
+     */
     @InputImport(name="osPolicies", required=true)
     private final Input<List<OsPolicyAssignmentOsPolicyArgs>> osPolicies;
 
@@ -53,6 +73,10 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
         return this.osPolicies;
     }
 
+    /**
+     * The project for the resource
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -60,6 +84,10 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Required. Rollout to deploy the OS policy assignment. A rollout is triggered in the following situations: 1) OSPolicyAssignment is created. 2) OSPolicyAssignment is updated and the update contains changes to one of the following fields: - instance_filter - os_policies 3) OSPolicyAssignment is deleted.
+     * 
+     */
     @InputImport(name="rollout", required=true)
     private final Input<OsPolicyAssignmentRolloutArgs> rollout;
 

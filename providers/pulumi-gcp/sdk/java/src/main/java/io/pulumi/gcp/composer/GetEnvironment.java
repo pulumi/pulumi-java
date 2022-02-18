@@ -13,6 +13,16 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEnvironment {
+/**
+ * Provides access to Cloud Composer environment configuration in a region for a given project.
+ * 
+ *
+ * A collection of arguments for invoking getEnvironment.
+ * 
+ *
+ * A collection of values returned by getEnvironment.
+ * 
+ */
     public static CompletableFuture<GetEnvironmentResult> invokeAsync(GetEnvironmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:composer/getEnvironment:getEnvironment", TypeShape.of(GetEnvironmentResult.class), args == null ? GetEnvironmentArgs.Empty : args, Utilities.withVersion(options));
     }

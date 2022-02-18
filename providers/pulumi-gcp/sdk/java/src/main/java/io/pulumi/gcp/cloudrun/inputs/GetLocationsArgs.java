@@ -14,6 +14,11 @@ public final class GetLocationsArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetLocationsArgs Empty = new GetLocationsArgs();
 
+    /**
+     * The project to list versions for. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

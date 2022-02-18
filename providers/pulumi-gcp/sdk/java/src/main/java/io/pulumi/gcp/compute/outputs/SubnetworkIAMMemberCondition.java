@@ -11,8 +11,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SubnetworkIAMMemberCondition {
+    /**
+     * An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * Textual representation of an expression in Common Expression Language syntax.
+     * 
+     */
     private final String expression;
+    /**
+     * A title for the expression, i.e. a short string describing its purpose.
+     * 
+     */
     private final String title;
 
     @OutputCustomType.Constructor({"description","expression","title"})
@@ -25,12 +37,24 @@ public final class SubnetworkIAMMemberCondition {
         this.title = Objects.requireNonNull(title);
     }
 
+    /**
+     * An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * Textual representation of an expression in Common Expression Language syntax.
+     * 
+     */
     public String getExpression() {
         return this.expression;
     }
+    /**
+     * A title for the expression, i.e. a short string describing its purpose.
+     * 
+     */
     public String getTitle() {
         return this.title;
     }

@@ -9,6 +9,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ServiceTemplateSpecContainerEnvValueFrom {
+    /**
+     * Selects a key (version) of a secret in Secret Manager.
+     * Structure is documented below.
+     * 
+     */
     private final ServiceTemplateSpecContainerEnvValueFromSecretKeyRef secretKeyRef;
 
     @OutputCustomType.Constructor({"secretKeyRef"})
@@ -16,6 +21,11 @@ public final class ServiceTemplateSpecContainerEnvValueFrom {
         this.secretKeyRef = Objects.requireNonNull(secretKeyRef);
     }
 
+    /**
+     * Selects a key (version) of a secret in Secret Manager.
+     * Structure is documented below.
+     * 
+     */
     public ServiceTemplateSpecContainerEnvValueFromSecretKeyRef getSecretKeyRef() {
         return this.secretKeyRef;
     }

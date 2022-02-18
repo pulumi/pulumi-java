@@ -13,6 +13,10 @@ public final class FlexibleAppVersionEntrypointGetArgs extends io.pulumi.resourc
 
     public static final FlexibleAppVersionEntrypointGetArgs Empty = new FlexibleAppVersionEntrypointGetArgs();
 
+    /**
+     * The format should be a shell command that can be fed to bash -c.
+     * 
+     */
     @InputImport(name="shell", required=true)
     private final Input<String> shell;
 

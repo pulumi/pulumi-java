@@ -13,6 +13,18 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetActiveFolder {
+/**
+ * Get an active folder within GCP by `display_name` and `parent`.
+ * 
+ * ## Example Usage
+ * 
+ *
+ * A collection of arguments for invoking getActiveFolder.
+ * 
+ *
+ * A collection of values returned by getActiveFolder.
+ * 
+ */
     public static CompletableFuture<GetActiveFolderResult> invokeAsync(GetActiveFolderArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:organizations/getActiveFolder:getActiveFolder", TypeShape.of(GetActiveFolderResult.class), args == null ? GetActiveFolderArgs.Empty : args, Utilities.withVersion(options));
     }

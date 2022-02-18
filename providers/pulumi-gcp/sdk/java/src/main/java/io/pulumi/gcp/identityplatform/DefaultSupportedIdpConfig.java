@@ -14,45 +14,147 @@ import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Configurations options for authenticating with a the standard set of Identity Toolkit-trusted IDPs.
+ * 
+ * You must enable the
+ * [Google Identity Platform](https://console.cloud.google.com/marketplace/details/google-cloud-platform/customer-identity) in
+ * the marketplace prior to using this resource.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * DefaultSupportedIdpConfig can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:identityplatform/defaultSupportedIdpConfig:DefaultSupportedIdpConfig default projects/{{project}}/defaultSupportedIdpConfigs/{{idp_id}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:identityplatform/defaultSupportedIdpConfig:DefaultSupportedIdpConfig default {{project}}/{{idp_id}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:identityplatform/defaultSupportedIdpConfig:DefaultSupportedIdpConfig default {{idp_id}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:identityplatform/defaultSupportedIdpConfig:DefaultSupportedIdpConfig")
 public class DefaultSupportedIdpConfig extends io.pulumi.resources.CustomResource {
+    /**
+     * OAuth client ID
+     * 
+     */
     @OutputExport(name="clientId", type=String.class, parameters={})
     private Output<String> clientId;
 
+    /**
+     * @return OAuth client ID
+     * 
+     */
     public Output<String> getClientId() {
         return this.clientId;
     }
+    /**
+     * OAuth client secret
+     * 
+     */
     @OutputExport(name="clientSecret", type=String.class, parameters={})
     private Output<String> clientSecret;
 
+    /**
+     * @return OAuth client secret
+     * 
+     */
     public Output<String> getClientSecret() {
         return this.clientSecret;
     }
+    /**
+     * If this IDP allows the user to sign in
+     * 
+     */
     @OutputExport(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
+    /**
+     * @return If this IDP allows the user to sign in
+     * 
+     */
     public Output</* @Nullable */ Boolean> getEnabled() {
         return this.enabled;
     }
+    /**
+     * ID of the IDP. Possible values include:
+     * * `apple.com`
+     * * `facebook.com`
+     * * `gc.apple.com`
+     * * `github.com`
+     * * `google.com`
+     * * `linkedin.com`
+     * * `microsoft.com`
+     * * `playgames.google.com`
+     * * `twitter.com`
+     * * `yahoo.com`
+     * 
+     */
     @OutputExport(name="idpId", type=String.class, parameters={})
     private Output<String> idpId;
 
+    /**
+     * @return ID of the IDP. Possible values include:
+     * * `apple.com`
+     * * `facebook.com`
+     * * `gc.apple.com`
+     * * `github.com`
+     * * `google.com`
+     * * `linkedin.com`
+     * * `microsoft.com`
+     * * `playgames.google.com`
+     * * `twitter.com`
+     * * `yahoo.com`
+     * 
+     */
     public Output<String> getIdpId() {
         return this.idpId;
     }
+    /**
+     * The name of the DefaultSupportedIdpConfig resource
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the DefaultSupportedIdpConfig resource
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public DefaultSupportedIdpConfig(String name, DefaultSupportedIdpConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:identityplatform/defaultSupportedIdpConfig:DefaultSupportedIdpConfig", name, args == null ? DefaultSupportedIdpConfigArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -68,6 +170,15 @@ public class DefaultSupportedIdpConfig extends io.pulumi.resources.CustomResourc
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static DefaultSupportedIdpConfig get(String name, Input<String> id, @Nullable DefaultSupportedIdpConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DefaultSupportedIdpConfig(name, id, state, options);
     }

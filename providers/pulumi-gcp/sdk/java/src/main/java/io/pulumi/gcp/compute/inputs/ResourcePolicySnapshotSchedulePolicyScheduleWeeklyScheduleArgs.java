@@ -14,6 +14,11 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleArg
 
     public static final ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleArgs Empty = new ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleArgs();
 
+    /**
+     * May contain up to seven (one for each day of the week) snapshot times.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="dayOfWeeks", required=true)
     private final Input<List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekArgs>> dayOfWeeks;
 

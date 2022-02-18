@@ -13,6 +13,11 @@ public final class ClusterNodeConfigSandboxConfigArgs extends io.pulumi.resource
 
     public static final ClusterNodeConfigSandboxConfigArgs Empty = new ClusterNodeConfigSandboxConfigArgs();
 
+    /**
+     * Which sandbox to use for pods in the node pool.
+     * Accepted values are:
+     * 
+     */
     @InputImport(name="sandboxType", required=true)
     private final Input<String> sandboxType;
 

@@ -9,8 +9,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTable {
+    /**
+     * The dataset ID of the table.
+     * 
+     */
     private final String datasetId;
+    /**
+     * The Google Cloud Platform project ID of the project containing the table.
+     * 
+     */
     private final String projectId;
+    /**
+     * The name of the table.
+     * 
+     */
     private final String tableId;
 
     @OutputCustomType.Constructor({"datasetId","projectId","tableId"})
@@ -23,12 +35,24 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTab
         this.tableId = Objects.requireNonNull(tableId);
     }
 
+    /**
+     * The dataset ID of the table.
+     * 
+     */
     public String getDatasetId() {
         return this.datasetId;
     }
+    /**
+     * The Google Cloud Platform project ID of the project containing the table.
+     * 
+     */
     public String getProjectId() {
         return this.projectId;
     }
+    /**
+     * The name of the table.
+     * 
+     */
     public String getTableId() {
         return this.tableId;
     }

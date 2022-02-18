@@ -15,9 +15,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FlexibleAppVersionDeployment {
+    /**
+     * Options for the build operations performed as a part of the version deployment. Only applicable when creating a version using source code directly.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable FlexibleAppVersionDeploymentCloudBuildOptions cloudBuildOptions;
+    /**
+     * The Docker image for the container that runs the version.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable FlexibleAppVersionDeploymentContainer container;
+    /**
+     * Manifest of the files stored in Google Cloud Storage that are included as part of this version.
+     * All files must be readable using the credentials supplied with this call.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable List<FlexibleAppVersionDeploymentFile> files;
+    /**
+     * Zip File
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable FlexibleAppVersionDeploymentZip zip;
 
     @OutputCustomType.Constructor({"cloudBuildOptions","container","files","zip"})
@@ -32,15 +53,36 @@ public final class FlexibleAppVersionDeployment {
         this.zip = zip;
     }
 
+    /**
+     * Options for the build operations performed as a part of the version deployment. Only applicable when creating a version using source code directly.
+     * Structure is documented below.
+     * 
+     */
     public Optional<FlexibleAppVersionDeploymentCloudBuildOptions> getCloudBuildOptions() {
         return Optional.ofNullable(this.cloudBuildOptions);
     }
+    /**
+     * The Docker image for the container that runs the version.
+     * Structure is documented below.
+     * 
+     */
     public Optional<FlexibleAppVersionDeploymentContainer> getContainer() {
         return Optional.ofNullable(this.container);
     }
+    /**
+     * Manifest of the files stored in Google Cloud Storage that are included as part of this version.
+     * All files must be readable using the credentials supplied with this call.
+     * Structure is documented below.
+     * 
+     */
     public List<FlexibleAppVersionDeploymentFile> getFiles() {
         return this.files == null ? List.of() : this.files;
     }
+    /**
+     * Zip File
+     * Structure is documented below.
+     * 
+     */
     public Optional<FlexibleAppVersionDeploymentZip> getZip() {
         return Optional.ofNullable(this.zip);
     }

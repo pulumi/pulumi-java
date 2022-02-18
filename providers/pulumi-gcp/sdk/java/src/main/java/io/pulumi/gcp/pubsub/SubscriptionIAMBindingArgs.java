@@ -30,6 +30,11 @@ public final class SubscriptionIAMBindingArgs extends io.pulumi.resources.Resour
         return this.members;
     }
 
+    /**
+     * The project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -37,6 +42,12 @@ public final class SubscriptionIAMBindingArgs extends io.pulumi.resources.Resour
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The role that should be applied. Only one
+     * `gcp.pubsub.SubscriptionIAMBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     @InputImport(name="role", required=true)
     private final Input<String> role;
 
@@ -44,6 +55,10 @@ public final class SubscriptionIAMBindingArgs extends io.pulumi.resources.Resour
         return this.role;
     }
 
+    /**
+     * The subscription name or id to bind to attach IAM policy to.
+     * 
+     */
     @InputImport(name="subscription", required=true)
     private final Input<String> subscription;
 

@@ -20,6 +20,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FunctionArgs Empty = new FunctionArgs();
 
+    /**
+     * Memory (in MB), available to the function. Default value is `256`. Possible values include `128`, `256`, `512`, `1024`, etc.
+     * 
+     */
     @InputImport(name="availableMemoryMb")
     private final @Nullable Input<Integer> availableMemoryMb;
 
@@ -27,6 +31,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.availableMemoryMb == null ? Input.empty() : this.availableMemoryMb;
     }
 
+    /**
+     * A set of key/value environment variable pairs available during build time.
+     * 
+     */
     @InputImport(name="buildEnvironmentVariables")
     private final @Nullable Input<Map<String,Object>> buildEnvironmentVariables;
 
@@ -34,6 +42,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.buildEnvironmentVariables == null ? Input.empty() : this.buildEnvironmentVariables;
     }
 
+    /**
+     * Description of the function.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -41,6 +53,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Name of the function that will be executed when the Google Cloud Function is triggered.
+     * 
+     */
     @InputImport(name="entryPoint")
     private final @Nullable Input<String> entryPoint;
 
@@ -48,6 +64,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.entryPoint == null ? Input.empty() : this.entryPoint;
     }
 
+    /**
+     * A set of key/value environment variable pairs to assign to the function.
+     * 
+     */
     @InputImport(name="environmentVariables")
     private final @Nullable Input<Map<String,Object>> environmentVariables;
 
@@ -55,6 +75,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.environmentVariables == null ? Input.empty() : this.environmentVariables;
     }
 
+    /**
+     * A source that fires events in response to a condition in another service. Structure is documented below. Cannot be used with `trigger_http`.
+     * 
+     */
     @InputImport(name="eventTrigger")
     private final @Nullable Input<FunctionEventTriggerArgs> eventTrigger;
 
@@ -62,6 +86,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.eventTrigger == null ? Input.empty() : this.eventTrigger;
     }
 
+    /**
+     * URL which triggers function execution. Returned only if `trigger_http` is used.
+     * 
+     */
     @InputImport(name="httpsTriggerUrl")
     private final @Nullable Input<String> httpsTriggerUrl;
 
@@ -69,6 +97,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.httpsTriggerUrl == null ? Input.empty() : this.httpsTriggerUrl;
     }
 
+    /**
+     * String value that controls what traffic can reach the function. Allowed values are `ALLOW_ALL`, `ALLOW_INTERNAL_AND_GCLB` and `ALLOW_INTERNAL_ONLY`. Check [ingress documentation](https://cloud.google.com/functions/docs/networking/network-settings#ingress_settings) to see the impact of each settings value. Changes to this field will recreate the cloud function.
+     * 
+     */
     @InputImport(name="ingressSettings")
     private final @Nullable Input<String> ingressSettings;
 
@@ -76,6 +108,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.ingressSettings == null ? Input.empty() : this.ingressSettings;
     }
 
+    /**
+     * A set of key/value label pairs to assign to the function. Label keys must follow the requirements at https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,Object>> labels;
 
@@ -83,6 +119,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The limit on the maximum number of function instances that may coexist at a given time.
+     * 
+     */
     @InputImport(name="maxInstances")
     private final @Nullable Input<Integer> maxInstances;
 
@@ -90,6 +130,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.maxInstances == null ? Input.empty() : this.maxInstances;
     }
 
+    /**
+     * The limit on the minimum number of function instances that may coexist at a given time.
+     * 
+     */
     @InputImport(name="minInstances")
     private final @Nullable Input<Integer> minInstances;
 
@@ -97,6 +141,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.minInstances == null ? Input.empty() : this.minInstances;
     }
 
+    /**
+     * A user-defined name of the function. Function names must be unique globally.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -104,6 +152,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Project of the function. If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -111,6 +163,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Region of function. If it is not provided, the provider region is used.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 
@@ -118,6 +174,11 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.region == null ? Input.empty() : this.region;
     }
 
+    /**
+     * The runtime in which the function is going to run.
+     * Eg. `"nodejs10"`, `"nodejs12"`, `"nodejs14"`, `"python37"`, `"python38"`, `"python39"`, `"dotnet3"`, `"go113"`, `"java11"`, `"ruby27"`, etc. Check the [official doc](https://cloud.google.com/functions/docs/concepts/exec#runtimes) for the up-to-date list.
+     * 
+     */
     @InputImport(name="runtime", required=true)
     private final Input<String> runtime;
 
@@ -125,6 +186,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.runtime;
     }
 
+    /**
+     * If provided, the self-provided service account to run the function with.
+     * 
+     */
     @InputImport(name="serviceAccountEmail")
     private final @Nullable Input<String> serviceAccountEmail;
 
@@ -132,6 +197,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceAccountEmail == null ? Input.empty() : this.serviceAccountEmail;
     }
 
+    /**
+     * The GCS bucket containing the zip archive which contains the function.
+     * 
+     */
     @InputImport(name="sourceArchiveBucket")
     private final @Nullable Input<String> sourceArchiveBucket;
 
@@ -139,6 +208,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceArchiveBucket == null ? Input.empty() : this.sourceArchiveBucket;
     }
 
+    /**
+     * The source archive object (file) in archive bucket.
+     * 
+     */
     @InputImport(name="sourceArchiveObject")
     private final @Nullable Input<String> sourceArchiveObject;
 
@@ -146,6 +219,11 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceArchiveObject == null ? Input.empty() : this.sourceArchiveObject;
     }
 
+    /**
+     * Represents parameters related to source repository where a function is hosted.
+     * Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Structure is documented below.
+     * 
+     */
     @InputImport(name="sourceRepository")
     private final @Nullable Input<FunctionSourceRepositoryArgs> sourceRepository;
 
@@ -153,6 +231,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceRepository == null ? Input.empty() : this.sourceRepository;
     }
 
+    /**
+     * Timeout (in seconds) for the function. Default value is 60 seconds. Cannot be more than 540 seconds.
+     * 
+     */
     @InputImport(name="timeout")
     private final @Nullable Input<Integer> timeout;
 
@@ -160,6 +242,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.timeout == null ? Input.empty() : this.timeout;
     }
 
+    /**
+     * Boolean variable. Any HTTP request (of a supported type) to the endpoint will trigger function execution. Supported HTTP request types are: POST, PUT, GET, DELETE, and OPTIONS. Endpoint is returned as `https_trigger_url`. Cannot be used with `event_trigger`.
+     * 
+     */
     @InputImport(name="triggerHttp")
     private final @Nullable Input<Boolean> triggerHttp;
 
@@ -167,6 +253,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.triggerHttp == null ? Input.empty() : this.triggerHttp;
     }
 
+    /**
+     * The VPC Network Connector that this cloud function can connect to. It should be set up as fully-qualified URI. The format of this field is `projects/*{@literal /}locations/*{@literal /}connectors/*`.
+     * 
+     */
     @InputImport(name="vpcConnector")
     private final @Nullable Input<String> vpcConnector;
 
@@ -174,6 +264,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.vpcConnector == null ? Input.empty() : this.vpcConnector;
     }
 
+    /**
+     * The egress settings for the connector, controlling what traffic is diverted through it. Allowed values are `ALL_TRAFFIC` and `PRIVATE_RANGES_ONLY`. Defaults to `PRIVATE_RANGES_ONLY`. If unset, this field preserves the previously set value.
+     * 
+     */
     @InputImport(name="vpcConnectorEgressSettings")
     private final @Nullable Input<String> vpcConnectorEgressSettings;
 

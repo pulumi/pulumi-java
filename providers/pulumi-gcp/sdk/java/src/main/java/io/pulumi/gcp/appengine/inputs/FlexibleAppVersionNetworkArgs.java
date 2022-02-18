@@ -16,6 +16,10 @@ public final class FlexibleAppVersionNetworkArgs extends io.pulumi.resources.Res
 
     public static final FlexibleAppVersionNetworkArgs Empty = new FlexibleAppVersionNetworkArgs();
 
+    /**
+     * List of ports, or port pairs, to forward from the virtual machine to the application container.
+     * 
+     */
     @InputImport(name="forwardedPorts")
     private final @Nullable Input<List<String>> forwardedPorts;
 
@@ -23,6 +27,10 @@ public final class FlexibleAppVersionNetworkArgs extends io.pulumi.resources.Res
         return this.forwardedPorts == null ? Input.empty() : this.forwardedPorts;
     }
 
+    /**
+     * Tag to apply to the instance during creation.
+     * 
+     */
     @InputImport(name="instanceTag")
     private final @Nullable Input<String> instanceTag;
 
@@ -30,6 +38,10 @@ public final class FlexibleAppVersionNetworkArgs extends io.pulumi.resources.Res
         return this.instanceTag == null ? Input.empty() : this.instanceTag;
     }
 
+    /**
+     * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -37,6 +49,10 @@ public final class FlexibleAppVersionNetworkArgs extends io.pulumi.resources.Res
         return this.name;
     }
 
+    /**
+     * Enable session affinity.
+     * 
+     */
     @InputImport(name="sessionAffinity")
     private final @Nullable Input<Boolean> sessionAffinity;
 
@@ -44,6 +60,14 @@ public final class FlexibleAppVersionNetworkArgs extends io.pulumi.resources.Res
         return this.sessionAffinity == null ? Input.empty() : this.sessionAffinity;
     }
 
+    /**
+     * Google Cloud Platform sub-network where the virtual machines are created. Specify the short name, not the resource path.
+     * If the network that the instance is being created in is a Legacy network, then the IP address is allocated from the IPv4Range.
+     * If the network that the instance is being created in is an auto Subnet Mode Network, then only network name should be specified (not the subnetworkName) and the IP address is created from the IPCidrRange of the subnetwork that exists in that zone for that network.
+     * If the network that the instance is being created in is a custom Subnet Mode Network, then the subnetworkName must be specified and the IP address is created from the IPCidrRange of the subnetwork.
+     * If specified, the subnetwork must exist in the same region as the App Engine flexible environment application.
+     * 
+     */
     @InputImport(name="subnetwork")
     private final @Nullable Input<String> subnetwork;
 

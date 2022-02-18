@@ -15,6 +15,10 @@ public final class WorkflowTemplateParameterValidationArgs extends io.pulumi.res
 
     public static final WorkflowTemplateParameterValidationArgs Empty = new WorkflowTemplateParameterValidationArgs();
 
+    /**
+     * Validation based on regular expressions.
+     * 
+     */
     @InputImport(name="regex")
     private final @Nullable Input<WorkflowTemplateParameterValidationRegexArgs> regex;
 
@@ -22,6 +26,10 @@ public final class WorkflowTemplateParameterValidationArgs extends io.pulumi.res
         return this.regex == null ? Input.empty() : this.regex;
     }
 
+    /**
+     * Optional. Corresponds to the label values of reservation resource.
+     * 
+     */
     @InputImport(name="values")
     private final @Nullable Input<WorkflowTemplateParameterValidationValuesArgs> values;
 

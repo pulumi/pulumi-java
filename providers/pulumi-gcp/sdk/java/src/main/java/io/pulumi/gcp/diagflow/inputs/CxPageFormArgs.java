@@ -15,6 +15,11 @@ public final class CxPageFormArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CxPageFormArgs Empty = new CxPageFormArgs();
 
+    /**
+     * Parameters to collect from the user.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="parameters")
     private final @Nullable Input<List<CxPageFormParameterArgs>> parameters;
 

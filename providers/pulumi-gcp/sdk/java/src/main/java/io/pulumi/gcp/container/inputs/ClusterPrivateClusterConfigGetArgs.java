@@ -16,6 +16,13 @@ public final class ClusterPrivateClusterConfigGetArgs extends io.pulumi.resource
 
     public static final ClusterPrivateClusterConfigGetArgs Empty = new ClusterPrivateClusterConfigGetArgs();
 
+    /**
+     * When `true`, the cluster's private
+     * endpoint is used as the cluster endpoint and access through the public endpoint
+     * is disabled. When `false`, either endpoint can be used. This field only applies
+     * to private clusters, when `enable_private_nodes` is `true`.
+     * 
+     */
     @InputImport(name="enablePrivateEndpoint", required=true)
     private final Input<Boolean> enablePrivateEndpoint;
 
@@ -23,6 +30,13 @@ public final class ClusterPrivateClusterConfigGetArgs extends io.pulumi.resource
         return this.enablePrivateEndpoint;
     }
 
+    /**
+     * Enables the private cluster feature,
+     * creating a private endpoint on the cluster. In a private cluster, nodes only
+     * have RFC 1918 private addresses and communicate with the master's private
+     * endpoint via private networking.
+     * 
+     */
     @InputImport(name="enablePrivateNodes")
     private final @Nullable Input<Boolean> enablePrivateNodes;
 
@@ -30,6 +44,12 @@ public final class ClusterPrivateClusterConfigGetArgs extends io.pulumi.resource
         return this.enablePrivateNodes == null ? Input.empty() : this.enablePrivateNodes;
     }
 
+    /**
+     * Controls cluster master global
+     * access settings. If unset, the provider will no longer manage this field and will
+     * not modify the previously-set value. Structure is documented below.
+     * 
+     */
     @InputImport(name="masterGlobalAccessConfig")
     private final @Nullable Input<ClusterPrivateClusterConfigMasterGlobalAccessConfigGetArgs> masterGlobalAccessConfig;
 
@@ -37,6 +57,16 @@ public final class ClusterPrivateClusterConfigGetArgs extends io.pulumi.resource
         return this.masterGlobalAccessConfig == null ? Input.empty() : this.masterGlobalAccessConfig;
     }
 
+    /**
+     * The IP range in CIDR notation to use for
+     * the hosted master network. This range will be used for assigning private IP
+     * addresses to the cluster master(s) and the ILB VIP. This range must not overlap
+     * with any other ranges in use within the cluster's network, and it must be a /28
+     * subnet. See [Private Cluster Limitations](https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters#req_res_lim)
+     * for more details. This field only applies to private clusters, when
+     * `enable_private_nodes` is `true`.
+     * 
+     */
     @InputImport(name="masterIpv4CidrBlock")
     private final @Nullable Input<String> masterIpv4CidrBlock;
 
@@ -44,6 +74,10 @@ public final class ClusterPrivateClusterConfigGetArgs extends io.pulumi.resource
         return this.masterIpv4CidrBlock == null ? Input.empty() : this.masterIpv4CidrBlock;
     }
 
+    /**
+     * The name of the peering between this cluster and the Google owned VPC.
+     * 
+     */
     @InputImport(name="peeringName")
     private final @Nullable Input<String> peeringName;
 
@@ -51,6 +85,10 @@ public final class ClusterPrivateClusterConfigGetArgs extends io.pulumi.resource
         return this.peeringName == null ? Input.empty() : this.peeringName;
     }
 
+    /**
+     * The internal IP address of this cluster's master endpoint.
+     * 
+     */
     @InputImport(name="privateEndpoint")
     private final @Nullable Input<String> privateEndpoint;
 
@@ -58,6 +96,10 @@ public final class ClusterPrivateClusterConfigGetArgs extends io.pulumi.resource
         return this.privateEndpoint == null ? Input.empty() : this.privateEndpoint;
     }
 
+    /**
+     * The external IP address of this cluster's master endpoint.
+     * 
+     */
     @InputImport(name="publicEndpoint")
     private final @Nullable Input<String> publicEndpoint;
 

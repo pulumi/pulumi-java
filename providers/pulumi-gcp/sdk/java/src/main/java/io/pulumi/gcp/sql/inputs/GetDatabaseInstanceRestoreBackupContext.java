@@ -27,6 +27,10 @@ public final class GetDatabaseInstanceRestoreBackupContext extends io.pulumi.res
         return this.instanceId;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * 
+     */
     @InputImport(name="project", required=true)
     private final String project;
 

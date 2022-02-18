@@ -16,6 +16,11 @@ public final class ReservationShareSettingsArgs extends io.pulumi.resources.Reso
 
     public static final ReservationShareSettingsArgs Empty = new ReservationShareSettingsArgs();
 
+    /**
+     * A map of project number and project config. This is only valid when shareType's value is SPECIFIC_PROJECTS.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="projectMaps")
     private final @Nullable Input<List<ReservationShareSettingsProjectMapArgs>> projectMaps;
 
@@ -23,6 +28,11 @@ public final class ReservationShareSettingsArgs extends io.pulumi.resources.Reso
         return this.projectMaps == null ? Input.empty() : this.projectMaps;
     }
 
+    /**
+     * Type of sharing for this shared-reservation
+     * Possible values are `LOCAL` and `SPECIFIC_PROJECTS`.
+     * 
+     */
     @InputImport(name="shareType")
     private final @Nullable Input<String> shareType;
 

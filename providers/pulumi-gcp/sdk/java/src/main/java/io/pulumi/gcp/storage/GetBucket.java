@@ -13,6 +13,21 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBucket {
+/**
+ * Gets an existing bucket in Google Cloud Storage service (GCS).
+ * See [the official documentation](https://cloud.google.com/storage/docs/key-terms#buckets)
+ * and
+ * [API](https://cloud.google.com/storage/docs/json_api/v1/buckets).
+ * 
+ * ## Example Usage
+ * 
+ *
+ * A collection of arguments for invoking getBucket.
+ * 
+ *
+ * A collection of values returned by getBucket.
+ * 
+ */
     public static CompletableFuture<GetBucketResult> invokeAsync(GetBucketArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:storage/getBucket:getBucket", TypeShape.of(GetBucketResult.class), args == null ? GetBucketArgs.Empty : args, Utilities.withVersion(options));
     }

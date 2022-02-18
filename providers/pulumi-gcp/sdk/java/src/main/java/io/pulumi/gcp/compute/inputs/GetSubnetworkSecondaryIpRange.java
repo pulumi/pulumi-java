@@ -12,6 +12,11 @@ public final class GetSubnetworkSecondaryIpRange extends io.pulumi.resources.Inv
 
     public static final GetSubnetworkSecondaryIpRange Empty = new GetSubnetworkSecondaryIpRange();
 
+    /**
+     * The range of IP addresses belonging to this subnetwork
+     * secondary range.
+     * 
+     */
     @InputImport(name="ipCidrRange", required=true)
     private final String ipCidrRange;
 
@@ -19,6 +24,11 @@ public final class GetSubnetworkSecondaryIpRange extends io.pulumi.resources.Inv
         return this.ipCidrRange;
     }
 
+    /**
+     * The name associated with this subnetwork secondary range, used
+     * when adding an alias IP range to a VM instance.
+     * 
+     */
     @InputImport(name="rangeName", required=true)
     private final String rangeName;
 

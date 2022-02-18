@@ -12,7 +12,15 @@ import java.util.Objects;
 @OutputCustomType
 public final class GetProjectResult {
     private final String filter;
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
+    /**
+     * A list of projects matching the provided filter. Structure is defined below.
+     * 
+     */
     private final List<GetProjectProject> projects;
 
     @OutputCustomType.Constructor({"filter","id","projects"})
@@ -28,9 +36,17 @@ public final class GetProjectResult {
     public String getFilter() {
         return this.filter;
     }
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * A list of projects matching the provided filter. Structure is defined below.
+     * 
+     */
     public List<GetProjectProject> getProjects() {
         return this.projects;
     }

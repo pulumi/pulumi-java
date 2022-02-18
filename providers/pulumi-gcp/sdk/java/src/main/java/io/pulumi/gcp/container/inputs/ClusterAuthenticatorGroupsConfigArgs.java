@@ -13,6 +13,10 @@ public final class ClusterAuthenticatorGroupsConfigArgs extends io.pulumi.resour
 
     public static final ClusterAuthenticatorGroupsConfigArgs Empty = new ClusterAuthenticatorGroupsConfigArgs();
 
+    /**
+     * The name of the RBAC security group for use with Google security groups in Kubernetes RBAC. Group name must be in format `gke-security-groups@yourdomain.com`.
+     * 
+     */
     @InputImport(name="securityGroup", required=true)
     private final Input<String> securityGroup;
 

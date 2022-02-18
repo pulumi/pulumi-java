@@ -11,9 +11,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FlexibleAppVersionAutomaticScalingNetworkUtilization {
+    /**
+     * Target bytes received per second.
+     * 
+     */
     private final @Nullable Integer targetReceivedBytesPerSecond;
+    /**
+     * Target packets received per second.
+     * 
+     */
     private final @Nullable Integer targetReceivedPacketsPerSecond;
+    /**
+     * Target bytes sent per second.
+     * 
+     */
     private final @Nullable Integer targetSentBytesPerSecond;
+    /**
+     * Target packets sent per second.
+     * 
+     */
     private final @Nullable Integer targetSentPacketsPerSecond;
 
     @OutputCustomType.Constructor({"targetReceivedBytesPerSecond","targetReceivedPacketsPerSecond","targetSentBytesPerSecond","targetSentPacketsPerSecond"})
@@ -28,15 +44,31 @@ public final class FlexibleAppVersionAutomaticScalingNetworkUtilization {
         this.targetSentPacketsPerSecond = targetSentPacketsPerSecond;
     }
 
+    /**
+     * Target bytes received per second.
+     * 
+     */
     public Optional<Integer> getTargetReceivedBytesPerSecond() {
         return Optional.ofNullable(this.targetReceivedBytesPerSecond);
     }
+    /**
+     * Target packets received per second.
+     * 
+     */
     public Optional<Integer> getTargetReceivedPacketsPerSecond() {
         return Optional.ofNullable(this.targetReceivedPacketsPerSecond);
     }
+    /**
+     * Target bytes sent per second.
+     * 
+     */
     public Optional<Integer> getTargetSentBytesPerSecond() {
         return Optional.ofNullable(this.targetSentBytesPerSecond);
     }
+    /**
+     * Target packets sent per second.
+     * 
+     */
     public Optional<Integer> getTargetSentPacketsPerSecond() {
         return Optional.ofNullable(this.targetSentPacketsPerSecond);
     }

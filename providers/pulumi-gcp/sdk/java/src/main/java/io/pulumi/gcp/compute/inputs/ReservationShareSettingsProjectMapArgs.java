@@ -14,6 +14,10 @@ public final class ReservationShareSettingsProjectMapArgs extends io.pulumi.reso
 
     public static final ReservationShareSettingsProjectMapArgs Empty = new ReservationShareSettingsProjectMapArgs();
 
+    /**
+     * The identifier for this object. Format specified above.
+     * 
+     */
     @InputImport(name="id", required=true)
     private final Input<String> id;
 
@@ -21,6 +25,10 @@ public final class ReservationShareSettingsProjectMapArgs extends io.pulumi.reso
         return this.id;
     }
 
+    /**
+     * The project id/number, should be same as the key of this project config in the project map.
+     * 
+     */
     @InputImport(name="projectId")
     private final @Nullable Input<String> projectId;
 

@@ -10,7 +10,18 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay {
+    /**
+     * Specifies the value of the fixed delay interval.
+     * Structure is documented below.
+     * 
+     */
     private final RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay fixedDelay;
+    /**
+     * The percentage of traffic (connections/operations/requests) on which delay will
+     * be introduced as part of fault injection. The value must be between 0.0 and
+     * 100.0 inclusive.
+     * 
+     */
     private final Double percentage;
 
     @OutputCustomType.Constructor({"fixedDelay","percentage"})
@@ -21,9 +32,20 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolic
         this.percentage = Objects.requireNonNull(percentage);
     }
 
+    /**
+     * Specifies the value of the fixed delay interval.
+     * Structure is documented below.
+     * 
+     */
     public RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay getFixedDelay() {
         return this.fixedDelay;
     }
+    /**
+     * The percentage of traffic (connections/operations/requests) on which delay will
+     * be introduced as part of fault injection. The value must be between 0.0 and
+     * 100.0 inclusive.
+     * 
+     */
     public Double getPercentage() {
         return this.percentage;
     }

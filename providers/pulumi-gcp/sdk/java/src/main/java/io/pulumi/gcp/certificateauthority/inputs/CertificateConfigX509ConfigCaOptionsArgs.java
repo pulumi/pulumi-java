@@ -15,6 +15,10 @@ public final class CertificateConfigX509ConfigCaOptionsArgs extends io.pulumi.re
 
     public static final CertificateConfigX509ConfigCaOptionsArgs Empty = new CertificateConfigX509ConfigCaOptionsArgs();
 
+    /**
+     * When true, the "CA" in Basic Constraints extension will be set to true.
+     * 
+     */
     @InputImport(name="isCa")
     private final @Nullable Input<Boolean> isCa;
 
@@ -22,6 +26,11 @@ public final class CertificateConfigX509ConfigCaOptionsArgs extends io.pulumi.re
         return this.isCa == null ? Input.empty() : this.isCa;
     }
 
+    /**
+     * Refers to the "path length constraint" in Basic Constraints extension. For a CA certificate, this value describes the depth of
+     * subordinate CA certificates that are allowed. If this value is less than 0, the request will fail.
+     * 
+     */
     @InputImport(name="maxIssuerPathLength")
     private final @Nullable Input<Integer> maxIssuerPathLength;
 
@@ -29,6 +38,11 @@ public final class CertificateConfigX509ConfigCaOptionsArgs extends io.pulumi.re
         return this.maxIssuerPathLength == null ? Input.empty() : this.maxIssuerPathLength;
     }
 
+    /**
+     * When true, the "CA" in Basic Constraints extension will be set to false.
+     * If both `is_ca` and `non_ca` are unset, the extension will be omitted from the CA certificate.
+     * 
+     */
     @InputImport(name="nonCa")
     private final @Nullable Input<Boolean> nonCa;
 
@@ -36,6 +50,12 @@ public final class CertificateConfigX509ConfigCaOptionsArgs extends io.pulumi.re
         return this.nonCa == null ? Input.empty() : this.nonCa;
     }
 
+    /**
+     * When true, the "path length constraint" in Basic Constraints extension will be set to 0.
+     * if both `max_issuer_path_length` and `zero_max_issuer_path_length` are unset,
+     * the max path length will be omitted from the CA certificate.
+     * 
+     */
     @InputImport(name="zeroMaxIssuerPathLength")
     private final @Nullable Input<Boolean> zeroMaxIssuerPathLength;
 

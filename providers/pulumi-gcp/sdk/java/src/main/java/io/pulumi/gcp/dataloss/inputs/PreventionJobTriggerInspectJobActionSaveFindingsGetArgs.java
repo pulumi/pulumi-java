@@ -13,6 +13,11 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsGetArgs exten
 
     public static final PreventionJobTriggerInspectJobActionSaveFindingsGetArgs Empty = new PreventionJobTriggerInspectJobActionSaveFindingsGetArgs();
 
+    /**
+     * Information on where to store output
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="outputConfig", required=true)
     private final Input<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigGetArgs> outputConfig;
 

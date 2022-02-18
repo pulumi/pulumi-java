@@ -15,6 +15,10 @@ public final class GetFolderArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetFolderArgs Empty = new GetFolderArgs();
 
+    /**
+     * The name of the Folder in the form `{folder_id}` or `folders/{folder_id}`.
+     * 
+     */
     @InputImport(name="folder", required=true)
     private final String folder;
 
@@ -22,6 +26,10 @@ public final class GetFolderArgs extends io.pulumi.resources.InvokeArgs {
         return this.folder;
     }
 
+    /**
+     * `true` to find the organization that the folder belongs, `false` to avoid the lookup. It searches up the tree. (defaults to `false`)
+     * 
+     */
     @InputImport(name="lookupOrganization")
     private final @Nullable Boolean lookupOrganization;
 

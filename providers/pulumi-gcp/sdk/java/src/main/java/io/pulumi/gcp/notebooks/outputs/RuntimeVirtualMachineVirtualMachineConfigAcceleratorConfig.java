@@ -12,7 +12,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfig {
+    /**
+     * Count of cores of this accelerator.
+     * 
+     */
     private final @Nullable Integer coreCount;
+    /**
+     * Accelerator model. For valid values, see
+     * `https://cloud.google.com/vertex-ai/docs/workbench/reference/
+     * rest/v1/projects.locations.runtimes#AcceleratorType`
+     * 
+     */
     private final @Nullable String type;
 
     @OutputCustomType.Constructor({"coreCount","type"})
@@ -23,9 +33,19 @@ public final class RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfig {
         this.type = type;
     }
 
+    /**
+     * Count of cores of this accelerator.
+     * 
+     */
     public Optional<Integer> getCoreCount() {
         return Optional.ofNullable(this.coreCount);
     }
+    /**
+     * Accelerator model. For valid values, see
+     * `https://cloud.google.com/vertex-ai/docs/workbench/reference/
+     * rest/v1/projects.locations.runtimes#AcceleratorType`
+     * 
+     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

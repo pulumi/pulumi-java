@@ -14,6 +14,15 @@ public final class ImageRawDiskArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ImageRawDiskArgs Empty = new ImageRawDiskArgs();
 
+    /**
+     * The format used to encode and transmit the block device, which
+     * should be TAR. This is just a container and transmission format
+     * and not a runtime format. Provided by the client when the disk
+     * image is created.
+     * Default value is `TAR`.
+     * Possible values are `TAR`.
+     * 
+     */
     @InputImport(name="containerType")
     private final @Nullable Input<String> containerType;
 
@@ -21,6 +30,11 @@ public final class ImageRawDiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.containerType == null ? Input.empty() : this.containerType;
     }
 
+    /**
+     * An optional SHA1 checksum of the disk image before unpackaging.
+     * This is provided by the client when the disk image is created.
+     * 
+     */
     @InputImport(name="sha1")
     private final @Nullable Input<String> sha1;
 
@@ -28,6 +42,12 @@ public final class ImageRawDiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.sha1 == null ? Input.empty() : this.sha1;
     }
 
+    /**
+     * The full Google Cloud Storage URL where disk storage is stored
+     * You must provide either this property or the sourceDisk property
+     * but not both.
+     * 
+     */
     @InputImport(name="source", required=true)
     private final Input<String> source;
 

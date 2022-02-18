@@ -12,10 +12,34 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CxPageEventHandler {
+    /**
+     * The name of the event to handle.
+     * 
+     */
     private final @Nullable String event;
+    /**
+     * - 
+     * The unique identifier of this event handler.
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * The target flow to transition to.
+     * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.
+     * 
+     */
     private final @Nullable String targetFlow;
+    /**
+     * The target page to transition to.
+     * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/pages/<Page ID>.
+     * 
+     */
     private final @Nullable String targetPage;
+    /**
+     * The fulfillment to call when the event occurs. Handling webhook errors with a fulfillment enabled with webhook could cause infinite loop. It is invalid to specify such fulfillment for a handler handling webhooks.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable CxPageEventHandlerTriggerFulfillment triggerFulfillment;
 
     @OutputCustomType.Constructor({"event","name","targetFlow","targetPage","triggerFulfillment"})
@@ -32,18 +56,42 @@ public final class CxPageEventHandler {
         this.triggerFulfillment = triggerFulfillment;
     }
 
+    /**
+     * The name of the event to handle.
+     * 
+     */
     public Optional<String> getEvent() {
         return Optional.ofNullable(this.event);
     }
+    /**
+     * - 
+     * The unique identifier of this event handler.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * The target flow to transition to.
+     * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.
+     * 
+     */
     public Optional<String> getTargetFlow() {
         return Optional.ofNullable(this.targetFlow);
     }
+    /**
+     * The target page to transition to.
+     * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/pages/<Page ID>.
+     * 
+     */
     public Optional<String> getTargetPage() {
         return Optional.ofNullable(this.targetPage);
     }
+    /**
+     * The fulfillment to call when the event occurs. Handling webhook errors with a fulfillment enabled with webhook could cause infinite loop. It is invalid to specify such fulfillment for a handler handling webhooks.
+     * Structure is documented below.
+     * 
+     */
     public Optional<CxPageEventHandlerTriggerFulfillment> getTriggerFulfillment() {
         return Optional.ofNullable(this.triggerFulfillment);
     }

@@ -15,6 +15,10 @@ public final class RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigArg
 
     public static final RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigArgs Empty = new RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigArgs();
 
+    /**
+     * Count of cores of this accelerator.
+     * 
+     */
     @InputImport(name="coreCount")
     private final @Nullable Input<Integer> coreCount;
 
@@ -22,6 +26,12 @@ public final class RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigArg
         return this.coreCount == null ? Input.empty() : this.coreCount;
     }
 
+    /**
+     * Accelerator model. For valid values, see
+     * `https://cloud.google.com/vertex-ai/docs/workbench/reference/
+     * rest/v1/projects.locations.runtimes#AcceleratorType`
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 

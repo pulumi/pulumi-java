@@ -12,6 +12,10 @@ import javax.annotation.Nullable;
 @OutputCustomType
 public final class GetRegistryImageResult {
     private final @Nullable String digest;
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
     private final String imageUrl;
     private final String name;
@@ -40,6 +44,10 @@ public final class GetRegistryImageResult {
     public Optional<String> getDigest() {
         return Optional.ofNullable(this.digest);
     }
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }

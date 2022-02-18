@@ -21,6 +21,10 @@ public final class FunctionSourceRepositoryGetArgs extends io.pulumi.resources.R
         return this.deployedUrl == null ? Input.empty() : this.deployedUrl;
     }
 
+    /**
+     * The URL pointing to the hosted repository where the function is defined. There are supported Cloud Source Repository URLs in the following formats:
+     * 
+     */
     @InputImport(name="url", required=true)
     private final Input<String> url;
 

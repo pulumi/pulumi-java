@@ -20,6 +20,10 @@ public final class GetServiceTemplateSpecContainerPort extends io.pulumi.resourc
         return this.containerPort;
     }
 
+    /**
+     * The name of the Cloud Run Service.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

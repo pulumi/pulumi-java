@@ -14,6 +14,12 @@ public final class SloWindowsBasedSliMetricSumInRangeRangeGetArgs extends io.pul
 
     public static final SloWindowsBasedSliMetricSumInRangeRangeGetArgs Empty = new SloWindowsBasedSliMetricSumInRangeRangeGetArgs();
 
+    /**
+     * max value for the range (inclusive). If not given,
+     * will be set to "infinity", defining an open range
+     * ">= range.min"
+     * 
+     */
     @InputImport(name="max")
     private final @Nullable Input<Double> max;
 
@@ -21,6 +27,12 @@ public final class SloWindowsBasedSliMetricSumInRangeRangeGetArgs extends io.pul
         return this.max == null ? Input.empty() : this.max;
     }
 
+    /**
+     * Min value for the range (inclusive). If not given,
+     * will be set to "-infinity", defining an open range
+     * "< range.max"
+     * 
+     */
     @InputImport(name="min")
     private final @Nullable Input<Double> min;
 

@@ -12,13 +12,35 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetInstanceBootDisk {
+    /**
+     * Whether the disk will be auto-deleted when the instance is deleted.
+     * 
+     */
     private final Boolean autoDelete;
+    /**
+     * Name with which the attached disk is accessible
+     * under `/dev/disk/by-id/`
+     * 
+     */
     private final String deviceName;
     private final String diskEncryptionKeyRaw;
     private final String diskEncryptionKeySha256;
+    /**
+     * Parameters with which a disk was created alongside the instance.
+     * Structure is documented below.
+     * 
+     */
     private final List<GetInstanceBootDiskInitializeParam> initializeParams;
     private final String kmsKeySelfLink;
+    /**
+     * Read/write mode for the disk. One of `"READ_ONLY"` or `"READ_WRITE"`.
+     * 
+     */
     private final String mode;
+    /**
+     * The name or self_link of the disk attached to this instance.
+     * 
+     */
     private final String source;
 
     @OutputCustomType.Constructor({"autoDelete","deviceName","diskEncryptionKeyRaw","diskEncryptionKeySha256","initializeParams","kmsKeySelfLink","mode","source"})
@@ -41,9 +63,18 @@ public final class GetInstanceBootDisk {
         this.source = Objects.requireNonNull(source);
     }
 
+    /**
+     * Whether the disk will be auto-deleted when the instance is deleted.
+     * 
+     */
     public Boolean getAutoDelete() {
         return this.autoDelete;
     }
+    /**
+     * Name with which the attached disk is accessible
+     * under `/dev/disk/by-id/`
+     * 
+     */
     public String getDeviceName() {
         return this.deviceName;
     }
@@ -53,15 +84,28 @@ public final class GetInstanceBootDisk {
     public String getDiskEncryptionKeySha256() {
         return this.diskEncryptionKeySha256;
     }
+    /**
+     * Parameters with which a disk was created alongside the instance.
+     * Structure is documented below.
+     * 
+     */
     public List<GetInstanceBootDiskInitializeParam> getInitializeParams() {
         return this.initializeParams;
     }
     public String getKmsKeySelfLink() {
         return this.kmsKeySelfLink;
     }
+    /**
+     * Read/write mode for the disk. One of `"READ_ONLY"` or `"READ_WRITE"`.
+     * 
+     */
     public String getMode() {
         return this.mode;
     }
+    /**
+     * The name or self_link of the disk attached to this instance.
+     * 
+     */
     public String getSource() {
         return this.source;
     }

@@ -14,6 +14,10 @@ public final class InstanceGuestAcceleratorArgs extends io.pulumi.resources.Reso
 
     public static final InstanceGuestAcceleratorArgs Empty = new InstanceGuestAcceleratorArgs();
 
+    /**
+     * The number of the guest accelerator cards exposed to this instance.
+     * 
+     */
     @InputImport(name="count", required=true)
     private final Input<Integer> count;
 
@@ -21,6 +25,10 @@ public final class InstanceGuestAcceleratorArgs extends io.pulumi.resources.Reso
         return this.count;
     }
 
+    /**
+     * The type of reservation from which this instance can consume resources.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

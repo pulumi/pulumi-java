@@ -14,6 +14,11 @@ public final class TableRangePartitioningArgs extends io.pulumi.resources.Resour
 
     public static final TableRangePartitioningArgs Empty = new TableRangePartitioningArgs();
 
+    /**
+     * The field used to determine how to create a range-based
+     * partition.
+     * 
+     */
     @InputImport(name="field", required=true)
     private final Input<String> field;
 
@@ -21,6 +26,11 @@ public final class TableRangePartitioningArgs extends io.pulumi.resources.Resour
         return this.field;
     }
 
+    /**
+     * Information required to partition based on ranges.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="range", required=true)
     private final Input<TableRangePartitioningRangeArgs> range;
 

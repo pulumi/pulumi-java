@@ -14,9 +14,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSource {
+    /**
+     * Defaults to false. When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.
+     * 
+     */
     private final @Nullable Boolean allowInsecure;
+    /**
+     * A Cloud Storage object.
+     * 
+     */
     private final @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceGcs gcs;
+    /**
+     * A local path within the VM to use.
+     * 
+     */
     private final @Nullable String localPath;
+    /**
+     * A generic remote file.
+     * 
+     */
     private final @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceRemote remote;
 
     @OutputCustomType.Constructor({"allowInsecure","gcs","localPath","remote"})
@@ -31,15 +47,31 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSource {
         this.remote = remote;
     }
 
+    /**
+     * Defaults to false. When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.
+     * 
+     */
     public Optional<Boolean> getAllowInsecure() {
         return Optional.ofNullable(this.allowInsecure);
     }
+    /**
+     * A Cloud Storage object.
+     * 
+     */
     public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceGcs> getGcs() {
         return Optional.ofNullable(this.gcs);
     }
+    /**
+     * A local path within the VM to use.
+     * 
+     */
     public Optional<String> getLocalPath() {
         return Optional.ofNullable(this.localPath);
     }
+    /**
+     * A generic remote file.
+     * 
+     */
     public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceRemote> getRemote() {
         return Optional.ofNullable(this.remote);
     }

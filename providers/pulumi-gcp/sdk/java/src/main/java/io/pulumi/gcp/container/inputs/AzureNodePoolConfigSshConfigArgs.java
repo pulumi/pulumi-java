@@ -13,6 +13,10 @@ public final class AzureNodePoolConfigSshConfigArgs extends io.pulumi.resources.
 
     public static final AzureNodePoolConfigSshConfigArgs Empty = new AzureNodePoolConfigSshConfigArgs();
 
+    /**
+     * Required. The SSH public key data for VMs managed by Anthos. This accepts the authorized_keys file format used in OpenSSH according to the sshd(8) manual page.
+     * 
+     */
     @InputImport(name="authorizedKey", required=true)
     private final Input<String> authorizedKey;
 

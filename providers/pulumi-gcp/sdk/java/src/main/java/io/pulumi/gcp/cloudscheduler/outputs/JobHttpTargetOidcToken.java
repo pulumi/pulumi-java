@@ -11,7 +11,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class JobHttpTargetOidcToken {
+    /**
+     * Audience to be used when generating OIDC token. If not specified,
+     * the URI specified in target will be used.
+     * 
+     */
     private final @Nullable String audience;
+    /**
+     * Service account email to be used for generating OAuth token.
+     * The service account must be within the same project as the job.
+     * 
+     */
     private final String serviceAccountEmail;
 
     @OutputCustomType.Constructor({"audience","serviceAccountEmail"})
@@ -22,9 +32,19 @@ public final class JobHttpTargetOidcToken {
         this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
     }
 
+    /**
+     * Audience to be used when generating OIDC token. If not specified,
+     * the URI specified in target will be used.
+     * 
+     */
     public Optional<String> getAudience() {
         return Optional.ofNullable(this.audience);
     }
+    /**
+     * Service account email to be used for generating OAuth token.
+     * The service account must be within the same project as the job.
+     * 
+     */
     public String getServiceAccountEmail() {
         return this.serviceAccountEmail;
     }

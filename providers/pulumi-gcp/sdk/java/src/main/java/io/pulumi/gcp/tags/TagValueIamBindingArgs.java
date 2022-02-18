@@ -30,6 +30,12 @@ public final class TagValueIamBindingArgs extends io.pulumi.resources.ResourceAr
         return this.members;
     }
 
+    /**
+     * The role that should be applied. Only one
+     * `gcp.tags.TagValueIamBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     @InputImport(name="role", required=true)
     private final Input<String> role;
 
@@ -37,6 +43,10 @@ public final class TagValueIamBindingArgs extends io.pulumi.resources.ResourceAr
         return this.role;
     }
 
+    /**
+     * Used to find the parent resource to bind the IAM policy to
+     * 
+     */
     @InputImport(name="tagValue", required=true)
     private final Input<String> tagValue;
 

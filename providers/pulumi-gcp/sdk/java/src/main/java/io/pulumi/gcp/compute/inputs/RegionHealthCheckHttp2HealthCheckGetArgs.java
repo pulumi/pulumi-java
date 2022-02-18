@@ -15,6 +15,12 @@ public final class RegionHealthCheckHttp2HealthCheckGetArgs extends io.pulumi.re
 
     public static final RegionHealthCheckHttp2HealthCheckGetArgs Empty = new RegionHealthCheckHttp2HealthCheckGetArgs();
 
+    /**
+     * The value of the host header in the HTTP2 health check request.
+     * If left empty (default value), the public IP on behalf of which this health
+     * check is performed will be used.
+     * 
+     */
     @InputImport(name="host")
     private final @Nullable Input<String> host;
 
@@ -22,6 +28,12 @@ public final class RegionHealthCheckHttp2HealthCheckGetArgs extends io.pulumi.re
         return this.host == null ? Input.empty() : this.host;
     }
 
+    /**
+     * The port number for the health check request.
+     * Must be specified if portName and portSpecification are not set
+     * or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
+     * 
+     */
     @InputImport(name="port")
     private final @Nullable Input<Integer> port;
 
@@ -29,6 +41,11 @@ public final class RegionHealthCheckHttp2HealthCheckGetArgs extends io.pulumi.re
         return this.port == null ? Input.empty() : this.port;
     }
 
+    /**
+     * Port name as defined in InstanceGroup#NamedPort#name. If both port and
+     * port_name are defined, port takes precedence.
+     * 
+     */
     @InputImport(name="portName")
     private final @Nullable Input<String> portName;
 
@@ -36,6 +53,20 @@ public final class RegionHealthCheckHttp2HealthCheckGetArgs extends io.pulumi.re
         return this.portName == null ? Input.empty() : this.portName;
     }
 
+    /**
+     * Specifies how port is selected for health checking, can be one of the
+     * following values:
+     * * `USE_FIXED_PORT`: The port number in `port` is used for health checking.
+     * * `USE_NAMED_PORT`: The `portName` is used for health checking.
+     * * `USE_SERVING_PORT`: For NetworkEndpointGroup, the port specified for each
+     *   network endpoint is used for health checking. For other backends, the
+     *   port or named port specified in the Backend Service is used for health
+     *   checking.
+     *   If not specified, gRPC health check follows behavior specified in `port` and
+     *   `portName` fields.
+     *   Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
+     * 
+     */
     @InputImport(name="portSpecification")
     private final @Nullable Input<String> portSpecification;
 
@@ -43,6 +74,13 @@ public final class RegionHealthCheckHttp2HealthCheckGetArgs extends io.pulumi.re
         return this.portSpecification == null ? Input.empty() : this.portSpecification;
     }
 
+    /**
+     * Specifies the type of proxy header to append before sending data to the
+     * backend.
+     * Default value is `NONE`.
+     * Possible values are `NONE` and `PROXY_V1`.
+     * 
+     */
     @InputImport(name="proxyHeader")
     private final @Nullable Input<String> proxyHeader;
 
@@ -50,6 +88,11 @@ public final class RegionHealthCheckHttp2HealthCheckGetArgs extends io.pulumi.re
         return this.proxyHeader == null ? Input.empty() : this.proxyHeader;
     }
 
+    /**
+     * The request path of the HTTP2 health check request.
+     * The default value is /.
+     * 
+     */
     @InputImport(name="requestPath")
     private final @Nullable Input<String> requestPath;
 
@@ -57,6 +100,12 @@ public final class RegionHealthCheckHttp2HealthCheckGetArgs extends io.pulumi.re
         return this.requestPath == null ? Input.empty() : this.requestPath;
     }
 
+    /**
+     * The bytes to match against the beginning of the response data. If left empty
+     * (the default value), any response will indicate health. The response data
+     * can only be ASCII.
+     * 
+     */
     @InputImport(name="response")
     private final @Nullable Input<String> response;
 

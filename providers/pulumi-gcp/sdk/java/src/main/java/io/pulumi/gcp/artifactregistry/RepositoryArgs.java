@@ -15,6 +15,10 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RepositoryArgs Empty = new RepositoryArgs();
 
+    /**
+     * The user-provided description of the repository.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -22,6 +26,18 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The format of packages that are stored in the repository. You can only create
+     * alpha formats if you are a member of the [alpha user group](https://cloud.google.com/artifact-registry/docs/supported-formats#alpha-access).
+     * - DOCKER
+     * - MAVEN ([Preview](https://cloud.google.com/products#product-launch-stages))
+     * - NPM ([Preview](https://cloud.google.com/products#product-launch-stages))
+     * - PYTHON ([Preview](https://cloud.google.com/products#product-launch-stages))
+     * - APT ([alpha](https://cloud.google.com/products#product-launch-stages))
+     * - YUM ([alpha](https://cloud.google.com/products#product-launch-stages))
+     * - HELM ([alpha](https://cloud.google.com/products#product-launch-stages))
+     * 
+     */
     @InputImport(name="format", required=true)
     private final Input<String> format;
 
@@ -29,6 +45,13 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
         return this.format;
     }
 
+    /**
+     * The Cloud KMS resource name of the customer managed encryption key that’s
+     * used to encrypt the contents of the Repository. Has the form:
+     * `projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key`.
+     * This value may not be changed after the Repository has been created.
+     * 
+     */
     @InputImport(name="kmsKeyName")
     private final @Nullable Input<String> kmsKeyName;
 
@@ -36,6 +59,14 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
         return this.kmsKeyName == null ? Input.empty() : this.kmsKeyName;
     }
 
+    /**
+     * Labels with user-defined metadata.
+     * This field may contain up to 64 entries. Label keys and values may be no
+     * longer than 63 characters. Label keys must begin with a lowercase letter
+     * and may only contain lowercase letters, numeric characters, underscores,
+     * and dashes.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -43,6 +74,10 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The name of the location this repository is located in.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -50,6 +85,11 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -57,6 +97,11 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The last part of the repository name, for example:
+     * "repo1"
+     * 
+     */
     @InputImport(name="repositoryId", required=true)
     private final Input<String> repositoryId;
 

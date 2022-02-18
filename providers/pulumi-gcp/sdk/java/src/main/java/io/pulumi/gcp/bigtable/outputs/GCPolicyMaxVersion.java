@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GCPolicyMaxVersion {
+    /**
+     * Number of version before applying the GC policy.
+     * 
+     */
     private final Integer number;
 
     @OutputCustomType.Constructor({"number"})
@@ -16,6 +20,10 @@ public final class GCPolicyMaxVersion {
         this.number = Objects.requireNonNull(number);
     }
 
+    /**
+     * Number of version before applying the GC policy.
+     * 
+     */
     public Integer getNumber() {
         return this.number;
     }

@@ -12,6 +12,10 @@ public final class GetWebAppArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetWebAppArgs Empty = new GetWebAppArgs();
 
+    /**
+     * The app_ip of name of the Firebase webApp.
+     * 
+     */
     @InputImport(name="appId", required=true)
     private final String appId;
 

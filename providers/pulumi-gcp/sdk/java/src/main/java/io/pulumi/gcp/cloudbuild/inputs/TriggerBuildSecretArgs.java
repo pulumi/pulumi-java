@@ -15,6 +15,10 @@ public final class TriggerBuildSecretArgs extends io.pulumi.resources.ResourceAr
 
     public static final TriggerBuildSecretArgs Empty = new TriggerBuildSecretArgs();
 
+    /**
+     * Cloud KMS key name to use to decrypt these envs.
+     * 
+     */
     @InputImport(name="kmsKeyName", required=true)
     private final Input<String> kmsKeyName;
 
@@ -22,6 +26,12 @@ public final class TriggerBuildSecretArgs extends io.pulumi.resources.ResourceAr
         return this.kmsKeyName;
     }
 
+    /**
+     * A list of global environment variables, which are encrypted using a Cloud Key Management
+     * Service crypto key. These values must be specified in the build's Secret. These variables
+     * will be available to all build steps in this build.
+     * 
+     */
     @InputImport(name="secretEnv")
     private final @Nullable Input<Map<String,String>> secretEnv;
 

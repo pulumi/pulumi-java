@@ -11,8 +11,22 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TriggerBuildSourceStorageSource {
+    /**
+     * Google Cloud Storage bucket containing the source.
+     * 
+     */
     private final String bucket;
+    /**
+     * Google Cloud Storage generation for the object.
+     * If the generation is omitted, the latest generation will be used
+     * 
+     */
     private final @Nullable String generation;
+    /**
+     * Google Cloud Storage object containing the source.
+     * This object must be a gzipped archive file (.tar.gz) containing source to build.
+     * 
+     */
     private final String object;
 
     @OutputCustomType.Constructor({"bucket","generation","object"})
@@ -25,12 +39,26 @@ public final class TriggerBuildSourceStorageSource {
         this.object = Objects.requireNonNull(object);
     }
 
+    /**
+     * Google Cloud Storage bucket containing the source.
+     * 
+     */
     public String getBucket() {
         return this.bucket;
     }
+    /**
+     * Google Cloud Storage generation for the object.
+     * If the generation is omitted, the latest generation will be used
+     * 
+     */
     public Optional<String> getGeneration() {
         return Optional.ofNullable(this.generation);
     }
+    /**
+     * Google Cloud Storage object containing the source.
+     * This object must be a gzipped archive file (.tar.gz) containing source to build.
+     * 
+     */
     public String getObject() {
         return this.object;
     }

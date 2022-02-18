@@ -14,6 +14,11 @@ public final class ProjectLocationArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final ProjectLocationArgs Empty = new ProjectLocationArgs();
 
+    /**
+     * The ID of the default GCP resource location for the Project. The location must be one of the available GCP
+     * resource locations.
+     * 
+     */
     @InputImport(name="locationId", required=true)
     private final Input<String> locationId;
 
@@ -21,6 +26,11 @@ public final class ProjectLocationArgs extends io.pulumi.resources.ResourceArgs 
         return this.locationId;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

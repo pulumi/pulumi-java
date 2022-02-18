@@ -14,6 +14,10 @@ public final class MonitoredProjectState extends io.pulumi.resources.ResourceArg
 
     public static final MonitoredProjectState Empty = new MonitoredProjectState();
 
+    /**
+     * Output only. The time when this `MonitoredProject` was created.
+     * 
+     */
     @InputImport(name="createTime")
     private final @Nullable Input<String> createTime;
 
@@ -21,6 +25,10 @@ public final class MonitoredProjectState extends io.pulumi.resources.ResourceArg
         return this.createTime == null ? Input.empty() : this.createTime;
     }
 
+    /**
+     * Required. The resource name of the existing Metrics Scope that will monitor this project. Example: locations/global/metricsScopes/{SCOPING_PROJECT_ID_OR_NUMBER}
+     * 
+     */
     @InputImport(name="metricsScope")
     private final @Nullable Input<String> metricsScope;
 
@@ -28,6 +36,10 @@ public final class MonitoredProjectState extends io.pulumi.resources.ResourceArg
         return this.metricsScope == null ? Input.empty() : this.metricsScope;
     }
 
+    /**
+     * Immutable. The resource name of the `MonitoredProject`. On input, the resource name includes the scoping project ID and monitored project ID. On output, it contains the equivalent project numbers. Example: `locations/global/metricsScopes/{SCOPING_PROJECT_ID_OR_NUMBER}/projects/{MONITORED_PROJECT_ID_OR_NUMBER}`
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

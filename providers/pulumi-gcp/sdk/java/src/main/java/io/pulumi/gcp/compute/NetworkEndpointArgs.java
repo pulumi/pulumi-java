@@ -15,6 +15,12 @@ public final class NetworkEndpointArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final NetworkEndpointArgs Empty = new NetworkEndpointArgs();
 
+    /**
+     * The name for a specific VM instance that the IP address belongs to.
+     * This is required for network endpoints of type GCE_VM_IP_PORT.
+     * The instance must be in the same zone of network endpoint group.
+     * 
+     */
     @InputImport(name="instance", required=true)
     private final Input<String> instance;
 
@@ -22,6 +28,12 @@ public final class NetworkEndpointArgs extends io.pulumi.resources.ResourceArgs 
         return this.instance;
     }
 
+    /**
+     * IPv4 address of network endpoint. The IP address must belong
+     * to a VM in GCE (either the primary IP or as part of an aliased IP
+     * range).
+     * 
+     */
     @InputImport(name="ipAddress", required=true)
     private final Input<String> ipAddress;
 
@@ -29,6 +41,10 @@ public final class NetworkEndpointArgs extends io.pulumi.resources.ResourceArgs 
         return this.ipAddress;
     }
 
+    /**
+     * The network endpoint group this endpoint is part of.
+     * 
+     */
     @InputImport(name="networkEndpointGroup", required=true)
     private final Input<String> networkEndpointGroup;
 
@@ -36,6 +52,10 @@ public final class NetworkEndpointArgs extends io.pulumi.resources.ResourceArgs 
         return this.networkEndpointGroup;
     }
 
+    /**
+     * Port number of network endpoint.
+     * 
+     */
     @InputImport(name="port", required=true)
     private final Input<Integer> port;
 
@@ -43,6 +63,11 @@ public final class NetworkEndpointArgs extends io.pulumi.resources.ResourceArgs 
         return this.port;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -50,6 +75,10 @@ public final class NetworkEndpointArgs extends io.pulumi.resources.ResourceArgs 
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Zone where the containing network endpoint group is located.
+     * 
+     */
     @InputImport(name="zone")
     private final @Nullable Input<String> zone;
 

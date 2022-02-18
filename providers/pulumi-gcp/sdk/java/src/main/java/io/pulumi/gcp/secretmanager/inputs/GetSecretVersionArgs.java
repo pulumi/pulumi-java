@@ -14,6 +14,11 @@ public final class GetSecretVersionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSecretVersionArgs Empty = new GetSecretVersionArgs();
 
+    /**
+     * The project to get the secret version for. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -21,6 +26,10 @@ public final class GetSecretVersionArgs extends io.pulumi.resources.InvokeArgs {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
+    /**
+     * The secret to get the secret version for.
+     * 
+     */
     @InputImport(name="secret", required=true)
     private final String secret;
 
@@ -28,6 +37,11 @@ public final class GetSecretVersionArgs extends io.pulumi.resources.InvokeArgs {
         return this.secret;
     }
 
+    /**
+     * The version of the secret to get. If it
+     * is not provided, the latest version is retrieved.
+     * 
+     */
     @InputImport(name="version")
     private final @Nullable String version;
 

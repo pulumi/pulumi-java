@@ -11,8 +11,23 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RegionBackendServiceIap {
+    /**
+     * OAuth2 Client ID for IAP
+     * 
+     */
     private final String oauth2ClientId;
+    /**
+     * OAuth2 Client Secret for IAP
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     private final String oauth2ClientSecret;
+    /**
+     * - 
+     * OAuth2 Client Secret SHA-256 for IAP
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     private final @Nullable String oauth2ClientSecretSha256;
 
     @OutputCustomType.Constructor({"oauth2ClientId","oauth2ClientSecret","oauth2ClientSecretSha256"})
@@ -25,12 +40,27 @@ public final class RegionBackendServiceIap {
         this.oauth2ClientSecretSha256 = oauth2ClientSecretSha256;
     }
 
+    /**
+     * OAuth2 Client ID for IAP
+     * 
+     */
     public String getOauth2ClientId() {
         return this.oauth2ClientId;
     }
+    /**
+     * OAuth2 Client Secret for IAP
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     public String getOauth2ClientSecret() {
         return this.oauth2ClientSecret;
     }
+    /**
+     * - 
+     * OAuth2 Client Secret SHA-256 for IAP
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     public Optional<String> getOauth2ClientSecretSha256() {
         return Optional.ofNullable(this.oauth2ClientSecretSha256);
     }

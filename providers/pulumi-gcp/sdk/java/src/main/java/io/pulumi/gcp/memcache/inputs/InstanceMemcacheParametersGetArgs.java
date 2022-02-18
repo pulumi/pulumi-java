@@ -15,6 +15,11 @@ public final class InstanceMemcacheParametersGetArgs extends io.pulumi.resources
 
     public static final InstanceMemcacheParametersGetArgs Empty = new InstanceMemcacheParametersGetArgs();
 
+    /**
+     * - 
+     * This is a unique ID associated with this set of parameters.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -22,6 +27,10 @@ public final class InstanceMemcacheParametersGetArgs extends io.pulumi.resources
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * User-defined set of parameters to use in the memcache process.
+     * 
+     */
     @InputImport(name="params")
     private final @Nullable Input<Map<String,String>> params;
 

@@ -19,6 +19,12 @@ public final class FlexibleAppVersionAutomaticScalingArgs extends io.pulumi.reso
 
     public static final FlexibleAppVersionAutomaticScalingArgs Empty = new FlexibleAppVersionAutomaticScalingArgs();
 
+    /**
+     * The time period that the Autoscaler should wait before it starts collecting information from a new instance.
+     * This prevents the autoscaler from collecting information when the instance is initializing,
+     * during which the collected usage would not be reliable. Default: 120s
+     * 
+     */
     @InputImport(name="coolDownPeriod")
     private final @Nullable Input<String> coolDownPeriod;
 
@@ -26,6 +32,11 @@ public final class FlexibleAppVersionAutomaticScalingArgs extends io.pulumi.reso
         return this.coolDownPeriod == null ? Input.empty() : this.coolDownPeriod;
     }
 
+    /**
+     * Target scaling by CPU usage.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="cpuUtilization", required=true)
     private final Input<FlexibleAppVersionAutomaticScalingCpuUtilizationArgs> cpuUtilization;
 
@@ -33,6 +44,11 @@ public final class FlexibleAppVersionAutomaticScalingArgs extends io.pulumi.reso
         return this.cpuUtilization;
     }
 
+    /**
+     * Target scaling by disk usage.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="diskUtilization")
     private final @Nullable Input<FlexibleAppVersionAutomaticScalingDiskUtilizationArgs> diskUtilization;
 
@@ -40,6 +56,11 @@ public final class FlexibleAppVersionAutomaticScalingArgs extends io.pulumi.reso
         return this.diskUtilization == null ? Input.empty() : this.diskUtilization;
     }
 
+    /**
+     * Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.
+     * Defaults to a runtime-specific value.
+     * 
+     */
     @InputImport(name="maxConcurrentRequests")
     private final @Nullable Input<Integer> maxConcurrentRequests;
 
@@ -47,6 +68,10 @@ public final class FlexibleAppVersionAutomaticScalingArgs extends io.pulumi.reso
         return this.maxConcurrentRequests == null ? Input.empty() : this.maxConcurrentRequests;
     }
 
+    /**
+     * Maximum number of idle instances that should be maintained for this version.
+     * 
+     */
     @InputImport(name="maxIdleInstances")
     private final @Nullable Input<Integer> maxIdleInstances;
 
@@ -54,6 +79,10 @@ public final class FlexibleAppVersionAutomaticScalingArgs extends io.pulumi.reso
         return this.maxIdleInstances == null ? Input.empty() : this.maxIdleInstances;
     }
 
+    /**
+     * Maximum amount of time that a request should wait in the pending queue before starting a new instance to handle it.
+     * 
+     */
     @InputImport(name="maxPendingLatency")
     private final @Nullable Input<String> maxPendingLatency;
 
@@ -61,6 +90,10 @@ public final class FlexibleAppVersionAutomaticScalingArgs extends io.pulumi.reso
         return this.maxPendingLatency == null ? Input.empty() : this.maxPendingLatency;
     }
 
+    /**
+     * Maximum number of instances that should be started to handle requests for this version. Default: 20
+     * 
+     */
     @InputImport(name="maxTotalInstances")
     private final @Nullable Input<Integer> maxTotalInstances;
 
@@ -68,6 +101,10 @@ public final class FlexibleAppVersionAutomaticScalingArgs extends io.pulumi.reso
         return this.maxTotalInstances == null ? Input.empty() : this.maxTotalInstances;
     }
 
+    /**
+     * Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service.
+     * 
+     */
     @InputImport(name="minIdleInstances")
     private final @Nullable Input<Integer> minIdleInstances;
 
@@ -75,6 +112,10 @@ public final class FlexibleAppVersionAutomaticScalingArgs extends io.pulumi.reso
         return this.minIdleInstances == null ? Input.empty() : this.minIdleInstances;
     }
 
+    /**
+     * Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it.
+     * 
+     */
     @InputImport(name="minPendingLatency")
     private final @Nullable Input<String> minPendingLatency;
 
@@ -82,6 +123,10 @@ public final class FlexibleAppVersionAutomaticScalingArgs extends io.pulumi.reso
         return this.minPendingLatency == null ? Input.empty() : this.minPendingLatency;
     }
 
+    /**
+     * Minimum number of running instances that should be maintained for this version. Default: 2
+     * 
+     */
     @InputImport(name="minTotalInstances")
     private final @Nullable Input<Integer> minTotalInstances;
 
@@ -89,6 +134,11 @@ public final class FlexibleAppVersionAutomaticScalingArgs extends io.pulumi.reso
         return this.minTotalInstances == null ? Input.empty() : this.minTotalInstances;
     }
 
+    /**
+     * Target scaling by network usage.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="networkUtilization")
     private final @Nullable Input<FlexibleAppVersionAutomaticScalingNetworkUtilizationArgs> networkUtilization;
 
@@ -96,6 +146,11 @@ public final class FlexibleAppVersionAutomaticScalingArgs extends io.pulumi.reso
         return this.networkUtilization == null ? Input.empty() : this.networkUtilization;
     }
 
+    /**
+     * Target scaling by request utilization.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="requestUtilization")
     private final @Nullable Input<FlexibleAppVersionAutomaticScalingRequestUtilizationArgs> requestUtilization;
 

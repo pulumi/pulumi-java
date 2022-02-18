@@ -13,6 +13,11 @@ public final class ClusterConfidentialNodesArgs extends io.pulumi.resources.Reso
 
     public static final ClusterConfidentialNodesArgs Empty = new ClusterConfidentialNodesArgs();
 
+    /**
+     * Enable the PodSecurityPolicy controller for this cluster.
+     * If enabled, pods must be valid under a PodSecurityPolicy to be created.
+     * 
+     */
     @InputImport(name="enabled", required=true)
     private final Input<Boolean> enabled;
 

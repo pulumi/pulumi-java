@@ -10,6 +10,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule {
+    /**
+     * May contain up to seven (one for each day of the week) snapshot times.
+     * Structure is documented below.
+     * 
+     */
     private final List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek> dayOfWeeks;
 
     @OutputCustomType.Constructor({"dayOfWeeks"})
@@ -17,6 +22,11 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule {
         this.dayOfWeeks = Objects.requireNonNull(dayOfWeeks);
     }
 
+    /**
+     * May contain up to seven (one for each day of the week) snapshot times.
+     * Structure is documented below.
+     * 
+     */
     public List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek> getDayOfWeeks() {
         return this.dayOfWeeks;
     }

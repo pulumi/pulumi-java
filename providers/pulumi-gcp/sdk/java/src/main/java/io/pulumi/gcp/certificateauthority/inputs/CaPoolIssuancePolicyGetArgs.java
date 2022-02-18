@@ -19,6 +19,11 @@ public final class CaPoolIssuancePolicyGetArgs extends io.pulumi.resources.Resou
 
     public static final CaPoolIssuancePolicyGetArgs Empty = new CaPoolIssuancePolicyGetArgs();
 
+    /**
+     * IssuanceModes specifies the allowed ways in which Certificates may be requested from this CaPool.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="allowedIssuanceModes")
     private final @Nullable Input<CaPoolIssuancePolicyAllowedIssuanceModesGetArgs> allowedIssuanceModes;
 
@@ -26,6 +31,12 @@ public final class CaPoolIssuancePolicyGetArgs extends io.pulumi.resources.Resou
         return this.allowedIssuanceModes == null ? Input.empty() : this.allowedIssuanceModes;
     }
 
+    /**
+     * If any AllowedKeyType is specified, then the certificate request's public key must match one of the key types listed here.
+     * Otherwise, any key may be used.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="allowedKeyTypes")
     private final @Nullable Input<List<CaPoolIssuancePolicyAllowedKeyTypeGetArgs>> allowedKeyTypes;
 
@@ -33,6 +44,14 @@ public final class CaPoolIssuancePolicyGetArgs extends io.pulumi.resources.Resou
         return this.allowedKeyTypes == null ? Input.empty() : this.allowedKeyTypes;
     }
 
+    /**
+     * A set of X.509 values that will be applied to all certificates issued through this CaPool. If a certificate request
+     * includes conflicting values for the same properties, they will be overwritten by the values defined here. If a certificate
+     * request uses a CertificateTemplate that defines conflicting predefinedValues for the same properties, the certificate
+     * issuance request will fail.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="baselineValues")
     private final @Nullable Input<CaPoolIssuancePolicyBaselineValuesGetArgs> baselineValues;
 
@@ -40,6 +59,12 @@ public final class CaPoolIssuancePolicyGetArgs extends io.pulumi.resources.Resou
         return this.baselineValues == null ? Input.empty() : this.baselineValues;
     }
 
+    /**
+     * Describes constraints on identities that may appear in Certificates issued through this CaPool.
+     * If this is omitted, then this CaPool will not add restrictions on a certificate's identity.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="identityConstraints")
     private final @Nullable Input<CaPoolIssuancePolicyIdentityConstraintsGetArgs> identityConstraints;
 
@@ -47,6 +72,11 @@ public final class CaPoolIssuancePolicyGetArgs extends io.pulumi.resources.Resou
         return this.identityConstraints == null ? Input.empty() : this.identityConstraints;
     }
 
+    /**
+     * The maximum lifetime allowed for issued Certificates. Note that if the issuing CertificateAuthority
+     * expires before a Certificate's requested maximumLifetime, the effective lifetime will be explicitly truncated to match it.
+     * 
+     */
     @InputImport(name="maximumLifetime")
     private final @Nullable Input<String> maximumLifetime;
 

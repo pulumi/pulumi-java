@@ -19,6 +19,11 @@ public final class RouterNatState extends io.pulumi.resources.ResourceArgs {
 
     public static final RouterNatState Empty = new RouterNatState();
 
+    /**
+     * A list of URLs of the IP resources to be drained. These IPs must be
+     * valid static external IPs that have been assigned to the NAT.
+     * 
+     */
     @InputImport(name="drainNatIps")
     private final @Nullable Input<List<String>> drainNatIps;
 
@@ -26,6 +31,11 @@ public final class RouterNatState extends io.pulumi.resources.ResourceArgs {
         return this.drainNatIps == null ? Input.empty() : this.drainNatIps;
     }
 
+    /**
+     * Specifies if endpoint independent mapping is enabled. This is enabled by default. For more information
+     * see the [official documentation](https://cloud.google.com/nat/docs/overview#specs-rfcs).
+     * 
+     */
     @InputImport(name="enableEndpointIndependentMapping")
     private final @Nullable Input<Boolean> enableEndpointIndependentMapping;
 
@@ -33,6 +43,10 @@ public final class RouterNatState extends io.pulumi.resources.ResourceArgs {
         return this.enableEndpointIndependentMapping == null ? Input.empty() : this.enableEndpointIndependentMapping;
     }
 
+    /**
+     * Timeout (in seconds) for ICMP connections. Defaults to 30s if not set.
+     * 
+     */
     @InputImport(name="icmpIdleTimeoutSec")
     private final @Nullable Input<Integer> icmpIdleTimeoutSec;
 
@@ -40,6 +54,11 @@ public final class RouterNatState extends io.pulumi.resources.ResourceArgs {
         return this.icmpIdleTimeoutSec == null ? Input.empty() : this.icmpIdleTimeoutSec;
     }
 
+    /**
+     * Configuration for logging on NAT
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="logConfig")
     private final @Nullable Input<RouterNatLogConfigGetArgs> logConfig;
 
@@ -47,6 +66,10 @@ public final class RouterNatState extends io.pulumi.resources.ResourceArgs {
         return this.logConfig == null ? Input.empty() : this.logConfig;
     }
 
+    /**
+     * Minimum number of ports allocated to a VM from this NAT.
+     * 
+     */
     @InputImport(name="minPortsPerVm")
     private final @Nullable Input<Integer> minPortsPerVm;
 
@@ -54,6 +77,10 @@ public final class RouterNatState extends io.pulumi.resources.ResourceArgs {
         return this.minPortsPerVm == null ? Input.empty() : this.minPortsPerVm;
     }
 
+    /**
+     * Self-link of subnetwork to NAT
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -61,6 +88,13 @@ public final class RouterNatState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * How external IPs should be allocated for this NAT. Valid values are
+     * `AUTO_ONLY` for only allowing NAT IPs allocated by Google Cloud
+     * Platform, or `MANUAL_ONLY` for only user-allocated NAT IP addresses.
+     * Possible values are `MANUAL_ONLY` and `AUTO_ONLY`.
+     * 
+     */
     @InputImport(name="natIpAllocateOption")
     private final @Nullable Input<String> natIpAllocateOption;
 
@@ -68,6 +102,11 @@ public final class RouterNatState extends io.pulumi.resources.ResourceArgs {
         return this.natIpAllocateOption == null ? Input.empty() : this.natIpAllocateOption;
     }
 
+    /**
+     * Self-links of NAT IPs. Only valid if natIpAllocateOption
+     * is set to MANUAL_ONLY.
+     * 
+     */
     @InputImport(name="natIps")
     private final @Nullable Input<List<String>> natIps;
 
@@ -75,6 +114,11 @@ public final class RouterNatState extends io.pulumi.resources.ResourceArgs {
         return this.natIps == null ? Input.empty() : this.natIps;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -82,6 +126,10 @@ public final class RouterNatState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Region where the router and NAT reside.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 
@@ -89,6 +137,10 @@ public final class RouterNatState extends io.pulumi.resources.ResourceArgs {
         return this.region == null ? Input.empty() : this.region;
     }
 
+    /**
+     * The name of the Cloud Router in which this NAT will be configured.
+     * 
+     */
     @InputImport(name="router")
     private final @Nullable Input<String> router;
 
@@ -96,6 +148,20 @@ public final class RouterNatState extends io.pulumi.resources.ResourceArgs {
         return this.router == null ? Input.empty() : this.router;
     }
 
+    /**
+     * How NAT should be configured per Subnetwork.
+     * If `ALL_SUBNETWORKS_ALL_IP_RANGES`, all of the
+     * IP ranges in every Subnetwork are allowed to Nat.
+     * If `ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES`, all of the primary IP
+     * ranges in every Subnetwork are allowed to Nat.
+     * `LIST_OF_SUBNETWORKS`: A list of Subnetworks are allowed to Nat
+     * (specified in the field subnetwork below). Note that if this field
+     * contains ALL_SUBNETWORKS_ALL_IP_RANGES or
+     * ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES, then there should not be any
+     * other RouterNat section in any Router for this network in this region.
+     * Possible values are `ALL_SUBNETWORKS_ALL_IP_RANGES`, `ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES`, and `LIST_OF_SUBNETWORKS`.
+     * 
+     */
     @InputImport(name="sourceSubnetworkIpRangesToNat")
     private final @Nullable Input<String> sourceSubnetworkIpRangesToNat;
 
@@ -103,6 +169,12 @@ public final class RouterNatState extends io.pulumi.resources.ResourceArgs {
         return this.sourceSubnetworkIpRangesToNat == null ? Input.empty() : this.sourceSubnetworkIpRangesToNat;
     }
 
+    /**
+     * One or more subnetwork NAT configurations. Only used if
+     * `source_subnetwork_ip_ranges_to_nat` is set to `LIST_OF_SUBNETWORKS`
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="subnetworks")
     private final @Nullable Input<List<RouterNatSubnetworkGetArgs>> subnetworks;
 
@@ -110,6 +182,11 @@ public final class RouterNatState extends io.pulumi.resources.ResourceArgs {
         return this.subnetworks == null ? Input.empty() : this.subnetworks;
     }
 
+    /**
+     * Timeout (in seconds) for TCP established connections.
+     * Defaults to 1200s if not set.
+     * 
+     */
     @InputImport(name="tcpEstablishedIdleTimeoutSec")
     private final @Nullable Input<Integer> tcpEstablishedIdleTimeoutSec;
 
@@ -117,6 +194,11 @@ public final class RouterNatState extends io.pulumi.resources.ResourceArgs {
         return this.tcpEstablishedIdleTimeoutSec == null ? Input.empty() : this.tcpEstablishedIdleTimeoutSec;
     }
 
+    /**
+     * Timeout (in seconds) for TCP transitory connections.
+     * Defaults to 30s if not set.
+     * 
+     */
     @InputImport(name="tcpTransitoryIdleTimeoutSec")
     private final @Nullable Input<Integer> tcpTransitoryIdleTimeoutSec;
 
@@ -124,6 +206,10 @@ public final class RouterNatState extends io.pulumi.resources.ResourceArgs {
         return this.tcpTransitoryIdleTimeoutSec == null ? Input.empty() : this.tcpTransitoryIdleTimeoutSec;
     }
 
+    /**
+     * Timeout (in seconds) for UDP connections. Defaults to 30s if not set.
+     * 
+     */
     @InputImport(name="udpIdleTimeoutSec")
     private final @Nullable Input<Integer> udpIdleTimeoutSec;
 

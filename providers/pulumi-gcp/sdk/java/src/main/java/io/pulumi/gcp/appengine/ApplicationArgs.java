@@ -16,6 +16,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationArgs Empty = new ApplicationArgs();
 
+    /**
+     * The domain to authenticate users with when using App Engine's User API.
+     * 
+     */
     @InputImport(name="authDomain")
     private final @Nullable Input<String> authDomain;
 
@@ -23,6 +27,13 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.authDomain == null ? Input.empty() : this.authDomain;
     }
 
+    /**
+     * The type of the Cloud Firestore or Cloud Datastore database associated with this application.
+     * Can be `CLOUD_FIRESTORE` or `CLOUD_DATASTORE_COMPATIBILITY` for new
+     * instances.  To support old instances, the value `CLOUD_DATASTORE` is accepted
+     * by the provider, but will be rejected by the API.
+     * 
+     */
     @InputImport(name="databaseType")
     private final @Nullable Input<String> databaseType;
 
@@ -30,6 +41,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.databaseType == null ? Input.empty() : this.databaseType;
     }
 
+    /**
+     * A block of optional settings to configure specific App Engine features:
+     * 
+     */
     @InputImport(name="featureSettings")
     private final @Nullable Input<ApplicationFeatureSettingsArgs> featureSettings;
 
@@ -37,6 +52,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.featureSettings == null ? Input.empty() : this.featureSettings;
     }
 
+    /**
+     * Settings for enabling Cloud Identity Aware Proxy
+     * 
+     */
     @InputImport(name="iap")
     private final @Nullable Input<ApplicationIapArgs> iap;
 
@@ -44,6 +63,11 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.iap == null ? Input.empty() : this.iap;
     }
 
+    /**
+     * The [location](https://cloud.google.com/appengine/docs/locations)
+     * to serve the app from.
+     * 
+     */
     @InputImport(name="locationId", required=true)
     private final Input<String> locationId;
 
@@ -51,6 +75,12 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.locationId;
     }
 
+    /**
+     * The project ID to create the application under.
+     * ~>**NOTE:** GCP only accepts project ID, not project number. If you are using number,
+     * you may get a "Permission denied" error.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -58,6 +88,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The serving status of the app.
+     * 
+     */
     @InputImport(name="servingStatus")
     private final @Nullable Input<String> servingStatus;
 

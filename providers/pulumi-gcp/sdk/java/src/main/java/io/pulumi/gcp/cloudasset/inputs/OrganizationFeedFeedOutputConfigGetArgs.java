@@ -13,6 +13,11 @@ public final class OrganizationFeedFeedOutputConfigGetArgs extends io.pulumi.res
 
     public static final OrganizationFeedFeedOutputConfigGetArgs Empty = new OrganizationFeedFeedOutputConfigGetArgs();
 
+    /**
+     * Destination on Cloud Pubsub.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="pubsubDestination", required=true)
     private final Input<OrganizationFeedFeedOutputConfigPubsubDestinationGetArgs> pubsubDestination;
 

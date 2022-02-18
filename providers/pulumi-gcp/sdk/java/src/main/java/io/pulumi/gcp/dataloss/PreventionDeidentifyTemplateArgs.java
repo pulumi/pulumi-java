@@ -15,6 +15,11 @@ public final class PreventionDeidentifyTemplateArgs extends io.pulumi.resources.
 
     public static final PreventionDeidentifyTemplateArgs Empty = new PreventionDeidentifyTemplateArgs();
 
+    /**
+     * Configuration of the deidentify template
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="deidentifyConfig", required=true)
     private final Input<PreventionDeidentifyTemplateDeidentifyConfigArgs> deidentifyConfig;
 
@@ -22,6 +27,10 @@ public final class PreventionDeidentifyTemplateArgs extends io.pulumi.resources.
         return this.deidentifyConfig;
     }
 
+    /**
+     * A description of the template.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -29,6 +38,10 @@ public final class PreventionDeidentifyTemplateArgs extends io.pulumi.resources.
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * User set display name of the template.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -36,6 +49,14 @@ public final class PreventionDeidentifyTemplateArgs extends io.pulumi.resources.
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The parent of the template in any of the following formats:
+     * * `projects/{{project}}`
+     * * `projects/{{project}}/locations/{{location}}`
+     * * `organizations/{{organization_id}}`
+     * * `organizations/{{organization_id}}/locations/{{location}}`
+     * 
+     */
     @InputImport(name="parent", required=true)
     private final Input<String> parent;
 

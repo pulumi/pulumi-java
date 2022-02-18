@@ -14,6 +14,10 @@ public final class GetServiceTemplateSpecVolume extends io.pulumi.resources.Invo
 
     public static final GetServiceTemplateSpecVolume Empty = new GetServiceTemplateSpecVolume();
 
+    /**
+     * The name of the Cloud Run Service.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

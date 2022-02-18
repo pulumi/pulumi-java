@@ -12,6 +12,10 @@ public final class GetGroupMembershipsArgs extends io.pulumi.resources.InvokeArg
 
     public static final GetGroupMembershipsArgs Empty = new GetGroupMembershipsArgs();
 
+    /**
+     * The parent Group resource under which to lookup the Membership names. Must be of the form groups/{group_id}.
+     * 
+     */
     @InputImport(name="group", required=true)
     private final String group;
 

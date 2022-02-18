@@ -16,6 +16,10 @@ public final class GetAccountIdTokenArgs extends io.pulumi.resources.InvokeArgs 
 
     public static final GetAccountIdTokenArgs Empty = new GetAccountIdTokenArgs();
 
+    /**
+     * Delegate chain of approvals needed to perform full impersonation. Specify the fully qualified service account name.   Used only when using impersonation mode.
+     * 
+     */
     @InputImport(name="delegates")
     private final @Nullable List<String> delegates;
 
@@ -23,6 +27,10 @@ public final class GetAccountIdTokenArgs extends io.pulumi.resources.InvokeArgs 
         return this.delegates == null ? List.of() : this.delegates;
     }
 
+    /**
+     * Include the verified email in the claim. Used only when using impersonation mode.
+     * 
+     */
     @InputImport(name="includeEmail")
     private final @Nullable Boolean includeEmail;
 
@@ -30,6 +38,10 @@ public final class GetAccountIdTokenArgs extends io.pulumi.resources.InvokeArgs 
         return this.includeEmail == null ? Optional.empty() : Optional.ofNullable(this.includeEmail);
     }
 
+    /**
+     * The audience claim for the `id_token`.
+     * 
+     */
     @InputImport(name="targetAudience", required=true)
     private final String targetAudience;
 
@@ -37,6 +49,10 @@ public final class GetAccountIdTokenArgs extends io.pulumi.resources.InvokeArgs 
         return this.targetAudience;
     }
 
+    /**
+     * The email of the service account being impersonated.  Used only when using impersonation mode.
+     * 
+     */
     @InputImport(name="targetServiceAccount")
     private final @Nullable String targetServiceAccount;
 

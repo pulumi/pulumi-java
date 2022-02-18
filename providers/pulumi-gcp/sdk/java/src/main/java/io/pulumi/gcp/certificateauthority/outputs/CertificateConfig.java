@@ -11,8 +11,23 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CertificateConfig {
+    /**
+     * A PublicKey describes a public key.
+     * Structure is documented below.
+     * 
+     */
     private final CertificateConfigPublicKey publicKey;
+    /**
+     * Specifies some of the values in a certificate that are related to the subject.
+     * Structure is documented below.
+     * 
+     */
     private final CertificateConfigSubjectConfig subjectConfig;
+    /**
+     * Describes how some of the technical X.509 fields in a certificate should be populated.
+     * Structure is documented below.
+     * 
+     */
     private final CertificateConfigX509Config x509Config;
 
     @OutputCustomType.Constructor({"publicKey","subjectConfig","x509Config"})
@@ -25,12 +40,27 @@ public final class CertificateConfig {
         this.x509Config = Objects.requireNonNull(x509Config);
     }
 
+    /**
+     * A PublicKey describes a public key.
+     * Structure is documented below.
+     * 
+     */
     public CertificateConfigPublicKey getPublicKey() {
         return this.publicKey;
     }
+    /**
+     * Specifies some of the values in a certificate that are related to the subject.
+     * Structure is documented below.
+     * 
+     */
     public CertificateConfigSubjectConfig getSubjectConfig() {
         return this.subjectConfig;
     }
+    /**
+     * Describes how some of the technical X.509 fields in a certificate should be populated.
+     * Structure is documented below.
+     * 
+     */
     public CertificateConfigX509Config getX509Config() {
         return this.x509Config;
     }

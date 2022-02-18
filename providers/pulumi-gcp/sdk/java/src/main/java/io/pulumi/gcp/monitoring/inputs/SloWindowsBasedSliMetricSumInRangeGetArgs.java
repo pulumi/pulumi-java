@@ -14,6 +14,16 @@ public final class SloWindowsBasedSliMetricSumInRangeGetArgs extends io.pulumi.r
 
     public static final SloWindowsBasedSliMetricSumInRangeGetArgs Empty = new SloWindowsBasedSliMetricSumInRangeGetArgs();
 
+    /**
+     * Range of numerical values. The computed good_service
+     * will be the count of values x in the Distribution such
+     * that range.min <= x <= range.max. inclusive of min and
+     * max. Open ranges can be defined by setting
+     * just one of min or max. Summed value `X` should satisfy
+     * `range.min <= X <= range.max` for a good window.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="range", required=true)
     private final Input<SloWindowsBasedSliMetricSumInRangeRangeGetArgs> range;
 
@@ -21,6 +31,16 @@ public final class SloWindowsBasedSliMetricSumInRangeGetArgs extends io.pulumi.r
         return this.range;
     }
 
+    /**
+     * A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+     * specifying the TimeSeries to use for evaluating window
+     * quality. The provided TimeSeries must have
+     * ValueType = INT64 or ValueType = DOUBLE and
+     * MetricKind = GAUGE.
+     * Summed value `X` should satisfy
+     * `range.min <= X <= range.max` for a good window.
+     * 
+     */
     @InputImport(name="timeSeries", required=true)
     private final Input<String> timeSeries;
 

@@ -14,6 +14,10 @@ public final class TriggerDestinationCloudRunServiceGetArgs extends io.pulumi.re
 
     public static final TriggerDestinationCloudRunServiceGetArgs Empty = new TriggerDestinationCloudRunServiceGetArgs();
 
+    /**
+     * Optional. The relative path on the Cloud Run service the events should be sent to. The value must conform to the definition of URI path segment (section 3.3 of RFC2396). Examples: "/route", "route", "route/subroute".
+     * 
+     */
     @InputImport(name="path")
     private final @Nullable Input<String> path;
 
@@ -21,6 +25,10 @@ public final class TriggerDestinationCloudRunServiceGetArgs extends io.pulumi.re
         return this.path == null ? Input.empty() : this.path;
     }
 
+    /**
+     * Required. The region the Cloud Run service is deployed in.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 
@@ -28,6 +36,10 @@ public final class TriggerDestinationCloudRunServiceGetArgs extends io.pulumi.re
         return this.region == null ? Input.empty() : this.region;
     }
 
+    /**
+     * Required. The name of the Cloud Run service being addressed. See https://cloud.google.com/run/docs/reference/rest/v1/namespaces.services. Only services located in the same project of the trigger object can be addressed.
+     * 
+     */
     @InputImport(name="service", required=true)
     private final Input<String> service;
 

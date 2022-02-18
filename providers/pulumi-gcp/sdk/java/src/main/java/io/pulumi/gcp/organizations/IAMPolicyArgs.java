@@ -13,6 +13,10 @@ public final class IAMPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IAMPolicyArgs Empty = new IAMPolicyArgs();
 
+    /**
+     * The numeric ID of the organization in which you want to manage the audit logging config.
+     * 
+     */
     @InputImport(name="orgId", required=true)
     private final Input<String> orgId;
 

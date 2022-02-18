@@ -15,6 +15,16 @@ public final class QueueRetryConfigArgs extends io.pulumi.resources.ResourceArgs
 
     public static final QueueRetryConfigArgs Empty = new QueueRetryConfigArgs();
 
+    /**
+     * Number of attempts per task.
+     * Cloud Tasks will attempt the task maxAttempts times (that is, if
+     * the first attempt fails, then there will be maxAttempts - 1
+     * retries). Must be >= -1.
+     * If unspecified when the queue is created, Cloud Tasks will pick
+     * the default.
+     * -1 indicates unlimited attempts.
+     * 
+     */
     @InputImport(name="maxAttempts")
     private final @Nullable Input<Integer> maxAttempts;
 
@@ -22,6 +32,12 @@ public final class QueueRetryConfigArgs extends io.pulumi.resources.ResourceArgs
         return this.maxAttempts == null ? Input.empty() : this.maxAttempts;
     }
 
+    /**
+     * A task will be scheduled for retry between minBackoff and
+     * maxBackoff duration after it fails, if the queue's RetryConfig
+     * specifies that the task should be retried.
+     * 
+     */
     @InputImport(name="maxBackoff")
     private final @Nullable Input<String> maxBackoff;
 
@@ -29,6 +45,13 @@ public final class QueueRetryConfigArgs extends io.pulumi.resources.ResourceArgs
         return this.maxBackoff == null ? Input.empty() : this.maxBackoff;
     }
 
+    /**
+     * The time between retries will double maxDoublings times.
+     * A task's retry interval starts at minBackoff, then doubles maxDoublings times,
+     * then increases linearly, and finally retries retries at intervals of maxBackoff
+     * up to maxAttempts times.
+     * 
+     */
     @InputImport(name="maxDoublings")
     private final @Nullable Input<Integer> maxDoublings;
 
@@ -36,6 +59,15 @@ public final class QueueRetryConfigArgs extends io.pulumi.resources.ResourceArgs
         return this.maxDoublings == null ? Input.empty() : this.maxDoublings;
     }
 
+    /**
+     * If positive, maxRetryDuration specifies the time limit for
+     * retrying a failed task, measured from when the task was first
+     * attempted. Once maxRetryDuration time has passed and the task has
+     * been attempted maxAttempts times, no further attempts will be
+     * made and the task will be deleted.
+     * If zero, then the task age is unlimited.
+     * 
+     */
     @InputImport(name="maxRetryDuration")
     private final @Nullable Input<String> maxRetryDuration;
 
@@ -43,6 +75,12 @@ public final class QueueRetryConfigArgs extends io.pulumi.resources.ResourceArgs
         return this.maxRetryDuration == null ? Input.empty() : this.maxRetryDuration;
     }
 
+    /**
+     * A task will be scheduled for retry between minBackoff and
+     * maxBackoff duration after it fails, if the queue's RetryConfig
+     * specifies that the task should be retried.
+     * 
+     */
     @InputImport(name="minBackoff")
     private final @Nullable Input<String> minBackoff;
 

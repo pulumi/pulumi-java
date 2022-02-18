@@ -17,6 +17,12 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NodeGroupArgs Empty = new NodeGroupArgs();
 
+    /**
+     * If you use sole-tenant nodes for your workloads, you can use the node
+     * group autoscaler to automatically manage the sizes of your node groups.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="autoscalingPolicy")
     private final @Nullable Input<NodeGroupAutoscalingPolicyArgs> autoscalingPolicy;
 
@@ -24,6 +30,10 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.autoscalingPolicy == null ? Input.empty() : this.autoscalingPolicy;
     }
 
+    /**
+     * An optional textual description of the resource.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -31,6 +41,10 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The initial number of nodes in the node group. One of `initial_size` or `size` must be specified.
+     * 
+     */
     @InputImport(name="initialSize")
     private final @Nullable Input<Integer> initialSize;
 
@@ -38,6 +52,10 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.initialSize == null ? Input.empty() : this.initialSize;
     }
 
+    /**
+     * Specifies how to handle instances when a node in the group undergoes maintenance. Set to one of: DEFAULT, RESTART_IN_PLACE, or MIGRATE_WITHIN_NODE_GROUP. The default value is DEFAULT.
+     * 
+     */
     @InputImport(name="maintenancePolicy")
     private final @Nullable Input<String> maintenancePolicy;
 
@@ -45,6 +63,11 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.maintenancePolicy == null ? Input.empty() : this.maintenancePolicy;
     }
 
+    /**
+     * contains properties for the timeframe of maintenance
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="maintenanceWindow")
     private final @Nullable Input<NodeGroupMaintenanceWindowArgs> maintenanceWindow;
 
@@ -52,6 +75,10 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.maintenanceWindow == null ? Input.empty() : this.maintenanceWindow;
     }
 
+    /**
+     * Name of the resource.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -59,6 +86,10 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The URL of the node template to which this node group belongs.
+     * 
+     */
     @InputImport(name="nodeTemplate", required=true)
     private final Input<String> nodeTemplate;
 
@@ -66,6 +97,11 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.nodeTemplate;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -73,6 +109,10 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The total number of nodes in the node group. One of `initial_size` or `size` must be specified.
+     * 
+     */
     @InputImport(name="size")
     private final @Nullable Input<Integer> size;
 
@@ -80,6 +120,10 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.size == null ? Input.empty() : this.size;
     }
 
+    /**
+     * Zone where this node group is located
+     * 
+     */
     @InputImport(name="zone")
     private final @Nullable Input<String> zone;
 

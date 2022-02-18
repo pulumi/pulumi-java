@@ -13,6 +13,18 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAzureVersions {
+/**
+ * Provides access to available Kubernetes versions in a location for a given project.
+ * 
+ * ## Example Usage
+ * 
+ *
+ * A collection of arguments for invoking getAzureVersions.
+ * 
+ *
+ * A collection of values returned by getAzureVersions.
+ * 
+ */
     public static CompletableFuture<GetAzureVersionsResult> invokeAsync(@Nullable GetAzureVersionsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:container/getAzureVersions:getAzureVersions", TypeShape.of(GetAzureVersionsResult.class), args == null ? GetAzureVersionsArgs.Empty : args, Utilities.withVersion(options));
     }

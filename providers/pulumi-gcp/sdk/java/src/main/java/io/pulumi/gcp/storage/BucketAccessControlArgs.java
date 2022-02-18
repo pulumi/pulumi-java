@@ -14,6 +14,10 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
 
     public static final BucketAccessControlArgs Empty = new BucketAccessControlArgs();
 
+    /**
+     * The name of the bucket.
+     * 
+     */
     @InputImport(name="bucket", required=true)
     private final Input<String> bucket;
 
@@ -21,6 +25,24 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
         return this.bucket;
     }
 
+    /**
+     * The entity holding the permission, in one of the following forms:
+     * user-userId
+     * user-email
+     * group-groupId
+     * group-email
+     * domain-domain
+     * project-team-projectId
+     * allUsers
+     * allAuthenticatedUsers
+     * Examples:
+     * The user liz@example.com would be user-liz@example.com.
+     * The group example@googlegroups.com would be
+     * group-example@googlegroups.com.
+     * To refer to all members of the Google Apps for Business domain
+     * example.com, the entity would be domain-example.com.
+     * 
+     */
     @InputImport(name="entity", required=true)
     private final Input<String> entity;
 
@@ -28,6 +50,11 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
         return this.entity;
     }
 
+    /**
+     * The access permission for the entity.
+     * Possible values are `OWNER`, `READER`, and `WRITER`.
+     * 
+     */
     @InputImport(name="role")
     private final @Nullable Input<String> role;
 

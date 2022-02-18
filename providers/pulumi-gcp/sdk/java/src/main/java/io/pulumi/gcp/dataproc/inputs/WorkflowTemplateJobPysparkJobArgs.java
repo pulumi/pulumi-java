@@ -17,6 +17,10 @@ public final class WorkflowTemplateJobPysparkJobArgs extends io.pulumi.resources
 
     public static final WorkflowTemplateJobPysparkJobArgs Empty = new WorkflowTemplateJobPysparkJobArgs();
 
+    /**
+     * Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
+     * 
+     */
     @InputImport(name="archiveUris")
     private final @Nullable Input<List<String>> archiveUris;
 
@@ -24,6 +28,10 @@ public final class WorkflowTemplateJobPysparkJobArgs extends io.pulumi.resources
         return this.archiveUris == null ? Input.empty() : this.archiveUris;
     }
 
+    /**
+     * Optional. The arguments to pass to the driver. Do not include arguments, such as `--conf`, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
+     * 
+     */
     @InputImport(name="args")
     private final @Nullable Input<List<String>> args;
 
@@ -31,6 +39,10 @@ public final class WorkflowTemplateJobPysparkJobArgs extends io.pulumi.resources
         return this.args == null ? Input.empty() : this.args;
     }
 
+    /**
+     * Optional. HCFS URIs of files to be placed in the working directory of each executor. Useful for naively parallel tasks.
+     * 
+     */
     @InputImport(name="fileUris")
     private final @Nullable Input<List<String>> fileUris;
 
@@ -38,6 +50,10 @@ public final class WorkflowTemplateJobPysparkJobArgs extends io.pulumi.resources
         return this.fileUris == null ? Input.empty() : this.fileUris;
     }
 
+    /**
+     * Optional. HCFS URIs of jar files to be added to the Spark CLASSPATH.
+     * 
+     */
     @InputImport(name="jarFileUris")
     private final @Nullable Input<List<String>> jarFileUris;
 
@@ -45,6 +61,10 @@ public final class WorkflowTemplateJobPysparkJobArgs extends io.pulumi.resources
         return this.jarFileUris == null ? Input.empty() : this.jarFileUris;
     }
 
+    /**
+     * Optional. The runtime log config for job execution.
+     * 
+     */
     @InputImport(name="loggingConfig")
     private final @Nullable Input<WorkflowTemplateJobPysparkJobLoggingConfigArgs> loggingConfig;
 
@@ -52,6 +72,10 @@ public final class WorkflowTemplateJobPysparkJobArgs extends io.pulumi.resources
         return this.loggingConfig == null ? Input.empty() : this.loggingConfig;
     }
 
+    /**
+     * Required. The HCFS URI of the main Python file to use as the driver. Must be a .py file.
+     * 
+     */
     @InputImport(name="mainPythonFileUri", required=true)
     private final Input<String> mainPythonFileUri;
 
@@ -59,6 +83,10 @@ public final class WorkflowTemplateJobPysparkJobArgs extends io.pulumi.resources
         return this.mainPythonFileUri;
     }
 
+    /**
+     * Optional. The properties to set on daemon config files. Property keys are specified in `prefix:property` format, for example `core:hadoop.tmp.dir`. The following are supported prefixes and their mappings: * capacity-scheduler: `capacity-scheduler.xml` * core: `core-site.xml` * distcp: `distcp-default.xml` * hdfs: `hdfs-site.xml` * hive: `hive-site.xml` * mapred: `mapred-site.xml` * pig: `pig.properties` * spark: `spark-defaults.conf` * yarn: `yarn-site.xml` For more information, see (https://cloud.google.com/dataproc/docs/concepts/cluster-properties).
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<Map<String,String>> properties;
 
@@ -66,6 +94,10 @@ public final class WorkflowTemplateJobPysparkJobArgs extends io.pulumi.resources
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * Optional. HCFS file URIs of Python files to pass to the PySpark framework. Supported file types: .py, .egg, and .zip.
+     * 
+     */
     @InputImport(name="pythonFileUris")
     private final @Nullable Input<List<String>> pythonFileUris;
 

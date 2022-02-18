@@ -11,7 +11,16 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CryptoKeyVersionTemplate {
+    /**
+     * The algorithm to use when creating a version based on this template.
+     * See the [algorithm reference](https://cloud.google.com/kms/docs/reference/rest/v1/CryptoKeyVersionAlgorithm) for possible inputs.
+     * 
+     */
     private final String algorithm;
+    /**
+     * The protection level to use when creating a version based on this template. Possible values include "SOFTWARE", "HSM", "EXTERNAL". Defaults to "SOFTWARE".
+     * 
+     */
     private final @Nullable String protectionLevel;
 
     @OutputCustomType.Constructor({"algorithm","protectionLevel"})
@@ -22,9 +31,18 @@ public final class CryptoKeyVersionTemplate {
         this.protectionLevel = protectionLevel;
     }
 
+    /**
+     * The algorithm to use when creating a version based on this template.
+     * See the [algorithm reference](https://cloud.google.com/kms/docs/reference/rest/v1/CryptoKeyVersionAlgorithm) for possible inputs.
+     * 
+     */
     public String getAlgorithm() {
         return this.algorithm;
     }
+    /**
+     * The protection level to use when creating a version based on this template. Possible values include "SOFTWARE", "HSM", "EXTERNAL". Defaults to "SOFTWARE".
+     * 
+     */
     public Optional<String> getProtectionLevel() {
         return Optional.ofNullable(this.protectionLevel);
     }

@@ -22,6 +22,10 @@ public final class ServiceIamMemberState extends io.pulumi.resources.ResourceArg
         return this.condition == null ? Input.empty() : this.condition;
     }
 
+    /**
+     * (Computed) The etag of the IAM policy.
+     * 
+     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -36,6 +40,12 @@ public final class ServiceIamMemberState extends io.pulumi.resources.ResourceArg
         return this.member == null ? Input.empty() : this.member;
     }
 
+    /**
+     * The role that should be applied. Only one
+     * `gcp.endpoints.ServiceIamBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     @InputImport(name="role")
     private final @Nullable Input<String> role;
 

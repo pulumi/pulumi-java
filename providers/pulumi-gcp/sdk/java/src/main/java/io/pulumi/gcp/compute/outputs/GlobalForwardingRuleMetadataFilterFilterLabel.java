@@ -9,7 +9,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GlobalForwardingRuleMetadataFilterFilterLabel {
+    /**
+     * Name of the metadata label. The length must be between
+     * 1 and 1024 characters, inclusive.
+     * 
+     */
     private final String name;
+    /**
+     * The value that the label must match. The value has a maximum
+     * length of 1024 characters.
+     * 
+     */
     private final String value;
 
     @OutputCustomType.Constructor({"name","value"})
@@ -20,9 +30,19 @@ public final class GlobalForwardingRuleMetadataFilterFilterLabel {
         this.value = Objects.requireNonNull(value);
     }
 
+    /**
+     * Name of the metadata label. The length must be between
+     * 1 and 1024 characters, inclusive.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The value that the label must match. The value has a maximum
+     * length of 1024 characters.
+     * 
+     */
     public String getValue() {
         return this.value;
     }

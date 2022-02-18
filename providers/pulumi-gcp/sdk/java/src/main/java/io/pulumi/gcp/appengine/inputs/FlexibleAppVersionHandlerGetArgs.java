@@ -16,6 +16,12 @@ public final class FlexibleAppVersionHandlerGetArgs extends io.pulumi.resources.
 
     public static final FlexibleAppVersionHandlerGetArgs Empty = new FlexibleAppVersionHandlerGetArgs();
 
+    /**
+     * Action to take when users access resources that require authentication.
+     * Default value is `AUTH_FAIL_ACTION_REDIRECT`.
+     * Possible values are `AUTH_FAIL_ACTION_REDIRECT` and `AUTH_FAIL_ACTION_UNAUTHORIZED`.
+     * 
+     */
     @InputImport(name="authFailAction")
     private final @Nullable Input<String> authFailAction;
 
@@ -23,6 +29,12 @@ public final class FlexibleAppVersionHandlerGetArgs extends io.pulumi.resources.
         return this.authFailAction == null ? Input.empty() : this.authFailAction;
     }
 
+    /**
+     * Level of login required to access this resource.
+     * Default value is `LOGIN_OPTIONAL`.
+     * Possible values are `LOGIN_OPTIONAL`, `LOGIN_ADMIN`, and `LOGIN_REQUIRED`.
+     * 
+     */
     @InputImport(name="login")
     private final @Nullable Input<String> login;
 
@@ -30,6 +42,11 @@ public final class FlexibleAppVersionHandlerGetArgs extends io.pulumi.resources.
         return this.login == null ? Input.empty() : this.login;
     }
 
+    /**
+     * 30x code to use when performing redirects for the secure field.
+     * Possible values are `REDIRECT_HTTP_RESPONSE_CODE_301`, `REDIRECT_HTTP_RESPONSE_CODE_302`, `REDIRECT_HTTP_RESPONSE_CODE_303`, and `REDIRECT_HTTP_RESPONSE_CODE_307`.
+     * 
+     */
     @InputImport(name="redirectHttpResponseCode")
     private final @Nullable Input<String> redirectHttpResponseCode;
 
@@ -37,6 +54,10 @@ public final class FlexibleAppVersionHandlerGetArgs extends io.pulumi.resources.
         return this.redirectHttpResponseCode == null ? Input.empty() : this.redirectHttpResponseCode;
     }
 
+    /**
+     * Path to the script from the application root directory.
+     * 
+     */
     @InputImport(name="script")
     private final @Nullable Input<FlexibleAppVersionHandlerScriptGetArgs> script;
 
@@ -44,6 +65,11 @@ public final class FlexibleAppVersionHandlerGetArgs extends io.pulumi.resources.
         return this.script == null ? Input.empty() : this.script;
     }
 
+    /**
+     * Security (HTTPS) enforcement for this URL.
+     * Possible values are `SECURE_DEFAULT`, `SECURE_NEVER`, `SECURE_OPTIONAL`, and `SECURE_ALWAYS`.
+     * 
+     */
     @InputImport(name="securityLevel")
     private final @Nullable Input<String> securityLevel;
 
@@ -51,6 +77,12 @@ public final class FlexibleAppVersionHandlerGetArgs extends io.pulumi.resources.
         return this.securityLevel == null ? Input.empty() : this.securityLevel;
     }
 
+    /**
+     * Files served directly to the user for a given URL, such as images, CSS stylesheets, or JavaScript source files.
+     * Static file handlers describe which files in the application directory are static files, and which URLs serve them.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="staticFiles")
     private final @Nullable Input<FlexibleAppVersionHandlerStaticFilesGetArgs> staticFiles;
 
@@ -58,6 +90,11 @@ public final class FlexibleAppVersionHandlerGetArgs extends io.pulumi.resources.
         return this.staticFiles == null ? Input.empty() : this.staticFiles;
     }
 
+    /**
+     * URL prefix. Uses regular expression syntax, which means regexp special characters must be escaped, but should not contain groupings.
+     * All URLs that begin with this prefix are handled by this handler, using the portion of the URL after the prefix as part of the file path.
+     * 
+     */
     @InputImport(name="urlRegex")
     private final @Nullable Input<String> urlRegex;
 

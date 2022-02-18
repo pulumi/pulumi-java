@@ -16,6 +16,10 @@ public final class GameServerClusterState extends io.pulumi.resources.ResourceAr
 
     public static final GameServerClusterState Empty = new GameServerClusterState();
 
+    /**
+     * Required. The resource name of the game server cluster
+     * 
+     */
     @InputImport(name="clusterId")
     private final @Nullable Input<String> clusterId;
 
@@ -23,6 +27,12 @@ public final class GameServerClusterState extends io.pulumi.resources.ResourceAr
         return this.clusterId == null ? Input.empty() : this.clusterId;
     }
 
+    /**
+     * Game server cluster connection information. This information is used to
+     * manage game server clusters.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="connectionInfo")
     private final @Nullable Input<GameServerClusterConnectionInfoGetArgs> connectionInfo;
 
@@ -30,6 +40,10 @@ public final class GameServerClusterState extends io.pulumi.resources.ResourceAr
         return this.connectionInfo == null ? Input.empty() : this.connectionInfo;
     }
 
+    /**
+     * Human readable description of the cluster.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -37,6 +51,11 @@ public final class GameServerClusterState extends io.pulumi.resources.ResourceAr
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The labels associated with this game server cluster. Each label is a
+     * key-value pair.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -44,6 +63,10 @@ public final class GameServerClusterState extends io.pulumi.resources.ResourceAr
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * Location of the Cluster.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -51,6 +74,12 @@ public final class GameServerClusterState extends io.pulumi.resources.ResourceAr
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The resource id of the game server cluster, eg:
+     * 'projects/{project_id}/locations/{location}/realms/{realm_id}/gameServerClusters/{cluster_id}'. For example,
+     * 'projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-onprem-cluster'.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -58,6 +87,11 @@ public final class GameServerClusterState extends io.pulumi.resources.ResourceAr
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -65,6 +99,10 @@ public final class GameServerClusterState extends io.pulumi.resources.ResourceAr
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The realm id of the game server realm.
+     * 
+     */
     @InputImport(name="realmId")
     private final @Nullable Input<String> realmId;
 

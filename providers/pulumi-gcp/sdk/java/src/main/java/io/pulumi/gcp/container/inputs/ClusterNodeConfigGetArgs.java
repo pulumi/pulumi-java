@@ -27,6 +27,10 @@ public final class ClusterNodeConfigGetArgs extends io.pulumi.resources.Resource
 
     public static final ClusterNodeConfigGetArgs Empty = new ClusterNodeConfigGetArgs();
 
+    /**
+     * The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: <https://cloud.google.com/compute/docs/disks/customer-managed-encryption>
+     * 
+     */
     @InputImport(name="bootDiskKmsKey")
     private final @Nullable Input<String> bootDiskKmsKey;
 
@@ -34,6 +38,11 @@ public final class ClusterNodeConfigGetArgs extends io.pulumi.resources.Resource
         return this.bootDiskKmsKey == null ? Input.empty() : this.bootDiskKmsKey;
     }
 
+    /**
+     * Size of the disk attached to each node, specified
+     * in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.
+     * 
+     */
     @InputImport(name="diskSizeGb")
     private final @Nullable Input<Integer> diskSizeGb;
 
@@ -41,6 +50,11 @@ public final class ClusterNodeConfigGetArgs extends io.pulumi.resources.Resource
         return this.diskSizeGb == null ? Input.empty() : this.diskSizeGb;
     }
 
+    /**
+     * Type of the disk attached to each node
+     * (e.g. 'pd-standard', 'pd-balanced' or 'pd-ssd'). If unspecified, the default disk type is 'pd-standard'
+     * 
+     */
     @InputImport(name="diskType")
     private final @Nullable Input<String> diskType;
 
@@ -48,6 +62,10 @@ public final class ClusterNodeConfigGetArgs extends io.pulumi.resources.Resource
         return this.diskType == null ? Input.empty() : this.diskType;
     }
 
+    /**
+     * Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by the boot disk. Structure is documented below.
+     * 
+     */
     @InputImport(name="ephemeralStorageConfig")
     private final @Nullable Input<ClusterNodeConfigEphemeralStorageConfigGetArgs> ephemeralStorageConfig;
 
@@ -55,6 +73,15 @@ public final class ClusterNodeConfigGetArgs extends io.pulumi.resources.Resource
         return this.ephemeralStorageConfig == null ? Input.empty() : this.ephemeralStorageConfig;
     }
 
+    /**
+     * Parameters for the Google Container Filesystem (GCFS).
+     * If unspecified, GCFS will not be enabled on the node pool. When enabling this feature you must specify `image_type = "COS_CONTAINERD"` and `node_version` from GKE versions 1.19 or later to use it.
+     * For GKE versions 1.19, 1.20, and 1.21, the recommended minimum `node_version` would be 1.19.15-gke.1300, 1.20.11-gke.1300, and 1.21.5-gke.1300 respectively.
+     * A `machine_type` that has more than 16 GiB of memory is also recommended.
+     * GCFS must be enabled in order to use [image streaming](https://cloud.google.com/kubernetes-engine/docs/how-to/image-streaming).
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="gcfsConfig")
     private final @Nullable Input<ClusterNodeConfigGcfsConfigGetArgs> gcfsConfig;
 
@@ -62,6 +89,11 @@ public final class ClusterNodeConfigGetArgs extends io.pulumi.resources.Resource
         return this.gcfsConfig == null ? Input.empty() : this.gcfsConfig;
     }
 
+    /**
+     * List of the type and count of accelerator cards attached to the instance.
+     * Structure documented below.
+     * 
+     */
     @InputImport(name="guestAccelerators")
     private final @Nullable Input<List<ClusterNodeConfigGuestAcceleratorGetArgs>> guestAccelerators;
 
@@ -69,6 +101,11 @@ public final class ClusterNodeConfigGetArgs extends io.pulumi.resources.Resource
         return this.guestAccelerators == null ? Input.empty() : this.guestAccelerators;
     }
 
+    /**
+     * The image type to use for this node. Note that changing the image type
+     * will delete and recreate all nodes in the node pool.
+     * 
+     */
     @InputImport(name="imageType")
     private final @Nullable Input<String> imageType;
 
@@ -76,6 +113,11 @@ public final class ClusterNodeConfigGetArgs extends io.pulumi.resources.Resource
         return this.imageType == null ? Input.empty() : this.imageType;
     }
 
+    /**
+     * Kubelet configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="kubeletConfig")
     private final @Nullable Input<ClusterNodeConfigKubeletConfigGetArgs> kubeletConfig;
 
@@ -83,6 +125,11 @@ public final class ClusterNodeConfigGetArgs extends io.pulumi.resources.Resource
         return this.kubeletConfig == null ? Input.empty() : this.kubeletConfig;
     }
 
+    /**
+     * The Kubernetes labels (key/value pairs) to be applied to each node. The kubernetes.io/ and k8s.io/ prefixes are
+     * reserved by Kubernetes Core components and cannot be specified.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -90,6 +137,12 @@ public final class ClusterNodeConfigGetArgs extends io.pulumi.resources.Resource
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * Linux node configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
+     * Note that validations happen all server side. All attributes are optional.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="linuxNodeConfig")
     private final @Nullable Input<ClusterNodeConfigLinuxNodeConfigGetArgs> linuxNodeConfig;
 
@@ -97,6 +150,10 @@ public final class ClusterNodeConfigGetArgs extends io.pulumi.resources.Resource
         return this.linuxNodeConfig == null ? Input.empty() : this.linuxNodeConfig;
     }
 
+    /**
+     * Number of local SSDs to use to back ephemeral storage. Uses NVMe interfaces. Each local SSD is 375 GB in size. If zero, it means to disable using local SSDs as ephemeral storage.
+     * 
+     */
     @InputImport(name="localSsdCount")
     private final @Nullable Input<Integer> localSsdCount;
 
@@ -104,6 +161,12 @@ public final class ClusterNodeConfigGetArgs extends io.pulumi.resources.Resource
         return this.localSsdCount == null ? Input.empty() : this.localSsdCount;
     }
 
+    /**
+     * The name of a Google Compute Engine machine type.
+     * Defaults to `e2-medium`. To create a custom machine type, value should be set as specified
+     * [here](https://cloud.google.com/compute/docs/reference/latest/instances#machineType).
+     * 
+     */
     @InputImport(name="machineType")
     private final @Nullable Input<String> machineType;
 
@@ -111,6 +174,14 @@ public final class ClusterNodeConfigGetArgs extends io.pulumi.resources.Resource
         return this.machineType == null ? Input.empty() : this.machineType;
     }
 
+    /**
+     * The metadata key/value pairs assigned to instances in
+     * the cluster. From GKE `1.12` onwards, `disable-legacy-endpoints` is set to
+     * `true` by the API; if `metadata` is set but that default value is not
+     * included, the provider will attempt to unset the value. To avoid this, set the
+     * value in your config.
+     * 
+     */
     @InputImport(name="metadata")
     private final @Nullable Input<Map<String,String>> metadata;
 
@@ -118,6 +189,14 @@ public final class ClusterNodeConfigGetArgs extends io.pulumi.resources.Resource
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
+    /**
+     * Minimum CPU platform to be used by this instance.
+     * The instance may be scheduled on the specified or newer CPU platform. Applicable
+     * values are the friendly names of CPU platforms, such as `Intel Haswell`. See the
+     * [official documentation](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform)
+     * for more information.
+     * 
+     */
     @InputImport(name="minCpuPlatform")
     private final @Nullable Input<String> minCpuPlatform;
 
@@ -125,6 +204,10 @@ public final class ClusterNodeConfigGetArgs extends io.pulumi.resources.Resource
         return this.minCpuPlatform == null ? Input.empty() : this.minCpuPlatform;
     }
 
+    /**
+     * Setting this field will assign instances of this pool to run on the specified node group. This is useful for running workloads on [sole tenant nodes](https://cloud.google.com/compute/docs/nodes/sole-tenant-nodes).
+     * 
+     */
     @InputImport(name="nodeGroup")
     private final @Nullable Input<String> nodeGroup;
 
@@ -132,6 +215,12 @@ public final class ClusterNodeConfigGetArgs extends io.pulumi.resources.Resource
         return this.nodeGroup == null ? Input.empty() : this.nodeGroup;
     }
 
+    /**
+     * The set of Google API scopes to be made available
+     * on all of the node VMs under the "default" service account.
+     * Use the "https://www.googleapis.com/auth/cloud-platform" scope to grant access to all APIs. It is recommended that you set `service_account` to a non-default service account and grant IAM roles to that service account for only the resources that it needs.
+     * 
+     */
     @InputImport(name="oauthScopes")
     private final @Nullable Input<List<String>> oauthScopes;
 
@@ -139,6 +228,12 @@ public final class ClusterNodeConfigGetArgs extends io.pulumi.resources.Resource
         return this.oauthScopes == null ? Input.empty() : this.oauthScopes;
     }
 
+    /**
+     * A boolean that represents whether or not the underlying node VMs
+     * are preemptible. See the [official documentation](https://cloud.google.com/container-engine/docs/preemptible-vm)
+     * for more information. Defaults to false.
+     * 
+     */
     @InputImport(name="preemptible")
     private final @Nullable Input<Boolean> preemptible;
 
@@ -146,6 +241,11 @@ public final class ClusterNodeConfigGetArgs extends io.pulumi.resources.Resource
         return this.preemptible == null ? Input.empty() : this.preemptible;
     }
 
+    /**
+     * [GKE Sandbox](https://cloud.google.com/kubernetes-engine/docs/how-to/sandbox-pods) configuration. When enabling this feature you must specify `image_type = "COS_CONTAINERD"` and `node_version = "1.12.7-gke.17"` or later to use it.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="sandboxConfig")
     private final @Nullable Input<ClusterNodeConfigSandboxConfigGetArgs> sandboxConfig;
 
@@ -153,6 +253,11 @@ public final class ClusterNodeConfigGetArgs extends io.pulumi.resources.Resource
         return this.sandboxConfig == null ? Input.empty() : this.sandboxConfig;
     }
 
+    /**
+     * The service account to be used by the Node VMs.
+     * If not specified, the "default" service account is used.
+     * 
+     */
     @InputImport(name="serviceAccount")
     private final @Nullable Input<String> serviceAccount;
 
@@ -160,6 +265,10 @@ public final class ClusterNodeConfigGetArgs extends io.pulumi.resources.Resource
         return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
     }
 
+    /**
+     * Shielded Instance options. Structure is documented below.
+     * 
+     */
     @InputImport(name="shieldedInstanceConfig")
     private final @Nullable Input<ClusterNodeConfigShieldedInstanceConfigGetArgs> shieldedInstanceConfig;
 
@@ -167,6 +276,12 @@ public final class ClusterNodeConfigGetArgs extends io.pulumi.resources.Resource
         return this.shieldedInstanceConfig == null ? Input.empty() : this.shieldedInstanceConfig;
     }
 
+    /**
+     * ) A boolean
+     * that represents whether the underlying node VMs are spot. See the [official documentation](https://cloud.google.com/kubernetes-engine/docs/concepts/spot-vms)
+     * for more information. Defaults to false.
+     * 
+     */
     @InputImport(name="spot")
     private final @Nullable Input<Boolean> spot;
 
@@ -174,6 +289,11 @@ public final class ClusterNodeConfigGetArgs extends io.pulumi.resources.Resource
         return this.spot == null ? Input.empty() : this.spot;
     }
 
+    /**
+     * The list of instance tags applied to all nodes. Tags are used to identify
+     * valid sources or targets for network firewalls.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<String>> tags;
 
@@ -181,6 +301,17 @@ public final class ClusterNodeConfigGetArgs extends io.pulumi.resources.Resource
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * A list of [Kubernetes taints](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/)
+     * to apply to nodes. GKE's API can only set this field on cluster creation.
+     * However, GKE will add taints to your nodes if you enable certain features such
+     * as GPUs. If this field is set, any diffs on this field will cause the provider to
+     * recreate the underlying resource. Taint values can be updated safely in
+     * Kubernetes (eg. through `kubectl`), and it's recommended that you do not use
+     * this field to manage taints. If you do, `lifecycle.ignore_changes` is
+     * recommended. Structure is documented below.
+     * 
+     */
     @InputImport(name="taints")
     private final @Nullable Input<List<ClusterNodeConfigTaintGetArgs>> taints;
 
@@ -188,6 +319,11 @@ public final class ClusterNodeConfigGetArgs extends io.pulumi.resources.Resource
         return this.taints == null ? Input.empty() : this.taints;
     }
 
+    /**
+     * Metadata configuration to expose to workloads on the node pool.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="workloadMetadataConfig")
     private final @Nullable Input<ClusterNodeConfigWorkloadMetadataConfigGetArgs> workloadMetadataConfig;
 

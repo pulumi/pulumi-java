@@ -14,6 +14,12 @@ public final class ClusterNodeConfigLinuxNodeConfigGetArgs extends io.pulumi.res
 
     public static final ClusterNodeConfigLinuxNodeConfigGetArgs Empty = new ClusterNodeConfigLinuxNodeConfigGetArgs();
 
+    /**
+     * The Linux kernel parameters to be applied to the nodes
+     * and all pods running on the nodes. Specified as a map from the key, such as
+     * `net.core.wmem_max`, to a string value.
+     * 
+     */
     @InputImport(name="sysctls", required=true)
     private final Input<Map<String,String>> sysctls;
 

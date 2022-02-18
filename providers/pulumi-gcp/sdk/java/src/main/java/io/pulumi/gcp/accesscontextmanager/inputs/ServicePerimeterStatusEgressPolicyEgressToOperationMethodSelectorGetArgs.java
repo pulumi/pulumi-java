@@ -14,6 +14,12 @@ public final class ServicePerimeterStatusEgressPolicyEgressToOperationMethodSele
 
     public static final ServicePerimeterStatusEgressPolicyEgressToOperationMethodSelectorGetArgs Empty = new ServicePerimeterStatusEgressPolicyEgressToOperationMethodSelectorGetArgs();
 
+    /**
+     * Value for `method` should be a valid method name for the corresponding
+     * `serviceName` in `ApiOperation`. If `*` used as value for method,
+     * then ALL methods and permissions are allowed.
+     * 
+     */
     @InputImport(name="method")
     private final @Nullable Input<String> method;
 
@@ -21,6 +27,11 @@ public final class ServicePerimeterStatusEgressPolicyEgressToOperationMethodSele
         return this.method == null ? Input.empty() : this.method;
     }
 
+    /**
+     * Value for permission should be a valid Cloud IAM permission for the
+     * corresponding `serviceName` in `ApiOperation`.
+     * 
+     */
     @InputImport(name="permission")
     private final @Nullable Input<String> permission;
 

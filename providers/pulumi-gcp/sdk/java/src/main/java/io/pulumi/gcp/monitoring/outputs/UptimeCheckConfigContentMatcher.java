@@ -11,7 +11,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class UptimeCheckConfigContentMatcher {
+    /**
+     * String or regex content to match (max 1024 bytes)
+     * 
+     */
     private final String content;
+    /**
+     * The type of content matcher that will be applied to the server output, compared to the content string when the check is run.
+     * Default value is `CONTAINS_STRING`.
+     * Possible values are `CONTAINS_STRING`, `NOT_CONTAINS_STRING`, `MATCHES_REGEX`, and `NOT_MATCHES_REGEX`.
+     * 
+     */
     private final @Nullable String matcher;
 
     @OutputCustomType.Constructor({"content","matcher"})
@@ -22,9 +32,19 @@ public final class UptimeCheckConfigContentMatcher {
         this.matcher = matcher;
     }
 
+    /**
+     * String or regex content to match (max 1024 bytes)
+     * 
+     */
     public String getContent() {
         return this.content;
     }
+    /**
+     * The type of content matcher that will be applied to the server output, compared to the content string when the check is run.
+     * Default value is `CONTAINS_STRING`.
+     * Possible values are `CONTAINS_STRING`, `NOT_CONTAINS_STRING`, `MATCHES_REGEX`, and `NOT_MATCHES_REGEX`.
+     * 
+     */
     public Optional<String> getMatcher() {
         return Optional.ofNullable(this.matcher);
     }

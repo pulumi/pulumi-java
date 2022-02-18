@@ -15,6 +15,10 @@ public final class RegionBackendServiceConsistentHashHttpCookieArgs extends io.p
 
     public static final RegionBackendServiceConsistentHashHttpCookieArgs Empty = new RegionBackendServiceConsistentHashHttpCookieArgs();
 
+    /**
+     * Name of the cookie.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -22,6 +26,10 @@ public final class RegionBackendServiceConsistentHashHttpCookieArgs extends io.p
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Path to set for the cookie.
+     * 
+     */
     @InputImport(name="path")
     private final @Nullable Input<String> path;
 
@@ -29,6 +37,11 @@ public final class RegionBackendServiceConsistentHashHttpCookieArgs extends io.p
         return this.path == null ? Input.empty() : this.path;
     }
 
+    /**
+     * The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s
+     * (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
+     * 
+     */
     @InputImport(name="ttl")
     private final @Nullable Input<RegionBackendServiceConsistentHashHttpCookieTtlArgs> ttl;
 

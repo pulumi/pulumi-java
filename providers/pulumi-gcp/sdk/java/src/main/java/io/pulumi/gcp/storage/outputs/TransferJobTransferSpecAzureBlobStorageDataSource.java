@@ -12,9 +12,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TransferJobTransferSpecAzureBlobStorageDataSource {
+    /**
+     * Credentials used to authenticate API requests to Azure block.
+     * 
+     */
     private final TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentials azureCredentials;
+    /**
+     * The container to transfer from the Azure Storage account.`
+     * 
+     */
     private final String container;
+    /**
+     * Root path to transfer objects. Must be an empty string or full path name that ends with a '/'. This field is treated as an object prefix. As such, it should generally not begin with a '/'.
+     * 
+     */
     private final @Nullable String path;
+    /**
+     * The name of the Azure Storage account.
+     * 
+     */
     private final String storageAccount;
 
     @OutputCustomType.Constructor({"azureCredentials","container","path","storageAccount"})
@@ -29,15 +45,31 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSource {
         this.storageAccount = Objects.requireNonNull(storageAccount);
     }
 
+    /**
+     * Credentials used to authenticate API requests to Azure block.
+     * 
+     */
     public TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentials getAzureCredentials() {
         return this.azureCredentials;
     }
+    /**
+     * The container to transfer from the Azure Storage account.`
+     * 
+     */
     public String getContainer() {
         return this.container;
     }
+    /**
+     * Root path to transfer objects. Must be an empty string or full path name that ends with a '/'. This field is treated as an object prefix. As such, it should generally not begin with a '/'.
+     * 
+     */
     public Optional<String> getPath() {
         return Optional.ofNullable(this.path);
     }
+    /**
+     * The name of the Azure Storage account.
+     * 
+     */
     public String getStorageAccount() {
         return this.storageAccount;
     }

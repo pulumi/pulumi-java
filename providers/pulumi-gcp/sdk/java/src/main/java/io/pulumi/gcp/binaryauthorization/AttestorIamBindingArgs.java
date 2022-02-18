@@ -16,6 +16,10 @@ public final class AttestorIamBindingArgs extends io.pulumi.resources.ResourceAr
 
     public static final AttestorIamBindingArgs Empty = new AttestorIamBindingArgs();
 
+    /**
+     * Used to find the parent resource to bind the IAM policy to
+     * 
+     */
     @InputImport(name="attestor", required=true)
     private final Input<String> attestor;
 
@@ -37,6 +41,11 @@ public final class AttestorIamBindingArgs extends io.pulumi.resources.ResourceAr
         return this.members;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -44,6 +53,12 @@ public final class AttestorIamBindingArgs extends io.pulumi.resources.ResourceAr
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The role that should be applied. Only one
+     * `gcp.binaryauthorization.AttestorIamBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     @InputImport(name="role", required=true)
     private final Input<String> role;
 

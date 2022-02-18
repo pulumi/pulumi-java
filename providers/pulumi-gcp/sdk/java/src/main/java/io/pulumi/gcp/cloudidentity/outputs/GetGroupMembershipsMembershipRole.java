@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetGroupMembershipsMembershipRole {
+    /**
+     * The name of the MembershipRole. One of OWNER, MANAGER, MEMBER.
+     * 
+     */
     private final String name;
 
     @OutputCustomType.Constructor({"name"})
@@ -16,6 +20,10 @@ public final class GetGroupMembershipsMembershipRole {
         this.name = Objects.requireNonNull(name);
     }
 
+    /**
+     * The name of the MembershipRole. One of OWNER, MANAGER, MEMBER.
+     * 
+     */
     public String getName() {
         return this.name;
     }

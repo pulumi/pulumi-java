@@ -14,6 +14,11 @@ public final class AuthorityConfigGetArgs extends io.pulumi.resources.ResourceAr
 
     public static final AuthorityConfigGetArgs Empty = new AuthorityConfigGetArgs();
 
+    /**
+     * Specifies some of the values in a certificate that are related to the subject.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="subjectConfig", required=true)
     private final Input<AuthorityConfigSubjectConfigGetArgs> subjectConfig;
 
@@ -21,6 +26,11 @@ public final class AuthorityConfigGetArgs extends io.pulumi.resources.ResourceAr
         return this.subjectConfig;
     }
 
+    /**
+     * Describes how some of the technical X.509 fields in a certificate should be populated.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="x509Config", required=true)
     private final Input<AuthorityConfigX509ConfigGetArgs> x509Config;
 

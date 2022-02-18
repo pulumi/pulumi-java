@@ -15,6 +15,10 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
 
     public static final CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdGetArgs Empty = new CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdGetArgs();
 
+    /**
+     * An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+     * 
+     */
     @InputImport(name="objectIdPaths")
     private final @Nullable Input<List<Integer>> objectIdPaths;
 

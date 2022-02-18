@@ -16,6 +16,11 @@ public final class ApplicationUrlDispatchRulesState extends io.pulumi.resources.
 
     public static final ApplicationUrlDispatchRulesState Empty = new ApplicationUrlDispatchRulesState();
 
+    /**
+     * Rules to match an HTTP request and dispatch that request to a service.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="dispatchRules")
     private final @Nullable Input<List<ApplicationUrlDispatchRulesDispatchRuleGetArgs>> dispatchRules;
 
@@ -23,6 +28,11 @@ public final class ApplicationUrlDispatchRulesState extends io.pulumi.resources.
         return this.dispatchRules == null ? Input.empty() : this.dispatchRules;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

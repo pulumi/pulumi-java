@@ -26,105 +26,260 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Manages a job resource within a Dataproc cluster within GCE. For more information see
+ * [the official dataproc documentation](https://cloud.google.com/dataproc/).
+ * 
+ * !> **Note:** This resource does not support 'update' and changing any attributes will cause the resource to be recreated.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * This resource does not support import.
+ * 
+ */
 @ResourceType(type="gcp:dataproc/job:Job")
 public class Job extends io.pulumi.resources.CustomResource {
+    /**
+     * If present, the location of miscellaneous control files which may be used as part of job setup and handling. If not present, control files may be placed in the same location as driver_output_uri.
+     * 
+     */
     @OutputExport(name="driverControlsFilesUri", type=String.class, parameters={})
     private Output<String> driverControlsFilesUri;
 
+    /**
+     * @return If present, the location of miscellaneous control files which may be used as part of job setup and handling. If not present, control files may be placed in the same location as driver_output_uri.
+     * 
+     */
     public Output<String> getDriverControlsFilesUri() {
         return this.driverControlsFilesUri;
     }
+    /**
+     * A URI pointing to the location of the stdout of the job's driver program.
+     * 
+     */
     @OutputExport(name="driverOutputResourceUri", type=String.class, parameters={})
     private Output<String> driverOutputResourceUri;
 
+    /**
+     * @return A URI pointing to the location of the stdout of the job's driver program.
+     * 
+     */
     public Output<String> getDriverOutputResourceUri() {
         return this.driverOutputResourceUri;
     }
+    /**
+     * By default, you can only delete inactive jobs within
+     * Dataproc. Setting this to true, and calling destroy, will ensure that the
+     * job is first cancelled before issuing the delete.
+     * 
+     */
     @OutputExport(name="forceDelete", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> forceDelete;
 
+    /**
+     * @return By default, you can only delete inactive jobs within
+     * Dataproc. Setting this to true, and calling destroy, will ensure that the
+     * job is first cancelled before issuing the delete.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getForceDelete() {
         return this.forceDelete;
     }
+    /**
+     * The config of Hadoop job
+     * 
+     */
     @OutputExport(name="hadoopConfig", type=JobHadoopConfig.class, parameters={})
     private Output</* @Nullable */ JobHadoopConfig> hadoopConfig;
 
+    /**
+     * @return The config of Hadoop job
+     * 
+     */
     public Output</* @Nullable */ JobHadoopConfig> getHadoopConfig() {
         return this.hadoopConfig;
     }
+    /**
+     * The config of hive job
+     * 
+     */
     @OutputExport(name="hiveConfig", type=JobHiveConfig.class, parameters={})
     private Output</* @Nullable */ JobHiveConfig> hiveConfig;
 
+    /**
+     * @return The config of hive job
+     * 
+     */
     public Output</* @Nullable */ JobHiveConfig> getHiveConfig() {
         return this.hiveConfig;
     }
+    /**
+     * The list of labels (key/value pairs) to add to the job.
+     * 
+     */
     @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
+    /**
+     * @return The list of labels (key/value pairs) to add to the job.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getLabels() {
         return this.labels;
     }
+    /**
+     * The config of pag job.
+     * 
+     */
     @OutputExport(name="pigConfig", type=JobPigConfig.class, parameters={})
     private Output</* @Nullable */ JobPigConfig> pigConfig;
 
+    /**
+     * @return The config of pag job.
+     * 
+     */
     public Output</* @Nullable */ JobPigConfig> getPigConfig() {
         return this.pigConfig;
     }
+    /**
+     * The config of job placement.
+     * 
+     */
     @OutputExport(name="placement", type=JobPlacement.class, parameters={})
     private Output<JobPlacement> placement;
 
+    /**
+     * @return The config of job placement.
+     * 
+     */
     public Output<JobPlacement> getPlacement() {
         return this.placement;
     }
+    /**
+     * The project in which the `cluster` can be found and jobs
+     * subsequently run against. If it is not provided, the provider project is used.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The project in which the `cluster` can be found and jobs
+     * subsequently run against. If it is not provided, the provider project is used.
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * The config of pySpark job.
+     * 
+     */
     @OutputExport(name="pysparkConfig", type=JobPysparkConfig.class, parameters={})
     private Output</* @Nullable */ JobPysparkConfig> pysparkConfig;
 
+    /**
+     * @return The config of pySpark job.
+     * 
+     */
     public Output</* @Nullable */ JobPysparkConfig> getPysparkConfig() {
         return this.pysparkConfig;
     }
+    /**
+     * The reference of the job
+     * 
+     */
     @OutputExport(name="reference", type=JobReference.class, parameters={})
     private Output<JobReference> reference;
 
+    /**
+     * @return The reference of the job
+     * 
+     */
     public Output<JobReference> getReference() {
         return this.reference;
     }
+    /**
+     * The Cloud Dataproc region. This essentially determines which clusters are available
+     * for this job to be submitted to. If not specified, defaults to `global`.
+     * 
+     */
     @OutputExport(name="region", type=String.class, parameters={})
     private Output</* @Nullable */ String> region;
 
+    /**
+     * @return The Cloud Dataproc region. This essentially determines which clusters are available
+     * for this job to be submitted to. If not specified, defaults to `global`.
+     * 
+     */
     public Output</* @Nullable */ String> getRegion() {
         return this.region;
     }
+    /**
+     * Optional. Job scheduling configuration.
+     * 
+     */
     @OutputExport(name="scheduling", type=JobScheduling.class, parameters={})
     private Output</* @Nullable */ JobScheduling> scheduling;
 
+    /**
+     * @return Optional. Job scheduling configuration.
+     * 
+     */
     public Output</* @Nullable */ JobScheduling> getScheduling() {
         return this.scheduling;
     }
+    /**
+     * The config of the Spark job.
+     * 
+     */
     @OutputExport(name="sparkConfig", type=JobSparkConfig.class, parameters={})
     private Output</* @Nullable */ JobSparkConfig> sparkConfig;
 
+    /**
+     * @return The config of the Spark job.
+     * 
+     */
     public Output</* @Nullable */ JobSparkConfig> getSparkConfig() {
         return this.sparkConfig;
     }
+    /**
+     * The config of SparkSql job
+     * 
+     */
     @OutputExport(name="sparksqlConfig", type=JobSparksqlConfig.class, parameters={})
     private Output</* @Nullable */ JobSparksqlConfig> sparksqlConfig;
 
+    /**
+     * @return The config of SparkSql job
+     * 
+     */
     public Output</* @Nullable */ JobSparksqlConfig> getSparksqlConfig() {
         return this.sparksqlConfig;
     }
+    /**
+     * The status of the job.
+     * 
+     */
     @OutputExport(name="statuses", type=List.class, parameters={JobStatus.class})
     private Output<List<JobStatus>> statuses;
 
+    /**
+     * @return The status of the job.
+     * 
+     */
     public Output<List<JobStatus>> getStatuses() {
         return this.statuses;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Job(String name, JobArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:dataproc/job:Job", name, args == null ? JobArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -140,6 +295,15 @@ public class Job extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Job get(String name, Input<String> id, @Nullable JobState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Job(name, id, state, options);
     }

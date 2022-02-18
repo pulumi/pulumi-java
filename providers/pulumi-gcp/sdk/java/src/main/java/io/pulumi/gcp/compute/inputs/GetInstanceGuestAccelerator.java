@@ -13,6 +13,10 @@ public final class GetInstanceGuestAccelerator extends io.pulumi.resources.Invok
 
     public static final GetInstanceGuestAccelerator Empty = new GetInstanceGuestAccelerator();
 
+    /**
+     * The number of the guest accelerator cards exposed to this instance.
+     * 
+     */
     @InputImport(name="count", required=true)
     private final Integer count;
 
@@ -20,6 +24,10 @@ public final class GetInstanceGuestAccelerator extends io.pulumi.resources.Invok
         return this.count;
     }
 
+    /**
+     * The accelerator type resource exposed to this instance. E.g. `nvidia-tesla-k80`.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

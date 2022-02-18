@@ -12,10 +12,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryApt {
+    /**
+     * Required. Type of archive files in this repository. Possible values: ARCHIVE_TYPE_UNSPECIFIED, DEB, DEB_SRC
+     * 
+     */
     private final String archiveType;
+    /**
+     * Required. List of components for this repository. Must contain at least one item.
+     * 
+     */
     private final List<String> components;
+    /**
+     * Required. Distribution of this repository.
+     * 
+     */
     private final String distribution;
+    /**
+     * URI of the key file for this repository. The agent maintains a keyring at `/etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg`.
+     * 
+     */
     private final @Nullable String gpgKey;
+    /**
+     * Required. URI for this repository.
+     * 
+     */
     private final String uri;
 
     @OutputCustomType.Constructor({"archiveType","components","distribution","gpgKey","uri"})
@@ -32,18 +52,38 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryApt 
         this.uri = Objects.requireNonNull(uri);
     }
 
+    /**
+     * Required. Type of archive files in this repository. Possible values: ARCHIVE_TYPE_UNSPECIFIED, DEB, DEB_SRC
+     * 
+     */
     public String getArchiveType() {
         return this.archiveType;
     }
+    /**
+     * Required. List of components for this repository. Must contain at least one item.
+     * 
+     */
     public List<String> getComponents() {
         return this.components;
     }
+    /**
+     * Required. Distribution of this repository.
+     * 
+     */
     public String getDistribution() {
         return this.distribution;
     }
+    /**
+     * URI of the key file for this repository. The agent maintains a keyring at `/etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg`.
+     * 
+     */
     public Optional<String> getGpgKey() {
         return Optional.ofNullable(this.gpgKey);
     }
+    /**
+     * Required. URI for this repository.
+     * 
+     */
     public String getUri() {
         return this.uri;
     }

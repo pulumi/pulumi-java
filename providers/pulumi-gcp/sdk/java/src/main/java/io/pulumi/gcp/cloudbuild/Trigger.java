@@ -21,111 +21,353 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Configuration for an automated build in response to source repository changes.
+ * 
+ * To get more information about Trigger, see:
+ * 
+ * * [API documentation](https://cloud.google.com/cloud-build/docs/api/reference/rest/v1/projects.triggers)
+ * * How-to Guides
+ *     * [Automating builds using build triggers](https://cloud.google.com/cloud-build/docs/running-builds/automate-builds)
+ * 
+ * > **Note:** You can retrieve the email of the Cloud Build Service Account used in jobs by using the `gcp.projects.ServiceIdentity` resource.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * Trigger can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:cloudbuild/trigger:Trigger default projects/{{project}}/triggers/{{trigger_id}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:cloudbuild/trigger:Trigger default {{project}}/{{trigger_id}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:cloudbuild/trigger:Trigger default {{trigger_id}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:cloudbuild/trigger:Trigger")
 public class Trigger extends io.pulumi.resources.CustomResource {
+    /**
+     * Contents of the build template. Either a filename or build template must be provided.
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="build", type=TriggerBuild.class, parameters={})
     private Output</* @Nullable */ TriggerBuild> build;
 
+    /**
+     * @return Contents of the build template. Either a filename or build template must be provided.
+     * Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ TriggerBuild> getBuild() {
         return this.build;
     }
+    /**
+     * Time when the trigger was created.
+     * 
+     */
     @OutputExport(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
+    /**
+     * @return Time when the trigger was created.
+     * 
+     */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
+    /**
+     * Human-readable description of the trigger.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return Human-readable description of the trigger.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * Whether the trigger is disabled or not. If true, the trigger will never result in a build.
+     * 
+     */
     @OutputExport(name="disabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> disabled;
 
+    /**
+     * @return Whether the trigger is disabled or not. If true, the trigger will never result in a build.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getDisabled() {
         return this.disabled;
     }
+    /**
+     * Path, from the source root, to a file whose contents is used for the template. Either a filename or build template must be provided.
+     * 
+     */
     @OutputExport(name="filename", type=String.class, parameters={})
     private Output</* @Nullable */ String> filename;
 
+    /**
+     * @return Path, from the source root, to a file whose contents is used for the template. Either a filename or build template must be provided.
+     * 
+     */
     public Output</* @Nullable */ String> getFilename() {
         return this.filename;
     }
+    /**
+     * Describes the configuration of a trigger that creates a build whenever a GitHub event is received.
+     * One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="github", type=TriggerGithub.class, parameters={})
     private Output</* @Nullable */ TriggerGithub> github;
 
+    /**
+     * @return Describes the configuration of a trigger that creates a build whenever a GitHub event is received.
+     * One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
+     * Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ TriggerGithub> getGithub() {
         return this.github;
     }
+    /**
+     * ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match
+     * extended with support for `**`.
+     * If ignoredFiles and changed files are both empty, then they are not
+     * used to determine whether or not to trigger a build.
+     * If ignoredFiles is not empty, then we ignore any files that match any
+     * of the ignored_file globs. If the change has no files that are outside
+     * of the ignoredFiles globs, then we do not trigger a build.
+     * 
+     */
     @OutputExport(name="ignoredFiles", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> ignoredFiles;
 
+    /**
+     * @return ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match
+     * extended with support for `**`.
+     * If ignoredFiles and changed files are both empty, then they are not
+     * used to determine whether or not to trigger a build.
+     * If ignoredFiles is not empty, then we ignore any files that match any
+     * of the ignored_file globs. If the change has no files that are outside
+     * of the ignoredFiles globs, then we do not trigger a build.
+     * 
+     */
     public Output</* @Nullable */ List<String>> getIgnoredFiles() {
         return this.ignoredFiles;
     }
+    /**
+     * ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match
+     * extended with support for `**`.
+     * If any of the files altered in the commit pass the ignoredFiles filter
+     * and includedFiles is empty, then as far as this filter is concerned, we
+     * should trigger the build.
+     * If any of the files altered in the commit pass the ignoredFiles filter
+     * and includedFiles is not empty, then we make sure that at least one of
+     * those files matches a includedFiles glob. If not, then we do not trigger
+     * a build.
+     * 
+     */
     @OutputExport(name="includedFiles", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> includedFiles;
 
+    /**
+     * @return ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match
+     * extended with support for `**`.
+     * If any of the files altered in the commit pass the ignoredFiles filter
+     * and includedFiles is empty, then as far as this filter is concerned, we
+     * should trigger the build.
+     * If any of the files altered in the commit pass the ignoredFiles filter
+     * and includedFiles is not empty, then we make sure that at least one of
+     * those files matches a includedFiles glob. If not, then we do not trigger
+     * a build.
+     * 
+     */
     public Output</* @Nullable */ List<String>> getIncludedFiles() {
         return this.includedFiles;
     }
+    /**
+     * Name of the volume to mount.
+     * Volume names must be unique per build step and must be valid names for Docker volumes.
+     * Each named volume must be used by at least two build steps.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Name of the volume to mount.
+     * Volume names must be unique per build step and must be valid names for Docker volumes.
+     * Each named volume must be used by at least two build steps.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * PubsubConfig describes the configuration of a trigger that creates
+     * a build whenever a Pub/Sub message is published.
+     * One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="pubsubConfig", type=TriggerPubsubConfig.class, parameters={})
     private Output</* @Nullable */ TriggerPubsubConfig> pubsubConfig;
 
+    /**
+     * @return PubsubConfig describes the configuration of a trigger that creates
+     * a build whenever a Pub/Sub message is published.
+     * One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
+     * Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ TriggerPubsubConfig> getPubsubConfig() {
         return this.pubsubConfig;
     }
+    /**
+     * The service account used for all user-controlled operations including
+     * triggers.patch, triggers.run, builds.create, and builds.cancel.
+     * If no service account is set, then the standard Cloud Build service account
+     * ([PROJECT_NUM]@system.gserviceaccount.com) will be used instead.
+     * Format: projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL}
+     * 
+     */
     @OutputExport(name="serviceAccount", type=String.class, parameters={})
     private Output</* @Nullable */ String> serviceAccount;
 
+    /**
+     * @return The service account used for all user-controlled operations including
+     * triggers.patch, triggers.run, builds.create, and builds.cancel.
+     * If no service account is set, then the standard Cloud Build service account
+     * ([PROJECT_NUM]@system.gserviceaccount.com) will be used instead.
+     * Format: projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL}
+     * 
+     */
     public Output</* @Nullable */ String> getServiceAccount() {
         return this.serviceAccount;
     }
+    /**
+     * Substitutions to use in a triggered build. Should only be used with triggers.run
+     * 
+     */
     @OutputExport(name="substitutions", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> substitutions;
 
+    /**
+     * @return Substitutions to use in a triggered build. Should only be used with triggers.run
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getSubstitutions() {
         return this.substitutions;
     }
+    /**
+     * Tags for annotation of a Build. These are not docker tags.
+     * 
+     */
     @OutputExport(name="tags", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> tags;
 
+    /**
+     * @return Tags for annotation of a Build. These are not docker tags.
+     * 
+     */
     public Output</* @Nullable */ List<String>> getTags() {
         return this.tags;
     }
+    /**
+     * The unique identifier for the trigger.
+     * 
+     */
     @OutputExport(name="triggerId", type=String.class, parameters={})
     private Output<String> triggerId;
 
+    /**
+     * @return The unique identifier for the trigger.
+     * 
+     */
     public Output<String> getTriggerId() {
         return this.triggerId;
     }
+    /**
+     * Template describing the types of source changes to trigger a build.
+     * Branch and tag names in trigger templates are interpreted as regular
+     * expressions. Any branch or tag change that matches that regular
+     * expression will trigger a build.
+     * One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="triggerTemplate", type=TriggerTriggerTemplate.class, parameters={})
     private Output</* @Nullable */ TriggerTriggerTemplate> triggerTemplate;
 
+    /**
+     * @return Template describing the types of source changes to trigger a build.
+     * Branch and tag names in trigger templates are interpreted as regular
+     * expressions. Any branch or tag change that matches that regular
+     * expression will trigger a build.
+     * One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
+     * Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ TriggerTriggerTemplate> getTriggerTemplate() {
         return this.triggerTemplate;
     }
+    /**
+     * WebhookConfig describes the configuration of a trigger that creates
+     * a build whenever a webhook is sent to a trigger's webhook URL.
+     * One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="webhookConfig", type=TriggerWebhookConfig.class, parameters={})
     private Output</* @Nullable */ TriggerWebhookConfig> webhookConfig;
 
+    /**
+     * @return WebhookConfig describes the configuration of a trigger that creates
+     * a build whenever a webhook is sent to a trigger's webhook URL.
+     * One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
+     * Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ TriggerWebhookConfig> getWebhookConfig() {
         return this.webhookConfig;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Trigger(String name, @Nullable TriggerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:cloudbuild/trigger:Trigger", name, args == null ? TriggerArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -141,6 +383,15 @@ public class Trigger extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Trigger get(String name, Input<String> id, @Nullable TriggerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Trigger(name, id, state, options);
     }

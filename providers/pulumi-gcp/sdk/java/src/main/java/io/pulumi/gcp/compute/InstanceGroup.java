@@ -16,63 +16,181 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Creates a group of dissimilar Compute Engine virtual machine instances.
+ * For more information, see [the official documentation](https://cloud.google.com/compute/docs/instance-groups/#unmanaged_instance_groups)
+ * and [API](https://cloud.google.com/compute/docs/reference/latest/instanceGroups)
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * Instance group can be imported using the `zone` and `name` with an optional `project`, e.g.
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/instanceGroup:InstanceGroup webservers us-central1-a/terraform-webservers
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/instanceGroup:InstanceGroup webservers big-project/us-central1-a/terraform-webservers
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/instanceGroup:InstanceGroup webservers projects/big-project/zones/us-central1-a/instanceGroups/terraform-webservers
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:compute/instanceGroup:InstanceGroup")
 public class InstanceGroup extends io.pulumi.resources.CustomResource {
+    /**
+     * An optional textual description of the instance
+     * group.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return An optional textual description of the instance
+     * group.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * List of instances in the group. They should be given
+     * as either self_link or id. When adding instances they must all be in the same
+     * network and zone as the instance group.
+     * 
+     */
     @OutputExport(name="instances", type=List.class, parameters={String.class})
     private Output<List<String>> instances;
 
+    /**
+     * @return List of instances in the group. They should be given
+     * as either self_link or id. When adding instances they must all be in the same
+     * network and zone as the instance group.
+     * 
+     */
     public Output<List<String>> getInstances() {
         return this.instances;
     }
+    /**
+     * The name which the port will be mapped to.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name which the port will be mapped to.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The named port configuration. See the section below
+     * for details on configuration. Structure is documented below.
+     * 
+     */
     @OutputExport(name="namedPorts", type=List.class, parameters={InstanceGroupNamedPort.class})
     private Output</* @Nullable */ List<InstanceGroupNamedPort>> namedPorts;
 
+    /**
+     * @return The named port configuration. See the section below
+     * for details on configuration. Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ List<InstanceGroupNamedPort>> getNamedPorts() {
         return this.namedPorts;
     }
+    /**
+     * The URL of the network the instance group is in. If
+     * this is different from the network where the instances are in, the creation
+     * fails. Defaults to the network where the instances are in (if neither
+     * `network` nor `instances` is specified, this field will be blank).
+     * 
+     */
     @OutputExport(name="network", type=String.class, parameters={})
     private Output<String> network;
 
+    /**
+     * @return The URL of the network the instance group is in. If
+     * this is different from the network where the instances are in, the creation
+     * fails. Defaults to the network where the instances are in (if neither
+     * `network` nor `instances` is specified, this field will be blank).
+     * 
+     */
     public Output<String> getNetwork() {
         return this.network;
     }
+    /**
+     * The ID of the project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * The URI of the created resource.
+     * 
+     */
     @OutputExport(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
+    /**
+     * @return The URI of the created resource.
+     * 
+     */
     public Output<String> getSelfLink() {
         return this.selfLink;
     }
+    /**
+     * The number of instances in the group.
+     * 
+     */
     @OutputExport(name="size", type=Integer.class, parameters={})
     private Output<Integer> size;
 
+    /**
+     * @return The number of instances in the group.
+     * 
+     */
     public Output<Integer> getSize() {
         return this.size;
     }
+    /**
+     * The zone that this instance group should be created in.
+     * 
+     */
     @OutputExport(name="zone", type=String.class, parameters={})
     private Output<String> zone;
 
+    /**
+     * @return The zone that this instance group should be created in.
+     * 
+     */
     public Output<String> getZone() {
         return this.zone;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public InstanceGroup(String name, @Nullable InstanceGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:compute/instanceGroup:InstanceGroup", name, args == null ? InstanceGroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -88,6 +206,15 @@ public class InstanceGroup extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static InstanceGroup get(String name, Input<String> id, @Nullable InstanceGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new InstanceGroup(name, id, state, options);
     }

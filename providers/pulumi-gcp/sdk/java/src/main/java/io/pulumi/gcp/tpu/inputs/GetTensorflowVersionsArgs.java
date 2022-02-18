@@ -14,6 +14,11 @@ public final class GetTensorflowVersionsArgs extends io.pulumi.resources.InvokeA
 
     public static final GetTensorflowVersionsArgs Empty = new GetTensorflowVersionsArgs();
 
+    /**
+     * The project to list versions for. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -21,6 +26,11 @@ public final class GetTensorflowVersionsArgs extends io.pulumi.resources.InvokeA
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
+    /**
+     * The zone to list versions for. If it
+     * is not provided, the provider zone is used.
+     * 
+     */
     @InputImport(name="zone")
     private final @Nullable String zone;
 

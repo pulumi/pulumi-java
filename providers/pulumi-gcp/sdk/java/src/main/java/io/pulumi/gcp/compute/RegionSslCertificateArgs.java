@@ -14,6 +14,13 @@ public final class RegionSslCertificateArgs extends io.pulumi.resources.Resource
 
     public static final RegionSslCertificateArgs Empty = new RegionSslCertificateArgs();
 
+    /**
+     * The certificate in PEM format.
+     * The certificate chain must be no greater than 5 certs long.
+     * The chain must include at least one intermediate cert.
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     @InputImport(name="certificate", required=true)
     private final Input<String> certificate;
 
@@ -21,6 +28,10 @@ public final class RegionSslCertificateArgs extends io.pulumi.resources.Resource
         return this.certificate;
     }
 
+    /**
+     * An optional description of this resource.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -28,6 +39,16 @@ public final class RegionSslCertificateArgs extends io.pulumi.resources.Resource
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Name of the resource. Provided by the client when the resource is
+     * created. The name must be 1-63 characters long, and comply with
+     * RFC1035. Specifically, the name must be 1-63 characters long and match
+     * the regular expression `a-z?` which means the
+     * first character must be a lowercase letter, and all following
+     * characters must be a dash, lowercase letter, or digit, except the last
+     * character, which cannot be a dash.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -35,6 +56,11 @@ public final class RegionSslCertificateArgs extends io.pulumi.resources.Resource
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Creates a unique name beginning with the
+     * specified prefix. Conflicts with `name`.
+     * 
+     */
     @InputImport(name="namePrefix")
     private final @Nullable Input<String> namePrefix;
 
@@ -42,6 +68,11 @@ public final class RegionSslCertificateArgs extends io.pulumi.resources.Resource
         return this.namePrefix == null ? Input.empty() : this.namePrefix;
     }
 
+    /**
+     * The write-only private key in PEM format.
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     @InputImport(name="privateKey", required=true)
     private final Input<String> privateKey;
 
@@ -49,6 +80,11 @@ public final class RegionSslCertificateArgs extends io.pulumi.resources.Resource
         return this.privateKey;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -56,6 +92,11 @@ public final class RegionSslCertificateArgs extends io.pulumi.resources.Resource
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The Region in which the created regional ssl certificate should reside.
+     * If it is not provided, the provider region is used.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 

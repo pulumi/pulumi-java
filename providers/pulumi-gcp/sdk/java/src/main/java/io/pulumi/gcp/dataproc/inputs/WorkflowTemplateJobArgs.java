@@ -25,6 +25,10 @@ public final class WorkflowTemplateJobArgs extends io.pulumi.resources.ResourceA
 
     public static final WorkflowTemplateJobArgs Empty = new WorkflowTemplateJobArgs();
 
+    /**
+     * Optional. Job is a Hadoop job.
+     * 
+     */
     @InputImport(name="hadoopJob")
     private final @Nullable Input<WorkflowTemplateJobHadoopJobArgs> hadoopJob;
 
@@ -32,6 +36,10 @@ public final class WorkflowTemplateJobArgs extends io.pulumi.resources.ResourceA
         return this.hadoopJob == null ? Input.empty() : this.hadoopJob;
     }
 
+    /**
+     * Optional. Job is a Hive job.
+     * 
+     */
     @InputImport(name="hiveJob")
     private final @Nullable Input<WorkflowTemplateJobHiveJobArgs> hiveJob;
 
@@ -39,6 +47,10 @@ public final class WorkflowTemplateJobArgs extends io.pulumi.resources.ResourceA
         return this.hiveJob == null ? Input.empty() : this.hiveJob;
     }
 
+    /**
+     * Optional. The labels to associate with this cluster. Label keys must be between 1 and 63 characters long, and must conform to the following PCRE regular expression: {0,63} No more than 32 labels can be associated with a given cluster.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -46,6 +58,10 @@ public final class WorkflowTemplateJobArgs extends io.pulumi.resources.ResourceA
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * Optional. Job is a Pig job.
+     * 
+     */
     @InputImport(name="pigJob")
     private final @Nullable Input<WorkflowTemplateJobPigJobArgs> pigJob;
 
@@ -53,6 +69,10 @@ public final class WorkflowTemplateJobArgs extends io.pulumi.resources.ResourceA
         return this.pigJob == null ? Input.empty() : this.pigJob;
     }
 
+    /**
+     * Optional. The optional list of prerequisite job step_ids. If not specified, the job will start at the beginning of workflow.
+     * 
+     */
     @InputImport(name="prerequisiteStepIds")
     private final @Nullable Input<List<String>> prerequisiteStepIds;
 
@@ -60,6 +80,10 @@ public final class WorkflowTemplateJobArgs extends io.pulumi.resources.ResourceA
         return this.prerequisiteStepIds == null ? Input.empty() : this.prerequisiteStepIds;
     }
 
+    /**
+     * Optional. Job is a Presto job.
+     * 
+     */
     @InputImport(name="prestoJob")
     private final @Nullable Input<WorkflowTemplateJobPrestoJobArgs> prestoJob;
 
@@ -67,6 +91,10 @@ public final class WorkflowTemplateJobArgs extends io.pulumi.resources.ResourceA
         return this.prestoJob == null ? Input.empty() : this.prestoJob;
     }
 
+    /**
+     * Optional. Job is a PySpark job.
+     * 
+     */
     @InputImport(name="pysparkJob")
     private final @Nullable Input<WorkflowTemplateJobPysparkJobArgs> pysparkJob;
 
@@ -74,6 +102,10 @@ public final class WorkflowTemplateJobArgs extends io.pulumi.resources.ResourceA
         return this.pysparkJob == null ? Input.empty() : this.pysparkJob;
     }
 
+    /**
+     * Optional. Job scheduling configuration.
+     * 
+     */
     @InputImport(name="scheduling")
     private final @Nullable Input<WorkflowTemplateJobSchedulingArgs> scheduling;
 
@@ -81,6 +113,10 @@ public final class WorkflowTemplateJobArgs extends io.pulumi.resources.ResourceA
         return this.scheduling == null ? Input.empty() : this.scheduling;
     }
 
+    /**
+     * Optional. Job is a Spark job.
+     * 
+     */
     @InputImport(name="sparkJob")
     private final @Nullable Input<WorkflowTemplateJobSparkJobArgs> sparkJob;
 
@@ -88,6 +124,10 @@ public final class WorkflowTemplateJobArgs extends io.pulumi.resources.ResourceA
         return this.sparkJob == null ? Input.empty() : this.sparkJob;
     }
 
+    /**
+     * Optional. Job is a SparkR job.
+     * 
+     */
     @InputImport(name="sparkRJob")
     private final @Nullable Input<WorkflowTemplateJobSparkRJobArgs> sparkRJob;
 
@@ -95,6 +135,10 @@ public final class WorkflowTemplateJobArgs extends io.pulumi.resources.ResourceA
         return this.sparkRJob == null ? Input.empty() : this.sparkRJob;
     }
 
+    /**
+     * Optional. Job is a SparkSql job.
+     * 
+     */
     @InputImport(name="sparkSqlJob")
     private final @Nullable Input<WorkflowTemplateJobSparkSqlJobArgs> sparkSqlJob;
 
@@ -102,6 +146,10 @@ public final class WorkflowTemplateJobArgs extends io.pulumi.resources.ResourceA
         return this.sparkSqlJob == null ? Input.empty() : this.sparkSqlJob;
     }
 
+    /**
+     * Required. The step id. The id must be unique among all jobs within the template. The step id is used as prefix for job id, as job `goog-dataproc-workflow-step-id` label, and in field from other steps. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between 3 and 50 characters.
+     * 
+     */
     @InputImport(name="stepId", required=true)
     private final Input<String> stepId;
 

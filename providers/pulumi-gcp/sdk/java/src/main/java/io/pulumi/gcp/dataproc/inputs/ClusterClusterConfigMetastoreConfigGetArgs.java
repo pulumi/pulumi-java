@@ -13,6 +13,10 @@ public final class ClusterClusterConfigMetastoreConfigGetArgs extends io.pulumi.
 
     public static final ClusterClusterConfigMetastoreConfigGetArgs Empty = new ClusterClusterConfigMetastoreConfigGetArgs();
 
+    /**
+     * Resource name of an existing Dataproc Metastore service.
+     * 
+     */
     @InputImport(name="dataprocMetastoreService", required=true)
     private final Input<String> dataprocMetastoreService;
 

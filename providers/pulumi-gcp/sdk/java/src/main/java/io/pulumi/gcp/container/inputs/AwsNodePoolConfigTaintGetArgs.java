@@ -13,6 +13,10 @@ public final class AwsNodePoolConfigTaintGetArgs extends io.pulumi.resources.Res
 
     public static final AwsNodePoolConfigTaintGetArgs Empty = new AwsNodePoolConfigTaintGetArgs();
 
+    /**
+     * Required. The taint effect. Possible values: EFFECT_UNSPECIFIED, NO_SCHEDULE, PREFER_NO_SCHEDULE, NO_EXECUTE
+     * 
+     */
     @InputImport(name="effect", required=true)
     private final Input<String> effect;
 
@@ -20,6 +24,10 @@ public final class AwsNodePoolConfigTaintGetArgs extends io.pulumi.resources.Res
         return this.effect;
     }
 
+    /**
+     * Required. Key for the taint.
+     * 
+     */
     @InputImport(name="key", required=true)
     private final Input<String> key;
 
@@ -27,6 +35,10 @@ public final class AwsNodePoolConfigTaintGetArgs extends io.pulumi.resources.Res
         return this.key;
     }
 
+    /**
+     * Required. Value for the taint.
+     * 
+     */
     @InputImport(name="value", required=true)
     private final Input<String> value;
 

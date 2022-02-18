@@ -13,6 +13,10 @@ public final class FlexibleAppVersionHandlerScriptGetArgs extends io.pulumi.reso
 
     public static final FlexibleAppVersionHandlerScriptGetArgs Empty = new FlexibleAppVersionHandlerScriptGetArgs();
 
+    /**
+     * Path to the script from the application root directory.
+     * 
+     */
     @InputImport(name="scriptPath", required=true)
     private final Input<String> scriptPath;
 

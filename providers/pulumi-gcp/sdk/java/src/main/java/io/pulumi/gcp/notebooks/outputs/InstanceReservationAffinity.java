@@ -12,8 +12,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class InstanceReservationAffinity {
+    /**
+     * The type of Compute Reservation.
+     * Possible values are `NO_RESERVATION`, `ANY_RESERVATION`, and `SPECIFIC_RESERVATION`.
+     * 
+     */
     private final String consumeReservationType;
+    /**
+     * Corresponds to the label key of reservation resource.
+     * 
+     */
     private final @Nullable String key;
+    /**
+     * Corresponds to the label values of reservation resource.
+     * 
+     */
     private final @Nullable List<String> values;
 
     @OutputCustomType.Constructor({"consumeReservationType","key","values"})
@@ -26,12 +39,25 @@ public final class InstanceReservationAffinity {
         this.values = values;
     }
 
+    /**
+     * The type of Compute Reservation.
+     * Possible values are `NO_RESERVATION`, `ANY_RESERVATION`, and `SPECIFIC_RESERVATION`.
+     * 
+     */
     public String getConsumeReservationType() {
         return this.consumeReservationType;
     }
+    /**
+     * Corresponds to the label key of reservation resource.
+     * 
+     */
     public Optional<String> getKey() {
         return Optional.ofNullable(this.key);
     }
+    /**
+     * Corresponds to the label values of reservation resource.
+     * 
+     */
     public List<String> getValues() {
         return this.values == null ? List.of() : this.values;
     }

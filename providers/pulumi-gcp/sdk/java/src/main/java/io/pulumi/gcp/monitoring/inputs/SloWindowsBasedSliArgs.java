@@ -17,6 +17,14 @@ public final class SloWindowsBasedSliArgs extends io.pulumi.resources.ResourceAr
 
     public static final SloWindowsBasedSliArgs Empty = new SloWindowsBasedSliArgs();
 
+    /**
+     * A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+     * with ValueType = BOOL. The window is good if any true values
+     * appear in the window. One of `good_bad_metric_filter`,
+     * `good_total_ratio_threshold`, `metric_mean_in_range`,
+     * `metric_sum_in_range` must be set for `windows_based_sli`.
+     * 
+     */
     @InputImport(name="goodBadMetricFilter")
     private final @Nullable Input<String> goodBadMetricFilter;
 
@@ -24,6 +32,14 @@ public final class SloWindowsBasedSliArgs extends io.pulumi.resources.ResourceAr
         return this.goodBadMetricFilter == null ? Input.empty() : this.goodBadMetricFilter;
     }
 
+    /**
+     * Criterion that describes a window as good if its performance is
+     * high enough. One of `good_bad_metric_filter`,
+     * `good_total_ratio_threshold`, `metric_mean_in_range`,
+     * `metric_sum_in_range` must be set for `windows_based_sli`.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="goodTotalRatioThreshold")
     private final @Nullable Input<SloWindowsBasedSliGoodTotalRatioThresholdArgs> goodTotalRatioThreshold;
 
@@ -31,6 +47,17 @@ public final class SloWindowsBasedSliArgs extends io.pulumi.resources.ResourceAr
         return this.goodTotalRatioThreshold == null ? Input.empty() : this.goodTotalRatioThreshold;
     }
 
+    /**
+     * Criterion that describes a window as good if the metric's value
+     * is in a good range, *averaged* across returned streams.
+     * One of `good_bad_metric_filter`,
+     * `good_total_ratio_threshold`, `metric_mean_in_range`,
+     * `metric_sum_in_range` must be set for `windows_based_sli`.
+     * Average value X of `time_series` should satisfy
+     * `range.min <= X <= range.max` for a good window.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="metricMeanInRange")
     private final @Nullable Input<SloWindowsBasedSliMetricMeanInRangeArgs> metricMeanInRange;
 
@@ -38,6 +65,17 @@ public final class SloWindowsBasedSliArgs extends io.pulumi.resources.ResourceAr
         return this.metricMeanInRange == null ? Input.empty() : this.metricMeanInRange;
     }
 
+    /**
+     * Criterion that describes a window as good if the metric's value
+     * is in a good range, *summed* across returned streams.
+     * Summed value `X` of `time_series` should satisfy
+     * `range.min <= X <= range.max` for a good window.
+     * One of `good_bad_metric_filter`,
+     * `good_total_ratio_threshold`, `metric_mean_in_range`,
+     * `metric_sum_in_range` must be set for `windows_based_sli`.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="metricSumInRange")
     private final @Nullable Input<SloWindowsBasedSliMetricSumInRangeArgs> metricSumInRange;
 
@@ -45,6 +83,12 @@ public final class SloWindowsBasedSliArgs extends io.pulumi.resources.ResourceAr
         return this.metricSumInRange == null ? Input.empty() : this.metricSumInRange;
     }
 
+    /**
+     * Duration over which window quality is evaluated, given as a
+     * duration string "{X}s" representing X seconds. Must be an
+     * integer fraction of a day and at least 60s.
+     * 
+     */
     @InputImport(name="windowPeriod")
     private final @Nullable Input<String> windowPeriod;
 

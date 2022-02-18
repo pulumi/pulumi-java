@@ -19,6 +19,10 @@ public final class GetFunctionSourceRepository extends io.pulumi.resources.Invok
         return this.deployedUrl;
     }
 
+    /**
+     * The URL pointing to the hosted repository where the function is defined.
+     * 
+     */
     @InputImport(name="url", required=true)
     private final String url;
 

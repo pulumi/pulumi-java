@@ -11,7 +11,16 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnore {
+    /**
+     * Characters to not transform when masking.
+     * 
+     */
     private final @Nullable String charactersToSkip;
+    /**
+     * Common characters to not transform when masking. Useful to avoid removing punctuation.
+     * Possible values are `NUMERIC`, `ALPHA_UPPER_CASE`, `ALPHA_LOWER_CASE`, `PUNCTUATION`, and `WHITESPACE`.
+     * 
+     */
     private final @Nullable String commonCharactersToIgnore;
 
     @OutputCustomType.Constructor({"charactersToSkip","commonCharactersToIgnore"})
@@ -22,9 +31,18 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
         this.commonCharactersToIgnore = commonCharactersToIgnore;
     }
 
+    /**
+     * Characters to not transform when masking.
+     * 
+     */
     public Optional<String> getCharactersToSkip() {
         return Optional.ofNullable(this.charactersToSkip);
     }
+    /**
+     * Common characters to not transform when masking. Useful to avoid removing punctuation.
+     * Possible values are `NUMERIC`, `ALPHA_UPPER_CASE`, `ALPHA_LOWER_CASE`, `PUNCTUATION`, and `WHITESPACE`.
+     * 
+     */
     public Optional<String> getCommonCharactersToIgnore() {
         return Optional.ofNullable(this.commonCharactersToIgnore);
     }

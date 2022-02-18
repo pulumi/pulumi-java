@@ -15,6 +15,11 @@ public final class PatchDeploymentPatchConfigWindowsUpdateGetArgs extends io.pul
 
     public static final PatchDeploymentPatchConfigWindowsUpdateGetArgs Empty = new PatchDeploymentPatchConfigWindowsUpdateGetArgs();
 
+    /**
+     * Only apply updates of these windows update classifications. If empty, all updates are applied.
+     * Each value may be one of `CRITICAL`, `SECURITY`, `DEFINITION`, `DRIVER`, `FEATURE_PACK`, `SERVICE_PACK`, `TOOL`, `UPDATE_ROLLUP`, and `UPDATE`.
+     * 
+     */
     @InputImport(name="classifications")
     private final @Nullable Input<List<String>> classifications;
 
@@ -22,6 +27,10 @@ public final class PatchDeploymentPatchConfigWindowsUpdateGetArgs extends io.pul
         return this.classifications == null ? Input.empty() : this.classifications;
     }
 
+    /**
+     * List of KBs to exclude from update.
+     * 
+     */
     @InputImport(name="excludes")
     private final @Nullable Input<List<String>> excludes;
 
@@ -29,6 +38,11 @@ public final class PatchDeploymentPatchConfigWindowsUpdateGetArgs extends io.pul
         return this.excludes == null ? Input.empty() : this.excludes;
     }
 
+    /**
+     * An exclusive list of kbs to be updated. These are the only patches that will be updated.
+     * This field must not be used with other patch configurations.
+     * 
+     */
     @InputImport(name="exclusivePatches")
     private final @Nullable Input<List<String>> exclusivePatches;
 

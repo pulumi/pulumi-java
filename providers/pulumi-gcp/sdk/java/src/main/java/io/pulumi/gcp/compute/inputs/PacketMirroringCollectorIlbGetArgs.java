@@ -13,6 +13,10 @@ public final class PacketMirroringCollectorIlbGetArgs extends io.pulumi.resource
 
     public static final PacketMirroringCollectorIlbGetArgs Empty = new PacketMirroringCollectorIlbGetArgs();
 
+    /**
+     * The URL of the instances where this rule should be active.
+     * 
+     */
     @InputImport(name="url", required=true)
     private final Input<String> url;
 

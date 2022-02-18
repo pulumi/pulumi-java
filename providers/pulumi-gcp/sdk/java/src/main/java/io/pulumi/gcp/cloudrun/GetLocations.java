@@ -13,6 +13,24 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLocations {
+/**
+ * Get Cloud Run locations available for a project.
+ * 
+ * To get more information about Cloud Run, see:
+ * 
+ * * [API documentation](https://cloud.google.com/run/docs/reference/rest/v1/projects.locations)
+ * * How-to Guides
+ *     * [Official Documentation](https://cloud.google.com/run/docs/)
+ * 
+ * ## Example Usage
+ * 
+ *
+ * A collection of arguments for invoking getLocations.
+ * 
+ *
+ * A collection of values returned by getLocations.
+ * 
+ */
     public static CompletableFuture<GetLocationsResult> invokeAsync(@Nullable GetLocationsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:cloudrun/getLocations:getLocations", TypeShape.of(GetLocationsResult.class), args == null ? GetLocationsArgs.Empty : args, Utilities.withVersion(options));
     }

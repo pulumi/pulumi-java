@@ -16,6 +16,10 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectorArgs Empty = new ConnectorArgs();
 
+    /**
+     * The range of internal addresses that follows RFC 4632 notation. Example: `10.132.0.0/28`.
+     * 
+     */
     @InputImport(name="ipCidrRange")
     private final @Nullable Input<String> ipCidrRange;
 
@@ -23,6 +27,10 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.ipCidrRange == null ? Input.empty() : this.ipCidrRange;
     }
 
+    /**
+     * Machine type of VM Instance underlying connector. Default is e2-micro
+     * 
+     */
     @InputImport(name="machineType")
     private final @Nullable Input<String> machineType;
 
@@ -30,6 +38,10 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.machineType == null ? Input.empty() : this.machineType;
     }
 
+    /**
+     * Maximum value of instances in autoscaling group underlying the connector.
+     * 
+     */
     @InputImport(name="maxInstances")
     private final @Nullable Input<Integer> maxInstances;
 
@@ -37,6 +49,10 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.maxInstances == null ? Input.empty() : this.maxInstances;
     }
 
+    /**
+     * Maximum throughput of the connector in Mbps, must be greater than `min_throughput`. Default is 300.
+     * 
+     */
     @InputImport(name="maxThroughput")
     private final @Nullable Input<Integer> maxThroughput;
 
@@ -44,6 +60,10 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.maxThroughput == null ? Input.empty() : this.maxThroughput;
     }
 
+    /**
+     * Minimum value of instances in autoscaling group underlying the connector.
+     * 
+     */
     @InputImport(name="minInstances")
     private final @Nullable Input<Integer> minInstances;
 
@@ -51,6 +71,10 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.minInstances == null ? Input.empty() : this.minInstances;
     }
 
+    /**
+     * Minimum throughput of the connector in Mbps. Default and min is 200.
+     * 
+     */
     @InputImport(name="minThroughput")
     private final @Nullable Input<Integer> minThroughput;
 
@@ -58,6 +82,11 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.minThroughput == null ? Input.empty() : this.minThroughput;
     }
 
+    /**
+     * Subnet name (relative, not fully qualified). E.g. if the full subnet selfLink is
+     * https://compute.googleapis.com/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetName} the correct input for this field would be {subnetName}"
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -65,6 +94,10 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Name or self_link of the VPC network. Required if `ip_cidr_range` is set.
+     * 
+     */
     @InputImport(name="network")
     private final @Nullable Input<String> network;
 
@@ -72,6 +105,11 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.network == null ? Input.empty() : this.network;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -79,6 +117,10 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Region where the VPC Access connector resides. If it is not provided, the provider region is used.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 
@@ -86,6 +128,11 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.region == null ? Input.empty() : this.region;
     }
 
+    /**
+     * The subnet in which to house the connector
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="subnet")
     private final @Nullable Input<ConnectorSubnetArgs> subnet;
 

@@ -21,6 +21,12 @@ public final class URLMapPathMatcherRouteRuleRouteActionGetArgs extends io.pulum
 
     public static final URLMapPathMatcherRouteRuleRouteActionGetArgs Empty = new URLMapPathMatcherRouteRuleRouteActionGetArgs();
 
+    /**
+     * The specification for allowing client side cross-origin requests. Please see
+     * [W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="corsPolicy")
     private final @Nullable Input<URLMapPathMatcherRouteRuleRouteActionCorsPolicyGetArgs> corsPolicy;
 
@@ -28,6 +34,15 @@ public final class URLMapPathMatcherRouteRuleRouteActionGetArgs extends io.pulum
         return this.corsPolicy == null ? Input.empty() : this.corsPolicy;
     }
 
+    /**
+     * The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
+     * As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
+     * percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted
+     * by the Loadbalancer for a percentage of requests.
+     * timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="faultInjectionPolicy")
     private final @Nullable Input<URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyGetArgs> faultInjectionPolicy;
 
@@ -35,6 +50,13 @@ public final class URLMapPathMatcherRouteRuleRouteActionGetArgs extends io.pulum
         return this.faultInjectionPolicy == null ? Input.empty() : this.faultInjectionPolicy;
     }
 
+    /**
+     * Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service.
+     * Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
+     * the host / authority header is suffixed with -shadow.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="requestMirrorPolicy")
     private final @Nullable Input<URLMapPathMatcherRouteRuleRouteActionRequestMirrorPolicyGetArgs> requestMirrorPolicy;
 
@@ -42,6 +64,11 @@ public final class URLMapPathMatcherRouteRuleRouteActionGetArgs extends io.pulum
         return this.requestMirrorPolicy == null ? Input.empty() : this.requestMirrorPolicy;
     }
 
+    /**
+     * Specifies the retry policy associated with this route.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="retryPolicy")
     private final @Nullable Input<URLMapPathMatcherRouteRuleRouteActionRetryPolicyGetArgs> retryPolicy;
 
@@ -49,6 +76,13 @@ public final class URLMapPathMatcherRouteRuleRouteActionGetArgs extends io.pulum
         return this.retryPolicy == null ? Input.empty() : this.retryPolicy;
     }
 
+    /**
+     * Specifies the timeout for the selected route. Timeout is computed from the time the request has been
+     * fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
+     * If not specified, will use the largest timeout among all backend services associated with the route.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="timeout")
     private final @Nullable Input<URLMapPathMatcherRouteRuleRouteActionTimeoutGetArgs> timeout;
 
@@ -56,6 +90,11 @@ public final class URLMapPathMatcherRouteRuleRouteActionGetArgs extends io.pulum
         return this.timeout == null ? Input.empty() : this.timeout;
     }
 
+    /**
+     * The spec to modify the URL of the request, prior to forwarding the request to the matched service.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="urlRewrite")
     private final @Nullable Input<URLMapPathMatcherRouteRuleRouteActionUrlRewriteGetArgs> urlRewrite;
 
@@ -63,6 +102,17 @@ public final class URLMapPathMatcherRouteRuleRouteActionGetArgs extends io.pulum
         return this.urlRewrite == null ? Input.empty() : this.urlRewrite;
     }
 
+    /**
+     * A list of weighted backend services to send traffic to when a route match occurs.
+     * The weights determine the fraction of traffic that flows to their corresponding backend service.
+     * If all traffic needs to go to a single backend service, there must be one weightedBackendService
+     * with weight set to a non 0 number.
+     * Once a backendService is identified and before forwarding the request to the backend service,
+     * advanced routing actions like Url rewrites and header transformations are applied depending on
+     * additional settings specified in this HttpRouteAction.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="weightedBackendServices")
     private final @Nullable Input<List<URLMapPathMatcherRouteRuleRouteActionWeightedBackendServiceGetArgs>> weightedBackendServices;
 

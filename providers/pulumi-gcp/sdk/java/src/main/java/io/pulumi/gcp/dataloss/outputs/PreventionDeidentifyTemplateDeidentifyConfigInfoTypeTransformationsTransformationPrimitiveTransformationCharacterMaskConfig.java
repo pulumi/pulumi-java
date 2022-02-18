@@ -15,9 +15,29 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfig {
+    /**
+     * Characters to skip when doing de-identification of a value. These will be left alone and skipped.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnore> charactersToIgnores;
+    /**
+     * Character to use to mask the sensitive values—for example, * for an alphabetic string such as a name, or 0 for a numeric string
+     * such as ZIP code or credit card number. This string must have a length of 1. If not supplied, this value defaults to * for
+     * strings, and 0 for digits.
+     * 
+     */
     private final @Nullable String maskingCharacter;
+    /**
+     * Number of characters to mask. If not set, all matching chars will be masked. Skipped characters do not count towards this tally.
+     * 
+     */
     private final @Nullable Integer numberToMask;
+    /**
+     * Mask characters in reverse order. For example, if masking_character is 0, number_to_mask is 14, and reverse_order is `false`, then the
+     * input string `1234-5678-9012-3456` is masked as `00000000000000-3456`.
+     * 
+     */
     private final @Nullable Boolean reverseOrder;
 
     @OutputCustomType.Constructor({"charactersToIgnores","maskingCharacter","numberToMask","reverseOrder"})
@@ -32,15 +52,35 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
         this.reverseOrder = reverseOrder;
     }
 
+    /**
+     * Characters to skip when doing de-identification of a value. These will be left alone and skipped.
+     * Structure is documented below.
+     * 
+     */
     public List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnore> getCharactersToIgnores() {
         return this.charactersToIgnores == null ? List.of() : this.charactersToIgnores;
     }
+    /**
+     * Character to use to mask the sensitive values—for example, * for an alphabetic string such as a name, or 0 for a numeric string
+     * such as ZIP code or credit card number. This string must have a length of 1. If not supplied, this value defaults to * for
+     * strings, and 0 for digits.
+     * 
+     */
     public Optional<String> getMaskingCharacter() {
         return Optional.ofNullable(this.maskingCharacter);
     }
+    /**
+     * Number of characters to mask. If not set, all matching chars will be masked. Skipped characters do not count towards this tally.
+     * 
+     */
     public Optional<Integer> getNumberToMask() {
         return Optional.ofNullable(this.numberToMask);
     }
+    /**
+     * Mask characters in reverse order. For example, if masking_character is 0, number_to_mask is 14, and reverse_order is `false`, then the
+     * input string `1234-5678-9012-3456` is masked as `00000000000000-3456`.
+     * 
+     */
     public Optional<Boolean> getReverseOrder() {
         return Optional.ofNullable(this.reverseOrder);
     }

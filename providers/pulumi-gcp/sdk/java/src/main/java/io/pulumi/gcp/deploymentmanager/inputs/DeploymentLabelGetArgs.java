@@ -14,6 +14,10 @@ public final class DeploymentLabelGetArgs extends io.pulumi.resources.ResourceAr
 
     public static final DeploymentLabelGetArgs Empty = new DeploymentLabelGetArgs();
 
+    /**
+     * Key for label.
+     * 
+     */
     @InputImport(name="key")
     private final @Nullable Input<String> key;
 
@@ -21,6 +25,10 @@ public final class DeploymentLabelGetArgs extends io.pulumi.resources.ResourceAr
         return this.key == null ? Input.empty() : this.key;
     }
 
+    /**
+     * Value of label.
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

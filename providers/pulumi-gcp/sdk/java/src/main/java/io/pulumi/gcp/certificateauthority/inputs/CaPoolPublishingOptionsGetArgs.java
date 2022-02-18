@@ -13,6 +13,12 @@ public final class CaPoolPublishingOptionsGetArgs extends io.pulumi.resources.Re
 
     public static final CaPoolPublishingOptionsGetArgs Empty = new CaPoolPublishingOptionsGetArgs();
 
+    /**
+     * When true, publishes each CertificateAuthority's CA certificate and includes its URL in the "Authority Information Access"
+     * X.509 extension in all issued Certificates. If this is false, the CA certificate will not be published and the corresponding
+     * X.509 extension will not be written in issued certificates.
+     * 
+     */
     @InputImport(name="publishCaCert", required=true)
     private final Input<Boolean> publishCaCert;
 
@@ -20,6 +26,13 @@ public final class CaPoolPublishingOptionsGetArgs extends io.pulumi.resources.Re
         return this.publishCaCert;
     }
 
+    /**
+     * When true, publishes each CertificateAuthority's CRL and includes its URL in the "CRL Distribution Points" X.509 extension
+     * in all issued Certificates. If this is false, CRLs will not be published and the corresponding X.509 extension will not
+     * be written in issued certificates. CRLs will expire 7 days from their creation. However, we will rebuild daily. CRLs are
+     * also rebuilt shortly after a certificate is revoked.
+     * 
+     */
     @InputImport(name="publishCrl", required=true)
     private final Input<Boolean> publishCrl;
 

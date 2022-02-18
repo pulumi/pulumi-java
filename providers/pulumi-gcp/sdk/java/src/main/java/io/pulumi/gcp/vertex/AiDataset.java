@@ -15,63 +15,165 @@ import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * A collection of DataItems and Annotations on them.
+ * 
+ * To get more information about Dataset, see:
+ * 
+ * * [API documentation](https://cloud.google.com/vertex-ai/docs/reference/rest/v1/projects.locations.datasets)
+ * * How-to Guides
+ *     * [Official Documentation](https://cloud.google.com/vertex-ai/docs)
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * This resource does not support import.
+ * 
+ */
 @ResourceType(type="gcp:vertex/aiDataset:AiDataset")
 public class AiDataset extends io.pulumi.resources.CustomResource {
+    /**
+     * The timestamp of when the dataset was created in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine
+     * fractional digits.
+     * 
+     */
     @OutputExport(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
+    /**
+     * @return The timestamp of when the dataset was created in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine
+     * fractional digits.
+     * 
+     */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
+    /**
+     * The user-defined name of the Dataset. The name can be up to 128 characters long and can be consist of any UTF-8 characters.
+     * 
+     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
+    /**
+     * @return The user-defined name of the Dataset. The name can be up to 128 characters long and can be consist of any UTF-8 characters.
+     * 
+     */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
+    /**
+     * Customer-managed encryption key spec for a Dataset. If set, this Dataset and all sub-resources of this Dataset will be secured by this key.
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="encryptionSpec", type=AiDatasetEncryptionSpec.class, parameters={})
     private Output</* @Nullable */ AiDatasetEncryptionSpec> encryptionSpec;
 
+    /**
+     * @return Customer-managed encryption key spec for a Dataset. If set, this Dataset and all sub-resources of this Dataset will be secured by this key.
+     * Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ AiDatasetEncryptionSpec> getEncryptionSpec() {
         return this.encryptionSpec;
     }
+    /**
+     * A set of key/value label pairs to assign to this Workflow.
+     * 
+     */
     @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
+    /**
+     * @return A set of key/value label pairs to assign to this Workflow.
+     * 
+     */
     public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
+    /**
+     * Points to a YAML file stored on Google Cloud Storage describing additional information about the Dataset. The schema is defined as an OpenAPI 3.0.2 Schema Object. The schema files that can be used here are found in gs://google-cloud-aiplatform/schema/dataset/metadata/.
+     * 
+     */
     @OutputExport(name="metadataSchemaUri", type=String.class, parameters={})
     private Output<String> metadataSchemaUri;
 
+    /**
+     * @return Points to a YAML file stored on Google Cloud Storage describing additional information about the Dataset. The schema is defined as an OpenAPI 3.0.2 Schema Object. The schema files that can be used here are found in gs://google-cloud-aiplatform/schema/dataset/metadata/.
+     * 
+     */
     public Output<String> getMetadataSchemaUri() {
         return this.metadataSchemaUri;
     }
+    /**
+     * The resource name of the Dataset. This value is set by Google.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The resource name of the Dataset. This value is set by Google.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * The region of the dataset. eg us-central1
+     * 
+     */
     @OutputExport(name="region", type=String.class, parameters={})
     private Output<String> region;
 
+    /**
+     * @return The region of the dataset. eg us-central1
+     * 
+     */
     public Output<String> getRegion() {
         return this.region;
     }
+    /**
+     * The timestamp of when the dataset was last updated in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to
+     * nine fractional digits.
+     * 
+     */
     @OutputExport(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
+    /**
+     * @return The timestamp of when the dataset was last updated in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to
+     * nine fractional digits.
+     * 
+     */
     public Output<String> getUpdateTime() {
         return this.updateTime;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public AiDataset(String name, AiDatasetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:vertex/aiDataset:AiDataset", name, args == null ? AiDatasetArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -87,6 +189,15 @@ public class AiDataset extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static AiDataset get(String name, Input<String> id, @Nullable AiDatasetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AiDataset(name, id, state, options);
     }

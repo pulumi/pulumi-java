@@ -14,6 +14,11 @@ public final class GetWebAppConfigArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetWebAppConfigArgs Empty = new GetWebAppConfigArgs();
 
+    /**
+     * The ID of the project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -21,6 +26,10 @@ public final class GetWebAppConfigArgs extends io.pulumi.resources.InvokeArgs {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
+    /**
+     * the id of the firebase web app
+     * 
+     */
     @InputImport(name="webAppId", required=true)
     private final String webAppId;
 

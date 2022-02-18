@@ -13,6 +13,16 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBillingAccount {
+/**
+ * Use this data source to get information about a Google Billing Account.
+ * 
+ *
+ * A collection of arguments for invoking getBillingAccount.
+ * 
+ *
+ * A collection of values returned by getBillingAccount.
+ * 
+ */
     public static CompletableFuture<GetBillingAccountResult> invokeAsync(@Nullable GetBillingAccountArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:organizations/getBillingAccount:getBillingAccount", TypeShape.of(GetBillingAccountResult.class), args == null ? GetBillingAccountArgs.Empty : args, Utilities.withVersion(options));
     }

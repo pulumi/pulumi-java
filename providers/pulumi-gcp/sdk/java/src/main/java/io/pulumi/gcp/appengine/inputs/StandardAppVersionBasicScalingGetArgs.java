@@ -15,6 +15,11 @@ public final class StandardAppVersionBasicScalingGetArgs extends io.pulumi.resou
 
     public static final StandardAppVersionBasicScalingGetArgs Empty = new StandardAppVersionBasicScalingGetArgs();
 
+    /**
+     * Duration of time after the last request that an instance must wait before the instance is shut down.
+     * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s". Defaults to 900s.
+     * 
+     */
     @InputImport(name="idleTimeout")
     private final @Nullable Input<String> idleTimeout;
 
@@ -22,6 +27,10 @@ public final class StandardAppVersionBasicScalingGetArgs extends io.pulumi.resou
         return this.idleTimeout == null ? Input.empty() : this.idleTimeout;
     }
 
+    /**
+     * Maximum number of instances to create for this version. Must be in the range [1.0, 200.0].
+     * 
+     */
     @InputImport(name="maxInstances", required=true)
     private final Input<Integer> maxInstances;
 

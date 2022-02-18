@@ -14,6 +14,10 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleGetA
 
     public static final ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleGetArgs Empty = new ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleGetArgs();
 
+    /**
+     * The number of days between snapshots.
+     * 
+     */
     @InputImport(name="daysInCycle", required=true)
     private final Input<Integer> daysInCycle;
 
@@ -21,6 +25,10 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleGetA
         return this.daysInCycle;
     }
 
+    /**
+     * The start time of the schedule. The timestamp is an RFC3339 string.
+     * 
+     */
     @InputImport(name="startTime", required=true)
     private final Input<String> startTime;
 

@@ -14,6 +14,10 @@ public final class UptimeCheckConfigResourceGroupArgs extends io.pulumi.resource
 
     public static final UptimeCheckConfigResourceGroupArgs Empty = new UptimeCheckConfigResourceGroupArgs();
 
+    /**
+     * The group of resources being monitored. Should be the `name` of a group
+     * 
+     */
     @InputImport(name="groupId")
     private final @Nullable Input<String> groupId;
 
@@ -21,6 +25,11 @@ public final class UptimeCheckConfigResourceGroupArgs extends io.pulumi.resource
         return this.groupId == null ? Input.empty() : this.groupId;
     }
 
+    /**
+     * The resource type of the group members.
+     * Possible values are `RESOURCE_TYPE_UNSPECIFIED`, `INSTANCE`, and `AWS_ELB_LOAD_BALANCER`.
+     * 
+     */
     @InputImport(name="resourceType")
     private final @Nullable Input<String> resourceType;
 

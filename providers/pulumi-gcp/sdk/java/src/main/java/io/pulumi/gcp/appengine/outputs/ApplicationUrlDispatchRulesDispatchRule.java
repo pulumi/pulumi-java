@@ -11,8 +11,23 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ApplicationUrlDispatchRulesDispatchRule {
+    /**
+     * Domain name to match against. The wildcard "*" is supported if specified before a period: "*.".
+     * Defaults to matching all domains: "*".
+     * 
+     */
     private final @Nullable String domain;
+    /**
+     * Pathname within the host. Must start with a "/". A single "*" can be included at the end of the path.
+     * The sum of the lengths of the domain and path may not exceed 100 characters.
+     * 
+     */
     private final String path;
+    /**
+     * Pathname within the host. Must start with a "/". A single "*" can be included at the end of the path.
+     * The sum of the lengths of the domain and path may not exceed 100 characters.
+     * 
+     */
     private final String service;
 
     @OutputCustomType.Constructor({"domain","path","service"})
@@ -25,12 +40,27 @@ public final class ApplicationUrlDispatchRulesDispatchRule {
         this.service = Objects.requireNonNull(service);
     }
 
+    /**
+     * Domain name to match against. The wildcard "*" is supported if specified before a period: "*.".
+     * Defaults to matching all domains: "*".
+     * 
+     */
     public Optional<String> getDomain() {
         return Optional.ofNullable(this.domain);
     }
+    /**
+     * Pathname within the host. Must start with a "/". A single "*" can be included at the end of the path.
+     * The sum of the lengths of the domain and path may not exceed 100 characters.
+     * 
+     */
     public String getPath() {
         return this.path;
     }
+    /**
+     * Pathname within the host. Must start with a "/". A single "*" can be included at the end of the path.
+     * The sum of the lengths of the domain and path may not exceed 100 characters.
+     * 
+     */
     public String getService() {
         return this.service;
     }

@@ -13,6 +13,10 @@ public final class ClusterNodeConfigTaintGetArgs extends io.pulumi.resources.Res
 
     public static final ClusterNodeConfigTaintGetArgs Empty = new ClusterNodeConfigTaintGetArgs();
 
+    /**
+     * Effect for taint. Accepted values are `NO_SCHEDULE`, `PREFER_NO_SCHEDULE`, and `NO_EXECUTE`.
+     * 
+     */
     @InputImport(name="effect", required=true)
     private final Input<String> effect;
 
@@ -20,6 +24,10 @@ public final class ClusterNodeConfigTaintGetArgs extends io.pulumi.resources.Res
         return this.effect;
     }
 
+    /**
+     * Key for taint.
+     * 
+     */
     @InputImport(name="key", required=true)
     private final Input<String> key;
 
@@ -27,6 +35,10 @@ public final class ClusterNodeConfigTaintGetArgs extends io.pulumi.resources.Res
         return this.key;
     }
 
+    /**
+     * Value for taint.
+     * 
+     */
     @InputImport(name="value", required=true)
     private final Input<String> value;
 

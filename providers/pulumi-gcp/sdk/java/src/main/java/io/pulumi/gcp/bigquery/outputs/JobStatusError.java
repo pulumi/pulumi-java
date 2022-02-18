@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class JobStatusError {
+    /**
+     * The geographic location of the job. The default value is US.
+     * 
+     */
     private final @Nullable String location;
     private final @Nullable String message;
     private final @Nullable String reason;
@@ -25,6 +29,10 @@ public final class JobStatusError {
         this.reason = reason;
     }
 
+    /**
+     * The geographic location of the job. The default value is US.
+     * 
+     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }

@@ -17,6 +17,10 @@ public final class EdgeCacheKeysetState extends io.pulumi.resources.ResourceArgs
 
     public static final EdgeCacheKeysetState Empty = new EdgeCacheKeysetState();
 
+    /**
+     * A human-readable description of the resource.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -24,6 +28,10 @@ public final class EdgeCacheKeysetState extends io.pulumi.resources.ResourceArgs
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Set of label tags associated with the EdgeCache resource.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -31,6 +39,12 @@ public final class EdgeCacheKeysetState extends io.pulumi.resources.ResourceArgs
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * Name of the resource; provided by the client when the resource is created.
+     * The name must be 1-64 characters long, and match the regular expression [a-zA-Z][a-zA-Z0-9_-]* which means the first character must be a letter,
+     * and all following characters must be a dash, underscore, letter or digit.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -38,6 +52,11 @@ public final class EdgeCacheKeysetState extends io.pulumi.resources.ResourceArgs
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -45,6 +64,14 @@ public final class EdgeCacheKeysetState extends io.pulumi.resources.ResourceArgs
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * An ordered list of Ed25519 public keys to use for validating signed requests.
+     * You must specify at least one (1) key, and may have up to three (3) keys.
+     * Ed25519 public keys are not secret, and only allow Google to validate a request was signed by your corresponding private key.
+     * You should ensure that the private key is kept secret, and that only authorized users can add public keys to a keyset.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="publicKeys")
     private final @Nullable Input<List<EdgeCacheKeysetPublicKeyGetArgs>> publicKeys;
 

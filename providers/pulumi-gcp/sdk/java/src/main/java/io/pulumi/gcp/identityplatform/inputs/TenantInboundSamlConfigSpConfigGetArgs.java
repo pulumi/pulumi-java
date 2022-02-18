@@ -16,6 +16,10 @@ public final class TenantInboundSamlConfigSpConfigGetArgs extends io.pulumi.reso
 
     public static final TenantInboundSamlConfigSpConfigGetArgs Empty = new TenantInboundSamlConfigSpConfigGetArgs();
 
+    /**
+     * Callback URI where responses from IDP are handled. Must start with `https://`.
+     * 
+     */
     @InputImport(name="callbackUri", required=true)
     private final Input<String> callbackUri;
 
@@ -23,6 +27,12 @@ public final class TenantInboundSamlConfigSpConfigGetArgs extends io.pulumi.reso
         return this.callbackUri;
     }
 
+    /**
+     * - 
+     * The IDP's certificate data to verify the signature in the SAMLResponse issued by the IDP.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="spCertificates")
     private final @Nullable Input<List<TenantInboundSamlConfigSpConfigSpCertificateGetArgs>> spCertificates;
 
@@ -30,6 +40,10 @@ public final class TenantInboundSamlConfigSpConfigGetArgs extends io.pulumi.reso
         return this.spCertificates == null ? Input.empty() : this.spCertificates;
     }
 
+    /**
+     * Unique identifier for all SAML entities.
+     * 
+     */
     @InputImport(name="spEntityId", required=true)
     private final Input<String> spEntityId;
 

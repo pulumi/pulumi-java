@@ -17,6 +17,11 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CaPoolArgs Empty = new CaPoolArgs();
 
+    /**
+     * The IssuancePolicy to control how Certificates will be issued from this CaPool.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="issuancePolicy")
     private final @Nullable Input<CaPoolIssuancePolicyArgs> issuancePolicy;
 
@@ -24,6 +29,12 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.issuancePolicy == null ? Input.empty() : this.issuancePolicy;
     }
 
+    /**
+     * Labels with user-defined metadata.
+     * An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass":
+     * "1.3kg", "count": "3" }.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -31,6 +42,10 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.
+     * 
+     */
     @InputImport(name="location", required=true)
     private final Input<String> location;
 
@@ -38,6 +53,10 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.location;
     }
 
+    /**
+     * The name for this CaPool.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -45,6 +64,11 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -52,6 +76,11 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The PublishingOptions to follow when issuing Certificates from any CertificateAuthority in this CaPool.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="publishingOptions")
     private final @Nullable Input<CaPoolPublishingOptionsArgs> publishingOptions;
 
@@ -59,6 +88,11 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.publishingOptions == null ? Input.empty() : this.publishingOptions;
     }
 
+    /**
+     * The Tier of this CaPool.
+     * Possible values are `ENTERPRISE` and `DEVOPS`.
+     * 
+     */
     @InputImport(name="tier", required=true)
     private final Input<String> tier;
 

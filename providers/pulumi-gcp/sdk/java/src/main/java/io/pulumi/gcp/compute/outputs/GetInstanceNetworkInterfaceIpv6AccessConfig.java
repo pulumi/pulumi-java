@@ -11,7 +11,15 @@ import java.util.Objects;
 public final class GetInstanceNetworkInterfaceIpv6AccessConfig {
     private final String externalIpv6;
     private final String externalIpv6PrefixLength;
+    /**
+     * The [networking tier][network-tier] used for configuring this instance. One of `PREMIUM` or `STANDARD`.
+     * 
+     */
     private final String networkTier;
+    /**
+     * The DNS domain name for the public PTR record.
+     * 
+     */
     private final String publicPtrDomainName;
 
     @OutputCustomType.Constructor({"externalIpv6","externalIpv6PrefixLength","networkTier","publicPtrDomainName"})
@@ -32,9 +40,17 @@ public final class GetInstanceNetworkInterfaceIpv6AccessConfig {
     public String getExternalIpv6PrefixLength() {
         return this.externalIpv6PrefixLength;
     }
+    /**
+     * The [networking tier][network-tier] used for configuring this instance. One of `PREMIUM` or `STANDARD`.
+     * 
+     */
     public String getNetworkTier() {
         return this.networkTier;
     }
+    /**
+     * The DNS domain name for the public PTR record.
+     * 
+     */
     public String getPublicPtrDomainName() {
         return this.publicPtrDomainName;
     }

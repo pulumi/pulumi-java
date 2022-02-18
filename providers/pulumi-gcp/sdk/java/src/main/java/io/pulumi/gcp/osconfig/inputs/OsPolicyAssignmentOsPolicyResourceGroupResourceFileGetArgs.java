@@ -15,6 +15,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs ex
 
     public static final OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs Empty = new OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs();
 
+    /**
+     * A a file with this content. The size of the content is limited to 1024 characters.
+     * 
+     */
     @InputImport(name="content")
     private final @Nullable Input<String> content;
 
@@ -22,6 +26,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs ex
         return this.content == null ? Input.empty() : this.content;
     }
 
+    /**
+     * A remote or local source.
+     * 
+     */
     @InputImport(name="file")
     private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGetArgs> file;
 
@@ -29,6 +37,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs ex
         return this.file == null ? Input.empty() : this.file;
     }
 
+    /**
+     * Required. The absolute path of the file within the VM.
+     * 
+     */
     @InputImport(name="path", required=true)
     private final Input<String> path;
 
@@ -36,6 +48,11 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs ex
         return this.path;
     }
 
+    /**
+     * - 
+     * Consists of three octal digits which represent, in order, the permissions of the owner, group, and other users for the file (similarly to the numeric mode used in the linux chmod utility). Each digit represents a three bit number with the 4 bit corresponding to the read permissions, the 2 bit corresponds to the write bit, and the one bit corresponds to the execute permission. Default behavior is 755. Below are some examples of permissions and their associated values: read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
+     * 
+     */
     @InputImport(name="permissions")
     private final @Nullable Input<String> permissions;
 
@@ -43,6 +60,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs ex
         return this.permissions == null ? Input.empty() : this.permissions;
     }
 
+    /**
+     * Required. Desired state of the file. Possible values: OS_POLICY_COMPLIANCE_STATE_UNSPECIFIED, COMPLIANT, NON_COMPLIANT, UNKNOWN, NO_OS_POLICIES_APPLICABLE
+     * 
+     */
     @InputImport(name="state", required=true)
     private final Input<String> state;
 

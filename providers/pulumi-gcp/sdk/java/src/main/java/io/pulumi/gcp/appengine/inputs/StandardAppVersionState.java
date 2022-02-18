@@ -25,6 +25,11 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
 
     public static final StandardAppVersionState Empty = new StandardAppVersionState();
 
+    /**
+     * Automatic scaling is based on request rate, response latencies, and other application metrics.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="automaticScaling")
     private final @Nullable Input<StandardAppVersionAutomaticScalingGetArgs> automaticScaling;
 
@@ -32,6 +37,11 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
         return this.automaticScaling == null ? Input.empty() : this.automaticScaling;
     }
 
+    /**
+     * Basic scaling creates instances when your application receives requests. Each instance will be shut down when the application becomes idle. Basic scaling is ideal for work that is intermittent or driven by user activity.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="basicScaling")
     private final @Nullable Input<StandardAppVersionBasicScalingGetArgs> basicScaling;
 
@@ -39,6 +49,10 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
         return this.basicScaling == null ? Input.empty() : this.basicScaling;
     }
 
+    /**
+     * If set to `true`, the service will be deleted if it is the last version.
+     * 
+     */
     @InputImport(name="deleteServiceOnDestroy")
     private final @Nullable Input<Boolean> deleteServiceOnDestroy;
 
@@ -46,6 +60,11 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
         return this.deleteServiceOnDestroy == null ? Input.empty() : this.deleteServiceOnDestroy;
     }
 
+    /**
+     * Code and application artifacts that make up this version.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="deployment")
     private final @Nullable Input<StandardAppVersionDeploymentGetArgs> deployment;
 
@@ -53,6 +72,11 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
         return this.deployment == null ? Input.empty() : this.deployment;
     }
 
+    /**
+     * The entrypoint for the application.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="entrypoint")
     private final @Nullable Input<StandardAppVersionEntrypointGetArgs> entrypoint;
 
@@ -60,6 +84,10 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
         return this.entrypoint == null ? Input.empty() : this.entrypoint;
     }
 
+    /**
+     * Environment variables available to the application.
+     * 
+     */
     @InputImport(name="envVariables")
     private final @Nullable Input<Map<String,String>> envVariables;
 
@@ -67,6 +95,12 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
         return this.envVariables == null ? Input.empty() : this.envVariables;
     }
 
+    /**
+     * An ordered list of URL-matching patterns that should be applied to incoming requests.
+     * The first matching URL handles the request and other request handlers are not attempted.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="handlers")
     private final @Nullable Input<List<StandardAppVersionHandlerGetArgs>> handlers;
 
@@ -74,6 +108,11 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
         return this.handlers == null ? Input.empty() : this.handlers;
     }
 
+    /**
+     * A list of the types of messages that this application is able to receive.
+     * Each value may be one of `INBOUND_SERVICE_MAIL`, `INBOUND_SERVICE_MAIL_BOUNCE`, `INBOUND_SERVICE_XMPP_ERROR`, `INBOUND_SERVICE_XMPP_MESSAGE`, `INBOUND_SERVICE_XMPP_SUBSCRIBE`, `INBOUND_SERVICE_XMPP_PRESENCE`, `INBOUND_SERVICE_CHANNEL_PRESENCE`, and `INBOUND_SERVICE_WARMUP`.
+     * 
+     */
     @InputImport(name="inboundServices")
     private final @Nullable Input<List<String>> inboundServices;
 
@@ -81,6 +120,13 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
         return this.inboundServices == null ? Input.empty() : this.inboundServices;
     }
 
+    /**
+     * Instance class that is used to run this version. Valid values are
+     * AutomaticScaling: F1, F2, F4, F4_1G
+     * BasicScaling or ManualScaling: B1, B2, B4, B4_1G, B8
+     * Defaults to F1 for AutomaticScaling and B2 for ManualScaling and BasicScaling. If no scaling is specified, AutomaticScaling is chosen.
+     * 
+     */
     @InputImport(name="instanceClass")
     private final @Nullable Input<String> instanceClass;
 
@@ -88,6 +134,11 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
         return this.instanceClass == null ? Input.empty() : this.instanceClass;
     }
 
+    /**
+     * Configuration for third-party Python runtime libraries that are required by the application.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="libraries")
     private final @Nullable Input<List<StandardAppVersionLibraryGetArgs>> libraries;
 
@@ -95,6 +146,11 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
         return this.libraries == null ? Input.empty() : this.libraries;
     }
 
+    /**
+     * A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="manualScaling")
     private final @Nullable Input<StandardAppVersionManualScalingGetArgs> manualScaling;
 
@@ -102,6 +158,10 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
         return this.manualScaling == null ? Input.empty() : this.manualScaling;
     }
 
+    /**
+     * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -109,6 +169,10 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * If set to `true`, the application version will not be deleted.
+     * 
+     */
     @InputImport(name="noopOnDestroy")
     private final @Nullable Input<Boolean> noopOnDestroy;
 
@@ -116,6 +180,11 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
         return this.noopOnDestroy == null ? Input.empty() : this.noopOnDestroy;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -123,6 +192,10 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Desired runtime. Example python27.
+     * 
+     */
     @InputImport(name="runtime")
     private final @Nullable Input<String> runtime;
 
@@ -130,6 +203,12 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
         return this.runtime == null ? Input.empty() : this.runtime;
     }
 
+    /**
+     * The version of the API in the given runtime environment.
+     * Please see the app.yaml reference for valid values at `https://cloud.google.com/appengine/docs/standard/<language>/config/appref`\
+     * Substitute `<language>` with `python`, `java`, `php`, `ruby`, `go` or `nodejs`.
+     * 
+     */
     @InputImport(name="runtimeApiVersion")
     private final @Nullable Input<String> runtimeApiVersion;
 
@@ -137,6 +216,10 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
         return this.runtimeApiVersion == null ? Input.empty() : this.runtimeApiVersion;
     }
 
+    /**
+     * AppEngine service resource
+     * 
+     */
     @InputImport(name="service")
     private final @Nullable Input<String> service;
 
@@ -144,6 +227,10 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
         return this.service == null ? Input.empty() : this.service;
     }
 
+    /**
+     * Whether multiple requests can be dispatched to this version at once.
+     * 
+     */
     @InputImport(name="threadsafe")
     private final @Nullable Input<Boolean> threadsafe;
 
@@ -151,6 +238,10 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
         return this.threadsafe == null ? Input.empty() : this.threadsafe;
     }
 
+    /**
+     * Relative name of the version within the service. For example, `v1`. Version names can contain only lowercase letters, numbers, or hyphens. Reserved names,"default", "latest", and any name with the prefix "ah-".
+     * 
+     */
     @InputImport(name="versionId")
     private final @Nullable Input<String> versionId;
 
@@ -158,6 +249,11 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
         return this.versionId == null ? Input.empty() : this.versionId;
     }
 
+    /**
+     * Enables VPC connectivity for standard apps.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="vpcAccessConnector")
     private final @Nullable Input<StandardAppVersionVpcAccessConnectorGetArgs> vpcAccessConnector;
 

@@ -27,6 +27,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
 
     public static final JobState Empty = new JobState();
 
+    /**
+     * If present, the location of miscellaneous control files which may be used as part of job setup and handling. If not present, control files may be placed in the same location as driver_output_uri.
+     * 
+     */
     @InputImport(name="driverControlsFilesUri")
     private final @Nullable Input<String> driverControlsFilesUri;
 
@@ -34,6 +38,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
         return this.driverControlsFilesUri == null ? Input.empty() : this.driverControlsFilesUri;
     }
 
+    /**
+     * A URI pointing to the location of the stdout of the job's driver program.
+     * 
+     */
     @InputImport(name="driverOutputResourceUri")
     private final @Nullable Input<String> driverOutputResourceUri;
 
@@ -41,6 +49,12 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
         return this.driverOutputResourceUri == null ? Input.empty() : this.driverOutputResourceUri;
     }
 
+    /**
+     * By default, you can only delete inactive jobs within
+     * Dataproc. Setting this to true, and calling destroy, will ensure that the
+     * job is first cancelled before issuing the delete.
+     * 
+     */
     @InputImport(name="forceDelete")
     private final @Nullable Input<Boolean> forceDelete;
 
@@ -48,6 +62,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
         return this.forceDelete == null ? Input.empty() : this.forceDelete;
     }
 
+    /**
+     * The config of Hadoop job
+     * 
+     */
     @InputImport(name="hadoopConfig")
     private final @Nullable Input<JobHadoopConfigGetArgs> hadoopConfig;
 
@@ -55,6 +73,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
         return this.hadoopConfig == null ? Input.empty() : this.hadoopConfig;
     }
 
+    /**
+     * The config of hive job
+     * 
+     */
     @InputImport(name="hiveConfig")
     private final @Nullable Input<JobHiveConfigGetArgs> hiveConfig;
 
@@ -62,6 +84,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
         return this.hiveConfig == null ? Input.empty() : this.hiveConfig;
     }
 
+    /**
+     * The list of labels (key/value pairs) to add to the job.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -69,6 +95,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The config of pag job.
+     * 
+     */
     @InputImport(name="pigConfig")
     private final @Nullable Input<JobPigConfigGetArgs> pigConfig;
 
@@ -76,6 +106,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
         return this.pigConfig == null ? Input.empty() : this.pigConfig;
     }
 
+    /**
+     * The config of job placement.
+     * 
+     */
     @InputImport(name="placement")
     private final @Nullable Input<JobPlacementGetArgs> placement;
 
@@ -83,6 +117,11 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
         return this.placement == null ? Input.empty() : this.placement;
     }
 
+    /**
+     * The project in which the `cluster` can be found and jobs
+     * subsequently run against. If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -90,6 +129,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The config of pySpark job.
+     * 
+     */
     @InputImport(name="pysparkConfig")
     private final @Nullable Input<JobPysparkConfigGetArgs> pysparkConfig;
 
@@ -97,6 +140,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
         return this.pysparkConfig == null ? Input.empty() : this.pysparkConfig;
     }
 
+    /**
+     * The reference of the job
+     * 
+     */
     @InputImport(name="reference")
     private final @Nullable Input<JobReferenceGetArgs> reference;
 
@@ -104,6 +151,11 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
         return this.reference == null ? Input.empty() : this.reference;
     }
 
+    /**
+     * The Cloud Dataproc region. This essentially determines which clusters are available
+     * for this job to be submitted to. If not specified, defaults to `global`.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 
@@ -111,6 +163,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
         return this.region == null ? Input.empty() : this.region;
     }
 
+    /**
+     * Optional. Job scheduling configuration.
+     * 
+     */
     @InputImport(name="scheduling")
     private final @Nullable Input<JobSchedulingGetArgs> scheduling;
 
@@ -118,6 +174,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
         return this.scheduling == null ? Input.empty() : this.scheduling;
     }
 
+    /**
+     * The config of the Spark job.
+     * 
+     */
     @InputImport(name="sparkConfig")
     private final @Nullable Input<JobSparkConfigGetArgs> sparkConfig;
 
@@ -125,6 +185,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
         return this.sparkConfig == null ? Input.empty() : this.sparkConfig;
     }
 
+    /**
+     * The config of SparkSql job
+     * 
+     */
     @InputImport(name="sparksqlConfig")
     private final @Nullable Input<JobSparksqlConfigGetArgs> sparksqlConfig;
 
@@ -132,6 +196,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
         return this.sparksqlConfig == null ? Input.empty() : this.sparksqlConfig;
     }
 
+    /**
+     * The status of the job.
+     * 
+     */
     @InputImport(name="statuses")
     private final @Nullable Input<List<JobStatusGetArgs>> statuses;
 

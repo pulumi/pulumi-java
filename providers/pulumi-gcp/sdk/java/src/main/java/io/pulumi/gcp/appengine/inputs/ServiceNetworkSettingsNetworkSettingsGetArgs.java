@@ -14,6 +14,12 @@ public final class ServiceNetworkSettingsNetworkSettingsGetArgs extends io.pulum
 
     public static final ServiceNetworkSettingsNetworkSettingsGetArgs Empty = new ServiceNetworkSettingsNetworkSettingsGetArgs();
 
+    /**
+     * The ingress settings for version or service.
+     * Default value is `INGRESS_TRAFFIC_ALLOWED_UNSPECIFIED`.
+     * Possible values are `INGRESS_TRAFFIC_ALLOWED_UNSPECIFIED`, `INGRESS_TRAFFIC_ALLOWED_ALL`, `INGRESS_TRAFFIC_ALLOWED_INTERNAL_ONLY`, and `INGRESS_TRAFFIC_ALLOWED_INTERNAL_AND_LB`.
+     * 
+     */
     @InputImport(name="ingressTrafficAllowed")
     private final @Nullable Input<String> ingressTrafficAllowed;
 

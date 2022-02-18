@@ -9,6 +9,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CaPoolIssuancePolicyAllowedKeyTypeEllipticCurve {
+    /**
+     * The algorithm used.
+     * Possible values are `ECDSA_P256`, `ECDSA_P384`, and `EDDSA_25519`.
+     * 
+     */
     private final String signatureAlgorithm;
 
     @OutputCustomType.Constructor({"signatureAlgorithm"})
@@ -16,6 +21,11 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeEllipticCurve {
         this.signatureAlgorithm = Objects.requireNonNull(signatureAlgorithm);
     }
 
+    /**
+     * The algorithm used.
+     * Possible values are `ECDSA_P256`, `ECDSA_P384`, and `EDDSA_25519`.
+     * 
+     */
     public String getSignatureAlgorithm() {
         return this.signatureAlgorithm;
     }

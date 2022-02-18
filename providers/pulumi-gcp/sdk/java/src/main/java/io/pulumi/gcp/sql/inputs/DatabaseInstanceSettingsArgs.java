@@ -24,6 +24,11 @@ public final class DatabaseInstanceSettingsArgs extends io.pulumi.resources.Reso
 
     public static final DatabaseInstanceSettingsArgs Empty = new DatabaseInstanceSettingsArgs();
 
+    /**
+     * This specifies when the instance should be
+     * active. Can be either `ALWAYS`, `NEVER` or `ON_DEMAND`.
+     * 
+     */
     @InputImport(name="activationPolicy")
     private final @Nullable Input<String> activationPolicy;
 
@@ -31,6 +36,13 @@ public final class DatabaseInstanceSettingsArgs extends io.pulumi.resources.Reso
         return this.activationPolicy == null ? Input.empty() : this.activationPolicy;
     }
 
+    /**
+     * The availability type of the Cloud SQL
+     * instance, high availability (`REGIONAL`) or single zone (`ZONAL`).' For MySQL
+     * instances, ensure that `settings.backup_configuration.enabled` and
+     * `settings.backup_configuration.binary_log_enabled` are both set to `true`.
+     * 
+     */
     @InputImport(name="availabilityType")
     private final @Nullable Input<String> availabilityType;
 
@@ -45,6 +57,10 @@ public final class DatabaseInstanceSettingsArgs extends io.pulumi.resources.Reso
         return this.backupConfiguration == null ? Input.empty() : this.backupConfiguration;
     }
 
+    /**
+     * The name of server instance collation.
+     * 
+     */
     @InputImport(name="collation")
     private final @Nullable Input<String> collation;
 
@@ -59,6 +75,10 @@ public final class DatabaseInstanceSettingsArgs extends io.pulumi.resources.Reso
         return this.databaseFlags == null ? Input.empty() : this.databaseFlags;
     }
 
+    /**
+     * Configuration to increase storage size automatically.  Note that future apply calls will attempt to resize the disk to the value specified in `disk_size` - if this is set, do not set `disk_size`.
+     * 
+     */
     @InputImport(name="diskAutoresize")
     private final @Nullable Input<Boolean> diskAutoresize;
 
@@ -73,6 +93,10 @@ public final class DatabaseInstanceSettingsArgs extends io.pulumi.resources.Reso
         return this.diskAutoresizeLimit == null ? Input.empty() : this.diskAutoresizeLimit;
     }
 
+    /**
+     * The size of data disk, in GB. Size of a running instance cannot be reduced but can be increased.
+     * 
+     */
     @InputImport(name="diskSize")
     private final @Nullable Input<Integer> diskSize;
 
@@ -80,6 +104,10 @@ public final class DatabaseInstanceSettingsArgs extends io.pulumi.resources.Reso
         return this.diskSize == null ? Input.empty() : this.diskSize;
     }
 
+    /**
+     * The type of data disk: PD_SSD or PD_HDD.
+     * 
+     */
     @InputImport(name="diskType")
     private final @Nullable Input<String> diskType;
 
@@ -115,6 +143,10 @@ public final class DatabaseInstanceSettingsArgs extends io.pulumi.resources.Reso
         return this.maintenanceWindow == null ? Input.empty() : this.maintenanceWindow;
     }
 
+    /**
+     * Pricing plan for this instance, can only be `PER_USE`.
+     * 
+     */
     @InputImport(name="pricingPlan")
     private final @Nullable Input<String> pricingPlan;
 
@@ -122,6 +154,12 @@ public final class DatabaseInstanceSettingsArgs extends io.pulumi.resources.Reso
         return this.pricingPlan == null ? Input.empty() : this.pricingPlan;
     }
 
+    /**
+     * The machine type to use. See [tiers](https://cloud.google.com/sql/docs/admin-api/v1beta4/tiers)
+     * for more details and supported versions. Postgres supports only shared-core machine types,
+     * and custom machine types such as `db-custom-2-13312`. See the [Custom Machine Type Documentation](https://cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type#create) to learn about specifying custom machine types.
+     * 
+     */
     @InputImport(name="tier", required=true)
     private final Input<String> tier;
 
@@ -129,6 +167,10 @@ public final class DatabaseInstanceSettingsArgs extends io.pulumi.resources.Reso
         return this.tier;
     }
 
+    /**
+     * A set of key/value user label pairs to assign to the instance.
+     * 
+     */
     @InputImport(name="userLabels")
     private final @Nullable Input<Map<String,String>> userLabels;
 

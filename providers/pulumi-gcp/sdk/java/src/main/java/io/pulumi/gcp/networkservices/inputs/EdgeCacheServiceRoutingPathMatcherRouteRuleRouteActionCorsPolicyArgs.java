@@ -16,6 +16,11 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPol
 
     public static final EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicyArgs Empty = new EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicyArgs();
 
+    /**
+     * In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
+     * This translates to the Access-Control-Allow-Credentials response header.
+     * 
+     */
     @InputImport(name="allowCredentials")
     private final @Nullable Input<Boolean> allowCredentials;
 
@@ -23,6 +28,10 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPol
         return this.allowCredentials == null ? Input.empty() : this.allowCredentials;
     }
 
+    /**
+     * Specifies the content for the Access-Control-Allow-Headers response header.
+     * 
+     */
     @InputImport(name="allowHeaders")
     private final @Nullable Input<List<String>> allowHeaders;
 
@@ -30,6 +39,10 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPol
         return this.allowHeaders == null ? Input.empty() : this.allowHeaders;
     }
 
+    /**
+     * Specifies the content for the Access-Control-Allow-Methods response header.
+     * 
+     */
     @InputImport(name="allowMethods")
     private final @Nullable Input<List<String>> allowMethods;
 
@@ -37,6 +50,11 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPol
         return this.allowMethods == null ? Input.empty() : this.allowMethods;
     }
 
+    /**
+     * Specifies the list of origins that will be allowed to do CORS requests.
+     * This translates to the Access-Control-Allow-Origin response header.
+     * 
+     */
     @InputImport(name="allowOrigins")
     private final @Nullable Input<List<String>> allowOrigins;
 
@@ -44,6 +62,10 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPol
         return this.allowOrigins == null ? Input.empty() : this.allowOrigins;
     }
 
+    /**
+     * If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
+     * 
+     */
     @InputImport(name="disabled")
     private final @Nullable Input<Boolean> disabled;
 
@@ -51,6 +73,10 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPol
         return this.disabled == null ? Input.empty() : this.disabled;
     }
 
+    /**
+     * Specifies the content for the Access-Control-Allow-Headers response header.
+     * 
+     */
     @InputImport(name="exposeHeaders")
     private final @Nullable Input<List<String>> exposeHeaders;
 
@@ -58,6 +84,14 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPol
         return this.exposeHeaders == null ? Input.empty() : this.exposeHeaders;
     }
 
+    /**
+     * Specifies how long results of a preflight request can be cached by a client in seconds. Note that many browser clients enforce a maximum TTL of 600s (10 minutes).
+     * - Setting the value to -1 forces a pre-flight check for all requests (not recommended)
+     * - A maximum TTL of 86400s can be set, but note that (as above) some clients may force pre-flight checks at a more regular interval.
+     * - This translates to the Access-Control-Max-Age header.
+     *   A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+     * 
+     */
     @InputImport(name="maxAge", required=true)
     private final Input<String> maxAge;
 

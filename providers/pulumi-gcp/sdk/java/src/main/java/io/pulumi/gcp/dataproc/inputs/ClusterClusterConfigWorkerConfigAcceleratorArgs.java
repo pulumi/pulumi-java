@@ -14,6 +14,10 @@ public final class ClusterClusterConfigWorkerConfigAcceleratorArgs extends io.pu
 
     public static final ClusterClusterConfigWorkerConfigAcceleratorArgs Empty = new ClusterClusterConfigWorkerConfigAcceleratorArgs();
 
+    /**
+     * The number of the accelerator cards of this type exposed to this instance. Often restricted to one of `1`, `2`, `4`, or `8`.
+     * 
+     */
     @InputImport(name="acceleratorCount", required=true)
     private final Input<Integer> acceleratorCount;
 
@@ -21,6 +25,10 @@ public final class ClusterClusterConfigWorkerConfigAcceleratorArgs extends io.pu
         return this.acceleratorCount;
     }
 
+    /**
+     * The short name of the accelerator type to expose to this instance. For example, `nvidia-tesla-k80`.
+     * 
+     */
     @InputImport(name="acceleratorType", required=true)
     private final Input<String> acceleratorType;
 

@@ -9,6 +9,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PreventionJobTriggerInspectJobStorageConfigBigQueryOptions {
+    /**
+     * Set of files to scan.
+     * Structure is documented below.
+     * 
+     */
     private final PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReference tableReference;
 
     @OutputCustomType.Constructor({"tableReference"})
@@ -16,6 +21,11 @@ public final class PreventionJobTriggerInspectJobStorageConfigBigQueryOptions {
         this.tableReference = Objects.requireNonNull(tableReference);
     }
 
+    /**
+     * Set of files to scan.
+     * Structure is documented below.
+     * 
+     */
     public PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReference getTableReference() {
         return this.tableReference;
     }

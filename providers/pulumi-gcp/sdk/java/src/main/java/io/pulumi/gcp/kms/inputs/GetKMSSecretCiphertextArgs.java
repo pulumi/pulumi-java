@@ -12,6 +12,12 @@ public final class GetKMSSecretCiphertextArgs extends io.pulumi.resources.Invoke
 
     public static final GetKMSSecretCiphertextArgs Empty = new GetKMSSecretCiphertextArgs();
 
+    /**
+     * The id of the CryptoKey that will be used to
+     * encrypt the provided plaintext. This is represented by the format
+     * `{projectId}/{location}/{keyRingName}/{cryptoKeyName}`.
+     * 
+     */
     @InputImport(name="cryptoKey", required=true)
     private final String cryptoKey;
 
@@ -19,6 +25,10 @@ public final class GetKMSSecretCiphertextArgs extends io.pulumi.resources.Invoke
         return this.cryptoKey;
     }
 
+    /**
+     * The plaintext to be encrypted
+     * 
+     */
     @InputImport(name="plaintext", required=true)
     private final String plaintext;
 

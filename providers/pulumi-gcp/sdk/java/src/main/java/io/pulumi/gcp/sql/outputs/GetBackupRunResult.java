@@ -14,11 +14,28 @@ import javax.annotation.Nullable;
 @OutputCustomType
 public final class GetBackupRunResult {
     private final Integer backupId;
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
     private final String instance;
+    /**
+     * Location of the backups.
+     * 
+     */
     private final String location;
     private final @Nullable Boolean mostRecent;
+    /**
+     * The time the backup operation actually started in UTC timezone in RFC 3339 format, for
+     * example 2012-11-15T16:19:00.094Z.
+     * 
+     */
     private final String startTime;
+    /**
+     * The status of this run. Refer to [API reference](https://cloud.google.com/sql/docs/mysql/admin-api/rest/v1beta4/backupRuns#SqlBackupRunStatus) for possible status values.
+     * 
+     */
     private final String status;
 
     @OutputCustomType.Constructor({"backupId","id","instance","location","mostRecent","startTime","status"})
@@ -42,21 +59,38 @@ public final class GetBackupRunResult {
     public Integer getBackupId() {
         return this.backupId;
     }
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }
     public String getInstance() {
         return this.instance;
     }
+    /**
+     * Location of the backups.
+     * 
+     */
     public String getLocation() {
         return this.location;
     }
     public Optional<Boolean> getMostRecent() {
         return Optional.ofNullable(this.mostRecent);
     }
+    /**
+     * The time the backup operation actually started in UTC timezone in RFC 3339 format, for
+     * example 2012-11-15T16:19:00.094Z.
+     * 
+     */
     public String getStartTime() {
         return this.startTime;
     }
+    /**
+     * The status of this run. Refer to [API reference](https://cloud.google.com/sql/docs/mysql/admin-api/rest/v1beta4/backupRuns#SqlBackupRunStatus) for possible status values.
+     * 
+     */
     public String getStatus() {
         return this.status;
     }

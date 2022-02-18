@@ -14,8 +14,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class InstanceGroupManagerStatus {
+    /**
+     * A bit indicating whether the managed instance group is in a stable state. A stable state means that: none of the instances in the managed instance group is currently undergoing any type of change (for example, creation, restart, or deletion); no future changes are scheduled for instances in the managed instance group; and the managed instance group itself is not being modified.
+     * 
+     */
     private final @Nullable Boolean isStable;
+    /**
+     * Stateful status of the given Instance Group Manager.
+     * 
+     */
     private final @Nullable List<InstanceGroupManagerStatusStateful> statefuls;
+    /**
+     * A bit indicating whether version target has been reached in this managed instance group, i.e. all instances are in their target version. Instances' target version are specified by version field on Instance Group Manager.
+     * 
+     */
     private final @Nullable List<InstanceGroupManagerStatusVersionTarget> versionTargets;
 
     @OutputCustomType.Constructor({"isStable","statefuls","versionTargets"})
@@ -28,12 +40,24 @@ public final class InstanceGroupManagerStatus {
         this.versionTargets = versionTargets;
     }
 
+    /**
+     * A bit indicating whether the managed instance group is in a stable state. A stable state means that: none of the instances in the managed instance group is currently undergoing any type of change (for example, creation, restart, or deletion); no future changes are scheduled for instances in the managed instance group; and the managed instance group itself is not being modified.
+     * 
+     */
     public Optional<Boolean> getIsStable() {
         return Optional.ofNullable(this.isStable);
     }
+    /**
+     * Stateful status of the given Instance Group Manager.
+     * 
+     */
     public List<InstanceGroupManagerStatusStateful> getStatefuls() {
         return this.statefuls == null ? List.of() : this.statefuls;
     }
+    /**
+     * A bit indicating whether version target has been reached in this managed instance group, i.e. all instances are in their target version. Instances' target version are specified by version field on Instance Group Manager.
+     * 
+     */
     public List<InstanceGroupManagerStatusVersionTarget> getVersionTargets() {
         return this.versionTargets == null ? List.of() : this.versionTargets;
     }

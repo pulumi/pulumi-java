@@ -16,6 +16,11 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleArgs extends io.p
 
     public static final ResourcePolicySnapshotSchedulePolicyScheduleArgs Empty = new ResourcePolicySnapshotSchedulePolicyScheduleArgs();
 
+    /**
+     * The policy will execute every nth day at the specified time.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="dailySchedule")
     private final @Nullable Input<ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs> dailySchedule;
 
@@ -23,6 +28,11 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleArgs extends io.p
         return this.dailySchedule == null ? Input.empty() : this.dailySchedule;
     }
 
+    /**
+     * The policy will execute every nth hour starting at the specified time.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="hourlySchedule")
     private final @Nullable Input<ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs> hourlySchedule;
 
@@ -30,6 +40,11 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleArgs extends io.p
         return this.hourlySchedule == null ? Input.empty() : this.hourlySchedule;
     }
 
+    /**
+     * Allows specifying a snapshot time for each day of the week.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="weeklySchedule")
     private final @Nullable Input<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleArgs> weeklySchedule;
 

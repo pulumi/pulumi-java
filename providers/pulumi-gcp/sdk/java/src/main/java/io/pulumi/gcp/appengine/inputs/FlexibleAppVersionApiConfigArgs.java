@@ -14,6 +14,12 @@ public final class FlexibleAppVersionApiConfigArgs extends io.pulumi.resources.R
 
     public static final FlexibleAppVersionApiConfigArgs Empty = new FlexibleAppVersionApiConfigArgs();
 
+    /**
+     * Action to take when users access resources that require authentication.
+     * Default value is `AUTH_FAIL_ACTION_REDIRECT`.
+     * Possible values are `AUTH_FAIL_ACTION_REDIRECT` and `AUTH_FAIL_ACTION_UNAUTHORIZED`.
+     * 
+     */
     @InputImport(name="authFailAction")
     private final @Nullable Input<String> authFailAction;
 
@@ -21,6 +27,12 @@ public final class FlexibleAppVersionApiConfigArgs extends io.pulumi.resources.R
         return this.authFailAction == null ? Input.empty() : this.authFailAction;
     }
 
+    /**
+     * Level of login required to access this resource.
+     * Default value is `LOGIN_OPTIONAL`.
+     * Possible values are `LOGIN_OPTIONAL`, `LOGIN_ADMIN`, and `LOGIN_REQUIRED`.
+     * 
+     */
     @InputImport(name="login")
     private final @Nullable Input<String> login;
 
@@ -28,6 +40,10 @@ public final class FlexibleAppVersionApiConfigArgs extends io.pulumi.resources.R
         return this.login == null ? Input.empty() : this.login;
     }
 
+    /**
+     * Path to the script from the application root directory.
+     * 
+     */
     @InputImport(name="script", required=true)
     private final Input<String> script;
 
@@ -35,6 +51,11 @@ public final class FlexibleAppVersionApiConfigArgs extends io.pulumi.resources.R
         return this.script;
     }
 
+    /**
+     * Security (HTTPS) enforcement for this URL.
+     * Possible values are `SECURE_DEFAULT`, `SECURE_NEVER`, `SECURE_OPTIONAL`, and `SECURE_ALWAYS`.
+     * 
+     */
     @InputImport(name="securityLevel")
     private final @Nullable Input<String> securityLevel;
 
@@ -42,6 +63,10 @@ public final class FlexibleAppVersionApiConfigArgs extends io.pulumi.resources.R
         return this.securityLevel == null ? Input.empty() : this.securityLevel;
     }
 
+    /**
+     * URL to serve the endpoint at.
+     * 
+     */
     @InputImport(name="url")
     private final @Nullable Input<String> url;
 

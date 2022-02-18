@@ -19,6 +19,15 @@ public final class InstanceNetworkInterfaceArgs extends io.pulumi.resources.Reso
 
     public static final InstanceNetworkInterfaceArgs Empty = new InstanceNetworkInterfaceArgs();
 
+    /**
+     * Access configurations, i.e. IPs via which this
+     * instance can be accessed via the Internet. Omit to ensure that the instance
+     * is not accessible from the Internet. If omitted, ssh will not
+     * work unless this provider can send traffic to the instance's network (e.g. via
+     * tunnel or because it is running on another cloud instance on that network).
+     * This block can be repeated multiple times. Structure documented below.
+     * 
+     */
     @InputImport(name="accessConfigs")
     private final @Nullable Input<List<InstanceNetworkInterfaceAccessConfigArgs>> accessConfigs;
 
@@ -26,6 +35,12 @@ public final class InstanceNetworkInterfaceArgs extends io.pulumi.resources.Reso
         return this.accessConfigs == null ? Input.empty() : this.accessConfigs;
     }
 
+    /**
+     * An
+     * array of alias IP ranges for this network interface. Can only be specified for network
+     * interfaces on subnet-mode networks. Structure documented below.
+     * 
+     */
     @InputImport(name="aliasIpRanges")
     private final @Nullable Input<List<InstanceNetworkInterfaceAliasIpRangeArgs>> aliasIpRanges;
 
@@ -33,6 +48,12 @@ public final class InstanceNetworkInterfaceArgs extends io.pulumi.resources.Reso
         return this.aliasIpRanges == null ? Input.empty() : this.aliasIpRanges;
     }
 
+    /**
+     * An array of IPv6 access configurations for this interface.
+     * Currently, only one IPv6 access config, DIRECT_IPV6, is supported. If there is no ipv6AccessConfig
+     * specified, then this instance will have no external IPv6 Internet access. Structure documented below.
+     * 
+     */
     @InputImport(name="ipv6AccessConfigs")
     private final @Nullable Input<List<InstanceNetworkInterfaceIpv6AccessConfigArgs>> ipv6AccessConfigs;
 
@@ -40,6 +61,11 @@ public final class InstanceNetworkInterfaceArgs extends io.pulumi.resources.Reso
         return this.ipv6AccessConfigs == null ? Input.empty() : this.ipv6AccessConfigs;
     }
 
+    /**
+     * One of EXTERNAL, INTERNAL to indicate whether the IP can be accessed from the Internet.
+     * This field is always inherited from its subnetwork.
+     * 
+     */
     @InputImport(name="ipv6AccessType")
     private final @Nullable Input<String> ipv6AccessType;
 
@@ -47,6 +73,11 @@ public final class InstanceNetworkInterfaceArgs extends io.pulumi.resources.Reso
         return this.ipv6AccessType == null ? Input.empty() : this.ipv6AccessType;
     }
 
+    /**
+     * A unique name for the resource, required by GCE.
+     * Changing this forces a new resource to be created.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -54,6 +85,12 @@ public final class InstanceNetworkInterfaceArgs extends io.pulumi.resources.Reso
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The name or self_link of the network to attach this interface to.
+     * Either `network` or `subnetwork` must be provided. If network isn't provided it will
+     * be inferred from the subnetwork.
+     * 
+     */
     @InputImport(name="network")
     private final @Nullable Input<String> network;
 
@@ -61,6 +98,11 @@ public final class InstanceNetworkInterfaceArgs extends io.pulumi.resources.Reso
         return this.network == null ? Input.empty() : this.network;
     }
 
+    /**
+     * The private IP address to assign to the instance. If
+     * empty, the address will be automatically assigned.
+     * 
+     */
     @InputImport(name="networkIp")
     private final @Nullable Input<String> networkIp;
 
@@ -68,6 +110,10 @@ public final class InstanceNetworkInterfaceArgs extends io.pulumi.resources.Reso
         return this.networkIp == null ? Input.empty() : this.networkIp;
     }
 
+    /**
+     * The type of vNIC to be used on this interface. Possible values: GVNIC, VIRTIO_NET.
+     * 
+     */
     @InputImport(name="nicType")
     private final @Nullable Input<String> nicType;
 
@@ -75,6 +121,10 @@ public final class InstanceNetworkInterfaceArgs extends io.pulumi.resources.Reso
         return this.nicType == null ? Input.empty() : this.nicType;
     }
 
+    /**
+     * The networking queue count that's specified by users for the network interface. Both Rx and Tx queues will be set to this number. It will be empty if not specified.
+     * 
+     */
     @InputImport(name="queueCount")
     private final @Nullable Input<Integer> queueCount;
 
@@ -82,6 +132,10 @@ public final class InstanceNetworkInterfaceArgs extends io.pulumi.resources.Reso
         return this.queueCount == null ? Input.empty() : this.queueCount;
     }
 
+    /**
+     * The stack type for this network interface to identify whether the IPv6 feature is enabled or not. Values are IPV4_IPV6 or IPV4_ONLY. If not specified, IPV4_ONLY will be used.
+     * 
+     */
     @InputImport(name="stackType")
     private final @Nullable Input<String> stackType;
 
@@ -89,6 +143,16 @@ public final class InstanceNetworkInterfaceArgs extends io.pulumi.resources.Reso
         return this.stackType == null ? Input.empty() : this.stackType;
     }
 
+    /**
+     * The name or self_link of the subnetwork to attach this
+     * interface to. Either `network` or `subnetwork` must be provided. If network isn't provided
+     * it will be inferred from the subnetwork. The subnetwork must exist in the same region this
+     * instance will be created in. If the network resource is in
+     * [legacy](https://cloud.google.com/vpc/docs/legacy) mode, do not specify this field. If the
+     * network is in auto subnet mode, specifying the subnetwork is optional. If the network is
+     * in custom subnet mode, specifying the subnetwork is required.
+     * 
+     */
     @InputImport(name="subnetwork")
     private final @Nullable Input<String> subnetwork;
 
@@ -96,6 +160,13 @@ public final class InstanceNetworkInterfaceArgs extends io.pulumi.resources.Reso
         return this.subnetwork == null ? Input.empty() : this.subnetwork;
     }
 
+    /**
+     * The project in which the subnetwork belongs.
+     * If the `subnetwork` is a self_link, this field is ignored in favor of the project
+     * defined in the subnetwork self_link. If the `subnetwork` is a name and this
+     * field is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="subnetworkProject")
     private final @Nullable Input<String> subnetworkProject;
 

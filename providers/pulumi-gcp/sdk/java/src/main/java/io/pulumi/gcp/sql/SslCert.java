@@ -13,69 +13,175 @@ import io.pulumi.gcp.sql.inputs.SslCertState;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Creates a new Google SQL SSL Cert on a Google SQL Instance. For more information, see the [official documentation](https://cloud.google.com/sql/), or the [JSON API](https://cloud.google.com/sql/docs/mysql/admin-api/v1beta4/sslCerts).
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * Since the contents of the certificate cannot be accessed after its creation, this resource cannot be imported.
+ * 
+ */
 @ResourceType(type="gcp:sql/sslCert:SslCert")
 public class SslCert extends io.pulumi.resources.CustomResource {
+    /**
+     * The actual certificate data for this client certificate.
+     * 
+     */
     @OutputExport(name="cert", type=String.class, parameters={})
     private Output<String> cert;
 
+    /**
+     * @return The actual certificate data for this client certificate.
+     * 
+     */
     public Output<String> getCert() {
         return this.cert;
     }
+    /**
+     * The serial number extracted from the certificate data.
+     * 
+     */
     @OutputExport(name="certSerialNumber", type=String.class, parameters={})
     private Output<String> certSerialNumber;
 
+    /**
+     * @return The serial number extracted from the certificate data.
+     * 
+     */
     public Output<String> getCertSerialNumber() {
         return this.certSerialNumber;
     }
+    /**
+     * The common name to be used in the certificate to identify the
+     * client. Constrained to [a-zA-Z.-_ ]+. Changing this forces a new resource to be created.
+     * 
+     */
     @OutputExport(name="commonName", type=String.class, parameters={})
     private Output<String> commonName;
 
+    /**
+     * @return The common name to be used in the certificate to identify the
+     * client. Constrained to [a-zA-Z.-_ ]+. Changing this forces a new resource to be created.
+     * 
+     */
     public Output<String> getCommonName() {
         return this.commonName;
     }
+    /**
+     * The time when the certificate was created in RFC 3339 format,
+     * for example 2012-11-15T16:19:00.094Z.
+     * 
+     */
     @OutputExport(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
+    /**
+     * @return The time when the certificate was created in RFC 3339 format,
+     * for example 2012-11-15T16:19:00.094Z.
+     * 
+     */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
+    /**
+     * The time when the certificate expires in RFC 3339 format,
+     * for example 2012-11-15T16:19:00.094Z.
+     * 
+     */
     @OutputExport(name="expirationTime", type=String.class, parameters={})
     private Output<String> expirationTime;
 
+    /**
+     * @return The time when the certificate expires in RFC 3339 format,
+     * for example 2012-11-15T16:19:00.094Z.
+     * 
+     */
     public Output<String> getExpirationTime() {
         return this.expirationTime;
     }
+    /**
+     * The name of the Cloud SQL instance. Changing this
+     * forces a new resource to be created.
+     * 
+     */
     @OutputExport(name="instance", type=String.class, parameters={})
     private Output<String> instance;
 
+    /**
+     * @return The name of the Cloud SQL instance. Changing this
+     * forces a new resource to be created.
+     * 
+     */
     public Output<String> getInstance() {
         return this.instance;
     }
+    /**
+     * The private key associated with the client certificate.
+     * 
+     */
     @OutputExport(name="privateKey", type=String.class, parameters={})
     private Output<String> privateKey;
 
+    /**
+     * @return The private key associated with the client certificate.
+     * 
+     */
     public Output<String> getPrivateKey() {
         return this.privateKey;
     }
+    /**
+     * The ID of the project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * The CA cert of the server this client cert was generated from.
+     * 
+     */
     @OutputExport(name="serverCaCert", type=String.class, parameters={})
     private Output<String> serverCaCert;
 
+    /**
+     * @return The CA cert of the server this client cert was generated from.
+     * 
+     */
     public Output<String> getServerCaCert() {
         return this.serverCaCert;
     }
+    /**
+     * The SHA1 Fingerprint of the certificate.
+     * 
+     */
     @OutputExport(name="sha1Fingerprint", type=String.class, parameters={})
     private Output<String> sha1Fingerprint;
 
+    /**
+     * @return The SHA1 Fingerprint of the certificate.
+     * 
+     */
     public Output<String> getSha1Fingerprint() {
         return this.sha1Fingerprint;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public SslCert(String name, SslCertArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:sql/sslCert:SslCert", name, args == null ? SslCertArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -91,6 +197,15 @@ public class SslCert extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static SslCert get(String name, Input<String> id, @Nullable SslCertState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SslCert(name, id, state, options);
     }

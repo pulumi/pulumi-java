@@ -16,6 +16,11 @@ public final class StandardAppVersionAutomaticScalingGetArgs extends io.pulumi.r
 
     public static final StandardAppVersionAutomaticScalingGetArgs Empty = new StandardAppVersionAutomaticScalingGetArgs();
 
+    /**
+     * Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.
+     * Defaults to a runtime-specific value.
+     * 
+     */
     @InputImport(name="maxConcurrentRequests")
     private final @Nullable Input<Integer> maxConcurrentRequests;
 
@@ -23,6 +28,10 @@ public final class StandardAppVersionAutomaticScalingGetArgs extends io.pulumi.r
         return this.maxConcurrentRequests == null ? Input.empty() : this.maxConcurrentRequests;
     }
 
+    /**
+     * Maximum number of idle instances that should be maintained for this version.
+     * 
+     */
     @InputImport(name="maxIdleInstances")
     private final @Nullable Input<Integer> maxIdleInstances;
 
@@ -30,6 +39,11 @@ public final class StandardAppVersionAutomaticScalingGetArgs extends io.pulumi.r
         return this.maxIdleInstances == null ? Input.empty() : this.maxIdleInstances;
     }
 
+    /**
+     * Maximum amount of time that a request should wait in the pending queue before starting a new instance to handle it.
+     * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+     * 
+     */
     @InputImport(name="maxPendingLatency")
     private final @Nullable Input<String> maxPendingLatency;
 
@@ -37,6 +51,10 @@ public final class StandardAppVersionAutomaticScalingGetArgs extends io.pulumi.r
         return this.maxPendingLatency == null ? Input.empty() : this.maxPendingLatency;
     }
 
+    /**
+     * Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service.
+     * 
+     */
     @InputImport(name="minIdleInstances")
     private final @Nullable Input<Integer> minIdleInstances;
 
@@ -44,6 +62,11 @@ public final class StandardAppVersionAutomaticScalingGetArgs extends io.pulumi.r
         return this.minIdleInstances == null ? Input.empty() : this.minIdleInstances;
     }
 
+    /**
+     * Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it.
+     * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+     * 
+     */
     @InputImport(name="minPendingLatency")
     private final @Nullable Input<String> minPendingLatency;
 
@@ -51,6 +74,11 @@ public final class StandardAppVersionAutomaticScalingGetArgs extends io.pulumi.r
         return this.minPendingLatency == null ? Input.empty() : this.minPendingLatency;
     }
 
+    /**
+     * Scheduler settings for standard environment.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="standardSchedulerSettings")
     private final @Nullable Input<StandardAppVersionAutomaticScalingStandardSchedulerSettingsGetArgs> standardSchedulerSettings;
 

@@ -16,45 +16,139 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * A domain serving an App Engine application.
+ * 
+ * To get more information about DomainMapping, see:
+ * 
+ * * [API documentation](https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.domainMappings)
+ * * How-to Guides
+ *     * [Official Documentation](https://cloud.google.com/appengine/docs/standard/python/mapping-custom-domains)
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * DomainMapping can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:appengine/domainMapping:DomainMapping default apps/{{project}}/domainMappings/{{domain_name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:appengine/domainMapping:DomainMapping default {{project}}/{{domain_name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:appengine/domainMapping:DomainMapping default {{domain_name}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:appengine/domainMapping:DomainMapping")
 public class DomainMapping extends io.pulumi.resources.CustomResource {
+    /**
+     * Relative name of the domain serving the application. Example: example.com.
+     * 
+     */
     @OutputExport(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
+    /**
+     * @return Relative name of the domain serving the application. Example: example.com.
+     * 
+     */
     public Output<String> getDomainName() {
         return this.domainName;
     }
+    /**
+     * Full path to the DomainMapping resource in the API. Example: apps/myapp/domainMapping/example.com.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Full path to the DomainMapping resource in the API. Example: apps/myapp/domainMapping/example.com.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Whether the domain creation should override any existing mappings for this domain.
+     * By default, overrides are rejected.
+     * Default value is `STRICT`.
+     * Possible values are `STRICT` and `OVERRIDE`.
+     * 
+     */
     @OutputExport(name="overrideStrategy", type=String.class, parameters={})
     private Output</* @Nullable */ String> overrideStrategy;
 
+    /**
+     * @return Whether the domain creation should override any existing mappings for this domain.
+     * By default, overrides are rejected.
+     * Default value is `STRICT`.
+     * Possible values are `STRICT` and `OVERRIDE`.
+     * 
+     */
     public Output</* @Nullable */ String> getOverrideStrategy() {
         return this.overrideStrategy;
     }
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * The resource records required to configure this domain mapping. These records must be added to the domain's DNS
+     * configuration in order to serve the application via this domain mapping.
+     * 
+     */
     @OutputExport(name="resourceRecords", type=List.class, parameters={DomainMappingResourceRecord.class})
     private Output<List<DomainMappingResourceRecord>> resourceRecords;
 
+    /**
+     * @return The resource records required to configure this domain mapping. These records must be added to the domain's DNS
+     * configuration in order to serve the application via this domain mapping.
+     * 
+     */
     public Output<List<DomainMappingResourceRecord>> getResourceRecords() {
         return this.resourceRecords;
     }
+    /**
+     * SSL configuration for this domain. If unconfigured, this domain will not serve with SSL.
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="sslSettings", type=DomainMappingSslSettings.class, parameters={})
     private Output</* @Nullable */ DomainMappingSslSettings> sslSettings;
 
+    /**
+     * @return SSL configuration for this domain. If unconfigured, this domain will not serve with SSL.
+     * Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ DomainMappingSslSettings> getSslSettings() {
         return this.sslSettings;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public DomainMapping(String name, DomainMappingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:appengine/domainMapping:DomainMapping", name, args == null ? DomainMappingArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -70,6 +164,15 @@ public class DomainMapping extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static DomainMapping get(String name, Input<String> id, @Nullable DomainMappingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DomainMapping(name, id, state, options);
     }

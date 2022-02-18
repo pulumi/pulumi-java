@@ -13,10 +13,33 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ResourcePolicyInstanceSchedulePolicy {
+    /**
+     * The expiration time of the schedule. The timestamp is an RFC3339 string.
+     * 
+     */
     private final @Nullable String expirationTime;
+    /**
+     * The start time of the schedule. The timestamp is an RFC3339 string.
+     * 
+     */
     private final @Nullable String startTime;
+    /**
+     * Specifies the time zone to be used in interpreting the schedule. The value of this field must be a time zone name
+     * from the tz database: http://en.wikipedia.org/wiki/Tz_database.
+     * 
+     */
     private final String timeZone;
+    /**
+     * Specifies the schedule for starting instances.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable ResourcePolicyInstanceSchedulePolicyVmStartSchedule vmStartSchedule;
+    /**
+     * Specifies the schedule for stopping instances.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable ResourcePolicyInstanceSchedulePolicyVmStopSchedule vmStopSchedule;
 
     @OutputCustomType.Constructor({"expirationTime","startTime","timeZone","vmStartSchedule","vmStopSchedule"})
@@ -33,18 +56,41 @@ public final class ResourcePolicyInstanceSchedulePolicy {
         this.vmStopSchedule = vmStopSchedule;
     }
 
+    /**
+     * The expiration time of the schedule. The timestamp is an RFC3339 string.
+     * 
+     */
     public Optional<String> getExpirationTime() {
         return Optional.ofNullable(this.expirationTime);
     }
+    /**
+     * The start time of the schedule. The timestamp is an RFC3339 string.
+     * 
+     */
     public Optional<String> getStartTime() {
         return Optional.ofNullable(this.startTime);
     }
+    /**
+     * Specifies the time zone to be used in interpreting the schedule. The value of this field must be a time zone name
+     * from the tz database: http://en.wikipedia.org/wiki/Tz_database.
+     * 
+     */
     public String getTimeZone() {
         return this.timeZone;
     }
+    /**
+     * Specifies the schedule for starting instances.
+     * Structure is documented below.
+     * 
+     */
     public Optional<ResourcePolicyInstanceSchedulePolicyVmStartSchedule> getVmStartSchedule() {
         return Optional.ofNullable(this.vmStartSchedule);
     }
+    /**
+     * Specifies the schedule for stopping instances.
+     * Structure is documented below.
+     * 
+     */
     public Optional<ResourcePolicyInstanceSchedulePolicyVmStopSchedule> getVmStopSchedule() {
         return Optional.ofNullable(this.vmStopSchedule);
     }

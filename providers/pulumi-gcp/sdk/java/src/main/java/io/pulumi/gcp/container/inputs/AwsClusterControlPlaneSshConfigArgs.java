@@ -13,6 +13,10 @@ public final class AwsClusterControlPlaneSshConfigArgs extends io.pulumi.resourc
 
     public static final AwsClusterControlPlaneSshConfigArgs Empty = new AwsClusterControlPlaneSshConfigArgs();
 
+    /**
+     * Required. The name of the EC2 key pair used to login into cluster machines.
+     * 
+     */
     @InputImport(name="ec2KeyPair", required=true)
     private final Input<String> ec2KeyPair;
 

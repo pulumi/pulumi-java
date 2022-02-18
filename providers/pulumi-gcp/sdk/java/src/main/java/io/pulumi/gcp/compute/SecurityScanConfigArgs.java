@@ -18,6 +18,12 @@ public final class SecurityScanConfigArgs extends io.pulumi.resources.ResourceAr
 
     public static final SecurityScanConfigArgs Empty = new SecurityScanConfigArgs();
 
+    /**
+     * The authentication configuration.
+     * If specified, service will use the authentication configuration during scanning.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="authentication")
     private final @Nullable Input<SecurityScanConfigAuthenticationArgs> authentication;
 
@@ -25,6 +31,11 @@ public final class SecurityScanConfigArgs extends io.pulumi.resources.ResourceAr
         return this.authentication == null ? Input.empty() : this.authentication;
     }
 
+    /**
+     * The blacklist URL patterns as described in
+     * https://cloud.google.com/security-scanner/docs/excluded-urls
+     * 
+     */
     @InputImport(name="blacklistPatterns")
     private final @Nullable Input<List<String>> blacklistPatterns;
 
@@ -32,6 +43,10 @@ public final class SecurityScanConfigArgs extends io.pulumi.resources.ResourceAr
         return this.blacklistPatterns == null ? Input.empty() : this.blacklistPatterns;
     }
 
+    /**
+     * The user provider display name of the ScanConfig.
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -39,6 +54,12 @@ public final class SecurityScanConfigArgs extends io.pulumi.resources.ResourceAr
         return this.displayName;
     }
 
+    /**
+     * Controls export of scan configurations and results to Cloud Security Command Center.
+     * Default value is `ENABLED`.
+     * Possible values are `ENABLED` and `DISABLED`.
+     * 
+     */
     @InputImport(name="exportToSecurityCommandCenter")
     private final @Nullable Input<String> exportToSecurityCommandCenter;
 
@@ -46,6 +67,11 @@ public final class SecurityScanConfigArgs extends io.pulumi.resources.ResourceAr
         return this.exportToSecurityCommandCenter == null ? Input.empty() : this.exportToSecurityCommandCenter;
     }
 
+    /**
+     * The maximum QPS during scanning. A valid value ranges from 5 to 20 inclusively.
+     * Defaults to 15.
+     * 
+     */
     @InputImport(name="maxQps")
     private final @Nullable Input<Integer> maxQps;
 
@@ -53,6 +79,11 @@ public final class SecurityScanConfigArgs extends io.pulumi.resources.ResourceAr
         return this.maxQps == null ? Input.empty() : this.maxQps;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -60,6 +91,11 @@ public final class SecurityScanConfigArgs extends io.pulumi.resources.ResourceAr
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The schedule of the ScanConfig
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="schedule")
     private final @Nullable Input<SecurityScanConfigScheduleArgs> schedule;
 
@@ -67,6 +103,10 @@ public final class SecurityScanConfigArgs extends io.pulumi.resources.ResourceAr
         return this.schedule == null ? Input.empty() : this.schedule;
     }
 
+    /**
+     * The starting URLs from which the scanner finds site pages.
+     * 
+     */
     @InputImport(name="startingUrls", required=true)
     private final Input<List<String>> startingUrls;
 
@@ -74,6 +114,11 @@ public final class SecurityScanConfigArgs extends io.pulumi.resources.ResourceAr
         return this.startingUrls;
     }
 
+    /**
+     * Set of Cloud Platforms targeted by the scan. If empty, APP_ENGINE will be used as a default.
+     * Each value may be one of `APP_ENGINE` and `COMPUTE`.
+     * 
+     */
     @InputImport(name="targetPlatforms")
     private final @Nullable Input<List<String>> targetPlatforms;
 
@@ -81,6 +126,12 @@ public final class SecurityScanConfigArgs extends io.pulumi.resources.ResourceAr
         return this.targetPlatforms == null ? Input.empty() : this.targetPlatforms;
     }
 
+    /**
+     * Type of the user agents used for scanning
+     * Default value is `CHROME_LINUX`.
+     * Possible values are `USER_AGENT_UNSPECIFIED`, `CHROME_LINUX`, `CHROME_ANDROID`, and `SAFARI_IPHONE`.
+     * 
+     */
     @InputImport(name="userAgent")
     private final @Nullable Input<String> userAgent;
 

@@ -13,6 +13,10 @@ public final class DeploymentTargetConfigArgs extends io.pulumi.resources.Resour
 
     public static final DeploymentTargetConfigArgs Empty = new DeploymentTargetConfigArgs();
 
+    /**
+     * The full contents of the template that you want to import.
+     * 
+     */
     @InputImport(name="content", required=true)
     private final Input<String> content;
 

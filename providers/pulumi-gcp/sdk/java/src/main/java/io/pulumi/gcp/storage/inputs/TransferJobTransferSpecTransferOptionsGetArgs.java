@@ -14,6 +14,10 @@ public final class TransferJobTransferSpecTransferOptionsGetArgs extends io.pulu
 
     public static final TransferJobTransferSpecTransferOptionsGetArgs Empty = new TransferJobTransferSpecTransferOptionsGetArgs();
 
+    /**
+     * Whether objects should be deleted from the source after they are transferred to the sink. Note that this option and `delete_objects_unique_in_sink` are mutually exclusive.
+     * 
+     */
     @InputImport(name="deleteObjectsFromSourceAfterTransfer")
     private final @Nullable Input<Boolean> deleteObjectsFromSourceAfterTransfer;
 
@@ -21,6 +25,11 @@ public final class TransferJobTransferSpecTransferOptionsGetArgs extends io.pulu
         return this.deleteObjectsFromSourceAfterTransfer == null ? Input.empty() : this.deleteObjectsFromSourceAfterTransfer;
     }
 
+    /**
+     * Whether objects that exist only in the sink should be deleted. Note that this option and
+     * `delete_objects_from_source_after_transfer` are mutually exclusive.
+     * 
+     */
     @InputImport(name="deleteObjectsUniqueInSink")
     private final @Nullable Input<Boolean> deleteObjectsUniqueInSink;
 
@@ -28,6 +37,10 @@ public final class TransferJobTransferSpecTransferOptionsGetArgs extends io.pulu
         return this.deleteObjectsUniqueInSink == null ? Input.empty() : this.deleteObjectsUniqueInSink;
     }
 
+    /**
+     * Whether overwriting objects that already exist in the sink is allowed.
+     * 
+     */
     @InputImport(name="overwriteObjectsAlreadyExistingInSink")
     private final @Nullable Input<Boolean> overwriteObjectsAlreadyExistingInSink;
 

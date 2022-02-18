@@ -14,6 +14,10 @@ public final class AzureClientArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureClientArgs Empty = new AzureClientArgs();
 
+    /**
+     * Required. The Azure Active Directory Application ID.
+     * 
+     */
     @InputImport(name="applicationId", required=true)
     private final Input<String> applicationId;
 
@@ -21,6 +25,10 @@ public final class AzureClientArgs extends io.pulumi.resources.ResourceArgs {
         return this.applicationId;
     }
 
+    /**
+     * The location for the resource
+     * 
+     */
     @InputImport(name="location", required=true)
     private final Input<String> location;
 
@@ -28,6 +36,10 @@ public final class AzureClientArgs extends io.pulumi.resources.ResourceArgs {
         return this.location;
     }
 
+    /**
+     * The name of this resource.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -35,6 +47,10 @@ public final class AzureClientArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The project for the resource
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -42,6 +58,10 @@ public final class AzureClientArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Required. The Azure Active Directory Tenant ID.
+     * 
+     */
     @InputImport(name="tenantId", required=true)
     private final Input<String> tenantId;
 

@@ -17,6 +17,12 @@ public final class MetricState extends io.pulumi.resources.ResourceArgs {
 
     public static final MetricState Empty = new MetricState();
 
+    /**
+     * The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it
+     * describes the bucket boundaries used to create a histogram of the extracted values.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="bucketOptions")
     private final @Nullable Input<MetricBucketOptionsGetArgs> bucketOptions;
 
@@ -24,6 +30,11 @@ public final class MetricState extends io.pulumi.resources.ResourceArgs {
         return this.bucketOptions == null ? Input.empty() : this.bucketOptions;
     }
 
+    /**
+     * A description of this metric, which is used in documentation. The maximum length of the
+     * description is 8000 characters.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -31,6 +42,11 @@ public final class MetricState extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced-filters) which
+     * is used to match log entries.
+     * 
+     */
     @InputImport(name="filter")
     private final @Nullable Input<String> filter;
 
@@ -38,6 +54,13 @@ public final class MetricState extends io.pulumi.resources.ResourceArgs {
         return this.filter == null ? Input.empty() : this.filter;
     }
 
+    /**
+     * A map from a label key string to an extractor expression which is used to extract data from a log
+     * entry field and assign as the label value. Each label key specified in the LabelDescriptor must
+     * have an associated extractor expression in this map. The syntax of the extractor expression is
+     * the same as for the valueExtractor field.
+     * 
+     */
     @InputImport(name="labelExtractors")
     private final @Nullable Input<Map<String,String>> labelExtractors;
 
@@ -45,6 +68,11 @@ public final class MetricState extends io.pulumi.resources.ResourceArgs {
         return this.labelExtractors == null ? Input.empty() : this.labelExtractors;
     }
 
+    /**
+     * The metric descriptor associated with the logs-based metric.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="metricDescriptor")
     private final @Nullable Input<MetricMetricDescriptorGetArgs> metricDescriptor;
 
@@ -52,6 +80,14 @@ public final class MetricState extends io.pulumi.resources.ResourceArgs {
         return this.metricDescriptor == null ? Input.empty() : this.metricDescriptor;
     }
 
+    /**
+     * The client-assigned metric identifier. Examples - "error_count", "nginx/requests".
+     * Metric identifiers are limited to 100 characters and can include only the following
+     * characters A-Z, a-z, 0-9, and the special characters _-.,+!*',()%/. The forward-slash
+     * character (/) denotes a hierarchy of name pieces, and it cannot be the first character
+     * of the name.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -59,6 +95,11 @@ public final class MetricState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -66,6 +107,16 @@ public final class MetricState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * A valueExtractor is required when using a distribution logs-based metric to extract the values to
+     * record from a log entry. Two functions are supported for value extraction - EXTRACT(field) or
+     * REGEXP_EXTRACT(field, regex). The argument are 1. field - The name of the log entry field from which
+     * the value is to be extracted. 2. regex - A regular expression using the Google RE2 syntax
+     * (https://github.com/google/re2/wiki/Syntax) with a single capture group to extract data from the specified
+     * log entry field. The value of the field is converted to a string before applying the regex. It is an
+     * error to specify a regex that does not include exactly one capture group.
+     * 
+     */
     @InputImport(name="valueExtractor")
     private final @Nullable Input<String> valueExtractor;
 

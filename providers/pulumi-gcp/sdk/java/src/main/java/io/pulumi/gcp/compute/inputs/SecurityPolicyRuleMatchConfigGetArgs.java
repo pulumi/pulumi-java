@@ -14,6 +14,12 @@ public final class SecurityPolicyRuleMatchConfigGetArgs extends io.pulumi.resour
 
     public static final SecurityPolicyRuleMatchConfigGetArgs Empty = new SecurityPolicyRuleMatchConfigGetArgs();
 
+    /**
+     * Set of IP addresses or ranges (IPV4 or IPV6) in CIDR notation
+     * to match against inbound traffic. There is a limit of 10 IP ranges per rule. A value of '\*' matches all IPs
+     * (can be used to override the default behavior).
+     * 
+     */
     @InputImport(name="srcIpRanges", required=true)
     private final Input<List<String>> srcIpRanges;
 

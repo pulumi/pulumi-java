@@ -15,6 +15,14 @@ public final class GCPolicyMaxAgeGetArgs extends io.pulumi.resources.ResourceArg
 
     public static final GCPolicyMaxAgeGetArgs Empty = new GCPolicyMaxAgeGetArgs();
 
+    /**
+     * Number of days before applying GC policy.
+     * 
+     * @deprecated
+     * Deprecated in favor of duration
+     * 
+     */
+    @Deprecated /* Deprecated in favor of duration */
     @InputImport(name="days")
     private final @Nullable Input<Integer> days;
 
@@ -23,6 +31,10 @@ public final class GCPolicyMaxAgeGetArgs extends io.pulumi.resources.ResourceArg
         return this.days == null ? Input.empty() : this.days;
     }
 
+    /**
+     * Duration before applying GC policy (ex. "8h"). This is required when `days` isn't set
+     * 
+     */
     @InputImport(name="duration")
     private final @Nullable Input<String> duration;
 

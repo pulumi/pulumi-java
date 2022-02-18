@@ -17,6 +17,10 @@ public final class AccessApprovalSettingsState extends io.pulumi.resources.Resou
 
     public static final AccessApprovalSettingsState Empty = new AccessApprovalSettingsState();
 
+    /**
+     * This field will always be unset for the organization since organizations do not have ancestors.
+     * 
+     */
     @InputImport(name="enrolledAncestor")
     private final @Nullable Input<Boolean> enrolledAncestor;
 
@@ -24,6 +28,14 @@ public final class AccessApprovalSettingsState extends io.pulumi.resources.Resou
         return this.enrolledAncestor == null ? Input.empty() : this.enrolledAncestor;
     }
 
+    /**
+     * A list of Google Cloud Services for which the given resource has Access Approval enrolled.
+     * Access requests for the resource given by name against any of these services contained here will be required
+     * to have explicit approval. Enrollment can be done for individual services.
+     * A maximum of 10 enrolled services will be enforced, to be expanded as the set of supported services is expanded.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="enrolledServices")
     private final @Nullable Input<List<AccessApprovalSettingsEnrolledServiceGetArgs>> enrolledServices;
 
@@ -31,6 +43,10 @@ public final class AccessApprovalSettingsState extends io.pulumi.resources.Resou
         return this.enrolledServices == null ? Input.empty() : this.enrolledServices;
     }
 
+    /**
+     * The resource name of the settings. Format is "organizations/{organization_id}/accessApprovalSettings"
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -38,6 +54,12 @@ public final class AccessApprovalSettingsState extends io.pulumi.resources.Resou
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * A list of email addresses to which notifications relating to approval requests should be sent.
+     * Notifications relating to a resource will be sent to all emails in the settings of ancestor
+     * resources of that resource. A maximum of 50 email addresses are allowed.
+     * 
+     */
     @InputImport(name="notificationEmails")
     private final @Nullable Input<List<String>> notificationEmails;
 
@@ -45,6 +67,10 @@ public final class AccessApprovalSettingsState extends io.pulumi.resources.Resou
         return this.notificationEmails == null ? Input.empty() : this.notificationEmails;
     }
 
+    /**
+     * ID of the organization of the access approval settings.
+     * 
+     */
     @InputImport(name="organizationId")
     private final @Nullable Input<String> organizationId;
 

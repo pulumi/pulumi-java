@@ -15,6 +15,10 @@ public final class AiMetadataStoreArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final AiMetadataStoreArgs Empty = new AiMetadataStoreArgs();
 
+    /**
+     * Description of the MetadataStore.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -22,6 +26,11 @@ public final class AiMetadataStoreArgs extends io.pulumi.resources.ResourceArgs 
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Customer-managed encryption key spec for a MetadataStore. If set, this MetadataStore and all sub-resources of this MetadataStore will be secured by this key.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="encryptionSpec")
     private final @Nullable Input<AiMetadataStoreEncryptionSpecArgs> encryptionSpec;
 
@@ -29,6 +38,10 @@ public final class AiMetadataStoreArgs extends io.pulumi.resources.ResourceArgs 
         return this.encryptionSpec == null ? Input.empty() : this.encryptionSpec;
     }
 
+    /**
+     * The name of the MetadataStore. This value may be up to 60 characters, and valid characters are [a-z0-9_]. The first character cannot be a number.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -36,6 +49,11 @@ public final class AiMetadataStoreArgs extends io.pulumi.resources.ResourceArgs 
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -43,6 +61,10 @@ public final class AiMetadataStoreArgs extends io.pulumi.resources.ResourceArgs 
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The region of the Metadata Store. eg us-central1
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 

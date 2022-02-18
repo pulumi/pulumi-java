@@ -17,6 +17,11 @@ public final class GetInstanceNetworkInterface extends io.pulumi.resources.Invok
 
     public static final GetInstanceNetworkInterface Empty = new GetInstanceNetworkInterface();
 
+    /**
+     * Access configurations, i.e. IPs via which this
+     * instance can be accessed via the Internet. Structure documented below.
+     * 
+     */
     @InputImport(name="accessConfigs", required=true)
     private final List<GetInstanceNetworkInterfaceAccessConfig> accessConfigs;
 
@@ -24,6 +29,10 @@ public final class GetInstanceNetworkInterface extends io.pulumi.resources.Invok
         return this.accessConfigs;
     }
 
+    /**
+     * An array of alias IP ranges for this network interface. Structure documented below.
+     * 
+     */
     @InputImport(name="aliasIpRanges", required=true)
     private final List<GetInstanceNetworkInterfaceAliasIpRange> aliasIpRanges;
 
@@ -45,6 +54,10 @@ public final class GetInstanceNetworkInterface extends io.pulumi.resources.Invok
         return this.ipv6AccessType;
     }
 
+    /**
+     * The name of the instance. One of `name` or `self_link` must be provided.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -52,6 +65,10 @@ public final class GetInstanceNetworkInterface extends io.pulumi.resources.Invok
         return this.name;
     }
 
+    /**
+     * The name or self_link of the network attached to this interface.
+     * 
+     */
     @InputImport(name="network", required=true)
     private final String network;
 
@@ -59,6 +76,10 @@ public final class GetInstanceNetworkInterface extends io.pulumi.resources.Invok
         return this.network;
     }
 
+    /**
+     * The private IP address assigned to the instance.
+     * 
+     */
     @InputImport(name="networkIp", required=true)
     private final String networkIp;
 
@@ -87,6 +108,10 @@ public final class GetInstanceNetworkInterface extends io.pulumi.resources.Invok
         return this.stackType;
     }
 
+    /**
+     * The name or self_link of the subnetwork attached to this interface.
+     * 
+     */
     @InputImport(name="subnetwork", required=true)
     private final String subnetwork;
 
@@ -94,6 +119,10 @@ public final class GetInstanceNetworkInterface extends io.pulumi.resources.Invok
         return this.subnetwork;
     }
 
+    /**
+     * The project in which the subnetwork belongs.
+     * 
+     */
     @InputImport(name="subnetworkProject", required=true)
     private final String subnetworkProject;
 

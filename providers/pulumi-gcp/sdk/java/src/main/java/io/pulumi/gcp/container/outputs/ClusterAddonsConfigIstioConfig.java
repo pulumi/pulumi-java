@@ -12,7 +12,16 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ClusterAddonsConfigIstioConfig {
+    /**
+     * The authentication type between services in Istio. Available options include `AUTH_MUTUAL_TLS`.
+     * 
+     */
     private final @Nullable String auth;
+    /**
+     * The status of the Istio addon, which makes it easy to set up Istio for services in a
+     * cluster. It is disabled by default. Set `disabled = false` to enable.
+     * 
+     */
     private final Boolean disabled;
 
     @OutputCustomType.Constructor({"auth","disabled"})
@@ -23,9 +32,18 @@ public final class ClusterAddonsConfigIstioConfig {
         this.disabled = Objects.requireNonNull(disabled);
     }
 
+    /**
+     * The authentication type between services in Istio. Available options include `AUTH_MUTUAL_TLS`.
+     * 
+     */
     public Optional<String> getAuth() {
         return Optional.ofNullable(this.auth);
     }
+    /**
+     * The status of the Istio addon, which makes it easy to set up Istio for services in a
+     * cluster. It is disabled by default. Set `disabled = false` to enable.
+     * 
+     */
     public Boolean getDisabled() {
         return this.disabled;
     }

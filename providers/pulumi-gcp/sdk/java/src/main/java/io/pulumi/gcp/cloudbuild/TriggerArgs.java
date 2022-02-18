@@ -22,6 +22,11 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TriggerArgs Empty = new TriggerArgs();
 
+    /**
+     * Contents of the build template. Either a filename or build template must be provided.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="build")
     private final @Nullable Input<TriggerBuildArgs> build;
 
@@ -29,6 +34,10 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
         return this.build == null ? Input.empty() : this.build;
     }
 
+    /**
+     * Human-readable description of the trigger.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -36,6 +45,10 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Whether the trigger is disabled or not. If true, the trigger will never result in a build.
+     * 
+     */
     @InputImport(name="disabled")
     private final @Nullable Input<Boolean> disabled;
 
@@ -43,6 +56,10 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
         return this.disabled == null ? Input.empty() : this.disabled;
     }
 
+    /**
+     * Path, from the source root, to a file whose contents is used for the template. Either a filename or build template must be provided.
+     * 
+     */
     @InputImport(name="filename")
     private final @Nullable Input<String> filename;
 
@@ -50,6 +67,12 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
         return this.filename == null ? Input.empty() : this.filename;
     }
 
+    /**
+     * Describes the configuration of a trigger that creates a build whenever a GitHub event is received.
+     * One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="github")
     private final @Nullable Input<TriggerGithubArgs> github;
 
@@ -57,6 +80,16 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
         return this.github == null ? Input.empty() : this.github;
     }
 
+    /**
+     * ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match
+     * extended with support for `**`.
+     * If ignoredFiles and changed files are both empty, then they are not
+     * used to determine whether or not to trigger a build.
+     * If ignoredFiles is not empty, then we ignore any files that match any
+     * of the ignored_file globs. If the change has no files that are outside
+     * of the ignoredFiles globs, then we do not trigger a build.
+     * 
+     */
     @InputImport(name="ignoredFiles")
     private final @Nullable Input<List<String>> ignoredFiles;
 
@@ -64,6 +97,18 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
         return this.ignoredFiles == null ? Input.empty() : this.ignoredFiles;
     }
 
+    /**
+     * ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match
+     * extended with support for `**`.
+     * If any of the files altered in the commit pass the ignoredFiles filter
+     * and includedFiles is empty, then as far as this filter is concerned, we
+     * should trigger the build.
+     * If any of the files altered in the commit pass the ignoredFiles filter
+     * and includedFiles is not empty, then we make sure that at least one of
+     * those files matches a includedFiles glob. If not, then we do not trigger
+     * a build.
+     * 
+     */
     @InputImport(name="includedFiles")
     private final @Nullable Input<List<String>> includedFiles;
 
@@ -71,6 +116,12 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
         return this.includedFiles == null ? Input.empty() : this.includedFiles;
     }
 
+    /**
+     * Name of the volume to mount.
+     * Volume names must be unique per build step and must be valid names for Docker volumes.
+     * Each named volume must be used by at least two build steps.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -78,6 +129,11 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -85,6 +141,13 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * PubsubConfig describes the configuration of a trigger that creates
+     * a build whenever a Pub/Sub message is published.
+     * One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="pubsubConfig")
     private final @Nullable Input<TriggerPubsubConfigArgs> pubsubConfig;
 
@@ -92,6 +155,14 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
         return this.pubsubConfig == null ? Input.empty() : this.pubsubConfig;
     }
 
+    /**
+     * The service account used for all user-controlled operations including
+     * triggers.patch, triggers.run, builds.create, and builds.cancel.
+     * If no service account is set, then the standard Cloud Build service account
+     * ([PROJECT_NUM]@system.gserviceaccount.com) will be used instead.
+     * Format: projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL}
+     * 
+     */
     @InputImport(name="serviceAccount")
     private final @Nullable Input<String> serviceAccount;
 
@@ -99,6 +170,10 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
     }
 
+    /**
+     * Substitutions to use in a triggered build. Should only be used with triggers.run
+     * 
+     */
     @InputImport(name="substitutions")
     private final @Nullable Input<Map<String,String>> substitutions;
 
@@ -106,6 +181,10 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
         return this.substitutions == null ? Input.empty() : this.substitutions;
     }
 
+    /**
+     * Tags for annotation of a Build. These are not docker tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<String>> tags;
 
@@ -113,6 +192,15 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * Template describing the types of source changes to trigger a build.
+     * Branch and tag names in trigger templates are interpreted as regular
+     * expressions. Any branch or tag change that matches that regular
+     * expression will trigger a build.
+     * One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="triggerTemplate")
     private final @Nullable Input<TriggerTriggerTemplateArgs> triggerTemplate;
 
@@ -120,6 +208,13 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
         return this.triggerTemplate == null ? Input.empty() : this.triggerTemplate;
     }
 
+    /**
+     * WebhookConfig describes the configuration of a trigger that creates
+     * a build whenever a webhook is sent to a trigger's webhook URL.
+     * One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="webhookConfig")
     private final @Nullable Input<TriggerWebhookConfigArgs> webhookConfig;
 

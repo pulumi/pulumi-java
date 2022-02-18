@@ -20,6 +20,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
 
     public static final WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigArgs Empty = new WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigArgs();
 
+    /**
+     * Optional. The Compute Engine accelerator configuration for these instances.
+     * 
+     */
     @InputImport(name="accelerators")
     private final @Nullable Input<List<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAcceleratorArgs>> accelerators;
 
@@ -27,6 +31,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
         return this.accelerators == null ? Input.empty() : this.accelerators;
     }
 
+    /**
+     * Optional. Disk option config settings.
+     * 
+     */
     @InputImport(name="diskConfig")
     private final @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfigArgs> diskConfig;
 
@@ -34,6 +42,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
         return this.diskConfig == null ? Input.empty() : this.diskConfig;
     }
 
+    /**
+     * Optional. The Compute Engine image resource used for cluster instances. The URI can represent an image or image family. Image examples: * `https://www.googleapis.com/compute/beta/projects/` If the URI is unspecified, it will be inferred from `SoftwareConfig.image_version` or the system default.
+     * 
+     */
     @InputImport(name="image")
     private final @Nullable Input<String> image;
 
@@ -41,6 +53,11 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
         return this.image == null ? Input.empty() : this.image;
     }
 
+    /**
+     * - 
+     * Output only. The list of instance names. Dataproc derives the names from `cluster_name`, `num_instances`, and the instance group.
+     * 
+     */
     @InputImport(name="instanceNames")
     private final @Nullable Input<List<String>> instanceNames;
 
@@ -48,6 +65,11 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
         return this.instanceNames == null ? Input.empty() : this.instanceNames;
     }
 
+    /**
+     * - 
+     * Output only. Specifies that this instance group contains preemptible instances.
+     * 
+     */
     @InputImport(name="isPreemptible")
     private final @Nullable Input<Boolean> isPreemptible;
 
@@ -55,6 +77,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
         return this.isPreemptible == null ? Input.empty() : this.isPreemptible;
     }
 
+    /**
+     * Optional. The Compute Engine machine type used for cluster instances. A full URL, partial URI, or short name are valid. Examples: * ` https://www.googleapis.com/compute/v1/projects/(https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the machine type resource, for example,  `n1-standard-2`.
+     * 
+     */
     @InputImport(name="machineType")
     private final @Nullable Input<String> machineType;
 
@@ -62,6 +88,11 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
         return this.machineType == null ? Input.empty() : this.machineType;
     }
 
+    /**
+     * - 
+     * Output only. The config for Compute Engine Instance Group Manager that manages this group. This is only used for preemptible instance groups.
+     * 
+     */
     @InputImport(name="managedGroupConfigs")
     private final @Nullable Input<List<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfigArgs>> managedGroupConfigs;
 
@@ -69,6 +100,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
         return this.managedGroupConfigs == null ? Input.empty() : this.managedGroupConfigs;
     }
 
+    /**
+     * Optional. Specifies the minimum cpu platform for the Instance Group. See (https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).
+     * 
+     */
     @InputImport(name="minCpuPlatform")
     private final @Nullable Input<String> minCpuPlatform;
 
@@ -76,6 +111,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
         return this.minCpuPlatform == null ? Input.empty() : this.minCpuPlatform;
     }
 
+    /**
+     * Optional. The number of VM instances in the instance group. For master instance groups, must be set to 1.
+     * 
+     */
     @InputImport(name="numInstances")
     private final @Nullable Input<Integer> numInstances;
 
@@ -83,6 +122,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
         return this.numInstances == null ? Input.empty() : this.numInstances;
     }
 
+    /**
+     * Optional. Specifies the preemptibility of the instance group. The default value for master and worker groups is `NON_PREEMPTIBLE`. This default cannot be changed. The default value for secondary instances is `PREEMPTIBLE`. Possible values: PREEMPTIBILITY_UNSPECIFIED, NON_PREEMPTIBLE, PREEMPTIBLE
+     * 
+     */
     @InputImport(name="preemptibility")
     private final @Nullable Input<String> preemptibility;
 

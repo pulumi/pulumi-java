@@ -9,7 +9,19 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class NodePoolUpgradeSettings {
+    /**
+     * The number of additional nodes that can be added to the node pool during
+     * an upgrade. Increasing `max_surge` raises the number of nodes that can be upgraded simultaneously.
+     * Can be set to 0 or greater.
+     * 
+     */
     private final Integer maxSurge;
+    /**
+     * The number of nodes that can be simultaneously unavailable during
+     * an upgrade. Increasing `max_unavailable` raises the number of nodes that can be upgraded in
+     * parallel. Can be set to 0 or greater.
+     * 
+     */
     private final Integer maxUnavailable;
 
     @OutputCustomType.Constructor({"maxSurge","maxUnavailable"})
@@ -20,9 +32,21 @@ public final class NodePoolUpgradeSettings {
         this.maxUnavailable = Objects.requireNonNull(maxUnavailable);
     }
 
+    /**
+     * The number of additional nodes that can be added to the node pool during
+     * an upgrade. Increasing `max_surge` raises the number of nodes that can be upgraded simultaneously.
+     * Can be set to 0 or greater.
+     * 
+     */
     public Integer getMaxSurge() {
         return this.maxSurge;
     }
+    /**
+     * The number of nodes that can be simultaneously unavailable during
+     * an upgrade. Increasing `max_unavailable` raises the number of nodes that can be upgraded in
+     * parallel. Can be set to 0 or greater.
+     * 
+     */
     public Integer getMaxUnavailable() {
         return this.maxUnavailable;
     }

@@ -14,6 +14,10 @@ public final class InstanceTemplateShieldedInstanceConfigGetArgs extends io.pulu
 
     public static final InstanceTemplateShieldedInstanceConfigGetArgs Empty = new InstanceTemplateShieldedInstanceConfigGetArgs();
 
+    /**
+     * -- Compare the most recent boot measurements to the integrity policy baseline and return a pair of pass/fail results depending on whether they match or not. Defaults to true.
+     * 
+     */
     @InputImport(name="enableIntegrityMonitoring")
     private final @Nullable Input<Boolean> enableIntegrityMonitoring;
 
@@ -21,6 +25,10 @@ public final class InstanceTemplateShieldedInstanceConfigGetArgs extends io.pulu
         return this.enableIntegrityMonitoring == null ? Input.empty() : this.enableIntegrityMonitoring;
     }
 
+    /**
+     * -- Verify the digital signature of all boot components, and halt the boot process if signature verification fails. Defaults to false.
+     * 
+     */
     @InputImport(name="enableSecureBoot")
     private final @Nullable Input<Boolean> enableSecureBoot;
 
@@ -28,6 +36,10 @@ public final class InstanceTemplateShieldedInstanceConfigGetArgs extends io.pulu
         return this.enableSecureBoot == null ? Input.empty() : this.enableSecureBoot;
     }
 
+    /**
+     * -- Use a virtualized trusted platform module, which is a specialized computer chip you can use to encrypt objects like keys and certificates. Defaults to true.
+     * 
+     */
     @InputImport(name="enableVtpm")
     private final @Nullable Input<Boolean> enableVtpm;
 

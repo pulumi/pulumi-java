@@ -14,6 +14,10 @@ public final class PatchDeploymentRolloutDisruptionBudgetArgs extends io.pulumi.
 
     public static final PatchDeploymentRolloutDisruptionBudgetArgs Empty = new PatchDeploymentRolloutDisruptionBudgetArgs();
 
+    /**
+     * Specifies a fixed value.
+     * 
+     */
     @InputImport(name="fixed")
     private final @Nullable Input<Integer> fixed;
 
@@ -21,6 +25,10 @@ public final class PatchDeploymentRolloutDisruptionBudgetArgs extends io.pulumi.
         return this.fixed == null ? Input.empty() : this.fixed;
     }
 
+    /**
+     * Specifies the relative value defined as a percentage, which will be multiplied by a reference value.
+     * 
+     */
     @InputImport(name="percentage")
     private final @Nullable Input<Integer> percentage;
 

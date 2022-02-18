@@ -18,63 +18,183 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * A Cloud AI Platform Notebook runtime.
+ * 
+ * > **Note:** Due to limitations of the Notebooks Runtime API, many fields
+ * in this resource do not properly detect drift. These fields will also not
+ * appear in state once imported.
+ * 
+ * To get more information about Runtime, see:
+ * 
+ * * [API documentation](https://cloud.google.com/ai-platform/notebooks/docs/reference/rest)
+ * * How-to Guides
+ *     * [Official Documentation](https://cloud.google.com/ai-platform-notebooks)
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * Runtime can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:notebooks/runtime:Runtime default projects/{{project}}/locations/{{location}}/runtimes/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:notebooks/runtime:Runtime default {{project}}/{{location}}/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:notebooks/runtime:Runtime default {{location}}/{{name}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:notebooks/runtime:Runtime")
 public class Runtime extends io.pulumi.resources.CustomResource {
+    /**
+     * The config settings for accessing runtime.
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="accessConfig", type=RuntimeAccessConfig.class, parameters={})
     private Output</* @Nullable */ RuntimeAccessConfig> accessConfig;
 
+    /**
+     * @return The config settings for accessing runtime.
+     * Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ RuntimeAccessConfig> getAccessConfig() {
         return this.accessConfig;
     }
+    /**
+     * The health state of this runtime. For a list of possible output values, see
+     * 'https://cloud.google.com/vertex-ai/docs/workbench/ reference/rest/v1/projects.locations.runtimes#healthstate'.
+     * 
+     */
     @OutputExport(name="healthState", type=String.class, parameters={})
     private Output<String> healthState;
 
+    /**
+     * @return The health state of this runtime. For a list of possible output values, see
+     * 'https://cloud.google.com/vertex-ai/docs/workbench/ reference/rest/v1/projects.locations.runtimes#healthstate'.
+     * 
+     */
     public Output<String> getHealthState() {
         return this.healthState;
     }
+    /**
+     * A reference to the zone where the machine resides.
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return A reference to the zone where the machine resides.
+     * 
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * Contains Runtime daemon metrics such as Service status and JupyterLab status
+     * 
+     */
     @OutputExport(name="metrics", type=List.class, parameters={RuntimeMetric.class})
     private Output<List<RuntimeMetric>> metrics;
 
+    /**
+     * @return Contains Runtime daemon metrics such as Service status and JupyterLab status
+     * 
+     */
     public Output<List<RuntimeMetric>> getMetrics() {
         return this.metrics;
     }
+    /**
+     * The name specified for the Notebook instance.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name specified for the Notebook instance.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * The config settings for software inside the runtime.
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="softwareConfig", type=RuntimeSoftwareConfig.class, parameters={})
     private Output<RuntimeSoftwareConfig> softwareConfig;
 
+    /**
+     * @return The config settings for software inside the runtime.
+     * Structure is documented below.
+     * 
+     */
     public Output<RuntimeSoftwareConfig> getSoftwareConfig() {
         return this.softwareConfig;
     }
+    /**
+     * The state of this runtime.
+     * 
+     */
     @OutputExport(name="state", type=String.class, parameters={})
     private Output<String> state;
 
+    /**
+     * @return The state of this runtime.
+     * 
+     */
     public Output<String> getState() {
         return this.state;
     }
+    /**
+     * Use a Compute Engine VM image to start the managed notebook instance.
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="virtualMachine", type=RuntimeVirtualMachine.class, parameters={})
     private Output</* @Nullable */ RuntimeVirtualMachine> virtualMachine;
 
+    /**
+     * @return Use a Compute Engine VM image to start the managed notebook instance.
+     * Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ RuntimeVirtualMachine> getVirtualMachine() {
         return this.virtualMachine;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Runtime(String name, RuntimeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:notebooks/runtime:Runtime", name, args == null ? RuntimeArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -90,6 +210,15 @@ public class Runtime extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Runtime get(String name, Input<String> id, @Nullable RuntimeState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Runtime(name, id, state, options);
     }

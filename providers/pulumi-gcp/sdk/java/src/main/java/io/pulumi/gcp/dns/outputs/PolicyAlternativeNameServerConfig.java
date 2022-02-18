@@ -10,6 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PolicyAlternativeNameServerConfig {
+    /**
+     * Sets an alternative name server for the associated networks. When specified,
+     * all DNS queries are forwarded to a name server that you choose. Names such as .internal
+     * are not available when an alternative name server is specified.
+     * Structure is documented below.
+     * 
+     */
     private final List<PolicyAlternativeNameServerConfigTargetNameServer> targetNameServers;
 
     @OutputCustomType.Constructor({"targetNameServers"})
@@ -17,6 +24,13 @@ public final class PolicyAlternativeNameServerConfig {
         this.targetNameServers = Objects.requireNonNull(targetNameServers);
     }
 
+    /**
+     * Sets an alternative name server for the associated networks. When specified,
+     * all DNS queries are forwarded to a name server that you choose. Names such as .internal
+     * are not available when an alternative name server is specified.
+     * Structure is documented below.
+     * 
+     */
     public List<PolicyAlternativeNameServerConfigTargetNameServer> getTargetNameServers() {
         return this.targetNameServers;
     }

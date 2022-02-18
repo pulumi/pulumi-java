@@ -16,6 +16,10 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesGetArgs
 
     public static final ResourcePolicySnapshotSchedulePolicySnapshotPropertiesGetArgs Empty = new ResourcePolicySnapshotSchedulePolicySnapshotPropertiesGetArgs();
 
+    /**
+     * Whether to perform a 'guest aware' snapshot.
+     * 
+     */
     @InputImport(name="guestFlush")
     private final @Nullable Input<Boolean> guestFlush;
 
@@ -23,6 +27,10 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesGetArgs
         return this.guestFlush == null ? Input.empty() : this.guestFlush;
     }
 
+    /**
+     * A set of key-value pairs.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -30,6 +38,11 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesGetArgs
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * Cloud Storage bucket location to store the auto snapshot
+     * (regional or multi-regional)
+     * 
+     */
     @InputImport(name="storageLocations")
     private final @Nullable Input<String> storageLocations;
 

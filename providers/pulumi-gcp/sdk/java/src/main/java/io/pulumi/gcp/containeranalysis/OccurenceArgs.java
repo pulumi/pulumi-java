@@ -15,6 +15,18 @@ public final class OccurenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OccurenceArgs Empty = new OccurenceArgs();
 
+    /**
+     * Occurrence that represents a single "attestation". The authenticity
+     * of an attestation can be verified using the attached signature.
+     * If the verifier trusts the public key of the signer, then verifying
+     * the signature is sufficient to establish trust. In this circumstance,
+     * the authority to which this attestation is attached is primarily
+     * useful for lookup (how to find this attestation if you already
+     * know the authority and artifact to be verified) and intent (for
+     * which authority this attestation was intended to sign.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="attestation", required=true)
     private final Input<OccurenceAttestationArgs> attestation;
 
@@ -22,6 +34,12 @@ public final class OccurenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.attestation;
     }
 
+    /**
+     * The analysis note associated with this occurrence, in the form of
+     * projects/[PROJECT]/notes/[NOTE_ID]. This field can be used as a
+     * filter in list requests.
+     * 
+     */
     @InputImport(name="noteName", required=true)
     private final Input<String> noteName;
 
@@ -29,6 +47,11 @@ public final class OccurenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.noteName;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -36,6 +59,10 @@ public final class OccurenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * A description of actions that can be taken to remedy the note.
+     * 
+     */
     @InputImport(name="remediation")
     private final @Nullable Input<String> remediation;
 
@@ -43,6 +70,12 @@ public final class OccurenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.remediation == null ? Input.empty() : this.remediation;
     }
 
+    /**
+     * Required. Immutable. A URI that represents the resource for which
+     * the occurrence applies. For example,
+     * https://gcr.io/project/image@sha256:123abc for a Docker image.
+     * 
+     */
     @InputImport(name="resourceUri", required=true)
     private final Input<String> resourceUri;
 

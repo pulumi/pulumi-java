@@ -22,6 +22,11 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
 
     public static final InstanceGroupManagerArgs Empty = new InstanceGroupManagerArgs();
 
+    /**
+     * The autohealing policies for this managed instance
+     * group. You can specify only one value. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances#monitoring_groups).
+     * 
+     */
     @InputImport(name="autoHealingPolicies")
     private final @Nullable Input<InstanceGroupManagerAutoHealingPoliciesArgs> autoHealingPolicies;
 
@@ -29,6 +34,15 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
         return this.autoHealingPolicies == null ? Input.empty() : this.autoHealingPolicies;
     }
 
+    /**
+     * The base instance name to use for
+     * instances in this group. The value must be a valid
+     * [RFC1035](https://www.ietf.org/rfc/rfc1035.txt) name. Supported characters
+     * are lowercase letters, numbers, and hyphens (-). Instances are named by
+     * appending a hyphen and a random four-character string to the base instance
+     * name.
+     * 
+     */
     @InputImport(name="baseInstanceName", required=true)
     private final Input<String> baseInstanceName;
 
@@ -36,6 +50,11 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
         return this.baseInstanceName;
     }
 
+    /**
+     * An optional textual description of the instance
+     * group manager.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -43,6 +62,10 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * - Version name.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -50,6 +73,11 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The named port configuration. See the section below
+     * for details on configuration.
+     * 
+     */
     @InputImport(name="namedPorts")
     private final @Nullable Input<List<InstanceGroupManagerNamedPortArgs>> namedPorts;
 
@@ -57,6 +85,11 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
         return this.namedPorts == null ? Input.empty() : this.namedPorts;
     }
 
+    /**
+     * The ID of the project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -64,6 +97,10 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * ) Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs).
+     * 
+     */
     @InputImport(name="statefulDisks")
     private final @Nullable Input<List<InstanceGroupManagerStatefulDiskArgs>> statefulDisks;
 
@@ -71,6 +108,12 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
         return this.statefulDisks == null ? Input.empty() : this.statefulDisks;
     }
 
+    /**
+     * The full URL of all target pools to which new
+     * instances in the group are added. Updating the target pools attribute does
+     * not affect existing instances.
+     * 
+     */
     @InputImport(name="targetPools")
     private final @Nullable Input<List<String>> targetPools;
 
@@ -78,6 +121,10 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
         return this.targetPools == null ? Input.empty() : this.targetPools;
     }
 
+    /**
+     * - The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.
+     * 
+     */
     @InputImport(name="targetSize")
     private final @Nullable Input<Integer> targetSize;
 
@@ -85,6 +132,10 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
         return this.targetSize == null ? Input.empty() : this.targetSize;
     }
 
+    /**
+     * The update policy for this managed instance group. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups) and [API](https://cloud.google.com/compute/docs/reference/rest/v1/instanceGroupManagers/patch)
+     * 
+     */
     @InputImport(name="updatePolicy")
     private final @Nullable Input<InstanceGroupManagerUpdatePolicyArgs> updatePolicy;
 
@@ -92,6 +143,12 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
         return this.updatePolicy == null ? Input.empty() : this.updatePolicy;
     }
 
+    /**
+     * Application versions managed by this instance group. Each
+     * version deals with a specific instance template, allowing canary release scenarios.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="versions", required=true)
     private final Input<List<InstanceGroupManagerVersionArgs>> versions;
 
@@ -99,6 +156,12 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
         return this.versions;
     }
 
+    /**
+     * Whether to wait for all instances to be created/updated before
+     * returning. Note that if this is set to true and the operation does not succeed, this provider will
+     * continue trying until it times out.
+     * 
+     */
     @InputImport(name="waitForInstances")
     private final @Nullable Input<Boolean> waitForInstances;
 
@@ -106,6 +169,13 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
         return this.waitForInstances == null ? Input.empty() : this.waitForInstances;
     }
 
+    /**
+     * When used with `wait_for_instances` it specifies the status to wait for.
+     * When `STABLE` is specified this resource will wait until the instances are stable before returning. When `UPDATED` is
+     * set, it will wait for the version target to be reached and any per instance configs to be effective as well as all
+     * instances to be stable before returning. The possible values are `STABLE` and `UPDATED`
+     * 
+     */
     @InputImport(name="waitForInstancesStatus")
     private final @Nullable Input<String> waitForInstancesStatus;
 
@@ -113,6 +183,11 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
         return this.waitForInstancesStatus == null ? Input.empty() : this.waitForInstancesStatus;
     }
 
+    /**
+     * The zone that instances in this group should be created
+     * in.
+     * 
+     */
     @InputImport(name="zone")
     private final @Nullable Input<String> zone;
 

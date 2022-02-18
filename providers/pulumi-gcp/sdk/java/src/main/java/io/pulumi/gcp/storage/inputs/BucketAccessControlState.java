@@ -14,6 +14,10 @@ public final class BucketAccessControlState extends io.pulumi.resources.Resource
 
     public static final BucketAccessControlState Empty = new BucketAccessControlState();
 
+    /**
+     * The name of the bucket.
+     * 
+     */
     @InputImport(name="bucket")
     private final @Nullable Input<String> bucket;
 
@@ -21,6 +25,10 @@ public final class BucketAccessControlState extends io.pulumi.resources.Resource
         return this.bucket == null ? Input.empty() : this.bucket;
     }
 
+    /**
+     * The domain associated with the entity.
+     * 
+     */
     @InputImport(name="domain")
     private final @Nullable Input<String> domain;
 
@@ -28,6 +36,10 @@ public final class BucketAccessControlState extends io.pulumi.resources.Resource
         return this.domain == null ? Input.empty() : this.domain;
     }
 
+    /**
+     * The email address associated with the entity.
+     * 
+     */
     @InputImport(name="email")
     private final @Nullable Input<String> email;
 
@@ -35,6 +47,24 @@ public final class BucketAccessControlState extends io.pulumi.resources.Resource
         return this.email == null ? Input.empty() : this.email;
     }
 
+    /**
+     * The entity holding the permission, in one of the following forms:
+     * user-userId
+     * user-email
+     * group-groupId
+     * group-email
+     * domain-domain
+     * project-team-projectId
+     * allUsers
+     * allAuthenticatedUsers
+     * Examples:
+     * The user liz@example.com would be user-liz@example.com.
+     * The group example@googlegroups.com would be
+     * group-example@googlegroups.com.
+     * To refer to all members of the Google Apps for Business domain
+     * example.com, the entity would be domain-example.com.
+     * 
+     */
     @InputImport(name="entity")
     private final @Nullable Input<String> entity;
 
@@ -42,6 +72,11 @@ public final class BucketAccessControlState extends io.pulumi.resources.Resource
         return this.entity == null ? Input.empty() : this.entity;
     }
 
+    /**
+     * The access permission for the entity.
+     * Possible values are `OWNER`, `READER`, and `WRITER`.
+     * 
+     */
     @InputImport(name="role")
     private final @Nullable Input<String> role;
 

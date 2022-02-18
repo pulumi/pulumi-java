@@ -12,9 +12,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FulfillmentGenericWebService {
+    /**
+     * The password for HTTP Basic authentication.
+     * 
+     */
     private final @Nullable String password;
+    /**
+     * The HTTP request headers to send together with fulfillment requests.
+     * 
+     */
     private final @Nullable Map<String,String> requestHeaders;
+    /**
+     * The fulfillment URI for receiving POST requests. It must use https protocol.
+     * 
+     */
     private final String uri;
+    /**
+     * The user name for HTTP Basic authentication.
+     * 
+     */
     private final @Nullable String username;
 
     @OutputCustomType.Constructor({"password","requestHeaders","uri","username"})
@@ -29,15 +45,31 @@ public final class FulfillmentGenericWebService {
         this.username = username;
     }
 
+    /**
+     * The password for HTTP Basic authentication.
+     * 
+     */
     public Optional<String> getPassword() {
         return Optional.ofNullable(this.password);
     }
+    /**
+     * The HTTP request headers to send together with fulfillment requests.
+     * 
+     */
     public Map<String,String> getRequestHeaders() {
         return this.requestHeaders == null ? Map.of() : this.requestHeaders;
     }
+    /**
+     * The fulfillment URI for receiving POST requests. It must use https protocol.
+     * 
+     */
     public String getUri() {
         return this.uri;
     }
+    /**
+     * The user name for HTTP Basic authentication.
+     * 
+     */
     public Optional<String> getUsername() {
         return Optional.ofNullable(this.username);
     }

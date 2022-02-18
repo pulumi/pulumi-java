@@ -14,6 +14,12 @@ public final class RegionNetworkEndpointGroupAppEngineGetArgs extends io.pulumi.
 
     public static final RegionNetworkEndpointGroupAppEngineGetArgs Empty = new RegionNetworkEndpointGroupAppEngineGetArgs();
 
+    /**
+     * Optional serving service.
+     * The service name must be 1-63 characters long, and comply with RFC1035.
+     * Example value: "default", "my-service".
+     * 
+     */
     @InputImport(name="service")
     private final @Nullable Input<String> service;
 
@@ -21,6 +27,15 @@ public final class RegionNetworkEndpointGroupAppEngineGetArgs extends io.pulumi.
         return this.service == null ? Input.empty() : this.service;
     }
 
+    /**
+     * A template to parse function field from a request URL. URL mask allows
+     * for routing to multiple Cloud Functions without having to create
+     * multiple Network Endpoint Groups and backend services.
+     * For example, request URLs "mydomain.com/function1" and "mydomain.com/function2"
+     * can be backed by the same Serverless NEG with URL mask "/". The URL mask
+     * will parse them to { function = "function1" } and { function = "function2" } respectively.
+     * 
+     */
     @InputImport(name="urlMask")
     private final @Nullable Input<String> urlMask;
 
@@ -28,6 +43,12 @@ public final class RegionNetworkEndpointGroupAppEngineGetArgs extends io.pulumi.
         return this.urlMask == null ? Input.empty() : this.urlMask;
     }
 
+    /**
+     * Optional serving version.
+     * The version must be 1-63 characters long, and comply with RFC1035.
+     * Example value: "v1", "v2".
+     * 
+     */
     @InputImport(name="version")
     private final @Nullable Input<String> version;
 

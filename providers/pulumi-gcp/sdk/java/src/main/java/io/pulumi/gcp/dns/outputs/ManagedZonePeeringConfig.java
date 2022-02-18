@@ -9,6 +9,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ManagedZonePeeringConfig {
+    /**
+     * The network with which to peer.
+     * Structure is documented below.
+     * 
+     */
     private final ManagedZonePeeringConfigTargetNetwork targetNetwork;
 
     @OutputCustomType.Constructor({"targetNetwork"})
@@ -16,6 +21,11 @@ public final class ManagedZonePeeringConfig {
         this.targetNetwork = Objects.requireNonNull(targetNetwork);
     }
 
+    /**
+     * The network with which to peer.
+     * Structure is documented below.
+     * 
+     */
     public ManagedZonePeeringConfigTargetNetwork getTargetNetwork() {
         return this.targetNetwork;
     }

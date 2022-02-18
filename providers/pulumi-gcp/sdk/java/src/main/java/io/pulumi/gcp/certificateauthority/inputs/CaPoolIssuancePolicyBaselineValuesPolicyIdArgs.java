@@ -14,6 +14,10 @@ public final class CaPoolIssuancePolicyBaselineValuesPolicyIdArgs extends io.pul
 
     public static final CaPoolIssuancePolicyBaselineValuesPolicyIdArgs Empty = new CaPoolIssuancePolicyBaselineValuesPolicyIdArgs();
 
+    /**
+     * An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+     * 
+     */
     @InputImport(name="objectIdPaths", required=true)
     private final Input<List<Integer>> objectIdPaths;
 

@@ -13,8 +13,22 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class InboundSamlConfigSpConfig {
+    /**
+     * Callback URI where responses from IDP are handled. Must start with `https://`.
+     * 
+     */
     private final @Nullable String callbackUri;
+    /**
+     * - 
+     * The IDP's certificate data to verify the signature in the SAMLResponse issued by the IDP.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable List<InboundSamlConfigSpConfigSpCertificate> spCertificates;
+    /**
+     * Unique identifier for all SAML entities.
+     * 
+     */
     private final @Nullable String spEntityId;
 
     @OutputCustomType.Constructor({"callbackUri","spCertificates","spEntityId"})
@@ -27,12 +41,26 @@ public final class InboundSamlConfigSpConfig {
         this.spEntityId = spEntityId;
     }
 
+    /**
+     * Callback URI where responses from IDP are handled. Must start with `https://`.
+     * 
+     */
     public Optional<String> getCallbackUri() {
         return Optional.ofNullable(this.callbackUri);
     }
+    /**
+     * - 
+     * The IDP's certificate data to verify the signature in the SAMLResponse issued by the IDP.
+     * Structure is documented below.
+     * 
+     */
     public List<InboundSamlConfigSpConfigSpCertificate> getSpCertificates() {
         return this.spCertificates == null ? List.of() : this.spCertificates;
     }
+    /**
+     * Unique identifier for all SAML entities.
+     * 
+     */
     public Optional<String> getSpEntityId() {
         return Optional.ofNullable(this.spEntityId);
     }

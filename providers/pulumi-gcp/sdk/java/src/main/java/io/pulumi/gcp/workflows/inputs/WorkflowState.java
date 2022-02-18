@@ -15,6 +15,11 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
 
     public static final WorkflowState Empty = new WorkflowState();
 
+    /**
+     * The timestamp of when the workflow was created in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine
+     * fractional digits.
+     * 
+     */
     @InputImport(name="createTime")
     private final @Nullable Input<String> createTime;
 
@@ -22,6 +27,10 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
         return this.createTime == null ? Input.empty() : this.createTime;
     }
 
+    /**
+     * Description of the workflow provided by the user. Must be at most 1000 unicode characters long.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -29,6 +38,10 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * A set of key/value label pairs to assign to this Workflow.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -36,6 +49,10 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * Name of the Workflow.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -43,6 +60,11 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Creates a unique name beginning with the
+     * specified prefix. If this and name are unspecified, a random value is chosen for the name.
+     * 
+     */
     @InputImport(name="namePrefix")
     private final @Nullable Input<String> namePrefix;
 
@@ -50,6 +72,11 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
         return this.namePrefix == null ? Input.empty() : this.namePrefix;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -57,6 +84,10 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The region of the workflow.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 
@@ -64,6 +95,10 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
         return this.region == null ? Input.empty() : this.region;
     }
 
+    /**
+     * The revision of the workflow. A new one is generated if the service account or source contents is changed.
+     * 
+     */
     @InputImport(name="revisionId")
     private final @Nullable Input<String> revisionId;
 
@@ -71,6 +106,12 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
         return this.revisionId == null ? Input.empty() : this.revisionId;
     }
 
+    /**
+     * Name of the service account associated with the latest workflow version. This service
+     * account represents the identity of the workflow and determines what permissions the workflow has.
+     * Format: projects/{project}/serviceAccounts/{account}.
+     * 
+     */
     @InputImport(name="serviceAccount")
     private final @Nullable Input<String> serviceAccount;
 
@@ -78,6 +119,10 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
         return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
     }
 
+    /**
+     * Workflow code to be executed. The size limit is 32KB.
+     * 
+     */
     @InputImport(name="sourceContents")
     private final @Nullable Input<String> sourceContents;
 
@@ -85,6 +130,10 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
         return this.sourceContents == null ? Input.empty() : this.sourceContents;
     }
 
+    /**
+     * State of the workflow deployment.
+     * 
+     */
     @InputImport(name="state")
     private final @Nullable Input<String> state;
 
@@ -92,6 +141,11 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
         return this.state == null ? Input.empty() : this.state;
     }
 
+    /**
+     * The timestamp of when the workflow was last updated in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to
+     * nine fractional digits.
+     * 
+     */
     @InputImport(name="updateTime")
     private final @Nullable Input<String> updateTime;
 

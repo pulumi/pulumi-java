@@ -16,6 +16,11 @@ public final class AccessLevelsAccessLevelArgs extends io.pulumi.resources.Resou
 
     public static final AccessLevelsAccessLevelArgs Empty = new AccessLevelsAccessLevelArgs();
 
+    /**
+     * A set of predefined conditions for the access level and a combining function.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="basic")
     private final @Nullable Input<AccessLevelsAccessLevelBasicArgs> basic;
 
@@ -23,6 +28,12 @@ public final class AccessLevelsAccessLevelArgs extends io.pulumi.resources.Resou
         return this.basic == null ? Input.empty() : this.basic;
     }
 
+    /**
+     * Custom access level conditions are set using the Cloud Common Expression Language to represent the necessary conditions for the level to apply to a request.
+     * See CEL spec at: https://github.com/google/cel-spec.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="custom")
     private final @Nullable Input<AccessLevelsAccessLevelCustomArgs> custom;
 
@@ -30,6 +41,10 @@ public final class AccessLevelsAccessLevelArgs extends io.pulumi.resources.Resou
         return this.custom == null ? Input.empty() : this.custom;
     }
 
+    /**
+     * Description of the expression
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -37,6 +52,12 @@ public final class AccessLevelsAccessLevelArgs extends io.pulumi.resources.Resou
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Resource name for the Access Level. The short_name component must begin
+     * with a letter and only include alphanumeric and '_'.
+     * Format: accessPolicies/{policy_id}/accessLevels/{short_name}
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -44,6 +65,10 @@ public final class AccessLevelsAccessLevelArgs extends io.pulumi.resources.Resou
         return this.name;
     }
 
+    /**
+     * Title for the expression, i.e. a short string describing its purpose.
+     * 
+     */
     @InputImport(name="title", required=true)
     private final Input<String> title;
 

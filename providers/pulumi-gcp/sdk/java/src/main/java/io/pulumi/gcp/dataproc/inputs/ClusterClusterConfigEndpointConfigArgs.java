@@ -17,6 +17,11 @@ public final class ClusterClusterConfigEndpointConfigArgs extends io.pulumi.reso
 
     public static final ClusterClusterConfigEndpointConfigArgs Empty = new ClusterClusterConfigEndpointConfigArgs();
 
+    /**
+     * The flag to enable http access to specific ports
+     * on the cluster from external sources (aka Component Gateway). Defaults to false.
+     * 
+     */
     @InputImport(name="enableHttpPortAccess", required=true)
     private final Input<Boolean> enableHttpPortAccess;
 

@@ -13,6 +13,10 @@ public final class AiFeatureStoreOnlineServingConfigArgs extends io.pulumi.resou
 
     public static final AiFeatureStoreOnlineServingConfigArgs Empty = new AiFeatureStoreOnlineServingConfigArgs();
 
+    /**
+     * The number of nodes for each cluster. The number of nodes will not scale automatically but can be scaled manually by providing different values when updating.
+     * 
+     */
     @InputImport(name="fixedNodeCount", required=true)
     private final Input<Integer> fixedNodeCount;
 

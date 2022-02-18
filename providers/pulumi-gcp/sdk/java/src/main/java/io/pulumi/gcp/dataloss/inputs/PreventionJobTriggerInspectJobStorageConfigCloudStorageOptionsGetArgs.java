@@ -17,6 +17,11 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
 
     public static final PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsGetArgs Empty = new PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsGetArgs();
 
+    /**
+     * Max number of bytes to scan from a file. If a scanned file's size is bigger than this value
+     * then the rest of the bytes are omitted.
+     * 
+     */
     @InputImport(name="bytesLimitPerFile")
     private final @Nullable Input<Integer> bytesLimitPerFile;
 
@@ -24,6 +29,11 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
         return this.bytesLimitPerFile == null ? Input.empty() : this.bytesLimitPerFile;
     }
 
+    /**
+     * Max percentage of bytes to scan from a file. The rest are omitted. The number of bytes scanned is rounded down.
+     * Must be between 0 and 100, inclusively. Both 0 and 100 means no limit.
+     * 
+     */
     @InputImport(name="bytesLimitPerFilePercent")
     private final @Nullable Input<Integer> bytesLimitPerFilePercent;
 
@@ -31,6 +41,11 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
         return this.bytesLimitPerFilePercent == null ? Input.empty() : this.bytesLimitPerFilePercent;
     }
 
+    /**
+     * Set of files to scan.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="fileSet", required=true)
     private final Input<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetGetArgs> fileSet;
 
@@ -38,6 +53,13 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
         return this.fileSet;
     }
 
+    /**
+     * List of file type groups to include in the scan. If empty, all files are scanned and available data
+     * format processors are applied. In addition, the binary content of the selected files is always scanned as well.
+     * Images are scanned only as binary if the specified region does not support image inspection and no fileTypes were specified.
+     * Each value may be one of `BINARY_FILE`, `TEXT_FILE`, `IMAGE`, `WORD`, `PDF`, `AVRO`, `CSV`, and `TSV`.
+     * 
+     */
     @InputImport(name="fileTypes")
     private final @Nullable Input<List<String>> fileTypes;
 
@@ -45,6 +67,11 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
         return this.fileTypes == null ? Input.empty() : this.fileTypes;
     }
 
+    /**
+     * Limits the number of files to scan to this percentage of the input FileSet. Number of files scanned is rounded down.
+     * Must be between 0 and 100, inclusively. Both 0 and 100 means no limit.
+     * 
+     */
     @InputImport(name="filesLimitPercent")
     private final @Nullable Input<Integer> filesLimitPercent;
 
@@ -52,6 +79,12 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
         return this.filesLimitPercent == null ? Input.empty() : this.filesLimitPercent;
     }
 
+    /**
+     * How to sample bytes if not all bytes are scanned. Meaningful only when used in conjunction with bytesLimitPerFile.
+     * If not specified, scanning would start from the top.
+     * Possible values are `TOP` and `RANDOM_START`.
+     * 
+     */
     @InputImport(name="sampleMethod")
     private final @Nullable Input<String> sampleMethod;
 

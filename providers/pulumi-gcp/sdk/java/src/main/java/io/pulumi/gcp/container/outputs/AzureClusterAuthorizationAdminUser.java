@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AzureClusterAuthorizationAdminUser {
+    /**
+     * Required. The name of the user, e.g. `my-gcp-id@gmail.com`.
+     * 
+     */
     private final String username;
 
     @OutputCustomType.Constructor({"username"})
@@ -16,6 +20,10 @@ public final class AzureClusterAuthorizationAdminUser {
         this.username = Objects.requireNonNull(username);
     }
 
+    /**
+     * Required. The name of the user, e.g. `my-gcp-id@gmail.com`.
+     * 
+     */
     public String getUsername() {
         return this.username;
     }

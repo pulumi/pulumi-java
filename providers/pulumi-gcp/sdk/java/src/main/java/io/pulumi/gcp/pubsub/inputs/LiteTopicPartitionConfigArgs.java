@@ -15,6 +15,11 @@ public final class LiteTopicPartitionConfigArgs extends io.pulumi.resources.Reso
 
     public static final LiteTopicPartitionConfigArgs Empty = new LiteTopicPartitionConfigArgs();
 
+    /**
+     * The capacity configuration.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="capacity")
     private final @Nullable Input<LiteTopicPartitionConfigCapacityArgs> capacity;
 
@@ -22,6 +27,10 @@ public final class LiteTopicPartitionConfigArgs extends io.pulumi.resources.Reso
         return this.capacity == null ? Input.empty() : this.capacity;
     }
 
+    /**
+     * The number of partitions in the topic. Must be at least 1.
+     * 
+     */
     @InputImport(name="count", required=true)
     private final Input<Integer> count;
 

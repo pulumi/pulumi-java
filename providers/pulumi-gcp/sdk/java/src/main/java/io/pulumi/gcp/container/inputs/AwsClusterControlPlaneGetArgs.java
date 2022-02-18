@@ -23,6 +23,10 @@ public final class AwsClusterControlPlaneGetArgs extends io.pulumi.resources.Res
 
     public static final AwsClusterControlPlaneGetArgs Empty = new AwsClusterControlPlaneGetArgs();
 
+    /**
+     * Required. Authentication configuration for management of AWS resources.
+     * 
+     */
     @InputImport(name="awsServicesAuthentication", required=true)
     private final Input<AwsClusterControlPlaneAwsServicesAuthenticationGetArgs> awsServicesAuthentication;
 
@@ -30,6 +34,10 @@ public final class AwsClusterControlPlaneGetArgs extends io.pulumi.resources.Res
         return this.awsServicesAuthentication;
     }
 
+    /**
+     * Required. The ARN of the AWS KMS key used to encrypt cluster configuration.
+     * 
+     */
     @InputImport(name="configEncryption", required=true)
     private final Input<AwsClusterControlPlaneConfigEncryptionGetArgs> configEncryption;
 
@@ -37,6 +45,10 @@ public final class AwsClusterControlPlaneGetArgs extends io.pulumi.resources.Res
         return this.configEncryption;
     }
 
+    /**
+     * Required. The ARN of the AWS KMS key used to encrypt cluster secrets.
+     * 
+     */
     @InputImport(name="databaseEncryption", required=true)
     private final Input<AwsClusterControlPlaneDatabaseEncryptionGetArgs> databaseEncryption;
 
@@ -44,6 +56,10 @@ public final class AwsClusterControlPlaneGetArgs extends io.pulumi.resources.Res
         return this.databaseEncryption;
     }
 
+    /**
+     * Required. The name of the AWS IAM instance pofile to assign to each control plane replica.
+     * 
+     */
     @InputImport(name="iamInstanceProfile", required=true)
     private final Input<String> iamInstanceProfile;
 
@@ -51,6 +67,10 @@ public final class AwsClusterControlPlaneGetArgs extends io.pulumi.resources.Res
         return this.iamInstanceProfile;
     }
 
+    /**
+     * Optional. The AWS instance type. When unspecified, it defaults to `t3.medium`.
+     * 
+     */
     @InputImport(name="instanceType")
     private final @Nullable Input<String> instanceType;
 
@@ -58,6 +78,10 @@ public final class AwsClusterControlPlaneGetArgs extends io.pulumi.resources.Res
         return this.instanceType == null ? Input.empty() : this.instanceType;
     }
 
+    /**
+     * Optional. Configuration related to the main volume provisioned for each control plane replica. The main volume is in charge of storing all of the cluster's etcd state. Volumes will be provisioned in the availability zone associated with the corresponding subnet. When unspecified, it defaults to 8 GiB with the GP2 volume type.
+     * 
+     */
     @InputImport(name="mainVolume")
     private final @Nullable Input<AwsClusterControlPlaneMainVolumeGetArgs> mainVolume;
 
@@ -65,6 +89,10 @@ public final class AwsClusterControlPlaneGetArgs extends io.pulumi.resources.Res
         return this.mainVolume == null ? Input.empty() : this.mainVolume;
     }
 
+    /**
+     * Proxy configuration for outbound HTTP(S) traffic.
+     * 
+     */
     @InputImport(name="proxyConfig")
     private final @Nullable Input<AwsClusterControlPlaneProxyConfigGetArgs> proxyConfig;
 
@@ -72,6 +100,10 @@ public final class AwsClusterControlPlaneGetArgs extends io.pulumi.resources.Res
         return this.proxyConfig == null ? Input.empty() : this.proxyConfig;
     }
 
+    /**
+     * Optional. Configuration related to the root volume provisioned for each control plane replica. Volumes will be provisioned in the availability zone associated with the corresponding subnet. When unspecified, it defaults to 32 GiB with the GP2 volume type.
+     * 
+     */
     @InputImport(name="rootVolume")
     private final @Nullable Input<AwsClusterControlPlaneRootVolumeGetArgs> rootVolume;
 
@@ -79,6 +111,10 @@ public final class AwsClusterControlPlaneGetArgs extends io.pulumi.resources.Res
         return this.rootVolume == null ? Input.empty() : this.rootVolume;
     }
 
+    /**
+     * Optional. The IDs of additional security groups to add to control plane replicas. The Anthos Multi-Cloud API will automatically create and manage security groups with the minimum rules needed for a functioning cluster.
+     * 
+     */
     @InputImport(name="securityGroupIds")
     private final @Nullable Input<List<String>> securityGroupIds;
 
@@ -86,6 +122,10 @@ public final class AwsClusterControlPlaneGetArgs extends io.pulumi.resources.Res
         return this.securityGroupIds == null ? Input.empty() : this.securityGroupIds;
     }
 
+    /**
+     * Optional. SSH configuration for how to access the underlying control plane machines.
+     * 
+     */
     @InputImport(name="sshConfig")
     private final @Nullable Input<AwsClusterControlPlaneSshConfigGetArgs> sshConfig;
 
@@ -93,6 +133,10 @@ public final class AwsClusterControlPlaneGetArgs extends io.pulumi.resources.Res
         return this.sshConfig == null ? Input.empty() : this.sshConfig;
     }
 
+    /**
+     * Required. The list of subnets where control plane replicas will run. A replica will be provisioned on each subnet and up to three values can be provided. Each subnet must be in a different AWS Availability Zone (AZ).
+     * 
+     */
     @InputImport(name="subnetIds", required=true)
     private final Input<List<String>> subnetIds;
 
@@ -100,6 +144,10 @@ public final class AwsClusterControlPlaneGetArgs extends io.pulumi.resources.Res
         return this.subnetIds;
     }
 
+    /**
+     * Optional. A set of AWS resource tags to propagate to all underlying managed AWS resources. Specify at most 50 pairs containing alphanumerics, spaces, and symbols (.+-=_:@/). Keys can be up to 127 Unicode characters. Values can be up to 255 Unicode characters.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -107,6 +155,10 @@ public final class AwsClusterControlPlaneGetArgs extends io.pulumi.resources.Res
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * Required. The Kubernetes version to run on control plane replicas (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling .
+     * 
+     */
     @InputImport(name="version", required=true)
     private final Input<String> version;
 

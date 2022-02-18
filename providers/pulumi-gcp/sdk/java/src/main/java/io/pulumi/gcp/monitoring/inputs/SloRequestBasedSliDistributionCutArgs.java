@@ -14,6 +14,13 @@ public final class SloRequestBasedSliDistributionCutArgs extends io.pulumi.resou
 
     public static final SloRequestBasedSliDistributionCutArgs Empty = new SloRequestBasedSliDistributionCutArgs();
 
+    /**
+     * A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+     * aggregating values to quantify the good service provided.
+     * Must have ValueType = DISTRIBUTION and
+     * MetricKind = DELTA or MetricKind = CUMULATIVE.
+     * 
+     */
     @InputImport(name="distributionFilter", required=true)
     private final Input<String> distributionFilter;
 
@@ -21,6 +28,16 @@ public final class SloRequestBasedSliDistributionCutArgs extends io.pulumi.resou
         return this.distributionFilter;
     }
 
+    /**
+     * Range of numerical values. The computed good_service
+     * will be the count of values x in the Distribution such
+     * that range.min <= x <= range.max. inclusive of min and
+     * max. Open ranges can be defined by setting
+     * just one of min or max. Summed value `X` should satisfy
+     * `range.min <= X <= range.max` for a good window.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="range", required=true)
     private final Input<SloRequestBasedSliDistributionCutRangeArgs> range;
 

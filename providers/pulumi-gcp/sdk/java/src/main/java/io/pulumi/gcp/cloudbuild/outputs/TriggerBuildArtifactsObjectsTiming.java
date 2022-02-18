@@ -11,7 +11,19 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TriggerBuildArtifactsObjectsTiming {
+    /**
+     * End of time span.
+     * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to
+     * nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
+     * 
+     */
     private final @Nullable String endTime;
+    /**
+     * Start of time span.
+     * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to
+     * nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
+     * 
+     */
     private final @Nullable String startTime;
 
     @OutputCustomType.Constructor({"endTime","startTime"})
@@ -22,9 +34,21 @@ public final class TriggerBuildArtifactsObjectsTiming {
         this.startTime = startTime;
     }
 
+    /**
+     * End of time span.
+     * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to
+     * nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
+     * 
+     */
     public Optional<String> getEndTime() {
         return Optional.ofNullable(this.endTime);
     }
+    /**
+     * Start of time span.
+     * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to
+     * nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
+     * 
+     */
     public Optional<String> getStartTime() {
         return Optional.ofNullable(this.startTime);
     }

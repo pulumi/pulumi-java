@@ -26,6 +26,10 @@ public final class GetInstanceNetworkInterfaceIpv6AccessConfig extends io.pulumi
         return this.externalIpv6PrefixLength;
     }
 
+    /**
+     * The [networking tier][network-tier] used for configuring this instance. One of `PREMIUM` or `STANDARD`.
+     * 
+     */
     @InputImport(name="networkTier", required=true)
     private final String networkTier;
 
@@ -33,6 +37,10 @@ public final class GetInstanceNetworkInterfaceIpv6AccessConfig extends io.pulumi
         return this.networkTier;
     }
 
+    /**
+     * The DNS domain name for the public PTR record.
+     * 
+     */
     @InputImport(name="publicPtrDomainName", required=true)
     private final String publicPtrDomainName;
 

@@ -13,6 +13,11 @@ public final class ProjectFeedFeedOutputConfigArgs extends io.pulumi.resources.R
 
     public static final ProjectFeedFeedOutputConfigArgs Empty = new ProjectFeedFeedOutputConfigArgs();
 
+    /**
+     * Destination on Cloud Pubsub.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="pubsubDestination", required=true)
     private final Input<ProjectFeedFeedOutputConfigPubsubDestinationArgs> pubsubDestination;
 

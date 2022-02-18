@@ -15,6 +15,11 @@ public final class URLMapDefaultRouteActionFaultInjectionPolicyDelayArgs extends
 
     public static final URLMapDefaultRouteActionFaultInjectionPolicyDelayArgs Empty = new URLMapDefaultRouteActionFaultInjectionPolicyDelayArgs();
 
+    /**
+     * Specifies the value of the fixed delay interval.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="fixedDelay")
     private final @Nullable Input<URLMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelayArgs> fixedDelay;
 
@@ -22,6 +27,11 @@ public final class URLMapDefaultRouteActionFaultInjectionPolicyDelayArgs extends
         return this.fixedDelay == null ? Input.empty() : this.fixedDelay;
     }
 
+    /**
+     * The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+     * The value must be between 0.0 and 100.0 inclusive.
+     * 
+     */
     @InputImport(name="percentage")
     private final @Nullable Input<Double> percentage;
 

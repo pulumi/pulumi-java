@@ -14,6 +14,12 @@ public final class TriggerBuildArtifactsObjectsTimingArgs extends io.pulumi.reso
 
     public static final TriggerBuildArtifactsObjectsTimingArgs Empty = new TriggerBuildArtifactsObjectsTimingArgs();
 
+    /**
+     * End of time span.
+     * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to
+     * nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
+     * 
+     */
     @InputImport(name="endTime")
     private final @Nullable Input<String> endTime;
 
@@ -21,6 +27,12 @@ public final class TriggerBuildArtifactsObjectsTimingArgs extends io.pulumi.reso
         return this.endTime == null ? Input.empty() : this.endTime;
     }
 
+    /**
+     * Start of time span.
+     * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to
+     * nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
+     * 
+     */
     @InputImport(name="startTime")
     private final @Nullable Input<String> startTime;
 

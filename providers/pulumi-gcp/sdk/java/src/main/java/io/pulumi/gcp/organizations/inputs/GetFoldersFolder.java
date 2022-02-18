@@ -12,6 +12,10 @@ public final class GetFoldersFolder extends io.pulumi.resources.InvokeArgs {
 
     public static final GetFoldersFolder Empty = new GetFoldersFolder();
 
+    /**
+     * The timestamp of when the folder was created
+     * 
+     */
     @InputImport(name="createTime", required=true)
     private final String createTime;
 
@@ -19,6 +23,10 @@ public final class GetFoldersFolder extends io.pulumi.resources.InvokeArgs {
         return this.createTime;
     }
 
+    /**
+     * The timestamp of when the folder was requested to be deleted (if applicable)
+     * 
+     */
     @InputImport(name="deleteTime", required=true)
     private final String deleteTime;
 
@@ -26,6 +34,10 @@ public final class GetFoldersFolder extends io.pulumi.resources.InvokeArgs {
         return this.deleteTime;
     }
 
+    /**
+     * The display name of the folder
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final String displayName;
 
@@ -33,6 +45,10 @@ public final class GetFoldersFolder extends io.pulumi.resources.InvokeArgs {
         return this.displayName;
     }
 
+    /**
+     * Entity tag identifier of the folder
+     * 
+     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -40,6 +56,10 @@ public final class GetFoldersFolder extends io.pulumi.resources.InvokeArgs {
         return this.etag;
     }
 
+    /**
+     * The id of the folder
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -47,6 +67,10 @@ public final class GetFoldersFolder extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    /**
+     * The parent id of the folder
+     * 
+     */
     @InputImport(name="parent", required=true)
     private final String parent;
 
@@ -54,6 +78,10 @@ public final class GetFoldersFolder extends io.pulumi.resources.InvokeArgs {
         return this.parent;
     }
 
+    /**
+     * The lifecycle state of the folder
+     * 
+     */
     @InputImport(name="state", required=true)
     private final String state;
 
@@ -61,6 +89,10 @@ public final class GetFoldersFolder extends io.pulumi.resources.InvokeArgs {
         return this.state;
     }
 
+    /**
+     * The timestamp of when the folder was last modified
+     * 
+     */
     @InputImport(name="updateTime", required=true)
     private final String updateTime;
 

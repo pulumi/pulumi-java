@@ -13,6 +13,11 @@ public final class NoteAttestationAuthorityHintGetArgs extends io.pulumi.resourc
 
     public static final NoteAttestationAuthorityHintGetArgs Empty = new NoteAttestationAuthorityHintGetArgs();
 
+    /**
+     * The human readable name of this Attestation Authority, for
+     * example "qa".
+     * 
+     */
     @InputImport(name="humanReadableName", required=true)
     private final Input<String> humanReadableName;
 

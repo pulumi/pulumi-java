@@ -15,6 +15,11 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectionArgs Empty = new ConnectionArgs();
 
+    /**
+     * Cloud SQL properties.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="cloudSql", required=true)
     private final Input<ConnectionCloudSqlArgs> cloudSql;
 
@@ -22,6 +27,10 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.cloudSql;
     }
 
+    /**
+     * Optional connection id that should be assigned to the created connection.
+     * 
+     */
     @InputImport(name="connectionId")
     private final @Nullable Input<String> connectionId;
 
@@ -29,6 +38,10 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.connectionId == null ? Input.empty() : this.connectionId;
     }
 
+    /**
+     * A descriptive description for the connection
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -36,6 +49,10 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * A descriptive name for the connection
+     * 
+     */
     @InputImport(name="friendlyName")
     private final @Nullable Input<String> friendlyName;
 
@@ -43,6 +60,13 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
     }
 
+    /**
+     * The geographic location where the connection should reside.
+     * Cloud SQL instance must be in the same location as the connection
+     * with following exceptions: Cloud SQL us-central1 maps to BigQuery US, Cloud SQL europe-west1 maps to BigQuery EU.
+     * Examples: US, EU, asia-northeast1, us-central1, europe-west1. The default value is US.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -50,6 +74,11 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

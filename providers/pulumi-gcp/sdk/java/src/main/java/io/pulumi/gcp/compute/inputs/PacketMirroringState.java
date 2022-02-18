@@ -19,6 +19,14 @@ public final class PacketMirroringState extends io.pulumi.resources.ResourceArgs
 
     public static final PacketMirroringState Empty = new PacketMirroringState();
 
+    /**
+     * The Forwarding Rule resource (of type load_balancing_scheme=INTERNAL)
+     * that will be used as collector for mirrored traffic. The
+     * specified forwarding rule must have is_mirroring_collector
+     * set to true.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="collectorIlb")
     private final @Nullable Input<PacketMirroringCollectorIlbGetArgs> collectorIlb;
 
@@ -26,6 +34,10 @@ public final class PacketMirroringState extends io.pulumi.resources.ResourceArgs
         return this.collectorIlb == null ? Input.empty() : this.collectorIlb;
     }
 
+    /**
+     * A human-readable description of the rule.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -33,6 +45,11 @@ public final class PacketMirroringState extends io.pulumi.resources.ResourceArgs
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * A filter for mirrored traffic.  If unset, all traffic is mirrored.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="filter")
     private final @Nullable Input<PacketMirroringFilterGetArgs> filter;
 
@@ -40,6 +57,11 @@ public final class PacketMirroringState extends io.pulumi.resources.ResourceArgs
         return this.filter == null ? Input.empty() : this.filter;
     }
 
+    /**
+     * A means of specifying which resources to mirror.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="mirroredResources")
     private final @Nullable Input<PacketMirroringMirroredResourcesGetArgs> mirroredResources;
 
@@ -47,6 +69,10 @@ public final class PacketMirroringState extends io.pulumi.resources.ResourceArgs
         return this.mirroredResources == null ? Input.empty() : this.mirroredResources;
     }
 
+    /**
+     * The name of the packet mirroring rule
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -54,6 +80,13 @@ public final class PacketMirroringState extends io.pulumi.resources.ResourceArgs
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Specifies the mirrored VPC network. Only packets in this network
+     * will be mirrored. All mirrored VMs should have a NIC in the given
+     * network. All mirrored subnetworks should belong to the given network.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="network")
     private final @Nullable Input<PacketMirroringNetworkGetArgs> network;
 
@@ -61,6 +94,12 @@ public final class PacketMirroringState extends io.pulumi.resources.ResourceArgs
         return this.network == null ? Input.empty() : this.network;
     }
 
+    /**
+     * Since only one rule can be active at a time, priority is
+     * used to break ties in the case of two rules that apply to
+     * the same instances.
+     * 
+     */
     @InputImport(name="priority")
     private final @Nullable Input<Integer> priority;
 
@@ -68,6 +107,11 @@ public final class PacketMirroringState extends io.pulumi.resources.ResourceArgs
         return this.priority == null ? Input.empty() : this.priority;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -75,6 +119,11 @@ public final class PacketMirroringState extends io.pulumi.resources.ResourceArgs
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The Region in which the created address should reside.
+     * If it is not provided, the provider region is used.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 

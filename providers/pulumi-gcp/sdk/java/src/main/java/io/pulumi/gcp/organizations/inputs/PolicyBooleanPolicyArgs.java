@@ -13,6 +13,10 @@ public final class PolicyBooleanPolicyArgs extends io.pulumi.resources.ResourceA
 
     public static final PolicyBooleanPolicyArgs Empty = new PolicyBooleanPolicyArgs();
 
+    /**
+     * If true, then the Policy is enforced. If false, then any configuration is acceptable.
+     * 
+     */
     @InputImport(name="enforced", required=true)
     private final Input<Boolean> enforced;
 

@@ -9,6 +9,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ApiConfigGatewayConfigBackendConfig {
+    /**
+     * Google Cloud IAM service account used to sign OIDC tokens for backends that have authentication configured
+     * (https://cloud.google.com/service-infrastructure/docs/service-management/reference/rest/v1/services.configs#backend).
+     * 
+     */
     private final String googleServiceAccount;
 
     @OutputCustomType.Constructor({"googleServiceAccount"})
@@ -16,6 +21,11 @@ public final class ApiConfigGatewayConfigBackendConfig {
         this.googleServiceAccount = Objects.requireNonNull(googleServiceAccount);
     }
 
+    /**
+     * Google Cloud IAM service account used to sign OIDC tokens for backends that have authentication configured
+     * (https://cloud.google.com/service-infrastructure/docs/service-management/reference/rest/v1/services.configs#backend).
+     * 
+     */
     public String getGoogleServiceAccount() {
         return this.googleServiceAccount;
     }

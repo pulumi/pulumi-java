@@ -9,6 +9,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ApiConfigGatewayConfig {
+    /**
+     * Backend settings that are applied to all backends of the Gateway.
+     * Structure is documented below.
+     * 
+     */
     private final ApiConfigGatewayConfigBackendConfig backendConfig;
 
     @OutputCustomType.Constructor({"backendConfig"})
@@ -16,6 +21,11 @@ public final class ApiConfigGatewayConfig {
         this.backendConfig = Objects.requireNonNull(backendConfig);
     }
 
+    /**
+     * Backend settings that are applied to all backends of the Gateway.
+     * Structure is documented below.
+     * 
+     */
     public ApiConfigGatewayConfigBackendConfig getBackendConfig() {
         return this.backendConfig;
     }

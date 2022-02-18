@@ -16,6 +16,10 @@ public final class EngineSplitTrafficState extends io.pulumi.resources.ResourceA
 
     public static final EngineSplitTrafficState Empty = new EngineSplitTrafficState();
 
+    /**
+     * If set to true traffic will be migrated to this version.
+     * 
+     */
     @InputImport(name="migrateTraffic")
     private final @Nullable Input<Boolean> migrateTraffic;
 
@@ -23,6 +27,11 @@ public final class EngineSplitTrafficState extends io.pulumi.resources.ResourceA
         return this.migrateTraffic == null ? Input.empty() : this.migrateTraffic;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -30,6 +39,10 @@ public final class EngineSplitTrafficState extends io.pulumi.resources.ResourceA
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The name of the service these settings apply to.
+     * 
+     */
     @InputImport(name="service")
     private final @Nullable Input<String> service;
 
@@ -37,6 +50,11 @@ public final class EngineSplitTrafficState extends io.pulumi.resources.ResourceA
         return this.service == null ? Input.empty() : this.service;
     }
 
+    /**
+     * Mapping that defines fractional HTTP traffic diversion to different versions within the service.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="split")
     private final @Nullable Input<EngineSplitTrafficSplitGetArgs> split;
 

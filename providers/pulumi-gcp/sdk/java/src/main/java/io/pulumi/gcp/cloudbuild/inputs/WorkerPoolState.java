@@ -17,6 +17,11 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
 
     public static final WorkerPoolState Empty = new WorkerPoolState();
 
+    /**
+     * User specified annotations. See https://google.aip.dev/128#annotations for more details such as format and size
+     * limitations.
+     * 
+     */
     @InputImport(name="annotations")
     private final @Nullable Input<Map<String,String>> annotations;
 
@@ -24,6 +29,10 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
+    /**
+     * Output only. Time at which the request to create the `WorkerPool` was received.
+     * 
+     */
     @InputImport(name="createTime")
     private final @Nullable Input<String> createTime;
 
@@ -31,6 +40,10 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
         return this.createTime == null ? Input.empty() : this.createTime;
     }
 
+    /**
+     * Output only. Time at which the request to delete the `WorkerPool` was received.
+     * 
+     */
     @InputImport(name="deleteTime")
     private final @Nullable Input<String> deleteTime;
 
@@ -38,6 +51,10 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
         return this.deleteTime == null ? Input.empty() : this.deleteTime;
     }
 
+    /**
+     * A user-specified, human-readable name for the `WorkerPool`. If provided, this value must be 1-63 characters.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -45,6 +62,10 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The location for the resource
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -52,6 +73,10 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * User-defined name of the `WorkerPool`.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -59,6 +84,10 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Network configuration for the `WorkerPool`. Structure is documented below.
+     * 
+     */
     @InputImport(name="networkConfig")
     private final @Nullable Input<WorkerPoolNetworkConfigGetArgs> networkConfig;
 
@@ -66,6 +95,10 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
         return this.networkConfig == null ? Input.empty() : this.networkConfig;
     }
 
+    /**
+     * The project for the resource
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -73,6 +106,10 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Output only. `WorkerPool` state. Possible values: STATE_UNSPECIFIED, PENDING, APPROVED, REJECTED, CANCELLED
+     * 
+     */
     @InputImport(name="state")
     private final @Nullable Input<String> state;
 
@@ -80,6 +117,10 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
         return this.state == null ? Input.empty() : this.state;
     }
 
+    /**
+     * Output only. A unique identifier for the `WorkerPool`.
+     * 
+     */
     @InputImport(name="uid")
     private final @Nullable Input<String> uid;
 
@@ -87,6 +128,10 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
         return this.uid == null ? Input.empty() : this.uid;
     }
 
+    /**
+     * Output only. Time at which the request to update the `WorkerPool` was received.
+     * 
+     */
     @InputImport(name="updateTime")
     private final @Nullable Input<String> updateTime;
 
@@ -94,6 +139,10 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
         return this.updateTime == null ? Input.empty() : this.updateTime;
     }
 
+    /**
+     * Configuration to be used for a creating workers in the `WorkerPool`. Structure is documented below.
+     * 
+     */
     @InputImport(name="workerConfig")
     private final @Nullable Input<WorkerPoolWorkerConfigGetArgs> workerConfig;
 

@@ -15,6 +15,13 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceState Empty = new ServiceState();
 
+    /**
+     * If `true`, services that are enabled
+     * and which depend on this service should also be disabled when this service is
+     * destroyed. If `false` or unset, an error will be generated if any enabled
+     * services depend on this service when destroying it.
+     * 
+     */
     @InputImport(name="disableDependentServices")
     private final @Nullable Input<Boolean> disableDependentServices;
 
@@ -22,6 +29,10 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
         return this.disableDependentServices == null ? Input.empty() : this.disableDependentServices;
     }
 
+    /**
+     * If true, disable the service when the resource is destroyed. Defaults to true. May be useful in the event that a project is long-lived but the infrastructure running in that project changes frequently.
+     * 
+     */
     @InputImport(name="disableOnDestroy")
     private final @Nullable Input<Boolean> disableOnDestroy;
 
@@ -29,6 +40,11 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
         return this.disableOnDestroy == null ? Input.empty() : this.disableOnDestroy;
     }
 
+    /**
+     * The project ID. If not provided, the provider project
+     * is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -36,6 +52,10 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The service to enable.
+     * 
+     */
     @InputImport(name="service")
     private final @Nullable Input<String> service;
 

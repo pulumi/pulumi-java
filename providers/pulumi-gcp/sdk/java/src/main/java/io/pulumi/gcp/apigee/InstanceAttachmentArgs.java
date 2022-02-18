@@ -13,6 +13,10 @@ public final class InstanceAttachmentArgs extends io.pulumi.resources.ResourceAr
 
     public static final InstanceAttachmentArgs Empty = new InstanceAttachmentArgs();
 
+    /**
+     * The resource ID of the environment.
+     * 
+     */
     @InputImport(name="environment", required=true)
     private final Input<String> environment;
 
@@ -20,6 +24,11 @@ public final class InstanceAttachmentArgs extends io.pulumi.resources.ResourceAr
         return this.environment;
     }
 
+    /**
+     * The Apigee instance associated with the Apigee environment,
+     * in the format `organisations/{{org_name}}/instances/{{instance_name}}`.
+     * 
+     */
     @InputImport(name="instanceId", required=true)
     private final Input<String> instanceId;
 

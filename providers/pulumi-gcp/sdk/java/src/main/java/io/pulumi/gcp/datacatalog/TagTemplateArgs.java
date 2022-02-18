@@ -17,6 +17,10 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TagTemplateArgs Empty = new TagTemplateArgs();
 
+    /**
+     * The display name for this template.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -24,6 +28,11 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * Set of tag template field IDs and the settings for the field. This set is an exhaustive list of the allowed fields. This set must contain at least one field and at most 500 fields.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="fields", required=true)
     private final Input<List<TagTemplateFieldArgs>> fields;
 
@@ -31,6 +40,10 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
         return this.fields;
     }
 
+    /**
+     * This confirms the deletion of any possible tags using this template. Must be set to true in order to delete the tag template.
+     * 
+     */
     @InputImport(name="forceDelete")
     private final @Nullable Input<Boolean> forceDelete;
 
@@ -38,6 +51,11 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
         return this.forceDelete == null ? Input.empty() : this.forceDelete;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -45,6 +63,10 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Template location region.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 
@@ -52,6 +74,10 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
         return this.region == null ? Input.empty() : this.region;
     }
 
+    /**
+     * The id of the tag template to create.
+     * 
+     */
     @InputImport(name="tagTemplateId", required=true)
     private final Input<String> tagTemplateId;
 

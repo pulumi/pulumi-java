@@ -12,8 +12,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceGcs {
+    /**
+     * Required. Bucket of the Cloud Storage object.
+     * 
+     */
     private final String bucket;
+    /**
+     * Generation number of the Cloud Storage object.
+     * 
+     */
     private final @Nullable Integer generation;
+    /**
+     * Required. Name of the Cloud Storage object.
+     * 
+     */
     private final String object;
 
     @OutputCustomType.Constructor({"bucket","generation","object"})
@@ -26,12 +38,24 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceGc
         this.object = Objects.requireNonNull(object);
     }
 
+    /**
+     * Required. Bucket of the Cloud Storage object.
+     * 
+     */
     public String getBucket() {
         return this.bucket;
     }
+    /**
+     * Generation number of the Cloud Storage object.
+     * 
+     */
     public Optional<Integer> getGeneration() {
         return Optional.ofNullable(this.generation);
     }
+    /**
+     * Required. Name of the Cloud Storage object.
+     * 
+     */
     public String getObject() {
         return this.object;
     }

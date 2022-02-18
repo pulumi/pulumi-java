@@ -9,6 +9,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DatabaseEncryptionConfig {
+    /**
+     * Fully qualified name of the KMS key to use to encrypt this database. This key must exist
+     * in the same location as the Spanner Database.
+     * 
+     */
     private final String kmsKeyName;
 
     @OutputCustomType.Constructor({"kmsKeyName"})
@@ -16,6 +21,11 @@ public final class DatabaseEncryptionConfig {
         this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
     }
 
+    /**
+     * Fully qualified name of the KMS key to use to encrypt this database. This key must exist
+     * in the same location as the Spanner Database.
+     * 
+     */
     public String getKmsKeyName() {
         return this.kmsKeyName;
     }

@@ -13,6 +13,10 @@ public final class SharedVPCHostProjectArgs extends io.pulumi.resources.Resource
 
     public static final SharedVPCHostProjectArgs Empty = new SharedVPCHostProjectArgs();
 
+    /**
+     * The ID of the project that will serve as a Shared VPC host project
+     * 
+     */
     @InputImport(name="project", required=true)
     private final Input<String> project;
 

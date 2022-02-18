@@ -15,6 +15,11 @@ public final class AutoscalarAutoscalingPolicyScaleInControlArgs extends io.pulu
 
     public static final AutoscalarAutoscalingPolicyScaleInControlArgs Empty = new AutoscalarAutoscalingPolicyScaleInControlArgs();
 
+    /**
+     * A nested object resource
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="maxScaledInReplicas")
     private final @Nullable Input<AutoscalarAutoscalingPolicyScaleInControlMaxScaledInReplicasArgs> maxScaledInReplicas;
 
@@ -22,6 +27,11 @@ public final class AutoscalarAutoscalingPolicyScaleInControlArgs extends io.pulu
         return this.maxScaledInReplicas == null ? Input.empty() : this.maxScaledInReplicas;
     }
 
+    /**
+     * How long back autoscaling should look when computing recommendations
+     * to include directives regarding slower scale down, as described above.
+     * 
+     */
     @InputImport(name="timeWindowSec")
     private final @Nullable Input<Integer> timeWindowSec;
 

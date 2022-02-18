@@ -16,6 +16,11 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdGetArgs extends io.p
 
     public static final SloWindowsBasedSliGoodTotalRatioThresholdGetArgs Empty = new SloWindowsBasedSliGoodTotalRatioThresholdGetArgs();
 
+    /**
+     * Basic SLI to evaluate to judge window quality.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="basicSliPerformance")
     private final @Nullable Input<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceGetArgs> basicSliPerformance;
 
@@ -23,6 +28,11 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdGetArgs extends io.p
         return this.basicSliPerformance == null ? Input.empty() : this.basicSliPerformance;
     }
 
+    /**
+     * Request-based SLI to evaluate to judge window quality.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="performance")
     private final @Nullable Input<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGetArgs> performance;
 
@@ -30,6 +40,12 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdGetArgs extends io.p
         return this.performance == null ? Input.empty() : this.performance;
     }
 
+    /**
+     * A duration string, e.g. 10s.
+     * Good service is defined to be the count of requests made to
+     * this service that return in no more than threshold.
+     * 
+     */
     @InputImport(name="threshold")
     private final @Nullable Input<Double> threshold;
 

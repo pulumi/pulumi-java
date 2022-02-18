@@ -14,6 +14,10 @@ public final class GetDatabaseInstanceArgs extends io.pulumi.resources.InvokeArg
 
     public static final GetDatabaseInstanceArgs Empty = new GetDatabaseInstanceArgs();
 
+    /**
+     * The name of the instance.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -21,6 +25,10 @@ public final class GetDatabaseInstanceArgs extends io.pulumi.resources.InvokeArg
         return this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

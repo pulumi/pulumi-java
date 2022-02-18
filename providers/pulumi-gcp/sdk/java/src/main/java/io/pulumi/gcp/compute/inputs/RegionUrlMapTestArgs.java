@@ -14,6 +14,10 @@ public final class RegionUrlMapTestArgs extends io.pulumi.resources.ResourceArgs
 
     public static final RegionUrlMapTestArgs Empty = new RegionUrlMapTestArgs();
 
+    /**
+     * Description of this test case.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -21,6 +25,10 @@ public final class RegionUrlMapTestArgs extends io.pulumi.resources.ResourceArgs
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Host portion of the URL.
+     * 
+     */
     @InputImport(name="host", required=true)
     private final Input<String> host;
 
@@ -28,6 +36,10 @@ public final class RegionUrlMapTestArgs extends io.pulumi.resources.ResourceArgs
         return this.host;
     }
 
+    /**
+     * Path portion of the URL.
+     * 
+     */
     @InputImport(name="path", required=true)
     private final Input<String> path;
 
@@ -35,6 +47,10 @@ public final class RegionUrlMapTestArgs extends io.pulumi.resources.ResourceArgs
         return this.path;
     }
 
+    /**
+     * A reference to expected RegionBackendService resource the given URL should be mapped to.
+     * 
+     */
     @InputImport(name="service", required=true)
     private final Input<String> service;
 

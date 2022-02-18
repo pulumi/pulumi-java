@@ -14,6 +14,10 @@ public final class RouterNatLogConfigGetArgs extends io.pulumi.resources.Resourc
 
     public static final RouterNatLogConfigGetArgs Empty = new RouterNatLogConfigGetArgs();
 
+    /**
+     * Indicates whether or not to export logs.
+     * 
+     */
     @InputImport(name="enable", required=true)
     private final Input<Boolean> enable;
 
@@ -21,6 +25,11 @@ public final class RouterNatLogConfigGetArgs extends io.pulumi.resources.Resourc
         return this.enable;
     }
 
+    /**
+     * Specifies the desired filtering of logs on this NAT.
+     * Possible values are `ERRORS_ONLY`, `TRANSLATIONS_ONLY`, and `ALL`.
+     * 
+     */
     @InputImport(name="filter", required=true)
     private final Input<String> filter;
 

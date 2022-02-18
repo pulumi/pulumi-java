@@ -12,6 +12,10 @@ public final class GetServiceTemplateSpecContainerEnvFromConfigMapRefLocalObject
 
     public static final GetServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReference Empty = new GetServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReference();
 
+    /**
+     * The name of the Cloud Run Service.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

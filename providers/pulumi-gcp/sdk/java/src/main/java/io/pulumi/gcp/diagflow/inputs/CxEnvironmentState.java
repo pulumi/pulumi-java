@@ -16,6 +16,10 @@ public final class CxEnvironmentState extends io.pulumi.resources.ResourceArgs {
 
     public static final CxEnvironmentState Empty = new CxEnvironmentState();
 
+    /**
+     * The human-readable description of the environment. The maximum length is 500 characters. If exceeded, the request is rejected.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -23,6 +27,10 @@ public final class CxEnvironmentState extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The human-readable name of the environment (unique in an agent). Limit of 64 characters.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -30,6 +38,10 @@ public final class CxEnvironmentState extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The name of the environment.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -37,6 +49,11 @@ public final class CxEnvironmentState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The Agent to create an Environment for.
+     * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>.
+     * 
+     */
     @InputImport(name="parent")
     private final @Nullable Input<String> parent;
 
@@ -44,6 +61,11 @@ public final class CxEnvironmentState extends io.pulumi.resources.ResourceArgs {
         return this.parent == null ? Input.empty() : this.parent;
     }
 
+    /**
+     * Update time of this environment. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine
+     * fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
+     * 
+     */
     @InputImport(name="updateTime")
     private final @Nullable Input<String> updateTime;
 
@@ -51,6 +73,11 @@ public final class CxEnvironmentState extends io.pulumi.resources.ResourceArgs {
         return this.updateTime == null ? Input.empty() : this.updateTime;
     }
 
+    /**
+     * A list of configurations for flow versions. You should include version configs for all flows that are reachable from [Start Flow][Agent.start_flow] in the agent. Otherwise, an error will be returned.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="versionConfigs")
     private final @Nullable Input<List<CxEnvironmentVersionConfigGetArgs>> versionConfigs;
 

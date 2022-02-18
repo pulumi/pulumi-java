@@ -18,13 +18,45 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkg {
+    /**
+     * An Apt Repository.
+     * 
+     */
     private final @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgApt apt;
+    /**
+     * A deb package file.
+     * 
+     */
     private final @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDeb deb;
+    /**
+     * Required. The desired state the agent should maintain for this package. Possible values: DESIRED_STATE_UNSPECIFIED, INSTALLED, REMOVED
+     * 
+     */
     private final String desiredState;
+    /**
+     * A package managed by GooGet.
+     * 
+     */
     private final @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGooget googet;
+    /**
+     * An MSI package.
+     * 
+     */
     private final @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsi msi;
+    /**
+     * An rpm package file.
+     * 
+     */
     private final @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpm rpm;
+    /**
+     * A Yum Repository.
+     * 
+     */
     private final @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYum yum;
+    /**
+     * A Zypper Repository.
+     * 
+     */
     private final @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypper zypper;
 
     @OutputCustomType.Constructor({"apt","deb","desiredState","googet","msi","rpm","yum","zypper"})
@@ -47,27 +79,59 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkg {
         this.zypper = zypper;
     }
 
+    /**
+     * An Apt Repository.
+     * 
+     */
     public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgApt> getApt() {
         return Optional.ofNullable(this.apt);
     }
+    /**
+     * A deb package file.
+     * 
+     */
     public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDeb> getDeb() {
         return Optional.ofNullable(this.deb);
     }
+    /**
+     * Required. The desired state the agent should maintain for this package. Possible values: DESIRED_STATE_UNSPECIFIED, INSTALLED, REMOVED
+     * 
+     */
     public String getDesiredState() {
         return this.desiredState;
     }
+    /**
+     * A package managed by GooGet.
+     * 
+     */
     public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGooget> getGooget() {
         return Optional.ofNullable(this.googet);
     }
+    /**
+     * An MSI package.
+     * 
+     */
     public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsi> getMsi() {
         return Optional.ofNullable(this.msi);
     }
+    /**
+     * An rpm package file.
+     * 
+     */
     public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpm> getRpm() {
         return Optional.ofNullable(this.rpm);
     }
+    /**
+     * A Yum Repository.
+     * 
+     */
     public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYum> getYum() {
         return Optional.ofNullable(this.yum);
     }
+    /**
+     * A Zypper Repository.
+     * 
+     */
     public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypper> getZypper() {
         return Optional.ofNullable(this.zypper);
     }

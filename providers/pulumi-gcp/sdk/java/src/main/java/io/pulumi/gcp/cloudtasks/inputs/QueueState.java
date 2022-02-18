@@ -18,6 +18,12 @@ public final class QueueState extends io.pulumi.resources.ResourceArgs {
 
     public static final QueueState Empty = new QueueState();
 
+    /**
+     * Overrides for task-level appEngineRouting. These settings apply only
+     * to App Engine tasks in this queue
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="appEngineRoutingOverride")
     private final @Nullable Input<QueueAppEngineRoutingOverrideGetArgs> appEngineRoutingOverride;
 
@@ -25,6 +31,10 @@ public final class QueueState extends io.pulumi.resources.ResourceArgs {
         return this.appEngineRoutingOverride == null ? Input.empty() : this.appEngineRoutingOverride;
     }
 
+    /**
+     * The location of the queue
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -32,6 +42,10 @@ public final class QueueState extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The queue name.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -39,6 +53,11 @@ public final class QueueState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -46,6 +65,17 @@ public final class QueueState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Rate limits for task dispatches.
+     * The queue's actual dispatch rate is the result of:
+     * * Number of tasks in the queue
+     * * User-specified throttling: rateLimits, retryConfig, and the queue's state.
+     * * System throttling due to 429 (Too Many Requests) or 503 (Service
+     *   Unavailable) responses from the worker, high error rates, or to
+     *   smooth sudden large traffic spikes.
+     *   Structure is documented below.
+     * 
+     */
     @InputImport(name="rateLimits")
     private final @Nullable Input<QueueRateLimitsGetArgs> rateLimits;
 
@@ -53,6 +83,11 @@ public final class QueueState extends io.pulumi.resources.ResourceArgs {
         return this.rateLimits == null ? Input.empty() : this.rateLimits;
     }
 
+    /**
+     * Settings that determine the retry behavior.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="retryConfig")
     private final @Nullable Input<QueueRetryConfigGetArgs> retryConfig;
 
@@ -60,6 +95,11 @@ public final class QueueState extends io.pulumi.resources.ResourceArgs {
         return this.retryConfig == null ? Input.empty() : this.retryConfig;
     }
 
+    /**
+     * Configuration options for writing logs to Stackdriver Logging.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="stackdriverLoggingConfig")
     private final @Nullable Input<QueueStackdriverLoggingConfigGetArgs> stackdriverLoggingConfig;
 

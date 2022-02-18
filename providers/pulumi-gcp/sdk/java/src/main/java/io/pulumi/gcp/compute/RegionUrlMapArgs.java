@@ -19,6 +19,12 @@ public final class RegionUrlMapArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RegionUrlMapArgs Empty = new RegionUrlMapArgs();
 
+    /**
+     * A reference to a RegionBackendService resource. This will be used if
+     * none of the pathRules defined by this PathMatcher is matched by
+     * the URL's path portion.
+     * 
+     */
     @InputImport(name="defaultService")
     private final @Nullable Input<String> defaultService;
 
@@ -26,6 +32,13 @@ public final class RegionUrlMapArgs extends io.pulumi.resources.ResourceArgs {
         return this.defaultService == null ? Input.empty() : this.defaultService;
     }
 
+    /**
+     * When none of the specified hostRules match, the request is redirected to a URL specified
+     * by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
+     * defaultRouteAction must not be set.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="defaultUrlRedirect")
     private final @Nullable Input<RegionUrlMapDefaultUrlRedirectArgs> defaultUrlRedirect;
 
@@ -33,6 +46,10 @@ public final class RegionUrlMapArgs extends io.pulumi.resources.ResourceArgs {
         return this.defaultUrlRedirect == null ? Input.empty() : this.defaultUrlRedirect;
     }
 
+    /**
+     * Description of this test case.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -40,6 +57,11 @@ public final class RegionUrlMapArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The list of HostRules to use against the URL.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="hostRules")
     private final @Nullable Input<List<RegionUrlMapHostRuleArgs>> hostRules;
 
@@ -47,6 +69,11 @@ public final class RegionUrlMapArgs extends io.pulumi.resources.ResourceArgs {
         return this.hostRules == null ? Input.empty() : this.hostRules;
     }
 
+    /**
+     * The name of the query parameter to match. The query parameter must exist in the
+     * request, in the absence of which the request match fails.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -54,6 +81,11 @@ public final class RegionUrlMapArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The name of the PathMatcher to use to match the path portion of
+     * the URL if the hostRule matches the URL's host portion.
+     * 
+     */
     @InputImport(name="pathMatchers")
     private final @Nullable Input<List<RegionUrlMapPathMatcherArgs>> pathMatchers;
 
@@ -61,6 +93,11 @@ public final class RegionUrlMapArgs extends io.pulumi.resources.ResourceArgs {
         return this.pathMatchers == null ? Input.empty() : this.pathMatchers;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -68,6 +105,11 @@ public final class RegionUrlMapArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The Region in which the url map should reside.
+     * If it is not provided, the provider region is used.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 
@@ -75,6 +117,12 @@ public final class RegionUrlMapArgs extends io.pulumi.resources.ResourceArgs {
         return this.region == null ? Input.empty() : this.region;
     }
 
+    /**
+     * The list of expected URL mappings. Requests to update this UrlMap will
+     * succeed only if all of the test cases pass.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="tests")
     private final @Nullable Input<List<RegionUrlMapTestArgs>> tests;
 

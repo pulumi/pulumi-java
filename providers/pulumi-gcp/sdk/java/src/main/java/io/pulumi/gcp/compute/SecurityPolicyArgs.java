@@ -17,6 +17,10 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SecurityPolicyArgs Empty = new SecurityPolicyArgs();
 
+    /**
+     * Configuration for [Google Cloud Armor Adaptive Protection](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
+     * 
+     */
     @InputImport(name="adaptiveProtectionConfig")
     private final @Nullable Input<SecurityPolicyAdaptiveProtectionConfigArgs> adaptiveProtectionConfig;
 
@@ -24,6 +28,10 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.adaptiveProtectionConfig == null ? Input.empty() : this.adaptiveProtectionConfig;
     }
 
+    /**
+     * An optional description of this rule. Max size is 64.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -31,6 +39,10 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The name of the security policy.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -38,6 +50,11 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -45,6 +62,12 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The set of rules that belong to this policy. There must always be a default
+     * rule (rule with priority 2147483647 and match "\*"). If no rules are provided when creating a
+     * security policy, a default rule with action "allow" will be added. Structure is documented below.
+     * 
+     */
     @InputImport(name="rules")
     private final @Nullable Input<List<SecurityPolicyRuleArgs>> rules;
 

@@ -17,6 +17,10 @@ public final class PreventionStoredInfoTypeArgs extends io.pulumi.resources.Reso
 
     public static final PreventionStoredInfoTypeArgs Empty = new PreventionStoredInfoTypeArgs();
 
+    /**
+     * A description of the info type.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -24,6 +28,11 @@ public final class PreventionStoredInfoTypeArgs extends io.pulumi.resources.Reso
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Dictionary which defines the rule.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="dictionary")
     private final @Nullable Input<PreventionStoredInfoTypeDictionaryArgs> dictionary;
 
@@ -31,6 +40,10 @@ public final class PreventionStoredInfoTypeArgs extends io.pulumi.resources.Reso
         return this.dictionary == null ? Input.empty() : this.dictionary;
     }
 
+    /**
+     * User set display name of the info type.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -38,6 +51,11 @@ public final class PreventionStoredInfoTypeArgs extends io.pulumi.resources.Reso
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * Dictionary which defines the rule.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="largeCustomDictionary")
     private final @Nullable Input<PreventionStoredInfoTypeLargeCustomDictionaryArgs> largeCustomDictionary;
 
@@ -45,6 +63,14 @@ public final class PreventionStoredInfoTypeArgs extends io.pulumi.resources.Reso
         return this.largeCustomDictionary == null ? Input.empty() : this.largeCustomDictionary;
     }
 
+    /**
+     * The parent of the info type in any of the following formats:
+     * * `projects/{{project}}`
+     * * `projects/{{project}}/locations/{{location}}`
+     * * `organizations/{{organization_id}}`
+     * * `organizations/{{organization_id}}/locations/{{location}}`
+     * 
+     */
     @InputImport(name="parent", required=true)
     private final Input<String> parent;
 
@@ -52,6 +78,11 @@ public final class PreventionStoredInfoTypeArgs extends io.pulumi.resources.Reso
         return this.parent;
     }
 
+    /**
+     * Regular expression which defines the rule.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="regex")
     private final @Nullable Input<PreventionStoredInfoTypeRegexArgs> regex;
 

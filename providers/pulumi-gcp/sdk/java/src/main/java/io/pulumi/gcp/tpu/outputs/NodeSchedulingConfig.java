@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class NodeSchedulingConfig {
+    /**
+     * Defines whether the TPU instance is preemptible.
+     * 
+     */
     private final Boolean preemptible;
 
     @OutputCustomType.Constructor({"preemptible"})
@@ -16,6 +20,10 @@ public final class NodeSchedulingConfig {
         this.preemptible = Objects.requireNonNull(preemptible);
     }
 
+    /**
+     * Defines whether the TPU instance is preemptible.
+     * 
+     */
     public Boolean getPreemptible() {
         return this.preemptible;
     }

@@ -11,7 +11,18 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AccessLevelsAccessLevelBasicConditionDevicePolicyOsConstraint {
+    /**
+     * The minimum allowed OS version. If not set, any version
+     * of this OS satisfies the constraint.
+     * Format: "major.minor.patch" such as "10.5.301", "9.2.1".
+     * 
+     */
     private final @Nullable String minimumVersion;
+    /**
+     * The operating system type of the device.
+     * Possible values are `OS_UNSPECIFIED`, `DESKTOP_MAC`, `DESKTOP_WINDOWS`, `DESKTOP_LINUX`, `DESKTOP_CHROME_OS`, `ANDROID`, and `IOS`.
+     * 
+     */
     private final String osType;
 
     @OutputCustomType.Constructor({"minimumVersion","osType"})
@@ -22,9 +33,20 @@ public final class AccessLevelsAccessLevelBasicConditionDevicePolicyOsConstraint
         this.osType = Objects.requireNonNull(osType);
     }
 
+    /**
+     * The minimum allowed OS version. If not set, any version
+     * of this OS satisfies the constraint.
+     * Format: "major.minor.patch" such as "10.5.301", "9.2.1".
+     * 
+     */
     public Optional<String> getMinimumVersion() {
         return Optional.ofNullable(this.minimumVersion);
     }
+    /**
+     * The operating system type of the device.
+     * Possible values are `OS_UNSPECIFIED`, `DESKTOP_MAC`, `DESKTOP_WINDOWS`, `DESKTOP_LINUX`, `DESKTOP_CHROME_OS`, `ANDROID`, and `IOS`.
+     * 
+     */
     public String getOsType() {
         return this.osType;
     }

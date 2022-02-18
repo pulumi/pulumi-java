@@ -17,6 +17,10 @@ public final class RegionInstanceGroupManagerStatusArgs extends io.pulumi.resour
 
     public static final RegionInstanceGroupManagerStatusArgs Empty = new RegionInstanceGroupManagerStatusArgs();
 
+    /**
+     * A bit indicating whether the managed instance group is in a stable state. A stable state means that: none of the instances in the managed instance group is currently undergoing any type of change (for example, creation, restart, or deletion); no future changes are scheduled for instances in the managed instance group; and the managed instance group itself is not being modified.
+     * 
+     */
     @InputImport(name="isStable")
     private final @Nullable Input<Boolean> isStable;
 
@@ -24,6 +28,10 @@ public final class RegionInstanceGroupManagerStatusArgs extends io.pulumi.resour
         return this.isStable == null ? Input.empty() : this.isStable;
     }
 
+    /**
+     * Stateful status of the given Instance Group Manager.
+     * 
+     */
     @InputImport(name="statefuls")
     private final @Nullable Input<List<RegionInstanceGroupManagerStatusStatefulArgs>> statefuls;
 
@@ -31,6 +39,10 @@ public final class RegionInstanceGroupManagerStatusArgs extends io.pulumi.resour
         return this.statefuls == null ? Input.empty() : this.statefuls;
     }
 
+    /**
+     * A bit indicating whether version target has been reached in this managed instance group, i.e. all instances are in their target version. Instances' target version are specified by version field on Instance Group Manager.
+     * 
+     */
     @InputImport(name="versionTargets")
     private final @Nullable Input<List<RegionInstanceGroupManagerStatusVersionTargetArgs>> versionTargets;
 

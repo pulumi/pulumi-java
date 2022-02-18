@@ -14,6 +14,10 @@ public final class UsageExportBucketState extends io.pulumi.resources.ResourceAr
 
     public static final UsageExportBucketState Empty = new UsageExportBucketState();
 
+    /**
+     * The bucket to store reports in.
+     * 
+     */
     @InputImport(name="bucketName")
     private final @Nullable Input<String> bucketName;
 
@@ -21,6 +25,10 @@ public final class UsageExportBucketState extends io.pulumi.resources.ResourceAr
         return this.bucketName == null ? Input.empty() : this.bucketName;
     }
 
+    /**
+     * A prefix for the reports, for instance, the project name.
+     * 
+     */
     @InputImport(name="prefix")
     private final @Nullable Input<String> prefix;
 
@@ -28,6 +36,10 @@ public final class UsageExportBucketState extends io.pulumi.resources.ResourceAr
         return this.prefix == null ? Input.empty() : this.prefix;
     }
 
+    /**
+     * The project to set the export bucket on. If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

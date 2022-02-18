@@ -15,6 +15,10 @@ public final class GameServerDeploymentRolloutGameServerConfigOverrideGetArgs ex
 
     public static final GameServerDeploymentRolloutGameServerConfigOverrideGetArgs Empty = new GameServerDeploymentRolloutGameServerConfigOverrideGetArgs();
 
+    /**
+     * Version of the configuration.
+     * 
+     */
     @InputImport(name="configVersion")
     private final @Nullable Input<String> configVersion;
 
@@ -22,6 +26,11 @@ public final class GameServerDeploymentRolloutGameServerConfigOverrideGetArgs ex
         return this.configVersion == null ? Input.empty() : this.configVersion;
     }
 
+    /**
+     * Selection by realms.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="realmsSelector")
     private final @Nullable Input<GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelectorGetArgs> realmsSelector;
 

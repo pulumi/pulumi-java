@@ -13,6 +13,11 @@ public final class ClusterDefaultSnatStatusArgs extends io.pulumi.resources.Reso
 
     public static final ClusterDefaultSnatStatusArgs Empty = new ClusterDefaultSnatStatusArgs();
 
+    /**
+     * The status of the Istio addon, which makes it easy to set up Istio for services in a
+     * cluster. It is disabled by default. Set `disabled = false` to enable.
+     * 
+     */
     @InputImport(name="disabled", required=true)
     private final Input<Boolean> disabled;
 

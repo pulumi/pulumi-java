@@ -16,6 +16,10 @@ public final class CertificateTemplatePredefinedValuesAdditionalExtensionArgs ex
 
     public static final CertificateTemplatePredefinedValuesAdditionalExtensionArgs Empty = new CertificateTemplatePredefinedValuesAdditionalExtensionArgs();
 
+    /**
+     * Optional. Indicates whether or not this extension is critical (i.e., if the client does not know how to handle this extension, the client should consider this to be an error).
+     * 
+     */
     @InputImport(name="critical")
     private final @Nullable Input<Boolean> critical;
 
@@ -23,6 +27,10 @@ public final class CertificateTemplatePredefinedValuesAdditionalExtensionArgs ex
         return this.critical == null ? Input.empty() : this.critical;
     }
 
+    /**
+     * Required. The OID for this X.509 extension.
+     * 
+     */
     @InputImport(name="objectId", required=true)
     private final Input<CertificateTemplatePredefinedValuesAdditionalExtensionObjectIdArgs> objectId;
 
@@ -30,6 +38,10 @@ public final class CertificateTemplatePredefinedValuesAdditionalExtensionArgs ex
         return this.objectId;
     }
 
+    /**
+     * Required. The value of this X.509 extension.
+     * 
+     */
     @InputImport(name="value", required=true)
     private final Input<String> value;
 

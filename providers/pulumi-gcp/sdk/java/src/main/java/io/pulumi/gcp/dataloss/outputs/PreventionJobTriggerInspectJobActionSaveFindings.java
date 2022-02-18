@@ -9,6 +9,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PreventionJobTriggerInspectJobActionSaveFindings {
+    /**
+     * Information on where to store output
+     * Structure is documented below.
+     * 
+     */
     private final PreventionJobTriggerInspectJobActionSaveFindingsOutputConfig outputConfig;
 
     @OutputCustomType.Constructor({"outputConfig"})
@@ -16,6 +21,11 @@ public final class PreventionJobTriggerInspectJobActionSaveFindings {
         this.outputConfig = Objects.requireNonNull(outputConfig);
     }
 
+    /**
+     * Information on where to store output
+     * Structure is documented below.
+     * 
+     */
     public PreventionJobTriggerInspectJobActionSaveFindingsOutputConfig getOutputConfig() {
         return this.outputConfig;
     }

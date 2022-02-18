@@ -12,8 +12,27 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ServiceTemplateSpecVolumeSecretItem {
+    /**
+     * The Cloud Secret Manager secret version.
+     * Can be 'latest' for the latest value or an integer for a specific version.
+     * 
+     */
     private final String key;
+    /**
+     * Mode bits to use on this file, must be a value between 0000 and 0777. If
+     * not specified, the volume defaultMode will be used. This might be in
+     * conflict with other options that affect the file mode, like fsGroup, and
+     * the result can be other mode bits set.
+     * 
+     */
     private final @Nullable Integer mode;
+    /**
+     * The relative path of the file to map the key to.
+     * May not be an absolute path.
+     * May not contain the path element '..'.
+     * May not start with the string '..'.
+     * 
+     */
     private final String path;
 
     @OutputCustomType.Constructor({"key","mode","path"})
@@ -26,12 +45,31 @@ public final class ServiceTemplateSpecVolumeSecretItem {
         this.path = Objects.requireNonNull(path);
     }
 
+    /**
+     * The Cloud Secret Manager secret version.
+     * Can be 'latest' for the latest value or an integer for a specific version.
+     * 
+     */
     public String getKey() {
         return this.key;
     }
+    /**
+     * Mode bits to use on this file, must be a value between 0000 and 0777. If
+     * not specified, the volume defaultMode will be used. This might be in
+     * conflict with other options that affect the file mode, like fsGroup, and
+     * the result can be other mode bits set.
+     * 
+     */
     public Optional<Integer> getMode() {
         return Optional.ofNullable(this.mode);
     }
+    /**
+     * The relative path of the file to map the key to.
+     * May not be an absolute path.
+     * May not contain the path element '..'.
+     * May not start with the string '..'.
+     * 
+     */
     public String getPath() {
         return this.path;
     }

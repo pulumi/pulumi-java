@@ -13,6 +13,10 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
 
     public static final PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedArgs Empty = new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedArgs();
 
+    /**
+     * The resource name of the KMS CryptoKey to use for unwrapping.
+     * 
+     */
     @InputImport(name="cryptoKeyName", required=true)
     private final Input<String> cryptoKeyName;
 
@@ -20,6 +24,11 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
         return this.cryptoKeyName;
     }
 
+    /**
+     * The wrapped data crypto key.
+     * A base64-encoded string.
+     * 
+     */
     @InputImport(name="wrappedKey", required=true)
     private final Input<String> wrappedKey;
 

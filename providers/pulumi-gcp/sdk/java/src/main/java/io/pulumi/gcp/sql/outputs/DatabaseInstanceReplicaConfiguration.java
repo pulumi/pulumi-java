@@ -13,16 +13,66 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DatabaseInstanceReplicaConfiguration {
+    /**
+     * PEM representation of the trusted CA's x509
+     * certificate.
+     * 
+     */
     private final @Nullable String caCertificate;
+    /**
+     * PEM representation of the replica's x509
+     * certificate.
+     * 
+     */
     private final @Nullable String clientCertificate;
+    /**
+     * PEM representation of the replica's private key. The
+     * corresponding public key in encoded in the `client_certificate`.
+     * 
+     */
     private final @Nullable String clientKey;
+    /**
+     * The number of seconds
+     * between connect retries.
+     * 
+     */
     private final @Nullable Integer connectRetryInterval;
+    /**
+     * Path to a SQL file in GCS from which replica
+     * instances are created. Format is `gs://bucket/filename`.
+     * 
+     */
     private final @Nullable String dumpFilePath;
+    /**
+     * Specifies if the replica is the failover target.
+     * If the field is set to true the replica will be designated as a failover replica.
+     * If the master instance fails, the replica instance will be promoted as
+     * the new master instance.
+     * 
+     */
     private final @Nullable Boolean failoverTarget;
+    /**
+     * Time in ms between replication
+     * heartbeats.
+     * 
+     */
     private final @Nullable Integer masterHeartbeatPeriod;
+    /**
+     * Password for the replication connection.
+     * 
+     */
     private final @Nullable String password;
     private final @Nullable String sslCipher;
+    /**
+     * Username for replication connection.
+     * 
+     */
     private final @Nullable String username;
+    /**
+     * True if the master's common name
+     * value is checked during the SSL handshake.
+     * 
+     */
     private final @Nullable Boolean verifyServerCertificate;
 
     @OutputCustomType.Constructor({"caCertificate","clientCertificate","clientKey","connectRetryInterval","dumpFilePath","failoverTarget","masterHeartbeatPeriod","password","sslCipher","username","verifyServerCertificate"})
@@ -51,36 +101,86 @@ public final class DatabaseInstanceReplicaConfiguration {
         this.verifyServerCertificate = verifyServerCertificate;
     }
 
+    /**
+     * PEM representation of the trusted CA's x509
+     * certificate.
+     * 
+     */
     public Optional<String> getCaCertificate() {
         return Optional.ofNullable(this.caCertificate);
     }
+    /**
+     * PEM representation of the replica's x509
+     * certificate.
+     * 
+     */
     public Optional<String> getClientCertificate() {
         return Optional.ofNullable(this.clientCertificate);
     }
+    /**
+     * PEM representation of the replica's private key. The
+     * corresponding public key in encoded in the `client_certificate`.
+     * 
+     */
     public Optional<String> getClientKey() {
         return Optional.ofNullable(this.clientKey);
     }
+    /**
+     * The number of seconds
+     * between connect retries.
+     * 
+     */
     public Optional<Integer> getConnectRetryInterval() {
         return Optional.ofNullable(this.connectRetryInterval);
     }
+    /**
+     * Path to a SQL file in GCS from which replica
+     * instances are created. Format is `gs://bucket/filename`.
+     * 
+     */
     public Optional<String> getDumpFilePath() {
         return Optional.ofNullable(this.dumpFilePath);
     }
+    /**
+     * Specifies if the replica is the failover target.
+     * If the field is set to true the replica will be designated as a failover replica.
+     * If the master instance fails, the replica instance will be promoted as
+     * the new master instance.
+     * 
+     */
     public Optional<Boolean> getFailoverTarget() {
         return Optional.ofNullable(this.failoverTarget);
     }
+    /**
+     * Time in ms between replication
+     * heartbeats.
+     * 
+     */
     public Optional<Integer> getMasterHeartbeatPeriod() {
         return Optional.ofNullable(this.masterHeartbeatPeriod);
     }
+    /**
+     * Password for the replication connection.
+     * 
+     */
     public Optional<String> getPassword() {
         return Optional.ofNullable(this.password);
     }
     public Optional<String> getSslCipher() {
         return Optional.ofNullable(this.sslCipher);
     }
+    /**
+     * Username for replication connection.
+     * 
+     */
     public Optional<String> getUsername() {
         return Optional.ofNullable(this.username);
     }
+    /**
+     * True if the master's common name
+     * value is checked during the SSL handshake.
+     * 
+     */
     public Optional<Boolean> getVerifyServerCertificate() {
         return Optional.ofNullable(this.verifyServerCertificate);
     }

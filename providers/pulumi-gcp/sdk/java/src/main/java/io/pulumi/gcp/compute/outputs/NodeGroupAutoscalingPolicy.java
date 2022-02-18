@@ -12,8 +12,28 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class NodeGroupAutoscalingPolicy {
+    /**
+     * Maximum size of the node group. Set to a value less than or equal
+     * to 100 and greater than or equal to min-nodes.
+     * 
+     */
     private final @Nullable Integer maxNodes;
+    /**
+     * Minimum size of the node group. Must be less
+     * than or equal to max-nodes. The default value is 0.
+     * 
+     */
     private final @Nullable Integer minNodes;
+    /**
+     * The autoscaling mode. Set to one of the following:
+     * - OFF: Disables the autoscaler.
+     * - ON: Enables scaling in and scaling out.
+     * - ONLY_SCALE_OUT: Enables only scaling out.
+     *   You must use this mode if your node groups are configured to
+     *   restart their hosted VMs on minimal servers.
+     *   Possible values are `OFF`, `ON`, and `ONLY_SCALE_OUT`.
+     * 
+     */
     private final @Nullable String mode;
 
     @OutputCustomType.Constructor({"maxNodes","minNodes","mode"})
@@ -26,12 +46,32 @@ public final class NodeGroupAutoscalingPolicy {
         this.mode = mode;
     }
 
+    /**
+     * Maximum size of the node group. Set to a value less than or equal
+     * to 100 and greater than or equal to min-nodes.
+     * 
+     */
     public Optional<Integer> getMaxNodes() {
         return Optional.ofNullable(this.maxNodes);
     }
+    /**
+     * Minimum size of the node group. Must be less
+     * than or equal to max-nodes. The default value is 0.
+     * 
+     */
     public Optional<Integer> getMinNodes() {
         return Optional.ofNullable(this.minNodes);
     }
+    /**
+     * The autoscaling mode. Set to one of the following:
+     * - OFF: Disables the autoscaler.
+     * - ON: Enables scaling in and scaling out.
+     * - ONLY_SCALE_OUT: Enables only scaling out.
+     *   You must use this mode if your node groups are configured to
+     *   restart their hosted VMs on minimal servers.
+     *   Possible values are `OFF`, `ON`, and `ONLY_SCALE_OUT`.
+     * 
+     */
     public Optional<String> getMode() {
         return Optional.ofNullable(this.mode);
     }

@@ -14,6 +14,14 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DatabaseArgs Empty = new DatabaseArgs();
 
+    /**
+     * The charset value. See MySQL's
+     * [Supported Character Sets and Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html)
+     * and Postgres' [Character Set Support](https://www.postgresql.org/docs/9.6/static/multibyte.html)
+     * for more details and supported values. Postgres databases only support
+     * a value of `UTF8` at creation time.
+     * 
+     */
     @InputImport(name="charset")
     private final @Nullable Input<String> charset;
 
@@ -21,6 +29,14 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.charset == null ? Input.empty() : this.charset;
     }
 
+    /**
+     * The collation value. See MySQL's
+     * [Supported Character Sets and Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html)
+     * and Postgres' [Collation Support](https://www.postgresql.org/docs/9.6/static/collation.html)
+     * for more details and supported values. Postgres databases only support
+     * a value of `en_US.UTF8` at creation time.
+     * 
+     */
     @InputImport(name="collation")
     private final @Nullable Input<String> collation;
 
@@ -28,6 +44,11 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.collation == null ? Input.empty() : this.collation;
     }
 
+    /**
+     * The name of the Cloud SQL instance. This does not include the project
+     * ID.
+     * 
+     */
     @InputImport(name="instance", required=true)
     private final Input<String> instance;
 
@@ -35,6 +56,11 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.instance;
     }
 
+    /**
+     * The name of the database in the Cloud SQL instance.
+     * This does not include the project ID or instance name.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -42,6 +68,11 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

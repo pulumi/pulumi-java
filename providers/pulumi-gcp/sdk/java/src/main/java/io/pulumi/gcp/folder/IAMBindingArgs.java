@@ -23,6 +23,10 @@ public final class IAMBindingArgs extends io.pulumi.resources.ResourceArgs {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
+    /**
+     * The resource name of the folder the policy is attached to. Its format is folders/{folder_id}.
+     * 
+     */
     @InputImport(name="folder", required=true)
     private final Input<String> folder;
 
@@ -30,6 +34,16 @@ public final class IAMBindingArgs extends io.pulumi.resources.ResourceArgs {
         return this.folder;
     }
 
+    /**
+     * An array of identities that will be granted the privilege in the `role`.
+     * Each entry can have one of the following values:
+     * * **user:{emailid}**: An email address that is associated with a specific Google account. For example, alice@gmail.com.
+     * * **serviceAccount:{emailid}**: An email address that represents a service account. For example, my-other-app@appspot.gserviceaccount.com.
+     * * **group:{emailid}**: An email address that represents a Google group. For example, admins@example.com.
+     * * **domain:{domain}**: A G Suite domain (primary, instead of alias) name that represents all the users of that domain. For example, google.com or example.com.
+     * * For more details on format and restrictions see https://cloud.google.com/billing/reference/rest/v1/Policy#Binding
+     * 
+     */
     @InputImport(name="members", required=true)
     private final Input<List<String>> members;
 
@@ -37,6 +51,12 @@ public final class IAMBindingArgs extends io.pulumi.resources.ResourceArgs {
         return this.members;
     }
 
+    /**
+     * The role that should be applied. Only one
+     * `gcp.folder.IAMBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     @InputImport(name="role", required=true)
     private final Input<String> role;
 

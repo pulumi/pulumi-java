@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class UptimeCheckConfigTcpCheck {
+    /**
+     * The port to the page to run the check against. Will be combined with host (specified within the MonitoredResource) to construct the full URL.
+     * 
+     */
     private final Integer port;
 
     @OutputCustomType.Constructor({"port"})
@@ -16,6 +20,10 @@ public final class UptimeCheckConfigTcpCheck {
         this.port = Objects.requireNonNull(port);
     }
 
+    /**
+     * The port to the page to run the check against. Will be combined with host (specified within the MonitoredResource) to construct the full URL.
+     * 
+     */
     public Integer getPort() {
         return this.port;
     }

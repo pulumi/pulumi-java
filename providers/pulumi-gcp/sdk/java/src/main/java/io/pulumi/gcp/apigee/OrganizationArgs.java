@@ -14,6 +14,10 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OrganizationArgs Empty = new OrganizationArgs();
 
+    /**
+     * Primary GCP region for analytics data storage. For valid values, see [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org).
+     * 
+     */
     @InputImport(name="analyticsRegion")
     private final @Nullable Input<String> analyticsRegion;
 
@@ -21,6 +25,12 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
         return this.analyticsRegion == null ? Input.empty() : this.analyticsRegion;
     }
 
+    /**
+     * Compute Engine network used for Service Networking to be peered with Apigee runtime instances.
+     * See [Getting started with the Service Networking API](https://cloud.google.com/service-infrastructure/docs/service-networking/getting-started).
+     * Valid only when `RuntimeType` is set to CLOUD. The value can be updated only when there are no runtime instances. For example: "default".
+     * 
+     */
     @InputImport(name="authorizedNetwork")
     private final @Nullable Input<String> authorizedNetwork;
 
@@ -28,6 +38,10 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
         return this.authorizedNetwork == null ? Input.empty() : this.authorizedNetwork;
     }
 
+    /**
+     * Description of the Apigee organization.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -35,6 +49,10 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The display name of the Apigee organization.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -42,6 +60,10 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The project ID associated with the Apigee organization.
+     * 
+     */
     @InputImport(name="projectId", required=true)
     private final Input<String> projectId;
 
@@ -49,6 +71,13 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
         return this.projectId;
     }
 
+    /**
+     * Cloud KMS key name used for encrypting the data that is stored and replicated across runtime instances.
+     * Update is not allowed after the organization is created.
+     * If not specified, a Google-Managed encryption key will be used.
+     * Valid only when `RuntimeType` is CLOUD. For example: `projects/foo/locations/us/keyRings/bar/cryptoKeys/baz`.
+     * 
+     */
     @InputImport(name="runtimeDatabaseEncryptionKeyName")
     private final @Nullable Input<String> runtimeDatabaseEncryptionKeyName;
 
@@ -56,6 +85,12 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
         return this.runtimeDatabaseEncryptionKeyName == null ? Input.empty() : this.runtimeDatabaseEncryptionKeyName;
     }
 
+    /**
+     * Runtime type of the Apigee organization based on the Apigee subscription purchased.
+     * Default value is `CLOUD`.
+     * Possible values are `CLOUD` and `HYBRID`.
+     * 
+     */
     @InputImport(name="runtimeType")
     private final @Nullable Input<String> runtimeType;
 

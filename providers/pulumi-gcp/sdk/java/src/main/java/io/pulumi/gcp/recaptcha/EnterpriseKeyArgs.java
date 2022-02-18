@@ -19,6 +19,10 @@ public final class EnterpriseKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EnterpriseKeyArgs Empty = new EnterpriseKeyArgs();
 
+    /**
+     * Settings for keys that can be used by Android apps.
+     * 
+     */
     @InputImport(name="androidSettings")
     private final @Nullable Input<EnterpriseKeyAndroidSettingsArgs> androidSettings;
 
@@ -26,6 +30,10 @@ public final class EnterpriseKeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.androidSettings == null ? Input.empty() : this.androidSettings;
     }
 
+    /**
+     * Human-readable display name of this key. Modifiable by user.
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -33,6 +41,10 @@ public final class EnterpriseKeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName;
     }
 
+    /**
+     * Settings for keys that can be used by iOS apps.
+     * 
+     */
     @InputImport(name="iosSettings")
     private final @Nullable Input<EnterpriseKeyIosSettingsArgs> iosSettings;
 
@@ -40,6 +52,10 @@ public final class EnterpriseKeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.iosSettings == null ? Input.empty() : this.iosSettings;
     }
 
+    /**
+     * See [Creating and managing labels](https://cloud.google.com/recaptcha-enterprise/docs/labels).
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -47,6 +63,10 @@ public final class EnterpriseKeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The project for the resource
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -54,6 +74,10 @@ public final class EnterpriseKeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Options for user acceptance testing.
+     * 
+     */
     @InputImport(name="testingOptions")
     private final @Nullable Input<EnterpriseKeyTestingOptionsArgs> testingOptions;
 
@@ -61,6 +85,10 @@ public final class EnterpriseKeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.testingOptions == null ? Input.empty() : this.testingOptions;
     }
 
+    /**
+     * Settings for keys that can be used by websites.
+     * 
+     */
     @InputImport(name="webSettings")
     private final @Nullable Input<EnterpriseKeyWebSettingsArgs> webSettings;
 

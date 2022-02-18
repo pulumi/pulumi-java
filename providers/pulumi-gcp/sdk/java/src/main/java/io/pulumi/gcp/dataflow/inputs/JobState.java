@@ -19,6 +19,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
 
     public static final JobState Empty = new JobState();
 
+    /**
+     * List of experiments that should be used by the job. An example value is `["enable_stackdriver_agent_metrics"]`.
+     * 
+     */
     @InputImport(name="additionalExperiments")
     private final @Nullable Input<List<String>> additionalExperiments;
 
@@ -26,6 +30,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
         return this.additionalExperiments == null ? Input.empty() : this.additionalExperiments;
     }
 
+    /**
+     * Enable/disable the use of [Streaming Engine](https://cloud.google.com/dataflow/docs/guides/deploying-a-pipeline#streaming-engine) for the job. Note that Streaming Engine is enabled by default for pipelines developed against the Beam SDK for Python v2.21.0 or later when using Python 3.
+     * 
+     */
     @InputImport(name="enableStreamingEngine")
     private final @Nullable Input<Boolean> enableStreamingEngine;
 
@@ -33,6 +41,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
         return this.enableStreamingEngine == null ? Input.empty() : this.enableStreamingEngine;
     }
 
+    /**
+     * The configuration for VM IPs.  Options are `"WORKER_IP_PUBLIC"` or `"WORKER_IP_PRIVATE"`.
+     * 
+     */
     @InputImport(name="ipConfiguration")
     private final @Nullable Input<String> ipConfiguration;
 
@@ -40,6 +52,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
         return this.ipConfiguration == null ? Input.empty() : this.ipConfiguration;
     }
 
+    /**
+     * The unique ID of this job.
+     * 
+     */
     @InputImport(name="jobId")
     private final @Nullable Input<String> jobId;
 
@@ -47,6 +63,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
         return this.jobId == null ? Input.empty() : this.jobId;
     }
 
+    /**
+     * The name for the Cloud KMS key for the job. Key format is: `projects/PROJECT_ID/locations/LOCATION/keyRings/KEY_RING/cryptoKeys/KEY`
+     * 
+     */
     @InputImport(name="kmsKeyName")
     private final @Nullable Input<String> kmsKeyName;
 
@@ -54,6 +74,14 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
         return this.kmsKeyName == null ? Input.empty() : this.kmsKeyName;
     }
 
+    /**
+     * User labels to be specified for the job. Keys and values should follow the restrictions
+     * specified in the [labeling restrictions](https://cloud.google.com/compute/docs/labeling-resources#restrictions) page.
+     * **NOTE**: Google-provided Dataflow templates often provide default labels that begin with `goog-dataflow-provided`.
+     * Unless explicitly set in config, these labels will be ignored to prevent diffs on re-apply.
+     * <<<<<<< HEAD
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,Object>> labels;
 
@@ -61,6 +89,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The machine type to use for the job.
+     * 
+     */
     @InputImport(name="machineType")
     private final @Nullable Input<String> machineType;
 
@@ -68,6 +100,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
         return this.machineType == null ? Input.empty() : this.machineType;
     }
 
+    /**
+     * The number of workers permitted to work on the job.  More workers may improve processing speed at additional cost.
+     * 
+     */
     @InputImport(name="maxWorkers")
     private final @Nullable Input<Integer> maxWorkers;
 
@@ -75,6 +111,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
         return this.maxWorkers == null ? Input.empty() : this.maxWorkers;
     }
 
+    /**
+     * A unique name for the resource, required by Dataflow.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -82,6 +122,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The network to which VMs will be assigned. If it is not provided, "default" will be used.
+     * 
+     */
     @InputImport(name="network")
     private final @Nullable Input<String> network;
 
@@ -89,6 +133,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
         return this.network == null ? Input.empty() : this.network;
     }
 
+    /**
+     * One of "drain" or "cancel".  Specifies behavior of deletion during `pulumi destroy`.  See above note.
+     * 
+     */
     @InputImport(name="onDelete")
     private final @Nullable Input<String> onDelete;
 
@@ -96,6 +144,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
         return this.onDelete == null ? Input.empty() : this.onDelete;
     }
 
+    /**
+     * Key/Value pairs to be passed to the Dataflow job (as used in the template).
+     * 
+     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,Object>> parameters;
 
@@ -103,6 +155,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
+    /**
+     * The project in which the resource belongs. If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -110,6 +166,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The region in which the created job should run.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 
@@ -117,6 +177,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
         return this.region == null ? Input.empty() : this.region;
     }
 
+    /**
+     * The Service Account email used to create the job.
+     * 
+     */
     @InputImport(name="serviceAccountEmail")
     private final @Nullable Input<String> serviceAccountEmail;
 
@@ -124,6 +188,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
         return this.serviceAccountEmail == null ? Input.empty() : this.serviceAccountEmail;
     }
 
+    /**
+     * The current state of the resource, selected from the [JobState enum](https://cloud.google.com/dataflow/docs/reference/rest/v1b3/projects.jobs#Job.JobState)
+     * 
+     */
     @InputImport(name="state")
     private final @Nullable Input<String> state;
 
@@ -131,6 +199,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
         return this.state == null ? Input.empty() : this.state;
     }
 
+    /**
+     * The subnetwork to which VMs will be assigned. Should be of the form "regions/REGION/subnetworks/SUBNETWORK". If the [subnetwork is located in a Shared VPC network](https://cloud.google.com/dataflow/docs/guides/specifying-networks#shared), you must use the complete URL. For example `"googleapis.com/compute/v1/projects/PROJECT_ID/regions/REGION/subnetworks/SUBNET_NAME"`
+     * 
+     */
     @InputImport(name="subnetwork")
     private final @Nullable Input<String> subnetwork;
 
@@ -138,6 +210,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
         return this.subnetwork == null ? Input.empty() : this.subnetwork;
     }
 
+    /**
+     * A writeable location on GCS for the Dataflow job to dump its temporary data.
+     * 
+     */
     @InputImport(name="tempGcsLocation")
     private final @Nullable Input<String> tempGcsLocation;
 
@@ -145,6 +221,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
         return this.tempGcsLocation == null ? Input.empty() : this.tempGcsLocation;
     }
 
+    /**
+     * The GCS path to the Dataflow job template.
+     * 
+     */
     @InputImport(name="templateGcsPath")
     private final @Nullable Input<String> templateGcsPath;
 
@@ -152,6 +232,11 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
         return this.templateGcsPath == null ? Input.empty() : this.templateGcsPath;
     }
 
+    /**
+     * Only applicable when updating a pipeline. Map of transform name prefixes of the job to be replaced with the corresponding name prefixes of the new job. This field is not used outside of update.
+     * > > > > > > > v4.1.0
+     * 
+     */
     @InputImport(name="transformNameMapping")
     private final @Nullable Input<Map<String,Object>> transformNameMapping;
 
@@ -159,6 +244,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
         return this.transformNameMapping == null ? Input.empty() : this.transformNameMapping;
     }
 
+    /**
+     * The type of this job, selected from the [JobType enum](https://cloud.google.com/dataflow/docs/reference/rest/v1b3/projects.jobs#Job.JobType)
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 
@@ -166,6 +255,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
         return this.type == null ? Input.empty() : this.type;
     }
 
+    /**
+     * The zone in which the created job should run. If it is not provided, the provider zone is used.
+     * 
+     */
     @InputImport(name="zone")
     private final @Nullable Input<String> zone;
 

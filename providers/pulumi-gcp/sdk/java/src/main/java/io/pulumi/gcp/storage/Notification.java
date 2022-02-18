@@ -15,57 +15,162 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Creates a new notification configuration on a specified bucket, establishing a flow of event notifications from GCS to a Cloud Pub/Sub topic.
+ *  For more information see
+ * [the official documentation](https://cloud.google.com/storage/docs/pubsub-notifications)
+ * and
+ * [API](https://cloud.google.com/storage/docs/json_api/v1/notifications).
+ * 
+ * In order to enable notifications, a special Google Cloud Storage service account unique to the project
+ * must exist and have the IAM permission "projects.topics.publish" for a Cloud Pub/Sub topic in the project.
+ * This service account is not created automatically when a project is created.
+ * To ensure the service account exists and obtain its email address for use in granting the correct IAM permission, use the
+ * [`gcp.storage.getProjectServiceAccount`](https://www.terraform.io/docs/providers/google/d/storage_project_service_account.html)
+ * datasource's `email_address` value, and see below for an example of enabling notifications by granting the correct IAM permission.
+ * See [the notifications documentation](https://cloud.google.com/storage/docs/gsutil/commands/notification) for more details.
+ * 
+ * > **NOTE**: This resource can affect your storage IAM policy. If you are using this in the same config as your storage IAM policy resources, consider
+ * making this resource dependent on those IAM resources via `depends_on`. This will safeguard against errors due to IAM race conditions.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * Storage notifications can be imported using the notification `id` in the format `<bucket_name>/notificationConfigs/<id>` e.g.
+ * 
+ * ```sh
+ *  $ pulumi import gcp:storage/notification:Notification notification default_bucket/notificationConfigs/102
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:storage/notification:Notification")
 public class Notification extends io.pulumi.resources.CustomResource {
+    /**
+     * The name of the bucket.
+     * 
+     */
     @OutputExport(name="bucket", type=String.class, parameters={})
     private Output<String> bucket;
 
+    /**
+     * @return The name of the bucket.
+     * 
+     */
     public Output<String> getBucket() {
         return this.bucket;
     }
+    /**
+     * A set of key/value attribute pairs to attach to each Cloud PubSub message published for this notification subscription
+     * 
+     */
     @OutputExport(name="customAttributes", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> customAttributes;
 
+    /**
+     * @return A set of key/value attribute pairs to attach to each Cloud PubSub message published for this notification subscription
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getCustomAttributes() {
         return this.customAttributes;
     }
+    /**
+     * List of event type filters for this notification config. If not specified, Cloud Storage will send notifications for all event types. The valid types are: `"OBJECT_FINALIZE"`, `"OBJECT_METADATA_UPDATE"`, `"OBJECT_DELETE"`, `"OBJECT_ARCHIVE"`
+     * 
+     */
     @OutputExport(name="eventTypes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> eventTypes;
 
+    /**
+     * @return List of event type filters for this notification config. If not specified, Cloud Storage will send notifications for all event types. The valid types are: `"OBJECT_FINALIZE"`, `"OBJECT_METADATA_UPDATE"`, `"OBJECT_DELETE"`, `"OBJECT_ARCHIVE"`
+     * 
+     */
     public Output</* @Nullable */ List<String>> getEventTypes() {
         return this.eventTypes;
     }
+    /**
+     * The ID of the created notification.
+     * 
+     */
     @OutputExport(name="notificationId", type=String.class, parameters={})
     private Output<String> notificationId;
 
+    /**
+     * @return The ID of the created notification.
+     * 
+     */
     public Output<String> getNotificationId() {
         return this.notificationId;
     }
+    /**
+     * Specifies a prefix path filter for this notification config. Cloud Storage will only send notifications for objects in this bucket whose names begin with the specified prefix.
+     * 
+     */
     @OutputExport(name="objectNamePrefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> objectNamePrefix;
 
+    /**
+     * @return Specifies a prefix path filter for this notification config. Cloud Storage will only send notifications for objects in this bucket whose names begin with the specified prefix.
+     * 
+     */
     public Output</* @Nullable */ String> getObjectNamePrefix() {
         return this.objectNamePrefix;
     }
+    /**
+     * The desired content of the Payload. One of `"JSON_API_V1"` or `"NONE"`.
+     * 
+     */
     @OutputExport(name="payloadFormat", type=String.class, parameters={})
     private Output<String> payloadFormat;
 
+    /**
+     * @return The desired content of the Payload. One of `"JSON_API_V1"` or `"NONE"`.
+     * 
+     */
     public Output<String> getPayloadFormat() {
         return this.payloadFormat;
     }
+    /**
+     * The URI of the created resource.
+     * 
+     */
     @OutputExport(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
+    /**
+     * @return The URI of the created resource.
+     * 
+     */
     public Output<String> getSelfLink() {
         return this.selfLink;
     }
+    /**
+     * The Cloud PubSub topic to which this subscription publishes. Expects either the
+     * topic name, assumed to belong to the default GCP provider project, or the project-level name,
+     * i.e. `projects/my-gcp-project/topics/my-topic` or `my-topic`. If the project is not set in the provider,
+     * you will need to use the project-level name.
+     * 
+     */
     @OutputExport(name="topic", type=String.class, parameters={})
     private Output<String> topic;
 
+    /**
+     * @return The Cloud PubSub topic to which this subscription publishes. Expects either the
+     * topic name, assumed to belong to the default GCP provider project, or the project-level name,
+     * i.e. `projects/my-gcp-project/topics/my-topic` or `my-topic`. If the project is not set in the provider,
+     * you will need to use the project-level name.
+     * 
+     */
     public Output<String> getTopic() {
         return this.topic;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Notification(String name, NotificationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:storage/notification:Notification", name, args == null ? NotificationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -81,6 +186,15 @@ public class Notification extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Notification get(String name, Input<String> id, @Nullable NotificationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Notification(name, id, state, options);
     }

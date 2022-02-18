@@ -13,6 +13,11 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigArgs extends io.p
 
     public static final PreventionDeidentifyTemplateDeidentifyConfigArgs Empty = new PreventionDeidentifyTemplateDeidentifyConfigArgs();
 
+    /**
+     * Specifies free-text based transformations to be applied to the dataset.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="infoTypeTransformations", required=true)
     private final Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsArgs> infoTypeTransformations;
 

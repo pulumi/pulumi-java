@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetTransferProjectServieAccountResult {
+    /**
+     * Email address of the default service account used by Storage Transfer Jobs running in this project
+     * 
+     */
     private final String email;
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
     private final String project;
 
@@ -23,9 +31,17 @@ public final class GetTransferProjectServieAccountResult {
         this.project = Objects.requireNonNull(project);
     }
 
+    /**
+     * Email address of the default service account used by Storage Transfer Jobs running in this project
+     * 
+     */
     public String getEmail() {
         return this.email;
     }
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }

@@ -15,11 +15,52 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AlertPolicyCondition {
+    /**
+     * A condition that checks that a time series
+     * continues to receive new data points.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable AlertPolicyConditionConditionAbsent conditionAbsent;
+    /**
+     * A condition that checks for log messages matching given constraints.
+     * If set, no other conditions can be present.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable AlertPolicyConditionConditionMatchedLog conditionMatchedLog;
+    /**
+     * A Monitoring Query Language query that outputs a boolean stream
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable AlertPolicyConditionConditionMonitoringQueryLanguage conditionMonitoringQueryLanguage;
+    /**
+     * A condition that compares a time series against a
+     * threshold.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable AlertPolicyConditionConditionThreshold conditionThreshold;
+    /**
+     * A short name or phrase used to identify the
+     * condition in dashboards, notifications, and
+     * incidents. To avoid confusion, don't use the same
+     * display name for multiple conditions in the same
+     * policy.
+     * 
+     */
     private final String displayName;
+    /**
+     * - 
+     * The unique resource name for this condition.
+     * Its syntax is:
+     * projects/[PROJECT_ID]/alertPolicies/[POLICY_ID]/conditions/[CONDITION_ID]
+     * [CONDITION_ID] is assigned by Stackdriver Monitoring when
+     * the condition is created as part of a new or updated alerting
+     * policy.
+     * 
+     */
     private final @Nullable String name;
 
     @OutputCustomType.Constructor({"conditionAbsent","conditionMatchedLog","conditionMonitoringQueryLanguage","conditionThreshold","displayName","name"})
@@ -38,21 +79,62 @@ public final class AlertPolicyCondition {
         this.name = name;
     }
 
+    /**
+     * A condition that checks that a time series
+     * continues to receive new data points.
+     * Structure is documented below.
+     * 
+     */
     public Optional<AlertPolicyConditionConditionAbsent> getConditionAbsent() {
         return Optional.ofNullable(this.conditionAbsent);
     }
+    /**
+     * A condition that checks for log messages matching given constraints.
+     * If set, no other conditions can be present.
+     * Structure is documented below.
+     * 
+     */
     public Optional<AlertPolicyConditionConditionMatchedLog> getConditionMatchedLog() {
         return Optional.ofNullable(this.conditionMatchedLog);
     }
+    /**
+     * A Monitoring Query Language query that outputs a boolean stream
+     * Structure is documented below.
+     * 
+     */
     public Optional<AlertPolicyConditionConditionMonitoringQueryLanguage> getConditionMonitoringQueryLanguage() {
         return Optional.ofNullable(this.conditionMonitoringQueryLanguage);
     }
+    /**
+     * A condition that compares a time series against a
+     * threshold.
+     * Structure is documented below.
+     * 
+     */
     public Optional<AlertPolicyConditionConditionThreshold> getConditionThreshold() {
         return Optional.ofNullable(this.conditionThreshold);
     }
+    /**
+     * A short name or phrase used to identify the
+     * condition in dashboards, notifications, and
+     * incidents. To avoid confusion, don't use the same
+     * display name for multiple conditions in the same
+     * policy.
+     * 
+     */
     public String getDisplayName() {
         return this.displayName;
     }
+    /**
+     * - 
+     * The unique resource name for this condition.
+     * Its syntax is:
+     * projects/[PROJECT_ID]/alertPolicies/[POLICY_ID]/conditions/[CONDITION_ID]
+     * [CONDITION_ID] is assigned by Stackdriver Monitoring when
+     * the condition is created as part of a new or updated alerting
+     * policy.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

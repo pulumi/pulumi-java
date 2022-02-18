@@ -15,6 +15,11 @@ public final class ClusterClusterConfigInitializationActionArgs extends io.pulum
 
     public static final ClusterClusterConfigInitializationActionArgs Empty = new ClusterClusterConfigInitializationActionArgs();
 
+    /**
+     * The script to be executed during initialization of the cluster.
+     * The script must be a GCS file with a gs:// prefix.
+     * 
+     */
     @InputImport(name="script", required=true)
     private final Input<String> script;
 
@@ -22,6 +27,12 @@ public final class ClusterClusterConfigInitializationActionArgs extends io.pulum
         return this.script;
     }
 
+    /**
+     * The maximum duration (in seconds) which `script` is
+     * allowed to take to execute its action. GCP will default to a predetermined
+     * computed value if not set (currently 300).
+     * 
+     */
     @InputImport(name="timeoutSec")
     private final @Nullable Input<Integer> timeoutSec;
 

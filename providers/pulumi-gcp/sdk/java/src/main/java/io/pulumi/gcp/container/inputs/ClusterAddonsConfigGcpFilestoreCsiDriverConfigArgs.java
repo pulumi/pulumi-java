@@ -13,6 +13,11 @@ public final class ClusterAddonsConfigGcpFilestoreCsiDriverConfigArgs extends io
 
     public static final ClusterAddonsConfigGcpFilestoreCsiDriverConfigArgs Empty = new ClusterAddonsConfigGcpFilestoreCsiDriverConfigArgs();
 
+    /**
+     * Enable the PodSecurityPolicy controller for this cluster.
+     * If enabled, pods must be valid under a PodSecurityPolicy to be created.
+     * 
+     */
     @InputImport(name="enabled", required=true)
     private final Input<Boolean> enabled;
 

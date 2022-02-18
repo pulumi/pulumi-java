@@ -17,6 +17,11 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
 
     public static final PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleArgs Empty = new PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleArgs();
 
+    /**
+     * Dictionary which defines the rule.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="dictionary")
     private final @Nullable Input<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryArgs> dictionary;
 
@@ -24,6 +29,11 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
         return this.dictionary == null ? Input.empty() : this.dictionary;
     }
 
+    /**
+     * Set of infoTypes for which findings would affect this rule.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="excludeInfoTypes")
     private final @Nullable Input<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesArgs> excludeInfoTypes;
 
@@ -31,6 +41,11 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
         return this.excludeInfoTypes == null ? Input.empty() : this.excludeInfoTypes;
     }
 
+    /**
+     * How the rule is applied. See the documentation for more information: https://cloud.google.com/dlp/docs/reference/rest/v2/InspectConfig#MatchingType
+     * Possible values are `MATCHING_TYPE_FULL_MATCH`, `MATCHING_TYPE_PARTIAL_MATCH`, and `MATCHING_TYPE_INVERSE_MATCH`.
+     * 
+     */
     @InputImport(name="matchingType", required=true)
     private final Input<String> matchingType;
 
@@ -38,6 +53,11 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
         return this.matchingType;
     }
 
+    /**
+     * Regular expression which defines the rule.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="regex")
     private final @Nullable Input<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegexArgs> regex;
 

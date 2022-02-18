@@ -35,6 +35,11 @@ public final class DatabaseInstanceServerCaCertGetArgs extends io.pulumi.resourc
         return this.createTime == null ? Input.empty() : this.createTime;
     }
 
+    /**
+     * The [RFC 3339](https://tools.ietf.org/html/rfc3339)
+     * formatted date time string indicating when this whitelist expires.
+     * 
+     */
     @InputImport(name="expirationTime")
     private final @Nullable Input<String> expirationTime;
 

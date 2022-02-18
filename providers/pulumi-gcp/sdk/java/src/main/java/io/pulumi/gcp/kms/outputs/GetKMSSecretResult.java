@@ -14,7 +14,15 @@ public final class GetKMSSecretResult {
     private final @Nullable String additionalAuthenticatedData;
     private final String ciphertext;
     private final String cryptoKey;
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
+    /**
+     * Contains the result of decrypting the provided ciphertext.
+     * 
+     */
     private final String plaintext;
 
     @OutputCustomType.Constructor({"additionalAuthenticatedData","ciphertext","cryptoKey","id","plaintext"})
@@ -40,9 +48,17 @@ public final class GetKMSSecretResult {
     public String getCryptoKey() {
         return this.cryptoKey;
     }
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Contains the result of decrypting the provided ciphertext.
+     * 
+     */
     public String getPlaintext() {
         return this.plaintext;
     }

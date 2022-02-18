@@ -16,6 +16,14 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
 
     public static final NetworkState Empty = new NetworkState();
 
+    /**
+     * When set to `true`, the network is created in "auto subnet mode" and
+     * it will create a subnet for each region automatically across the
+     * `10.128.0.0/9` address range.
+     * When set to `false`, the network is created in "custom subnet mode" so
+     * the user can explicitly connect subnetwork resources.
+     * 
+     */
     @InputImport(name="autoCreateSubnetworks")
     private final @Nullable Input<Boolean> autoCreateSubnetworks;
 
@@ -23,6 +31,11 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
         return this.autoCreateSubnetworks == null ? Input.empty() : this.autoCreateSubnetworks;
     }
 
+    /**
+     * If set to `true`, default routes (`0.0.0.0/0`) will be deleted
+     * immediately after network creation. Defaults to `false`.
+     * 
+     */
     @InputImport(name="deleteDefaultRoutesOnCreate")
     private final @Nullable Input<Boolean> deleteDefaultRoutesOnCreate;
 
@@ -30,6 +43,11 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
         return this.deleteDefaultRoutesOnCreate == null ? Input.empty() : this.deleteDefaultRoutesOnCreate;
     }
 
+    /**
+     * An optional description of this resource. The resource must be
+     * recreated to modify this field.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -37,6 +55,10 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The gateway address for default routing out of the network. This value is selected by GCP.
+     * 
+     */
     @InputImport(name="gatewayIpv4")
     private final @Nullable Input<String> gatewayIpv4;
 
@@ -44,6 +66,11 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
         return this.gatewayIpv4 == null ? Input.empty() : this.gatewayIpv4;
     }
 
+    /**
+     * Maximum Transmission Unit in bytes. The minimum value for this field is 1460
+     * and the maximum value is 1500 bytes.
+     * 
+     */
     @InputImport(name="mtu")
     private final @Nullable Input<Integer> mtu;
 
@@ -51,6 +78,16 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
         return this.mtu == null ? Input.empty() : this.mtu;
     }
 
+    /**
+     * Name of the resource. Provided by the client when the resource is
+     * created. The name must be 1-63 characters long, and comply with
+     * RFC1035. Specifically, the name must be 1-63 characters long and match
+     * the regular expression `a-z?` which means the
+     * first character must be a lowercase letter, and all following
+     * characters must be a dash, lowercase letter, or digit, except the last
+     * character, which cannot be a dash.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -58,6 +95,11 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -65,6 +107,15 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The network-wide routing mode to use. If set to `REGIONAL`, this
+     * network's cloud routers will only advertise routes with subnetworks
+     * of this network in the same region as the router. If set to `GLOBAL`,
+     * this network's cloud routers will advertise routes with all
+     * subnetworks of this network, across regions.
+     * Possible values are `REGIONAL` and `GLOBAL`.
+     * 
+     */
     @InputImport(name="routingMode")
     private final @Nullable Input<String> routingMode;
 
@@ -72,6 +123,10 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
         return this.routingMode == null ? Input.empty() : this.routingMode;
     }
 
+    /**
+     * The URI of the created resource.
+     * 
+     */
     @InputImport(name="selfLink")
     private final @Nullable Input<String> selfLink;
 

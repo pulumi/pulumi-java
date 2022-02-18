@@ -12,8 +12,28 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ServiceTemplateSpecContainerEnv {
+    /**
+     * Volume's name.
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * Variable references $(VAR_NAME) are expanded
+     * using the previous defined environment variables in the container and
+     * any route environment variables. If a variable cannot be resolved,
+     * the reference in the input string will be unchanged. The $(VAR_NAME)
+     * syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped
+     * references will never be expanded, regardless of whether the variable
+     * exists or not.
+     * Defaults to "".
+     * 
+     */
     private final @Nullable String value;
+    /**
+     * Source for the environment variable's value. Only supports secret_key_ref.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable ServiceTemplateSpecContainerEnvValueFrom valueFrom;
 
     @OutputCustomType.Constructor({"name","value","valueFrom"})
@@ -26,12 +46,32 @@ public final class ServiceTemplateSpecContainerEnv {
         this.valueFrom = valueFrom;
     }
 
+    /**
+     * Volume's name.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * Variable references $(VAR_NAME) are expanded
+     * using the previous defined environment variables in the container and
+     * any route environment variables. If a variable cannot be resolved,
+     * the reference in the input string will be unchanged. The $(VAR_NAME)
+     * syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped
+     * references will never be expanded, regardless of whether the variable
+     * exists or not.
+     * Defaults to "".
+     * 
+     */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }
+    /**
+     * Source for the environment variable's value. Only supports secret_key_ref.
+     * Structure is documented below.
+     * 
+     */
     public Optional<ServiceTemplateSpecContainerEnvValueFrom> getValueFrom() {
         return Optional.ofNullable(this.valueFrom);
     }

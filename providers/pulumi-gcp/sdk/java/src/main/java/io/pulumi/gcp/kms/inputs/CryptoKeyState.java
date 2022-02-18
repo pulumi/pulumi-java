@@ -17,6 +17,11 @@ public final class CryptoKeyState extends io.pulumi.resources.ResourceArgs {
 
     public static final CryptoKeyState Empty = new CryptoKeyState();
 
+    /**
+     * The period of time that versions of this key spend in the DESTROY_SCHEDULED state before transitioning to DESTROYED.
+     * If not specified at creation time, the default duration is 24 hours.
+     * 
+     */
     @InputImport(name="destroyScheduledDuration")
     private final @Nullable Input<String> destroyScheduledDuration;
 
@@ -24,6 +29,10 @@ public final class CryptoKeyState extends io.pulumi.resources.ResourceArgs {
         return this.destroyScheduledDuration == null ? Input.empty() : this.destroyScheduledDuration;
     }
 
+    /**
+     * Whether this key may contain imported versions only.
+     * 
+     */
     @InputImport(name="importOnly")
     private final @Nullable Input<Boolean> importOnly;
 
@@ -31,6 +40,11 @@ public final class CryptoKeyState extends io.pulumi.resources.ResourceArgs {
         return this.importOnly == null ? Input.empty() : this.importOnly;
     }
 
+    /**
+     * The KeyRing that this key belongs to.
+     * Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
+     * 
+     */
     @InputImport(name="keyRing")
     private final @Nullable Input<String> keyRing;
 
@@ -38,6 +52,10 @@ public final class CryptoKeyState extends io.pulumi.resources.ResourceArgs {
         return this.keyRing == null ? Input.empty() : this.keyRing;
     }
 
+    /**
+     * Labels with user-defined metadata to apply to this resource.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -45,6 +63,10 @@ public final class CryptoKeyState extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The resource name for the CryptoKey.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -52,6 +74,14 @@ public final class CryptoKeyState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The immutable purpose of this CryptoKey. See the
+     * [purpose reference](https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys#CryptoKeyPurpose)
+     * for possible inputs.
+     * Default value is `ENCRYPT_DECRYPT`.
+     * Possible values are `ENCRYPT_DECRYPT`, `ASYMMETRIC_SIGN`, and `ASYMMETRIC_DECRYPT`.
+     * 
+     */
     @InputImport(name="purpose")
     private final @Nullable Input<String> purpose;
 
@@ -59,6 +89,13 @@ public final class CryptoKeyState extends io.pulumi.resources.ResourceArgs {
         return this.purpose == null ? Input.empty() : this.purpose;
     }
 
+    /**
+     * Every time this period passes, generate a new CryptoKeyVersion and set it as the primary.
+     * The first rotation will take place after the specified period. The rotation period has
+     * the format of a decimal number with up to 9 fractional digits, followed by the
+     * letter `s` (seconds). It must be greater than a day (ie, 86400).
+     * 
+     */
     @InputImport(name="rotationPeriod")
     private final @Nullable Input<String> rotationPeriod;
 
@@ -66,6 +103,11 @@ public final class CryptoKeyState extends io.pulumi.resources.ResourceArgs {
         return this.rotationPeriod == null ? Input.empty() : this.rotationPeriod;
     }
 
+    /**
+     * If set to true, the request will create a CryptoKey without any CryptoKeyVersions.
+     * You must use the `gcp.kms.KeyRingImportJob` resource to import the CryptoKeyVersion.
+     * 
+     */
     @InputImport(name="skipInitialVersionCreation")
     private final @Nullable Input<Boolean> skipInitialVersionCreation;
 
@@ -73,6 +115,11 @@ public final class CryptoKeyState extends io.pulumi.resources.ResourceArgs {
         return this.skipInitialVersionCreation == null ? Input.empty() : this.skipInitialVersionCreation;
     }
 
+    /**
+     * A template describing settings for new crypto key versions.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="versionTemplate")
     private final @Nullable Input<CryptoKeyVersionTemplateGetArgs> versionTemplate;
 

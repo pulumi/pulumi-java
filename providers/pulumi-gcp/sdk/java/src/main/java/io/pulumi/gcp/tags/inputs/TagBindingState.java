@@ -14,6 +14,10 @@ public final class TagBindingState extends io.pulumi.resources.ResourceArgs {
 
     public static final TagBindingState Empty = new TagBindingState();
 
+    /**
+     * The generated id for the TagBinding. This is a string of the form: 'tagBindings/{full-resource-name}/{tag-value-name}'
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -21,6 +25,10 @@ public final class TagBindingState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The full resource name of the resource the TagValue is bound to. E.g. //cloudresourcemanager.googleapis.com/projects/123
+     * 
+     */
     @InputImport(name="parent")
     private final @Nullable Input<String> parent;
 
@@ -28,6 +36,10 @@ public final class TagBindingState extends io.pulumi.resources.ResourceArgs {
         return this.parent == null ? Input.empty() : this.parent;
     }
 
+    /**
+     * The TagValue of the TagBinding. Must be of the form tagValues/456.
+     * 
+     */
     @InputImport(name="tagValue")
     private final @Nullable Input<String> tagValue;
 

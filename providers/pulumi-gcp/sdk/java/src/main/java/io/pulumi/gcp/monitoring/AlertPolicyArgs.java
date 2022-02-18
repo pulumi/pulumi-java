@@ -20,6 +20,11 @@ public final class AlertPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AlertPolicyArgs Empty = new AlertPolicyArgs();
 
+    /**
+     * Control over how this alert policy's notification channels are notified.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="alertStrategy")
     private final @Nullable Input<AlertPolicyAlertStrategyArgs> alertStrategy;
 
@@ -27,6 +32,12 @@ public final class AlertPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.alertStrategy == null ? Input.empty() : this.alertStrategy;
     }
 
+    /**
+     * How to combine the results of multiple conditions to
+     * determine if an incident should be opened.
+     * Possible values are `AND`, `OR`, and `AND_WITH_MATCHING_RESOURCE`.
+     * 
+     */
     @InputImport(name="combiner", required=true)
     private final Input<String> combiner;
 
@@ -34,6 +45,14 @@ public final class AlertPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.combiner;
     }
 
+    /**
+     * A list of conditions for the policy. The conditions are combined by
+     * AND or OR according to the combiner field. If the combined conditions
+     * evaluate to true, then an incident is created. A policy can have from
+     * one to six conditions.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="conditions", required=true)
     private final Input<List<AlertPolicyConditionArgs>> conditions;
 
@@ -41,6 +60,14 @@ public final class AlertPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.conditions;
     }
 
+    /**
+     * A short name or phrase used to identify the
+     * condition in dashboards, notifications, and
+     * incidents. To avoid confusion, don't use the same
+     * display name for multiple conditions in the same
+     * policy.
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -48,6 +75,15 @@ public final class AlertPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName;
     }
 
+    /**
+     * Documentation that is included with notifications and incidents related
+     * to this policy. Best practice is for the documentation to include information
+     * to help responders understand, mitigate, escalate, and correct the underlying
+     * problems detected by the alerting policy. Notification channels that have
+     * limited capacity might not show this documentation.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="documentation")
     private final @Nullable Input<AlertPolicyDocumentationArgs> documentation;
 
@@ -55,6 +91,10 @@ public final class AlertPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.documentation == null ? Input.empty() : this.documentation;
     }
 
+    /**
+     * Whether or not the policy is enabled. The default is true.
+     * 
+     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 
@@ -62,6 +102,16 @@ public final class AlertPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
+    /**
+     * Identifies the notification channels to which notifications should be
+     * sent when incidents are opened or closed or when new violations occur
+     * on an already opened incident. Each element of this array corresponds
+     * to the name field in each of the NotificationChannel objects that are
+     * returned from the notificationChannels.list method. The syntax of the
+     * entries in this field is
+     * `projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`
+     * 
+     */
     @InputImport(name="notificationChannels")
     private final @Nullable Input<List<String>> notificationChannels;
 
@@ -69,6 +119,11 @@ public final class AlertPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.notificationChannels == null ? Input.empty() : this.notificationChannels;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -76,6 +131,14 @@ public final class AlertPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * This field is intended to be used for organizing and identifying the AlertPolicy
+     * objects.The field can contain up to 64 entries. Each key and value is limited
+     * to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values
+     * can contain only lowercase letters, numerals, underscores, and dashes. Keys
+     * must begin with a letter.
+     * 
+     */
     @InputImport(name="userLabels")
     private final @Nullable Input<Map<String,String>> userLabels;
 

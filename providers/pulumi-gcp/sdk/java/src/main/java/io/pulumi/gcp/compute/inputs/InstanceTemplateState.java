@@ -28,6 +28,10 @@ public final class InstanceTemplateState extends io.pulumi.resources.ResourceArg
 
     public static final InstanceTemplateState Empty = new InstanceTemplateState();
 
+    /**
+     * Configure Nested Virtualisation and Simultaneous Hyper Threading on this VM. Structure is documented below
+     * 
+     */
     @InputImport(name="advancedMachineFeatures")
     private final @Nullable Input<InstanceTemplateAdvancedMachineFeaturesGetArgs> advancedMachineFeatures;
 
@@ -35,6 +39,11 @@ public final class InstanceTemplateState extends io.pulumi.resources.ResourceArg
         return this.advancedMachineFeatures == null ? Input.empty() : this.advancedMachineFeatures;
     }
 
+    /**
+     * Whether to allow sending and receiving of
+     * packets with non-matching source or destination IPs. This defaults to false.
+     * 
+     */
     @InputImport(name="canIpForward")
     private final @Nullable Input<Boolean> canIpForward;
 
@@ -42,6 +51,10 @@ public final class InstanceTemplateState extends io.pulumi.resources.ResourceArg
         return this.canIpForward == null ? Input.empty() : this.canIpForward;
     }
 
+    /**
+     * Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM. Structure is documented below
+     * 
+     */
     @InputImport(name="confidentialInstanceConfig")
     private final @Nullable Input<InstanceTemplateConfidentialInstanceConfigGetArgs> confidentialInstanceConfig;
 
@@ -49,6 +62,10 @@ public final class InstanceTemplateState extends io.pulumi.resources.ResourceArg
         return this.confidentialInstanceConfig == null ? Input.empty() : this.confidentialInstanceConfig;
     }
 
+    /**
+     * A brief description of this resource.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -56,6 +73,12 @@ public final class InstanceTemplateState extends io.pulumi.resources.ResourceArg
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Disks to attach to instances created from this template.
+     * This can be specified multiple times for multiple disks. Structure is
+     * documented below.
+     * 
+     */
     @InputImport(name="disks")
     private final @Nullable Input<List<InstanceTemplateDiskGetArgs>> disks;
 
@@ -63,6 +86,11 @@ public final class InstanceTemplateState extends io.pulumi.resources.ResourceArg
         return this.disks == null ? Input.empty() : this.disks;
     }
 
+    /**
+     * ) Enable [Virtual Displays](https://cloud.google.com/compute/docs/instances/enable-instance-virtual-display#verify_display_driver) on this instance.
+     * **Note**: `allow_stopping_for_update` must be set to true in order to update this field.
+     * 
+     */
     @InputImport(name="enableDisplay")
     private final @Nullable Input<Boolean> enableDisplay;
 
@@ -70,6 +98,10 @@ public final class InstanceTemplateState extends io.pulumi.resources.ResourceArg
         return this.enableDisplay == null ? Input.empty() : this.enableDisplay;
     }
 
+    /**
+     * List of the type and count of accelerator cards attached to the instance. Structure documented below.
+     * 
+     */
     @InputImport(name="guestAccelerators")
     private final @Nullable Input<List<InstanceTemplateGuestAcceleratorGetArgs>> guestAccelerators;
 
@@ -77,6 +109,11 @@ public final class InstanceTemplateState extends io.pulumi.resources.ResourceArg
         return this.guestAccelerators == null ? Input.empty() : this.guestAccelerators;
     }
 
+    /**
+     * A brief description to use for instances
+     * created from this template.
+     * 
+     */
     @InputImport(name="instanceDescription")
     private final @Nullable Input<String> instanceDescription;
 
@@ -84,6 +121,11 @@ public final class InstanceTemplateState extends io.pulumi.resources.ResourceArg
         return this.instanceDescription == null ? Input.empty() : this.instanceDescription;
     }
 
+    /**
+     * A set of ket/value label pairs to assign to disk created from
+     * this template
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -91,6 +133,10 @@ public final class InstanceTemplateState extends io.pulumi.resources.ResourceArg
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The machine type to create.
+     * 
+     */
     @InputImport(name="machineType")
     private final @Nullable Input<String> machineType;
 
@@ -98,6 +144,11 @@ public final class InstanceTemplateState extends io.pulumi.resources.ResourceArg
         return this.machineType == null ? Input.empty() : this.machineType;
     }
 
+    /**
+     * Metadata key/value pairs to make available from
+     * within instances created from this template.
+     * 
+     */
     @InputImport(name="metadata")
     private final @Nullable Input<Map<String,Object>> metadata;
 
@@ -105,6 +156,10 @@ public final class InstanceTemplateState extends io.pulumi.resources.ResourceArg
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
+    /**
+     * The unique fingerprint of the metadata.
+     * 
+     */
     @InputImport(name="metadataFingerprint")
     private final @Nullable Input<String> metadataFingerprint;
 
@@ -112,6 +167,13 @@ public final class InstanceTemplateState extends io.pulumi.resources.ResourceArg
         return this.metadataFingerprint == null ? Input.empty() : this.metadataFingerprint;
     }
 
+    /**
+     * An alternative to using the
+     * startup-script metadata key, mostly to match the compute_instance resource.
+     * This replaces the startup-script metadata key on the created instance and
+     * thus the two mechanisms are not allowed to be used simultaneously.
+     * 
+     */
     @InputImport(name="metadataStartupScript")
     private final @Nullable Input<String> metadataStartupScript;
 
@@ -119,6 +181,11 @@ public final class InstanceTemplateState extends io.pulumi.resources.ResourceArg
         return this.metadataStartupScript == null ? Input.empty() : this.metadataStartupScript;
     }
 
+    /**
+     * Specifies a minimum CPU platform. Applicable values are the friendly names of CPU platforms, such as
+     * `Intel Haswell` or `Intel Skylake`. See the complete list [here](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform).
+     * 
+     */
     @InputImport(name="minCpuPlatform")
     private final @Nullable Input<String> minCpuPlatform;
 
@@ -126,6 +193,11 @@ public final class InstanceTemplateState extends io.pulumi.resources.ResourceArg
         return this.minCpuPlatform == null ? Input.empty() : this.minCpuPlatform;
     }
 
+    /**
+     * The name of the instance template. If you leave
+     * this blank, the provider will auto-generate a unique name.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -133,6 +205,11 @@ public final class InstanceTemplateState extends io.pulumi.resources.ResourceArg
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Creates a unique name beginning with the specified
+     * prefix. Conflicts with `name`.
+     * 
+     */
     @InputImport(name="namePrefix")
     private final @Nullable Input<String> namePrefix;
 
@@ -140,6 +217,12 @@ public final class InstanceTemplateState extends io.pulumi.resources.ResourceArg
         return this.namePrefix == null ? Input.empty() : this.namePrefix;
     }
 
+    /**
+     * Networks to attach to instances created from
+     * this template. This can be specified multiple times for multiple networks.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="networkInterfaces")
     private final @Nullable Input<List<InstanceTemplateNetworkInterfaceGetArgs>> networkInterfaces;
 
@@ -147,6 +230,15 @@ public final class InstanceTemplateState extends io.pulumi.resources.ResourceArg
         return this.networkInterfaces == null ? Input.empty() : this.networkInterfaces;
     }
 
+    /**
+     * Configures network performance settings for the instance created from the
+     * template. Structure is documented below. **Note**: `machine_type`
+     * must be a [supported type](https://cloud.google.com/compute/docs/networking/configure-vm-with-high-bandwidth-configuration),
+     * the `image` used must include the [`GVNIC`](https://cloud.google.com/compute/docs/networking/using-gvnic#create-instance-gvnic-image)
+     * in `guest-os-features`, and `network_interface.0.nic-type` must be `GVNIC`
+     * in order for this setting to take effect.
+     * 
+     */
     @InputImport(name="networkPerformanceConfig")
     private final @Nullable Input<InstanceTemplateNetworkPerformanceConfigGetArgs> networkPerformanceConfig;
 
@@ -154,6 +246,11 @@ public final class InstanceTemplateState extends io.pulumi.resources.ResourceArg
         return this.networkPerformanceConfig == null ? Input.empty() : this.networkPerformanceConfig;
     }
 
+    /**
+     * The ID of the project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -161,6 +258,15 @@ public final class InstanceTemplateState extends io.pulumi.resources.ResourceArg
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * An instance template is a global resource that is not
+     * bound to a zone or a region. However, you can still specify some regional
+     * resources in an instance template, which restricts the template to the
+     * region where that resource resides. For example, a custom `subnetwork`
+     * resource is tied to a specific region. Defaults to the region of the
+     * Provider if no value is given.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 
@@ -168,6 +274,11 @@ public final class InstanceTemplateState extends io.pulumi.resources.ResourceArg
         return this.region == null ? Input.empty() : this.region;
     }
 
+    /**
+     * Specifies the reservations that this instance can consume from.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="reservationAffinity")
     private final @Nullable Input<InstanceTemplateReservationAffinityGetArgs> reservationAffinity;
 
@@ -175,6 +286,11 @@ public final class InstanceTemplateState extends io.pulumi.resources.ResourceArg
         return this.reservationAffinity == null ? Input.empty() : this.reservationAffinity;
     }
 
+    /**
+     * The scheduling strategy to use. More details about
+     * this configuration option are detailed below.
+     * 
+     */
     @InputImport(name="scheduling")
     private final @Nullable Input<InstanceTemplateSchedulingGetArgs> scheduling;
 
@@ -182,6 +298,10 @@ public final class InstanceTemplateState extends io.pulumi.resources.ResourceArg
         return this.scheduling == null ? Input.empty() : this.scheduling;
     }
 
+    /**
+     * The URI of the created resource.
+     * 
+     */
     @InputImport(name="selfLink")
     private final @Nullable Input<String> selfLink;
 
@@ -189,6 +309,10 @@ public final class InstanceTemplateState extends io.pulumi.resources.ResourceArg
         return this.selfLink == null ? Input.empty() : this.selfLink;
     }
 
+    /**
+     * Service account to attach to the instance. Structure is documented below.
+     * 
+     */
     @InputImport(name="serviceAccount")
     private final @Nullable Input<InstanceTemplateServiceAccountGetArgs> serviceAccount;
 
@@ -196,6 +320,11 @@ public final class InstanceTemplateState extends io.pulumi.resources.ResourceArg
         return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
     }
 
+    /**
+     * Enable [Shielded VM](https://cloud.google.com/security/shielded-cloud/shielded-vm) on this instance. Shielded VM provides verifiable integrity to prevent against malware and rootkits. Defaults to disabled. Structure is documented below.
+     * **Note**: `shielded_instance_config` can only be used with boot images with shielded vm support. See the complete list [here](https://cloud.google.com/compute/docs/images#shielded-images).
+     * 
+     */
     @InputImport(name="shieldedInstanceConfig")
     private final @Nullable Input<InstanceTemplateShieldedInstanceConfigGetArgs> shieldedInstanceConfig;
 
@@ -203,6 +332,10 @@ public final class InstanceTemplateState extends io.pulumi.resources.ResourceArg
         return this.shieldedInstanceConfig == null ? Input.empty() : this.shieldedInstanceConfig;
     }
 
+    /**
+     * Tags to attach to the instance.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<String>> tags;
 
@@ -210,6 +343,10 @@ public final class InstanceTemplateState extends io.pulumi.resources.ResourceArg
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The unique fingerprint of the tags.
+     * 
+     */
     @InputImport(name="tagsFingerprint")
     private final @Nullable Input<String> tagsFingerprint;
 

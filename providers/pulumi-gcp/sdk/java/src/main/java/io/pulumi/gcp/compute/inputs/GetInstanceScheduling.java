@@ -16,6 +16,11 @@ public final class GetInstanceScheduling extends io.pulumi.resources.InvokeArgs 
 
     public static final GetInstanceScheduling Empty = new GetInstanceScheduling();
 
+    /**
+     * Specifies if the instance should be
+     * restarted if it was terminated by Compute Engine (not a user).
+     * 
+     */
     @InputImport(name="automaticRestart", required=true)
     private final Boolean automaticRestart;
 
@@ -37,6 +42,12 @@ public final class GetInstanceScheduling extends io.pulumi.resources.InvokeArgs 
         return this.nodeAffinities;
     }
 
+    /**
+     * Describes maintenance behavior for the
+     * instance. One of `MIGRATE` or `TERMINATE`, for more info, read
+     * [here](https://cloud.google.com/compute/docs/instances/setting-instance-scheduling-options)
+     * 
+     */
     @InputImport(name="onHostMaintenance", required=true)
     private final String onHostMaintenance;
 
@@ -44,6 +55,10 @@ public final class GetInstanceScheduling extends io.pulumi.resources.InvokeArgs 
         return this.onHostMaintenance;
     }
 
+    /**
+     * Whether the instance is preemptible.
+     * 
+     */
     @InputImport(name="preemptible", required=true)
     private final Boolean preemptible;
 

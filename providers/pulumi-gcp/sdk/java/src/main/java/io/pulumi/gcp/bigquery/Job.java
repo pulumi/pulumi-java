@@ -20,81 +20,234 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Jobs are actions that BigQuery runs on your behalf to load data, export data, query data, or copy data.
+ * Once a BigQuery job is created, it cannot be changed or deleted.
+ * 
+ * To get more information about Job, see:
+ * 
+ * * [API documentation](https://cloud.google.com/bigquery/docs/reference/rest/v2/jobs)
+ * * How-to Guides
+ *     * [BigQuery Jobs Intro](https://cloud.google.com/bigquery/docs/jobs-overview)
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * Job can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:bigquery/job:Job default projects/{{project}}/jobs/{{job_id}}/location/{{location}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:bigquery/job:Job default projects/{{project}}/jobs/{{job_id}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:bigquery/job:Job default {{project}}/{{job_id}}/{{location}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:bigquery/job:Job default {{job_id}}/{{location}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:bigquery/job:Job default {{project}}/{{job_id}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:bigquery/job:Job default {{job_id}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:bigquery/job:Job")
 public class Job extends io.pulumi.resources.CustomResource {
+    /**
+     * Copies a table.
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="copy", type=JobCopy.class, parameters={})
     private Output</* @Nullable */ JobCopy> copy;
 
+    /**
+     * @return Copies a table.
+     * Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ JobCopy> getCopy() {
         return this.copy;
     }
+    /**
+     * Configures an extract job.
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="extract", type=JobExtract.class, parameters={})
     private Output</* @Nullable */ JobExtract> extract;
 
+    /**
+     * @return Configures an extract job.
+     * Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ JobExtract> getExtract() {
         return this.extract;
     }
+    /**
+     * The ID of the job. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), or dashes (-). The maximum length is 1,024 characters.
+     * 
+     */
     @OutputExport(name="jobId", type=String.class, parameters={})
     private Output<String> jobId;
 
+    /**
+     * @return The ID of the job. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), or dashes (-). The maximum length is 1,024 characters.
+     * 
+     */
     public Output<String> getJobId() {
         return this.jobId;
     }
+    /**
+     * Job timeout in milliseconds. If this time limit is exceeded, BigQuery may attempt to terminate the job.
+     * 
+     */
     @OutputExport(name="jobTimeoutMs", type=String.class, parameters={})
     private Output</* @Nullable */ String> jobTimeoutMs;
 
+    /**
+     * @return Job timeout in milliseconds. If this time limit is exceeded, BigQuery may attempt to terminate the job.
+     * 
+     */
     public Output</* @Nullable */ String> getJobTimeoutMs() {
         return this.jobTimeoutMs;
     }
+    /**
+     * The type of the job.
+     * 
+     */
     @OutputExport(name="jobType", type=String.class, parameters={})
     private Output<String> jobType;
 
+    /**
+     * @return The type of the job.
+     * 
+     */
     public Output<String> getJobType() {
         return this.jobType;
     }
+    /**
+     * The labels associated with this job. You can use these to organize and group your jobs.
+     * 
+     */
     @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
+    /**
+     * @return The labels associated with this job. You can use these to organize and group your jobs.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getLabels() {
         return this.labels;
     }
+    /**
+     * Configures a load job.
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="load", type=JobLoad.class, parameters={})
     private Output</* @Nullable */ JobLoad> load;
 
+    /**
+     * @return Configures a load job.
+     * Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ JobLoad> getLoad() {
         return this.load;
     }
+    /**
+     * The geographic location of the job. The default value is US.
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return The geographic location of the job. The default value is US.
+     * 
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * Configures a query job.
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="query", type=JobQuery.class, parameters={})
     private Output</* @Nullable */ JobQuery> query;
 
+    /**
+     * @return Configures a query job.
+     * Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ JobQuery> getQuery() {
         return this.query;
     }
+    /**
+     * The status of this job. Examine this value when polling an asynchronous job to see if the job is complete.
+     * 
+     */
     @OutputExport(name="statuses", type=List.class, parameters={JobStatus.class})
     private Output<List<JobStatus>> statuses;
 
+    /**
+     * @return The status of this job. Examine this value when polling an asynchronous job to see if the job is complete.
+     * 
+     */
     public Output<List<JobStatus>> getStatuses() {
         return this.statuses;
     }
+    /**
+     * Email address of the user who ran the job.
+     * 
+     */
     @OutputExport(name="userEmail", type=String.class, parameters={})
     private Output<String> userEmail;
 
+    /**
+     * @return Email address of the user who ran the job.
+     * 
+     */
     public Output<String> getUserEmail() {
         return this.userEmail;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Job(String name, JobArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:bigquery/job:Job", name, args == null ? JobArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -110,6 +263,15 @@ public class Job extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Job get(String name, Input<String> id, @Nullable JobState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Job(name, id, state, options);
     }

@@ -16,6 +16,10 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NotificationArgs Empty = new NotificationArgs();
 
+    /**
+     * The name of the bucket.
+     * 
+     */
     @InputImport(name="bucket", required=true)
     private final Input<String> bucket;
 
@@ -23,6 +27,10 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
         return this.bucket;
     }
 
+    /**
+     * A set of key/value attribute pairs to attach to each Cloud PubSub message published for this notification subscription
+     * 
+     */
     @InputImport(name="customAttributes")
     private final @Nullable Input<Map<String,String>> customAttributes;
 
@@ -30,6 +38,10 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
         return this.customAttributes == null ? Input.empty() : this.customAttributes;
     }
 
+    /**
+     * List of event type filters for this notification config. If not specified, Cloud Storage will send notifications for all event types. The valid types are: `"OBJECT_FINALIZE"`, `"OBJECT_METADATA_UPDATE"`, `"OBJECT_DELETE"`, `"OBJECT_ARCHIVE"`
+     * 
+     */
     @InputImport(name="eventTypes")
     private final @Nullable Input<List<String>> eventTypes;
 
@@ -37,6 +49,10 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
         return this.eventTypes == null ? Input.empty() : this.eventTypes;
     }
 
+    /**
+     * Specifies a prefix path filter for this notification config. Cloud Storage will only send notifications for objects in this bucket whose names begin with the specified prefix.
+     * 
+     */
     @InputImport(name="objectNamePrefix")
     private final @Nullable Input<String> objectNamePrefix;
 
@@ -44,6 +60,10 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
         return this.objectNamePrefix == null ? Input.empty() : this.objectNamePrefix;
     }
 
+    /**
+     * The desired content of the Payload. One of `"JSON_API_V1"` or `"NONE"`.
+     * 
+     */
     @InputImport(name="payloadFormat", required=true)
     private final Input<String> payloadFormat;
 
@@ -51,6 +71,13 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
         return this.payloadFormat;
     }
 
+    /**
+     * The Cloud PubSub topic to which this subscription publishes. Expects either the
+     * topic name, assumed to belong to the default GCP provider project, or the project-level name,
+     * i.e. `projects/my-gcp-project/topics/my-topic` or `my-topic`. If the project is not set in the provider,
+     * you will need to use the project-level name.
+     * 
+     */
     @InputImport(name="topic", required=true)
     private final Input<String> topic;
 

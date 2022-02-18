@@ -23,6 +23,10 @@ public final class DatabaseIAMBindingState extends io.pulumi.resources.ResourceA
         return this.condition == null ? Input.empty() : this.condition;
     }
 
+    /**
+     * The name of the Spanner database.
+     * 
+     */
     @InputImport(name="database")
     private final @Nullable Input<String> database;
 
@@ -30,6 +34,10 @@ public final class DatabaseIAMBindingState extends io.pulumi.resources.ResourceA
         return this.database == null ? Input.empty() : this.database;
     }
 
+    /**
+     * (Computed) The etag of the database's IAM policy.
+     * 
+     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -37,6 +45,10 @@ public final class DatabaseIAMBindingState extends io.pulumi.resources.ResourceA
         return this.etag == null ? Input.empty() : this.etag;
     }
 
+    /**
+     * The name of the Spanner instance the database belongs to.
+     * 
+     */
     @InputImport(name="instance")
     private final @Nullable Input<String> instance;
 
@@ -51,6 +63,11 @@ public final class DatabaseIAMBindingState extends io.pulumi.resources.ResourceA
         return this.members == null ? Input.empty() : this.members;
     }
 
+    /**
+     * The ID of the project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -58,6 +75,12 @@ public final class DatabaseIAMBindingState extends io.pulumi.resources.ResourceA
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The role that should be applied. Only one
+     * `gcp.spanner.DatabaseIAMBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     @InputImport(name="role")
     private final @Nullable Input<String> role;
 

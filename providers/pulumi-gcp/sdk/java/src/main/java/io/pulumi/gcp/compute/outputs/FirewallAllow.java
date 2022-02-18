@@ -11,7 +11,23 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FirewallAllow {
+    /**
+     * An optional list of ports to which this rule applies. This field
+     * is only applicable for UDP or TCP protocol. Each entry must be
+     * either an integer or a range. If not specified, this rule
+     * applies to connections through any port.
+     * Example inputs include: ["22"], ["80","443"], and
+     * ["12345-12349"].
+     * 
+     */
     private final @Nullable List<String> ports;
+    /**
+     * The IP protocol to which this rule applies. The protocol type is
+     * required when creating a firewall rule. This value can either be
+     * one of the following well known protocol strings (tcp, udp,
+     * icmp, esp, ah, sctp, ipip, all), or the IP protocol number.
+     * 
+     */
     private final String protocol;
 
     @OutputCustomType.Constructor({"ports","protocol"})
@@ -22,9 +38,25 @@ public final class FirewallAllow {
         this.protocol = Objects.requireNonNull(protocol);
     }
 
+    /**
+     * An optional list of ports to which this rule applies. This field
+     * is only applicable for UDP or TCP protocol. Each entry must be
+     * either an integer or a range. If not specified, this rule
+     * applies to connections through any port.
+     * Example inputs include: ["22"], ["80","443"], and
+     * ["12345-12349"].
+     * 
+     */
     public List<String> getPorts() {
         return this.ports == null ? List.of() : this.ports;
     }
+    /**
+     * The IP protocol to which this rule applies. The protocol type is
+     * required when creating a firewall rule. This value can either be
+     * one of the following well known protocol strings (tcp, udp,
+     * icmp, esp, ah, sctp, ipip, all), or the IP protocol number.
+     * 
+     */
     public String getProtocol() {
         return this.protocol;
     }

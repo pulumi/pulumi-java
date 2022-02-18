@@ -14,6 +14,11 @@ public final class TriggerWebhookConfigGetArgs extends io.pulumi.resources.Resou
 
     public static final TriggerWebhookConfigGetArgs Empty = new TriggerWebhookConfigGetArgs();
 
+    /**
+     * Secrets to decrypt using Cloud Key Management Service.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="secret", required=true)
     private final Input<String> secret;
 
@@ -21,6 +26,12 @@ public final class TriggerWebhookConfigGetArgs extends io.pulumi.resources.Resou
         return this.secret;
     }
 
+    /**
+     * - 
+     * Potential issues with the underlying Pub/Sub subscription configuration.
+     * Only populated on get requests.
+     * 
+     */
     @InputImport(name="state")
     private final @Nullable Input<String> state;
 

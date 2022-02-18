@@ -9,6 +9,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ApiConfigOpenapiDocument {
+    /**
+     * The OpenAPI Specification document file.
+     * Structure is documented below.
+     * 
+     */
     private final ApiConfigOpenapiDocumentDocument document;
 
     @OutputCustomType.Constructor({"document"})
@@ -16,6 +21,11 @@ public final class ApiConfigOpenapiDocument {
         this.document = Objects.requireNonNull(document);
     }
 
+    /**
+     * The OpenAPI Specification document file.
+     * Structure is documented below.
+     * 
+     */
     public ApiConfigOpenapiDocumentDocument getDocument() {
         return this.document;
     }

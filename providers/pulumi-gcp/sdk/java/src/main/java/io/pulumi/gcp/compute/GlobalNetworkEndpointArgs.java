@@ -15,6 +15,11 @@ public final class GlobalNetworkEndpointArgs extends io.pulumi.resources.Resourc
 
     public static final GlobalNetworkEndpointArgs Empty = new GlobalNetworkEndpointArgs();
 
+    /**
+     * Fully qualified domain name of network endpoint.
+     * This can only be specified when network_endpoint_type of the NEG is INTERNET_FQDN_PORT.
+     * 
+     */
     @InputImport(name="fqdn")
     private final @Nullable Input<String> fqdn;
 
@@ -22,6 +27,10 @@ public final class GlobalNetworkEndpointArgs extends io.pulumi.resources.Resourc
         return this.fqdn == null ? Input.empty() : this.fqdn;
     }
 
+    /**
+     * The global network endpoint group this endpoint is part of.
+     * 
+     */
     @InputImport(name="globalNetworkEndpointGroup", required=true)
     private final Input<String> globalNetworkEndpointGroup;
 
@@ -29,6 +38,10 @@ public final class GlobalNetworkEndpointArgs extends io.pulumi.resources.Resourc
         return this.globalNetworkEndpointGroup;
     }
 
+    /**
+     * IPv4 address external endpoint.
+     * 
+     */
     @InputImport(name="ipAddress")
     private final @Nullable Input<String> ipAddress;
 
@@ -36,6 +49,10 @@ public final class GlobalNetworkEndpointArgs extends io.pulumi.resources.Resourc
         return this.ipAddress == null ? Input.empty() : this.ipAddress;
     }
 
+    /**
+     * Port number of the external endpoint.
+     * 
+     */
     @InputImport(name="port", required=true)
     private final Input<Integer> port;
 
@@ -43,6 +60,11 @@ public final class GlobalNetworkEndpointArgs extends io.pulumi.resources.Resourc
         return this.port;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

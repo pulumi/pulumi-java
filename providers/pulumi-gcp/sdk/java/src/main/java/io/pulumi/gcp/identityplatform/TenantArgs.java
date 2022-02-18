@@ -15,6 +15,10 @@ public final class TenantArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TenantArgs Empty = new TenantArgs();
 
+    /**
+     * Whether to allow email/password user authentication.
+     * 
+     */
     @InputImport(name="allowPasswordSignup")
     private final @Nullable Input<Boolean> allowPasswordSignup;
 
@@ -22,6 +26,12 @@ public final class TenantArgs extends io.pulumi.resources.ResourceArgs {
         return this.allowPasswordSignup == null ? Input.empty() : this.allowPasswordSignup;
     }
 
+    /**
+     * Whether authentication is disabled for the tenant. If true, the users under
+     * the disabled tenant are not allowed to sign-in. Admins of the disabled tenant
+     * are not able to manage its users.
+     * 
+     */
     @InputImport(name="disableAuth")
     private final @Nullable Input<Boolean> disableAuth;
 
@@ -29,6 +39,10 @@ public final class TenantArgs extends io.pulumi.resources.ResourceArgs {
         return this.disableAuth == null ? Input.empty() : this.disableAuth;
     }
 
+    /**
+     * Human friendly display name of the tenant.
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -36,6 +50,10 @@ public final class TenantArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName;
     }
 
+    /**
+     * Whether to enable email link user authentication.
+     * 
+     */
     @InputImport(name="enableEmailLinkSignin")
     private final @Nullable Input<Boolean> enableEmailLinkSignin;
 
@@ -43,6 +61,11 @@ public final class TenantArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableEmailLinkSignin == null ? Input.empty() : this.enableEmailLinkSignin;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

@@ -14,6 +14,10 @@ public final class OrganizationSecurityPolicyState extends io.pulumi.resources.R
 
     public static final OrganizationSecurityPolicyState Empty = new OrganizationSecurityPolicyState();
 
+    /**
+     * A textual description for the organization security policy.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -21,6 +25,10 @@ public final class OrganizationSecurityPolicyState extends io.pulumi.resources.R
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * A textual name of the security policy.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -28,6 +36,10 @@ public final class OrganizationSecurityPolicyState extends io.pulumi.resources.R
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * Fingerprint of this resource. This field is used internally during updates of this resource.
+     * 
+     */
     @InputImport(name="fingerprint")
     private final @Nullable Input<String> fingerprint;
 
@@ -35,6 +47,11 @@ public final class OrganizationSecurityPolicyState extends io.pulumi.resources.R
         return this.fingerprint == null ? Input.empty() : this.fingerprint;
     }
 
+    /**
+     * The parent of this OrganizationSecurityPolicy in the Cloud Resource Hierarchy.
+     * Format: organizations/{organization_id} or folders/{folder_id}
+     * 
+     */
     @InputImport(name="parent")
     private final @Nullable Input<String> parent;
 
@@ -42,6 +59,10 @@ public final class OrganizationSecurityPolicyState extends io.pulumi.resources.R
         return this.parent == null ? Input.empty() : this.parent;
     }
 
+    /**
+     * The unique identifier for the resource. This identifier is defined by the server.
+     * 
+     */
     @InputImport(name="policyId")
     private final @Nullable Input<String> policyId;
 
@@ -49,6 +70,14 @@ public final class OrganizationSecurityPolicyState extends io.pulumi.resources.R
         return this.policyId == null ? Input.empty() : this.policyId;
     }
 
+    /**
+     * The type indicates the intended use of the security policy.
+     * For organization security policies, the only supported type
+     * is "FIREWALL".
+     * Default value is `FIREWALL`.
+     * Possible values are `FIREWALL`.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 

@@ -15,6 +15,11 @@ public final class ClusterAddonsConfigCloudrunConfigArgs extends io.pulumi.resou
 
     public static final ClusterAddonsConfigCloudrunConfigArgs Empty = new ClusterAddonsConfigCloudrunConfigArgs();
 
+    /**
+     * The status of the Istio addon, which makes it easy to set up Istio for services in a
+     * cluster. It is disabled by default. Set `disabled = false` to enable.
+     * 
+     */
     @InputImport(name="disabled", required=true)
     private final Input<Boolean> disabled;
 
@@ -22,6 +27,11 @@ public final class ClusterAddonsConfigCloudrunConfigArgs extends io.pulumi.resou
         return this.disabled;
     }
 
+    /**
+     * The load balancer type of CloudRun ingress service. It is external load balancer by default.
+     * Set `load_balancer_type=LOAD_BALANCER_TYPE_INTERNAL` to configure it as internal load balancer.
+     * 
+     */
     @InputImport(name="loadBalancerType")
     private final @Nullable Input<String> loadBalancerType;
 

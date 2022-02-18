@@ -13,6 +13,10 @@ public final class LiteTopicPartitionConfigCapacityArgs extends io.pulumi.resour
 
     public static final LiteTopicPartitionConfigCapacityArgs Empty = new LiteTopicPartitionConfigCapacityArgs();
 
+    /**
+     * Subscribe throughput capacity per partition in MiB/s. Must be >= 4 and <= 16.
+     * 
+     */
     @InputImport(name="publishMibPerSec", required=true)
     private final Input<Integer> publishMibPerSec;
 
@@ -20,6 +24,10 @@ public final class LiteTopicPartitionConfigCapacityArgs extends io.pulumi.resour
         return this.publishMibPerSec;
     }
 
+    /**
+     * Publish throughput capacity per partition in MiB/s. Must be >= 4 and <= 16.
+     * 
+     */
     @InputImport(name="subscribeMibPerSec", required=true)
     private final Input<Integer> subscribeMibPerSec;
 

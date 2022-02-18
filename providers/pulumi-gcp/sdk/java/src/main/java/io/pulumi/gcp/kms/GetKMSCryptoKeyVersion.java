@@ -13,6 +13,23 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetKMSCryptoKeyVersion {
+/**
+ * Provides access to a Google Cloud Platform KMS CryptoKeyVersion. For more information see
+ * [the official documentation](https://cloud.google.com/kms/docs/object-hierarchy#key_version)
+ * and
+ * [API](https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys.cryptoKeyVersions).
+ * 
+ * A CryptoKeyVersion represents an individual cryptographic key, and the associated key material.
+ * 
+ * ## Example Usage
+ * 
+ *
+ * A collection of arguments for invoking getKMSCryptoKeyVersion.
+ * 
+ *
+ * A collection of values returned by getKMSCryptoKeyVersion.
+ * 
+ */
     public static CompletableFuture<GetKMSCryptoKeyVersionResult> invokeAsync(GetKMSCryptoKeyVersionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:kms/getKMSCryptoKeyVersion:getKMSCryptoKeyVersion", TypeShape.of(GetKMSCryptoKeyVersionResult.class), args == null ? GetKMSCryptoKeyVersionArgs.Empty : args, Utilities.withVersion(options));
     }

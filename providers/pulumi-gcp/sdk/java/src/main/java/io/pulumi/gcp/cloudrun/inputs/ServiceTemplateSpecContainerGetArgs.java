@@ -20,6 +20,18 @@ public final class ServiceTemplateSpecContainerGetArgs extends io.pulumi.resourc
 
     public static final ServiceTemplateSpecContainerGetArgs Empty = new ServiceTemplateSpecContainerGetArgs();
 
+    /**
+     * Arguments to the entrypoint.
+     * The docker image's CMD is used if this is not provided.
+     * Variable references $(VAR_NAME) are expanded using the container's
+     * environment. If a variable cannot be resolved, the reference in the input
+     * string will be unchanged. The $(VAR_NAME) syntax can be escaped with a
+     * double $$, ie: $$(VAR_NAME). Escaped references will never be expanded,
+     * regardless of whether the variable exists or not.
+     * More info:
+     * https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
+     * 
+     */
     @InputImport(name="args")
     private final @Nullable Input<List<String>> args;
 
@@ -27,6 +39,18 @@ public final class ServiceTemplateSpecContainerGetArgs extends io.pulumi.resourc
         return this.args == null ? Input.empty() : this.args;
     }
 
+    /**
+     * Entrypoint array. Not executed within a shell.
+     * The docker image's ENTRYPOINT is used if this is not provided.
+     * Variable references $(VAR_NAME) are expanded using the container's
+     * environment. If a variable cannot be resolved, the reference in the input
+     * string will be unchanged. The $(VAR_NAME) syntax can be escaped with a
+     * double $$, ie: $$(VAR_NAME). Escaped references will never be expanded,
+     * regardless of whether the variable exists or not.
+     * More info:
+     * https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
+     * 
+     */
     @InputImport(name="commands")
     private final @Nullable Input<List<String>> commands;
 
@@ -34,6 +58,21 @@ public final class ServiceTemplateSpecContainerGetArgs extends io.pulumi.resourc
         return this.commands == null ? Input.empty() : this.commands;
     }
 
+    /**
+     * - 
+     * (Optional, Deprecated)
+     * List of sources to populate environment variables in the container.
+     * All invalid keys will be reported as an event when the container is starting.
+     * When a key exists in multiple sources, the value associated with the last source will
+     * take precedence. Values defined by an Env with a duplicate key will take
+     * precedence.
+     * Structure is documented below.
+     * 
+     * @deprecated
+     * Not supported by Cloud Run fully managed
+     * 
+     */
+    @Deprecated /* Not supported by Cloud Run fully managed */
     @InputImport(name="envFroms")
     private final @Nullable Input<List<ServiceTemplateSpecContainerEnvFromGetArgs>> envFroms;
 
@@ -42,6 +81,11 @@ public final class ServiceTemplateSpecContainerGetArgs extends io.pulumi.resourc
         return this.envFroms == null ? Input.empty() : this.envFroms;
     }
 
+    /**
+     * List of environment variables to set in the container.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="envs")
     private final @Nullable Input<List<ServiceTemplateSpecContainerEnvGetArgs>> envs;
 
@@ -49,6 +93,12 @@ public final class ServiceTemplateSpecContainerGetArgs extends io.pulumi.resourc
         return this.envs == null ? Input.empty() : this.envs;
     }
 
+    /**
+     * Docker image name. This is most often a reference to a container located
+     * in the container registry, such as gcr.io/cloudrun/hello
+     * More info: https://kubernetes.io/docs/concepts/containers/images
+     * 
+     */
     @InputImport(name="image", required=true)
     private final Input<String> image;
 
@@ -56,6 +106,13 @@ public final class ServiceTemplateSpecContainerGetArgs extends io.pulumi.resourc
         return this.image;
     }
 
+    /**
+     * List of open ports in the container.
+     * More Info:
+     * https://cloud.google.com/run/docs/reference/rest/v1/RevisionSpec#ContainerPort
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="ports")
     private final @Nullable Input<List<ServiceTemplateSpecContainerPortGetArgs>> ports;
 
@@ -63,6 +120,13 @@ public final class ServiceTemplateSpecContainerGetArgs extends io.pulumi.resourc
         return this.ports == null ? Input.empty() : this.ports;
     }
 
+    /**
+     * Compute Resources required by this container. Used to set values such as max memory
+     * More info:
+     * https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#requests-and-limits
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="resources")
     private final @Nullable Input<ServiceTemplateSpecContainerResourcesGetArgs> resources;
 
@@ -70,6 +134,12 @@ public final class ServiceTemplateSpecContainerGetArgs extends io.pulumi.resourc
         return this.resources == null ? Input.empty() : this.resources;
     }
 
+    /**
+     * Volume to mount into the container's filesystem.
+     * Only supports SecretVolumeSources.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="volumeMounts")
     private final @Nullable Input<List<ServiceTemplateSpecContainerVolumeMountGetArgs>> volumeMounts;
 
@@ -77,6 +147,18 @@ public final class ServiceTemplateSpecContainerGetArgs extends io.pulumi.resourc
         return this.volumeMounts == null ? Input.empty() : this.volumeMounts;
     }
 
+    /**
+     * - 
+     * (Optional, Deprecated)
+     * Container's working directory.
+     * If not specified, the container runtime's default will be used, which
+     * might be configured in the container image.
+     * 
+     * @deprecated
+     * Not supported by Cloud Run fully managed
+     * 
+     */
+    @Deprecated /* Not supported by Cloud Run fully managed */
     @InputImport(name="workingDir")
     private final @Nullable Input<String> workingDir;
 

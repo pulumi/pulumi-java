@@ -15,6 +15,13 @@ public final class FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs exte
 
     public static final FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs Empty = new FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs();
 
+    /**
+     * The depth for all recursive structures in the output analytics schema. For example, concept in the CodeSystem
+     * resource is a recursive structure; when the depth is 2, the CodeSystem table will have a column called
+     * concept.concept but not concept.concept.concept. If not specified or set to 0, the server will use the default
+     * value 2. The maximum depth allowed is 5.
+     * 
+     */
     @InputImport(name="recursiveStructureDepth", required=true)
     private final Input<Integer> recursiveStructureDepth;
 
@@ -22,6 +29,14 @@ public final class FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs exte
         return this.recursiveStructureDepth;
     }
 
+    /**
+     * Specifies the output schema type. Only ANALYTICS is supported at this time.
+     * * ANALYTICS: Analytics schema defined by the FHIR community.
+     *   See https://github.com/FHIR/sql-on-fhir/blob/master/sql-on-fhir.md.
+     *   Default value is `ANALYTICS`.
+     *   Possible values are `ANALYTICS`.
+     * 
+     */
     @InputImport(name="schemaType")
     private final @Nullable Input<String> schemaType;
 

@@ -15,6 +15,10 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
 
     public static final SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigGetArgs Empty = new SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigGetArgs();
 
+    /**
+     * If set to true, enables CAAP for L7 DDoS detection.
+     * 
+     */
     @InputImport(name="enable")
     private final @Nullable Input<Boolean> enable;
 
@@ -22,6 +26,10 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
         return this.enable == null ? Input.empty() : this.enable;
     }
 
+    /**
+     * Rule visibility can be one of the following: STANDARD - opaque rules. (default) PREMIUM - transparent rules.
+     * 
+     */
     @InputImport(name="ruleVisibility")
     private final @Nullable Input<String> ruleVisibility;
 

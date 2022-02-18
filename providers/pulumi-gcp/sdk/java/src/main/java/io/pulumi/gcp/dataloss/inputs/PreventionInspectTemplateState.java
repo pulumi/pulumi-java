@@ -15,6 +15,10 @@ public final class PreventionInspectTemplateState extends io.pulumi.resources.Re
 
     public static final PreventionInspectTemplateState Empty = new PreventionInspectTemplateState();
 
+    /**
+     * A description of the inspect template.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -22,6 +26,10 @@ public final class PreventionInspectTemplateState extends io.pulumi.resources.Re
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * User set display name of the inspect template.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -29,6 +37,11 @@ public final class PreventionInspectTemplateState extends io.pulumi.resources.Re
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The core content of the template.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="inspectConfig")
     private final @Nullable Input<PreventionInspectTemplateInspectConfigGetArgs> inspectConfig;
 
@@ -36,6 +49,11 @@ public final class PreventionInspectTemplateState extends io.pulumi.resources.Re
         return this.inspectConfig == null ? Input.empty() : this.inspectConfig;
     }
 
+    /**
+     * Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
+     * or `projects/project-id/storedInfoTypes/432452342`.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -43,6 +61,14 @@ public final class PreventionInspectTemplateState extends io.pulumi.resources.Re
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The parent of the inspect template in any of the following formats:
+     * * `projects/{{project}}`
+     * * `projects/{{project}}/locations/{{location}}`
+     * * `organizations/{{organization_id}}`
+     * * `organizations/{{organization_id}}/locations/{{location}}`
+     * 
+     */
     @InputImport(name="parent")
     private final @Nullable Input<String> parent;
 

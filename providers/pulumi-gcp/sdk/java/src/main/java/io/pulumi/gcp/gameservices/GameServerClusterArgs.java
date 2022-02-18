@@ -16,6 +16,10 @@ public final class GameServerClusterArgs extends io.pulumi.resources.ResourceArg
 
     public static final GameServerClusterArgs Empty = new GameServerClusterArgs();
 
+    /**
+     * Required. The resource name of the game server cluster
+     * 
+     */
     @InputImport(name="clusterId", required=true)
     private final Input<String> clusterId;
 
@@ -23,6 +27,12 @@ public final class GameServerClusterArgs extends io.pulumi.resources.ResourceArg
         return this.clusterId;
     }
 
+    /**
+     * Game server cluster connection information. This information is used to
+     * manage game server clusters.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="connectionInfo", required=true)
     private final Input<GameServerClusterConnectionInfoArgs> connectionInfo;
 
@@ -30,6 +40,10 @@ public final class GameServerClusterArgs extends io.pulumi.resources.ResourceArg
         return this.connectionInfo;
     }
 
+    /**
+     * Human readable description of the cluster.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -37,6 +51,11 @@ public final class GameServerClusterArgs extends io.pulumi.resources.ResourceArg
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The labels associated with this game server cluster. Each label is a
+     * key-value pair.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -44,6 +63,10 @@ public final class GameServerClusterArgs extends io.pulumi.resources.ResourceArg
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * Location of the Cluster.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -51,6 +74,11 @@ public final class GameServerClusterArgs extends io.pulumi.resources.ResourceArg
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -58,6 +86,10 @@ public final class GameServerClusterArgs extends io.pulumi.resources.ResourceArg
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The realm id of the game server realm.
+     * 
+     */
     @InputImport(name="realmId", required=true)
     private final Input<String> realmId;
 

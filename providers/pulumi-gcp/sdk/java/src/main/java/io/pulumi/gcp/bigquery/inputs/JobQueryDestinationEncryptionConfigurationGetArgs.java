@@ -14,6 +14,11 @@ public final class JobQueryDestinationEncryptionConfigurationGetArgs extends io.
 
     public static final JobQueryDestinationEncryptionConfigurationGetArgs Empty = new JobQueryDestinationEncryptionConfigurationGetArgs();
 
+    /**
+     * Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
+     * The BigQuery Service Account associated with your project requires access to this encryption key.
+     * 
+     */
     @InputImport(name="kmsKeyName", required=true)
     private final Input<String> kmsKeyName;
 
@@ -21,6 +26,11 @@ public final class JobQueryDestinationEncryptionConfigurationGetArgs extends io.
         return this.kmsKeyName;
     }
 
+    /**
+     * - 
+     * Describes the Cloud KMS encryption key version used to protect destination BigQuery table.
+     * 
+     */
     @InputImport(name="kmsKeyVersion")
     private final @Nullable Input<String> kmsKeyVersion;
 

@@ -15,6 +15,10 @@ public final class FeatureMembershipState extends io.pulumi.resources.ResourceAr
 
     public static final FeatureMembershipState Empty = new FeatureMembershipState();
 
+    /**
+     * Config Management-specific spec. Structure is documented below.
+     * 
+     */
     @InputImport(name="configmanagement")
     private final @Nullable Input<FeatureMembershipConfigmanagementGetArgs> configmanagement;
 
@@ -22,6 +26,10 @@ public final class FeatureMembershipState extends io.pulumi.resources.ResourceAr
         return this.configmanagement == null ? Input.empty() : this.configmanagement;
     }
 
+    /**
+     * The name of the feature
+     * 
+     */
     @InputImport(name="feature")
     private final @Nullable Input<String> feature;
 
@@ -29,6 +37,10 @@ public final class FeatureMembershipState extends io.pulumi.resources.ResourceAr
         return this.feature == null ? Input.empty() : this.feature;
     }
 
+    /**
+     * The location of the feature
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -36,6 +48,10 @@ public final class FeatureMembershipState extends io.pulumi.resources.ResourceAr
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the membership
+     * 
+     */
     @InputImport(name="membership")
     private final @Nullable Input<String> membership;
 
@@ -43,6 +59,10 @@ public final class FeatureMembershipState extends io.pulumi.resources.ResourceAr
         return this.membership == null ? Input.empty() : this.membership;
     }
 
+    /**
+     * The project of the feature
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

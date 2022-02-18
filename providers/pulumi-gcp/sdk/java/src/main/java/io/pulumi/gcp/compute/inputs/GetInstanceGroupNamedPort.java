@@ -13,6 +13,10 @@ public final class GetInstanceGroupNamedPort extends io.pulumi.resources.InvokeA
 
     public static final GetInstanceGroupNamedPort Empty = new GetInstanceGroupNamedPort();
 
+    /**
+     * The name of the instance group. Either `name` or `self_link` must be provided.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

@@ -28,6 +28,11 @@ public final class InstanceNetworkInterfaceIpv6AccessConfigArgs extends io.pulum
         return this.externalIpv6PrefixLength == null ? Input.empty() : this.externalIpv6PrefixLength;
     }
 
+    /**
+     * The service-level to be provided for IPv6 traffic when the
+     * subnet has an external subnet. Only PREMIUM tier is valid for IPv6.
+     * 
+     */
     @InputImport(name="networkTier", required=true)
     private final Input<String> networkTier;
 
@@ -35,6 +40,11 @@ public final class InstanceNetworkInterfaceIpv6AccessConfigArgs extends io.pulum
         return this.networkTier;
     }
 
+    /**
+     * The domain name to be used when creating DNSv6
+     * records for the external IPv6 ranges..
+     * 
+     */
     @InputImport(name="publicPtrDomainName")
     private final @Nullable Input<String> publicPtrDomainName;
 

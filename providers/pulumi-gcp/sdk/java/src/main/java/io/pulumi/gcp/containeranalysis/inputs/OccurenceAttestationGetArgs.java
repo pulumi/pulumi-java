@@ -15,6 +15,11 @@ public final class OccurenceAttestationGetArgs extends io.pulumi.resources.Resou
 
     public static final OccurenceAttestationGetArgs Empty = new OccurenceAttestationGetArgs();
 
+    /**
+     * The serialized payload that is verified by one or
+     * more signatures. A base64-encoded string.
+     * 
+     */
     @InputImport(name="serializedPayload", required=true)
     private final Input<String> serializedPayload;
 
@@ -22,6 +27,15 @@ public final class OccurenceAttestationGetArgs extends io.pulumi.resources.Resou
         return this.serializedPayload;
     }
 
+    /**
+     * One or more signatures over serializedPayload.
+     * Verifier implementations should consider this attestation
+     * message verified if at least one signature verifies
+     * serializedPayload. See Signature in common.proto for more
+     * details on signature structure and verification.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="signatures", required=true)
     private final Input<List<OccurenceAttestationSignatureGetArgs>> signatures;
 

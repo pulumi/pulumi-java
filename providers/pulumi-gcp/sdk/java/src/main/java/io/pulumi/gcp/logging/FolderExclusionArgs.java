@@ -15,6 +15,10 @@ public final class FolderExclusionArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final FolderExclusionArgs Empty = new FolderExclusionArgs();
 
+    /**
+     * A human-readable description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -22,6 +26,11 @@ public final class FolderExclusionArgs extends io.pulumi.resources.ResourceArgs 
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Whether this exclusion rule should be disabled or not. This defaults to
+     * false.
+     * 
+     */
     @InputImport(name="disabled")
     private final @Nullable Input<Boolean> disabled;
 
@@ -29,6 +38,12 @@ public final class FolderExclusionArgs extends io.pulumi.resources.ResourceArgs 
         return this.disabled == null ? Input.empty() : this.disabled;
     }
 
+    /**
+     * The filter to apply when excluding logs. Only log entries that match the filter are excluded.
+     * See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced-filters) for information on how to
+     * write a filter.
+     * 
+     */
     @InputImport(name="filter", required=true)
     private final Input<String> filter;
 
@@ -36,6 +51,11 @@ public final class FolderExclusionArgs extends io.pulumi.resources.ResourceArgs 
         return this.filter;
     }
 
+    /**
+     * The folder to be exported to the sink. Note that either [FOLDER_ID] or "folders/[FOLDER_ID]" is
+     * accepted.
+     * 
+     */
     @InputImport(name="folder", required=true)
     private final Input<String> folder;
 
@@ -43,6 +63,10 @@ public final class FolderExclusionArgs extends io.pulumi.resources.ResourceArgs 
         return this.folder;
     }
 
+    /**
+     * The name of the logging exclusion.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

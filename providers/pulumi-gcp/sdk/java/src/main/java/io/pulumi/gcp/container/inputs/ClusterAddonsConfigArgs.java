@@ -23,6 +23,10 @@ public final class ClusterAddonsConfigArgs extends io.pulumi.resources.ResourceA
 
     public static final ClusterAddonsConfigArgs Empty = new ClusterAddonsConfigArgs();
 
+    /**
+     * . Structure is documented below.
+     * 
+     */
     @InputImport(name="cloudrunConfig")
     private final @Nullable Input<ClusterAddonsConfigCloudrunConfigArgs> cloudrunConfig;
 
@@ -30,6 +34,11 @@ public final class ClusterAddonsConfigArgs extends io.pulumi.resources.ResourceA
         return this.cloudrunConfig == null ? Input.empty() : this.cloudrunConfig;
     }
 
+    /**
+     * .
+     * The status of the ConfigConnector addon. It is disabled by default; Set `enabled = true` to enable.
+     * 
+     */
     @InputImport(name="configConnectorConfig")
     private final @Nullable Input<ClusterAddonsConfigConfigConnectorConfigArgs> configConnectorConfig;
 
@@ -37,6 +46,12 @@ public final class ClusterAddonsConfigArgs extends io.pulumi.resources.ResourceA
         return this.configConnectorConfig == null ? Input.empty() : this.configConnectorConfig;
     }
 
+    /**
+     * .
+     * The status of the NodeLocal DNSCache addon. It is disabled by default.
+     * Set `enabled = true` to enable.
+     * 
+     */
     @InputImport(name="dnsCacheConfig")
     private final @Nullable Input<ClusterAddonsConfigDnsCacheConfigArgs> dnsCacheConfig;
 
@@ -44,6 +59,11 @@ public final class ClusterAddonsConfigArgs extends io.pulumi.resources.ResourceA
         return this.dnsCacheConfig == null ? Input.empty() : this.dnsCacheConfig;
     }
 
+    /**
+     * .
+     * Whether this cluster should enable the Google Compute Engine Persistent Disk Container Storage Interface (CSI) Driver. Defaults to disabled; set `enabled = true` to enable.
+     * 
+     */
     @InputImport(name="gcePersistentDiskCsiDriverConfig")
     private final @Nullable Input<ClusterAddonsConfigGcePersistentDiskCsiDriverConfigArgs> gcePersistentDiskCsiDriverConfig;
 
@@ -51,6 +71,12 @@ public final class ClusterAddonsConfigArgs extends io.pulumi.resources.ResourceA
         return this.gcePersistentDiskCsiDriverConfig == null ? Input.empty() : this.gcePersistentDiskCsiDriverConfig;
     }
 
+    /**
+     * The status of the Filestore CSI driver addon,
+     * which allows the usage of filestore instance as volumes.
+     * It is disbaled by default; set `enabled = true` to enable.
+     * 
+     */
     @InputImport(name="gcpFilestoreCsiDriverConfig")
     private final @Nullable Input<ClusterAddonsConfigGcpFilestoreCsiDriverConfigArgs> gcpFilestoreCsiDriverConfig;
 
@@ -58,6 +84,14 @@ public final class ClusterAddonsConfigArgs extends io.pulumi.resources.ResourceA
         return this.gcpFilestoreCsiDriverConfig == null ? Input.empty() : this.gcpFilestoreCsiDriverConfig;
     }
 
+    /**
+     * The status of the Horizontal Pod Autoscaling
+     * addon, which increases or decreases the number of replica pods a replication controller
+     * has based on the resource usage of the existing pods.
+     * It is enabled by default;
+     * set `disabled = true` to disable.
+     * 
+     */
     @InputImport(name="horizontalPodAutoscaling")
     private final @Nullable Input<ClusterAddonsConfigHorizontalPodAutoscalingArgs> horizontalPodAutoscaling;
 
@@ -65,6 +99,12 @@ public final class ClusterAddonsConfigArgs extends io.pulumi.resources.ResourceA
         return this.horizontalPodAutoscaling == null ? Input.empty() : this.horizontalPodAutoscaling;
     }
 
+    /**
+     * The status of the HTTP (L7) load balancing
+     * controller addon, which makes it easy to set up HTTP load balancers for services in a
+     * cluster. It is enabled by default; set `disabled = true` to disable.
+     * 
+     */
     @InputImport(name="httpLoadBalancing")
     private final @Nullable Input<ClusterAddonsConfigHttpLoadBalancingArgs> httpLoadBalancing;
 
@@ -72,6 +112,11 @@ public final class ClusterAddonsConfigArgs extends io.pulumi.resources.ResourceA
         return this.httpLoadBalancing == null ? Input.empty() : this.httpLoadBalancing;
     }
 
+    /**
+     * .
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="istioConfig")
     private final @Nullable Input<ClusterAddonsConfigIstioConfigArgs> istioConfig;
 
@@ -79,6 +124,11 @@ public final class ClusterAddonsConfigArgs extends io.pulumi.resources.ResourceA
         return this.istioConfig == null ? Input.empty() : this.istioConfig;
     }
 
+    /**
+     * .
+     * Configuration for the KALM addon, which manages the lifecycle of k8s. It is disabled by default; Set `enabled = true` to enable.
+     * 
+     */
     @InputImport(name="kalmConfig")
     private final @Nullable Input<ClusterAddonsConfigKalmConfigArgs> kalmConfig;
 
@@ -86,6 +136,15 @@ public final class ClusterAddonsConfigArgs extends io.pulumi.resources.ResourceA
         return this.kalmConfig == null ? Input.empty() : this.kalmConfig;
     }
 
+    /**
+     * Whether we should enable the network policy addon
+     * for the master.  This must be enabled in order to enable network policy for the nodes.
+     * To enable this, you must also define a `network_policy` block,
+     * otherwise nothing will happen.
+     * It can only be disabled if the nodes already do not have network policies enabled.
+     * Defaults to disabled; set `disabled = false` to enable.
+     * 
+     */
     @InputImport(name="networkPolicyConfig")
     private final @Nullable Input<ClusterAddonsConfigNetworkPolicyConfigArgs> networkPolicyConfig;
 

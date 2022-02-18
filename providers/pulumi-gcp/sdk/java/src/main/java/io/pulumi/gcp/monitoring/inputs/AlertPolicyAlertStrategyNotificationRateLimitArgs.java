@@ -14,6 +14,10 @@ public final class AlertPolicyAlertStrategyNotificationRateLimitArgs extends io.
 
     public static final AlertPolicyAlertStrategyNotificationRateLimitArgs Empty = new AlertPolicyAlertStrategyNotificationRateLimitArgs();
 
+    /**
+     * Not more than one notification per period.
+     * 
+     */
     @InputImport(name="period")
     private final @Nullable Input<String> period;
 

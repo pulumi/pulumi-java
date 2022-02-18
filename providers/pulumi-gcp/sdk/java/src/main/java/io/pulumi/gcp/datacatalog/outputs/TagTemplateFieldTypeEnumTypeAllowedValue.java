@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TagTemplateFieldTypeEnumTypeAllowedValue {
+    /**
+     * The display name for this template.
+     * 
+     */
     private final String displayName;
 
     @OutputCustomType.Constructor({"displayName"})
@@ -16,6 +20,10 @@ public final class TagTemplateFieldTypeEnumTypeAllowedValue {
         this.displayName = Objects.requireNonNull(displayName);
     }
 
+    /**
+     * The display name for this template.
+     * 
+     */
     public String getDisplayName() {
         return this.displayName;
     }

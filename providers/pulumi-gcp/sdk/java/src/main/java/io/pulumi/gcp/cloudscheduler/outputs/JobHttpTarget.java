@@ -14,11 +14,43 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class JobHttpTarget {
+    /**
+     * HTTP request body.
+     * A request body is allowed only if the HTTP method is POST, PUT, or PATCH.
+     * It is an error to set body on a job with an incompatible HttpMethod.
+     * A base64-encoded string.
+     * 
+     */
     private final @Nullable String body;
+    /**
+     * This map contains the header field names and values.
+     * Repeated headers are not supported, but a header value can contain commas.
+     * 
+     */
     private final @Nullable Map<String,String> headers;
+    /**
+     * Which HTTP method to use for the request.
+     * 
+     */
     private final @Nullable String httpMethod;
+    /**
+     * Contains information needed for generating an OAuth token.
+     * This type of authorization should be used when sending requests to a GCP endpoint.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable JobHttpTargetOauthToken oauthToken;
+    /**
+     * Contains information needed for generating an OpenID Connect token.
+     * This type of authorization should be used when sending requests to third party endpoints or Cloud Run.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable JobHttpTargetOidcToken oidcToken;
+    /**
+     * The full URI path that the request will be sent to.
+     * 
+     */
     private final String uri;
 
     @OutputCustomType.Constructor({"body","headers","httpMethod","oauthToken","oidcToken","uri"})
@@ -37,21 +69,53 @@ public final class JobHttpTarget {
         this.uri = Objects.requireNonNull(uri);
     }
 
+    /**
+     * HTTP request body.
+     * A request body is allowed only if the HTTP method is POST, PUT, or PATCH.
+     * It is an error to set body on a job with an incompatible HttpMethod.
+     * A base64-encoded string.
+     * 
+     */
     public Optional<String> getBody() {
         return Optional.ofNullable(this.body);
     }
+    /**
+     * This map contains the header field names and values.
+     * Repeated headers are not supported, but a header value can contain commas.
+     * 
+     */
     public Map<String,String> getHeaders() {
         return this.headers == null ? Map.of() : this.headers;
     }
+    /**
+     * Which HTTP method to use for the request.
+     * 
+     */
     public Optional<String> getHttpMethod() {
         return Optional.ofNullable(this.httpMethod);
     }
+    /**
+     * Contains information needed for generating an OAuth token.
+     * This type of authorization should be used when sending requests to a GCP endpoint.
+     * Structure is documented below.
+     * 
+     */
     public Optional<JobHttpTargetOauthToken> getOauthToken() {
         return Optional.ofNullable(this.oauthToken);
     }
+    /**
+     * Contains information needed for generating an OpenID Connect token.
+     * This type of authorization should be used when sending requests to third party endpoints or Cloud Run.
+     * Structure is documented below.
+     * 
+     */
     public Optional<JobHttpTargetOidcToken> getOidcToken() {
         return Optional.ofNullable(this.oidcToken);
     }
+    /**
+     * The full URI path that the request will be sent to.
+     * 
+     */
     public String getUri() {
         return this.uri;
     }

@@ -12,8 +12,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RegionInstanceGroupManagerVersion {
+    /**
+     * - The full URL to an instance template from which all new instances of this version will be created.
+     * 
+     */
     private final String instanceTemplate;
+    /**
+     * - Version name.
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * - The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.
+     * 
+     */
     private final @Nullable RegionInstanceGroupManagerVersionTargetSize targetSize;
 
     @OutputCustomType.Constructor({"instanceTemplate","name","targetSize"})
@@ -26,12 +38,24 @@ public final class RegionInstanceGroupManagerVersion {
         this.targetSize = targetSize;
     }
 
+    /**
+     * - The full URL to an instance template from which all new instances of this version will be created.
+     * 
+     */
     public String getInstanceTemplate() {
         return this.instanceTemplate;
     }
+    /**
+     * - Version name.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * - The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.
+     * 
+     */
     public Optional<RegionInstanceGroupManagerVersionTargetSize> getTargetSize() {
         return Optional.ofNullable(this.targetSize);
     }

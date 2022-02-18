@@ -17,93 +17,251 @@ import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * A managed metastore service that serves metadata queries.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * Service can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:dataproc/metastoreService:MetastoreService default projects/{{project}}/locations/{{location}}/services/{{service_id}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:dataproc/metastoreService:MetastoreService default {{project}}/{{location}}/{{service_id}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:dataproc/metastoreService:MetastoreService default {{location}}/{{service_id}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:dataproc/metastoreService:MetastoreService")
 public class MetastoreService extends io.pulumi.resources.CustomResource {
+    /**
+     * A Cloud Storage URI (starting with gs://) that specifies where artifacts related to the metastore service are stored.
+     * 
+     */
     @OutputExport(name="artifactGcsUri", type=String.class, parameters={})
     private Output<String> artifactGcsUri;
 
+    /**
+     * @return A Cloud Storage URI (starting with gs://) that specifies where artifacts related to the metastore service are stored.
+     * 
+     */
     public Output<String> getArtifactGcsUri() {
         return this.artifactGcsUri;
     }
+    /**
+     * The URI of the endpoint used to access the metastore service.
+     * 
+     */
     @OutputExport(name="endpointUri", type=String.class, parameters={})
     private Output<String> endpointUri;
 
+    /**
+     * @return The URI of the endpoint used to access the metastore service.
+     * 
+     */
     public Output<String> getEndpointUri() {
         return this.endpointUri;
     }
+    /**
+     * Configuration information specific to running Hive metastore software as the metastore service.
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="hiveMetastoreConfig", type=MetastoreServiceHiveMetastoreConfig.class, parameters={})
     private Output</* @Nullable */ MetastoreServiceHiveMetastoreConfig> hiveMetastoreConfig;
 
+    /**
+     * @return Configuration information specific to running Hive metastore software as the metastore service.
+     * Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ MetastoreServiceHiveMetastoreConfig> getHiveMetastoreConfig() {
         return this.hiveMetastoreConfig;
     }
+    /**
+     * User-defined labels for the metastore service.
+     * 
+     */
     @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
+    /**
+     * @return User-defined labels for the metastore service.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getLabels() {
         return this.labels;
     }
+    /**
+     * The  location where the autoscaling policy should reside.
+     * The default value is `global`.
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return The  location where the autoscaling policy should reside.
+     * The default value is `global`.
+     * 
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * The one hour maintenance window of the metastore service.
+     * This specifies when the service can be restarted for maintenance purposes in UTC time.
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="maintenanceWindow", type=MetastoreServiceMaintenanceWindow.class, parameters={})
     private Output</* @Nullable */ MetastoreServiceMaintenanceWindow> maintenanceWindow;
 
+    /**
+     * @return The one hour maintenance window of the metastore service.
+     * This specifies when the service can be restarted for maintenance purposes in UTC time.
+     * Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ MetastoreServiceMaintenanceWindow> getMaintenanceWindow() {
         return this.maintenanceWindow;
     }
+    /**
+     * The relative resource name of the metastore service.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The relative resource name of the metastore service.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The relative resource name of the VPC network on which the instance can be accessed. It is specified in the following form:
+     * "projects/{projectNumber}/global/networks/{network_id}".
+     * 
+     */
     @OutputExport(name="network", type=String.class, parameters={})
     private Output<String> network;
 
+    /**
+     * @return The relative resource name of the VPC network on which the instance can be accessed. It is specified in the following form:
+     * "projects/{projectNumber}/global/networks/{network_id}".
+     * 
+     */
     public Output<String> getNetwork() {
         return this.network;
     }
+    /**
+     * The TCP port at which the metastore service is reached. Default: 9083.
+     * 
+     */
     @OutputExport(name="port", type=Integer.class, parameters={})
     private Output<Integer> port;
 
+    /**
+     * @return The TCP port at which the metastore service is reached. Default: 9083.
+     * 
+     */
     public Output<Integer> getPort() {
         return this.port;
     }
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * The ID of the metastore service. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
+     * and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between
+     * 3 and 63 characters.
+     * 
+     */
     @OutputExport(name="serviceId", type=String.class, parameters={})
     private Output<String> serviceId;
 
+    /**
+     * @return The ID of the metastore service. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
+     * and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between
+     * 3 and 63 characters.
+     * 
+     */
     public Output<String> getServiceId() {
         return this.serviceId;
     }
+    /**
+     * The current state of the metastore service.
+     * 
+     */
     @OutputExport(name="state", type=String.class, parameters={})
     private Output<String> state;
 
+    /**
+     * @return The current state of the metastore service.
+     * 
+     */
     public Output<String> getState() {
         return this.state;
     }
+    /**
+     * Additional information about the current state of the metastore service, if available.
+     * 
+     */
     @OutputExport(name="stateMessage", type=String.class, parameters={})
     private Output<String> stateMessage;
 
+    /**
+     * @return Additional information about the current state of the metastore service, if available.
+     * 
+     */
     public Output<String> getStateMessage() {
         return this.stateMessage;
     }
+    /**
+     * The tier of the service.
+     * Possible values are `DEVELOPER` and `ENTERPRISE`.
+     * 
+     */
     @OutputExport(name="tier", type=String.class, parameters={})
     private Output<String> tier;
 
+    /**
+     * @return The tier of the service.
+     * Possible values are `DEVELOPER` and `ENTERPRISE`.
+     * 
+     */
     public Output<String> getTier() {
         return this.tier;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public MetastoreService(String name, MetastoreServiceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:dataproc/metastoreService:MetastoreService", name, args == null ? MetastoreServiceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -119,6 +277,15 @@ public class MetastoreService extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static MetastoreService get(String name, Input<String> id, @Nullable MetastoreServiceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new MetastoreService(name, id, state, options);
     }

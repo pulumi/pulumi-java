@@ -10,7 +10,16 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class InstanceGroupManagerNamedPort {
+    /**
+     * - Version name.
+     * 
+     */
     private final String name;
+    /**
+     * The port number.
+     * ***
+     * 
+     */
     private final Integer port;
 
     @OutputCustomType.Constructor({"name","port"})
@@ -21,9 +30,18 @@ public final class InstanceGroupManagerNamedPort {
         this.port = Objects.requireNonNull(port);
     }
 
+    /**
+     * - Version name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The port number.
+     * ***
+     * 
+     */
     public Integer getPort() {
         return this.port;
     }

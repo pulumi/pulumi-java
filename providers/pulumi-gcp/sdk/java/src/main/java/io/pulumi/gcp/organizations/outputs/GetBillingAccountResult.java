@@ -15,9 +15,21 @@ import javax.annotation.Nullable;
 public final class GetBillingAccountResult {
     private final @Nullable String billingAccount;
     private final String displayName;
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
+    /**
+     * The resource name of the billing account in the form `billingAccounts/{billing_account_id}`.
+     * 
+     */
     private final String name;
     private final Boolean open;
+    /**
+     * The IDs of any projects associated with the billing account.
+     * 
+     */
     private final List<String> projectIds;
 
     @OutputCustomType.Constructor({"billingAccount","displayName","id","name","open","projectIds"})
@@ -42,15 +54,27 @@ public final class GetBillingAccountResult {
     public String getDisplayName() {
         return this.displayName;
     }
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * The resource name of the billing account in the form `billingAccounts/{billing_account_id}`.
+     * 
+     */
     public String getName() {
         return this.name;
     }
     public Boolean getOpen() {
         return this.open;
     }
+    /**
+     * The IDs of any projects associated with the billing account.
+     * 
+     */
     public List<String> getProjectIds() {
         return this.projectIds;
     }

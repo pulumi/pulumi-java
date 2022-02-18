@@ -13,6 +13,10 @@ public final class TransferJobTransferSpecHttpDataSourceArgs extends io.pulumi.r
 
     public static final TransferJobTransferSpecHttpDataSourceArgs Empty = new TransferJobTransferSpecHttpDataSourceArgs();
 
+    /**
+     * The URL that points to the file that stores the object list entries. This file must allow public access. Currently, only URLs with HTTP and HTTPS schemes are supported.
+     * 
+     */
     @InputImport(name="listUrl", required=true)
     private final Input<String> listUrl;
 

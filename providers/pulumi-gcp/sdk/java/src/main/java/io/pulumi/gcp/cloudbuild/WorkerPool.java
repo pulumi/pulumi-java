@@ -16,81 +16,209 @@ import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Definition of custom Cloud Build WorkerPools for running jobs with custom configuration and custom networking.
+ * 
+ * > This resource is not currently public, and requires allow-listing of projects prior to use.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * WorkerPool can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:cloudbuild/workerPool:WorkerPool default projects/{{project}}/locations/{{location}}/workerPools/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:cloudbuild/workerPool:WorkerPool default {{project}}/{{location}}/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:cloudbuild/workerPool:WorkerPool default {{location}}/{{name}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:cloudbuild/workerPool:WorkerPool")
 public class WorkerPool extends io.pulumi.resources.CustomResource {
+    /**
+     * User specified annotations. See https://google.aip.dev/128#annotations for more details such as format and size
+     * limitations.
+     * 
+     */
     @OutputExport(name="annotations", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> annotations;
 
+    /**
+     * @return User specified annotations. See https://google.aip.dev/128#annotations for more details such as format and size
+     * limitations.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getAnnotations() {
         return this.annotations;
     }
+    /**
+     * Output only. Time at which the request to create the `WorkerPool` was received.
+     * 
+     */
     @OutputExport(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
+    /**
+     * @return Output only. Time at which the request to create the `WorkerPool` was received.
+     * 
+     */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
+    /**
+     * Output only. Time at which the request to delete the `WorkerPool` was received.
+     * 
+     */
     @OutputExport(name="deleteTime", type=String.class, parameters={})
     private Output<String> deleteTime;
 
+    /**
+     * @return Output only. Time at which the request to delete the `WorkerPool` was received.
+     * 
+     */
     public Output<String> getDeleteTime() {
         return this.deleteTime;
     }
+    /**
+     * A user-specified, human-readable name for the `WorkerPool`. If provided, this value must be 1-63 characters.
+     * 
+     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
+    /**
+     * @return A user-specified, human-readable name for the `WorkerPool`. If provided, this value must be 1-63 characters.
+     * 
+     */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
+    /**
+     * The location for the resource
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return The location for the resource
+     * 
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * User-defined name of the `WorkerPool`.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return User-defined name of the `WorkerPool`.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Network configuration for the `WorkerPool`. Structure is documented below.
+     * 
+     */
     @OutputExport(name="networkConfig", type=WorkerPoolNetworkConfig.class, parameters={})
     private Output</* @Nullable */ WorkerPoolNetworkConfig> networkConfig;
 
+    /**
+     * @return Network configuration for the `WorkerPool`. Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ WorkerPoolNetworkConfig> getNetworkConfig() {
         return this.networkConfig;
     }
+    /**
+     * The project for the resource
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The project for the resource
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * Output only. `WorkerPool` state. Possible values: STATE_UNSPECIFIED, PENDING, APPROVED, REJECTED, CANCELLED
+     * 
+     */
     @OutputExport(name="state", type=String.class, parameters={})
     private Output<String> state;
 
+    /**
+     * @return Output only. `WorkerPool` state. Possible values: STATE_UNSPECIFIED, PENDING, APPROVED, REJECTED, CANCELLED
+     * 
+     */
     public Output<String> getState() {
         return this.state;
     }
+    /**
+     * Output only. A unique identifier for the `WorkerPool`.
+     * 
+     */
     @OutputExport(name="uid", type=String.class, parameters={})
     private Output<String> uid;
 
+    /**
+     * @return Output only. A unique identifier for the `WorkerPool`.
+     * 
+     */
     public Output<String> getUid() {
         return this.uid;
     }
+    /**
+     * Output only. Time at which the request to update the `WorkerPool` was received.
+     * 
+     */
     @OutputExport(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
+    /**
+     * @return Output only. Time at which the request to update the `WorkerPool` was received.
+     * 
+     */
     public Output<String> getUpdateTime() {
         return this.updateTime;
     }
+    /**
+     * Configuration to be used for a creating workers in the `WorkerPool`. Structure is documented below.
+     * 
+     */
     @OutputExport(name="workerConfig", type=WorkerPoolWorkerConfig.class, parameters={})
     private Output<WorkerPoolWorkerConfig> workerConfig;
 
+    /**
+     * @return Configuration to be used for a creating workers in the `WorkerPool`. Structure is documented below.
+     * 
+     */
     public Output<WorkerPoolWorkerConfig> getWorkerConfig() {
         return this.workerConfig;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public WorkerPool(String name, WorkerPoolArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:cloudbuild/workerPool:WorkerPool", name, args == null ? WorkerPoolArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -106,6 +234,15 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static WorkerPool get(String name, Input<String> id, @Nullable WorkerPoolState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new WorkerPool(name, id, state, options);
     }

@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectId {
+    /**
+     * An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+     * 
+     */
     private final @Nullable List<Integer> objectIdPaths;
 
     @OutputCustomType.Constructor({"objectIdPaths"})
@@ -18,6 +22,10 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
         this.objectIdPaths = objectIdPaths;
     }
 
+    /**
+     * An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+     * 
+     */
     public List<Integer> getObjectIdPaths() {
         return this.objectIdPaths == null ? List.of() : this.objectIdPaths;
     }

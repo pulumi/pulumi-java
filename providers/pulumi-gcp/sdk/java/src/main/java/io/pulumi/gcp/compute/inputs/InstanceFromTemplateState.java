@@ -29,6 +29,10 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
 
     public static final InstanceFromTemplateState Empty = new InstanceFromTemplateState();
 
+    /**
+     * Controls for advanced machine-related behavior features.
+     * 
+     */
     @InputImport(name="advancedMachineFeatures")
     private final @Nullable Input<InstanceFromTemplateAdvancedMachineFeaturesGetArgs> advancedMachineFeatures;
 
@@ -36,6 +40,11 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
         return this.advancedMachineFeatures == null ? Input.empty() : this.advancedMachineFeatures;
     }
 
+    /**
+     * If true, allows Terraform to stop the instance to update its properties. If you try to update a property that requires
+     * stopping the instance without setting this field, the update will fail.
+     * 
+     */
     @InputImport(name="allowStoppingForUpdate")
     private final @Nullable Input<Boolean> allowStoppingForUpdate;
 
@@ -43,6 +52,10 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
         return this.allowStoppingForUpdate == null ? Input.empty() : this.allowStoppingForUpdate;
     }
 
+    /**
+     * List of disks attached to the instance
+     * 
+     */
     @InputImport(name="attachedDisks")
     private final @Nullable Input<List<InstanceFromTemplateAttachedDiskGetArgs>> attachedDisks;
 
@@ -50,6 +63,10 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
         return this.attachedDisks == null ? Input.empty() : this.attachedDisks;
     }
 
+    /**
+     * The boot disk for the instance.
+     * 
+     */
     @InputImport(name="bootDisk")
     private final @Nullable Input<InstanceFromTemplateBootDiskGetArgs> bootDisk;
 
@@ -57,6 +74,10 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
         return this.bootDisk == null ? Input.empty() : this.bootDisk;
     }
 
+    /**
+     * Whether sending and receiving of packets with non-matching source or destination IPs is allowed.
+     * 
+     */
     @InputImport(name="canIpForward")
     private final @Nullable Input<Boolean> canIpForward;
 
@@ -64,6 +85,11 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
         return this.canIpForward == null ? Input.empty() : this.canIpForward;
     }
 
+    /**
+     * The Confidential VM config being used by the instance. on_host_maintenance has to be set to TERMINATE or this will fail
+     * to create.
+     * 
+     */
     @InputImport(name="confidentialInstanceConfig")
     private final @Nullable Input<InstanceFromTemplateConfidentialInstanceConfigGetArgs> confidentialInstanceConfig;
 
@@ -71,6 +97,10 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
         return this.confidentialInstanceConfig == null ? Input.empty() : this.confidentialInstanceConfig;
     }
 
+    /**
+     * The CPU platform used by this instance.
+     * 
+     */
     @InputImport(name="cpuPlatform")
     private final @Nullable Input<String> cpuPlatform;
 
@@ -78,6 +108,10 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
         return this.cpuPlatform == null ? Input.empty() : this.cpuPlatform;
     }
 
+    /**
+     * Current status of the instance.
+     * 
+     */
     @InputImport(name="currentStatus")
     private final @Nullable Input<String> currentStatus;
 
@@ -85,6 +119,10 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
         return this.currentStatus == null ? Input.empty() : this.currentStatus;
     }
 
+    /**
+     * Whether deletion protection is enabled on this instance.
+     * 
+     */
     @InputImport(name="deletionProtection")
     private final @Nullable Input<Boolean> deletionProtection;
 
@@ -92,6 +130,10 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
         return this.deletionProtection == null ? Input.empty() : this.deletionProtection;
     }
 
+    /**
+     * A brief description of the resource.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -99,6 +141,10 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Desired status of the instance. Either "RUNNING" or "TERMINATED".
+     * 
+     */
     @InputImport(name="desiredStatus")
     private final @Nullable Input<String> desiredStatus;
 
@@ -106,6 +152,10 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
         return this.desiredStatus == null ? Input.empty() : this.desiredStatus;
     }
 
+    /**
+     * Whether the instance has virtual displays enabled.
+     * 
+     */
     @InputImport(name="enableDisplay")
     private final @Nullable Input<Boolean> enableDisplay;
 
@@ -113,6 +163,10 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
         return this.enableDisplay == null ? Input.empty() : this.enableDisplay;
     }
 
+    /**
+     * List of the type and count of accelerator cards attached to the instance.
+     * 
+     */
     @InputImport(name="guestAccelerators")
     private final @Nullable Input<List<InstanceFromTemplateGuestAcceleratorGetArgs>> guestAccelerators;
 
@@ -120,6 +174,12 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
         return this.guestAccelerators == null ? Input.empty() : this.guestAccelerators;
     }
 
+    /**
+     * A custom hostname for the instance. Must be a fully qualified DNS name and RFC-1035-valid. Valid format is a series of
+     * labels 1-63 characters long matching the regular expression [a-z]([-a-z0-9]*[a-z0-9]), concatenated with periods. The
+     * entire hostname must not exceed 253 characters. Changing this forces a new resource to be created.
+     * 
+     */
     @InputImport(name="hostname")
     private final @Nullable Input<String> hostname;
 
@@ -127,6 +187,10 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
         return this.hostname == null ? Input.empty() : this.hostname;
     }
 
+    /**
+     * The server-assigned unique identifier of this instance.
+     * 
+     */
     @InputImport(name="instanceId")
     private final @Nullable Input<String> instanceId;
 
@@ -134,6 +198,10 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
         return this.instanceId == null ? Input.empty() : this.instanceId;
     }
 
+    /**
+     * The unique fingerprint of the labels.
+     * 
+     */
     @InputImport(name="labelFingerprint")
     private final @Nullable Input<String> labelFingerprint;
 
@@ -141,6 +209,10 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
         return this.labelFingerprint == null ? Input.empty() : this.labelFingerprint;
     }
 
+    /**
+     * A set of key/value label pairs assigned to the instance.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -148,6 +220,10 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The machine type to create.
+     * 
+     */
     @InputImport(name="machineType")
     private final @Nullable Input<String> machineType;
 
@@ -155,6 +231,10 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
         return this.machineType == null ? Input.empty() : this.machineType;
     }
 
+    /**
+     * Metadata key/value pairs made available within the instance.
+     * 
+     */
     @InputImport(name="metadata")
     private final @Nullable Input<Map<String,String>> metadata;
 
@@ -162,6 +242,10 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
+    /**
+     * The unique fingerprint of the metadata.
+     * 
+     */
     @InputImport(name="metadataFingerprint")
     private final @Nullable Input<String> metadataFingerprint;
 
@@ -169,6 +253,10 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
         return this.metadataFingerprint == null ? Input.empty() : this.metadataFingerprint;
     }
 
+    /**
+     * Metadata startup scripts made available within the instance.
+     * 
+     */
     @InputImport(name="metadataStartupScript")
     private final @Nullable Input<String> metadataStartupScript;
 
@@ -176,6 +264,10 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
         return this.metadataStartupScript == null ? Input.empty() : this.metadataStartupScript;
     }
 
+    /**
+     * The minimum CPU platform specified for the VM instance.
+     * 
+     */
     @InputImport(name="minCpuPlatform")
     private final @Nullable Input<String> minCpuPlatform;
 
@@ -183,6 +275,11 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
         return this.minCpuPlatform == null ? Input.empty() : this.minCpuPlatform;
     }
 
+    /**
+     * A unique name for the resource, required by GCE.
+     * Changing this forces a new resource to be created.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -190,6 +287,10 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The networks attached to the instance.
+     * 
+     */
     @InputImport(name="networkInterfaces")
     private final @Nullable Input<List<InstanceFromTemplateNetworkInterfaceGetArgs>> networkInterfaces;
 
@@ -197,6 +298,11 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
         return this.networkInterfaces == null ? Input.empty() : this.networkInterfaces;
     }
 
+    /**
+     * Configures network performance settings for the instance. If not specified, the instance will be created with its
+     * default network performance configuration.
+     * 
+     */
     @InputImport(name="networkPerformanceConfig")
     private final @Nullable Input<InstanceFromTemplateNetworkPerformanceConfigGetArgs> networkPerformanceConfig;
 
@@ -204,6 +310,11 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
         return this.networkPerformanceConfig == null ? Input.empty() : this.networkPerformanceConfig;
     }
 
+    /**
+     * The ID of the project in which the resource belongs. If self_link is provided, this value is ignored. If neither
+     * self_link nor project are provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -211,6 +322,10 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Specifies the reservations that this instance can consume from.
+     * 
+     */
     @InputImport(name="reservationAffinity")
     private final @Nullable Input<InstanceFromTemplateReservationAffinityGetArgs> reservationAffinity;
 
@@ -218,6 +333,11 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
         return this.reservationAffinity == null ? Input.empty() : this.reservationAffinity;
     }
 
+    /**
+     * A list of short names or self_links of resource policies to attach to the instance. Currently a max of 1 resource policy
+     * is supported.
+     * 
+     */
     @InputImport(name="resourcePolicies")
     private final @Nullable Input<String> resourcePolicies;
 
@@ -225,6 +345,10 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
         return this.resourcePolicies == null ? Input.empty() : this.resourcePolicies;
     }
 
+    /**
+     * The scheduling strategy being used by the instance.
+     * 
+     */
     @InputImport(name="scheduling")
     private final @Nullable Input<InstanceFromTemplateSchedulingGetArgs> scheduling;
 
@@ -232,6 +356,10 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
         return this.scheduling == null ? Input.empty() : this.scheduling;
     }
 
+    /**
+     * The scratch disks attached to the instance.
+     * 
+     */
     @InputImport(name="scratchDisks")
     private final @Nullable Input<List<InstanceFromTemplateScratchDiskGetArgs>> scratchDisks;
 
@@ -239,6 +367,10 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
         return this.scratchDisks == null ? Input.empty() : this.scratchDisks;
     }
 
+    /**
+     * The URI of the created resource.
+     * 
+     */
     @InputImport(name="selfLink")
     private final @Nullable Input<String> selfLink;
 
@@ -246,6 +378,10 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
         return this.selfLink == null ? Input.empty() : this.selfLink;
     }
 
+    /**
+     * The service account to attach to the instance.
+     * 
+     */
     @InputImport(name="serviceAccount")
     private final @Nullable Input<InstanceFromTemplateServiceAccountGetArgs> serviceAccount;
 
@@ -253,6 +389,10 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
         return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
     }
 
+    /**
+     * The shielded vm config being used by the instance.
+     * 
+     */
     @InputImport(name="shieldedInstanceConfig")
     private final @Nullable Input<InstanceFromTemplateShieldedInstanceConfigGetArgs> shieldedInstanceConfig;
 
@@ -260,6 +400,11 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
         return this.shieldedInstanceConfig == null ? Input.empty() : this.shieldedInstanceConfig;
     }
 
+    /**
+     * Name or self link of an instance
+     * template to create the instance based on.
+     * 
+     */
     @InputImport(name="sourceInstanceTemplate")
     private final @Nullable Input<String> sourceInstanceTemplate;
 
@@ -267,6 +412,10 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
         return this.sourceInstanceTemplate == null ? Input.empty() : this.sourceInstanceTemplate;
     }
 
+    /**
+     * The list of tags attached to the instance.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<String>> tags;
 
@@ -274,6 +423,10 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The unique fingerprint of the tags.
+     * 
+     */
     @InputImport(name="tagsFingerprint")
     private final @Nullable Input<String> tagsFingerprint;
 
@@ -281,6 +434,11 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
         return this.tagsFingerprint == null ? Input.empty() : this.tagsFingerprint;
     }
 
+    /**
+     * The zone that the machine should be created in. If not
+     * set, the provider zone is used.
+     * 
+     */
     @InputImport(name="zone")
     private final @Nullable Input<String> zone;
 

@@ -16,6 +16,13 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ProjectArgs Empty = new ProjectArgs();
 
+    /**
+     * Create the 'default' network automatically.  Default `true`.
+     * If set to `false`, the default network will be deleted.  Note that, for quota purposes, you
+     * will still need to have 1 network slot available to create the project successfully, even if
+     * you set `auto_create_network` to `false`, since the network will exist momentarily.
+     * 
+     */
     @InputImport(name="autoCreateNetwork")
     private final @Nullable Input<Boolean> autoCreateNetwork;
 
@@ -23,6 +30,14 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.autoCreateNetwork == null ? Input.empty() : this.autoCreateNetwork;
     }
 
+    /**
+     * The alphanumeric ID of the billing account this project
+     * belongs to. The user or service account performing this operation with the provider
+     * must have at mininum Billing Account User privileges (`roles/billing.user`) on the billing account.
+     * See [Google Cloud Billing API Access Control](https://cloud.google.com/billing/docs/how-to/billing-access)
+     * for more details.
+     * 
+     */
     @InputImport(name="billingAccount")
     private final @Nullable Input<String> billingAccount;
 
@@ -30,6 +45,14 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.billingAccount == null ? Input.empty() : this.billingAccount;
     }
 
+    /**
+     * The numeric ID of the folder this project should be
+     * created under. Only one of `org_id` or `folder_id` may be
+     * specified. If the `folder_id` is specified, then the project is
+     * created under the specified folder. Changing this forces the
+     * project to be migrated to the newly specified folder.
+     * 
+     */
     @InputImport(name="folderId")
     private final @Nullable Input<String> folderId;
 
@@ -37,6 +60,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.folderId == null ? Input.empty() : this.folderId;
     }
 
+    /**
+     * A set of key/value label pairs to assign to the project.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -44,6 +71,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The display name of the project.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -51,6 +82,15 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The numeric ID of the organization this project belongs to.
+     * Changing this forces a new project to be created.  Only one of
+     * `org_id` or `folder_id` may be specified. If the `org_id` is
+     * specified then the project is created at the top level. Changing
+     * this forces the project to be migrated to the newly specified
+     * organization.
+     * 
+     */
     @InputImport(name="orgId")
     private final @Nullable Input<String> orgId;
 
@@ -58,6 +98,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.orgId == null ? Input.empty() : this.orgId;
     }
 
+    /**
+     * The project ID. Changing this forces a new project to be created.
+     * 
+     */
     @InputImport(name="projectId", required=true)
     private final Input<String> projectId;
 
@@ -65,6 +109,11 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.projectId;
     }
 
+    /**
+     * If true, the resource can be deleted
+     * without deleting the Project via the Google API.
+     * 
+     */
     @InputImport(name="skipDelete")
     private final @Nullable Input<Boolean> skipDelete;
 

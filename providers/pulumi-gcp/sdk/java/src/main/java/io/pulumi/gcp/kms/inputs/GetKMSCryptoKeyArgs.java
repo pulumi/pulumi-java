@@ -12,6 +12,10 @@ public final class GetKMSCryptoKeyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetKMSCryptoKeyArgs Empty = new GetKMSCryptoKeyArgs();
 
+    /**
+     * The `id` of the Google Cloud Platform KeyRing to which the key belongs.
+     * 
+     */
     @InputImport(name="keyRing", required=true)
     private final String keyRing;
 
@@ -19,6 +23,11 @@ public final class GetKMSCryptoKeyArgs extends io.pulumi.resources.InvokeArgs {
         return this.keyRing;
     }
 
+    /**
+     * The CryptoKey's name.
+     * A CryptoKey’s name belonging to the specified Google Cloud Platform KeyRing and match the regular expression `[a-zA-Z0-9_-]{1,63}`
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

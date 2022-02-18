@@ -13,69 +13,197 @@ import io.pulumi.gcp.apigee.inputs.OrganizationState;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * An `Organization` is the top-level container in Apigee.
+ * 
+ * To get more information about Organization, see:
+ * 
+ * * [API documentation](https://cloud.google.com/apigee/docs/reference/apis/apigee/rest/v1/organizations)
+ * * How-to Guides
+ *     * [Creating an API organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org)
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * Organization can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:apigee/organization:Organization default organizations/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:apigee/organization:Organization default {{name}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:apigee/organization:Organization")
 public class Organization extends io.pulumi.resources.CustomResource {
+    /**
+     * Primary GCP region for analytics data storage. For valid values, see [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org).
+     * 
+     */
     @OutputExport(name="analyticsRegion", type=String.class, parameters={})
     private Output</* @Nullable */ String> analyticsRegion;
 
+    /**
+     * @return Primary GCP region for analytics data storage. For valid values, see [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org).
+     * 
+     */
     public Output</* @Nullable */ String> getAnalyticsRegion() {
         return this.analyticsRegion;
     }
+    /**
+     * Compute Engine network used for Service Networking to be peered with Apigee runtime instances.
+     * See [Getting started with the Service Networking API](https://cloud.google.com/service-infrastructure/docs/service-networking/getting-started).
+     * Valid only when `RuntimeType` is set to CLOUD. The value can be updated only when there are no runtime instances. For example: "default".
+     * 
+     */
     @OutputExport(name="authorizedNetwork", type=String.class, parameters={})
     private Output</* @Nullable */ String> authorizedNetwork;
 
+    /**
+     * @return Compute Engine network used for Service Networking to be peered with Apigee runtime instances.
+     * See [Getting started with the Service Networking API](https://cloud.google.com/service-infrastructure/docs/service-networking/getting-started).
+     * Valid only when `RuntimeType` is set to CLOUD. The value can be updated only when there are no runtime instances. For example: "default".
+     * 
+     */
     public Output</* @Nullable */ String> getAuthorizedNetwork() {
         return this.authorizedNetwork;
     }
+    /**
+     * Output only. Base64-encoded public certificate for the root CA of the Apigee organization. Valid only when 'RuntimeType'
+     * is CLOUD. A base64-encoded string.
+     * 
+     */
     @OutputExport(name="caCertificate", type=String.class, parameters={})
     private Output<String> caCertificate;
 
+    /**
+     * @return Output only. Base64-encoded public certificate for the root CA of the Apigee organization. Valid only when 'RuntimeType'
+     * is CLOUD. A base64-encoded string.
+     * 
+     */
     public Output<String> getCaCertificate() {
         return this.caCertificate;
     }
+    /**
+     * Description of the Apigee organization.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return Description of the Apigee organization.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * The display name of the Apigee organization.
+     * 
+     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
+    /**
+     * @return The display name of the Apigee organization.
+     * 
+     */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
+    /**
+     * Output only. Name of the Apigee organization.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Output only. Name of the Apigee organization.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The project ID associated with the Apigee organization.
+     * 
+     */
     @OutputExport(name="projectId", type=String.class, parameters={})
     private Output<String> projectId;
 
+    /**
+     * @return The project ID associated with the Apigee organization.
+     * 
+     */
     public Output<String> getProjectId() {
         return this.projectId;
     }
+    /**
+     * Cloud KMS key name used for encrypting the data that is stored and replicated across runtime instances.
+     * Update is not allowed after the organization is created.
+     * If not specified, a Google-Managed encryption key will be used.
+     * Valid only when `RuntimeType` is CLOUD. For example: `projects/foo/locations/us/keyRings/bar/cryptoKeys/baz`.
+     * 
+     */
     @OutputExport(name="runtimeDatabaseEncryptionKeyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> runtimeDatabaseEncryptionKeyName;
 
+    /**
+     * @return Cloud KMS key name used for encrypting the data that is stored and replicated across runtime instances.
+     * Update is not allowed after the organization is created.
+     * If not specified, a Google-Managed encryption key will be used.
+     * Valid only when `RuntimeType` is CLOUD. For example: `projects/foo/locations/us/keyRings/bar/cryptoKeys/baz`.
+     * 
+     */
     public Output</* @Nullable */ String> getRuntimeDatabaseEncryptionKeyName() {
         return this.runtimeDatabaseEncryptionKeyName;
     }
+    /**
+     * Runtime type of the Apigee organization based on the Apigee subscription purchased.
+     * Default value is `CLOUD`.
+     * Possible values are `CLOUD` and `HYBRID`.
+     * 
+     */
     @OutputExport(name="runtimeType", type=String.class, parameters={})
     private Output</* @Nullable */ String> runtimeType;
 
+    /**
+     * @return Runtime type of the Apigee organization based on the Apigee subscription purchased.
+     * Default value is `CLOUD`.
+     * Possible values are `CLOUD` and `HYBRID`.
+     * 
+     */
     public Output</* @Nullable */ String> getRuntimeType() {
         return this.runtimeType;
     }
+    /**
+     * Output only. Subscription type of the Apigee organization. Valid values include trial (free, limited, and for evaluation
+     * purposes only) or paid (full subscription has been purchased).
+     * 
+     */
     @OutputExport(name="subscriptionType", type=String.class, parameters={})
     private Output<String> subscriptionType;
 
+    /**
+     * @return Output only. Subscription type of the Apigee organization. Valid values include trial (free, limited, and for evaluation
+     * purposes only) or paid (full subscription has been purchased).
+     * 
+     */
     public Output<String> getSubscriptionType() {
         return this.subscriptionType;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Organization(String name, OrganizationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:apigee/organization:Organization", name, args == null ? OrganizationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -91,6 +219,15 @@ public class Organization extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Organization get(String name, Input<String> id, @Nullable OrganizationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Organization(name, id, state, options);
     }

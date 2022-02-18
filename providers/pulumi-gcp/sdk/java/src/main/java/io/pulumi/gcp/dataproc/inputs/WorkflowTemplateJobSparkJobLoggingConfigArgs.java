@@ -15,6 +15,10 @@ public final class WorkflowTemplateJobSparkJobLoggingConfigArgs extends io.pulum
 
     public static final WorkflowTemplateJobSparkJobLoggingConfigArgs Empty = new WorkflowTemplateJobSparkJobLoggingConfigArgs();
 
+    /**
+     * The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
+     * 
+     */
     @InputImport(name="driverLogLevels")
     private final @Nullable Input<Map<String,String>> driverLogLevels;
 

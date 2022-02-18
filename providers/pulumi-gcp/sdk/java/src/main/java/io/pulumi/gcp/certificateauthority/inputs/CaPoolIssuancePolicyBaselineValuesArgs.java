@@ -19,6 +19,11 @@ public final class CaPoolIssuancePolicyBaselineValuesArgs extends io.pulumi.reso
 
     public static final CaPoolIssuancePolicyBaselineValuesArgs Empty = new CaPoolIssuancePolicyBaselineValuesArgs();
 
+    /**
+     * Specifies an X.509 extension, which may be used in different parts of X.509 objects like certificates, CSRs, and CRLs.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="additionalExtensions")
     private final @Nullable Input<List<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionArgs>> additionalExtensions;
 
@@ -26,6 +31,11 @@ public final class CaPoolIssuancePolicyBaselineValuesArgs extends io.pulumi.reso
         return this.additionalExtensions == null ? Input.empty() : this.additionalExtensions;
     }
 
+    /**
+     * Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the
+     * "Authority Information Access" extension in the certificate.
+     * 
+     */
     @InputImport(name="aiaOcspServers")
     private final @Nullable Input<List<String>> aiaOcspServers;
 
@@ -33,6 +43,11 @@ public final class CaPoolIssuancePolicyBaselineValuesArgs extends io.pulumi.reso
         return this.aiaOcspServers == null ? Input.empty() : this.aiaOcspServers;
     }
 
+    /**
+     * Describes values that are relevant in a CA certificate.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="caOptions", required=true)
     private final Input<CaPoolIssuancePolicyBaselineValuesCaOptionsArgs> caOptions;
 
@@ -40,6 +55,11 @@ public final class CaPoolIssuancePolicyBaselineValuesArgs extends io.pulumi.reso
         return this.caOptions;
     }
 
+    /**
+     * Indicates the intended use for keys that correspond to a certificate.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="keyUsage", required=true)
     private final Input<CaPoolIssuancePolicyBaselineValuesKeyUsageArgs> keyUsage;
 
@@ -47,6 +67,11 @@ public final class CaPoolIssuancePolicyBaselineValuesArgs extends io.pulumi.reso
         return this.keyUsage;
     }
 
+    /**
+     * Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="policyIds")
     private final @Nullable Input<List<CaPoolIssuancePolicyBaselineValuesPolicyIdArgs>> policyIds;
 
