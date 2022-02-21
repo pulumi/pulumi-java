@@ -1,13 +1,12 @@
 package io.pulumi.core.internal;
 
 import com.google.common.collect.ImmutableList;
-import io.pulumi.core.Either;
+import com.google.common.collect.ImmutableMap;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
-import java.util.Objects;
-import java.util.function.Function;
-import java.util.stream.Collectors;
+
+import static java.util.Objects.requireNonNull;
 
 public class Reflection {
 
@@ -16,7 +15,7 @@ public class Reflection {
     }
 
     public static ImmutableList<Field> allFields(Class<?> type) {
-        Objects.requireNonNull(type);
+        requireNonNull(type);
         var fieldsArray = type.getDeclaredFields();
         var fields = ImmutableList.<Field>builder();
         fields.add(fieldsArray);
@@ -27,48 +26,39 @@ public class Reflection {
     }
 
     public static boolean isNestedClass(Class<?> type) {
-        Objects.requireNonNull(type);
+        requireNonNull(type);
         return type.isMemberClass() && !Modifier.isStatic(type.getModifiers());
     }
 
-    private static <R> Either<IllegalArgumentException, R> enumUnderlyingType(Class<?> type, Function<Field, R> transformer) {
-        Objects.requireNonNull(type);
-        Objects.requireNonNull(transformer);
-        if (!type.isEnum()) {
-            var ex = new IllegalArgumentException(String.format("Expected an Enum, got: '%s'", type.getTypeName()));
-            ex.fillInStackTrace(); // pre-throw
-            return Either.errorOf(ex);
+    /**
+     * Adds check for wrapped primitives (boxing) in addition to what original {@link Class#isAssignableFrom(Class)} does.
+     *
+     * @return true if given types are assignable, including primitive-wrapper pairs
+     * @throws NullPointerException if any parameter is null
+     */
+    public static boolean isAssignablePrimitiveFrom(Class<?> to, Class<?> from) {
+        requireNonNull(to);
+        requireNonNull(from);
+        if (from.isPrimitive() && to.isPrimitive()) {
+            return to == from;
         }
-        var allFields = allFields(type);
-        var fields = allFields.stream()
-                .filter(field -> !Modifier.isStatic(field.getModifiers()))
-                .filter(field -> !field.getName().equals("ordinal"))
-                .filter(field -> !field.getName().equals("name"))
-                .collect(Collectors.toList());
-        if (fields.size() == 0) {
-            var field = allFields.stream()
-                    .filter(f -> f.getName().equals("ordinal"))
-                    .peek(f -> f.setAccessible(true))
-                    .findFirst();
-            if (field.isPresent()) {
-                return Either.valueOf(transformer.apply(field.get()));
-            }
-            var ex = new IllegalArgumentException("Expected 'ordinal' filed, not found.");
-            ex.fillInStackTrace(); // pre-throw
-            return Either.errorOf(ex);
+        if (to.isPrimitive()) {
+            return primitiveWrappers.get(to) == from;
         }
-        if (fields.size() == 1) {
-            var field = fields.get(0);
-            field.setAccessible(true);
-            return Either.valueOf(transformer.apply(fields.get(0)));
+        if (from.isPrimitive()) {
+            return primitiveWrappers.get(from) == to;
         }
-
-        var ex = new IllegalArgumentException(String.format(
-                "Expected an Enum with zero or one custom fields, got %d in from '%s'",
-                fields.size(), type.getTypeName()
-        ));
-        ex.fillInStackTrace(); // pre-throw
-        return Either.errorOf(ex);
+        return to.isAssignableFrom(from);
     }
 
+    private static final ImmutableMap<Class<?>, Class<?>> primitiveWrappers = ImmutableMap.<Class<?>, Class<?>>builder()
+            .put(boolean.class, Boolean.class)
+            .put(byte.class, Byte.class)
+            .put(char.class, Character.class)
+            .put(double.class, Double.class)
+            .put(float.class, Float.class)
+            .put(int.class, Integer.class)
+            .put(long.class, Long.class)
+            .put(short.class, Short.class)
+            .build();
 }

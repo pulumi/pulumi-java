@@ -132,7 +132,7 @@ class InputOutputMetadataTest {
         assertThat(complex2Info).isNotNull();
         assertThat(complex2Info.getName()).isEqualTo("complex2");
         assertThat(complex2Info.getFieldType()).isAssignableFrom(tester.explicitFoo.getClass());
-        assertThat(complex2Info.getDataShape().isAssignableFrom(TypeShape.either(Integer.class, String.class))).isTrue();
+        assertThat(complex2Info.getDataShape().isAssignablePrimitiveFrom(TypeShape.either(Integer.class, String.class))).isTrue();
         var complex2 = complex2Info.getFieldValue(tester);
         assertThat(complex2).isNotNull().isPresent();
         var complex2Value = Internal.of(complex2.get()).getValueNullable().join();

@@ -23,8 +23,8 @@ class ComplexTypeConverterTest {
         public final boolean b;
         public final int i;
         public final double d;
-        public final ImmutableList<Boolean> list;
-        public final ImmutableMap<String, Integer> map;
+        public final List<Boolean> list;
+        public final Map<String, Integer> map;
         public final Object obj;
         public final ContainerSize size;
         public final ContainerColor color;
@@ -32,7 +32,7 @@ class ComplexTypeConverterTest {
         @OutputCustomType.Constructor({"s", "b", "i", "d", "list", "map", "obj", "size", "color"})
         public ComplexType1(
                 String s, boolean b, int i, double d,
-                ImmutableList<Boolean> list, ImmutableMap<String, Integer> map, Object obj,
+                List<Boolean> list, Map<String, Integer> map, Object obj,
                 ContainerSize size, ContainerColor color
         ) {
             this.s = s;
@@ -82,14 +82,14 @@ class ComplexTypeConverterTest {
     @OutputCustomType
     public static class ComplexType2 {
         public final ComplexType1 c;
-        public final ImmutableList<ComplexType1> c2List;
-        public final ImmutableMap<String, ComplexType1> c2Map;
+        public final List<ComplexType1> c2List;
+        public final Map<String, ComplexType1> c2Map;
 
         @OutputCustomType.Constructor({"c", "c2List", "c2Map"})
         public ComplexType2(
                 ComplexType1 c,
-                ImmutableList<ComplexType1> c2List,
-                ImmutableMap<String, ComplexType1> c2Map)
+                List<ComplexType1> c2List,
+                Map<String, ComplexType1> c2Map)
         {
             this.c = c;
             this.c2List = c2List;

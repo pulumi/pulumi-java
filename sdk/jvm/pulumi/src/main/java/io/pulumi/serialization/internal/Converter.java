@@ -1,7 +1,6 @@
 package io.pulumi.serialization.internal;
 
 import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
@@ -24,11 +23,10 @@ import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.io.IOException;
 import java.io.StringWriter;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Parameter;
 import java.util.*;
 import java.util.function.Function;
 
+import static io.pulumi.core.internal.Reflection.isAssignablePrimitiveFrom;
 import static java.util.stream.Collectors.joining;
 
 /**
@@ -86,7 +84,7 @@ public class Converter {
     }
 
     @Nullable
-    private static Object convertObjectUntyped(String context, @Nullable Object value, TypeShape<?> targetType) {
+    private static <T> Object convertObjectUntyped(String context, @Nullable Object value, TypeShape<T> targetType) {
         try {
             return tryConvertObjectInner(context, value, targetType);
         } catch (UnsupportedOperationException ex) {
@@ -103,12 +101,12 @@ public class Converter {
     }
 
     @Nullable
-    private static Object tryConvertObjectInner(
-            String context, @Nullable Object value, TypeShape<?> targetType
+    private static <T> Object tryConvertObjectInner(
+            String context, @Nullable Object value, TypeShape<T> targetType
     ) {
         var targetIsOptional = Optional.class.isAssignableFrom(targetType.getType());
 
-        // Note: null's  can enter the system as the representation of an 'unknown' value.
+        // Note: null's can enter the system as the representation of an 'unknown' value.
         // Before calling 'convert' we will have already lifted the 'isKnown' bit out, but we
         // will be passing null around as a value.
         if (value == null) {
@@ -123,20 +121,17 @@ public class Converter {
 
             // We're null and we're NOT converting to an Optional
             // We check for primitives and primitives wrappers here
-            if (boolean.class.isAssignableFrom(targetType.getType())
-                    || Boolean.class.isAssignableFrom(targetType.getType())) {
-                return false;
-            }
             if (String.class.isAssignableFrom(targetType.getType())) {
                 return "";
             }
-            if (double.class.isAssignableFrom(targetType.getType())
-                    || Double.class.isAssignableFrom(targetType.getType())) {
+            if (isAssignablePrimitiveFrom(Boolean.class, targetType.getType())) {
+                return false;
+            }
+            if (isAssignablePrimitiveFrom(Double.class, targetType.getType())) {
                 return 0.0;
             }
-            if (int.class.isAssignableFrom(targetType.getType())
-                    || Integer.class.isAssignableFrom(targetType.getType())) {
-                return 1;
+            if (isAssignablePrimitiveFrom(Integer.class, targetType.getType())) {
+                return 0;
             }
             if (JsonElement.class.isAssignableFrom(targetType.getType())) {
                 return JsonNull.INSTANCE;
@@ -190,21 +185,19 @@ public class Converter {
             return tryEnsureType(context, value, targetType);
         }
 
-        if (boolean.class.isAssignableFrom(targetType.getType())
-                || Boolean.class.isAssignableFrom(targetType.getType())) {
+        if (isAssignablePrimitiveFrom(Boolean.class, targetType.getType())) {
             return tryEnsureType(context, value, targetType);
         }
 
-        if (double.class.isAssignableFrom(targetType.getType())
-                || Double.class.isAssignableFrom(targetType.getType())) {
+        if (isAssignablePrimitiveFrom(Double.class, targetType.getType())) {
             return tryEnsureType(context, value, targetType);
         }
 
-        if (int.class.isAssignableFrom(targetType.getType())
-                || Integer.class.isAssignableFrom(targetType.getType())) {
+        if (isAssignablePrimitiveFrom(Integer.class, targetType.getType())) {
             return tryEnsureType(context, value, TypeShape.of(Double.class)).intValue();
         }
 
+        // The target type is exactly an Object
         if (Object.class.equals(targetType.getType())) {
             return value;
         }
@@ -242,8 +235,11 @@ public class Converter {
                     .filter(constant -> {
                         try {
                             return Objects.equals(value, converter.invoke(constant));
-                        } catch (IllegalAccessException | InvocationTargetException ex) {
-                            throw new IllegalStateException(String.format("Unexpected exception: %s", ex.getMessage()), ex);
+                        } catch (Throwable ex) {
+                            throw new IllegalStateException(String.format(
+                                    "Unexpected exception when calling an enum '%s' method annotated with '@%s': %s",
+                                    targetType.getTypeName(), EnumType.Converter.class.getSimpleName(), ex.getMessage()
+                            ), ex);
                         }
                     })
                     .findFirst()
@@ -272,17 +268,15 @@ public class Converter {
         var propertyTypeAnnotation = targetType.getAnnotation(OutputCustomType.class);
         if (propertyTypeAnnotation.isPresent()) {
             var constructor = targetType.getAnnotatedConstructor(OutputCustomType.Constructor.class);
-            var constructorAnnotation = Optional.ofNullable(
-                    constructor.getAnnotation(OutputCustomType.Constructor.class)
-            ).orElseThrow(() -> new IllegalStateException("Expected a constructor annotation.")); // validated before
 
             //noinspection unchecked
             var argumentsMap = (Map<String, Object>) tryEnsureType(context, value, TypeShape.of(Map.class));
             var constructorParameters = constructor.getParameters();
-            var arguments = new Object[constructorParameters.length];
+            var arguments = new Object[constructorParameters.size()];
 
             // Validate that the constructor is annotated properly before doing anything else
-            if (constructorParameters.length != constructorAnnotation.value().length) {
+            var expectedParametersCount = constructor.getAnnotation().value().length;
+            if (constructorParameters.size() != expectedParametersCount) {
                 throw new IllegalArgumentException(String.format(
                         "Expected type '%s' (annotated with '%s') to provide a constructor annotated with '%s', " +
                                 "and the number of constructor parameters matching the annotated parameter names. " +
@@ -291,13 +285,13 @@ public class Converter {
                         OutputCustomType.class.getTypeName(),
                         OutputCustomType.Constructor.class.getTypeName(),
                         constructor,
-                        constructorParameters.length,
-                        constructorAnnotation.value().length
+                        constructorParameters.size(),
+                        expectedParametersCount
                 ));
             }
 
             // Validate that we can decode the argument we've received
-            var expectedParameterNames = Set.of(constructorAnnotation.value());
+            var expectedParameterNames = Set.of(constructor.getAnnotation().value());
             for (var argumentName : argumentsMap.keySet()) {
                 if (!expectedParameterNames.contains(argumentName)) {
                     System.out.printf("can't deserialize: '%s'\n", argumentName);
@@ -315,9 +309,12 @@ public class Converter {
                     ));
                 }
             }
-            for (int i = 0, n = constructorParameters.length; i < n; i++) {
-                var parameter = constructorParameters[i];
-                var parameterName = constructorAnnotation.value()[i]; // we cannot use parameter.getName(), because it will be just e.g. 'arg0'
+            for (int i = 0, n = constructorParameters.size(); i < n; i++) {
+                var parameter = constructorParameters.get(i);
+                // we cannot use parameter.getName(), because it will be just e.g. 'arg0'
+                // we cannot use javac -parameters because we can't guarantee user types
+                // will have the runtime information present, that's why we use an annotation
+                var parameterName = constructor.getAnnotation().value()[i];
 
                 // Note: tryGetValue may not find a value here.
                 // That can happen for things like unknown values.
@@ -327,9 +324,9 @@ public class Converter {
                     arguments[i] = tryConvertObjectInner(
                             String.format("%s(%s)", targetType.getTypeName(), parameterName),
                             argValue,
-                            TypeShape.extract(parameter)
+                            parameter
                     );
-                } else if (parameter.isAnnotationPresent(Nullable.class)) {
+                } else if (parameter.isNullable()) {
                     arguments[i] = null;
                 } else {
                     throw new IllegalStateException(String.format(
@@ -349,9 +346,14 @@ public class Converter {
             }
 
             try {
-                return constructor.newInstance(arguments);
-            } catch (InstantiationException | IllegalAccessException | InvocationTargetException e) {
-                throw new IllegalStateException(String.format("Unexpected exception: %s", e.getMessage()), e);
+                return constructor.invoke(arguments);
+            } catch (Exception e) {
+                throw new IllegalStateException(String.format(
+                        "Unexpected exception while invoking type '%s' constructor annotated with '@%s', " +
+                                "expected arguments: '%s', given arguments: '%s', the error: %s",
+                        targetType.getTypeName(), constructor.getAnnotation().annotationType().getSimpleName(),
+                        expectedParameterNames, Arrays.toString(arguments), e.getMessage()
+                ), e);
             }
         }
 
@@ -439,7 +441,7 @@ public class Converter {
         }
     }
 
-    private static Either<Object, Object> tryConvertOneOf(String context, Object value, TypeShape<?> targetType) {
+    private static <T> Either<Object, Object> tryConvertOneOf(String context, Object value, TypeShape<T> targetType) {
         var leftType = targetType.getParameter(0)
                 .orElseThrow(() -> new IllegalStateException("Expected a left parameter type for the Either, got none"));
         var rightType = targetType.getParameter(1)
@@ -471,59 +473,56 @@ public class Converter {
         }
     }
 
-    private static ImmutableList<Object> tryConvertList(String context, Object value, TypeShape<?> targetType) {
+    private static <T> List</* Nullable */ Object> tryConvertList(String context, Object value, TypeShape<T> targetType) {
         if (!List.class.isAssignableFrom(value.getClass())) {
             throw new IllegalArgumentException(String.format(
                     "%s; Expected List but got '%s' while deserializing", context, value.getClass().getTypeName()
             ));
         }
-
-        var builder = ImmutableList.builder();
-        var elementType = targetType.getParameter(0)
-                .orElseThrow(() -> new IllegalArgumentException("Expected a parameter type for the List, got none"));
         //noinspection unchecked
         var objects = (List<Object>) value;
+        var elementType = targetType.getParameter(0)
+                .orElseThrow(() -> new IllegalArgumentException("Expected a parameter type for the List, got none"));
+
+        var list = new ArrayList<>(); // accepts null's
         for (int i = 0, objectsSize = objects.size(); i < objectsSize; i++) {
-            builder.add(tryConvertObjectInner(
+            list.add(tryConvertObjectInner(
                     String.format("%s[%d]", targetType.getTypeName(), i),
                     objects.get(i),
                     elementType
             ));
         }
-        return builder.build();
+        return list;
     }
 
-    private static ImmutableMap<String, Object> tryConvertMap(String context, Object value, TypeShape<?> targetType) {
+    private static <T> Map<String, /* Nullable */ Object> tryConvertMap(String context, Object value, TypeShape<T> targetType) {
         if (!Map.class.isAssignableFrom(value.getClass())) {
             throw new IllegalArgumentException(String.format(
                     "%s; Expected Map but got '%s' while deserializing", context, value.getClass().getTypeName()
             ));
         }
-
-        var builder = ImmutableMap.<String, Object>builder();
+        //noinspection unchecked
+        var objects = (Map<String, Object>) value;
         var valueType = targetType.getParameter(1)
                 .orElseThrow(() -> new IllegalArgumentException("Expected a key parameter type for the Map, got none"));
 
-        //noinspection unchecked
-        var objects = (Map<String, Object>) value;
+        var map = new HashMap<String, Object>();  // accepts null's
         for (var entry : objects.entrySet()) {
-            builder.put(entry.getKey(), tryConvertObjectInner(
+            map.put(entry.getKey(), tryConvertObjectInner(
                     String.format("%s[%s]", targetType.getTypeName(), entry.getKey()),
                     entry.getValue(),
                     valueType
             ));
         }
-        return builder.build();
+        return map;
     }
 
-    // TODO
-
-    public static void checkTargetType(String context, TypeShape<?> targetType) {
+    public static <T> void checkTargetType(String context, TypeShape<T> targetType) {
         checkTargetType(context, targetType, new HashSet<>());
     }
 
     // pre-check for performance reasons
-    public static void checkTargetType(String context, TypeShape<?> targetType, HashSet<Class<?>> seenTypes) {
+    public static <T> void checkTargetType(String context, TypeShape<T> targetType, HashSet<Class<?>> seenTypes) {
 
         // types can be recursive.  So only dive into a type if it's the first time we're seeing it.
         if (!seenTypes.add(targetType.getType())) {
@@ -531,12 +530,9 @@ public class Converter {
         }
 
         // we've reached a primitive or "basic" type - stop condition
-        if (boolean.class.isAssignableFrom(targetType.getType()) ||
-                Boolean.class.isAssignableFrom(targetType.getType()) ||
-                int.class.isAssignableFrom(targetType.getType()) ||
-                Integer.class.isAssignableFrom(targetType.getType()) ||
-                double.class.isAssignableFrom(targetType.getType()) ||
-                Double.class.isAssignableFrom(targetType.getType()) ||
+        if (isAssignablePrimitiveFrom(Boolean.class, targetType.getType()) ||
+                isAssignablePrimitiveFrom(Integer.class, targetType.getType()) ||
+                isAssignablePrimitiveFrom(Double.class, targetType.getType()) ||
                 String.class.isAssignableFrom(targetType.getType()) ||
                 AssetOrArchive.class.isAssignableFrom(targetType.getType()) ||
                 JsonElement.class.isAssignableFrom(targetType.getType()) ||
@@ -556,21 +552,21 @@ public class Converter {
                             context, targetType.getTypeName(), EnumType.class.getSimpleName()
                     )));
 
-            Function<Class<?>, Boolean> isAllowedGenericArgumentType = type ->
+            // We expect only those types as an enum value
+            Function<Class<?>, Boolean> isAllowedEnumArgumentType = type ->
                     String.class.isAssignableFrom(type)
-                            || double.class.isAssignableFrom(type)
-                            || Double.class.isAssignableFrom(type);
+                            || isAssignablePrimitiveFrom(Double.class, type);
 
             var converter = targetType.getAnnotatedMethod(EnumType.Converter.class);
 
-            if (converter.getParameterCount() != 0) {
+            if (converter.getParameters().size() != 1) { // the first parameter is the self-reference type (receiver)
                 throw new IllegalArgumentException(String.format(
-                        "%s; Expected enum type to have a converter that takes zero parameters, got wrong number of parameters: '%s'",
-                        context, converter
+                        "%s; Expected enum type '%s' to have a converter that takes zero parameters, got wrong number of parameters: '%s'",
+                        context, targetType.getTypeName(), converter.getParameters().size()
                 ));
             }
 
-            if (!isAllowedGenericArgumentType.apply(converter.getReturnType())) {
+            if (!isAllowedEnumArgumentType.apply(converter.getReturnType().getType())) {
                 throw new IllegalArgumentException(String.format(
                         "%s; Expected enum type to have a converter to String or Double, got: '%s'",
                         context, converter
@@ -642,11 +638,11 @@ public class Converter {
         if (propertyTypeAnnotation.isPresent()) {
             var constructor = targetType.getAnnotatedConstructor(OutputCustomType.Constructor.class);
 
-            Parameter[] parameters = constructor.getParameters();
-            for (Parameter parameter : parameters) {
+            var parameters = constructor.getParameters();
+            for (TypeShape<?> parameter : parameters) {
                 checkTargetType(
-                        String.format("%s(%s)", targetType.getTypeName(), parameter.getName()),
-                        TypeShape.extract(parameter), // check nested target type
+                        String.format("%s(%s)", targetType.getTypeName(), parameter.getTypeName()),
+                        parameter, // check nested target type
                         seenTypes
                 );
             }

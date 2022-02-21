@@ -24,7 +24,6 @@ import io.pulumi.resources.InputArgs;
 import io.pulumi.resources.Resource;
 
 import javax.annotation.Nullable;
-import java.lang.reflect.InvocationTargetException;
 import java.util.*;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
@@ -262,30 +261,34 @@ public class Serializer {
         if (prop instanceof Enum) {
             var shape = TypeShape.of(prop.getClass());
             var converter = shape.getAnnotatedMethod(EnumType.Converter.class);
+            final Object value;
             try {
-                var value = converter.invoke(prop);
-                if (value instanceof Double || value instanceof String) {
-                    return CompletableFuture.completedFuture(value);
-                } else {
-                    throw new UnsupportedOperationException(
-                            String.format(
-                                    "Serialize property[%s]: Type '%s' is not a supported argument type." +
-                                            " Expected an Enum with a converter method annotated with '%s' and return type of Double or String, got a converted type: '%s'",
-                                    ctx,
-                                    prop.getClass().getTypeName(),
-                                    EnumType.Converter.class,
-                                    value.getClass().getTypeName()
-                            )
-                    );
-                }
-            } catch (IllegalAccessException | InvocationTargetException ex) {
-                throw new IllegalStateException(String.format("Unexpected exception: %s", ex.getMessage()), ex);
+                value = converter.invoke(prop);
+            } catch (Throwable ex) {
+                throw new IllegalStateException(String.format(
+                        "Unexpected exception when calling an enum '%s' method annotated with '@%s': %s",
+                        shape.getTypeName(), EnumType.Converter.class.getSimpleName(), ex.getMessage()
+                ), ex);
+            }
+            if (value instanceof Double || value instanceof String) {
+                return CompletableFuture.completedFuture(value);
+            } else {
+                throw new UnsupportedOperationException(
+                        String.format(
+                                "Serialize property[%s]: Type '%s' is not a supported argument type." +
+                                        " Expected an Enum with a converter method annotated with '%s' and return type of Double or String, got a converted type: '%s'",
+                                ctx,
+                                prop.getClass().getTypeName(),
+                                EnumType.Converter.class,
+                                value.getClass().getTypeName()
+                        )
+                );
             }
         }
 
         throw new UnsupportedOperationException(String.format(
                 "Serialize property[%s]: Type '%s' is not a supported argument type.",
-                ctx, prop.getClass().getSimpleName()
+                ctx, prop.getClass().getTypeName()
         ));
     }
 
@@ -332,7 +335,7 @@ public class Serializer {
     }
 
     private CompletableFuture<Map<String, /* @Nullable */ Object>> serializeAssetOrArchiveAsync(String ctx, AssetOrArchive assetOrArchive, boolean keepResources) {
-        log.excessive(String.format("Serialize property[%s]: asset/archive=%s", ctx, assetOrArchive.getClass().getSimpleName()));
+        log.excessive(String.format("Serialize property[%s]: asset/archive=%s", ctx, assetOrArchive.getClass().getTypeName()));
 
         if (assetOrArchive instanceof InvalidAsset) {
             throw new UnsupportedOperationException("Cannot serialize invalid asset");
@@ -462,6 +465,6 @@ public class Serializer {
             return builder.setStructValue(createStruct(map)).build();
         }
         throw new UnsupportedOperationException(
-                String.format("Unsupported value when converting to protobuf, type: '%s'", value.getClass().getSimpleName()));
+                String.format("Unsupported value when converting to protobuf, type: '%s'", value.getClass().getTypeName()));
     }
 }

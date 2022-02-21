@@ -15,6 +15,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
 import javax.annotation.Nullable;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
@@ -61,7 +62,7 @@ public class DeploymentInvokeTest {
     }
 
     static class CustomInvokes {
-        static Output<ImmutableList<ImmutableMap<String, Object>>> doStuff(
+        static Output<List<Map<String, Object>>> doStuff(
                 @SuppressWarnings("SameParameterValue") CustomArgs args,
                 @Nullable InvokeOptions options) {
             return Output.of(
@@ -94,10 +95,10 @@ public class DeploymentInvokeTest {
 
     @OutputCustomType
     static class CustomResult {
-        public final ImmutableList<ImmutableMap<String, Object>> result;
+        public final List<Map<String, Object>> result;
 
         @OutputCustomType.Constructor("result")
-        private CustomResult(ImmutableList<ImmutableMap<String, Object>> result) {
+        private CustomResult(List<Map<String, Object>> result) {
             this.result = result;
         }
     }

@@ -1,8 +1,6 @@
 package io.pulumi.serialization.internal;
 
 import com.google.common.base.MoreObjects;
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableMap;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.protobuf.ListValue;
@@ -33,6 +31,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 import javax.annotation.CheckReturnValue;
 import javax.annotation.Nullable;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.Stream;
@@ -416,7 +415,7 @@ class ConverterTests {
                             .putFields("__defaults", Value.newBuilder().setBoolValue(true).build())
                             .build()
             ).build();
-            var shape = TypeShape.builder(ImmutableMap.class)
+            var shape = TypeShape.builder(Map.class)
                     .addParameter(String.class)
                     .addParameter(String.class)
                     .build();
@@ -667,10 +666,10 @@ class ConverterTests {
     @OutputCustomType
     public static class RecursiveType {
         public final String ref;
-        public final ImmutableList<RecursiveType> additionalItems;
+        public final List<RecursiveType> additionalItems;
 
         @OutputCustomType.Constructor({"ref", "additionalItems"})
-        public RecursiveType(String ref, ImmutableList<RecursiveType> additionalItems) {
+        public RecursiveType(String ref, List<RecursiveType> additionalItems) {
             this.ref = ref;
             this.additionalItems = additionalItems;
         }

@@ -17,6 +17,7 @@ import java.util.Objects;
 import java.util.concurrent.CompletableFuture;
 
 import static com.google.common.collect.ImmutableMap.toImmutableMap;
+import static io.pulumi.core.internal.Reflection.isAssignablePrimitiveFrom;
 
 @ParametersAreNonnullByDefault
 public class OutputCompletionSource<T> {
@@ -50,13 +51,13 @@ public class OutputCompletionSource<T> {
     }
 
     public void setObjectValue(Object value, TypeShape<?> valueShape, boolean isKnown) {
-        if (!dataTypeShape.getType().isAssignableFrom(value.getClass())) {
+        if (!isAssignablePrimitiveFrom(dataTypeShape.getType(), value.getClass())) {
             throw new IllegalArgumentException(String.format(
                     "Expected 'setObjectValue' with matching types, got 'OutputCompletionSource<%s>' and value class '%s",
                     value.getClass().getTypeName(), dataTypeShape.getType().getTypeName())
             );
         }
-        if (!dataTypeShape.isAssignableFrom(valueShape)) {
+        if (!dataTypeShape.isAssignablePrimitiveFrom(valueShape)) {
             throw new IllegalArgumentException(String.format(
                     "Expected 'setObjectValue' with matching types, got 'OutputCompletionSource<%s>' and value shape '%s'",
                     valueShape.asString(), dataTypeShape.asString())
