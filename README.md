@@ -36,10 +36,10 @@ Update `rootProject.name` in `settings.gradle`.
 
 Update `name` in `Pulumi.yaml`.
 
-Update `mainClass` in `app/build.grale`.
+Update `mainClass` in `app/build.gradle`.
 
 Reference any providers your example needs in `dependencies` section
-of `pp/build.gradle`.
+of `app/build.gradle`.
 
 Edit sources in `app/src/main`.
 
