@@ -21,7 +21,7 @@ public final class GetKeysKeySigningKey extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="algorithm", required=true)
-    private final String algorithm;
+        private final String algorithm;
 
     public String getAlgorithm() {
         return this.algorithm;
@@ -32,7 +32,7 @@ public final class GetKeysKeySigningKey extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="creationTime", required=true)
-    private final String creationTime;
+        private final String creationTime;
 
     public String getCreationTime() {
         return this.creationTime;
@@ -43,7 +43,7 @@ public final class GetKeysKeySigningKey extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+        private final String description;
 
     public String getDescription() {
         return this.description;
@@ -54,7 +54,7 @@ public final class GetKeysKeySigningKey extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="digests", required=true)
-    private final List<GetKeysKeySigningKeyDigest> digests;
+        private final List<GetKeysKeySigningKeyDigest> digests;
 
     public List<GetKeysKeySigningKeyDigest> getDigests() {
         return this.digests;
@@ -65,7 +65,7 @@ public final class GetKeysKeySigningKey extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dsRecord", required=true)
-    private final String dsRecord;
+        private final String dsRecord;
 
     public String getDsRecord() {
         return this.dsRecord;
@@ -76,7 +76,7 @@ public final class GetKeysKeySigningKey extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -87,7 +87,7 @@ public final class GetKeysKeySigningKey extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="isActive", required=true)
-    private final Boolean isActive;
+        private final Boolean isActive;
 
     public Boolean getIsActive() {
         return this.isActive;
@@ -98,7 +98,7 @@ public final class GetKeysKeySigningKey extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="keyLength", required=true)
-    private final Integer keyLength;
+        private final Integer keyLength;
 
     public Integer getKeyLength() {
         return this.keyLength;
@@ -109,7 +109,7 @@ public final class GetKeysKeySigningKey extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="keyTag", required=true)
-    private final Integer keyTag;
+        private final Integer keyTag;
 
     public Integer getKeyTag() {
         return this.keyTag;
@@ -120,7 +120,7 @@ public final class GetKeysKeySigningKey extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="publicKey", required=true)
-    private final String publicKey;
+        private final String publicKey;
 
     public String getPublicKey() {
         return this.publicKey;
@@ -249,7 +249,6 @@ public final class GetKeysKeySigningKey extends io.pulumi.resources.InvokeArgs {
             this.publicKey = Objects.requireNonNull(publicKey);
             return this;
         }
-
         public GetKeysKeySigningKey build() {
             return new GetKeysKeySigningKey(algorithm, creationTime, description, digests, dsRecord, id, isActive, keyLength, keyTag, publicKey);
         }

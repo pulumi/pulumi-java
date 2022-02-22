@@ -19,7 +19,7 @@ public final class AzureClusterAuthorizationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="adminUsers", required=true)
-    private final Input<List<AzureClusterAuthorizationAdminUserArgs>> adminUsers;
+        private final Input<List<AzureClusterAuthorizationAdminUserArgs>> adminUsers;
 
     public Input<List<AzureClusterAuthorizationAdminUserArgs>> getAdminUsers() {
         return this.adminUsers;
@@ -62,7 +62,6 @@ public final class AzureClusterAuthorizationArgs extends io.pulumi.resources.Res
             this.adminUsers = Input.of(Objects.requireNonNull(adminUsers));
             return this;
         }
-
         public AzureClusterAuthorizationArgs build() {
             return new AzureClusterAuthorizationArgs(adminUsers);
         }

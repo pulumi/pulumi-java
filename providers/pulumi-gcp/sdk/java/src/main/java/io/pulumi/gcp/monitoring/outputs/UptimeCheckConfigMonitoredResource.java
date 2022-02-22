@@ -75,7 +75,6 @@ public final class UptimeCheckConfigMonitoredResource {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public UptimeCheckConfigMonitoredResource build() {
             return new UptimeCheckConfigMonitoredResource(labels, type);
         }

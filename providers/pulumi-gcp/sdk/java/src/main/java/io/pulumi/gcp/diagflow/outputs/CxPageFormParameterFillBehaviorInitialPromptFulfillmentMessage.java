@@ -54,7 +54,6 @@ public final class CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessag
             this.text = text;
             return this;
         }
-
         public CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessage build() {
             return new CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessage(text);
         }

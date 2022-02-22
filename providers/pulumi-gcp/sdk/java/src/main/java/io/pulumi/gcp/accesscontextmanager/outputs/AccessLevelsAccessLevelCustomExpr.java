@@ -118,7 +118,6 @@ public final class AccessLevelsAccessLevelCustomExpr {
             this.title = title;
             return this;
         }
-
         public AccessLevelsAccessLevelCustomExpr build() {
             return new AccessLevelsAccessLevelCustomExpr(description, expression, location, title);
         }

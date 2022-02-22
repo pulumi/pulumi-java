@@ -20,7 +20,7 @@ public final class GetAppEngineServiceArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="moduleId", required=true)
-    private final String moduleId;
+        private final String moduleId;
 
     public String getModuleId() {
         return this.moduleId;
@@ -32,7 +32,7 @@ public final class GetAppEngineServiceArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="project")
-    private final @Nullable String project;
+        private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -81,7 +81,6 @@ public final class GetAppEngineServiceArgs extends io.pulumi.resources.InvokeArg
             this.project = project;
             return this;
         }
-
         public GetAppEngineServiceArgs build() {
             return new GetAppEngineServiceArgs(moduleId, project);
         }

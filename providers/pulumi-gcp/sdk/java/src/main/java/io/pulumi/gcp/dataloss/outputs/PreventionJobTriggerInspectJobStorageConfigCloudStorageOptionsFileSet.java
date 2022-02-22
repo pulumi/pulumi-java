@@ -87,7 +87,6 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
             this.url = url;
             return this;
         }
-
         public PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSet build() {
             return new PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSet(regexFileSet, url);
         }

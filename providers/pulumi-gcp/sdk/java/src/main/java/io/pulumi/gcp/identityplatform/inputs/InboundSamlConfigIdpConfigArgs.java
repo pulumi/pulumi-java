@@ -23,7 +23,7 @@ public final class InboundSamlConfigIdpConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="idpCertificates", required=true)
-    private final Input<List<InboundSamlConfigIdpConfigIdpCertificateArgs>> idpCertificates;
+        private final Input<List<InboundSamlConfigIdpConfigIdpCertificateArgs>> idpCertificates;
 
     public Input<List<InboundSamlConfigIdpConfigIdpCertificateArgs>> getIdpCertificates() {
         return this.idpCertificates;
@@ -34,7 +34,7 @@ public final class InboundSamlConfigIdpConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="idpEntityId", required=true)
-    private final Input<String> idpEntityId;
+        private final Input<String> idpEntityId;
 
     public Input<String> getIdpEntityId() {
         return this.idpEntityId;
@@ -45,7 +45,7 @@ public final class InboundSamlConfigIdpConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="signRequest")
-    private final @Nullable Input<Boolean> signRequest;
+        private final @Nullable Input<Boolean> signRequest;
 
     public Input<Boolean> getSignRequest() {
         return this.signRequest == null ? Input.empty() : this.signRequest;
@@ -56,7 +56,7 @@ public final class InboundSamlConfigIdpConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="ssoUrl", required=true)
-    private final Input<String> ssoUrl;
+        private final Input<String> ssoUrl;
 
     public Input<String> getSsoUrl() {
         return this.ssoUrl;
@@ -145,7 +145,6 @@ public final class InboundSamlConfigIdpConfigArgs extends io.pulumi.resources.Re
             this.ssoUrl = Input.of(Objects.requireNonNull(ssoUrl));
             return this;
         }
-
         public InboundSamlConfigIdpConfigArgs build() {
             return new InboundSamlConfigIdpConfigArgs(idpCertificates, idpEntityId, signRequest, ssoUrl);
         }

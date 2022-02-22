@@ -197,7 +197,6 @@ public final class JobSparkConfig {
             this.properties = properties;
             return this;
         }
-
         public JobSparkConfig build() {
             return new JobSparkConfig(archiveUris, args, fileUris, jarFileUris, loggingConfig, mainClass, mainJarFileUri, properties);
         }

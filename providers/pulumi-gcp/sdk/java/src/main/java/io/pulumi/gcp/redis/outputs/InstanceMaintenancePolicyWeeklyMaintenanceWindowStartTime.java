@@ -122,7 +122,6 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime {
             this.seconds = seconds;
             return this;
         }
-
         public InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime build() {
             return new InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime(hours, minutes, nanos, seconds);
         }

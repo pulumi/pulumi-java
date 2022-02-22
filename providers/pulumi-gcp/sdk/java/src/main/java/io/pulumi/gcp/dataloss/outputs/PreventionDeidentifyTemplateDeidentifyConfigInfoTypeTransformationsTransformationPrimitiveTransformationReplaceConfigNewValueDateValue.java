@@ -99,7 +99,6 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             this.year = year;
             return this;
         }
-
         public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValue build() {
             return new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValue(day, month, year);
         }

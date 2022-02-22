@@ -75,7 +75,6 @@ public final class GetRegionInstanceGroupInstanceNamedPort {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public GetRegionInstanceGroupInstanceNamedPort build() {
             return new GetRegionInstanceGroupInstanceNamedPort(name, port);
         }

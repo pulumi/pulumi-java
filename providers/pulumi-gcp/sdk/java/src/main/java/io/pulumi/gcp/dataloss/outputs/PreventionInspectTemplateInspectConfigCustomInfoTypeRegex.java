@@ -79,7 +79,6 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeRegex {
             this.pattern = Objects.requireNonNull(pattern);
             return this;
         }
-
         public PreventionInspectTemplateInspectConfigCustomInfoTypeRegex build() {
             return new PreventionInspectTemplateInspectConfigCustomInfoTypeRegex(groupIndexes, pattern);
         }

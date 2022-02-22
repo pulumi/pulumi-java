@@ -142,7 +142,6 @@ public final class InstanceMaintenancePolicy {
             this.weeklyMaintenanceWindows = weeklyMaintenanceWindows;
             return this;
         }
-
         public InstanceMaintenancePolicy build() {
             return new InstanceMaintenancePolicy(createTime, description, updateTime, weeklyMaintenanceWindows);
         }

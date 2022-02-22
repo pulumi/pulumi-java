@@ -218,7 +218,6 @@ public final class JobExtract {
             this.useAvroLogicalTypes = useAvroLogicalTypes;
             return this;
         }
-
         public JobExtract build() {
             return new JobExtract(compression, destinationFormat, destinationUris, fieldDelimiter, printHeader, sourceModel, sourceTable, useAvroLogicalTypes);
         }

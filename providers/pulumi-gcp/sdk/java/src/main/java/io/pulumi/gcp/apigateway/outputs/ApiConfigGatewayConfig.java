@@ -54,7 +54,6 @@ public final class ApiConfigGatewayConfig {
             this.backendConfig = Objects.requireNonNull(backendConfig);
             return this;
         }
-
         public ApiConfigGatewayConfig build() {
             return new ApiConfigGatewayConfig(backendConfig);
         }

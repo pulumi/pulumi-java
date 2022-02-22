@@ -22,7 +22,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchGetArgs
      * 
      */
     @InputImport(name="exactMatch")
-    private final @Nullable Input<String> exactMatch;
+        private final @Nullable Input<String> exactMatch;
 
     public Input<String> getExactMatch() {
         return this.exactMatch == null ? Input.empty() : this.exactMatch;
@@ -34,7 +34,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchGetArgs
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -47,7 +47,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchGetArgs
      * 
      */
     @InputImport(name="presentMatch")
-    private final @Nullable Input<Boolean> presentMatch;
+        private final @Nullable Input<Boolean> presentMatch;
 
     public Input<Boolean> getPresentMatch() {
         return this.presentMatch == null ? Input.empty() : this.presentMatch;
@@ -61,7 +61,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchGetArgs
      * 
      */
     @InputImport(name="regexMatch")
-    private final @Nullable Input<String> regexMatch;
+        private final @Nullable Input<String> regexMatch;
 
     public Input<String> getRegexMatch() {
         return this.regexMatch == null ? Input.empty() : this.regexMatch;
@@ -150,7 +150,6 @@ public final class URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchGetArgs
             this.regexMatch = Input.ofNullable(regexMatch);
             return this;
         }
-
         public URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchGetArgs build() {
             return new URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchGetArgs(exactMatch, name, presentMatch, regexMatch);
         }

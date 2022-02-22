@@ -126,7 +126,6 @@ public final class QueueAppEngineRoutingOverride {
             this.version = version;
             return this;
         }
-
         public QueueAppEngineRoutingOverride build() {
             return new QueueAppEngineRoutingOverride(host, instance, service, version);
         }

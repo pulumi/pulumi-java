@@ -18,7 +18,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMetastoreConfigA
      * 
      */
     @InputImport(name="dataprocMetastoreService", required=true)
-    private final Input<String> dataprocMetastoreService;
+        private final Input<String> dataprocMetastoreService;
 
     public Input<String> getDataprocMetastoreService() {
         return this.dataprocMetastoreService;
@@ -61,7 +61,6 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMetastoreConfigA
             this.dataprocMetastoreService = Input.of(Objects.requireNonNull(dataprocMetastoreService));
             return this;
         }
-
         public WorkflowTemplatePlacementManagedClusterConfigMetastoreConfigArgs build() {
             return new WorkflowTemplatePlacementManagedClusterConfigMetastoreConfigArgs(dataprocMetastoreService);
         }

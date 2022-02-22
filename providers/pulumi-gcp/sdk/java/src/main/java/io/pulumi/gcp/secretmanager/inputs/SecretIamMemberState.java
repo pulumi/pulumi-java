@@ -16,7 +16,7 @@ public final class SecretIamMemberState extends io.pulumi.resources.ResourceArgs
     public static final SecretIamMemberState Empty = new SecretIamMemberState();
 
     @InputImport(name="condition")
-    private final @Nullable Input<SecretIamMemberConditionGetArgs> condition;
+        private final @Nullable Input<SecretIamMemberConditionGetArgs> condition;
 
     public Input<SecretIamMemberConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -27,14 +27,14 @@ public final class SecretIamMemberState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+        private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="member")
-    private final @Nullable Input<String> member;
+        private final @Nullable Input<String> member;
 
     public Input<String> getMember() {
         return this.member == null ? Input.empty() : this.member;
@@ -46,7 +46,7 @@ public final class SecretIamMemberState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -59,14 +59,14 @@ public final class SecretIamMemberState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+        private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
     }
 
     @InputImport(name="secretId")
-    private final @Nullable Input<String> secretId;
+        private final @Nullable Input<String> secretId;
 
     public Input<String> getSecretId() {
         return this.secretId == null ? Input.empty() : this.secretId;
@@ -185,7 +185,6 @@ public final class SecretIamMemberState extends io.pulumi.resources.ResourceArgs
             this.secretId = Input.ofNullable(secretId);
             return this;
         }
-
         public SecretIamMemberState build() {
             return new SecretIamMemberState(condition, etag, member, project, role, secretId);
         }

@@ -246,7 +246,6 @@ public final class GetSSLPolicyResult {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public GetSSLPolicyResult build() {
             return new GetSSLPolicyResult(creationTimestamp, customFeatures, description, enabledFeatures, fingerprint, id, minTlsVersion, name, profile, project, selfLink);
         }

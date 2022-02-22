@@ -146,7 +146,6 @@ public final class DatabaseInstanceSettingsIpConfiguration {
             this.requireSsl = requireSsl;
             return this;
         }
-
         public DatabaseInstanceSettingsIpConfiguration build() {
             return new DatabaseInstanceSettingsIpConfiguration(allocatedIpRange, authorizedNetworks, ipv4Enabled, privateNetwork, requireSsl);
         }

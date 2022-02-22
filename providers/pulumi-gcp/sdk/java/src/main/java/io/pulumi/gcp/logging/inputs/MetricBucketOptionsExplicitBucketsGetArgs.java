@@ -19,7 +19,7 @@ public final class MetricBucketOptionsExplicitBucketsGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="bounds", required=true)
-    private final Input<List<Double>> bounds;
+        private final Input<List<Double>> bounds;
 
     public Input<List<Double>> getBounds() {
         return this.bounds;
@@ -62,7 +62,6 @@ public final class MetricBucketOptionsExplicitBucketsGetArgs extends io.pulumi.r
             this.bounds = Input.of(Objects.requireNonNull(bounds));
             return this;
         }
-
         public MetricBucketOptionsExplicitBucketsGetArgs build() {
             return new MetricBucketOptionsExplicitBucketsGetArgs(bounds);
         }

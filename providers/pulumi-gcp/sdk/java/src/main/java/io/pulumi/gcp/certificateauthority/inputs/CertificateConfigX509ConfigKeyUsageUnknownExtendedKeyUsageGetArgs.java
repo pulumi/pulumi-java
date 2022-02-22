@@ -19,7 +19,7 @@ public final class CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsageGet
      * 
      */
     @InputImport(name="objectIdPaths", required=true)
-    private final Input<List<Integer>> objectIdPaths;
+        private final Input<List<Integer>> objectIdPaths;
 
     public Input<List<Integer>> getObjectIdPaths() {
         return this.objectIdPaths;
@@ -62,7 +62,6 @@ public final class CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsageGet
             this.objectIdPaths = Input.of(Objects.requireNonNull(objectIdPaths));
             return this;
         }
-
         public CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsageGetArgs build() {
             return new CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsageGetArgs(objectIdPaths);
         }

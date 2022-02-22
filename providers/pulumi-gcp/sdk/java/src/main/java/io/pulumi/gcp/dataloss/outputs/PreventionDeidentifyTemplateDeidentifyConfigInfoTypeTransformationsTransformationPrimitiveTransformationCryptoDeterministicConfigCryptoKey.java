@@ -105,7 +105,6 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             this.unwrapped = unwrapped;
             return this;
         }
-
         public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKey build() {
             return new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKey(kmsWrapped, $transient, unwrapped);
         }

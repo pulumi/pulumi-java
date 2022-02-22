@@ -106,7 +106,6 @@ public final class OccurenceAttestationSignature {
             this.signature = signature;
             return this;
         }
-
         public OccurenceAttestationSignature build() {
             return new OccurenceAttestationSignature(publicKeyId, signature);
         }

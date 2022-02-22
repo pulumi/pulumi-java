@@ -143,7 +143,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResource {
             this.repository = repository;
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResource build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResource(exec, file, id, pkg, repository);
         }

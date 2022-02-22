@@ -128,7 +128,6 @@ public final class DeviceGatewayConfig {
             this.lastAccessedGatewayTime = lastAccessedGatewayTime;
             return this;
         }
-
         public DeviceGatewayConfig build() {
             return new DeviceGatewayConfig(gatewayAuthMethod, gatewayType, lastAccessedGatewayId, lastAccessedGatewayTime);
         }

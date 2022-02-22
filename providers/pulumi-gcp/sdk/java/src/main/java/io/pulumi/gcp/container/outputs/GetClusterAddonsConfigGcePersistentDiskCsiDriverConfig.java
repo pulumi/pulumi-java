@@ -44,7 +44,6 @@ public final class GetClusterAddonsConfigGcePersistentDiskCsiDriverConfig {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public GetClusterAddonsConfigGcePersistentDiskCsiDriverConfig build() {
             return new GetClusterAddonsConfigGcePersistentDiskCsiDriverConfig(enabled);
         }

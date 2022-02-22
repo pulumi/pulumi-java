@@ -18,7 +18,7 @@ public final class AiFeatureStoreOnlineServingConfigArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="fixedNodeCount", required=true)
-    private final Input<Integer> fixedNodeCount;
+        private final Input<Integer> fixedNodeCount;
 
     public Input<Integer> getFixedNodeCount() {
         return this.fixedNodeCount;
@@ -61,7 +61,6 @@ public final class AiFeatureStoreOnlineServingConfigArgs extends io.pulumi.resou
             this.fixedNodeCount = Input.of(Objects.requireNonNull(fixedNodeCount));
             return this;
         }
-
         public AiFeatureStoreOnlineServingConfigArgs build() {
             return new AiFeatureStoreOnlineServingConfigArgs(fixedNodeCount);
         }

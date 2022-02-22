@@ -78,7 +78,6 @@ public final class RouterBgpAdvertisedIpRange {
             this.range = Objects.requireNonNull(range);
             return this;
         }
-
         public RouterBgpAdvertisedIpRange build() {
             return new RouterBgpAdvertisedIpRange(description, range);
         }

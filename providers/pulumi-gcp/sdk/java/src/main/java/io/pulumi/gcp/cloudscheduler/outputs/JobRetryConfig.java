@@ -158,7 +158,6 @@ public final class JobRetryConfig {
             this.retryCount = retryCount;
             return this;
         }
-
         public JobRetryConfig build() {
             return new JobRetryConfig(maxBackoffDuration, maxDoublings, maxRetryDuration, minBackoffDuration, retryCount);
         }

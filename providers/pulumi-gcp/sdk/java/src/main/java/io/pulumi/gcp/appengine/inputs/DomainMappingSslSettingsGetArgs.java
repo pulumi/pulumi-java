@@ -24,7 +24,7 @@ public final class DomainMappingSslSettingsGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="certificateId")
-    private final @Nullable Input<String> certificateId;
+        private final @Nullable Input<String> certificateId;
 
     public Input<String> getCertificateId() {
         return this.certificateId == null ? Input.empty() : this.certificateId;
@@ -40,7 +40,7 @@ public final class DomainMappingSslSettingsGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="pendingManagedCertificateId")
-    private final @Nullable Input<String> pendingManagedCertificateId;
+        private final @Nullable Input<String> pendingManagedCertificateId;
 
     public Input<String> getPendingManagedCertificateId() {
         return this.pendingManagedCertificateId == null ? Input.empty() : this.pendingManagedCertificateId;
@@ -53,7 +53,7 @@ public final class DomainMappingSslSettingsGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="sslManagementType", required=true)
-    private final Input<String> sslManagementType;
+        private final Input<String> sslManagementType;
 
     public Input<String> getSslManagementType() {
         return this.sslManagementType;
@@ -127,7 +127,6 @@ public final class DomainMappingSslSettingsGetArgs extends io.pulumi.resources.R
             this.sslManagementType = Input.of(Objects.requireNonNull(sslManagementType));
             return this;
         }
-
         public DomainMappingSslSettingsGetArgs build() {
             return new DomainMappingSslSettingsGetArgs(certificateId, pendingManagedCertificateId, sslManagementType);
         }

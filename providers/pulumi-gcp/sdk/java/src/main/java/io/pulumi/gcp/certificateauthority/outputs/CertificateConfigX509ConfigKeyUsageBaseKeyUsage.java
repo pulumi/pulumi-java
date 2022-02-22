@@ -223,7 +223,6 @@ public final class CertificateConfigX509ConfigKeyUsageBaseKeyUsage {
             this.keyEncipherment = keyEncipherment;
             return this;
         }
-
         public CertificateConfigX509ConfigKeyUsageBaseKeyUsage build() {
             return new CertificateConfigX509ConfigKeyUsageBaseKeyUsage(certSign, contentCommitment, crlSign, dataEncipherment, decipherOnly, digitalSignature, encipherOnly, keyAgreement, keyEncipherment);
         }

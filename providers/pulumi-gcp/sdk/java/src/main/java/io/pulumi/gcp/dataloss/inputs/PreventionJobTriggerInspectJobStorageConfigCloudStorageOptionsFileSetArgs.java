@@ -21,7 +21,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      * 
      */
     @InputImport(name="regexFileSet")
-    private final @Nullable Input<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetArgs> regexFileSet;
+        private final @Nullable Input<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetArgs> regexFileSet;
 
     public Input<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetArgs> getRegexFileSet() {
         return this.regexFileSet == null ? Input.empty() : this.regexFileSet;
@@ -36,7 +36,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      * 
      */
     @InputImport(name="url")
-    private final @Nullable Input<String> url;
+        private final @Nullable Input<String> url;
 
     public Input<String> getUrl() {
         return this.url == null ? Input.empty() : this.url;
@@ -95,7 +95,6 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
             this.url = Input.ofNullable(url);
             return this;
         }
-
         public PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetArgs build() {
             return new PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetArgs(regexFileSet, url);
         }

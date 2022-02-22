@@ -86,7 +86,6 @@ public final class GetInstanceMaintenancePolicy {
             this.weeklyMaintenanceWindows = Objects.requireNonNull(weeklyMaintenanceWindows);
             return this;
         }
-
         public GetInstanceMaintenancePolicy build() {
             return new GetInstanceMaintenancePolicy(createTime, description, updateTime, weeklyMaintenanceWindows);
         }

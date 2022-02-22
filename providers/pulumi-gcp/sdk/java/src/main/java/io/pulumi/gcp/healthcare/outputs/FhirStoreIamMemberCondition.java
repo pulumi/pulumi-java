@@ -73,7 +73,6 @@ public final class FhirStoreIamMemberCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public FhirStoreIamMemberCondition build() {
             return new FhirStoreIamMemberCondition(description, expression, title);
         }

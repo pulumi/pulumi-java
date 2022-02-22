@@ -24,7 +24,7 @@ public final class CertificateTemplatePredefinedValuesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="additionalExtensions")
-    private final @Nullable Input<List<CertificateTemplatePredefinedValuesAdditionalExtensionArgs>> additionalExtensions;
+        private final @Nullable Input<List<CertificateTemplatePredefinedValuesAdditionalExtensionArgs>> additionalExtensions;
 
     public Input<List<CertificateTemplatePredefinedValuesAdditionalExtensionArgs>> getAdditionalExtensions() {
         return this.additionalExtensions == null ? Input.empty() : this.additionalExtensions;
@@ -35,7 +35,7 @@ public final class CertificateTemplatePredefinedValuesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="aiaOcspServers")
-    private final @Nullable Input<List<String>> aiaOcspServers;
+        private final @Nullable Input<List<String>> aiaOcspServers;
 
     public Input<List<String>> getAiaOcspServers() {
         return this.aiaOcspServers == null ? Input.empty() : this.aiaOcspServers;
@@ -46,7 +46,7 @@ public final class CertificateTemplatePredefinedValuesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="caOptions")
-    private final @Nullable Input<CertificateTemplatePredefinedValuesCaOptionsArgs> caOptions;
+        private final @Nullable Input<CertificateTemplatePredefinedValuesCaOptionsArgs> caOptions;
 
     public Input<CertificateTemplatePredefinedValuesCaOptionsArgs> getCaOptions() {
         return this.caOptions == null ? Input.empty() : this.caOptions;
@@ -57,7 +57,7 @@ public final class CertificateTemplatePredefinedValuesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="keyUsage")
-    private final @Nullable Input<CertificateTemplatePredefinedValuesKeyUsageArgs> keyUsage;
+        private final @Nullable Input<CertificateTemplatePredefinedValuesKeyUsageArgs> keyUsage;
 
     public Input<CertificateTemplatePredefinedValuesKeyUsageArgs> getKeyUsage() {
         return this.keyUsage == null ? Input.empty() : this.keyUsage;
@@ -68,7 +68,7 @@ public final class CertificateTemplatePredefinedValuesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="policyIds")
-    private final @Nullable Input<List<CertificateTemplatePredefinedValuesPolicyIdArgs>> policyIds;
+        private final @Nullable Input<List<CertificateTemplatePredefinedValuesPolicyIdArgs>> policyIds;
 
     public Input<List<CertificateTemplatePredefinedValuesPolicyIdArgs>> getPolicyIds() {
         return this.policyIds == null ? Input.empty() : this.policyIds;
@@ -172,7 +172,6 @@ public final class CertificateTemplatePredefinedValuesArgs extends io.pulumi.res
             this.policyIds = Input.ofNullable(policyIds);
             return this;
         }
-
         public CertificateTemplatePredefinedValuesArgs build() {
             return new CertificateTemplatePredefinedValuesArgs(additionalExtensions, aiaOcspServers, caOptions, keyUsage, policyIds);
         }

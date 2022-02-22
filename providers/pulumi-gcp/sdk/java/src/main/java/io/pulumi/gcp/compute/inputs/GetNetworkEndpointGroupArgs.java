@@ -20,7 +20,7 @@ public final class GetNetworkEndpointGroupArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -32,7 +32,7 @@ public final class GetNetworkEndpointGroupArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="project")
-    private final @Nullable String project;
+        private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -43,7 +43,7 @@ public final class GetNetworkEndpointGroupArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="selfLink")
-    private final @Nullable String selfLink;
+        private final @Nullable String selfLink;
 
     public Optional<String> getSelfLink() {
         return this.selfLink == null ? Optional.empty() : Optional.ofNullable(this.selfLink);
@@ -54,7 +54,7 @@ public final class GetNetworkEndpointGroupArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="zone")
-    private final @Nullable String zone;
+        private final @Nullable String zone;
 
     public Optional<String> getZone() {
         return this.zone == null ? Optional.empty() : Optional.ofNullable(this.zone);
@@ -123,7 +123,6 @@ public final class GetNetworkEndpointGroupArgs extends io.pulumi.resources.Invok
             this.zone = zone;
             return this;
         }
-
         public GetNetworkEndpointGroupArgs build() {
             return new GetNetworkEndpointGroupArgs(name, project, selfLink, zone);
         }

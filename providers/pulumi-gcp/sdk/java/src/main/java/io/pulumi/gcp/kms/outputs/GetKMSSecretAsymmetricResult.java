@@ -123,7 +123,6 @@ public final class GetKMSSecretAsymmetricResult {
             this.plaintext = Objects.requireNonNull(plaintext);
             return this;
         }
-
         public GetKMSSecretAsymmetricResult build() {
             return new GetKMSSecretAsymmetricResult(ciphertext, crc32, cryptoKeyVersion, id, plaintext);
         }

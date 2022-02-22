@@ -136,7 +136,6 @@ public final class GetInstanceAttachedDisk {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public GetInstanceAttachedDisk build() {
             return new GetInstanceAttachedDisk(deviceName, diskEncryptionKeyRaw, diskEncryptionKeySha256, kmsKeySelfLink, mode, source);
         }

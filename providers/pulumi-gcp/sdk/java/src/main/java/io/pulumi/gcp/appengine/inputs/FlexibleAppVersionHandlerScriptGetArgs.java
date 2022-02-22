@@ -18,7 +18,7 @@ public final class FlexibleAppVersionHandlerScriptGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="scriptPath", required=true)
-    private final Input<String> scriptPath;
+        private final Input<String> scriptPath;
 
     public Input<String> getScriptPath() {
         return this.scriptPath;
@@ -61,7 +61,6 @@ public final class FlexibleAppVersionHandlerScriptGetArgs extends io.pulumi.reso
             this.scriptPath = Input.of(Objects.requireNonNull(scriptPath));
             return this;
         }
-
         public FlexibleAppVersionHandlerScriptGetArgs build() {
             return new FlexibleAppVersionHandlerScriptGetArgs(scriptPath);
         }

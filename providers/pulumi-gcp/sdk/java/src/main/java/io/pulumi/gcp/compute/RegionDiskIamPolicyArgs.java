@@ -19,7 +19,7 @@ public final class RegionDiskIamPolicyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -31,7 +31,7 @@ public final class RegionDiskIamPolicyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="policyData", required=true)
-    private final Input<String> policyData;
+        private final Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData;
@@ -43,14 +43,14 @@ public final class RegionDiskIamPolicyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+        private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -139,7 +139,6 @@ public final class RegionDiskIamPolicyArgs extends io.pulumi.resources.ResourceA
             this.region = Input.ofNullable(region);
             return this;
         }
-
         public RegionDiskIamPolicyArgs build() {
             return new RegionDiskIamPolicyArgs(name, policyData, project, region);
         }

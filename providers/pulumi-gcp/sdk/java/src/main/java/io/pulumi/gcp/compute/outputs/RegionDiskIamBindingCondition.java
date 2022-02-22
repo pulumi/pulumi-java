@@ -73,7 +73,6 @@ public final class RegionDiskIamBindingCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public RegionDiskIamBindingCondition build() {
             return new RegionDiskIamBindingCondition(description, expression, title);
         }

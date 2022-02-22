@@ -20,7 +20,7 @@ public final class SubscriptionRetryPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="maximumBackoff")
-    private final @Nullable Input<String> maximumBackoff;
+        private final @Nullable Input<String> maximumBackoff;
 
     public Input<String> getMaximumBackoff() {
         return this.maximumBackoff == null ? Input.empty() : this.maximumBackoff;
@@ -32,7 +32,7 @@ public final class SubscriptionRetryPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="minimumBackoff")
-    private final @Nullable Input<String> minimumBackoff;
+        private final @Nullable Input<String> minimumBackoff;
 
     public Input<String> getMinimumBackoff() {
         return this.minimumBackoff == null ? Input.empty() : this.minimumBackoff;
@@ -91,7 +91,6 @@ public final class SubscriptionRetryPolicyArgs extends io.pulumi.resources.Resou
             this.minimumBackoff = Input.ofNullable(minimumBackoff);
             return this;
         }
-
         public SubscriptionRetryPolicyArgs build() {
             return new SubscriptionRetryPolicyArgs(maximumBackoff, minimumBackoff);
         }

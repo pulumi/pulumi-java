@@ -19,7 +19,7 @@ public final class WorkflowTemplateParameterValidationRegexGetArgs extends io.pu
      * 
      */
     @InputImport(name="regexes", required=true)
-    private final Input<List<String>> regexes;
+        private final Input<List<String>> regexes;
 
     public Input<List<String>> getRegexes() {
         return this.regexes;
@@ -62,7 +62,6 @@ public final class WorkflowTemplateParameterValidationRegexGetArgs extends io.pu
             this.regexes = Input.of(Objects.requireNonNull(regexes));
             return this;
         }
-
         public WorkflowTemplateParameterValidationRegexGetArgs build() {
             return new WorkflowTemplateParameterValidationRegexGetArgs(regexes);
         }

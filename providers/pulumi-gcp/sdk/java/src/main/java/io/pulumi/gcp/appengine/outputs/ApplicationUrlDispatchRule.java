@@ -73,7 +73,6 @@ public final class ApplicationUrlDispatchRule {
             this.service = service;
             return this;
         }
-
         public ApplicationUrlDispatchRule build() {
             return new ApplicationUrlDispatchRule(domain, path, service);
         }

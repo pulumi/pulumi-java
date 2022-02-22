@@ -19,7 +19,7 @@ public final class RegionInstanceGroupManagerVersionTargetSizeGetArgs extends io
      * 
      */
     @InputImport(name="fixed")
-    private final @Nullable Input<Integer> fixed;
+        private final @Nullable Input<Integer> fixed;
 
     public Input<Integer> getFixed() {
         return this.fixed == null ? Input.empty() : this.fixed;
@@ -32,7 +32,7 @@ public final class RegionInstanceGroupManagerVersionTargetSizeGetArgs extends io
      * 
      */
     @InputImport(name="percent")
-    private final @Nullable Input<Integer> percent;
+        private final @Nullable Input<Integer> percent;
 
     public Input<Integer> getPercent() {
         return this.percent == null ? Input.empty() : this.percent;
@@ -91,7 +91,6 @@ public final class RegionInstanceGroupManagerVersionTargetSizeGetArgs extends io
             this.percent = Input.ofNullable(percent);
             return this;
         }
-
         public RegionInstanceGroupManagerVersionTargetSizeGetArgs build() {
             return new RegionInstanceGroupManagerVersionTargetSizeGetArgs(fixed, percent);
         }

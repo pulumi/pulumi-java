@@ -72,7 +72,6 @@ public final class GetHcVpnGatewayVpnInterface {
             this.ipAddress = Objects.requireNonNull(ipAddress);
             return this;
         }
-
         public GetHcVpnGatewayVpnInterface build() {
             return new GetHcVpnGatewayVpnInterface(id, interconnectAttachment, ipAddress);
         }

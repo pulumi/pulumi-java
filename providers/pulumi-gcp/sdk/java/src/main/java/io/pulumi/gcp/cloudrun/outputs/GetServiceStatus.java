@@ -100,7 +100,6 @@ public final class GetServiceStatus {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public GetServiceStatus build() {
             return new GetServiceStatus(conditions, latestCreatedRevisionName, latestReadyRevisionName, observedGeneration, url);
         }

@@ -19,7 +19,7 @@ public final class JobLoadTimePartitioningGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="expirationMs")
-    private final @Nullable Input<String> expirationMs;
+        private final @Nullable Input<String> expirationMs;
 
     public Input<String> getExpirationMs() {
         return this.expirationMs == null ? Input.empty() : this.expirationMs;
@@ -32,7 +32,7 @@ public final class JobLoadTimePartitioningGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="field")
-    private final @Nullable Input<String> field;
+        private final @Nullable Input<String> field;
 
     public Input<String> getField() {
         return this.field == null ? Input.empty() : this.field;
@@ -44,7 +44,7 @@ public final class JobLoadTimePartitioningGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -118,7 +118,6 @@ public final class JobLoadTimePartitioningGetArgs extends io.pulumi.resources.Re
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public JobLoadTimePartitioningGetArgs build() {
             return new JobLoadTimePartitioningGetArgs(expirationMs, field, type);
         }

@@ -98,7 +98,6 @@ public final class MetricBucketOptionsExponentialBuckets {
             this.scale = scale;
             return this;
         }
-
         public MetricBucketOptionsExponentialBuckets build() {
             return new MetricBucketOptionsExponentialBuckets(growthFactor, numFiniteBuckets, scale);
         }

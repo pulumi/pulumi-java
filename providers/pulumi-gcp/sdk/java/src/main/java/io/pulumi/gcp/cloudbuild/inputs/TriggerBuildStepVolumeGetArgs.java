@@ -20,7 +20,7 @@ public final class TriggerBuildStepVolumeGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -33,7 +33,7 @@ public final class TriggerBuildStepVolumeGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="path", required=true)
-    private final Input<String> path;
+        private final Input<String> path;
 
     public Input<String> getPath() {
         return this.path;
@@ -92,7 +92,6 @@ public final class TriggerBuildStepVolumeGetArgs extends io.pulumi.resources.Res
             this.path = Input.of(Objects.requireNonNull(path));
             return this;
         }
-
         public TriggerBuildStepVolumeGetArgs build() {
             return new TriggerBuildStepVolumeGetArgs(name, path);
         }

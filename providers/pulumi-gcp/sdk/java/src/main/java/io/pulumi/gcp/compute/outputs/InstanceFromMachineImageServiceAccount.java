@@ -61,7 +61,6 @@ public final class InstanceFromMachineImageServiceAccount {
             this.scopes = Objects.requireNonNull(scopes);
             return this;
         }
-
         public InstanceFromMachineImageServiceAccount build() {
             return new InstanceFromMachineImageServiceAccount(email, scopes);
         }

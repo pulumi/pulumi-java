@@ -78,7 +78,6 @@ public final class FlexibleAppVersionDeploymentCloudBuildOptions {
             this.cloudBuildTimeout = cloudBuildTimeout;
             return this;
         }
-
         public FlexibleAppVersionDeploymentCloudBuildOptions build() {
             return new FlexibleAppVersionDeploymentCloudBuildOptions(appYamlPath, cloudBuildTimeout);
         }

@@ -20,7 +20,7 @@ public final class ReservationSpecificReservationInstancePropertiesLocalSsdArgs 
      * 
      */
     @InputImport(name="diskSizeGb", required=true)
-    private final Input<Integer> diskSizeGb;
+        private final Input<Integer> diskSizeGb;
 
     public Input<Integer> getDiskSizeGb() {
         return this.diskSizeGb;
@@ -33,7 +33,7 @@ public final class ReservationSpecificReservationInstancePropertiesLocalSsdArgs 
      * 
      */
     @InputImport(name="interface")
-    private final @Nullable Input<String> $interface;
+        private final @Nullable Input<String> $interface;
 
     public Input<String> get$interface() {
         return this.$interface == null ? Input.empty() : this.$interface;
@@ -92,7 +92,6 @@ public final class ReservationSpecificReservationInstancePropertiesLocalSsdArgs 
             this.$interface = Input.ofNullable($interface);
             return this;
         }
-
         public ReservationSpecificReservationInstancePropertiesLocalSsdArgs build() {
             return new ReservationSpecificReservationInstancePropertiesLocalSsdArgs(diskSizeGb, $interface);
         }

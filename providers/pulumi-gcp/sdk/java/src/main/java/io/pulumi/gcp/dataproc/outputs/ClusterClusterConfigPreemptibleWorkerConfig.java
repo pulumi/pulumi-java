@@ -94,7 +94,6 @@ public final class ClusterClusterConfigPreemptibleWorkerConfig {
             this.numInstances = numInstances;
             return this;
         }
-
         public ClusterClusterConfigPreemptibleWorkerConfig build() {
             return new ClusterClusterConfigPreemptibleWorkerConfig(diskConfig, instanceNames, numInstances);
         }

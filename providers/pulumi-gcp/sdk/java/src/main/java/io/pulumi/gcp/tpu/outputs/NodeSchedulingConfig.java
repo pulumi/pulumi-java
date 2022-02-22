@@ -52,7 +52,6 @@ public final class NodeSchedulingConfig {
             this.preemptible = Objects.requireNonNull(preemptible);
             return this;
         }
-
         public NodeSchedulingConfig build() {
             return new NodeSchedulingConfig(preemptible);
         }

@@ -18,7 +18,7 @@ public final class GetSubnetworkSecondaryIpRange extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="ipCidrRange", required=true)
-    private final String ipCidrRange;
+        private final String ipCidrRange;
 
     public String getIpCidrRange() {
         return this.ipCidrRange;
@@ -30,7 +30,7 @@ public final class GetSubnetworkSecondaryIpRange extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="rangeName", required=true)
-    private final String rangeName;
+        private final String rangeName;
 
     public String getRangeName() {
         return this.rangeName;
@@ -79,7 +79,6 @@ public final class GetSubnetworkSecondaryIpRange extends io.pulumi.resources.Inv
             this.rangeName = Objects.requireNonNull(rangeName);
             return this;
         }
-
         public GetSubnetworkSecondaryIpRange build() {
             return new GetSubnetworkSecondaryIpRange(ipCidrRange, rangeName);
         }

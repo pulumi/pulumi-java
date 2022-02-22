@@ -19,7 +19,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig
      * 
      */
     @InputImport(name="clusterNamespace")
-    private final @Nullable Input<String> clusterNamespace;
+        private final @Nullable Input<String> clusterNamespace;
 
     public Input<String> getClusterNamespace() {
         return this.clusterNamespace == null ? Input.empty() : this.clusterNamespace;
@@ -30,7 +30,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig
      * 
      */
     @InputImport(name="targetGkeCluster")
-    private final @Nullable Input<String> targetGkeCluster;
+        private final @Nullable Input<String> targetGkeCluster;
 
     public Input<String> getTargetGkeCluster() {
         return this.targetGkeCluster == null ? Input.empty() : this.targetGkeCluster;
@@ -89,7 +89,6 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig
             this.targetGkeCluster = Input.ofNullable(targetGkeCluster);
             return this;
         }
-
         public WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetGetArgs build() {
             return new WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetGetArgs(clusterNamespace, targetGkeCluster);
         }

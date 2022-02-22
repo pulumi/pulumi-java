@@ -19,7 +19,7 @@ public final class InstanceTemplateShieldedInstanceConfigGetArgs extends io.pulu
      * 
      */
     @InputImport(name="enableIntegrityMonitoring")
-    private final @Nullable Input<Boolean> enableIntegrityMonitoring;
+        private final @Nullable Input<Boolean> enableIntegrityMonitoring;
 
     public Input<Boolean> getEnableIntegrityMonitoring() {
         return this.enableIntegrityMonitoring == null ? Input.empty() : this.enableIntegrityMonitoring;
@@ -30,7 +30,7 @@ public final class InstanceTemplateShieldedInstanceConfigGetArgs extends io.pulu
      * 
      */
     @InputImport(name="enableSecureBoot")
-    private final @Nullable Input<Boolean> enableSecureBoot;
+        private final @Nullable Input<Boolean> enableSecureBoot;
 
     public Input<Boolean> getEnableSecureBoot() {
         return this.enableSecureBoot == null ? Input.empty() : this.enableSecureBoot;
@@ -41,7 +41,7 @@ public final class InstanceTemplateShieldedInstanceConfigGetArgs extends io.pulu
      * 
      */
     @InputImport(name="enableVtpm")
-    private final @Nullable Input<Boolean> enableVtpm;
+        private final @Nullable Input<Boolean> enableVtpm;
 
     public Input<Boolean> getEnableVtpm() {
         return this.enableVtpm == null ? Input.empty() : this.enableVtpm;
@@ -115,7 +115,6 @@ public final class InstanceTemplateShieldedInstanceConfigGetArgs extends io.pulu
             this.enableVtpm = Input.ofNullable(enableVtpm);
             return this;
         }
-
         public InstanceTemplateShieldedInstanceConfigGetArgs build() {
             return new InstanceTemplateShieldedInstanceConfigGetArgs(enableIntegrityMonitoring, enableSecureBoot, enableVtpm);
         }

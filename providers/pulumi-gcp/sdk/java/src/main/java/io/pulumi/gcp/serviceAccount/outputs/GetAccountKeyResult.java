@@ -128,7 +128,6 @@ public final class GetAccountKeyResult {
             this.publicKeyType = publicKeyType;
             return this;
         }
-
         public GetAccountKeyResult build() {
             return new GetAccountKeyResult(id, keyAlgorithm, name, project, publicKey, publicKeyType);
         }

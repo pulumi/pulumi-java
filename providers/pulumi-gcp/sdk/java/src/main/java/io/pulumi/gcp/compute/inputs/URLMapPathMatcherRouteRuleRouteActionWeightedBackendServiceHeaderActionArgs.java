@@ -23,7 +23,7 @@ public final class URLMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHe
      * 
      */
     @InputImport(name="requestHeadersToAdds")
-    private final @Nullable Input<List<URLMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAddArgs>> requestHeadersToAdds;
+        private final @Nullable Input<List<URLMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAddArgs>> requestHeadersToAdds;
 
     public Input<List<URLMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAddArgs>> getRequestHeadersToAdds() {
         return this.requestHeadersToAdds == null ? Input.empty() : this.requestHeadersToAdds;
@@ -35,7 +35,7 @@ public final class URLMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHe
      * 
      */
     @InputImport(name="requestHeadersToRemoves")
-    private final @Nullable Input<List<String>> requestHeadersToRemoves;
+        private final @Nullable Input<List<String>> requestHeadersToRemoves;
 
     public Input<List<String>> getRequestHeadersToRemoves() {
         return this.requestHeadersToRemoves == null ? Input.empty() : this.requestHeadersToRemoves;
@@ -47,7 +47,7 @@ public final class URLMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHe
      * 
      */
     @InputImport(name="responseHeadersToAdds")
-    private final @Nullable Input<List<URLMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddArgs>> responseHeadersToAdds;
+        private final @Nullable Input<List<URLMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddArgs>> responseHeadersToAdds;
 
     public Input<List<URLMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddArgs>> getResponseHeadersToAdds() {
         return this.responseHeadersToAdds == null ? Input.empty() : this.responseHeadersToAdds;
@@ -59,7 +59,7 @@ public final class URLMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHe
      * 
      */
     @InputImport(name="responseHeadersToRemoves")
-    private final @Nullable Input<List<String>> responseHeadersToRemoves;
+        private final @Nullable Input<List<String>> responseHeadersToRemoves;
 
     public Input<List<String>> getResponseHeadersToRemoves() {
         return this.responseHeadersToRemoves == null ? Input.empty() : this.responseHeadersToRemoves;
@@ -148,7 +148,6 @@ public final class URLMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHe
             this.responseHeadersToRemoves = Input.ofNullable(responseHeadersToRemoves);
             return this;
         }
-
         public URLMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderActionArgs build() {
             return new URLMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderActionArgs(requestHeadersToAdds, requestHeadersToRemoves, responseHeadersToAdds, responseHeadersToRemoves);
         }

@@ -22,7 +22,7 @@ public final class PolicyAlternativeNameServerConfigArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="targetNameServers", required=true)
-    private final Input<List<PolicyAlternativeNameServerConfigTargetNameServerArgs>> targetNameServers;
+        private final Input<List<PolicyAlternativeNameServerConfigTargetNameServerArgs>> targetNameServers;
 
     public Input<List<PolicyAlternativeNameServerConfigTargetNameServerArgs>> getTargetNameServers() {
         return this.targetNameServers;
@@ -65,7 +65,6 @@ public final class PolicyAlternativeNameServerConfigArgs extends io.pulumi.resou
             this.targetNameServers = Input.of(Objects.requireNonNull(targetNameServers));
             return this;
         }
-
         public PolicyAlternativeNameServerConfigArgs build() {
             return new PolicyAlternativeNameServerConfigArgs(targetNameServers);
         }

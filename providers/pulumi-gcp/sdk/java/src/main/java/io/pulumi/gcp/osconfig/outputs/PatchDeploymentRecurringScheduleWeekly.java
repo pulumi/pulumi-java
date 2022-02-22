@@ -54,7 +54,6 @@ public final class PatchDeploymentRecurringScheduleWeekly {
             this.dayOfWeek = Objects.requireNonNull(dayOfWeek);
             return this;
         }
-
         public PatchDeploymentRecurringScheduleWeekly build() {
             return new PatchDeploymentRecurringScheduleWeekly(dayOfWeek);
         }

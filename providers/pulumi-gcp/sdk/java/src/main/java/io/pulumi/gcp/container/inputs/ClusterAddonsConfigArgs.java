@@ -28,7 +28,7 @@ public final class ClusterAddonsConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="cloudrunConfig")
-    private final @Nullable Input<ClusterAddonsConfigCloudrunConfigArgs> cloudrunConfig;
+        private final @Nullable Input<ClusterAddonsConfigCloudrunConfigArgs> cloudrunConfig;
 
     public Input<ClusterAddonsConfigCloudrunConfigArgs> getCloudrunConfig() {
         return this.cloudrunConfig == null ? Input.empty() : this.cloudrunConfig;
@@ -40,7 +40,7 @@ public final class ClusterAddonsConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="configConnectorConfig")
-    private final @Nullable Input<ClusterAddonsConfigConfigConnectorConfigArgs> configConnectorConfig;
+        private final @Nullable Input<ClusterAddonsConfigConfigConnectorConfigArgs> configConnectorConfig;
 
     public Input<ClusterAddonsConfigConfigConnectorConfigArgs> getConfigConnectorConfig() {
         return this.configConnectorConfig == null ? Input.empty() : this.configConnectorConfig;
@@ -53,7 +53,7 @@ public final class ClusterAddonsConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="dnsCacheConfig")
-    private final @Nullable Input<ClusterAddonsConfigDnsCacheConfigArgs> dnsCacheConfig;
+        private final @Nullable Input<ClusterAddonsConfigDnsCacheConfigArgs> dnsCacheConfig;
 
     public Input<ClusterAddonsConfigDnsCacheConfigArgs> getDnsCacheConfig() {
         return this.dnsCacheConfig == null ? Input.empty() : this.dnsCacheConfig;
@@ -65,7 +65,7 @@ public final class ClusterAddonsConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="gcePersistentDiskCsiDriverConfig")
-    private final @Nullable Input<ClusterAddonsConfigGcePersistentDiskCsiDriverConfigArgs> gcePersistentDiskCsiDriverConfig;
+        private final @Nullable Input<ClusterAddonsConfigGcePersistentDiskCsiDriverConfigArgs> gcePersistentDiskCsiDriverConfig;
 
     public Input<ClusterAddonsConfigGcePersistentDiskCsiDriverConfigArgs> getGcePersistentDiskCsiDriverConfig() {
         return this.gcePersistentDiskCsiDriverConfig == null ? Input.empty() : this.gcePersistentDiskCsiDriverConfig;
@@ -78,7 +78,7 @@ public final class ClusterAddonsConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="gcpFilestoreCsiDriverConfig")
-    private final @Nullable Input<ClusterAddonsConfigGcpFilestoreCsiDriverConfigArgs> gcpFilestoreCsiDriverConfig;
+        private final @Nullable Input<ClusterAddonsConfigGcpFilestoreCsiDriverConfigArgs> gcpFilestoreCsiDriverConfig;
 
     public Input<ClusterAddonsConfigGcpFilestoreCsiDriverConfigArgs> getGcpFilestoreCsiDriverConfig() {
         return this.gcpFilestoreCsiDriverConfig == null ? Input.empty() : this.gcpFilestoreCsiDriverConfig;
@@ -93,7 +93,7 @@ public final class ClusterAddonsConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="horizontalPodAutoscaling")
-    private final @Nullable Input<ClusterAddonsConfigHorizontalPodAutoscalingArgs> horizontalPodAutoscaling;
+        private final @Nullable Input<ClusterAddonsConfigHorizontalPodAutoscalingArgs> horizontalPodAutoscaling;
 
     public Input<ClusterAddonsConfigHorizontalPodAutoscalingArgs> getHorizontalPodAutoscaling() {
         return this.horizontalPodAutoscaling == null ? Input.empty() : this.horizontalPodAutoscaling;
@@ -106,7 +106,7 @@ public final class ClusterAddonsConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="httpLoadBalancing")
-    private final @Nullable Input<ClusterAddonsConfigHttpLoadBalancingArgs> httpLoadBalancing;
+        private final @Nullable Input<ClusterAddonsConfigHttpLoadBalancingArgs> httpLoadBalancing;
 
     public Input<ClusterAddonsConfigHttpLoadBalancingArgs> getHttpLoadBalancing() {
         return this.httpLoadBalancing == null ? Input.empty() : this.httpLoadBalancing;
@@ -118,7 +118,7 @@ public final class ClusterAddonsConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="istioConfig")
-    private final @Nullable Input<ClusterAddonsConfigIstioConfigArgs> istioConfig;
+        private final @Nullable Input<ClusterAddonsConfigIstioConfigArgs> istioConfig;
 
     public Input<ClusterAddonsConfigIstioConfigArgs> getIstioConfig() {
         return this.istioConfig == null ? Input.empty() : this.istioConfig;
@@ -130,7 +130,7 @@ public final class ClusterAddonsConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="kalmConfig")
-    private final @Nullable Input<ClusterAddonsConfigKalmConfigArgs> kalmConfig;
+        private final @Nullable Input<ClusterAddonsConfigKalmConfigArgs> kalmConfig;
 
     public Input<ClusterAddonsConfigKalmConfigArgs> getKalmConfig() {
         return this.kalmConfig == null ? Input.empty() : this.kalmConfig;
@@ -146,7 +146,7 @@ public final class ClusterAddonsConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="networkPolicyConfig")
-    private final @Nullable Input<ClusterAddonsConfigNetworkPolicyConfigArgs> networkPolicyConfig;
+        private final @Nullable Input<ClusterAddonsConfigNetworkPolicyConfigArgs> networkPolicyConfig;
 
     public Input<ClusterAddonsConfigNetworkPolicyConfigArgs> getNetworkPolicyConfig() {
         return this.networkPolicyConfig == null ? Input.empty() : this.networkPolicyConfig;
@@ -325,7 +325,6 @@ public final class ClusterAddonsConfigArgs extends io.pulumi.resources.ResourceA
             this.networkPolicyConfig = Input.ofNullable(networkPolicyConfig);
             return this;
         }
-
         public ClusterAddonsConfigArgs build() {
             return new ClusterAddonsConfigArgs(cloudrunConfig, configConnectorConfig, dnsCacheConfig, gcePersistentDiskCsiDriverConfig, gcpFilestoreCsiDriverConfig, horizontalPodAutoscaling, httpLoadBalancing, istioConfig, kalmConfig, networkPolicyConfig);
         }

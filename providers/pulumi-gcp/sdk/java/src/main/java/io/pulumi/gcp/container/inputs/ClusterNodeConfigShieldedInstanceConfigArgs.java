@@ -19,7 +19,7 @@ public final class ClusterNodeConfigShieldedInstanceConfigArgs extends io.pulumi
      * 
      */
     @InputImport(name="enableIntegrityMonitoring")
-    private final @Nullable Input<Boolean> enableIntegrityMonitoring;
+        private final @Nullable Input<Boolean> enableIntegrityMonitoring;
 
     public Input<Boolean> getEnableIntegrityMonitoring() {
         return this.enableIntegrityMonitoring == null ? Input.empty() : this.enableIntegrityMonitoring;
@@ -30,7 +30,7 @@ public final class ClusterNodeConfigShieldedInstanceConfigArgs extends io.pulumi
      * 
      */
     @InputImport(name="enableSecureBoot")
-    private final @Nullable Input<Boolean> enableSecureBoot;
+        private final @Nullable Input<Boolean> enableSecureBoot;
 
     public Input<Boolean> getEnableSecureBoot() {
         return this.enableSecureBoot == null ? Input.empty() : this.enableSecureBoot;
@@ -89,7 +89,6 @@ public final class ClusterNodeConfigShieldedInstanceConfigArgs extends io.pulumi
             this.enableSecureBoot = Input.ofNullable(enableSecureBoot);
             return this;
         }
-
         public ClusterNodeConfigShieldedInstanceConfigArgs build() {
             return new ClusterNodeConfigShieldedInstanceConfigArgs(enableIntegrityMonitoring, enableSecureBoot);
         }

@@ -19,7 +19,7 @@ public final class InstanceTemplateReservationAffinitySpecificReservationGetArgs
      * 
      */
     @InputImport(name="key", required=true)
-    private final Input<String> key;
+        private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
@@ -30,7 +30,7 @@ public final class InstanceTemplateReservationAffinitySpecificReservationGetArgs
      * 
      */
     @InputImport(name="values", required=true)
-    private final Input<List<String>> values;
+        private final Input<List<String>> values;
 
     public Input<List<String>> getValues() {
         return this.values;
@@ -89,7 +89,6 @@ public final class InstanceTemplateReservationAffinitySpecificReservationGetArgs
             this.values = Input.of(Objects.requireNonNull(values));
             return this;
         }
-
         public InstanceTemplateReservationAffinitySpecificReservationGetArgs build() {
             return new InstanceTemplateReservationAffinitySpecificReservationGetArgs(key, values);
         }

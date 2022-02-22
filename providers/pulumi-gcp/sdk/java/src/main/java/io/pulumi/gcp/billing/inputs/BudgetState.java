@@ -27,7 +27,7 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allUpdatesRule")
-    private final @Nullable Input<BudgetAllUpdatesRuleGetArgs> allUpdatesRule;
+        private final @Nullable Input<BudgetAllUpdatesRuleGetArgs> allUpdatesRule;
 
     public Input<BudgetAllUpdatesRuleGetArgs> getAllUpdatesRule() {
         return this.allUpdatesRule == null ? Input.empty() : this.allUpdatesRule;
@@ -39,7 +39,7 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="amount")
-    private final @Nullable Input<BudgetAmountGetArgs> amount;
+        private final @Nullable Input<BudgetAmountGetArgs> amount;
 
     public Input<BudgetAmountGetArgs> getAmount() {
         return this.amount == null ? Input.empty() : this.amount;
@@ -50,7 +50,7 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="billingAccount")
-    private final @Nullable Input<String> billingAccount;
+        private final @Nullable Input<String> billingAccount;
 
     public Input<String> getBillingAccount() {
         return this.billingAccount == null ? Input.empty() : this.billingAccount;
@@ -63,7 +63,7 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="budgetFilter")
-    private final @Nullable Input<BudgetBudgetFilterGetArgs> budgetFilter;
+        private final @Nullable Input<BudgetBudgetFilterGetArgs> budgetFilter;
 
     public Input<BudgetBudgetFilterGetArgs> getBudgetFilter() {
         return this.budgetFilter == null ? Input.empty() : this.budgetFilter;
@@ -74,7 +74,7 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+        private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -86,7 +86,7 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -100,7 +100,7 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="thresholdRules")
-    private final @Nullable Input<List<BudgetThresholdRuleGetArgs>> thresholdRules;
+        private final @Nullable Input<List<BudgetThresholdRuleGetArgs>> thresholdRules;
 
     public Input<List<BudgetThresholdRuleGetArgs>> getThresholdRules() {
         return this.thresholdRules == null ? Input.empty() : this.thresholdRules;
@@ -234,7 +234,6 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
             this.thresholdRules = Input.ofNullable(thresholdRules);
             return this;
         }
-
         public BudgetState build() {
             return new BudgetState(allUpdatesRule, amount, billingAccount, budgetFilter, displayName, name, thresholdRules);
         }

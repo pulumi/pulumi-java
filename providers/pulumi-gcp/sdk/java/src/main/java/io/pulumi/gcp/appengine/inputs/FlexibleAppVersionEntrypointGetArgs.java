@@ -18,7 +18,7 @@ public final class FlexibleAppVersionEntrypointGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="shell", required=true)
-    private final Input<String> shell;
+        private final Input<String> shell;
 
     public Input<String> getShell() {
         return this.shell;
@@ -61,7 +61,6 @@ public final class FlexibleAppVersionEntrypointGetArgs extends io.pulumi.resourc
             this.shell = Input.of(Objects.requireNonNull(shell));
             return this;
         }
-
         public FlexibleAppVersionEntrypointGetArgs build() {
             return new FlexibleAppVersionEntrypointGetArgs(shell);
         }

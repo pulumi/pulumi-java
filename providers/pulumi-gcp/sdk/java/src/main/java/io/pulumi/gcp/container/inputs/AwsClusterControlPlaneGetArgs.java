@@ -28,7 +28,7 @@ public final class AwsClusterControlPlaneGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="awsServicesAuthentication", required=true)
-    private final Input<AwsClusterControlPlaneAwsServicesAuthenticationGetArgs> awsServicesAuthentication;
+        private final Input<AwsClusterControlPlaneAwsServicesAuthenticationGetArgs> awsServicesAuthentication;
 
     public Input<AwsClusterControlPlaneAwsServicesAuthenticationGetArgs> getAwsServicesAuthentication() {
         return this.awsServicesAuthentication;
@@ -39,7 +39,7 @@ public final class AwsClusterControlPlaneGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="configEncryption", required=true)
-    private final Input<AwsClusterControlPlaneConfigEncryptionGetArgs> configEncryption;
+        private final Input<AwsClusterControlPlaneConfigEncryptionGetArgs> configEncryption;
 
     public Input<AwsClusterControlPlaneConfigEncryptionGetArgs> getConfigEncryption() {
         return this.configEncryption;
@@ -50,7 +50,7 @@ public final class AwsClusterControlPlaneGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="databaseEncryption", required=true)
-    private final Input<AwsClusterControlPlaneDatabaseEncryptionGetArgs> databaseEncryption;
+        private final Input<AwsClusterControlPlaneDatabaseEncryptionGetArgs> databaseEncryption;
 
     public Input<AwsClusterControlPlaneDatabaseEncryptionGetArgs> getDatabaseEncryption() {
         return this.databaseEncryption;
@@ -61,7 +61,7 @@ public final class AwsClusterControlPlaneGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="iamInstanceProfile", required=true)
-    private final Input<String> iamInstanceProfile;
+        private final Input<String> iamInstanceProfile;
 
     public Input<String> getIamInstanceProfile() {
         return this.iamInstanceProfile;
@@ -72,7 +72,7 @@ public final class AwsClusterControlPlaneGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="instanceType")
-    private final @Nullable Input<String> instanceType;
+        private final @Nullable Input<String> instanceType;
 
     public Input<String> getInstanceType() {
         return this.instanceType == null ? Input.empty() : this.instanceType;
@@ -83,7 +83,7 @@ public final class AwsClusterControlPlaneGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="mainVolume")
-    private final @Nullable Input<AwsClusterControlPlaneMainVolumeGetArgs> mainVolume;
+        private final @Nullable Input<AwsClusterControlPlaneMainVolumeGetArgs> mainVolume;
 
     public Input<AwsClusterControlPlaneMainVolumeGetArgs> getMainVolume() {
         return this.mainVolume == null ? Input.empty() : this.mainVolume;
@@ -94,7 +94,7 @@ public final class AwsClusterControlPlaneGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="proxyConfig")
-    private final @Nullable Input<AwsClusterControlPlaneProxyConfigGetArgs> proxyConfig;
+        private final @Nullable Input<AwsClusterControlPlaneProxyConfigGetArgs> proxyConfig;
 
     public Input<AwsClusterControlPlaneProxyConfigGetArgs> getProxyConfig() {
         return this.proxyConfig == null ? Input.empty() : this.proxyConfig;
@@ -105,7 +105,7 @@ public final class AwsClusterControlPlaneGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="rootVolume")
-    private final @Nullable Input<AwsClusterControlPlaneRootVolumeGetArgs> rootVolume;
+        private final @Nullable Input<AwsClusterControlPlaneRootVolumeGetArgs> rootVolume;
 
     public Input<AwsClusterControlPlaneRootVolumeGetArgs> getRootVolume() {
         return this.rootVolume == null ? Input.empty() : this.rootVolume;
@@ -116,7 +116,7 @@ public final class AwsClusterControlPlaneGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="securityGroupIds")
-    private final @Nullable Input<List<String>> securityGroupIds;
+        private final @Nullable Input<List<String>> securityGroupIds;
 
     public Input<List<String>> getSecurityGroupIds() {
         return this.securityGroupIds == null ? Input.empty() : this.securityGroupIds;
@@ -127,7 +127,7 @@ public final class AwsClusterControlPlaneGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="sshConfig")
-    private final @Nullable Input<AwsClusterControlPlaneSshConfigGetArgs> sshConfig;
+        private final @Nullable Input<AwsClusterControlPlaneSshConfigGetArgs> sshConfig;
 
     public Input<AwsClusterControlPlaneSshConfigGetArgs> getSshConfig() {
         return this.sshConfig == null ? Input.empty() : this.sshConfig;
@@ -138,7 +138,7 @@ public final class AwsClusterControlPlaneGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="subnetIds", required=true)
-    private final Input<List<String>> subnetIds;
+        private final Input<List<String>> subnetIds;
 
     public Input<List<String>> getSubnetIds() {
         return this.subnetIds;
@@ -149,7 +149,7 @@ public final class AwsClusterControlPlaneGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -160,7 +160,7 @@ public final class AwsClusterControlPlaneGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="version", required=true)
-    private final Input<String> version;
+        private final Input<String> version;
 
     public Input<String> getVersion() {
         return this.version;
@@ -384,7 +384,6 @@ public final class AwsClusterControlPlaneGetArgs extends io.pulumi.resources.Res
             this.version = Input.of(Objects.requireNonNull(version));
             return this;
         }
-
         public AwsClusterControlPlaneGetArgs build() {
             return new AwsClusterControlPlaneGetArgs(awsServicesAuthentication, configEncryption, databaseEncryption, iamInstanceProfile, instanceType, mainVolume, proxyConfig, rootVolume, securityGroupIds, sshConfig, subnetIds, tags, version);
         }

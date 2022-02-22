@@ -26,7 +26,7 @@ public final class ServicePerimeterStatusIngressPolicyIngressFromSourceGetArgs e
      * 
      */
     @InputImport(name="accessLevel")
-    private final @Nullable Input<String> accessLevel;
+        private final @Nullable Input<String> accessLevel;
 
     public Input<String> getAccessLevel() {
         return this.accessLevel == null ? Input.empty() : this.accessLevel;
@@ -42,7 +42,7 @@ public final class ServicePerimeterStatusIngressPolicyIngressFromSourceGetArgs e
      * 
      */
     @InputImport(name="resource")
-    private final @Nullable Input<String> resource;
+        private final @Nullable Input<String> resource;
 
     public Input<String> getResource() {
         return this.resource == null ? Input.empty() : this.resource;
@@ -101,7 +101,6 @@ public final class ServicePerimeterStatusIngressPolicyIngressFromSourceGetArgs e
             this.resource = Input.ofNullable(resource);
             return this;
         }
-
         public ServicePerimeterStatusIngressPolicyIngressFromSourceGetArgs build() {
             return new ServicePerimeterStatusIngressPolicyIngressFromSourceGetArgs(accessLevel, resource);
         }

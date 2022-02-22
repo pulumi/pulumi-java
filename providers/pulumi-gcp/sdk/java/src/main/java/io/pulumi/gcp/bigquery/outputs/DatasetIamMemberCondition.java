@@ -73,7 +73,6 @@ public final class DatasetIamMemberCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public DatasetIamMemberCondition build() {
             return new DatasetIamMemberCondition(description, expression, title);
         }

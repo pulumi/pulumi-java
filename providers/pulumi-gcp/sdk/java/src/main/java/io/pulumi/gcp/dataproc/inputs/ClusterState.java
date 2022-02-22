@@ -22,7 +22,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterConfig")
-    private final @Nullable Input<ClusterClusterConfigGetArgs> clusterConfig;
+        private final @Nullable Input<ClusterClusterConfigGetArgs> clusterConfig;
 
     public Input<ClusterClusterConfigGetArgs> getClusterConfig() {
         return this.clusterConfig == null ? Input.empty() : this.clusterConfig;
@@ -34,7 +34,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gracefulDecommissionTimeout")
-    private final @Nullable Input<String> gracefulDecommissionTimeout;
+        private final @Nullable Input<String> gracefulDecommissionTimeout;
 
     public Input<String> getGracefulDecommissionTimeout() {
         return this.gracefulDecommissionTimeout == null ? Input.empty() : this.gracefulDecommissionTimeout;
@@ -47,7 +47,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+        private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -59,7 +59,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -71,7 +71,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -83,7 +83,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+        private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -202,7 +202,6 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             this.region = Input.ofNullable(region);
             return this;
         }
-
         public ClusterState build() {
             return new ClusterState(clusterConfig, gracefulDecommissionTimeout, labels, name, project, region);
         }

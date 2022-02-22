@@ -74,7 +74,6 @@ public final class TransferJobTransferSpecAwsS3DataSourceAwsAccessKey {
             this.secretAccessKey = Objects.requireNonNull(secretAccessKey);
             return this;
         }
-
         public TransferJobTransferSpecAwsS3DataSourceAwsAccessKey build() {
             return new TransferJobTransferSpecAwsS3DataSourceAwsAccessKey(accessKeyId, secretAccessKey);
         }

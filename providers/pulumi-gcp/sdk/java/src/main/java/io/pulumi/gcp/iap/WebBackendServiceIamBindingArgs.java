@@ -22,14 +22,14 @@ public final class WebBackendServiceIamBindingArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="condition")
-    private final @Nullable Input<WebBackendServiceIamBindingConditionArgs> condition;
+        private final @Nullable Input<WebBackendServiceIamBindingConditionArgs> condition;
 
     public Input<WebBackendServiceIamBindingConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
     @InputImport(name="members", required=true)
-    private final Input<List<String>> members;
+        private final Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members;
@@ -41,7 +41,7 @@ public final class WebBackendServiceIamBindingArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -54,7 +54,7 @@ public final class WebBackendServiceIamBindingArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+        private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -65,7 +65,7 @@ public final class WebBackendServiceIamBindingArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="webBackendService", required=true)
-    private final Input<String> webBackendService;
+        private final Input<String> webBackendService;
 
     public Input<String> getWebBackendService() {
         return this.webBackendService;
@@ -169,7 +169,6 @@ public final class WebBackendServiceIamBindingArgs extends io.pulumi.resources.R
             this.webBackendService = Input.of(Objects.requireNonNull(webBackendService));
             return this;
         }
-
         public WebBackendServiceIamBindingArgs build() {
             return new WebBackendServiceIamBindingArgs(condition, members, project, role, webBackendService);
         }

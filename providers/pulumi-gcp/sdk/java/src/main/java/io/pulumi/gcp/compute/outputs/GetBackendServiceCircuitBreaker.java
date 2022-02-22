@@ -112,7 +112,6 @@ public final class GetBackendServiceCircuitBreaker {
             this.maxRetries = Objects.requireNonNull(maxRetries);
             return this;
         }
-
         public GetBackendServiceCircuitBreaker build() {
             return new GetBackendServiceCircuitBreaker(connectTimeouts, maxConnections, maxPendingRequests, maxRequests, maxRequestsPerConnection, maxRetries);
         }

@@ -23,7 +23,7 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="billingAccount", required=true)
-    private final Input<String> billingAccount;
+        private final Input<String> billingAccount;
 
     public Input<String> getBillingAccount() {
         return this.billingAccount;
@@ -34,7 +34,7 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="complianceRegime", required=true)
-    private final Input<String> complianceRegime;
+        private final Input<String> complianceRegime;
 
     public Input<String> getComplianceRegime() {
         return this.complianceRegime;
@@ -45,7 +45,7 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+        private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -56,7 +56,7 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsSettings")
-    private final @Nullable Input<WorkloadKmsSettingsArgs> kmsSettings;
+        private final @Nullable Input<WorkloadKmsSettingsArgs> kmsSettings;
 
     public Input<WorkloadKmsSettingsArgs> getKmsSettings() {
         return this.kmsSettings == null ? Input.empty() : this.kmsSettings;
@@ -67,7 +67,7 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+        private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -78,7 +78,7 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location", required=true)
-    private final Input<String> location;
+        private final Input<String> location;
 
     public Input<String> getLocation() {
         return this.location;
@@ -89,7 +89,7 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="organization", required=true)
-    private final Input<String> organization;
+        private final Input<String> organization;
 
     public Input<String> getOrganization() {
         return this.organization;
@@ -100,7 +100,7 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provisionedResourcesParent")
-    private final @Nullable Input<String> provisionedResourcesParent;
+        private final @Nullable Input<String> provisionedResourcesParent;
 
     public Input<String> getProvisionedResourcesParent() {
         return this.provisionedResourcesParent == null ? Input.empty() : this.provisionedResourcesParent;
@@ -111,7 +111,7 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceSettings")
-    private final @Nullable Input<List<WorkloadResourceSettingArgs>> resourceSettings;
+        private final @Nullable Input<List<WorkloadResourceSettingArgs>> resourceSettings;
 
     public Input<List<WorkloadResourceSettingArgs>> getResourceSettings() {
         return this.resourceSettings == null ? Input.empty() : this.resourceSettings;
@@ -275,7 +275,6 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
             this.resourceSettings = Input.ofNullable(resourceSettings);
             return this;
         }
-
         public WorkloadArgs build() {
             return new WorkloadArgs(billingAccount, complianceRegime, displayName, kmsSettings, labels, location, organization, provisionedResourcesParent, resourceSettings);
         }

@@ -60,7 +60,6 @@ public final class ServiceAttachmentConnectedEndpoint {
             this.status = status;
             return this;
         }
-
         public ServiceAttachmentConnectedEndpoint build() {
             return new ServiceAttachmentConnectedEndpoint(endpoint, status);
         }

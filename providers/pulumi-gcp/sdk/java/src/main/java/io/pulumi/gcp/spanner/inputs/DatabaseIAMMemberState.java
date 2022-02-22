@@ -16,7 +16,7 @@ public final class DatabaseIAMMemberState extends io.pulumi.resources.ResourceAr
     public static final DatabaseIAMMemberState Empty = new DatabaseIAMMemberState();
 
     @InputImport(name="condition")
-    private final @Nullable Input<DatabaseIAMMemberConditionGetArgs> condition;
+        private final @Nullable Input<DatabaseIAMMemberConditionGetArgs> condition;
 
     public Input<DatabaseIAMMemberConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -27,7 +27,7 @@ public final class DatabaseIAMMemberState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="database")
-    private final @Nullable Input<String> database;
+        private final @Nullable Input<String> database;
 
     public Input<String> getDatabase() {
         return this.database == null ? Input.empty() : this.database;
@@ -38,7 +38,7 @@ public final class DatabaseIAMMemberState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+        private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -49,14 +49,14 @@ public final class DatabaseIAMMemberState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="instance")
-    private final @Nullable Input<String> instance;
+        private final @Nullable Input<String> instance;
 
     public Input<String> getInstance() {
         return this.instance == null ? Input.empty() : this.instance;
     }
 
     @InputImport(name="member")
-    private final @Nullable Input<String> member;
+        private final @Nullable Input<String> member;
 
     public Input<String> getMember() {
         return this.member == null ? Input.empty() : this.member;
@@ -68,7 +68,7 @@ public final class DatabaseIAMMemberState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -81,7 +81,7 @@ public final class DatabaseIAMMemberState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+        private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -215,7 +215,6 @@ public final class DatabaseIAMMemberState extends io.pulumi.resources.ResourceAr
             this.role = Input.ofNullable(role);
             return this;
         }
-
         public DatabaseIAMMemberState build() {
             return new DatabaseIAMMemberState(condition, database, etag, instance, member, project, role);
         }

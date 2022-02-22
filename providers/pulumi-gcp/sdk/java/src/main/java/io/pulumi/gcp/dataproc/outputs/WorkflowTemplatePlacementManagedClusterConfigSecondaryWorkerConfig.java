@@ -256,7 +256,6 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
             this.preemptibility = preemptibility;
             return this;
         }
-
         public WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfig build() {
             return new WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfig(accelerators, diskConfig, image, instanceNames, isPreemptible, machineType, managedGroupConfigs, minCpuPlatform, numInstances, preemptibility);
         }

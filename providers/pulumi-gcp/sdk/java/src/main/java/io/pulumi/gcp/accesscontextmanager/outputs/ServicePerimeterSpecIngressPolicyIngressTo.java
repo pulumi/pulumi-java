@@ -89,7 +89,6 @@ public final class ServicePerimeterSpecIngressPolicyIngressTo {
             this.resources = resources;
             return this;
         }
-
         public ServicePerimeterSpecIngressPolicyIngressTo build() {
             return new ServicePerimeterSpecIngressPolicyIngressTo(operations, resources);
         }

@@ -81,7 +81,6 @@ public final class URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDela
             this.percentage = percentage;
             return this;
         }
-
         public URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelay build() {
             return new URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelay(fixedDelay, percentage);
         }

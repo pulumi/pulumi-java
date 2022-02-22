@@ -208,7 +208,6 @@ public final class SecurityPolicyRuleRateLimitOptions {
             this.rateLimitThreshold = Objects.requireNonNull(rateLimitThreshold);
             return this;
         }
-
         public SecurityPolicyRuleRateLimitOptions build() {
             return new SecurityPolicyRuleRateLimitOptions(banDurationSec, banThreshold, conformAction, enforceOnKey, enforceOnKeyName, exceedAction, exceedRedirectOptions, rateLimitThreshold);
         }

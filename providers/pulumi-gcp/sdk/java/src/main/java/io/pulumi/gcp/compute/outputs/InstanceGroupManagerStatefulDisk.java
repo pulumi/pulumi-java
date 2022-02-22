@@ -76,7 +76,6 @@ public final class InstanceGroupManagerStatefulDisk {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public InstanceGroupManagerStatefulDisk build() {
             return new InstanceGroupManagerStatefulDisk(deleteRule, deviceName);
         }

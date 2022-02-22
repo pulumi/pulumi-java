@@ -181,7 +181,6 @@ public final class JobPigConfig {
             this.scriptVariables = scriptVariables;
             return this;
         }
-
         public JobPigConfig build() {
             return new JobPigConfig(continueOnFailure, jarFileUris, loggingConfig, properties, queryFileUri, queryLists, scriptVariables);
         }

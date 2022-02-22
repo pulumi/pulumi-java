@@ -79,7 +79,6 @@ public final class TableView {
             this.useLegacySql = useLegacySql;
             return this;
         }
-
         public TableView build() {
             return new TableView(query, useLegacySql);
         }

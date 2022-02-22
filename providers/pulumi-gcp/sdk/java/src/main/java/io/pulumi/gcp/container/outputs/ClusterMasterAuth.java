@@ -95,7 +95,6 @@ public final class ClusterMasterAuth {
             this.clusterCaCertificate = clusterCaCertificate;
             return this;
         }
-
         public ClusterMasterAuth build() {
             return new ClusterMasterAuth(clientCertificate, clientCertificateConfig, clientKey, clusterCaCertificate);
         }

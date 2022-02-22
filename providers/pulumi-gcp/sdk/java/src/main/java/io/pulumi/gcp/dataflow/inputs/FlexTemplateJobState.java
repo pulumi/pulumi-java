@@ -22,7 +22,7 @@ public final class FlexTemplateJobState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="containerSpecGcsPath")
-    private final @Nullable Input<String> containerSpecGcsPath;
+        private final @Nullable Input<String> containerSpecGcsPath;
 
     public Input<String> getContainerSpecGcsPath() {
         return this.containerSpecGcsPath == null ? Input.empty() : this.containerSpecGcsPath;
@@ -33,7 +33,7 @@ public final class FlexTemplateJobState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="jobId")
-    private final @Nullable Input<String> jobId;
+        private final @Nullable Input<String> jobId;
 
     public Input<String> getJobId() {
         return this.jobId == null ? Input.empty() : this.jobId;
@@ -54,7 +54,7 @@ public final class FlexTemplateJobState extends io.pulumi.resources.ResourceArgs
      */
     @Deprecated /* Deprecated until the API supports this field */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,Object>> labels;
+        private final @Nullable Input<Map<String,Object>> labels;
 
     @Deprecated /* Deprecated until the API supports this field */
     public Input<Map<String,Object>> getLabels() {
@@ -66,7 +66,7 @@ public final class FlexTemplateJobState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -78,7 +78,7 @@ public final class FlexTemplateJobState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="onDelete")
-    private final @Nullable Input<String> onDelete;
+        private final @Nullable Input<String> onDelete;
 
     public Input<String> getOnDelete() {
         return this.onDelete == null ? Input.empty() : this.onDelete;
@@ -91,7 +91,7 @@ public final class FlexTemplateJobState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,Object>> parameters;
+        private final @Nullable Input<Map<String,Object>> parameters;
 
     public Input<Map<String,Object>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -103,7 +103,7 @@ public final class FlexTemplateJobState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -114,7 +114,7 @@ public final class FlexTemplateJobState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+        private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -125,7 +125,7 @@ public final class FlexTemplateJobState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<String> state;
+        private final @Nullable Input<String> state;
 
     public Input<String> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -289,7 +289,6 @@ public final class FlexTemplateJobState extends io.pulumi.resources.ResourceArgs
             this.state = Input.ofNullable(state);
             return this;
         }
-
         public FlexTemplateJobState build() {
             return new FlexTemplateJobState(containerSpecGcsPath, jobId, labels, name, onDelete, parameters, project, region, state);
         }

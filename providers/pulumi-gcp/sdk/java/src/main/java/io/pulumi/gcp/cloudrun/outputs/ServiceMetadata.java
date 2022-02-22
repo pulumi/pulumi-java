@@ -231,7 +231,6 @@ public final class ServiceMetadata {
             this.uid = uid;
             return this;
         }
-
         public ServiceMetadata build() {
             return new ServiceMetadata(annotations, generation, labels, namespace, resourceVersion, selfLink, uid);
         }

@@ -17,7 +17,7 @@ public final class IamBindingArgs extends io.pulumi.resources.ResourceArgs {
     public static final IamBindingArgs Empty = new IamBindingArgs();
 
     @InputImport(name="condition")
-    private final @Nullable Input<IamBindingConditionArgs> condition;
+        private final @Nullable Input<IamBindingConditionArgs> condition;
 
     public Input<IamBindingConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -28,14 +28,14 @@ public final class IamBindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="members", required=true)
-    private final Input<List<String>> members;
+        private final Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members;
@@ -47,7 +47,7 @@ public final class IamBindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -60,7 +60,7 @@ public final class IamBindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+        private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -71,7 +71,7 @@ public final class IamBindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="service", required=true)
-    private final Input<String> service;
+        private final Input<String> service;
 
     public Input<String> getService() {
         return this.service;
@@ -190,7 +190,6 @@ public final class IamBindingArgs extends io.pulumi.resources.ResourceArgs {
             this.service = Input.of(Objects.requireNonNull(service));
             return this;
         }
-
         public IamBindingArgs build() {
             return new IamBindingArgs(condition, location, members, project, role, service);
         }

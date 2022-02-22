@@ -21,7 +21,7 @@ public final class AccessLevelsAccessLevelCustomArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="expr", required=true)
-    private final Input<AccessLevelsAccessLevelCustomExprArgs> expr;
+        private final Input<AccessLevelsAccessLevelCustomExprArgs> expr;
 
     public Input<AccessLevelsAccessLevelCustomExprArgs> getExpr() {
         return this.expr;
@@ -64,7 +64,6 @@ public final class AccessLevelsAccessLevelCustomArgs extends io.pulumi.resources
             this.expr = Input.of(Objects.requireNonNull(expr));
             return this;
         }
-
         public AccessLevelsAccessLevelCustomArgs build() {
             return new AccessLevelsAccessLevelCustomArgs(expr);
         }

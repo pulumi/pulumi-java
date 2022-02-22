@@ -15,7 +15,7 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
     public static final FeatureMembershipConfigmanagementConfigSyncGitGetArgs Empty = new FeatureMembershipConfigmanagementConfigSyncGitGetArgs();
 
     @InputImport(name="gcpServiceAccountEmail")
-    private final @Nullable Input<String> gcpServiceAccountEmail;
+        private final @Nullable Input<String> gcpServiceAccountEmail;
 
     public Input<String> getGcpServiceAccountEmail() {
         return this.gcpServiceAccountEmail == null ? Input.empty() : this.gcpServiceAccountEmail;
@@ -26,7 +26,7 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
      * 
      */
     @InputImport(name="httpsProxy")
-    private final @Nullable Input<String> httpsProxy;
+        private final @Nullable Input<String> httpsProxy;
 
     public Input<String> getHttpsProxy() {
         return this.httpsProxy == null ? Input.empty() : this.httpsProxy;
@@ -37,7 +37,7 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
      * 
      */
     @InputImport(name="policyDir")
-    private final @Nullable Input<String> policyDir;
+        private final @Nullable Input<String> policyDir;
 
     public Input<String> getPolicyDir() {
         return this.policyDir == null ? Input.empty() : this.policyDir;
@@ -48,7 +48,7 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
      * 
      */
     @InputImport(name="secretType")
-    private final @Nullable Input<String> secretType;
+        private final @Nullable Input<String> secretType;
 
     public Input<String> getSecretType() {
         return this.secretType == null ? Input.empty() : this.secretType;
@@ -59,7 +59,7 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
      * 
      */
     @InputImport(name="syncBranch")
-    private final @Nullable Input<String> syncBranch;
+        private final @Nullable Input<String> syncBranch;
 
     public Input<String> getSyncBranch() {
         return this.syncBranch == null ? Input.empty() : this.syncBranch;
@@ -70,7 +70,7 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
      * 
      */
     @InputImport(name="syncRepo")
-    private final @Nullable Input<String> syncRepo;
+        private final @Nullable Input<String> syncRepo;
 
     public Input<String> getSyncRepo() {
         return this.syncRepo == null ? Input.empty() : this.syncRepo;
@@ -81,7 +81,7 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
      * 
      */
     @InputImport(name="syncRev")
-    private final @Nullable Input<String> syncRev;
+        private final @Nullable Input<String> syncRev;
 
     public Input<String> getSyncRev() {
         return this.syncRev == null ? Input.empty() : this.syncRev;
@@ -92,7 +92,7 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
      * 
      */
     @InputImport(name="syncWaitSecs")
-    private final @Nullable Input<String> syncWaitSecs;
+        private final @Nullable Input<String> syncWaitSecs;
 
     public Input<String> getSyncWaitSecs() {
         return this.syncWaitSecs == null ? Input.empty() : this.syncWaitSecs;
@@ -241,7 +241,6 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
             this.syncWaitSecs = Input.ofNullable(syncWaitSecs);
             return this;
         }
-
         public FeatureMembershipConfigmanagementConfigSyncGitGetArgs build() {
             return new FeatureMembershipConfigmanagementConfigSyncGitGetArgs(gcpServiceAccountEmail, httpsProxy, policyDir, secretType, syncBranch, syncRepo, syncRev, syncWaitSecs);
         }

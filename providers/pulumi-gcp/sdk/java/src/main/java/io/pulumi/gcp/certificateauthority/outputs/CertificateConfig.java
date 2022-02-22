@@ -103,7 +103,6 @@ public final class CertificateConfig {
             this.x509Config = Objects.requireNonNull(x509Config);
             return this;
         }
-
         public CertificateConfig build() {
             return new CertificateConfig(publicKey, subjectConfig, x509Config);
         }

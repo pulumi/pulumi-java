@@ -83,7 +83,6 @@ public final class ServiceTemplate {
             this.spec = spec;
             return this;
         }
-
         public ServiceTemplate build() {
             return new ServiceTemplate(metadata, spec);
         }

@@ -81,7 +81,6 @@ public final class CaPoolIssuancePolicyAllowedKeyType {
             this.rsa = rsa;
             return this;
         }
-
         public CaPoolIssuancePolicyAllowedKeyType build() {
             return new CaPoolIssuancePolicyAllowedKeyType(ellipticCurve, rsa);
         }

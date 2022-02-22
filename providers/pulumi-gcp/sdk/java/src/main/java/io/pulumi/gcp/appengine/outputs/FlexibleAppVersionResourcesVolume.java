@@ -96,7 +96,6 @@ public final class FlexibleAppVersionResourcesVolume {
             this.volumeType = Objects.requireNonNull(volumeType);
             return this;
         }
-
         public FlexibleAppVersionResourcesVolume build() {
             return new FlexibleAppVersionResourcesVolume(name, sizeGb, volumeType);
         }

@@ -76,7 +76,6 @@ public final class NoteRelatedUrl {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public NoteRelatedUrl build() {
             return new NoteRelatedUrl(label, url);
         }

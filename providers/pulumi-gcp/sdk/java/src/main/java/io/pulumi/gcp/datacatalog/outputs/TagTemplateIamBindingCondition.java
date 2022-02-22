@@ -73,7 +73,6 @@ public final class TagTemplateIamBindingCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public TagTemplateIamBindingCondition build() {
             return new TagTemplateIamBindingCondition(description, expression, title);
         }

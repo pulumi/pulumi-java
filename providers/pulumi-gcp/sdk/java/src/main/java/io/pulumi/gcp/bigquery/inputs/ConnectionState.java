@@ -22,7 +22,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloudSql")
-    private final @Nullable Input<ConnectionCloudSqlGetArgs> cloudSql;
+        private final @Nullable Input<ConnectionCloudSqlGetArgs> cloudSql;
 
     public Input<ConnectionCloudSqlGetArgs> getCloudSql() {
         return this.cloudSql == null ? Input.empty() : this.cloudSql;
@@ -33,7 +33,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectionId")
-    private final @Nullable Input<String> connectionId;
+        private final @Nullable Input<String> connectionId;
 
     public Input<String> getConnectionId() {
         return this.connectionId == null ? Input.empty() : this.connectionId;
@@ -44,7 +44,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -55,7 +55,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="friendlyName")
-    private final @Nullable Input<String> friendlyName;
+        private final @Nullable Input<String> friendlyName;
 
     public Input<String> getFriendlyName() {
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
@@ -66,7 +66,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hasCredential")
-    private final @Nullable Input<Boolean> hasCredential;
+        private final @Nullable Input<Boolean> hasCredential;
 
     public Input<Boolean> getHasCredential() {
         return this.hasCredential == null ? Input.empty() : this.hasCredential;
@@ -80,7 +80,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -92,7 +92,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -104,7 +104,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -253,7 +253,6 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public ConnectionState build() {
             return new ConnectionState(cloudSql, connectionId, description, friendlyName, hasCredential, location, name, project);
         }

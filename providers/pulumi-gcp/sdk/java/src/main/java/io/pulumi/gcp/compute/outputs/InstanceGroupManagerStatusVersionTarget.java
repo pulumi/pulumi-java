@@ -46,7 +46,6 @@ public final class InstanceGroupManagerStatusVersionTarget {
             this.isReached = isReached;
             return this;
         }
-
         public InstanceGroupManagerStatusVersionTarget build() {
             return new InstanceGroupManagerStatusVersionTarget(isReached);
         }

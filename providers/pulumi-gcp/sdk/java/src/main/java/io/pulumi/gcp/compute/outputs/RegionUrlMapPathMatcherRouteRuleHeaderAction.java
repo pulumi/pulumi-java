@@ -130,7 +130,6 @@ public final class RegionUrlMapPathMatcherRouteRuleHeaderAction {
             this.responseHeadersToRemoves = responseHeadersToRemoves;
             return this;
         }
-
         public RegionUrlMapPathMatcherRouteRuleHeaderAction build() {
             return new RegionUrlMapPathMatcherRouteRuleHeaderAction(requestHeadersToAdds, requestHeadersToRemoves, responseHeadersToAdds, responseHeadersToRemoves);
         }

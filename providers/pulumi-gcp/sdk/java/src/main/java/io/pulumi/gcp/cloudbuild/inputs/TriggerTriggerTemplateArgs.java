@@ -22,7 +22,7 @@ public final class TriggerTriggerTemplateArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="branchName")
-    private final @Nullable Input<String> branchName;
+        private final @Nullable Input<String> branchName;
 
     public Input<String> getBranchName() {
         return this.branchName == null ? Input.empty() : this.branchName;
@@ -33,7 +33,7 @@ public final class TriggerTriggerTemplateArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="commitSha")
-    private final @Nullable Input<String> commitSha;
+        private final @Nullable Input<String> commitSha;
 
     public Input<String> getCommitSha() {
         return this.commitSha == null ? Input.empty() : this.commitSha;
@@ -52,7 +52,7 @@ public final class TriggerTriggerTemplateArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="dir")
-    private final @Nullable Input<String> dir;
+        private final @Nullable Input<String> dir;
 
     public Input<String> getDir() {
         return this.dir == null ? Input.empty() : this.dir;
@@ -63,7 +63,7 @@ public final class TriggerTriggerTemplateArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="invertRegex")
-    private final @Nullable Input<Boolean> invertRegex;
+        private final @Nullable Input<Boolean> invertRegex;
 
     public Input<Boolean> getInvertRegex() {
         return this.invertRegex == null ? Input.empty() : this.invertRegex;
@@ -75,7 +75,7 @@ public final class TriggerTriggerTemplateArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="projectId")
-    private final @Nullable Input<String> projectId;
+        private final @Nullable Input<String> projectId;
 
     public Input<String> getProjectId() {
         return this.projectId == null ? Input.empty() : this.projectId;
@@ -86,7 +86,7 @@ public final class TriggerTriggerTemplateArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="repoName")
-    private final @Nullable Input<String> repoName;
+        private final @Nullable Input<String> repoName;
 
     public Input<String> getRepoName() {
         return this.repoName == null ? Input.empty() : this.repoName;
@@ -99,7 +99,7 @@ public final class TriggerTriggerTemplateArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tagName")
-    private final @Nullable Input<String> tagName;
+        private final @Nullable Input<String> tagName;
 
     public Input<String> getTagName() {
         return this.tagName == null ? Input.empty() : this.tagName;
@@ -233,7 +233,6 @@ public final class TriggerTriggerTemplateArgs extends io.pulumi.resources.Resour
             this.tagName = Input.ofNullable(tagName);
             return this;
         }
-
         public TriggerTriggerTemplateArgs build() {
             return new TriggerTriggerTemplateArgs(branchName, commitSha, dir, invertRegex, projectId, repoName, tagName);
         }

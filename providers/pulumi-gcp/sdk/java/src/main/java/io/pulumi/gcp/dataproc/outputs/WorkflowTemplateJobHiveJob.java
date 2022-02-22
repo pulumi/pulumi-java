@@ -164,7 +164,6 @@ public final class WorkflowTemplateJobHiveJob {
             this.scriptVariables = scriptVariables;
             return this;
         }
-
         public WorkflowTemplateJobHiveJob build() {
             return new WorkflowTemplateJobHiveJob(continueOnFailure, jarFileUris, properties, queryFileUri, queryList, scriptVariables);
         }

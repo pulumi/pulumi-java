@@ -119,7 +119,6 @@ public final class DatabaseInstanceSettingsInsightsConfig {
             this.recordClientAddress = recordClientAddress;
             return this;
         }
-
         public DatabaseInstanceSettingsInsightsConfig build() {
             return new DatabaseInstanceSettingsInsightsConfig(queryInsightsEnabled, queryStringLength, recordApplicationTags, recordClientAddress);
         }

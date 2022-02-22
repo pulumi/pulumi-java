@@ -103,7 +103,6 @@ public final class EdgeCacheOriginTimeout {
             this.responseTimeout = responseTimeout;
             return this;
         }
-
         public EdgeCacheOriginTimeout build() {
             return new EdgeCacheOriginTimeout(connectTimeout, maxAttemptsTimeout, responseTimeout);
         }

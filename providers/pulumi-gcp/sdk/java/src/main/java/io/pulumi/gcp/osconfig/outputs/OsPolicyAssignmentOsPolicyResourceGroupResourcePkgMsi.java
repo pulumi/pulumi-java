@@ -77,7 +77,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsi {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsi build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsi(properties, source);
         }

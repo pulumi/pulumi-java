@@ -60,7 +60,6 @@ public final class GetBucketLifecycleRule {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
-
         public GetBucketLifecycleRule build() {
             return new GetBucketLifecycleRule(actions, conditions);
         }

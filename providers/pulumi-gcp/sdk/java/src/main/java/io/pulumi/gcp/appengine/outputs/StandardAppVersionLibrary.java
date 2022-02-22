@@ -76,7 +76,6 @@ public final class StandardAppVersionLibrary {
             this.version = version;
             return this;
         }
-
         public StandardAppVersionLibrary build() {
             return new StandardAppVersionLibrary(name, version);
         }

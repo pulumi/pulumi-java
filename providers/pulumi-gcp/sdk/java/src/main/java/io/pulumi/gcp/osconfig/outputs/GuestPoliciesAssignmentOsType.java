@@ -97,7 +97,6 @@ public final class GuestPoliciesAssignmentOsType {
             this.osVersion = osVersion;
             return this;
         }
-
         public GuestPoliciesAssignmentOsType build() {
             return new GuestPoliciesAssignmentOsType(osArchitecture, osShortName, osVersion);
         }

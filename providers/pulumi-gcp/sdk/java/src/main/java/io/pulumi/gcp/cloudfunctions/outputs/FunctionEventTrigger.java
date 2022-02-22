@@ -104,7 +104,6 @@ public final class FunctionEventTrigger {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
-
         public FunctionEventTrigger build() {
             return new FunctionEventTrigger(eventType, failurePolicy, resource);
         }

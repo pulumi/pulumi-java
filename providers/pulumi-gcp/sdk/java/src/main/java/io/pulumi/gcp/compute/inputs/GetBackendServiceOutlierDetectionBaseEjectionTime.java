@@ -13,14 +13,14 @@ public final class GetBackendServiceOutlierDetectionBaseEjectionTime extends io.
     public static final GetBackendServiceOutlierDetectionBaseEjectionTime Empty = new GetBackendServiceOutlierDetectionBaseEjectionTime();
 
     @InputImport(name="nanos", required=true)
-    private final Integer nanos;
+        private final Integer nanos;
 
     public Integer getNanos() {
         return this.nanos;
     }
 
     @InputImport(name="seconds", required=true)
-    private final Integer seconds;
+        private final Integer seconds;
 
     public Integer getSeconds() {
         return this.seconds;
@@ -69,7 +69,6 @@ public final class GetBackendServiceOutlierDetectionBaseEjectionTime extends io.
             this.seconds = Objects.requireNonNull(seconds);
             return this;
         }
-
         public GetBackendServiceOutlierDetectionBaseEjectionTime build() {
             return new GetBackendServiceOutlierDetectionBaseEjectionTime(nanos, seconds);
         }

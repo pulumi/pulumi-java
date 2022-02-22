@@ -98,7 +98,6 @@ public final class ClusterNodePoolNetworkConfig {
             this.podRange = Objects.requireNonNull(podRange);
             return this;
         }
-
         public ClusterNodePoolNetworkConfig build() {
             return new ClusterNodePoolNetworkConfig(createPodRange, podIpv4CidrBlock, podRange);
         }

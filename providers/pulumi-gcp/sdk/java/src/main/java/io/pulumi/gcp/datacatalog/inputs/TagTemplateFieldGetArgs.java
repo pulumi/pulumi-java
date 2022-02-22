@@ -22,7 +22,7 @@ public final class TagTemplateFieldGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -33,7 +33,7 @@ public final class TagTemplateFieldGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+        private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -44,7 +44,7 @@ public final class TagTemplateFieldGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="fieldId", required=true)
-    private final Input<String> fieldId;
+        private final Input<String> fieldId;
 
     public Input<String> getFieldId() {
         return this.fieldId;
@@ -55,7 +55,7 @@ public final class TagTemplateFieldGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="isRequired")
-    private final @Nullable Input<Boolean> isRequired;
+        private final @Nullable Input<Boolean> isRequired;
 
     public Input<Boolean> getIsRequired() {
         return this.isRequired == null ? Input.empty() : this.isRequired;
@@ -67,7 +67,7 @@ public final class TagTemplateFieldGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -80,7 +80,7 @@ public final class TagTemplateFieldGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="order")
-    private final @Nullable Input<Integer> order;
+        private final @Nullable Input<Integer> order;
 
     public Input<Integer> getOrder() {
         return this.order == null ? Input.empty() : this.order;
@@ -92,7 +92,7 @@ public final class TagTemplateFieldGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<TagTemplateFieldTypeGetArgs> type;
+        private final Input<TagTemplateFieldTypeGetArgs> type;
 
     public Input<TagTemplateFieldTypeGetArgs> getType() {
         return this.type;
@@ -226,7 +226,6 @@ public final class TagTemplateFieldGetArgs extends io.pulumi.resources.ResourceA
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public TagTemplateFieldGetArgs build() {
             return new TagTemplateFieldGetArgs(description, displayName, fieldId, isRequired, name, order, type);
         }

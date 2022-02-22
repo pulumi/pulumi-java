@@ -123,7 +123,6 @@ public final class GetRepositoryResult {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public GetRepositoryResult build() {
             return new GetRepositoryResult(id, name, project, pubsubConfigs, size, url);
         }

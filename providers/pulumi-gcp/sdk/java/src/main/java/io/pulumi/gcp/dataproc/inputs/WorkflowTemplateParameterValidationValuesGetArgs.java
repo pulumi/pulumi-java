@@ -19,7 +19,7 @@ public final class WorkflowTemplateParameterValidationValuesGetArgs extends io.p
      * 
      */
     @InputImport(name="values", required=true)
-    private final Input<List<String>> values;
+        private final Input<List<String>> values;
 
     public Input<List<String>> getValues() {
         return this.values;
@@ -62,7 +62,6 @@ public final class WorkflowTemplateParameterValidationValuesGetArgs extends io.p
             this.values = Input.of(Objects.requireNonNull(values));
             return this;
         }
-
         public WorkflowTemplateParameterValidationValuesGetArgs build() {
             return new WorkflowTemplateParameterValidationValuesGetArgs(values);
         }

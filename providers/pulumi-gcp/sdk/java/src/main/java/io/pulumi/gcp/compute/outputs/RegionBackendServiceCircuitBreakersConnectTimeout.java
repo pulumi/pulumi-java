@@ -82,7 +82,6 @@ public final class RegionBackendServiceCircuitBreakersConnectTimeout {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
         }
-
         public RegionBackendServiceCircuitBreakersConnectTimeout build() {
             return new RegionBackendServiceCircuitBreakersConnectTimeout(nanos, seconds);
         }

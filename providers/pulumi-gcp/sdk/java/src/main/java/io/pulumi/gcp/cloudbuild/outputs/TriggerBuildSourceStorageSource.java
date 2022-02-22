@@ -101,7 +101,6 @@ public final class TriggerBuildSourceStorageSource {
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public TriggerBuildSourceStorageSource build() {
             return new TriggerBuildSourceStorageSource(bucket, generation, object);
         }

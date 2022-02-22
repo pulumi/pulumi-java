@@ -15,14 +15,14 @@ public final class GetEnvironmentConfigMasterAuthorizedNetworksConfig extends io
     public static final GetEnvironmentConfigMasterAuthorizedNetworksConfig Empty = new GetEnvironmentConfigMasterAuthorizedNetworksConfig();
 
     @InputImport(name="cidrBlocks", required=true)
-    private final List<GetEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock> cidrBlocks;
+        private final List<GetEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock> cidrBlocks;
 
     public List<GetEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock> getCidrBlocks() {
         return this.cidrBlocks;
     }
 
     @InputImport(name="enabled", required=true)
-    private final Boolean enabled;
+        private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
@@ -71,7 +71,6 @@ public final class GetEnvironmentConfigMasterAuthorizedNetworksConfig extends io
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public GetEnvironmentConfigMasterAuthorizedNetworksConfig build() {
             return new GetEnvironmentConfigMasterAuthorizedNetworksConfig(cidrBlocks, enabled);
         }

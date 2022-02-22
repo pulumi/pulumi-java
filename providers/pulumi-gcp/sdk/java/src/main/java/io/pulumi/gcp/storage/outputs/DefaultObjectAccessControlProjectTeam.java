@@ -60,7 +60,6 @@ public final class DefaultObjectAccessControlProjectTeam {
             this.team = team;
             return this;
         }
-
         public DefaultObjectAccessControlProjectTeam build() {
             return new DefaultObjectAccessControlProjectTeam(projectNumber, team);
         }

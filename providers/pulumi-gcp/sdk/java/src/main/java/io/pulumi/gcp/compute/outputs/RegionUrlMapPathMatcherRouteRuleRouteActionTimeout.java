@@ -83,7 +83,6 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionTimeout {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
         }
-
         public RegionUrlMapPathMatcherRouteRuleRouteActionTimeout build() {
             return new RegionUrlMapPathMatcherRouteRuleRouteActionTimeout(nanos, seconds);
         }

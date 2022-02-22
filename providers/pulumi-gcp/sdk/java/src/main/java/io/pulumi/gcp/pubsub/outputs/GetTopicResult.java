@@ -150,7 +150,6 @@ public final class GetTopicResult {
             this.schemaSettings = Objects.requireNonNull(schemaSettings);
             return this;
         }
-
         public GetTopicResult build() {
             return new GetTopicResult(id, kmsKeyName, labels, messageRetentionDuration, messageStoragePolicies, name, project, schemaSettings);
         }

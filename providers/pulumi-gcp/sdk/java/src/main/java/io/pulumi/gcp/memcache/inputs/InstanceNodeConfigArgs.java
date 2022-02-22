@@ -18,7 +18,7 @@ public final class InstanceNodeConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="cpuCount", required=true)
-    private final Input<Integer> cpuCount;
+        private final Input<Integer> cpuCount;
 
     public Input<Integer> getCpuCount() {
         return this.cpuCount;
@@ -29,7 +29,7 @@ public final class InstanceNodeConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="memorySizeMb", required=true)
-    private final Input<Integer> memorySizeMb;
+        private final Input<Integer> memorySizeMb;
 
     public Input<Integer> getMemorySizeMb() {
         return this.memorySizeMb;
@@ -88,7 +88,6 @@ public final class InstanceNodeConfigArgs extends io.pulumi.resources.ResourceAr
             this.memorySizeMb = Input.of(Objects.requireNonNull(memorySizeMb));
             return this;
         }
-
         public InstanceNodeConfigArgs build() {
             return new InstanceNodeConfigArgs(cpuCount, memorySizeMb);
         }

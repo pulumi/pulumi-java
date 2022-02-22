@@ -121,7 +121,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFileFile {
             this.remote = remote;
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourceFileFile build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourceFileFile(allowInsecure, gcs, localPath, remote);
         }

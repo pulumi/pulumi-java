@@ -223,7 +223,6 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsage {
             this.keyEncipherment = keyEncipherment;
             return this;
         }
-
         public CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsage build() {
             return new CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsage(certSign, contentCommitment, crlSign, dataEncipherment, decipherOnly, digitalSignature, encipherOnly, keyAgreement, keyEncipherment);
         }

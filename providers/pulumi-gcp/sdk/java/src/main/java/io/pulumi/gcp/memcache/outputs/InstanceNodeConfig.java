@@ -74,7 +74,6 @@ public final class InstanceNodeConfig {
             this.memorySizeMb = Objects.requireNonNull(memorySizeMb);
             return this;
         }
-
         public InstanceNodeConfig build() {
             return new InstanceNodeConfig(cpuCount, memorySizeMb);
         }

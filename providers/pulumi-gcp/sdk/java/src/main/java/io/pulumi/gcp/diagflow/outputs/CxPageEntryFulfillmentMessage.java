@@ -54,7 +54,6 @@ public final class CxPageEntryFulfillmentMessage {
             this.text = text;
             return this;
         }
-
         public CxPageEntryFulfillmentMessage build() {
             return new CxPageEntryFulfillmentMessage(text);
         }

@@ -100,7 +100,6 @@ public final class ServicePerimeterSpecIngressPolicyIngressFromSource {
             this.resource = resource;
             return this;
         }
-
         public ServicePerimeterSpecIngressPolicyIngressFromSource build() {
             return new ServicePerimeterSpecIngressPolicyIngressFromSource(accessLevel, resource);
         }

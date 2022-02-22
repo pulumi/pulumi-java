@@ -118,7 +118,6 @@ public final class PolicySpecRuleCondition {
             this.title = title;
             return this;
         }
-
         public PolicySpecRuleCondition build() {
             return new PolicySpecRuleCondition(description, expression, location, title);
         }

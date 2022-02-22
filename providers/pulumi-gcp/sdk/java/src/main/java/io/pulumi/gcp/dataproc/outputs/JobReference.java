@@ -46,7 +46,6 @@ public final class JobReference {
             this.jobId = jobId;
             return this;
         }
-
         public JobReference build() {
             return new JobReference(jobId);
         }

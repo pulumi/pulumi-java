@@ -89,7 +89,6 @@ public final class GetFoldersResult {
             this.parentId = Objects.requireNonNull(parentId);
             return this;
         }
-
         public GetFoldersResult build() {
             return new GetFoldersResult(folders, id, parentId);
         }

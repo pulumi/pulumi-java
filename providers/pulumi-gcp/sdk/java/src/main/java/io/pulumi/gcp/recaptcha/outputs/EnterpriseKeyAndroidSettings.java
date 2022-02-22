@@ -78,7 +78,6 @@ public final class EnterpriseKeyAndroidSettings {
             this.allowedPackageNames = allowedPackageNames;
             return this;
         }
-
         public EnterpriseKeyAndroidSettings build() {
             return new EnterpriseKeyAndroidSettings(allowAllPackageNames, allowedPackageNames);
         }

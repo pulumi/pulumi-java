@@ -103,7 +103,6 @@ public final class ApplicationUrlDispatchRulesDispatchRule {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public ApplicationUrlDispatchRulesDispatchRule build() {
             return new ApplicationUrlDispatchRulesDispatchRule(domain, path, service);
         }

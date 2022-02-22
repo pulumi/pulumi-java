@@ -84,7 +84,6 @@ public final class TriggerBuildOptionsVolume {
             this.path = path;
             return this;
         }
-
         public TriggerBuildOptionsVolume build() {
             return new TriggerBuildOptionsVolume(name, path);
         }

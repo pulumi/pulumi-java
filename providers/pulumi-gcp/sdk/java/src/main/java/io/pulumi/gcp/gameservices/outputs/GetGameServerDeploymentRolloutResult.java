@@ -130,7 +130,6 @@ public final class GetGameServerDeploymentRolloutResult {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public GetGameServerDeploymentRolloutResult build() {
             return new GetGameServerDeploymentRolloutResult(defaultGameServerConfig, deploymentId, gameServerConfigOverrides, id, name, project);
         }

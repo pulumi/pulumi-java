@@ -141,7 +141,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidate {
             this.script = script;
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidate build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidate(args, file, interpreter, outputFilePath, script);
         }

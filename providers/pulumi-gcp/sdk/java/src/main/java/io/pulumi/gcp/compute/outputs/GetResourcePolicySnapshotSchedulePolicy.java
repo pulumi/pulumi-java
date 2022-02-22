@@ -74,7 +74,6 @@ public final class GetResourcePolicySnapshotSchedulePolicy {
             this.snapshotProperties = Objects.requireNonNull(snapshotProperties);
             return this;
         }
-
         public GetResourcePolicySnapshotSchedulePolicy build() {
             return new GetResourcePolicySnapshotSchedulePolicy(retentionPolicies, schedules, snapshotProperties);
         }

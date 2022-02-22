@@ -23,7 +23,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigGetA
      * 
      */
     @InputImport(name="kmsKey")
-    private final @Nullable Input<String> kmsKey;
+        private final @Nullable Input<String> kmsKey;
 
     public Input<String> getKmsKey() {
         return this.kmsKey == null ? Input.empty() : this.kmsKey;
@@ -66,7 +66,6 @@ public final class RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigGetA
             this.kmsKey = Input.ofNullable(kmsKey);
             return this;
         }
-
         public RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigGetArgs build() {
             return new RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigGetArgs(kmsKey);
         }

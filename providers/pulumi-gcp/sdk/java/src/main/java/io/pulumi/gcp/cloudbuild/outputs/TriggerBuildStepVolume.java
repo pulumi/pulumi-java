@@ -82,7 +82,6 @@ public final class TriggerBuildStepVolume {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public TriggerBuildStepVolume build() {
             return new TriggerBuildStepVolume(name, path);
         }

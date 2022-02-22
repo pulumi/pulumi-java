@@ -97,7 +97,6 @@ public final class IAMBindingCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public IAMBindingCondition build() {
             return new IAMBindingCondition(description, expression, title);
         }

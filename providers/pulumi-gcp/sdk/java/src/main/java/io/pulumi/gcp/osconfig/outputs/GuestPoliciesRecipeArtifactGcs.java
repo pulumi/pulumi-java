@@ -104,7 +104,6 @@ public final class GuestPoliciesRecipeArtifactGcs {
             this.object = object;
             return this;
         }
-
         public GuestPoliciesRecipeArtifactGcs build() {
             return new GuestPoliciesRecipeArtifactGcs(bucket, generation, object);
         }

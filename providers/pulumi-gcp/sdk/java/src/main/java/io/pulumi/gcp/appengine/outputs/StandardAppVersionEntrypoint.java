@@ -52,7 +52,6 @@ public final class StandardAppVersionEntrypoint {
             this.shell = Objects.requireNonNull(shell);
             return this;
         }
-
         public StandardAppVersionEntrypoint build() {
             return new StandardAppVersionEntrypoint(shell);
         }

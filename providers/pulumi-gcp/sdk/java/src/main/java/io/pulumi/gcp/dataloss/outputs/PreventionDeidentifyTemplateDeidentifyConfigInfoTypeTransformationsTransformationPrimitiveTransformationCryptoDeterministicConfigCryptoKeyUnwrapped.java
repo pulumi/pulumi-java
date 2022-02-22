@@ -54,7 +54,6 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped build() {
             return new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped(key);
         }

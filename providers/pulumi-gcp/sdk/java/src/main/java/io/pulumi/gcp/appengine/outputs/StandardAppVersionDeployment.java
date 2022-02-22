@@ -84,7 +84,6 @@ public final class StandardAppVersionDeployment {
             this.zip = zip;
             return this;
         }
-
         public StandardAppVersionDeployment build() {
             return new StandardAppVersionDeployment(files, zip);
         }

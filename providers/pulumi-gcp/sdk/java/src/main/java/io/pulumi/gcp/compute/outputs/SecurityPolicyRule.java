@@ -180,7 +180,6 @@ public final class SecurityPolicyRule {
             this.rateLimitOptions = rateLimitOptions;
             return this;
         }
-
         public SecurityPolicyRule build() {
             return new SecurityPolicyRule(action, description, match, preview, priority, rateLimitOptions);
         }

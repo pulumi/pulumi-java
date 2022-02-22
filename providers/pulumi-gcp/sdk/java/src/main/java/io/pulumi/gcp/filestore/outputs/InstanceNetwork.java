@@ -158,7 +158,6 @@ public final class InstanceNetwork {
             this.reservedIpRange = reservedIpRange;
             return this;
         }
-
         public InstanceNetwork build() {
             return new InstanceNetwork(connectMode, ipAddresses, modes, network, reservedIpRange);
         }

@@ -97,7 +97,6 @@ public final class GetIAMPolicyBindingCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public GetIAMPolicyBindingCondition build() {
             return new GetIAMPolicyBindingCondition(description, expression, title);
         }

@@ -177,7 +177,6 @@ public final class RegionBackendServiceCircuitBreakers {
             this.maxRetries = maxRetries;
             return this;
         }
-
         public RegionBackendServiceCircuitBreakers build() {
             return new RegionBackendServiceCircuitBreakers(connectTimeout, maxConnections, maxPendingRequests, maxRequests, maxRequestsPerConnection, maxRetries);
         }

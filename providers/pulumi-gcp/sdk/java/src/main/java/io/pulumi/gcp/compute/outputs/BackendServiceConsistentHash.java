@@ -119,7 +119,6 @@ public final class BackendServiceConsistentHash {
             this.minimumRingSize = minimumRingSize;
             return this;
         }
-
         public BackendServiceConsistentHash build() {
             return new BackendServiceConsistentHash(httpCookie, httpHeaderName, minimumRingSize);
         }

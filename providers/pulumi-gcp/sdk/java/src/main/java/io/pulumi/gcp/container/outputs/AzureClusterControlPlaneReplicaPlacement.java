@@ -74,7 +74,6 @@ public final class AzureClusterControlPlaneReplicaPlacement {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
-
         public AzureClusterControlPlaneReplicaPlacement build() {
             return new AzureClusterControlPlaneReplicaPlacement(azureAvailabilityZone, subnetId);
         }

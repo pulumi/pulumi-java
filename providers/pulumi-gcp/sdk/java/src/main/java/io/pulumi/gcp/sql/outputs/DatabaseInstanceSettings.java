@@ -349,7 +349,6 @@ public final class DatabaseInstanceSettings {
             this.version = version;
             return this;
         }
-
         public DatabaseInstanceSettings build() {
             return new DatabaseInstanceSettings(activationPolicy, availabilityType, backupConfiguration, collation, databaseFlags, diskAutoresize, diskAutoresizeLimit, diskSize, diskType, insightsConfig, ipConfiguration, locationPreference, maintenanceWindow, pricingPlan, tier, userLabels, version);
         }

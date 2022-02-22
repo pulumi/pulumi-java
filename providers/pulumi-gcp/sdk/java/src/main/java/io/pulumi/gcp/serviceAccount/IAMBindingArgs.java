@@ -22,14 +22,14 @@ public final class IAMBindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="condition")
-    private final @Nullable Input<IAMBindingConditionArgs> condition;
+        private final @Nullable Input<IAMBindingConditionArgs> condition;
 
     public Input<IAMBindingConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
     @InputImport(name="members", required=true)
-    private final Input<List<String>> members;
+        private final Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members;
@@ -42,7 +42,7 @@ public final class IAMBindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+        private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -53,7 +53,7 @@ public final class IAMBindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccountId", required=true)
-    private final Input<String> serviceAccountId;
+        private final Input<String> serviceAccountId;
 
     public Input<String> getServiceAccountId() {
         return this.serviceAccountId;
@@ -142,7 +142,6 @@ public final class IAMBindingArgs extends io.pulumi.resources.ResourceArgs {
             this.serviceAccountId = Input.of(Objects.requireNonNull(serviceAccountId));
             return this;
         }
-
         public IAMBindingArgs build() {
             return new IAMBindingArgs(condition, members, role, serviceAccountId);
         }

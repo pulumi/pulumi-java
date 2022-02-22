@@ -20,7 +20,7 @@ public final class ClusterNodePoolNodeConfigGuestAcceleratorArgs extends io.pulu
      * 
      */
     @InputImport(name="count", required=true)
-    private final Input<Integer> count;
+        private final Input<Integer> count;
 
     public Input<Integer> getCount() {
         return this.count;
@@ -31,7 +31,7 @@ public final class ClusterNodePoolNodeConfigGuestAcceleratorArgs extends io.pulu
      * 
      */
     @InputImport(name="gpuPartitionSize")
-    private final @Nullable Input<String> gpuPartitionSize;
+        private final @Nullable Input<String> gpuPartitionSize;
 
     public Input<String> getGpuPartitionSize() {
         return this.gpuPartitionSize == null ? Input.empty() : this.gpuPartitionSize;
@@ -42,7 +42,7 @@ public final class ClusterNodePoolNodeConfigGuestAcceleratorArgs extends io.pulu
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -116,7 +116,6 @@ public final class ClusterNodePoolNodeConfigGuestAcceleratorArgs extends io.pulu
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public ClusterNodePoolNodeConfigGuestAcceleratorArgs build() {
             return new ClusterNodePoolNodeConfigGuestAcceleratorArgs(count, gpuPartitionSize, type);
         }

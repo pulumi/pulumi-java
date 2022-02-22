@@ -18,7 +18,7 @@ public final class JobExtractSourceModelArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="datasetId", required=true)
-    private final Input<String> datasetId;
+        private final Input<String> datasetId;
 
     public Input<String> getDatasetId() {
         return this.datasetId;
@@ -29,7 +29,7 @@ public final class JobExtractSourceModelArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="modelId", required=true)
-    private final Input<String> modelId;
+        private final Input<String> modelId;
 
     public Input<String> getModelId() {
         return this.modelId;
@@ -40,7 +40,7 @@ public final class JobExtractSourceModelArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="projectId", required=true)
-    private final Input<String> projectId;
+        private final Input<String> projectId;
 
     public Input<String> getProjectId() {
         return this.projectId;
@@ -114,7 +114,6 @@ public final class JobExtractSourceModelArgs extends io.pulumi.resources.Resourc
             this.projectId = Input.of(Objects.requireNonNull(projectId));
             return this;
         }
-
         public JobExtractSourceModelArgs build() {
             return new JobExtractSourceModelArgs(datasetId, modelId, projectId);
         }

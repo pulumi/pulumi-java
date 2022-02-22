@@ -20,7 +20,7 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigArgs extends io.pulum
      * 
      */
     @InputImport(name="snapshotAnalysis")
-    private final @Nullable Input<AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisArgs> snapshotAnalysis;
+        private final @Nullable Input<AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisArgs> snapshotAnalysis;
 
     public Input<AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisArgs> getSnapshotAnalysis() {
         return this.snapshotAnalysis == null ? Input.empty() : this.snapshotAnalysis;
@@ -63,7 +63,6 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigArgs extends io.pulum
             this.snapshotAnalysis = Input.ofNullable(snapshotAnalysis);
             return this;
         }
-
         public AiFeatureStoreEntityTypeMonitoringConfigArgs build() {
             return new AiFeatureStoreEntityTypeMonitoringConfigArgs(snapshotAnalysis);
         }

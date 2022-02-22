@@ -19,7 +19,7 @@ public final class PeeredDnsDomainState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="dnsSuffix")
-    private final @Nullable Input<String> dnsSuffix;
+        private final @Nullable Input<String> dnsSuffix;
 
     public Input<String> getDnsSuffix() {
         return this.dnsSuffix == null ? Input.empty() : this.dnsSuffix;
@@ -30,7 +30,7 @@ public final class PeeredDnsDomainState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -41,7 +41,7 @@ public final class PeeredDnsDomainState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="network")
-    private final @Nullable Input<String> network;
+        private final @Nullable Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network == null ? Input.empty() : this.network;
@@ -52,7 +52,7 @@ public final class PeeredDnsDomainState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="parent")
-    private final @Nullable Input<String> parent;
+        private final @Nullable Input<String> parent;
 
     public Input<String> getParent() {
         return this.parent == null ? Input.empty() : this.parent;
@@ -63,7 +63,7 @@ public final class PeeredDnsDomainState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -74,7 +74,7 @@ public final class PeeredDnsDomainState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="service")
-    private final @Nullable Input<String> service;
+        private final @Nullable Input<String> service;
 
     public Input<String> getService() {
         return this.service == null ? Input.empty() : this.service;
@@ -193,7 +193,6 @@ public final class PeeredDnsDomainState extends io.pulumi.resources.ResourceArgs
             this.service = Input.ofNullable(service);
             return this;
         }
-
         public PeeredDnsDomainState build() {
             return new PeeredDnsDomainState(dnsSuffix, name, network, parent, project, service);
         }

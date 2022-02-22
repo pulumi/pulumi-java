@@ -74,7 +74,6 @@ public final class GetClientOpenIdUserInfoResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public GetClientOpenIdUserInfoResult build() {
             return new GetClientOpenIdUserInfoResult(email, id);
         }

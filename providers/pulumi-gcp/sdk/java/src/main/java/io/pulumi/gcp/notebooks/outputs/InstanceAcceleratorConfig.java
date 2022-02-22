@@ -77,7 +77,6 @@ public final class InstanceAcceleratorConfig {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public InstanceAcceleratorConfig build() {
             return new InstanceAcceleratorConfig(coreCount, type);
         }

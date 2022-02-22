@@ -19,7 +19,7 @@ public final class SharedVPCHostProjectState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -62,7 +62,6 @@ public final class SharedVPCHostProjectState extends io.pulumi.resources.Resourc
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public SharedVPCHostProjectState build() {
             return new SharedVPCHostProjectState(project);
         }

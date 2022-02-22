@@ -20,7 +20,7 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
      * 
      */
     @InputImport(name="enable")
-    private final @Nullable Input<Boolean> enable;
+        private final @Nullable Input<Boolean> enable;
 
     public Input<Boolean> getEnable() {
         return this.enable == null ? Input.empty() : this.enable;
@@ -31,7 +31,7 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
      * 
      */
     @InputImport(name="ruleVisibility")
-    private final @Nullable Input<String> ruleVisibility;
+        private final @Nullable Input<String> ruleVisibility;
 
     public Input<String> getRuleVisibility() {
         return this.ruleVisibility == null ? Input.empty() : this.ruleVisibility;
@@ -90,7 +90,6 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
             this.ruleVisibility = Input.ofNullable(ruleVisibility);
             return this;
         }
-
         public SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigArgs build() {
             return new SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigArgs(enable, ruleVisibility);
         }

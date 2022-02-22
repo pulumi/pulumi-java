@@ -45,7 +45,6 @@ public final class JobHadoopConfigLoggingConfig {
             this.driverLogLevels = Objects.requireNonNull(driverLogLevels);
             return this;
         }
-
         public JobHadoopConfigLoggingConfig build() {
             return new JobHadoopConfigLoggingConfig(driverLogLevels);
         }

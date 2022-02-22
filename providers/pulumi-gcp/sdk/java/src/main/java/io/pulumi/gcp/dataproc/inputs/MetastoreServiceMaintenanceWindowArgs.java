@@ -20,7 +20,7 @@ public final class MetastoreServiceMaintenanceWindowArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="dayOfWeek", required=true)
-    private final Input<String> dayOfWeek;
+        private final Input<String> dayOfWeek;
 
     public Input<String> getDayOfWeek() {
         return this.dayOfWeek;
@@ -31,7 +31,7 @@ public final class MetastoreServiceMaintenanceWindowArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="hourOfDay", required=true)
-    private final Input<Integer> hourOfDay;
+        private final Input<Integer> hourOfDay;
 
     public Input<Integer> getHourOfDay() {
         return this.hourOfDay;
@@ -90,7 +90,6 @@ public final class MetastoreServiceMaintenanceWindowArgs extends io.pulumi.resou
             this.hourOfDay = Input.of(Objects.requireNonNull(hourOfDay));
             return this;
         }
-
         public MetastoreServiceMaintenanceWindowArgs build() {
             return new MetastoreServiceMaintenanceWindowArgs(dayOfWeek, hourOfDay);
         }

@@ -164,7 +164,6 @@ public final class CaPoolIssuancePolicy {
             this.maximumLifetime = maximumLifetime;
             return this;
         }
-
         public CaPoolIssuancePolicy build() {
             return new CaPoolIssuancePolicy(allowedIssuanceModes, allowedKeyTypes, baselineValues, identityConstraints, maximumLifetime);
         }

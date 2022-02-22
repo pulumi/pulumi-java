@@ -52,7 +52,6 @@ public final class FlexibleAppVersionEntrypoint {
             this.shell = Objects.requireNonNull(shell);
             return this;
         }
-
         public FlexibleAppVersionEntrypoint build() {
             return new FlexibleAppVersionEntrypoint(shell);
         }

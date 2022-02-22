@@ -15,21 +15,21 @@ public final class AccountIamPolicyState extends io.pulumi.resources.ResourceArg
     public static final AccountIamPolicyState Empty = new AccountIamPolicyState();
 
     @InputImport(name="billingAccountId")
-    private final @Nullable Input<String> billingAccountId;
+        private final @Nullable Input<String> billingAccountId;
 
     public Input<String> getBillingAccountId() {
         return this.billingAccountId == null ? Input.empty() : this.billingAccountId;
     }
 
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+        private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="policyData")
-    private final @Nullable Input<String> policyData;
+        private final @Nullable Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData == null ? Input.empty() : this.policyData;
@@ -103,7 +103,6 @@ public final class AccountIamPolicyState extends io.pulumi.resources.ResourceArg
             this.policyData = Input.ofNullable(policyData);
             return this;
         }
-
         public AccountIamPolicyState build() {
             return new AccountIamPolicyState(billingAccountId, etag, policyData);
         }

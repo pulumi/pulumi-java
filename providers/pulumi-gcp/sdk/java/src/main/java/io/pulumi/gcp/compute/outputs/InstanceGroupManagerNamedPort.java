@@ -77,7 +77,6 @@ public final class InstanceGroupManagerNamedPort {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public InstanceGroupManagerNamedPort build() {
             return new InstanceGroupManagerNamedPort(name, port);
         }

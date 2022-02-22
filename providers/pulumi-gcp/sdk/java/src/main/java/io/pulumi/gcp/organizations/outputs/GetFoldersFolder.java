@@ -200,7 +200,6 @@ public final class GetFoldersFolder {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetFoldersFolder build() {
             return new GetFoldersFolder(createTime, deleteTime, displayName, etag, name, parent, state, updateTime);
         }

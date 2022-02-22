@@ -73,7 +73,6 @@ public final class BackendServiceIamBindingCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public BackendServiceIamBindingCondition build() {
             return new BackendServiceIamBindingCondition(description, expression, title);
         }

@@ -21,7 +21,7 @@ public final class URLMapPathMatcherRouteRuleRouteActionTimeoutGetArgs extends i
      * 
      */
     @InputImport(name="nanos")
-    private final @Nullable Input<Integer> nanos;
+        private final @Nullable Input<Integer> nanos;
 
     public Input<Integer> getNanos() {
         return this.nanos == null ? Input.empty() : this.nanos;
@@ -33,7 +33,7 @@ public final class URLMapPathMatcherRouteRuleRouteActionTimeoutGetArgs extends i
      * 
      */
     @InputImport(name="seconds", required=true)
-    private final Input<String> seconds;
+        private final Input<String> seconds;
 
     public Input<String> getSeconds() {
         return this.seconds;
@@ -92,7 +92,6 @@ public final class URLMapPathMatcherRouteRuleRouteActionTimeoutGetArgs extends i
             this.seconds = Input.of(Objects.requireNonNull(seconds));
             return this;
         }
-
         public URLMapPathMatcherRouteRuleRouteActionTimeoutGetArgs build() {
             return new URLMapPathMatcherRouteRuleRouteActionTimeoutGetArgs(nanos, seconds);
         }

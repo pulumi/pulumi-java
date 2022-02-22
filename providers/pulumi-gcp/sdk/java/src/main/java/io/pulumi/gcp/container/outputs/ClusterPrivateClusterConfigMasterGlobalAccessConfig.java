@@ -54,7 +54,6 @@ public final class ClusterPrivateClusterConfigMasterGlobalAccessConfig {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public ClusterPrivateClusterConfigMasterGlobalAccessConfig build() {
             return new ClusterPrivateClusterConfigMasterGlobalAccessConfig(enabled);
         }

@@ -83,7 +83,6 @@ public final class InstanceTemplateServiceAccount {
             this.scopes = Objects.requireNonNull(scopes);
             return this;
         }
-
         public InstanceTemplateServiceAccount build() {
             return new InstanceTemplateServiceAccount(email, scopes);
         }

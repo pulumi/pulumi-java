@@ -182,7 +182,6 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRule {
             this.queryParameterMatches = queryParameterMatches;
             return this;
         }
-
         public EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRule build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRule(fullPathMatch, headerMatches, ignoreCase, pathTemplateMatch, prefixMatch, queryParameterMatches);
         }

@@ -54,7 +54,6 @@ public final class CxFlowTransitionRouteTriggerFulfillmentMessage {
             this.text = text;
             return this;
         }
-
         public CxFlowTransitionRouteTriggerFulfillmentMessage build() {
             return new CxFlowTransitionRouteTriggerFulfillmentMessage(text);
         }

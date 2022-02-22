@@ -102,7 +102,6 @@ public final class TenantInboundSamlConfigSpConfig {
             this.spEntityId = Objects.requireNonNull(spEntityId);
             return this;
         }
-
         public TenantInboundSamlConfigSpConfig build() {
             return new TenantInboundSamlConfigSpConfig(callbackUri, spCertificates, spEntityId);
         }

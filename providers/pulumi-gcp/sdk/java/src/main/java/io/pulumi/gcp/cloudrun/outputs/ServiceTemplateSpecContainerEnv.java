@@ -114,7 +114,6 @@ public final class ServiceTemplateSpecContainerEnv {
             this.valueFrom = valueFrom;
             return this;
         }
-
         public ServiceTemplateSpecContainerEnv build() {
             return new ServiceTemplateSpecContainerEnv(name, value, valueFrom);
         }

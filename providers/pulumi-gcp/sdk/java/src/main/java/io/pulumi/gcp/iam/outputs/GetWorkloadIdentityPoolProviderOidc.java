@@ -59,7 +59,6 @@ public final class GetWorkloadIdentityPoolProviderOidc {
             this.issuerUri = Objects.requireNonNull(issuerUri);
             return this;
         }
-
         public GetWorkloadIdentityPoolProviderOidc build() {
             return new GetWorkloadIdentityPoolProviderOidc(allowedAudiences, issuerUri);
         }

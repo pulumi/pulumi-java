@@ -109,7 +109,6 @@ public final class DatabaseInstanceServerCaCert {
             this.sha1Fingerprint = sha1Fingerprint;
             return this;
         }
-
         public DatabaseInstanceServerCaCert build() {
             return new DatabaseInstanceServerCaCert(cert, commonName, createTime, expirationTime, sha1Fingerprint);
         }

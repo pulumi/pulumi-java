@@ -76,7 +76,6 @@ public final class PolicySpecRuleValues {
             this.deniedValues = deniedValues;
             return this;
         }
-
         public PolicySpecRuleValues build() {
             return new PolicySpecRuleValues(allowedValues, deniedValues);
         }

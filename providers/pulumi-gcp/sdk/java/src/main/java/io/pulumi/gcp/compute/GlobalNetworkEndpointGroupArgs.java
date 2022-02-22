@@ -21,7 +21,7 @@ public final class GlobalNetworkEndpointGroupArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="defaultPort")
-    private final @Nullable Input<Integer> defaultPort;
+        private final @Nullable Input<Integer> defaultPort;
 
     public Input<Integer> getDefaultPort() {
         return this.defaultPort == null ? Input.empty() : this.defaultPort;
@@ -33,7 +33,7 @@ public final class GlobalNetworkEndpointGroupArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -50,7 +50,7 @@ public final class GlobalNetworkEndpointGroupArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -62,7 +62,7 @@ public final class GlobalNetworkEndpointGroupArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="networkEndpointType", required=true)
-    private final Input<String> networkEndpointType;
+        private final Input<String> networkEndpointType;
 
     public Input<String> getNetworkEndpointType() {
         return this.networkEndpointType;
@@ -74,7 +74,7 @@ public final class GlobalNetworkEndpointGroupArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -178,7 +178,6 @@ public final class GlobalNetworkEndpointGroupArgs extends io.pulumi.resources.Re
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public GlobalNetworkEndpointGroupArgs build() {
             return new GlobalNetworkEndpointGroupArgs(defaultPort, description, name, networkEndpointType, project);
         }

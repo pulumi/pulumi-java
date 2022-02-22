@@ -80,7 +80,6 @@ public final class RegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInRep
             this.percent = percent;
             return this;
         }
-
         public RegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas build() {
             return new RegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas(fixed, percent);
         }

@@ -52,7 +52,6 @@ public final class PreventionJobTriggerInspectJobStorageConfigTimespanConfigTime
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampField build() {
             return new PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampField(name);
         }

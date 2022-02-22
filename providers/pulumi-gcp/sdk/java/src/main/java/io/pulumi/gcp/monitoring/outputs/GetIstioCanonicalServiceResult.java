@@ -161,7 +161,6 @@ public final class GetIstioCanonicalServiceResult {
             this.telemetries = Objects.requireNonNull(telemetries);
             return this;
         }
-
         public GetIstioCanonicalServiceResult build() {
             return new GetIstioCanonicalServiceResult(canonicalService, canonicalServiceNamespace, displayName, id, meshUid, name, project, serviceId, telemetries);
         }

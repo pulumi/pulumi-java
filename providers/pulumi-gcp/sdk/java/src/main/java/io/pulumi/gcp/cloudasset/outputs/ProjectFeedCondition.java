@@ -124,7 +124,6 @@ public final class ProjectFeedCondition {
             this.title = title;
             return this;
         }
-
         public ProjectFeedCondition build() {
             return new ProjectFeedCondition(description, expression, location, title);
         }

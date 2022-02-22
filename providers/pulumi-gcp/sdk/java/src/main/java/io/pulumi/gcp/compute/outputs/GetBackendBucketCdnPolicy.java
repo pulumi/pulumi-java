@@ -140,7 +140,6 @@ public final class GetBackendBucketCdnPolicy {
             this.signedUrlCacheMaxAgeSec = Objects.requireNonNull(signedUrlCacheMaxAgeSec);
             return this;
         }
-
         public GetBackendBucketCdnPolicy build() {
             return new GetBackendBucketCdnPolicy(cacheMode, clientTtl, defaultTtl, maxTtl, negativeCaching, negativeCachingPolicies, serveWhileStale, signedUrlCacheMaxAgeSec);
         }

@@ -97,7 +97,6 @@ public final class SloRequestBasedSli {
             this.goodTotalRatio = goodTotalRatio;
             return this;
         }
-
         public SloRequestBasedSli build() {
             return new SloRequestBasedSli(distributionCut, goodTotalRatio);
         }

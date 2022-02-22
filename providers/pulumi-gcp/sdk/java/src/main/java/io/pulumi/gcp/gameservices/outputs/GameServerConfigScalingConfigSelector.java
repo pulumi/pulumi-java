@@ -54,7 +54,6 @@ public final class GameServerConfigScalingConfigSelector {
             this.labels = labels;
             return this;
         }
-
         public GameServerConfigScalingConfigSelector build() {
             return new GameServerConfigScalingConfigSelector(labels);
         }

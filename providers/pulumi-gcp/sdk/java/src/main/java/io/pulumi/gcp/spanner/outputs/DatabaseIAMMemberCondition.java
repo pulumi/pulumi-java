@@ -73,7 +73,6 @@ public final class DatabaseIAMMemberCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public DatabaseIAMMemberCondition build() {
             return new DatabaseIAMMemberCondition(description, expression, title);
         }

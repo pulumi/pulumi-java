@@ -205,7 +205,6 @@ public final class WorkflowTemplateJobPysparkJob {
             this.pythonFileUris = pythonFileUris;
             return this;
         }
-
         public WorkflowTemplateJobPysparkJob build() {
             return new WorkflowTemplateJobPysparkJob(archiveUris, args, fileUris, jarFileUris, loggingConfig, mainPythonFileUri, properties, pythonFileUris);
         }

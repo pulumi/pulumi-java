@@ -18,7 +18,7 @@ public final class LiteTopicPartitionConfigCapacityGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="publishMibPerSec", required=true)
-    private final Input<Integer> publishMibPerSec;
+        private final Input<Integer> publishMibPerSec;
 
     public Input<Integer> getPublishMibPerSec() {
         return this.publishMibPerSec;
@@ -29,7 +29,7 @@ public final class LiteTopicPartitionConfigCapacityGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="subscribeMibPerSec", required=true)
-    private final Input<Integer> subscribeMibPerSec;
+        private final Input<Integer> subscribeMibPerSec;
 
     public Input<Integer> getSubscribeMibPerSec() {
         return this.subscribeMibPerSec;
@@ -88,7 +88,6 @@ public final class LiteTopicPartitionConfigCapacityGetArgs extends io.pulumi.res
             this.subscribeMibPerSec = Input.of(Objects.requireNonNull(subscribeMibPerSec));
             return this;
         }
-
         public LiteTopicPartitionConfigCapacityGetArgs build() {
             return new LiteTopicPartitionConfigCapacityGetArgs(publishMibPerSec, subscribeMibPerSec);
         }

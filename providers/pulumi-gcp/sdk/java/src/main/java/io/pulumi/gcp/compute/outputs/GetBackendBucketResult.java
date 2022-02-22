@@ -175,7 +175,6 @@ public final class GetBackendBucketResult {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public GetBackendBucketResult build() {
             return new GetBackendBucketResult(bucketName, cdnPolicies, creationTimestamp, customResponseHeaders, description, enableCdn, id, name, project, selfLink);
         }

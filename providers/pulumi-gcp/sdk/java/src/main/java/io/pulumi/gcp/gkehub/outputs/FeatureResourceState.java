@@ -61,7 +61,6 @@ public final class FeatureResourceState {
             this.state = state;
             return this;
         }
-
         public FeatureResourceState build() {
             return new FeatureResourceState(hasResources, state);
         }

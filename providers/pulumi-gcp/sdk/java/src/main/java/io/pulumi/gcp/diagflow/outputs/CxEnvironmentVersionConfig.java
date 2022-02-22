@@ -52,7 +52,6 @@ public final class CxEnvironmentVersionConfig {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public CxEnvironmentVersionConfig build() {
             return new CxEnvironmentVersionConfig(version);
         }

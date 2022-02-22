@@ -226,7 +226,6 @@ public final class AutoscalarAutoscalingPolicyMetric {
             this.type = type;
             return this;
         }
-
         public AutoscalarAutoscalingPolicyMetric build() {
             return new AutoscalarAutoscalingPolicyMetric(filter, name, singleInstanceAssignment, target, type);
         }

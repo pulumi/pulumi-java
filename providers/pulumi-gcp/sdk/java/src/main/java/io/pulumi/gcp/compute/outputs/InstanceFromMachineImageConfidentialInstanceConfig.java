@@ -44,7 +44,6 @@ public final class InstanceFromMachineImageConfidentialInstanceConfig {
             this.enableConfidentialCompute = Objects.requireNonNull(enableConfidentialCompute);
             return this;
         }
-
         public InstanceFromMachineImageConfidentialInstanceConfig build() {
             return new InstanceFromMachineImageConfidentialInstanceConfig(enableConfidentialCompute);
         }

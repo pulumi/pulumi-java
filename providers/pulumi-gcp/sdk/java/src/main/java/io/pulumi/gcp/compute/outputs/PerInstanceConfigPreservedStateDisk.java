@@ -136,7 +136,6 @@ public final class PerInstanceConfigPreservedStateDisk {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public PerInstanceConfigPreservedStateDisk build() {
             return new PerInstanceConfigPreservedStateDisk(deleteRule, deviceName, mode, source);
         }

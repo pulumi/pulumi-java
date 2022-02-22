@@ -160,7 +160,6 @@ public final class ConnectivityTestDestination {
             this.projectId = projectId;
             return this;
         }
-
         public ConnectivityTestDestination build() {
             return new ConnectivityTestDestination(instance, ipAddress, network, port, projectId);
         }

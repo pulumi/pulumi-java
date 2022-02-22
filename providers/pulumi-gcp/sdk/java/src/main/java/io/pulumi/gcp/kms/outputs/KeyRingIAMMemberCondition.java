@@ -97,7 +97,6 @@ public final class KeyRingIAMMemberCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public KeyRingIAMMemberCondition build() {
             return new KeyRingIAMMemberCondition(description, expression, title);
         }

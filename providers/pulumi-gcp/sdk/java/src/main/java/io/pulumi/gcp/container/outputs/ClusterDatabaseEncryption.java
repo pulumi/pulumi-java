@@ -76,7 +76,6 @@ public final class ClusterDatabaseEncryption {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public ClusterDatabaseEncryption build() {
             return new ClusterDatabaseEncryption(keyName, state);
         }

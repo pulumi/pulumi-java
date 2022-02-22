@@ -97,7 +97,6 @@ public final class InstanceTemplateShieldedInstanceConfig {
             this.enableVtpm = enableVtpm;
             return this;
         }
-
         public InstanceTemplateShieldedInstanceConfig build() {
             return new InstanceTemplateShieldedInstanceConfig(enableIntegrityMonitoring, enableSecureBoot, enableVtpm);
         }

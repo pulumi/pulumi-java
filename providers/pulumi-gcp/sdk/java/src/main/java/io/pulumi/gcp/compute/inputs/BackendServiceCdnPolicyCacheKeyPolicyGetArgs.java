@@ -21,7 +21,7 @@ public final class BackendServiceCdnPolicyCacheKeyPolicyGetArgs extends io.pulum
      * 
      */
     @InputImport(name="includeHost")
-    private final @Nullable Input<Boolean> includeHost;
+        private final @Nullable Input<Boolean> includeHost;
 
     public Input<Boolean> getIncludeHost() {
         return this.includeHost == null ? Input.empty() : this.includeHost;
@@ -32,7 +32,7 @@ public final class BackendServiceCdnPolicyCacheKeyPolicyGetArgs extends io.pulum
      * 
      */
     @InputImport(name="includeProtocol")
-    private final @Nullable Input<Boolean> includeProtocol;
+        private final @Nullable Input<Boolean> includeProtocol;
 
     public Input<Boolean> getIncludeProtocol() {
         return this.includeProtocol == null ? Input.empty() : this.includeProtocol;
@@ -48,7 +48,7 @@ public final class BackendServiceCdnPolicyCacheKeyPolicyGetArgs extends io.pulum
      * 
      */
     @InputImport(name="includeQueryString")
-    private final @Nullable Input<Boolean> includeQueryString;
+        private final @Nullable Input<Boolean> includeQueryString;
 
     public Input<Boolean> getIncludeQueryString() {
         return this.includeQueryString == null ? Input.empty() : this.includeQueryString;
@@ -63,7 +63,7 @@ public final class BackendServiceCdnPolicyCacheKeyPolicyGetArgs extends io.pulum
      * 
      */
     @InputImport(name="queryStringBlacklists")
-    private final @Nullable Input<List<String>> queryStringBlacklists;
+        private final @Nullable Input<List<String>> queryStringBlacklists;
 
     public Input<List<String>> getQueryStringBlacklists() {
         return this.queryStringBlacklists == null ? Input.empty() : this.queryStringBlacklists;
@@ -78,7 +78,7 @@ public final class BackendServiceCdnPolicyCacheKeyPolicyGetArgs extends io.pulum
      * 
      */
     @InputImport(name="queryStringWhitelists")
-    private final @Nullable Input<List<String>> queryStringWhitelists;
+        private final @Nullable Input<List<String>> queryStringWhitelists;
 
     public Input<List<String>> getQueryStringWhitelists() {
         return this.queryStringWhitelists == null ? Input.empty() : this.queryStringWhitelists;
@@ -182,7 +182,6 @@ public final class BackendServiceCdnPolicyCacheKeyPolicyGetArgs extends io.pulum
             this.queryStringWhitelists = Input.ofNullable(queryStringWhitelists);
             return this;
         }
-
         public BackendServiceCdnPolicyCacheKeyPolicyGetArgs build() {
             return new BackendServiceCdnPolicyCacheKeyPolicyGetArgs(includeHost, includeProtocol, includeQueryString, queryStringBlacklists, queryStringWhitelists);
         }

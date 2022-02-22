@@ -58,7 +58,6 @@ public final class GetDatabaseInstanceClone {
             this.sourceInstanceName = Objects.requireNonNull(sourceInstanceName);
             return this;
         }
-
         public GetDatabaseInstanceClone build() {
             return new GetDatabaseInstanceClone(pointInTime, sourceInstanceName);
         }

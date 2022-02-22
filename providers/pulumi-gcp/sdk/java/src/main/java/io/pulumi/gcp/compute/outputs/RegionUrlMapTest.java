@@ -118,7 +118,6 @@ public final class RegionUrlMapTest {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public RegionUrlMapTest build() {
             return new RegionUrlMapTest(description, host, path, service);
         }

@@ -19,7 +19,7 @@ public final class CxPageEntryFulfillmentMessageArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="text")
-    private final @Nullable Input<CxPageEntryFulfillmentMessageTextArgs> text;
+        private final @Nullable Input<CxPageEntryFulfillmentMessageTextArgs> text;
 
     public Input<CxPageEntryFulfillmentMessageTextArgs> getText() {
         return this.text == null ? Input.empty() : this.text;
@@ -62,7 +62,6 @@ public final class CxPageEntryFulfillmentMessageArgs extends io.pulumi.resources
             this.text = Input.ofNullable(text);
             return this;
         }
-
         public CxPageEntryFulfillmentMessageArgs build() {
             return new CxPageEntryFulfillmentMessageArgs(text);
         }

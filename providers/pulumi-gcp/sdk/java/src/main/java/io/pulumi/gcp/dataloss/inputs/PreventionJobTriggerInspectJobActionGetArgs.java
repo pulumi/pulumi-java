@@ -19,7 +19,7 @@ public final class PreventionJobTriggerInspectJobActionGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="saveFindings", required=true)
-    private final Input<PreventionJobTriggerInspectJobActionSaveFindingsGetArgs> saveFindings;
+        private final Input<PreventionJobTriggerInspectJobActionSaveFindingsGetArgs> saveFindings;
 
     public Input<PreventionJobTriggerInspectJobActionSaveFindingsGetArgs> getSaveFindings() {
         return this.saveFindings;
@@ -62,7 +62,6 @@ public final class PreventionJobTriggerInspectJobActionGetArgs extends io.pulumi
             this.saveFindings = Input.of(Objects.requireNonNull(saveFindings));
             return this;
         }
-
         public PreventionJobTriggerInspectJobActionGetArgs build() {
             return new PreventionJobTriggerInspectJobActionGetArgs(saveFindings);
         }

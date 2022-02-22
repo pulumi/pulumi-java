@@ -71,7 +71,6 @@ public final class GetClusterDnsConfig {
             this.clusterDnsScope = Objects.requireNonNull(clusterDnsScope);
             return this;
         }
-
         public GetClusterDnsConfig build() {
             return new GetClusterDnsConfig(clusterDns, clusterDnsDomain, clusterDnsScope);
         }

@@ -46,7 +46,6 @@ public final class RegistryCredential {
             this.publicKeyCertificate = Objects.requireNonNull(publicKeyCertificate);
             return this;
         }
-
         public RegistryCredential build() {
             return new RegistryCredential(publicKeyCertificate);
         }

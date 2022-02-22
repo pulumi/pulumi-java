@@ -79,7 +79,6 @@ public final class CxEntityTypeEntity {
             this.value = value;
             return this;
         }
-
         public CxEntityTypeEntity build() {
             return new CxEntityTypeEntity(synonyms, value);
         }

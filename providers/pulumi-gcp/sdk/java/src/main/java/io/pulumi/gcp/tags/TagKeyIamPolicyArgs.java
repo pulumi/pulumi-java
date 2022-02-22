@@ -19,7 +19,7 @@ public final class TagKeyIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="policyData", required=true)
-    private final Input<String> policyData;
+        private final Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData;
@@ -30,7 +30,7 @@ public final class TagKeyIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tagKey", required=true)
-    private final Input<String> tagKey;
+        private final Input<String> tagKey;
 
     public Input<String> getTagKey() {
         return this.tagKey;
@@ -89,7 +89,6 @@ public final class TagKeyIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
             this.tagKey = Input.of(Objects.requireNonNull(tagKey));
             return this;
         }
-
         public TagKeyIamPolicyArgs build() {
             return new TagKeyIamPolicyArgs(policyData, tagKey);
         }

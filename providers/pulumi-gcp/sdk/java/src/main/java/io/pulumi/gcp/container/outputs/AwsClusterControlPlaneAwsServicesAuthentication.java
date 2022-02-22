@@ -76,7 +76,6 @@ public final class AwsClusterControlPlaneAwsServicesAuthentication {
             this.roleSessionName = roleSessionName;
             return this;
         }
-
         public AwsClusterControlPlaneAwsServicesAuthentication build() {
             return new AwsClusterControlPlaneAwsServicesAuthentication(roleArn, roleSessionName);
         }

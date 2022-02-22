@@ -177,7 +177,6 @@ public final class AccessLevelsAccessLevelBasicConditionDevicePolicy {
             this.requireScreenLock = requireScreenLock;
             return this;
         }
-
         public AccessLevelsAccessLevelBasicConditionDevicePolicy build() {
             return new AccessLevelsAccessLevelBasicConditionDevicePolicy(allowedDeviceManagementLevels, allowedEncryptionStatuses, osConstraints, requireAdminApproval, requireCorpOwned, requireScreenLock);
         }

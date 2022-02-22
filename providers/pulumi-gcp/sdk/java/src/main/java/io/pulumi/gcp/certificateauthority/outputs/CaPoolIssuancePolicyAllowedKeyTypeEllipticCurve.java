@@ -54,7 +54,6 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeEllipticCurve {
             this.signatureAlgorithm = Objects.requireNonNull(signatureAlgorithm);
             return this;
         }
-
         public CaPoolIssuancePolicyAllowedKeyTypeEllipticCurve build() {
             return new CaPoolIssuancePolicyAllowedKeyTypeEllipticCurve(signatureAlgorithm);
         }

@@ -23,7 +23,7 @@ public final class StandardAppVersionDeploymentArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="files")
-    private final @Nullable Input<List<StandardAppVersionDeploymentFileArgs>> files;
+        private final @Nullable Input<List<StandardAppVersionDeploymentFileArgs>> files;
 
     public Input<List<StandardAppVersionDeploymentFileArgs>> getFiles() {
         return this.files == null ? Input.empty() : this.files;
@@ -35,7 +35,7 @@ public final class StandardAppVersionDeploymentArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="zip")
-    private final @Nullable Input<StandardAppVersionDeploymentZipArgs> zip;
+        private final @Nullable Input<StandardAppVersionDeploymentZipArgs> zip;
 
     public Input<StandardAppVersionDeploymentZipArgs> getZip() {
         return this.zip == null ? Input.empty() : this.zip;
@@ -94,7 +94,6 @@ public final class StandardAppVersionDeploymentArgs extends io.pulumi.resources.
             this.zip = Input.ofNullable(zip);
             return this;
         }
-
         public StandardAppVersionDeploymentArgs build() {
             return new StandardAppVersionDeploymentArgs(files, zip);
         }

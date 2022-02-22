@@ -22,7 +22,7 @@ public final class FlexibleAppVersionResourcesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="cpu")
-    private final @Nullable Input<Integer> cpu;
+        private final @Nullable Input<Integer> cpu;
 
     public Input<Integer> getCpu() {
         return this.cpu == null ? Input.empty() : this.cpu;
@@ -33,7 +33,7 @@ public final class FlexibleAppVersionResourcesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="diskGb")
-    private final @Nullable Input<Integer> diskGb;
+        private final @Nullable Input<Integer> diskGb;
 
     public Input<Integer> getDiskGb() {
         return this.diskGb == null ? Input.empty() : this.diskGb;
@@ -44,7 +44,7 @@ public final class FlexibleAppVersionResourcesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="memoryGb")
-    private final @Nullable Input<Double> memoryGb;
+        private final @Nullable Input<Double> memoryGb;
 
     public Input<Double> getMemoryGb() {
         return this.memoryGb == null ? Input.empty() : this.memoryGb;
@@ -56,7 +56,7 @@ public final class FlexibleAppVersionResourcesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="volumes")
-    private final @Nullable Input<List<FlexibleAppVersionResourcesVolumeArgs>> volumes;
+        private final @Nullable Input<List<FlexibleAppVersionResourcesVolumeArgs>> volumes;
 
     public Input<List<FlexibleAppVersionResourcesVolumeArgs>> getVolumes() {
         return this.volumes == null ? Input.empty() : this.volumes;
@@ -145,7 +145,6 @@ public final class FlexibleAppVersionResourcesArgs extends io.pulumi.resources.R
             this.volumes = Input.ofNullable(volumes);
             return this;
         }
-
         public FlexibleAppVersionResourcesArgs build() {
             return new FlexibleAppVersionResourcesArgs(cpu, diskGb, memoryGb, volumes);
         }

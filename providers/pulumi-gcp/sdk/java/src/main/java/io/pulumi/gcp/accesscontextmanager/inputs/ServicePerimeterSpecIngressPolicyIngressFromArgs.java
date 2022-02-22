@@ -23,7 +23,7 @@ public final class ServicePerimeterSpecIngressPolicyIngressFromArgs extends io.p
      * 
      */
     @InputImport(name="identities")
-    private final @Nullable Input<List<String>> identities;
+        private final @Nullable Input<List<String>> identities;
 
     public Input<List<String>> getIdentities() {
         return this.identities == null ? Input.empty() : this.identities;
@@ -37,7 +37,7 @@ public final class ServicePerimeterSpecIngressPolicyIngressFromArgs extends io.p
      * 
      */
     @InputImport(name="identityType")
-    private final @Nullable Input<String> identityType;
+        private final @Nullable Input<String> identityType;
 
     public Input<String> getIdentityType() {
         return this.identityType == null ? Input.empty() : this.identityType;
@@ -49,7 +49,7 @@ public final class ServicePerimeterSpecIngressPolicyIngressFromArgs extends io.p
      * 
      */
     @InputImport(name="sources")
-    private final @Nullable Input<List<ServicePerimeterSpecIngressPolicyIngressFromSourceArgs>> sources;
+        private final @Nullable Input<List<ServicePerimeterSpecIngressPolicyIngressFromSourceArgs>> sources;
 
     public Input<List<ServicePerimeterSpecIngressPolicyIngressFromSourceArgs>> getSources() {
         return this.sources == null ? Input.empty() : this.sources;
@@ -123,7 +123,6 @@ public final class ServicePerimeterSpecIngressPolicyIngressFromArgs extends io.p
             this.sources = Input.ofNullable(sources);
             return this;
         }
-
         public ServicePerimeterSpecIngressPolicyIngressFromArgs build() {
             return new ServicePerimeterSpecIngressPolicyIngressFromArgs(identities, identityType, sources);
         }

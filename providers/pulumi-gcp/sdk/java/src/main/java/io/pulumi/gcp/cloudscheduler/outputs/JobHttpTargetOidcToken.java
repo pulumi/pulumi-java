@@ -80,7 +80,6 @@ public final class JobHttpTargetOidcToken {
             this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
             return this;
         }
-
         public JobHttpTargetOidcToken build() {
             return new JobHttpTargetOidcToken(audience, serviceAccountEmail);
         }

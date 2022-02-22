@@ -23,7 +23,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServ
      * 
      */
     @InputImport(name="backendService", required=true)
-    private final Input<String> backendService;
+        private final Input<String> backendService;
 
     public Input<String> getBackendService() {
         return this.backendService;
@@ -37,7 +37,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServ
      * 
      */
     @InputImport(name="headerAction")
-    private final @Nullable Input<RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionGetArgs> headerAction;
+        private final @Nullable Input<RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionGetArgs> headerAction;
 
     public Input<RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionGetArgs> getHeaderAction() {
         return this.headerAction == null ? Input.empty() : this.headerAction;
@@ -53,7 +53,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServ
      * 
      */
     @InputImport(name="weight", required=true)
-    private final Input<Integer> weight;
+        private final Input<Integer> weight;
 
     public Input<Integer> getWeight() {
         return this.weight;
@@ -127,7 +127,6 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServ
             this.weight = Input.of(Objects.requireNonNull(weight));
             return this;
         }
-
         public RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceGetArgs build() {
             return new RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceGetArgs(backendService, headerAction, weight);
         }

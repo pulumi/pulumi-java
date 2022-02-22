@@ -15,14 +15,14 @@ public final class InstanceFromMachineImageGuestAcceleratorGetArgs extends io.pu
     public static final InstanceFromMachineImageGuestAcceleratorGetArgs Empty = new InstanceFromMachineImageGuestAcceleratorGetArgs();
 
     @InputImport(name="count", required=true)
-    private final Input<Integer> count;
+        private final Input<Integer> count;
 
     public Input<Integer> getCount() {
         return this.count;
     }
 
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -81,7 +81,6 @@ public final class InstanceFromMachineImageGuestAcceleratorGetArgs extends io.pu
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public InstanceFromMachineImageGuestAcceleratorGetArgs build() {
             return new InstanceFromMachineImageGuestAcceleratorGetArgs(count, type);
         }

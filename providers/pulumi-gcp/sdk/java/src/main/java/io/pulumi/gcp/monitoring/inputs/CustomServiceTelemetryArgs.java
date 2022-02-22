@@ -21,7 +21,7 @@ public final class CustomServiceTelemetryArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceName")
-    private final @Nullable Input<String> resourceName;
+        private final @Nullable Input<String> resourceName;
 
     public Input<String> getPropResourceName() {
         return this.resourceName == null ? Input.empty() : this.resourceName;
@@ -64,7 +64,6 @@ public final class CustomServiceTelemetryArgs extends io.pulumi.resources.Resour
             this.resourceName = Input.ofNullable(resourceName);
             return this;
         }
-
         public CustomServiceTelemetryArgs build() {
             return new CustomServiceTelemetryArgs(resourceName);
         }

@@ -21,7 +21,7 @@ public final class URLMapDefaultRouteActionTimeoutGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="nanos")
-    private final @Nullable Input<Integer> nanos;
+        private final @Nullable Input<Integer> nanos;
 
     public Input<Integer> getNanos() {
         return this.nanos == null ? Input.empty() : this.nanos;
@@ -33,7 +33,7 @@ public final class URLMapDefaultRouteActionTimeoutGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="seconds")
-    private final @Nullable Input<String> seconds;
+        private final @Nullable Input<String> seconds;
 
     public Input<String> getSeconds() {
         return this.seconds == null ? Input.empty() : this.seconds;
@@ -92,7 +92,6 @@ public final class URLMapDefaultRouteActionTimeoutGetArgs extends io.pulumi.reso
             this.seconds = Input.ofNullable(seconds);
             return this;
         }
-
         public URLMapDefaultRouteActionTimeoutGetArgs build() {
             return new URLMapDefaultRouteActionTimeoutGetArgs(nanos, seconds);
         }

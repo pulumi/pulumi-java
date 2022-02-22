@@ -72,7 +72,6 @@ public final class GetClusterNodePoolNetworkConfig {
             this.podRange = Objects.requireNonNull(podRange);
             return this;
         }
-
         public GetClusterNodePoolNetworkConfig build() {
             return new GetClusterNodePoolNetworkConfig(createPodRange, podIpv4CidrBlock, podRange);
         }

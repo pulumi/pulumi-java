@@ -138,7 +138,6 @@ public final class GetTestablePermissionsPermission {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public GetTestablePermissionsPermission build() {
             return new GetTestablePermissionsPermission(apiDisabled, customSupportLevel, name, stage, title);
         }

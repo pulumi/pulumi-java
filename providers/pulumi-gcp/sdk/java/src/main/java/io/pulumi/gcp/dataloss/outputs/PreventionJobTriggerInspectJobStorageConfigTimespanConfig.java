@@ -126,7 +126,6 @@ public final class PreventionJobTriggerInspectJobStorageConfigTimespanConfig {
             this.timestampField = Objects.requireNonNull(timestampField);
             return this;
         }
-
         public PreventionJobTriggerInspectJobStorageConfigTimespanConfig build() {
             return new PreventionJobTriggerInspectJobStorageConfigTimespanConfig(enableAutoPopulationOfTimespanConfig, endTime, startTime, timestampField);
         }

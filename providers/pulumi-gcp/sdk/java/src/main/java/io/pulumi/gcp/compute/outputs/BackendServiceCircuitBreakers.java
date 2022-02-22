@@ -177,7 +177,6 @@ public final class BackendServiceCircuitBreakers {
             this.maxRetries = maxRetries;
             return this;
         }
-
         public BackendServiceCircuitBreakers build() {
             return new BackendServiceCircuitBreakers(connectTimeout, maxConnections, maxPendingRequests, maxRequests, maxRequestsPerConnection, maxRetries);
         }

@@ -53,7 +53,6 @@ public final class CertificateTemplatePredefinedValuesAdditionalExtensionObjectI
             this.objectIdPaths = Objects.requireNonNull(objectIdPaths);
             return this;
         }
-
         public CertificateTemplatePredefinedValuesAdditionalExtensionObjectId build() {
             return new CertificateTemplatePredefinedValuesAdditionalExtensionObjectId(objectIdPaths);
         }

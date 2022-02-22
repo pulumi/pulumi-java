@@ -24,7 +24,7 @@ public final class WorkflowTemplateJobPigJobGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="continueOnFailure")
-    private final @Nullable Input<Boolean> continueOnFailure;
+        private final @Nullable Input<Boolean> continueOnFailure;
 
     public Input<Boolean> getContinueOnFailure() {
         return this.continueOnFailure == null ? Input.empty() : this.continueOnFailure;
@@ -35,7 +35,7 @@ public final class WorkflowTemplateJobPigJobGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="jarFileUris")
-    private final @Nullable Input<List<String>> jarFileUris;
+        private final @Nullable Input<List<String>> jarFileUris;
 
     public Input<List<String>> getJarFileUris() {
         return this.jarFileUris == null ? Input.empty() : this.jarFileUris;
@@ -46,7 +46,7 @@ public final class WorkflowTemplateJobPigJobGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="loggingConfig")
-    private final @Nullable Input<WorkflowTemplateJobPigJobLoggingConfigGetArgs> loggingConfig;
+        private final @Nullable Input<WorkflowTemplateJobPigJobLoggingConfigGetArgs> loggingConfig;
 
     public Input<WorkflowTemplateJobPigJobLoggingConfigGetArgs> getLoggingConfig() {
         return this.loggingConfig == null ? Input.empty() : this.loggingConfig;
@@ -57,7 +57,7 @@ public final class WorkflowTemplateJobPigJobGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<Map<String,String>> properties;
+        private final @Nullable Input<Map<String,String>> properties;
 
     public Input<Map<String,String>> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -68,7 +68,7 @@ public final class WorkflowTemplateJobPigJobGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="queryFileUri")
-    private final @Nullable Input<String> queryFileUri;
+        private final @Nullable Input<String> queryFileUri;
 
     public Input<String> getQueryFileUri() {
         return this.queryFileUri == null ? Input.empty() : this.queryFileUri;
@@ -79,7 +79,7 @@ public final class WorkflowTemplateJobPigJobGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="queryList")
-    private final @Nullable Input<WorkflowTemplateJobPigJobQueryListGetArgs> queryList;
+        private final @Nullable Input<WorkflowTemplateJobPigJobQueryListGetArgs> queryList;
 
     public Input<WorkflowTemplateJobPigJobQueryListGetArgs> getQueryList() {
         return this.queryList == null ? Input.empty() : this.queryList;
@@ -90,7 +90,7 @@ public final class WorkflowTemplateJobPigJobGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="scriptVariables")
-    private final @Nullable Input<Map<String,String>> scriptVariables;
+        private final @Nullable Input<Map<String,String>> scriptVariables;
 
     public Input<Map<String,String>> getScriptVariables() {
         return this.scriptVariables == null ? Input.empty() : this.scriptVariables;
@@ -224,7 +224,6 @@ public final class WorkflowTemplateJobPigJobGetArgs extends io.pulumi.resources.
             this.scriptVariables = Input.ofNullable(scriptVariables);
             return this;
         }
-
         public WorkflowTemplateJobPigJobGetArgs build() {
             return new WorkflowTemplateJobPigJobGetArgs(continueOnFailure, jarFileUris, loggingConfig, properties, queryFileUri, queryList, scriptVariables);
         }

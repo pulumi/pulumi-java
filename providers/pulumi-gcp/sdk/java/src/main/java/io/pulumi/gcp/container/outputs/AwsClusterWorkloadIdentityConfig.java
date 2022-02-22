@@ -73,7 +73,6 @@ public final class AwsClusterWorkloadIdentityConfig {
             this.workloadPool = workloadPool;
             return this;
         }
-
         public AwsClusterWorkloadIdentityConfig build() {
             return new AwsClusterWorkloadIdentityConfig(identityProvider, issuerUri, workloadPool);
         }

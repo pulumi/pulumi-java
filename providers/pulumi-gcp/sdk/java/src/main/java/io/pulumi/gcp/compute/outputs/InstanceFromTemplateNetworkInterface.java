@@ -205,7 +205,6 @@ public final class InstanceFromTemplateNetworkInterface {
             this.subnetworkProject = subnetworkProject;
             return this;
         }
-
         public InstanceFromTemplateNetworkInterface build() {
             return new InstanceFromTemplateNetworkInterface(accessConfigs, aliasIpRanges, ipv6AccessConfigs, ipv6AccessType, name, network, networkIp, nicType, queueCount, stackType, subnetwork, subnetworkProject);
         }

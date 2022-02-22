@@ -20,7 +20,7 @@ public final class OrganizationExclusionState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -32,7 +32,7 @@ public final class OrganizationExclusionState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="disabled")
-    private final @Nullable Input<Boolean> disabled;
+        private final @Nullable Input<Boolean> disabled;
 
     public Input<Boolean> getDisabled() {
         return this.disabled == null ? Input.empty() : this.disabled;
@@ -45,7 +45,7 @@ public final class OrganizationExclusionState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="filter")
-    private final @Nullable Input<String> filter;
+        private final @Nullable Input<String> filter;
 
     public Input<String> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
@@ -56,7 +56,7 @@ public final class OrganizationExclusionState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -67,7 +67,7 @@ public final class OrganizationExclusionState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="orgId")
-    private final @Nullable Input<String> orgId;
+        private final @Nullable Input<String> orgId;
 
     public Input<String> getOrgId() {
         return this.orgId == null ? Input.empty() : this.orgId;
@@ -171,7 +171,6 @@ public final class OrganizationExclusionState extends io.pulumi.resources.Resour
             this.orgId = Input.ofNullable(orgId);
             return this;
         }
-
         public OrganizationExclusionState build() {
             return new OrganizationExclusionState(description, disabled, filter, name, orgId);
         }

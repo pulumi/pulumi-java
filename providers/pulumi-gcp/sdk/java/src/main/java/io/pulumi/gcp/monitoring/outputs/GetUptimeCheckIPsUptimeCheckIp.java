@@ -103,7 +103,6 @@ public final class GetUptimeCheckIPsUptimeCheckIp {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public GetUptimeCheckIPsUptimeCheckIp build() {
             return new GetUptimeCheckIPsUptimeCheckIp(ipAddress, location, region);
         }

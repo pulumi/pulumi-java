@@ -23,7 +23,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
      * 
      */
     @InputImport(name="dictionary")
-    private final @Nullable Input<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryArgs> dictionary;
+        private final @Nullable Input<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryArgs> dictionary;
 
     public Input<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryArgs> getDictionary() {
         return this.dictionary == null ? Input.empty() : this.dictionary;
@@ -35,7 +35,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
      * 
      */
     @InputImport(name="excludeInfoTypes")
-    private final @Nullable Input<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesArgs> excludeInfoTypes;
+        private final @Nullable Input<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesArgs> excludeInfoTypes;
 
     public Input<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesArgs> getExcludeInfoTypes() {
         return this.excludeInfoTypes == null ? Input.empty() : this.excludeInfoTypes;
@@ -47,7 +47,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
      * 
      */
     @InputImport(name="matchingType", required=true)
-    private final Input<String> matchingType;
+        private final Input<String> matchingType;
 
     public Input<String> getMatchingType() {
         return this.matchingType;
@@ -59,7 +59,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
      * 
      */
     @InputImport(name="regex")
-    private final @Nullable Input<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegexArgs> regex;
+        private final @Nullable Input<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegexArgs> regex;
 
     public Input<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegexArgs> getRegex() {
         return this.regex == null ? Input.empty() : this.regex;
@@ -148,7 +148,6 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
             this.regex = Input.ofNullable(regex);
             return this;
         }
-
         public PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleArgs build() {
             return new PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleArgs(dictionary, excludeInfoTypes, matchingType, regex);
         }

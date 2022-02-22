@@ -87,7 +87,6 @@ public final class GetRouterBgp {
             this.asn = Objects.requireNonNull(asn);
             return this;
         }
-
         public GetRouterBgp build() {
             return new GetRouterBgp(advertiseMode, advertisedGroups, advertisedIpRanges, asn);
         }

@@ -216,7 +216,6 @@ public final class ServicePerimeterSpec {
             this.vpcAccessibleServices = vpcAccessibleServices;
             return this;
         }
-
         public ServicePerimeterSpec build() {
             return new ServicePerimeterSpec(accessLevels, egressPolicies, ingressPolicies, resources, restrictedServices, vpcAccessibleServices);
         }

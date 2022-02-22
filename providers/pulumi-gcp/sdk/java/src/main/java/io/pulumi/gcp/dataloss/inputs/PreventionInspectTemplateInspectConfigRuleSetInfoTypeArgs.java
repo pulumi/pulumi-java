@@ -19,7 +19,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs ext
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -62,7 +62,6 @@ public final class PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs ext
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs build() {
             return new PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs(name);
         }

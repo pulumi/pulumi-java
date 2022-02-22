@@ -74,7 +74,6 @@ public final class AzureNodePoolAutoscaling {
             this.minNodeCount = Objects.requireNonNull(minNodeCount);
             return this;
         }
-
         public AzureNodePoolAutoscaling build() {
             return new AzureNodePoolAutoscaling(maxNodeCount, minNodeCount);
         }

@@ -18,7 +18,7 @@ public final class TriggerMatchingCriteriaArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="attribute", required=true)
-    private final Input<String> attribute;
+        private final Input<String> attribute;
 
     public Input<String> getAttribute() {
         return this.attribute;
@@ -29,7 +29,7 @@ public final class TriggerMatchingCriteriaArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+        private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;
@@ -88,7 +88,6 @@ public final class TriggerMatchingCriteriaArgs extends io.pulumi.resources.Resou
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }
-
         public TriggerMatchingCriteriaArgs build() {
             return new TriggerMatchingCriteriaArgs(attribute, value);
         }

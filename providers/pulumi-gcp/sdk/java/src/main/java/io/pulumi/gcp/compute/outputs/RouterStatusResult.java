@@ -146,7 +146,6 @@ public final class RouterStatusResult {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public RouterStatusResult build() {
             return new RouterStatusResult(bestRoutes, bestRoutesForRouters, id, name, network, project, region);
         }

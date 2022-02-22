@@ -73,7 +73,6 @@ public final class BackendServiceIamMemberCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public BackendServiceIamMemberCondition build() {
             return new BackendServiceIamMemberCondition(description, expression, title);
         }

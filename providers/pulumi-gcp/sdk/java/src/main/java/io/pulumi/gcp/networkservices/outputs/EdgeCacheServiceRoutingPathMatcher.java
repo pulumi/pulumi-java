@@ -101,7 +101,6 @@ public final class EdgeCacheServiceRoutingPathMatcher {
             this.routeRules = Objects.requireNonNull(routeRules);
             return this;
         }
-
         public EdgeCacheServiceRoutingPathMatcher build() {
             return new EdgeCacheServiceRoutingPathMatcher(description, name, routeRules);
         }

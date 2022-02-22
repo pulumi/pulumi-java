@@ -142,7 +142,6 @@ public final class BudgetAllUpdatesRule {
             this.schemaVersion = schemaVersion;
             return this;
         }
-
         public BudgetAllUpdatesRule build() {
             return new BudgetAllUpdatesRule(disableDefaultIamRecipients, monitoringNotificationChannels, pubsubTopic, schemaVersion);
         }

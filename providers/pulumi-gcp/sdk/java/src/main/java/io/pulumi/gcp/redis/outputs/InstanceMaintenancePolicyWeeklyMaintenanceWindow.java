@@ -130,7 +130,6 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindow {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public InstanceMaintenancePolicyWeeklyMaintenanceWindow build() {
             return new InstanceMaintenancePolicyWeeklyMaintenanceWindow(day, duration, startTime);
         }

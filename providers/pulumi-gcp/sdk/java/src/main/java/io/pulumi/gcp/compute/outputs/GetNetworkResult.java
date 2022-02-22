@@ -166,7 +166,6 @@ public final class GetNetworkResult {
             this.subnetworksSelfLinks = Objects.requireNonNull(subnetworksSelfLinks);
             return this;
         }
-
         public GetNetworkResult build() {
             return new GetNetworkResult(description, gatewayIpv4, id, name, project, selfLink, subnetworksSelfLinks);
         }

@@ -80,7 +80,6 @@ public final class JobHttpTargetOauthToken {
             this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
             return this;
         }
-
         public JobHttpTargetOauthToken build() {
             return new JobHttpTargetOauthToken(scope, serviceAccountEmail);
         }

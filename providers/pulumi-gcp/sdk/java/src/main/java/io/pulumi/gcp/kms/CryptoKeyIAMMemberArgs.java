@@ -21,7 +21,7 @@ public final class CryptoKeyIAMMemberArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="condition")
-    private final @Nullable Input<CryptoKeyIAMMemberConditionArgs> condition;
+        private final @Nullable Input<CryptoKeyIAMMemberConditionArgs> condition;
 
     public Input<CryptoKeyIAMMemberConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -35,14 +35,14 @@ public final class CryptoKeyIAMMemberArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="cryptoKeyId", required=true)
-    private final Input<String> cryptoKeyId;
+        private final Input<String> cryptoKeyId;
 
     public Input<String> getCryptoKeyId() {
         return this.cryptoKeyId;
     }
 
     @InputImport(name="member", required=true)
-    private final Input<String> member;
+        private final Input<String> member;
 
     public Input<String> getMember() {
         return this.member;
@@ -54,7 +54,7 @@ public final class CryptoKeyIAMMemberArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+        private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -143,7 +143,6 @@ public final class CryptoKeyIAMMemberArgs extends io.pulumi.resources.ResourceAr
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }
-
         public CryptoKeyIAMMemberArgs build() {
             return new CryptoKeyIAMMemberArgs(condition, cryptoKeyId, member, role);
         }

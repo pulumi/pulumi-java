@@ -91,7 +91,6 @@ public final class FhirStoreStreamConfigBigqueryDestinationSchemaConfig {
             this.schemaType = schemaType;
             return this;
         }
-
         public FhirStoreStreamConfigBigqueryDestinationSchemaConfig build() {
             return new FhirStoreStreamConfigBigqueryDestinationSchemaConfig(recursiveStructureDepth, schemaType);
         }

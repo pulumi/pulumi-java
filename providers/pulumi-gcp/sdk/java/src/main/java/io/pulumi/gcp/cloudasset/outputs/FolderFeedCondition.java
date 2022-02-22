@@ -124,7 +124,6 @@ public final class FolderFeedCondition {
             this.title = title;
             return this;
         }
-
         public FolderFeedCondition build() {
             return new FolderFeedCondition(description, expression, location, title);
         }

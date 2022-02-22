@@ -103,7 +103,6 @@ public final class MetricMetricDescriptorLabel {
             this.valueType = valueType;
             return this;
         }
-
         public MetricMetricDescriptorLabel build() {
             return new MetricMetricDescriptorLabel(description, key, valueType);
         }

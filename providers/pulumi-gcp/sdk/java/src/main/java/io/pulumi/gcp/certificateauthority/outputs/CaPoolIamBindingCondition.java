@@ -73,7 +73,6 @@ public final class CaPoolIamBindingCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public CaPoolIamBindingCondition build() {
             return new CaPoolIamBindingCondition(description, expression, title);
         }

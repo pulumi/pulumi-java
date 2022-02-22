@@ -74,7 +74,6 @@ public final class CxVersionNluSetting {
             this.modelType = modelType;
             return this;
         }
-
         public CxVersionNluSetting build() {
             return new CxVersionNluSetting(classificationThreshold, modelTrainingMode, modelType);
         }

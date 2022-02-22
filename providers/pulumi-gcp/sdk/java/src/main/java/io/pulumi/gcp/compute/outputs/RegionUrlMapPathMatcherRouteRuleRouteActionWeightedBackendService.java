@@ -119,7 +119,6 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendSer
             this.weight = Objects.requireNonNull(weight);
             return this;
         }
-
         public RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendService build() {
             return new RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendService(backendService, headerAction, weight);
         }

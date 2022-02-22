@@ -127,7 +127,6 @@ public final class PatchDeploymentPatchConfigPostStepLinuxExecStepConfig {
             this.localPath = localPath;
             return this;
         }
-
         public PatchDeploymentPatchConfigPostStepLinuxExecStepConfig build() {
             return new PatchDeploymentPatchConfigPostStepLinuxExecStepConfig(allowedSuccessCodes, gcsObject, interpreter, localPath);
         }

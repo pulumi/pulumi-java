@@ -60,7 +60,6 @@ public final class DeviceState {
             this.updateTime = updateTime;
             return this;
         }
-
         public DeviceState build() {
             return new DeviceState(binaryData, updateTime);
         }

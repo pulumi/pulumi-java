@@ -19,7 +19,7 @@ public final class InstanceNetworkConfigGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="ipAllocation", required=true)
-    private final Input<String> ipAllocation;
+        private final Input<String> ipAllocation;
 
     public Input<String> getIpAllocation() {
         return this.ipAllocation;
@@ -32,7 +32,7 @@ public final class InstanceNetworkConfigGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="network", required=true)
-    private final Input<String> network;
+        private final Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network;
@@ -91,7 +91,6 @@ public final class InstanceNetworkConfigGetArgs extends io.pulumi.resources.Reso
             this.network = Input.of(Objects.requireNonNull(network));
             return this;
         }
-
         public InstanceNetworkConfigGetArgs build() {
             return new InstanceNetworkConfigGetArgs(ipAllocation, network);
         }

@@ -19,7 +19,7 @@ public final class CaPoolIssuancePolicyBaselineValuesPolicyIdGetArgs extends io.
      * 
      */
     @InputImport(name="objectIdPaths", required=true)
-    private final Input<List<Integer>> objectIdPaths;
+        private final Input<List<Integer>> objectIdPaths;
 
     public Input<List<Integer>> getObjectIdPaths() {
         return this.objectIdPaths;
@@ -62,7 +62,6 @@ public final class CaPoolIssuancePolicyBaselineValuesPolicyIdGetArgs extends io.
             this.objectIdPaths = Input.of(Objects.requireNonNull(objectIdPaths));
             return this;
         }
-
         public CaPoolIssuancePolicyBaselineValuesPolicyIdGetArgs build() {
             return new CaPoolIssuancePolicyBaselineValuesPolicyIdGetArgs(objectIdPaths);
         }

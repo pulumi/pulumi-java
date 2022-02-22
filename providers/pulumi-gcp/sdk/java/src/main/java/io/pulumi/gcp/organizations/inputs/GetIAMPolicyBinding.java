@@ -21,7 +21,7 @@ public final class GetIAMPolicyBinding extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="condition")
-    private final @Nullable GetIAMPolicyBindingCondition condition;
+        private final @Nullable GetIAMPolicyBindingCondition condition;
 
     public Optional<GetIAMPolicyBindingCondition> getCondition() {
         return this.condition == null ? Optional.empty() : Optional.ofNullable(this.condition);
@@ -39,7 +39,7 @@ public final class GetIAMPolicyBinding extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="members", required=true)
-    private final List<String> members;
+        private final List<String> members;
 
     public List<String> getMembers() {
         return this.members;
@@ -52,7 +52,7 @@ public final class GetIAMPolicyBinding extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="role", required=true)
-    private final String role;
+        private final String role;
 
     public String getRole() {
         return this.role;
@@ -111,7 +111,6 @@ public final class GetIAMPolicyBinding extends io.pulumi.resources.InvokeArgs {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public GetIAMPolicyBinding build() {
             return new GetIAMPolicyBinding(condition, members, role);
         }

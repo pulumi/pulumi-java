@@ -97,7 +97,6 @@ public final class GetInstanceServerCaCert {
             this.sha1Fingerprint = Objects.requireNonNull(sha1Fingerprint);
             return this;
         }
-
         public GetInstanceServerCaCert build() {
             return new GetInstanceServerCaCert(cert, createTime, expireTime, serialNumber, sha1Fingerprint);
         }

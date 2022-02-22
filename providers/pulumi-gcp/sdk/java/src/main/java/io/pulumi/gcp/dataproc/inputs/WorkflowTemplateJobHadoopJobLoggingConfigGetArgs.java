@@ -20,7 +20,7 @@ public final class WorkflowTemplateJobHadoopJobLoggingConfigGetArgs extends io.p
      * 
      */
     @InputImport(name="driverLogLevels")
-    private final @Nullable Input<Map<String,String>> driverLogLevels;
+        private final @Nullable Input<Map<String,String>> driverLogLevels;
 
     public Input<Map<String,String>> getDriverLogLevels() {
         return this.driverLogLevels == null ? Input.empty() : this.driverLogLevels;
@@ -63,7 +63,6 @@ public final class WorkflowTemplateJobHadoopJobLoggingConfigGetArgs extends io.p
             this.driverLogLevels = Input.ofNullable(driverLogLevels);
             return this;
         }
-
         public WorkflowTemplateJobHadoopJobLoggingConfigGetArgs build() {
             return new WorkflowTemplateJobHadoopJobLoggingConfigGetArgs(driverLogLevels);
         }

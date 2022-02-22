@@ -14,7 +14,7 @@ public final class BucketEncryptionArgs extends io.pulumi.resources.ResourceArgs
     public static final BucketEncryptionArgs Empty = new BucketEncryptionArgs();
 
     @InputImport(name="defaultKmsKeyName", required=true)
-    private final Input<String> defaultKmsKeyName;
+        private final Input<String> defaultKmsKeyName;
 
     public Input<String> getDefaultKmsKeyName() {
         return this.defaultKmsKeyName;
@@ -57,7 +57,6 @@ public final class BucketEncryptionArgs extends io.pulumi.resources.ResourceArgs
             this.defaultKmsKeyName = Input.of(Objects.requireNonNull(defaultKmsKeyName));
             return this;
         }
-
         public BucketEncryptionArgs build() {
             return new BucketEncryptionArgs(defaultKmsKeyName);
         }

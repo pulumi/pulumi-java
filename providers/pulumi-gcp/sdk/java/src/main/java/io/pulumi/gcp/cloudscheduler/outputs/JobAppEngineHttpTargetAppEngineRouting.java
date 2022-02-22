@@ -103,7 +103,6 @@ public final class JobAppEngineHttpTargetAppEngineRouting {
             this.version = version;
             return this;
         }
-
         public JobAppEngineHttpTargetAppEngineRouting build() {
             return new JobAppEngineHttpTargetAppEngineRouting(instance, service, version);
         }

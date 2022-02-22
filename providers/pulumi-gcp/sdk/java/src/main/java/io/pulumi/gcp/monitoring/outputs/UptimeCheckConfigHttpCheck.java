@@ -256,7 +256,6 @@ public final class UptimeCheckConfigHttpCheck {
             this.validateSsl = validateSsl;
             return this;
         }
-
         public UptimeCheckConfigHttpCheck build() {
             return new UptimeCheckConfigHttpCheck(authInfo, body, contentType, headers, maskHeaders, path, port, requestMethod, useSsl, validateSsl);
         }

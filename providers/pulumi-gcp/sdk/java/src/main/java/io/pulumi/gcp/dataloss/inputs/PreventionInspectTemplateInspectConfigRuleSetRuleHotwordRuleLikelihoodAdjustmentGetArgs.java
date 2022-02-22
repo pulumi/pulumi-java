@@ -21,7 +21,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleL
      * 
      */
     @InputImport(name="fixedLikelihood")
-    private final @Nullable Input<String> fixedLikelihood;
+        private final @Nullable Input<String> fixedLikelihood;
 
     public Input<String> getFixedLikelihood() {
         return this.fixedLikelihood == null ? Input.empty() : this.fixedLikelihood;
@@ -37,7 +37,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleL
      * 
      */
     @InputImport(name="relativeLikelihood")
-    private final @Nullable Input<Integer> relativeLikelihood;
+        private final @Nullable Input<Integer> relativeLikelihood;
 
     public Input<Integer> getRelativeLikelihood() {
         return this.relativeLikelihood == null ? Input.empty() : this.relativeLikelihood;
@@ -96,7 +96,6 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleL
             this.relativeLikelihood = Input.ofNullable(relativeLikelihood);
             return this;
         }
-
         public PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustmentGetArgs build() {
             return new PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustmentGetArgs(fixedLikelihood, relativeLikelihood);
         }

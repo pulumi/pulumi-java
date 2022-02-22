@@ -56,7 +56,6 @@ public final class AiDatasetEncryptionSpec {
             this.kmsKeyName = kmsKeyName;
             return this;
         }
-
         public AiDatasetEncryptionSpec build() {
             return new AiDatasetEncryptionSpec(kmsKeyName);
         }

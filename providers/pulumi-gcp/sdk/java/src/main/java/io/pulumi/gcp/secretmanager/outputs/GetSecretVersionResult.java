@@ -200,7 +200,6 @@ public final class GetSecretVersionResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetSecretVersionResult build() {
             return new GetSecretVersionResult(createTime, destroyTime, enabled, id, name, project, secret, secretData, version);
         }

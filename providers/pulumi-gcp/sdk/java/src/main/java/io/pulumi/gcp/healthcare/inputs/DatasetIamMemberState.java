@@ -16,7 +16,7 @@ public final class DatasetIamMemberState extends io.pulumi.resources.ResourceArg
     public static final DatasetIamMemberState Empty = new DatasetIamMemberState();
 
     @InputImport(name="condition")
-    private final @Nullable Input<DatasetIamMemberConditionGetArgs> condition;
+        private final @Nullable Input<DatasetIamMemberConditionGetArgs> condition;
 
     public Input<DatasetIamMemberConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -30,7 +30,7 @@ public final class DatasetIamMemberState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="datasetId")
-    private final @Nullable Input<String> datasetId;
+        private final @Nullable Input<String> datasetId;
 
     public Input<String> getDatasetId() {
         return this.datasetId == null ? Input.empty() : this.datasetId;
@@ -41,14 +41,14 @@ public final class DatasetIamMemberState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+        private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="member")
-    private final @Nullable Input<String> member;
+        private final @Nullable Input<String> member;
 
     public Input<String> getMember() {
         return this.member == null ? Input.empty() : this.member;
@@ -61,7 +61,7 @@ public final class DatasetIamMemberState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+        private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -165,7 +165,6 @@ public final class DatasetIamMemberState extends io.pulumi.resources.ResourceArg
             this.role = Input.ofNullable(role);
             return this;
         }
-
         public DatasetIamMemberState build() {
             return new DatasetIamMemberState(condition, datasetId, etag, member, role);
         }

@@ -137,7 +137,6 @@ public final class GetClientConfigResult {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public GetClientConfigResult build() {
             return new GetClientConfigResult(accessToken, id, project, region, zone);
         }

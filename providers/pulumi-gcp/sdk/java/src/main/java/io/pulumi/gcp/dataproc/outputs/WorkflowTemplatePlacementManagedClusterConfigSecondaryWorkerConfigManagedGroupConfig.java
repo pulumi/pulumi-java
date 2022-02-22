@@ -60,7 +60,6 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
             this.instanceTemplateName = instanceTemplateName;
             return this;
         }
-
         public WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfig build() {
             return new WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfig(instanceGroupManagerName, instanceTemplateName);
         }

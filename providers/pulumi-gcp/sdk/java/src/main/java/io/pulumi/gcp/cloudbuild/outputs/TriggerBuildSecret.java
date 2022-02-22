@@ -80,7 +80,6 @@ public final class TriggerBuildSecret {
             this.secretEnv = secretEnv;
             return this;
         }
-
         public TriggerBuildSecret build() {
             return new TriggerBuildSecret(kmsKeyName, secretEnv);
         }

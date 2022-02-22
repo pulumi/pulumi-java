@@ -83,7 +83,6 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicy {
             this.onSourceDiskDelete = onSourceDiskDelete;
             return this;
         }
-
         public ResourcePolicySnapshotSchedulePolicyRetentionPolicy build() {
             return new ResourcePolicySnapshotSchedulePolicyRetentionPolicy(maxRetentionDays, onSourceDiskDelete);
         }

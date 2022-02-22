@@ -16,7 +16,7 @@ public final class EntryGroupIamMemberArgs extends io.pulumi.resources.ResourceA
     public static final EntryGroupIamMemberArgs Empty = new EntryGroupIamMemberArgs();
 
     @InputImport(name="condition")
-    private final @Nullable Input<EntryGroupIamMemberConditionArgs> condition;
+        private final @Nullable Input<EntryGroupIamMemberConditionArgs> condition;
 
     public Input<EntryGroupIamMemberConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -27,14 +27,14 @@ public final class EntryGroupIamMemberArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="entryGroup", required=true)
-    private final Input<String> entryGroup;
+        private final Input<String> entryGroup;
 
     public Input<String> getEntryGroup() {
         return this.entryGroup;
     }
 
     @InputImport(name="member", required=true)
-    private final Input<String> member;
+        private final Input<String> member;
 
     public Input<String> getMember() {
         return this.member;
@@ -46,14 +46,14 @@ public final class EntryGroupIamMemberArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+        private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -66,7 +66,7 @@ public final class EntryGroupIamMemberArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+        private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -185,7 +185,6 @@ public final class EntryGroupIamMemberArgs extends io.pulumi.resources.ResourceA
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }
-
         public EntryGroupIamMemberArgs build() {
             return new EntryGroupIamMemberArgs(condition, entryGroup, member, project, region, role);
         }

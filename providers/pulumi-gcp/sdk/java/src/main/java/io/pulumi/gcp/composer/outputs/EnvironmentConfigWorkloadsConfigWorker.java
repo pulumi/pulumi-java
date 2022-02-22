@@ -100,7 +100,6 @@ public final class EnvironmentConfigWorkloadsConfigWorker {
             this.storageGb = storageGb;
             return this;
         }
-
         public EnvironmentConfigWorkloadsConfigWorker build() {
             return new EnvironmentConfigWorkloadsConfigWorker(cpu, maxCount, memoryGb, minCount, storageGb);
         }

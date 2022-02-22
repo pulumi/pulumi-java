@@ -119,7 +119,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYum 
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYum build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYum(baseUrl, displayName, gpgKeys, id);
         }

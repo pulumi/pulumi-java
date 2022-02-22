@@ -27,7 +27,7 @@ public final class PatchDeploymentPatchConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="apt")
-    private final @Nullable Input<PatchDeploymentPatchConfigAptArgs> apt;
+        private final @Nullable Input<PatchDeploymentPatchConfigAptArgs> apt;
 
     public Input<PatchDeploymentPatchConfigAptArgs> getApt() {
         return this.apt == null ? Input.empty() : this.apt;
@@ -39,7 +39,7 @@ public final class PatchDeploymentPatchConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="goo")
-    private final @Nullable Input<PatchDeploymentPatchConfigGooArgs> goo;
+        private final @Nullable Input<PatchDeploymentPatchConfigGooArgs> goo;
 
     public Input<PatchDeploymentPatchConfigGooArgs> getGoo() {
         return this.goo == null ? Input.empty() : this.goo;
@@ -51,7 +51,7 @@ public final class PatchDeploymentPatchConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="postStep")
-    private final @Nullable Input<PatchDeploymentPatchConfigPostStepArgs> postStep;
+        private final @Nullable Input<PatchDeploymentPatchConfigPostStepArgs> postStep;
 
     public Input<PatchDeploymentPatchConfigPostStepArgs> getPostStep() {
         return this.postStep == null ? Input.empty() : this.postStep;
@@ -63,7 +63,7 @@ public final class PatchDeploymentPatchConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="preStep")
-    private final @Nullable Input<PatchDeploymentPatchConfigPreStepArgs> preStep;
+        private final @Nullable Input<PatchDeploymentPatchConfigPreStepArgs> preStep;
 
     public Input<PatchDeploymentPatchConfigPreStepArgs> getPreStep() {
         return this.preStep == null ? Input.empty() : this.preStep;
@@ -75,7 +75,7 @@ public final class PatchDeploymentPatchConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="rebootConfig")
-    private final @Nullable Input<String> rebootConfig;
+        private final @Nullable Input<String> rebootConfig;
 
     public Input<String> getRebootConfig() {
         return this.rebootConfig == null ? Input.empty() : this.rebootConfig;
@@ -87,7 +87,7 @@ public final class PatchDeploymentPatchConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="windowsUpdate")
-    private final @Nullable Input<PatchDeploymentPatchConfigWindowsUpdateArgs> windowsUpdate;
+        private final @Nullable Input<PatchDeploymentPatchConfigWindowsUpdateArgs> windowsUpdate;
 
     public Input<PatchDeploymentPatchConfigWindowsUpdateArgs> getWindowsUpdate() {
         return this.windowsUpdate == null ? Input.empty() : this.windowsUpdate;
@@ -99,7 +99,7 @@ public final class PatchDeploymentPatchConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="yum")
-    private final @Nullable Input<PatchDeploymentPatchConfigYumArgs> yum;
+        private final @Nullable Input<PatchDeploymentPatchConfigYumArgs> yum;
 
     public Input<PatchDeploymentPatchConfigYumArgs> getYum() {
         return this.yum == null ? Input.empty() : this.yum;
@@ -111,7 +111,7 @@ public final class PatchDeploymentPatchConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="zypper")
-    private final @Nullable Input<PatchDeploymentPatchConfigZypperArgs> zypper;
+        private final @Nullable Input<PatchDeploymentPatchConfigZypperArgs> zypper;
 
     public Input<PatchDeploymentPatchConfigZypperArgs> getZypper() {
         return this.zypper == null ? Input.empty() : this.zypper;
@@ -260,7 +260,6 @@ public final class PatchDeploymentPatchConfigArgs extends io.pulumi.resources.Re
             this.zypper = Input.ofNullable(zypper);
             return this;
         }
-
         public PatchDeploymentPatchConfigArgs build() {
             return new PatchDeploymentPatchConfigArgs(apt, goo, postStep, preStep, rebootConfig, windowsUpdate, yum, zypper);
         }

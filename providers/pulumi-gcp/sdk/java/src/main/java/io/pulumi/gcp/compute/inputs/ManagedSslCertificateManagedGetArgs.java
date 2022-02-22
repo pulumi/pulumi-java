@@ -20,7 +20,7 @@ public final class ManagedSslCertificateManagedGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="domains", required=true)
-    private final Input<List<String>> domains;
+        private final Input<List<String>> domains;
 
     public Input<List<String>> getDomains() {
         return this.domains;
@@ -63,7 +63,6 @@ public final class ManagedSslCertificateManagedGetArgs extends io.pulumi.resourc
             this.domains = Input.of(Objects.requireNonNull(domains));
             return this;
         }
-
         public ManagedSslCertificateManagedGetArgs build() {
             return new ManagedSslCertificateManagedGetArgs(domains);
         }

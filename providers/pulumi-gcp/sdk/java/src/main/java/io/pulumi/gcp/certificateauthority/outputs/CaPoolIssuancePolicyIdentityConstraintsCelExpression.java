@@ -118,7 +118,6 @@ public final class CaPoolIssuancePolicyIdentityConstraintsCelExpression {
             this.title = title;
             return this;
         }
-
         public CaPoolIssuancePolicyIdentityConstraintsCelExpression build() {
             return new CaPoolIssuancePolicyIdentityConstraintsCelExpression(description, expression, location, title);
         }

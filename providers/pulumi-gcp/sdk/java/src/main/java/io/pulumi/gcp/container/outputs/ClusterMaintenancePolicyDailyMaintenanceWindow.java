@@ -60,7 +60,6 @@ public final class ClusterMaintenancePolicyDailyMaintenanceWindow {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public ClusterMaintenancePolicyDailyMaintenanceWindow build() {
             return new ClusterMaintenancePolicyDailyMaintenanceWindow(duration, startTime);
         }

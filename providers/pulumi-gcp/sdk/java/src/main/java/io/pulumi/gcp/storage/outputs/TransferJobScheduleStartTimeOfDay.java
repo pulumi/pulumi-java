@@ -116,7 +116,6 @@ public final class TransferJobScheduleStartTimeOfDay {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
         }
-
         public TransferJobScheduleStartTimeOfDay build() {
             return new TransferJobScheduleStartTimeOfDay(hours, minutes, nanos, seconds);
         }

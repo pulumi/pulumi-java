@@ -20,7 +20,7 @@ public final class BudgetAmountSpecifiedAmountArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="currencyCode")
-    private final @Nullable Input<String> currencyCode;
+        private final @Nullable Input<String> currencyCode;
 
     public Input<String> getCurrencyCode() {
         return this.currencyCode == null ? Input.empty() : this.currencyCode;
@@ -37,7 +37,7 @@ public final class BudgetAmountSpecifiedAmountArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="nanos")
-    private final @Nullable Input<Integer> nanos;
+        private final @Nullable Input<Integer> nanos;
 
     public Input<Integer> getNanos() {
         return this.nanos == null ? Input.empty() : this.nanos;
@@ -49,7 +49,7 @@ public final class BudgetAmountSpecifiedAmountArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="units")
-    private final @Nullable Input<String> units;
+        private final @Nullable Input<String> units;
 
     public Input<String> getUnits() {
         return this.units == null ? Input.empty() : this.units;
@@ -123,7 +123,6 @@ public final class BudgetAmountSpecifiedAmountArgs extends io.pulumi.resources.R
             this.units = Input.ofNullable(units);
             return this;
         }
-
         public BudgetAmountSpecifiedAmountArgs build() {
             return new BudgetAmountSpecifiedAmountArgs(currencyCode, nanos, units);
         }

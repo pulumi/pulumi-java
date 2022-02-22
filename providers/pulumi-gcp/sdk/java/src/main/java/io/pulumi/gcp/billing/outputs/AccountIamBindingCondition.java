@@ -73,7 +73,6 @@ public final class AccountIamBindingCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public AccountIamBindingCondition build() {
             return new AccountIamBindingCondition(description, expression, title);
         }

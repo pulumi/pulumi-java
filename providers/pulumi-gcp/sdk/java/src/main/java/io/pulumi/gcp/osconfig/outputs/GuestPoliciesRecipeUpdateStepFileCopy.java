@@ -131,7 +131,6 @@ public final class GuestPoliciesRecipeUpdateStepFileCopy {
             this.permissions = permissions;
             return this;
         }
-
         public GuestPoliciesRecipeUpdateStepFileCopy build() {
             return new GuestPoliciesRecipeUpdateStepFileCopy(artifactId, destination, overwrite, permissions);
         }

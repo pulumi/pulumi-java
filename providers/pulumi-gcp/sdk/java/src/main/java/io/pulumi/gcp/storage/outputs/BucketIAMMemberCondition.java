@@ -97,7 +97,6 @@ public final class BucketIAMMemberCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public BucketIAMMemberCondition build() {
             return new BucketIAMMemberCondition(description, expression, title);
         }

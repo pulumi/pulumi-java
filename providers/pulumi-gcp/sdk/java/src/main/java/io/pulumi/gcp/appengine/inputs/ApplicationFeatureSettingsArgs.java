@@ -19,7 +19,7 @@ public final class ApplicationFeatureSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="splitHealthChecks", required=true)
-    private final Input<Boolean> splitHealthChecks;
+        private final Input<Boolean> splitHealthChecks;
 
     public Input<Boolean> getSplitHealthChecks() {
         return this.splitHealthChecks;
@@ -62,7 +62,6 @@ public final class ApplicationFeatureSettingsArgs extends io.pulumi.resources.Re
             this.splitHealthChecks = Input.of(Objects.requireNonNull(splitHealthChecks));
             return this;
         }
-
         public ApplicationFeatureSettingsArgs build() {
             return new ApplicationFeatureSettingsArgs(splitHealthChecks);
         }

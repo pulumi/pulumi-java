@@ -81,7 +81,6 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRule {
             this.hotwordRule = hotwordRule;
             return this;
         }
-
         public PreventionInspectTemplateInspectConfigRuleSetRule build() {
             return new PreventionInspectTemplateInspectConfigRuleSetRule(exclusionRule, hotwordRule);
         }

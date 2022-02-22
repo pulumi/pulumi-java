@@ -23,7 +23,7 @@ public final class AuthorityConfigX509ConfigKeyUsageGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="baseKeyUsage", required=true)
-    private final Input<AuthorityConfigX509ConfigKeyUsageBaseKeyUsageGetArgs> baseKeyUsage;
+        private final Input<AuthorityConfigX509ConfigKeyUsageBaseKeyUsageGetArgs> baseKeyUsage;
 
     public Input<AuthorityConfigX509ConfigKeyUsageBaseKeyUsageGetArgs> getBaseKeyUsage() {
         return this.baseKeyUsage;
@@ -35,7 +35,7 @@ public final class AuthorityConfigX509ConfigKeyUsageGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="extendedKeyUsage", required=true)
-    private final Input<AuthorityConfigX509ConfigKeyUsageExtendedKeyUsageGetArgs> extendedKeyUsage;
+        private final Input<AuthorityConfigX509ConfigKeyUsageExtendedKeyUsageGetArgs> extendedKeyUsage;
 
     public Input<AuthorityConfigX509ConfigKeyUsageExtendedKeyUsageGetArgs> getExtendedKeyUsage() {
         return this.extendedKeyUsage;
@@ -47,7 +47,7 @@ public final class AuthorityConfigX509ConfigKeyUsageGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="unknownExtendedKeyUsages")
-    private final @Nullable Input<List<AuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsageGetArgs>> unknownExtendedKeyUsages;
+        private final @Nullable Input<List<AuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsageGetArgs>> unknownExtendedKeyUsages;
 
     public Input<List<AuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsageGetArgs>> getUnknownExtendedKeyUsages() {
         return this.unknownExtendedKeyUsages == null ? Input.empty() : this.unknownExtendedKeyUsages;
@@ -121,7 +121,6 @@ public final class AuthorityConfigX509ConfigKeyUsageGetArgs extends io.pulumi.re
             this.unknownExtendedKeyUsages = Input.ofNullable(unknownExtendedKeyUsages);
             return this;
         }
-
         public AuthorityConfigX509ConfigKeyUsageGetArgs build() {
             return new AuthorityConfigX509ConfigKeyUsageGetArgs(baseKeyUsage, extendedKeyUsage, unknownExtendedKeyUsages);
         }

@@ -234,7 +234,6 @@ public final class GetNetworkEndpointGroupResult {
             this.zone = zone;
             return this;
         }
-
         public GetNetworkEndpointGroupResult build() {
             return new GetNetworkEndpointGroupResult(defaultPort, description, id, name, network, networkEndpointType, project, selfLink, size, subnetwork, zone);
         }

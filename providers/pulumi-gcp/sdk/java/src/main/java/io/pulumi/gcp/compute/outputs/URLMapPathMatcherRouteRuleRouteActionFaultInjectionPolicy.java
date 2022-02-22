@@ -81,7 +81,6 @@ public final class URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicy {
             this.delay = delay;
             return this;
         }
-
         public URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicy build() {
             return new URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicy(abort, delay);
         }

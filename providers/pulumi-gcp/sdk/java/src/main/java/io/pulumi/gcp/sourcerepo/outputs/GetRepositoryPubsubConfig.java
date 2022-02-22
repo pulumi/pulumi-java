@@ -71,7 +71,6 @@ public final class GetRepositoryPubsubConfig {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
-
         public GetRepositoryPubsubConfig build() {
             return new GetRepositoryPubsubConfig(messageFormat, serviceAccountEmail, topic);
         }

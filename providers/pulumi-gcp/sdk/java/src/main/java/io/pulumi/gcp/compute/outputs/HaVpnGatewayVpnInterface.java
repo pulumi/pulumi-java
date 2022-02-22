@@ -110,7 +110,6 @@ public final class HaVpnGatewayVpnInterface {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public HaVpnGatewayVpnInterface build() {
             return new HaVpnGatewayVpnInterface(id, interconnectAttachment, ipAddress);
         }

@@ -21,7 +21,7 @@ public final class ServiceTemplateSpecContainerEnvFromConfigMapRefGetArgs extend
      * 
      */
     @InputImport(name="localObjectReference")
-    private final @Nullable Input<ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReferenceGetArgs> localObjectReference;
+        private final @Nullable Input<ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReferenceGetArgs> localObjectReference;
 
     public Input<ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReferenceGetArgs> getLocalObjectReference() {
         return this.localObjectReference == null ? Input.empty() : this.localObjectReference;
@@ -32,7 +32,7 @@ public final class ServiceTemplateSpecContainerEnvFromConfigMapRefGetArgs extend
      * 
      */
     @InputImport(name="optional")
-    private final @Nullable Input<Boolean> optional;
+        private final @Nullable Input<Boolean> optional;
 
     public Input<Boolean> getOptional() {
         return this.optional == null ? Input.empty() : this.optional;
@@ -91,7 +91,6 @@ public final class ServiceTemplateSpecContainerEnvFromConfigMapRefGetArgs extend
             this.optional = Input.ofNullable(optional);
             return this;
         }
-
         public ServiceTemplateSpecContainerEnvFromConfigMapRefGetArgs build() {
             return new ServiceTemplateSpecContainerEnvFromConfigMapRefGetArgs(localObjectReference, optional);
         }

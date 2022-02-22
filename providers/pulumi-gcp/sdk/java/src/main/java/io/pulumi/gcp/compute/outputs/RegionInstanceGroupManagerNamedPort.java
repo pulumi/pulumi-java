@@ -77,7 +77,6 @@ public final class RegionInstanceGroupManagerNamedPort {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public RegionInstanceGroupManagerNamedPort build() {
             return new RegionInstanceGroupManagerNamedPort(name, port);
         }

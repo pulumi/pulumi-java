@@ -181,7 +181,6 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
             this.sampleMethod = sampleMethod;
             return this;
         }
-
         public PreventionJobTriggerInspectJobStorageConfigCloudStorageOptions build() {
             return new PreventionJobTriggerInspectJobStorageConfigCloudStorageOptions(bytesLimitPerFile, bytesLimitPerFilePercent, fileSet, fileTypes, filesLimitPercent, sampleMethod);
         }

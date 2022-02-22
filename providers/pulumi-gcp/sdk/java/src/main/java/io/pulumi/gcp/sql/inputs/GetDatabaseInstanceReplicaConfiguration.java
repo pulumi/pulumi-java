@@ -15,77 +15,77 @@ public final class GetDatabaseInstanceReplicaConfiguration extends io.pulumi.res
     public static final GetDatabaseInstanceReplicaConfiguration Empty = new GetDatabaseInstanceReplicaConfiguration();
 
     @InputImport(name="caCertificate", required=true)
-    private final String caCertificate;
+        private final String caCertificate;
 
     public String getCaCertificate() {
         return this.caCertificate;
     }
 
     @InputImport(name="clientCertificate", required=true)
-    private final String clientCertificate;
+        private final String clientCertificate;
 
     public String getClientCertificate() {
         return this.clientCertificate;
     }
 
     @InputImport(name="clientKey", required=true)
-    private final String clientKey;
+        private final String clientKey;
 
     public String getClientKey() {
         return this.clientKey;
     }
 
     @InputImport(name="connectRetryInterval", required=true)
-    private final Integer connectRetryInterval;
+        private final Integer connectRetryInterval;
 
     public Integer getConnectRetryInterval() {
         return this.connectRetryInterval;
     }
 
     @InputImport(name="dumpFilePath", required=true)
-    private final String dumpFilePath;
+        private final String dumpFilePath;
 
     public String getDumpFilePath() {
         return this.dumpFilePath;
     }
 
     @InputImport(name="failoverTarget", required=true)
-    private final Boolean failoverTarget;
+        private final Boolean failoverTarget;
 
     public Boolean getFailoverTarget() {
         return this.failoverTarget;
     }
 
     @InputImport(name="masterHeartbeatPeriod", required=true)
-    private final Integer masterHeartbeatPeriod;
+        private final Integer masterHeartbeatPeriod;
 
     public Integer getMasterHeartbeatPeriod() {
         return this.masterHeartbeatPeriod;
     }
 
     @InputImport(name="password", required=true)
-    private final String password;
+        private final String password;
 
     public String getPassword() {
         return this.password;
     }
 
     @InputImport(name="sslCipher", required=true)
-    private final String sslCipher;
+        private final String sslCipher;
 
     public String getSslCipher() {
         return this.sslCipher;
     }
 
     @InputImport(name="username", required=true)
-    private final String username;
+        private final String username;
 
     public String getUsername() {
         return this.username;
     }
 
     @InputImport(name="verifyServerCertificate", required=true)
-    private final Boolean verifyServerCertificate;
+        private final Boolean verifyServerCertificate;
 
     public Boolean getVerifyServerCertificate() {
         return this.verifyServerCertificate;
@@ -224,7 +224,6 @@ public final class GetDatabaseInstanceReplicaConfiguration extends io.pulumi.res
             this.verifyServerCertificate = Objects.requireNonNull(verifyServerCertificate);
             return this;
         }
-
         public GetDatabaseInstanceReplicaConfiguration build() {
             return new GetDatabaseInstanceReplicaConfiguration(caCertificate, clientCertificate, clientKey, connectRetryInterval, dumpFilePath, failoverTarget, masterHeartbeatPeriod, password, sslCipher, username, verifyServerCertificate);
         }

@@ -13,28 +13,28 @@ public final class GetPeeredDnsDomainArgs extends io.pulumi.resources.InvokeArgs
     public static final GetPeeredDnsDomainArgs Empty = new GetPeeredDnsDomainArgs();
 
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
     }
 
     @InputImport(name="network", required=true)
-    private final String network;
+        private final String network;
 
     public String getNetwork() {
         return this.network;
     }
 
     @InputImport(name="project", required=true)
-    private final String project;
+        private final String project;
 
     public String getProject() {
         return this.project;
     }
 
     @InputImport(name="service", required=true)
-    private final String service;
+        private final String service;
 
     public String getService() {
         return this.service;
@@ -103,7 +103,6 @@ public final class GetPeeredDnsDomainArgs extends io.pulumi.resources.InvokeArgs
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public GetPeeredDnsDomainArgs build() {
             return new GetPeeredDnsDomainArgs(name, network, project, service);
         }

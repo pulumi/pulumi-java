@@ -80,7 +80,6 @@ public final class GetServiceTemplateSpecContainerPort {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public GetServiceTemplateSpecContainerPort build() {
             return new GetServiceTemplateSpecContainerPort(containerPort, name, protocol);
         }

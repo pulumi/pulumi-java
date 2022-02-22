@@ -20,7 +20,7 @@ public final class CertificateConfigPublicKeyGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="format", required=true)
-    private final Input<String> format;
+        private final Input<String> format;
 
     public Input<String> getFormat() {
         return this.format;
@@ -31,7 +31,7 @@ public final class CertificateConfigPublicKeyGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="key")
-    private final @Nullable Input<String> key;
+        private final @Nullable Input<String> key;
 
     public Input<String> getKey() {
         return this.key == null ? Input.empty() : this.key;
@@ -90,7 +90,6 @@ public final class CertificateConfigPublicKeyGetArgs extends io.pulumi.resources
             this.key = Input.ofNullable(key);
             return this;
         }
-
         public CertificateConfigPublicKeyGetArgs build() {
             return new CertificateConfigPublicKeyGetArgs(format, key);
         }

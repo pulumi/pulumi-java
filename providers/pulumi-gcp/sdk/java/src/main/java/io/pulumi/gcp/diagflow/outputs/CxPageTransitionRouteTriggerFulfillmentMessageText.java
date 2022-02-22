@@ -80,7 +80,6 @@ public final class CxPageTransitionRouteTriggerFulfillmentMessageText {
             this.texts = texts;
             return this;
         }
-
         public CxPageTransitionRouteTriggerFulfillmentMessageText build() {
             return new CxPageTransitionRouteTriggerFulfillmentMessageText(allowPlaybackInterruption, texts);
         }

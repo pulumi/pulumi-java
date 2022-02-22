@@ -52,7 +52,6 @@ public final class AwsClusterAuthorizationAdminUser {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public AwsClusterAuthorizationAdminUser build() {
             return new AwsClusterAuthorizationAdminUser(username);
         }

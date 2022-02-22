@@ -114,7 +114,6 @@ public final class CxIntentTrainingPhrase {
             this.repeatCount = repeatCount;
             return this;
         }
-
         public CxIntentTrainingPhrase build() {
             return new CxIntentTrainingPhrase(id, parts, repeatCount);
         }

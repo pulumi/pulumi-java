@@ -20,7 +20,7 @@ public final class RepositoryIamPolicyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="policyData", required=true)
-    private final Input<String> policyData;
+        private final Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData;
@@ -32,14 +32,14 @@ public final class RepositoryIamPolicyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="repository", required=true)
-    private final Input<String> repository;
+        private final Input<String> repository;
 
     public Input<String> getRepository() {
         return this.repository;
@@ -113,7 +113,6 @@ public final class RepositoryIamPolicyArgs extends io.pulumi.resources.ResourceA
             this.repository = Input.of(Objects.requireNonNull(repository));
             return this;
         }
-
         public RepositoryIamPolicyArgs build() {
             return new RepositoryIamPolicyArgs(policyData, project, repository);
         }

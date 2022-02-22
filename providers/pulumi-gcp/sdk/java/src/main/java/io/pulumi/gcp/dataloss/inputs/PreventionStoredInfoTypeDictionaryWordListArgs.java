@@ -20,7 +20,7 @@ public final class PreventionStoredInfoTypeDictionaryWordListArgs extends io.pul
      * 
      */
     @InputImport(name="words", required=true)
-    private final Input<List<String>> words;
+        private final Input<List<String>> words;
 
     public Input<List<String>> getWords() {
         return this.words;
@@ -63,7 +63,6 @@ public final class PreventionStoredInfoTypeDictionaryWordListArgs extends io.pul
             this.words = Input.of(Objects.requireNonNull(words));
             return this;
         }
-
         public PreventionStoredInfoTypeDictionaryWordListArgs build() {
             return new PreventionStoredInfoTypeDictionaryWordListArgs(words);
         }

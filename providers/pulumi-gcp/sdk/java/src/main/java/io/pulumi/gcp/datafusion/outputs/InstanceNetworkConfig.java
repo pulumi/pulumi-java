@@ -80,7 +80,6 @@ public final class InstanceNetworkConfig {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public InstanceNetworkConfig build() {
             return new InstanceNetworkConfig(ipAllocation, network);
         }

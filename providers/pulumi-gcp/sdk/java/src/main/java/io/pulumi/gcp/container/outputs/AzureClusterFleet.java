@@ -78,7 +78,6 @@ public final class AzureClusterFleet {
             this.project = project;
             return this;
         }
-
         public AzureClusterFleet build() {
             return new AzureClusterFleet(membership, project);
         }

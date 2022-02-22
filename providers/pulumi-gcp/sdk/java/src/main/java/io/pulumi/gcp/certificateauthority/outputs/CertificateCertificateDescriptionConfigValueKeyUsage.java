@@ -105,7 +105,6 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsage {
             this.unknownExtendedKeyUsages = unknownExtendedKeyUsages;
             return this;
         }
-
         public CertificateCertificateDescriptionConfigValueKeyUsage build() {
             return new CertificateCertificateDescriptionConfigValueKeyUsage(baseKeyUsages, extendedKeyUsages, unknownExtendedKeyUsages);
         }

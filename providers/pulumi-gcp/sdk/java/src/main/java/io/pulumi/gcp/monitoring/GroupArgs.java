@@ -21,7 +21,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+        private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -33,7 +33,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filter", required=true)
-    private final Input<String> filter;
+        private final Input<String> filter;
 
     public Input<String> getFilter() {
         return this.filter;
@@ -46,7 +46,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isCluster")
-    private final @Nullable Input<Boolean> isCluster;
+        private final @Nullable Input<Boolean> isCluster;
 
     public Input<Boolean> getIsCluster() {
         return this.isCluster == null ? Input.empty() : this.isCluster;
@@ -59,7 +59,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parentName")
-    private final @Nullable Input<String> parentName;
+        private final @Nullable Input<String> parentName;
 
     public Input<String> getParentName() {
         return this.parentName == null ? Input.empty() : this.parentName;
@@ -71,7 +71,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -175,7 +175,6 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public GroupArgs build() {
             return new GroupArgs(displayName, filter, isCluster, parentName, project);
         }

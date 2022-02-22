@@ -16,14 +16,14 @@ public final class ProviderBatchingArgs extends io.pulumi.resources.ResourceArgs
     public static final ProviderBatchingArgs Empty = new ProviderBatchingArgs();
 
     @InputImport(name="enableBatching")
-    private final @Nullable Input<Boolean> enableBatching;
+        private final @Nullable Input<Boolean> enableBatching;
 
     public Input<Boolean> getEnableBatching() {
         return this.enableBatching == null ? Input.empty() : this.enableBatching;
     }
 
     @InputImport(name="sendAfter")
-    private final @Nullable Input<String> sendAfter;
+        private final @Nullable Input<String> sendAfter;
 
     public Input<String> getSendAfter() {
         return this.sendAfter == null ? Input.empty() : this.sendAfter;
@@ -82,7 +82,6 @@ public final class ProviderBatchingArgs extends io.pulumi.resources.ResourceArgs
             this.sendAfter = Input.ofNullable(sendAfter);
             return this;
         }
-
         public ProviderBatchingArgs build() {
             return new ProviderBatchingArgs(enableBatching, sendAfter);
         }

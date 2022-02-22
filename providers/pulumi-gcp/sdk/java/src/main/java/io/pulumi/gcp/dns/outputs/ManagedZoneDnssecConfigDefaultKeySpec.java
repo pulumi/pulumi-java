@@ -133,7 +133,6 @@ public final class ManagedZoneDnssecConfigDefaultKeySpec {
             this.kind = kind;
             return this;
         }
-
         public ManagedZoneDnssecConfigDefaultKeySpec build() {
             return new ManagedZoneDnssecConfigDefaultKeySpec(algorithm, keyLength, keyType, kind);
         }

@@ -19,7 +19,7 @@ public final class InstanceGroupManagerVersionTargetSizeGetArgs extends io.pulum
      * 
      */
     @InputImport(name="fixed")
-    private final @Nullable Input<Integer> fixed;
+        private final @Nullable Input<Integer> fixed;
 
     public Input<Integer> getFixed() {
         return this.fixed == null ? Input.empty() : this.fixed;
@@ -32,7 +32,7 @@ public final class InstanceGroupManagerVersionTargetSizeGetArgs extends io.pulum
      * 
      */
     @InputImport(name="percent")
-    private final @Nullable Input<Integer> percent;
+        private final @Nullable Input<Integer> percent;
 
     public Input<Integer> getPercent() {
         return this.percent == null ? Input.empty() : this.percent;
@@ -91,7 +91,6 @@ public final class InstanceGroupManagerVersionTargetSizeGetArgs extends io.pulum
             this.percent = Input.ofNullable(percent);
             return this;
         }
-
         public InstanceGroupManagerVersionTargetSizeGetArgs build() {
             return new InstanceGroupManagerVersionTargetSizeGetArgs(fixed, percent);
         }

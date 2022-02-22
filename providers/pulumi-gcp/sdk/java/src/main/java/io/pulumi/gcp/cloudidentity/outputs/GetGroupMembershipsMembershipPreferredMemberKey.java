@@ -84,7 +84,6 @@ public final class GetGroupMembershipsMembershipPreferredMemberKey {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
-
         public GetGroupMembershipsMembershipPreferredMemberKey build() {
             return new GetGroupMembershipsMembershipPreferredMemberKey(id, namespace);
         }

@@ -81,7 +81,6 @@ public final class EntryGcsFilesetSpecSampleGcsFileSpec {
             this.sizeBytes = sizeBytes;
             return this;
         }
-
         public EntryGcsFilesetSpecSampleGcsFileSpec build() {
             return new EntryGcsFilesetSpecSampleGcsFileSpec(filePath, sizeBytes);
         }

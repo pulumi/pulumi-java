@@ -73,7 +73,6 @@ public final class InstanceFromMachineImageNetworkInterfaceAccessConfig {
             this.publicPtrDomainName = publicPtrDomainName;
             return this;
         }
-
         public InstanceFromMachineImageNetworkInterfaceAccessConfig build() {
             return new InstanceFromMachineImageNetworkInterfaceAccessConfig(natIp, networkTier, publicPtrDomainName);
         }

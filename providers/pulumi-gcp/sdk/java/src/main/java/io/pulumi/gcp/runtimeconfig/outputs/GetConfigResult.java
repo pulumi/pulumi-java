@@ -94,7 +94,6 @@ public final class GetConfigResult {
             this.project = project;
             return this;
         }
-
         public GetConfigResult build() {
             return new GetConfigResult(description, id, name, project);
         }

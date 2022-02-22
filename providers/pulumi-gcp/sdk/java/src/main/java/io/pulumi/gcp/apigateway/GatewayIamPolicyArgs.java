@@ -15,7 +15,7 @@ public final class GatewayIamPolicyArgs extends io.pulumi.resources.ResourceArgs
     public static final GatewayIamPolicyArgs Empty = new GatewayIamPolicyArgs();
 
     @InputImport(name="gateway", required=true)
-    private final Input<String> gateway;
+        private final Input<String> gateway;
 
     public Input<String> getGateway() {
         return this.gateway;
@@ -27,7 +27,7 @@ public final class GatewayIamPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="policyData", required=true)
-    private final Input<String> policyData;
+        private final Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData;
@@ -39,7 +39,7 @@ public final class GatewayIamPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -53,7 +53,7 @@ public final class GatewayIamPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+        private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -142,7 +142,6 @@ public final class GatewayIamPolicyArgs extends io.pulumi.resources.ResourceArgs
             this.region = Input.ofNullable(region);
             return this;
         }
-
         public GatewayIamPolicyArgs build() {
             return new GatewayIamPolicyArgs(gateway, policyData, project, region);
         }

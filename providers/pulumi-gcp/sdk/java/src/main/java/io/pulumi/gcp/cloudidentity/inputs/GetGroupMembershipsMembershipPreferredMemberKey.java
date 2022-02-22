@@ -19,7 +19,7 @@ public final class GetGroupMembershipsMembershipPreferredMemberKey extends io.pu
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -33,7 +33,7 @@ public final class GetGroupMembershipsMembershipPreferredMemberKey extends io.pu
      * 
      */
     @InputImport(name="namespace", required=true)
-    private final String namespace;
+        private final String namespace;
 
     public String getNamespace() {
         return this.namespace;
@@ -82,7 +82,6 @@ public final class GetGroupMembershipsMembershipPreferredMemberKey extends io.pu
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
-
         public GetGroupMembershipsMembershipPreferredMemberKey build() {
             return new GetGroupMembershipsMembershipPreferredMemberKey(id, namespace);
         }

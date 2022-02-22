@@ -22,7 +22,7 @@ public final class AiFeatureStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forceDestroy")
-    private final @Nullable Input<Boolean> forceDestroy;
+        private final @Nullable Input<Boolean> forceDestroy;
 
     public Input<Boolean> getForceDestroy() {
         return this.forceDestroy == null ? Input.empty() : this.forceDestroy;
@@ -33,7 +33,7 @@ public final class AiFeatureStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+        private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -44,7 +44,7 @@ public final class AiFeatureStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -56,7 +56,7 @@ public final class AiFeatureStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="onlineServingConfig")
-    private final @Nullable Input<AiFeatureStoreOnlineServingConfigArgs> onlineServingConfig;
+        private final @Nullable Input<AiFeatureStoreOnlineServingConfigArgs> onlineServingConfig;
 
     public Input<AiFeatureStoreOnlineServingConfigArgs> getOnlineServingConfig() {
         return this.onlineServingConfig == null ? Input.empty() : this.onlineServingConfig;
@@ -68,7 +68,7 @@ public final class AiFeatureStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -79,7 +79,7 @@ public final class AiFeatureStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+        private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -198,7 +198,6 @@ public final class AiFeatureStoreArgs extends io.pulumi.resources.ResourceArgs {
             this.region = Input.ofNullable(region);
             return this;
         }
-
         public AiFeatureStoreArgs build() {
             return new AiFeatureStoreArgs(forceDestroy, labels, name, onlineServingConfig, project, region);
         }

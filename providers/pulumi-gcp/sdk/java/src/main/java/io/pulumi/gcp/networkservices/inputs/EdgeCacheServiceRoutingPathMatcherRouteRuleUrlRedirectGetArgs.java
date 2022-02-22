@@ -20,7 +20,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectGetArgs
      * 
      */
     @InputImport(name="hostRedirect")
-    private final @Nullable Input<String> hostRedirect;
+        private final @Nullable Input<String> hostRedirect;
 
     public Input<String> getHostRedirect() {
         return this.hostRedirect == null ? Input.empty() : this.hostRedirect;
@@ -32,7 +32,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectGetArgs
      * 
      */
     @InputImport(name="httpsRedirect")
-    private final @Nullable Input<Boolean> httpsRedirect;
+        private final @Nullable Input<Boolean> httpsRedirect;
 
     public Input<Boolean> getHttpsRedirect() {
         return this.httpsRedirect == null ? Input.empty() : this.httpsRedirect;
@@ -45,7 +45,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectGetArgs
      * 
      */
     @InputImport(name="pathRedirect")
-    private final @Nullable Input<String> pathRedirect;
+        private final @Nullable Input<String> pathRedirect;
 
     public Input<String> getPathRedirect() {
         return this.pathRedirect == null ? Input.empty() : this.pathRedirect;
@@ -57,7 +57,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectGetArgs
      * 
      */
     @InputImport(name="prefixRedirect")
-    private final @Nullable Input<String> prefixRedirect;
+        private final @Nullable Input<String> prefixRedirect;
 
     public Input<String> getPrefixRedirect() {
         return this.prefixRedirect == null ? Input.empty() : this.prefixRedirect;
@@ -71,7 +71,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectGetArgs
      * 
      */
     @InputImport(name="redirectResponseCode")
-    private final @Nullable Input<String> redirectResponseCode;
+        private final @Nullable Input<String> redirectResponseCode;
 
     public Input<String> getRedirectResponseCode() {
         return this.redirectResponseCode == null ? Input.empty() : this.redirectResponseCode;
@@ -82,7 +82,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectGetArgs
      * 
      */
     @InputImport(name="stripQuery")
-    private final @Nullable Input<Boolean> stripQuery;
+        private final @Nullable Input<Boolean> stripQuery;
 
     public Input<Boolean> getStripQuery() {
         return this.stripQuery == null ? Input.empty() : this.stripQuery;
@@ -201,7 +201,6 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectGetArgs
             this.stripQuery = Input.ofNullable(stripQuery);
             return this;
         }
-
         public EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectGetArgs build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectGetArgs(hostRedirect, httpsRedirect, pathRedirect, prefixRedirect, redirectResponseCode, stripQuery);
         }

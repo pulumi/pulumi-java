@@ -76,7 +76,6 @@ public final class WorkflowTemplateJobScheduling {
             this.maxFailuresTotal = maxFailuresTotal;
             return this;
         }
-
         public WorkflowTemplateJobScheduling build() {
             return new WorkflowTemplateJobScheduling(maxFailuresPerHour, maxFailuresTotal);
         }

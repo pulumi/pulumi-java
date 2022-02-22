@@ -21,7 +21,7 @@ public final class URLMapDefaultRouteActionFaultInjectionPolicyArgs extends io.p
      * 
      */
     @InputImport(name="abort")
-    private final @Nullable Input<URLMapDefaultRouteActionFaultInjectionPolicyAbortArgs> abort;
+        private final @Nullable Input<URLMapDefaultRouteActionFaultInjectionPolicyAbortArgs> abort;
 
     public Input<URLMapDefaultRouteActionFaultInjectionPolicyAbortArgs> getAbort() {
         return this.abort == null ? Input.empty() : this.abort;
@@ -33,7 +33,7 @@ public final class URLMapDefaultRouteActionFaultInjectionPolicyArgs extends io.p
      * 
      */
     @InputImport(name="delay")
-    private final @Nullable Input<URLMapDefaultRouteActionFaultInjectionPolicyDelayArgs> delay;
+        private final @Nullable Input<URLMapDefaultRouteActionFaultInjectionPolicyDelayArgs> delay;
 
     public Input<URLMapDefaultRouteActionFaultInjectionPolicyDelayArgs> getDelay() {
         return this.delay == null ? Input.empty() : this.delay;
@@ -92,7 +92,6 @@ public final class URLMapDefaultRouteActionFaultInjectionPolicyArgs extends io.p
             this.delay = Input.ofNullable(delay);
             return this;
         }
-
         public URLMapDefaultRouteActionFaultInjectionPolicyArgs build() {
             return new URLMapDefaultRouteActionFaultInjectionPolicyArgs(abort, delay);
         }

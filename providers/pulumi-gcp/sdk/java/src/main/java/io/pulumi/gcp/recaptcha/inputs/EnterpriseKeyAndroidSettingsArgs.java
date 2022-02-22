@@ -21,7 +21,7 @@ public final class EnterpriseKeyAndroidSettingsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="allowAllPackageNames")
-    private final @Nullable Input<Boolean> allowAllPackageNames;
+        private final @Nullable Input<Boolean> allowAllPackageNames;
 
     public Input<Boolean> getAllowAllPackageNames() {
         return this.allowAllPackageNames == null ? Input.empty() : this.allowAllPackageNames;
@@ -32,7 +32,7 @@ public final class EnterpriseKeyAndroidSettingsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="allowedPackageNames")
-    private final @Nullable Input<List<String>> allowedPackageNames;
+        private final @Nullable Input<List<String>> allowedPackageNames;
 
     public Input<List<String>> getAllowedPackageNames() {
         return this.allowedPackageNames == null ? Input.empty() : this.allowedPackageNames;
@@ -91,7 +91,6 @@ public final class EnterpriseKeyAndroidSettingsArgs extends io.pulumi.resources.
             this.allowedPackageNames = Input.ofNullable(allowedPackageNames);
             return this;
         }
-
         public EnterpriseKeyAndroidSettingsArgs build() {
             return new EnterpriseKeyAndroidSettingsArgs(allowAllPackageNames, allowedPackageNames);
         }

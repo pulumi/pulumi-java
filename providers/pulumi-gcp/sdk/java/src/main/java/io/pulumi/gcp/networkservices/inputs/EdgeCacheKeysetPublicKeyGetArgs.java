@@ -20,7 +20,7 @@ public final class EdgeCacheKeysetPublicKeyGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="id", required=true)
-    private final Input<String> id;
+        private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -33,7 +33,7 @@ public final class EdgeCacheKeysetPublicKeyGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+        private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;
@@ -92,7 +92,6 @@ public final class EdgeCacheKeysetPublicKeyGetArgs extends io.pulumi.resources.R
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }
-
         public EdgeCacheKeysetPublicKeyGetArgs build() {
             return new EdgeCacheKeysetPublicKeyGetArgs(id, value);
         }

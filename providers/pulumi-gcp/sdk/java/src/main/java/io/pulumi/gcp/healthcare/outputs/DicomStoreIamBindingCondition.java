@@ -73,7 +73,6 @@ public final class DicomStoreIamBindingCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public DicomStoreIamBindingCondition build() {
             return new DicomStoreIamBindingCondition(description, expression, title);
         }

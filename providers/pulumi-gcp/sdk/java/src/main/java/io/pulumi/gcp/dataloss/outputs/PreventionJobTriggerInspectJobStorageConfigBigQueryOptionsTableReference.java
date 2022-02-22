@@ -97,7 +97,6 @@ public final class PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTab
             this.tableId = Objects.requireNonNull(tableId);
             return this;
         }
-
         public PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReference build() {
             return new PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReference(datasetId, projectId, tableId);
         }

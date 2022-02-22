@@ -21,7 +21,7 @@ public final class RegionAutoscalerAutoscalingPolicyScalingScheduleGetArgs exten
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -32,7 +32,7 @@ public final class RegionAutoscalerAutoscalingPolicyScalingScheduleGetArgs exten
      * 
      */
     @InputImport(name="disabled")
-    private final @Nullable Input<Boolean> disabled;
+        private final @Nullable Input<Boolean> disabled;
 
     public Input<Boolean> getDisabled() {
         return this.disabled == null ? Input.empty() : this.disabled;
@@ -43,7 +43,7 @@ public final class RegionAutoscalerAutoscalingPolicyScalingScheduleGetArgs exten
      * 
      */
     @InputImport(name="durationSec", required=true)
-    private final Input<Integer> durationSec;
+        private final Input<Integer> durationSec;
 
     public Input<Integer> getDurationSec() {
         return this.durationSec;
@@ -54,7 +54,7 @@ public final class RegionAutoscalerAutoscalingPolicyScalingScheduleGetArgs exten
      * 
      */
     @InputImport(name="minRequiredReplicas", required=true)
-    private final Input<Integer> minRequiredReplicas;
+        private final Input<Integer> minRequiredReplicas;
 
     public Input<Integer> getMinRequiredReplicas() {
         return this.minRequiredReplicas;
@@ -65,7 +65,7 @@ public final class RegionAutoscalerAutoscalingPolicyScalingScheduleGetArgs exten
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -76,7 +76,7 @@ public final class RegionAutoscalerAutoscalingPolicyScalingScheduleGetArgs exten
      * 
      */
     @InputImport(name="schedule", required=true)
-    private final Input<String> schedule;
+        private final Input<String> schedule;
 
     public Input<String> getSchedule() {
         return this.schedule;
@@ -87,7 +87,7 @@ public final class RegionAutoscalerAutoscalingPolicyScalingScheduleGetArgs exten
      * 
      */
     @InputImport(name="timeZone")
-    private final @Nullable Input<String> timeZone;
+        private final @Nullable Input<String> timeZone;
 
     public Input<String> getTimeZone() {
         return this.timeZone == null ? Input.empty() : this.timeZone;
@@ -221,7 +221,6 @@ public final class RegionAutoscalerAutoscalingPolicyScalingScheduleGetArgs exten
             this.timeZone = Input.ofNullable(timeZone);
             return this;
         }
-
         public RegionAutoscalerAutoscalingPolicyScalingScheduleGetArgs build() {
             return new RegionAutoscalerAutoscalingPolicyScalingScheduleGetArgs(description, disabled, durationSec, minRequiredReplicas, name, schedule, timeZone);
         }

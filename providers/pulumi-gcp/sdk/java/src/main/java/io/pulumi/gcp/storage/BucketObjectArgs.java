@@ -23,7 +23,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bucket", required=true)
-    private final Input<String> bucket;
+        private final Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket;
@@ -35,7 +35,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cacheControl")
-    private final @Nullable Input<String> cacheControl;
+        private final @Nullable Input<String> cacheControl;
 
     public Input<String> getCacheControl() {
         return this.cacheControl == null ? Input.empty() : this.cacheControl;
@@ -46,7 +46,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="content")
-    private final @Nullable Input<String> content;
+        private final @Nullable Input<String> content;
 
     public Input<String> getContent() {
         return this.content == null ? Input.empty() : this.content;
@@ -57,7 +57,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentDisposition")
-    private final @Nullable Input<String> contentDisposition;
+        private final @Nullable Input<String> contentDisposition;
 
     public Input<String> getContentDisposition() {
         return this.contentDisposition == null ? Input.empty() : this.contentDisposition;
@@ -68,7 +68,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentEncoding")
-    private final @Nullable Input<String> contentEncoding;
+        private final @Nullable Input<String> contentEncoding;
 
     public Input<String> getContentEncoding() {
         return this.contentEncoding == null ? Input.empty() : this.contentEncoding;
@@ -79,7 +79,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentLanguage")
-    private final @Nullable Input<String> contentLanguage;
+        private final @Nullable Input<String> contentLanguage;
 
     public Input<String> getContentLanguage() {
         return this.contentLanguage == null ? Input.empty() : this.contentLanguage;
@@ -90,7 +90,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentType")
-    private final @Nullable Input<String> contentType;
+        private final @Nullable Input<String> contentType;
 
     public Input<String> getContentType() {
         return this.contentType == null ? Input.empty() : this.contentType;
@@ -102,14 +102,14 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customerEncryption")
-    private final @Nullable Input<BucketObjectCustomerEncryptionArgs> customerEncryption;
+        private final @Nullable Input<BucketObjectCustomerEncryptionArgs> customerEncryption;
 
     public Input<BucketObjectCustomerEncryptionArgs> getCustomerEncryption() {
         return this.customerEncryption == null ? Input.empty() : this.customerEncryption;
     }
 
     @InputImport(name="detectMd5hash")
-    private final @Nullable Input<String> detectMd5hash;
+        private final @Nullable Input<String> detectMd5hash;
 
     public Input<String> getDetectMd5hash() {
         return this.detectMd5hash == null ? Input.empty() : this.detectMd5hash;
@@ -122,7 +122,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventBasedHold")
-    private final @Nullable Input<Boolean> eventBasedHold;
+        private final @Nullable Input<Boolean> eventBasedHold;
 
     public Input<Boolean> getEventBasedHold() {
         return this.eventBasedHold == null ? Input.empty() : this.eventBasedHold;
@@ -133,7 +133,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyName")
-    private final @Nullable Input<String> kmsKeyName;
+        private final @Nullable Input<String> kmsKeyName;
 
     public Input<String> getKmsKeyName() {
         return this.kmsKeyName == null ? Input.empty() : this.kmsKeyName;
@@ -144,7 +144,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<Map<String,String>> metadata;
+        private final @Nullable Input<Map<String,String>> metadata;
 
     public Input<Map<String,String>> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -155,7 +155,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -167,7 +167,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="source")
-    private final @Nullable Input<AssetOrArchive> source;
+        private final @Nullable Input<AssetOrArchive> source;
 
     public Input<AssetOrArchive> getSource() {
         return this.source == null ? Input.empty() : this.source;
@@ -180,7 +180,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageClass")
-    private final @Nullable Input<String> storageClass;
+        private final @Nullable Input<String> storageClass;
 
     public Input<String> getStorageClass() {
         return this.storageClass == null ? Input.empty() : this.storageClass;
@@ -192,7 +192,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="temporaryHold")
-    private final @Nullable Input<Boolean> temporaryHold;
+        private final @Nullable Input<Boolean> temporaryHold;
 
     public Input<Boolean> getTemporaryHold() {
         return this.temporaryHold == null ? Input.empty() : this.temporaryHold;
@@ -461,7 +461,6 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
             this.temporaryHold = Input.ofNullable(temporaryHold);
             return this;
         }
-
         public BucketObjectArgs build() {
             return new BucketObjectArgs(bucket, cacheControl, content, contentDisposition, contentEncoding, contentLanguage, contentType, customerEncryption, detectMd5hash, eventBasedHold, kmsKeyName, metadata, name, source, storageClass, temporaryHold);
         }

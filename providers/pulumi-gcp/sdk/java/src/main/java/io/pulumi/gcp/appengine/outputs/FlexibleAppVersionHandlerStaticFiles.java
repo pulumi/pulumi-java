@@ -197,7 +197,6 @@ public final class FlexibleAppVersionHandlerStaticFiles {
             this.uploadPathRegex = uploadPathRegex;
             return this;
         }
-
         public FlexibleAppVersionHandlerStaticFiles build() {
             return new FlexibleAppVersionHandlerStaticFiles(applicationReadable, expiration, httpHeaders, mimeType, path, requireMatchingFile, uploadPathRegex);
         }

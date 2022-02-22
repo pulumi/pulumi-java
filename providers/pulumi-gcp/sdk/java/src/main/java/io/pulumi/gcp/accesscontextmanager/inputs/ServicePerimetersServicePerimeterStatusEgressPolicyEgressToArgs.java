@@ -23,7 +23,7 @@ public final class ServicePerimetersServicePerimeterStatusEgressPolicyEgressToAr
      * 
      */
     @InputImport(name="operations")
-    private final @Nullable Input<List<ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOperationArgs>> operations;
+        private final @Nullable Input<List<ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOperationArgs>> operations;
 
     public Input<List<ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOperationArgs>> getOperations() {
         return this.operations == null ? Input.empty() : this.operations;
@@ -38,7 +38,7 @@ public final class ServicePerimetersServicePerimeterStatusEgressPolicyEgressToAr
      * 
      */
     @InputImport(name="resources")
-    private final @Nullable Input<List<String>> resources;
+        private final @Nullable Input<List<String>> resources;
 
     public Input<List<String>> getResources() {
         return this.resources == null ? Input.empty() : this.resources;
@@ -97,7 +97,6 @@ public final class ServicePerimetersServicePerimeterStatusEgressPolicyEgressToAr
             this.resources = Input.ofNullable(resources);
             return this;
         }
-
         public ServicePerimetersServicePerimeterStatusEgressPolicyEgressToArgs build() {
             return new ServicePerimetersServicePerimeterStatusEgressPolicyEgressToArgs(operations, resources);
         }

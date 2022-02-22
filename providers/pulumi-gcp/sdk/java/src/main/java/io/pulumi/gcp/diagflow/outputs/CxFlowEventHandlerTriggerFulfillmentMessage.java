@@ -54,7 +54,6 @@ public final class CxFlowEventHandlerTriggerFulfillmentMessage {
             this.text = text;
             return this;
         }
-
         public CxFlowEventHandlerTriggerFulfillmentMessage build() {
             return new CxFlowEventHandlerTriggerFulfillmentMessage(text);
         }

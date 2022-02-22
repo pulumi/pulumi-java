@@ -98,7 +98,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGcs {
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGcs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGcs(bucket, generation, object);
         }

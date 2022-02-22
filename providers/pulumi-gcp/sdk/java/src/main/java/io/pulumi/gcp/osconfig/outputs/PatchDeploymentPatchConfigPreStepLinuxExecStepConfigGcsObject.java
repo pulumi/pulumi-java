@@ -95,7 +95,6 @@ public final class PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObject
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObject build() {
             return new PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObject(bucket, generationNumber, object);
         }

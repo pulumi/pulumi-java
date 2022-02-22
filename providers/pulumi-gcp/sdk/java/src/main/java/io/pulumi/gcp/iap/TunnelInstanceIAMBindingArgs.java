@@ -22,7 +22,7 @@ public final class TunnelInstanceIAMBindingArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="condition")
-    private final @Nullable Input<TunnelInstanceIAMBindingConditionArgs> condition;
+        private final @Nullable Input<TunnelInstanceIAMBindingConditionArgs> condition;
 
     public Input<TunnelInstanceIAMBindingConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -33,14 +33,14 @@ public final class TunnelInstanceIAMBindingArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="instance", required=true)
-    private final Input<String> instance;
+        private final Input<String> instance;
 
     public Input<String> getInstance() {
         return this.instance;
     }
 
     @InputImport(name="members", required=true)
-    private final Input<List<String>> members;
+        private final Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members;
@@ -52,7 +52,7 @@ public final class TunnelInstanceIAMBindingArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -65,14 +65,14 @@ public final class TunnelInstanceIAMBindingArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+        private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
     }
 
     @InputImport(name="zone")
-    private final @Nullable Input<String> zone;
+        private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;
@@ -191,7 +191,6 @@ public final class TunnelInstanceIAMBindingArgs extends io.pulumi.resources.Reso
             this.zone = Input.ofNullable(zone);
             return this;
         }
-
         public TunnelInstanceIAMBindingArgs build() {
             return new TunnelInstanceIAMBindingArgs(condition, instance, members, project, role, zone);
         }

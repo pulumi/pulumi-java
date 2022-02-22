@@ -13,7 +13,7 @@ public final class GetClusterNodePoolNodeConfigSandboxConfig extends io.pulumi.r
     public static final GetClusterNodePoolNodeConfigSandboxConfig Empty = new GetClusterNodePoolNodeConfigSandboxConfig();
 
     @InputImport(name="sandboxType", required=true)
-    private final String sandboxType;
+        private final String sandboxType;
 
     public String getSandboxType() {
         return this.sandboxType;
@@ -51,7 +51,6 @@ public final class GetClusterNodePoolNodeConfigSandboxConfig extends io.pulumi.r
             this.sandboxType = Objects.requireNonNull(sandboxType);
             return this;
         }
-
         public GetClusterNodePoolNodeConfigSandboxConfig build() {
             return new GetClusterNodePoolNodeConfigSandboxConfig(sandboxType);
         }

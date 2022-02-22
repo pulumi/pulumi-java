@@ -256,7 +256,6 @@ public final class RegionBackendServiceCdnPolicy {
             this.signedUrlCacheMaxAgeSec = signedUrlCacheMaxAgeSec;
             return this;
         }
-
         public RegionBackendServiceCdnPolicy build() {
             return new RegionBackendServiceCdnPolicy(cacheKeyPolicy, cacheMode, clientTtl, defaultTtl, maxTtl, negativeCaching, negativeCachingPolicies, serveWhileStale, signedUrlCacheMaxAgeSec);
         }

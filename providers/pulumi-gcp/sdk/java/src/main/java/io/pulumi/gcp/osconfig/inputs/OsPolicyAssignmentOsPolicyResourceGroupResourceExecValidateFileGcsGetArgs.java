@@ -20,7 +20,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFi
      * 
      */
     @InputImport(name="bucket", required=true)
-    private final Input<String> bucket;
+        private final Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket;
@@ -31,7 +31,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFi
      * 
      */
     @InputImport(name="generation")
-    private final @Nullable Input<Integer> generation;
+        private final @Nullable Input<Integer> generation;
 
     public Input<Integer> getGeneration() {
         return this.generation == null ? Input.empty() : this.generation;
@@ -42,7 +42,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFi
      * 
      */
     @InputImport(name="object", required=true)
-    private final Input<String> object;
+        private final Input<String> object;
 
     public Input<String> getObject() {
         return this.object;
@@ -116,7 +116,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFi
             this.object = Input.of(Objects.requireNonNull(object));
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileGcsGetArgs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileGcsGetArgs(bucket, generation, object);
         }

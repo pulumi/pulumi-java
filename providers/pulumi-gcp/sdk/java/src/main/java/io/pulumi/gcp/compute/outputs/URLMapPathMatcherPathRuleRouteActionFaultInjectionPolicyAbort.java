@@ -79,7 +79,6 @@ public final class URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort
             this.percentage = Objects.requireNonNull(percentage);
             return this;
         }
-
         public URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort build() {
             return new URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort(httpStatus, percentage);
         }

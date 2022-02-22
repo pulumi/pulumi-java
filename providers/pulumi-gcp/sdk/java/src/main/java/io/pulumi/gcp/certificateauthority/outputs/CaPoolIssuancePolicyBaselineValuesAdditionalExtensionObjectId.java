@@ -53,7 +53,6 @@ public final class CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectId
             this.objectIdPaths = Objects.requireNonNull(objectIdPaths);
             return this;
         }
-
         public CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectId build() {
             return new CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectId(objectIdPaths);
         }

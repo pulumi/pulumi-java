@@ -29,7 +29,7 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowLargeResults")
-    private final @Nullable Input<Boolean> allowLargeResults;
+        private final @Nullable Input<Boolean> allowLargeResults;
 
     public Input<Boolean> getAllowLargeResults() {
         return this.allowLargeResults == null ? Input.empty() : this.allowLargeResults;
@@ -45,7 +45,7 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createDisposition")
-    private final @Nullable Input<String> createDisposition;
+        private final @Nullable Input<String> createDisposition;
 
     public Input<String> getCreateDisposition() {
         return this.createDisposition == null ? Input.empty() : this.createDisposition;
@@ -57,7 +57,7 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultDataset")
-    private final @Nullable Input<JobQueryDefaultDatasetArgs> defaultDataset;
+        private final @Nullable Input<JobQueryDefaultDatasetArgs> defaultDataset;
 
     public Input<JobQueryDefaultDatasetArgs> getDefaultDataset() {
         return this.defaultDataset == null ? Input.empty() : this.defaultDataset;
@@ -69,7 +69,7 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationEncryptionConfiguration")
-    private final @Nullable Input<JobQueryDestinationEncryptionConfigurationArgs> destinationEncryptionConfiguration;
+        private final @Nullable Input<JobQueryDestinationEncryptionConfigurationArgs> destinationEncryptionConfiguration;
 
     public Input<JobQueryDestinationEncryptionConfigurationArgs> getDestinationEncryptionConfiguration() {
         return this.destinationEncryptionConfiguration == null ? Input.empty() : this.destinationEncryptionConfiguration;
@@ -81,7 +81,7 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationTable")
-    private final @Nullable Input<JobQueryDestinationTableArgs> destinationTable;
+        private final @Nullable Input<JobQueryDestinationTableArgs> destinationTable;
 
     public Input<JobQueryDestinationTableArgs> getDestinationTable() {
         return this.destinationTable == null ? Input.empty() : this.destinationTable;
@@ -93,7 +93,7 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="flattenResults")
-    private final @Nullable Input<Boolean> flattenResults;
+        private final @Nullable Input<Boolean> flattenResults;
 
     public Input<Boolean> getFlattenResults() {
         return this.flattenResults == null ? Input.empty() : this.flattenResults;
@@ -105,7 +105,7 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maximumBillingTier")
-    private final @Nullable Input<Integer> maximumBillingTier;
+        private final @Nullable Input<Integer> maximumBillingTier;
 
     public Input<Integer> getMaximumBillingTier() {
         return this.maximumBillingTier == null ? Input.empty() : this.maximumBillingTier;
@@ -117,7 +117,7 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maximumBytesBilled")
-    private final @Nullable Input<String> maximumBytesBilled;
+        private final @Nullable Input<String> maximumBytesBilled;
 
     public Input<String> getMaximumBytesBilled() {
         return this.maximumBytesBilled == null ? Input.empty() : this.maximumBytesBilled;
@@ -128,7 +128,7 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameterMode")
-    private final @Nullable Input<String> parameterMode;
+        private final @Nullable Input<String> parameterMode;
 
     public Input<String> getParameterMode() {
         return this.parameterMode == null ? Input.empty() : this.parameterMode;
@@ -141,7 +141,7 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="priority")
-    private final @Nullable Input<String> priority;
+        private final @Nullable Input<String> priority;
 
     public Input<String> getPriority() {
         return this.priority == null ? Input.empty() : this.priority;
@@ -153,7 +153,7 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="query", required=true)
-    private final Input<String> query;
+        private final Input<String> query;
 
     public Input<String> getQuery() {
         return this.query;
@@ -169,7 +169,7 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schemaUpdateOptions")
-    private final @Nullable Input<List<String>> schemaUpdateOptions;
+        private final @Nullable Input<List<String>> schemaUpdateOptions;
 
     public Input<List<String>> getSchemaUpdateOptions() {
         return this.schemaUpdateOptions == null ? Input.empty() : this.schemaUpdateOptions;
@@ -181,7 +181,7 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scriptOptions")
-    private final @Nullable Input<JobQueryScriptOptionsArgs> scriptOptions;
+        private final @Nullable Input<JobQueryScriptOptionsArgs> scriptOptions;
 
     public Input<JobQueryScriptOptionsArgs> getScriptOptions() {
         return this.scriptOptions == null ? Input.empty() : this.scriptOptions;
@@ -193,7 +193,7 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="useLegacySql")
-    private final @Nullable Input<Boolean> useLegacySql;
+        private final @Nullable Input<Boolean> useLegacySql;
 
     public Input<Boolean> getUseLegacySql() {
         return this.useLegacySql == null ? Input.empty() : this.useLegacySql;
@@ -206,7 +206,7 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="useQueryCache")
-    private final @Nullable Input<Boolean> useQueryCache;
+        private final @Nullable Input<Boolean> useQueryCache;
 
     public Input<Boolean> getUseQueryCache() {
         return this.useQueryCache == null ? Input.empty() : this.useQueryCache;
@@ -218,7 +218,7 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userDefinedFunctionResources")
-    private final @Nullable Input<List<JobQueryUserDefinedFunctionResourceArgs>> userDefinedFunctionResources;
+        private final @Nullable Input<List<JobQueryUserDefinedFunctionResourceArgs>> userDefinedFunctionResources;
 
     public Input<List<JobQueryUserDefinedFunctionResourceArgs>> getUserDefinedFunctionResources() {
         return this.userDefinedFunctionResources == null ? Input.empty() : this.userDefinedFunctionResources;
@@ -236,7 +236,7 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="writeDisposition")
-    private final @Nullable Input<String> writeDisposition;
+        private final @Nullable Input<String> writeDisposition;
 
     public Input<String> getWriteDisposition() {
         return this.writeDisposition == null ? Input.empty() : this.writeDisposition;
@@ -520,7 +520,6 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
             this.writeDisposition = Input.ofNullable(writeDisposition);
             return this;
         }
-
         public JobQueryArgs build() {
             return new JobQueryArgs(allowLargeResults, createDisposition, defaultDataset, destinationEncryptionConfiguration, destinationTable, flattenResults, maximumBillingTier, maximumBytesBilled, parameterMode, priority, query, schemaUpdateOptions, scriptOptions, useLegacySql, useQueryCache, userDefinedFunctionResources, writeDisposition);
         }

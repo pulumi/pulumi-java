@@ -22,7 +22,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionGetArgs
      * 
      */
     @InputImport(name="cdnPolicy")
-    private final @Nullable Input<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyGetArgs> cdnPolicy;
+        private final @Nullable Input<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyGetArgs> cdnPolicy;
 
     public Input<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyGetArgs> getCdnPolicy() {
         return this.cdnPolicy == null ? Input.empty() : this.cdnPolicy;
@@ -34,7 +34,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionGetArgs
      * 
      */
     @InputImport(name="corsPolicy")
-    private final @Nullable Input<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicyGetArgs> corsPolicy;
+        private final @Nullable Input<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicyGetArgs> corsPolicy;
 
     public Input<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicyGetArgs> getCorsPolicy() {
         return this.corsPolicy == null ? Input.empty() : this.corsPolicy;
@@ -46,7 +46,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionGetArgs
      * 
      */
     @InputImport(name="urlRewrite")
-    private final @Nullable Input<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewriteGetArgs> urlRewrite;
+        private final @Nullable Input<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewriteGetArgs> urlRewrite;
 
     public Input<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewriteGetArgs> getUrlRewrite() {
         return this.urlRewrite == null ? Input.empty() : this.urlRewrite;
@@ -120,7 +120,6 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionGetArgs
             this.urlRewrite = Input.ofNullable(urlRewrite);
             return this;
         }
-
         public EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionGetArgs build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionGetArgs(cdnPolicy, corsPolicy, urlRewrite);
         }

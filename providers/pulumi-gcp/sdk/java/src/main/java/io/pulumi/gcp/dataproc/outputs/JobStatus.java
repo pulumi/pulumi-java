@@ -86,7 +86,6 @@ public final class JobStatus {
             this.substate = substate;
             return this;
         }
-
         public JobStatus build() {
             return new JobStatus(details, state, stateStartTime, substate);
         }

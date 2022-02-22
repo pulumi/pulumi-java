@@ -73,7 +73,6 @@ public final class NamespaceIamBindingCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public NamespaceIamBindingCondition build() {
             return new NamespaceIamBindingCondition(description, expression, title);
         }

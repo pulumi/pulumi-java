@@ -84,7 +84,6 @@ public final class AlertPolicyDocumentation {
             this.mimeType = mimeType;
             return this;
         }
-
         public AlertPolicyDocumentation build() {
             return new AlertPolicyDocumentation(content, mimeType);
         }

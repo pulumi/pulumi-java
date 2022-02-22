@@ -54,7 +54,6 @@ public final class ClusterAddonsConfigHttpLoadBalancing {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
-
         public ClusterAddonsConfigHttpLoadBalancing build() {
             return new ClusterAddonsConfigHttpLoadBalancing(disabled);
         }

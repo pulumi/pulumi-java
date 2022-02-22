@@ -99,7 +99,6 @@ public final class GuestPoliciesRecipeUpdateStepArchiveExtraction {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GuestPoliciesRecipeUpdateStepArchiveExtraction build() {
             return new GuestPoliciesRecipeUpdateStepArchiveExtraction(artifactId, destination, type);
         }

@@ -24,7 +24,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionCorsPolicyGetArgs 
      * 
      */
     @InputImport(name="allowCredentials")
-    private final @Nullable Input<Boolean> allowCredentials;
+        private final @Nullable Input<Boolean> allowCredentials;
 
     public Input<Boolean> getAllowCredentials() {
         return this.allowCredentials == null ? Input.empty() : this.allowCredentials;
@@ -35,7 +35,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionCorsPolicyGetArgs 
      * 
      */
     @InputImport(name="allowHeaders")
-    private final @Nullable Input<List<String>> allowHeaders;
+        private final @Nullable Input<List<String>> allowHeaders;
 
     public Input<List<String>> getAllowHeaders() {
         return this.allowHeaders == null ? Input.empty() : this.allowHeaders;
@@ -46,7 +46,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionCorsPolicyGetArgs 
      * 
      */
     @InputImport(name="allowMethods")
-    private final @Nullable Input<List<String>> allowMethods;
+        private final @Nullable Input<List<String>> allowMethods;
 
     public Input<List<String>> getAllowMethods() {
         return this.allowMethods == null ? Input.empty() : this.allowMethods;
@@ -59,7 +59,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionCorsPolicyGetArgs 
      * 
      */
     @InputImport(name="allowOriginRegexes")
-    private final @Nullable Input<List<String>> allowOriginRegexes;
+        private final @Nullable Input<List<String>> allowOriginRegexes;
 
     public Input<List<String>> getAllowOriginRegexes() {
         return this.allowOriginRegexes == null ? Input.empty() : this.allowOriginRegexes;
@@ -71,7 +71,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionCorsPolicyGetArgs 
      * 
      */
     @InputImport(name="allowOrigins")
-    private final @Nullable Input<List<String>> allowOrigins;
+        private final @Nullable Input<List<String>> allowOrigins;
 
     public Input<List<String>> getAllowOrigins() {
         return this.allowOrigins == null ? Input.empty() : this.allowOrigins;
@@ -82,7 +82,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionCorsPolicyGetArgs 
      * 
      */
     @InputImport(name="disabled")
-    private final @Nullable Input<Boolean> disabled;
+        private final @Nullable Input<Boolean> disabled;
 
     public Input<Boolean> getDisabled() {
         return this.disabled == null ? Input.empty() : this.disabled;
@@ -93,7 +93,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionCorsPolicyGetArgs 
      * 
      */
     @InputImport(name="exposeHeaders")
-    private final @Nullable Input<List<String>> exposeHeaders;
+        private final @Nullable Input<List<String>> exposeHeaders;
 
     public Input<List<String>> getExposeHeaders() {
         return this.exposeHeaders == null ? Input.empty() : this.exposeHeaders;
@@ -105,7 +105,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionCorsPolicyGetArgs 
      * 
      */
     @InputImport(name="maxAge")
-    private final @Nullable Input<Integer> maxAge;
+        private final @Nullable Input<Integer> maxAge;
 
     public Input<Integer> getMaxAge() {
         return this.maxAge == null ? Input.empty() : this.maxAge;
@@ -254,7 +254,6 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionCorsPolicyGetArgs 
             this.maxAge = Input.ofNullable(maxAge);
             return this;
         }
-
         public RegionUrlMapPathMatcherRouteRuleRouteActionCorsPolicyGetArgs build() {
             return new RegionUrlMapPathMatcherRouteRuleRouteActionCorsPolicyGetArgs(allowCredentials, allowHeaders, allowMethods, allowOriginRegexes, allowOrigins, disabled, exposeHeaders, maxAge);
         }

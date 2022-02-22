@@ -17,7 +17,7 @@ public final class PolicyTagIamBindingState extends io.pulumi.resources.Resource
     public static final PolicyTagIamBindingState Empty = new PolicyTagIamBindingState();
 
     @InputImport(name="condition")
-    private final @Nullable Input<PolicyTagIamBindingConditionGetArgs> condition;
+        private final @Nullable Input<PolicyTagIamBindingConditionGetArgs> condition;
 
     public Input<PolicyTagIamBindingConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -28,14 +28,14 @@ public final class PolicyTagIamBindingState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+        private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="members")
-    private final @Nullable Input<List<String>> members;
+        private final @Nullable Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members == null ? Input.empty() : this.members;
@@ -46,7 +46,7 @@ public final class PolicyTagIamBindingState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="policyTag")
-    private final @Nullable Input<String> policyTag;
+        private final @Nullable Input<String> policyTag;
 
     public Input<String> getPolicyTag() {
         return this.policyTag == null ? Input.empty() : this.policyTag;
@@ -59,7 +59,7 @@ public final class PolicyTagIamBindingState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+        private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -163,7 +163,6 @@ public final class PolicyTagIamBindingState extends io.pulumi.resources.Resource
             this.role = Input.ofNullable(role);
             return this;
         }
-
         public PolicyTagIamBindingState build() {
             return new PolicyTagIamBindingState(condition, etag, members, policyTag, role);
         }

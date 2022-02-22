@@ -365,7 +365,6 @@ public final class GetInstanceTemplateDisk {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetInstanceTemplateDisk build() {
             return new GetInstanceTemplateDisk(autoDelete, boot, deviceName, diskEncryptionKeys, diskName, diskSizeGb, diskType, $interface, labels, mode, resourcePolicies, source, sourceImage, type);
         }

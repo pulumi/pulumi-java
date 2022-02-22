@@ -108,7 +108,6 @@ public final class ClusterClusterConfigPreemptibleWorkerConfigDiskConfig {
             this.numLocalSsds = numLocalSsds;
             return this;
         }
-
         public ClusterClusterConfigPreemptibleWorkerConfigDiskConfig build() {
             return new ClusterClusterConfigPreemptibleWorkerConfigDiskConfig(bootDiskSizeGb, bootDiskType, numLocalSsds);
         }

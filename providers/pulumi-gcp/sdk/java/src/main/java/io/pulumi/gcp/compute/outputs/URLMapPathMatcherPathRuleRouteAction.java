@@ -232,7 +232,6 @@ public final class URLMapPathMatcherPathRuleRouteAction {
             this.weightedBackendServices = weightedBackendServices;
             return this;
         }
-
         public URLMapPathMatcherPathRuleRouteAction build() {
             return new URLMapPathMatcherPathRuleRouteAction(corsPolicy, faultInjectionPolicy, requestMirrorPolicy, retryPolicy, timeout, urlRewrite, weightedBackendServices);
         }

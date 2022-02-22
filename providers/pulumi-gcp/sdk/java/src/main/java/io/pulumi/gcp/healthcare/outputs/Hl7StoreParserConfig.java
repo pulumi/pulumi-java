@@ -127,7 +127,6 @@ public final class Hl7StoreParserConfig {
             this.version = version;
             return this;
         }
-
         public Hl7StoreParserConfig build() {
             return new Hl7StoreParserConfig(allowNullHeader, schema, segmentTerminator, version);
         }

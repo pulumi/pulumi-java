@@ -22,7 +22,7 @@ public final class StandardAppVersionHandlerArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="authFailAction")
-    private final @Nullable Input<String> authFailAction;
+        private final @Nullable Input<String> authFailAction;
 
     public Input<String> getAuthFailAction() {
         return this.authFailAction == null ? Input.empty() : this.authFailAction;
@@ -34,7 +34,7 @@ public final class StandardAppVersionHandlerArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="login")
-    private final @Nullable Input<String> login;
+        private final @Nullable Input<String> login;
 
     public Input<String> getLogin() {
         return this.login == null ? Input.empty() : this.login;
@@ -46,7 +46,7 @@ public final class StandardAppVersionHandlerArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="redirectHttpResponseCode")
-    private final @Nullable Input<String> redirectHttpResponseCode;
+        private final @Nullable Input<String> redirectHttpResponseCode;
 
     public Input<String> getRedirectHttpResponseCode() {
         return this.redirectHttpResponseCode == null ? Input.empty() : this.redirectHttpResponseCode;
@@ -59,7 +59,7 @@ public final class StandardAppVersionHandlerArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="script")
-    private final @Nullable Input<StandardAppVersionHandlerScriptArgs> script;
+        private final @Nullable Input<StandardAppVersionHandlerScriptArgs> script;
 
     public Input<StandardAppVersionHandlerScriptArgs> getScript() {
         return this.script == null ? Input.empty() : this.script;
@@ -71,7 +71,7 @@ public final class StandardAppVersionHandlerArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="securityLevel")
-    private final @Nullable Input<String> securityLevel;
+        private final @Nullable Input<String> securityLevel;
 
     public Input<String> getSecurityLevel() {
         return this.securityLevel == null ? Input.empty() : this.securityLevel;
@@ -83,7 +83,7 @@ public final class StandardAppVersionHandlerArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="staticFiles")
-    private final @Nullable Input<StandardAppVersionHandlerStaticFilesArgs> staticFiles;
+        private final @Nullable Input<StandardAppVersionHandlerStaticFilesArgs> staticFiles;
 
     public Input<StandardAppVersionHandlerStaticFilesArgs> getStaticFiles() {
         return this.staticFiles == null ? Input.empty() : this.staticFiles;
@@ -95,7 +95,7 @@ public final class StandardAppVersionHandlerArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="urlRegex")
-    private final @Nullable Input<String> urlRegex;
+        private final @Nullable Input<String> urlRegex;
 
     public Input<String> getUrlRegex() {
         return this.urlRegex == null ? Input.empty() : this.urlRegex;
@@ -229,7 +229,6 @@ public final class StandardAppVersionHandlerArgs extends io.pulumi.resources.Res
             this.urlRegex = Input.ofNullable(urlRegex);
             return this;
         }
-
         public StandardAppVersionHandlerArgs build() {
             return new StandardAppVersionHandlerArgs(authFailAction, login, redirectHttpResponseCode, script, securityLevel, staticFiles, urlRegex);
         }

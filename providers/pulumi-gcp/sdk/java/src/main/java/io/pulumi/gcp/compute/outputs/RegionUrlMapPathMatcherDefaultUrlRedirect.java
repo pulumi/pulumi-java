@@ -205,7 +205,6 @@ public final class RegionUrlMapPathMatcherDefaultUrlRedirect {
             this.stripQuery = Objects.requireNonNull(stripQuery);
             return this;
         }
-
         public RegionUrlMapPathMatcherDefaultUrlRedirect build() {
             return new RegionUrlMapPathMatcherDefaultUrlRedirect(hostRedirect, httpsRedirect, pathRedirect, prefixRedirect, redirectResponseCode, stripQuery);
         }

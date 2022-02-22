@@ -18,7 +18,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -61,7 +61,6 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransientGetArgs build() {
             return new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransientGetArgs(name);
         }

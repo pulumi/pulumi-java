@@ -19,63 +19,63 @@ public final class GetServiceTemplateSpecContainer extends io.pulumi.resources.I
     public static final GetServiceTemplateSpecContainer Empty = new GetServiceTemplateSpecContainer();
 
     @InputImport(name="args", required=true)
-    private final List<String> args;
+        private final List<String> args;
 
     public List<String> getArgs() {
         return this.args;
     }
 
     @InputImport(name="commands", required=true)
-    private final List<String> commands;
+        private final List<String> commands;
 
     public List<String> getCommands() {
         return this.commands;
     }
 
     @InputImport(name="envFroms", required=true)
-    private final List<GetServiceTemplateSpecContainerEnvFrom> envFroms;
+        private final List<GetServiceTemplateSpecContainerEnvFrom> envFroms;
 
     public List<GetServiceTemplateSpecContainerEnvFrom> getEnvFroms() {
         return this.envFroms;
     }
 
     @InputImport(name="envs", required=true)
-    private final List<GetServiceTemplateSpecContainerEnv> envs;
+        private final List<GetServiceTemplateSpecContainerEnv> envs;
 
     public List<GetServiceTemplateSpecContainerEnv> getEnvs() {
         return this.envs;
     }
 
     @InputImport(name="image", required=true)
-    private final String image;
+        private final String image;
 
     public String getImage() {
         return this.image;
     }
 
     @InputImport(name="ports", required=true)
-    private final List<GetServiceTemplateSpecContainerPort> ports;
+        private final List<GetServiceTemplateSpecContainerPort> ports;
 
     public List<GetServiceTemplateSpecContainerPort> getPorts() {
         return this.ports;
     }
 
     @InputImport(name="resources", required=true)
-    private final List<GetServiceTemplateSpecContainerResource> resources;
+        private final List<GetServiceTemplateSpecContainerResource> resources;
 
     public List<GetServiceTemplateSpecContainerResource> getResources() {
         return this.resources;
     }
 
     @InputImport(name="volumeMounts", required=true)
-    private final List<GetServiceTemplateSpecContainerVolumeMount> volumeMounts;
+        private final List<GetServiceTemplateSpecContainerVolumeMount> volumeMounts;
 
     public List<GetServiceTemplateSpecContainerVolumeMount> getVolumeMounts() {
         return this.volumeMounts;
     }
 
     @InputImport(name="workingDir", required=true)
-    private final String workingDir;
+        private final String workingDir;
 
     public String getWorkingDir() {
         return this.workingDir;
@@ -194,7 +194,6 @@ public final class GetServiceTemplateSpecContainer extends io.pulumi.resources.I
             this.workingDir = Objects.requireNonNull(workingDir);
             return this;
         }
-
         public GetServiceTemplateSpecContainer build() {
             return new GetServiceTemplateSpecContainer(args, commands, envFroms, envs, image, ports, resources, volumeMounts, workingDir);
         }

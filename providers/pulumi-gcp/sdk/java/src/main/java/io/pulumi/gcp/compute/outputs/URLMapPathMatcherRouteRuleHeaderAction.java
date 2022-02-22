@@ -128,7 +128,6 @@ public final class URLMapPathMatcherRouteRuleHeaderAction {
             this.responseHeadersToRemoves = responseHeadersToRemoves;
             return this;
         }
-
         public URLMapPathMatcherRouteRuleHeaderAction build() {
             return new URLMapPathMatcherRouteRuleHeaderAction(requestHeadersToAdds, requestHeadersToRemoves, responseHeadersToAdds, responseHeadersToRemoves);
         }

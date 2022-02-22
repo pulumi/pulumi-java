@@ -205,7 +205,6 @@ public final class InstanceGroupManagerUpdatePolicy {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public InstanceGroupManagerUpdatePolicy build() {
             return new InstanceGroupManagerUpdatePolicy(maxSurgeFixed, maxSurgePercent, maxUnavailableFixed, maxUnavailablePercent, minReadySec, minimalAction, replacementMethod, type);
         }

@@ -101,7 +101,6 @@ public final class JobQueryScriptOptions {
             this.statementTimeoutMs = statementTimeoutMs;
             return this;
         }
-
         public JobQueryScriptOptions build() {
             return new JobQueryScriptOptions(keyResultStatement, statementByteBudget, statementTimeoutMs);
         }

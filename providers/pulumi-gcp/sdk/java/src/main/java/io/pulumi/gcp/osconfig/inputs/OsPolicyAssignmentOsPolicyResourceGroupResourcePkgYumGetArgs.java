@@ -18,7 +18,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYumGetArgs 
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -61,7 +61,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYumGetArgs 
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYumGetArgs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYumGetArgs(name);
         }

@@ -54,7 +54,6 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfig {
             this.kerberosConfig = kerberosConfig;
             return this;
         }
-
         public WorkflowTemplatePlacementManagedClusterConfigSecurityConfig build() {
             return new WorkflowTemplatePlacementManagedClusterConfigSecurityConfig(kerberosConfig);
         }

@@ -18,7 +18,7 @@ public final class TransferJobScheduleScheduleStartDateGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="day", required=true)
-    private final Input<Integer> day;
+        private final Input<Integer> day;
 
     public Input<Integer> getDay() {
         return this.day;
@@ -29,7 +29,7 @@ public final class TransferJobScheduleScheduleStartDateGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="month", required=true)
-    private final Input<Integer> month;
+        private final Input<Integer> month;
 
     public Input<Integer> getMonth() {
         return this.month;
@@ -40,7 +40,7 @@ public final class TransferJobScheduleScheduleStartDateGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="year", required=true)
-    private final Input<Integer> year;
+        private final Input<Integer> year;
 
     public Input<Integer> getYear() {
         return this.year;
@@ -114,7 +114,6 @@ public final class TransferJobScheduleScheduleStartDateGetArgs extends io.pulumi
             this.year = Input.of(Objects.requireNonNull(year));
             return this;
         }
-
         public TransferJobScheduleScheduleStartDateGetArgs build() {
             return new TransferJobScheduleScheduleStartDateGetArgs(day, month, year);
         }

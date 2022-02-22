@@ -21,7 +21,7 @@ public final class SecretReplicationUserManagedReplicaGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="customerManagedEncryption")
-    private final @Nullable Input<SecretReplicationUserManagedReplicaCustomerManagedEncryptionGetArgs> customerManagedEncryption;
+        private final @Nullable Input<SecretReplicationUserManagedReplicaCustomerManagedEncryptionGetArgs> customerManagedEncryption;
 
     public Input<SecretReplicationUserManagedReplicaCustomerManagedEncryptionGetArgs> getCustomerManagedEncryption() {
         return this.customerManagedEncryption == null ? Input.empty() : this.customerManagedEncryption;
@@ -32,7 +32,7 @@ public final class SecretReplicationUserManagedReplicaGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="location", required=true)
-    private final Input<String> location;
+        private final Input<String> location;
 
     public Input<String> getLocation() {
         return this.location;
@@ -91,7 +91,6 @@ public final class SecretReplicationUserManagedReplicaGetArgs extends io.pulumi.
             this.location = Input.of(Objects.requireNonNull(location));
             return this;
         }
-
         public SecretReplicationUserManagedReplicaGetArgs build() {
             return new SecretReplicationUserManagedReplicaGetArgs(customerManagedEncryption, location);
         }

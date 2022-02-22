@@ -73,7 +73,6 @@ public final class TableIamBindingCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public TableIamBindingCondition build() {
             return new TableIamBindingCondition(description, expression, title);
         }

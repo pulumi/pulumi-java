@@ -101,7 +101,6 @@ public final class MetricDescriptorLabel {
             this.valueType = valueType;
             return this;
         }
-
         public MetricDescriptorLabel build() {
             return new MetricDescriptorLabel(description, key, valueType);
         }

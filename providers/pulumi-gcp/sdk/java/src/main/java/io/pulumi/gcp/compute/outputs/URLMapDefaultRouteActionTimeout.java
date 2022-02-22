@@ -81,7 +81,6 @@ public final class URLMapDefaultRouteActionTimeout {
             this.seconds = seconds;
             return this;
         }
-
         public URLMapDefaultRouteActionTimeout build() {
             return new URLMapDefaultRouteActionTimeout(nanos, seconds);
         }

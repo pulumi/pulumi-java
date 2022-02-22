@@ -19,7 +19,7 @@ public final class ClusterNodePoolNodeConfigSandboxConfigArgs extends io.pulumi.
      * 
      */
     @InputImport(name="sandboxType", required=true)
-    private final Input<String> sandboxType;
+        private final Input<String> sandboxType;
 
     public Input<String> getSandboxType() {
         return this.sandboxType;
@@ -62,7 +62,6 @@ public final class ClusterNodePoolNodeConfigSandboxConfigArgs extends io.pulumi.
             this.sandboxType = Input.of(Objects.requireNonNull(sandboxType));
             return this;
         }
-
         public ClusterNodePoolNodeConfigSandboxConfigArgs build() {
             return new ClusterNodePoolNodeConfigSandboxConfigArgs(sandboxType);
         }

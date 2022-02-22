@@ -14,21 +14,21 @@ public final class GetHcVpnGatewayVpnInterface extends io.pulumi.resources.Invok
     public static final GetHcVpnGatewayVpnInterface Empty = new GetHcVpnGatewayVpnInterface();
 
     @InputImport(name="id", required=true)
-    private final Integer id;
+        private final Integer id;
 
     public Integer getId() {
         return this.id;
     }
 
     @InputImport(name="interconnectAttachment", required=true)
-    private final String interconnectAttachment;
+        private final String interconnectAttachment;
 
     public String getInterconnectAttachment() {
         return this.interconnectAttachment;
     }
 
     @InputImport(name="ipAddress", required=true)
-    private final String ipAddress;
+        private final String ipAddress;
 
     public String getIpAddress() {
         return this.ipAddress;
@@ -87,7 +87,6 @@ public final class GetHcVpnGatewayVpnInterface extends io.pulumi.resources.Invok
             this.ipAddress = Objects.requireNonNull(ipAddress);
             return this;
         }
-
         public GetHcVpnGatewayVpnInterface build() {
             return new GetHcVpnGatewayVpnInterface(id, interconnectAttachment, ipAddress);
         }

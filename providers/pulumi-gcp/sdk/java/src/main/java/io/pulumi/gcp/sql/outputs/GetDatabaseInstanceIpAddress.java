@@ -71,7 +71,6 @@ public final class GetDatabaseInstanceIpAddress {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDatabaseInstanceIpAddress build() {
             return new GetDatabaseInstanceIpAddress(ipAddress, timeToRetire, type);
         }

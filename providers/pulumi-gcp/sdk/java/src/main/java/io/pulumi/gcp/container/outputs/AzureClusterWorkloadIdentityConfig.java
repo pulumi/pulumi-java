@@ -73,7 +73,6 @@ public final class AzureClusterWorkloadIdentityConfig {
             this.workloadPool = workloadPool;
             return this;
         }
-
         public AzureClusterWorkloadIdentityConfig build() {
             return new AzureClusterWorkloadIdentityConfig(identityProvider, issuerUri, workloadPool);
         }

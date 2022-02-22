@@ -25,7 +25,7 @@ public final class JobHttpTargetGetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="body")
-    private final @Nullable Input<String> body;
+        private final @Nullable Input<String> body;
 
     public Input<String> getBody() {
         return this.body == null ? Input.empty() : this.body;
@@ -37,7 +37,7 @@ public final class JobHttpTargetGetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="headers")
-    private final @Nullable Input<Map<String,String>> headers;
+        private final @Nullable Input<Map<String,String>> headers;
 
     public Input<Map<String,String>> getHeaders() {
         return this.headers == null ? Input.empty() : this.headers;
@@ -48,7 +48,7 @@ public final class JobHttpTargetGetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="httpMethod")
-    private final @Nullable Input<String> httpMethod;
+        private final @Nullable Input<String> httpMethod;
 
     public Input<String> getHttpMethod() {
         return this.httpMethod == null ? Input.empty() : this.httpMethod;
@@ -61,7 +61,7 @@ public final class JobHttpTargetGetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="oauthToken")
-    private final @Nullable Input<JobHttpTargetOauthTokenGetArgs> oauthToken;
+        private final @Nullable Input<JobHttpTargetOauthTokenGetArgs> oauthToken;
 
     public Input<JobHttpTargetOauthTokenGetArgs> getOauthToken() {
         return this.oauthToken == null ? Input.empty() : this.oauthToken;
@@ -74,7 +74,7 @@ public final class JobHttpTargetGetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="oidcToken")
-    private final @Nullable Input<JobHttpTargetOidcTokenGetArgs> oidcToken;
+        private final @Nullable Input<JobHttpTargetOidcTokenGetArgs> oidcToken;
 
     public Input<JobHttpTargetOidcTokenGetArgs> getOidcToken() {
         return this.oidcToken == null ? Input.empty() : this.oidcToken;
@@ -85,7 +85,7 @@ public final class JobHttpTargetGetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="uri", required=true)
-    private final Input<String> uri;
+        private final Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri;
@@ -204,7 +204,6 @@ public final class JobHttpTargetGetArgs extends io.pulumi.resources.ResourceArgs
             this.uri = Input.of(Objects.requireNonNull(uri));
             return this;
         }
-
         public JobHttpTargetGetArgs build() {
             return new JobHttpTargetGetArgs(body, headers, httpMethod, oauthToken, oidcToken, uri);
         }

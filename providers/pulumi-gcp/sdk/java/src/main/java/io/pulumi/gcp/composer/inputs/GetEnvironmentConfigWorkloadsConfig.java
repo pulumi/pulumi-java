@@ -16,21 +16,21 @@ public final class GetEnvironmentConfigWorkloadsConfig extends io.pulumi.resourc
     public static final GetEnvironmentConfigWorkloadsConfig Empty = new GetEnvironmentConfigWorkloadsConfig();
 
     @InputImport(name="schedulers", required=true)
-    private final List<GetEnvironmentConfigWorkloadsConfigScheduler> schedulers;
+        private final List<GetEnvironmentConfigWorkloadsConfigScheduler> schedulers;
 
     public List<GetEnvironmentConfigWorkloadsConfigScheduler> getSchedulers() {
         return this.schedulers;
     }
 
     @InputImport(name="webServers", required=true)
-    private final List<GetEnvironmentConfigWorkloadsConfigWebServer> webServers;
+        private final List<GetEnvironmentConfigWorkloadsConfigWebServer> webServers;
 
     public List<GetEnvironmentConfigWorkloadsConfigWebServer> getWebServers() {
         return this.webServers;
     }
 
     @InputImport(name="workers", required=true)
-    private final List<GetEnvironmentConfigWorkloadsConfigWorker> workers;
+        private final List<GetEnvironmentConfigWorkloadsConfigWorker> workers;
 
     public List<GetEnvironmentConfigWorkloadsConfigWorker> getWorkers() {
         return this.workers;
@@ -89,7 +89,6 @@ public final class GetEnvironmentConfigWorkloadsConfig extends io.pulumi.resourc
             this.workers = Objects.requireNonNull(workers);
             return this;
         }
-
         public GetEnvironmentConfigWorkloadsConfig build() {
             return new GetEnvironmentConfigWorkloadsConfig(schedulers, webServers, workers);
         }

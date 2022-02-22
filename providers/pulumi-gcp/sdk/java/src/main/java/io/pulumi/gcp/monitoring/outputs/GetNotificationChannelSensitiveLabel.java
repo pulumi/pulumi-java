@@ -71,7 +71,6 @@ public final class GetNotificationChannelSensitiveLabel {
             this.serviceKey = Objects.requireNonNull(serviceKey);
             return this;
         }
-
         public GetNotificationChannelSensitiveLabel build() {
             return new GetNotificationChannelSensitiveLabel(authToken, password, serviceKey);
         }

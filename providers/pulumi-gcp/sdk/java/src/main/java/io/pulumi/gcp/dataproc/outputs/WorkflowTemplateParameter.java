@@ -120,7 +120,6 @@ public final class WorkflowTemplateParameter {
             this.validation = validation;
             return this;
         }
-
         public WorkflowTemplateParameter build() {
             return new WorkflowTemplateParameter(description, fields, name, validation);
         }

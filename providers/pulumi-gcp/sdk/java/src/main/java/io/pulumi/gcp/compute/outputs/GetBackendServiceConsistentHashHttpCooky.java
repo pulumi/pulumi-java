@@ -81,7 +81,6 @@ public final class GetBackendServiceConsistentHashHttpCooky {
             this.ttls = Objects.requireNonNull(ttls);
             return this;
         }
-
         public GetBackendServiceConsistentHashHttpCooky build() {
             return new GetBackendServiceConsistentHashHttpCooky(name, path, ttls);
         }

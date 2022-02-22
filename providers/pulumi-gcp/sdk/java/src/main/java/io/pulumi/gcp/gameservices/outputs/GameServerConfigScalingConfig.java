@@ -132,7 +132,6 @@ public final class GameServerConfigScalingConfig {
             this.selectors = selectors;
             return this;
         }
-
         public GameServerConfigScalingConfig build() {
             return new GameServerConfigScalingConfig(fleetAutoscalerSpec, name, schedules, selectors);
         }

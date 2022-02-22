@@ -19,7 +19,7 @@ public final class RegionDiskResourcePolicyAttachmentArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="disk", required=true)
-    private final Input<String> disk;
+        private final Input<String> disk;
 
     public Input<String> getDisk() {
         return this.disk;
@@ -31,7 +31,7 @@ public final class RegionDiskResourcePolicyAttachmentArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -43,7 +43,7 @@ public final class RegionDiskResourcePolicyAttachmentArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -54,7 +54,7 @@ public final class RegionDiskResourcePolicyAttachmentArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+        private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -143,7 +143,6 @@ public final class RegionDiskResourcePolicyAttachmentArgs extends io.pulumi.reso
             this.region = Input.ofNullable(region);
             return this;
         }
-
         public RegionDiskResourcePolicyAttachmentArgs build() {
             return new RegionDiskResourcePolicyAttachmentArgs(disk, name, project, region);
         }

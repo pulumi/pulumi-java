@@ -15,14 +15,14 @@ public final class GetSecretReplicationUserManagedReplica extends io.pulumi.reso
     public static final GetSecretReplicationUserManagedReplica Empty = new GetSecretReplicationUserManagedReplica();
 
     @InputImport(name="customerManagedEncryptions", required=true)
-    private final List<GetSecretReplicationUserManagedReplicaCustomerManagedEncryption> customerManagedEncryptions;
+        private final List<GetSecretReplicationUserManagedReplicaCustomerManagedEncryption> customerManagedEncryptions;
 
     public List<GetSecretReplicationUserManagedReplicaCustomerManagedEncryption> getCustomerManagedEncryptions() {
         return this.customerManagedEncryptions;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+        private final String location;
 
     public String getLocation() {
         return this.location;
@@ -71,7 +71,6 @@ public final class GetSecretReplicationUserManagedReplica extends io.pulumi.reso
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public GetSecretReplicationUserManagedReplica build() {
             return new GetSecretReplicationUserManagedReplica(customerManagedEncryptions, location);
         }

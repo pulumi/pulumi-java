@@ -15,14 +15,14 @@ public final class ObjectAccessControlProjectTeamArgs extends io.pulumi.resource
     public static final ObjectAccessControlProjectTeamArgs Empty = new ObjectAccessControlProjectTeamArgs();
 
     @InputImport(name="projectNumber")
-    private final @Nullable Input<String> projectNumber;
+        private final @Nullable Input<String> projectNumber;
 
     public Input<String> getProjectNumber() {
         return this.projectNumber == null ? Input.empty() : this.projectNumber;
     }
 
     @InputImport(name="team")
-    private final @Nullable Input<String> team;
+        private final @Nullable Input<String> team;
 
     public Input<String> getTeam() {
         return this.team == null ? Input.empty() : this.team;
@@ -81,7 +81,6 @@ public final class ObjectAccessControlProjectTeamArgs extends io.pulumi.resource
             this.team = Input.ofNullable(team);
             return this;
         }
-
         public ObjectAccessControlProjectTeamArgs build() {
             return new ObjectAccessControlProjectTeamArgs(projectNumber, team);
         }

@@ -252,7 +252,6 @@ public final class ServiceTemplateMetadata {
             this.uid = uid;
             return this;
         }
-
         public ServiceTemplateMetadata build() {
             return new ServiceTemplateMetadata(annotations, generation, labels, name, namespace, resourceVersion, selfLink, uid);
         }

@@ -58,7 +58,6 @@ public final class GetClusterMasterAuthorizedNetworksConfigCidrBlock {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public GetClusterMasterAuthorizedNetworksConfigCidrBlock build() {
             return new GetClusterMasterAuthorizedNetworksConfigCidrBlock(cidrBlock, displayName);
         }

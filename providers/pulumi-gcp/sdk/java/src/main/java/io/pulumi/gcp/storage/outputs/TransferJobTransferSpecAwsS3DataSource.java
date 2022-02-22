@@ -98,7 +98,6 @@ public final class TransferJobTransferSpecAwsS3DataSource {
             this.roleArn = roleArn;
             return this;
         }
-
         public TransferJobTransferSpecAwsS3DataSource build() {
             return new TransferJobTransferSpecAwsS3DataSource(awsAccessKey, bucketName, roleArn);
         }

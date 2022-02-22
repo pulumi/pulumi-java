@@ -202,7 +202,6 @@ public final class AuthorityConfigSubjectConfigSubject {
             this.streetAddress = streetAddress;
             return this;
         }
-
         public AuthorityConfigSubjectConfigSubject build() {
             return new AuthorityConfigSubjectConfigSubject(commonName, countryCode, locality, organization, organizationalUnit, postalCode, province, streetAddress);
         }

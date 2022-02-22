@@ -75,7 +75,6 @@ public final class GetImageVersionsImageVersion {
             this.supportedPythonVersions = Objects.requireNonNull(supportedPythonVersions);
             return this;
         }
-
         public GetImageVersionsImageVersion build() {
             return new GetImageVersionsImageVersion(imageVersionId, supportedPythonVersions);
         }

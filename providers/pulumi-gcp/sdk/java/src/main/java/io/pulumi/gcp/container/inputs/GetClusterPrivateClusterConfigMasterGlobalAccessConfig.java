@@ -13,7 +13,7 @@ public final class GetClusterPrivateClusterConfigMasterGlobalAccessConfig extend
     public static final GetClusterPrivateClusterConfigMasterGlobalAccessConfig Empty = new GetClusterPrivateClusterConfigMasterGlobalAccessConfig();
 
     @InputImport(name="enabled", required=true)
-    private final Boolean enabled;
+        private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
@@ -51,7 +51,6 @@ public final class GetClusterPrivateClusterConfigMasterGlobalAccessConfig extend
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public GetClusterPrivateClusterConfigMasterGlobalAccessConfig build() {
             return new GetClusterPrivateClusterConfigMasterGlobalAccessConfig(enabled);
         }

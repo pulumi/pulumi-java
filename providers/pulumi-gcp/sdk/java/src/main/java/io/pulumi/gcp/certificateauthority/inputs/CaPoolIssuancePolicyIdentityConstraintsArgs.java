@@ -21,7 +21,7 @@ public final class CaPoolIssuancePolicyIdentityConstraintsArgs extends io.pulumi
      * 
      */
     @InputImport(name="allowSubjectAltNamesPassthrough", required=true)
-    private final Input<Boolean> allowSubjectAltNamesPassthrough;
+        private final Input<Boolean> allowSubjectAltNamesPassthrough;
 
     public Input<Boolean> getAllowSubjectAltNamesPassthrough() {
         return this.allowSubjectAltNamesPassthrough;
@@ -33,7 +33,7 @@ public final class CaPoolIssuancePolicyIdentityConstraintsArgs extends io.pulumi
      * 
      */
     @InputImport(name="allowSubjectPassthrough", required=true)
-    private final Input<Boolean> allowSubjectPassthrough;
+        private final Input<Boolean> allowSubjectPassthrough;
 
     public Input<Boolean> getAllowSubjectPassthrough() {
         return this.allowSubjectPassthrough;
@@ -47,7 +47,7 @@ public final class CaPoolIssuancePolicyIdentityConstraintsArgs extends io.pulumi
      * 
      */
     @InputImport(name="celExpression")
-    private final @Nullable Input<CaPoolIssuancePolicyIdentityConstraintsCelExpressionArgs> celExpression;
+        private final @Nullable Input<CaPoolIssuancePolicyIdentityConstraintsCelExpressionArgs> celExpression;
 
     public Input<CaPoolIssuancePolicyIdentityConstraintsCelExpressionArgs> getCelExpression() {
         return this.celExpression == null ? Input.empty() : this.celExpression;
@@ -121,7 +121,6 @@ public final class CaPoolIssuancePolicyIdentityConstraintsArgs extends io.pulumi
             this.celExpression = Input.ofNullable(celExpression);
             return this;
         }
-
         public CaPoolIssuancePolicyIdentityConstraintsArgs build() {
             return new CaPoolIssuancePolicyIdentityConstraintsArgs(allowSubjectAltNamesPassthrough, allowSubjectPassthrough, celExpression);
         }

@@ -81,7 +81,6 @@ public final class RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfig {
             this.type = type;
             return this;
         }
-
         public RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfig build() {
             return new RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfig(coreCount, type);
         }

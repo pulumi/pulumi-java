@@ -163,7 +163,6 @@ public final class GetVPNGatewayResult {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public GetVPNGatewayResult build() {
             return new GetVPNGatewayResult(description, id, name, network, project, region, selfLink);
         }

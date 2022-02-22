@@ -58,7 +58,6 @@ public final class AccessLevelsAccessLevelCustom {
             this.expr = Objects.requireNonNull(expr);
             return this;
         }
-
         public AccessLevelsAccessLevelCustom build() {
             return new AccessLevelsAccessLevelCustom(expr);
         }

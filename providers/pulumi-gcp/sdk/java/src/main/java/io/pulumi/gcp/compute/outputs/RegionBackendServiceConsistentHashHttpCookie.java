@@ -100,7 +100,6 @@ public final class RegionBackendServiceConsistentHashHttpCookie {
             this.ttl = ttl;
             return this;
         }
-
         public RegionBackendServiceConsistentHashHttpCookie build() {
             return new RegionBackendServiceConsistentHashHttpCookie(name, path, ttl);
         }

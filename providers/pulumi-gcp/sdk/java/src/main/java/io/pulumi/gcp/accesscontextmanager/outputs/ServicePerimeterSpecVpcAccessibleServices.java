@@ -82,7 +82,6 @@ public final class ServicePerimeterSpecVpcAccessibleServices {
             this.enableRestriction = enableRestriction;
             return this;
         }
-
         public ServicePerimeterSpecVpcAccessibleServices build() {
             return new ServicePerimeterSpecVpcAccessibleServices(allowedServices, enableRestriction);
         }

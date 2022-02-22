@@ -140,7 +140,6 @@ public final class InstanceFromMachineImageBootDisk {
             this.source = source;
             return this;
         }
-
         public InstanceFromMachineImageBootDisk build() {
             return new InstanceFromMachineImageBootDisk(autoDelete, deviceName, diskEncryptionKeyRaw, diskEncryptionKeySha256, initializeParams, kmsKeySelfLink, mode, source);
         }

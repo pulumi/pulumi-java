@@ -184,7 +184,6 @@ public final class FlexibleAppVersionLivenessCheck {
             this.timeout = timeout;
             return this;
         }
-
         public FlexibleAppVersionLivenessCheck build() {
             return new FlexibleAppVersionLivenessCheck(checkInterval, failureThreshold, host, initialDelay, path, successThreshold, timeout);
         }

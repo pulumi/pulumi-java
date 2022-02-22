@@ -59,7 +59,6 @@ public final class GetBucketRetentionPolicy {
             this.retentionPeriod = Objects.requireNonNull(retentionPeriod);
             return this;
         }
-
         public GetBucketRetentionPolicy build() {
             return new GetBucketRetentionPolicy(isLocked, retentionPeriod);
         }

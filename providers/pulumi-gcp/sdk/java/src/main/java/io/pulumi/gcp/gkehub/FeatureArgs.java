@@ -21,7 +21,7 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+        private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -32,7 +32,7 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location", required=true)
-    private final Input<String> location;
+        private final Input<String> location;
 
     public Input<String> getLocation() {
         return this.location;
@@ -43,7 +43,7 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -54,7 +54,7 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -65,7 +65,7 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="spec")
-    private final @Nullable Input<FeatureSpecArgs> spec;
+        private final @Nullable Input<FeatureSpecArgs> spec;
 
     public Input<FeatureSpecArgs> getSpec() {
         return this.spec == null ? Input.empty() : this.spec;
@@ -169,7 +169,6 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
             this.spec = Input.ofNullable(spec);
             return this;
         }
-
         public FeatureArgs build() {
             return new FeatureArgs(labels, location, name, project, spec);
         }

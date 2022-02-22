@@ -74,7 +74,6 @@ public final class NodePoolNodeConfigGuestAccelerator {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public NodePoolNodeConfigGuestAccelerator build() {
             return new NodePoolNodeConfigGuestAccelerator(count, gpuPartitionSize, type);
         }

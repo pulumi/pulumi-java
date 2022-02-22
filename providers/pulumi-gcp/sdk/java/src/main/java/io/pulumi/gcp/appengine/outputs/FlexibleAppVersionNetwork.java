@@ -149,7 +149,6 @@ public final class FlexibleAppVersionNetwork {
             this.subnetwork = subnetwork;
             return this;
         }
-
         public FlexibleAppVersionNetwork build() {
             return new FlexibleAppVersionNetwork(forwardedPorts, instanceTag, name, sessionAffinity, subnetwork);
         }

@@ -80,7 +80,6 @@ public final class DatabaseInstanceSettingsLocationPreference {
             this.zone = zone;
             return this;
         }
-
         public DatabaseInstanceSettingsLocationPreference build() {
             return new DatabaseInstanceSettingsLocationPreference(followGaeApplication, zone);
         }

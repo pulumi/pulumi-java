@@ -97,7 +97,6 @@ public final class AppEngineServiceIamMemberCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public AppEngineServiceIamMemberCondition build() {
             return new AppEngineServiceIamMemberCondition(description, expression, title);
         }

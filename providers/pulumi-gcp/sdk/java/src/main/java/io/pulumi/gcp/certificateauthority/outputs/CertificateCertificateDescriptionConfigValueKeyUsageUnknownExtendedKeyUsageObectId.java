@@ -54,7 +54,6 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageUnknownEx
             this.objectIdPaths = objectIdPaths;
             return this;
         }
-
         public CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectId build() {
             return new CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectId(objectIdPaths);
         }

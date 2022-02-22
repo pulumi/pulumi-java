@@ -140,7 +140,6 @@ public final class InstanceFromTemplateBootDisk {
             this.source = source;
             return this;
         }
-
         public InstanceFromTemplateBootDisk build() {
             return new InstanceFromTemplateBootDisk(autoDelete, deviceName, diskEncryptionKeyRaw, diskEncryptionKeySha256, initializeParams, kmsKeySelfLink, mode, source);
         }

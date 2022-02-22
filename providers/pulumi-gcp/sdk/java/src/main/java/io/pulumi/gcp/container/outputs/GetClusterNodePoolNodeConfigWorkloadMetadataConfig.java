@@ -44,7 +44,6 @@ public final class GetClusterNodePoolNodeConfigWorkloadMetadataConfig {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
-
         public GetClusterNodePoolNodeConfigWorkloadMetadataConfig build() {
             return new GetClusterNodePoolNodeConfigWorkloadMetadataConfig(mode);
         }

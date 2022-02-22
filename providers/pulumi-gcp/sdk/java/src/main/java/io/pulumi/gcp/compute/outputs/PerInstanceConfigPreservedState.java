@@ -80,7 +80,6 @@ public final class PerInstanceConfigPreservedState {
             this.metadata = metadata;
             return this;
         }
-
         public PerInstanceConfigPreservedState build() {
             return new PerInstanceConfigPreservedState(disks, metadata);
         }

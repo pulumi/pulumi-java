@@ -119,7 +119,6 @@ public final class GuestPoliciesRecipeInstallStepFileExec {
             this.localPath = localPath;
             return this;
         }
-
         public GuestPoliciesRecipeInstallStepFileExec build() {
             return new GuestPoliciesRecipeInstallStepFileExec(allowedExitCodes, args, artifactId, localPath);
         }

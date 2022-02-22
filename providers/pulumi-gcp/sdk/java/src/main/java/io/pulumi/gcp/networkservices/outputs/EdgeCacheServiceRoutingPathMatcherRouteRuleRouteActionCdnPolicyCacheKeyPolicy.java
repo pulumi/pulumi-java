@@ -186,7 +186,6 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
             this.includedQueryParameters = includedQueryParameters;
             return this;
         }
-
         public EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicy build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicy(excludeHost, excludeQueryString, excludedQueryParameters, includeProtocol, includedHeaderNames, includedQueryParameters);
         }

@@ -60,7 +60,6 @@ public final class KeyRingImportJobAttestation {
             this.format = format;
             return this;
         }
-
         public KeyRingImportJobAttestation build() {
             return new KeyRingImportJobAttestation(content, format);
         }

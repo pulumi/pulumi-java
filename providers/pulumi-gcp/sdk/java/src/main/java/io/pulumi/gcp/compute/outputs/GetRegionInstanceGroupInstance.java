@@ -97,7 +97,6 @@ public final class GetRegionInstanceGroupInstance {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public GetRegionInstanceGroupInstance build() {
             return new GetRegionInstanceGroupInstance(instance, namedPorts, status);
         }

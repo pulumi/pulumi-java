@@ -179,7 +179,6 @@ public final class JobHttpTarget {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public JobHttpTarget build() {
             return new JobHttpTarget(body, headers, httpMethod, oauthToken, oidcToken, uri);
         }

@@ -56,7 +56,6 @@ public final class AiFeatureStoreEntityTypeMonitoringConfig {
             this.snapshotAnalysis = snapshotAnalysis;
             return this;
         }
-
         public AiFeatureStoreEntityTypeMonitoringConfig build() {
             return new AiFeatureStoreEntityTypeMonitoringConfig(snapshotAnalysis);
         }

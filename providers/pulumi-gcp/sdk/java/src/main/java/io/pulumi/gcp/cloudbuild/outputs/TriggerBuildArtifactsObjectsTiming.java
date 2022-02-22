@@ -84,7 +84,6 @@ public final class TriggerBuildArtifactsObjectsTiming {
             this.startTime = startTime;
             return this;
         }
-
         public TriggerBuildArtifactsObjectsTiming build() {
             return new TriggerBuildArtifactsObjectsTiming(endTime, startTime);
         }

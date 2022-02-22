@@ -44,7 +44,6 @@ public final class GetClusterMasterAuthClientCertificateConfig {
             this.issueClientCertificate = Objects.requireNonNull(issueClientCertificate);
             return this;
         }
-
         public GetClusterMasterAuthClientCertificateConfig build() {
             return new GetClusterMasterAuthClientCertificateConfig(issueClientCertificate);
         }

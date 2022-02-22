@@ -85,7 +85,6 @@ public final class GetDatabaseInstanceSettingInsightsConfig {
             this.recordClientAddress = Objects.requireNonNull(recordClientAddress);
             return this;
         }
-
         public GetDatabaseInstanceSettingInsightsConfig build() {
             return new GetDatabaseInstanceSettingInsightsConfig(queryInsightsEnabled, queryStringLength, recordApplicationTags, recordClientAddress);
         }

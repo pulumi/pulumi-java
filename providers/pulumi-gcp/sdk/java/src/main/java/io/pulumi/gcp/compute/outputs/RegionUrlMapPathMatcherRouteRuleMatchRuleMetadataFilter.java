@@ -94,7 +94,6 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilter {
             this.filterMatchCriteria = Objects.requireNonNull(filterMatchCriteria);
             return this;
         }
-
         public RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilter build() {
             return new RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilter(filterLabels, filterMatchCriteria);
         }

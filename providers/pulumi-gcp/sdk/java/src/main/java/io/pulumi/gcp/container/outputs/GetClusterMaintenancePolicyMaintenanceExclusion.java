@@ -71,7 +71,6 @@ public final class GetClusterMaintenancePolicyMaintenanceExclusion {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public GetClusterMaintenancePolicyMaintenanceExclusion build() {
             return new GetClusterMaintenancePolicyMaintenanceExclusion(endTime, exclusionName, startTime);
         }

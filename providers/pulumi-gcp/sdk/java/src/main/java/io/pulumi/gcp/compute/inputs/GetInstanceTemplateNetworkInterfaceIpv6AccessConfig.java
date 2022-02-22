@@ -13,14 +13,14 @@ public final class GetInstanceTemplateNetworkInterfaceIpv6AccessConfig extends i
     public static final GetInstanceTemplateNetworkInterfaceIpv6AccessConfig Empty = new GetInstanceTemplateNetworkInterfaceIpv6AccessConfig();
 
     @InputImport(name="externalIpv6", required=true)
-    private final String externalIpv6;
+        private final String externalIpv6;
 
     public String getExternalIpv6() {
         return this.externalIpv6;
     }
 
     @InputImport(name="externalIpv6PrefixLength", required=true)
-    private final String externalIpv6PrefixLength;
+        private final String externalIpv6PrefixLength;
 
     public String getExternalIpv6PrefixLength() {
         return this.externalIpv6PrefixLength;
@@ -33,14 +33,14 @@ public final class GetInstanceTemplateNetworkInterfaceIpv6AccessConfig extends i
      * 
      */
     @InputImport(name="networkTier", required=true)
-    private final String networkTier;
+        private final String networkTier;
 
     public String getNetworkTier() {
         return this.networkTier;
     }
 
     @InputImport(name="publicPtrDomainName", required=true)
-    private final String publicPtrDomainName;
+        private final String publicPtrDomainName;
 
     public String getPublicPtrDomainName() {
         return this.publicPtrDomainName;
@@ -109,7 +109,6 @@ public final class GetInstanceTemplateNetworkInterfaceIpv6AccessConfig extends i
             this.publicPtrDomainName = Objects.requireNonNull(publicPtrDomainName);
             return this;
         }
-
         public GetInstanceTemplateNetworkInterfaceIpv6AccessConfig build() {
             return new GetInstanceTemplateNetworkInterfaceIpv6AccessConfig(externalIpv6, externalIpv6PrefixLength, networkTier, publicPtrDomainName);
         }

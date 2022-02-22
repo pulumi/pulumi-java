@@ -77,7 +77,6 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
             this.acceleratorType = acceleratorType;
             return this;
         }
-
         public WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerator build() {
             return new WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerator(acceleratorCount, acceleratorType);
         }

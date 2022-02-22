@@ -44,7 +44,6 @@ public final class GetClusterNodeConfigEphemeralStorageConfig {
             this.localSsdCount = Objects.requireNonNull(localSsdCount);
             return this;
         }
-
         public GetClusterNodeConfigEphemeralStorageConfig build() {
             return new GetClusterNodeConfigEphemeralStorageConfig(localSsdCount);
         }

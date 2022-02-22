@@ -151,7 +151,6 @@ public final class GetBucketLifecycleRuleCondition {
             this.withState = Objects.requireNonNull(withState);
             return this;
         }
-
         public GetBucketLifecycleRuleCondition build() {
             return new GetBucketLifecycleRuleCondition(age, createdBefore, customTimeBefore, daysSinceCustomTime, daysSinceNoncurrentTime, matchesStorageClasses, noncurrentTimeBefore, numNewerVersions, withState);
         }

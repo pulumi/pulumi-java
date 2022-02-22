@@ -15,21 +15,21 @@ public final class InstanceFromMachineImageSchedulingNodeAffinityArgs extends io
     public static final InstanceFromMachineImageSchedulingNodeAffinityArgs Empty = new InstanceFromMachineImageSchedulingNodeAffinityArgs();
 
     @InputImport(name="key", required=true)
-    private final Input<String> key;
+        private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
     }
 
     @InputImport(name="operator", required=true)
-    private final Input<String> operator;
+        private final Input<String> operator;
 
     public Input<String> getOperator() {
         return this.operator;
     }
 
     @InputImport(name="values", required=true)
-    private final Input<List<String>> values;
+        private final Input<List<String>> values;
 
     public Input<List<String>> getValues() {
         return this.values;
@@ -103,7 +103,6 @@ public final class InstanceFromMachineImageSchedulingNodeAffinityArgs extends io
             this.values = Input.of(Objects.requireNonNull(values));
             return this;
         }
-
         public InstanceFromMachineImageSchedulingNodeAffinityArgs build() {
             return new InstanceFromMachineImageSchedulingNodeAffinityArgs(key, operator, values);
         }

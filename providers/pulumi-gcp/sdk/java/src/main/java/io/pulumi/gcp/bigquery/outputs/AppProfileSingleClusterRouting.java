@@ -79,7 +79,6 @@ public final class AppProfileSingleClusterRouting {
             this.clusterId = Objects.requireNonNull(clusterId);
             return this;
         }
-
         public AppProfileSingleClusterRouting build() {
             return new AppProfileSingleClusterRouting(allowTransactionalWrites, clusterId);
         }

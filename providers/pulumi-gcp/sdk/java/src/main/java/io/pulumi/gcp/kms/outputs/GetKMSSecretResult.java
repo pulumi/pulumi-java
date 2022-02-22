@@ -115,7 +115,6 @@ public final class GetKMSSecretResult {
             this.plaintext = Objects.requireNonNull(plaintext);
             return this;
         }
-
         public GetKMSSecretResult build() {
             return new GetKMSSecretResult(additionalAuthenticatedData, ciphertext, cryptoKey, id, plaintext);
         }

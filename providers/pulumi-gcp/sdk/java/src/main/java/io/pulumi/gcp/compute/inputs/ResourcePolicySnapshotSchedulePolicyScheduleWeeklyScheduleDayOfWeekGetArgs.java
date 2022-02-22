@@ -19,7 +19,7 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDay
      * 
      */
     @InputImport(name="day", required=true)
-    private final Input<String> day;
+        private final Input<String> day;
 
     public Input<String> getDay() {
         return this.day;
@@ -30,7 +30,7 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDay
      * 
      */
     @InputImport(name="startTime", required=true)
-    private final Input<String> startTime;
+        private final Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime;
@@ -89,7 +89,6 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDay
             this.startTime = Input.of(Objects.requireNonNull(startTime));
             return this;
         }
-
         public ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekGetArgs build() {
             return new ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekGetArgs(day, startTime);
         }

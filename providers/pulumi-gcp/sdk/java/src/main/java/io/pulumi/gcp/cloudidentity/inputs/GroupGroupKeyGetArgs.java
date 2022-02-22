@@ -24,7 +24,7 @@ public final class GroupGroupKeyGetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="id", required=true)
-    private final Input<String> id;
+        private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -40,7 +40,7 @@ public final class GroupGroupKeyGetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="namespace")
-    private final @Nullable Input<String> namespace;
+        private final @Nullable Input<String> namespace;
 
     public Input<String> getNamespace() {
         return this.namespace == null ? Input.empty() : this.namespace;
@@ -99,7 +99,6 @@ public final class GroupGroupKeyGetArgs extends io.pulumi.resources.ResourceArgs
             this.namespace = Input.ofNullable(namespace);
             return this;
         }
-
         public GroupGroupKeyGetArgs build() {
             return new GroupGroupKeyGetArgs(id, namespace);
         }

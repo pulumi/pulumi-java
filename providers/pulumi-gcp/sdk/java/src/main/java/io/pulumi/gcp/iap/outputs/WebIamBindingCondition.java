@@ -97,7 +97,6 @@ public final class WebIamBindingCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public WebIamBindingCondition build() {
             return new WebIamBindingCondition(description, expression, title);
         }

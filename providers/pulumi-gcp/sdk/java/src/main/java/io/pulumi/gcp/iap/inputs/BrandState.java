@@ -20,7 +20,7 @@ public final class BrandState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationTitle")
-    private final @Nullable Input<String> applicationTitle;
+        private final @Nullable Input<String> applicationTitle;
 
     public Input<String> getApplicationTitle() {
         return this.applicationTitle == null ? Input.empty() : this.applicationTitle;
@@ -32,7 +32,7 @@ public final class BrandState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -43,7 +43,7 @@ public final class BrandState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="orgInternalOnly")
-    private final @Nullable Input<Boolean> orgInternalOnly;
+        private final @Nullable Input<Boolean> orgInternalOnly;
 
     public Input<Boolean> getOrgInternalOnly() {
         return this.orgInternalOnly == null ? Input.empty() : this.orgInternalOnly;
@@ -55,7 +55,7 @@ public final class BrandState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -70,7 +70,7 @@ public final class BrandState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="supportEmail")
-    private final @Nullable Input<String> supportEmail;
+        private final @Nullable Input<String> supportEmail;
 
     public Input<String> getSupportEmail() {
         return this.supportEmail == null ? Input.empty() : this.supportEmail;
@@ -174,7 +174,6 @@ public final class BrandState extends io.pulumi.resources.ResourceArgs {
             this.supportEmail = Input.ofNullable(supportEmail);
             return this;
         }
-
         public BrandState build() {
             return new BrandState(applicationTitle, name, orgInternalOnly, project, supportEmail);
         }

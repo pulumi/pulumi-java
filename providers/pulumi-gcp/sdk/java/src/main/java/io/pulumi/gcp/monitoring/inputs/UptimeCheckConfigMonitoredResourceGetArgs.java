@@ -19,7 +19,7 @@ public final class UptimeCheckConfigMonitoredResourceGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="labels", required=true)
-    private final Input<Map<String,String>> labels;
+        private final Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels;
@@ -30,7 +30,7 @@ public final class UptimeCheckConfigMonitoredResourceGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -89,7 +89,6 @@ public final class UptimeCheckConfigMonitoredResourceGetArgs extends io.pulumi.r
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public UptimeCheckConfigMonitoredResourceGetArgs build() {
             return new UptimeCheckConfigMonitoredResourceGetArgs(labels, type);
         }

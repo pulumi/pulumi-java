@@ -77,7 +77,6 @@ public final class EnterpriseKeyTestingOptions {
             this.testingScore = testingScore;
             return this;
         }
-
         public EnterpriseKeyTestingOptions build() {
             return new EnterpriseKeyTestingOptions(testingChallenge, testingScore);
         }

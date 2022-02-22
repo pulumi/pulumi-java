@@ -14,7 +14,7 @@ public final class NodePoolNodeConfigSandboxConfigGetArgs extends io.pulumi.reso
     public static final NodePoolNodeConfigSandboxConfigGetArgs Empty = new NodePoolNodeConfigSandboxConfigGetArgs();
 
     @InputImport(name="sandboxType", required=true)
-    private final Input<String> sandboxType;
+        private final Input<String> sandboxType;
 
     public Input<String> getSandboxType() {
         return this.sandboxType;
@@ -57,7 +57,6 @@ public final class NodePoolNodeConfigSandboxConfigGetArgs extends io.pulumi.reso
             this.sandboxType = Input.of(Objects.requireNonNull(sandboxType));
             return this;
         }
-
         public NodePoolNodeConfigSandboxConfigGetArgs build() {
             return new NodePoolNodeConfigSandboxConfigGetArgs(sandboxType);
         }

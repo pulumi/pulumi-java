@@ -20,7 +20,7 @@ public final class FlexibleAppVersionAutomaticScalingRequestUtilizationArgs exte
      * 
      */
     @InputImport(name="targetConcurrentRequests")
-    private final @Nullable Input<Double> targetConcurrentRequests;
+        private final @Nullable Input<Double> targetConcurrentRequests;
 
     public Input<Double> getTargetConcurrentRequests() {
         return this.targetConcurrentRequests == null ? Input.empty() : this.targetConcurrentRequests;
@@ -31,7 +31,7 @@ public final class FlexibleAppVersionAutomaticScalingRequestUtilizationArgs exte
      * 
      */
     @InputImport(name="targetRequestCountPerSecond")
-    private final @Nullable Input<String> targetRequestCountPerSecond;
+        private final @Nullable Input<String> targetRequestCountPerSecond;
 
     public Input<String> getTargetRequestCountPerSecond() {
         return this.targetRequestCountPerSecond == null ? Input.empty() : this.targetRequestCountPerSecond;
@@ -90,7 +90,6 @@ public final class FlexibleAppVersionAutomaticScalingRequestUtilizationArgs exte
             this.targetRequestCountPerSecond = Input.ofNullable(targetRequestCountPerSecond);
             return this;
         }
-
         public FlexibleAppVersionAutomaticScalingRequestUtilizationArgs build() {
             return new FlexibleAppVersionAutomaticScalingRequestUtilizationArgs(targetConcurrentRequests, targetRequestCountPerSecond);
         }

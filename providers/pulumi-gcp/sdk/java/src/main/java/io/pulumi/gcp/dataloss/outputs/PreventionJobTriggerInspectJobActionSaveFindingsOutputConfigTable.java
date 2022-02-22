@@ -99,7 +99,6 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigT
             this.tableId = tableId;
             return this;
         }
-
         public PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTable build() {
             return new PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTable(datasetId, projectId, tableId);
         }

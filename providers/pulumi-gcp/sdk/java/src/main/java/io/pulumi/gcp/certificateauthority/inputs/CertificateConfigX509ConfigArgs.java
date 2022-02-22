@@ -25,7 +25,7 @@ public final class CertificateConfigX509ConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="additionalExtensions")
-    private final @Nullable Input<List<CertificateConfigX509ConfigAdditionalExtensionArgs>> additionalExtensions;
+        private final @Nullable Input<List<CertificateConfigX509ConfigAdditionalExtensionArgs>> additionalExtensions;
 
     public Input<List<CertificateConfigX509ConfigAdditionalExtensionArgs>> getAdditionalExtensions() {
         return this.additionalExtensions == null ? Input.empty() : this.additionalExtensions;
@@ -37,7 +37,7 @@ public final class CertificateConfigX509ConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="aiaOcspServers")
-    private final @Nullable Input<List<String>> aiaOcspServers;
+        private final @Nullable Input<List<String>> aiaOcspServers;
 
     public Input<List<String>> getAiaOcspServers() {
         return this.aiaOcspServers == null ? Input.empty() : this.aiaOcspServers;
@@ -49,7 +49,7 @@ public final class CertificateConfigX509ConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="caOptions")
-    private final @Nullable Input<CertificateConfigX509ConfigCaOptionsArgs> caOptions;
+        private final @Nullable Input<CertificateConfigX509ConfigCaOptionsArgs> caOptions;
 
     public Input<CertificateConfigX509ConfigCaOptionsArgs> getCaOptions() {
         return this.caOptions == null ? Input.empty() : this.caOptions;
@@ -61,7 +61,7 @@ public final class CertificateConfigX509ConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="keyUsage", required=true)
-    private final Input<CertificateConfigX509ConfigKeyUsageArgs> keyUsage;
+        private final Input<CertificateConfigX509ConfigKeyUsageArgs> keyUsage;
 
     public Input<CertificateConfigX509ConfigKeyUsageArgs> getKeyUsage() {
         return this.keyUsage;
@@ -73,7 +73,7 @@ public final class CertificateConfigX509ConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="policyIds")
-    private final @Nullable Input<List<CertificateConfigX509ConfigPolicyIdArgs>> policyIds;
+        private final @Nullable Input<List<CertificateConfigX509ConfigPolicyIdArgs>> policyIds;
 
     public Input<List<CertificateConfigX509ConfigPolicyIdArgs>> getPolicyIds() {
         return this.policyIds == null ? Input.empty() : this.policyIds;
@@ -177,7 +177,6 @@ public final class CertificateConfigX509ConfigArgs extends io.pulumi.resources.R
             this.policyIds = Input.ofNullable(policyIds);
             return this;
         }
-
         public CertificateConfigX509ConfigArgs build() {
             return new CertificateConfigX509ConfigArgs(additionalExtensions, aiaOcspServers, caOptions, keyUsage, policyIds);
         }

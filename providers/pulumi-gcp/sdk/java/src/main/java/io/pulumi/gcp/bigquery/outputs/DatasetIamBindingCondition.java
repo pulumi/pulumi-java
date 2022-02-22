@@ -73,7 +73,6 @@ public final class DatasetIamBindingCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public DatasetIamBindingCondition build() {
             return new DatasetIamBindingCondition(description, expression, title);
         }

@@ -204,7 +204,6 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRule {
             this.urlRedirect = urlRedirect;
             return this;
         }
-
         public EdgeCacheServiceRoutingPathMatcherRouteRule build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRule(description, headerAction, matchRules, origin, priority, routeAction, urlRedirect);
         }

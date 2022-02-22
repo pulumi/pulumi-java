@@ -75,7 +75,6 @@ public final class OsPolicyAssignmentRollout {
             this.minWaitDuration = Objects.requireNonNull(minWaitDuration);
             return this;
         }
-
         public OsPolicyAssignmentRollout build() {
             return new OsPolicyAssignmentRollout(disruptionBudget, minWaitDuration);
         }

@@ -26,7 +26,7 @@ public final class QueueRetryConfigGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="maxAttempts")
-    private final @Nullable Input<Integer> maxAttempts;
+        private final @Nullable Input<Integer> maxAttempts;
 
     public Input<Integer> getMaxAttempts() {
         return this.maxAttempts == null ? Input.empty() : this.maxAttempts;
@@ -39,7 +39,7 @@ public final class QueueRetryConfigGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="maxBackoff")
-    private final @Nullable Input<String> maxBackoff;
+        private final @Nullable Input<String> maxBackoff;
 
     public Input<String> getMaxBackoff() {
         return this.maxBackoff == null ? Input.empty() : this.maxBackoff;
@@ -53,7 +53,7 @@ public final class QueueRetryConfigGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="maxDoublings")
-    private final @Nullable Input<Integer> maxDoublings;
+        private final @Nullable Input<Integer> maxDoublings;
 
     public Input<Integer> getMaxDoublings() {
         return this.maxDoublings == null ? Input.empty() : this.maxDoublings;
@@ -69,7 +69,7 @@ public final class QueueRetryConfigGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="maxRetryDuration")
-    private final @Nullable Input<String> maxRetryDuration;
+        private final @Nullable Input<String> maxRetryDuration;
 
     public Input<String> getMaxRetryDuration() {
         return this.maxRetryDuration == null ? Input.empty() : this.maxRetryDuration;
@@ -82,7 +82,7 @@ public final class QueueRetryConfigGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="minBackoff")
-    private final @Nullable Input<String> minBackoff;
+        private final @Nullable Input<String> minBackoff;
 
     public Input<String> getMinBackoff() {
         return this.minBackoff == null ? Input.empty() : this.minBackoff;
@@ -186,7 +186,6 @@ public final class QueueRetryConfigGetArgs extends io.pulumi.resources.ResourceA
             this.minBackoff = Input.ofNullable(minBackoff);
             return this;
         }
-
         public QueueRetryConfigGetArgs build() {
             return new QueueRetryConfigGetArgs(maxAttempts, maxBackoff, maxDoublings, maxRetryDuration, minBackoff);
         }

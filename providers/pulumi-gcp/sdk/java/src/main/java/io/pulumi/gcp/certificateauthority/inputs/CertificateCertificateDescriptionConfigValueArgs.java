@@ -21,7 +21,7 @@ public final class CertificateCertificateDescriptionConfigValueArgs extends io.p
      * 
      */
     @InputImport(name="keyUsages")
-    private final @Nullable Input<List<CertificateCertificateDescriptionConfigValueKeyUsageArgs>> keyUsages;
+        private final @Nullable Input<List<CertificateCertificateDescriptionConfigValueKeyUsageArgs>> keyUsages;
 
     public Input<List<CertificateCertificateDescriptionConfigValueKeyUsageArgs>> getKeyUsages() {
         return this.keyUsages == null ? Input.empty() : this.keyUsages;
@@ -64,7 +64,6 @@ public final class CertificateCertificateDescriptionConfigValueArgs extends io.p
             this.keyUsages = Input.ofNullable(keyUsages);
             return this;
         }
-
         public CertificateCertificateDescriptionConfigValueArgs build() {
             return new CertificateCertificateDescriptionConfigValueArgs(keyUsages);
         }

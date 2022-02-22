@@ -79,7 +79,6 @@ public final class DatabaseInstanceSettingsBackupConfigurationBackupRetentionSet
             this.retentionUnit = retentionUnit;
             return this;
         }
-
         public DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettings build() {
             return new DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettings(retainedBackups, retentionUnit);
         }

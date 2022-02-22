@@ -23,7 +23,7 @@ public final class AccessApprovalSettingsState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="enrolledAncestor")
-    private final @Nullable Input<Boolean> enrolledAncestor;
+        private final @Nullable Input<Boolean> enrolledAncestor;
 
     public Input<Boolean> getEnrolledAncestor() {
         return this.enrolledAncestor == null ? Input.empty() : this.enrolledAncestor;
@@ -38,7 +38,7 @@ public final class AccessApprovalSettingsState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="enrolledServices")
-    private final @Nullable Input<List<AccessApprovalSettingsEnrolledServiceGetArgs>> enrolledServices;
+        private final @Nullable Input<List<AccessApprovalSettingsEnrolledServiceGetArgs>> enrolledServices;
 
     public Input<List<AccessApprovalSettingsEnrolledServiceGetArgs>> getEnrolledServices() {
         return this.enrolledServices == null ? Input.empty() : this.enrolledServices;
@@ -49,7 +49,7 @@ public final class AccessApprovalSettingsState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -62,7 +62,7 @@ public final class AccessApprovalSettingsState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="notificationEmails")
-    private final @Nullable Input<List<String>> notificationEmails;
+        private final @Nullable Input<List<String>> notificationEmails;
 
     public Input<List<String>> getNotificationEmails() {
         return this.notificationEmails == null ? Input.empty() : this.notificationEmails;
@@ -79,7 +79,7 @@ public final class AccessApprovalSettingsState extends io.pulumi.resources.Resou
      */
     @Deprecated /* Deprecated in favor of `project_id` */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     @Deprecated /* Deprecated in favor of `project_id` */
     public Input<String> getProject() {
@@ -91,7 +91,7 @@ public final class AccessApprovalSettingsState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="projectId")
-    private final @Nullable Input<String> projectId;
+        private final @Nullable Input<String> projectId;
 
     public Input<String> getProjectId() {
         return this.projectId == null ? Input.empty() : this.projectId;
@@ -210,7 +210,6 @@ public final class AccessApprovalSettingsState extends io.pulumi.resources.Resou
             this.projectId = Input.ofNullable(projectId);
             return this;
         }
-
         public AccessApprovalSettingsState build() {
             return new AccessApprovalSettingsState(enrolledAncestor, enrolledServices, name, notificationEmails, project, projectId);
         }

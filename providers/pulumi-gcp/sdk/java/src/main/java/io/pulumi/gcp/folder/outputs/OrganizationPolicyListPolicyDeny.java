@@ -78,7 +78,6 @@ public final class OrganizationPolicyListPolicyDeny {
             this.values = values;
             return this;
         }
-
         public OrganizationPolicyListPolicyDeny build() {
             return new OrganizationPolicyListPolicyDeny(all, values);
         }

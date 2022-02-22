@@ -17,14 +17,14 @@ public final class GetGlobalForwardingRuleMetadataFilterFilterLabel extends io.p
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
     }
 
     @InputImport(name="value", required=true)
-    private final String value;
+        private final String value;
 
     public String getValue() {
         return this.value;
@@ -73,7 +73,6 @@ public final class GetGlobalForwardingRuleMetadataFilterFilterLabel extends io.p
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public GetGlobalForwardingRuleMetadataFilterFilterLabel build() {
             return new GetGlobalForwardingRuleMetadataFilterFilterLabel(name, value);
         }

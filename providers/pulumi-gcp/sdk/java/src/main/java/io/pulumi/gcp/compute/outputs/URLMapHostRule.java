@@ -104,7 +104,6 @@ public final class URLMapHostRule {
             this.pathMatcher = Objects.requireNonNull(pathMatcher);
             return this;
         }
-
         public URLMapHostRule build() {
             return new URLMapHostRule(description, hosts, pathMatcher);
         }

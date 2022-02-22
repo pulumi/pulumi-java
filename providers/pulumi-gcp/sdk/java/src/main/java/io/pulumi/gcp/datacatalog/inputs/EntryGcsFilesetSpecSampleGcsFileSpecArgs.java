@@ -21,7 +21,7 @@ public final class EntryGcsFilesetSpecSampleGcsFileSpecArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="filePath")
-    private final @Nullable Input<String> filePath;
+        private final @Nullable Input<String> filePath;
 
     public Input<String> getFilePath() {
         return this.filePath == null ? Input.empty() : this.filePath;
@@ -33,7 +33,7 @@ public final class EntryGcsFilesetSpecSampleGcsFileSpecArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="sizeBytes")
-    private final @Nullable Input<Integer> sizeBytes;
+        private final @Nullable Input<Integer> sizeBytes;
 
     public Input<Integer> getSizeBytes() {
         return this.sizeBytes == null ? Input.empty() : this.sizeBytes;
@@ -92,7 +92,6 @@ public final class EntryGcsFilesetSpecSampleGcsFileSpecArgs extends io.pulumi.re
             this.sizeBytes = Input.ofNullable(sizeBytes);
             return this;
         }
-
         public EntryGcsFilesetSpecSampleGcsFileSpecArgs build() {
             return new EntryGcsFilesetSpecSampleGcsFileSpecArgs(filePath, sizeBytes);
         }

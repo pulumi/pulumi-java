@@ -20,7 +20,7 @@ public final class ProjectMetadataArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="metadata", required=true)
-    private final Input<Map<String,String>> metadata;
+        private final Input<Map<String,String>> metadata;
 
     public Input<Map<String,String>> getMetadata() {
         return this.metadata;
@@ -32,7 +32,7 @@ public final class ProjectMetadataArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -91,7 +91,6 @@ public final class ProjectMetadataArgs extends io.pulumi.resources.ResourceArgs 
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public ProjectMetadataArgs build() {
             return new ProjectMetadataArgs(metadata, project);
         }

@@ -96,7 +96,6 @@ public final class AwsClusterNetworking {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
-
         public AwsClusterNetworking build() {
             return new AwsClusterNetworking(podAddressCidrBlocks, serviceAddressCidrBlocks, vpcId);
         }

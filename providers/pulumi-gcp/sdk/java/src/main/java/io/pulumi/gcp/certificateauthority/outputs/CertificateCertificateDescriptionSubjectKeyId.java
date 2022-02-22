@@ -46,7 +46,6 @@ public final class CertificateCertificateDescriptionSubjectKeyId {
             this.keyId = keyId;
             return this;
         }
-
         public CertificateCertificateDescriptionSubjectKeyId build() {
             return new CertificateCertificateDescriptionSubjectKeyId(keyId);
         }

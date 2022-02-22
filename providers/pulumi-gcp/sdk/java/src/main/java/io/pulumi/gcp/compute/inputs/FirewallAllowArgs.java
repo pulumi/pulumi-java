@@ -25,7 +25,7 @@ public final class FirewallAllowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ports")
-    private final @Nullable Input<List<String>> ports;
+        private final @Nullable Input<List<String>> ports;
 
     public Input<List<String>> getPorts() {
         return this.ports == null ? Input.empty() : this.ports;
@@ -39,7 +39,7 @@ public final class FirewallAllowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocol", required=true)
-    private final Input<String> protocol;
+        private final Input<String> protocol;
 
     public Input<String> getProtocol() {
         return this.protocol;
@@ -98,7 +98,6 @@ public final class FirewallAllowArgs extends io.pulumi.resources.ResourceArgs {
             this.protocol = Input.of(Objects.requireNonNull(protocol));
             return this;
         }
-
         public FirewallAllowArgs build() {
             return new FirewallAllowArgs(ports, protocol);
         }

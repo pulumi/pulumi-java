@@ -146,7 +146,6 @@ public final class GetServiceTemplateMetadata {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }
-
         public GetServiceTemplateMetadata build() {
             return new GetServiceTemplateMetadata(annotations, generation, labels, name, namespace, resourceVersion, selfLink, uid);
         }

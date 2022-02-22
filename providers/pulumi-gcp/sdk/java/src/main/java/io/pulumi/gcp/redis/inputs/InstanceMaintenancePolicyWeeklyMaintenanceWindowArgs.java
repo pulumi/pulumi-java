@@ -29,7 +29,7 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindowArgs extends 
      * 
      */
     @InputImport(name="day", required=true)
-    private final Input<String> day;
+        private final Input<String> day;
 
     public Input<String> getDay() {
         return this.day;
@@ -44,7 +44,7 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindowArgs extends 
      * 
      */
     @InputImport(name="duration")
-    private final @Nullable Input<String> duration;
+        private final @Nullable Input<String> duration;
 
     public Input<String> getDuration() {
         return this.duration == null ? Input.empty() : this.duration;
@@ -58,7 +58,7 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindowArgs extends 
      * 
      */
     @InputImport(name="startTime", required=true)
-    private final Input<InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeArgs> startTime;
+        private final Input<InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeArgs> startTime;
 
     public Input<InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeArgs> getStartTime() {
         return this.startTime;
@@ -132,7 +132,6 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindowArgs extends 
             this.startTime = Input.of(Objects.requireNonNull(startTime));
             return this;
         }
-
         public InstanceMaintenancePolicyWeeklyMaintenanceWindowArgs build() {
             return new InstanceMaintenancePolicyWeeklyMaintenanceWindowArgs(day, duration, startTime);
         }

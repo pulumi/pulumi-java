@@ -54,7 +54,6 @@ public final class ApplicationFeatureSettings {
             this.splitHealthChecks = Objects.requireNonNull(splitHealthChecks);
             return this;
         }
-
         public ApplicationFeatureSettings build() {
             return new ApplicationFeatureSettings(splitHealthChecks);
         }

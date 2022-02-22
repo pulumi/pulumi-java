@@ -465,7 +465,6 @@ public final class JobQuery {
             this.writeDisposition = writeDisposition;
             return this;
         }
-
         public JobQuery build() {
             return new JobQuery(allowLargeResults, createDisposition, defaultDataset, destinationEncryptionConfiguration, destinationTable, flattenResults, maximumBillingTier, maximumBytesBilled, parameterMode, priority, query, schemaUpdateOptions, scriptOptions, useLegacySql, useQueryCache, userDefinedFunctionResources, writeDisposition);
         }

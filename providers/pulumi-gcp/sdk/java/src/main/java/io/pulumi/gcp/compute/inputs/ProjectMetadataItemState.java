@@ -19,7 +19,7 @@ public final class ProjectMetadataItemState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="key")
-    private final @Nullable Input<String> key;
+        private final @Nullable Input<String> key;
 
     public Input<String> getKey() {
         return this.key == null ? Input.empty() : this.key;
@@ -31,7 +31,7 @@ public final class ProjectMetadataItemState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -42,7 +42,7 @@ public final class ProjectMetadataItemState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+        private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -116,7 +116,6 @@ public final class ProjectMetadataItemState extends io.pulumi.resources.Resource
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public ProjectMetadataItemState build() {
             return new ProjectMetadataItemState(key, project, value);
         }

@@ -60,7 +60,6 @@ public final class EnvironmentConfigWebServerNetworkAccessControlAllowedIpRange 
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public EnvironmentConfigWebServerNetworkAccessControlAllowedIpRange build() {
             return new EnvironmentConfigWebServerNetworkAccessControlAllowedIpRange(description, value);
         }

@@ -141,7 +141,6 @@ public final class SubscriptionPushConfig {
             this.pushEndpoint = Objects.requireNonNull(pushEndpoint);
             return this;
         }
-
         public SubscriptionPushConfig build() {
             return new SubscriptionPushConfig(attributes, oidcToken, pushEndpoint);
         }

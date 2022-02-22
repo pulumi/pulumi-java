@@ -92,7 +92,6 @@ public final class FirewallAllow {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public FirewallAllow build() {
             return new FirewallAllow(ports, protocol);
         }

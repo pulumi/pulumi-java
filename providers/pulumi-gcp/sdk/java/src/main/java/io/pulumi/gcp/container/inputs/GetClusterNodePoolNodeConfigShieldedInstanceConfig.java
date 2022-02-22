@@ -13,14 +13,14 @@ public final class GetClusterNodePoolNodeConfigShieldedInstanceConfig extends io
     public static final GetClusterNodePoolNodeConfigShieldedInstanceConfig Empty = new GetClusterNodePoolNodeConfigShieldedInstanceConfig();
 
     @InputImport(name="enableIntegrityMonitoring", required=true)
-    private final Boolean enableIntegrityMonitoring;
+        private final Boolean enableIntegrityMonitoring;
 
     public Boolean getEnableIntegrityMonitoring() {
         return this.enableIntegrityMonitoring;
     }
 
     @InputImport(name="enableSecureBoot", required=true)
-    private final Boolean enableSecureBoot;
+        private final Boolean enableSecureBoot;
 
     public Boolean getEnableSecureBoot() {
         return this.enableSecureBoot;
@@ -69,7 +69,6 @@ public final class GetClusterNodePoolNodeConfigShieldedInstanceConfig extends io
             this.enableSecureBoot = Objects.requireNonNull(enableSecureBoot);
             return this;
         }
-
         public GetClusterNodePoolNodeConfigShieldedInstanceConfig build() {
             return new GetClusterNodePoolNodeConfigShieldedInstanceConfig(enableIntegrityMonitoring, enableSecureBoot);
         }

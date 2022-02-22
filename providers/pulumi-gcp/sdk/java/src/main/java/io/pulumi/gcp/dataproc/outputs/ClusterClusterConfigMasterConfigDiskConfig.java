@@ -108,7 +108,6 @@ public final class ClusterClusterConfigMasterConfigDiskConfig {
             this.numLocalSsds = numLocalSsds;
             return this;
         }
-
         public ClusterClusterConfigMasterConfigDiskConfig build() {
             return new ClusterClusterConfigMasterConfigDiskConfig(bootDiskSizeGb, bootDiskType, numLocalSsds);
         }

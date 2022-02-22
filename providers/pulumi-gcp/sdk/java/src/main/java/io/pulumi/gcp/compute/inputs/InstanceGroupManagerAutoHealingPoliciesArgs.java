@@ -19,7 +19,7 @@ public final class InstanceGroupManagerAutoHealingPoliciesArgs extends io.pulumi
      * 
      */
     @InputImport(name="healthCheck", required=true)
-    private final Input<String> healthCheck;
+        private final Input<String> healthCheck;
 
     public Input<String> getHealthCheck() {
         return this.healthCheck;
@@ -31,7 +31,7 @@ public final class InstanceGroupManagerAutoHealingPoliciesArgs extends io.pulumi
      * 
      */
     @InputImport(name="initialDelaySec", required=true)
-    private final Input<Integer> initialDelaySec;
+        private final Input<Integer> initialDelaySec;
 
     public Input<Integer> getInitialDelaySec() {
         return this.initialDelaySec;
@@ -90,7 +90,6 @@ public final class InstanceGroupManagerAutoHealingPoliciesArgs extends io.pulumi
             this.initialDelaySec = Input.of(Objects.requireNonNull(initialDelaySec));
             return this;
         }
-
         public InstanceGroupManagerAutoHealingPoliciesArgs build() {
             return new InstanceGroupManagerAutoHealingPoliciesArgs(healthCheck, initialDelaySec);
         }

@@ -97,7 +97,6 @@ public final class BucketIAMBindingCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public BucketIAMBindingCondition build() {
             return new BucketIAMBindingCondition(description, expression, title);
         }

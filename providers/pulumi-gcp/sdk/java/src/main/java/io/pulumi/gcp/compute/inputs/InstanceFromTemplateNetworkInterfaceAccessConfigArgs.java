@@ -15,21 +15,21 @@ public final class InstanceFromTemplateNetworkInterfaceAccessConfigArgs extends 
     public static final InstanceFromTemplateNetworkInterfaceAccessConfigArgs Empty = new InstanceFromTemplateNetworkInterfaceAccessConfigArgs();
 
     @InputImport(name="natIp")
-    private final @Nullable Input<String> natIp;
+        private final @Nullable Input<String> natIp;
 
     public Input<String> getNatIp() {
         return this.natIp == null ? Input.empty() : this.natIp;
     }
 
     @InputImport(name="networkTier")
-    private final @Nullable Input<String> networkTier;
+        private final @Nullable Input<String> networkTier;
 
     public Input<String> getNetworkTier() {
         return this.networkTier == null ? Input.empty() : this.networkTier;
     }
 
     @InputImport(name="publicPtrDomainName")
-    private final @Nullable Input<String> publicPtrDomainName;
+        private final @Nullable Input<String> publicPtrDomainName;
 
     public Input<String> getPublicPtrDomainName() {
         return this.publicPtrDomainName == null ? Input.empty() : this.publicPtrDomainName;
@@ -103,7 +103,6 @@ public final class InstanceFromTemplateNetworkInterfaceAccessConfigArgs extends 
             this.publicPtrDomainName = Input.ofNullable(publicPtrDomainName);
             return this;
         }
-
         public InstanceFromTemplateNetworkInterfaceAccessConfigArgs build() {
             return new InstanceFromTemplateNetworkInterfaceAccessConfigArgs(natIp, networkTier, publicPtrDomainName);
         }

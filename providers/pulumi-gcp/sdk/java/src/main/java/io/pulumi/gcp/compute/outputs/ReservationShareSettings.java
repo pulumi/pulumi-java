@@ -82,7 +82,6 @@ public final class ReservationShareSettings {
             this.shareType = shareType;
             return this;
         }
-
         public ReservationShareSettings build() {
             return new ReservationShareSettings(projectMaps, shareType);
         }

@@ -22,7 +22,7 @@ public final class URLMapDefaultRouteActionRetryPolicyArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="numRetries")
-    private final @Nullable Input<Integer> numRetries;
+        private final @Nullable Input<Integer> numRetries;
 
     public Input<Integer> getNumRetries() {
         return this.numRetries == null ? Input.empty() : this.numRetries;
@@ -36,7 +36,7 @@ public final class URLMapDefaultRouteActionRetryPolicyArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="perTryTimeout")
-    private final @Nullable Input<URLMapDefaultRouteActionRetryPolicyPerTryTimeoutArgs> perTryTimeout;
+        private final @Nullable Input<URLMapDefaultRouteActionRetryPolicyPerTryTimeoutArgs> perTryTimeout;
 
     public Input<URLMapDefaultRouteActionRetryPolicyPerTryTimeoutArgs> getPerTryTimeout() {
         return this.perTryTimeout == null ? Input.empty() : this.perTryTimeout;
@@ -61,7 +61,7 @@ public final class URLMapDefaultRouteActionRetryPolicyArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="retryConditions")
-    private final @Nullable Input<List<String>> retryConditions;
+        private final @Nullable Input<List<String>> retryConditions;
 
     public Input<List<String>> getRetryConditions() {
         return this.retryConditions == null ? Input.empty() : this.retryConditions;
@@ -135,7 +135,6 @@ public final class URLMapDefaultRouteActionRetryPolicyArgs extends io.pulumi.res
             this.retryConditions = Input.ofNullable(retryConditions);
             return this;
         }
-
         public URLMapDefaultRouteActionRetryPolicyArgs build() {
             return new URLMapDefaultRouteActionRetryPolicyArgs(numRetries, perTryTimeout, retryConditions);
         }

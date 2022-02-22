@@ -21,7 +21,7 @@ public final class BucketIAMBindingState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="bucket")
-    private final @Nullable Input<String> bucket;
+        private final @Nullable Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket == null ? Input.empty() : this.bucket;
@@ -33,7 +33,7 @@ public final class BucketIAMBindingState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="condition")
-    private final @Nullable Input<BucketIAMBindingConditionGetArgs> condition;
+        private final @Nullable Input<BucketIAMBindingConditionGetArgs> condition;
 
     public Input<BucketIAMBindingConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -44,7 +44,7 @@ public final class BucketIAMBindingState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+        private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -65,7 +65,7 @@ public final class BucketIAMBindingState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="members")
-    private final @Nullable Input<List<String>> members;
+        private final @Nullable Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members == null ? Input.empty() : this.members;
@@ -78,7 +78,7 @@ public final class BucketIAMBindingState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+        private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -182,7 +182,6 @@ public final class BucketIAMBindingState extends io.pulumi.resources.ResourceArg
             this.role = Input.ofNullable(role);
             return this;
         }
-
         public BucketIAMBindingState build() {
             return new BucketIAMBindingState(bucket, condition, etag, members, role);
         }

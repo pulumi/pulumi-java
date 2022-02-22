@@ -15,14 +15,14 @@ public final class GetRegistryRepositoryArgs extends io.pulumi.resources.InvokeA
     public static final GetRegistryRepositoryArgs Empty = new GetRegistryRepositoryArgs();
 
     @InputImport(name="project")
-    private final @Nullable String project;
+        private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="region")
-    private final @Nullable String region;
+        private final @Nullable String region;
 
     public Optional<String> getRegion() {
         return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);
@@ -71,7 +71,6 @@ public final class GetRegistryRepositoryArgs extends io.pulumi.resources.InvokeA
             this.region = region;
             return this;
         }
-
         public GetRegistryRepositoryArgs build() {
             return new GetRegistryRepositoryArgs(project, region);
         }

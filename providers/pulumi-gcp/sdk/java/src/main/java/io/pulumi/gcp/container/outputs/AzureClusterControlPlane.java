@@ -252,7 +252,6 @@ public final class AzureClusterControlPlane {
             this.vmSize = vmSize;
             return this;
         }
-
         public AzureClusterControlPlane build() {
             return new AzureClusterControlPlane(databaseEncryption, mainVolume, proxyConfig, replicaPlacements, rootVolume, sshConfig, subnetId, tags, version, vmSize);
         }

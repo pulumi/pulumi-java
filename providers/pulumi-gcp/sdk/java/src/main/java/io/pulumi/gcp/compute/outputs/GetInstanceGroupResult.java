@@ -223,7 +223,6 @@ public final class GetInstanceGroupResult {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public GetInstanceGroupResult build() {
             return new GetInstanceGroupResult(description, id, instances, name, namedPorts, network, project, selfLink, size, zone);
         }

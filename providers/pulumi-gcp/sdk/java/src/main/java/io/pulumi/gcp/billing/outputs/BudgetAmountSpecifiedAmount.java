@@ -112,7 +112,6 @@ public final class BudgetAmountSpecifiedAmount {
             this.units = units;
             return this;
         }
-
         public BudgetAmountSpecifiedAmount build() {
             return new BudgetAmountSpecifiedAmount(currencyCode, nanos, units);
         }

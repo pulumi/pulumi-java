@@ -29,7 +29,7 @@ public final class AccessApprovalSettingsEnrolledServiceGetArgs extends io.pulum
      * 
      */
     @InputImport(name="cloudProduct", required=true)
-    private final Input<String> cloudProduct;
+        private final Input<String> cloudProduct;
 
     public Input<String> getCloudProduct() {
         return this.cloudProduct;
@@ -42,7 +42,7 @@ public final class AccessApprovalSettingsEnrolledServiceGetArgs extends io.pulum
      * 
      */
     @InputImport(name="enrollmentLevel")
-    private final @Nullable Input<String> enrollmentLevel;
+        private final @Nullable Input<String> enrollmentLevel;
 
     public Input<String> getEnrollmentLevel() {
         return this.enrollmentLevel == null ? Input.empty() : this.enrollmentLevel;
@@ -101,7 +101,6 @@ public final class AccessApprovalSettingsEnrolledServiceGetArgs extends io.pulum
             this.enrollmentLevel = Input.ofNullable(enrollmentLevel);
             return this;
         }
-
         public AccessApprovalSettingsEnrolledServiceGetArgs build() {
             return new AccessApprovalSettingsEnrolledServiceGetArgs(cloudProduct, enrollmentLevel);
         }

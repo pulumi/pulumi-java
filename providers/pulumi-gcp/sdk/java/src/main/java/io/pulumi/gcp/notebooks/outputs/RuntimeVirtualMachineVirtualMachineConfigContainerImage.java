@@ -78,7 +78,6 @@ public final class RuntimeVirtualMachineVirtualMachineConfigContainerImage {
             this.tag = tag;
             return this;
         }
-
         public RuntimeVirtualMachineVirtualMachineConfigContainerImage build() {
             return new RuntimeVirtualMachineVirtualMachineConfigContainerImage(repository, tag);
         }

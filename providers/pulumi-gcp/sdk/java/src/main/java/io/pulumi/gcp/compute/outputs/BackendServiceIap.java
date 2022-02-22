@@ -103,7 +103,6 @@ public final class BackendServiceIap {
             this.oauth2ClientSecretSha256 = oauth2ClientSecretSha256;
             return this;
         }
-
         public BackendServiceIap build() {
             return new BackendServiceIap(oauth2ClientId, oauth2ClientSecret, oauth2ClientSecretSha256);
         }

@@ -82,7 +82,6 @@ public final class ServicePerimeterSpecEgressPolicyEgressToOperationMethodSelect
             this.permission = permission;
             return this;
         }
-
         public ServicePerimeterSpecEgressPolicyEgressToOperationMethodSelector build() {
             return new ServicePerimeterSpecEgressPolicyEgressToOperationMethodSelector(method, permission);
         }

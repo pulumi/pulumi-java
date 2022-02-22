@@ -98,7 +98,6 @@ public final class InstanceGroupManagerVersion {
             this.targetSize = targetSize;
             return this;
         }
-
         public InstanceGroupManagerVersion build() {
             return new InstanceGroupManagerVersion(instanceTemplate, name, targetSize);
         }

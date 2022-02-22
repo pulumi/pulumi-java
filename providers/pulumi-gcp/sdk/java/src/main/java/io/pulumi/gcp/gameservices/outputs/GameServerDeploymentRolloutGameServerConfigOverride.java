@@ -79,7 +79,6 @@ public final class GameServerDeploymentRolloutGameServerConfigOverride {
             this.realmsSelector = realmsSelector;
             return this;
         }
-
         public GameServerDeploymentRolloutGameServerConfigOverride build() {
             return new GameServerDeploymentRolloutGameServerConfigOverride(configVersion, realmsSelector);
         }

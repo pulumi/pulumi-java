@@ -70,7 +70,6 @@ public final class IntentFollowupIntentInfo {
             this.parentFollowupIntentName = parentFollowupIntentName;
             return this;
         }
-
         public IntentFollowupIntentInfo build() {
             return new IntentFollowupIntentInfo(followupIntentName, parentFollowupIntentName);
         }

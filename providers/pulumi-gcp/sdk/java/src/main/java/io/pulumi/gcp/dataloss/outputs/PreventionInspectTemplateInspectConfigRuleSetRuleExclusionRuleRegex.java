@@ -79,7 +79,6 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
             this.pattern = Objects.requireNonNull(pattern);
             return this;
         }
-
         public PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegex build() {
             return new PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegex(groupIndexes, pattern);
         }

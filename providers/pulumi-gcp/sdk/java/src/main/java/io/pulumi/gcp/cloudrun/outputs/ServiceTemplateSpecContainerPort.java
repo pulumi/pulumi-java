@@ -98,7 +98,6 @@ public final class ServiceTemplateSpecContainerPort {
             this.protocol = protocol;
             return this;
         }
-
         public ServiceTemplateSpecContainerPort build() {
             return new ServiceTemplateSpecContainerPort(containerPort, name, protocol);
         }

@@ -86,7 +86,6 @@ public final class DomainMappingStatusCondition {
             this.type = type;
             return this;
         }
-
         public DomainMappingStatusCondition build() {
             return new DomainMappingStatusCondition(message, reason, status, type);
         }

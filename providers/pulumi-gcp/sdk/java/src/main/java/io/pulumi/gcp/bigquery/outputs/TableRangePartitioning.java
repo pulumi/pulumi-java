@@ -79,7 +79,6 @@ public final class TableRangePartitioning {
             this.range = Objects.requireNonNull(range);
             return this;
         }
-
         public TableRangePartitioning build() {
             return new TableRangePartitioning(field, range);
         }

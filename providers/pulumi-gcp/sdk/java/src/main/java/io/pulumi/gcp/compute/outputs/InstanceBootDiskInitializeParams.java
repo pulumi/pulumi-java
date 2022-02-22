@@ -139,7 +139,6 @@ public final class InstanceBootDiskInitializeParams {
             this.type = type;
             return this;
         }
-
         public InstanceBootDiskInitializeParams build() {
             return new InstanceBootDiskInitializeParams(image, labels, size, type);
         }

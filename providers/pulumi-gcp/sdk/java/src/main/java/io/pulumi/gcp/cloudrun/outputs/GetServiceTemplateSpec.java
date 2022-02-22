@@ -114,7 +114,6 @@ public final class GetServiceTemplateSpec {
             this.volumes = Objects.requireNonNull(volumes);
             return this;
         }
-
         public GetServiceTemplateSpec build() {
             return new GetServiceTemplateSpec(containerConcurrency, containers, serviceAccountName, servingState, timeoutSeconds, volumes);
         }

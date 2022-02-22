@@ -60,7 +60,6 @@ public final class GetOrganizationPolicyListPolicyAllow {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public GetOrganizationPolicyListPolicyAllow build() {
             return new GetOrganizationPolicyListPolicyAllow(all, values);
         }

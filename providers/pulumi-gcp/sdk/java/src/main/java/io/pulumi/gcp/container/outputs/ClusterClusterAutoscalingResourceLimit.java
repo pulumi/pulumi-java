@@ -102,7 +102,6 @@ public final class ClusterClusterAutoscalingResourceLimit {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public ClusterClusterAutoscalingResourceLimit build() {
             return new ClusterClusterAutoscalingResourceLimit(maximum, minimum, resourceType);
         }

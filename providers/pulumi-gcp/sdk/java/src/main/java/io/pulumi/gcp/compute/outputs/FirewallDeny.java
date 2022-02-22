@@ -92,7 +92,6 @@ public final class FirewallDeny {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public FirewallDeny build() {
             return new FirewallDeny(ports, protocol);
         }

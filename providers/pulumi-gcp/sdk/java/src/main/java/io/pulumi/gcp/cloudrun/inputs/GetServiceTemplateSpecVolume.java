@@ -19,14 +19,14 @@ public final class GetServiceTemplateSpecVolume extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
     }
 
     @InputImport(name="secrets", required=true)
-    private final List<GetServiceTemplateSpecVolumeSecret> secrets;
+        private final List<GetServiceTemplateSpecVolumeSecret> secrets;
 
     public List<GetServiceTemplateSpecVolumeSecret> getSecrets() {
         return this.secrets;
@@ -75,7 +75,6 @@ public final class GetServiceTemplateSpecVolume extends io.pulumi.resources.Invo
             this.secrets = Objects.requireNonNull(secrets);
             return this;
         }
-
         public GetServiceTemplateSpecVolume build() {
             return new GetServiceTemplateSpecVolume(name, secrets);
         }

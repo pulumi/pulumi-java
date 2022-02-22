@@ -19,7 +19,7 @@ public final class CertificateConfigX509ConfigPolicyIdArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="objectIdPaths", required=true)
-    private final Input<List<Integer>> objectIdPaths;
+        private final Input<List<Integer>> objectIdPaths;
 
     public Input<List<Integer>> getObjectIdPaths() {
         return this.objectIdPaths;
@@ -62,7 +62,6 @@ public final class CertificateConfigX509ConfigPolicyIdArgs extends io.pulumi.res
             this.objectIdPaths = Input.of(Objects.requireNonNull(objectIdPaths));
             return this;
         }
-
         public CertificateConfigX509ConfigPolicyIdArgs build() {
             return new CertificateConfigX509ConfigPolicyIdArgs(objectIdPaths);
         }

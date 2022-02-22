@@ -251,7 +251,6 @@ public final class GetInstanceNetworkInterface {
             this.subnetworkProject = Objects.requireNonNull(subnetworkProject);
             return this;
         }
-
         public GetInstanceNetworkInterface build() {
             return new GetInstanceNetworkInterface(accessConfigs, aliasIpRanges, ipv6AccessConfigs, ipv6AccessType, name, network, networkIp, nicType, queueCount, stackType, subnetwork, subnetworkProject);
         }

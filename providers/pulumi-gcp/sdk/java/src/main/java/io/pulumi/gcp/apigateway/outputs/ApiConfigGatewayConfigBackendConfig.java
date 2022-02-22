@@ -54,7 +54,6 @@ public final class ApiConfigGatewayConfigBackendConfig {
             this.googleServiceAccount = Objects.requireNonNull(googleServiceAccount);
             return this;
         }
-
         public ApiConfigGatewayConfigBackendConfig build() {
             return new ApiConfigGatewayConfigBackendConfig(googleServiceAccount);
         }

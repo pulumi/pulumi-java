@@ -44,7 +44,6 @@ public final class NodePoolNodeConfigEphemeralStorageConfig {
             this.localSsdCount = Objects.requireNonNull(localSsdCount);
             return this;
         }
-
         public NodePoolNodeConfigEphemeralStorageConfig build() {
             return new NodePoolNodeConfigEphemeralStorageConfig(localSsdCount);
         }

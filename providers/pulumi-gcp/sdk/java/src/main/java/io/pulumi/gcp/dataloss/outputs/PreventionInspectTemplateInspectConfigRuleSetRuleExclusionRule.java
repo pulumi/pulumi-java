@@ -129,7 +129,6 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
             this.regex = regex;
             return this;
         }
-
         public PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRule build() {
             return new PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRule(dictionary, excludeInfoTypes, matchingType, regex);
         }

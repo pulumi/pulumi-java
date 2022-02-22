@@ -19,7 +19,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPa
      * 
      */
     @InputImport(name="namespaceId")
-    private final @Nullable Input<String> namespaceId;
+        private final @Nullable Input<String> namespaceId;
 
     public Input<String> getNamespaceId() {
         return this.namespaceId == null ? Input.empty() : this.namespaceId;
@@ -30,7 +30,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPa
      * 
      */
     @InputImport(name="projectId", required=true)
-    private final Input<String> projectId;
+        private final Input<String> projectId;
 
     public Input<String> getProjectId() {
         return this.projectId;
@@ -89,7 +89,6 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPa
             this.projectId = Input.of(Objects.requireNonNull(projectId));
             return this;
         }
-
         public PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdGetArgs build() {
             return new PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdGetArgs(namespaceId, projectId);
         }

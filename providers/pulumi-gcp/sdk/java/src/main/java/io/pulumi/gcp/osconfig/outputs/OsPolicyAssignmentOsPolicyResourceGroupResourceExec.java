@@ -77,7 +77,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExec {
             this.validate = Objects.requireNonNull(validate);
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourceExec build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourceExec(enforce, validate);
         }

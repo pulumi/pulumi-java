@@ -24,7 +24,7 @@ public final class RouterPeerBfdArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minReceiveInterval")
-    private final @Nullable Input<Integer> minReceiveInterval;
+        private final @Nullable Input<Integer> minReceiveInterval;
 
     public Input<Integer> getMinReceiveInterval() {
         return this.minReceiveInterval == null ? Input.empty() : this.minReceiveInterval;
@@ -39,7 +39,7 @@ public final class RouterPeerBfdArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minTransmitInterval")
-    private final @Nullable Input<Integer> minTransmitInterval;
+        private final @Nullable Input<Integer> minTransmitInterval;
 
     public Input<Integer> getMinTransmitInterval() {
         return this.minTransmitInterval == null ? Input.empty() : this.minTransmitInterval;
@@ -52,7 +52,7 @@ public final class RouterPeerBfdArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="multiplier")
-    private final @Nullable Input<Integer> multiplier;
+        private final @Nullable Input<Integer> multiplier;
 
     public Input<Integer> getMultiplier() {
         return this.multiplier == null ? Input.empty() : this.multiplier;
@@ -68,7 +68,7 @@ public final class RouterPeerBfdArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sessionInitializationMode", required=true)
-    private final Input<String> sessionInitializationMode;
+        private final Input<String> sessionInitializationMode;
 
     public Input<String> getSessionInitializationMode() {
         return this.sessionInitializationMode;
@@ -157,7 +157,6 @@ public final class RouterPeerBfdArgs extends io.pulumi.resources.ResourceArgs {
             this.sessionInitializationMode = Input.of(Objects.requireNonNull(sessionInitializationMode));
             return this;
         }
-
         public RouterPeerBfdArgs build() {
             return new RouterPeerBfdArgs(minReceiveInterval, minTransmitInterval, multiplier, sessionInitializationMode);
         }

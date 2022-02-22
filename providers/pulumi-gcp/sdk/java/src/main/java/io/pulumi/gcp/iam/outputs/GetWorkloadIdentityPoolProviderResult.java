@@ -216,7 +216,6 @@ public final class GetWorkloadIdentityPoolProviderResult {
             this.workloadIdentityPoolProviderId = Objects.requireNonNull(workloadIdentityPoolProviderId);
             return this;
         }
-
         public GetWorkloadIdentityPoolProviderResult build() {
             return new GetWorkloadIdentityPoolProviderResult(attributeCondition, attributeMapping, aws, description, disabled, displayName, id, name, oidcs, project, state, workloadIdentityPoolId, workloadIdentityPoolProviderId);
         }

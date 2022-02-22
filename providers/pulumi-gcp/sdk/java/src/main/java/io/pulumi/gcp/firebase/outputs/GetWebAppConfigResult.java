@@ -172,7 +172,6 @@ public final class GetWebAppConfigResult {
             this.webAppId = Objects.requireNonNull(webAppId);
             return this;
         }
-
         public GetWebAppConfigResult build() {
             return new GetWebAppConfigResult(apiKey, authDomain, databaseUrl, id, locationId, measurementId, messagingSenderId, project, storageBucket, webAppId);
         }

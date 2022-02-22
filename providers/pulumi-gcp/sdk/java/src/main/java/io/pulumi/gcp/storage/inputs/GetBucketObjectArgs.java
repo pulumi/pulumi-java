@@ -19,7 +19,7 @@ public final class GetBucketObjectArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="bucket")
-    private final @Nullable String bucket;
+        private final @Nullable String bucket;
 
     public Optional<String> getBucket() {
         return this.bucket == null ? Optional.empty() : Optional.ofNullable(this.bucket);
@@ -30,7 +30,7 @@ public final class GetBucketObjectArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -79,7 +79,6 @@ public final class GetBucketObjectArgs extends io.pulumi.resources.InvokeArgs {
             this.name = name;
             return this;
         }
-
         public GetBucketObjectArgs build() {
             return new GetBucketObjectArgs(bucket, name);
         }

@@ -54,7 +54,6 @@ public final class NoteAttestationAuthorityHint {
             this.humanReadableName = Objects.requireNonNull(humanReadableName);
             return this;
         }
-
         public NoteAttestationAuthorityHint build() {
             return new NoteAttestationAuthorityHint(humanReadableName);
         }

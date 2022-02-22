@@ -80,7 +80,6 @@ public final class BucketWebsite {
             this.notFoundPage = notFoundPage;
             return this;
         }
-
         public BucketWebsite build() {
             return new BucketWebsite(mainPageSuffix, notFoundPage);
         }

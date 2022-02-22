@@ -46,7 +46,6 @@ public final class KeyRingImportJobPublicKey {
             this.pem = pem;
             return this;
         }
-
         public KeyRingImportJobPublicKey build() {
             return new KeyRingImportJobPublicKey(pem);
         }

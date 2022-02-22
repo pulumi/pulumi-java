@@ -54,7 +54,6 @@ public final class PreventionJobTriggerInspectJobAction {
             this.saveFindings = Objects.requireNonNull(saveFindings);
             return this;
         }
-
         public PreventionJobTriggerInspectJobAction build() {
             return new PreventionJobTriggerInspectJobAction(saveFindings);
         }

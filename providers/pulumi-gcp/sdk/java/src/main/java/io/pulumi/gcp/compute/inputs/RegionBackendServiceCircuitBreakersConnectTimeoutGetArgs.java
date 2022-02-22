@@ -21,7 +21,7 @@ public final class RegionBackendServiceCircuitBreakersConnectTimeoutGetArgs exte
      * 
      */
     @InputImport(name="nanos")
-    private final @Nullable Input<Integer> nanos;
+        private final @Nullable Input<Integer> nanos;
 
     public Input<Integer> getNanos() {
         return this.nanos == null ? Input.empty() : this.nanos;
@@ -33,7 +33,7 @@ public final class RegionBackendServiceCircuitBreakersConnectTimeoutGetArgs exte
      * 
      */
     @InputImport(name="seconds", required=true)
-    private final Input<Integer> seconds;
+        private final Input<Integer> seconds;
 
     public Input<Integer> getSeconds() {
         return this.seconds;
@@ -92,7 +92,6 @@ public final class RegionBackendServiceCircuitBreakersConnectTimeoutGetArgs exte
             this.seconds = Input.of(Objects.requireNonNull(seconds));
             return this;
         }
-
         public RegionBackendServiceCircuitBreakersConnectTimeoutGetArgs build() {
             return new RegionBackendServiceCircuitBreakersConnectTimeoutGetArgs(nanos, seconds);
         }

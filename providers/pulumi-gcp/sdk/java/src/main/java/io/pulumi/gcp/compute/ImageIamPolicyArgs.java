@@ -19,7 +19,7 @@ public final class ImageIamPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="image", required=true)
-    private final Input<String> image;
+        private final Input<String> image;
 
     public Input<String> getImage() {
         return this.image;
@@ -31,7 +31,7 @@ public final class ImageIamPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policyData", required=true)
-    private final Input<String> policyData;
+        private final Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData;
@@ -43,7 +43,7 @@ public final class ImageIamPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -117,7 +117,6 @@ public final class ImageIamPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public ImageIamPolicyArgs build() {
             return new ImageIamPolicyArgs(image, policyData, project);
         }

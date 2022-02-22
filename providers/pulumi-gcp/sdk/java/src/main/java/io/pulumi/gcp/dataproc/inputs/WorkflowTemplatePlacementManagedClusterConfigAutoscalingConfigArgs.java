@@ -19,7 +19,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfi
      * 
      */
     @InputImport(name="policy")
-    private final @Nullable Input<String> policy;
+        private final @Nullable Input<String> policy;
 
     public Input<String> getPolicy() {
         return this.policy == null ? Input.empty() : this.policy;
@@ -62,7 +62,6 @@ public final class WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfi
             this.policy = Input.ofNullable(policy);
             return this;
         }
-
         public WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigArgs build() {
             return new WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigArgs(policy);
         }

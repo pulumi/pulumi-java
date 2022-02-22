@@ -14,14 +14,14 @@ public final class GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule 
     public static final GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule Empty = new GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule();
 
     @InputImport(name="daysInCycle", required=true)
-    private final Integer daysInCycle;
+        private final Integer daysInCycle;
 
     public Integer getDaysInCycle() {
         return this.daysInCycle;
     }
 
     @InputImport(name="startTime", required=true)
-    private final String startTime;
+        private final String startTime;
 
     public String getStartTime() {
         return this.startTime;
@@ -70,7 +70,6 @@ public final class GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule 
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule build() {
             return new GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule(daysInCycle, startTime);
         }

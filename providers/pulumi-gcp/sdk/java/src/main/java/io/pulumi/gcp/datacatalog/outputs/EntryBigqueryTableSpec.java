@@ -76,7 +76,6 @@ public final class EntryBigqueryTableSpec {
             this.viewSpecs = viewSpecs;
             return this;
         }
-
         public EntryBigqueryTableSpec build() {
             return new EntryBigqueryTableSpec(tableSourceType, tableSpecs, viewSpecs);
         }

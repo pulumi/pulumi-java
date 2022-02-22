@@ -79,7 +79,6 @@ public final class PreventionStoredInfoTypeRegex {
             this.pattern = Objects.requireNonNull(pattern);
             return this;
         }
-
         public PreventionStoredInfoTypeRegex build() {
             return new PreventionStoredInfoTypeRegex(groupIndexes, pattern);
         }

@@ -74,7 +74,6 @@ public final class ApiConfigOpenapiDocumentDocument {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public ApiConfigOpenapiDocumentDocument build() {
             return new ApiConfigOpenapiDocumentDocument(contents, path);
         }

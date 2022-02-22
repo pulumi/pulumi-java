@@ -56,7 +56,6 @@ public final class MembershipEndpoint {
             this.gkeCluster = gkeCluster;
             return this;
         }
-
         public MembershipEndpoint build() {
             return new MembershipEndpoint(gkeCluster);
         }

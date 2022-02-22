@@ -121,7 +121,6 @@ public final class FolderSinkExclusion {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public FolderSinkExclusion build() {
             return new FolderSinkExclusion(description, disabled, filter, name);
         }

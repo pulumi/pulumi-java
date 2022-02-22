@@ -15,7 +15,7 @@ public final class JobSparkConfigLoggingConfigGetArgs extends io.pulumi.resource
     public static final JobSparkConfigLoggingConfigGetArgs Empty = new JobSparkConfigLoggingConfigGetArgs();
 
     @InputImport(name="driverLogLevels", required=true)
-    private final Input<Map<String,String>> driverLogLevels;
+        private final Input<Map<String,String>> driverLogLevels;
 
     public Input<Map<String,String>> getDriverLogLevels() {
         return this.driverLogLevels;
@@ -58,7 +58,6 @@ public final class JobSparkConfigLoggingConfigGetArgs extends io.pulumi.resource
             this.driverLogLevels = Input.of(Objects.requireNonNull(driverLogLevels));
             return this;
         }
-
         public JobSparkConfigLoggingConfigGetArgs build() {
             return new JobSparkConfigLoggingConfigGetArgs(driverLogLevels);
         }

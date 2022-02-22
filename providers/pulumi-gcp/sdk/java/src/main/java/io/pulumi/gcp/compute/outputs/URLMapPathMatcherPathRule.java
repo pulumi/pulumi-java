@@ -145,7 +145,6 @@ public final class URLMapPathMatcherPathRule {
             this.urlRedirect = urlRedirect;
             return this;
         }
-
         public URLMapPathMatcherPathRule build() {
             return new URLMapPathMatcherPathRule(paths, routeAction, service, urlRedirect);
         }

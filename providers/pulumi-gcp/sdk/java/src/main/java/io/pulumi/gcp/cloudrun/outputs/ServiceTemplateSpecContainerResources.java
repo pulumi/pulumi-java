@@ -88,7 +88,6 @@ public final class ServiceTemplateSpecContainerResources {
             this.requests = requests;
             return this;
         }
-
         public ServiceTemplateSpecContainerResources build() {
             return new ServiceTemplateSpecContainerResources(limits, requests);
         }

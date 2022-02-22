@@ -73,7 +73,6 @@ public final class SecretIamBindingCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public SecretIamBindingCondition build() {
             return new SecretIamBindingCondition(description, expression, title);
         }

@@ -17,7 +17,7 @@ public final class Hl7StoreIamBindingArgs extends io.pulumi.resources.ResourceAr
     public static final Hl7StoreIamBindingArgs Empty = new Hl7StoreIamBindingArgs();
 
     @InputImport(name="condition")
-    private final @Nullable Input<Hl7StoreIamBindingConditionArgs> condition;
+        private final @Nullable Input<Hl7StoreIamBindingConditionArgs> condition;
 
     public Input<Hl7StoreIamBindingConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -31,14 +31,14 @@ public final class Hl7StoreIamBindingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="hl7V2StoreId", required=true)
-    private final Input<String> hl7V2StoreId;
+        private final Input<String> hl7V2StoreId;
 
     public Input<String> getHl7V2StoreId() {
         return this.hl7V2StoreId;
     }
 
     @InputImport(name="members", required=true)
-    private final Input<List<String>> members;
+        private final Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members;
@@ -51,7 +51,7 @@ public final class Hl7StoreIamBindingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+        private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -140,7 +140,6 @@ public final class Hl7StoreIamBindingArgs extends io.pulumi.resources.ResourceAr
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }
-
         public Hl7StoreIamBindingArgs build() {
             return new Hl7StoreIamBindingArgs(condition, hl7V2StoreId, members, role);
         }

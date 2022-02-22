@@ -86,7 +86,6 @@ public final class LiteTopicRetentionConfig {
             this.period = period;
             return this;
         }
-
         public LiteTopicRetentionConfig build() {
             return new LiteTopicRetentionConfig(perPartitionBytes, period);
         }

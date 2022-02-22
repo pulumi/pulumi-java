@@ -205,7 +205,6 @@ public final class URLMapPathMatcherRouteRuleUrlRedirect {
             this.stripQuery = stripQuery;
             return this;
         }
-
         public URLMapPathMatcherRouteRuleUrlRedirect build() {
             return new URLMapPathMatcherRouteRuleUrlRedirect(hostRedirect, httpsRedirect, pathRedirect, prefixRedirect, redirectResponseCode, stripQuery);
         }

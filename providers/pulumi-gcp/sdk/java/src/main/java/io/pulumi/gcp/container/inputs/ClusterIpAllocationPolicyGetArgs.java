@@ -23,7 +23,7 @@ public final class ClusterIpAllocationPolicyGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="clusterIpv4CidrBlock")
-    private final @Nullable Input<String> clusterIpv4CidrBlock;
+        private final @Nullable Input<String> clusterIpv4CidrBlock;
 
     public Input<String> getClusterIpv4CidrBlock() {
         return this.clusterIpv4CidrBlock == null ? Input.empty() : this.clusterIpv4CidrBlock;
@@ -36,7 +36,7 @@ public final class ClusterIpAllocationPolicyGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="clusterSecondaryRangeName")
-    private final @Nullable Input<String> clusterSecondaryRangeName;
+        private final @Nullable Input<String> clusterSecondaryRangeName;
 
     public Input<String> getClusterSecondaryRangeName() {
         return this.clusterSecondaryRangeName == null ? Input.empty() : this.clusterSecondaryRangeName;
@@ -51,7 +51,7 @@ public final class ClusterIpAllocationPolicyGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="servicesIpv4CidrBlock")
-    private final @Nullable Input<String> servicesIpv4CidrBlock;
+        private final @Nullable Input<String> servicesIpv4CidrBlock;
 
     public Input<String> getServicesIpv4CidrBlock() {
         return this.servicesIpv4CidrBlock == null ? Input.empty() : this.servicesIpv4CidrBlock;
@@ -65,7 +65,7 @@ public final class ClusterIpAllocationPolicyGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="servicesSecondaryRangeName")
-    private final @Nullable Input<String> servicesSecondaryRangeName;
+        private final @Nullable Input<String> servicesSecondaryRangeName;
 
     public Input<String> getServicesSecondaryRangeName() {
         return this.servicesSecondaryRangeName == null ? Input.empty() : this.servicesSecondaryRangeName;
@@ -154,7 +154,6 @@ public final class ClusterIpAllocationPolicyGetArgs extends io.pulumi.resources.
             this.servicesSecondaryRangeName = Input.ofNullable(servicesSecondaryRangeName);
             return this;
         }
-
         public ClusterIpAllocationPolicyGetArgs build() {
             return new ClusterIpAllocationPolicyGetArgs(clusterIpv4CidrBlock, clusterSecondaryRangeName, servicesIpv4CidrBlock, servicesSecondaryRangeName);
         }

@@ -53,7 +53,6 @@ public final class CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKey
             this.objectIdPaths = Objects.requireNonNull(objectIdPaths);
             return this;
         }
-
         public CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsage build() {
             return new CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsage(objectIdPaths);
         }

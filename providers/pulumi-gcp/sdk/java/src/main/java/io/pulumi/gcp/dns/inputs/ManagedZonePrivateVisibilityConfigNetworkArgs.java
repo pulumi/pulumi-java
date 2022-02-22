@@ -20,7 +20,7 @@ public final class ManagedZonePrivateVisibilityConfigNetworkArgs extends io.pulu
      * 
      */
     @InputImport(name="networkUrl", required=true)
-    private final Input<String> networkUrl;
+        private final Input<String> networkUrl;
 
     public Input<String> getNetworkUrl() {
         return this.networkUrl;
@@ -63,7 +63,6 @@ public final class ManagedZonePrivateVisibilityConfigNetworkArgs extends io.pulu
             this.networkUrl = Input.of(Objects.requireNonNull(networkUrl));
             return this;
         }
-
         public ManagedZonePrivateVisibilityConfigNetworkArgs build() {
             return new ManagedZonePrivateVisibilityConfigNetworkArgs(networkUrl);
         }

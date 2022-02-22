@@ -225,7 +225,6 @@ public final class GetKeysZoneSigningKey {
             this.publicKey = Objects.requireNonNull(publicKey);
             return this;
         }
-
         public GetKeysZoneSigningKey build() {
             return new GetKeysZoneSigningKey(algorithm, creationTime, description, digests, id, isActive, keyLength, keyTag, publicKey);
         }

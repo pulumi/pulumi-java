@@ -86,7 +86,6 @@ public final class AttestorAttestationAuthorityNotePublicKeyPkixPublicKey {
             this.signatureAlgorithm = signatureAlgorithm;
             return this;
         }
-
         public AttestorAttestationAuthorityNotePublicKeyPkixPublicKey build() {
             return new AttestorAttestationAuthorityNotePublicKeyPkixPublicKey(publicKeyPem, signatureAlgorithm);
         }

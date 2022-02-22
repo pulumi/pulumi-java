@@ -151,7 +151,6 @@ public final class AccessLevelsAccessLevel {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public AccessLevelsAccessLevel build() {
             return new AccessLevelsAccessLevel(basic, custom, description, name, title);
         }

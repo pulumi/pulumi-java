@@ -98,7 +98,6 @@ public final class CertificateTemplateIdentityConstraints {
             this.celExpression = celExpression;
             return this;
         }
-
         public CertificateTemplateIdentityConstraints build() {
             return new CertificateTemplateIdentityConstraints(allowSubjectAltNamesPassthrough, allowSubjectPassthrough, celExpression);
         }

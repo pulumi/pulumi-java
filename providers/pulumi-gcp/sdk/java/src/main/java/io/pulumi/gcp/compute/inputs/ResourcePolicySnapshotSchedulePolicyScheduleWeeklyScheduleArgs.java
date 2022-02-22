@@ -20,7 +20,7 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleArg
      * 
      */
     @InputImport(name="dayOfWeeks", required=true)
-    private final Input<List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekArgs>> dayOfWeeks;
+        private final Input<List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekArgs>> dayOfWeeks;
 
     public Input<List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekArgs>> getDayOfWeeks() {
         return this.dayOfWeeks;
@@ -63,7 +63,6 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleArg
             this.dayOfWeeks = Input.of(Objects.requireNonNull(dayOfWeeks));
             return this;
         }
-
         public ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleArgs build() {
             return new ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleArgs(dayOfWeeks);
         }

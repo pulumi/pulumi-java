@@ -19,7 +19,7 @@ public final class SecurityPolicyAdaptiveProtectionConfigGetArgs extends io.pulu
      * 
      */
     @InputImport(name="layer7DdosDefenseConfig")
-    private final @Nullable Input<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigGetArgs> layer7DdosDefenseConfig;
+        private final @Nullable Input<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigGetArgs> layer7DdosDefenseConfig;
 
     public Input<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigGetArgs> getLayer7DdosDefenseConfig() {
         return this.layer7DdosDefenseConfig == null ? Input.empty() : this.layer7DdosDefenseConfig;
@@ -62,7 +62,6 @@ public final class SecurityPolicyAdaptiveProtectionConfigGetArgs extends io.pulu
             this.layer7DdosDefenseConfig = Input.ofNullable(layer7DdosDefenseConfig);
             return this;
         }
-
         public SecurityPolicyAdaptiveProtectionConfigGetArgs build() {
             return new SecurityPolicyAdaptiveProtectionConfigGetArgs(layer7DdosDefenseConfig);
         }

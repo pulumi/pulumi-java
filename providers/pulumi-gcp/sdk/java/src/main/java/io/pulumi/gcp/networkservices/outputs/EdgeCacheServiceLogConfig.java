@@ -79,7 +79,6 @@ public final class EdgeCacheServiceLogConfig {
             this.sampleRate = sampleRate;
             return this;
         }
-
         public EdgeCacheServiceLogConfig build() {
             return new EdgeCacheServiceLogConfig(enable, sampleRate);
         }

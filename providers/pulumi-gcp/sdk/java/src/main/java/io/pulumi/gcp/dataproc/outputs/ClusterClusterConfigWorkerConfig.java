@@ -191,7 +191,6 @@ public final class ClusterClusterConfigWorkerConfig {
             this.numInstances = numInstances;
             return this;
         }
-
         public ClusterClusterConfigWorkerConfig build() {
             return new ClusterClusterConfigWorkerConfig(accelerators, diskConfig, imageUri, instanceNames, machineType, minCpuPlatform, numInstances);
         }

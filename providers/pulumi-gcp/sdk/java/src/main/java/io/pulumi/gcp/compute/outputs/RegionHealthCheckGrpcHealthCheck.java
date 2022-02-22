@@ -153,7 +153,6 @@ public final class RegionHealthCheckGrpcHealthCheck {
             this.portSpecification = portSpecification;
             return this;
         }
-
         public RegionHealthCheckGrpcHealthCheck build() {
             return new RegionHealthCheckGrpcHealthCheck(grpcServiceName, port, portName, portSpecification);
         }

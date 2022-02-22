@@ -60,7 +60,6 @@ public final class GetServiceTemplateSpecContainerEnvFromConfigMapRef {
             this.optional = Objects.requireNonNull(optional);
             return this;
         }
-
         public GetServiceTemplateSpecContainerEnvFromConfigMapRef build() {
             return new GetServiceTemplateSpecContainerEnvFromConfigMapRef(localObjectReferences, optional);
         }

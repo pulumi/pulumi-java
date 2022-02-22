@@ -175,7 +175,6 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirect {
             this.stripQuery = stripQuery;
             return this;
         }
-
         public EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirect build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirect(hostRedirect, httpsRedirect, pathRedirect, prefixRedirect, redirectResponseCode, stripQuery);
         }

@@ -20,7 +20,7 @@ public final class DeviceCredentialGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="expirationTime")
-    private final @Nullable Input<String> expirationTime;
+        private final @Nullable Input<String> expirationTime;
 
     public Input<String> getExpirationTime() {
         return this.expirationTime == null ? Input.empty() : this.expirationTime;
@@ -32,7 +32,7 @@ public final class DeviceCredentialGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="publicKey", required=true)
-    private final Input<DeviceCredentialPublicKeyGetArgs> publicKey;
+        private final Input<DeviceCredentialPublicKeyGetArgs> publicKey;
 
     public Input<DeviceCredentialPublicKeyGetArgs> getPublicKey() {
         return this.publicKey;
@@ -91,7 +91,6 @@ public final class DeviceCredentialGetArgs extends io.pulumi.resources.ResourceA
             this.publicKey = Input.of(Objects.requireNonNull(publicKey));
             return this;
         }
-
         public DeviceCredentialGetArgs build() {
             return new DeviceCredentialGetArgs(expirationTime, publicKey);
         }

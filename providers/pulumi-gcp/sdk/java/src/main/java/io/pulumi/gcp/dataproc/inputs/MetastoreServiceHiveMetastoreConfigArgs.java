@@ -22,7 +22,7 @@ public final class MetastoreServiceHiveMetastoreConfigArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="configOverrides")
-    private final @Nullable Input<Map<String,String>> configOverrides;
+        private final @Nullable Input<Map<String,String>> configOverrides;
 
     public Input<Map<String,String>> getConfigOverrides() {
         return this.configOverrides == null ? Input.empty() : this.configOverrides;
@@ -34,7 +34,7 @@ public final class MetastoreServiceHiveMetastoreConfigArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="kerberosConfig")
-    private final @Nullable Input<MetastoreServiceHiveMetastoreConfigKerberosConfigArgs> kerberosConfig;
+        private final @Nullable Input<MetastoreServiceHiveMetastoreConfigKerberosConfigArgs> kerberosConfig;
 
     public Input<MetastoreServiceHiveMetastoreConfigKerberosConfigArgs> getKerberosConfig() {
         return this.kerberosConfig == null ? Input.empty() : this.kerberosConfig;
@@ -45,7 +45,7 @@ public final class MetastoreServiceHiveMetastoreConfigArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="version", required=true)
-    private final Input<String> version;
+        private final Input<String> version;
 
     public Input<String> getVersion() {
         return this.version;
@@ -119,7 +119,6 @@ public final class MetastoreServiceHiveMetastoreConfigArgs extends io.pulumi.res
             this.version = Input.of(Objects.requireNonNull(version));
             return this;
         }
-
         public MetastoreServiceHiveMetastoreConfigArgs build() {
             return new MetastoreServiceHiveMetastoreConfigArgs(configOverrides, kerberosConfig, version);
         }

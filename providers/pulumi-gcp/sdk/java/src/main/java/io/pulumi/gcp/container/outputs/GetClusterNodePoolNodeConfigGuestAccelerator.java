@@ -72,7 +72,6 @@ public final class GetClusterNodePoolNodeConfigGuestAccelerator {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetClusterNodePoolNodeConfigGuestAccelerator build() {
             return new GetClusterNodePoolNodeConfigGuestAccelerator(count, gpuPartitionSize, type);
         }

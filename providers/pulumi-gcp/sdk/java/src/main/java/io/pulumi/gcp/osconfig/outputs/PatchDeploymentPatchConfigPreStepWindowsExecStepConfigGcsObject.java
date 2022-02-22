@@ -95,7 +95,6 @@ public final class PatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObje
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public PatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObject build() {
             return new PatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObject(bucket, generationNumber, object);
         }

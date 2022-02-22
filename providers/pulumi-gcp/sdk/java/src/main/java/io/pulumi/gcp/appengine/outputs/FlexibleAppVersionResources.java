@@ -123,7 +123,6 @@ public final class FlexibleAppVersionResources {
             this.volumes = volumes;
             return this;
         }
-
         public FlexibleAppVersionResources build() {
             return new FlexibleAppVersionResources(cpu, diskGb, memoryGb, volumes);
         }

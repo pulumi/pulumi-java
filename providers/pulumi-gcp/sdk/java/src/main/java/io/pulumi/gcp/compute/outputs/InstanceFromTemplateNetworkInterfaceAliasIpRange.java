@@ -60,7 +60,6 @@ public final class InstanceFromTemplateNetworkInterfaceAliasIpRange {
             this.subnetworkRangeName = subnetworkRangeName;
             return this;
         }
-
         public InstanceFromTemplateNetworkInterfaceAliasIpRange build() {
             return new InstanceFromTemplateNetworkInterfaceAliasIpRange(ipCidrRange, subnetworkRangeName);
         }

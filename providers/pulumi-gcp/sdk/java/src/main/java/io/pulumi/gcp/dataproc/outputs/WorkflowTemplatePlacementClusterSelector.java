@@ -77,7 +77,6 @@ public final class WorkflowTemplatePlacementClusterSelector {
             this.zone = zone;
             return this;
         }
-
         public WorkflowTemplatePlacementClusterSelector build() {
             return new WorkflowTemplatePlacementClusterSelector(clusterLabels, zone);
         }

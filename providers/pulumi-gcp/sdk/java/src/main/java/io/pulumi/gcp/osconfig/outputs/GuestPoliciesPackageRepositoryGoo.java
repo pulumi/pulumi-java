@@ -80,7 +80,6 @@ public final class GuestPoliciesPackageRepositoryGoo {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public GuestPoliciesPackageRepositoryGoo build() {
             return new GuestPoliciesPackageRepositoryGoo(name, url);
         }

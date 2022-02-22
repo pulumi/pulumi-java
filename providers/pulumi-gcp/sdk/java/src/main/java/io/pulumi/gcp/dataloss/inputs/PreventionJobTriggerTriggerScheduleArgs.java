@@ -22,7 +22,7 @@ public final class PreventionJobTriggerTriggerScheduleArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="recurrencePeriodDuration")
-    private final @Nullable Input<String> recurrencePeriodDuration;
+        private final @Nullable Input<String> recurrencePeriodDuration;
 
     public Input<String> getRecurrencePeriodDuration() {
         return this.recurrencePeriodDuration == null ? Input.empty() : this.recurrencePeriodDuration;
@@ -65,7 +65,6 @@ public final class PreventionJobTriggerTriggerScheduleArgs extends io.pulumi.res
             this.recurrencePeriodDuration = Input.ofNullable(recurrencePeriodDuration);
             return this;
         }
-
         public PreventionJobTriggerTriggerScheduleArgs build() {
             return new PreventionJobTriggerTriggerScheduleArgs(recurrencePeriodDuration);
         }

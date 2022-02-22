@@ -60,7 +60,6 @@ public final class GetGlobalForwardingRuleMetadataFilter {
             this.filterMatchCriteria = Objects.requireNonNull(filterMatchCriteria);
             return this;
         }
-
         public GetGlobalForwardingRuleMetadataFilter build() {
             return new GetGlobalForwardingRuleMetadataFilter(filterLabels, filterMatchCriteria);
         }

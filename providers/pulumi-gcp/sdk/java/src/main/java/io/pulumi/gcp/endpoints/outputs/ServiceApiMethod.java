@@ -86,7 +86,6 @@ public final class ServiceApiMethod {
             this.syntax = syntax;
             return this;
         }
-
         public ServiceApiMethod build() {
             return new ServiceApiMethod(name, requestType, responseType, syntax);
         }

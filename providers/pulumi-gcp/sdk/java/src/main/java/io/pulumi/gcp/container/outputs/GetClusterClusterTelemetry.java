@@ -44,7 +44,6 @@ public final class GetClusterClusterTelemetry {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetClusterClusterTelemetry build() {
             return new GetClusterClusterTelemetry(type);
         }

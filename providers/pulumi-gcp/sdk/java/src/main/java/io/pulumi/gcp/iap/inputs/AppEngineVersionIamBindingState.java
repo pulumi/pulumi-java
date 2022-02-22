@@ -21,7 +21,7 @@ public final class AppEngineVersionIamBindingState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="appId")
-    private final @Nullable Input<String> appId;
+        private final @Nullable Input<String> appId;
 
     public Input<String> getAppId() {
         return this.appId == null ? Input.empty() : this.appId;
@@ -33,7 +33,7 @@ public final class AppEngineVersionIamBindingState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="condition")
-    private final @Nullable Input<AppEngineVersionIamBindingConditionGetArgs> condition;
+        private final @Nullable Input<AppEngineVersionIamBindingConditionGetArgs> condition;
 
     public Input<AppEngineVersionIamBindingConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -44,14 +44,14 @@ public final class AppEngineVersionIamBindingState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+        private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="members")
-    private final @Nullable Input<List<String>> members;
+        private final @Nullable Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members == null ? Input.empty() : this.members;
@@ -63,7 +63,7 @@ public final class AppEngineVersionIamBindingState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -76,7 +76,7 @@ public final class AppEngineVersionIamBindingState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+        private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -87,7 +87,7 @@ public final class AppEngineVersionIamBindingState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="service")
-    private final @Nullable Input<String> service;
+        private final @Nullable Input<String> service;
 
     public Input<String> getService() {
         return this.service == null ? Input.empty() : this.service;
@@ -98,7 +98,7 @@ public final class AppEngineVersionIamBindingState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="versionId")
-    private final @Nullable Input<String> versionId;
+        private final @Nullable Input<String> versionId;
 
     public Input<String> getVersionId() {
         return this.versionId == null ? Input.empty() : this.versionId;
@@ -247,7 +247,6 @@ public final class AppEngineVersionIamBindingState extends io.pulumi.resources.R
             this.versionId = Input.ofNullable(versionId);
             return this;
         }
-
         public AppEngineVersionIamBindingState build() {
             return new AppEngineVersionIamBindingState(appId, condition, etag, members, project, role, service, versionId);
         }

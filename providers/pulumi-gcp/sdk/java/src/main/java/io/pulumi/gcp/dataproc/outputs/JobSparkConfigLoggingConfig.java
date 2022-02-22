@@ -45,7 +45,6 @@ public final class JobSparkConfigLoggingConfig {
             this.driverLogLevels = Objects.requireNonNull(driverLogLevels);
             return this;
         }
-
         public JobSparkConfigLoggingConfig build() {
             return new JobSparkConfigLoggingConfig(driverLogLevels);
         }

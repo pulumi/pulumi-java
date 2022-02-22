@@ -82,7 +82,6 @@ public final class NodePoolUpgradeSettings {
             this.maxUnavailable = Objects.requireNonNull(maxUnavailable);
             return this;
         }
-
         public NodePoolUpgradeSettings build() {
             return new NodePoolUpgradeSettings(maxSurge, maxUnavailable);
         }

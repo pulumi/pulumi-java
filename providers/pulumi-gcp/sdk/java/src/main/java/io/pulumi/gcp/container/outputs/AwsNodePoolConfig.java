@@ -229,7 +229,6 @@ public final class AwsNodePoolConfig {
             this.taints = taints;
             return this;
         }
-
         public AwsNodePoolConfig build() {
             return new AwsNodePoolConfig(configEncryption, iamInstanceProfile, instanceType, labels, rootVolume, securityGroupIds, sshConfig, tags, taints);
         }

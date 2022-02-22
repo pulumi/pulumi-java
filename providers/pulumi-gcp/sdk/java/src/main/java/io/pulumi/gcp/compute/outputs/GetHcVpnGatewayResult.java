@@ -148,7 +148,6 @@ public final class GetHcVpnGatewayResult {
             this.vpnInterfaces = Objects.requireNonNull(vpnInterfaces);
             return this;
         }
-
         public GetHcVpnGatewayResult build() {
             return new GetHcVpnGatewayResult(description, id, name, network, project, region, selfLink, vpnInterfaces);
         }

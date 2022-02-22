@@ -18,7 +18,7 @@ public final class GuestPoliciesRecipeUpdateStepRpmInstallationGetArgs extends i
      * 
      */
     @InputImport(name="artifactId", required=true)
-    private final Input<String> artifactId;
+        private final Input<String> artifactId;
 
     public Input<String> getArtifactId() {
         return this.artifactId;
@@ -61,7 +61,6 @@ public final class GuestPoliciesRecipeUpdateStepRpmInstallationGetArgs extends i
             this.artifactId = Input.of(Objects.requireNonNull(artifactId));
             return this;
         }
-
         public GuestPoliciesRecipeUpdateStepRpmInstallationGetArgs build() {
             return new GuestPoliciesRecipeUpdateStepRpmInstallationGetArgs(artifactId);
         }

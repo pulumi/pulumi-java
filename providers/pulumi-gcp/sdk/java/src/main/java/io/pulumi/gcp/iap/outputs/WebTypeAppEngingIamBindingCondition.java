@@ -97,7 +97,6 @@ public final class WebTypeAppEngingIamBindingCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public WebTypeAppEngingIamBindingCondition build() {
             return new WebTypeAppEngingIamBindingCondition(description, expression, title);
         }

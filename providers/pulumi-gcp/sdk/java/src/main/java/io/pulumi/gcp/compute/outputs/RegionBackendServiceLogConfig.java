@@ -83,7 +83,6 @@ public final class RegionBackendServiceLogConfig {
             this.sampleRate = sampleRate;
             return this;
         }
-
         public RegionBackendServiceLogConfig build() {
             return new RegionBackendServiceLogConfig(enable, sampleRate);
         }

@@ -82,7 +82,6 @@ public final class AccessLevelsAccessLevelBasicConditionDevicePolicyOsConstraint
             this.osType = Objects.requireNonNull(osType);
             return this;
         }
-
         public AccessLevelsAccessLevelBasicConditionDevicePolicyOsConstraint build() {
             return new AccessLevelsAccessLevelBasicConditionDevicePolicyOsConstraint(minimumVersion, osType);
         }

@@ -99,7 +99,6 @@ public final class GetBackendServiceCdnPolicyCacheKeyPolicy {
             this.queryStringWhitelists = Objects.requireNonNull(queryStringWhitelists);
             return this;
         }
-
         public GetBackendServiceCdnPolicyCacheKeyPolicy build() {
             return new GetBackendServiceCdnPolicyCacheKeyPolicy(includeHost, includeProtocol, includeQueryString, queryStringBlacklists, queryStringWhitelists);
         }

@@ -121,7 +121,6 @@ public final class ProjectSinkExclusion {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public ProjectSinkExclusion build() {
             return new ProjectSinkExclusion(description, disabled, filter, name);
         }

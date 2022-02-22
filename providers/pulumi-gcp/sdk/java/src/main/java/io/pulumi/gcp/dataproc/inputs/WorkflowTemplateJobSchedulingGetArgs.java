@@ -19,7 +19,7 @@ public final class WorkflowTemplateJobSchedulingGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="maxFailuresPerHour")
-    private final @Nullable Input<Integer> maxFailuresPerHour;
+        private final @Nullable Input<Integer> maxFailuresPerHour;
 
     public Input<Integer> getMaxFailuresPerHour() {
         return this.maxFailuresPerHour == null ? Input.empty() : this.maxFailuresPerHour;
@@ -30,7 +30,7 @@ public final class WorkflowTemplateJobSchedulingGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="maxFailuresTotal")
-    private final @Nullable Input<Integer> maxFailuresTotal;
+        private final @Nullable Input<Integer> maxFailuresTotal;
 
     public Input<Integer> getMaxFailuresTotal() {
         return this.maxFailuresTotal == null ? Input.empty() : this.maxFailuresTotal;
@@ -89,7 +89,6 @@ public final class WorkflowTemplateJobSchedulingGetArgs extends io.pulumi.resour
             this.maxFailuresTotal = Input.ofNullable(maxFailuresTotal);
             return this;
         }
-
         public WorkflowTemplateJobSchedulingGetArgs build() {
             return new WorkflowTemplateJobSchedulingGetArgs(maxFailuresPerHour, maxFailuresTotal);
         }

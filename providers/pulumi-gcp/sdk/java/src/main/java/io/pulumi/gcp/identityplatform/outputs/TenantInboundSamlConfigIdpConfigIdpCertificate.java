@@ -56,7 +56,6 @@ public final class TenantInboundSamlConfigIdpConfigIdpCertificate {
             this.x509Certificate = x509Certificate;
             return this;
         }
-
         public TenantInboundSamlConfigIdpConfigIdpCertificate build() {
             return new TenantInboundSamlConfigIdpConfigIdpCertificate(x509Certificate);
         }

@@ -95,7 +95,6 @@ public final class ClusterNodeConfigTaint {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ClusterNodeConfigTaint build() {
             return new ClusterNodeConfigTaint(effect, key, value);
         }

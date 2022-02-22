@@ -144,7 +144,6 @@ public final class RegionBackendServiceConnectionTrackingPolicy {
             this.trackingMode = trackingMode;
             return this;
         }
-
         public RegionBackendServiceConnectionTrackingPolicy build() {
             return new RegionBackendServiceConnectionTrackingPolicy(connectionPersistenceOnUnhealthyBackends, idleTimeoutSec, trackingMode);
         }

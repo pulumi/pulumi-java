@@ -73,7 +73,6 @@ public final class TagKeyIamBindingCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public TagKeyIamBindingCondition build() {
             return new TagKeyIamBindingCondition(description, expression, title);
         }

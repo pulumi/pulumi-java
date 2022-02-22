@@ -80,7 +80,6 @@ public final class InstanceGroupManagerVersionTargetSize {
             this.percent = percent;
             return this;
         }
-
         public InstanceGroupManagerVersionTargetSize build() {
             return new InstanceGroupManagerVersionTargetSize(fixed, percent);
         }

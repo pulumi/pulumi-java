@@ -73,7 +73,6 @@ public final class GetServiceTraffic {
             this.revisionName = Objects.requireNonNull(revisionName);
             return this;
         }
-
         public GetServiceTraffic build() {
             return new GetServiceTraffic(latestRevision, percent, revisionName);
         }

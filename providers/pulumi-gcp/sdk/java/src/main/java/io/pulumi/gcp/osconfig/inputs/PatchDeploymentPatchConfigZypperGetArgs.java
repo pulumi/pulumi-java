@@ -21,7 +21,7 @@ public final class PatchDeploymentPatchConfigZypperGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="categories")
-    private final @Nullable Input<List<String>> categories;
+        private final @Nullable Input<List<String>> categories;
 
     public Input<List<String>> getCategories() {
         return this.categories == null ? Input.empty() : this.categories;
@@ -32,7 +32,7 @@ public final class PatchDeploymentPatchConfigZypperGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="excludes")
-    private final @Nullable Input<List<String>> excludes;
+        private final @Nullable Input<List<String>> excludes;
 
     public Input<List<String>> getExcludes() {
         return this.excludes == null ? Input.empty() : this.excludes;
@@ -44,7 +44,7 @@ public final class PatchDeploymentPatchConfigZypperGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="exclusivePatches")
-    private final @Nullable Input<List<String>> exclusivePatches;
+        private final @Nullable Input<List<String>> exclusivePatches;
 
     public Input<List<String>> getExclusivePatches() {
         return this.exclusivePatches == null ? Input.empty() : this.exclusivePatches;
@@ -55,7 +55,7 @@ public final class PatchDeploymentPatchConfigZypperGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="severities")
-    private final @Nullable Input<List<String>> severities;
+        private final @Nullable Input<List<String>> severities;
 
     public Input<List<String>> getSeverities() {
         return this.severities == null ? Input.empty() : this.severities;
@@ -66,7 +66,7 @@ public final class PatchDeploymentPatchConfigZypperGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="withOptional")
-    private final @Nullable Input<Boolean> withOptional;
+        private final @Nullable Input<Boolean> withOptional;
 
     public Input<Boolean> getWithOptional() {
         return this.withOptional == null ? Input.empty() : this.withOptional;
@@ -77,7 +77,7 @@ public final class PatchDeploymentPatchConfigZypperGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="withUpdate")
-    private final @Nullable Input<Boolean> withUpdate;
+        private final @Nullable Input<Boolean> withUpdate;
 
     public Input<Boolean> getWithUpdate() {
         return this.withUpdate == null ? Input.empty() : this.withUpdate;
@@ -196,7 +196,6 @@ public final class PatchDeploymentPatchConfigZypperGetArgs extends io.pulumi.res
             this.withUpdate = Input.ofNullable(withUpdate);
             return this;
         }
-
         public PatchDeploymentPatchConfigZypperGetArgs build() {
             return new PatchDeploymentPatchConfigZypperGetArgs(categories, excludes, exclusivePatches, severities, withOptional, withUpdate);
         }

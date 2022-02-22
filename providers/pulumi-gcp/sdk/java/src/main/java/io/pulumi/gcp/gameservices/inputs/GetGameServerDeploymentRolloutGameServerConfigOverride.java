@@ -15,14 +15,14 @@ public final class GetGameServerDeploymentRolloutGameServerConfigOverride extend
     public static final GetGameServerDeploymentRolloutGameServerConfigOverride Empty = new GetGameServerDeploymentRolloutGameServerConfigOverride();
 
     @InputImport(name="configVersion", required=true)
-    private final String configVersion;
+        private final String configVersion;
 
     public String getConfigVersion() {
         return this.configVersion;
     }
 
     @InputImport(name="realmsSelectors", required=true)
-    private final List<GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector> realmsSelectors;
+        private final List<GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector> realmsSelectors;
 
     public List<GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector> getRealmsSelectors() {
         return this.realmsSelectors;
@@ -71,7 +71,6 @@ public final class GetGameServerDeploymentRolloutGameServerConfigOverride extend
             this.realmsSelectors = Objects.requireNonNull(realmsSelectors);
             return this;
         }
-
         public GetGameServerDeploymentRolloutGameServerConfigOverride build() {
             return new GetGameServerDeploymentRolloutGameServerConfigOverride(configVersion, realmsSelectors);
         }

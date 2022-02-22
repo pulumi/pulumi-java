@@ -19,7 +19,7 @@ public final class BucketObjectCustomerEncryptionArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="encryptionAlgorithm")
-    private final @Nullable Input<String> encryptionAlgorithm;
+        private final @Nullable Input<String> encryptionAlgorithm;
 
     public Input<String> getEncryptionAlgorithm() {
         return this.encryptionAlgorithm == null ? Input.empty() : this.encryptionAlgorithm;
@@ -30,7 +30,7 @@ public final class BucketObjectCustomerEncryptionArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="encryptionKey", required=true)
-    private final Input<String> encryptionKey;
+        private final Input<String> encryptionKey;
 
     public Input<String> getEncryptionKey() {
         return this.encryptionKey;
@@ -89,7 +89,6 @@ public final class BucketObjectCustomerEncryptionArgs extends io.pulumi.resource
             this.encryptionKey = Input.of(Objects.requireNonNull(encryptionKey));
             return this;
         }
-
         public BucketObjectCustomerEncryptionArgs build() {
             return new BucketObjectCustomerEncryptionArgs(encryptionAlgorithm, encryptionKey);
         }

@@ -80,7 +80,6 @@ public final class CxFlowEventHandlerTriggerFulfillmentMessageText {
             this.texts = texts;
             return this;
         }
-
         public CxFlowEventHandlerTriggerFulfillmentMessageText build() {
             return new CxFlowEventHandlerTriggerFulfillmentMessageText(allowPlaybackInterruption, texts);
         }

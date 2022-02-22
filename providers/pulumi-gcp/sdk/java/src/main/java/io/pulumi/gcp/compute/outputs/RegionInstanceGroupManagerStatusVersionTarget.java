@@ -46,7 +46,6 @@ public final class RegionInstanceGroupManagerStatusVersionTarget {
             this.isReached = isReached;
             return this;
         }
-
         public RegionInstanceGroupManagerStatusVersionTarget build() {
             return new RegionInstanceGroupManagerStatusVersionTarget(isReached);
         }

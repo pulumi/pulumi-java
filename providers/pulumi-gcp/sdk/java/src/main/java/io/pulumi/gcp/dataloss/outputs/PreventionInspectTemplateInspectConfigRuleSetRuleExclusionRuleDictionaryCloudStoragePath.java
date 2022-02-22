@@ -52,7 +52,6 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryCloudStoragePath build() {
             return new PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryCloudStoragePath(path);
         }

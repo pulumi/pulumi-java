@@ -19,7 +19,7 @@ public final class AuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsageArgs 
      * 
      */
     @InputImport(name="objectIdPaths", required=true)
-    private final Input<List<Integer>> objectIdPaths;
+        private final Input<List<Integer>> objectIdPaths;
 
     public Input<List<Integer>> getObjectIdPaths() {
         return this.objectIdPaths;
@@ -62,7 +62,6 @@ public final class AuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsageArgs 
             this.objectIdPaths = Input.of(Objects.requireNonNull(objectIdPaths));
             return this;
         }
-
         public AuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsageArgs build() {
             return new AuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsageArgs(objectIdPaths);
         }

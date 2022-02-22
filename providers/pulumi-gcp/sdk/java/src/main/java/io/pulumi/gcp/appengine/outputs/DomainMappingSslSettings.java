@@ -121,7 +121,6 @@ public final class DomainMappingSslSettings {
             this.sslManagementType = Objects.requireNonNull(sslManagementType);
             return this;
         }
-
         public DomainMappingSslSettings build() {
             return new DomainMappingSslSettings(certificateId, pendingManagedCertificateId, sslManagementType);
         }

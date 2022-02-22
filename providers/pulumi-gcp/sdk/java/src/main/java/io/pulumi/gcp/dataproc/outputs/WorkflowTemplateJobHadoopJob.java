@@ -205,7 +205,6 @@ public final class WorkflowTemplateJobHadoopJob {
             this.properties = properties;
             return this;
         }
-
         public WorkflowTemplateJobHadoopJob build() {
             return new WorkflowTemplateJobHadoopJob(archiveUris, args, fileUris, jarFileUris, loggingConfig, mainClass, mainJarFileUri, properties);
         }

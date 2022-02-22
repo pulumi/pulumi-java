@@ -13,7 +13,7 @@ public final class GetClusterAddonsConfigGcePersistentDiskCsiDriverConfig extend
     public static final GetClusterAddonsConfigGcePersistentDiskCsiDriverConfig Empty = new GetClusterAddonsConfigGcePersistentDiskCsiDriverConfig();
 
     @InputImport(name="enabled", required=true)
-    private final Boolean enabled;
+        private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
@@ -51,7 +51,6 @@ public final class GetClusterAddonsConfigGcePersistentDiskCsiDriverConfig extend
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public GetClusterAddonsConfigGcePersistentDiskCsiDriverConfig build() {
             return new GetClusterAddonsConfigGcePersistentDiskCsiDriverConfig(enabled);
         }

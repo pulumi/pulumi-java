@@ -19,7 +19,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsArg
      * 
      */
     @InputImport(name="tableReference", required=true)
-    private final Input<PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceArgs> tableReference;
+        private final Input<PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceArgs> tableReference;
 
     public Input<PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceArgs> getTableReference() {
         return this.tableReference;
@@ -62,7 +62,6 @@ public final class PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsArg
             this.tableReference = Input.of(Objects.requireNonNull(tableReference));
             return this;
         }
-
         public PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsArgs build() {
             return new PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsArgs(tableReference);
         }

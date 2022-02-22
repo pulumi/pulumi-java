@@ -505,7 +505,6 @@ public final class GetBackendServiceResult {
             this.timeoutSec = Objects.requireNonNull(timeoutSec);
             return this;
         }
-
         public GetBackendServiceResult build() {
             return new GetBackendServiceResult(affinityCookieTtlSec, backends, cdnPolicies, circuitBreakers, connectionDrainingTimeoutSec, consistentHash, creationTimestamp, customRequestHeaders, customResponseHeaders, description, enableCdn, fingerprint, healthChecks, iaps, id, loadBalancingScheme, localityLbPolicy, logConfigs, name, outlierDetections, portName, project, protocol, securityPolicy, securitySettings, selfLink, sessionAffinity, timeoutSec);
         }

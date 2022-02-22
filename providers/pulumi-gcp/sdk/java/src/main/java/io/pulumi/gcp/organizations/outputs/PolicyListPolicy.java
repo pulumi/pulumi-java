@@ -115,7 +115,6 @@ public final class PolicyListPolicy {
             this.suggestedValue = suggestedValue;
             return this;
         }
-
         public PolicyListPolicy build() {
             return new PolicyListPolicy(allow, deny, inheritFromParent, suggestedValue);
         }

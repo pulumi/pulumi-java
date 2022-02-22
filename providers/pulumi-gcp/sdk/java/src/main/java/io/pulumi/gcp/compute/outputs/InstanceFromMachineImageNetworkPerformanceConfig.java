@@ -44,7 +44,6 @@ public final class InstanceFromMachineImageNetworkPerformanceConfig {
             this.totalEgressBandwidthTier = Objects.requireNonNull(totalEgressBandwidthTier);
             return this;
         }
-
         public InstanceFromMachineImageNetworkPerformanceConfig build() {
             return new InstanceFromMachineImageNetworkPerformanceConfig(totalEgressBandwidthTier);
         }

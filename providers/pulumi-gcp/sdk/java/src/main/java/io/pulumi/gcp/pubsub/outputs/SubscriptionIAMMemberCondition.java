@@ -73,7 +73,6 @@ public final class SubscriptionIAMMemberCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public SubscriptionIAMMemberCondition build() {
             return new SubscriptionIAMMemberCondition(description, expression, title);
         }

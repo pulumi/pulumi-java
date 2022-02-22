@@ -14,7 +14,7 @@ public final class ClusterResourceUsageExportConfigBigqueryDestinationArgs exten
     public static final ClusterResourceUsageExportConfigBigqueryDestinationArgs Empty = new ClusterResourceUsageExportConfigBigqueryDestinationArgs();
 
     @InputImport(name="datasetId", required=true)
-    private final Input<String> datasetId;
+        private final Input<String> datasetId;
 
     public Input<String> getDatasetId() {
         return this.datasetId;
@@ -57,7 +57,6 @@ public final class ClusterResourceUsageExportConfigBigqueryDestinationArgs exten
             this.datasetId = Input.of(Objects.requireNonNull(datasetId));
             return this;
         }
-
         public ClusterResourceUsageExportConfigBigqueryDestinationArgs build() {
             return new ClusterResourceUsageExportConfigBigqueryDestinationArgs(datasetId);
         }

@@ -19,7 +19,7 @@ public final class ClusterNodePoolNodeConfigGcfsConfigGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Input<Boolean> enabled;
+        private final Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled;
@@ -62,7 +62,6 @@ public final class ClusterNodePoolNodeConfigGcfsConfigGetArgs extends io.pulumi.
             this.enabled = Input.of(Objects.requireNonNull(enabled));
             return this;
         }
-
         public ClusterNodePoolNodeConfigGcfsConfigGetArgs build() {
             return new ClusterNodePoolNodeConfigGcfsConfigGetArgs(enabled);
         }

@@ -130,7 +130,6 @@ public final class GameServerConfigScalingConfigSchedule {
             this.startTime = startTime;
             return this;
         }
-
         public GameServerConfigScalingConfigSchedule build() {
             return new GameServerConfigScalingConfigSchedule(cronJobDuration, cronSpec, endTime, startTime);
         }

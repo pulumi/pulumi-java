@@ -56,7 +56,6 @@ public final class StandardAppVersionManualScaling {
             this.instances = Objects.requireNonNull(instances);
             return this;
         }
-
         public StandardAppVersionManualScaling build() {
             return new StandardAppVersionManualScaling(instances);
         }

@@ -19,7 +19,7 @@ public final class ApiConfigGatewayConfigBackendConfigGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="googleServiceAccount", required=true)
-    private final Input<String> googleServiceAccount;
+        private final Input<String> googleServiceAccount;
 
     public Input<String> getGoogleServiceAccount() {
         return this.googleServiceAccount;
@@ -62,7 +62,6 @@ public final class ApiConfigGatewayConfigBackendConfigGetArgs extends io.pulumi.
             this.googleServiceAccount = Input.of(Objects.requireNonNull(googleServiceAccount));
             return this;
         }
-
         public ApiConfigGatewayConfigBackendConfigGetArgs build() {
             return new ApiConfigGatewayConfigBackendConfigGetArgs(googleServiceAccount);
         }

@@ -121,7 +121,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSource {
             this.remote = remote;
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSource build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSource(allowInsecure, gcs, localPath, remote);
         }

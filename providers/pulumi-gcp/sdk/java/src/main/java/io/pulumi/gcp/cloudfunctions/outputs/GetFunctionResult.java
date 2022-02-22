@@ -505,7 +505,6 @@ public final class GetFunctionResult {
             this.vpcConnectorEgressSettings = Objects.requireNonNull(vpcConnectorEgressSettings);
             return this;
         }
-
         public GetFunctionResult build() {
             return new GetFunctionResult(availableMemoryMb, buildEnvironmentVariables, description, entryPoint, environmentVariables, eventTriggers, httpsTriggerUrl, id, ingressSettings, labels, maxInstances, minInstances, name, project, region, runtime, serviceAccountEmail, sourceArchiveBucket, sourceArchiveObject, sourceRepositories, timeout, triggerHttp, vpcConnector, vpcConnectorEgressSettings);
         }

@@ -13,7 +13,7 @@ public final class GetBucketEncryption extends io.pulumi.resources.InvokeArgs {
     public static final GetBucketEncryption Empty = new GetBucketEncryption();
 
     @InputImport(name="defaultKmsKeyName", required=true)
-    private final String defaultKmsKeyName;
+        private final String defaultKmsKeyName;
 
     public String getDefaultKmsKeyName() {
         return this.defaultKmsKeyName;
@@ -51,7 +51,6 @@ public final class GetBucketEncryption extends io.pulumi.resources.InvokeArgs {
             this.defaultKmsKeyName = Objects.requireNonNull(defaultKmsKeyName);
             return this;
         }
-
         public GetBucketEncryption build() {
             return new GetBucketEncryption(defaultKmsKeyName);
         }

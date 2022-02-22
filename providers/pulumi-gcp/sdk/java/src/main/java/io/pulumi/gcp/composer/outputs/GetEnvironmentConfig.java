@@ -239,7 +239,6 @@ public final class GetEnvironmentConfig {
             this.workloadsConfigs = Objects.requireNonNull(workloadsConfigs);
             return this;
         }
-
         public GetEnvironmentConfig build() {
             return new GetEnvironmentConfig(airflowUri, dagGcsPrefix, databaseConfigs, encryptionConfigs, environmentSize, gkeCluster, maintenanceWindows, masterAuthorizedNetworksConfigs, nodeConfigs, nodeCount, privateEnvironmentConfigs, softwareConfigs, webServerConfigs, webServerNetworkAccessControls, workloadsConfigs);
         }

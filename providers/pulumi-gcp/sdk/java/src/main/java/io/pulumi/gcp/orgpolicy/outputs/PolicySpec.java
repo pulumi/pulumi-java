@@ -146,7 +146,6 @@ public final class PolicySpec {
             this.updateTime = updateTime;
             return this;
         }
-
         public PolicySpec build() {
             return new PolicySpec(etag, inheritFromParent, reset, rules, updateTime);
         }

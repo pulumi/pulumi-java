@@ -118,7 +118,6 @@ public final class FlexibleAppVersionAutomaticScalingDiskUtilization {
             this.targetWriteOpsPerSecond = targetWriteOpsPerSecond;
             return this;
         }
-
         public FlexibleAppVersionAutomaticScalingDiskUtilization build() {
             return new FlexibleAppVersionAutomaticScalingDiskUtilization(targetReadBytesPerSecond, targetReadOpsPerSecond, targetWriteBytesPerSecond, targetWriteOpsPerSecond);
         }

@@ -59,7 +59,6 @@ public final class InstanceFromTemplateReservationAffinitySpecificReservation {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public InstanceFromTemplateReservationAffinitySpecificReservation build() {
             return new InstanceFromTemplateReservationAffinitySpecificReservation(key, values);
         }

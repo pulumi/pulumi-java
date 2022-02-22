@@ -81,7 +81,6 @@ public final class DomainMappingStatusResourceRecord {
             this.type = type;
             return this;
         }
-
         public DomainMappingStatusResourceRecord build() {
             return new DomainMappingStatusResourceRecord(name, rrdata, type);
         }

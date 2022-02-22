@@ -81,7 +81,6 @@ public final class CertificateConfigSubjectConfig {
             this.subjectAltName = subjectAltName;
             return this;
         }
-
         public CertificateConfigSubjectConfig build() {
             return new CertificateConfigSubjectConfig(subject, subjectAltName);
         }

@@ -18,7 +18,7 @@ public final class UptimeCheckConfigTcpCheckArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="port", required=true)
-    private final Input<Integer> port;
+        private final Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port;
@@ -61,7 +61,6 @@ public final class UptimeCheckConfigTcpCheckArgs extends io.pulumi.resources.Res
             this.port = Input.of(Objects.requireNonNull(port));
             return this;
         }
-
         public UptimeCheckConfigTcpCheckArgs build() {
             return new UptimeCheckConfigTcpCheckArgs(port);
         }

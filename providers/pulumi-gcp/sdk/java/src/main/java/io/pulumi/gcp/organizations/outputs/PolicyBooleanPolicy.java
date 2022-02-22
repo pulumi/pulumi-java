@@ -52,7 +52,6 @@ public final class PolicyBooleanPolicy {
             this.enforced = Objects.requireNonNull(enforced);
             return this;
         }
-
         public PolicyBooleanPolicy build() {
             return new PolicyBooleanPolicy(enforced);
         }

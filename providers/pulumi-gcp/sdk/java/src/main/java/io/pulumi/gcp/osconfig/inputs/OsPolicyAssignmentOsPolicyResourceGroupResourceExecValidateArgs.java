@@ -21,7 +21,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateAr
      * 
      */
     @InputImport(name="args")
-    private final @Nullable Input<List<String>> args;
+        private final @Nullable Input<List<String>> args;
 
     public Input<List<String>> getArgs() {
         return this.args == null ? Input.empty() : this.args;
@@ -32,7 +32,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateAr
      * 
      */
     @InputImport(name="file")
-    private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileArgs> file;
+        private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileArgs> file;
 
     public Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileArgs> getFile() {
         return this.file == null ? Input.empty() : this.file;
@@ -43,7 +43,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateAr
      * 
      */
     @InputImport(name="interpreter", required=true)
-    private final Input<String> interpreter;
+        private final Input<String> interpreter;
 
     public Input<String> getInterpreter() {
         return this.interpreter;
@@ -54,7 +54,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateAr
      * 
      */
     @InputImport(name="outputFilePath")
-    private final @Nullable Input<String> outputFilePath;
+        private final @Nullable Input<String> outputFilePath;
 
     public Input<String> getOutputFilePath() {
         return this.outputFilePath == null ? Input.empty() : this.outputFilePath;
@@ -65,7 +65,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateAr
      * 
      */
     @InputImport(name="script")
-    private final @Nullable Input<String> script;
+        private final @Nullable Input<String> script;
 
     public Input<String> getScript() {
         return this.script == null ? Input.empty() : this.script;
@@ -169,7 +169,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateAr
             this.script = Input.ofNullable(script);
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateArgs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateArgs(args, file, interpreter, outputFilePath, script);
         }

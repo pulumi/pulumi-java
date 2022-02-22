@@ -77,7 +77,6 @@ public final class RegionInstanceGroupManagerAutoHealingPolicies {
             this.initialDelaySec = Objects.requireNonNull(initialDelaySec);
             return this;
         }
-
         public RegionInstanceGroupManagerAutoHealingPolicies build() {
             return new RegionInstanceGroupManagerAutoHealingPolicies(healthCheck, initialDelaySec);
         }

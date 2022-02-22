@@ -71,7 +71,6 @@ public final class NodePoolNodeConfigTaint {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public NodePoolNodeConfigTaint build() {
             return new NodePoolNodeConfigTaint(effect, key, value);
         }

@@ -18,7 +18,7 @@ public final class SecurityPolicyRuleRateLimitOptionsRateLimitThresholdGetArgs e
      * 
      */
     @InputImport(name="count", required=true)
-    private final Input<Integer> count;
+        private final Input<Integer> count;
 
     public Input<Integer> getCount() {
         return this.count;
@@ -29,7 +29,7 @@ public final class SecurityPolicyRuleRateLimitOptionsRateLimitThresholdGetArgs e
      * 
      */
     @InputImport(name="intervalSec", required=true)
-    private final Input<Integer> intervalSec;
+        private final Input<Integer> intervalSec;
 
     public Input<Integer> getIntervalSec() {
         return this.intervalSec;
@@ -88,7 +88,6 @@ public final class SecurityPolicyRuleRateLimitOptionsRateLimitThresholdGetArgs e
             this.intervalSec = Input.of(Objects.requireNonNull(intervalSec));
             return this;
         }
-
         public SecurityPolicyRuleRateLimitOptionsRateLimitThresholdGetArgs build() {
             return new SecurityPolicyRuleRateLimitOptionsRateLimitThresholdGetArgs(count, intervalSec);
         }

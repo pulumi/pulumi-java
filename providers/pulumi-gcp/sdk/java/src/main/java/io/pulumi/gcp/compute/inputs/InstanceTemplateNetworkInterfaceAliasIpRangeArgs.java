@@ -23,7 +23,7 @@ public final class InstanceTemplateNetworkInterfaceAliasIpRangeArgs extends io.p
      * 
      */
     @InputImport(name="ipCidrRange", required=true)
-    private final Input<String> ipCidrRange;
+        private final Input<String> ipCidrRange;
 
     public Input<String> getIpCidrRange() {
         return this.ipCidrRange;
@@ -36,7 +36,7 @@ public final class InstanceTemplateNetworkInterfaceAliasIpRangeArgs extends io.p
      * 
      */
     @InputImport(name="subnetworkRangeName")
-    private final @Nullable Input<String> subnetworkRangeName;
+        private final @Nullable Input<String> subnetworkRangeName;
 
     public Input<String> getSubnetworkRangeName() {
         return this.subnetworkRangeName == null ? Input.empty() : this.subnetworkRangeName;
@@ -95,7 +95,6 @@ public final class InstanceTemplateNetworkInterfaceAliasIpRangeArgs extends io.p
             this.subnetworkRangeName = Input.ofNullable(subnetworkRangeName);
             return this;
         }
-
         public InstanceTemplateNetworkInterfaceAliasIpRangeArgs build() {
             return new InstanceTemplateNetworkInterfaceAliasIpRangeArgs(ipCidrRange, subnetworkRangeName);
         }

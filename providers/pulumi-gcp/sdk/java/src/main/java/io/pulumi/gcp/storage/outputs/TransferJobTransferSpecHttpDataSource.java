@@ -52,7 +52,6 @@ public final class TransferJobTransferSpecHttpDataSource {
             this.listUrl = Objects.requireNonNull(listUrl);
             return this;
         }
-
         public TransferJobTransferSpecHttpDataSource build() {
             return new TransferJobTransferSpecHttpDataSource(listUrl);
         }

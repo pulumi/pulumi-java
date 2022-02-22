@@ -147,7 +147,6 @@ public final class CertificateCertificateDescriptionSubjectDescription {
             this.subjects = subjects;
             return this;
         }
-
         public CertificateCertificateDescriptionSubjectDescription build() {
             return new CertificateCertificateDescriptionSubjectDescription(hexSerialNumber, lifetime, notAfterTime, notBeforeTime, subjectAltNames, subjects);
         }

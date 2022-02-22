@@ -81,7 +81,6 @@ public final class URLMapDefaultRouteActionFaultInjectionPolicyAbort {
             this.percentage = percentage;
             return this;
         }
-
         public URLMapDefaultRouteActionFaultInjectionPolicyAbort build() {
             return new URLMapDefaultRouteActionFaultInjectionPolicyAbort(httpStatus, percentage);
         }

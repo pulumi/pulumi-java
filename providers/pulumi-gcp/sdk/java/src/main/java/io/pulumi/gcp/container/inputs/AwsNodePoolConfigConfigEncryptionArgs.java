@@ -18,7 +18,7 @@ public final class AwsNodePoolConfigConfigEncryptionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="kmsKeyArn", required=true)
-    private final Input<String> kmsKeyArn;
+        private final Input<String> kmsKeyArn;
 
     public Input<String> getKmsKeyArn() {
         return this.kmsKeyArn;
@@ -61,7 +61,6 @@ public final class AwsNodePoolConfigConfigEncryptionArgs extends io.pulumi.resou
             this.kmsKeyArn = Input.of(Objects.requireNonNull(kmsKeyArn));
             return this;
         }
-
         public AwsNodePoolConfigConfigEncryptionArgs build() {
             return new AwsNodePoolConfigConfigEncryptionArgs(kmsKeyArn);
         }

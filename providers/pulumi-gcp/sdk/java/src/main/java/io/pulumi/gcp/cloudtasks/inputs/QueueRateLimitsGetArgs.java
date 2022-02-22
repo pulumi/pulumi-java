@@ -25,7 +25,7 @@ public final class QueueRateLimitsGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="maxBurstSize")
-    private final @Nullable Input<Integer> maxBurstSize;
+        private final @Nullable Input<Integer> maxBurstSize;
 
     public Input<Integer> getMaxBurstSize() {
         return this.maxBurstSize == null ? Input.empty() : this.maxBurstSize;
@@ -39,7 +39,7 @@ public final class QueueRateLimitsGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="maxConcurrentDispatches")
-    private final @Nullable Input<Integer> maxConcurrentDispatches;
+        private final @Nullable Input<Integer> maxConcurrentDispatches;
 
     public Input<Integer> getMaxConcurrentDispatches() {
         return this.maxConcurrentDispatches == null ? Input.empty() : this.maxConcurrentDispatches;
@@ -51,7 +51,7 @@ public final class QueueRateLimitsGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="maxDispatchesPerSecond")
-    private final @Nullable Input<Double> maxDispatchesPerSecond;
+        private final @Nullable Input<Double> maxDispatchesPerSecond;
 
     public Input<Double> getMaxDispatchesPerSecond() {
         return this.maxDispatchesPerSecond == null ? Input.empty() : this.maxDispatchesPerSecond;
@@ -125,7 +125,6 @@ public final class QueueRateLimitsGetArgs extends io.pulumi.resources.ResourceAr
             this.maxDispatchesPerSecond = Input.ofNullable(maxDispatchesPerSecond);
             return this;
         }
-
         public QueueRateLimitsGetArgs build() {
             return new QueueRateLimitsGetArgs(maxBurstSize, maxConcurrentDispatches, maxDispatchesPerSecond);
         }

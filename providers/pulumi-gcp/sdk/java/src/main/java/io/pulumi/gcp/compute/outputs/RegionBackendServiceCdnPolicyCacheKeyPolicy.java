@@ -167,7 +167,6 @@ public final class RegionBackendServiceCdnPolicyCacheKeyPolicy {
             this.queryStringWhitelists = queryStringWhitelists;
             return this;
         }
-
         public RegionBackendServiceCdnPolicyCacheKeyPolicy build() {
             return new RegionBackendServiceCdnPolicyCacheKeyPolicy(includeHost, includeProtocol, includeQueryString, queryStringBlacklists, queryStringWhitelists);
         }

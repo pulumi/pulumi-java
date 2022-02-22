@@ -439,7 +439,6 @@ public final class RuntimeVirtualMachineVirtualMachineConfig {
             this.zone = zone;
             return this;
         }
-
         public RuntimeVirtualMachineVirtualMachineConfig build() {
             return new RuntimeVirtualMachineVirtualMachineConfig(acceleratorConfig, containerImages, dataDisk, encryptionConfig, guestAttributes, internalIpOnly, labels, machineType, metadata, network, nicType, shieldedInstanceConfig, subnet, tags, zone);
         }

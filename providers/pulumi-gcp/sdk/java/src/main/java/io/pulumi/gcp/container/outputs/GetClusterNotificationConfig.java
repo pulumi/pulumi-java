@@ -45,7 +45,6 @@ public final class GetClusterNotificationConfig {
             this.pubsubs = Objects.requireNonNull(pubsubs);
             return this;
         }
-
         public GetClusterNotificationConfig build() {
             return new GetClusterNotificationConfig(pubsubs);
         }

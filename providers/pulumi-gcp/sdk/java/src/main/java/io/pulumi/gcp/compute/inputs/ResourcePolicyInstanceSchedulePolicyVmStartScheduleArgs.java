@@ -18,7 +18,7 @@ public final class ResourcePolicyInstanceSchedulePolicyVmStartScheduleArgs exten
      * 
      */
     @InputImport(name="schedule", required=true)
-    private final Input<String> schedule;
+        private final Input<String> schedule;
 
     public Input<String> getSchedule() {
         return this.schedule;
@@ -61,7 +61,6 @@ public final class ResourcePolicyInstanceSchedulePolicyVmStartScheduleArgs exten
             this.schedule = Input.of(Objects.requireNonNull(schedule));
             return this;
         }
-
         public ResourcePolicyInstanceSchedulePolicyVmStartScheduleArgs build() {
             return new ResourcePolicyInstanceSchedulePolicyVmStartScheduleArgs(schedule);
         }

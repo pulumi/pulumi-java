@@ -17,7 +17,7 @@ public final class GetFunctionEventTriggerFailurePolicy extends io.pulumi.resour
      * 
      */
     @InputImport(name="retry", required=true)
-    private final Boolean retry;
+        private final Boolean retry;
 
     public Boolean getRetry() {
         return this.retry;
@@ -55,7 +55,6 @@ public final class GetFunctionEventTriggerFailurePolicy extends io.pulumi.resour
             this.retry = Objects.requireNonNull(retry);
             return this;
         }
-
         public GetFunctionEventTriggerFailurePolicy build() {
             return new GetFunctionEventTriggerFailurePolicy(retry);
         }

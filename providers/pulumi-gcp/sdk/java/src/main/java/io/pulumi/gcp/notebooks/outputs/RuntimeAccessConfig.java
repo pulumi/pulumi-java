@@ -105,7 +105,6 @@ public final class RuntimeAccessConfig {
             this.runtimeOwner = runtimeOwner;
             return this;
         }
-
         public RuntimeAccessConfig build() {
             return new RuntimeAccessConfig(accessType, proxyUri, runtimeOwner);
         }

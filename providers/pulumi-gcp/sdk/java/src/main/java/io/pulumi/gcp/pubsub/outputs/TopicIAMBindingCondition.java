@@ -73,7 +73,6 @@ public final class TopicIAMBindingCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public TopicIAMBindingCondition build() {
             return new TopicIAMBindingCondition(description, expression, title);
         }

@@ -21,7 +21,7 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicyIngressTo
      * 
      */
     @InputImport(name="method")
-    private final @Nullable Input<String> method;
+        private final @Nullable Input<String> method;
 
     public Input<String> getMethod() {
         return this.method == null ? Input.empty() : this.method;
@@ -33,7 +33,7 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicyIngressTo
      * 
      */
     @InputImport(name="permission")
-    private final @Nullable Input<String> permission;
+        private final @Nullable Input<String> permission;
 
     public Input<String> getPermission() {
         return this.permission == null ? Input.empty() : this.permission;
@@ -92,7 +92,6 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicyIngressTo
             this.permission = Input.ofNullable(permission);
             return this;
         }
-
         public ServicePerimetersServicePerimeterStatusIngressPolicyIngressToOperationMethodSelectorArgs build() {
             return new ServicePerimetersServicePerimeterStatusIngressPolicyIngressToOperationMethodSelectorArgs(method, permission);
         }

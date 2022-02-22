@@ -93,7 +93,6 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsOutputConfig 
             this.table = Objects.requireNonNull(table);
             return this;
         }
-
         public PreventionJobTriggerInspectJobActionSaveFindingsOutputConfig build() {
             return new PreventionJobTriggerInspectJobActionSaveFindingsOutputConfig(outputSchema, table);
         }

@@ -60,7 +60,6 @@ public final class GetServiceTemplate {
             this.specs = Objects.requireNonNull(specs);
             return this;
         }
-
         public GetServiceTemplate build() {
             return new GetServiceTemplate(metadatas, specs);
         }

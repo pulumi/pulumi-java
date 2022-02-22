@@ -86,7 +86,6 @@ public final class DeviceConfig {
             this.version = version;
             return this;
         }
-
         public DeviceConfig build() {
             return new DeviceConfig(binaryData, cloudUpdateTime, deviceAckTime, version);
         }

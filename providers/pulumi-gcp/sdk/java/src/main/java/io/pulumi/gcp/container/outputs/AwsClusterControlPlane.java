@@ -316,7 +316,6 @@ public final class AwsClusterControlPlane {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public AwsClusterControlPlane build() {
             return new AwsClusterControlPlane(awsServicesAuthentication, configEncryption, databaseEncryption, iamInstanceProfile, instanceType, mainVolume, proxyConfig, rootVolume, securityGroupIds, sshConfig, subnetIds, tags, version);
         }

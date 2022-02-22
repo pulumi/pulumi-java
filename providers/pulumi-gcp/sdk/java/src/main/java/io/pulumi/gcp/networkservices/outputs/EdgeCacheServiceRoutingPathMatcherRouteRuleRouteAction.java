@@ -105,7 +105,6 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteAction {
             this.urlRewrite = urlRewrite;
             return this;
         }
-
         public EdgeCacheServiceRoutingPathMatcherRouteRuleRouteAction build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRuleRouteAction(cdnPolicy, corsPolicy, urlRewrite);
         }

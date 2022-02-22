@@ -99,7 +99,6 @@ public final class TransferJobTransferSpecTransferOptions {
             this.overwriteObjectsAlreadyExistingInSink = overwriteObjectsAlreadyExistingInSink;
             return this;
         }
-
         public TransferJobTransferSpecTransferOptions build() {
             return new TransferJobTransferSpecTransferOptions(deleteObjectsFromSourceAfterTransfer, deleteObjectsUniqueInSink, overwriteObjectsAlreadyExistingInSink);
         }

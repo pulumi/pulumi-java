@@ -78,7 +78,6 @@ public final class ConnectorSubnet {
             this.projectId = projectId;
             return this;
         }
-
         public ConnectorSubnet build() {
             return new ConnectorSubnet(name, projectId);
         }

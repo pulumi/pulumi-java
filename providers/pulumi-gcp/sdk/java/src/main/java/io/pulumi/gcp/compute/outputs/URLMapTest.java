@@ -118,7 +118,6 @@ public final class URLMapTest {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public URLMapTest build() {
             return new URLMapTest(description, host, path, service);
         }

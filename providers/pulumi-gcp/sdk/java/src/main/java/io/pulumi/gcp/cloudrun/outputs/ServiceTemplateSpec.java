@@ -200,7 +200,6 @@ public final class ServiceTemplateSpec {
             this.volumes = volumes;
             return this;
         }
-
         public ServiceTemplateSpec build() {
             return new ServiceTemplateSpec(containerConcurrency, containers, serviceAccountName, servingState, timeoutSeconds, volumes);
         }

@@ -21,7 +21,7 @@ public final class CxPageTransitionRouteGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="condition")
-    private final @Nullable Input<String> condition;
+        private final @Nullable Input<String> condition;
 
     public Input<String> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -33,7 +33,7 @@ public final class CxPageTransitionRouteGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="intent")
-    private final @Nullable Input<String> intent;
+        private final @Nullable Input<String> intent;
 
     public Input<String> getIntent() {
         return this.intent == null ? Input.empty() : this.intent;
@@ -45,7 +45,7 @@ public final class CxPageTransitionRouteGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -57,7 +57,7 @@ public final class CxPageTransitionRouteGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="targetFlow")
-    private final @Nullable Input<String> targetFlow;
+        private final @Nullable Input<String> targetFlow;
 
     public Input<String> getTargetFlow() {
         return this.targetFlow == null ? Input.empty() : this.targetFlow;
@@ -69,7 +69,7 @@ public final class CxPageTransitionRouteGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="targetPage")
-    private final @Nullable Input<String> targetPage;
+        private final @Nullable Input<String> targetPage;
 
     public Input<String> getTargetPage() {
         return this.targetPage == null ? Input.empty() : this.targetPage;
@@ -81,7 +81,7 @@ public final class CxPageTransitionRouteGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="triggerFulfillment")
-    private final @Nullable Input<CxPageTransitionRouteTriggerFulfillmentGetArgs> triggerFulfillment;
+        private final @Nullable Input<CxPageTransitionRouteTriggerFulfillmentGetArgs> triggerFulfillment;
 
     public Input<CxPageTransitionRouteTriggerFulfillmentGetArgs> getTriggerFulfillment() {
         return this.triggerFulfillment == null ? Input.empty() : this.triggerFulfillment;
@@ -200,7 +200,6 @@ public final class CxPageTransitionRouteGetArgs extends io.pulumi.resources.Reso
             this.triggerFulfillment = Input.ofNullable(triggerFulfillment);
             return this;
         }
-
         public CxPageTransitionRouteGetArgs build() {
             return new CxPageTransitionRouteGetArgs(condition, intent, name, targetFlow, targetPage, triggerFulfillment);
         }

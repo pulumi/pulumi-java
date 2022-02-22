@@ -60,7 +60,6 @@ public final class GetSecretReplication {
             this.userManageds = Objects.requireNonNull(userManageds);
             return this;
         }
-
         public GetSecretReplication build() {
             return new GetSecretReplication(automatic, userManageds);
         }

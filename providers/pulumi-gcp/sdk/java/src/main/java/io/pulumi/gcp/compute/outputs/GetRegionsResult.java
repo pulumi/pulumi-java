@@ -103,7 +103,6 @@ public final class GetRegionsResult {
             this.status = status;
             return this;
         }
-
         public GetRegionsResult build() {
             return new GetRegionsResult(id, names, project, status);
         }

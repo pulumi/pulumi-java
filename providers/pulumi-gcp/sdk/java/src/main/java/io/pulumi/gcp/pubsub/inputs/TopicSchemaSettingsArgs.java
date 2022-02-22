@@ -21,7 +21,7 @@ public final class TopicSchemaSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="encoding")
-    private final @Nullable Input<String> encoding;
+        private final @Nullable Input<String> encoding;
 
     public Input<String> getEncoding() {
         return this.encoding == null ? Input.empty() : this.encoding;
@@ -35,7 +35,7 @@ public final class TopicSchemaSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="schema", required=true)
-    private final Input<String> schema;
+        private final Input<String> schema;
 
     public Input<String> getSchema() {
         return this.schema;
@@ -94,7 +94,6 @@ public final class TopicSchemaSettingsArgs extends io.pulumi.resources.ResourceA
             this.schema = Input.of(Objects.requireNonNull(schema));
             return this;
         }
-
         public TopicSchemaSettingsArgs build() {
             return new TopicSchemaSettingsArgs(encoding, schema);
         }

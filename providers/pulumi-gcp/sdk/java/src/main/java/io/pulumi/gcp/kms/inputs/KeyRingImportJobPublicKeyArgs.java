@@ -15,7 +15,7 @@ public final class KeyRingImportJobPublicKeyArgs extends io.pulumi.resources.Res
     public static final KeyRingImportJobPublicKeyArgs Empty = new KeyRingImportJobPublicKeyArgs();
 
     @InputImport(name="pem")
-    private final @Nullable Input<String> pem;
+        private final @Nullable Input<String> pem;
 
     public Input<String> getPem() {
         return this.pem == null ? Input.empty() : this.pem;
@@ -58,7 +58,6 @@ public final class KeyRingImportJobPublicKeyArgs extends io.pulumi.resources.Res
             this.pem = Input.ofNullable(pem);
             return this;
         }
-
         public KeyRingImportJobPublicKeyArgs build() {
             return new KeyRingImportJobPublicKeyArgs(pem);
         }

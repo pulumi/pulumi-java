@@ -200,7 +200,6 @@ public final class RegionUrlMapPathMatcher {
             this.routeRules = routeRules;
             return this;
         }
-
         public RegionUrlMapPathMatcher build() {
             return new RegionUrlMapPathMatcher(defaultService, defaultUrlRedirect, description, name, pathRules, routeRules);
         }

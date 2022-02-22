@@ -124,7 +124,6 @@ public final class GetKeysResult {
             this.zoneSigningKeys = Objects.requireNonNull(zoneSigningKeys);
             return this;
         }
-
         public GetKeysResult build() {
             return new GetKeysResult(id, keySigningKeys, managedZone, project, zoneSigningKeys);
         }

@@ -19,7 +19,7 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsArgs extends 
      * 
      */
     @InputImport(name="outputConfig", required=true)
-    private final Input<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigArgs> outputConfig;
+        private final Input<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigArgs> outputConfig;
 
     public Input<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigArgs> getOutputConfig() {
         return this.outputConfig;
@@ -62,7 +62,6 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsArgs extends 
             this.outputConfig = Input.of(Objects.requireNonNull(outputConfig));
             return this;
         }
-
         public PreventionJobTriggerInspectJobActionSaveFindingsArgs build() {
             return new PreventionJobTriggerInspectJobActionSaveFindingsArgs(outputConfig);
         }

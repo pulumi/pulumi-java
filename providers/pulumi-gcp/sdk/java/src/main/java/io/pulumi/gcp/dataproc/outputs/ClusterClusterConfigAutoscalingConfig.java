@@ -52,7 +52,6 @@ public final class ClusterClusterConfigAutoscalingConfig {
             this.policyUri = Objects.requireNonNull(policyUri);
             return this;
         }
-
         public ClusterClusterConfigAutoscalingConfig build() {
             return new ClusterClusterConfigAutoscalingConfig(policyUri);
         }

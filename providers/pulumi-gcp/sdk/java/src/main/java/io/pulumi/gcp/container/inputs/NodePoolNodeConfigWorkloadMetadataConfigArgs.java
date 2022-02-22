@@ -14,7 +14,7 @@ public final class NodePoolNodeConfigWorkloadMetadataConfigArgs extends io.pulum
     public static final NodePoolNodeConfigWorkloadMetadataConfigArgs Empty = new NodePoolNodeConfigWorkloadMetadataConfigArgs();
 
     @InputImport(name="mode", required=true)
-    private final Input<String> mode;
+        private final Input<String> mode;
 
     public Input<String> getMode() {
         return this.mode;
@@ -57,7 +57,6 @@ public final class NodePoolNodeConfigWorkloadMetadataConfigArgs extends io.pulum
             this.mode = Input.of(Objects.requireNonNull(mode));
             return this;
         }
-
         public NodePoolNodeConfigWorkloadMetadataConfigArgs build() {
             return new NodePoolNodeConfigWorkloadMetadataConfigArgs(mode);
         }

@@ -137,7 +137,6 @@ public final class GetCaCertsCert {
             this.sha1Fingerprint = Objects.requireNonNull(sha1Fingerprint);
             return this;
         }
-
         public GetCaCertsCert build() {
             return new GetCaCertsCert(cert, commonName, createTime, expirationTime, sha1Fingerprint);
         }

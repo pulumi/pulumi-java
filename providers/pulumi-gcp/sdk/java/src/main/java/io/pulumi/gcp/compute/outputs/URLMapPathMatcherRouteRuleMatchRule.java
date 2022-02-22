@@ -236,7 +236,6 @@ public final class URLMapPathMatcherRouteRuleMatchRule {
             this.regexMatch = regexMatch;
             return this;
         }
-
         public URLMapPathMatcherRouteRuleMatchRule build() {
             return new URLMapPathMatcherRouteRuleMatchRule(fullPathMatch, headerMatches, ignoreCase, metadataFilters, prefixMatch, queryParameterMatches, regexMatch);
         }

@@ -15,7 +15,7 @@ public final class InstanceGroupManagerStatusVersionTargetGetArgs extends io.pul
     public static final InstanceGroupManagerStatusVersionTargetGetArgs Empty = new InstanceGroupManagerStatusVersionTargetGetArgs();
 
     @InputImport(name="isReached")
-    private final @Nullable Input<Boolean> isReached;
+        private final @Nullable Input<Boolean> isReached;
 
     public Input<Boolean> getIsReached() {
         return this.isReached == null ? Input.empty() : this.isReached;
@@ -58,7 +58,6 @@ public final class InstanceGroupManagerStatusVersionTargetGetArgs extends io.pul
             this.isReached = Input.ofNullable(isReached);
             return this;
         }
-
         public InstanceGroupManagerStatusVersionTargetGetArgs build() {
             return new InstanceGroupManagerStatusVersionTargetGetArgs(isReached);
         }

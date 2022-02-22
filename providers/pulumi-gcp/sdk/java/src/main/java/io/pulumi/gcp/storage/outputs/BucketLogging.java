@@ -78,7 +78,6 @@ public final class BucketLogging {
             this.logObjectPrefix = logObjectPrefix;
             return this;
         }
-
         public BucketLogging build() {
             return new BucketLogging(logBucket, logObjectPrefix);
         }

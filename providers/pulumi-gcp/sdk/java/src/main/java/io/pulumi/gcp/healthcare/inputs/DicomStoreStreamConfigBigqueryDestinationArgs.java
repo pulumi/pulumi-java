@@ -18,7 +18,7 @@ public final class DicomStoreStreamConfigBigqueryDestinationArgs extends io.pulu
      * 
      */
     @InputImport(name="tableUri", required=true)
-    private final Input<String> tableUri;
+        private final Input<String> tableUri;
 
     public Input<String> getTableUri() {
         return this.tableUri;
@@ -61,7 +61,6 @@ public final class DicomStoreStreamConfigBigqueryDestinationArgs extends io.pulu
             this.tableUri = Input.of(Objects.requireNonNull(tableUri));
             return this;
         }
-
         public DicomStoreStreamConfigBigqueryDestinationArgs build() {
             return new DicomStoreStreamConfigBigqueryDestinationArgs(tableUri);
         }

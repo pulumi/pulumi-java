@@ -112,7 +112,6 @@ public final class InstanceFromTemplateAttachedDisk {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public InstanceFromTemplateAttachedDisk build() {
             return new InstanceFromTemplateAttachedDisk(deviceName, diskEncryptionKeyRaw, diskEncryptionKeySha256, kmsKeySelfLink, mode, source);
         }

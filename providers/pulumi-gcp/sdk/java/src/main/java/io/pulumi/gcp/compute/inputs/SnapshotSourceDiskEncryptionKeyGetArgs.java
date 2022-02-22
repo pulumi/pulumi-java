@@ -20,7 +20,7 @@ public final class SnapshotSourceDiskEncryptionKeyGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="kmsKeyServiceAccount")
-    private final @Nullable Input<String> kmsKeyServiceAccount;
+        private final @Nullable Input<String> kmsKeyServiceAccount;
 
     public Input<String> getKmsKeyServiceAccount() {
         return this.kmsKeyServiceAccount == null ? Input.empty() : this.kmsKeyServiceAccount;
@@ -33,7 +33,7 @@ public final class SnapshotSourceDiskEncryptionKeyGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="rawKey")
-    private final @Nullable Input<String> rawKey;
+        private final @Nullable Input<String> rawKey;
 
     public Input<String> getRawKey() {
         return this.rawKey == null ? Input.empty() : this.rawKey;
@@ -92,7 +92,6 @@ public final class SnapshotSourceDiskEncryptionKeyGetArgs extends io.pulumi.reso
             this.rawKey = Input.ofNullable(rawKey);
             return this;
         }
-
         public SnapshotSourceDiskEncryptionKeyGetArgs build() {
             return new SnapshotSourceDiskEncryptionKeyGetArgs(kmsKeyServiceAccount, rawKey);
         }

@@ -24,7 +24,7 @@ public final class GCPolicyMaxAgeGetArgs extends io.pulumi.resources.ResourceArg
      */
     @Deprecated /* Deprecated in favor of duration */
     @InputImport(name="days")
-    private final @Nullable Input<Integer> days;
+        private final @Nullable Input<Integer> days;
 
     @Deprecated /* Deprecated in favor of duration */
     public Input<Integer> getDays() {
@@ -36,7 +36,7 @@ public final class GCPolicyMaxAgeGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="duration")
-    private final @Nullable Input<String> duration;
+        private final @Nullable Input<String> duration;
 
     public Input<String> getDuration() {
         return this.duration == null ? Input.empty() : this.duration;
@@ -95,7 +95,6 @@ public final class GCPolicyMaxAgeGetArgs extends io.pulumi.resources.ResourceArg
             this.duration = Input.ofNullable(duration);
             return this;
         }
-
         public GCPolicyMaxAgeGetArgs build() {
             return new GCPolicyMaxAgeGetArgs(days, duration);
         }

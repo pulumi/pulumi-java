@@ -54,7 +54,6 @@ public final class LiteSubscriptionDeliveryConfig {
             this.deliveryRequirement = Objects.requireNonNull(deliveryRequirement);
             return this;
         }
-
         public LiteSubscriptionDeliveryConfig build() {
             return new LiteSubscriptionDeliveryConfig(deliveryRequirement);
         }

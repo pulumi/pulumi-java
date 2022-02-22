@@ -131,7 +131,6 @@ public final class GetInstanceScheduling {
             this.preemptible = Objects.requireNonNull(preemptible);
             return this;
         }
-
         public GetInstanceScheduling build() {
             return new GetInstanceScheduling(automaticRestart, minNodeCpus, nodeAffinities, onHostMaintenance, preemptible);
         }

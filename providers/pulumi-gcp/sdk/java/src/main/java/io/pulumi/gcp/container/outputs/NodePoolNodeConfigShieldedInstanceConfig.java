@@ -60,7 +60,6 @@ public final class NodePoolNodeConfigShieldedInstanceConfig {
             this.enableSecureBoot = enableSecureBoot;
             return this;
         }
-
         public NodePoolNodeConfigShieldedInstanceConfig build() {
             return new NodePoolNodeConfigShieldedInstanceConfig(enableIntegrityMonitoring, enableSecureBoot);
         }

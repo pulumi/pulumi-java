@@ -102,7 +102,6 @@ public final class GetImageVersionsResult {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public GetImageVersionsResult build() {
             return new GetImageVersionsResult(id, imageVersions, project, region);
         }

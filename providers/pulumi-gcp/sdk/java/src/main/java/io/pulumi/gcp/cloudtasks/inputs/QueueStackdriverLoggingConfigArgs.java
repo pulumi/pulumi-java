@@ -20,7 +20,7 @@ public final class QueueStackdriverLoggingConfigArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="samplingRatio", required=true)
-    private final Input<Double> samplingRatio;
+        private final Input<Double> samplingRatio;
 
     public Input<Double> getSamplingRatio() {
         return this.samplingRatio;
@@ -63,7 +63,6 @@ public final class QueueStackdriverLoggingConfigArgs extends io.pulumi.resources
             this.samplingRatio = Input.of(Objects.requireNonNull(samplingRatio));
             return this;
         }
-
         public QueueStackdriverLoggingConfigArgs build() {
             return new QueueStackdriverLoggingConfigArgs(samplingRatio);
         }

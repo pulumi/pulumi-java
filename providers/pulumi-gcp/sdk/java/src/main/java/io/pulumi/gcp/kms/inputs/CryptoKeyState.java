@@ -23,7 +23,7 @@ public final class CryptoKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destroyScheduledDuration")
-    private final @Nullable Input<String> destroyScheduledDuration;
+        private final @Nullable Input<String> destroyScheduledDuration;
 
     public Input<String> getDestroyScheduledDuration() {
         return this.destroyScheduledDuration == null ? Input.empty() : this.destroyScheduledDuration;
@@ -34,7 +34,7 @@ public final class CryptoKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="importOnly")
-    private final @Nullable Input<Boolean> importOnly;
+        private final @Nullable Input<Boolean> importOnly;
 
     public Input<Boolean> getImportOnly() {
         return this.importOnly == null ? Input.empty() : this.importOnly;
@@ -46,7 +46,7 @@ public final class CryptoKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyRing")
-    private final @Nullable Input<String> keyRing;
+        private final @Nullable Input<String> keyRing;
 
     public Input<String> getKeyRing() {
         return this.keyRing == null ? Input.empty() : this.keyRing;
@@ -57,7 +57,7 @@ public final class CryptoKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+        private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -68,7 +68,7 @@ public final class CryptoKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -83,7 +83,7 @@ public final class CryptoKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="purpose")
-    private final @Nullable Input<String> purpose;
+        private final @Nullable Input<String> purpose;
 
     public Input<String> getPurpose() {
         return this.purpose == null ? Input.empty() : this.purpose;
@@ -97,7 +97,7 @@ public final class CryptoKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rotationPeriod")
-    private final @Nullable Input<String> rotationPeriod;
+        private final @Nullable Input<String> rotationPeriod;
 
     public Input<String> getRotationPeriod() {
         return this.rotationPeriod == null ? Input.empty() : this.rotationPeriod;
@@ -109,7 +109,7 @@ public final class CryptoKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="skipInitialVersionCreation")
-    private final @Nullable Input<Boolean> skipInitialVersionCreation;
+        private final @Nullable Input<Boolean> skipInitialVersionCreation;
 
     public Input<Boolean> getSkipInitialVersionCreation() {
         return this.skipInitialVersionCreation == null ? Input.empty() : this.skipInitialVersionCreation;
@@ -121,7 +121,7 @@ public final class CryptoKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="versionTemplate")
-    private final @Nullable Input<CryptoKeyVersionTemplateGetArgs> versionTemplate;
+        private final @Nullable Input<CryptoKeyVersionTemplateGetArgs> versionTemplate;
 
     public Input<CryptoKeyVersionTemplateGetArgs> getVersionTemplate() {
         return this.versionTemplate == null ? Input.empty() : this.versionTemplate;
@@ -285,7 +285,6 @@ public final class CryptoKeyState extends io.pulumi.resources.ResourceArgs {
             this.versionTemplate = Input.ofNullable(versionTemplate);
             return this;
         }
-
         public CryptoKeyState build() {
             return new CryptoKeyState(destroyScheduledDuration, importOnly, keyRing, labels, name, purpose, rotationPeriod, skipInitialVersionCreation, versionTemplate);
         }

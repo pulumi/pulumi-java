@@ -15,21 +15,21 @@ public final class InstanceFromTemplateShieldedInstanceConfigArgs extends io.pul
     public static final InstanceFromTemplateShieldedInstanceConfigArgs Empty = new InstanceFromTemplateShieldedInstanceConfigArgs();
 
     @InputImport(name="enableIntegrityMonitoring")
-    private final @Nullable Input<Boolean> enableIntegrityMonitoring;
+        private final @Nullable Input<Boolean> enableIntegrityMonitoring;
 
     public Input<Boolean> getEnableIntegrityMonitoring() {
         return this.enableIntegrityMonitoring == null ? Input.empty() : this.enableIntegrityMonitoring;
     }
 
     @InputImport(name="enableSecureBoot")
-    private final @Nullable Input<Boolean> enableSecureBoot;
+        private final @Nullable Input<Boolean> enableSecureBoot;
 
     public Input<Boolean> getEnableSecureBoot() {
         return this.enableSecureBoot == null ? Input.empty() : this.enableSecureBoot;
     }
 
     @InputImport(name="enableVtpm")
-    private final @Nullable Input<Boolean> enableVtpm;
+        private final @Nullable Input<Boolean> enableVtpm;
 
     public Input<Boolean> getEnableVtpm() {
         return this.enableVtpm == null ? Input.empty() : this.enableVtpm;
@@ -103,7 +103,6 @@ public final class InstanceFromTemplateShieldedInstanceConfigArgs extends io.pul
             this.enableVtpm = Input.ofNullable(enableVtpm);
             return this;
         }
-
         public InstanceFromTemplateShieldedInstanceConfigArgs build() {
             return new InstanceFromTemplateShieldedInstanceConfigArgs(enableIntegrityMonitoring, enableSecureBoot, enableVtpm);
         }

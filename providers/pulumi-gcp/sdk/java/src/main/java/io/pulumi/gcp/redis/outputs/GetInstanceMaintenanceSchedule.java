@@ -71,7 +71,6 @@ public final class GetInstanceMaintenanceSchedule {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public GetInstanceMaintenanceSchedule build() {
             return new GetInstanceMaintenanceSchedule(endTime, scheduleDeadlineTime, startTime);
         }

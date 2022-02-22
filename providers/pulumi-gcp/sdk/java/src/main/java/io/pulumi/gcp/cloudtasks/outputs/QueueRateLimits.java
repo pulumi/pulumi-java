@@ -116,7 +116,6 @@ public final class QueueRateLimits {
             this.maxDispatchesPerSecond = maxDispatchesPerSecond;
             return this;
         }
-
         public QueueRateLimits build() {
             return new QueueRateLimits(maxBurstSize, maxConcurrentDispatches, maxDispatchesPerSecond);
         }

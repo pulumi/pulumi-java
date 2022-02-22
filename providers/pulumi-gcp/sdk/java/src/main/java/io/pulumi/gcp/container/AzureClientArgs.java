@@ -19,7 +19,7 @@ public final class AzureClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationId", required=true)
-    private final Input<String> applicationId;
+        private final Input<String> applicationId;
 
     public Input<String> getApplicationId() {
         return this.applicationId;
@@ -30,7 +30,7 @@ public final class AzureClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location", required=true)
-    private final Input<String> location;
+        private final Input<String> location;
 
     public Input<String> getLocation() {
         return this.location;
@@ -41,7 +41,7 @@ public final class AzureClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -52,7 +52,7 @@ public final class AzureClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -63,7 +63,7 @@ public final class AzureClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tenantId", required=true)
-    private final Input<String> tenantId;
+        private final Input<String> tenantId;
 
     public Input<String> getTenantId() {
         return this.tenantId;
@@ -167,7 +167,6 @@ public final class AzureClientArgs extends io.pulumi.resources.ResourceArgs {
             this.tenantId = Input.of(Objects.requireNonNull(tenantId));
             return this;
         }
-
         public AzureClientArgs build() {
             return new AzureClientArgs(applicationId, location, name, project, tenantId);
         }

@@ -323,7 +323,6 @@ public final class GetDatabaseInstanceResult {
             this.settings = Objects.requireNonNull(settings);
             return this;
         }
-
         public GetDatabaseInstanceResult build() {
             return new GetDatabaseInstanceResult(clones, connectionName, databaseVersion, deletionProtection, encryptionKeyName, firstIpAddress, id, ipAddresses, masterInstanceName, name, privateIpAddress, project, publicIpAddress, region, replicaConfigurations, restoreBackupContexts, rootPassword, selfLink, serverCaCerts, serviceAccountEmailAddress, settings);
         }

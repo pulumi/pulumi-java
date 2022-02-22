@@ -19,7 +19,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="analyticsRegion")
-    private final @Nullable Input<String> analyticsRegion;
+        private final @Nullable Input<String> analyticsRegion;
 
     public Input<String> getAnalyticsRegion() {
         return this.analyticsRegion == null ? Input.empty() : this.analyticsRegion;
@@ -32,7 +32,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorizedNetwork")
-    private final @Nullable Input<String> authorizedNetwork;
+        private final @Nullable Input<String> authorizedNetwork;
 
     public Input<String> getAuthorizedNetwork() {
         return this.authorizedNetwork == null ? Input.empty() : this.authorizedNetwork;
@@ -43,7 +43,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -54,7 +54,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+        private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -65,7 +65,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="projectId", required=true)
-    private final Input<String> projectId;
+        private final Input<String> projectId;
 
     public Input<String> getProjectId() {
         return this.projectId;
@@ -79,7 +79,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runtimeDatabaseEncryptionKeyName")
-    private final @Nullable Input<String> runtimeDatabaseEncryptionKeyName;
+        private final @Nullable Input<String> runtimeDatabaseEncryptionKeyName;
 
     public Input<String> getRuntimeDatabaseEncryptionKeyName() {
         return this.runtimeDatabaseEncryptionKeyName == null ? Input.empty() : this.runtimeDatabaseEncryptionKeyName;
@@ -92,7 +92,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runtimeType")
-    private final @Nullable Input<String> runtimeType;
+        private final @Nullable Input<String> runtimeType;
 
     public Input<String> getRuntimeType() {
         return this.runtimeType == null ? Input.empty() : this.runtimeType;
@@ -226,7 +226,6 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
             this.runtimeType = Input.ofNullable(runtimeType);
             return this;
         }
-
         public OrganizationArgs build() {
             return new OrganizationArgs(analyticsRegion, authorizedNetwork, description, displayName, projectId, runtimeDatabaseEncryptionKeyName, runtimeType);
         }

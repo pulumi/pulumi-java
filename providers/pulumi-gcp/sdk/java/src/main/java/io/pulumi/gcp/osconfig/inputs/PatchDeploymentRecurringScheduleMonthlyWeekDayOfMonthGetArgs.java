@@ -20,7 +20,7 @@ public final class PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthGetArgs 
      * 
      */
     @InputImport(name="dayOfWeek", required=true)
-    private final Input<String> dayOfWeek;
+        private final Input<String> dayOfWeek;
 
     public Input<String> getDayOfWeek() {
         return this.dayOfWeek;
@@ -31,7 +31,7 @@ public final class PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthGetArgs 
      * 
      */
     @InputImport(name="weekOrdinal", required=true)
-    private final Input<Integer> weekOrdinal;
+        private final Input<Integer> weekOrdinal;
 
     public Input<Integer> getWeekOrdinal() {
         return this.weekOrdinal;
@@ -90,7 +90,6 @@ public final class PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthGetArgs 
             this.weekOrdinal = Input.of(Objects.requireNonNull(weekOrdinal));
             return this;
         }
-
         public PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthGetArgs build() {
             return new PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthGetArgs(dayOfWeek, weekOrdinal);
         }

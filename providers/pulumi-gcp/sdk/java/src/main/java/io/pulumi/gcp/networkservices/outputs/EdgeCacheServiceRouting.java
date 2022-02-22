@@ -78,7 +78,6 @@ public final class EdgeCacheServiceRouting {
             this.pathMatchers = Objects.requireNonNull(pathMatchers);
             return this;
         }
-
         public EdgeCacheServiceRouting build() {
             return new EdgeCacheServiceRouting(hostRules, pathMatchers);
         }

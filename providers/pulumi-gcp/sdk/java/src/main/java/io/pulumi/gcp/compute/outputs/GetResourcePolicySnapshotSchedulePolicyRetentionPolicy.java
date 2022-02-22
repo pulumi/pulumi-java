@@ -59,7 +59,6 @@ public final class GetResourcePolicySnapshotSchedulePolicyRetentionPolicy {
             this.onSourceDiskDelete = Objects.requireNonNull(onSourceDiskDelete);
             return this;
         }
-
         public GetResourcePolicySnapshotSchedulePolicyRetentionPolicy build() {
             return new GetResourcePolicySnapshotSchedulePolicyRetentionPolicy(maxRetentionDays, onSourceDiskDelete);
         }

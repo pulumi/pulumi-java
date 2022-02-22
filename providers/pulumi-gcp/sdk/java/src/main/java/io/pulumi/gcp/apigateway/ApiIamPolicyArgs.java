@@ -15,7 +15,7 @@ public final class ApiIamPolicyArgs extends io.pulumi.resources.ResourceArgs {
     public static final ApiIamPolicyArgs Empty = new ApiIamPolicyArgs();
 
     @InputImport(name="api", required=true)
-    private final Input<String> api;
+        private final Input<String> api;
 
     public Input<String> getApi() {
         return this.api;
@@ -27,7 +27,7 @@ public final class ApiIamPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policyData", required=true)
-    private final Input<String> policyData;
+        private final Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData;
@@ -39,7 +39,7 @@ public final class ApiIamPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -113,7 +113,6 @@ public final class ApiIamPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public ApiIamPolicyArgs build() {
             return new ApiIamPolicyArgs(api, policyData, project);
         }

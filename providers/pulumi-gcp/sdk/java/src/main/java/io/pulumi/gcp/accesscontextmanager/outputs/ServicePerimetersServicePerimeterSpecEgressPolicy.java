@@ -83,7 +83,6 @@ public final class ServicePerimetersServicePerimeterSpecEgressPolicy {
             this.egressTo = egressTo;
             return this;
         }
-
         public ServicePerimetersServicePerimeterSpecEgressPolicy build() {
             return new ServicePerimetersServicePerimeterSpecEgressPolicy(egressFrom, egressTo);
         }

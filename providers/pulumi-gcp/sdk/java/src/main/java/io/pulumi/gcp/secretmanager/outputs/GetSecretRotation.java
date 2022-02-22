@@ -58,7 +58,6 @@ public final class GetSecretRotation {
             this.rotationPeriod = Objects.requireNonNull(rotationPeriod);
             return this;
         }
-
         public GetSecretRotation build() {
             return new GetSecretRotation(nextRotationTime, rotationPeriod);
         }

@@ -24,7 +24,7 @@ public final class BackendServiceOutlierDetectionGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="baseEjectionTime")
-    private final @Nullable Input<BackendServiceOutlierDetectionBaseEjectionTimeGetArgs> baseEjectionTime;
+        private final @Nullable Input<BackendServiceOutlierDetectionBaseEjectionTimeGetArgs> baseEjectionTime;
 
     public Input<BackendServiceOutlierDetectionBaseEjectionTimeGetArgs> getBaseEjectionTime() {
         return this.baseEjectionTime == null ? Input.empty() : this.baseEjectionTime;
@@ -37,7 +37,7 @@ public final class BackendServiceOutlierDetectionGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="consecutiveErrors")
-    private final @Nullable Input<Integer> consecutiveErrors;
+        private final @Nullable Input<Integer> consecutiveErrors;
 
     public Input<Integer> getConsecutiveErrors() {
         return this.consecutiveErrors == null ? Input.empty() : this.consecutiveErrors;
@@ -50,7 +50,7 @@ public final class BackendServiceOutlierDetectionGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="consecutiveGatewayFailure")
-    private final @Nullable Input<Integer> consecutiveGatewayFailure;
+        private final @Nullable Input<Integer> consecutiveGatewayFailure;
 
     public Input<Integer> getConsecutiveGatewayFailure() {
         return this.consecutiveGatewayFailure == null ? Input.empty() : this.consecutiveGatewayFailure;
@@ -63,7 +63,7 @@ public final class BackendServiceOutlierDetectionGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="enforcingConsecutiveErrors")
-    private final @Nullable Input<Integer> enforcingConsecutiveErrors;
+        private final @Nullable Input<Integer> enforcingConsecutiveErrors;
 
     public Input<Integer> getEnforcingConsecutiveErrors() {
         return this.enforcingConsecutiveErrors == null ? Input.empty() : this.enforcingConsecutiveErrors;
@@ -76,7 +76,7 @@ public final class BackendServiceOutlierDetectionGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="enforcingConsecutiveGatewayFailure")
-    private final @Nullable Input<Integer> enforcingConsecutiveGatewayFailure;
+        private final @Nullable Input<Integer> enforcingConsecutiveGatewayFailure;
 
     public Input<Integer> getEnforcingConsecutiveGatewayFailure() {
         return this.enforcingConsecutiveGatewayFailure == null ? Input.empty() : this.enforcingConsecutiveGatewayFailure;
@@ -89,7 +89,7 @@ public final class BackendServiceOutlierDetectionGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="enforcingSuccessRate")
-    private final @Nullable Input<Integer> enforcingSuccessRate;
+        private final @Nullable Input<Integer> enforcingSuccessRate;
 
     public Input<Integer> getEnforcingSuccessRate() {
         return this.enforcingSuccessRate == null ? Input.empty() : this.enforcingSuccessRate;
@@ -102,7 +102,7 @@ public final class BackendServiceOutlierDetectionGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="interval")
-    private final @Nullable Input<BackendServiceOutlierDetectionIntervalGetArgs> interval;
+        private final @Nullable Input<BackendServiceOutlierDetectionIntervalGetArgs> interval;
 
     public Input<BackendServiceOutlierDetectionIntervalGetArgs> getInterval() {
         return this.interval == null ? Input.empty() : this.interval;
@@ -114,7 +114,7 @@ public final class BackendServiceOutlierDetectionGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="maxEjectionPercent")
-    private final @Nullable Input<Integer> maxEjectionPercent;
+        private final @Nullable Input<Integer> maxEjectionPercent;
 
     public Input<Integer> getMaxEjectionPercent() {
         return this.maxEjectionPercent == null ? Input.empty() : this.maxEjectionPercent;
@@ -128,7 +128,7 @@ public final class BackendServiceOutlierDetectionGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="successRateMinimumHosts")
-    private final @Nullable Input<Integer> successRateMinimumHosts;
+        private final @Nullable Input<Integer> successRateMinimumHosts;
 
     public Input<Integer> getSuccessRateMinimumHosts() {
         return this.successRateMinimumHosts == null ? Input.empty() : this.successRateMinimumHosts;
@@ -143,7 +143,7 @@ public final class BackendServiceOutlierDetectionGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="successRateRequestVolume")
-    private final @Nullable Input<Integer> successRateRequestVolume;
+        private final @Nullable Input<Integer> successRateRequestVolume;
 
     public Input<Integer> getSuccessRateRequestVolume() {
         return this.successRateRequestVolume == null ? Input.empty() : this.successRateRequestVolume;
@@ -159,7 +159,7 @@ public final class BackendServiceOutlierDetectionGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="successRateStdevFactor")
-    private final @Nullable Input<Integer> successRateStdevFactor;
+        private final @Nullable Input<Integer> successRateStdevFactor;
 
     public Input<Integer> getSuccessRateStdevFactor() {
         return this.successRateStdevFactor == null ? Input.empty() : this.successRateStdevFactor;
@@ -353,7 +353,6 @@ public final class BackendServiceOutlierDetectionGetArgs extends io.pulumi.resou
             this.successRateStdevFactor = Input.ofNullable(successRateStdevFactor);
             return this;
         }
-
         public BackendServiceOutlierDetectionGetArgs build() {
             return new BackendServiceOutlierDetectionGetArgs(baseEjectionTime, consecutiveErrors, consecutiveGatewayFailure, enforcingConsecutiveErrors, enforcingConsecutiveGatewayFailure, enforcingSuccessRate, interval, maxEjectionPercent, successRateMinimumHosts, successRateRequestVolume, successRateStdevFactor);
         }

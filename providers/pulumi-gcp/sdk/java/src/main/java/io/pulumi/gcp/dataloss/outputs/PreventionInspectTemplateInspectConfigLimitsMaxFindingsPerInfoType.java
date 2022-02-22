@@ -83,7 +83,6 @@ public final class PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInf
             this.maxFindings = Objects.requireNonNull(maxFindings);
             return this;
         }
-
         public PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoType build() {
             return new PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoType(infoType, maxFindings);
         }

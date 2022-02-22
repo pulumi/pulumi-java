@@ -44,7 +44,6 @@ public final class EnvironmentConfigDatabaseConfig {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
-
         public EnvironmentConfigDatabaseConfig build() {
             return new EnvironmentConfigDatabaseConfig(machineType);
         }

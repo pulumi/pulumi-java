@@ -21,7 +21,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="address")
-    private final @Nullable Input<String> address;
+        private final @Nullable Input<String> address;
 
     public Input<String> getAddress() {
         return this.address == null ? Input.empty() : this.address;
@@ -33,7 +33,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointId")
-    private final @Nullable Input<String> endpointId;
+        private final @Nullable Input<String> endpointId;
 
     public Input<String> getEndpointId() {
         return this.endpointId == null ? Input.empty() : this.endpointId;
@@ -47,7 +47,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<Map<String,String>> metadata;
+        private final @Nullable Input<Map<String,String>> metadata;
 
     public Input<Map<String,String>> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -58,7 +58,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -69,7 +69,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network")
-    private final @Nullable Input<String> network;
+        private final @Nullable Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network == null ? Input.empty() : this.network;
@@ -81,7 +81,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Input<Integer> port;
+        private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -92,7 +92,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="service")
-    private final @Nullable Input<String> service;
+        private final @Nullable Input<String> service;
 
     public Input<String> getService() {
         return this.service == null ? Input.empty() : this.service;
@@ -226,7 +226,6 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
             this.service = Input.ofNullable(service);
             return this;
         }
-
         public EndpointState build() {
             return new EndpointState(address, endpointId, metadata, name, network, port, service);
         }

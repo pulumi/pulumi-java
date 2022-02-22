@@ -120,7 +120,6 @@ public final class WorkflowTemplatePlacementManagedClusterConfigLifecycleConfig 
             this.idleStartTime = idleStartTime;
             return this;
         }
-
         public WorkflowTemplatePlacementManagedClusterConfigLifecycleConfig build() {
             return new WorkflowTemplatePlacementManagedClusterConfigLifecycleConfig(autoDeleteTime, autoDeleteTtl, idleDeleteTtl, idleStartTime);
         }

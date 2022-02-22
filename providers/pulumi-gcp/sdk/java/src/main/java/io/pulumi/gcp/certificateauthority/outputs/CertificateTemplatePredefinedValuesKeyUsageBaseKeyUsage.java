@@ -223,7 +223,6 @@ public final class CertificateTemplatePredefinedValuesKeyUsageBaseKeyUsage {
             this.keyEncipherment = keyEncipherment;
             return this;
         }
-
         public CertificateTemplatePredefinedValuesKeyUsageBaseKeyUsage build() {
             return new CertificateTemplatePredefinedValuesKeyUsageBaseKeyUsage(certSign, contentCommitment, crlSign, dataEncipherment, decipherOnly, digitalSignature, encipherOnly, keyAgreement, keyEncipherment);
         }

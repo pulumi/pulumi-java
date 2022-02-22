@@ -21,7 +21,7 @@ public final class URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbortG
      * 
      */
     @InputImport(name="httpStatus")
-    private final @Nullable Input<Integer> httpStatus;
+        private final @Nullable Input<Integer> httpStatus;
 
     public Input<Integer> getHttpStatus() {
         return this.httpStatus == null ? Input.empty() : this.httpStatus;
@@ -33,7 +33,7 @@ public final class URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbortG
      * 
      */
     @InputImport(name="percentage")
-    private final @Nullable Input<Double> percentage;
+        private final @Nullable Input<Double> percentage;
 
     public Input<Double> getPercentage() {
         return this.percentage == null ? Input.empty() : this.percentage;
@@ -92,7 +92,6 @@ public final class URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbortG
             this.percentage = Input.ofNullable(percentage);
             return this;
         }
-
         public URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbortGetArgs build() {
             return new URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbortGetArgs(httpStatus, percentage);
         }

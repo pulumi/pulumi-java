@@ -77,7 +77,6 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
             this.ruleVisibility = ruleVisibility;
             return this;
         }
-
         public SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig build() {
             return new SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig(enable, ruleVisibility);
         }

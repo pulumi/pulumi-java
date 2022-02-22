@@ -98,7 +98,6 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
             this.numLocalSsds = numLocalSsds;
             return this;
         }
-
         public WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfig build() {
             return new WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfig(bootDiskSizeGb, bootDiskType, numLocalSsds);
         }

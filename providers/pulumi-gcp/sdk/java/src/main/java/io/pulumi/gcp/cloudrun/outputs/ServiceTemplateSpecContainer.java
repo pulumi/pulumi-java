@@ -321,7 +321,6 @@ public final class ServiceTemplateSpecContainer {
             this.workingDir = workingDir;
             return this;
         }
-
         public ServiceTemplateSpecContainer build() {
             return new ServiceTemplateSpecContainer(args, commands, envFroms, envs, image, ports, resources, volumeMounts, workingDir);
         }

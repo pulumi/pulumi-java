@@ -25,7 +25,7 @@ public final class QueueState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appEngineRoutingOverride")
-    private final @Nullable Input<QueueAppEngineRoutingOverrideGetArgs> appEngineRoutingOverride;
+        private final @Nullable Input<QueueAppEngineRoutingOverrideGetArgs> appEngineRoutingOverride;
 
     public Input<QueueAppEngineRoutingOverrideGetArgs> getAppEngineRoutingOverride() {
         return this.appEngineRoutingOverride == null ? Input.empty() : this.appEngineRoutingOverride;
@@ -36,7 +36,7 @@ public final class QueueState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -47,7 +47,7 @@ public final class QueueState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -59,7 +59,7 @@ public final class QueueState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -77,7 +77,7 @@ public final class QueueState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rateLimits")
-    private final @Nullable Input<QueueRateLimitsGetArgs> rateLimits;
+        private final @Nullable Input<QueueRateLimitsGetArgs> rateLimits;
 
     public Input<QueueRateLimitsGetArgs> getRateLimits() {
         return this.rateLimits == null ? Input.empty() : this.rateLimits;
@@ -89,7 +89,7 @@ public final class QueueState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retryConfig")
-    private final @Nullable Input<QueueRetryConfigGetArgs> retryConfig;
+        private final @Nullable Input<QueueRetryConfigGetArgs> retryConfig;
 
     public Input<QueueRetryConfigGetArgs> getRetryConfig() {
         return this.retryConfig == null ? Input.empty() : this.retryConfig;
@@ -101,7 +101,7 @@ public final class QueueState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stackdriverLoggingConfig")
-    private final @Nullable Input<QueueStackdriverLoggingConfigGetArgs> stackdriverLoggingConfig;
+        private final @Nullable Input<QueueStackdriverLoggingConfigGetArgs> stackdriverLoggingConfig;
 
     public Input<QueueStackdriverLoggingConfigGetArgs> getStackdriverLoggingConfig() {
         return this.stackdriverLoggingConfig == null ? Input.empty() : this.stackdriverLoggingConfig;
@@ -235,7 +235,6 @@ public final class QueueState extends io.pulumi.resources.ResourceArgs {
             this.stackdriverLoggingConfig = Input.ofNullable(stackdriverLoggingConfig);
             return this;
         }
-
         public QueueState build() {
             return new QueueState(appEngineRoutingOverride, location, name, project, rateLimits, retryConfig, stackdriverLoggingConfig);
         }

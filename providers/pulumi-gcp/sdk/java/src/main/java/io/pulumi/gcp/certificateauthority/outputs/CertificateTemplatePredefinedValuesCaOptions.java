@@ -77,7 +77,6 @@ public final class CertificateTemplatePredefinedValuesCaOptions {
             this.maxIssuerPathLength = maxIssuerPathLength;
             return this;
         }
-
         public CertificateTemplatePredefinedValuesCaOptions build() {
             return new CertificateTemplatePredefinedValuesCaOptions(isCa, maxIssuerPathLength);
         }

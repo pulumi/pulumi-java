@@ -18,63 +18,63 @@ public final class GetBackendServiceCdnPolicy extends io.pulumi.resources.Invoke
     public static final GetBackendServiceCdnPolicy Empty = new GetBackendServiceCdnPolicy();
 
     @InputImport(name="cacheKeyPolicies", required=true)
-    private final List<GetBackendServiceCdnPolicyCacheKeyPolicy> cacheKeyPolicies;
+        private final List<GetBackendServiceCdnPolicyCacheKeyPolicy> cacheKeyPolicies;
 
     public List<GetBackendServiceCdnPolicyCacheKeyPolicy> getCacheKeyPolicies() {
         return this.cacheKeyPolicies;
     }
 
     @InputImport(name="cacheMode", required=true)
-    private final String cacheMode;
+        private final String cacheMode;
 
     public String getCacheMode() {
         return this.cacheMode;
     }
 
     @InputImport(name="clientTtl", required=true)
-    private final Integer clientTtl;
+        private final Integer clientTtl;
 
     public Integer getClientTtl() {
         return this.clientTtl;
     }
 
     @InputImport(name="defaultTtl", required=true)
-    private final Integer defaultTtl;
+        private final Integer defaultTtl;
 
     public Integer getDefaultTtl() {
         return this.defaultTtl;
     }
 
     @InputImport(name="maxTtl", required=true)
-    private final Integer maxTtl;
+        private final Integer maxTtl;
 
     public Integer getMaxTtl() {
         return this.maxTtl;
     }
 
     @InputImport(name="negativeCaching", required=true)
-    private final Boolean negativeCaching;
+        private final Boolean negativeCaching;
 
     public Boolean getNegativeCaching() {
         return this.negativeCaching;
     }
 
     @InputImport(name="negativeCachingPolicies", required=true)
-    private final List<GetBackendServiceCdnPolicyNegativeCachingPolicy> negativeCachingPolicies;
+        private final List<GetBackendServiceCdnPolicyNegativeCachingPolicy> negativeCachingPolicies;
 
     public List<GetBackendServiceCdnPolicyNegativeCachingPolicy> getNegativeCachingPolicies() {
         return this.negativeCachingPolicies;
     }
 
     @InputImport(name="serveWhileStale", required=true)
-    private final Integer serveWhileStale;
+        private final Integer serveWhileStale;
 
     public Integer getServeWhileStale() {
         return this.serveWhileStale;
     }
 
     @InputImport(name="signedUrlCacheMaxAgeSec", required=true)
-    private final Integer signedUrlCacheMaxAgeSec;
+        private final Integer signedUrlCacheMaxAgeSec;
 
     public Integer getSignedUrlCacheMaxAgeSec() {
         return this.signedUrlCacheMaxAgeSec;
@@ -193,7 +193,6 @@ public final class GetBackendServiceCdnPolicy extends io.pulumi.resources.Invoke
             this.signedUrlCacheMaxAgeSec = Objects.requireNonNull(signedUrlCacheMaxAgeSec);
             return this;
         }
-
         public GetBackendServiceCdnPolicy build() {
             return new GetBackendServiceCdnPolicy(cacheKeyPolicies, cacheMode, clientTtl, defaultTtl, maxTtl, negativeCaching, negativeCachingPolicies, serveWhileStale, signedUrlCacheMaxAgeSec);
         }

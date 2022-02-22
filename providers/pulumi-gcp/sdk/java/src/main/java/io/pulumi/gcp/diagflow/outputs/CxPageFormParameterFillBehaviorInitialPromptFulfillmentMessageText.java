@@ -80,7 +80,6 @@ public final class CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessag
             this.texts = texts;
             return this;
         }
-
         public CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageText build() {
             return new CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageText(allowPlaybackInterruption, texts);
         }

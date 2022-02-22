@@ -103,7 +103,6 @@ public final class DatabaseInstanceSettingsIpConfigurationAuthorizedNetwork {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public DatabaseInstanceSettingsIpConfigurationAuthorizedNetwork build() {
             return new DatabaseInstanceSettingsIpConfigurationAuthorizedNetwork(expirationTime, name, value);
         }

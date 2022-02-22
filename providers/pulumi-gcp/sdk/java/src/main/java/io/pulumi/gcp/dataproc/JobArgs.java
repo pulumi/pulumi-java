@@ -32,7 +32,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forceDelete")
-    private final @Nullable Input<Boolean> forceDelete;
+        private final @Nullable Input<Boolean> forceDelete;
 
     public Input<Boolean> getForceDelete() {
         return this.forceDelete == null ? Input.empty() : this.forceDelete;
@@ -43,7 +43,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hadoopConfig")
-    private final @Nullable Input<JobHadoopConfigArgs> hadoopConfig;
+        private final @Nullable Input<JobHadoopConfigArgs> hadoopConfig;
 
     public Input<JobHadoopConfigArgs> getHadoopConfig() {
         return this.hadoopConfig == null ? Input.empty() : this.hadoopConfig;
@@ -54,7 +54,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hiveConfig")
-    private final @Nullable Input<JobHiveConfigArgs> hiveConfig;
+        private final @Nullable Input<JobHiveConfigArgs> hiveConfig;
 
     public Input<JobHiveConfigArgs> getHiveConfig() {
         return this.hiveConfig == null ? Input.empty() : this.hiveConfig;
@@ -65,7 +65,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+        private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -76,7 +76,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pigConfig")
-    private final @Nullable Input<JobPigConfigArgs> pigConfig;
+        private final @Nullable Input<JobPigConfigArgs> pigConfig;
 
     public Input<JobPigConfigArgs> getPigConfig() {
         return this.pigConfig == null ? Input.empty() : this.pigConfig;
@@ -87,7 +87,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="placement", required=true)
-    private final Input<JobPlacementArgs> placement;
+        private final Input<JobPlacementArgs> placement;
 
     public Input<JobPlacementArgs> getPlacement() {
         return this.placement;
@@ -99,7 +99,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -110,7 +110,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pysparkConfig")
-    private final @Nullable Input<JobPysparkConfigArgs> pysparkConfig;
+        private final @Nullable Input<JobPysparkConfigArgs> pysparkConfig;
 
     public Input<JobPysparkConfigArgs> getPysparkConfig() {
         return this.pysparkConfig == null ? Input.empty() : this.pysparkConfig;
@@ -121,7 +121,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reference")
-    private final @Nullable Input<JobReferenceArgs> reference;
+        private final @Nullable Input<JobReferenceArgs> reference;
 
     public Input<JobReferenceArgs> getReference() {
         return this.reference == null ? Input.empty() : this.reference;
@@ -133,7 +133,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+        private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -144,7 +144,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scheduling")
-    private final @Nullable Input<JobSchedulingArgs> scheduling;
+        private final @Nullable Input<JobSchedulingArgs> scheduling;
 
     public Input<JobSchedulingArgs> getScheduling() {
         return this.scheduling == null ? Input.empty() : this.scheduling;
@@ -155,7 +155,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sparkConfig")
-    private final @Nullable Input<JobSparkConfigArgs> sparkConfig;
+        private final @Nullable Input<JobSparkConfigArgs> sparkConfig;
 
     public Input<JobSparkConfigArgs> getSparkConfig() {
         return this.sparkConfig == null ? Input.empty() : this.sparkConfig;
@@ -166,7 +166,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sparksqlConfig")
-    private final @Nullable Input<JobSparksqlConfigArgs> sparksqlConfig;
+        private final @Nullable Input<JobSparksqlConfigArgs> sparksqlConfig;
 
     public Input<JobSparksqlConfigArgs> getSparksqlConfig() {
         return this.sparksqlConfig == null ? Input.empty() : this.sparksqlConfig;
@@ -390,7 +390,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             this.sparksqlConfig = Input.ofNullable(sparksqlConfig);
             return this;
         }
-
         public JobArgs build() {
             return new JobArgs(forceDelete, hadoopConfig, hiveConfig, labels, pigConfig, placement, project, pysparkConfig, reference, region, scheduling, sparkConfig, sparksqlConfig);
         }

@@ -22,7 +22,7 @@ public final class SubnetworkIAMBindingState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="condition")
-    private final @Nullable Input<SubnetworkIAMBindingConditionGetArgs> condition;
+        private final @Nullable Input<SubnetworkIAMBindingConditionGetArgs> condition;
 
     public Input<SubnetworkIAMBindingConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -33,14 +33,14 @@ public final class SubnetworkIAMBindingState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+        private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="members")
-    private final @Nullable Input<List<String>> members;
+        private final @Nullable Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members == null ? Input.empty() : this.members;
@@ -52,7 +52,7 @@ public final class SubnetworkIAMBindingState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -66,7 +66,7 @@ public final class SubnetworkIAMBindingState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+        private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -79,7 +79,7 @@ public final class SubnetworkIAMBindingState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+        private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -90,7 +90,7 @@ public final class SubnetworkIAMBindingState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="subnetwork")
-    private final @Nullable Input<String> subnetwork;
+        private final @Nullable Input<String> subnetwork;
 
     public Input<String> getSubnetwork() {
         return this.subnetwork == null ? Input.empty() : this.subnetwork;
@@ -224,7 +224,6 @@ public final class SubnetworkIAMBindingState extends io.pulumi.resources.Resourc
             this.subnetwork = Input.ofNullable(subnetwork);
             return this;
         }
-
         public SubnetworkIAMBindingState build() {
             return new SubnetworkIAMBindingState(condition, etag, members, project, region, role, subnetwork);
         }

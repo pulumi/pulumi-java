@@ -76,7 +76,6 @@ public final class OsPolicyAssignmentInstanceFilterInventory {
             this.osVersion = osVersion;
             return this;
         }
-
         public OsPolicyAssignmentInstanceFilterInventory build() {
             return new OsPolicyAssignmentInstanceFilterInventory(osShortName, osVersion);
         }

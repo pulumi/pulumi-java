@@ -79,7 +79,6 @@ public final class StandardAppVersionBasicScaling {
             this.maxInstances = Objects.requireNonNull(maxInstances);
             return this;
         }
-
         public StandardAppVersionBasicScaling build() {
             return new StandardAppVersionBasicScaling(idleTimeout, maxInstances);
         }

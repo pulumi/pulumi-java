@@ -304,7 +304,6 @@ public final class RegionAutoscalerAutoscalingPolicy {
             this.scalingSchedules = scalingSchedules;
             return this;
         }
-
         public RegionAutoscalerAutoscalingPolicy build() {
             return new RegionAutoscalerAutoscalingPolicy(cooldownPeriod, cpuUtilization, loadBalancingUtilization, maxReplicas, metrics, minReplicas, mode, scaleDownControl, scaleInControl, scalingSchedules);
         }

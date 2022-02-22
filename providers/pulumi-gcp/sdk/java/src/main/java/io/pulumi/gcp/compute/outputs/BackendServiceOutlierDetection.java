@@ -323,7 +323,6 @@ public final class BackendServiceOutlierDetection {
             this.successRateStdevFactor = successRateStdevFactor;
             return this;
         }
-
         public BackendServiceOutlierDetection build() {
             return new BackendServiceOutlierDetection(baseEjectionTime, consecutiveErrors, consecutiveGatewayFailure, enforcingConsecutiveErrors, enforcingConsecutiveGatewayFailure, enforcingSuccessRate, interval, maxEjectionPercent, successRateMinimumHosts, successRateRequestVolume, successRateStdevFactor);
         }

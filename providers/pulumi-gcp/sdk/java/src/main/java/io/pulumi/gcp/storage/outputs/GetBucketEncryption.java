@@ -44,7 +44,6 @@ public final class GetBucketEncryption {
             this.defaultKmsKeyName = Objects.requireNonNull(defaultKmsKeyName);
             return this;
         }
-
         public GetBucketEncryption build() {
             return new GetBucketEncryption(defaultKmsKeyName);
         }

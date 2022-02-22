@@ -81,7 +81,6 @@ public final class AutoscalerAutoscalingPolicyScaleDownControl {
             this.timeWindowSec = timeWindowSec;
             return this;
         }
-
         public AutoscalerAutoscalingPolicyScaleDownControl build() {
             return new AutoscalerAutoscalingPolicyScaleDownControl(maxScaledDownReplicas, timeWindowSec);
         }

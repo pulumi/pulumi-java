@@ -14,7 +14,7 @@ public final class MembershipEndpointGkeClusterArgs extends io.pulumi.resources.
     public static final MembershipEndpointGkeClusterArgs Empty = new MembershipEndpointGkeClusterArgs();
 
     @InputImport(name="resourceLink", required=true)
-    private final Input<String> resourceLink;
+        private final Input<String> resourceLink;
 
     public Input<String> getResourceLink() {
         return this.resourceLink;
@@ -57,7 +57,6 @@ public final class MembershipEndpointGkeClusterArgs extends io.pulumi.resources.
             this.resourceLink = Input.of(Objects.requireNonNull(resourceLink));
             return this;
         }
-
         public MembershipEndpointGkeClusterArgs build() {
             return new MembershipEndpointGkeClusterArgs(resourceLink);
         }

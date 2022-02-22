@@ -19,7 +19,7 @@ public final class GetRegionSslCertificateArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -31,7 +31,7 @@ public final class GetRegionSslCertificateArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="project")
-    private final @Nullable String project;
+        private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -43,7 +43,7 @@ public final class GetRegionSslCertificateArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="region")
-    private final @Nullable String region;
+        private final @Nullable String region;
 
     public Optional<String> getRegion() {
         return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);
@@ -102,7 +102,6 @@ public final class GetRegionSslCertificateArgs extends io.pulumi.resources.Invok
             this.region = region;
             return this;
         }
-
         public GetRegionSslCertificateArgs build() {
             return new GetRegionSslCertificateArgs(name, project, region);
         }
