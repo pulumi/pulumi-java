@@ -289,7 +289,7 @@ const builderTemplateText = `{{ .Indent }}public static {{ .Name }} builder() {
 {{ $.Indent }}        final var built = new {{ .ResultType }}();
 {{ range $i, $field := .Fields }}
 {{ $.Indent }}        built.{{ $field.FieldName }} = {{ $field.FieldName }};
-{{ end }}
+{{- end }}
 {{ $.Indent }}        return built;
 {{- else -}}
 {{ $.Indent }}    public {{ .ResultType }} build() {

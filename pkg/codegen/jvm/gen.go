@@ -447,7 +447,7 @@ type plainType struct {
 	state                 bool
 }
 
-func (pt *plainType) genInputProperty(ctx *classFileContext, prop *schema.Property) error {
+func (pt *plainType) genInputProperty(ctx *classFileContext, prop *schema.Property, isFinal bool) error {
 	w := ctx.writer
 	requireInitializers := !pt.args || isInputType(prop.Type)
 
@@ -504,7 +504,11 @@ func (pt *plainType) genInputProperty(ctx *classFileContext, prop *schema.Proper
 
 	printObsoleteAttribute(ctx, prop.DeprecationMessage, indent)
 	_, _ = fmt.Fprintf(w, "%s@%s(name=\"%s\"%s)\n", indent, ctx.ref(names.InputImport), wireName, attributeArgs)
-	_, _ = fmt.Fprintf(w, "%sprivate final %s %s;\n", indent, propertyType.ToCode(ctx.imports), propertyName)
+	if isFinal {
+		_, _ = fmt.Fprintf(w, "%sprivate final %s %s;\n", indent, propertyType.ToCode(ctx.imports), propertyName)
+	} else {
+		_, _ = fmt.Fprintf(w, "%sprivate %s %s;\n", indent, propertyType.ToCode(ctx.imports), propertyName)
+	}
 	_, _ = fmt.Fprintf(w, "\n")
 
 	// Add getter
@@ -558,14 +562,18 @@ func (pt *plainType) genInputProperty(ctx *classFileContext, prop *schema.Proper
 }
 
 func (pt *plainType) genInputType(ctx *classFileContext) error {
+	if len(pt.properties) > 250 {
+		return pt.genJumboInputType(ctx)
+	}
+	return pt.genNormalInputType(ctx)
+}
+
+func (pt *plainType) genJumboInputType(ctx *classFileContext) error {
+	// generates a class for Outputs where pt.properties >= 250
 	w := ctx.writer
 	_, _ = fmt.Fprintf(w, "\n")
 
-	// TODO: proper support for large constructors
 	props := pt.properties
-	if len(props) > 250 {
-		props = pt.properties[0:250]
-	}
 
 	// Open the class.
 	if pt.comment != "" {
@@ -581,7 +589,150 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 
 	// Declare each input property.
 	for _, p := range props {
-		if err := pt.genInputProperty(ctx, p); err != nil {
+		if err := pt.genInputProperty(ctx, p, false); err != nil {
+			return err
+		}
+		_, _ = fmt.Fprintf(w, "\n")
+		_, _ = fmt.Fprintf(w, "\n")
+	}
+
+	// Generate empty constructor, not that the instance created
+	// with this constructor may not be valid if there are 'required' fields.
+	if len(props) > 0 {
+		_, _ = fmt.Fprintf(w, "\n")
+		_, _ = fmt.Fprintf(w, "    private %s() {\n", pt.name)
+		for _, prop := range props {
+			fieldName := names.Ident(pt.mod.propertyName(prop))
+			emptyValue := emptyTypeInitializer(ctx, prop.Type, true)
+			_, _ = fmt.Fprintf(w, "        this.%s = %s;\n", fieldName, emptyValue)
+		}
+		_, _ = fmt.Fprintf(w, "    }\n")
+	}
+
+	// Generate the builder
+	var builderFields []builderFieldTemplateContext
+	var builderSetters []builderSetterTemplateContext
+	for _, prop := range props {
+		requireInitializers := !pt.args || isInputType(prop.Type)
+		propertyName := names.Ident(pt.mod.propertyName(prop))
+		propertyType := pt.mod.typeString(
+			ctx,
+			prop.Type,
+			pt.propertyTypeQualifier,
+			true,                // is input
+			pt.state,            // is state
+			requireInitializers, // requires initializers
+			false,               // outer optional
+			false,               // inputless overload
+		)
+
+		// add field
+		builderFields = append(builderFields, builderFieldTemplateContext{
+			FieldType: propertyType.ToCode(ctx.imports),
+			FieldName: propertyName.String(),
+		})
+
+		setterName := names.Ident(prop.Name).AsProperty().Setter()
+		assignment := func(propertyName names.Ident) string {
+			if prop.Secret {
+				return fmt.Sprintf("this.%s = %s.ofNullable(%s).asSecret()", propertyName, ctx.ref(names.Input), propertyName)
+			}
+			if prop.IsRequired() {
+				return fmt.Sprintf("this.%s = %s.requireNonNull(%s)", propertyName, ctx.ref(names.Objects), propertyName)
+			}
+			return fmt.Sprintf("this.%s = %s", propertyName, propertyName)
+		}
+
+		// add main setter
+		builderSetters = append(builderSetters, builderSetterTemplateContext{
+			SetterName:   setterName,
+			PropertyType: propertyType.ToCode(ctx.imports),
+			PropertyName: propertyName.String(),
+			Assignment:   assignment(propertyName),
+		})
+
+		if isInputType(prop.Type) { // we have a wrapped field so we add an unwrapped helper setter
+			var typ schema.Type = &schema.OptionalType{ElementType: codegen.UnwrapType(prop.Type)}
+			if prop.IsRequired() {
+				typ = codegen.UnwrapType(typ)
+			}
+			propertyTypeUnwrapped := pt.mod.typeString(
+				ctx,
+				typ,
+				pt.propertyTypeQualifier,
+				true,                // is input
+				pt.state,            // is state
+				requireInitializers, // requires initializers
+				false,               // outer optional
+				true,                // inputless overload
+			)
+
+			assignmentUnwrapped := func(propertyName names.Ident) string {
+				if prop.Secret {
+					return fmt.Sprintf("this.%s = %s.ofNullable(%s).asSecret()", propertyName, ctx.ref(names.Input), propertyName)
+				}
+				if prop.IsRequired() {
+					return fmt.Sprintf("this.%s = %s.of(%s.requireNonNull(%s))",
+						propertyName, ctx.ref(names.Input), ctx.ref(names.Objects), propertyName)
+				}
+				return fmt.Sprintf("this.%s = %s.ofNullable(%s)", propertyName, ctx.ref(names.Input), propertyName)
+			}
+
+			if !propertyTypeUnwrapped.Equal(propertyType) {
+				// add overloaded setter
+				builderSetters = append(builderSetters, builderSetterTemplateContext{
+					SetterName:   setterName,
+					PropertyType: propertyTypeUnwrapped.ToCode(ctx.imports),
+					PropertyName: propertyName.String(),
+					Assignment:   assignmentUnwrapped(propertyName),
+				})
+			}
+		}
+	}
+
+	_, _ = fmt.Fprintf(w, "\n")
+	if err := builderTemplate.Execute(w, builderTemplateContext{
+		Indent:     strings.Repeat("    ", 1),
+		Name:       "Builder",
+		IsFinal:    true,
+		IsJumbo:    true,
+		Fields:     builderFields,
+		Setters:    builderSetters,
+		ResultType: pt.name,
+		Objects:    ctx.ref(names.Objects),
+	}); err != nil {
+		return err
+	}
+	_, _ = fmt.Fprintf(w, "\n")
+
+	// Close the class.
+	_, _ = fmt.Fprintf(w, "}\n")
+
+	return nil
+}
+
+func (pt *plainType) genNormalInputType(ctx *classFileContext) error {
+	w := ctx.writer
+	_, _ = fmt.Fprintf(w, "\n")
+
+	// TODO: proper support for large constructors
+	props := pt.properties
+
+	// Open the class.
+	if pt.comment != "" {
+		_, _ = fmt.Fprintf(w, "/**\n")
+		_, _ = fmt.Fprintln(w, formatBlockComment(pt.comment, ""))
+		_, _ = fmt.Fprintf(w, " */\n")
+	}
+
+	_, _ = fmt.Fprintf(w, "public final class %s extends %s {\n", pt.name, pt.baseClass)
+	_, _ = fmt.Fprintf(w, "\n")
+	_, _ = fmt.Fprintf(w, "    public static final %s Empty = new %s();\n", pt.name, pt.name)
+	_, _ = fmt.Fprintf(w, "\n")
+
+	// Declare each input property.
+	for _, p := range props {
+		if err := pt.genInputProperty(ctx, p, true); err != nil {
 			return err
 		}
 		_, _ = fmt.Fprintf(w, "\n")
@@ -828,7 +979,18 @@ func (pt *plainType) genJumboOutputType(ctx *classFileContext) error {
 	fmt.Fprintf(w,
 		"%s    @%s.Constructor(%s)\n",
 		indent, ctx.ref(names.OutputCustomType), paramNamesStringBuilder.String())
-	fmt.Fprintf(w, "%s    private %s() {}\n", indent, pt.name)
+	// Generate empty constructor, not that the instance created
+	// with this constructor may not be valid if there are 'required' fields.
+	if len(props) > 0 {
+		_, _ = fmt.Fprintf(w, "\n")
+		_, _ = fmt.Fprintf(w, "    private %s() {\n", pt.name)
+		for _, prop := range props {
+			fieldName := names.Ident(pt.mod.propertyName(prop))
+			emptyValue := emptyTypeInitializer(ctx, prop.Type, true)
+			_, _ = fmt.Fprintf(w, "        this.%s = %s;\n", fieldName, emptyValue)
+		}
+		_, _ = fmt.Fprintf(w, "    }\n")
+	}
 
 	// Generate getters
 	for _, prop := range props {
