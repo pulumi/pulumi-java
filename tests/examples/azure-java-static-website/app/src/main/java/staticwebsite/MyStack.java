@@ -35,9 +35,7 @@ public final class MyStack extends Stack {
     private Output<String> cdnEndpoint;
 
     public MyStack() {
-        var resourceGroup = new ResourceGroup("resourceGroup",
-                                              ResourceGroupArgs.builder().build(),
-                                              CustomResourceOptions.Empty);
+        var resourceGroup = new ResourceGroup("resourceGroup");
 
         var storageAccount = new StorageAccount("storageaccount",
                                                 StorageAccountArgs.builder()

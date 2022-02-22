@@ -92,6 +92,13 @@ public class Endpoints extends io.pulumi.resources.CustomResource {
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public Endpoints(String name) {
+        super("kubernetes:core/v1:Endpoints", name, EndpointsArgs.Empty, makeResourceOptions(null, Input.empty()));
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

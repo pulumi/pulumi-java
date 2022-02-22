@@ -36,6 +36,13 @@ public class Topic extends io.pulumi.resources.CustomResource {
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public Topic(String name) {
+        super("google-native:pubsub/v1beta2:Topic", name, TopicArgs.Empty, makeResourceOptions(null, Input.empty()));
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

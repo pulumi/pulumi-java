@@ -82,6 +82,13 @@ public class SnapshotSchedulePolicy extends io.pulumi.resources.CustomResource {
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public SnapshotSchedulePolicy(String name) {
+        super("google-native:baremetalsolution/v2:SnapshotSchedulePolicy", name, SnapshotSchedulePolicyArgs.Empty, makeResourceOptions(null, Input.empty()));
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

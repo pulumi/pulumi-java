@@ -150,6 +150,13 @@ public class HubVirtualNetworkConnection extends io.pulumi.resources.CustomResou
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public HubVirtualNetworkConnection(String name) {
+        super("azure-native:network:HubVirtualNetworkConnection", name, HubVirtualNetworkConnectionArgs.Empty, makeResourceOptions(null, Input.empty()));
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

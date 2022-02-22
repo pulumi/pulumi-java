@@ -1263,6 +1263,25 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 	_, _ = fmt.Fprintf(w, "    /**\n")
 	_, _ = fmt.Fprintf(w, "     *\n")
 	_, _ = fmt.Fprintf(w, "     * @param name The _unique_ name of the resulting resource.\n")
+	_, _ = fmt.Fprintf(w, "     */\n")
+
+	// Name only constructor
+	fmt.Fprintf(w,
+		"    public %s(String name) {\n", className)
+	if r.IsComponent {
+		fmt.Fprintf(w,
+			"        super(\"%s\", name, %s.Empty, makeResourceOptions(null, %s.empty()), true);\n",
+			tok, ctx.ref(argsFQN), ctx.imports.Ref(names.Input))
+	} else {
+		fmt.Fprintf(w,
+			"        super(\"%s\", name, %s.Empty, makeResourceOptions(null, %s.empty()));\n",
+			tok, ctx.ref(argsFQN), ctx.imports.Ref(names.Input))
+	}
+	fmt.Fprintf(w, "    }\n")
+
+	_, _ = fmt.Fprintf(w, "    /**\n")
+	_, _ = fmt.Fprintf(w, "     *\n")
+	_, _ = fmt.Fprintf(w, "     * @param name The _unique_ name of the resulting resource.\n")
 	_, _ = fmt.Fprintf(w, "     * @param args The arguments to use to populate this resource's properties.\n")
 	_, _ = fmt.Fprintf(w, "     * @param options A bag of options that control this resource's behavior.\n")
 	_, _ = fmt.Fprintf(w, "     */\n")

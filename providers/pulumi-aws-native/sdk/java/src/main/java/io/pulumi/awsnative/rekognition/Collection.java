@@ -50,6 +50,13 @@ public class Collection extends io.pulumi.resources.CustomResource {
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public Collection(String name) {
+        super("aws-native:rekognition:Collection", name, CollectionArgs.Empty, makeResourceOptions(null, Input.empty()));
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

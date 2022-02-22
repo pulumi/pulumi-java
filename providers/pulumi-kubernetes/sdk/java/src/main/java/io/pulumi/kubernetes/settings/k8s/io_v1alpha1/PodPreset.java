@@ -64,6 +64,13 @@ public class PodPreset extends io.pulumi.resources.CustomResource {
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public PodPreset(String name) {
+        super("kubernetes:settings.k8s.io/v1alpha1:PodPreset", name, PodPresetArgs.Empty, makeResourceOptions(null, Input.empty()));
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

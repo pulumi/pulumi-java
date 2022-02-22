@@ -99,6 +99,13 @@ public class RegionBackendServiceIamPolicy extends io.pulumi.resources.CustomRes
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public RegionBackendServiceIamPolicy(String name) {
+        super("google-native:compute/alpha:RegionBackendServiceIamPolicy", name, RegionBackendServiceIamPolicyArgs.Empty, makeResourceOptions(null, Input.empty()));
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

@@ -151,6 +151,13 @@ public class DatasetIamBinding extends io.pulumi.resources.CustomResource {
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public DatasetIamBinding(String name) {
+        super("gcp:bigquery/datasetIamBinding:DatasetIamBinding", name, DatasetIamBindingArgs.Empty, makeResourceOptions(null, Input.empty()));
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

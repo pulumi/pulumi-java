@@ -106,6 +106,13 @@ public class DefaultServiceAccounts extends io.pulumi.resources.CustomResource {
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public DefaultServiceAccounts(String name) {
+        super("gcp:projects/defaultServiceAccounts:DefaultServiceAccounts", name, DefaultServiceAccountsArgs.Empty, makeResourceOptions(null, Input.empty()));
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

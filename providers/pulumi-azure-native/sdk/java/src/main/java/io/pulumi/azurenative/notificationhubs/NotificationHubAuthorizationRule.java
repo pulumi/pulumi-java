@@ -234,6 +234,13 @@ public class NotificationHubAuthorizationRule extends io.pulumi.resources.Custom
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public NotificationHubAuthorizationRule(String name) {
+        super("azure-native:notificationhubs:NotificationHubAuthorizationRule", name, NotificationHubAuthorizationRuleArgs.Empty, makeResourceOptions(null, Input.empty()));
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

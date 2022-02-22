@@ -160,6 +160,13 @@ public class AppServiceCertificateOrderCertificate extends io.pulumi.resources.C
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public AppServiceCertificateOrderCertificate(String name) {
+        super("azure-native:certificateregistration:AppServiceCertificateOrderCertificate", name, AppServiceCertificateOrderCertificateArgs.Empty, makeResourceOptions(null, Input.empty()));
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

@@ -125,6 +125,13 @@ public class PriorityClass extends io.pulumi.resources.CustomResource {
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public PriorityClass(String name) {
+        super("kubernetes:scheduling.k8s.io/v1alpha1:PriorityClass", name, PriorityClassArgs.Empty, makeResourceOptions(null, Input.empty()));
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

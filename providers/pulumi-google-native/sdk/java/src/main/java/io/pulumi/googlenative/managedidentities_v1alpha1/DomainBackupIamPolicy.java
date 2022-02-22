@@ -69,6 +69,13 @@ public class DomainBackupIamPolicy extends io.pulumi.resources.CustomResource {
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public DomainBackupIamPolicy(String name) {
+        super("google-native:managedidentities/v1alpha1:DomainBackupIamPolicy", name, DomainBackupIamPolicyArgs.Empty, makeResourceOptions(null, Input.empty()));
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

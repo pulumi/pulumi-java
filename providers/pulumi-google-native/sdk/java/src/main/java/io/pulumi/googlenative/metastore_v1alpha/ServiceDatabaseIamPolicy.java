@@ -84,6 +84,13 @@ public class ServiceDatabaseIamPolicy extends io.pulumi.resources.CustomResource
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public ServiceDatabaseIamPolicy(String name) {
+        super("google-native:metastore/v1alpha:ServiceDatabaseIamPolicy", name, ServiceDatabaseIamPolicyArgs.Empty, makeResourceOptions(null, Input.empty()));
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

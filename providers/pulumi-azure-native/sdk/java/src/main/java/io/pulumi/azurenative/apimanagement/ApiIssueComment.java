@@ -105,6 +105,13 @@ public class ApiIssueComment extends io.pulumi.resources.CustomResource {
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public ApiIssueComment(String name) {
+        super("azure-native:apimanagement:ApiIssueComment", name, ApiIssueCommentArgs.Empty, makeResourceOptions(null, Input.empty()));
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

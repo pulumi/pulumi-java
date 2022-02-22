@@ -134,6 +134,13 @@ public class WorkloadNetworkVMGroup extends io.pulumi.resources.CustomResource {
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public WorkloadNetworkVMGroup(String name) {
+        super("azure-native:avs:WorkloadNetworkVMGroup", name, WorkloadNetworkVMGroupArgs.Empty, makeResourceOptions(null, Input.empty()));
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

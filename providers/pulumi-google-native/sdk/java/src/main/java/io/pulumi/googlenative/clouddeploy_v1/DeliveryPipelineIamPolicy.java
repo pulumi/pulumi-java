@@ -84,6 +84,13 @@ public class DeliveryPipelineIamPolicy extends io.pulumi.resources.CustomResourc
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public DeliveryPipelineIamPolicy(String name) {
+        super("google-native:clouddeploy/v1:DeliveryPipelineIamPolicy", name, DeliveryPipelineIamPolicyArgs.Empty, makeResourceOptions(null, Input.empty()));
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

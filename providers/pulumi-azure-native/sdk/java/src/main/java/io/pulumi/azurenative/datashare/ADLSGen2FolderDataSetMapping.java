@@ -206,6 +206,13 @@ public class ADLSGen2FolderDataSetMapping extends io.pulumi.resources.CustomReso
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public ADLSGen2FolderDataSetMapping(String name) {
+        super("azure-native:datashare:ADLSGen2FolderDataSetMapping", name, ADLSGen2FolderDataSetMappingArgs.Empty, makeResourceOptions(null, Input.empty()));
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
