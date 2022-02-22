@@ -6,7 +6,7 @@ package io.pulumi.awsnative.route53.inputs;
 import io.pulumi.awsnative.route53.enums.HealthCheckConfigPropertiesInsufficientDataHealthStatus;
 import io.pulumi.awsnative.route53.enums.HealthCheckConfigPropertiesType;
 import io.pulumi.awsnative.route53.inputs.HealthCheckAlarmIdentifier;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;

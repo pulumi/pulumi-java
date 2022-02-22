@@ -6,7 +6,7 @@ package io.pulumi.awsnative.appflow.outputs;
 import io.pulumi.awsnative.appflow.enums.FlowConnectorType;
 import io.pulumi.awsnative.appflow.outputs.FlowIncrementalPullConfig;
 import io.pulumi.awsnative.appflow.outputs.FlowSourceConnectorProperties;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

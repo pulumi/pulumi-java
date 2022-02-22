@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigquery_v2.inputs.DatasetAccessEntryArgs;
 import io.pulumi.googlenative.bigquery_v2.inputs.RoutineReferenceArgs;
 import io.pulumi.googlenative.bigquery_v2.inputs.TableReferenceArgs;

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.greengrassv2.outputs;
 import io.pulumi.awsnative.greengrassv2.enums.ComponentVersionLambdaExecutionParametersInputPayloadEncodingType;
 import io.pulumi.awsnative.greengrassv2.outputs.ComponentVersionLambdaEventSource;
 import io.pulumi.awsnative.greengrassv2.outputs.ComponentVersionLambdaLinuxProcessParams;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;

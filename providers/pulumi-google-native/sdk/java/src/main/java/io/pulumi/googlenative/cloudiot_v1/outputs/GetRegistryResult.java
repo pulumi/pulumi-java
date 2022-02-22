@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudiot_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudiot_v1.outputs.EventNotificationConfigResponse;
 import io.pulumi.googlenative.cloudiot_v1.outputs.HttpConfigResponse;
 import io.pulumi.googlenative.cloudiot_v1.outputs.MqttConfigResponse;

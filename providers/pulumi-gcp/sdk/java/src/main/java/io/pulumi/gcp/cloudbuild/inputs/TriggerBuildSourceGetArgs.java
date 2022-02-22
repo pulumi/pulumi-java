@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudbuild.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudbuild.inputs.TriggerBuildSourceRepoSourceGetArgs;
 import io.pulumi.gcp.cloudbuild.inputs.TriggerBuildSourceStorageSourceGetArgs;
 import java.util.Objects;

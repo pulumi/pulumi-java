@@ -45,7 +45,7 @@ import io.pulumi.azurenative.datafactory.inputs.WaitActivityArgs;
 import io.pulumi.azurenative.datafactory.inputs.WebActivityArgs;
 import io.pulumi.azurenative.datafactory.inputs.WebHookActivityArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.connectedvmwarevsphere;
 import io.pulumi.azurenative.connectedvmwarevsphere.inputs.ExtendedLocationArgs;
 import io.pulumi.azurenative.connectedvmwarevsphere.inputs.VICredentialArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;

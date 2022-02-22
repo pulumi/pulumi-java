@@ -5,7 +5,7 @@ package io.pulumi.azurenative.consumption.inputs;
 
 import io.pulumi.azurenative.consumption.inputs.BudgetComparisonExpressionResponse;
 import io.pulumi.azurenative.consumption.inputs.BudgetFilterPropertiesResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;

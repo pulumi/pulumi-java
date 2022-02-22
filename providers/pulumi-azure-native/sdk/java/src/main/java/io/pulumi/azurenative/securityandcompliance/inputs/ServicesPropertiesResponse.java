@@ -9,7 +9,7 @@ import io.pulumi.azurenative.securityandcompliance.inputs.ServiceAuthenticationC
 import io.pulumi.azurenative.securityandcompliance.inputs.ServiceCorsConfigurationInfoResponse;
 import io.pulumi.azurenative.securityandcompliance.inputs.ServiceCosmosDbConfigurationInfoResponse;
 import io.pulumi.azurenative.securityandcompliance.inputs.ServiceExportConfigurationInfoResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

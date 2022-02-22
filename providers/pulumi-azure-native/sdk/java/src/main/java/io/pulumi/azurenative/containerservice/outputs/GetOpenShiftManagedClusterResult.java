@@ -9,7 +9,7 @@ import io.pulumi.azurenative.containerservice.outputs.OpenShiftManagedClusterAut
 import io.pulumi.azurenative.containerservice.outputs.OpenShiftManagedClusterMasterPoolProfileResponse;
 import io.pulumi.azurenative.containerservice.outputs.OpenShiftRouterProfileResponse;
 import io.pulumi.azurenative.containerservice.outputs.PurchasePlanResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;

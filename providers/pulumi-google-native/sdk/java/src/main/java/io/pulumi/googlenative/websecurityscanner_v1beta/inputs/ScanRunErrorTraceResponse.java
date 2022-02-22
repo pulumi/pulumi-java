@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.websecurityscanner_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.websecurityscanner_v1beta.inputs.ScanConfigErrorResponse;
 import java.lang.Integer;
 import java.lang.String;

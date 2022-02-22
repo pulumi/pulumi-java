@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.run_v1alpha1.outputs.ConfigMapEnvSourceResponse;
 import io.pulumi.googlenative.run_v1alpha1.outputs.SecretEnvSourceResponse;
 import java.lang.String;

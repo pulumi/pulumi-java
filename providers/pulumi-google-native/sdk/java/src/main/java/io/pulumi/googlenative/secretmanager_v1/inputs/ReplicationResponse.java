@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.secretmanager_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.secretmanager_v1.inputs.AutomaticResponse;
 import io.pulumi.googlenative.secretmanager_v1.inputs.UserManagedResponse;
 import java.util.Objects;

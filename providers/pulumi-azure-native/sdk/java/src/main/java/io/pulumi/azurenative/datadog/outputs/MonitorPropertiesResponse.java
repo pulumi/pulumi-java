@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datadog.outputs;
 
 import io.pulumi.azurenative.datadog.outputs.DatadogOrganizationPropertiesResponse;
 import io.pulumi.azurenative.datadog.outputs.UserInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;

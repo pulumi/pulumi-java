@@ -2,7 +2,7 @@ package io.pulumi.serialization.internal;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.serialization.internal.ConverterTests.ContainerSize;
 import org.junit.jupiter.api.Test;
 

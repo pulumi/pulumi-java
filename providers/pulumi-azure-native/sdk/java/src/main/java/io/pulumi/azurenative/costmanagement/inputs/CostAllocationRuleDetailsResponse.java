@@ -5,7 +5,7 @@ package io.pulumi.azurenative.costmanagement.inputs;
 
 import io.pulumi.azurenative.costmanagement.inputs.SourceCostAllocationResourceResponse;
 import io.pulumi.azurenative.costmanagement.inputs.TargetCostAllocationResourceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;

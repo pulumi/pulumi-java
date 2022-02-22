@@ -6,7 +6,7 @@ package io.pulumi.awsnative.kendra.inputs;
 import io.pulumi.awsnative.kendra.enums.IndexDocumentAttributeValueType;
 import io.pulumi.awsnative.kendra.inputs.IndexRelevance;
 import io.pulumi.awsnative.kendra.inputs.IndexSearch;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

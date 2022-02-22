@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sso.inputs;
 
 import io.pulumi.awsnative.sso.enums.AssignmentPrincipalType;
 import io.pulumi.awsnative.sso.enums.AssignmentTargetType;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 

@@ -16,7 +16,7 @@ import io.pulumi.azurenative.documentdb.outputs.PeriodicModeBackupPolicyResponse
 import io.pulumi.azurenative.documentdb.outputs.PrivateEndpointConnectionResponse;
 import io.pulumi.azurenative.documentdb.outputs.VirtualNetworkRuleResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;

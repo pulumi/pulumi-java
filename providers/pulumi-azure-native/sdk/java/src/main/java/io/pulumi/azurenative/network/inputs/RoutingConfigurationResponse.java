@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.inputs.PropagatedRouteTableResponse;
 import io.pulumi.azurenative.network.inputs.SubResourceResponse;
 import io.pulumi.azurenative.network.inputs.VnetRouteResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

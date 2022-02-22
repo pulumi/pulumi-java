@@ -10,7 +10,7 @@ import io.pulumi.awsnative.lightsail.inputs.InstanceNetworkingArgs;
 import io.pulumi.awsnative.lightsail.inputs.InstanceStateArgs;
 import io.pulumi.awsnative.lightsail.inputs.InstanceTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

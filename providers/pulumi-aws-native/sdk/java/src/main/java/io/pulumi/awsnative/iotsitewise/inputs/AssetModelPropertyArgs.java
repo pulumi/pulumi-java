@@ -7,7 +7,7 @@ import io.pulumi.awsnative.iotsitewise.enums.AssetModelDataType;
 import io.pulumi.awsnative.iotsitewise.enums.AssetModelDataTypeSpec;
 import io.pulumi.awsnative.iotsitewise.inputs.AssetModelPropertyTypeArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;

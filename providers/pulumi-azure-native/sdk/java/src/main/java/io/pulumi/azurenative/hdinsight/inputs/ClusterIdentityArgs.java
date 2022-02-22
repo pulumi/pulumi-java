@@ -6,7 +6,7 @@ package io.pulumi.azurenative.hdinsight.inputs;
 import io.pulumi.azurenative.hdinsight.enums.ResourceIdentityType;
 import io.pulumi.azurenative.hdinsight.inputs.ClusterIdentityUserAssignedIdentitiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;

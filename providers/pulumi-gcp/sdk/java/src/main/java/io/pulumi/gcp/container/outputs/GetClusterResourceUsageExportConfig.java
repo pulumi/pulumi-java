@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.container.outputs.GetClusterResourceUsageExportConfigBigqueryDestination;
 import java.lang.Boolean;
 import java.util.List;

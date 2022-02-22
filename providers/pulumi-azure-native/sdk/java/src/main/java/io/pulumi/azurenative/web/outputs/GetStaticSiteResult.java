@@ -9,7 +9,7 @@ import io.pulumi.azurenative.web.outputs.SkuDescriptionResponse;
 import io.pulumi.azurenative.web.outputs.StaticSiteBuildPropertiesResponse;
 import io.pulumi.azurenative.web.outputs.StaticSiteTemplateOptionsResponse;
 import io.pulumi.azurenative.web.outputs.StaticSiteUserProvidedFunctionAppResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.awsnative.databrew.inputs.RecipeParametersInputProperties;
 import io.pulumi.awsnative.databrew.inputs.RecipeSecondaryInput;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;

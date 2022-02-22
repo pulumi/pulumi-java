@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.notebooks_v1.outputs.DataprocParametersResponse;
 import io.pulumi.googlenative.notebooks_v1.outputs.SchedulerAcceleratorConfigResponse;
 import io.pulumi.googlenative.notebooks_v1.outputs.VertexAIParametersResponse;

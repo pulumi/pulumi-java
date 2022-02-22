@@ -5,7 +5,7 @@ package io.pulumi.awsnative.mediaconnect.outputs;
 
 import io.pulumi.awsnative.mediaconnect.enums.FlowSourceProtocol;
 import io.pulumi.awsnative.mediaconnect.outputs.FlowEncryption;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;

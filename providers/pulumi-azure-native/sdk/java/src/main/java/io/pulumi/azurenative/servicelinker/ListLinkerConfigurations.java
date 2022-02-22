@@ -6,7 +6,7 @@ package io.pulumi.azurenative.servicelinker;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.servicelinker.inputs.ListLinkerConfigurationsArgs;
 import io.pulumi.azurenative.servicelinker.outputs.ListLinkerConfigurationsResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

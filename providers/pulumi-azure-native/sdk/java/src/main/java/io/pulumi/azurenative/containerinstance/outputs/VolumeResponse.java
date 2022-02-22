@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerinstance.outputs;
 
 import io.pulumi.azurenative.containerinstance.outputs.AzureFileVolumeResponse;
 import io.pulumi.azurenative.containerinstance.outputs.GitRepoVolumeResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;

@@ -5,8 +5,8 @@ package io.pulumi.googlenative.gameservices_v1beta;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.gameservices_v1beta.GameServerDeploymentArgs;
 import java.lang.String;

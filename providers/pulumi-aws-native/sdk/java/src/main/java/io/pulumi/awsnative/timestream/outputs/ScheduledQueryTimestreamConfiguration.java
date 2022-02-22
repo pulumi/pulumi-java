@@ -6,7 +6,7 @@ package io.pulumi.awsnative.timestream.outputs;
 import io.pulumi.awsnative.timestream.outputs.ScheduledQueryDimensionMapping;
 import io.pulumi.awsnative.timestream.outputs.ScheduledQueryMixedMeasureMapping;
 import io.pulumi.awsnative.timestream.outputs.ScheduledQueryMultiMeasureMappings;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

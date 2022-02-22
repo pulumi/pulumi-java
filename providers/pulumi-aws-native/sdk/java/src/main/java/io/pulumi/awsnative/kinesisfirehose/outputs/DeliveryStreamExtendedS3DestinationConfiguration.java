@@ -12,7 +12,7 @@ import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamDynamicPartitio
 import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamEncryptionConfiguration;
 import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamProcessingConfiguration;
 import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamS3DestinationConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

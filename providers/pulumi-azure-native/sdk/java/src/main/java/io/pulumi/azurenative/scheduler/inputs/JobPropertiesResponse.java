@@ -6,7 +6,7 @@ package io.pulumi.azurenative.scheduler.inputs;
 import io.pulumi.azurenative.scheduler.inputs.JobActionResponse;
 import io.pulumi.azurenative.scheduler.inputs.JobRecurrenceResponse;
 import io.pulumi.azurenative.scheduler.inputs.JobStatusResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

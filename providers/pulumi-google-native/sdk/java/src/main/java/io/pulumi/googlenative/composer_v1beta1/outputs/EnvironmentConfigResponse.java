@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.composer_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.composer_v1beta1.outputs.DatabaseConfigResponse;
 import io.pulumi.googlenative.composer_v1beta1.outputs.EncryptionConfigResponse;
 import io.pulumi.googlenative.composer_v1beta1.outputs.MaintenanceWindowResponse;

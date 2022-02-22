@@ -6,7 +6,7 @@ package io.pulumi.awsnative.resourcegroups;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.resourcegroups.inputs.GetGroupArgs;
 import io.pulumi.awsnative.resourcegroups.outputs.GetGroupResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

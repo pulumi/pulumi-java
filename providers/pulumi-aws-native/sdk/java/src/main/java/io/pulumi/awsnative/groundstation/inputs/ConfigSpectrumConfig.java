@@ -6,7 +6,7 @@ package io.pulumi.awsnative.groundstation.inputs;
 import io.pulumi.awsnative.groundstation.enums.ConfigPolarization;
 import io.pulumi.awsnative.groundstation.inputs.ConfigFrequency;
 import io.pulumi.awsnative.groundstation.inputs.ConfigFrequencyBandwidth;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.AffinityArgs;
 import io.pulumi.kubernetes.core_v1.inputs.ContainerArgs;
 import io.pulumi.kubernetes.core_v1.inputs.EphemeralContainerArgs;

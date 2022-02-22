@@ -11,7 +11,7 @@ import io.pulumi.azurenative.compute.outputs.VirtualMachineScaleSetExtensionProf
 import io.pulumi.azurenative.compute.outputs.VirtualMachineScaleSetNetworkProfileResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineScaleSetOSProfileResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineScaleSetStorageProfileResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

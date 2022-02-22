@@ -7,7 +7,7 @@ import io.pulumi.awsnative.appflow.enums.FlowFileType;
 import io.pulumi.awsnative.appflow.inputs.FlowAggregationConfigArgs;
 import io.pulumi.awsnative.appflow.inputs.FlowPrefixConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkmanagement_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.networkmanagement_v1beta1.inputs.EndpointInfoResponse;
 import io.pulumi.googlenative.networkmanagement_v1beta1.inputs.StepResponse;
 import java.util.List;

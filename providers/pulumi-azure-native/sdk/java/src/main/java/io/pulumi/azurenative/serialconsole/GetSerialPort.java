@@ -6,7 +6,7 @@ package io.pulumi.azurenative.serialconsole;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.serialconsole.inputs.GetSerialPortArgs;
 import io.pulumi.azurenative.serialconsole.outputs.GetSerialPortResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

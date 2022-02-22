@@ -6,7 +6,7 @@ package io.pulumi.awsnative.gamelift;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.gamelift.inputs.GetGameServerGroupArgs;
 import io.pulumi.awsnative.gamelift.outputs.GetGameServerGroupResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ssmincidents.inputs;
 import io.pulumi.awsnative.ssmincidents.enums.ResponsePlanSsmAutomationTargetAccount;
 import io.pulumi.awsnative.ssmincidents.inputs.ResponsePlanSsmParameterArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

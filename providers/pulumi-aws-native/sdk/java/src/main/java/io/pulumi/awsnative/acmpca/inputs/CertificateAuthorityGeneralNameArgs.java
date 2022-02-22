@@ -7,7 +7,7 @@ import io.pulumi.awsnative.acmpca.inputs.CertificateAuthorityEdiPartyNameArgs;
 import io.pulumi.awsnative.acmpca.inputs.CertificateAuthorityOtherNameArgs;
 import io.pulumi.awsnative.acmpca.inputs.CertificateAuthoritySubjectArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.wafv2.outputs;
 
 import io.pulumi.awsnative.wafv2.outputs.LoggingConfigurationConditionActionConditionProperties;
 import io.pulumi.awsnative.wafv2.outputs.LoggingConfigurationConditionLabelNameConditionProperties;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

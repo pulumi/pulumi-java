@@ -9,7 +9,7 @@ import io.pulumi.azurenative.m365securityandcompliance.inputs.ServiceAuthenticat
 import io.pulumi.azurenative.m365securityandcompliance.inputs.ServiceCorsConfigurationInfoResponse;
 import io.pulumi.azurenative.m365securityandcompliance.inputs.ServiceCosmosDbConfigurationInfoResponse;
 import io.pulumi.azurenative.m365securityandcompliance.inputs.ServiceExportConfigurationInfoResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

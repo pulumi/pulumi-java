@@ -5,7 +5,7 @@ package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.azurenative.documentdb.inputs.CertificateResponse;
 import io.pulumi.azurenative.documentdb.inputs.SeedNodeResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;

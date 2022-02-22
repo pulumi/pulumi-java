@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iot.inputs;
 import io.pulumi.awsnative.iot.inputs.SecurityProfileBehaviorCriteriaArgs;
 import io.pulumi.awsnative.iot.inputs.SecurityProfileMetricDimensionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;

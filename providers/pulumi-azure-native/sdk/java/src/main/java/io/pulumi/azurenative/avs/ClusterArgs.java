@@ -5,7 +5,7 @@ package io.pulumi.azurenative.avs;
 
 import io.pulumi.azurenative.avs.inputs.SkuArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;

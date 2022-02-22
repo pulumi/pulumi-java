@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.ml_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__BuiltInAlgorithmOutputArgs;
 import java.lang.Boolean;

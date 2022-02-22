@@ -5,7 +5,7 @@ package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.awsnative.databrew.inputs.RecipeDataCatalogInputDefinition;
 import io.pulumi.awsnative.databrew.inputs.RecipeS3Location;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.automanage;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.automanage.inputs.GetConfigurationProfilePreferenceArgs;
 import io.pulumi.azurenative.automanage.outputs.GetConfigurationProfilePreferenceResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

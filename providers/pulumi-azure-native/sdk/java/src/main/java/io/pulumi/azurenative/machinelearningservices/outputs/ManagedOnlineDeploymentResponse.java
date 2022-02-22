@@ -12,7 +12,7 @@ import io.pulumi.azurenative.machinelearningservices.outputs.OnlineRequestSettin
 import io.pulumi.azurenative.machinelearningservices.outputs.OutputPathAssetReferenceResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.ProbeSettingsResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;

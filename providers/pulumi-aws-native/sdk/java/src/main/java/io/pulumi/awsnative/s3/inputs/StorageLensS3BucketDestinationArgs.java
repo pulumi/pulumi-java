@@ -7,7 +7,7 @@ import io.pulumi.awsnative.s3.enums.StorageLensS3BucketDestinationFormat;
 import io.pulumi.awsnative.s3.enums.StorageLensS3BucketDestinationOutputSchemaVersion;
 import io.pulumi.awsnative.s3.inputs.StorageLensEncryptionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;

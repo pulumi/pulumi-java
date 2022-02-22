@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.memcache_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.memcache_v1.outputs.InstanceMessageResponse;
 import io.pulumi.googlenative.memcache_v1.outputs.MemcacheParametersResponse;
 import io.pulumi.googlenative.memcache_v1.outputs.NodeConfigResponse;

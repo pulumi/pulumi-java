@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.tpu_v1alpha1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.tpu_v1alpha1.enums.NodeHealth;
 import io.pulumi.googlenative.tpu_v1alpha1.inputs.SchedulingConfigArgs;
 import java.lang.Boolean;

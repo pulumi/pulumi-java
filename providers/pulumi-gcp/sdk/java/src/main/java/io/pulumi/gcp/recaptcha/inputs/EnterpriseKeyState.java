@@ -4,7 +4,7 @@
 package io.pulumi.gcp.recaptcha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.recaptcha.inputs.EnterpriseKeyAndroidSettingsGetArgs;
 import io.pulumi.gcp.recaptcha.inputs.EnterpriseKeyIosSettingsGetArgs;
 import io.pulumi.gcp.recaptcha.inputs.EnterpriseKeyTestingOptionsGetArgs;

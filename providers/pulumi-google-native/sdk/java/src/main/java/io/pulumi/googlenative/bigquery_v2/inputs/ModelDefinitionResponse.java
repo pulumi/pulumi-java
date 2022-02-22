@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigquery_v2.inputs.BqmlTrainingRunResponse;
 import io.pulumi.googlenative.bigquery_v2.inputs.ModelDefinitionModelOptionsResponse;
 import java.util.List;

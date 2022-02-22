@@ -6,7 +6,7 @@ package io.pulumi.azurenative.azurearcdata;
 import io.pulumi.azurenative.azurearcdata.inputs.DataControllerPropertiesArgs;
 import io.pulumi.azurenative.azurearcdata.inputs.ExtendedLocationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;

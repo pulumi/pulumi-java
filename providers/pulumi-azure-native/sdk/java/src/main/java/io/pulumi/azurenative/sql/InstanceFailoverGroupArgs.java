@@ -8,7 +8,7 @@ import io.pulumi.azurenative.sql.inputs.InstanceFailoverGroupReadWriteEndpointAr
 import io.pulumi.azurenative.sql.inputs.ManagedInstancePairInfoArgs;
 import io.pulumi.azurenative.sql.inputs.PartnerRegionInfoArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

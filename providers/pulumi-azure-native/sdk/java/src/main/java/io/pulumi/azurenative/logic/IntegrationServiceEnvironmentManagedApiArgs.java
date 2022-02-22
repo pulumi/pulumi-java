@@ -6,7 +6,7 @@ package io.pulumi.azurenative.logic;
 import io.pulumi.azurenative.logic.inputs.IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs;
 import io.pulumi.azurenative.logic.inputs.ResourceReferenceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;

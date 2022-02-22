@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceResponse;
 import io.pulumi.azurenative.datafactory.inputs.TriggerPipelineReferenceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;

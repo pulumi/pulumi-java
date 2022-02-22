@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.gkehub.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.gkehub.outputs.FeatureMembershipConfigmanagementBinauthz;
 import io.pulumi.gcp.gkehub.outputs.FeatureMembershipConfigmanagementConfigSync;
 import io.pulumi.gcp.gkehub.outputs.FeatureMembershipConfigmanagementHierarchyController;

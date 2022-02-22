@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.eventarc_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.eventarc_v1.inputs.CloudRunArgs;
 import io.pulumi.googlenative.eventarc_v1.inputs.GKEArgs;
 import java.lang.String;

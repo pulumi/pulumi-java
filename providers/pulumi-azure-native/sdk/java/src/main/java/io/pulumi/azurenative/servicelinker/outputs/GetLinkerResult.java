@@ -9,7 +9,7 @@ import io.pulumi.azurenative.servicelinker.outputs.ServicePrincipalSecretAuthInf
 import io.pulumi.azurenative.servicelinker.outputs.SystemAssignedIdentityAuthInfoResponse;
 import io.pulumi.azurenative.servicelinker.outputs.SystemDataResponse;
 import io.pulumi.azurenative.servicelinker.outputs.UserAssignedIdentityAuthInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;

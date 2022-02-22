@@ -18,7 +18,7 @@ import io.pulumi.azurenative.virtualmachineimages.outputs.ImageTemplateVhdDistri
 import io.pulumi.azurenative.virtualmachineimages.outputs.ImageTemplateVmProfileResponse;
 import io.pulumi.azurenative.virtualmachineimages.outputs.ImageTemplateWindowsUpdateCustomizerResponse;
 import io.pulumi.azurenative.virtualmachineimages.outputs.ProvisioningErrorResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;

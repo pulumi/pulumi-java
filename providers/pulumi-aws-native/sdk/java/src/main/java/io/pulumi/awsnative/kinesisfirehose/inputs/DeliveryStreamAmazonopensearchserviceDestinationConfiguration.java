@@ -11,7 +11,7 @@ import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamCloudWatchLoggin
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamProcessingConfiguration;
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamS3DestinationConfiguration;
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamVpcConfiguration;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

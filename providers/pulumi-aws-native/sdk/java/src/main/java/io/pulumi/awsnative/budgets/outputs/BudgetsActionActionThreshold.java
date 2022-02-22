@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.budgets.outputs;
 
 import io.pulumi.awsnative.budgets.enums.BudgetsActionActionThresholdType;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.util.Objects;
 

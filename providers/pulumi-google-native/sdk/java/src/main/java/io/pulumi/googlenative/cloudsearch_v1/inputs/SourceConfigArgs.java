@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudsearch_v1.inputs.SourceArgs;
 import io.pulumi.googlenative.cloudsearch_v1.inputs.SourceCrowdingConfigArgs;
 import io.pulumi.googlenative.cloudsearch_v1.inputs.SourceScoringConfigArgs;

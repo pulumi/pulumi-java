@@ -11,7 +11,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.InMageRcmFabricSpecificDeta
 import io.pulumi.azurenative.recoveryservices.inputs.VMwareDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.VMwareV2FabricSpecificDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.VmmDetailsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;

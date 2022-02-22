@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.timestream.outputs;
 
 import io.pulumi.awsnative.timestream.enums.ScheduledQueryDimensionValueType;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 

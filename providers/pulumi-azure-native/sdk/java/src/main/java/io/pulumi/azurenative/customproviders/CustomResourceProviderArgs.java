@@ -7,7 +7,7 @@ import io.pulumi.azurenative.customproviders.inputs.CustomRPActionRouteDefinitio
 import io.pulumi.azurenative.customproviders.inputs.CustomRPResourceTypeRouteDefinitionArgs;
 import io.pulumi.azurenative.customproviders.inputs.CustomRPValidationsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;

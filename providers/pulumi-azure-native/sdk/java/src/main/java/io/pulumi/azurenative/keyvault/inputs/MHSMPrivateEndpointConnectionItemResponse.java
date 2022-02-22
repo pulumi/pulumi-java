@@ -5,7 +5,7 @@ package io.pulumi.azurenative.keyvault.inputs;
 
 import io.pulumi.azurenative.keyvault.inputs.MHSMPrivateEndpointResponse;
 import io.pulumi.azurenative.keyvault.inputs.MHSMPrivateLinkServiceConnectionStateResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

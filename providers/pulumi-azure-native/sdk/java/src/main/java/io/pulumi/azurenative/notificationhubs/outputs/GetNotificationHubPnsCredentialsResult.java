@@ -10,7 +10,7 @@ import io.pulumi.azurenative.notificationhubs.outputs.GcmCredentialResponse;
 import io.pulumi.azurenative.notificationhubs.outputs.MpnsCredentialResponse;
 import io.pulumi.azurenative.notificationhubs.outputs.SkuResponse;
 import io.pulumi.azurenative.notificationhubs.outputs.WnsCredentialResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;

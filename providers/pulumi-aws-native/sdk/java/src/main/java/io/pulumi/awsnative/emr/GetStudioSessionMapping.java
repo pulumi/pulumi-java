@@ -6,7 +6,7 @@ package io.pulumi.awsnative.emr;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.emr.inputs.GetStudioSessionMappingArgs;
 import io.pulumi.awsnative.emr.outputs.GetStudioSessionMappingResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

@@ -3,10 +3,10 @@ package io.pulumi.core.internal;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.Reflection.TypeShape;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.TypeShape;
+import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.InputMetadata;
-import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.OutputMetadata;
 import org.junit.jupiter.api.Test;
 

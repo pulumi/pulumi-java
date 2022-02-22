@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.authorization.k8s.io_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.authorization.k8s.io_v1.inputs.NonResourceAttributesArgs;
 import io.pulumi.kubernetes.authorization.k8s.io_v1.inputs.ResourceAttributesArgs;
 import java.util.Objects;

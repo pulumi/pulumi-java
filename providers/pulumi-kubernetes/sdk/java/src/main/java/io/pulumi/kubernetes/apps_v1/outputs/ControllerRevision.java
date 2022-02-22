@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apps_v1.outputs;
 
 import com.google.gson.JsonElement;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import java.lang.Integer;
 import java.lang.String;

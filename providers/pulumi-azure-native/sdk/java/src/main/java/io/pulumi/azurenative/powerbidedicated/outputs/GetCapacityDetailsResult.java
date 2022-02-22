@@ -6,7 +6,7 @@ package io.pulumi.azurenative.powerbidedicated.outputs;
 import io.pulumi.azurenative.powerbidedicated.outputs.CapacitySkuResponse;
 import io.pulumi.azurenative.powerbidedicated.outputs.DedicatedCapacityAdministratorsResponse;
 import io.pulumi.azurenative.powerbidedicated.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;

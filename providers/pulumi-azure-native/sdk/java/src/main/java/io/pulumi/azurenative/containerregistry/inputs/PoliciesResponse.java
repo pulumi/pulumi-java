@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 import io.pulumi.azurenative.containerregistry.inputs.QuarantinePolicyResponse;
 import io.pulumi.azurenative.containerregistry.inputs.RetentionPolicyResponse;
 import io.pulumi.azurenative.containerregistry.inputs.TrustPolicyResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

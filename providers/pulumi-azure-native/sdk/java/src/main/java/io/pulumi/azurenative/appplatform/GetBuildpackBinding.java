@@ -6,7 +6,7 @@ package io.pulumi.azurenative.appplatform;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.appplatform.inputs.GetBuildpackBindingArgs;
 import io.pulumi.azurenative.appplatform.outputs.GetBuildpackBindingResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

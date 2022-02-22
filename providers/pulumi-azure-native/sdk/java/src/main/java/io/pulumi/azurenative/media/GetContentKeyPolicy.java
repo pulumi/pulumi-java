@@ -6,7 +6,7 @@ package io.pulumi.azurenative.media;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.media.inputs.GetContentKeyPolicyArgs;
 import io.pulumi.azurenative.media.outputs.GetContentKeyPolicyResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

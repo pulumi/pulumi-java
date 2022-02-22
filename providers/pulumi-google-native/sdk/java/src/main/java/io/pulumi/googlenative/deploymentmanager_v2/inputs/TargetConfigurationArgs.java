@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.deploymentmanager_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.deploymentmanager_v2.inputs.ConfigFileArgs;
 import io.pulumi.googlenative.deploymentmanager_v2.inputs.ImportFileArgs;
 import java.util.List;

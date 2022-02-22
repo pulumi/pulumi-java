@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudbuild.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.cloudbuild.outputs.TriggerBuildSourceRepoSource;
 import io.pulumi.gcp.cloudbuild.outputs.TriggerBuildSourceStorageSource;
 import java.util.Objects;

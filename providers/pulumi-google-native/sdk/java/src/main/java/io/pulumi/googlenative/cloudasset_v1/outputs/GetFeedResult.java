@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudasset_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudasset_v1.outputs.ExprResponse;
 import io.pulumi.googlenative.cloudasset_v1.outputs.FeedOutputConfigResponse;
 import java.lang.String;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.MonthlyScheduleResponse;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.TimeOfDayResponse;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.TimeZoneResponse;

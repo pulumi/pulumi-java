@@ -6,7 +6,7 @@ package io.pulumi.azurenative.machinelearning.inputs;
 import io.pulumi.azurenative.machinelearning.inputs.GraphEdgeResponse;
 import io.pulumi.azurenative.machinelearning.inputs.GraphNodeResponse;
 import io.pulumi.azurenative.machinelearning.inputs.GraphParameterResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;

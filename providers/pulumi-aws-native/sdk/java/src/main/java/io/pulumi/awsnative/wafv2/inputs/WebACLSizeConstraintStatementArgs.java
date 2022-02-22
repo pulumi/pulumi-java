@@ -7,7 +7,7 @@ import io.pulumi.awsnative.wafv2.enums.WebACLSizeConstraintStatementComparisonOp
 import io.pulumi.awsnative.wafv2.inputs.WebACLFieldToMatchArgs;
 import io.pulumi.awsnative.wafv2.inputs.WebACLTextTransformationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.List;
 import java.util.Objects;

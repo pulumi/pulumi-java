@@ -6,7 +6,7 @@ package io.pulumi.azurenative.hdinsight.inputs;
 import io.pulumi.azurenative.hdinsight.inputs.AutoscaleCapacityArgs;
 import io.pulumi.azurenative.hdinsight.inputs.AutoscaleRecurrenceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 

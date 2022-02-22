@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.appengine_v1alpha;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.appengine_v1alpha.inputs.SslSettingsArgs;
 import java.lang.String;
 import java.util.Objects;

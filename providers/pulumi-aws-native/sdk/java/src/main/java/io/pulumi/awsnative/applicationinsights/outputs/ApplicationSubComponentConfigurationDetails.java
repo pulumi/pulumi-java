@@ -6,7 +6,7 @@ package io.pulumi.awsnative.applicationinsights.outputs;
 import io.pulumi.awsnative.applicationinsights.outputs.ApplicationAlarmMetric;
 import io.pulumi.awsnative.applicationinsights.outputs.ApplicationLog;
 import io.pulumi.awsnative.applicationinsights.outputs.ApplicationWindowsEvent;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.compute.enums.DiskCreateOptionTypes;
 import io.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetManagedDiskParametersArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;

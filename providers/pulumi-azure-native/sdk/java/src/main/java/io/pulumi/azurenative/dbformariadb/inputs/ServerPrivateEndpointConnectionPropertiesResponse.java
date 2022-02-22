@@ -5,7 +5,7 @@ package io.pulumi.azurenative.dbformariadb.inputs;
 
 import io.pulumi.azurenative.dbformariadb.inputs.PrivateEndpointPropertyResponse;
 import io.pulumi.azurenative.dbformariadb.inputs.ServerPrivateLinkServiceConnectionStatePropertyResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

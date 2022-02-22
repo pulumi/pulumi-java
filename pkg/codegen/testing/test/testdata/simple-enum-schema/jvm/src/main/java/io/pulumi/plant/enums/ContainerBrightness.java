@@ -3,7 +3,7 @@
 
 package io.pulumi.plant.enums;
 
-import io.pulumi.core.internal.annotations.EnumType;
+import io.pulumi.core.annotations.EnumType;
 import java.lang.Double;
 import java.util.StringJoiner;
 

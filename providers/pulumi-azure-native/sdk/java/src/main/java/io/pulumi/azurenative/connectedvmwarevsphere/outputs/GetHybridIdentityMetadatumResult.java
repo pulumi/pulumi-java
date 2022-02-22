@@ -5,7 +5,7 @@ package io.pulumi.azurenative.connectedvmwarevsphere.outputs;
 
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.IdentityResponse;
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

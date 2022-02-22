@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.GitHubActionCodeConfigurationResponse;
 import io.pulumi.azurenative.web.outputs.GitHubActionContainerConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;

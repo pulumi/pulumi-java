@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gameservices_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.gameservices_v1beta.outputs.GkeClusterReferenceResponse;
 import java.lang.String;
 import java.util.Objects;

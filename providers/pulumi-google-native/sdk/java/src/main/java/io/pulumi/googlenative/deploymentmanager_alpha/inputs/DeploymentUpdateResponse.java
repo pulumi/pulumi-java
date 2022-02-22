@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.deploymentmanager_alpha.inputs.CredentialResponse;
 import io.pulumi.googlenative.deploymentmanager_alpha.inputs.DeploymentUpdateLabelEntryResponse;
 import java.lang.String;

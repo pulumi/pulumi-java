@@ -7,7 +7,7 @@ import io.pulumi.awsnative.cassandra.outputs.TableBillingMode;
 import io.pulumi.awsnative.cassandra.outputs.TableColumn;
 import io.pulumi.awsnative.cassandra.outputs.TableEncryptionSpecification;
 import io.pulumi.awsnative.cassandra.outputs.TableTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;

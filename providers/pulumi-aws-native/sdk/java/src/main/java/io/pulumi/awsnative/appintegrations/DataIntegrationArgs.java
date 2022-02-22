@@ -6,7 +6,7 @@ package io.pulumi.awsnative.appintegrations;
 import io.pulumi.awsnative.appintegrations.inputs.DataIntegrationScheduleConfigArgs;
 import io.pulumi.awsnative.appintegrations.inputs.DataIntegrationTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

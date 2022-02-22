@@ -6,7 +6,7 @@ package io.pulumi.azurenative.domainregistration;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.domainregistration.inputs.ListTopLevelDomainAgreementsArgs;
 import io.pulumi.azurenative.domainregistration.outputs.ListTopLevelDomainAgreementsResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

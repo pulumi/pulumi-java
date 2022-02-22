@@ -9,7 +9,7 @@ import io.pulumi.azurenative.network.outputs.ConnectionMonitorOutputResponse;
 import io.pulumi.azurenative.network.outputs.ConnectionMonitorSourceResponse;
 import io.pulumi.azurenative.network.outputs.ConnectionMonitorTestConfigurationResponse;
 import io.pulumi.azurenative.network.outputs.ConnectionMonitorTestGroupResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;

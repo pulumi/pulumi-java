@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.MonitoringDestinationResponse;
 import java.util.List;
 import java.util.Objects;

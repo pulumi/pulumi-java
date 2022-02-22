@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.genomics_v1alpha2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.genomics_v1alpha2.outputs.DiskResponse;
 import java.lang.Boolean;
 import java.lang.Double;

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.iap;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.iap.inputs.WebTypeAppEngingIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;

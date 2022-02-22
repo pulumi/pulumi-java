@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storagetransfer_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.storagetransfer_v1.inputs.DateResponse;
 import io.pulumi.googlenative.storagetransfer_v1.inputs.TimeOfDayResponse;
 import java.lang.String;

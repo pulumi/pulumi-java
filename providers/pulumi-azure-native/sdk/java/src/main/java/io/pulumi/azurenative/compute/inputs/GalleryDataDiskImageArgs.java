@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.enums.HostCaching;
 import io.pulumi.azurenative.compute.inputs.GalleryArtifactVersionSourceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;

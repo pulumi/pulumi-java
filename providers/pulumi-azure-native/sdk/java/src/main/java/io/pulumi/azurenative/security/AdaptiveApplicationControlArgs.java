@@ -7,7 +7,7 @@ import io.pulumi.azurenative.security.inputs.PathRecommendationArgs;
 import io.pulumi.azurenative.security.inputs.ProtectionModeArgs;
 import io.pulumi.azurenative.security.inputs.VmRecommendationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

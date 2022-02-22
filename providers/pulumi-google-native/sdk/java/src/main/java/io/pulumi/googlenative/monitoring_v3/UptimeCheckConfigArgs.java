@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v3;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v3.enums.UptimeCheckConfigCheckerType;
 import io.pulumi.googlenative.monitoring_v3.enums.UptimeCheckConfigSelectedRegionsItem;
 import io.pulumi.googlenative.monitoring_v3.inputs.ContentMatcherArgs;

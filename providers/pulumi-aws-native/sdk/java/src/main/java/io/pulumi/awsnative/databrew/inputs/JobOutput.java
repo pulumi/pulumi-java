@@ -7,7 +7,7 @@ import io.pulumi.awsnative.databrew.enums.JobOutputCompressionFormat;
 import io.pulumi.awsnative.databrew.enums.JobOutputFormat;
 import io.pulumi.awsnative.databrew.inputs.JobOutputFormatOptions;
 import io.pulumi.awsnative.databrew.inputs.JobS3Location;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;

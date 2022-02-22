@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.dynamodb.outputs;
 
 import io.pulumi.awsnative.dynamodb.outputs.GlobalTableCapacityAutoScalingSettings;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

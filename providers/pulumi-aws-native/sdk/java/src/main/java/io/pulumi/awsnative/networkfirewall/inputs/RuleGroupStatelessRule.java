@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.networkfirewall.inputs;
 
 import io.pulumi.awsnative.networkfirewall.inputs.RuleGroupRuleDefinition;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 

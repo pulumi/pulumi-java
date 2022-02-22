@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.automation.inputs;
 
 import io.pulumi.azurenative.automation.inputs.AdvancedScheduleResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;

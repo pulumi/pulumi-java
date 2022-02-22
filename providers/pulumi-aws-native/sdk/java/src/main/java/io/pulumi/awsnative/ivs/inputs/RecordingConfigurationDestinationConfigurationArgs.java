@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ivs.inputs;
 
 import io.pulumi.awsnative.ivs.inputs.RecordingConfigurationS3DestinationConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 

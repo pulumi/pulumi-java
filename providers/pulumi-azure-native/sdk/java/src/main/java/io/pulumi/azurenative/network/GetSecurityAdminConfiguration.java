@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.inputs.GetSecurityAdminConfigurationArgs;
 import io.pulumi.azurenative.network.outputs.GetSecurityAdminConfigurationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

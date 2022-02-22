@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.inputs.ApplicationRuleResponse;
 import io.pulumi.azurenative.network.inputs.FirewallPolicyFilterRuleCollectionActionResponse;
 import io.pulumi.azurenative.network.inputs.NatRuleResponse;
 import io.pulumi.azurenative.network.inputs.NetworkRuleResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;

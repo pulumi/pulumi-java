@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.websecurityscanner_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.websecurityscanner_v1.outputs.AuthenticationResponse;
 import io.pulumi.googlenative.websecurityscanner_v1.outputs.ScheduleResponse;
 import java.lang.Boolean;

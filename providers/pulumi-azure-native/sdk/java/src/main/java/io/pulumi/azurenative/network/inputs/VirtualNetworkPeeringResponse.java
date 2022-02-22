@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.inputs.AddressSpaceResponse;
 import io.pulumi.azurenative.network.inputs.SubResourceResponse;
 import io.pulumi.azurenative.network.inputs.VirtualNetworkBgpCommunitiesResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;

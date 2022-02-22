@@ -7,7 +7,7 @@ import io.pulumi.azurenative.testbase.inputs.DistributionGroupListReceiverValueA
 import io.pulumi.azurenative.testbase.inputs.SubscriptionReceiverValueArgs;
 import io.pulumi.azurenative.testbase.inputs.UserObjectReceiverValueArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 

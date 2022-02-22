@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.emrcontainers.outputs;
 
 import io.pulumi.awsnative.emrcontainers.outputs.VirtualClusterEksInfo;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType

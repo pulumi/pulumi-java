@@ -5,7 +5,7 @@ package io.pulumi.azurenative.automation.outputs;
 
 import io.pulumi.azurenative.automation.outputs.ContentLinkResponse;
 import io.pulumi.azurenative.automation.outputs.RunbookParameterResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;

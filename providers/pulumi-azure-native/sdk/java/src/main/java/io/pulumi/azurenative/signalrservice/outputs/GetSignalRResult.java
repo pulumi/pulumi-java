@@ -9,7 +9,7 @@ import io.pulumi.azurenative.signalrservice.outputs.ServerlessUpstreamSettingsRe
 import io.pulumi.azurenative.signalrservice.outputs.SignalRCorsSettingsResponse;
 import io.pulumi.azurenative.signalrservice.outputs.SignalRFeatureResponse;
 import io.pulumi.azurenative.signalrservice.outputs.SignalRNetworkACLsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;

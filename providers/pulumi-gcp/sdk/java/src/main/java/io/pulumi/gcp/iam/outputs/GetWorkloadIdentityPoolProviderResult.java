@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.iam.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.iam.outputs.GetWorkloadIdentityPoolProviderAw;
 import io.pulumi.gcp.iam.outputs.GetWorkloadIdentityPoolProviderOidc;
 import java.lang.Boolean;

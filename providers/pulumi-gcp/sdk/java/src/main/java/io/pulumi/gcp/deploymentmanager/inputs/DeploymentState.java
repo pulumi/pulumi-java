@@ -4,7 +4,7 @@
 package io.pulumi.gcp.deploymentmanager.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.deploymentmanager.inputs.DeploymentLabelGetArgs;
 import io.pulumi.gcp.deploymentmanager.inputs.DeploymentTargetGetArgs;
 import java.lang.Boolean;

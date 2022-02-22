@@ -5,7 +5,7 @@ package io.pulumi.awsnative.networkfirewall.outputs;
 
 import io.pulumi.awsnative.networkfirewall.outputs.FirewallPolicy;
 import io.pulumi.awsnative.networkfirewall.outputs.FirewallPolicyTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

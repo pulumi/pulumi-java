@@ -5,7 +5,7 @@ package io.pulumi.azurenative.managedservices.inputs;
 
 import io.pulumi.azurenative.managedservices.inputs.PlanResponse;
 import io.pulumi.azurenative.managedservices.inputs.RegistrationAssignmentPropertiesResponseProperties;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

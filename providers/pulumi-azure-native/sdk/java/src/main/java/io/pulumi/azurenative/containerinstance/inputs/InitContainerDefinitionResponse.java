@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerinstance.inputs;
 import io.pulumi.azurenative.containerinstance.inputs.EnvironmentVariableResponse;
 import io.pulumi.azurenative.containerinstance.inputs.InitContainerPropertiesDefinitionResponseInstanceView;
 import io.pulumi.azurenative.containerinstance.inputs.VolumeMountResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.recoveryservices.outputs.A2AProtectionContainerMapp
 import io.pulumi.azurenative.recoveryservices.outputs.HealthErrorResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.VMwareCbtProtectionContainerMappingDetailsResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

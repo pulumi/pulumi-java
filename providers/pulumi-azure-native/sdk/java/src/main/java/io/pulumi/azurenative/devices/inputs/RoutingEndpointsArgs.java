@@ -8,7 +8,7 @@ import io.pulumi.azurenative.devices.inputs.RoutingServiceBusQueueEndpointProper
 import io.pulumi.azurenative.devices.inputs.RoutingServiceBusTopicEndpointPropertiesArgs;
 import io.pulumi.azurenative.devices.inputs.RoutingStorageContainerPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;

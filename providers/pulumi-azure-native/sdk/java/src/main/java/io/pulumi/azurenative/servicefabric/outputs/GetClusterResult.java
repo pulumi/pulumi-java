@@ -14,7 +14,7 @@ import io.pulumi.azurenative.servicefabric.outputs.DiagnosticsStorageAccountConf
 import io.pulumi.azurenative.servicefabric.outputs.NodeTypeDescriptionResponse;
 import io.pulumi.azurenative.servicefabric.outputs.ServerCertificateCommonNamesResponse;
 import io.pulumi.azurenative.servicefabric.outputs.SettingsSectionDescriptionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;

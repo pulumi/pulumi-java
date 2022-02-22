@@ -9,7 +9,7 @@ import io.pulumi.azurenative.compute.outputs.EncryptionSettingsCollectionRespons
 import io.pulumi.azurenative.compute.outputs.ExtendedLocationResponse;
 import io.pulumi.azurenative.compute.outputs.PurchasePlanResponse;
 import io.pulumi.azurenative.compute.outputs.SnapshotSkuResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;

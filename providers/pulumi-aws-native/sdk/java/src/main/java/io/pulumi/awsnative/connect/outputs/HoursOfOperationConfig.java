@@ -5,7 +5,7 @@ package io.pulumi.awsnative.connect.outputs;
 
 import io.pulumi.awsnative.connect.enums.HoursOfOperationConfigDay;
 import io.pulumi.awsnative.connect.outputs.HoursOfOperationTimeSlice;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType

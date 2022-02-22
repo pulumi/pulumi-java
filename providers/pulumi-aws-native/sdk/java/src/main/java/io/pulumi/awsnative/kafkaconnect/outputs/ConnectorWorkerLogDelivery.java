@@ -6,7 +6,7 @@ package io.pulumi.awsnative.kafkaconnect.outputs;
 import io.pulumi.awsnative.kafkaconnect.outputs.ConnectorCloudWatchLogsLogDelivery;
 import io.pulumi.awsnative.kafkaconnect.outputs.ConnectorFirehoseLogDelivery;
 import io.pulumi.awsnative.kafkaconnect.outputs.ConnectorS3LogDelivery;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

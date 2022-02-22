@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.inputs.IpsecPolicyResponse;
 import io.pulumi.azurenative.network.inputs.RadiusServerResponse;
 import io.pulumi.azurenative.network.inputs.VpnClientRevokedCertificateResponse;
 import io.pulumi.azurenative.network.inputs.VpnClientRootCertificateResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

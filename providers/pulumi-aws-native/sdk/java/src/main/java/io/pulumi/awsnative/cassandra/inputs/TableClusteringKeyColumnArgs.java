@@ -6,7 +6,7 @@ package io.pulumi.awsnative.cassandra.inputs;
 import io.pulumi.awsnative.cassandra.enums.TableClusteringKeyColumnOrderBy;
 import io.pulumi.awsnative.cassandra.inputs.TableColumnArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 

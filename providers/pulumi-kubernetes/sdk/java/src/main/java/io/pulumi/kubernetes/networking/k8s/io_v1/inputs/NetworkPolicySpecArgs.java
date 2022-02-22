@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.networking.k8s.io_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
 import io.pulumi.kubernetes.networking.k8s.io_v1.inputs.NetworkPolicyEgressRuleArgs;
 import io.pulumi.kubernetes.networking.k8s.io_v1.inputs.NetworkPolicyIngressRuleArgs;

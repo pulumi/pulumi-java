@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.JwtResponse;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.SignatureResponse;
 import java.lang.String;

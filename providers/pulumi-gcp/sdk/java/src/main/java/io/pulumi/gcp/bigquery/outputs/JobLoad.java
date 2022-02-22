@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.bigquery.outputs.JobLoadDestinationEncryptionConfiguration;
 import io.pulumi.gcp.bigquery.outputs.JobLoadDestinationTable;
 import io.pulumi.gcp.bigquery.outputs.JobLoadTimePartitioning;

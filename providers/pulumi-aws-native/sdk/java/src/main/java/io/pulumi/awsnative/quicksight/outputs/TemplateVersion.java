@@ -7,7 +7,7 @@ import io.pulumi.awsnative.quicksight.enums.TemplateResourceStatus;
 import io.pulumi.awsnative.quicksight.outputs.TemplateDataSetConfiguration;
 import io.pulumi.awsnative.quicksight.outputs.TemplateError;
 import io.pulumi.awsnative.quicksight.outputs.TemplateSheet;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;

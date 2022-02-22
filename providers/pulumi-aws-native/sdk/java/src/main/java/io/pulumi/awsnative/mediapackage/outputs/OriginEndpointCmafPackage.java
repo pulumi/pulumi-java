@@ -6,7 +6,7 @@ package io.pulumi.awsnative.mediapackage.outputs;
 import io.pulumi.awsnative.mediapackage.outputs.OriginEndpointCmafEncryption;
 import io.pulumi.awsnative.mediapackage.outputs.OriginEndpointHlsManifest;
 import io.pulumi.awsnative.mediapackage.outputs.OriginEndpointStreamSelection;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;

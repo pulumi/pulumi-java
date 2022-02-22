@@ -1,8 +1,8 @@
 package io.pulumi.resources;
 
 import io.pulumi.core.Output;
+import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.internal.Constants;
-import io.pulumi.core.internal.annotations.OutputExport;
 
 import javax.annotation.Nullable;
 

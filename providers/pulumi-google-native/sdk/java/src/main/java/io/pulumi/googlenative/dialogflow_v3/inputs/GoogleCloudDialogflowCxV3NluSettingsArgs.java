@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v3.enums.GoogleCloudDialogflowCxV3NluSettingsModelTrainingMode;
 import io.pulumi.googlenative.dialogflow_v3.enums.GoogleCloudDialogflowCxV3NluSettingsModelType;
 import java.lang.Double;

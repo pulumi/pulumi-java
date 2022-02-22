@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.secretmanager.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.secretmanager.outputs.GetSecretReplication;
 import io.pulumi.gcp.secretmanager.outputs.GetSecretRotation;
 import io.pulumi.gcp.secretmanager.outputs.GetSecretTopic;

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyAllowedIssuanceModesGetArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyAllowedKeyTypeGetArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyBaselineValuesGetArgs;

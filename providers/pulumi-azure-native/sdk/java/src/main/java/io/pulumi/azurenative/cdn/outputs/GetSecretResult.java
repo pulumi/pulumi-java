@@ -7,7 +7,7 @@ import io.pulumi.azurenative.cdn.outputs.CustomerCertificateParametersResponse;
 import io.pulumi.azurenative.cdn.outputs.ManagedCertificateParametersResponse;
 import io.pulumi.azurenative.cdn.outputs.SystemDataResponse;
 import io.pulumi.azurenative.cdn.outputs.UrlSigningKeyParametersResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;

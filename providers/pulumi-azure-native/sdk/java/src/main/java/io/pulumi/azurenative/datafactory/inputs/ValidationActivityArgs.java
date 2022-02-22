@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.inputs.ActivityDependencyArgs;
 import io.pulumi.azurenative.datafactory.inputs.DatasetReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;

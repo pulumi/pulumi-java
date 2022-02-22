@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.gkehub_v1beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.gkehub_v1beta.inputs.AppDevExperienceFeatureSpecArgs;
 import io.pulumi.googlenative.gkehub_v1beta.inputs.MultiClusterIngressFeatureSpecArgs;
 import java.util.Objects;

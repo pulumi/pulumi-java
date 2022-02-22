@@ -7,7 +7,7 @@ import io.pulumi.azurenative.automation.enums.EncryptionKeySourceType;
 import io.pulumi.azurenative.automation.inputs.EncryptionPropertiesIdentityArgs;
 import io.pulumi.azurenative.automation.inputs.KeyVaultPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 

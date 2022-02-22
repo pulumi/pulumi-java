@@ -8,7 +8,7 @@ import io.pulumi.awsnative.apigateway.inputs.UsagePlanQuotaSettingsArgs;
 import io.pulumi.awsnative.apigateway.inputs.UsagePlanTagArgs;
 import io.pulumi.awsnative.apigateway.inputs.UsagePlanThrottleSettingsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

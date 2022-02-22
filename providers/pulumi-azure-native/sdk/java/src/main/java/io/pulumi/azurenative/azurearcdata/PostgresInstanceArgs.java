@@ -7,7 +7,7 @@ import io.pulumi.azurenative.azurearcdata.inputs.ExtendedLocationArgs;
 import io.pulumi.azurenative.azurearcdata.inputs.PostgresInstancePropertiesArgs;
 import io.pulumi.azurenative.azurearcdata.inputs.PostgresInstanceSkuArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;

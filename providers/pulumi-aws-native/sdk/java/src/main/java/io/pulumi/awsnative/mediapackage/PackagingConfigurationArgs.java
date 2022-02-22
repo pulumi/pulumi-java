@@ -9,7 +9,7 @@ import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationHlsPackageA
 import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationMssPackageArgs;
 import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

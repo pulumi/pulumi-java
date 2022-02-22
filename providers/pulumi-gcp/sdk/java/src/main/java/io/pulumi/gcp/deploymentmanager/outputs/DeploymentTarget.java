@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.deploymentmanager.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.deploymentmanager.outputs.DeploymentTargetConfig;
 import io.pulumi.gcp.deploymentmanager.outputs.DeploymentTargetImport;
 import java.util.List;

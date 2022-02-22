@@ -5,7 +5,7 @@ package io.pulumi.awsnative.cassandra.inputs;
 
 import io.pulumi.awsnative.cassandra.enums.TableMode;
 import io.pulumi.awsnative.cassandra.inputs.TableProvisionedThroughput;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

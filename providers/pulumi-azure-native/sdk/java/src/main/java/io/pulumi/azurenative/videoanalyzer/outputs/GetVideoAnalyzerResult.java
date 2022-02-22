@@ -8,7 +8,7 @@ import io.pulumi.azurenative.videoanalyzer.outputs.EndpointResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.StorageAccountResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.SystemDataResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.VideoAnalyzerIdentityResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;

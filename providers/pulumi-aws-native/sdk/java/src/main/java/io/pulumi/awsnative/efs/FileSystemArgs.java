@@ -7,7 +7,7 @@ import io.pulumi.awsnative.efs.inputs.FileSystemBackupPolicyArgs;
 import io.pulumi.awsnative.efs.inputs.FileSystemElasticFileSystemTagArgs;
 import io.pulumi.awsnative.efs.inputs.FileSystemLifecyclePolicyArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Object;

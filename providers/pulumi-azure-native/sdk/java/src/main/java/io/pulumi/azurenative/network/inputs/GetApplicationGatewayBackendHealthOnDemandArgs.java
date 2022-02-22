@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.ApplicationGatewayProtocol;
 import io.pulumi.azurenative.network.inputs.ApplicationGatewayProbeHealthResponseMatch;
 import io.pulumi.azurenative.network.inputs.SubResource;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;

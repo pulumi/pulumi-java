@@ -8,7 +8,7 @@ import io.pulumi.azurenative.kubernetesconfiguration.outputs.ErrorDefinitionResp
 import io.pulumi.azurenative.kubernetesconfiguration.outputs.ExtensionStatusResponse;
 import io.pulumi.azurenative.kubernetesconfiguration.outputs.ScopeResponse;
 import io.pulumi.azurenative.kubernetesconfiguration.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;

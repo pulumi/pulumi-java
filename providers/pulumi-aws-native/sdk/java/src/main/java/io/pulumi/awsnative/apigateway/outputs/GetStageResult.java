@@ -7,7 +7,7 @@ import io.pulumi.awsnative.apigateway.outputs.StageAccessLogSetting;
 import io.pulumi.awsnative.apigateway.outputs.StageCanarySetting;
 import io.pulumi.awsnative.apigateway.outputs.StageMethodSetting;
 import io.pulumi.awsnative.apigateway.outputs.StageTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;

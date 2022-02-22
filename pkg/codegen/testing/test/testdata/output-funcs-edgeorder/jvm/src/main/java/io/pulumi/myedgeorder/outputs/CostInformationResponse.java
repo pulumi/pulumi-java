@@ -3,7 +3,7 @@
 
 package io.pulumi.myedgeorder.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.myedgeorder.outputs.BillingMeterDetailsResponse;
 import java.lang.String;
 import java.util.List;

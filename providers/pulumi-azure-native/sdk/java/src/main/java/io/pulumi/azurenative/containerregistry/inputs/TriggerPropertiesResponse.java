@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 import io.pulumi.azurenative.containerregistry.inputs.BaseImageTriggerResponse;
 import io.pulumi.azurenative.containerregistry.inputs.SourceTriggerResponse;
 import io.pulumi.azurenative.containerregistry.inputs.TimerTriggerResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;

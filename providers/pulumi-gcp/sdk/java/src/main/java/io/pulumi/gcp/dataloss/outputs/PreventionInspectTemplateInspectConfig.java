@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataloss.outputs.PreventionInspectTemplateInspectConfigCustomInfoType;
 import io.pulumi.gcp.dataloss.outputs.PreventionInspectTemplateInspectConfigInfoType;
 import io.pulumi.gcp.dataloss.outputs.PreventionInspectTemplateInspectConfigLimits;

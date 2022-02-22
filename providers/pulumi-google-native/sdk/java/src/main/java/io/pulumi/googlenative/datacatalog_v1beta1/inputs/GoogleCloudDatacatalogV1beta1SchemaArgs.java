@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datacatalog_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datacatalog_v1beta1.inputs.GoogleCloudDatacatalogV1beta1ColumnSchemaArgs;
 import java.util.List;
 import java.util.Objects;

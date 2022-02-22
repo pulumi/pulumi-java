@@ -6,7 +6,7 @@ package io.pulumi.azurenative.m365securityandcompliance;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.m365securityandcompliance.inputs.GetprivateLinkServicesForO365ManagementActivityAPIArgs;
 import io.pulumi.azurenative.m365securityandcompliance.outputs.GetprivateLinkServicesForO365ManagementActivityAPIResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

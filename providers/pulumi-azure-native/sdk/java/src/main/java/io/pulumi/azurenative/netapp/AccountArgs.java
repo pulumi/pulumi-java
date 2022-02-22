@@ -6,7 +6,7 @@ package io.pulumi.azurenative.netapp;
 import io.pulumi.azurenative.netapp.inputs.AccountEncryptionArgs;
 import io.pulumi.azurenative.netapp.inputs.ActiveDirectoryArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;

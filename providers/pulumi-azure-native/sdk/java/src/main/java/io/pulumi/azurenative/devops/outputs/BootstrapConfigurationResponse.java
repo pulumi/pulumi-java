@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devops.outputs;
 
 import io.pulumi.azurenative.devops.outputs.CodeRepositoryResponse;
 import io.pulumi.azurenative.devops.outputs.PipelineTemplateResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

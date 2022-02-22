@@ -6,7 +6,7 @@ package io.pulumi.awsnative.resiliencehub;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.resiliencehub.inputs.GetResiliencyPolicyArgs;
 import io.pulumi.awsnative.resiliencehub.outputs.GetResiliencyPolicyResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.recoveryservices.enums.BackupManagementType;
 import io.pulumi.azurenative.recoveryservices.inputs.DPMContainerExtendedInfoArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;

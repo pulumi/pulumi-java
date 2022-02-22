@@ -6,7 +6,7 @@ package io.pulumi.awsnative.auditmanager.inputs;
 import io.pulumi.awsnative.auditmanager.inputs.AssessmentAWSAccountArgs;
 import io.pulumi.awsnative.auditmanager.inputs.AssessmentAWSServiceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;

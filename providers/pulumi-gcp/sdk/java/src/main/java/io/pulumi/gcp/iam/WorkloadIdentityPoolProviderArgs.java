@@ -4,7 +4,7 @@
 package io.pulumi.gcp.iam;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.iam.inputs.WorkloadIdentityPoolProviderAwsArgs;
 import io.pulumi.gcp.iam.inputs.WorkloadIdentityPoolProviderOidcArgs;
 import java.lang.Boolean;

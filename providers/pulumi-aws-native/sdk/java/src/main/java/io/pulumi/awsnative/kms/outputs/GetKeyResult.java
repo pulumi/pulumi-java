@@ -6,7 +6,7 @@ package io.pulumi.awsnative.kms.outputs;
 import io.pulumi.awsnative.kms.enums.KeySpec;
 import io.pulumi.awsnative.kms.enums.KeyUsage;
 import io.pulumi.awsnative.kms.outputs.KeyTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;

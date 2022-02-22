@@ -8,7 +8,7 @@ import io.pulumi.azurenative.dataprotection.inputs.AzureBackupParamsResponse;
 import io.pulumi.azurenative.dataprotection.inputs.DataStoreInfoBaseResponse;
 import io.pulumi.azurenative.dataprotection.inputs.ScheduleBasedTriggerContextResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

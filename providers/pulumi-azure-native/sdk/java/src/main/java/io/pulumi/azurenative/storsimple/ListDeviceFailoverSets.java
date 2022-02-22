@@ -6,7 +6,7 @@ package io.pulumi.azurenative.storsimple;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.storsimple.inputs.ListDeviceFailoverSetsArgs;
 import io.pulumi.azurenative.storsimple.outputs.ListDeviceFailoverSetsResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.settings.k8s.io_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.EnvFromSource;
 import io.pulumi.kubernetes.core_v1.outputs.EnvVar;
 import io.pulumi.kubernetes.core_v1.outputs.Volume;

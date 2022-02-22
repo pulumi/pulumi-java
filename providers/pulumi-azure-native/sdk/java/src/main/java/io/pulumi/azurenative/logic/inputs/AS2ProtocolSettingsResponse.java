@@ -10,7 +10,7 @@ import io.pulumi.azurenative.logic.inputs.AS2MdnSettingsResponse;
 import io.pulumi.azurenative.logic.inputs.AS2MessageConnectionSettingsResponse;
 import io.pulumi.azurenative.logic.inputs.AS2SecuritySettingsResponse;
 import io.pulumi.azurenative.logic.inputs.AS2ValidationSettingsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 

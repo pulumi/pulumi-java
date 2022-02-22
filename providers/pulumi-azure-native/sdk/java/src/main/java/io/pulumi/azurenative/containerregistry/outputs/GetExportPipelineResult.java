@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerregistry.outputs;
 import io.pulumi.azurenative.containerregistry.outputs.ExportPipelineTargetPropertiesResponse;
 import io.pulumi.azurenative.containerregistry.outputs.IdentityPropertiesResponse;
 import io.pulumi.azurenative.containerregistry.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.groundstation.inputs;
 
 import io.pulumi.awsnative.groundstation.inputs.DataflowEndpointGroupDataflowEndpoint;
 import io.pulumi.awsnative.groundstation.inputs.DataflowEndpointGroupSecurityDetails;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

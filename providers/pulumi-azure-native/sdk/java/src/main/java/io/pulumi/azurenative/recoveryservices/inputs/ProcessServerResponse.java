@@ -6,7 +6,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 import io.pulumi.azurenative.recoveryservices.inputs.HealthErrorResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.MobilityServiceUpdateResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.VersionDetailsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;

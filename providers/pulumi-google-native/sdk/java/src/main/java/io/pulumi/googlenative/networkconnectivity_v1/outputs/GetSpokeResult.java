@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkconnectivity_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.networkconnectivity_v1.outputs.LinkedInterconnectAttachmentsResponse;
 import io.pulumi.googlenative.networkconnectivity_v1.outputs.LinkedRouterApplianceInstancesResponse;
 import io.pulumi.googlenative.networkconnectivity_v1.outputs.LinkedVpnTunnelsResponse;

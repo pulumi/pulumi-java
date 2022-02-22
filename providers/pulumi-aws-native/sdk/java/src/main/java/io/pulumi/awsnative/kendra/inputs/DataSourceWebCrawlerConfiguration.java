@@ -6,7 +6,7 @@ package io.pulumi.awsnative.kendra.inputs;
 import io.pulumi.awsnative.kendra.inputs.DataSourceProxyConfiguration;
 import io.pulumi.awsnative.kendra.inputs.DataSourceWebCrawlerAuthenticationConfiguration;
 import io.pulumi.awsnative.kendra.inputs.DataSourceWebCrawlerUrls;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;

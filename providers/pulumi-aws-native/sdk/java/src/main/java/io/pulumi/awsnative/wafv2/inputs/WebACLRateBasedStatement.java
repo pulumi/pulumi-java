@@ -6,7 +6,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 import io.pulumi.awsnative.wafv2.enums.WebACLRateBasedStatementAggregateKeyType;
 import io.pulumi.awsnative.wafv2.inputs.WebACLForwardedIPConfiguration;
 import io.pulumi.awsnative.wafv2.inputs.WebACLStatement;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;

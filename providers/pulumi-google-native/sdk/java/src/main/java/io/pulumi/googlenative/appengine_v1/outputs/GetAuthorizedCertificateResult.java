@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.appengine_v1.outputs.CertificateRawDataResponse;
 import io.pulumi.googlenative.appengine_v1.outputs.ManagedCertificateResponse;
 import java.lang.Integer;

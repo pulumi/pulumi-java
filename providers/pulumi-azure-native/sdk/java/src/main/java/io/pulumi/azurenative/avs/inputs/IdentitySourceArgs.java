@@ -6,7 +6,7 @@ package io.pulumi.azurenative.avs.inputs;
 import io.pulumi.azurenative.avs.enums.SslEnum;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;

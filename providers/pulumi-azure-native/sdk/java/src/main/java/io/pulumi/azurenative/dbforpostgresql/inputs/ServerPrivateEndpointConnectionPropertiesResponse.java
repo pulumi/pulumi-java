@@ -5,7 +5,7 @@ package io.pulumi.azurenative.dbforpostgresql.inputs;
 
 import io.pulumi.azurenative.dbforpostgresql.inputs.PrivateEndpointPropertyResponse;
 import io.pulumi.azurenative.dbforpostgresql.inputs.ServerPrivateLinkServiceConnectionStatePropertyResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

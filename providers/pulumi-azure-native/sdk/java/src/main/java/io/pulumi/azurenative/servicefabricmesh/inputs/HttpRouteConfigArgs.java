@@ -6,7 +6,7 @@ package io.pulumi.azurenative.servicefabricmesh.inputs;
 import io.pulumi.azurenative.servicefabricmesh.inputs.GatewayDestinationArgs;
 import io.pulumi.azurenative.servicefabricmesh.inputs.HttpRouteMatchRuleArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 

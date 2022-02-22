@@ -6,7 +6,7 @@ package io.pulumi.awsnative.memorydb;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.memorydb.inputs.GetClusterArgs;
 import io.pulumi.awsnative.memorydb.outputs.GetClusterResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

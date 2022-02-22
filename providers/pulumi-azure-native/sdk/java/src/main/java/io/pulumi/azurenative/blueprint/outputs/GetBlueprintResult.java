@@ -6,7 +6,7 @@ package io.pulumi.azurenative.blueprint.outputs;
 import io.pulumi.azurenative.blueprint.outputs.BlueprintStatusResponse;
 import io.pulumi.azurenative.blueprint.outputs.ParameterDefinitionResponse;
 import io.pulumi.azurenative.blueprint.outputs.ResourceGroupDefinitionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;

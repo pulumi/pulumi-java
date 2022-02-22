@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.inputs.KubeClientSettingsArgs;
 import java.lang.String;

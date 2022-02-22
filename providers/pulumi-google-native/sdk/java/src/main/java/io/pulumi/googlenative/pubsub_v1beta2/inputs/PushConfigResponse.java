@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.pubsub_v1beta2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.pubsub_v1beta2.inputs.OidcTokenResponse;
 import java.lang.String;
 import java.util.Map;

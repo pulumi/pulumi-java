@@ -6,7 +6,7 @@ package io.pulumi.awsnative.imagebuilder;
 import io.pulumi.awsnative.imagebuilder.inputs.InfrastructureConfigurationInstanceMetadataOptionsArgs;
 import io.pulumi.awsnative.imagebuilder.inputs.InfrastructureConfigurationLoggingArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;

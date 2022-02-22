@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.inputs.BucketReplicationRuleAndOperator;
 import io.pulumi.awsnative.s3.inputs.BucketTagFilter;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

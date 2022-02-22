@@ -9,7 +9,7 @@ import io.pulumi.azurenative.batch.outputs.EncryptionPropertiesResponse;
 import io.pulumi.azurenative.batch.outputs.KeyVaultReferenceResponse;
 import io.pulumi.azurenative.batch.outputs.PrivateEndpointConnectionResponse;
 import io.pulumi.azurenative.batch.outputs.VirtualMachineFamilyCoreQuotaResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;

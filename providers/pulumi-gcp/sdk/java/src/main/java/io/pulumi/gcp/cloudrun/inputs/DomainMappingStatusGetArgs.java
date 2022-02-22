@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudrun.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudrun.inputs.DomainMappingStatusConditionGetArgs;
 import io.pulumi.gcp.cloudrun.inputs.DomainMappingStatusResourceRecordGetArgs;
 import java.lang.Integer;

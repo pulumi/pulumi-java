@@ -6,7 +6,7 @@ package io.pulumi.azurenative.hybridconnectivity;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.hybridconnectivity.inputs.GetEndpointArgs;
 import io.pulumi.azurenative.hybridconnectivity.outputs.GetEndpointResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

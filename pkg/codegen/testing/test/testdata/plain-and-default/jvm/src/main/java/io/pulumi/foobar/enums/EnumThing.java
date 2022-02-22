@@ -3,7 +3,7 @@
 
 package io.pulumi.foobar.enums;
 
-import io.pulumi.core.internal.annotations.EnumType;
+import io.pulumi.core.annotations.EnumType;
 import java.lang.Integer;
 import java.util.StringJoiner;
 

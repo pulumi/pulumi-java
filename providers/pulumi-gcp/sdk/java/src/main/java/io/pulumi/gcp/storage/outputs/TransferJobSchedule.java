@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.storage.outputs.TransferJobScheduleScheduleEndDate;
 import io.pulumi.gcp.storage.outputs.TransferJobScheduleScheduleStartDate;
 import io.pulumi.gcp.storage.outputs.TransferJobScheduleStartTimeOfDay;

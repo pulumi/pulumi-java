@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.enums;
 
-import io.pulumi.core.internal.annotations.EnumType;
+import io.pulumi.core.annotations.EnumType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;

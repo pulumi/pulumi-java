@@ -13,7 +13,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.HyperVReplicaReplicationDet
 import io.pulumi.azurenative.recoveryservices.inputs.InMageAzureV2ReplicationDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.InMageRcmReplicationDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.InMageReplicationDetailsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;

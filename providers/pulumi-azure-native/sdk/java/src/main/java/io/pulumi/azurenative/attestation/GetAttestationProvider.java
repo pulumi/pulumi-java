@@ -6,7 +6,7 @@ package io.pulumi.azurenative.attestation;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.attestation.inputs.GetAttestationProviderArgs;
 import io.pulumi.azurenative.attestation.outputs.GetAttestationProviderResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

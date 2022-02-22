@@ -25,7 +25,7 @@ import io.pulumi.azurenative.cdn.inputs.OriginGroupOverrideActionResponse;
 import io.pulumi.azurenative.cdn.inputs.UrlRedirectActionResponse;
 import io.pulumi.azurenative.cdn.inputs.UrlRewriteActionResponse;
 import io.pulumi.azurenative.cdn.inputs.UrlSigningActionResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;

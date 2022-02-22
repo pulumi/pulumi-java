@@ -6,7 +6,7 @@ package io.pulumi.awsnative.cloudfront.inputs;
 import io.pulumi.awsnative.cloudfront.inputs.CachePolicyCookiesConfig;
 import io.pulumi.awsnative.cloudfront.inputs.CachePolicyHeadersConfig;
 import io.pulumi.awsnative.cloudfront.inputs.CachePolicyQueryStringsConfig;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;

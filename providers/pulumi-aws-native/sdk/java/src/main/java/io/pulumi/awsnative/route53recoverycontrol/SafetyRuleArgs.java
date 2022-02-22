@@ -8,7 +8,7 @@ import io.pulumi.awsnative.route53recoverycontrol.inputs.SafetyRuleGatingRuleArg
 import io.pulumi.awsnative.route53recoverycontrol.inputs.SafetyRuleRuleConfigArgs;
 import io.pulumi.awsnative.route53recoverycontrol.inputs.SafetyRuleTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

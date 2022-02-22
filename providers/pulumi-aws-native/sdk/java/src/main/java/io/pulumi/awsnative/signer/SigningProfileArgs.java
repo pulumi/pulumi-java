@@ -7,7 +7,7 @@ import io.pulumi.awsnative.signer.enums.SigningProfilePlatformId;
 import io.pulumi.awsnative.signer.inputs.SigningProfileSignatureValidityPeriodArgs;
 import io.pulumi.awsnative.signer.inputs.SigningProfileTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;

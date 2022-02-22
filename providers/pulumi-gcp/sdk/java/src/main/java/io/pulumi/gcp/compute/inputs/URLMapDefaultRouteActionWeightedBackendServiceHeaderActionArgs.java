@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.URLMapDefaultRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAddArgs;
 import io.pulumi.gcp.compute.inputs.URLMapDefaultRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddArgs;
 import java.lang.String;

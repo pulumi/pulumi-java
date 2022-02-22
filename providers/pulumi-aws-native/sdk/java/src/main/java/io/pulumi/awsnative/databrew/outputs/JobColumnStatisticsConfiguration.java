@@ -5,7 +5,7 @@ package io.pulumi.awsnative.databrew.outputs;
 
 import io.pulumi.awsnative.databrew.outputs.JobColumnSelector;
 import io.pulumi.awsnative.databrew.outputs.JobStatisticsConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;

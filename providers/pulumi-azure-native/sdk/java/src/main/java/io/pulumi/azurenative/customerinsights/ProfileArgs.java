@@ -7,7 +7,7 @@ import io.pulumi.azurenative.customerinsights.enums.EntityTypes;
 import io.pulumi.azurenative.customerinsights.inputs.PropertyDefinitionArgs;
 import io.pulumi.azurenative.customerinsights.inputs.StrongIdArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;

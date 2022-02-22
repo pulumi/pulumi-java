@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.monitoring.inputs.AlertPolicyConditionConditionAbsentArgs;
 import io.pulumi.gcp.monitoring.inputs.AlertPolicyConditionConditionMatchedLogArgs;
 import io.pulumi.gcp.monitoring.inputs.AlertPolicyConditionConditionMonitoringQueryLanguageArgs;

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.s3.outputs.StorageLensAccountLevel;
 import io.pulumi.awsnative.s3.outputs.StorageLensAwsOrg;
 import io.pulumi.awsnative.s3.outputs.StorageLensBucketsAndRegions;
 import io.pulumi.awsnative.s3.outputs.StorageLensDataExport;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;

@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.batch_v2alpha1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.batch_v2alpha1.inputs.JobTemplateSpecArgs;
 import java.lang.Boolean;
 import java.lang.Integer;

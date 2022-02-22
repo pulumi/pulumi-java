@@ -9,7 +9,7 @@ import io.pulumi.awsnative.elasticloadbalancingv2.inputs.ListenerRuleFixedRespon
 import io.pulumi.awsnative.elasticloadbalancingv2.inputs.ListenerRuleForwardConfigArgs;
 import io.pulumi.awsnative.elasticloadbalancingv2.inputs.ListenerRuleRedirectConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;

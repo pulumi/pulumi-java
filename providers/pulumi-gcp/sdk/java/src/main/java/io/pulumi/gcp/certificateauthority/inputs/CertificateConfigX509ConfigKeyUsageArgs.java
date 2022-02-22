@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateConfigX509ConfigKeyUsageBaseKeyUsageArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateConfigX509ConfigKeyUsageExtendedKeyUsageArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsageArgs;

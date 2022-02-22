@@ -6,7 +6,7 @@ package io.pulumi.azurenative.managedservices;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.managedservices.inputs.GetRegistrationDefinitionArgs;
 import io.pulumi.azurenative.managedservices.outputs.GetRegistrationDefinitionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

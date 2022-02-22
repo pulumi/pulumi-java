@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.outputs.ManagedServiceIdentityResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.azurenative.network.outputs.VirtualApplianceNicPropertiesResponse;
 import io.pulumi.azurenative.network.outputs.VirtualApplianceSkuPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;

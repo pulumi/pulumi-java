@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v1.inputs.TimeSeriesFilterRatioResponse;
 import io.pulumi.googlenative.monitoring_v1.inputs.TimeSeriesFilterResponse;
 import java.lang.String;

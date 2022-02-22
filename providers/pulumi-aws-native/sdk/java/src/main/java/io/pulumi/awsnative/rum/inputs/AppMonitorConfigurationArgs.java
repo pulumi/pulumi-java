@@ -5,7 +5,7 @@ package io.pulumi.awsnative.rum.inputs;
 
 import io.pulumi.awsnative.rum.enums.AppMonitorTelemetry;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;

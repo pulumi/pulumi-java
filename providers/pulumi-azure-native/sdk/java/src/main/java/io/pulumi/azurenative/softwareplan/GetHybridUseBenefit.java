@@ -6,7 +6,7 @@ package io.pulumi.azurenative.softwareplan;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.softwareplan.inputs.GetHybridUseBenefitArgs;
 import io.pulumi.azurenative.softwareplan.outputs.GetHybridUseBenefitResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

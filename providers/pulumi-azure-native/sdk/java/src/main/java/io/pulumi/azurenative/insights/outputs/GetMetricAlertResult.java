@@ -7,7 +7,7 @@ import io.pulumi.azurenative.insights.outputs.MetricAlertActionResponse;
 import io.pulumi.azurenative.insights.outputs.MetricAlertMultipleResourceMultipleMetricCriteriaResponse;
 import io.pulumi.azurenative.insights.outputs.MetricAlertSingleResourceMultipleMetricCriteriaResponse;
 import io.pulumi.azurenative.insights.outputs.WebtestLocationAvailabilityCriteriaResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;

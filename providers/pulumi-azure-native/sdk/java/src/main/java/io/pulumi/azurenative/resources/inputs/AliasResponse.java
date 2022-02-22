@@ -6,7 +6,7 @@ package io.pulumi.azurenative.resources.inputs;
 import io.pulumi.azurenative.resources.inputs.AliasPathMetadataResponse;
 import io.pulumi.azurenative.resources.inputs.AliasPathResponse;
 import io.pulumi.azurenative.resources.inputs.AliasPatternResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

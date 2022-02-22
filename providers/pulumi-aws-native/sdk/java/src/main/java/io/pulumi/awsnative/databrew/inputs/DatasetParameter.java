@@ -6,7 +6,7 @@ package io.pulumi.awsnative.databrew.inputs;
 import io.pulumi.awsnative.databrew.enums.DatasetParameterType;
 import io.pulumi.awsnative.databrew.inputs.DatasetDatetimeOptions;
 import io.pulumi.awsnative.databrew.inputs.DatasetFilterExpression;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;

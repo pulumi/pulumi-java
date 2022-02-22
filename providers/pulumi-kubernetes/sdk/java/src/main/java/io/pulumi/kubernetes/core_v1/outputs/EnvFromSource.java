@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.ConfigMapEnvSource;
 import io.pulumi.kubernetes.core_v1.outputs.SecretEnvSource;
 import java.lang.String;

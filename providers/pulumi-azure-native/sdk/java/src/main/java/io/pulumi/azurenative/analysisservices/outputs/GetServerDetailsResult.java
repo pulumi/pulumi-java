@@ -7,7 +7,7 @@ import io.pulumi.azurenative.analysisservices.outputs.GatewayDetailsResponse;
 import io.pulumi.azurenative.analysisservices.outputs.IPv4FirewallSettingsResponse;
 import io.pulumi.azurenative.analysisservices.outputs.ResourceSkuResponse;
 import io.pulumi.azurenative.analysisservices.outputs.ServerAdministratorsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;

@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.discovery.k8s.io_v1beta1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.discovery.k8s.io_v1beta1.inputs.EndpointArgs;
 import io.pulumi.kubernetes.discovery.k8s.io_v1beta1.inputs.EndpointPortArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;

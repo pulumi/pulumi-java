@@ -5,7 +5,7 @@ package io.pulumi.awsnative.appflow.outputs;
 
 import io.pulumi.awsnative.appflow.enums.FlowPrefixFormat;
 import io.pulumi.awsnative.appflow.enums.FlowPrefixType;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

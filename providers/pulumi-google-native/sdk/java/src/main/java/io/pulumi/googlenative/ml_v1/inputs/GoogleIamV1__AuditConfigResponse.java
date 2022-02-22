@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleIamV1__AuditLogConfigResponse;
 import java.lang.String;
 import java.util.List;

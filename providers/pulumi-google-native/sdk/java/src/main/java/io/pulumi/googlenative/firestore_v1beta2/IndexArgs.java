@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.firestore_v1beta2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.firestore_v1beta2.enums.IndexQueryScope;
 import io.pulumi.googlenative.firestore_v1beta2.inputs.GoogleFirestoreAdminV1beta2IndexFieldArgs;
 import java.lang.String;

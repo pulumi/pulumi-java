@@ -5,7 +5,7 @@ package io.pulumi.azurenative.peering.outputs;
 
 import io.pulumi.azurenative.peering.outputs.DirectConnectionResponse;
 import io.pulumi.azurenative.peering.outputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;

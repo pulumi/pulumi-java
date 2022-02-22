@@ -7,7 +7,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.DataStoreResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.HealthErrorResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.RetentionVolumeResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.VersionDetailsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;

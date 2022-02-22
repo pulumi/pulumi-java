@@ -1,9 +1,9 @@
 package io.pulumi;
 
 import io.pulumi.core.Output;
+import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.internal.Internal.Field;
 import io.pulumi.core.internal.annotations.InternalUse;
-import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.OutputMetadata;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.internal.DeploymentInternal;

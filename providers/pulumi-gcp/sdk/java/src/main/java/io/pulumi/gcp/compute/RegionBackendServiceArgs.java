@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.RegionBackendServiceBackendArgs;
 import io.pulumi.gcp.compute.inputs.RegionBackendServiceCdnPolicyArgs;
 import io.pulumi.gcp.compute.inputs.RegionBackendServiceCircuitBreakersArgs;

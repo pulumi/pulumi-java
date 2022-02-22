@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1alpha1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.vmmigration_v1alpha1.inputs.CycleStepResponse;
 import java.lang.Integer;
 import java.lang.String;

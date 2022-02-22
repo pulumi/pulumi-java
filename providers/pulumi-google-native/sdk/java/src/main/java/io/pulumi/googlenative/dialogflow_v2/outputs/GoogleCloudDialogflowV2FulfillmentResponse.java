@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dialogflow_v2.outputs.GoogleCloudDialogflowV2FulfillmentFeatureResponse;
 import io.pulumi.googlenative.dialogflow_v2.outputs.GoogleCloudDialogflowV2FulfillmentGenericWebServiceResponse;
 import java.lang.Boolean;

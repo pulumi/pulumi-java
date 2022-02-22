@@ -7,7 +7,7 @@ import io.pulumi.awsnative.wafv2.outputs.RuleGroupRuleActionAllowProperties;
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupRuleActionBlockProperties;
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupRuleActionCaptchaProperties;
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupRuleActionCountProperties;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

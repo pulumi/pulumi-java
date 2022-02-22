@@ -6,7 +6,7 @@ package io.pulumi.azurenative.media.inputs;
 import io.pulumi.azurenative.media.inputs.StreamingPolicyFairPlayConfigurationResponse;
 import io.pulumi.azurenative.media.inputs.StreamingPolicyPlayReadyConfigurationResponse;
 import io.pulumi.azurenative.media.inputs.StreamingPolicyWidevineConfigurationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.databoxedge;
 import io.pulumi.azurenative.databoxedge.inputs.FileSourceInfoArgs;
 import io.pulumi.azurenative.databoxedge.inputs.RoleSinkInfoArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;

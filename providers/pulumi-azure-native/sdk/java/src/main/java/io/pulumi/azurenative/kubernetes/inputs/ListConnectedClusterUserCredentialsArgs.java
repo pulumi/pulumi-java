@@ -5,7 +5,7 @@ package io.pulumi.azurenative.kubernetes.inputs;
 
 import io.pulumi.azurenative.kubernetes.enums.AuthenticationMethod;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;

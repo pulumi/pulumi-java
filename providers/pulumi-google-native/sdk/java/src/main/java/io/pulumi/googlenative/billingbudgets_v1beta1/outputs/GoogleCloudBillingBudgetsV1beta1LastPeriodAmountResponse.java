@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.billingbudgets_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType

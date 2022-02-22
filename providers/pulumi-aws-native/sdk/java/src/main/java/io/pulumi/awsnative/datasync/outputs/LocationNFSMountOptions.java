@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.datasync.outputs;
 
 import io.pulumi.awsnative.datasync.enums.LocationNFSMountOptionsVersion;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

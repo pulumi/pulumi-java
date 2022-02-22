@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.BigtableColumnFamilyResponse;
 import java.lang.Boolean;
 import java.util.List;

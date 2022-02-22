@@ -7,7 +7,7 @@ import io.pulumi.azurenative.hybridnetwork.outputs.CustomProfileResponse;
 import io.pulumi.azurenative.hybridnetwork.outputs.NetworkInterfaceResponse;
 import io.pulumi.azurenative.hybridnetwork.outputs.OsProfileResponse;
 import io.pulumi.azurenative.hybridnetwork.outputs.StorageProfileResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;

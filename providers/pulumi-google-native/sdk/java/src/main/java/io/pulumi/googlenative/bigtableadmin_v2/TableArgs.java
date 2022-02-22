@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigtableadmin_v2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigtableadmin_v2.enums.TableGranularity;
 import io.pulumi.googlenative.bigtableadmin_v2.inputs.SplitArgs;
 import java.lang.String;

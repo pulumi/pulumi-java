@@ -6,7 +6,7 @@ package io.pulumi.azurenative.storagesync;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.storagesync.inputs.GetSyncGroupArgs;
 import io.pulumi.azurenative.storagesync.outputs.GetSyncGroupResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

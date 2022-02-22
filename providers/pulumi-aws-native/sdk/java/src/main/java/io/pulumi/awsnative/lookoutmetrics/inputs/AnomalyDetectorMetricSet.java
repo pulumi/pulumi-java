@@ -7,7 +7,7 @@ import io.pulumi.awsnative.lookoutmetrics.enums.AnomalyDetectorMetricSetMetricSe
 import io.pulumi.awsnative.lookoutmetrics.inputs.AnomalyDetectorMetric;
 import io.pulumi.awsnative.lookoutmetrics.inputs.AnomalyDetectorMetricSource;
 import io.pulumi.awsnative.lookoutmetrics.inputs.AnomalyDetectorTimestampColumn;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;

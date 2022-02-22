@@ -7,7 +7,7 @@ import io.pulumi.azurenative.compute.enums.UpgradeMode;
 import io.pulumi.azurenative.compute.inputs.AutomaticOSUpgradePolicyArgs;
 import io.pulumi.azurenative.compute.inputs.RollingUpgradePolicyArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 

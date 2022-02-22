@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.metastore_v1alpha;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.metastore_v1alpha.enums.ServiceDatabaseType;
 import io.pulumi.googlenative.metastore_v1alpha.enums.ServiceReleaseChannel;
 import io.pulumi.googlenative.metastore_v1alpha.enums.ServiceTier;

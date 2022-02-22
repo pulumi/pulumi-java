@@ -7,7 +7,7 @@ import io.pulumi.awsnative.quicksight.enums.ThemeType;
 import io.pulumi.awsnative.quicksight.outputs.ThemeResourcePermission;
 import io.pulumi.awsnative.quicksight.outputs.ThemeTag;
 import io.pulumi.awsnative.quicksight.outputs.ThemeVersion;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

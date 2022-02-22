@@ -5,7 +5,7 @@ package io.pulumi.awsnative.cloudformation;
 
 import io.pulumi.awsnative.cloudformation.enums.PublicTypeVersionType;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;

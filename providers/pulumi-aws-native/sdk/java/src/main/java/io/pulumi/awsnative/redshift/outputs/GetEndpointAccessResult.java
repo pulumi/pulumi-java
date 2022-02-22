@@ -5,7 +5,7 @@ package io.pulumi.awsnative.redshift.outputs;
 
 import io.pulumi.awsnative.redshift.outputs.EndpointAccessVpcSecurityGroup;
 import io.pulumi.awsnative.redshift.outputs.VpcEndpointProperties;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;

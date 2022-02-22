@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logz.outputs;
 
 import io.pulumi.azurenative.logz.outputs.FilteringTagResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.logging_v2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.logging_v2.inputs.BigQueryOptionsArgs;
 import io.pulumi.googlenative.logging_v2.inputs.LogExclusionArgs;
 import java.lang.Boolean;

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.outputs.DataQualityJobDefinitionEndpointInput;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType

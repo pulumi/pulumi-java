@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.analysisservices.inputs;
 
 import io.pulumi.azurenative.analysisservices.inputs.IPv4FirewallRuleResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;

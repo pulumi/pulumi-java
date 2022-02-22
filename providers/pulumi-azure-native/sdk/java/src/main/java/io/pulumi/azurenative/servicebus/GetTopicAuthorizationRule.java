@@ -6,7 +6,7 @@ package io.pulumi.azurenative.servicebus;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.servicebus.inputs.GetTopicAuthorizationRuleArgs;
 import io.pulumi.azurenative.servicebus.outputs.GetTopicAuthorizationRuleResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

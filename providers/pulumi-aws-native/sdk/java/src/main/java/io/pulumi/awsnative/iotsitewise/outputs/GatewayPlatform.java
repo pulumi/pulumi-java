@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotsitewise.outputs;
 
 import io.pulumi.awsnative.iotsitewise.outputs.GatewayGreengrass;
 import io.pulumi.awsnative.iotsitewise.outputs.GatewayGreengrassV2;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.appplatform;
 import io.pulumi.azurenative.appplatform.inputs.AppResourcePropertiesArgs;
 import io.pulumi.azurenative.appplatform.inputs.ManagedIdentityPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;

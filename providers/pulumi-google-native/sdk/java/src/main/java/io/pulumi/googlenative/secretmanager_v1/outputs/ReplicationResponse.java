@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.secretmanager_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.secretmanager_v1.outputs.AutomaticResponse;
 import io.pulumi.googlenative.secretmanager_v1.outputs.UserManagedResponse;
 import java.util.Objects;

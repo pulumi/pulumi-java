@@ -6,7 +6,7 @@ package io.pulumi.azurenative.dataprotection;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.dataprotection.inputs.GetBackupVaultArgs;
 import io.pulumi.azurenative.dataprotection.outputs.GetBackupVaultResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

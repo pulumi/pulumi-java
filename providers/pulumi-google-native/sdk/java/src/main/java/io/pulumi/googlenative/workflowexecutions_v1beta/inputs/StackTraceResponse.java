@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.workflowexecutions_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.workflowexecutions_v1beta.inputs.StackTraceElementResponse;
 import java.util.List;
 import java.util.Objects;

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.networkmanagement;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.networkmanagement.inputs.ConnectivityTestDestinationArgs;
 import io.pulumi.gcp.networkmanagement.inputs.ConnectivityTestSourceArgs;
 import java.lang.String;

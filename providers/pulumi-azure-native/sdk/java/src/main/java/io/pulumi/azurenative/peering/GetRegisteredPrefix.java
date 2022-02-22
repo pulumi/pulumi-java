@@ -6,7 +6,7 @@ package io.pulumi.azurenative.peering;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.peering.inputs.GetRegisteredPrefixArgs;
 import io.pulumi.azurenative.peering.outputs.GetRegisteredPrefixResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

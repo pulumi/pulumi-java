@@ -9,7 +9,7 @@ import io.pulumi.awsnative.timestream.inputs.ScheduledQueryScheduleConfiguration
 import io.pulumi.awsnative.timestream.inputs.ScheduledQueryTagArgs;
 import io.pulumi.awsnative.timestream.inputs.ScheduledQueryTargetConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

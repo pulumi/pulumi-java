@@ -6,7 +6,7 @@ package io.pulumi.azurenative.devops;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.devops.inputs.GetPipelineArgs;
 import io.pulumi.azurenative.devops.outputs.GetPipelineResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

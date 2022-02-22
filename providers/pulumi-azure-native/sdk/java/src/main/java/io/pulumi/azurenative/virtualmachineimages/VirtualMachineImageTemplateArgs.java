@@ -17,7 +17,7 @@ import io.pulumi.azurenative.virtualmachineimages.inputs.ImageTemplateVhdDistrib
 import io.pulumi.azurenative.virtualmachineimages.inputs.ImageTemplateVmProfileArgs;
 import io.pulumi.azurenative.virtualmachineimages.inputs.ImageTemplateWindowsUpdateCustomizerArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;

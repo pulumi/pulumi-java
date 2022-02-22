@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.fms.inputs;
 
 import io.pulumi.awsnative.fms.enums.PolicySecurityServicePolicyDataPropertiesType;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

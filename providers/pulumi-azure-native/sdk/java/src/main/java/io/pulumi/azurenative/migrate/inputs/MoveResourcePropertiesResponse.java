@@ -20,7 +20,7 @@ import io.pulumi.azurenative.migrate.inputs.SqlElasticPoolResourceSettingsRespon
 import io.pulumi.azurenative.migrate.inputs.SqlServerResourceSettingsResponse;
 import io.pulumi.azurenative.migrate.inputs.VirtualMachineResourceSettingsResponse;
 import io.pulumi.azurenative.migrate.inputs.VirtualNetworkResourceSettingsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.web.inputs.AzureBlobStorageApplicationLogsConfigArg
 import io.pulumi.azurenative.web.inputs.AzureTableStorageApplicationLogsConfigArgs;
 import io.pulumi.azurenative.web.inputs.FileSystemApplicationLogsConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 

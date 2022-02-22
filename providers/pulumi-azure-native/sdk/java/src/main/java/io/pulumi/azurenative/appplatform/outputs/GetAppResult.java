@@ -5,7 +5,7 @@ package io.pulumi.azurenative.appplatform.outputs;
 
 import io.pulumi.azurenative.appplatform.outputs.AppResourcePropertiesResponse;
 import io.pulumi.azurenative.appplatform.outputs.ManagedIdentityPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

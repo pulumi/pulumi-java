@@ -7,7 +7,7 @@ import io.pulumi.awsnative.mediapackage.enums.OriginEndpointAdsOnDeliveryRestric
 import io.pulumi.awsnative.mediapackage.enums.OriginEndpointHlsManifestAdMarkers;
 import io.pulumi.awsnative.mediapackage.enums.OriginEndpointHlsManifestAdTriggersItem;
 import io.pulumi.awsnative.mediapackage.enums.OriginEndpointHlsManifestPlaylistType;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;

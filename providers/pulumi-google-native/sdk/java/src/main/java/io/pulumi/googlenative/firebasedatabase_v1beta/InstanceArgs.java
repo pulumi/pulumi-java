@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.firebasedatabase_v1beta;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.firebasedatabase_v1beta.enums.InstanceState;
 import io.pulumi.googlenative.firebasedatabase_v1beta.enums.InstanceType;
 import java.lang.String;

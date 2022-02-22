@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.policy_v1beta1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import io.pulumi.kubernetes.policy_v1beta1.inputs.PodDisruptionBudgetSpecArgs;
 import java.lang.String;

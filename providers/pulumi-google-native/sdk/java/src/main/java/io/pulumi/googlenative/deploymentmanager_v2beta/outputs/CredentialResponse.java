@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_v2beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.deploymentmanager_v2beta.outputs.BasicAuthResponse;
 import io.pulumi.googlenative.deploymentmanager_v2beta.outputs.ServiceAccountResponse;
 import java.lang.Boolean;

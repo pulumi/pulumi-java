@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.vmmigration_v1alpha1.outputs.CloneJobResponse;
 import io.pulumi.googlenative.vmmigration_v1alpha1.outputs.ComputeEngineTargetDefaultsResponse;
 import io.pulumi.googlenative.vmmigration_v1alpha1.outputs.CutoverJobResponse;

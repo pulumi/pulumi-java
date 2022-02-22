@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datalakestore.inputs;
 import io.pulumi.azurenative.datalakestore.enums.EncryptionConfigType;
 import io.pulumi.azurenative.datalakestore.inputs.KeyVaultMetaInfoArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 

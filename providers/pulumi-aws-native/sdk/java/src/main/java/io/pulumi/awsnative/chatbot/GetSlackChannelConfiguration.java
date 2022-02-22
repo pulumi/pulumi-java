@@ -6,7 +6,7 @@ package io.pulumi.awsnative.chatbot;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.chatbot.inputs.GetSlackChannelConfigurationArgs;
 import io.pulumi.awsnative.chatbot.outputs.GetSlackChannelConfigurationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

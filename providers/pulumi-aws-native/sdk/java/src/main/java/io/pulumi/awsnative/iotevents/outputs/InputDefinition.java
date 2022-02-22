@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotevents.outputs;
 
 import io.pulumi.awsnative.iotevents.outputs.InputAttribute;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 

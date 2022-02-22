@@ -6,7 +6,7 @@ package io.pulumi.awsnative.sagemaker.outputs;
 import io.pulumi.awsnative.sagemaker.enums.MonitoringScheduleMonitoringType;
 import io.pulumi.awsnative.sagemaker.outputs.MonitoringScheduleMonitoringJobDefinition;
 import io.pulumi.awsnative.sagemaker.outputs.MonitoringScheduleScheduleConfig;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

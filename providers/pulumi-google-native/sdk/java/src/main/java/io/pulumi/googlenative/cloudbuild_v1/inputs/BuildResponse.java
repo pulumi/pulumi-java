@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.ArtifactsResponse;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.BuildApprovalResponse;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.BuildOptionsResponse;

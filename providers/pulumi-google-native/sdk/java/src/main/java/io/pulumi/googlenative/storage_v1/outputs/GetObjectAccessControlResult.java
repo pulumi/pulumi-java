@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.storage_v1.outputs.ObjectAccessControlProjectTeamResponse;
 import java.lang.String;
 import java.util.Objects;

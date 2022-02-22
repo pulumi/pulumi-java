@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.edgeorder.outputs;
 
 import io.pulumi.azurenative.edgeorder.outputs.AddressPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType

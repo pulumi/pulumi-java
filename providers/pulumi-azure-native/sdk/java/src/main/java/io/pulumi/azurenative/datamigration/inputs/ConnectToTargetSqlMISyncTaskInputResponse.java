@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.AzureActiveDirectoryAppResponse;
 import io.pulumi.azurenative.datamigration.inputs.MiSqlConnectionInfoResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 

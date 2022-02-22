@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v3.enums.SecuritySettingPurgeDataTypesItem;
 import io.pulumi.googlenative.dialogflow_v3.enums.SecuritySettingRedactionScope;
 import io.pulumi.googlenative.dialogflow_v3.enums.SecuritySettingRedactionStrategy;

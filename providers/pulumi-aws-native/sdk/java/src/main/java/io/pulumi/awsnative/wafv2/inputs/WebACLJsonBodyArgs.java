@@ -7,7 +7,7 @@ import io.pulumi.awsnative.wafv2.enums.WebACLBodyParsingFallbackBehavior;
 import io.pulumi.awsnative.wafv2.enums.WebACLJsonMatchScope;
 import io.pulumi.awsnative.wafv2.inputs.WebACLJsonMatchPatternArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 

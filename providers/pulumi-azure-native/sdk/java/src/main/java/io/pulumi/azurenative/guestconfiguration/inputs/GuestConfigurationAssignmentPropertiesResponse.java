@@ -6,7 +6,7 @@ package io.pulumi.azurenative.guestconfiguration.inputs;
 import io.pulumi.azurenative.guestconfiguration.inputs.AssignmentReportResponse;
 import io.pulumi.azurenative.guestconfiguration.inputs.GuestConfigurationNavigationResponse;
 import io.pulumi.azurenative.guestconfiguration.inputs.VMSSVMInfoResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

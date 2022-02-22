@@ -5,7 +5,7 @@ package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.awsnative.appflow.enums.FlowTriggerType;
 import io.pulumi.awsnative.appflow.inputs.FlowScheduledTriggerProperties;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ivs.outputs;
 
 import io.pulumi.awsnative.ivs.enums.RecordingConfigurationState;
 import io.pulumi.awsnative.ivs.outputs.RecordingConfigurationTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

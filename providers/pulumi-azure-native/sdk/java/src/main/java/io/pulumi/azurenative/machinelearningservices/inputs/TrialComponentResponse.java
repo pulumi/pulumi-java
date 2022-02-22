@@ -8,7 +8,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.MpiResponse;
 import io.pulumi.azurenative.machinelearningservices.inputs.OutputDataBindingResponse;
 import io.pulumi.azurenative.machinelearningservices.inputs.PyTorchResponse;
 import io.pulumi.azurenative.machinelearningservices.inputs.TensorFlowResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;

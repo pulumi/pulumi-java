@@ -12,7 +12,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.InMagePolicyInputArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.InMageRcmPolicyCreationInputArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.VMwareCbtPolicyCreationInputArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;

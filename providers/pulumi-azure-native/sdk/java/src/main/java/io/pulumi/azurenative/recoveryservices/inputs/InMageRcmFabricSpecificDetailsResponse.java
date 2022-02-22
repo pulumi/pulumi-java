@@ -10,7 +10,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.PushInstallerDetailsRespons
 import io.pulumi.azurenative.recoveryservices.inputs.RcmProxyDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.ReplicationAgentDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.ReprotectAgentDetailsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

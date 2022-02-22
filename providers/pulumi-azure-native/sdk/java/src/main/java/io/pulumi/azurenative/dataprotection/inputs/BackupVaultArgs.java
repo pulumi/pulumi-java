@@ -5,7 +5,7 @@ package io.pulumi.azurenative.dataprotection.inputs;
 
 import io.pulumi.azurenative.dataprotection.inputs.StorageSettingArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 

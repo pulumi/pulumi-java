@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotwireless.outputs;
 
 import io.pulumi.awsnative.iotwireless.enums.DestinationExpressionType;
 import io.pulumi.awsnative.iotwireless.outputs.DestinationTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

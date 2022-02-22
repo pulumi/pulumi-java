@@ -7,7 +7,7 @@ import io.pulumi.azurenative.healthcareapis.inputs.IotEventHubIngestionEndpointC
 import io.pulumi.azurenative.healthcareapis.inputs.IotMappingPropertiesArgs;
 import io.pulumi.azurenative.healthcareapis.inputs.ServiceManagedIdentityIdentityArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;

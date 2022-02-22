@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.kubernetesconfiguration.inputs;
 
 import io.pulumi.azurenative.kubernetesconfiguration.inputs.DependsOnDefinitionResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;

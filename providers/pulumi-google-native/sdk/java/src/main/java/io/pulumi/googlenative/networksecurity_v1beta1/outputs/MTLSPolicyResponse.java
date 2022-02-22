@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networksecurity_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.networksecurity_v1beta1.outputs.ValidationCAResponse;
 import java.util.List;
 import java.util.Objects;

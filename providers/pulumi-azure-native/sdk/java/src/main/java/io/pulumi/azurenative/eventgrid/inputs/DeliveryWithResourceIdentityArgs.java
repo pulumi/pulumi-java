@@ -12,7 +12,7 @@ import io.pulumi.azurenative.eventgrid.inputs.ServiceBusTopicEventSubscriptionDe
 import io.pulumi.azurenative.eventgrid.inputs.StorageQueueEventSubscriptionDestinationArgs;
 import io.pulumi.azurenative.eventgrid.inputs.WebHookEventSubscriptionDestinationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;

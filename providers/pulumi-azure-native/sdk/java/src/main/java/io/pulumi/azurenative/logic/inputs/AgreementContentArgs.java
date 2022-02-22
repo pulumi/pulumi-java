@@ -7,7 +7,7 @@ import io.pulumi.azurenative.logic.inputs.AS2AgreementContentArgs;
 import io.pulumi.azurenative.logic.inputs.EdifactAgreementContentArgs;
 import io.pulumi.azurenative.logic.inputs.X12AgreementContentArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 

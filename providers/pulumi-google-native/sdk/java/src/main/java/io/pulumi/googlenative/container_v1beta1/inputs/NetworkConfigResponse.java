@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1beta1.inputs.DNSConfigResponse;
 import io.pulumi.googlenative.container_v1beta1.inputs.DefaultSnatStatusResponse;
 import io.pulumi.googlenative.container_v1beta1.inputs.ServiceExternalIPsConfigResponse;

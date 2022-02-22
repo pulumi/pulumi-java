@@ -20,7 +20,7 @@ import io.pulumi.awsnative.ec2.inputs.SpotFleetMemoryMiBRequest;
 import io.pulumi.awsnative.ec2.inputs.SpotFleetNetworkInterfaceCountRequest;
 import io.pulumi.awsnative.ec2.inputs.SpotFleetTotalLocalStorageGBRequest;
 import io.pulumi.awsnative.ec2.inputs.SpotFleetVCpuCountRangeRequest;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;

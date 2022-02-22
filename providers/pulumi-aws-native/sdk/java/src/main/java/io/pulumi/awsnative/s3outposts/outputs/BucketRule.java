@@ -6,7 +6,7 @@ package io.pulumi.awsnative.s3outposts.outputs;
 import io.pulumi.awsnative.s3outposts.enums.BucketRuleStatus;
 import io.pulumi.awsnative.s3outposts.outputs.BucketAbortIncompleteMultipartUpload;
 import io.pulumi.awsnative.s3outposts.outputs.BucketRuleFilterProperties;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;

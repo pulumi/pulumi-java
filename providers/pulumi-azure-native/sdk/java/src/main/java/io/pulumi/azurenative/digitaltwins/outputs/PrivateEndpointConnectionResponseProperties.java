@@ -5,7 +5,7 @@ package io.pulumi.azurenative.digitaltwins.outputs;
 
 import io.pulumi.azurenative.digitaltwins.outputs.ConnectionPropertiesResponsePrivateEndpoint;
 import io.pulumi.azurenative.digitaltwins.outputs.ConnectionPropertiesResponsePrivateLinkServiceConnectionState;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

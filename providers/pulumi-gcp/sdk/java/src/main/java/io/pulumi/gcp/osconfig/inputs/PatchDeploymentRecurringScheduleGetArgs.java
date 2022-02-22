@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.osconfig.inputs.PatchDeploymentRecurringScheduleMonthlyGetArgs;
 import io.pulumi.gcp.osconfig.inputs.PatchDeploymentRecurringScheduleTimeOfDayGetArgs;
 import io.pulumi.gcp.osconfig.inputs.PatchDeploymentRecurringScheduleTimeZoneGetArgs;

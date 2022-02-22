@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.outputs;
 import io.pulumi.azurenative.network.outputs.NetworkInterfaceResponse;
 import io.pulumi.azurenative.network.outputs.QosIpRangeResponse;
 import io.pulumi.azurenative.network.outputs.QosPortRangeResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.digitaltwins.inputs.EventGridArgs;
 import io.pulumi.azurenative.digitaltwins.inputs.EventHubArgs;
 import io.pulumi.azurenative.digitaltwins.inputs.ServiceBusArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;

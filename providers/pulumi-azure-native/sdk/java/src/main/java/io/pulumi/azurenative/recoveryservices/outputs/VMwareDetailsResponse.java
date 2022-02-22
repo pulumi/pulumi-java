@@ -7,7 +7,7 @@ import io.pulumi.azurenative.recoveryservices.outputs.MasterTargetServerResponse
 import io.pulumi.azurenative.recoveryservices.outputs.ProcessServerResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.RunAsAccountResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.VersionDetailsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;

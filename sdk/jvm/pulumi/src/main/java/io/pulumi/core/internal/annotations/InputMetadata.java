@@ -2,6 +2,7 @@ package io.pulumi.core.internal.annotations;
 
 import com.google.common.base.MoreObjects;
 import com.google.common.collect.ImmutableMap;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.core.internal.Reflection;
 
 import java.lang.reflect.Field;

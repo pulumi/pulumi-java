@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.gamelift.outputs;
 
 import io.pulumi.awsnative.gamelift.enums.FleetIpPermissionProtocol;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;

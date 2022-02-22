@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;

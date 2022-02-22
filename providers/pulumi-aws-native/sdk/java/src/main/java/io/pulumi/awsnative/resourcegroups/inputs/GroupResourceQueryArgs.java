@@ -6,7 +6,7 @@ package io.pulumi.awsnative.resourcegroups.inputs;
 import io.pulumi.awsnative.resourcegroups.enums.GroupResourceQueryType;
 import io.pulumi.awsnative.resourcegroups.inputs.GroupQueryArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 

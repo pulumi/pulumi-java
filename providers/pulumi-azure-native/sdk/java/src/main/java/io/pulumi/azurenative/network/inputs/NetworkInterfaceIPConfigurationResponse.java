@@ -11,7 +11,7 @@ import io.pulumi.azurenative.network.inputs.NetworkInterfaceIPConfigurationPriva
 import io.pulumi.azurenative.network.inputs.PublicIPAddressResponse;
 import io.pulumi.azurenative.network.inputs.SubnetResponse;
 import io.pulumi.azurenative.network.inputs.VirtualNetworkTapResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;

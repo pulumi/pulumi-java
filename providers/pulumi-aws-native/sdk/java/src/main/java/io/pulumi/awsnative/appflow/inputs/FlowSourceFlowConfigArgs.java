@@ -7,7 +7,7 @@ import io.pulumi.awsnative.appflow.enums.FlowConnectorType;
 import io.pulumi.awsnative.appflow.inputs.FlowIncrementalPullConfigArgs;
 import io.pulumi.awsnative.appflow.inputs.FlowSourceConnectorPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;

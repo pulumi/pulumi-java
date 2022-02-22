@@ -5,8 +5,8 @@ package io.pulumi.aws;
 
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.config_endpoints.inputs.Endpoints;
+import io.pulumi.core.TypeShape;
 import io.pulumi.core.internal.Optionals;
-import io.pulumi.core.internal.Reflection.TypeShape;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;

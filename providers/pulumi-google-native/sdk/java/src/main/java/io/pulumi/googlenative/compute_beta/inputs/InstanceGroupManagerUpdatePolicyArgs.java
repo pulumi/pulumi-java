@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.enums.InstanceGroupManagerUpdatePolicyInstanceRedistributionType;
 import io.pulumi.googlenative.compute_beta.enums.InstanceGroupManagerUpdatePolicyMinimalAction;
 import io.pulumi.googlenative.compute_beta.enums.InstanceGroupManagerUpdatePolicyMostDisruptiveAllowedAction;

@@ -8,7 +8,7 @@ import io.pulumi.awsnative.databrew.inputs.DatasetDatabaseInputDefinitionArgs;
 import io.pulumi.awsnative.databrew.inputs.DatasetMetadataArgs;
 import io.pulumi.awsnative.databrew.inputs.DatasetS3LocationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 

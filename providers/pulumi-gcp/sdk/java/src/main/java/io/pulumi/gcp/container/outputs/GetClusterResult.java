@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.container.outputs.GetClusterAddonsConfig;
 import io.pulumi.gcp.container.outputs.GetClusterAuthenticatorGroupsConfig;
 import io.pulumi.gcp.container.outputs.GetClusterClusterAutoscaling;

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.scheduler.enums.JobCollectionState;
 import io.pulumi.azurenative.scheduler.inputs.JobCollectionQuotaArgs;
 import io.pulumi.azurenative.scheduler.inputs.SkuArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.timestream.outputs;
 
 import io.pulumi.awsnative.timestream.outputs.ScheduledQueryTimestreamConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType

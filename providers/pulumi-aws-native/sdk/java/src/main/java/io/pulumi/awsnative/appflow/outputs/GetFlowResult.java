@@ -8,7 +8,7 @@ import io.pulumi.awsnative.appflow.outputs.FlowSourceFlowConfig;
 import io.pulumi.awsnative.appflow.outputs.FlowTag;
 import io.pulumi.awsnative.appflow.outputs.FlowTask;
 import io.pulumi.awsnative.appflow.outputs.FlowTriggerConfig;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

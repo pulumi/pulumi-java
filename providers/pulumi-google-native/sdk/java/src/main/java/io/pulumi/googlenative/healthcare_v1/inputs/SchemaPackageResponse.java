@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.healthcare_v1.inputs.Hl7SchemaConfigResponse;
 import io.pulumi.googlenative.healthcare_v1.inputs.Hl7TypesConfigResponse;
 import java.lang.Boolean;

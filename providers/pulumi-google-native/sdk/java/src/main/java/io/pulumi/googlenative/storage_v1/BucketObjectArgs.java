@@ -5,7 +5,7 @@ package io.pulumi.googlenative.storage_v1;
 
 import io.pulumi.core.AssetOrArchive;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.storage_v1.inputs.BucketObjectCustomerEncryptionArgs;
 import io.pulumi.googlenative.storage_v1.inputs.BucketObjectOwnerArgs;
 import io.pulumi.googlenative.storage_v1.inputs.ObjectAccessControlArgs;

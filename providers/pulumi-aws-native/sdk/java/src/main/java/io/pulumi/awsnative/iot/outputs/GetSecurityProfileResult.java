@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iot.outputs;
 import io.pulumi.awsnative.iot.outputs.SecurityProfileBehavior;
 import io.pulumi.awsnative.iot.outputs.SecurityProfileMetricToRetain;
 import io.pulumi.awsnative.iot.outputs.SecurityProfileTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.awsnative.ec2.inputs.SpotFleetInstanceIpv6Address;
 import io.pulumi.awsnative.ec2.inputs.SpotFleetPrivateIpAddressSpecification;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;

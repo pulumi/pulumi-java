@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataproc_v1.inputs.IdentityConfigArgs;
 import io.pulumi.googlenative.dataproc_v1.inputs.KerberosConfigArgs;
 import java.util.Objects;

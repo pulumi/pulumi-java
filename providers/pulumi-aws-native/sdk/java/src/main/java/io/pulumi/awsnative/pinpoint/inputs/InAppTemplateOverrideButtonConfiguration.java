@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.pinpoint.inputs;
 
 import io.pulumi.awsnative.pinpoint.enums.InAppTemplateButtonAction;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

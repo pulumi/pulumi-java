@@ -6,7 +6,7 @@ package io.pulumi.azurenative.streamanalytics.inputs;
 import io.pulumi.azurenative.streamanalytics.inputs.ReferenceInputPropertiesResponse;
 import io.pulumi.azurenative.streamanalytics.inputs.StreamInputPropertiesResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

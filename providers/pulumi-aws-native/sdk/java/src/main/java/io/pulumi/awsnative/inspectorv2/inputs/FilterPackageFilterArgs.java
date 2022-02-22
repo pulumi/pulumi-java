@@ -6,7 +6,7 @@ package io.pulumi.awsnative.inspectorv2.inputs;
 import io.pulumi.awsnative.inspectorv2.inputs.FilterNumberFilterArgs;
 import io.pulumi.awsnative.inspectorv2.inputs.FilterStringFilterArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 

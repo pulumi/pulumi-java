@@ -7,7 +7,7 @@ import io.pulumi.awsnative.fms.outputs.PolicyIEMap;
 import io.pulumi.awsnative.fms.outputs.PolicyResourceTag;
 import io.pulumi.awsnative.fms.outputs.PolicyTag;
 import io.pulumi.awsnative.fms.outputs.SecurityServicePolicyDataProperties;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;

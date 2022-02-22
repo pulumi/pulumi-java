@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.tpu_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.tpu_v1alpha1.outputs.NetworkEndpointResponse;
 import io.pulumi.googlenative.tpu_v1alpha1.outputs.SchedulingConfigResponse;
 import io.pulumi.googlenative.tpu_v1alpha1.outputs.SymptomResponse;

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.greengrassv2.inputs;
 import io.pulumi.awsnative.greengrassv2.enums.ComponentVersionLambdaLinuxProcessParamsIsolationMode;
 import io.pulumi.awsnative.greengrassv2.inputs.ComponentVersionLambdaContainerParamsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 

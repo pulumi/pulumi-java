@@ -6,7 +6,7 @@ package io.pulumi.azurenative.webpubsub;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.webpubsub.inputs.GetWebPubSubHubArgs;
 import io.pulumi.azurenative.webpubsub.outputs.GetWebPubSubHubResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.vmwarecloudsimple.enums.NICType;
 import io.pulumi.azurenative.vmwarecloudsimple.inputs.GuestOSNICCustomizationArgs;
 import io.pulumi.azurenative.vmwarecloudsimple.inputs.VirtualNetworkArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;

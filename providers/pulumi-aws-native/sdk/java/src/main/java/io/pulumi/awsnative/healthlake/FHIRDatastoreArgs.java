@@ -8,7 +8,7 @@ import io.pulumi.awsnative.healthlake.inputs.FHIRDatastorePreloadDataConfigArgs;
 import io.pulumi.awsnative.healthlake.inputs.FHIRDatastoreSseConfigurationArgs;
 import io.pulumi.awsnative.healthlake.inputs.FHIRDatastoreTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

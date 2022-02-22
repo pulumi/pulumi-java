@@ -7,7 +7,7 @@ import io.pulumi.azurenative.containerregistry.inputs.QuarantinePolicyArgs;
 import io.pulumi.azurenative.containerregistry.inputs.RetentionPolicyArgs;
 import io.pulumi.azurenative.containerregistry.inputs.TrustPolicyArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 

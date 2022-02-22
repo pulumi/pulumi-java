@@ -7,7 +7,7 @@ import io.pulumi.azurenative.storagepool.inputs.AclArgs;
 import io.pulumi.azurenative.storagepool.inputs.AttributesArgs;
 import io.pulumi.azurenative.storagepool.inputs.IscsiLunArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 

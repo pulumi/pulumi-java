@@ -7,7 +7,7 @@ import io.pulumi.awsnative.resiliencehub.enums.ResiliencyPolicyDataLocationConst
 import io.pulumi.awsnative.resiliencehub.enums.ResiliencyPolicyTier;
 import io.pulumi.awsnative.resiliencehub.outputs.ResiliencyPolicyPolicyMap;
 import io.pulumi.awsnative.resiliencehub.outputs.ResiliencyPolicyTagMap;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.jobs_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.jobs_v3.outputs.ApplicationInfoResponse;
 import io.pulumi.googlenative.jobs_v3.outputs.CompensationInfoResponse;
 import io.pulumi.googlenative.jobs_v3.outputs.JobDerivedInfoResponse;

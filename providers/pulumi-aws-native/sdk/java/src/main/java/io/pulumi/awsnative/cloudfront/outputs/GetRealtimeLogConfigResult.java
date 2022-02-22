@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudfront.outputs;
 
 import io.pulumi.awsnative.cloudfront.outputs.RealtimeLogConfigEndPoint;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;

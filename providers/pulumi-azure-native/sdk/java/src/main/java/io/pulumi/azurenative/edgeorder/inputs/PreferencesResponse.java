@@ -7,7 +7,7 @@ import io.pulumi.azurenative.edgeorder.inputs.EncryptionPreferencesResponse;
 import io.pulumi.azurenative.edgeorder.inputs.ManagementResourcePreferencesResponse;
 import io.pulumi.azurenative.edgeorder.inputs.NotificationPreferenceResponse;
 import io.pulumi.azurenative.edgeorder.inputs.TransportPreferencesResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;

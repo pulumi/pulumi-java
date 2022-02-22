@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.enums.GooglePrivacyDlpV2ValueDayOfWeekValue;
 import io.pulumi.googlenative.dlp_v2.inputs.GoogleTypeDateArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GoogleTypeTimeOfDayArgs;

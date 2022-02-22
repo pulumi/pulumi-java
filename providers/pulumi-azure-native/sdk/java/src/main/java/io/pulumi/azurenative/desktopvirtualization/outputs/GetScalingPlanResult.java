@@ -8,7 +8,7 @@ import io.pulumi.azurenative.desktopvirtualization.outputs.ResourceModelWithAllo
 import io.pulumi.azurenative.desktopvirtualization.outputs.ResourceModelWithAllowedPropertySetResponseSku;
 import io.pulumi.azurenative.desktopvirtualization.outputs.ScalingHostPoolReferenceResponse;
 import io.pulumi.azurenative.desktopvirtualization.outputs.ScalingScheduleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.ecr.enums.RepositoryImageTagMutability;
 import io.pulumi.awsnative.ecr.outputs.RepositoryImageScanningConfiguration;
 import io.pulumi.awsnative.ecr.outputs.RepositoryLifecyclePolicy;
 import io.pulumi.awsnative.ecr.outputs.RepositoryTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;

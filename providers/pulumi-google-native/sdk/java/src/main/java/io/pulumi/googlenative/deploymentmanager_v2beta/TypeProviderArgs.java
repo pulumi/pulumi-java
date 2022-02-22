@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.deploymentmanager_v2beta;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.deploymentmanager_v2beta.inputs.CollectionOverrideArgs;
 import io.pulumi.googlenative.deploymentmanager_v2beta.inputs.CredentialArgs;
 import io.pulumi.googlenative.deploymentmanager_v2beta.inputs.OptionsArgs;

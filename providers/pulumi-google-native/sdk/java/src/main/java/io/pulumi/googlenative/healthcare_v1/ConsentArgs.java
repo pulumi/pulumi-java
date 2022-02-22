@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.healthcare_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.healthcare_v1.enums.ConsentState;
 import io.pulumi.googlenative.healthcare_v1.inputs.GoogleCloudHealthcareV1ConsentPolicyArgs;
 import java.lang.String;

@@ -18,7 +18,7 @@ import io.pulumi.awsnative.appflow.outputs.FlowSlackSourceProperties;
 import io.pulumi.awsnative.appflow.outputs.FlowTrendmicroSourceProperties;
 import io.pulumi.awsnative.appflow.outputs.FlowVeevaSourceProperties;
 import io.pulumi.awsnative.appflow.outputs.FlowZendeskSourceProperties;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

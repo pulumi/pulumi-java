@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataproc.outputs.WorkflowTemplateJobSparkSqlJobLoggingConfig;
 import io.pulumi.gcp.dataproc.outputs.WorkflowTemplateJobSparkSqlJobQueryList;
 import java.lang.String;

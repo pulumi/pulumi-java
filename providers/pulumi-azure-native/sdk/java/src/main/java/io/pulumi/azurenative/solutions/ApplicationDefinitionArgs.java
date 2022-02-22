@@ -13,7 +13,7 @@ import io.pulumi.azurenative.solutions.inputs.ApplicationPackageLockingPolicyDef
 import io.pulumi.azurenative.solutions.inputs.ApplicationPolicyArgs;
 import io.pulumi.azurenative.solutions.inputs.SkuArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;

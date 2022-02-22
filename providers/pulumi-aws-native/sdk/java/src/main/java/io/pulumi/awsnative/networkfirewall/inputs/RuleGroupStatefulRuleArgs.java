@@ -7,7 +7,7 @@ import io.pulumi.awsnative.networkfirewall.enums.RuleGroupStatefulRuleAction;
 import io.pulumi.awsnative.networkfirewall.inputs.RuleGroupHeaderArgs;
 import io.pulumi.awsnative.networkfirewall.inputs.RuleGroupRuleOptionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 

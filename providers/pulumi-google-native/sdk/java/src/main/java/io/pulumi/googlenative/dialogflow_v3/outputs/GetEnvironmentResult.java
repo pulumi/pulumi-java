@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigResponse;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3EnvironmentVersionConfigResponse;
 import java.lang.String;

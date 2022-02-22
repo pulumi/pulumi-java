@@ -7,7 +7,7 @@ import io.pulumi.awsnative.wafv2.inputs.RuleGroupFieldToMatchSingleHeaderPropert
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupFieldToMatchSingleQueryArgumentPropertiesArgs;
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupJsonBodyArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;

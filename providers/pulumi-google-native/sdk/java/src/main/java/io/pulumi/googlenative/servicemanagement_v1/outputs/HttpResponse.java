@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.HttpRuleResponse;
 import java.lang.Boolean;
 import java.util.List;

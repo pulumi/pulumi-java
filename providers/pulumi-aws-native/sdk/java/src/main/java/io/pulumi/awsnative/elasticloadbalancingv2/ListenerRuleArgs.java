@@ -6,7 +6,7 @@ package io.pulumi.awsnative.elasticloadbalancingv2;
 import io.pulumi.awsnative.elasticloadbalancingv2.inputs.ListenerRuleActionArgs;
 import io.pulumi.awsnative.elasticloadbalancingv2.inputs.ListenerRuleRuleConditionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;

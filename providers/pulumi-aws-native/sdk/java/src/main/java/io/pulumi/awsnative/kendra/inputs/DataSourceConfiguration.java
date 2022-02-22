@@ -13,7 +13,7 @@ import io.pulumi.awsnative.kendra.inputs.DataSourceServiceNowConfiguration;
 import io.pulumi.awsnative.kendra.inputs.DataSourceSharePointConfiguration;
 import io.pulumi.awsnative.kendra.inputs.DataSourceWebCrawlerConfiguration;
 import io.pulumi.awsnative.kendra.inputs.DataSourceWorkDocsConfiguration;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

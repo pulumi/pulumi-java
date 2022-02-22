@@ -6,7 +6,7 @@ package io.pulumi.awsnative.aps;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.aps.inputs.GetRuleGroupsNamespaceArgs;
 import io.pulumi.awsnative.aps.outputs.GetRuleGroupsNamespaceResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

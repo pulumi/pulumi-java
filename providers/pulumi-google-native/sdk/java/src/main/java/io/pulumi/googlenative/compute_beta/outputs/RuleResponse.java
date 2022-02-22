@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_beta.outputs.ConditionResponse;
 import io.pulumi.googlenative.compute_beta.outputs.LogConfigResponse;
 import java.lang.String;

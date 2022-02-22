@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.imagebuilder.inputs;
 
 import io.pulumi.awsnative.imagebuilder.inputs.InfrastructureConfigurationS3Logs;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

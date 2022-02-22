@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.ConfigMapKeySelector;
 import io.pulumi.kubernetes.core_v1.outputs.ObjectFieldSelector;
 import io.pulumi.kubernetes.core_v1.outputs.ResourceFieldSelector;

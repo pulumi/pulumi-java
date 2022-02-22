@@ -6,7 +6,7 @@ package io.pulumi.awsnative.nimblestudio;
 import io.pulumi.awsnative.nimblestudio.inputs.StudioEncryptionConfigurationArgs;
 import io.pulumi.awsnative.nimblestudio.inputs.StudioTagsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;

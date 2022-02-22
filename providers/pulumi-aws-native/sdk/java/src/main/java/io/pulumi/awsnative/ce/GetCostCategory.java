@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ce;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ce.inputs.GetCostCategoryArgs;
 import io.pulumi.awsnative.ce.outputs.GetCostCategoryResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

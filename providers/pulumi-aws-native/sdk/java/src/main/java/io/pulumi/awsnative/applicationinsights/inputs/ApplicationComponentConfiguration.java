@@ -5,7 +5,7 @@ package io.pulumi.awsnative.applicationinsights.inputs;
 
 import io.pulumi.awsnative.applicationinsights.inputs.ApplicationConfigurationDetails;
 import io.pulumi.awsnative.applicationinsights.inputs.ApplicationSubComponentTypeConfiguration;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;

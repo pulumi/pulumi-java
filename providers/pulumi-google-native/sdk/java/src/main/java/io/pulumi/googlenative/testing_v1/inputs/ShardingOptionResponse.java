@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.testing_v1.inputs.ManualShardingResponse;
 import io.pulumi.googlenative.testing_v1.inputs.UniformShardingResponse;
 import java.util.Objects;

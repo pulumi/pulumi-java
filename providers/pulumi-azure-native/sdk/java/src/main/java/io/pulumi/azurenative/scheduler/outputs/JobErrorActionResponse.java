@@ -8,7 +8,7 @@ import io.pulumi.azurenative.scheduler.outputs.RetryPolicyResponse;
 import io.pulumi.azurenative.scheduler.outputs.ServiceBusQueueMessageResponse;
 import io.pulumi.azurenative.scheduler.outputs.ServiceBusTopicMessageResponse;
 import io.pulumi.azurenative.scheduler.outputs.StorageQueueMessageResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

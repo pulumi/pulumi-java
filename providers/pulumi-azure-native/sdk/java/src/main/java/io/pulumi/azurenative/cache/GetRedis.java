@@ -6,7 +6,7 @@ package io.pulumi.azurenative.cache;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.cache.inputs.GetRedisArgs;
 import io.pulumi.azurenative.cache.outputs.GetRedisResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

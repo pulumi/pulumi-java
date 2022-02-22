@@ -6,7 +6,7 @@ package io.pulumi.awsnative.quicksight.outputs;
 import io.pulumi.awsnative.quicksight.outputs.DashboardAdHocFilteringOption;
 import io.pulumi.awsnative.quicksight.outputs.DashboardExportToCSVOption;
 import io.pulumi.awsnative.quicksight.outputs.DashboardSheetControlsOption;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

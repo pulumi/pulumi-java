@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.sqladmin_v1beta4.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.sqladmin_v1beta4.enums.MaintenanceWindowUpdateTrack;
 import java.lang.Integer;
 import java.lang.String;

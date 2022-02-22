@@ -5,7 +5,7 @@ package io.pulumi.azurenative.kubernetes.outputs;
 
 import io.pulumi.azurenative.kubernetes.outputs.ConnectedClusterIdentityResponse;
 import io.pulumi.azurenative.kubernetes.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;

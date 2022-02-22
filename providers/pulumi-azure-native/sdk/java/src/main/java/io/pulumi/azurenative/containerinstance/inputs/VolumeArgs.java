@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerinstance.inputs;
 import io.pulumi.azurenative.containerinstance.inputs.AzureFileVolumeArgs;
 import io.pulumi.azurenative.containerinstance.inputs.GitRepoVolumeArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;

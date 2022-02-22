@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.run_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.run_v1.inputs.GoogleCloudRunV1ConditionArgs;
 import io.pulumi.googlenative.run_v1.inputs.ResourceRecordArgs;
 import java.lang.Integer;

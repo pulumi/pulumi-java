@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.inputs.ForwardingConfigurationResponse;
 import io.pulumi.azurenative.network.inputs.HeaderActionResponse;
 import io.pulumi.azurenative.network.inputs.RedirectConfigurationResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;

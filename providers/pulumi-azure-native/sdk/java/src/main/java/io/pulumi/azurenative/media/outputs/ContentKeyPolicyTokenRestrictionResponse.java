@@ -7,7 +7,7 @@ import io.pulumi.azurenative.media.outputs.ContentKeyPolicyRsaTokenKeyResponse;
 import io.pulumi.azurenative.media.outputs.ContentKeyPolicySymmetricTokenKeyResponse;
 import io.pulumi.azurenative.media.outputs.ContentKeyPolicyTokenClaimResponse;
 import io.pulumi.azurenative.media.outputs.ContentKeyPolicyX509CertificateTokenKeyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;

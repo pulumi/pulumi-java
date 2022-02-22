@@ -7,7 +7,7 @@ import io.pulumi.awsnative.iot.enums.SecurityProfileBehaviorCriteriaComparisonOp
 import io.pulumi.awsnative.iot.outputs.SecurityProfileMachineLearningDetectionConfig;
 import io.pulumi.awsnative.iot.outputs.SecurityProfileMetricValue;
 import io.pulumi.awsnative.iot.outputs.SecurityProfileStatisticalThreshold;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;

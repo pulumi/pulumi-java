@@ -5,7 +5,7 @@ package io.pulumi.awsnative.backup.inputs;
 
 import io.pulumi.awsnative.backup.inputs.BackupPlanAdvancedBackupSettingResourceType;
 import io.pulumi.awsnative.backup.inputs.BackupPlanBackupRuleResourceType;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

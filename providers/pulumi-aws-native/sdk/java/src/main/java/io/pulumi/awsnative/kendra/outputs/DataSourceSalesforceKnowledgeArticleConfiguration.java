@@ -6,7 +6,7 @@ package io.pulumi.awsnative.kendra.outputs;
 import io.pulumi.awsnative.kendra.enums.DataSourceSalesforceKnowledgeArticleState;
 import io.pulumi.awsnative.kendra.outputs.DataSourceSalesforceCustomKnowledgeArticleTypeConfiguration;
 import io.pulumi.awsnative.kendra.outputs.DataSourceSalesforceStandardKnowledgeArticleTypeConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;

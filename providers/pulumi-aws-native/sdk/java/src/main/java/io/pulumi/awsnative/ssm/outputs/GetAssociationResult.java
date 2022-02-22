@@ -7,7 +7,7 @@ import io.pulumi.awsnative.ssm.enums.AssociationComplianceSeverity;
 import io.pulumi.awsnative.ssm.enums.AssociationSyncCompliance;
 import io.pulumi.awsnative.ssm.outputs.AssociationInstanceAssociationOutputLocation;
 import io.pulumi.awsnative.ssm.outputs.AssociationTarget;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;

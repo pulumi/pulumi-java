@@ -1,7 +1,7 @@
 package io.pulumi.deployment;
 
+import io.pulumi.core.TypeShape;
 import io.pulumi.core.internal.Internal.Field;
-import io.pulumi.core.internal.Reflection;
 import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.resources.CallArgs;
 import io.pulumi.resources.ProviderResource;
@@ -12,7 +12,7 @@ import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.Optional;
 
 /**
- * Options to help control the behavior of  @see {@link Deployment#call(String, Reflection.TypeShape, CallArgs, Resource, CallOptions)}"/>.
+ * Options to help control the behavior of  @see {@link Deployment#call(String, TypeShape, CallArgs, Resource, CallOptions)}"/>.
  */
 @ParametersAreNonnullByDefault
 public final class CallOptions {

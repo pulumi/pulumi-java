@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.osconfig.inputs.GuestPoliciesAssignmentGetArgs;
 import io.pulumi.gcp.osconfig.inputs.GuestPoliciesPackageGetArgs;
 import io.pulumi.gcp.osconfig.inputs.GuestPoliciesPackageRepositoryGetArgs;

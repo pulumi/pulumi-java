@@ -14,7 +14,7 @@ import io.pulumi.awsnative.lambda.inputs.FunctionTagArgs;
 import io.pulumi.awsnative.lambda.inputs.FunctionTracingConfigArgs;
 import io.pulumi.awsnative.lambda.inputs.FunctionVpcConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.CopyActivityLogSettingsResponse;
 import io.pulumi.azurenative.datafactory.inputs.LogLocationSettingsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;

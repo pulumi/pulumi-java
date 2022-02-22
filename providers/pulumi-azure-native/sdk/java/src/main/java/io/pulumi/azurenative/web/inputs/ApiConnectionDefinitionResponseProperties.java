@@ -6,7 +6,7 @@ package io.pulumi.azurenative.web.inputs;
 import io.pulumi.azurenative.web.inputs.ApiConnectionTestLinkResponse;
 import io.pulumi.azurenative.web.inputs.ApiReferenceResponse;
 import io.pulumi.azurenative.web.inputs.ConnectionStatusDefinitionResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.maintenance;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.maintenance.inputs.GetConfigurationAssignmentParentArgs;
 import io.pulumi.azurenative.maintenance.outputs.GetConfigurationAssignmentParentResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

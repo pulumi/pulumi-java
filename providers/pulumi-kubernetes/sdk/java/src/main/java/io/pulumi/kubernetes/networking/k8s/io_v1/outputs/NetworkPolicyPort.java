@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.networking.k8s.io_v1.outputs;
 
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.imagebuilder.inputs.ImageRecipeAdditionalInstanceConf
 import io.pulumi.awsnative.imagebuilder.inputs.ImageRecipeComponentConfigurationArgs;
 import io.pulumi.awsnative.imagebuilder.inputs.ImageRecipeInstanceBlockDeviceMappingArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;

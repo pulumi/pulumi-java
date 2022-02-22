@@ -7,7 +7,7 @@ import io.pulumi.azurenative.web.outputs.RequestsBasedTriggerResponse;
 import io.pulumi.azurenative.web.outputs.SlowRequestsBasedTriggerResponse;
 import io.pulumi.azurenative.web.outputs.StatusCodesBasedTriggerResponse;
 import io.pulumi.azurenative.web.outputs.StatusCodesRangeBasedTriggerResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;

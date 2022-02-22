@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.recaptchaenterprise_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.recaptchaenterprise_v1.enums.GoogleCloudRecaptchaenterpriseV1WebKeySettingsChallengeSecurityPreference;
 import io.pulumi.googlenative.recaptchaenterprise_v1.enums.GoogleCloudRecaptchaenterpriseV1WebKeySettingsIntegrationType;
 import java.lang.Boolean;

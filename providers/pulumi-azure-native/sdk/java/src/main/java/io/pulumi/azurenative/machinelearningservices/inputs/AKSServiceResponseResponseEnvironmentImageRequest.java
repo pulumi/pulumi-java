@@ -7,7 +7,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.EnvironmentImageResp
 import io.pulumi.azurenative.machinelearningservices.inputs.EnvironmentImageResponseResponseEnvironmentReference;
 import io.pulumi.azurenative.machinelearningservices.inputs.ImageAssetResponse;
 import io.pulumi.azurenative.machinelearningservices.inputs.ModelResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ssmincidents.inputs;
 
 import io.pulumi.awsnative.ssmincidents.inputs.ResponsePlanNotificationTargetItem;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;

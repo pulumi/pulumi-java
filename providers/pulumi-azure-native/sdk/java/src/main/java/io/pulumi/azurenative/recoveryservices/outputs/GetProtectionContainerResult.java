@@ -15,7 +15,7 @@ import io.pulumi.azurenative.recoveryservices.outputs.DpmContainerResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.GenericContainerResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.IaaSVMContainerResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.MabContainerResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;

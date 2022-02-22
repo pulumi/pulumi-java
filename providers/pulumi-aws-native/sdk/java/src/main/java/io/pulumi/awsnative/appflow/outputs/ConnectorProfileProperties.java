@@ -15,7 +15,7 @@ import io.pulumi.awsnative.appflow.outputs.ConnectorProfileSlackConnectorProfile
 import io.pulumi.awsnative.appflow.outputs.ConnectorProfileSnowflakeConnectorProfileProperties;
 import io.pulumi.awsnative.appflow.outputs.ConnectorProfileVeevaConnectorProfileProperties;
 import io.pulumi.awsnative.appflow.outputs.ConnectorProfileZendeskConnectorProfileProperties;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

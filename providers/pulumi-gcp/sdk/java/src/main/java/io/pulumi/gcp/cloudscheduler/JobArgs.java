@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudscheduler;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudscheduler.inputs.JobAppEngineHttpTargetArgs;
 import io.pulumi.gcp.cloudscheduler.inputs.JobHttpTargetArgs;
 import io.pulumi.gcp.cloudscheduler.inputs.JobPubsubTargetArgs;

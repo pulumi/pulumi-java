@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1.inputs.AptSettingsResponse;
 import io.pulumi.googlenative.osconfig_v1.inputs.ExecStepResponse;
 import io.pulumi.googlenative.osconfig_v1.inputs.GooSettingsResponse;

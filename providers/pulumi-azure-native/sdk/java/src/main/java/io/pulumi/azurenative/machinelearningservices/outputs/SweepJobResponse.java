@@ -14,7 +14,7 @@ import io.pulumi.azurenative.machinelearningservices.outputs.ObjectiveResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.TrialComponentResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.TruncationSelectionPolicyResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;

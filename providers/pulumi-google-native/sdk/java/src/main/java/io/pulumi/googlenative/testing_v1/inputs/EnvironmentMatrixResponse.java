@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.testing_v1.inputs.AndroidDeviceListResponse;
 import io.pulumi.googlenative.testing_v1.inputs.AndroidMatrixResponse;
 import io.pulumi.googlenative.testing_v1.inputs.IosDeviceListResponse;

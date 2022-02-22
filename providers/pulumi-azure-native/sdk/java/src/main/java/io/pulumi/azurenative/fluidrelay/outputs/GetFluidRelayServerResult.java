@@ -5,7 +5,7 @@ package io.pulumi.azurenative.fluidrelay.outputs;
 
 import io.pulumi.azurenative.fluidrelay.outputs.FluidRelayEndpointsResponse;
 import io.pulumi.azurenative.fluidrelay.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;

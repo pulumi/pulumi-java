@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.transcoder_v1.outputs.H264CodecSettingsResponse;
 import io.pulumi.googlenative.transcoder_v1.outputs.H265CodecSettingsResponse;
 import io.pulumi.googlenative.transcoder_v1.outputs.Vp9CodecSettingsResponse;

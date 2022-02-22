@@ -6,7 +6,7 @@ package io.pulumi.azurenative.hybridnetwork.inputs;
 import io.pulumi.azurenative.hybridnetwork.inputs.DataDiskResponse;
 import io.pulumi.azurenative.hybridnetwork.inputs.ImageReferenceResponse;
 import io.pulumi.azurenative.hybridnetwork.inputs.OsDiskResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;

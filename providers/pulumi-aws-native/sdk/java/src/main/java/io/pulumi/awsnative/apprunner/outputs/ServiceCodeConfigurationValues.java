@@ -5,7 +5,7 @@ package io.pulumi.awsnative.apprunner.outputs;
 
 import io.pulumi.awsnative.apprunner.enums.ServiceCodeConfigurationValuesRuntime;
 import io.pulumi.awsnative.apprunner.outputs.ServiceKeyValuePair;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

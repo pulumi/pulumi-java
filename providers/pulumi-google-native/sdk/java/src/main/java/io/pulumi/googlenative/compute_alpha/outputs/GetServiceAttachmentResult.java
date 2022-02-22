@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.ServiceAttachmentConnectedEndpointResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.ServiceAttachmentConsumerProjectLimitResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.Uint128Response;

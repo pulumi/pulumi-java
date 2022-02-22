@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1AttributeArgs;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1GraphQLOperationGroupArgs;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1OperationGroupArgs;

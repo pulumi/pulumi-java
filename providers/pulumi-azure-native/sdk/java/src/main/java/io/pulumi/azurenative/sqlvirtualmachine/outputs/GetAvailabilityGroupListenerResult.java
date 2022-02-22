@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sqlvirtualmachine.outputs;
 
 import io.pulumi.azurenative.sqlvirtualmachine.outputs.LoadBalancerConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;

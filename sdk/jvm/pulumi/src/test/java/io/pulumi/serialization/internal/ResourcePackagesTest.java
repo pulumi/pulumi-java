@@ -1,6 +1,6 @@
 package io.pulumi.serialization.internal;
 
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.resources.CustomResource;
 import io.pulumi.resources.CustomResourceOptions;
 import io.pulumi.resources.ResourceArgs;

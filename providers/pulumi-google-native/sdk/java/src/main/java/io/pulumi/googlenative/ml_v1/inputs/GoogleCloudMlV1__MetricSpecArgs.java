@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.ml_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.ml_v1.enums.GoogleCloudMlV1__MetricSpecName;
 import java.lang.Integer;
 import java.util.Objects;

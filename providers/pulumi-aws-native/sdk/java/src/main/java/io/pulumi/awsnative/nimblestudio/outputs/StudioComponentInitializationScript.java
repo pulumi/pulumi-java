@@ -5,7 +5,7 @@ package io.pulumi.awsnative.nimblestudio.outputs;
 
 import io.pulumi.awsnative.nimblestudio.enums.StudioComponentInitializationScriptRunContext;
 import io.pulumi.awsnative.nimblestudio.enums.StudioComponentLaunchProfilePlatform;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

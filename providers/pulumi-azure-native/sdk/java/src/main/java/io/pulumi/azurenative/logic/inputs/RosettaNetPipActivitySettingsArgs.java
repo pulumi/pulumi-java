@@ -7,7 +7,7 @@ import io.pulumi.azurenative.logic.enums.RosettaNetPipActivityType;
 import io.pulumi.azurenative.logic.inputs.RosettaNetPipAcknowledgmentOfReceiptSettingsArgs;
 import io.pulumi.azurenative.logic.inputs.RosettaNetPipActivityBehaviorArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 

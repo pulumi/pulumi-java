@@ -25,7 +25,7 @@ import io.pulumi.azurenative.datamigration.inputs.ValidateMigrationInputSqlServe
 import io.pulumi.azurenative.datamigration.inputs.ValidateMigrationInputSqlServerSqlMISyncTaskPropertiesArgs;
 import io.pulumi.azurenative.datamigration.inputs.ValidateMigrationInputSqlServerSqlMITaskPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;

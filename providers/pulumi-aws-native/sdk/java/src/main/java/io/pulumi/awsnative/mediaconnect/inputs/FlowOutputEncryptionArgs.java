@@ -6,7 +6,7 @@ package io.pulumi.awsnative.mediaconnect.inputs;
 import io.pulumi.awsnative.mediaconnect.enums.FlowOutputEncryptionAlgorithm;
 import io.pulumi.awsnative.mediaconnect.enums.FlowOutputEncryptionKeyType;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;

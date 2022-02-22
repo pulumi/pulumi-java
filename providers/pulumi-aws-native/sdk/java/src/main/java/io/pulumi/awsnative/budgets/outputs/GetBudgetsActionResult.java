@@ -8,7 +8,7 @@ import io.pulumi.awsnative.budgets.enums.BudgetsActionNotificationType;
 import io.pulumi.awsnative.budgets.outputs.BudgetsActionActionThreshold;
 import io.pulumi.awsnative.budgets.outputs.BudgetsActionDefinition;
 import io.pulumi.awsnative.budgets.outputs.BudgetsActionSubscriber;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

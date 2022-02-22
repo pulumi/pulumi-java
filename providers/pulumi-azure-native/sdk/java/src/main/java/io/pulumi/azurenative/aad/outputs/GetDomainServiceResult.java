@@ -10,7 +10,7 @@ import io.pulumi.azurenative.aad.outputs.NotificationSettingsResponse;
 import io.pulumi.azurenative.aad.outputs.ReplicaSetResponse;
 import io.pulumi.azurenative.aad.outputs.ResourceForestSettingsResponse;
 import io.pulumi.azurenative.aad.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.connect.enums.ContactFlowState;
 import io.pulumi.awsnative.connect.enums.ContactFlowType;
 import io.pulumi.awsnative.connect.inputs.ContactFlowTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

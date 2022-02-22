@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2ContainerResponse;
 import io.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2RevisionScalingResponse;
 import io.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2VolumeResponse;

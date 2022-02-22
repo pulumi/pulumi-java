@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.privateca_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.privateca_v1.enums.CertificateSubjectMode;
 import io.pulumi.googlenative.privateca_v1.inputs.CertificateConfigArgs;
 import java.lang.String;

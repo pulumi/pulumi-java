@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.BuilderConfigArgs;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.MetadataArgs;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.RecipeArgs;

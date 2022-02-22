@@ -5,7 +5,7 @@ package io.pulumi.azurenative.features;
 
 import io.pulumi.azurenative.features.inputs.SubscriptionFeatureRegistrationPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.webpubsub;
 import io.pulumi.azurenative.webpubsub.inputs.PrivateEndpointArgs;
 import io.pulumi.azurenative.webpubsub.inputs.PrivateLinkServiceConnectionStateArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;

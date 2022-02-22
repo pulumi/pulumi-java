@@ -10,7 +10,7 @@ import io.pulumi.azurenative.batch.inputs.ImageReferenceResponse;
 import io.pulumi.azurenative.batch.inputs.NodePlacementConfigurationResponse;
 import io.pulumi.azurenative.batch.inputs.VMExtensionResponse;
 import io.pulumi.azurenative.batch.inputs.WindowsConfigurationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

@@ -12,7 +12,7 @@ import io.pulumi.azurenative.datafactory.inputs.OrcFormatResponse;
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.inputs.ParquetFormatResponse;
 import io.pulumi.azurenative.datafactory.inputs.TextFormatResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;

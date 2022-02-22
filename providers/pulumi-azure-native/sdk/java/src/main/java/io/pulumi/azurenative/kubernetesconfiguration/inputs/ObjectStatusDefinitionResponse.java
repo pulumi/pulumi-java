@@ -6,7 +6,7 @@ package io.pulumi.azurenative.kubernetesconfiguration.inputs;
 import io.pulumi.azurenative.kubernetesconfiguration.inputs.HelmReleasePropertiesDefinitionResponse;
 import io.pulumi.azurenative.kubernetesconfiguration.inputs.ObjectReferenceDefinitionResponse;
 import io.pulumi.azurenative.kubernetesconfiguration.inputs.ObjectStatusConditionDefinitionResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

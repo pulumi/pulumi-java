@@ -6,7 +6,7 @@ package io.pulumi.awsnative.route53;
 import io.pulumi.awsnative.route53.inputs.HealthCheckConfigPropertiesArgs;
 import io.pulumi.awsnative.route53.inputs.HealthCheckTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;

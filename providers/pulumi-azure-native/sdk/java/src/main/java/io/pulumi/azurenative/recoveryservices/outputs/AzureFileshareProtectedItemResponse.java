@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.AzureFileshareProtectedItemExtendedInfoResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.KPIResourceHealthDetailsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;

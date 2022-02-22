@@ -11,7 +11,7 @@ import io.pulumi.awsnative.gamelift.inputs.FleetLocationConfigurationArgs;
 import io.pulumi.awsnative.gamelift.inputs.FleetResourceCreationLimitPolicyArgs;
 import io.pulumi.awsnative.gamelift.inputs.FleetRuntimeConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;

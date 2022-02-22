@@ -6,7 +6,7 @@ package io.pulumi.azurenative.azureactivedirectory;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.azureactivedirectory.inputs.GetB2CTenantArgs;
 import io.pulumi.azurenative.azureactivedirectory.outputs.GetB2CTenantResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkmanagement_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.networkmanagement_v1.inputs.AbortInfoResponse;
 import io.pulumi.googlenative.networkmanagement_v1.inputs.CloudSQLInstanceInfoResponse;
 import io.pulumi.googlenative.networkmanagement_v1.inputs.DeliverInfoResponse;

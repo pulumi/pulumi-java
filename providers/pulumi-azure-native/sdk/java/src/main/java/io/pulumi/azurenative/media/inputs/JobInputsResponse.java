@@ -7,7 +7,7 @@ import io.pulumi.azurenative.media.inputs.JobInputAssetResponse;
 import io.pulumi.azurenative.media.inputs.JobInputClipResponse;
 import io.pulumi.azurenative.media.inputs.JobInputHttpResponse;
 import io.pulumi.azurenative.media.inputs.JobInputSequenceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.mediapackage.outputs;
 
 import io.pulumi.awsnative.mediapackage.outputs.OriginEndpointMssEncryption;
 import io.pulumi.awsnative.mediapackage.outputs.OriginEndpointStreamSelection;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;

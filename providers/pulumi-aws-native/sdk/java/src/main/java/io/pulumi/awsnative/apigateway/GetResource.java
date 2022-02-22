@@ -6,7 +6,7 @@ package io.pulumi.awsnative.apigateway;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.apigateway.inputs.GetResourceArgs;
 import io.pulumi.awsnative.apigateway.outputs.GetResourceResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

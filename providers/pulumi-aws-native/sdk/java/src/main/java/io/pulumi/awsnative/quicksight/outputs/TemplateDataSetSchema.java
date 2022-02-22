@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.quicksight.outputs;
 
 import io.pulumi.awsnative.quicksight.outputs.TemplateColumnSchema;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.healthcare.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.healthcare.inputs.Hl7StoreNotificationConfigGetArgs;
 import io.pulumi.gcp.healthcare.inputs.Hl7StoreNotificationConfigsGetArgs;
 import io.pulumi.gcp.healthcare.inputs.Hl7StoreParserConfigGetArgs;

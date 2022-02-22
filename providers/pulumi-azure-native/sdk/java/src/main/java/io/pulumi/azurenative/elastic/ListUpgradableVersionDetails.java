@@ -6,7 +6,7 @@ package io.pulumi.azurenative.elastic;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.elastic.inputs.ListUpgradableVersionDetailsArgs;
 import io.pulumi.azurenative.elastic.outputs.ListUpgradableVersionDetailsResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

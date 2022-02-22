@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.eventarc_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.eventarc_v1.outputs.DestinationResponse;
 import io.pulumi.googlenative.eventarc_v1.outputs.EventFilterResponse;
 import io.pulumi.googlenative.eventarc_v1.outputs.TransportResponse;

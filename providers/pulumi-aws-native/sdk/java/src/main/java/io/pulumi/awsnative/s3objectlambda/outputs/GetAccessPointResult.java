@@ -6,7 +6,7 @@ package io.pulumi.awsnative.s3objectlambda.outputs;
 import io.pulumi.awsnative.s3objectlambda.outputs.AccessPointObjectLambdaConfiguration;
 import io.pulumi.awsnative.s3objectlambda.outputs.AccessPointPublicAccessBlockConfiguration;
 import io.pulumi.awsnative.s3objectlambda.outputs.PolicyStatusProperties;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

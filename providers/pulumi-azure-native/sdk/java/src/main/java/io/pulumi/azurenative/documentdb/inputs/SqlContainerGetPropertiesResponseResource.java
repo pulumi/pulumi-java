@@ -7,7 +7,7 @@ import io.pulumi.azurenative.documentdb.inputs.ConflictResolutionPolicyResponse;
 import io.pulumi.azurenative.documentdb.inputs.ContainerPartitionKeyResponse;
 import io.pulumi.azurenative.documentdb.inputs.IndexingPolicyResponse;
 import io.pulumi.azurenative.documentdb.inputs.UniqueKeyPolicyResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;

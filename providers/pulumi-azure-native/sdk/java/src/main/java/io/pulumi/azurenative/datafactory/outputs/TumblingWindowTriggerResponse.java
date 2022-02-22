@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.outputs.SelfDependencyTumblingWindowTri
 import io.pulumi.azurenative.datafactory.outputs.TriggerDependencyReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.TriggerPipelineReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.TumblingWindowTriggerDependencyReferenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;

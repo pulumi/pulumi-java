@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.customerprofiles.outputs;
 
 import io.pulumi.awsnative.customerprofiles.outputs.ObjectTypeField;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

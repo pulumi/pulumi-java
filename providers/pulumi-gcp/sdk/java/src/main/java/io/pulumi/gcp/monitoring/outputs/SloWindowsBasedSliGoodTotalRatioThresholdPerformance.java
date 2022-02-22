@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.monitoring.outputs.SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCut;
 import io.pulumi.gcp.monitoring.outputs.SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio;
 import java.util.Objects;

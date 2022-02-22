@@ -6,7 +6,7 @@ package io.pulumi.azurenative.edgeorder.outputs;
 import io.pulumi.azurenative.edgeorder.outputs.DeviceDetailsResponse;
 import io.pulumi.azurenative.edgeorder.outputs.DisplayInfoResponse;
 import io.pulumi.azurenative.edgeorder.outputs.HierarchyInformationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;

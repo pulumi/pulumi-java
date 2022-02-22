@@ -7,7 +7,7 @@ import io.pulumi.awsnative.kinesisfirehose.enums.DeliveryStreamS3DestinationConf
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamBufferingHints;
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamCloudWatchLoggingOptions;
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamEncryptionConfiguration;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

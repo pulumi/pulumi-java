@@ -14,7 +14,7 @@ import io.pulumi.azurenative.insights.inputs.SmsReceiverArgs;
 import io.pulumi.azurenative.insights.inputs.VoiceReceiverArgs;
 import io.pulumi.azurenative.insights.inputs.WebhookReceiverArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;

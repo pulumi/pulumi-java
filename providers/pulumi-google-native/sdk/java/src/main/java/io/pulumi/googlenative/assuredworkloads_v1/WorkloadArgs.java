@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.assuredworkloads_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.assuredworkloads_v1.enums.WorkloadComplianceRegime;
 import io.pulumi.googlenative.assuredworkloads_v1.inputs.GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs;
 import io.pulumi.googlenative.assuredworkloads_v1.inputs.GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs;

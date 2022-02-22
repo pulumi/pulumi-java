@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.ExpressRouteLinkMacSecCipher;
 import io.pulumi.azurenative.network.enums.ExpressRouteLinkMacSecSciState;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;

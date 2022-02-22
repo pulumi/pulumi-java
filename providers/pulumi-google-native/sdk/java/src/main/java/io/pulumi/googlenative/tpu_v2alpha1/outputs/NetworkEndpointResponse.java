@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.tpu_v2alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.tpu_v2alpha1.outputs.AccessConfigResponse;
 import java.lang.Integer;
 import java.lang.String;

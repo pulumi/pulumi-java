@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.AllowedConfigListArgs;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.AllowedSubjectAltNamesArgs;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.IssuanceModesArgs;

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 import io.pulumi.awsnative.wafv2.enums.RuleGroupSizeConstraintStatementComparisonOperator;
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupFieldToMatch;
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupTextTransformation;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.List;
 import java.util.Objects;

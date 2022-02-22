@@ -7,7 +7,7 @@ import io.pulumi.awsnative.wafv2.enums.LoggingConfigurationFilterBehavior;
 import io.pulumi.awsnative.wafv2.enums.LoggingConfigurationFilterRequirement;
 import io.pulumi.awsnative.wafv2.inputs.LoggingConfigurationConditionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 

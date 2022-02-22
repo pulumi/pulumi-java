@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.storage.outputs.TransferJobTransferSpecAwsS3DataSourceAwsAccessKey;
 import java.lang.String;
 import java.util.Objects;

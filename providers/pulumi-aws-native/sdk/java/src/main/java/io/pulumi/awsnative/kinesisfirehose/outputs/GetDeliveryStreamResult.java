@@ -12,7 +12,7 @@ import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamRedshiftDestina
 import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamS3DestinationConfiguration;
 import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamSplunkDestinationConfiguration;
 import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

@@ -12,7 +12,7 @@ import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeCustomSetupScr
 import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeDataProxyPropertiesResponse;
 import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeSsisCatalogInfoResponse;
 import io.pulumi.azurenative.datafactory.inputs.PackageStoreResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;

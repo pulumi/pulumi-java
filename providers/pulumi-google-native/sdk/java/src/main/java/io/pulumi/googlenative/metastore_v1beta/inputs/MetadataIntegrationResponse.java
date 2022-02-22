@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.metastore_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.metastore_v1beta.inputs.DataCatalogConfigResponse;
 import io.pulumi.googlenative.metastore_v1beta.inputs.DataplexConfigResponse;
 import java.util.Objects;

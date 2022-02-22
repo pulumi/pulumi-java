@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.policysimulator_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.policysimulator_v1.outputs.GoogleCloudPolicysimulatorV1ReplayConfigResponse;
 import io.pulumi.googlenative.policysimulator_v1.outputs.GoogleCloudPolicysimulatorV1ReplayResultsSummaryResponse;
 import java.lang.String;

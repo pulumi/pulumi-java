@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

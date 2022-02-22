@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.inputs.CustomerEncryptionKeyArgs;
 import io.pulumi.googlenative.compute_beta.inputs.GuestOsFeatureArgs;
 import java.lang.Boolean;

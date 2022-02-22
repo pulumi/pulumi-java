@@ -6,7 +6,7 @@ package io.pulumi.awsnative.cloudformation.inputs;
 import io.pulumi.awsnative.cloudformation.inputs.StackSetDeploymentTargetsArgs;
 import io.pulumi.awsnative.cloudformation.inputs.StackSetParameterArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

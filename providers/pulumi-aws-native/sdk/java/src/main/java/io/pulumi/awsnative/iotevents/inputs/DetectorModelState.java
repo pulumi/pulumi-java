@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iotevents.inputs;
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelOnEnter;
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelOnExit;
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelOnInput;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

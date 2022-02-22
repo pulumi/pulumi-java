@@ -12,7 +12,7 @@ var PulumiCore = Pulumi.Dot("core")
 
 var PulumiInternal = PulumiCore.Dot("internal")
 
-var PulumiAnnotations = PulumiInternal.Dot("annotations")
+var PulumiAnnotations = PulumiCore.Dot("annotations")
 
 var ResourceType = PulumiAnnotations.Dot("ResourceType")
 
@@ -66,7 +66,7 @@ var InvokeOptions = PulumiDeployment.Dot("InvokeOptions")
 
 var CompletableFuture = JavaUtil.Dot("concurrent").Dot("CompletableFuture")
 
-var TypeShape = PulumiInternal.Dot("Reflection").Dot("TypeShape")
+var TypeShape = PulumiCore.Dot("TypeShape")
 
 var StringJoiner = JavaUtil.Dot("StringJoiner")
 

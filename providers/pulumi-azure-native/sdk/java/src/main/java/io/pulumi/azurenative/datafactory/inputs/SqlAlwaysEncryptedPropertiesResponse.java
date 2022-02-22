@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.inputs.AzureKeyVaultSecretReferenceResp
 import io.pulumi.azurenative.datafactory.inputs.CredentialReferenceResponse;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;

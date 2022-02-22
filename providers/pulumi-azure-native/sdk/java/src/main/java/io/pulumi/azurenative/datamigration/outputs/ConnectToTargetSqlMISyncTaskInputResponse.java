@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.AzureActiveDirectoryAppResponse;
 import io.pulumi.azurenative.datamigration.outputs.MiSqlConnectionInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType

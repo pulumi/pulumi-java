@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.composer.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.composer.inputs.GetEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock;
 import java.lang.Boolean;
 import java.util.List;

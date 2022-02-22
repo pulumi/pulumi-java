@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.opensearchservice.inputs;
 
 import io.pulumi.awsnative.opensearchservice.inputs.DomainZoneAwarenessConfig;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;

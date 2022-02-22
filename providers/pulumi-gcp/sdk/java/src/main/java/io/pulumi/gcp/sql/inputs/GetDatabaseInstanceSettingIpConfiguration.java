@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.sql.inputs.GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork;
 import java.lang.Boolean;
 import java.lang.String;

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.appengine.inputs.FlexibleAppVersionApiConfigArgs;
 import io.pulumi.gcp.appengine.inputs.FlexibleAppVersionAutomaticScalingArgs;
 import io.pulumi.gcp.appengine.inputs.FlexibleAppVersionDeploymentArgs;

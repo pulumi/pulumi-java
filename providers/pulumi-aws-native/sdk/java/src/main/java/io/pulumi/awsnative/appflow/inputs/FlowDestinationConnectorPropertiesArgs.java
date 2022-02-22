@@ -12,7 +12,7 @@ import io.pulumi.awsnative.appflow.inputs.FlowSnowflakeDestinationPropertiesArgs
 import io.pulumi.awsnative.appflow.inputs.FlowUpsolverDestinationPropertiesArgs;
 import io.pulumi.awsnative.appflow.inputs.FlowZendeskDestinationPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 

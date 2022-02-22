@@ -7,7 +7,7 @@ import io.pulumi.awsnative.redshift.inputs.ClusterEndpointArgs;
 import io.pulumi.awsnative.redshift.inputs.ClusterLoggingPropertiesArgs;
 import io.pulumi.awsnative.redshift.inputs.ClusterTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;

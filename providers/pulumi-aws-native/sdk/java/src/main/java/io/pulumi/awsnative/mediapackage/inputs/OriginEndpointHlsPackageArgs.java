@@ -10,7 +10,7 @@ import io.pulumi.awsnative.mediapackage.enums.OriginEndpointHlsPackagePlaylistTy
 import io.pulumi.awsnative.mediapackage.inputs.OriginEndpointHlsEncryptionArgs;
 import io.pulumi.awsnative.mediapackage.inputs.OriginEndpointStreamSelectionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.portal.inputs;
 import io.pulumi.azurenative.portal.inputs.DashboardPartsPositionArgs;
 import io.pulumi.azurenative.portal.inputs.MarkdownPartMetadataArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 

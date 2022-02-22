@@ -9,7 +9,7 @@ import io.pulumi.awsnative.apprunner.inputs.ServiceInstanceConfigurationArgs;
 import io.pulumi.awsnative.apprunner.inputs.ServiceSourceConfigurationArgs;
 import io.pulumi.awsnative.apprunner.inputs.ServiceTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

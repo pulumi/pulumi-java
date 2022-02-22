@@ -5,7 +5,7 @@ package io.pulumi.awsnative.inspectorv2.outputs;
 
 import io.pulumi.awsnative.inspectorv2.enums.FilterAction;
 import io.pulumi.awsnative.inspectorv2.outputs.FilterCriteria;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

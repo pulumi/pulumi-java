@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.transcoder_v1.inputs.H264CodecSettingsResponse;
 import io.pulumi.googlenative.transcoder_v1.inputs.H265CodecSettingsResponse;
 import io.pulumi.googlenative.transcoder_v1.inputs.Vp9CodecSettingsResponse;

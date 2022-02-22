@@ -9,8 +9,8 @@ import io.pulumi.awsnative.route53resolver.enums.ResolverConfigAutodefinedRevers
 import io.pulumi.awsnative.route53resolver.enums.ResolverConfigAutodefinedReverseFlag;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 

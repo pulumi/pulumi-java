@@ -6,7 +6,7 @@ package io.pulumi.azurenative.devices;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.devices.inputs.GetIotDpsResourceArgs;
 import io.pulumi.azurenative.devices.outputs.GetIotDpsResourceResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
