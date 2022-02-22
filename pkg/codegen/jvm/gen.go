@@ -450,9 +450,7 @@ type plainType struct {
 func (pt *plainType) genInputProperty(ctx *classFileContext, prop *schema.Property, isFinal bool) error {
 	w := ctx.writer
 	requireInitializers := !pt.args || isInputType(prop.Type)
-
 	wireName := prop.Name
-	propertyName := names.Ident(pt.mod.propertyName(prop))
 	typ := prop.Type
 	if !prop.IsRequired() {
 		typ = codegen.OptionalType(prop)
@@ -502,13 +500,16 @@ func (pt *plainType) genInputProperty(ctx *classFileContext, prop *schema.Proper
 		_, _ = fmt.Fprintf(w, "%s */\n", indent)
 	}
 
+	propertyName := names.Ident(pt.mod.propertyName(prop))
+	propertyModifiers := make([]string, 4)
+
+	propertyModifiers = append(propertyModifiers, "private")
+	if isFinal {
+		propertyModifiers = append(propertyModifiers, "final")
+	}
 	printObsoleteAttribute(ctx, prop.DeprecationMessage, indent)
 	_, _ = fmt.Fprintf(w, "%s@%s(name=\"%s\"%s)\n", indent, ctx.ref(names.InputImport), wireName, attributeArgs)
-	if isFinal {
-		_, _ = fmt.Fprintf(w, "%sprivate final %s %s;\n", indent, propertyType.ToCode(ctx.imports), propertyName)
-	} else {
-		_, _ = fmt.Fprintf(w, "%sprivate %s %s;\n", indent, propertyType.ToCode(ctx.imports), propertyName)
-	}
+	_, _ = fmt.Fprintf(w, "%s%s %s %s;\n", indent, strings.Join(propertyModifiers, " "), propertyType.ToCode(ctx.imports), propertyName)
 	_, _ = fmt.Fprintf(w, "\n")
 
 	// Add getter
