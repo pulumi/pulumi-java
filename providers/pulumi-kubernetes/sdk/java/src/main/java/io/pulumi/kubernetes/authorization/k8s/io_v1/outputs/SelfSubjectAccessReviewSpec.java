@@ -77,7 +77,6 @@ public final class SelfSubjectAccessReviewSpec {
             this.resourceAttributes = resourceAttributes;
             return this;
         }
-
         public SelfSubjectAccessReviewSpec build() {
             return new SelfSubjectAccessReviewSpec(nonResourceAttributes, resourceAttributes);
         }

@@ -24,7 +24,7 @@ public final class AzureDiskVolumeSourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="cachingMode")
-    private final @Nullable Input<String> cachingMode;
+        private final @Nullable Input<String> cachingMode;
 
     public Input<String> getCachingMode() {
         return this.cachingMode == null ? Input.empty() : this.cachingMode;
@@ -35,7 +35,7 @@ public final class AzureDiskVolumeSourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="diskName", required=true)
-    private final Input<String> diskName;
+        private final Input<String> diskName;
 
     public Input<String> getDiskName() {
         return this.diskName;
@@ -46,7 +46,7 @@ public final class AzureDiskVolumeSourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="diskURI", required=true)
-    private final Input<String> diskURI;
+        private final Input<String> diskURI;
 
     public Input<String> getDiskURI() {
         return this.diskURI;
@@ -57,7 +57,7 @@ public final class AzureDiskVolumeSourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="fsType")
-    private final @Nullable Input<String> fsType;
+        private final @Nullable Input<String> fsType;
 
     public Input<String> getFsType() {
         return this.fsType == null ? Input.empty() : this.fsType;
@@ -68,7 +68,7 @@ public final class AzureDiskVolumeSourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+        private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -79,7 +79,7 @@ public final class AzureDiskVolumeSourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="readOnly")
-    private final @Nullable Input<Boolean> readOnly;
+        private final @Nullable Input<Boolean> readOnly;
 
     public Input<Boolean> getReadOnly() {
         return this.readOnly == null ? Input.empty() : this.readOnly;
@@ -198,7 +198,6 @@ public final class AzureDiskVolumeSourceArgs extends io.pulumi.resources.Resourc
             this.readOnly = Input.ofNullable(readOnly);
             return this;
         }
-
         public AzureDiskVolumeSourceArgs build() {
             return new AzureDiskVolumeSourceArgs(cachingMode, diskName, diskURI, fsType, kind, readOnly);
         }

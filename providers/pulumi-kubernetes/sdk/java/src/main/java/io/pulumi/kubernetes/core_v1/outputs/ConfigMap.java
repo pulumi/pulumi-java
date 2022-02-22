@@ -163,7 +163,6 @@ public final class ConfigMap {
             this.metadata = metadata;
             return this;
         }
-
         public ConfigMap build() {
             return new ConfigMap(apiVersion, binaryData, data, immutable, kind, metadata);
         }

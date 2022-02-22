@@ -142,7 +142,6 @@ public final class ControllerRevision {
             this.revision = Objects.requireNonNull(revision);
             return this;
         }
-
         public ControllerRevision build() {
             return new ControllerRevision(apiVersion, data, kind, metadata, revision);
         }

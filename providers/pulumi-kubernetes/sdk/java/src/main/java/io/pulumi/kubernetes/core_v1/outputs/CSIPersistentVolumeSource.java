@@ -226,7 +226,6 @@ public final class CSIPersistentVolumeSource {
             this.volumeHandle = Objects.requireNonNull(volumeHandle);
             return this;
         }
-
         public CSIPersistentVolumeSource build() {
             return new CSIPersistentVolumeSource(controllerExpandSecretRef, controllerPublishSecretRef, driver, fsType, nodePublishSecretRef, nodeStageSecretRef, readOnly, volumeAttributes, volumeHandle);
         }

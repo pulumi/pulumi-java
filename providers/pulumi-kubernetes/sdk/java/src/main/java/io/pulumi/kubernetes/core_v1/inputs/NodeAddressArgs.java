@@ -22,7 +22,7 @@ public final class NodeAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="address", required=true)
-    private final Input<String> address;
+        private final Input<String> address;
 
     public Input<String> getAddress() {
         return this.address;
@@ -40,7 +40,7 @@ public final class NodeAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -99,7 +99,6 @@ public final class NodeAddressArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public NodeAddressArgs build() {
             return new NodeAddressArgs(address, type);
         }

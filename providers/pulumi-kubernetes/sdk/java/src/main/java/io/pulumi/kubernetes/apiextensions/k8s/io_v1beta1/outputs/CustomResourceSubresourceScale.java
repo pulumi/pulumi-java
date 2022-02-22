@@ -97,7 +97,6 @@ public final class CustomResourceSubresourceScale {
             this.statusReplicasPath = Objects.requireNonNull(statusReplicasPath);
             return this;
         }
-
         public CustomResourceSubresourceScale build() {
             return new CustomResourceSubresourceScale(labelSelectorPath, specReplicasPath, statusReplicasPath);
         }

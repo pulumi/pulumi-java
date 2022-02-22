@@ -230,7 +230,6 @@ public final class CSIDriverSpec {
             this.volumeLifecycleModes = volumeLifecycleModes;
             return this;
         }
-
         public CSIDriverSpec build() {
             return new CSIDriverSpec(attachRequired, fsGroupPolicy, podInfoOnMount, requiresRepublish, storageCapacity, tokenRequests, volumeLifecycleModes);
         }

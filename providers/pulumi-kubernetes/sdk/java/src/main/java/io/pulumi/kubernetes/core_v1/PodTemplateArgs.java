@@ -21,7 +21,7 @@ public final class PodTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiVersion")
-    private final @Nullable Input<String> apiVersion;
+        private final @Nullable Input<String> apiVersion;
 
     public Input<String> getApiVersion() {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
@@ -32,7 +32,7 @@ public final class PodTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+        private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -43,7 +43,7 @@ public final class PodTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<ObjectMetaArgs> metadata;
+        private final @Nullable Input<ObjectMetaArgs> metadata;
 
     public Input<ObjectMetaArgs> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -54,7 +54,7 @@ public final class PodTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="template")
-    private final @Nullable Input<PodTemplateSpecArgs> template;
+        private final @Nullable Input<PodTemplateSpecArgs> template;
 
     public Input<PodTemplateSpecArgs> getTemplate() {
         return this.template == null ? Input.empty() : this.template;
@@ -143,7 +143,6 @@ public final class PodTemplateArgs extends io.pulumi.resources.ResourceArgs {
             this.template = Input.ofNullable(template);
             return this;
         }
-
         public PodTemplateArgs build() {
             return new PodTemplateArgs(apiVersion, kind, metadata, template);
         }

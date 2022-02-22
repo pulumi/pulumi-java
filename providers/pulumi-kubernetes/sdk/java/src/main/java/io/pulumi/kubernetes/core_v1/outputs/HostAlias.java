@@ -77,7 +77,6 @@ public final class HostAlias {
             this.ip = ip;
             return this;
         }
-
         public HostAlias build() {
             return new HostAlias(hostnames, ip);
         }

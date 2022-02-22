@@ -25,7 +25,7 @@ public final class CSINodeDriverArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allocatable")
-    private final @Nullable Input<VolumeNodeResourcesArgs> allocatable;
+        private final @Nullable Input<VolumeNodeResourcesArgs> allocatable;
 
     public Input<VolumeNodeResourcesArgs> getAllocatable() {
         return this.allocatable == null ? Input.empty() : this.allocatable;
@@ -36,7 +36,7 @@ public final class CSINodeDriverArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -47,7 +47,7 @@ public final class CSINodeDriverArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeID", required=true)
-    private final Input<String> nodeID;
+        private final Input<String> nodeID;
 
     public Input<String> getNodeID() {
         return this.nodeID;
@@ -58,7 +58,7 @@ public final class CSINodeDriverArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="topologyKeys")
-    private final @Nullable Input<List<String>> topologyKeys;
+        private final @Nullable Input<List<String>> topologyKeys;
 
     public Input<List<String>> getTopologyKeys() {
         return this.topologyKeys == null ? Input.empty() : this.topologyKeys;
@@ -147,7 +147,6 @@ public final class CSINodeDriverArgs extends io.pulumi.resources.ResourceArgs {
             this.topologyKeys = Input.ofNullable(topologyKeys);
             return this;
         }
-
         public CSINodeDriverArgs build() {
             return new CSINodeDriverArgs(allocatable, name, nodeID, topologyKeys);
         }

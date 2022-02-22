@@ -26,7 +26,7 @@ public final class ReplicationControllerArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="apiVersion")
-    private final @Nullable Input<String> apiVersion;
+        private final @Nullable Input<String> apiVersion;
 
     public Input<String> getApiVersion() {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
@@ -37,7 +37,7 @@ public final class ReplicationControllerArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+        private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -48,7 +48,7 @@ public final class ReplicationControllerArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<ObjectMetaArgs> metadata;
+        private final @Nullable Input<ObjectMetaArgs> metadata;
 
     public Input<ObjectMetaArgs> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -59,7 +59,7 @@ public final class ReplicationControllerArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="spec")
-    private final @Nullable Input<ReplicationControllerSpecArgs> spec;
+        private final @Nullable Input<ReplicationControllerSpecArgs> spec;
 
     public Input<ReplicationControllerSpecArgs> getSpec() {
         return this.spec == null ? Input.empty() : this.spec;
@@ -70,7 +70,7 @@ public final class ReplicationControllerArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<ReplicationControllerStatusArgs> status;
+        private final @Nullable Input<ReplicationControllerStatusArgs> status;
 
     public Input<ReplicationControllerStatusArgs> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -174,7 +174,6 @@ public final class ReplicationControllerArgs extends io.pulumi.resources.Resourc
             this.status = Input.ofNullable(status);
             return this;
         }
-
         public ReplicationControllerArgs build() {
             return new ReplicationControllerArgs(apiVersion, kind, metadata, spec, status);
         }

@@ -98,7 +98,6 @@ public final class EndpointSubset {
             this.ports = ports;
             return this;
         }
-
         public EndpointSubset build() {
             return new EndpointSubset(addresses, notReadyAddresses, ports);
         }

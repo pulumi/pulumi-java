@@ -161,7 +161,6 @@ public final class OwnerReference {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }
-
         public OwnerReference build() {
             return new OwnerReference(apiVersion, blockOwnerDeletion, controller, kind, name, uid);
         }

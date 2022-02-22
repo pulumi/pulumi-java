@@ -121,7 +121,6 @@ public final class Role {
             this.rules = rules;
             return this;
         }
-
         public Role build() {
             return new Role(apiVersion, kind, metadata, rules);
         }

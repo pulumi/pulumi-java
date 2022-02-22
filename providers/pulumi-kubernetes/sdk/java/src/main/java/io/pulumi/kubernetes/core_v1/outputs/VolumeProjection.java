@@ -121,7 +121,6 @@ public final class VolumeProjection {
             this.serviceAccountToken = serviceAccountToken;
             return this;
         }
-
         public VolumeProjection build() {
             return new VolumeProjection(configMap, downwardAPI, secret, serviceAccountToken);
         }

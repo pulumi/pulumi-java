@@ -20,7 +20,7 @@ public final class DaemonSetUpdateStrategyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="rollingUpdate")
-    private final @Nullable Input<RollingUpdateDaemonSetArgs> rollingUpdate;
+        private final @Nullable Input<RollingUpdateDaemonSetArgs> rollingUpdate;
 
     public Input<RollingUpdateDaemonSetArgs> getRollingUpdate() {
         return this.rollingUpdate == null ? Input.empty() : this.rollingUpdate;
@@ -31,7 +31,7 @@ public final class DaemonSetUpdateStrategyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+        private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -90,7 +90,6 @@ public final class DaemonSetUpdateStrategyArgs extends io.pulumi.resources.Resou
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public DaemonSetUpdateStrategyArgs build() {
             return new DaemonSetUpdateStrategyArgs(rollingUpdate, type);
         }

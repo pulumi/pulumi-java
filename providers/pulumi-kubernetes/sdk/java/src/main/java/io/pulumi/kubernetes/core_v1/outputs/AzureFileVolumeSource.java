@@ -98,7 +98,6 @@ public final class AzureFileVolumeSource {
             this.shareName = Objects.requireNonNull(shareName);
             return this;
         }
-
         public AzureFileVolumeSource build() {
             return new AzureFileVolumeSource(readOnly, secretName, shareName);
         }

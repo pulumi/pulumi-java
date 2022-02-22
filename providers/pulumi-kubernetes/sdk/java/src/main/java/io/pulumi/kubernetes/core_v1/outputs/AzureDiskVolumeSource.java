@@ -161,7 +161,6 @@ public final class AzureDiskVolumeSource {
             this.readOnly = readOnly;
             return this;
         }
-
         public AzureDiskVolumeSource build() {
             return new AzureDiskVolumeSource(cachingMode, diskName, diskURI, fsType, kind, readOnly);
         }

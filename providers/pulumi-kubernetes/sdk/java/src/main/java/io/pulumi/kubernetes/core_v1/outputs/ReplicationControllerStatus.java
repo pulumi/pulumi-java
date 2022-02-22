@@ -162,7 +162,6 @@ public final class ReplicationControllerStatus {
             this.replicas = Objects.requireNonNull(replicas);
             return this;
         }
-
         public ReplicationControllerStatus build() {
             return new ReplicationControllerStatus(availableReplicas, conditions, fullyLabeledReplicas, observedGeneration, readyReplicas, replicas);
         }

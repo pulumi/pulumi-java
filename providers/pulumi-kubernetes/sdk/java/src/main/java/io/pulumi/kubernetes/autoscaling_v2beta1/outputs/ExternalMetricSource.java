@@ -119,7 +119,6 @@ public final class ExternalMetricSource {
             this.targetValue = targetValue;
             return this;
         }
-
         public ExternalMetricSource build() {
             return new ExternalMetricSource(metricName, metricSelector, targetAverageValue, targetValue);
         }

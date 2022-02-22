@@ -52,7 +52,6 @@ public final class DaemonEndpoint {
             this.Port = Objects.requireNonNull(Port);
             return this;
         }
-
         public DaemonEndpoint build() {
             return new DaemonEndpoint(Port);
         }

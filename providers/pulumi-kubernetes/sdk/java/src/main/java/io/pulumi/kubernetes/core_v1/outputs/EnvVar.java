@@ -98,7 +98,6 @@ public final class EnvVar {
             this.valueFrom = valueFrom;
             return this;
         }
-
         public EnvVar build() {
             return new EnvVar(name, value, valueFrom);
         }

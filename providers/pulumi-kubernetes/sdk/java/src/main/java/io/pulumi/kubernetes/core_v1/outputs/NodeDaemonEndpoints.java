@@ -54,7 +54,6 @@ public final class NodeDaemonEndpoints {
             this.kubeletEndpoint = kubeletEndpoint;
             return this;
         }
-
         public NodeDaemonEndpoints build() {
             return new NodeDaemonEndpoints(kubeletEndpoint);
         }

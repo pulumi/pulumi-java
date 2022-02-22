@@ -142,7 +142,6 @@ public final class Ingress {
             this.status = status;
             return this;
         }
-
         public Ingress build() {
             return new Ingress(apiVersion, kind, metadata, spec, status);
         }

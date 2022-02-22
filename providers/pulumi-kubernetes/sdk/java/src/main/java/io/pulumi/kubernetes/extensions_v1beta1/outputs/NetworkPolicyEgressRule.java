@@ -77,7 +77,6 @@ public final class NetworkPolicyEgressRule {
             this.to = to;
             return this;
         }
-
         public NetworkPolicyEgressRule build() {
             return new NetworkPolicyEgressRule(ports, to);
         }

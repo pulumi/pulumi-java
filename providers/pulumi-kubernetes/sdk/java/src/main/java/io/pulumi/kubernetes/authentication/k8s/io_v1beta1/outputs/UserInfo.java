@@ -120,7 +120,6 @@ public final class UserInfo {
             this.username = username;
             return this;
         }
-
         public UserInfo build() {
             return new UserInfo(extra, groups, uid, username);
         }

@@ -23,7 +23,7 @@ public final class ContainerStateRunningArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="startedAt")
-    private final @Nullable Input<String> startedAt;
+        private final @Nullable Input<String> startedAt;
 
     public Input<String> getStartedAt() {
         return this.startedAt == null ? Input.empty() : this.startedAt;
@@ -66,7 +66,6 @@ public final class ContainerStateRunningArgs extends io.pulumi.resources.Resourc
             this.startedAt = Input.ofNullable(startedAt);
             return this;
         }
-
         public ContainerStateRunningArgs build() {
             return new ContainerStateRunningArgs(startedAt);
         }

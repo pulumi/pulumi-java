@@ -74,7 +74,6 @@ public final class AttachedVolume {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public AttachedVolume build() {
             return new AttachedVolume(devicePath, name);
         }

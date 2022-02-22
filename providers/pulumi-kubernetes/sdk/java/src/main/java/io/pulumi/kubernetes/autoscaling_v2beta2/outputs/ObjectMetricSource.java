@@ -89,7 +89,6 @@ public final class ObjectMetricSource {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public ObjectMetricSource build() {
             return new ObjectMetricSource(describedObject, metric, target);
         }

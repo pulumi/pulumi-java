@@ -119,7 +119,6 @@ public final class EndpointAddress {
             this.targetRef = targetRef;
             return this;
         }
-
         public EndpointAddress build() {
             return new EndpointAddress(hostname, ip, nodeName, targetRef);
         }

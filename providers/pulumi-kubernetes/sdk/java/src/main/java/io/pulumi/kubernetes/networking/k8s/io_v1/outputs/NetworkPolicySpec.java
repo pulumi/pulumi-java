@@ -121,7 +121,6 @@ public final class NetworkPolicySpec {
             this.policyTypes = policyTypes;
             return this;
         }
-
         public NetworkPolicySpec build() {
             return new NetworkPolicySpec(egress, ingress, podSelector, policyTypes);
         }

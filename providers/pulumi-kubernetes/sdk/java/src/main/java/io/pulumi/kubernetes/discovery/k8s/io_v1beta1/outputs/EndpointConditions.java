@@ -97,7 +97,6 @@ public final class EndpointConditions {
             this.terminating = terminating;
             return this;
         }
-
         public EndpointConditions build() {
             return new EndpointConditions(ready, serving, terminating);
         }

@@ -19,14 +19,14 @@ public final class ExternalDocumentationArgs extends io.pulumi.resources.Resourc
     public static final ExternalDocumentationArgs Empty = new ExternalDocumentationArgs();
 
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="url")
-    private final @Nullable Input<String> url;
+        private final @Nullable Input<String> url;
 
     public Input<String> getUrl() {
         return this.url == null ? Input.empty() : this.url;
@@ -85,7 +85,6 @@ public final class ExternalDocumentationArgs extends io.pulumi.resources.Resourc
             this.url = Input.ofNullable(url);
             return this;
         }
-
         public ExternalDocumentationArgs build() {
             return new ExternalDocumentationArgs(description, url);
         }

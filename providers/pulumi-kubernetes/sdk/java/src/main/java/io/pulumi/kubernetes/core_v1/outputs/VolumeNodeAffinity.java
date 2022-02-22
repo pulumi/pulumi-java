@@ -54,7 +54,6 @@ public final class VolumeNodeAffinity {
             this.required = required;
             return this;
         }
-
         public VolumeNodeAffinity build() {
             return new VolumeNodeAffinity(required);
         }

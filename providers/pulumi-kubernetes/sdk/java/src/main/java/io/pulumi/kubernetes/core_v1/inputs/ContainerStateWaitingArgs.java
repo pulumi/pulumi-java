@@ -23,7 +23,7 @@ public final class ContainerStateWaitingArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="message")
-    private final @Nullable Input<String> message;
+        private final @Nullable Input<String> message;
 
     public Input<String> getMessage() {
         return this.message == null ? Input.empty() : this.message;
@@ -34,7 +34,7 @@ public final class ContainerStateWaitingArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="reason")
-    private final @Nullable Input<String> reason;
+        private final @Nullable Input<String> reason;
 
     public Input<String> getReason() {
         return this.reason == null ? Input.empty() : this.reason;
@@ -93,7 +93,6 @@ public final class ContainerStateWaitingArgs extends io.pulumi.resources.Resourc
             this.reason = Input.ofNullable(reason);
             return this;
         }
-
         public ContainerStateWaitingArgs build() {
             return new ContainerStateWaitingArgs(message, reason);
         }

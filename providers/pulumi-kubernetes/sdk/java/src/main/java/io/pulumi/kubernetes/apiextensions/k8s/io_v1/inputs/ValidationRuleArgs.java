@@ -23,7 +23,7 @@ public final class ValidationRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="message")
-    private final @Nullable Input<String> message;
+        private final @Nullable Input<String> message;
 
     public Input<String> getMessage() {
         return this.message == null ? Input.empty() : this.message;
@@ -58,7 +58,7 @@ public final class ValidationRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rule", required=true)
-    private final Input<String> rule;
+        private final Input<String> rule;
 
     public Input<String> getRule() {
         return this.rule;
@@ -117,7 +117,6 @@ public final class ValidationRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.rule = Input.of(Objects.requireNonNull(rule));
             return this;
         }
-
         public ValidationRuleArgs build() {
             return new ValidationRuleArgs(message, rule);
         }

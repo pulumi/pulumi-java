@@ -54,7 +54,6 @@ public final class DownwardAPIProjection {
             this.items = items;
             return this;
         }
-
         public DownwardAPIProjection build() {
             return new DownwardAPIProjection(items);
         }

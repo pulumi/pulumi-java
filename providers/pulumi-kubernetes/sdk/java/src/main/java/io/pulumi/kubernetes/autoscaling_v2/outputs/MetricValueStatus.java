@@ -98,7 +98,6 @@ public final class MetricValueStatus {
             this.value = value;
             return this;
         }
-
         public MetricValueStatus build() {
             return new MetricValueStatus(averageUtilization, averageValue, value);
         }

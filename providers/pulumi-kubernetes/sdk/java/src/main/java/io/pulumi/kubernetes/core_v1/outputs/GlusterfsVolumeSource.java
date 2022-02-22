@@ -98,7 +98,6 @@ public final class GlusterfsVolumeSource {
             this.readOnly = readOnly;
             return this;
         }
-
         public GlusterfsVolumeSource build() {
             return new GlusterfsVolumeSource(endpoints, path, readOnly);
         }

@@ -141,7 +141,6 @@ public final class StorageOSPersistentVolumeSource {
             this.volumeNamespace = volumeNamespace;
             return this;
         }
-
         public StorageOSPersistentVolumeSource build() {
             return new StorageOSPersistentVolumeSource(fsType, readOnly, secretRef, volumeName, volumeNamespace);
         }

@@ -97,7 +97,6 @@ public final class TypedLocalObjectReference {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public TypedLocalObjectReference build() {
             return new TypedLocalObjectReference(apiGroup, kind, name);
         }

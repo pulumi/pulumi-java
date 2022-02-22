@@ -81,7 +81,6 @@ public final class AllowedHostPath {
             this.readOnly = readOnly;
             return this;
         }
-
         public AllowedHostPath build() {
             return new AllowedHostPath(pathPrefix, readOnly);
         }

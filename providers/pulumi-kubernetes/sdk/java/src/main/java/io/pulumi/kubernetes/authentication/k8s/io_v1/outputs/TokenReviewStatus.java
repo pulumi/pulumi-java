@@ -121,7 +121,6 @@ public final class TokenReviewStatus {
             this.user = user;
             return this;
         }
-
         public TokenReviewStatus build() {
             return new TokenReviewStatus(audiences, authenticated, error, user);
         }

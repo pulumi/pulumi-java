@@ -139,7 +139,6 @@ public final class PolicyRule {
             this.verbs = Objects.requireNonNull(verbs);
             return this;
         }
-
         public PolicyRule build() {
             return new PolicyRule(apiGroups, nonResourceURLs, resourceNames, resources, verbs);
         }

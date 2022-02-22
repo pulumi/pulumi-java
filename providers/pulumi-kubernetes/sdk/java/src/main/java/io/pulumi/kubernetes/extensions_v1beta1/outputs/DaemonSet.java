@@ -142,7 +142,6 @@ public final class DaemonSet {
             this.status = status;
             return this;
         }
-
         public DaemonSet build() {
             return new DaemonSet(apiVersion, kind, metadata, spec, status);
         }

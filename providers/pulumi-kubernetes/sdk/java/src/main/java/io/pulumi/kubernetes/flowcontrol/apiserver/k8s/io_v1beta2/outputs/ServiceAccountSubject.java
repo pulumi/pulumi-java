@@ -74,7 +74,6 @@ public final class ServiceAccountSubject {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
-
         public ServiceAccountSubject build() {
             return new ServiceAccountSubject(name, namespace);
         }

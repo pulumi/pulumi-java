@@ -77,7 +77,6 @@ public final class IngressServiceBackend {
             this.port = port;
             return this;
         }
-
         public IngressServiceBackend build() {
             return new IngressServiceBackend(name, port);
         }

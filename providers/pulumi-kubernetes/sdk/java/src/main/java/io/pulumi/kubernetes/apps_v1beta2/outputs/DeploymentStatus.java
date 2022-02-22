@@ -204,7 +204,6 @@ public final class DeploymentStatus {
             this.updatedReplicas = updatedReplicas;
             return this;
         }
-
         public DeploymentStatus build() {
             return new DeploymentStatus(availableReplicas, collisionCount, conditions, observedGeneration, readyReplicas, replicas, unavailableReplicas, updatedReplicas);
         }

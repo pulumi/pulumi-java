@@ -139,7 +139,6 @@ public final class CustomResourceDefinitionCondition {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public CustomResourceDefinitionCondition build() {
             return new CustomResourceDefinitionCondition(lastTransitionTime, message, reason, status, type);
         }

@@ -141,7 +141,6 @@ public final class ResourcePolicyRule {
             this.verbs = Objects.requireNonNull(verbs);
             return this;
         }
-
         public ResourcePolicyRule build() {
             return new ResourcePolicyRule(apiGroups, clusterScope, namespaces, resources, verbs);
         }

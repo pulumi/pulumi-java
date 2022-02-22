@@ -142,7 +142,6 @@ public final class FlowSchema {
             this.status = status;
             return this;
         }
-
         public FlowSchema build() {
             return new FlowSchema(apiVersion, kind, metadata, spec, status);
         }

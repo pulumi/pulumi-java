@@ -96,7 +96,6 @@ public final class ContainerResourceMetricSource {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public ContainerResourceMetricSource build() {
             return new ContainerResourceMetricSource(container, name, target);
         }

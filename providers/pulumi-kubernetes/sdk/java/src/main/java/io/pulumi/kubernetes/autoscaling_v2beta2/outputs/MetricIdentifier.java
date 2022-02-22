@@ -77,7 +77,6 @@ public final class MetricIdentifier {
             this.selector = selector;
             return this;
         }
-
         public MetricIdentifier build() {
             return new MetricIdentifier(name, selector);
         }

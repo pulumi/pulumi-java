@@ -284,7 +284,6 @@ public final class NodeStatus {
             this.volumesInUse = volumesInUse;
             return this;
         }
-
         public NodeStatus build() {
             return new NodeStatus(addresses, allocatable, capacity, conditions, config, daemonEndpoints, images, nodeInfo, phase, volumesAttached, volumesInUse);
         }

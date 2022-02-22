@@ -23,7 +23,7 @@ public final class ContainerResourceMetricSourceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="container", required=true)
-    private final Input<String> container;
+        private final Input<String> container;
 
     public Input<String> getContainer() {
         return this.container;
@@ -34,7 +34,7 @@ public final class ContainerResourceMetricSourceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -45,7 +45,7 @@ public final class ContainerResourceMetricSourceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="target", required=true)
-    private final Input<MetricTargetArgs> target;
+        private final Input<MetricTargetArgs> target;
 
     public Input<MetricTargetArgs> getTarget() {
         return this.target;
@@ -119,7 +119,6 @@ public final class ContainerResourceMetricSourceArgs extends io.pulumi.resources
             this.target = Input.of(Objects.requireNonNull(target));
             return this;
         }
-
         public ContainerResourceMetricSourceArgs build() {
             return new ContainerResourceMetricSourceArgs(container, name, target);
         }

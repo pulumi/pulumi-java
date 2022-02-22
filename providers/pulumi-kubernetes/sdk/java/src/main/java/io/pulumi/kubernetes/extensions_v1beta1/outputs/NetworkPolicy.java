@@ -120,7 +120,6 @@ public final class NetworkPolicy {
             this.spec = spec;
             return this;
         }
-
         public NetworkPolicy build() {
             return new NetworkPolicy(apiVersion, kind, metadata, spec);
         }

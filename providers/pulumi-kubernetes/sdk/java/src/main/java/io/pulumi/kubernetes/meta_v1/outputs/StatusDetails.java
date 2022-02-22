@@ -163,7 +163,6 @@ public final class StatusDetails {
             this.uid = uid;
             return this;
         }
-
         public StatusDetails build() {
             return new StatusDetails(causes, group, kind, name, retryAfterSeconds, uid);
         }

@@ -88,7 +88,6 @@ public final class NodeAddress {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public NodeAddress build() {
             return new NodeAddress(address, type);
         }

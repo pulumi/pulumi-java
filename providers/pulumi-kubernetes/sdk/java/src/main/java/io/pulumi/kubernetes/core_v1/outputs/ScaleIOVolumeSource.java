@@ -246,7 +246,6 @@ public final class ScaleIOVolumeSource {
             this.volumeName = volumeName;
             return this;
         }
-
         public ScaleIOVolumeSource build() {
             return new ScaleIOVolumeSource(fsType, gateway, protectionDomain, readOnly, secretRef, sslEnabled, storageMode, storagePool, system, volumeName);
         }

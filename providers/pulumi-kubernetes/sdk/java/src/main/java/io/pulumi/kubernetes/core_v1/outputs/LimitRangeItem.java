@@ -170,7 +170,6 @@ public final class LimitRangeItem {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public LimitRangeItem build() {
             return new LimitRangeItem($default, defaultRequest, max, maxLimitRequestRatio, min, type);
         }

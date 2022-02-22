@@ -396,7 +396,6 @@ public final class Event {
             this.type = type;
             return this;
         }
-
         public Event build() {
             return new Event(action, apiVersion, count, eventTime, firstTimestamp, involvedObject, kind, lastTimestamp, message, metadata, reason, related, reportingComponent, reportingInstance, series, source, type);
         }

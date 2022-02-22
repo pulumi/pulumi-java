@@ -76,7 +76,6 @@ public final class ResourceRequirements {
             this.requests = requests;
             return this;
         }
-
         public ResourceRequirements build() {
             return new ResourceRequirements(limits, requests);
         }

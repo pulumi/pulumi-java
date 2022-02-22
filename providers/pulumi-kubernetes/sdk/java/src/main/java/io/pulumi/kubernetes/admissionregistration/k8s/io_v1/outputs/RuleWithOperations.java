@@ -152,7 +152,6 @@ public final class RuleWithOperations {
             this.scope = scope;
             return this;
         }
-
         public RuleWithOperations build() {
             return new RuleWithOperations(apiGroups, apiVersions, operations, resources, scope);
         }

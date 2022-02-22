@@ -77,7 +77,6 @@ public final class ConfigMapEnvSource {
             this.optional = optional;
             return this;
         }
-
         public ConfigMapEnvSource build() {
             return new ConfigMapEnvSource(name, optional);
         }

@@ -112,7 +112,6 @@ public final class AuditSink {
             this.spec = spec;
             return this;
         }
-
         public AuditSink build() {
             return new AuditSink(apiVersion, kind, metadata, spec);
         }

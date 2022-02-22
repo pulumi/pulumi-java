@@ -122,7 +122,6 @@ public final class ConfigMapVolumeSource {
             this.optional = optional;
             return this;
         }
-
         public ConfigMapVolumeSource build() {
             return new ConfigMapVolumeSource(defaultMode, items, name, optional);
         }

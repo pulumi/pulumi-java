@@ -321,7 +321,6 @@ public final class ValidatingWebhook {
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }
-
         public ValidatingWebhook build() {
             return new ValidatingWebhook(admissionReviewVersions, clientConfig, failurePolicy, matchPolicy, name, namespaceSelector, objectSelector, rules, sideEffects, timeoutSeconds);
         }

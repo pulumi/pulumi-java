@@ -120,7 +120,6 @@ public final class CinderPersistentVolumeSource {
             this.volumeID = Objects.requireNonNull(volumeID);
             return this;
         }
-
         public CinderPersistentVolumeSource build() {
             return new CinderPersistentVolumeSource(fsType, readOnly, secretRef, volumeID);
         }

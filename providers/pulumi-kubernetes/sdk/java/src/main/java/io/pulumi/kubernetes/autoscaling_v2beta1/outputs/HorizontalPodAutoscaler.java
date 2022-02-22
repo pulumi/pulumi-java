@@ -142,7 +142,6 @@ public final class HorizontalPodAutoscaler {
             this.status = status;
             return this;
         }
-
         public HorizontalPodAutoscaler build() {
             return new HorizontalPodAutoscaler(apiVersion, kind, metadata, spec, status);
         }

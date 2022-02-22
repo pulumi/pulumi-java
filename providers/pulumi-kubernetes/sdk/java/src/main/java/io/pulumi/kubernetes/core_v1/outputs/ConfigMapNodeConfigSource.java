@@ -139,7 +139,6 @@ public final class ConfigMapNodeConfigSource {
             this.uid = uid;
             return this;
         }
-
         public ConfigMapNodeConfigSource build() {
             return new ConfigMapNodeConfigSource(kubeletConfigKey, name, namespace, resourceVersion, uid);
         }

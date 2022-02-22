@@ -24,7 +24,7 @@ public final class TokenReviewSpecArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="audiences")
-    private final @Nullable Input<List<String>> audiences;
+        private final @Nullable Input<List<String>> audiences;
 
     public Input<List<String>> getAudiences() {
         return this.audiences == null ? Input.empty() : this.audiences;
@@ -35,7 +35,7 @@ public final class TokenReviewSpecArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="token")
-    private final @Nullable Input<String> token;
+        private final @Nullable Input<String> token;
 
     public Input<String> getToken() {
         return this.token == null ? Input.empty() : this.token;
@@ -94,7 +94,6 @@ public final class TokenReviewSpecArgs extends io.pulumi.resources.ResourceArgs 
             this.token = Input.ofNullable(token);
             return this;
         }
-
         public TokenReviewSpecArgs build() {
             return new TokenReviewSpecArgs(audiences, token);
         }

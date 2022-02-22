@@ -54,7 +54,6 @@ public final class RollbackConfig {
             this.revision = revision;
             return this;
         }
-
         public RollbackConfig build() {
             return new RollbackConfig(revision);
         }

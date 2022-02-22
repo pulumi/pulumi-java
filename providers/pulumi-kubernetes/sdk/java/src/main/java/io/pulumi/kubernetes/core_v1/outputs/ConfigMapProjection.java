@@ -100,7 +100,6 @@ public final class ConfigMapProjection {
             this.optional = optional;
             return this;
         }
-
         public ConfigMapProjection build() {
             return new ConfigMapProjection(items, name, optional);
         }

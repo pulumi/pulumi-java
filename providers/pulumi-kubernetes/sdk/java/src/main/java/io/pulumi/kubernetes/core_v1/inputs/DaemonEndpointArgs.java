@@ -22,7 +22,7 @@ public final class DaemonEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="Port", required=true)
-    private final Input<Integer> Port;
+        private final Input<Integer> Port;
 
     public Input<Integer> getPort() {
         return this.Port;
@@ -65,7 +65,6 @@ public final class DaemonEndpointArgs extends io.pulumi.resources.ResourceArgs {
             this.Port = Input.of(Objects.requireNonNull(Port));
             return this;
         }
-
         public DaemonEndpointArgs build() {
             return new DaemonEndpointArgs(Port);
         }

@@ -139,7 +139,6 @@ public final class HorizontalPodAutoscalerCondition {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public HorizontalPodAutoscalerCondition build() {
             return new HorizontalPodAutoscalerCondition(lastTransitionTime, message, reason, status, type);
         }

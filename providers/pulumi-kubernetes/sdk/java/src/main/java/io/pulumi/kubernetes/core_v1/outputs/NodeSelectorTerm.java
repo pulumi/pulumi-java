@@ -76,7 +76,6 @@ public final class NodeSelectorTerm {
             this.matchFields = matchFields;
             return this;
         }
-
         public NodeSelectorTerm build() {
             return new NodeSelectorTerm(matchExpressions, matchFields);
         }

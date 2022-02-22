@@ -165,7 +165,6 @@ public final class ServiceAccount {
             this.secrets = secrets;
             return this;
         }
-
         public ServiceAccount build() {
             return new ServiceAccount(apiVersion, automountServiceAccountToken, imagePullSecrets, kind, metadata, secrets);
         }

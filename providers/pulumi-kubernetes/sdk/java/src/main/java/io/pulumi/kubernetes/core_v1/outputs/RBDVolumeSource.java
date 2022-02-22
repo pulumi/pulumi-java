@@ -205,7 +205,6 @@ public final class RBDVolumeSource {
             this.user = user;
             return this;
         }
-
         public RBDVolumeSource build() {
             return new RBDVolumeSource(fsType, image, keyring, monitors, pool, readOnly, secretRef, user);
         }

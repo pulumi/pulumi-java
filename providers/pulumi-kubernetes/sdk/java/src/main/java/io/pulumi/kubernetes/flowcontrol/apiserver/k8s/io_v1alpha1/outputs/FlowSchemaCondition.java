@@ -139,7 +139,6 @@ public final class FlowSchemaCondition {
             this.type = type;
             return this;
         }
-
         public FlowSchemaCondition build() {
             return new FlowSchemaCondition(lastTransitionTime, message, reason, status, type);
         }

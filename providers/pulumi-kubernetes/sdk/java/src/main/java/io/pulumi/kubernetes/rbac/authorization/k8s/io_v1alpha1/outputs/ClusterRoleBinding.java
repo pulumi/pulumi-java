@@ -143,7 +143,6 @@ public final class ClusterRoleBinding {
             this.subjects = subjects;
             return this;
         }
-
         public ClusterRoleBinding build() {
             return new ClusterRoleBinding(apiVersion, kind, metadata, roleRef, subjects);
         }

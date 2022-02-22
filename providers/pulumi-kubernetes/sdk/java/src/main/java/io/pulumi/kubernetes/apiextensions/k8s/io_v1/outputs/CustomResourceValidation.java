@@ -54,7 +54,6 @@ public final class CustomResourceValidation {
             this.openAPIV3Schema = openAPIV3Schema;
             return this;
         }
-
         public CustomResourceValidation build() {
             return new CustomResourceValidation(openAPIV3Schema);
         }

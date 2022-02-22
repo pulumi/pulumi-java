@@ -161,7 +161,6 @@ public final class Condition {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Condition build() {
             return new Condition(lastTransitionTime, message, observedGeneration, reason, status, type);
         }

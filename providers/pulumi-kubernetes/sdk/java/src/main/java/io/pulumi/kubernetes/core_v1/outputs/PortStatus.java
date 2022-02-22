@@ -114,7 +114,6 @@ public final class PortStatus {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public PortStatus build() {
             return new PortStatus(error, port, protocol);
         }

@@ -142,7 +142,6 @@ public final class CSIVolumeSource {
             this.volumeAttributes = volumeAttributes;
             return this;
         }
-
         public CSIVolumeSource build() {
             return new CSIVolumeSource(driver, fsType, nodePublishSecretRef, readOnly, volumeAttributes);
         }

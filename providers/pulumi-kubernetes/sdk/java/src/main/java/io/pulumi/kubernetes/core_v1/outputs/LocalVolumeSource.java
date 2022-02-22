@@ -76,7 +76,6 @@ public final class LocalVolumeSource {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public LocalVolumeSource build() {
             return new LocalVolumeSource(fsType, path);
         }

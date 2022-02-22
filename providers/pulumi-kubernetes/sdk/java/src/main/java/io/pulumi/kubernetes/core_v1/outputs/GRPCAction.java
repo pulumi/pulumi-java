@@ -81,7 +81,6 @@ public final class GRPCAction {
             this.service = service;
             return this;
         }
-
         public GRPCAction build() {
             return new GRPCAction(port, service);
         }

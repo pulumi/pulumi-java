@@ -27,7 +27,7 @@ public final class StatusCauseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="field")
-    private final @Nullable Input<String> field;
+        private final @Nullable Input<String> field;
 
     public Input<String> getField() {
         return this.field == null ? Input.empty() : this.field;
@@ -38,7 +38,7 @@ public final class StatusCauseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="message")
-    private final @Nullable Input<String> message;
+        private final @Nullable Input<String> message;
 
     public Input<String> getMessage() {
         return this.message == null ? Input.empty() : this.message;
@@ -49,7 +49,7 @@ public final class StatusCauseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reason")
-    private final @Nullable Input<String> reason;
+        private final @Nullable Input<String> reason;
 
     public Input<String> getReason() {
         return this.reason == null ? Input.empty() : this.reason;
@@ -123,7 +123,6 @@ public final class StatusCauseArgs extends io.pulumi.resources.ResourceArgs {
             this.reason = Input.ofNullable(reason);
             return this;
         }
-
         public StatusCauseArgs build() {
             return new StatusCauseArgs(field, message, reason);
         }

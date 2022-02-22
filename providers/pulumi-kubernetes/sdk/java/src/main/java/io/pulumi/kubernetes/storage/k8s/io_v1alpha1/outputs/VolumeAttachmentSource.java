@@ -77,7 +77,6 @@ public final class VolumeAttachmentSource {
             this.persistentVolumeName = persistentVolumeName;
             return this;
         }
-
         public VolumeAttachmentSource build() {
             return new VolumeAttachmentSource(inlineVolumeSpec, persistentVolumeName);
         }

@@ -174,7 +174,6 @@ public final class NodeCondition {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public NodeCondition build() {
             return new NodeCondition(lastHeartbeatTime, lastTransitionTime, message, reason, status, type);
         }

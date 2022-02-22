@@ -23,7 +23,7 @@ public final class NonResourceAttributesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+        private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -34,7 +34,7 @@ public final class NonResourceAttributesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="verb")
-    private final @Nullable Input<String> verb;
+        private final @Nullable Input<String> verb;
 
     public Input<String> getVerb() {
         return this.verb == null ? Input.empty() : this.verb;
@@ -93,7 +93,6 @@ public final class NonResourceAttributesArgs extends io.pulumi.resources.Resourc
             this.verb = Input.ofNullable(verb);
             return this;
         }
-
         public NonResourceAttributesArgs build() {
             return new NonResourceAttributesArgs(path, verb);
         }

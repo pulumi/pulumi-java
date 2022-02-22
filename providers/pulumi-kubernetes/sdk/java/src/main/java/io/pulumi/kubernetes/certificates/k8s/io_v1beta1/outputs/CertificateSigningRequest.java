@@ -134,7 +134,6 @@ public final class CertificateSigningRequest {
             this.status = status;
             return this;
         }
-
         public CertificateSigningRequest build() {
             return new CertificateSigningRequest(apiVersion, kind, metadata, spec, status);
         }

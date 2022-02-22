@@ -52,7 +52,6 @@ public final class UserSubject {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public UserSubject build() {
             return new UserSubject(name);
         }

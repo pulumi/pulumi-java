@@ -271,7 +271,6 @@ public final class SecurityContext {
             this.windowsOptions = windowsOptions;
             return this;
         }
-
         public SecurityContext build() {
             return new SecurityContext(allowPrivilegeEscalation, capabilities, privileged, procMount, readOnlyRootFilesystem, runAsGroup, runAsNonRoot, runAsUser, seLinuxOptions, seccompProfile, windowsOptions);
         }

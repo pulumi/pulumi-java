@@ -184,7 +184,6 @@ public final class APIServiceSpec {
             this.versionPriority = Objects.requireNonNull(versionPriority);
             return this;
         }
-
         public APIServiceSpec build() {
             return new APIServiceSpec(caBundle, group, groupPriorityMinimum, insecureSkipTLSVerify, service, version, versionPriority);
         }

@@ -142,7 +142,6 @@ public final class PersistentVolume {
             this.status = status;
             return this;
         }
-
         public PersistentVolume build() {
             return new PersistentVolume(apiVersion, kind, metadata, spec, status);
         }

@@ -75,7 +75,6 @@ public final class ResourceMetricSource {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public ResourceMetricSource build() {
             return new ResourceMetricSource(name, target);
         }

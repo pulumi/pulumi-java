@@ -78,7 +78,6 @@ public final class TCPSocketAction {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public TCPSocketAction build() {
             return new TCPSocketAction(host, port);
         }

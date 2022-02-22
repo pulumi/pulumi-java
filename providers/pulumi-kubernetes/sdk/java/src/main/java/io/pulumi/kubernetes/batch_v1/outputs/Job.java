@@ -142,7 +142,6 @@ public final class Job {
             this.status = status;
             return this;
         }
-
         public Job build() {
             return new Job(apiVersion, kind, metadata, spec, status);
         }

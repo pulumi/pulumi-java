@@ -354,7 +354,6 @@ public final class MutatingWebhook {
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }
-
         public MutatingWebhook build() {
             return new MutatingWebhook(admissionReviewVersions, clientConfig, failurePolicy, matchPolicy, name, namespaceSelector, objectSelector, reinvocationPolicy, rules, sideEffects, timeoutSeconds);
         }

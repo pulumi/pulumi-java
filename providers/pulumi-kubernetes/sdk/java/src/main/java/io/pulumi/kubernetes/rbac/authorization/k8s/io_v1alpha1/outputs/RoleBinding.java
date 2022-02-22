@@ -143,7 +143,6 @@ public final class RoleBinding {
             this.subjects = subjects;
             return this;
         }
-
         public RoleBinding build() {
             return new RoleBinding(apiVersion, kind, metadata, roleRef, subjects);
         }

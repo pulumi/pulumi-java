@@ -99,7 +99,6 @@ public final class LifecycleHandler {
             this.tcpSocket = tcpSocket;
             return this;
         }
-
         public LifecycleHandler build() {
             return new LifecycleHandler(exec, httpGet, tcpSocket);
         }

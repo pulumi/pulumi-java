@@ -78,7 +78,6 @@ public final class ContainerImage {
             this.sizeBytes = sizeBytes;
             return this;
         }
-
         public ContainerImage build() {
             return new ContainerImage(names, sizeBytes);
         }

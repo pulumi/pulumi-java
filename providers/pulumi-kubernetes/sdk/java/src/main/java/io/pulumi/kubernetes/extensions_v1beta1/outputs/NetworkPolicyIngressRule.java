@@ -77,7 +77,6 @@ public final class NetworkPolicyIngressRule {
             this.ports = ports;
             return this;
         }
-
         public NetworkPolicyIngressRule build() {
             return new NetworkPolicyIngressRule(from, ports);
         }

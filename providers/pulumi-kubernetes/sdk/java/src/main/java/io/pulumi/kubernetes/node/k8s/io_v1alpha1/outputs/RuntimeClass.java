@@ -120,7 +120,6 @@ public final class RuntimeClass {
             this.spec = Objects.requireNonNull(spec);
             return this;
         }
-
         public RuntimeClass build() {
             return new RuntimeClass(apiVersion, kind, metadata, spec);
         }

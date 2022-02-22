@@ -118,7 +118,6 @@ public final class SELinuxOptions {
             this.user = user;
             return this;
         }
-
         public SELinuxOptions build() {
             return new SELinuxOptions(level, role, type, user);
         }

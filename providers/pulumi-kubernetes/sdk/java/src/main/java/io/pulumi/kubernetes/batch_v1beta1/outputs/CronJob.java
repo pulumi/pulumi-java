@@ -142,7 +142,6 @@ public final class CronJob {
             this.status = status;
             return this;
         }
-
         public CronJob build() {
             return new CronJob(apiVersion, kind, metadata, spec, status);
         }

@@ -142,7 +142,6 @@ public final class PersistentVolumeClaim {
             this.status = status;
             return this;
         }
-
         public PersistentVolumeClaim build() {
             return new PersistentVolumeClaim(apiVersion, kind, metadata, spec, status);
         }

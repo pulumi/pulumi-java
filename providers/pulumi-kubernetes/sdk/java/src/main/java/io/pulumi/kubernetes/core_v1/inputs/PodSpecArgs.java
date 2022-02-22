@@ -39,7 +39,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="activeDeadlineSeconds")
-    private final @Nullable Input<Integer> activeDeadlineSeconds;
+        private final @Nullable Input<Integer> activeDeadlineSeconds;
 
     public Input<Integer> getActiveDeadlineSeconds() {
         return this.activeDeadlineSeconds == null ? Input.empty() : this.activeDeadlineSeconds;
@@ -50,7 +50,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="affinity")
-    private final @Nullable Input<AffinityArgs> affinity;
+        private final @Nullable Input<AffinityArgs> affinity;
 
     public Input<AffinityArgs> getAffinity() {
         return this.affinity == null ? Input.empty() : this.affinity;
@@ -61,7 +61,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="automountServiceAccountToken")
-    private final @Nullable Input<Boolean> automountServiceAccountToken;
+        private final @Nullable Input<Boolean> automountServiceAccountToken;
 
     public Input<Boolean> getAutomountServiceAccountToken() {
         return this.automountServiceAccountToken == null ? Input.empty() : this.automountServiceAccountToken;
@@ -72,7 +72,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containers", required=true)
-    private final Input<List<ContainerArgs>> containers;
+        private final Input<List<ContainerArgs>> containers;
 
     public Input<List<ContainerArgs>> getContainers() {
         return this.containers;
@@ -83,7 +83,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnsConfig")
-    private final @Nullable Input<PodDNSConfigArgs> dnsConfig;
+        private final @Nullable Input<PodDNSConfigArgs> dnsConfig;
 
     public Input<PodDNSConfigArgs> getDnsConfig() {
         return this.dnsConfig == null ? Input.empty() : this.dnsConfig;
@@ -100,7 +100,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnsPolicy")
-    private final @Nullable Input<String> dnsPolicy;
+        private final @Nullable Input<String> dnsPolicy;
 
     public Input<String> getDnsPolicy() {
         return this.dnsPolicy == null ? Input.empty() : this.dnsPolicy;
@@ -111,7 +111,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableServiceLinks")
-    private final @Nullable Input<Boolean> enableServiceLinks;
+        private final @Nullable Input<Boolean> enableServiceLinks;
 
     public Input<Boolean> getEnableServiceLinks() {
         return this.enableServiceLinks == null ? Input.empty() : this.enableServiceLinks;
@@ -122,7 +122,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ephemeralContainers")
-    private final @Nullable Input<List<EphemeralContainerArgs>> ephemeralContainers;
+        private final @Nullable Input<List<EphemeralContainerArgs>> ephemeralContainers;
 
     public Input<List<EphemeralContainerArgs>> getEphemeralContainers() {
         return this.ephemeralContainers == null ? Input.empty() : this.ephemeralContainers;
@@ -133,7 +133,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostAliases")
-    private final @Nullable Input<List<HostAliasArgs>> hostAliases;
+        private final @Nullable Input<List<HostAliasArgs>> hostAliases;
 
     public Input<List<HostAliasArgs>> getHostAliases() {
         return this.hostAliases == null ? Input.empty() : this.hostAliases;
@@ -144,7 +144,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostIPC")
-    private final @Nullable Input<Boolean> hostIPC;
+        private final @Nullable Input<Boolean> hostIPC;
 
     public Input<Boolean> getHostIPC() {
         return this.hostIPC == null ? Input.empty() : this.hostIPC;
@@ -155,7 +155,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostNetwork")
-    private final @Nullable Input<Boolean> hostNetwork;
+        private final @Nullable Input<Boolean> hostNetwork;
 
     public Input<Boolean> getHostNetwork() {
         return this.hostNetwork == null ? Input.empty() : this.hostNetwork;
@@ -166,7 +166,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostPID")
-    private final @Nullable Input<Boolean> hostPID;
+        private final @Nullable Input<Boolean> hostPID;
 
     public Input<Boolean> getHostPID() {
         return this.hostPID == null ? Input.empty() : this.hostPID;
@@ -177,7 +177,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostname")
-    private final @Nullable Input<String> hostname;
+        private final @Nullable Input<String> hostname;
 
     public Input<String> getHostname() {
         return this.hostname == null ? Input.empty() : this.hostname;
@@ -188,7 +188,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imagePullSecrets")
-    private final @Nullable Input<List<LocalObjectReferenceArgs>> imagePullSecrets;
+        private final @Nullable Input<List<LocalObjectReferenceArgs>> imagePullSecrets;
 
     public Input<List<LocalObjectReferenceArgs>> getImagePullSecrets() {
         return this.imagePullSecrets == null ? Input.empty() : this.imagePullSecrets;
@@ -199,7 +199,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="initContainers")
-    private final @Nullable Input<List<ContainerArgs>> initContainers;
+        private final @Nullable Input<List<ContainerArgs>> initContainers;
 
     public Input<List<ContainerArgs>> getInitContainers() {
         return this.initContainers == null ? Input.empty() : this.initContainers;
@@ -210,7 +210,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeName")
-    private final @Nullable Input<String> nodeName;
+        private final @Nullable Input<String> nodeName;
 
     public Input<String> getNodeName() {
         return this.nodeName == null ? Input.empty() : this.nodeName;
@@ -221,7 +221,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeSelector")
-    private final @Nullable Input<Map<String,String>> nodeSelector;
+        private final @Nullable Input<Map<String,String>> nodeSelector;
 
     public Input<Map<String,String>> getNodeSelector() {
         return this.nodeSelector == null ? Input.empty() : this.nodeSelector;
@@ -236,7 +236,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="os")
-    private final @Nullable Input<PodOSArgs> os;
+        private final @Nullable Input<PodOSArgs> os;
 
     public Input<PodOSArgs> getOs() {
         return this.os == null ? Input.empty() : this.os;
@@ -247,7 +247,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="overhead")
-    private final @Nullable Input<Map<String,String>> overhead;
+        private final @Nullable Input<Map<String,String>> overhead;
 
     public Input<Map<String,String>> getOverhead() {
         return this.overhead == null ? Input.empty() : this.overhead;
@@ -258,7 +258,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preemptionPolicy")
-    private final @Nullable Input<String> preemptionPolicy;
+        private final @Nullable Input<String> preemptionPolicy;
 
     public Input<String> getPreemptionPolicy() {
         return this.preemptionPolicy == null ? Input.empty() : this.preemptionPolicy;
@@ -269,7 +269,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="priority")
-    private final @Nullable Input<Integer> priority;
+        private final @Nullable Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority == null ? Input.empty() : this.priority;
@@ -280,7 +280,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="priorityClassName")
-    private final @Nullable Input<String> priorityClassName;
+        private final @Nullable Input<String> priorityClassName;
 
     public Input<String> getPriorityClassName() {
         return this.priorityClassName == null ? Input.empty() : this.priorityClassName;
@@ -291,7 +291,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="readinessGates")
-    private final @Nullable Input<List<PodReadinessGateArgs>> readinessGates;
+        private final @Nullable Input<List<PodReadinessGateArgs>> readinessGates;
 
     public Input<List<PodReadinessGateArgs>> getReadinessGates() {
         return this.readinessGates == null ? Input.empty() : this.readinessGates;
@@ -307,7 +307,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restartPolicy")
-    private final @Nullable Input<String> restartPolicy;
+        private final @Nullable Input<String> restartPolicy;
 
     public Input<String> getRestartPolicy() {
         return this.restartPolicy == null ? Input.empty() : this.restartPolicy;
@@ -318,7 +318,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runtimeClassName")
-    private final @Nullable Input<String> runtimeClassName;
+        private final @Nullable Input<String> runtimeClassName;
 
     public Input<String> getRuntimeClassName() {
         return this.runtimeClassName == null ? Input.empty() : this.runtimeClassName;
@@ -329,7 +329,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedulerName")
-    private final @Nullable Input<String> schedulerName;
+        private final @Nullable Input<String> schedulerName;
 
     public Input<String> getSchedulerName() {
         return this.schedulerName == null ? Input.empty() : this.schedulerName;
@@ -340,7 +340,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityContext")
-    private final @Nullable Input<PodSecurityContextArgs> securityContext;
+        private final @Nullable Input<PodSecurityContextArgs> securityContext;
 
     public Input<PodSecurityContextArgs> getSecurityContext() {
         return this.securityContext == null ? Input.empty() : this.securityContext;
@@ -351,7 +351,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccount")
-    private final @Nullable Input<String> serviceAccount;
+        private final @Nullable Input<String> serviceAccount;
 
     public Input<String> getServiceAccount() {
         return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
@@ -362,7 +362,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccountName")
-    private final @Nullable Input<String> serviceAccountName;
+        private final @Nullable Input<String> serviceAccountName;
 
     public Input<String> getServiceAccountName() {
         return this.serviceAccountName == null ? Input.empty() : this.serviceAccountName;
@@ -373,7 +373,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="setHostnameAsFQDN")
-    private final @Nullable Input<Boolean> setHostnameAsFQDN;
+        private final @Nullable Input<Boolean> setHostnameAsFQDN;
 
     public Input<Boolean> getSetHostnameAsFQDN() {
         return this.setHostnameAsFQDN == null ? Input.empty() : this.setHostnameAsFQDN;
@@ -384,7 +384,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shareProcessNamespace")
-    private final @Nullable Input<Boolean> shareProcessNamespace;
+        private final @Nullable Input<Boolean> shareProcessNamespace;
 
     public Input<Boolean> getShareProcessNamespace() {
         return this.shareProcessNamespace == null ? Input.empty() : this.shareProcessNamespace;
@@ -395,7 +395,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subdomain")
-    private final @Nullable Input<String> subdomain;
+        private final @Nullable Input<String> subdomain;
 
     public Input<String> getSubdomain() {
         return this.subdomain == null ? Input.empty() : this.subdomain;
@@ -406,7 +406,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="terminationGracePeriodSeconds")
-    private final @Nullable Input<Integer> terminationGracePeriodSeconds;
+        private final @Nullable Input<Integer> terminationGracePeriodSeconds;
 
     public Input<Integer> getTerminationGracePeriodSeconds() {
         return this.terminationGracePeriodSeconds == null ? Input.empty() : this.terminationGracePeriodSeconds;
@@ -417,7 +417,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tolerations")
-    private final @Nullable Input<List<TolerationArgs>> tolerations;
+        private final @Nullable Input<List<TolerationArgs>> tolerations;
 
     public Input<List<TolerationArgs>> getTolerations() {
         return this.tolerations == null ? Input.empty() : this.tolerations;
@@ -428,7 +428,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="topologySpreadConstraints")
-    private final @Nullable Input<List<TopologySpreadConstraintArgs>> topologySpreadConstraints;
+        private final @Nullable Input<List<TopologySpreadConstraintArgs>> topologySpreadConstraints;
 
     public Input<List<TopologySpreadConstraintArgs>> getTopologySpreadConstraints() {
         return this.topologySpreadConstraints == null ? Input.empty() : this.topologySpreadConstraints;
@@ -439,7 +439,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumes")
-    private final @Nullable Input<List<VolumeArgs>> volumes;
+        private final @Nullable Input<List<VolumeArgs>> volumes;
 
     public Input<List<VolumeArgs>> getVolumes() {
         return this.volumes == null ? Input.empty() : this.volumes;
@@ -1008,7 +1008,6 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
             this.volumes = Input.ofNullable(volumes);
             return this;
         }
-
         public PodSpecArgs build() {
             return new PodSpecArgs(activeDeadlineSeconds, affinity, automountServiceAccountToken, containers, dnsConfig, dnsPolicy, enableServiceLinks, ephemeralContainers, hostAliases, hostIPC, hostNetwork, hostPID, hostname, imagePullSecrets, initContainers, nodeName, nodeSelector, os, overhead, preemptionPolicy, priority, priorityClassName, readinessGates, restartPolicy, runtimeClassName, schedulerName, securityContext, serviceAccount, serviceAccountName, setHostnameAsFQDN, shareProcessNamespace, subdomain, terminationGracePeriodSeconds, tolerations, topologySpreadConstraints, volumes);
         }

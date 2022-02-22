@@ -77,7 +77,6 @@ public final class TokenReviewSpec {
             this.token = token;
             return this;
         }
-
         public TokenReviewSpec build() {
             return new TokenReviewSpec(audiences, token);
         }

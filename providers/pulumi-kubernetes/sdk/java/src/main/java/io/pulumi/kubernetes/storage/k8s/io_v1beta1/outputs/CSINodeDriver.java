@@ -120,7 +120,6 @@ public final class CSINodeDriver {
             this.topologyKeys = topologyKeys;
             return this;
         }
-
         public CSINodeDriver build() {
             return new CSINodeDriver(allocatable, name, nodeID, topologyKeys);
         }

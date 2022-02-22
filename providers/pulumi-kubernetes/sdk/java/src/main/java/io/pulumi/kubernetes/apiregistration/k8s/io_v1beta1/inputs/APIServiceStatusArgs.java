@@ -24,7 +24,7 @@ public final class APIServiceStatusArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="conditions")
-    private final @Nullable Input<List<APIServiceConditionArgs>> conditions;
+        private final @Nullable Input<List<APIServiceConditionArgs>> conditions;
 
     public Input<List<APIServiceConditionArgs>> getConditions() {
         return this.conditions == null ? Input.empty() : this.conditions;
@@ -67,7 +67,6 @@ public final class APIServiceStatusArgs extends io.pulumi.resources.ResourceArgs
             this.conditions = Input.ofNullable(conditions);
             return this;
         }
-
         public APIServiceStatusArgs build() {
             return new APIServiceStatusArgs(conditions);
         }

@@ -97,7 +97,6 @@ public final class ResourceFieldSelector {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
-
         public ResourceFieldSelector build() {
             return new ResourceFieldSelector(containerName, divisor, resource);
         }

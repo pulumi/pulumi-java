@@ -184,7 +184,6 @@ public final class Secret {
             this.type = type;
             return this;
         }
-
         public Secret build() {
             return new Secret(apiVersion, data, immutable, kind, metadata, stringData, type);
         }

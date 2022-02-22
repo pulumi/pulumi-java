@@ -54,7 +54,6 @@ public final class NodeConfigSource {
             this.configMap = configMap;
             return this;
         }
-
         public NodeConfigSource build() {
             return new NodeConfigSource(configMap);
         }

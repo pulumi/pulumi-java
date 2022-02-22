@@ -76,7 +76,6 @@ public final class EmptyDirVolumeSource {
             this.sizeLimit = sizeLimit;
             return this;
         }
-
         public EmptyDirVolumeSource build() {
             return new EmptyDirVolumeSource(medium, sizeLimit);
         }

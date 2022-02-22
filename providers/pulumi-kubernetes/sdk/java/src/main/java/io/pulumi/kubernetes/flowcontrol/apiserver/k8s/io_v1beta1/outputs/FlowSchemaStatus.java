@@ -54,7 +54,6 @@ public final class FlowSchemaStatus {
             this.conditions = conditions;
             return this;
         }
-
         public FlowSchemaStatus build() {
             return new FlowSchemaStatus(conditions);
         }

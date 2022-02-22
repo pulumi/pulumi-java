@@ -139,7 +139,6 @@ public final class ReplicaSetCondition {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ReplicaSetCondition build() {
             return new ReplicaSetCondition(lastTransitionTime, message, reason, status, type);
         }

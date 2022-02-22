@@ -25,7 +25,7 @@ public final class NetworkPolicyEgressRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="ports")
-    private final @Nullable Input<List<NetworkPolicyPortArgs>> ports;
+        private final @Nullable Input<List<NetworkPolicyPortArgs>> ports;
 
     public Input<List<NetworkPolicyPortArgs>> getPorts() {
         return this.ports == null ? Input.empty() : this.ports;
@@ -36,7 +36,7 @@ public final class NetworkPolicyEgressRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="to")
-    private final @Nullable Input<List<NetworkPolicyPeerArgs>> to;
+        private final @Nullable Input<List<NetworkPolicyPeerArgs>> to;
 
     public Input<List<NetworkPolicyPeerArgs>> getTo() {
         return this.to == null ? Input.empty() : this.to;
@@ -95,7 +95,6 @@ public final class NetworkPolicyEgressRuleArgs extends io.pulumi.resources.Resou
             this.to = Input.ofNullable(to);
             return this;
         }
-
         public NetworkPolicyEgressRuleArgs build() {
             return new NetworkPolicyEgressRuleArgs(ports, to);
         }

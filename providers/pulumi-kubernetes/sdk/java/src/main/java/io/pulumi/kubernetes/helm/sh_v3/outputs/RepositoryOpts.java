@@ -160,7 +160,6 @@ public final class RepositoryOpts {
             this.username = username;
             return this;
         }
-
         public RepositoryOpts build() {
             return new RepositoryOpts(caFile, certFile, keyFile, password, repo, username);
         }

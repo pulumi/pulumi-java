@@ -206,7 +206,6 @@ public final class DeploymentSpec {
             this.template = Objects.requireNonNull(template);
             return this;
         }
-
         public DeploymentSpec build() {
             return new DeploymentSpec(minReadySeconds, paused, progressDeadlineSeconds, replicas, revisionHistoryLimit, selector, strategy, template);
         }

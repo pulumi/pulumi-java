@@ -75,7 +75,6 @@ public final class AuditSinkSpec {
             this.webhook = Objects.requireNonNull(webhook);
             return this;
         }
-
         public AuditSinkSpec build() {
             return new AuditSinkSpec(policy, webhook);
         }

@@ -142,7 +142,6 @@ public final class Pod {
             this.status = status;
             return this;
         }
-
         public Pod build() {
             return new Pod(apiVersion, kind, metadata, spec, status);
         }

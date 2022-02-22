@@ -77,7 +77,6 @@ public final class RunAsGroupStrategyOptions {
             this.rule = Objects.requireNonNull(rule);
             return this;
         }
-
         public RunAsGroupStrategyOptions build() {
             return new RunAsGroupStrategyOptions(ranges, rule);
         }

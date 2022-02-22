@@ -142,7 +142,6 @@ public final class PriorityLevelConfiguration {
             this.status = status;
             return this;
         }
-
         public PriorityLevelConfiguration build() {
             return new PriorityLevelConfiguration(apiVersion, kind, metadata, spec, status);
         }

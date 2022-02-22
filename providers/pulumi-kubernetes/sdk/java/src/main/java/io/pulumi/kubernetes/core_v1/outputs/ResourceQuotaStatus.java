@@ -76,7 +76,6 @@ public final class ResourceQuotaStatus {
             this.used = used;
             return this;
         }
-
         public ResourceQuotaStatus build() {
             return new ResourceQuotaStatus(hard, used);
         }

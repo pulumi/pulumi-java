@@ -23,7 +23,7 @@ public final class PortStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="error")
-    private final @Nullable Input<String> error;
+        private final @Nullable Input<String> error;
 
     public Input<String> getError() {
         return this.error == null ? Input.empty() : this.error;
@@ -34,7 +34,7 @@ public final class PortStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="port", required=true)
-    private final Input<Integer> port;
+        private final Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port;
@@ -50,7 +50,7 @@ public final class PortStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocol", required=true)
-    private final Input<String> protocol;
+        private final Input<String> protocol;
 
     public Input<String> getProtocol() {
         return this.protocol;
@@ -124,7 +124,6 @@ public final class PortStatusArgs extends io.pulumi.resources.ResourceArgs {
             this.protocol = Input.of(Objects.requireNonNull(protocol));
             return this;
         }
-
         public PortStatusArgs build() {
             return new PortStatusArgs(error, port, protocol);
         }

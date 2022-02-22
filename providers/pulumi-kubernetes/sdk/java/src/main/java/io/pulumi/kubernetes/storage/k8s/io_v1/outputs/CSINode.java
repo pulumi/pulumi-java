@@ -120,7 +120,6 @@ public final class CSINode {
             this.spec = Objects.requireNonNull(spec);
             return this;
         }
-
         public CSINode build() {
             return new CSINode(apiVersion, kind, metadata, spec);
         }

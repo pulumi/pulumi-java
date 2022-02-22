@@ -35,7 +35,7 @@ public final class PodDisruptionBudgetStatusArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="conditions")
-    private final @Nullable Input<List<ConditionArgs>> conditions;
+        private final @Nullable Input<List<ConditionArgs>> conditions;
 
     public Input<List<ConditionArgs>> getConditions() {
         return this.conditions == null ? Input.empty() : this.conditions;
@@ -46,7 +46,7 @@ public final class PodDisruptionBudgetStatusArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="currentHealthy", required=true)
-    private final Input<Integer> currentHealthy;
+        private final Input<Integer> currentHealthy;
 
     public Input<Integer> getCurrentHealthy() {
         return this.currentHealthy;
@@ -57,7 +57,7 @@ public final class PodDisruptionBudgetStatusArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="desiredHealthy", required=true)
-    private final Input<Integer> desiredHealthy;
+        private final Input<Integer> desiredHealthy;
 
     public Input<Integer> getDesiredHealthy() {
         return this.desiredHealthy;
@@ -68,7 +68,7 @@ public final class PodDisruptionBudgetStatusArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="disruptedPods")
-    private final @Nullable Input<Map<String,String>> disruptedPods;
+        private final @Nullable Input<Map<String,String>> disruptedPods;
 
     public Input<Map<String,String>> getDisruptedPods() {
         return this.disruptedPods == null ? Input.empty() : this.disruptedPods;
@@ -79,7 +79,7 @@ public final class PodDisruptionBudgetStatusArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="disruptionsAllowed", required=true)
-    private final Input<Integer> disruptionsAllowed;
+        private final Input<Integer> disruptionsAllowed;
 
     public Input<Integer> getDisruptionsAllowed() {
         return this.disruptionsAllowed;
@@ -90,7 +90,7 @@ public final class PodDisruptionBudgetStatusArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="expectedPods", required=true)
-    private final Input<Integer> expectedPods;
+        private final Input<Integer> expectedPods;
 
     public Input<Integer> getExpectedPods() {
         return this.expectedPods;
@@ -101,7 +101,7 @@ public final class PodDisruptionBudgetStatusArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="observedGeneration")
-    private final @Nullable Input<Integer> observedGeneration;
+        private final @Nullable Input<Integer> observedGeneration;
 
     public Input<Integer> getObservedGeneration() {
         return this.observedGeneration == null ? Input.empty() : this.observedGeneration;
@@ -235,7 +235,6 @@ public final class PodDisruptionBudgetStatusArgs extends io.pulumi.resources.Res
             this.observedGeneration = Input.ofNullable(observedGeneration);
             return this;
         }
-
         public PodDisruptionBudgetStatusArgs build() {
             return new PodDisruptionBudgetStatusArgs(conditions, currentHealthy, desiredHealthy, disruptedPods, disruptionsAllowed, expectedPods, observedGeneration);
         }

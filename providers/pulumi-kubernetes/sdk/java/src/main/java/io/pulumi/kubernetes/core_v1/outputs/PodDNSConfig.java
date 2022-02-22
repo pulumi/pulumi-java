@@ -98,7 +98,6 @@ public final class PodDNSConfig {
             this.searches = searches;
             return this;
         }
-
         public PodDNSConfig build() {
             return new PodDNSConfig(nameservers, options, searches);
         }

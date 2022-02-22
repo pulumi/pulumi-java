@@ -97,7 +97,6 @@ public final class LabelSelectorRequirement {
             this.values = values;
             return this;
         }
-
         public LabelSelectorRequirement build() {
             return new LabelSelectorRequirement(key, operator, values);
         }

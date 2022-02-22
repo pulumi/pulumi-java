@@ -25,7 +25,7 @@ public final class NamespaceStatusArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="conditions")
-    private final @Nullable Input<List<NamespaceConditionArgs>> conditions;
+        private final @Nullable Input<List<NamespaceConditionArgs>> conditions;
 
     public Input<List<NamespaceConditionArgs>> getConditions() {
         return this.conditions == null ? Input.empty() : this.conditions;
@@ -40,7 +40,7 @@ public final class NamespaceStatusArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="phase")
-    private final @Nullable Input<String> phase;
+        private final @Nullable Input<String> phase;
 
     public Input<String> getPhase() {
         return this.phase == null ? Input.empty() : this.phase;
@@ -99,7 +99,6 @@ public final class NamespaceStatusArgs extends io.pulumi.resources.ResourceArgs 
             this.phase = Input.ofNullable(phase);
             return this;
         }
-
         public NamespaceStatusArgs build() {
             return new NamespaceStatusArgs(conditions, phase);
         }

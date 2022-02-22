@@ -76,7 +76,6 @@ public final class VolumeError {
             this.time = time;
             return this;
         }
-
         public VolumeError build() {
             return new VolumeError(message, time);
         }

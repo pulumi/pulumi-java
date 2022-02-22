@@ -85,7 +85,6 @@ public final class StatefulSetUpdateStrategy {
             this.type = type;
             return this;
         }
-
         public StatefulSetUpdateStrategy build() {
             return new StatefulSetUpdateStrategy(rollingUpdate, type);
         }

@@ -247,7 +247,6 @@ public final class StatefulSetStatus {
             this.updatedReplicas = updatedReplicas;
             return this;
         }
-
         public StatefulSetStatus build() {
             return new StatefulSetStatus(availableReplicas, collisionCount, conditions, currentReplicas, currentRevision, observedGeneration, readyReplicas, replicas, updateRevision, updatedReplicas);
         }

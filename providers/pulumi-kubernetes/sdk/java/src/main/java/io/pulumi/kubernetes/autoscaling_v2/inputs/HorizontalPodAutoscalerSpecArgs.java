@@ -27,7 +27,7 @@ public final class HorizontalPodAutoscalerSpecArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="behavior")
-    private final @Nullable Input<HorizontalPodAutoscalerBehaviorArgs> behavior;
+        private final @Nullable Input<HorizontalPodAutoscalerBehaviorArgs> behavior;
 
     public Input<HorizontalPodAutoscalerBehaviorArgs> getBehavior() {
         return this.behavior == null ? Input.empty() : this.behavior;
@@ -38,7 +38,7 @@ public final class HorizontalPodAutoscalerSpecArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="maxReplicas", required=true)
-    private final Input<Integer> maxReplicas;
+        private final Input<Integer> maxReplicas;
 
     public Input<Integer> getMaxReplicas() {
         return this.maxReplicas;
@@ -49,7 +49,7 @@ public final class HorizontalPodAutoscalerSpecArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="metrics")
-    private final @Nullable Input<List<MetricSpecArgs>> metrics;
+        private final @Nullable Input<List<MetricSpecArgs>> metrics;
 
     public Input<List<MetricSpecArgs>> getMetrics() {
         return this.metrics == null ? Input.empty() : this.metrics;
@@ -60,7 +60,7 @@ public final class HorizontalPodAutoscalerSpecArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="minReplicas")
-    private final @Nullable Input<Integer> minReplicas;
+        private final @Nullable Input<Integer> minReplicas;
 
     public Input<Integer> getMinReplicas() {
         return this.minReplicas == null ? Input.empty() : this.minReplicas;
@@ -71,7 +71,7 @@ public final class HorizontalPodAutoscalerSpecArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="scaleTargetRef", required=true)
-    private final Input<CrossVersionObjectReferenceArgs> scaleTargetRef;
+        private final Input<CrossVersionObjectReferenceArgs> scaleTargetRef;
 
     public Input<CrossVersionObjectReferenceArgs> getScaleTargetRef() {
         return this.scaleTargetRef;
@@ -175,7 +175,6 @@ public final class HorizontalPodAutoscalerSpecArgs extends io.pulumi.resources.R
             this.scaleTargetRef = Input.of(Objects.requireNonNull(scaleTargetRef));
             return this;
         }
-
         public HorizontalPodAutoscalerSpecArgs build() {
             return new HorizontalPodAutoscalerSpecArgs(behavior, maxReplicas, metrics, minReplicas, scaleTargetRef);
         }

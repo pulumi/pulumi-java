@@ -26,7 +26,7 @@ public final class SecretEnvSourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -37,7 +37,7 @@ public final class SecretEnvSourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="optional")
-    private final @Nullable Input<Boolean> optional;
+        private final @Nullable Input<Boolean> optional;
 
     public Input<Boolean> getOptional() {
         return this.optional == null ? Input.empty() : this.optional;
@@ -96,7 +96,6 @@ public final class SecretEnvSourceArgs extends io.pulumi.resources.ResourceArgs 
             this.optional = Input.ofNullable(optional);
             return this;
         }
-
         public SecretEnvSourceArgs build() {
             return new SecretEnvSourceArgs(name, optional);
         }

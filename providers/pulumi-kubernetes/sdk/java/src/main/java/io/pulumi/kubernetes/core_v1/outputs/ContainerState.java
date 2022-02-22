@@ -99,7 +99,6 @@ public final class ContainerState {
             this.waiting = waiting;
             return this;
         }
-
         public ContainerState build() {
             return new ContainerState(running, terminated, waiting);
         }

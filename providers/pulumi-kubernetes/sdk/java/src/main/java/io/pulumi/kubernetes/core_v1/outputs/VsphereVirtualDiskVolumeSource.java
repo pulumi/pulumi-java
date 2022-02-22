@@ -118,7 +118,6 @@ public final class VsphereVirtualDiskVolumeSource {
             this.volumePath = Objects.requireNonNull(volumePath);
             return this;
         }
-
         public VsphereVirtualDiskVolumeSource build() {
             return new VsphereVirtualDiskVolumeSource(fsType, storagePolicyID, storagePolicyName, volumePath);
         }

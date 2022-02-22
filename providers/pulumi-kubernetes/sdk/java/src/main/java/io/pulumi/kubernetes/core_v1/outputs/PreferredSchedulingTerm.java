@@ -75,7 +75,6 @@ public final class PreferredSchedulingTerm {
             this.weight = Objects.requireNonNull(weight);
             return this;
         }
-
         public PreferredSchedulingTerm build() {
             return new PreferredSchedulingTerm(preference, weight);
         }
